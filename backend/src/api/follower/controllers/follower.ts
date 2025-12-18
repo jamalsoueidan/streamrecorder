@@ -75,6 +75,8 @@ export default factories.createCoreController(
       const user = ctx.state.user;
       if (!user) return ctx.unauthorized();
 
+      const { page = 1, pageSize = 20 } = ctx.query;
+
       const fullUser = await strapi
         .documents("plugin::users-permissions.user")
         .findOne({
@@ -82,19 +84,35 @@ export default factories.createCoreController(
           fields: ["id"],
           populate: {
             followers: {
-              fields: ["id", "username", "slug"],
+              fields: ["id", "username", "slug", "type"],
             },
           },
           status: "published",
         });
 
       if (!fullUser?.followers || fullUser.followers.length === 0) {
-        return { data: [] };
+        return {
+          data: [],
+          meta: {
+            pagination: {
+              page: Number(page),
+              pageSize: Number(pageSize),
+              pageCount: 0,
+              total: 0,
+            },
+          },
+        };
       }
 
+      const total = fullUser.followers.length;
+      const offset = (Number(page) - 1) * Number(pageSize);
+      const paginatedFollowers = fullUser.followers.slice(
+        offset,
+        offset + Number(pageSize)
+      );
+
       const followersWithRecordings = await Promise.all(
-        fullUser.followers.map(async (follower) => {
-          // Get total count
+        paginatedFollowers.map(async (follower) => {
           const totalRecordings = await strapi
             .documents("api::recording.recording")
             .count({
@@ -106,7 +124,6 @@ export default factories.createCoreController(
               status: "published",
             });
 
-          // Get latest 5 recordings
           const recordings = await strapi
             .documents("api::recording.recording")
             .findMany({
@@ -131,7 +148,109 @@ export default factories.createCoreController(
         })
       );
 
-      return { data: followersWithRecordings };
+      return {
+        data: followersWithRecordings,
+        meta: {
+          pagination: {
+            page: Number(page),
+            pageSize: Number(pageSize),
+            pageCount: Math.ceil(total / Number(pageSize)),
+            total,
+          },
+        },
+      };
+    },
+    async findNotFollowing(ctx) {
+      const user = ctx.state.user;
+      if (!user) return ctx.unauthorized();
+
+      const { page = 1, pageSize = 20 } = ctx.query;
+
+      // Get user's current followers (just IDs)
+      const fullUser = await strapi
+        .documents("plugin::users-permissions.user")
+        .findOne({
+          documentId: user.documentId,
+          fields: ["id"],
+          populate: {
+            followers: {
+              fields: ["id"],
+            },
+          },
+          status: "published",
+        });
+
+      const followingIds = fullUser?.followers?.map((f) => f.id) || [];
+
+      const filters =
+        followingIds.length > 0 ? { id: { $notIn: followingIds } } : {};
+
+      // Get count for pagination
+      const total = await strapi
+        .documents("api::follower.follower")
+        .count({ filters, status: "published" });
+
+      // Get paginated followers
+      const notFollowing = await strapi
+        .documents("api::follower.follower")
+        .findMany({
+          filters,
+          fields: ["id", "username", "slug", "type"],
+          status: "published",
+          sort: { username: "asc" },
+          limit: Number(pageSize),
+          offset: (Number(page) - 1) * Number(pageSize),
+        });
+
+      // Add recordings for each follower
+      const followersWithRecordings = await Promise.all(
+        notFollowing.map(async (follower) => {
+          const totalRecordings = await strapi
+            .documents("api::recording.recording")
+            .count({
+              filters: {
+                follower: {
+                  id: { $eq: follower.id },
+                },
+              },
+              status: "published",
+            });
+
+          const recordings = await strapi
+            .documents("api::recording.recording")
+            .findMany({
+              filters: {
+                follower: {
+                  id: { $eq: follower.id },
+                },
+              },
+              status: "published",
+              populate: {
+                sources: {},
+              },
+              sort: { createdAt: "desc" },
+              limit: 5,
+            });
+
+          return {
+            ...follower,
+            totalRecordings,
+            recordings,
+          };
+        })
+      );
+
+      return {
+        data: followersWithRecordings,
+        meta: {
+          pagination: {
+            page: Number(page),
+            pageSize: Number(pageSize),
+            pageCount: Math.ceil(total / Number(pageSize)),
+            total,
+          },
+        },
+      };
     },
   })
 );
