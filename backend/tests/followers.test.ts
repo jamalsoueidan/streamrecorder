@@ -2,36 +2,21 @@ import { afterAll, beforeAll, describe, expect, it, jest } from "@jest/globals";
 import request from "supertest";
 import { cleanupStrapi, getServer, setupStrapi } from "./strapi";
 
-jest.setTimeout(30000); // 30 seconds timeout
+jest.setTimeout(30000);
 
 let jwt: string;
+let jwt2: string;
 let followerId: number;
+let authenticatedRole: any;
 
 beforeAll(async () => {
   await setupStrapi();
 
-  // Get the authenticated role
-  const authenticatedRole = await strapi.db
+  authenticatedRole = await strapi.db
     .query("plugin::users-permissions.role")
-    .findOne({
-      where: { type: "authenticated" },
-    });
+    .findOne({ where: { type: "authenticated" } });
 
-  // Check what actions are available
-  const allPermissions = await strapi.db
-    .query("plugin::users-permissions.permission")
-    .findMany({});
-  console.log(
-    "Existing permissions:",
-    allPermissions.map((p) => p.action)
-  );
-
-  // Try to find the correct action names
-  const actions =
-    (await strapi.contentAPI?.permissions?.providers?.action?.keys()) || [];
-  console.log("Available actions:", Array.from(actions));
-
-  // Grant permissions for our custom routes
+  // Grant permissions
   const permissionsToCreate = [
     {
       action: "api::follower.follower.findForUser",
@@ -42,31 +27,15 @@ beforeAll(async () => {
   ];
 
   for (const perm of permissionsToCreate) {
-    try {
-      await strapi.db.query("plugin::users-permissions.permission").create({
-        data: perm,
-      });
-      console.log(`Created permission: ${perm.action}`);
-    } catch (error) {
-      console.log(`Failed to create permission: ${perm.action}`, error.message);
-    }
+    await strapi.db.query("plugin::users-permissions.permission").create({
+      data: perm,
+    });
   }
 
-  // Verify permissions were created
-  const createdPerms = await strapi.db
-    .query("plugin::users-permissions.permission")
-    .findMany({
-      where: { role: authenticatedRole.id },
-    });
-  console.log(
-    "Permissions for authenticated role:",
-    createdPerms.map((p) => p.action)
-  );
-
-  // Create test user
+  // Create user 1
   await strapi.plugins["users-permissions"].services.user.add({
-    username: "testuser",
-    email: "test@test.com",
+    username: "testuser1",
+    email: "test1@test.com",
     password: "password123",
     confirmed: true,
     blocked: false,
@@ -74,16 +43,31 @@ beforeAll(async () => {
     role: authenticatedRole.id,
   });
 
-  // Login
-  const res = await request(getServer())
+  // Create user 2
+  await strapi.plugins["users-permissions"].services.user.add({
+    username: "testuser2",
+    email: "test2@test.com",
+    password: "password123",
+    confirmed: true,
+    blocked: false,
+    provider: "local",
+    role: authenticatedRole.id,
+  });
+
+  // Login user 1
+  const res1 = await request(getServer())
     .post("/api/auth/local")
-    .send({ identifier: "test@test.com", password: "password123" });
+    .send({ identifier: "test1@test.com", password: "password123" });
+  jwt = res1.body.jwt;
 
-  jwt = res.body.jwt;
+  // Login user 2
+  const res2 = await request(getServer())
+    .post("/api/auth/local")
+    .send({ identifier: "test2@test.com", password: "password123" });
+  jwt2 = res2.body.jwt;
 
-  if (!jwt) {
-    console.log("Login failed:", res.body);
-    throw new Error("Failed to get JWT token");
+  if (!jwt || !jwt2) {
+    throw new Error("Failed to get JWT tokens");
   }
 }, 30000);
 
@@ -91,31 +75,191 @@ afterAll(async () => {
   await cleanupStrapi();
 }, 30000);
 
+// Helper - now much simpler with bidirectional relations!
+async function createRecording(followerIdNum: number, withSource = false) {
+  const recording = await strapi.db.query("api::recording.recording").create({
+    data: {
+      follower: followerIdNum,
+      publishedAt: new Date(),
+    },
+  });
+
+  if (withSource) {
+    const source = await strapi.db.query("api::source.source").create({
+      data: {
+        path: "https://example.com/video.mp4",
+        recording: recording.id,
+        publishedAt: new Date(),
+      },
+    });
+  }
+
+  // Verify the relation was created
+  const verify = await strapi.db.query("api::recording.recording").findOne({
+    where: { id: recording.id },
+    populate: ["follower", "sources"],
+  });
+
+  return recording;
+}
+
 describe("Follower API", () => {
-  it("should follow a user", async () => {
-    const res = await request(getServer())
-      .post("/api/followers/follow")
-      .set("Authorization", `Bearer ${jwt}`)
-      .send({ username: "tiktoker", slug: "tiktoker", type: "tiktok" })
-      .expect(200);
+  describe("Follow", () => {
+    it("should follow a user", async () => {
+      const res = await request(getServer())
+        .post("/api/followers/follow")
+        .set("Authorization", `Bearer ${jwt}`)
+        .send({ username: "tiktoker", slug: "tiktoker", type: "tiktok" })
+        .expect(200);
 
-    expect(res.body.data).toHaveProperty("id");
-    followerId = res.body.data.id;
+      expect(res.body.data).toHaveProperty("id");
+      expect(res.body.data).toHaveProperty("documentId");
+      followerId = res.body.data.id;
+    });
+
+    it("should not duplicate when following same user twice", async () => {
+      const res = await request(getServer())
+        .post("/api/followers/follow")
+        .set("Authorization", `Bearer ${jwt}`)
+        .send({ username: "tiktoker", slug: "tiktoker", type: "tiktok" })
+        .expect(200);
+
+      expect(res.body.data.id).toBe(followerId);
+    });
   });
 
-  it("should get my followers", async () => {
-    const res = await request(getServer())
-      .get("/api/followers/for-user")
-      .set("Authorization", `Bearer ${jwt}`)
-      .expect(200);
+  describe("Get Followers (findForUser)", () => {
+    it("should return empty array when no followers", async () => {
+      const res = await request(getServer())
+        .get("/api/followers/for-user")
+        .set("Authorization", `Bearer ${jwt2}`)
+        .expect(200);
 
-    expect(res.body.data.some((f: any) => f.id === followerId)).toBe(true);
+      expect(res.body.data).toEqual([]);
+    });
+
+    it("should get my followers with correct fields", async () => {
+      const res = await request(getServer())
+        .get("/api/followers/for-user")
+        .set("Authorization", `Bearer ${jwt}`)
+        .expect(200);
+
+      expect(res.body.data).toHaveLength(1);
+      expect(res.body.data[0]).toHaveProperty("id");
+      expect(res.body.data[0]).toHaveProperty("username", "tiktoker");
+      expect(res.body.data[0]).toHaveProperty("slug", "tiktoker");
+      expect(res.body.data[0]).toHaveProperty("totalRecordings");
+      expect(res.body.data[0]).toHaveProperty("recordings");
+    });
+
+    it("should return totalRecordings as 0 when no recordings", async () => {
+      const res = await request(getServer())
+        .get("/api/followers/for-user")
+        .set("Authorization", `Bearer ${jwt}`)
+        .expect(200);
+
+      expect(res.body.data[0].totalRecordings).toBe(0);
+      expect(res.body.data[0].recordings).toEqual([]);
+    });
+
+    it("should return recordings with sources", async () => {
+      await createRecording(followerId, true);
+
+      const res = await request(getServer())
+        .get("/api/followers/for-user")
+        .set("Authorization", `Bearer ${jwt}`)
+        .expect(200);
+
+      expect(res.body.data[0].totalRecordings).toBe(1);
+      expect(res.body.data[0].recordings).toHaveLength(1);
+      expect(res.body.data[0].recordings[0]).toHaveProperty("id");
+      expect(res.body.data[0].recordings[0].sources).toHaveLength(1);
+      expect(res.body.data[0].recordings[0].sources[0]).toHaveProperty(
+        "path",
+        "https://example.com/video.mp4"
+      );
+    });
+
+    it("should return max 5 recordings even if more exist", async () => {
+      // Create 6 more recordings (7 total)
+      for (let i = 0; i < 6; i++) {
+        await createRecording(followerId);
+      }
+
+      const res = await request(getServer())
+        .get("/api/followers/for-user")
+        .set("Authorization", `Bearer ${jwt}`)
+        .expect(200);
+
+      expect(res.body.data[0].totalRecordings).toBe(7);
+      expect(res.body.data[0].recordings).toHaveLength(5);
+    });
+
+    it("should return recordings sorted by createdAt desc (newest first)", async () => {
+      const res = await request(getServer())
+        .get("/api/followers/for-user")
+        .set("Authorization", `Bearer ${jwt}`)
+        .expect(200);
+
+      const recordings = res.body.data[0].recordings;
+
+      for (let i = 0; i < recordings.length - 1; i++) {
+        const current = new Date(recordings[i].createdAt);
+        const next = new Date(recordings[i + 1].createdAt);
+        expect(current.getTime()).toBeGreaterThanOrEqual(next.getTime());
+      }
+    });
+
+    it("should NOT see other users followers or recordings", async () => {
+      const res1 = await request(getServer())
+        .post("/api/followers/follow")
+        .set("Authorization", `Bearer ${jwt2}`)
+        .send({
+          username: "other_tiktoker",
+          slug: "other_tiktoker",
+          type: "tiktok",
+        })
+        .expect(200);
+
+      const otherFollowerId = res1.body.data.id;
+
+      await createRecording(otherFollowerId);
+
+      const res2 = await request(getServer())
+        .get("/api/followers/for-user")
+        .set("Authorization", `Bearer ${jwt}`)
+        .expect(200);
+
+      expect(res2.body.data).toHaveLength(1);
+      expect(res2.body.data[0].username).toBe("tiktoker");
+      expect(
+        res2.body.data.some((f: any) => f.username === "other_tiktoker")
+      ).toBe(false);
+    });
   });
 
-  it("should unfollow", async () => {
-    await request(getServer())
-      .delete(`/api/followers/unfollow/${followerId}`)
-      .set("Authorization", `Bearer ${jwt}`)
-      .expect(200);
+  describe("Unfollow", () => {
+    it("should unfollow", async () => {
+      await request(getServer())
+        .delete(`/api/followers/unfollow/${followerId}`)
+        .set("Authorization", `Bearer ${jwt}`)
+        .expect(200);
+    });
+
+    it("should NOT have follower after unfollow", async () => {
+      const res = await request(getServer())
+        .get("/api/followers/for-user")
+        .set("Authorization", `Bearer ${jwt}`)
+        .expect(200);
+
+      expect(res.body.data).toHaveLength(0);
+    });
+
+    it("should NOT be able to unfollow someone you dont follow", async () => {
+      await request(getServer())
+        .delete(`/api/followers/unfollow/99999`)
+        .set("Authorization", `Bearer ${jwt}`)
+        .expect(404);
+    });
   });
 });

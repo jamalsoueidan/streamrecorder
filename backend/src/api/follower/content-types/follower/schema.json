@@ -25,11 +25,6 @@
         "twitch"
       ]
     },
-    "recordings": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::recording.recording"
-    },
     "protected": {
       "type": "boolean"
     },
@@ -39,11 +34,11 @@
       "target": "plugin::users-permissions.user",
       "inversedBy": "followers"
     },
-    "recording": {
+    "recordings": {
       "type": "relation",
-      "relation": "oneToOne",
+      "relation": "oneToMany",
       "target": "api::recording.recording",
-      "inversedBy": "follower"
+      "mappedBy": "follower"
     }
   }
 }

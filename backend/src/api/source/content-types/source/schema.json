@@ -51,6 +51,12 @@
       "enum": [
         "video/mp4"
       ]
+    },
+    "recording": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::recording.recording",
+      "inversedBy": "sources"
     }
   }
 }

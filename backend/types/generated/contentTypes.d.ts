@@ -452,10 +452,6 @@ export interface ApiFollowerFollower extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     protected: Schema.Attribute.Boolean;
     publishedAt: Schema.Attribute.DateTime;
-    recording: Schema.Attribute.Relation<
-      'oneToOne',
-      'api::recording.recording'
-    >;
     recordings: Schema.Attribute.Relation<
       'oneToMany',
       'api::recording.recording'
@@ -487,7 +483,7 @@ export interface ApiRecordingRecording extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    follower: Schema.Attribute.Relation<'oneToOne', 'api::follower.follower'>;
+    follower: Schema.Attribute.Relation<'manyToOne', 'api::follower.follower'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -528,6 +524,10 @@ export interface ApiSourceSource extends Struct.CollectionTypeSchema {
     path: Schema.Attribute.String;
     playlist: Schema.Attribute.Text;
     publishedAt: Schema.Attribute.DateTime;
+    recording: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::recording.recording'
+    >;
     size: Schema.Attribute.String;
     sizeBytes: Schema.Attribute.BigInteger;
     state: Schema.Attribute.Enumeration<['recording', 'done', 'failed']>;
