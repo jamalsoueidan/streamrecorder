@@ -3,7 +3,10 @@ import Image from "next/image";
 import styles from "./page.module.css";
 
 async function getSources() {
-  const res = await fetch("http://localhost:1337/api/sources");
+  const strapiUrl =
+    process.env.NEXT_PUBLIC_STRAPI_URL || "http://localhost:1337";
+
+  const res = await fetch(`${strapiUrl}/api/sources`);
   if (!res.ok) {
     throw new Error("Failed to fetch sources");
   }
@@ -13,6 +16,7 @@ async function getSources() {
 export default async function Home() {
   const data: SourceListResponse = await getSources();
 
+  console.log(data);
   return (
     <div className={styles.page}>
       <main className={styles.main}>
