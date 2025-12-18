@@ -33,6 +33,21 @@
                     └───────────────────┘
 ```
 
+## Auto Deploy (Coolify)
+
+1. In **Coolify** → Your App → Webhooks:
+
+   - Add a GitHub Webhook Secret
+   - Click Save
+
+2. In **GitHub** → Settings → Webhooks → Add webhook:
+   - Payload URL: `https://coolify.tiktokrecorder.com/webhooks/source/github/events/manual`
+   - Content type: `application/json`
+   - Secret: Same as Coolify
+   - Events: Just the push event
+
+Push to `main` → auto deploys.
+
 ## Deployment Environment (Coolify)
 
 1. **PostgreSQL Database** - Data storage
