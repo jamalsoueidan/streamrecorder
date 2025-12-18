@@ -11,15 +11,16 @@
   },
   "pluginOptions": {},
   "attributes": {
+    "follower": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::follower.follower",
+      "inversedBy": "recordings"
+    },
     "sources": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::source.source"
-    },
-    "follower": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::follower.follower",
+      "target": "api::source.source",
       "mappedBy": "recording"
     }
   }

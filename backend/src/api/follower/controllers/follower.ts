@@ -14,12 +14,14 @@ export default factories.createCoreController(
         .documents("api::follower.follower")
         .findFirst({
           filters: { slug },
+          status: "published",
         });
 
       // Create if doesn't exist
       if (!follower) {
         follower = await strapi.documents("api::follower.follower").create({
           data: { username, slug, type },
+          status: "published",
         });
       }
 
@@ -40,12 +42,29 @@ export default factories.createCoreController(
       if (!user) return ctx.unauthorized();
 
       const { id } = ctx.params;
+      const followerId = Number(id);
+
+      // Get user with their followers
+      const fullUser = await strapi
+        .documents("plugin::users-permissions.user")
+        .findOne({
+          documentId: user.documentId,
+          status: "published",
+          populate: { followers: { fields: ["id"] } },
+        });
+
+      // Check if user actually follows this follower
+      const isFollowing = fullUser.followers?.some((f) => f.id === followerId);
+
+      if (!isFollowing) {
+        return ctx.notFound("You are not following this account");
+      }
 
       await strapi.documents("plugin::users-permissions.user").update({
         documentId: user.documentId,
         data: {
           followers: {
-            disconnect: [{ id: Number(id) }],
+            disconnect: [{ id: followerId }],
           },
         },
       });
@@ -66,6 +85,7 @@ export default factories.createCoreController(
               fields: ["id", "username", "slug"],
             },
           },
+          status: "published",
         });
 
       if (!fullUser?.followers || fullUser.followers.length === 0) {
@@ -83,6 +103,7 @@ export default factories.createCoreController(
                   id: { $eq: follower.id },
                 },
               },
+              status: "published",
             });
 
           // Get latest 5 recordings
@@ -94,6 +115,7 @@ export default factories.createCoreController(
                   id: { $eq: follower.id },
                 },
               },
+              status: "published",
               populate: {
                 sources: {},
               },
