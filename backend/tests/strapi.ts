@@ -1,11 +1,13 @@
 import type { Core } from "@strapi/strapi";
 import { createStrapi } from "@strapi/strapi";
+import fs from "fs";
 import path from "path";
 import { Client } from "pg";
 
 let instance: Core.Strapi | null = null;
 
 const TEST_DB_NAME = "streamrecorder_test";
+const isCI = process.env.CI === "true";
 
 // Set test environment
 process.env.NODE_ENV = "test";
@@ -16,24 +18,43 @@ process.env.TRANSFER_TOKEN_SALT = "test-transfer-token-salt";
 process.env.JWT_SECRET = "test-jwt-secret";
 
 async function createTestDatabase() {
+  if (isCI) {
+    // SQLite in CI - ensure .tmp directory exists
+    const tmpDir = path.resolve(__dirname, "..", ".tmp");
+    if (!fs.existsSync(tmpDir)) {
+      fs.mkdirSync(tmpDir, { recursive: true });
+    }
+    const dbPath = path.resolve(tmpDir, "test.db");
+    if (fs.existsSync(dbPath)) {
+      fs.unlinkSync(dbPath);
+    }
+    return;
+  }
+
+  // PostgreSQL locally
   const client = new Client({
     host: process.env.DATABASE_HOST || "localhost",
     port: Number(process.env.DATABASE_PORT) || 5432,
     user: process.env.DATABASE_USERNAME || "postgres",
     password: process.env.DATABASE_PASSWORD || "postgres",
-    database: "postgres", // Connect to default database
+    database: "postgres",
   });
 
   await client.connect();
-
-  // Drop if exists, then create fresh
   await client.query(`DROP DATABASE IF EXISTS ${TEST_DB_NAME}`);
   await client.query(`CREATE DATABASE ${TEST_DB_NAME}`);
-
   await client.end();
 }
 
 async function dropTestDatabase() {
+  if (isCI) {
+    const dbPath = path.resolve(__dirname, "..", ".tmp", "test.db");
+    if (fs.existsSync(dbPath)) {
+      fs.unlinkSync(dbPath);
+    }
+    return;
+  }
+
   const client = new Client({
     host: process.env.DATABASE_HOST || "localhost",
     port: Number(process.env.DATABASE_PORT) || 5432,
@@ -49,7 +70,6 @@ async function dropTestDatabase() {
 
 export async function setupStrapi(): Promise<Core.Strapi> {
   if (!instance) {
-    // Create fresh test database
     await createTestDatabase();
 
     instance = await createStrapi({
@@ -75,7 +95,5 @@ export async function cleanupStrapi(): Promise<void> {
   await instance.destroy();
 
   instance = null;
-
-  // Drop test database
   await dropTestDatabase();
 }
