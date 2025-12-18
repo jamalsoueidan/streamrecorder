@@ -456,12 +456,14 @@ export interface ApiFollowerFollower extends Struct.CollectionTypeSchema {
       'oneToMany',
       'api::recording.recording'
     >;
-    slug: Schema.Attribute.UID<'username'>;
-    type: Schema.Attribute.Enumeration<['tiktok', 'twitch']>;
+    slug: Schema.Attribute.UID<'username'> & Schema.Attribute.Required;
+    type: Schema.Attribute.Enumeration<['tiktok', 'twitch']> &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'tiktok'>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    username: Schema.Attribute.String;
+    username: Schema.Attribute.String & Schema.Attribute.Required;
     users: Schema.Attribute.Relation<
       'manyToMany',
       'plugin::users-permissions.user'

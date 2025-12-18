@@ -20,11 +20,11 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-12-18T16:07:50.633Z"
+    "x-generation-date": "2025-12-18T17:05:06.675Z"
   },
   "servers": [
     {
-      "url": "http://0.0.0.0:1337/api",
+      "url": "http://localhost:1337/api",
       "description": "Development server"
     }
   ],
@@ -3003,7 +3003,7 @@
         "tags": [
           "Follower"
         ],
-        "summary": "Get followers with recordings for logged in user",
+        "summary": "Get followers for logged in user",
         "security": [
           {
             "bearerAuth": []
@@ -3016,8 +3016,7 @@
             "schema": {
               "type": "integer",
               "default": 1
-            },
-            "description": "Page number"
+            }
           },
           {
             "name": "pageSize",
@@ -3025,8 +3024,7 @@
             "schema": {
               "type": "integer",
               "default": 20
-            },
-            "description": "Number of items per page"
+            }
           }
         ],
         "responses": {
@@ -3035,7 +3033,18 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/FollowersWithRecordingsResponse"
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/FollowerWithCount"
+                      }
+                    },
+                    "meta": {
+                      "$ref": "#/components/schemas/FollowerListResponse/properties/meta"
+                    }
+                  }
                 }
               }
             }
@@ -3051,7 +3060,7 @@
         "tags": [
           "Follower"
         ],
-        "summary": "Get followers that the user is not following",
+        "summary": "Get followers user is not following",
         "security": [
           {
             "bearerAuth": []
@@ -3064,8 +3073,7 @@
             "schema": {
               "type": "integer",
               "default": 1
-            },
-            "description": "Page number"
+            }
           },
           {
             "name": "pageSize",
@@ -3073,8 +3081,7 @@
             "schema": {
               "type": "integer",
               "default": 20
-            },
-            "description": "Number of items per page"
+            }
           }
         ],
         "responses": {
@@ -3083,7 +3090,18 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/FollowersWithRecordingsResponse"
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/FollowerWithCount"
+                      }
+                    },
+                    "meta": {
+                      "$ref": "#/components/schemas/FollowerListResponse/properties/meta"
+                    }
+                  }
                 }
               }
             }
@@ -3099,10 +3117,28 @@
         "tags": [
           "Recording"
         ],
-        "summary": "Get recordings from user's followed accounts",
+        "summary": "Get recordings from followed accounts",
         "security": [
           {
             "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "default": 1
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "default": 20
+            }
           }
         ],
         "responses": {
@@ -3111,15 +3147,53 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object",
-                  "properties": {
-                    "data": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/RecordingWithSources"
-                      }
-                    }
-                  }
+                  "$ref": "#/components/schemas/RecordingWithSourcesListResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/recordings/not-following": {
+      "get": {
+        "tags": [
+          "Recording"
+        ],
+        "summary": "Get recordings from accounts user is not following",
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "default": 1
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "default": 20
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RecordingWithSourcesListResponse"
                 }
               }
             }
@@ -3136,7 +3210,6 @@
           "Follower"
         ],
         "summary": "Follow a new account",
-        "description": "Creates follower if it doesn't exist and connects to current user",
         "security": [
           {
             "bearerAuth": []
@@ -3147,7 +3220,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/FollowRequest"
+                "$ref": "#/components/schemas/FollowerRequest"
               }
             }
           }
@@ -3180,7 +3253,6 @@
           "Follower"
         ],
         "summary": "Unfollow an account",
-        "description": "Removes relation between user and follower (does not delete follower)",
         "security": [
           {
             "bearerAuth": []
@@ -3193,8 +3265,7 @@
             "required": true,
             "schema": {
               "type": "integer"
-            },
-            "description": "Follower ID to unfollow"
+            }
           }
         ],
         "responses": {
@@ -3203,13 +3274,21 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/SuccessResponse"
+                  "type": "object",
+                  "properties": {
+                    "success": {
+                      "type": "boolean"
+                    }
+                  }
                 }
               }
             }
           },
           "401": {
             "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not found"
           }
         }
       }
@@ -3270,6 +3349,11 @@
         ],
         "properties": {
           "data": {
+            "required": [
+              "slug",
+              "username",
+              "type"
+            ],
             "type": "object",
             "properties": {
               "slug": {
@@ -3374,6 +3458,11 @@
       },
       "Follower": {
         "type": "object",
+        "required": [
+          "slug",
+          "username",
+          "type"
+        ],
         "properties": {
           "id": {
             "type": "number"
@@ -6429,60 +6518,7 @@
           }
         }
       },
-      "FollowRequest": {
-        "type": "object",
-        "required": [
-          "username",
-          "type"
-        ],
-        "properties": {
-          "username": {
-            "type": "string"
-          },
-          "slug": {
-            "type": "string"
-          },
-          "type": {
-            "type": "string",
-            "enum": [
-              "tiktok",
-              "instagram",
-              "youtube"
-            ]
-          }
-        }
-      },
-      "SuccessResponse": {
-        "type": "object",
-        "properties": {
-          "success": {
-            "type": "boolean"
-          }
-        }
-      },
-      "PaginationMeta": {
-        "type": "object",
-        "properties": {
-          "pagination": {
-            "type": "object",
-            "properties": {
-              "page": {
-                "type": "integer"
-              },
-              "pageSize": {
-                "type": "integer"
-              },
-              "pageCount": {
-                "type": "integer"
-              },
-              "total": {
-                "type": "integer"
-              }
-            }
-          }
-        }
-      },
-      "FollowerWithRecordings": {
+      "FollowerWithCount": {
         "allOf": [
           {
             "$ref": "#/components/schemas/Follower"
@@ -6492,48 +6528,56 @@
             "properties": {
               "totalRecordings": {
                 "type": "integer"
-              },
-              "recordings": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/Recording"
-                }
               }
             }
           }
         ]
       },
-      "FollowersWithRecordingsResponse": {
+      "RecordingWithSources": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "documentId": {
+            "type": "string"
+          },
+          "follower": {
+            "$ref": "#/components/schemas/Follower"
+          },
+          "sources": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Source"
+            }
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "publishedAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "RecordingWithSourcesListResponse": {
         "type": "object",
         "properties": {
           "data": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/FollowerWithRecordings"
+              "$ref": "#/components/schemas/RecordingWithSources"
             }
           },
           "meta": {
-            "$ref": "#/components/schemas/PaginationMeta"
+            "$ref": "#/components/schemas/RecordingListResponse/properties/meta"
           }
         }
-      },
-      "RecordingWithSources": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Recording"
-          },
-          {
-            "type": "object",
-            "properties": {
-              "sources": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/Source"
-                }
-              }
-            }
-          }
-        ]
       }
     },
     "requestBodies": {
