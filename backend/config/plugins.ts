@@ -4,7 +4,7 @@ export default () => ({
     config: {
       "x-strapi-config": {
         mutateDocumentation: (draft) => {
-          // Fix populate parameter type for all GET endpoints to allow string, array, or object
+          // Fix populate parameter type for all GET endpoints
           Object.keys(draft.paths).forEach((path) => {
             const get = draft.paths[path]?.get;
             if (get?.parameters) {
@@ -59,7 +59,29 @@ export default () => ({
             ],
           };
 
-          // Endpoint: /api/followers/for-user
+          // Custom schema: Follow request body
+          draft.components.schemas.FollowRequest = {
+            type: "object",
+            required: ["username", "type"],
+            properties: {
+              username: { type: "string" },
+              slug: { type: "string" },
+              type: {
+                type: "string",
+                enum: ["tiktok", "instagram", "youtube"],
+              },
+            },
+          };
+
+          // Custom schema: Success response
+          draft.components.schemas.SuccessResponse = {
+            type: "object",
+            properties: {
+              success: { type: "boolean" },
+            },
+          };
+
+          // Endpoint: GET /followers/for-user
           draft.paths["/followers/for-user"] = {
             get: {
               tags: ["Follower"],
@@ -91,7 +113,7 @@ export default () => ({
             },
           };
 
-          // Endpoint: /api/recordings/for-user
+          // Endpoint: GET /recordings/for-user
           draft.paths["/recordings/for-user"] = {
             get: {
               tags: ["Recording"],
@@ -112,6 +134,84 @@ export default () => ({
                             },
                           },
                         },
+                      },
+                    },
+                  },
+                },
+                "401": {
+                  description: "Unauthorized",
+                },
+              },
+            },
+          };
+
+          // Endpoint: POST /followers/follow
+          draft.paths["/followers/follow"] = {
+            post: {
+              tags: ["Follower"],
+              summary: "Follow a new account",
+              description:
+                "Creates follower if it doesn't exist and connects to current user",
+              security: [{ bearerAuth: [] }],
+              requestBody: {
+                required: true,
+                content: {
+                  "application/json": {
+                    schema: {
+                      $ref: "#/components/schemas/FollowRequest",
+                    },
+                  },
+                },
+              },
+              responses: {
+                "200": {
+                  description: "Success",
+                  content: {
+                    "application/json": {
+                      schema: {
+                        type: "object",
+                        properties: {
+                          data: {
+                            $ref: "#/components/schemas/Follower",
+                          },
+                        },
+                      },
+                    },
+                  },
+                },
+                "401": {
+                  description: "Unauthorized",
+                },
+              },
+            },
+          };
+
+          // Endpoint: DELETE /followers/unfollow/:id
+          draft.paths["/followers/unfollow/{id}"] = {
+            delete: {
+              tags: ["Follower"],
+              summary: "Unfollow an account",
+              description:
+                "Removes relation between user and follower (does not delete follower)",
+              security: [{ bearerAuth: [] }],
+              parameters: [
+                {
+                  name: "id",
+                  in: "path",
+                  required: true,
+                  schema: {
+                    type: "integer",
+                  },
+                  description: "Follower ID to unfollow",
+                },
+              ],
+              responses: {
+                "200": {
+                  description: "Success",
+                  content: {
+                    "application/json": {
+                      schema: {
+                        $ref: "#/components/schemas/SuccessResponse",
                       },
                     },
                   },

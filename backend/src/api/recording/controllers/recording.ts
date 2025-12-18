@@ -9,10 +9,7 @@ export default factories.createCoreController(
   ({ strapi }) => ({
     async findForUser(ctx) {
       const user = ctx.state.user;
-
-      if (!user) {
-        return ctx.unauthorized("You must be logged in");
-      }
+      if (!user) return ctx.unauthorized();
 
       // Get user with followers using document service
       const fullUser = await strapi

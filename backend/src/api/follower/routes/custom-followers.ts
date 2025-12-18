@@ -4,10 +4,16 @@ export default {
       method: "GET",
       path: "/followers/for-user",
       handler: "follower.findForUser",
-      config: {
-        policies: [],
-        middlewares: [],
-      },
+    },
+    {
+      method: "POST",
+      path: "/followers/follow",
+      handler: "follower.follow",
+    },
+    {
+      method: "DELETE",
+      path: "/followers/unfollow/:id",
+      handler: "follower.unfollow",
     },
   ],
 };

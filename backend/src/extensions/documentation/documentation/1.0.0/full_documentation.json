@@ -20,7 +20,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-12-18T04:16:23.867Z"
+    "x-generation-date": "2025-12-18T05:16:05.084Z"
   },
   "servers": [
     {
@@ -3069,6 +3069,90 @@
           }
         }
       }
+    },
+    "/followers/follow": {
+      "post": {
+        "tags": [
+          "Follower"
+        ],
+        "summary": "Follow a new account",
+        "description": "Creates follower if it doesn't exist and connects to current user",
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FollowRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "$ref": "#/components/schemas/Follower"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/followers/unfollow/{id}": {
+      "delete": {
+        "tags": [
+          "Follower"
+        ],
+        "summary": "Unfollow an account",
+        "description": "Removes relation between user and follower (does not delete follower)",
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            },
+            "description": "Follower ID to unfollow"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SuccessResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
     }
   },
   "components": {
@@ -5890,6 +5974,37 @@
             }
           }
         ]
+      },
+      "FollowRequest": {
+        "type": "object",
+        "required": [
+          "username",
+          "type"
+        ],
+        "properties": {
+          "username": {
+            "type": "string"
+          },
+          "slug": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "tiktok",
+              "instagram",
+              "youtube"
+            ]
+          }
+        }
+      },
+      "SuccessResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          }
+        }
       }
     },
     "requestBodies": {
