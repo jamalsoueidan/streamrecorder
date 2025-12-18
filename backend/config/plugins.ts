@@ -26,174 +26,35 @@ export default () => ({
             }
           });
 
-          // Custom schema: Follow request body
-          draft.components.schemas.FollowRequest = {
-            type: "object",
-            required: ["username", "type"],
-            properties: {
-              username: { type: "string" },
-              slug: { type: "string" },
-              type: {
-                type: "string",
-                enum: ["tiktok", "instagram", "youtube"],
-              },
-            },
-          };
-
-          // Custom schema: Success response
-          draft.components.schemas.SuccessResponse = {
-            type: "object",
-            properties: {
-              success: { type: "boolean" },
-            },
-          };
-
-          draft.components.schemas.PaginationMeta = {
-            type: "object",
-            properties: {
-              pagination: {
-                type: "object",
-                properties: {
-                  page: { type: "integer" },
-                  pageSize: { type: "integer" },
-                  pageCount: { type: "integer" },
-                  total: { type: "integer" },
-                },
-              },
-            },
-          };
-
-          // Custom schema: Follower with recordings
-          draft.components.schemas.FollowerWithRecordings = {
+          draft.components.schemas.FollowerWithCount = {
             allOf: [
               { $ref: "#/components/schemas/Follower" },
               {
                 type: "object",
                 properties: {
                   totalRecordings: { type: "integer" },
-                  recordings: {
-                    type: "array",
-                    items: { $ref: "#/components/schemas/Recording" },
-                  },
                 },
               },
             ],
           };
 
-          // Response schema for paginated followers
-          draft.components.schemas.FollowersWithRecordingsResponse = {
-            type: "object",
-            properties: {
-              data: {
-                type: "array",
-                items: {
-                  $ref: "#/components/schemas/FollowerWithRecordings",
-                },
-              },
-              meta: {
-                $ref: "#/components/schemas/PaginationMeta",
-              },
-            },
-          };
-
-          // Endpoint: GET /followers/for-user
           draft.paths["/followers/for-user"] = {
             get: {
               tags: ["Follower"],
-              summary: "Get followers with recordings for logged in user",
+              summary: "Get followers for logged in user",
               security: [{ bearerAuth: [] }],
               parameters: [
                 {
                   name: "page",
                   in: "query",
                   schema: { type: "integer", default: 1 },
-                  description: "Page number",
                 },
                 {
                   name: "pageSize",
                   in: "query",
                   schema: { type: "integer", default: 20 },
-                  description: "Number of items per page",
                 },
               ],
-              responses: {
-                "200": {
-                  description: "Success",
-                  content: {
-                    "application/json": {
-                      schema: {
-                        $ref: "#/components/schemas/FollowersWithRecordingsResponse",
-                      },
-                    },
-                  },
-                },
-                "401": {
-                  description: "Unauthorized",
-                },
-              },
-            },
-          };
-
-          // Endpoint: GET /followers/not-following
-          draft.paths["/followers/not-following"] = {
-            get: {
-              tags: ["Follower"],
-              summary: "Get followers that the user is not following",
-              security: [{ bearerAuth: [] }],
-              parameters: [
-                {
-                  name: "page",
-                  in: "query",
-                  schema: { type: "integer", default: 1 },
-                  description: "Page number",
-                },
-                {
-                  name: "pageSize",
-                  in: "query",
-                  schema: { type: "integer", default: 20 },
-                  description: "Number of items per page",
-                },
-              ],
-              responses: {
-                "200": {
-                  description: "Success",
-                  content: {
-                    "application/json": {
-                      schema: {
-                        $ref: "#/components/schemas/FollowersWithRecordingsResponse",
-                      },
-                    },
-                  },
-                },
-                "401": {
-                  description: "Unauthorized",
-                },
-              },
-            },
-          };
-
-          // Custom schema: Recording with sources
-          draft.components.schemas.RecordingWithSources = {
-            allOf: [
-              { $ref: "#/components/schemas/Recording" },
-              {
-                type: "object",
-                properties: {
-                  sources: {
-                    type: "array",
-                    items: { $ref: "#/components/schemas/Source" },
-                  },
-                },
-              },
-            ],
-          };
-
-          // Endpoint: GET /recordings/for-user
-          draft.paths["/recordings/for-user"] = {
-            get: {
-              tags: ["Recording"],
-              summary: "Get recordings from user's followed accounts",
-              security: [{ bearerAuth: [] }],
               responses: {
                 "200": {
                   description: "Success",
@@ -205,17 +66,161 @@ export default () => ({
                           data: {
                             type: "array",
                             items: {
-                              $ref: "#/components/schemas/RecordingWithSources",
+                              $ref: "#/components/schemas/FollowerWithCount",
                             },
+                          },
+                          meta: {
+                            $ref: "#/components/schemas/FollowerListResponse/properties/meta",
                           },
                         },
                       },
                     },
                   },
                 },
-                "401": {
-                  description: "Unauthorized",
+                "401": { description: "Unauthorized" },
+              },
+            },
+          };
+
+          // /followers/not-following - use FollowerWithCount
+          draft.paths["/followers/not-following"] = {
+            get: {
+              tags: ["Follower"],
+              summary: "Get followers user is not following",
+              security: [{ bearerAuth: [] }],
+              parameters: [
+                {
+                  name: "page",
+                  in: "query",
+                  schema: { type: "integer", default: 1 },
                 },
+                {
+                  name: "pageSize",
+                  in: "query",
+                  schema: { type: "integer", default: 20 },
+                },
+              ],
+              responses: {
+                "200": {
+                  description: "Success",
+                  content: {
+                    "application/json": {
+                      schema: {
+                        type: "object",
+                        properties: {
+                          data: {
+                            type: "array",
+                            items: {
+                              $ref: "#/components/schemas/FollowerWithCount",
+                            },
+                          },
+                          meta: {
+                            $ref: "#/components/schemas/FollowerListResponse/properties/meta",
+                          },
+                        },
+                      },
+                    },
+                  },
+                },
+                "401": { description: "Unauthorized" },
+              },
+            },
+          };
+
+          // Extend Recording with full Source
+          draft.components.schemas.RecordingWithSources = {
+            type: "object",
+            properties: {
+              id: { type: "integer" },
+              documentId: { type: "string" },
+              follower: { $ref: "#/components/schemas/Follower" },
+              sources: {
+                type: "array",
+                items: { $ref: "#/components/schemas/Source" },
+              },
+              createdAt: { type: "string", format: "date-time" },
+              updatedAt: { type: "string", format: "date-time" },
+              publishedAt: { type: "string", format: "date-time" },
+            },
+          };
+
+          draft.components.schemas.RecordingWithSourcesListResponse = {
+            type: "object",
+            properties: {
+              data: {
+                type: "array",
+                items: { $ref: "#/components/schemas/RecordingWithSources" },
+              },
+              meta: {
+                $ref: "#/components/schemas/RecordingListResponse/properties/meta",
+              },
+            },
+          };
+
+          // /recordings/for-user - use RecordingWithSourcesListResponse
+          draft.paths["/recordings/for-user"] = {
+            get: {
+              tags: ["Recording"],
+              summary: "Get recordings from followed accounts",
+              security: [{ bearerAuth: [] }],
+              parameters: [
+                {
+                  name: "page",
+                  in: "query",
+                  schema: { type: "integer", default: 1 },
+                },
+                {
+                  name: "pageSize",
+                  in: "query",
+                  schema: { type: "integer", default: 20 },
+                },
+              ],
+              responses: {
+                "200": {
+                  description: "Success",
+                  content: {
+                    "application/json": {
+                      schema: {
+                        $ref: "#/components/schemas/RecordingWithSourcesListResponse",
+                      },
+                    },
+                  },
+                },
+                "401": { description: "Unauthorized" },
+              },
+            },
+          };
+
+          // /recordings/not-following - use RecordingWithSourcesListResponse
+          draft.paths["/recordings/not-following"] = {
+            get: {
+              tags: ["Recording"],
+              summary: "Get recordings from accounts user is not following",
+              security: [{ bearerAuth: [] }],
+              parameters: [
+                {
+                  name: "page",
+                  in: "query",
+                  schema: { type: "integer", default: 1 },
+                },
+                {
+                  name: "pageSize",
+                  in: "query",
+                  schema: { type: "integer", default: 20 },
+                },
+              ],
+              responses: {
+                "200": {
+                  description: "Success",
+                  content: {
+                    "application/json": {
+                      schema: {
+                        $ref: "#/components/schemas/RecordingWithSourcesListResponse",
+                      },
+                    },
+                  },
+                },
+                "401": { description: "Unauthorized" },
               },
             },
           };
@@ -225,15 +230,13 @@ export default () => ({
             post: {
               tags: ["Follower"],
               summary: "Follow a new account",
-              description:
-                "Creates follower if it doesn't exist and connects to current user",
               security: [{ bearerAuth: [] }],
               requestBody: {
                 required: true,
                 content: {
                   "application/json": {
                     schema: {
-                      $ref: "#/components/schemas/FollowRequest",
+                      $ref: "#/components/schemas/FollowerRequest",
                     },
                   },
                 },
@@ -246,17 +249,13 @@ export default () => ({
                       schema: {
                         type: "object",
                         properties: {
-                          data: {
-                            $ref: "#/components/schemas/Follower",
-                          },
+                          data: { $ref: "#/components/schemas/Follower" },
                         },
                       },
                     },
                   },
                 },
-                "401": {
-                  description: "Unauthorized",
-                },
+                "401": { description: "Unauthorized" },
               },
             },
           };
@@ -266,18 +265,13 @@ export default () => ({
             delete: {
               tags: ["Follower"],
               summary: "Unfollow an account",
-              description:
-                "Removes relation between user and follower (does not delete follower)",
               security: [{ bearerAuth: [] }],
               parameters: [
                 {
                   name: "id",
                   in: "path",
                   required: true,
-                  schema: {
-                    type: "integer",
-                  },
-                  description: "Follower ID to unfollow",
+                  schema: { type: "integer" },
                 },
               ],
               responses: {
@@ -286,14 +280,16 @@ export default () => ({
                   content: {
                     "application/json": {
                       schema: {
-                        $ref: "#/components/schemas/SuccessResponse",
+                        type: "object",
+                        properties: {
+                          success: { type: "boolean" },
+                        },
                       },
                     },
                   },
                 },
-                "401": {
-                  description: "Unauthorized",
-                },
+                "401": { description: "Unauthorized" },
+                "404": { description: "Not found" },
               },
             },
           };

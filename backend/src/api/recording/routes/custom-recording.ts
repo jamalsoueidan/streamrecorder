@@ -4,10 +4,11 @@ export default {
       method: "GET",
       path: "/recordings/for-user",
       handler: "recording.findForUser",
-      config: {
-        policies: [],
-        middlewares: [],
-      },
+    },
+    {
+      method: "GET",
+      path: "/recordings/not-following",
+      handler: "recording.findNotFollowing",
     },
   ],
 };

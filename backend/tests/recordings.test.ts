@@ -23,6 +23,10 @@ beforeAll(async () => {
       action: "api::recording.recording.findForUser",
       role: authenticatedRole.id,
     },
+    {
+      action: "api::recording.recording.findNotUser",
+      role: authenticatedRole.id,
+    },
   ];
 
   for (const perm of permissionsToCreate) {

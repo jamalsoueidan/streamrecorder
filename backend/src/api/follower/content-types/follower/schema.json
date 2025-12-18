@@ -13,13 +13,17 @@
   "attributes": {
     "slug": {
       "type": "uid",
-      "targetField": "username"
+      "targetField": "username",
+      "required": true
     },
     "username": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "type": {
       "type": "enumeration",
+      "required": true,
+      "default": "tiktok",
       "enum": [
         "tiktok",
         "twitch"
