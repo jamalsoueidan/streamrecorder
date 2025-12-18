@@ -22,6 +22,7 @@ export default factories.createCoreController(
               fields: ["id"],
             },
           },
+          status: "published",
         });
 
       const followers = fullUser?.followers;
@@ -45,6 +46,7 @@ export default factories.createCoreController(
           populate: ["sources", "follower"],
           sort: { createdAt: "desc" },
           limit: 20,
+          status: "published",
         });
 
       return { data: recordings };
