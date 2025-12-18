@@ -1010,6 +1010,16 @@ export type RecordingWithSources = Recording & {
   sources?: Source[];
 };
 
+export interface FollowRequest {
+  username: string;
+  slug?: string;
+  type: FollowRequestTypeEnum;
+}
+
+export interface SuccessResponse {
+  success?: boolean;
+}
+
 export enum FollowerRequestTypeEnum {
   Tiktok = "tiktok",
   Twitch = "twitch",
@@ -1078,6 +1088,12 @@ export enum SourceStateEnum1 {
 
 export enum SourceTypeEnum1 {
   VideoMp4 = "video/mp4",
+}
+
+export enum FollowRequestTypeEnum {
+  Tiktok = "tiktok",
+  Instagram = "instagram",
+  Youtube = "youtube",
 }
 
 export interface GetFollowersParams {
@@ -1446,6 +1462,17 @@ export interface ForUserListResult {
   data?: RecordingWithSources[];
 }
 
+export interface FollowCreateData {
+  data?: Follower;
+}
+
+export interface UnfollowDeleteParams {
+  /** Follower ID to unfollow */
+  id: number;
+}
+
+export type UnfollowDeleteData = SuccessResponse;
+
 export namespace Follower {
   /**
    * No description
@@ -1563,6 +1590,41 @@ export namespace Follower {
     export type RequestBody = never;
     export type RequestHeaders = {};
     export type ResponseBody = ForUserListData;
+  }
+
+  /**
+   * @description Creates follower if it doesn't exist and connects to current user
+   * @tags Follower
+   * @name FollowCreate
+   * @summary Follow a new account
+   * @request POST:/followers/follow
+   * @secure
+   */
+  export namespace FollowCreate {
+    export type RequestParams = {};
+    export type RequestQuery = {};
+    export type RequestBody = FollowRequest;
+    export type RequestHeaders = {};
+    export type ResponseBody = FollowCreateData;
+  }
+
+  /**
+   * @description Removes relation between user and follower (does not delete follower)
+   * @tags Follower
+   * @name UnfollowDelete
+   * @summary Unfollow an account
+   * @request DELETE:/followers/unfollow/{id}
+   * @secure
+   */
+  export namespace UnfollowDelete {
+    export type RequestParams = {
+      /** Follower ID to unfollow */
+      id: number;
+    };
+    export type RequestQuery = {};
+    export type RequestBody = never;
+    export type RequestHeaders = {};
+    export type ResponseBody = UnfollowDeleteData;
   }
 }
 
@@ -2573,6 +2635,47 @@ export class Api<
       this.request<ForUserListData, void>({
         path: `/followers/for-user`,
         method: "GET",
+        secure: true,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * @description Creates follower if it doesn't exist and connects to current user
+     *
+     * @tags Follower
+     * @name FollowCreate
+     * @summary Follow a new account
+     * @request POST:/followers/follow
+     * @secure
+     */
+    followCreate: (data: FollowRequest, params: RequestParams = {}) =>
+      this.request<FollowCreateData, void>({
+        path: `/followers/follow`,
+        method: "POST",
+        body: data,
+        secure: true,
+        type: ContentType.Json,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * @description Removes relation between user and follower (does not delete follower)
+     *
+     * @tags Follower
+     * @name UnfollowDelete
+     * @summary Unfollow an account
+     * @request DELETE:/followers/unfollow/{id}
+     * @secure
+     */
+    unfollowDelete: (
+      { id, ...query }: UnfollowDeleteParams,
+      params: RequestParams = {},
+    ) =>
+      this.request<UnfollowDeleteData, void>({
+        path: `/followers/unfollow/${id}`,
+        method: "DELETE",
         secure: true,
         format: "json",
         ...params,
