@@ -20,11 +20,11 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-12-18T15:24:17.057Z"
+    "x-generation-date": "2025-12-18T16:07:50.633Z"
   },
   "servers": [
     {
-      "url": "http://localhost:1337/api",
+      "url": "http://0.0.0.0:1337/api",
       "description": "Development server"
     }
   ],
@@ -3009,21 +3009,81 @@
             "bearerAuth": []
           }
         ],
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "default": 1
+            },
+            "description": "Page number"
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "default": 20
+            },
+            "description": "Number of items per page"
+          }
+        ],
         "responses": {
           "200": {
             "description": "Success",
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object",
-                  "properties": {
-                    "data": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/FollowerWithRecordings"
-                      }
-                    }
-                  }
+                  "$ref": "#/components/schemas/FollowersWithRecordingsResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/followers/not-following": {
+      "get": {
+        "tags": [
+          "Follower"
+        ],
+        "summary": "Get followers that the user is not following",
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "default": 1
+            },
+            "description": "Page number"
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "default": 20
+            },
+            "description": "Number of items per page"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FollowersWithRecordingsResponse"
                 }
               }
             }
@@ -6369,45 +6429,6 @@
           }
         }
       },
-      "FollowerWithRecordings": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Follower"
-          },
-          {
-            "type": "object",
-            "properties": {
-              "totalRecordings": {
-                "type": "integer"
-              },
-              "recordings": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/Recording"
-                }
-              }
-            }
-          }
-        ]
-      },
-      "RecordingWithSources": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Recording"
-          },
-          {
-            "type": "object",
-            "properties": {
-              "sources": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/Source"
-                }
-              }
-            }
-          }
-        ]
-      },
       "FollowRequest": {
         "type": "object",
         "required": [
@@ -6438,6 +6459,81 @@
             "type": "boolean"
           }
         }
+      },
+      "PaginationMeta": {
+        "type": "object",
+        "properties": {
+          "pagination": {
+            "type": "object",
+            "properties": {
+              "page": {
+                "type": "integer"
+              },
+              "pageSize": {
+                "type": "integer"
+              },
+              "pageCount": {
+                "type": "integer"
+              },
+              "total": {
+                "type": "integer"
+              }
+            }
+          }
+        }
+      },
+      "FollowerWithRecordings": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Follower"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "totalRecordings": {
+                "type": "integer"
+              },
+              "recordings": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Recording"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "FollowersWithRecordingsResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FollowerWithRecordings"
+            }
+          },
+          "meta": {
+            "$ref": "#/components/schemas/PaginationMeta"
+          }
+        }
+      },
+      "RecordingWithSources": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Recording"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "sources": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Source"
+                }
+              }
+            }
+          }
+        ]
       }
     },
     "requestBodies": {

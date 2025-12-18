@@ -26,39 +26,6 @@ export default () => ({
             }
           });
 
-          // Custom schema: Follower with recordings
-          draft.components.schemas.FollowerWithRecordings = {
-            allOf: [
-              { $ref: "#/components/schemas/Follower" },
-              {
-                type: "object",
-                properties: {
-                  totalRecordings: { type: "integer" },
-                  recordings: {
-                    type: "array",
-                    items: { $ref: "#/components/schemas/Recording" },
-                  },
-                },
-              },
-            ],
-          };
-
-          // Custom schema: Recording with sources
-          draft.components.schemas.RecordingWithSources = {
-            allOf: [
-              { $ref: "#/components/schemas/Recording" },
-              {
-                type: "object",
-                properties: {
-                  sources: {
-                    type: "array",
-                    items: { $ref: "#/components/schemas/Source" },
-                  },
-                },
-              },
-            ],
-          };
-
           // Custom schema: Follow request body
           draft.components.schemas.FollowRequest = {
             type: "object",
@@ -81,27 +48,81 @@ export default () => ({
             },
           };
 
+          draft.components.schemas.PaginationMeta = {
+            type: "object",
+            properties: {
+              pagination: {
+                type: "object",
+                properties: {
+                  page: { type: "integer" },
+                  pageSize: { type: "integer" },
+                  pageCount: { type: "integer" },
+                  total: { type: "integer" },
+                },
+              },
+            },
+          };
+
+          // Custom schema: Follower with recordings
+          draft.components.schemas.FollowerWithRecordings = {
+            allOf: [
+              { $ref: "#/components/schemas/Follower" },
+              {
+                type: "object",
+                properties: {
+                  totalRecordings: { type: "integer" },
+                  recordings: {
+                    type: "array",
+                    items: { $ref: "#/components/schemas/Recording" },
+                  },
+                },
+              },
+            ],
+          };
+
+          // Response schema for paginated followers
+          draft.components.schemas.FollowersWithRecordingsResponse = {
+            type: "object",
+            properties: {
+              data: {
+                type: "array",
+                items: {
+                  $ref: "#/components/schemas/FollowerWithRecordings",
+                },
+              },
+              meta: {
+                $ref: "#/components/schemas/PaginationMeta",
+              },
+            },
+          };
+
           // Endpoint: GET /followers/for-user
           draft.paths["/followers/for-user"] = {
             get: {
               tags: ["Follower"],
               summary: "Get followers with recordings for logged in user",
               security: [{ bearerAuth: [] }],
+              parameters: [
+                {
+                  name: "page",
+                  in: "query",
+                  schema: { type: "integer", default: 1 },
+                  description: "Page number",
+                },
+                {
+                  name: "pageSize",
+                  in: "query",
+                  schema: { type: "integer", default: 20 },
+                  description: "Number of items per page",
+                },
+              ],
               responses: {
                 "200": {
                   description: "Success",
                   content: {
                     "application/json": {
                       schema: {
-                        type: "object",
-                        properties: {
-                          data: {
-                            type: "array",
-                            items: {
-                              $ref: "#/components/schemas/FollowerWithRecordings",
-                            },
-                          },
-                        },
+                        $ref: "#/components/schemas/FollowersWithRecordingsResponse",
                       },
                     },
                   },
@@ -111,6 +132,60 @@ export default () => ({
                 },
               },
             },
+          };
+
+          // Endpoint: GET /followers/not-following
+          draft.paths["/followers/not-following"] = {
+            get: {
+              tags: ["Follower"],
+              summary: "Get followers that the user is not following",
+              security: [{ bearerAuth: [] }],
+              parameters: [
+                {
+                  name: "page",
+                  in: "query",
+                  schema: { type: "integer", default: 1 },
+                  description: "Page number",
+                },
+                {
+                  name: "pageSize",
+                  in: "query",
+                  schema: { type: "integer", default: 20 },
+                  description: "Number of items per page",
+                },
+              ],
+              responses: {
+                "200": {
+                  description: "Success",
+                  content: {
+                    "application/json": {
+                      schema: {
+                        $ref: "#/components/schemas/FollowersWithRecordingsResponse",
+                      },
+                    },
+                  },
+                },
+                "401": {
+                  description: "Unauthorized",
+                },
+              },
+            },
+          };
+
+          // Custom schema: Recording with sources
+          draft.components.schemas.RecordingWithSources = {
+            allOf: [
+              { $ref: "#/components/schemas/Recording" },
+              {
+                type: "object",
+                properties: {
+                  sources: {
+                    type: "array",
+                    items: { $ref: "#/components/schemas/Source" },
+                  },
+                },
+              },
+            ],
           };
 
           // Endpoint: GET /recordings/for-user

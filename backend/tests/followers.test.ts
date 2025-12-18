@@ -22,6 +22,10 @@ beforeAll(async () => {
       action: "api::follower.follower.findForUser",
       role: authenticatedRole.id,
     },
+    {
+      action: "api::follower.follower.findNotFollowing",
+      role: authenticatedRole.id,
+    },
     { action: "api::follower.follower.follow", role: authenticatedRole.id },
     { action: "api::follower.follower.unfollow", role: authenticatedRole.id },
   ];
@@ -136,6 +140,8 @@ describe("Follower API", () => {
         .expect(200);
 
       expect(res.body.data).toEqual([]);
+      expect(res.body.meta).toHaveProperty("pagination");
+      expect(res.body.meta.pagination.total).toBe(0);
     });
 
     it("should get my followers with correct fields", async () => {
@@ -150,6 +156,7 @@ describe("Follower API", () => {
       expect(res.body.data[0]).toHaveProperty("slug", "tiktoker");
       expect(res.body.data[0]).toHaveProperty("totalRecordings");
       expect(res.body.data[0]).toHaveProperty("recordings");
+      expect(res.body.meta.pagination.total).toBe(1);
     });
 
     it("should return totalRecordings as 0 when no recordings", async () => {
@@ -236,6 +243,121 @@ describe("Follower API", () => {
         res2.body.data.some((f: any) => f.username === "other_tiktoker")
       ).toBe(false);
     });
+
+    it("should support pagination", async () => {
+      // User 1 follows multiple accounts
+      for (let i = 1; i <= 5; i++) {
+        await request(getServer())
+          .post("/api/followers/follow")
+          .set("Authorization", `Bearer ${jwt}`)
+          .send({
+            username: `streamer${i}`,
+            slug: `streamer${i}`,
+            type: "tiktok",
+          })
+          .expect(200);
+      }
+
+      // Get first page (pageSize=2)
+      const page1 = await request(getServer())
+        .get("/api/followers/for-user?page=1&pageSize=2")
+        .set("Authorization", `Bearer ${jwt}`)
+        .expect(200);
+
+      expect(page1.body.data).toHaveLength(2);
+      expect(page1.body.meta.pagination).toEqual({
+        page: 1,
+        pageSize: 2,
+        pageCount: 3, // 6 total (tiktoker + 5 new) / 2 = 3
+        total: 6,
+      });
+
+      // Get second page
+      const page2 = await request(getServer())
+        .get("/api/followers/for-user?page=2&pageSize=2")
+        .set("Authorization", `Bearer ${jwt}`)
+        .expect(200);
+
+      expect(page2.body.data).toHaveLength(2);
+      expect(page2.body.meta.pagination.page).toBe(2);
+
+      // Get last page
+      const page3 = await request(getServer())
+        .get("/api/followers/for-user?page=3&pageSize=2")
+        .set("Authorization", `Bearer ${jwt}`)
+        .expect(200);
+
+      expect(page3.body.data).toHaveLength(2);
+      expect(page3.body.meta.pagination.page).toBe(3);
+    });
+  });
+
+  describe("Get Not Following (findNotFollowing)", () => {
+    it("should return all followers when user follows no one", async () => {
+      // Create a new user who follows nobody
+      await strapi.plugins["users-permissions"].services.user.add({
+        username: "newuser",
+        email: "newuser@test.com",
+        password: "password123",
+        confirmed: true,
+        blocked: false,
+        provider: "local",
+        role: authenticatedRole.id,
+      });
+
+      const loginRes = await request(getServer())
+        .post("/api/auth/local")
+        .send({ identifier: "newuser@test.com", password: "password123" });
+
+      const newUserJwt = loginRes.body.jwt;
+
+      const res = await request(getServer())
+        .get("/api/followers/not-following")
+        .set("Authorization", `Bearer ${newUserJwt}`)
+        .expect(200);
+
+      // Should see all followers created in other tests
+      expect(res.body.data.length).toBeGreaterThan(0);
+      expect(res.body.meta).toHaveProperty("pagination");
+    });
+
+    it("should exclude followers user is already following", async () => {
+      const res = await request(getServer())
+        .get("/api/followers/not-following")
+        .set("Authorization", `Bearer ${jwt}`)
+        .expect(200);
+
+      // User 1 follows "tiktoker", so it should NOT be in the list
+      const followingTiktoker = res.body.data.some(
+        (f: any) => f.slug === "tiktoker"
+      );
+      expect(followingTiktoker).toBe(false);
+    });
+
+    it("should return followers with recordings", async () => {
+      const res = await request(getServer())
+        .get("/api/followers/not-following")
+        .set("Authorization", `Bearer ${jwt}`)
+        .expect(200);
+
+      if (res.body.data.length > 0) {
+        expect(res.body.data[0]).toHaveProperty("totalRecordings");
+        expect(res.body.data[0]).toHaveProperty("recordings");
+      }
+    });
+
+    it("should support pagination", async () => {
+      const res = await request(getServer())
+        .get("/api/followers/not-following?page=1&pageSize=2")
+        .set("Authorization", `Bearer ${jwt}`)
+        .expect(200);
+
+      expect(res.body.data.length).toBeLessThanOrEqual(2);
+      expect(res.body.meta.pagination).toHaveProperty("page", 1);
+      expect(res.body.meta.pagination).toHaveProperty("pageSize", 2);
+      expect(res.body.meta.pagination).toHaveProperty("pageCount");
+      expect(res.body.meta.pagination).toHaveProperty("total");
+    });
   });
 
   describe("Unfollow", () => {
@@ -246,13 +368,15 @@ describe("Follower API", () => {
         .expect(200);
     });
 
-    it("should NOT have follower after unfollow", async () => {
+    it("should NOT have tiktoker after unfollow", async () => {
       const res = await request(getServer())
         .get("/api/followers/for-user")
         .set("Authorization", `Bearer ${jwt}`)
         .expect(200);
 
-      expect(res.body.data).toHaveLength(0);
+      // Check tiktoker is not in the list anymore
+      const hasTiktoker = res.body.data.some((f: any) => f.slug === "tiktoker");
+      expect(hasTiktoker).toBe(false);
     });
 
     it("should NOT be able to unfollow someone you dont follow", async () => {
