@@ -430,6 +430,78 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiFollowerFollower extends Struct.CollectionTypeSchema {
+  collectionName: 'followers';
+  info: {
+    displayName: 'Follower';
+    pluralName: 'followers';
+    singularName: 'follower';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::follower.follower'
+    > &
+      Schema.Attribute.Private;
+    protected: Schema.Attribute.Boolean;
+    publishedAt: Schema.Attribute.DateTime;
+    recording: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::recording.recording'
+    >;
+    recordings: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::recording.recording'
+    >;
+    slug: Schema.Attribute.UID<'username'>;
+    type: Schema.Attribute.Enumeration<['tiktok', 'twitch']>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    username: Schema.Attribute.String;
+    users: Schema.Attribute.Relation<
+      'manyToMany',
+      'plugin::users-permissions.user'
+    >;
+  };
+}
+
+export interface ApiRecordingRecording extends Struct.CollectionTypeSchema {
+  collectionName: 'recordings';
+  info: {
+    displayName: 'Recording';
+    pluralName: 'recordings';
+    singularName: 'recording';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    follower: Schema.Attribute.Relation<'oneToOne', 'api::follower.follower'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::recording.recording'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    sources: Schema.Attribute.Relation<'oneToMany', 'api::source.source'>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiSourceSource extends Struct.CollectionTypeSchema {
   collectionName: 'sources';
   info: {
@@ -444,17 +516,27 @@ export interface ApiSourceSource extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    duration: Schema.Attribute.Integer;
+    executionId: Schema.Attribute.Integer;
+    finishedAt: Schema.Attribute.DateTime;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::source.source'
     > &
       Schema.Attribute.Private;
+    path: Schema.Attribute.String;
+    playlist: Schema.Attribute.Text;
     publishedAt: Schema.Attribute.DateTime;
+    size: Schema.Attribute.String;
+    sizeBytes: Schema.Attribute.BigInteger;
+    state: Schema.Attribute.Enumeration<['recording', 'done', 'failed']>;
+    thumbnailCols: Schema.Attribute.Integer;
+    thumbnailInterval: Schema.Attribute.Integer;
+    type: Schema.Attribute.Enumeration<['video/mp4']>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    username: Schema.Attribute.String;
   };
 }
 
@@ -913,7 +995,6 @@ export interface PluginUsersPermissionsUser
   };
   options: {
     draftAndPublish: false;
-    timestamps: true;
   };
   attributes: {
     blocked: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
@@ -927,6 +1008,10 @@ export interface PluginUsersPermissionsUser
       Schema.Attribute.SetMinMaxLength<{
         minLength: 6;
       }>;
+    followers: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::follower.follower'
+    >;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -968,6 +1053,8 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::follower.follower': ApiFollowerFollower;
+      'api::recording.recording': ApiRecordingRecording;
       'api::source.source': ApiSourceSource;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;

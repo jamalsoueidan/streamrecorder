@@ -11,8 +11,46 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "username": {
+    "state": {
+      "type": "enumeration",
+      "enum": [
+        "recording",
+        "done",
+        "failed"
+      ]
+    },
+    "executionId": {
+      "type": "integer"
+    },
+    "finishedAt": {
+      "type": "datetime"
+    },
+    "path": {
       "type": "string"
+    },
+    "playlist": {
+      "type": "text"
+    },
+    "duration": {
+      "type": "integer"
+    },
+    "size": {
+      "type": "string"
+    },
+    "sizeBytes": {
+      "type": "biginteger"
+    },
+    "thumbnailInterval": {
+      "type": "integer"
+    },
+    "thumbnailCols": {
+      "type": "integer"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "video/mp4"
+      ]
     }
   }
 }

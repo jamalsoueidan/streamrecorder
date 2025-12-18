@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "followers",
+  "info": {
+    "singularName": "follower",
+    "pluralName": "followers",
+    "displayName": "Follower"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "slug": {
+      "type": "uid",
+      "targetField": "username"
+    },
+    "username": {
+      "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "tiktok",
+        "twitch"
+      ]
+    },
+    "recordings": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::recording.recording"
+    },
+    "protected": {
+      "type": "boolean"
+    },
+    "users": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "followers"
+    },
+    "recording": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::recording.recording",
+      "inversedBy": "follower"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "recordings",
+  "info": {
+    "singularName": "recording",
+    "pluralName": "recordings",
+    "displayName": "Recording"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "sources": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::source.source"
+    },
+    "follower": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::follower.follower",
+      "mappedBy": "recording"
+    }
+  }
+}
