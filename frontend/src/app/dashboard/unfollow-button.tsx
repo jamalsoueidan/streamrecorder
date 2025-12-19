@@ -9,7 +9,7 @@ export default function UnfollowButton({ id }: { id: number }) {
   }
 
   return (
-    <button onClick={handleClick} style={{ color: "red" }}>
+    <button type="button" onClick={handleClick}>
       Unfollow
     </button>
   );
