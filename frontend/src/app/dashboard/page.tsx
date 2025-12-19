@@ -21,14 +21,13 @@ export default async function DashboardPage({ searchParams }: Props) {
 
   const { scope: scopeParam } = await searchParams;
   const scope = scopeParam || ScopeEnum.Following;
-  const apiScope = scope === "all" ? undefined : (scope as ScopeEnum);
 
   const user =
     await api.usersPermissionsUsersRoles.getUsersPermissionsUsersRoles();
 
   const [followersResponse, recordingsResponse] = await Promise.all([
-    api.follower.getFollowers({ scope: apiScope, populate: "*" }),
-    api.recording.getRecordings({ scope: apiScope, populate: "*" }),
+    api.follower.getFollowers(scope === "all" ? { populate: "*" } : { scope: scope as ScopeEnum, populate: "*" }),
+    api.recording.getRecordings(scope === "all" ? { populate: "*" } : { scope: scope as ScopeEnum, populate: "*" }),
   ]);
 
   return (
