@@ -15,26 +15,25 @@ export default function Recordings({ initialState }: Props) {
   const recordings = state?.data?.data || [];
 
   return (
-    <div>
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 16 }}>
+    <section>
+      <header>
         <h2>Recordings ({recordings.length})</h2>
-        <form action={formAction} style={{ display: "flex", gap: 8, alignItems: "center" }}>
+        <form action={formAction}>
           <select
             name="scope"
             defaultValue={state?.scope || ScopeEnum.Following}
             onChange={(e) => e.currentTarget.form?.requestSubmit()}
-            style={{ padding: 8, borderRadius: 4 }}
           >
             <option value={ScopeEnum.Following}>Following</option>
             <option value={ScopeEnum.Discover}>Discover</option>
             <option value="all">All</option>
           </select>
-          {pending && <span style={{ color: "#666", fontSize: 12 }}>Loading...</span>}
+          {pending && <span>Loading...</span>}
         </form>
-      </div>
+      </header>
 
       {recordings.length === 0 ? (
-        <p style={{ color: "#666" }}>
+        <p>
           {state?.scope === ScopeEnum.Following
             ? "No recordings from followed accounts."
             : state?.scope === ScopeEnum.Discover
@@ -42,22 +41,11 @@ export default function Recordings({ initialState }: Props) {
             : "No recordings found."}
         </p>
       ) : (
-        <ul style={{ listStyle: "none", padding: 0 }}>
+        <ul>
           {recordings.map((r) => (
-            <li
-              key={r.id}
-              style={{
-                padding: 12,
-                border: "1px solid #eee",
-                marginBottom: 8,
-                borderRadius: 8,
-              }}
-            >
-              <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 8 }}>
-                <div>
-                  <strong>{r.follower?.username}</strong>{" "}
-                  <span style={{ color: "#666", fontSize: 12 }}>@{r.follower?.slug}</span>
-                </div>
+            <li key={r.id}>
+              <div>
+                <strong>{r.follower?.username}</strong> <span>@{r.follower?.slug}</span>
                 {r.follower && state?.scope !== ScopeEnum.Following && (
                   <FollowButton
                     username={r.follower.username || ""}
@@ -66,25 +54,20 @@ export default function Recordings({ initialState }: Props) {
                   />
                 )}
               </div>
-              <div style={{ fontSize: 12, color: "#999", marginBottom: 8 }}>
+              <div>
                 {r.createdAt ? new Date(r.createdAt).toLocaleString() : "Unknown date"}
               </div>
               {r.sources && r.sources.length > 0 && (
                 <div>
-                  <small style={{ color: "#666" }}>{r.sources.length} source(s)</small>
-                  <ul style={{ margin: "8px 0", paddingLeft: 20 }}>
+                  <small>{r.sources.length} source(s)</small>
+                  <ul>
                     {r.sources.map((s) => (
-                      <li key={s.id} style={{ fontSize: 12 }}>
-                        <a
-                          href={s.path || "#"}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          style={{ color: "#0066cc" }}
-                        >
+                      <li key={s.id}>
+                        <a href={s.path || "#"} target="_blank" rel="noopener noreferrer">
                           {s.path?.split("/").pop() || "View"}
                         </a>
                         {s.duration && (
-                          <span style={{ color: "#999", marginLeft: 8 }}>
+                          <span>
                             {Math.floor(s.duration / 60)}m {s.duration % 60}s
                           </span>
                         )}
@@ -97,6 +80,6 @@ export default function Recordings({ initialState }: Props) {
           ))}
         </ul>
       )}
-    </div>
+    </section>
   );
 }
