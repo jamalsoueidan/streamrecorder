@@ -6,6 +6,7 @@ import UnfollowButton from "../unfollow-button";
 export default async function FollowingsPage() {
   const response = await api.follower.browseFollowers({
     scope: ScopeEnum.Discover,
+    hasRecordings: true,
   });
 
   const data = response.data?.data || [];
@@ -20,7 +21,7 @@ export default async function FollowingsPage() {
           marginBottom: 16,
         }}
       >
-        <h2>Discover ({data.length})</h2>
+        <h2>Discover ({response.data?.meta?.pagination?.total})</h2>
       </div>
 
       {data.length === 0 ? (
