@@ -9,7 +9,10 @@ type Props = FollowRequestBody & {
 
 export default function FollowButton({ onSuccess, ...data }: Props) {
   async function handleClick() {
-    await followUser(data);
+    console.log("FollowButton: calling followUser", data);
+    const result = await followUser(data);
+    console.log("FollowButton: followUser result", result);
+    console.log("FollowButton: calling onSuccess");
     onSuccess?.();
   }
 
