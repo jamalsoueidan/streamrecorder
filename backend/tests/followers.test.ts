@@ -237,6 +237,132 @@ describe("Follower API", () => {
     });
   });
 
+  describe("Get Followers (hasRecordings filter)", () => {
+    let followerWithRecordings: number;
+    let followerWithoutRecordings: number;
+
+    beforeAll(async () => {
+      // Create a follower WITH recordings
+      const res1 = await request(getServer())
+        .post("/api/followers/follow")
+        .set("Authorization", `Bearer ${jwt}`)
+        .send({ username: "has_recordings", type: "tiktok" });
+      followerWithRecordings = res1.body.data.id;
+      await createRecording(followerWithRecordings, true);
+
+      // Create a follower WITHOUT recordings
+      const res2 = await request(getServer())
+        .post("/api/followers/follow")
+        .set("Authorization", `Bearer ${jwt}`)
+        .send({ username: "no_recordings", type: "tiktok" });
+      followerWithoutRecordings = res2.body.data.id;
+    });
+
+    it("should return only followers with recordings when hasRecordings=true", async () => {
+      const res = await request(getServer())
+        .get("/api/followers/browse?hasRecordings=true")
+        .set("Authorization", `Bearer ${jwt}`)
+        .expect(200);
+
+      const usernames = res.body.data.map((f: any) => f.username);
+      expect(usernames).toContain("has_recordings");
+      expect(usernames).not.toContain("no_recordings");
+
+      // All returned followers should have recordings
+      res.body.data.forEach((f: any) => {
+        expect(f.totalRecordings).toBeGreaterThan(0);
+      });
+    });
+
+    it("should return all followers when hasRecordings is not set", async () => {
+      const res = await request(getServer())
+        .get("/api/followers/browse")
+        .set("Authorization", `Bearer ${jwt}`)
+        .expect(200);
+
+      const usernames = res.body.data.map((f: any) => f.username);
+      expect(usernames).toContain("has_recordings");
+      expect(usernames).toContain("no_recordings");
+    });
+
+    it("should work with scope=following", async () => {
+      const res = await request(getServer())
+        .get("/api/followers/browse?scope=following&hasRecordings=true")
+        .set("Authorization", `Bearer ${jwt}`)
+        .expect(200);
+
+      const usernames = res.body.data.map((f: any) => f.username);
+      expect(usernames).toContain("has_recordings");
+      expect(usernames).not.toContain("no_recordings");
+
+      // All should be following
+      res.body.data.forEach((f: any) => {
+        expect(f.isFollowing).toBe(true);
+      });
+    });
+
+    it("should work with scope=discover", async () => {
+      // Create a follower with recordings that user doesn't follow
+      const discoverFollower = await strapi.db
+        .query("api::follower.follower")
+        .create({
+          data: {
+            username: "discover_with_recordings",
+            type: "tiktok",
+            slug: "discover_with_recordings",
+            publishedAt: new Date(),
+          },
+        });
+      await createRecording(discoverFollower.id, true);
+
+      const res = await request(getServer())
+        .get("/api/followers/browse?scope=discover&hasRecordings=true")
+        .set("Authorization", `Bearer ${jwt}`)
+        .expect(200);
+
+      const usernames = res.body.data.map((f: any) => f.username);
+      expect(usernames).toContain("discover_with_recordings");
+
+      // None should be following
+      res.body.data.forEach((f: any) => {
+        expect(f.isFollowing).toBe(false);
+        expect(f.totalRecordings).toBeGreaterThan(0);
+      });
+    });
+
+    it("should work with populate", async () => {
+      const res = await request(getServer())
+        .get(
+          "/api/followers/browse?hasRecordings=true&populate[recordings][populate]=sources"
+        )
+        .set("Authorization", `Bearer ${jwt}`)
+        .expect(200);
+
+      const follower = res.body.data.find(
+        (f: any) => f.username === "has_recordings"
+      );
+      expect(follower).toBeDefined();
+      expect(follower.recordings.length).toBeGreaterThan(0);
+      expect(follower.recordings[0].sources.length).toBeGreaterThan(0);
+    });
+
+    it("should support pagination with hasRecordings", async () => {
+      const res = await request(getServer())
+        .get(
+          "/api/followers/browse?hasRecordings=true&pagination[page]=1&pagination[pageSize]=1"
+        )
+        .set("Authorization", `Bearer ${jwt}`)
+        .expect(200);
+
+      expect(res.body.data).toHaveLength(1);
+      expect(res.body.meta.pagination).toMatchObject({
+        page: 1,
+        pageSize: 1,
+      });
+      expect(res.body.meta.pagination.total).toBeGreaterThanOrEqual(1);
+    });
+  });
+
   describe("Get Not Following (scope=discover)", () => {
     it("should return all followers when user follows no one", async () => {
       await strapi.plugins["users-permissions"].services.user.add({
