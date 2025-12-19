@@ -26,204 +26,96 @@ export default () => ({
             }
           });
 
-          draft.components.schemas.FollowerWithCount = {
+          // Define scope enum once
+          draft.components.schemas.ScopeEnum = {
+            type: "string",
+            enum: ["following", "discover"],
+            description: "Filter by follow status",
+          };
+
+          // Scope parameter referencing shared enum
+          const scopeParam = {
+            name: "scope",
+            in: "query",
+            required: false,
+            schema: {
+              $ref: "#/components/schemas/ScopeEnum",
+            },
+            description:
+              "Filter by follow status: 'following' (only followed), 'discover' (not followed), or omit for all",
+          };
+
+          // Add scope param to /followers
+          if (draft.paths["/followers"]?.get) {
+            draft.paths["/followers"].get.parameters = [
+              ...(draft.paths["/followers"].get.parameters || []),
+              scopeParam,
+            ];
+          }
+
+          // Add scope param to /recordings
+          if (draft.paths["/recordings"]?.get) {
+            draft.paths["/recordings"].get.parameters = [
+              ...(draft.paths["/recordings"].get.parameters || []),
+              scopeParam,
+            ];
+          }
+
+          // Extend Follower with isFollowing and totalRecordings
+          draft.components.schemas.FollowerWithMeta = {
             allOf: [
               { $ref: "#/components/schemas/Follower" },
               {
                 type: "object",
                 properties: {
+                  isFollowing: { type: "boolean" },
                   totalRecordings: { type: "integer" },
                 },
               },
             ],
           };
 
-          draft.paths["/followers/for-user"] = {
-            get: {
-              tags: ["Follower"],
-              summary: "Get followers for logged in user",
-              security: [{ bearerAuth: [] }],
-              parameters: [
-                {
-                  name: "page",
-                  in: "query",
-                  schema: { type: "integer", default: 1 },
-                },
-                {
-                  name: "pageSize",
-                  in: "query",
-                  schema: { type: "integer", default: 20 },
-                },
-              ],
-              responses: {
-                "200": {
-                  description: "Success",
-                  content: {
-                    "application/json": {
-                      schema: {
-                        type: "object",
-                        properties: {
-                          data: {
-                            type: "array",
-                            items: {
-                              $ref: "#/components/schemas/FollowerWithCount",
-                            },
-                          },
-                          meta: {
-                            $ref: "#/components/schemas/FollowerListResponse/properties/meta",
-                          },
+          // Update /followers response to use FollowerWithMeta
+          if (draft.paths["/followers"]?.get?.responses?.["200"]) {
+            draft.paths["/followers"].get.responses["200"] = {
+              description: "OK",
+              content: {
+                "application/json": {
+                  schema: {
+                    type: "object",
+                    properties: {
+                      data: {
+                        type: "array",
+                        items: {
+                          $ref: "#/components/schemas/FollowerWithMeta",
                         },
                       },
-                    },
-                  },
-                },
-                "401": { description: "Unauthorized" },
-              },
-            },
-          };
-
-          // /followers/not-following - use FollowerWithCount
-          draft.paths["/followers/not-following"] = {
-            get: {
-              tags: ["Follower"],
-              summary: "Get followers user is not following",
-              security: [{ bearerAuth: [] }],
-              parameters: [
-                {
-                  name: "page",
-                  in: "query",
-                  schema: { type: "integer", default: 1 },
-                },
-                {
-                  name: "pageSize",
-                  in: "query",
-                  schema: { type: "integer", default: 20 },
-                },
-              ],
-              responses: {
-                "200": {
-                  description: "Success",
-                  content: {
-                    "application/json": {
-                      schema: {
-                        type: "object",
-                        properties: {
-                          data: {
-                            type: "array",
-                            items: {
-                              $ref: "#/components/schemas/FollowerWithCount",
-                            },
-                          },
-                          meta: {
-                            $ref: "#/components/schemas/FollowerListResponse/properties/meta",
-                          },
-                        },
+                      meta: {
+                        $ref: "#/components/schemas/FollowerListResponse/properties/meta",
                       },
                     },
                   },
                 },
-                "401": { description: "Unauthorized" },
               },
-            },
-          };
+            };
+          }
 
-          // Extend Recording with full Source
-          draft.components.schemas.RecordingWithSources = {
-            type: "object",
-            properties: {
-              id: { type: "integer" },
-              documentId: { type: "string" },
-              follower: { $ref: "#/components/schemas/Follower" },
-              sources: {
-                type: "array",
-                items: { $ref: "#/components/schemas/Source" },
-              },
-              createdAt: { type: "string", format: "date-time" },
-              updatedAt: { type: "string", format: "date-time" },
-              publishedAt: { type: "string", format: "date-time" },
-            },
-          };
+          // Fix Recording.sources schema
+          if (draft.components.schemas.Recording?.properties) {
+            // Delete the broken ones
+            delete draft.components.schemas.Recording.properties.sources;
+            // Add them back with proper refs
+            draft.components.schemas.Recording.properties.sources = {
+              type: "array",
+              items: { $ref: "#/components/schemas/Source" },
+            };
+          }
 
-          draft.components.schemas.RecordingWithSourcesListResponse = {
-            type: "object",
-            properties: {
-              data: {
-                type: "array",
-                items: { $ref: "#/components/schemas/RecordingWithSources" },
-              },
-              meta: {
-                $ref: "#/components/schemas/RecordingListResponse/properties/meta",
-              },
-            },
-          };
-
-          // /recordings/for-user - use RecordingWithSourcesListResponse
-          draft.paths["/recordings/for-user"] = {
-            get: {
-              tags: ["Recording"],
-              summary: "Get recordings from followed accounts",
-              security: [{ bearerAuth: [] }],
-              parameters: [
-                {
-                  name: "page",
-                  in: "query",
-                  schema: { type: "integer", default: 1 },
-                },
-                {
-                  name: "pageSize",
-                  in: "query",
-                  schema: { type: "integer", default: 20 },
-                },
-              ],
-              responses: {
-                "200": {
-                  description: "Success",
-                  content: {
-                    "application/json": {
-                      schema: {
-                        $ref: "#/components/schemas/RecordingWithSourcesListResponse",
-                      },
-                    },
-                  },
-                },
-                "401": { description: "Unauthorized" },
-              },
-            },
-          };
-
-          // /recordings/not-following - use RecordingWithSourcesListResponse
-          draft.paths["/recordings/not-following"] = {
-            get: {
-              tags: ["Recording"],
-              summary: "Get recordings from accounts user is not following",
-              security: [{ bearerAuth: [] }],
-              parameters: [
-                {
-                  name: "page",
-                  in: "query",
-                  schema: { type: "integer", default: 1 },
-                },
-                {
-                  name: "pageSize",
-                  in: "query",
-                  schema: { type: "integer", default: 20 },
-                },
-              ],
-              responses: {
-                "200": {
-                  description: "Success",
-                  content: {
-                    "application/json": {
-                      schema: {
-                        $ref: "#/components/schemas/RecordingWithSourcesListResponse",
-                      },
-                    },
-                  },
-                },
-                "401": { description: "Unauthorized" },
-              },
-            },
-          };
+          // Extract the inner data schema from FollowerRequest
+          if (draft.components.schemas.FollowerRequest?.properties?.data) {
+            draft.components.schemas.FollowRequestBody =
+              draft.components.schemas.FollowerRequest.properties.data;
+          }
 
           // Endpoint: POST /followers/follow
           draft.paths["/followers/follow"] = {
@@ -236,7 +128,7 @@ export default () => ({
                 content: {
                   "application/json": {
                     schema: {
-                      $ref: "#/components/schemas/FollowerRequest",
+                      $ref: "#/components/schemas/FollowRequestBody",
                     },
                   },
                 },

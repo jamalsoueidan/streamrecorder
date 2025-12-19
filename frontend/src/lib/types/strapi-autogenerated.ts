@@ -10,6 +10,12 @@
  * ---------------------------------------------------------------
  */
 
+/** Filter by follow status */
+export enum ScopeEnum {
+  Following = "following",
+  Discover = "discover",
+}
+
 export interface Error {
   data?: object | object[] | null;
   error: {
@@ -673,10 +679,6 @@ export interface Recording {
       documentId?: string;
     }[];
   };
-  sources?: {
-    id?: number;
-    documentId?: string;
-  }[];
   /** @format date-time */
   createdAt?: string;
   /** @format date-time */
@@ -696,6 +698,7 @@ export interface Recording {
     id?: number;
     documentId?: string;
   }[];
+  sources?: Source[];
 }
 
 export interface RecordingResponse {
@@ -1152,26 +1155,20 @@ export type UsersPermissionsPermissionsTree = Record<
   }
 >;
 
-export type FollowerWithCount = Follower & {
+export type FollowerWithMeta = Follower & {
+  isFollowing?: boolean;
   totalRecordings?: number;
 };
 
-export interface RecordingWithSources {
-  id?: number;
-  documentId?: string;
-  follower?: Follower;
-  sources?: Source[];
-  /** @format date-time */
-  createdAt?: string;
-  /** @format date-time */
-  updatedAt?: string;
-  /** @format date-time */
-  publishedAt?: string;
-}
-
-export interface RecordingWithSourcesListResponse {
-  data?: RecordingWithSources[];
-  meta?: any;
+export interface FollowRequestBody {
+  slug: string;
+  username: string;
+  type: FollowRequestBodyTypeEnum;
+  protected?: boolean;
+  users?: (number | string)[];
+  recordings?: (number | string)[];
+  locale?: string;
+  localizations?: (number | string)[];
 }
 
 export enum FollowerRequestTypeEnum {
@@ -1249,6 +1246,11 @@ export enum SourceTypeEnum2 {
   VideoMp4 = "video/mp4",
 }
 
+export enum FollowRequestBodyTypeEnum {
+  Tiktok = "tiktok",
+  Twitch = "twitch",
+}
+
 export interface GetFollowersParams {
   /** Sort by attributes ascending (asc) or descending (desc) */
   sort?: string;
@@ -1270,9 +1272,14 @@ export interface GetFollowersParams {
   filters?: Record<string, any>;
   /** Locale to apply */
   locale?: string;
+  /** Filter by follow status: 'following' (only followed), 'discover' (not followed), or omit for all */
+  scope?: ScopeEnum;
 }
 
-export type GetFollowersData = FollowerListResponse;
+export interface GetFollowersData {
+  data?: FollowerWithMeta[];
+  meta?: any;
+}
 
 export type PostFollowersData = FollowerResponse;
 
@@ -1316,6 +1323,8 @@ export interface GetRecordingsParams {
   filters?: Record<string, any>;
   /** Locale to apply */
   locale?: string;
+  /** Filter by follow status: 'following' (only followed), 'discover' (not followed), or omit for all */
+  scope?: ScopeEnum;
 }
 
 export type GetRecordingsData = RecordingListResponse;
@@ -1607,48 +1616,6 @@ export type GetUsersPermissionsUsersRolesData = UsersPermissionsUser;
 
 export type CountListData = number;
 
-export interface ForUserListParams {
-  /** @default 1 */
-  page?: number;
-  /** @default 20 */
-  pageSize?: number;
-}
-
-export interface ForUserListData {
-  data?: FollowerWithCount[];
-  meta?: any;
-}
-
-export interface NotFollowingListParams {
-  /** @default 1 */
-  page?: number;
-  /** @default 20 */
-  pageSize?: number;
-}
-
-export interface NotFollowingListData {
-  data?: FollowerWithCount[];
-  meta?: any;
-}
-
-export interface ForUserListParams2 {
-  /** @default 1 */
-  page?: number;
-  /** @default 20 */
-  pageSize?: number;
-}
-
-export type ForUserListResult = RecordingWithSourcesListResponse;
-
-export interface NotFollowingListParams2 {
-  /** @default 1 */
-  page?: number;
-  /** @default 20 */
-  pageSize?: number;
-}
-
-export type NotFollowingListResult = RecordingWithSourcesListResponse;
-
 export interface FollowCreateData {
   data?: Follower;
 }
@@ -1692,6 +1659,8 @@ export namespace Follower {
       filters?: Record<string, any>;
       /** Locale to apply */
       locale?: string;
+      /** Filter by follow status: 'following' (only followed), 'discover' (not followed), or omit for all */
+      scope?: ScopeEnum;
     };
     export type RequestBody = never;
     export type RequestHeaders = {};
@@ -1767,48 +1736,6 @@ export namespace Follower {
   /**
    * No description
    * @tags Follower
-   * @name ForUserList
-   * @summary Get followers for logged in user
-   * @request GET:/followers/for-user
-   * @secure
-   */
-  export namespace ForUserList {
-    export type RequestParams = {};
-    export type RequestQuery = {
-      /** @default 1 */
-      page?: number;
-      /** @default 20 */
-      pageSize?: number;
-    };
-    export type RequestBody = never;
-    export type RequestHeaders = {};
-    export type ResponseBody = ForUserListData;
-  }
-
-  /**
-   * No description
-   * @tags Follower
-   * @name NotFollowingList
-   * @summary Get followers user is not following
-   * @request GET:/followers/not-following
-   * @secure
-   */
-  export namespace NotFollowingList {
-    export type RequestParams = {};
-    export type RequestQuery = {
-      /** @default 1 */
-      page?: number;
-      /** @default 20 */
-      pageSize?: number;
-    };
-    export type RequestBody = never;
-    export type RequestHeaders = {};
-    export type ResponseBody = NotFollowingListData;
-  }
-
-  /**
-   * No description
-   * @tags Follower
    * @name FollowCreate
    * @summary Follow a new account
    * @request POST:/followers/follow
@@ -1817,7 +1744,7 @@ export namespace Follower {
   export namespace FollowCreate {
     export type RequestParams = {};
     export type RequestQuery = {};
-    export type RequestBody = FollowerRequest;
+    export type RequestBody = FollowRequestBody;
     export type RequestHeaders = {};
     export type ResponseBody = FollowCreateData;
   }
@@ -1872,6 +1799,8 @@ export namespace Recording {
       filters?: Record<string, any>;
       /** Locale to apply */
       locale?: string;
+      /** Filter by follow status: 'following' (only followed), 'discover' (not followed), or omit for all */
+      scope?: ScopeEnum;
     };
     export type RequestBody = never;
     export type RequestHeaders = {};
@@ -1942,48 +1871,6 @@ export namespace Recording {
     export type RequestBody = never;
     export type RequestHeaders = {};
     export type ResponseBody = DeleteRecordingsIdData;
-  }
-
-  /**
-   * No description
-   * @tags Recording
-   * @name ForUserList
-   * @summary Get recordings from followed accounts
-   * @request GET:/recordings/for-user
-   * @secure
-   */
-  export namespace ForUserList {
-    export type RequestParams = {};
-    export type RequestQuery = {
-      /** @default 1 */
-      page?: number;
-      /** @default 20 */
-      pageSize?: number;
-    };
-    export type RequestBody = never;
-    export type RequestHeaders = {};
-    export type ResponseBody = ForUserListResult;
-  }
-
-  /**
-   * No description
-   * @tags Recording
-   * @name NotFollowingList
-   * @summary Get recordings from accounts user is not following
-   * @request GET:/recordings/not-following
-   * @secure
-   */
-  export namespace NotFollowingList {
-    export type RequestParams = {};
-    export type RequestQuery = {
-      /** @default 1 */
-      page?: number;
-      /** @default 20 */
-      pageSize?: number;
-    };
-    export type RequestBody = never;
-    export type RequestHeaders = {};
-    export type ResponseBody = NotFollowingListResult;
   }
 }
 
@@ -2865,53 +2752,12 @@ export class Api<
      * No description
      *
      * @tags Follower
-     * @name ForUserList
-     * @summary Get followers for logged in user
-     * @request GET:/followers/for-user
-     * @secure
-     */
-    forUserList: (query: ForUserListParams, params: RequestParams = {}) =>
-      this.request<ForUserListData, void>({
-        path: `/followers/for-user`,
-        method: "GET",
-        query: query,
-        secure: true,
-        format: "json",
-        ...params,
-      }),
-
-    /**
-     * No description
-     *
-     * @tags Follower
-     * @name NotFollowingList
-     * @summary Get followers user is not following
-     * @request GET:/followers/not-following
-     * @secure
-     */
-    notFollowingList: (
-      query: NotFollowingListParams,
-      params: RequestParams = {},
-    ) =>
-      this.request<NotFollowingListData, void>({
-        path: `/followers/not-following`,
-        method: "GET",
-        query: query,
-        secure: true,
-        format: "json",
-        ...params,
-      }),
-
-    /**
-     * No description
-     *
-     * @tags Follower
      * @name FollowCreate
      * @summary Follow a new account
      * @request POST:/followers/follow
      * @secure
      */
-    followCreate: (data: FollowerRequest, params: RequestParams = {}) =>
+    followCreate: (data: FollowRequestBody, params: RequestParams = {}) =>
       this.request<FollowCreateData, void>({
         path: `/followers/follow`,
         method: "POST",
@@ -3039,47 +2885,6 @@ export class Api<
       this.request<DeleteRecordingsIdData, Error>({
         path: `/recordings/${id}`,
         method: "DELETE",
-        secure: true,
-        format: "json",
-        ...params,
-      }),
-
-    /**
-     * No description
-     *
-     * @tags Recording
-     * @name ForUserList
-     * @summary Get recordings from followed accounts
-     * @request GET:/recordings/for-user
-     * @secure
-     */
-    forUserList: (query: ForUserListParams2, params: RequestParams = {}) =>
-      this.request<ForUserListResult, void>({
-        path: `/recordings/for-user`,
-        method: "GET",
-        query: query,
-        secure: true,
-        format: "json",
-        ...params,
-      }),
-
-    /**
-     * No description
-     *
-     * @tags Recording
-     * @name NotFollowingList
-     * @summary Get recordings from accounts user is not following
-     * @request GET:/recordings/not-following
-     * @secure
-     */
-    notFollowingList: (
-      query: NotFollowingListParams2,
-      params: RequestParams = {},
-    ) =>
-      this.request<NotFollowingListResult, void>({
-        path: `/recordings/not-following`,
-        method: "GET",
-        query: query,
         secure: true,
         format: "json",
         ...params,
