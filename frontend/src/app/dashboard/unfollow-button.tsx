@@ -8,5 +8,9 @@ export default function UnfollowButton({ id }: { id: number }) {
     await unfollow(id);
   }
 
-  return <button onClick={handleClick}>Unfollow</button>;
+  return (
+    <button type="button" onClick={handleClick}>
+      Unfollow
+    </button>
+  );
 }

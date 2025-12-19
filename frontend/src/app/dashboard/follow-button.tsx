@@ -7,5 +7,9 @@ export default function FollowButton(data: any) {
     await followUser(data);
   }
 
-  return <button onClick={handleClick}>Follow</button>;
+  return (
+    <button type="button" onClick={handleClick}>
+      Follow
+    </button>
+  );
 }
