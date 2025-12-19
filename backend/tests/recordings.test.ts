@@ -18,15 +18,18 @@ beforeAll(async () => {
 
   // Grant permissions
   const permissionsToCreate = [
+    {
+      action: "plugin::users-permissions.user.find",
+      role: authenticatedRole.id,
+    },
+    { action: "api::follower.follower.find", role: authenticatedRole.id },
+    { action: "api::follower.follower.findOne", role: authenticatedRole.id },
     { action: "api::follower.follower.follow", role: authenticatedRole.id },
-    {
-      action: "api::recording.recording.findForUser",
-      role: authenticatedRole.id,
-    },
-    {
-      action: "api::recording.recording.findNotUser",
-      role: authenticatedRole.id,
-    },
+    { action: "api::follower.follower.unfollow", role: authenticatedRole.id },
+    { action: "api::recording.recording.find", role: authenticatedRole.id },
+    { action: "api::recording.recording.findOne", role: authenticatedRole.id },
+    { action: "api::source.source.find", role: authenticatedRole.id },
+    { action: "api::source.source.findOne", role: authenticatedRole.id },
   ];
 
   for (const perm of permissionsToCreate) {
@@ -101,14 +104,16 @@ async function createRecording(followerIdNum: number, withSource = false) {
 }
 
 describe("Recording API", () => {
-  describe("Get Recordings (findForUser)", () => {
+  describe("Get Recordings (find)", () => {
     it("should require authentication", async () => {
-      await request(getServer()).get("/api/recordings/for-user").expect(403);
+      await request(getServer())
+        .get("/api/recordings?scope=following")
+        .expect(403);
     });
 
     it("should return empty array when user has no followers", async () => {
       const res = await request(getServer())
-        .get("/api/recordings/for-user")
+        .get("/api/recordings?scope=following")
         .set("Authorization", `Bearer ${jwt}`)
         .expect(200);
 
@@ -124,7 +129,7 @@ describe("Recording API", () => {
         .expect(200);
 
       const res = await request(getServer())
-        .get("/api/recordings/for-user")
+        .get("/api/recordings?scope=following")
         .set("Authorization", `Bearer ${jwt}`)
         .expect(200);
 
@@ -145,7 +150,7 @@ describe("Recording API", () => {
       await createRecording(followerId);
 
       const res = await request(getServer())
-        .get("/api/recordings/for-user")
+        .get("/api/recordings?scope=following&populate=*")
         .set("Authorization", `Bearer ${jwt}`)
         .expect(200);
 
@@ -159,7 +164,7 @@ describe("Recording API", () => {
       await createRecording(followerId, true);
 
       const res = await request(getServer())
-        .get("/api/recordings/for-user")
+        .get("/api/recordings?scope=following&populate=sources")
         .set("Authorization", `Bearer ${jwt}`)
         .expect(200);
 
@@ -174,7 +179,7 @@ describe("Recording API", () => {
 
     it("should return recordings with follower populated", async () => {
       const res = await request(getServer())
-        .get("/api/recordings/for-user")
+        .get("/api/recordings?scope=following&populate=follower")
         .set("Authorization", `Bearer ${jwt}`)
         .expect(200);
 
@@ -190,7 +195,7 @@ describe("Recording API", () => {
       }
 
       const res = await request(getServer())
-        .get("/api/recordings/for-user")
+        .get("/api/recordings?scope=following&sort=createdAt:desc")
         .set("Authorization", `Bearer ${jwt}`)
         .expect(200);
 
@@ -210,7 +215,7 @@ describe("Recording API", () => {
       }
 
       const res = await request(getServer())
-        .get("/api/recordings/for-user")
+        .get("/api/recordings?scope=following&pagination[pageSize]=20")
         .set("Authorization", `Bearer ${jwt}`)
         .expect(200);
 
@@ -236,7 +241,7 @@ describe("Recording API", () => {
 
       // User 1 should NOT see this recording
       const res2 = await request(getServer())
-        .get("/api/recordings/for-user")
+        .get("/api/recordings?scope=following&populate=follower")
         .set("Authorization", `Bearer ${jwt}`)
         .expect(200);
 
