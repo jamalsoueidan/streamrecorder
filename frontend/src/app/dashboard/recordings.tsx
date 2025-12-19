@@ -16,7 +16,7 @@ export default function Recordings({ initialState }: Props) {
 
   return (
     <section>
-      <header>
+      <header style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 12 }}>
         <h2>Recordings ({recordings.length})</h2>
         <form action={formAction}>
           <select
@@ -28,7 +28,7 @@ export default function Recordings({ initialState }: Props) {
             <option value={ScopeEnum.Discover}>Discover</option>
             <option value="all">All</option>
           </select>
-          {pending && <span>Loading...</span>}
+          {pending && <span> Loading...</span>}
         </form>
       </header>
 
@@ -41,11 +41,13 @@ export default function Recordings({ initialState }: Props) {
             : "No recordings found."}
         </p>
       ) : (
-        <ul>
+        <ul style={{ listStyle: "none", padding: 0 }}>
           {recordings.map((r) => (
-            <li key={r.id}>
-              <div>
-                <strong>{r.follower?.username}</strong> <span>@{r.follower?.slug}</span>
+            <li key={r.id} style={{ marginBottom: 12 }}>
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
+                <span>
+                  <strong>{r.follower?.username}</strong> @{r.follower?.slug}
+                </span>
                 {r.follower && state?.scope !== ScopeEnum.Following && (
                   <FollowButton
                     username={r.follower.username || ""}
@@ -54,27 +56,20 @@ export default function Recordings({ initialState }: Props) {
                   />
                 )}
               </div>
-              <div>
-                {r.createdAt ? new Date(r.createdAt).toLocaleString() : "Unknown date"}
-              </div>
+              <small>{r.createdAt ? new Date(r.createdAt).toLocaleString() : "Unknown date"}</small>
               {r.sources && r.sources.length > 0 && (
-                <div>
-                  <small>{r.sources.length} source(s)</small>
-                  <ul>
-                    {r.sources.map((s) => (
-                      <li key={s.id}>
-                        <a href={s.path || "#"} target="_blank" rel="noopener noreferrer">
-                          {s.path?.split("/").pop() || "View"}
-                        </a>
-                        {s.duration && (
-                          <span>
-                            {Math.floor(s.duration / 60)}m {s.duration % 60}s
-                          </span>
-                        )}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                <ul style={{ marginTop: 4 }}>
+                  {r.sources.map((s) => (
+                    <li key={s.id}>
+                      <a href={s.path || "#"} target="_blank" rel="noopener noreferrer">
+                        {s.path?.split("/").pop() || "View"}
+                      </a>
+                      {s.duration && (
+                        <span> ({Math.floor(s.duration / 60)}m {s.duration % 60}s)</span>
+                      )}
+                    </li>
+                  ))}
+                </ul>
               )}
             </li>
           ))}

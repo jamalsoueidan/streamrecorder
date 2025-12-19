@@ -17,7 +17,7 @@ export default function Followings({ initialState }: Props) {
 
   return (
     <section>
-      <header>
+      <header style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 12 }}>
         <h2>Followers ({followers.length})</h2>
         <form action={formAction}>
           <select
@@ -29,7 +29,7 @@ export default function Followings({ initialState }: Props) {
             <option value={ScopeEnum.Discover}>Discover</option>
             <option value="all">All</option>
           </select>
-          {pending && <span>Loading...</span>}
+          {pending && <span> Loading...</span>}
         </form>
       </header>
 
@@ -42,9 +42,9 @@ export default function Followings({ initialState }: Props) {
             : "No followers found."}
         </p>
       ) : (
-        <ul>
+        <ul style={{ listStyle: "none", padding: 0 }}>
           {followers.map((f) => (
-            <li key={f.id}>
+            <li key={f.id} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 8 }}>
               <div>
                 <strong>{f.username}</strong> <span>@{f.slug}</span>
                 <br />
