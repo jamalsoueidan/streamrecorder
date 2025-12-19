@@ -1,9 +1,10 @@
-import { logout } from "@/app/actions/auth";
 import { getToken } from "@/lib/token";
+
 import { redirect } from "next/navigation";
 import api from "../api";
-import AddFollowerForm from "./add-follower-form";
-import DashboardNav from "./dashboard-nav";
+import { NavigationProvider } from "../lib/navigation-provider";
+import { UserProvider } from "../lib/user-provider";
+import { Shell } from "../ui/shell";
 
 export default async function DashboardLayout({
   children,
@@ -19,23 +20,13 @@ export default async function DashboardLayout({
   const user =
     await api.usersPermissionsUsersRoles.getUsersPermissionsUsersRoles();
 
+  const navigation = await api.navigation.getNavigation({ populate: "links" });
+
   return (
-    <div style={{ maxWidth: 800, margin: "0 auto", padding: 20 }}>
-      <header style={{ display: "flex", justifyContent: "space-between", marginBottom: 24 }}>
-        <h1>Dashboard</h1>
-        <div>
-          <span>Hi, {user?.data?.username}</span>
-          <form action={logout} style={{ display: "inline", marginLeft: 12 }}>
-            <button type="submit">Logout</button>
-          </form>
-        </div>
-      </header>
-
-      <AddFollowerForm />
-
-      <DashboardNav />
-
-      {children}
-    </div>
+    <UserProvider user={user?.data}>
+      <NavigationProvider navigation={navigation?.data}>
+        <Shell>{children}</Shell>
+      </NavigationProvider>
+    </UserProvider>
   );
 }

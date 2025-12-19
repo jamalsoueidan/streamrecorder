@@ -18,18 +18,12 @@ beforeAll(async () => {
 
   // Grant permissions
   const permissionsToCreate = [
-    {
-      action: "plugin::users-permissions.user.find",
-      role: authenticatedRole.id,
-    },
     { action: "api::follower.follower.find", role: authenticatedRole.id },
-    { action: "api::follower.follower.findOne", role: authenticatedRole.id },
     { action: "api::follower.follower.follow", role: authenticatedRole.id },
     { action: "api::follower.follower.unfollow", role: authenticatedRole.id },
     { action: "api::recording.recording.find", role: authenticatedRole.id },
-    { action: "api::recording.recording.findOne", role: authenticatedRole.id },
+    { action: "api::recording.recording.browse", role: authenticatedRole.id },
     { action: "api::source.source.find", role: authenticatedRole.id },
-    { action: "api::source.source.findOne", role: authenticatedRole.id },
   ];
 
   for (const perm of permissionsToCreate) {
@@ -107,13 +101,13 @@ describe("Recording API", () => {
   describe("Get Recordings (find)", () => {
     it("should require authentication", async () => {
       await request(getServer())
-        .get("/api/recordings?scope=following")
+        .get("/api/recordings/browse?scope=following")
         .expect(403);
     });
 
     it("should return empty array when user has no followers", async () => {
       const res = await request(getServer())
-        .get("/api/recordings?scope=following")
+        .get("/api/recordings/browse?scope=following")
         .set("Authorization", `Bearer ${jwt}`)
         .expect(200);
 
@@ -125,11 +119,11 @@ describe("Recording API", () => {
       await request(getServer())
         .post("/api/followers/follow")
         .set("Authorization", `Bearer ${jwt}`)
-        .send({ username: "tiktoker", slug: "tiktoker", type: "tiktok" })
+        .send({ username: "tiktoker", type: "tiktok" })
         .expect(200);
 
       const res = await request(getServer())
-        .get("/api/recordings?scope=following")
+        .get("/api/recordings/browse?scope=following")
         .set("Authorization", `Bearer ${jwt}`)
         .expect(200);
 
@@ -141,7 +135,7 @@ describe("Recording API", () => {
       const followRes = await request(getServer())
         .post("/api/followers/follow")
         .set("Authorization", `Bearer ${jwt}`)
-        .send({ username: "tiktoker", slug: "tiktoker", type: "tiktok" })
+        .send({ username: "tiktoker", type: "tiktok" })
         .expect(200);
 
       followerId = followRes.body.data.id;
@@ -150,7 +144,7 @@ describe("Recording API", () => {
       await createRecording(followerId);
 
       const res = await request(getServer())
-        .get("/api/recordings?scope=following&populate=*")
+        .get("/api/recordings/browse?scope=following&populate=*")
         .set("Authorization", `Bearer ${jwt}`)
         .expect(200);
 
@@ -164,7 +158,7 @@ describe("Recording API", () => {
       await createRecording(followerId, true);
 
       const res = await request(getServer())
-        .get("/api/recordings?scope=following&populate=sources")
+        .get("/api/recordings/browse?scope=following&populate=sources")
         .set("Authorization", `Bearer ${jwt}`)
         .expect(200);
 
@@ -179,13 +173,12 @@ describe("Recording API", () => {
 
     it("should return recordings with follower populated", async () => {
       const res = await request(getServer())
-        .get("/api/recordings?scope=following&populate=follower")
+        .get("/api/recordings/browse?scope=following&populate=follower")
         .set("Authorization", `Bearer ${jwt}`)
         .expect(200);
 
       expect(res.body.data[0].follower).toHaveProperty("id");
       expect(res.body.data[0].follower).toHaveProperty("username", "tiktoker");
-      expect(res.body.data[0].follower).toHaveProperty("slug", "tiktoker");
     });
 
     it("should return recordings sorted by createdAt desc (newest first)", async () => {
@@ -195,7 +188,7 @@ describe("Recording API", () => {
       }
 
       const res = await request(getServer())
-        .get("/api/recordings?scope=following&sort=createdAt:desc")
+        .get("/api/recordings/browse?scope=following&sort=createdAt:desc")
         .set("Authorization", `Bearer ${jwt}`)
         .expect(200);
 
@@ -215,7 +208,7 @@ describe("Recording API", () => {
       }
 
       const res = await request(getServer())
-        .get("/api/recordings?scope=following&pagination[pageSize]=20")
+        .get("/api/recordings/browse?scope=following&pagination[pageSize]=20")
         .set("Authorization", `Bearer ${jwt}`)
         .expect(200);
 
@@ -229,7 +222,6 @@ describe("Recording API", () => {
         .set("Authorization", `Bearer ${jwt2}`)
         .send({
           username: "other_tiktoker",
-          slug: "other_tiktoker",
           type: "tiktok",
         })
         .expect(200);
@@ -241,13 +233,15 @@ describe("Recording API", () => {
 
       // User 1 should NOT see this recording
       const res2 = await request(getServer())
-        .get("/api/recordings?scope=following&populate=follower")
+        .get("/api/recordings/browse?scope=following&populate=follower")
         .set("Authorization", `Bearer ${jwt}`)
         .expect(200);
 
       // All recordings should be from "tiktoker", not "other_tiktoker"
       const hasOtherFollower = res2.body.data.some(
-        (r: any) => r.follower?.slug === "other_tiktoker"
+        (r: any) =>
+          r.follower?.username === "other_tiktoker" &&
+          r.follower?.type === "tiktok"
       );
 
       expect(hasOtherFollower).toBe(false);
