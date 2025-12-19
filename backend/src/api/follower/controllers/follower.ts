@@ -9,7 +9,10 @@ export default factories.createCoreController(
 
       // Extract and remove scope from query
       const scope = ctx.query.scope as string | undefined;
+      const hasRecordings = ctx.query.hasRecordings === "true";
+
       delete ctx.query.scope;
+      delete ctx.query.hasRecordings;
 
       const fullUser = await strapi
         .documents("plugin::users-permissions.user")
@@ -41,6 +44,14 @@ export default factories.createCoreController(
         Object.assign(ctx.query, {
           filters: Object.assign({}, ctx.query.filters, {
             id: scopeFilters[scope],
+          }),
+        });
+      }
+
+      if (hasRecordings) {
+        Object.assign(ctx.query, {
+          filters: Object.assign({}, ctx.query.filters, {
+            recordings: { id: { $notNull: true } },
           }),
         });
       }
