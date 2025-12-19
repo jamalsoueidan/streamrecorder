@@ -7,19 +7,5 @@ export default function FollowButton(data: any) {
     await followUser(data);
   }
 
-  return (
-    <button
-      onClick={handleClick}
-      style={{
-        color: "#0066cc",
-        background: "none",
-        border: "1px solid #0066cc",
-        padding: "4px 12px",
-        borderRadius: 4,
-        cursor: "pointer",
-      }}
-    >
-      Follow
-    </button>
-  );
+  return <button onClick={handleClick}>Follow</button>;
 }

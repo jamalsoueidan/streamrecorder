@@ -25,39 +25,32 @@ export default async function DashboardPage() {
   ]);
 
   return (
-    <div style={{ maxWidth: 800, margin: "40px auto", padding: 20 }}>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          marginBottom: 32,
-        }}
-      >
+    <div>
+      <header>
         <h1>Dashboard</h1>
         <div>
-          <span style={{ marginRight: 16 }}>Hi, {user?.data?.username}</span>
-          <form action={logout} style={{ display: "inline" }}>
+          <span>Hi, {user?.data?.username}</span>
+          <form action={logout}>
             <button type="submit">Logout</button>
           </form>
         </div>
-      </div>
+      </header>
 
       <AddFollowerForm />
 
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 32 }}>
-        <Followings
-          initialState={{
-            scope: defaultScope,
-            data: followersResponse.data,
-          }}
-        />
-        <Recordings
-          initialState={{
-            scope: defaultScope,
-            data: recordingsResponse.data,
-          }}
-        />
-      </div>
+      <Followings
+        initialState={{
+          scope: defaultScope,
+          data: followersResponse.data,
+        }}
+      />
+
+      <Recordings
+        initialState={{
+          scope: defaultScope,
+          data: recordingsResponse.data,
+        }}
+      />
     </div>
   );
 }

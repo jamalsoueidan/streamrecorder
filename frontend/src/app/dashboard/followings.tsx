@@ -16,26 +16,25 @@ export default function Followings({ initialState }: Props) {
   const followers = state?.data?.data || [];
 
   return (
-    <div>
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 16 }}>
+    <section>
+      <header>
         <h2>Followers ({followers.length})</h2>
-        <form action={formAction} style={{ display: "flex", gap: 8, alignItems: "center" }}>
+        <form action={formAction}>
           <select
             name="scope"
             defaultValue={state?.scope || ScopeEnum.Following}
             onChange={(e) => e.currentTarget.form?.requestSubmit()}
-            style={{ padding: 8, borderRadius: 4 }}
           >
             <option value={ScopeEnum.Following}>Following</option>
             <option value={ScopeEnum.Discover}>Discover</option>
             <option value="all">All</option>
           </select>
-          {pending && <span style={{ color: "#666", fontSize: 12 }}>Loading...</span>}
+          {pending && <span>Loading...</span>}
         </form>
-      </div>
+      </header>
 
       {followers.length === 0 ? (
-        <p style={{ color: "#666" }}>
+        <p>
           {state?.scope === ScopeEnum.Following
             ? "You're not following anyone yet."
             : state?.scope === ScopeEnum.Discover
@@ -43,25 +42,13 @@ export default function Followings({ initialState }: Props) {
             : "No followers found."}
         </p>
       ) : (
-        <ul style={{ listStyle: "none", padding: 0 }}>
+        <ul>
           {followers.map((f) => (
-            <li
-              key={f.id}
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                padding: 12,
-                border: "1px solid #eee",
-                marginBottom: 8,
-                borderRadius: 8,
-              }}
-            >
+            <li key={f.id}>
               <div>
-                <strong>{f.username}</strong>{" "}
-                <span style={{ color: "#666", fontSize: 12 }}>@{f.slug}</span>
+                <strong>{f.username}</strong> <span>@{f.slug}</span>
                 <br />
-                <small style={{ color: "#999" }}>{f.totalRecordings} recordings</small>
+                <small>{f.totalRecordings} recordings</small>
               </div>
               {f.isFollowing ? (
                 <UnfollowButton id={f.id!} />
@@ -72,6 +59,6 @@ export default function Followings({ initialState }: Props) {
           ))}
         </ul>
       )}
-    </div>
+    </section>
   );
 }
