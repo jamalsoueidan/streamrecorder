@@ -17,9 +17,13 @@ export default function Followings({ initialState }: Props) {
   const followers = state?.data?.data || [];
 
   const refresh = () => {
+    console.log("Followings: refresh called, scope=", scope);
     const formData = new FormData();
     formData.set("scope", scope);
-    startTransition(() => formAction(formData));
+    startTransition(() => {
+      console.log("Followings: inside startTransition, calling formAction");
+      formAction(formData);
+    });
   };
 
   return (
