@@ -13,12 +13,21 @@ export type FollowersState = {
   data: Awaited<ReturnType<typeof api.follower.getFollowers>>["data"];
 };
 
-export async function getFollowersData(scope: ScopeEnum | "all") {
+export async function getFollowers(
+  _prevState: FollowersState | null,
+  formData: FormData
+): Promise<FollowersState> {
+  const scope = formData.get("scope") as ScopeEnum | "all";
+
   const response = await api.follower.getFollowers({
     scope: scope === "all" ? undefined : scope,
     populate: "*",
   });
-  return response.data?.data || [];
+
+  return {
+    scope,
+    data: response.data,
+  };
 }
 
 export async function follow(prevState: any, formData: FormData) {

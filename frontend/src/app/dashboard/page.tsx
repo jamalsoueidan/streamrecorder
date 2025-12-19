@@ -40,13 +40,17 @@ export default async function DashboardPage() {
 
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24 }}>
         <Followings
-          initialData={followersResponse.data?.data || []}
-          initialScope={defaultScope}
+          initialState={{
+            scope: defaultScope,
+            data: followersResponse.data,
+          }}
         />
 
         <Recordings
-          initialData={recordingsResponse.data?.data || []}
-          initialScope={defaultScope}
+          initialState={{
+            scope: defaultScope,
+            data: recordingsResponse.data,
+          }}
         />
       </div>
     </div>
