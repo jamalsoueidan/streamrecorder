@@ -6,22 +6,29 @@ import api from "../api";
 import AddFollowerForm from "./add-follower-form";
 import Followings from "./followings";
 import Recordings from "./recordings";
+import ScopeFilter from "./scope-filter";
 
-export default async function DashboardPage() {
+type Props = {
+  searchParams: Promise<{ scope?: string }>;
+};
+
+export default async function DashboardPage({ searchParams }: Props) {
   const token = await getToken();
 
   if (!token) {
     redirect("/login");
   }
 
+  const { scope: scopeParam } = await searchParams;
+  const scope = scopeParam || ScopeEnum.Following;
+  const apiScope = scope === "all" ? undefined : (scope as ScopeEnum);
+
   const user =
     await api.usersPermissionsUsersRoles.getUsersPermissionsUsersRoles();
 
-  const defaultScope = ScopeEnum.Following;
-
   const [followersResponse, recordingsResponse] = await Promise.all([
-    api.follower.getFollowers({ scope: defaultScope, populate: "*" }),
-    api.recording.getRecordings({ scope: defaultScope, populate: "*" }),
+    api.follower.getFollowers({ scope: apiScope, populate: "*" }),
+    api.recording.getRecordings({ scope: apiScope, populate: "*" }),
   ]);
 
   return (
@@ -38,20 +45,13 @@ export default async function DashboardPage() {
 
       <AddFollowerForm />
 
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24 }}>
-        <Followings
-          initialState={{
-            scope: defaultScope,
-            data: followersResponse.data,
-          }}
-        />
+      <div style={{ marginBottom: 16 }}>
+        <ScopeFilter currentScope={scope} />
+      </div>
 
-        <Recordings
-          initialState={{
-            scope: defaultScope,
-            data: recordingsResponse.data,
-          }}
-        />
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24 }}>
+        <Followings data={followersResponse.data?.data || []} scope={scope} />
+        <Recordings data={recordingsResponse.data?.data || []} scope={scope} />
       </div>
     </div>
   );
