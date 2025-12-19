@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_okay_links",
+  "info": {
+    "displayName": "links",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "url": {
+      "type": "string",
+      "required": true
+    },
+    "icon": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "test",
+        "test1"
+      ]
+    }
+  },
+  "config": {}
+}

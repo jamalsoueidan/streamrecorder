@@ -7,7 +7,7 @@ import { factories } from "@strapi/strapi";
 export default factories.createCoreController(
   "api::recording.recording",
   ({ strapi }) => ({
-    async find(ctx) {
+    async browse(ctx) {
       const user = ctx.state.user;
       if (!user) return ctx.unauthorized();
 

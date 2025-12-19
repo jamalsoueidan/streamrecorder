@@ -14,7 +14,6 @@ export async function follow(prevState: any, formData: FormData) {
   try {
     await api.follower.followCreate({
       username,
-      slug: username.toLowerCase(),
       type,
     });
     revalidatePath("/dashboard");
