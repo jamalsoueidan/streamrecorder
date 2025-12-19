@@ -1325,10 +1325,11 @@ export type UsersPermissionsPermissionsTree = Record<
   }
 >;
 
-export type FollowerWithMeta = Follower & {
+export type FollowerWithMeta = {
   isFollowing?: boolean;
   totalRecordings?: number;
-};
+  recordings?: Recording[];
+} & Follower;
 
 export interface BrowseFollowersResponse {
   data?: FollowerWithMeta[];

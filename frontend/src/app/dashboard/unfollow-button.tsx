@@ -1,6 +1,7 @@
 "use client";
 
 import { unfollow } from "@/app/actions/followers";
+import { Button } from "@mantine/core";
 
 export default function UnfollowButton({ id }: { id: number }) {
   async function handleClick() {
@@ -8,8 +9,8 @@ export default function UnfollowButton({ id }: { id: number }) {
   }
 
   return (
-    <button type="button" onClick={handleClick}>
-      Unfollow
-    </button>
+    <Button color="gray" size="xs" type="button" onClick={handleClick}>
+      Following
+    </Button>
   );
 }
