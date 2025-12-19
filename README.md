@@ -102,6 +102,7 @@ Create `.env.local` file in `/frontend`:
 
 ```bash
 NEXT_PUBLIC_STRAPI_URL=http://localhost:1337
+NEXT_PUBLIC_S3_URL=https://domain.com/bucket
 ```
 
 **Note:** `NEXT_PUBLIC_*` variables are exposed to browser (safe for public URLs).
