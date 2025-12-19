@@ -45,22 +45,6 @@ export default () => ({
               "Filter by follow status: 'following' (only followed), 'discover' (not followed), or omit for all",
           };
 
-          // Add scope param to /followers
-          if (draft.paths["/followers"]?.get) {
-            draft.paths["/followers"].get.parameters = [
-              ...(draft.paths["/followers"].get.parameters || []),
-              scopeParam,
-            ];
-          }
-
-          // Add scope param to /recordings
-          if (draft.paths["/recordings"]?.get) {
-            draft.paths["/recordings"].get.parameters = [
-              ...(draft.paths["/recordings"].get.parameters || []),
-              scopeParam,
-            ];
-          }
-
           // Extend Follower with isFollowing and totalRecordings
           draft.components.schemas.FollowerWithMeta = {
             allOf: [
@@ -75,26 +59,43 @@ export default () => ({
             ],
           };
 
-          // Update /followers response to use FollowerWithMeta
-          if (draft.paths["/followers"]?.get?.responses?.["200"]) {
-            draft.paths["/followers"].get.responses["200"] = {
-              description: "OK",
-              content: {
-                "application/json": {
-                  schema: {
-                    type: "object",
-                    properties: {
-                      data: {
-                        type: "array",
-                        items: {
-                          $ref: "#/components/schemas/FollowerWithMeta",
+          // Endpoint: GET /followers/browse - copy from /followers and add scope
+          if (draft.paths["/followers"]?.get) {
+            draft.paths["/followers/browse"] = {
+              get: {
+                ...draft.paths["/followers"].get,
+                operationId: "browseFollowers",
+                summary:
+                  "Browse followers with scope filtering (auth required)",
+                security: [{ bearerAuth: [] }],
+                parameters: [
+                  ...(draft.paths["/followers"].get.parameters || []),
+                  scopeParam,
+                ],
+                responses: {
+                  ...draft.paths["/followers"].get.responses,
+                  "200": {
+                    description: "OK",
+                    content: {
+                      "application/json": {
+                        schema: {
+                          type: "object",
+                          properties: {
+                            data: {
+                              type: "array",
+                              items: {
+                                $ref: "#/components/schemas/FollowerWithMeta",
+                              },
+                            },
+                            meta: {
+                              $ref: "#/components/schemas/FollowerListResponse/properties/meta",
+                            },
+                          },
                         },
-                      },
-                      meta: {
-                        $ref: "#/components/schemas/FollowerListResponse/properties/meta",
                       },
                     },
                   },
+                  "401": { description: "Unauthorized" },
                 },
               },
             };
@@ -102,20 +103,66 @@ export default () => ({
 
           // Fix Recording.sources schema
           if (draft.components.schemas.Recording?.properties) {
-            // Delete the broken ones
             delete draft.components.schemas.Recording.properties.sources;
-            // Add them back with proper refs
             draft.components.schemas.Recording.properties.sources = {
               type: "array",
               items: { $ref: "#/components/schemas/Source" },
             };
           }
 
-          // Extract the inner data schema from FollowerRequest
-          if (draft.components.schemas.FollowerRequest?.properties?.data) {
-            draft.components.schemas.FollowRequestBody =
-              draft.components.schemas.FollowerRequest.properties.data;
+          // Fix Recording's nested follower type to use same enum
+          if (
+            draft.components.schemas.Recording?.properties?.follower?.properties
+              ?.type
+          ) {
+            draft.components.schemas.Recording.properties.follower.properties.type =
+              {
+                $ref: "#/components/schemas/FollowerTypeEnum",
+              };
           }
+
+          // Endpoint: GET /recordings/browse - copy from /recordings and add scope
+          if (draft.paths["/recordings"]?.get) {
+            draft.paths["/recordings/browse"] = {
+              get: {
+                ...draft.paths["/recordings"].get,
+                operationId: "browseRecordings",
+                summary:
+                  "Browse recordings with scope filtering (auth required)",
+                security: [{ bearerAuth: [] }],
+                parameters: [
+                  ...(draft.paths["/recordings"].get.parameters || []),
+                  scopeParam,
+                ],
+                responses: {
+                  ...draft.paths["/recordings"].get.responses,
+                  "401": { description: "Unauthorized" },
+                },
+              },
+            };
+          }
+
+          // Extract the inner data schema from FollowerRequest
+          // First, extract the type enum from Follower and make it reusable
+          if (draft.components.schemas.Follower?.properties?.type) {
+            draft.components.schemas.FollowerTypeEnum =
+              draft.components.schemas.Follower.properties.type;
+
+            // Update Follower to use the ref
+            draft.components.schemas.Follower.properties.type = {
+              $ref: "#/components/schemas/FollowerTypeEnum",
+            };
+          }
+
+          // Define FollowRequestBody from scratch using refs
+          draft.components.schemas.FollowRequestBody = {
+            type: "object",
+            required: ["username", "type"],
+            properties: {
+              username: { type: "string" },
+              type: { $ref: "#/components/schemas/FollowerTypeEnum" },
+            },
+          };
 
           // Endpoint: POST /followers/follow
           draft.paths["/followers/follow"] = {

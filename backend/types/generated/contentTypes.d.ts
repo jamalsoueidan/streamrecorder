@@ -456,7 +456,6 @@ export interface ApiFollowerFollower extends Struct.CollectionTypeSchema {
       'oneToMany',
       'api::recording.recording'
     >;
-    slug: Schema.Attribute.UID<'username'> & Schema.Attribute.Required;
     type: Schema.Attribute.Enumeration<['tiktok', 'twitch']> &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'tiktok'>;
@@ -468,6 +467,43 @@ export interface ApiFollowerFollower extends Struct.CollectionTypeSchema {
       'manyToMany',
       'plugin::users-permissions.user'
     >;
+  };
+}
+
+export interface ApiNavigationNavigation extends Struct.SingleTypeSchema {
+  collectionName: 'navigations';
+  info: {
+    displayName: 'Navigation';
+    pluralName: 'navigations';
+    singularName: 'navigation';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    links: Schema.Attribute.Component<'okay.links', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::navigation.navigation'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
   };
 }
 
@@ -1056,6 +1092,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::follower.follower': ApiFollowerFollower;
+      'api::navigation.navigation': ApiNavigationNavigation;
       'api::recording.recording': ApiRecordingRecording;
       'api::source.source': ApiSourceSource;
       'plugin::content-releases.release': PluginContentReleasesRelease;
