@@ -58,14 +58,20 @@ export default () => ({
           // Extend Follower with isFollowing and totalRecordings
           draft.components.schemas.FollowerWithMeta = {
             allOf: [
-              { $ref: "#/components/schemas/Follower" },
               {
                 type: "object",
                 properties: {
                   isFollowing: { type: "boolean" },
                   totalRecordings: { type: "integer" },
+                  recordings: {
+                    type: "array",
+                    items: {
+                      $ref: "#/components/schemas/Recording",
+                    },
+                  },
                 },
               },
+              { $ref: "#/components/schemas/Follower" },
             ],
           };
 
