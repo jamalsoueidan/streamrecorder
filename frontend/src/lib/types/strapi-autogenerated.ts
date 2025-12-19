@@ -1325,10 +1325,25 @@ export type UsersPermissionsPermissionsTree = Record<
   }
 >;
 
-export type FollowerWithMeta = Follower & {
+export type FollowerWithMeta = {
   isFollowing?: boolean;
   totalRecordings?: number;
-};
+  recordings?: Recording[];
+} & Follower;
+
+export interface BrowseFollowersResponse {
+  data?: FollowerWithMeta[];
+  meta?: {
+    pagination?: {
+      page?: number;
+      /** @min 25 */
+      pageSize?: number;
+      /** @max 1 */
+      pageCount?: number;
+      total?: number;
+    };
+  };
+}
 
 export interface FollowRequestBody {
   username: string;
@@ -1811,12 +1826,11 @@ export interface BrowseFollowersParams {
   locale?: string;
   /** Filter by follow status: 'following' (only followed), 'discover' (not followed), or omit for all */
   scope?: ScopeEnum;
+  /** Filter to only return followers with at least 1 recording */
+  hasRecordings?: boolean;
 }
 
-export interface BrowseFollowersData {
-  data?: FollowerWithMeta[];
-  meta?: any;
-}
+export type BrowseFollowersData = BrowseFollowersResponse;
 
 export interface BrowseRecordingsParams {
   /** Sort by attributes ascending (asc) or descending (desc) */
@@ -1993,6 +2007,8 @@ export namespace Follower {
       locale?: string;
       /** Filter by follow status: 'following' (only followed), 'discover' (not followed), or omit for all */
       scope?: ScopeEnum;
+      /** Filter to only return followers with at least 1 recording */
+      hasRecordings?: boolean;
     };
     export type RequestBody = never;
     export type RequestHeaders = {};

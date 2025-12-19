@@ -45,21 +45,52 @@ export default () => ({
               "Filter by follow status: 'following' (only followed), 'discover' (not followed), or omit for all",
           };
 
+          // Add hasRecordings param
+          const hasRecordingsParam = {
+            name: "hasRecordings",
+            in: "query",
+            required: false,
+            schema: { type: "boolean" },
+            description:
+              "Filter to only return followers with at least 1 recording",
+          };
+
           // Extend Follower with isFollowing and totalRecordings
           draft.components.schemas.FollowerWithMeta = {
             allOf: [
-              { $ref: "#/components/schemas/Follower" },
               {
                 type: "object",
                 properties: {
                   isFollowing: { type: "boolean" },
                   totalRecordings: { type: "integer" },
+                  recordings: {
+                    type: "array",
+                    items: {
+                      $ref: "#/components/schemas/Recording",
+                    },
+                  },
                 },
               },
+              { $ref: "#/components/schemas/Follower" },
             ],
           };
 
-          // Endpoint: GET /followers/browse - copy from /followers and add scope
+          // Add after FollowerWithMeta definition
+          draft.components.schemas.BrowseFollowersResponse = {
+            type: "object",
+            properties: {
+              data: {
+                type: "array",
+                items: {
+                  $ref: "#/components/schemas/FollowerWithMeta",
+                },
+              },
+              meta: draft.components.schemas.FollowerListResponse.properties
+                .meta,
+            },
+          };
+
+          // Then in the endpoint
           if (draft.paths["/followers"]?.get) {
             draft.paths["/followers/browse"] = {
               get: {
@@ -71,6 +102,7 @@ export default () => ({
                 parameters: [
                   ...(draft.paths["/followers"].get.parameters || []),
                   scopeParam,
+                  hasRecordingsParam,
                 ],
                 responses: {
                   ...draft.paths["/followers"].get.responses,
@@ -79,18 +111,7 @@ export default () => ({
                     content: {
                       "application/json": {
                         schema: {
-                          type: "object",
-                          properties: {
-                            data: {
-                              type: "array",
-                              items: {
-                                $ref: "#/components/schemas/FollowerWithMeta",
-                              },
-                            },
-                            meta: {
-                              $ref: "#/components/schemas/FollowerListResponse/properties/meta",
-                            },
-                          },
+                          $ref: "#/components/schemas/BrowseFollowersResponse",
                         },
                       },
                     },
