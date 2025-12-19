@@ -1,6 +1,11 @@
 export default {
   routes: [
     {
+      method: "GET",
+      path: "/followers/browse",
+      handler: "follower.browse",
+    },
+    {
       method: "POST",
       path: "/followers/follow",
       handler: "follower.follow",

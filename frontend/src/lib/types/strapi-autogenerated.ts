@@ -10,6 +10,11 @@
  * ---------------------------------------------------------------
  */
 
+export enum FollowerTypeEnum {
+  Tiktok = "tiktok",
+  Twitch = "twitch",
+}
+
 /** Filter by follow status */
 export enum ScopeEnum {
   Following = "following",
@@ -28,7 +33,6 @@ export interface Error {
 
 export interface FollowerRequest {
   data: {
-    slug: string;
     username: string;
     type: FollowerRequestTypeEnum;
     protected?: boolean;
@@ -56,7 +60,6 @@ export interface FollowerListResponse {
 export interface Follower {
   id?: number;
   documentId?: string;
-  slug: string;
   username: string;
   type: FollowerTypeEnum;
   protected?: boolean;
@@ -223,9 +226,8 @@ export interface Follower {
     followers?: {
       id?: number;
       documentId?: string;
-      slug?: string;
       username?: string;
-      type?: FollowerTypeEnum1;
+      type?: FollowerTypeEnum;
       protected?: boolean;
       users?: {
         id?: number;
@@ -256,7 +258,7 @@ export interface Follower {
           sizeBytes?: string;
           thumbnailInterval?: number;
           thumbnailCols?: number;
-          type?: FollowerTypeEnum2;
+          type?: FollowerTypeEnum1;
           recording?: {
             id?: number;
             documentId?: string;
@@ -371,6 +373,176 @@ export interface FollowerResponse {
   meta?: object;
 }
 
+export interface NavigationRequest {
+  data: {
+    links?: OkayLinksComponent[];
+    locale?: string;
+    localizations?: (number | string)[];
+  };
+}
+
+export interface NavigationListResponse {
+  data?: Navigation[];
+  meta?: {
+    pagination?: {
+      page?: number;
+      /** @min 25 */
+      pageSize?: number;
+      /** @max 1 */
+      pageCount?: number;
+      total?: number;
+    };
+  };
+}
+
+export interface Navigation {
+  id?: number;
+  documentId?: string;
+  links?: OkayLinksComponent[];
+  /** @format date-time */
+  createdAt?: string;
+  /** @format date-time */
+  updatedAt?: string;
+  /** @format date-time */
+  publishedAt?: string;
+  createdBy?: {
+    id?: number;
+    documentId?: string;
+    firstname?: string;
+    lastname?: string;
+    username?: string;
+    /** @format email */
+    email?: string;
+    resetPasswordToken?: string;
+    registrationToken?: string;
+    isActive?: boolean;
+    roles?: {
+      id?: number;
+      documentId?: string;
+      name?: string;
+      code?: string;
+      description?: string;
+      users?: {
+        id?: number;
+        documentId?: string;
+      }[];
+      permissions?: {
+        id?: number;
+        documentId?: string;
+        action?: string;
+        actionParameters?: any;
+        subject?: string;
+        properties?: any;
+        conditions?: any;
+        role?: {
+          id?: number;
+          documentId?: string;
+        };
+        /** @format date-time */
+        createdAt?: string;
+        /** @format date-time */
+        updatedAt?: string;
+        /** @format date-time */
+        publishedAt?: string;
+        createdBy?: {
+          id?: number;
+          documentId?: string;
+        };
+        updatedBy?: {
+          id?: number;
+          documentId?: string;
+        };
+        locale?: string;
+        localizations?: {
+          id?: number;
+          documentId?: string;
+        }[];
+      }[];
+      /** @format date-time */
+      createdAt?: string;
+      /** @format date-time */
+      updatedAt?: string;
+      /** @format date-time */
+      publishedAt?: string;
+      createdBy?: {
+        id?: number;
+        documentId?: string;
+      };
+      updatedBy?: {
+        id?: number;
+        documentId?: string;
+      };
+      locale?: string;
+      localizations?: {
+        id?: number;
+        documentId?: string;
+      }[];
+    }[];
+    blocked?: boolean;
+    preferedLanguage?: string;
+    /** @format date-time */
+    createdAt?: string;
+    /** @format date-time */
+    updatedAt?: string;
+    /** @format date-time */
+    publishedAt?: string;
+    createdBy?: {
+      id?: number;
+      documentId?: string;
+    };
+    updatedBy?: {
+      id?: number;
+      documentId?: string;
+    };
+    locale?: string;
+    localizations?: {
+      id?: number;
+      documentId?: string;
+    }[];
+  };
+  updatedBy?: {
+    id?: number;
+    documentId?: string;
+  };
+  locale?: string;
+  localizations?: {
+    id?: number;
+    documentId?: string;
+    links?: OkayLinksComponent[];
+    /** @format date-time */
+    createdAt?: string;
+    /** @format date-time */
+    updatedAt?: string;
+    /** @format date-time */
+    publishedAt?: string;
+    createdBy?: {
+      id?: number;
+      documentId?: string;
+    };
+    updatedBy?: {
+      id?: number;
+      documentId?: string;
+    };
+    locale?: string;
+    localizations?: {
+      id?: number;
+      documentId?: string;
+    }[];
+  }[];
+}
+
+export interface NavigationResponse {
+  data?: Navigation;
+  meta?: object;
+}
+
+export interface OkayLinksComponent {
+  id?: number;
+  label?: string;
+  url?: string;
+  icon?: OkayLinksComponentIconEnum;
+}
+
 export interface RecordingRequest {
   data: {
     /** @example "string or id" */
@@ -401,9 +573,8 @@ export interface Recording {
   follower?: {
     id?: number;
     documentId?: string;
-    slug?: string;
     username?: string;
-    type?: RecordingTypeEnum;
+    type?: FollowerTypeEnum;
     protected?: boolean;
     users?: {
       id?: number;
@@ -614,7 +785,7 @@ export interface Recording {
         sizeBytes?: string;
         thumbnailInterval?: number;
         thumbnailCols?: number;
-        type?: RecordingTypeEnum1;
+        type?: RecordingTypeEnum;
         recording?: {
           id?: number;
           documentId?: string;
@@ -770,7 +941,6 @@ export interface Source {
     follower?: {
       id?: number;
       documentId?: string;
-      slug?: string;
       username?: string;
       type?: SourceTypeEnum1;
       protected?: boolean;
@@ -1161,27 +1331,11 @@ export type FollowerWithMeta = Follower & {
 };
 
 export interface FollowRequestBody {
-  slug: string;
   username: string;
-  type: FollowRequestBodyTypeEnum;
-  protected?: boolean;
-  users?: (number | string)[];
-  recordings?: (number | string)[];
-  locale?: string;
-  localizations?: (number | string)[];
+  type: FollowerTypeEnum;
 }
 
 export enum FollowerRequestTypeEnum {
-  Tiktok = "tiktok",
-  Twitch = "twitch",
-}
-
-export enum FollowerTypeEnum {
-  Tiktok = "tiktok",
-  Twitch = "twitch",
-}
-
-export enum FollowerTypeEnum1 {
   Tiktok = "tiktok",
   Twitch = "twitch",
 }
@@ -1192,13 +1346,13 @@ export enum FollowerStateEnum {
   Failed = "failed",
 }
 
-export enum FollowerTypeEnum2 {
+export enum FollowerTypeEnum1 {
   VideoMp4 = "video/mp4",
 }
 
-export enum RecordingTypeEnum {
-  Tiktok = "tiktok",
-  Twitch = "twitch",
+export enum OkayLinksComponentIconEnum {
+  Test = "test",
+  Test1 = "test1",
 }
 
 export enum RecordingStateEnum {
@@ -1207,7 +1361,7 @@ export enum RecordingStateEnum {
   Failed = "failed",
 }
 
-export enum RecordingTypeEnum1 {
+export enum RecordingTypeEnum {
   VideoMp4 = "video/mp4",
 }
 
@@ -1246,11 +1400,6 @@ export enum SourceTypeEnum2 {
   VideoMp4 = "video/mp4",
 }
 
-export enum FollowRequestBodyTypeEnum {
-  Tiktok = "tiktok",
-  Twitch = "twitch",
-}
-
 export interface GetFollowersParams {
   /** Sort by attributes ascending (asc) or descending (desc) */
   sort?: string;
@@ -1272,14 +1421,9 @@ export interface GetFollowersParams {
   filters?: Record<string, any>;
   /** Locale to apply */
   locale?: string;
-  /** Filter by follow status: 'following' (only followed), 'discover' (not followed), or omit for all */
-  scope?: ScopeEnum;
 }
 
-export interface GetFollowersData {
-  data?: FollowerWithMeta[];
-  meta?: any;
-}
+export type GetFollowersData = FollowerListResponse;
 
 export type PostFollowersData = FollowerResponse;
 
@@ -1302,6 +1446,36 @@ export interface DeleteFollowersIdParams {
 /** @format int64 */
 export type DeleteFollowersIdData = number;
 
+export interface GetNavigationParams {
+  /** Sort by attributes ascending (asc) or descending (desc) */
+  sort?: string;
+  /** Return page/pageSize (default: true) */
+  "pagination[withCount]"?: boolean;
+  /** Page number (default: 0) */
+  "pagination[page]"?: number;
+  /** Page size (default: 25) */
+  "pagination[pageSize]"?: number;
+  /** Offset value (default: 0) */
+  "pagination[start]"?: number;
+  /** Number of entities to return (default: 25) */
+  "pagination[limit]"?: number;
+  /** Fields to return (ex: title,author) */
+  fields?: string;
+  /** Relations to return */
+  populate?: string | string[] | object;
+  /** Filters to apply */
+  filters?: Record<string, any>;
+  /** Locale to apply */
+  locale?: string;
+}
+
+export type GetNavigationData = NavigationResponse;
+
+export type PutNavigationData = NavigationResponse;
+
+/** @format int64 */
+export type DeleteNavigationData = number;
+
 export interface GetRecordingsParams {
   /** Sort by attributes ascending (asc) or descending (desc) */
   sort?: string;
@@ -1323,8 +1497,6 @@ export interface GetRecordingsParams {
   filters?: Record<string, any>;
   /** Locale to apply */
   locale?: string;
-  /** Filter by follow status: 'following' (only followed), 'discover' (not followed), or omit for all */
-  scope?: ScopeEnum;
 }
 
 export type GetRecordingsData = RecordingListResponse;
@@ -1616,6 +1788,63 @@ export type GetUsersPermissionsUsersRolesData = UsersPermissionsUser;
 
 export type CountListData = number;
 
+export interface BrowseFollowersParams {
+  /** Sort by attributes ascending (asc) or descending (desc) */
+  sort?: string;
+  /** Return page/pageSize (default: true) */
+  "pagination[withCount]"?: boolean;
+  /** Page number (default: 0) */
+  "pagination[page]"?: number;
+  /** Page size (default: 25) */
+  "pagination[pageSize]"?: number;
+  /** Offset value (default: 0) */
+  "pagination[start]"?: number;
+  /** Number of entities to return (default: 25) */
+  "pagination[limit]"?: number;
+  /** Fields to return (ex: title,author) */
+  fields?: string;
+  /** Relations to return */
+  populate?: string | string[] | object;
+  /** Filters to apply */
+  filters?: Record<string, any>;
+  /** Locale to apply */
+  locale?: string;
+  /** Filter by follow status: 'following' (only followed), 'discover' (not followed), or omit for all */
+  scope?: ScopeEnum;
+}
+
+export interface BrowseFollowersData {
+  data?: FollowerWithMeta[];
+  meta?: any;
+}
+
+export interface BrowseRecordingsParams {
+  /** Sort by attributes ascending (asc) or descending (desc) */
+  sort?: string;
+  /** Return page/pageSize (default: true) */
+  "pagination[withCount]"?: boolean;
+  /** Page number (default: 0) */
+  "pagination[page]"?: number;
+  /** Page size (default: 25) */
+  "pagination[pageSize]"?: number;
+  /** Offset value (default: 0) */
+  "pagination[start]"?: number;
+  /** Number of entities to return (default: 25) */
+  "pagination[limit]"?: number;
+  /** Fields to return (ex: title,author) */
+  fields?: string;
+  /** Relations to return */
+  populate?: string | string[] | object;
+  /** Filters to apply */
+  filters?: Record<string, any>;
+  /** Locale to apply */
+  locale?: string;
+  /** Filter by follow status: 'following' (only followed), 'discover' (not followed), or omit for all */
+  scope?: ScopeEnum;
+}
+
+export type BrowseRecordingsData = RecordingListResponse;
+
 export interface FollowCreateData {
   data?: Follower;
 }
@@ -1659,8 +1888,6 @@ export namespace Follower {
       filters?: Record<string, any>;
       /** Locale to apply */
       locale?: string;
-      /** Filter by follow status: 'following' (only followed), 'discover' (not followed), or omit for all */
-      scope?: ScopeEnum;
     };
     export type RequestBody = never;
     export type RequestHeaders = {};
@@ -1736,6 +1963,45 @@ export namespace Follower {
   /**
    * No description
    * @tags Follower
+   * @name BrowseFollowers
+   * @summary Browse followers with scope filtering (auth required)
+   * @request GET:/followers/browse
+   * @secure
+   */
+  export namespace BrowseFollowers {
+    export type RequestParams = {};
+    export type RequestQuery = {
+      /** Sort by attributes ascending (asc) or descending (desc) */
+      sort?: string;
+      /** Return page/pageSize (default: true) */
+      "pagination[withCount]"?: boolean;
+      /** Page number (default: 0) */
+      "pagination[page]"?: number;
+      /** Page size (default: 25) */
+      "pagination[pageSize]"?: number;
+      /** Offset value (default: 0) */
+      "pagination[start]"?: number;
+      /** Number of entities to return (default: 25) */
+      "pagination[limit]"?: number;
+      /** Fields to return (ex: title,author) */
+      fields?: string;
+      /** Relations to return */
+      populate?: string | string[] | object;
+      /** Filters to apply */
+      filters?: Record<string, any>;
+      /** Locale to apply */
+      locale?: string;
+      /** Filter by follow status: 'following' (only followed), 'discover' (not followed), or omit for all */
+      scope?: ScopeEnum;
+    };
+    export type RequestBody = never;
+    export type RequestHeaders = {};
+    export type ResponseBody = BrowseFollowersData;
+  }
+
+  /**
+   * No description
+   * @tags Follower
    * @name FollowCreate
    * @summary Follow a new account
    * @request POST:/followers/follow
@@ -1765,6 +2031,74 @@ export namespace Follower {
     export type RequestBody = never;
     export type RequestHeaders = {};
     export type ResponseBody = UnfollowDeleteData;
+  }
+}
+
+export namespace Navigation {
+  /**
+   * No description
+   * @tags Navigation
+   * @name GetNavigation
+   * @request GET:/navigation
+   * @secure
+   */
+  export namespace GetNavigation {
+    export type RequestParams = {};
+    export type RequestQuery = {
+      /** Sort by attributes ascending (asc) or descending (desc) */
+      sort?: string;
+      /** Return page/pageSize (default: true) */
+      "pagination[withCount]"?: boolean;
+      /** Page number (default: 0) */
+      "pagination[page]"?: number;
+      /** Page size (default: 25) */
+      "pagination[pageSize]"?: number;
+      /** Offset value (default: 0) */
+      "pagination[start]"?: number;
+      /** Number of entities to return (default: 25) */
+      "pagination[limit]"?: number;
+      /** Fields to return (ex: title,author) */
+      fields?: string;
+      /** Relations to return */
+      populate?: string | string[] | object;
+      /** Filters to apply */
+      filters?: Record<string, any>;
+      /** Locale to apply */
+      locale?: string;
+    };
+    export type RequestBody = never;
+    export type RequestHeaders = {};
+    export type ResponseBody = GetNavigationData;
+  }
+
+  /**
+   * No description
+   * @tags Navigation
+   * @name PutNavigation
+   * @request PUT:/navigation
+   * @secure
+   */
+  export namespace PutNavigation {
+    export type RequestParams = {};
+    export type RequestQuery = {};
+    export type RequestBody = NavigationRequest;
+    export type RequestHeaders = {};
+    export type ResponseBody = PutNavigationData;
+  }
+
+  /**
+   * No description
+   * @tags Navigation
+   * @name DeleteNavigation
+   * @request DELETE:/navigation
+   * @secure
+   */
+  export namespace DeleteNavigation {
+    export type RequestParams = {};
+    export type RequestQuery = {};
+    export type RequestBody = never;
+    export type RequestHeaders = {};
+    export type ResponseBody = DeleteNavigationData;
   }
 }
 
@@ -1799,8 +2133,6 @@ export namespace Recording {
       filters?: Record<string, any>;
       /** Locale to apply */
       locale?: string;
-      /** Filter by follow status: 'following' (only followed), 'discover' (not followed), or omit for all */
-      scope?: ScopeEnum;
     };
     export type RequestBody = never;
     export type RequestHeaders = {};
@@ -1871,6 +2203,45 @@ export namespace Recording {
     export type RequestBody = never;
     export type RequestHeaders = {};
     export type ResponseBody = DeleteRecordingsIdData;
+  }
+
+  /**
+   * No description
+   * @tags Recording
+   * @name BrowseRecordings
+   * @summary Browse recordings with scope filtering (auth required)
+   * @request GET:/recordings/browse
+   * @secure
+   */
+  export namespace BrowseRecordings {
+    export type RequestParams = {};
+    export type RequestQuery = {
+      /** Sort by attributes ascending (asc) or descending (desc) */
+      sort?: string;
+      /** Return page/pageSize (default: true) */
+      "pagination[withCount]"?: boolean;
+      /** Page number (default: 0) */
+      "pagination[page]"?: number;
+      /** Page size (default: 25) */
+      "pagination[pageSize]"?: number;
+      /** Offset value (default: 0) */
+      "pagination[start]"?: number;
+      /** Number of entities to return (default: 25) */
+      "pagination[limit]"?: number;
+      /** Fields to return (ex: title,author) */
+      fields?: string;
+      /** Relations to return */
+      populate?: string | string[] | object;
+      /** Filters to apply */
+      filters?: Record<string, any>;
+      /** Locale to apply */
+      locale?: string;
+      /** Filter by follow status: 'following' (only followed), 'discover' (not followed), or omit for all */
+      scope?: ScopeEnum;
+    };
+    export type RequestBody = never;
+    export type RequestHeaders = {};
+    export type ResponseBody = BrowseRecordingsData;
   }
 }
 
@@ -2752,6 +3123,28 @@ export class Api<
      * No description
      *
      * @tags Follower
+     * @name BrowseFollowers
+     * @summary Browse followers with scope filtering (auth required)
+     * @request GET:/followers/browse
+     * @secure
+     */
+    browseFollowers: (
+      query: BrowseFollowersParams,
+      params: RequestParams = {},
+    ) =>
+      this.request<BrowseFollowersData, Error | void>({
+        path: `/followers/browse`,
+        method: "GET",
+        query: query,
+        secure: true,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Follower
      * @name FollowCreate
      * @summary Follow a new account
      * @request POST:/followers/follow
@@ -2783,6 +3176,61 @@ export class Api<
     ) =>
       this.request<UnfollowDeleteData, void>({
         path: `/followers/unfollow/${id}`,
+        method: "DELETE",
+        secure: true,
+        format: "json",
+        ...params,
+      }),
+  };
+  navigation = {
+    /**
+     * No description
+     *
+     * @tags Navigation
+     * @name GetNavigation
+     * @request GET:/navigation
+     * @secure
+     */
+    getNavigation: (query: GetNavigationParams, params: RequestParams = {}) =>
+      this.request<GetNavigationData, Error>({
+        path: `/navigation`,
+        method: "GET",
+        query: query,
+        secure: true,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Navigation
+     * @name PutNavigation
+     * @request PUT:/navigation
+     * @secure
+     */
+    putNavigation: (data: NavigationRequest, params: RequestParams = {}) =>
+      this.request<PutNavigationData, Error>({
+        path: `/navigation`,
+        method: "PUT",
+        body: data,
+        secure: true,
+        type: ContentType.Json,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Navigation
+     * @name DeleteNavigation
+     * @request DELETE:/navigation
+     * @secure
+     */
+    deleteNavigation: (params: RequestParams = {}) =>
+      this.request<DeleteNavigationData, Error>({
+        path: `/navigation`,
         method: "DELETE",
         secure: true,
         format: "json",
@@ -2885,6 +3333,28 @@ export class Api<
       this.request<DeleteRecordingsIdData, Error>({
         path: `/recordings/${id}`,
         method: "DELETE",
+        secure: true,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Recording
+     * @name BrowseRecordings
+     * @summary Browse recordings with scope filtering (auth required)
+     * @request GET:/recordings/browse
+     * @secure
+     */
+    browseRecordings: (
+      query: BrowseRecordingsParams,
+      params: RequestParams = {},
+    ) =>
+      this.request<BrowseRecordingsData, Error | void>({
+        path: `/recordings/browse`,
+        method: "GET",
+        query: query,
         secure: true,
         format: "json",
         ...params,

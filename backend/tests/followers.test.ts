@@ -18,18 +18,11 @@ beforeAll(async () => {
 
   // Grant permissions
   const permissionsToCreate = [
-    {
-      action: "plugin::users-permissions.user.find",
-      role: authenticatedRole.id,
-    },
-    { action: "api::follower.follower.find", role: authenticatedRole.id },
-    { action: "api::follower.follower.findOne", role: authenticatedRole.id },
+    { action: "api::follower.follower.browse", role: authenticatedRole.id },
     { action: "api::follower.follower.follow", role: authenticatedRole.id },
     { action: "api::follower.follower.unfollow", role: authenticatedRole.id },
     { action: "api::recording.recording.find", role: authenticatedRole.id },
-    { action: "api::recording.recording.findOne", role: authenticatedRole.id },
     { action: "api::source.source.find", role: authenticatedRole.id },
-    { action: "api::source.source.findOne", role: authenticatedRole.id },
   ];
 
   for (const perm of permissionsToCreate) {
@@ -108,7 +101,7 @@ describe("Follower API", () => {
       const res = await request(getServer())
         .post("/api/followers/follow")
         .set("Authorization", `Bearer ${jwt}`)
-        .send({ username: "tiktoker", slug: "tiktoker", type: "tiktok" })
+        .send({ username: "tiktoker", type: "tiktok" })
         .expect(200);
 
       expect(res.body.data).toHaveProperty("id");
@@ -120,7 +113,7 @@ describe("Follower API", () => {
       const res = await request(getServer())
         .post("/api/followers/follow")
         .set("Authorization", `Bearer ${jwt}`)
-        .send({ username: "tiktoker", slug: "tiktoker", type: "tiktok" })
+        .send({ username: "tiktoker", type: "tiktok" })
         .expect(200);
 
       expect(res.body.data.id).toBe(followerId);
@@ -130,7 +123,7 @@ describe("Follower API", () => {
   describe("Get Followers (scope=following)", () => {
     it("should return empty array when no followers", async () => {
       const res = await request(getServer())
-        .get("/api/followers?scope=following")
+        .get("/api/followers/browse?scope=following")
         .set("Authorization", `Bearer ${jwt2}`)
         .expect(200);
 
@@ -141,14 +134,13 @@ describe("Follower API", () => {
 
     it("should get my followers with correct fields", async () => {
       const res = await request(getServer())
-        .get("/api/followers?scope=following")
+        .get("/api/followers/browse?scope=following")
         .set("Authorization", `Bearer ${jwt}`)
         .expect(200);
 
       expect(res.body.data).toHaveLength(1);
       expect(res.body.data[0]).toHaveProperty("id");
       expect(res.body.data[0]).toHaveProperty("username", "tiktoker");
-      expect(res.body.data[0]).toHaveProperty("slug", "tiktoker");
       expect(res.body.data[0]).toHaveProperty("totalRecordings");
       expect(res.body.data[0]).toHaveProperty("isFollowing", true);
       expect(res.body.meta.pagination.total).toBe(1);
@@ -156,7 +148,7 @@ describe("Follower API", () => {
 
     it("should return recordings when populated", async () => {
       const res = await request(getServer())
-        .get("/api/followers?scope=following&populate=recordings")
+        .get("/api/followers/browse?scope=following&populate=recordings")
         .set("Authorization", `Bearer ${jwt}`)
         .expect(200);
 
@@ -169,7 +161,7 @@ describe("Follower API", () => {
 
       const res = await request(getServer())
         .get(
-          "/api/followers?scope=following&populate[recordings][populate]=sources"
+          "/api/followers/browse?scope=following&populate[recordings][populate]=sources"
         )
         .set("Authorization", `Bearer ${jwt}`)
         .expect(200);
@@ -190,13 +182,12 @@ describe("Follower API", () => {
         .set("Authorization", `Bearer ${jwt2}`)
         .send({
           username: "other_tiktoker",
-          slug: "other_tiktoker",
           type: "tiktok",
         })
         .expect(200);
 
       const res2 = await request(getServer())
-        .get("/api/followers?scope=following")
+        .get("/api/followers/browse?scope=following")
         .set("Authorization", `Bearer ${jwt}`)
         .expect(200);
 
@@ -215,7 +206,6 @@ describe("Follower API", () => {
           .set("Authorization", `Bearer ${jwt}`)
           .send({
             username: `streamer${i}`,
-            slug: `streamer${i}`,
             type: "tiktok",
           })
           .expect(200);
@@ -223,7 +213,7 @@ describe("Follower API", () => {
 
       const page1 = await request(getServer())
         .get(
-          "/api/followers?scope=following&pagination[page]=1&pagination[pageSize]=2"
+          "/api/followers/browse?scope=following&pagination[page]=1&pagination[pageSize]=2"
         )
         .set("Authorization", `Bearer ${jwt}`)
         .expect(200);
@@ -237,7 +227,7 @@ describe("Follower API", () => {
 
       const page2 = await request(getServer())
         .get(
-          "/api/followers?scope=following&pagination[page]=2&pagination[pageSize]=2"
+          "/api/followers/browse?scope=following&pagination[page]=2&pagination[pageSize]=2"
         )
         .set("Authorization", `Bearer ${jwt}`)
         .expect(200);
@@ -266,7 +256,7 @@ describe("Follower API", () => {
       const newUserJwt = loginRes.body.jwt;
 
       const res = await request(getServer())
-        .get("/api/followers?scope=discover")
+        .get("/api/followers/browse?scope=discover")
         .set("Authorization", `Bearer ${newUserJwt}`)
         .expect(200);
 
@@ -276,12 +266,12 @@ describe("Follower API", () => {
 
     it("should exclude followers user is already following", async () => {
       const res = await request(getServer())
-        .get("/api/followers?scope=discover")
+        .get("/api/followers/browse?scope=discover")
         .set("Authorization", `Bearer ${jwt}`)
         .expect(200);
 
       const followingTiktoker = res.body.data.some(
-        (f: any) => f.slug === "tiktoker"
+        (f: any) => f.username === "tiktoker" && f.type === "tiktok"
       );
       expect(followingTiktoker).toBe(false);
     });
@@ -289,7 +279,7 @@ describe("Follower API", () => {
     it("should support pagination", async () => {
       const res = await request(getServer())
         .get(
-          "/api/followers?scope=discover&pagination[page]=1&pagination[pageSize]=2"
+          "/api/followers/browse?scope=discover&pagination[page]=1&pagination[pageSize]=2"
         )
         .set("Authorization", `Bearer ${jwt}`)
         .expect(200);
@@ -310,7 +300,7 @@ describe("Follower API", () => {
 
     it("should NOT have tiktoker after unfollow", async () => {
       const res = await request(getServer())
-        .get("/api/followers?scope=following")
+        .get("/api/followers/browse?scope=following")
         .set("Authorization", `Bearer ${jwt}`)
         .expect(200);
 

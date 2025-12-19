@@ -3,7 +3,7 @@ import { factories } from "@strapi/strapi";
 export default factories.createCoreController(
   "api::follower.follower",
   ({ strapi }) => ({
-    async find(ctx) {
+    async browse(ctx) {
       const user = ctx.state.user;
       if (!user) return ctx.unauthorized();
 
@@ -74,20 +74,20 @@ export default factories.createCoreController(
       const user = ctx.state.user;
       if (!user) return ctx.unauthorized();
 
-      const { username, slug, type } = ctx.request.body;
+      const { username, type } = ctx.request.body;
 
       // Check if follower already exists
       let follower = await strapi
         .documents("api::follower.follower")
         .findFirst({
-          filters: { slug },
+          filters: { username, type },
           status: "published",
         });
 
       // Create if doesn't exist
       if (!follower) {
         follower = await strapi.documents("api::follower.follower").create({
-          data: { username, slug, type },
+          data: { username, type },
           status: "published",
         });
       }
