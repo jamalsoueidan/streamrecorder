@@ -123,9 +123,13 @@ export function VideoPlayer({ sources }: { sources: Source[] }) {
 
     if (videoRef.current && !playerRef.current) {
       const player = videojs(videoRef.current, {
-        autoplay: false,
+        autoplay: true,
+        muted: false,
         controls: true,
         responsive: true,
+        controlBar: {
+          pictureInPictureToggle: false,
+        },
         html5: {
           vhs: {
             overrideNative: true,
@@ -279,6 +283,41 @@ export function VideoPlayer({ sources }: { sources: Source[] }) {
           font-size: 11px;
           text-align: center;
           padding: 2px 0;
+        }
+
+        .video-player-wrapper .video-js {
+          font-size: 16px; /* Increase from 10px to make everything bigger */
+        }
+
+        /* Or target control bar specifically */
+        .video-player-wrapper .vjs-control-bar {
+          font-size: 18px;
+        }
+
+        /* Progress bar height */
+        .video-player-wrapper .vjs-progress-holder {
+          height: 0.6em; /* Bigger progress bar */
+        }
+
+        /* Keep progress bar big even without hover */
+        .video-player-wrapper .vjs-progress-control:hover .vjs-progress-holder,
+        .video-player-wrapper .vjs-progress-control .vjs-progress-holder {
+          height: 0.6em;
+        }
+
+        /* Slider (the clickable area) */
+        .video-player-wrapper .vjs-slider {
+          height: 0.6em;
+        }
+
+        /* Play progress (the filled part) */
+        .video-player-wrapper .vjs-play-progress,
+        .video-player-wrapper .vjs-load-progress {
+          height: 100%;
+        }
+
+        .video-js .vjs-play-progress:before {
+          font-size: 1.4em;
         }
       `}</style>
 

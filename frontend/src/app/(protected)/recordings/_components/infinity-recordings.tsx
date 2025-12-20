@@ -22,11 +22,17 @@ import {
 } from "@mantine/core";
 import { useIntersection } from "@mantine/hooks";
 import Link from "next/link";
+import { parseAsStringEnum, useQueryState } from "nuqs";
 import { useEffect, useState, useTransition } from "react";
 
+enum Sort {
+  createdAtDesc = "createdAt:desc",
+  createdAtAsc = "createdAt:asc",
+}
+
 const SORT_OPTIONS = [
-  { value: "createdAt:desc", label: "Newest first" },
-  { value: "createdAt:asc", label: "Oldest first" },
+  { value: Sort.createdAtDesc, label: "Newest first" },
+  { value: Sort.createdAtAsc, label: "Oldest first" },
 ];
 
 interface Props {
@@ -45,7 +51,12 @@ export default function InfiniteRecordings({
   const [hasMore, setHasMore] = useState(
     page < (initialPagination?.pagination?.pageCount ?? 1)
   );
-  const [sort, setSort] = useState(initialSort);
+  const [sort, setSort] = useQueryState(
+    "sort",
+    parseAsStringEnum<Sort>(Object.values(Sort)).withDefault(
+      initialSort as unknown as Sort
+    )
+  );
   const [isPending, startTransition] = useTransition();
 
   const { ref, entry } = useIntersection({
@@ -55,7 +66,7 @@ export default function InfiniteRecordings({
   const handleSortChange = (value: string | null) => {
     if (!value) return;
 
-    setSort(value);
+    setSort(value as unknown as Sort);
     startTransition(async () => {
       const result = await getRecordings(ScopeEnum.Discover, 1, value);
       setData(result.data);
@@ -158,7 +169,10 @@ export default function InfiniteRecordings({
                       {f.follower?.username}
                     </Title>
                     <Text size="xs">
-                      {new Date(f.createdAt || "").toDateString()}
+                      {new Date(f.createdAt || "").toLocaleString("en-US", {
+                        dateStyle: "short",
+                        timeStyle: "short",
+                      })}
                     </Text>
                   </div>
                 </Group>
