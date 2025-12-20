@@ -14,6 +14,10 @@ export default factories.createCoreController(
       delete ctx.query.scope;
       delete ctx.query.hasRecordings;
 
+      // Extract and remove recordings populate config
+      const recordingsPopulate = (ctx.query.populate as any)?.recordings;
+      delete ctx.query.populate;
+
       const fullUser = await strapi
         .documents("plugin::users-permissions.user")
         .findOne({
@@ -60,15 +64,34 @@ export default factories.createCoreController(
 
       const dataWithMeta = await Promise.all(
         result.data.map(async (follower) => {
-          const totalRecordings = await strapi
-            .documents("api::recording.recording")
-            .count({
+          // Build recordings query, mimicking frontend populate
+          const recordingsQuery: any = {
+            filters: { follower: { id: { $eq: follower.id } } },
+            status: "published",
+            limit: 5,
+            sort: { createdAt: "desc" },
+          };
+
+          // Apply nested populate if it was requested
+          if (recordingsPopulate?.populate) {
+            recordingsQuery.populate = recordingsPopulate.populate;
+          }
+
+          const [totalRecordings, recordings] = await Promise.all([
+            strapi.documents("api::recording.recording").count({
               filters: { follower: { id: { $eq: follower.id } } },
               status: "published",
-            });
+            }),
+            recordingsPopulate
+              ? strapi
+                  .documents("api::recording.recording")
+                  .findMany(recordingsQuery)
+              : Promise.resolve(undefined),
+          ]);
 
           return {
             ...follower,
+            ...(recordings !== undefined && { recordings }),
             isFollowing: followingIds.includes(follower.id),
             totalRecordings,
           };

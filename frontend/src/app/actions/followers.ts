@@ -50,7 +50,6 @@ export async function getFollowers(
   page: number,
   sort: string = "username:asc"
 ) {
-  console.log(sort);
   const response = await api.follower.browseFollowers({
     scope,
     hasRecordings: true,
@@ -60,7 +59,7 @@ export async function getFollowers(
       recordings: {
         populate: {
           sources: {
-            fields: ["id", "documentId", "path", "duration"],
+            fields: ["*"],
           },
         },
       },

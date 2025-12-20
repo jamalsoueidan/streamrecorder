@@ -14,7 +14,6 @@ import {
   Flex,
   Grid,
   Group,
-  Image,
   Loader,
   Select,
   Stack,
@@ -25,6 +24,7 @@ import { useIntersection } from "@mantine/hooks";
 import Link from "next/link";
 import { parseAsStringEnum, useQueryState } from "nuqs";
 import { useEffect, useRef, useState, useTransition } from "react";
+import { ImageVideoPreview } from "./image-video-preview";
 
 const SORT_OPTIONS = [
   { value: SortOptions.createdAtDesc, label: "Newest first" },
@@ -129,34 +129,22 @@ export default function InfiniteRecordings({
         {(data || []).map((f) => (
           <Grid gutter="xs" key={f.documentId} w="160">
             <Grid.Col span={12}>
-              <Anchor
-                component={Link}
+              <ImageVideoPreview
+                key={f.documentId}
                 href={`/${f.follower?.type}/${f.follower?.username}/live/${
                   f.documentId
                 }${sort ? `?sort=` + sort : null}`}
-              >
-                <Image
-                  key={f.documentId}
-                  alt={f.follower?.username || "unknown"}
-                  radius="md"
-                  src={
-                    f.sources?.length
-                      ? process.env.NEXT_PUBLIC_S3_URL! +
-                        f.sources[0].path +
-                        "preview.jpg"
-                      : null
-                  }
-                  w={160}
-                  h={284}
-                  loading="lazy"
-                  fallbackSrc="https://placehold.co/600x400?text=Placeholder"
-                  style={{
-                    objectFit: "cover",
-                    objectPosition: "center center",
-                    flexShrink: 0,
-                  }}
-                />
-              </Anchor>
+                src={
+                  f.sources?.length
+                    ? process.env.NEXT_PUBLIC_S3_URL! +
+                      f.sources[0].path +
+                      "preview.jpg"
+                    : null
+                }
+                w={160}
+                h={284}
+                sources={f.sources}
+              />
             </Grid.Col>
             <Grid.Col span={12}>
               <Anchor

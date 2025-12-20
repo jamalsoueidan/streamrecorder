@@ -19,7 +19,7 @@ export async function getRecordings({
     "pagination[pageSize]": 10,
     populate: {
       sources: {
-        fields: ["id", "documentId", "path", "duration"],
+        fields: ["*"],
       },
       follower: {
         fields: ["username", "type"],
