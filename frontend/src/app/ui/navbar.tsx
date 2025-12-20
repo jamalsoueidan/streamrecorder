@@ -11,8 +11,8 @@ import {
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import AddFollowerForm from "../(protected)/_components/add-follower-form";
 import { logout } from "../actions/auth";
-import AddFollowerForm from "../dashboard/add-follower-form";
 import { useNavigation } from "../lib/navigation-provider";
 import { useUser } from "../lib/user-provider";
 import classes from "./navbar.module.css";

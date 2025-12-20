@@ -1,4 +1,4 @@
-import api from "@/app/api";
+import api from "@/lib/api";
 
 export async function GET() {
   try {

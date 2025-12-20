@@ -10,6 +10,7 @@ import {
 import {
   Avatar,
   Box,
+  Divider,
   Grid,
   Group,
   Image,
@@ -21,8 +22,8 @@ import {
 } from "@mantine/core";
 import { useIntersection } from "@mantine/hooks";
 import { useEffect, useState, useTransition } from "react";
-import FollowButton from "../dashboard/follow-button";
-import UnfollowButton from "../dashboard/unfollow-button";
+import FollowButton from "./follow-button";
+import UnfollowButton from "./unfollow-button";
 
 const SORT_OPTIONS = [
   { value: "username:asc", label: "Username A-Z" },
@@ -32,12 +33,14 @@ const SORT_OPTIONS = [
 ];
 
 interface Props {
+  title: string;
   initialData: FollowerWithMeta[];
   initialPagination: BrowseFollowersResponse["meta"];
   initialSort?: string;
 }
 
 export default function InfiniteFollowers({
+  title,
   initialData,
   initialPagination,
   initialSort,
@@ -89,10 +92,14 @@ export default function InfiniteFollowers({
 
   return (
     <Stack gap="sm">
-      <Group justify="flex-end">
+      <Group justify="space-between">
+        <Title order={1} size="lg">
+          {title} ({initialPagination?.pagination?.total || 0})
+        </Title>
+
         <Select
           key={sort}
-          size="sm"
+          size="xs"
           w={180}
           value={sort}
           onChange={handleSortChange}
@@ -100,6 +107,7 @@ export default function InfiniteFollowers({
           disabled={isPending}
         />
       </Group>
+      <Divider />
       <Stack gap="xl">
         {data.map((f) => (
           <Box key={f.documentId} w="100%">
@@ -130,7 +138,10 @@ export default function InfiniteFollowers({
               </Grid.Col>
               <Grid.Col span={2} style={{ textAlign: "right" }}>
                 {f.isFollowing ? (
-                  <UnfollowButton id={f.id!} />
+                  <UnfollowButton
+                    id={f.id!}
+                    onSuccess={() => handleFollowed(f.id!)}
+                  />
                 ) : (
                   <FollowButton
                     username={f.username!}
