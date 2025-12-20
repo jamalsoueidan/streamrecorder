@@ -1,28 +1,38 @@
 "use client";
 
 import { AppShell, Burger, Group, useMatches } from "@mantine/core";
-import { useDisclosure } from "@mantine/hooks";
+import { useDisclosure, useMounted } from "@mantine/hooks";
 import { Navbar } from "./navbar";
 
 export function Shell({ children }: { children: React.ReactNode }) {
   const [opened, { close, open }] = useDisclosure(false);
-  const isMobile = useMatches({
-    sm: true,
+
+  // mount and headerHeight is fix for SSR and the video player page
+  const mounted = useMounted();
+  const headerHeight = useMatches({
+    base: 60,
+    sm: 0,
   });
 
   return (
     <AppShell
+      styles={{
+        header: !headerHeight
+          ? {
+              display: "none",
+            }
+          : {},
+      }}
       layout="alt"
-      header={{ height: 60, collapsed: !!isMobile }}
+      header={{
+        height: mounted ? headerHeight : 0,
+        collapsed: headerHeight === 0,
+      }}
       navbar={{
         width: 300,
+
         breakpoint: "sm",
         collapsed: { mobile: !opened },
-      }}
-      aside={{
-        width: 300,
-        breakpoint: "md",
-        collapsed: { desktop: true, mobile: true },
       }}
       padding="md"
     >
@@ -35,7 +45,6 @@ export function Shell({ children }: { children: React.ReactNode }) {
         <Navbar opened={opened} toggle={close} />
       </AppShell.Navbar>
       <AppShell.Main>{children}</AppShell.Main>
-      <AppShell.Aside p="md">Aside</AppShell.Aside>
     </AppShell>
   );
 }

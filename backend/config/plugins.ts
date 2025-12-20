@@ -26,6 +26,32 @@ export default () => ({
             }
           });
 
+          // Fix id type for all /{id} endpoints (Strapi v5 uses documentId which is string)
+          Object.keys(draft.paths).forEach((path) => {
+            if (path.match(/\/\{id\}$/)) {
+              ["get", "put", "delete"].forEach((method) => {
+                const endpoint = draft.paths[path]?.[method];
+                if (endpoint?.parameters) {
+                  endpoint.parameters = endpoint.parameters.map(
+                    (param: any) => {
+                      if (param.name === "id" && param.in === "path") {
+                        return { ...param, schema: { type: "string" } };
+                      }
+                      return param;
+                    }
+                  );
+                }
+              });
+            }
+          });
+
+          // Add populate to /XXX/{id}
+          const populateParam = draft.paths["/recordings"].get.parameters.find(
+            (param: any) => param.name === "populate"
+          );
+
+          draft.paths["/recordings/{id}"].get.parameters.push(populateParam);
+
           // Define scope enum once
           draft.components.schemas.ScopeEnum = {
             type: "string",
