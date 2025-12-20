@@ -105,7 +105,7 @@ export default function InfiniteRecordings({
             <Grid.Col span={12}>
               <Anchor
                 component={Link}
-                href={`/${f.follower?.type}/${f.follower?.username}/live/${f.id}`}
+                href={`/${f.follower?.type}/${f.follower?.username}/live/${f.documentId}`}
               >
                 <Image
                   key={f.documentId}

@@ -1443,19 +1443,19 @@ export type GetFollowersData = FollowerListResponse;
 export type PostFollowersData = FollowerResponse;
 
 export interface GetFollowersIdParams {
-  id: number;
+  id: string;
 }
 
 export type GetFollowersIdData = FollowerResponse;
 
 export interface PutFollowersIdParams {
-  id: number;
+  id: string;
 }
 
 export type PutFollowersIdData = FollowerResponse;
 
 export interface DeleteFollowersIdParams {
-  id: number;
+  id: string;
 }
 
 /** @format int64 */
@@ -1519,19 +1519,21 @@ export type GetRecordingsData = RecordingListResponse;
 export type PostRecordingsData = RecordingResponse;
 
 export interface GetRecordingsIdParams {
-  id: number;
+  /** Relations to return */
+  populate?: string | string[] | object;
+  id: string;
 }
 
 export type GetRecordingsIdData = RecordingResponse;
 
 export interface PutRecordingsIdParams {
-  id: number;
+  id: string;
 }
 
 export type PutRecordingsIdData = RecordingResponse;
 
 export interface DeleteRecordingsIdParams {
-  id: number;
+  id: string;
 }
 
 /** @format int64 */
@@ -1565,19 +1567,19 @@ export type GetSourcesData = SourceListResponse;
 export type PostSourcesData = SourceResponse;
 
 export interface GetSourcesIdParams {
-  id: number;
+  id: string;
 }
 
 export type GetSourcesIdData = SourceResponse;
 
 export interface PutSourcesIdParams {
-  id: number;
+  id: string;
 }
 
 export type PutSourcesIdData = SourceResponse;
 
 export interface DeleteSourcesIdParams {
-  id: number;
+  id: string;
 }
 
 /** @format int64 */
@@ -1932,7 +1934,7 @@ export namespace Follower {
    */
   export namespace GetFollowersId {
     export type RequestParams = {
-      id: number;
+      id: string;
     };
     export type RequestQuery = {};
     export type RequestBody = never;
@@ -1949,7 +1951,7 @@ export namespace Follower {
    */
   export namespace PutFollowersId {
     export type RequestParams = {
-      id: number;
+      id: string;
     };
     export type RequestQuery = {};
     export type RequestBody = FollowerRequest;
@@ -1966,7 +1968,7 @@ export namespace Follower {
    */
   export namespace DeleteFollowersId {
     export type RequestParams = {
-      id: number;
+      id: string;
     };
     export type RequestQuery = {};
     export type RequestBody = never;
@@ -2179,9 +2181,12 @@ export namespace Recording {
    */
   export namespace GetRecordingsId {
     export type RequestParams = {
-      id: number;
+      id: string;
     };
-    export type RequestQuery = {};
+    export type RequestQuery = {
+      /** Relations to return */
+      populate?: string | string[] | object;
+    };
     export type RequestBody = never;
     export type RequestHeaders = {};
     export type ResponseBody = GetRecordingsIdData;
@@ -2196,7 +2201,7 @@ export namespace Recording {
    */
   export namespace PutRecordingsId {
     export type RequestParams = {
-      id: number;
+      id: string;
     };
     export type RequestQuery = {};
     export type RequestBody = RecordingRequest;
@@ -2213,7 +2218,7 @@ export namespace Recording {
    */
   export namespace DeleteRecordingsId {
     export type RequestParams = {
-      id: number;
+      id: string;
     };
     export type RequestQuery = {};
     export type RequestBody = never;
@@ -2322,7 +2327,7 @@ export namespace Source {
    */
   export namespace GetSourcesId {
     export type RequestParams = {
-      id: number;
+      id: string;
     };
     export type RequestQuery = {};
     export type RequestBody = never;
@@ -2339,7 +2344,7 @@ export namespace Source {
    */
   export namespace PutSourcesId {
     export type RequestParams = {
-      id: number;
+      id: string;
     };
     export type RequestQuery = {};
     export type RequestBody = SourceRequest;
@@ -2356,7 +2361,7 @@ export namespace Source {
    */
   export namespace DeleteSourcesId {
     export type RequestParams = {
-      id: number;
+      id: string;
     };
     export type RequestQuery = {};
     export type RequestBody = never;
@@ -3306,6 +3311,7 @@ export class Api<
       this.request<GetRecordingsIdData, Error>({
         path: `/recordings/${id}`,
         method: "GET",
+        query: query,
         secure: true,
         format: "json",
         ...params,

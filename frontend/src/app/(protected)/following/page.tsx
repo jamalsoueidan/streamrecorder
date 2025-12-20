@@ -11,7 +11,7 @@ export default async function FollowingsPage() {
   return (
     <section>
       {data.length === 0 ? (
-        <p>No more accounts to discover.</p>
+        <p>You are not following anyone yet.</p>
       ) : (
         <InfiniteFollowers
           title="Followers"
