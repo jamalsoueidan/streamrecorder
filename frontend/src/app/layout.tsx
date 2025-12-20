@@ -1,12 +1,12 @@
-import "@mantine/core/styles.css";
-import type { Metadata } from "next";
-
 import {
   ColorSchemeScript,
   MantineProvider,
   createTheme,
   mantineHtmlProps,
 } from "@mantine/core";
+import "@mantine/core/styles.css";
+import type { Metadata } from "next";
+import { NuqsAdapter } from "nuqs/adapters/next/app";
 
 const theme = createTheme({
   colors: {
@@ -42,7 +42,7 @@ export default function RootLayout({
       </head>
       <body>
         <MantineProvider theme={theme} defaultColorScheme="dark">
-          {children}
+          <NuqsAdapter>{children}</NuqsAdapter>
         </MantineProvider>
       </body>
     </html>

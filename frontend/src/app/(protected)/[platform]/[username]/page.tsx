@@ -1,3 +1,3 @@
-export default function DashboardPage() {
+export default function FollowerPage() {
   return <>asd</>;
 }

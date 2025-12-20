@@ -28,3 +28,108 @@ export async function getRecordings(
     meta: response.data?.meta,
   };
 }
+
+export async function getRecordingsWithPrevNextByFollower({
+  id,
+}: {
+  id: string;
+}) {
+  const response = await api.recording.getRecordingsId({
+    id,
+    populate: "*",
+  });
+
+  const recording = response.data.data;
+  const currentCreatedAt = recording?.createdAt;
+  const sources = recording?.sources || [];
+
+  const [prevResponse, nextResponse] = await Promise.all([
+    api.recording.getRecordings({
+      filters: {
+        follower: {
+          username: { $eq: recording?.follower?.username },
+          type: { $eq: recording?.follower?.type },
+        },
+        createdAt: { $lt: currentCreatedAt },
+      },
+      sort: "createdAt:desc",
+      "pagination[limit]": 1,
+      fields: "documentId",
+    }),
+
+    api.recording.getRecordings({
+      filters: {
+        follower: {
+          username: { $eq: recording?.follower?.username },
+          type: { $eq: recording?.follower?.type },
+        },
+        createdAt: { $gt: currentCreatedAt },
+      },
+      sort: "createdAt:asc",
+      "pagination[limit]": 1,
+      fields: "documentId",
+    }),
+  ]);
+
+  return {
+    sources,
+    recording,
+    prevId: prevResponse.data.data?.[0]?.documentId || null,
+    nextId: nextResponse.data.data?.[0]?.documentId || null,
+  };
+}
+
+interface GetRecordingOptions {
+  id: string;
+  sort: "createdAt:desc" | "createdAt:asc" | string;
+}
+
+export async function getRecordingsWithPrevNext({
+  id,
+  sort = "createdAt:desc",
+}: GetRecordingOptions) {
+  const response = await api.recording.getRecordingsId({
+    id,
+    populate: "*",
+  });
+
+  const recording = response.data.data;
+  const currentCreatedAt = recording?.createdAt;
+  const sources = recording?.sources || [];
+
+  const isDesc = sort.includes("desc");
+
+  const [prevResponse, nextResponse] = await Promise.all([
+    // Prev: opposite direction of list
+    api.recording.browseRecordings({
+      scope: ScopeEnum.Following,
+      filters: {
+        createdAt: isDesc
+          ? { $gt: currentCreatedAt }
+          : { $lt: currentCreatedAt },
+      },
+      sort: isDesc ? "createdAt:asc" : "createdAt:desc",
+      "pagination[limit]": 1,
+      fields: "documentId",
+    }),
+    // Next: same direction as list
+    api.recording.browseRecordings({
+      scope: ScopeEnum.Following,
+      filters: {
+        createdAt: isDesc
+          ? { $lt: currentCreatedAt }
+          : { $gt: currentCreatedAt },
+      },
+      sort: isDesc ? "createdAt:desc" : "createdAt:asc",
+      "pagination[limit]": 1,
+      fields: "documentId",
+    }),
+  ]);
+
+  return {
+    sources,
+    recording,
+    prevId: prevResponse.data.data?.[0]?.documentId || null,
+    nextId: nextResponse.data.data?.[0]?.documentId || null,
+  };
+}
