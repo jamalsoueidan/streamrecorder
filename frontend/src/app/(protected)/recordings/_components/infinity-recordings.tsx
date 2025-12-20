@@ -2,6 +2,7 @@
 "use client";
 
 import { getRecordings } from "@/app/actions/recordings";
+import { SortOptions } from "@/app/lib/types/filtering";
 import {
   RecordingListResponse,
   ScopeEnum,
@@ -23,22 +24,17 @@ import {
 import { useIntersection } from "@mantine/hooks";
 import Link from "next/link";
 import { parseAsStringEnum, useQueryState } from "nuqs";
-import { useEffect, useState, useTransition } from "react";
-
-enum Sort {
-  createdAtDesc = "createdAt:desc",
-  createdAtAsc = "createdAt:asc",
-}
+import { useEffect, useRef, useState, useTransition } from "react";
 
 const SORT_OPTIONS = [
-  { value: Sort.createdAtDesc, label: "Newest first" },
-  { value: Sort.createdAtAsc, label: "Oldest first" },
+  { value: SortOptions.createdAtDesc, label: "Newest first" },
+  { value: SortOptions.createdAtAsc, label: "Oldest first" },
 ];
 
 interface Props {
   initialData: RecordingListResponse["data"];
   initialPagination: RecordingListResponse["meta"];
-  initialSort?: string;
+  initialSort?: SortOptions;
 }
 
 export default function InfiniteRecordings({
@@ -53,10 +49,11 @@ export default function InfiniteRecordings({
   );
   const [sort, setSort] = useQueryState(
     "sort",
-    parseAsStringEnum<Sort>(Object.values(Sort)).withDefault(
-      initialSort as unknown as Sort
+    parseAsStringEnum<SortOptions>(Object.values(SortOptions)).withDefault(
+      initialSort || SortOptions.createdAtDesc
     )
   );
+
   const [isPending, startTransition] = useTransition();
 
   const { ref, entry } = useIntersection({
@@ -65,21 +62,39 @@ export default function InfiniteRecordings({
 
   const handleSortChange = (value: string | null) => {
     if (!value) return;
+    setSort(value as unknown as SortOptions);
+  };
 
-    setSort(value as unknown as Sort);
+  const isFirstRender = useRef(true);
+
+  // 1. Refetch when sort changes
+  useEffect(() => {
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+      return;
+    }
+
     startTransition(async () => {
-      const result = await getRecordings(ScopeEnum.Discover, 1, value);
+      const result = await getRecordings({
+        scope: ScopeEnum.Following,
+        page: 1,
+        sort,
+      });
       setData(result.data);
       setPage(1);
       setHasMore(1 < (result.meta?.pagination?.pageCount ?? 1));
     });
-  };
+  }, [sort]);
 
   useEffect(() => {
     if (entry?.isIntersecting && hasMore && !isPending) {
       startTransition(async () => {
         const nextPage = page + 1;
-        const result = await getRecordings(ScopeEnum.Discover, nextPage, sort);
+        const result = await getRecordings({
+          scope: ScopeEnum.Following,
+          page: nextPage,
+          sort,
+        });
 
         setData((prev) => {
           const existingIds = new Set(prev?.map((f) => f.id));
@@ -116,7 +131,9 @@ export default function InfiniteRecordings({
             <Grid.Col span={12}>
               <Anchor
                 component={Link}
-                href={`/${f.follower?.type}/${f.follower?.username}/live/${f.documentId}`}
+                href={`/${f.follower?.type}/${f.follower?.username}/live/${
+                  f.documentId
+                }${sort ? `?sort=` + sort : null}`}
               >
                 <Image
                   key={f.documentId}
