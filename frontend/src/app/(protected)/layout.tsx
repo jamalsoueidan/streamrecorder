@@ -1,7 +1,7 @@
 import { getToken } from "@/lib/token";
 
 import { redirect } from "next/navigation";
-import api from "../api";
+import api from "../../lib/api";
 import { NavigationProvider } from "../lib/navigation-provider";
 import { UserProvider } from "../lib/user-provider";
 import { Shell } from "../ui/shell";
