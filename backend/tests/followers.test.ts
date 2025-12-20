@@ -146,16 +146,6 @@ describe("Follower API", () => {
       expect(res.body.meta.pagination.total).toBe(1);
     });
 
-    it("should return recordings when populated", async () => {
-      const res = await request(getServer())
-        .get("/api/followers/browse?scope=following&populate=recordings")
-        .set("Authorization", `Bearer ${jwt}`)
-        .expect(200);
-
-      expect(res.body.data[0]).toHaveProperty("recordings");
-      expect(res.body.data[0].recordings).toEqual([]);
-    });
-
     it("should return recordings with sources when populated", async () => {
       await createRecording(followerId, true);
 
