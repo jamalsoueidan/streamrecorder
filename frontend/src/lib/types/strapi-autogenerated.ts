@@ -252,7 +252,7 @@ export interface Follower {
           thumbnailInterval?: number;
           thumbnailCols?: number;
           videoOriginal?: VideosVideoComponent;
-          videoSmall?: VideosVideoComponent[];
+          videoSmall?: VideosVideoComponent;
           /** @format date-time */
           createdAt?: string;
           /** @format date-time */
@@ -778,7 +778,7 @@ export interface Recording {
         thumbnailInterval?: number;
         thumbnailCols?: number;
         videoOriginal?: VideosVideoComponent;
-        videoSmall?: VideosVideoComponent[];
+        videoSmall?: VideosVideoComponent;
         /** @format date-time */
         createdAt?: string;
         /** @format date-time */
@@ -877,7 +877,7 @@ export interface SourceRequest {
     thumbnailInterval?: number;
     thumbnailCols?: number;
     videoOriginal?: VideosVideoComponent;
-    videoSmall?: VideosVideoComponent[];
+    videoSmall?: VideosVideoComponent;
     locale?: string;
     localizations?: (number | string)[];
   };
@@ -909,7 +909,7 @@ export interface Source {
   thumbnailInterval?: number;
   thumbnailCols?: number;
   videoOriginal?: VideosVideoComponent;
-  videoSmall?: VideosVideoComponent[];
+  videoSmall?: VideosVideoComponent;
   /** @format date-time */
   createdAt?: string;
   /** @format date-time */
@@ -1028,7 +1028,7 @@ export interface Source {
     thumbnailInterval?: number;
     thumbnailCols?: number;
     videoOriginal?: VideosVideoComponent;
-    videoSmall?: VideosVideoComponent[];
+    videoSmall?: VideosVideoComponent;
     /** @format date-time */
     createdAt?: string;
     /** @format date-time */

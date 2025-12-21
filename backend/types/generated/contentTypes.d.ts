@@ -568,7 +568,7 @@ export interface ApiSourceSource extends Struct.CollectionTypeSchema {
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     videoOriginal: Schema.Attribute.Component<'videos.video', false>;
-    videoSmall: Schema.Attribute.Component<'videos.video', true>;
+    videoSmall: Schema.Attribute.Component<'videos.video', false>;
   };
 }
 
