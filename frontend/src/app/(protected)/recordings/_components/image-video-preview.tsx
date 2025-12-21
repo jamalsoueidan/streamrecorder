@@ -46,8 +46,10 @@ export function ImageVideoPreview({
     setShowVideo(false);
   };
 
-  const handleDoubleClick = () => {
-    router.push(href);
+  const handleDoubleClick = (evt: React.MouseEvent<HTMLDivElement>) => {
+    if (evt.target instanceof HTMLVideoElement) {
+      router.push(href);
+    }
   };
 
   return (
@@ -74,7 +76,11 @@ export function ImageVideoPreview({
       </Anchor>
 
       {showVideo && sources && (
-        <div onDoubleClick={handleDoubleClick} style={{ cursor: "pointer" }}>
+        <div
+          onClick={handleDoubleClick}
+          onDoubleClick={handleDoubleClick}
+          style={{ cursor: "pointer" }}
+        >
           <MiniPlayer sources={sources} width={w} height={h} />
         </div>
       )}

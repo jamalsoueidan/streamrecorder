@@ -55,9 +55,9 @@ export async function getRecordingsWithPrevNextByFollower({
           username: { $eq: recording?.follower?.username },
           type: { $eq: recording?.follower?.type },
         },
-        createdAt: { $lt: currentCreatedAt },
+        createdAt: { $gt: currentCreatedAt },
       },
-      sort: "createdAt:desc",
+      sort: SortOptions.createdAtDesc,
       "pagination[limit]": 1,
       fields: "documentId",
     }),
@@ -68,9 +68,9 @@ export async function getRecordingsWithPrevNextByFollower({
           username: { $eq: recording?.follower?.username },
           type: { $eq: recording?.follower?.type },
         },
-        createdAt: { $gt: currentCreatedAt },
+        createdAt: { $lt: currentCreatedAt },
       },
-      sort: "createdAt:asc",
+      sort: SortOptions.createdAtDesc,
       "pagination[limit]": 1,
       fields: "documentId",
     }),
@@ -103,7 +103,6 @@ export async function getRecordingsWithPrevNext({
   const sources = recording?.sources || [];
 
   const isDesc = sort.includes("desc");
-  console.log("isDesc:", isDesc);
 
   const [prevResponse, nextResponse] = await Promise.all([
     // Prev: opposite direction of list
@@ -114,7 +113,7 @@ export async function getRecordingsWithPrevNext({
           ? { $gt: currentCreatedAt }
           : { $lt: currentCreatedAt },
       },
-      sort: isDesc ? "createdAt:asc" : "createdAt:desc",
+      sort,
       "pagination[limit]": 1,
       fields: "documentId",
     }),
@@ -126,7 +125,7 @@ export async function getRecordingsWithPrevNext({
           ? { $lt: currentCreatedAt }
           : { $gt: currentCreatedAt },
       },
-      sort: isDesc ? "createdAt:desc" : "createdAt:asc",
+      sort,
       "pagination[limit]": 1,
       fields: "documentId",
     }),

@@ -11,6 +11,7 @@ interface PageProps {
 
 export default async function Page({ params }: PageProps) {
   const { id, username, platform } = await params;
+
   const { sources, prevId, nextId } = await getRecordingsWithPrevNextByFollower(
     {
       id,
