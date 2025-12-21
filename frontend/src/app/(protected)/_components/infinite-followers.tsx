@@ -2,6 +2,7 @@
 "use client";
 
 import { getFollowers } from "@/app/actions/followers";
+import { SortOptions } from "@/app/lib/types/filtering";
 import {
   BrowseFollowersResponse,
   ScopeEnum,
@@ -20,23 +21,25 @@ import {
   Title,
 } from "@mantine/core";
 import { useIntersection } from "@mantine/hooks";
+import { parseAsStringEnum, useQueryState } from "nuqs";
 import { useEffect, useState, useTransition } from "react";
 import { ImageVideoPreview } from "../recordings/_components/image-video-preview";
 import FollowButton from "./follow-button";
 import UnfollowButton from "./unfollow-button";
 
 const SORT_OPTIONS = [
-  { value: "username:asc", label: "Username A-Z" },
-  { value: "username:desc", label: "Username Z-A" },
-  { value: "createdAt:desc", label: "Newest first" },
-  { value: "createdAt:asc", label: "Oldest first" },
+  { value: SortOptions.UsernameAsc, label: "Username A-Z" },
+  { value: SortOptions.UsernameDesc, label: "Username Z-A" },
+  { value: SortOptions.createdAtDesc, label: "Newest first" },
+  { value: SortOptions.createdAtAsc, label: "Oldest first" },
 ];
 
 interface Props {
   title: string;
   initialData: FollowerWithMeta[];
   initialPagination: BrowseFollowersResponse["meta"];
-  initialSort?: string;
+  initialSort?: SortOptions;
+  initialScope: ScopeEnum;
 }
 
 export default function InfiniteFollowers({
@@ -44,13 +47,19 @@ export default function InfiniteFollowers({
   initialData,
   initialPagination,
   initialSort,
+  initialScope,
 }: Props) {
   const [data, setData] = useState(initialData);
   const [page, setPage] = useState(initialPagination?.pagination?.page ?? 1);
   const [hasMore, setHasMore] = useState(
     page < (initialPagination?.pagination?.pageCount ?? 1)
   );
-  const [sort, setSort] = useState(initialSort);
+  const [sort, setSort] = useQueryState(
+    "sort",
+    parseAsStringEnum<SortOptions>(Object.values(SortOptions)).withDefault(
+      initialSort || SortOptions.createdAtDesc
+    )
+  );
   const [isPending, startTransition] = useTransition();
 
   const { ref, entry } = useIntersection({
@@ -60,9 +69,13 @@ export default function InfiniteFollowers({
   const handleSortChange = (value: string | null) => {
     if (!value) return;
 
-    setSort(value);
+    setSort(value as unknown as SortOptions);
     startTransition(async () => {
-      const result = await getFollowers(ScopeEnum.Discover, 1, value);
+      const result = await getFollowers({
+        scope: initialScope,
+        page: 1,
+        sort: value as unknown as SortOptions,
+      });
       setData(result.data);
       setPage(1);
       setHasMore(1 < (result.meta?.pagination?.pageCount ?? 1));
@@ -77,7 +90,11 @@ export default function InfiniteFollowers({
     if (entry?.isIntersecting && hasMore && !isPending) {
       startTransition(async () => {
         const nextPage = page + 1;
-        const result = await getFollowers(ScopeEnum.Discover, nextPage, sort);
+        const result = await getFollowers({
+          scope: ScopeEnum.Discover,
+          page: nextPage,
+          sort,
+        });
 
         setData((prev) => {
           const existingIds = new Set(prev.map((f) => f.id));
@@ -99,7 +116,7 @@ export default function InfiniteFollowers({
 
         <Select
           key={sort}
-          size="xs"
+          size="sm"
           w={180}
           value={sort}
           onChange={handleSortChange}
@@ -111,7 +128,7 @@ export default function InfiniteFollowers({
       <Stack gap="xl">
         {data.map((f) => (
           <Box key={f.documentId} w="100%">
-            <Grid>
+            <Grid justify="center" align="center">
               <Grid.Col span="content">
                 <Avatar
                   size="lg"
@@ -135,6 +152,12 @@ export default function InfiniteFollowers({
                   {f.username}
                 </Title>
                 <Text>{f.totalRecordings} recordings</Text>
+                <Text size="xs">
+                  {new Date(f.createdAt || "").toLocaleString("en-US", {
+                    dateStyle: "short",
+                    timeStyle: "long",
+                  })}
+                </Text>
               </Grid.Col>
               <Grid.Col span={2} style={{ textAlign: "right" }}>
                 {f.isFollowing ? (
@@ -156,9 +179,9 @@ export default function InfiniteFollowers({
                 style={{
                   display: "grid",
                   gridTemplateColumns: "repeat(auto-fill, 160px)",
-                  gridAutoRows: "284px",
-                  gap: "8px",
-                  maxHeight: 284,
+                  gridAutoRows: "310px",
+                  gap: "1.4em",
+                  maxHeight: 310,
                   overflow: "hidden",
                 }}
               >
@@ -170,14 +193,26 @@ export default function InfiniteFollowers({
                     : null;
 
                   return (
-                    <ImageVideoPreview
-                      key={rec.documentId}
-                      href={`/${f.type}/${f.username}/live/${rec.documentId}`}
-                      src={path}
-                      w={160}
-                      h={284}
-                      sources={rec.sources}
-                    />
+                    <Stack key={rec.documentId} gap="xs">
+                      <ImageVideoPreview
+                        href={`/${f.type}/${f.username}/live/${rec.documentId}`}
+                        src={path}
+                        w={160}
+                        h={284}
+                        sources={rec.sources}
+                      />
+                      <div>
+                        <Text size="xs">
+                          {new Date(rec.createdAt || "").toLocaleString(
+                            "en-US",
+                            {
+                              dateStyle: "short",
+                              timeStyle: "short",
+                            }
+                          )}
+                        </Text>
+                      </div>
+                    </Stack>
                   );
                 })}
               </div>
