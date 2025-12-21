@@ -22,7 +22,7 @@ export default factories.createCoreController(
           status: "published",
         });
 
-      const followingIds = fullUser?.followers?.map((f) => f.id) || [];
+      const followingIds = fullUser?.followers?.map((f) => f.id) || [0];
 
       const scopeFilters: Record<string, object | null> = {
         following: { $in: followingIds },
