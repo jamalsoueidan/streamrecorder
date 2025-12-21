@@ -1,6 +1,6 @@
 import { VideoModalByRecordings } from "@/app/(protected)/[platform]/[username]/live/[id]/_components/video-modal-by-recordings";
 import { getRecordingsWithPrevNext } from "@/app/actions/recordings";
-import { SortOptions } from "@/app/lib/types/filtering";
+import { SortOptions } from "@/lib/types/filtering";
 
 interface PageProps {
   params: Promise<{

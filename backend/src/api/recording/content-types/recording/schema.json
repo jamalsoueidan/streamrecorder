@@ -20,8 +20,7 @@
     "sources": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::source.source",
-      "mappedBy": "recording"
+      "target": "api::source.source"
     }
   }
 }

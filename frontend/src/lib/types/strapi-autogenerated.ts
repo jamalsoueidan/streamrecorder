@@ -248,21 +248,11 @@ export interface Follower {
           /** @format date-time */
           finishedAt?: string;
           path?: string;
-          playlist?: string;
           duration?: number;
-          size?: string;
-          /**
-           * @pattern ^\d*$
-           * @example "123456789"
-           */
-          sizeBytes?: string;
           thumbnailInterval?: number;
           thumbnailCols?: number;
-          type?: FollowerTypeEnum1;
-          recording?: {
-            id?: number;
-            documentId?: string;
-          };
+          videoOriginal?: Videos480Component;
+          videoSmall?: Videos480Component;
           /** @format date-time */
           createdAt?: string;
           /** @format date-time */
@@ -371,6 +361,15 @@ export interface Follower {
 export interface FollowerResponse {
   data?: Follower;
   meta?: object;
+}
+
+export interface Videos480Component {
+  id?: number;
+  playlist?: string;
+  width?: number;
+  height?: number;
+  sizeBytes?: number;
+  size?: string;
 }
 
 export interface NavigationRequest {
@@ -775,21 +774,11 @@ export interface Recording {
         /** @format date-time */
         finishedAt?: string;
         path?: string;
-        playlist?: string;
         duration?: number;
-        size?: string;
-        /**
-         * @pattern ^\d*$
-         * @example "123456789"
-         */
-        sizeBytes?: string;
         thumbnailInterval?: number;
         thumbnailCols?: number;
-        type?: RecordingTypeEnum;
-        recording?: {
-          id?: number;
-          documentId?: string;
-        };
+        videoOriginal?: Videos480Component;
+        videoSmall?: Videos480Component;
         /** @format date-time */
         createdAt?: string;
         /** @format date-time */
@@ -883,20 +872,12 @@ export interface SourceRequest {
     executionId?: number;
     /** @format date-time */
     finishedAt?: string;
-    path?: string;
-    playlist?: string;
-    duration?: number;
-    size?: string;
-    /**
-     * @pattern ^\d*$
-     * @example "123456789"
-     */
-    sizeBytes?: string;
+    path: string;
+    duration: number;
     thumbnailInterval?: number;
     thumbnailCols?: number;
-    type?: SourceRequestTypeEnum;
-    /** @example "string or id" */
-    recording?: number | string;
+    videoOriginal?: Videos480Component;
+    videoSmall?: Videos480Component;
     locale?: string;
     localizations?: (number | string)[];
   };
@@ -923,191 +904,51 @@ export interface Source {
   executionId?: number;
   /** @format date-time */
   finishedAt?: string;
-  path?: string;
-  playlist?: string;
-  duration?: number;
-  size?: string;
-  /**
-   * @pattern ^\d*$
-   * @example "123456789"
-   */
-  sizeBytes?: string;
+  path: string;
+  duration: number;
   thumbnailInterval?: number;
   thumbnailCols?: number;
-  type?: SourceTypeEnum;
-  recording?: {
+  videoOriginal?: Videos480Component;
+  videoSmall?: Videos480Component;
+  /** @format date-time */
+  createdAt?: string;
+  /** @format date-time */
+  updatedAt?: string;
+  /** @format date-time */
+  publishedAt?: string;
+  createdBy?: {
     id?: number;
     documentId?: string;
-    follower?: {
+    firstname?: string;
+    lastname?: string;
+    username?: string;
+    /** @format email */
+    email?: string;
+    resetPasswordToken?: string;
+    registrationToken?: string;
+    isActive?: boolean;
+    roles?: {
       id?: number;
       documentId?: string;
-      username?: string;
-      type?: SourceTypeEnum1;
-      protected?: boolean;
+      name?: string;
+      code?: string;
+      description?: string;
       users?: {
         id?: number;
         documentId?: string;
-        username?: string;
-        /** @format email */
-        email?: string;
-        provider?: string;
-        resetPasswordToken?: string;
-        confirmationToken?: string;
-        confirmed?: boolean;
-        blocked?: boolean;
+      }[];
+      permissions?: {
+        id?: number;
+        documentId?: string;
+        action?: string;
+        actionParameters?: any;
+        subject?: string;
+        properties?: any;
+        conditions?: any;
         role?: {
           id?: number;
           documentId?: string;
-          name?: string;
-          description?: string;
-          type?: string;
-          permissions?: {
-            id?: number;
-            documentId?: string;
-            action?: string;
-            role?: {
-              id?: number;
-              documentId?: string;
-            };
-            /** @format date-time */
-            createdAt?: string;
-            /** @format date-time */
-            updatedAt?: string;
-            /** @format date-time */
-            publishedAt?: string;
-            createdBy?: {
-              id?: number;
-              documentId?: string;
-              firstname?: string;
-              lastname?: string;
-              username?: string;
-              /** @format email */
-              email?: string;
-              resetPasswordToken?: string;
-              registrationToken?: string;
-              isActive?: boolean;
-              roles?: {
-                id?: number;
-                documentId?: string;
-                name?: string;
-                code?: string;
-                description?: string;
-                users?: {
-                  id?: number;
-                  documentId?: string;
-                }[];
-                permissions?: {
-                  id?: number;
-                  documentId?: string;
-                  action?: string;
-                  actionParameters?: any;
-                  subject?: string;
-                  properties?: any;
-                  conditions?: any;
-                  role?: {
-                    id?: number;
-                    documentId?: string;
-                  };
-                  /** @format date-time */
-                  createdAt?: string;
-                  /** @format date-time */
-                  updatedAt?: string;
-                  /** @format date-time */
-                  publishedAt?: string;
-                  createdBy?: {
-                    id?: number;
-                    documentId?: string;
-                  };
-                  updatedBy?: {
-                    id?: number;
-                    documentId?: string;
-                  };
-                  locale?: string;
-                  localizations?: {
-                    id?: number;
-                    documentId?: string;
-                  }[];
-                }[];
-                /** @format date-time */
-                createdAt?: string;
-                /** @format date-time */
-                updatedAt?: string;
-                /** @format date-time */
-                publishedAt?: string;
-                createdBy?: {
-                  id?: number;
-                  documentId?: string;
-                };
-                updatedBy?: {
-                  id?: number;
-                  documentId?: string;
-                };
-                locale?: string;
-                localizations?: {
-                  id?: number;
-                  documentId?: string;
-                }[];
-              }[];
-              blocked?: boolean;
-              preferedLanguage?: string;
-              /** @format date-time */
-              createdAt?: string;
-              /** @format date-time */
-              updatedAt?: string;
-              /** @format date-time */
-              publishedAt?: string;
-              createdBy?: {
-                id?: number;
-                documentId?: string;
-              };
-              updatedBy?: {
-                id?: number;
-                documentId?: string;
-              };
-              locale?: string;
-              localizations?: {
-                id?: number;
-                documentId?: string;
-              }[];
-            };
-            updatedBy?: {
-              id?: number;
-              documentId?: string;
-            };
-            locale?: string;
-            localizations?: {
-              id?: number;
-              documentId?: string;
-            }[];
-          }[];
-          users?: {
-            id?: number;
-            documentId?: string;
-          }[];
-          /** @format date-time */
-          createdAt?: string;
-          /** @format date-time */
-          updatedAt?: string;
-          /** @format date-time */
-          publishedAt?: string;
-          createdBy?: {
-            id?: number;
-            documentId?: string;
-          };
-          updatedBy?: {
-            id?: number;
-            documentId?: string;
-          };
-          locale?: string;
-          localizations?: {
-            id?: number;
-            documentId?: string;
-          }[];
         };
-        followers?: {
-          id?: number;
-          documentId?: string;
-        }[];
         /** @format date-time */
         createdAt?: string;
         /** @format date-time */
@@ -1128,53 +969,6 @@ export interface Source {
           documentId?: string;
         }[];
       }[];
-      recordings?: {
-        id?: number;
-        documentId?: string;
-      }[];
-      /** @format date-time */
-      createdAt?: string;
-      /** @format date-time */
-      updatedAt?: string;
-      /** @format date-time */
-      publishedAt?: string;
-      createdBy?: {
-        id?: number;
-        documentId?: string;
-      };
-      updatedBy?: {
-        id?: number;
-        documentId?: string;
-      };
-      locale?: string;
-      localizations?: {
-        id?: number;
-        documentId?: string;
-      }[];
-    };
-    sources?: {
-      id?: number;
-      documentId?: string;
-      state?: SourceStateEnum1;
-      executionId?: number;
-      /** @format date-time */
-      finishedAt?: string;
-      path?: string;
-      playlist?: string;
-      duration?: number;
-      size?: string;
-      /**
-       * @pattern ^\d*$
-       * @example "123456789"
-       */
-      sizeBytes?: string;
-      thumbnailInterval?: number;
-      thumbnailCols?: number;
-      type?: SourceTypeEnum2;
-      recording?: {
-        id?: number;
-        documentId?: string;
-      };
       /** @format date-time */
       createdAt?: string;
       /** @format date-time */
@@ -1195,6 +989,8 @@ export interface Source {
         documentId?: string;
       }[];
     }[];
+    blocked?: boolean;
+    preferedLanguage?: string;
     /** @format date-time */
     createdAt?: string;
     /** @format date-time */
@@ -1215,16 +1011,6 @@ export interface Source {
       documentId?: string;
     }[];
   };
-  /** @format date-time */
-  createdAt?: string;
-  /** @format date-time */
-  updatedAt?: string;
-  /** @format date-time */
-  publishedAt?: string;
-  createdBy?: {
-    id?: number;
-    documentId?: string;
-  };
   updatedBy?: {
     id?: number;
     documentId?: string;
@@ -1233,6 +1019,35 @@ export interface Source {
   localizations?: {
     id?: number;
     documentId?: string;
+    state?: SourceStateEnum1;
+    executionId?: number;
+    /** @format date-time */
+    finishedAt?: string;
+    path?: string;
+    duration?: number;
+    thumbnailInterval?: number;
+    thumbnailCols?: number;
+    videoOriginal?: Videos480Component;
+    videoSmall?: Videos480Component;
+    /** @format date-time */
+    createdAt?: string;
+    /** @format date-time */
+    updatedAt?: string;
+    /** @format date-time */
+    publishedAt?: string;
+    createdBy?: {
+      id?: number;
+      documentId?: string;
+    };
+    updatedBy?: {
+      id?: number;
+      documentId?: string;
+    };
+    locale?: string;
+    localizations?: {
+      id?: number;
+      documentId?: string;
+    }[];
   }[];
 }
 
@@ -1361,10 +1176,6 @@ export enum FollowerStateEnum {
   Failed = "failed",
 }
 
-export enum FollowerTypeEnum1 {
-  VideoMp4 = "video/mp4",
-}
-
 export enum OkayLinksComponentIconEnum {
   Test = "test",
   Test1 = "test1",
@@ -1376,18 +1187,10 @@ export enum RecordingStateEnum {
   Failed = "failed",
 }
 
-export enum RecordingTypeEnum {
-  VideoMp4 = "video/mp4",
-}
-
 export enum SourceRequestStateEnum {
   Recording = "recording",
   Done = "done",
   Failed = "failed",
-}
-
-export enum SourceRequestTypeEnum {
-  VideoMp4 = "video/mp4",
 }
 
 export enum SourceStateEnum {
@@ -1396,23 +1199,10 @@ export enum SourceStateEnum {
   Failed = "failed",
 }
 
-export enum SourceTypeEnum {
-  VideoMp4 = "video/mp4",
-}
-
-export enum SourceTypeEnum1 {
-  Tiktok = "tiktok",
-  Twitch = "twitch",
-}
-
 export enum SourceStateEnum1 {
   Recording = "recording",
   Done = "done",
   Failed = "failed",
-}
-
-export enum SourceTypeEnum2 {
-  VideoMp4 = "video/mp4",
 }
 
 export interface GetFollowersParams {

@@ -1,20 +1,21 @@
 "use client";
 
-import { Code, Group } from "@mantine/core";
+import { ActionIcon, Code, Group, Text } from "@mantine/core";
 import {
+  IconArrowLeft,
   IconBellRinging,
   IconLogout,
   IconReceipt2,
   IconSettings,
-  IconSwitchHorizontal,
 } from "@tabler/icons-react";
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import AddFollowerForm from "../(protected)/_components/add-follower-form";
 import { logout } from "../actions/auth";
-import { useNavigation } from "../lib/navigation-provider";
-import { useUser } from "../lib/user-provider";
+
+import { useNavigation } from "../providers/navigation-provider";
+import { useUser } from "../providers/user-provider";
 import classes from "./navbar.module.css";
 
 export const iconMap: Record<string, typeof IconBellRinging> = {
@@ -52,18 +53,24 @@ export function Navbar({
     <nav className={classes.navbar}>
       <div className={classes.navbarMain}>
         <Group className={classes.header} justify="space-between">
-          {user?.username} <Code fw={700}>{opened}v3.1.2</Code>
+          <Group>
+            <ActionIcon
+              component={Link}
+              href="#"
+              onClick={toggle}
+              hiddenFrom="sm"
+            >
+              <IconArrowLeft stroke={1.4} />
+            </ActionIcon>
+            <Text> {user?.username}</Text>
+          </Group>
+          <Code fw={700}>{opened}v0.1.0</Code>
         </Group>
         <AddFollowerForm />
         {links}
       </div>
 
       <div className={classes.footer}>
-        <Link href="#" className={classes.link} onClick={toggle}>
-          <IconSwitchHorizontal className={classes.linkIcon} stroke={1.5} />
-          <span>Change account</span>
-        </Link>
-
         <Link
           href="#"
           className={classes.link}

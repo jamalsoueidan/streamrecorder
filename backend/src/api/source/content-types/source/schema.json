@@ -26,19 +26,12 @@
       "type": "datetime"
     },
     "path": {
-      "type": "string"
-    },
-    "playlist": {
-      "type": "text"
+      "type": "string",
+      "required": true
     },
     "duration": {
-      "type": "integer"
-    },
-    "size": {
-      "type": "string"
-    },
-    "sizeBytes": {
-      "type": "biginteger"
+      "type": "integer",
+      "required": true
     },
     "thumbnailInterval": {
       "type": "integer"
@@ -46,17 +39,15 @@
     "thumbnailCols": {
       "type": "integer"
     },
-    "type": {
-      "type": "enumeration",
-      "enum": [
-        "video/mp4"
-      ]
+    "videoOriginal": {
+      "type": "component",
+      "component": "videos.480",
+      "repeatable": false
     },
-    "recording": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::recording.recording",
-      "inversedBy": "sources"
+    "videoSmall": {
+      "type": "component",
+      "component": "videos.480",
+      "repeatable": false
     }
   }
 }

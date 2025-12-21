@@ -30,7 +30,7 @@ export function MiniPlayer({ sources, width, height }: Props) {
   useEffect(() => {
     if (!mounted || !sources || sources.length === 0) return;
 
-    const combinedPlaylist = combinePlaylistsFromSources(sources);
+    const combinedPlaylist = combinePlaylistsFromSources(sources, "small");
     if (!combinedPlaylist || combinedPlaylist.length < 50) return;
 
     const blob = new Blob([combinedPlaylist], {
@@ -131,7 +131,16 @@ export function MiniPlayer({ sources, width, height }: Props) {
   const showSpinner = loading || seeking;
 
   return (
-    <div className="mini-player-wrapper" style={{ width, height }}>
+    <div
+      className="mini-player-wrapper"
+      style={{
+        width,
+        height,
+        borderRadius: 8, // or use a prop
+        overflow: "hidden", // Important! Clips video to rounded corners
+        position: "relative", // Add this too for absolute children
+      }}
+    >
       <style jsx global>{`
         @keyframes mini-player-spin {
           to {

@@ -2,7 +2,9 @@
 "use client";
 
 import { getRecordings } from "@/app/actions/recordings";
-import { SortOptions } from "@/app/lib/types/filtering";
+
+import dayjs from "@/app/lib/dayjs";
+import { SortOptions } from "@/lib/types/filtering";
 import {
   RecordingListResponse,
   ScopeEnum,
@@ -147,11 +149,11 @@ export default function InfiniteRecordings({
               />
             </Grid.Col>
             <Grid.Col span={12}>
-              <Anchor
-                component={Link}
-                href={`/${f.follower?.type}/${f.follower?.username}`}
-              >
-                <Group gap="xs">
+              <Group gap="xs">
+                <Anchor
+                  component={Link}
+                  href={`/${f.follower?.type}/${f.follower?.username}`}
+                >
                   <Avatar
                     size={34}
                     src={
@@ -168,20 +170,21 @@ export default function InfiniteRecordings({
                       },
                     }}
                   />
+                </Anchor>
 
-                  <div>
-                    <Title order={2} size="md">
-                      {f.follower?.username}
-                    </Title>
-                    <Text size="xs">
-                      {new Date(f.createdAt || "").toLocaleString("en-US", {
-                        dateStyle: "short",
-                        timeStyle: "short",
-                      })}
-                    </Text>
-                  </div>
-                </Group>
-              </Anchor>
+                <div>
+                  <Anchor
+                    component={Link}
+                    href={`/${f.follower?.type}/${f.follower?.username}`}
+                    size="md"
+                    truncate
+                    maw={120}
+                  >
+                    {f.follower?.username}
+                  </Anchor>
+                  <Text size="xs">live {dayjs(f.createdAt).fromNow()}</Text>
+                </div>
+              </Group>
             </Grid.Col>
           </Grid>
         ))}

@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_videos_480s",
+  "info": {
+    "displayName": "data",
+    "icon": "earth"
+  },
+  "options": {},
+  "attributes": {
+    "playlist": {
+      "type": "text"
+    },
+    "width": {
+      "type": "integer"
+    },
+    "height": {
+      "type": "integer"
+    },
+    "sizeBytes": {
+      "type": "integer"
+    },
+    "size": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
