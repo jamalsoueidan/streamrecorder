@@ -20,11 +20,11 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-12-21T07:44:08.085Z"
+    "x-generation-date": "2025-12-21T08:24:14.367Z"
   },
   "servers": [
     {
-      "url": "http://0.0.0.0:1337/api",
+      "url": "http://localhost:1337/api",
       "description": "Development server"
     }
   ],
@@ -4574,10 +4574,13 @@
                                     "type": "integer"
                                   },
                                   "videoOriginal": {
-                                    "$ref": "#/components/schemas/Videos480Component"
+                                    "$ref": "#/components/schemas/VideosVideoComponent"
                                   },
                                   "videoSmall": {
-                                    "$ref": "#/components/schemas/Videos480Component"
+                                    "type": "array",
+                                    "items": {
+                                      "$ref": "#/components/schemas/VideosVideoComponent"
+                                    }
                                   },
                                   "createdAt": {
                                     "type": "string",
@@ -4873,7 +4876,7 @@
           }
         }
       },
-      "Videos480Component": {
+      "VideosVideoComponent": {
         "type": "object",
         "properties": {
           "id": {
@@ -4908,7 +4911,7 @@
               "links": {
                 "type": "array",
                 "items": {
-                  "$ref": "#/components/schemas/OkayLinksComponent"
+                  "$ref": "#/components/schemas/NavigationsLinksComponent"
                 }
               },
               "locale": {
@@ -4979,7 +4982,7 @@
           "links": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/OkayLinksComponent"
+              "$ref": "#/components/schemas/NavigationsLinksComponent"
             }
           },
           "createdAt": {
@@ -5285,7 +5288,7 @@
                 "links": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/OkayLinksComponent"
+                    "$ref": "#/components/schemas/NavigationsLinksComponent"
                   }
                 },
                 "createdAt": {
@@ -5355,7 +5358,7 @@
           }
         }
       },
-      "OkayLinksComponent": {
+      "NavigationsLinksComponent": {
         "type": "object",
         "properties": {
           "id": {
@@ -5370,8 +5373,11 @@
           "icon": {
             "type": "string",
             "enum": [
-              "test",
-              "test1"
+              "IconFlower",
+              "IconUsers",
+              "IconPlayerPlayFilled",
+              "IconWorldSearch",
+              "IconQuestionMark"
             ]
           }
         }
@@ -6071,10 +6077,13 @@
                             "type": "integer"
                           },
                           "videoOriginal": {
-                            "$ref": "#/components/schemas/Videos480Component"
+                            "$ref": "#/components/schemas/VideosVideoComponent"
                           },
                           "videoSmall": {
-                            "$ref": "#/components/schemas/Videos480Component"
+                            "type": "array",
+                            "items": {
+                              "$ref": "#/components/schemas/VideosVideoComponent"
+                            }
                           },
                           "createdAt": {
                             "type": "string",
@@ -6348,10 +6357,13 @@
                 "type": "integer"
               },
               "videoOriginal": {
-                "$ref": "#/components/schemas/Videos480Component"
+                "$ref": "#/components/schemas/VideosVideoComponent"
               },
               "videoSmall": {
-                "$ref": "#/components/schemas/Videos480Component"
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/VideosVideoComponent"
+                }
               },
               "locale": {
                 "type": "string"
@@ -6450,10 +6462,13 @@
             "type": "integer"
           },
           "videoOriginal": {
-            "$ref": "#/components/schemas/Videos480Component"
+            "$ref": "#/components/schemas/VideosVideoComponent"
           },
           "videoSmall": {
-            "$ref": "#/components/schemas/Videos480Component"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/VideosVideoComponent"
+            }
           },
           "createdAt": {
             "type": "string",
@@ -6783,10 +6798,13 @@
                   "type": "integer"
                 },
                 "videoOriginal": {
-                  "$ref": "#/components/schemas/Videos480Component"
+                  "$ref": "#/components/schemas/VideosVideoComponent"
                 },
                 "videoSmall": {
-                  "$ref": "#/components/schemas/Videos480Component"
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/VideosVideoComponent"
+                  }
                 },
                 "createdAt": {
                   "type": "string",

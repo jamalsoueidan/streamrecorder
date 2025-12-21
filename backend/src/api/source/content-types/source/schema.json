@@ -41,13 +41,13 @@
     },
     "videoOriginal": {
       "type": "component",
-      "component": "videos.480",
+      "component": "videos.video",
       "repeatable": false
     },
     "videoSmall": {
       "type": "component",
-      "component": "videos.480",
-      "repeatable": false
+      "component": "videos.video",
+      "repeatable": true
     }
   }
 }

@@ -94,7 +94,7 @@ export default function InfiniteFollowers({
       startTransition(async () => {
         const nextPage = page + 1;
         const result = await getFollowers({
-          scope: ScopeEnum.Discover,
+          scope: initialScope,
           page: nextPage,
           sort,
         });
@@ -108,7 +108,7 @@ export default function InfiniteFollowers({
         setHasMore(nextPage < (result.meta?.pagination?.pageCount ?? 1));
       });
     }
-  }, [entry?.isIntersecting, hasMore, isPending, page, sort]);
+  }, [entry?.isIntersecting, hasMore, initialScope, isPending, page, sort]);
 
   return (
     <Stack gap="sm">
@@ -135,7 +135,7 @@ export default function InfiniteFollowers({
             shadow="sm"
             padding="lg"
             radius="md"
-            bg="gray.9"
+            bg="black"
             withBorder
           >
             <Grid justify="center" align="center">

@@ -489,7 +489,7 @@ export interface ApiNavigationNavigation extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    links: Schema.Attribute.Component<'okay.links', true> &
+    links: Schema.Attribute.Component<'navigations.links', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -567,8 +567,8 @@ export interface ApiSourceSource extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    videoOriginal: Schema.Attribute.Component<'videos.480', false>;
-    videoSmall: Schema.Attribute.Component<'videos.480', false>;
+    videoOriginal: Schema.Attribute.Component<'videos.video', false>;
+    videoSmall: Schema.Attribute.Component<'videos.video', true>;
   };
 }
 

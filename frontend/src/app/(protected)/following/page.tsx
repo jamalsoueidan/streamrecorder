@@ -20,6 +20,7 @@ export default async function FollowingsPage() {
         <p>You are not following anyone yet.</p>
       ) : (
         <InfiniteFollowers
+          key={meta?.pagination?.total}
           title="Followers"
           initialData={data}
           initialPagination={meta}

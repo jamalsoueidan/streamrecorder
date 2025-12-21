@@ -5,6 +5,8 @@ import {
   mantineHtmlProps,
 } from "@mantine/core";
 import "@mantine/core/styles.css";
+import { Notifications } from "@mantine/notifications";
+import "@mantine/notifications/styles.css";
 import type { Metadata } from "next";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
 
@@ -42,6 +44,7 @@ export default function RootLayout({
       </head>
       <body>
         <MantineProvider theme={theme} defaultColorScheme="dark">
+          <Notifications color="red" position="bottom-center" />
           <NuqsAdapter>{children}</NuqsAdapter>
         </MantineProvider>
       </body>

@@ -1,24 +1,29 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
-export interface OkayLinks extends Struct.ComponentSchema {
-  collectionName: 'components_okay_links';
+export interface NavigationsLinks extends Struct.ComponentSchema {
+  collectionName: 'components_navigations_links';
   info: {
     displayName: 'links';
-    icon: 'apps';
   };
   attributes: {
-    icon: Schema.Attribute.Enumeration<['test', 'test1']> &
-      Schema.Attribute.Required;
-    label: Schema.Attribute.String & Schema.Attribute.Required;
-    url: Schema.Attribute.String & Schema.Attribute.Required;
+    icon: Schema.Attribute.Enumeration<
+      [
+        'IconFlower',
+        'IconUsers',
+        'IconPlayerPlayFilled',
+        'IconWorldSearch',
+        'IconQuestionMark',
+      ]
+    >;
+    label: Schema.Attribute.String;
+    url: Schema.Attribute.String;
   };
 }
 
-export interface Videos480 extends Struct.ComponentSchema {
-  collectionName: 'components_videos_480s';
+export interface VideosVideo extends Struct.ComponentSchema {
+  collectionName: 'components_videos_videos';
   info: {
-    displayName: 'data';
-    icon: 'earth';
+    displayName: 'video';
   };
   attributes: {
     height: Schema.Attribute.Integer;
@@ -32,8 +37,8 @@ export interface Videos480 extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
-      'okay.links': OkayLinks;
-      'videos.480': Videos480;
+      'navigations.links': NavigationsLinks;
+      'videos.video': VideosVideo;
     }
   }
 }

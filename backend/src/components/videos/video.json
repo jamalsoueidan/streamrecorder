@@ -1,8 +1,7 @@
 {
-  "collectionName": "components_videos_480s",
+  "collectionName": "components_videos_videos",
   "info": {
-    "displayName": "data",
-    "icon": "earth"
+    "displayName": "video"
   },
   "options": {},
   "attributes": {

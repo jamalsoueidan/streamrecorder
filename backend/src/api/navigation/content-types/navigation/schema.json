@@ -22,7 +22,7 @@
           "localized": true
         }
       },
-      "component": "okay.links",
+      "component": "navigations.links",
       "repeatable": true
     }
   }

@@ -1,12 +1,15 @@
 "use client";
 
-import { ActionIcon, Code, Group, Text } from "@mantine/core";
+import { ActionIcon, Box, Code, Group, Text } from "@mantine/core";
 import {
   IconArrowLeft,
   IconBellRinging,
+  IconFlower,
   IconLogout,
-  IconReceipt2,
-  IconSettings,
+  IconPlayerPlayFilled,
+  IconQuestionMark,
+  IconUsers,
+  IconWorldSearch,
 } from "@tabler/icons-react";
 
 import Link from "next/link";
@@ -19,8 +22,11 @@ import { useUser } from "../providers/user-provider";
 import classes from "./navbar.module.css";
 
 export const iconMap: Record<string, typeof IconBellRinging> = {
-  IconBellRinging: IconBellRinging,
-  IconReceipt2: IconReceipt2,
+  IconFlower: IconFlower,
+  IconUsers: IconUsers,
+  IconPlayerPlayFilled: IconPlayerPlayFilled,
+  IconWorldSearch: IconWorldSearch,
+  IconQuestionMark: IconQuestionMark,
 };
 
 export function Navbar({
@@ -35,7 +41,7 @@ export function Navbar({
   const pathname = usePathname();
 
   const links = (navigation?.data?.links || []).map((item) => {
-    const Icon = iconMap[item.icon || "IconReceipt2"] || IconSettings;
+    const Icon = iconMap[item.icon || "IconQuestionMark"];
     return (
       <Link
         className={classes.link}
@@ -43,7 +49,7 @@ export function Navbar({
         href={item.url || "#"}
         key={item.label}
       >
-        <Icon className={classes.linkIcon} stroke={1.5} />
+        <Icon className={classes.linkIcon} stroke={2} />
         <span>{item.label}</span>
       </Link>
     );
@@ -66,9 +72,13 @@ export function Navbar({
           </Group>
           <Code fw={700}>{opened}v0.1.0</Code>
         </Group>
-        <AddFollowerForm />
+
         {links}
       </div>
+
+      <Box p="xs">
+        <AddFollowerForm />
+      </Box>
 
       <div className={classes.footer}>
         <Link
