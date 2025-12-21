@@ -1,5 +1,6 @@
 import { getRecordingsWithPrevNext } from "@/app/actions/recordings";
-import { SortOptions } from "@/app/lib/types/filtering";
+import { SortOptions } from "@/lib/types/filtering";
+
 import { NextRequest, NextResponse } from "next/server";
 
 export async function GET(request: NextRequest) {
