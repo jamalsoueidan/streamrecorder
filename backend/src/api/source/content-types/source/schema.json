@@ -13,6 +13,7 @@
   "attributes": {
     "state": {
       "type": "enumeration",
+      "required": true,
       "enum": [
         "recording",
         "done",

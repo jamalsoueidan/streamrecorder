@@ -20,7 +20,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-12-21T12:06:26.942Z"
+    "x-generation-date": "2025-12-21T12:27:10.225Z"
   },
   "servers": [
     {
@@ -6318,6 +6318,7 @@
         "properties": {
           "data": {
             "required": [
+              "state",
               "path",
               "duration"
             ],
@@ -6415,6 +6416,7 @@
       "Source": {
         "type": "object",
         "required": [
+          "state",
           "path",
           "duration"
         ],
