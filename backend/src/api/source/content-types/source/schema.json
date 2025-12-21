@@ -47,7 +47,7 @@
     "videoSmall": {
       "type": "component",
       "component": "videos.video",
-      "repeatable": true
+      "repeatable": false
     }
   }
 }

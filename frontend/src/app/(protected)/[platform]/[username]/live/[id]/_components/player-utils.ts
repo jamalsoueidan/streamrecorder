@@ -28,6 +28,7 @@ export function combinePlaylistsFromSources(
       quality === "original"
         ? source.videoOriginal?.playlist
         : source.videoSmall?.playlist;
+
     if (!playlist) continue;
 
     const lines = playlist.split("\n");

@@ -20,7 +20,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-12-21T08:24:14.367Z"
+    "x-generation-date": "2025-12-21T12:06:26.942Z"
   },
   "servers": [
     {
@@ -4577,10 +4577,7 @@
                                     "$ref": "#/components/schemas/VideosVideoComponent"
                                   },
                                   "videoSmall": {
-                                    "type": "array",
-                                    "items": {
-                                      "$ref": "#/components/schemas/VideosVideoComponent"
-                                    }
+                                    "$ref": "#/components/schemas/VideosVideoComponent"
                                   },
                                   "createdAt": {
                                     "type": "string",
@@ -6080,10 +6077,7 @@
                             "$ref": "#/components/schemas/VideosVideoComponent"
                           },
                           "videoSmall": {
-                            "type": "array",
-                            "items": {
-                              "$ref": "#/components/schemas/VideosVideoComponent"
-                            }
+                            "$ref": "#/components/schemas/VideosVideoComponent"
                           },
                           "createdAt": {
                             "type": "string",
@@ -6360,10 +6354,7 @@
                 "$ref": "#/components/schemas/VideosVideoComponent"
               },
               "videoSmall": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/VideosVideoComponent"
-                }
+                "$ref": "#/components/schemas/VideosVideoComponent"
               },
               "locale": {
                 "type": "string"
@@ -6465,10 +6456,7 @@
             "$ref": "#/components/schemas/VideosVideoComponent"
           },
           "videoSmall": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/VideosVideoComponent"
-            }
+            "$ref": "#/components/schemas/VideosVideoComponent"
           },
           "createdAt": {
             "type": "string",
@@ -6801,10 +6789,7 @@
                   "$ref": "#/components/schemas/VideosVideoComponent"
                 },
                 "videoSmall": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/VideosVideoComponent"
-                  }
+                  "$ref": "#/components/schemas/VideosVideoComponent"
                 },
                 "createdAt": {
                   "type": "string",
