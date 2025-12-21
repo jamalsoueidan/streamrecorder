@@ -14,10 +14,26 @@ export interface OkayLinks extends Struct.ComponentSchema {
   };
 }
 
+export interface Videos480 extends Struct.ComponentSchema {
+  collectionName: 'components_videos_480s';
+  info: {
+    displayName: 'data';
+    icon: 'earth';
+  };
+  attributes: {
+    height: Schema.Attribute.Integer;
+    playlist: Schema.Attribute.Text;
+    size: Schema.Attribute.String;
+    sizeBytes: Schema.Attribute.Integer;
+    width: Schema.Attribute.Integer;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'okay.links': OkayLinks;
+      'videos.480': Videos480;
     }
   }
 }

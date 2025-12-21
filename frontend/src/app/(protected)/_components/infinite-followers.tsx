@@ -2,7 +2,9 @@
 "use client";
 
 import { getFollowers } from "@/app/actions/followers";
-import { SortOptions } from "@/app/lib/types/filtering";
+
+import dayjs from "@/app/lib/dayjs";
+import { SortOptions } from "@/lib/types/filtering";
 import {
   BrowseFollowersResponse,
   ScopeEnum,
@@ -11,6 +13,7 @@ import {
 import {
   Avatar,
   Box,
+  Card,
   Divider,
   Grid,
   Group,
@@ -125,9 +128,16 @@ export default function InfiniteFollowers({
         />
       </Group>
       <Divider />
-      <Stack gap="xl">
+      <Stack gap="md">
         {data.map((f) => (
-          <Box key={f.documentId} w="100%">
+          <Card
+            key={f.documentId}
+            shadow="sm"
+            padding="lg"
+            radius="md"
+            bg="gray.9"
+            withBorder
+          >
             <Grid justify="center" align="center">
               <Grid.Col span="content">
                 <Avatar
@@ -152,12 +162,8 @@ export default function InfiniteFollowers({
                   {f.username}
                 </Title>
                 <Text>{f.totalRecordings} recordings</Text>
-                <Text size="xs">
-                  {new Date(f.createdAt || "").toLocaleString("en-US", {
-                    dateStyle: "short",
-                    timeStyle: "long",
-                  })}
-                </Text>
+
+                <Text size="xs">added {dayjs(f.createdAt).fromNow()}</Text>
               </Grid.Col>
               <Grid.Col span={2} style={{ textAlign: "right" }}>
                 {f.isFollowing ? (
@@ -179,9 +185,9 @@ export default function InfiniteFollowers({
                 style={{
                   display: "grid",
                   gridTemplateColumns: "repeat(auto-fill, 160px)",
-                  gridAutoRows: "310px",
+                  gridAutoRows: "306px",
                   gap: "1.4em",
-                  maxHeight: 310,
+                  maxHeight: 306,
                   overflow: "hidden",
                 }}
               >
@@ -193,7 +199,7 @@ export default function InfiniteFollowers({
                     : null;
 
                   return (
-                    <Stack key={rec.documentId} gap="xs">
+                    <Stack key={rec.documentId} gap="4">
                       <ImageVideoPreview
                         href={`/${f.type}/${f.username}/live/${rec.documentId}`}
                         src={path}
@@ -203,13 +209,7 @@ export default function InfiniteFollowers({
                       />
                       <div>
                         <Text size="xs">
-                          {new Date(rec.createdAt || "").toLocaleString(
-                            "en-US",
-                            {
-                              dateStyle: "short",
-                              timeStyle: "short",
-                            }
-                          )}
+                          recorded {dayjs(f.createdAt).fromNow()}
                         </Text>
                       </div>
                     </Stack>
@@ -217,7 +217,7 @@ export default function InfiniteFollowers({
                 })}
               </div>
             </Box>
-          </Box>
+          </Card>
         ))}
       </Stack>
       {/* Sentinel element */}

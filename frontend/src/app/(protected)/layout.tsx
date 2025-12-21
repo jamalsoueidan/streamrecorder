@@ -2,8 +2,9 @@ import { getToken } from "@/lib/token";
 
 import { redirect } from "next/navigation";
 import api from "../../lib/api";
-import { NavigationProvider } from "../lib/navigation-provider";
-import { UserProvider } from "../lib/user-provider";
+
+import { NavigationProvider } from "../providers/navigation-provider";
+import { UserProvider } from "../providers/user-provider";
 import { Shell } from "../ui/shell";
 
 export default async function DashboardLayout({

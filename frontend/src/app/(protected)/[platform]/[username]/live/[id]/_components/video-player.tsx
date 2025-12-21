@@ -109,7 +109,7 @@ export function VideoPlayer({ sources }: { sources: Source[] }) {
   useEffect(() => {
     if (!mounted || validationError) return;
 
-    const combinedPlaylist = combinePlaylistsFromSources(sources);
+    const combinedPlaylist = combinePlaylistsFromSources(sources, "original");
 
     if (!combinedPlaylist || combinedPlaylist.length < 50) {
       return;

@@ -7,6 +7,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useRef, useState } from "react";
 import { MiniPlayer } from "../../[platform]/[username]/live/[id]/_components/mini-player";
+import { formatDuration } from "../../[platform]/[username]/live/[id]/_components/player-utils";
 
 interface Props {
   sources?: Source[] | null;
@@ -30,6 +31,9 @@ export function ImageVideoPreview({
   const [showVideo, setShowVideo] = useState(false);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
   const router = useRouter();
+
+  const totalDuration =
+    sources?.reduce((sum, s) => sum + (s.duration || 0), 0) || 0;
 
   const handleMouseEnter = () => {
     if (!sources || sources.length === 0) return;
@@ -82,6 +86,25 @@ export function ImageVideoPreview({
           style={{ cursor: "pointer" }}
         >
           <MiniPlayer sources={sources} width={w} height={h} />
+        </div>
+      )}
+
+      {totalDuration > 0 && (
+        <div
+          style={{
+            position: "absolute",
+            bottom: 10,
+            right: 8,
+            backgroundColor: "rgba(0, 0, 0, 0.8)",
+            color: "white",
+            padding: "2px 6px",
+            borderRadius: 4,
+            fontSize: 12,
+            fontWeight: 500,
+            pointerEvents: "none",
+          }}
+        >
+          {formatDuration(totalDuration)}
         </div>
       )}
     </div>

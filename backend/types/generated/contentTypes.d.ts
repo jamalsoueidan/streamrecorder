@@ -550,7 +550,7 @@ export interface ApiSourceSource extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    duration: Schema.Attribute.Integer;
+    duration: Schema.Attribute.Integer & Schema.Attribute.Required;
     executionId: Schema.Attribute.Integer;
     finishedAt: Schema.Attribute.DateTime;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
@@ -559,22 +559,16 @@ export interface ApiSourceSource extends Struct.CollectionTypeSchema {
       'api::source.source'
     > &
       Schema.Attribute.Private;
-    path: Schema.Attribute.String;
-    playlist: Schema.Attribute.Text;
+    path: Schema.Attribute.String & Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
-    recording: Schema.Attribute.Relation<
-      'manyToOne',
-      'api::recording.recording'
-    >;
-    size: Schema.Attribute.String;
-    sizeBytes: Schema.Attribute.BigInteger;
     state: Schema.Attribute.Enumeration<['recording', 'done', 'failed']>;
     thumbnailCols: Schema.Attribute.Integer;
     thumbnailInterval: Schema.Attribute.Integer;
-    type: Schema.Attribute.Enumeration<['video/mp4']>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    videoOriginal: Schema.Attribute.Component<'videos.480', false>;
+    videoSmall: Schema.Attribute.Component<'videos.480', false>;
   };
 }
 

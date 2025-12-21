@@ -77,18 +77,30 @@ afterAll(async () => {
 
 // Helper to create a recording
 async function createRecording(followerIdNum: number, withSource = false) {
-  const recording = await strapi.db.query("api::recording.recording").create({
-    data: {
-      follower: followerIdNum,
-      publishedAt: new Date(),
-    },
-  });
+  let recording;
 
   if (withSource) {
-    await strapi.db.query("api::source.source").create({
+    const response = await strapi.db.query("api::source.source").create({
       data: {
         path: "https://example.com/video.mp4",
-        recording: recording.id,
+        duration: 12,
+        publishedAt: new Date(),
+      },
+    });
+
+    let sourceIdNum = response.id;
+
+    recording = await strapi.db.query("api::recording.recording").create({
+      data: {
+        follower: followerIdNum,
+        sources: [sourceIdNum],
+        publishedAt: new Date(),
+      },
+    });
+  } else {
+    recording = await strapi.db.query("api::recording.recording").create({
+      data: {
+        follower: followerIdNum,
         publishedAt: new Date(),
       },
     });
@@ -161,6 +173,8 @@ describe("Recording API", () => {
         .get("/api/recordings/browse?scope=following&populate=sources")
         .set("Authorization", `Bearer ${jwt}`)
         .expect(200);
+
+      console.log(res.body.data);
 
       // Find recording with sources
       const recordingWithSources = res.body.data.find(
