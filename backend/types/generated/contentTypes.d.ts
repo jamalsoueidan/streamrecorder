@@ -561,7 +561,8 @@ export interface ApiSourceSource extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     path: Schema.Attribute.String & Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
-    state: Schema.Attribute.Enumeration<['recording', 'done', 'failed']>;
+    state: Schema.Attribute.Enumeration<['recording', 'done', 'failed']> &
+      Schema.Attribute.Required;
     thumbnailCols: Schema.Attribute.Integer;
     thumbnailInterval: Schema.Attribute.Integer;
     updatedAt: Schema.Attribute.DateTime;
