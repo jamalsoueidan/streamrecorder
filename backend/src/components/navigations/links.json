@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_navigations_links",
+  "info": {
+    "displayName": "links"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "enumeration",
+      "enum": [
+        "IconFlower",
+        "IconUsers",
+        "IconPlayerPlayFilled",
+        "IconWorldSearch",
+        "IconQuestionMark"
+      ]
+    }
+  },
+  "config": {}
+}

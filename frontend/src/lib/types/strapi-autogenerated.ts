@@ -251,8 +251,8 @@ export interface Follower {
           duration?: number;
           thumbnailInterval?: number;
           thumbnailCols?: number;
-          videoOriginal?: Videos480Component;
-          videoSmall?: Videos480Component;
+          videoOriginal?: VideosVideoComponent;
+          videoSmall?: VideosVideoComponent[];
           /** @format date-time */
           createdAt?: string;
           /** @format date-time */
@@ -363,7 +363,7 @@ export interface FollowerResponse {
   meta?: object;
 }
 
-export interface Videos480Component {
+export interface VideosVideoComponent {
   id?: number;
   playlist?: string;
   width?: number;
@@ -374,7 +374,7 @@ export interface Videos480Component {
 
 export interface NavigationRequest {
   data: {
-    links?: OkayLinksComponent[];
+    links?: NavigationsLinksComponent[];
     locale?: string;
     localizations?: (number | string)[];
   };
@@ -397,7 +397,7 @@ export interface NavigationListResponse {
 export interface Navigation {
   id?: number;
   documentId?: string;
-  links?: OkayLinksComponent[];
+  links?: NavigationsLinksComponent[];
   /** @format date-time */
   createdAt?: string;
   /** @format date-time */
@@ -507,7 +507,7 @@ export interface Navigation {
   localizations?: {
     id?: number;
     documentId?: string;
-    links?: OkayLinksComponent[];
+    links?: NavigationsLinksComponent[];
     /** @format date-time */
     createdAt?: string;
     /** @format date-time */
@@ -535,11 +535,11 @@ export interface NavigationResponse {
   meta?: object;
 }
 
-export interface OkayLinksComponent {
+export interface NavigationsLinksComponent {
   id?: number;
   label?: string;
   url?: string;
-  icon?: OkayLinksComponentIconEnum;
+  icon?: NavigationsLinksComponentIconEnum;
 }
 
 export interface RecordingRequest {
@@ -777,8 +777,8 @@ export interface Recording {
         duration?: number;
         thumbnailInterval?: number;
         thumbnailCols?: number;
-        videoOriginal?: Videos480Component;
-        videoSmall?: Videos480Component;
+        videoOriginal?: VideosVideoComponent;
+        videoSmall?: VideosVideoComponent[];
         /** @format date-time */
         createdAt?: string;
         /** @format date-time */
@@ -876,8 +876,8 @@ export interface SourceRequest {
     duration: number;
     thumbnailInterval?: number;
     thumbnailCols?: number;
-    videoOriginal?: Videos480Component;
-    videoSmall?: Videos480Component;
+    videoOriginal?: VideosVideoComponent;
+    videoSmall?: VideosVideoComponent[];
     locale?: string;
     localizations?: (number | string)[];
   };
@@ -908,8 +908,8 @@ export interface Source {
   duration: number;
   thumbnailInterval?: number;
   thumbnailCols?: number;
-  videoOriginal?: Videos480Component;
-  videoSmall?: Videos480Component;
+  videoOriginal?: VideosVideoComponent;
+  videoSmall?: VideosVideoComponent[];
   /** @format date-time */
   createdAt?: string;
   /** @format date-time */
@@ -1027,8 +1027,8 @@ export interface Source {
     duration?: number;
     thumbnailInterval?: number;
     thumbnailCols?: number;
-    videoOriginal?: Videos480Component;
-    videoSmall?: Videos480Component;
+    videoOriginal?: VideosVideoComponent;
+    videoSmall?: VideosVideoComponent[];
     /** @format date-time */
     createdAt?: string;
     /** @format date-time */
@@ -1176,9 +1176,12 @@ export enum FollowerStateEnum {
   Failed = "failed",
 }
 
-export enum OkayLinksComponentIconEnum {
-  Test = "test",
-  Test1 = "test1",
+export enum NavigationsLinksComponentIconEnum {
+  IconFlower = "IconFlower",
+  IconUsers = "IconUsers",
+  IconPlayerPlayFilled = "IconPlayerPlayFilled",
+  IconWorldSearch = "IconWorldSearch",
+  IconQuestionMark = "IconQuestionMark",
 }
 
 export enum RecordingStateEnum {
