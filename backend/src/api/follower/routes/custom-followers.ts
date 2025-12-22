@@ -15,5 +15,10 @@ export default {
       path: "/followers/unfollow/:id",
       handler: "follower.unfollow",
     },
+    {
+      method: "POST",
+      path: "/followers/import",
+      handler: "follower.import",
+    },
   ],
 };

@@ -13,6 +13,7 @@ export interface NavigationsLinks extends Struct.ComponentSchema {
         'IconPlayerPlayFilled',
         'IconWorldSearch',
         'IconQuestionMark',
+        'IconVideo',
       ]
     >;
     label: Schema.Attribute.String;

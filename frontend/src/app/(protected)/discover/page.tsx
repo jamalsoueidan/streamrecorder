@@ -24,7 +24,7 @@ export default async function FollowingsPage() {
           initialData={data}
           initialPagination={meta}
           initialSort={SortOptions.createdAtDesc}
-          initialScope={ScopeEnum.Following}
+          initialScope={ScopeEnum.Discover}
         />
       )}
     </section>

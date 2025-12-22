@@ -19,7 +19,7 @@ export async function follow(prevState: any, formData: FormData) {
       type,
     });
 
-    revalidatePath("/followers");
+    revalidatePath("/following");
 
     return { success: true, username, type };
   } catch (err: any) {
@@ -30,7 +30,7 @@ export async function follow(prevState: any, formData: FormData) {
 export async function followUser(data: FollowRequestBody) {
   try {
     await api.follower.followCreate(data);
-    revalidatePath("/followers");
+    revalidatePath("/following");
 
     return { success: true };
   } catch (err: any) {
@@ -41,6 +41,7 @@ export async function followUser(data: FollowRequestBody) {
 export async function unfollow(id: number) {
   try {
     await api.follower.unfollowDelete({ id });
+    revalidatePath("/following");
 
     return { success: true };
   } catch (err: any) {
@@ -54,14 +55,16 @@ export async function getFollowers({
   scope,
   page,
   sort = SortOptions.createdAtAsc,
+  hasRecordings,
 }: {
   scope: ScopeEnum;
   page: number;
   sort: SortOptions;
+  hasRecordings?: boolean;
 }) {
   const response = await api.follower.browseFollowers({
     scope,
-    //hasRecordings: true,
+    hasRecordings,
     "pagination[page]": page,
     "pagination[pageSize]": 10,
     populate: {
