@@ -44,7 +44,7 @@ export default function AddFollowerForm() {
 
         <Flex gap={3}>
           <Input
-            placeholder="Your email"
+            placeholder=""
             name="username"
             type="text"
             autoComplete="off"
