@@ -38,7 +38,7 @@ export function ImageVideoPreview({
   const recording = sources?.some((s) => s.state === SourceStateEnum.Recording);
 
   const handleMouseEnter = () => {
-    if (!sources || sources.length === 0) return;
+    if (!sources || sources.length === 0 || recording) return;
     timeoutRef.current = setTimeout(() => {
       setShowVideo(true);
     }, 300);
