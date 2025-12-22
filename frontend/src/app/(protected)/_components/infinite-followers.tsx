@@ -209,7 +209,7 @@ export default function InfiniteFollowers({
                       />
                       <div>
                         <Text size="xs">
-                          recorded {dayjs(f.createdAt).fromNow()}
+                          recorded {dayjs(rec.createdAt).fromNow()}
                         </Text>
                       </div>
                     </Stack>
