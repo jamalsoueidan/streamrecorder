@@ -18,6 +18,7 @@ import { usePathname } from "next/navigation";
 import AddFollowerForm from "../(protected)/_components/add-follower-form";
 import { logout } from "../actions/auth";
 
+import { useRouter } from "next/navigation";
 import { useNavigation } from "../providers/navigation-provider";
 import { useUser } from "../providers/user-provider";
 import classes from "./navbar.module.css";
@@ -32,15 +33,25 @@ export const iconMap: Record<string, typeof IconBellRinging> = {
 };
 
 export function Navbar({
-  toggle,
+  close,
   opened,
 }: {
-  toggle: () => void;
+  close: () => void;
   opened: boolean;
 }) {
+  const router = useRouter();
   const navigation = useNavigation();
   const user = useUser();
   const pathname = usePathname();
+
+  const handleLinkClick = (e: React.MouseEvent, url: string) => {
+    if (opened) {
+      // only mobile
+      e.preventDefault();
+      close();
+      setTimeout(() => router.push(url), 100);
+    }
+  };
 
   const links = (navigation?.data?.links || []).map((item) => {
     const Icon = iconMap[item.icon || "IconQuestionMark"];
@@ -48,8 +59,9 @@ export function Navbar({
       <Link
         className={classes.link}
         data-active={pathname.startsWith(item.url || "") || undefined}
-        href={item.url || "#"}
         key={item.label}
+        href={item.url || "#"}
+        onClick={(e) => handleLinkClick(e, item.url || "#")}
       >
         <Icon className={classes.linkIcon} stroke={2} />
         <span>{item.label}</span>
@@ -65,7 +77,7 @@ export function Navbar({
             <ActionIcon
               component={Link}
               href="#"
-              onClick={toggle}
+              onClick={close}
               hiddenFrom="sm"
             >
               <IconArrowLeft stroke={1.4} />

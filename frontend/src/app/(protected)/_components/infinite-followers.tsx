@@ -23,6 +23,7 @@ import {
   Stack,
   Text,
   Title,
+  useMatches,
 } from "@mantine/core";
 import { useIntersection } from "@mantine/hooks";
 import { parseAsBoolean, parseAsStringEnum, useQueryState } from "nuqs";
@@ -53,6 +54,12 @@ export default function InfiniteFollowers({
   initialSort,
   initialScope,
 }: Props) {
+  const cardPadding = useMatches({
+    base: "sm",
+    sm: "md",
+    md: "lg",
+  });
+
   const [data, setData] = useState(initialData);
   const [page, setPage] = useState(initialPagination?.pagination?.page ?? 1);
   const [hasMore, setHasMore] = useState(
@@ -169,7 +176,7 @@ export default function InfiniteFollowers({
           <Card
             key={f.documentId}
             shadow="sm"
-            padding="lg"
+            padding={cardPadding}
             radius="md"
             bg="black"
             withBorder
@@ -201,7 +208,7 @@ export default function InfiniteFollowers({
 
                 <Text size="xs">added {dayjs(f.createdAt).fromNow()}</Text>
               </Grid.Col>
-              <Grid.Col span={2} style={{ textAlign: "right" }}>
+              <Grid.Col span={4} style={{ textAlign: "right" }}>
                 {f.isFollowing ? (
                   <UnfollowButton
                     id={f.id!}
@@ -216,43 +223,45 @@ export default function InfiniteFollowers({
                 )}
               </Grid.Col>
             </Grid>
-            <Box mt="sm">
-              <div
-                style={{
-                  display: "grid",
-                  gridTemplateColumns: "repeat(auto-fill, 160px)",
-                  gridAutoRows: "306px",
-                  gap: "1.4em",
-                  maxHeight: 306,
-                  overflow: "hidden",
-                }}
-              >
-                {f.recordings?.slice(0, 7).map((rec) => {
-                  const path = rec.sources?.length
-                    ? process.env.NEXT_PUBLIC_S3_URL! +
-                      rec.sources[0].path +
-                      "preview.jpg"
-                    : null;
+            {f.recordings && f.recordings?.length > 0 ? (
+              <Box mt="sm">
+                <div
+                  style={{
+                    display: "grid",
+                    gridTemplateColumns: "repeat(auto-fill, 160px)",
+                    gridAutoRows: "306px",
+                    gap: "1.4em",
+                    maxHeight: 306,
+                    overflow: "hidden",
+                  }}
+                >
+                  {f.recordings?.slice(0, 7).map((rec) => {
+                    const path = rec.sources?.length
+                      ? process.env.NEXT_PUBLIC_S3_URL! +
+                        rec.sources[0].path +
+                        "preview.jpg"
+                      : null;
 
-                  return (
-                    <Stack key={rec.documentId} gap="4">
-                      <ImageVideoPreview
-                        href={`/${f.type}/${f.username}/live/${rec.documentId}`}
-                        src={path}
-                        w={160}
-                        h={284}
-                        sources={rec.sources}
-                      />
-                      <div>
-                        <Text size="xs">
-                          recorded {dayjs(rec.createdAt).fromNow()}
-                        </Text>
-                      </div>
-                    </Stack>
-                  );
-                })}
-              </div>
-            </Box>
+                    return (
+                      <Stack key={rec.documentId} gap="4">
+                        <ImageVideoPreview
+                          href={`/${f.type}/${f.username}/live/${rec.documentId}`}
+                          src={path}
+                          w={160}
+                          h={284}
+                          sources={rec.sources}
+                        />
+                        <div>
+                          <Text size="xs">
+                            recorded {dayjs(rec.createdAt).fromNow()}
+                          </Text>
+                        </div>
+                      </Stack>
+                    );
+                  })}
+                </div>
+              </Box>
+            ) : null}
           </Card>
         ))}
       </Stack>

@@ -42,7 +42,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
         </Group>
       </AppShell.Header>
       <AppShell.Navbar>
-        <Navbar opened={opened} toggle={close} />
+        <Navbar opened={opened} close={close} />
       </AppShell.Navbar>
       <AppShell.Main>{children}</AppShell.Main>
     </AppShell>

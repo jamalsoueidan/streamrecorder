@@ -22,7 +22,7 @@ export default function FollowButton({
   };
 
   return (
-    <Button color="red" size="xs" onClick={handleClick} loading={isPending}>
+    <Button color="red" onClick={handleClick} loading={isPending}>
       Follow
     </Button>
   );
