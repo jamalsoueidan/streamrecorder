@@ -58,11 +58,11 @@ export function combinePlaylistsFromSources(
         continue;
       }
 
-      if (line.includes("video.mp4")) {
+      if (line.includes(".mp4")) {
         combined +=
           line.replace(
-            /video\.mp4/g,
-            `${process.env.NEXT_PUBLIC_S3_URL}${source.path}video.mp4`
+            /(\S+\.mp4)/g,
+            `${process.env.NEXT_PUBLIC_S3_URL}${source.path}$1`
           ) + "\n";
       } else if (line.trim()) {
         combined += line + "\n";
