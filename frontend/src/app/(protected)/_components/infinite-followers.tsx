@@ -73,7 +73,7 @@ export default function InfiniteFollowers({
   );
   const [hasRecordings, setHasRecordings] = useQueryState(
     "hasRecordings",
-    parseAsBoolean.withDefault(false)
+    parseAsBoolean.withDefault(true)
   );
   const [isPending, startTransition] = useTransition();
 
