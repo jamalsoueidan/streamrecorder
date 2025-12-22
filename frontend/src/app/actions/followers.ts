@@ -72,11 +72,15 @@ export async function getFollowers({
         populate: {
           sources: {
             fields: ["*"],
+            filters: {
+              state: { $ne: "failed" }, // Filter WITHIN populate
+            },
             populate: ["videoSmall"],
           },
         },
       },
     },
+
     sort,
   });
 
