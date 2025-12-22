@@ -18,7 +18,7 @@ export default async function Page({ searchParams }: PageProps) {
     scope: ScopeEnum.Discover,
     page: 1,
     sort: !sort ? SortOptions.createdAtDesc : (sort as unknown as SortOptions),
-    hasRecordings: hasRecordings === "true",
+    hasRecordings: !hasRecordings,
   });
 
   const data = response.data || [];
