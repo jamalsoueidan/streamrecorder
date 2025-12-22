@@ -73,9 +73,9 @@ export async function getFollowers({
           sources: {
             fields: ["*"],
             filters: {
-              state: { $ne: "failed" }, // Filter WITHIN populate
+              state: { $ne: "failed" },
             },
-            populate: ["videoSmall"],
+            populate: ["videoSmall", "videoOriginal"],
           },
         },
       },

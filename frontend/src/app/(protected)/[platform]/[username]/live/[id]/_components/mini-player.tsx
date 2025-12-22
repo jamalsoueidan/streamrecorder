@@ -32,6 +32,7 @@ export function MiniPlayer({ sources, width, height }: Props) {
 
     const smallMissing = sources.some((s) => !s.videoSmall);
 
+    console.log(smallMissing);
     const combinedPlaylist = combinePlaylistsFromSources(
       sources,
       smallMissing ? "original" : "small"
