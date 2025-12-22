@@ -9,6 +9,7 @@ import {
   IconPlayerPlayFilled,
   IconQuestionMark,
   IconUsers,
+  IconVideo,
   IconWorldSearch,
 } from "@tabler/icons-react";
 
@@ -25,6 +26,7 @@ export const iconMap: Record<string, typeof IconBellRinging> = {
   IconFlower: IconFlower,
   IconUsers: IconUsers,
   IconPlayerPlayFilled: IconPlayerPlayFilled,
+  IconVideo: IconVideo,
   IconWorldSearch: IconWorldSearch,
   IconQuestionMark: IconQuestionMark,
 };

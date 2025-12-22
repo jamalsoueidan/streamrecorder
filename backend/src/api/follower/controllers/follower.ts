@@ -138,6 +138,24 @@ export default factories.createCoreController(
 
       return { data: follower };
     },
+    async import(ctx) {
+      const { username, type, createdAt } = ctx.request.body;
+
+      if (!username) {
+        return ctx.badRequest("username is required");
+      }
+
+      const result = await strapi.documents("api::follower.follower").create({
+        data: {
+          username,
+          type,
+          createdAt: createdAt || new Date(),
+        },
+        status: "published",
+      });
+
+      ctx.body = { data: result };
+    },
     async unfollow(ctx) {
       const user = ctx.state.user;
       if (!user) return ctx.unauthorized();

@@ -14,6 +14,7 @@ import {
   Avatar,
   Box,
   Card,
+  Checkbox,
   Divider,
   Grid,
   Group,
@@ -24,7 +25,7 @@ import {
   Title,
 } from "@mantine/core";
 import { useIntersection } from "@mantine/hooks";
-import { parseAsStringEnum, useQueryState } from "nuqs";
+import { parseAsBoolean, parseAsStringEnum, useQueryState } from "nuqs";
 import { useEffect, useState, useTransition } from "react";
 import { ImageVideoPreview } from "../recordings/_components/image-video-preview";
 import FollowButton from "./follow-button";
@@ -63,26 +64,41 @@ export default function InfiniteFollowers({
       initialSort || SortOptions.createdAtDesc
     )
   );
+  const [hasRecordings, setHasRecordings] = useQueryState(
+    "hasRecordings",
+    parseAsBoolean.withDefault(false)
+  );
   const [isPending, startTransition] = useTransition();
 
   const { ref, entry } = useIntersection({
     threshold: 0.5,
   });
 
-  const handleSortChange = (value: string | null) => {
-    if (!value) return;
-
-    setSort(value as unknown as SortOptions);
+  const update = (object = {}) => {
+    console.log(sort, object);
     startTransition(async () => {
       const result = await getFollowers({
         scope: initialScope,
         page: 1,
-        sort: value as unknown as SortOptions,
+        sort,
+        hasRecordings,
+        ...object,
       });
       setData(result.data);
       setPage(1);
       setHasMore(1 < (result.meta?.pagination?.pageCount ?? 1));
     });
+  };
+
+  const handleSortChange = (sort: string | null) => {
+    if (!sort) return;
+    setSort(sort as unknown as SortOptions);
+    update({ sort });
+  };
+
+  const handleHasRecordingsChange = (hasRecordings: boolean | null) => {
+    setHasRecordings(hasRecordings);
+    update({ hasRecordings });
   };
 
   const handleFollowed = (id: number) => {
@@ -97,6 +113,7 @@ export default function InfiniteFollowers({
           scope: initialScope,
           page: nextPage,
           sort,
+          hasRecordings,
         });
 
         setData((prev) => {
@@ -108,7 +125,15 @@ export default function InfiniteFollowers({
         setHasMore(nextPage < (result.meta?.pagination?.pageCount ?? 1));
       });
     }
-  }, [entry?.isIntersecting, hasMore, initialScope, isPending, page, sort]);
+  }, [
+    entry?.isIntersecting,
+    hasMore,
+    hasRecordings,
+    initialScope,
+    isPending,
+    page,
+    sort,
+  ]);
 
   return (
     <Stack gap="sm">
@@ -117,15 +142,26 @@ export default function InfiniteFollowers({
           {title} ({initialPagination?.pagination?.total || 0})
         </Title>
 
-        <Select
-          key={sort}
-          size="sm"
-          w={180}
-          value={sort}
-          onChange={handleSortChange}
-          data={SORT_OPTIONS}
-          disabled={isPending}
-        />
+        <Group>
+          {initialScope === ScopeEnum.Discover ? (
+            <Checkbox
+              label="Show only streamers with recordings"
+              checked={hasRecordings}
+              onChange={(event) =>
+                handleHasRecordingsChange(event.currentTarget.checked)
+              }
+            />
+          ) : null}
+          <Select
+            key={sort}
+            size="sm"
+            w={180}
+            value={sort}
+            onChange={handleSortChange}
+            data={SORT_OPTIONS}
+            disabled={isPending}
+          />
+        </Group>
       </Group>
       <Divider />
       <Stack gap="md">
