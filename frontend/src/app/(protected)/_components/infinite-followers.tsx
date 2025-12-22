@@ -235,7 +235,7 @@ export default function InfiniteFollowers({
                     overflow: "hidden",
                   }}
                 >
-                  {f.recordings?.slice(0, 7).map((rec) => {
+                  {f.recordings?.map((rec) => {
                     const path = rec.sources?.length
                       ? process.env.NEXT_PUBLIC_S3_URL! +
                         rec.sources[0].path +

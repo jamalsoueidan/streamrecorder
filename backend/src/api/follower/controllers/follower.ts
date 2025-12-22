@@ -66,7 +66,9 @@ export default factories.createCoreController(
         result.data.map(async (follower) => {
           // Build recordings query, mimicking frontend populate
           const recordingsQuery: any = {
-            filters: { follower: { id: { $eq: follower.id } } },
+            filters: {
+              follower: { id: { $eq: follower.id } },
+            },
             status: "published",
             limit: 5,
             sort: { createdAt: "desc" },
@@ -79,8 +81,8 @@ export default factories.createCoreController(
 
           const [totalRecordings, recordings] = await Promise.all([
             strapi.documents("api::recording.recording").count({
-              filters: { follower: { id: { $eq: follower.id } } },
-              status: "published",
+              ...recordingsQuery,
+              limit: undefined,
             }),
             recordingsPopulate
               ? strapi
@@ -91,7 +93,9 @@ export default factories.createCoreController(
 
           return {
             ...follower,
-            ...(recordings !== undefined && { recordings }),
+            ...(recordings !== undefined && {
+              recordings: recordings.filter((r) => r.sources?.length > 0),
+            }),
             isFollowing: followingIds.includes(follower.id),
             totalRecordings,
           };
