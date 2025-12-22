@@ -12,7 +12,7 @@ export default {
     },
     {
       method: "DELETE",
-      path: "/followers/unfollow/:id",
+      path: "/followers/unfollow/:documentId",
       handler: "follower.unfollow",
     },
     {

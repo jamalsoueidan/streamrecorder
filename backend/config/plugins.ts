@@ -247,17 +247,17 @@ export default () => ({
           };
 
           // Endpoint: DELETE /followers/unfollow/:id
-          draft.paths["/followers/unfollow/{id}"] = {
+          draft.paths["/followers/unfollow/{documentId}"] = {
             delete: {
               tags: ["Follower"],
               summary: "Unfollow an account",
               security: [{ bearerAuth: [] }],
               parameters: [
                 {
-                  name: "id",
+                  name: "documentId",
                   in: "path",
                   required: true,
-                  schema: { type: "integer" },
+                  schema: { type: "string" },
                 },
               ],
               responses: {

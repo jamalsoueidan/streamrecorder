@@ -107,14 +107,21 @@ export default factories.createCoreController(
         meta: result.meta,
       };
     },
-
     async follow(ctx) {
       const user = ctx.state.user;
       if (!user) return ctx.unauthorized();
 
       const { username, type } = ctx.request.body;
 
-      // Check if follower already exists
+      // Get current user with existing followers
+      const currentUser = await strapi
+        .documents("plugin::users-permissions.user")
+        .findOne({
+          documentId: user.documentId,
+          populate: ["followers"],
+        });
+
+      // Find or create follower
       let follower = await strapi
         .documents("api::follower.follower")
         .findFirst({
@@ -122,7 +129,6 @@ export default factories.createCoreController(
           status: "published",
         });
 
-      // Create if doesn't exist
       if (!follower) {
         follower = await strapi.documents("api::follower.follower").create({
           data: { username, type },
@@ -130,15 +136,35 @@ export default factories.createCoreController(
         });
       }
 
-      // Connect to user
-      await strapi.documents("plugin::users-permissions.user").update({
+      // Get all existing documentIds + new one
+      const existingDocIds =
+        currentUser.followers?.map((f) => f.documentId) || [];
+
+      if (!existingDocIds.includes(follower.documentId)) {
+        existingDocIds.push(follower.documentId);
+      }
+
+      // Update with connect using documentIds
+      const updatePayload = {
         documentId: user.documentId,
         data: {
           followers: {
-            connect: [{ id: follower.id }],
+            connect: existingDocIds,
           },
         },
-      });
+      };
+
+      const updateResult = await strapi
+        .documents("plugin::users-permissions.user")
+        .update(updatePayload);
+
+      // Check after
+      const afterUser = await strapi
+        .documents("plugin::users-permissions.user")
+        .findOne({
+          documentId: user.documentId,
+          populate: ["followers"],
+        });
 
       return { data: follower };
     },
@@ -164,22 +190,21 @@ export default factories.createCoreController(
       const user = ctx.state.user;
       if (!user) return ctx.unauthorized();
 
-      const { id } = ctx.params;
-      const followerId = Number(id);
+      const { documentId } = ctx.params; // This should actually be documentId from frontend!
 
-      // Get user with their followers
       const fullUser = await strapi
         .documents("plugin::users-permissions.user")
         .findOne({
           documentId: user.documentId,
-          status: "published",
-          populate: { followers: { fields: ["id"] } },
+          populate: { followers: { fields: ["id", "documentId"] } },
         });
 
-      // Check if user actually follows this follower
-      const isFollowing = fullUser.followers?.some((f) => f.id === followerId);
+      // Find by documentId, not numeric id
+      const followerToRemove = fullUser.followers?.find(
+        (f) => f.documentId === documentId
+      );
 
-      if (!isFollowing) {
+      if (!followerToRemove) {
         return ctx.notFound("You are not following this account");
       }
 
@@ -187,10 +212,17 @@ export default factories.createCoreController(
         documentId: user.documentId,
         data: {
           followers: {
-            disconnect: [{ id: followerId }],
+            disconnect: [documentId],
           },
         },
       });
+
+      const afterUser = await strapi
+        .documents("plugin::users-permissions.user")
+        .findOne({
+          documentId: user.documentId,
+          populate: { followers: { fields: ["id", "documentId"] } },
+        });
 
       return { success: true };
     },

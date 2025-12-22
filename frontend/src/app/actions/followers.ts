@@ -38,9 +38,9 @@ export async function followUser(data: FollowRequestBody) {
   }
 }
 
-export async function unfollow(id: number) {
+export async function unfollow(documentId: string) {
   try {
-    await api.follower.unfollowDelete({ id });
+    await api.follower.unfollowDelete({ documentId });
     revalidatePath("/following");
 
     return { success: true };

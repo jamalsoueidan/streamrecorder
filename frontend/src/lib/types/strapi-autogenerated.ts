@@ -38,6 +38,8 @@ export interface FollowerRequest {
     protected?: boolean;
     users?: (number | string)[];
     recordings?: (number | string)[];
+    /** @format date-time */
+    lastCheckedAt?: string;
     locale?: string;
     localizations?: (number | string)[];
   };
@@ -248,6 +250,7 @@ export interface Follower {
           /** @format date-time */
           finishedAt?: string;
           path?: string;
+          /** @format float */
           duration?: number;
           thumbnailInterval?: number;
           thumbnailCols?: number;
@@ -294,6 +297,8 @@ export interface Follower {
         }[];
       }[];
       /** @format date-time */
+      lastCheckedAt?: string;
+      /** @format date-time */
       createdAt?: string;
       /** @format date-time */
       updatedAt?: string;
@@ -338,6 +343,8 @@ export interface Follower {
     documentId?: string;
   }[];
   /** @format date-time */
+  lastCheckedAt?: string;
+  /** @format date-time */
   createdAt?: string;
   /** @format date-time */
   updatedAt?: string;
@@ -369,7 +376,6 @@ export interface VideosVideoComponent {
   width?: number;
   height?: number;
   sizeBytes?: number;
-  size?: string;
 }
 
 export interface NavigationRequest {
@@ -774,6 +780,7 @@ export interface Recording {
         /** @format date-time */
         finishedAt?: string;
         path?: string;
+        /** @format float */
         duration?: number;
         thumbnailInterval?: number;
         thumbnailCols?: number;
@@ -819,6 +826,8 @@ export interface Recording {
         documentId?: string;
       }[];
     }[];
+    /** @format date-time */
+    lastCheckedAt?: string;
     /** @format date-time */
     createdAt?: string;
     /** @format date-time */
@@ -868,11 +877,12 @@ export interface RecordingResponse {
 
 export interface SourceRequest {
   data: {
-    state?: SourceRequestStateEnum;
+    state: SourceRequestStateEnum;
     executionId?: number;
     /** @format date-time */
     finishedAt?: string;
     path: string;
+    /** @format float */
     duration: number;
     thumbnailInterval?: number;
     thumbnailCols?: number;
@@ -900,11 +910,12 @@ export interface SourceListResponse {
 export interface Source {
   id?: number;
   documentId?: string;
-  state?: SourceStateEnum;
+  state: SourceStateEnum;
   executionId?: number;
   /** @format date-time */
   finishedAt?: string;
   path: string;
+  /** @format float */
   duration: number;
   thumbnailInterval?: number;
   thumbnailCols?: number;
@@ -1024,6 +1035,7 @@ export interface Source {
     /** @format date-time */
     finishedAt?: string;
     path?: string;
+    /** @format float */
     duration?: number;
     thumbnailInterval?: number;
     thumbnailCols?: number;
@@ -1182,6 +1194,7 @@ export enum NavigationsLinksComponentIconEnum {
   IconPlayerPlayFilled = "IconPlayerPlayFilled",
   IconWorldSearch = "IconWorldSearch",
   IconQuestionMark = "IconQuestionMark",
+  IconVideo = "IconVideo",
 }
 
 export enum RecordingStateEnum {
@@ -1659,7 +1672,7 @@ export interface FollowCreateData {
 }
 
 export interface UnfollowDeleteParams {
-  id: number;
+  documentId: string;
 }
 
 export interface UnfollowDeleteData {
@@ -1831,12 +1844,12 @@ export namespace Follower {
    * @tags Follower
    * @name UnfollowDelete
    * @summary Unfollow an account
-   * @request DELETE:/followers/unfollow/{id}
+   * @request DELETE:/followers/unfollow/{documentId}
    * @secure
    */
   export namespace UnfollowDelete {
     export type RequestParams = {
-      id: number;
+      documentId: string;
     };
     export type RequestQuery = {};
     export type RequestBody = never;
@@ -2981,15 +2994,15 @@ export class Api<
      * @tags Follower
      * @name UnfollowDelete
      * @summary Unfollow an account
-     * @request DELETE:/followers/unfollow/{id}
+     * @request DELETE:/followers/unfollow/{documentId}
      * @secure
      */
     unfollowDelete: (
-      { id, ...query }: UnfollowDeleteParams,
+      { documentId, ...query }: UnfollowDeleteParams,
       params: RequestParams = {},
     ) =>
       this.request<UnfollowDeleteData, void>({
-        path: `/followers/unfollow/${id}`,
+        path: `/followers/unfollow/${documentId}`,
         method: "DELETE",
         secure: true,
         format: "json",
