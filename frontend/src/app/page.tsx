@@ -1,42 +1,52 @@
-import Link from "next/link";
+import { Alert, Button, Group, Text, Title } from "@mantine/core";
+import { IconHeart } from "@tabler/icons-react";
 
 export default function Home() {
   return (
     <div
       style={{
-        maxWidth: 400,
+        maxWidth: 500,
         margin: "100px auto",
         padding: 20,
         textAlign: "center",
       }}
     >
-      <h1>Stream Recorder</h1>
-      <p style={{ margin: "20px 0", color: "#666" }}>
-        Record your favorite streamers
-      </p>
-      <div style={{ display: "flex", gap: 16, justifyContent: "center" }}>
-        <Link
-          href="/login"
-          style={{
-            padding: "12px 24px",
-            background: "#000",
-            color: "#fff",
-            borderRadius: 8,
-          }}
-        >
+      <Title>Stream Recorder</Title>
+      <Text c="dimmed">Record your favourite streamers</Text>
+
+      <Alert
+        icon={<IconHeart size="xl" />}
+        title="We've moved to a new platform! (22
+          december 2025)"
+        color="blue"
+        mt="xl"
+        mb="xl"
+        pb="lg"
+        pt="lg"
+        style={{ textAlign: "left" }}
+      >
+        <Text size="sm">
+          ✓ Your followed streamers are safe and will still be recorded.
+        </Text>
+        <Text size="sm">✓ Recordings now in original + multiple qualities</Text>
+        <Text size="sm">✓ Completely redesigned UI</Text>
+        <Text size="sm" mt="xs">
+          ✗ Accounts were reset — please create a new one
+        </Text>
+        <Text size="sm">✗ Previous recordings were deleted</Text>
+        <Text size="sm" c="dimmed" mt="sm">
+          Sorry for any inconvenience. Thanks for sticking with us!
+        </Text>
+      </Alert>
+
+      <Group justify="center">
+        <Button component="a" href="/login" size="xl">
           Login
-        </Link>
-        <Link
-          href="/register"
-          style={{
-            padding: "12px 24px",
-            border: "1px solid #ccc",
-            borderRadius: 8,
-          }}
-        >
+        </Button>
+        <Button component="a" href="/register" variant="subtle" size="xl">
           Register
-        </Link>
-      </div>
+        </Button>
+      </Group>
     </div>
   );
 }
