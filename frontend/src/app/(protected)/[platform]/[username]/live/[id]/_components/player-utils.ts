@@ -23,7 +23,8 @@ export function combinePlaylistsFromSources(
   let maxDuration = 0;
   let isFirst = true;
 
-  for (const source of sources) {
+  // Reverse to go from oldest to newest
+  for (const source of [...sources].reverse()) {
     const playlist =
       quality === "original"
         ? source.videoOriginal?.playlist
