@@ -12,7 +12,6 @@ import { formatDuration } from "../../[platform]/[username]/live/[id]/_component
 interface Props {
   sources?: Source[] | null;
   href: string;
-  src: string | null;
   w: number;
   h: number;
   alt?: string;
@@ -22,7 +21,6 @@ interface Props {
 export function ImageVideoPreview({
   sources,
   href,
-  src,
   w,
   h,
   alt = "",
@@ -36,6 +34,12 @@ export function ImageVideoPreview({
     sources?.reduce((sum, s) => sum + (s.duration || 0), 0) || 0;
 
   const recording = sources?.some((s) => s.state === SourceStateEnum.Recording);
+
+  const src = sources?.length
+    ? process.env.NEXT_PUBLIC_S3_URL! +
+      sources[sources.length - 1].path +
+      "preview.jpg"
+    : null;
 
   const handleMouseEnter = () => {
     if (!sources || sources.length === 0 || recording) return;

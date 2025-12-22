@@ -136,13 +136,6 @@ export default function InfiniteRecordings({
                 href={`/${f.follower?.type}/${f.follower?.username}/live/${
                   f.documentId
                 }${sort ? `?sort=` + sort : null}`}
-                src={
-                  f.sources?.length
-                    ? process.env.NEXT_PUBLIC_S3_URL! +
-                      f.sources[0].path +
-                      "preview.jpg"
-                    : null
-                }
                 w={160}
                 h={284}
                 sources={f.sources}
