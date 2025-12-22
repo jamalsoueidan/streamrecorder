@@ -238,17 +238,10 @@ export default function InfiniteFollowers({
                   }}
                 >
                   {f.recordings?.map((rec) => {
-                    const path = rec.sources?.length
-                      ? process.env.NEXT_PUBLIC_S3_URL! +
-                        rec.sources[0].path +
-                        "preview.jpg"
-                      : null;
-
                     return (
                       <Stack key={rec.documentId} gap="4">
                         <ImageVideoPreview
                           href={`/${f.type}/${f.username}/live/${rec.documentId}`}
-                          src={path}
                           w={160}
                           h={284}
                           sources={rec.sources}

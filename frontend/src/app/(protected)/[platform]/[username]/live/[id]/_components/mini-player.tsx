@@ -30,7 +30,13 @@ export function MiniPlayer({ sources, width, height }: Props) {
   useEffect(() => {
     if (!mounted || !sources || sources.length === 0) return;
 
-    const combinedPlaylist = combinePlaylistsFromSources(sources, "small");
+    const smallMissing = sources.some((s) => !s.videoSmall);
+
+    const combinedPlaylist = combinePlaylistsFromSources(
+      sources,
+      smallMissing ? "original" : "small"
+    );
+
     if (!combinedPlaylist || combinedPlaylist.length < 50) return;
 
     const blob = new Blob([combinedPlaylist], {
