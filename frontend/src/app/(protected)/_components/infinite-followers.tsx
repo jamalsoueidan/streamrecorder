@@ -210,10 +210,12 @@ export default function InfiniteFollowers({
               </Grid.Col>
               <Grid.Col span={4} style={{ textAlign: "right" }}>
                 {f.isFollowing ? (
-                  <UnfollowButton
-                    id={f.id!}
-                    onSuccess={() => handleFollowed(f.id!)}
-                  />
+                  <>
+                    <UnfollowButton
+                      documentId={f.documentId!}
+                      onSuccess={() => handleFollowed(f.id!)}
+                    />
+                  </>
                 ) : (
                   <FollowButton
                     username={f.username!}

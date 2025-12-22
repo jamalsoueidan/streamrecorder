@@ -7,6 +7,7 @@ jest.setTimeout(30000);
 let jwt: string;
 let jwt2: string;
 let followerId: number;
+let followerDocumentId: number;
 let authenticatedRole: any;
 
 beforeAll(async () => {
@@ -119,6 +120,7 @@ describe("Follower API", () => {
       expect(res.body.data).toHaveProperty("id");
       expect(res.body.data).toHaveProperty("documentId");
       followerId = res.body.data.id;
+      followerDocumentId = res.body.data.documentId;
     });
 
     it("should not duplicate when following same user twice", async () => {
@@ -128,7 +130,7 @@ describe("Follower API", () => {
         .send({ username: "tiktoker", type: "tiktok" })
         .expect(200);
 
-      expect(res.body.data.id).toBe(followerId);
+      expect(res.body.data.documentId).toBe(followerDocumentId);
     });
   });
 
@@ -421,7 +423,7 @@ describe("Follower API", () => {
   describe("Unfollow", () => {
     it("should unfollow", async () => {
       await request(getServer())
-        .delete(`/api/followers/unfollow/${followerId}`)
+        .delete(`/api/followers/unfollow/${followerDocumentId}`)
         .set("Authorization", `Bearer ${jwt}`)
         .expect(200);
     });

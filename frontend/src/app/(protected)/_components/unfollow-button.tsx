@@ -6,17 +6,17 @@ import { IconX } from "@tabler/icons-react";
 import { useTransition } from "react";
 
 export default function UnfollowButton({
-  id,
+  documentId,
   onSuccess,
 }: {
-  id: number;
+  documentId: string;
   onSuccess?: () => void;
 }) {
   const [isPending, startTransition] = useTransition();
 
   const handleClick = () => {
     startTransition(async () => {
-      await unfollow(id);
+      await unfollow(documentId);
       onSuccess?.();
     });
   };
