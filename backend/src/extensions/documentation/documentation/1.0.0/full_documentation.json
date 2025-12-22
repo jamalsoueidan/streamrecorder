@@ -20,7 +20,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-12-22T11:05:43.092Z"
+    "x-generation-date": "2025-12-22T11:45:20.281Z"
   },
   "servers": [
     {
@@ -4569,7 +4569,8 @@
                                     "type": "string"
                                   },
                                   "duration": {
-                                    "type": "integer"
+                                    "type": "number",
+                                    "format": "float"
                                   },
                                   "thumbnailInterval": {
                                     "type": "integer"
@@ -6075,7 +6076,8 @@
                             "type": "string"
                           },
                           "duration": {
-                            "type": "integer"
+                            "type": "number",
+                            "format": "float"
                           },
                           "thumbnailInterval": {
                             "type": "integer"
@@ -6357,7 +6359,8 @@
                 "type": "string"
               },
               "duration": {
-                "type": "integer"
+                "type": "number",
+                "format": "float"
               },
               "thumbnailInterval": {
                 "type": "integer"
@@ -6460,7 +6463,8 @@
             "type": "string"
           },
           "duration": {
-            "type": "integer"
+            "type": "number",
+            "format": "float"
           },
           "thumbnailInterval": {
             "type": "integer"
@@ -6793,7 +6797,8 @@
                   "type": "string"
                 },
                 "duration": {
-                  "type": "integer"
+                  "type": "number",
+                  "format": "float"
                 },
                 "thumbnailInterval": {
                   "type": "integer"

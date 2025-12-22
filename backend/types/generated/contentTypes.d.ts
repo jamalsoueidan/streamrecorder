@@ -551,7 +551,7 @@ export interface ApiSourceSource extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    duration: Schema.Attribute.Integer & Schema.Attribute.Required;
+    duration: Schema.Attribute.Decimal & Schema.Attribute.Required;
     executionId: Schema.Attribute.Integer;
     finishedAt: Schema.Attribute.DateTime;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
