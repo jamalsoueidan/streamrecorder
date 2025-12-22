@@ -16,9 +16,6 @@
     },
     "sizeBytes": {
       "type": "integer"
-    },
-    "size": {
-      "type": "string"
     }
   },
   "config": {}

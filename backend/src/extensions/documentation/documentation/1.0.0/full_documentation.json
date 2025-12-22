@@ -20,7 +20,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-12-21T12:27:10.225Z"
+    "x-generation-date": "2025-12-22T01:04:10.873Z"
   },
   "servers": [
     {
@@ -4890,9 +4890,6 @@
           },
           "sizeBytes": {
             "type": "integer"
-          },
-          "size": {
-            "type": "string"
           }
         }
       },
