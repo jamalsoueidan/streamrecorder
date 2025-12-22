@@ -38,6 +38,9 @@
       "relation": "oneToMany",
       "target": "api::recording.recording",
       "mappedBy": "follower"
+    },
+    "lastCheckedAt": {
+      "type": "datetime"
     }
   }
 }

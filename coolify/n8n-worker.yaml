@@ -1,0 +1,41 @@
+services:
+  fix-permissions:
+    image: "alpine:latest"
+    user: root
+    restart: "no"
+    volumes:
+      - "./downloads:/files"
+    command: 'sh -c "chown -R 1000:1000 /files && chmod -R 755 /files && exit 0"'
+  n8n-worker:
+    build:
+      context: .
+      dockerfile_inline: "FROM docker.n8n.io/n8nio/n8n:1.123.5\nUSER root\nRUN apk update && \\\n    apk add --no-cache ffmpeg python3 py3-pip curl aws-cli && \\\n    pip3 install --break-system-packages streamlink\nRUN npm install -g bcrypt\nUSER node\n"
+    command: "worker --concurrency=30"
+    environment:
+      - GENERIC_TIMEZONE=Europe/Berlin
+      - TZ=Europe/Berlin
+      - DB_TYPE=postgresdb
+      - DB_POSTGRESDB_DATABASE=n8n
+      - DB_POSTGRESDB_HOST=IP #<<<<<<<<<
+      - DB_POSTGRESDB_PORT=5432
+      - DB_POSTGRESDB_USER=XXX #<<<<<<<<<
+      - DB_POSTGRESDB_SCHEMA=public
+      - DB_POSTGRESDB_PASSWORD=XXX #<<<<<<<<<
+      - DB_POSTGRESDB_POOL_SIZE=4
+      - EXECUTIONS_MODE=queue
+      - QUEUE_BULL_REDIS_HOST=IP #<<<<<<<<<
+      - QUEUE_BULL_REDIS_PORT=6379
+      - QUEUE_HEALTH_CHECK_ACTIVE=true
+      - N8N_ENCRYPTION_KEY=XXX #<<<<<<<<<
+      - N8N_RUNNERS_ENABLED=true
+      - N8N_BLOCK_ENV_ACCESS_IN_NODE=true
+      - N8N_GIT_NODE_DISABLE_BARE_REPOS=true
+      - N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true
+      - N8N_PROXY_HOPS=1
+      - "NODE_FUNCTION_ALLOW_EXTERNAL=*"
+      - "NODE_FUNCTION_ALLOW_BUILTIN=*"
+    volumes:
+      - "./downloads:/files"
+    depends_on:
+      fix-permissions:
+        condition: service_completed_successfully
