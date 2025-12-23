@@ -227,12 +227,11 @@ export default factories.createCoreController(
       return { success: true };
     },
     async backfill(ctx) {
-      // Run in background
       setImmediate(async () => {
-        const followers = await strapi.db
-          .query("api::follower.follower")
+        const followers = await strapi
+          .documents("api::follower.follower")
           .findMany({
-            where: { avatar: null },
+            status: "published",
           });
 
         console.log(`[Backfill] Found ${followers.length} followers`);
@@ -301,12 +300,15 @@ export default factories.createCoreController(
                 }
               }
 
-              await strapi.db.query("api::follower.follower").update({
-                where: { id: follower.id },
+              await strapi.documents("api::follower.follower").update({
+                documentId: follower.documentId,
                 data: updateData,
+                status: "published",
               });
 
-              console.log(`[Backfill] Updated: ${follower.username}`);
+              console.log(
+                `[Backfill] Updated: ${follower.username} - ${profile.profile.Country}`
+              );
             }
 
             await new Promise((r) => setTimeout(r, 500));
