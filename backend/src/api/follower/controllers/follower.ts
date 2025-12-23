@@ -219,5 +219,20 @@ export default factories.createCoreController(
 
       return { success: true };
     },
+    async bulkUpdateLastChecked(ctx) {
+      const { documentIds } = ctx.request.body;
+
+      const result = await strapi.db
+        .query("api::follower.follower")
+        .updateMany({
+          where: { documentId: { $in: documentIds } },
+          data: { lastCheckedAt: new Date() },
+        });
+
+      return {
+        requested: documentIds.length,
+        updated: result.count / 2, // each document have two rows in db
+      };
+    },
   })
 );

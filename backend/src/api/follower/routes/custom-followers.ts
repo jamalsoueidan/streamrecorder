@@ -20,5 +20,10 @@ export default {
       path: "/followers/import",
       handler: "follower.import",
     },
+    {
+      method: "POST",
+      path: "/followers/bulk-update-checked",
+      handler: "follower.bulkUpdateLastChecked",
+    },
   ],
 };
