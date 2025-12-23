@@ -6,8 +6,8 @@ import Link from "next/link";
 
 import { useRouter } from "next/navigation";
 import { useRef, useState } from "react";
-import { MiniPlayer } from "../../[platform]/[username]/live/[id]/_components/mini-player";
-import { formatDuration } from "../../[platform]/[username]/live/[id]/_components/player-utils";
+import { MiniPlayer } from "../../[type]/[username]/live/[id]/_components/mini-player";
+import { formatDuration } from "../../[type]/[username]/live/[id]/_components/player-utils";
 
 interface Props {
   sources?: Source[] | null;

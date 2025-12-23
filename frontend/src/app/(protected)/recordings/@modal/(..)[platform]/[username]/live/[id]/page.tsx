@@ -1,4 +1,4 @@
-import { VideoModalByRecordings } from "@/app/(protected)/[platform]/[username]/live/[id]/_components/video-modal-by-recordings";
+import { VideoModalByRecordings } from "@/app/(protected)/[type]/[username]/live/[id]/_components/video-modal-by-recordings";
 import { getRecordingsWithPrevNext } from "@/app/actions/recordings";
 import { SortOptions } from "@/lib/types/filtering";
 
@@ -6,7 +6,7 @@ interface PageProps {
   params: Promise<{
     id: string;
     username: string;
-    platform: string;
+    type: string;
   }>;
   searchParams: Promise<{
     sort?: string;
@@ -14,7 +14,7 @@ interface PageProps {
 }
 
 export default async function Page({ params, searchParams }: PageProps) {
-  const { id, username, platform } = await params;
+  const { id, username, type } = await params;
   const { sort } = await searchParams;
 
   const { sources, prevId, nextId } = await getRecordingsWithPrevNext({
@@ -26,7 +26,7 @@ export default async function Page({ params, searchParams }: PageProps) {
     <VideoModalByRecordings
       initialId={id}
       username={username}
-      platform={platform}
+      type={type}
       initialSources={sources}
       initialPrevId={prevId}
       initialNextId={nextId}

@@ -37,12 +37,16 @@ interface Props {
   initialData: RecordingListResponse["data"];
   initialPagination: RecordingListResponse["meta"];
   initialSort?: SortOptions;
+  fetchAction: (
+    options: Parameters<typeof getRecordings>[0]
+  ) => ReturnType<typeof getRecordings>;
 }
 
 export default function InfiniteRecordings({
   initialData,
   initialPagination,
   initialSort,
+  fetchAction,
 }: Props) {
   const [data, setData] = useState(initialData);
   const [page, setPage] = useState(initialPagination?.pagination?.page ?? 1);
@@ -77,24 +81,24 @@ export default function InfiniteRecordings({
     }
 
     startTransition(async () => {
-      const result = await getRecordings({
+      const result = await fetchAction({
         scope: ScopeEnum.Following,
-        page: 1,
+        "pagination[page]": 1,
         sort,
       });
       setData(result.data);
       setPage(1);
       setHasMore(1 < (result.meta?.pagination?.pageCount ?? 1));
     });
-  }, [sort]);
+  }, [fetchAction, sort]);
 
   useEffect(() => {
     if (entry?.isIntersecting && hasMore && !isPending) {
       startTransition(async () => {
         const nextPage = page + 1;
-        const result = await getRecordings({
+        const result = await fetchAction({
           scope: ScopeEnum.Following,
-          page: nextPage,
+          "pagination[page]": nextPage,
           sort,
         });
 
@@ -107,7 +111,7 @@ export default function InfiniteRecordings({
         setHasMore(nextPage < (result.meta?.pagination?.pageCount ?? 1));
       });
     }
-  }, [entry?.isIntersecting, hasMore, isPending, page, sort]);
+  }, [entry?.isIntersecting, hasMore, isPending, page, sort, fetchAction]);
 
   return (
     <Stack gap="sm">
@@ -128,59 +132,64 @@ export default function InfiniteRecordings({
       </Group>
       <Divider />
       <Flex gap="lg" wrap="wrap">
-        {(data || []).map((f) => (
-          <Grid gutter="xs" key={f.documentId} w="160">
-            <Grid.Col span={12}>
-              <ImageVideoPreview
-                key={f.documentId}
-                href={`/${f.follower?.type}/${f.follower?.username}/live/${
-                  f.documentId
-                }${sort ? `?sort=` + sort : null}`}
-                w={160}
-                h={284}
-                sources={f.sources}
-              />
-            </Grid.Col>
-            <Grid.Col span={12}>
-              <Group gap="xs">
-                <Anchor
-                  component={Link}
-                  href={`/${f.follower?.type}/${f.follower?.username}`}
-                >
-                  <Avatar
-                    size={34}
-                    src={
-                      f.sources?.at(0)?.path
-                        ? process.env.NEXT_PUBLIC_S3_URL! +
-                          f.sources?.at(0)?.path +
-                          "preview.jpg"
-                        : null
-                    }
-                    styles={{
-                      image: {
-                        transform: "scale(2)",
-                        objectFit: "cover",
-                      },
-                    }}
-                  />
-                </Anchor>
-
-                <div>
+        {(data || []).map((rec) => {
+          if (rec.follower?.username === "stefany_23v") {
+            console.log(rec);
+          }
+          return (
+            <Grid gutter="xs" key={rec.documentId} w="160">
+              <Grid.Col span={12}>
+                <ImageVideoPreview
+                  key={rec.documentId}
+                  href={`/${rec.follower?.type}/${
+                    rec.follower?.username
+                  }/live/${rec.documentId}${sort ? `?sort=` + sort : null}`}
+                  w={160}
+                  h={284}
+                  sources={rec.sources}
+                />
+              </Grid.Col>
+              <Grid.Col span={12}>
+                <Group gap="xs">
                   <Anchor
                     component={Link}
-                    href={`/${f.follower?.type}/${f.follower?.username}`}
-                    size="md"
-                    truncate
-                    maw={120}
+                    href={`/${rec.follower?.type}/${rec.follower?.username}`}
                   >
-                    {f.follower?.username}
+                    <Avatar
+                      size={34}
+                      src={
+                        rec.sources?.at(0)?.path
+                          ? process.env.NEXT_PUBLIC_S3_URL! +
+                            rec.sources?.at(0)?.path +
+                            "preview.jpg"
+                          : null
+                      }
+                      styles={{
+                        image: {
+                          transform: "scale(2)",
+                          objectFit: "cover",
+                        },
+                      }}
+                    />
                   </Anchor>
-                  <Text size="xs">live {dayjs(f.createdAt).fromNow()}</Text>
-                </div>
-              </Group>
-            </Grid.Col>
-          </Grid>
-        ))}
+
+                  <div>
+                    <Anchor
+                      component={Link}
+                      href={`/${rec.follower?.type}/${rec.follower?.username}`}
+                      size="md"
+                      truncate
+                      maw={120}
+                    >
+                      {rec.follower?.username}
+                    </Anchor>
+                    <Text size="xs">live {dayjs(rec.createdAt).fromNow()}</Text>
+                  </div>
+                </Group>
+              </Grid.Col>
+            </Grid>
+          );
+        })}
       </Flex>
       {/* Sentinel element */}
       <div ref={ref} style={{ height: 1 }} />

@@ -8,12 +8,17 @@ import InfiniteRecordings from "./_components/infinity-recordings";
 export default async function FollowingsPage() {
   const response = await getRecordings({
     scope: ScopeEnum.Following,
-    page: 1,
+    "pagination[page]": 1,
     sort: SortOptions.createdAtDesc,
   });
 
   const data = response.data || [];
   const meta = response.meta;
+
+  const fetchAction = async (options: Parameters<typeof getRecordings>[0]) => {
+    "use server";
+    return await getRecordings(options);
+  };
 
   return (
     <section>
@@ -50,6 +55,7 @@ export default async function FollowingsPage() {
           initialData={data}
           initialPagination={meta}
           initialSort={SortOptions.createdAtDesc}
+          fetchAction={fetchAction}
         />
       )}
     </section>
