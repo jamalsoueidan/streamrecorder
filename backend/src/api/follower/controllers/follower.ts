@@ -230,9 +230,7 @@ export default factories.createCoreController(
       setImmediate(async () => {
         const followers = await strapi
           .documents("api::follower.follower")
-          .findMany({
-            status: "published",
-          });
+          .findMany();
 
         console.log(`[Backfill] Found ${followers.length} followers`);
 
