@@ -7,12 +7,12 @@ interface PageProps {
   params: Promise<{
     id: string;
     username: string;
-    platform: string;
+    type: string;
   }>;
 }
 
 export default async function VideoPage({ params }: PageProps) {
-  const { platform, id, username } = await params;
+  const { type, id, username } = await params;
   const { sources, prevId, nextId } = await getRecordingsWithPrevNext({
     id,
     sort: "createdAt:desc",
@@ -29,7 +29,7 @@ export default async function VideoPage({ params }: PageProps) {
       <PlayBack
         prevId={prevId}
         nextId={nextId}
-        basePath={`/${platform}/${username}/live`}
+        basePath={`/${type}/${username}/live`}
       />
     </Box>
   );

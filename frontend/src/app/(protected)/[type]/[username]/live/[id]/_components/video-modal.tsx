@@ -12,7 +12,7 @@ import { VideoPlayer } from "./video-player";
 interface Props {
   initialId: string;
   username: string;
-  platform: string;
+  type: string;
   initialSources: Source[];
   initialPrevId: string | null;
   initialNextId: string | null;
@@ -26,7 +26,7 @@ interface Props {
 export function VideoModal({
   initialId,
   username,
-  platform,
+  type,
   initialSources,
   initialPrevId,
   initialNextId,
@@ -40,7 +40,7 @@ export function VideoModal({
   const [nextId, setNextId] = useState(initialNextId);
   const [loading, setLoading] = useState(false);
 
-  const basePath = `/${platform}/${username}/live`;
+  const basePath = `/${type}/${username}/live`;
   const queryString = searchParams.toString();
 
   useEffect(() => {
@@ -96,7 +96,7 @@ export function VideoModal({
         <PlayBack
           prevId={prevId}
           nextId={nextId}
-          basePath={`/${platform}/${username}/live`}
+          basePath={`/${type}/${username}/live`}
           onPrev={() => loadVideo(prevId!)}
           onNext={() => loadVideo(nextId!)}
           loading={loading}

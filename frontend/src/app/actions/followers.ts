@@ -75,7 +75,7 @@ export async function getFollowers({
             filters: {
               state: { $ne: "failed" },
             },
-            populate: ["videoSmall", "videoOriginal"],
+            populate: ["videoSmall", "videoOriginal"], // we ask for original because sometime small is null while encoding for mini-player
           },
         },
       },

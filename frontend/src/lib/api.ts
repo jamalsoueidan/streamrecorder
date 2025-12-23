@@ -24,9 +24,9 @@ const api = new Api({
 });
 
 api.instance.interceptors.request.use((config) => {
-  /*console.log("REQUEST URL:", config.baseURL + ":" + config.url);
-  console.log("PARAMS:", config.params);*/
-  console.log("FULL URL:", api.instance.getUri(config));
+  //console.log("REQUEST URL:", config.baseURL + ":" + config.url);
+  //console.log("PARAMS:", JSON.stringify(config.params));
+  // console.log("FULL URL:", api.instance.getUri(config));
   return config;
 });
 
