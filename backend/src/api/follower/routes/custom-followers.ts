@@ -20,13 +20,5 @@ export default {
       path: "/followers/import",
       handler: "follower.import",
     },
-    {
-      method: "POST",
-      path: "/followers/backfill",
-      handler: "follower.backfill",
-      config: {
-        auth: false,
-      },
-    },
   ],
 };
