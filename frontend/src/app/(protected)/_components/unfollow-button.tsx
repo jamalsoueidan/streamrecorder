@@ -1,9 +1,9 @@
 "use client";
 
 import { unfollow } from "@/app/actions/followers";
-import { Button } from "@mantine/core";
+import { ActionIcon, Tooltip } from "@mantine/core";
 import { notifications } from "@mantine/notifications";
-import { IconCheck, IconX } from "@tabler/icons-react";
+import { IconCheck, IconUsersMinus } from "@tabler/icons-react";
 import { useTransition } from "react";
 
 export default function UnfollowButton({
@@ -34,15 +34,16 @@ export default function UnfollowButton({
   };
 
   return (
-    <Button
-      color="gray"
-      size="xs"
-      type="button"
-      onClick={handleClick}
-      loading={isPending}
-      rightSection={<IconX size={14} />}
-    >
-      Following
-    </Button>
+    <Tooltip label="Add Follower">
+      <ActionIcon
+        size="lg"
+        color="gray"
+        type="button"
+        onClick={handleClick}
+        loading={isPending}
+      >
+        <IconUsersMinus />
+      </ActionIcon>
+    </Tooltip>
   );
 }
