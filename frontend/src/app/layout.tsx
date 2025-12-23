@@ -9,6 +9,7 @@ import { Notifications } from "@mantine/notifications";
 import "@mantine/notifications/styles.css";
 import type { Metadata } from "next";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
+import "./globals.css";
 
 const theme = createTheme({
   colors: {
