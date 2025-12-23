@@ -195,13 +195,7 @@ export default function InfiniteFollowers({
                 >
                   <Avatar
                     size="lg"
-                    src={
-                      follower.recordings?.at(0)?.sources?.at(0)?.path
-                        ? process.env.NEXT_PUBLIC_S3_URL! +
-                          follower.recordings?.at(0)?.sources?.at(0)?.path +
-                          "preview.jpg"
-                        : null
-                    }
+                    src={follower.avatar?.url}
                     styles={{
                       image: {
                         transform: "scale(2)",

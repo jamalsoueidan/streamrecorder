@@ -157,13 +157,7 @@ export default function InfiniteRecordings({
                   >
                     <Avatar
                       size={34}
-                      src={
-                        rec.sources?.at(0)?.path
-                          ? process.env.NEXT_PUBLIC_S3_URL! +
-                            rec.sources?.at(0)?.path +
-                            "preview.jpg"
-                          : null
-                      }
+                      src={rec.follower?.avatar?.url}
                       styles={{
                         image: {
                           transform: "scale(2)",

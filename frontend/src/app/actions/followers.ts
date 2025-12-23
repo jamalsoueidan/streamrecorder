@@ -68,6 +68,9 @@ export async function getFollowers({
     "pagination[page]": page,
     "pagination[pageSize]": 10,
     populate: {
+      avatar: {
+        fields: ["url"],
+      },
       recordings: {
         populate: {
           sources: {
