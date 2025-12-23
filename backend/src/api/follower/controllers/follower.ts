@@ -16,7 +16,7 @@ export default factories.createCoreController(
 
       // Extract and remove recordings populate config
       const recordingsPopulate = (ctx.query.populate as any)?.recordings;
-      delete ctx.query.populate;
+      delete (ctx.query.populate as any).recordings;
 
       const fullUser = await strapi
         .documents("plugin::users-permissions.user")

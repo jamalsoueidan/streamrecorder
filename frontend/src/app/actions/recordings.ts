@@ -34,12 +34,15 @@ export async function getRecordings(
                 $ne: "failed",
               },
             },
-            populate: {
-              populate: ["videoSmall", "videoOriginal"], // we ask for original because sometime small is null while encoding for mini-player
-            },
+            populate: ["videoSmall", "videoOriginal"], // we ask for original because sometime small is null while encoding for mini-player
           },
           follower: {
             fields: ["username", "type"],
+            populate: {
+              avatar: {
+                fields: ["url"],
+              },
+            },
           },
         },
       },
