@@ -29,7 +29,7 @@ export interface VideosVideo extends Struct.ComponentSchema {
   attributes: {
     height: Schema.Attribute.Integer;
     playlist: Schema.Attribute.Text;
-    sizeBytes: Schema.Attribute.Integer;
+    sizeBytes: Schema.Attribute.BigInteger;
     width: Schema.Attribute.Integer;
   };
 }
