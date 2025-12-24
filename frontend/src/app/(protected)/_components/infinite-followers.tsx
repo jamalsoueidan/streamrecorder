@@ -31,7 +31,7 @@ import {
   useMatches,
 } from "@mantine/core";
 import { useIntersection } from "@mantine/hooks";
-import { IconWindowMaximize } from "@tabler/icons-react";
+import { IconGrid4x4, IconList, IconWindowMaximize } from "@tabler/icons-react";
 import Link from "next/link";
 import { parseAsBoolean, parseAsStringEnum, useQueryState } from "nuqs";
 import { useEffect, useState, useTransition } from "react";
@@ -46,6 +46,11 @@ const SORT_OPTIONS = [
   { value: SortOptions.createdAtDesc, label: "Newest followers" },
   { value: SortOptions.createdAtAsc, label: "Oldest followers" },
 ];
+
+enum ViewOptions {
+  grid = "grid",
+  list = "list",
+}
 
 interface Props {
   title: string;
@@ -73,8 +78,9 @@ export default function InfiniteFollowers({
   });
 
   const mawTruncate = useMatches({
-    base: 90,
-    sm: 150,
+    base: 150,
+    sm: 100,
+    md: 150,
   });
 
   const [data, setData] = useState(initialData);
@@ -91,6 +97,13 @@ export default function InfiniteFollowers({
   const [hasRecordings, setHasRecordings] = useQueryState(
     "hasRecordings",
     parseAsBoolean.withDefault(true)
+  );
+
+  const [view, setView] = useQueryState(
+    "view",
+    parseAsStringEnum<ViewOptions>(Object.values(ViewOptions)).withDefault(
+      ViewOptions.list
+    )
   );
   const [isPending, startTransition] = useTransition();
 
@@ -176,6 +189,22 @@ export default function InfiniteFollowers({
               }
             />
           ) : null}
+          <Tooltip label="Grid view">
+            <ActionIcon
+              variant={view === ViewOptions.grid ? undefined : "default"}
+              onClick={() => setView(ViewOptions.grid)}
+            >
+              <IconGrid4x4 />
+            </ActionIcon>
+          </Tooltip>
+          <Tooltip label="List view">
+            <ActionIcon
+              variant={view === ViewOptions.list ? undefined : "default"}
+              onClick={() => setView(ViewOptions.list)}
+            >
+              <IconList />
+            </ActionIcon>
+          </Tooltip>
           <Select
             key={sort}
             size="sm"
@@ -189,127 +218,133 @@ export default function InfiniteFollowers({
       </Group>
       <Divider />
       <Stack gap="md">
-        {data.map((follower) => (
-          <Card
-            key={follower.documentId}
-            shadow="sm"
-            padding={cardPadding}
-            radius="md"
-            bg="gray.7"
-            withBorder
-          >
-            <Grid justify="center" align="center">
-              <Grid.Col span="content">
-                <Anchor
-                  component={Link}
-                  href={`/${follower?.type}/${follower?.username}`}
-                >
-                  <Avatar
-                    size="xl"
-                    src={follower.avatar?.url}
-                    styles={{
-                      image: {
-                        transform: "scale(2)",
-                        objectFit: "cover",
-                      },
-                    }}
-                  />
-                </Anchor>
-              </Grid.Col>
-              <Grid.Col span="auto">
-                <Anchor
-                  component={Link}
-                  href={`/${follower?.type}/${follower?.username}`}
-                  size="md"
-                  truncate
-                  maw={120}
-                >
+        <Grid>
+          {data.map((follower) => (
+            <Grid.Col
+              key={follower.documentId}
+              span={view === "list" ? 12 : { base: 12, md: 6, lg: 4 }}
+            >
+              <Card
+                shadow="sm"
+                padding={cardPadding}
+                radius="md"
+                bg="gray.7"
+                withBorder
+              >
+                <Flex justify="space-between">
                   <Group>
-                    <Text truncate maw={mawTruncate}>
-                      {follower.username}
-                    </Text>
-                    {follower.country ? (
-                      <CountryFlag country={follower?.country} />
-                    ) : null}
-                  </Group>
-                </Anchor>
-                <Text size="xs">{follower.totalRecordings} recordings</Text>
-
-                <Text size="xs">
-                  added {dayjs(follower.createdAt).fromNow()}
-                </Text>
-              </Grid.Col>
-              <Grid.Col span={4}>
-                <Flex gap="xs" justify="right" align="center">
-                  <Tooltip label="Go to tiktok">
-                    <ActionIcon
-                      size="lg"
+                    <Anchor
                       component={Link}
-                      href={`https://www.tiktok.com/@${follower.username}/live`}
-                      target="_blank"
+                      href={`/${follower?.type}/${follower?.username}`}
                     >
-                      <IconWindowMaximize size={24} />
-                    </ActionIcon>
-                  </Tooltip>
-                  {follower.isFollowing ? (
-                    <>
-                      <UnfollowButton
-                        documentId={follower.documentId!}
+                      <Avatar
+                        size="lg"
+                        src={follower.avatar?.url}
+                        styles={{
+                          image: {
+                            transform: "scale(2)",
+                            objectFit: "cover",
+                          },
+                        }}
+                      />
+                    </Anchor>
+
+                    <Stack gap="0">
+                      <Group gap="xs">
+                        <Anchor
+                          component={Link}
+                          href={`/${follower?.type}/${follower?.username}`}
+                          size="md"
+                          truncate
+                          maw={mawTruncate}
+                        >
+                          <Text size="lg" truncate maw={mawTruncate} fw="bold">
+                            {follower.username}
+                          </Text>
+                        </Anchor>
+                        {follower.country ? (
+                          <CountryFlag country={follower?.country} />
+                        ) : null}
+                      </Group>
+                      <Text size="md" c="gray.4">
+                        {follower.totalRecordings} recordings
+                      </Text>
+                    </Stack>
+                  </Group>
+
+                  <Flex gap="xs" justify="right" align="center">
+                    <Tooltip label="Go to tiktok">
+                      <ActionIcon
+                        size="lg"
+                        component={Link}
+                        href={`https://www.tiktok.com/@${follower.username}/live`}
+                        target="_blank"
+                      >
+                        <IconWindowMaximize size={24} />
+                      </ActionIcon>
+                    </Tooltip>
+                    {follower.isFollowing ? (
+                      <>
+                        <UnfollowButton
+                          documentId={follower.documentId!}
+                          onSuccess={() => handleFollowed(follower.id!)}
+                        />
+                      </>
+                    ) : (
+                      <FollowButton
+                        username={follower.username!}
+                        type={follower.type}
                         onSuccess={() => handleFollowed(follower.id!)}
                       />
-                    </>
-                  ) : (
-                    <FollowButton
-                      username={follower.username!}
-                      type={follower.type}
-                      onSuccess={() => handleFollowed(follower.id!)}
-                    />
-                  )}
+                    )}
+                  </Flex>
                 </Flex>
-              </Grid.Col>
-            </Grid>
-            {follower.recordings && follower.recordings?.length > 0 ? (
-              <Box mt="lg">
-                <div
-                  style={{
-                    display: "grid",
-                    gridTemplateColumns: "repeat(auto-fill, 160px)",
-                    gridAutoRows: "306px",
-                    gap: "1.4em",
-                    maxHeight: 306,
-                    overflow: "hidden",
-                  }}
-                >
-                  {follower.recordings?.map((rec) => {
-                    const isRecording = rec.sources?.some(
-                      (s) => s.state === SourceStateEnum.Recording
-                    );
+                {follower.recordings && follower.recordings?.length > 0 ? (
+                  <Box mt="lg">
+                    <div
+                      style={{
+                        display: "grid",
+                        gridTemplateColumns: "repeat(auto-fill, 160px)",
+                        gridAutoRows: "306px",
+                        gap: "1.4em",
+                        maxHeight: 306,
+                        overflow: "hidden",
+                      }}
+                    >
+                      {follower.recordings?.map((rec) => {
+                        const isRecording = rec.sources?.some(
+                          (s) => s.state === SourceStateEnum.Recording
+                        );
 
-                    return (
-                      <Stack key={rec.documentId} gap="4">
-                        <ImageVideoPreview
-                          href={`/${follower.type}/${follower.username}/live/${rec.documentId}`}
-                          w={160}
-                          h={284}
-                          sources={rec.sources}
-                        />
-                        <div>
-                          <Text size="xs">
-                            {isRecording
-                              ? `recording for ${dayjs(rec.createdAt).fromNow(
-                                  true
-                                )}`
-                              : `recorded ${dayjs(rec.createdAt).fromNow()}`}
-                          </Text>
-                        </div>
-                      </Stack>
-                    );
-                  })}
-                </div>
-              </Box>
-            ) : null}
-          </Card>
-        ))}
+                        return (
+                          <Stack key={rec.documentId} gap="4">
+                            <ImageVideoPreview
+                              href={`/${follower.type}/${follower.username}/live/${rec.documentId}`}
+                              w={160}
+                              h={284}
+                              sources={rec.sources}
+                            />
+                            <div>
+                              <Text size="xs">
+                                {isRecording
+                                  ? `recording for ${dayjs(
+                                      rec.createdAt
+                                    ).fromNow(true)}`
+                                  : `recorded ${dayjs(
+                                      rec.createdAt
+                                    ).fromNow()}`}
+                              </Text>
+                            </div>
+                          </Stack>
+                        );
+                      })}
+                    </div>
+                  </Box>
+                ) : null}
+              </Card>
+            </Grid.Col>
+          ))}
+        </Grid>
       </Stack>
       {/* Sentinel element */}
       <div ref={ref} style={{ height: 1 }} />
