@@ -430,6 +430,35 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiChangeLogChangeLog extends Struct.CollectionTypeSchema {
+  collectionName: 'change_logs';
+  info: {
+    displayName: 'ChangeLog';
+    pluralName: 'change-logs';
+    singularName: 'change-log';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    body: Schema.Attribute.Text;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::change-log.change-log'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    version: Schema.Attribute.String;
+  };
+}
+
 export interface ApiFollowerFollower extends Struct.CollectionTypeSchema {
   collectionName: 'followers';
   info: {
@@ -1090,6 +1119,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::change-log.change-log': ApiChangeLogChangeLog;
       'api::follower.follower': ApiFollowerFollower;
       'api::navigation.navigation': ApiNavigationNavigation;
       'api::recording.recording': ApiRecordingRecording;
