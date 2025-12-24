@@ -7,22 +7,28 @@ import { IconUsers, IconWorldSearch } from "@tabler/icons-react";
 
 interface PageProps {
   searchParams: Promise<{
-    hasRecordings?: string;
     sort?: string;
   }>;
 }
 
 export default async function Page({ searchParams }: PageProps) {
-  const { sort, hasRecordings } = await searchParams;
+  const { sort } = await searchParams;
   const response = await getFollowers({
     scope: ScopeEnum.Following,
     page: 1,
-    sort: !sort ? SortOptions.createdAtDesc : (sort as unknown as SortOptions),
-    hasRecordings: hasRecordings === "true",
+    sort: !sort ? SortOptions.UsernameAsc : (sort as unknown as SortOptions),
   });
 
   const data = response.data || [];
   const meta = response.meta;
+
+  const fetchAction = async (options: Parameters<typeof getFollowers>[0]) => {
+    "use server";
+    return await getFollowers({
+      ...options,
+      hasRecordings: undefined,
+    });
+  };
 
   return (
     <section>
@@ -62,6 +68,7 @@ export default async function Page({ searchParams }: PageProps) {
           initialPagination={meta}
           initialSort={SortOptions.UsernameAsc}
           initialScope={ScopeEnum.Following}
+          fetchAction={fetchAction}
         />
       )}
     </section>
