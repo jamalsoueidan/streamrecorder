@@ -34,7 +34,7 @@ export default function UnfollowButton({
   };
 
   return (
-    <Tooltip label="Add Follower">
+    <Tooltip label="Remove Follower">
       <ActionIcon
         size="lg"
         color="gray"
