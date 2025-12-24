@@ -25,5 +25,10 @@ export default {
       path: "/followers/bulk-update-checked",
       handler: "follower.bulkUpdateLastChecked",
     },
+    {
+      method: "POST",
+      path: "/followers/backfill",
+      handler: "follower.backfill",
+    },
   ],
 };
