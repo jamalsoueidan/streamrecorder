@@ -90,7 +90,7 @@ export function buildVideoRanges(sources: Source[]) {
   }[] = [];
 
   let cumTime = 0;
-  for (const source of sources) {
+  for (const source of [...sources].reverse()) {
     const dur = source.duration || 0;
     ranges.push({
       start: cumTime,
