@@ -43,8 +43,8 @@ import UnfollowButton from "./unfollow-button";
 const SORT_OPTIONS = [
   { value: SortOptions.UsernameAsc, label: "Username A-Z" },
   { value: SortOptions.UsernameDesc, label: "Username Z-A" },
-  { value: SortOptions.createdAtDesc, label: "Newest first" },
-  { value: SortOptions.createdAtAsc, label: "Oldest first" },
+  { value: SortOptions.createdAtDesc, label: "Newest followers" },
+  { value: SortOptions.createdAtAsc, label: "Oldest followers" },
 ];
 
 interface Props {

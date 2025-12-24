@@ -92,7 +92,7 @@ export function ImageVideoPreview({
           w={w}
           h={h}
           loading="lazy"
-          fallbackSrc="https://placehold.co/180x280/black/white?text=Error..."
+          fallbackSrc="https://placehold.co/180x280/black/white?text=Recording started"
           style={{
             objectFit: "cover",
             objectPosition: "center center",
