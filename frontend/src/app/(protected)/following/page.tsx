@@ -63,7 +63,7 @@ export default async function Page({ searchParams }: PageProps) {
       ) : (
         <InfiniteFollowers
           key={meta?.pagination?.total}
-          title="Followers"
+          title="Following"
           initialData={data}
           initialPagination={meta}
           initialSort={SortOptions.UsernameAsc}
