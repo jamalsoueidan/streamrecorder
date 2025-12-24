@@ -24,7 +24,6 @@ import {
   Group,
   Image,
   Loader,
-  Overlay,
   Select,
   Stack,
   Text,
@@ -346,23 +345,25 @@ export default function InfiniteFollowers({
                     </div>
                   </Box>
                 ) : (
-                  <Box mt="lg" pos="relative">
+                  <Box
+                    mt="lg"
+                    pos="relative"
+                    w={160}
+                    h={284}
+                    style={{
+                      overflow: "hidden",
+                      borderRadius: "var(--mantine-radius-md)",
+                    }}
+                  >
                     <Image
                       alt="no videos"
                       radius="md"
-                      src="https://placehold.co/180x280/1a1b1e/909296?text=📹"
+                      src="https://placehold.co/180x280/1a1b1e/909296?text=No videos yet"
                       w={160}
                       h={284}
                       loading="lazy"
                       style={{ objectFit: "cover", opacity: 0.8 }}
                     />
-                    <Overlay color="#000" backgroundOpacity={0.5} radius="md">
-                      <Stack align="center" justify="center" h="100%">
-                        <Text size="xl" c="dimmed">
-                          No videos yet
-                        </Text>
-                      </Stack>
-                    </Overlay>
                   </Box>
                 )}
               </Card>
