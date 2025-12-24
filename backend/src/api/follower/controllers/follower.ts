@@ -136,6 +136,11 @@ export default factories.createCoreController(
           data: { username, type },
           status: "published",
         });
+      } else {
+        follower = await strapi.documents("api::follower.follower").update({
+          documentId: follower.documentId,
+          data: { lastCheckedAt: new Date() },
+        });
       }
 
       // Get all existing documentIds + new one
