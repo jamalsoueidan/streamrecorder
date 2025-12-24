@@ -3,6 +3,7 @@ import { createStrapi } from "@strapi/strapi";
 import fs from "fs";
 import path from "path";
 import { Client } from "pg";
+import request from "supertest";
 
 let instance: Core.Strapi | null = null;
 
@@ -96,4 +97,103 @@ export async function cleanupStrapi(): Promise<void> {
 
   instance = null;
   await dropTestDatabase();
+}
+
+export async function createTestUser(email: string, username: string) {
+  const authenticatedRole = await strapi.db
+    .query("plugin::users-permissions.role")
+    .findOne({ where: { type: "authenticated" } });
+
+  // Create user
+  await strapi.plugins["users-permissions"].services.user.add({
+    username,
+    email,
+    password: "password123",
+    confirmed: true,
+    blocked: false,
+    provider: "local",
+    role: authenticatedRole.id,
+  });
+
+  // Login and get JWT
+  const res = await request(getServer())
+    .post("/api/auth/local")
+    .send({ identifier: email, password: "password123" });
+
+  if (!res.body.jwt) {
+    throw new Error(`Failed to get JWT for ${email}`);
+  }
+
+  return {
+    jwt: res.body.jwt,
+    user: res.body.user,
+  };
+}
+
+export async function grantPermissions(actions: string[]) {
+  const authenticatedRole = await strapi.db
+    .query("plugin::users-permissions.role")
+    .findOne({ where: { type: "authenticated" } });
+
+  for (const action of actions) {
+    await strapi.db.query("plugin::users-permissions.permission").create({
+      data: { action, role: authenticatedRole.id },
+    });
+  }
+}
+
+export async function createRecording(
+  followerId: number,
+  options: { withSource?: boolean; sourceState?: string } = {}
+) {
+  const { withSource = false, sourceState = "done" } = options;
+
+  if (withSource) {
+    const source = await strapi.db.query("api::source.source").create({
+      data: {
+        path: "/test/video.mp4",
+        state: sourceState,
+        duration: 120,
+        publishedAt: new Date(),
+      },
+    });
+
+    return strapi.db.query("api::recording.recording").create({
+      data: {
+        follower: followerId,
+        sources: [source.id],
+        publishedAt: new Date(),
+      },
+    });
+  }
+
+  return strapi.db.query("api::recording.recording").create({
+    data: {
+      follower: followerId,
+      publishedAt: new Date(),
+    },
+  });
+}
+
+// Build query string from nested object
+export function buildQuery(params: Record<string, any>, prefix = ""): string {
+  const parts: string[] = [];
+
+  for (const [key, value] of Object.entries(params)) {
+    const fullKey = prefix ? `${prefix}[${key}]` : key;
+
+    if (value === null || value === undefined) continue;
+
+    if (typeof value === "object" && !Array.isArray(value)) {
+      parts.push(buildQuery(value, fullKey));
+    } else if (Array.isArray(value)) {
+      value.forEach((v, i) => {
+        parts.push(`${fullKey}[${i}]=${encodeURIComponent(v)}`);
+      });
+    } else {
+      parts.push(`${fullKey}=${encodeURIComponent(value)}`);
+    }
+  }
+
+  return parts.filter(Boolean).join("&");
 }

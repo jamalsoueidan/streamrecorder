@@ -63,7 +63,7 @@ export default {
   async beforeCreate(event) {
     const { data } = event.params;
 
-    if (data?.username) {
+    if (data?.username && data?.type === "tiktok") {
       const profile: any = await fetchTikTokProfile(data.username);
 
       if (profile?.profile) {
