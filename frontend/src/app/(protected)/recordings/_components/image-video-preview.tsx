@@ -32,14 +32,16 @@ export function ImageVideoPreview({
   const totalDuration =
     sources?.reduce((sum, s) => sum + (s.duration || 0), 0) || 0;
 
-  const recording = sources?.some((s) => s.state === SourceStateEnum.Recording);
+  const isRecording = sources?.some(
+    (s) => s.state === SourceStateEnum.Recording
+  );
 
   const uri = sources?.length
     ? process.env.NEXT_PUBLIC_S3_URL! + sources[sources.length - 1].path
     : null;
 
   const handleMouseEnter = () => {
-    if (!sources || sources.length === 0 || recording) return;
+    if (!sources || sources.length === 0 || isRecording) return;
     timeoutRef.current = setTimeout(() => {
       setShowVideo(true);
     }, 300);
@@ -73,8 +75,8 @@ export function ImageVideoPreview({
         component={Link}
         href={href}
         style={{
-          pointerEvents: recording ? "none" : "auto",
-          cursor: recording ? "not-allowed" : "pointer",
+          pointerEvents: isRecording ? "none" : "auto",
+          cursor: isRecording ? "not-allowed" : "pointer",
         }}
       >
         <Image
@@ -82,7 +84,7 @@ export function ImageVideoPreview({
           radius={radius}
           src={
             uri
-              ? recording
+              ? isRecording
                 ? uri + "screenshot.jpg"
                 : uri + "preview.jpg"
               : null
@@ -95,11 +97,11 @@ export function ImageVideoPreview({
             objectFit: "cover",
             objectPosition: "center center",
             display: showVideo ? "none" : "block",
-            ...(recording && { border: "2px solid red" }),
+            ...(isRecording && { border: "2px solid red" }),
           }}
         />
       </Anchor>
-      {recording && (
+      {isRecording && (
         <Badge
           radius="sm"
           color="red"
@@ -117,7 +119,7 @@ export function ImageVideoPreview({
             />
           }
         >
-          REC
+          REC {sources && sources?.length > 1 && `#${sources.length}`}
         </Badge>
       )}
 
@@ -146,7 +148,13 @@ export function ImageVideoPreview({
             pointerEvents: "none",
           }}
         >
-          {formatDuration(totalDuration)}
+          {isRecording
+            ? totalDuration > 0
+              ? `+${formatDuration(totalDuration)}`
+              : "LIVE"
+            : totalDuration > 0
+            ? formatDuration(totalDuration)
+            : null}
         </div>
       )}
     </div>

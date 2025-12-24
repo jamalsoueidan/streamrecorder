@@ -1,7 +1,11 @@
+import { getToken } from "@/lib/token";
 import { Alert, Button, Group, Text, Title } from "@mantine/core";
 import { IconHeart } from "@tabler/icons-react";
 
-export default function Home() {
+export default async function Home() {
+  const token = await getToken();
+  const isLoggedIn = !!token;
+
   return (
     <div
       style={{
@@ -40,12 +44,20 @@ export default function Home() {
       </Alert>
 
       <Group justify="center">
-        <Button component="a" href="/login" size="xl">
-          Login
-        </Button>
-        <Button component="a" href="/register" variant="subtle" size="xl">
-          Register
-        </Button>
+        {isLoggedIn ? (
+          <Button component="a" href="/following" size="xl">
+            Go to Dashboard
+          </Button>
+        ) : (
+          <>
+            <Button component="a" href="/login" size="xl">
+              Login
+            </Button>
+            <Button component="a" href="/register" variant="subtle" size="xl">
+              Register
+            </Button>
+          </>
+        )}
       </Group>
     </div>
   );
