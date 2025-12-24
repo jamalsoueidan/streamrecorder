@@ -3,7 +3,7 @@ export default ({ env }) => ({
     config: {
       provider: "@strapi/provider-upload-aws-s3",
       providerOptions: {
-        baseUrl: env("AWS_BUCKET_URL", env("AWS_BUCKET_URL")),
+        baseUrl: env("AWS_BUCKET_URL"),
         s3Options: {
           credentials: {
             accessKeyId: env("AWS_ACCESS_KEY_ID"),
