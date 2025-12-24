@@ -7,7 +7,13 @@ export default ({ env }) => [
         useDefaults: true,
         directives: {
           "connect-src": ["'self'", "https:"],
-          "img-src": ["'self'", "data:", "blob:", env("AWS_ENDPOINT")],
+          "img-src": [
+            "'self'",
+            "data:",
+            "blob:",
+            "https://market-assets.strapi.io",
+            env("AWS_ENDPOINT"),
+          ],
           "media-src": ["'self'", "data:", "blob:", env("AWS_ENDPOINT")],
           upgradeInsecureRequests: null,
         },
@@ -15,7 +21,6 @@ export default ({ env }) => [
     },
   },
   "strapi::errors",
-  "strapi::security",
   "strapi::cors",
   "strapi::poweredBy",
   "strapi::query",
