@@ -22,7 +22,9 @@ import {
   Flex,
   Grid,
   Group,
+  Image,
   Loader,
+  Overlay,
   Select,
   Stack,
   Text,
@@ -78,9 +80,8 @@ export default function InfiniteFollowers({
   });
 
   const mawTruncate = useMatches({
-    base: 150,
-    sm: 100,
-    md: 150,
+    base: 200,
+    md: 120,
   });
 
   const [data, setData] = useState(initialData);
@@ -176,7 +177,10 @@ export default function InfiniteFollowers({
     <Stack gap="sm">
       <Group justify="space-between">
         <Title order={1} size="lg">
-          {title} ({initialPagination?.pagination?.total || 0})
+          {title}{" "}
+          {initialScope === ScopeEnum.Following
+            ? initialPagination?.pagination?.total || 0
+            : ""}
         </Title>
 
         <Group>
@@ -218,7 +222,7 @@ export default function InfiniteFollowers({
       </Group>
       <Divider />
       <Stack gap="md">
-        <Grid>
+        <Grid justify="flex-start" align="stretch">
           {data.map((follower) => (
             <Grid.Col
               key={follower.documentId}
@@ -229,6 +233,7 @@ export default function InfiniteFollowers({
                 padding={cardPadding}
                 radius="md"
                 bg="gray.7"
+                h="100%"
                 withBorder
               >
                 <Flex justify="space-between">
@@ -255,8 +260,6 @@ export default function InfiniteFollowers({
                           component={Link}
                           href={`/${follower?.type}/${follower?.username}`}
                           size="md"
-                          truncate
-                          maw={mawTruncate}
                         >
                           <Text size="lg" truncate maw={mawTruncate} fw="bold">
                             {follower.username}
@@ -271,33 +274,35 @@ export default function InfiniteFollowers({
                       </Text>
                     </Stack>
                   </Group>
+                  {view === "list" ? (
+                    <Flex gap="xs" justify="right" align="center">
+                      <Tooltip label="Go to tiktok">
+                        <ActionIcon
+                          size="lg"
+                          component={Link}
+                          href={`https://www.tiktok.com/@${follower.username}/live`}
+                          target="_blank"
+                        >
+                          <IconWindowMaximize size={24} />
+                        </ActionIcon>
+                      </Tooltip>
 
-                  <Flex gap="xs" justify="right" align="center">
-                    <Tooltip label="Go to tiktok">
-                      <ActionIcon
-                        size="lg"
-                        component={Link}
-                        href={`https://www.tiktok.com/@${follower.username}/live`}
-                        target="_blank"
-                      >
-                        <IconWindowMaximize size={24} />
-                      </ActionIcon>
-                    </Tooltip>
-                    {follower.isFollowing ? (
-                      <>
-                        <UnfollowButton
-                          documentId={follower.documentId!}
+                      {follower.isFollowing ? (
+                        <>
+                          <UnfollowButton
+                            documentId={follower.documentId!}
+                            onSuccess={() => handleFollowed(follower.id!)}
+                          />
+                        </>
+                      ) : (
+                        <FollowButton
+                          username={follower.username!}
+                          type={follower.type}
                           onSuccess={() => handleFollowed(follower.id!)}
                         />
-                      </>
-                    ) : (
-                      <FollowButton
-                        username={follower.username!}
-                        type={follower.type}
-                        onSuccess={() => handleFollowed(follower.id!)}
-                      />
-                    )}
-                  </Flex>
+                      )}
+                    </Flex>
+                  ) : null}
                 </Flex>
                 {follower.recordings && follower.recordings?.length > 0 ? (
                   <Box mt="lg">
@@ -340,7 +345,26 @@ export default function InfiniteFollowers({
                       })}
                     </div>
                   </Box>
-                ) : null}
+                ) : (
+                  <Box mt="lg" pos="relative">
+                    <Image
+                      alt="no videos"
+                      radius="md"
+                      src="https://placehold.co/180x280/1a1b1e/909296?text=📹"
+                      w={160}
+                      h={284}
+                      loading="lazy"
+                      style={{ objectFit: "cover", opacity: 0.8 }}
+                    />
+                    <Overlay color="#000" backgroundOpacity={0.5} radius="md">
+                      <Stack align="center" justify="center" h="100%">
+                        <Text size="xl" c="dimmed">
+                          No videos yet
+                        </Text>
+                      </Stack>
+                    </Overlay>
+                  </Box>
+                )}
               </Card>
             </Grid.Col>
           ))}
