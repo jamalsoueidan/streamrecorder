@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "change_logs",
+  "info": {
+    "singularName": "change-log",
+    "pluralName": "change-logs",
+    "displayName": "ChangeLog"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "version": {
+      "type": "string"
+    },
+    "body": {
+      "type": "text"
+    }
+  }
+}
