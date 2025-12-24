@@ -53,6 +53,9 @@ interface Props {
   initialPagination: BrowseFollowersResponse["meta"];
   initialSort?: SortOptions;
   initialScope: ScopeEnum;
+  fetchAction: (
+    options: Parameters<typeof getFollowers>[0]
+  ) => ReturnType<typeof getFollowers>;
 }
 
 export default function InfiniteFollowers({
@@ -61,6 +64,7 @@ export default function InfiniteFollowers({
   initialPagination,
   initialSort,
   initialScope,
+  fetchAction,
 }: Props) {
   const cardPadding = useMatches({
     base: "sm",
@@ -95,13 +99,12 @@ export default function InfiniteFollowers({
   });
 
   const update = (object = {}) => {
-    console.log(sort, object);
     startTransition(async () => {
-      const result = await getFollowers({
-        scope: initialScope,
+      const result = await fetchAction({
         page: 1,
         sort,
         hasRecordings,
+        scope: initialScope,
         ...object,
       });
       setData(result.data);
@@ -129,11 +132,11 @@ export default function InfiniteFollowers({
     if (entry?.isIntersecting && hasMore && !isPending) {
       startTransition(async () => {
         const nextPage = page + 1;
-        const result = await getFollowers({
-          scope: initialScope,
+        const result = await fetchAction({
           page: nextPage,
           sort,
           hasRecordings,
+          scope: initialScope,
         });
 
         setData((prev) => {
@@ -149,10 +152,11 @@ export default function InfiniteFollowers({
     entry?.isIntersecting,
     hasMore,
     hasRecordings,
-    initialScope,
     isPending,
     page,
     sort,
+    fetchAction,
+    initialScope,
   ]);
 
   return (

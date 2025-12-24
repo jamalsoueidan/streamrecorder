@@ -24,6 +24,11 @@ export default async function Page({ searchParams }: PageProps) {
   const data = response.data || [];
   const meta = response.meta;
 
+  const fetchAction = async (options: Parameters<typeof getFollowers>[0]) => {
+    "use server";
+    return await getFollowers(options);
+  };
+
   return (
     <section>
       {data.length === 0 ? (
@@ -35,6 +40,7 @@ export default async function Page({ searchParams }: PageProps) {
           initialPagination={meta}
           initialSort={SortOptions.createdAtDesc}
           initialScope={ScopeEnum.Discover}
+          fetchAction={fetchAction}
         />
       )}
     </section>
