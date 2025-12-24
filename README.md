@@ -3,34 +3,53 @@
 ## Architecture
 
 ```bash
-┌─────────────────────────────────────────────────────────────────┐
-│                         Internet / Users                        │
-│                    (Browser accessing app)                      │
-└────────────────────────┬────────────────────────────────────────┘
-                         │
-        ┌────────────────┴────────────────┐
-        │                                 │
-   ┌────▼─────────────┐         ┌────────▼────────────┐
-   │ Frontend Domain  │         │ Backend Domain      │
-   │ xxxx..com        │         │ strapi.xxx.com      │
-   │                  │         │                     │
-   │ (HTTPS 443)      │         │ (HTTPS 443)         │
-   │ ┌──────────────┐ │         │ ┌────────────────┐  │
-   │ │   Next.js    │ │         │ │    Strapi      │  │
-   │ │   Port 3000  │ │         │ │   Port 1337    │  │
-   │ └──────────────┘ │         │ └────────────────┘  │
-   └────────────────┬─┘         └────────┬────────────┘
-                    │                    │
-                    │  HTTP Requests     │
-                    │  (Fetch API)       │
-                    │                    │
-                    └────────┬───────────┘
-                             │
-                    ┌────────▼──────────┐
-                    │   PostgreSQL      │
-                    │   Database        │
-                    │   Port 5432       │
-                    └───────────────────┘
+┌─────────────────────────────────────────────────────────────────────────────────────┐
+│                                 Internet / Users                                    │
+│                              (Browser accessing app)                                │
+└────────────────────────────────────┬────────────────────────────────────────────────┘
+                                     │
+           ┌─────────────────────────┼─────────────────────────┐
+           │                         │                         │
+   ┌───────▼───────────┐    ┌───────▼───────────┐    ┌────────▼────────┐
+   │     Frontend      │    │     Backend       │    │   S3 Storage    │
+   │     xxxx.com      │    │  strapi.xxx.com   │    │   cdn.xxx.com   │
+   │                   │    │                   │    │                 │
+   │ ┌───────────────┐ │    │ ┌───────────────┐ │    │ ┌─────────────┐ │
+   │ │   Next.js     │◄├────┼─┤    Strapi     │ │    │ │  Recordings │ │
+   │ └───────┬───────┘ │    │ └───────┬───────┘ │    │ │  Thumbnails │ │
+   └─────────┼─────────┘    └─────────┼─────────┘    │ └─────────────┘ │
+             │                        │              └────────▲────────┘
+             │                        │                       │
+             └────────────┬───────────┘                       │
+                          │                                   │
+                 ┌────────▼────────┐                          │
+                 │   PostgreSQL    │                          │
+                 │    Database     │                          │
+                 └─────────────────┘                          │
+                                                              │
+                                                              │ Upload recordings
+                             ┌────────────────┐               │
+                             │ Workflow Queue │               │
+                             │  (Automation)  │               │
+                             └───────┬────────┘               │
+                                     │                        │
+                                     │ Dispatches             │
+                   ┌─────────────────┼─────────────────┐      │
+                   │                 │                 │      │
+          ┌────────▼───────┐ ┌───────▼───────┐ ┌──────▼──────┴┐
+          │   Worker 1     │ │   Worker 2    │ │   Worker N   │
+          │ ┌────────────┐ │ │ ┌───────────┐ │ │ ┌──────────┐ │
+          │ │  TikTok    │ │ │ │  TikTok   │ │ │ │  Twitch  │ │
+          │ │  Recorder  │ │ │ │  Recorder │ │ │ │  Recorder│ │
+          │ └─────┬──────┘ │ │ └─────┬─────┘ │ │ └────┬─────┘ │
+          └───────┼────────┘ └───────┼───────┘ └──────┼───────┘
+                  │                  │                │
+                  └──────────────────┼────────────────┘
+                                     │
+                            ┌────────▼────────┐
+                            │      Redis      │
+                            │    Job Queue    │
+                            └─────────────────┘
 ```
 
 ## Auto Deploy (Coolify)
@@ -110,17 +129,27 @@ NEXT_PUBLIC_S3_URL=https://domain.com/bucket
 
 **Note:** `NEXT_PUBLIC_*` variables are exposed to browser (safe for public URLs).
 
-### 4. Start
+## GitHub Changelog Setup
+
+1. Generate a secret key and add it to your Strapi `.env` file:
+
+   ```bash
+      GITHUB_WEBHOOK_SECRET=your-secret-here
+   ```
+
+2. Go to your GitHub repo → Settings → Webhooks → Add webhook
+
+3. Configure the webhook:
+
+   - **Payload URL:** `https://your-domain.com/api/change-log/github-webhook`
+   - **Content type:** `application/json`
+   - **Secret:** Same value as `GITHUB_WEBHOOK_SECRET`
+   - **Events:** Select "Let me select individual events" → check only **Releases**
+
+4. Click "Add webhook"
+
+Now when you publish a release on GitHub, the version and changelog body will automatically be saved to Strapi.
+
+## 4. Start
 
 Deploy
-
-Frontend runs on: `http://localhost:3000`
-
-## Run production DB locally
-
-```bash
-pg_dump -h IP_ADDRESS -p 32768 -U postgres -d strapi > backup.sql
-psql -U postgres -c "DROP DATABASE IF EXISTS strapi;"
-psql -U postgres -c "CREATE DATABASE strapi;"
-psql -U postgres -d strapi < backup.sql
-```
