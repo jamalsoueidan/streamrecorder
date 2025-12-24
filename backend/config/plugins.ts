@@ -3,19 +3,16 @@ export default ({ env }) => ({
     config: {
       provider: "@strapi/provider-upload-aws-s3",
       providerOptions: {
-        baseUrl: env(
-          "AWS_BUCKET_URL",
-          "https://fsn1.your-objectstorage.com/streamavatars"
-        ),
+        baseUrl: env("AWS_BUCKET_URL", env("AWS_BUCKET_URL")),
         s3Options: {
           credentials: {
             accessKeyId: env("AWS_ACCESS_KEY_ID"),
             secretAccessKey: env("AWS_SECRET_ACCESS_KEY"),
           },
-          endpoint: env("AWS_ENDPOINT", "https://fsn1.your-objectstorage.com"),
+          endpoint: env("AWS_ENDPOINT"),
           region: "eu-central-1",
           params: {
-            Bucket: env("AWS_BUCKET", "streamavatars"),
+            Bucket: env("AWS_BUCKET"),
           },
           forcePathStyle: true,
         },
