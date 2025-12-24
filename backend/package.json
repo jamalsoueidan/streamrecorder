@@ -62,6 +62,8 @@
     ],
     "transform": {
       "^.+\\.ts$": "ts-jest"
-    }
+    },
+    "forceExit": true,
+    "detectOpenHandles": true
   }
 }

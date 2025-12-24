@@ -16,7 +16,9 @@ export default factories.createCoreController(
 
       // Extract and remove recordings populate config
       const recordingsPopulate = (ctx.query.populate as any)?.recordings;
-      delete (ctx.query.populate as any).recordings;
+      if (recordingsPopulate) {
+        delete (ctx.query.populate as any).recordings;
+      }
 
       const fullUser = await strapi
         .documents("plugin::users-permissions.user")
@@ -154,17 +156,9 @@ export default factories.createCoreController(
         },
       };
 
-      const updateResult = await strapi
+      await strapi
         .documents("plugin::users-permissions.user")
         .update(updatePayload);
-
-      // Check after
-      const afterUser = await strapi
-        .documents("plugin::users-permissions.user")
-        .findOne({
-          documentId: user.documentId,
-          populate: ["followers"],
-        });
 
       return { data: follower };
     },
@@ -233,98 +227,6 @@ export default factories.createCoreController(
         requested: documentIds.length,
         updated: result.count / 2, // each document have two rows in db
       };
-    },
-    async backfill(ctx) {
-      setImmediate(async () => {
-        const followers = await strapi
-          .documents("api::follower.follower")
-          .findMany();
-
-        console.log(`[Backfill] Found ${followers.length} followers`);
-
-        for (const follower of followers) {
-          if (!follower.username) continue;
-
-          try {
-            const cleanUsername = follower.username.replace("@", "");
-            const response = await fetch(
-              `https://tiktok-api-proxy-secure-1547345324345.issam1996kech.workers.dev/?username=${cleanUsername}`
-            );
-
-            if (!response.ok) continue;
-
-            const profile: any = await response.json();
-
-            if (profile?.profile) {
-              const updateData: any = {
-                country: profile.profile.Country || null,
-                language: profile.profile.Language || null,
-              };
-
-              if (profile.profile["Avatar URL"]) {
-                const avatarResponse = await fetch(
-                  profile.profile["Avatar URL"]
-                );
-                if (avatarResponse.ok) {
-                  const buffer = Buffer.from(
-                    await avatarResponse.arrayBuffer()
-                  );
-                  const hash = `${cleanUsername}_avatar_${Date.now()}`;
-
-                  const fileData: any = {
-                    name: `${cleanUsername}-avatar.jpg`,
-                    alternativeText: `${cleanUsername} TikTok avatar`,
-                    caption: null,
-                    hash: hash,
-                    ext: ".jpg",
-                    mime: "image/jpeg",
-                    size: buffer.length / 1000,
-                    buffer: buffer,
-                  };
-
-                  await strapi.plugin("upload").provider.upload(fileData);
-
-                  const uploadedFile = await strapi.db
-                    .query("plugin::upload.file")
-                    .create({
-                      data: {
-                        name: fileData.name,
-                        alternativeText: fileData.alternativeText,
-                        caption: fileData.caption,
-                        hash: fileData.hash,
-                        ext: fileData.ext,
-                        mime: fileData.mime,
-                        size: fileData.size,
-                        url: fileData.url,
-                        provider: "local",
-                      },
-                    });
-
-                  if (uploadedFile?.id) {
-                    updateData.avatar = uploadedFile.id;
-                  }
-                }
-              }
-
-              await strapi.documents("api::follower.follower").update({
-                documentId: follower.documentId,
-                data: updateData,
-                status: "published",
-              });
-
-              console.log(
-                `[Backfill] Updated: ${follower.username} - ${profile.profile.Country}`
-              );
-            }
-          } catch (error) {
-            console.error(`[Backfill] Error for ${follower.username}:`, error);
-          }
-        }
-
-        console.log("[Backfill] Done");
-      });
-
-      return { message: "Backfill started" };
     },
   })
 );
