@@ -156,7 +156,7 @@ export default function InfiniteRecordings({
                     href={`/${rec.follower?.type}/${rec.follower?.username}`}
                   >
                     <Avatar
-                      size={34}
+                      size={38}
                       src={rec.follower?.avatar?.url}
                       styles={{
                         image: {
@@ -167,18 +167,19 @@ export default function InfiniteRecordings({
                     />
                   </Anchor>
 
-                  <div>
+                  <Stack gap="0">
                     <Anchor
                       component={Link}
                       href={`/${rec.follower?.type}/${rec.follower?.username}`}
                       size="md"
                       truncate
-                      maw={120}
+                      maw={110}
+                      display="inline-block"
                     >
                       {rec.follower?.username}
                     </Anchor>
                     <Text size="xs">live {dayjs(rec.createdAt).fromNow()}</Text>
-                  </div>
+                  </Stack>
                 </Group>
               </Grid.Col>
             </Grid>

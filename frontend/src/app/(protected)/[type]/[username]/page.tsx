@@ -13,6 +13,7 @@ import {
   Title,
 } from "@mantine/core";
 import { IconVideo, IconWorldSearch } from "@tabler/icons-react";
+import { CountryFlag } from "../../_components/country-flag";
 import FollowButton from "../../_components/follow-button";
 import UnfollowButton from "../../_components/unfollow-button";
 import InfiniteRecordings from "../../recordings/_components/infinity-recordings";
@@ -106,7 +107,12 @@ export default async function Page({ params }: PageProps) {
         />
 
         <Stack gap="xs">
-          <Title order={2}>{follower.username}</Title>
+          <Group>
+            <Title order={2}>{follower.username}</Title>
+            {follower.country ? (
+              <CountryFlag country={follower?.country} size={40} />
+            ) : null}
+          </Group>
           {isFollowing ? (
             <>
               <UnfollowButton documentId={follower.documentId!} />

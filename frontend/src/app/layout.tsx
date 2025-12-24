@@ -11,22 +11,7 @@ import type { Metadata } from "next";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
 import "./globals.css";
 
-const theme = createTheme({
-  colors: {
-    dark: [
-      "#f5f5f5",
-      "#e7e7e7",
-      "#cdcdcd",
-      "#b2b2b2",
-      "#9a9a9a",
-      "#8b8b8b",
-      "#848484",
-      "#000000",
-      "#000000",
-      "#000000",
-    ],
-  },
-});
+const theme = createTheme({});
 
 export const metadata: Metadata = {
   title: "StreamRecorder",

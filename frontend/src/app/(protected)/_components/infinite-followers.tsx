@@ -36,6 +36,7 @@ import Link from "next/link";
 import { parseAsBoolean, parseAsStringEnum, useQueryState } from "nuqs";
 import { useEffect, useState, useTransition } from "react";
 import { ImageVideoPreview } from "../recordings/_components/image-video-preview";
+import { CountryFlag } from "./country-flag";
 import FollowButton from "./follow-button";
 import UnfollowButton from "./unfollow-button";
 
@@ -65,6 +66,11 @@ export default function InfiniteFollowers({
     base: "sm",
     sm: "md",
     md: "lg",
+  });
+
+  const mawTruncate = useMatches({
+    base: 90,
+    sm: 150,
   });
 
   const [data, setData] = useState(initialData);
@@ -185,7 +191,7 @@ export default function InfiniteFollowers({
             shadow="sm"
             padding={cardPadding}
             radius="md"
-            bg="black"
+            bg="gray.7"
             withBorder
           >
             <Grid justify="center" align="center">
@@ -195,7 +201,7 @@ export default function InfiniteFollowers({
                   href={`/${follower?.type}/${follower?.username}`}
                 >
                   <Avatar
-                    size="lg"
+                    size="xl"
                     src={follower.avatar?.url}
                     styles={{
                       image: {
@@ -214,7 +220,14 @@ export default function InfiniteFollowers({
                   truncate
                   maw={120}
                 >
-                  {follower.username}
+                  <Group>
+                    <Text truncate maw={mawTruncate}>
+                      {follower.username}
+                    </Text>
+                    {follower.country ? (
+                      <CountryFlag country={follower?.country} />
+                    ) : null}
+                  </Group>
                 </Anchor>
                 <Text size="xs">{follower.totalRecordings} recordings</Text>
 
@@ -252,7 +265,7 @@ export default function InfiniteFollowers({
               </Grid.Col>
             </Grid>
             {follower.recordings && follower.recordings?.length > 0 ? (
-              <Box mt="sm">
+              <Box mt="lg">
                 <div
                   style={{
                     display: "grid",
@@ -278,8 +291,11 @@ export default function InfiniteFollowers({
                         />
                         <div>
                           <Text size="xs">
-                            {isRecording ? "recording since" : "recorded"}{" "}
-                            {dayjs(rec.createdAt).fromNow()}
+                            {isRecording
+                              ? `recording for ${dayjs(rec.createdAt).fromNow(
+                                  true
+                                )}`
+                              : `recorded ${dayjs(rec.createdAt).fromNow()}`}
                           </Text>
                         </div>
                       </Stack>
