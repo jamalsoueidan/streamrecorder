@@ -121,8 +121,12 @@ export default async function Page({ params }: PageProps) {
             <FollowButton username={follower.username!} type={follower.type} />
           )}
           <div>
-            <Text> recordings</Text>
-            <Text size="sm">added {dayjs(follower.createdAt).fromNow()}</Text>
+            <Text size="sm" c="dimmed">
+              added {dayjs(follower.createdAt).fromNow()}
+            </Text>
+            <Text size="sm" c="dimmed">
+              last checked {dayjs(follower.lastCheckedAt).fromNow()}
+            </Text>
           </div>
         </Stack>
       </Group>
