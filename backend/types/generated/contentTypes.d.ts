@@ -485,6 +485,7 @@ export interface ApiFollowerFollower extends Struct.CollectionTypeSchema {
       'api::follower.follower'
     > &
       Schema.Attribute.Private;
+    nickname: Schema.Attribute.String;
     protected: Schema.Attribute.Boolean;
     publishedAt: Schema.Attribute.DateTime;
     recordings: Schema.Attribute.Relation<

@@ -20,7 +20,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-12-25T06:28:08.780Z"
+    "x-generation-date": "2025-12-25T06:51:34.404Z"
   },
   "servers": [
     {
@@ -4885,6 +4885,9 @@
             ],
             "type": "object",
             "properties": {
+              "nickname": {
+                "type": "string"
+              },
               "username": {
                 "type": "string"
               },
@@ -5020,6 +5023,9 @@
             "type": "number"
           },
           "documentId": {
+            "type": "string"
+          },
+          "nickname": {
             "type": "string"
           },
           "username": {
@@ -5489,6 +5495,9 @@
                         "type": "number"
                       },
                       "documentId": {
+                        "type": "string"
+                      },
+                      "nickname": {
                         "type": "string"
                       },
                       "username": {
@@ -6998,6 +7007,9 @@
                 "type": "number"
               },
               "documentId": {
+                "type": "string"
+              },
+              "nickname": {
                 "type": "string"
               },
               "username": {
