@@ -45,7 +45,13 @@
     "country": {
       "type": "string"
     },
+    "countryCode": {
+      "type": "string"
+    },
     "language": {
+      "type": "string"
+    },
+    "languageCode": {
       "type": "string"
     },
     "avatar": {
