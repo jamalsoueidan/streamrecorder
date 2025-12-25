@@ -52,21 +52,6 @@
                             └─────────────────┘
 ```
 
-## Auto Deploy (Coolify)
-
-1. In **Coolify** → Your App → Webhooks:
-
-   - Add a GitHub Webhook Secret
-   - Click Save
-
-2. In **GitHub** → Settings → Webhooks → Add webhook:
-   - Payload URL: `https://coolify.tiktokrecorder.com/webhooks/source/github/events/manual`
-   - Content type: `application/json`
-   - Secret: Same as Coolify
-   - Events: Just the push event
-
-Push to `main` → auto deploys.
-
 ## Deployment Environment (Coolify)
 
 1. **PostgreSQL Database** - Data storage
@@ -92,24 +77,36 @@ Create `.env` file in `/backend`:
 
 ```bash
 # Database
+
+# Server
+HOST=0.0.0.0
+PORT=1337
+
+# Secrets
+APP_KEYS=
+API_TOKEN_SALT=
+ADMIN_JWT_SECRET=
+TRANSFER_TOKEN_SALT=
+ENCRYPTION_KEY=
+
+# Database
 DATABASE_CLIENT=postgres
-DATABASE_HOST=localhost
+DATABASE_HOST=127.0.0.1
 DATABASE_PORT=5432
 DATABASE_NAME=strapi
 DATABASE_USERNAME=postgres
-DATABASE_PASSWORD=your_password
+DATABASE_PASSWORD=
 DATABASE_SSL=false
-JWT_SECRET=XXXX
+DATABASE_FILENAME=
+JWT_SECRET=
 
-# Strapi Auth
-APP_KEYS=XXXX
-API_TOKEN_SALT=XXXX
-ADMIN_JWT_SECRET=XXXX
-TRANSFER_TOKEN_SALT=XXXX
-ENCRYPTION_KEY=XXXX
+AWS_ACCESS_KEY_ID=
+AWS_SECRET_ACCESS_KEY=
+AWS_BUCKET=
+AWS_BUCKET_URL=
+AWS_ENDPOINT=
 
-AWS_ACCESS_KEY_ID=XXX
-AWS_SECRET_ACCESS_KEY=XXX
+GITHUB_WEBHOOK_SECRET=
 ```
 
 ### 3. Start Strapi
@@ -149,6 +146,21 @@ NEXT_PUBLIC_S3_URL=https://domain.com/bucket
 4. Click "Add webhook"
 
 Now when you publish a release on GitHub, the version and changelog body will automatically be saved to Strapi.
+
+## Github Auto Deploy (Coolify)
+
+1. In **Coolify** → Your App → Webhooks:
+
+   - Add a GitHub Webhook Secret
+   - Click Save
+
+2. In **GitHub** → Settings → Webhooks → Add webhook:
+   - Payload URL: `https://coolify.tiktokrecorder.com/webhooks/source/github/events/manual`
+   - Content type: `application/json`
+   - Secret: Same as Coolify
+   - Events: Just the push event
+
+Push to `main` → auto deploys.
 
 ## 4. Start
 
