@@ -15,12 +15,13 @@ import {
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import AddFollowerForm from "../(protected)/_components/add-follower-form";
-import { logout } from "../actions/auth";
+
+import { logout } from "../../actions/auth";
 
 import { useRouter } from "next/navigation";
-import { useNavigation } from "../providers/navigation-provider";
-import { useUser } from "../providers/user-provider";
+import { useNavigation } from "../../providers/navigation-provider";
+import { useUser } from "../../providers/user-provider";
+import AddFollowerForm from "./add-follower-form";
 import classes from "./navbar.module.css";
 
 export const iconMap: Record<string, typeof IconBellRinging> = {

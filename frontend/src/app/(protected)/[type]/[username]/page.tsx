@@ -15,6 +15,7 @@ import {
 import { IconVideo, IconWorldSearch } from "@tabler/icons-react";
 import { CountryFlag } from "../../_components/country-flag";
 import FollowButton from "../../_components/follow-button";
+import OpenSocial from "../../_components/open-social";
 import UnfollowButton from "../../_components/unfollow-button";
 import InfiniteRecordings from "../../recordings/_components/infinity-recordings";
 
@@ -113,13 +114,20 @@ export default async function Page({ params }: PageProps) {
               <CountryFlag country={follower?.country} size={40} />
             ) : null}
           </Group>
-          {isFollowing ? (
-            <>
-              <UnfollowButton documentId={follower.documentId!} />
-            </>
-          ) : (
-            <FollowButton username={follower.username!} type={follower.type} />
-          )}
+
+          <Group gap="xs">
+            <OpenSocial follower={follower} />
+            {isFollowing ? (
+              <>
+                <UnfollowButton documentId={follower.documentId!} />
+              </>
+            ) : (
+              <FollowButton
+                username={follower.username!}
+                type={follower.type}
+              />
+            )}
+          </Group>
           <div>
             <Text size="sm" c="dimmed">
               added {dayjs(follower.createdAt).fromNow()}
