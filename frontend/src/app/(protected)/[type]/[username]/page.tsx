@@ -35,6 +35,7 @@ export default async function Page({ params }: PageProps) {
       username,
       type,
     },
+    populate: ["avatar"],
   });
 
   const follower = response.data.data?.at(0);
@@ -55,6 +56,7 @@ export default async function Page({ params }: PageProps) {
     sort: SortOptions.createdAtDesc,
   });
 
+  // check logged in user if he is following this streamer
   const resIsFollowing = await api.follower.getFollowers({
     filters: {
       documentId: {
@@ -92,13 +94,7 @@ export default async function Page({ params }: PageProps) {
       <Group mb="xl">
         <Avatar
           size={150}
-          src={
-            data?.at(0)?.sources?.at(0)?.path
-              ? process.env.NEXT_PUBLIC_S3_URL! +
-                data?.at(0)?.sources?.at(0)?.path +
-                "preview.jpg"
-              : null
-          }
+          src={follower.avatar?.url}
           styles={{
             image: {
               transform: "scale(2)",

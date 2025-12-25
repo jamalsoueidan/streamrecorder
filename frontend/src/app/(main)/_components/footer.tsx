@@ -8,6 +8,8 @@ import classes from "./footer.module.css";
 const links = [
   { link: "/", label: "Home" },
   { link: "/product-updates", label: "Product updates" },
+  { link: "/privacy", label: "Privacy Policy" },
+  { link: "/terms", label: "Terms & Conditions" },
 ];
 
 export function Footer() {
