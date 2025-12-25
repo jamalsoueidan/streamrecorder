@@ -5,7 +5,7 @@ import api from "../../lib/api";
 
 import { NavigationProvider } from "../providers/navigation-provider";
 import { UserProvider } from "../providers/user-provider";
-import { Shell } from "../ui/shell";
+import { Shell } from "./_components/shell";
 
 export default async function DashboardLayout({
   children,
