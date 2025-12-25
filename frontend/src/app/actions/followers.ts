@@ -30,7 +30,7 @@ export async function follow(prevState: any, formData: FormData) {
 export async function followUser(data: FollowRequestBody) {
   try {
     await api.follower.followCreate(data);
-    revalidatePath("/following");
+    //revalidatePath("/following");
 
     return { success: true };
   } catch (err: any) {
@@ -41,7 +41,7 @@ export async function followUser(data: FollowRequestBody) {
 export async function unfollow(documentId: string) {
   try {
     await api.follower.unfollowDelete({ documentId });
-    revalidatePath("/following");
+    //revalidatePath("/following");
 
     return { success: true };
   } catch (err: any) {
