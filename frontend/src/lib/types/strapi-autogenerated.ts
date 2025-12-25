@@ -31,6 +31,172 @@ export interface Error {
   };
 }
 
+export interface ChangeLogRequest {
+  data: {
+    version?: string;
+    body?: string;
+    locale?: string;
+    localizations?: (number | string)[];
+  };
+}
+
+export interface ChangeLogListResponse {
+  data?: ChangeLog[];
+  meta?: {
+    pagination?: {
+      page?: number;
+      /** @min 25 */
+      pageSize?: number;
+      /** @max 1 */
+      pageCount?: number;
+      total?: number;
+    };
+  };
+}
+
+export interface ChangeLog {
+  id?: number;
+  documentId?: string;
+  version?: string;
+  body?: string;
+  /** @format date-time */
+  createdAt?: string;
+  /** @format date-time */
+  updatedAt?: string;
+  /** @format date-time */
+  publishedAt?: string;
+  createdBy?: {
+    id?: number;
+    documentId?: string;
+    firstname?: string;
+    lastname?: string;
+    username?: string;
+    /** @format email */
+    email?: string;
+    resetPasswordToken?: string;
+    registrationToken?: string;
+    isActive?: boolean;
+    roles?: {
+      id?: number;
+      documentId?: string;
+      name?: string;
+      code?: string;
+      description?: string;
+      users?: {
+        id?: number;
+        documentId?: string;
+      }[];
+      permissions?: {
+        id?: number;
+        documentId?: string;
+        action?: string;
+        actionParameters?: any;
+        subject?: string;
+        properties?: any;
+        conditions?: any;
+        role?: {
+          id?: number;
+          documentId?: string;
+        };
+        /** @format date-time */
+        createdAt?: string;
+        /** @format date-time */
+        updatedAt?: string;
+        /** @format date-time */
+        publishedAt?: string;
+        createdBy?: {
+          id?: number;
+          documentId?: string;
+        };
+        updatedBy?: {
+          id?: number;
+          documentId?: string;
+        };
+        locale?: string;
+        localizations?: {
+          id?: number;
+          documentId?: string;
+        }[];
+      }[];
+      /** @format date-time */
+      createdAt?: string;
+      /** @format date-time */
+      updatedAt?: string;
+      /** @format date-time */
+      publishedAt?: string;
+      createdBy?: {
+        id?: number;
+        documentId?: string;
+      };
+      updatedBy?: {
+        id?: number;
+        documentId?: string;
+      };
+      locale?: string;
+      localizations?: {
+        id?: number;
+        documentId?: string;
+      }[];
+    }[];
+    blocked?: boolean;
+    preferedLanguage?: string;
+    /** @format date-time */
+    createdAt?: string;
+    /** @format date-time */
+    updatedAt?: string;
+    /** @format date-time */
+    publishedAt?: string;
+    createdBy?: {
+      id?: number;
+      documentId?: string;
+    };
+    updatedBy?: {
+      id?: number;
+      documentId?: string;
+    };
+    locale?: string;
+    localizations?: {
+      id?: number;
+      documentId?: string;
+    }[];
+  };
+  updatedBy?: {
+    id?: number;
+    documentId?: string;
+  };
+  locale?: string;
+  localizations?: {
+    id?: number;
+    documentId?: string;
+    version?: string;
+    body?: string;
+    /** @format date-time */
+    createdAt?: string;
+    /** @format date-time */
+    updatedAt?: string;
+    /** @format date-time */
+    publishedAt?: string;
+    createdBy?: {
+      id?: number;
+      documentId?: string;
+    };
+    updatedBy?: {
+      id?: number;
+      documentId?: string;
+    };
+    locale?: string;
+    localizations?: {
+      id?: number;
+      documentId?: string;
+    }[];
+  }[];
+}
+
+export interface ChangeLogResponse {
+  data?: ChangeLog;
+  meta?: object;
+}
+
 export interface FollowerRequest {
   data: {
     username: string;
@@ -554,7 +720,11 @@ export interface VideosVideoComponent {
   playlist?: string;
   width?: number;
   height?: number;
-  sizeBytes?: number;
+  /**
+   * @pattern ^\d*$
+   * @example "123456789"
+   */
+  sizeBytes?: string;
 }
 
 export interface NavigationRequest {
@@ -1526,6 +1696,52 @@ export enum SourceStateEnum1 {
   Failed = "failed",
 }
 
+export interface GetChangeLogsParams {
+  /** Sort by attributes ascending (asc) or descending (desc) */
+  sort?: string;
+  /** Return page/pageSize (default: true) */
+  "pagination[withCount]"?: boolean;
+  /** Page number (default: 0) */
+  "pagination[page]"?: number;
+  /** Page size (default: 25) */
+  "pagination[pageSize]"?: number;
+  /** Offset value (default: 0) */
+  "pagination[start]"?: number;
+  /** Number of entities to return (default: 25) */
+  "pagination[limit]"?: number;
+  /** Fields to return (ex: title,author) */
+  fields?: string;
+  /** Relations to return */
+  populate?: string | string[] | object;
+  /** Filters to apply */
+  filters?: Record<string, any>;
+  /** Locale to apply */
+  locale?: string;
+}
+
+export type GetChangeLogsData = ChangeLogListResponse;
+
+export type PostChangeLogsData = ChangeLogResponse;
+
+export interface GetChangeLogsIdParams {
+  id: string;
+}
+
+export type GetChangeLogsIdData = ChangeLogResponse;
+
+export interface PutChangeLogsIdParams {
+  id: string;
+}
+
+export type PutChangeLogsIdData = ChangeLogResponse;
+
+export interface DeleteChangeLogsIdParams {
+  id: string;
+}
+
+/** @format int64 */
+export type DeleteChangeLogsIdData = number;
+
 export interface GetFollowersParams {
   /** Sort by attributes ascending (asc) or descending (desc) */
   sort?: string;
@@ -1982,6 +2198,110 @@ export interface UnfollowDeleteParams {
 
 export interface UnfollowDeleteData {
   success?: boolean;
+}
+
+export namespace ChangeLog {
+  /**
+   * No description
+   * @tags Change-log
+   * @name GetChangeLogs
+   * @request GET:/change-logs
+   * @secure
+   */
+  export namespace GetChangeLogs {
+    export type RequestParams = {};
+    export type RequestQuery = {
+      /** Sort by attributes ascending (asc) or descending (desc) */
+      sort?: string;
+      /** Return page/pageSize (default: true) */
+      "pagination[withCount]"?: boolean;
+      /** Page number (default: 0) */
+      "pagination[page]"?: number;
+      /** Page size (default: 25) */
+      "pagination[pageSize]"?: number;
+      /** Offset value (default: 0) */
+      "pagination[start]"?: number;
+      /** Number of entities to return (default: 25) */
+      "pagination[limit]"?: number;
+      /** Fields to return (ex: title,author) */
+      fields?: string;
+      /** Relations to return */
+      populate?: string | string[] | object;
+      /** Filters to apply */
+      filters?: Record<string, any>;
+      /** Locale to apply */
+      locale?: string;
+    };
+    export type RequestBody = never;
+    export type RequestHeaders = {};
+    export type ResponseBody = GetChangeLogsData;
+  }
+
+  /**
+   * No description
+   * @tags Change-log
+   * @name PostChangeLogs
+   * @request POST:/change-logs
+   * @secure
+   */
+  export namespace PostChangeLogs {
+    export type RequestParams = {};
+    export type RequestQuery = {};
+    export type RequestBody = ChangeLogRequest;
+    export type RequestHeaders = {};
+    export type ResponseBody = PostChangeLogsData;
+  }
+
+  /**
+   * No description
+   * @tags Change-log
+   * @name GetChangeLogsId
+   * @request GET:/change-logs/{id}
+   * @secure
+   */
+  export namespace GetChangeLogsId {
+    export type RequestParams = {
+      id: string;
+    };
+    export type RequestQuery = {};
+    export type RequestBody = never;
+    export type RequestHeaders = {};
+    export type ResponseBody = GetChangeLogsIdData;
+  }
+
+  /**
+   * No description
+   * @tags Change-log
+   * @name PutChangeLogsId
+   * @request PUT:/change-logs/{id}
+   * @secure
+   */
+  export namespace PutChangeLogsId {
+    export type RequestParams = {
+      id: string;
+    };
+    export type RequestQuery = {};
+    export type RequestBody = ChangeLogRequest;
+    export type RequestHeaders = {};
+    export type ResponseBody = PutChangeLogsIdData;
+  }
+
+  /**
+   * No description
+   * @tags Change-log
+   * @name DeleteChangeLogsId
+   * @request DELETE:/change-logs/{id}
+   * @secure
+   */
+  export namespace DeleteChangeLogsId {
+    export type RequestParams = {
+      id: string;
+    };
+    export type RequestQuery = {};
+    export type RequestBody = never;
+    export type RequestHeaders = {};
+    export type ResponseBody = DeleteChangeLogsIdData;
+  }
 }
 
 export namespace Follower {
@@ -3150,6 +3470,107 @@ export class HttpClient<SecurityDataType = unknown> {
 export class Api<
   SecurityDataType extends unknown,
 > extends HttpClient<SecurityDataType> {
+  changeLog = {
+    /**
+     * No description
+     *
+     * @tags Change-log
+     * @name GetChangeLogs
+     * @request GET:/change-logs
+     * @secure
+     */
+    getChangeLogs: (query: GetChangeLogsParams, params: RequestParams = {}) =>
+      this.request<GetChangeLogsData, Error>({
+        path: `/change-logs`,
+        method: "GET",
+        query: query,
+        secure: true,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Change-log
+     * @name PostChangeLogs
+     * @request POST:/change-logs
+     * @secure
+     */
+    postChangeLogs: (data: ChangeLogRequest, params: RequestParams = {}) =>
+      this.request<PostChangeLogsData, Error>({
+        path: `/change-logs`,
+        method: "POST",
+        body: data,
+        secure: true,
+        type: ContentType.Json,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Change-log
+     * @name GetChangeLogsId
+     * @request GET:/change-logs/{id}
+     * @secure
+     */
+    getChangeLogsId: (
+      { id, ...query }: GetChangeLogsIdParams,
+      params: RequestParams = {},
+    ) =>
+      this.request<GetChangeLogsIdData, Error>({
+        path: `/change-logs/${id}`,
+        method: "GET",
+        secure: true,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Change-log
+     * @name PutChangeLogsId
+     * @request PUT:/change-logs/{id}
+     * @secure
+     */
+    putChangeLogsId: (
+      { id, ...query }: PutChangeLogsIdParams,
+      data: ChangeLogRequest,
+      params: RequestParams = {},
+    ) =>
+      this.request<PutChangeLogsIdData, Error>({
+        path: `/change-logs/${id}`,
+        method: "PUT",
+        body: data,
+        secure: true,
+        type: ContentType.Json,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Change-log
+     * @name DeleteChangeLogsId
+     * @request DELETE:/change-logs/{id}
+     * @secure
+     */
+    deleteChangeLogsId: (
+      { id, ...query }: DeleteChangeLogsIdParams,
+      params: RequestParams = {},
+    ) =>
+      this.request<DeleteChangeLogsIdData, Error>({
+        path: `/change-logs/${id}`,
+        method: "DELETE",
+        secure: true,
+        format: "json",
+        ...params,
+      }),
+  };
   follower = {
     /**
      * No description

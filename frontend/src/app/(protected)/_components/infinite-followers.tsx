@@ -32,13 +32,14 @@ import {
   useMatches,
 } from "@mantine/core";
 import { useIntersection } from "@mantine/hooks";
-import { IconGrid4x4, IconList, IconWindowMaximize } from "@tabler/icons-react";
+import { IconGrid4x4, IconList } from "@tabler/icons-react";
 import Link from "next/link";
 import { parseAsBoolean, parseAsStringEnum, useQueryState } from "nuqs";
 import { useEffect, useState, useTransition } from "react";
 import { ImageVideoPreview } from "../recordings/_components/image-video-preview";
 import { CountryFlag } from "./country-flag";
 import FollowButton from "./follow-button";
+import OpenSocial from "./open-social";
 import UnfollowButton from "./unfollow-button";
 
 const SORT_OPTIONS = [
@@ -275,16 +276,7 @@ export default function InfiniteFollowers({
                   </Group>
                   {view === "list" ? (
                     <Flex gap="xs" justify="right" align="center">
-                      <Tooltip label="Go to tiktok">
-                        <ActionIcon
-                          size="lg"
-                          component={Link}
-                          href={`https://www.tiktok.com/@${follower.username}/live`}
-                          target="_blank"
-                        >
-                          <IconWindowMaximize size={24} />
-                        </ActionIcon>
-                      </Tooltip>
+                      <OpenSocial follower={follower} />
 
                       {follower.isFollowing ? (
                         <>
