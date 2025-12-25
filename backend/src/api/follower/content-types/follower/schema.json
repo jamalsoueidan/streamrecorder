@@ -11,6 +11,9 @@
   },
   "pluginOptions": {},
   "attributes": {
+    "nickname": {
+      "type": "string"
+    },
     "username": {
       "type": "string",
       "required": true
