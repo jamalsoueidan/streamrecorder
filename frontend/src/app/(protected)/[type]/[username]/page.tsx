@@ -15,9 +15,9 @@ import {
 import { IconVideo, IconWorldSearch } from "@tabler/icons-react";
 import { CountryFlag } from "../../_components/country-flag";
 import FollowButton from "../../_components/follow-button";
+import InfiniteRecordings from "../../_components/infinity-recordings";
 import OpenSocial from "../../_components/open-social";
 import UnfollowButton from "../../_components/unfollow-button";
-import InfiniteRecordings from "../../recordings/_components/infinity-recordings";
 
 interface PageProps {
   params: Promise<{

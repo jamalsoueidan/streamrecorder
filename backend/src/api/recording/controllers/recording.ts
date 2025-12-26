@@ -37,6 +37,8 @@ export default factories.createCoreController(
         });
       }
 
+      console.log(JSON.stringify(ctx.query));
+
       return super.find(ctx);
     },
   })

@@ -7,7 +7,7 @@ import { IconVideo, IconWorldSearch } from "@tabler/icons-react";
 
 export default async function FollowingsPage() {
   const response = await getRecordings({
-    scope: ScopeEnum.Following,
+    scope: ScopeEnum.Discover,
     "pagination[page]": 1,
     sort: SortOptions.createdAtDesc,
   });
@@ -17,7 +17,7 @@ export default async function FollowingsPage() {
 
   const fetchAction = async (options: Parameters<typeof getRecordings>[0]) => {
     "use server";
-    return await getRecordings(options);
+    return await getRecordings({ ...options, scope: ScopeEnum.Discover });
   };
 
   return (

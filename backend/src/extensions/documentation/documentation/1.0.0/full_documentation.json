@@ -20,7 +20,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-12-25T06:51:34.404Z"
+    "x-generation-date": "2025-12-26T05:55:26.223Z"
   },
   "servers": [
     {
@@ -6896,8 +6896,15 @@
               "IconPlayerPlayFilled",
               "IconWorldSearch",
               "IconQuestionMark",
-              "IconVideo"
+              "IconVideo",
+              "IconPlayerRecord",
+              "IconBrandSafari",
+              "IconHeart",
+              "IconStar"
             ]
+          },
+          "color": {
+            "type": "string"
           }
         }
       },
