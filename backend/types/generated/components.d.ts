@@ -6,6 +6,7 @@ export interface NavigationsLinks extends Struct.ComponentSchema {
     displayName: 'links';
   };
   attributes: {
+    color: Schema.Attribute.String;
     icon: Schema.Attribute.Enumeration<
       [
         'IconFlower',
@@ -14,6 +15,10 @@ export interface NavigationsLinks extends Struct.ComponentSchema {
         'IconWorldSearch',
         'IconQuestionMark',
         'IconVideo',
+        'IconPlayerRecord',
+        'IconBrandSafari',
+        'IconHeart',
+        'IconStar',
       ]
     >;
     label: Schema.Attribute.String;

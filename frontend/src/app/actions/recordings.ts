@@ -21,7 +21,7 @@ export async function getRecordings(
           //filter out recording that have failed?
           sources: {
             state: {
-              $ne: "failed",
+              $eq: "done",
             },
           },
         },
@@ -31,7 +31,7 @@ export async function getRecordings(
             filters: {
               // filter out from source
               state: {
-                $ne: "failed",
+                $eq: "done",
               },
             },
             populate: ["videoSmall", "videoOriginal"], // we ask for original because sometime small is null while encoding for mini-player
