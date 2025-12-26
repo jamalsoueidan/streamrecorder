@@ -19,8 +19,15 @@
         "IconPlayerPlayFilled",
         "IconWorldSearch",
         "IconQuestionMark",
-        "IconVideo"
+        "IconVideo",
+        "IconPlayerRecord",
+        "IconBrandSafari",
+        "IconHeart",
+        "IconStar"
       ]
+    },
+    "color": {
+      "type": "string"
     }
   },
   "config": {}

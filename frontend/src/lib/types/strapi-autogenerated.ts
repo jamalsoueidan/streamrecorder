@@ -199,6 +199,7 @@ export interface ChangeLogResponse {
 
 export interface FollowerRequest {
   data: {
+    nickname?: string;
     username: string;
     type: FollowerRequestTypeEnum;
     protected?: boolean;
@@ -207,7 +208,9 @@ export interface FollowerRequest {
     /** @format date-time */
     lastCheckedAt?: string;
     country?: string;
+    countryCode?: string;
     language?: string;
+    languageCode?: string;
     /** @example "string or id" */
     avatar?: number | string;
     locale?: string;
@@ -232,6 +235,7 @@ export interface FollowerListResponse {
 export interface Follower {
   id?: number;
   documentId?: string;
+  nickname?: string;
   username: string;
   type: FollowerTypeEnum;
   protected?: boolean;
@@ -398,6 +402,7 @@ export interface Follower {
     followers?: {
       id?: number;
       documentId?: string;
+      nickname?: string;
       username?: string;
       type?: FollowerTypeEnum;
       protected?: boolean;
@@ -469,7 +474,9 @@ export interface Follower {
       /** @format date-time */
       lastCheckedAt?: string;
       country?: string;
+      countryCode?: string;
       language?: string;
+      languageCode?: string;
       avatar?: {
         id?: number;
         documentId?: string;
@@ -641,7 +648,9 @@ export interface Follower {
   /** @format date-time */
   lastCheckedAt?: string;
   country?: string;
+  countryCode?: string;
   language?: string;
+  languageCode?: string;
   avatar?: {
     id?: number;
     documentId?: string;
@@ -895,6 +904,7 @@ export interface NavigationsLinksComponent {
   label?: string;
   url?: string;
   icon?: NavigationsLinksComponentIconEnum;
+  color?: string;
 }
 
 export interface RecordingRequest {
@@ -927,6 +937,7 @@ export interface Recording {
   follower?: {
     id?: number;
     documentId?: string;
+    nickname?: string;
     username?: string;
     type?: FollowerTypeEnum;
     protected?: boolean;
@@ -1178,7 +1189,9 @@ export interface Recording {
     /** @format date-time */
     lastCheckedAt?: string;
     country?: string;
+    countryCode?: string;
     language?: string;
+    languageCode?: string;
     avatar?: {
       id?: number;
       documentId?: string;
@@ -1670,6 +1683,7 @@ export enum NavigationsLinksComponentIconEnum {
   IconWorldSearch = "IconWorldSearch",
   IconQuestionMark = "IconQuestionMark",
   IconVideo = "IconVideo",
+  IconPlayerRecord = "IconPlayerRecord",
 }
 
 export enum RecordingStateEnum {

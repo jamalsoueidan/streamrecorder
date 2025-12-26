@@ -4,10 +4,14 @@ import { ActionIcon, Box, Code, Group, Text } from "@mantine/core";
 import {
   IconArrowLeft,
   IconBellRinging,
+  IconBrandSafari,
   IconFlower,
+  IconHeart,
   IconLogout,
   IconPlayerPlayFilled,
+  IconPlayerRecordFilled,
   IconQuestionMark,
+  IconStar,
   IconUsers,
   IconVideo,
   IconWorldSearch,
@@ -18,7 +22,9 @@ import { usePathname } from "next/navigation";
 
 import { logout } from "../../actions/auth";
 
+import { getChangeLogVersion } from "@/app/actions/changelog";
 import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 import { useNavigation } from "../../providers/navigation-provider";
 import { useUser } from "../../providers/user-provider";
 import AddFollowerForm from "./add-follower-form";
@@ -31,6 +37,10 @@ export const iconMap: Record<string, typeof IconBellRinging> = {
   IconVideo: IconVideo,
   IconWorldSearch: IconWorldSearch,
   IconQuestionMark: IconQuestionMark,
+  IconPlayerRecord: IconPlayerRecordFilled,
+  IconBrandSafari: IconBrandSafari,
+  IconHeart: IconHeart,
+  IconStar: IconStar,
 };
 
 export function Navbar({
@@ -44,6 +54,11 @@ export function Navbar({
   const navigation = useNavigation();
   const user = useUser();
   const pathname = usePathname();
+  const [version, setStreamers] = useState<string | undefined>();
+
+  useEffect(() => {
+    getChangeLogVersion().then(setStreamers);
+  }, []);
 
   const handleLinkClick = (e: React.MouseEvent, url: string) => {
     if (opened) {
@@ -55,7 +70,7 @@ export function Navbar({
   };
 
   const links = (navigation?.data?.links || []).map((item) => {
-    const Icon = iconMap[item.icon || "IconQuestionMark"];
+    const Icon = iconMap[item.icon || "IconPlayerRecord"];
     return (
       <Link
         className={classes.link}
@@ -64,7 +79,12 @@ export function Navbar({
         href={item.url || "#"}
         onClick={(e) => handleLinkClick(e, item.url || "#")}
       >
-        <Icon className={classes.linkIcon} stroke={2} />
+        <Icon
+          className={classes.linkIcon}
+          stroke={2}
+          style={{ width: "32px", height: "32px" }}
+          color={item.color ? item.color : undefined}
+        />
         <span>{item.label}</span>
       </Link>
     );
@@ -85,7 +105,9 @@ export function Navbar({
             </ActionIcon>
             <Text> {user?.username}</Text>
           </Group>
-          <Code fw={700}>{opened}v0.1.0</Code>
+          <Code fw={700}>
+            {opened}v{version}
+          </Code>
         </Group>
 
         {links}

@@ -36,7 +36,8 @@ import { IconGrid4x4, IconList } from "@tabler/icons-react";
 import Link from "next/link";
 import { parseAsBoolean, parseAsStringEnum, useQueryState } from "nuqs";
 import { useEffect, useState, useTransition } from "react";
-import { ImageVideoPreview } from "../recordings/_components/image-video-preview";
+
+import { ImageVideoPreview } from "@/app/(protected)/_components/image-video-preview";
 import { CountryFlag } from "./country-flag";
 import FollowButton from "./follow-button";
 import OpenSocial from "./open-social";
