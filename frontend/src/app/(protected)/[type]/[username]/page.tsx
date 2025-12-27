@@ -6,6 +6,7 @@ import {
   ActionIcon,
   Anchor,
   Avatar,
+  Box,
   Button,
   Group,
   Stack,
@@ -15,6 +16,7 @@ import {
 import { IconVideo, IconWorldSearch } from "@tabler/icons-react";
 import { CountryFlag } from "../../_components/country-flag";
 import FollowButton from "../../_components/follow-button";
+import { FollowerTypeIcon } from "../../_components/follower-type";
 import InfiniteRecordings from "../../_components/infinity-recordings";
 import OpenSocial from "../../_components/open-social";
 import UnfollowButton from "../../_components/unfollow-button";
@@ -92,16 +94,32 @@ export default async function Page({ params }: PageProps) {
   return (
     <section>
       <Group mb="xl">
-        <Avatar
-          size={150}
-          src={follower.avatar?.url}
-          styles={{
-            image: {
-              transform: "scale(2)",
-              objectFit: "cover",
-            },
-          }}
-        />
+        <Box pos="relative">
+          <Avatar
+            size={150}
+            src={follower.avatar?.url}
+            styles={{
+              image: {
+                transform: "scale(2)",
+                objectFit: "cover",
+              },
+            }}
+          />
+
+          {follower.type ? (
+            <>
+              <FollowerTypeIcon
+                pos="absolute"
+                color="transparent"
+                type={follower?.type}
+                top="50%"
+                left="50%"
+                size={90}
+                style={{ transform: "translate(-50%, -50%)" }}
+              />
+            </>
+          ) : null}
+        </Box>
 
         <Stack gap="xs">
           <Group>

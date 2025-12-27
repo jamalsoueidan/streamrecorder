@@ -146,6 +146,7 @@ export default function InfiniteRecordings({
                   }/live/${rec.documentId}${sort ? `?sort=` + sort : null}`}
                   w={160}
                   h={284}
+                  type={rec.follower?.type}
                   sources={rec.sources}
                 />
               </Grid.Col>
