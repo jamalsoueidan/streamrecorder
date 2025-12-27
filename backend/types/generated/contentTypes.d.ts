@@ -462,7 +462,7 @@ export interface ApiChangeLogChangeLog extends Struct.CollectionTypeSchema {
 export interface ApiFaqFaq extends Struct.CollectionTypeSchema {
   collectionName: 'faqs';
   info: {
-    displayName: 'faq';
+    displayName: 'Faq';
     pluralName: 'faqs';
     singularName: 'faq';
   };
