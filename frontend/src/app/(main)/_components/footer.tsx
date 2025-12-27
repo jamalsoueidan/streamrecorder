@@ -11,6 +11,7 @@ const links = [
   { link: "/privacy", label: "Privacy Policy" },
   { link: "/terms", label: "Terms & Conditions" },
   { link: "/dmca", label: "DMCA policy" },
+  { link: "/faq", label: "Faq" },
 ];
 
 export function Footer() {
