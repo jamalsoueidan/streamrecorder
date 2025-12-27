@@ -22,9 +22,7 @@ import { usePathname } from "next/navigation";
 
 import { logout } from "../../actions/auth";
 
-import { getChangeLogVersion } from "@/app/actions/changelog";
 import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
 import { useNavigation } from "../../providers/navigation-provider";
 import { useUser } from "../../providers/user-provider";
 import AddFollowerForm from "./add-follower-form";
@@ -55,11 +53,6 @@ export function Navbar({
   const navigation = useNavigation();
   const user = useUser();
   const pathname = usePathname();
-  const [version, setStreamers] = useState<string | undefined>();
-
-  useEffect(() => {
-    getChangeLogVersion().then(setStreamers);
-  }, []);
 
   const handleLinkClick = (e: React.MouseEvent, url: string) => {
     if (opened) {

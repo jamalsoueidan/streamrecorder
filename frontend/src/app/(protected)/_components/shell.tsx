@@ -30,7 +30,6 @@ export function Shell({ children }: { children: React.ReactNode }) {
       }}
       navbar={{
         width: 300,
-
         breakpoint: "sm",
         collapsed: { mobile: !opened },
       }}
@@ -41,7 +40,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
           <Burger opened={opened} onClick={open} hiddenFrom="sm" size="sm" />
         </Group>
       </AppShell.Header>
-      <AppShell.Navbar>
+      <AppShell.Navbar bg="transparent">
         <Navbar opened={opened} close={close} />
       </AppShell.Navbar>
       <AppShell.Main>{children}</AppShell.Main>
