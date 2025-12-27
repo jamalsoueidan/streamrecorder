@@ -12,7 +12,9 @@ import { IconGitBranch, IconSparkles } from "@tabler/icons-react";
 import { ChangeLogTimeline } from "./_components/change-log-timeline";
 
 export default async function ChangelogPage() {
-  const response = await api.changeLog.getChangeLogs({});
+  const response = await api.changeLog.getChangeLogs({
+    sort: "createdAt:desc",
+  });
 
   const changelogs = response.data?.data || [];
 
