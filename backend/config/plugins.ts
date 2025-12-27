@@ -299,6 +299,56 @@ export default ({ env }) => ({
               },
             },
           };
+
+          if (draft.paths["/users/me"]?.get) {
+            const populateParam = {
+              name: "populate",
+              in: "query",
+              required: false,
+              schema: {
+                oneOf: [
+                  { type: "string" },
+                  { type: "array", items: { type: "string" } },
+                  { type: "object" },
+                ],
+              },
+              description: "Relations to populate",
+            };
+
+            draft.paths["/users/me"].get.parameters = [
+              ...(draft.paths["/users/me"].get.parameters || []),
+              populateParam,
+            ];
+
+            // Get the current response schema
+            const currentSchema =
+              draft.paths["/users/me"].get.responses["200"].content[
+                "application/json"
+              ].schema;
+
+            // Extend it with role (inline the role properties since $ref isn't resolving)
+            draft.paths["/users/me"].get.responses["200"].content[
+              "application/json"
+            ].schema = {
+              allOf: [
+                currentSchema,
+                {
+                  type: "object",
+                  properties: {
+                    role: {
+                      type: "object",
+                      properties: {
+                        id: { type: "number" },
+                        name: { type: "string" },
+                        description: { type: "string" },
+                        type: { type: "string" },
+                      },
+                    },
+                  },
+                },
+              ],
+            };
+          }
         },
       },
     },

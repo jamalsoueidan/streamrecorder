@@ -19,7 +19,9 @@ export default async function DashboardLayout({
   }
 
   const user =
-    await api.usersPermissionsUsersRoles.getUsersPermissionsUsersRoles();
+    await api.usersPermissionsUsersRoles.getUsersPermissionsUsersRoles({
+      populate: "role",
+    });
 
   const navigation = await api.navigation.getNavigation({ populate: "links" });
 
