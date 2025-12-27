@@ -1684,6 +1684,9 @@ export enum NavigationsLinksComponentIconEnum {
   IconQuestionMark = "IconQuestionMark",
   IconVideo = "IconVideo",
   IconPlayerRecord = "IconPlayerRecord",
+  IconBrandSafari = "IconBrandSafari",
+  IconHeart = "IconHeart",
+  IconStar = "IconStar",
 }
 
 export enum RecordingStateEnum {
@@ -2142,7 +2145,19 @@ export interface UsersDeleteParams {
 
 export type UsersDeleteData = UsersPermissionsUser;
 
-export type GetUsersPermissionsUsersRolesData = UsersPermissionsUser;
+export interface GetUsersPermissionsUsersRolesParams {
+  /** Relations to populate */
+  populate?: string | string[] | object;
+}
+
+export type GetUsersPermissionsUsersRolesData = UsersPermissionsUser & {
+  role?: {
+    id?: number;
+    name?: string;
+    description?: string;
+    type?: string;
+  };
+};
 
 export type CountListData = number;
 
@@ -3274,7 +3289,10 @@ export namespace UsersPermissionsUsersRoles {
    */
   export namespace GetUsersPermissionsUsersRoles {
     export type RequestParams = {};
-    export type RequestQuery = {};
+    export type RequestQuery = {
+      /** Relations to populate */
+      populate?: string | string[] | object;
+    };
     export type RequestBody = never;
     export type RequestHeaders = {};
     export type ResponseBody = GetUsersPermissionsUsersRolesData;
@@ -3332,7 +3350,7 @@ export type RequestParams = Omit<
 export interface ApiConfig<SecurityDataType = unknown>
   extends Omit<AxiosRequestConfig, "data" | "cancelToken"> {
   securityWorker?: (
-    securityData: SecurityDataType | null,
+    securityData: SecurityDataType | null
   ) => Promise<AxiosRequestConfig | void> | AxiosRequestConfig | void;
   secure?: boolean;
   format?: ResponseType;
@@ -3374,7 +3392,7 @@ export class HttpClient<SecurityDataType = unknown> {
 
   protected mergeRequestParams(
     params1: AxiosRequestConfig,
-    params2?: AxiosRequestConfig,
+    params2?: AxiosRequestConfig
   ): AxiosRequestConfig {
     const method = params1.method || (params2 && params2.method);
 
@@ -3415,7 +3433,7 @@ export class HttpClient<SecurityDataType = unknown> {
         const isFileType = formItem instanceof Blob || formItem instanceof File;
         formData.append(
           key,
-          isFileType ? formItem : this.stringifyFormItem(formItem),
+          isFileType ? formItem : this.stringifyFormItem(formItem)
         );
       }
 
@@ -3482,7 +3500,7 @@ export class HttpClient<SecurityDataType = unknown> {
  * @contact TEAM <contact-email@something.io> (mywebsite.io)
  */
 export class Api<
-  SecurityDataType extends unknown,
+  SecurityDataType extends unknown
 > extends HttpClient<SecurityDataType> {
   changeLog = {
     /**
@@ -3532,7 +3550,7 @@ export class Api<
      */
     getChangeLogsId: (
       { id, ...query }: GetChangeLogsIdParams,
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<GetChangeLogsIdData, Error>({
         path: `/change-logs/${id}`,
@@ -3553,7 +3571,7 @@ export class Api<
     putChangeLogsId: (
       { id, ...query }: PutChangeLogsIdParams,
       data: ChangeLogRequest,
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<PutChangeLogsIdData, Error>({
         path: `/change-logs/${id}`,
@@ -3575,7 +3593,7 @@ export class Api<
      */
     deleteChangeLogsId: (
       { id, ...query }: DeleteChangeLogsIdParams,
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<DeleteChangeLogsIdData, Error>({
         path: `/change-logs/${id}`,
@@ -3633,7 +3651,7 @@ export class Api<
      */
     getFollowersId: (
       { id, ...query }: GetFollowersIdParams,
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<GetFollowersIdData, Error>({
         path: `/followers/${id}`,
@@ -3654,7 +3672,7 @@ export class Api<
     putFollowersId: (
       { id, ...query }: PutFollowersIdParams,
       data: FollowerRequest,
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<PutFollowersIdData, Error>({
         path: `/followers/${id}`,
@@ -3676,7 +3694,7 @@ export class Api<
      */
     deleteFollowersId: (
       { id, ...query }: DeleteFollowersIdParams,
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<DeleteFollowersIdData, Error>({
         path: `/followers/${id}`,
@@ -3697,7 +3715,7 @@ export class Api<
      */
     browseFollowers: (
       query: BrowseFollowersParams,
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<BrowseFollowersData, Error | void>({
         path: `/followers/browse`,
@@ -3739,7 +3757,7 @@ export class Api<
      */
     unfollowDelete: (
       { documentId, ...query }: UnfollowDeleteParams,
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<UnfollowDeleteData, void>({
         path: `/followers/unfollow/${documentId}`,
@@ -3852,7 +3870,7 @@ export class Api<
      */
     getRecordingsId: (
       { id, ...query }: GetRecordingsIdParams,
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<GetRecordingsIdData, Error>({
         path: `/recordings/${id}`,
@@ -3874,7 +3892,7 @@ export class Api<
     putRecordingsId: (
       { id, ...query }: PutRecordingsIdParams,
       data: RecordingRequest,
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<PutRecordingsIdData, Error>({
         path: `/recordings/${id}`,
@@ -3896,7 +3914,7 @@ export class Api<
      */
     deleteRecordingsId: (
       { id, ...query }: DeleteRecordingsIdParams,
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<DeleteRecordingsIdData, Error>({
         path: `/recordings/${id}`,
@@ -3917,7 +3935,7 @@ export class Api<
      */
     browseRecordings: (
       query: BrowseRecordingsParams,
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<BrowseRecordingsData, Error | void>({
         path: `/recordings/browse`,
@@ -3976,7 +3994,7 @@ export class Api<
      */
     getSourcesId: (
       { id, ...query }: GetSourcesIdParams,
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<GetSourcesIdData, Error>({
         path: `/sources/${id}`,
@@ -3997,7 +4015,7 @@ export class Api<
     putSourcesId: (
       { id, ...query }: PutSourcesIdParams,
       data: SourceRequest,
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<PutSourcesIdData, Error>({
         path: `/sources/${id}`,
@@ -4019,7 +4037,7 @@ export class Api<
      */
     deleteSourcesId: (
       { id, ...query }: DeleteSourcesIdParams,
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<DeleteSourcesIdData, Error>({
         path: `/sources/${id}`,
@@ -4060,7 +4078,7 @@ export class Api<
     uploadIdCreate: (
       { id, ...query }: UploadIdCreateParams,
       data: UploadIdCreatePayload,
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<UploadIdCreateData, any>({
         path: `/upload?id=${id}`,
@@ -4100,7 +4118,7 @@ export class Api<
      */
     filesDetail: (
       { id, ...query }: FilesDetailParams,
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<FilesDetailData, any>({
         path: `/upload/files/${id}`,
@@ -4120,7 +4138,7 @@ export class Api<
      */
     filesDelete: (
       { id, ...query }: FilesDeleteParams,
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<FilesDeleteData, any>({
         path: `/upload/files/${id}`,
@@ -4142,7 +4160,7 @@ export class Api<
      */
     connectDetail: (
       { provider, ...query }: ConnectDetailParams,
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<any, void | Error>({
         path: `/connect/${provider}`,
@@ -4182,7 +4200,7 @@ export class Api<
      */
     localRegisterCreate: (
       data: LocalRegisterCreatePayload,
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<LocalRegisterCreateData, Error>({
         path: `/auth/local/register`,
@@ -4205,7 +4223,7 @@ export class Api<
      */
     callbackList: (
       { provider, ...query }: CallbackListParams,
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<CallbackListData, Error>({
         path: `/auth/${provider}/callback`,
@@ -4226,7 +4244,7 @@ export class Api<
      */
     forgotPasswordCreate: (
       data: ForgotPasswordCreatePayload,
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<ForgotPasswordCreateData, Error>({
         path: `/auth/forgot-password`,
@@ -4249,7 +4267,7 @@ export class Api<
      */
     resetPasswordCreate: (
       data: ResetPasswordCreatePayload,
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<ResetPasswordCreateData, Error>({
         path: `/auth/reset-password`,
@@ -4272,7 +4290,7 @@ export class Api<
      */
     changePasswordCreate: (
       data: ChangePasswordCreatePayload,
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<ChangePasswordCreateData, Error>({
         path: `/auth/change-password`,
@@ -4295,7 +4313,7 @@ export class Api<
      */
     emailConfirmationList: (
       query: EmailConfirmationListParams,
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<any, void | Error>({
         path: `/auth/email-confirmation`,
@@ -4316,7 +4334,7 @@ export class Api<
      */
     sendEmailConfirmationCreate: (
       data: SendEmailConfirmationCreatePayload,
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<SendEmailConfirmationCreateData, Error>({
         path: `/auth/send-email-confirmation`,
@@ -4381,7 +4399,7 @@ export class Api<
         type?: string;
         permissions?: UsersPermissionsPermissionsTree;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<RolesCreateData, Error>({
         path: `/users-permissions/roles`,
@@ -4403,7 +4421,7 @@ export class Api<
      */
     rolesDetail: (
       { id, ...query }: RolesDetailParams,
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<RolesDetailData, Error>({
         path: `/users-permissions/roles/${id}`,
@@ -4430,7 +4448,7 @@ export class Api<
         type?: string;
         permissions?: UsersPermissionsPermissionsTree;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<RolesUpdateData, Error>({
         path: `/users-permissions/roles/${role}`,
@@ -4452,7 +4470,7 @@ export class Api<
      */
     rolesDelete: (
       { role, ...query }: RolesDeleteParams,
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<RolesDeleteData, Error>({
         path: `/users-permissions/roles/${role}`,
@@ -4511,7 +4529,7 @@ export class Api<
      */
     usersDetail: (
       { id, ...query }: UsersDetailParams,
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<UsersDetailData, Error>({
         path: `/users/${id}`,
@@ -4533,7 +4551,7 @@ export class Api<
     usersUpdate: (
       { id, ...query }: UsersUpdateParams,
       data: UsersUpdatePayload,
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<UsersUpdateData, Error>({
         path: `/users/${id}`,
@@ -4556,7 +4574,7 @@ export class Api<
      */
     usersDelete: (
       { id, ...query }: UsersDeleteParams,
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<UsersDeleteData, Error>({
         path: `/users/${id}`,
@@ -4575,10 +4593,14 @@ export class Api<
      * @request GET:/users/me
      * @secure
      */
-    getUsersPermissionsUsersRoles: (params: RequestParams = {}) =>
+    getUsersPermissionsUsersRoles: (
+      query: GetUsersPermissionsUsersRolesParams,
+      params: RequestParams = {}
+    ) =>
       this.request<GetUsersPermissionsUsersRolesData, Error>({
         path: `/users/me`,
         method: "GET",
+        query: query,
         secure: true,
         format: "json",
         ...params,
