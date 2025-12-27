@@ -621,6 +621,37 @@ export interface Follower {
         documentId?: string;
       }[];
     }[];
+    messages?: {
+      id?: number;
+      documentId?: string;
+      type?: string;
+      subject?: string;
+      content?: string;
+      user?: {
+        id?: number;
+        documentId?: string;
+      };
+      state?: string;
+      /** @format date-time */
+      createdAt?: string;
+      /** @format date-time */
+      updatedAt?: string;
+      /** @format date-time */
+      publishedAt?: string;
+      createdBy?: {
+        id?: number;
+        documentId?: string;
+      };
+      updatedBy?: {
+        id?: number;
+        documentId?: string;
+      };
+      locale?: string;
+      localizations?: {
+        id?: number;
+        documentId?: string;
+      }[];
+    }[];
     /** @format date-time */
     createdAt?: string;
     /** @format date-time */
@@ -734,6 +765,499 @@ export interface VideosVideoComponent {
    * @example "123456789"
    */
   sizeBytes?: string;
+}
+
+export interface MessageRequest {
+  data: {
+    type?: string;
+    subject?: string;
+    content?: string;
+    /** @example "string or id" */
+    user?: number | string;
+    state?: string;
+    locale?: string;
+    localizations?: (number | string)[];
+  };
+}
+
+export interface MessageListResponse {
+  data?: Message[];
+  meta?: {
+    pagination?: {
+      page?: number;
+      /** @min 25 */
+      pageSize?: number;
+      /** @max 1 */
+      pageCount?: number;
+      total?: number;
+    };
+  };
+}
+
+export interface Message {
+  id?: number;
+  documentId?: string;
+  type?: string;
+  subject?: string;
+  content?: string;
+  user?: {
+    id?: number;
+    documentId?: string;
+    username?: string;
+    /** @format email */
+    email?: string;
+    provider?: string;
+    resetPasswordToken?: string;
+    confirmationToken?: string;
+    confirmed?: boolean;
+    blocked?: boolean;
+    role?: {
+      id?: number;
+      documentId?: string;
+      name?: string;
+      description?: string;
+      type?: string;
+      permissions?: {
+        id?: number;
+        documentId?: string;
+        action?: string;
+        role?: {
+          id?: number;
+          documentId?: string;
+        };
+        /** @format date-time */
+        createdAt?: string;
+        /** @format date-time */
+        updatedAt?: string;
+        /** @format date-time */
+        publishedAt?: string;
+        createdBy?: {
+          id?: number;
+          documentId?: string;
+          firstname?: string;
+          lastname?: string;
+          username?: string;
+          /** @format email */
+          email?: string;
+          resetPasswordToken?: string;
+          registrationToken?: string;
+          isActive?: boolean;
+          roles?: {
+            id?: number;
+            documentId?: string;
+            name?: string;
+            code?: string;
+            description?: string;
+            users?: {
+              id?: number;
+              documentId?: string;
+            }[];
+            permissions?: {
+              id?: number;
+              documentId?: string;
+              action?: string;
+              actionParameters?: any;
+              subject?: string;
+              properties?: any;
+              conditions?: any;
+              role?: {
+                id?: number;
+                documentId?: string;
+              };
+              /** @format date-time */
+              createdAt?: string;
+              /** @format date-time */
+              updatedAt?: string;
+              /** @format date-time */
+              publishedAt?: string;
+              createdBy?: {
+                id?: number;
+                documentId?: string;
+              };
+              updatedBy?: {
+                id?: number;
+                documentId?: string;
+              };
+              locale?: string;
+              localizations?: {
+                id?: number;
+                documentId?: string;
+              }[];
+            }[];
+            /** @format date-time */
+            createdAt?: string;
+            /** @format date-time */
+            updatedAt?: string;
+            /** @format date-time */
+            publishedAt?: string;
+            createdBy?: {
+              id?: number;
+              documentId?: string;
+            };
+            updatedBy?: {
+              id?: number;
+              documentId?: string;
+            };
+            locale?: string;
+            localizations?: {
+              id?: number;
+              documentId?: string;
+            }[];
+          }[];
+          blocked?: boolean;
+          preferedLanguage?: string;
+          /** @format date-time */
+          createdAt?: string;
+          /** @format date-time */
+          updatedAt?: string;
+          /** @format date-time */
+          publishedAt?: string;
+          createdBy?: {
+            id?: number;
+            documentId?: string;
+          };
+          updatedBy?: {
+            id?: number;
+            documentId?: string;
+          };
+          locale?: string;
+          localizations?: {
+            id?: number;
+            documentId?: string;
+          }[];
+        };
+        updatedBy?: {
+          id?: number;
+          documentId?: string;
+        };
+        locale?: string;
+        localizations?: {
+          id?: number;
+          documentId?: string;
+        }[];
+      }[];
+      users?: {
+        id?: number;
+        documentId?: string;
+      }[];
+      /** @format date-time */
+      createdAt?: string;
+      /** @format date-time */
+      updatedAt?: string;
+      /** @format date-time */
+      publishedAt?: string;
+      createdBy?: {
+        id?: number;
+        documentId?: string;
+      };
+      updatedBy?: {
+        id?: number;
+        documentId?: string;
+      };
+      locale?: string;
+      localizations?: {
+        id?: number;
+        documentId?: string;
+      }[];
+    };
+    followers?: {
+      id?: number;
+      documentId?: string;
+      nickname?: string;
+      username?: string;
+      type?: MessageTypeEnum;
+      protected?: boolean;
+      users?: {
+        id?: number;
+        documentId?: string;
+      }[];
+      recordings?: {
+        id?: number;
+        documentId?: string;
+        follower?: {
+          id?: number;
+          documentId?: string;
+        };
+        sources?: {
+          id?: number;
+          documentId?: string;
+          state?: MessageStateEnum;
+          executionId?: number;
+          /** @format date-time */
+          finishedAt?: string;
+          path?: string;
+          /** @format float */
+          duration?: number;
+          thumbnailInterval?: number;
+          thumbnailCols?: number;
+          videoOriginal?: VideosVideoComponent;
+          videoSmall?: VideosVideoComponent;
+          /** @format date-time */
+          createdAt?: string;
+          /** @format date-time */
+          updatedAt?: string;
+          /** @format date-time */
+          publishedAt?: string;
+          createdBy?: {
+            id?: number;
+            documentId?: string;
+          };
+          updatedBy?: {
+            id?: number;
+            documentId?: string;
+          };
+          locale?: string;
+          localizations?: {
+            id?: number;
+            documentId?: string;
+          }[];
+        }[];
+        /** @format date-time */
+        createdAt?: string;
+        /** @format date-time */
+        updatedAt?: string;
+        /** @format date-time */
+        publishedAt?: string;
+        createdBy?: {
+          id?: number;
+          documentId?: string;
+        };
+        updatedBy?: {
+          id?: number;
+          documentId?: string;
+        };
+        locale?: string;
+        localizations?: {
+          id?: number;
+          documentId?: string;
+        }[];
+      }[];
+      /** @format date-time */
+      lastCheckedAt?: string;
+      country?: string;
+      countryCode?: string;
+      language?: string;
+      languageCode?: string;
+      avatar?: {
+        id?: number;
+        documentId?: string;
+        name?: string;
+        alternativeText?: string;
+        caption?: string;
+        width?: number;
+        height?: number;
+        formats?: any;
+        hash?: string;
+        ext?: string;
+        mime?: string;
+        /** @format float */
+        size?: number;
+        url?: string;
+        previewUrl?: string;
+        provider?: string;
+        provider_metadata?: any;
+        related?: {
+          id?: number;
+          documentId?: string;
+        }[];
+        folder?: {
+          id?: number;
+          documentId?: string;
+          name?: string;
+          pathId?: number;
+          parent?: {
+            id?: number;
+            documentId?: string;
+          };
+          children?: {
+            id?: number;
+            documentId?: string;
+          }[];
+          files?: {
+            id?: number;
+            documentId?: string;
+            name?: string;
+            alternativeText?: string;
+            caption?: string;
+            width?: number;
+            height?: number;
+            formats?: any;
+            hash?: string;
+            ext?: string;
+            mime?: string;
+            /** @format float */
+            size?: number;
+            url?: string;
+            previewUrl?: string;
+            provider?: string;
+            provider_metadata?: any;
+            related?: {
+              id?: number;
+              documentId?: string;
+            }[];
+            folder?: {
+              id?: number;
+              documentId?: string;
+            };
+            folderPath?: string;
+            /** @format date-time */
+            createdAt?: string;
+            /** @format date-time */
+            updatedAt?: string;
+            /** @format date-time */
+            publishedAt?: string;
+            createdBy?: {
+              id?: number;
+              documentId?: string;
+            };
+            updatedBy?: {
+              id?: number;
+              documentId?: string;
+            };
+            locale?: string;
+            localizations?: {
+              id?: number;
+              documentId?: string;
+            }[];
+          }[];
+          path?: string;
+          /** @format date-time */
+          createdAt?: string;
+          /** @format date-time */
+          updatedAt?: string;
+          /** @format date-time */
+          publishedAt?: string;
+          createdBy?: {
+            id?: number;
+            documentId?: string;
+          };
+          updatedBy?: {
+            id?: number;
+            documentId?: string;
+          };
+          locale?: string;
+          localizations?: {
+            id?: number;
+            documentId?: string;
+          }[];
+        };
+        folderPath?: string;
+        /** @format date-time */
+        createdAt?: string;
+        /** @format date-time */
+        updatedAt?: string;
+        /** @format date-time */
+        publishedAt?: string;
+        createdBy?: {
+          id?: number;
+          documentId?: string;
+        };
+        updatedBy?: {
+          id?: number;
+          documentId?: string;
+        };
+        locale?: string;
+        localizations?: {
+          id?: number;
+          documentId?: string;
+        }[];
+      };
+      /** @format date-time */
+      createdAt?: string;
+      /** @format date-time */
+      updatedAt?: string;
+      /** @format date-time */
+      publishedAt?: string;
+      createdBy?: {
+        id?: number;
+        documentId?: string;
+      };
+      updatedBy?: {
+        id?: number;
+        documentId?: string;
+      };
+      locale?: string;
+      localizations?: {
+        id?: number;
+        documentId?: string;
+      }[];
+    }[];
+    messages?: {
+      id?: number;
+      documentId?: string;
+      type?: string;
+      subject?: string;
+      content?: string;
+      user?: {
+        id?: number;
+        documentId?: string;
+      };
+      state?: string;
+      /** @format date-time */
+      createdAt?: string;
+      /** @format date-time */
+      updatedAt?: string;
+      /** @format date-time */
+      publishedAt?: string;
+      createdBy?: {
+        id?: number;
+        documentId?: string;
+      };
+      updatedBy?: {
+        id?: number;
+        documentId?: string;
+      };
+      locale?: string;
+      localizations?: {
+        id?: number;
+        documentId?: string;
+      }[];
+    }[];
+    /** @format date-time */
+    createdAt?: string;
+    /** @format date-time */
+    updatedAt?: string;
+    /** @format date-time */
+    publishedAt?: string;
+    createdBy?: {
+      id?: number;
+      documentId?: string;
+    };
+    updatedBy?: {
+      id?: number;
+      documentId?: string;
+    };
+    locale?: string;
+    localizations?: {
+      id?: number;
+      documentId?: string;
+    }[];
+  };
+  state?: string;
+  /** @format date-time */
+  createdAt?: string;
+  /** @format date-time */
+  updatedAt?: string;
+  /** @format date-time */
+  publishedAt?: string;
+  createdBy?: {
+    id?: number;
+    documentId?: string;
+  };
+  updatedBy?: {
+    id?: number;
+    documentId?: string;
+  };
+  locale?: string;
+  localizations?: {
+    id?: number;
+    documentId?: string;
+  }[];
+}
+
+export interface MessageResponse {
+  data?: Message;
+  meta?: object;
 }
 
 export interface NavigationRequest {
@@ -1104,6 +1628,37 @@ export interface Recording {
       followers?: {
         id?: number;
         documentId?: string;
+      }[];
+      messages?: {
+        id?: number;
+        documentId?: string;
+        type?: string;
+        subject?: string;
+        content?: string;
+        user?: {
+          id?: number;
+          documentId?: string;
+        };
+        state?: string;
+        /** @format date-time */
+        createdAt?: string;
+        /** @format date-time */
+        updatedAt?: string;
+        /** @format date-time */
+        publishedAt?: string;
+        createdBy?: {
+          id?: number;
+          documentId?: string;
+        };
+        updatedBy?: {
+          id?: number;
+          documentId?: string;
+        };
+        locale?: string;
+        localizations?: {
+          id?: number;
+          documentId?: string;
+        }[];
       }[];
       /** @format date-time */
       createdAt?: string;
@@ -1676,6 +2231,17 @@ export enum FollowerStateEnum {
   Failed = "failed",
 }
 
+export enum MessageTypeEnum {
+  Tiktok = "tiktok",
+  Twitch = "twitch",
+}
+
+export enum MessageStateEnum {
+  Recording = "recording",
+  Done = "done",
+  Failed = "failed",
+}
+
 export enum NavigationsLinksComponentIconEnum {
   IconFlower = "IconFlower",
   IconUsers = "IconUsers",
@@ -1804,6 +2370,52 @@ export interface DeleteFollowersIdParams {
 
 /** @format int64 */
 export type DeleteFollowersIdData = number;
+
+export interface GetMessagesParams {
+  /** Sort by attributes ascending (asc) or descending (desc) */
+  sort?: string;
+  /** Return page/pageSize (default: true) */
+  "pagination[withCount]"?: boolean;
+  /** Page number (default: 0) */
+  "pagination[page]"?: number;
+  /** Page size (default: 25) */
+  "pagination[pageSize]"?: number;
+  /** Offset value (default: 0) */
+  "pagination[start]"?: number;
+  /** Number of entities to return (default: 25) */
+  "pagination[limit]"?: number;
+  /** Fields to return (ex: title,author) */
+  fields?: string;
+  /** Relations to return */
+  populate?: string | string[] | object;
+  /** Filters to apply */
+  filters?: Record<string, any>;
+  /** Locale to apply */
+  locale?: string;
+}
+
+export type GetMessagesData = MessageListResponse;
+
+export type PostMessagesData = MessageResponse;
+
+export interface GetMessagesIdParams {
+  id: string;
+}
+
+export type GetMessagesIdData = MessageResponse;
+
+export interface PutMessagesIdParams {
+  id: string;
+}
+
+export type PutMessagesIdData = MessageResponse;
+
+export interface DeleteMessagesIdParams {
+  id: string;
+}
+
+/** @format int64 */
+export type DeleteMessagesIdData = number;
 
 export interface GetNavigationParams {
   /** Sort by attributes ascending (asc) or descending (desc) */
@@ -2509,6 +3121,110 @@ export namespace Follower {
     export type RequestBody = never;
     export type RequestHeaders = {};
     export type ResponseBody = UnfollowDeleteData;
+  }
+}
+
+export namespace Message {
+  /**
+   * No description
+   * @tags Message
+   * @name GetMessages
+   * @request GET:/messages
+   * @secure
+   */
+  export namespace GetMessages {
+    export type RequestParams = {};
+    export type RequestQuery = {
+      /** Sort by attributes ascending (asc) or descending (desc) */
+      sort?: string;
+      /** Return page/pageSize (default: true) */
+      "pagination[withCount]"?: boolean;
+      /** Page number (default: 0) */
+      "pagination[page]"?: number;
+      /** Page size (default: 25) */
+      "pagination[pageSize]"?: number;
+      /** Offset value (default: 0) */
+      "pagination[start]"?: number;
+      /** Number of entities to return (default: 25) */
+      "pagination[limit]"?: number;
+      /** Fields to return (ex: title,author) */
+      fields?: string;
+      /** Relations to return */
+      populate?: string | string[] | object;
+      /** Filters to apply */
+      filters?: Record<string, any>;
+      /** Locale to apply */
+      locale?: string;
+    };
+    export type RequestBody = never;
+    export type RequestHeaders = {};
+    export type ResponseBody = GetMessagesData;
+  }
+
+  /**
+   * No description
+   * @tags Message
+   * @name PostMessages
+   * @request POST:/messages
+   * @secure
+   */
+  export namespace PostMessages {
+    export type RequestParams = {};
+    export type RequestQuery = {};
+    export type RequestBody = MessageRequest;
+    export type RequestHeaders = {};
+    export type ResponseBody = PostMessagesData;
+  }
+
+  /**
+   * No description
+   * @tags Message
+   * @name GetMessagesId
+   * @request GET:/messages/{id}
+   * @secure
+   */
+  export namespace GetMessagesId {
+    export type RequestParams = {
+      id: string;
+    };
+    export type RequestQuery = {};
+    export type RequestBody = never;
+    export type RequestHeaders = {};
+    export type ResponseBody = GetMessagesIdData;
+  }
+
+  /**
+   * No description
+   * @tags Message
+   * @name PutMessagesId
+   * @request PUT:/messages/{id}
+   * @secure
+   */
+  export namespace PutMessagesId {
+    export type RequestParams = {
+      id: string;
+    };
+    export type RequestQuery = {};
+    export type RequestBody = MessageRequest;
+    export type RequestHeaders = {};
+    export type ResponseBody = PutMessagesIdData;
+  }
+
+  /**
+   * No description
+   * @tags Message
+   * @name DeleteMessagesId
+   * @request DELETE:/messages/{id}
+   * @secure
+   */
+  export namespace DeleteMessagesId {
+    export type RequestParams = {
+      id: string;
+    };
+    export type RequestQuery = {};
+    export type RequestBody = never;
+    export type RequestHeaders = {};
+    export type ResponseBody = DeleteMessagesIdData;
   }
 }
 
@@ -3350,7 +4066,7 @@ export type RequestParams = Omit<
 export interface ApiConfig<SecurityDataType = unknown>
   extends Omit<AxiosRequestConfig, "data" | "cancelToken"> {
   securityWorker?: (
-    securityData: SecurityDataType | null
+    securityData: SecurityDataType | null,
   ) => Promise<AxiosRequestConfig | void> | AxiosRequestConfig | void;
   secure?: boolean;
   format?: ResponseType;
@@ -3392,7 +4108,7 @@ export class HttpClient<SecurityDataType = unknown> {
 
   protected mergeRequestParams(
     params1: AxiosRequestConfig,
-    params2?: AxiosRequestConfig
+    params2?: AxiosRequestConfig,
   ): AxiosRequestConfig {
     const method = params1.method || (params2 && params2.method);
 
@@ -3433,7 +4149,7 @@ export class HttpClient<SecurityDataType = unknown> {
         const isFileType = formItem instanceof Blob || formItem instanceof File;
         formData.append(
           key,
-          isFileType ? formItem : this.stringifyFormItem(formItem)
+          isFileType ? formItem : this.stringifyFormItem(formItem),
         );
       }
 
@@ -3500,7 +4216,7 @@ export class HttpClient<SecurityDataType = unknown> {
  * @contact TEAM <contact-email@something.io> (mywebsite.io)
  */
 export class Api<
-  SecurityDataType extends unknown
+  SecurityDataType extends unknown,
 > extends HttpClient<SecurityDataType> {
   changeLog = {
     /**
@@ -3550,7 +4266,7 @@ export class Api<
      */
     getChangeLogsId: (
       { id, ...query }: GetChangeLogsIdParams,
-      params: RequestParams = {}
+      params: RequestParams = {},
     ) =>
       this.request<GetChangeLogsIdData, Error>({
         path: `/change-logs/${id}`,
@@ -3571,7 +4287,7 @@ export class Api<
     putChangeLogsId: (
       { id, ...query }: PutChangeLogsIdParams,
       data: ChangeLogRequest,
-      params: RequestParams = {}
+      params: RequestParams = {},
     ) =>
       this.request<PutChangeLogsIdData, Error>({
         path: `/change-logs/${id}`,
@@ -3593,7 +4309,7 @@ export class Api<
      */
     deleteChangeLogsId: (
       { id, ...query }: DeleteChangeLogsIdParams,
-      params: RequestParams = {}
+      params: RequestParams = {},
     ) =>
       this.request<DeleteChangeLogsIdData, Error>({
         path: `/change-logs/${id}`,
@@ -3651,7 +4367,7 @@ export class Api<
      */
     getFollowersId: (
       { id, ...query }: GetFollowersIdParams,
-      params: RequestParams = {}
+      params: RequestParams = {},
     ) =>
       this.request<GetFollowersIdData, Error>({
         path: `/followers/${id}`,
@@ -3672,7 +4388,7 @@ export class Api<
     putFollowersId: (
       { id, ...query }: PutFollowersIdParams,
       data: FollowerRequest,
-      params: RequestParams = {}
+      params: RequestParams = {},
     ) =>
       this.request<PutFollowersIdData, Error>({
         path: `/followers/${id}`,
@@ -3694,7 +4410,7 @@ export class Api<
      */
     deleteFollowersId: (
       { id, ...query }: DeleteFollowersIdParams,
-      params: RequestParams = {}
+      params: RequestParams = {},
     ) =>
       this.request<DeleteFollowersIdData, Error>({
         path: `/followers/${id}`,
@@ -3715,7 +4431,7 @@ export class Api<
      */
     browseFollowers: (
       query: BrowseFollowersParams,
-      params: RequestParams = {}
+      params: RequestParams = {},
     ) =>
       this.request<BrowseFollowersData, Error | void>({
         path: `/followers/browse`,
@@ -3757,10 +4473,111 @@ export class Api<
      */
     unfollowDelete: (
       { documentId, ...query }: UnfollowDeleteParams,
-      params: RequestParams = {}
+      params: RequestParams = {},
     ) =>
       this.request<UnfollowDeleteData, void>({
         path: `/followers/unfollow/${documentId}`,
+        method: "DELETE",
+        secure: true,
+        format: "json",
+        ...params,
+      }),
+  };
+  message = {
+    /**
+     * No description
+     *
+     * @tags Message
+     * @name GetMessages
+     * @request GET:/messages
+     * @secure
+     */
+    getMessages: (query: GetMessagesParams, params: RequestParams = {}) =>
+      this.request<GetMessagesData, Error>({
+        path: `/messages`,
+        method: "GET",
+        query: query,
+        secure: true,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Message
+     * @name PostMessages
+     * @request POST:/messages
+     * @secure
+     */
+    postMessages: (data: MessageRequest, params: RequestParams = {}) =>
+      this.request<PostMessagesData, Error>({
+        path: `/messages`,
+        method: "POST",
+        body: data,
+        secure: true,
+        type: ContentType.Json,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Message
+     * @name GetMessagesId
+     * @request GET:/messages/{id}
+     * @secure
+     */
+    getMessagesId: (
+      { id, ...query }: GetMessagesIdParams,
+      params: RequestParams = {},
+    ) =>
+      this.request<GetMessagesIdData, Error>({
+        path: `/messages/${id}`,
+        method: "GET",
+        secure: true,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Message
+     * @name PutMessagesId
+     * @request PUT:/messages/{id}
+     * @secure
+     */
+    putMessagesId: (
+      { id, ...query }: PutMessagesIdParams,
+      data: MessageRequest,
+      params: RequestParams = {},
+    ) =>
+      this.request<PutMessagesIdData, Error>({
+        path: `/messages/${id}`,
+        method: "PUT",
+        body: data,
+        secure: true,
+        type: ContentType.Json,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Message
+     * @name DeleteMessagesId
+     * @request DELETE:/messages/{id}
+     * @secure
+     */
+    deleteMessagesId: (
+      { id, ...query }: DeleteMessagesIdParams,
+      params: RequestParams = {},
+    ) =>
+      this.request<DeleteMessagesIdData, Error>({
+        path: `/messages/${id}`,
         method: "DELETE",
         secure: true,
         format: "json",
@@ -3870,7 +4687,7 @@ export class Api<
      */
     getRecordingsId: (
       { id, ...query }: GetRecordingsIdParams,
-      params: RequestParams = {}
+      params: RequestParams = {},
     ) =>
       this.request<GetRecordingsIdData, Error>({
         path: `/recordings/${id}`,
@@ -3892,7 +4709,7 @@ export class Api<
     putRecordingsId: (
       { id, ...query }: PutRecordingsIdParams,
       data: RecordingRequest,
-      params: RequestParams = {}
+      params: RequestParams = {},
     ) =>
       this.request<PutRecordingsIdData, Error>({
         path: `/recordings/${id}`,
@@ -3914,7 +4731,7 @@ export class Api<
      */
     deleteRecordingsId: (
       { id, ...query }: DeleteRecordingsIdParams,
-      params: RequestParams = {}
+      params: RequestParams = {},
     ) =>
       this.request<DeleteRecordingsIdData, Error>({
         path: `/recordings/${id}`,
@@ -3935,7 +4752,7 @@ export class Api<
      */
     browseRecordings: (
       query: BrowseRecordingsParams,
-      params: RequestParams = {}
+      params: RequestParams = {},
     ) =>
       this.request<BrowseRecordingsData, Error | void>({
         path: `/recordings/browse`,
@@ -3994,7 +4811,7 @@ export class Api<
      */
     getSourcesId: (
       { id, ...query }: GetSourcesIdParams,
-      params: RequestParams = {}
+      params: RequestParams = {},
     ) =>
       this.request<GetSourcesIdData, Error>({
         path: `/sources/${id}`,
@@ -4015,7 +4832,7 @@ export class Api<
     putSourcesId: (
       { id, ...query }: PutSourcesIdParams,
       data: SourceRequest,
-      params: RequestParams = {}
+      params: RequestParams = {},
     ) =>
       this.request<PutSourcesIdData, Error>({
         path: `/sources/${id}`,
@@ -4037,7 +4854,7 @@ export class Api<
      */
     deleteSourcesId: (
       { id, ...query }: DeleteSourcesIdParams,
-      params: RequestParams = {}
+      params: RequestParams = {},
     ) =>
       this.request<DeleteSourcesIdData, Error>({
         path: `/sources/${id}`,
@@ -4078,7 +4895,7 @@ export class Api<
     uploadIdCreate: (
       { id, ...query }: UploadIdCreateParams,
       data: UploadIdCreatePayload,
-      params: RequestParams = {}
+      params: RequestParams = {},
     ) =>
       this.request<UploadIdCreateData, any>({
         path: `/upload?id=${id}`,
@@ -4118,7 +4935,7 @@ export class Api<
      */
     filesDetail: (
       { id, ...query }: FilesDetailParams,
-      params: RequestParams = {}
+      params: RequestParams = {},
     ) =>
       this.request<FilesDetailData, any>({
         path: `/upload/files/${id}`,
@@ -4138,7 +4955,7 @@ export class Api<
      */
     filesDelete: (
       { id, ...query }: FilesDeleteParams,
-      params: RequestParams = {}
+      params: RequestParams = {},
     ) =>
       this.request<FilesDeleteData, any>({
         path: `/upload/files/${id}`,
@@ -4160,7 +4977,7 @@ export class Api<
      */
     connectDetail: (
       { provider, ...query }: ConnectDetailParams,
-      params: RequestParams = {}
+      params: RequestParams = {},
     ) =>
       this.request<any, void | Error>({
         path: `/connect/${provider}`,
@@ -4200,7 +5017,7 @@ export class Api<
      */
     localRegisterCreate: (
       data: LocalRegisterCreatePayload,
-      params: RequestParams = {}
+      params: RequestParams = {},
     ) =>
       this.request<LocalRegisterCreateData, Error>({
         path: `/auth/local/register`,
@@ -4223,7 +5040,7 @@ export class Api<
      */
     callbackList: (
       { provider, ...query }: CallbackListParams,
-      params: RequestParams = {}
+      params: RequestParams = {},
     ) =>
       this.request<CallbackListData, Error>({
         path: `/auth/${provider}/callback`,
@@ -4244,7 +5061,7 @@ export class Api<
      */
     forgotPasswordCreate: (
       data: ForgotPasswordCreatePayload,
-      params: RequestParams = {}
+      params: RequestParams = {},
     ) =>
       this.request<ForgotPasswordCreateData, Error>({
         path: `/auth/forgot-password`,
@@ -4267,7 +5084,7 @@ export class Api<
      */
     resetPasswordCreate: (
       data: ResetPasswordCreatePayload,
-      params: RequestParams = {}
+      params: RequestParams = {},
     ) =>
       this.request<ResetPasswordCreateData, Error>({
         path: `/auth/reset-password`,
@@ -4290,7 +5107,7 @@ export class Api<
      */
     changePasswordCreate: (
       data: ChangePasswordCreatePayload,
-      params: RequestParams = {}
+      params: RequestParams = {},
     ) =>
       this.request<ChangePasswordCreateData, Error>({
         path: `/auth/change-password`,
@@ -4313,7 +5130,7 @@ export class Api<
      */
     emailConfirmationList: (
       query: EmailConfirmationListParams,
-      params: RequestParams = {}
+      params: RequestParams = {},
     ) =>
       this.request<any, void | Error>({
         path: `/auth/email-confirmation`,
@@ -4334,7 +5151,7 @@ export class Api<
      */
     sendEmailConfirmationCreate: (
       data: SendEmailConfirmationCreatePayload,
-      params: RequestParams = {}
+      params: RequestParams = {},
     ) =>
       this.request<SendEmailConfirmationCreateData, Error>({
         path: `/auth/send-email-confirmation`,
@@ -4399,7 +5216,7 @@ export class Api<
         type?: string;
         permissions?: UsersPermissionsPermissionsTree;
       },
-      params: RequestParams = {}
+      params: RequestParams = {},
     ) =>
       this.request<RolesCreateData, Error>({
         path: `/users-permissions/roles`,
@@ -4421,7 +5238,7 @@ export class Api<
      */
     rolesDetail: (
       { id, ...query }: RolesDetailParams,
-      params: RequestParams = {}
+      params: RequestParams = {},
     ) =>
       this.request<RolesDetailData, Error>({
         path: `/users-permissions/roles/${id}`,
@@ -4448,7 +5265,7 @@ export class Api<
         type?: string;
         permissions?: UsersPermissionsPermissionsTree;
       },
-      params: RequestParams = {}
+      params: RequestParams = {},
     ) =>
       this.request<RolesUpdateData, Error>({
         path: `/users-permissions/roles/${role}`,
@@ -4470,7 +5287,7 @@ export class Api<
      */
     rolesDelete: (
       { role, ...query }: RolesDeleteParams,
-      params: RequestParams = {}
+      params: RequestParams = {},
     ) =>
       this.request<RolesDeleteData, Error>({
         path: `/users-permissions/roles/${role}`,
@@ -4529,7 +5346,7 @@ export class Api<
      */
     usersDetail: (
       { id, ...query }: UsersDetailParams,
-      params: RequestParams = {}
+      params: RequestParams = {},
     ) =>
       this.request<UsersDetailData, Error>({
         path: `/users/${id}`,
@@ -4551,7 +5368,7 @@ export class Api<
     usersUpdate: (
       { id, ...query }: UsersUpdateParams,
       data: UsersUpdatePayload,
-      params: RequestParams = {}
+      params: RequestParams = {},
     ) =>
       this.request<UsersUpdateData, Error>({
         path: `/users/${id}`,
@@ -4574,7 +5391,7 @@ export class Api<
      */
     usersDelete: (
       { id, ...query }: UsersDeleteParams,
-      params: RequestParams = {}
+      params: RequestParams = {},
     ) =>
       this.request<UsersDeleteData, Error>({
         path: `/users/${id}`,
@@ -4595,7 +5412,7 @@ export class Api<
      */
     getUsersPermissionsUsersRoles: (
       query: GetUsersPermissionsUsersRolesParams,
-      params: RequestParams = {}
+      params: RequestParams = {},
     ) =>
       this.request<GetUsersPermissionsUsersRolesData, Error>({
         path: `/users/me`,
