@@ -13,6 +13,15 @@ body {
   box-shadow: inset 0 0 100px 25px rgba(100, 150, 255, 0.2);
 }
 
+.mantine-AppShell-navbar {
+  background-color: transparent;
+  @media (max-width: 48em) {
+    /* sm breakpoint */
+    background-color: #01010c;
+    box-shadow: inset 0 0 100px 25px rgba(100, 150, 255, 0.2);
+  }
+}
+
 [data-mantine-color-scheme="dark"] {
   --mantine-color-body: #01010c;
   --mantine-color-dark-filled: #0a0a1a;
