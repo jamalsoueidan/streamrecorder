@@ -29,7 +29,7 @@
   align-items: center;
   text-decoration: none;
   font-size: var(--mantine-font-size-lg);
-  color: light-dark(var(--mantine-color-gray-7), var(--mantine-color-dark-1));
+  color: white;
   padding: var(--mantine-spacing-xs) var(--mantine-spacing-sm);
   border-radius: var(--mantine-radius-sm);
   font-weight: 500;

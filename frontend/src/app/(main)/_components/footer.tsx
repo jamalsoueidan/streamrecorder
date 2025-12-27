@@ -1,8 +1,14 @@
 "use client";
-import { Container, Text } from "@mantine/core";
-
+import {
+  Anchor,
+  Container,
+  Group,
+  Stack,
+  Text,
+  Title,
+  useMatches,
+} from "@mantine/core";
 import Link from "next/link";
-import classes from "./footer.module.css";
 
 const data = [
   {
@@ -32,41 +38,62 @@ const data = [
 ];
 
 export function Footer() {
-  const groups = data.map((group) => {
-    const links = group.links.map((link, index) => (
-      <Text
-        key={index}
-        className={classes.link}
-        component={Link}
-        href={link.link}
-      >
-        {link.label}
-      </Text>
-    ));
-
-    return (
-      <div className={classes.wrapper} key={group.title}>
-        <Text className={classes.title}>{group.title}</Text>
-        {links}
-      </div>
-    );
+  const gap = useMatches({
+    base: 30,
+    sm: 50,
+    md: 100,
   });
 
+  const groups = data.map((group) => (
+    <Stack key={group.title} gap="xs">
+      <Text fw={500} size="sm" c="dimmed">
+        {group.title}
+      </Text>
+      {group.links.map((link) => (
+        <Anchor
+          key={link.label}
+          component={Link}
+          href={link.link}
+          size="md"
+          c="white"
+        >
+          {link.label}
+        </Anchor>
+      ))}
+    </Stack>
+  ));
+
   return (
-    <footer className={classes.footer}>
-      <Container className={classes.inner}>
-        <div className={classes.logo}>
-          StreamRecorder
-          <Text size="sm" c="dimmed" className={classes.description}>
-            Never miss a live stream again
+    <footer>
+      <Container size="lg" py="xl" mt={120}>
+        <Group justify="space-between" align="flex-start">
+          {/* Logo & description - left side */}
+          <Stack gap="xs">
+            <Anchor component={Link} href="/" c="white" underline="never">
+              <Title order={3}>StreamRecorder</Title>
+            </Anchor>
+            <Text size="sm" c="dimmed">
+              Never miss a live stream again
+            </Text>
+          </Stack>
+
+          {/* Link groups - right side, close together */}
+          <Group gap={gap} align="flex-start" px={gap}>
+            {groups}
+          </Group>
+        </Group>
+
+        {/* Bottom section */}
+        <Group
+          justify="space-between"
+          mt="xl"
+          pt="xl"
+          style={{ borderTop: "1px solid var(--mantine-color-dark-4)" }}
+        >
+          <Text c="dimmed" size="sm">
+            © 2026 streamrecorder.com. All rights reserved.
           </Text>
-        </div>
-        <div className={classes.groups}>{groups}</div>
-      </Container>
-      <Container className={classes.afterFooter}>
-        <Text c="dimmed" size="sm">
-          © 2026 streamrecorder.com. All rights reserved.
-        </Text>
+        </Group>
       </Container>
     </footer>
   );

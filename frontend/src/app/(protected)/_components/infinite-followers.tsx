@@ -233,7 +233,6 @@ export default function InfiniteFollowers({
                 shadow="sm"
                 padding={cardPadding}
                 radius="md"
-                bg="gray.7"
                 h="100%"
                 withBorder
               >

@@ -1,5 +1,5 @@
 "use client";
-import { Anchor, Burger, Container, Group } from "@mantine/core";
+import { Anchor, Burger, Container, Group, Title } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 
 import Link from "next/link";
@@ -28,10 +28,10 @@ export function HeaderMenu() {
 
   return (
     <header className={classes.header}>
-      <Container size="md">
+      <Container size="lg">
         <div className={classes.inner}>
-          <Anchor component={Link} href="/">
-            <strong>StreamRecorder</strong>
+          <Anchor component={Link} href="/" c="white" style={{}}>
+            <Title size="xl">StreamRecorder</Title>
           </Anchor>
           <Group gap={5} visibleFrom="sm">
             {items}
