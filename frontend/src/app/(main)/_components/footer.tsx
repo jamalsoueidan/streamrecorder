@@ -1,6 +1,7 @@
 "use client";
 import { Container, Text } from "@mantine/core";
 
+import Link from "next/link";
 import classes from "./footer.module.css";
 
 const data = [
@@ -33,12 +34,11 @@ const data = [
 export function Footer() {
   const groups = data.map((group) => {
     const links = group.links.map((link, index) => (
-      <Text<"a">
+      <Text
         key={index}
         className={classes.link}
-        component="a"
+        component={Link}
         href={link.link}
-        onClick={(event) => event.preventDefault()}
       >
         {link.label}
       </Text>
