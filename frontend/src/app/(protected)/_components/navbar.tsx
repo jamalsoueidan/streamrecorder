@@ -1,6 +1,6 @@
 "use client";
 
-import { ActionIcon, Badge, Box, Code, Group, Text } from "@mantine/core";
+import { ActionIcon, Box, Group, Text } from "@mantine/core";
 import {
   IconArrowLeft,
   IconBellRinging,
@@ -29,6 +29,7 @@ import { useNavigation } from "../../providers/navigation-provider";
 import { useUser } from "../../providers/user-provider";
 import AddFollowerForm from "./add-follower-form";
 import classes from "./navbar.module.css";
+import { RoleBadge } from "./role-badge";
 
 export const iconMap: Record<string, typeof IconBellRinging> = {
   IconFlower: IconFlower,
@@ -103,16 +104,10 @@ export function Navbar({
             >
               <IconArrowLeft stroke={1.4} />
             </ActionIcon>
-            <Group gap="xs">
-              <Text>{user?.username}</Text>
-              <Badge size="sm" color="blue">
-                {user?.role?.name}
-              </Badge>
-            </Group>
+
+            <Text>{user?.username}</Text>
           </Group>
-          <Code fw={700}>
-            {opened}v{version}
-          </Code>
+          {user?.role ? <RoleBadge role={user.role} /> : null}
         </Group>
 
         {links}
