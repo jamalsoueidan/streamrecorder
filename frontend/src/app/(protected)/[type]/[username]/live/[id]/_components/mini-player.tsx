@@ -109,6 +109,8 @@ export function MiniPlayer({ sources, width, height }: Props) {
   };
 
   const handleProgressClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
     handleSeek(e.clientX, e.currentTarget.getBoundingClientRect());
   };
 
@@ -233,10 +235,10 @@ export function MiniPlayer({ sources, width, height }: Props) {
           onClick={handleProgressClick}
           style={{
             position: "absolute",
-            bottom: 0,
-            left: 0,
-            right: 0,
-            height: 20,
+            bottom: 8,
+            left: 8,
+            right: 8,
+            height: 24,
             paddingTop: 12,
             cursor: "pointer",
             zIndex: 10,
@@ -245,9 +247,9 @@ export function MiniPlayer({ sources, width, height }: Props) {
           {/* Track background */}
           <div
             style={{
-              height: 8,
+              height: 14,
               background: "rgba(255,255,255,0.3)",
-              borderRadius: 4,
+              borderRadius: 12,
               position: "relative",
             }}
           >
@@ -257,7 +259,8 @@ export function MiniPlayer({ sources, width, height }: Props) {
                 height: "100%",
                 width: `${progress}%`,
                 background: "#fff",
-                borderRadius: 4,
+                borderStartStartRadius: 12,
+                borderEndStartRadius: 12,
                 position: "relative",
               }}
             >
@@ -266,11 +269,11 @@ export function MiniPlayer({ sources, width, height }: Props) {
                 onMouseDown={handleMouseDown}
                 style={{
                   position: "absolute",
-                  right: -6,
+                  right: -12,
                   top: "50%",
                   transform: "translateY(-50%)",
-                  width: 12,
-                  height: 12,
+                  width: 16,
+                  height: 16,
                   background: "#fff",
                   borderRadius: "50%",
                   cursor: "grab",

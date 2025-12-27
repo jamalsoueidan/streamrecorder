@@ -320,6 +320,7 @@ export default function InfiniteFollowers({
                               w={160}
                               h={284}
                               sources={rec.sources}
+                              type={follower.type}
                             />
                             <div>
                               <Text size="xs">
