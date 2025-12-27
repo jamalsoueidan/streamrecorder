@@ -49,7 +49,7 @@ export function ImageVideoPreview({ sources, href, w, h, type }: Props) {
       clearTimeout(timeoutRef.current);
       timeoutRef.current = null;
     }
-    //setShowVideo(false);
+    setShowVideo(false);
   };
 
   const handleDoubleClick = () => {
