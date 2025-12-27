@@ -30,20 +30,13 @@
     "protected": {
       "type": "boolean"
     },
-    "users": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "plugin::users-permissions.user",
-      "inversedBy": "followers"
-    },
-    "recordings": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::recording.recording",
-      "mappedBy": "follower"
-    },
-    "lastCheckedAt": {
-      "type": "datetime"
+    "gender": {
+      "type": "enumeration",
+      "enum": [
+        "male",
+        "female",
+        "unknown"
+      ]
     },
     "country": {
       "type": "string"
@@ -66,6 +59,21 @@
         "videos",
         "audios"
       ]
+    },
+    "lastCheckedAt": {
+      "type": "datetime"
+    },
+    "users": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "followers"
+    },
+    "recordings": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::recording.recording",
+      "mappedBy": "follower"
     }
   }
 }
