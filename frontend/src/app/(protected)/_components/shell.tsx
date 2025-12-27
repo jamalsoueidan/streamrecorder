@@ -40,7 +40,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
           <Burger opened={opened} onClick={open} hiddenFrom="sm" size="sm" />
         </Group>
       </AppShell.Header>
-      <AppShell.Navbar bg="transparent">
+      <AppShell.Navbar>
         <Navbar opened={opened} close={close} />
       </AppShell.Navbar>
       <AppShell.Main>{children}</AppShell.Main>
