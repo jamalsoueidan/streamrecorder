@@ -1,52 +1,73 @@
 "use client";
-import { ActionIcon, Anchor, Group } from "@mantine/core";
-import { IconBrandGithub } from "@tabler/icons-react";
+import { Container, Text } from "@mantine/core";
 
-import Link from "next/link";
 import classes from "./footer.module.css";
 
-const links = [
-  { link: "/", label: "Home" },
-  { link: "/product-updates", label: "Product updates" },
-  { link: "/privacy", label: "Privacy Policy" },
-  { link: "/terms", label: "Terms & Conditions" },
-  { link: "/dmca", label: "DMCA policy" },
-  { link: "/faq", label: "Faq" },
+const data = [
+  {
+    title: "Recordings",
+    links: [
+      { label: "Tiktok recordings", link: "#" },
+      { label: "Twitch recordings", link: "#" },
+    ],
+  },
+  {
+    title: "Legal",
+    links: [
+      { link: "/privacy", label: "Privacy Policy" },
+      { link: "/terms", label: "Terms & Conditions" },
+      { link: "/dmca", label: "DMCA policy" },
+    ],
+  },
+  {
+    title: "About",
+    links: [
+      { link: "/product-updates", label: "News" },
+      { link: "/faq", label: "Faq" },
+      { link: "/product-updates", label: "Updates" },
+      { link: "/contact", label: "Contact" },
+    ],
+  },
 ];
 
 export function Footer() {
-  const items = links.map((link) => (
-    <Anchor
-      c="dimmed"
-      component={Link}
-      key={link.label}
-      href={link.link}
-      lh={1}
-      size="sm"
-    >
-      {link.label}
-    </Anchor>
-  ));
+  const groups = data.map((group) => {
+    const links = group.links.map((link, index) => (
+      <Text<"a">
+        key={index}
+        className={classes.link}
+        component="a"
+        href={link.link}
+        onClick={(event) => event.preventDefault()}
+      >
+        {link.label}
+      </Text>
+    ));
+
+    return (
+      <div className={classes.wrapper} key={group.title}>
+        <Text className={classes.title}>{group.title}</Text>
+        {links}
+      </div>
+    );
+  });
 
   return (
-    <div className={classes.footer}>
-      <div className={classes.inner}>
-        <Anchor component={Link} href="/">
-          <strong>StreamRecorder</strong>
-        </Anchor>
-        <Group className={classes.links}>{items}</Group>
-        <Group gap="xs" justify="flex-end" wrap="nowrap">
-          <ActionIcon
-            size="lg"
-            variant="default"
-            radius="xl"
-            component={Link}
-            href="#"
-          >
-            <IconBrandGithub size={18} stroke={1.5} />
-          </ActionIcon>
-        </Group>
-      </div>
-    </div>
+    <footer className={classes.footer}>
+      <Container className={classes.inner}>
+        <div className={classes.logo}>
+          StreamRecorder
+          <Text size="sm" c="dimmed" className={classes.description}>
+            Never miss a live stream again
+          </Text>
+        </div>
+        <div className={classes.groups}>{groups}</div>
+      </Container>
+      <Container className={classes.afterFooter}>
+        <Text c="dimmed" size="sm">
+          © 2026 streamrecorder.com. All rights reserved.
+        </Text>
+      </Container>
+    </footer>
   );
 }
