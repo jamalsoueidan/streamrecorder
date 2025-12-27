@@ -506,6 +506,41 @@ export interface ApiFollowerFollower extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiMessageMessage extends Struct.CollectionTypeSchema {
+  collectionName: 'messages';
+  info: {
+    displayName: 'Message';
+    pluralName: 'messages';
+    singularName: 'message';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    content: Schema.Attribute.Text;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::message.message'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    state: Schema.Attribute.String;
+    subject: Schema.Attribute.String;
+    type: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    user: Schema.Attribute.Relation<
+      'manyToOne',
+      'plugin::users-permissions.user'
+    >;
+  };
+}
+
 export interface ApiNavigationNavigation extends Struct.SingleTypeSchema {
   collectionName: 'navigations';
   info: {
@@ -1087,6 +1122,7 @@ export interface PluginUsersPermissionsUser
       'plugin::users-permissions.user'
     > &
       Schema.Attribute.Private;
+    messages: Schema.Attribute.Relation<'oneToMany', 'api::message.message'>;
     password: Schema.Attribute.Password &
       Schema.Attribute.Private &
       Schema.Attribute.SetMinMaxLength<{
@@ -1124,6 +1160,7 @@ declare module '@strapi/strapi' {
       'admin::user': AdminUser;
       'api::change-log.change-log': ApiChangeLogChangeLog;
       'api::follower.follower': ApiFollowerFollower;
+      'api::message.message': ApiMessageMessage;
       'api::navigation.navigation': ApiNavigationNavigation;
       'api::recording.recording': ApiRecordingRecording;
       'api::source.source': ApiSourceSource;

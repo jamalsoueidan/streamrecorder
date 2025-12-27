@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "messages",
+  "info": {
+    "singularName": "message",
+    "pluralName": "messages",
+    "displayName": "Message"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "type": {
+      "type": "string"
+    },
+    "subject": {
+      "type": "string"
+    },
+    "content": {
+      "type": "text"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "messages"
+    },
+    "state": {
+      "type": "string"
+    }
+  }
+}

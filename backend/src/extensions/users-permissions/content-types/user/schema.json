@@ -71,6 +71,12 @@
       "relation": "manyToMany",
       "target": "api::follower.follower",
       "mappedBy": "users"
+    },
+    "messages": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::message.message",
+      "mappedBy": "user"
     }
   }
 }
