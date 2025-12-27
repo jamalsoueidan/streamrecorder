@@ -1,6 +1,6 @@
 "use client";
 
-import { ActionIcon, Box, Code, Group, Text } from "@mantine/core";
+import { ActionIcon, Badge, Box, Code, Group, Text } from "@mantine/core";
 import {
   IconArrowLeft,
   IconBellRinging,
@@ -103,7 +103,12 @@ export function Navbar({
             >
               <IconArrowLeft stroke={1.4} />
             </ActionIcon>
-            <Text> {user?.username}</Text>
+            <Group gap="xs">
+              <Text>{user?.username}</Text>
+              <Badge size="sm" color="blue">
+                {user?.role?.name}
+              </Badge>
+            </Group>
           </Group>
           <Code fw={700}>
             {opened}v{version}

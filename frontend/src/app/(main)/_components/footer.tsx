@@ -10,6 +10,7 @@ const links = [
   { link: "/product-updates", label: "Product updates" },
   { link: "/privacy", label: "Privacy Policy" },
   { link: "/terms", label: "Terms & Conditions" },
+  { link: "/dmca", label: "DMCA policy" },
 ];
 
 export function Footer() {
