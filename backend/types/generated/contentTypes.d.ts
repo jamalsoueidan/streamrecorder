@@ -503,6 +503,7 @@ export interface ApiFollowerFollower extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    gender: Schema.Attribute.Enumeration<['male', 'female', 'unknown']>;
     language: Schema.Attribute.String;
     languageCode: Schema.Attribute.String;
     lastCheckedAt: Schema.Attribute.DateTime;
