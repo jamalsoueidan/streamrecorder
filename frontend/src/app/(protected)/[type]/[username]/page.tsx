@@ -29,7 +29,7 @@ interface PageProps {
 export default async function Page({ params }: PageProps) {
   const { type, username } = await params;
   const user =
-    await api.usersPermissionsUsersRoles.getUsersPermissionsUsersRoles();
+    await api.usersPermissionsUsersRoles.getUsersPermissionsUsersRoles({});
   const response = await api.follower.getFollowers({
     filters: {
       username,
