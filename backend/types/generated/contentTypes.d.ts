@@ -468,7 +468,7 @@ export interface ApiChangeLogChangeLog extends Struct.CollectionTypeSchema {
     singularName: 'change-log';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     body: Schema.Attribute.Text;
@@ -497,7 +497,7 @@ export interface ApiFaqFaq extends Struct.CollectionTypeSchema {
     singularName: 'faq';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     createdAt: Schema.Attribute.DateTime;
@@ -524,7 +524,7 @@ export interface ApiFollowerFollower extends Struct.CollectionTypeSchema {
     singularName: 'follower';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     avatar: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
@@ -564,7 +564,7 @@ export interface ApiMessageMessage extends Struct.CollectionTypeSchema {
     singularName: 'message';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     content: Schema.Attribute.Text;
@@ -636,7 +636,7 @@ export interface ApiRecordingRecording extends Struct.CollectionTypeSchema {
     singularName: 'recording';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     createdAt: Schema.Attribute.DateTime;
@@ -665,7 +665,7 @@ export interface ApiSourceSource extends Struct.CollectionTypeSchema {
     singularName: 'source';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     createdAt: Schema.Attribute.DateTime;

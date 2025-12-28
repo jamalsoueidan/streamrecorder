@@ -26,7 +26,6 @@ export default factories.createCoreController(
           documentId: user.documentId,
           fields: ["id"],
           populate: { followers: { fields: ["id"] } },
-          status: "published",
         });
 
       const followingIds = fullUser?.followers?.map((f) => f.id) || [];
@@ -100,7 +99,7 @@ export default factories.createCoreController(
             filters: {
               follower: { id: { $eq: follower.id } },
             },
-            status: "published",
+
             limit: 5,
             sort: { createdAt: "desc" },
           };
@@ -157,13 +156,11 @@ export default factories.createCoreController(
         .documents("api::follower.follower")
         .findFirst({
           filters: { username, type },
-          status: "published",
         });
 
       if (!follower) {
         follower = await strapi.documents("api::follower.follower").create({
           data: { username, type },
-          status: "published",
         });
       } else {
         follower = await strapi.documents("api::follower.follower").update({
@@ -209,7 +206,6 @@ export default factories.createCoreController(
           type,
           createdAt: createdAt || new Date(),
         },
-        status: "published",
       });
 
       ctx.body = { data: result };
