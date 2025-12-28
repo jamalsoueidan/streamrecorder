@@ -13,11 +13,11 @@ import {
   Anchor,
   Avatar,
   Divider,
-  Flex,
   Grid,
   Group,
   Loader,
   Select,
+  SimpleGrid,
   Stack,
   Text,
   Title,
@@ -131,21 +131,19 @@ export default function InfiniteRecordings({
         />
       </Group>
       <Divider />
-      <Flex gap="lg" wrap="wrap">
+      <SimpleGrid cols={{ base: 1, sm: 2, md: 3, xl: 4 }} spacing="lg">
         {(data || []).map((rec) => {
           if (rec.follower?.username === "stefany_23v") {
             console.log(rec);
           }
           return (
-            <Grid gutter="xs" key={rec.documentId} w="160">
+            <Grid gutter="xs" key={rec.documentId} w="100%">
               <Grid.Col span={12}>
                 <ImageVideoPreview
                   key={rec.documentId}
                   href={`/${rec.follower?.type}/${
                     rec.follower?.username
                   }/live/${rec.documentId}${sort ? `?sort=` + sort : null}`}
-                  w={160}
-                  h={284}
                   type={rec.follower?.type}
                   sources={rec.sources}
                 />
@@ -186,7 +184,7 @@ export default function InfiniteRecordings({
             </Grid>
           );
         })}
-      </Flex>
+      </SimpleGrid>
       {/* Sentinel element */}
       <div ref={ref} style={{ height: 1 }} />
 

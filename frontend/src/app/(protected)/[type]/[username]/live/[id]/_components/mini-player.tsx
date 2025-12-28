@@ -11,11 +11,10 @@ import "video.js/dist/video-js.css";
 
 interface Props {
   sources: Source[];
-  width: number;
-  height: number;
 }
 
-export function MiniPlayer({ sources, width, height }: Props) {
+export function MiniPlayer({ sources }: Props) {
+  const containerRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const playerRef = useRef<Player | null>(null);
   const playlistUrlRef = useRef<string | null>(null);
@@ -32,7 +31,6 @@ export function MiniPlayer({ sources, width, height }: Props) {
 
     const smallMissing = sources.some((s) => !s.videoSmall);
 
-    console.log(smallMissing);
     const combinedPlaylist = combinePlaylistsFromSources(
       sources,
       smallMissing ? "original" : "small"
@@ -51,6 +49,8 @@ export function MiniPlayer({ sources, width, height }: Props) {
         autoplay: true,
         muted: true,
         controls: false,
+        fluid: false, // Don't use fluid
+        fill: true, // Fill the container
         responsive: false,
         loadingSpinner: false,
         html5: {
@@ -141,13 +141,13 @@ export function MiniPlayer({ sources, width, height }: Props) {
 
   return (
     <div
+      ref={containerRef}
       className="mini-player-wrapper"
       style={{
-        width,
-        height,
-        borderRadius: 8, // or use a prop
-        overflow: "hidden", // Important! Clips video to rounded corners
-        position: "relative", // Add this too for absolute children
+        position: "absolute", // Fill parent
+        inset: 0, // top/right/bottom/left = 0
+        borderRadius: 8,
+        overflow: "hidden",
       }}
     >
       <style jsx global>{`
@@ -160,6 +160,8 @@ export function MiniPlayer({ sources, width, height }: Props) {
         .mini-player-wrapper .video-js,
         .mini-player-wrapper .vjs-tech,
         .mini-player-wrapper [data-vjs-player] {
+          position: absolute !important;
+          inset: 0 !important;
           width: 100% !important;
           height: 100% !important;
           background: transparent !important;
@@ -167,7 +169,10 @@ export function MiniPlayer({ sources, width, height }: Props) {
         }
 
         .mini-player-wrapper .vjs-tech {
-          object-fit: cover;
+          background-color: #000 !important;
+          border-radius: 10px !important;
+          overflow: hidden !important;
+          object-fit: contain;
         }
 
         .mini-player-wrapper .vjs-control-bar,
@@ -182,24 +187,30 @@ export function MiniPlayer({ sources, width, height }: Props) {
         }
       `}</style>
 
-      {/* Video - hidden until loaded */}
+      {/* Video container */}
       <div
         data-vjs-player
         style={{
-          width: "100%",
-          height: "100%",
+          position: "absolute",
+          inset: 0,
           opacity: loading ? 0 : 1,
           transition: "opacity 0.2s ease",
         }}
       >
         <video
           ref={videoRef}
-          className="video-js vjs-default-skin"
+          className="video-js vjs-default-skin vjs-fill"
           playsInline
+          style={{
+            position: "absolute",
+            inset: 0,
+            width: "100%",
+            height: "100%",
+          }}
         />
       </div>
 
-      {/* Loading spinner - shows during initial load and seeking */}
+      {/* Loading spinner */}
       {showSpinner && (
         <div
           style={{
@@ -214,6 +225,7 @@ export function MiniPlayer({ sources, width, height }: Props) {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
+            zIndex: 5,
           }}
         >
           <div
@@ -229,7 +241,7 @@ export function MiniPlayer({ sources, width, height }: Props) {
         </div>
       )}
 
-      {/* Progress bar - only show when video is loaded */}
+      {/* Progress bar */}
       {!loading && (
         <div
           onClick={handleProgressClick}
@@ -244,7 +256,6 @@ export function MiniPlayer({ sources, width, height }: Props) {
             zIndex: 10,
           }}
         >
-          {/* Track background */}
           <div
             style={{
               height: 14,
@@ -253,7 +264,6 @@ export function MiniPlayer({ sources, width, height }: Props) {
               position: "relative",
             }}
           >
-            {/* Progress fill */}
             <div
               style={{
                 height: "100%",
@@ -264,7 +274,6 @@ export function MiniPlayer({ sources, width, height }: Props) {
                 position: "relative",
               }}
             >
-              {/* Draggable thumb */}
               <div
                 onMouseDown={handleMouseDown}
                 style={{

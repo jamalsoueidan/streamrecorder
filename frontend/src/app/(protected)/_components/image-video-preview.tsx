@@ -16,12 +16,10 @@ import { FollowerTypeIcon } from "./follower-type";
 interface Props {
   sources?: Source[] | null;
   href: string;
-  w: number;
-  h: number;
   type: FollowerTypeEnum | undefined;
 }
 
-export function ImageVideoPreview({ sources, href, w, h, type }: Props) {
+export function ImageVideoPreview({ sources, href, type }: Props) {
   const [showVideo, setShowVideo] = useState(false);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
   const router = useRouter();
@@ -56,14 +54,17 @@ export function ImageVideoPreview({ sources, href, w, h, type }: Props) {
     router.push(href);
   };
 
+  const w = 540;
+  const h = 320;
+
   return (
     <div
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       style={{
         position: "relative",
-        width: w,
-        height: h,
+        width: "100%",
+        aspectRatio: "1/1",
       }}
     >
       <Anchor
@@ -84,13 +85,12 @@ export function ImageVideoPreview({ sources, href, w, h, type }: Props) {
                 : uri + "preview.jpg"
               : null
           }
-          w={w}
-          h={h}
           loading="lazy"
           fallbackSrc="https://placehold.co/180x280/black/white?text=Recording started"
           style={{
+            width: "100%",
+            height: "100%",
             objectFit: "cover",
-            objectPosition: "center center",
             display: showVideo ? "none" : "block",
             ...(isRecording && { border: "2px solid red" }),
           }}
@@ -120,7 +120,7 @@ export function ImageVideoPreview({ sources, href, w, h, type }: Props) {
 
       {showVideo && sources && (
         <div onClick={handleDoubleClick} style={{ cursor: "pointer" }}>
-          <MiniPlayer sources={sources} width={w} height={h} />
+          <MiniPlayer sources={sources} />
         </div>
       )}
 

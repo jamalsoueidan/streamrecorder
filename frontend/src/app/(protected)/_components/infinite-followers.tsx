@@ -25,6 +25,7 @@ import {
   Image,
   Loader,
   Select,
+  SimpleGrid,
   Stack,
   Text,
   Title,
@@ -65,6 +66,13 @@ interface Props {
     options: Parameters<typeof getFollowers>[0]
   ) => ReturnType<typeof getFollowers>;
 }
+
+const getVisibleFrom = (index: number): "sm" | "md" | "xl" | undefined => {
+  if (index === 0) return undefined; // Always visible
+  if (index === 1) return "sm"; // 2+ columns
+  if (index === 2) return "md"; // 3+ columns
+  return "xl"; // 4+ columns
+};
 
 export default function InfiniteFollowers({
   title,
@@ -298,30 +306,27 @@ export default function InfiniteFollowers({
                 </Flex>
                 {follower.recordings && follower.recordings?.length > 0 ? (
                   <Box mt="lg">
-                    <div
-                      style={{
-                        display: "grid",
-                        gridTemplateColumns: "repeat(auto-fill, 160px)",
-                        gridAutoRows: "306px",
-                        gap: "1.4em",
-                        maxHeight: 306,
-                        overflow: "hidden",
-                      }}
+                    <SimpleGrid
+                      cols={{ base: 1, sm: 2, md: 3, xl: 4 }}
+                      spacing="lg"
                     >
-                      {follower.recordings?.map((rec) => {
+                      {follower.recordings?.map((rec, index) => {
                         const isRecording = rec.sources?.some(
                           (s) => s.state === SourceStateEnum.Recording
                         );
 
                         return (
-                          <Stack key={rec.documentId} gap="4">
+                          <Stack
+                            key={rec.documentId}
+                            gap="4"
+                            visibleFrom={getVisibleFrom(index)}
+                          >
                             <ImageVideoPreview
                               href={`/${follower.type}/${follower.username}/live/${rec.documentId}`}
-                              w={160}
-                              h={284}
                               sources={rec.sources}
                               type={follower.type}
                             />
+
                             <div>
                               <Text size="xs">
                                 {isRecording
@@ -336,7 +341,7 @@ export default function InfiniteFollowers({
                           </Stack>
                         );
                       })}
-                    </div>
+                    </SimpleGrid>
                   </Box>
                 ) : (
                   <Box
