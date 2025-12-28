@@ -22,21 +22,14 @@
       "type": "enumeration",
       "required": true,
       "default": "tiktok",
-      "enum": [
-        "tiktok",
-        "twitch"
-      ]
+      "enum": ["tiktok", "twitch"]
     },
     "protected": {
       "type": "boolean"
     },
     "gender": {
       "type": "enumeration",
-      "enum": [
-        "male",
-        "female",
-        "unknown"
-      ]
+      "enum": ["male", "female", "unknown"]
     },
     "country": {
       "type": "string"
@@ -53,27 +46,10 @@
     "avatar": {
       "type": "media",
       "multiple": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
+      "allowedTypes": ["images", "files", "videos", "audios"]
     },
     "lastCheckedAt": {
       "type": "datetime"
-    },
-    "users": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "plugin::users-permissions.user",
-      "inversedBy": "followers"
-    },
-    "recordings": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::recording.recording",
-      "mappedBy": "follower"
     }
   }
 }

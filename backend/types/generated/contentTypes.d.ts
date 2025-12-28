@@ -516,10 +516,6 @@ export interface ApiFollowerFollower extends Struct.CollectionTypeSchema {
     nickname: Schema.Attribute.String;
     protected: Schema.Attribute.Boolean;
     publishedAt: Schema.Attribute.DateTime;
-    recordings: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::recording.recording'
-    >;
     type: Schema.Attribute.Enumeration<['tiktok', 'twitch']> &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'tiktok'>;
@@ -527,10 +523,6 @@ export interface ApiFollowerFollower extends Struct.CollectionTypeSchema {
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     username: Schema.Attribute.String & Schema.Attribute.Required;
-    users: Schema.Attribute.Relation<
-      'manyToMany',
-      'plugin::users-permissions.user'
-    >;
   };
 }
 
