@@ -281,13 +281,14 @@ export default function InfiniteFollowers({
                       {follower.isFollowing ? (
                         <>
                           <UnfollowButton
-                            documentId={follower.documentId!}
+                            username={follower.username}
+                            type={follower.type}
                             onSuccess={() => handleFollowed(follower.id!)}
                           />
                         </>
                       ) : (
                         <FollowButton
-                          username={follower.username!}
+                          username={follower.username}
                           type={follower.type}
                           onSuccess={() => handleFollowed(follower.id!)}
                         />

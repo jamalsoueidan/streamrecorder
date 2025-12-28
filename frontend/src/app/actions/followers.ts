@@ -20,6 +20,7 @@ export async function follow(prevState: any, formData: FormData) {
     });
 
     revalidatePath("/following");
+    revalidatePath(`/${type}/${username}`);
 
     return { success: true, username, type };
   } catch (err: any) {
@@ -30,7 +31,8 @@ export async function follow(prevState: any, formData: FormData) {
 export async function followUser(data: FollowRequestBody) {
   try {
     await api.follower.followCreate(data);
-    //revalidatePath("/following");
+    revalidatePath("/following");
+    revalidatePath(`/${data.type}/${data.username}`);
 
     return { success: true };
   } catch (err: any) {
@@ -38,10 +40,11 @@ export async function followUser(data: FollowRequestBody) {
   }
 }
 
-export async function unfollow(documentId: string) {
+export async function unfollow(data: FollowRequestBody) {
   try {
-    await api.follower.unfollowDelete({ documentId });
-    //revalidatePath("/following");
+    await api.follower.unfollowCreate(data);
+    revalidatePath("/following");
+    revalidatePath(`/${data.type}/${data.username}`);
 
     return { success: true };
   } catch (err: any) {

@@ -2862,11 +2862,7 @@ export interface FollowCreateData {
   data?: Follower;
 }
 
-export interface UnfollowDeleteParams {
-  documentId: string;
-}
-
-export interface UnfollowDeleteData {
+export interface UnfollowCreateData {
   success?: boolean;
 }
 
@@ -3345,19 +3341,17 @@ export namespace Follower {
   /**
    * No description
    * @tags Follower
-   * @name UnfollowDelete
+   * @name UnfollowCreate
    * @summary Unfollow an account
-   * @request DELETE:/followers/unfollow/{documentId}
+   * @request POST:/followers/unfollow
    * @secure
    */
-  export namespace UnfollowDelete {
-    export type RequestParams = {
-      documentId: string;
-    };
+  export namespace UnfollowCreate {
+    export type RequestParams = {};
     export type RequestQuery = {};
-    export type RequestBody = never;
+    export type RequestBody = FollowRequestBody;
     export type RequestHeaders = {};
-    export type ResponseBody = UnfollowDeleteData;
+    export type ResponseBody = UnfollowCreateData;
   }
 }
 
@@ -4905,19 +4899,18 @@ export class Api<
      * No description
      *
      * @tags Follower
-     * @name UnfollowDelete
+     * @name UnfollowCreate
      * @summary Unfollow an account
-     * @request DELETE:/followers/unfollow/{documentId}
+     * @request POST:/followers/unfollow
      * @secure
      */
-    unfollowDelete: (
-      { documentId, ...query }: UnfollowDeleteParams,
-      params: RequestParams = {},
-    ) =>
-      this.request<UnfollowDeleteData, void>({
-        path: `/followers/unfollow/${documentId}`,
-        method: "DELETE",
+    unfollowCreate: (data: FollowRequestBody, params: RequestParams = {}) =>
+      this.request<UnfollowCreateData, void>({
+        path: `/followers/unfollow`,
+        method: "POST",
+        body: data,
         secure: true,
+        type: ContentType.Json,
         format: "json",
         ...params,
       }),

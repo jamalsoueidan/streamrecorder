@@ -11,8 +11,8 @@ export default {
       handler: "follower.follow",
     },
     {
-      method: "DELETE",
-      path: "/followers/unfollow/:documentId",
+      method: "POST",
+      path: "/followers/unfollow",
       handler: "follower.unfollow",
     },
     {

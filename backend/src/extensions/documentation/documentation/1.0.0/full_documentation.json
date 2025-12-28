@@ -20,7 +20,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-12-28T10:15:30.884Z"
+    "x-generation-date": "2025-12-28T11:28:32.284Z"
   },
   "servers": [
     {
@@ -5925,8 +5925,8 @@
         }
       }
     },
-    "/followers/unfollow/{documentId}": {
-      "delete": {
+    "/followers/unfollow": {
+      "post": {
         "tags": [
           "Follower"
         ],
@@ -5936,16 +5936,16 @@
             "bearerAuth": []
           }
         ],
-        "parameters": [
-          {
-            "name": "documentId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FollowRequestBody"
+              }
             }
           }
-        ],
+        },
         "responses": {
           "200": {
             "description": "Success",

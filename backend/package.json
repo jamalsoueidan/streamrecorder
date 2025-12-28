@@ -14,7 +14,7 @@
     "upgrade": "npx @strapi/upgrade latest",
     "upgrade:dry": "npx @strapi/upgrade latest --dry",
     "test": "yarn build && jest --forceExit --detectOpenHandles",
-    "test:followers": "yarn test --testPathPatterns=tests/followers/followers_scope_discover"
+    "test:users": "yarn test --testPathPatterns=tests/users/"
   },
   "dependencies": {
     "@strapi/plugin-cloud": "5.33.0",
