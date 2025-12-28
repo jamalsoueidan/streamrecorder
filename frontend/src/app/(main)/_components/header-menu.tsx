@@ -7,7 +7,7 @@ import classes from "./header-menu.module.css";
 
 const links = [
   { link: "/", label: "Home" },
-  { link: "/product-updates", label: "Product updates" },
+  { link: "/news", label: "News" },
 ];
 
 export function HeaderMenu() {

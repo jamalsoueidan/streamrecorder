@@ -31,7 +31,9 @@ interface PageProps {
 export default async function Page({ params }: PageProps) {
   const { type, username } = await params;
   const user =
-    await api.usersPermissionsUsersRoles.getUsersPermissionsUsersRoles({});
+    await api.usersPermissionsUsersRoles.getUsersPermissionsUsersRoles({
+      populate: ["followers"],
+    });
   const response = await api.follower.getFollowers({
     filters: {
       username,
@@ -58,23 +60,7 @@ export default async function Page({ params }: PageProps) {
     sort: SortOptions.createdAtDesc,
   });
 
-  // check logged in user if he is following this streamer
-  const resIsFollowing = await api.follower.getFollowers({
-    filters: {
-      documentId: {
-        $eq: follower.documentId,
-      },
-      users: {
-        id: {
-          $eq: user.data.id,
-        },
-      },
-    },
-    "pagination[limit]": 0,
-    "pagination[withCount]": true,
-  });
-
-  const isFollowing = resIsFollowing.data?.meta?.pagination?.total || false;
+  const isFollowing = false;
 
   const fetchAction = async (options: Parameters<typeof getRecordings>[0]) => {
     "use server";
