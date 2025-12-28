@@ -29,7 +29,7 @@ const data = [
   {
     title: "About",
     links: [
-      { link: "/product-updates", label: "News" },
+      { link: "/news", label: "News" },
       { link: "/faq", label: "Faq" },
       { link: "/product-updates", label: "Updates" },
       { link: "/contact", label: "Contact" },

@@ -31,6 +31,175 @@ export interface Error {
   };
 }
 
+export interface ArticleRequest {
+  data: {
+    title: string;
+    content: string;
+    color?: string;
+    locale?: string;
+    localizations?: (number | string)[];
+  };
+}
+
+export interface ArticleListResponse {
+  data?: Article[];
+  meta?: {
+    pagination?: {
+      page?: number;
+      /** @min 25 */
+      pageSize?: number;
+      /** @max 1 */
+      pageCount?: number;
+      total?: number;
+    };
+  };
+}
+
+export interface Article {
+  id?: number;
+  documentId?: string;
+  title: string;
+  content: string;
+  color?: string;
+  /** @format date-time */
+  createdAt?: string;
+  /** @format date-time */
+  updatedAt?: string;
+  /** @format date-time */
+  publishedAt?: string;
+  createdBy?: {
+    id?: number;
+    documentId?: string;
+    firstname?: string;
+    lastname?: string;
+    username?: string;
+    /** @format email */
+    email?: string;
+    resetPasswordToken?: string;
+    registrationToken?: string;
+    isActive?: boolean;
+    roles?: {
+      id?: number;
+      documentId?: string;
+      name?: string;
+      code?: string;
+      description?: string;
+      users?: {
+        id?: number;
+        documentId?: string;
+      }[];
+      permissions?: {
+        id?: number;
+        documentId?: string;
+        action?: string;
+        actionParameters?: any;
+        subject?: string;
+        properties?: any;
+        conditions?: any;
+        role?: {
+          id?: number;
+          documentId?: string;
+        };
+        /** @format date-time */
+        createdAt?: string;
+        /** @format date-time */
+        updatedAt?: string;
+        /** @format date-time */
+        publishedAt?: string;
+        createdBy?: {
+          id?: number;
+          documentId?: string;
+        };
+        updatedBy?: {
+          id?: number;
+          documentId?: string;
+        };
+        locale?: string;
+        localizations?: {
+          id?: number;
+          documentId?: string;
+        }[];
+      }[];
+      /** @format date-time */
+      createdAt?: string;
+      /** @format date-time */
+      updatedAt?: string;
+      /** @format date-time */
+      publishedAt?: string;
+      createdBy?: {
+        id?: number;
+        documentId?: string;
+      };
+      updatedBy?: {
+        id?: number;
+        documentId?: string;
+      };
+      locale?: string;
+      localizations?: {
+        id?: number;
+        documentId?: string;
+      }[];
+    }[];
+    blocked?: boolean;
+    preferedLanguage?: string;
+    /** @format date-time */
+    createdAt?: string;
+    /** @format date-time */
+    updatedAt?: string;
+    /** @format date-time */
+    publishedAt?: string;
+    createdBy?: {
+      id?: number;
+      documentId?: string;
+    };
+    updatedBy?: {
+      id?: number;
+      documentId?: string;
+    };
+    locale?: string;
+    localizations?: {
+      id?: number;
+      documentId?: string;
+    }[];
+  };
+  updatedBy?: {
+    id?: number;
+    documentId?: string;
+  };
+  locale?: string;
+  localizations?: {
+    id?: number;
+    documentId?: string;
+    title?: string;
+    content?: string;
+    color?: string;
+    /** @format date-time */
+    createdAt?: string;
+    /** @format date-time */
+    updatedAt?: string;
+    /** @format date-time */
+    publishedAt?: string;
+    createdBy?: {
+      id?: number;
+      documentId?: string;
+    };
+    updatedBy?: {
+      id?: number;
+      documentId?: string;
+    };
+    locale?: string;
+    localizations?: {
+      id?: number;
+      documentId?: string;
+    }[];
+  }[];
+}
+
+export interface ArticleResponse {
+  data?: Article;
+  meta?: object;
+}
+
 export interface ChangeLogRequest {
   data: {
     version?: string;
@@ -372,16 +541,15 @@ export interface FollowerRequest {
     username: string;
     type: FollowerRequestTypeEnum;
     protected?: boolean;
-    users?: (number | string)[];
-    recordings?: (number | string)[];
-    /** @format date-time */
-    lastCheckedAt?: string;
+    gender?: FollowerRequestGenderEnum;
     country?: string;
     countryCode?: string;
     language?: string;
     languageCode?: string;
     /** @example "string or id" */
     avatar?: number | string;
+    /** @format date-time */
+    lastCheckedAt?: string;
     locale?: string;
     localizations?: (number | string)[];
   };
@@ -408,31 +576,73 @@ export interface Follower {
   username: string;
   type: FollowerTypeEnum;
   protected?: boolean;
-  users?: {
+  gender?: FollowerGenderEnum;
+  country?: string;
+  countryCode?: string;
+  language?: string;
+  languageCode?: string;
+  avatar?: {
     id?: number;
     documentId?: string;
-    username?: string;
-    /** @format email */
-    email?: string;
+    name?: string;
+    alternativeText?: string;
+    caption?: string;
+    width?: number;
+    height?: number;
+    formats?: any;
+    hash?: string;
+    ext?: string;
+    mime?: string;
+    /** @format float */
+    size?: number;
+    url?: string;
+    previewUrl?: string;
     provider?: string;
-    resetPasswordToken?: string;
-    confirmationToken?: string;
-    confirmed?: boolean;
-    blocked?: boolean;
-    role?: {
+    provider_metadata?: any;
+    related?: {
+      id?: number;
+      documentId?: string;
+    }[];
+    folder?: {
       id?: number;
       documentId?: string;
       name?: string;
-      description?: string;
-      type?: string;
-      permissions?: {
+      pathId?: number;
+      parent?: {
         id?: number;
         documentId?: string;
-        action?: string;
-        role?: {
+      };
+      children?: {
+        id?: number;
+        documentId?: string;
+      }[];
+      files?: {
+        id?: number;
+        documentId?: string;
+        name?: string;
+        alternativeText?: string;
+        caption?: string;
+        width?: number;
+        height?: number;
+        formats?: any;
+        hash?: string;
+        ext?: string;
+        mime?: string;
+        /** @format float */
+        size?: number;
+        url?: string;
+        previewUrl?: string;
+        provider?: string;
+        provider_metadata?: any;
+        related?: {
+          id?: number;
+          documentId?: string;
+        }[];
+        folder?: {
           id?: number;
           documentId?: string;
         };
+        folderPath?: string;
         /** @format date-time */
         createdAt?: string;
         /** @format date-time */
@@ -544,10 +754,7 @@ export interface Follower {
           documentId?: string;
         }[];
       }[];
-      users?: {
-        id?: number;
-        documentId?: string;
-      }[];
+      path?: string;
       /** @format date-time */
       createdAt?: string;
       /** @format date-time */
@@ -567,315 +774,6 @@ export interface Follower {
         id?: number;
         documentId?: string;
       }[];
-    };
-    followers?: {
-      id?: number;
-      documentId?: string;
-      nickname?: string;
-      username?: string;
-      type?: FollowerTypeEnum;
-      protected?: boolean;
-      users?: {
-        id?: number;
-        documentId?: string;
-      }[];
-      recordings?: {
-        id?: number;
-        documentId?: string;
-        follower?: {
-          id?: number;
-          documentId?: string;
-        };
-        sources?: {
-          id?: number;
-          documentId?: string;
-          state?: FollowerStateEnum;
-          executionId?: number;
-          /** @format date-time */
-          finishedAt?: string;
-          path?: string;
-          /** @format float */
-          duration?: number;
-          thumbnailInterval?: number;
-          thumbnailCols?: number;
-          videoOriginal?: VideosVideoComponent;
-          videoSmall?: VideosVideoComponent;
-          /** @format date-time */
-          createdAt?: string;
-          /** @format date-time */
-          updatedAt?: string;
-          /** @format date-time */
-          publishedAt?: string;
-          createdBy?: {
-            id?: number;
-            documentId?: string;
-          };
-          updatedBy?: {
-            id?: number;
-            documentId?: string;
-          };
-          locale?: string;
-          localizations?: {
-            id?: number;
-            documentId?: string;
-          }[];
-        }[];
-        /** @format date-time */
-        createdAt?: string;
-        /** @format date-time */
-        updatedAt?: string;
-        /** @format date-time */
-        publishedAt?: string;
-        createdBy?: {
-          id?: number;
-          documentId?: string;
-        };
-        updatedBy?: {
-          id?: number;
-          documentId?: string;
-        };
-        locale?: string;
-        localizations?: {
-          id?: number;
-          documentId?: string;
-        }[];
-      }[];
-      /** @format date-time */
-      lastCheckedAt?: string;
-      country?: string;
-      countryCode?: string;
-      language?: string;
-      languageCode?: string;
-      avatar?: {
-        id?: number;
-        documentId?: string;
-        name?: string;
-        alternativeText?: string;
-        caption?: string;
-        width?: number;
-        height?: number;
-        formats?: any;
-        hash?: string;
-        ext?: string;
-        mime?: string;
-        /** @format float */
-        size?: number;
-        url?: string;
-        previewUrl?: string;
-        provider?: string;
-        provider_metadata?: any;
-        related?: {
-          id?: number;
-          documentId?: string;
-        }[];
-        folder?: {
-          id?: number;
-          documentId?: string;
-          name?: string;
-          pathId?: number;
-          parent?: {
-            id?: number;
-            documentId?: string;
-          };
-          children?: {
-            id?: number;
-            documentId?: string;
-          }[];
-          files?: {
-            id?: number;
-            documentId?: string;
-            name?: string;
-            alternativeText?: string;
-            caption?: string;
-            width?: number;
-            height?: number;
-            formats?: any;
-            hash?: string;
-            ext?: string;
-            mime?: string;
-            /** @format float */
-            size?: number;
-            url?: string;
-            previewUrl?: string;
-            provider?: string;
-            provider_metadata?: any;
-            related?: {
-              id?: number;
-              documentId?: string;
-            }[];
-            folder?: {
-              id?: number;
-              documentId?: string;
-            };
-            folderPath?: string;
-            /** @format date-time */
-            createdAt?: string;
-            /** @format date-time */
-            updatedAt?: string;
-            /** @format date-time */
-            publishedAt?: string;
-            createdBy?: {
-              id?: number;
-              documentId?: string;
-            };
-            updatedBy?: {
-              id?: number;
-              documentId?: string;
-            };
-            locale?: string;
-            localizations?: {
-              id?: number;
-              documentId?: string;
-            }[];
-          }[];
-          path?: string;
-          /** @format date-time */
-          createdAt?: string;
-          /** @format date-time */
-          updatedAt?: string;
-          /** @format date-time */
-          publishedAt?: string;
-          createdBy?: {
-            id?: number;
-            documentId?: string;
-          };
-          updatedBy?: {
-            id?: number;
-            documentId?: string;
-          };
-          locale?: string;
-          localizations?: {
-            id?: number;
-            documentId?: string;
-          }[];
-        };
-        folderPath?: string;
-        /** @format date-time */
-        createdAt?: string;
-        /** @format date-time */
-        updatedAt?: string;
-        /** @format date-time */
-        publishedAt?: string;
-        createdBy?: {
-          id?: number;
-          documentId?: string;
-        };
-        updatedBy?: {
-          id?: number;
-          documentId?: string;
-        };
-        locale?: string;
-        localizations?: {
-          id?: number;
-          documentId?: string;
-        }[];
-      };
-      /** @format date-time */
-      createdAt?: string;
-      /** @format date-time */
-      updatedAt?: string;
-      /** @format date-time */
-      publishedAt?: string;
-      createdBy?: {
-        id?: number;
-        documentId?: string;
-      };
-      updatedBy?: {
-        id?: number;
-        documentId?: string;
-      };
-      locale?: string;
-      localizations?: {
-        id?: number;
-        documentId?: string;
-      }[];
-    }[];
-    messages?: {
-      id?: number;
-      documentId?: string;
-      type?: string;
-      subject?: string;
-      content?: string;
-      user?: {
-        id?: number;
-        documentId?: string;
-      };
-      state?: string;
-      /** @format date-time */
-      createdAt?: string;
-      /** @format date-time */
-      updatedAt?: string;
-      /** @format date-time */
-      publishedAt?: string;
-      createdBy?: {
-        id?: number;
-        documentId?: string;
-      };
-      updatedBy?: {
-        id?: number;
-        documentId?: string;
-      };
-      locale?: string;
-      localizations?: {
-        id?: number;
-        documentId?: string;
-      }[];
-    }[];
-    /** @format date-time */
-    createdAt?: string;
-    /** @format date-time */
-    updatedAt?: string;
-    /** @format date-time */
-    publishedAt?: string;
-    createdBy?: {
-      id?: number;
-      documentId?: string;
-    };
-    updatedBy?: {
-      id?: number;
-      documentId?: string;
-    };
-    locale?: string;
-    localizations?: {
-      id?: number;
-      documentId?: string;
-    }[];
-  }[];
-  recordings?: {
-    id?: number;
-    documentId?: string;
-  }[];
-  /** @format date-time */
-  lastCheckedAt?: string;
-  country?: string;
-  countryCode?: string;
-  language?: string;
-  languageCode?: string;
-  avatar?: {
-    id?: number;
-    documentId?: string;
-    name?: string;
-    alternativeText?: string;
-    caption?: string;
-    width?: number;
-    height?: number;
-    formats?: any;
-    hash?: string;
-    ext?: string;
-    mime?: string;
-    /** @format float */
-    size?: number;
-    url?: string;
-    previewUrl?: string;
-    provider?: string;
-    provider_metadata?: any;
-    related?: {
-      id?: number;
-      documentId?: string;
-    }[];
-    folder?: {
-      id?: number;
-      documentId?: string;
     };
     folderPath?: string;
     /** @format date-time */
@@ -899,6 +797,8 @@ export interface Follower {
     }[];
   };
   /** @format date-time */
+  lastCheckedAt?: string;
+  /** @format date-time */
   createdAt?: string;
   /** @format date-time */
   updatedAt?: string;
@@ -916,24 +816,89 @@ export interface Follower {
   localizations?: {
     id?: number;
     documentId?: string;
+    nickname?: string;
+    username?: string;
+    type?: FollowerTypeEnum;
+    protected?: boolean;
+    gender?: FollowerGenderEnum1;
+    country?: string;
+    countryCode?: string;
+    language?: string;
+    languageCode?: string;
+    avatar?: {
+      id?: number;
+      documentId?: string;
+      name?: string;
+      alternativeText?: string;
+      caption?: string;
+      width?: number;
+      height?: number;
+      formats?: any;
+      hash?: string;
+      ext?: string;
+      mime?: string;
+      /** @format float */
+      size?: number;
+      url?: string;
+      previewUrl?: string;
+      provider?: string;
+      provider_metadata?: any;
+      related?: {
+        id?: number;
+        documentId?: string;
+      }[];
+      folder?: {
+        id?: number;
+        documentId?: string;
+      };
+      folderPath?: string;
+      /** @format date-time */
+      createdAt?: string;
+      /** @format date-time */
+      updatedAt?: string;
+      /** @format date-time */
+      publishedAt?: string;
+      createdBy?: {
+        id?: number;
+        documentId?: string;
+      };
+      updatedBy?: {
+        id?: number;
+        documentId?: string;
+      };
+      locale?: string;
+      localizations?: {
+        id?: number;
+        documentId?: string;
+      }[];
+    };
+    /** @format date-time */
+    lastCheckedAt?: string;
+    /** @format date-time */
+    createdAt?: string;
+    /** @format date-time */
+    updatedAt?: string;
+    /** @format date-time */
+    publishedAt?: string;
+    createdBy?: {
+      id?: number;
+      documentId?: string;
+    };
+    updatedBy?: {
+      id?: number;
+      documentId?: string;
+    };
+    locale?: string;
+    localizations?: {
+      id?: number;
+      documentId?: string;
+    }[];
   }[];
 }
 
 export interface FollowerResponse {
   data?: Follower;
   meta?: object;
-}
-
-export interface VideosVideoComponent {
-  id?: number;
-  playlist?: string;
-  width?: number;
-  height?: number;
-  /**
-   * @pattern ^\d*$
-   * @example "123456789"
-   */
-  sizeBytes?: string;
 }
 
 export interface MessageRequest {
@@ -1136,73 +1101,7 @@ export interface Message {
       username?: string;
       type?: MessageTypeEnum;
       protected?: boolean;
-      users?: {
-        id?: number;
-        documentId?: string;
-      }[];
-      recordings?: {
-        id?: number;
-        documentId?: string;
-        follower?: {
-          id?: number;
-          documentId?: string;
-        };
-        sources?: {
-          id?: number;
-          documentId?: string;
-          state?: MessageStateEnum;
-          executionId?: number;
-          /** @format date-time */
-          finishedAt?: string;
-          path?: string;
-          /** @format float */
-          duration?: number;
-          thumbnailInterval?: number;
-          thumbnailCols?: number;
-          videoOriginal?: VideosVideoComponent;
-          videoSmall?: VideosVideoComponent;
-          /** @format date-time */
-          createdAt?: string;
-          /** @format date-time */
-          updatedAt?: string;
-          /** @format date-time */
-          publishedAt?: string;
-          createdBy?: {
-            id?: number;
-            documentId?: string;
-          };
-          updatedBy?: {
-            id?: number;
-            documentId?: string;
-          };
-          locale?: string;
-          localizations?: {
-            id?: number;
-            documentId?: string;
-          }[];
-        }[];
-        /** @format date-time */
-        createdAt?: string;
-        /** @format date-time */
-        updatedAt?: string;
-        /** @format date-time */
-        publishedAt?: string;
-        createdBy?: {
-          id?: number;
-          documentId?: string;
-        };
-        updatedBy?: {
-          id?: number;
-          documentId?: string;
-        };
-        locale?: string;
-        localizations?: {
-          id?: number;
-          documentId?: string;
-        }[];
-      }[];
-      /** @format date-time */
-      lastCheckedAt?: string;
+      gender?: MessageGenderEnum;
       country?: string;
       countryCode?: string;
       language?: string;
@@ -1331,6 +1230,8 @@ export interface Message {
           documentId?: string;
         }[];
       };
+      /** @format date-time */
+      lastCheckedAt?: string;
       /** @format date-time */
       createdAt?: string;
       /** @format date-time */
@@ -1634,31 +1535,73 @@ export interface Recording {
     username?: string;
     type?: FollowerTypeEnum;
     protected?: boolean;
-    users?: {
+    gender?: RecordingGenderEnum;
+    country?: string;
+    countryCode?: string;
+    language?: string;
+    languageCode?: string;
+    avatar?: {
       id?: number;
       documentId?: string;
-      username?: string;
-      /** @format email */
-      email?: string;
+      name?: string;
+      alternativeText?: string;
+      caption?: string;
+      width?: number;
+      height?: number;
+      formats?: any;
+      hash?: string;
+      ext?: string;
+      mime?: string;
+      /** @format float */
+      size?: number;
+      url?: string;
+      previewUrl?: string;
       provider?: string;
-      resetPasswordToken?: string;
-      confirmationToken?: string;
-      confirmed?: boolean;
-      blocked?: boolean;
-      role?: {
+      provider_metadata?: any;
+      related?: {
+        id?: number;
+        documentId?: string;
+      }[];
+      folder?: {
         id?: number;
         documentId?: string;
         name?: string;
-        description?: string;
-        type?: string;
-        permissions?: {
+        pathId?: number;
+        parent?: {
           id?: number;
           documentId?: string;
-          action?: string;
-          role?: {
+        };
+        children?: {
+          id?: number;
+          documentId?: string;
+        }[];
+        files?: {
+          id?: number;
+          documentId?: string;
+          name?: string;
+          alternativeText?: string;
+          caption?: string;
+          width?: number;
+          height?: number;
+          formats?: any;
+          hash?: string;
+          ext?: string;
+          mime?: string;
+          /** @format float */
+          size?: number;
+          url?: string;
+          previewUrl?: string;
+          provider?: string;
+          provider_metadata?: any;
+          related?: {
+            id?: number;
+            documentId?: string;
+          }[];
+          folder?: {
             id?: number;
             documentId?: string;
           };
+          folderPath?: string;
           /** @format date-time */
           createdAt?: string;
           /** @format date-time */
@@ -1770,234 +1713,6 @@ export interface Recording {
             documentId?: string;
           }[];
         }[];
-        users?: {
-          id?: number;
-          documentId?: string;
-        }[];
-        /** @format date-time */
-        createdAt?: string;
-        /** @format date-time */
-        updatedAt?: string;
-        /** @format date-time */
-        publishedAt?: string;
-        createdBy?: {
-          id?: number;
-          documentId?: string;
-        };
-        updatedBy?: {
-          id?: number;
-          documentId?: string;
-        };
-        locale?: string;
-        localizations?: {
-          id?: number;
-          documentId?: string;
-        }[];
-      };
-      followers?: {
-        id?: number;
-        documentId?: string;
-      }[];
-      messages?: {
-        id?: number;
-        documentId?: string;
-        type?: string;
-        subject?: string;
-        content?: string;
-        user?: {
-          id?: number;
-          documentId?: string;
-        };
-        state?: string;
-        /** @format date-time */
-        createdAt?: string;
-        /** @format date-time */
-        updatedAt?: string;
-        /** @format date-time */
-        publishedAt?: string;
-        createdBy?: {
-          id?: number;
-          documentId?: string;
-        };
-        updatedBy?: {
-          id?: number;
-          documentId?: string;
-        };
-        locale?: string;
-        localizations?: {
-          id?: number;
-          documentId?: string;
-        }[];
-      }[];
-      /** @format date-time */
-      createdAt?: string;
-      /** @format date-time */
-      updatedAt?: string;
-      /** @format date-time */
-      publishedAt?: string;
-      createdBy?: {
-        id?: number;
-        documentId?: string;
-      };
-      updatedBy?: {
-        id?: number;
-        documentId?: string;
-      };
-      locale?: string;
-      localizations?: {
-        id?: number;
-        documentId?: string;
-      }[];
-    }[];
-    recordings?: {
-      id?: number;
-      documentId?: string;
-      follower?: {
-        id?: number;
-        documentId?: string;
-      };
-      sources?: {
-        id?: number;
-        documentId?: string;
-        state?: RecordingStateEnum;
-        executionId?: number;
-        /** @format date-time */
-        finishedAt?: string;
-        path?: string;
-        /** @format float */
-        duration?: number;
-        thumbnailInterval?: number;
-        thumbnailCols?: number;
-        videoOriginal?: VideosVideoComponent;
-        videoSmall?: VideosVideoComponent;
-        /** @format date-time */
-        createdAt?: string;
-        /** @format date-time */
-        updatedAt?: string;
-        /** @format date-time */
-        publishedAt?: string;
-        createdBy?: {
-          id?: number;
-          documentId?: string;
-        };
-        updatedBy?: {
-          id?: number;
-          documentId?: string;
-        };
-        locale?: string;
-        localizations?: {
-          id?: number;
-          documentId?: string;
-        }[];
-      }[];
-      /** @format date-time */
-      createdAt?: string;
-      /** @format date-time */
-      updatedAt?: string;
-      /** @format date-time */
-      publishedAt?: string;
-      createdBy?: {
-        id?: number;
-        documentId?: string;
-      };
-      updatedBy?: {
-        id?: number;
-        documentId?: string;
-      };
-      locale?: string;
-      localizations?: {
-        id?: number;
-        documentId?: string;
-      }[];
-    }[];
-    /** @format date-time */
-    lastCheckedAt?: string;
-    country?: string;
-    countryCode?: string;
-    language?: string;
-    languageCode?: string;
-    avatar?: {
-      id?: number;
-      documentId?: string;
-      name?: string;
-      alternativeText?: string;
-      caption?: string;
-      width?: number;
-      height?: number;
-      formats?: any;
-      hash?: string;
-      ext?: string;
-      mime?: string;
-      /** @format float */
-      size?: number;
-      url?: string;
-      previewUrl?: string;
-      provider?: string;
-      provider_metadata?: any;
-      related?: {
-        id?: number;
-        documentId?: string;
-      }[];
-      folder?: {
-        id?: number;
-        documentId?: string;
-        name?: string;
-        pathId?: number;
-        parent?: {
-          id?: number;
-          documentId?: string;
-        };
-        children?: {
-          id?: number;
-          documentId?: string;
-        }[];
-        files?: {
-          id?: number;
-          documentId?: string;
-          name?: string;
-          alternativeText?: string;
-          caption?: string;
-          width?: number;
-          height?: number;
-          formats?: any;
-          hash?: string;
-          ext?: string;
-          mime?: string;
-          /** @format float */
-          size?: number;
-          url?: string;
-          previewUrl?: string;
-          provider?: string;
-          provider_metadata?: any;
-          related?: {
-            id?: number;
-            documentId?: string;
-          }[];
-          folder?: {
-            id?: number;
-            documentId?: string;
-          };
-          folderPath?: string;
-          /** @format date-time */
-          createdAt?: string;
-          /** @format date-time */
-          updatedAt?: string;
-          /** @format date-time */
-          publishedAt?: string;
-          createdBy?: {
-            id?: number;
-            documentId?: string;
-          };
-          updatedBy?: {
-            id?: number;
-            documentId?: string;
-          };
-          locale?: string;
-          localizations?: {
-            id?: number;
-            documentId?: string;
-          }[];
-        }[];
         path?: string;
         /** @format date-time */
         createdAt?: string;
@@ -2041,6 +1756,8 @@ export interface Recording {
       }[];
     };
     /** @format date-time */
+    lastCheckedAt?: string;
+    /** @format date-time */
     createdAt?: string;
     /** @format date-time */
     updatedAt?: string;
@@ -2078,6 +1795,33 @@ export interface Recording {
   localizations?: {
     id?: number;
     documentId?: string;
+    follower?: {
+      id?: number;
+      documentId?: string;
+    };
+    sources?: {
+      id?: number;
+      documentId?: string;
+    }[];
+    /** @format date-time */
+    createdAt?: string;
+    /** @format date-time */
+    updatedAt?: string;
+    /** @format date-time */
+    publishedAt?: string;
+    createdBy?: {
+      id?: number;
+      documentId?: string;
+    };
+    updatedBy?: {
+      id?: number;
+      documentId?: string;
+    };
+    locale?: string;
+    localizations?: {
+      id?: number;
+      documentId?: string;
+    }[];
   }[];
   sources?: Source[];
 }
@@ -2085,6 +1829,18 @@ export interface Recording {
 export interface RecordingResponse {
   data?: Recording;
   meta?: object;
+}
+
+export interface VideosVideoComponent {
+  id?: number;
+  playlist?: string;
+  width?: number;
+  height?: number;
+  /**
+   * @pattern ^\d*$
+   * @example "123456789"
+   */
+  sizeBytes?: string;
 }
 
 export interface SourceRequest {
@@ -2394,10 +2150,22 @@ export enum FollowerRequestTypeEnum {
   Twitch = "twitch",
 }
 
-export enum FollowerStateEnum {
-  Recording = "recording",
-  Done = "done",
-  Failed = "failed",
+export enum FollowerRequestGenderEnum {
+  Male = "male",
+  Female = "female",
+  Unknown = "unknown",
+}
+
+export enum FollowerGenderEnum {
+  Male = "male",
+  Female = "female",
+  Unknown = "unknown",
+}
+
+export enum FollowerGenderEnum1 {
+  Male = "male",
+  Female = "female",
+  Unknown = "unknown",
 }
 
 export enum MessageTypeEnum {
@@ -2405,10 +2173,10 @@ export enum MessageTypeEnum {
   Twitch = "twitch",
 }
 
-export enum MessageStateEnum {
-  Recording = "recording",
-  Done = "done",
-  Failed = "failed",
+export enum MessageGenderEnum {
+  Male = "male",
+  Female = "female",
+  Unknown = "unknown",
 }
 
 export enum NavigationsLinksComponentIconEnum {
@@ -2424,10 +2192,10 @@ export enum NavigationsLinksComponentIconEnum {
   IconStar = "IconStar",
 }
 
-export enum RecordingStateEnum {
-  Recording = "recording",
-  Done = "done",
-  Failed = "failed",
+export enum RecordingGenderEnum {
+  Male = "male",
+  Female = "female",
+  Unknown = "unknown",
 }
 
 export enum SourceRequestStateEnum {
@@ -2447,6 +2215,52 @@ export enum SourceStateEnum1 {
   Done = "done",
   Failed = "failed",
 }
+
+export interface GetArticlesParams {
+  /** Sort by attributes ascending (asc) or descending (desc) */
+  sort?: string;
+  /** Return page/pageSize (default: true) */
+  "pagination[withCount]"?: boolean;
+  /** Page number (default: 0) */
+  "pagination[page]"?: number;
+  /** Page size (default: 25) */
+  "pagination[pageSize]"?: number;
+  /** Offset value (default: 0) */
+  "pagination[start]"?: number;
+  /** Number of entities to return (default: 25) */
+  "pagination[limit]"?: number;
+  /** Fields to return (ex: title,author) */
+  fields?: string;
+  /** Relations to return */
+  populate?: string | string[] | object;
+  /** Filters to apply */
+  filters?: Record<string, any>;
+  /** Locale to apply */
+  locale?: string;
+}
+
+export type GetArticlesData = ArticleListResponse;
+
+export type PostArticlesData = ArticleResponse;
+
+export interface GetArticlesIdParams {
+  id: string;
+}
+
+export type GetArticlesIdData = ArticleResponse;
+
+export interface PutArticlesIdParams {
+  id: string;
+}
+
+export type PutArticlesIdData = ArticleResponse;
+
+export interface DeleteArticlesIdParams {
+  id: string;
+}
+
+/** @format int64 */
+export type DeleteArticlesIdData = number;
 
 export interface GetChangeLogsParams {
   /** Sort by attributes ascending (asc) or descending (desc) */
@@ -3054,6 +2868,110 @@ export interface UnfollowDeleteParams {
 
 export interface UnfollowDeleteData {
   success?: boolean;
+}
+
+export namespace Article {
+  /**
+   * No description
+   * @tags Article
+   * @name GetArticles
+   * @request GET:/articles
+   * @secure
+   */
+  export namespace GetArticles {
+    export type RequestParams = {};
+    export type RequestQuery = {
+      /** Sort by attributes ascending (asc) or descending (desc) */
+      sort?: string;
+      /** Return page/pageSize (default: true) */
+      "pagination[withCount]"?: boolean;
+      /** Page number (default: 0) */
+      "pagination[page]"?: number;
+      /** Page size (default: 25) */
+      "pagination[pageSize]"?: number;
+      /** Offset value (default: 0) */
+      "pagination[start]"?: number;
+      /** Number of entities to return (default: 25) */
+      "pagination[limit]"?: number;
+      /** Fields to return (ex: title,author) */
+      fields?: string;
+      /** Relations to return */
+      populate?: string | string[] | object;
+      /** Filters to apply */
+      filters?: Record<string, any>;
+      /** Locale to apply */
+      locale?: string;
+    };
+    export type RequestBody = never;
+    export type RequestHeaders = {};
+    export type ResponseBody = GetArticlesData;
+  }
+
+  /**
+   * No description
+   * @tags Article
+   * @name PostArticles
+   * @request POST:/articles
+   * @secure
+   */
+  export namespace PostArticles {
+    export type RequestParams = {};
+    export type RequestQuery = {};
+    export type RequestBody = ArticleRequest;
+    export type RequestHeaders = {};
+    export type ResponseBody = PostArticlesData;
+  }
+
+  /**
+   * No description
+   * @tags Article
+   * @name GetArticlesId
+   * @request GET:/articles/{id}
+   * @secure
+   */
+  export namespace GetArticlesId {
+    export type RequestParams = {
+      id: string;
+    };
+    export type RequestQuery = {};
+    export type RequestBody = never;
+    export type RequestHeaders = {};
+    export type ResponseBody = GetArticlesIdData;
+  }
+
+  /**
+   * No description
+   * @tags Article
+   * @name PutArticlesId
+   * @request PUT:/articles/{id}
+   * @secure
+   */
+  export namespace PutArticlesId {
+    export type RequestParams = {
+      id: string;
+    };
+    export type RequestQuery = {};
+    export type RequestBody = ArticleRequest;
+    export type RequestHeaders = {};
+    export type ResponseBody = PutArticlesIdData;
+  }
+
+  /**
+   * No description
+   * @tags Article
+   * @name DeleteArticlesId
+   * @request DELETE:/articles/{id}
+   * @secure
+   */
+  export namespace DeleteArticlesId {
+    export type RequestParams = {
+      id: string;
+    };
+    export type RequestQuery = {};
+    export type RequestBody = never;
+    export type RequestHeaders = {};
+    export type ResponseBody = DeleteArticlesIdData;
+  }
 }
 
 export namespace ChangeLog {
@@ -4537,6 +4455,107 @@ export class HttpClient<SecurityDataType = unknown> {
 export class Api<
   SecurityDataType extends unknown,
 > extends HttpClient<SecurityDataType> {
+  article = {
+    /**
+     * No description
+     *
+     * @tags Article
+     * @name GetArticles
+     * @request GET:/articles
+     * @secure
+     */
+    getArticles: (query: GetArticlesParams, params: RequestParams = {}) =>
+      this.request<GetArticlesData, Error>({
+        path: `/articles`,
+        method: "GET",
+        query: query,
+        secure: true,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Article
+     * @name PostArticles
+     * @request POST:/articles
+     * @secure
+     */
+    postArticles: (data: ArticleRequest, params: RequestParams = {}) =>
+      this.request<PostArticlesData, Error>({
+        path: `/articles`,
+        method: "POST",
+        body: data,
+        secure: true,
+        type: ContentType.Json,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Article
+     * @name GetArticlesId
+     * @request GET:/articles/{id}
+     * @secure
+     */
+    getArticlesId: (
+      { id, ...query }: GetArticlesIdParams,
+      params: RequestParams = {},
+    ) =>
+      this.request<GetArticlesIdData, Error>({
+        path: `/articles/${id}`,
+        method: "GET",
+        secure: true,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Article
+     * @name PutArticlesId
+     * @request PUT:/articles/{id}
+     * @secure
+     */
+    putArticlesId: (
+      { id, ...query }: PutArticlesIdParams,
+      data: ArticleRequest,
+      params: RequestParams = {},
+    ) =>
+      this.request<PutArticlesIdData, Error>({
+        path: `/articles/${id}`,
+        method: "PUT",
+        body: data,
+        secure: true,
+        type: ContentType.Json,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Article
+     * @name DeleteArticlesId
+     * @request DELETE:/articles/{id}
+     * @secure
+     */
+    deleteArticlesId: (
+      { id, ...query }: DeleteArticlesIdParams,
+      params: RequestParams = {},
+    ) =>
+      this.request<DeleteArticlesIdData, Error>({
+        path: `/articles/${id}`,
+        method: "DELETE",
+        secure: true,
+        format: "json",
+        ...params,
+      }),
+  };
   changeLog = {
     /**
      * No description
