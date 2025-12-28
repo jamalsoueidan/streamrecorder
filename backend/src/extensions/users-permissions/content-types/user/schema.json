@@ -69,8 +69,7 @@
     "followers": {
       "type": "relation",
       "relation": "manyToMany",
-      "target": "api::follower.follower",
-      "mappedBy": "users"
+      "target": "api::follower.follower"
     },
     "messages": {
       "type": "relation",

@@ -128,10 +128,10 @@ describe("Followers Browse (scope=discover)", () => {
         .set("Authorization", `Bearer ${jwt}`)
         .expect(200);
 
-      expect(res.body.data).toHaveLength(2);
+      expect(res.body.data).toHaveLength(1);
       const usernames = res.body.data.map((f: any) => f.username);
       expect(usernames).toContain("alice");
-      expect(usernames).toContain("bob");
+      expect(usernames).not.toContain("bob");
       expect(usernames).not.toContain("charlie");
       expect(usernames).not.toContain("david");
       expect(usernames).not.toContain("eve");
@@ -186,11 +186,12 @@ describe("Followers Browse (scope=discover)", () => {
 
       const alice = res.body.data.find((f: any) => f.username === "alice");
       expect(alice.recordings).toHaveLength(1);
-      expect(alice.recordings[0].sources).toHaveLength(1);
-      expect(alice.recordings[0].sources[0].state).toBe("done");
 
-      const bob = res.body.data.find((f: any) => f.username === "bob");
-      expect(bob.recordings).toHaveLength(0);
+      const allSources = res.body.data.flatMap((f: any) =>
+        (f.recordings || []).flatMap((r: any) => r.sources || [])
+      );
+      const failedSources = allSources.filter((s: any) => s.state === "failed");
+      expect(failedSources).toHaveLength(0);
     });
 
     it("should have isFollowing=false for all", async () => {

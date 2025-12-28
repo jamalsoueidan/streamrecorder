@@ -41,25 +41,54 @@ export default factories.createCoreController(
         };
       }
 
-      const scopeFilters: Record<string, object | null> = {
-        following: { $in: followingIds },
-        discover: followingIds.length > 0 ? { $notIn: followingIds } : null,
-      };
-
-      if (scope && scopeFilters[scope]) {
-        Object.assign(ctx.query, {
-          filters: Object.assign({}, ctx.query.filters, {
-            id: scopeFilters[scope],
-          }),
-        });
-      }
-
       if (hasRecordings) {
+        const knex = strapi.db.connection;
+
+        let query = knex("recordings_follower_lnk as rf")
+          .distinct("rf.follower_id")
+          // Join to recordings to check for valid sources
+          .innerJoin("recordings as r", "rf.recording_id", "r.id")
+          .innerJoin("recordings_sources_lnk as rs", "rs.recording_id", "r.id")
+          .innerJoin("sources as s", "rs.source_id", "s.id")
+          .where("s.state", "!=", "failed");
+
+        // Apply scope filter directly in SQL
+        if (scope === "following" && followingIds.length > 0) {
+          query = query.whereIn("follower_id", followingIds);
+        } else if (scope === "discover" && followingIds.length > 0) {
+          query = query.whereNotIn("follower_id", followingIds);
+        }
+
+        const followerIdsWithRecordings = await query.pluck("follower_id");
+
+        if (followerIdsWithRecordings.length === 0) {
+          return {
+            data: [],
+            meta: {
+              pagination: { page: 1, pageSize: 25, pageCount: 0, total: 0 },
+            },
+          };
+        }
+
         Object.assign(ctx.query, {
           filters: Object.assign({}, ctx.query.filters, {
-            recordings: { id: { $notNull: true } },
+            id: { $in: followerIdsWithRecordings },
           }),
         });
+      } else {
+        // Only apply scope filter when hasRecordings=false
+        const scopeFilters: Record<string, object | null> = {
+          following: { $in: followingIds },
+          discover: followingIds.length > 0 ? { $notIn: followingIds } : null,
+        };
+
+        if (scope && scopeFilters[scope]) {
+          Object.assign(ctx.query, {
+            filters: Object.assign({}, ctx.query.filters, {
+              id: scopeFilters[scope],
+            }),
+          });
+        }
       }
 
       const result = await super.find(ctx);

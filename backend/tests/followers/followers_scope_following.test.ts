@@ -112,7 +112,18 @@ describe("Followers Browse (scope=following)", () => {
   });
 
   describe("hasRecordings filter", () => {
-    it("should return only followers with recordings", async () => {
+    it("should return all followers when hasRecordings is not set", async () => {
+      const query = buildQuery({ scope: "following" });
+
+      const res = await request(getServer())
+        .get(`/api/followers/browse?${query}`)
+        .set("Authorization", `Bearer ${jwt}`)
+        .expect(200);
+
+      expect(res.body.data).toHaveLength(5);
+    });
+
+    it("should return only followers with valid recordings", async () => {
       const query = buildQuery({ scope: "following", hasRecordings: "true" });
 
       const res = await request(getServer())
@@ -120,13 +131,9 @@ describe("Followers Browse (scope=following)", () => {
         .set("Authorization", `Bearer ${jwt}`)
         .expect(200);
 
-      expect(res.body.data).toHaveLength(2);
-      const usernames = res.body.data.map((f: any) => f.username);
-      expect(usernames).toContain("alice");
-      expect(usernames).toContain("bob");
-      expect(usernames).not.toContain("charlie");
-      expect(usernames).not.toContain("david");
-      expect(usernames).not.toContain("eve");
+      // Only alice has recording with valid source
+      expect(res.body.data).toHaveLength(1);
+      expect(res.body.data[0].username).toBe("alice");
     });
   });
 
@@ -181,10 +188,6 @@ describe("Followers Browse (scope=following)", () => {
       expect(alice.recordings).toHaveLength(1);
       expect(alice.recordings[0].sources).toHaveLength(1);
       expect(alice.recordings[0].sources[0].state).toBe("done");
-
-      // Bob has recording with failed source - recording filtered out (no valid sources)
-      const bob = res.body.data.find((f: any) => f.username === "bob");
-      expect(bob.recordings).toHaveLength(0);
     });
   });
 });

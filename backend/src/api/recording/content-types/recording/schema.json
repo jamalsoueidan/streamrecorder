@@ -14,8 +14,7 @@
     "follower": {
       "type": "relation",
       "relation": "manyToOne",
-      "target": "api::follower.follower",
-      "inversedBy": "recordings"
+      "target": "api::follower.follower"
     },
     "sources": {
       "type": "relation",
