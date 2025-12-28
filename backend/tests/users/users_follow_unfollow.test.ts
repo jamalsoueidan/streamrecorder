@@ -30,17 +30,17 @@ afterAll(async () => {
 });
 
 describe("Follow / Unfollow", () => {
-  let followerDocumentId: string;
+  let username = "coolstreamer";
+  let type = "tiktok";
 
   it("should follow a streamer", async () => {
     const res = await request(getServer())
       .post("/api/followers/follow")
       .set("Authorization", `Bearer ${jwt}`)
-      .send({ username: "coolstreamer", type: "tiktok" })
+      .send({ username, type })
       .expect(200);
 
     expect(res.body.data).toHaveProperty("documentId");
-    followerDocumentId = res.body.data.documentId;
   });
 
   it("should see streamer in following list", async () => {
@@ -66,8 +66,9 @@ describe("Follow / Unfollow", () => {
 
   it("should unfollow the streamer", async () => {
     await request(getServer())
-      .delete(`/api/followers/unfollow/${followerDocumentId}`)
+      .post(`/api/followers/unfollow`)
       .set("Authorization", `Bearer ${jwt}`)
+      .send({ username, type })
       .expect(200);
   });
 

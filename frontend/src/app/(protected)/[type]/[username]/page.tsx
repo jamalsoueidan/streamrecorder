@@ -62,6 +62,7 @@ export default async function Page({ params }: PageProps) {
 
   const followers: Follower[] = (user.data as any).followers;
   const isFollowing = followers.find((f) => f.id === follower.id);
+
   const { data, meta } = await getRecordings({
     filters: {
       follower: {
@@ -131,7 +132,10 @@ export default async function Page({ params }: PageProps) {
             <OpenSocial follower={follower} />
             {isFollowing ? (
               <>
-                <UnfollowButton documentId={follower.documentId!} />
+                <UnfollowButton
+                  username={follower.username!}
+                  type={follower.type}
+                />
               </>
             ) : (
               <FollowButton

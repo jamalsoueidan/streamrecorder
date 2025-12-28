@@ -25,6 +25,7 @@ export default function FollowButton({
           color: "green",
           icon: <IconCheck size={16} />,
         });
+
         onSuccess?.();
       }
 

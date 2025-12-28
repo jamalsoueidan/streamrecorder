@@ -193,6 +193,46 @@ export default factories.createCoreController(
 
       return { data: follower };
     },
+    async unfollow(ctx) {
+      const user = ctx.state.user;
+      if (!user) return ctx.unauthorized();
+
+      const { username, type } = ctx.request.body;
+
+      const fullUser = await strapi
+        .documents("plugin::users-permissions.user")
+        .findOne({
+          documentId: user.documentId,
+          populate: {
+            followers: {
+              fields: ["id", "documentId", "username", "type"],
+              filters: {
+                username,
+                type,
+              },
+            },
+          },
+        });
+
+      const followerToRemove = fullUser.followers?.find(
+        (f) => f.username === username && f.type === type
+      );
+
+      if (!followerToRemove) {
+        return ctx.notFound();
+      }
+
+      await strapi.documents("plugin::users-permissions.user").update({
+        documentId: user.documentId,
+        data: {
+          followers: {
+            disconnect: [followerToRemove.documentId],
+          },
+        },
+      });
+
+      return { success: true };
+    },
     async import(ctx) {
       const { username, type, createdAt } = ctx.request.body;
 
@@ -210,39 +250,6 @@ export default factories.createCoreController(
 
       ctx.body = { data: result };
     },
-    async unfollow(ctx) {
-      const user = ctx.state.user;
-      if (!user) return ctx.unauthorized();
-
-      const { documentId } = ctx.params; // This should actually be documentId from frontend!
-
-      const fullUser = await strapi
-        .documents("plugin::users-permissions.user")
-        .findOne({
-          documentId: user.documentId,
-          populate: { followers: { fields: ["id", "documentId"] } },
-        });
-
-      // Find by documentId, not numeric id
-      const followerToRemove = fullUser.followers?.find(
-        (f) => f.documentId === documentId
-      );
-
-      if (!followerToRemove) {
-        return ctx.notFound("You are not following this account");
-      }
-
-      await strapi.documents("plugin::users-permissions.user").update({
-        documentId: user.documentId,
-        data: {
-          followers: {
-            disconnect: [documentId],
-          },
-        },
-      });
-
-      return { success: true };
-    },
     async bulkUpdateLastChecked(ctx) {
       const { documentIds } = ctx.request.body;
 
@@ -255,7 +262,7 @@ export default factories.createCoreController(
 
       return {
         requested: documentIds.length,
-        updated: result.count / 2, // each document have two rows in db
+        updated: result.count,
       };
     },
   })
