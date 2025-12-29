@@ -12,6 +12,7 @@ import {
   Avatar,
   Badge,
   Center,
+  FocusTrap,
   Group,
   Loader,
   Paper,
@@ -25,7 +26,12 @@ import { useDebouncedValue } from "@mantine/hooks";
 import { notifications } from "@mantine/notifications";
 import { Spotlight, spotlight } from "@mantine/spotlight";
 import "@mantine/spotlight/styles.css";
-import { IconCheck, IconSearch, IconUsersPlus } from "@tabler/icons-react";
+import {
+  IconCheck,
+  IconLink,
+  IconSearch,
+  IconUsersPlus,
+} from "@tabler/icons-react";
 import { useRouter } from "next/navigation";
 import { useActionState, useEffect, useState, useTransition } from "react";
 
@@ -157,11 +163,7 @@ export default function AddFollowerForm() {
     // Show error or empty state
     if (!searchResult) {
       if (query.trim().length === 0) {
-        return (
-          <Spotlight.Empty>
-            Enter a username or paste a TikTok/Twitch link...
-          </Spotlight.Empty>
-        );
+        return <Spotlight.Empty></Spotlight.Empty>;
       }
 
       if (searchError) {
@@ -215,7 +217,8 @@ export default function AddFollowerForm() {
   return (
     <section>
       <Spotlight.Root query={query} onQueryChange={setQuery}>
-        <Stack gap="xs" p="xs">
+        <FocusTrap.InitialFocus />
+        <Stack gap="0">
           <SegmentedControl
             value={detectedPlatform ?? selectedPlatform}
             onChange={(value) => setSelectedPlatform(value as PlatformType)}
@@ -227,28 +230,29 @@ export default function AddFollowerForm() {
             fullWidth
           />
           {detectedPlatform && (
-            <Text size="xs" c="dimmed" ta="center">
+            <Text size="xs" c="dimmed" ta="center" my="xs">
               Platform auto-detected from URL
             </Text>
           )}
         </Stack>
         <Spotlight.Search
-          placeholder="Search username or paste link..."
-          leftSection={<IconSearch stroke={1.5} />}
+          placeholder="Enter creators name or link"
+          leftSection={<IconSearch stroke={1.5} data-autofocus />}
         />
+
         <Spotlight.ActionsList>{renderContent()}</Spotlight.ActionsList>
       </Spotlight.Root>
 
       <UnstyledButton onClick={spotlight.open} w="100%">
         <Paper
           p="sm"
-          radius="sm"
+          radius="md"
           style={{ cursor: "pointer" }}
           withBorder={isMobile}
         >
           <Group>
-            <IconSearch size={20} color="gray" />
-            <Text c="dimmed">Search for a streamer...</Text>
+            <IconLink size={24} color="gray" />
+            <Text c="gray.3">Enter creators name or link</Text>
           </Group>
         </Paper>
       </UnstyledButton>

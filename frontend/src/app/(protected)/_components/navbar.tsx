@@ -1,6 +1,6 @@
 "use client";
 
-import { ActionIcon, Box, Group, Text } from "@mantine/core";
+import { ActionIcon, Divider, Group, Text } from "@mantine/core";
 import {
   IconArrowLeft,
   IconBellRinging,
@@ -103,12 +103,13 @@ export function Navbar({
           {user?.role ? <RoleBadge role={user.role} /> : null}
         </Group>
 
+        <Divider my="sm" color="transparent" />
+        <AddFollowerForm />
+
+        <Divider my="xs" color="transparent" />
+
         {links}
       </div>
-
-      <Box p="xs">
-        <AddFollowerForm />
-      </Box>
 
       <div className={classes.footer}>
         <Link

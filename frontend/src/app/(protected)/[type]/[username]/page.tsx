@@ -14,7 +14,12 @@ import {
   Text,
   Title,
 } from "@mantine/core";
-import { IconVideo, IconWorldSearch } from "@tabler/icons-react";
+import {
+  IconClock,
+  IconStar,
+  IconVideo,
+  IconWorldSearch,
+} from "@tabler/icons-react";
 import { CountryFlag } from "../../_components/country-flag";
 import FollowButton from "../../_components/follow-button";
 import { FollowerTypeIcon } from "../../_components/follower-type";
@@ -103,7 +108,9 @@ export default async function Page({ params }: PageProps) {
                 objectFit: "cover",
               },
             }}
-          />
+          >
+            <IconStar size={1} />
+          </Avatar>
 
           {follower.type ? (
             <>
@@ -156,33 +163,65 @@ export default async function Page({ params }: PageProps) {
       </Group>
 
       {data.length === 0 ? (
-        <Stack align="center" justify="center" py={80} gap="lg">
-          <ActionIcon
-            variant="transparent"
-            size={120}
-            radius="xl"
-            color="white"
-          >
-            <IconVideo size={90} stroke={2} />
-          </ActionIcon>
-          <Stack align="center" gap={12}>
-            <Title order={2} fw={600}>
-              No recordings yet
-            </Title>
-            <Text size="xl" c="dimmed" maw={450} ta="center">
-              Follow streamers to see their recordings here
-            </Text>
-          </Stack>
-          <Anchor href="/discover" underline="never">
-            <Button
-              size="lg"
-              radius="md"
-              leftSection={<IconWorldSearch size={20} />}
-            >
-              Discover Streamers
-            </Button>
-          </Anchor>
-        </Stack>
+        (() => {
+          const isNewlyAdded =
+            dayjs().diff(dayjs(follower.createdAt), "minute") < 5;
+
+          if (isNewlyAdded) {
+            return (
+              <Stack align="center" justify="center" py={80} gap="lg">
+                <ActionIcon
+                  variant="transparent"
+                  size={120}
+                  radius="xl"
+                  color="blue"
+                >
+                  <IconClock size={90} stroke={2} />
+                </ActionIcon>
+                <Stack align="center" gap={12}>
+                  <Title order={2} fw={600}>
+                    You&apos;re now following {follower.username}!
+                  </Title>
+                  <Text size="xl" c="dimmed" maw={450} ta="center">
+                    We&apos;ll start monitoring their streams and save
+                    recordings for you automatically.
+                  </Text>
+                </Stack>
+              </Stack>
+            );
+          }
+
+          return (
+            <Stack align="center" justify="center" py={80} gap="lg">
+              <ActionIcon
+                variant="transparent"
+                size={120}
+                radius="xl"
+                color="white"
+              >
+                <IconVideo size={90} stroke={2} />
+              </ActionIcon>
+              <Stack align="center" gap={12}>
+                <Title order={2} fw={600}>
+                  No recordings yet
+                </Title>
+                <Text size="xl" c="dimmed" maw={450} ta="center">
+                  We haven&apos;t captured any streams from {follower.username}{" "}
+                  yet. Check back later!
+                </Text>
+              </Stack>
+              <Anchor href="/discover" underline="never">
+                <Button
+                  size="lg"
+                  radius="md"
+                  leftSection={<IconWorldSearch size={20} />}
+                >
+                  Discover Streamers
+                </Button>
+              </Anchor>
+            </Stack>
+          );
+        })()
       ) : (
         <InfiniteRecordings
           initialData={data}

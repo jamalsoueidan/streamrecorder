@@ -62,9 +62,10 @@ export function ImageVideoPreview({ sources, href, type }: Props) {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       style={{
+        aspectRatio: "16/9",
         position: "relative",
-        width: "100%",
-        aspectRatio: "1/1",
+        overflow: "hidden",
+        borderRadius: "var(--mantine-radius-md)",
       }}
     >
       <Anchor
@@ -87,12 +88,16 @@ export function ImageVideoPreview({ sources, href, type }: Props) {
           }
           loading="lazy"
           fallbackSrc="https://placehold.co/180x280/black/white?text=Recording started"
+          w="100%"
+          h="100%"
+          fit="cover"
           style={{
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
+            objectPosition: "center center",
             display: showVideo ? "none" : "block",
-            ...(isRecording && { border: "2px solid red" }),
+            ...(isRecording && {
+              border: "2px solid red",
+              borderRadius: "var(--mantine-radius-md)",
+            }),
           }}
         />
       </Anchor>

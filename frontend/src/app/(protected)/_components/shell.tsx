@@ -30,7 +30,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
         collapsed: headerHeight === 0,
       }}
       navbar={{
-        width: 300,
+        width: 310,
         breakpoint: "sm",
         collapsed: { mobile: !opened },
       }}
