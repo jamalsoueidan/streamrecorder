@@ -1,15 +1,104 @@
 "use client";
 
+import {
+  checkUser,
+  PlatformType,
+  UserSearchResult,
+} from "@/app/actions/check-user";
 import { follow } from "@/app/actions/followers";
-import { ActionIcon, Flex, Input, Select, Title } from "@mantine/core";
+import { parseUsername } from "@/app/lib/parse-username";
+
+import {
+  Avatar,
+  Badge,
+  Center,
+  Group,
+  Loader,
+  Paper,
+  SegmentedControl,
+  Stack,
+  Text,
+  UnstyledButton,
+  useMatches,
+} from "@mantine/core";
+import { useDebouncedValue } from "@mantine/hooks";
 import { notifications } from "@mantine/notifications";
-import { IconAt, IconCheck, IconLoader, IconPlus } from "@tabler/icons-react";
-import { useActionState, useEffect, useRef } from "react";
+import { Spotlight, spotlight } from "@mantine/spotlight";
+import "@mantine/spotlight/styles.css";
+import { IconCheck, IconSearch, IconUsersPlus } from "@tabler/icons-react";
+import { useRouter } from "next/navigation";
+import { useActionState, useEffect, useState, useTransition } from "react";
 
 export default function AddFollowerForm() {
-  const [state, formAction, pending] = useActionState(follow, null);
-  const formRef = useRef<HTMLFormElement>(null);
+  const router = useRouter();
+  const [query, setQuery] = useState("");
+  const [debouncedQuery] = useDebouncedValue(query, 500);
+  const [selectedPlatform, setSelectedPlatform] =
+    useState<PlatformType>("tiktok");
+  const [detectedPlatform, setDetectedPlatform] = useState<PlatformType | null>(
+    null
+  );
+  const [searchResult, setSearchResult] = useState<UserSearchResult | null>(
+    null
+  );
+  const [isSearching, setIsSearching] = useState(false);
+  const [searchError, setSearchError] = useState<string | null>(null);
 
+  const [state, formAction, pending] = useActionState(follow, null);
+  const [isPending, startTransition] = useTransition();
+
+  const isMobile = useMatches({
+    base: false,
+    sm: true,
+  });
+
+  // The effective platform: use detected (from URL) if available, otherwise use selected
+  const effectivePlatform = detectedPlatform ?? selectedPlatform;
+
+  // Search for user when debounced query changes
+  useEffect(() => {
+    const searchUser = async () => {
+      if (!debouncedQuery || debouncedQuery.trim().length === 0) {
+        setSearchResult(null);
+        setSearchError(null);
+        setDetectedPlatform(null);
+        return;
+      }
+
+      setIsSearching(true);
+      setSearchError(null);
+
+      // Parse the input to extract username from URL or plain text
+      const parsed = parseUsername(debouncedQuery);
+      setDetectedPlatform(parsed.platform);
+
+      if (!parsed.username) {
+        setSearchResult(null);
+        setSearchError("Could not parse username");
+        setIsSearching(false);
+        return;
+      }
+
+      // Use detected platform from URL, or fall back to selected platform
+      const platformToUse = parsed.platform ?? selectedPlatform;
+
+      const result = await checkUser(parsed.username, platformToUse);
+
+      if (result.success && result.user) {
+        setSearchResult(result.user);
+        setSearchError(null);
+      } else {
+        setSearchResult(null);
+        setSearchError(result.error || "User not found");
+      }
+
+      setIsSearching(false);
+    };
+
+    searchUser();
+  }, [debouncedQuery, selectedPlatform]);
+
+  // Handle follow success/error notifications
   useEffect(() => {
     if (state?.success) {
       notifications.show({
@@ -18,7 +107,6 @@ export default function AddFollowerForm() {
         color: "green",
         icon: <IconCheck size={16} />,
       });
-      formRef.current?.reset();
     }
 
     if (state?.error) {
@@ -30,32 +118,140 @@ export default function AddFollowerForm() {
     }
   }, [state]);
 
+  // Handle clicking on a user result
+  const handleUserSelect = (user: UserSearchResult) => {
+    spotlight.close();
+    setQuery("");
+    setSearchResult(null);
+    setDetectedPlatform(null);
+
+    // Create FormData and call the follow action
+    const formData = new FormData();
+    formData.append("username", user.username);
+    formData.append("type", user.type);
+
+    startTransition(() => {
+      formAction(formData);
+    });
+
+    // Redirect to user page (adjust the path as needed)
+    router.push(`/${user.type}/${user.username}`);
+  };
+
+  // Render the search results
+  const renderContent = () => {
+    // Show loader while searching
+    if (isSearching) {
+      return (
+        <Center py="xl">
+          <Group gap="xs">
+            <Loader size="sm" />
+            <Text size="sm" c="dimmed">
+              Searching on {effectivePlatform}...
+            </Text>
+          </Group>
+        </Center>
+      );
+    }
+
+    // Show error or empty state
+    if (!searchResult) {
+      if (query.trim().length === 0) {
+        return (
+          <Spotlight.Empty>
+            Enter a username or paste a TikTok/Twitch link...
+          </Spotlight.Empty>
+        );
+      }
+
+      if (searchError) {
+        return <Spotlight.Empty>{searchError}</Spotlight.Empty>;
+      }
+
+      return <Spotlight.Empty>Nothing found...</Spotlight.Empty>;
+    }
+
+    // Show the found user
+    return (
+      <Spotlight.Action
+        onClick={() => handleUserSelect(searchResult)}
+        disabled={isPending}
+      >
+        <Group wrap="nowrap" w="100%">
+          <Center>
+            <Avatar
+              src={searchResult.avatar}
+              alt={searchResult.nickname}
+              size={80}
+            />
+          </Center>
+
+          <div style={{ flex: 1 }}>
+            <Text fw={500}>{searchResult.nickname}</Text>
+            <Text opacity={0.6} size="xs">
+              @{searchResult.username}
+            </Text>
+            <Badge variant="light" size="md">
+              {searchResult.type}
+            </Badge>
+          </div>
+
+          <Group gap="xs">
+            {/* Add this */}
+            <Badge
+              variant="filled"
+              color="red"
+              size="xl"
+              leftSection={<IconUsersPlus size={28} />}
+            >
+              Follow
+            </Badge>
+          </Group>
+        </Group>
+      </Spotlight.Action>
+    );
+  };
+
   return (
     <section>
-      <Title order={3} mb="xs">
-        Add Follower
-      </Title>
-
-      <form
-        action={formAction}
-        style={{ display: "flex", flexDirection: "column", gap: 4 }}
-      >
-        <Select name="type" data={["tiktok", "twitch"]} defaultValue="tiktok" />
-
-        <Flex gap={3}>
-          <Input
-            placeholder=""
-            name="username"
-            type="text"
-            autoComplete="off"
-            required
-            leftSection={<IconAt size={16} />}
+      <Spotlight.Root query={query} onQueryChange={setQuery}>
+        <Stack gap="xs" p="xs">
+          <SegmentedControl
+            value={detectedPlatform ?? selectedPlatform}
+            onChange={(value) => setSelectedPlatform(value as PlatformType)}
+            disabled={detectedPlatform !== null} // Disable when URL auto-detected
+            data={[
+              { label: "TikTok", value: "tiktok" },
+              { label: "Twitch", value: "twitch" },
+            ]}
+            fullWidth
           />
-          <ActionIcon size="lg" type="submit" disabled={pending}>
-            {pending ? <IconLoader /> : <IconPlus />}
-          </ActionIcon>
-        </Flex>
-      </form>
+          {detectedPlatform && (
+            <Text size="xs" c="dimmed" ta="center">
+              Platform auto-detected from URL
+            </Text>
+          )}
+        </Stack>
+        <Spotlight.Search
+          placeholder="Search username or paste link..."
+          leftSection={<IconSearch stroke={1.5} />}
+        />
+        <Spotlight.ActionsList>{renderContent()}</Spotlight.ActionsList>
+      </Spotlight.Root>
+
+      <UnstyledButton onClick={spotlight.open} w="100%">
+        <Paper
+          p="sm"
+          radius="sm"
+          style={{ cursor: "pointer" }}
+          withBorder={isMobile}
+        >
+          <Group>
+            <IconSearch size={20} color="gray" />
+            <Text c="dimmed">Search for a streamer...</Text>
+          </Group>
+        </Paper>
+      </UnstyledButton>
     </section>
   );
 }

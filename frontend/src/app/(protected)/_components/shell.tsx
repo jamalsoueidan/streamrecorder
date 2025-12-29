@@ -2,6 +2,7 @@
 
 import { AppShell, Burger, Group, useMatches } from "@mantine/core";
 import { useDisclosure, useMounted } from "@mantine/hooks";
+import AddFollowerForm from "./add-follower-form";
 import { Navbar } from "./navbar";
 
 export function Shell({ children }: { children: React.ReactNode }) {
@@ -36,8 +37,9 @@ export function Shell({ children }: { children: React.ReactNode }) {
       padding="md"
     >
       <AppShell.Header>
-        <Group h="100%" px="md">
-          <Burger opened={opened} onClick={open} hiddenFrom="sm" size="sm" />
+        <Group h="100%" px="md" hiddenFrom="sm">
+          <Burger opened={opened} onClick={open} size="sm" />
+          <AddFollowerForm />
         </Group>
       </AppShell.Header>
       <AppShell.Navbar>

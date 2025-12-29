@@ -27,14 +27,21 @@ async function followStreamer(username: string, type = "tiktok") {
 beforeAll(async () => {
   await setupStrapi();
 
-  await grantPermissions([
-    "api::follower.follower.browse",
-    "api::follower.follower.follow",
-    "api::recording.recording.find",
-    "api::source.source.find",
-  ]);
+  await grantPermissions(
+    [
+      "api::follower.follower.browse",
+      "api::follower.follower.follow",
+      "api::recording.recording.find",
+      "api::source.source.find",
+    ],
+    "premium"
+  );
 
-  const { jwt: userJwt } = await createTestUser("user@test.com", "testuser");
+  const { jwt: userJwt } = await createTestUser(
+    "user@test.com",
+    "testuser",
+    "premium"
+  );
   jwt = userJwt;
 
   // Create 5 followers

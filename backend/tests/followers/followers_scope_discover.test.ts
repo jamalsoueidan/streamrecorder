@@ -32,19 +32,30 @@ async function followStreamer(
 beforeAll(async () => {
   await setupStrapi();
 
-  await grantPermissions([
-    "api::follower.follower.browse",
-    "api::follower.follower.follow",
-    "api::recording.recording.find",
-    "api::source.source.find",
-  ]);
+  await grantPermissions(
+    [
+      "api::follower.follower.browse",
+      "api::follower.follower.follow",
+      "api::recording.recording.find",
+      "api::source.source.find",
+    ],
+    "premium"
+  );
 
   // User 1 - will use discover
-  const { jwt: userJwt } = await createTestUser("user@test.com", "testuser");
+  const { jwt: userJwt } = await createTestUser(
+    "user@test.com",
+    "testuser",
+    "premium"
+  );
   jwt = userJwt;
 
   // User 2 - will follow streamers (so they exist in DB)
-  const { jwt: userJwt2 } = await createTestUser("user2@test.com", "testuser2");
+  const { jwt: userJwt2 } = await createTestUser(
+    "user2@test.com",
+    "testuser2",
+    "premium"
+  );
   jwt2 = userJwt2;
 
   // User 2 follows 5 streamers (User 1 does NOT follow them = discover)
