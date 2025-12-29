@@ -15,12 +15,16 @@ let jwt: string;
 beforeAll(async () => {
   await setupStrapi();
 
-  await grantPermissions([
-    "api::follower.follower.browse",
-    "api::follower.follower.follow",
-  ]);
+  await grantPermissions(
+    ["api::follower.follower.browse", "api::follower.follower.follow"],
+    "premium"
+  );
 
-  const { jwt: userJwt } = await createTestUser("user@test.com", "testuser");
+  const { jwt: userJwt } = await createTestUser(
+    "user@test.com",
+    "testuser",
+    "premium"
+  );
   jwt = userJwt;
 });
 

@@ -18,6 +18,8 @@ process.env.ADMIN_JWT_SECRET = "test-admin-jwt-secret";
 process.env.TRANSFER_TOKEN_SALT = "test-transfer-token-salt";
 process.env.JWT_SECRET = "test-jwt-secret";
 
+export type RoleType = "authenticated" | "premium" | "founder" | "public";
+
 async function createTestDatabase() {
   if (isCI) {
     // SQLite in CI - ensure .tmp directory exists
@@ -99,12 +101,64 @@ export async function cleanupStrapi(): Promise<void> {
   await dropTestDatabase();
 }
 
-export async function createTestUser(email: string, username: string) {
-  const authenticatedRole = await strapi.db
+/**
+ * Get or create a role by type
+ */
+export async function getOrCreateRole(roleType: RoleType) {
+  let role = await strapi.db
     .query("plugin::users-permissions.role")
-    .findOne({ where: { type: "authenticated" } });
+    .findOne({ where: { type: roleType } });
 
-  // Create user
+  if (!role) {
+    role = await strapi.db.query("plugin::users-permissions.role").create({
+      data: {
+        name: roleType.charAt(0).toUpperCase() + roleType.slice(1),
+        description: `${roleType} role`,
+        type: roleType,
+      },
+    });
+  }
+
+  return role;
+}
+
+/**
+ * Grant permissions to a specific role
+ */
+export async function grantPermissions(
+  actions: string[],
+  roleType: RoleType = "authenticated"
+) {
+  const role = await getOrCreateRole(roleType);
+
+  for (const action of actions) {
+    // Check if permission already exists
+    const existing = await strapi.db
+      .query("plugin::users-permissions.permission")
+      .findOne({
+        where: { action, role: role.id },
+      });
+
+    if (!existing) {
+      await strapi.db.query("plugin::users-permissions.permission").create({
+        data: { action, role: role.id },
+      });
+    }
+  }
+}
+
+/**
+ * Create a test user with specified role
+ * Permissions should be granted to the role before calling this
+ */
+export async function createTestUser(
+  email: string,
+  username: string,
+  roleType: RoleType = "premium"
+) {
+  const role = await getOrCreateRole(roleType);
+
+  // Create user with that role
   await strapi.plugins["users-permissions"].services.user.add({
     username,
     email,
@@ -112,7 +166,7 @@ export async function createTestUser(email: string, username: string) {
     confirmed: true,
     blocked: false,
     provider: "local",
-    role: authenticatedRole.id,
+    role: role.id,
   });
 
   // Login and get JWT
@@ -127,19 +181,21 @@ export async function createTestUser(email: string, username: string) {
   return {
     jwt: res.body.jwt,
     user: res.body.user,
+    role: role,
   };
 }
 
-export async function grantPermissions(actions: string[]) {
-  const authenticatedRole = await strapi.db
-    .query("plugin::users-permissions.role")
-    .findOne({ where: { type: "authenticated" } });
-
-  for (const action of actions) {
-    await strapi.db.query("plugin::users-permissions.permission").create({
-      data: { action, role: authenticatedRole.id },
-    });
-  }
+/**
+ * Convenience: Setup role with permissions and create user in one call
+ */
+export async function createTestUserWithPermissions(
+  email: string,
+  username: string,
+  roleType: RoleType,
+  permissions: string[]
+) {
+  await grantPermissions(permissions, roleType);
+  return createTestUser(email, username, roleType);
 }
 
 export async function createRecording(

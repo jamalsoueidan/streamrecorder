@@ -3,6 +3,50 @@ import { factories } from "@strapi/strapi";
 export default factories.createCoreController(
   "api::follower.follower",
   ({ strapi }) => ({
+    async filters(cxt) {
+      const knex = strapi.db.connection;
+
+      const [countries, genders, languages, types] = await Promise.all([
+        knex("followers")
+          .select("country as value")
+          .count("* as count")
+          .whereNotNull("country")
+          .where("country", "!=", "")
+          .groupBy("country")
+          .orderBy("count", "desc"),
+
+        knex("followers")
+          .select("gender as value")
+          .count("* as count")
+          .whereNotNull("gender")
+          .where("gender", "!=", "")
+          .groupBy("gender")
+          .orderBy("count", "desc"),
+
+        knex("followers")
+          .select("language as value")
+          .count("* as count")
+          .whereNotNull("language")
+          .where("language", "!=", "")
+          .groupBy("language")
+          .orderBy("count", "desc"),
+
+        knex("followers")
+          .select("type as value")
+          .count("* as count")
+          .whereNotNull("type")
+          .where("type", "!=", "")
+          .groupBy("type")
+          .orderBy("count", "desc"),
+      ]);
+
+      return {
+        countries,
+        genders,
+        languages,
+        types,
+      };
+    },
     async browse(ctx) {
       const user = ctx.state.user;
       if (!user) return ctx.unauthorized();
@@ -148,7 +192,7 @@ export default factories.createCoreController(
         .documents("plugin::users-permissions.user")
         .findOne({
           documentId: user.documentId,
-          populate: ["followers"],
+          populate: ["followers", "role"],
         });
 
       // Find or create follower
@@ -167,6 +211,24 @@ export default factories.createCoreController(
           documentId: follower.documentId,
           data: { lastCheckedAt: new Date() },
         });
+      }
+
+      const totalFollowers = currentUser.followers
+        ? currentUser.followers.length
+        : 0;
+
+      if (currentUser.role.type === "authenticated" && totalFollowers >= 3) {
+        return ctx.forbidden("You already follow the maximum of 3 followers.");
+      }
+
+      if (currentUser.role.type === "founder" && totalFollowers >= 50) {
+        return ctx.forbidden("You already follow the maximum of 50 followers.");
+      }
+
+      if (currentUser.role.type === "premium" && totalFollowers >= 100) {
+        return ctx.forbidden(
+          "You already follow the maximum of 100 followers."
+        );
       }
 
       // Get all existing documentIds + new one
@@ -232,23 +294,6 @@ export default factories.createCoreController(
       });
 
       return { success: true };
-    },
-    async import(ctx) {
-      const { username, type, createdAt } = ctx.request.body;
-
-      if (!username) {
-        return ctx.badRequest("username is required");
-      }
-
-      const result = await strapi.documents("api::follower.follower").create({
-        data: {
-          username,
-          type,
-          createdAt: createdAt || new Date(),
-        },
-      });
-
-      ctx.body = { data: result };
     },
     async bulkUpdateLastChecked(ctx) {
       const { documentIds } = ctx.request.body;

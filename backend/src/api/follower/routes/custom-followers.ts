@@ -2,6 +2,11 @@ export default {
   routes: [
     {
       method: "GET",
+      path: "/followers/filters",
+      handler: "follower.filters",
+    },
+    {
+      method: "GET",
       path: "/followers/browse",
       handler: "follower.browse",
     },
@@ -14,11 +19,6 @@ export default {
       method: "POST",
       path: "/followers/unfollow",
       handler: "follower.unfollow",
-    },
-    {
-      method: "POST",
-      path: "/followers/import",
-      handler: "follower.import",
     },
     {
       method: "POST",
