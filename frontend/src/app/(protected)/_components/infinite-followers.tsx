@@ -322,8 +322,8 @@ export default function InfiniteFollowers({
                             visibleFrom={getVisibleFrom(index)}
                           >
                             <ImageVideoPreview
-                              href={`/${follower.type}/${follower.username}/live/${rec.documentId}`}
-                              sources={rec.sources}
+                              recording={rec}
+                              username={follower.username}
                               type={follower.type}
                             />
 

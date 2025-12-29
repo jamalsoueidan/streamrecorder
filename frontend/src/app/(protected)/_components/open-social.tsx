@@ -5,16 +5,20 @@ import { ActionIcon, Tooltip } from "@mantine/core";
 import { IconWindowMaximize } from "@tabler/icons-react";
 import Link from "next/link";
 
-export default function OpenSocial({ follower }: { follower: Follower }) {
-  const type = follower.type;
+export const SOCIAL_URL_PATTERNS: Record<
+  FollowerTypeEnum,
+  (username: string) => string
+> = {
+  [FollowerTypeEnum.Tiktok]: (username) =>
+    `https://www.tiktok.com/@${username}/live`,
+  [FollowerTypeEnum.Twitch]: (username) => `https://www.twitch.tv/${username}`,
+};
 
-  const href =
-    type === FollowerTypeEnum.Tiktok
-      ? `https://www.tiktok.com/@${follower.username}/live`
-      : `https://www.twitch.tv/${follower.username}`;
+export default function OpenSocial({ follower }: { follower: Follower }) {
+  const href = SOCIAL_URL_PATTERNS[follower.type](follower.username);
 
   return (
-    <Tooltip label={`Go to ${type}`}>
+    <Tooltip label={`Go to ${follower.type}`}>
       <ActionIcon size="lg" component={Link} href={href} target="_blank">
         <IconWindowMaximize size={24} />
       </ActionIcon>
