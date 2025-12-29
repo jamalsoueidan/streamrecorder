@@ -151,6 +151,25 @@ export function ImageVideoPreview({ recording, type, username }: Props) {
         }}
       />
 
+      {isRecording && (
+        <div
+          style={{
+            position: "absolute",
+            bottom: 8,
+            right: 8,
+            backgroundColor: "rgba(0, 0, 0, 0.8)",
+            color: "white",
+            padding: "2px 6px",
+            borderRadius: 4,
+            fontSize: 12,
+            fontWeight: 500,
+            pointerEvents: "none",
+          }}
+        >
+          {recording.sources?.find((s) => s.state === "recording")?.executionId}
+        </div>
+      )}
+
       {totalDuration > 0 && !showVideo && (
         <div
           style={{
