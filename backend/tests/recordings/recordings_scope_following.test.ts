@@ -32,19 +32,30 @@ async function followStreamer(
 beforeAll(async () => {
   await setupStrapi();
 
-  await grantPermissions([
-    "api::follower.follower.find",
-    "api::follower.follower.browse",
-    "api::follower.follower.follow",
-    "api::recording.recording.find",
-    "api::recording.recording.browse",
-    "api::source.source.find",
-  ]);
+  await grantPermissions(
+    [
+      "api::follower.follower.find",
+      "api::follower.follower.browse",
+      "api::follower.follower.follow",
+      "api::recording.recording.find",
+      "api::recording.recording.browse",
+      "api::source.source.find",
+    ],
+    "premium"
+  );
 
-  const { jwt: userJwt } = await createTestUser("user@test.com", "testuser");
+  const { jwt: userJwt } = await createTestUser(
+    "user@test.com",
+    "testuser",
+    "premium"
+  );
   jwt = userJwt;
 
-  const { jwt: userJwt2 } = await createTestUser("user2@test.com", "testuser2");
+  const { jwt: userJwt2 } = await createTestUser(
+    "user2@test.com",
+    "testuser2",
+    "premium"
+  );
   jwt2 = userJwt2;
 
   // User 1 follows alice and bob
