@@ -12,9 +12,11 @@ import {
   IconUserPlus,
 } from "@tabler/icons-react";
 import { usePathname, useRouter } from "next/navigation";
+import { useTransition } from "react";
 import { iconMap } from "./navbar";
 
 export function MobileBar() {
+  const [isPending, startTransition] = useTransition();
   const navigation = useNavigation();
   const user = useUser();
   const pathname = usePathname();
@@ -53,7 +55,9 @@ export function MobileBar() {
 
   const handleChange = (value: string) => {
     if (value === "menu") return;
-    router.push(value);
+    startTransition(() => {
+      router.push(value);
+    });
   };
 
   return (
