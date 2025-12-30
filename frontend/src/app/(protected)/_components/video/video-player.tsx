@@ -9,11 +9,9 @@ import {
   HlsVideo,
   MediaControlBar,
   MediaController,
-  MediaPlaybackRateButton,
   MediaSeekForwardButton,
   MediaTimeDisplay,
   MediaTimeRange,
-  MediaVolumeRange,
 } from "./media-chrome";
 import { buildVideoRanges, combinePlaylistsFromSources } from "./player-utils";
 
@@ -173,11 +171,9 @@ export function VideoPlayer({ sources }: { sources: Source[] }) {
         </HlsVideo>
 
         <MediaControlBar>
-          <MediaSeekForwardButton seek-offset="10" />
-          <MediaTimeRange />
           <MediaTimeDisplay show-duration />
-          <MediaVolumeRange />
-          <MediaPlaybackRateButton />
+          <MediaTimeRange />
+          <MediaSeekForwardButton seek-offset="10" />
         </MediaControlBar>
       </MediaController>
 
