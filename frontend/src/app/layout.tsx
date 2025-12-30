@@ -10,6 +10,7 @@ import "@mantine/notifications/styles.css";
 import type { Metadata, Viewport } from "next";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
 import "./globals.css";
+import { PWAUpdater } from "./pwa-updater";
 
 const theme = createTheme({});
 
@@ -47,7 +48,10 @@ export default function RootLayout({
       <body>
         <MantineProvider theme={theme} defaultColorScheme="dark">
           <Notifications color="red" position="bottom-center" />
-          <NuqsAdapter>{children}</NuqsAdapter>
+          <NuqsAdapter>
+            {children}
+            <PWAUpdater />
+          </NuqsAdapter>
         </MantineProvider>
       </body>
     </html>

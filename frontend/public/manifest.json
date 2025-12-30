@@ -2,7 +2,7 @@
   "name": "LiveStreamRecorder",
   "short_name": "LSR",
   "description": "Never miss a live stream again",
-  "start_url": "/",
+  "start_url": "/following",
   "display": "standalone",
   "background_color": "#000000",
   "theme_color": "#000000",

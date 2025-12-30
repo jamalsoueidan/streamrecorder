@@ -23,7 +23,7 @@ import {
   IconUserPlus,
 } from "@tabler/icons-react";
 import { usePathname, useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useTransition } from "react";
 import { iconMap } from "./navbar";
 
 // Check if running in standalone mode (outside component)
@@ -33,6 +33,7 @@ const getIsInstalled = () => {
 };
 
 export function MobileBar() {
+  const [isPending, startTransition] = useTransition();
   const navigation = useNavigation();
   const user = useUser();
   const pathname = usePathname();
@@ -96,10 +97,10 @@ export function MobileBar() {
         <Stack gap="0" align="center">
           <Icon
             {...iconProps}
-            style={{ width: "24px", height: "24px" }}
+            style={{ width: "18px", height: "18px" }}
             color={item.color ? item.color : undefined}
           />
-          <Text c="dimmed" size="sm">
+          <Text c="dimmed" size="xs">
             {item.label}
           </Text>
         </Stack>
@@ -109,9 +110,9 @@ export function MobileBar() {
 
   const handleChange = (value: string) => {
     if (value === "menu") return;
-    setTimeout(() => {
+    startTransition(() => {
       router.push(value);
-    }, 150);
+    });
   };
 
   return (
@@ -156,9 +157,9 @@ export function MobileBar() {
                   >
                     <IconDotsVertical
                       {...iconProps}
-                      style={{ width: "24px", height: "24px" }}
+                      style={{ width: "18px", height: "18px" }}
                     />
-                    <Text c="dimmed" size="sm">
+                    <Text c="dimmed" size="xs">
                       More
                     </Text>
                   </Stack>
