@@ -1,4 +1,4 @@
-import { VideoModal } from "@/app/(protected)/[type]/[username]/live/[id]/_components/video-modal";
+import { VideoModal } from "@/app/(protected)/_components/video/video-modal";
 import api from "@/lib/api";
 import { SortOptions } from "@/lib/types/filtering";
 import { deepMerge } from "@mantine/core";
