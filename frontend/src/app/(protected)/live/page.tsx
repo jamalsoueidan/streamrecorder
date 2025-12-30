@@ -1,10 +1,16 @@
 import InfiniteRecordings from "@/app/(protected)/_components/infinity-recordings";
-import { getRecordings } from "@/app/actions/recordings";
 import api from "@/lib/api";
 import { SortOptions } from "@/lib/types/filtering";
-import { ActionIcon, Anchor, Button, Stack, Text, Title } from "@mantine/core";
+import {
+  ActionIcon,
+  Anchor,
+  Button,
+  deepMerge,
+  Stack,
+  Text,
+  Title,
+} from "@mantine/core";
 import { IconVideo, IconWorldSearch } from "@tabler/icons-react";
-import deepmerge from "deepmerge";
 
 const defaultOptions = {
   "pagination[pageSize]": 10,
@@ -35,23 +41,12 @@ const defaultOptions = {
 };
 
 export default async function FollowingsPage() {
-  const response = await api.recording.getRecordings(
-    deepmerge(
-      {
-        "pagination[page]": 1,
-        sort: SortOptions.createdAtDesc,
-      },
-      defaultOptions
-    )
-  );
-
-  const data = response.data?.data || [];
-  const meta = response.data?.meta;
-
-  const fetchAction = async (options: Parameters<typeof getRecordings>[0]) => {
+  const fetchAction = async (
+    options: Parameters<typeof api.recording.browseRecordings>[0]
+  ) => {
     "use server";
     const response = await api.recording.getRecordings(
-      deepmerge(options, defaultOptions)
+      deepMerge(options, defaultOptions)
     );
 
     return {
@@ -59,6 +54,11 @@ export default async function FollowingsPage() {
       meta: response.data?.meta,
     };
   };
+
+  const { data, meta } = await fetchAction({
+    "pagination[page]": 1,
+    sort: SortOptions.createdAtDesc,
+  });
 
   return (
     <section>

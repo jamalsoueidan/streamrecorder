@@ -29,7 +29,7 @@ export async function checkUser(
 
   try {
     const response = await fetch(
-      "https://n8n.tiktokrecorder.com/webhook/check-user",
+      process.env.NEXT_PUBLIC_N8N_URL + "/webhook/check-user",
       {
         method: "POST",
         headers: {

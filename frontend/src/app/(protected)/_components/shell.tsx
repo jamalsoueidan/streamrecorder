@@ -1,8 +1,8 @@
 "use client";
 
-import { AppShell, Burger, Group, useMatches } from "@mantine/core";
+import { AppShell, useMatches } from "@mantine/core";
 import { useDisclosure, useMounted } from "@mantine/hooks";
-import AddFollowerForm from "./add-follower-form";
+import { MobileBar } from "./mobilebar";
 import { Navbar } from "./navbar";
 
 export function Shell({ children }: { children: React.ReactNode }) {
@@ -11,21 +11,21 @@ export function Shell({ children }: { children: React.ReactNode }) {
   // mount and headerHeight is fix for SSR and the video player page
   const mounted = useMounted();
   const headerHeight = useMatches({
-    base: 60,
+    base: 50,
     sm: 0,
   });
 
   return (
     <AppShell
       styles={{
-        header: !headerHeight
+        footer: !headerHeight
           ? {
               display: "none",
             }
           : {},
       }}
       layout="alt"
-      header={{
+      footer={{
         height: mounted ? headerHeight : 0,
         collapsed: headerHeight === 0,
       }}
@@ -36,16 +36,14 @@ export function Shell({ children }: { children: React.ReactNode }) {
       }}
       padding="md"
     >
-      <AppShell.Header>
-        <Group h="100%" px="md" hiddenFrom="sm">
-          <Burger opened={opened} onClick={open} size="sm" />
-          <AddFollowerForm />
-        </Group>
-      </AppShell.Header>
+      <AppShell.Header></AppShell.Header>
       <AppShell.Navbar>
         <Navbar opened={opened} close={close} />
       </AppShell.Navbar>
       <AppShell.Main>{children}</AppShell.Main>
+      <AppShell.Footer>
+        <MobileBar />
+      </AppShell.Footer>
     </AppShell>
   );
 }

@@ -1,23 +1,20 @@
 import { Image, Tooltip } from "@mantine/core";
-import countries from "i18n-iso-countries";
-import en from "i18n-iso-countries/langs/en.json";
-
-countries.registerLocale(en);
 
 interface CountryFlagProps {
   country: string;
+  countryCode?: string;
   size?: number;
 }
 
-export const CountryFlag = ({ country, size = 24 }: CountryFlagProps) => {
-  const code = countries.getAlpha2Code(country, "en")?.toLowerCase();
-
-  if (!code) return null;
-
+export const CountryFlag = ({
+  country,
+  countryCode,
+  size = 24,
+}: CountryFlagProps) => {
   return (
     <Tooltip label={country}>
       <Image
-        src={`https://flagcdn.com/w40/${code}.png`}
+        src={`https://flagcdn.com/w40/${countryCode?.toLowerCase()}.png`}
         alt={country}
         style={{
           width: size,
