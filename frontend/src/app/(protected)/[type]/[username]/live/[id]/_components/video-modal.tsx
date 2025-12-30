@@ -16,7 +16,7 @@ interface Props {
   initialSources: Source[];
   initialPrevId: string | null;
   initialNextId: string | null;
-  onLoadVideo: (id: string) => Promise<{
+  fetchAction: (id: string) => Promise<{
     sources: Source[];
     prevId: string | null;
     nextId: string | null;
@@ -30,7 +30,7 @@ export function VideoModal({
   initialSources,
   initialPrevId,
   initialNextId,
-  onLoadVideo,
+  fetchAction,
 }: Props) {
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -54,7 +54,7 @@ export function VideoModal({
     async (id: string) => {
       setLoading(true);
       try {
-        const data = await onLoadVideo(id);
+        const data = await fetchAction(id);
 
         setSources(data.sources);
         setPrevId(data.prevId);
@@ -65,7 +65,7 @@ export function VideoModal({
       }
       setLoading(false);
     },
-    [onLoadVideo]
+    [fetchAction]
   );
 
   return (

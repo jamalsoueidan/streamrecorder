@@ -1,4 +1,3 @@
-import { getRecordings } from "@/app/actions/recordings";
 import dayjs from "@/app/lib/dayjs";
 import api from "@/lib/api";
 import { SortOptions } from "@/lib/types/filtering";
@@ -9,6 +8,7 @@ import {
   Avatar,
   Box,
   Button,
+  deepMerge,
   Group,
   Stack,
   Text,
@@ -26,6 +26,37 @@ import { FollowerTypeIcon } from "../../_components/follower-type";
 import InfiniteRecordings from "../../_components/infinity-recordings";
 import OpenSocial from "../../_components/open-social";
 import UnfollowButton from "../../_components/unfollow-button";
+
+const defaultOptions = {
+  filters: {
+    // give me all recordings that are done or recording
+    sources: {
+      state: {
+        $in: ["done", "recording"],
+      },
+    },
+  },
+  populate: {
+    sources: {
+      fields: ["*"],
+      filters: {
+        // filter out from source
+        state: {
+          $ne: "failed",
+        },
+      },
+      populate: ["videoSmall", "videoOriginal"], // we ask for original because sometime small is null while encoding for mini-player
+    },
+    follower: {
+      fields: ["username", "type"],
+      populate: {
+        avatar: {
+          fields: ["url"],
+        },
+      },
+    },
+  },
+};
 
 interface PageProps {
   params: Promise<{
@@ -68,32 +99,35 @@ export default async function Page({ params }: PageProps) {
   const followers: Follower[] = (user.data as any).followers;
   const isFollowing = followers.find((f) => f.id === follower.id);
 
-  const { data, meta } = await getRecordings({
-    filters: {
-      follower: {
-        documentId: {
-          $eq: follower?.documentId,
+  const fetchAction = async (
+    options: Parameters<typeof api.recording.browseRecordings>[0]
+  ) => {
+    "use server";
+    const response = await api.recording.browseRecordings(
+      deepMerge(defaultOptions, {
+        filters: {
+          follower: {
+            documentId: {
+              $eq: follower?.documentId,
+            },
+          },
         },
-      },
-    },
+        ...options,
+        "pagination[pageSize]": 10,
+      })
+    );
+
+    return response.data;
+  };
+
+  const { data, meta } = await fetchAction({
     "pagination[page]": 1,
     sort: SortOptions.createdAtDesc,
   });
 
-  const fetchAction = async (options: Parameters<typeof getRecordings>[0]) => {
-    "use server";
-    delete options.scope; //remove scope, incase user does not follow streamer
-    return await getRecordings({
-      ...options,
-      filters: {
-        follower: {
-          documentId: {
-            $eq: follower?.documentId,
-          },
-        },
-      },
-    });
-  };
+  const isRecording = data?.some((r) =>
+    r.sources?.some((s) => s.state === "recording")
+  );
 
   return (
     <section>
@@ -102,6 +136,13 @@ export default async function Page({ params }: PageProps) {
           <Avatar
             size={150}
             src={follower.avatar?.url}
+            style={{
+              ...(isRecording
+                ? {
+                    border: "3px solid red",
+                  }
+                : {}),
+            }}
             styles={{
               image: {
                 transform: "scale(2)",
@@ -131,7 +172,11 @@ export default async function Page({ params }: PageProps) {
           <Group>
             <Title order={2}>{follower.username}</Title>
             {follower.country ? (
-              <CountryFlag country={follower?.country} size={40} />
+              <CountryFlag
+                country={follower.country}
+                countryCode={follower?.countryCode}
+                size={40}
+              />
             ) : null}
           </Group>
 
@@ -162,7 +207,7 @@ export default async function Page({ params }: PageProps) {
         </Stack>
       </Group>
 
-      {data.length === 0 ? (
+      {data?.length === 0 ? (
         (() => {
           const isNewlyAdded =
             dayjs().diff(dayjs(follower.createdAt), "minute") < 5;
