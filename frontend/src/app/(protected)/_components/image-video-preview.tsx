@@ -10,10 +10,10 @@ import { Anchor, Badge, Box, Button, CopyButton, Image } from "@mantine/core";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useRef, useState } from "react";
-import { MiniPlayer } from "../[type]/[username]/live/[id]/_components/mini-player";
-import { formatDuration } from "../[type]/[username]/live/[id]/_components/player-utils";
 import { FollowerTypeIcon } from "./follower-type";
 import { SOCIAL_URL_PATTERNS } from "./open-social";
+import { MiniPlayer } from "./video/mini-player";
+import { formatDuration } from "./video/player-utils";
 
 interface Props {
   recording: Recording;
@@ -28,10 +28,6 @@ export function ImageVideoPreview({ recording, type, username }: Props) {
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
   const router = useRouter();
 
-  const href = `/${type}/${username}/live/${
-    recording.documentId
-  }?${searchParams.toString()}`;
-
   const sources = recording.sources;
   const totalDuration =
     sources?.reduce((sum, s) => sum + (s.duration || 0), 0) || 0;
@@ -43,6 +39,16 @@ export function ImageVideoPreview({ recording, type, username }: Props) {
   const uri = sources?.length
     ? process.env.NEXT_PUBLIC_S3_URL! + sources[sources.length - 1].path
     : null;
+
+  const getHref = (time?: number) => {
+    const params = new URLSearchParams(searchParams.toString());
+    if (time && time > 0) {
+      params.set("t", Math.floor(time).toString());
+    }
+    return `/${type}/${username}/live/${
+      recording.documentId
+    }?${params.toString()}`;
+  };
 
   const handleMouseEnter = () => {
     if (!sources || sources.length === 0 || isRecording) return;
@@ -59,8 +65,9 @@ export function ImageVideoPreview({ recording, type, username }: Props) {
     setShowVideo(false);
   };
 
-  const handleDoubleClick = () => {
-    router.push(href);
+  const handleTimeClick = (currentTime: number) => {
+    console.log("clicked");
+    router.push(getHref(currentTime));
   };
 
   return (
@@ -76,7 +83,7 @@ export function ImageVideoPreview({ recording, type, username }: Props) {
     >
       <Anchor
         component={Link}
-        href={href}
+        href={getHref()}
         style={{
           pointerEvents: isRecording ? "none" : "auto",
           cursor: isRecording ? "not-allowed" : "pointer",
@@ -136,9 +143,7 @@ export function ImageVideoPreview({ recording, type, username }: Props) {
       )}
 
       {showVideo && sources && (
-        <div onClick={handleDoubleClick} style={{ cursor: "pointer" }}>
-          <MiniPlayer sources={sources} />
-        </div>
+        <MiniPlayer sources={sources} onTimeClick={handleTimeClick} />
       )}
 
       <FollowerTypeIcon
@@ -181,7 +186,7 @@ export function ImageVideoPreview({ recording, type, username }: Props) {
         </CopyButton>
       ) : null}
 
-      {totalDuration > 0 && !showVideo! && !isRecording && (
+      {totalDuration > 0 && !showVideo && !isRecording && (
         <div
           style={{
             position: "absolute",
@@ -196,13 +201,7 @@ export function ImageVideoPreview({ recording, type, username }: Props) {
             pointerEvents: "none",
           }}
         >
-          {isRecording
-            ? totalDuration > 0
-              ? `+${formatDuration(totalDuration)}`
-              : "LIVE"
-            : totalDuration > 0
-            ? formatDuration(totalDuration)
-            : null}
+          {formatDuration(totalDuration)}
         </div>
       )}
     </div>

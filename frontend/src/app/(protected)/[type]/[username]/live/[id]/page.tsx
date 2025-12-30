@@ -1,7 +1,7 @@
+import { PlayBack } from "@/app/(protected)/_components/video/playback";
+import { VideoPlayer } from "@/app/(protected)/_components/video/video-player";
 import { getRecordingsWithPrevNext } from "@/app/actions/recordings";
 import { Box } from "@mantine/core";
-import { PlayBack } from "./_components/playback";
-import { VideoPlayer } from "./_components/video-player";
 
 interface PageProps {
   params: Promise<{

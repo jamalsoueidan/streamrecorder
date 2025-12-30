@@ -74,8 +74,9 @@ export function VideoModal({
       onClose={() => router.back()}
       fullScreen
       withCloseButton={false}
+      transitionProps={{ duration: 0 }}
       styles={{
-        body: { height: "100%", padding: 0 },
+        body: { height: "100%", padding: 0, overflow: "hidden" },
       }}
     >
       <Flex h="100%" justify="center" align="center" pos="relative">
