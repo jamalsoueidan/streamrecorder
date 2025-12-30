@@ -9,11 +9,7 @@ import {
   HlsVideo,
   MediaControlBar,
   MediaController,
-  MediaFullscreenButton,
-  MediaMuteButton,
   MediaPlaybackRateButton,
-  MediaPlayButton,
-  MediaSeekBackwardButton,
   MediaSeekForwardButton,
   MediaTimeDisplay,
   MediaTimeRange,
@@ -177,27 +173,11 @@ export function VideoPlayer({ sources }: { sources: Source[] }) {
         </HlsVideo>
 
         <MediaControlBar>
-          <MediaPlayButton />
-          <MediaSeekBackwardButton seek-offset="10" />
           <MediaSeekForwardButton seek-offset="10" />
           <MediaTimeRange />
           <MediaTimeDisplay show-duration />
-          <MediaMuteButton />
           <MediaVolumeRange />
           <MediaPlaybackRateButton />
-          <button
-            onClick={rotate}
-            style={{
-              background: "transparent",
-              border: "none",
-              color: "#fff",
-              padding: "8px",
-              cursor: "pointer",
-            }}
-          >
-            ↻
-          </button>
-          <MediaFullscreenButton />
         </MediaControlBar>
       </MediaController>
 
