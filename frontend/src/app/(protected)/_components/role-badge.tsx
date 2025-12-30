@@ -30,7 +30,13 @@ const roleStyles: Record<string, RoleStyle> = {
     icon: <IconAward size={16} />,
     size: "lg",
   },
-  mod: {
+  admin: {
+    variant: "filled",
+    color: "red",
+    icon: <IconShield size={16} />,
+    size: "md",
+  },
+  moderator: {
     variant: "filled",
     color: "red",
     icon: <IconShield size={16} />,

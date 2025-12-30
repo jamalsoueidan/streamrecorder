@@ -274,7 +274,10 @@ export default function InfiniteFollowers({
                           </Text>
                         </Anchor>
                         {follower.country ? (
-                          <CountryFlag country={follower?.country} />
+                          <CountryFlag
+                            country={follower.country}
+                            countryCode={follower?.countryCode}
+                          />
                         ) : null}
                       </Group>
                       <Text size="md" c="gray.4">
