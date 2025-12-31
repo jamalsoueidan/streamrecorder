@@ -24,7 +24,7 @@ export default function ScopeTabs({ children }: Props) {
       <Tabs.List mx={{ base: "-xs", sm: "-md" }}>
         <Tabs.Tab
           value="following"
-          leftSection={<IconUsers size={16} />}
+          leftSection={<IconUsers size={20} />}
           fz="md"
           lts="0.02em"
           ml={{ base: "xs", sm: "md" }}
@@ -33,7 +33,7 @@ export default function ScopeTabs({ children }: Props) {
         </Tabs.Tab>
         <Tabs.Tab
           value="discover"
-          leftSection={<IconCompass size={16} />}
+          leftSection={<IconCompass size={20} stroke={1.2} />}
           fz="md"
           lts="0.02em"
         >

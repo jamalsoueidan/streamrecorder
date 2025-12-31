@@ -66,7 +66,6 @@ export function ImageVideoPreview({ recording, type, username }: Props) {
   };
 
   const handleTimeClick = (currentTime: number) => {
-    console.log("clicked");
     router.push(getHref(currentTime));
   };
 

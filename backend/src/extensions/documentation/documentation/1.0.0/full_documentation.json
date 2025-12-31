@@ -20,7 +20,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-12-31T01:59:15.631Z"
+    "x-generation-date": "2025-12-31T20:01:46.455Z"
   },
   "servers": [
     {
@@ -7478,9 +7478,6 @@
                   "twitch"
                 ]
               },
-              "protected": {
-                "type": "boolean"
-              },
               "gender": {
                 "type": "string",
                 "enum": [
@@ -7515,6 +7512,12 @@
               "lastCheckedAt": {
                 "type": "string",
                 "format": "date-time"
+              },
+              "protected": {
+                "type": "boolean"
+              },
+              "pause": {
+                "type": "boolean"
               },
               "locale": {
                 "type": "string"
@@ -7593,9 +7596,6 @@
           },
           "type": {
             "$ref": "#/components/schemas/FollowerTypeEnum"
-          },
-          "protected": {
-            "type": "boolean"
           },
           "gender": {
             "type": "string",
@@ -8219,6 +8219,12 @@
             "type": "string",
             "format": "date-time"
           },
+          "protected": {
+            "type": "boolean"
+          },
+          "pause": {
+            "type": "boolean"
+          },
           "createdAt": {
             "type": "string",
             "format": "date-time"
@@ -8279,9 +8285,6 @@
                     "tiktok",
                     "twitch"
                   ]
-                },
-                "protected": {
-                  "type": "boolean"
                 },
                 "gender": {
                   "type": "string",
@@ -8435,6 +8438,12 @@
                 "lastCheckedAt": {
                   "type": "string",
                   "format": "date-time"
+                },
+                "protected": {
+                  "type": "boolean"
+                },
+                "pause": {
+                  "type": "boolean"
                 },
                 "createdAt": {
                   "type": "string",
@@ -9080,9 +9089,6 @@
                         "twitch"
                       ]
                     },
-                    "protected": {
-                      "type": "boolean"
-                    },
                     "gender": {
                       "type": "string",
                       "enum": [
@@ -9452,6 +9458,12 @@
                     "lastCheckedAt": {
                       "type": "string",
                       "format": "date-time"
+                    },
+                    "protected": {
+                      "type": "boolean"
+                    },
+                    "pause": {
+                      "type": "boolean"
                     },
                     "createdAt": {
                       "type": "string",
@@ -10323,9 +10335,6 @@
               "type": {
                 "$ref": "#/components/schemas/FollowerTypeEnum"
               },
-              "protected": {
-                "type": "boolean"
-              },
               "gender": {
                 "type": "string",
                 "enum": [
@@ -10947,6 +10956,12 @@
               "lastCheckedAt": {
                 "type": "string",
                 "format": "date-time"
+              },
+              "protected": {
+                "type": "boolean"
+              },
+              "pause": {
+                "type": "boolean"
               },
               "createdAt": {
                 "type": "string",
