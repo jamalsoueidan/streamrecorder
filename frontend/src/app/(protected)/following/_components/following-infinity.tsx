@@ -211,7 +211,7 @@ export default function FollowingInfinity({
                   >
                     {rec.follower?.username}
                   </Anchor>
-                  <Text size="xs">live {dayjs(rec.updatedAt).fromNow()}</Text>
+                  <Text size="xs">live {dayjs(rec.createdAt).fromNow()}</Text>
                 </Stack>
               </Group>
             </Grid.Col>
