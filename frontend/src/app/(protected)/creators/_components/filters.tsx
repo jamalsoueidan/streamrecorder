@@ -9,6 +9,7 @@ import {
   Chip,
   Divider,
   Drawer,
+  Flex,
   Group,
   Image,
   Indicator,
@@ -245,7 +246,11 @@ export default function Filters({ filterOptions }: Props) {
 
   return (
     <>
-      <Group gap="sm">
+      <Flex
+        direction={{ base: "column", sm: "row" }}
+        w={{ base: "100%", sm: "auto" }}
+        gap="xs"
+      >
         {/* Search Input */}
         <TextInput
           placeholder="Search username..."
@@ -262,106 +267,104 @@ export default function Filters({ filterOptions }: Props) {
           }
           value={searchValue}
           onChange={(e) => handleSearchChange(e.currentTarget.value)}
-          style={{ flex: 1, maxWidth: 300 }}
+          style={{ flex: 1 }}
+          w={{ base: "100%", sm: "auto" }}
         />
 
-        {/* Active filter badges */}
-        {filters.type && (
-          <Badge
-            variant="light"
-            size="lg"
-            leftSection={typeIcons[filters.type]}
-            rightSection={
-              <IconX
-                size={16}
-                style={{ cursor: "pointer" }}
-                onClick={() => setFilters({ type: null })}
-              />
-            }
-          >
-            {filters.type}
-          </Badge>
-        )}
-        {filters.gender && (
-          <Badge
-            variant="light"
-            size="lg"
-            leftSection={genderIcons[filters.gender]}
-            rightSection={
-              <IconX
-                size={16}
-                style={{ cursor: "pointer" }}
-                onClick={() => setFilters({ gender: null })}
-              />
-            }
-          >
-            {filters.gender === "unknown" ? "Other" : filters.gender}
-          </Badge>
-        )}
-        {filters.country && (
-          <Badge
-            variant="light"
-            size="lg"
-            leftSection={<FlagIcon code={filters.country} size={18} />}
-            rightSection={
-              <IconX
-                size={16}
-                style={{ cursor: "pointer" }}
-                onClick={() => setFilters({ country: null })}
-              />
-            }
-          >
-            {getCountryName(filters.country)}
-          </Badge>
-        )}
-        {filters.language && (
-          <Badge
-            variant="light"
-            size="lg"
-            leftSection={
-              <Badge size="xs" variant="filled" tt="uppercase">
-                {filters.language}
-              </Badge>
-            }
-            rightSection={
-              <IconX
-                size={16}
-                style={{ cursor: "pointer" }}
-                onClick={() => setFilters({ language: null })}
-              />
-            }
-          >
-            {getLanguageName(filters.language)}
-          </Badge>
-        )}
-        {filters.dateRange && (
-          <Badge
-            variant="light"
-            size="lg"
-            leftSection={<IconCalendar size={16} />}
-            rightSection={
-              <IconX
-                size={16}
-                style={{ cursor: "pointer" }}
-                onClick={() => setFilters({ dateRange: null })}
-              />
-            }
-          >
-            {DATE_RANGE_OPTIONS.find((d) => d.value === filters.dateRange)
-              ?.label || filters.dateRange}
-          </Badge>
-        )}
+        <Group>
+          {/* Active filter badges */}
+          {filters.type && (
+            <Badge
+              variant="light"
+              size="lg"
+              leftSection={typeIcons[filters.type]}
+              rightSection={
+                <IconX
+                  size={16}
+                  style={{ cursor: "pointer" }}
+                  onClick={() => setFilters({ type: null })}
+                />
+              }
+            >
+              {filters.type}
+            </Badge>
+          )}
+          {filters.gender && (
+            <Badge
+              variant="light"
+              size="lg"
+              leftSection={genderIcons[filters.gender]}
+              rightSection={
+                <IconX
+                  size={16}
+                  style={{ cursor: "pointer" }}
+                  onClick={() => setFilters({ gender: null })}
+                />
+              }
+            >
+              {filters.gender === "unknown" ? "Other" : filters.gender}
+            </Badge>
+          )}
+          {filters.country && (
+            <Badge
+              variant="light"
+              size="lg"
+              leftSection={<FlagIcon code={filters.country} size={18} />}
+              rightSection={
+                <IconX
+                  size={16}
+                  style={{ cursor: "pointer" }}
+                  onClick={() => setFilters({ country: null })}
+                />
+              }
+            >
+              {getCountryName(filters.country)}
+            </Badge>
+          )}
+          {filters.language && (
+            <Badge
+              variant="light"
+              size="lg"
+              leftSection={
+                <Badge size="xs" variant="filled" tt="uppercase">
+                  {filters.language}
+                </Badge>
+              }
+              rightSection={
+                <IconX
+                  size={16}
+                  style={{ cursor: "pointer" }}
+                  onClick={() => setFilters({ language: null })}
+                />
+              }
+            >
+              {getLanguageName(filters.language)}
+            </Badge>
+          )}
+          {filters.dateRange && (
+            <Badge
+              variant="light"
+              size="lg"
+              leftSection={<IconCalendar size={16} />}
+              rightSection={
+                <IconX
+                  size={16}
+                  style={{ cursor: "pointer" }}
+                  onClick={() => setFilters({ dateRange: null })}
+                />
+              }
+            >
+              {DATE_RANGE_OPTIONS.find((d) => d.value === filters.dateRange)
+                ?.label || filters.dateRange}
+            </Badge>
+          )}
 
-        {activeFilterCount > 0 && (
-          <Text
-            size="sm"
-            c="dimmed"
-            style={{ cursor: "pointer" }}
-            onClick={clearFilters}
-          >
-            Clear all
-          </Text>
-        )}
+          {activeFilterCount > 0 && (
+            <Button size="sm" onClick={clearFilters}>
+              Clear all
+            </Button>
+          )}
+        </Group>
 
         <Indicator
           disabled={activeFilterCount === 0}
@@ -373,11 +376,12 @@ export default function Filters({ filterOptions }: Props) {
             size="md"
             leftSection={<IconFilter size={20} />}
             onClick={open}
+            fullWidth
           >
             Filters
           </Button>
         </Indicator>
-      </Group>
+      </Flex>
 
       <Drawer opened={opened} onClose={close} title="Filters" position="right">
         <Stack gap="lg">

@@ -84,8 +84,8 @@ export default async function Page({ searchParams }: PageProps) {
       {data.length === 0 ? (
         <p>No more accounts to discover.</p>
       ) : (
-        <Stack gap="sm">
-          <Group justify="space-between">
+        <Stack gap="sm" w="100%">
+          <Group justify="space-between" w="100%">
             <Stack gap={2}>
               <Group gap="xs">
                 <IconStar size={32} />
