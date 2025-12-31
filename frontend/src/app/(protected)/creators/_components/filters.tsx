@@ -19,24 +19,29 @@ import {
   Stack,
   Switch,
   Text,
+  TextInput,
   UnstyledButton,
 } from "@mantine/core";
-import { useDisclosure } from "@mantine/hooks";
+import { useDebouncedCallback, useDisclosure } from "@mantine/hooks";
 import {
   IconArrowDown,
   IconArrowUp,
   IconBrandTiktok,
   IconBrandTwitch,
+  IconCalendar,
   IconFilter,
   IconGenderFemale,
   IconGenderMale,
   IconQuestionMark,
+  IconSearch,
   IconSortAZ,
   IconSortZA,
+  IconUsers,
   IconWorld,
   IconX,
 } from "@tabler/icons-react";
 import { useQueryStates } from "nuqs";
+import { useState } from "react";
 import { discoverParsers } from "../lib/search-params";
 
 const sortIcons: Record<string, React.ReactNode> = {
@@ -54,9 +59,10 @@ const sortLabels: Record<string, string> = {
 };
 
 const genderIcons: Record<string, React.ReactNode> = {
-  male: <IconGenderMale size={20} />,
-  female: <IconGenderFemale size={20} />,
-  unknown: <IconQuestionMark size={20} />,
+  all: <IconUsers size={24} />,
+  male: <IconGenderMale size={24} />,
+  female: <IconGenderFemale size={24} />,
+  unknown: <IconQuestionMark size={24} />,
 };
 
 const typeIcons: Record<string, React.ReactNode> = {
@@ -72,6 +78,15 @@ const genderLabels: Record<string, string> = {
 };
 
 const GENDER_VALUES = ["all", "female", "male", "unknown"];
+
+const DATE_RANGE_OPTIONS = [
+  { value: "today", label: "Today" },
+  { value: "yesterday", label: "Yesterday" },
+  { value: "thisWeek", label: "This week" },
+  { value: "lastWeek", label: "Last week" },
+  { value: "thisMonth", label: "This month" },
+  { value: "lastMonth", label: "Last month" },
+];
 
 const PLATFORM_OPTIONS = [
   {
@@ -153,12 +168,23 @@ interface Props {
 export default function Filters({ filterOptions }: Props) {
   const [opened, { open, close }] = useDisclosure(false);
   const [filters, setFilters] = useQueryStates(discoverParsers);
+  const [searchValue, setSearchValue] = useState(filters.search || "");
+
+  const debouncedSearch = useDebouncedCallback((value: string) => {
+    setFilters({ search: value || null });
+  }, 400);
+
+  const handleSearchChange = (value: string) => {
+    setSearchValue(value);
+    debouncedSearch(value);
+  };
 
   const activeFilterCount = [
     filters.gender,
     filters.country,
     filters.language,
     filters.type,
+    filters.dateRange,
     !filters.hasRecordings && filters.scope === ScopeEnum.Discover,
   ].filter(Boolean).length;
 
@@ -168,9 +194,15 @@ export default function Filters({ filterOptions }: Props) {
       country: null,
       language: null,
       type: null,
+      dateRange: null,
       hasRecordings: true,
       sort: SortOptions.createdAtDesc,
     });
+  };
+
+  const clearSearch = () => {
+    setSearchValue("");
+    setFilters({ search: null });
   };
 
   // Custom render for country options
@@ -213,7 +245,26 @@ export default function Filters({ filterOptions }: Props) {
 
   return (
     <>
-      <Group gap="xs">
+      <Group gap="sm">
+        {/* Search Input */}
+        <TextInput
+          placeholder="Search username..."
+          size="md"
+          leftSection={<IconSearch size={18} />}
+          rightSection={
+            searchValue ? (
+              <IconX
+                size={16}
+                style={{ cursor: "pointer" }}
+                onClick={clearSearch}
+              />
+            ) : null
+          }
+          value={searchValue}
+          onChange={(e) => handleSearchChange(e.currentTarget.value)}
+          style={{ flex: 1, maxWidth: 300 }}
+        />
+
         {/* Active filter badges */}
         {filters.type && (
           <Badge
@@ -283,6 +334,23 @@ export default function Filters({ filterOptions }: Props) {
             {getLanguageName(filters.language)}
           </Badge>
         )}
+        {filters.dateRange && (
+          <Badge
+            variant="light"
+            size="lg"
+            leftSection={<IconCalendar size={16} />}
+            rightSection={
+              <IconX
+                size={16}
+                style={{ cursor: "pointer" }}
+                onClick={() => setFilters({ dateRange: null })}
+              />
+            }
+          >
+            {DATE_RANGE_OPTIONS.find((d) => d.value === filters.dateRange)
+              ?.label || filters.dateRange}
+          </Badge>
+        )}
 
         {activeFilterCount > 0 && (
           <Text
@@ -313,7 +381,7 @@ export default function Filters({ filterOptions }: Props) {
 
       <Drawer opened={opened} onClose={close} title="Filters" position="right">
         <Stack gap="lg">
-          {/* Sort - 2x2 Grid */}
+          {/* Sort - Grid */}
           <Stack gap={4}>
             <Text size="md" fw={500}>
               Sort by
@@ -365,7 +433,7 @@ export default function Filters({ filterOptions }: Props) {
             />
           </Stack>
 
-          {/* Gender - SegmentedControl */}
+          {/* Gender - Grid */}
           <Stack gap={4}>
             <Text size="md" fw={500}>
               Gender
@@ -401,6 +469,31 @@ export default function Filters({ filterOptions }: Props) {
                 </UnstyledButton>
               ))}
             </SimpleGrid>
+          </Stack>
+
+          <Divider />
+
+          {/* Date Range - Chips */}
+          <Stack gap={4}>
+            <Text size="md" fw={500}>
+              Added
+            </Text>
+            <Chip.Group
+              value={filters.dateRange || ""}
+              onChange={(value) =>
+                setFilters({
+                  dateRange: typeof value === "string" ? value || null : null,
+                })
+              }
+            >
+              <Group gap="xs">
+                {DATE_RANGE_OPTIONS.map((d) => (
+                  <Chip key={d.value} value={d.value} variant="light">
+                    {d.label}
+                  </Chip>
+                ))}
+              </Group>
+            </Chip.Group>
           </Stack>
 
           <Divider />

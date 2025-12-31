@@ -21,6 +21,8 @@ export const discoverParsers = {
   country: parseAsString,
   language: parseAsString,
   type: parseAsString,
+  search: parseAsString,
+  dateRange: parseAsString,
 };
 
 export const discoverParamsCache = createSearchParamsCache(discoverParsers);

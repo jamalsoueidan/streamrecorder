@@ -23,6 +23,7 @@ import {
 import Link from "next/link";
 
 import { ImageVideoPreview } from "@/app/(protected)/_components/image-video-preview";
+import { IconCalendarPlus, IconVideo } from "@tabler/icons-react";
 import { CountryFlag } from "../../_components/country-flag";
 import FollowButton from "../../_components/follow-button";
 import OpenSocial from "../../_components/open-social";
@@ -65,7 +66,7 @@ export default function FollowerItem({ follower }: Props) {
               />
             </Anchor>
 
-            <Stack gap="0">
+            <Stack gap={2}>
               <Group gap="xs">
                 <Anchor
                   component={Link}
@@ -83,9 +84,22 @@ export default function FollowerItem({ follower }: Props) {
                   />
                 ) : null}
               </Group>
-              <Text size="md" c="gray.4">
-                {follower.totalRecordings} recordings
-              </Text>
+
+              <Group gap="xs">
+                <Group gap={4}>
+                  <IconCalendarPlus size={14} />
+                  <Text size="sm" c="dimmed">
+                    Added {dayjs(follower.createdAt).fromNow()}
+                  </Text>
+                </Group>
+                <Group gap={4}>
+                  <IconVideo size={14} />
+                  <Text size="sm" c="dimmed">
+                    {follower.totalRecordings}{" "}
+                    {follower.totalRecordings === 1 ? "video" : "videos"}
+                  </Text>
+                </Group>
+              </Group>
             </Stack>
           </Group>
 

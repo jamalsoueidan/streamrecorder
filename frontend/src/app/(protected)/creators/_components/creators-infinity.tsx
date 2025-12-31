@@ -9,6 +9,7 @@ import { Grid, Loader, Stack } from "@mantine/core";
 import { useIntersection } from "@mantine/hooks";
 import { useCallback, useEffect, useState, useTransition } from "react";
 
+import dayjs from "@/app/lib/dayjs";
 import api from "@/lib/api";
 import { useQueryStates } from "nuqs";
 import { discoverParsers } from "../lib/search-params";
@@ -40,23 +41,30 @@ export default function CreatorsInfinity({
     threshold: 0.5,
   });
 
+  const buildFilters = useCallback(
+    () => ({
+      ...(filters.gender && { gender: { $eq: filters.gender } }),
+      ...(filters.country && { countryCode: { $eq: filters.country } }),
+      ...(filters.language && { languageCode: { $eq: filters.language } }),
+      ...(filters.type && { type: { $eq: filters.type } }),
+      ...(filters.search && { username: { $containsi: filters.search } }),
+      ...getDateRange(filters.dateRange),
+    }),
+    [filters]
+  );
+
   useEffect(() => {
     startTransition(async () => {
       const result = await fetchAction({
         "pagination[page]": 1,
-        filters: {
-          ...(filters.gender && { gender: { $eq: filters.gender } }),
-          ...(filters.country && { countryCode: { $eq: filters.country } }),
-          ...(filters.language && { languageCode: { $eq: filters.language } }),
-          ...(filters.type && { type: { $eq: filters.type } }),
-        },
+        filters: buildFilters(),
         scope: filters.scope,
         hasRecordings: filters.hasRecordings,
       });
       setData(result?.data || []);
       setPage(1);
     });
-  }, [filters, fetchAction]);
+  }, [filters, fetchAction, buildFilters]);
 
   const loadMore = useCallback(() => {
     if (!hasMore || isPending) return;
@@ -65,12 +73,7 @@ export default function CreatorsInfinity({
       const nextPage = page + 1;
       const result = await fetchAction({
         "pagination[page]": nextPage,
-        filters: {
-          ...(filters.gender && { gender: { $eq: filters.gender } }),
-          ...(filters.country && { countryCode: { $eq: filters.country } }),
-          ...(filters.language && { languageCode: { $eq: filters.language } }),
-          ...(filters.type && { type: { $eq: filters.type } }),
-        },
+        filters: buildFilters(),
         scope: filters.scope,
         hasRecordings: filters.hasRecordings,
       });
@@ -84,7 +87,15 @@ export default function CreatorsInfinity({
       setPage(nextPage);
       setHasMore(nextPage < (result.meta?.pagination?.pageCount ?? 1));
     });
-  }, [hasMore, isPending, page, fetchAction, filters]);
+  }, [
+    hasMore,
+    isPending,
+    page,
+    fetchAction,
+    buildFilters,
+    filters.scope,
+    filters.hasRecordings,
+  ]);
 
   useEffect(() => {
     if (entry?.isIntersecting) {
@@ -111,3 +122,33 @@ export default function CreatorsInfinity({
     </>
   );
 }
+
+const getDateRange = (range: string | null) => {
+  if (!range) return {};
+
+  const ranges: Record<string, { $gte?: string; $lte?: string }> = {
+    today: {
+      $gte: dayjs().startOf("day").toISOString(),
+    },
+    yesterday: {
+      $gte: dayjs().subtract(1, "day").startOf("day").toISOString(),
+      $lte: dayjs().subtract(1, "day").endOf("day").toISOString(),
+    },
+    thisWeek: {
+      $gte: dayjs().startOf("week").toISOString(),
+    },
+    lastWeek: {
+      $gte: dayjs().subtract(1, "week").startOf("week").toISOString(),
+      $lte: dayjs().subtract(1, "week").endOf("week").toISOString(),
+    },
+    thisMonth: {
+      $gte: dayjs().startOf("month").toISOString(),
+    },
+    lastMonth: {
+      $gte: dayjs().subtract(1, "month").startOf("month").toISOString(),
+      $lte: dayjs().subtract(1, "month").endOf("month").toISOString(),
+    },
+  };
+
+  return ranges[range] ? { createdAt: ranges[range] } : {};
+};
