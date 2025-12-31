@@ -20,21 +20,23 @@ export function AdminMenu({ follower }: { follower: Follower }) {
   const [protect, setProtect] = useState(follower.protected || false);
 
   const handlePaused = () => {
-    setPaused(!paused);
+    const nextPaused = !paused;
+    setPaused(nextPaused);
 
     startTransition(async () => {
       await updateFollower(follower.documentId!, {
-        pause: paused,
+        pause: nextPaused,
       });
     });
   };
 
   const handleProtected = () => {
-    setProtect(!protect);
+    const nextProtected = !protect;
+    setProtect(nextProtected);
 
     startTransition(async () => {
       await updateFollower(follower.documentId!, {
-        protected: protect,
+        protected: nextProtected,
       });
     });
   };
