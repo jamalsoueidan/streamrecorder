@@ -271,100 +271,106 @@ export default function Filters({ filterOptions }: Props) {
           w={{ base: "100%", sm: "auto" }}
         />
 
-        <Group>
-          {/* Active filter badges */}
-          {filters.type && (
-            <Badge
-              variant="light"
-              size="lg"
-              leftSection={typeIcons[filters.type]}
-              rightSection={
-                <IconX
-                  size={16}
-                  style={{ cursor: "pointer" }}
-                  onClick={() => setFilters({ type: null })}
-                />
-              }
-            >
-              {filters.type}
-            </Badge>
-          )}
-          {filters.gender && (
-            <Badge
-              variant="light"
-              size="lg"
-              leftSection={genderIcons[filters.gender]}
-              rightSection={
-                <IconX
-                  size={16}
-                  style={{ cursor: "pointer" }}
-                  onClick={() => setFilters({ gender: null })}
-                />
-              }
-            >
-              {filters.gender === "unknown" ? "Other" : filters.gender}
-            </Badge>
-          )}
-          {filters.country && (
-            <Badge
-              variant="light"
-              size="lg"
-              leftSection={<FlagIcon code={filters.country} size={18} />}
-              rightSection={
-                <IconX
-                  size={16}
-                  style={{ cursor: "pointer" }}
-                  onClick={() => setFilters({ country: null })}
-                />
-              }
-            >
-              {getCountryName(filters.country)}
-            </Badge>
-          )}
-          {filters.language && (
-            <Badge
-              variant="light"
-              size="lg"
-              leftSection={
-                <Badge size="xs" variant="filled" tt="uppercase">
-                  {filters.language}
-                </Badge>
-              }
-              rightSection={
-                <IconX
-                  size={16}
-                  style={{ cursor: "pointer" }}
-                  onClick={() => setFilters({ language: null })}
-                />
-              }
-            >
-              {getLanguageName(filters.language)}
-            </Badge>
-          )}
-          {filters.dateRange && (
-            <Badge
-              variant="light"
-              size="lg"
-              leftSection={<IconCalendar size={16} />}
-              rightSection={
-                <IconX
-                  size={16}
-                  style={{ cursor: "pointer" }}
-                  onClick={() => setFilters({ dateRange: null })}
-                />
-              }
-            >
-              {DATE_RANGE_OPTIONS.find((d) => d.value === filters.dateRange)
-                ?.label || filters.dateRange}
-            </Badge>
-          )}
+        {filters.type ||
+        filters.gender ||
+        filters.country ||
+        filters.language ||
+        filters.dateRange ? (
+          <Group>
+            {/* Active filter badges */}
+            {filters.type && (
+              <Badge
+                variant="light"
+                size="lg"
+                leftSection={typeIcons[filters.type]}
+                rightSection={
+                  <IconX
+                    size={16}
+                    style={{ cursor: "pointer" }}
+                    onClick={() => setFilters({ type: null })}
+                  />
+                }
+              >
+                {filters.type}
+              </Badge>
+            )}
+            {filters.gender && (
+              <Badge
+                variant="light"
+                size="lg"
+                leftSection={genderIcons[filters.gender]}
+                rightSection={
+                  <IconX
+                    size={16}
+                    style={{ cursor: "pointer" }}
+                    onClick={() => setFilters({ gender: null })}
+                  />
+                }
+              >
+                {filters.gender === "unknown" ? "Other" : filters.gender}
+              </Badge>
+            )}
+            {filters.country && (
+              <Badge
+                variant="light"
+                size="lg"
+                leftSection={<FlagIcon code={filters.country} size={18} />}
+                rightSection={
+                  <IconX
+                    size={16}
+                    style={{ cursor: "pointer" }}
+                    onClick={() => setFilters({ country: null })}
+                  />
+                }
+              >
+                {getCountryName(filters.country)}
+              </Badge>
+            )}
+            {filters.language && (
+              <Badge
+                variant="light"
+                size="lg"
+                leftSection={
+                  <Badge size="xs" variant="filled" tt="uppercase">
+                    {filters.language}
+                  </Badge>
+                }
+                rightSection={
+                  <IconX
+                    size={16}
+                    style={{ cursor: "pointer" }}
+                    onClick={() => setFilters({ language: null })}
+                  />
+                }
+              >
+                {getLanguageName(filters.language)}
+              </Badge>
+            )}
+            {filters.dateRange && (
+              <Badge
+                variant="light"
+                size="lg"
+                leftSection={<IconCalendar size={16} />}
+                rightSection={
+                  <IconX
+                    size={16}
+                    style={{ cursor: "pointer" }}
+                    onClick={() => setFilters({ dateRange: null })}
+                  />
+                }
+              >
+                {DATE_RANGE_OPTIONS.find((d) => d.value === filters.dateRange)
+                  ?.label || filters.dateRange}
+              </Badge>
+            )}
 
-          {activeFilterCount > 0 && (
-            <Button size="sm" onClick={clearFilters}>
-              Clear all
-            </Button>
-          )}
-        </Group>
+            {activeFilterCount > 0 && (
+              <Button size="sm" onClick={clearFilters}>
+                Clear all
+              </Button>
+            )}
+          </Group>
+        ) : null}
 
         <Indicator
           disabled={activeFilterCount === 0}
@@ -582,19 +588,15 @@ export default function Filters({ filterOptions }: Props) {
             )}
           </Stack>
 
-          {filters.scope === ScopeEnum.Discover && (
-            <>
-              <Divider />
-              <Switch
-                size="md"
-                label="Only show creators with recordings"
-                checked={filters.hasRecordings}
-                onChange={(event) =>
-                  setFilters({ hasRecordings: event.currentTarget.checked })
-                }
-              />
-            </>
-          )}
+          <Divider />
+          <Switch
+            size="md"
+            label="Only show creators with recordings"
+            checked={filters.hasRecordings}
+            onChange={(event) =>
+              setFilters({ hasRecordings: event.currentTarget.checked })
+            }
+          />
 
           <Divider />
 
