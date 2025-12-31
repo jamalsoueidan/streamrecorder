@@ -96,8 +96,6 @@ export function VideoPlayer({ sources }: { sources: Source[] }) {
     };
   }, [startTime]);
 
-  const rotate = () => setRotation((r) => (r + 90) % 360);
-
   const handleDoubleClick = () => {
     const controller = controllerRef.current;
     if (!controller) return;
@@ -123,6 +121,7 @@ export function VideoPlayer({ sources }: { sources: Source[] }) {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
+            pointerEvents: "none",
             zIndex: 10,
           }}
         >
@@ -173,7 +172,7 @@ export function VideoPlayer({ sources }: { sources: Source[] }) {
         <MediaControlBar>
           <MediaTimeDisplay show-duration />
           <MediaTimeRange />
-          <MediaSeekForwardButton seek-offset="10" />
+          <MediaSeekForwardButton seekoffset="10" />
         </MediaControlBar>
       </MediaController>
 

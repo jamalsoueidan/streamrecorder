@@ -18,7 +18,7 @@ process.env.ADMIN_JWT_SECRET = "test-admin-jwt-secret";
 process.env.TRANSFER_TOKEN_SALT = "test-transfer-token-salt";
 process.env.JWT_SECRET = "test-jwt-secret";
 
-export type RoleType = "authenticated" | "premium" | "founder" | "public";
+export type RoleType = "authenticated" | "premium" | "champion" | "public";
 
 async function createTestDatabase() {
   if (isCI) {
