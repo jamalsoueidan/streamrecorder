@@ -27,9 +27,6 @@
         "twitch"
       ]
     },
-    "protected": {
-      "type": "boolean"
-    },
     "gender": {
       "type": "enumeration",
       "enum": [
@@ -62,6 +59,14 @@
     },
     "lastCheckedAt": {
       "type": "datetime"
+    },
+    "protected": {
+      "type": "boolean",
+      "default": false
+    },
+    "pause": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

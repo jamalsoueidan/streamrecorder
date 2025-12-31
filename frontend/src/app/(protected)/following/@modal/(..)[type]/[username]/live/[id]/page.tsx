@@ -1,5 +1,6 @@
 import { VideoModal } from "@/app/(protected)/_components/video/video-modal";
-import { followingDefaultOptions } from "@/app/(protected)/following/page";
+import { followingDefaultOptions } from "@/app/(protected)/following/lib/search-params";
+
 import api from "@/lib/api";
 import { SortOptions } from "@/lib/types/filtering";
 import { deepMerge } from "@mantine/core";
