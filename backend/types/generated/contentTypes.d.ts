@@ -544,7 +544,8 @@ export interface ApiFollowerFollower extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     nickname: Schema.Attribute.String;
-    protected: Schema.Attribute.Boolean;
+    pause: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    protected: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     publishedAt: Schema.Attribute.DateTime;
     type: Schema.Attribute.Enumeration<['tiktok', 'twitch']> &
       Schema.Attribute.Required &

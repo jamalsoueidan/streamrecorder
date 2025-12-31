@@ -1,31 +1,16 @@
 import api from "@/lib/api";
-
-import { deepMerge, Group, Stack, Text, Title } from "@mantine/core";
+import { Group, Stack, Text, Title } from "@mantine/core";
 import { IconStar } from "@tabler/icons-react";
+import {
+  dehydrate,
+  HydrationBoundary,
+  QueryClient,
+} from "@tanstack/react-query";
 import CreatorsInfinity from "./_components/creators-infinity";
 import Filters from "./_components/filters";
 import ScopeTabs from "./_components/scope-tabs";
+import { fetchFollowers } from "./actions/fetch-followers";
 import { discoverParamsCache } from "./lib/search-params";
-
-const defaultOptions = {
-  "pagination[pageSize]": 10,
-  populate: {
-    avatar: {
-      fields: ["url"],
-    },
-    recordings: {
-      populate: {
-        sources: {
-          fields: ["*"],
-          filters: {
-            state: { $ne: "failed" },
-          },
-          populate: ["videoSmall", "videoOriginal"],
-        },
-      },
-    },
-  },
-};
 
 interface PageProps {
   searchParams: Promise<{
@@ -36,30 +21,15 @@ interface PageProps {
 }
 
 export default async function Page({ searchParams }: PageProps) {
-  const { sort, hasRecordings, scope } = await discoverParamsCache.parse(
-    searchParams
-  );
+  const filters = await discoverParamsCache.parse(searchParams);
 
-  const fetchAction = async (
-    options: Parameters<typeof api.follower.browseFollowers>[0]
-  ) => {
-    "use server";
-    const response = await api.follower.browseFollowers(
-      deepMerge(defaultOptions, {
-        scope,
-        sort,
-        hasRecordings,
-        ...options,
-      })
-    );
+  const queryClient = new QueryClient();
 
-    return {
-      data: response.data?.data || [],
-      meta: response.data?.meta,
-    };
-  };
-
-  const { data, meta } = await fetchAction({ "pagination[page]": 1 });
+  await queryClient.prefetchInfiniteQuery({
+    queryKey: ["followers", filters],
+    queryFn: ({ pageParam }) => fetchFollowers(filters, pageParam),
+    initialPageParam: 1,
+  });
 
   const { data: filtersData } = await api.follower.getFollowerFilters();
 
@@ -80,10 +50,8 @@ export default async function Page({ searchParams }: PageProps) {
     })),
   };
 
-  const isFollowing = scope === "following";
-
   return (
-    <section>
+    <HydrationBoundary state={dehydrate(queryClient)}>
       <Stack w="100%">
         <Group justify="space-between" w="100%" mb="md">
           <Stack gap={2}>
@@ -94,38 +62,16 @@ export default async function Page({ searchParams }: PageProps) {
               </Title>
             </Group>
             <Text size="xs" c="dimmed">
-              {isFollowing
-                ? "Manage your followed creators"
-                : "Explore and follow your favorite creators"}
+              Manage and discover creators
             </Text>
           </Stack>
 
           <Filters filterOptions={filterOptions} />
         </Group>
-
         <ScopeTabs>
-          {data.length === 0 ? (
-            <Stack align="center" py="xl" gap="xs">
-              <Text size="lg" fw={500}>
-                {isFollowing
-                  ? "You're not following anyone yet"
-                  : "No creators to discover"}
-              </Text>
-              <Text size="sm" c="dimmed">
-                {isFollowing
-                  ? "Switch to Discover to find creators to follow"
-                  : "Try adjusting your filters"}
-              </Text>
-            </Stack>
-          ) : (
-            <CreatorsInfinity
-              initialData={data}
-              initialPagination={meta}
-              fetchAction={fetchAction}
-            />
-          )}
+          <CreatorsInfinity />
         </ScopeTabs>
       </Stack>
-    </section>
+    </HydrationBoundary>
   );
 }

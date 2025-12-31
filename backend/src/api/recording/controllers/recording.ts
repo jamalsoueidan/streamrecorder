@@ -32,12 +32,15 @@ export default factories.createCoreController(
       };
 
       if (scope && scopeFilters[scope]) {
-        console.log("inside scope");
-        Object.assign(ctx.query, {
-          filters: Object.assign({}, ctx.query.filters, {
-            follower: { id: scopeFilters[scope] },
-          }),
-        });
+        const filters = (ctx.query.filters ?? {}) as Record<string, any>;
+
+        ctx.query.filters = {
+          ...filters,
+          follower: {
+            ...(filters.follower ?? {}),
+            id: scopeFilters[scope],
+          },
+        };
       }
 
       return super.find(ctx);

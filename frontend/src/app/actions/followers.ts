@@ -51,3 +51,7 @@ export async function unfollow(data: FollowRequestBody) {
     };
   }
 }
+
+export async function updateFollower(documentId: string, data: any) {
+  await api.follower.putFollowersId({ id: documentId }, { data });
+}

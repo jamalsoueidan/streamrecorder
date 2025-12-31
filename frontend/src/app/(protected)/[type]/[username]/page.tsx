@@ -26,6 +26,7 @@ import { FollowerTypeIcon } from "../../_components/follower-type";
 import InfiniteRecordings from "../../_components/infinity-recordings";
 import OpenSocial from "../../_components/open-social";
 import UnfollowButton from "../../_components/unfollow-button";
+import { AdminMenu } from "./_components/admin-menu";
 
 const defaultOptions = {
   filters: {
@@ -195,6 +196,7 @@ export default async function Page({ params }: PageProps) {
                 type={follower.type}
               />
             )}
+            <AdminMenu follower={follower} />
           </Group>
           <div>
             <Text size="sm" c="dimmed">

@@ -540,7 +540,6 @@ export interface FollowerRequest {
     nickname?: string;
     username: string;
     type: FollowerRequestTypeEnum;
-    protected?: boolean;
     gender?: FollowerRequestGenderEnum;
     country?: string;
     countryCode?: string;
@@ -550,6 +549,8 @@ export interface FollowerRequest {
     avatar?: number | string;
     /** @format date-time */
     lastCheckedAt?: string;
+    protected?: boolean;
+    pause?: boolean;
     locale?: string;
     localizations?: (number | string)[];
   };
@@ -575,7 +576,6 @@ export interface Follower {
   nickname?: string;
   username: string;
   type: FollowerTypeEnum;
-  protected?: boolean;
   gender?: FollowerGenderEnum;
   country?: string;
   countryCode?: string;
@@ -798,6 +798,8 @@ export interface Follower {
   };
   /** @format date-time */
   lastCheckedAt?: string;
+  protected?: boolean;
+  pause?: boolean;
   /** @format date-time */
   createdAt?: string;
   /** @format date-time */
@@ -819,7 +821,6 @@ export interface Follower {
     nickname?: string;
     username?: string;
     type?: FollowerTypeEnum;
-    protected?: boolean;
     gender?: FollowerGenderEnum1;
     country?: string;
     countryCode?: string;
@@ -874,6 +875,8 @@ export interface Follower {
     };
     /** @format date-time */
     lastCheckedAt?: string;
+    protected?: boolean;
+    pause?: boolean;
     /** @format date-time */
     createdAt?: string;
     /** @format date-time */
@@ -1100,7 +1103,6 @@ export interface Message {
       nickname?: string;
       username?: string;
       type?: MessageTypeEnum;
-      protected?: boolean;
       gender?: MessageGenderEnum;
       country?: string;
       countryCode?: string;
@@ -1232,6 +1234,8 @@ export interface Message {
       };
       /** @format date-time */
       lastCheckedAt?: string;
+      protected?: boolean;
+      pause?: boolean;
       /** @format date-time */
       createdAt?: string;
       /** @format date-time */
@@ -1534,7 +1538,6 @@ export interface Recording {
     nickname?: string;
     username?: string;
     type?: FollowerTypeEnum;
-    protected?: boolean;
     gender?: RecordingGenderEnum;
     country?: string;
     countryCode?: string;
@@ -1757,6 +1760,8 @@ export interface Recording {
     };
     /** @format date-time */
     lastCheckedAt?: string;
+    protected?: boolean;
+    pause?: boolean;
     /** @format date-time */
     createdAt?: string;
     /** @format date-time */
