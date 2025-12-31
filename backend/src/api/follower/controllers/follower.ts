@@ -6,13 +6,28 @@ export default factories.createCoreController(
     async filters(cxt) {
       const knex = strapi.db.connection;
 
-      const [countries, genders, languages, types] = await Promise.all([
+      const [
+        countries,
+        countryCodes,
+        genders,
+        languages,
+        languageCodes,
+        types,
+      ] = await Promise.all([
         knex("followers")
           .select("country as value")
           .count("* as count")
           .whereNotNull("country")
           .where("country", "!=", "")
           .groupBy("country")
+          .orderBy("count", "desc"),
+
+        knex("followers")
+          .select("country_code as value")
+          .count("* as count")
+          .whereNotNull("country_code")
+          .where("country_code", "!=", "")
+          .groupBy("country_code")
           .orderBy("count", "desc"),
 
         knex("followers")
@@ -32,6 +47,14 @@ export default factories.createCoreController(
           .orderBy("count", "desc"),
 
         knex("followers")
+          .select("language_code as value")
+          .count("* as count")
+          .whereNotNull("language_code")
+          .where("language_code", "!=", "")
+          .groupBy("language_code")
+          .orderBy("count", "desc"),
+
+        knex("followers")
           .select("type as value")
           .count("* as count")
           .whereNotNull("type")
@@ -42,8 +65,10 @@ export default factories.createCoreController(
 
       return {
         countries,
+        countryCodes,
         genders,
         languages,
+        languageCodes,
         types,
       };
     },
@@ -221,7 +246,7 @@ export default factories.createCoreController(
         return ctx.forbidden("You already follow the maximum of 3 followers.");
       }
 
-      if (currentUser.role.type === "founder" && totalFollowers >= 50) {
+      if (currentUser.role.type === "champion" && totalFollowers >= 50) {
         return ctx.forbidden("You already follow the maximum of 50 followers.");
       }
 
