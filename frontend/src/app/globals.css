@@ -11,6 +11,11 @@
 body {
   background-color: #01010c;
   box-shadow: inset 0 0 100px 25px rgba(100, 150, 255, 0.2);
+  @media (max-width: 48em) {
+    /* sm breakpoint */
+    background-color: #01010c;
+    box-shadow: inset 0 0 50px 12px rgba(100, 150, 255, 0.2);
+  }
 }
 
 .mantine-AppShell-navbar {
@@ -18,7 +23,7 @@ body {
   @media (max-width: 48em) {
     /* sm breakpoint */
     background-color: #01010c;
-    box-shadow: inset 0 0 100px 25px rgba(100, 150, 255, 0.2);
+    box-shadow: inset 0 0 50px 12px rgba(100, 150, 255, 0.2);
   }
 }
 
@@ -33,7 +38,7 @@ body {
   --mantine-color-dark-4: #373a40;
   --mantine-color-dark-5: #2c2e33;
   --mantine-color-dark-6: #1a1a2e;
-  --mantine-color-dark-7: #0f0f1a;
+  --mantine-color-dark-7: #01010c;
   --mantine-color-dark-8: #070710;
   --mantine-color-dark-9: #01010c;
   --mantine-color-default: #0a0a1a;

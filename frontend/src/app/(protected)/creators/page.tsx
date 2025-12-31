@@ -1,9 +1,10 @@
 import api from "@/lib/api";
 
-import { deepMerge, Divider, Group, Stack, Text, Title } from "@mantine/core";
+import { deepMerge, Group, Stack, Text, Title } from "@mantine/core";
 import { IconStar } from "@tabler/icons-react";
 import CreatorsInfinity from "./_components/creators-infinity";
 import Filters from "./_components/filters";
+import ScopeTabs from "./_components/scope-tabs";
 import { discoverParamsCache } from "./lib/search-params";
 
 const defaultOptions = {
@@ -19,7 +20,7 @@ const defaultOptions = {
           filters: {
             state: { $ne: "failed" },
           },
-          populate: ["videoSmall", "videoOriginal"], // we ask for original because sometime small is null while encoding for mini-player
+          populate: ["videoSmall", "videoOriginal"],
         },
       },
     },
@@ -79,35 +80,52 @@ export default async function Page({ searchParams }: PageProps) {
     })),
   };
 
+  const isFollowing = scope === "following";
+
   return (
     <section>
-      {data.length === 0 ? (
-        <p>No more accounts to discover.</p>
-      ) : (
-        <Stack gap="sm" w="100%">
-          <Group justify="space-between" w="100%">
-            <Stack gap={2}>
-              <Group gap="xs">
-                <IconStar size={32} />
-                <Title order={1} size="h3">
-                  Creators
-                </Title>
-              </Group>
-              <Text size="xs" c="dimmed">
-                Explore and follow your favorites creators
+      <Stack w="100%">
+        <Group justify="space-between" w="100%" mb="md">
+          <Stack gap={2}>
+            <Group gap="xs">
+              <IconStar size={32} />
+              <Title order={1} size="h3">
+                Creators
+              </Title>
+            </Group>
+            <Text size="xs" c="dimmed">
+              {isFollowing
+                ? "Manage your followed creators"
+                : "Explore and follow your favorite creators"}
+            </Text>
+          </Stack>
+
+          <Filters filterOptions={filterOptions} />
+        </Group>
+
+        <ScopeTabs>
+          {data.length === 0 ? (
+            <Stack align="center" py="xl" gap="xs">
+              <Text size="lg" fw={500}>
+                {isFollowing
+                  ? "You're not following anyone yet"
+                  : "No creators to discover"}
+              </Text>
+              <Text size="sm" c="dimmed">
+                {isFollowing
+                  ? "Switch to Discover to find creators to follow"
+                  : "Try adjusting your filters"}
               </Text>
             </Stack>
-
-            <Filters filterOptions={filterOptions} />
-          </Group>
-          <Divider />
-          <CreatorsInfinity
-            initialData={data}
-            initialPagination={meta}
-            fetchAction={fetchAction}
-          />
-        </Stack>
-      )}
+          ) : (
+            <CreatorsInfinity
+              initialData={data}
+              initialPagination={meta}
+              fetchAction={fetchAction}
+            />
+          )}
+        </ScopeTabs>
+      </Stack>
     </section>
   );
 }

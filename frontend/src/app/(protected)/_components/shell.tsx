@@ -34,7 +34,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
         breakpoint: "sm",
         collapsed: { mobile: !opened },
       }}
-      padding="md"
+      padding={{ base: "xs", sm: "md" }}
     >
       <AppShell.Header></AppShell.Header>
       <AppShell.Navbar>

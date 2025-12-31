@@ -15,7 +15,7 @@ export const discoverParsers = {
   ),
   hasRecordings: parseAsBoolean.withDefault(true),
   scope: parseAsStringEnum<ScopeEnum>(Object.values(ScopeEnum)).withDefault(
-    ScopeEnum.Discover
+    ScopeEnum.Following
   ),
   gender: parseAsString,
   country: parseAsString,
