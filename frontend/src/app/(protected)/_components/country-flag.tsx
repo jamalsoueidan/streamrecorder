@@ -11,6 +11,9 @@ export const CountryFlag = ({
   countryCode,
   size = 24,
 }: CountryFlagProps) => {
+  if (countryCode === undefined || countryCode === "-") {
+    return null;
+  }
   return (
     <Tooltip label={country}>
       <Image

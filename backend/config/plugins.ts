@@ -350,6 +350,68 @@ export default ({ env }) => ({
                 },
               ],
             };
+
+            draft.components.schemas.FilterOption = {
+              type: "object",
+              properties: {
+                value: { type: "string" },
+                count: { type: "string" },
+              },
+            };
+
+            // Define FiltersResponse schema
+            draft.components.schemas.FiltersResponse = {
+              type: "object",
+              properties: {
+                countries: {
+                  type: "array",
+                  items: { $ref: "#/components/schemas/FilterOption" },
+                },
+                countryCodes: {
+                  type: "array",
+                  items: { $ref: "#/components/schemas/FilterOption" },
+                },
+                genders: {
+                  type: "array",
+                  items: { $ref: "#/components/schemas/FilterOption" },
+                },
+                languages: {
+                  type: "array",
+                  items: { $ref: "#/components/schemas/FilterOption" },
+                },
+                languageCodes: {
+                  type: "array",
+                  items: { $ref: "#/components/schemas/FilterOption" },
+                },
+                types: {
+                  type: "array",
+                  items: { $ref: "#/components/schemas/FilterOption" },
+                },
+              },
+            };
+
+            // Endpoint: GET /followers/filters
+            draft.paths["/followers/filters"] = {
+              get: {
+                tags: ["Follower"],
+                operationId: "getFollowerFilters",
+                summary: "Get available filter options with counts",
+                security: [{ bearerAuth: [] }],
+                responses: {
+                  "200": {
+                    description: "OK",
+                    content: {
+                      "application/json": {
+                        schema: {
+                          $ref: "#/components/schemas/FiltersResponse",
+                        },
+                      },
+                    },
+                  },
+                  "401": { description: "Unauthorized" },
+                },
+              },
+            };
           }
         },
       },

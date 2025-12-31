@@ -1,9 +1,7 @@
-// components/infinite-followers.tsx
 "use client";
 
 import dayjs from "@/app/lib/dayjs";
 import api from "@/lib/api";
-import { SortOptions } from "@/lib/types/filtering";
 import {
   BrowseRecordingsData,
   FollowerTypeEnum,
@@ -12,52 +10,35 @@ import {
 import {
   Anchor,
   Avatar,
-  Divider,
   Grid,
   Group,
   Loader,
-  Select,
   SimpleGrid,
   Stack,
   Text,
-  Title,
 } from "@mantine/core";
 import { useIntersection } from "@mantine/hooks";
 import Link from "next/link";
-import { parseAsStringEnum, useQueryState } from "nuqs";
-import { useEffect, useState, useTransition } from "react";
-import { ImageVideoPreview } from "./image-video-preview";
-
-const SORT_OPTIONS = [
-  { value: SortOptions.createdAtDesc, label: "Newest first" },
-  { value: SortOptions.createdAtAsc, label: "Oldest first" },
-];
+import { useCallback, useEffect, useState, useTransition } from "react";
+import { ImageVideoPreview } from "../../_components/image-video-preview";
 
 interface Props {
   initialData: RecordingListResponse["data"];
   initialPagination: RecordingListResponse["meta"];
-  initialSort?: SortOptions;
   fetchAction: (
     options: Parameters<typeof api.recording.browseRecordings>[0]
   ) => Promise<BrowseRecordingsData>;
 }
 
-export default function InfiniteRecordings({
+export default function LiveInfinity({
   initialData,
   initialPagination,
-  initialSort,
   fetchAction,
 }: Props) {
   const [data, setData] = useState(initialData);
   const [page, setPage] = useState(initialPagination?.pagination?.page ?? 1);
   const [hasMore, setHasMore] = useState(
     page < (initialPagination?.pagination?.pageCount ?? 1)
-  );
-  const [sort, setSort] = useQueryState(
-    "sort",
-    parseAsStringEnum<SortOptions>(Object.values(SortOptions)).withDefault(
-      initialSort || SortOptions.createdAtDesc
-    )
   );
 
   const [isPending, startTransition] = useTransition();
@@ -66,60 +47,35 @@ export default function InfiniteRecordings({
     threshold: 0.5,
   });
 
-  useEffect(() => {
+  const loadMore = useCallback(() => {
+    if (!hasMore || isPending) return;
+
     startTransition(async () => {
+      const nextPage = page + 1;
       const result = await fetchAction({
-        "pagination[page]": 1,
-        sort,
+        "pagination[page]": nextPage,
       });
-      setData(result?.data || []);
-      setPage(1);
-      setHasMore(1 < (result.meta?.pagination?.pageCount ?? 1));
+
+      setData((prev) => {
+        const existingIds = new Set(prev?.map((f) => f.id));
+        const newItems =
+          result?.data?.filter((f) => !existingIds.has(f.id)) || [];
+        return [...(prev || []), ...newItems];
+      });
+      setPage(nextPage);
+      setHasMore(nextPage < (result.meta?.pagination?.pageCount ?? 1));
     });
-  }, [fetchAction, sort]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [hasMore, isPending, page]);
 
   useEffect(() => {
-    if (entry?.isIntersecting && hasMore && !isPending) {
-      startTransition(async () => {
-        const nextPage = page + 1;
-        const result = await fetchAction({
-          "pagination[page]": nextPage,
-          sort,
-        });
-
-        setData((prev) => {
-          const existingIds = new Set(prev?.map((f) => f.id));
-          const newItems =
-            result?.data?.filter((f) => !existingIds.has(f.id)) || [];
-          return [...(prev || []), ...newItems];
-        });
-        setPage(nextPage);
-        setHasMore(nextPage < (result.meta?.pagination?.pageCount ?? 1));
-      });
+    if (entry?.isIntersecting) {
+      loadMore();
     }
-  }, [entry?.isIntersecting, hasMore, isPending, page, sort, fetchAction]);
+  }, [entry?.isIntersecting, loadMore]);
 
   return (
-    <Stack gap="sm">
-      <Group justify="space-between">
-        <Title order={1} size="lg">
-          Recordings ({initialPagination?.pagination?.total || 0})
-        </Title>
-
-        <Select
-          key={sort}
-          size="xs"
-          w={180}
-          value={sort}
-          onChange={(value: string | null) => {
-            if (!value) return;
-            setSort(value as unknown as SortOptions);
-          }}
-          data={SORT_OPTIONS}
-          disabled={isPending}
-        />
-      </Group>
-      <Divider />
+    <>
       <SimpleGrid cols={{ base: 1, sm: 2, md: 3, xl: 4 }} spacing="lg">
         {(data || []).map((rec) => {
           return (
@@ -171,14 +127,10 @@ export default function InfiniteRecordings({
           );
         })}
       </SimpleGrid>
-      {/* Sentinel element */}
-      <div ref={ref} style={{ height: 1 }} />
+
+      <div ref={ref} style={{ height: 20 }} />
 
       {isPending && <Loader size="sm" style={{ alignSelf: "center" }} />}
-
-      {!hasMore && data && data.length > 0 && (
-        <p style={{ textAlign: "center", color: "gray" }}>No more to load</p>
-      )}
-    </Stack>
+    </>
   );
 }

@@ -30,21 +30,21 @@ export const MediaPlayButton = forwardRef<HTMLElement, MediaProps>(
 );
 MediaPlayButton.displayName = "MediaPlayButton";
 
-export const MediaSeekBackwardButton = forwardRef<HTMLElement, MediaProps>(
+export const MediaMuteButton = forwardRef<HTMLElement, MediaProps>(
   (props, ref) => (
     // @ts-expect-error - web component
-    <media-seek-backward-button ref={ref} {...props} />
+    <media-mute-button ref={ref} {...props} />
   )
 );
-MediaSeekBackwardButton.displayName = "MediaSeekBackwardButton";
+MediaMuteButton.displayName = "MediaMuteButton";
 
-export const MediaSeekForwardButton = forwardRef<HTMLElement, MediaProps>(
+export const MediaVolumeRange = forwardRef<HTMLElement, MediaProps>(
   (props, ref) => (
     // @ts-expect-error - web component
-    <media-seek-forward-button ref={ref} {...props} />
+    <media-volume-range ref={ref} {...props} />
   )
 );
-MediaSeekForwardButton.displayName = "MediaSeekForwardButton";
+MediaVolumeRange.displayName = "MediaVolumeRange";
 
 export const MediaTimeRange = forwardRef<HTMLElement, MediaProps>(
   (props, ref) => (
@@ -62,21 +62,29 @@ export const MediaTimeDisplay = forwardRef<HTMLElement, MediaProps>(
 );
 MediaTimeDisplay.displayName = "MediaTimeDisplay";
 
-export const MediaMuteButton = forwardRef<HTMLElement, MediaProps>(
+export const MediaFullscreenButton = forwardRef<HTMLElement, MediaProps>(
   (props, ref) => (
     // @ts-expect-error - web component
-    <media-mute-button ref={ref} {...props} />
+    <media-fullscreen-button ref={ref} {...props} />
   )
 );
-MediaMuteButton.displayName = "MediaMuteButton";
+MediaFullscreenButton.displayName = "MediaFullscreenButton";
 
-export const MediaVolumeRange = forwardRef<HTMLElement, MediaProps>(
+export const MediaSeekBackwardButton = forwardRef<HTMLElement, MediaProps>(
   (props, ref) => (
     // @ts-expect-error - web component
-    <media-volume-range ref={ref} {...props} />
+    <media-seek-backward-button ref={ref} {...props} />
   )
 );
-MediaVolumeRange.displayName = "MediaVolumeRange";
+MediaSeekBackwardButton.displayName = "MediaSeekBackwardButton";
+
+export const MediaSeekForwardButton = forwardRef<HTMLElement, MediaProps>(
+  (props, ref) => (
+    // @ts-expect-error - web component
+    <media-seek-forward-button ref={ref} {...props} />
+  )
+);
+MediaSeekForwardButton.displayName = "MediaSeekForwardButton";
 
 export const MediaPlaybackRateButton = forwardRef<HTMLElement, MediaProps>(
   (props, ref) => (
@@ -86,14 +94,6 @@ export const MediaPlaybackRateButton = forwardRef<HTMLElement, MediaProps>(
 );
 MediaPlaybackRateButton.displayName = "MediaPlaybackRateButton";
 
-export const MediaFullscreenButton = forwardRef<HTMLElement, MediaProps>(
-  (props, ref) => (
-    // @ts-expect-error - web component
-    <media-fullscreen-button ref={ref} {...props} />
-  )
-);
-MediaFullscreenButton.displayName = "MediaFullscreenButton";
-
 export const MediaLoadingIndicator = forwardRef<HTMLElement, MediaProps>(
   (props, ref) => (
     // @ts-expect-error - web component
@@ -102,6 +102,23 @@ export const MediaLoadingIndicator = forwardRef<HTMLElement, MediaProps>(
 );
 MediaLoadingIndicator.displayName = "MediaLoadingIndicator";
 
+export const MediaPipButton = forwardRef<HTMLElement, MediaProps>(
+  (props, ref) => (
+    // @ts-expect-error - web component
+    <media-pip-button ref={ref} {...props} />
+  )
+);
+MediaPipButton.displayName = "MediaPipButton";
+
+export const MediaCaptionsButton = forwardRef<HTMLElement, MediaProps>(
+  (props, ref) => (
+    // @ts-expect-error - web component
+    <media-captions-button ref={ref} {...props} />
+  )
+);
+MediaCaptionsButton.displayName = "MediaCaptionsButton";
+
+// HLS Video element
 export const HlsVideo = forwardRef<HTMLVideoElement, VideoProps>(
   (props, ref) => (
     // @ts-expect-error - web component

@@ -2145,6 +2145,20 @@ export interface FollowRequestBody {
   type: FollowerTypeEnum;
 }
 
+export interface FilterOption {
+  value?: string;
+  count?: string;
+}
+
+export interface FiltersResponse {
+  countries?: FilterOption[];
+  countryCodes?: FilterOption[];
+  genders?: FilterOption[];
+  languages?: FilterOption[];
+  languageCodes?: FilterOption[];
+  types?: FilterOption[];
+}
+
 export enum FollowerRequestTypeEnum {
   Tiktok = "tiktok",
   Twitch = "twitch",
@@ -2866,6 +2880,8 @@ export interface UnfollowCreateData {
   success?: boolean;
 }
 
+export type GetFollowerFiltersData = FiltersResponse;
+
 export namespace Article {
   /**
    * No description
@@ -3352,6 +3368,22 @@ export namespace Follower {
     export type RequestBody = FollowRequestBody;
     export type RequestHeaders = {};
     export type ResponseBody = UnfollowCreateData;
+  }
+
+  /**
+   * No description
+   * @tags Follower
+   * @name GetFollowerFilters
+   * @summary Get available filter options with counts
+   * @request GET:/followers/filters
+   * @secure
+   */
+  export namespace GetFollowerFilters {
+    export type RequestParams = {};
+    export type RequestQuery = {};
+    export type RequestBody = never;
+    export type RequestHeaders = {};
+    export type ResponseBody = GetFollowerFiltersData;
   }
 }
 
@@ -4911,6 +4943,24 @@ export class Api<
         body: data,
         secure: true,
         type: ContentType.Json,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Follower
+     * @name GetFollowerFilters
+     * @summary Get available filter options with counts
+     * @request GET:/followers/filters
+     * @secure
+     */
+    getFollowerFilters: (params: RequestParams = {}) =>
+      this.request<GetFollowerFiltersData, void>({
+        path: `/followers/filters`,
+        method: "GET",
+        secure: true,
         format: "json",
         ...params,
       }),

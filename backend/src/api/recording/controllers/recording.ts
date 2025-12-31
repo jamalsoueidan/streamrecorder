@@ -18,7 +18,9 @@ export default factories.createCoreController(
         .findOne({
           documentId: user.documentId,
           fields: ["id"],
-          populate: { followers: { fields: ["id"] } },
+          populate: {
+            followers: { fields: ["id"] },
+          },
           status: "published",
         });
 
@@ -30,6 +32,7 @@ export default factories.createCoreController(
       };
 
       if (scope && scopeFilters[scope]) {
+        console.log("inside scope");
         Object.assign(ctx.query, {
           filters: Object.assign({}, ctx.query.filters, {
             follower: { id: scopeFilters[scope] },
