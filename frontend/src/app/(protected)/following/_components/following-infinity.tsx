@@ -15,8 +15,6 @@ import RecordingItem from "./recording-item";
 export default function FollowingInfinity() {
   const [filters] = useQueryStates(discoverParsers);
 
-  console.log("COMPONENT RENDER");
-
   const {
     data,
     fetchNextPage,
@@ -28,10 +26,7 @@ export default function FollowingInfinity() {
     fetchStatus,
   } = useInfiniteQuery({
     queryKey: ["recordings", filters],
-    queryFn: ({ pageParam }) => {
-      console.log("QUERY FN CALLED - page:", pageParam);
-      return fetchRecordings(filters, pageParam);
-    },
+    queryFn: ({ pageParam }) => fetchRecordings(filters, pageParam),
     initialPageParam: 1,
     getNextPageParam: (lastPage) => {
       const { page = 1, pageCount = 0 } = lastPage.meta?.pagination ?? {};
@@ -39,26 +34,12 @@ export default function FollowingInfinity() {
     },
   });
 
-  console.log("QUERY STATE:", {
-    status,
-    fetchStatus,
-    isLoading,
-    isFetching,
-    hasData: !!data,
-  });
-
   const { ref, entry } = useIntersection({
     threshold: 0.5,
   });
 
   useEffect(() => {
-    console.log("INTERSECTION:", {
-      isIntersecting: entry?.isIntersecting,
-      hasNextPage,
-      isFetchingNextPage,
-    });
     if (entry?.isIntersecting && hasNextPage && !isFetchingNextPage) {
-      console.log("CALLING fetchNextPage()");
       fetchNextPage();
     }
   }, [entry?.isIntersecting, hasNextPage, isFetchingNextPage, fetchNextPage]);
