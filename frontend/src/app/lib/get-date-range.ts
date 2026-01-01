@@ -1,6 +1,9 @@
 import dayjs from "@/app/lib/dayjs";
 
-export const getDateRange = (range: string | null) => {
+export const getDateRange = (
+  range: string | null,
+  field: string = "createdAt"
+) => {
   if (!range) return {};
 
   const ranges: Record<string, { $gte?: string; $lte?: string }> = {
@@ -27,5 +30,5 @@ export const getDateRange = (range: string | null) => {
     },
   };
 
-  return ranges[range] ? { createdAt: ranges[range] } : {};
+  return ranges[range] ? { [field]: ranges[range] } : {};
 };

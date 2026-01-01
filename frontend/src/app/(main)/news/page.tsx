@@ -9,7 +9,7 @@ import {
   Title,
 } from "@mantine/core";
 import { IconArticle, IconNews } from "@tabler/icons-react";
-import { NewsList } from "./_components/news-list";
+import { NewsList } from "./components/news-list";
 
 export default async function NewsPage() {
   const response = await api.article.getArticles({

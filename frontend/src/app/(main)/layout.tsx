@@ -1,7 +1,7 @@
 import { Box } from "@mantine/core";
 
-import { Footer } from "./_components/footer";
-import { HeaderMenu } from "./_components/header-menu";
+import { Footer } from "./components/footer";
+import { HeaderMenu } from "./components/header-menu";
 
 export default function MainLayout({
   children,

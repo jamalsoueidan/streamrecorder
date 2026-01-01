@@ -20,7 +20,7 @@ import {
   IconVideo,
   IconWorldSearch,
 } from "@tabler/icons-react";
-import LiveInfinity from "./_components/live-infinity";
+import LiveInfinity from "./components/live-infinity";
 
 const defaultOptions = {
   "pagination[pageSize]": 10,

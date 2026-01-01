@@ -1,27 +1,23 @@
-import api from "@/lib/api";
 import { Divider, Group, Stack, Text, Title } from "@mantine/core";
-import { IconStar } from "@tabler/icons-react";
+import { IconUsers } from "@tabler/icons-react";
 import {
   dehydrate,
   HydrationBoundary,
   QueryClient,
 } from "@tanstack/react-query";
 
-import Filters from "./_components/filters";
-import FollowingInfinity from "./_components/following-infinity";
+import { getFollowerFilters } from "@/app/actions/followers";
 import { fetchRecordings } from "./actions/fetch-recordings";
-import { discoverParamsCache } from "./lib/search-params";
+import Filters from "./components/filters";
+import FollowingInfinity from "./components/following-infinity";
+import { FollowingFilters, followingParamsCache } from "./lib/search-params";
 
-interface PageProps {
-  searchParams: Promise<{
-    hasRecordings?: string;
-    sort?: string;
-    scope?: string;
-  }>;
-}
-
-export default async function Page({ searchParams }: PageProps) {
-  const filters = await discoverParamsCache.parse(searchParams);
+export default async function Page({
+  searchParams,
+}: {
+  searchParams: Promise<FollowingFilters>;
+}) {
+  const filters = await followingParamsCache.parse(searchParams);
 
   const queryClient = new QueryClient();
 
@@ -31,24 +27,7 @@ export default async function Page({ searchParams }: PageProps) {
     initialPageParam: 1,
   });
 
-  const { data: filtersData } = await api.follower.getFollowerFilters();
-
-  const filterOptions = {
-    genders: (filtersData.genders ?? [])
-      .filter((g) => g.value)
-      .map((g) => ({ value: g.value || "", label: `${g.value} (${g.count})` })),
-    countryCodes: (filtersData.countryCodes ?? [])
-      .filter((c) => c.value !== "-")
-      .map((c) => ({ value: c.value || "", label: `${c.value} (${c.count})` })),
-    types: (filtersData.types ?? []).map((l) => ({
-      value: l.value || "",
-      label: `${l.value} (${l.count})`,
-    })),
-    languageCodes: (filtersData.languageCodes ?? []).map((l) => ({
-      value: l.value || "",
-      label: `${l.value} (${l.count})`,
-    })),
-  };
+  const filterOptions = await getFollowerFilters();
 
   return (
     <HydrationBoundary state={dehydrate(queryClient)}>
@@ -56,13 +35,13 @@ export default async function Page({ searchParams }: PageProps) {
         <Group justify="space-between" w="100%">
           <Stack gap={2}>
             <Group gap="xs">
-              <IconStar size={32} />
+              <IconUsers size={32} />
               <Title order={1} size="h3">
                 Following
               </Title>
             </Group>
             <Text size="xs" c="dimmed">
-              Your followed creators live recordings
+              Recordings from creators you follow
             </Text>
           </Stack>
 

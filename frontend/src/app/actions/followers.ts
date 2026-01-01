@@ -55,3 +55,24 @@ export async function unfollow(data: FollowRequestBody) {
 export async function updateFollower(documentId: string, data: any) {
   await api.follower.putFollowersId({ id: documentId }, { data });
 }
+
+export async function getFollowerFilters() {
+  const { data: filtersData } = await api.follower.getFollowerFilters();
+
+  return {
+    genders: (filtersData.genders ?? [])
+      .filter((g) => g.value)
+      .map((g) => ({ value: g.value || "", label: `${g.value} (${g.count})` })),
+    countryCodes: (filtersData.countryCodes ?? [])
+      .filter((c) => c.value !== "-")
+      .map((c) => ({ value: c.value || "", label: `${c.value} (${c.count})` })),
+    types: (filtersData.types ?? []).map((l) => ({
+      value: l.value || "",
+      label: `${l.value} (${l.count})`,
+    })),
+    languageCodes: (filtersData.languageCodes ?? []).map((l) => ({
+      value: l.value || "",
+      label: `${l.value} (${l.count})`,
+    })),
+  };
+}

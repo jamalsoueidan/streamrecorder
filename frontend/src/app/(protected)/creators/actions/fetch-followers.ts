@@ -2,7 +2,7 @@
 
 import api from "@/lib/api";
 import { deepMerge } from "@mantine/core";
-import { buildStrapiFilters, DiscoverFilters } from "../lib/search-params";
+import { buildCreatorsFilters, ExploreFilters } from "../lib/search-params";
 
 const defaultOptions = {
   "pagination[pageSize]": 10,
@@ -20,10 +20,10 @@ const defaultOptions = {
   },
 };
 
-export async function fetchFollowers(filters: DiscoverFilters, page: number) {
+export async function fetchFollowers(filters: ExploreFilters, page: number) {
   const response = await api.follower.browseFollowers(
     deepMerge(defaultOptions, {
-      filters: buildStrapiFilters(filters),
+      filters: buildCreatorsFilters(filters),
       scope: filters.scope,
       hasRecordings: filters.hasRecordings,
       "pagination[page]": page,

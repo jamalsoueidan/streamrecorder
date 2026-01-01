@@ -1,6 +1,5 @@
 "use client";
 
-import { SortOptions } from "@/lib/types/filtering";
 import {
   Badge,
   Button,
@@ -33,28 +32,22 @@ import {
   IconGenderMale,
   IconQuestionMark,
   IconSearch,
-  IconSortAZ,
-  IconSortZA,
   IconUsers,
   IconWorld,
   IconX,
 } from "@tabler/icons-react";
 import { useQueryStates } from "nuqs";
 import { useState } from "react";
-import { discoverParsers } from "../lib/search-params";
+import { followingParsers, FollowingSortOptions } from "../lib/search-params";
 
 const sortIcons: Record<string, React.ReactNode> = {
-  [SortOptions.UsernameAsc]: <IconSortAZ size={24} />,
-  [SortOptions.UsernameDesc]: <IconSortZA size={24} />,
-  [SortOptions.createdAtDesc]: <IconArrowDown size={24} />,
-  [SortOptions.createdAtAsc]: <IconArrowUp size={24} />,
+  [FollowingSortOptions.updatedAtDesc]: <IconArrowDown size={24} />,
+  [FollowingSortOptions.updatedAtAsc]: <IconArrowUp size={24} />,
 };
 
 const sortLabels: Record<string, string> = {
-  [SortOptions.UsernameAsc]: "A-Z",
-  [SortOptions.UsernameDesc]: "Z-A",
-  [SortOptions.createdAtDesc]: "Newest",
-  [SortOptions.createdAtAsc]: "Oldest",
+  [FollowingSortOptions.updatedAtDesc]: "Newest",
+  [FollowingSortOptions.updatedAtAsc]: "Oldest",
 };
 
 const genderIcons: Record<string, React.ReactNode> = {
@@ -166,7 +159,7 @@ interface Props {
 
 export default function Filters({ filterOptions }: Props) {
   const [opened, { open, close }] = useDisclosure(false);
-  const [filters, setFilters] = useQueryStates(discoverParsers);
+  const [filters, setFilters] = useQueryStates(followingParsers);
   const [searchValue, setSearchValue] = useState(filters.search || "");
 
   const debouncedSearch = useDebouncedCallback((value: string) => {
@@ -193,7 +186,7 @@ export default function Filters({ filterOptions }: Props) {
       language: null,
       type: null,
       dateRange: null,
-      sort: SortOptions.createdAtDesc,
+      sort: FollowingSortOptions.updatedAtDesc,
     });
   };
 
@@ -393,7 +386,7 @@ export default function Filters({ filterOptions }: Props) {
               Sort by
             </Text>
             <SimpleGrid cols={4} spacing="xs">
-              {Object.values(SortOptions).map((sortValue) => (
+              {Object.values(FollowingSortOptions).map((sortValue) => (
                 <UnstyledButton
                   key={sortValue}
                   onClick={() => setFilters({ sort: sortValue })}

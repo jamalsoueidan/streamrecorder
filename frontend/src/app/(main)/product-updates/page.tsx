@@ -9,7 +9,7 @@ import {
   Title,
 } from "@mantine/core";
 import { IconGitBranch, IconSparkles } from "@tabler/icons-react";
-import { ChangeLogTimeline } from "./_components/change-log-timeline";
+import { ChangeLogTimeline } from "./components/change-log-timeline";
 
 export default async function ChangelogPage() {
   const response = await api.changeLog.getChangeLogs({
