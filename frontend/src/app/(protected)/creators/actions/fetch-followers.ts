@@ -25,6 +25,7 @@ export async function fetchFollowers(filters: CreatorFilters, page: number) {
     deepMerge(defaultOptions, {
       filters: buildCreatorsFilters(filters),
       scope: filters.scope,
+      sort: filters.sort,
       hasRecordings: filters.hasRecordings,
       "pagination[page]": page,
     })
