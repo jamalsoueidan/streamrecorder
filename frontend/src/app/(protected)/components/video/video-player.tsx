@@ -170,8 +170,8 @@ export function VideoPlayer({ sources }: { sources: Source[] }) {
         </HlsVideo>
 
         <MediaControlBar>
-          <MediaTimeDisplay show-duration />
           <MediaTimeRange />
+          <MediaTimeDisplay show-duration />
           <MediaSeekForwardButton seekoffset="10" />
         </MediaControlBar>
       </MediaController>

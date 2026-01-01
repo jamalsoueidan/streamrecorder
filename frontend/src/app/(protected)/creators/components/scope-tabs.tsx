@@ -5,14 +5,14 @@ import { Tabs } from "@mantine/core";
 import { IconCompass, IconUsers } from "@tabler/icons-react";
 import { useQueryStates } from "nuqs";
 import { ReactNode } from "react";
-import { discoverParsers } from "../lib/search-params";
+import { exploreParsers } from "../lib/search-params";
 
 interface Props {
   children: ReactNode;
 }
 
 export default function ScopeTabs({ children }: Props) {
-  const [filters, setFilters] = useQueryStates(discoverParsers);
+  const [filters, setFilters] = useQueryStates(exploreParsers);
 
   return (
     <Tabs

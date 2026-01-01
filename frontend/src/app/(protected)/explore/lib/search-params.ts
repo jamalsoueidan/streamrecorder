@@ -48,7 +48,7 @@ export const followingParsers = {
     Object.values(FollowingSortOptions)
   ).withDefault(FollowingSortOptions.updatedAtDesc),
   scope: parseAsStringEnum<ScopeEnum>(Object.values(ScopeEnum)).withDefault(
-    ScopeEnum.Following
+    ScopeEnum.Discover
   ),
   gender: parseAsString,
   country: parseAsString,

@@ -20,7 +20,7 @@ import {
 import { useIntersection } from "@mantine/hooks";
 import Link from "next/link";
 import { useCallback, useEffect, useState, useTransition } from "react";
-import { ImageVideoPreview } from "../../_components/image-video-preview";
+import { ImageVideoPreview } from "../../components/image-video-preview";
 
 interface Props {
   initialData: RecordingListResponse["data"];

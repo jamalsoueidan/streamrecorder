@@ -1,23 +1,24 @@
 "use client";
 
-import { Grid, Loader, Stack, Text } from "@mantine/core";
+import { Loader, SimpleGrid, Stack, Text } from "@mantine/core";
 import { useIntersection } from "@mantine/hooks";
 import { useEffect } from "react";
 
 import { useQueryStates } from "nuqs";
 
 import { useInfiniteQuery } from "@tanstack/react-query";
-import { fetchFollowers } from "../actions/fetch-followers";
-import { discoverParsers } from "../lib/search-params";
-import FollowerItem from "./follower-item";
 
-export default function CreatorsInfinity() {
-  const [filters] = useQueryStates(discoverParsers);
+import { fetchRecordings } from "../actions/fetch-recordings";
+import { followingParsers } from "../lib/search-params";
+import RecordingItem from "./recording-item";
+
+export default function FollowingInfinity() {
+  const [filters] = useQueryStates(followingParsers);
 
   const { data, fetchNextPage, hasNextPage, isFetchingNextPage, isLoading } =
     useInfiniteQuery({
-      queryKey: ["followers", filters],
-      queryFn: ({ pageParam }) => fetchFollowers(filters, pageParam),
+      queryKey: ["recordings", filters],
+      queryFn: ({ pageParam }) => fetchRecordings(filters, pageParam),
       initialPageParam: 1,
       getNextPageParam: (lastPage) => {
         const { page = 1, pageCount = 0 } = lastPage.meta?.pagination ?? {};
@@ -35,7 +36,7 @@ export default function CreatorsInfinity() {
     }
   }, [entry?.isIntersecting, hasNextPage, isFetchingNextPage, fetchNextPage]);
 
-  const allFollowers = data?.pages.flatMap((p) => p.data) ?? [];
+  const recordings = data?.pages.flatMap((p) => p.data) ?? [];
 
   if (isLoading) {
     return (
@@ -44,8 +45,6 @@ export default function CreatorsInfinity() {
       </Stack>
     );
   }
-
-  const isFollowing = filters.scope === "following";
 
   const hasActiveFilters = Boolean(
     filters.gender ||
@@ -56,24 +55,7 @@ export default function CreatorsInfinity() {
       filters.dateRange
   );
 
-  if (allFollowers.length === 0) {
-    if (isFollowing) {
-      return (
-        <Stack align="center" py="xl" gap="xs">
-          <Text size="lg" fw={500}>
-            {hasActiveFilters
-              ? "No followers match your filters"
-              : "You're not following anyone yet"}
-          </Text>
-          <Text size="sm" c="dimmed">
-            {hasActiveFilters
-              ? "Try adjusting or clearing your filters"
-              : "Switch to Discover to find creators to follow"}
-          </Text>
-        </Stack>
-      );
-    }
-
+  if (recordings.length === 0) {
     return (
       <Stack align="center" py="xl" gap="xs">
         <Text size="lg" fw={500}>
@@ -90,19 +72,18 @@ export default function CreatorsInfinity() {
 
   return (
     <>
-      <Grid justify="flex-start" align="stretch">
-        {allFollowers.map((follower) => (
-          <FollowerItem key={follower.documentId} follower={follower} />
+      <SimpleGrid cols={{ base: 1, sm: 2, md: 3, xl: 4 }} spacing="lg">
+        {recordings?.map((rec) => (
+          <RecordingItem key={rec.id} recording={rec} />
         ))}
-      </Grid>
+      </SimpleGrid>
 
       <div ref={ref} style={{ height: 1 }} />
 
       {isFetchingNextPage && (
         <Loader size="sm" style={{ alignSelf: "center" }} />
       )}
-
-      {!hasNextPage && allFollowers.length > 0 && (
+      {!hasNextPage && recordings.length > 0 && (
         <Text ta="center" c="dimmed">
           No more to load
         </Text>
