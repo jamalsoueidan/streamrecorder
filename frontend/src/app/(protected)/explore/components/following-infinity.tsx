@@ -17,7 +17,7 @@ export default function FollowingInfinity() {
 
   const { data, fetchNextPage, hasNextPage, isFetchingNextPage, isLoading } =
     useInfiniteQuery({
-      queryKey: ["recordings", filters],
+      queryKey: ["explore", filters],
       queryFn: ({ pageParam }) => fetchRecordings(filters, pageParam),
       initialPageParam: 1,
       getNextPageParam: (lastPage) => {
