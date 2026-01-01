@@ -24,7 +24,7 @@ export default function RecordingModal() {
   const [filters] = useQueryStates(followingParsers);
   const containerRef = useRef<HTMLDivElement>(null);
   const slideRefs = useRef<Map<number, HTMLDivElement>>(new Map());
-  const visibleIndexRef = useRef<number>(0);
+  const [visibleIndex, setVisibleIndex] = useState<number | null>(null);
   const hasScrolledToInitial = useRef(false);
 
   const { data, fetchNextPage, hasNextPage, isFetchingNextPage, isLoading } =
@@ -58,8 +58,6 @@ export default function RecordingModal() {
     if (hasScrolledToInitial.current) return;
     if (recordings.length === 0) return;
 
-    visibleIndexRef.current = initialIndex;
-
     if (initialIndex > 0) {
       requestAnimationFrame(() => {
         const target = slideRefs.current.get(initialIndex);
@@ -72,20 +70,18 @@ export default function RecordingModal() {
 
   // Navigation functions
   const goToPrev = useCallback(() => {
-    const currentIndex = visibleIndexRef.current;
-    if (currentIndex > 0) {
-      const target = slideRefs.current.get(currentIndex - 1);
+    if (visibleIndex !== null && visibleIndex > 0) {
+      const target = slideRefs.current.get(visibleIndex - 1);
       target?.scrollIntoView({ behavior: "smooth" });
     }
-  }, []);
+  }, [visibleIndex]);
 
   const goToNext = useCallback(() => {
-    const currentIndex = visibleIndexRef.current;
-    if (currentIndex < recordings.length - 1) {
-      const target = slideRefs.current.get(currentIndex + 1);
+    if (visibleIndex !== null && visibleIndex < recordings.length - 1) {
+      const target = slideRefs.current.get(visibleIndex + 1);
       target?.scrollIntoView({ behavior: "smooth" });
     }
-  }, [recordings.length]);
+  }, [visibleIndex, recordings.length]);
 
   // Keyboard navigation
   useEffect(() => {
@@ -108,10 +104,10 @@ export default function RecordingModal() {
     router.back();
   };
 
-  // Callback for when visible slide changes
+  // Callback for when visible slide changes (called from IntersectionObserver - async, so setState is fine)
   const handleVisibleChange = useCallback(
     (index: number) => {
-      visibleIndexRef.current = index;
+      setVisibleIndex(index);
 
       // Update URL
       const recording = recordings[index];
@@ -142,6 +138,11 @@ export default function RecordingModal() {
       </Modal.Root>
     );
   }
+
+  const showPrev = visibleIndex !== null && visibleIndex > 0;
+  const showNext =
+    visibleIndex !== null &&
+    (visibleIndex < recordings.length - 1 || hasNextPage);
 
   return (
     <Modal.Root
@@ -185,25 +186,29 @@ export default function RecordingModal() {
               zIndex: 10,
             }}
           >
-            <ActionIcon
-              variant="filled"
-              radius="xl"
-              size="xl"
-              color="gray"
-              onClick={goToPrev}
-            >
-              <IconChevronUp />
-            </ActionIcon>
-            <ActionIcon
-              variant="filled"
-              radius="xl"
-              size="xl"
-              color="gray"
-              onClick={goToNext}
-              loading={isFetchingNextPage}
-            >
-              <IconChevronDown />
-            </ActionIcon>
+            {showPrev && (
+              <ActionIcon
+                variant="filled"
+                radius="xl"
+                size="xl"
+                color="gray"
+                onClick={goToPrev}
+              >
+                <IconChevronUp />
+              </ActionIcon>
+            )}
+            {showNext && (
+              <ActionIcon
+                variant="filled"
+                radius="xl"
+                size="xl"
+                color="gray"
+                onClick={goToNext}
+                loading={isFetchingNextPage}
+              >
+                <IconChevronDown />
+              </ActionIcon>
+            )}
           </Group>
 
           {/* Scroll container with snap */}
