@@ -9,7 +9,7 @@ import {
 } from "nuqs/server";
 
 export const followingDefaultOptions = {
-  scope: ScopeEnum.Following,
+  scope: ScopeEnum.Discover,
   filters: {
     sources: {
       state: {
@@ -48,7 +48,7 @@ export const followingParsers = {
     Object.values(FollowingSortOptions)
   ).withDefault(FollowingSortOptions.updatedAtDesc),
   scope: parseAsStringEnum<ScopeEnum>(Object.values(ScopeEnum)).withDefault(
-    ScopeEnum.Following
+    ScopeEnum.Discover
   ),
   gender: parseAsString,
   country: parseAsString,

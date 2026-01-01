@@ -1,6 +1,6 @@
 import { Container, Group, Stack, Text, ThemeIcon, Title } from "@mantine/core";
 import { IconScale } from "@tabler/icons-react";
-import { DMCAForm } from "./_components/form";
+import { DMCAForm } from "./components/form";
 
 export default function DMCAPolicy() {
   return (

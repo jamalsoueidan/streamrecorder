@@ -9,30 +9,22 @@ import { useQueryStates } from "nuqs";
 import { useInfiniteQuery } from "@tanstack/react-query";
 
 import { fetchRecordings } from "../actions/fetch-recordings";
-import { discoverParsers } from "../lib/search-params";
+import { followingParsers } from "../lib/search-params";
 import RecordingItem from "./recording-item";
 
 export default function FollowingInfinity() {
-  const [filters] = useQueryStates(discoverParsers);
+  const [filters] = useQueryStates(followingParsers);
 
-  const {
-    data,
-    fetchNextPage,
-    hasNextPage,
-    isFetchingNextPage,
-    isLoading,
-    isFetching,
-    status,
-    fetchStatus,
-  } = useInfiniteQuery({
-    queryKey: ["recordings", filters],
-    queryFn: ({ pageParam }) => fetchRecordings(filters, pageParam),
-    initialPageParam: 1,
-    getNextPageParam: (lastPage) => {
-      const { page = 1, pageCount = 0 } = lastPage.meta?.pagination ?? {};
-      return page < pageCount ? page + 1 : undefined;
-    },
-  });
+  const { data, fetchNextPage, hasNextPage, isFetchingNextPage, isLoading } =
+    useInfiniteQuery({
+      queryKey: ["recordings", filters],
+      queryFn: ({ pageParam }) => fetchRecordings(filters, pageParam),
+      initialPageParam: 1,
+      getNextPageParam: (lastPage) => {
+        const { page = 1, pageCount = 0 } = lastPage.meta?.pagination ?? {};
+        return page < pageCount ? page + 1 : undefined;
+      },
+    });
 
   const { ref, entry } = useIntersection({
     threshold: 0.5,
@@ -44,7 +36,7 @@ export default function FollowingInfinity() {
     }
   }, [entry?.isIntersecting, hasNextPage, isFetchingNextPage, fetchNextPage]);
 
-  const allFollowers = data?.pages.flatMap((p) => p.data) ?? [];
+  const recordings = data?.pages.flatMap((p) => p.data) ?? [];
 
   if (isLoading) {
     return (
@@ -63,7 +55,7 @@ export default function FollowingInfinity() {
       filters.dateRange
   );
 
-  if (allFollowers.length === 0) {
+  if (recordings.length === 0) {
     return (
       <Stack align="center" py="xl" gap="xs">
         <Text size="lg" fw={500}>
@@ -81,7 +73,7 @@ export default function FollowingInfinity() {
   return (
     <>
       <SimpleGrid cols={{ base: 1, sm: 2, md: 3, xl: 4 }} spacing="lg">
-        {allFollowers?.map((rec) => (
+        {recordings?.map((rec) => (
           <RecordingItem key={rec.id} recording={rec} />
         ))}
       </SimpleGrid>
@@ -91,7 +83,7 @@ export default function FollowingInfinity() {
       {isFetchingNextPage && (
         <Loader size="sm" style={{ alignSelf: "center" }} />
       )}
-      {!hasNextPage && allFollowers.length > 0 && (
+      {!hasNextPage && recordings.length > 0 && (
         <Text ta="center" c="dimmed">
           No more to load
         </Text>

@@ -8,7 +8,7 @@ import { AbilityProvider } from "../providers/ability-provider";
 import { NavigationProvider } from "../providers/navigation-provider";
 import { QueryProvider } from "../providers/query-provider";
 import { UserProvider } from "../providers/user-provider";
-import { Shell } from "./_components/shell";
+import { Shell } from "./components/shell";
 
 export default async function DashboardLayout({
   children,

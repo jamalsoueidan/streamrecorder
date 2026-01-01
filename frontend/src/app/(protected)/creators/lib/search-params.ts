@@ -9,7 +9,7 @@ import {
   parseAsStringEnum,
 } from "nuqs/server";
 
-export const discoverParsers = {
+export const exploreParsers = {
   sort: parseAsStringEnum<SortOptions>(Object.values(SortOptions)).withDefault(
     SortOptions.createdAtDesc
   ),
@@ -25,11 +25,11 @@ export const discoverParsers = {
   dateRange: parseAsString,
 };
 
-export const discoverParamsCache = createSearchParamsCache(discoverParsers);
+export const creatorsParamsCache = createSearchParamsCache(exploreParsers);
 
-export type DiscoverFilters = inferParserType<typeof discoverParsers>;
+export type CreatorFilters = inferParserType<typeof exploreParsers>;
 
-export const buildStrapiFilters = (filters: DiscoverFilters) => ({
+export const buildCreatorsFilters = (filters: CreatorFilters) => ({
   ...(filters.gender && { gender: { $eq: filters.gender } }),
   ...(filters.country && { countryCode: { $eq: filters.country } }),
   ...(filters.language && { languageCode: { $eq: filters.language } }),
