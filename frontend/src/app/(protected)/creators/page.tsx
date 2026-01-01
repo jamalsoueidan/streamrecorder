@@ -10,14 +10,14 @@ import { fetchFollowers } from "./actions/fetch-followers";
 import CreatorsInfinity from "./components/creators-infinity";
 import Filters from "./components/filters";
 import ScopeTabs from "./components/scope-tabs";
-import { creatorsParamscache, ExploreFilters } from "./lib/search-params";
+import { CreatorFilters, creatorsParamsCache } from "./lib/search-params";
 
 export default async function Page({
   searchParams,
 }: {
-  searchParams: Promise<ExploreFilters>;
+  searchParams: Promise<CreatorFilters>;
 }) {
-  const filters = await creatorsParamscache.parse(searchParams);
+  const filters = await creatorsParamsCache.parse(searchParams);
 
   const queryClient = new QueryClient();
 
