@@ -25,11 +25,11 @@ export const exploreParsers = {
   dateRange: parseAsString,
 };
 
-export const creatorsParamscache = createSearchParamsCache(exploreParsers);
+export const creatorsParamsCache = createSearchParamsCache(exploreParsers);
 
-export type ExploreFilters = inferParserType<typeof exploreParsers>;
+export type CreatorFilters = inferParserType<typeof exploreParsers>;
 
-export const buildCreatorsFilters = (filters: ExploreFilters) => ({
+export const buildCreatorsFilters = (filters: CreatorFilters) => ({
   ...(filters.gender && { gender: { $eq: filters.gender } }),
   ...(filters.country && { countryCode: { $eq: filters.country } }),
   ...(filters.language && { languageCode: { $eq: filters.language } }),

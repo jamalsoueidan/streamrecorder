@@ -9,7 +9,7 @@ import {
 } from "nuqs/server";
 
 export const followingDefaultOptions = {
-  scope: ScopeEnum.Following,
+  scope: ScopeEnum.Discover,
   filters: {
     sources: {
       state: {
