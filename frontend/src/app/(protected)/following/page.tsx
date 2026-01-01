@@ -22,7 +22,7 @@ export default async function Page({
   const queryClient = new QueryClient();
 
   await queryClient.prefetchInfiniteQuery({
-    queryKey: ["recordings", filters],
+    queryKey: ["following", filters],
     queryFn: ({ pageParam }) => fetchRecordings(filters, pageParam),
     initialPageParam: 1,
   });
