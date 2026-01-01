@@ -1,5 +1,5 @@
-import { PlayBack } from "@/app/(protected)/_components/video/playback";
-import { VideoPlayer } from "@/app/(protected)/_components/video/video-player";
+import { PlayBack } from "@/app/(protected)/components/video/playback";
+import { VideoPlayer } from "@/app/(protected)/components/video/video-player";
 import { getRecordingsWithPrevNext } from "@/app/actions/recordings";
 import { Box } from "@mantine/core";
 

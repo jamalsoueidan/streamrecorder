@@ -54,7 +54,7 @@ export function ImageVideoPreview({ recording, type, username }: Props) {
     if (!sources || sources.length === 0 || isRecording) return;
     timeoutRef.current = setTimeout(() => {
       setShowVideo(true);
-    }, 300);
+    }, 1500);
   };
 
   const handleMouseLeave = () => {

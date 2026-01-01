@@ -1,4 +1,4 @@
-// app/_components/pwa-updater.tsx
+// app/components/pwa-updater.tsx
 "use client";
 
 import { Button, Notification } from "@mantine/core";

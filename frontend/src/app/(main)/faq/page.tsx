@@ -1,7 +1,7 @@
 import api from "@/lib/api";
 import { Container, Group, Stack, Text, ThemeIcon, Title } from "@mantine/core";
 import { IconQuestionMark } from "@tabler/icons-react";
-import { Questions } from "./_components/questions";
+import { Questions } from "./components/questions";
 
 export default async function FAQPage() {
   const response = await api.faq.getFaqs({ sort: "order:asc" });

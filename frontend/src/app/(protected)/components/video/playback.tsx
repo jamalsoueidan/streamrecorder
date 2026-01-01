@@ -1,4 +1,4 @@
-// _components/nav-buttons.tsx
+// components/nav-buttons.tsx
 "use client";
 
 import { ActionIcon, Flex } from "@mantine/core";

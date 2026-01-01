@@ -1,4 +1,4 @@
-import api from "@/lib/api";
+import { getFollowerFilters } from "@/app/actions/followers";
 import { Group, Stack, Text, Title } from "@mantine/core";
 import { IconStar } from "@tabler/icons-react";
 import {
@@ -6,22 +6,18 @@ import {
   HydrationBoundary,
   QueryClient,
 } from "@tanstack/react-query";
-import CreatorsInfinity from "./_components/creators-infinity";
-import Filters from "./_components/filters";
-import ScopeTabs from "./_components/scope-tabs";
 import { fetchFollowers } from "./actions/fetch-followers";
-import { discoverParamsCache } from "./lib/search-params";
+import CreatorsInfinity from "./components/creators-infinity";
+import Filters from "./components/filters";
+import ScopeTabs from "./components/scope-tabs";
+import { CreatorFilters, creatorsParamsCache } from "./lib/search-params";
 
-interface PageProps {
-  searchParams: Promise<{
-    hasRecordings?: string;
-    sort?: string;
-    scope?: string;
-  }>;
-}
-
-export default async function Page({ searchParams }: PageProps) {
-  const filters = await discoverParamsCache.parse(searchParams);
+export default async function Page({
+  searchParams,
+}: {
+  searchParams: Promise<CreatorFilters>;
+}) {
+  const filters = await creatorsParamsCache.parse(searchParams);
 
   const queryClient = new QueryClient();
 
@@ -31,24 +27,7 @@ export default async function Page({ searchParams }: PageProps) {
     initialPageParam: 1,
   });
 
-  const { data: filtersData } = await api.follower.getFollowerFilters();
-
-  const filterOptions = {
-    genders: (filtersData.genders ?? [])
-      .filter((g) => g.value)
-      .map((g) => ({ value: g.value || "", label: `${g.value} (${g.count})` })),
-    countryCodes: (filtersData.countryCodes ?? [])
-      .filter((c) => c.value !== "-")
-      .map((c) => ({ value: c.value || "", label: `${c.value} (${c.count})` })),
-    types: (filtersData.types ?? []).map((l) => ({
-      value: l.value || "",
-      label: `${l.value} (${l.count})`,
-    })),
-    languageCodes: (filtersData.languageCodes ?? []).map((l) => ({
-      value: l.value || "",
-      label: `${l.value} (${l.count})`,
-    })),
-  };
+  const filterOptions = await getFollowerFilters();
 
   return (
     <HydrationBoundary state={dehydrate(queryClient)}>

@@ -20,13 +20,13 @@ import {
   IconVideo,
   IconWorldSearch,
 } from "@tabler/icons-react";
-import { CountryFlag } from "../../_components/country-flag";
-import FollowButton from "../../_components/follow-button";
-import { FollowerTypeIcon } from "../../_components/follower-type";
-import InfiniteRecordings from "../../_components/infinity-recordings";
-import OpenSocial from "../../_components/open-social";
-import UnfollowButton from "../../_components/unfollow-button";
-import { AdminMenu } from "./_components/admin-menu";
+import { CountryFlag } from "../../components/country-flag";
+import FollowButton from "../../components/follow-button";
+import { FollowerTypeIcon } from "../../components/follower-type";
+import InfiniteRecordings from "../../components/infinity-recordings";
+import OpenSocial from "../../components/open-social";
+import UnfollowButton from "../../components/unfollow-button";
+import { AdminMenu } from "./components/admin-menu";
 
 const defaultOptions = {
   filters: {
