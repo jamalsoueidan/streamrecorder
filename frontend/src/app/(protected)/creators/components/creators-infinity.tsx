@@ -16,7 +16,7 @@ export default function CreatorsInfinity() {
 
   const { data, fetchNextPage, hasNextPage, isFetchingNextPage, isLoading } =
     useInfiniteQuery({
-      queryKey: ["followers", filters],
+      queryKey: ["creators", filters],
       queryFn: ({ pageParam }) => fetchFollowers(filters, pageParam),
       initialPageParam: 1,
       getNextPageParam: (lastPage) => {

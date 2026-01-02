@@ -22,7 +22,7 @@ export default async function Page({
   const queryClient = new QueryClient();
 
   await queryClient.prefetchInfiniteQuery({
-    queryKey: ["followers", filters],
+    queryKey: ["creators", filters],
     queryFn: ({ pageParam }) => fetchFollowers(filters, pageParam),
     initialPageParam: 1,
   });
