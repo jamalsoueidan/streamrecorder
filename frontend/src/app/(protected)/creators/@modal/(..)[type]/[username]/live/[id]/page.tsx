@@ -19,7 +19,6 @@ export default function CreatorRecordingModal() {
     id: string;
     username: string;
     type: string;
-    status: string;
   }>();
   const searchParams = useSearchParams();
 
@@ -125,8 +124,7 @@ export default function CreatorRecordingModal() {
       const recording = recordings[index];
       if (!recording) return;
 
-      const status = params.status; // Keep same status (live/recorded)
-      const basePath = `/${recording.follower?.type}/${recording.follower?.username}/${status}/${recording.documentId}`;
+      const basePath = `/${recording.follower?.type}/${recording.follower?.username}/live/${recording.documentId}`;
       const search = searchParams.toString();
       const url = search ? `${basePath}?${search}` : basePath;
       window.history.replaceState(null, "", url);
@@ -137,14 +135,7 @@ export default function CreatorRecordingModal() {
         fetchNextPage();
       }
     },
-    [
-      recordings,
-      searchParams,
-      params.status,
-      hasNextPage,
-      isFetchingNextPage,
-      fetchNextPage,
-    ]
+    [recordings, searchParams, hasNextPage, isFetchingNextPage, fetchNextPage]
   );
 
   if (isLoading) {

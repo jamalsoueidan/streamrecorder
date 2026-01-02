@@ -131,7 +131,7 @@ export default function RecordingModal() {
     return (
       <Modal.Root opened={true} onClose={handleClose} fullScreen>
         <Modal.Content>
-          <Flex h="100vh" justify="center" align="center">
+          <Flex h="100dvh" justify="center" align="center">
             <Loader size="lg" />
           </Flex>
         </Modal.Content>
@@ -214,7 +214,7 @@ export default function RecordingModal() {
           {/* Scroll container with snap */}
           <Box
             ref={containerRef}
-            h="100vh"
+            h="100dvh"
             className="no-scrollbar"
             style={{
               overflowY: "auto",
@@ -289,7 +289,7 @@ function VideoSlide({
   return (
     <Flex
       ref={ref}
-      h="100vh"
+      h="100dvh"
       justify="center"
       align="center"
       style={{

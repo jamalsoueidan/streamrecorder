@@ -14,7 +14,7 @@ export async function fetchRecordings(filters: FollowingFilters, page: number) {
       scope: filters.scope,
       sort: filters.sort,
       "pagination[page]": page,
-      "pagination[pageSize]": 10,
+      "pagination[pageSize]": 15,
     })
   );
 
