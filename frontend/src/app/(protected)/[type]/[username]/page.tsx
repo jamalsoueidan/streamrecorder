@@ -191,7 +191,7 @@ function EmptyState({ follower }: { follower: Follower }) {
           Check back later!
         </Text>
       </Stack>
-      <Anchor href="/discover" underline="never">
+      <Anchor href="/creators" underline="never">
         <Button
           size="lg"
           radius="md"
