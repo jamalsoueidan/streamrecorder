@@ -70,6 +70,14 @@ export const MediaFullscreenButton = forwardRef<HTMLElement, MediaProps>(
 );
 MediaFullscreenButton.displayName = "MediaFullscreenButton";
 
+export const MediaPosterImage = forwardRef<HTMLElement, MediaProps>(
+  (props, ref) => (
+    // @ts-expect-error - web component
+    <media-poster-image ref={ref} {...props} />
+  )
+);
+MediaPosterImage.displayName = "MediaPosterImage";
+
 export const MediaSeekBackwardButton = forwardRef<HTMLElement, MediaProps>(
   (props, ref) => (
     // @ts-expect-error - web component

@@ -45,3 +45,7 @@ body {
   --mantine-color-default-hover: #12122a;
   --mantine-color-default-border: rgba(255, 255, 255, 0.1);
 }
+
+media-loading-indicator[medialoading] {
+  --media-loading-indicator-opacity: 1;
+}

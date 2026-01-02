@@ -21,9 +21,9 @@ import {
 } from "@mantine/core";
 import { useIntersection } from "@mantine/hooks";
 import {
+  IconPlayerRecord,
   IconPlayerRecordFilled,
   IconRefresh,
-  IconStar,
   IconVideo,
   IconWorldSearch,
 } from "@tabler/icons-react";
@@ -31,6 +31,7 @@ import { useInfiniteQuery } from "@tanstack/react-query";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
 
+import { Role } from "@/app/providers/ability-provider";
 import { ImageVideoPreview } from "../../components/image-video-preview";
 import { fetchLiveRecordings } from "../actions/fetch-live-recordings";
 
@@ -100,7 +101,7 @@ export default function LiveInfinity({ scope }: Props) {
             Your followed streamers live status appears here
           </Text>
         </Stack>
-        <Anchor href="/discover" underline="never">
+        <Anchor href="/creators" underline="never">
           <Button
             size="lg"
             radius="md"
@@ -146,15 +147,17 @@ export default function LiveInfinity({ scope }: Props) {
               <IconRefresh size={20} />
             </ActionIcon>
           </Tooltip>
-          <Anchor href="/creators" underline="never">
-            <Button
-              variant="light"
-              leftSection={<IconStar size={18} />}
-              size="lg"
-            >
-              Creators
-            </Button>
-          </Anchor>
+          <Role is={["admin", "moderator"]}>
+            <Anchor href={"/live?scope=all"} underline="never">
+              <Button
+                variant="light"
+                leftSection={<IconPlayerRecord size={18} />}
+                size="lg"
+              >
+                All
+              </Button>
+            </Anchor>
+          </Role>
         </Group>
       </Group>
 

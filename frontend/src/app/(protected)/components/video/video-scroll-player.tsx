@@ -197,9 +197,10 @@ export function VideoScrollPlayer({
             onClose();
           }}
           pos="absolute"
+          opacity={0.5}
           top={20}
           left={20}
-          style={{ zIndex: 10 }}
+          style={{ zIndex: 100 }} // Higher z-index
         >
           <IconX />
         </ActionIcon>
@@ -214,7 +215,7 @@ export function VideoScrollPlayer({
         style={{
           transform: "translateY(-50%)",
           flexDirection: "column",
-          zIndex: 10,
+          zIndex: 100, // Higher z-index
         }}
       >
         {showPrev && (
@@ -224,6 +225,7 @@ export function VideoScrollPlayer({
             size="xl"
             color="gray"
             onClick={goToPrev}
+            opacity={0.7}
           >
             <IconChevronUp />
           </ActionIcon>
@@ -235,6 +237,7 @@ export function VideoScrollPlayer({
             size="xl"
             color="gray"
             onClick={goToNext}
+            opacity={0.7}
             loading={isFetchingNextPage}
           >
             <IconChevronDown />
@@ -242,7 +245,7 @@ export function VideoScrollPlayer({
         )}
       </Group>
 
-      {/* Scroll container with snap */}
+      {/* Scroll container with snap - lower z-index */}
       <Box
         ref={containerRef}
         h="100%"
@@ -254,6 +257,8 @@ export function VideoScrollPlayer({
           scrollbarWidth: "none",
           msOverflowStyle: "none",
           overscrollBehavior: "contain",
+          position: "relative", // Add this
+          zIndex: 1, // Add this - keeps it below buttons
         }}
       >
         {recordings.map((recording, index) => (
