@@ -142,7 +142,7 @@ export default function CreatorRecordingModal() {
     return (
       <Modal.Root opened={true} onClose={handleClose} fullScreen>
         <Modal.Content>
-          <Flex h="100vh" justify="center" align="center">
+          <Flex h="100dvh" justify="center" align="center">
             <Loader size="lg" />
           </Flex>
         </Modal.Content>
@@ -244,7 +244,7 @@ export default function CreatorRecordingModal() {
           {/* Scroll container with snap */}
           <Box
             ref={containerRef}
-            h="100vh"
+            h="100dvh"
             className="no-scrollbar"
             style={{
               overflowY: "auto",
@@ -314,12 +314,10 @@ function VideoSlide({
     return () => observer.disconnect();
   }, [index, onVisible]);
 
-  const sources = recording.sources ?? [];
-
   return (
     <Flex
       ref={ref}
-      h="100vh"
+      h="100dvh"
       justify="center"
       align="center"
       style={{
@@ -328,7 +326,7 @@ function VideoSlide({
       }}
     >
       {isVisible ? (
-        <VideoPlayer sources={sources} key={recording.documentId} />
+        <VideoPlayer recording={recording} key={recording.documentId} />
       ) : (
         <Box w="100%" h="100%" bg="dark.9" />
       )}
