@@ -284,8 +284,6 @@ function VideoSlide({
     return () => observer.disconnect();
   }, [index, onVisible]);
 
-  const sources = recording.sources ?? [];
-
   return (
     <Flex
       ref={ref}
@@ -298,7 +296,7 @@ function VideoSlide({
       }}
     >
       {isVisible ? (
-        <VideoPlayer sources={sources} key={recording.documentId} />
+        <VideoPlayer recording={recording} key={recording.documentId} />
       ) : (
         <Box w="100%" h="100%" bg="dark.9" />
       )}
