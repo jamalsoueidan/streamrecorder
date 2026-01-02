@@ -17,7 +17,6 @@ export default function ProfileRecordingModal() {
     id: string;
     username: string;
     type: string;
-    status: string;
   }>();
   const searchParams = useSearchParams();
   const [filters] = useQueryStates(profileParsers);
@@ -50,13 +49,17 @@ export default function ProfileRecordingModal() {
 
   const handleVisibleChange = useCallback(
     (recording: Recording) => {
-      const basePath = `/${params.type}/${params.username}/${params.status}/${recording.documentId}`;
+      const basePath = `/${params.type}/${params.username}/live/${recording.documentId}`;
       const search = searchParams.toString();
       const url = search ? `${basePath}?${search}` : basePath;
       window.history.replaceState(null, "", url);
     },
-    [params.type, params.username, params.status, searchParams]
+    [params.type, params.username, searchParams]
   );
+
+  const handleNotFound = () => {
+    router.replace(`/${params.type}/${params.username}`);
+  };
 
   if (isLoading) {
     return (
@@ -90,6 +93,7 @@ export default function ProfileRecordingModal() {
             onFetchNextPage={fetchNextPage}
             onVisibleChange={handleVisibleChange}
             onClose={handleClose}
+            onNotFound={handleNotFound}
             showCloseButton={true}
             height="100dvh"
           />

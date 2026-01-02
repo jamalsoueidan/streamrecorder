@@ -56,6 +56,10 @@ export default function VideoPage() {
     [params.type, params.username, searchParams]
   );
 
+  const handleNotFound = () => {
+    router.replace(`/${params.type}/${params.username}`);
+  };
+
   const handleClose = () => {
     // Go back to profile page
     router.push(`/${params.type}/${params.username}`);
@@ -85,6 +89,7 @@ export default function VideoPage() {
         onFetchNextPage={fetchNextPage}
         onVisibleChange={handleVisibleChange}
         onClose={handleClose}
+        onNotFound={handleNotFound}
         showCloseButton={true}
         height="100%"
       />
