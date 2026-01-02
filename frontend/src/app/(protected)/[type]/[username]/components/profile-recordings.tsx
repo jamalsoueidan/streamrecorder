@@ -18,14 +18,13 @@ import { useIntersection } from "@mantine/hooks";
 import { useInfiniteQuery } from "@tanstack/react-query";
 import { useParams } from "next/navigation";
 import { useQueryStates } from "nuqs";
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 
 import { fetchProfileRecordings } from "../actions/actions";
 import { profileParsers, SortOptions } from "../lib/search-params";
 
 export default function ProfileRecordings() {
   const params = useParams<{ type: FollowerTypeEnum; username: string }>();
-  const isFetchingRef = useRef(false);
   const [filters, setFilters] = useQueryStates(profileParsers);
 
   const { data, fetchNextPage, hasNextPage, isFetchingNextPage, isLoading } =
@@ -48,15 +47,10 @@ export default function ProfileRecordings() {
   const { ref, entry } = useIntersection({ threshold: 0.5 });
 
   useEffect(() => {
-    isFetchingRef.current = isFetchingNextPage;
-  }, [isFetchingNextPage]);
-
-  useEffect(() => {
-    if (entry?.isIntersecting && hasNextPage && !isFetchingRef.current) {
-      isFetchingRef.current = true;
+    if (entry?.isIntersecting && hasNextPage && !isFetchingNextPage) {
       fetchNextPage();
     }
-  }, [entry?.isIntersecting, hasNextPage, fetchNextPage]);
+  }, [entry?.isIntersecting, hasNextPage, isFetchingNextPage, fetchNextPage]);
 
   const recordings = data?.pages.flatMap((p) => p.data) ?? [];
 
