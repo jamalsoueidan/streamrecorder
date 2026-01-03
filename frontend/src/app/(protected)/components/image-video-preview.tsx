@@ -10,6 +10,7 @@ import { Anchor, Badge, Box, Button, CopyButton, Image } from "@mantine/core";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useRef, useState } from "react";
+import { useIsNew } from "../hooks/use-is-new";
 import { FollowerTypeIcon } from "./follower-type";
 import { SOCIAL_URL_PATTERNS } from "./open-social";
 import { MiniPlayer } from "./video/mini-player";
@@ -22,6 +23,8 @@ interface Props {
 }
 
 export function ImageVideoPreview({ recording, type, username }: Props) {
+  const { isNew } = useIsNew();
+
   const user = useUser();
   const searchParams = useSearchParams();
   const [showVideo, setShowVideo] = useState(false);
@@ -183,6 +186,20 @@ export function ImageVideoPreview({ recording, type, username }: Props) {
             </Button>
           )}
         </CopyButton>
+      ) : null}
+
+      {isNew(recording) ? (
+        <Badge
+          radius="md"
+          size="sm"
+          style={{
+            position: "absolute",
+            bottom: 8,
+            left: 8,
+          }}
+        >
+          New
+        </Badge>
       ) : null}
 
       {totalDuration > 0 && !showVideo && !isRecording && (

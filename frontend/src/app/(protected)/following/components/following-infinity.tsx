@@ -8,9 +8,9 @@ import { useQueryStates } from "nuqs";
 
 import { useInfiniteQuery } from "@tanstack/react-query";
 
+import RecordingItem from "../../components/recording-item";
 import { fetchRecordings } from "../actions/fetch-recordings";
 import { followingParsers } from "../lib/search-params";
-import RecordingItem from "./recording-item";
 
 export default function FollowingInfinity() {
   const [filters] = useQueryStates(followingParsers);
