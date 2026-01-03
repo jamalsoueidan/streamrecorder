@@ -19,9 +19,9 @@ export function useIsNew() {
   }, []);
 
   const isNew = useCallback(
-    (item: { createdAt?: string | null }) => {
-      return item.createdAt
-        ? dayjs(item.createdAt).isAfter(dayjs(lastVisitedAt))
+    (item: { updatedAt?: string | null }) => {
+      return item.updatedAt
+        ? dayjs(item.updatedAt).isAfter(dayjs(lastVisitedAt))
         : false;
     },
     [lastVisitedAt]
