@@ -294,6 +294,12 @@ function VideoSlide({
 }) {
   const ref = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(isInitiallyVisible);
+  const onVisibleRef = useRef(onVisible);
+
+  // Keep ref updated with latest callback
+  useEffect(() => {
+    onVisibleRef.current = onVisible;
+  }, [onVisible]);
 
   useEffect(() => {
     registerRef(ref.current);
@@ -308,7 +314,7 @@ function VideoSlide({
       ([entry]) => {
         setIsVisible(entry.isIntersecting);
         if (entry.isIntersecting) {
-          onVisible(index);
+          onVisibleRef.current(index); // Use ref instead of callback directly
         }
       },
       { threshold: 0.5 }
@@ -316,7 +322,7 @@ function VideoSlide({
 
     observer.observe(element);
     return () => observer.disconnect();
-  }, [index, onVisible]);
+  }, [index]); // Remove onVisible from dependencies
 
   return (
     <Flex
