@@ -190,14 +190,14 @@ export function VideoScrollPlayer({
         <ActionIcon
           variant="filled"
           radius="xl"
-          size="xl"
+          size="input-md"
+          bg="rgb(20 20 30 / 0.7)"
           color="gray"
           onClick={(e) => {
             e.stopPropagation();
             onClose();
           }}
           pos="absolute"
-          opacity={0.5}
           top={20}
           left={20}
           style={{ zIndex: 100 }} // Higher z-index
@@ -222,10 +222,10 @@ export function VideoScrollPlayer({
           <ActionIcon
             variant="filled"
             radius="xl"
-            size="xl"
+            size="input-md"
+            bg="rgb(20 20 30 / 0.7)"
             color="gray"
             onClick={goToPrev}
-            opacity={0.7}
           >
             <IconChevronUp />
           </ActionIcon>
@@ -234,10 +234,10 @@ export function VideoScrollPlayer({
           <ActionIcon
             variant="filled"
             radius="xl"
-            size="xl"
+            size="input-md"
+            bg="rgb(20 20 30 / 0.7)"
             color="gray"
             onClick={goToNext}
-            opacity={0.7}
             loading={isFetchingNextPage}
           >
             <IconChevronDown />

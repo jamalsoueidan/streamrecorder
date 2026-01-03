@@ -10,10 +10,12 @@ import {
   MediaControlBar,
   MediaController,
   MediaLoadingIndicator,
+  MediaMuteButton,
   MediaPosterImage,
   MediaSeekForwardButton,
   MediaTimeDisplay,
   MediaTimeRange,
+  MediaVolumeRange,
 } from "./media-chrome";
 import { buildVideoRanges, combinePlaylistsFromSources } from "./player-utils";
 
@@ -157,6 +159,11 @@ export function VideoPlayer({ recording }: { recording: Recording }) {
           <MediaTimeRange />
           <MediaTimeDisplay showduration />
           <MediaSeekForwardButton seekoffset="10" />
+
+          <div className="volume-hover-container">
+            <MediaVolumeRange />
+            <MediaMuteButton title="" />
+          </div>
         </MediaControlBar>
       </MediaController>
     </>
