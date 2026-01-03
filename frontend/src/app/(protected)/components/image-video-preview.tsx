@@ -191,7 +191,10 @@ export function ImageVideoPreview({ recording, type, username }: Props) {
       {isNew(recording) ? (
         <Badge
           radius="md"
-          size="sm"
+          variant="outline"
+          size="md"
+          color="white"
+          bg="green"
           style={{
             position: "absolute",
             bottom: 8,

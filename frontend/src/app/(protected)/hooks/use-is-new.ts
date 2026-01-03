@@ -2,7 +2,7 @@ import dayjs from "@/app/lib/dayjs";
 import { useLocalStorage } from "@mantine/hooks";
 import { useCallback, useEffect } from "react";
 
-const SESSION_GAP_MINUTES = 30;
+const SESSION_GAP_MINUTES = 180;
 
 export function useIsNew() {
   const [lastVisitedAt, setLastVisitedAt] = useLocalStorage<string>({
