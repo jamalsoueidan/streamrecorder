@@ -49,3 +49,32 @@ body {
 media-loading-indicator[medialoading] {
   --media-loading-indicator-opacity: 1;
 }
+
+media-volume-range {
+  position: absolute;
+  left: 0px;
+  bottom: 2px;
+  transform: rotate(-90deg);
+  transform-origin: left top;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s, visibility 0.2s;
+}
+
+.volume-hover-container {
+  position: relative;
+}
+
+.volume-hover-container:hover media-volume-range {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media (pointer: coarse) {
+  .volume-hover-container {
+    display: none;
+  }
+}
+.volume-hover-container media-mute-button {
+  --media-tooltip-display: none;
+}
