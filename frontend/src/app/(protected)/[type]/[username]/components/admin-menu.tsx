@@ -10,6 +10,7 @@ import {
   IconPlayerPause,
   IconPlayerPlay,
   IconTransformPoint,
+  IconTrash,
 } from "@tabler/icons-react";
 import { useState, useTransition } from "react";
 
@@ -29,6 +30,8 @@ export function AdminMenu({ follower }: { follower: Follower }) {
       });
     });
   };
+
+  const handleDelete = () => {};
 
   const handleProtected = () => {
     const nextProtected = !protect;
@@ -65,6 +68,11 @@ export function AdminMenu({ follower }: { follower: Follower }) {
               onClick={handleProtected}
             >
               {protect ? "Unlock" : "Lock"}
+            </Menu.Item>
+          </Can>
+          <Can I="delete" a="Follower">
+            <Menu.Item leftSection={<IconTrash />} onClick={handleDelete}>
+              Delete
             </Menu.Item>
           </Can>
         </Menu.Dropdown>

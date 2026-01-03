@@ -20,7 +20,6 @@ import {
   Stack,
   Text,
   UnstyledButton,
-  useMatches,
 } from "@mantine/core";
 import { useDebouncedValue } from "@mantine/hooks";
 import { notifications } from "@mantine/notifications";
@@ -52,11 +51,6 @@ export default function AddFollowerForm() {
 
   const [state, formAction, pending] = useActionState(follow, null);
   const [isPending, startTransition] = useTransition();
-
-  const isMobile = useMatches({
-    base: false,
-    sm: true,
-  });
 
   // The effective platform: use detected (from URL) if available, otherwise use selected
   const effectivePlatform = detectedPlatform ?? selectedPlatform;
@@ -247,8 +241,11 @@ export default function AddFollowerForm() {
         <Paper
           p="sm"
           radius="md"
-          style={{ cursor: "pointer" }}
-          withBorder={isMobile}
+          style={{
+            cursor: "pointer",
+            border: "1px solid gold",
+            animation: "glow 1.5s ease-in-out 3 forwards",
+          }}
         >
           <Group>
             <IconLink size={24} color="gray" />

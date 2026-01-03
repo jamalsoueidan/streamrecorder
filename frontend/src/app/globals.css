@@ -78,3 +78,13 @@ media-volume-range {
 .volume-hover-container media-mute-button {
   --media-tooltip-display: none;
 }
+
+@keyframes glow {
+  0%,
+  100% {
+    box-shadow: 0 0 5px gold, 0 0 10px rgba(255, 215, 0, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px gold, 0 0 30px rgba(255, 215, 0, 0.8);
+  }
+}
