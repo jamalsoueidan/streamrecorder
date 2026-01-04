@@ -255,9 +255,9 @@ export default async function LandingPage() {
               ) || 0;
 
             const uri = recording.sources?.length
-              ? process.env.NEXT_PUBLIC_S3_URL! +
-                recording.sources[recording.sources.length - 1].path
+              ? "/media" + recording.sources[recording.sources.length - 1].path
               : null;
+
             return (
               <div
                 key={recording.id}

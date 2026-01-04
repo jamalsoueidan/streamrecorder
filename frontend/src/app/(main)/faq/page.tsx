@@ -1,10 +1,10 @@
-import api from "@/lib/api";
+import publicApi from "@/lib/public-api";
 import { Container, Flex, Stack, Text, Title } from "@mantine/core";
 import { IconQuestionMark } from "@tabler/icons-react";
 import { Questions } from "./components/questions";
 
 export default async function FAQPage() {
-  const response = await api.faq.getFaqs({ sort: "order:asc" });
+  const response = await publicApi.faq.getFaqs({ sort: "order:asc" });
   const faqs = response.data.data || [];
 
   const midpoint = Math.ceil(faqs.length / 2);

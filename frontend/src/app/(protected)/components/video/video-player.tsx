@@ -31,9 +31,7 @@ export function VideoPlayer({ recording }: { recording: Recording }) {
 
   const previewUrl = useMemo(() => {
     if (sources.length === 0) return null;
-    return `${process.env.NEXT_PUBLIC_S3_URL}${
-      sources[sources.length - 1].path
-    }screenshot.jpg`;
+    return `/media${sources[sources.length - 1].path}screenshot.jpg`;
   }, [sources]);
 
   const vttDataUrl = useMemo(() => {
@@ -46,7 +44,7 @@ export function VideoPlayer({ recording }: { recording: Recording }) {
     for (const range of videoRanges) {
       if (!range.path) continue;
 
-      const spriteUrl = `${process.env.NEXT_PUBLIC_S3_URL}${range.path}thumbnails.jpg`;
+      const spriteUrl = `${range.path}thumbnails.jpg`;
       const numThumbs = Math.ceil((range.end - range.start) / range.interval);
 
       for (let i = 0; i < numThumbs; i++) {
