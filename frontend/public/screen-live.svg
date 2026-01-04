@@ -1,0 +1,13 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <!-- Screen frame -->
+  <rect x="64" y="126" width="384" height="260" rx="32" fill="#ffffff"/>
+  
+  <!-- Inner screen - dark -->
+  <rect x="88" y="150" width="336" height="212" rx="20" fill="#0a0a1a"/>
+  
+  <!-- Big centered LIVE badge -->
+  <rect x="156" y="211" width="200" height="90" rx="18" fill="#ef4444"/>
+  
+  <!-- LIVE text - clean and bold -->
+  <text x="256" y="276" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="56" font-weight="800" fill="#ffffff" text-anchor="middle">LIVE</text>
+</svg>
