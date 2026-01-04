@@ -5,10 +5,22 @@
       <stop offset="100%" style="stop-color:#ec4899"/>
     </linearGradient>
   </defs>
+  
   <!-- Background -->
   <rect width="512" height="512" rx="108" fill="url(#bg)"/>
-  <!-- Record circle -->
-  <circle cx="256" cy="256" r="120" fill="#ffffff" opacity="0.95"/>
-  <!-- Inner record dot -->
-  <circle cx="256" cy="256" r="50" fill="#ef4444"/>
+  
+  <!-- Screen frame - wider aspect -->
+  <rect x="64" y="110" width="384" height="240" rx="28" fill="#ffffff" opacity="0.95"/>
+  
+  <!-- Inner screen - dark -->
+  <rect x="84" y="130" width="344" height="200" rx="16" fill="#0a0a1a"/>
+  
+  <!-- Big centered LIVE badge with subtle glow effect -->
+  <rect x="156" y="190" width="200" height="80" rx="16" fill="#ef4444"/>
+  
+  <!-- LIVE text - clean and bold -->
+  <text x="256" y="250" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="52" font-weight="800" fill="#ffffff" text-anchor="middle">LIVE</text>
+  
+  <!-- StreamRecorder text below -->
+  <text x="256" y="405" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="38" font-weight="700" fill="#ffffff" text-anchor="middle">StreamRecorder</text>
 </svg>

@@ -1,5 +1,5 @@
 {
-  "name": "LiveStreamRecorder",
+  "name": "Live Stream Recorder",
   "short_name": "LSR",
   "description": "Never miss a live stream again",
   "start_url": "/following",
