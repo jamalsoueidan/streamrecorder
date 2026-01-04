@@ -16,7 +16,7 @@ const theme = createTheme({});
 
 export const metadata: Metadata = {
   title: "Live Stream Recorder",
-  description: "Rewatch your favorit streamer",
+  description: "Rewatch your favorite streamer",
   manifest: "/manifest.json",
   appleWebApp: {
     capable: true,

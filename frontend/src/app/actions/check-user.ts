@@ -28,19 +28,16 @@ export async function checkUser(
   }
 
   try {
-    const response = await fetch(
-      process.env.NEXT_PUBLIC_N8N_URL + "/webhook/check-user",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          username: username.trim(),
-          type: type,
-        }),
-      }
-    );
+    const response = await fetch(process.env.N8N_URL + "/webhook/check-user", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        username: username.trim(),
+        type: type,
+      }),
+    });
 
     if (!response.ok) {
       return { success: false, error: "User not found" };
