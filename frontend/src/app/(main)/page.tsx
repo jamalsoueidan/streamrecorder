@@ -13,8 +13,8 @@ import {
   Paper,
   Stack,
   Text,
-  TextInput,
   Title,
+  Tooltip,
 } from "@mantine/core";
 import {
   IconArrowRight,
@@ -25,7 +25,6 @@ import {
   IconBrandYoutube,
   IconClock,
   IconPlayerPlay,
-  IconSearch,
 } from "@tabler/icons-react";
 import { CountryFlag } from "../(protected)/components/country-flag";
 import { FollowerTypeIcon } from "../(protected)/components/follower-type";
@@ -131,47 +130,20 @@ export default async function LandingPage() {
           }
         </Text>
 
-        {/* Search Input */}
-        <Paper
-          p={6}
-          mt={16}
-          style={{
-            background: "rgba(255, 255, 255, 0.03)",
-            border: "1px solid rgba(255, 255, 255, 0.08)",
-            borderRadius: "16px",
-            backdropFilter: "blur(20px)",
-            width: "100%",
-            maxWidth: "600px",
-          }}
-        >
-          <TextInput
-            placeholder="Search for creators"
-            size="xl"
-            leftSection={<IconSearch size={22} style={{ color: "#6366f1" }} />}
-            styles={{
-              input: {
-                background: "transparent",
-                border: "none",
-                color: "#ffffff",
-                fontSize: "1.1rem",
-              },
-            }}
-          />
-        </Paper>
-
         {/* Streaming Platforms */}
         <Stack align="center" gap={12} mt="md">
           <Flex gap={24} align="center" wrap="wrap" justify="center">
             {streamingPlatforms.map((platform) => (
-              <div
-                key={platform.name}
-                style={{
-                  color: platform.color,
-                  opacity: 0.7,
-                }}
-              >
-                <platform.icon size={60} stroke={1.5} />
-              </div>
+              <Tooltip label={platform.name} key={platform.name} withArrow>
+                <div
+                  style={{
+                    color: platform.color,
+                    opacity: 0.7,
+                  }}
+                >
+                  <platform.icon size={120} stroke={1.5} />
+                </div>
+              </Tooltip>
             ))}
           </Flex>
         </Stack>
