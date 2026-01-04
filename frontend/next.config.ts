@@ -9,7 +9,7 @@ const nextConfig: NextConfig = {
     return [
       {
         source: "/uploads/:path*",
-        destination: process.env.NEXT_PUBLIC_STRAPI_URL + "/uploads/:path*",
+        destination: process.env.STRAPI_URL + "/uploads/:path*",
       },
     ];
   },
