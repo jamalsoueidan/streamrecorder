@@ -1,9 +1,7 @@
-"use client";
-import { Anchor, Burger, Container, Group, Title } from "@mantine/core";
-import { useDisclosure } from "@mantine/hooks";
-
+import { getToken } from "@/lib/token";
+import { Badge, Button, Container, Flex, Title } from "@mantine/core";
+import { IconUserPlus } from "@tabler/icons-react";
 import Link from "next/link";
-import classes from "./header-menu.module.css";
 
 const links = [
   { link: "/", label: "Home" },
@@ -11,34 +9,141 @@ const links = [
   { link: "/pricing", label: "Pricing" },
 ];
 
-export function HeaderMenu() {
-  const [opened, { toggle }] = useDisclosure(false);
-
-  const items = links.map((link) => {
-    return (
-      <Anchor
-        key={link.label}
-        component={Link}
-        href={link.link}
-        className={classes.link}
-      >
-        {link.label}
-      </Anchor>
-    );
-  });
+export async function HeaderMenu() {
+  const token = await getToken();
+  const isLoggedIn = !!token;
 
   return (
-    <header className={classes.header}>
-      <Container size="lg">
-        <div className={classes.inner}>
-          <Anchor component={Link} href="/" c="white" style={{}}>
-            <Title size="xl">StreamRecorder</Title>
-          </Anchor>
-          <Group gap={5} visibleFrom="sm">
-            {items}
-          </Group>
-          <Burger opened={opened} onClick={toggle} size="sm" hiddenFrom="sm" />
-        </div>
+    <header
+      style={{
+        height: 64,
+        marginBottom: 32,
+      }}
+    >
+      <Container size="lg" h="100%">
+        <Flex justify="space-between" align="center" h="100%">
+          {/* Logo */}
+          <Link
+            href="/"
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: 10,
+              textDecoration: "none",
+            }}
+          >
+            <Badge
+              size="lg"
+              c="white"
+              bg="red"
+              radius="xs"
+              style={{
+                animation: "pulse 2s ease-in-out infinite",
+              }}
+            >
+              <span
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: 4,
+                }}
+              >
+                <span
+                  style={{
+                    width: 6,
+                    height: 6,
+                    borderRadius: "50%",
+                    background: "#ffffff",
+                    animation: "blink 1s ease-in-out infinite",
+                  }}
+                />
+                <span
+                  style={{
+                    letterSpacing: "0.5px",
+                    fontWeight: 700,
+                    textTransform: "uppercase",
+                    textShadow: "0 0 1px rgba(255,255,255,0.5)",
+                  }}
+                >
+                  Live
+                </span>
+              </span>
+            </Badge>
+
+            <Title
+              order={4}
+              style={{
+                color: "#f1f5f9",
+                fontWeight: 700,
+                letterSpacing: "-0.02em",
+              }}
+            >
+              Stream Recorder
+            </Title>
+          </Link>
+
+          {/* Navigation */}
+          <Flex gap={4} align="center">
+            {links.map((link) => (
+              <a
+                key={link.label}
+                href={link.link}
+                style={{
+                  color: "#94a3b8",
+                  fontSize: "0.95rem",
+                  fontWeight: 500,
+                  borderRadius: 8,
+                  padding: "8px 16px",
+                  textDecoration: "none",
+                }}
+              >
+                {link.label}
+              </a>
+            ))}
+          </Flex>
+
+          {/* Auth Buttons */}
+          <Flex gap={12} align="center">
+            {isLoggedIn ? (
+              <Button
+                component="a"
+                href="/following"
+                variant="gradient"
+                gradient={{ from: "#6366f1", to: "#a855f7", deg: 135 }}
+                radius="md"
+                style={{ fontWeight: 600 }}
+              >
+                Dashboard
+              </Button>
+            ) : (
+              <>
+                <Button
+                  component="a"
+                  href="/login"
+                  variant="subtle"
+                  radius="md"
+                  style={{
+                    color: "#94a3b8",
+                    fontWeight: 500,
+                  }}
+                >
+                  Login
+                </Button>
+                <Button
+                  component="a"
+                  href="/register"
+                  variant="gradient"
+                  gradient={{ from: "#6366f1", to: "#a855f7", deg: 135 }}
+                  radius="md"
+                  leftSection={<IconUserPlus size={18} />}
+                  style={{ fontWeight: 600 }}
+                >
+                  Get Started
+                </Button>
+              </>
+            )}
+          </Flex>
+        </Flex>
       </Container>
     </header>
   );

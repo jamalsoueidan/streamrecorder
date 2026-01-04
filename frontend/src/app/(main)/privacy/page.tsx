@@ -1,15 +1,4 @@
-"use client";
-import {
-  Container,
-  Divider,
-  Group,
-  List,
-  Paper,
-  Stack,
-  Text,
-  ThemeIcon,
-  Title,
-} from "@mantine/core";
+import { Container, Flex, Paper, Stack, Text, Title } from "@mantine/core";
 import {
   IconDatabase,
   IconLock,
@@ -23,140 +12,302 @@ export default function PrivacyPolicy() {
   const lastUpdated = "December 25, 2025";
 
   return (
-    <Container size="md" py="xl">
-      <Stack gap="lg">
-        <div>
-          <Title order={1}>Privacy Policy</Title>
-          <Text c="dimmed" size="sm" mt="xs">
+    <Container size="md" style={{ position: "relative", zIndex: 1 }}>
+      <Stack gap={32}>
+        {/* Header */}
+        <Stack align="center" gap={12} mb={24}>
+          <Title
+            order={1}
+            ta="center"
+            style={{
+              fontSize: "clamp(2rem, 5vw, 3.5rem)",
+              fontWeight: 800,
+              lineHeight: 1.3,
+              letterSpacing: "-0.03em",
+              background:
+                "linear-gradient(135deg, #ffffff 0%, #e2e8f0 50%, #94a3b8 100%)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              paddingBottom: "0.1em",
+            }}
+          >
+            Privacy Policy
+          </Title>
+          <Text size="sm" style={{ color: "#64748b" }}>
             Last updated: {lastUpdated}
           </Text>
-        </div>
+        </Stack>
 
-        <Paper withBorder p="lg" radius="md">
-          <Group gap="xs" mb="sm">
-            <ThemeIcon variant="light" size="lg" color="green">
+        {/* Overview */}
+        <Paper
+          p="xl"
+          radius="lg"
+          style={{
+            background: "rgba(255, 255, 255, 0.02)",
+            border: "1px solid rgba(255, 255, 255, 0.06)",
+          }}
+        >
+          <Flex gap={12} align="center" mb="md">
+            <div
+              style={{
+                width: 40,
+                height: 40,
+                borderRadius: 10,
+                background: "rgba(16, 185, 129, 0.2)",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                color: "#10b981",
+              }}
+            >
               <IconLock size={20} />
-            </ThemeIcon>
-            <Title order={3}>Overview</Title>
-          </Group>
-          <Text>
-            {
-              "We keep things simple. We collect minimal data and don't track you. No analytics, no selling data to third parties."
-            }
+            </div>
+            <Title order={3} style={{ color: "#f1f5f9", fontWeight: 600 }}>
+              Overview
+            </Title>
+          </Flex>
+          <Text style={{ color: "#94a3b8", lineHeight: 1.7 }}>
+            We keep things simple. We collect minimal data and do not track you.
+            No analytics, no selling data to third parties.
           </Text>
         </Paper>
 
-        <Paper withBorder p="lg" radius="md">
-          <Group gap="xs" mb="sm">
-            <ThemeIcon variant="light" size="lg" color="blue">
+        {/* What We Collect */}
+        <Paper
+          p="xl"
+          radius="lg"
+          style={{
+            background: "rgba(255, 255, 255, 0.02)",
+            border: "1px solid rgba(255, 255, 255, 0.06)",
+          }}
+        >
+          <Flex gap={12} align="center" mb="md">
+            <div
+              style={{
+                width: 40,
+                height: 40,
+                borderRadius: 10,
+                background: "rgba(99, 102, 241, 0.2)",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                color: "#6366f1",
+              }}
+            >
               <IconDatabase size={20} />
-            </ThemeIcon>
-            <Title order={3}>What We Collect</Title>
-          </Group>
-          <Text mb="md">When you create an account, we store:</Text>
-          <List spacing="sm">
-            <List.Item>
-              <Text component="span" fw={500}>
+            </div>
+            <Title order={3} style={{ color: "#f1f5f9", fontWeight: 600 }}>
+              What We Collect
+            </Title>
+          </Flex>
+          <Text style={{ color: "#94a3b8", lineHeight: 1.7 }} mb="md">
+            When you create an account, we store:
+          </Text>
+          <Stack gap={8} ml={16}>
+            <Text style={{ color: "#94a3b8" }}>
+              {"• "}
+              <Text component="span" fw={500} style={{ color: "#f1f5f9" }}>
                 Email address
               </Text>
-              <Text c="dimmed" size="sm">
-                {" "}
-                — to let you log in and recover your account
+              <Text component="span" style={{ color: "#64748b" }}>
+                {" — to let you log in and recover your account"}
               </Text>
-            </List.Item>
-            <List.Item>
-              <Text component="span" fw={500}>
+            </Text>
+            <Text style={{ color: "#94a3b8" }}>
+              {"• "}
+              <Text component="span" fw={500} style={{ color: "#f1f5f9" }}>
                 Username
               </Text>
-              <Text c="dimmed" size="sm">
-                {" "}
-                — to identify your account
+              <Text component="span" style={{ color: "#64748b" }}>
+                {" — to identify your account"}
               </Text>
-            </List.Item>
-            <List.Item>
-              <Text component="span" fw={500}>
+            </Text>
+            <Text style={{ color: "#94a3b8" }}>
+              {"• "}
+              <Text component="span" fw={500} style={{ color: "#f1f5f9" }}>
                 Last login date
               </Text>
-              <Text c="dimmed" size="sm">
-                {" "}
-                — for basic account management
+              <Text component="span" style={{ color: "#64748b" }}>
+                {" — for basic account management"}
               </Text>
-            </List.Item>
-            <List.Item>
-              <Text component="span" fw={500}>
+            </Text>
+            <Text style={{ color: "#94a3b8" }}>
+              {"• "}
+              <Text component="span" fw={500} style={{ color: "#f1f5f9" }}>
                 Streamers you follow
               </Text>
-              <Text c="dimmed" size="sm">
-                {"— to show you content from streamers you're interested in"}
+              <Text component="span" style={{ color: "#64748b" }}>
+                {" — to show you content from streamers you are interested in"}
               </Text>
-            </List.Item>
-          </List>
-          <Text mt="md" c="dimmed" size="sm">
-            {"That's it. Nothing else."}
+            </Text>
+          </Stack>
+          <Text mt="md" style={{ color: "#64748b" }} size="sm">
+            That is it. Nothing else.
           </Text>
         </Paper>
 
-        <Paper withBorder p="lg" radius="md">
-          <Group gap="xs" mb="sm">
-            <ThemeIcon variant="light" size="lg" color="violet">
+        {/* Where Your Data Is Stored */}
+        <Paper
+          p="xl"
+          radius="lg"
+          style={{
+            background: "rgba(255, 255, 255, 0.02)",
+            border: "1px solid rgba(255, 255, 255, 0.06)",
+          }}
+        >
+          <Flex gap={12} align="center" mb="md">
+            <div
+              style={{
+                width: 40,
+                height: 40,
+                borderRadius: 10,
+                background: "rgba(168, 85, 247, 0.2)",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                color: "#a855f7",
+              }}
+            >
               <IconServer size={20} />
-            </ThemeIcon>
-            <Title order={3}>Where Your Data Is Stored</Title>
-          </Group>
-          <Text>Our servers are located in Europe.</Text>
+            </div>
+            <Title order={3} style={{ color: "#f1f5f9", fontWeight: 600 }}>
+              Where Your Data Is Stored
+            </Title>
+          </Flex>
+          <Text style={{ color: "#94a3b8", lineHeight: 1.7 }}>
+            Our servers are located in Europe.
+          </Text>
         </Paper>
 
-        <Paper withBorder p="lg" radius="md">
-          <Group gap="xs" mb="sm">
-            <ThemeIcon variant="light" size="lg" color="teal">
+        {/* Third Parties */}
+        <Paper
+          p="xl"
+          radius="lg"
+          style={{
+            background: "rgba(255, 255, 255, 0.02)",
+            border: "1px solid rgba(255, 255, 255, 0.06)",
+          }}
+        >
+          <Flex gap={12} align="center" mb="md">
+            <div
+              style={{
+                width: 40,
+                height: 40,
+                borderRadius: 10,
+                background: "rgba(20, 184, 166, 0.2)",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                color: "#14b8a6",
+              }}
+            >
               <IconUsers size={20} />
-            </ThemeIcon>
-            <Title order={3}>Third Parties</Title>
-          </Group>
-          <Text>We do not share your data with anyone.</Text>
+            </div>
+            <Title order={3} style={{ color: "#f1f5f9", fontWeight: 600 }}>
+              Third Parties
+            </Title>
+          </Flex>
+          <Text style={{ color: "#94a3b8", lineHeight: 1.7 }}>
+            We do not share your data with anyone.
+          </Text>
         </Paper>
 
-        <Paper withBorder p="lg" radius="md">
-          <Group gap="xs" mb="sm">
-            <ThemeIcon variant="light" size="lg" color="orange">
+        {/* Your Rights */}
+        <Paper
+          p="xl"
+          radius="lg"
+          style={{
+            background: "rgba(255, 255, 255, 0.02)",
+            border: "1px solid rgba(255, 255, 255, 0.06)",
+          }}
+        >
+          <Flex gap={12} align="center" mb="md">
+            <div
+              style={{
+                width: 40,
+                height: 40,
+                borderRadius: 10,
+                background: "rgba(249, 115, 22, 0.2)",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                color: "#f97316",
+              }}
+            >
               <IconUserCheck size={20} />
-            </ThemeIcon>
-            <Title order={3}>Your Rights</Title>
-          </Group>
-          <Text>You have the right to:</Text>
-          <List spacing="xs" mt="sm">
-            <List.Item>Access your data</List.Item>
-            <List.Item>Correct your data</List.Item>
-            <List.Item>
-              Delete your account and all associated data at any time
-            </List.Item>
-          </List>
+            </div>
+            <Title order={3} style={{ color: "#f1f5f9", fontWeight: 600 }}>
+              Your Rights
+            </Title>
+          </Flex>
+          <Text style={{ color: "#94a3b8", lineHeight: 1.7 }}>
+            You have the right to:
+          </Text>
+          <Stack gap={4} mt="sm" ml={16}>
+            <Text style={{ color: "#94a3b8" }}>{"• Access your data"}</Text>
+            <Text style={{ color: "#94a3b8" }}>{"• Correct your data"}</Text>
+            <Text style={{ color: "#94a3b8" }}>
+              {"• Delete your account and all associated data at any time"}
+            </Text>
+          </Stack>
         </Paper>
 
-        <Paper withBorder p="lg" radius="md">
-          <Group gap="xs" mb="sm">
-            <ThemeIcon variant="light" size="lg" color="red">
+        {/* Delete Your Account */}
+        <Paper
+          p="xl"
+          radius="lg"
+          style={{
+            background: "rgba(255, 255, 255, 0.02)",
+            border: "1px solid rgba(255, 255, 255, 0.06)",
+          }}
+        >
+          <Flex gap={12} align="center" mb="md">
+            <div
+              style={{
+                width: 40,
+                height: 40,
+                borderRadius: 10,
+                background: "rgba(239, 68, 68, 0.2)",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                color: "#ef4444",
+              }}
+            >
               <IconTrash size={20} />
-            </ThemeIcon>
-            <Title order={3}>Delete Your Account</Title>
-          </Group>
-          <Text>
+            </div>
+            <Title order={3} style={{ color: "#f1f5f9", fontWeight: 600 }}>
+              Delete Your Account
+            </Title>
+          </Flex>
+          <Text style={{ color: "#94a3b8", lineHeight: 1.7 }}>
             To delete your account, go to{" "}
-            <Text component="span" fw={600}>
-              Settings → Delete Account
+            <Text component="span" fw={600} style={{ color: "#f1f5f9" }}>
+              Settings
+            </Text>
+            {" then "}
+            <Text component="span" fw={600} style={{ color: "#f1f5f9" }}>
+              Delete Account
             </Text>
             .
           </Text>
-          <Text mt="xs" c="dimmed" size="sm">
+          <Text mt="xs" style={{ color: "#64748b" }} size="sm">
             Once deleted, all your data is permanently removed from our servers.
           </Text>
         </Paper>
 
-        <Divider my="sm" />
-
-        <Text size="sm" c="dimmed" ta="center">
-          {"If we update this policy, we'll post changes here with a new date."}
-        </Text>
+        {/* Footer note */}
+        <div
+          style={{
+            borderTop: "1px solid rgba(255, 255, 255, 0.06)",
+            paddingTop: 24,
+            marginTop: 16,
+          }}
+        >
+          <Text size="sm" ta="center" style={{ color: "#64748b" }}>
+            If we update this policy, we will post changes here with a new date.
+          </Text>
+        </div>
       </Stack>
     </Container>
   );
