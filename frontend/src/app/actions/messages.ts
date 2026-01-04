@@ -1,6 +1,6 @@
 "use server";
 
-import api from "@/lib/api";
+import publicApi from "@/lib/public-api";
 
 export type DMCAFormData = {
   content: string;
@@ -30,7 +30,7 @@ export async function submitDMCA(data: DMCAFormData): Promise<ActionResponse> {
   }
 
   try {
-    const response = await api.message.postMessages({
+    const response = await publicApi.message.postMessages({
       data: {
         type: "dmca",
         subject: `DMCA Request from ${data.fullName}`,

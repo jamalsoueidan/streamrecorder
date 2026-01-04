@@ -40,7 +40,7 @@ export function ImageVideoPreview({ recording, type, username }: Props) {
   );
 
   const uri = sources?.length
-    ? process.env.NEXT_PUBLIC_S3_URL! + sources[sources.length - 1].path
+    ? "/media" + sources[sources.length - 1].path
     : null;
 
   const getHref = (time?: number) => {

@@ -30,7 +30,9 @@ export default function RecordingItem({ recording }: Props) {
           >
             <Avatar
               size={38}
-              src={recording.follower?.avatar?.url}
+              src={`/avatar/${recording.follower?.avatar?.url
+                ?.split("/")
+                .pop()}`}
               styles={{
                 image: { transform: "scale(2)", objectFit: "cover" },
               }}

@@ -46,6 +46,9 @@ export function combinePlaylistsFromSources(
         continue;
       }
 
+      const baseUrl =
+        typeof window !== "undefined" ? window.location.origin : "";
+
       if (line.startsWith("#EXT-X-MAP")) {
         if (!isFirst) {
           combined += "#EXT-X-DISCONTINUITY\n";
@@ -54,17 +57,15 @@ export function combinePlaylistsFromSources(
         combined +=
           line.replace(
             /URI="([^"]+)"/,
-            `URI="${process.env.NEXT_PUBLIC_S3_URL}${source.path}$1"`
+            `URI="${baseUrl}/media${source.path}$1"`
           ) + "\n";
         continue;
       }
 
       if (line.includes(".mp4")) {
         combined +=
-          line.replace(
-            /(\S+\.mp4)/g,
-            `${process.env.NEXT_PUBLIC_S3_URL}${source.path}$1`
-          ) + "\n";
+          line.replace(/(\S+\.mp4)/g, `${baseUrl}/media${source.path}$1`) +
+          "\n";
       } else if (line.trim()) {
         combined += line + "\n";
       }
@@ -89,13 +90,15 @@ export function buildVideoRanges(sources: Source[]) {
     cols: number;
   }[] = [];
 
+  const baseUrl = typeof window !== "undefined" ? window.location.origin : "";
+
   let cumTime = 0;
   for (const source of [...sources].reverse()) {
     const dur = source.duration || 0;
     ranges.push({
       start: cumTime,
       end: cumTime + dur,
-      path: source.path || "",
+      path: baseUrl + "/media" + source.path || "",
       interval: source.thumbnailInterval || 10,
       cols: source.thumbnailCols || 10,
     });

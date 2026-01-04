@@ -1,10 +1,10 @@
-import api from "@/lib/api";
+import publicApi from "@/lib/public-api";
 import { Container, Paper, Stack, Text, Title } from "@mantine/core";
 import { IconGitBranch } from "@tabler/icons-react";
 import { ChangeLogTimeline } from "./components/change-log-timeline";
 
 export default async function ChangelogPage() {
-  const response = await api.changeLog.getChangeLogs({
+  const response = await publicApi.changeLog.getChangeLogs({
     sort: "createdAt:desc",
   });
 

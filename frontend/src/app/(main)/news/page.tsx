@@ -1,10 +1,10 @@
-import api from "@/lib/api";
+import publicApi from "@/lib/public-api";
 import { Container, Paper, Stack, Text, Title } from "@mantine/core";
 import { IconArticle } from "@tabler/icons-react";
 import { NewsList } from "./components/news-list";
 
 export default async function NewsPage() {
-  const response = await api.article.getArticles({
+  const response = await publicApi.article.getArticles({
     "pagination[limit]": 10,
     sort: "createdAt:desc",
   });
