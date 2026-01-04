@@ -15,13 +15,13 @@ import { PWAUpdater } from "./pwa-updater";
 const theme = createTheme({});
 
 export const metadata: Metadata = {
-  title: "StreamRecorder",
-  description: "Rewatch your favorit streamer",
+  title: "Live Stream Recorder",
+  description: "Rewatch your favorite streamer",
   manifest: "/manifest.json",
   appleWebApp: {
     capable: true,
     statusBarStyle: "black-translucent",
-    title: "Your App",
+    title: "Live Stream Recorder",
   },
 };
 

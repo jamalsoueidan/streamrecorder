@@ -1,7 +1,7 @@
 import { Image, Tooltip } from "@mantine/core";
 
 interface CountryFlagProps {
-  country: string;
+  country?: string;
   countryCode?: string;
   size?: number;
 }
@@ -11,13 +11,11 @@ export const CountryFlag = ({
   countryCode,
   size = 24,
 }: CountryFlagProps) => {
-  if (countryCode === undefined || countryCode === "-") {
-    return null;
-  }
   return (
     <Tooltip label={country}>
       <Image
         src={`https://flagcdn.com/w40/${countryCode?.toLowerCase()}.png`}
+        fallbackSrc="https://flagcdn.com/w40/un.png"
         alt={country}
         style={{
           width: size,

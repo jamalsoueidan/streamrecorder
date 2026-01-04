@@ -2,11 +2,9 @@
 
 import { submitDMCA } from "@/app/actions/messages";
 import {
-  Alert,
   Button,
   Checkbox,
-  Divider,
-  Group,
+  Flex,
   Paper,
   Radio,
   Stack,
@@ -50,7 +48,6 @@ export function DMCAForm() {
     e.preventDefault();
     if (!isFormValid) return;
 
-    // Check captcha
     if (parseInt(captchaInput) !== captcha.answer) {
       setCaptchaError(true);
       setCaptchaInput("");
@@ -75,7 +72,6 @@ export function DMCAForm() {
       setSubmitted(true);
     } else {
       setError(result.error || "Something went wrong");
-      // Generate new captcha on error
       generateCaptcha();
       setCaptchaInput("");
     }
@@ -86,11 +82,18 @@ export function DMCAForm() {
   }
 
   return (
-    <Paper withBorder p="lg" radius="md">
-      <Title order={3} mb="md">
+    <Paper
+      p="xl"
+      radius="lg"
+      style={{
+        background: "rgba(255, 255, 255, 0.02)",
+        border: "1px solid rgba(255, 255, 255, 0.06)",
+      }}
+    >
+      <Title order={3} mb="md" style={{ color: "#f1f5f9", fontWeight: 600 }}>
         Notification of Claimed Infringement
       </Title>
-      <Text c="dimmed" mb="lg">
+      <Text style={{ color: "#64748b" }} mb="lg">
         Please use this form to request the removal of recordings under the
         DMCA.
       </Text>
@@ -98,9 +101,21 @@ export function DMCAForm() {
       <form onSubmit={handleSubmit}>
         <Stack gap="lg">
           {error && (
-            <Alert color="red" icon={<IconAlertCircle size={18} />}>
-              {error}
-            </Alert>
+            <Paper
+              p="md"
+              radius="md"
+              style={{
+                background: "rgba(239, 68, 68, 0.1)",
+                border: "1px solid rgba(239, 68, 68, 0.2)",
+              }}
+            >
+              <Flex gap={8} align="center">
+                <IconAlertCircle size={18} style={{ color: "#ef4444" }} />
+                <Text size="sm" style={{ color: "#fca5a5" }}>
+                  {error}
+                </Text>
+              </Flex>
+            </Paper>
           )}
 
           <TextInput
@@ -112,6 +127,15 @@ export function DMCAForm() {
             onChange={(e) =>
               setFormData({ ...formData, content: e.target.value })
             }
+            styles={{
+              label: { color: "#f1f5f9" },
+              description: { color: "#64748b" },
+              input: {
+                background: "rgba(255, 255, 255, 0.03)",
+                border: "1px solid rgba(255, 255, 255, 0.1)",
+                color: "#f1f5f9",
+              },
+            }}
           />
 
           <Radio.Group
@@ -121,15 +145,24 @@ export function DMCAForm() {
             onChange={(value) =>
               setFormData({ ...formData, copyrightType: value })
             }
+            styles={{
+              label: { color: "#f1f5f9" },
+            }}
           >
             <Stack gap="xs" mt="xs">
               <Radio
                 value="personal"
                 label="Infringes on my personal copyright"
+                styles={{
+                  label: { color: "#94a3b8" },
+                }}
               />
               <Radio
                 value="authorized"
                 label="Infringes on the copyright of someone I am authorized to represent"
+                styles={{
+                  label: { color: "#94a3b8" },
+                }}
               />
             </Stack>
           </Radio.Group>
@@ -144,23 +177,45 @@ export function DMCAForm() {
             onChange={(e) =>
               setFormData({ ...formData, email: e.target.value })
             }
+            styles={{
+              label: { color: "#f1f5f9" },
+              description: { color: "#64748b" },
+              input: {
+                background: "rgba(255, 255, 255, 0.03)",
+                border: "1px solid rgba(255, 255, 255, 0.1)",
+                color: "#f1f5f9",
+              },
+            }}
           />
 
-          <Divider my="sm" />
+          <div
+            style={{
+              borderTop: "1px solid rgba(255, 255, 255, 0.06)",
+              margin: "8px 0",
+            }}
+          />
 
           <div>
-            <Text fw={500} mb="xs">
+            <Text fw={500} mb="xs" style={{ color: "#f1f5f9" }}>
               By checking the following boxes, I state UNDER PENALTY OF PERJURY
               that:
             </Text>
-            <Alert
-              variant="light"
-              color="orange"
-              icon={<IconAlertCircle size={18} />}
+            <Paper
+              p="md"
+              radius="md"
               mb="md"
+              style={{
+                background: "rgba(249, 115, 22, 0.1)",
+                border: "1px solid rgba(249, 115, 22, 0.2)",
+              }}
             >
-              Please read each statement carefully before checking.
-            </Alert>
+              <Flex gap={8} align="center">
+                <IconAlertCircle size={18} style={{ color: "#f97316" }} />
+                <Text size="sm" style={{ color: "#fdba74" }}>
+                  Please read each statement carefully before checking.
+                </Text>
+              </Flex>
+            </Paper>
 
             <Stack gap="md">
               <Checkbox
@@ -172,6 +227,9 @@ export function DMCAForm() {
                     goodFaith: e.currentTarget.checked,
                   })
                 }
+                styles={{
+                  label: { color: "#94a3b8" },
+                }}
               />
               <Checkbox
                 label="I hereby state that the information in this Notice is accurate and, under penalty of perjury, that I am the owner, or authorized to act on behalf of, the owner, of the copyright or of an exclusive right under the copyright that is allegedly infringed."
@@ -182,6 +240,9 @@ export function DMCAForm() {
                     accurate: e.currentTarget.checked,
                   })
                 }
+                styles={{
+                  label: { color: "#94a3b8" },
+                }}
               />
               <Checkbox
                 label="I acknowledge that under Section 512(f) any person who knowingly materially misrepresents that material or activity is infringing may be subject to liability for damages."
@@ -192,11 +253,19 @@ export function DMCAForm() {
                     acknowledge: e.currentTarget.checked,
                   })
                 }
+                styles={{
+                  label: { color: "#94a3b8" },
+                }}
               />
             </Stack>
           </div>
 
-          <Divider my="sm" />
+          <div
+            style={{
+              borderTop: "1px solid rgba(255, 255, 255, 0.06)",
+              margin: "8px 0",
+            }}
+          />
 
           <TextInput
             label="Digital Signature"
@@ -207,11 +276,19 @@ export function DMCAForm() {
             onChange={(e) =>
               setFormData({ ...formData, fullName: e.target.value })
             }
+            styles={{
+              label: { color: "#f1f5f9" },
+              description: { color: "#64748b" },
+              input: {
+                background: "rgba(255, 255, 255, 0.03)",
+                border: "1px solid rgba(255, 255, 255, 0.1)",
+                color: "#f1f5f9",
+              },
+            }}
           />
 
-          {/* Simple Math CAPTCHA */}
           <div>
-            <Group gap="xs" align="flex-end">
+            <Flex gap="xs" align="flex-end">
               <TextInput
                 label="Verification"
                 description={`What is ${captcha.question}?`}
@@ -221,6 +298,15 @@ export function DMCAForm() {
                 onChange={(e) => setCaptchaInput(e.target.value)}
                 error={captchaError && "Wrong answer, try again"}
                 style={{ flex: 1 }}
+                styles={{
+                  label: { color: "#f1f5f9" },
+                  description: { color: "#64748b" },
+                  input: {
+                    background: "rgba(255, 255, 255, 0.03)",
+                    border: "1px solid rgba(255, 255, 255, 0.1)",
+                    color: "#f1f5f9",
+                  },
+                }}
               />
               <Button
                 variant="subtle"
@@ -231,10 +317,11 @@ export function DMCAForm() {
                   setCaptchaError(false);
                 }}
                 title="New question"
+                style={{ color: "#94a3b8" }}
               >
                 <IconRefresh size={18} />
               </Button>
-            </Group>
+            </Flex>
           </div>
 
           <Button
@@ -242,6 +329,9 @@ export function DMCAForm() {
             size="md"
             disabled={!isFormValid}
             loading={loading}
+            variant="gradient"
+            gradient={{ from: "#6366f1", to: "#a855f7", deg: 135 }}
+            style={{ fontWeight: 600 }}
           >
             Submit DMCA Request
           </Button>
@@ -251,7 +341,6 @@ export function DMCAForm() {
   );
 }
 
-// Simple math CAPTCHA - no API keys needed
 function createCaptcha() {
   const num1 = Math.floor(Math.random() * 10) + 1;
   const num2 = Math.floor(Math.random() * 10) + 1;

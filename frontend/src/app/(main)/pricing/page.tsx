@@ -1,18 +1,11 @@
-"use client";
-
 import {
   Badge,
-  Box,
   Button,
-  Card,
   Container,
-  Divider,
-  Grid,
-  Group,
-  List,
+  Flex,
+  Paper,
   Stack,
   Text,
-  ThemeIcon,
   Title,
 } from "@mantine/core";
 import {
@@ -37,7 +30,7 @@ const PLANS = [
       { text: "Live streaming alerts", included: true },
       { text: "Watch recordings (3 days)", included: true },
       { text: "Standard quality (480p)", included: true },
-      { text: "HD & Original quality", included: false },
+      { text: "HD and Original quality", included: false },
       { text: "Explore other creators", included: false },
       { text: "Search all creators", included: false },
       { text: "Download videos", included: false },
@@ -59,7 +52,7 @@ const PLANS = [
       { text: "Live streaming alerts", included: true },
       { text: "Watch recordings (14 days)", included: true },
       { text: "Standard quality (480p)", included: true },
-      { text: "HD & Original quality", included: true },
+      { text: "HD and Original quality", included: true },
       { text: "Explore other creators", included: true },
       { text: "Search all creators", included: true },
       { text: "Download videos", included: true },
@@ -110,290 +103,380 @@ const COMPARISON_ROWS = [
 
 export default function PricingPage() {
   return (
-    <Container size="lg" py="xl">
-      <Stack gap="xl">
+    <Container size="lg" style={{ position: "relative", zIndex: 1 }}>
+      <Stack gap={48}>
         {/* Header */}
-        <Stack align="center" gap="xs" ta="center">
-          <Badge
-            size="lg"
-            variant="gradient"
-            gradient={{ from: "violet", to: "cyan" }}
+        <Stack align="center" gap={12} ta="center">
+          <Title
+            order={1}
+            style={{
+              fontSize: "clamp(2rem, 5vw, 3rem)",
+              fontWeight: 800,
+              lineHeight: 1.3,
+              letterSpacing: "-0.03em",
+              background:
+                "linear-gradient(135deg, #ffffff 0%, #e2e8f0 50%, #94a3b8 100%)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              paddingBottom: "0.1em",
+            }}
           >
-            Pricing
-          </Badge>
-          <Title order={1} size="2.5rem">
             Never miss a stream again
           </Title>
-          <Text size="lg" c="dimmed" maw={500}>
+          <Text
+            size="lg"
+            maw={500}
+            style={{ color: "#94a3b8", lineHeight: 1.7 }}
+          >
             Choose the plan that works for you. Upgrade anytime to unlock all
             features.
           </Text>
         </Stack>
 
         {/* Plan Cards */}
-        <Grid gutter="xl" justify="center">
+        <Flex
+          gap={32}
+          justify="center"
+          align="stretch"
+          direction={{ base: "column", sm: "row" }}
+          wrap="wrap"
+        >
           {PLANS.map((plan) => (
-            <Grid.Col key={plan.name} span={{ base: 12, sm: 6, md: 5 }}>
-              <Card
-                shadow={plan.featured ? "xl" : "sm"}
-                padding="xl"
-                radius="lg"
-                withBorder
-                style={(theme) => ({
-                  borderColor: plan.featured
-                    ? theme.colors.violet[5]
-                    : undefined,
-                  borderWidth: plan.featured ? 2 : 1,
-                  position: "relative",
-                  overflow: "visible",
-                })}
-              >
-                {plan.featured && (
-                  <Badge
-                    size="lg"
-                    variant="gradient"
-                    gradient={{ from: "violet", to: "cyan" }}
-                    leftSection={<IconCrown size={14} />}
+            <Paper
+              key={plan.name}
+              p="xl"
+              radius="lg"
+              style={{
+                flex: "1 1 340px",
+                maxWidth: 420,
+                background: "rgba(255, 255, 255, 0.02)",
+                border: plan.featured
+                  ? "2px solid #8b5cf6"
+                  : "1px solid rgba(255, 255, 255, 0.06)",
+                position: "relative",
+                overflow: "visible",
+              }}
+            >
+              {plan.featured && (
+                <Badge
+                  size="lg"
+                  variant="gradient"
+                  gradient={{ from: "#8b5cf6", to: "#06b6d4" }}
+                  leftSection={<IconCrown size={14} />}
+                  style={{
+                    position: "absolute",
+                    top: -12,
+                    left: "50%",
+                    transform: "translateX(-50%)",
+                  }}
+                >
+                  Most Popular
+                </Badge>
+              )}
+
+              <Stack gap="lg">
+                {/* Plan Header */}
+                <Stack gap={4}>
+                  <Text size="xl" fw={600} style={{ color: "#f1f5f9" }}>
+                    {plan.name}
+                  </Text>
+                  <Text size="sm" style={{ color: "#64748b" }}>
+                    {plan.description}
+                  </Text>
+                </Stack>
+
+                {/* Price */}
+                <Flex align="baseline" gap={4}>
+                  <Text
                     style={{
-                      position: "absolute",
-                      top: -12,
-                      left: "50%",
-                      transform: "translateX(-50%)",
+                      fontSize: "3rem",
+                      fontWeight: 700,
+                      lineHeight: 1,
+                      color: "#f1f5f9",
                     }}
                   >
-                    Most Popular
-                  </Badge>
-                )}
-
-                <Stack gap="lg">
-                  {/* Plan Header */}
-                  <Stack gap={4}>
-                    <Text size="xl" fw={600}>
-                      {plan.name}
+                    {plan.price}
+                  </Text>
+                  {plan.period && (
+                    <Text size="lg" style={{ color: "#64748b" }}>
+                      {plan.period}
                     </Text>
-                    <Text size="sm" c="dimmed">
-                      {plan.description}
-                    </Text>
-                  </Stack>
+                  )}
+                </Flex>
 
-                  {/* Price */}
-                  <Group align="baseline" gap={4}>
-                    <Text size="3rem" fw={700} lh={1}>
-                      {plan.price}
-                    </Text>
-                    {plan.period && (
-                      <Text size="lg" c="dimmed">
-                        {plan.period}
-                      </Text>
-                    )}
-                  </Group>
+                <div
+                  style={{
+                    borderTop: "1px solid rgba(255, 255, 255, 0.06)",
+                    margin: "8px 0",
+                  }}
+                />
 
-                  <Divider />
-
-                  {/* Features */}
-                  <List spacing="sm" center>
-                    {plan.features.map((feature, index) => (
-                      <List.Item
-                        key={index}
-                        icon={
-                          <ThemeIcon
-                            size={22}
-                            radius="xl"
-                            color={feature.included ? "teal" : "gray"}
-                            variant={feature.included ? "filled" : "light"}
-                          >
-                            {feature.included ? (
-                              <IconCheck size={14} />
-                            ) : (
-                              <IconX size={14} />
-                            )}
-                          </ThemeIcon>
-                        }
+                {/* Features */}
+                <Stack gap={12}>
+                  {plan.features.map((feature, index) => (
+                    <Flex key={index} gap={12} align="center">
+                      <div
+                        style={{
+                          width: 22,
+                          height: 22,
+                          borderRadius: "50%",
+                          background: feature.included
+                            ? "rgba(20, 184, 166, 0.2)"
+                            : "rgba(100, 116, 139, 0.2)",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          color: feature.included ? "#14b8a6" : "#64748b",
+                          flexShrink: 0,
+                        }}
                       >
-                        <Text
-                          size="sm"
-                          c={feature.included ? undefined : "dimmed"}
-                          td={feature.included ? undefined : "line-through"}
-                        >
-                          {feature.text}
-                        </Text>
-                      </List.Item>
-                    ))}
-                  </List>
-
-                  {/* CTA */}
-                  <Button
-                    size="lg"
-                    radius="md"
-                    variant={plan.ctaVariant}
-                    gradient={{ from: "violet", to: "cyan" }}
-                    disabled={plan.disabled}
-                    fullWidth
-                  >
-                    {plan.cta}
-                  </Button>
+                        {feature.included ? (
+                          <IconCheck size={14} />
+                        ) : (
+                          <IconX size={14} />
+                        )}
+                      </div>
+                      <Text
+                        size="sm"
+                        style={{
+                          color: feature.included ? "#94a3b8" : "#64748b",
+                          textDecoration: feature.included
+                            ? "none"
+                            : "line-through",
+                        }}
+                      >
+                        {feature.text}
+                      </Text>
+                    </Flex>
+                  ))}
                 </Stack>
-              </Card>
-            </Grid.Col>
+
+                {/* CTA */}
+                <Button
+                  size="lg"
+                  radius="md"
+                  variant={plan.ctaVariant}
+                  gradient={{ from: "#8b5cf6", to: "#06b6d4" }}
+                  disabled={plan.disabled}
+                  fullWidth
+                  style={{ fontWeight: 600 }}
+                >
+                  {plan.cta}
+                </Button>
+              </Stack>
+            </Paper>
           ))}
-        </Grid>
+        </Flex>
 
         {/* Premium Highlights */}
-        <Box mt="xl">
-          <Stack align="center" gap="xs" mb="xl">
-            <Title order={2}>Why go Premium?</Title>
-            <Text c="dimmed">Everything you need to stay connected</Text>
+        <div style={{ marginTop: 32 }}>
+          <Stack align="center" gap={8} mb={32}>
+            <Title order={2} style={{ color: "#f1f5f9" }}>
+              Why go Premium?
+            </Title>
+            <Text style={{ color: "#64748b" }}>
+              Everything you need to stay connected
+            </Text>
           </Stack>
 
-          <Grid gutter="lg">
-            {PREMIUM_HIGHLIGHTS.map((highlight, index) => (
-              <Grid.Col key={index} span={{ base: 12, xs: 6, md: 3 }}>
-                <Card padding="lg" radius="md" withBorder h="100%">
+          <Flex gap={24} wrap="wrap" justify="center">
+            {PREMIUM_HIGHLIGHTS.map((highlight, index) => {
+              const Icon = highlight.icon;
+              return (
+                <Paper
+                  key={index}
+                  p="lg"
+                  radius="lg"
+                  style={{
+                    flex: "1 1 220px",
+                    maxWidth: 280,
+                    background: "rgba(255, 255, 255, 0.02)",
+                    border: "1px solid rgba(255, 255, 255, 0.06)",
+                  }}
+                >
                   <Stack align="center" ta="center" gap="sm">
-                    <ThemeIcon
-                      size={56}
-                      radius="xl"
-                      variant="gradient"
-                      gradient={{ from: "violet", to: "cyan" }}
+                    <div
+                      style={{
+                        width: 56,
+                        height: 56,
+                        borderRadius: "50%",
+                        background: "linear-gradient(135deg, #8b5cf6, #06b6d4)",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        color: "#ffffff",
+                      }}
                     >
-                      <highlight.icon size={28} />
-                    </ThemeIcon>
-                    <Text fw={600}>{highlight.title}</Text>
-                    <Text size="sm" c="dimmed">
+                      <Icon size={28} />
+                    </div>
+                    <Text fw={600} style={{ color: "#f1f5f9" }}>
+                      {highlight.title}
+                    </Text>
+                    <Text size="sm" style={{ color: "#64748b" }}>
                       {highlight.description}
                     </Text>
                   </Stack>
-                </Card>
-              </Grid.Col>
-            ))}
-          </Grid>
-        </Box>
+                </Paper>
+              );
+            })}
+          </Flex>
+        </div>
 
         {/* Feature Comparison Table */}
-        <Box mt="xl">
-          <Stack align="center" gap="xs" mb="xl">
-            <Title order={2}>Compare Plans</Title>
-            <Text c="dimmed">See exactly what you get</Text>
+        <div style={{ marginTop: 32 }}>
+          <Stack align="center" gap={8} mb={32}>
+            <Title order={2} style={{ color: "#f1f5f9" }}>
+              Compare Plans
+            </Title>
+            <Text style={{ color: "#64748b" }}>See exactly what you get</Text>
           </Stack>
 
-          <Card withBorder radius="lg" p={0} style={{ overflow: "hidden" }}>
+          <Paper
+            radius="lg"
+            style={{
+              background: "rgba(255, 255, 255, 0.02)",
+              border: "1px solid rgba(255, 255, 255, 0.06)",
+              overflow: "hidden",
+            }}
+          >
             {/* Table Header */}
-            <Grid
-              gutter={0}
+            <Flex
               p="md"
-              style={(theme) => ({
-                backgroundColor: theme.colors.dark[6],
-              })}
+              style={{
+                background: "rgba(255, 255, 255, 0.03)",
+                borderBottom: "1px solid rgba(255, 255, 255, 0.06)",
+              }}
             >
-              <Grid.Col span={6}>
-                <Text fw={600}>Feature</Text>
-              </Grid.Col>
-              <Grid.Col span={3}>
-                <Text fw={600} ta="center">
+              <div style={{ flex: 2 }}>
+                <Text fw={600} style={{ color: "#f1f5f9" }}>
+                  Feature
+                </Text>
+              </div>
+              <div style={{ flex: 1, textAlign: "center" }}>
+                <Text fw={600} style={{ color: "#f1f5f9" }}>
                   Basic
                 </Text>
-              </Grid.Col>
-              <Grid.Col span={3}>
-                <Text fw={600} ta="center">
+              </div>
+              <div style={{ flex: 1, textAlign: "center" }}>
+                <Text fw={600} style={{ color: "#f1f5f9" }}>
                   Premium
                 </Text>
-              </Grid.Col>
-            </Grid>
+              </div>
+            </Flex>
 
             {/* Table Rows */}
             {COMPARISON_ROWS.map((row, index) => (
-              <Grid
+              <Flex
                 key={index}
-                gutter={0}
                 p="md"
-                style={(theme) => ({
-                  borderTop: `1px solid ${theme.colors.dark[4]}`,
-                })}
+                align="center"
+                style={{
+                  borderTop:
+                    index > 0 ? "1px solid rgba(255, 255, 255, 0.04)" : "none",
+                }}
               >
-                <Grid.Col span={6}>
-                  <Text size="sm">{row.feature}</Text>
-                </Grid.Col>
-                <Grid.Col span={3}>
-                  <Group justify="center">
-                    {typeof row.basic === "boolean" ? (
-                      row.basic ? (
-                        <ThemeIcon
-                          size={22}
-                          radius="xl"
-                          color="teal"
-                          variant="filled"
-                        >
-                          <IconCheck size={14} />
-                        </ThemeIcon>
+                <div style={{ flex: 2 }}>
+                  <Text size="sm" style={{ color: "#94a3b8" }}>
+                    {row.feature}
+                  </Text>
+                </div>
+                <div
+                  style={{
+                    flex: 1,
+                    display: "flex",
+                    justifyContent: "center",
+                  }}
+                >
+                  {typeof row.basic === "boolean" ? (
+                    <div
+                      style={{
+                        width: 22,
+                        height: 22,
+                        borderRadius: "50%",
+                        background: row.basic
+                          ? "rgba(20, 184, 166, 0.2)"
+                          : "rgba(100, 116, 139, 0.2)",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        color: row.basic ? "#14b8a6" : "#64748b",
+                      }}
+                    >
+                      {row.basic ? (
+                        <IconCheck size={14} />
                       ) : (
-                        <ThemeIcon
-                          size={22}
-                          radius="xl"
-                          color="gray"
-                          variant="light"
-                        >
-                          <IconX size={14} />
-                        </ThemeIcon>
-                      )
-                    ) : (
-                      <Text size="sm" ta="center">
-                        {row.basic}
-                      </Text>
-                    )}
-                  </Group>
-                </Grid.Col>
-                <Grid.Col span={3}>
-                  <Group justify="center">
-                    {typeof row.premium === "boolean" ? (
-                      row.premium ? (
-                        <ThemeIcon
-                          size={22}
-                          radius="xl"
-                          color="teal"
-                          variant="filled"
-                        >
-                          <IconCheck size={14} />
-                        </ThemeIcon>
+                        <IconX size={14} />
+                      )}
+                    </div>
+                  ) : (
+                    <Text size="sm" ta="center" style={{ color: "#94a3b8" }}>
+                      {row.basic}
+                    </Text>
+                  )}
+                </div>
+                <div
+                  style={{
+                    flex: 1,
+                    display: "flex",
+                    justifyContent: "center",
+                  }}
+                >
+                  {typeof row.premium === "boolean" ? (
+                    <div
+                      style={{
+                        width: 22,
+                        height: 22,
+                        borderRadius: "50%",
+                        background: row.premium
+                          ? "rgba(20, 184, 166, 0.2)"
+                          : "rgba(100, 116, 139, 0.2)",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        color: row.premium ? "#14b8a6" : "#64748b",
+                      }}
+                    >
+                      {row.premium ? (
+                        <IconCheck size={14} />
                       ) : (
-                        <ThemeIcon
-                          size={22}
-                          radius="xl"
-                          color="gray"
-                          variant="light"
-                        >
-                          <IconX size={14} />
-                        </ThemeIcon>
-                      )
-                    ) : (
-                      <Badge
-                        variant="gradient"
-                        gradient={{ from: "violet", to: "cyan" }}
-                      >
-                        {row.premium}
-                      </Badge>
-                    )}
-                  </Group>
-                </Grid.Col>
-              </Grid>
+                        <IconX size={14} />
+                      )}
+                    </div>
+                  ) : (
+                    <Badge
+                      variant="gradient"
+                      gradient={{ from: "#8b5cf6", to: "#06b6d4" }}
+                    >
+                      {row.premium}
+                    </Badge>
+                  )}
+                </div>
+              </Flex>
             ))}
-          </Card>
-        </Box>
+          </Paper>
+        </div>
 
         {/* Final CTA */}
-        <Card
+        <Paper
           radius="lg"
           p="xl"
-          mt="xl"
-          style={(theme) => ({
-            background: `linear-gradient(135deg, ${theme.colors.violet[9]} 0%, ${theme.colors.cyan[9]} 100%)`,
-          })}
+          mt={32}
+          style={{
+            background: "linear-gradient(135deg, #5b21b6 0%, #0e7490 100%)",
+          }}
         >
-          <Group justify="space-between" align="center" wrap="wrap" gap="lg">
-            <Stack gap={4}>
-              <Title order={3} c="white">
+          <Flex
+            justify="space-between"
+            align="center"
+            wrap="wrap"
+            gap="lg"
+            direction={{ base: "column", sm: "row" }}
+          >
+            <Stack gap={4} style={{ textAlign: "center" }}>
+              <Title order={3} style={{ color: "#ffffff" }}>
                 Ready to unlock everything?
               </Title>
-              <Text c="white" opacity={0.9}>
+              <Text style={{ color: "rgba(255, 255, 255, 0.9)" }}>
                 Join thousands of users who never miss their favorite streams.
               </Text>
             </Stack>
@@ -403,11 +486,12 @@ export default function PricingPage() {
               variant="white"
               color="dark"
               leftSection={<IconCrown size={20} />}
+              style={{ fontWeight: 600 }}
             >
               Get Premium
             </Button>
-          </Group>
-        </Card>
+          </Flex>
+        </Paper>
       </Stack>
     </Container>
   );
