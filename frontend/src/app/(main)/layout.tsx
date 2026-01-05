@@ -1,7 +1,7 @@
 import { Box } from "@mantine/core";
 
 import { Footer } from "./components/footer";
-import { HeaderMenu } from "./components/header-menu";
+import { Header } from "./components/header";
 
 export default function MainLayout({
   children,
@@ -13,7 +13,7 @@ export default function MainLayout({
       display="flex"
       style={{ flexDirection: "column", position: "relative", zIndex: 1 }}
     >
-      <HeaderMenu />
+      <Header />
       <Box flex={1}>{children}</Box>
       <Footer />
     </Box>

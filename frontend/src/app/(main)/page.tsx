@@ -141,7 +141,7 @@ export default async function LandingPage() {
                     opacity: 0.7,
                   }}
                 >
-                  <platform.icon size={120} stroke={1.5} />
+                  <platform.icon size={60} stroke={1.5} />
                 </div>
               </Tooltip>
             ))}
@@ -335,7 +335,7 @@ export default async function LandingPage() {
                       <IconPlayerPlay size={20} />
                     </ActionIcon>
                   </div>
-                  <Stack gap={8} p={16}>
+                  <Stack gap={2} p={16}>
                     <Text
                       fw={600}
                       size="sm"
@@ -344,11 +344,10 @@ export default async function LandingPage() {
                     >
                       {recording.follower?.nickname}
                     </Text>
-                    <Flex justify="space-between" align="center">
-                      <Text size="xs" c="dimmed">
-                        {recording.follower?.nickname}
-                      </Text>
-                    </Flex>
+
+                    <Text size="xs" c="dimmed">
+                      @{recording.follower?.username}
+                    </Text>
                   </Stack>
                 </Card>
               </div>
@@ -453,7 +452,7 @@ export default async function LandingPage() {
       </div>
 
       {/* CTA Section */}
-      <div style={{ marginTop: 120 }}>
+      <div style={{ marginTop: 100 }}>
         <Paper
           p={60}
           style={{

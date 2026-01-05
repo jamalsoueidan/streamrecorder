@@ -9,7 +9,7 @@ const links = [
   { link: "/pricing", label: "Pricing" },
 ];
 
-export async function HeaderMenu() {
+export async function Header() {
   const token = await getToken();
   const isLoggedIn = !!token;
 
@@ -83,7 +83,7 @@ export async function HeaderMenu() {
           </Link>
 
           {/* Navigation */}
-          <Flex gap={4} align="center">
+          <Flex gap={4} align="center" visibleFrom="sm">
             {links.map((link) => (
               <a
                 key={link.label}

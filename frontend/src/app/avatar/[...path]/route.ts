@@ -10,7 +10,7 @@ const s3 = new S3Client({
 });
 
 export async function GET(
-  request: Request,
+  _: Request,
   { params }: { params: Promise<{ path: string[] }> }
 ) {
   const { path } = await params;

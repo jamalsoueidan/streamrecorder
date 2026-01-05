@@ -27,7 +27,7 @@ const PLANS = [
     featured: false,
     features: [
       { text: "Follow up to 3 creators", included: true },
-      { text: "Live streaming alerts", included: true },
+      { text: "Live stream recording", included: true },
       { text: "Watch recordings (3 days)", included: true },
       { text: "Standard quality (480p)", included: true },
       { text: "HD and Original quality", included: false },
@@ -36,6 +36,7 @@ const PLANS = [
       { text: "Download videos", included: false },
       { text: "Favorite videos", included: false },
       { text: "Watch later list", included: false },
+      { text: "Notification false", included: true },
     ],
     cta: "Current Plan",
     ctaVariant: "default" as const,
@@ -49,7 +50,7 @@ const PLANS = [
     featured: true,
     features: [
       { text: "Follow up to 100 creators", included: true },
-      { text: "Live streaming alerts", included: true },
+      { text: "Live stream recording", included: true },
       { text: "Watch recordings (14 days)", included: true },
       { text: "Standard quality (480p)", included: true },
       { text: "HD and Original quality", included: true },
@@ -58,6 +59,7 @@ const PLANS = [
       { text: "Download videos", included: true },
       { text: "Favorite videos", included: true },
       { text: "Watch later list", included: true },
+      { text: "Notification alerts", included: true },
     ],
     cta: "Upgrade Now",
     ctaVariant: "gradient" as const,
