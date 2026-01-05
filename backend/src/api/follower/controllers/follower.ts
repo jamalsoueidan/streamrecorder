@@ -126,6 +126,13 @@ export default factories.createCoreController(
         parseInt(ctx.query["pagination[pageSize]"] as string) || 25;
       const offset = (page - 1) * pageSize;
 
+      const escapeLikePattern = (value: string): string => {
+        return value
+          .replace(/\\/g, "\\\\") // Escape backslashes first
+          .replace(/%/g, "\\%") // Escape %
+          .replace(/_/g, "\\_"); // Escape _
+      };
+
       // Helper function to apply common filters to a knex query
       const applyFilters = (query: any) => {
         // Scope filter
@@ -172,10 +179,10 @@ export default factories.createCoreController(
             query = query.where("f.type", filters.type.$eq);
           }
           if (filters.username?.$containsi) {
-            query = query.whereILike(
-              "f.username",
-              `%${filters.username.$containsi}%`
+            const escapedUsername = escapeLikePattern(
+              filters.username.$containsi
             );
+            query = query.whereILike("f.username", `%${escapedUsername}%`);
           }
         }
 
@@ -188,20 +195,25 @@ export default factories.createCoreController(
         let sortQuery = knex("followers as f")
           .select("f.id")
           .leftJoin(
-            knex.raw(`(
-        SELECT rf_inner.follower_id, rf_inner.recording_id
-        FROM recordings_follower_lnk rf_inner
-        INNER JOIN recordings r ON rf_inner.recording_id = r.id
-        INNER JOIN recordings_sources_lnk rs ON rs.recording_id = r.id
-        INNER JOIN sources s ON rs.source_id = s.id
-        WHERE s.state != 'failed'
-        GROUP BY rf_inner.follower_id, rf_inner.recording_id
-      ) as rf`),
+            knex("recordings_follower_lnk as rf_inner")
+              .select("rf_inner.follower_id", "rf_inner.recording_id")
+              .innerJoin("recordings as r", "rf_inner.recording_id", "r.id")
+              .innerJoin(
+                "recordings_sources_lnk as rs",
+                "rs.recording_id",
+                "r.id"
+              )
+              .innerJoin("sources as s", "rs.source_id", "s.id")
+              .where("s.state", "!=", "failed")
+              .groupBy("rf_inner.follower_id", "rf_inner.recording_id")
+              .as("rf"),
             "rf.follower_id",
             "f.id"
           )
           .groupBy("f.id")
-          .orderByRaw(`COUNT(rf.recording_id) ${sortDirection}`)
+          .orderByRaw(
+            `COUNT(rf.recording_id) ${sortDirection === "desc" ? "desc" : "asc"}`
+          )
           .limit(pageSize)
           .offset(offset);
 
