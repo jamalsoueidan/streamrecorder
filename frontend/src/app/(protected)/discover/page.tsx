@@ -1,6 +1,6 @@
 import { getFollowerFilters } from "@/app/actions/followers";
-import { Group, Stack, Text, Title } from "@mantine/core";
-import { IconStar } from "@tabler/icons-react";
+import { Divider, Group, Stack, Text, Title } from "@mantine/core";
+import { IconWorldSearch } from "@tabler/icons-react";
 import {
   dehydrate,
   HydrationBoundary,
@@ -9,7 +9,6 @@ import {
 import { fetchFollowers } from "./actions/fetch-followers";
 import CreatorsInfinity from "./components/creators-infinity";
 import Filters from "./components/filters";
-import ScopeTabs from "./components/scope-tabs";
 import { CreatorFilters, creatorsParamsCache } from "./lib/search-params";
 
 export default async function Page({
@@ -32,24 +31,23 @@ export default async function Page({
   return (
     <HydrationBoundary state={dehydrate(queryClient)}>
       <Stack w="100%">
-        <Group justify="space-between" w="100%" mb="md">
+        <Group justify="space-between" w="100%">
           <Stack gap={2}>
             <Group gap="xs">
-              <IconStar size={32} />
+              <IconWorldSearch size={32} />
               <Title order={1} size="h3">
-                Creators
+                Discover
               </Title>
             </Group>
             <Text size="xs" c="dimmed">
-              Manage and discover creators
+              Explore creators and expand your list
             </Text>
           </Stack>
 
           <Filters filterOptions={filterOptions} />
         </Group>
-        <ScopeTabs>
-          <CreatorsInfinity />
-        </ScopeTabs>
+        <Divider mx={{ base: "-xs", sm: "-md" }} />
+        <CreatorsInfinity />
       </Stack>
     </HydrationBoundary>
   );

@@ -26,6 +26,31 @@ export interface NavigationsLinks extends Struct.ComponentSchema {
   };
 }
 
+export interface NavigationsSections extends Struct.ComponentSchema {
+  collectionName: 'components_navigations_sections';
+  info: {
+    displayName: 'sections';
+  };
+  attributes: {
+    icon: Schema.Attribute.Enumeration<
+      [
+        'IconFlower',
+        'IconUsers',
+        'IconPlayerPlayFilled',
+        'IconWorldSearch',
+        'IconQuestionMark',
+        'IconVideo',
+        'IconPlayerRecord',
+        'IconBrandSafari',
+        'IconHeart',
+        'IconStar',
+      ]
+    >;
+    links: Schema.Attribute.Component<'navigations.links', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface VideosVideo extends Struct.ComponentSchema {
   collectionName: 'components_videos_videos';
   info: {
@@ -43,6 +68,7 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'navigations.links': NavigationsLinks;
+      'navigations.sections': NavigationsSections;
       'videos.video': VideosVideo;
     }
   }

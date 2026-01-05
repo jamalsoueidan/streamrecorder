@@ -45,8 +45,6 @@ export default function CreatorsInfinity() {
     );
   }
 
-  const isFollowing = filters.scope === "following";
-
   const hasActiveFilters = Boolean(
     filters.gender ||
       filters.country ||
@@ -57,23 +55,6 @@ export default function CreatorsInfinity() {
   );
 
   if (allFollowers.length === 0) {
-    if (isFollowing) {
-      return (
-        <Stack align="center" py="xl" gap="xs">
-          <Text size="lg" fw={500}>
-            {hasActiveFilters
-              ? "No followers match your filters"
-              : "You're not following anyone yet"}
-          </Text>
-          <Text size="sm" c="dimmed">
-            {hasActiveFilters
-              ? "Try adjusting or clearing your filters"
-              : "Switch to Discover to find creators to follow"}
-          </Text>
-        </Stack>
-      );
-    }
-
     return (
       <Stack align="center" py="xl" gap="xs">
         <Text size="lg" fw={500}>

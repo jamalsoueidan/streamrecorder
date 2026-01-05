@@ -11,6 +11,7 @@ services:
       context: .
       dockerfile_inline: "FROM docker.n8n.io/n8nio/n8n:1.123.5\nUSER root\nRUN apk update && \\\n    apk add --no-cache ffmpeg python3 py3-pip curl aws-cli && \\\n    pip3 install --break-system-packages streamlink\nRUN npm install -g bcrypt\nUSER node\n"
     command: "worker --concurrency=30"
+    stop_grace_period: 37m
     environment:
       - GENERIC_TIMEZONE=Europe/Berlin
       - TZ=Europe/Berlin
@@ -34,6 +35,7 @@ services:
       - N8N_PROXY_HOPS=1
       - "NODE_FUNCTION_ALLOW_EXTERNAL=*"
       - "NODE_FUNCTION_ALLOW_BUILTIN=*"
+      - N8N_GRACEFUL_SHUTDOWN_TIMEOUT=2100
     volumes:
       - "./downloads:/files"
     depends_on:
