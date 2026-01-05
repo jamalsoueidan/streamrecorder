@@ -12,13 +12,15 @@ export enum SortOptions {
   createdAtAsc = "createdAt:asc",
   UsernameDesc = "username:desc",
   UsernameAsc = "username:asc",
+  TotalRecordingsDesc = "totalRecordings:desc",
+  TotalRecordingsAsc = "totalRecordings:asc",
 }
 
 export const exploreParsers = {
   sort: parseAsStringEnum<SortOptions>(Object.values(SortOptions)).withDefault(
     SortOptions.createdAtDesc
   ),
-  hasRecordings: parseAsBoolean.withDefault(true),
+  hasRecordings: parseAsBoolean.withDefault(false),
   gender: parseAsString,
   country: parseAsString,
   language: parseAsString,
