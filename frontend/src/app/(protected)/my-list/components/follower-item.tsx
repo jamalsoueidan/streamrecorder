@@ -209,10 +209,3 @@ export default function FollowerItem({ follower, isOpen }: Props) {
     </Accordion.Item>
   );
 }
-
-const getVisibleFrom = (index: number): "sm" | "md" | "xl" | undefined => {
-  if (index === 0) return undefined; // Always visible
-  if (index === 1) return "sm"; // 2+ columns
-  if (index === 2) return "md"; // 3+ columns
-  return "xl"; // 4+ columns
-};
