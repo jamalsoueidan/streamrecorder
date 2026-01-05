@@ -31,6 +31,7 @@ import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
 import { CountryFlag } from "../../components/country-flag";
 import FollowButton from "../../components/follow-button";
+import { FollowerTypeIcon } from "../../components/follower-type";
 import OpenSocial from "../../components/open-social";
 import UnfollowButton from "../../components/unfollow-button";
 import { getRecordings } from "../actions/fetch-followers";
@@ -39,11 +40,15 @@ function AccordionControl({
   follower,
   ...props
 }: AccordionControlProps & { follower: FollowerWithMeta }) {
+  const isMobile = useMatches({
+    base: true,
+    sm: false,
+  });
   return (
     <Center>
       <Accordion.Control {...props} />
       <Flex gap="xs" align="center" mr="md">
-        <OpenSocial follower={follower} />
+        {isMobile ? null : <OpenSocial follower={follower} />}
 
         {follower.isFollowing ? (
           <>
@@ -64,9 +69,9 @@ interface Props {
 
 export default function FollowerItem({ follower, isOpen }: Props) {
   const [page, setPage] = useState(1);
-  const mawTruncate = useMatches({
-    base: 200,
-    md: 120,
+  const isMobile = useMatches({
+    base: true,
+    sm: false,
   });
 
   const { data, isLoading } = useQuery({
@@ -82,61 +87,94 @@ export default function FollowerItem({ follower, isOpen }: Props) {
   return (
     <Accordion.Item key={follower.documentId} value={follower.username}>
       <AccordionControl follower={follower}>
-        <Flex justify="space-between">
-          <Group>
-            <Anchor
-              component={Link}
-              href={`/${follower?.type}/${follower?.username}`}
-            >
-              <Avatar
-                size="lg"
-                src={follower.avatar?.url}
-                styles={{
-                  image: {
-                    transform: "scale(2)",
-                    objectFit: "cover",
-                  },
-                }}
+        <Group>
+          <Box pos="relative" visibleFrom="sm">
+            <Avatar
+              size="lg"
+              src={follower.avatar?.url}
+              styles={{
+                image: {
+                  transform: "scale(2)",
+                  objectFit: "cover",
+                },
+              }}
+            />
+
+            {follower.type && (
+              <FollowerTypeIcon
+                pos="absolute"
+                color="transparent"
+                type={follower.type}
+                top="50%"
+                left="50%"
+                size={50}
+                opacity={0.5}
+                style={{ transform: "translate(-50%, -50%)" }}
               />
-            </Anchor>
+            )}
+          </Box>
 
-            <Stack gap={2}>
-              <Group gap="xs">
-                <Anchor
-                  component={Link}
-                  href={`/${follower?.type}/${follower?.username}`}
+          <Stack gap={2}>
+            <Group gap="xs">
+              <Box pos="relative" hiddenFrom="sm">
+                <Avatar
                   size="md"
-                >
-                  <Text size="lg" truncate maw={mawTruncate} fw="bold">
-                    {follower.username}
-                  </Text>
-                </Anchor>
-                {follower.country ? (
-                  <CountryFlag
-                    country={follower.country}
-                    countryCode={follower?.countryCode}
-                  />
-                ) : null}
-              </Group>
+                  src={follower.avatar?.url}
+                  styles={{
+                    image: {
+                      transform: "scale(2)",
+                      objectFit: "cover",
+                    },
+                  }}
+                />
 
-              <Group gap="xs">
-                <Group gap={4}>
-                  <IconCalendarPlus size={14} />
-                  <Text size="sm" c="dimmed">
-                    Added {dayjs(follower.createdAt).fromNow()}
-                  </Text>
-                </Group>
-                <Group gap={4}>
-                  <IconVideo size={14} />
-                  <Text size="sm" c="dimmed">
-                    {follower.totalRecordings}{" "}
-                    {follower.totalRecordings === 1 ? "video" : "videos"}
-                  </Text>
-                </Group>
+                {follower.type && (
+                  <FollowerTypeIcon
+                    pos="absolute"
+                    color="transparent"
+                    type={follower.type}
+                    top="50%"
+                    left="50%"
+                    size={25}
+                    style={{ transform: "translate(-50%, -50%)" }}
+                  />
+                )}
+              </Box>
+
+              <Anchor
+                component={Link}
+                href={`/${follower?.type}/${follower?.username}`}
+                size="md"
+              >
+                <Text size="lg" truncate maw={isMobile ? 100 : 200} fw="bold">
+                  {follower.username}
+                </Text>
+              </Anchor>
+              {follower.country ? (
+                <CountryFlag
+                  country={follower.country}
+                  countryCode={follower?.countryCode}
+                />
+              ) : null}
+            </Group>
+
+            <Group gap="xs">
+              <Group gap={4}>
+                <IconCalendarPlus size={14} />
+                <Text size="sm" c="dimmed">
+                  Added {dayjs(follower.createdAt).fromNow()}
+                </Text>
               </Group>
-            </Stack>
-          </Group>
-        </Flex>
+              <Group gap={4}>
+                <IconVideo size={14} />
+                <Text size="sm" c="dimmed">
+                  {follower.totalRecordings}{" "}
+                  {follower.totalRecordings === 1 ? "video" : "videos"}
+                </Text>
+              </Group>
+            </Group>
+          </Stack>
+        </Group>
       </AccordionControl>
       <Accordion.Panel>
         {isLoading ? (
