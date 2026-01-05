@@ -121,9 +121,11 @@ export default factories.createCoreController(
 
       const knex = strapi.db.connection;
       const filters = ctx.query.filters as any;
-      const page = parseInt(ctx.query["pagination[page]"] as string) || 1;
-      const pageSize =
-        parseInt(ctx.query["pagination[pageSize]"] as string) || 25;
+      const pagination = ctx.query.pagination as
+        | { page?: string; pageSize?: string }
+        | undefined;
+      const page = parseInt(pagination?.page || "1");
+      const pageSize = parseInt(pagination?.pageSize || "25");
       const offset = (page - 1) * pageSize;
 
       const escapeLikePattern = (value: string): string => {
