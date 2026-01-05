@@ -196,7 +196,7 @@ export default function Filters({ filterOptions }: Props) {
     filters.language,
     filters.type,
     filters.dateRange,
-    !filters.hasRecordings,
+    filters.hasRecordings,
   ].filter(Boolean).length;
 
   const clearFilters = () => {
