@@ -91,7 +91,7 @@ export default function FollowerItem({ follower, isOpen }: Props) {
           <Box pos="relative" visibleFrom="sm">
             <Avatar
               size="lg"
-              src={follower.avatar?.url}
+              src={`/avatar/${follower.avatar?.url?.split("/").pop()}`}
               styles={{
                 image: {
                   transform: "scale(2)",
