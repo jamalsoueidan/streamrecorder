@@ -33,6 +33,8 @@ import {
   IconGenderMale,
   IconQuestionMark,
   IconSearch,
+  IconSort09,
+  IconSort90,
   IconSortAZ,
   IconSortZA,
   IconUsers,
@@ -48,13 +50,17 @@ const sortIcons: Record<string, React.ReactNode> = {
   [SortOptions.UsernameDesc]: <IconSortZA size={24} />,
   [SortOptions.createdAtDesc]: <IconArrowDown size={24} />,
   [SortOptions.createdAtAsc]: <IconArrowUp size={24} />,
+  [SortOptions.TotalRecordingsDesc]: <IconSort90 size={24} />,
+  [SortOptions.TotalRecordingsAsc]: <IconSort09 size={24} />,
 };
 
 const sortLabels: Record<string, string> = {
   [SortOptions.UsernameAsc]: "A-Z",
   [SortOptions.UsernameDesc]: "Z-A",
-  [SortOptions.createdAtDesc]: "Newest",
-  [SortOptions.createdAtAsc]: "Oldest",
+  [SortOptions.createdAtDesc]: "Added Recently",
+  [SortOptions.createdAtAsc]: "Added Oldest",
+  [SortOptions.TotalRecordingsDesc]: "Most videos",
+  [SortOptions.TotalRecordingsAsc]: "Least videos",
 };
 
 const genderIcons: Record<string, React.ReactNode> = {
