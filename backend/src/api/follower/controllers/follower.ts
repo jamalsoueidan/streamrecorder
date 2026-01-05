@@ -232,23 +232,20 @@ export default factories.createCoreController(
         }
       }
 
-      // Map rows directly - no extra Strapi call
+      const snakeToCamel = (obj: any): any => {
+        if (obj === null || typeof obj !== "object") return obj;
+
+        return Object.fromEntries(
+          Object.entries(obj).map(([key, value]) => [
+            key.replace(/_([a-z])/g, (_, letter) => letter.toUpperCase()),
+            value,
+          ])
+        );
+      };
+
       const data = rows.map((row: any) => ({
-        id: row.id,
-        documentId: row.document_id,
-        username: row.username,
-        nickname: row.nickname,
-        country: row.country,
-        countryCode: row.country_code,
-        language: row.language,
-        languageCode: row.language_code,
-        gender: row.gender,
-        type: row.type,
-        createdAt: row.created_at,
-        updatedAt: row.updated_at,
+        ...snakeToCamel(row),
         avatar: row.avatar_url ? { url: row.avatar_url } : null,
-        totalRecordings: row.total_recordings,
-        latestRecording: row.latest_recording,
         recordings: recordingsMap.get(row.id) || [],
         isFollowing: followingIds.includes(row.id),
       }));
