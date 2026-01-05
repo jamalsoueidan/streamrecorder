@@ -84,11 +84,12 @@ export default factories.createCoreController(
       delete ctx.query.scope;
       delete ctx.query.hasRecordings;
 
-      // Check if sorting by totalRecordings
+      // Check if sorting by custom fields
       const sortByRecordings = sort?.includes("totalRecordings");
+      const sortByLatestRecording = sort?.includes("latestRecording");
       const sortDirection = sort?.includes(":desc") ? "desc" : "asc";
 
-      if (sortByRecordings) {
+      if (sortByRecordings || sortByLatestRecording) {
         delete ctx.query.sort;
       }
 
@@ -130,21 +131,19 @@ export default factories.createCoreController(
 
       const escapeLikePattern = (value: string): string => {
         return value
-          .replace(/\\/g, "\\\\") // Escape backslashes first
-          .replace(/%/g, "\\%") // Escape %
-          .replace(/_/g, "\\_"); // Escape _
+          .replace(/\\/g, "\\\\")
+          .replace(/%/g, "\\%")
+          .replace(/_/g, "\\_");
       };
 
       // Helper function to apply common filters to a knex query
       const applyFilters = (query: any) => {
-        // Scope filter
         if (scope === "following" && followingIds.length > 0) {
           query = query.whereIn("f.id", followingIds);
         } else if (scope === "discover" && followingIds.length > 0) {
           query = query.whereNotIn("f.id", followingIds);
         }
 
-        // hasRecordings filter
         if (hasRecordings) {
           query = query.whereExists(function (builder) {
             builder
@@ -166,7 +165,6 @@ export default factories.createCoreController(
           });
         }
 
-        // Other filters
         if (filters) {
           if (filters.country?.$eq) {
             query = query.where("f.country", filters.country.$eq);
@@ -191,9 +189,8 @@ export default factories.createCoreController(
         return query;
       };
 
-      // If sorting by totalRecordings, use Knex for everything
-      if (sortByRecordings) {
-        // Build query with sorting by valid recording count using derived table
+      // If sorting by totalRecordings or latestRecording, use Knex
+      if (sortByRecordings || sortByLatestRecording) {
         let sortQuery = knex("followers as f")
           .select("f.id")
           .leftJoin(
@@ -212,12 +209,23 @@ export default factories.createCoreController(
             "rf.follower_id",
             "f.id"
           )
-          .groupBy("f.id")
-          .orderByRaw(
-            `COUNT(rf.recording_id) ${sortDirection === "desc" ? "desc" : "asc"}, f.id ASC`
-          )
-          .limit(pageSize)
-          .offset(offset);
+          // Join recordings again to get created_at for latestRecording sort
+          .leftJoin("recordings as r_sort", "rf.recording_id", "r_sort.id")
+          .groupBy("f.id");
+
+        // Apply sorting based on type
+        if (sortByRecordings) {
+          sortQuery = sortQuery.orderByRaw(
+            `COUNT(rf.recording_id) ${sortDirection === "desc" ? "DESC" : "ASC"}, f.id ASC`
+          );
+        } else if (sortByLatestRecording) {
+          // NULLS LAST puts followers without recordings at the bottom
+          sortQuery = sortQuery.orderByRaw(
+            `MAX(r_sort.created_at) ${sortDirection === "desc" ? "DESC NULLS LAST" : "ASC NULLS FIRST"}, f.id ASC`
+          );
+        }
+
+        sortQuery = sortQuery.limit(pageSize).offset(offset);
 
         // Build count query
         let countQuery = knex("followers as f").count("* as count");

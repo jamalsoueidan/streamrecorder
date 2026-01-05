@@ -14,6 +14,8 @@ export enum SortOptions {
   UsernameAsc = "username:asc",
   TotalRecordingsDesc = "totalRecordings:desc",
   TotalRecordingsAsc = "totalRecordings:asc",
+  LatestRecordingDesc = "latestRecording:desc",
+  LatestRecordingAsc = "latestRecording:asc",
 }
 
 export const exploreParsers = {

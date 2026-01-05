@@ -23,19 +23,21 @@ import {
 } from "@mantine/core";
 import { useDebouncedCallback, useDisclosure } from "@mantine/hooks";
 import {
-  IconArrowDown,
-  IconArrowUp,
   IconBrandTiktok,
   IconBrandTwitch,
   IconCalendar,
+  IconCalendarDown,
+  IconCalendarUp,
+  IconClock,
   IconFilter,
   IconGenderFemale,
   IconGenderMale,
+  IconHistory,
   IconQuestionMark,
   IconSearch,
-  IconSort09,
-  IconSort90,
+  IconSortAscendingNumbers,
   IconSortAZ,
+  IconSortDescendingNumbers,
   IconSortZA,
   IconUsers,
   IconWorld,
@@ -48,19 +50,23 @@ import { exploreParsers, SortOptions } from "../lib/search-params";
 const sortIcons: Record<string, React.ReactNode> = {
   [SortOptions.UsernameAsc]: <IconSortAZ size={24} />,
   [SortOptions.UsernameDesc]: <IconSortZA size={24} />,
-  [SortOptions.createdAtDesc]: <IconArrowDown size={24} />,
-  [SortOptions.createdAtAsc]: <IconArrowUp size={24} />,
-  [SortOptions.TotalRecordingsDesc]: <IconSort90 size={24} />,
-  [SortOptions.TotalRecordingsAsc]: <IconSort09 size={24} />,
+  [SortOptions.createdAtDesc]: <IconCalendarDown size={24} />,
+  [SortOptions.createdAtAsc]: <IconCalendarUp size={24} />,
+  [SortOptions.TotalRecordingsDesc]: <IconSortDescendingNumbers size={24} />,
+  [SortOptions.TotalRecordingsAsc]: <IconSortAscendingNumbers size={24} />,
+  [SortOptions.LatestRecordingDesc]: <IconClock size={24} />,
+  [SortOptions.LatestRecordingAsc]: <IconHistory size={24} />,
 };
 
 const sortLabels: Record<string, string> = {
   [SortOptions.UsernameAsc]: "A-Z",
   [SortOptions.UsernameDesc]: "Z-A",
-  [SortOptions.createdAtDesc]: "Added Recently",
-  [SortOptions.createdAtAsc]: "Added Oldest",
-  [SortOptions.TotalRecordingsDesc]: "Most videos",
-  [SortOptions.TotalRecordingsAsc]: "Least videos",
+  [SortOptions.createdAtDesc]: "Recently followed",
+  [SortOptions.createdAtAsc]: "First followed",
+  [SortOptions.TotalRecordingsDesc]: "Most recordings",
+  [SortOptions.TotalRecordingsAsc]: "Fewest recordings",
+  [SortOptions.LatestRecordingDesc]: "Recently Streamed",
+  [SortOptions.LatestRecordingAsc]: "Oldest Stream",
 };
 
 const genderIcons: Record<string, React.ReactNode> = {
