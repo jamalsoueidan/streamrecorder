@@ -212,7 +212,7 @@ export default factories.createCoreController(
           )
           .groupBy("f.id")
           .orderByRaw(
-            `COUNT(rf.recording_id) ${sortDirection === "desc" ? "desc" : "asc"}`
+            `COUNT(rf.recording_id) ${sortDirection === "desc" ? "desc" : "asc"}, f.id ASC`
           )
           .limit(pageSize)
           .offset(offset);
