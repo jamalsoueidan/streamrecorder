@@ -30,6 +30,7 @@ const data = [
     title: "About",
     links: [
       { link: "/news", label: "News" },
+      { link: "/pricing", label: "Pricing" },
       { link: "/faq", label: "Faq" },
       { link: "/product-updates", label: "Updates" },
       { link: "/contact", label: "Contact" },

@@ -15,17 +15,16 @@ export async function GET(
   request: Request,
   { params }: { params: Promise<{ path: string[] }> }
 ) {
-  const token = await getToken();
-  const isLoggedIn = !!token;
-  if (!isLoggedIn) {
-    return new Response("Unauthorized", { status: 401 });
-  }
-
   const { path } = await params;
   const filePath = path.join("/");
   const isVideo = /\.(mp4|webm|mov|avi|mkv)$/i.test(filePath);
 
   if (isVideo) {
+    const token = await getToken();
+    const isLoggedIn = !!token;
+    if (!isLoggedIn) {
+      return new Response("Unauthorized", { status: 401 });
+    }
     const command = new GetObjectCommand({
       Bucket: process.env.MEDIA_BUCKET!,
       Key: filePath,
