@@ -11,8 +11,8 @@ import { parseUsername } from "@/app/lib/parse-username";
 import {
   Avatar,
   Badge,
+  Button,
   Center,
-  FocusTrap,
   Group,
   Loader,
   Paper,
@@ -20,6 +20,7 @@ import {
   Stack,
   Text,
   UnstyledButton,
+  useMatches,
 } from "@mantine/core";
 import { useDebouncedValue } from "@mantine/hooks";
 import { notifications } from "@mantine/notifications";
@@ -27,6 +28,7 @@ import { Spotlight, spotlight } from "@mantine/spotlight";
 import "@mantine/spotlight/styles.css";
 import {
   IconCheck,
+  IconClipboard,
   IconLink,
   IconSearch,
   IconUsersPlus,
@@ -208,15 +210,65 @@ export default function AddFollowerForm() {
     );
   };
 
+  const isMobile = useMatches({
+    base: true,
+    sm: false,
+  });
+
   return (
     <section>
-      <Spotlight.Root query={query} onQueryChange={setQuery}>
-        <FocusTrap.InitialFocus />
-        <Stack gap="0">
+      <Spotlight.Root
+        query={query}
+        onQueryChange={setQuery}
+        styles={{
+          content: {
+            ...(isMobile && {
+              position: "absolute",
+              bottom: 0,
+              left: 0,
+              right: 0,
+              borderRadius: "16px 16px 0 0",
+              maxHeight: "80dvh",
+            }),
+          },
+        }}
+      >
+        <Spotlight.Search
+          placeholder="Enter creators name or link"
+          leftSection={<IconSearch stroke={1.5} />}
+          rightSectionPointerEvents="auto"
+          rightSectionWidth={80}
+          rightSection={
+            <Button
+              variant="subtle"
+              size="compact-xs"
+              color="gray.6"
+              leftSection={<IconClipboard size={14} />}
+              onClick={async () => {
+                try {
+                  const text = await navigator.clipboard.readText();
+                  if (text?.trim()) {
+                    setQuery(text);
+                  }
+                } catch {
+                  notifications.show({
+                    message: "Paste manually using Ctrl+V or long-press",
+                    color: "yellow",
+                  });
+                }
+              }}
+            >
+              Paste
+            </Button>
+          }
+        />
+
+        {/* Move SegmentedControl here, after Search */}
+        <Stack gap="0" p="xs">
           <SegmentedControl
             value={detectedPlatform ?? selectedPlatform}
             onChange={(value) => setSelectedPlatform(value as PlatformType)}
-            disabled={detectedPlatform !== null} // Disable when URL auto-detected
+            disabled={detectedPlatform !== null}
             data={[
               { label: "TikTok", value: "tiktok" },
               { label: "Twitch", value: "twitch" },
@@ -229,10 +281,6 @@ export default function AddFollowerForm() {
             </Text>
           )}
         </Stack>
-        <Spotlight.Search
-          placeholder="Enter creators name or link"
-          leftSection={<IconSearch stroke={1.5} data-autofocus />}
-        />
 
         <Spotlight.ActionsList>{renderContent()}</Spotlight.ActionsList>
       </Spotlight.Root>
