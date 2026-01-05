@@ -184,10 +184,22 @@ export default factories.createCoreController(
 
       // If sorting by totalRecordings, use Knex for everything
       if (sortByRecordings) {
-        // Build query with sorting by recording count
+        // Build query with sorting by valid recording count using derived table
         let sortQuery = knex("followers as f")
           .select("f.id")
-          .leftJoin("recordings_follower_lnk as rf", "rf.follower_id", "f.id")
+          .leftJoin(
+            knex.raw(`(
+        SELECT rf_inner.follower_id, rf_inner.recording_id
+        FROM recordings_follower_lnk rf_inner
+        INNER JOIN recordings r ON rf_inner.recording_id = r.id
+        INNER JOIN recordings_sources_lnk rs ON rs.recording_id = r.id
+        INNER JOIN sources s ON rs.source_id = s.id
+        WHERE s.state != 'failed'
+        GROUP BY rf_inner.follower_id, rf_inner.recording_id
+      ) as rf`),
+            "rf.follower_id",
+            "f.id"
+          )
           .groupBy("f.id")
           .orderByRaw(`COUNT(rf.recording_id) ${sortDirection}`)
           .limit(pageSize)
