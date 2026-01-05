@@ -3,6 +3,265 @@ import { factories } from "@strapi/strapi";
 export default factories.createCoreController(
   "api::follower.follower",
   ({ strapi }) => ({
+    async browse(ctx) {
+      const user = ctx.state.user;
+      if (!user) return ctx.unauthorized();
+
+      // Parse params
+      const scope = ctx.query.scope as string | undefined;
+      const hasRecordings = ctx.query.hasRecordings === "true";
+      const sort = ctx.query.sort as string | undefined;
+      const includeRecordings = scope === "discover";
+
+      const sortField = sort?.split(":")[0] || "createdAt";
+      const sortDirection = sort?.includes(":desc") ? "DESC" : "ASC";
+
+      const knex = strapi.db.connection;
+      const filters = ctx.query.filters as any;
+      const pagination = ctx.query.pagination as
+        | { page?: string; pageSize?: string }
+        | undefined;
+      const page = parseInt(pagination?.page || "1");
+      const pageSize = parseInt(pagination?.pageSize || "25");
+      const offset = (page - 1) * pageSize;
+
+      // Get following IDs
+      const fullUser = await strapi
+        .documents("plugin::users-permissions.user")
+        .findOne({
+          documentId: user.documentId,
+          fields: ["id"],
+          populate: { followers: { fields: ["id"] } },
+        });
+      const followingIds = fullUser?.followers?.map((f) => f.id) || [];
+
+      if (scope === "following" && followingIds.length === 0) {
+        return {
+          data: [],
+          meta: {
+            pagination: { page: 1, pageSize: 25, pageCount: 0, total: 0 },
+          },
+        };
+      }
+
+      const escapeLikePattern = (value: string): string => {
+        return value
+          .replace(/\\/g, "\\\\")
+          .replace(/%/g, "\\%")
+          .replace(/_/g, "\\_");
+      };
+
+      // Shared filter function
+      const applyBaseFilters = (q: any) => {
+        if (scope === "following" && followingIds.length > 0) {
+          q = q.whereIn("f.id", followingIds);
+        } else if (scope === "discover" && followingIds.length > 0) {
+          q = q.whereNotIn("f.id", followingIds);
+        }
+
+        if (filters?.country?.$eq) {
+          q = q.where("f.country", filters.country.$eq);
+        }
+        if (filters?.countryCode?.$eq) {
+          q = q.where("f.country_code", filters.countryCode.$eq);
+        }
+        if (filters?.language?.$eq) {
+          q = q.where("f.language", filters.language.$eq);
+        }
+        if (filters?.languageCode?.$eq) {
+          q = q.where("f.language_code", filters.languageCode.$eq);
+        }
+        if (filters?.gender?.$eq) {
+          q = q.where("f.gender", filters.gender.$eq);
+        }
+        if (filters?.type?.$eq) {
+          q = q.where("f.type", filters.type.$eq);
+        }
+
+        if (filters?.$or) {
+          const searchTerm =
+            filters.$or[0]?.username?.$containsi ||
+            filters.$or[0]?.nickname?.$containsi;
+          if (searchTerm) {
+            const escaped = escapeLikePattern(searchTerm);
+            q = q.where(function (this: any) {
+              this.whereILike("f.username", `%${escaped}%`).orWhereILike(
+                "f.nickname",
+                `%${escaped}%`
+              );
+            });
+          }
+        }
+
+        return q;
+      };
+
+      // hasRecordings EXISTS subquery (for count query)
+      const applyHasRecordingsExists = (q: any) => {
+        return q.whereExists(function (this: any) {
+          this.select(knex.raw("1"))
+            .from("recordings_follower_lnk as rf")
+            .innerJoin("recordings as r", "rf.recording_id", "r.id")
+            .innerJoin(
+              "recordings_sources_lnk as rs",
+              "rs.recording_id",
+              "r.id"
+            )
+            .innerJoin("sources as s", "rs.source_id", "s.id")
+            .whereRaw("rf.follower_id = f.id")
+            .where("s.state", "!=", "failed");
+        });
+      };
+
+      // Main query - select all follower fields + avatar + stats
+      let query = knex("followers as f")
+        .select(
+          "f.*",
+          knex.raw(`(
+      SELECT files.url
+      FROM files_related_mph frm
+      JOIN files ON files.id = frm.file_id
+      WHERE frm.related_id = f.id
+      AND frm.related_type = 'api::follower.follower'
+      AND frm.field = 'avatar'
+      LIMIT 1
+    ) as avatar_url`),
+          knex.raw("COUNT(DISTINCT vr.recording_id) as total_recordings"),
+          knex.raw("MAX(vr.created_at) as latest_recording")
+        )
+        .leftJoin(
+          knex("recordings as r")
+            .select("r.id as recording_id", "r.created_at", "rf.follower_id")
+            .innerJoin(
+              "recordings_follower_lnk as rf",
+              "rf.recording_id",
+              "r.id"
+            )
+            .innerJoin(
+              "recordings_sources_lnk as rs",
+              "rs.recording_id",
+              "r.id"
+            )
+            .innerJoin("sources as s", "rs.source_id", "s.id")
+            .where("s.state", "!=", "failed")
+            .groupBy("r.id", "r.created_at", "rf.follower_id")
+            .as("vr"),
+          "vr.follower_id",
+          "f.id"
+        )
+        .groupBy("f.id");
+
+      // Apply base filters
+      query = applyBaseFilters(query);
+
+      // hasRecordings - use HAVING for main query
+      if (hasRecordings) {
+        query = query.having(knex.raw("COUNT(DISTINCT vr.recording_id) > 0"));
+      }
+
+      // Sort
+      switch (sortField) {
+        case "totalRecordings":
+          query = query.orderByRaw(
+            `COUNT(DISTINCT vr.recording_id) ${sortDirection}, f.id ASC`
+          );
+          break;
+        case "latestRecording":
+          query = query.orderByRaw(
+            `MAX(vr.created_at) ${sortDirection} NULLS LAST, f.id ASC`
+          );
+          break;
+        case "username":
+          query = query.orderByRaw(`f.username ${sortDirection}, f.id ASC`);
+          break;
+        default:
+          query = query.orderByRaw(`f.created_at ${sortDirection}, f.id ASC`);
+      }
+
+      // Pagination
+      query = query.limit(pageSize).offset(offset);
+
+      // Count query - separate, no GROUP BY
+      let countQuery = knex("followers as f").countDistinct("f.id as total");
+      countQuery = applyBaseFilters(countQuery);
+      if (hasRecordings) {
+        countQuery = applyHasRecordingsExists(countQuery);
+      }
+
+      // Execute both
+      const [rows, countResult] = await Promise.all([
+        query,
+        countQuery.first(),
+      ]);
+      const total = Number(countResult?.total || 0);
+
+      if (rows.length === 0) {
+        return {
+          data: [],
+          meta: { pagination: { page, pageSize, pageCount: 0, total: 0 } },
+        };
+      }
+
+      const followerIds = rows.map((r: any) => r.id);
+
+      // Fetch recordings if needed (discover only)
+      let recordingsMap = new Map<number | string, any[]>();
+      if (includeRecordings) {
+        const recordings = await strapi
+          .documents("api::recording.recording")
+          .findMany({
+            filters: { follower: { id: { $in: followerIds } } },
+            populate: {
+              sources: {
+                filters: { state: { $ne: "failed" } },
+                populate: ["videoSmall", "videoOriginal"],
+              },
+              follower: { fields: ["id"] },
+            },
+            sort: { createdAt: "desc" },
+          });
+
+        for (const rec of recordings) {
+          if (rec.sources?.length > 0) {
+            const fId = rec.follower?.id;
+            if (!recordingsMap.has(fId)) recordingsMap.set(fId, []);
+            if (recordingsMap.get(fId)!.length < 5) {
+              recordingsMap.get(fId)!.push(rec);
+            }
+          }
+        }
+      }
+
+      const snakeToCamel = (obj: any): any => {
+        if (obj === null || typeof obj !== "object") return obj;
+
+        return Object.fromEntries(
+          Object.entries(obj).map(([key, value]) => [
+            key.replace(/_([a-z])/g, (_, letter) => letter.toUpperCase()),
+            value,
+          ])
+        );
+      };
+
+      const data = rows.map((row: any) => ({
+        ...snakeToCamel(row),
+        avatar: row.avatar_url ? { url: row.avatar_url } : null,
+        recordings: recordingsMap.get(row.id) || [],
+        isFollowing: followingIds.includes(row.id),
+      }));
+
+      return {
+        data,
+        meta: {
+          pagination: {
+            page,
+            pageSize,
+            pageCount: Math.ceil(total / pageSize),
+            total,
+          },
+        },
+      };
+    },
     async filters(cxt) {
       const knex = strapi.db.connection;
 
@@ -70,340 +329,6 @@ export default factories.createCoreController(
         languages,
         languageCodes,
         types,
-      };
-    },
-    async browse(ctx) {
-      const user = ctx.state.user;
-      if (!user) return ctx.unauthorized();
-
-      // Extract custom query params
-      const scope = ctx.query.scope as string | undefined;
-      const hasRecordings = ctx.query.hasRecordings === "true";
-      const sort = ctx.query.sort as string | undefined;
-
-      delete ctx.query.scope;
-      delete ctx.query.hasRecordings;
-
-      // Check if sorting by custom fields
-      const sortByRecordings = sort?.includes("totalRecordings");
-      const sortByLatestRecording = sort?.includes("latestRecording");
-      const sortDirection = sort?.includes(":desc") ? "desc" : "asc";
-
-      if (sortByRecordings || sortByLatestRecording) {
-        delete ctx.query.sort;
-      }
-
-      // Extract and remove recordings populate config
-      const recordingsPopulate = (ctx.query.populate as any)?.recordings;
-      if (recordingsPopulate) {
-        delete (ctx.query.populate as any).recordings;
-      }
-
-      // Get user's following list
-      const fullUser = await strapi
-        .documents("plugin::users-permissions.user")
-        .findOne({
-          documentId: user.documentId,
-          fields: ["id"],
-          populate: { followers: { fields: ["id"] } },
-        });
-
-      const followingIds = fullUser?.followers?.map((f) => f.id) || [];
-
-      // If scope is "following" and user follows no one, return empty result
-      if (scope === "following" && followingIds.length === 0) {
-        return {
-          data: [],
-          meta: {
-            pagination: { page: 1, pageSize: 25, pageCount: 0, total: 0 },
-          },
-        };
-      }
-
-      const knex = strapi.db.connection;
-      const filters = ctx.query.filters as any;
-      const pagination = ctx.query.pagination as
-        | { page?: string; pageSize?: string }
-        | undefined;
-      const page = parseInt(pagination?.page || "1");
-      const pageSize = parseInt(pagination?.pageSize || "25");
-      const offset = (page - 1) * pageSize;
-
-      const escapeLikePattern = (value: string): string => {
-        return value
-          .replace(/\\/g, "\\\\")
-          .replace(/%/g, "\\%")
-          .replace(/_/g, "\\_");
-      };
-
-      // Helper function to apply common filters to a knex query
-      const applyFilters = (query: any) => {
-        if (scope === "following" && followingIds.length > 0) {
-          query = query.whereIn("f.id", followingIds);
-        } else if (scope === "discover" && followingIds.length > 0) {
-          query = query.whereNotIn("f.id", followingIds);
-        }
-
-        if (hasRecordings) {
-          query = query.whereExists(function (builder) {
-            builder
-              .select(knex.raw("1"))
-              .from("recordings_follower_lnk as rf_sub")
-              .innerJoin(
-                "recordings as r_sub",
-                "rf_sub.recording_id",
-                "r_sub.id"
-              )
-              .innerJoin(
-                "recordings_sources_lnk as rs_sub",
-                "rs_sub.recording_id",
-                "r_sub.id"
-              )
-              .innerJoin("sources as s_sub", "rs_sub.source_id", "s_sub.id")
-              .whereRaw("rf_sub.follower_id = f.id")
-              .where("s_sub.state", "!=", "failed");
-          });
-        }
-
-        if (filters) {
-          if (filters.country?.$eq) {
-            query = query.where("f.country", filters.country.$eq);
-          }
-          if (filters.language?.$eq) {
-            query = query.where("f.language", filters.language.$eq);
-          }
-          if (filters.gender?.$eq) {
-            query = query.where("f.gender", filters.gender.$eq);
-          }
-          if (filters.type?.$eq) {
-            query = query.where("f.type", filters.type.$eq);
-          }
-          if (filters.$or) {
-            const searchTerm =
-              filters.$or[0]?.username?.$containsi ||
-              filters.$or[0]?.nickname?.$containsi;
-            if (searchTerm) {
-              const escapedSearch = escapeLikePattern(searchTerm);
-              query = query.where(function (this: any) {
-                this.whereILike(
-                  "f.username",
-                  `%${escapedSearch}%`
-                ).orWhereILike("f.nickname", `%${escapedSearch}%`);
-              });
-            }
-          }
-        }
-
-        return query;
-      };
-
-      // If sorting by totalRecordings or latestRecording, use Knex
-      if (sortByRecordings || sortByLatestRecording) {
-        let sortQuery = knex("followers as f")
-          .select("f.id")
-          .leftJoin(
-            knex("recordings_follower_lnk as rf_inner")
-              .select("rf_inner.follower_id", "rf_inner.recording_id")
-              .innerJoin("recordings as r", "rf_inner.recording_id", "r.id")
-              .innerJoin(
-                "recordings_sources_lnk as rs",
-                "rs.recording_id",
-                "r.id"
-              )
-              .innerJoin("sources as s", "rs.source_id", "s.id")
-              .where("s.state", "!=", "failed")
-              .groupBy("rf_inner.follower_id", "rf_inner.recording_id")
-              .as("rf"),
-            "rf.follower_id",
-            "f.id"
-          )
-          // Join recordings again to get created_at for latestRecording sort
-          .leftJoin("recordings as r_sort", "rf.recording_id", "r_sort.id")
-          .groupBy("f.id");
-
-        // Apply sorting based on type
-        if (sortByRecordings) {
-          sortQuery = sortQuery.orderByRaw(
-            `COUNT(rf.recording_id) ${sortDirection === "desc" ? "DESC" : "ASC"}, f.id ASC`
-          );
-        } else if (sortByLatestRecording) {
-          // NULLS LAST puts followers without recordings at the bottom
-          sortQuery = sortQuery.orderByRaw(
-            `MAX(r_sort.created_at) ${sortDirection === "desc" ? "DESC NULLS LAST" : "ASC NULLS FIRST"}, f.id ASC`
-          );
-        }
-
-        sortQuery = sortQuery.limit(pageSize).offset(offset);
-
-        // Build count query
-        let countQuery = knex("followers as f").count("* as count");
-
-        // Apply all filters to both queries
-        sortQuery = applyFilters(sortQuery);
-        countQuery = applyFilters(countQuery);
-
-        // Execute queries
-        const sortedIds = await sortQuery.pluck("f.id");
-        const [{ count: total }] = await countQuery;
-
-        if (sortedIds.length === 0) {
-          return {
-            data: [],
-            meta: {
-              pagination: { page, pageSize, pageCount: 0, total: 0 },
-            },
-          };
-        }
-
-        // Fetch full follower data using Strapi
-        const followers = await strapi
-          .documents("api::follower.follower")
-          .findMany({
-            filters: { id: { $in: sortedIds } },
-            populate: ctx.query.populate,
-          });
-
-        // Re-sort to match the order from SQL query
-        const sortedFollowers = sortedIds
-          .map((id) => followers.find((f) => f.id === id))
-          .filter(Boolean);
-
-        // Add metadata
-        const dataWithMeta = await Promise.all(
-          sortedFollowers.map(async (follower) => {
-            const recordingsQuery: any = {
-              filters: { follower: { id: { $eq: follower.id } } },
-              limit: 5,
-              sort: { createdAt: "desc" },
-            };
-
-            if (recordingsPopulate?.populate) {
-              recordingsQuery.populate = recordingsPopulate.populate;
-            }
-
-            const [totalRecordings, recordings] = await Promise.all([
-              strapi.documents("api::recording.recording").count({
-                ...recordingsQuery,
-                limit: undefined,
-              }),
-              recordingsPopulate
-                ? strapi
-                    .documents("api::recording.recording")
-                    .findMany(recordingsQuery)
-                : Promise.resolve(undefined),
-            ]);
-
-            return {
-              ...follower,
-              ...(recordings !== undefined && {
-                recordings: recordings.filter((r) => r.sources?.length > 0),
-              }),
-              isFollowing: followingIds.includes(follower.id),
-              totalRecordings,
-            };
-          })
-        );
-
-        return {
-          data: dataWithMeta,
-          meta: {
-            pagination: {
-              page,
-              pageSize,
-              pageCount: Math.ceil(Number(total) / pageSize),
-              total: Number(total),
-            },
-          },
-        };
-      }
-
-      // ---- DEFAULT SORTING (not by totalRecordings) - use original Strapi logic ----
-
-      if (hasRecordings) {
-        let query = knex("recordings_follower_lnk as rf")
-          .distinct("rf.follower_id")
-          .innerJoin("recordings as r", "rf.recording_id", "r.id")
-          .innerJoin("recordings_sources_lnk as rs", "rs.recording_id", "r.id")
-          .innerJoin("sources as s", "rs.source_id", "s.id")
-          .where("s.state", "!=", "failed");
-
-        if (scope === "following" && followingIds.length > 0) {
-          query = query.whereIn("rf.follower_id", followingIds);
-        } else if (scope === "discover" && followingIds.length > 0) {
-          query = query.whereNotIn("rf.follower_id", followingIds);
-        }
-
-        const followerIdsWithRecordings = await query.pluck("follower_id");
-
-        if (followerIdsWithRecordings.length === 0) {
-          return {
-            data: [],
-            meta: {
-              pagination: { page: 1, pageSize: 25, pageCount: 0, total: 0 },
-            },
-          };
-        }
-
-        Object.assign(ctx.query, {
-          filters: Object.assign({}, ctx.query.filters, {
-            id: { $in: followerIdsWithRecordings },
-          }),
-        });
-      } else {
-        const scopeFilters: Record<string, object | null> = {
-          following: { $in: followingIds },
-          discover: followingIds.length > 0 ? { $notIn: followingIds } : null,
-        };
-
-        if (scope && scopeFilters[scope]) {
-          Object.assign(ctx.query, {
-            filters: Object.assign({}, ctx.query.filters, {
-              id: scopeFilters[scope],
-            }),
-          });
-        }
-      }
-
-      const result = await super.find(ctx);
-
-      const dataWithMeta = await Promise.all(
-        result.data.map(async (follower) => {
-          const recordingsQuery: any = {
-            filters: { follower: { id: { $eq: follower.id } } },
-            limit: 5,
-            sort: { createdAt: "desc" },
-          };
-
-          if (recordingsPopulate?.populate) {
-            recordingsQuery.populate = recordingsPopulate.populate;
-          }
-
-          const [totalRecordings, recordings] = await Promise.all([
-            strapi.documents("api::recording.recording").count({
-              ...recordingsQuery,
-              limit: undefined,
-            }),
-            recordingsPopulate
-              ? strapi
-                  .documents("api::recording.recording")
-                  .findMany(recordingsQuery)
-              : Promise.resolve(undefined),
-          ]);
-
-          return {
-            ...follower,
-            ...(recordings !== undefined && {
-              recordings: recordings.filter((r) => r.sources?.length > 0),
-            }),
-            isFollowing: followingIds.includes(follower.id),
-            totalRecordings,
-          };
-        })
-      );
-
-      return {
-        data: dataWithMeta,
-        meta: result.meta,
       };
     },
     async follow(ctx) {

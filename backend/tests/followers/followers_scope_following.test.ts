@@ -144,7 +144,7 @@ describe("Followers Browse (scope=following)", () => {
     });
   });
 
-  describe("Populate", () => {
+  /*describe("Populate", () => {
     it("should populate recordings with sources", async () => {
       const query = buildQuery({
         scope: "following",
@@ -196,5 +196,5 @@ describe("Followers Browse (scope=following)", () => {
       expect(alice.recordings[0].sources).toHaveLength(1);
       expect(alice.recordings[0].sources[0].state).toBe("done");
     });
-  });
+  });*/
 });

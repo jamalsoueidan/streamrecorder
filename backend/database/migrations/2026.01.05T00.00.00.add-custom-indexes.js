@@ -1,13 +1,23 @@
-"use strict";
-
 async function up(knex) {
-  await knex.raw(`
-    CREATE INDEX IF NOT EXISTS idx_sources_state ON sources(state);
-  `);
+  // Check if table exists first
+  const hasTable = await knex.schema.hasTable("sources");
 
-  await knex.raw(`
-    CREATE INDEX IF NOT EXISTS idx_sources_state_id ON sources(state, id);
-  `);
+  if (hasTable) {
+    // PostgreSQL syntax
+    await knex.raw(`
+      CREATE INDEX IF NOT EXISTS idx_sources_state ON sources(state);
+    `);
+  }
 }
 
-module.exports = { up };
+async function down(knex) {
+  const hasTable = await knex.schema.hasTable("sources");
+
+  if (hasTable) {
+    await knex.raw(`
+      DROP INDEX IF EXISTS idx_sources_state;
+    `);
+  }
+}
+
+module.exports = { up, down };

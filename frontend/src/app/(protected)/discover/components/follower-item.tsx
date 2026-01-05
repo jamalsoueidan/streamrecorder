@@ -56,7 +56,7 @@ export default function FollowerItem({ follower }: Props) {
             >
               <Avatar
                 size="lg"
-                src={follower.avatar?.url}
+                src={`/avatar/${follower.avatar?.url?.split("/").pop()}`}
                 styles={{
                   image: {
                     transform: "scale(2)",
