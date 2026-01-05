@@ -126,7 +126,7 @@ export default factories.createCoreController(
       AND frm.field = 'avatar'
       LIMIT 1
     ) as avatar_url`),
-          knex.raw("COUNT(DISTINCT vr.recording_id)::int as total_recordings"),
+          knex.raw("COUNT(DISTINCT vr.recording_id) as total_recordings"),
           knex.raw("MAX(vr.created_at) as latest_recording")
         )
         .leftJoin(
