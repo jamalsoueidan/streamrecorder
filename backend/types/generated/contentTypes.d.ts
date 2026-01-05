@@ -489,6 +489,35 @@ export interface ApiChangeLogChangeLog extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiDashboardNavbarDashboardNavbar
+  extends Struct.SingleTypeSchema {
+  collectionName: 'dashboard_navbars';
+  info: {
+    displayName: 'DashboardNavbar';
+    pluralName: 'dashboard-navbars';
+    singularName: 'dashboard-navbar';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::dashboard-navbar.dashboard-navbar'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    section: Schema.Attribute.Component<'navigations.sections', true>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiFaqFaq extends Struct.CollectionTypeSchema {
   collectionName: 'faqs';
   info: {
@@ -592,7 +621,7 @@ export interface ApiMessageMessage extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface ApiNavigationNavigation extends Struct.SingleTypeSchema {
+export interface ApiNavigationNavigation extends Struct.CollectionTypeSchema {
   collectionName: 'navigations';
   info: {
     displayName: 'Navigation';
@@ -1211,6 +1240,7 @@ declare module '@strapi/strapi' {
       'admin::user': AdminUser;
       'api::article.article': ApiArticleArticle;
       'api::change-log.change-log': ApiChangeLogChangeLog;
+      'api::dashboard-navbar.dashboard-navbar': ApiDashboardNavbarDashboardNavbar;
       'api::faq.faq': ApiFaqFaq;
       'api::follower.follower': ApiFollowerFollower;
       'api::message.message': ApiMessageMessage;

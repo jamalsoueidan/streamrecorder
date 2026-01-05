@@ -1,5 +1,5 @@
 {
-  "kind": "singleType",
+  "kind": "collectionType",
   "collectionName": "navigations",
   "info": {
     "singularName": "navigation",
