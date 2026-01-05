@@ -501,7 +501,8 @@ export default async function LandingPage() {
               Sign up free and start recording your favorite creators today.
             </Text>
             <Group gap={16} mt={16}>
-              <Button<"a">
+              <Button
+                component="a"
                 size="lg"
                 variant="gradient"
                 gradient={{ from: "#6366f1", to: "#a855f7", deg: 135 }}
