@@ -20,7 +20,7 @@ export const exploreParsers = {
   sort: parseAsStringEnum<SortOptions>(Object.values(SortOptions)).withDefault(
     SortOptions.createdAtDesc
   ),
-  hasRecordings: parseAsBoolean.withDefault(true),
+  hasRecordings: parseAsBoolean.withDefault(false),
   gender: parseAsString,
   country: parseAsString,
   language: parseAsString,
