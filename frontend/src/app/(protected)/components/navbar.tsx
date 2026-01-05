@@ -1,6 +1,6 @@
 "use client";
 
-import { ActionIcon, Divider, Group, Text } from "@mantine/core";
+import { ActionIcon, Divider, Group, Stack, Text } from "@mantine/core";
 import {
   IconArrowLeft,
   IconBellRinging,
@@ -63,24 +63,35 @@ export function Navbar({
     }
   };
 
-  const links = (navigation?.data?.links || []).map((item) => {
-    const Icon = iconMap[item.icon || "IconPlayerRecord"];
+  const links = navigation?.section?.map((section) => {
+    const html = section.links?.map((item) => {
+      const Icon = iconMap[item.icon || "IconPlayerRecord"];
+      return (
+        <Link
+          className={classes.link}
+          data-active={pathname.startsWith(item.url || "") || undefined}
+          key={item.label}
+          href={item.url || "#"}
+          onClick={(e) => handleLinkClick(e, item.url || "#")}
+        >
+          <Icon
+            className={classes.linkIcon}
+            stroke={2}
+            style={{ width: "28px", height: "28px" }}
+            color={item.color ? item.color : undefined}
+          />
+          <span>{item.label}</span>
+        </Link>
+      );
+    });
+
     return (
-      <Link
-        className={classes.link}
-        data-active={pathname.startsWith(item.url || "") || undefined}
-        key={item.label}
-        href={item.url || "#"}
-        onClick={(e) => handleLinkClick(e, item.url || "#")}
-      >
-        <Icon
-          className={classes.linkIcon}
-          stroke={2}
-          style={{ width: "32px", height: "32px" }}
-          color={item.color ? item.color : undefined}
-        />
-        <span>{item.label}</span>
-      </Link>
+      <div key={section.id}>
+        <Text size="md" fw={400} c="dimmed" mb="xs">
+          {section.title}
+        </Text>
+        {html}
+      </div>
     );
   });
 
@@ -107,8 +118,7 @@ export function Navbar({
         <AddFollowerForm />
 
         <Divider my="xs" color="transparent" />
-
-        {links}
+        <Stack>{links}</Stack>
       </div>
 
       <div className={classes.footer}>

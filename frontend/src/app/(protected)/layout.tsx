@@ -3,6 +3,7 @@ import { getToken } from "@/lib/token";
 import { redirect } from "next/navigation";
 import api from "../../lib/api";
 
+import publicApi from "@/lib/public-api";
 import { buildRulesFromStrapi } from "../lib/ability";
 import { AbilityProvider } from "../providers/ability-provider";
 import { NavigationProvider } from "../providers/navigation-provider";
@@ -36,13 +37,27 @@ export default async function DashboardLayout({
     (permissions.data?.role as any)?.permissions || {}
   );
 
-  const navigation = await api.navigation.getNavigation({ populate: "links" });
+  const {
+    data: { data: navigation },
+  } = await publicApi.dashboardNavbar.getDashboardNavbar({
+    populate: {
+      section: {
+        populate: {
+          links: "*",
+        },
+      },
+    },
+  });
+
+  if (!navigation) {
+    throw new Error("Failed to load navigation");
+  }
 
   return (
     <QueryProvider>
       <UserProvider user={user?.data}>
         <AbilityProvider rules={rules} role={role}>
-          <NavigationProvider navigation={navigation?.data}>
+          <NavigationProvider navigation={navigation}>
             <Shell>{children}</Shell>
           </NavigationProvider>
         </AbilityProvider>

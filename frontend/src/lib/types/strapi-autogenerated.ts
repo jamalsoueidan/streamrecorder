@@ -366,6 +366,184 @@ export interface ChangeLogResponse {
   meta?: object;
 }
 
+export interface DashboardNavbarRequest {
+  data: {
+    section?: NavigationsSectionsComponent[];
+    locale?: string;
+    localizations?: (number | string)[];
+  };
+}
+
+export interface DashboardNavbarListResponse {
+  data?: DashboardNavbar[];
+  meta?: {
+    pagination?: {
+      page?: number;
+      /** @min 25 */
+      pageSize?: number;
+      /** @max 1 */
+      pageCount?: number;
+      total?: number;
+    };
+  };
+}
+
+export interface DashboardNavbar {
+  id?: number;
+  documentId?: string;
+  section?: NavigationsSectionsComponent[];
+  /** @format date-time */
+  createdAt?: string;
+  /** @format date-time */
+  updatedAt?: string;
+  /** @format date-time */
+  publishedAt?: string;
+  createdBy?: {
+    id?: number;
+    documentId?: string;
+    firstname?: string;
+    lastname?: string;
+    username?: string;
+    /** @format email */
+    email?: string;
+    resetPasswordToken?: string;
+    registrationToken?: string;
+    isActive?: boolean;
+    roles?: {
+      id?: number;
+      documentId?: string;
+      name?: string;
+      code?: string;
+      description?: string;
+      users?: {
+        id?: number;
+        documentId?: string;
+      }[];
+      permissions?: {
+        id?: number;
+        documentId?: string;
+        action?: string;
+        actionParameters?: any;
+        subject?: string;
+        properties?: any;
+        conditions?: any;
+        role?: {
+          id?: number;
+          documentId?: string;
+        };
+        /** @format date-time */
+        createdAt?: string;
+        /** @format date-time */
+        updatedAt?: string;
+        /** @format date-time */
+        publishedAt?: string;
+        createdBy?: {
+          id?: number;
+          documentId?: string;
+        };
+        updatedBy?: {
+          id?: number;
+          documentId?: string;
+        };
+        locale?: string;
+        localizations?: {
+          id?: number;
+          documentId?: string;
+        }[];
+      }[];
+      /** @format date-time */
+      createdAt?: string;
+      /** @format date-time */
+      updatedAt?: string;
+      /** @format date-time */
+      publishedAt?: string;
+      createdBy?: {
+        id?: number;
+        documentId?: string;
+      };
+      updatedBy?: {
+        id?: number;
+        documentId?: string;
+      };
+      locale?: string;
+      localizations?: {
+        id?: number;
+        documentId?: string;
+      }[];
+    }[];
+    blocked?: boolean;
+    preferedLanguage?: string;
+    /** @format date-time */
+    createdAt?: string;
+    /** @format date-time */
+    updatedAt?: string;
+    /** @format date-time */
+    publishedAt?: string;
+    createdBy?: {
+      id?: number;
+      documentId?: string;
+    };
+    updatedBy?: {
+      id?: number;
+      documentId?: string;
+    };
+    locale?: string;
+    localizations?: {
+      id?: number;
+      documentId?: string;
+    }[];
+  };
+  updatedBy?: {
+    id?: number;
+    documentId?: string;
+  };
+  locale?: string;
+  localizations?: {
+    id?: number;
+    documentId?: string;
+    section?: NavigationsSectionsComponent[];
+    /** @format date-time */
+    createdAt?: string;
+    /** @format date-time */
+    updatedAt?: string;
+    /** @format date-time */
+    publishedAt?: string;
+    createdBy?: {
+      id?: number;
+      documentId?: string;
+    };
+    updatedBy?: {
+      id?: number;
+      documentId?: string;
+    };
+    locale?: string;
+    localizations?: {
+      id?: number;
+      documentId?: string;
+    }[];
+  }[];
+}
+
+export interface DashboardNavbarResponse {
+  data?: DashboardNavbar;
+  meta?: object;
+}
+
+export interface NavigationsLinksComponent {
+  id?: number;
+  label?: string;
+  url?: string;
+  icon?: NavigationsLinksComponentIconEnum;
+  color?: string;
+}
+
+export interface NavigationsSectionsComponent {
+  id?: number;
+  title?: string;
+  icon?: NavigationsSectionsComponentIconEnum;
+  links?: NavigationsLinksComponent[];
+}
+
 export interface FaqRequest {
   data: {
     title?: string;
@@ -1497,14 +1675,6 @@ export interface NavigationResponse {
   meta?: object;
 }
 
-export interface NavigationsLinksComponent {
-  id?: number;
-  label?: string;
-  url?: string;
-  icon?: NavigationsLinksComponentIconEnum;
-  color?: string;
-}
-
 export interface RecordingRequest {
   data: {
     /** @example "string or id" */
@@ -2164,6 +2334,32 @@ export interface FiltersResponse {
   types?: FilterOption[];
 }
 
+export enum NavigationsLinksComponentIconEnum {
+  IconFlower = "IconFlower",
+  IconUsers = "IconUsers",
+  IconPlayerPlayFilled = "IconPlayerPlayFilled",
+  IconWorldSearch = "IconWorldSearch",
+  IconQuestionMark = "IconQuestionMark",
+  IconVideo = "IconVideo",
+  IconPlayerRecord = "IconPlayerRecord",
+  IconBrandSafari = "IconBrandSafari",
+  IconHeart = "IconHeart",
+  IconStar = "IconStar",
+}
+
+export enum NavigationsSectionsComponentIconEnum {
+  IconFlower = "IconFlower",
+  IconUsers = "IconUsers",
+  IconPlayerPlayFilled = "IconPlayerPlayFilled",
+  IconWorldSearch = "IconWorldSearch",
+  IconQuestionMark = "IconQuestionMark",
+  IconVideo = "IconVideo",
+  IconPlayerRecord = "IconPlayerRecord",
+  IconBrandSafari = "IconBrandSafari",
+  IconHeart = "IconHeart",
+  IconStar = "IconStar",
+}
+
 export enum FollowerRequestTypeEnum {
   Tiktok = "tiktok",
   Twitch = "twitch",
@@ -2196,19 +2392,6 @@ export enum MessageGenderEnum {
   Male = "male",
   Female = "female",
   Unknown = "unknown",
-}
-
-export enum NavigationsLinksComponentIconEnum {
-  IconFlower = "IconFlower",
-  IconUsers = "IconUsers",
-  IconPlayerPlayFilled = "IconPlayerPlayFilled",
-  IconWorldSearch = "IconWorldSearch",
-  IconQuestionMark = "IconQuestionMark",
-  IconVideo = "IconVideo",
-  IconPlayerRecord = "IconPlayerRecord",
-  IconBrandSafari = "IconBrandSafari",
-  IconHeart = "IconHeart",
-  IconStar = "IconStar",
 }
 
 export enum RecordingGenderEnum {
@@ -2326,6 +2509,36 @@ export interface DeleteChangeLogsIdParams {
 
 /** @format int64 */
 export type DeleteChangeLogsIdData = number;
+
+export interface GetDashboardNavbarParams {
+  /** Sort by attributes ascending (asc) or descending (desc) */
+  sort?: string;
+  /** Return page/pageSize (default: true) */
+  "pagination[withCount]"?: boolean;
+  /** Page number (default: 0) */
+  "pagination[page]"?: number;
+  /** Page size (default: 25) */
+  "pagination[pageSize]"?: number;
+  /** Offset value (default: 0) */
+  "pagination[start]"?: number;
+  /** Number of entities to return (default: 25) */
+  "pagination[limit]"?: number;
+  /** Fields to return (ex: title,author) */
+  fields?: string;
+  /** Relations to return */
+  populate?: string | string[] | object;
+  /** Filters to apply */
+  filters?: Record<string, any>;
+  /** Locale to apply */
+  locale?: string;
+}
+
+export type GetDashboardNavbarData = DashboardNavbarResponse;
+
+export type PutDashboardNavbarData = DashboardNavbarResponse;
+
+/** @format int64 */
+export type DeleteDashboardNavbarData = number;
 
 export interface GetFaqsParams {
   /** Sort by attributes ascending (asc) or descending (desc) */
@@ -2465,7 +2678,7 @@ export interface DeleteMessagesIdParams {
 /** @format int64 */
 export type DeleteMessagesIdData = number;
 
-export interface GetNavigationParams {
+export interface GetNavigationsParams {
   /** Sort by attributes ascending (asc) or descending (desc) */
   sort?: string;
   /** Return page/pageSize (default: true) */
@@ -2488,12 +2701,28 @@ export interface GetNavigationParams {
   locale?: string;
 }
 
-export type GetNavigationData = NavigationResponse;
+export type GetNavigationsData = NavigationListResponse;
 
-export type PutNavigationData = NavigationResponse;
+export type PostNavigationsData = NavigationResponse;
+
+export interface GetNavigationsIdParams {
+  id: string;
+}
+
+export type GetNavigationsIdData = NavigationResponse;
+
+export interface PutNavigationsIdParams {
+  id: string;
+}
+
+export type PutNavigationsIdData = NavigationResponse;
+
+export interface DeleteNavigationsIdParams {
+  id: string;
+}
 
 /** @format int64 */
-export type DeleteNavigationData = number;
+export type DeleteNavigationsIdData = number;
 
 export interface GetRecordingsParams {
   /** Sort by attributes ascending (asc) or descending (desc) */
@@ -3095,6 +3324,74 @@ export namespace ChangeLog {
   }
 }
 
+export namespace DashboardNavbar {
+  /**
+   * No description
+   * @tags Dashboard-navbar
+   * @name GetDashboardNavbar
+   * @request GET:/dashboard-navbar
+   * @secure
+   */
+  export namespace GetDashboardNavbar {
+    export type RequestParams = {};
+    export type RequestQuery = {
+      /** Sort by attributes ascending (asc) or descending (desc) */
+      sort?: string;
+      /** Return page/pageSize (default: true) */
+      "pagination[withCount]"?: boolean;
+      /** Page number (default: 0) */
+      "pagination[page]"?: number;
+      /** Page size (default: 25) */
+      "pagination[pageSize]"?: number;
+      /** Offset value (default: 0) */
+      "pagination[start]"?: number;
+      /** Number of entities to return (default: 25) */
+      "pagination[limit]"?: number;
+      /** Fields to return (ex: title,author) */
+      fields?: string;
+      /** Relations to return */
+      populate?: string | string[] | object;
+      /** Filters to apply */
+      filters?: Record<string, any>;
+      /** Locale to apply */
+      locale?: string;
+    };
+    export type RequestBody = never;
+    export type RequestHeaders = {};
+    export type ResponseBody = GetDashboardNavbarData;
+  }
+
+  /**
+   * No description
+   * @tags Dashboard-navbar
+   * @name PutDashboardNavbar
+   * @request PUT:/dashboard-navbar
+   * @secure
+   */
+  export namespace PutDashboardNavbar {
+    export type RequestParams = {};
+    export type RequestQuery = {};
+    export type RequestBody = DashboardNavbarRequest;
+    export type RequestHeaders = {};
+    export type ResponseBody = PutDashboardNavbarData;
+  }
+
+  /**
+   * No description
+   * @tags Dashboard-navbar
+   * @name DeleteDashboardNavbar
+   * @request DELETE:/dashboard-navbar
+   * @secure
+   */
+  export namespace DeleteDashboardNavbar {
+    export type RequestParams = {};
+    export type RequestQuery = {};
+    export type RequestBody = never;
+    export type RequestHeaders = {};
+    export type ResponseBody = DeleteDashboardNavbarData;
+  }
+}
+
 export namespace Faq {
   /**
    * No description
@@ -3500,11 +3797,11 @@ export namespace Navigation {
   /**
    * No description
    * @tags Navigation
-   * @name GetNavigation
-   * @request GET:/navigation
+   * @name GetNavigations
+   * @request GET:/navigations
    * @secure
    */
-  export namespace GetNavigation {
+  export namespace GetNavigations {
     export type RequestParams = {};
     export type RequestQuery = {
       /** Sort by attributes ascending (asc) or descending (desc) */
@@ -3530,37 +3827,73 @@ export namespace Navigation {
     };
     export type RequestBody = never;
     export type RequestHeaders = {};
-    export type ResponseBody = GetNavigationData;
+    export type ResponseBody = GetNavigationsData;
   }
 
   /**
    * No description
    * @tags Navigation
-   * @name PutNavigation
-   * @request PUT:/navigation
+   * @name PostNavigations
+   * @request POST:/navigations
    * @secure
    */
-  export namespace PutNavigation {
+  export namespace PostNavigations {
     export type RequestParams = {};
     export type RequestQuery = {};
     export type RequestBody = NavigationRequest;
     export type RequestHeaders = {};
-    export type ResponseBody = PutNavigationData;
+    export type ResponseBody = PostNavigationsData;
   }
 
   /**
    * No description
    * @tags Navigation
-   * @name DeleteNavigation
-   * @request DELETE:/navigation
+   * @name GetNavigationsId
+   * @request GET:/navigations/{id}
    * @secure
    */
-  export namespace DeleteNavigation {
-    export type RequestParams = {};
+  export namespace GetNavigationsId {
+    export type RequestParams = {
+      id: string;
+    };
     export type RequestQuery = {};
     export type RequestBody = never;
     export type RequestHeaders = {};
-    export type ResponseBody = DeleteNavigationData;
+    export type ResponseBody = GetNavigationsIdData;
+  }
+
+  /**
+   * No description
+   * @tags Navigation
+   * @name PutNavigationsId
+   * @request PUT:/navigations/{id}
+   * @secure
+   */
+  export namespace PutNavigationsId {
+    export type RequestParams = {
+      id: string;
+    };
+    export type RequestQuery = {};
+    export type RequestBody = NavigationRequest;
+    export type RequestHeaders = {};
+    export type ResponseBody = PutNavigationsIdData;
+  }
+
+  /**
+   * No description
+   * @tags Navigation
+   * @name DeleteNavigationsId
+   * @request DELETE:/navigations/{id}
+   * @secure
+   */
+  export namespace DeleteNavigationsId {
+    export type RequestParams = {
+      id: string;
+    };
+    export type RequestQuery = {};
+    export type RequestBody = never;
+    export type RequestHeaders = {};
+    export type ResponseBody = DeleteNavigationsIdData;
   }
 }
 
@@ -4688,6 +5021,67 @@ export class Api<
         ...params,
       }),
   };
+  dashboardNavbar = {
+    /**
+     * No description
+     *
+     * @tags Dashboard-navbar
+     * @name GetDashboardNavbar
+     * @request GET:/dashboard-navbar
+     * @secure
+     */
+    getDashboardNavbar: (
+      query: GetDashboardNavbarParams,
+      params: RequestParams = {},
+    ) =>
+      this.request<GetDashboardNavbarData, Error>({
+        path: `/dashboard-navbar`,
+        method: "GET",
+        query: query,
+        secure: true,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Dashboard-navbar
+     * @name PutDashboardNavbar
+     * @request PUT:/dashboard-navbar
+     * @secure
+     */
+    putDashboardNavbar: (
+      data: DashboardNavbarRequest,
+      params: RequestParams = {},
+    ) =>
+      this.request<PutDashboardNavbarData, Error>({
+        path: `/dashboard-navbar`,
+        method: "PUT",
+        body: data,
+        secure: true,
+        type: ContentType.Json,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Dashboard-navbar
+     * @name DeleteDashboardNavbar
+     * @request DELETE:/dashboard-navbar
+     * @secure
+     */
+    deleteDashboardNavbar: (params: RequestParams = {}) =>
+      this.request<DeleteDashboardNavbarData, Error>({
+        path: `/dashboard-navbar`,
+        method: "DELETE",
+        secure: true,
+        format: "json",
+        ...params,
+      }),
+  };
   faq = {
     /**
      * No description
@@ -5076,13 +5470,13 @@ export class Api<
      * No description
      *
      * @tags Navigation
-     * @name GetNavigation
-     * @request GET:/navigation
+     * @name GetNavigations
+     * @request GET:/navigations
      * @secure
      */
-    getNavigation: (query: GetNavigationParams, params: RequestParams = {}) =>
-      this.request<GetNavigationData, Error>({
-        path: `/navigation`,
+    getNavigations: (query: GetNavigationsParams, params: RequestParams = {}) =>
+      this.request<GetNavigationsData, Error>({
+        path: `/navigations`,
         method: "GET",
         query: query,
         secure: true,
@@ -5094,13 +5488,56 @@ export class Api<
      * No description
      *
      * @tags Navigation
-     * @name PutNavigation
-     * @request PUT:/navigation
+     * @name PostNavigations
+     * @request POST:/navigations
      * @secure
      */
-    putNavigation: (data: NavigationRequest, params: RequestParams = {}) =>
-      this.request<PutNavigationData, Error>({
-        path: `/navigation`,
+    postNavigations: (data: NavigationRequest, params: RequestParams = {}) =>
+      this.request<PostNavigationsData, Error>({
+        path: `/navigations`,
+        method: "POST",
+        body: data,
+        secure: true,
+        type: ContentType.Json,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Navigation
+     * @name GetNavigationsId
+     * @request GET:/navigations/{id}
+     * @secure
+     */
+    getNavigationsId: (
+      { id, ...query }: GetNavigationsIdParams,
+      params: RequestParams = {},
+    ) =>
+      this.request<GetNavigationsIdData, Error>({
+        path: `/navigations/${id}`,
+        method: "GET",
+        secure: true,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Navigation
+     * @name PutNavigationsId
+     * @request PUT:/navigations/{id}
+     * @secure
+     */
+    putNavigationsId: (
+      { id, ...query }: PutNavigationsIdParams,
+      data: NavigationRequest,
+      params: RequestParams = {},
+    ) =>
+      this.request<PutNavigationsIdData, Error>({
+        path: `/navigations/${id}`,
         method: "PUT",
         body: data,
         secure: true,
@@ -5113,13 +5550,16 @@ export class Api<
      * No description
      *
      * @tags Navigation
-     * @name DeleteNavigation
-     * @request DELETE:/navigation
+     * @name DeleteNavigationsId
+     * @request DELETE:/navigations/{id}
      * @secure
      */
-    deleteNavigation: (params: RequestParams = {}) =>
-      this.request<DeleteNavigationData, Error>({
-        path: `/navigation`,
+    deleteNavigationsId: (
+      { id, ...query }: DeleteNavigationsIdParams,
+      params: RequestParams = {},
+    ) =>
+      this.request<DeleteNavigationsIdData, Error>({
+        path: `/navigations/${id}`,
         method: "DELETE",
         secure: true,
         format: "json",

@@ -83,37 +83,64 @@ export function MobileBar() {
     stroke: 1.5,
   };
 
-  const currentValue =
-    (navigation?.data?.links || []).find((item) =>
-      pathname.startsWith(item.url || "")
-    )?.url || "";
-
-  const links = (navigation?.data?.links || []).map((item) => {
-    const Icon = iconMap[item.icon || "IconPlayerRecord"];
-
-    return {
-      value: item.url || "",
-      label: (
-        <Stack gap="0" align="center">
-          <Icon
-            {...iconProps}
-            style={{ width: "18px", height: "18px" }}
-            color={item.color ? item.color : undefined}
-          />
-          <Text c="dimmed" size="xs">
-            {item.label}
-          </Text>
-        </Stack>
-      ),
-    };
-  });
-
   const handleChange = (value: string) => {
-    if (value === "menu") return;
+    if (value.substring(0, 4) === "menu") return;
     startTransition(() => {
       router.push(value);
     });
   };
+
+  const currentValue = (() => {
+    const section = navigation?.section?.find((section) =>
+      section.links?.some((link) => pathname.startsWith(link.url || ""))
+    );
+    return section ? "menu" + section.title : "";
+  })();
+
+  const links =
+    navigation?.section?.map((section) => {
+      const Icon = iconMap[section.icon || "IconPlayerRecord"];
+      return {
+        value: "menu" + section.title,
+        label: (
+          <Menu position="top-start" offset={15}>
+            <Menu.Target>
+              <Stack gap={4} align="center">
+                <Icon
+                  {...iconProps}
+                  style={{ width: "18px", height: "18px" }}
+                />
+                <Text c="dimmed" size="xs">
+                  {section.title}
+                </Text>
+              </Stack>
+            </Menu.Target>
+
+            <Menu.Dropdown>
+              {section.links?.map((item) => {
+                const Icon = iconMap[item.icon || "IconPlayerRecord"];
+
+                return (
+                  <Menu.Item
+                    key={item.id}
+                    leftSection={
+                      <Icon
+                        {...iconProps}
+                        style={{ width: "18px", height: "18px" }}
+                        color={item.color ? item.color : undefined}
+                      />
+                    }
+                    onClick={() => handleChange(item.url || "#")}
+                  >
+                    {item.label}
+                  </Menu.Item>
+                );
+              })}
+            </Menu.Dropdown>
+          </Menu>
+        ),
+      };
+    }) || [];
 
   return (
     <>
@@ -140,7 +167,7 @@ export function MobileBar() {
 
       <SegmentedControl
         size="xl"
-        w="100%"
+        fullWidth
         value={currentValue}
         onChange={handleChange}
         data={[
@@ -148,13 +175,9 @@ export function MobileBar() {
           {
             value: "menu",
             label: (
-              <Menu shadow="md" width={200} position="top-end">
+              <Menu offset={15} position="top-start">
                 <Menu.Target>
-                  <Stack
-                    gap="0"
-                    align="center"
-                    onClick={(e) => e.stopPropagation()}
-                  >
+                  <Stack gap={4} align="center">
                     <IconDotsVertical
                       {...iconProps}
                       style={{ width: "18px", height: "18px" }}
