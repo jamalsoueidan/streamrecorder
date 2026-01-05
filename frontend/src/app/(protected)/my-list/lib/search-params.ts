@@ -40,6 +40,11 @@ export const buildCreatorsFilters = (filters: CreatorFilters) => ({
   ...(filters.country && { countryCode: { $eq: filters.country } }),
   ...(filters.language && { languageCode: { $eq: filters.language } }),
   ...(filters.type && { type: { $eq: filters.type } }),
-  ...(filters.search && { username: { $containsi: filters.search } }),
+  ...(filters.search && {
+    $or: [
+      { username: { $containsi: filters.search } },
+      { nickname: { $containsi: filters.search } },
+    ],
+  }),
   ...getDateRange(filters.dateRange),
 });

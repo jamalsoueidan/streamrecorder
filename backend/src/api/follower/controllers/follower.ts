@@ -178,11 +178,19 @@ export default factories.createCoreController(
           if (filters.type?.$eq) {
             query = query.where("f.type", filters.type.$eq);
           }
-          if (filters.username?.$containsi) {
-            const escapedUsername = escapeLikePattern(
-              filters.username.$containsi
-            );
-            query = query.whereILike("f.username", `%${escapedUsername}%`);
+          if (filters.$or) {
+            const searchTerm =
+              filters.$or[0]?.username?.$containsi ||
+              filters.$or[0]?.nickname?.$containsi;
+            if (searchTerm) {
+              const escapedSearch = escapeLikePattern(searchTerm);
+              query = query.where(function (this: any) {
+                this.whereILike(
+                  "f.username",
+                  `%${escapedSearch}%`
+                ).orWhereILike("f.nickname", `%${escapedSearch}%`);
+              });
+            }
           }
         }
 
