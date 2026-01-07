@@ -15,7 +15,6 @@ export default async function VideoPage({ params }: PageProps) {
   const { id, username, type } = await params;
 
   const data = await getRecordingById(id);
-
   const sources = data.sources ?? [];
   const lastSource = sources[sources.length - 1];
   const previewUrl = lastSource ? `/media${lastSource.path}screenshot.jpg` : "";
@@ -31,7 +30,9 @@ export default async function VideoPage({ params }: PageProps) {
     name: `${data.follower?.nickname} Stream - ${dayjs(data.createdAt).format(
       "MMM D, YYYY"
     )}`,
-    description: `Recorded live stream from ${data.follower?.nickname}`,
+    description: `Recorded live stream from ${
+      data.follower?.nickname
+    } on ${dayjs(data.createdAt).format("MMM D, YYYY")}`,
     thumbnailUrl: sources?.length
       ? "https://livestreamrecorder.com/media" +
         sources[sources.length - 1].path +
