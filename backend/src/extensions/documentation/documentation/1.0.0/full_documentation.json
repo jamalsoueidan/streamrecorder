@@ -20,7 +20,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2026-01-05T21:34:51.564Z"
+    "x-generation-date": "2026-01-07T14:53:43.919Z"
   },
   "servers": [
     {
@@ -8528,6 +8528,9 @@
                   "unknown"
                 ]
               },
+              "description": {
+                "type": "string"
+              },
               "country": {
                 "type": "string"
               },
@@ -8560,6 +8563,10 @@
               },
               "pause": {
                 "type": "boolean"
+              },
+              "faq": {},
+              "category": {
+                "type": "string"
               },
               "locale": {
                 "type": "string"
@@ -8646,6 +8653,9 @@
               "female",
               "unknown"
             ]
+          },
+          "description": {
+            "type": "string"
           },
           "country": {
             "type": "string"
@@ -9267,6 +9277,10 @@
           "pause": {
             "type": "boolean"
           },
+          "faq": {},
+          "category": {
+            "type": "string"
+          },
           "createdAt": {
             "type": "string",
             "format": "date-time"
@@ -9335,6 +9349,9 @@
                     "female",
                     "unknown"
                   ]
+                },
+                "description": {
+                  "type": "string"
                 },
                 "country": {
                   "type": "string"
@@ -9486,6 +9503,10 @@
                 },
                 "pause": {
                   "type": "boolean"
+                },
+                "faq": {},
+                "category": {
+                  "type": "string"
                 },
                 "createdAt": {
                   "type": "string",
@@ -10139,6 +10160,9 @@
                         "unknown"
                       ]
                     },
+                    "description": {
+                      "type": "string"
+                    },
                     "country": {
                       "type": "string"
                     },
@@ -10506,6 +10530,10 @@
                     },
                     "pause": {
                       "type": "boolean"
+                    },
+                    "faq": {},
+                    "category": {
+                      "type": "string"
                     },
                     "createdAt": {
                       "type": "string",
@@ -11353,6 +11381,9 @@
                   "unknown"
                 ]
               },
+              "description": {
+                "type": "string"
+              },
               "country": {
                 "type": "string"
               },
@@ -11972,6 +12003,10 @@
               },
               "pause": {
                 "type": "boolean"
+              },
+              "faq": {},
+              "category": {
+                "type": "string"
               },
               "createdAt": {
                 "type": "string",
