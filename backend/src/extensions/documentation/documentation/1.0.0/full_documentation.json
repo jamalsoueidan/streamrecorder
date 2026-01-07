@@ -20,7 +20,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2026-01-07T14:53:43.919Z"
+    "x-generation-date": "2026-01-07T18:12:30.191Z"
   },
   "servers": [
     {
@@ -8564,10 +8564,13 @@
               "pause": {
                 "type": "boolean"
               },
-              "faq": {},
+              "tagline": {
+                "type": "string"
+              },
               "category": {
                 "type": "string"
               },
+              "faq": {},
               "locale": {
                 "type": "string"
               },
@@ -9277,10 +9280,13 @@
           "pause": {
             "type": "boolean"
           },
-          "faq": {},
+          "tagline": {
+            "type": "string"
+          },
           "category": {
             "type": "string"
           },
+          "faq": {},
           "createdAt": {
             "type": "string",
             "format": "date-time"
@@ -9504,10 +9510,13 @@
                 "pause": {
                   "type": "boolean"
                 },
-                "faq": {},
+                "tagline": {
+                  "type": "string"
+                },
                 "category": {
                   "type": "string"
                 },
+                "faq": {},
                 "createdAt": {
                   "type": "string",
                   "format": "date-time"
@@ -10531,10 +10540,13 @@
                     "pause": {
                       "type": "boolean"
                     },
-                    "faq": {},
+                    "tagline": {
+                      "type": "string"
+                    },
                     "category": {
                       "type": "string"
                     },
+                    "faq": {},
                     "createdAt": {
                       "type": "string",
                       "format": "date-time"
@@ -12004,10 +12016,13 @@
               "pause": {
                 "type": "boolean"
               },
-              "faq": {},
+              "tagline": {
+                "type": "string"
+              },
               "category": {
                 "type": "string"
               },
+              "faq": {},
               "createdAt": {
                 "type": "string",
                 "format": "date-time"
