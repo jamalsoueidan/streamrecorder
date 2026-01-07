@@ -35,6 +35,9 @@
         "unknown"
       ]
     },
+    "description": {
+      "type": "text"
+    },
     "country": {
       "type": "string"
     },
@@ -67,6 +70,12 @@
     "pause": {
       "type": "boolean",
       "default": false
+    },
+    "faq": {
+      "type": "json"
+    },
+    "category": {
+      "type": "string"
     }
   }
 }

@@ -557,11 +557,14 @@ export interface ApiFollowerFollower extends Struct.CollectionTypeSchema {
   };
   attributes: {
     avatar: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    category: Schema.Attribute.String;
     country: Schema.Attribute.String;
     countryCode: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    description: Schema.Attribute.Text;
+    faq: Schema.Attribute.JSON;
     gender: Schema.Attribute.Enumeration<['male', 'female', 'unknown']>;
     language: Schema.Attribute.String;
     languageCode: Schema.Attribute.String;
