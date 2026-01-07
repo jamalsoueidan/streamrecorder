@@ -28,7 +28,7 @@ export async function GET(
       Bucket: process.env.MEDIA_BUCKET!,
       Key: filePath,
     });
-    const signedUrl = await getSignedUrl(s3, command, { expiresIn: 3600 });
+    const signedUrl = await getSignedUrl(s3, command, { expiresIn: 1800 });
     return Response.redirect(signedUrl);
   } else {
     const command = new GetObjectCommand({
