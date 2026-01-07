@@ -30,7 +30,7 @@ export default async function Page({ params }: PageProps) {
     name: follower.nickname,
     description: follower.description,
     image: follower.avatar?.url,
-    url: `https://www.livestreamrecorder.com/${follower.type}/${follower.username}`,
+    url: `https://livestreamrecorder.com/${follower.type}/${follower.username}`,
     video: recordings.slice(0, 5).map((video) => {
       const duration =
         video.sources?.reduce(
@@ -44,7 +44,7 @@ export default async function Page({ params }: PageProps) {
           "MMM D, YYYY"
         )}`,
         thumbnailUrl: video.sources?.length
-          ? "https://www.livestreamrecorder.com/media" +
+          ? "https://livestreamrecorder.com/media" +
             video.sources[video.sources.length - 1].path +
             "screenshot.jpg"
           : null,
@@ -55,7 +55,7 @@ export default async function Page({ params }: PageProps) {
         duration: `PT${Math.floor(duration / 60)}M${Math.round(
           duration % 60
         )}S`,
-        contentUrl: `https://www.livestreamrecorder.com/${follower?.type}/${follower?.username}/video/${video.documentId}`,
+        contentUrl: `https://livestreamrecorder.com/${follower?.type}/${follower?.username}/video/${video.documentId}`,
       };
     }),
     nationality: follower.country,
