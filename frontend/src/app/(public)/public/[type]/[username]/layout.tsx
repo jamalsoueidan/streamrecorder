@@ -19,7 +19,7 @@ import { Metadata } from "next";
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ username: string; type: FollowerTypeEnum }>;
+  params: Promise<{ username: string; type: string }>;
 }): Promise<Metadata> {
   const { type, username } = await params;
   const follower = await getFollower({ username, type });
