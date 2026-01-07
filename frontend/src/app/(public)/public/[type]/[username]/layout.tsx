@@ -130,7 +130,7 @@ export default async function Layout({
         {follower.faq ? (
           <>
             <Title order={3}>FAQ</Title>
-            {follower.faq.map((item) => (
+            {follower.faq.map((item: { q: string; a: string }) => (
               <Paper
                 key={item.q}
                 p="md"
