@@ -32,7 +32,7 @@ const data = [
     links: [
       { link: "/news", label: "News" },
       { link: "/pricing", label: "Pricing" },
-      { link: "/faq", label: "Faq" },
+      { link: "/faq", label: "FAQ" },
       { link: "/product-updates", label: "Updates" },
       { link: "/contact", label: "Contact" },
     ],

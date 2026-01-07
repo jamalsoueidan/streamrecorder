@@ -48,6 +48,9 @@ export default async function Page({ params }: PageProps) {
             video.sources[video.sources.length - 1].path +
             "screenshot.jpg"
           : null,
+        description: `Recorded live stream from ${follower.nickname} on ${dayjs(
+          video.createdAt
+        ).format("MMM D, YYYY")}`,
         uploadDate: video.createdAt,
         duration: `PT${Math.floor(duration / 60)}M${Math.round(
           duration % 60

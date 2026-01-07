@@ -30,7 +30,9 @@ export async function generateMetadata({
   }
 
   const title = `${follower.nickname} VODs & Recordings | Live Stream Recorder`;
-  const description = `Watch ${follower.nickname}'s recorded streams anytime. Never miss a live stream — we record automatically so you can watch later or download for free.`;
+  const description =
+    follower.tagline ||
+    `Watch ${follower.nickname}'s recorded streams anytime. Never miss a live stream — we record automatically so you can watch later or download for free.`;
 
   return {
     title,
