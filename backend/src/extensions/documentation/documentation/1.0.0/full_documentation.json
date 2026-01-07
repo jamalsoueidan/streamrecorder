@@ -20,7 +20,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2026-01-07T18:12:30.191Z"
+    "x-generation-date": "2026-01-07T18:22:14.065Z"
   },
   "servers": [
     {
@@ -8564,13 +8564,13 @@
               "pause": {
                 "type": "boolean"
               },
-              "tagline": {
-                "type": "string"
-              },
+              "faq": {},
               "category": {
                 "type": "string"
               },
-              "faq": {},
+              "tagline": {
+                "type": "string"
+              },
               "locale": {
                 "type": "string"
               },
@@ -9280,13 +9280,13 @@
           "pause": {
             "type": "boolean"
           },
-          "tagline": {
-            "type": "string"
-          },
+          "faq": {},
           "category": {
             "type": "string"
           },
-          "faq": {},
+          "tagline": {
+            "type": "string"
+          },
           "createdAt": {
             "type": "string",
             "format": "date-time"
@@ -9510,13 +9510,13 @@
                 "pause": {
                   "type": "boolean"
                 },
-                "tagline": {
-                  "type": "string"
-                },
+                "faq": {},
                 "category": {
                   "type": "string"
                 },
-                "faq": {},
+                "tagline": {
+                  "type": "string"
+                },
                 "createdAt": {
                   "type": "string",
                   "format": "date-time"
@@ -10540,13 +10540,13 @@
                     "pause": {
                       "type": "boolean"
                     },
-                    "tagline": {
-                      "type": "string"
-                    },
+                    "faq": {},
                     "category": {
                       "type": "string"
                     },
-                    "faq": {},
+                    "tagline": {
+                      "type": "string"
+                    },
                     "createdAt": {
                       "type": "string",
                       "format": "date-time"
@@ -12016,13 +12016,13 @@
               "pause": {
                 "type": "boolean"
               },
-              "tagline": {
-                "type": "string"
-              },
+              "faq": {},
               "category": {
                 "type": "string"
               },
-              "faq": {},
+              "tagline": {
+                "type": "string"
+              },
               "createdAt": {
                 "type": "string",
                 "format": "date-time"
