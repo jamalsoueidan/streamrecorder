@@ -14,7 +14,6 @@ export async function GET(
   request: Request,
   { params }: { params: Promise<{ path: string[] }> }
 ) {
-  console.log("media route called with params:");
   const { path } = await params;
   const filePath = path.join("/");
   const isVideo = /\.(mp4|webm|mov|avi|mkv)$/i.test(filePath);

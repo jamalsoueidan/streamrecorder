@@ -24,12 +24,12 @@ export const URL_PATTERNS: Record<
 
 export const getSocialUrl = (username: string, type: FollowerTypeEnum) => {
   const patternFn = SOCIAL_URL_PATTERNS[type];
-  return patternFn ? patternFn(username) : "not found" + type + username;
+  return patternFn ? patternFn(username) : "/404";
 };
 
 export const getProfileUrl = (username: string, type: FollowerTypeEnum) => {
   const patternFn = URL_PATTERNS[type];
-  return patternFn ? patternFn(username) : "not found" + type + username;
+  return patternFn ? patternFn(username) : "/404";
 };
 
 export default function OpenSocial({ follower }: { follower: Follower }) {

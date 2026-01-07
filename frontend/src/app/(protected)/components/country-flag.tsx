@@ -11,15 +11,15 @@ export const CountryFlag = ({
   countryCode,
   size = 24,
 }: CountryFlagProps) => {
+  if (countryCode === "-" || !countryCode || !country) {
+    return null;
+  }
+
   return (
-    <Tooltip
-      label={country !== "-" && country ? country.toLowerCase() : "unknown"}
-    >
+    <Tooltip label={country.toLowerCase()}>
       <Image
-        src={`https://flagcdn.com/w40/${
-          countryCode !== "-" && countryCode ? countryCode.toLowerCase() : "un"
-        }.png`}
-        alt={country !== "-" && country ? country.toLowerCase() : "unknown"}
+        src={`https://flagcdn.com/w40/${countryCode.toLowerCase()}.png`}
+        alt={country.toLowerCase()}
         style={{
           width: size,
           height: size * 0.75,
