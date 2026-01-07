@@ -730,8 +730,9 @@ export interface FollowerRequest {
     lastCheckedAt?: string;
     protected?: boolean;
     pause?: boolean;
-    faq?: any;
+    tagline?: string;
     category?: string;
+    faq?: any;
     locale?: string;
     localizations?: (number | string)[];
   };
@@ -982,8 +983,9 @@ export interface Follower {
   lastCheckedAt?: string;
   protected?: boolean;
   pause?: boolean;
-  faq?: any;
+  tagline?: string;
   category?: string;
+  faq?: any;
   /** @format date-time */
   createdAt?: string;
   /** @format date-time */
@@ -1062,8 +1064,9 @@ export interface Follower {
     lastCheckedAt?: string;
     protected?: boolean;
     pause?: boolean;
-    faq?: any;
+    tagline?: string;
     category?: string;
+    faq?: any;
     /** @format date-time */
     createdAt?: string;
     /** @format date-time */
@@ -1424,8 +1427,9 @@ export interface Message {
       lastCheckedAt?: string;
       protected?: boolean;
       pause?: boolean;
-      faq?: any;
+      tagline?: string;
       category?: string;
+      faq?: any;
       /** @format date-time */
       createdAt?: string;
       /** @format date-time */
@@ -1945,8 +1949,9 @@ export interface Recording {
     lastCheckedAt?: string;
     protected?: boolean;
     pause?: boolean;
-    faq?: any;
+    tagline?: string;
     category?: string;
+    faq?: any;
     /** @format date-time */
     createdAt?: string;
     /** @format date-time */

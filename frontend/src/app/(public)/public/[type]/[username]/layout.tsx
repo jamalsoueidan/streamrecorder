@@ -110,7 +110,8 @@ export default async function Layout({
               )}
             </Group>
             <Text>
-              {`Watch ${follower.nickname}'s recorded streams anytime. Never miss a live stream — we record automatically.`}
+              {follower.tagline ||
+                `Watch ${follower.nickname}'s recorded streams anytime. Never miss a live stream — we record automatically.`}
             </Text>
           </Stack>
         </Flex>

@@ -71,11 +71,14 @@
       "type": "boolean",
       "default": false
     },
-    "faq": {
-      "type": "json"
+    "tagline": {
+      "type": "string"
     },
     "category": {
       "type": "string"
+    },
+    "faq": {
+      "type": "json"
     }
   }
 }
