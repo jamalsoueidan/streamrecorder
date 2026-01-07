@@ -1,0 +1,20 @@
+services:
+  create-streamlink-service:
+    image: "alpine:latest"
+    restart: "no"
+    volumes:
+      - "./streamlink-app:/app"
+    command: "sh -c 'cat > /app/service.py << '\"'\"'PYEOF'\"'\"'\nfrom fastapi import FastAPI\nfrom pydantic import BaseModel\nfrom typing import Optional, Dict, List\nimport streamlink, asyncio, time, base64\nfrom concurrent.futures import ThreadPoolExecutor\n\napp = FastAPI()\nexecutor = ThreadPoolExecutor(max_workers=20)\n\ndef parse_cookie_file(cookie_string: str) -> Dict[str, str]:\n    \"\"\"Parse Netscape cookie file string into dict.\"\"\"\n    cookies = {}\n    for line in cookie_string.strip().split(\"\\n\"):\n        line = line.strip()\n        if not line or line.startswith(\"#\"):\n            continue\n        parts = line.split(\"\\t\")\n        if len(parts) >= 7:\n            name = parts[5]\n            value = parts[6]\n            cookies[name] = value\n    return cookies\n\nclass Req(BaseModel):\n    url: str\n    cookie_file_base64: Optional[str] = None\n\nclass BulkReq(BaseModel):\n    urls: List[str]\n    cookie_file_base64: Optional[str] = None\n\ndef check(url: str, cookie_file_base64: Optional[str] = None):\n    start = time.time()\n    try:\n        session = streamlink.Streamlink()\n        \n        if cookie_file_base64:\n            cookie_string = base64.b64decode(cookie_file_base64).decode(\"utf-8\")\n            cookies = parse_cookie_file(cookie_string)\n            if cookies:\n                session.set_option(\"http-cookies\", cookies)\n        \n        streams = session.streams(url)\n        ms = (time.time() - start) * 1000\n        \n        if streams:\n            stream_urls = {}\n            for q, s in streams.items():\n                try:\n                    stream_urls[q] = s.to_url()\n                except:\n                    stream_urls[q] = str(type(s).__name__)\n            return {\"url\": url, \"is_live\": True, \"streams\": stream_urls, \"ms\": ms}\n        return {\"url\": url, \"is_live\": False, \"ms\": ms}\n    except Exception as e:\n        return {\"url\": url, \"is_live\": False, \"error\": str(e), \"ms\": (time.time()-start)*1000}\n\n@app.get(\"/health\")\ndef health():\n    return {\"status\": \"ok\"}\n\n@app.post(\"/check\")\nasync def check_one(r: Req):\n    loop = asyncio.get_event_loop()\n    return await loop.run_in_executor(executor, check, r.url, r.cookie_file_base64)\n\n@app.post(\"/check/bulk\")\nasync def check_bulk(r: BulkReq):\n    loop = asyncio.get_event_loop()\n    tasks = [loop.run_in_executor(executor, check, u, r.cookie_file_base64) for u in r.urls]\n    return await asyncio.gather(*tasks)\n\nif __name__ == \"__main__\":\n    import uvicorn\n    uvicorn.run(app, host=\"0.0.0.0\", port=8765)\nPYEOF'\n"
+  streamlink-service:
+    build:
+      context: .
+      dockerfile_inline: "FROM python:3.11-slim\nRUN pip install streamlink fastapi uvicorn\nWORKDIR /app\n"
+    ports:
+      - "8765:8765"
+    restart: always
+    volumes:
+      - "./streamlink-app:/app"
+    command: "python /app/service.py"
+    depends_on:
+      create-streamlink-service:
+        condition: service_completed_successfully

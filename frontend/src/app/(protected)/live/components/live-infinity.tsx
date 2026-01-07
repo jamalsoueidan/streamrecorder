@@ -101,7 +101,7 @@ export default function LiveInfinity({ scope }: Props) {
             Your followed streamers live status appears here
           </Text>
         </Stack>
-        <Anchor href="/creators" underline="never">
+        <Anchor href="/discover" underline="never">
           <Button
             size="lg"
             radius="md"
@@ -148,15 +148,16 @@ export default function LiveInfinity({ scope }: Props) {
             </ActionIcon>
           </Tooltip>
           <Role is={["admin", "moderator"]}>
-            <Anchor href={"/live?scope=all"} underline="never">
-              <Button
-                variant="light"
-                leftSection={<IconPlayerRecord size={18} />}
-                size="lg"
-              >
-                All
-              </Button>
-            </Anchor>
+            <Button
+              component={Link}
+              color="yellow"
+              variant="light"
+              leftSection={<IconPlayerRecord size={18} />}
+              size="lg"
+              href={"/live?scope=all"}
+            >
+              Show all
+            </Button>
           </Role>
         </Group>
       </Group>

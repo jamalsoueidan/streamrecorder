@@ -471,7 +471,7 @@ export default function TermsAndConditions() {
             <Text size="sm" style={{ color: "#94a3b8" }}>
               Questions or concerns? Contact us at{" "}
               <Text component="span" fw={600} style={{ color: "#f1f5f9" }}>
-                contact@example.com
+                contact@livestreamrecorder.com
               </Text>
             </Text>
           </Flex>

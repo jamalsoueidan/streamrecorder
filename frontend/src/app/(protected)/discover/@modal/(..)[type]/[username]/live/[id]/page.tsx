@@ -64,7 +64,7 @@ export default function CreatorRecordingModal() {
   );
 
   const handleNotFound = () => {
-    router.replace("/creators");
+    router.replace("/discover");
   };
 
   if (isLoading) {
