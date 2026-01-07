@@ -15,13 +15,39 @@ import { PWAUpdater } from "./pwa-updater";
 const theme = createTheme({});
 
 export const metadata: Metadata = {
-  title: "Live Stream Recorder",
-  description: "Rewatch your favorite streamer",
+  title: "Live Stream Recorder | Automatically Record Tiktok, Twitch & More",
+  description:
+    "Never miss a live stream again. We automatically record your favorite streamers so you can watch later or download anytime. Free Twitch VOD downloads, Tiktok live stream recordings, and more.",
+  keywords: [
+    "live stream recorder",
+    "stream recording",
+    "record tiktok streams",
+    "tiktok vod downloader",
+    "tiktok live stream capture",
+    "livestream recording",
+    "recording streaming video",
+    "stream capture software",
+    "record live stream",
+    "tiktok video recording",
+  ],
   manifest: "/manifest.json",
   appleWebApp: {
     capable: true,
     statusBarStyle: "black-translucent",
     title: "Live Stream Recorder",
+  },
+  openGraph: {
+    title: "Live Stream Recorder | Record Your Favorite Streams Automatically",
+    description:
+      "Follow your favorite streamers and never miss a broadcast. Automatic stream recording with free cloud storage. Watch or download anytime.",
+    type: "website",
+    siteName: "Live Stream Recorder",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Live Stream Recorder | Record Tiktok, Twitch & More",
+    description:
+      "Automatically record and save live streams from your favorite creators. Free to start, watch anytime.",
   },
 };
 

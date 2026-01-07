@@ -9,7 +9,7 @@ type VideoProps = ComponentProps<"video"> & Record<string, any>;
 export const MediaController = forwardRef<HTMLElement, MediaProps>(
   (props, ref) => (
     // @ts-expect-error - web component
-    <media-controller ref={ref} {...props} />
+    <media-controller ref={ref} suppressHydrationWarning {...props} />
   )
 );
 MediaController.displayName = "MediaController";
@@ -17,7 +17,7 @@ MediaController.displayName = "MediaController";
 export const MediaControlBar = forwardRef<HTMLElement, MediaProps>(
   (props, ref) => (
     // @ts-expect-error - web component
-    <media-control-bar ref={ref} {...props} />
+    <media-control-bar ref={ref} suppressHydrationWarning {...props} />
   )
 );
 MediaControlBar.displayName = "MediaControlBar";
@@ -25,7 +25,7 @@ MediaControlBar.displayName = "MediaControlBar";
 export const MediaPlayButton = forwardRef<HTMLElement, MediaProps>(
   (props, ref) => (
     // @ts-expect-error - web component
-    <media-play-button ref={ref} {...props} />
+    <media-play-button ref={ref} suppressHydrationWarning {...props} />
   )
 );
 MediaPlayButton.displayName = "MediaPlayButton";
@@ -33,7 +33,7 @@ MediaPlayButton.displayName = "MediaPlayButton";
 export const MediaMuteButton = forwardRef<HTMLElement, MediaProps>(
   (props, ref) => (
     // @ts-expect-error - web component
-    <media-mute-button ref={ref} {...props} />
+    <media-mute-button ref={ref} suppressHydrationWarning {...props} />
   )
 );
 MediaMuteButton.displayName = "MediaMuteButton";
@@ -41,7 +41,7 @@ MediaMuteButton.displayName = "MediaMuteButton";
 export const MediaVolumeRange = forwardRef<HTMLElement, MediaProps>(
   (props, ref) => (
     // @ts-expect-error - web component
-    <media-volume-range ref={ref} {...props} />
+    <media-volume-range ref={ref} suppressHydrationWarning {...props} />
   )
 );
 MediaVolumeRange.displayName = "MediaVolumeRange";
@@ -49,7 +49,7 @@ MediaVolumeRange.displayName = "MediaVolumeRange";
 export const MediaTimeRange = forwardRef<HTMLElement, MediaProps>(
   (props, ref) => (
     // @ts-expect-error - web component
-    <media-time-range ref={ref} {...props} />
+    <media-time-range ref={ref} suppressHydrationWarning {...props} />
   )
 );
 MediaTimeRange.displayName = "MediaTimeRange";
@@ -57,7 +57,7 @@ MediaTimeRange.displayName = "MediaTimeRange";
 export const MediaTimeDisplay = forwardRef<HTMLElement, MediaProps>(
   (props, ref) => (
     // @ts-expect-error - web component
-    <media-time-display ref={ref} {...props} />
+    <media-time-display ref={ref} suppressHydrationWarning {...props} />
   )
 );
 MediaTimeDisplay.displayName = "MediaTimeDisplay";
@@ -65,7 +65,7 @@ MediaTimeDisplay.displayName = "MediaTimeDisplay";
 export const MediaFullscreenButton = forwardRef<HTMLElement, MediaProps>(
   (props, ref) => (
     // @ts-expect-error - web component
-    <media-fullscreen-button ref={ref} {...props} />
+    <media-fullscreen-button ref={ref} suppressHydrationWarning {...props} />
   )
 );
 MediaFullscreenButton.displayName = "MediaFullscreenButton";
@@ -73,7 +73,7 @@ MediaFullscreenButton.displayName = "MediaFullscreenButton";
 export const MediaPosterImage = forwardRef<HTMLElement, MediaProps>(
   (props, ref) => (
     // @ts-expect-error - web component
-    <media-poster-image ref={ref} {...props} />
+    <media-poster-image ref={ref} suppressHydrationWarning {...props} />
   )
 );
 MediaPosterImage.displayName = "MediaPosterImage";
@@ -81,7 +81,7 @@ MediaPosterImage.displayName = "MediaPosterImage";
 export const MediaSeekBackwardButton = forwardRef<HTMLElement, MediaProps>(
   (props, ref) => (
     // @ts-expect-error - web component
-    <media-seek-backward-button ref={ref} {...props} />
+    <media-seek-backward-button ref={ref} suppressHydrationWarning {...props} />
   )
 );
 MediaSeekBackwardButton.displayName = "MediaSeekBackwardButton";
@@ -89,7 +89,7 @@ MediaSeekBackwardButton.displayName = "MediaSeekBackwardButton";
 export const MediaSeekForwardButton = forwardRef<HTMLElement, MediaProps>(
   (props, ref) => (
     // @ts-expect-error - web component
-    <media-seek-forward-button ref={ref} {...props} />
+    <media-seek-forward-button ref={ref} suppressHydrationWarning {...props} />
   )
 );
 MediaSeekForwardButton.displayName = "MediaSeekForwardButton";
@@ -97,7 +97,7 @@ MediaSeekForwardButton.displayName = "MediaSeekForwardButton";
 export const MediaPlaybackRateButton = forwardRef<HTMLElement, MediaProps>(
   (props, ref) => (
     // @ts-expect-error - web component
-    <media-playback-rate-button ref={ref} {...props} />
+    <media-playback-rate-button ref={ref} suppressHydrationWarning {...props} />
   )
 );
 MediaPlaybackRateButton.displayName = "MediaPlaybackRateButton";
@@ -105,7 +105,7 @@ MediaPlaybackRateButton.displayName = "MediaPlaybackRateButton";
 export const MediaLoadingIndicator = forwardRef<HTMLElement, MediaProps>(
   (props, ref) => (
     // @ts-expect-error - web component
-    <media-loading-indicator ref={ref} {...props} />
+    <media-loading-indicator ref={ref} suppressHydrationWarning {...props} />
   )
 );
 MediaLoadingIndicator.displayName = "MediaLoadingIndicator";
@@ -113,7 +113,7 @@ MediaLoadingIndicator.displayName = "MediaLoadingIndicator";
 export const MediaPipButton = forwardRef<HTMLElement, MediaProps>(
   (props, ref) => (
     // @ts-expect-error - web component
-    <media-pip-button ref={ref} {...props} />
+    <media-pip-button ref={ref} suppressHydrationWarning {...props} />
   )
 );
 MediaPipButton.displayName = "MediaPipButton";
@@ -121,7 +121,7 @@ MediaPipButton.displayName = "MediaPipButton";
 export const MediaCaptionsButton = forwardRef<HTMLElement, MediaProps>(
   (props, ref) => (
     // @ts-expect-error - web component
-    <media-captions-button ref={ref} {...props} />
+    <media-captions-button ref={ref} suppressHydrationWarning {...props} />
   )
 );
 MediaCaptionsButton.displayName = "MediaCaptionsButton";
@@ -130,7 +130,7 @@ MediaCaptionsButton.displayName = "MediaCaptionsButton";
 export const HlsVideo = forwardRef<HTMLVideoElement, VideoProps>(
   (props, ref) => (
     // @ts-expect-error - web component
-    <hls-video ref={ref} {...props} />
+    <hls-video ref={ref} suppressHydrationWarning {...props} />
   )
 );
 HlsVideo.displayName = "HlsVideo";

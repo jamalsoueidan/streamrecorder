@@ -42,8 +42,16 @@ export const buildCreatorsFilters = (filters: CreatorFilters) => ({
   ...(filters.type && { type: { $eq: filters.type } }),
   ...(filters.search && {
     $or: [
-      { username: { $containsi: filters.search } },
-      { nickname: { $containsi: filters.search } },
+      {
+        username: {
+          $containsi: decodeURIComponent(filters.search).replace("@", ""),
+        },
+      },
+      {
+        nickname: {
+          $containsi: decodeURIComponent(filters.search).replace("@", ""),
+        },
+      },
     ],
   }),
   ...getDateRange(filters.dateRange),

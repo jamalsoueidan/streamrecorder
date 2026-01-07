@@ -11,12 +11,15 @@ export const CountryFlag = ({
   countryCode,
   size = 24,
 }: CountryFlagProps) => {
+  if (countryCode === "-" || !countryCode || !country) {
+    return null;
+  }
+
   return (
-    <Tooltip label={country}>
+    <Tooltip label={country.toLowerCase()}>
       <Image
-        src={`https://flagcdn.com/w40/${countryCode?.toLowerCase()}.png`}
-        fallbackSrc="https://flagcdn.com/w40/un.png"
-        alt={country}
+        src={`https://flagcdn.com/w40/${countryCode.toLowerCase()}.png`}
+        alt={country.toLowerCase()}
         style={{
           width: size,
           height: size * 0.75,

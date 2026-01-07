@@ -45,7 +45,7 @@ export async function getFollower({
 }) {
   const response = await api.follower.getFollowers({
     filters: {
-      username,
+      username: decodeURIComponent(username).replace("@", ""),
       type,
     },
     populate: ["avatar"],
@@ -91,7 +91,7 @@ export async function fetchProfileRecordings(
     deepMerge(defaultOptions, {
       filters: {
         follower: {
-          username: { $eq: username },
+          username: { $eq: decodeURIComponent(username).replace("@", "") },
           type: { $eq: type },
         },
       },

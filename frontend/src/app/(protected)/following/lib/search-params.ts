@@ -72,7 +72,11 @@ export const buildFollowingFilters = (filters: FollowingFilters) => ({
   }),
   ...(filters.type && { follower: { type: { $eq: filters.type } } }),
   ...(filters.search && {
-    follower: { username: { $containsi: filters.search } },
+    follower: {
+      username: {
+        $containsi: decodeURIComponent(filters.search).replace("@", ""),
+      },
+    },
   }),
   ...(filters.dateRange && { ...getDateRange(filters.dateRange, "updatedAt") }),
 });
