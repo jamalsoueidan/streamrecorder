@@ -45,29 +45,5 @@ export default factories.createCoreController(
 
       return super.find(ctx);
     },
-    async count(ctx) {
-      const minRecordings = parseInt(ctx.query.min as string) || 6;
-      const limit = parseInt(ctx.query.limit as string) || 10;
-
-      const knex = strapi.db.connection;
-
-      const results = await knex("followers as f")
-        .select("f.*")
-        .countDistinct("r.id as recordings_count")
-        .innerJoin("recordings_follower_lnk as rfl", "rfl.follower_id", "f.id")
-        .innerJoin("recordings as r", "r.id", "rfl.recording_id")
-        .innerJoin("recordings_sources_lnk as rsl", "rsl.recording_id", "r.id")
-        .innerJoin("sources as s", "s.id", "rsl.source_id")
-        .where(function () {
-          this.whereNull("f.description").orWhere("f.description", "");
-        })
-        .where("s.state", "=", "done")
-        .groupBy("f.id")
-        .having(knex.raw("COUNT(DISTINCT r.id) >= ?", [minRecordings]))
-        .orderBy("recordings_count", "desc")
-        .limit(limit);
-
-      return { data: results };
-    },
   })
 );
