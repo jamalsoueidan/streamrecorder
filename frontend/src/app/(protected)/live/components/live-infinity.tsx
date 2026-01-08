@@ -1,4 +1,4 @@
-// app/(protected)/live/components/live-infinity.tsx
+// app/(protected)/video/components/video-infinity.tsx
 "use client";
 
 import dayjs from "@/app/lib/dayjs";
@@ -154,7 +154,7 @@ export default function LiveInfinity({ scope }: Props) {
               variant="light"
               leftSection={<IconPlayerRecord size={18} />}
               size="lg"
-              href={"/live?scope=all"}
+              href={"/video?scope=all"}
             >
               Show all
             </Button>

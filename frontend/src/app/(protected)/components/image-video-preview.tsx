@@ -48,7 +48,7 @@ export function ImageVideoPreview({ recording, type, username }: Props) {
     if (time && time > 0) {
       params.set("t", Math.floor(time).toString());
     }
-    return `/${type}/${username}/live/${
+    return `/${type}/${username}/video/${
       recording.documentId
     }?${params.toString()}`;
   };
