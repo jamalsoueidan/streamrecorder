@@ -245,6 +245,7 @@ export default factories.createCoreController(
 
       const data = rows.map((row: any) => ({
         ...snakeToCamel(row),
+        totalRecordings: Number(row.total_recordings),
         avatar: row.avatar_url ? { url: row.avatar_url } : null,
         recordings: recordingsMap.get(row.id) || [],
         isFollowing: followingIds.includes(row.id),
@@ -458,6 +459,46 @@ export default factories.createCoreController(
       return {
         requested: documentIds.length,
         updated: result.count,
+      };
+    },
+    async cleanup(ctx) {
+      const daysOld = parseInt(ctx.query.days as string) || 7;
+      const dryRun = ctx.query.dryRun !== "false"; // Default to dry run
+
+      const knex = strapi.db.connection;
+
+      const cutoffDate = new Date();
+      cutoffDate.setDate(cutoffDate.getDate() - daysOld);
+
+      // Find followers with 0 recordings, older than X days
+      const staleFollowers = await knex("followers as f")
+        .select("f.id", "f.document_id", "f.username", "f.type", "f.created_at")
+        .leftJoin("recordings_follower_lnk as rfl", "rfl.follower_id", "f.id")
+        .where("f.created_at", "<", cutoffDate.toISOString())
+        .groupBy("f.id")
+        .having(knex.raw("COUNT(rfl.recording_id) = 0"));
+
+      if (dryRun) {
+        return {
+          message: "Dry run - no deletions",
+          count: staleFollowers.length,
+          cutoffDate: cutoffDate.toISOString(),
+          followers: staleFollowers,
+        };
+      }
+
+      // Actually delete them
+      const ids = staleFollowers.map((f: any) => f.id);
+
+      if (ids.length > 0) {
+        await knex("followers").whereIn("id", ids).delete();
+      }
+
+      return {
+        message: "Deleted stale followers",
+        count: ids.length,
+        cutoffDate: cutoffDate.toISOString(),
+        deleted: staleFollowers,
       };
     },
   })
