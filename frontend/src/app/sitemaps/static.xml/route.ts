@@ -1,6 +1,5 @@
-// app/sitemaps/static.xml/route.ts
 
-export const revalidate = 86400; // Cache for 1 day
+export const revalidate = 86400; 
 
 export async function GET() {
   const baseUrl = "https://livestreamrecorder.com";
