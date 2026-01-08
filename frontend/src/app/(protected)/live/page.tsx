@@ -6,7 +6,7 @@ import {
   QueryClient,
 } from "@tanstack/react-query";
 import { fetchLiveRecordings } from "./actions/fetch-live-recordings";
-import LiveInfinity from "./components/video-infinity";
+import LiveInfinity from "./components/live-infinity";
 
 interface PageProps {
   searchParams: Promise<{
