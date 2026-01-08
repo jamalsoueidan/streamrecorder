@@ -79,6 +79,10 @@
     },
     "tagline": {
       "type": "string"
+    },
+    "migration": {
+      "type": "integer",
+      "default": 0
     }
   }
 }
