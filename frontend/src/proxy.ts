@@ -4,9 +4,14 @@ import { NextResponse } from "next/server";
 const PLATFORMS = ["tiktok", "twitch", "youtube"];
 
 export function proxy(request: NextRequest) {
-  console.log("Middleware hit:", request.nextUrl.pathname);
   const token = request.cookies.get("strapi_jwt");
   const path = request.nextUrl.pathname;
+
+  // Skip rewrite for client-side navigations (let intercepts work) for (protected)/@modal/(..)[type]/ to work
+  const secFetchDest = request.headers.get("Sec-Fetch-Dest");
+  if (secFetchDest !== "document") {
+    return NextResponse.next();
+  }
 
   // Check if it's a platform route like /tiktok/@username/...
   const firstSegment = path.split("/")[1];
