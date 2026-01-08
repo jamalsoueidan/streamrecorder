@@ -1,6 +1,13 @@
 "use client";
 
-import { ActionIcon, Divider, Group, Stack, Text } from "@mantine/core";
+import {
+  ActionIcon,
+  Divider,
+  Group,
+  Stack,
+  Text,
+  UnstyledButton,
+} from "@mantine/core";
 import {
   IconArrowLeft,
   IconBellRinging,
@@ -122,17 +129,16 @@ export function Navbar({
       </div>
 
       <div className={classes.footer}>
-        <Link
-          href="#"
+        <UnstyledButton
+          style={{ width: "100%" }}
           className={classes.link}
           onClick={async (e) => {
-            e.preventDefault();
             await logout();
           }}
         >
           <IconLogout className={classes.linkIcon} stroke={1.5} />
           <span>Logout</span>
-        </Link>
+        </UnstyledButton>
       </div>
     </nav>
   );

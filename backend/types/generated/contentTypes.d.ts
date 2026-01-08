@@ -575,6 +575,7 @@ export interface ApiFollowerFollower extends Struct.CollectionTypeSchema {
       'api::follower.follower'
     > &
       Schema.Attribute.Private;
+    migration: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
     nickname: Schema.Attribute.String;
     pause: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     protected: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
