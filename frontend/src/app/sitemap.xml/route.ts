@@ -4,6 +4,7 @@ const URLS_PER_SITEMAP = 1000;
 const STRAPI_PAGE_SIZE = 100;
 const STRAPI_PAGES_PER_SITEMAP = URLS_PER_SITEMAP / STRAPI_PAGE_SIZE; // 10
 
+export const dynamic = "force-dynamic";
 export const revalidate = 3600;
 
 export async function GET() {
