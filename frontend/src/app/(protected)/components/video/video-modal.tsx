@@ -40,7 +40,7 @@ export function VideoModal({
   const [nextId, setNextId] = useState(initialNextId);
   const [loading, setLoading] = useState(false);
 
-  const basePath = `/${type}/${username}/live`;
+  const basePath = `/${type}/${username}/video`;
   const queryString = searchParams.toString();
 
   useEffect(() => {
@@ -97,7 +97,7 @@ export function VideoModal({
         <PlayBack
           prevId={prevId}
           nextId={nextId}
-          basePath={`/${type}/${username}/live`}
+          basePath={`/${type}/${username}/video`}
           onPrev={() => loadVideo(prevId!)}
           onNext={() => loadVideo(nextId!)}
           loading={loading}

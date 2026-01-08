@@ -10,7 +10,7 @@ export const SOCIAL_URL_PATTERNS: Record<
     `https://www.tiktok.com/@${decodeURIComponent(username).replace(
       /^@/,
       ""
-    )}/live`,
+    )}/video`,
   [FollowerTypeEnum.Twitch]: (username) => `https://www.twitch.tv/${username}`,
 };
 

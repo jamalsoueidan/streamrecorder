@@ -34,6 +34,7 @@ const data = [
       { link: "/pricing", label: "Pricing" },
       { link: "/faq", label: "FAQ" },
       { link: "/product-updates", label: "Updates" },
+      { link: "/sitemap.xml", label: "Sitemap" },
       { link: "/contact", label: "Contact" },
     ],
   },
