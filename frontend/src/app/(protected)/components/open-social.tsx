@@ -37,7 +37,7 @@ export default function OpenSocial({ follower }: { follower: Follower }) {
 
   return (
     <Tooltip label={`Go to ${follower.type}`}>
-      <ActionIcon<"a"> size="lg" href={href} target="_blank">
+      <ActionIcon component="a" size="lg" href={href} target="_blank">
         <IconWindowMaximize size={24} />
       </ActionIcon>
     </Tooltip>
