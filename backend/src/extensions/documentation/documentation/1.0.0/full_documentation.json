@@ -20,11 +20,11 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2026-01-08T09:03:34.233Z"
+    "x-generation-date": "2026-01-08T10:33:55.097Z"
   },
   "servers": [
     {
-      "url": "http://0.0.0.0:1337/api",
+      "url": "http://localhost:1337/api",
       "description": "Development server"
     }
   ],
@@ -8571,6 +8571,9 @@
               "tagline": {
                 "type": "string"
               },
+              "migration": {
+                "type": "integer"
+              },
               "locale": {
                 "type": "string"
               },
@@ -9287,6 +9290,9 @@
           "tagline": {
             "type": "string"
           },
+          "migration": {
+            "type": "integer"
+          },
           "createdAt": {
             "type": "string",
             "format": "date-time"
@@ -9516,6 +9522,9 @@
                 },
                 "tagline": {
                   "type": "string"
+                },
+                "migration": {
+                  "type": "integer"
                 },
                 "createdAt": {
                   "type": "string",
@@ -10546,6 +10555,9 @@
                     },
                     "tagline": {
                       "type": "string"
+                    },
+                    "migration": {
+                      "type": "integer"
                     },
                     "createdAt": {
                       "type": "string",
@@ -12022,6 +12034,9 @@
               },
               "tagline": {
                 "type": "string"
+              },
+              "migration": {
+                "type": "integer"
               },
               "createdAt": {
                 "type": "string",

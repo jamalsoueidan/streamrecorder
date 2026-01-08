@@ -462,41 +462,65 @@ export default factories.createCoreController(
       };
     },
     async cleanup(ctx) {
-      const daysOld = parseInt(ctx.query.days as string) || 7;
-      const dryRun = ctx.query.dryRun !== "false"; // Default to dry run
+      // delete users who is 7 days old and still have no recordings
+      const days = parseInt(ctx.query.days as string) || 7;
+      const limit = parseInt(ctx.query.limit as string) || 50;
+      const destroy = ctx.query.destroy === "true";
 
       const knex = strapi.db.connection;
 
       const cutoffDate = new Date();
-      cutoffDate.setDate(cutoffDate.getDate() - daysOld);
+      cutoffDate.setDate(cutoffDate.getDate() - days);
 
-      // Find followers with 0 recordings, older than X days
       const staleFollowers = await knex("followers as f")
         .select("f.id", "f.document_id", "f.username", "f.type", "f.created_at")
         .leftJoin("recordings_follower_lnk as rfl", "rfl.follower_id", "f.id")
         .where("f.created_at", "<", cutoffDate.toISOString())
         .groupBy("f.id")
-        .having(knex.raw("COUNT(rfl.recording_id) = 0"));
+        .having(knex.raw("COUNT(rfl.recording_id) = 0"))
+        .limit(limit);
 
-      if (dryRun) {
+      if (!destroy) {
         return {
-          message: "Dry run - no deletions",
+          message: "Preview - no deletions",
           count: staleFollowers.length,
           cutoffDate: cutoffDate.toISOString(),
           followers: staleFollowers,
         };
       }
 
-      // Actually delete them
       const ids = staleFollowers.map((f: any) => f.id);
+      let deletedAvatars = 0;
 
       if (ids.length > 0) {
+        const avatarFiles = await knex("files as f")
+          .select("f.*")
+          .innerJoin("files_related_mph as frm", "frm.file_id", "f.id")
+          .whereIn("frm.related_id", ids)
+          .where("frm.related_type", "api::follower.follower")
+          .where("frm.field", "avatar");
+
+        for (const file of avatarFiles) {
+          try {
+            await strapi.plugin("upload").service("upload").remove(file);
+            deletedAvatars++;
+          } catch (err) {
+            console.error(`Failed to delete avatar ${file.id}:`, err);
+          }
+        }
+
+        await knex("files_related_mph")
+          .whereIn("related_id", ids)
+          .where("related_type", "api::follower.follower")
+          .delete();
+
         await knex("followers").whereIn("id", ids).delete();
       }
 
       return {
-        message: "Deleted stale followers",
-        count: ids.length,
+        message: "Deleted stale followers and their avatars",
+        followersDeleted: ids.length,
+        avatarsDeleted: deletedAvatars,
         cutoffDate: cutoffDate.toISOString(),
         deleted: staleFollowers,
       };
