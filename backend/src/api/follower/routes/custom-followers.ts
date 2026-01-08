@@ -25,5 +25,10 @@ export default {
       path: "/followers/bulk-update-checked",
       handler: "follower.bulkUpdateLastChecked",
     },
+    {
+      method: "DELETE",
+      path: "/followers/cleanup",
+      handler: "follower.cleanup",
+    },
   ],
 };
