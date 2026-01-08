@@ -27,8 +27,6 @@ import {
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-import { logout } from "../../actions/auth";
-
 import { useRouter } from "next/navigation";
 import { useNavigation } from "../../providers/navigation-provider";
 import { useUser } from "../../providers/user-provider";
@@ -133,7 +131,8 @@ export function Navbar({
           style={{ width: "100%" }}
           className={classes.link}
           onClick={async (e) => {
-            await logout();
+            await fetch("/api/logout", { method: "POST" });
+            window.location.href = "/";
           }}
         >
           <IconLogout className={classes.linkIcon} stroke={1.5} />

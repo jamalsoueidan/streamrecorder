@@ -1,6 +1,5 @@
 "use client";
 
-import { logout } from "@/app/actions/auth";
 import { useNavigation } from "@/app/providers/navigation-provider";
 import { useUser } from "@/app/providers/user-provider";
 import {
@@ -220,7 +219,10 @@ export function MobileBar() {
                   <Menu.Item
                     color="red"
                     leftSection={<IconLogout size={16} />}
-                    onClick={async () => await logout()}
+                    onClick={async () => {
+                      await fetch("/api/logout", { method: "POST" });
+                      window.location.href = "/";
+                    }}
                   >
                     Logout
                   </Menu.Item>
