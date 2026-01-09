@@ -1,7 +1,7 @@
 import type { NextRequest } from "next/server";
 import { NextResponse } from "next/server";
 
-const PLATFORMS = ["tiktok", "twitch", "youtube"];
+const PLATFORMS = ["tiktok", "twitch", "youtube", "kick", "patreon"];
 
 export function proxy(request: NextRequest) {
   const token = request.cookies.get("strapi_jwt");
@@ -28,5 +28,5 @@ export function proxy(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/(tiktok|twitch|youtube)/:path*"],
+  matcher: ["/(tiktok|twitch|youtube|kick|patreon)/:path*"],
 };

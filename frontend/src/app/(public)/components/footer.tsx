@@ -15,8 +15,8 @@ const data = [
   {
     title: "Recordings",
     links: [
-      { label: "Tiktok recordings", link: "#" },
-      { label: "Twitch recordings", link: "#" },
+      { label: "Tiktok recordings", link: "/tiktok" },
+      { label: "Twitch recordings", link: "/twitch" },
     ],
   },
   {
