@@ -29,7 +29,8 @@ import {
   IconPlayerPlay,
 } from "@tabler/icons-react";
 import { CountryFlag } from "../(protected)/components/country-flag";
-import { FollowerTypeIcon } from "../(protected)/components/follower-type";
+import { FollowerTypeIcon } from "../(protected)/components/follower-type-icon";
+import { FollowerTypeText } from "../(protected)/components/follwoer-type-text";
 import { getProfileUrl } from "../(protected)/components/open-social";
 import { formatDuration } from "../(protected)/components/video/player-utils";
 
@@ -460,6 +461,8 @@ export default async function LandingPage() {
                       countryCode={creator.countryCode}
                       size={24}
                     />
+
+                    <FollowerTypeText type={creator.type} />
                   </Stack>
                 </Card>
               </Anchor>

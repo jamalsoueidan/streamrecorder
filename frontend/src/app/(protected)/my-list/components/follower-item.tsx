@@ -31,7 +31,7 @@ import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
 import { CountryFlag } from "../../components/country-flag";
 import FollowButton from "../../components/follow-button";
-import { FollowerTypeIcon } from "../../components/follower-type";
+import { FollowerTypeIcon } from "../../components/follower-type-icon";
 import OpenSocial from "../../components/open-social";
 import UnfollowButton from "../../components/unfollow-button";
 import { getRecordings } from "../actions/fetch-followers";

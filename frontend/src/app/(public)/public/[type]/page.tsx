@@ -1,5 +1,5 @@
 import { CountryFlag } from "@/app/(protected)/components/country-flag";
-import { FollowerTypeIcon } from "@/app/(protected)/components/follower-type";
+import { FollowerTypeIcon } from "@/app/(protected)/components/follower-type-icon";
 import { getProfileUrl } from "@/app/(protected)/components/open-social";
 import PaginationControls from "@/app/(protected)/components/pagination";
 import publicApi from "@/lib/public-api";

@@ -12,7 +12,7 @@ import {
 import { getFollower } from "./actions/actions";
 
 import { CountryFlag } from "@/app/(protected)/components/country-flag";
-import { FollowerTypeIcon } from "@/app/(protected)/components/follower-type";
+import { FollowerTypeIcon } from "@/app/(protected)/components/follower-type-icon";
 import { Metadata } from "next";
 
 export async function generateMetadata({
