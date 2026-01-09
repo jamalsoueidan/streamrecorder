@@ -1,14 +1,17 @@
 // components/pagination-controls.tsx
 "use client";
 
-import { Pagination } from "@mantine/core";
+import { Pagination, PaginationProps } from "@mantine/core";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
-interface PaginationControlsProps {
-  total: number; // pageCount
-}
+type PaginationControlsProps = {
+  total: number;
+} & PaginationProps;
 
-export default function PaginationControls({ total }: PaginationControlsProps) {
+export default function PaginationControls({
+  total,
+  ...props
+}: PaginationControlsProps) {
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
@@ -24,6 +27,12 @@ export default function PaginationControls({ total }: PaginationControlsProps) {
   if (total <= 1) return null;
 
   return (
-    <Pagination value={page} onChange={handleChange} total={total} mt="xl" />
+    <Pagination
+      value={page}
+      onChange={handleChange}
+      total={total}
+      mt="xl"
+      {...props}
+    />
   );
 }

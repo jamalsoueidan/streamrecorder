@@ -154,7 +154,7 @@ export default function LiveInfinity({ scope }: Props) {
               variant="light"
               leftSection={<IconPlayerRecord size={18} />}
               size="lg"
-              href={"/video?scope=all"}
+              href={"?scope=all"}
             >
               Show all
             </Button>
