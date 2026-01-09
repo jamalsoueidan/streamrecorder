@@ -17,6 +17,9 @@ const data = [
     links: [
       { label: "Tiktok recordings", link: "/tiktok" },
       { label: "Twitch recordings", link: "/twitch" },
+      { label: "Kick recordings", link: "/kick" },
+      { label: "YouTube recordings", link: "/youtube" },
+      { label: "AfreecaTV recordings", link: "/afreecatv" },
     ],
   },
   {
