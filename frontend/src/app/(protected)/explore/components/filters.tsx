@@ -22,10 +22,13 @@ import {
 } from "@mantine/core";
 import { useDebouncedCallback, useDisclosure } from "@mantine/hooks";
 import {
+  IconAlphabetKorean,
   IconArrowDown,
   IconArrowUp,
+  IconBrandKick,
   IconBrandTiktok,
   IconBrandTwitch,
+  IconBrandYoutube,
   IconCalendar,
   IconFilter,
   IconGenderFemale,
@@ -57,29 +60,6 @@ const genderIcons: Record<string, React.ReactNode> = {
   unknown: <IconQuestionMark size={24} />,
 };
 
-const typeIcons: Record<string, React.ReactNode> = {
-  tiktok: <IconBrandTiktok size={20} />,
-  twitch: <IconBrandTwitch size={20} />,
-};
-
-const genderLabels: Record<string, string> = {
-  all: "All",
-  female: "Female",
-  male: "Male",
-  unknown: "Other",
-};
-
-const GENDER_VALUES = ["all", "female", "male", "unknown"];
-
-const DATE_RANGE_OPTIONS = [
-  { value: "today", label: "Today" },
-  { value: "yesterday", label: "Yesterday" },
-  { value: "thisWeek", label: "This week" },
-  { value: "lastWeek", label: "Last week" },
-  { value: "thisMonth", label: "This month" },
-  { value: "lastMonth", label: "Last month" },
-];
-
 const PLATFORM_OPTIONS = [
   {
     value: "all",
@@ -108,6 +88,59 @@ const PLATFORM_OPTIONS = [
       </Center>
     ),
   },
+  {
+    value: "youtube",
+    label: (
+      <Center style={{ gap: 8 }}>
+        <IconBrandYoutube size={18} />
+        <span>Youtube</span>
+      </Center>
+    ),
+  },
+  {
+    value: "kick",
+    label: (
+      <Center style={{ gap: 8 }}>
+        <IconBrandKick size={18} />
+        <span>Kick</span>
+      </Center>
+    ),
+  },
+  {
+    value: "afreecatv",
+    label: (
+      <Center style={{ gap: 8 }}>
+        <IconAlphabetKorean size={18} />
+        <span>AfreecaTV</span>
+      </Center>
+    ),
+  },
+];
+
+const typeIcons: Record<string, React.ReactNode> = {
+  tiktok: <IconBrandTiktok size={20} />,
+  twitch: <IconBrandTwitch size={20} />,
+  youtube: <IconBrandYoutube size={20} />,
+  kick: <IconBrandKick size={20} />,
+  afreecatv: <IconAlphabetKorean size={20} />,
+};
+
+const genderLabels: Record<string, string> = {
+  all: "All",
+  female: "Female",
+  male: "Male",
+  unknown: "Other",
+};
+
+const GENDER_VALUES = ["all", "female", "male", "unknown"];
+
+const DATE_RANGE_OPTIONS = [
+  { value: "today", label: "Today" },
+  { value: "yesterday", label: "Yesterday" },
+  { value: "thisWeek", label: "This week" },
+  { value: "lastWeek", label: "Last week" },
+  { value: "thisMonth", label: "This month" },
+  { value: "lastMonth", label: "Last month" },
 ];
 
 // Intl converters

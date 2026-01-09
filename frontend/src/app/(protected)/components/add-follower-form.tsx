@@ -274,6 +274,7 @@ export default function AddFollowerForm() {
               { label: "Twitch", value: "twitch" },
               { label: "Kick", value: "kick" },
               { label: "Youtube", value: "youtube" },
+              { label: "AfreecaTV", value: "afreecatv" },
             ]}
             fullWidth
           />

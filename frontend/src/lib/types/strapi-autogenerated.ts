@@ -15,6 +15,7 @@ export enum FollowerTypeEnum {
   Twitch = "twitch",
   Kick = "kick",
   Youtube = "youtube",
+  Afreecatv = "afreecatv",
 }
 
 /** Filter by follow status */
@@ -2392,6 +2393,7 @@ export enum FollowerRequestTypeEnum {
   Twitch = "twitch",
   Kick = "kick",
   Youtube = "youtube",
+  Afreecatv = "afreecatv",
 }
 
 export enum FollowerRequestGenderEnum {
@@ -2417,6 +2419,7 @@ export enum MessageTypeEnum {
   Twitch = "twitch",
   Kick = "kick",
   Youtube = "youtube",
+  Afreecatv = "afreecatv",
 }
 
 export enum MessageGenderEnum {

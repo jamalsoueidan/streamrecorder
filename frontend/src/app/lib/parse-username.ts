@@ -31,7 +31,6 @@ export function parseUsername(input: string): ParsedUsername {
   }
 
   // Kick URL pattern
-  // Matches: kick.com/username or www.kick.com/username
   const kickRegex = /(?:https?:\/\/)?(?:www\.)?kick\.com\/([^\/\s?]+)/i;
   const kickMatch = trimmed.match(kickRegex);
 
@@ -43,7 +42,6 @@ export function parseUsername(input: string): ParsedUsername {
   }
 
   // YouTube URL patterns
-  // Matches: youtube.com/@handle or youtube.com/channel/ID or youtube.com/c/name
   const youtubeHandleRegex =
     /(?:https?:\/\/)?(?:www\.)?youtube\.com\/@([^\/\s?]+)/i;
   const youtubeChannelRegex =
@@ -62,7 +60,7 @@ export function parseUsername(input: string): ParsedUsername {
   const youtubeChannelMatch = trimmed.match(youtubeChannelRegex);
   if (youtubeChannelMatch) {
     return {
-      username: youtubeChannelMatch[1], // This is channel ID like UCxxxxxx
+      username: youtubeChannelMatch[1],
       platform: "youtube",
     };
   }
@@ -72,6 +70,18 @@ export function parseUsername(input: string): ParsedUsername {
     return {
       username: youtubeCustomMatch[1],
       platform: "youtube",
+    };
+  }
+
+  // AfreecaTV / SOOP URL patterns
+  const afreecaRegex =
+    /(?:https?:\/\/)?(?:www\.|play\.|bj\.)?(?:afreecatv\.com|sooplive\.co\.kr)\/(?:station\/)?([^\/\s?]+)/i;
+  const afreecaMatch = trimmed.match(afreecaRegex);
+
+  if (afreecaMatch) {
+    return {
+      username: afreecaMatch[1],
+      platform: "afreecatv",
     };
   }
 

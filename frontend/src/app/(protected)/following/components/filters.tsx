@@ -22,10 +22,13 @@ import {
 } from "@mantine/core";
 import { useDebouncedCallback, useDisclosure } from "@mantine/hooks";
 import {
+  IconAlphabetKorean,
   IconArrowDown,
   IconArrowUp,
+  IconBrandKick,
   IconBrandTiktok,
   IconBrandTwitch,
+  IconBrandYoutube,
   IconCalendar,
   IconFilter,
   IconGenderFemale,
@@ -55,11 +58,6 @@ const genderIcons: Record<string, React.ReactNode> = {
   male: <IconGenderMale size={24} />,
   female: <IconGenderFemale size={24} />,
   unknown: <IconQuestionMark size={24} />,
-};
-
-const typeIcons: Record<string, React.ReactNode> = {
-  tiktok: <IconBrandTiktok size={20} />,
-  twitch: <IconBrandTwitch size={20} />,
 };
 
 const genderLabels: Record<string, string> = {
@@ -108,7 +106,42 @@ const PLATFORM_OPTIONS = [
       </Center>
     ),
   },
+  {
+    value: "youtube",
+    label: (
+      <Center style={{ gap: 8 }}>
+        <IconBrandYoutube size={18} />
+        <span>Youtube</span>
+      </Center>
+    ),
+  },
+  {
+    value: "kick",
+    label: (
+      <Center style={{ gap: 8 }}>
+        <IconBrandKick size={18} />
+        <span>Kick</span>
+      </Center>
+    ),
+  },
+  {
+    value: "afreecatv",
+    label: (
+      <Center style={{ gap: 8 }}>
+        <IconAlphabetKorean size={18} />
+        <span>AfreecaTV</span>
+      </Center>
+    ),
+  },
 ];
+
+const typeIcons: Record<string, React.ReactNode> = {
+  tiktok: <IconBrandTiktok size={20} />,
+  twitch: <IconBrandTwitch size={20} />,
+  youtube: <IconBrandYoutube size={20} />,
+  kick: <IconBrandKick size={20} />,
+  afreecatv: <IconAlphabetKorean size={20} />,
+};
 
 // Intl converters
 const regionNames = new Intl.DisplayNames(["en"], { type: "region" });
