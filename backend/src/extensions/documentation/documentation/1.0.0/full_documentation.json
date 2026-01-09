@@ -20,7 +20,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2026-01-09T13:34:33.624Z"
+    "x-generation-date": "2026-01-09T18:02:40.217Z"
   },
   "servers": [
     {
@@ -8519,7 +8519,8 @@
                   "tiktok",
                   "twitch",
                   "kick",
-                  "youtube"
+                  "youtube",
+                  "afreecatv"
                 ]
               },
               "gender": {
@@ -9355,7 +9356,8 @@
                     "tiktok",
                     "twitch",
                     "kick",
-                    "youtube"
+                    "youtube",
+                    "afreecatv"
                   ]
                 },
                 "gender": {
@@ -10173,7 +10175,8 @@
                         "tiktok",
                         "twitch",
                         "kick",
-                        "youtube"
+                        "youtube",
+                        "afreecatv"
                       ]
                     },
                     "gender": {
@@ -13055,7 +13058,8 @@
           "tiktok",
           "twitch",
           "kick",
-          "youtube"
+          "youtube",
+          "afreecatv"
         ]
       },
       "FollowRequestBody": {

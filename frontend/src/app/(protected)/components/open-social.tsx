@@ -15,6 +15,8 @@ export const SOCIAL_URL_PATTERNS: Record<
   [FollowerTypeEnum.Kick]: (username) => `https://www.kick.com/${username}`,
   [FollowerTypeEnum.Youtube]: (username) =>
     `https://www.youtube.com/@${username}/live`,
+  [FollowerTypeEnum.Afreecatv]: (username) =>
+    `https://play.afreecatv.com/${username}`,
 };
 
 export const URL_PATTERNS: Record<
@@ -25,6 +27,7 @@ export const URL_PATTERNS: Record<
   [FollowerTypeEnum.Twitch]: (username) => `/twitch/${username}`,
   [FollowerTypeEnum.Kick]: (username) => `/kick/${username}`,
   [FollowerTypeEnum.Youtube]: (username) => `/youtube/@${username}`,
+  [FollowerTypeEnum.Afreecatv]: (username) => `/afreecatv/${username}`,
 };
 
 export const getSocialUrl = (username: string, type: FollowerTypeEnum) => {
