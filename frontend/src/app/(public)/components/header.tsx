@@ -5,7 +5,8 @@ import Link from "next/link";
 
 const links = [
   { link: "/", label: "Home" },
-  { link: "/news", label: "News" },
+  { link: "/tiktok", label: "Tiktok recordings" },
+  { link: "/twitch", label: "Twitch recordings" },
   { link: "/pricing", label: "Pricing" },
 ];
 

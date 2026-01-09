@@ -13,6 +13,8 @@
 export enum FollowerTypeEnum {
   Tiktok = "tiktok",
   Twitch = "twitch",
+  Kick = "kick",
+  Youtube = "youtube",
 }
 
 /** Filter by follow status */
@@ -730,9 +732,10 @@ export interface FollowerRequest {
     lastCheckedAt?: string;
     protected?: boolean;
     pause?: boolean;
-    tagline?: string;
-    category?: string;
     faq?: any;
+    category?: string;
+    tagline?: string;
+    migration?: number;
     locale?: string;
     localizations?: (number | string)[];
   };
@@ -983,9 +986,10 @@ export interface Follower {
   lastCheckedAt?: string;
   protected?: boolean;
   pause?: boolean;
-  tagline?: string;
-  category?: string;
   faq?: any;
+  category?: string;
+  tagline?: string;
+  migration?: number;
   /** @format date-time */
   createdAt?: string;
   /** @format date-time */
@@ -1064,9 +1068,10 @@ export interface Follower {
     lastCheckedAt?: string;
     protected?: boolean;
     pause?: boolean;
-    tagline?: string;
-    category?: string;
     faq?: any;
+    category?: string;
+    tagline?: string;
+    migration?: number;
     /** @format date-time */
     createdAt?: string;
     /** @format date-time */
@@ -1427,9 +1432,10 @@ export interface Message {
       lastCheckedAt?: string;
       protected?: boolean;
       pause?: boolean;
-      tagline?: string;
-      category?: string;
       faq?: any;
+      category?: string;
+      tagline?: string;
+      migration?: number;
       /** @format date-time */
       createdAt?: string;
       /** @format date-time */
@@ -1949,9 +1955,10 @@ export interface Recording {
     lastCheckedAt?: string;
     protected?: boolean;
     pause?: boolean;
-    tagline?: string;
-    category?: string;
     faq?: any;
+    category?: string;
+    tagline?: string;
+    migration?: number;
     /** @format date-time */
     createdAt?: string;
     /** @format date-time */
@@ -2383,6 +2390,8 @@ export enum NavigationsSectionsComponentIconEnum {
 export enum FollowerRequestTypeEnum {
   Tiktok = "tiktok",
   Twitch = "twitch",
+  Kick = "kick",
+  Youtube = "youtube",
 }
 
 export enum FollowerRequestGenderEnum {
@@ -2406,6 +2415,8 @@ export enum FollowerGenderEnum1 {
 export enum MessageTypeEnum {
   Tiktok = "tiktok",
   Twitch = "twitch",
+  Kick = "kick",
+  Youtube = "youtube",
 }
 
 export enum MessageGenderEnum {

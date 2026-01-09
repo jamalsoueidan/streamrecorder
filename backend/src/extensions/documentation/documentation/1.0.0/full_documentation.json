@@ -20,7 +20,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2026-01-08T13:06:23.399Z"
+    "x-generation-date": "2026-01-09T13:34:33.624Z"
   },
   "servers": [
     {
@@ -8517,7 +8517,9 @@
                 "type": "string",
                 "enum": [
                   "tiktok",
-                  "twitch"
+                  "twitch",
+                  "kick",
+                  "youtube"
                 ]
               },
               "gender": {
@@ -9351,7 +9353,9 @@
                   "type": "string",
                   "enum": [
                     "tiktok",
-                    "twitch"
+                    "twitch",
+                    "kick",
+                    "youtube"
                   ]
                 },
                 "gender": {
@@ -10167,7 +10171,9 @@
                       "type": "string",
                       "enum": [
                         "tiktok",
-                        "twitch"
+                        "twitch",
+                        "kick",
+                        "youtube"
                       ]
                     },
                     "gender": {
@@ -13047,7 +13053,9 @@
         "type": "string",
         "enum": [
           "tiktok",
-          "twitch"
+          "twitch",
+          "kick",
+          "youtube"
         ]
       },
       "FollowRequestBody": {
