@@ -18,28 +18,19 @@ import {
   Title,
   Tooltip,
 } from "@mantine/core";
-import {
-  IconArrowRight,
-  IconBrandKick,
-  IconBrandPatreon,
-  IconBrandTiktok,
-  IconBrandTwitch,
-  IconBrandYoutube,
-  IconClock,
-  IconPlayerPlay,
-} from "@tabler/icons-react";
+import { IconArrowRight, IconClock, IconPlayerPlay } from "@tabler/icons-react";
 import { CountryFlag } from "../(protected)/components/country-flag";
 import { FollowerTypeIcon } from "../(protected)/components/follower-type-icon";
-import { FollowerTypeText } from "../(protected)/components/follwoer-type-text";
+import { FollowerTypeText } from "../(protected)/components/follower-type-text";
 import { getProfileUrl } from "../(protected)/components/open-social";
 import { formatDuration } from "../(protected)/components/video/player-utils";
 
 const streamingPlatforms = [
-  { icon: IconBrandTiktok, color: "#ff0050", name: "TikTok" },
-  { icon: IconBrandTwitch, color: "#9146ff", name: "Twitch" },
-  { icon: IconBrandKick, color: "#53fc18", name: "Kick" },
-  { icon: IconBrandYoutube, color: "#ff0000", name: "YouTube" },
-  { icon: IconBrandPatreon, color: "#ff424d", name: "Patreon" },
+  { color: "#ff0050", name: "TikTok" },
+  { color: "#9146ff", name: "Twitch" },
+  { color: "#53fc18", name: "Kick" },
+  { color: "#ff0000", name: "YouTube" },
+  { color: "#ff424d", name: "AfreecaTV" },
 ];
 
 export default async function LandingPage() {
@@ -135,22 +126,26 @@ export default async function LandingPage() {
         </Text>
 
         {/* Streaming Platforms */}
-        <Stack align="center" gap={12} mt="md">
-          <Flex gap={24} align="center" wrap="wrap" justify="center">
-            {streamingPlatforms.map((platform) => (
-              <Tooltip label={platform.name} key={platform.name} withArrow>
-                <div
-                  style={{
-                    color: platform.color,
-                    opacity: 0.7,
-                  }}
-                >
-                  <platform.icon size={60} stroke={1.5} />
-                </div>
-              </Tooltip>
-            ))}
-          </Flex>
-        </Stack>
+
+        <Flex gap={30} align="center" mt={50}>
+          {streamingPlatforms.map((p) => (
+            <Tooltip key={p.name} label={p.name} withArrow>
+              <Anchor
+                href={`/${p.name.toLowerCase()}`}
+                style={{
+                  color: p.color,
+                  opacity: 0.7,
+                }}
+              >
+                <Image
+                  alt={p.name}
+                  src={p.name.toLowerCase() + ".svg"}
+                  height={40}
+                />
+              </Anchor>
+            </Tooltip>
+          ))}
+        </Flex>
       </Stack>
 
       {/* Platform Preview Section */}
@@ -346,20 +341,24 @@ export default async function LandingPage() {
                         <IconPlayerPlay size={20} />
                       </ActionIcon>
                     </div>
-                    <Stack gap={2} p={16}>
-                      <Text
-                        fw={600}
-                        size="sm"
-                        lineClamp={2}
-                        style={{ color: "#f1f5f9", lineHeight: 1.4 }}
-                      >
-                        {recording.follower?.nickname}
-                      </Text>
+                    <Flex p={16} align="center" justify="space-between">
+                      <Stack gap={2}>
+                        <Text
+                          fw={600}
+                          size="sm"
+                          lineClamp={2}
+                          style={{ color: "#f1f5f9", lineHeight: 1.4 }}
+                        >
+                          {recording.follower?.nickname}
+                        </Text>
 
-                      <Text size="xs" c="dimmed">
-                        @{recording.follower?.username}
-                      </Text>
-                    </Stack>
+                        <Text size="xs" c="dimmed">
+                          @{recording.follower?.username}
+                        </Text>
+                      </Stack>
+
+                      <FollowerTypeText type={recording.follower?.type} />
+                    </Flex>
                   </Card>
                 </Anchor>
               </div>

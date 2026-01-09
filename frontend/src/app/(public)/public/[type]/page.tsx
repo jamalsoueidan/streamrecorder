@@ -12,17 +12,13 @@ import {
   Center,
   Container,
   Flex,
+  Image,
   Paper,
   Stack,
   Text,
   Title,
 } from "@mantine/core";
 import {
-  IconBrandKick,
-  IconBrandPatreon,
-  IconBrandTiktok,
-  IconBrandTwitch,
-  IconBrandYoutube,
   IconCloud,
   IconDeviceTv,
   IconPlayerPlay,
@@ -30,27 +26,12 @@ import {
   IconUsers,
 } from "@tabler/icons-react";
 
-const platformConfig: Record<
-  string,
-  { name: string; color: string; icon: typeof IconBrandTiktok }
-> = {
-  tiktok: { name: "TikTok", color: "#ff0050", icon: IconBrandTiktok },
-  twitch: { name: "Twitch", color: "#9146ff", icon: IconBrandTwitch },
-  kick: { name: "Kick", color: "#53fc18", icon: IconBrandKick },
-  youtube: { name: "YouTube", color: "#ff0000", icon: IconBrandYoutube },
-  patreon: { name: "Patreon", color: "#ff424d", icon: IconBrandPatreon },
-};
-
 const streamingPlatforms = [
-  { icon: IconBrandTiktok, color: "#ff0050", name: "TikTok", slug: "tiktok" },
-  { icon: IconBrandTwitch, color: "#9146ff", name: "Twitch", slug: "twitch" },
-  { icon: IconBrandKick, color: "#53fc18", name: "Kick", slug: "kick" },
-  {
-    icon: IconBrandYoutube,
-    color: "#ff0000",
-    name: "YouTube",
-    slug: "youtube",
-  },
+  { color: "#ff0050", name: "TikTok" },
+  { color: "#9146ff", name: "Twitch" },
+  { color: "#53fc18", name: "Kick" },
+  { color: "#ff0000", name: "YouTube" },
+  { color: "#ff424d", name: "AfreecaTV" },
 ];
 
 const features = [
@@ -92,12 +73,13 @@ interface PageProps {
 export default async function Page({ params, searchParams }: PageProps) {
   const { type } = await params;
   const { page } = await searchParams;
-  const platform = platformConfig[type] || {
+  const platform = streamingPlatforms.find(
+    (p) => p.name.toLowerCase() === type
+  ) || {
     name: "Streams",
     color: "#6366f1",
     icon: IconPlayerPlay,
   };
-  const PlatformIcon = platform.icon;
 
   const {
     data: { data: followers, meta },
@@ -143,27 +125,25 @@ export default async function Page({ params, searchParams }: PageProps) {
           your favorite creators so you can watch anytime.
         </Text>
 
-        {/* Platform Switcher */}
-        <Flex gap={16} align="center" mt={24}>
-          <Text size="sm" style={{ color: "#64748b" }}>
-            Also available:
-          </Text>
-          <Flex gap={12}>
-            {streamingPlatforms
-              .filter((p) => p.slug !== type)
-              .map((p) => (
-                <Anchor
-                  key={p.slug}
-                  href={`/${p.slug}`}
-                  style={{
-                    color: p.color,
-                    opacity: 0.7,
-                  }}
-                >
-                  <p.icon size={28} />
-                </Anchor>
-              ))}
-          </Flex>
+        <Flex gap={30} align="center" mt={24}>
+          {streamingPlatforms
+            .filter((p) => p.name.toLowerCase() != type)
+            .map((p) => (
+              <Anchor
+                key={p.name}
+                href={`/${p.name.toLowerCase()}`}
+                style={{
+                  color: p.color,
+                  opacity: 0.7,
+                }}
+              >
+                <Image
+                  alt={p.name}
+                  src={p.name.toLowerCase() + ".svg"}
+                  height={40}
+                />
+              </Anchor>
+            ))}
         </Flex>
       </Stack>
 
@@ -271,7 +251,11 @@ export default async function Page({ params, searchParams }: PageProps) {
                   color: platform.color,
                 }}
               >
-                <PlatformIcon size={30} />
+                <Image
+                  alt={platform.name}
+                  src={platform.name.toLowerCase() + ".svg"}
+                  height={40}
+                />
               </div>
               <Title order={3} style={{ color: "#f1f5f9" }}>
                 No creators yet
@@ -406,7 +390,11 @@ export default async function Page({ params, searchParams }: PageProps) {
             gap={24}
             style={{ position: "relative", zIndex: 1 }}
           >
-            <PlatformIcon size={48} style={{ color: platform.color }} />
+            <Image
+              alt={platform.name}
+              src={platform.name.toLowerCase() + ".svg"}
+              height={40}
+            />
             <Title
               order={2}
               style={{
