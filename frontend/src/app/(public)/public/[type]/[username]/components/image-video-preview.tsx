@@ -1,4 +1,4 @@
-import { FollowerTypeIcon } from "@/app/(protected)/components/follower-type";
+import { FollowerTypeIcon } from "@/app/(protected)/components/follower-type-icon";
 import { getSocialUrl } from "@/app/(protected)/components/open-social";
 import { formatDuration } from "@/app/(protected)/components/video/player-utils";
 import {

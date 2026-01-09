@@ -11,7 +11,7 @@ import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useRef, useState } from "react";
 import { useIsNew } from "../hooks/use-is-new";
-import { FollowerTypeIcon } from "./follower-type";
+import { FollowerTypeIcon } from "./follower-type-icon";
 import { SOCIAL_URL_PATTERNS } from "./open-social";
 import { MiniPlayer } from "./video/mini-player";
 import { formatDuration } from "./video/player-utils";

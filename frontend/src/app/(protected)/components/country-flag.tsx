@@ -11,15 +11,16 @@ export const CountryFlag = ({
   countryCode,
   size = 24,
 }: CountryFlagProps) => {
-  if (countryCode === "-" || !countryCode || !country) {
-    return null;
-  }
+  const src =
+    countryCode === "-" || !countryCode || !country
+      ? "https://placehold.co/24x18?text=NA"
+      : `https://flagcdn.com/w40/${countryCode.toLowerCase()}.png`;
 
   return (
-    <Tooltip label={country.toLowerCase()}>
+    <Tooltip label={country?.toLowerCase()}>
       <Image
-        src={`https://flagcdn.com/w40/${countryCode.toLowerCase()}.png`}
-        alt={country.toLowerCase()}
+        src={src}
+        alt={country?.toLowerCase()}
         style={{
           width: size,
           height: size * 0.75,
