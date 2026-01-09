@@ -272,6 +272,8 @@ export default function AddFollowerForm() {
             data={[
               { label: "TikTok", value: "tiktok" },
               { label: "Twitch", value: "twitch" },
+              { label: "Kick", value: "kick" },
+              { label: "Youtube", value: "youtube" },
             ]}
             fullWidth
           />

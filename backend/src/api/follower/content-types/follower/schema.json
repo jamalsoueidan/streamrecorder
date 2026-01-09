@@ -24,7 +24,9 @@
       "default": "tiktok",
       "enum": [
         "tiktok",
-        "twitch"
+        "twitch",
+        "kick",
+        "youtube"
       ]
     },
     "gender": {
