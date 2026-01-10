@@ -17,6 +17,8 @@ export const SOCIAL_URL_PATTERNS: Record<
     `https://www.youtube.com/@${username}/live`,
   [FollowerTypeEnum.Afreecatv]: (username) =>
     `https://play.afreecatv.com/${username}`,
+  [FollowerTypeEnum.Pandalive]: (username) =>
+    `https://www.pandalive.co.kr/play/${username}`,
 };
 
 export const URL_PATTERNS: Record<
@@ -28,6 +30,7 @@ export const URL_PATTERNS: Record<
   [FollowerTypeEnum.Kick]: (username) => `/kick/${username}`,
   [FollowerTypeEnum.Youtube]: (username) => `/youtube/@${username}`,
   [FollowerTypeEnum.Afreecatv]: (username) => `/afreecatv/${username}`,
+  [FollowerTypeEnum.Pandalive]: (username) => `/pandalive/${username}`,
 };
 
 export const getSocialUrl = (username: string, type: FollowerTypeEnum) => {

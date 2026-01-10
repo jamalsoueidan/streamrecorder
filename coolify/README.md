@@ -1,6 +1,6 @@
 # 🚀 N8N
 
-## Kill worker
+## Kill n8n worker the right way, so you do not loss any recording
 
 ```bash
 docker ps #List running containers:

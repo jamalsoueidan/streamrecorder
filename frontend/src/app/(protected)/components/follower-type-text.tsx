@@ -17,11 +17,14 @@ export const FollowerTypeText = ({ type }: FollowerTypeTextProps) => {
       {type === FollowerTypeEnum.Kick && (
         <Image src="kick.svg" alt="Kick" w={50} fit="contain" />
       )}
+      {type === FollowerTypeEnum.Youtube && (
+        <Image src="youtube.svg" alt="Youtube" w={50} fit="contain" />
+      )}
       {type === FollowerTypeEnum.Afreecatv && (
         <Image src="afreecatv.svg" alt="Afreecatv" w={50} fit="contain" />
       )}
-      {type === FollowerTypeEnum.Youtube && (
-        <Image src="youtube.svg" alt="Youtube" w={50} fit="contain" />
+      {type === FollowerTypeEnum.Pandalive && (
+        <Image src="pandalive.png" alt="Pandalive" w={50} fit="contain" />
       )}
     </>
   );

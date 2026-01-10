@@ -26,11 +26,12 @@ import { getProfileUrl } from "../(protected)/components/open-social";
 import { formatDuration } from "../(protected)/components/video/player-utils";
 
 const streamingPlatforms = [
-  { color: "#ff0050", name: "TikTok" },
-  { color: "#9146ff", name: "Twitch" },
-  { color: "#53fc18", name: "Kick" },
-  { color: "#ff0000", name: "YouTube" },
-  { color: "#ff424d", name: "AfreecaTV" },
+  { color: "#ff0050", name: "TikTok", file: "tiktok.svg" },
+  { color: "#9146ff", name: "Twitch", file: "twitch.svg" },
+  { color: "#53fc18", name: "Kick", file: "kick.svg" },
+  { color: "#ff0000", name: "YouTube", file: "youtube.svg" },
+  { color: "#ff424d", name: "AfreecaTV", file: "afreecatv.svg" },
+  { color: "#1da1f2", name: "Pandalive", file: "pandalive.png" },
 ];
 
 export default async function LandingPage() {
@@ -121,27 +122,17 @@ export default async function LandingPage() {
           }}
         >
           {
-            "Automatic stream recording for Tiktok. Add your favorite creators — we'll capture every stream and save VODs for you to watch anytime."
+            "Automatic stream recording for Tiktok, Twitch, Kick, YouTube, AfreecaTV, and Pandalive. Add your favorite creators — we'll capture every stream and save VODs for you to watch anytime."
           }
         </Text>
 
         {/* Streaming Platforms */}
 
-        <Flex gap={30} align="center" mt={50}>
+        <Flex gap={30} align="center" mt={20}>
           {streamingPlatforms.map((p) => (
             <Tooltip key={p.name} label={p.name} withArrow>
-              <Anchor
-                href={`/${p.name.toLowerCase()}`}
-                style={{
-                  color: p.color,
-                  opacity: 0.7,
-                }}
-              >
-                <Image
-                  alt={p.name}
-                  src={p.name.toLowerCase() + ".svg"}
-                  height={40}
-                />
+              <Anchor href={`/${p.name.toLowerCase()}`}>
+                <Image alt={p.name} src={p.file} maw={120} />
               </Anchor>
             </Tooltip>
           ))}
@@ -349,7 +340,7 @@ export default async function LandingPage() {
                           lineClamp={2}
                           style={{ color: "#f1f5f9", lineHeight: 1.4 }}
                         >
-                          {recording.follower?.nickname}
+                          {recording.follower?.nickname || "-"}
                         </Text>
 
                         <Text size="xs" c="dimmed">
@@ -447,7 +438,7 @@ export default async function LandingPage() {
                     </Box>
                     <div>
                       <Text fw={600} size="sm" style={{ color: "#f1f5f9" }}>
-                        {creator.nickname}
+                        {creator.nickname || "-"}
                       </Text>
 
                       <Text size="xs" c="dimmed">
