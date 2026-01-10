@@ -94,7 +94,7 @@ export default async function LandingPage() {
             Live Stream Recorder
           </Title>
           <Title
-            order={1}
+            order={2}
             ta="center"
             style={{
               fontSize: "clamp(2.5rem, 6vw, 3.5rem)",
@@ -416,6 +416,7 @@ export default async function LandingPage() {
                   <Stack align="center" gap={12}>
                     <Box pos="relative">
                       <Avatar
+                        alt={creator.nickname || ""}
                         src={creator.avatar?.url}
                         size={72}
                         radius="xl"

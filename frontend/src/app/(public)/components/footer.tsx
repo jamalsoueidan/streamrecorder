@@ -9,7 +9,6 @@ import {
   Title,
   useMatches,
 } from "@mantine/core";
-import Link from "next/link";
 
 const data = [
   {
@@ -72,7 +71,7 @@ export function Footer() {
       {group.links.map((link) => (
         <Anchor
           key={link.label}
-          component={Link}
+          component="a"
           href={link.link}
           size="md"
           c="white"
@@ -89,7 +88,7 @@ export function Footer() {
         <Group justify="space-between" align="flex-start">
           {/* Logo & description - left side */}
           <Stack gap="xs">
-            <Anchor component={Link} href="/" c="white" underline="never">
+            <Anchor component="a" href="/" c="white" underline="never">
               <Group>
                 <Badge
                   size="lg"
