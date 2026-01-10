@@ -10,7 +10,6 @@ import {
   Group,
   Image,
   Indicator,
-  SegmentedControl,
   Select,
   SelectProps,
   SimpleGrid,
@@ -404,15 +403,34 @@ export default function Filters({ filterOptions }: Props) {
             <Text size="md" fw={500}>
               Platform
             </Text>
-            <SegmentedControl
-              size="md"
-              value={filters.type || "all"}
-              onChange={(value) =>
-                setFilters({ type: value === "all" ? null : value })
-              }
-              data={PLATFORM_OPTIONS}
-              fullWidth
-            />
+            <SimpleGrid cols={3} spacing="xs">
+              {PLATFORM_OPTIONS.map((p) => (
+                <UnstyledButton
+                  key={p.value}
+                  onClick={() =>
+                    setFilters({ type: p.value === "all" ? null : p.value })
+                  }
+                  style={(theme) => ({
+                    padding: theme.spacing.xs,
+                    borderRadius: theme.radius.md,
+                    border: `1px solid ${
+                      filters.type === p.value ||
+                      (p.value === "all" && !filters.type)
+                        ? theme.colors.blue[1]
+                        : theme.colors.gray[3]
+                    }`,
+                    backgroundColor:
+                      filters.type === p.value ||
+                      (p.value === "all" && !filters.type)
+                        ? theme.colors.blue[9]
+                        : "transparent",
+                    textAlign: "center",
+                  })}
+                >
+                  {p.label}
+                </UnstyledButton>
+              ))}
+            </SimpleGrid>
           </Stack>
 
           {/* Gender - Grid */}

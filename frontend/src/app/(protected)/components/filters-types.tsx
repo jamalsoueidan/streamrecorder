@@ -1,10 +1,12 @@
-import { Center } from "@mantine/core";
+import { Center, Text } from "@mantine/core";
 import {
   IconAlphabetKorean,
+  IconBrandFunimation,
   IconBrandKick,
   IconBrandTiktok,
   IconBrandTwitch,
   IconBrandYoutube,
+  IconDeviceTv,
   IconWorld,
 } from "@tabler/icons-react";
 
@@ -14,7 +16,7 @@ export const PLATFORM_OPTIONS = [
     label: (
       <Center style={{ gap: 8 }}>
         <IconWorld size={18} />
-        <span>All</span>
+        <Text size="sm">All</Text>
       </Center>
     ),
   },
@@ -23,7 +25,7 @@ export const PLATFORM_OPTIONS = [
     label: (
       <Center style={{ gap: 8 }}>
         <IconBrandTiktok size={18} />
-        <span>TikTok</span>
+        <Text size="sm">TikTok</Text>
       </Center>
     ),
   },
@@ -32,7 +34,7 @@ export const PLATFORM_OPTIONS = [
     label: (
       <Center style={{ gap: 8 }}>
         <IconBrandTwitch size={18} />
-        <span>Twitch</span>
+        <Text size="sm">Twitch</Text>
       </Center>
     ),
   },
@@ -41,7 +43,7 @@ export const PLATFORM_OPTIONS = [
     label: (
       <Center style={{ gap: 8 }}>
         <IconBrandYoutube size={18} />
-        <span>Youtube</span>
+        <Text size="sm">Youtube</Text>
       </Center>
     ),
   },
@@ -50,7 +52,7 @@ export const PLATFORM_OPTIONS = [
     label: (
       <Center style={{ gap: 8 }}>
         <IconBrandKick size={18} />
-        <span>Kick</span>
+        <Text size="sm">Kick</Text>
       </Center>
     ),
   },
@@ -58,8 +60,17 @@ export const PLATFORM_OPTIONS = [
     value: "afreecatv",
     label: (
       <Center style={{ gap: 8 }}>
-        <IconAlphabetKorean size={18} />
-        <span>AfreecaTV</span>
+        <IconDeviceTv size={18} />
+        <Text size="sm">AfreecaTV</Text>
+      </Center>
+    ),
+  },
+  {
+    value: "pandalive",
+    label: (
+      <Center style={{ gap: 8 }}>
+        <IconBrandFunimation size={18} />
+        <Text size="sm">PandaLive</Text>
       </Center>
     ),
   },

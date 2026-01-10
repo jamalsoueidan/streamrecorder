@@ -13,7 +13,7 @@ import Link from "next/link";
 
 const data = [
   {
-    title: "Recordings",
+    title: "Watch recordings",
     links: [
       { label: "Tiktok recordings", link: "/tiktok" },
       { label: "Twitch recordings", link: "/twitch" },
@@ -32,7 +32,7 @@ const data = [
     ],
   },
   {
-    title: "About",
+    title: "Company",
     links: [
       { link: "/news", label: "News" },
       { link: "/pricing", label: "Pricing" },
