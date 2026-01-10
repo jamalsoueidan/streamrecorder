@@ -336,7 +336,10 @@ export default factories.createCoreController(
       const user = ctx.state.user;
       if (!user) return ctx.unauthorized();
 
-      const { username, type } = ctx.request.body;
+      const body = ctx.request.body;
+
+      const username = body.username.toLowerCase().trim();
+      const type = body.type.trim();
 
       // Get current user with existing followers
       const currentUser = await strapi
