@@ -25,6 +25,15 @@ export function proxy(request: NextRequest) {
 
   if (PLATFORMS.includes(firstSegment)) {
     if (token) {
+      // Check if URL is ONLY the platform (e.g., /pandalive with nothing after)
+      const segments = path.split("/").filter(Boolean);
+
+      if (segments.length === 1) {
+        // Only platform in URL, redirect to discover
+        return NextResponse.redirect(
+          new URL(`/discover?type=${firstSegment}`, request.url)
+        );
+      }
       return NextResponse.rewrite(new URL(`/protected${path}`, request.url));
     } else {
       return NextResponse.rewrite(new URL(`/public${path}`, request.url));

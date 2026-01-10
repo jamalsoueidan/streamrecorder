@@ -25,7 +25,7 @@ import { FollowerTypeText } from "../(protected)/components/follower-type-text";
 import { getProfileUrl } from "../(protected)/components/open-social";
 import { formatDuration } from "../(protected)/components/video/player-utils";
 
-const streamingPlatforms = [
+export const streamingPlatforms = [
   { color: "#ff0050", name: "TikTok", file: "tiktok.svg" },
   { color: "#9146ff", name: "Twitch", file: "twitch.svg" },
   { color: "#53fc18", name: "Kick", file: "kick.svg" },

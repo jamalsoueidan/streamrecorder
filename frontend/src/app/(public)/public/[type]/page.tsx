@@ -17,6 +17,7 @@ import {
   Stack,
   Text,
   Title,
+  Tooltip,
 } from "@mantine/core";
 import {
   IconCloud,
@@ -25,14 +26,7 @@ import {
   IconUserPlus,
   IconUsers,
 } from "@tabler/icons-react";
-
-const streamingPlatforms = [
-  { color: "#ff0050", name: "TikTok" },
-  { color: "#9146ff", name: "Twitch" },
-  { color: "#53fc18", name: "Kick" },
-  { color: "#ff0000", name: "YouTube" },
-  { color: "#ff424d", name: "AfreecaTV" },
-];
+import { streamingPlatforms } from "../../page";
 
 const features = [
   {
@@ -76,9 +70,9 @@ export default async function Page({ params, searchParams }: PageProps) {
   const platform = streamingPlatforms.find(
     (p) => p.name.toLowerCase() === type
   ) || {
-    name: "Streams",
-    color: "#6366f1",
-    icon: IconPlayerPlay,
+    color: "#ff0050",
+    name: "TikTok",
+    file: "tiktok.svg",
   };
 
   const {
@@ -125,25 +119,14 @@ export default async function Page({ params, searchParams }: PageProps) {
           your favorite creators so you can watch anytime.
         </Text>
 
-        <Flex gap={30} align="center" mt={24}>
-          {streamingPlatforms
-            .filter((p) => p.name.toLowerCase() != type)
-            .map((p) => (
-              <Anchor
-                key={p.name}
-                href={`/${p.name.toLowerCase()}`}
-                style={{
-                  color: p.color,
-                  opacity: 0.7,
-                }}
-              >
-                <Image
-                  alt={p.name}
-                  src={p.name.toLowerCase() + ".svg"}
-                  height={40}
-                />
+        <Flex gap={30} align="center" mt={20}>
+          {streamingPlatforms.map((p) => (
+            <Tooltip key={p.name} label={p.name} withArrow>
+              <Anchor href={`/${p.name.toLowerCase()}`}>
+                <Image alt={p.name} src={p.file} maw={120} />
               </Anchor>
-            ))}
+            </Tooltip>
+          ))}
         </Flex>
       </Stack>
 
@@ -253,8 +236,8 @@ export default async function Page({ params, searchParams }: PageProps) {
               >
                 <Image
                   alt={platform.name}
-                  src={platform.name.toLowerCase() + ".svg"}
-                  height={40}
+                  src={platform.file.toLowerCase()}
+                  width={100}
                 />
               </div>
               <Title order={3} style={{ color: "#f1f5f9" }}>
@@ -390,11 +373,6 @@ export default async function Page({ params, searchParams }: PageProps) {
             gap={24}
             style={{ position: "relative", zIndex: 1 }}
           >
-            <Image
-              alt={platform.name}
-              src={platform.name.toLowerCase() + ".svg"}
-              height={40}
-            />
             <Title
               order={2}
               style={{
@@ -413,7 +391,13 @@ export default async function Page({ params, searchParams }: PageProps) {
               Join thousands of users who never miss their favorite{" "}
               {platform.name} streams. Free to get started.
             </Text>
-            <Flex gap={16} mt={8}>
+            <Flex
+              gap={16}
+              mt={8}
+              direction="column"
+              justify="center"
+              align="center"
+            >
               <Button
                 component="a"
                 href="/register"
