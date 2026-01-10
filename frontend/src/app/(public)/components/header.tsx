@@ -84,7 +84,7 @@ export async function Header() {
           </Link>
 
           {/* Navigation */}
-          <Flex gap={4} align="center" visibleFrom="sm">
+          <Flex gap={4} align="center" visibleFrom="sm" display="none">
             {links.map((link) => (
               <a
                 key={link.label}
