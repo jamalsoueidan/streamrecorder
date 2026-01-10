@@ -2,6 +2,7 @@ import type { NextRequest } from "next/server";
 import { NextResponse } from "next/server";
 
 const PLATFORMS = [
+  "creators",
   "tiktok",
   "twitch",
   "youtube",
@@ -44,5 +45,7 @@ export function proxy(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/(tiktok|twitch|youtube|kick|afreecatv|pandalive)/:path*"],
+  matcher: [
+    "/(creators|tiktok|twitch|youtube|kick|afreecatv|pandalive)/:path*",
+  ],
 };

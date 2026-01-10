@@ -13,14 +13,27 @@ import Link from "next/link";
 
 const data = [
   {
-    title: "Watch recordings",
+    title: "Featured Creators",
     links: [
-      { label: "Tiktok recordings", link: "/tiktok" },
-      { label: "Twitch recordings", link: "/twitch" },
-      { label: "Kick recordings", link: "/kick" },
-      { label: "YouTube recordings", link: "/youtube" },
-      { label: "AfreecaTV recordings", link: "/afreecatv" },
-      { label: "Pandalive recordings", link: "/pandalive" },
+      { label: "Browse creators", link: "/creators" },
+      { label: "Tiktok creators", link: "/tiktok" },
+      { label: "Twitch creators", link: "/twitch" },
+      { label: "Kick creators", link: "/kick" },
+      { label: "YouTube creators", link: "/youtube" },
+      { label: "AfreecaTV creators", link: "/afreecatv" },
+      { label: "Pandalive creators", link: "/pandalive" },
+    ],
+  },
+  {
+    title: "Watch Recordings",
+    links: [
+      { label: "Browse recordings", link: "/recordings/all" },
+      { label: "Tiktok recordings", link: "/recordings/tiktok" },
+      { label: "Twitch recordings", link: "/recordings/twitch" },
+      { label: "Kick recordings", link: "/recordings/kick" },
+      { label: "YouTube recordings", link: "/recordings/youtube" },
+      { label: "AfreecaTV recordings", link: "/recordings/afreecatv" },
+      { label: "Pandalive recordings", link: "/recordings/pandalive" },
     ],
   },
   {
@@ -48,7 +61,7 @@ export function Footer() {
   const gap = useMatches({
     base: 30,
     sm: 50,
-    md: 100,
+    md: 50,
   });
 
   const groups = data.map((group) => (

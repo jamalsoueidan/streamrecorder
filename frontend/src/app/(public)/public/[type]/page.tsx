@@ -17,7 +17,6 @@ import {
   Stack,
   Text,
   Title,
-  Tooltip,
 } from "@mantine/core";
 import {
   IconCloud,
@@ -71,14 +70,14 @@ export default async function Page({ params, searchParams }: PageProps) {
     (p) => p.name.toLowerCase() === type
   ) || {
     color: "#ff0050",
-    name: "TikTok",
-    file: "tiktok.svg",
+    name: "",
+    file: "creators.png",
   };
 
   const {
     data: { data: followers, meta },
   } = await publicApi.follower.getFollowers({
-    filters: { type },
+    ...(!platform.name ? {} : { filters: { type } }),
     "pagination[pageSize]": 20,
     "pagination[page]": parseInt(page || "1"),
     sort: "createdAt:desc",
@@ -121,11 +120,18 @@ export default async function Page({ params, searchParams }: PageProps) {
 
         <Flex gap={30} align="center" mt={20}>
           {streamingPlatforms.map((p) => (
-            <Tooltip key={p.name} label={p.name} withArrow>
-              <Anchor href={`/${p.name.toLowerCase()}`}>
-                <Image alt={p.name} src={p.file} maw={120} />
-              </Anchor>
-            </Tooltip>
+            <Button
+              key={p.name}
+              component="a"
+              size="xl"
+              radius="lg"
+              href={`/recordings/${p.name.toLowerCase()}`}
+              variant={
+                p.name.toLowerCase() === type ? "outline" : "transparent"
+              }
+            >
+              <Image alt={p.name} src={p.file} maw={120} />
+            </Button>
           ))}
         </Flex>
       </Stack>
