@@ -36,6 +36,15 @@ import {
 import { useRouter } from "next/navigation";
 import { useActionState, useEffect, useState, useTransition } from "react";
 
+const data = [
+  { label: "TikTok", value: "tiktok" },
+  { label: "Twitch", value: "twitch" },
+  { label: "Kick", value: "kick" },
+  { label: "Youtube", value: "youtube" },
+  { label: "AfreecaTV", value: "afreecatv" },
+  { label: "PandaLive", value: "pandalive" },
+];
+
 export default function AddFollowerForm() {
   const router = useRouter();
   const [query, setQuery] = useState("");
@@ -269,13 +278,7 @@ export default function AddFollowerForm() {
             value={detectedPlatform ?? selectedPlatform}
             onChange={(value) => setSelectedPlatform(value as PlatformType)}
             disabled={detectedPlatform !== null}
-            data={[
-              { label: "TikTok", value: "tiktok" },
-              { label: "Twitch", value: "twitch" },
-              { label: "Kick", value: "kick" },
-              { label: "Youtube", value: "youtube" },
-              { label: "AfreecaTV", value: "afreecatv" },
-            ]}
+            data={data}
             fullWidth
           />
           {detectedPlatform && (

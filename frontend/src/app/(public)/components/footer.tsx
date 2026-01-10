@@ -20,6 +20,7 @@ const data = [
       { label: "Kick recordings", link: "/kick" },
       { label: "YouTube recordings", link: "/youtube" },
       { label: "AfreecaTV recordings", link: "/afreecatv" },
+      { label: "Pandalive recordings", link: "/pandalive" },
     ],
   },
   {

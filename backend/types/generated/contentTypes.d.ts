@@ -582,7 +582,7 @@ export interface ApiFollowerFollower extends Struct.CollectionTypeSchema {
     publishedAt: Schema.Attribute.DateTime;
     tagline: Schema.Attribute.String;
     type: Schema.Attribute.Enumeration<
-      ['tiktok', 'twitch', 'kick', 'youtube', 'afreecatv']
+      ['tiktok', 'twitch', 'kick', 'youtube', 'afreecatv', 'pandalive']
     > &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'tiktok'>;

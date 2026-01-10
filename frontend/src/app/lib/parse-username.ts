@@ -85,6 +85,18 @@ export function parseUsername(input: string): ParsedUsername {
     };
   }
 
+  // PandaLive URL pattern
+  const pandaliveRegex =
+    /(?:https?:\/\/)?(?:www\.)?pandalive\.co\.kr\/(?:live\/)?play\/([^\/\s?]+)/i;
+  const pandaliveMatch = trimmed.match(pandaliveRegex);
+
+  if (pandaliveMatch) {
+    return {
+      username: pandaliveMatch[1],
+      platform: "pandalive",
+    };
+  }
+
   // Plain username - remove @ if present
   const username = trimmed.startsWith("@") ? trimmed.slice(1) : trimmed;
 
