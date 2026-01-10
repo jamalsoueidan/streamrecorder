@@ -9,17 +9,17 @@ export const FollowerTypeText = ({ type, ...props }: FollowerTypeTextProps) => {
   return (
     <>
       {type === FollowerTypeEnum.Tiktok && (
-        <Image src="tiktok.svg" alt="Tiktok" w={50} fit="contain" {...props} />
+        <Image src="/tiktok.svg" alt="Tiktok" w={50} fit="contain" {...props} />
       )}
       {type === FollowerTypeEnum.Twitch && (
-        <Image src="twitch.svg" alt="Twitch" w={50} fit="contain" {...props} />
+        <Image src="/twitch.svg" alt="Twitch" w={50} fit="contain" {...props} />
       )}
       {type === FollowerTypeEnum.Kick && (
-        <Image src="kick.svg" alt="Kick" w={50} fit="contain" {...props} />
+        <Image src="/kick.svg" alt="Kick" w={50} fit="contain" {...props} />
       )}
       {type === FollowerTypeEnum.Youtube && (
         <Image
-          src="youtube.svg"
+          src="/youtube.svg"
           alt="Youtube"
           w={50}
           fit="contain"
@@ -28,7 +28,7 @@ export const FollowerTypeText = ({ type, ...props }: FollowerTypeTextProps) => {
       )}
       {type === FollowerTypeEnum.Afreecatv && (
         <Image
-          src="afreecatv.svg"
+          src="/afreecatv.svg"
           alt="Afreecatv"
           w={50}
           fit="contain"
@@ -37,7 +37,7 @@ export const FollowerTypeText = ({ type, ...props }: FollowerTypeTextProps) => {
       )}
       {type === FollowerTypeEnum.Pandalive && (
         <Image
-          src="pandalive.png"
+          src="/pandalive.png"
           alt="Pandalive"
           w={50}
           fit="contain"
