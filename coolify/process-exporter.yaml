@@ -1,0 +1,100 @@
+services:
+  init-configs:
+    image: alpine:latest
+    restart: "no"
+    volumes:
+      - config_data:/config
+    command: |
+      sh -c '
+      cat > /config/process-exporter.yml << "EOF"
+      process_names:
+        - name: "ffmpeg:screenshot"
+          comm:
+            - ffmpeg
+          cmdline:
+            - "screenshot.jpg"
+
+        - name: "ffmpeg:thumbnails"
+          comm:
+            - ffmpeg
+          cmdline:
+            - "thumbnails.jpg"
+
+        - name: "ffmpeg:thumb"
+          comm:
+            - ffmpeg
+          cmdline:
+            - "thumb_"
+
+        - name: "ffmpeg:preview"
+          comm:
+            - ffmpeg
+          cmdline:
+            - "preview.jpg"
+
+        - name: "ffmpeg:video_small"
+          comm:
+            - ffmpeg
+          cmdline:
+            - "video_small.mp4"
+
+        - name: "ffmpeg:video"
+          comm:
+            - ffmpeg
+          cmdline:
+            - "video.mp4"
+
+        - name: "ffmpeg:other"
+          comm:
+            - ffmpeg
+
+        - name: "node"
+          comm:
+            - node
+
+        - name: "python"
+          comm:
+            - python
+            - python3
+
+        - name: "curl"
+          comm:
+            - curl
+
+        - name: "streamlink"
+          comm:
+            - streamlink
+      EOF
+      '
+  node-exporter:
+    image: "prom/node-exporter:latest"
+    command:
+      - "--path.procfs=/host/proc"
+      - "--path.sysfs=/host/sys"
+      - "--path.rootfs=/rootfs"
+      - "--collector.filesystem.mount-points-exclude=^/(sys|proc|dev|host|etc)($$|/)"
+    volumes:
+      - "/proc:/host/proc:ro"
+      - "/sys:/host/sys:ro"
+      - "/:/rootfs:ro"
+    pid: host
+    ports:
+      - "9100:9100"
+    restart: unless-stopped
+  process-exporter:
+    image: "ncabatoff/process-exporter:latest"
+    command:
+      - "--procfs=/host/proc"
+      - "-config.path=/config/process-exporter.yml"
+    volumes:
+      - "/proc:/host/proc:ro"
+      - "config_data:/config:ro"
+    ports:
+      - "9256:9256"
+    privileged: true
+    restart: unless-stopped
+    depends_on:
+      init-configs:
+        condition: service_completed_successfully
+volumes:
+  config_data: null

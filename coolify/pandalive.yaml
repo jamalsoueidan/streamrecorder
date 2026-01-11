@@ -11,6 +11,13 @@ services:
       - net.ipv4.conf.all.src_valid_mark=1
     volumes:
       - warp-data:/var/lib/cloudflare-warp
+    entrypoint: ["/bin/sh", "-c"]
+    command:
+      - |
+        /entrypoint.sh &
+        sleep 15
+        warp-cli --accept-tos mode proxy
+        wait
 
   create-pandalive-service:
     image: alpine:latest

@@ -1,0 +1,39 @@
+services:
+  init-configs:
+    image: "alpine:latest"
+    restart: "no"
+    environment:
+      - "WORKER_TARGETS=${WORKER_TARGETS:-localhost:9100}"
+    volumes:
+      - "config_data:/config"
+    command: "sh -c '\ncat > /config/prometheus.yml << EOF\nglobal:\n  scrape_interval: 15s\n\nscrape_configs:\n  - job_name: \"prometheus\"\n    static_configs:\n      - targets: [\"localhost:9090\"]\n\n  - job_name: \"workers\"\n    static_configs:\n      - targets: [${WORKER_TARGETS}]\nEOF\necho \"Config created with targets: ${WORKER_TARGETS}\"\ncat /config/prometheus.yml\n'\n"
+  prometheus:
+    image: "prom/prometheus:latest"
+    command:
+      - "--config.file=/config/prometheus.yml"
+      - "--storage.tsdb.path=/prometheus"
+      - "--storage.tsdb.retention.time=30d"
+    volumes:
+      - "prometheus_data:/prometheus"
+      - "config_data:/config:ro"
+    ports:
+      - "9090:9090"
+    restart: unless-stopped
+    depends_on:
+      init-configs:
+        condition: service_completed_successfully
+  grafana:
+    image: "grafana/grafana:latest"
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=your_password_here
+      - GF_USERS_ALLOW_SIGN_UP=false
+    volumes:
+      - "grafana_data:/var/lib/grafana"
+    ports:
+      - "3033:3000"
+    restart: unless-stopped
+volumes:
+  prometheus_data: null
+  grafana_data: null
+  config_data: null
