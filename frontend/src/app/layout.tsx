@@ -15,6 +15,7 @@ import { PWAUpdater } from "./pwa-updater";
 const theme = createTheme({});
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.livestreamrecorder.com"),
   title: "Live Stream Recorder | Automatically Record Tiktok, Twitch & More",
   description:
     "Never miss a live stream again. We automatically record your favorite streamers so you can watch later or download anytime. Free Twitch VOD downloads, Tiktok live stream recordings, and more.",
