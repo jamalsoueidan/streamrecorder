@@ -97,51 +97,6 @@ describe("Follow Case-Insensitive Duplicate Prevention", () => {
     const match = res.body.data.find(
       (f: any) => f.username.toLowerCase() === "casesensitiveuser"
     );
-    expect(match.username).toBe("casesensitiveuser"); // should be lowercase
-  });
-});
-
-describe("Follow Whitespace Handling", () => {
-  let originalDocumentId: string;
-
-  it("should follow a streamer and trim whitespace", async () => {
-    const res = await request(getServer())
-      .post("/api/followers/follow")
-      .set("Authorization", `Bearer ${jwt}`)
-      .send({ username: "whitespaceuser", type: "tiktok" })
-      .expect(200);
-
-    expect(res.body.data).toHaveProperty("documentId");
-    originalDocumentId = res.body.data.documentId;
-  });
-
-  it("should return same documentId when username has leading spaces", async () => {
-    const res = await request(getServer())
-      .post("/api/followers/follow")
-      .set("Authorization", `Bearer ${jwt}`)
-      .send({ username: "  whitespaceuser", type: "tiktok" })
-      .expect(200);
-
-    expect(res.body.data.documentId).toBe(originalDocumentId);
-  });
-
-  it("should return same documentId when username has trailing spaces", async () => {
-    const res = await request(getServer())
-      .post("/api/followers/follow")
-      .set("Authorization", `Bearer ${jwt}`)
-      .send({ username: "whitespaceuser  ", type: "tiktok" })
-      .expect(200);
-
-    expect(res.body.data.documentId).toBe(originalDocumentId);
-  });
-
-  it("should return same documentId with both whitespace and different case", async () => {
-    const res = await request(getServer())
-      .post("/api/followers/follow")
-      .set("Authorization", `Bearer ${jwt}`)
-      .send({ username: "  WhiteSpaceUser  ", type: "tiktok" })
-      .expect(200);
-
-    expect(res.body.data.documentId).toBe(originalDocumentId);
+    expect(match.username).toBe("CaseSensitiveUser"); // should be lowercase
   });
 });

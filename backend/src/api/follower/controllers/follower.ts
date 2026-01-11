@@ -338,10 +338,9 @@ export default factories.createCoreController(
 
       const body = ctx.request.body;
 
-      const username = body.username.toLowerCase().trim();
+      const username = body.username.trim(); // ✅ Keep original casing
       const type = body.type.trim();
 
-      // Get current user with existing followers
       const currentUser = await strapi
         .documents("plugin::users-permissions.user")
         .findOne({
@@ -349,11 +348,13 @@ export default factories.createCoreController(
           populate: ["followers", "role"],
         });
 
-      // Find or create follower
       let follower = await strapi
         .documents("api::follower.follower")
         .findFirst({
-          filters: { username, type },
+          filters: {
+            username: { $eqi: username }, // ✅ Case-insensitive search
+            type,
+          },
         });
 
       if (!follower) {
