@@ -15,7 +15,6 @@ interface PageProps {
   params: Promise<{
     type: string;
   }>;
-
   children: React.ReactNode;
 }
 
