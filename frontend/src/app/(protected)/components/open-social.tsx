@@ -33,14 +33,19 @@ export const URL_PATTERNS: Record<
   [FollowerTypeEnum.Pandalive]: (username) => `/pandalive/${username}`,
 };
 
-export const getSocialUrl = (username: string, type: FollowerTypeEnum) => {
-  const patternFn = SOCIAL_URL_PATTERNS[type];
-  return patternFn ? patternFn(username) : "/404";
+export const getSocialUrl = (
+  follower?: Partial<Pick<Follower, "username" | "type">>
+) => {
+  const patternFn =
+    SOCIAL_URL_PATTERNS[follower?.type || FollowerTypeEnum.Tiktok];
+  return patternFn ? patternFn(follower?.username || "unknown") : "/404";
 };
 
-export const getProfileUrl = (username: string, type: FollowerTypeEnum) => {
-  const patternFn = URL_PATTERNS[type];
-  return patternFn ? patternFn(username) : "/404";
+export const getProfileUrl = (
+  follower?: Partial<Pick<Follower, "username" | "type">>
+) => {
+  const patternFn = URL_PATTERNS[follower?.type || FollowerTypeEnum.Tiktok];
+  return patternFn ? patternFn(follower?.username || "unknown") : "/404";
 };
 
 export default function OpenSocial({ follower }: { follower: Follower }) {

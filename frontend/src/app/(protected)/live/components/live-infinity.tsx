@@ -31,8 +31,10 @@ import { useInfiniteQuery } from "@tanstack/react-query";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
 
+import { generateAvatarUrl } from "@/app/lib/avatar-url";
 import { Role } from "@/app/providers/ability-provider";
 import { ImageVideoPreview } from "../../components/image-video-preview";
+import { getProfileUrl } from "../../components/open-social";
 import { fetchLiveRecordings } from "../actions/fetch-live-recordings";
 
 interface Props {
@@ -179,13 +181,10 @@ export default function LiveInfinity({ scope }: Props) {
             )}
             <Grid.Col span={12}>
               <Group gap="xs">
-                <Anchor
-                  component={Link}
-                  href={`/${rec.follower?.type}/${rec.follower?.username}`}
-                >
+                <Anchor component={Link} href={getProfileUrl(rec.follower)}>
                   <Avatar
                     size={38}
-                    src={rec.follower?.avatar?.url}
+                    src={generateAvatarUrl(rec.follower?.avatar?.url)}
                     styles={{
                       image: {
                         transform: "scale(2)",
@@ -198,7 +197,7 @@ export default function LiveInfinity({ scope }: Props) {
                 <Stack gap="0">
                   <Anchor
                     component={Link}
-                    href={`/${rec.follower?.type}/${rec.follower?.username}`}
+                    href={getProfileUrl(rec.follower)}
                     size="md"
                     truncate
                     maw={110}

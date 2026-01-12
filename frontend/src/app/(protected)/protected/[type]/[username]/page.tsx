@@ -31,6 +31,7 @@ import FollowButton from "@/app/(protected)/components/follow-button";
 import { FollowerTypeIcon } from "@/app/(protected)/components/follower-type-icon";
 import OpenSocial from "@/app/(protected)/components/open-social";
 import UnfollowButton from "@/app/(protected)/components/unfollow-button";
+import { generateAvatarUrl } from "@/app/lib/avatar-url";
 import { fetchProfileRecordings, getFollower } from "./actions/actions";
 import { AdminMenu } from "./components/admin-menu";
 import ProfileRecordings from "./components/profile-recordings";
@@ -80,7 +81,7 @@ export default async function Page({ params, searchParams }: PageProps) {
         <Box pos="relative">
           <Avatar
             size={150}
-            src={follower.avatar?.url}
+            src={generateAvatarUrl(follower.avatar?.url)}
             style={{
               ...(isRecording ? { border: "3px solid red" } : {}),
             }}
