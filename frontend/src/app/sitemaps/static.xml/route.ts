@@ -15,12 +15,12 @@ export async function GET() {
     { url: "/privacy", priority: 0.3, changefreq: "yearly" },
     { url: "/terms", priority: 0.3, changefreq: "yearly" },
     {
-      url: `/creators`,
+      url: `/creators/all`,
       priority: 0.8,
       changefreq: "daily",
     },
     ...streamingPlatforms.map((platform) => ({
-      url: `/${platform.name.toLowerCase()}`,
+      url: `/creators/${platform.name.toLowerCase()}`,
       priority: 0.8,
       changefreq: "daily",
     })),
