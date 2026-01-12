@@ -26,13 +26,14 @@ import {
 import Link from "next/link";
 
 import { ImageVideoPreview } from "@/app/(protected)/components/image-video-preview";
+import { generateAvatarUrl } from "@/app/lib/avatar-url";
 import { IconCalendarPlus, IconVideo } from "@tabler/icons-react";
 import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
 import { CountryFlag } from "../../components/country-flag";
 import FollowButton from "../../components/follow-button";
 import { FollowerTypeIcon } from "../../components/follower-type-icon";
-import OpenSocial from "../../components/open-social";
+import OpenSocial, { getProfileUrl } from "../../components/open-social";
 import UnfollowButton from "../../components/unfollow-button";
 import { getRecordings } from "../actions/fetch-followers";
 
@@ -91,7 +92,7 @@ export default function FollowerItem({ follower, isOpen }: Props) {
           <Box pos="relative" visibleFrom="sm">
             <Avatar
               size="lg"
-              src={`/avatar/${follower.avatar?.url?.split("/").pop()}`}
+              src={generateAvatarUrl(follower.avatar?.url)}
               styles={{
                 image: {
                   transform: "scale(2)",
@@ -119,7 +120,7 @@ export default function FollowerItem({ follower, isOpen }: Props) {
               <Box pos="relative" hiddenFrom="sm">
                 <Avatar
                   size="md"
-                  src={follower.avatar?.url}
+                  src={generateAvatarUrl(follower.avatar?.url)}
                   styles={{
                     image: {
                       transform: "scale(2)",
@@ -141,11 +142,7 @@ export default function FollowerItem({ follower, isOpen }: Props) {
                 )}
               </Box>
 
-              <Anchor
-                component={Link}
-                href={`/${follower?.type}/${follower?.username}`}
-                size="md"
-              >
+              <Anchor component={Link} href={getProfileUrl(follower)} size="md">
                 <Text size="lg" truncate maw={isMobile ? 100 : 200} fw="bold">
                   {follower.username}
                 </Text>

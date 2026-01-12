@@ -13,54 +13,7 @@ import { getFollower } from "./actions/actions";
 
 import { CountryFlag } from "@/app/(protected)/components/country-flag";
 import { FollowerTypeIcon } from "@/app/(protected)/components/follower-type-icon";
-import { Metadata } from "next";
-
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ username: string; type: string }>;
-}): Promise<Metadata> {
-  const { type, username } = await params;
-  const follower = await getFollower({ username, type });
-
-  if (!follower) {
-    return {
-      title: "Streamer Not Found | Live Stream Recorder",
-    };
-  }
-
-  const title = `${follower.nickname} VODs & Recordings | Live Stream Recorder`;
-  const description =
-    follower.tagline ||
-    `Watch ${follower.nickname}'s recorded streams anytime. Never miss a live stream — we record automatically so you can watch later or download for free.`;
-
-  return {
-    title,
-    description,
-    keywords: [
-      `${follower.nickname} vods`,
-      `${follower.nickname} streams`,
-      `${follower.nickname} recordings`,
-      `watch ${follower.nickname}`,
-      "live stream recorder",
-      "stream recording",
-      `${follower.type} vod downloader`,
-    ],
-    openGraph: {
-      title,
-      description,
-      type: "profile",
-      images: follower.avatar?.url ? [{ url: follower.avatar.url }] : [],
-      siteName: "Live Stream Recorder",
-    },
-    twitter: {
-      card: "summary",
-      title,
-      description,
-      images: follower.avatar?.url ? [follower.avatar.url] : [],
-    },
-  };
-}
+import { generateAvatarUrl } from "@/app/lib/avatar-url";
 
 export default async function Layout({
   children,
@@ -83,7 +36,7 @@ export default async function Layout({
           <Avatar
             size="xl"
             radius="xl"
-            src={follower.avatar?.url}
+            src={generateAvatarUrl(follower.avatar?.url)}
             styles={{
               image: {
                 transform: "scale(2)",

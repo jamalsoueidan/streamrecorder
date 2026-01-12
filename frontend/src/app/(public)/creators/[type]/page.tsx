@@ -1,7 +1,12 @@
 import { CountryFlag } from "@/app/(protected)/components/country-flag";
 import { FollowerTypeIcon } from "@/app/(protected)/components/follower-type-icon";
-import { getProfileUrl } from "@/app/(protected)/components/open-social";
+import {
+  getProfileUrl,
+  getSocialUrl,
+} from "@/app/(protected)/components/open-social";
 import PaginationControls from "@/app/(protected)/components/pagination";
+import { generateAvatarUrl } from "@/app/lib/avatar-url";
+import { generateProfileUrl } from "@/app/lib/profile-url";
 import publicApi from "@/lib/public-api";
 import {
   Anchor,
@@ -16,40 +21,8 @@ import {
   Text,
   Title,
 } from "@mantine/core";
-import {
-  IconCloud,
-  IconDeviceTv,
-  IconPlayerPlay,
-  IconUsers,
-} from "@tabler/icons-react";
+import { Metadata } from "next";
 import { streamingPlatforms } from "../../page";
-
-const features = [
-  {
-    icon: IconUsers,
-    title: "Follow Your Favorite Streamers",
-    description:
-      "Simply follow the creators you love, and we handle the rest. Our service works around the clock, recording streaming video in the background and making it available on-demand.",
-  },
-  {
-    icon: IconPlayerPlay,
-    title: "Watch Anytime, Anywhere",
-    description:
-      "Busy schedule? Different time zone? No problem. Catch up on live content whenever it suits you. Access your recordings through our built-in player or download them for offline viewing.",
-  },
-  {
-    icon: IconCloud,
-    title: "Securely Stored in the Cloud",
-    description:
-      "Your recorded streams are saved securely on our servers. No storage fees, no lost files - just reliable access to your favorite content whenever you need it.",
-  },
-  {
-    icon: IconDeviceTv,
-    title: "One Platform, Every Stream",
-    description:
-      "Whether you want to record TikTok streams, capture Twitch live broadcasts, or save content from other platforms, our stream recording service has you covered.",
-  },
-];
 
 interface PageProps {
   params: Promise<{
@@ -58,6 +31,64 @@ interface PageProps {
   searchParams: Promise<{
     page?: string;
   }>;
+}
+
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
+  const { type } = await params;
+
+  const platform = streamingPlatforms.find(
+    (p) => p.name.toLowerCase() === type
+  );
+
+  const platformName = platform?.name || "All Platforms";
+  const isAllPlatforms = type === "all";
+
+  const title = isAllPlatforms
+    ? "All Streamers & Creators"
+    : `${platformName} Streamers & Creators`;
+
+  const description = isAllPlatforms
+    ? "Browse all streamers and creators we're recording. Follow your favorites and never miss a live stream from TikTok, Twitch, and more."
+    : `Discover ${platformName} streamers and creators. Follow your favorites and we'll automatically record their live streams so you never miss a moment.`;
+
+  return {
+    title,
+    description,
+    keywords: [
+      `${platformName.toLowerCase()} streamers`,
+      `${platformName.toLowerCase()} creators`,
+      `${platformName.toLowerCase()} live stream`,
+      `record ${platformName.toLowerCase()}`,
+      `${platformName.toLowerCase()} vod`,
+      "live stream recorder",
+      "stream recording",
+    ],
+    openGraph: {
+      title: `${title} | Live Stream Recorder`,
+      description,
+      url: `https://www.livestreamrecorder.com/creators/${type}`,
+      type: "website",
+      images: [
+        {
+          url: "/og-image.png",
+          width: 1200,
+          height: 630,
+          alt: `${platformName} Streamers & Creators`,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${title} | Live Stream Recorder`,
+      description,
+      images: ["/og-image.png"],
+    },
+    alternates: {
+      canonical: `https://www.livestreamrecorder.com/creators/${type}`,
+    },
+  };
 }
 
 export default async function Page({ params, searchParams }: PageProps) {
@@ -83,134 +114,170 @@ export default async function Page({ params, searchParams }: PageProps) {
 
   const totalPages = meta?.pagination?.pageCount || 1;
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: `${platform.name || "All"} Streamers & Creators`,
+    description: `Discover ${
+      platform.name || "all"
+    } streamers and creators. Follow your favorites and we'll automatically record their live streams.`,
+    url: `https://www.livestreamrecorder.com/creators/${type}`,
+    isPartOf: {
+      "@type": "WebSite",
+      name: "Live Stream Recorder",
+      url: "https://www.livestreamrecorder.com",
+    },
+    mainEntity: {
+      "@type": "ItemList",
+      numberOfItems: followers?.length || 0,
+      itemListElement: followers?.slice(0, 20).map((creator, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        item: {
+          "@type": "Person",
+          name: creator.nickname || creator.username,
+          alternateName: `@${creator.username}`,
+          description: creator.tagline || creator.description,
+          image: generateAvatarUrl(creator.avatar?.url),
+          url: generateProfileUrl(creator),
+          nationality: creator.country,
+          sameAs: [getSocialUrl(creator)],
+        },
+      })),
+    },
+  };
+
   return (
-    <div style={{ marginTop: 80 }}>
-      {followers && followers.length > 0 ? (
-        <>
-          <Flex gap={20} wrap="wrap">
-            {followers.map((creator) => (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <div style={{ marginTop: 80 }}>
+        {followers && followers.length > 0 ? (
+          <>
+            <Flex gap={20} wrap="wrap">
+              {followers.map((creator) => (
+                <div
+                  key={creator.id}
+                  style={{
+                    flex: "1 1 calc(16.666% - 17px)",
+                    minWidth: "180px",
+                    maxWidth: "220px",
+                  }}
+                >
+                  <Anchor href={getProfileUrl(creator)} underline="never">
+                    <Card
+                      padding={20}
+                      style={{
+                        background: "rgba(255, 255, 255, 0.02)",
+                        border: "1px solid rgba(255, 255, 255, 0.06)",
+                        borderRadius: "16px",
+                        cursor: "pointer",
+                        textAlign: "center",
+                      }}
+                    >
+                      <Stack align="center" gap={12}>
+                        <div style={{ position: "relative" }}>
+                          <Avatar
+                            src={generateAvatarUrl(creator.avatar?.url)}
+                            size={72}
+                            radius="xl"
+                            style={{
+                              border: `3px solid ${platform.color}40`,
+                            }}
+                          />
+                          {creator.type && (
+                            <FollowerTypeIcon
+                              pos="absolute"
+                              color="transparent"
+                              type={creator.type}
+                              top="50%"
+                              left="50%"
+                              size={40}
+                              opacity={0.5}
+                              style={{ transform: "translate(-50%, -50%)" }}
+                            />
+                          )}
+                        </div>
+                        <div>
+                          <Text fw={600} size="sm" style={{ color: "#f1f5f9" }}>
+                            {creator.nickname || "unknown"}
+                          </Text>
+                          <Text size="xs" style={{ color: "#64748b" }}>
+                            @{creator.username}
+                          </Text>
+                        </div>
+                        <div style={{ minHeight: 24 }}>
+                          {creator.country && (
+                            <CountryFlag
+                              country={creator.country}
+                              countryCode={creator.countryCode}
+                              size={20}
+                            />
+                          )}
+                        </div>
+                      </Stack>
+                    </Card>
+                  </Anchor>
+                </div>
+              ))}
+            </Flex>
+
+            {totalPages > 1 && (
+              <Center mt={40}>
+                <PaginationControls total={totalPages} size="lg" />
+              </Center>
+            )}
+          </>
+        ) : (
+          <Paper
+            p="xl"
+            radius="lg"
+            style={{
+              background: "rgba(255, 255, 255, 0.02)",
+              border: "1px solid rgba(255, 255, 255, 0.06)",
+              textAlign: "center",
+            }}
+          >
+            <Stack align="center" gap="md">
               <div
-                key={creator.id}
                 style={{
-                  flex: "1 1 calc(16.666% - 17px)",
-                  minWidth: "180px",
-                  maxWidth: "220px",
+                  width: 60,
+                  height: 60,
+                  borderRadius: "50%",
+                  background: `${platform.color}20`,
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  color: platform.color,
                 }}
               >
-                <Anchor
-                  href={getProfileUrl(creator.username, creator.type)}
-                  underline="never"
-                >
-                  <Card
-                    padding={20}
-                    style={{
-                      background: "rgba(255, 255, 255, 0.02)",
-                      border: "1px solid rgba(255, 255, 255, 0.06)",
-                      borderRadius: "16px",
-                      cursor: "pointer",
-                      textAlign: "center",
-                    }}
-                  >
-                    <Stack align="center" gap={12}>
-                      <div style={{ position: "relative" }}>
-                        <Avatar
-                          src={creator.avatar?.url}
-                          size={72}
-                          radius="xl"
-                          style={{
-                            border: `3px solid ${platform.color}40`,
-                          }}
-                        />
-                        {creator.type && (
-                          <FollowerTypeIcon
-                            pos="absolute"
-                            color="transparent"
-                            type={creator.type}
-                            top="50%"
-                            left="50%"
-                            size={40}
-                            opacity={0.5}
-                            style={{ transform: "translate(-50%, -50%)" }}
-                          />
-                        )}
-                      </div>
-                      <div>
-                        <Text fw={600} size="sm" style={{ color: "#f1f5f9" }}>
-                          {creator.nickname || "unknown"}
-                        </Text>
-                        <Text size="xs" style={{ color: "#64748b" }}>
-                          @{creator.username}
-                        </Text>
-                      </div>
-                      <div style={{ minHeight: 24 }}>
-                        {creator.country && (
-                          <CountryFlag
-                            country={creator.country}
-                            countryCode={creator.countryCode}
-                            size={20}
-                          />
-                        )}
-                      </div>
-                    </Stack>
-                  </Card>
-                </Anchor>
+                <Image
+                  alt={platform.name}
+                  src={platform.file.toLowerCase()}
+                  width={100}
+                />
               </div>
-            ))}
-          </Flex>
-
-          {totalPages > 1 && (
-            <Center mt={40}>
-              <PaginationControls total={totalPages} size="lg" />
-            </Center>
-          )}
-        </>
-      ) : (
-        <Paper
-          p="xl"
-          radius="lg"
-          style={{
-            background: "rgba(255, 255, 255, 0.02)",
-            border: "1px solid rgba(255, 255, 255, 0.06)",
-            textAlign: "center",
-          }}
-        >
-          <Stack align="center" gap="md">
-            <div
-              style={{
-                width: 60,
-                height: 60,
-                borderRadius: "50%",
-                background: `${platform.color}20`,
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                color: platform.color,
-              }}
-            >
-              <Image
-                alt={platform.name}
-                src={platform.file.toLowerCase()}
-                width={100}
-              />
-            </div>
-            <Title order={3} style={{ color: "#f1f5f9" }}>
-              No creators yet
-            </Title>
-            <Text style={{ color: "#64748b" }}>
-              Be the first to add a {platform.name} streamer!
-            </Text>
-            <Button
-              component="a"
-              href="/register"
-              variant="gradient"
-              gradient={{ from: "#6366f1", to: "#a855f7", deg: 135 }}
-              mt="sm"
-            >
-              Get Started
-            </Button>
-          </Stack>
-        </Paper>
-      )}
-    </div>
+              <Title order={3} style={{ color: "#f1f5f9" }}>
+                No creators yet
+              </Title>
+              <Text style={{ color: "#64748b" }}>
+                Be the first to add a {platform.name} streamer!
+              </Text>
+              <Button
+                component="a"
+                href="/register"
+                variant="gradient"
+                gradient={{ from: "#6366f1", to: "#a855f7", deg: 135 }}
+                mt="sm"
+              >
+                Get Started
+              </Button>
+            </Stack>
+          </Paper>
+        )}
+      </div>
+    </>
   );
 }

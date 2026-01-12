@@ -1,5 +1,8 @@
 import { FollowerTypeIcon } from "@/app/(protected)/components/follower-type-icon";
-import { getSocialUrl } from "@/app/(protected)/components/open-social";
+import {
+  getProfileUrl,
+  getSocialUrl,
+} from "@/app/(protected)/components/open-social";
 import { formatDuration } from "@/app/(protected)/components/video/player-utils";
 import {
   FollowerTypeEnum,
@@ -37,9 +40,9 @@ export function ImageVideoPreview({ recording, type, username }: Props) {
       }}
     >
       <Anchor
-        href={`/${type}/${decodeURIComponent(username)}/video/${
-          recording.documentId
-        }`}
+        href={
+          getProfileUrl(recording.follower) + `/video/${recording.documentId}`
+        }
         style={{
           pointerEvents: isRecording ? "none" : "auto",
           cursor: isRecording ? "not-allowed" : "pointer",
@@ -73,7 +76,7 @@ export function ImageVideoPreview({ recording, type, username }: Props) {
       {isRecording && (
         <Badge
           component="a"
-          href={getSocialUrl(username, type)}
+          href={getSocialUrl(recording.follower)}
           target="_blank"
           rel="noopener noreferrer"
           pos="absolute"

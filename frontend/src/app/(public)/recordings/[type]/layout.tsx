@@ -28,8 +28,6 @@ export default async function RecordingPage({ params, children }: PageProps) {
     file: "creators.png",
   };
 
-  console.log(streamingPlatforms, type, platform);
-
   return (
     <Container size="lg">
       <Stack align="center" gap={24} mb={60}>
@@ -48,7 +46,7 @@ export default async function RecordingPage({ params, children }: PageProps) {
             paddingBottom: "0.1em",
           }}
         >
-          {platform.name} Latest Recordings
+          {platform.name} Recordings
         </Title>
 
         <Text

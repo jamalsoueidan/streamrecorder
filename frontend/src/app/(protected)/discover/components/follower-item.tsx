@@ -23,10 +23,11 @@ import {
 import Link from "next/link";
 
 import { ImageVideoPreview } from "@/app/(protected)/components/image-video-preview";
+import { generateAvatarUrl } from "@/app/lib/avatar-url";
 import { IconCalendarPlus, IconVideo } from "@tabler/icons-react";
 import { CountryFlag } from "../../components/country-flag";
 import FollowButton from "../../components/follow-button";
-import OpenSocial from "../../components/open-social";
+import OpenSocial, { getProfileUrl } from "../../components/open-social";
 import UnfollowButton from "../../components/unfollow-button";
 
 interface Props {
@@ -50,13 +51,10 @@ export default function FollowerItem({ follower }: Props) {
       <Card shadow="sm" padding={cardPadding} radius="md" h="100%" withBorder>
         <Flex justify="space-between">
           <Group>
-            <Anchor
-              component={Link}
-              href={`/${follower?.type}/${follower?.username}`}
-            >
+            <Anchor component={Link} href={getProfileUrl(follower)}>
               <Avatar
                 size="lg"
-                src={`/avatar/${follower.avatar?.url?.split("/").pop()}`}
+                src={generateAvatarUrl(follower.avatar?.url)}
                 styles={{
                   image: {
                     transform: "scale(2)",
@@ -70,7 +68,7 @@ export default function FollowerItem({ follower }: Props) {
               <Group gap="xs">
                 <Anchor
                   component={Link}
-                  href={`/${follower?.type}/${follower?.username}`}
+                  href={getProfileUrl(follower)}
                   size="md"
                 >
                   <Text size="lg" truncate maw={mawTruncate} fw="bold">
