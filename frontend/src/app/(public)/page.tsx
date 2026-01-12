@@ -542,7 +542,7 @@ export default async function LandingPage() {
               Simply follow the creators you love, and we handle the rest. Our
               service works around the clock, recording streaming video in the
               background and making it available on-demand. No stream recording
-              software to install, no manual scheduling — just follow and we
+              software to install, no manual scheduling, just follow and we
               capture every broadcast automatically.
             </Text>
           </div>
@@ -561,10 +561,9 @@ export default async function LandingPage() {
             <Title order={4}>Securely Stored in the Cloud</Title>
             <Text mt="xs">
               Your recorded streams are saved securely on our servers. No
-              storage fees, no lost files — just reliable access to your
-              favorite content whenever you need it. From Twitch VOD downloads
-              to Tiktok live stream captures, everything is organized and ready
-              to watch.
+              storage fees, no lost files, just reliable access to your favorite
+              content whenever you need it. From Twitch VOD downloads to Tiktok
+              live stream captures, everything is organized and ready to watch.
             </Text>
           </div>
 

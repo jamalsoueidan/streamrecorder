@@ -38,7 +38,7 @@ export async function generateMetadata({
     duration % 60
   )}s`;
 
-  const title = `${creatorName} Stream - ${recordedDate}`;
+  const title = `${creatorName}'s Stream - ${recordedDate}`;
   const description = `Watch ${creatorName}'s recorded ${platformName} live stream from ${recordedDate}. Duration: ${durationFormatted}. Never miss a stream with Live Stream Recorder.`;
 
   return {
@@ -88,7 +88,7 @@ export async function generateMetadata({
       }),
     },
     alternates: {
-      canonical: `/${type}/${username}/video/${id}`,
+      canonical: generateProfileUrl(data.follower, true) + `/video/${id}`,
     },
   };
 }

@@ -147,11 +147,11 @@ export default async function RecordingTypePage({
     description: `Browse recorded live streams from ${
       platform.name || "all platforms"
     }. Never miss a stream again.`,
-    url: `https://livestreamrecorder.com/recordings/${type}`,
+    url: `https://www.livestreamrecorder.com/recordings/${type}`,
     isPartOf: {
       "@type": "WebSite",
       name: "Live Stream Recorder",
-      url: "https://livestreamrecorder.com",
+      url: "https://www.livestreamrecorder.com",
     },
     mainEntity: {
       "@type": "ItemList",
@@ -168,7 +168,7 @@ export default async function RecordingTypePage({
             "@type": "VideoObject",
             name: `${
               recording.follower?.nickname || recording.follower?.username
-            } Creator - ${dayjs(recording.createdAt).format("MMM D, YYYY")}`,
+            }'s Stream - ${dayjs(recording.createdAt).format("MMM D, YYYY")}`,
             description: `Recorded live stream from ${
               recording.follower?.nickname || recording.follower?.username
             } on ${recording.follower?.type || "unknown platform"}`,
@@ -182,7 +182,7 @@ export default async function RecordingTypePage({
               duration % 60
             )}S`,
             contentUrl:
-              generateProfileUrl(recording.follower) +
+              generateProfileUrl(recording.follower, true) +
               `/video/${recording.documentId}`,
           },
         };

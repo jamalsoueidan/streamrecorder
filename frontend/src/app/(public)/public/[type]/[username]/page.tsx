@@ -89,7 +89,7 @@ export default async function Page({ params }: PageProps) {
     name: follower.nickname || follower.username,
     alternateName: `@${follower.username}`,
     description: follower.tagline || follower.description,
-    image: generateAvatarUrl(follower.avatar?.url),
+    image: generateAvatarUrl(follower.avatar?.url, true),
     url: generateProfileUrl(follower, true),
     nationality: follower.country,
     sameAs: [getSocialUrl(follower)],
@@ -102,7 +102,7 @@ export default async function Page({ params }: PageProps) {
 
       return {
         "@type": "VideoObject",
-        name: `${follower?.nickname || follower?.username} Creator - ${dayjs(
+        name: `${follower?.nickname || follower?.username}'s Stream - ${dayjs(
           video.createdAt
         ).format("MMM D, YYYY")}`,
         thumbnailUrl: video.sources?.length
