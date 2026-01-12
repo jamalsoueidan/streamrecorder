@@ -16,7 +16,6 @@ export function proxy(request: NextRequest) {
 
   // Skip rewrite for client-side navigations (let intercepts work) for (protected)/@modal/(..)[type]/ to work
   const secFetchDest = request.headers.get("Sec-Fetch-Dest");
-
   const isOgImage =
     path.includes("opengraph-image") || path.includes("twitter-image");
   const userAgent = request.headers.get("User-Agent") || "";
