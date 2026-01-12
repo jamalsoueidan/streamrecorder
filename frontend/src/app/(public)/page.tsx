@@ -131,7 +131,7 @@ export default async function LandingPage() {
         <Flex gap={30} align="center" mt={20}>
           {streamingPlatforms.map((p) => (
             <Tooltip key={p.name} label={p.name} withArrow>
-              <Anchor href={`/${p.name.toLowerCase()}`}>
+              <Anchor href={`/recordings/${p.name.toLowerCase()}`}>
                 <Image alt={p.name} src={p.file} maw={120} />
               </Anchor>
             </Tooltip>

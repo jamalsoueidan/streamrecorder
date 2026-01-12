@@ -1,24 +1,19 @@
 services:
   warp-proxy:
-    image: caomingjun/warp:latest
+    image: "caomingjun/warp:latest"
     restart: unless-stopped
     ports:
       - "8000:8000"
+      - "1080:1080"
+    environment:
+      - "GOST_ARGS=-L :1080 -F=127.0.0.1:40000"
     cap_add:
       - NET_ADMIN
     sysctls:
       - net.ipv6.conf.all.disable_ipv6=0
       - net.ipv4.conf.all.src_valid_mark=1
     volumes:
-      - warp-data:/var/lib/cloudflare-warp
-    entrypoint: ["/bin/sh", "-c"]
-    command:
-      - |
-        /entrypoint.sh &
-        sleep 15
-        warp-cli --accept-tos mode proxy
-        wait
-
+      - "warp-data:/var/lib/cloudflare-warp"
   create-pandalive-service:
     image: alpine:latest
     restart: "no"
