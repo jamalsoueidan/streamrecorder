@@ -149,7 +149,10 @@ export function Footer() {
           style={{ borderTop: "1px solid var(--mantine-color-dark-4)" }}
         >
           <Text c="dimmed" size="sm">
-            © 2026 LiveStreamRecorder.com. All rights reserved.
+            © 2026 LiveStreamRecorder provides cloud-based infrastructure that
+            enables users to record streams for personal, private,
+            non-commercial use. Users are responsible for ensuring their use
+            complies with applicable laws and third-party platform terms.
           </Text>
         </Group>
       </Container>
