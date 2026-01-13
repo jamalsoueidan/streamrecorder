@@ -6,6 +6,7 @@ import {
   UserSearchResult,
 } from "@/app/actions/check-user";
 import { follow } from "@/app/actions/followers";
+import { trackEvent } from "@/app/lib/analytics";
 import { parseUsername } from "@/app/lib/parse-username";
 
 import {
@@ -112,6 +113,11 @@ export default function AddFollowerForm() {
   // Handle follow success/error notifications
   useEffect(() => {
     if (state?.success) {
+      trackEvent("follow", {
+        platform: searchResult?.type,
+        username: state.username,
+      });
+
       notifications.show({
         title: "Followed!",
         message: `You are now following ${state.username}`,
@@ -291,7 +297,13 @@ export default function AddFollowerForm() {
         <Spotlight.ActionsList>{renderContent()}</Spotlight.ActionsList>
       </Spotlight.Root>
 
-      <UnstyledButton onClick={spotlight.open} w="100%">
+      <UnstyledButton
+        onClick={() => {
+          trackEvent("open-follow-search");
+          spotlight.open();
+        }}
+        w="100%"
+      >
         <Paper
           p="sm"
           radius="md"
