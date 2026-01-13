@@ -1,6 +1,7 @@
 "use client";
 
 import { login } from "@/app/actions/auth";
+import { trackEvent } from "@/app/lib/analytics";
 import {
   Anchor,
   Button,
@@ -15,10 +16,19 @@ import {
 } from "@mantine/core";
 import { IconLock, IconMail, IconSparkles } from "@tabler/icons-react";
 import Link from "next/link";
-import { useActionState } from "react";
+import { useRouter } from "next/navigation";
+import { useActionState, useEffect } from "react";
 
 export default function LoginPage() {
   const [state, formAction, pending] = useActionState(login, null);
+  const router = useRouter();
+
+  useEffect(() => {
+    if (state?.success) {
+      trackEvent("login");
+      router.push("/following");
+    }
+  }, [state, router]);
 
   return (
     <Container size="xs">

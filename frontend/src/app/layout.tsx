@@ -8,6 +8,7 @@ import "@mantine/core/styles.css";
 import { Notifications } from "@mantine/notifications";
 import "@mantine/notifications/styles.css";
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
 import "./globals.css";
 import { PWAUpdater } from "./pwa-updater";
@@ -95,6 +96,11 @@ export default function RootLayout({
     <html lang="en" {...mantineHtmlProps}>
       <head>
         <ColorSchemeScript defaultColorScheme="dark" />
+        <Script
+          defer
+          src="/script.js"
+          data-website-id={process.env.NEXT_PUBLIC_UMAMI_ID}
+        />
         <link rel="apple-touch-icon" href="/icons/icon-192.png" />
       </head>
       <body>

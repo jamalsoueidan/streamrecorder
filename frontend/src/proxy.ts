@@ -16,15 +16,12 @@ export function proxy(request: NextRequest) {
 
   // Skip rewrite for client-side navigations (let intercepts work) for (protected)/@modal/(..)[type]/ to work
   const secFetchDest = request.headers.get("Sec-Fetch-Dest");
-  const isOgImage =
-    path.includes("opengraph-image") || path.includes("twitter-image");
-  const userAgent = request.headers.get("User-Agent") || "";
-  const isBot =
-    /facebookexternalhit|twitterbot|linkedinbot|whatsapp|telegrambot|googlebot|bingbot|slackbot/i.test(
-      userAgent
-    );
 
-  if (secFetchDest && secFetchDest !== "document" && !isOgImage && !isBot) {
+  // Only skip for client-side JS fetches (script, style, etc.)
+  // Rewrite everything else: bots, direct visits, document requests
+  const isClientSideFetch = secFetchDest && secFetchDest !== "document";
+
+  if (isClientSideFetch) {
     return NextResponse.next();
   }
 
