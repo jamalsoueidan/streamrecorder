@@ -19,22 +19,25 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.livestreamrecorder.com"),
   title: {
     default:
-      "Live Stream Recorder | Automatically Record Tiktok, Twitch & More",
+      "Live Stream Recorder | Automatically Record TikTok, Twitch & More",
     template: "%s | Live Stream Recorder",
   },
   description:
-    "Never miss a live stream again. We automatically record your favorite streamers so you can watch later or download anytime. Free Twitch VOD downloads, Tiktok live stream recordings, and more.",
+    "Never miss a live stream again. Your favorite streamers are automatically recorded so you can watch later or download anytime. Free stream recording for TikTok, Twitch, YouTube, Kick & more.",
   keywords: [
     "live stream recorder",
     "stream recording",
-    "record tiktok streams",
-    "tiktok vod downloader",
-    "tiktok live stream capture",
     "livestream recording",
+    "capture live stream",
+    "capture video stream",
     "recording streaming video",
-    "stream capture software",
-    "record live stream",
-    "tiktok video recording",
+    "record twitch stream",
+    "record tiktok live",
+    "youtube live stream capture",
+    "live stream screen recorder",
+    "record youtube live stream",
+    "twitch vod download",
+    "tiktok live recording",
   ],
   manifest: "/manifest.json",
   appleWebApp: {
@@ -43,9 +46,9 @@ export const metadata: Metadata = {
     title: "Live Stream Recorder",
   },
   openGraph: {
-    title: "Live Stream Recorder | Record Your Favorite Streams Automatically",
+    title: "Live Stream Recorder | Capture Live Streams Automatically",
     description:
-      "Follow your favorite streamers and never miss a broadcast. Automatic stream recording with free cloud storage. Watch or download anytime.",
+      "Follow your favorite streamers and never miss a live stream. Automatic stream recording with free cloud storage. Watch or download anytime.",
     type: "website",
     siteName: "Live Stream Recorder",
     locale: "en_US",
@@ -54,15 +57,16 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Live Stream Recorder - Record TikTok, Twitch & More",
+        alt: "Live Stream Recorder - Record TikTok, Twitch, YouTube & More",
       },
     ],
   },
+
   twitter: {
     card: "summary_large_image",
-    title: "Live Stream Recorder | Record Tiktok, Twitch & More",
+    title: "Live Stream Recorder | Capture Live Streams Automatically",
     description:
-      "Automatically record and save live streams from your favorite creators. Free to start, watch anytime.",
+      "Live streams from your favorite creators are recorded and saved automatically. Free to start, watch or download anytime.",
     images: ["/og-image.png"],
   },
   robots: {

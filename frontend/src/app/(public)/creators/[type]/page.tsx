@@ -1,20 +1,11 @@
-import { CountryFlag } from "@/app/(protected)/components/country-flag";
-import { FollowerTypeIcon } from "@/app/(protected)/components/follower-type-icon";
-import {
-  getProfileUrl,
-  getSocialUrl,
-} from "@/app/(protected)/components/open-social";
+import { getSocialUrl } from "@/app/(protected)/components/open-social";
 import PaginationControls from "@/app/(protected)/components/pagination";
 import { generateAvatarUrl } from "@/app/lib/avatar-url";
 import { generateProfileUrl } from "@/app/lib/profile-url";
 import publicApi from "@/lib/public-api";
 import {
-  Anchor,
-  Avatar,
   Button,
-  Card,
   Center,
-  Flex,
   Image,
   Paper,
   Stack,
@@ -23,6 +14,7 @@ import {
 } from "@mantine/core";
 import { Metadata } from "next";
 import { streamingPlatforms } from "../../page";
+import { CreatorsSimpleGrid } from "../components/creators-simple-grid";
 
 interface PageProps {
   params: Promise<{
@@ -156,74 +148,7 @@ export default async function Page({ params, searchParams }: PageProps) {
       <div style={{ marginTop: 80 }}>
         {followers && followers.length > 0 ? (
           <>
-            <Flex gap={20} wrap="wrap">
-              {followers.map((creator) => (
-                <div
-                  key={creator.id}
-                  style={{
-                    flex: "1 1 calc(16.666% - 17px)",
-                    minWidth: "180px",
-                    maxWidth: "220px",
-                  }}
-                >
-                  <Anchor href={getProfileUrl(creator)} underline="never">
-                    <Card
-                      padding={20}
-                      style={{
-                        background: "rgba(255, 255, 255, 0.02)",
-                        border: "1px solid rgba(255, 255, 255, 0.06)",
-                        borderRadius: "16px",
-                        cursor: "pointer",
-                        textAlign: "center",
-                      }}
-                    >
-                      <Stack align="center" gap={12}>
-                        <div style={{ position: "relative" }}>
-                          <Avatar
-                            src={generateAvatarUrl(creator.avatar?.url)}
-                            size={72}
-                            radius="xl"
-                            style={{
-                              border: `3px solid ${platform.color}40`,
-                            }}
-                          />
-                          {creator.type && (
-                            <FollowerTypeIcon
-                              pos="absolute"
-                              color="transparent"
-                              type={creator.type}
-                              top="50%"
-                              left="50%"
-                              size={40}
-                              opacity={0.5}
-                              style={{ transform: "translate(-50%, -50%)" }}
-                            />
-                          )}
-                        </div>
-                        <div>
-                          <Text fw={600} size="sm" style={{ color: "#f1f5f9" }}>
-                            {creator.nickname || "unknown"}
-                          </Text>
-                          <Text size="xs" style={{ color: "#64748b" }}>
-                            @{creator.username}
-                          </Text>
-                        </div>
-                        <div style={{ minHeight: 24 }}>
-                          {creator.country && (
-                            <CountryFlag
-                              country={creator.country}
-                              countryCode={creator.countryCode}
-                              size={20}
-                            />
-                          )}
-                        </div>
-                      </Stack>
-                    </Card>
-                  </Anchor>
-                </div>
-              ))}
-            </Flex>
-
+            <CreatorsSimpleGrid followers={followers} />
             {totalPages > 1 && (
               <Center mt={40}>
                 <PaginationControls total={totalPages} size="lg" />

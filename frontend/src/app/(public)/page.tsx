@@ -1,12 +1,7 @@
 import publicApi from "@/lib/public-api";
 import {
-  ActionIcon,
   Anchor,
-  Avatar,
-  Badge,
-  Box,
   Button,
-  Card,
   Container,
   Flex,
   Group,
@@ -17,13 +12,9 @@ import {
   Title,
   Tooltip,
 } from "@mantine/core";
-import { IconArrowRight, IconClock, IconPlayerPlay } from "@tabler/icons-react";
-import { CountryFlag } from "../(protected)/components/country-flag";
-import { FollowerTypeIcon } from "../(protected)/components/follower-type-icon";
-import { FollowerTypeText } from "../(protected)/components/follower-type-text";
-import { getProfileUrl } from "../(protected)/components/open-social";
-import { formatDuration } from "../(protected)/components/video/player-utils";
-import { generateAvatarUrl } from "../lib/avatar-url";
+import { IconArrowRight } from "@tabler/icons-react";
+import { CreatorsSimpleGrid } from "./creators/components/creators-simple-grid";
+import { RecordingsSimpleGrid } from "./recordings/components/recordings-simple-grid";
 
 export const streamingPlatforms = [
   { color: "#ff0050", name: "TikTok", file: "/tiktok.svg" },
@@ -53,7 +44,7 @@ export default async function LandingPage() {
         },
       },
     },
-    "pagination[limit]": 6,
+    "pagination[limit]": 8,
     sort: "createdAt:desc",
     populate: {
       sources: {
@@ -114,7 +105,7 @@ export default async function LandingPage() {
           size="xl"
           ta="center"
           c="dimmed"
-          maw={600}
+          maw={700}
           style={{
             fontSize: "clamp(1rem, 2vw, 1.25rem)",
             lineHeight: 1.7,
@@ -122,11 +113,9 @@ export default async function LandingPage() {
           }}
         >
           {
-            "Automatic stream recording for Tiktok, Twitch, Kick, YouTube, AfreecaTV, and Pandalive. Add your favorite creators — we'll capture every stream and save VODs for you to watch anytime."
+            "Cloud-based stream recording for TikTok, Twitch, Kick, YouTube, AfreecaTV, and Pandalive. Add your favorite creators and live streams are automatically captured and saved for you to watch anytime."
           }
         </Text>
-
-        {/* Streaming Platforms */}
 
         <Flex gap={30} align="center" mt={20}>
           {streamingPlatforms.map((p) => (
@@ -139,7 +128,6 @@ export default async function LandingPage() {
         </Flex>
       </Stack>
 
-      {/* Platform Preview Section */}
       <div style={{ marginTop: 100 }}>
         <Flex gap={60} align="center" direction={{ base: "column", md: "row" }}>
           <div style={{ flex: 1 }}>
@@ -154,7 +142,7 @@ export default async function LandingPage() {
                     color: "#f1f5f9",
                   }}
                 >
-                  All Your Recordings
+                  All Your Livestream Recordings
                 </Title>
                 <Title
                   order={2}
@@ -170,6 +158,7 @@ export default async function LandingPage() {
                   One place
                 </Title>
               </div>
+
               <Text
                 size="lg"
                 style={{
@@ -177,9 +166,9 @@ export default async function LandingPage() {
                   lineHeight: 1.8,
                 }}
               >
-                Add streamers from any platform. We record every live stream
-                automatically and save the VOD. Come back whenever you are ready
-                to watch or download anytime.
+                Add streamers from any platform. Live streams are recorded
+                automatically and VODs are saved for you. Come back whenever you
+                are ready to watch or download.
               </Text>
             </Stack>
           </div>
@@ -207,7 +196,6 @@ export default async function LandingPage() {
         </Flex>
       </div>
 
-      {/* Latest Recordings Section */}
       <div style={{ marginTop: 120 }}>
         <Flex justify="space-between" align="center" mb={40}>
           <Stack gap={8}>
@@ -237,128 +225,9 @@ export default async function LandingPage() {
           </Button>
         </Flex>
 
-        <Flex gap={24} wrap="wrap">
-          {recordings?.map((recording) => {
-            const totalDuration =
-              recording.sources?.reduce(
-                (sum, s) => sum + (s.duration || 0),
-                0
-              ) || 0;
-
-            const uri = recording.sources?.length
-              ? "/media" + recording.sources[recording.sources.length - 1].path
-              : null;
-
-            return (
-              <div
-                key={recording.id}
-                style={{
-                  flex: "1 1 calc(25% - 18px)",
-                  minWidth: "280px",
-                  maxWidth: "100%",
-                }}
-              >
-                <Anchor
-                  href={`${getProfileUrl(recording.follower)}/video/${
-                    recording.documentId
-                  }`}
-                  underline="never"
-                >
-                  <Card
-                    padding={0}
-                    style={{
-                      background: "rgba(255, 255, 255, 0.02)",
-                      border: "1px solid rgba(255, 255, 255, 0.06)",
-                      borderRadius: "16px",
-                      overflow: "hidden",
-                      cursor: "pointer",
-                    }}
-                  >
-                    <div style={{ position: "relative" }}>
-                      <Image
-                        src={uri + "preview.jpg"}
-                        alt={recording.follower?.username}
-                        height={160}
-                      />
-                      <div
-                        style={{
-                          position: "absolute",
-                          inset: 0,
-                          background:
-                            "linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 50%)",
-                        }}
-                      />
-                      <Badge
-                        style={{
-                          position: "absolute",
-                          top: 12,
-                          left: 12,
-                          background: "rgba(0, 0, 0, 0.6)",
-                          backdropFilter: "blur(8px)",
-                        }}
-                      >
-                        {recording.follower?.type}
-                      </Badge>
-                      <Flex
-                        align="center"
-                        gap={4}
-                        style={{
-                          position: "absolute",
-                          bottom: 12,
-                          right: 12,
-                          background: "rgba(0, 0, 0, 0.7)",
-                          padding: "4px 8px",
-                          borderRadius: "6px",
-                        }}
-                      >
-                        <IconClock size={12} color="#fff" />
-                        <Text size="xs" c="white">
-                          {formatDuration(totalDuration)}
-                        </Text>
-                      </Flex>
-                      <ActionIcon
-                        variant="filled"
-                        size="xl"
-                        radius="xl"
-                        style={{
-                          position: "absolute",
-                          top: "50%",
-                          left: "50%",
-                          transform: "translate(-50%, -50%)",
-                          background: "rgba(99, 102, 241, 0.9)",
-                          opacity: 0.9,
-                        }}
-                      >
-                        <IconPlayerPlay size={20} />
-                      </ActionIcon>
-                    </div>
-                    <Flex p={16} align="center" justify="space-between">
-                      <Stack gap={2}>
-                        <Text
-                          fw={600}
-                          size="sm"
-                          lineClamp={2}
-                          style={{ color: "#f1f5f9", lineHeight: 1.4 }}
-                        >
-                          {recording.follower?.nickname || "-"}
-                        </Text>
-
-                        <Text size="xs" c="dimmed">
-                          @{recording.follower?.username}
-                        </Text>
-                      </Stack>
-
-                      <FollowerTypeText type={recording.follower?.type} />
-                    </Flex>
-                  </Card>
-                </Anchor>
-              </div>
-            );
-          })}
-        </Flex>
+        <RecordingsSimpleGrid recordings={recordings} />
       </div>
 
-      {/* Latest Creators Section */}
       <div style={{ marginTop: 100 }}>
         <Flex justify="space-between" align="center" mb={40}>
           <Stack gap={8}>
@@ -388,79 +257,9 @@ export default async function LandingPage() {
           </Button>
         </Flex>
 
-        <Flex gap={20} wrap="wrap">
-          {followers?.map((creator) => (
-            <div
-              key={creator.id}
-              style={{
-                flex: "1 1 calc(16.666% - 17px)",
-                minWidth: "180px",
-                maxWidth: "100%",
-              }}
-            >
-              <Anchor href={getProfileUrl(creator)} underline="never">
-                <Card
-                  padding={20}
-                  style={{
-                    background: "rgba(255, 255, 255, 0.02)",
-                    border: "1px solid rgba(255, 255, 255, 0.06)",
-                    borderRadius: "16px",
-                    cursor: "pointer",
-                    textAlign: "center",
-                  }}
-                >
-                  <Stack align="center" gap={12}>
-                    <Box pos="relative">
-                      <Avatar
-                        alt={creator.nickname || ""}
-                        src={generateAvatarUrl(creator.avatar?.url)}
-                        size={72}
-                        radius="xl"
-                        style={{
-                          border: "3px solid transparent",
-                          background:
-                            "linear-gradient(135deg, #6366f1, #a855f7) border-box",
-                        }}
-                      />
-                      {creator.type && (
-                        <FollowerTypeIcon
-                          pos="absolute"
-                          color="transparent"
-                          type={creator.type}
-                          top="50%"
-                          left="50%"
-                          size={40}
-                          opacity={0.6}
-                          style={{ transform: "translate(-50%, -50%)" }}
-                        />
-                      )}
-                    </Box>
-                    <div>
-                      <Text fw={600} size="sm" style={{ color: "#f1f5f9" }}>
-                        {creator.nickname || "-"}
-                      </Text>
-
-                      <Text size="xs" c="dimmed">
-                        @{creator.username}
-                      </Text>
-                    </div>
-
-                    <CountryFlag
-                      country={creator.country}
-                      countryCode={creator.countryCode}
-                      size={24}
-                    />
-
-                    <FollowerTypeText type={creator.type} />
-                  </Stack>
-                </Card>
-              </Anchor>
-            </div>
-          ))}
-        </Flex>
+        <CreatorsSimpleGrid followers={followers} />
       </div>
 
-      {/* CTA Section */}
       <div style={{ marginTop: 100 }}>
         <Paper
           p={60}
@@ -500,7 +299,7 @@ export default async function LandingPage() {
                 color: "#f1f5f9",
               }}
             >
-              Never Miss a Stream Again
+              Never Miss a Live Stream Again
             </Title>
             <Text
               size="lg"
@@ -530,28 +329,27 @@ export default async function LandingPage() {
           <div>
             <Title order={2}>About Live Stream Recorder</Title>
             <Text c="dimmed" size="lg" mt="sm">
-              Never miss a moment from your favorite creators. Our live stream
-              recorder automatically captures broadcasts so you can watch them
-              on your own schedule.
+              Never miss a moment from your favorite creators. Our cloud-based
+              platform lets you capture live streams automatically so you can
+              watch them on your own schedule.
             </Text>
           </div>
 
           <div>
-            <Title order={4}>Follow Your Favorite Streamers</Title>
+            <Title order={4}>Automatic Livestream Recording</Title>
             <Text mt="xs">
-              Simply follow the creators you love, and we handle the rest. Our
-              service works around the clock, recording streaming video in the
-              background and making it available on-demand. No stream recording
-              software to install, no manual scheduling, just follow and we
-              capture every broadcast automatically.
+              Simply follow the creators you love, and our cloud servers handle
+              the rest. Stream recording happens automatically in the background
+              — no software to install, no manual scheduling. Just follow a
+              creator and their live streams are captured for your personal use.
             </Text>
           </div>
 
           <div>
             <Title order={4}>Watch Anytime, Anywhere</Title>
             <Text mt="xs">
-              Busy schedule? Different time zone? No problem. With our
-              livestream recording service, you can catch up on live content
+              Busy schedule? Different time zone? No problem. With cloud-based
+              recording of streaming video, you can catch up on live content
               whenever it suits you. Access your recordings through our built-in
               player or download them for offline viewing.
             </Text>
@@ -561,19 +359,30 @@ export default async function LandingPage() {
             <Title order={4}>Securely Stored in the Cloud</Title>
             <Text mt="xs">
               Your recorded streams are saved securely on our servers. No
-              storage fees, no lost files, just reliable access to your favorite
-              content whenever you need it. From Twitch VOD downloads to Tiktok
-              live stream captures, everything is organized and ready to watch.
+              storage fees, no lost files — just reliable access to your
+              favorite content whenever you need it. Capture video streams from
+              multiple platforms, all organized and ready to watch.
             </Text>
           </div>
 
           <div>
-            <Title order={4}>One Platform, Every Stream</Title>
+            <Title order={4}>Record TikTok, Twitch, YouTube & More</Title>
             <Text mt="xs">
-              Whether you want to record Tiktok streams, capture Twitch live
-              broadcasts, or save content from other platforms, our stream
-              recording service has you covered. We are continuously expanding
-              to support more platforms so you never miss out.
+              Whether you want to record TikTok live streams, record Twitch
+              streams, or use YouTube live stream capture — our cloud-based
+              service has you covered. Record Kick streams, AfreecaTV, and
+              Pandalive too. Support for more platforms is continuously being
+              added.
+            </Text>
+          </div>
+
+          <div>
+            <Title order={4}>No Screen Recorder Needed</Title>
+            <Text mt="xs">
+              Unlike a live stream screen recorder that requires your computer
+              to stay on, our cloud service runs 24/7. No need for livestream
+              screen recorder software or leaving your PC running. Streams are
+              recorded even while you sleep.
             </Text>
           </div>
 
