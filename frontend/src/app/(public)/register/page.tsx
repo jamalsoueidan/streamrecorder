@@ -1,6 +1,7 @@
 "use client";
 
 import { register } from "@/app/actions/auth";
+import { trackEvent } from "@/app/lib/analytics";
 import {
   Anchor,
   Button,
@@ -20,11 +21,21 @@ import {
   IconUserPlus,
 } from "@tabler/icons-react";
 import Link from "next/link";
-import { useActionState, useState } from "react";
+import { useRouter } from "next/navigation";
+
+import { useActionState, useEffect, useState } from "react";
 
 export default function RegisterPage() {
+  const router = useRouter();
   const [state, formAction, pending] = useActionState(register, null);
   const [acceptedTerms, setAcceptedTerms] = useState(false);
+
+  useEffect(() => {
+    if (state?.success) {
+      trackEvent("signup");
+      router.push("/following");
+    }
+  }, [state, router]);
 
   return (
     <Container size="xs">

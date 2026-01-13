@@ -22,6 +22,14 @@ const nextConfig: NextConfig = {
         source: "/uploads/:path*",
         destination: process.env.STRAPI_URL + "/uploads/:path*",
       },
+      {
+        source: "/script.js",
+        destination: `${process.env.NEXT_PUBLIC_UMAMI_URL}/script.js`,
+      },
+      {
+        source: "/api/send",
+        destination: `${process.env.NEXT_PUBLIC_UMAMI_URL}/api/send`,
+      },
     ];
   },
 };

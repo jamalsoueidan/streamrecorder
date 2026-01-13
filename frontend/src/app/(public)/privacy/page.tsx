@@ -1,5 +1,6 @@
 import { Container, Flex, Paper, Stack, Text, Title } from "@mantine/core";
 import {
+  IconChartBar,
   IconDatabase,
   IconLock,
   IconServer,
@@ -9,7 +10,7 @@ import {
 } from "@tabler/icons-react";
 
 export default function PrivacyPolicy() {
-  const lastUpdated = "December 25, 2025";
+  const lastUpdated = "January 13, 2026";
 
   return (
     <Container size="md" style={{ position: "relative", zIndex: 1 }}>
@@ -143,6 +144,105 @@ export default function PrivacyPolicy() {
           </Stack>
           <Text mt="md" style={{ color: "#64748b" }} size="sm">
             That is it. Nothing else.
+          </Text>
+        </Paper>
+
+        {/* Analytics */}
+        <Paper
+          p="xl"
+          radius="lg"
+          style={{
+            background: "rgba(255, 255, 255, 0.02)",
+            border: "1px solid rgba(255, 255, 255, 0.06)",
+          }}
+        >
+          <Flex gap={12} align="center" mb="md">
+            <div
+              style={{
+                width: 40,
+                height: 40,
+                borderRadius: 10,
+                background: "rgba(59, 130, 246, 0.2)",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                color: "#3b82f6",
+              }}
+            >
+              <IconChartBar size={20} />
+            </div>
+            <Title order={3} style={{ color: "#f1f5f9", fontWeight: 600 }}>
+              Analytics
+            </Title>
+          </Flex>
+          <Text style={{ color: "#94a3b8", lineHeight: 1.7 }} mb="md">
+            We use Umami, a privacy-focused analytics tool, to understand how
+            our site is used. This helps us improve the experience.
+          </Text>
+          <Text
+            style={{ color: "#94a3b8", lineHeight: 1.7, fontWeight: 500 }}
+            mb="sm"
+          >
+            What Umami does NOT collect:
+          </Text>
+          <Stack gap={4} ml={16} mb="md">
+            <Text style={{ color: "#94a3b8" }}>
+              {"• "}
+              <Text component="span" fw={500} style={{ color: "#f1f5f9" }}>
+                No cookies
+              </Text>{" "}
+            </Text>
+            <Text style={{ color: "#94a3b8" }}>
+              {"• "}
+              <Text component="span" fw={500} style={{ color: "#f1f5f9" }}>
+                No personal information
+              </Text>{" "}
+            </Text>
+            <Text style={{ color: "#94a3b8" }}>
+              {"• "}
+              <Text component="span" fw={500} style={{ color: "#f1f5f9" }}>
+                No cross-site tracking
+              </Text>{" "}
+            </Text>
+          </Stack>
+          <Text
+            style={{ color: "#94a3b8", lineHeight: 1.7, fontWeight: 500 }}
+            mb="sm"
+          >
+            What we do collect:
+          </Text>
+          <Stack gap={4} ml={16}>
+            <Text style={{ color: "#94a3b8" }}>
+              {"• "}
+              <Text component="span" fw={500} style={{ color: "#f1f5f9" }}>
+                {" "}
+                Page views
+              </Text>
+            </Text>
+            <Text style={{ color: "#94a3b8" }}>
+              {"• "}
+              <Text component="span" fw={500} style={{ color: "#f1f5f9" }}>
+                {" "}
+                Referrer (where you came from)
+              </Text>
+            </Text>
+            <Text style={{ color: "#94a3b8" }}>
+              {"• "}
+              <Text component="span" fw={500} style={{ color: "#f1f5f9" }}>
+                {" "}
+                Browser and device type
+              </Text>
+            </Text>
+            <Text style={{ color: "#94a3b8" }}>
+              {"• "}
+              <Text component="span" fw={500} style={{ color: "#f1f5f9" }}>
+                {" "}
+                Country (not precise location)
+              </Text>
+            </Text>
+          </Stack>
+          <Text mt="md" style={{ color: "#64748b" }} size="sm">
+            All data is anonymized and stored on our own servers in Europe.
           </Text>
         </Paper>
 
