@@ -9,5 +9,3 @@
 7. follower-type-icon.tsx
 8. follower-type-text.tsx
 9. public page.tsx
-
-# setup
