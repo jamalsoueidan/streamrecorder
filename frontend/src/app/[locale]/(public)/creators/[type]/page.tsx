@@ -2,6 +2,7 @@ import { getSocialUrl } from "@/app/components/open-social";
 import PaginationControls from "@/app/components/pagination";
 import { generateAvatarUrl } from "@/app/lib/avatar-url";
 import { generateProfileUrl } from "@/app/lib/profile-url";
+import { streamingPlatforms } from "@/app/lib/streaming-platforms";
 import publicApi from "@/lib/public-api";
 import {
   Button,
@@ -13,8 +14,7 @@ import {
   Title,
 } from "@mantine/core";
 import { Metadata } from "next";
-
-import { streamingPlatforms } from "@/app/lib/streaming-platforms";
+import { getTranslations } from "next-intl/server";
 import { CreatorsSimpleGrid } from "../components/creators-simple-grid";
 
 interface PageProps {
@@ -30,53 +30,21 @@ export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
   const { type } = await params;
+  const t = await getTranslations("creators");
 
   const platform = streamingPlatforms.find(
     (p) => p.name.toLowerCase() === type
   );
-
-  const platformName = platform?.name || "All Platforms";
-  const isAllPlatforms = type === "all";
-
-  const title = isAllPlatforms
-    ? "All Streamers & Creators"
-    : `${platformName} Streamers & Creators`;
-
-  const description = isAllPlatforms
-    ? "Browse all streamers and creators we're recording. Follow your favorites and never miss a live stream from TikTok, Twitch, and more."
-    : `Discover ${platformName} streamers and creators. Follow your favorites and we'll automatically record their live streams so you never miss a moment.`;
+  const platformKey = platform ? type : "all";
 
   return {
-    title,
-    description,
-    keywords: [
-      `${platformName.toLowerCase()} streamers`,
-      `${platformName.toLowerCase()} creators`,
-      `${platformName.toLowerCase()} live stream`,
-      `record ${platformName.toLowerCase()}`,
-      `${platformName.toLowerCase()} vod`,
-      "live stream recorder",
-      "stream recording",
-    ],
+    title: t(`meta.${platformKey}.title`),
+    description: t(`meta.${platformKey}.description`),
     openGraph: {
-      title: `${title} | Live Stream Recorder`,
-      description,
+      title: t(`meta.${platformKey}.title`),
+      description: t(`meta.${platformKey}.description`),
       url: `https://www.livestreamrecorder.com/creators/${type}`,
       type: "website",
-      images: [
-        {
-          url: "/og-image.png",
-          width: 1200,
-          height: 630,
-          alt: `${platformName} Streamers & Creators`,
-        },
-      ],
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: `${title} | Live Stream Recorder`,
-      description,
-      images: ["/og-image.png"],
     },
     alternates: {
       canonical: `https://www.livestreamrecorder.com/creators/${type}`,
@@ -87,6 +55,8 @@ export async function generateMetadata({
 export default async function Page({ params, searchParams }: PageProps) {
   const { type } = await params;
   const { page } = await searchParams;
+  const t = await getTranslations("creators");
+
   const platform = streamingPlatforms.find(
     (p) => p.name.toLowerCase() === type
   ) || {
@@ -94,6 +64,9 @@ export default async function Page({ params, searchParams }: PageProps) {
     name: "",
     file: "creators.png",
   };
+
+  const platformName = platform.name || "All";
+  const platformKey = platform ? type : "all";
 
   const {
     data: { data: followers, meta },
@@ -110,10 +83,8 @@ export default async function Page({ params, searchParams }: PageProps) {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    name: `${platform.name || "All"} Streamers & Creators`,
-    description: `Discover ${
-      platform.name || "all"
-    } streamers and creators. Follow your favorites and we'll automatically record their live streams.`,
+    name: t(`meta.${platformKey}.title`),
+    description: t(`meta.${platformKey}.description`),
     url: `https://www.livestreamrecorder.com/creators/${type}`,
     isPartOf: {
       "@type": "WebSite",
@@ -186,10 +157,10 @@ export default async function Page({ params, searchParams }: PageProps) {
                 />
               </div>
               <Title order={3} style={{ color: "#f1f5f9" }}>
-                No creators yet
+                {t("empty.title")}
               </Title>
               <Text style={{ color: "#64748b" }}>
-                Be the first to add a {platform.name} streamer!
+                {t("empty.description", { platform: platformName })}
               </Text>
               <Button
                 component="a"
@@ -198,7 +169,7 @@ export default async function Page({ params, searchParams }: PageProps) {
                 gradient={{ from: "#6366f1", to: "#a855f7", deg: 135 }}
                 mt="sm"
               >
-                Get Started
+                {t("empty.button")}
               </Button>
             </Stack>
           </Paper>
