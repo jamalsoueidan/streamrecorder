@@ -17,8 +17,10 @@ import {
   IconUserCheck,
   IconWorld,
 } from "@tabler/icons-react";
+import { useTranslations } from "next-intl";
 
 export default function TermsAndConditions() {
+  const t = useTranslations("terms");
   const lastUpdated = "January 13, 2026";
 
   return (
@@ -41,10 +43,10 @@ export default function TermsAndConditions() {
               paddingBottom: "0.1em",
             }}
           >
-            Terms & Conditions
+            {t("header.title")}
           </Title>
           <Text size="sm" style={{ color: "#64748b" }}>
-            Last updated: {lastUpdated}
+            {t("header.lastUpdated", { date: lastUpdated })}
           </Text>
         </Stack>
 
@@ -73,14 +75,11 @@ export default function TermsAndConditions() {
               <IconFileText size={20} />
             </div>
             <Title order={3} style={{ color: "#f1f5f9", fontWeight: 600 }}>
-              Introduction
+              {t("introduction.title")}
             </Title>
           </Flex>
           <Text style={{ color: "#94a3b8", lineHeight: 1.7 }}>
-            By using LiveStreamRecorder.com and its services, you agree to be
-            bound by these Terms and Conditions. Please read them carefully
-            before using our platform. If you do not agree to these terms, you
-            may not use the Service.
+            {t("introduction.content")}
           </Text>
         </Paper>
 
@@ -109,24 +108,17 @@ export default function TermsAndConditions() {
               <IconCloud size={20} />
             </div>
             <Title order={3} style={{ color: "#f1f5f9", fontWeight: 600 }}>
-              Service Description
+              {t("serviceDescription.title")}
             </Title>
           </Flex>
           <Text style={{ color: "#94a3b8", lineHeight: 1.7 }} mb="md">
-            LiveStreamRecorder provides a cloud-based platform that enables
-            users to utilize our servers to perform recording tasks that would
-            typically require local execution on their own computers.
+            {t("serviceDescription.content1")}
           </Text>
           <Text style={{ color: "#94a3b8", lineHeight: 1.7 }} mb="md">
-            By handling the recording, archiving, and storage of streaming
-            content remotely on our servers, users benefit from enhanced
-            convenience, faster processing, and reduced reliance on personal
-            hardware — without needing to install software or leave their
-            devices running.
+            {t("serviceDescription.content2")}
           </Text>
           <Text style={{ color: "#94a3b8", lineHeight: 1.7 }}>
-            LiveStreamRecorder is a technical service provider. We do not host,
-            own, or control the content of third-party streaming platforms.
+            {t("serviceDescription.content3")}
           </Text>
         </Paper>
 
@@ -155,27 +147,17 @@ export default function TermsAndConditions() {
               <IconUser size={20} />
             </div>
             <Title order={3} style={{ color: "#f1f5f9", fontWeight: 600 }}>
-              Private Use Only
+              {t("privateUse.title")}
             </Title>
           </Flex>
           <Text style={{ color: "#94a3b8", lineHeight: 1.7 }} mb="md">
-            The services provided by LiveStreamRecorder are intended{" "}
-            <Text component="span" fw={600} style={{ color: "#f1f5f9" }}>
-              solely for personal, private, and non-commercial use
-            </Text>
-            .
+            {t("privateUse.content1")}
           </Text>
           <Text style={{ color: "#94a3b8", lineHeight: 1.7 }} mb="md">
-            Any commercial use of the Service is strictly prohibited without
-            prior written consent from LiveStreamRecorder. By using this
-            Service, you represent that you are accessing it in your capacity as
-            a private individual and not for any commercial purposes.
+            {t("privateUse.content2")}
           </Text>
           <Text style={{ color: "#94a3b8", lineHeight: 1.7 }}>
-            LiveStreamRecorder reserves the right to monitor account activity to
-            ensure compliance with this policy. If violations are detected,
-            appropriate actions may be taken, including account suspension or
-            termination.
+            {t("privateUse.content3")}
           </Text>
         </Paper>
 
@@ -204,17 +186,11 @@ export default function TermsAndConditions() {
               <IconUserCheck size={20} />
             </div>
             <Title order={3} style={{ color: "#f1f5f9", fontWeight: 600 }}>
-              Age Requirement
+              {t("ageRequirement.title")}
             </Title>
           </Flex>
           <Text style={{ color: "#94a3b8", lineHeight: 1.7 }}>
-            You must be at least{" "}
-            <Text component="span" fw={600} style={{ color: "#f1f5f9" }}>
-              18 years old
-            </Text>{" "}
-            or have reached the age of majority in your jurisdiction to use this
-            platform. By creating an account, you confirm that you meet this
-            requirement.
+            {t("ageRequirement.content")}
           </Text>
         </Paper>
 
@@ -233,45 +209,47 @@ export default function TermsAndConditions() {
                 width: 40,
                 height: 40,
                 borderRadius: 10,
-                background: "rgba(20, 184, 166, 0.2)",
+                background: "rgba(16, 185, 129, 0.2)",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                color: "#14b8a6",
+                color: "#10b981",
               }}
             >
               <IconLock size={20} />
             </div>
             <Title order={3} style={{ color: "#f1f5f9", fontWeight: 600 }}>
-              Your Account
+              {t("yourAccount.title")}
             </Title>
           </Flex>
-          <Text style={{ color: "#94a3b8", lineHeight: 1.7 }} mb="md">
-            When registering for an account, you agree to:
+          <Text
+            style={{ color: "#94a3b8", lineHeight: 1.7, fontWeight: 500 }}
+            mb="sm"
+          >
+            {t("yourAccount.intro")}
           </Text>
           <Stack gap={8} ml={16}>
             <Text style={{ color: "#94a3b8" }}>
-              • Provide accurate, current, and complete information
+              • {t("yourAccount.items.accurate")}
             </Text>
             <Text style={{ color: "#94a3b8" }}>
-              • Maintain the confidentiality of your login credentials
+              • {t("yourAccount.items.confidential")}
             </Text>
             <Text style={{ color: "#94a3b8" }}>
-              • Not share your account with others
+              • {t("yourAccount.items.noShare")}
             </Text>
             <Text style={{ color: "#94a3b8" }}>
-              • Maintain only one account per person
+              • {t("yourAccount.items.oneAccount")}
             </Text>
             <Text style={{ color: "#94a3b8" }}>
-              • Notify us immediately of any unauthorized access
+              • {t("yourAccount.items.notify")}
             </Text>
             <Text style={{ color: "#94a3b8" }}>
-              • Accept responsibility for all activity under your account
+              • {t("yourAccount.items.responsibility")}
             </Text>
           </Stack>
           <Text mt="md" style={{ color: "#64748b" }} size="sm">
-            LiveStreamRecorder is not liable for any loss or damage arising from
-            your failure to secure your account credentials.
+            {t("yourAccount.footer")}
           </Text>
         </Paper>
 
@@ -290,86 +268,74 @@ export default function TermsAndConditions() {
                 width: 40,
                 height: 40,
                 borderRadius: 10,
-                background: "rgba(249, 115, 22, 0.2)",
+                background: "rgba(239, 68, 68, 0.2)",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                color: "#f97316",
+                color: "#ef4444",
               }}
             >
               <IconCopyright size={20} />
             </div>
             <Title order={3} style={{ color: "#f1f5f9", fontWeight: 600 }}>
-              Intellectual Property & Copyright
+              {t("intellectualProperty.title")}
             </Title>
           </Flex>
           <Text style={{ color: "#94a3b8", lineHeight: 1.7 }} mb="md">
-            LiveStreamRecorder respects the intellectual property rights of
-            others and expects users to do the same. We do not claim ownership
-            of any content that users record or access. All rights to such
-            content remain with the original creators or rights holders.
+            {t("intellectualProperty.intro")}
           </Text>
           <Text
             style={{ color: "#94a3b8", lineHeight: 1.7, fontWeight: 500 }}
             mb="sm"
           >
-            By using LiveStreamRecorder, you acknowledge and agree that:
+            {t("intellectualProperty.agreementIntro")}
           </Text>
-          <Stack gap={8} ml={16} mb="md">
+          <Stack gap={12} ml={16}>
             <Text style={{ color: "#94a3b8" }}>
               •{" "}
-              <Text component="span" fw={500} style={{ color: "#f1f5f9" }}>
-                You are solely responsible
+              <Text component="span" fw={600} style={{ color: "#f1f5f9" }}>
+                {t("intellectualProperty.items.responsible")}
               </Text>{" "}
-              for obtaining all necessary rights and permissions from copyright
-              owners before recording or accessing any content
+              {t("intellectualProperty.items.responsibleDesc")}
             </Text>
             <Text style={{ color: "#94a3b8" }}>
               •{" "}
-              <Text component="span" fw={500} style={{ color: "#f1f5f9" }}>
-                You confirm
+              <Text component="span" fw={600} style={{ color: "#f1f5f9" }}>
+                {t("intellectualProperty.items.confirm")}
               </Text>{" "}
-              that your use of the Service complies with applicable copyright
-              laws and the terms of third-party streaming platforms
+              {t("intellectualProperty.items.confirmDesc")}
             </Text>
             <Text style={{ color: "#94a3b8" }}>
               •{" "}
-              <Text component="span" fw={500} style={{ color: "#f1f5f9" }}>
-                You will not use
+              <Text component="span" fw={600} style={{ color: "#f1f5f9" }}>
+                {t("intellectualProperty.items.notUse")}
               </Text>{" "}
-              LiveStreamRecorder to create unauthorized copies of copyrighted
-              streams or infringe upon the rights of third-party content
-              creators
+              {t("intellectualProperty.items.notUseDesc")}
             </Text>
             <Text style={{ color: "#94a3b8" }}>
               •{" "}
-              <Text component="span" fw={500} style={{ color: "#f1f5f9" }}>
-                You are responsible
+              <Text component="span" fw={600} style={{ color: "#f1f5f9" }}>
+                {t("intellectualProperty.items.legalConsequences")}
               </Text>{" "}
-              for any legal consequences arising from the unauthorized use of
-              streamed content
+              {t("intellectualProperty.items.legalConsequencesDesc")}
             </Text>
             <Text style={{ color: "#94a3b8" }}>
               •{" "}
-              <Text component="span" fw={500} style={{ color: "#f1f5f9" }}>
-                You will indemnify
+              <Text component="span" fw={600} style={{ color: "#f1f5f9" }}>
+                {t("intellectualProperty.items.indemnify")}
               </Text>{" "}
-              and hold LiveStreamRecorder harmless from any claims related to
-              your use of the Service
+              {t("intellectualProperty.items.indemnifyDesc")}
             </Text>
             <Text style={{ color: "#94a3b8" }}>
               •{" "}
-              <Text component="span" fw={500} style={{ color: "#f1f5f9" }}>
-                Any misuse
+              <Text component="span" fw={600} style={{ color: "#f1f5f9" }}>
+                {t("intellectualProperty.items.misuse")}
               </Text>{" "}
-              may lead to termination of your access and potential legal action
-              from rights holders
+              {t("intellectualProperty.items.misuseDesc")}
             </Text>
           </Stack>
-          <Text style={{ color: "#64748b" }} size="sm">
-            {
-              "LiveStreamRecorder reserves the right to remove or disable access to any content alleged to be infringing and may terminate repeat infringers' access to the Service."
-            }
+          <Text mt="md" style={{ color: "#64748b" }} size="sm">
+            {t("intellectualProperty.footer")}
           </Text>
         </Paper>
 
@@ -398,47 +364,49 @@ export default function TermsAndConditions() {
               <IconBan size={20} />
             </div>
             <Title order={3} style={{ color: "#f1f5f9", fontWeight: 600 }}>
-              Prohibited Activities
+              {t("prohibitedActivities.title")}
             </Title>
           </Flex>
-          <Text style={{ color: "#94a3b8", lineHeight: 1.7 }} mb="md">
-            You may not use this platform to:
+          <Text
+            style={{ color: "#94a3b8", lineHeight: 1.7, fontWeight: 500 }}
+            mb="sm"
+          >
+            {t("prohibitedActivities.intro")}
           </Text>
           <Stack gap={8} ml={16}>
             <Text style={{ color: "#94a3b8" }}>
-              • Follow or record minors (anyone under 18)
+              • {t("prohibitedActivities.items.minors")}
             </Text>
             <Text style={{ color: "#94a3b8" }}>
-              • Access content that exploits, endangers, or sexualizes minors
+              • {t("prohibitedActivities.items.exploit")}
             </Text>
             <Text style={{ color: "#94a3b8" }}>
-              • Infringe on intellectual property rights without authorization
+              • {t("prohibitedActivities.items.infringe")}
             </Text>
             <Text style={{ color: "#94a3b8" }}>
-              • Engage in any illegal activity
+              • {t("prohibitedActivities.items.illegal")}
             </Text>
             <Text style={{ color: "#94a3b8" }}>
-              • Harass, stalk, or harm others
+              • {t("prohibitedActivities.items.harass")}
             </Text>
             <Text style={{ color: "#94a3b8" }}>
-              • Use bots, scripts, or automated tools to abuse the Service
+              • {t("prohibitedActivities.items.bots")}
             </Text>
             <Text style={{ color: "#94a3b8" }}>
-              • Create multiple accounts to circumvent restrictions
+              • {t("prohibitedActivities.items.multipleAccounts")}
             </Text>
             <Text style={{ color: "#94a3b8" }}>
-              • Upload malware or harmful software
+              • {t("prohibitedActivities.items.malware")}
             </Text>
             <Text style={{ color: "#94a3b8" }}>
-              • Reverse engineer or tamper with our systems
+              • {t("prohibitedActivities.items.reverseEngineer")}
             </Text>
             <Text style={{ color: "#94a3b8" }}>
-              • Use the Service for any commercial purpose without authorization
+              • {t("prohibitedActivities.items.commercial")}
             </Text>
           </Stack>
           <Text mt="md" style={{ color: "#64748b" }} size="sm">
-            Violations may result in immediate account termination without
-            notice and may lead to legal action.
+            {t("prohibitedActivities.footer")}
           </Text>
         </Paper>
 
@@ -457,39 +425,27 @@ export default function TermsAndConditions() {
                 width: 40,
                 height: 40,
                 borderRadius: 10,
-                background: "rgba(234, 179, 8, 0.2)",
+                background: "rgba(251, 146, 60, 0.2)",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                color: "#eab308",
+                color: "#fb923c",
               }}
             >
               <IconAlertTriangle size={20} />
             </div>
             <Title order={3} style={{ color: "#f1f5f9", fontWeight: 600 }}>
-              Content Removal & DMCA
+              {t("contentRemoval.title")}
             </Title>
           </Flex>
           <Text style={{ color: "#94a3b8", lineHeight: 1.7 }} mb="md">
-            We reserve the right to remove any content or terminate any account
-            at our discretion. We will respond to claims of copyright
-            infringement and take appropriate action as required by law,
-            including removal of infringing content and termination of access
-            for repeat infringers.
+            {t("contentRemoval.content1")}
           </Text>
           <Text style={{ color: "#94a3b8", lineHeight: 1.7 }} mb="md">
-            If you believe content on our platform infringes your rights,
-            involves a minor, or otherwise violates these terms, please contact
-            us at{" "}
-            <Text component="span" fw={500} style={{ color: "#f1f5f9" }}>
-              contact@livestreamrecorder.com
-            </Text>{" "}
-            with complete details for prompt resolution.
+            {t("contentRemoval.content2")}
           </Text>
           <Text style={{ color: "#64748b" }} size="sm">
-            Please include: a description of the copyrighted work, the URL of
-            the infringing content, your contact information, and a statement
-            that you have a good faith belief that the use is not authorized.
+            {t("contentRemoval.footer")}
           </Text>
         </Paper>
 
@@ -508,34 +464,27 @@ export default function TermsAndConditions() {
                 width: 40,
                 height: 40,
                 borderRadius: 10,
-                background: "rgba(139, 92, 246, 0.2)",
+                background: "rgba(59, 130, 246, 0.2)",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                color: "#8b5cf6",
+                color: "#3b82f6",
               }}
             >
               <IconWorld size={20} />
             </div>
             <Title order={3} style={{ color: "#f1f5f9", fontWeight: 600 }}>
-              Third-Party Platforms
+              {t("thirdPartyPlatforms.title")}
             </Title>
           </Flex>
           <Text style={{ color: "#94a3b8", lineHeight: 1.7 }} mb="md">
-            Our services may rely on integrations with third-party streaming
-            platforms (such as TikTok, Twitch, YouTube, Kick, etc.). We do not
-            guarantee uninterrupted access to these platforms.
+            {t("thirdPartyPlatforms.content1")}
           </Text>
           <Text style={{ color: "#94a3b8", lineHeight: 1.7 }} mb="md">
-            Changes or restrictions imposed by third-party platforms (e.g., API
-            changes, content removal, platform bans) may affect the availability
-            or functionality of our services. LiveStreamRecorder is not
-            responsible for any disruptions caused by third-party platforms.
+            {t("thirdPartyPlatforms.content2")}
           </Text>
           <Text style={{ color: "#94a3b8", lineHeight: 1.7 }}>
-            By using our services, you acknowledge that any interaction with
-            third-party platforms is at your own risk, and you are solely
-            responsible for complying with their terms and conditions.
+            {t("thirdPartyPlatforms.content3")}
           </Text>
         </Paper>
 
@@ -554,42 +503,40 @@ export default function TermsAndConditions() {
                 width: 40,
                 height: 40,
                 borderRadius: 10,
-                background: "rgba(34, 197, 94, 0.2)",
+                background: "rgba(16, 185, 129, 0.2)",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                color: "#22c55e",
+                color: "#10b981",
               }}
             >
               <IconCreditCard size={20} />
             </div>
             <Title order={3} style={{ color: "#f1f5f9", fontWeight: 600 }}>
-              Payments & Subscriptions
+              {t("payments.title")}
             </Title>
           </Flex>
           <Stack gap={8} ml={16}>
             <Text style={{ color: "#94a3b8" }}>
-              • Paid plans are billed automatically until you cancel
+              • {t("payments.items.autoBill")}
             </Text>
             <Text style={{ color: "#94a3b8" }}>
-              • Subscriptions auto-renew unless canceled at least 24 hours
-              before the next billing date
+              • {t("payments.items.autoRenew")}
             </Text>
             <Text style={{ color: "#94a3b8" }}>
-              • Cancel anytime in your account settings
+              • {t("payments.items.cancelAnytime")}
             </Text>
             <Text style={{ color: "#94a3b8" }}>
-              • No refunds for unused subscription time
+              • {t("payments.items.noRefunds")}
             </Text>
             <Text style={{ color: "#94a3b8" }}>
-              • We may change pricing with reasonable notice to existing
-              subscribers
+              • {t("payments.items.priceChanges")}
             </Text>
             <Text style={{ color: "#94a3b8" }}>
-              • Failed payments may result in restricted access until resolved
+              • {t("payments.items.failedPayments")}
             </Text>
             <Text style={{ color: "#94a3b8" }}>
-              • You are responsible for any applicable taxes
+              • {t("payments.items.taxes")}
             </Text>
           </Stack>
         </Paper>
@@ -609,34 +556,27 @@ export default function TermsAndConditions() {
                 width: 40,
                 height: 40,
                 borderRadius: 10,
-                background: "rgba(244, 63, 94, 0.2)",
+                background: "rgba(239, 68, 68, 0.2)",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                color: "#f43f5e",
+                color: "#ef4444",
               }}
             >
               <IconLogout size={20} />
             </div>
             <Title order={3} style={{ color: "#f1f5f9", fontWeight: 600 }}>
-              Termination
+              {t("termination.title")}
             </Title>
           </Flex>
           <Text style={{ color: "#94a3b8", lineHeight: 1.7 }} mb="md">
-            We may suspend or terminate your account at any time if you violate
-            these terms, engage in prohibited activities, or fail to resolve
-            payment issues.
+            {t("termination.content1")}
           </Text>
           <Text style={{ color: "#94a3b8", lineHeight: 1.7 }} mb="md">
-            You can delete your account anytime in{" "}
-            <Text component="span" fw={500} style={{ color: "#f1f5f9" }}>
-              Settings
-            </Text>
-            . Cancellation takes effect at the end of the current billing cycle.
+            {t("termination.content2")}
           </Text>
           <Text style={{ color: "#94a3b8", lineHeight: 1.7 }}>
-            Upon termination, access to the Service will be revoked immediately,
-            and any data stored on our servers may be permanently deleted.
+            {t("termination.content3")}
           </Text>
         </Paper>
 
@@ -665,51 +605,40 @@ export default function TermsAndConditions() {
               <IconScale size={20} />
             </div>
             <Title order={3} style={{ color: "#f1f5f9", fontWeight: 600 }}>
-              Limitation of Liability
+              {t("liability.title")}
             </Title>
           </Flex>
           <Text style={{ color: "#94a3b8", lineHeight: 1.7 }} mb="md">
-            This platform is provided{" "}
-            <Text component="span" fw={500} style={{ color: "#f1f5f9" }}>
-              {"as-is"}
-            </Text>{" "}
-            and{" "}
-            <Text component="span" fw={500} style={{ color: "#f1f5f9" }}>
-              {"as-available"}
-            </Text>{" "}
-            without warranties of any kind, either express or implied. Your use
-            of the Service is at your sole risk.
+            {t("liability.content")}
           </Text>
           <Text
             style={{ color: "#94a3b8", lineHeight: 1.7, fontWeight: 500 }}
             mb="sm"
           >
-            LiveStreamRecorder is not liable for:
+            {t("liability.intro")}
           </Text>
           <Stack gap={8} ml={16}>
             <Text style={{ color: "#94a3b8" }}>
-              • Content created, recorded, or accessed by users
+              • {t("liability.items.content")}
             </Text>
             <Text style={{ color: "#94a3b8" }}>
-              • Actions of third-party streaming platforms
+              • {t("liability.items.thirdParty")}
             </Text>
             <Text style={{ color: "#94a3b8" }}>
-              • Service interruptions or technical issues
+              • {t("liability.items.interruptions")}
             </Text>
             <Text style={{ color: "#94a3b8" }}>
-              • Indirect, incidental, special, or consequential damages
+              • {t("liability.items.indirect")}
             </Text>
             <Text style={{ color: "#94a3b8" }}>
-              • Loss of data, profits, or business opportunities
+              • {t("liability.items.lossData")}
             </Text>
             <Text style={{ color: "#94a3b8" }}>
-              • Unauthorized access due to your failure to secure credentials
+              • {t("liability.items.unauthorized")}
             </Text>
           </Stack>
           <Text mt="md" style={{ color: "#64748b" }} size="sm">
-            To the fullest extent permitted by law, our total liability shall
-            not exceed the amount paid by you for the Service during the twelve
-            (12) months preceding the event giving rise to the claim.
+            {t("liability.footer")}
           </Text>
         </Paper>
 
@@ -738,15 +667,11 @@ export default function TermsAndConditions() {
               <IconShieldCheck size={20} />
             </div>
             <Title order={3} style={{ color: "#f1f5f9", fontWeight: 600 }}>
-              Indemnification
+              {t("indemnification.title")}
             </Title>
           </Flex>
           <Text style={{ color: "#94a3b8", lineHeight: 1.7 }}>
-            You agree to defend, indemnify, and hold harmless LiveStreamRecorder
-            and its affiliates, officers, agents, and employees from any claims,
-            damages, losses, liabilities, costs, or expenses (including legal
-            fees) arising from your use of the platform, your violation of these
-            terms, or your infringement of any third-party rights.
+            {t("indemnification.content")}
           </Text>
         </Paper>
 
@@ -775,18 +700,14 @@ export default function TermsAndConditions() {
               <IconRefresh size={20} />
             </div>
             <Title order={3} style={{ color: "#f1f5f9", fontWeight: 600 }}>
-              Modifications
+              {t("modifications.title")}
             </Title>
           </Flex>
           <Text style={{ color: "#94a3b8", lineHeight: 1.7 }} mb="md">
-            LiveStreamRecorder reserves the right to modify, update, or
-            discontinue any part of the Service at any time without prior
-            notice. We may also update these terms at any time.
+            {t("modifications.content1")}
           </Text>
           <Text style={{ color: "#94a3b8", lineHeight: 1.7 }}>
-            {
-              'Continued use of the platform after changes means you accept the new terms. We will update the "Last updated" date at the top of this page when changes are made.'
-            }
+            {t("modifications.content2")}
           </Text>
         </Paper>
 
@@ -815,15 +736,11 @@ export default function TermsAndConditions() {
               <IconGavel size={20} />
             </div>
             <Title order={3} style={{ color: "#f1f5f9", fontWeight: 600 }}>
-              Governing Law
+              {t("governingLaw.title")}
             </Title>
           </Flex>
           <Text style={{ color: "#94a3b8", lineHeight: 1.7 }}>
-            These Terms shall be governed by and construed in accordance with
-            the laws of Denmark, without regard to its conflict of law
-            provisions. Any disputes arising from these terms or your use of the
-            Service shall be subject to the exclusive jurisdiction of the courts
-            of Denmark.
+            {t("governingLaw.content")}
           </Text>
         </Paper>
 
@@ -852,14 +769,11 @@ export default function TermsAndConditions() {
               <IconShield size={20} />
             </div>
             <Title order={3} style={{ color: "#f1f5f9", fontWeight: 600 }}>
-              Contact Us
+              {t("contact.title")}
             </Title>
           </Flex>
           <Text style={{ color: "#94a3b8", lineHeight: 1.7 }}>
-            Questions or concerns about these terms? Contact us at{" "}
-            <Text component="span" fw={500} style={{ color: "#f1f5f9" }}>
-              contact@livestreamrecorder.com
-            </Text>
+            {t("contact.content")}
           </Text>
         </Paper>
 
@@ -872,8 +786,7 @@ export default function TermsAndConditions() {
           }}
         >
           <Text size="sm" ta="center" style={{ color: "#64748b" }}>
-            By using LiveStreamRecorder, you acknowledge that you have read,
-            understood, and agree to be bound by these Terms and Conditions.
+            {t("footerNote")}
           </Text>
         </div>
       </Stack>

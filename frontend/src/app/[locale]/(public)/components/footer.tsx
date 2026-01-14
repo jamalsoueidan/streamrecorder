@@ -9,59 +9,68 @@ import {
   Title,
   useMatches,
 } from "@mantine/core";
-
-const data = [
-  {
-    title: "Featured Creators",
-    links: [
-      { label: "Browse creators", link: "/creators/all" },
-      { label: "Tiktok creators", link: "/creators/tiktok" },
-      { label: "Twitch creators", link: "/creators/twitch" },
-      { label: "Kick creators", link: "/creators/kick" },
-      { label: "YouTube creators", link: "/creators/youtube" },
-      { label: "AfreecaTV creators", link: "/creators/afreecatv" },
-      { label: "Pandalive creators", link: "/creators/pandalive" },
-    ],
-  },
-  {
-    title: "Watch Recordings",
-    links: [
-      { label: "Browse recordings", link: "/recordings/all" },
-      { label: "Tiktok recordings", link: "/recordings/tiktok" },
-      { label: "Twitch recordings", link: "/recordings/twitch" },
-      { label: "Kick recordings", link: "/recordings/kick" },
-      { label: "YouTube recordings", link: "/recordings/youtube" },
-      { label: "AfreecaTV recordings", link: "/recordings/afreecatv" },
-      { label: "Pandalive recordings", link: "/recordings/pandalive" },
-    ],
-  },
-  {
-    title: "Legal",
-    links: [
-      { link: "/privacy", label: "Privacy Policy" },
-      { link: "/terms", label: "Terms & Conditions" },
-      { link: "/dmca", label: "DMCA policy" },
-    ],
-  },
-  {
-    title: "Company",
-    links: [
-      { link: "/news", label: "News" },
-      { link: "/pricing", label: "Pricing" },
-      { link: "/faq", label: "FAQ" },
-      { link: "/product-updates", label: "Updates" },
-      { link: "/sitemap.xml", label: "Sitemap" },
-      { link: "/contact", label: "Contact" },
-    ],
-  },
-];
+import { useTranslations } from "next-intl";
 
 export function Footer() {
+  const t = useTranslations("footer");
+
   const gap = useMatches({
     base: 30,
     sm: 50,
     md: 50,
   });
+
+  const data = [
+    {
+      title: t("featuredCreators.title"),
+      links: [
+        { label: t("featuredCreators.browse"), link: "/creators/all" },
+        { label: t("featuredCreators.tiktok"), link: "/creators/tiktok" },
+        { label: t("featuredCreators.twitch"), link: "/creators/twitch" },
+        { label: t("featuredCreators.kick"), link: "/creators/kick" },
+        { label: t("featuredCreators.youtube"), link: "/creators/youtube" },
+        { label: t("featuredCreators.afreecatv"), link: "/creators/afreecatv" },
+        { label: t("featuredCreators.pandalive"), link: "/creators/pandalive" },
+      ],
+    },
+    {
+      title: t("watchRecordings.title"),
+      links: [
+        { label: t("watchRecordings.browse"), link: "/recordings/all" },
+        { label: t("watchRecordings.tiktok"), link: "/recordings/tiktok" },
+        { label: t("watchRecordings.twitch"), link: "/recordings/twitch" },
+        { label: t("watchRecordings.kick"), link: "/recordings/kick" },
+        { label: t("watchRecordings.youtube"), link: "/recordings/youtube" },
+        {
+          label: t("watchRecordings.afreecatv"),
+          link: "/recordings/afreecatv",
+        },
+        {
+          label: t("watchRecordings.pandalive"),
+          link: "/recordings/pandalive",
+        },
+      ],
+    },
+    {
+      title: t("legal.title"),
+      links: [
+        { link: "/privacy", label: t("legal.privacy") },
+        { link: "/terms", label: t("legal.terms") },
+        { link: "/dmca", label: t("legal.dmca") },
+      ],
+    },
+    {
+      title: t("company.title"),
+      links: [
+        { link: "/news", label: t("company.news") },
+        { link: "/pricing", label: t("company.pricing") },
+        { link: "/faq", label: t("company.faq") },
+        { link: "/product-updates", label: t("company.updates") },
+        { link: "/sitemap.xml", label: t("company.sitemap") },
+        { link: "/contact", label: t("company.contact") },
+      ],
+    },
+  ];
 
   const groups = data.map((group) => (
     <Stack key={group.title} gap="xs">
@@ -86,7 +95,6 @@ export function Footer() {
     <footer>
       <Container size="lg" py="xl" mt={120}>
         <Group justify="space-between" align="flex-start">
-          {/* Logo & description - left side */}
           <Stack gap="xs">
             <Anchor component="a" href="/" c="white" underline="never">
               <Group>
@@ -131,17 +139,15 @@ export function Footer() {
               </Group>
             </Anchor>
             <Text size="sm" c="dimmed">
-              Never miss a live stream again
+              {t("tagline")}
             </Text>
           </Stack>
 
-          {/* Link groups - right side, close together */}
           <Group gap={gap} align="flex-start" px={gap}>
             {groups}
           </Group>
         </Group>
 
-        {/* Bottom section */}
         <Group
           justify="space-between"
           mt="xl"
@@ -149,10 +155,7 @@ export function Footer() {
           style={{ borderTop: "1px solid var(--mantine-color-dark-4)" }}
         >
           <Text c="dimmed" size="sm">
-            © 2026 LiveStreamRecorder provides cloud-based infrastructure that
-            enables users to record streams for personal, private,
-            non-commercial use. Users are responsible for ensuring their use
-            complies with applicable laws and third-party platform terms.
+            {t("copyright")}
           </Text>
         </Group>
       </Container>

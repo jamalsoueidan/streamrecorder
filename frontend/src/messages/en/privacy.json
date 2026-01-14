@@ -1,0 +1,149 @@
+{
+  "meta": {
+    "title": "Privacy Policy",
+    "description": "Privacy Policy for LiveStreamRecorder. Learn how we collect, use, and protect your data."
+  },
+  "header": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated: {date}"
+  },
+  "overview": {
+    "title": "Overview",
+    "content": "We keep things simple. We collect minimal data and do not track you. No invasive analytics, no selling data to third parties. Your privacy matters to us."
+  },
+  "dataController": {
+    "title": "Data Controller",
+    "content": "LiveStreamRecorder.com is the data controller responsible for your personal data. If you have any questions about this Privacy Policy or our data practices, you can contact us at:",
+    "email": "contact@livestreamrecorder.com"
+  },
+  "whatWeCollect": {
+    "title": "What We Collect",
+    "intro": "When you create an account, we store:",
+    "items": {
+      "email": "Email address",
+      "emailDesc": "to let you log in and recover your account",
+      "username": "Username",
+      "usernameDesc": "to identify your account",
+      "lastLogin": "Last login date",
+      "lastLoginDesc": "for basic account management",
+      "streamers": "Streamers you follow",
+      "streamersDesc": "to show you content from streamers you are interested in"
+    },
+    "footer": "That is it. Nothing else."
+  },
+  "legalBasis": {
+    "title": "Legal Basis for Processing",
+    "intro": "Under the GDPR, we process your personal data based on the following legal grounds:",
+    "items": {
+      "contract": "Contract",
+      "contractDesc": "Processing is necessary to provide you with our services",
+      "consent": "Consent",
+      "consentDesc": "You have given consent for specific purposes (e.g., marketing emails)",
+      "legitimateInterest": "Legitimate Interest",
+      "legitimateInterestDesc": "To improve our services and prevent fraud"
+    }
+  },
+  "payment": {
+    "title": "Payment Processing",
+    "content": "For paid subscriptions, we use Stripe as our payment processor. Stripe collects and processes your payment information directly. We do not store your credit card details on our servers.",
+    "stripePolicy": "Stripe's privacy policy can be found at: stripe.com/privacy"
+  },
+  "analytics": {
+    "title": "Analytics",
+    "intro": "We use Umami, a privacy-focused analytics tool, to understand how our site is used. This helps us improve the experience.",
+    "notCollect": "What Umami does NOT collect:",
+    "notCollectItems": {
+      "cookies": "No cookies",
+      "personal": "No personal information",
+      "tracking": "No cross-site tracking"
+    },
+    "collect": "What we do collect:",
+    "collectItems": {
+      "pageViews": "Page views",
+      "referrer": "Referrer (where you came from)",
+      "browser": "Browser and device type",
+      "country": "Country (not precise location)"
+    },
+    "footer": "All data is anonymized and stored on our own servers in Europe."
+  },
+  "dataRetention": {
+    "title": "Data Retention",
+    "intro": "We retain your data only as long as necessary:",
+    "items": {
+      "account": "Account data",
+      "accountDesc": "Until you delete your account",
+      "freeStreams": "Recorded streams (Free plan)",
+      "freeStreamsDesc": "7 days",
+      "premiumStreams": "Recorded streams (Premium plan)",
+      "premiumStreamsDesc": "60 days",
+      "analyticsData": "Analytics data",
+      "analyticsDataDesc": "Anonymized, retained for service improvement"
+    }
+  },
+  "dataStorage": {
+    "title": "Where Your Data Is Stored",
+    "content": "Our servers are located in Europe. Your data is processed and stored in compliance with GDPR requirements. We do not transfer your personal data outside the European Economic Area (EEA) unless necessary for service provision (e.g., Stripe payment processing) and with appropriate safeguards in place."
+  },
+  "thirdParties": {
+    "title": "Third Parties",
+    "intro": "We do not sell your data to anyone. We only share data with:",
+    "items": {
+      "stripe": "Stripe",
+      "stripeDesc": "For payment processing (if you subscribe)"
+    },
+    "footer": "We do not use third-party advertising networks or sell your personal information."
+  },
+  "cookies": {
+    "title": "Cookies",
+    "intro": "We use only essential cookies necessary for the website to function properly:",
+    "items": {
+      "session": "Session cookies",
+      "sessionDesc": "To keep you logged in",
+      "preference": "Preference cookies",
+      "preferenceDesc": "To remember your settings"
+    },
+    "footer": "We do not use tracking cookies, advertising cookies, or third-party analytics cookies."
+  },
+  "rights": {
+    "title": "Your Rights (GDPR)",
+    "intro": "Under the GDPR, you have the following rights:",
+    "items": {
+      "access": "Right to Access",
+      "accessDesc": "Request a copy of your personal data",
+      "rectification": "Right to Rectification",
+      "rectificationDesc": "Correct inaccurate or incomplete data",
+      "erasure": "Right to Erasure",
+      "erasureDesc": "Request deletion of your data",
+      "restrict": "Right to Restrict Processing",
+      "restrictDesc": "Limit how we use your data",
+      "portability": "Right to Data Portability",
+      "portabilityDesc": "Receive your data in a portable format",
+      "object": "Right to Object",
+      "objectDesc": "Object to processing based on legitimate interests",
+      "withdraw": "Right to Withdraw Consent",
+      "withdrawDesc": "Withdraw consent at any time"
+    },
+    "footer": "To exercise any of these rights, contact us at contact@livestreamrecorder.com"
+  },
+  "children": {
+    "title": "Children's Privacy",
+    "content": "Our Service is not intended for anyone under the age of 18 years old. We do not knowingly collect personal information from children under 18.",
+    "contact": "If you believe that a child has provided us with personal information, please contact us immediately at contact@livestreamrecorder.com, and we will take steps to delete such information from our systems."
+  },
+  "security": {
+    "title": "Data Security",
+    "content": "We implement appropriate technical and organizational measures to protect your personal data against unauthorized access, alteration, disclosure, or destruction. This includes encryption, secure servers, and access controls. However, no method of transmission over the Internet is 100% secure, and we cannot guarantee absolute security."
+  },
+  "deleteAccount": {
+    "title": "Delete Your Account",
+    "content": "To delete your account, go to Settings then Delete Account.",
+    "footer": "Once deleted, all your data is permanently removed from our servers. This action cannot be undone."
+  },
+  "contact": {
+    "title": "Contact Us",
+    "content": "If you have any questions about this Privacy Policy, your data, or your rights, please contact us:",
+    "email": "contact@livestreamrecorder.com",
+    "footer": "You also have the right to lodge a complaint with a supervisory authority (such as the Danish Data Protection Agency - Datatilsynet) if you believe your data protection rights have been violated."
+  },
+  "footerNote": "If we update this policy, we will post changes here with a new date. Continued use of the Service after changes constitutes acceptance of the updated policy."
+}

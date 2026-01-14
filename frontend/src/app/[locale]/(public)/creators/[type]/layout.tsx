@@ -1,3 +1,4 @@
+import { streamingPlatforms } from "@/app/lib/streaming-platforms";
 import {
   Badge,
   Button,
@@ -16,7 +17,6 @@ import {
   IconUserPlus,
   IconUsers,
 } from "@tabler/icons-react";
-import { streamingPlatforms } from "../../page";
 
 const features = [
   {

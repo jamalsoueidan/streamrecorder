@@ -1,0 +1,39 @@
+{
+  "tagline": "Never miss a live stream again",
+  "copyright": "© 2026 LiveStreamRecorder provides cloud-based infrastructure that enables users to record streams for personal, private, non-commercial use. Users are responsible for ensuring their use complies with applicable laws and third-party platform terms.",
+  "featuredCreators": {
+    "title": "Featured Creators",
+    "browse": "Browse creators",
+    "tiktok": "TikTok creators",
+    "twitch": "Twitch creators",
+    "kick": "Kick creators",
+    "youtube": "YouTube creators",
+    "afreecatv": "AfreecaTV creators",
+    "pandalive": "Pandalive creators"
+  },
+  "watchRecordings": {
+    "title": "Watch Recordings",
+    "browse": "Browse recordings",
+    "tiktok": "TikTok recordings",
+    "twitch": "Twitch recordings",
+    "kick": "Kick recordings",
+    "youtube": "YouTube recordings",
+    "afreecatv": "AfreecaTV recordings",
+    "pandalive": "Pandalive recordings"
+  },
+  "legal": {
+    "title": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms & Conditions",
+    "dmca": "DMCA Policy"
+  },
+  "company": {
+    "title": "Company",
+    "news": "News",
+    "pricing": "Pricing",
+    "faq": "FAQ",
+    "updates": "Updates",
+    "sitemap": "Sitemap",
+    "contact": "Contact"
+  }
+}
