@@ -440,20 +440,35 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
   options: {
     draftAndPublish: true;
   };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
   attributes: {
-    color: Schema.Attribute.String;
-    content: Schema.Attribute.Text & Schema.Attribute.Required;
+    content: Schema.Attribute.Text &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::article.article'
-    > &
-      Schema.Attribute.Private;
+    >;
     publishedAt: Schema.Attribute.DateTime;
-    title: Schema.Attribute.String & Schema.Attribute.Required;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -512,33 +527,6 @@ export interface ApiDashboardNavbarDashboardNavbar
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
     section: Schema.Attribute.Component<'navigations.sections', true>;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiFaqFaq extends Struct.CollectionTypeSchema {
-  collectionName: 'faqs';
-  info: {
-    displayName: 'Faq';
-    pluralName: 'faqs';
-    singularName: 'faq';
-  };
-  options: {
-    draftAndPublish: false;
-  };
-  attributes: {
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    description: Schema.Attribute.Text;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<'oneToMany', 'api::faq.faq'> &
-      Schema.Attribute.Private;
-    order: Schema.Attribute.Integer;
-    publishedAt: Schema.Attribute.DateTime;
-    title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1248,7 +1236,6 @@ declare module '@strapi/strapi' {
       'api::article.article': ApiArticleArticle;
       'api::change-log.change-log': ApiChangeLogChangeLog;
       'api::dashboard-navbar.dashboard-navbar': ApiDashboardNavbarDashboardNavbar;
-      'api::faq.faq': ApiFaqFaq;
       'api::follower.follower': ApiFollowerFollower;
       'api::message.message': ApiMessageMessage;
       'api::navigation.navigation': ApiNavigationNavigation;

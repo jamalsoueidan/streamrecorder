@@ -9,18 +9,29 @@
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
   "attributes": {
     "title": {
       "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
       "required": true
     },
     "content": {
       "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
       "required": true
-    },
-    "color": {
-      "type": "string"
     }
   }
 }
