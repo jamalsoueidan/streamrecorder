@@ -290,7 +290,7 @@ export default async function Page({ params, children }: PageProps) {
             ),
           }}
         >
-          {t("about")}
+          -
         </ReactMarkdown>
       </div>
     </Container>
