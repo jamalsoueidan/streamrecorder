@@ -18,7 +18,7 @@ export default function ProfileRecordingModal() {
     username: string;
     type: string;
   }>();
-  console.log(params);
+
   const searchParams = useSearchParams();
   const [filters] = useQueryStates(profileParsers);
 
@@ -50,7 +50,9 @@ export default function ProfileRecordingModal() {
 
   const handleVisibleChange = useCallback(
     (recording: Recording) => {
-      const basePath = `/${params.type}/${params.username}/video/${recording.documentId}`;
+      const basePath = `/${params.type}/${decodeURIComponent(
+        params.username
+      )}/video/${recording.documentId}`;
       const search = searchParams.toString();
       const url = search ? `${basePath}?${search}` : basePath;
       window.history.replaceState(null, "", url);
@@ -59,7 +61,7 @@ export default function ProfileRecordingModal() {
   );
 
   const handleNotFound = () => {
-    router.replace(`/${params.type}/${params.username}`);
+    router.replace(`/${params.type}/${decodeURIComponent(params.username)}`);
   };
 
   if (isLoading) {
