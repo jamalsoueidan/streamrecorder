@@ -103,7 +103,6 @@ export async function Header() {
             ))}
           </Flex>
 
-          {/* Auth Buttons */}
           <Flex gap={12} align="center">
             {isLoggedIn ? (
               <Button
