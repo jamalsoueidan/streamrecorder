@@ -1,5 +1,6 @@
 import { loadEnvConfig } from "@next/env";
 import type { NextConfig } from "next";
+import createNextIntlPlugin from "next-intl/plugin";
 
 loadEnvConfig(process.cwd());
 
@@ -7,7 +8,6 @@ const nextConfig: NextConfig = {
   reactCompiler: true,
   async redirects() {
     return [
-      // non-www to www
       {
         source: "/:path*",
         has: [{ type: "host", value: "livestreamrecorder.com" }],
@@ -34,4 +34,6 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default nextConfig;
+const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
+
+export default withNextIntl(nextConfig);

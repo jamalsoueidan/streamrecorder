@@ -1,5 +1,7 @@
+import createIntlMiddleware from "next-intl/middleware";
 import type { NextRequest } from "next/server";
 import { NextResponse } from "next/server";
+import { routing } from "./i18n/routing";
 
 const PLATFORMS = [
   "tiktok",
@@ -10,44 +12,48 @@ const PLATFORMS = [
   "pandalive",
 ];
 
+const handleI18nRouting = createIntlMiddleware(routing);
+
 export function proxy(request: NextRequest) {
-  const token = request.cookies.get("strapi_jwt");
   const path = request.nextUrl.pathname;
 
-  // Skip rewrite for client-side navigations (let intercepts work) for (protected)/@modal/(..)[type]/ to work
-  const secFetchDest = request.headers.get("Sec-Fetch-Dest");
+  // Check for locale prefix
+  const hasArPrefix = path.startsWith("/ar");
+  const pathWithoutLocale = hasArPrefix ? path.replace(/^\/ar/, "") : path;
+  const locale = hasArPrefix ? "ar" : "en";
 
-  // Only skip for client-side JS fetches (script, style, etc.)
-  // Rewrite everything else: bots, direct visits, document requests
-  const isClientSideFetch = secFetchDest && secFetchDest !== "document";
+  const firstSegment = pathWithoutLocale.split("/")[1];
 
-  if (isClientSideFetch) {
-    return NextResponse.next();
-  }
-
-  // Check if it's a platform route like /tiktok/@username/...
-  const firstSegment = path.split("/")[1];
-
+  // Platform routes - handle auth rewrites
   if (PLATFORMS.includes(firstSegment)) {
-    if (token) {
-      // Check if URL is ONLY the platform (e.g., /pandalive with nothing after)
-      const segments = path.split("/").filter(Boolean);
+    const token = request.cookies.get("strapi_jwt");
 
-      if (segments.length === 1) {
-        // Only platform in URL, redirect to discover
-        return NextResponse.redirect(
-          new URL(`/discover?type=${firstSegment}`, request.url)
-        );
-      }
-      return NextResponse.rewrite(new URL(`/protected${path}`, request.url));
+    // Skip rewrite for client-side navigations (for intercepting routes)
+    const secFetchDest = request.headers.get("Sec-Fetch-Dest");
+    const isClientSideFetch = secFetchDest && secFetchDest !== "document";
+
+    if (isClientSideFetch) {
+      return NextResponse.next();
+    }
+
+    if (token) {
+      return NextResponse.rewrite(
+        new URL(`/${locale}/protected${pathWithoutLocale}`, request.url)
+      );
     } else {
-      return NextResponse.rewrite(new URL(`/public${path}`, request.url));
+      return NextResponse.rewrite(
+        new URL(`/${locale}/public${pathWithoutLocale}`, request.url)
+      );
     }
   }
 
-  return NextResponse.next();
+  return handleI18nRouting(request);
 }
 
 export const config = {
-  matcher: ["/(tiktok|twitch|youtube|kick|afreecatv|pandalive)/:path*"],
+  matcher: [
+    "/",
+    "/(ar|en)/:path*",
+    "/((?!api|_next|_vercel|favicon.ico|.*\\.(?:js|css|png|jpg|jpeg|gif|svg|ico|webp|woff|woff2|ttf|json)$).*)",
+  ],
 };

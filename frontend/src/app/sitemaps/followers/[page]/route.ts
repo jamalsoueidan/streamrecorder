@@ -36,7 +36,7 @@ export async function GET(
         .map(
           (f) => `
         <url>
-          <loc>https://livestreamrecorder.com/${f.type}/${
+          <loc>https://www.livestreamrecorder.com/${f.type}/${
             f.type === "tiktok" ? `@${f.username}` : f.username
           }</loc>
           <lastmod>${f.updatedAt}</lastmod>

@@ -48,7 +48,7 @@ export async function GET(
         .map(
           (r) => `
         <url>
-          <loc>https://livestreamrecorder.com/${r.follower?.type}/${
+          <loc>https://www.livestreamrecorder.com/${r.follower?.type}/${
             r.follower?.type === "tiktok"
               ? `@${r.follower.username}`
               : r.follower?.username

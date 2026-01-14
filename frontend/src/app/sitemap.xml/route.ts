@@ -30,13 +30,13 @@ export async function GET() {
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
     <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
       <sitemap>
-        <loc>https://livestreamrecorder.com/sitemaps/static.xml</loc>
+        <loc>https://www.livestreamrecorder.com/sitemaps/static.xml</loc>
       </sitemap>
       ${Array.from(
         { length: followerSitemapCount },
         (_, i) => `
         <sitemap>
-          <loc>https://livestreamrecorder.com/sitemaps/followers/${
+          <loc>https://www.livestreamrecorder.com/sitemaps/followers/${
             i + 1
           }.xml</loc>
         </sitemap>
@@ -46,7 +46,9 @@ export async function GET() {
         { length: recordingSitemapCount },
         (_, i) => `
         <sitemap>
-          <loc>https://livestreamrecorder.com/sitemaps/videos/${i + 1}.xml</loc>
+          <loc>https://www.livestreamrecorder.com/sitemaps/videos/${
+            i + 1
+          }.xml</loc>
         </sitemap>
       `
       ).join("")}
