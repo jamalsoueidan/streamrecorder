@@ -1,0 +1,66 @@
+{
+  "title": "Frequently Asked Questions",
+  "subtitle": "Find answers to common questions about our service.",
+  "faqs": [
+    {
+      "question": "What is LiveStreamRecorder.io?",
+      "answer": "LiveStreamRecorder.io is a free service that automatically captures live streams from your favorite creators. No need to leave your computer running or manually hit record — we handle everything. Just add the streamers you want to follow, and we will save their live stream for you to watch or download later."
+    },
+    {
+      "question": "How does it work?",
+      "answer": "Sign up for free, then add the creators you want to record. Whenever they go live, our system automatically captures the stream. You can watch recordings directly in your browser or download the video file to your device."
+    },
+    {
+      "question": "Is it really free?",
+      "answer": "Yes! Our free plan lets you record up to 3 streamers and recordings are kept for 5 days. If you need more, our premium plan gives you better video quality, 30-day storage, video downloads, and the ability to record up to 100 creators."
+    },
+    {
+      "question": "Which platforms are supported?",
+      "answer": "We currently support Twitch and TikTok. We are always working on adding more platforms — stay tuned for updates."
+    },
+    {
+      "question": "How long are recordings stored?",
+      "answer": "Free users get 5 days of storage. Premium users get 30 days. Make sure to download any recordings you want to keep them on your computer before they expire."
+    },
+    {
+      "question": "How do I add a streamer?",
+      "answer": "Click the Add Follower button on your dashboard and enter the streamer username. Once added, we will automatically start recording whenever they go live."
+    },
+    {
+      "question": "Can I download recordings?",
+      "answer": "Downloading is available for premium users. Every recording has a download button that lets you save the full video file to your computer."
+    },
+    {
+      "question": "What is included in the premium plan?",
+      "answer": "Premium gives you better video quality, the ability to download recordings, 30-day storage, and you can follow up to 100 creators."
+    },
+    {
+      "question": "How do I upgrade to premium?",
+      "answer": "Go to your dashboard and click Upgrade. Choose the plan that works for you and complete the payment. We accept credit cards, Apple Pay, and Google Pay."
+    },
+    {
+      "question": "Do I get access to past recordings when I add a streamer?",
+      "answer": "Free users only get recordings from the moment they add a creator. Premium users also get access to any existing recordings we already have for that creator."
+    },
+    {
+      "question": "How do I contact support?",
+      "answer": "You can reach us anytime through the contact form on our website. We are here to help with any questions or issues."
+    },
+    {
+      "question": "Can streamers see who is recording them?",
+      "answer": "No."
+    },
+    {
+      "question": "How do I delete my account?",
+      "answer": "Go to Settings and click Delete Account. Your account and all data are permanently removed immediately. This action cannot be undone."
+    },
+    {
+      "question": "Is my privacy protected?",
+      "answer": "Yes. We only save your username, email and who you follow. Check our Privacy Policy for full details."
+    },
+    {
+      "question": "What happens if a streamer changes their username?",
+      "answer": "Unfortunately, we cannot detect username changes. If a streamer changes their name, you will need to remove the old entry and add them again with the new username."
+    }
+  ]
+}

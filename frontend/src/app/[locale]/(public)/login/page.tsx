@@ -15,11 +15,13 @@ import {
   Title,
 } from "@mantine/core";
 import { IconLock, IconMail, IconSparkles } from "@tabler/icons-react";
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useActionState, useEffect } from "react";
 
 export default function LoginPage() {
+  const t = useTranslations("login");
   const [state, formAction, pending] = useActionState(login, null);
   const router = useRouter();
 
@@ -62,11 +64,9 @@ export default function LoginPage() {
               WebkitTextFillColor: "transparent",
             }}
           >
-            Welcome back
+            {t("title")}
           </Title>
-          <Text style={{ color: "#64748b" }}>
-            Sign in to continue to your account
-          </Text>
+          <Text style={{ color: "#64748b" }}>{t("subtitle")}</Text>
         </Stack>
       </Stack>
 
@@ -99,8 +99,8 @@ export default function LoginPage() {
             <TextInput
               name="email"
               type="email"
-              label="Email address"
-              placeholder="you@example.com"
+              label={t("email.label")}
+              placeholder={t("email.placeholder")}
               required
               leftSection={<IconMail size={18} style={{ color: "#64748b" }} />}
               styles={{
@@ -119,8 +119,8 @@ export default function LoginPage() {
 
             <PasswordInput
               name="password"
-              label="Password"
-              placeholder="Enter your password"
+              label={t("password.label")}
+              placeholder={t("password.placeholder")}
               required
               leftSection={<IconLock size={18} style={{ color: "#64748b" }} />}
               styles={{
@@ -147,7 +147,7 @@ export default function LoginPage() {
                 size="sm"
                 style={{ color: "#a5b4fc" }}
               >
-                Forgot password?
+                {t("forgotPassword")}
               </Anchor>
             </Flex>
 
@@ -161,20 +161,20 @@ export default function LoginPage() {
               fullWidth
               style={{ fontWeight: 600, height: 48 }}
             >
-              {pending ? "Signing in..." : "Sign in"}
+              {pending ? t("submit.loading") : t("submit.default")}
             </Button>
           </Stack>
         </form>
       </Paper>
 
       <Text ta="center" mt="xl" style={{ color: "#64748b" }}>
-        Do not have an account?{" "}
+        {t("register.text")}{" "}
         <Anchor
           component={Link}
           href="/register"
           style={{ color: "#a5b4fc", fontWeight: 500 }}
         >
-          Create one
+          {t("register.link")}
         </Anchor>
       </Text>
     </Container>

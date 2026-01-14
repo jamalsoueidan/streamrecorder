@@ -1,0 +1,21 @@
+{
+  "title": "Welcome back",
+  "subtitle": "Sign in to continue to your account",
+  "email": {
+    "label": "Email address",
+    "placeholder": "you@example.com"
+  },
+  "password": {
+    "label": "Password",
+    "placeholder": "Enter your password"
+  },
+  "forgotPassword": "Forgot password?",
+  "submit": {
+    "default": "Sign in",
+    "loading": "Signing in..."
+  },
+  "register": {
+    "text": "Do not have an account?",
+    "link": "Create one"
+  }
+}

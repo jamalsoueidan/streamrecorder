@@ -20,12 +20,14 @@ import {
   IconUser,
   IconUserPlus,
 } from "@tabler/icons-react";
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 import { useActionState, useEffect, useState } from "react";
 
 export default function RegisterPage() {
+  const t = useTranslations("register");
   const router = useRouter();
   const [state, formAction, pending] = useActionState(register, null);
   const [acceptedTerms, setAcceptedTerms] = useState(false);
@@ -69,9 +71,9 @@ export default function RegisterPage() {
               WebkitTextFillColor: "transparent",
             }}
           >
-            Create an account
+            {t("title")}
           </Title>
-          <Text style={{ color: "#64748b" }}>Join us and start exploring</Text>
+          <Text style={{ color: "#64748b" }}>{t("subtitle")}</Text>
         </Stack>
       </Stack>
 
@@ -104,8 +106,8 @@ export default function RegisterPage() {
             <TextInput
               name="username"
               type="text"
-              label="Username"
-              placeholder="Choose a username"
+              label={t("username.label")}
+              placeholder={t("username.placeholder")}
               required
               leftSection={<IconUser size={18} style={{ color: "#64748b" }} />}
               styles={{
@@ -122,8 +124,8 @@ export default function RegisterPage() {
             <TextInput
               name="email"
               type="email"
-              label="Email address"
-              placeholder="you@example.com"
+              label={t("email.label")}
+              placeholder={t("email.placeholder")}
               required
               leftSection={<IconMail size={18} style={{ color: "#64748b" }} />}
               styles={{
@@ -139,8 +141,8 @@ export default function RegisterPage() {
 
             <PasswordInput
               name="password"
-              label="Password"
-              placeholder="Create a password"
+              label={t("password.label")}
+              placeholder={t("password.placeholder")}
               required
               minLength={6}
               leftSection={<IconLock size={18} style={{ color: "#64748b" }} />}
@@ -159,7 +161,7 @@ export default function RegisterPage() {
             />
 
             <Text size="xs" style={{ color: "#64748b" }}>
-              Password must be at least 6 characters long
+              {t("password.hint")}
             </Text>
 
             <Checkbox
@@ -167,13 +169,13 @@ export default function RegisterPage() {
               onChange={(e) => setAcceptedTerms(e.currentTarget.checked)}
               label={
                 <Text size="sm" style={{ color: "#94a3b8" }}>
-                  I agree to the{" "}
+                  {t("terms.agree")}{" "}
                   <Anchor
                     component={Link}
                     href="/terms"
                     style={{ color: "#a5b4fc" }}
                   >
-                    Terms and Conditions
+                    {t("terms.link")}
                   </Anchor>
                 </Text>
               }
@@ -196,20 +198,20 @@ export default function RegisterPage() {
               fullWidth
               style={{ fontWeight: 600, height: 48 }}
             >
-              {pending ? "Creating account..." : "Create account"}
+              {pending ? t("submit.loading") : t("submit.default")}
             </Button>
           </Stack>
         </form>
       </Paper>
 
       <Text ta="center" mt="xl" style={{ color: "#64748b" }}>
-        Already have an account?{" "}
+        {t("login.text")}{" "}
         <Anchor
           component={Link}
           href="/login"
           style={{ color: "#a5b4fc", fontWeight: 500 }}
         >
-          Sign in
+          {t("login.link")}
         </Anchor>
       </Text>
     </Container>
