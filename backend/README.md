@@ -8,3 +8,5 @@ psql -U postgres -c "DROP DATABASE IF EXISTS strapi;"
 psql -U postgres -c "CREATE DATABASE strapi;"
 psql -U postgres -d strapi < backup.sql
 ```
+
+# test
