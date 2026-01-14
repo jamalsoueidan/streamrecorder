@@ -1,10 +1,7 @@
-"use client";
-
 import { Container, Flex, Paper, Stack, Text, Title } from "@mantine/core";
 import { IconChevronDown, IconQuestionMark } from "@tabler/icons-react";
 import { useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
-import { useState } from "react";
 
 export async function generateMetadata() {
   const t = await getTranslations("faq");
@@ -108,8 +105,6 @@ export default function FAQPage() {
 }
 
 function FAQItem({ question, answer }: { question: string; answer: string }) {
-  const [isOpen, setIsOpen] = useState(false);
-
   return (
     <Paper
       p="md"
@@ -119,7 +114,6 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
         border: "1px solid rgba(255, 255, 255, 0.06)",
         cursor: "pointer",
       }}
-      onClick={() => setIsOpen(!isOpen)}
     >
       <Flex justify="space-between" align="center" gap="md">
         <Text fw={500} style={{ color: "#f1f5f9" }}>
@@ -129,26 +123,25 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
           style={{
             color: "#64748b",
             transition: "transform 0.2s ease",
-            transform: isOpen ? "rotate(180deg)" : "rotate(0deg)",
+
             flexShrink: 0,
           }}
         >
           <IconChevronDown size={20} />
         </div>
       </Flex>
-      {isOpen && (
-        <Text
-          mt="md"
-          style={{
-            color: "#94a3b8",
-            lineHeight: 1.7,
-            borderTop: "1px solid rgba(255, 255, 255, 0.06)",
-            paddingTop: 12,
-          }}
-        >
-          {answer}
-        </Text>
-      )}
+
+      <Text
+        mt="md"
+        style={{
+          color: "#94a3b8",
+          lineHeight: 1.7,
+          borderTop: "1px solid rgba(255, 255, 255, 0.06)",
+          paddingTop: 12,
+        }}
+      >
+        {answer}
+      </Text>
     </Paper>
   );
 }
