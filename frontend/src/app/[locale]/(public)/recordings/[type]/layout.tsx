@@ -10,6 +10,7 @@ import {
   Text,
   Title,
 } from "@mantine/core";
+import Link from "next/link";
 
 interface PageProps {
   params: Promise<{
@@ -59,20 +60,19 @@ export default async function RecordingPage({ params, children }: PageProps) {
           your favorite creators so you can watch anytime.
         </Text>
 
-        <Flex gap={30} align="center" mt={20}>
+        <Flex align="center" gap={30} mt={20} wrap="wrap">
           {streamingPlatforms.map((p) => (
-            <Button
+            <Link
               key={p.name}
-              component="a"
-              size="xl"
-              radius="lg"
-              href={`/recordings/${p.name.toLowerCase()}`}
-              variant={
-                p.name.toLowerCase() === type ? "outline" : "transparent"
-              }
+              href={`/creators/${p.name.toLowerCase()}`}
+              style={{
+                border: p.name.toLowerCase() === type ? "1px solid" : "none",
+                borderRadius: "8px",
+                padding: "4px",
+              }}
             >
-              <Image alt={p.name} src={p.file} maw={120} />
-            </Button>
+              <Image alt={p.name} src={p.file} w={120} />
+            </Link>
           ))}
         </Flex>
       </Stack>

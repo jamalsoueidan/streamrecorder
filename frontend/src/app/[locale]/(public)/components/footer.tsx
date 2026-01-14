@@ -3,7 +3,10 @@ import {
   Anchor,
   Badge,
   Container,
+  Divider,
   Group,
+  Image,
+  SimpleGrid,
   Stack,
   Text,
   Title,
@@ -93,13 +96,15 @@ export function Footer() {
 
   return (
     <footer>
-      <Container size="lg" py="xl" mt={120}>
-        <Group justify="space-between" align="flex-start">
-          <Stack gap="xs">
+      <Image src="/logo2.svg" alt="Logo" maw="100%" mt={30} />
+      <Divider c="white" size="xl" mb={20} visibleFrom="sm" />
+      <Container size="xl" py="xl" mt={20}>
+        <SimpleGrid cols={{ base: 1, sm: 3, md: 5 }} mb="xl">
+          <Stack>
             <Anchor component="a" href="/" c="white" underline="never">
-              <Group>
+              <Group gap="xs">
                 <Badge
-                  size="lg"
+                  size="md"
                   c="white"
                   bg="red"
                   radius="xs"
@@ -135,7 +140,9 @@ export function Footer() {
                     </span>
                   </span>
                 </Badge>
-                <Title order={3}>StreamRecorder</Title>
+                <Title order={2} size="h4">
+                  StreamRecorder
+                </Title>
               </Group>
             </Anchor>
             <Text size="sm" c="dimmed">
@@ -143,21 +150,17 @@ export function Footer() {
             </Text>
           </Stack>
 
-          <Group gap={gap} align="flex-start" px={gap}>
-            {groups}
-          </Group>
-        </Group>
+          {groups}
+        </SimpleGrid>
 
-        <Group
-          justify="space-between"
-          mt="xl"
-          pt="xl"
-          style={{ borderTop: "1px solid var(--mantine-color-dark-4)" }}
-        >
-          <Text c="dimmed" size="sm">
+        <Stack mt="xl">
+          <Text c="dimmed" size="xs" fw="bold">
             {t("copyright")}
           </Text>
-        </Group>
+          <Text c="dimmed" size="xs">
+            {t("copyright_text")} {t("association")}
+          </Text>
+        </Stack>
       </Container>
     </footer>
   );
