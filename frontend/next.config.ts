@@ -6,6 +6,7 @@ loadEnvConfig(process.cwd());
 
 const nextConfig: NextConfig = {
   reactCompiler: true,
+  output: "standalone",
   async redirects() {
     return [
       // non-www to www
