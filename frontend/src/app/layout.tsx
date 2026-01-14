@@ -1,5 +1,6 @@
 import {
   ColorSchemeScript,
+  DirectionProvider,
   MantineProvider,
   createTheme,
   mantineHtmlProps,
@@ -8,6 +9,7 @@ import "@mantine/core/styles.css";
 import { Notifications } from "@mantine/notifications";
 import "@mantine/notifications/styles.css";
 import type { Metadata, Viewport } from "next";
+import { headers } from "next/headers";
 import Script from "next/script";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
 import "./globals.css";
@@ -91,13 +93,17 @@ export const viewport: Viewport = {
   themeColor: "#000000",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const headersList = await headers();
+  const locale = headersList.get("x-next-intl-locale") || "en";
+  const dir = locale === "ar" ? "rtl" : "ltr";
+
   return (
-    <html lang="en" {...mantineHtmlProps}>
+    <html lang={locale} dir={dir} {...mantineHtmlProps}>
       <head>
         <ColorSchemeScript defaultColorScheme="dark" />
         <Script
@@ -108,13 +114,15 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/icons/icon-192.png" />
       </head>
       <body>
-        <MantineProvider theme={theme} defaultColorScheme="dark">
-          <Notifications color="red" position="bottom-center" />
-          <NuqsAdapter>
-            {children}
-            <PWAUpdater />
-          </NuqsAdapter>
-        </MantineProvider>
+        <DirectionProvider initialDirection={dir} detectDirection={false}>
+          <MantineProvider theme={theme} defaultColorScheme="dark">
+            <Notifications color="red" position="bottom-center" />
+            <NuqsAdapter>
+              {children}
+              <PWAUpdater />
+            </NuqsAdapter>
+          </MantineProvider>
+        </DirectionProvider>
       </body>
     </html>
   );
