@@ -2,7 +2,6 @@ import { getToken } from "@/lib/token";
 import { Badge, Button, Container, Flex, Title } from "@mantine/core";
 import { IconUserPlus } from "@tabler/icons-react";
 import Link from "next/link";
-import { LanguageSwitcher } from "./language-switcher";
 
 const links = [
   { link: "/", label: "Home" },
@@ -103,8 +102,6 @@ export async function Header() {
               </a>
             ))}
           </Flex>
-
-          <LanguageSwitcher />
 
           {/* Auth Buttons */}
           <Flex gap={12} align="center">
