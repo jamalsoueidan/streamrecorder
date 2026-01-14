@@ -17,34 +17,11 @@ import {
   IconUserPlus,
   IconUsers,
 } from "@tabler/icons-react";
+import { getTranslations } from "next-intl/server";
 import ReactMarkdown from "react-markdown";
 
-const features = [
-  {
-    icon: IconUsers,
-    title: "Follow Your Favorite Streamers",
-    description:
-      "Simply follow the creators you love, and we handle the rest. Our service works around the clock, recording streaming video in the background and making it available on-demand.",
-  },
-  {
-    icon: IconPlayerPlay,
-    title: "Watch Anytime, Anywhere",
-    description:
-      "Busy schedule? Different time zone? No problem. Catch up on live content whenever it suits you. Access your recordings through our built-in player or download them for offline viewing.",
-  },
-  {
-    icon: IconCloud,
-    title: "Securely Stored in the Cloud",
-    description:
-      "Your recorded streams are saved securely on our servers. No storage fees, no lost files, just reliable access to your favorite content whenever you need it.",
-  },
-  {
-    icon: IconDeviceTv,
-    title: "One Platform, Every Stream",
-    description:
-      "Whether you want to record TikTok streams, capture Twitch live broadcasts, or save content from other platforms, our stream recording service has you covered.",
-  },
-];
+const featureIcons = [IconUsers, IconPlayerPlay, IconCloud, IconDeviceTv];
+const featureKeys = ["follow", "watch", "cloud", "platform"] as const;
 
 interface PageProps {
   params: Promise<{
@@ -55,6 +32,7 @@ interface PageProps {
 
 export default async function Page({ params, children }: PageProps) {
   const { type } = await params;
+  const t = await getTranslations("creators");
 
   const platform = streamingPlatforms.find(
     (p) => p.name.toLowerCase() === type
@@ -63,6 +41,8 @@ export default async function Page({ params, children }: PageProps) {
     name: "",
     file: "creators.png",
   };
+
+  const platformName = platform.name || "All";
 
   return (
     <Container size="lg">
@@ -83,7 +63,7 @@ export default async function Page({ params, children }: PageProps) {
             paddingBottom: "0.1em",
           }}
         >
-          {platform.name} Creators
+          {t("hero.title", { platform: platformName })}
         </Title>
 
         <Text
@@ -92,8 +72,7 @@ export default async function Page({ params, children }: PageProps) {
           maw={600}
           style={{ color: "#94a3b8", lineHeight: 1.7 }}
         >
-          Never miss a {platform.name} stream again. We automatically record
-          your favorite creators so you can watch anytime.
+          {t("hero.subtitle", { platform: platformName })}
         </Text>
 
         <Flex gap={30} align="center" mt={20}>
@@ -124,7 +103,7 @@ export default async function Page({ params, children }: PageProps) {
             variant="gradient"
             gradient={{ from: "#6366f1", to: "#a855f7", deg: 135 }}
           >
-            How It Works
+            {t("features.badge")}
           </Badge>
           <Title
             order={2}
@@ -135,28 +114,27 @@ export default async function Page({ params, children }: PageProps) {
               color: "#f1f5f9",
             }}
           >
-            Record {platform.name} Streams Automatically
+            {t("features.title", { platform: platformName })}
           </Title>
           <Text
             ta="center"
             maw={500}
             style={{ color: "#94a3b8", lineHeight: 1.7 }}
           >
-            Our service runs 24/7 so you never miss a moment
+            {t("features.subtitle")}
           </Text>
         </Stack>
 
         <Flex gap={24} wrap="wrap" justify="center">
-          {features.map((feature, index) => {
-            const Icon = feature.icon;
+          {featureKeys.map((key, index) => {
+            const Icon = featureIcons[index];
             return (
               <Paper
-                key={index}
+                key={key}
                 p="xl"
                 radius="lg"
                 style={{
                   flex: "1 1 calc(50% - 12px)",
-
                   background: "rgba(255, 255, 255, 0.02)",
                   border: "1px solid rgba(255, 255, 255, 0.06)",
                 }}
@@ -183,13 +161,13 @@ export default async function Page({ params, children }: PageProps) {
                       mb={8}
                       style={{ color: "#f1f5f9", fontWeight: 600 }}
                     >
-                      {feature.title}
+                      {t(`features.items.${key}.title`)}
                     </Title>
                     <Text
                       size="sm"
                       style={{ color: "#94a3b8", lineHeight: 1.7 }}
                     >
-                      {feature.description}
+                      {t(`features.items.${key}.description`)}
                     </Text>
                   </div>
                 </Flex>
@@ -237,15 +215,14 @@ export default async function Page({ params, children }: PageProps) {
                 color: "#f1f5f9",
               }}
             >
-              Start Recording {platform.name} Today
+              {t("cta.title", { platform: platformName })}
             </Title>
             <Text
               size="lg"
               maw={500}
               style={{ color: "#94a3b8", lineHeight: 1.7 }}
             >
-              Join thousands of users who never miss their favorite{" "}
-              {platform.name} streams. Free to get started.
+              {t("cta.subtitle", { platform: platformName })}
             </Text>
             <Flex
               gap={16}
@@ -263,7 +240,7 @@ export default async function Page({ params, children }: PageProps) {
                 leftSection={<IconUserPlus size={20} />}
                 style={{ fontWeight: 600 }}
               >
-                Create Free Account
+                {t("cta.button")}
               </Button>
             </Flex>
           </Stack>
@@ -274,23 +251,23 @@ export default async function Page({ params, children }: PageProps) {
         <ReactMarkdown
           components={{
             h2: ({ children }) => (
-              <Title order={2} mb="sm">
+              <Title order={2} mb="sm" style={{ color: "#f1f5f9" }}>
                 {children}
               </Title>
             ),
             h3: ({ children }) => (
-              <Title order={4} mt="xl">
+              <Title order={4} mt="xl" style={{ color: "#f1f5f9" }}>
                 {children}
               </Title>
             ),
             p: ({ children }) => (
-              <Text mt="xs" c="dimmed">
+              <Text mt="xs" style={{ color: "#94a3b8" }}>
                 {children}
               </Text>
             ),
           }}
         >
-          -
+          {t(`about.${type}`)}
         </ReactMarkdown>
       </div>
     </Container>

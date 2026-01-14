@@ -1,0 +1,58 @@
+{
+  "meta": {
+    "all": {
+      "title": "All Streamers & Creators - LiveStreamRecorder",
+      "description": "Browse all streamers and creators we are recording. Follow your favorites and never miss a live stream from TikTok, Twitch, and more."
+    },
+    "tiktok": {
+      "title": "TikTok Streamers & Creators - LiveStreamRecorder",
+      "description": "Discover TikTok streamers and creators. Follow your favorites and we will automatically record their live streams so you never miss a moment."
+    },
+    "twitch": {
+      "title": "Twitch Streamers & Creators - LiveStreamRecorder",
+      "description": "Discover Twitch streamers and creators. Follow your favorites and we will automatically record their live streams so you never miss a moment."
+    }
+  },
+  "hero": {
+    "title": "{platform} Creators",
+    "subtitle": "Never miss a {platform} stream again. We automatically record your favorite creators so you can watch anytime."
+  },
+  "features": {
+    "badge": "How It Works",
+    "title": "Record {platform} Streams Automatically",
+    "subtitle": "Our service runs 24/7 so you never miss a moment",
+    "items": {
+      "follow": {
+        "title": "Follow Your Favorite Streamers",
+        "description": "Simply follow the creators you love, and we handle the rest. Our service works around the clock, recording streaming video in the background and making it available on-demand."
+      },
+      "watch": {
+        "title": "Watch Anytime, Anywhere",
+        "description": "Busy schedule? Different time zone? No problem. Catch up on live content whenever it suits you. Access your recordings through our built-in player or download them for offline viewing."
+      },
+      "cloud": {
+        "title": "Securely Stored in the Cloud",
+        "description": "Your recorded streams are saved securely on our servers. No storage fees, no lost files, just reliable access to your favorite content whenever you need it."
+      },
+      "platform": {
+        "title": "One Platform, Every Stream",
+        "description": "Whether you want to record TikTok streams, capture Twitch live broadcasts, or save content from other platforms, our stream recording service has you covered."
+      }
+    }
+  },
+  "cta": {
+    "title": "Start Recording {platform} Today",
+    "subtitle": "Join thousands of users who never miss their favorite {platform} streams. Free to get started.",
+    "button": "Create Free Account"
+  },
+  "empty": {
+    "title": "No creators yet",
+    "description": "Be the first to add a {platform} streamer!",
+    "button": "Get Started"
+  },
+  "about": {
+    "all": "## About Live Stream Recorder\n\nNever miss a moment from your favorite creators. Our cloud-based platform lets you capture live streams automatically so you can watch them on your own schedule.\n\n### Automatic Livestream Recording\n\nSimply follow the creators you love, and our cloud servers handle the rest. Stream recording happens automatically in the background — no software to install, no manual scheduling. Just follow a creator and their live streams are captured for your personal use.\n\n### Watch Anytime, Anywhere\n\nBusy schedule? Different time zone? No problem. With cloud-based recording of streaming video, you can catch up on live content whenever it suits you. Access your recordings through our built-in player or download them for offline viewing.\n\n### Securely Stored in the Cloud\n\nYour recorded streams are saved securely on our servers. No storage fees, no lost files — just reliable access to your favorite content whenever you need it. Capture video streams from multiple platforms, all organized and ready to watch.\n\n### Record TikTok, Twitch & More\n\nWhether you want to record TikTok live streams, record Twitch streams, or capture content from other platforms — our cloud-based service has you covered. Support for more platforms is continuously being added.\n\n### No Screen Recorder Needed\n\nUnlike a live stream screen recorder that requires your computer to stay on, our cloud service runs 24/7. No need for livestream screen recorder software or leaving your PC running. Streams are recorded even while you sleep.\n\n### Free to Get Started\n\nCreate an account and start recording your favorite streamers today. Upgrade to premium for higher quality recordings, more simultaneous follows, and faster downloads.",
+    "tiktok": "## About TikTok Live Stream Recording\n\nNever miss a TikTok Live again. Our cloud-based platform automatically captures TikTok live streams from your favorite creators so you can watch them on your own schedule.\n\n### Automatic TikTok Live Recording\n\nSimply follow the TikTok creators you love, and our cloud servers handle the rest. TikTok Live recording happens automatically in the background — no software to install, no manual scheduling. Just follow a creator and their TikTok live streams are captured for your personal use.\n\n### Watch TikTok Lives Anytime\n\nBusy schedule? Different time zone? No problem. With cloud-based TikTok recording, you can catch up on live content whenever it suits you. Access your TikTok recordings through our built-in player or download them for offline viewing.\n\n### TikTok Streams Securely Stored\n\nYour recorded TikTok streams are saved securely on our servers. No storage fees, no lost files — just reliable access to your favorite TikTok content whenever you need it.\n\n### No Screen Recorder Needed\n\nUnlike a TikTok screen recorder that requires your phone or computer to stay on, our cloud service runs 24/7. No need for screen recording software or leaving your device running. TikTok Lives are recorded even while you sleep.\n\n### Free to Get Started\n\nCreate an account and start recording your favorite TikTok streamers today. Upgrade to premium for higher quality recordings, more simultaneous follows, and faster downloads.",
+    "twitch": "## About Twitch Stream Recording\n\nNever miss a Twitch stream again. Our cloud-based platform automatically captures Twitch live streams from your favorite streamers so you can watch them on your own schedule.\n\n### Automatic Twitch VOD Recording\n\nSimply follow the Twitch streamers you love, and our cloud servers handle the rest. Twitch stream recording happens automatically in the background — no software to install, no manual scheduling. Just follow a streamer and their Twitch broadcasts are captured for your personal use.\n\n### Watch Twitch Streams Anytime\n\nBusy schedule? Different time zone? No problem. With cloud-based Twitch recording, you can catch up on live content whenever it suits you. Access your Twitch VODs through our built-in player or download them for offline viewing.\n\n### Twitch Streams Securely Stored\n\nYour recorded Twitch streams are saved securely on our servers. No storage fees, no lost files — just reliable access to your favorite Twitch content whenever you need it. Never worry about VODs expiring or being deleted.\n\n### No Screen Recorder Needed\n\nUnlike a Twitch screen recorder that requires your computer to stay on, our cloud service runs 24/7. No need for OBS or screen recording software. Twitch streams are recorded even while you sleep.\n\n### Free to Get Started\n\nCreate an account and start recording your favorite Twitch streamers today. Upgrade to premium for higher quality recordings, more simultaneous follows, and faster downloads."
+  }
+}
