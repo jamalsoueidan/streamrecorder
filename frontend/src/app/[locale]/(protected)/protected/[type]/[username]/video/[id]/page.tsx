@@ -48,7 +48,10 @@ export default function VideoPage() {
 
   const handleVisibleChange = useCallback(
     (recording: Recording) => {
-      const basePath = `/${params.type}/${params.username}/video/${recording.documentId}`;
+      const basePath = `/${params.type}/${decodeURIComponent(
+        params.username
+      )}/video/${recording.documentId}`;
+
       const search = searchParams.toString();
       const url = search ? `${basePath}?${search}` : basePath;
       window.history.replaceState(null, "", url);
@@ -57,12 +60,12 @@ export default function VideoPage() {
   );
 
   const handleNotFound = () => {
-    router.replace(`/${params.type}/${params.username}`);
+    router.replace(`/${params.type}/${decodeURIComponent(params.username)}`);
   };
 
   const handleClose = () => {
     // Go back to profile page
-    router.push(`/${params.type}/${params.username}`);
+    router.push(`/${params.type}/${decodeURIComponent(params.username)}`);
   };
 
   if (isLoading) {
