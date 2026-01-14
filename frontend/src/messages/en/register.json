@@ -1,4 +1,8 @@
 {
+  "meta": {
+    "title": "Create Account",
+    "description": "Create a free LiveStreamRecorder account to automatically record live streams from your favorite creators."
+  },
   "title": "Create an account",
   "subtitle": "Join us and start exploring",
   "username": {

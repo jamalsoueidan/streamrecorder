@@ -1,4 +1,8 @@
 {
+  "meta": {
+    "title": "Sign In",
+    "description": "Sign in to your LiveStreamRecorder account to access your recordings and followed streamers."
+  },
   "title": "Welcome back",
   "subtitle": "Sign in to continue to your account",
   "email": {

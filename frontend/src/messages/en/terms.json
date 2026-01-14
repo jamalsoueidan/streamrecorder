@@ -1,4 +1,8 @@
 {
+  "meta": {
+    "title": "Terms & Conditions",
+    "description": "Read the terms and conditions for using LiveStreamRecorder services."
+  },
   "header": {
     "title": "Terms & Conditions",
     "lastUpdated": "Last updated: {date}"

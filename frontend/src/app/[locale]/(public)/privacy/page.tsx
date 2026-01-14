@@ -16,10 +16,19 @@ import {
   IconUsers,
   IconWorld,
 } from "@tabler/icons-react";
+import { useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
 
-export default async function PrivacyPolicy() {
+export async function generateMetadata() {
   const t = await getTranslations("privacy");
+  return {
+    title: t("meta.title"),
+    description: t("meta.description"),
+  };
+}
+
+export default function PrivacyPolicy() {
+  const t = useTranslations("privacy");
   const lastUpdated = "January 13, 2026";
 
   return (

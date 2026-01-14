@@ -1,4 +1,8 @@
 {
+  "meta": {
+    "title": "FAQ",
+    "description": "Find answers to frequently asked questions about LiveStreamRecorder, our features, pricing, and how to use the service."
+  },
   "title": "Frequently Asked Questions",
   "subtitle": "Find answers to common questions about our service.",
   "faqs": [

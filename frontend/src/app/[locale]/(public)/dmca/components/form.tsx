@@ -13,10 +13,12 @@ import {
   Title,
 } from "@mantine/core";
 import { IconAlertCircle, IconRefresh } from "@tabler/icons-react";
+import { useTranslations } from "next-intl";
 import { useState } from "react";
 import { Submitted } from "./submitted";
 
 export function DMCAForm() {
+  const t = useTranslations("dmca.form");
   const [formData, setFormData] = useState({
     content: "",
     copyrightType: "",
@@ -91,11 +93,10 @@ export function DMCAForm() {
       }}
     >
       <Title order={3} mb="md" style={{ color: "#f1f5f9", fontWeight: 600 }}>
-        Notification of Claimed Infringement
+        {t("title")}
       </Title>
       <Text style={{ color: "#64748b" }} mb="lg">
-        Please use this form to request the removal of recordings under the
-        DMCA.
+        {t("description")}
       </Text>
 
       <form onSubmit={handleSubmit}>
@@ -119,9 +120,9 @@ export function DMCAForm() {
           )}
 
           <TextInput
-            label="The following content"
-            description="Provide the URL(s) or description of the infringing content"
-            placeholder="https://example.com/recording/..."
+            label={t("content.label")}
+            description={t("content.description")}
+            placeholder={t("content.placeholder")}
             required
             value={formData.content}
             onChange={(e) =>
@@ -139,7 +140,7 @@ export function DMCAForm() {
           />
 
           <Radio.Group
-            label="Please choose one"
+            label={t("copyrightType.label")}
             required
             value={formData.copyrightType}
             onChange={(value) =>
@@ -152,14 +153,14 @@ export function DMCAForm() {
             <Stack gap="xs" mt="xs">
               <Radio
                 value="personal"
-                label="Infringes on my personal copyright"
+                label={t("copyrightType.personal")}
                 styles={{
                   label: { color: "#94a3b8" },
                 }}
               />
               <Radio
                 value="authorized"
-                label="Infringes on the copyright of someone I am authorized to represent"
+                label={t("copyrightType.authorized")}
                 styles={{
                   label: { color: "#94a3b8" },
                 }}
@@ -168,9 +169,9 @@ export function DMCAForm() {
           </Radio.Group>
 
           <TextInput
-            label="Your email address"
-            description="We will use this to respond to your request"
-            placeholder="you@example.com"
+            label={t("email.label")}
+            description={t("email.description")}
+            placeholder={t("email.placeholder")}
             type="email"
             required
             value={formData.email}
@@ -197,8 +198,7 @@ export function DMCAForm() {
 
           <div>
             <Text fw={500} mb="xs" style={{ color: "#f1f5f9" }}>
-              By checking the following boxes, I state UNDER PENALTY OF PERJURY
-              that:
+              {t("perjury.title")}
             </Text>
             <Paper
               p="md"
@@ -212,14 +212,14 @@ export function DMCAForm() {
               <Flex gap={8} align="center">
                 <IconAlertCircle size={18} style={{ color: "#f97316" }} />
                 <Text size="sm" style={{ color: "#fdba74" }}>
-                  Please read each statement carefully before checking.
+                  {t("perjury.warning")}
                 </Text>
               </Flex>
             </Paper>
 
             <Stack gap="md">
               <Checkbox
-                label="I hereby state that I have a good faith belief that the sharing of copyrighted material at the location above is not authorized by the copyright owner, its agent, or the law (e.g., as a fair use)."
+                label={t("perjury.goodFaith")}
                 checked={formData.goodFaith}
                 onChange={(e) =>
                   setFormData({
@@ -232,7 +232,7 @@ export function DMCAForm() {
                 }}
               />
               <Checkbox
-                label="I hereby state that the information in this Notice is accurate and, under penalty of perjury, that I am the owner, or authorized to act on behalf of, the owner, of the copyright or of an exclusive right under the copyright that is allegedly infringed."
+                label={t("perjury.accurate")}
                 checked={formData.accurate}
                 onChange={(e) =>
                   setFormData({
@@ -245,7 +245,7 @@ export function DMCAForm() {
                 }}
               />
               <Checkbox
-                label="I acknowledge that under Section 512(f) any person who knowingly materially misrepresents that material or activity is infringing may be subject to liability for damages."
+                label={t("perjury.acknowledge")}
                 checked={formData.acknowledge}
                 onChange={(e) =>
                   setFormData({
@@ -268,9 +268,9 @@ export function DMCAForm() {
           />
 
           <TextInput
-            label="Digital Signature"
-            description="Typing your full name in this box will act as your digital signature"
-            placeholder="Your full legal name"
+            label={t("signature.label")}
+            description={t("signature.description")}
+            placeholder={t("signature.placeholder")}
             required
             value={formData.fullName}
             onChange={(e) =>
@@ -290,13 +290,15 @@ export function DMCAForm() {
           <div>
             <Flex gap="xs" align="flex-end">
               <TextInput
-                label="Verification"
-                description={`What is ${captcha.question}?`}
-                placeholder="Your answer"
+                label={t("captcha.label")}
+                description={t("captcha.description", {
+                  question: captcha.question,
+                })}
+                placeholder={t("captcha.placeholder")}
                 required
                 value={captchaInput}
                 onChange={(e) => setCaptchaInput(e.target.value)}
-                error={captchaError && "Wrong answer, try again"}
+                error={captchaError && t("captcha.error")}
                 style={{ flex: 1 }}
                 styles={{
                   label: { color: "#f1f5f9" },
@@ -333,7 +335,7 @@ export function DMCAForm() {
             gradient={{ from: "#6366f1", to: "#a855f7", deg: 135 }}
             style={{ fontWeight: 600 }}
           >
-            Submit DMCA Request
+            {t("submit")}
           </Button>
         </Stack>
       </form>

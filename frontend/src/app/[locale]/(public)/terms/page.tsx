@@ -18,6 +18,15 @@ import {
   IconWorld,
 } from "@tabler/icons-react";
 import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
+
+export async function generateMetadata() {
+  const t = await getTranslations("terms");
+  return {
+    title: t("meta.title"),
+    description: t("meta.description"),
+  };
+}
 
 export default function TermsAndConditions() {
   const t = useTranslations("terms");
