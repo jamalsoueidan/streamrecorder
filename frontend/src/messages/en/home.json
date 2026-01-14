@@ -1,0 +1,38 @@
+{
+  "meta": {
+    "title": "Live Stream Recorder | Automatically Record TikTok, Twitch & More",
+    "titleTemplate": "%s | Live Stream Recorder",
+    "description": "Never miss a live stream again. Your favorite streamers are automatically recorded so you can watch later or download anytime. Free stream recording for TikTok, Twitch, YouTube, Kick & more.",
+    "keywords": "live stream recorder, stream recording, livestream recording, capture live stream, record twitch stream, record tiktok live, youtube live stream capture, twitch vod download, tiktok live recording",
+    "ogTitle": "Live Stream Recorder | Capture Live Streams Automatically",
+    "ogDescription": "Follow your favorite streamers and never miss a live stream. Automatic stream recording with free cloud storage. Watch or download anytime.",
+    "ogAlt": "Live Stream Recorder - Record TikTok, Twitch, YouTube & More",
+    "twitterDescription": "Live streams from your favorite creators are recorded and saved automatically. Free to start, watch or download anytime."
+  },
+  "hero": {
+    "title": "Live Stream Recorder",
+    "subtitle": "Watch or download anytime.",
+    "description": "Cloud-based stream recording for TikTok, Twitch, Kick, YouTube, AfreecaTV, and Pandalive. Add your favorite creators and live streams are automatically captured and saved for you to watch anytime."
+  },
+  "feature": {
+    "title": "All Your Livestream Recordings",
+    "subtitle": "One place",
+    "description": "Add streamers from any platform. Live streams are recorded automatically and VODs are saved for you. Come back whenever you are ready to watch or download."
+  },
+  "latestRecordings": {
+    "title": "Latest Recordings",
+    "subtitle": "Streams recorded in the last 24 hours",
+    "viewAll": "View All"
+  },
+  "featuredCreators": {
+    "title": "Featured Creators",
+    "subtitle": "New creators on the platform",
+    "browseAll": "Browse All"
+  },
+  "cta": {
+    "title": "Never Miss a Live Stream Again",
+    "description": "Sign up for free and start recording your favorite creators today.",
+    "button": "Get Started Free"
+  },
+  "about": "## About Live Stream Recorder\n\nNever miss a moment from your favorite creators. Our cloud-based platform lets you capture live streams automatically so you can watch them on your own schedule.\n\n### Automatic Livestream Recording\n\nSimply follow the creators you love, and our cloud servers handle the rest. Stream recording happens automatically in the background — no software to install, no manual scheduling. Just follow a creator and their live streams are captured for your personal use.\n\n### Watch Anytime, Anywhere\n\nBusy schedule? Different time zone? No problem. With cloud-based recording of streaming video, you can catch up on live content whenever it suits you. Access your recordings through our built-in player or download them for offline viewing.\n\n### Securely Stored in the Cloud\n\nYour recorded streams are saved securely on our servers. No storage fees, no lost files — just reliable access to your favorite content whenever you need it. Capture video streams from multiple platforms, all organized and ready to watch.\n\n### Record TikTok, Twitch, YouTube & More\n\nWhether you want to record TikTok live streams, record Twitch streams, or use YouTube live stream capture — our cloud-based service has you covered. Record Kick streams, AfreecaTV, and Pandalive too. Support for more platforms is continuously being added.\n\n### No Screen Recorder Needed\n\nUnlike a live stream screen recorder that requires your computer to stay on, our cloud service runs 24/7. No need for livestream screen recorder software or leaving your PC running. Streams are recorded even while you sleep.\n\n### Free to Get Started\n\nCreate an account and start recording your favorite streamers today. Upgrade to premium for higher quality recordings, more simultaneous follows, and faster downloads."
+}

@@ -1,11 +1,39 @@
-import publicApi from "@/lib/public-api";
-import { Container, Flex, Stack, Text, Title } from "@mantine/core";
-import { IconQuestionMark } from "@tabler/icons-react";
-import { Questions } from "./components/questions";
+"use client";
 
-export default async function FAQPage() {
-  const response = await publicApi.faq.getFaqs({ sort: "order:asc" });
-  const faqs = response.data.data || [];
+import { Container, Flex, Paper, Stack, Text, Title } from "@mantine/core";
+import { IconChevronDown, IconQuestionMark } from "@tabler/icons-react";
+import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
+import { useState } from "react";
+
+export async function generateMetadata() {
+  const t = await getTranslations("faq");
+  return {
+    title: t("meta.title"),
+    description: t("meta.description"),
+  };
+}
+
+export default function FAQPage() {
+  const t = useTranslations("faq");
+
+  const faqs = [
+    { question: t("faqs.0.question"), answer: t("faqs.0.answer") },
+    { question: t("faqs.1.question"), answer: t("faqs.1.answer") },
+    { question: t("faqs.2.question"), answer: t("faqs.2.answer") },
+    { question: t("faqs.3.question"), answer: t("faqs.3.answer") },
+    { question: t("faqs.4.question"), answer: t("faqs.4.answer") },
+    { question: t("faqs.5.question"), answer: t("faqs.5.answer") },
+    { question: t("faqs.6.question"), answer: t("faqs.6.answer") },
+    { question: t("faqs.7.question"), answer: t("faqs.7.answer") },
+    { question: t("faqs.8.question"), answer: t("faqs.8.answer") },
+    { question: t("faqs.9.question"), answer: t("faqs.9.answer") },
+    { question: t("faqs.10.question"), answer: t("faqs.10.answer") },
+    { question: t("faqs.11.question"), answer: t("faqs.11.answer") },
+    { question: t("faqs.12.question"), answer: t("faqs.12.answer") },
+    { question: t("faqs.13.question"), answer: t("faqs.13.answer") },
+    { question: t("faqs.14.question"), answer: t("faqs.14.answer") },
+  ];
 
   const midpoint = Math.ceil(faqs.length / 2);
   const leftColumn = faqs.slice(0, midpoint);
@@ -45,16 +73,82 @@ export default async function FAQPage() {
                 paddingBottom: "0.1em",
               }}
             >
-              Frequently Asked Questions
+              {t("title")}
             </Title>
           </Flex>
           <Text size="md" style={{ color: "#64748b" }}>
-            Find answers to common questions about our service.
+            {t("subtitle")}
           </Text>
         </Stack>
 
-        <Questions leftColumn={leftColumn} rightColumn={rightColumn} />
+        {/* Questions */}
+        <Flex gap={24} direction={{ base: "column", md: "row" }}>
+          <Stack gap={16} style={{ flex: 1 }}>
+            {leftColumn.map((faq, index) => (
+              <FAQItem
+                key={index}
+                question={faq.question}
+                answer={faq.answer}
+              />
+            ))}
+          </Stack>
+          <Stack gap={16} style={{ flex: 1 }}>
+            {rightColumn.map((faq, index) => (
+              <FAQItem
+                key={index}
+                question={faq.question}
+                answer={faq.answer}
+              />
+            ))}
+          </Stack>
+        </Flex>
       </Stack>
     </Container>
+  );
+}
+
+function FAQItem({ question, answer }: { question: string; answer: string }) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <Paper
+      p="md"
+      radius="lg"
+      style={{
+        background: "rgba(255, 255, 255, 0.02)",
+        border: "1px solid rgba(255, 255, 255, 0.06)",
+        cursor: "pointer",
+      }}
+      onClick={() => setIsOpen(!isOpen)}
+    >
+      <Flex justify="space-between" align="center" gap="md">
+        <Text fw={500} style={{ color: "#f1f5f9" }}>
+          {question}
+        </Text>
+        <div
+          style={{
+            color: "#64748b",
+            transition: "transform 0.2s ease",
+            transform: isOpen ? "rotate(180deg)" : "rotate(0deg)",
+            flexShrink: 0,
+          }}
+        >
+          <IconChevronDown size={20} />
+        </div>
+      </Flex>
+      {isOpen && (
+        <Text
+          mt="md"
+          style={{
+            color: "#94a3b8",
+            lineHeight: 1.7,
+            borderTop: "1px solid rgba(255, 255, 255, 0.06)",
+            paddingTop: 12,
+          }}
+        >
+          {answer}
+        </Text>
+      )}
+    </Paper>
   );
 }

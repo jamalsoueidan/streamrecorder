@@ -1,0 +1,12 @@
+{
+  "meta": {
+    "title": "News & Updates",
+    "description": "Stay informed about the latest announcements, features, and important updates from LiveStreamRecorder."
+  },
+  "title": "News and Updates",
+  "subtitle": "Stay informed about the latest announcements, features, and important updates.",
+  "empty": {
+    "title": "No news yet",
+    "description": "Check back soon for updates."
+  }
+}

@@ -1,3 +1,4 @@
+import { streamingPlatforms } from "@/app/lib/streaming-platforms";
 import {
   Button,
   Container,
@@ -9,7 +10,6 @@ import {
   Text,
   Title,
 } from "@mantine/core";
-import { streamingPlatforms } from "../../page";
 
 interface PageProps {
   params: Promise<{

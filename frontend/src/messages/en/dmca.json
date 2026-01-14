@@ -1,0 +1,53 @@
+{
+  "meta": {
+    "title": "DMCA Policy",
+    "description": "Submit a DMCA takedown request for content that infringes on your copyright."
+  },
+  "header": {
+    "title": "Digital Millennium Copyright Act",
+    "subtitle": "DMCA Policy"
+  },
+  "footer": "We respond to all valid DMCA requests. Abuse of this process may result in legal consequences.",
+  "form": {
+    "title": "Notification of Claimed Infringement",
+    "description": "Please use this form to request the removal of recordings under the DMCA.",
+    "content": {
+      "label": "The following content",
+      "description": "Provide the URL(s) or description of the infringing content",
+      "placeholder": "https://example.com/recording/..."
+    },
+    "copyrightType": {
+      "label": "Please choose one",
+      "personal": "Infringes on my personal copyright",
+      "authorized": "Infringes on the copyright of someone I am authorized to represent"
+    },
+    "email": {
+      "label": "Your email address",
+      "description": "We will use this to respond to your request",
+      "placeholder": "you@example.com"
+    },
+    "perjury": {
+      "title": "By checking the following boxes, I state UNDER PENALTY OF PERJURY that:",
+      "warning": "Please read each statement carefully before checking.",
+      "goodFaith": "I hereby state that I have a good faith belief that the sharing of copyrighted material at the location above is not authorized by the copyright owner, its agent, or the law (e.g., as a fair use).",
+      "accurate": "I hereby state that the information in this Notice is accurate and, under penalty of perjury, that I am the owner, or authorized to act on behalf of, the owner, of the copyright or of an exclusive right under the copyright that is allegedly infringed.",
+      "acknowledge": "I acknowledge that under Section 512(f) any person who knowingly materially misrepresents that material or activity is infringing may be subject to liability for damages."
+    },
+    "signature": {
+      "label": "Digital Signature",
+      "description": "Typing your full name in this box will act as your digital signature",
+      "placeholder": "Your full legal name"
+    },
+    "captcha": {
+      "label": "Verification",
+      "description": "What is {question}?",
+      "placeholder": "Your answer",
+      "error": "Wrong answer, try again"
+    },
+    "submit": "Submit DMCA Request"
+  },
+  "submitted": {
+    "title": "DMCA Request Submitted",
+    "description": "We have received your DMCA takedown request. We will review it and respond to the email address you provided."
+  }
+}

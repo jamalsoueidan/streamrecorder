@@ -1,16 +1,11 @@
 import createIntlMiddleware from "next-intl/middleware";
 import type { NextRequest } from "next/server";
 import { NextResponse } from "next/server";
+
+import { streamingPlatforms } from "./app/lib/streaming-platforms";
 import { routing } from "./i18n/routing";
 
-const PLATFORMS = [
-  "tiktok",
-  "twitch",
-  "youtube",
-  "kick",
-  "afreecatv",
-  "pandalive",
-];
+const PLATFORMS = streamingPlatforms.map((p) => p.name.toLowerCase());
 
 // Get locales from your config
 const locales = routing.locales; // e.g. ["en", "ar", "fr", "es"]

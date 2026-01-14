@@ -1,4 +1,4 @@
-import { streamingPlatforms } from "@/app/[locale]/(public)/page";
+import { streamingPlatforms } from "@/app/lib/streaming-platforms";
 
 export const revalidate = 86400;
 

@@ -1,3 +1,4 @@
+import { streamingPlatforms } from "@/app/lib/streaming-platforms";
 import publicApi from "@/lib/public-api";
 import {
   Anchor,
@@ -10,22 +11,16 @@ import {
   Stack,
   Text,
   Title,
-  Tooltip,
 } from "@mantine/core";
 import { IconArrowRight } from "@tabler/icons-react";
+import { getTranslations } from "next-intl/server";
+import ReactMarkdown from "react-markdown";
 import { CreatorsSimpleGrid } from "./creators/components/creators-simple-grid";
 import { RecordingsSimpleGrid } from "./recordings/components/recordings-simple-grid";
 
-export const streamingPlatforms = [
-  { color: "#ff0050", name: "TikTok", file: "/tiktok.svg" },
-  { color: "#9146ff", name: "Twitch", file: "/twitch.svg" },
-  { color: "#53fc18", name: "Kick", file: "/kick.svg" },
-  { color: "#ff0000", name: "YouTube", file: "/youtube.svg" },
-  { color: "#ff424d", name: "AfreecaTV", file: "/afreecatv.svg" },
-  { color: "#1da1f2", name: "Pandalive", file: "/pandalive.png" },
-];
-
 export default async function LandingPage() {
+  const t = await getTranslations("home");
+
   const {
     data: { data: followers },
   } = await publicApi.follower.getFollowers({
@@ -73,7 +68,7 @@ export default async function LandingPage() {
             style={{
               fontSize: "clamp(2.5rem, 6vw, 4.5rem)",
               fontWeight: 600,
-              lineHeight: 1,
+              lineHeight: 1.3,
               letterSpacing: "-0.03em",
               background:
                 "linear-gradient(135deg, #ffffff 0%, #e2e8f0 50%, #94a3b8 100%)",
@@ -82,7 +77,7 @@ export default async function LandingPage() {
               maxWidth: "800px",
             }}
           >
-            Live Stream Recorder
+            {t("hero.title")}
           </Title>
           <Title
             order={2}
@@ -91,13 +86,14 @@ export default async function LandingPage() {
               fontSize: "clamp(2.5rem, 6vw, 3.5rem)",
               fontWeight: 600,
               lineHeight: 1.3,
+              marginTop: "-0.3em",
               letterSpacing: "-0.03em",
               background: "linear-gradient(135deg, #6366f1, #a855f7)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
             }}
           >
-            Watch or download anytime.
+            {t("hero.subtitle")}
           </Title>
         </div>
 
@@ -112,18 +108,14 @@ export default async function LandingPage() {
             color: "#94a3b8",
           }}
         >
-          {
-            "Cloud-based stream recording for TikTok, Twitch, Kick, YouTube, AfreecaTV, and Pandalive. Add your favorite creators and live streams are automatically captured and saved for you to watch anytime."
-          }
+          {t("hero.description")}
         </Text>
 
         <Flex gap={30} align="center" mt={20}>
           {streamingPlatforms.map((p) => (
-            <Tooltip key={p.name} label={p.name} withArrow>
-              <Anchor href={`/recordings/${p.name.toLowerCase()}`}>
-                <Image alt={p.name} src={p.file} maw={120} />
-              </Anchor>
-            </Tooltip>
+            <Anchor key={p.name} href={`/recordings/${p.name.toLowerCase()}`}>
+              <Image alt={p.name} src={p.file} maw={120} />
+            </Anchor>
           ))}
         </Flex>
       </Stack>
@@ -138,37 +130,29 @@ export default async function LandingPage() {
                   style={{
                     fontSize: "clamp(1.75rem, 4vw, 2.3rem)",
                     fontWeight: 700,
-                    lineHeight: 1.2,
+                    lineHeight: 1.3,
                     color: "#f1f5f9",
                   }}
                 >
-                  All Your Livestream Recordings
+                  {t("feature.title")}
                 </Title>
                 <Title
                   order={2}
                   style={{
                     fontSize: "clamp(1.75rem, 4vw, 2.3rem)",
                     fontWeight: 700,
-                    lineHeight: 1.2,
+                    lineHeight: 1.4,
                     background: "linear-gradient(135deg, #6366f1, #a855f7)",
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
                   }}
                 >
-                  One place
+                  {t("feature.subtitle")}
                 </Title>
               </div>
 
-              <Text
-                size="lg"
-                style={{
-                  color: "#94a3b8",
-                  lineHeight: 1.8,
-                }}
-              >
-                Add streamers from any platform. Live streams are recorded
-                automatically and VODs are saved for you. Come back whenever you
-                are ready to watch or download.
+              <Text size="lg" style={{ color: "#94a3b8", lineHeight: 1.8 }}>
+                {t("feature.description")}
               </Text>
             </Stack>
           </div>
@@ -187,9 +171,7 @@ export default async function LandingPage() {
                 src="/desktop.png"
                 alt="Platform dashboard preview"
                 radius="lg"
-                style={{
-                  boxShadow: "0 8px 32px rgba(0, 0, 0, 0.7)",
-                }}
+                style={{ boxShadow: "0 8px 32px rgba(0, 0, 0, 0.7)" }}
               />
             </Paper>
           </div>
@@ -207,10 +189,10 @@ export default async function LandingPage() {
                 color: "#f1f5f9",
               }}
             >
-              Latest Recordings
+              {t("latestRecordings.title")}
             </Title>
             <Text size="md" c="dimmed">
-              Streams recorded in the last 24 hours
+              {t("latestRecordings.subtitle")}
             </Text>
           </Stack>
           <Button
@@ -221,7 +203,7 @@ export default async function LandingPage() {
             style={{ color: "#94a3b8" }}
             href="/recordings"
           >
-            View All
+            {t("latestRecordings.viewAll")}
           </Button>
         </Flex>
 
@@ -239,10 +221,10 @@ export default async function LandingPage() {
                 color: "#f1f5f9",
               }}
             >
-              Featured Creators
+              {t("featuredCreators.title")}
             </Title>
             <Text size="md" c="dimmed">
-              New creators on the platform
+              {t("featuredCreators.subtitle")}
             </Text>
           </Stack>
           <Button
@@ -253,7 +235,7 @@ export default async function LandingPage() {
             rightSection={<IconArrowRight size={16} />}
             style={{ color: "#94a3b8" }}
           >
-            Browse All
+            {t("featuredCreators.browseAll")}
           </Button>
         </Flex>
 
@@ -299,14 +281,14 @@ export default async function LandingPage() {
                 color: "#f1f5f9",
               }}
             >
-              Never Miss a Live Stream Again
+              {t("cta.title")}
             </Title>
             <Text
               size="lg"
               maw={500}
               style={{ color: "#94a3b8", lineHeight: 1.7 }}
             >
-              Sign up for free and start recording your favorite creators today.
+              {t("cta.description")}
             </Text>
             <Group gap={16} mt={16}>
               <Button
@@ -317,84 +299,35 @@ export default async function LandingPage() {
                 style={{ fontWeight: 600 }}
                 href="/register"
               >
-                Get Started Free
+                {t("cta.button")}
               </Button>
             </Group>
           </Stack>
         </Paper>
       </div>
 
-      <div style={{ marginTop: "100px" }}>
-        <Stack gap="xl">
-          <div>
-            <Title order={2}>About Live Stream Recorder</Title>
-            <Text c="dimmed" size="lg" mt="sm">
-              Never miss a moment from your favorite creators. Our cloud-based
-              platform lets you capture live streams automatically so you can
-              watch them on your own schedule.
-            </Text>
-          </div>
-
-          <div>
-            <Title order={4}>Automatic Livestream Recording</Title>
-            <Text mt="xs">
-              Simply follow the creators you love, and our cloud servers handle
-              the rest. Stream recording happens automatically in the background
-              — no software to install, no manual scheduling. Just follow a
-              creator and their live streams are captured for your personal use.
-            </Text>
-          </div>
-
-          <div>
-            <Title order={4}>Watch Anytime, Anywhere</Title>
-            <Text mt="xs">
-              Busy schedule? Different time zone? No problem. With cloud-based
-              recording of streaming video, you can catch up on live content
-              whenever it suits you. Access your recordings through our built-in
-              player or download them for offline viewing.
-            </Text>
-          </div>
-
-          <div>
-            <Title order={4}>Securely Stored in the Cloud</Title>
-            <Text mt="xs">
-              Your recorded streams are saved securely on our servers. No
-              storage fees, no lost files — just reliable access to your
-              favorite content whenever you need it. Capture video streams from
-              multiple platforms, all organized and ready to watch.
-            </Text>
-          </div>
-
-          <div>
-            <Title order={4}>Record TikTok, Twitch, YouTube & More</Title>
-            <Text mt="xs">
-              Whether you want to record TikTok live streams, record Twitch
-              streams, or use YouTube live stream capture — our cloud-based
-              service has you covered. Record Kick streams, AfreecaTV, and
-              Pandalive too. Support for more platforms is continuously being
-              added.
-            </Text>
-          </div>
-
-          <div>
-            <Title order={4}>No Screen Recorder Needed</Title>
-            <Text mt="xs">
-              Unlike a live stream screen recorder that requires your computer
-              to stay on, our cloud service runs 24/7. No need for livestream
-              screen recorder software or leaving your PC running. Streams are
-              recorded even while you sleep.
-            </Text>
-          </div>
-
-          <div>
-            <Title order={4}>Free to Get Started</Title>
-            <Text mt="xs">
-              Create an account and start recording your favorite streamers
-              today. Upgrade to premium for higher quality recordings, more
-              simultaneous follows, and faster downloads.
-            </Text>
-          </div>
-        </Stack>
+      <div style={{ marginTop: 100 }}>
+        <ReactMarkdown
+          components={{
+            h2: ({ children }) => (
+              <Title order={2} mb="sm">
+                {children}
+              </Title>
+            ),
+            h3: ({ children }) => (
+              <Title order={4} mt="xl">
+                {children}
+              </Title>
+            ),
+            p: ({ children }) => (
+              <Text mt="xs" c="dimmed">
+                {children}
+              </Text>
+            ),
+          }}
+        >
+          {t("about")}
+        </ReactMarkdown>
       </div>
     </Container>
   );

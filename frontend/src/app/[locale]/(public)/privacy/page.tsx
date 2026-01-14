@@ -16,8 +16,19 @@ import {
   IconUsers,
   IconWorld,
 } from "@tabler/icons-react";
+import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
+
+export async function generateMetadata() {
+  const t = await getTranslations("privacy");
+  return {
+    title: t("meta.title"),
+    description: t("meta.description"),
+  };
+}
 
 export default function PrivacyPolicy() {
+  const t = useTranslations("privacy");
   const lastUpdated = "January 13, 2026";
 
   return (
@@ -40,10 +51,10 @@ export default function PrivacyPolicy() {
               paddingBottom: "0.1em",
             }}
           >
-            Privacy Policy
+            {t("header.title")}
           </Title>
           <Text size="sm" style={{ color: "#64748b" }}>
-            Last updated: {lastUpdated}
+            {t("header.lastUpdated", { date: lastUpdated })}
           </Text>
         </Stack>
 
@@ -72,13 +83,11 @@ export default function PrivacyPolicy() {
               <IconLock size={20} />
             </div>
             <Title order={3} style={{ color: "#f1f5f9", fontWeight: 600 }}>
-              Overview
+              {t("overview.title")}
             </Title>
           </Flex>
           <Text style={{ color: "#94a3b8", lineHeight: 1.7 }}>
-            We keep things simple. We collect minimal data and do not track you.
-            No invasive analytics, no selling data to third parties. Your
-            privacy matters to us.
+            {t("overview.content")}
           </Text>
         </Paper>
 
@@ -107,16 +116,14 @@ export default function PrivacyPolicy() {
               <IconFileText size={20} />
             </div>
             <Title order={3} style={{ color: "#f1f5f9", fontWeight: 600 }}>
-              Data Controller
+              {t("dataController.title")}
             </Title>
           </Flex>
           <Text style={{ color: "#94a3b8", lineHeight: 1.7 }} mb="md">
-            LiveStreamRecorder.com is the data controller responsible for your
-            personal data. If you have any questions about this Privacy Policy
-            or our data practices, you can contact us at:
+            {t("dataController.content")}
           </Text>
           <Text style={{ color: "#f1f5f9", lineHeight: 1.7 }} fw={500}>
-            contact@livestreamrecorder.com
+            {t("dataController.email")}
           </Text>
         </Paper>
 
@@ -145,60 +152,60 @@ export default function PrivacyPolicy() {
               <IconDatabase size={20} />
             </div>
             <Title order={3} style={{ color: "#f1f5f9", fontWeight: 600 }}>
-              What We Collect
+              {t("whatWeCollect.title")}
             </Title>
           </Flex>
           <Text style={{ color: "#94a3b8", lineHeight: 1.7 }} mb="md">
-            When you create an account, we store:
+            {t("whatWeCollect.intro")}
           </Text>
           <Stack gap={8} ml={16}>
             <Text style={{ color: "#94a3b8" }}>
               •{" "}
               <Text component="span" fw={500} style={{ color: "#f1f5f9" }}>
-                Email address
+                {t("whatWeCollect.items.email")}
               </Text>
               <Text component="span" style={{ color: "#64748b" }}>
                 {" "}
-                — to let you log in and recover your account
+                — {t("whatWeCollect.items.emailDesc")}
               </Text>
             </Text>
             <Text style={{ color: "#94a3b8" }}>
               •{" "}
               <Text component="span" fw={500} style={{ color: "#f1f5f9" }}>
-                Username
+                {t("whatWeCollect.items.username")}
               </Text>
               <Text component="span" style={{ color: "#64748b" }}>
                 {" "}
-                — to identify your account
+                — {t("whatWeCollect.items.usernameDesc")}
               </Text>
             </Text>
             <Text style={{ color: "#94a3b8" }}>
               •{" "}
               <Text component="span" fw={500} style={{ color: "#f1f5f9" }}>
-                Last login date
+                {t("whatWeCollect.items.lastLogin")}
               </Text>
               <Text component="span" style={{ color: "#64748b" }}>
                 {" "}
-                — for basic account management
+                — {t("whatWeCollect.items.lastLoginDesc")}
               </Text>
             </Text>
             <Text style={{ color: "#94a3b8" }}>
               •{" "}
               <Text component="span" fw={500} style={{ color: "#f1f5f9" }}>
-                Streamers you follow
+                {t("whatWeCollect.items.streamers")}
               </Text>
               <Text component="span" style={{ color: "#64748b" }}>
                 {" "}
-                — to show you content from streamers you are interested in
+                — {t("whatWeCollect.items.streamersDesc")}
               </Text>
             </Text>
           </Stack>
           <Text mt="md" style={{ color: "#64748b" }} size="sm">
-            That is it. Nothing else.
+            {t("whatWeCollect.footer")}
           </Text>
         </Paper>
 
-        {/* Legal Basis for Processing (GDPR) */}
+        {/* Legal Basis for Processing */}
         <Paper
           p="xl"
           radius="lg"
@@ -223,43 +230,41 @@ export default function PrivacyPolicy() {
               <IconScale size={20} />
             </div>
             <Title order={3} style={{ color: "#f1f5f9", fontWeight: 600 }}>
-              Legal Basis for Processing
+              {t("legalBasis.title")}
             </Title>
           </Flex>
           <Text style={{ color: "#94a3b8", lineHeight: 1.7 }} mb="md">
-            Under the GDPR, we process your personal data based on the following
-            legal grounds:
+            {t("legalBasis.intro")}
           </Text>
           <Stack gap={8} ml={16}>
             <Text style={{ color: "#94a3b8" }}>
               •{" "}
               <Text component="span" fw={500} style={{ color: "#f1f5f9" }}>
-                Contract
+                {t("legalBasis.items.contract")}
               </Text>
               <Text component="span" style={{ color: "#64748b" }}>
                 {" "}
-                — Processing is necessary to provide you with our services
+                — {t("legalBasis.items.contractDesc")}
               </Text>
             </Text>
             <Text style={{ color: "#94a3b8" }}>
               •{" "}
               <Text component="span" fw={500} style={{ color: "#f1f5f9" }}>
-                Consent
+                {t("legalBasis.items.consent")}
               </Text>
               <Text component="span" style={{ color: "#64748b" }}>
                 {" "}
-                — You have given consent for specific purposes (e.g., marketing
-                emails)
+                — {t("legalBasis.items.consentDesc")}
               </Text>
             </Text>
             <Text style={{ color: "#94a3b8" }}>
               •{" "}
               <Text component="span" fw={500} style={{ color: "#f1f5f9" }}>
-                Legitimate Interest
+                {t("legalBasis.items.legitimateInterest")}
               </Text>
               <Text component="span" style={{ color: "#64748b" }}>
                 {" "}
-                — To improve our services and prevent fraud
+                — {t("legalBasis.items.legitimateInterestDesc")}
               </Text>
             </Text>
           </Stack>
@@ -290,23 +295,14 @@ export default function PrivacyPolicy() {
               <IconCreditCard size={20} />
             </div>
             <Title order={3} style={{ color: "#f1f5f9", fontWeight: 600 }}>
-              Payment Processing
+              {t("payment.title")}
             </Title>
           </Flex>
           <Text style={{ color: "#94a3b8", lineHeight: 1.7 }} mb="md">
-            For paid subscriptions, we use{" "}
-            <Text component="span" fw={500} style={{ color: "#f1f5f9" }}>
-              Stripe
-            </Text>{" "}
-            as our payment processor. Stripe collects and processes your payment
-            information directly. We do not store your credit card details on
-            our servers.
+            {t("payment.content")}
           </Text>
           <Text style={{ color: "#94a3b8", lineHeight: 1.7 }}>
-            {"Stripe's privacy policy can be found at: "}
-            <Text component="span" fw={500} style={{ color: "#6366f1" }}>
-              stripe.com/privacy
-            </Text>
+            {t("payment.stripePolicy")}
           </Text>
         </Paper>
 
@@ -335,36 +331,35 @@ export default function PrivacyPolicy() {
               <IconChartBar size={20} />
             </div>
             <Title order={3} style={{ color: "#f1f5f9", fontWeight: 600 }}>
-              Analytics
+              {t("analytics.title")}
             </Title>
           </Flex>
           <Text style={{ color: "#94a3b8", lineHeight: 1.7 }} mb="md">
-            We use Umami, a privacy-focused analytics tool, to understand how
-            our site is used. This helps us improve the experience.
+            {t("analytics.intro")}
           </Text>
           <Text
             style={{ color: "#94a3b8", lineHeight: 1.7, fontWeight: 500 }}
             mb="sm"
           >
-            What Umami does NOT collect:
+            {t("analytics.notCollect")}
           </Text>
           <Stack gap={4} ml={16} mb="md">
             <Text style={{ color: "#94a3b8" }}>
               •{" "}
               <Text component="span" fw={500} style={{ color: "#f1f5f9" }}>
-                No cookies
+                {t("analytics.notCollectItems.cookies")}
               </Text>
             </Text>
             <Text style={{ color: "#94a3b8" }}>
               •{" "}
               <Text component="span" fw={500} style={{ color: "#f1f5f9" }}>
-                No personal information
+                {t("analytics.notCollectItems.personal")}
               </Text>
             </Text>
             <Text style={{ color: "#94a3b8" }}>
               •{" "}
               <Text component="span" fw={500} style={{ color: "#f1f5f9" }}>
-                No cross-site tracking
+                {t("analytics.notCollectItems.tracking")}
               </Text>
             </Text>
           </Stack>
@@ -372,36 +367,36 @@ export default function PrivacyPolicy() {
             style={{ color: "#94a3b8", lineHeight: 1.7, fontWeight: 500 }}
             mb="sm"
           >
-            What we do collect:
+            {t("analytics.collect")}
           </Text>
           <Stack gap={4} ml={16}>
             <Text style={{ color: "#94a3b8" }}>
               •{" "}
               <Text component="span" fw={500} style={{ color: "#f1f5f9" }}>
-                Page views
+                {t("analytics.collectItems.pageViews")}
               </Text>
             </Text>
             <Text style={{ color: "#94a3b8" }}>
               •{" "}
               <Text component="span" fw={500} style={{ color: "#f1f5f9" }}>
-                Referrer (where you came from)
+                {t("analytics.collectItems.referrer")}
               </Text>
             </Text>
             <Text style={{ color: "#94a3b8" }}>
               •{" "}
               <Text component="span" fw={500} style={{ color: "#f1f5f9" }}>
-                Browser and device type
+                {t("analytics.collectItems.browser")}
               </Text>
             </Text>
             <Text style={{ color: "#94a3b8" }}>
               •{" "}
               <Text component="span" fw={500} style={{ color: "#f1f5f9" }}>
-                Country (not precise location)
+                {t("analytics.collectItems.country")}
               </Text>
             </Text>
           </Stack>
           <Text mt="md" style={{ color: "#64748b" }} size="sm">
-            All data is anonymized and stored on our own servers in Europe.
+            {t("analytics.footer")}
           </Text>
         </Paper>
 
@@ -430,51 +425,51 @@ export default function PrivacyPolicy() {
               <IconClock size={20} />
             </div>
             <Title order={3} style={{ color: "#f1f5f9", fontWeight: 600 }}>
-              Data Retention
+              {t("dataRetention.title")}
             </Title>
           </Flex>
           <Text style={{ color: "#94a3b8", lineHeight: 1.7 }} mb="md">
-            We retain your data only as long as necessary:
+            {t("dataRetention.intro")}
           </Text>
           <Stack gap={8} ml={16}>
             <Text style={{ color: "#94a3b8" }}>
               •{" "}
               <Text component="span" fw={500} style={{ color: "#f1f5f9" }}>
-                Account data
+                {t("dataRetention.items.account")}
               </Text>
               <Text component="span" style={{ color: "#64748b" }}>
                 {" "}
-                — Until you delete your account
+                — {t("dataRetention.items.accountDesc")}
               </Text>
             </Text>
             <Text style={{ color: "#94a3b8" }}>
               •{" "}
               <Text component="span" fw={500} style={{ color: "#f1f5f9" }}>
-                Recorded streams (Free plan)
+                {t("dataRetention.items.freeStreams")}
               </Text>
               <Text component="span" style={{ color: "#64748b" }}>
                 {" "}
-                — 7 days
+                — {t("dataRetention.items.freeStreamsDesc")}
               </Text>
             </Text>
             <Text style={{ color: "#94a3b8" }}>
               •{" "}
               <Text component="span" fw={500} style={{ color: "#f1f5f9" }}>
-                Recorded streams (Premium plan)
+                {t("dataRetention.items.premiumStreams")}
               </Text>
               <Text component="span" style={{ color: "#64748b" }}>
                 {" "}
-                — 60 days
+                — {t("dataRetention.items.premiumStreamsDesc")}
               </Text>
             </Text>
             <Text style={{ color: "#94a3b8" }}>
               •{" "}
               <Text component="span" fw={500} style={{ color: "#f1f5f9" }}>
-                Analytics data
+                {t("dataRetention.items.analyticsData")}
               </Text>
               <Text component="span" style={{ color: "#64748b" }}>
                 {" "}
-                — Anonymized, retained for service improvement
+                — {t("dataRetention.items.analyticsDataDesc")}
               </Text>
             </Text>
           </Stack>
@@ -505,19 +500,11 @@ export default function PrivacyPolicy() {
               <IconServer size={20} />
             </div>
             <Title order={3} style={{ color: "#f1f5f9", fontWeight: 600 }}>
-              Where Your Data Is Stored
+              {t("dataStorage.title")}
             </Title>
           </Flex>
           <Text style={{ color: "#94a3b8", lineHeight: 1.7 }}>
-            Our servers are located in{" "}
-            <Text component="span" fw={500} style={{ color: "#f1f5f9" }}>
-              Europe
-            </Text>
-            . Your data is processed and stored in compliance with GDPR
-            requirements. We do not transfer your personal data outside the
-            European Economic Area (EEA) unless necessary for service provision
-            (e.g., Stripe payment processing) and with appropriate safeguards in
-            place.
+            {t("dataStorage.content")}
           </Text>
         </Paper>
 
@@ -546,27 +533,26 @@ export default function PrivacyPolicy() {
               <IconUsers size={20} />
             </div>
             <Title order={3} style={{ color: "#f1f5f9", fontWeight: 600 }}>
-              Third Parties
+              {t("thirdParties.title")}
             </Title>
           </Flex>
           <Text style={{ color: "#94a3b8", lineHeight: 1.7 }} mb="md">
-            We do not sell your data to anyone. We only share data with:
+            {t("thirdParties.intro")}
           </Text>
           <Stack gap={8} ml={16}>
             <Text style={{ color: "#94a3b8" }}>
               •{" "}
               <Text component="span" fw={500} style={{ color: "#f1f5f9" }}>
-                Stripe
+                {t("thirdParties.items.stripe")}
               </Text>
               <Text component="span" style={{ color: "#64748b" }}>
                 {" "}
-                — For payment processing (if you subscribe)
+                — {t("thirdParties.items.stripeDesc")}
               </Text>
             </Text>
           </Stack>
           <Text mt="md" style={{ color: "#64748b" }} size="sm">
-            We do not use third-party advertising networks or sell your personal
-            information.
+            {t("thirdParties.footer")}
           </Text>
         </Paper>
 
@@ -595,41 +581,36 @@ export default function PrivacyPolicy() {
               <IconWorld size={20} />
             </div>
             <Title order={3} style={{ color: "#f1f5f9", fontWeight: 600 }}>
-              Cookies
+              {t("cookies.title")}
             </Title>
           </Flex>
           <Text style={{ color: "#94a3b8", lineHeight: 1.7 }} mb="md">
-            We use only{" "}
-            <Text component="span" fw={500} style={{ color: "#f1f5f9" }}>
-              essential cookies
-            </Text>{" "}
-            necessary for the website to function properly:
+            {t("cookies.intro")}
           </Text>
           <Stack gap={8} ml={16}>
             <Text style={{ color: "#94a3b8" }}>
               •{" "}
               <Text component="span" fw={500} style={{ color: "#f1f5f9" }}>
-                Session cookies
+                {t("cookies.items.session")}
               </Text>
               <Text component="span" style={{ color: "#64748b" }}>
                 {" "}
-                — To keep you logged in
+                — {t("cookies.items.sessionDesc")}
               </Text>
             </Text>
             <Text style={{ color: "#94a3b8" }}>
               •{" "}
               <Text component="span" fw={500} style={{ color: "#f1f5f9" }}>
-                Preference cookies
+                {t("cookies.items.preference")}
               </Text>
               <Text component="span" style={{ color: "#64748b" }}>
                 {" "}
-                — To remember your settings
+                — {t("cookies.items.preferenceDesc")}
               </Text>
             </Text>
           </Stack>
           <Text mt="md" style={{ color: "#64748b" }} size="sm">
-            We do not use tracking cookies, advertising cookies, or third-party
-            analytics cookies.
+            {t("cookies.footer")}
           </Text>
         </Paper>
 
@@ -658,87 +639,86 @@ export default function PrivacyPolicy() {
               <IconUserCheck size={20} />
             </div>
             <Title order={3} style={{ color: "#f1f5f9", fontWeight: 600 }}>
-              Your Rights (GDPR)
+              {t("rights.title")}
             </Title>
           </Flex>
           <Text style={{ color: "#94a3b8", lineHeight: 1.7 }} mb="md">
-            Under the GDPR, you have the following rights:
+            {t("rights.intro")}
           </Text>
           <Stack gap={8} ml={16}>
             <Text style={{ color: "#94a3b8" }}>
               •{" "}
               <Text component="span" fw={500} style={{ color: "#f1f5f9" }}>
-                Right to Access
+                {t("rights.items.access")}
               </Text>
               <Text component="span" style={{ color: "#64748b" }}>
                 {" "}
-                — Request a copy of your personal data
+                — {t("rights.items.accessDesc")}
               </Text>
             </Text>
             <Text style={{ color: "#94a3b8" }}>
               •{" "}
               <Text component="span" fw={500} style={{ color: "#f1f5f9" }}>
-                Right to Rectification
+                {t("rights.items.rectification")}
               </Text>
               <Text component="span" style={{ color: "#64748b" }}>
                 {" "}
-                — Correct inaccurate or incomplete data
+                — {t("rights.items.rectificationDesc")}
               </Text>
             </Text>
             <Text style={{ color: "#94a3b8" }}>
               •{" "}
               <Text component="span" fw={500} style={{ color: "#f1f5f9" }}>
-                Right to Erasure
+                {t("rights.items.erasure")}
               </Text>
               <Text component="span" style={{ color: "#64748b" }}>
                 {" "}
-                — Request deletion of your data
+                — {t("rights.items.erasureDesc")}
               </Text>
             </Text>
             <Text style={{ color: "#94a3b8" }}>
               •{" "}
               <Text component="span" fw={500} style={{ color: "#f1f5f9" }}>
-                Right to Restrict Processing
+                {t("rights.items.restrict")}
               </Text>
               <Text component="span" style={{ color: "#64748b" }}>
                 {" "}
-                — Limit how we use your data
+                — {t("rights.items.restrictDesc")}
               </Text>
             </Text>
             <Text style={{ color: "#94a3b8" }}>
               •{" "}
               <Text component="span" fw={500} style={{ color: "#f1f5f9" }}>
-                Right to Data Portability
+                {t("rights.items.portability")}
               </Text>
               <Text component="span" style={{ color: "#64748b" }}>
                 {" "}
-                — Receive your data in a portable format
+                — {t("rights.items.portabilityDesc")}
               </Text>
             </Text>
             <Text style={{ color: "#94a3b8" }}>
               •{" "}
               <Text component="span" fw={500} style={{ color: "#f1f5f9" }}>
-                Right to Object
+                {t("rights.items.object")}
               </Text>
               <Text component="span" style={{ color: "#64748b" }}>
                 {" "}
-                — Object to processing based on legitimate interests
+                — {t("rights.items.objectDesc")}
               </Text>
             </Text>
             <Text style={{ color: "#94a3b8" }}>
               •{" "}
               <Text component="span" fw={500} style={{ color: "#f1f5f9" }}>
-                Right to Withdraw Consent
+                {t("rights.items.withdraw")}
               </Text>
               <Text component="span" style={{ color: "#64748b" }}>
                 {" "}
-                — Withdraw consent at any time
+                — {t("rights.items.withdrawDesc")}
               </Text>
             </Text>
           </Stack>
           <Text mt="md" style={{ color: "#64748b" }} size="sm">
-            To exercise any of these rights, contact us at
-            contact@livestreamrecorder.com
+            {t("rights.footer")}
           </Text>
         </Paper>
 
@@ -767,22 +747,14 @@ export default function PrivacyPolicy() {
               <IconBabyCarriage size={20} />
             </div>
             <Title order={3} style={{ color: "#f1f5f9", fontWeight: 600 }}>
-              {"Children's Privacy"}
+              {t("children.title")}
             </Title>
           </Flex>
           <Text style={{ color: "#94a3b8", lineHeight: 1.7 }} mb="md">
-            Our Service is not intended for anyone under the age of{" "}
-            <Text component="span" fw={500} style={{ color: "#f1f5f9" }}>
-              18 years old
-            </Text>
-            . We do not knowingly collect personal information from children
-            under 18.
+            {t("children.content")}
           </Text>
           <Text style={{ color: "#94a3b8", lineHeight: 1.7 }}>
-            If you believe that a child has provided us with personal
-            information, please contact us immediately at
-            contact@livestreamrecorder.com, and we will take steps to delete
-            such information from our systems.
+            {t("children.contact")}
           </Text>
         </Paper>
 
@@ -811,16 +783,11 @@ export default function PrivacyPolicy() {
               <IconShield size={20} />
             </div>
             <Title order={3} style={{ color: "#f1f5f9", fontWeight: 600 }}>
-              Data Security
+              {t("security.title")}
             </Title>
           </Flex>
           <Text style={{ color: "#94a3b8", lineHeight: 1.7 }}>
-            We implement appropriate technical and organizational measures to
-            protect your personal data against unauthorized access, alteration,
-            disclosure, or destruction. This includes encryption, secure
-            servers, and access controls. However, no method of transmission
-            over the Internet is 100% secure, and we cannot guarantee absolute
-            security.
+            {t("security.content")}
           </Text>
         </Paper>
 
@@ -849,23 +816,14 @@ export default function PrivacyPolicy() {
               <IconTrash size={20} />
             </div>
             <Title order={3} style={{ color: "#f1f5f9", fontWeight: 600 }}>
-              Delete Your Account
+              {t("deleteAccount.title")}
             </Title>
           </Flex>
           <Text style={{ color: "#94a3b8", lineHeight: 1.7 }}>
-            To delete your account, go to{" "}
-            <Text component="span" fw={600} style={{ color: "#f1f5f9" }}>
-              Settings
-            </Text>
-            {" then "}
-            <Text component="span" fw={600} style={{ color: "#f1f5f9" }}>
-              Delete Account
-            </Text>
-            .
+            {t("deleteAccount.content")}
           </Text>
           <Text mt="xs" style={{ color: "#64748b" }} size="sm">
-            Once deleted, all your data is permanently removed from our servers.
-            This action cannot be undone.
+            {t("deleteAccount.footer")}
           </Text>
         </Paper>
 
@@ -894,20 +852,17 @@ export default function PrivacyPolicy() {
               <IconMail size={20} />
             </div>
             <Title order={3} style={{ color: "#f1f5f9", fontWeight: 600 }}>
-              Contact Us
+              {t("contact.title")}
             </Title>
           </Flex>
           <Text style={{ color: "#94a3b8", lineHeight: 1.7 }} mb="md">
-            If you have any questions about this Privacy Policy, your data, or
-            your rights, please contact us:
+            {t("contact.content")}
           </Text>
           <Text style={{ color: "#f1f5f9", lineHeight: 1.7 }} fw={500}>
-            contact@livestreamrecorder.com
+            {t("contact.email")}
           </Text>
           <Text mt="md" style={{ color: "#64748b" }} size="sm">
-            You also have the right to lodge a complaint with a supervisory
-            authority (such as the Danish Data Protection Agency - Datatilsynet)
-            if you believe your data protection rights have been violated.
+            {t("contact.footer")}
           </Text>
         </Paper>
 
@@ -920,9 +875,7 @@ export default function PrivacyPolicy() {
           }}
         >
           <Text size="sm" ta="center" style={{ color: "#64748b" }}>
-            If we update this policy, we will post changes here with a new date.
-            Continued use of the Service after changes constitutes acceptance of
-            the updated policy.
+            {t("footerNote")}
           </Text>
         </div>
       </Stack>

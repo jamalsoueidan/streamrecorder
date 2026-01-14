@@ -1,29 +1,36 @@
 import dayjs from "@/app/lib/dayjs";
 import publicApi from "@/lib/public-api";
-import { Container, Flex, Paper, Stack, Text, Title } from "@mantine/core";
-import { IconArticle } from "@tabler/icons-react";
+import {
+  Badge,
+  Container,
+  Flex,
+  Paper,
+  Stack,
+  Text,
+  Title,
+} from "@mantine/core";
+import { IconCalendar, IconGitBranch } from "@tabler/icons-react";
 import { getLocale, getTranslations } from "next-intl/server";
 import ReactMarkdown from "react-markdown";
 
 export async function generateMetadata() {
-  const t = await getTranslations("news");
+  const t = await getTranslations("changelog");
   return {
     title: t("meta.title"),
     description: t("meta.description"),
   };
 }
 
-export default async function NewsPage() {
-  const t = await getTranslations("news");
+export default async function ChangelogPage() {
+  const t = await getTranslations("changelog");
   const locale = await getLocale();
 
-  const response = await publicApi.article.getArticles({
-    "pagination[limit]": 10,
+  const response = await publicApi.changeLog.getChangeLogs({
     sort: "createdAt:desc",
     locale: locale,
   });
 
-  const articles = response.data?.data || [];
+  const changelogs = response.data?.data || [];
 
   return (
     <Container size="md" style={{ position: "relative", zIndex: 1 }}>
@@ -55,7 +62,7 @@ export default async function NewsPage() {
         </Text>
       </Stack>
 
-      {articles.length === 0 ? (
+      {changelogs.length === 0 ? (
         <Paper
           p="xl"
           radius="lg"
@@ -77,7 +84,7 @@ export default async function NewsPage() {
                 color: "#64748b",
               }}
             >
-              <IconArticle size={30} />
+              <IconGitBranch size={30} />
             </div>
             <Title order={3} style={{ color: "#f1f5f9" }}>
               {t("empty.title")}
@@ -86,10 +93,10 @@ export default async function NewsPage() {
           </Stack>
         </Paper>
       ) : (
-        <Stack gap="xl">
-          {articles.map((article) => (
+        <Stack gap={24}>
+          {changelogs.map((entry) => (
             <Paper
-              key={article.documentId}
+              key={entry.id}
               p="lg"
               radius="lg"
               style={{
@@ -97,36 +104,56 @@ export default async function NewsPage() {
                 border: "1px solid rgba(255, 255, 255, 0.06)",
               }}
             >
-              <Flex gap={12} align="flex-start">
-                <div
-                  style={{
-                    width: 40,
-                    height: 40,
-                    borderRadius: 10,
-                    background: "rgba(99, 102, 241, 0.2)",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    color: "#6366f1",
-                    flexShrink: 0,
-                  }}
+              <Flex
+                justify="space-between"
+                align="center"
+                mb="sm"
+                wrap="wrap"
+                gap="sm"
+              >
+                <Badge
+                  size="lg"
+                  variant="light"
+                  color="indigo"
+                  radius="sm"
+                  style={{ fontFamily: "monospace" }}
                 >
-                  <IconArticle size={20} />
-                </div>
-                <div style={{ flex: 1 }}>
-                  <Title order={4} mb="xs" style={{ color: "#f1f5f9" }}>
-                    {article.title}
-                  </Title>
-                  {article.content && (
-                    <div style={{ color: "#94a3b8", lineHeight: 1.7 }}>
-                      <ReactMarkdown>{article.content}</ReactMarkdown>
-                    </div>
-                  )}
-                  <Text size="xs" mt="sm" style={{ color: "#64748b" }}>
-                    {dayjs(article.createdAt).fromNow()}
+                  v{entry.version}
+                </Badge>
+                <Flex gap={6} align="center" style={{ color: "#64748b" }}>
+                  <IconCalendar size={14} />
+                  <Text
+                    size="sm"
+                    title={dayjs(entry.createdAt).format("MMMM D, YYYY")}
+                    style={{ color: "#64748b" }}
+                  >
+                    {dayjs(entry.createdAt).fromNow()}
                   </Text>
-                </div>
+                </Flex>
               </Flex>
+
+              <div
+                style={{
+                  borderTop: "1px solid rgba(255, 255, 255, 0.06)",
+                  margin: "12px 0",
+                }}
+              />
+
+              {entry.body ? (
+                <div style={{ color: "#94a3b8", lineHeight: 1.7 }}>
+                  <ReactMarkdown>{entry.body}</ReactMarkdown>
+                </div>
+              ) : (
+                <Text size="sm" fs="italic" style={{ color: "#64748b" }}>
+                  {t("noDescription")}
+                </Text>
+              )}
+
+              <Text size="xs" mt="md" style={{ color: "#64748b" }}>
+                {t("published", {
+                  date: dayjs(entry.publishedAt).format("MMMM D, YYYY"),
+                })}
+              </Text>
             </Paper>
           ))}
         </Stack>

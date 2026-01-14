@@ -39,7 +39,6 @@ export interface ArticleRequest {
   data: {
     title: string;
     content: string;
-    color?: string;
     locale?: string;
     localizations?: (number | string)[];
   };
@@ -64,7 +63,6 @@ export interface Article {
   documentId?: string;
   title: string;
   content: string;
-  color?: string;
   /** @format date-time */
   createdAt?: string;
   /** @format date-time */
@@ -176,7 +174,6 @@ export interface Article {
     documentId?: string;
     title?: string;
     content?: string;
-    color?: string;
     /** @format date-time */
     createdAt?: string;
     /** @format date-time */
@@ -546,175 +543,6 @@ export interface NavigationsSectionsComponent {
   title?: string;
   icon?: NavigationsSectionsComponentIconEnum;
   links?: NavigationsLinksComponent[];
-}
-
-export interface FaqRequest {
-  data: {
-    title?: string;
-    description?: string;
-    order?: number;
-    locale?: string;
-    localizations?: (number | string)[];
-  };
-}
-
-export interface FaqListResponse {
-  data?: Faq[];
-  meta?: {
-    pagination?: {
-      page?: number;
-      /** @min 25 */
-      pageSize?: number;
-      /** @max 1 */
-      pageCount?: number;
-      total?: number;
-    };
-  };
-}
-
-export interface Faq {
-  id?: number;
-  documentId?: string;
-  title?: string;
-  description?: string;
-  order?: number;
-  /** @format date-time */
-  createdAt?: string;
-  /** @format date-time */
-  updatedAt?: string;
-  /** @format date-time */
-  publishedAt?: string;
-  createdBy?: {
-    id?: number;
-    documentId?: string;
-    firstname?: string;
-    lastname?: string;
-    username?: string;
-    /** @format email */
-    email?: string;
-    resetPasswordToken?: string;
-    registrationToken?: string;
-    isActive?: boolean;
-    roles?: {
-      id?: number;
-      documentId?: string;
-      name?: string;
-      code?: string;
-      description?: string;
-      users?: {
-        id?: number;
-        documentId?: string;
-      }[];
-      permissions?: {
-        id?: number;
-        documentId?: string;
-        action?: string;
-        actionParameters?: any;
-        subject?: string;
-        properties?: any;
-        conditions?: any;
-        role?: {
-          id?: number;
-          documentId?: string;
-        };
-        /** @format date-time */
-        createdAt?: string;
-        /** @format date-time */
-        updatedAt?: string;
-        /** @format date-time */
-        publishedAt?: string;
-        createdBy?: {
-          id?: number;
-          documentId?: string;
-        };
-        updatedBy?: {
-          id?: number;
-          documentId?: string;
-        };
-        locale?: string;
-        localizations?: {
-          id?: number;
-          documentId?: string;
-        }[];
-      }[];
-      /** @format date-time */
-      createdAt?: string;
-      /** @format date-time */
-      updatedAt?: string;
-      /** @format date-time */
-      publishedAt?: string;
-      createdBy?: {
-        id?: number;
-        documentId?: string;
-      };
-      updatedBy?: {
-        id?: number;
-        documentId?: string;
-      };
-      locale?: string;
-      localizations?: {
-        id?: number;
-        documentId?: string;
-      }[];
-    }[];
-    blocked?: boolean;
-    preferedLanguage?: string;
-    /** @format date-time */
-    createdAt?: string;
-    /** @format date-time */
-    updatedAt?: string;
-    /** @format date-time */
-    publishedAt?: string;
-    createdBy?: {
-      id?: number;
-      documentId?: string;
-    };
-    updatedBy?: {
-      id?: number;
-      documentId?: string;
-    };
-    locale?: string;
-    localizations?: {
-      id?: number;
-      documentId?: string;
-    }[];
-  };
-  updatedBy?: {
-    id?: number;
-    documentId?: string;
-  };
-  locale?: string;
-  localizations?: {
-    id?: number;
-    documentId?: string;
-    title?: string;
-    description?: string;
-    order?: number;
-    /** @format date-time */
-    createdAt?: string;
-    /** @format date-time */
-    updatedAt?: string;
-    /** @format date-time */
-    publishedAt?: string;
-    createdBy?: {
-      id?: number;
-      documentId?: string;
-    };
-    updatedBy?: {
-      id?: number;
-      documentId?: string;
-    };
-    locale?: string;
-    localizations?: {
-      id?: number;
-      documentId?: string;
-    }[];
-  }[];
-}
-
-export interface FaqResponse {
-  data?: Faq;
-  meta?: object;
 }
 
 export interface FollowerRequest {
@@ -2577,52 +2405,6 @@ export type PutDashboardNavbarData = DashboardNavbarResponse;
 /** @format int64 */
 export type DeleteDashboardNavbarData = number;
 
-export interface GetFaqsParams {
-  /** Sort by attributes ascending (asc) or descending (desc) */
-  sort?: string;
-  /** Return page/pageSize (default: true) */
-  "pagination[withCount]"?: boolean;
-  /** Page number (default: 0) */
-  "pagination[page]"?: number;
-  /** Page size (default: 25) */
-  "pagination[pageSize]"?: number;
-  /** Offset value (default: 0) */
-  "pagination[start]"?: number;
-  /** Number of entities to return (default: 25) */
-  "pagination[limit]"?: number;
-  /** Fields to return (ex: title,author) */
-  fields?: string;
-  /** Relations to return */
-  populate?: string | string[] | object;
-  /** Filters to apply */
-  filters?: Record<string, any>;
-  /** Locale to apply */
-  locale?: string;
-}
-
-export type GetFaqsData = FaqListResponse;
-
-export type PostFaqsData = FaqResponse;
-
-export interface GetFaqsIdParams {
-  id: string;
-}
-
-export type GetFaqsIdData = FaqResponse;
-
-export interface PutFaqsIdParams {
-  id: string;
-}
-
-export type PutFaqsIdData = FaqResponse;
-
-export interface DeleteFaqsIdParams {
-  id: string;
-}
-
-/** @format int64 */
-export type DeleteFaqsIdData = number;
-
 export interface GetFollowersParams {
   /** Sort by attributes ascending (asc) or descending (desc) */
   sort?: string;
@@ -3426,110 +3208,6 @@ export namespace DashboardNavbar {
     export type RequestBody = never;
     export type RequestHeaders = {};
     export type ResponseBody = DeleteDashboardNavbarData;
-  }
-}
-
-export namespace Faq {
-  /**
-   * No description
-   * @tags Faq
-   * @name GetFaqs
-   * @request GET:/faqs
-   * @secure
-   */
-  export namespace GetFaqs {
-    export type RequestParams = {};
-    export type RequestQuery = {
-      /** Sort by attributes ascending (asc) or descending (desc) */
-      sort?: string;
-      /** Return page/pageSize (default: true) */
-      "pagination[withCount]"?: boolean;
-      /** Page number (default: 0) */
-      "pagination[page]"?: number;
-      /** Page size (default: 25) */
-      "pagination[pageSize]"?: number;
-      /** Offset value (default: 0) */
-      "pagination[start]"?: number;
-      /** Number of entities to return (default: 25) */
-      "pagination[limit]"?: number;
-      /** Fields to return (ex: title,author) */
-      fields?: string;
-      /** Relations to return */
-      populate?: string | string[] | object;
-      /** Filters to apply */
-      filters?: Record<string, any>;
-      /** Locale to apply */
-      locale?: string;
-    };
-    export type RequestBody = never;
-    export type RequestHeaders = {};
-    export type ResponseBody = GetFaqsData;
-  }
-
-  /**
-   * No description
-   * @tags Faq
-   * @name PostFaqs
-   * @request POST:/faqs
-   * @secure
-   */
-  export namespace PostFaqs {
-    export type RequestParams = {};
-    export type RequestQuery = {};
-    export type RequestBody = FaqRequest;
-    export type RequestHeaders = {};
-    export type ResponseBody = PostFaqsData;
-  }
-
-  /**
-   * No description
-   * @tags Faq
-   * @name GetFaqsId
-   * @request GET:/faqs/{id}
-   * @secure
-   */
-  export namespace GetFaqsId {
-    export type RequestParams = {
-      id: string;
-    };
-    export type RequestQuery = {};
-    export type RequestBody = never;
-    export type RequestHeaders = {};
-    export type ResponseBody = GetFaqsIdData;
-  }
-
-  /**
-   * No description
-   * @tags Faq
-   * @name PutFaqsId
-   * @request PUT:/faqs/{id}
-   * @secure
-   */
-  export namespace PutFaqsId {
-    export type RequestParams = {
-      id: string;
-    };
-    export type RequestQuery = {};
-    export type RequestBody = FaqRequest;
-    export type RequestHeaders = {};
-    export type ResponseBody = PutFaqsIdData;
-  }
-
-  /**
-   * No description
-   * @tags Faq
-   * @name DeleteFaqsId
-   * @request DELETE:/faqs/{id}
-   * @secure
-   */
-  export namespace DeleteFaqsId {
-    export type RequestParams = {
-      id: string;
-    };
-    export type RequestQuery = {};
-    export type RequestBody = never;
-    export type RequestHeaders = {};
-    export type ResponseBody = DeleteFaqsIdData;
   }
 }
 
@@ -5113,107 +4791,6 @@ export class Api<
     deleteDashboardNavbar: (params: RequestParams = {}) =>
       this.request<DeleteDashboardNavbarData, Error>({
         path: `/dashboard-navbar`,
-        method: "DELETE",
-        secure: true,
-        format: "json",
-        ...params,
-      }),
-  };
-  faq = {
-    /**
-     * No description
-     *
-     * @tags Faq
-     * @name GetFaqs
-     * @request GET:/faqs
-     * @secure
-     */
-    getFaqs: (query: GetFaqsParams, params: RequestParams = {}) =>
-      this.request<GetFaqsData, Error>({
-        path: `/faqs`,
-        method: "GET",
-        query: query,
-        secure: true,
-        format: "json",
-        ...params,
-      }),
-
-    /**
-     * No description
-     *
-     * @tags Faq
-     * @name PostFaqs
-     * @request POST:/faqs
-     * @secure
-     */
-    postFaqs: (data: FaqRequest, params: RequestParams = {}) =>
-      this.request<PostFaqsData, Error>({
-        path: `/faqs`,
-        method: "POST",
-        body: data,
-        secure: true,
-        type: ContentType.Json,
-        format: "json",
-        ...params,
-      }),
-
-    /**
-     * No description
-     *
-     * @tags Faq
-     * @name GetFaqsId
-     * @request GET:/faqs/{id}
-     * @secure
-     */
-    getFaqsId: (
-      { id, ...query }: GetFaqsIdParams,
-      params: RequestParams = {},
-    ) =>
-      this.request<GetFaqsIdData, Error>({
-        path: `/faqs/${id}`,
-        method: "GET",
-        secure: true,
-        format: "json",
-        ...params,
-      }),
-
-    /**
-     * No description
-     *
-     * @tags Faq
-     * @name PutFaqsId
-     * @request PUT:/faqs/{id}
-     * @secure
-     */
-    putFaqsId: (
-      { id, ...query }: PutFaqsIdParams,
-      data: FaqRequest,
-      params: RequestParams = {},
-    ) =>
-      this.request<PutFaqsIdData, Error>({
-        path: `/faqs/${id}`,
-        method: "PUT",
-        body: data,
-        secure: true,
-        type: ContentType.Json,
-        format: "json",
-        ...params,
-      }),
-
-    /**
-     * No description
-     *
-     * @tags Faq
-     * @name DeleteFaqsId
-     * @request DELETE:/faqs/{id}
-     * @secure
-     */
-    deleteFaqsId: (
-      { id, ...query }: DeleteFaqsIdParams,
-      params: RequestParams = {},
-    ) =>
-      this.request<DeleteFaqsIdData, Error>({
-        path: `/faqs/${id}`,
         method: "DELETE",
         secure: true,
         format: "json",

@@ -1,8 +1,19 @@
 import { Container, Flex, Stack, Text, Title } from "@mantine/core";
 import { IconScale } from "@tabler/icons-react";
+import { getTranslations } from "next-intl/server";
 import { DMCAForm } from "./components/form";
 
-export default function DMCAPolicy() {
+export async function generateMetadata() {
+  const t = await getTranslations("dmca");
+  return {
+    title: t("meta.title"),
+    description: t("meta.description"),
+  };
+}
+
+export default async function DMCAPolicy() {
+  const t = await getTranslations("dmca");
+
   return (
     <Container size="md" style={{ position: "relative", zIndex: 1 }}>
       <Stack gap={32}>
@@ -37,19 +48,18 @@ export default function DMCAPolicy() {
                 paddingBottom: "0.1em",
               }}
             >
-              Digital Millennium Copyright Act
+              {t("header.title")}
             </Title>
           </Flex>
           <Text size="sm" style={{ color: "#64748b" }}>
-            DMCA Policy
+            {t("header.subtitle")}
           </Text>
         </Stack>
 
         <DMCAForm />
 
         <Text size="sm" ta="center" style={{ color: "#64748b" }}>
-          We respond to all valid DMCA requests. Abuse of this process may
-          result in legal consequences.
+          {t("footer")}
         </Text>
       </Stack>
     </Container>

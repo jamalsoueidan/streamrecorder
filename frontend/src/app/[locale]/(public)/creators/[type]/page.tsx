@@ -13,7 +13,8 @@ import {
   Title,
 } from "@mantine/core";
 import { Metadata } from "next";
-import { streamingPlatforms } from "../../page";
+
+import { streamingPlatforms } from "@/app/lib/streaming-platforms";
 import { CreatorsSimpleGrid } from "../components/creators-simple-grid";
 
 interface PageProps {

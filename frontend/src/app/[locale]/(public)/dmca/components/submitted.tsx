@@ -2,8 +2,11 @@
 
 import { Paper, Stack, Text, Title } from "@mantine/core";
 import { IconCheck } from "@tabler/icons-react";
+import { useTranslations } from "next-intl";
 
 export function Submitted() {
+  const t = useTranslations("dmca.submitted");
+
   return (
     <Paper
       p="xl"
@@ -29,11 +32,10 @@ export function Submitted() {
           <IconCheck size={30} />
         </div>
         <Title order={2} ta="center" style={{ color: "#f1f5f9" }}>
-          DMCA Request Submitted
+          {t("title")}
         </Title>
         <Text ta="center" style={{ color: "#94a3b8", lineHeight: 1.7 }}>
-          We have received your DMCA takedown request. We will review it and
-          respond to the email address you provided.
+          {t("description")}
         </Text>
       </Stack>
     </Paper>
