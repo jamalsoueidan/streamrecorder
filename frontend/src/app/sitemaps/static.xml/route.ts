@@ -1,9 +1,9 @@
-import { streamingPlatforms } from "@/app/(public)/page";
+import { streamingPlatforms } from "@/app/[locale]/(public)/page";
 
 export const revalidate = 86400;
 
 export async function GET() {
-  const baseUrl = "https://livestreamrecorder.com";
+  const baseUrl = "https://www.livestreamrecorder.com";
 
   const staticPages = [
     { url: "", priority: 1.0, changefreq: "daily" }, // Homepage

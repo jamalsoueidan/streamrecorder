@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://livestreamrecorder.com/sitemap.xml",
+    sitemap: "https://www.livestreamrecorder.com/sitemap.xml",
   };
 }

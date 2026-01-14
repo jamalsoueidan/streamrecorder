@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import { getFollower } from "@/app/(public)/public/[type]/[username]/actions/actions";
+import { getFollower } from "@/app/[locale]/(public)/public/[type]/[username]/actions/actions";
 import { ImageResponse } from "next/og";
 import { NextRequest } from "next/server";
 
