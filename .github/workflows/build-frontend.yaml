@@ -44,6 +44,8 @@ jobs:
           build-args: |
             NEXT_PUBLIC_UMAMI_ID=${{ secrets.NEXT_PUBLIC_UMAMI_ID }}
             NEXT_PUBLIC_UMAMI_URL=${{ secrets.NEXT_PUBLIC_UMAMI_URL }}
+            STRAPI_URL=${{ secrets.STRAPI_URL }}
+
       - name: Trigger Coolify Deploy
         run: |
           curl -X GET "${{ secrets.COOLIFY_FRONTEND_WEBHOOK }}" \
