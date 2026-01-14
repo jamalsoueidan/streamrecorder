@@ -16,16 +16,28 @@ export async function GET(
   const { path } = await params;
   const filePath = path.join("/");
 
-  const command = new GetObjectCommand({
-    Bucket: process.env.AVATAR_BUCKET!,
-    Key: filePath,
-  });
-  const response = await s3.send(command);
+  try {
+    const command = new GetObjectCommand({
+      Bucket: process.env.AVATAR_BUCKET!,
+      Key: filePath,
+    });
+    const response = await s3.send(command);
 
-  return new Response(response.Body as ReadableStream, {
-    headers: {
-      "Content-Type": response.ContentType || "application/octet-stream",
-      "Cache-Control": "public, max-age=31536000",
-    },
-  });
+    return new Response(response.Body as ReadableStream, {
+      headers: {
+        "Content-Type": response.ContentType || "application/octet-stream",
+        "Cache-Control": "public, max-age=31536000",
+      },
+    });
+  } catch (error: any) {
+    console.error(
+      `[AVATAR] Failed to get: ${filePath}`,
+      error.Code || error.name
+    );
+
+    if (error.Code === "NoSuchKey" || error.name === "NoSuchKey") {
+      return new Response("Not found", { status: 404 });
+    }
+    return new Response("Error fetching file", { status: 500 });
+  }
 }

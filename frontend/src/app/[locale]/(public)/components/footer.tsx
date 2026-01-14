@@ -63,7 +63,7 @@ export function Footer() {
       title: t("company.title"),
       links: [
         { link: "/news", label: t("company.news") },
-        { link: "/pricing", label: t("company.pricing") },
+        //{ link: "/pricing", label: t("company.pricing") },
         { link: "/faq", label: t("company.faq") },
         { link: "/changelog", label: t("company.updates") },
         { link: "/sitemap.xml", label: t("company.sitemap") },
