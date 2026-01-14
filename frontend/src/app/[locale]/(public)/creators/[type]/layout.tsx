@@ -18,6 +18,7 @@ import {
   IconUsers,
 } from "@tabler/icons-react";
 import { getTranslations } from "next-intl/server";
+import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 
 const featureIcons = [IconUsers, IconPlayerPlay, IconCloud, IconDeviceTv];
@@ -75,20 +76,19 @@ export default async function Page({ params, children }: PageProps) {
           {t("hero.subtitle", { platform: platformName })}
         </Text>
 
-        <Flex gap={30} align="center" mt={20}>
+        <Flex align="center" gap={30} mt={20} wrap="wrap">
           {streamingPlatforms.map((p) => (
-            <Button
+            <Link
               key={p.name}
-              component="a"
-              size="xl"
-              radius="lg"
               href={`/creators/${p.name.toLowerCase()}`}
-              variant={
-                p.name.toLowerCase() === type ? "outline" : "transparent"
-              }
+              style={{
+                border: p.name.toLowerCase() === type ? "1px solid" : "none",
+                borderRadius: "8px",
+                padding: "4px",
+              }}
             >
-              <Image alt={p.name} src={p.file} maw={120} />
-            </Button>
+              <Image alt={p.name} src={p.file} w={120} />
+            </Link>
           ))}
         </Flex>
       </Stack>
