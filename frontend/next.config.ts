@@ -8,6 +8,7 @@ const nextConfig: NextConfig = {
   reactCompiler: true,
   async redirects() {
     return [
+      // non-www to www
       {
         source: "/:path*",
         has: [{ type: "host", value: "livestreamrecorder.com" }],
