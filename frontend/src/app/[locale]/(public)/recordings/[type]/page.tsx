@@ -4,7 +4,8 @@ import { generateProfileUrl } from "@/app/lib/profile-url";
 import publicApi from "@/lib/public-api";
 import { Center } from "@mantine/core";
 import { Metadata } from "next";
-import { streamingPlatforms } from "../../page";
+
+import { streamingPlatforms } from "@/app/lib/streaming-platforms";
 import { RecordingsSimpleGrid } from "../components/recordings-simple-grid";
 
 interface PageProps {

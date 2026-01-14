@@ -1,0 +1,25 @@
+{
+  "meta": {
+    "title": "تسجيل الدخول",
+    "description": "سجل الدخول إلى حسابك في LiveStreamRecorder للوصول إلى تسجيلاتك والمذيعين المتابعين."
+  },
+  "title": "مرحباً بعودتك",
+  "subtitle": "سجل الدخول للمتابعة إلى حسابك",
+  "email": {
+    "label": "البريد الإلكتروني",
+    "placeholder": "you@example.com"
+  },
+  "password": {
+    "label": "كلمة المرور",
+    "placeholder": "أدخل كلمة المرور"
+  },
+  "forgotPassword": "نسيت كلمة المرور؟",
+  "submit": {
+    "default": "تسجيل الدخول",
+    "loading": "جارٍ تسجيل الدخول..."
+  },
+  "register": {
+    "text": "ليس لديك حساب؟",
+    "link": "أنشئ حساباً"
+  }
+}
