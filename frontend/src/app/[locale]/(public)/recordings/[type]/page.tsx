@@ -4,6 +4,7 @@ import { generateProfileUrl } from "@/app/lib/profile-url";
 import publicApi from "@/lib/public-api";
 import { Center } from "@mantine/core";
 import { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 
 import { streamingPlatforms } from "@/app/lib/streaming-platforms";
 import { RecordingsSimpleGrid } from "../components/recordings-simple-grid";
@@ -21,21 +22,17 @@ export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
   const { type } = await params;
+  const t = await getTranslations("recordings");
 
   const platform = streamingPlatforms.find(
     (p) => p.name.toLowerCase() === type
   );
 
   const platformName = platform?.name || "All Platforms";
-  const isAllPlatforms = type === "all";
+  const metaKey = type === "all" ? "all" : type;
 
-  const title = isAllPlatforms
-    ? "All Live Stream Recordings"
-    : `${platformName} Live Stream Recordings`;
-
-  const description = isAllPlatforms
-    ? "Browse all recorded live streams from TikTok, Twitch, and more. Never miss a stream again — watch your favorite creators anytime."
-    : `Never miss a ${platformName} stream again. Watch recorded live streams from your favorite ${platformName} creators anytime, anywhere.`;
+  const title = t(`meta.${metaKey}.title`);
+  const description = t(`meta.${metaKey}.description`);
 
   return {
     title,
@@ -49,13 +46,13 @@ export async function generateMetadata({
       "stream recording",
     ],
     openGraph: {
-      title: `${title} | Live Stream Recorder`,
+      title,
       description,
       url: `https://www.livestreamrecorder.com/recordings/${type}`,
       type: "website",
       images: [
         {
-          url: "/og-image.png", // Make sure this exists in /public
+          url: "/og-image.png",
           width: 1200,
           height: 630,
           alt: `${platformName} Live Stream Recordings`,
@@ -64,7 +61,7 @@ export async function generateMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title: `${title} | Live Stream Recorder`,
+      title,
       description,
       images: ["/og-image.png"],
     },
@@ -80,6 +77,7 @@ export default async function RecordingTypePage({
 }: PageProps) {
   const { type } = await params;
   const { page } = await searchParams;
+  const t = await getTranslations("recordings");
 
   const platform = streamingPlatforms.find(
     (p) => p.name.toLowerCase() === type
@@ -88,6 +86,8 @@ export default async function RecordingTypePage({
     name: "",
     file: "creators.png",
   };
+
+  const platformName = platform.name || "All";
 
   const {
     data: { data: recordings, meta },
@@ -130,10 +130,8 @@ export default async function RecordingTypePage({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    name: `${platform.name || "All"} Live Stream Recordings`,
-    description: `Browse recorded live streams from ${
-      platform.name || "all platforms"
-    }. Never miss a stream again.`,
+    name: t("jsonLd.name", { platform: platformName }),
+    description: t("jsonLd.description", { platform: platformName }),
     url: `https://www.livestreamrecorder.com/recordings/${type}`,
     isPartOf: {
       "@type": "WebSite",
@@ -148,17 +146,25 @@ export default async function RecordingTypePage({
           recording.sources?.reduce((sum, s) => sum + (s.duration || 0), 0) ||
           0;
 
+        const nickname =
+          recording.follower?.nickname ||
+          recording.follower?.username ||
+          "Unknown";
+        const recordingDate = dayjs(recording.createdAt).format("MMM D, YYYY");
+
         return {
           "@type": "ListItem",
           position: index + 1,
           item: {
             "@type": "VideoObject",
-            name: `${
-              recording.follower?.nickname || recording.follower?.username
-            }'s Stream - ${dayjs(recording.createdAt).format("MMM D, YYYY")}`,
-            description: `Recorded live stream from ${
-              recording.follower?.nickname || recording.follower?.username
-            } on ${recording.follower?.type || "unknown platform"}`,
+            name: t("jsonLd.streamTitle", {
+              nickname,
+              date: recordingDate,
+            }),
+            description: t("jsonLd.streamDescription", {
+              nickname,
+              platform: recording.follower?.type || "unknown platform",
+            }),
             thumbnailUrl: recording.sources?.length
               ? `https://www.livestreamrecorder.com/media${
                   recording.sources[recording.sources.length - 1].path
