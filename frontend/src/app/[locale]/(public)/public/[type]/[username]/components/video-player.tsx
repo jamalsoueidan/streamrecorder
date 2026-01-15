@@ -3,13 +3,16 @@ import {
   HlsVideo,
   MediaControlBar,
   MediaController,
+  MediaFullscreenButton,
   MediaLoadingIndicator,
   MediaMuteButton,
+  MediaPlayButton,
   MediaPosterImage,
   MediaTimeDisplay,
   MediaTimeRange,
   MediaVolumeRange,
 } from "@/app/[locale]/(protected)/components/video/media-chrome";
+import { Box } from "@mantine/core";
 
 import "hls-video-element";
 import "media-chrome";
@@ -48,12 +51,14 @@ export function VideoPlayer({ documentId, previewUrl }: VideoPlayerProps) {
       />
 
       <MediaControlBar>
+        <MediaPlayButton />
         <MediaTimeRange />
         <MediaTimeDisplay showduration />
-        <div className="volume-hover-container">
+        <Box className="volume-hover-container">
           <MediaVolumeRange />
           <MediaMuteButton title="" />
-        </div>
+        </Box>
+        <MediaFullscreenButton />
       </MediaControlBar>
     </MediaController>
   );
