@@ -70,13 +70,15 @@ media-volume-range {
   visibility: visible;
 }
 
-@media (pointer: coarse) {
-  .volume-hover-container {
-    display: none;
-  }
-}
 .volume-hover-container media-mute-button {
   --media-tooltip-display: none;
+}
+
+/* Mobile: hide only the volume slider, keep mute button */
+@media (pointer: coarse) {
+  .volume-hover-container media-volume-range {
+    display: none;
+  }
 }
 
 @keyframes glow {
