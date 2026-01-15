@@ -1,31 +1,31 @@
 {
   "meta": {
     "all": {
-      "title": "All Streamers & Creators - LiveStreamRecorder",
+      "title": "All Streamers & Creators",
       "description": "Browse all streamers and creators we are recording. Follow your favorites and never miss a live stream from TikTok, Twitch, YouTube, Kick, and more."
     },
     "tiktok": {
-      "title": "TikTok Streamers & Creators - LiveStreamRecorder",
+      "title": "TikTok Streamers & Creators",
       "description": "Discover TikTok streamers and creators. Follow your favorites and we will automatically record their live streams so you never miss a moment."
     },
     "twitch": {
-      "title": "Twitch Streamers & Creators - LiveStreamRecorder",
+      "title": "Twitch Streamers & Creators",
       "description": "Discover Twitch streamers and creators. Follow your favorites and we will automatically record their live streams so you never miss a moment."
     },
     "youtube": {
-      "title": "YouTube Streamers & Creators - LiveStreamRecorder",
+      "title": "YouTube Streamers & Creators",
       "description": "Discover YouTube streamers and creators. Follow your favorites and we will automatically record their live streams so you never miss a moment."
     },
     "kick": {
-      "title": "Kick Streamers & Creators - LiveStreamRecorder",
+      "title": "Kick Streamers & Creators",
       "description": "Discover Kick streamers and creators. Follow your favorites and we will automatically record their live streams so you never miss a moment."
     },
     "pandalive": {
-      "title": "PandaLive Streamers & Creators - LiveStreamRecorder",
+      "title": "PandaLive Streamers & Creators",
       "description": "Discover PandaLive streamers and creators. Follow your favorites and we will automatically record their live streams so you never miss a moment."
     },
     "afreecatv": {
-      "title": "AfreecaTV Streamers & Creators - LiveStreamRecorder",
+      "title": "AfreecaTV Streamers & Creators",
       "description": "Discover AfreecaTV streamers and creators. Follow your favorites and we will automatically record their live streams so you never miss a moment."
     }
   },
