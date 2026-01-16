@@ -10,11 +10,5 @@
     "draftAndPublish": true
   },
   "pluginOptions": {},
-  "attributes": {
-    "section": {
-      "type": "component",
-      "component": "navigations.sections",
-      "repeatable": true
-    }
-  }
+  "attributes": {}
 }

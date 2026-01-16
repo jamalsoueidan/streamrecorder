@@ -540,7 +540,6 @@ export interface ApiDashboardNavbarDashboardNavbar
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
-    section: Schema.Attribute.Component<'navigations.sections', true>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -627,43 +626,6 @@ export interface ApiMessageMessage extends Struct.CollectionTypeSchema {
       'manyToOne',
       'plugin::users-permissions.user'
     >;
-  };
-}
-
-export interface ApiNavigationNavigation extends Struct.CollectionTypeSchema {
-  collectionName: 'navigations';
-  info: {
-    displayName: 'Navigation';
-    pluralName: 'navigations';
-    singularName: 'navigation';
-  };
-  options: {
-    draftAndPublish: false;
-  };
-  pluginOptions: {
-    i18n: {
-      localized: true;
-    };
-  };
-  attributes: {
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    links: Schema.Attribute.Component<'navigations.links', true> &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    locale: Schema.Attribute.String;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::navigation.navigation'
-    >;
-    publishedAt: Schema.Attribute.DateTime;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
   };
 }
 
@@ -1252,7 +1214,6 @@ declare module '@strapi/strapi' {
       'api::dashboard-navbar.dashboard-navbar': ApiDashboardNavbarDashboardNavbar;
       'api::follower.follower': ApiFollowerFollower;
       'api::message.message': ApiMessageMessage;
-      'api::navigation.navigation': ApiNavigationNavigation;
       'api::recording.recording': ApiRecordingRecording;
       'api::source.source': ApiSourceSource;
       'plugin::content-releases.release': PluginContentReleasesRelease;
