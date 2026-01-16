@@ -157,7 +157,7 @@ export default function Filters({ filterOptions }: Props) {
     filters.language,
     filters.type,
     filters.dateRange,
-    filters.hasRecordings,
+    !filters.hasRecordings,
   ].filter(Boolean).length;
 
   const clearFilters = () => {
@@ -246,7 +246,8 @@ export default function Filters({ filterOptions }: Props) {
         filters.gender ||
         filters.country ||
         filters.language ||
-        filters.dateRange ? (
+        filters.dateRange ||
+        !filters.hasRecordings ? (
           <Group>
             {/* Active filter badges */}
             {filters.type && (
@@ -332,6 +333,22 @@ export default function Filters({ filterOptions }: Props) {
               >
                 {DATE_RANGE_OPTIONS.find((d) => d.value === filters.dateRange)
                   ?.label || filters.dateRange}
+              </Badge>
+            )}
+            {!filters.hasRecordings && (
+              <Badge
+                variant="light"
+                size="lg"
+                leftSection={<IconCalendar size={16} />}
+                rightSection={
+                  <IconX
+                    size={16}
+                    style={{ cursor: "pointer" }}
+                    onClick={() => setFilters({ hasRecordings: false })}
+                  />
+                }
+              >
+                Show creators without recordings
               </Badge>
             )}
 
