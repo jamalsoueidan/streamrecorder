@@ -1,4 +1,5 @@
 "use client";
+
 import {
   Anchor,
   Badge,
@@ -10,68 +11,41 @@ import {
   Stack,
   Text,
   Title,
-  useMatches,
 } from "@mantine/core";
 import { useTranslations } from "next-intl";
+import { navConfig } from "./nav";
 
 export function Footer() {
   const t = useTranslations("footer");
 
-  const gap = useMatches({
-    base: 30,
-    sm: 50,
-    md: 50,
-  });
-
   const data = [
     {
       title: t("featuredCreators.title"),
-      links: [
-        { label: t("featuredCreators.browse"), link: "/creators/all" },
-        { label: t("featuredCreators.tiktok"), link: "/creators/tiktok" },
-        { label: t("featuredCreators.twitch"), link: "/creators/twitch" },
-        { label: t("featuredCreators.kick"), link: "/creators/kick" },
-        { label: t("featuredCreators.youtube"), link: "/creators/youtube" },
-        { label: t("featuredCreators.afreecatv"), link: "/creators/afreecatv" },
-        { label: t("featuredCreators.pandalive"), link: "/creators/pandalive" },
-      ],
+      links: navConfig.featuredCreators.map((link) => ({
+        label: t(`featuredCreators.${link.key}`),
+        link: link.href,
+      })),
     },
     {
       title: t("watchRecordings.title"),
-      links: [
-        { label: t("watchRecordings.browse"), link: "/recordings/all" },
-        { label: t("watchRecordings.tiktok"), link: "/recordings/tiktok" },
-        { label: t("watchRecordings.twitch"), link: "/recordings/twitch" },
-        { label: t("watchRecordings.kick"), link: "/recordings/kick" },
-        { label: t("watchRecordings.youtube"), link: "/recordings/youtube" },
-        {
-          label: t("watchRecordings.afreecatv"),
-          link: "/recordings/afreecatv",
-        },
-        {
-          label: t("watchRecordings.pandalive"),
-          link: "/recordings/pandalive",
-        },
-      ],
+      links: navConfig.watchRecordings.map((link) => ({
+        label: t(`watchRecordings.${link.key}`),
+        link: link.href,
+      })),
     },
     {
       title: t("legal.title"),
-      links: [
-        { link: "/privacy", label: t("legal.privacy") },
-        { link: "/terms", label: t("legal.terms") },
-        { link: "/dmca", label: t("legal.dmca") },
-      ],
+      links: navConfig.legal.map((link) => ({
+        label: t(`legal.${link.key}`),
+        link: link.href,
+      })),
     },
     {
       title: t("company.title"),
-      links: [
-        { link: "/news", label: t("company.news") },
-        //{ link: "/pricing", label: t("company.pricing") },
-        { link: "/faq", label: t("company.faq") },
-        { link: "/changelog", label: t("company.updates") },
-        { link: "/sitemap.xml", label: t("company.sitemap") },
-        { link: "/contact", label: t("company.contact") },
-      ],
+      links: navConfig.company.map((link) => ({
+        label: t(`company.${link.key}`),
+        link: link.href,
+      })),
     },
   ];
 

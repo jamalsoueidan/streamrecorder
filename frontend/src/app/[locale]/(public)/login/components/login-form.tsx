@@ -14,7 +14,7 @@ import {
   TextInput,
   Title,
 } from "@mantine/core";
-import { IconLock, IconMail, IconSparkles } from "@tabler/icons-react";
+import { IconLock, IconMail } from "@tabler/icons-react";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -34,40 +34,33 @@ export function LoginForm() {
 
   return (
     <Container size="xs">
-      <Stack align="center" gap={24} mb={32}>
-        <div
+      <Stack align="center" gap={16} mb={48}>
+        <Title
+          order={1}
+          ta="center"
           style={{
-            width: 64,
-            height: 64,
-            borderRadius: 16,
-            background: "linear-gradient(135deg, #6366f1, #a855f7)",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            color: "#ffffff",
+            fontSize: "clamp(2.5rem, 6vw, 4rem)",
+            fontWeight: 800,
+            lineHeight: 1.2,
+            letterSpacing: "-0.03em",
+            background:
+              "linear-gradient(135deg, #ffffff 0%, #e2e8f0 50%, #94a3b8 100%)",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+            filter: "drop-shadow(0 0 40px rgba(99, 102, 241, 0.3))",
           }}
         >
-          <IconSparkles size={32} />
-        </div>
-        <Stack align="center" gap={8}>
-          <Title
-            order={1}
-            ta="center"
-            style={{
-              fontSize: "2rem",
-              fontWeight: 800,
-              lineHeight: 1.3,
-              letterSpacing: "-0.03em",
-              background:
-                "linear-gradient(135deg, #ffffff 0%, #e2e8f0 50%, #94a3b8 100%)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-            }}
-          >
-            {t("title")}
-          </Title>
-          <Text style={{ color: "#64748b" }}>{t("subtitle")}</Text>
-        </Stack>
+          {t("title")}
+        </Title>
+
+        <Text
+          size="xl"
+          ta="center"
+          maw={600}
+          style={{ color: "#94a3b8", lineHeight: 1.7 }}
+        >
+          {t("subtitle")}
+        </Text>
       </Stack>
 
       <Paper

@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 600" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <!-- Glow that fades toward bottom -->
+    <radialGradient id="glowTop" cx="50%" cy="30%" r="60%">
+      <stop offset="0%" style="stop-color:#a855f7;stop-opacity:0.18"/>
+      <stop offset="60%" style="stop-color:#a855f7;stop-opacity:0.05"/>
+      <stop offset="100%" style="stop-color:#a855f7;stop-opacity:0"/>
+    </radialGradient>
+
+    <radialGradient id="glowTop2" cx="50%" cy="30%" r="50%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:0.12"/>
+      <stop offset="70%" style="stop-color:#6366f1;stop-opacity:0.03"/>
+      <stop offset="100%" style="stop-color:#6366f1;stop-opacity:0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background glows - positioned high, fade naturally -->
+  <ellipse cx="25%" cy="25%" rx="500" ry="350" fill="url(#glowTop)"/>
+  <ellipse cx="75%" cy="20%" rx="450" ry="300" fill="url(#glowTop2)"/>
+  <ellipse cx="50%" cy="35%" rx="400" ry="280" fill="url(#glowTop)"/>
+
+  <!-- Particles - mostly in top half, fewer and more transparent toward bottom -->
+
+  <!-- Top row - brightest -->
+  <circle cx="8%" cy="10%" r="2" fill="#a855f7" opacity="0.7">
+    <animate attributeName="cy" values="10%;7%;13%;10%" dur="8s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.7;0.4;0.7" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="22%" cy="8%" r="1.5" fill="#6366f1" opacity="0.6">
+    <animate attributeName="cy" values="8%;5%;11%;8%" dur="6s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="38%" cy="12%" r="2.5" fill="#a855f7" opacity="0.5">
+    <animate attributeName="cy" values="12%;9%;15%;12%" dur="10s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="52%" cy="6%" r="1.5" fill="#ff4444" opacity="0.6">
+    <animate attributeName="cy" values="6%;3%;9%;6%" dur="7s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.6;0.9;0.6" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="68%" cy="10%" r="2" fill="#6366f1" opacity="0.6">
+    <animate attributeName="cy" values="10%;7%;13%;10%" dur="9s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="82%" cy="8%" r="1.5" fill="#a855f7" opacity="0.5">
+    <animate attributeName="cy" values="8%;5%;11%;8%" dur="5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="94%" cy="14%" r="2" fill="#6366f1" opacity="0.5">
+    <animate attributeName="cy" values="14%;11%;17%;14%" dur="7s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Second row -->
+  <circle cx="5%" cy="28%" r="1.5" fill="#ff4444" opacity="0.5">
+    <animate attributeName="cy" values="28%;25%;31%;28%" dur="8s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.5;0.8;0.5" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="18%" cy="22%" r="2" fill="#a855f7" opacity="0.5">
+    <animate attributeName="cy" values="22%;19%;25%;22%" dur="6s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="45%" cy="25%" r="1.5" fill="#6366f1" opacity="0.4">
+    <animate attributeName="cy" values="25%;22%;28%;25%" dur="9s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="75%" cy="20%" r="2" fill="#a855f7" opacity="0.5">
+    <animate attributeName="cy" values="20%;17%;23%;20%" dur="7s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="92%" cy="26%" r="1.5" fill="#6366f1" opacity="0.45">
+    <animate attributeName="cy" values="26%;23%;29%;26%" dur="8s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Third row - getting fainter -->
+  <circle cx="12%" cy="42%" r="1.5" fill="#a855f7" opacity="0.35">
+    <animate attributeName="cy" values="42%;39%;45%;42%" dur="9s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="30%" cy="38%" r="1" fill="#6366f1" opacity="0.3">
+    <animate attributeName="cy" values="38%;35%;41%;38%" dur="6s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="60%" cy="40%" r="1.5" fill="#ff4444" opacity="0.35">
+    <animate attributeName="cy" values="40%;37%;43%;40%" dur="7s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.35;0.5;0.35" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="88%" cy="38%" r="1" fill="#a855f7" opacity="0.3">
+    <animate attributeName="cy" values="38%;35%;41%;38%" dur="8s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Bottom area - very faint, sparse -->
+  <circle cx="20%" cy="58%" r="1" fill="#6366f1" opacity="0.15">
+    <animate attributeName="cy" values="58%;55%;61%;58%" dur="10s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="50%" cy="55%" r="1" fill="#a855f7" opacity="0.12">
+    <animate attributeName="cy" values="55%;52%;58%;55%" dur="8s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="78%" cy="52%" r="1" fill="#6366f1" opacity="0.1">
+    <animate attributeName="cy" values="52%;49%;55%;52%" dur="9s" repeatCount="indefinite"/>
+  </circle>
+</svg>

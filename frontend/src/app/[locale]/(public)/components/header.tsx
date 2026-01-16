@@ -1,45 +1,68 @@
-import { getToken } from "@/lib/token";
-import { Badge, Button, Container, Flex, Title } from "@mantine/core";
-import { IconUserPlus } from "@tabler/icons-react";
+"use client";
+
+import {
+  Burger,
+  Button,
+  Container,
+  Drawer,
+  Flex,
+  Group,
+  NavLink,
+  Stack,
+  Title,
+} from "@mantine/core";
+import { useDisclosure } from "@mantine/hooks";
+import { IconUser } from "@tabler/icons-react";
+import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useCallback } from "react";
 
-const links = [
-  { link: "/", label: "Home" },
-  { link: "/tiktok", label: "Tiktok recordings" },
-  { link: "/twitch", label: "Twitch recordings" },
-  { link: "/pricing", label: "Pricing" },
-];
+interface HeaderProps {
+  isLoggedIn?: boolean;
+}
 
-export async function Header() {
-  const token = await getToken();
-  const isLoggedIn = !!token;
+export function Header({ isLoggedIn = false }: HeaderProps) {
+  const t = useTranslations("footer");
+  const locale = useLocale();
+  const pathname = usePathname();
+  const basePath = pathname.replace(/^\/ar/, "") || "/";
+
+  const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] =
+    useDisclosure();
+
+  const switchLocale = useCallback(
+    (newLocale: string) => {
+      document.cookie = `NEXT_LOCALE=${newLocale}; path=/; max-age=31536000`;
+      const href =
+        newLocale === "en"
+          ? basePath
+          : `/ar${basePath === "/" ? "" : basePath}`;
+      window.location.href = href;
+    },
+    [basePath]
+  );
 
   return (
-    <header
-      style={{
-        height: 64,
-        marginBottom: 32,
-      }}
-    >
-      <Container size="lg" h="100%">
-        <Flex justify="space-between" align="center" h="100%">
-          {/* Logo */}
-          <Link
-            href="/"
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: 10,
-              textDecoration: "none",
-            }}
-          >
-            <Badge
-              size="lg"
-              c="white"
-              bg="red"
-              radius="xs"
+    <>
+      <style>{`
+        @keyframes blink {
+          0%, 100% { opacity: 1; }
+          50% { opacity: 0.3; }
+        }
+      `}</style>
+
+      <header>
+        <Container size="xl" py={12}>
+          <Flex justify="space-between" align="center">
+            {/* Logo */}
+            <Link
+              href="/"
               style={{
-                animation: "pulse 2s ease-in-out infinite",
+                textDecoration: "none",
+                display: "flex",
+                alignItems: "center",
+                gap: 10,
               }}
             >
               <span
@@ -47,6 +70,14 @@ export async function Header() {
                   display: "inline-flex",
                   alignItems: "center",
                   gap: 4,
+                  background: "#e53935",
+                  color: "white",
+                  padding: "4px 10px",
+                  borderRadius: 4,
+                  fontSize: "0.8rem",
+                  fontWeight: 700,
+                  textTransform: "uppercase",
+                  letterSpacing: "0.5px",
                 }}
               >
                 <span
@@ -58,93 +89,210 @@ export async function Header() {
                     animation: "blink 1s ease-in-out infinite",
                   }}
                 />
-                <span
-                  style={{
-                    letterSpacing: "0.5px",
-                    fontWeight: 700,
-                    textTransform: "uppercase",
-                    textShadow: "0 0 1px rgba(255,255,255,0.5)",
-                  }}
-                >
-                  Live
-                </span>
+                Live
               </span>
-            </Badge>
+              <Title order={4} c="white" fw={700}>
+                Stream Recorder
+              </Title>
+            </Link>
 
-            <Title
-              order={4}
-              style={{
-                color: "#f1f5f9",
-                fontWeight: 700,
-                letterSpacing: "-0.02em",
-              }}
-            >
-              Stream Recorder
-            </Title>
-          </Link>
-
-          {/* Navigation */}
-          <Flex gap={4} align="center" visibleFrom="sm" display="none">
-            {links.map((link) => (
-              <a
-                key={link.label}
-                href={link.link}
-                style={{
-                  color: "#94a3b8",
-                  fontSize: "0.95rem",
-                  fontWeight: 500,
-                  borderRadius: 8,
-                  padding: "8px 16px",
-                  textDecoration: "none",
-                }}
-              >
-                {link.label}
-              </a>
-            ))}
-          </Flex>
-
-          <Flex gap={12} align="center">
-            {isLoggedIn ? (
+            {/* Desktop Nav */}
+            <Group gap={8} visibleFrom="md">
               <Button
-                component="a"
-                href="/following"
-                variant="gradient"
-                gradient={{ from: "#6366f1", to: "#a855f7", deg: 135 }}
-                radius="md"
-                style={{ fontWeight: 600 }}
+                variant="subtle"
+                c="white"
+                component={Link}
+                href="/creators/all"
               >
-                Dashboard
+                {t("header.creators")}
               </Button>
-            ) : (
-              <>
+              <Button
+                variant="subtle"
+                c="white"
+                component={Link}
+                href="/recordings/all"
+              >
+                {t("header.recordings")}
+              </Button>
+            </Group>
+
+            <Group gap={12} visibleFrom="md">
+              {/* <Menu>
+                <Menu.Target>
+                  <Button
+                    variant="subtle"
+                    c="white"
+                    leftSection={<IconGlobe size={18} />}
+                    rightSection={<IconChevronDown size={14} />}
+                  >
+                    {locale === "en" ? "EN" : "عربي"}
+                  </Button>
+                </Menu.Target>
+                <Menu.Dropdown>
+                  {navConfig.languages
+                    .filter((lang) => locale !== lang.code)
+                    .map((lang) => (
+                      <Menu.Item
+                        key={lang.code}
+                        onClick={() => switchLocale(lang.code)}
+                      >
+                        {lang.label}
+                      </Menu.Item>
+                    ))}
+                </Menu.Dropdown>
+              </Menu>*/}
+
+              {isLoggedIn ? (
                 <Button
-                  component="a"
-                  href="/login"
-                  variant="subtle"
-                  radius="md"
-                  style={{
-                    color: "#94a3b8",
-                    fontWeight: 500,
-                  }}
-                >
-                  Login
-                </Button>
-                <Button
-                  component="a"
-                  href="/register"
+                  component={Link}
+                  href="/dashboard"
                   variant="gradient"
                   gradient={{ from: "#6366f1", to: "#a855f7", deg: 135 }}
                   radius="md"
-                  leftSection={<IconUserPlus size={18} />}
-                  style={{ fontWeight: 600 }}
                 >
-                  Get Started
+                  {t("header.dashboard")}
                 </Button>
-              </>
-            )}
+              ) : (
+                <>
+                  <Button
+                    variant="subtle"
+                    c="white"
+                    component={Link}
+                    href="/login"
+                  >
+                    {t("header.login")}
+                  </Button>
+                  <Button
+                    component={Link}
+                    href="/register"
+                    variant="gradient"
+                    gradient={{ from: "#6366f1", to: "#a855f7", deg: 135 }}
+                    radius="md"
+                  >
+                    {t("header.signUp")}
+                  </Button>
+                </>
+              )}
+            </Group>
+
+            {/* Mobile */}
+            <Group gap={12} hiddenFrom="md">
+              <Burger
+                opened={drawerOpened}
+                onClick={toggleDrawer}
+                color="white"
+              />
+            </Group>
           </Flex>
-        </Flex>
-      </Container>
-    </header>
+        </Container>
+      </header>
+
+      <Drawer
+        opened={drawerOpened}
+        onClose={closeDrawer}
+        position="right"
+        size="100%"
+        title={
+          <Link
+            href="/"
+            style={{
+              textDecoration: "none",
+              display: "flex",
+              alignItems: "center",
+              gap: 10,
+            }}
+            onClick={closeDrawer}
+          >
+            <span
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 4,
+                background: "#e53935",
+                color: "white",
+                padding: "4px 10px",
+                borderRadius: 4,
+                fontSize: "0.8rem",
+                fontWeight: 700,
+                textTransform: "uppercase",
+                letterSpacing: "0.5px",
+              }}
+            >
+              <span
+                style={{
+                  width: 6,
+                  height: 6,
+                  borderRadius: "50%",
+                  background: "#ffffff",
+                  animation: "blink 1s ease-in-out infinite",
+                }}
+              />
+              Live
+            </span>
+            <Title order={4} fw={700} c="white">
+              Stream Recorder
+            </Title>
+          </Link>
+        }
+      >
+        <Stack gap="xs" mt="md">
+          <NavLink
+            label={t("header.creators")}
+            href="/creators/all"
+            component={Link}
+            onClick={closeDrawer}
+          />
+          <NavLink
+            label={t("header.recordings")}
+            href="/recordings/all"
+            component={Link}
+            onClick={closeDrawer}
+          />
+
+          {/*<NavLink
+            label={t("header.language")}
+            childrenOffset={28}
+            defaultOpened={false}
+          >
+            {navConfig.languages.map((lang) => (
+              <NavLink
+                key={lang.code}
+                label={lang.label}
+                onClick={() => {
+                  switchLocale(lang.code);
+                  closeDrawer();
+                }}
+                active={locale === lang.code}
+              />
+            ))}
+          </NavLink>*/}
+
+          <Group gap={12} mt="xl">
+            <Button
+              variant="gradient"
+              gradient={{ from: "#6366f1", to: "#a855f7", deg: 135 }}
+              radius="lg"
+              fullWidth
+              component={Link}
+              href="/register"
+              onClick={closeDrawer}
+            >
+              {t("header.signUp")}
+            </Button>
+            <Button
+              variant="default"
+              radius="lg"
+              fullWidth
+              leftSection={<IconUser size={18} />}
+              component={Link}
+              href="/login"
+              onClick={closeDrawer}
+            >
+              {t("header.login")}
+            </Button>
+          </Group>
+        </Stack>
+      </Drawer>
+    </>
   );
 }

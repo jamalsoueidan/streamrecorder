@@ -60,7 +60,29 @@ export default async function LandingPage() {
 
   return (
     <Container size="lg">
-      <Stack align="center">
+      <div
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: 700,
+          zIndex: 0,
+          pointerEvents: "none",
+        }}
+      >
+        <Image
+          src="/background.svg"
+          alt=""
+          style={{
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+          }}
+        />
+      </div>
+
+      <Stack align="center" style={{ position: "relative", zIndex: 1 }}>
         <div>
           <Title
             order={1}
