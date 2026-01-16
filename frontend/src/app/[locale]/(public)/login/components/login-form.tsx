@@ -1,7 +1,7 @@
 "use client";
 
-import { login } from "@/app/actions/auth";
 import { trackEvent } from "@/app/lib/analytics";
+import { authClient } from "@/lib/auth-client";
 import {
   Anchor,
   Button,
@@ -18,19 +18,34 @@ import { IconLock, IconMail } from "@tabler/icons-react";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useActionState, useEffect } from "react";
+import { useState } from "react";
 
 export function LoginForm() {
   const t = useTranslations("login");
-  const [state, formAction, pending] = useActionState(login, null);
   const router = useRouter();
+  const [error, setError] = useState("");
+  const [pending, setPending] = useState(false);
 
-  useEffect(() => {
-    if (state?.success) {
-      trackEvent("login");
-      router.push("/following");
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setError("");
+    setPending(true);
+
+    const formData = new FormData(e.currentTarget);
+    const email = formData.get("email") as string;
+    const password = formData.get("password") as string;
+
+    const { error } = await authClient.signIn.email({ email, password });
+
+    if (error) {
+      setError(error?.message || "");
+      setPending(false);
+      return;
     }
-  }, [state, router]);
+
+    trackEvent("login");
+    router.push("/following");
+  };
 
   return (
     <Container size="xs">
@@ -71,7 +86,7 @@ export function LoginForm() {
           border: "1px solid rgba(255, 255, 255, 0.06)",
         }}
       >
-        {state?.error && (
+        {error && (
           <Paper
             p="md"
             radius="md"
@@ -82,12 +97,12 @@ export function LoginForm() {
             }}
           >
             <Text size="sm" style={{ color: "#fca5a5" }}>
-              {state.error}
+              {error}
             </Text>
           </Paper>
         )}
 
-        <form action={formAction}>
+        <form onSubmit={handleSubmit}>
           <Stack gap="lg">
             <TextInput
               name="email"
