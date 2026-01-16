@@ -1,12 +1,7 @@
 import { getFollowerFilters } from "@/app/actions/followers";
+import { getQueryClient, HydrateClient, trpc } from "@/app/trpc/server";
 import { Divider, Group, Stack, Text, Title } from "@mantine/core";
 import { IconWorldSearch } from "@tabler/icons-react";
-import {
-  dehydrate,
-  HydrationBoundary,
-  QueryClient,
-} from "@tanstack/react-query";
-import { fetchFollowers } from "./actions/fetch-followers";
 import CreatorsInfinity from "./components/creators-infinity";
 import Filters from "./components/filters";
 import { CreatorFilters, creatorsParamsCache } from "./lib/search-params";
@@ -18,18 +13,25 @@ export default async function Page({
 }) {
   const filters = await creatorsParamsCache.parse(searchParams);
 
-  const queryClient = new QueryClient();
+  const queryClient = getQueryClient();
 
-  await queryClient.prefetchInfiniteQuery({
-    queryKey: ["creators", filters],
-    queryFn: ({ pageParam }) => fetchFollowers(filters, pageParam),
-    initialPageParam: 1,
-  });
+  await queryClient.prefetchInfiniteQuery(
+    trpc.followers.browse.infiniteQueryOptions({
+      scope: "discover",
+      filters: {
+        country: filters.country ?? undefined,
+        language: filters.language ?? undefined,
+        gender: filters.gender ?? undefined,
+        type: filters.type ?? undefined,
+        search: filters.search ?? undefined,
+      },
+    })
+  );
 
   const filterOptions = await getFollowerFilters();
 
   return (
-    <HydrationBoundary state={dehydrate(queryClient)}>
+    <HydrateClient>
       <Stack w="100%">
         <Group justify="space-between" w="100%">
           <Stack gap={2}>
@@ -49,6 +51,6 @@ export default async function Page({
         <Divider mx={{ base: "-xs", sm: "-md" }} />
         <CreatorsInfinity />
       </Stack>
-    </HydrationBoundary>
+    </HydrateClient>
   );
 }

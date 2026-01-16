@@ -6,29 +6,43 @@ import { useEffect } from "react";
 
 import { useQueryStates } from "nuqs";
 
+import { useTRPC } from "@/app/trpc/trpc";
 import { useInfiniteQuery } from "@tanstack/react-query";
-import { fetchFollowers } from "../actions/fetch-followers";
 import { exploreParsers } from "../lib/search-params";
 import FollowerItem from "./follower-item";
 
 export default function CreatorsInfinity() {
   const [filters] = useQueryStates(exploreParsers);
 
+  const trpc = useTRPC();
+
   const { data, fetchNextPage, hasNextPage, isFetchingNextPage, isLoading } =
-    useInfiniteQuery({
-      queryKey: ["creators", filters],
-      queryFn: ({ pageParam }) => fetchFollowers(filters, pageParam),
-      initialPageParam: 1,
-      getNextPageParam: (lastPage) => {
-        const { page = 1, pageCount = 0 } = lastPage.meta?.pagination ?? {};
-        return page < pageCount ? page + 1 : undefined;
-      },
-    });
+    useInfiniteQuery(
+      trpc.followers.browse.infiniteQueryOptions(
+        {
+          scope: "discover",
+          filters: {
+            country: filters.country ?? undefined,
+            language: filters.language ?? undefined,
+            gender: filters.gender ?? undefined,
+            type: filters.type ?? undefined,
+            search: filters.search ?? undefined,
+          },
+        },
+        {
+          getNextPageParam: (lastPage) => {
+            const { page = 1, pageCount = 0 } = lastPage.meta?.pagination ?? {};
+            return page < pageCount ? page + 1 : undefined;
+          },
+        }
+      )
+    );
 
   const { ref, entry } = useIntersection({
     threshold: 0.5,
   });
 
+  console.log(data);
   useEffect(() => {
     if (entry?.isIntersecting && hasNextPage && !isFetchingNextPage) {
       fetchNextPage();
