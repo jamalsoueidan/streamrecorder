@@ -68,7 +68,9 @@ export default function MainLayout({
       style={{ flexDirection: "column", position: "relative", zIndex: 1 }}
     >
       <Header />
-      <Box flex={1}>{children}</Box>
+      <Box flex={1} mt="xl">
+        {children}
+      </Box>
       <Footer />
     </Box>
   );

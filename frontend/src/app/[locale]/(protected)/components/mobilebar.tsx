@@ -1,6 +1,5 @@
 "use client";
 
-import { useNavigation } from "@/app/providers/navigation-provider";
 import { useUser } from "@/app/providers/user-provider";
 import {
   Group,
@@ -16,6 +15,7 @@ import {
   IconDotsVertical,
   IconDownload,
   IconLogout,
+  IconPlayerPlayFilled,
   IconShare,
   IconSquarePlus,
   IconUser,
@@ -23,7 +23,7 @@ import {
 } from "@tabler/icons-react";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState, useTransition } from "react";
-import { iconMap } from "./navbar";
+import { navigation } from "./navbar";
 
 // Check if running in standalone mode (outside component)
 const getIsInstalled = () => {
@@ -33,7 +33,6 @@ const getIsInstalled = () => {
 
 export function MobileBar() {
   const [isPending, startTransition] = useTransition();
-  const navigation = useNavigation();
   const user = useUser();
   const pathname = usePathname();
   const router = useRouter();
@@ -90,15 +89,15 @@ export function MobileBar() {
   };
 
   const currentValue = (() => {
-    const section = navigation?.section?.find((section) =>
+    const section = navigation.find((section) =>
       section.links?.some((link) => pathname.startsWith(link.url || ""))
     );
     return section ? "menu" + section.title : "";
   })();
 
   const links =
-    navigation?.section?.map((section) => {
-      const Icon = iconMap[section.icon || "IconPlayerRecord"];
+    navigation?.map((section) => {
+      const Icon = section.icon || IconPlayerPlayFilled;
       return {
         value: "menu" + section.title,
         label: (
@@ -117,7 +116,7 @@ export function MobileBar() {
 
             <Menu.Dropdown>
               {section.links?.map((item) => {
-                const Icon = iconMap[item.icon || "IconPlayerRecord"];
+                const Icon = item.icon || IconPlayerPlayFilled;
 
                 return (
                   <Menu.Item

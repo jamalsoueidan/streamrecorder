@@ -10,15 +10,10 @@ import {
 } from "@mantine/core";
 import {
   IconArrowLeft,
-  IconBellRinging,
   IconBrandSafari,
-  IconFlower,
   IconHeart,
   IconLogout,
-  IconPlayerPlayFilled,
   IconPlayerRecordFilled,
-  IconQuestionMark,
-  IconStar,
   IconUsers,
   IconVideo,
   IconWorldSearch,
@@ -29,24 +24,62 @@ import { usePathname } from "next/navigation";
 
 import { useRouter } from "next/navigation";
 
-import { useNavigation } from "@/app/providers/navigation-provider";
 import { useUser } from "@/app/providers/user-provider";
 import AddFollowerForm from "./add-follower-form";
 import classes from "./navbar.module.css";
 import { RoleBadge } from "./role-badge";
 
-export const iconMap: Record<string, typeof IconBellRinging> = {
-  IconFlower: IconFlower,
-  IconUsers: IconUsers,
-  IconPlayerPlayFilled: IconPlayerPlayFilled,
-  IconVideo: IconVideo,
-  IconWorldSearch: IconWorldSearch,
-  IconQuestionMark: IconQuestionMark,
-  IconPlayerRecord: IconPlayerRecordFilled,
-  IconBrandSafari: IconBrandSafari,
-  IconHeart: IconHeart,
-  IconStar: IconStar,
-};
+export const navigation = [
+  {
+    id: 9,
+    title: "Recordings",
+    icon: IconVideo,
+    links: [
+      {
+        id: 44,
+        label: "Explore",
+        url: "/explore",
+        icon: IconBrandSafari,
+        color: null,
+      },
+      {
+        id: 45,
+        label: "Following",
+        url: "/following",
+        icon: IconUsers,
+        color: null,
+      },
+      {
+        id: 46,
+        label: "Live",
+        url: "/live",
+        icon: IconPlayerRecordFilled,
+        color: "red",
+      },
+    ],
+  },
+  {
+    id: 10,
+    title: "Creators",
+    icon: IconUsers,
+    links: [
+      {
+        id: 47,
+        label: "Discover",
+        url: "/discover",
+        icon: IconWorldSearch,
+        color: null,
+      },
+      {
+        id: 48,
+        label: "My List",
+        url: "/my-list",
+        icon: IconHeart,
+        color: null,
+      },
+    ],
+  },
+];
 
 export function Navbar({
   close,
@@ -56,7 +89,6 @@ export function Navbar({
   opened: boolean;
 }) {
   const router = useRouter();
-  const navigation = useNavigation();
   const user = useUser();
   const pathname = usePathname();
 
@@ -69,9 +101,9 @@ export function Navbar({
     }
   };
 
-  const links = navigation?.section?.map((section) => {
+  const links = navigation?.map((section) => {
     const html = section.links?.map((item) => {
-      const Icon = iconMap[item.icon || "IconPlayerRecord"];
+      const Icon = item.icon || IconPlayerRecordFilled;
       return (
         <Link
           className={classes.link}

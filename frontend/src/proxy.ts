@@ -8,15 +8,18 @@ import { routing } from "./i18n/routing";
 const PLATFORMS = streamingPlatforms.map((p) => p.name.toLowerCase());
 
 // Get locales from your config
-const locales = routing.locales; // e.g. ["en", "ar", "fr", "es"]
-const defaultLocale = routing.defaultLocale; // e.g. "en"
+const locales = routing.locales;
+const defaultLocale = routing.defaultLocale;
 
 const handleI18nRouting = createIntlMiddleware(routing);
+
+const STATIC_EXT =
+  /\.(js|css|ico|png|jpg|jpeg|gif|svg|webp|webm|mp4|mp3|woff|woff2|ttf|eot|otf|json|xml|txt|map|pdf|zip)$/i;
 
 export function proxy(request: NextRequest) {
   const path = request.nextUrl.pathname;
 
-  if (/\.[a-z0-9]{2,5}$/i.test(path)) {
+  if (STATIC_EXT.test(path)) {
     return NextResponse.next();
   }
 
@@ -36,6 +39,7 @@ export function proxy(request: NextRequest) {
   if (PLATFORMS.includes(platformSegment)) {
     const token = request.cookies.get("strapi_jwt");
     const destination = token ? "protected" : "public";
+    const rewriteUrl = `/${locale}/${destination}${pathWithoutLocale}`;
 
     return NextResponse.rewrite(
       new URL(`/${locale}/${destination}${pathWithoutLocale}`, request.url)
