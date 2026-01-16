@@ -6,6 +6,7 @@ import {
   UserSearchResult,
 } from "@/app/actions/check-user";
 import { follow } from "@/app/actions/followers";
+import { useKeyboardHeight } from "@/app/hooks/use-keyboard-height";
 import { trackEvent } from "@/app/lib/analytics";
 import { parseUsername } from "@/app/lib/parse-username";
 
@@ -47,6 +48,7 @@ const data = [
 ];
 
 export default function AddFollowerForm() {
+  const keyboardHeight = useKeyboardHeight();
   const router = useRouter();
   const [query, setQuery] = useState("");
   const [debouncedQuery] = useDebouncedValue(query, 500);
@@ -133,7 +135,7 @@ export default function AddFollowerForm() {
         color: "red",
       });
     }
-  }, [state]);
+  }, [searchResult?.type, state]);
 
   // Handle clicking on a user result
   const handleUserSelect = (user: UserSearchResult) => {
@@ -238,12 +240,13 @@ export default function AddFollowerForm() {
         styles={{
           content: {
             ...(isMobile && {
-              position: "absolute",
-              bottom: 0,
+              position: "fixed",
+              bottom: keyboardHeight,
               left: 0,
               right: 0,
               borderRadius: "16px 16px 0 0",
-              maxHeight: "80dvh",
+              maxHeight: `calc(80dvh - ${keyboardHeight}px)`,
+              transition: "bottom 0.15s ease-out, max-height 0.15s ease-out",
             }),
           },
         }}
@@ -286,6 +289,7 @@ export default function AddFollowerForm() {
             disabled={detectedPlatform !== null}
             data={data}
             fullWidth
+            size={isMobile ? "xs" : "sm"}
           />
           {detectedPlatform && (
             <Text size="xs" c="dimmed" ta="center" my="xs">

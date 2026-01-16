@@ -30,7 +30,7 @@ export function RegisterForm() {
   useEffect(() => {
     if (state?.success) {
       trackEvent("signup");
-      router.push("/following");
+      router.push("/discover");
     }
   }, [state, router]);
 
