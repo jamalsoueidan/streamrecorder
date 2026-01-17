@@ -36,14 +36,14 @@ export default async function Page({ params, children }: PageProps) {
   const t = await getTranslations("creators");
 
   const platform = streamingPlatforms.find(
-    (p) => p.name.toLowerCase() === type
+    (p) => p.name.toLowerCase() === type,
   ) || {
     color: "#ff0050",
     name: "",
     file: "creators.png",
   };
 
-  const platformName = platform.name || "All";
+  const platformKey = platform.name ? type : "all";
 
   return (
     <Container size="lg">
@@ -64,7 +64,7 @@ export default async function Page({ params, children }: PageProps) {
             paddingBottom: "0.1em",
           }}
         >
-          {t("hero.title", { platform: platformName })}
+          {t(`hero.title.${platformKey}`)}
         </Title>
 
         <Text
@@ -73,7 +73,7 @@ export default async function Page({ params, children }: PageProps) {
           maw={600}
           style={{ color: "#94a3b8", lineHeight: 1.7 }}
         >
-          {t("hero.subtitle", { platform: platformName })}
+          {t(`hero.subtitle.${platformKey}`)}
         </Text>
 
         <Flex align="center" gap={30} mt={20} wrap="wrap">
@@ -114,7 +114,7 @@ export default async function Page({ params, children }: PageProps) {
               color: "#f1f5f9",
             }}
           >
-            {t("features.title", { platform: platformName })}
+            {t(`features.title.${platformKey}`)}
           </Title>
           <Text
             ta="center"
@@ -215,14 +215,14 @@ export default async function Page({ params, children }: PageProps) {
                 color: "#f1f5f9",
               }}
             >
-              {t("cta.title", { platform: platformName })}
+              {t(`cta.title.${platformKey}`)}
             </Title>
             <Text
               size="lg"
               maw={500}
               style={{ color: "#94a3b8", lineHeight: 1.7 }}
             >
-              {t("cta.subtitle", { platform: platformName })}
+              {t(`cta.subtitle.${platformKey}`)}
             </Text>
             <Flex
               gap={16}
@@ -267,7 +267,7 @@ export default async function Page({ params, children }: PageProps) {
             ),
           }}
         >
-          {t(`about.${type}`)}
+          {t(`about.${platformKey}`)}
         </ReactMarkdown>
       </div>
     </Container>

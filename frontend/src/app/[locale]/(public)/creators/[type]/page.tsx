@@ -33,13 +33,14 @@ export async function generateMetadata({
   const t = await getTranslations("creators");
 
   const platform = streamingPlatforms.find(
-    (p) => p.name.toLowerCase() === type
+    (p) => p.name.toLowerCase() === type,
   );
   const platformKey = platform ? type : "all";
 
   return {
     title: t(`meta.${platformKey}.title`),
     description: t(`meta.${platformKey}.description`),
+    keywords: t.raw(`meta.${platformKey}.keywords`),
     openGraph: {
       title: t(`meta.${platformKey}.title`),
       description: t(`meta.${platformKey}.description`),
@@ -58,15 +59,14 @@ export default async function Page({ params, searchParams }: PageProps) {
   const t = await getTranslations("creators");
 
   const platform = streamingPlatforms.find(
-    (p) => p.name.toLowerCase() === type
+    (p) => p.name.toLowerCase() === type,
   ) || {
     color: "#ff0050",
     name: "",
     file: "creators.png",
   };
 
-  const platformName = platform.name || "All";
-  const platformKey = platform ? type : "all";
+  const platformKey = platform.name ? type : "all";
 
   const {
     data: { data: followers, meta },
@@ -160,7 +160,7 @@ export default async function Page({ params, searchParams }: PageProps) {
                 {t("empty.title")}
               </Title>
               <Text style={{ color: "#64748b" }}>
-                {t("empty.description", { platform: platformName })}
+                {t(`empty.description.${platformKey}`)}
               </Text>
               <Button
                 component="a"
