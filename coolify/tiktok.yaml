@@ -1,0 +1,19 @@
+services:
+  create-tiktok-service:
+    image: "alpine:latest"
+    restart: "no"
+    volumes:
+      - "./tiktok-app:/app"
+    command: "sh -c 'cat > /app/service.js << '\\''JSEOF'\\''\nconst http = require(\"http\");\nconst url = require(\"url\");\nconst Tiktok = require(\"@tobyg74/tiktok-api-dl\");\n\nconsole.log(\"TikTok API module loaded, server starting...\");\n\nconst server = http.createServer(async (req, res) => {\n  const parsed = url.parse(req.url, true);\n  const path = parsed.pathname;\n  const query = parsed.query;\n  \n  res.setHeader(\"Content-Type\", \"application/json\");\n  \n  const start = Date.now();\n  \n  try {\n    if (path === \"/health\") {\n      res.end(JSON.stringify({ status: \"ok\" }));\n      return;\n    }\n    \n    if (path === \"/stalkuser\") {\n      const user = query.user;\n      if (!user) {\n        res.statusCode = 400;\n        res.end(JSON.stringify({ error: \"Missing ?user= parameter\" }));\n        return;\n      }\n      const result = await Tiktok.StalkUser(user);\n      res.end(JSON.stringify({ ...result, ms: Date.now() - start }));\n      return;\n    }\n    \n    if (path === \"/downloader\") {\n      const tiktokUrl = query.url;\n      const version = query.version || \"v2\";\n      if (!tiktokUrl) {\n        res.statusCode = 400;\n        res.end(JSON.stringify({ error: \"Missing ?url= parameter\" }));\n        return;\n      }\n      const result = await Tiktok.Downloader(tiktokUrl, { version });\n      res.end(JSON.stringify({ ...result.result, ms: Date.now() - start }));\n      return;\n    }\n    \n    res.statusCode = 404;\n    res.end(JSON.stringify({ error: \"Not found. Use /stalkuser?user= or /downloader?url=\" }));\n    \n  } catch (e) {\n    res.statusCode = 500;\n    res.end(JSON.stringify({ error: e.message, ms: Date.now() - start }));\n  }\n});\n\nserver.listen(3456, \"0.0.0.0\", () => {\n  console.log(\"TikTok API service running on port 3456\");\n});\nJSEOF'\n"
+  tiktok-service:
+    image: "node:20-slim"
+    ports:
+      - "3456:3456"
+    restart: always
+    volumes:
+      - "./tiktok-app:/app"
+    working_dir: /app
+    command: 'sh -c "npm install @tobyg74/tiktok-api-dl && node service.js"'
+    depends_on:
+      create-tiktok-service:
+        condition: service_completed_successfully
