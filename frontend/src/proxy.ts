@@ -41,9 +41,23 @@ export function proxy(request: NextRequest) {
     const destination = token ? "protected" : "public";
     const rewriteUrl = `/${locale}/${destination}${pathWithoutLocale}`;
 
-    return NextResponse.rewrite(
-      new URL(`/${locale}/${destination}${pathWithoutLocale}`, request.url)
-    );
+    const cookieLocale = request.cookies.get("NEXT_LOCALE")?.value;
+
+    // Only redirect if they want a NON-default locale
+    if (!hasLocalePrefix) {
+      const cookieLocale = request.cookies.get("NEXT_LOCALE")?.value;
+
+      if (
+        cookieLocale &&
+        cookieLocale !== defaultLocale &&
+        locales.includes(cookieLocale as any)
+      ) {
+        const redirectUrl = `/${cookieLocale}${pathWithoutLocale}`;
+        return NextResponse.redirect(new URL(redirectUrl, request.url));
+      }
+    }
+
+    return NextResponse.rewrite(new URL(rewriteUrl, request.url));
   }
 
   return handleI18nRouting(request);

@@ -7,16 +7,18 @@ import {
   Drawer,
   Flex,
   Group,
+  Menu,
   NavLink,
   Stack,
   Title,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
-import { IconUser } from "@tabler/icons-react";
+import { IconChevronDown, IconGlobe, IconUser } from "@tabler/icons-react";
 import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useCallback } from "react";
+import { navConfig } from "./nav";
 
 interface HeaderProps {
   isLoggedIn?: boolean;
@@ -117,7 +119,7 @@ export function Header({ isLoggedIn = false }: HeaderProps) {
             </Group>
 
             <Group gap={12} visibleFrom="md">
-              {/* <Menu>
+              <Menu>
                 <Menu.Target>
                   <Button
                     variant="subtle"
@@ -140,7 +142,7 @@ export function Header({ isLoggedIn = false }: HeaderProps) {
                       </Menu.Item>
                     ))}
                 </Menu.Dropdown>
-              </Menu>*/}
+              </Menu>
 
               {isLoggedIn ? (
                 <Button
