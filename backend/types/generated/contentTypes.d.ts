@@ -518,34 +518,6 @@ export interface ApiChangeLogChangeLog extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface ApiDashboardNavbarDashboardNavbar
-  extends Struct.SingleTypeSchema {
-  collectionName: 'dashboard_navbars';
-  info: {
-    displayName: 'DashboardNavbar';
-    pluralName: 'dashboard-navbars';
-    singularName: 'dashboard-navbar';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::dashboard-navbar.dashboard-navbar'
-    > &
-      Schema.Attribute.Private;
-    publishedAt: Schema.Attribute.DateTime;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
 export interface ApiFollowerFollower extends Struct.CollectionTypeSchema {
   collectionName: 'followers';
   info: {
@@ -1211,7 +1183,6 @@ declare module '@strapi/strapi' {
       'admin::user': AdminUser;
       'api::article.article': ApiArticleArticle;
       'api::change-log.change-log': ApiChangeLogChangeLog;
-      'api::dashboard-navbar.dashboard-navbar': ApiDashboardNavbarDashboardNavbar;
       'api::follower.follower': ApiFollowerFollower;
       'api::message.message': ApiMessageMessage;
       'api::recording.recording': ApiRecordingRecording;
