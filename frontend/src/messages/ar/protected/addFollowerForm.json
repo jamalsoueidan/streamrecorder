@@ -1,0 +1,30 @@
+{
+  "platforms": {
+    "tiktok": "تيك توك",
+    "twitch": "تويتش",
+    "kick": "كيك",
+    "youtube": "يوتيوب",
+    "afreecatv": "أفريكا تي في",
+    "pandalive": "باندا لايف"
+  },
+  "search": {
+    "placeholder": "أدخل @اسم_المستخدم أو رابط الملف الشخصي",
+    "searching": "جاري البحث في {platform}...",
+    "pasteButton": "لصق",
+    "pasteError": "الصق يدوياً باستخدام Ctrl+V أو الضغط المطول",
+    "parseError": "تعذر تحليل اسم المستخدم",
+    "notFound": "لم يتم العثور على شيء...",
+    "autoDetected": "تم اكتشاف المنصة تلقائياً من الرابط"
+  },
+  "hints": {
+    "tryFormats": "جرب هذه الصيغ:",
+    "enterUsername": "أدخل @اسم_المستخدم أو الصق رابط الملف الشخصي"
+  },
+  "actions": {
+    "follow": "متابعة",
+    "successTitle": "تمت المتابعة!",
+    "successMessage": "أنت الآن تتابع {username}",
+    "errorTitle": "خطأ"
+  },
+  "inputLabel": "أدخل اسم أو الرابط"
+}

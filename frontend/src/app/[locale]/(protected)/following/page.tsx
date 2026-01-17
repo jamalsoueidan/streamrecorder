@@ -7,6 +7,7 @@ import {
 } from "@tanstack/react-query";
 
 import { getFollowerFilters } from "@/app/actions/followers";
+import { getTranslations } from "next-intl/server";
 import { fetchRecordings } from "./actions/fetch-recordings";
 import Filters from "./components/filters";
 import FollowingInfinity from "./components/following-infinity";
@@ -17,6 +18,7 @@ export default async function Page({
 }: {
   searchParams: Promise<FollowingFilters>;
 }) {
+  const t = await getTranslations("protected.following");
   const filters = await followingParamsCache.parse(searchParams);
 
   const queryClient = new QueryClient();
@@ -37,11 +39,11 @@ export default async function Page({
             <Group gap="xs">
               <IconUsers size={32} />
               <Title order={1} size="h3">
-                Following
+                {t("title")}
               </Title>
             </Group>
             <Text size="xs" c="dimmed">
-              Recordings from creators you follow
+              {t("description")}
             </Text>
           </Stack>
 

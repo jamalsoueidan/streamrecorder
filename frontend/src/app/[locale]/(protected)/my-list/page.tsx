@@ -7,6 +7,7 @@ import {
   InfiniteData,
   QueryClient,
 } from "@tanstack/react-query";
+import { getTranslations } from "next-intl/server";
 import { fetchFollowers } from "./actions/fetch-followers";
 import CreatorsInfinity from "./components/creators-infinity";
 import Filters from "./components/filters";
@@ -17,6 +18,7 @@ export default async function Page({
 }: {
   searchParams: Promise<CreatorFilters>;
 }) {
+  const t = await getTranslations("protected.myList");
   const filters = await creatorsParamsCache.parse(searchParams);
 
   const queryClient = new QueryClient();
@@ -33,6 +35,8 @@ export default async function Page({
 
   const filterOptions = await getFollowerFilters();
 
+  const count = initialData?.pages?.[0]?.meta?.pagination?.total ?? 0;
+
   return (
     <HydrationBoundary state={dehydrate(queryClient)}>
       <Stack w="100%">
@@ -41,12 +45,11 @@ export default async function Page({
             <Group gap="xs">
               <IconHeart size={32} />
               <Title order={1} size="h3">
-                My List ({initialData?.pages?.[0]?.meta?.pagination?.total ?? 0}
-                )
+                {t("title", { count })}
               </Title>
             </Group>
             <Text size="xs" c="dimmed">
-              Manage your followed creators
+              {t("description")}
             </Text>
           </Stack>
 

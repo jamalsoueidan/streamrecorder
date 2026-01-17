@@ -48,7 +48,7 @@ function AccordionControl({
   return (
     <Center>
       <Accordion.Control {...props} />
-      <Flex gap="xs" align="center" mr="md">
+      <Flex gap="xs" align="center" mx="md">
         {isMobile ? null : <OpenSocial follower={follower} />}
 
         {follower.isFollowing ? (
@@ -183,7 +183,7 @@ export default function FollowerItem({ follower, isOpen }: Props) {
             <SimpleGrid cols={{ sm: 2, md: 3, xl: 4 }} spacing="lg">
               {recordings.map((rec) => {
                 const isRecording = rec.sources?.some(
-                  (s) => s.state === SourceStateEnum.Recording
+                  (s) => s.state === SourceStateEnum.Recording,
                 );
 
                 return (
@@ -198,7 +198,7 @@ export default function FollowerItem({ follower, isOpen }: Props) {
                       <Text size="xs">
                         {isRecording
                           ? `recording for ${dayjs(rec.createdAt).fromNow(
-                              true
+                              true,
                             )}`
                           : `recorded ${dayjs(rec.createdAt).fromNow()}`}
                       </Text>

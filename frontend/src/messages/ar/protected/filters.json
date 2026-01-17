@@ -1,0 +1,60 @@
+{
+  "platforms": {
+    "label": "المنصة",
+    "all": "الكل",
+    "tiktok": "تيك توك",
+    "twitch": "تويتش",
+    "youtube": "يوتيوب",
+    "kick": "كيك",
+    "afreecatv": "أفريكا تي في",
+    "pandalive": "باندا لايف"
+  },
+  "sort": {
+    "label": "ترتيب حسب",
+    "usernameAsc": "أ-ي",
+    "usernameDesc": "ي-أ",
+    "createdAtDesc": "المتابعة مؤخراً",
+    "createdAtAsc": "المتابعة أولاً",
+    "totalRecordingsDesc": "الأكثر تسجيلات",
+    "totalRecordingsAsc": "الأقل تسجيلات",
+    "latestRecordingDesc": "بث مؤخراً",
+    "latestRecordingAsc": "أقدم بث",
+    "updatedAtDesc": "الأحدث",
+    "updatedAtAsc": "الأقدم"
+  },
+  "gender": {
+    "label": "الجنس",
+    "all": "الكل",
+    "female": "أنثى",
+    "male": "ذكر",
+    "unknown": "آخر"
+  },
+  "dateRange": {
+    "label": "تمت الإضافة",
+    "today": "اليوم",
+    "yesterday": "أمس",
+    "thisWeek": "هذا الأسبوع",
+    "lastWeek": "الأسبوع الماضي",
+    "thisMonth": "هذا الشهر",
+    "lastMonth": "الشهر الماضي"
+  },
+  "country": {
+    "label": "البلد",
+    "placeholder": "المزيد من البلدان..."
+  },
+  "language": {
+    "label": "اللغة",
+    "placeholder": "المزيد من اللغات..."
+  },
+  "search": {
+    "placeholder": "البحث عن اسم المستخدم..."
+  },
+  "actions": {
+    "clearAll": "مسح الكل",
+    "filters": "الفلاتر",
+    "done": "تم"
+  },
+  "options": {
+    "hasRecordings": "إظهار صناع المحتوى الذين لديهم تسجيلات فقط"
+  }
+}

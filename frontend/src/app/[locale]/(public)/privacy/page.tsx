@@ -158,7 +158,7 @@ export default function PrivacyPolicy() {
           <Text style={{ color: "#94a3b8", lineHeight: 1.7 }} mb="md">
             {t("whatWeCollect.intro")}
           </Text>
-          <Stack gap={8} ml={16}>
+          <Stack gap={8} mx={16}>
             <Text style={{ color: "#94a3b8" }}>
               •{" "}
               <Text component="span" fw={500} style={{ color: "#f1f5f9" }}>
@@ -236,7 +236,7 @@ export default function PrivacyPolicy() {
           <Text style={{ color: "#94a3b8", lineHeight: 1.7 }} mb="md">
             {t("legalBasis.intro")}
           </Text>
-          <Stack gap={8} ml={16}>
+          <Stack gap={8} mx={16}>
             <Text style={{ color: "#94a3b8" }}>
               •{" "}
               <Text component="span" fw={500} style={{ color: "#f1f5f9" }}>
@@ -343,7 +343,7 @@ export default function PrivacyPolicy() {
           >
             {t("analytics.notCollect")}
           </Text>
-          <Stack gap={4} ml={16} mb="md">
+          <Stack gap={4} mx={16} mb="md">
             <Text style={{ color: "#94a3b8" }}>
               •{" "}
               <Text component="span" fw={500} style={{ color: "#f1f5f9" }}>
@@ -369,7 +369,7 @@ export default function PrivacyPolicy() {
           >
             {t("analytics.collect")}
           </Text>
-          <Stack gap={4} ml={16}>
+          <Stack gap={4} mx={16}>
             <Text style={{ color: "#94a3b8" }}>
               •{" "}
               <Text component="span" fw={500} style={{ color: "#f1f5f9" }}>
@@ -431,7 +431,7 @@ export default function PrivacyPolicy() {
           <Text style={{ color: "#94a3b8", lineHeight: 1.7 }} mb="md">
             {t("dataRetention.intro")}
           </Text>
-          <Stack gap={8} ml={16}>
+          <Stack gap={8} mx={16}>
             <Text style={{ color: "#94a3b8" }}>
               •{" "}
               <Text component="span" fw={500} style={{ color: "#f1f5f9" }}>
@@ -539,7 +539,7 @@ export default function PrivacyPolicy() {
           <Text style={{ color: "#94a3b8", lineHeight: 1.7 }} mb="md">
             {t("thirdParties.intro")}
           </Text>
-          <Stack gap={8} ml={16}>
+          <Stack gap={8} mx={16}>
             <Text style={{ color: "#94a3b8" }}>
               •{" "}
               <Text component="span" fw={500} style={{ color: "#f1f5f9" }}>
@@ -587,7 +587,7 @@ export default function PrivacyPolicy() {
           <Text style={{ color: "#94a3b8", lineHeight: 1.7 }} mb="md">
             {t("cookies.intro")}
           </Text>
-          <Stack gap={8} ml={16}>
+          <Stack gap={8} mx={16}>
             <Text style={{ color: "#94a3b8" }}>
               •{" "}
               <Text component="span" fw={500} style={{ color: "#f1f5f9" }}>
@@ -645,7 +645,7 @@ export default function PrivacyPolicy() {
           <Text style={{ color: "#94a3b8", lineHeight: 1.7 }} mb="md">
             {t("rights.intro")}
           </Text>
-          <Stack gap={8} ml={16}>
+          <Stack gap={8} mx={16}>
             <Text style={{ color: "#94a3b8" }}>
               •{" "}
               <Text component="span" fw={500} style={{ color: "#f1f5f9" }}>

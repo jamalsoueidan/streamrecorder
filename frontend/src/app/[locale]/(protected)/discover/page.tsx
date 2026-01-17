@@ -6,6 +6,7 @@ import {
   HydrationBoundary,
   QueryClient,
 } from "@tanstack/react-query";
+import { getTranslations } from "next-intl/server";
 import { fetchFollowers } from "./actions/fetch-followers";
 import CreatorsInfinity from "./components/creators-infinity";
 import Filters from "./components/filters";
@@ -16,6 +17,7 @@ export default async function Page({
 }: {
   searchParams: Promise<CreatorFilters>;
 }) {
+  const t = await getTranslations("protected.discover");
   const filters = await creatorsParamsCache.parse(searchParams);
 
   const queryClient = new QueryClient();
@@ -36,11 +38,11 @@ export default async function Page({
             <Group gap="xs">
               <IconWorldSearch size={32} />
               <Title order={1} size="h3">
-                Discover
+                {t("title")}
               </Title>
             </Group>
             <Text size="xs" c="dimmed">
-              Explore creators and expand your list
+              {t("description")}
             </Text>
           </Stack>
 

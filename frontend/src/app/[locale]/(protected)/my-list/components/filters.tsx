@@ -38,9 +38,11 @@ import {
   IconUsers,
   IconX,
 } from "@tabler/icons-react";
+import { useTranslations } from "next-intl";
 import { useQueryStates } from "nuqs";
 import { useState } from "react";
 import { PLATFORM_OPTIONS, typeIcons } from "../../components/filters-types";
+import { useIntlNames } from "../../hooks/use-intl-names";
 import { exploreParsers, SortOptions } from "../lib/search-params";
 
 const sortIcons: Record<string, React.ReactNode> = {
@@ -54,15 +56,15 @@ const sortIcons: Record<string, React.ReactNode> = {
   [SortOptions.LatestRecordingAsc]: <IconHistory size={24} />,
 };
 
-const sortLabels: Record<string, string> = {
-  [SortOptions.UsernameAsc]: "A-Z",
-  [SortOptions.UsernameDesc]: "Z-A",
-  [SortOptions.createdAtDesc]: "Recently followed",
-  [SortOptions.createdAtAsc]: "First followed",
-  [SortOptions.TotalRecordingsDesc]: "Most recordings",
-  [SortOptions.TotalRecordingsAsc]: "Fewest recordings",
-  [SortOptions.LatestRecordingDesc]: "Recently Streamed",
-  [SortOptions.LatestRecordingAsc]: "Oldest Stream",
+const sortLabelKeys: Record<string, string> = {
+  [SortOptions.UsernameAsc]: "sort.usernameAsc",
+  [SortOptions.UsernameDesc]: "sort.usernameDesc",
+  [SortOptions.createdAtDesc]: "sort.createdAtDesc",
+  [SortOptions.createdAtAsc]: "sort.createdAtAsc",
+  [SortOptions.TotalRecordingsDesc]: "sort.totalRecordingsDesc",
+  [SortOptions.TotalRecordingsAsc]: "sort.totalRecordingsAsc",
+  [SortOptions.LatestRecordingDesc]: "sort.latestRecordingDesc",
+  [SortOptions.LatestRecordingAsc]: "sort.latestRecordingAsc",
 };
 
 const genderIcons: Record<string, React.ReactNode> = {
@@ -72,43 +74,32 @@ const genderIcons: Record<string, React.ReactNode> = {
   unknown: <IconQuestionMark size={24} />,
 };
 
-const genderLabels: Record<string, string> = {
-  all: "All",
-  female: "Female",
-  male: "Male",
-  unknown: "Other",
+const genderLabelKeys: Record<string, string> = {
+  all: "gender.all",
+  female: "gender.female",
+  male: "gender.male",
+  unknown: "gender.unknown",
 };
 
 const GENDER_VALUES = ["all", "female", "male", "unknown"];
 
-const DATE_RANGE_OPTIONS = [
-  { value: "today", label: "Today" },
-  { value: "yesterday", label: "Yesterday" },
-  { value: "thisWeek", label: "This week" },
-  { value: "lastWeek", label: "Last week" },
-  { value: "thisMonth", label: "This month" },
-  { value: "lastMonth", label: "Last month" },
+const dateRangeLabelKeys: Record<string, string> = {
+  today: "dateRange.today",
+  yesterday: "dateRange.yesterday",
+  thisWeek: "dateRange.thisWeek",
+  lastWeek: "dateRange.lastWeek",
+  thisMonth: "dateRange.thisMonth",
+  lastMonth: "dateRange.lastMonth",
+};
+
+const DATE_RANGE_VALUES = [
+  "today",
+  "yesterday",
+  "thisWeek",
+  "lastWeek",
+  "thisMonth",
+  "lastMonth",
 ];
-
-// Intl converters
-const regionNames = new Intl.DisplayNames(["en"], { type: "region" });
-const languageNames = new Intl.DisplayNames(["en"], { type: "language" });
-
-const getCountryName = (code: string) => {
-  try {
-    return regionNames.of(code.toUpperCase()) || code;
-  } catch {
-    return code;
-  }
-};
-
-const getLanguageName = (code: string) => {
-  try {
-    return languageNames.of(code.toLowerCase()) || code;
-  } catch {
-    return code;
-  }
-};
 
 const FlagIcon = ({ code, size = 20 }: { code: string; size?: number }) => (
   <Image
@@ -138,6 +129,8 @@ interface Props {
 }
 
 export default function Filters({ filterOptions }: Props) {
+  const { getCountryName, getLanguageName } = useIntlNames();
+  const t = useTranslations("protected.filters");
   const [opened, { open, close }] = useDisclosure(false);
   const [filters, setFilters] = useQueryStates(exploreParsers);
   const [searchValue, setSearchValue] = useState(filters.search || "");
@@ -224,7 +217,7 @@ export default function Filters({ filterOptions }: Props) {
       >
         {/* Search Input */}
         <TextInput
-          placeholder="Search username..."
+          placeholder={t("search.placeholder")}
           size="md"
           leftSection={<IconSearch size={18} />}
           rightSection={
@@ -278,14 +271,14 @@ export default function Filters({ filterOptions }: Props) {
                   />
                 }
               >
-                {filters.gender === "unknown" ? "Other" : filters.gender}
+                {t(genderLabelKeys[filters.gender])}
               </Badge>
             )}
             {filters.country && (
               <Badge
                 variant="light"
                 size="lg"
-                leftSection={<FlagIcon code={filters.country} size={18} />}
+                leftSection={<FlagIcon code={filters.country} size={16} />}
                 rightSection={
                   <IconX
                     size={16}
@@ -301,11 +294,6 @@ export default function Filters({ filterOptions }: Props) {
               <Badge
                 variant="light"
                 size="lg"
-                leftSection={
-                  <Badge size="xs" variant="filled" tt="uppercase">
-                    {filters.language}
-                  </Badge>
-                }
                 rightSection={
                   <IconX
                     size={16}
@@ -330,14 +318,13 @@ export default function Filters({ filterOptions }: Props) {
                   />
                 }
               >
-                {DATE_RANGE_OPTIONS.find((d) => d.value === filters.dateRange)
-                  ?.label || filters.dateRange}
+                {t(dateRangeLabelKeys[filters.dateRange])}
               </Badge>
             )}
 
             {activeFilterCount > 0 && (
               <Button size="sm" onClick={clearFilters}>
-                Clear all
+                {t("actions.clearAll")}
               </Button>
             )}
           </Group>
@@ -355,17 +342,22 @@ export default function Filters({ filterOptions }: Props) {
             onClick={open}
             fullWidth
           >
-            Filters
+            {t("actions.filters")}
           </Button>
         </Indicator>
       </Flex>
 
-      <Drawer opened={opened} onClose={close} title="Filters" position="right">
+      <Drawer
+        opened={opened}
+        onClose={close}
+        title={t("actions.filters")}
+        position="right"
+      >
         <Stack gap="lg">
           {/* Sort - Grid */}
           <Stack gap={4}>
             <Text size="md" fw={500}>
-              Sort by
+              {t("sort.label")}
             </Text>
             <SimpleGrid cols={4} spacing="xs">
               {Object.values(SortOptions).map((sortValue) => (
@@ -389,7 +381,7 @@ export default function Filters({ filterOptions }: Props) {
                 >
                   <Stack gap={2} align="center">
                     {sortIcons[sortValue]}
-                    <Text size="xs">{sortLabels[sortValue]}</Text>
+                    <Text size="xs">{t(sortLabelKeys[sortValue])}</Text>
                   </Stack>
                 </UnstyledButton>
               ))}
@@ -401,7 +393,7 @@ export default function Filters({ filterOptions }: Props) {
           {/* Platform - SegmentedControl */}
           <Stack gap={4}>
             <Text size="md" fw={500}>
-              Platform
+              {t("platforms.label")}
             </Text>
             <SimpleGrid cols={3} spacing="xs">
               {PLATFORM_OPTIONS.map((p) => (
@@ -427,7 +419,7 @@ export default function Filters({ filterOptions }: Props) {
                     textAlign: "center",
                   })}
                 >
-                  {p.label}
+                  {t(`platforms.${p.value}`)}
                 </UnstyledButton>
               ))}
             </SimpleGrid>
@@ -436,7 +428,7 @@ export default function Filters({ filterOptions }: Props) {
           {/* Gender - Grid */}
           <Stack gap={4}>
             <Text size="md" fw={500}>
-              Gender
+              {t("gender.label")}
             </Text>
             <SimpleGrid cols={4} spacing="xs">
               {GENDER_VALUES.map((genderValue) => (
@@ -464,7 +456,7 @@ export default function Filters({ filterOptions }: Props) {
                 >
                   <Stack gap={2} align="center">
                     {genderIcons[genderValue]}
-                    <Text size="xs">{genderLabels[genderValue]}</Text>
+                    <Text size="xs">{t(genderLabelKeys[genderValue])}</Text>
                   </Stack>
                 </UnstyledButton>
               ))}
@@ -476,7 +468,7 @@ export default function Filters({ filterOptions }: Props) {
           {/* Date Range - Chips */}
           <Stack gap={4}>
             <Text size="md" fw={500}>
-              Added
+              {t("dateRange.label")}
             </Text>
             <Chip.Group
               value={filters.dateRange || ""}
@@ -487,9 +479,9 @@ export default function Filters({ filterOptions }: Props) {
               }
             >
               <Group gap="xs">
-                {DATE_RANGE_OPTIONS.map((d) => (
-                  <Chip key={d.value} value={d.value} variant="light">
-                    {d.label}
+                {DATE_RANGE_VALUES.map((d) => (
+                  <Chip key={d} value={d} variant="light">
+                    {t(dateRangeLabelKeys[d])}
                   </Chip>
                 ))}
               </Group>
@@ -501,7 +493,7 @@ export default function Filters({ filterOptions }: Props) {
           {/* Country - Chips + Select */}
           <Stack gap={4}>
             <Text size="md" fw={500}>
-              Country
+              {t("country.label")}
             </Text>
             <Chip.Group
               value={filters.country || ""}
@@ -526,7 +518,7 @@ export default function Filters({ filterOptions }: Props) {
               <Select
                 mt={3}
                 size="md"
-                placeholder="More countries..."
+                placeholder={t("country.placeholder")}
                 value={filters.country}
                 onChange={(value) => setFilters({ country: value })}
                 data={countrySelectData}
@@ -540,7 +532,7 @@ export default function Filters({ filterOptions }: Props) {
           {/* Language - Chips + Select */}
           <Stack gap={4}>
             <Text size="md" fw={500}>
-              Language
+              {t("language.label")}
             </Text>
             <Chip.Group
               value={filters.language || ""}
@@ -567,7 +559,7 @@ export default function Filters({ filterOptions }: Props) {
               <Select
                 mt={3}
                 size="md"
-                placeholder="More languages..."
+                placeholder={t("language.placeholder")}
                 value={filters.language}
                 onChange={(value) => setFilters({ language: value })}
                 data={languageSelectData}
@@ -581,7 +573,7 @@ export default function Filters({ filterOptions }: Props) {
           <Divider />
           <Switch
             size="md"
-            label="Only show creators with recordings"
+            label={t("options.hasRecordings")}
             checked={filters.hasRecordings}
             onChange={(event) =>
               setFilters({ hasRecordings: event.currentTarget.checked })
@@ -592,10 +584,10 @@ export default function Filters({ filterOptions }: Props) {
 
           <Group grow>
             <Button variant="subtle" size="md" onClick={clearFilters}>
-              Clear all
+              {t("actions.clearAll")}
             </Button>
             <Button size="md" onClick={close}>
-              Done
+              {t("actions.done")}
             </Button>
           </Group>
         </Stack>
