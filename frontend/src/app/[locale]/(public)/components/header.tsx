@@ -40,7 +40,7 @@ export function Header({ isLoggedIn = false }: HeaderProps) {
           : `/ar${basePath === "/" ? "" : basePath}`;
       window.location.href = href;
     },
-    [basePath]
+    [basePath],
   );
 
   return (
@@ -145,7 +145,7 @@ export function Header({ isLoggedIn = false }: HeaderProps) {
               {isLoggedIn ? (
                 <Button
                   component={Link}
-                  href="/dashboard"
+                  href="/following"
                   variant="gradient"
                   gradient={{ from: "#6366f1", to: "#a855f7", deg: 135 }}
                   radius="md"

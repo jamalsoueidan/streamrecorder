@@ -1,0 +1,28 @@
+{
+  "sections": {
+    "recordings": "التسجيلات",
+    "creators": "صناع المحتوى"
+  },
+  "links": {
+    "explore": "استكشف",
+    "following": "المتابَعون",
+    "live": "مباشر",
+    "discover": "اكتشف",
+    "myList": "قائمتي"
+  },
+  "actions": {
+    "logout": "تسجيل الخروج",
+    "addCreator": "إضافة صانع محتوى",
+    "installApp": "تثبيت التطبيق",
+    "more": "المزيد"
+  },
+  "installModal": {
+    "title": "تثبيت التطبيق",
+    "description": "لتثبيت هذا التطبيق على الآيفون:",
+    "step1": "اضغط على",
+    "shareButton": "زر المشاركة",
+    "step2": "اضغط على",
+    "addToHomeScreen": "إضافة إلى الشاشة الرئيسية",
+    "step3": "اضغط على \"إضافة\""
+  }
+}

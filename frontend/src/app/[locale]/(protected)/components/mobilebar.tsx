@@ -21,6 +21,7 @@ import {
   IconUser,
   IconUserPlus,
 } from "@tabler/icons-react";
+import { useTranslations } from "next-intl";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState, useTransition } from "react";
 import { navigation } from "./navbar";
@@ -36,6 +37,7 @@ export function MobileBar() {
   const user = useUser();
   const pathname = usePathname();
   const router = useRouter();
+  const t = useTranslations("protected.navigation");
 
   const [deferredPrompt, setDeferredPrompt] = useState<any>(null);
   const [isInstalled, setIsInstalled] = useState(getIsInstalled);
@@ -90,16 +92,16 @@ export function MobileBar() {
 
   const currentValue = (() => {
     const section = navigation.find((section) =>
-      section.links?.some((link) => pathname.startsWith(link.url || ""))
+      section.links?.some((link) => pathname.startsWith(link.url || "")),
     );
-    return section ? "menu" + section.title : "";
+    return section ? "menu" + section.titleKey : "";
   })();
 
   const links =
     navigation?.map((section) => {
       const Icon = section.icon || IconPlayerPlayFilled;
       return {
-        value: "menu" + section.title,
+        value: "menu" + section.titleKey,
         label: (
           <Menu position="top-start" offset={15}>
             <Menu.Target>
@@ -109,7 +111,7 @@ export function MobileBar() {
                   style={{ width: "18px", height: "18px" }}
                 />
                 <Text c="dimmed" size="xs">
-                  {section.title}
+                  {t(section.titleKey)}
                 </Text>
               </Stack>
             </Menu.Target>
@@ -120,7 +122,7 @@ export function MobileBar() {
 
                 return (
                   <Menu.Item
-                    key={item.id}
+                    key={item.labelKey}
                     leftSection={
                       <Icon
                         {...iconProps}
@@ -130,7 +132,7 @@ export function MobileBar() {
                     }
                     onClick={() => handleChange(item.url || "#")}
                   >
-                    {item.label}
+                    {t(item.labelKey)}
                   </Menu.Item>
                 );
               })}
@@ -145,21 +147,21 @@ export function MobileBar() {
       <Modal
         opened={iosModalOpened}
         onClose={closeIosModal}
-        title="Install App"
+        title={t("installModal.title")}
       >
         <Stack gap="md">
-          <Text>To install this app on your iPhone:</Text>
+          <Text>{t("installModal.description")}</Text>
           <Group gap="xs">
-            <Text>1. Tap the</Text>
+            <Text>1. {t("installModal.step1")}</Text>
             <IconShare size={20} />
-            <Text>Share button</Text>
+            <Text>{t("installModal.shareButton")}</Text>
           </Group>
           <Group gap="xs">
-            <Text>2. Tap</Text>
+            <Text>2. {t("installModal.step2")}</Text>
             <IconSquarePlus size={20} />
-            <Text>&quot;Add to Home Screen&quot;</Text>
+            <Text>&quot;{t("installModal.addToHomeScreen")}&quot;</Text>
           </Group>
-          <Text>3. Tap &quot;Add&quot;</Text>
+          <Text>3. {t("installModal.step3")}</Text>
         </Stack>
       </Modal>
 
@@ -181,7 +183,7 @@ export function MobileBar() {
                       style={{ width: "18px", height: "18px" }}
                     />
                     <Text c="dimmed" size="xs">
-                      More
+                      {t("actions.more")}
                     </Text>
                   </Stack>
                 </Menu.Target>
@@ -192,7 +194,7 @@ export function MobileBar() {
                       size={14}
                       style={{ marginRight: 8, verticalAlign: "middle" }}
                     />
-                    {user?.username || "Guest"}
+                    {user?.username || t("actions.guest")}
                   </Menu.Label>
 
                   <Menu.Divider />
@@ -201,7 +203,7 @@ export function MobileBar() {
                     leftSection={<IconUserPlus size={16} />}
                     onClick={() => spotlight.open()}
                   >
-                    Add Creator
+                    {t("actions.addCreator")}
                   </Menu.Item>
 
                   {!isInstalled && (
@@ -209,7 +211,7 @@ export function MobileBar() {
                       leftSection={<IconDownload size={16} />}
                       onClick={handleInstall}
                     >
-                      Install App
+                      {t("actions.installApp")}
                     </Menu.Item>
                   )}
 
@@ -223,7 +225,7 @@ export function MobileBar() {
                       window.location.href = "/";
                     }}
                   >
-                    Logout
+                    {t("actions.logout")}
                   </Menu.Item>
                 </Menu.Dropdown>
               </Menu>

@@ -25,33 +25,30 @@ import { usePathname } from "next/navigation";
 import { useRouter } from "next/navigation";
 
 import { useUser } from "@/app/providers/user-provider";
+import { useTranslations } from "next-intl";
 import AddFollowerForm from "./add-follower-form";
 import classes from "./navbar.module.css";
 import { RoleBadge } from "./role-badge";
 
 export const navigation = [
   {
-    id: 9,
-    title: "Recordings",
+    titleKey: "sections.recordings",
     icon: IconVideo,
     links: [
       {
-        id: 44,
-        label: "Explore",
+        labelKey: "links.explore",
         url: "/explore",
         icon: IconBrandSafari,
         color: null,
       },
       {
-        id: 45,
-        label: "Following",
+        labelKey: "links.following",
         url: "/following",
         icon: IconUsers,
         color: null,
       },
       {
-        id: 46,
-        label: "Live",
+        labelKey: "links.live",
         url: "/live",
         icon: IconPlayerRecordFilled,
         color: "red",
@@ -59,20 +56,17 @@ export const navigation = [
     ],
   },
   {
-    id: 10,
-    title: "Creators",
+    titleKey: "sections.creators",
     icon: IconUsers,
     links: [
       {
-        id: 47,
-        label: "Discover",
+        labelKey: "links.discover",
         url: "/discover",
         icon: IconWorldSearch,
         color: null,
       },
       {
-        id: 48,
-        label: "My List",
+        labelKey: "links.myList",
         url: "/my-list",
         icon: IconHeart,
         color: null,
@@ -91,6 +85,7 @@ export function Navbar({
   const router = useRouter();
   const user = useUser();
   const pathname = usePathname();
+  const t = useTranslations("protected.navigation");
 
   const handleLinkClick = (e: React.MouseEvent, url: string) => {
     if (opened) {
@@ -108,7 +103,7 @@ export function Navbar({
         <Link
           className={classes.link}
           data-active={pathname.startsWith(item.url || "") || undefined}
-          key={item.label}
+          key={item.labelKey}
           href={item.url || "#"}
           onClick={(e) => handleLinkClick(e, item.url || "#")}
         >
@@ -118,15 +113,15 @@ export function Navbar({
             style={{ width: "28px", height: "28px" }}
             color={item.color ? item.color : undefined}
           />
-          <span>{item.label}</span>
+          <span>{t(item.labelKey)}</span>
         </Link>
       );
     });
 
     return (
-      <div key={section.id}>
+      <div key={section.titleKey}>
         <Text size="md" fw={400} c="dimmed" mb="xs">
-          {section.title}
+          {t(section.titleKey)}
         </Text>
         {html}
       </div>
@@ -169,7 +164,7 @@ export function Navbar({
           }}
         >
           <IconLogout className={classes.linkIcon} stroke={1.5} />
-          <span>Logout</span>
+          <span>{t("actions.logout")}</span>
         </UnstyledButton>
       </div>
     </nav>
