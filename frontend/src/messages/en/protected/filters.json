@@ -1,0 +1,60 @@
+{
+  "platforms": {
+    "label": "Platform",
+    "all": "All",
+    "tiktok": "TikTok",
+    "twitch": "Twitch",
+    "youtube": "YouTube",
+    "kick": "Kick",
+    "afreecatv": "AfreecaTV",
+    "pandalive": "PandaLive"
+  },
+  "sort": {
+    "label": "Sort by",
+    "usernameAsc": "A-Z",
+    "usernameDesc": "Z-A",
+    "createdAtDesc": "Recently followed",
+    "createdAtAsc": "First followed",
+    "totalRecordingsDesc": "Most recordings",
+    "totalRecordingsAsc": "Fewest recordings",
+    "latestRecordingDesc": "Recently Streamed",
+    "latestRecordingAsc": "Oldest Stream",
+    "updatedAtDesc": "Newest",
+    "updatedAtAsc": "Oldest"
+  },
+  "gender": {
+    "label": "Gender",
+    "all": "All",
+    "female": "Female",
+    "male": "Male",
+    "unknown": "Other"
+  },
+  "dateRange": {
+    "label": "Added",
+    "today": "Today",
+    "yesterday": "Yesterday",
+    "thisWeek": "This week",
+    "lastWeek": "Last week",
+    "thisMonth": "This month",
+    "lastMonth": "Last month"
+  },
+  "country": {
+    "label": "Country",
+    "placeholder": "More countries..."
+  },
+  "language": {
+    "label": "Language",
+    "placeholder": "More languages..."
+  },
+  "search": {
+    "placeholder": "Search username..."
+  },
+  "actions": {
+    "clearAll": "Clear all",
+    "filters": "Filters",
+    "done": "Done"
+  },
+  "options": {
+    "hasRecordings": "Only show creators with recordings"
+  }
+}

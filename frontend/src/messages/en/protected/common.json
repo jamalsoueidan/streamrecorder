@@ -1,0 +1,24 @@
+{
+  "follow": {
+    "tooltip": "Add Follower",
+    "successTitle": "Followed!",
+    "successMessage": "You are now following {username}",
+    "errorTitle": "Error"
+  },
+  "unfollow": {
+    "tooltip": "Remove Follower",
+    "successTitle": "Unfollowed",
+    "successMessage": "You unfollowed {username}",
+    "successMessageGeneric": "Successfully unfollowed"
+  },
+  "recording": {
+    "rec": "REC",
+    "new": "New"
+  },
+  "scopeFilter": {
+    "label": "Filter:",
+    "following": "Following",
+    "discover": "Discover",
+    "all": "All"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "platforms": {
+    "tiktok": "TikTok",
+    "twitch": "Twitch",
+    "kick": "Kick",
+    "youtube": "YouTube",
+    "afreecatv": "AfreecaTV",
+    "pandalive": "PandaLive"
+  },
+  "search": {
+    "placeholder": "Enter @username or profile link",
+    "searching": "Searching on {platform}...",
+    "pasteButton": "Paste",
+    "pasteError": "Paste manually using Ctrl+V or long-press",
+    "parseError": "Could not parse username",
+    "notFound": "Nothing found...",
+    "autoDetected": "Platform auto-detected from URL"
+  },
+  "hints": {
+    "tryFormats": "Try these formats:",
+    "enterUsername": "Enter a @username or paste a profile URL"
+  },
+  "actions": {
+    "follow": "Follow",
+    "successTitle": "Followed!",
+    "successMessage": "You are now following {username}",
+    "errorTitle": "Error"
+  },
+  "inputLabel": "Enter creators name or link"
+}

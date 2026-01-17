@@ -36,19 +36,12 @@ import {
   IconSearch,
   IconUsersPlus,
 } from "@tabler/icons-react";
+import { useTranslations } from "next-intl";
 import { useRouter } from "next/navigation";
 import { useActionState, useEffect, useState, useTransition } from "react";
 
-const data = [
-  { label: "TikTok", value: "tiktok" },
-  { label: "Twitch", value: "twitch" },
-  { label: "Kick", value: "kick" },
-  { label: "Youtube", value: "youtube" },
-  { label: "AfreecaTV", value: "afreecatv" },
-  { label: "PandaLive", value: "pandalive" },
-];
-
 export default function AddFollowerForm() {
+  const t = useTranslations("protected.addFollowerForm");
   const keyboardHeight = useKeyboardHeight();
   const router = useRouter();
   const [query, setQuery] = useState("");
@@ -70,6 +63,15 @@ export default function AddFollowerForm() {
   // The effective platform: use detected (from URL) if available, otherwise use selected
   const effectivePlatform = detectedPlatform ?? selectedPlatform;
 
+  const data = [
+    { label: t("platforms.tiktok"), value: "tiktok" },
+    { label: t("platforms.twitch"), value: "twitch" },
+    { label: t("platforms.kick"), value: "kick" },
+    { label: t("platforms.youtube"), value: "youtube" },
+    { label: t("platforms.afreecatv"), value: "afreecatv" },
+    { label: t("platforms.pandalive"), value: "pandalive" },
+  ];
+
   // Search for user when debounced query changes
   useEffect(() => {
     const searchUser = async () => {
@@ -89,7 +91,7 @@ export default function AddFollowerForm() {
 
       if (!parsed.username) {
         setSearchResult(null);
-        setSearchError("Could not parse username");
+        setSearchError(t("search.parseError"));
         setIsSearching(false);
         return;
       }
@@ -104,14 +106,14 @@ export default function AddFollowerForm() {
         setSearchError(null);
       } else {
         setSearchResult(null);
-        setSearchError(result.error || "User not found");
+        setSearchError(result.error || t("search.notFound"));
       }
 
       setIsSearching(false);
     };
 
     searchUser();
-  }, [debouncedQuery, selectedPlatform]);
+  }, [debouncedQuery, selectedPlatform, t]);
 
   // Handle follow success/error notifications
   useEffect(() => {
@@ -122,8 +124,8 @@ export default function AddFollowerForm() {
       });
 
       notifications.show({
-        title: "Followed!",
-        message: `You are now following ${state.username}`,
+        title: t("actions.successTitle"),
+        message: t("actions.successMessage", { username: state.username }),
         color: "green",
         icon: <IconCheck size={16} />,
       });
@@ -131,12 +133,12 @@ export default function AddFollowerForm() {
 
     if (state?.error) {
       notifications.show({
-        title: "Error",
+        title: t("actions.errorTitle"),
         message: state.error,
         color: "red",
       });
     }
-  }, [searchResult?.type, state]);
+  }, [searchResult?.type, state, t]);
 
   // Handle clicking on a user result
   const handleUserSelect = (user: UserSearchResult) => {
@@ -167,7 +169,7 @@ export default function AddFollowerForm() {
           <Group gap="xs">
             <Loader size="sm" />
             <Text size="sm" c="dimmed">
-              Searching on {effectivePlatform}...
+              {t("search.searching", { platform: effectivePlatform })}
             </Text>
           </Group>
         </Center>
@@ -181,7 +183,7 @@ export default function AddFollowerForm() {
           <Spotlight.Empty>
             <Stack align="center" gap="xs">
               <Text size="xs" c="dimmed">
-                Enter a @username or paste a profile URL
+                {t("hints.enterUsername")}
               </Text>
               <Text size="xs" c="dimmed">
                 @mrbeast
@@ -205,7 +207,7 @@ export default function AddFollowerForm() {
         return <Spotlight.Empty>{searchError}</Spotlight.Empty>;
       }
 
-      return <Spotlight.Empty>Nothing found...</Spotlight.Empty>;
+      return <Spotlight.Empty>{t("search.notFound")}</Spotlight.Empty>;
     }
 
     // Show the found user
@@ -234,14 +236,13 @@ export default function AddFollowerForm() {
           </div>
 
           <Group gap="xs">
-            {/* Add this */}
             <Badge
               variant="filled"
               color="red"
               size="xl"
               leftSection={<IconUsersPlus size={28} />}
             >
-              Follow
+              {t("actions.follow")}
             </Badge>
           </Group>
         </Group>
@@ -277,7 +278,7 @@ export default function AddFollowerForm() {
           <>
             <Group justify="center" gap="xs" py="xs">
               <Text size="xs" c="dimmed" ta="center">
-                Try these formats:
+                {t("hints.tryFormats")}
               </Text>
 
               <Badge
@@ -300,7 +301,7 @@ export default function AddFollowerForm() {
           </>
         )}
         <Spotlight.Search
-          placeholder="Enter @username or profile link"
+          placeholder={t("search.placeholder")}
           leftSection={<IconSearch stroke={1.5} />}
           rightSectionPointerEvents="auto"
           rightSectionWidth={80}
@@ -318,13 +319,13 @@ export default function AddFollowerForm() {
                   }
                 } catch {
                   notifications.show({
-                    message: "Paste manually using Ctrl+V or long-press",
+                    message: t("search.pasteError"),
                     color: "yellow",
                   });
                 }
               }}
             >
-              Paste
+              {t("search.pasteButton")}
             </Button>
           }
         />
@@ -341,7 +342,7 @@ export default function AddFollowerForm() {
           />
           {detectedPlatform && (
             <Text size="xs" c="dimmed" ta="center" my="xs">
-              Platform auto-detected from URL
+              {t("search.autoDetected")}
             </Text>
           )}
         </Stack>
@@ -371,7 +372,7 @@ export default function AddFollowerForm() {
         >
           <Group>
             <IconLink size={24} color="gray" />
-            <Text c="gray.3">Enter creators name or link</Text>
+            <Text c="gray.3">{t("inputLabel")}</Text>
           </Group>
         </Paper>
       </UnstyledButton>
