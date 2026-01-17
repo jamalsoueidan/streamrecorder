@@ -1,0 +1,28 @@
+{
+  "sections": {
+    "recordings": "Recordings",
+    "creators": "Creators"
+  },
+  "links": {
+    "explore": "Explore",
+    "following": "Following",
+    "live": "Live",
+    "discover": "Discover",
+    "myList": "My List"
+  },
+  "actions": {
+    "logout": "Logout",
+    "addCreator": "Add Creator",
+    "installApp": "Install App",
+    "more": "More"
+  },
+  "installModal": {
+    "title": "Install App",
+    "description": "To install this app on your iPhone:",
+    "step1": "Tap the",
+    "shareButton": "Share button",
+    "step2": "Tap",
+    "addToHomeScreen": "Add to Home Screen",
+    "step3": "Tap \"Add\""
+  }
+}
