@@ -107,13 +107,15 @@ export function Navbar({
           href={item.url || "#"}
           onClick={(e) => handleLinkClick(e, item.url || "#")}
         >
-          <Icon
-            className={classes.linkIcon}
-            stroke={2}
-            style={{ width: "28px", height: "28px" }}
-            color={item.color ? item.color : undefined}
-          />
-          <span>{t(item.labelKey)}</span>
+          <Group gap="xs">
+            <Icon
+              className={classes.linkIcon}
+              stroke={2}
+              style={{ width: "28px", height: "28px" }}
+              color={item.color ? item.color : undefined}
+            />
+            <span>{t(item.labelKey)}</span>
+          </Group>
         </Link>
       );
     });
@@ -163,8 +165,10 @@ export function Navbar({
             window.location.href = "/";
           }}
         >
-          <IconLogout className={classes.linkIcon} stroke={1.5} />
-          <span>{t("actions.logout")}</span>
+          <Group gap="xs">
+            <IconLogout className={classes.linkIcon} stroke={1.5} />
+            <span>{t("actions.logout")}</span>
+          </Group>
         </UnstyledButton>
       </div>
     </nav>

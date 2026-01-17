@@ -237,7 +237,7 @@ export default function TermsAndConditions() {
           >
             {t("yourAccount.intro")}
           </Text>
-          <Stack gap={8} ml={16}>
+          <Stack gap={8} mx={16}>
             <Text style={{ color: "#94a3b8" }}>
               • {t("yourAccount.items.accurate")}
             </Text>
@@ -299,7 +299,7 @@ export default function TermsAndConditions() {
           >
             {t("intellectualProperty.agreementIntro")}
           </Text>
-          <Stack gap={12} ml={16}>
+          <Stack gap={12} mx={16}>
             <Text style={{ color: "#94a3b8" }}>
               •{" "}
               <Text component="span" fw={600} style={{ color: "#f1f5f9" }}>
@@ -382,7 +382,7 @@ export default function TermsAndConditions() {
           >
             {t("prohibitedActivities.intro")}
           </Text>
-          <Stack gap={8} ml={16}>
+          <Stack gap={8} mx={16}>
             <Text style={{ color: "#94a3b8" }}>
               • {t("prohibitedActivities.items.minors")}
             </Text>
@@ -525,7 +525,7 @@ export default function TermsAndConditions() {
               {t("payments.title")}
             </Title>
           </Flex>
-          <Stack gap={8} ml={16}>
+          <Stack gap={8} mx={16}>
             <Text style={{ color: "#94a3b8" }}>
               • {t("payments.items.autoBill")}
             </Text>
@@ -626,7 +626,7 @@ export default function TermsAndConditions() {
           >
             {t("liability.intro")}
           </Text>
-          <Stack gap={8} ml={16}>
+          <Stack gap={8} mx={16}>
             <Text style={{ color: "#94a3b8" }}>
               • {t("liability.items.content")}
             </Text>

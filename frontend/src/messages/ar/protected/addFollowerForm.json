@@ -26,5 +26,5 @@
     "successMessage": "أنت الآن تتابع {username}",
     "errorTitle": "خطأ"
   },
-  "inputLabel": "أدخل اسم صانع المحتوى أو الرابط"
+  "inputLabel": "أدخل اسم أو الرابط"
 }

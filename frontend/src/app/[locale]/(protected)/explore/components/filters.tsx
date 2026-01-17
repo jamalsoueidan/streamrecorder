@@ -35,6 +35,7 @@ import { useTranslations } from "next-intl";
 import { useQueryStates } from "nuqs";
 import { useState } from "react";
 import { PLATFORM_OPTIONS, typeIcons } from "../../components/filters-types";
+import { useIntlNames } from "../../hooks/use-intl-names";
 import { followingParsers, FollowingSortOptions } from "../lib/search-params";
 
 const sortIcons: Record<string, React.ReactNode> = {
@@ -81,26 +82,6 @@ const DATE_RANGE_VALUES = [
   "lastMonth",
 ];
 
-// Intl converters
-const regionNames = new Intl.DisplayNames(["en"], { type: "region" });
-const languageNames = new Intl.DisplayNames(["en"], { type: "language" });
-
-const getCountryName = (code: string) => {
-  try {
-    return regionNames.of(code.toUpperCase()) || code;
-  } catch {
-    return code;
-  }
-};
-
-const getLanguageName = (code: string) => {
-  try {
-    return languageNames.of(code.toLowerCase()) || code;
-  } catch {
-    return code;
-  }
-};
-
 const FlagIcon = ({ code, size = 20 }: { code: string; size?: number }) => (
   <Image
     src={`https://flagcdn.com/w40/${code.toLowerCase()}.png`}
@@ -129,6 +110,7 @@ interface Props {
 }
 
 export default function Filters({ filterOptions }: Props) {
+  const { getCountryName, getLanguageName } = useIntlNames();
   const t = useTranslations("protected.filters");
   const [opened, { open, close }] = useDisclosure(false);
   const [filters, setFilters] = useQueryStates(followingParsers);
