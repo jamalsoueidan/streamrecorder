@@ -3,7 +3,7 @@ import { streamingPlatforms } from "@/app/lib/streaming-platforms";
 export const revalidate = 86400;
 
 export async function GET() {
-  const baseUrl = "https://www.livestreamrecorder.com";
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
   const staticPages = [
     { url: "", priority: 1.0, changefreq: "daily" }, // Homepage
@@ -46,7 +46,7 @@ export async function GET() {
           <changefreq>${page.changefreq}</changefreq>
           <priority>${page.priority}</priority>
         </url>
-      `
+      `,
         )
         .join("")}
     </urlset>`;

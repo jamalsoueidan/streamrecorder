@@ -23,11 +23,6 @@ export async function generateMetadata({
   const { type } = await params;
   const t = await getTranslations("recordings");
 
-  const platform = streamingPlatforms.find(
-    (p) => p.name.toLowerCase() === type,
-  );
-
-  const platformName = platform?.name || "All Platforms";
   const metaKey = type === "all" ? "all" : type;
 
   const title = t(`meta.${metaKey}.title`);
@@ -40,14 +35,13 @@ export async function generateMetadata({
     openGraph: {
       title,
       description,
-      url: `https://www.livestreamrecorder.com/recordings/${type}`,
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}/recordings/${type}`,
       type: "website",
       images: [
         {
           url: "/og-image.png",
           width: 1200,
           height: 630,
-          alt: `${platformName} Live Stream Recordings`,
         },
       ],
     },
@@ -58,7 +52,7 @@ export async function generateMetadata({
       images: ["/og-image.png"],
     },
     alternates: {
-      canonical: `https://www.livestreamrecorder.com/recordings/${type}`,
+      canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/recordings/${type}`,
     },
   };
 }
@@ -125,11 +119,11 @@ export default async function RecordingTypePage({
     "@type": "CollectionPage",
     name: t(`jsonLd.name.${platformName.toLowerCase()}`),
     description: t(`jsonLd.description.${platformName.toLowerCase()}`),
-    url: `https://www.livestreamrecorder.com/recordings/${type}`,
+    url: `${process.env.NEXT_PUBLIC_BASE_URL}/recordings/${type}`,
     isPartOf: {
       "@type": "WebSite",
       name: "Live Stream Recorder",
-      url: "https://www.livestreamrecorder.com",
+      url: process.env.NEXT_PUBLIC_BASE_URL,
     },
     mainEntity: {
       "@type": "ItemList",
@@ -164,7 +158,7 @@ export default async function RecordingTypePage({
               nickname,
             }),
             thumbnailUrl: recording.sources?.length
-              ? `https://www.livestreamrecorder.com/media${
+              ? `${process.env.NEXT_PUBLIC_BASE_URL}/media${
                   recording.sources[recording.sources.length - 1].path
                 }screenshot.jpg`
               : undefined,

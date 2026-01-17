@@ -1,9 +1,9 @@
 export function generateAvatarUrl(
   url?: string,
-  fullUrl: boolean = false
+  fullUrl: boolean = false,
 ): string {
   return (
-    (fullUrl ? "https://www.livestreamrecorder.com" : "") +
+    (fullUrl ? process.env.NEXT_PUBLIC_BASE_URL : "") +
     `/avatar/${url?.split("/").pop()}`
   );
 }

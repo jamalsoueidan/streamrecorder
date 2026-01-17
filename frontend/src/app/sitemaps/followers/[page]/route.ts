@@ -6,7 +6,7 @@ export const revalidate = 3600;
 
 export async function GET(
   request: Request,
-  { params }: { params: Promise<{ page: string }> }
+  { params }: { params: Promise<{ page: string }> },
 ) {
   const { page } = await params;
   const sitemapPage = parseInt(page);
@@ -36,14 +36,14 @@ export async function GET(
         .map(
           (f) => `
         <url>
-          <loc>https://www.livestreamrecorder.com/${f.type}/${
+          <loc>${process.env.NEXT_PUBLIC_BASE_URL}/${f.type}/${
             f.type === "tiktok" ? `@${f.username}` : f.username
           }</loc>
           <lastmod>${f.updatedAt}</lastmod>
           <changefreq>daily</changefreq>
           <priority>0.8</priority>
         </url>
-      `
+      `,
         )
         .join("")}
     </urlset>`;

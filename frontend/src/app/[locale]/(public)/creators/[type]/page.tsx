@@ -44,11 +44,24 @@ export async function generateMetadata({
     openGraph: {
       title: t(`meta.${platformKey}.title`),
       description: t(`meta.${platformKey}.description`),
-      url: `https://www.livestreamrecorder.com/creators/${type}`,
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}/creators/${type}`,
       type: "website",
+      images: [
+        {
+          url: "/og-image.png",
+          width: 1200,
+          height: 630,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t(`meta.${platformKey}.title`),
+      description: t(`meta.${platformKey}.description`),
+      images: ["/og-image.png"],
     },
     alternates: {
-      canonical: `https://www.livestreamrecorder.com/creators/${type}`,
+      canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/creators/${type}`,
     },
   };
 }
@@ -85,11 +98,11 @@ export default async function Page({ params, searchParams }: PageProps) {
     "@type": "CollectionPage",
     name: t(`meta.${platformKey}.title`),
     description: t(`meta.${platformKey}.description`),
-    url: `https://www.livestreamrecorder.com/creators/${type}`,
+    url: `${process.env.NEXT_PUBLIC_BASE_URL}/creators/${type}`,
     isPartOf: {
       "@type": "WebSite",
       name: "Live Stream Recorder",
-      url: "https://www.livestreamrecorder.com",
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}`,
     },
     mainEntity: {
       "@type": "ItemList",

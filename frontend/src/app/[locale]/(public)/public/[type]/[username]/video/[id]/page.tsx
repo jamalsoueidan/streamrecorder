@@ -27,15 +27,15 @@ export async function generateMetadata({
   const sources = data.sources ?? [];
   const lastSource = sources[sources.length - 1];
   const thumbnailUrl = lastSource
-    ? `https://www.livestreamrecorder.com/media${lastSource.path}screenshot.jpg`
+    ? `${process.env.NEXT_PUBLIC_BASE_URL}/media${lastSource.path}screenshot.jpg`
     : null;
 
   const duration = sources.reduce(
     (acc, source) => acc + (source.duration || 0),
-    0
+    0,
   );
   const durationFormatted = `${Math.floor(duration / 60)}m ${Math.round(
-    duration % 60
+    duration % 60,
   )}s`;
 
   const title = `${creatorName}'s Stream - ${recordedDate}`;
@@ -103,7 +103,7 @@ export default async function VideoPage({ params }: PageProps) {
 
   const duration = sources.reduce(
     (acc, source) => acc + (source.duration || 0),
-    0
+    0,
   );
 
   const creatorName = data.follower?.nickname || data.follower?.username;
@@ -115,7 +115,7 @@ export default async function VideoPage({ params }: PageProps) {
     name: `${creatorName} Stream - ${recordedDate}`,
     description: `Recorded live stream from ${creatorName} on ${recordedDate}`,
     thumbnailUrl: sources?.length
-      ? `https://www.livestreamrecorder.com/media${
+      ? `${process.env.NEXT_PUBLIC_BASE_URL}/media${
           sources[sources.length - 1].path
         }screenshot.jpg`
       : null,
@@ -130,7 +130,7 @@ export default async function VideoPage({ params }: PageProps) {
     publisher: {
       "@type": "Organization",
       name: "Live Stream Recorder",
-      url: "https://www.livestreamrecorder.com",
+      url: process.env.NEXT_PUBLIC_BASE_URL,
     },
     ...(data.follower && {
       author: {
