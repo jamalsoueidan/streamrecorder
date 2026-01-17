@@ -335,7 +335,7 @@ export default function Filters({ filterOptions }: Props) {
                   <IconX
                     size={16}
                     style={{ cursor: "pointer" }}
-                    onClick={() => setFilters({ hasRecordings: true })}
+                    onClick={() => setFilters({ hasRecordings: null })}
                   />
                 }
               >
