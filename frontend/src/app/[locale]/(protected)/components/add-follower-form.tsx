@@ -15,6 +15,7 @@ import {
   Badge,
   Button,
   Center,
+  Divider,
   Group,
   Loader,
   Paper,
@@ -175,6 +176,27 @@ export default function AddFollowerForm() {
 
     // Show error or empty state
     if (!searchResult) {
+      if (query.includes(" ") || query.length > 30) {
+        return (
+          <Spotlight.Empty>
+            <Stack align="center" gap="xs">
+              <Text size="xs" c="dimmed">
+                Enter a @username or paste a profile URL
+              </Text>
+              <Text size="xs" c="dimmed">
+                @mrbeast
+              </Text>
+              <Text size="xs" c="dimmed">
+                twitch.tv/mrbeast
+              </Text>
+              <Text size="xs" c="dimmed">
+                https://www.tiktok.com/@mrbeast
+              </Text>
+            </Stack>
+          </Spotlight.Empty>
+        );
+      }
+
       if (query.trim().length === 0) {
         return <Spotlight.Empty></Spotlight.Empty>;
       }
@@ -251,8 +273,34 @@ export default function AddFollowerForm() {
           },
         }}
       >
+        {query.trim().length === 0 && (
+          <>
+            <Group justify="center" gap="xs" py="xs">
+              <Text size="xs" c="dimmed" ta="center">
+                Try these formats:
+              </Text>
+
+              <Badge
+                variant="outline"
+                style={{ cursor: "pointer" }}
+                onClick={() => setQuery("@username")}
+              >
+                @mrbeast
+              </Badge>
+              <Badge
+                variant="outline"
+                style={{ cursor: "pointer" }}
+                onClick={() => setQuery("tiktok.com/@username")}
+              >
+                tiktok.com/@mrbeast
+              </Badge>
+            </Group>
+
+            <Divider />
+          </>
+        )}
         <Spotlight.Search
-          placeholder="Enter creators name or link"
+          placeholder="Enter @username or profile link"
           leftSection={<IconSearch stroke={1.5} />}
           rightSectionPointerEvents="auto"
           rightSectionWidth={80}
@@ -298,7 +346,11 @@ export default function AddFollowerForm() {
           )}
         </Stack>
 
-        <Spotlight.ActionsList>{renderContent()}</Spotlight.ActionsList>
+        <Spotlight.ActionsList
+          display={query.trim().length === 0 ? "none" : "block"}
+        >
+          {renderContent()}
+        </Spotlight.ActionsList>
       </Spotlight.Root>
 
       <UnstyledButton

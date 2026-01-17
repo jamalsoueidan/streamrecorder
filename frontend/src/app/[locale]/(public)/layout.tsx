@@ -1,3 +1,4 @@
+import { getToken } from "@/lib/token";
 import { Box } from "@mantine/core";
 import { Metadata } from "next";
 import { getLocale, getTranslations } from "next-intl/server";
@@ -57,17 +58,20 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-export default function MainLayout({
+export default async function MainLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const token = await getToken();
+  const isLoggedIn = !!token;
+
   return (
     <Box
       display="flex"
       style={{ flexDirection: "column", position: "relative", zIndex: 1 }}
     >
-      <Header />
+      <Header isLoggedIn={isLoggedIn} />
       <Box flex={1} mt="xl">
         {children}
       </Box>
