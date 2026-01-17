@@ -1,0 +1,49 @@
+{
+  "brand": "LiveStreamRecorder",
+  "tagline": "Never miss a stream",
+  "defaultDescription": "Live streams are recorded automatically so you can watch anytime",
+  "creators": {
+    "title": {
+      "all": "All Creators",
+      "tiktok": "TikTok Creators",
+      "twitch": "Twitch Creators",
+      "youtube": "YouTube Creators",
+      "kick": "Kick Creators",
+      "pandalive": "PandaLive Creators",
+      "afreecatv": "AfreecaTV Creators"
+    },
+    "subtitle": {
+      "all": "Browse all streamers and creators",
+      "tiktok": "Discover TikTok streamers",
+      "twitch": "Discover Twitch streamers",
+      "youtube": "Discover YouTube creators",
+      "kick": "Discover Kick streamers",
+      "pandalive": "Discover PandaLive creators",
+      "afreecatv": "Discover AfreecaTV creators"
+    }
+  },
+  "recordings": {
+    "title": {
+      "all": "All Recordings",
+      "tiktok": "TikTok Recordings",
+      "twitch": "Twitch Recordings",
+      "youtube": "YouTube Recordings",
+      "kick": "Kick Recordings",
+      "pandalive": "PandaLive Recordings",
+      "afreecatv": "AfreecaTV Recordings"
+    },
+    "subtitle": {
+      "all": "Watch recorded live streams",
+      "tiktok": "Watch recorded TikTok lives",
+      "twitch": "Watch recorded Twitch streams",
+      "youtube": "Watch recorded YouTube lives",
+      "kick": "Watch recorded Kick streams",
+      "pandalive": "Watch recorded PandaLive streams",
+      "afreecatv": "Watch recorded AfreecaTV streams"
+    }
+  },
+  "home": {
+    "title": "Live Stream Recorder",
+    "subtitle": "Your favorite streams recorded automatically"
+  }
+}
