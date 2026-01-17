@@ -7,7 +7,7 @@ export const revalidate = 3600;
 
 export async function GET(
   request: Request,
-  { params }: { params: Promise<{ page: string }> }
+  { params }: { params: Promise<{ page: string }> },
 ) {
   const { page } = await params;
   const sitemapPage = parseInt(page);
@@ -48,7 +48,7 @@ export async function GET(
         .map(
           (r) => `
         <url>
-          <loc>https://www.livestreamrecorder.com/${r.follower?.type}/${
+          <loc>${process.env.NEXT_PUBLIC_BASE_URL}/${r.follower?.type}/${
             r.follower?.type === "tiktok"
               ? `@${r.follower.username}`
               : r.follower?.username
@@ -57,7 +57,7 @@ export async function GET(
           <changefreq>weekly</changefreq>
           <priority>0.6</priority>
         </url>
-      `
+      `,
         )
         .join("")}
     </urlset>`;

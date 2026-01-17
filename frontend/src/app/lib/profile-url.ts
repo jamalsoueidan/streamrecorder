@@ -3,14 +3,13 @@ import { getProfileUrl } from "../components/open-social";
 
 export function generateProfileUrl(
   follower?: Partial<Pick<Follower, "username" | "type">>,
-  fullURL: boolean = false
+  fullURL: boolean = false,
 ) {
   if (!follower) {
     return "";
   }
 
   return (
-    (fullURL ? `https://www.livestreamrecorder.com` : ``) +
-    getProfileUrl(follower)
+    (fullURL ? process.env.NEXT_PUBLIC_BASE_URL : ``) + getProfileUrl(follower)
   );
 }

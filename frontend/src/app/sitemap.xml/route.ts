@@ -20,37 +20,37 @@ export async function GET() {
 
   // Calculate how many sitemap files we need
   const followerSitemapCount = Math.ceil(
-    (follower.meta?.pagination?.pageCount || 1) / STRAPI_PAGES_PER_SITEMAP
+    (follower.meta?.pagination?.pageCount || 1) / STRAPI_PAGES_PER_SITEMAP,
   );
 
   const recordingSitemapCount = Math.ceil(
-    (recording.meta?.pagination?.pageCount || 1) / STRAPI_PAGES_PER_SITEMAP
+    (recording.meta?.pagination?.pageCount || 1) / STRAPI_PAGES_PER_SITEMAP,
   );
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
     <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
       <sitemap>
-        <loc>https://www.livestreamrecorder.com/sitemaps/static.xml</loc>
+        <loc>${process.env.NEXT_PUBLIC_BASE_URL}/sitemaps/static.xml</loc>
       </sitemap>
       ${Array.from(
         { length: followerSitemapCount },
         (_, i) => `
         <sitemap>
-          <loc>https://www.livestreamrecorder.com/sitemaps/followers/${
+          <loc>${process.env.NEXT_PUBLIC_BASE_URL}/sitemaps/followers/${
             i + 1
           }.xml</loc>
         </sitemap>
-      `
+      `,
       ).join("")}
       ${Array.from(
         { length: recordingSitemapCount },
         (_, i) => `
         <sitemap>
-          <loc>https://www.livestreamrecorder.com/sitemaps/videos/${
+          <loc>${process.env.NEXT_PUBLIC_BASE_URL}/sitemaps/videos/${
             i + 1
           }.xml</loc>
         </sitemap>
-      `
+      `,
       ).join("")}
     </sitemapindex>`;
 

@@ -60,9 +60,9 @@ export async function generateMetadata({
       type: "profile",
       siteName: "Live Stream Recorder",
       images: [
-        `https://www.livestreamrecorder.com/api/og/${generateProfileUrl(
+        `${process.env.NEXT_PUBLIC_BASE_URL}/api/og/${generateProfileUrl(
           follower,
-          false
+          false,
         )}`,
       ],
     },
@@ -71,9 +71,9 @@ export async function generateMetadata({
       title: `${follower.nickname} – Recorded ${platformName} Streams`,
       description,
       images: [
-        `https://www.livestreamrecorder.com/api/og/${generateProfileUrl(
+        `${process.env.NEXT_PUBLIC_BASE_URL}/api/og/${generateProfileUrl(
           follower,
-          false
+          false,
         )}`,
       ],
     },
@@ -107,25 +107,25 @@ export default async function Page({ params }: PageProps) {
       const duration =
         video.sources?.reduce(
           (acc, source) => acc + (source.duration || 0),
-          0
+          0,
         ) || 0;
 
       return {
         "@type": "VideoObject",
         name: `${follower?.nickname || follower?.username}'s Stream - ${dayjs(
-          video.createdAt
+          video.createdAt,
         ).format("MMM D, YYYY")}`,
         thumbnailUrl: video.sources?.length
-          ? "https://www.livestreamrecorder.com/media" +
+          ? `${process.env.NEXT_PUBLIC_BASE_URL}/media` +
             video.sources[video.sources.length - 1].path +
             "screenshot.jpg"
           : null,
         description: `Recorded live stream from ${follower.nickname} on ${dayjs(
-          video.createdAt
+          video.createdAt,
         ).format("MMM D, YYYY")}`,
         uploadDate: video.createdAt,
         duration: `PT${Math.floor(duration / 60)}M${Math.round(
-          duration % 60
+          duration % 60,
         )}S`,
         contentUrl: `${generateProfileUrl(follower, true)}/video/${
           video.documentId

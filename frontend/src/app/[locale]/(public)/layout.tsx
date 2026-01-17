@@ -10,7 +10,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale();
 
   return {
-    metadataBase: new URL("https://www.livestreamrecorder.com"),
+    metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL!),
     title: {
       default: t("title"),
       template: t("titleTemplate"),
