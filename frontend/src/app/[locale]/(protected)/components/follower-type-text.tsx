@@ -9,7 +9,7 @@ type FollowerTypeTextProps = {
 } & ImageProps;
 
 export const FollowerTypeText = ({ type, ...props }: FollowerTypeTextProps) => {
-  const t = useTranslations("protected.common");
+  const t = useTranslations("protected.addFollowerForm");
 
   return (
     <>

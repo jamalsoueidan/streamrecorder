@@ -26,7 +26,7 @@ export default async function RecordingPage({ params, children }: PageProps) {
   const t = await getTranslations("recordings");
 
   const platform = streamingPlatforms.find(
-    (p) => p.name.toLowerCase() === type
+    (p) => p.name.toLowerCase() === type,
   ) || {
     color: "#ff0050",
     name: "",
@@ -54,7 +54,7 @@ export default async function RecordingPage({ params, children }: PageProps) {
             paddingBottom: "0.1em",
           }}
         >
-          {t("hero.title", { platform: platformName })}
+          {t(`hero.title.${platformName.toLowerCase()}`)}
         </Title>
 
         <Text
@@ -63,7 +63,8 @@ export default async function RecordingPage({ params, children }: PageProps) {
           maw={600}
           style={{ color: "#94a3b8", lineHeight: 1.7 }}
         >
-          {t("hero.subtitle", { platform: platformName })}
+          {}
+          {t(`hero.subtitle.${platformName.toLowerCase()}`)}
         </Text>
 
         <Flex align="center" gap={30} mt={20} wrap="wrap">
@@ -124,7 +125,7 @@ export default async function RecordingPage({ params, children }: PageProps) {
                 color: "#f1f5f9",
               }}
             >
-              {t("cta.title", { platform: platformName })}
+              {t(`cta.title.${platformName.toLowerCase()}`)}
             </Title>
             <Text size="lg" style={{ color: "#94a3b8", lineHeight: 1.7 }}>
               {t("cta.subtitle")}

@@ -1,10 +1,9 @@
 import PaginationControls from "@/app/components/pagination";
-import dayjs from "@/app/lib/dayjs";
 import { generateProfileUrl } from "@/app/lib/profile-url";
 import publicApi from "@/lib/public-api";
 import { Center } from "@mantine/core";
 import { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
+import { getFormatter, getTranslations } from "next-intl/server";
 
 import { streamingPlatforms } from "@/app/lib/streaming-platforms";
 import { RecordingsSimpleGrid } from "../components/recordings-simple-grid";
@@ -25,7 +24,7 @@ export async function generateMetadata({
   const t = await getTranslations("recordings");
 
   const platform = streamingPlatforms.find(
-    (p) => p.name.toLowerCase() === type
+    (p) => p.name.toLowerCase() === type,
   );
 
   const platformName = platform?.name || "All Platforms";
@@ -37,14 +36,7 @@ export async function generateMetadata({
   return {
     title,
     description,
-    keywords: [
-      `${platformName.toLowerCase()} recordings`,
-      `${platformName.toLowerCase()} live stream`,
-      `record ${platformName.toLowerCase()} streams`,
-      `${platformName.toLowerCase()} vod`,
-      "live stream recorder",
-      "stream recording",
-    ],
+    keywords: t.raw(`meta.${metaKey}.keywords`),
     openGraph: {
       title,
       description,
@@ -78,9 +70,10 @@ export default async function RecordingTypePage({
   const { type } = await params;
   const { page } = await searchParams;
   const t = await getTranslations("recordings");
+  const format = await getFormatter();
 
   const platform = streamingPlatforms.find(
-    (p) => p.name.toLowerCase() === type
+    (p) => p.name.toLowerCase() === type,
   ) || {
     color: "#ff0050",
     name: "",
@@ -130,8 +123,8 @@ export default async function RecordingTypePage({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    name: t("jsonLd.name", { platform: platformName }),
-    description: t("jsonLd.description", { platform: platformName }),
+    name: t(`jsonLd.name.${platformName.toLowerCase()}`),
+    description: t(`jsonLd.description.${platformName.toLowerCase()}`),
     url: `https://www.livestreamrecorder.com/recordings/${type}`,
     isPartOf: {
       "@type": "WebSite",
@@ -142,6 +135,9 @@ export default async function RecordingTypePage({
       "@type": "ItemList",
       numberOfItems: recordings?.length || 0,
       itemListElement: recordings?.slice(0, 10).map((recording, index) => {
+        const followerPlatform =
+          recording.follower?.type?.toLowerCase() || "unknown";
+
         const duration =
           recording.sources?.reduce((sum, s) => sum + (s.duration || 0), 0) ||
           0;
@@ -150,7 +146,6 @@ export default async function RecordingTypePage({
           recording.follower?.nickname ||
           recording.follower?.username ||
           "Unknown";
-        const recordingDate = dayjs(recording.createdAt).format("MMM D, YYYY");
 
         return {
           "@type": "ListItem",
@@ -159,11 +154,14 @@ export default async function RecordingTypePage({
             "@type": "VideoObject",
             name: t("jsonLd.streamTitle", {
               nickname,
-              date: recordingDate,
+              date: format.dateTime(new Date(recording.createdAt || ""), {
+                year: "numeric",
+                month: "short",
+                day: "numeric",
+              }),
             }),
-            description: t("jsonLd.streamDescription", {
+            description: t(`jsonLd.streamDescription.${followerPlatform}`, {
               nickname,
-              platform: recording.follower?.type || "unknown platform",
             }),
             thumbnailUrl: recording.sources?.length
               ? `https://www.livestreamrecorder.com/media${
@@ -172,7 +170,7 @@ export default async function RecordingTypePage({
               : undefined,
             uploadDate: recording.createdAt,
             duration: `PT${Math.floor(duration / 60)}M${Math.round(
-              duration % 60
+              duration % 60,
             )}S`,
             contentUrl:
               generateProfileUrl(recording.follower, true) +
