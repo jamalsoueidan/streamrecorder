@@ -2,39 +2,119 @@
   "meta": {
     "all": {
       "title": "All Live Stream Recordings",
-      "description": "Browse all recorded live streams from TikTok, Twitch, YouTube, Kick, and more. Never miss a stream again — watch your favorite creators anytime."
+      "description": "Browse all live stream recordings from your favorite creators.",
+      "keywords": [
+        "recordings",
+        "live stream",
+        "record streams",
+        "vod",
+        "live stream recorder",
+        "stream recording"
+      ]
     },
     "tiktok": {
       "title": "TikTok Live Stream Recordings",
-      "description": "Never miss a TikTok stream again. Watch recorded live streams from your favorite TikTok creators anytime, anywhere."
+      "description": "Browse TikTok live stream recordings from your favorite creators.",
+      "keywords": [
+        "tiktok recordings",
+        "tiktok live stream",
+        "record tiktok streams",
+        "tiktok vod",
+        "live stream recorder",
+        "stream recording"
+      ]
     },
     "twitch": {
       "title": "Twitch Live Stream Recordings",
-      "description": "Never miss a Twitch stream again. Watch recorded live streams from your favorite Twitch streamers anytime, anywhere."
+      "description": "Browse Twitch live stream recordings from your favorite creators.",
+      "keywords": [
+        "twitch recordings",
+        "twitch live stream",
+        "record twitch streams",
+        "twitch vod",
+        "live stream recorder",
+        "stream recording"
+      ]
     },
     "youtube": {
       "title": "YouTube Live Stream Recordings",
-      "description": "Never miss a YouTube Live again. Watch recorded live streams from your favorite YouTube channels anytime, anywhere."
+      "description": "Browse YouTube live stream recordings from your favorite creators.",
+      "keywords": [
+        "youtube recordings",
+        "youtube live stream",
+        "record youtube streams",
+        "youtube vod",
+        "live stream recorder",
+        "stream recording"
+      ]
     },
     "kick": {
       "title": "Kick Live Stream Recordings",
-      "description": "Never miss a Kick stream again. Watch recorded live streams from your favorite Kick streamers anytime, anywhere."
-    },
-    "pandalive": {
-      "title": "PandaLive Stream Recordings",
-      "description": "Never miss a PandaLive stream again. Watch recorded live streams from your favorite PandaLive creators anytime, anywhere."
+      "description": "Browse Kick live stream recordings from your favorite creators.",
+      "keywords": [
+        "kick recordings",
+        "kick live stream",
+        "record kick streams",
+        "kick vod",
+        "live stream recorder",
+        "stream recording"
+      ]
     },
     "afreecatv": {
-      "title": "AfreecaTV Stream Recordings",
-      "description": "Never miss an AfreecaTV stream again. Watch recorded live streams from your favorite AfreecaTV BJs anytime, anywhere."
+      "title": "AfreecaTV Live Stream Recordings",
+      "description": "Browse AfreecaTV live stream recordings from your favorite creators.",
+      "keywords": [
+        "afreecatv recordings",
+        "afreecatv live stream",
+        "record afreecatv streams",
+        "afreecatv vod",
+        "live stream recorder",
+        "stream recording"
+      ]
+    },
+    "pandalive": {
+      "title": "PandaLive Live Stream Recordings",
+      "description": "Browse PandaLive live stream recordings from your favorite creators.",
+      "keywords": [
+        "pandalive recordings",
+        "pandalive live stream",
+        "record pandalive streams",
+        "pandalive vod",
+        "live stream recorder",
+        "stream recording"
+      ]
     }
   },
   "hero": {
-    "title": "{platform} Recordings",
-    "subtitle": "Never miss a {platform} stream again. We automatically record your favorite creators so you can watch anytime."
+    "title": {
+      "all": "All Recordings",
+      "tiktok": "TikTok Recordings",
+      "twitch": "Twitch Recordings",
+      "youtube": "YouTube Recordings",
+      "kick": "Kick Recordings",
+      "afreecatv": "AfreecaTV Recordings",
+      "pandalive": "PandaLive Recordings"
+    },
+    "subtitle": {
+      "all": "Never miss a stream again. We automatically record your favorite creators so you can watch anytime.",
+      "tiktok": "Never miss a TikTok stream again. We automatically record your favorite creators so you can watch anytime.",
+      "twitch": "Never miss a Twitch stream again. We automatically record your favorite creators so you can watch anytime.",
+      "youtube": "Never miss a YouTube stream again. We automatically record your favorite creators so you can watch anytime.",
+      "kick": "Never miss a Kick stream again. We automatically record your favorite creators so you can watch anytime.",
+      "afreecatv": "Never miss an AfreecaTV stream again. We automatically record your favorite creators so you can watch anytime.",
+      "pandalive": "Never miss a PandaLive stream again. We automatically record your favorite creators so you can watch anytime."
+    }
   },
   "cta": {
-    "title": "Never Miss a {platform} Stream Again",
+    "title": {
+      "all": "Never miss a stream again",
+      "tiktok": "Never miss a TikTok stream again",
+      "twitch": "Never miss a Twitch stream again",
+      "youtube": "Never miss a YouTube stream again",
+      "kick": "Never miss a Kick stream again",
+      "afreecatv": "Never miss an AfreecaTV stream again",
+      "pandalive": "Never miss a PandaLive stream again"
+    },
     "subtitle": "Sign up for free and start recording your favorite creators today.",
     "button": "Get Started Free"
   },
@@ -53,9 +133,34 @@
     "afreecatv": "## About AfreecaTV Recordings\n\nWatch AfreecaTV streams you missed. Our service automatically records AfreecaTV broadcasts so you can catch up on your favorite BJs anytime.\n\n### Why AfreecaTV Recordings?\n\nAfreecaTV is Korea's original streaming platform. From legendary esports moments to viral mukbang sessions, AfreecaTV has content you won't find anywhere else. Our recordings make it accessible worldwide.\n\n### Browse AfreecaTV Recordings\n\nExplore our library of recorded AfreecaTV streams. Whether you're into gaming, mukbang, or talk shows, find Korean content organized and ready to watch.\n\n### Korean Content, Global Access\n\nAfreecaTV streams happen on Korean time. Our recordings remove the time zone barrier so international fans can enjoy authentic Korean streaming culture.\n\n### Start Recording AfreecaTV Today\n\nCreate a free account and follow your first AfreecaTV BJ. Experience Korean streaming on your schedule."
   },
   "jsonLd": {
-    "name": "{platform} Live Stream Recordings",
-    "description": "Browse recorded live streams from {platform}. Never miss a stream again.",
-    "streamTitle": "{nickname}'s Stream - {date}",
-    "streamDescription": "Recorded live stream from {nickname} on {platform}"
-  }
+    "name": {
+      "all": "Live Stream Recordings",
+      "tiktok": "TikTok Live Stream Recordings",
+      "twitch": "Twitch Live Stream Recordings",
+      "youtube": "YouTube Live Stream Recordings",
+      "kick": "Kick Live Stream Recordings",
+      "afreecatv": "AfreecaTV Live Stream Recordings",
+      "pandalive": "PandaLive Live Stream Recordings"
+    },
+    "description": {
+      "all": "Browse live stream recordings. Never miss a stream again.",
+      "tiktok": "Browse live stream recordings from TikTok. Never miss a stream again.",
+      "twitch": "Browse live stream recordings from Twitch. Never miss a stream again.",
+      "youtube": "Browse live stream recordings from YouTube. Never miss a stream again.",
+      "kick": "Browse live stream recordings from Kick. Never miss a stream again.",
+      "afreecatv": "Browse live stream recordings from AfreecaTV. Never miss a stream again.",
+      "pandalive": "Browse live stream recordings from PandaLive. Never miss a stream again."
+    },
+    "streamTitle": "{nickname} Stream - {date}",
+    "streamDescription": {
+      "tiktok": "Live stream recording from {nickname} on TikTok",
+      "twitch": "Live stream recording from {nickname} on Twitch",
+      "youtube": "Live stream recording from {nickname} on YouTube",
+      "kick": "Live stream recording from {nickname} on Kick",
+      "afreecatv": "Live stream recording from {nickname} on AfreecaTV",
+      "pandalive": "Live stream recording from {nickname} on PandaLive",
+      "unknown": "Live stream recording from {nickname}"
+    }
+  },
+  "recordedOn": "recorded on {date}"
 }
