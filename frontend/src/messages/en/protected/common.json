@@ -1,0 +1,33 @@
+{
+  "follow": {
+    "tooltip": "Add Follower",
+    "successTitle": "Followed!",
+    "successMessage": "You are now following {username}",
+    "errorTitle": "Error"
+  },
+  "unfollow": {
+    "tooltip": "Remove Follower",
+    "successTitle": "Unfollowed",
+    "successMessage": "You unfollowed {username}",
+    "successMessageGeneric": "Successfully unfollowed"
+  },
+  "platforms": {
+    "all": "All",
+    "tiktok": "TikTok",
+    "twitch": "Twitch",
+    "youtube": "YouTube",
+    "kick": "Kick",
+    "afreecatv": "AfreecaTV",
+    "pandalive": "PandaLive"
+  },
+  "recording": {
+    "rec": "REC",
+    "new": "New"
+  },
+  "scopeFilter": {
+    "label": "Filter:",
+    "following": "Following",
+    "discover": "Discover",
+    "all": "All"
+  }
+}

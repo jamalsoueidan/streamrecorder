@@ -1,0 +1,24 @@
+{
+  "follow": {
+    "tooltip": "إضافة متابعة",
+    "successTitle": "تمت المتابعة!",
+    "successMessage": "أنت الآن تتابع {username}",
+    "errorTitle": "خطأ"
+  },
+  "unfollow": {
+    "tooltip": "إلغاء المتابعة",
+    "successTitle": "تم إلغاء المتابعة",
+    "successMessage": "ألغيت متابعة {username}",
+    "successMessageGeneric": "تم إلغاء المتابعة بنجاح"
+  },
+  "recording": {
+    "rec": "تسجيل",
+    "new": "جديد"
+  },
+  "scopeFilter": {
+    "label": "تصفية:",
+    "following": "المتابَعون",
+    "discover": "اكتشف",
+    "all": "الكل"
+  }
+}
