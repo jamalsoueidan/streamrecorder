@@ -55,10 +55,10 @@ export default function AddFollowerForm() {
   const [selectedPlatform, setSelectedPlatform] =
     useState<PlatformType>("tiktok");
   const [detectedPlatform, setDetectedPlatform] = useState<PlatformType | null>(
-    null
+    null,
   );
   const [searchResult, setSearchResult] = useState<UserSearchResult | null>(
-    null
+    null,
   );
   const [isSearching, setIsSearching] = useState(false);
   const [searchError, setSearchError] = useState<string | null>(null);
@@ -195,7 +195,7 @@ export default function AddFollowerForm() {
         <Group wrap="nowrap" w="100%">
           <Center>
             <Avatar
-              src={searchResult.avatar}
+              src={`/api/image/${searchResult.avatar}`}
               alt={searchResult.nickname}
               size={80}
             />
