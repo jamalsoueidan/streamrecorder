@@ -4541,6 +4541,22 @@
     yup "0.32.9"
     zod "3.25.67"
 
+"@strapi/utils@5.5.0":
+  version "5.5.0"
+  resolved "https://registry.yarnpkg.com/@strapi/utils/-/utils-5.5.0.tgz#9a1b5fed03dff95d85c4ae5919cee01214d1ca08"
+  integrity sha512-qxfQwpTYDXij7XyMjMEVGyu4kugv1OMfbe7lM+WABUrIRHi4qwMpDE8rcPmctQsdBwaMNg5qf/6bJ9U3lYI4qQ==
+  dependencies:
+    "@sindresorhus/slugify" "1.1.0"
+    date-fns "2.30.0"
+    execa "5.1.1"
+    http-errors "2.0.0"
+    lodash "4.17.21"
+    node-machine-id "1.1.12"
+    p-map "4.0.0"
+    preferred-pm "3.1.2"
+    yup "0.32.9"
+    zod "^3.22.4"
+
 "@swc/core-darwin-arm64@1.15.5":
   version "1.15.5"
   resolved "https://registry.yarnpkg.com/@swc/core-darwin-arm64/-/core-darwin-arm64-1.15.5.tgz#573ac681f407ba04baf2e87a52887761a97ee9ac"
@@ -6964,6 +6980,11 @@ define-properties@^1.2.1:
     define-data-property "^1.0.1"
     has-property-descriptors "^1.0.0"
     object-keys "^1.1.1"
+
+defu@^6.1.4:
+  version "6.1.4"
+  resolved "https://registry.yarnpkg.com/defu/-/defu-6.1.4.tgz#4e0c9cf9ff68fe5f3d7f2765cc1a012dfdcb0479"
+  integrity sha512-mEQCMmwJu317oSz8CwdIOdwf3xMif1ttiM8LTufzc3g6kR+9Pe236twL8j3IYT1F7GfRgGcW6MWxzZjLIkuHIg==
 
 delayed-stream@~1.0.0:
   version "1.0.0"
@@ -12831,6 +12852,15 @@ stdin-discarder@^0.2.2:
   resolved "https://registry.yarnpkg.com/stdin-discarder/-/stdin-discarder-0.2.2.tgz#390037f44c4ae1a1ae535c5fe38dc3aba8d997be"
   integrity sha512-UhDfHmA92YAlNnCfhmq0VeNL5bDbiZGg7sZ2IvPsXubGkiNa9EC+tUTsjBRsYUAz87btI6/1wf4XoVvQ3uRnmQ==
 
+strapi-provider-email-extra@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/strapi-provider-email-extra/-/strapi-provider-email-extra-0.6.0.tgz#110d073295b61bdea722afe8aa7692887e12a471"
+  integrity sha512-wL+u8/bq0GSVn24RbKwjvXE8K+7aw7Tn/Yj4HvY8p2WRowxi/DbN71c5IdtWTQ47XW5tZx7LqhBqou3bLA1SpA==
+  dependencies:
+    "@strapi/utils" "5.5.0"
+    defu "^6.1.4"
+    lodash "^4.17.21"
+
 strapi-provider-email-resend@^1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/strapi-provider-email-resend/-/strapi-provider-email-resend-1.0.4.tgz#819062ecf9c142dfa3dbabba98d78c861a56d160"
@@ -14136,7 +14166,7 @@ zod@3.25.67:
   resolved "https://registry.yarnpkg.com/zod/-/zod-3.25.67.tgz#62987e4078e2ab0f63b491ef0c4f33df24236da8"
   integrity sha512-idA2YXwpCdqUSKRCACDE6ItZD9TZzy3OZMtpfLoh6oPR47lipysRrJfjzMqFxQ3uJuUPyUeWe1r9vLH33xO/Qw==
 
-zod@^3.19.1:
+zod@^3.19.1, zod@^3.22.4:
   version "3.25.76"
   resolved "https://registry.yarnpkg.com/zod/-/zod-3.25.76.tgz#26841c3f6fd22a6a2760e7ccb719179768471e34"
   integrity sha512-gzUt/qt81nXsFGKIFcC3YnfEAx5NkunCfnDlvuBSSFS02bcXu4Lmea0AFIUwbLWxWPx3d9p8S5QoaujKcNQxcQ==

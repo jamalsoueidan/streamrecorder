@@ -1,13 +1,26 @@
 export default ({ env }) => ({
   email: {
     config: {
-      provider: "strapi-provider-email-resend",
+      provider: "strapi-provider-email-extra",
       providerOptions: {
-        apiKey: env("RESEND_API_KEY"),
+        defaultProvider: "strapi-provider-email-resend",
+        providers: {
+          "strapi-provider-email-resend": {
+            provider: "strapi-provider-email-resend",
+            providerOptions: {
+              apiKey: env("RESEND_API_KEY"),
+            },
+          },
+        },
+        dynamicTemplates: {
+          enabled: true,
+          collection: "api::email-template.email-template",
+          subjectMatcherField: "subjectMatcher",
+        },
       },
       settings: {
-        defaultFrom: "contact@livestreamrecorder.com",
-        defaultReplyTo: "contact@livestreamrecorder.com",
+        defaultFrom: "noreply@livestreamrecorder.com",
+        defaultFromName: "Live Stream Recorder",
       },
     },
   },
