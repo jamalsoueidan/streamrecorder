@@ -1,5 +1,6 @@
 import { ActionIcon, SimpleGrid, Stack, Text, Title } from "@mantine/core";
 import { IconVideo } from "@tabler/icons-react";
+import { getTranslations } from "next-intl/server";
 
 import dayjs from "@/app/lib/dayjs";
 import { fetchProfileRecordings, getFollower } from "./actions/actions";
@@ -24,20 +25,24 @@ export async function generateMetadata({
   params: Promise<{ username: string; type: string }>;
 }): Promise<Metadata> {
   const { type, username } = await params;
+  const t = await getTranslations("profile");
   const follower = await getFollower({ username, type });
 
   if (!follower) {
     return {
-      title: "Streamer Not Found",
-      description: "This creator profile could not be found.",
+      title: t("meta.notFoundTitle"),
+      description: t("meta.notFoundDescription"),
     };
   }
 
   const platformName = type.charAt(0).toUpperCase() + type.slice(1);
-  const title = `${follower.nickname} (@${follower.username}) VODs & Recordings`;
-  const description =
-    follower.tagline ||
-    `Watch ${follower.nickname}'s recorded ${platformName} streams anytime. Never miss a live stream – we record automatically so you can watch later or download for free.`;
+  const translation = {
+    nickname: follower.nickname || "",
+    username: follower.username,
+    platform: platformName,
+  };
+  const title = t("meta.title", translation);
+  const description = follower.tagline || t("meta.description", translation);
 
   return {
     title,
@@ -55,7 +60,7 @@ export async function generateMetadata({
       `${platformName.toLowerCase()} stream recorder`,
     ],
     openGraph: {
-      title: `${follower.nickname} – Watch Recorded Streams | Live Stream Recorder`,
+      title: t("meta.ogTitle", translation),
       description,
       type: "profile",
       siteName: "Live Stream Recorder",
@@ -68,7 +73,7 @@ export async function generateMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title: `${follower.nickname} – Recorded ${platformName} Streams`,
+      title: t("meta.twitterTitle", translation),
       description,
       images: [
         `${process.env.NEXT_PUBLIC_BASE_URL}/api/og/${generateProfileUrl(
@@ -85,6 +90,7 @@ export async function generateMetadata({
 
 export default async function Page({ params }: PageProps) {
   const { type, username } = await params;
+  const t = await getTranslations("profile");
 
   const follower = await getFollower({ username, type });
 
@@ -112,9 +118,10 @@ export default async function Page({ params }: PageProps) {
 
       return {
         "@type": "VideoObject",
-        name: `${follower?.nickname || follower?.username}'s Stream - ${dayjs(
-          video.createdAt,
-        ).format("MMM D, YYYY")}`,
+        name: t("jsonLd.streamTitle", {
+          nickname: follower?.nickname || follower?.username,
+          date: dayjs(video.createdAt).format("MMM D, YYYY"),
+        }),
         thumbnailUrl: video.sources?.length
           ? `${process.env.NEXT_PUBLIC_BASE_URL}/media` +
             video.sources[video.sources.length - 1].path +
@@ -154,7 +161,7 @@ export default async function Page({ params }: PageProps) {
                     type={type as unknown as FollowerTypeEnum}
                   />
                   <Text size="xs">
-                    Recorded{" "}
+                    {t("recorded")}{" "}
                     <time dateTime={rec.createdAt}>
                       {dayjs(rec.createdAt).format("MMM D, YYYY")}
                     </time>
@@ -169,7 +176,9 @@ export default async function Page({ params }: PageProps) {
   );
 }
 
-function EmptyState() {
+async function EmptyState() {
+  const t = await getTranslations("profile");
+
   return (
     <Stack align="center" justify="center" py={80} gap="lg">
       <ActionIcon variant="transparent" size={120} radius="xl" color="white">
@@ -177,11 +186,10 @@ function EmptyState() {
       </ActionIcon>
       <Stack align="center" gap={12}>
         <Title order={2} fw={600}>
-          No recordings yet
+          {t("emptyState.title")}
         </Title>
         <Text size="xl" c="dimmed" maw={450} ta="center">
-          We haven&apos;t captured any streams from this creator yet. Check back
-          later!
+          {t("emptyState.description")}
         </Text>
       </Stack>
     </Stack>

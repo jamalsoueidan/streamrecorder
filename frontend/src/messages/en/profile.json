@@ -1,0 +1,21 @@
+{
+  "meta": {
+    "title": "{nickname} (@{username}) VODs & Recordings",
+    "notFoundTitle": "Streamer Not Found",
+    "notFoundDescription": "This creator profile could not be found.",
+    "description": "Watch {nickname}'s recorded {platform} streams anytime. Never miss a live stream — we record automatically so you can watch later or download for free.",
+    "ogTitle": "{nickname} — Watch Recorded Streams | Live Stream Recorder",
+    "twitterTitle": "{nickname} — Recorded {platform} Streams"
+  },
+  "defaultTagline": "Watch {nickname}'s recorded streams anytime. Never miss a live stream — we record automatically.",
+  "about": "About {nickname}",
+  "faq": "FAQ",
+  "recorded": "Recorded",
+  "emptyState": {
+    "title": "No recordings yet",
+    "description": "We haven't captured any streams from this creator yet. Check back later!"
+  },
+  "jsonLd": {
+    "streamTitle": "{nickname}'s Stream - {date}"
+  }
+}
