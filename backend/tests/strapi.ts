@@ -17,6 +17,7 @@ process.env.API_TOKEN_SALT = "test-api-token-salt";
 process.env.ADMIN_JWT_SECRET = "test-admin-jwt-secret";
 process.env.TRANSFER_TOKEN_SALT = "test-transfer-token-salt";
 process.env.JWT_SECRET = "test-jwt-secret";
+process.env.RESEND_API_KEY = "re_ABasdsadsadsad";
 
 export type RoleType = "authenticated" | "premium" | "champion" | "public";
 
@@ -127,7 +128,7 @@ export async function getOrCreateRole(roleType: RoleType) {
  */
 export async function grantPermissions(
   actions: string[],
-  roleType: RoleType = "authenticated"
+  roleType: RoleType = "authenticated",
 ) {
   const role = await getOrCreateRole(roleType);
 
@@ -154,7 +155,7 @@ export async function grantPermissions(
 export async function createTestUser(
   email: string,
   username: string,
-  roleType: RoleType = "premium"
+  roleType: RoleType = "premium",
 ) {
   const role = await getOrCreateRole(roleType);
 
@@ -192,7 +193,7 @@ export async function createTestUserWithPermissions(
   email: string,
   username: string,
   roleType: RoleType,
-  permissions: string[]
+  permissions: string[],
 ) {
   await grantPermissions(permissions, roleType);
   return createTestUser(email, username, roleType);
@@ -200,7 +201,7 @@ export async function createTestUserWithPermissions(
 
 export async function createRecording(
   followerId: number,
-  options: { withSource?: boolean; sourceState?: string } = {}
+  options: { withSource?: boolean; sourceState?: string } = {},
 ) {
   const { withSource = false, sourceState = "done" } = options;
 
