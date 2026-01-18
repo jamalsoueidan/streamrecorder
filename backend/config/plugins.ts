@@ -1,4 +1,16 @@
 export default ({ env }) => ({
+  email: {
+    config: {
+      provider: "strapi-provider-email-resend",
+      providerOptions: {
+        apiKey: env("RESEND_API_KEY"),
+      },
+      settings: {
+        defaultFrom: "contact@livestreamrecorder.com",
+        defaultReplyTo: "contact@livestreamrecorder.com",
+      },
+    },
+  },
   upload: {
     config: {
       provider: "@strapi/provider-upload-aws-s3",
@@ -58,7 +70,7 @@ export default ({ env }) => ({
                         return { ...param, schema: { type: "string" } };
                       }
                       return param;
-                    }
+                    },
                   );
                 }
               });
@@ -67,7 +79,7 @@ export default ({ env }) => ({
 
           // Add populate to /XXX/{id}
           const populateParam = draft.paths["/recordings"].get.parameters.find(
-            (param: any) => param.name === "populate"
+            (param: any) => param.name === "populate",
           );
 
           draft.paths["/recordings/{id}"].get.parameters.push(populateParam);
