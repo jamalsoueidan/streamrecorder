@@ -1,6 +1,7 @@
 import { streamingPlatforms } from "@/app/lib/streaming-platforms";
 
-export const revalidate = 86400;
+export const dynamic = "force-dynamic";
+export const revalidate = 3600;
 
 export async function GET() {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
