@@ -9,6 +9,7 @@ import {
   Title,
   Tooltip,
 } from "@mantine/core";
+import { getTranslations } from "next-intl/server";
 import { getFollower } from "./actions/actions";
 
 import { CountryFlag } from "@/app/[locale]/(protected)/components/country-flag";
@@ -26,13 +27,14 @@ export default async function Layout({
   }>;
 }) {
   const { type, username } = await params;
+  const t = await getTranslations("profile");
 
   const follower = await getFollower({ username, type });
 
   return (
     <Container size="lg">
       <Stack gap="xl">
-        <Flex gap="md" align="center">
+        <Flex gap="md">
           <Avatar
             size="xl"
             radius="xl"
@@ -65,7 +67,7 @@ export default async function Layout({
             </Group>
             <Text>
               {follower.tagline ||
-                `Watch ${follower.nickname}'s recorded streams anytime. Never miss a live stream — we record automatically.`}
+                t("defaultTagline", { nickname: follower.nickname || "" })}
             </Text>
           </Stack>
         </Flex>
@@ -74,7 +76,9 @@ export default async function Layout({
         {follower.description ? (
           <Stack gap="xl">
             <div>
-              <Title order={2}>About {follower.nickname}</Title>
+              <Title order={2}>
+                {t("about", { nickname: follower.nickname || "" })}
+              </Title>
               <Text c="dimmed" size="lg" mt="sm">
                 {follower.description}
               </Text>
@@ -84,7 +88,7 @@ export default async function Layout({
 
         {follower.faq ? (
           <>
-            <Title order={3}>FAQ</Title>
+            <Title order={3}>{t("faq")}</Title>
             {follower.faq.map((item: { q: string; a: string }) => (
               <Paper
                 key={item.q}

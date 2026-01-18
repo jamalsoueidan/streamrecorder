@@ -117,7 +117,7 @@ export function Header({ isLoggedIn = false }: HeaderProps) {
             </Group>
 
             <Group gap={12} visibleFrom="md">
-              {/* <Menu>
+              {/*<Menu>
                 <Menu.Target>
                   <Button
                     variant="subtle"

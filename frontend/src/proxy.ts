@@ -57,7 +57,9 @@ export function proxy(request: NextRequest) {
       }
     }
 
-    return NextResponse.rewrite(new URL(rewriteUrl, request.url));
+    const response = NextResponse.rewrite(new URL(rewriteUrl, request.url));
+    response.headers.set("x-next-intl-locale", locale);
+    return response;
   }
 
   return handleI18nRouting(request);

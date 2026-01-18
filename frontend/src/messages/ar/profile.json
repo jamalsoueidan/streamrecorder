@@ -1,0 +1,21 @@
+{
+  "meta": {
+    "title": "تسجيلات {nickname} (@{username})",
+    "notFoundTitle": "المذيع غير موجود",
+    "notFoundDescription": "لم يتم العثور على ملف هذا المذيع.",
+    "description": "شاهد بث {nickname} المسجل على {platform} في أي وقت. لا تفوت أي بث مباشر — نسجل تلقائياً حتى تتمكن من المشاهدة لاحقاً أو التحميل مجاناً.",
+    "ogTitle": "{nickname} — شاهد البث المسجل | مسجل البث المباشر",
+    "twitterTitle": "{nickname} — بث {platform} المسجل"
+  },
+  "defaultTagline": "شاهد بث {nickname} المسجل في أي وقت. لا تفوت أي بث مباشر — نسجل تلقائياً.",
+  "about": "حول {nickname}",
+  "faq": "الأسئلة الشائعة",
+  "recorded": "تم التسجيل",
+  "emptyState": {
+    "title": "لا توجد تسجيلات بعد",
+    "description": "لم نلتقط أي بث من هذا المذيع بعد. تحقق لاحقاً!"
+  },
+  "jsonLd": {
+    "streamTitle": "بث {nickname} - {date}"
+  }
+}
