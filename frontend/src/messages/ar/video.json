@@ -1,0 +1,13 @@
+{
+  "meta": {
+    "title": "بث {creatorName} - {recordedDate}",
+    "description": "شاهد بث {creatorName} المسجل على {platform} من {recordedDate}. المدة: {duration}. لا تفوت أي بث مع مسجل البث المباشر.",
+    "ogTitle": "بث {creatorName} - {recordedDate} | مسجل البث المباشر",
+    "keywords": "{creatorName} فيديو, {creatorName} بث {recordedDate}, {creatorName} {platform}, {creatorName} بث مسجل, شاهد {creatorName}"
+  },
+  "jsonLd": {
+    "name": "بث {creatorName} - {recordedDate}",
+    "description": "بث مباشر مسجل من {creatorName} في {recordedDate}"
+  },
+  "backToProfile": "العودة إلى ملف {username}"
+}
