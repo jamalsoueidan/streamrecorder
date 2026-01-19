@@ -11,17 +11,16 @@ import { Anchor, Badge, Box, Image } from "@mantine/core";
 
 interface Props {
   recording: Recording;
-  username: string;
   type: FollowerTypeEnum;
 }
 
-export function ImageVideoPreview({ recording, type, username }: Props) {
+export function ImageVideoPreview({ recording, type }: Props) {
   const sources = recording.sources;
   const totalDuration =
     sources?.reduce((sum, s) => sum + (s.duration || 0), 0) || 0;
 
   const isRecording = sources?.some(
-    (s) => s.state === SourceStateEnum.Recording
+    (s) => s.state === SourceStateEnum.Recording,
   );
 
   const uri = sources?.length

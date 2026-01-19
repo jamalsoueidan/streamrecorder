@@ -5,7 +5,8 @@
     "notFoundDescription": "This creator profile could not be found.",
     "description": "Watch {nickname}'s recorded {platform} streams anytime. Never miss a live stream — we record automatically so you can watch later or download for free.",
     "ogTitle": "{nickname} — Watch Recorded Streams | Live Stream Recorder",
-    "twitterTitle": "{nickname} — Recorded {platform} Streams"
+    "twitterTitle": "{nickname} — Recorded {platform} Streams",
+    "keywords": "{nickname} vods, {nickname} streams, {nickname} recordings, {nickname} {platform}, watch {nickname}, {nickname} live stream, {platform} vod downloader, {platform} stream recorder"
   },
   "defaultTagline": "Watch {nickname}'s recorded streams anytime. Never miss a live stream — we record automatically.",
   "about": "About {nickname}",

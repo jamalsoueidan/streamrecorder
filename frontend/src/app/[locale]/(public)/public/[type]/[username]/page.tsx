@@ -1,6 +1,6 @@
 import { ActionIcon, SimpleGrid, Stack, Text, Title } from "@mantine/core";
 import { IconVideo } from "@tabler/icons-react";
-import { getTranslations } from "next-intl/server";
+import { getFormatter, getTranslations } from "next-intl/server";
 
 import dayjs from "@/app/lib/dayjs";
 import { fetchProfileRecordings, getFollower } from "./actions/actions";
@@ -47,18 +47,7 @@ export async function generateMetadata({
   return {
     title,
     description,
-    keywords: [
-      `${follower.nickname} vods`,
-      `${follower.nickname} streams`,
-      `${follower.nickname} recordings`,
-      `${follower.nickname} ${platformName}`,
-      `watch ${follower.nickname}`,
-      `${follower.nickname} live stream`,
-      "live stream recorder",
-      "stream recording",
-      `${platformName.toLowerCase()} vod downloader`,
-      `${platformName.toLowerCase()} stream recorder`,
-    ],
+    keywords: t("meta.keywords", translation).split(", "),
     openGraph: {
       title: t("meta.ogTitle", translation),
       description,
@@ -90,14 +79,17 @@ export async function generateMetadata({
 
 export default async function Page({ params }: PageProps) {
   const { type, username } = await params;
+  const format = await getFormatter();
   const t = await getTranslations("profile");
-
+  const tv = await getTranslations("video");
   const follower = await getFollower({ username, type });
 
   const data = await fetchProfileRecordings(type, username);
 
   const recordings = data?.data ?? [];
   const hasRecordings = recordings.length > 0;
+
+  const creatorName = follower.nickname || follower.username || "Unknown";
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -118,23 +110,35 @@ export default async function Page({ params }: PageProps) {
 
       return {
         "@type": "VideoObject",
-        name: t("jsonLd.streamTitle", {
-          nickname: follower?.nickname || follower?.username,
-          date: dayjs(video.createdAt).format("MMM D, YYYY"),
+        name: tv("jsonLd.name", {
+          creatorName,
+          recordedDate: format.dateTime(new Date(video.createdAt || ""), {
+            year: "numeric",
+            month: "short",
+            day: "numeric",
+          }),
+        }),
+        description: tv("jsonLd.description", {
+          creatorName,
+          recordedDate: format.dateTime(new Date(video.createdAt || ""), {
+            year: "numeric",
+            month: "short",
+            day: "numeric",
+          }),
         }),
         thumbnailUrl: video.sources?.length
           ? `${process.env.NEXT_PUBLIC_BASE_URL}/media` +
             video.sources[video.sources.length - 1].path +
             "screenshot.jpg"
           : null,
-        description: `Recorded live stream from ${follower.nickname} on ${dayjs(
-          video.createdAt,
-        ).format("MMM D, YYYY")}`,
         uploadDate: video.createdAt,
         duration: `PT${Math.floor(duration / 60)}M${Math.round(
           duration % 60,
         )}S`,
-        contentUrl: `${generateProfileUrl(follower, true)}/video/${
+        contentUrl: `${
+          process.env.NEXT_PUBLIC_BASE_URL
+        }/api/playlist/${video.documentId}`,
+        embedUrl: `${generateProfileUrl(follower, true)}/video/${
           video.documentId
         }`,
       };
@@ -157,7 +161,6 @@ export default async function Page({ params }: PageProps) {
                 <Stack key={rec.documentId} gap={4}>
                   <ImageVideoPreview
                     recording={rec}
-                    username={username}
                     type={type as unknown as FollowerTypeEnum}
                   />
                   <Text size="xs">
