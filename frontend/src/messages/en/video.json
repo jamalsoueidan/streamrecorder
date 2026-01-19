@@ -1,0 +1,13 @@
+{
+  "meta": {
+    "title": "{creatorName}'s Stream - {recordedDate}",
+    "description": "Watch {creatorName}'s recorded {platform} live stream from {recordedDate}. Duration: {duration}. Never miss a stream with Live Stream Recorder.",
+    "ogTitle": "{creatorName}'s Stream - {recordedDate} | Live Stream Recorder",
+    "keywords": "{creatorName} video, {creatorName} stream {recordedDate}, {creatorName} {platform}, {creatorName} recorded stream, watch {creatorName}"
+  },
+  "jsonLd": {
+    "name": "{creatorName} Stream - {recordedDate}",
+    "description": "Recorded live stream from {creatorName} on {recordedDate}"
+  },
+  "backToProfile": "Back to {username} profile"
+}
