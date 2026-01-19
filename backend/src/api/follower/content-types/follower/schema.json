@@ -9,17 +9,36 @@
   "options": {
     "draftAndPublish": false
   },
-  "pluginOptions": {},
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
   "attributes": {
     "nickname": {
-      "type": "string"
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "username": {
       "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
       "required": true
     },
     "type": {
       "type": "enumeration",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
       "required": true,
       "default": "tiktok",
       "enum": [
@@ -33,29 +52,56 @@
     },
     "gender": {
       "type": "enumeration",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
       "enum": [
         "male",
         "female",
         "unknown"
       ]
     },
-    "description": {
-      "type": "text"
-    },
     "country": {
-      "type": "string"
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "countryCode": {
-      "type": "string"
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "language": {
-      "type": "string"
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "languageCode": {
-      "type": "string"
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "avatar": {
       "type": "media",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
       "multiple": false,
       "allowedTypes": [
         "images",
@@ -65,27 +111,70 @@
       ]
     },
     "lastCheckedAt": {
-      "type": "datetime"
+      "type": "datetime",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "protected": {
       "type": "boolean",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
       "default": false
     },
     "pause": {
       "type": "boolean",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
       "default": false
     },
-    "faq": {
-      "type": "json"
-    },
-    "category": {
-      "type": "string"
+    "description": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "tagline": {
-      "type": "string"
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "faq": {
+      "type": "json",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "category": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
     },
     "migration": {
       "type": "integer",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
       "default": 0
     }
   }

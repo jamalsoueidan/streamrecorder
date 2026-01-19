@@ -4,7 +4,241 @@ services:
     restart: "no"
     volumes:
       - "./tiktok-app:/app"
-    command: "sh -c 'cat > /app/service.js << '\\''JSEOF'\\''\nconst http = require(\"http\");\nconst url = require(\"url\");\nconst Tiktok = require(\"@tobyg74/tiktok-api-dl\");\n\nconsole.log(\"TikTok API module loaded, server starting...\");\n\nconst server = http.createServer(async (req, res) => {\n  const parsed = url.parse(req.url, true);\n  const path = parsed.pathname;\n  const query = parsed.query;\n  \n  res.setHeader(\"Content-Type\", \"application/json\");\n  \n  const start = Date.now();\n  \n  try {\n    if (path === \"/health\") {\n      res.end(JSON.stringify({ status: \"ok\" }));\n      return;\n    }\n    \n    if (path === \"/stalkuser\") {\n      const user = query.user;\n      if (!user) {\n        res.statusCode = 400;\n        res.end(JSON.stringify({ error: \"Missing ?user= parameter\" }));\n        return;\n      }\n      const result = await Tiktok.StalkUser(user);\n      res.end(JSON.stringify({ ...result, ms: Date.now() - start }));\n      return;\n    }\n    \n    if (path === \"/downloader\") {\n      const tiktokUrl = query.url;\n      const version = query.version || \"v2\";\n      if (!tiktokUrl) {\n        res.statusCode = 400;\n        res.end(JSON.stringify({ error: \"Missing ?url= parameter\" }));\n        return;\n      }\n      const result = await Tiktok.Downloader(tiktokUrl, { version });\n      res.end(JSON.stringify({ ...result.result, ms: Date.now() - start }));\n      return;\n    }\n    \n    res.statusCode = 404;\n    res.end(JSON.stringify({ error: \"Not found. Use /stalkuser?user= or /downloader?url=\" }));\n    \n  } catch (e) {\n    res.statusCode = 500;\n    res.end(JSON.stringify({ error: e.message, ms: Date.now() - start }));\n  }\n});\n\nserver.listen(3456, \"0.0.0.0\", () => {\n  console.log(\"TikTok API service running on port 3456\");\n});\nJSEOF'\n"
+    command: |
+      sh -c 'cat > /app/service.js << '\''JSEOF'\''
+      const http = require("http");
+      const Tiktok = require("@tobyg74/tiktok-api-dl");
+
+      console.log("TikTok API module loaded, server starting...");
+
+      function parseCookieFile(cookieString) {
+        const cookies = [];
+        for (const line of cookieString.split("\n")) {
+          const trimmed = line.trim();
+          if (!trimmed || trimmed.startsWith("#")) continue;
+          const parts = trimmed.split("\t");
+          if (parts.length >= 7) {
+            cookies.push(parts[5] + "=" + parts[6]);
+          }
+        }
+        return cookies.join("; ");
+      }
+
+      function getCookie(body) {
+        if (body.cookie_file_base64) {
+          const decoded = Buffer.from(body.cookie_file_base64, "base64").toString("utf-8");
+          return parseCookieFile(decoded);
+        }
+        if (body.cookie) {
+          return body.cookie;
+        }
+        return null;
+      }
+
+      async function handleRequest(req, res) {
+        const path = req.url.split("?")[0];
+        res.setHeader("Content-Type", "application/json");
+        const start = Date.now();
+
+        try {
+          if (path === "/health" && req.method === "GET") {
+            res.end(JSON.stringify({ status: "ok" }));
+            return;
+          }
+
+          if (req.method !== "POST") {
+            res.statusCode = 405;
+            res.end(JSON.stringify({ error: "Use POST with JSON body" }));
+            return;
+          }
+
+          const body = await new Promise((resolve, reject) => {
+            let data = "";
+            req.on("data", chunk => data += chunk);
+            req.on("end", () => {
+              try { resolve(JSON.parse(data || "{}")); }
+              catch { resolve({}); }
+            });
+            req.on("error", reject);
+          });
+
+          const cookie = getCookie(body);
+
+          // === NO COOKIE REQUIRED ===
+
+          if (path === "/downloader") {
+            const { url, version = "v1" } = body;
+            if (!url) {
+              res.statusCode = 400;
+              res.end(JSON.stringify({ error: "Missing url field" }));
+              return;
+            }
+            const result = await Tiktok.Downloader(url, { version });
+            res.end(JSON.stringify({ ...result, ms: Date.now() - start }));
+            return;
+          }
+
+          if (path === "/stalkuser") {
+            const { user } = body;
+            if (!user) {
+              res.statusCode = 400;
+              res.end(JSON.stringify({ error: "Missing user field" }));
+              return;
+            }
+            const result = await Tiktok.StalkUser(user, {});
+            res.end(JSON.stringify({ ...result, ms: Date.now() - start }));
+            return;
+          }
+
+          if (path === "/getvideocomments") {
+            const { url, commentLimit = 30 } = body;
+            if (!url) {
+              res.statusCode = 400;
+              res.end(JSON.stringify({ error: "Missing url field" }));
+              return;
+            }
+            const result = await Tiktok.GetVideoComments(url, { commentLimit });
+            res.end(JSON.stringify({ ...result, ms: Date.now() - start }));
+            return;
+          }
+
+          if (path === "/getuserposts") {
+            const { user, postLimit = 30 } = body;
+            if (!user) {
+              res.statusCode = 400;
+              res.end(JSON.stringify({ error: "Missing user field" }));
+              return;
+            }
+            const result = await Tiktok.GetUserPosts(user, { postLimit });
+            res.end(JSON.stringify({ ...result, ms: Date.now() - start }));
+            return;
+          }
+
+          if (path === "/getuserreposts") {
+            const { user, postLimit = 30 } = body;
+            if (!user) {
+              res.statusCode = 400;
+              res.end(JSON.stringify({ error: "Missing user field" }));
+              return;
+            }
+            const result = await Tiktok.GetUserReposts(user, { postLimit });
+            res.end(JSON.stringify({ ...result, ms: Date.now() - start }));
+            return;
+          }
+
+          if (path === "/trending") {
+            const result = await Tiktok.Trending({});
+            res.end(JSON.stringify({ ...result, ms: Date.now() - start }));
+            return;
+          }
+
+          if (path === "/trendingcreators") {
+            const result = await Tiktok.TrendingCreators({});
+            res.end(JSON.stringify({ ...result, ms: Date.now() - start }));
+            return;
+          }
+
+          if (path === "/collection") {
+            const { id, page = 1, count = 30 } = body;
+            if (!id) {
+              res.statusCode = 400;
+              res.end(JSON.stringify({ error: "Missing id field" }));
+              return;
+            }
+            const result = await Tiktok.Collection(id, { page, count });
+            res.end(JSON.stringify({ ...result, ms: Date.now() - start }));
+            return;
+          }
+
+          if (path === "/playlist") {
+            const { id, page = 1, count = 30 } = body;
+            if (!id) {
+              res.statusCode = 400;
+              res.end(JSON.stringify({ error: "Missing id field" }));
+              return;
+            }
+            const result = await Tiktok.Playlist(id, { page, count });
+            res.end(JSON.stringify({ ...result, ms: Date.now() - start }));
+            return;
+          }
+
+          if (path === "/getmusicvideos") {
+            const { id, page = 1, count = 30 } = body;
+            if (!id) {
+              res.statusCode = 400;
+              res.end(JSON.stringify({ error: "Missing id field" }));
+              return;
+            }
+            const result = await Tiktok.GetVideosByMusicId(id, { page, count });
+            res.end(JSON.stringify({ ...result, ms: Date.now() - start }));
+            return;
+          }
+
+          // === COOKIE REQUIRED ===
+
+          if (!cookie) {
+            res.statusCode = 400;
+            res.end(JSON.stringify({ error: "Missing cookie_file_base64 or cookie field (required for this endpoint)" }));
+            return;
+          }
+
+          if (path === "/search") {
+            const { query, type = "user", page = 1 } = body;
+            if (!query) {
+              res.statusCode = 400;
+              res.end(JSON.stringify({ error: "Missing query field" }));
+              return;
+            }
+            const result = await Tiktok.Search(query, { type, page, cookie });
+            res.end(JSON.stringify({ ...result, ms: Date.now() - start }));
+            return;
+          }
+
+          if (path === "/getuserliked") {
+            const { user, postLimit = 30 } = body;
+            if (!user) {
+              res.statusCode = 400;
+              res.end(JSON.stringify({ error: "Missing user field" }));
+              return;
+            }
+            const result = await Tiktok.GetUserLiked(user, { postLimit, cookie });
+            res.end(JSON.stringify({ ...result, ms: Date.now() - start }));
+            return;
+          }
+
+          if (path === "/getmusicdetail") {
+            const { id } = body;
+            if (!id) {
+              res.statusCode = 400;
+              res.end(JSON.stringify({ error: "Missing id field" }));
+              return;
+            }
+            const result = await Tiktok.GetMusicDetail(id, { cookie });
+            res.end(JSON.stringify({ ...result, ms: Date.now() - start }));
+            return;
+          }
+
+          res.statusCode = 404;
+          res.end(JSON.stringify({ 
+            error: "Not found", 
+            endpoints: {
+              no_cookie: ["/downloader", "/stalkuser", "/getvideocomments", "/getuserposts", "/getuserreposts", "/trending", "/trendingcreators", "/collection", "/playlist", "/getmusicvideos"],
+              cookie_required: ["/search", "/getuserliked", "/getmusicdetail"]
+            }
+          }));
+
+        } catch (e) {
+          res.statusCode = 500;
+          res.end(JSON.stringify({ error: e.message, stack: e.stack, ms: Date.now() - start }));
+        }
+      }
+
+      const server = http.createServer(handleRequest);
+      server.listen(3456, "0.0.0.0", () => {
+        console.log("TikTok API service running on port 3456");
+      });
+      JSEOF'
+
   tiktok-service:
     image: "node:20-slim"
     ports:
