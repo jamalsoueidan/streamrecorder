@@ -20,7 +20,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2026-01-18T13:33:54.238Z"
+    "x-generation-date": "2026-01-19T04:42:18.960Z"
   },
   "servers": [
     {
@@ -7162,9 +7162,6 @@
                   "unknown"
                 ]
               },
-              "description": {
-                "type": "string"
-              },
               "country": {
                 "type": "string"
               },
@@ -7198,11 +7195,14 @@
               "pause": {
                 "type": "boolean"
               },
-              "faq": {},
-              "category": {
+              "description": {
                 "type": "string"
               },
               "tagline": {
+                "type": "string"
+              },
+              "faq": {},
+              "category": {
                 "type": "string"
               },
               "migration": {
@@ -7293,9 +7293,6 @@
               "female",
               "unknown"
             ]
-          },
-          "description": {
-            "type": "string"
           },
           "country": {
             "type": "string"
@@ -7917,11 +7914,14 @@
           "pause": {
             "type": "boolean"
           },
-          "faq": {},
-          "category": {
+          "description": {
             "type": "string"
           },
           "tagline": {
+            "type": "string"
+          },
+          "faq": {},
+          "category": {
             "type": "string"
           },
           "migration": {
@@ -7999,9 +7999,6 @@
                     "female",
                     "unknown"
                   ]
-                },
-                "description": {
-                  "type": "string"
                 },
                 "country": {
                   "type": "string"
@@ -8154,11 +8151,14 @@
                 "pause": {
                   "type": "boolean"
                 },
-                "faq": {},
-                "category": {
+                "description": {
                   "type": "string"
                 },
                 "tagline": {
+                  "type": "string"
+                },
+                "faq": {},
+                "category": {
                   "type": "string"
                 },
                 "migration": {
@@ -8820,9 +8820,6 @@
                         "unknown"
                       ]
                     },
-                    "description": {
-                      "type": "string"
-                    },
                     "country": {
                       "type": "string"
                     },
@@ -9191,11 +9188,14 @@
                     "pause": {
                       "type": "boolean"
                     },
-                    "faq": {},
-                    "category": {
+                    "description": {
                       "type": "string"
                     },
                     "tagline": {
+                      "type": "string"
+                    },
+                    "faq": {},
+                    "category": {
                       "type": "string"
                     },
                     "migration": {
@@ -9587,9 +9587,6 @@
                   "female",
                   "unknown"
                 ]
-              },
-              "description": {
-                "type": "string"
               },
               "country": {
                 "type": "string"
@@ -10211,11 +10208,14 @@
               "pause": {
                 "type": "boolean"
               },
-              "faq": {},
-              "category": {
+              "description": {
                 "type": "string"
               },
               "tagline": {
+                "type": "string"
+              },
+              "faq": {},
+              "category": {
                 "type": "string"
               },
               "migration": {
