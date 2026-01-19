@@ -19,7 +19,7 @@
       "type": "string",
       "pluginOptions": {
         "i18n": {
-          "localized": true
+          "localized": false
         }
       }
     },
@@ -27,7 +27,7 @@
       "type": "string",
       "pluginOptions": {
         "i18n": {
-          "localized": true
+          "localized": false
         }
       },
       "required": true
@@ -36,7 +36,7 @@
       "type": "enumeration",
       "pluginOptions": {
         "i18n": {
-          "localized": true
+          "localized": false
         }
       },
       "required": true,
@@ -54,7 +54,7 @@
       "type": "enumeration",
       "pluginOptions": {
         "i18n": {
-          "localized": true
+          "localized": false
         }
       },
       "enum": [
@@ -67,7 +67,7 @@
       "type": "string",
       "pluginOptions": {
         "i18n": {
-          "localized": true
+          "localized": false
         }
       }
     },
@@ -75,7 +75,7 @@
       "type": "string",
       "pluginOptions": {
         "i18n": {
-          "localized": true
+          "localized": false
         }
       }
     },
@@ -83,7 +83,7 @@
       "type": "string",
       "pluginOptions": {
         "i18n": {
-          "localized": true
+          "localized": false
         }
       }
     },
@@ -91,7 +91,7 @@
       "type": "string",
       "pluginOptions": {
         "i18n": {
-          "localized": true
+          "localized": false
         }
       }
     },
@@ -99,7 +99,7 @@
       "type": "media",
       "pluginOptions": {
         "i18n": {
-          "localized": true
+          "localized": false
         }
       },
       "multiple": false,
@@ -114,7 +114,7 @@
       "type": "datetime",
       "pluginOptions": {
         "i18n": {
-          "localized": true
+          "localized": false
         }
       }
     },
@@ -122,7 +122,7 @@
       "type": "boolean",
       "pluginOptions": {
         "i18n": {
-          "localized": true
+          "localized": false
         }
       },
       "default": false
@@ -131,7 +131,7 @@
       "type": "boolean",
       "pluginOptions": {
         "i18n": {
-          "localized": true
+          "localized": false
         }
       },
       "default": false
@@ -172,7 +172,7 @@
       "type": "integer",
       "pluginOptions": {
         "i18n": {
-          "localized": true
+          "localized": false
         }
       },
       "default": 0
