@@ -24,6 +24,9 @@ export default async function LandingPage() {
   const {
     data: { data: followers },
   } = await publicApi.follower.getFollowers({
+    filters: {
+      description: { $notNull: true },
+    },
     "pagination[limit]": 10,
     sort: "createdAt:desc",
     populate: { avatar: true },

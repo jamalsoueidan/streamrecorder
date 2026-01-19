@@ -5,10 +5,11 @@
     "notFoundDescription": "لم يتم العثور على ملف هذا المذيع.",
     "description": "شاهد بث {nickname} المسجل على {platform} في أي وقت. لا تفوت أي بث مباشر — نسجل تلقائياً حتى تتمكن من المشاهدة لاحقاً أو التحميل مجاناً.",
     "ogTitle": "{nickname} — شاهد البث المسجل | مسجل البث المباشر",
-    "twitterTitle": "{nickname} — بث {platform} المسجل"
+    "twitterTitle": "{nickname} — بث {platform} المسجل",
+    "keywords": "{nickname} بثوث محفوظة, {nickname} بثوث, {nickname} تسجيلات, {nickname} {platform}, شاهد {nickname}, {nickname} بث مباشر, تحميل بثوث {platform}, مسجل بثوث {platform}"
   },
   "defaultTagline": "شاهد بث {nickname} المسجل في أي وقت. لا تفوت أي بث مباشر — نسجل تلقائياً.",
-  "about": "حول {nickname}",
+  "about": "عن {nickname}",
   "faq": "الأسئلة الشائعة",
   "recorded": "تم التسجيل",
   "emptyState": {

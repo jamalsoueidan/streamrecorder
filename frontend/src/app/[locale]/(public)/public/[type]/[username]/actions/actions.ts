@@ -35,19 +35,35 @@ const defaultOptions = {
 export const getFollower = cache(async function getFollower({
   username,
   type,
+  locale = "en",
 }: {
   username: string;
   type: string;
+  locale?: string;
 }) {
-  const response = await publicApi.follower.getFollowers({
-    filters: {
-      username: decodeURIComponent(username).replace("@", ""),
-      type,
-    },
+  const filters = {
+    username: decodeURIComponent(username).replace("@", ""),
+    type,
+  };
+
+  // Try requested locale first
+  let response = await publicApi.follower.getFollowers({
+    filters,
     populate: ["avatar"],
+    locale,
   });
 
-  const follower = response.data.data?.at(0);
+  let follower = response.data.data?.at(0);
+
+  // Fallback to default locale if not found
+  if (!follower && locale !== "en") {
+    response = await publicApi.follower.getFollowers({
+      filters,
+      populate: ["avatar"],
+      locale: "en",
+    });
+    follower = response.data.data?.at(0);
+  }
 
   if (!follower) {
     throw new Error("Follower not found");
@@ -89,7 +105,7 @@ export async function fetchProfileRecordings(type: string, username: string) {
       sort: "createdAt:desc",
       "pagination[page]": 1,
       "pagination[pageSize]": 6,
-    })
+    }),
   );
 
   return {

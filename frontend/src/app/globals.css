@@ -58,7 +58,13 @@ media-volume-range {
   transform-origin: left top;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.2s, visibility 0.2s;
+  transition:
+    opacity 0.2s,
+    visibility 0.2s;
+}
+
+[dir="rtl"] media-volume-range {
+  direction: ltr;
 }
 
 .volume-hover-container {
@@ -84,9 +90,13 @@ media-volume-range {
 @keyframes glow {
   0%,
   100% {
-    box-shadow: 0 0 5px gold, 0 0 10px rgba(255, 215, 0, 0.5);
+    box-shadow:
+      0 0 5px gold,
+      0 0 10px rgba(255, 215, 0, 0.5);
   }
   50% {
-    box-shadow: 0 0 20px gold, 0 0 30px rgba(255, 215, 0, 0.8);
+    box-shadow:
+      0 0 20px gold,
+      0 0 30px rgba(255, 215, 0, 0.8);
   }
 }

@@ -1,4 +1,5 @@
 "use client";
+
 import {
   HlsVideo,
   MediaControlBar,
@@ -25,7 +26,9 @@ interface VideoPlayerProps {
 
 export function VideoPlayer({ documentId, previewUrl }: VideoPlayerProps) {
   return (
-    <MediaController style={{ height: "70vh", width: "100%" }}>
+    <MediaController
+      style={{ width: "100%", height: "clamp(250px, 50vh, 70vh)" }}
+    >
       <HlsVideo
         src={`/api/playlist/${documentId}`}
         slot="media"
