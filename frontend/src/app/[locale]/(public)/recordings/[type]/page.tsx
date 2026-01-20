@@ -129,51 +129,13 @@ export default async function RecordingTypePage({
     mainEntity: {
       "@type": "ItemList",
       numberOfItems: recordings?.length || 0,
-      itemListElement: recordings?.slice(0, 10).map((recording, index) => {
-        const followerPlatform =
-          recording.follower?.type?.toLowerCase() || "unknown";
-
-        const duration =
-          recording.sources?.reduce((sum, s) => sum + (s.duration || 0), 0) ||
-          0;
-
-        const nickname =
-          recording.follower?.nickname ||
-          recording.follower?.username ||
-          "Unknown";
-
-        return {
-          "@type": "ListItem",
-          position: index + 1,
-          item: {
-            "@type": "VideoObject",
-            name: t("jsonLd.streamTitle", {
-              nickname,
-              date: format.dateTime(new Date(recording.createdAt || ""), {
-                year: "numeric",
-                month: "short",
-                day: "numeric",
-              }),
-            }),
-            description: t(`jsonLd.streamDescription.${followerPlatform}`, {
-              nickname,
-            }),
-            thumbnailUrl: recording.sources?.length
-              ? `${process.env.NEXT_PUBLIC_BASE_URL}/media${
-                  recording.sources[recording.sources.length - 1].path
-                }screenshot.jpg`
-              : undefined,
-            uploadDate: recording.createdAt,
-            duration: `PT${Math.floor(duration / 60)}M${Math.round(
-              duration % 60,
-            )}S`,
-            contentUrl:
-              generateProfileUrl(recording.follower, true) +
-              `/video/${recording.documentId}`,
-            inLanguage: locale,
-          },
-        };
-      }),
+      itemListElement: recordings?.slice(0, 10).map((recording, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        url:
+          generateProfileUrl(recording.follower, true) +
+          `/video/${recording.documentId}`,
+      })),
     },
   };
 
