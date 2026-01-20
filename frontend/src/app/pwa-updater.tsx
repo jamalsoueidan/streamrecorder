@@ -6,15 +6,19 @@ export function PWAUpdater() {
   useEffect(() => {
     if (!("serviceWorker" in navigator)) return;
 
-    navigator.serviceWorker.register("/sw.js").then((registration) => {
-      setInterval(() => registration.update(), 60 * 60 * 1000);
-    });
+    if (/bot|crawl|spider|googlebot/i.test(navigator.userAgent)) return;
 
-    // Reload automatically when new SW takes control
+    navigator.serviceWorker
+      .register("/sw.js")
+      .then((registration) => {
+        setInterval(() => registration.update(), 60 * 60 * 1000);
+      })
+      .catch(() => {});
+
     navigator.serviceWorker.addEventListener("controllerchange", () => {
       window.location.reload();
     });
   }, []);
 
-  return <></>;
+  return null;
 }
