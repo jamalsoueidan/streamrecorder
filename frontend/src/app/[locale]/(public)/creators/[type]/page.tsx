@@ -14,7 +14,7 @@ import {
   Title,
 } from "@mantine/core";
 import { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import { CreatorsSimpleGrid } from "../components/creators-simple-grid";
 
 interface PageProps {
@@ -69,6 +69,7 @@ export async function generateMetadata({
 export default async function Page({ params, searchParams }: PageProps) {
   const { type } = await params;
   const { page } = await searchParams;
+  const locale = await getLocale();
   const t = await getTranslations("creators");
 
   const platform = streamingPlatforms.find(
@@ -104,6 +105,7 @@ export default async function Page({ params, searchParams }: PageProps) {
       name: "Live Stream Recorder",
       url: `${process.env.NEXT_PUBLIC_BASE_URL}`,
     },
+    inLanguage: locale,
     mainEntity: {
       "@type": "ItemList",
       numberOfItems: followers?.length || 0,

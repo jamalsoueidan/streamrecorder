@@ -1,5 +1,6 @@
 "use client";
 
+import { useChangeLanguage } from "@/app/hooks/use-change-language";
 import {
   Burger,
   Button,
@@ -16,8 +17,6 @@ import { useDisclosure } from "@mantine/hooks";
 import { IconChevronDown, IconGlobe, IconUser } from "@tabler/icons-react";
 import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { useCallback } from "react";
 import { navConfig } from "./nav";
 
 interface HeaderProps {
@@ -27,23 +26,10 @@ interface HeaderProps {
 export function Header({ isLoggedIn = false }: HeaderProps) {
   const t = useTranslations("footer");
   const locale = useLocale();
-  const pathname = usePathname();
-  const basePath = pathname.replace(/^\/ar/, "") || "/";
+  const { switchLocale } = useChangeLanguage();
 
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] =
     useDisclosure();
-
-  const switchLocale = useCallback(
-    (newLocale: string) => {
-      document.cookie = `NEXT_LOCALE=${newLocale}; path=/; max-age=31536000`;
-      const href =
-        newLocale === "en"
-          ? basePath
-          : `/ar${basePath === "/" ? "" : basePath}`;
-      window.location.href = href;
-    },
-    [basePath],
-  );
 
   return (
     <>

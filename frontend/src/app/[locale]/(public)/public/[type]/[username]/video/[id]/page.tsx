@@ -152,6 +152,7 @@ export default async function VideoPage({ params }: PageProps) {
         url: generateProfileUrl(data.follower, true),
       },
     }),
+    inLanguage: locale,
   };
 
   return (
