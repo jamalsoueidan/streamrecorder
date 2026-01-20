@@ -25,11 +25,11 @@ export function MiniPlayer({ sources, onTimeClick }: Props) {
     const smallMissing = sources.some((s) => !s.videoSmall);
     const playlist = combinePlaylistsFromSources(
       sources,
-      smallMissing ? "original" : "small"
+      smallMissing ? "original" : "small",
     );
     if (!playlist || playlist.length < 50) return null;
     return `data:application/vnd.apple.mpegurl;charset=utf-8,${encodeURIComponent(
-      playlist
+      playlist,
     )}`;
   }, [sources]);
 

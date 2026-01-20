@@ -145,8 +145,9 @@ export function ImageVideoPreview({ recording, type, username }: Props) {
             />
           }
         >
-          {t("recording.rec")}{" "}
-          {sources && sources?.length > 1 && `#${sources.length}`}
+          {t("recordings.recordCount", {
+            count: sources && sources?.length > 1 ? `#${sources.length}` : "",
+          })}
         </Badge>
       )}
 
@@ -163,7 +164,7 @@ export function ImageVideoPreview({ recording, type, username }: Props) {
             left: 8,
           }}
         >
-          {t("recording.new")}
+          {t("recordings.newRecording")}
         </Badge>
       ) : null}
 

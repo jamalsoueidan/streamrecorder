@@ -1,7 +1,6 @@
 // components/infinite-followers.tsx
 "use client";
 
-import dayjs from "@/app/lib/dayjs";
 import {
   FollowerWithMeta,
   SourceStateEnum,
@@ -29,6 +28,7 @@ import { ImageVideoPreview } from "@/app/[locale]/(protected)/components/image-v
 import { generateAvatarUrl } from "@/app/lib/avatar-url";
 import { IconCalendarPlus, IconVideo } from "@tabler/icons-react";
 import { useQuery } from "@tanstack/react-query";
+import { useFormatter, useNow, useTranslations } from "next-intl";
 import { useState } from "react";
 import OpenSocial, { getProfileUrl } from "../../../../components/open-social";
 import { CountryFlag } from "../../components/country-flag";
@@ -37,32 +37,6 @@ import { FollowerTypeIcon } from "../../components/follower-type-icon";
 import UnfollowButton from "../../components/unfollow-button";
 import { getRecordings } from "../actions/fetch-followers";
 
-function AccordionControl({
-  follower,
-  ...props
-}: AccordionControlProps & { follower: FollowerWithMeta }) {
-  const isMobile = useMatches({
-    base: true,
-    sm: false,
-  });
-  return (
-    <Center>
-      <Accordion.Control {...props} />
-      <Flex gap="xs" align="center" mx="md">
-        {isMobile ? null : <OpenSocial follower={follower} />}
-
-        {follower.isFollowing ? (
-          <>
-            <UnfollowButton username={follower.username} type={follower.type} />
-          </>
-        ) : (
-          <FollowButton username={follower.username} type={follower.type} />
-        )}
-      </Flex>
-    </Center>
-  );
-}
-
 interface Props {
   follower: FollowerWithMeta;
   isOpen: boolean;
@@ -70,6 +44,9 @@ interface Props {
 
 export default function FollowerItem({ follower, isOpen }: Props) {
   const [page, setPage] = useState(1);
+  const t = useTranslations("protected.common");
+  const now = useNow({ updateInterval: 1000 * 30 });
+  const format = useFormatter();
   const isMobile = useMatches({
     base: true,
     sm: false,
@@ -158,15 +135,21 @@ export default function FollowerItem({ follower, isOpen }: Props) {
             <Group gap="xs">
               <Group gap={4}>
                 <IconCalendarPlus size={14} />
-                <Text size="sm" c="dimmed">
-                  Added {dayjs(follower.createdAt).fromNow()}
+                <Text size="sm" c="dimmed" suppressHydrationWarning>
+                  {t("followers.addedAgo", {
+                    time: format.relativeTime(
+                      new Date(follower.createdAt || ""),
+                      { now },
+                    ),
+                  })}
                 </Text>
               </Group>
               <Group gap={4}>
                 <IconVideo size={14} />
-                <Text size="sm" c="dimmed">
-                  {follower.totalRecordings}{" "}
-                  {follower.totalRecordings === 1 ? "video" : "videos"}
+                <Text size="sm" c="dimmed" suppressHydrationWarning>
+                  {t("recordings.videoCount", {
+                    count: follower.totalRecordings!,
+                  })}
                 </Text>
               </Group>
             </Group>
@@ -194,15 +177,24 @@ export default function FollowerItem({ follower, isOpen }: Props) {
                       type={follower.type}
                     />
 
-                    <div>
-                      <Text size="xs">
-                        {isRecording
-                          ? `recording for ${dayjs(rec.createdAt).fromNow(
-                              true,
-                            )}`
-                          : `recorded ${dayjs(rec.createdAt).fromNow()}`}
-                      </Text>
-                    </div>
+                    <Text size="xs" suppressHydrationWarning>
+                      {isRecording
+                        ? t("recordings.liveAgo", {
+                            time: format.relativeTime(
+                              new Date(rec.createdAt || ""),
+                              {
+                                style: "narrow",
+                                now,
+                              },
+                            ),
+                          })
+                        : t("recordings.recordedAgo", {
+                            time: format.relativeTime(
+                              new Date(rec.createdAt || ""),
+                              { now },
+                            ),
+                          })}
+                    </Text>
                   </Stack>
                 );
               })}
@@ -242,5 +234,31 @@ export default function FollowerItem({ follower, isOpen }: Props) {
         )}
       </Accordion.Panel>
     </Accordion.Item>
+  );
+}
+
+function AccordionControl({
+  follower,
+  ...props
+}: AccordionControlProps & { follower: FollowerWithMeta }) {
+  const isMobile = useMatches({
+    base: true,
+    sm: false,
+  });
+  return (
+    <Center>
+      <Accordion.Control {...props} />
+      <Flex gap="xs" align="center" mx="md">
+        {isMobile ? null : <OpenSocial follower={follower} />}
+
+        {follower.isFollowing ? (
+          <>
+            <UnfollowButton username={follower.username} type={follower.type} />
+          </>
+        ) : (
+          <FollowButton username={follower.username} type={follower.type} />
+        )}
+      </Flex>
+    </Center>
   );
 }

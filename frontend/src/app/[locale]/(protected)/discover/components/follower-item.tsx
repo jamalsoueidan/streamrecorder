@@ -1,7 +1,6 @@
 // components/infinite-followers.tsx
 "use client";
 
-import dayjs from "@/app/lib/dayjs";
 import {
   FollowerWithMeta,
   SourceStateEnum,
@@ -26,6 +25,7 @@ import { ImageVideoPreview } from "@/app/[locale]/(protected)/components/image-v
 import OpenSocial, { getProfileUrl } from "@/app/components/open-social";
 import { generateAvatarUrl } from "@/app/lib/avatar-url";
 import { IconCalendarPlus, IconVideo } from "@tabler/icons-react";
+import { useFormatter, useNow, useTranslations } from "next-intl";
 import { CountryFlag } from "../../components/country-flag";
 import FollowButton from "../../components/follow-button";
 import UnfollowButton from "../../components/unfollow-button";
@@ -35,6 +35,9 @@ interface Props {
 }
 
 export default function FollowerItem({ follower }: Props) {
+  const t = useTranslations("protected.common");
+  const now = useNow({ updateInterval: 1000 * 30 });
+  const format = useFormatter();
   const cardPadding = useMatches({
     base: "sm",
     sm: "md",
@@ -86,15 +89,21 @@ export default function FollowerItem({ follower }: Props) {
               <Group gap="xs">
                 <Group gap={4}>
                   <IconCalendarPlus size={14} />
-                  <Text size="sm" c="dimmed">
-                    Added {dayjs(follower.createdAt).fromNow()}
+                  <Text size="sm" c="dimmed" suppressHydrationWarning>
+                    {t("followers.addedAgo", {
+                      time: format.relativeTime(
+                        new Date(follower.createdAt || ""),
+                        { now },
+                      ),
+                    })}
                   </Text>
                 </Group>
                 <Group gap={4}>
                   <IconVideo size={14} />
-                  <Text size="sm" c="dimmed">
-                    {follower.totalRecordings}{" "}
-                    {follower.totalRecordings === 1 ? "video" : "videos"}
+                  <Text size="sm" c="dimmed" suppressHydrationWarning>
+                    {t("recordings.videoCount", {
+                      count: follower.totalRecordings!,
+                    })}
                   </Text>
                 </Group>
               </Group>
@@ -126,7 +135,7 @@ export default function FollowerItem({ follower }: Props) {
             <SimpleGrid cols={{ base: 1, sm: 2, md: 3, xl: 4 }} spacing="lg">
               {follower.recordings?.map((rec, index) => {
                 const isRecording = rec.sources?.some(
-                  (s) => s.state === SourceStateEnum.Recording
+                  (s) => s.state === SourceStateEnum.Recording,
                 );
 
                 return (
@@ -142,12 +151,23 @@ export default function FollowerItem({ follower }: Props) {
                     />
 
                     <div>
-                      <Text size="xs">
+                      <Text size="xs" suppressHydrationWarning>
                         {isRecording
-                          ? `recording for ${dayjs(rec.createdAt).fromNow(
-                              true
-                            )}`
-                          : `recorded ${dayjs(rec.createdAt).fromNow()}`}
+                          ? t("recordings.liveAgo", {
+                              time: format.relativeTime(
+                                new Date(rec.createdAt || ""),
+                                {
+                                  style: "narrow",
+                                  now,
+                                },
+                              ),
+                            })
+                          : t("recordings.recordedAgo", {
+                              time: format.relativeTime(
+                                new Date(rec.createdAt || ""),
+                                { now },
+                              ),
+                            })}
                       </Text>
                     </div>
                   </Stack>
@@ -167,7 +187,7 @@ export default function FollowerItem({ follower }: Props) {
             }}
           >
             <Image
-              alt="no videos"
+              alt=""
               radius="md"
               src="https://placehold.co/180x280/1a1b1e/909296?text=No videos yet"
               w={160}

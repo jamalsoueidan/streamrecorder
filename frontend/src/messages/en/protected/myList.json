@@ -1,4 +1,13 @@
 {
   "title": "My List ({count})",
-  "description": "Manage your followed creators"
+  "description": "Manage your followed creators",
+  "emptyFiltered": {
+    "title": "No followers match your filters",
+    "description": "Try adjusting or clearing your filters"
+  },
+  "emptyDefault": {
+    "title": "You're not following anyone yet",
+    "description": "Switch to Discover to find creators to follow"
+  },
+  "noMoreToLoad": "No more to load"
 }

@@ -11,14 +11,26 @@
     "successMessage": "You unfollowed {username}",
     "successMessageGeneric": "Successfully unfollowed"
   },
-  "recording": {
-    "rec": "REC",
-    "new": "New"
-  },
   "scopeFilter": {
     "label": "Filter:",
     "following": "Following",
     "discover": "Discover",
     "all": "All"
-  }
+  },
+  "recordings": {
+    "liveAgo_context": "For live streams showing when recording started. Shows 'started recording 15 minutes ago'",
+    "liveAgo": "started recording {time}",
+    "recordedAgo_context": "For recorded streams showing when recording was made. Shows 'recorded 3 days ago'",
+    "recordedAgo": "recorded {time}",
+    "recordCount": "REC {count}",
+    "newRecording": "New",
+    "videoCount": "{count, plural, one {# video} other {# videos}}",
+    "noRecordings": "No more recordings to load."
+  },
+  "followers": {
+    "addedAgo_context": "For when a creator/follower was added to user's list. Shows 'Added 3 days ago'",
+    "addedAgo": "Added {time}"
+  },
+  "newest": "Newest",
+  "oldest": "Oldest"
 }

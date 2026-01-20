@@ -1,15 +1,8 @@
 "use client";
 
+import { Button, Divider, Group, Menu, Stack, Text } from "@mantine/core";
 import {
-  ActionIcon,
-  Divider,
-  Group,
-  Stack,
-  Text,
-  UnstyledButton,
-} from "@mantine/core";
-import {
-  IconArrowLeft,
+  IconArrowDown,
   IconBrandSafari,
   IconHeart,
   IconLogout,
@@ -25,7 +18,8 @@ import { usePathname } from "next/navigation";
 import { useRouter } from "next/navigation";
 
 import { useUser } from "@/app/providers/user-provider";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
+import { navConfig } from "../../(public)/components/nav";
 import AddFollowerForm from "./add-follower-form";
 import classes from "./navbar.module.css";
 import { RoleBadge } from "./role-badge";
@@ -84,6 +78,7 @@ export function Navbar({
 }) {
   const router = useRouter();
   const user = useUser();
+  const locale = useLocale();
   const pathname = usePathname();
   const t = useTranslations("protected.navigation");
 
@@ -133,23 +128,7 @@ export function Navbar({
   return (
     <nav className={classes.navbar}>
       <div className={classes.navbarMain}>
-        <Group className={classes.header} justify="space-between">
-          <Group>
-            <ActionIcon
-              component={Link}
-              href="#"
-              onClick={close}
-              hiddenFrom="sm"
-            >
-              <IconArrowLeft stroke={1.4} />
-            </ActionIcon>
-
-            <Text>{user?.username}</Text>
-          </Group>
-          {user?.role ? <RoleBadge role={user.role} /> : null}
-        </Group>
-
-        <Divider my="sm" color="transparent" />
+        <Divider my="4px" color="transparent" />
         <AddFollowerForm />
 
         <Divider my="xs" color="transparent" />
@@ -157,19 +136,47 @@ export function Navbar({
       </div>
 
       <div className={classes.footer}>
-        <UnstyledButton
-          style={{ width: "100%" }}
-          className={classes.link}
-          onClick={async (e) => {
-            await fetch("/api/logout", { method: "POST" });
-            window.location.href = "/";
-          }}
-        >
-          <Group gap="xs">
-            <IconLogout className={classes.linkIcon} stroke={1.5} />
-            <span>{t("actions.logout")}</span>
-          </Group>
-        </UnstyledButton>
+        <Menu width={280}>
+          <Menu.Target>
+            <Button
+              fullWidth
+              size="lg"
+              variant="outline"
+              c="white"
+              color="gray.7"
+              leftSection={<IconArrowDown size="18" stroke={1.5} />}
+              rightSection={user?.role ? <RoleBadge role={user.role} /> : null}
+            >
+              {user?.username}
+            </Button>
+          </Menu.Target>
+          <Menu.Dropdown>
+            <Menu.Sub openDelay={120} closeDelay={150}>
+              <Menu.Sub.Target>
+                <Menu.Sub.Item leftSection={<IconWorldSearch size={16} />}>
+                  {t("actions.language")} {locale.toUpperCase()}
+                </Menu.Sub.Item>
+              </Menu.Sub.Target>
+
+              <Menu.Sub.Dropdown>
+                {navConfig.languages
+                  .filter((lang) => locale !== lang.code)
+                  .map((lang) => (
+                    <Menu.Item key={lang.code}>{lang.label}</Menu.Item>
+                  ))}
+              </Menu.Sub.Dropdown>
+            </Menu.Sub>
+            <Menu.Item
+              onClick={async (e) => {
+                await fetch("/api/logout", { method: "POST" });
+                window.location.href = "/";
+              }}
+              leftSection={<IconLogout size={16} />}
+            >
+              {t("actions.logout")}
+            </Menu.Item>
+          </Menu.Dropdown>
+        </Menu>
       </div>
     </nav>
   );

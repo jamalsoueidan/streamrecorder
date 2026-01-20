@@ -20,10 +20,12 @@ import {
   IconSquarePlus,
   IconUser,
   IconUserPlus,
+  IconWorldSearch,
 } from "@tabler/icons-react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState, useTransition } from "react";
+import { navConfig } from "../../(public)/components/nav";
 import { navigation } from "./navbar";
 
 // Check if running in standalone mode (outside component)
@@ -33,11 +35,12 @@ const getIsInstalled = () => {
 };
 
 export function MobileBar() {
-  const [isPending, startTransition] = useTransition();
+  const [, startTransition] = useTransition();
   const user = useUser();
   const pathname = usePathname();
   const router = useRouter();
   const t = useTranslations("protected.navigation");
+  const locale = useLocale();
 
   const [deferredPrompt, setDeferredPrompt] = useState<any>(null);
   const [isInstalled, setIsInstalled] = useState(getIsInstalled);
@@ -217,6 +220,24 @@ export function MobileBar() {
 
                   <Menu.Divider />
 
+                  <Menu.Sub openDelay={120} closeDelay={150}>
+                    <Menu.Sub.Target>
+                      <Menu.Sub.Item
+                        leftSection={<IconWorldSearch size={16} />}
+                      >
+                        {t("actions.language")} {locale.toUpperCase()}
+                      </Menu.Sub.Item>
+                    </Menu.Sub.Target>
+
+                    <Menu.Sub.Dropdown>
+                      {navConfig.languages
+                        .filter((lang) => locale !== lang.code)
+                        .map((lang) => (
+                          <Menu.Item key={lang.code}>{lang.label}</Menu.Item>
+                        ))}
+                    </Menu.Sub.Dropdown>
+                  </Menu.Sub>
+                  <Menu.Divider />
                   <Menu.Item
                     color="red"
                     leftSection={<IconLogout size={16} />}

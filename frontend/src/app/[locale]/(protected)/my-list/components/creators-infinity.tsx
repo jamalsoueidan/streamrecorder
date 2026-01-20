@@ -7,11 +7,14 @@ import { useEffect, useState } from "react";
 import { useQueryStates } from "nuqs";
 
 import { useInfiniteQuery } from "@tanstack/react-query";
+import { useTranslations } from "next-intl";
+import { EmptyState } from "../../components/empty-state";
 import { fetchFollowers } from "../actions/fetch-followers";
 import { exploreParsers } from "../lib/search-params";
 import FollowerItem from "./follower-item";
 
 export default function CreatorsInfinity() {
+  const t = useTranslations("protected.myList");
   const [filters] = useQueryStates(exploreParsers);
   const [openItems, setOpenItems] = useState<string[]>([]);
 
@@ -48,27 +51,20 @@ export default function CreatorsInfinity() {
 
   const hasActiveFilters = Boolean(
     filters.gender ||
-      filters.country ||
-      filters.language ||
-      filters.type ||
-      filters.search ||
-      filters.dateRange
+    filters.country ||
+    filters.language ||
+    filters.type ||
+    filters.search ||
+    filters.dateRange,
   );
 
   if (allFollowers.length === 0) {
+    const key = hasActiveFilters ? "emptyFiltered" : "emptyDefault";
     return (
-      <Stack align="center" py="xl" gap="xs">
-        <Text size="lg" fw={500}>
-          {hasActiveFilters
-            ? "No followers match your filters"
-            : "You're not following anyone yet"}
-        </Text>
-        <Text size="sm" c="dimmed">
-          {hasActiveFilters
-            ? "Try adjusting or clearing your filters"
-            : "Switch to Discover to find creators to follow"}
-        </Text>
-      </Stack>
+      <EmptyState
+        title={t(`${key}.title`)}
+        description={t(`${key}.description`)}
+      />
     );
   }
 
@@ -100,7 +96,7 @@ export default function CreatorsInfinity() {
 
       {!hasNextPage && allFollowers.length > 0 && (
         <Text ta="center" c="dimmed">
-          No more to load
+          {t("noMoreToLoad")}
         </Text>
       )}
     </>

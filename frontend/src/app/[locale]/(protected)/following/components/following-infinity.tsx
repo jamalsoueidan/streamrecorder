@@ -8,12 +8,15 @@ import { useQueryStates } from "nuqs";
 
 import { useInfiniteQuery } from "@tanstack/react-query";
 
+import { useTranslations } from "next-intl";
+import { EmptyState } from "../../components/empty-state";
 import RecordingItem from "../../components/recording-item";
 import { fetchRecordings } from "../actions/fetch-recordings";
 import { followingParsers } from "../lib/search-params";
 
 export default function FollowingInfinity() {
   const [filters] = useQueryStates(followingParsers);
+  const t = useTranslations("protected.following");
 
   const { data, fetchNextPage, hasNextPage, isFetchingNextPage, isLoading } =
     useInfiniteQuery({
@@ -48,25 +51,20 @@ export default function FollowingInfinity() {
 
   const hasActiveFilters = Boolean(
     filters.gender ||
-      filters.country ||
-      filters.language ||
-      filters.type ||
-      filters.search ||
-      filters.dateRange
+    filters.country ||
+    filters.language ||
+    filters.type ||
+    filters.search ||
+    filters.dateRange,
   );
 
   if (recordings.length === 0) {
+    const key = hasActiveFilters ? "emptyFiltered" : "emptyDefault";
     return (
-      <Stack align="center" py="xl" gap="xs">
-        <Text size="lg" fw={500}>
-          {hasActiveFilters
-            ? "No creators match your filters"
-            : "No creators to discover"}
-        </Text>
-        <Text size="sm" c="dimmed">
-          Try adjusting your filters
-        </Text>
-      </Stack>
+      <EmptyState
+        title={t(`${key}.title`)}
+        description={t(`${key}.description`)}
+      />
     );
   }
 
@@ -85,7 +83,7 @@ export default function FollowingInfinity() {
       )}
       {!hasNextPage && recordings.length > 0 && (
         <Text ta="center" c="dimmed">
-          No more to load
+          {t("noMoreToLoad")}
         </Text>
       )}
     </>
