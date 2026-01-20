@@ -1,0 +1,13 @@
+{
+  "addedAgo": "added {time}",
+  "lastCheckedAgo": "live status checked {time}",
+  "discoverStreamers": "Discover Streamers",
+  "emptyNewlyAdded": {
+    "title": "You're now following {username}!",
+    "description": "We'll start monitoring their streams and save recordings for you automatically."
+  },
+  "emptyDefault": {
+    "title": "No recordings yet",
+    "description": "We haven't captured any streams from {username} yet. Check back later!"
+  }
+}

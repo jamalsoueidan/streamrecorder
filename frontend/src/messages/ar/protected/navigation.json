@@ -14,7 +14,8 @@
     "logout": "تسجيل الخروج",
     "addCreator": "إضافة صانع محتوى",
     "installApp": "تثبيت التطبيق",
-    "more": "المزيد"
+    "more": "المزيد",
+    "language": "اللغة"
   },
   "installModal": {
     "title": "تثبيت التطبيق",

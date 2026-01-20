@@ -1,5 +1,5 @@
 import { generateProfileUrl } from "@/app/lib/profile-url";
-import { Button, Flex } from "@mantine/core";
+import { Button, Flex, Title } from "@mantine/core";
 import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
 import { Metadata } from "next";
 import { getFormatter, getLocale, getTranslations } from "next-intl/server";
@@ -161,6 +161,12 @@ export default async function VideoPage({ params }: PageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(videoJsonLd) }}
       />
       <Flex gap="xs" justify="center" align="center" direction="column">
+        <Title order={2} c="dimmed" size="sm" fw="400">
+          {t("jsonLd.description", { creatorName, recordedDate })}
+        </Title>
+
+        <VideoPlayer previewUrl={previewUrl} documentId={id} />
+
         <Button
           component="a"
           href={generateProfileUrl(data.follower)}
@@ -175,8 +181,6 @@ export default async function VideoPage({ params }: PageProps) {
         >
           {t("backToProfile", { username: creatorName })}
         </Button>
-
-        <VideoPlayer previewUrl={previewUrl} documentId={id} />
       </Flex>
     </>
   );

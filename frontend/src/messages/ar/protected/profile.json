@@ -1,0 +1,13 @@
+{
+  "addedAgo": "تمت الإضافة {time}",
+  "lastCheckedAgo": "آخر فحص للبث {time}",
+  "discoverStreamers": "اكتشف المذيعين",
+  "emptyNewlyAdded": {
+    "title": "أنت الآن تتابع {username}!",
+    "description": "سنبدأ بمراقبة بثوثهم وحفظ التسجيلات لك تلقائياً."
+  },
+  "emptyDefault": {
+    "title": "لا توجد تسجيلات بعد",
+    "description": "لم نلتقط أي بثوث من {username} بعد. تحقق لاحقاً!"
+  }
+}

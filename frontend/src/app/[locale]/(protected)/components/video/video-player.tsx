@@ -51,7 +51,7 @@ export function VideoPlayer({ recording }: { recording: Recording }) {
         const cueStart = range.start + i * range.interval;
         const cueEnd = Math.min(
           range.start + (i + 1) * range.interval,
-          range.end
+          range.end,
         );
 
         const col = i % range.cols;
@@ -72,7 +72,7 @@ export function VideoPlayer({ recording }: { recording: Recording }) {
     const playlist = combinePlaylistsFromSources(sources, "original");
     if (!playlist) return null;
     return `data:application/vnd.apple.mpegurl;charset=utf-8,${encodeURIComponent(
-      playlist
+      playlist,
     )}`;
   }, [sources]);
 

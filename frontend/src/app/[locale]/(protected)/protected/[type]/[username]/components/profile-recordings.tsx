@@ -1,7 +1,6 @@
 "use client";
 
 import { ImageVideoPreview } from "@/app/[locale]/(protected)/components/image-video-preview";
-import dayjs from "@/app/lib/dayjs";
 import {
   FollowerTypeEnum,
   SourceStateEnum,
@@ -20,10 +19,14 @@ import { useParams } from "next/navigation";
 import { useQueryStates } from "nuqs";
 import { useEffect } from "react";
 
+import { useFormatter, useNow, useTranslations } from "next-intl";
 import { fetchProfileRecordings } from "../actions/actions";
 import { profileParsers, SortOptions } from "../lib/search-params";
 
 export default function ProfileRecordings() {
+  const t = useTranslations("protected.common");
+  const format = useFormatter();
+  const now = useNow();
   const params = useParams<{ type: FollowerTypeEnum; username: string }>();
   const [filters, setFilters] = useQueryStates(profileParsers);
 
@@ -35,7 +38,7 @@ export default function ProfileRecordings() {
           params.type,
           params.username,
           filters,
-          pageParam
+          pageParam,
         ),
       initialPageParam: 1,
       getNextPageParam: (lastPage) => {
@@ -69,8 +72,8 @@ export default function ProfileRecordings() {
           value={filters.sort}
           onChange={(value) => setFilters({ sort: value as SortOptions })}
           data={[
-            { label: "Newest", value: SortOptions.createdAtDesc },
-            { label: "Oldest", value: SortOptions.createdAtAsc },
+            { label: t("newest"), value: SortOptions.createdAtDesc },
+            { label: t("oldest"), value: SortOptions.createdAtAsc },
           ]}
         />
       </Group>
@@ -78,7 +81,7 @@ export default function ProfileRecordings() {
       <SimpleGrid cols={{ base: 1, sm: 2, md: 3, xl: 4 }} spacing="lg">
         {recordings.map((rec) => {
           const isRecording = rec.sources?.some(
-            (s) => s.state === SourceStateEnum.Recording
+            (s) => s.state === SourceStateEnum.Recording,
           );
 
           return (
@@ -88,10 +91,20 @@ export default function ProfileRecordings() {
                 username={params.username}
                 type={params.type}
               />
-              <Text size="xs">
+
+              <Text size="xs" suppressHydrationWarning>
                 {isRecording
-                  ? `recording for ${dayjs(rec.createdAt).fromNow(true)}`
-                  : `recorded ${dayjs(rec.createdAt).fromNow()}`}
+                  ? t("recordings.liveAgo", {
+                      time: format.relativeTime(new Date(rec.createdAt || ""), {
+                        style: "narrow",
+                        now,
+                      }),
+                    })
+                  : t("recordings.recordedAgo", {
+                      time: format.relativeTime(new Date(rec.createdAt || ""), {
+                        now,
+                      }),
+                    })}
               </Text>
             </Stack>
           );
@@ -105,8 +118,8 @@ export default function ProfileRecordings() {
         <Loader size="sm" style={{ alignSelf: "center" }} />
       )}
       {!hasNextPage && recordings.length > 0 && (
-        <Text ta="center" c="dimmed" size="sm">
-          No more recordings
+        <Text ta="center" c="dimmed" size="sm" suppressHydrationWarning>
+          {t("recordings.noRecordings")}
         </Text>
       )}
     </Stack>

@@ -1,4 +1,13 @@
 {
   "title": "Discover",
-  "description": "Explore creators and expand your list"
+  "description": "Explore creators and expand your list",
+  "emptyFiltered": {
+    "title": "No creators match your filters",
+    "description": "Try adjusting or clearing your filters"
+  },
+  "emptyDefault": {
+    "title": "No creators to discover",
+    "description": "..."
+  },
+  "noMoreToLoad": "No more to load"
 }

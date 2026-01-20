@@ -14,7 +14,8 @@
     "logout": "Logout",
     "addCreator": "Add Creator",
     "installApp": "Install App",
-    "more": "More"
+    "more": "More",
+    "language": "Language"
   },
   "installModal": {
     "title": "Install App",

@@ -28,7 +28,7 @@ const roleStyles: Record<string, RoleStyle> = {
     variant: "gradient",
     gradient: { from: "gold", to: "yellow", deg: 90 },
     icon: <IconAward size={16} />,
-    size: "lg",
+    size: "md",
   },
   admin: {
     variant: "filled",
@@ -52,20 +52,20 @@ const roleStyles: Record<string, RoleStyle> = {
     variant: "light",
     color: "blue",
     icon: <IconUser size={14} />,
-    size: "sm",
+    size: "md",
   },
   public: {
     variant: "outline",
     color: "gray",
     icon: <IconWorld size={14} />,
-    size: "sm",
+    size: "md",
   },
 };
 
 const defaultStyle: RoleStyle = {
   variant: "light",
   color: "gray",
-  size: "sm",
+  size: "md",
 };
 
 export const RoleBadge = ({ role }: { role: RoleBadgeProps }) => {
@@ -77,9 +77,9 @@ export const RoleBadge = ({ role }: { role: RoleBadgeProps }) => {
       <Badge
         size={style.size}
         variant={style.variant}
+        fw="400"
         color={style.color}
         gradient={style.gradient}
-        rightSection={style.icon}
       >
         {role.name}
       </Badge>

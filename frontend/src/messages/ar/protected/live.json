@@ -1,0 +1,12 @@
+{
+  "title": "مباشر الآن",
+  "subtitle": "شاهد البثوث المباشرة من صناع المحتوى الذين تتابعهم",
+  "streamingCount": "{count, plural, zero {لا أحد يبث} one {# يبث} two {# يبثان} few {# يبثون} many {# يبث} other {# يبث}}",
+  "refresh": "تحديث",
+  "showAll": "عرض الكل",
+  "discoverStreamers": "اكتشف المذيعين",
+  "emptyState": {
+    "title": "لا توجد بثوث مباشرة بعد",
+    "description": "تظهر حالة البث المباشر للمذيعين الذين تتابعهم هنا"
+  }
+}

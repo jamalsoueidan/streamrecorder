@@ -7,12 +7,14 @@ import { useEffect } from "react";
 import { useQueryStates } from "nuqs";
 
 import { useInfiniteQuery } from "@tanstack/react-query";
+import { useTranslations } from "next-intl";
 import { fetchFollowers } from "../actions/fetch-followers";
 import { exploreParsers } from "../lib/search-params";
 import FollowerItem from "./follower-item";
 
 export default function CreatorsInfinity() {
   const [filters] = useQueryStates(exploreParsers);
+  const t = useTranslations("protected.disocver");
 
   const { data, fetchNextPage, hasNextPage, isFetchingNextPage, isLoading } =
     useInfiniteQuery({
@@ -47,11 +49,11 @@ export default function CreatorsInfinity() {
 
   const hasActiveFilters = Boolean(
     filters.gender ||
-      filters.country ||
-      filters.language ||
-      filters.type ||
-      filters.search ||
-      filters.dateRange
+    filters.country ||
+    filters.language ||
+    filters.type ||
+    filters.search ||
+    filters.dateRange,
   );
 
   if (allFollowers.length === 0) {
@@ -59,11 +61,13 @@ export default function CreatorsInfinity() {
       <Stack align="center" py="xl" gap="xs">
         <Text size="lg" fw={500}>
           {hasActiveFilters
-            ? "No creators match your filters"
-            : "No creators to discover"}
+            ? t("emptyFiltered.title")
+            : t("emptyDefault.title")}
         </Text>
         <Text size="sm" c="dimmed">
-          Try adjusting your filters
+          {hasActiveFilters
+            ? t("emptyFiltered.description")
+            : t("emptyDefault.description")}
         </Text>
       </Stack>
     );
@@ -85,7 +89,7 @@ export default function CreatorsInfinity() {
 
       {!hasNextPage && allFollowers.length > 0 && (
         <Text ta="center" c="dimmed">
-          No more to load
+          {t("noMoreToLoad")}
         </Text>
       )}
     </>
