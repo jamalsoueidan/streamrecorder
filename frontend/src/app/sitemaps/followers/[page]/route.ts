@@ -2,6 +2,7 @@ import { generateProfileUrl } from "@/app/lib/profile-url";
 import { routing } from "@/i18n/routing";
 import publicApi from "@/lib/public-api";
 
+const STRAPI_PAGE_SIZE = 100;
 const URLS_PER_SITEMAP = 1000;
 
 export const dynamic = "force-dynamic";
@@ -15,7 +16,7 @@ export async function GET(
   const sitemapPage = parseInt(page);
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
-  const strapiPagesPerSitemap = URLS_PER_SITEMAP / 100;
+  const strapiPagesPerSitemap = URLS_PER_SITEMAP / STRAPI_PAGE_SIZE;
   const startPage = (sitemapPage - 1) * strapiPagesPerSitemap + 1;
 
   const allFollowers = [];
