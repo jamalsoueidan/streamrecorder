@@ -1,6 +1,6 @@
 import { ActionIcon, SimpleGrid, Stack, Text, Title } from "@mantine/core";
 import { IconVideo } from "@tabler/icons-react";
-import { getFormatter, getLocale, getTranslations } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
 
 import dayjs from "@/app/lib/dayjs";
 import { fetchProfileRecordings, getFollower } from "./actions/actions";
@@ -79,18 +79,11 @@ export async function generateMetadata({
 
 export default async function Page({ params }: PageProps) {
   const { type, username } = await params;
-  const locale = await getLocale();
-  const format = await getFormatter();
   const t = await getTranslations("profile");
-  const tv = await getTranslations("video");
   const follower = await getFollower({ username, type });
-
   const data = await fetchProfileRecordings(type, username);
-
   const recordings = data?.data ?? [];
   const hasRecordings = recordings.length > 0;
-
-  const creatorName = follower.nickname || follower.username || "Unknown";
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -102,49 +95,14 @@ export default async function Page({ params }: PageProps) {
     url: generateProfileUrl(follower, true),
     nationality: follower.country,
     sameAs: [getSocialUrl(follower)],
-    video: recordings.slice(0, 5).map((video) => {
-      const duration =
-        video.sources?.reduce(
-          (acc, source) => acc + (source.duration || 0),
-          0,
-        ) || 0;
-
-      return {
-        "@type": "VideoObject",
-        name: tv("jsonLd.name", {
-          creatorName,
-          recordedDate: format.dateTime(new Date(video.createdAt || ""), {
-            year: "numeric",
-            month: "short",
-            day: "numeric",
-          }),
-        }),
-        description: tv("jsonLd.description", {
-          creatorName,
-          recordedDate: format.dateTime(new Date(video.createdAt || ""), {
-            year: "numeric",
-            month: "short",
-            day: "numeric",
-          }),
-        }),
-        thumbnailUrl: video.sources?.length
-          ? `${process.env.NEXT_PUBLIC_BASE_URL}/media` +
-            video.sources[video.sources.length - 1].path +
-            "screenshot.jpg"
-          : null,
-        uploadDate: video.createdAt,
-        duration: `PT${Math.floor(duration / 60)}M${Math.round(
-          duration % 60,
-        )}S`,
-        contentUrl: `${
-          process.env.NEXT_PUBLIC_BASE_URL
-        }/api/playlist/${video.documentId}`,
-        embedUrl: `${generateProfileUrl(follower, true)}/video/${
-          video.documentId
-        }`,
-        inLanguage: locale,
-      };
-    }),
+    mainContentOfPage: {
+      "@type": "ItemList",
+      itemListElement: recordings.slice(0, 5).map((video, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        url: `${generateProfileUrl(follower, true)}/video/${video.documentId}`,
+      })),
+    },
   };
 
   return (
