@@ -29,6 +29,7 @@ export async function generateMetadata(): Promise<Metadata> {
       type: "website",
       siteName: "Live Stream Recorder",
       locale: locale === "ar" ? "ar_SA" : "en_US",
+      alternateLocale: locale === "ar" ? "en_US" : "ar_SA",
       images: [
         {
           url: "/og-image.png",

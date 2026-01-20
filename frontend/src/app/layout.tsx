@@ -38,6 +38,21 @@ export default async function RootLayout({
   return (
     <html lang={locale} dir={dir} {...mantineHtmlProps}>
       <head>
+        <link
+          rel="alternate"
+          hrefLang="en"
+          href={`${process.env.NEXT_PUBLIC_BASE_URL}`}
+        />
+        <link
+          rel="alternate"
+          hrefLang="ar"
+          href={`${process.env.NEXT_PUBLIC_BASE_URL}/ar`}
+        />
+        <link
+          rel="alternate"
+          hrefLang="x-default"
+          href={`${process.env.NEXT_PUBLIC_BASE_URL}`}
+        />
         <ColorSchemeScript defaultColorScheme="dark" />
         <Script
           defer

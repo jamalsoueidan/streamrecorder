@@ -41,8 +41,6 @@ export function proxy(request: NextRequest) {
     const destination = token ? "protected" : "public";
     const rewriteUrl = `/${locale}/${destination}${pathWithoutLocale}`;
 
-    const cookieLocale = request.cookies.get("NEXT_LOCALE")?.value;
-
     // Only redirect if they want a NON-default locale
     if (!hasLocalePrefix) {
       const cookieLocale = request.cookies.get("NEXT_LOCALE")?.value;
