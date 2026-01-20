@@ -2,10 +2,10 @@ import { streamingPlatforms } from "@/app/lib/streaming-platforms";
 import {
   Button,
   Container,
-  Flex,
   Group,
   Image,
   Paper,
+  SimpleGrid,
   Stack,
   Text,
   Title,
@@ -67,7 +67,7 @@ export default async function RecordingPage({ params, children }: PageProps) {
           {t(`hero.subtitle.${platformName.toLowerCase()}`)}
         </Text>
 
-        <Flex align="center" gap={30} mt={20} wrap="wrap">
+        <SimpleGrid cols={{ base: 2, sm: 6 }} spacing="xl" mt={20}>
           {streamingPlatforms.map((p) => (
             <Link
               key={p.name}
@@ -78,10 +78,10 @@ export default async function RecordingPage({ params, children }: PageProps) {
                 padding: "4px",
               }}
             >
-              <Image alt={p.name} src={p.file} w={120} />
+              <Image alt={p.name} src={p.file} maw={120} />
             </Link>
           ))}
-        </Flex>
+        </SimpleGrid>
       </Stack>
       {children}
 

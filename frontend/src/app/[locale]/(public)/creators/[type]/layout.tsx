@@ -6,6 +6,7 @@ import {
   Flex,
   Image,
   Paper,
+  SimpleGrid,
   Stack,
   Text,
   Title,
@@ -76,7 +77,7 @@ export default async function Page({ params, children }: PageProps) {
           {t(`hero.subtitle.${platformKey}`)}
         </Text>
 
-        <Flex align="center" gap={30} mt={20} wrap="wrap">
+        <SimpleGrid cols={{ base: 2, sm: 6 }} spacing="xl" mt={20}>
           {streamingPlatforms.map((p) => (
             <Link
               key={p.name}
@@ -90,7 +91,7 @@ export default async function Page({ params, children }: PageProps) {
               <Image alt={p.name} src={p.file} w={120} />
             </Link>
           ))}
-        </Flex>
+        </SimpleGrid>
       </Stack>
 
       {children}

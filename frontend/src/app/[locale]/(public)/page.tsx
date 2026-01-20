@@ -8,6 +8,7 @@ import {
   Group,
   Image,
   Paper,
+  SimpleGrid,
   Stack,
   Text,
   Title,
@@ -136,16 +137,16 @@ export default async function LandingPage() {
           {t("hero.description")}
         </Text>
 
-        <Flex gap={30} align="center" mt={20}>
+        <SimpleGrid cols={{ base: 2, sm: 6 }} spacing="xl" mt={20}>
           {streamingPlatforms.map((p) => (
             <Anchor key={p.name} href={`/recordings/${p.name.toLowerCase()}`}>
               <Image alt={p.name} src={p.file} maw={120} />
             </Anchor>
           ))}
-        </Flex>
+        </SimpleGrid>
       </Stack>
 
-      <div style={{ marginTop: 100 }}>
+      <div style={{ marginTop: 80 }}>
         <Flex gap={60} align="center" direction={{ base: "column", md: "row" }}>
           <div style={{ flex: 1 }}>
             <Stack gap={24}>
