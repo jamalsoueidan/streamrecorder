@@ -13,7 +13,7 @@ export const CountryFlag = ({
 }: CountryFlagProps) => {
   const src =
     countryCode === "-" || !countryCode || !country
-      ? "https://placehold.co/24x18?text=NA"
+      ? "/placeholder/24x18?text=NA"
       : `https://flagcdn.com/w40/${countryCode.toLowerCase()}.png`;
 
   return (

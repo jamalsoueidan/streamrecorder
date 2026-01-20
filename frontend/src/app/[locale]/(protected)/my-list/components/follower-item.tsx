@@ -224,7 +224,7 @@ export default function FollowerItem({ follower, isOpen }: Props) {
             <Image
               alt="no videos"
               radius="md"
-              src="https://placehold.co/180x280/1a1b1e/909296?text=No videos yet"
+              src="/placeholder/180x280/1a1b1e/909296?text=No videos yet"
               w={160}
               h={284}
               loading="lazy"

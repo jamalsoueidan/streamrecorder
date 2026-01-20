@@ -56,7 +56,7 @@ export function ImageVideoPreview({ recording, type }: Props) {
               : null
           }
           loading="lazy"
-          fallbackSrc="https://placehold.co/180x280/black/white?text=Recording started"
+          fallbackSrc="/placeholder/180x280/black/white?text=Recording started"
           w="100%"
           h="100%"
           fit="cover"
