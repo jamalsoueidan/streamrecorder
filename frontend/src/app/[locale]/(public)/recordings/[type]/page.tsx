@@ -3,7 +3,7 @@ import { generateProfileUrl } from "@/app/lib/profile-url";
 import publicApi from "@/lib/public-api";
 import { Center } from "@mantine/core";
 import { Metadata } from "next";
-import { getFormatter, getTranslations } from "next-intl/server";
+import { getFormatter, getLocale, getTranslations } from "next-intl/server";
 
 import { streamingPlatforms } from "@/app/lib/streaming-platforms";
 import { RecordingsSimpleGrid } from "../components/recordings-simple-grid";
@@ -62,6 +62,7 @@ export default async function RecordingTypePage({
   searchParams,
 }: PageProps) {
   const { type } = await params;
+  const locale = await getLocale();
   const { page } = await searchParams;
   const t = await getTranslations("recordings");
   const format = await getFormatter();
@@ -169,6 +170,7 @@ export default async function RecordingTypePage({
             contentUrl:
               generateProfileUrl(recording.follower, true) +
               `/video/${recording.documentId}`,
+            inLanguage: locale,
           },
         };
       }),

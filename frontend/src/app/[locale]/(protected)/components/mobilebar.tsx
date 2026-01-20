@@ -1,5 +1,6 @@
 "use client";
 
+import { useChangeLanguage } from "@/app/hooks/use-change-language";
 import { useUser } from "@/app/providers/user-provider";
 import {
   Group,
@@ -41,8 +42,16 @@ export function MobileBar() {
   const router = useRouter();
   const t = useTranslations("protected.navigation");
   const locale = useLocale();
+  const { switchLocale } = useChangeLanguage();
 
-  const [deferredPrompt, setDeferredPrompt] = useState<any>(null);
+  const [deferredPrompt, setDeferredPrompt] = useState<{
+    platforms: string[];
+    userChoice: Promise<{
+      outcome: "accepted" | "dismissed";
+      platform: string;
+    }>;
+    prompt(): Promise<void>;
+  } | null>(null);
   const [isInstalled, setIsInstalled] = useState(getIsInstalled);
   const [iosModalOpened, { open: openIosModal, close: closeIosModal }] =
     useDisclosure(false);
@@ -50,7 +59,7 @@ export function MobileBar() {
   useEffect(() => {
     const handlePrompt = (e: Event) => {
       e.preventDefault();
-      setDeferredPrompt(e);
+      setDeferredPrompt(e as never);
     };
 
     const handleInstalled = () => {
@@ -233,7 +242,12 @@ export function MobileBar() {
                       {navConfig.languages
                         .filter((lang) => locale !== lang.code)
                         .map((lang) => (
-                          <Menu.Item key={lang.code}>{lang.label}</Menu.Item>
+                          <Menu.Item
+                            key={lang.code}
+                            onClick={() => switchLocale(lang.code)}
+                          >
+                            {lang.label}
+                          </Menu.Item>
                         ))}
                     </Menu.Sub.Dropdown>
                   </Menu.Sub>

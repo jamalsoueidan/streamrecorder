@@ -17,6 +17,7 @@ import { usePathname } from "next/navigation";
 
 import { useRouter } from "next/navigation";
 
+import { useChangeLanguage } from "@/app/hooks/use-change-language";
 import { useUser } from "@/app/providers/user-provider";
 import { useLocale, useTranslations } from "next-intl";
 import { navConfig } from "../../(public)/components/nav";
@@ -81,6 +82,7 @@ export function Navbar({
   const locale = useLocale();
   const pathname = usePathname();
   const t = useTranslations("protected.navigation");
+  const { switchLocale } = useChangeLanguage();
 
   const handleLinkClick = (e: React.MouseEvent, url: string) => {
     if (opened) {
@@ -162,7 +164,12 @@ export function Navbar({
                 {navConfig.languages
                   .filter((lang) => locale !== lang.code)
                   .map((lang) => (
-                    <Menu.Item key={lang.code}>{lang.label}</Menu.Item>
+                    <Menu.Item
+                      key={lang.code}
+                      onClick={() => switchLocale(lang.code)}
+                    >
+                      {lang.label}
+                    </Menu.Item>
                   ))}
               </Menu.Sub.Dropdown>
             </Menu.Sub>

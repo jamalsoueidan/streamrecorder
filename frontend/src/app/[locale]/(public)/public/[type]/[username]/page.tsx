@@ -1,6 +1,6 @@
 import { ActionIcon, SimpleGrid, Stack, Text, Title } from "@mantine/core";
 import { IconVideo } from "@tabler/icons-react";
-import { getFormatter, getTranslations } from "next-intl/server";
+import { getFormatter, getLocale, getTranslations } from "next-intl/server";
 
 import dayjs from "@/app/lib/dayjs";
 import { fetchProfileRecordings, getFollower } from "./actions/actions";
@@ -79,6 +79,7 @@ export async function generateMetadata({
 
 export default async function Page({ params }: PageProps) {
   const { type, username } = await params;
+  const locale = await getLocale();
   const format = await getFormatter();
   const t = await getTranslations("profile");
   const tv = await getTranslations("video");
@@ -141,6 +142,7 @@ export default async function Page({ params }: PageProps) {
         embedUrl: `${generateProfileUrl(follower, true)}/video/${
           video.documentId
         }`,
+        inLanguage: locale,
       };
     }),
   };

@@ -1,3 +1,4 @@
+import { routing } from "@/i18n/routing";
 import {
   ColorSchemeScript,
   DirectionProvider,
@@ -43,11 +44,16 @@ export default async function RootLayout({
           hrefLang="en"
           href={`${process.env.NEXT_PUBLIC_BASE_URL}`}
         />
-        <link
-          rel="alternate"
-          hrefLang="ar"
-          href={`${process.env.NEXT_PUBLIC_BASE_URL}/ar`}
-        />
+        {routing.locales
+          .filter((l) => l !== "en")
+          .map((locale) => (
+            <link
+              key={locale}
+              rel="alternate"
+              hrefLang={locale}
+              href={`${process.env.NEXT_PUBLIC_BASE_URL}/${locale}`}
+            />
+          ))}
         <link
           rel="alternate"
           hrefLang="x-default"
