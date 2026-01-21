@@ -1,9 +1,9 @@
 import { generateProfileUrl } from "@/app/lib/profile-url";
+import { routing } from "@/i18n/routing";
 import publicApi from "@/lib/public-api";
 
 const STRAPI_PAGE_SIZE = 100;
 const STRAPI_PAGES_PER_SITEMAP = 10;
-const locales = ["en", "ar"];
 
 export const dynamic = "force-dynamic";
 export const revalidate = 3600;
@@ -25,6 +25,9 @@ export async function GET(
         sources: {
           state: {
             $eq: "done",
+          },
+          duration: {
+            $gt: 60,
           },
         },
       },
@@ -52,6 +55,7 @@ export async function GET(
       const path =
         generateProfileUrl(r.follower, false) + "/video/" + r.documentId;
       const pageUrl = baseUrl + path;
+      const videoUrl = baseUrl + `/api/playlist/${r.documentId}`;
 
       const creatorName =
         r.follower?.nickname || r.follower?.username || "Unknown";
@@ -65,7 +69,7 @@ export async function GET(
           0,
         ) || 0;
 
-      const alternates = locales
+      const alternates = routing.locales
         .map((locale) => {
           const href = baseUrl + (locale === "en" ? "" : "/" + locale) + path;
           return (
@@ -85,10 +89,8 @@ export async function GET(
       const videoTag =
         "<video:video>" +
         "<video:thumbnail_loc>" +
-        baseUrl +
-        "/media" +
-        lastSource?.path +
-        "screenshot.jpg</video:thumbnail_loc>" +
+        thumbnailUrl +
+        "</video:thumbnail_loc>" +
         "<video:title>" +
         escapeXml(creatorName + "'s Stream - " + r.createdAt?.split("T")[0]) +
         "</video:title>" +
@@ -102,9 +104,9 @@ export async function GET(
             r.createdAt?.split("T")[0],
         ) +
         "</video:description>" +
-        "<video:player_loc>" +
-        pageUrl +
-        "</video:player_loc>" +
+        "<video:content_loc>" +
+        videoUrl +
+        "</video:content_loc>" +
         "<video:duration>" +
         Math.round(duration) +
         "</video:duration>" +

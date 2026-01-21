@@ -16,6 +16,12 @@ const nextConfig: NextConfig = {
         destination: "https://www.livestreamrecorder.com/:path*",
         permanent: true,
       },
+      //webmaster tools
+      {
+        source: "/pandalive",
+        destination: "/recordings/pandalive",
+        permanent: true,
+      },
     ];
   },
   async rewrites() {
