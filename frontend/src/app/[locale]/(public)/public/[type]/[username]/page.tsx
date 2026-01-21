@@ -1,8 +1,7 @@
 import { ActionIcon, SimpleGrid, Stack, Text, Title } from "@mantine/core";
 import { IconVideo } from "@tabler/icons-react";
-import { getTranslations } from "next-intl/server";
+import { getFormatter, getTranslations } from "next-intl/server";
 
-import dayjs from "@/app/lib/dayjs";
 import { fetchProfileRecordings, getFollower } from "./actions/actions";
 
 import { getSocialUrl } from "@/app/components/open-social";
@@ -26,6 +25,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { type, username } = await params;
   const t = await getTranslations("profile");
+
   const follower = await getFollower({ username, type });
 
   if (!follower) {
@@ -80,6 +80,7 @@ export async function generateMetadata({
 export default async function Page({ params }: PageProps) {
   const { type, username } = await params;
   const t = await getTranslations("profile");
+  const format = await getFormatter();
   const follower = await getFollower({ username, type });
   const data = await fetchProfileRecordings(type, username);
   const recordings = data?.data ?? [];
@@ -124,10 +125,13 @@ export default async function Page({ params }: PageProps) {
                     type={type as unknown as FollowerTypeEnum}
                   />
                   <Text size="xs">
-                    {t("recorded")}{" "}
-                    <time dateTime={rec.createdAt}>
-                      {dayjs(rec.createdAt).format("MMM D, YYYY")}
-                    </time>
+                    {t("recorded", {
+                      date: format.dateTime(new Date(rec.createdAt || ""), {
+                        year: "numeric",
+                        month: "short",
+                        day: "numeric",
+                      }),
+                    })}
                   </Text>
                 </Stack>
               ))}
