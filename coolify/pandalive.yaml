@@ -1,46 +1,55 @@
 services:
   warp-proxy:
-    image: "caomingjun/warp:latest"
+    image: 'caomingjun/warp:latest'
     restart: always
     ports:
-      - "8000:8000"
-      - "1080:1080"
+      - '8000:8000'
+      - '1080:1080'
     environment:
-      - "GOST_ARGS=-L :1080 -F=127.0.0.1:40000"
+      - 'GOST_ARGS=-L :1080 -F=127.0.0.1:40000'
     cap_add:
       - NET_ADMIN
     sysctls:
       - net.ipv6.conf.all.disable_ipv6=0
       - net.ipv4.conf.all.src_valid_mark=1
     volumes:
-      - "warp-data:/var/lib/cloudflare-warp"
+      - 'warp-data:/var/lib/cloudflare-warp'
     healthcheck:
-      test: ["CMD", "warp-cli", "--accept-tos", "status"]
-      interval: 30s
-      timeout: 10s
+      test:
+        - CMD
+        - sh
+        - '-c'
+        - 'curl --proxy socks5://127.0.0.1:40000 --connect-timeout 5 -s https://httpbin.org/ip > /dev/null || exit 1'
+      interval: 60s
+      timeout: 15s
       retries: 3
       start_period: 60s
-  create-pandalive-service:
-    image: alpine:latest
-    restart: "no"
+  autoheal:
+    image: willfarrell/autoheal
+    restart: always
+    environment:
+      - AUTOHEAL_CONTAINER_LABEL=all
     volumes:
-      - "./pandalive-app:/app"
+      - '/var/run/docker.sock:/var/run/docker.sock'
+  create-pandalive-service:
+    image: 'alpine:latest'
+    restart: 'no'
+    volumes:
+      - './pandalive-app:/app'
     command: "sh -c 'cat > /app/service.py << '\"'\"'PYEOF'\"'\"'\nfrom fastapi import FastAPI\nimport subprocess\nimport json\n\napp = FastAPI()\n\n@app.get(\"/health\")\ndef health():\n    return {\"status\": \"ok\"}\n\n@app.get(\"/pandalive/{username}\")\ndef get_pandalive(username: str):\n    try:\n        result = subprocess.run([\n            \"curl\", \"-s\",\n            \"--proxy\", \"socks5://127.0.0.1:40000\",\n            \"-X\", \"POST\",\n            \"https://api.pandalive.co.kr/v1/live/play\",\n            \"-H\", \"Referer: https://www.pandalive.co.kr/\",\n            \"-d\", f\"action=watch&userId={username}\"\n        ], capture_output=True, text=True, timeout=30)\n        return json.loads(result.stdout)\n    except Exception as e:\n        return {\"error\": str(e)}\n\nif __name__ == \"__main__\":\n    import uvicorn\n    uvicorn.run(app, host=\"0.0.0.0\", port=8000)\nPYEOF'\n"
-
   pandalive-service:
     build:
       context: .
       dockerfile_inline: "FROM python:3.11-slim\nRUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/*\nRUN pip install fastapi uvicorn\nWORKDIR /app\n"
     restart: always
-    network_mode: "service:warp-proxy"
+    network_mode: 'service:warp-proxy'
     volumes:
-      - "./pandalive-app:/app"
-    command: "python /app/service.py"
+      - './pandalive-app:/app'
+    command: 'python /app/service.py'
     depends_on:
       warp-proxy:
         condition: service_started
       create-pandalive-service:
         condition: service_completed_successfully
-
 volumes:
-  warp-data:
+  warp-data: null
