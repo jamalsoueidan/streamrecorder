@@ -29,7 +29,7 @@ export default async function LandingPage() {
       description: { $notNull: true },
     },
     "pagination[limit]": 10,
-    sort: "createdAt:desc",
+    sort: "updatedAt:desc",
     populate: { avatar: true },
   });
 
