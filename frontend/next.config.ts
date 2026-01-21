@@ -39,7 +39,7 @@ const nextConfig: NextConfig = {
         destination: `${process.env.NEXT_PUBLIC_UMAMI_URL}/api/send`,
       },
       {
-        source: "/placeholder/:path*",
+        source: "/assets/placeholder/:path*",
         destination: "https://placehold.co/:path*",
       },
     ];
