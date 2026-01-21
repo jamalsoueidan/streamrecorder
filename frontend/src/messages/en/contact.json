@@ -1,0 +1,35 @@
+{
+  "meta": {
+    "title": "Contact Us",
+    "description": "Get in touch with us"
+  },
+  "header": {
+    "title": "Contact Us",
+    "subtitle": "We'd love to hear from you"
+  },
+  "form": {
+    "title": "Send a Message",
+    "description": "Fill out the form below and we'll get back to you as soon as possible.",
+    "name": {
+      "label": "Name",
+      "placeholder": "Your name"
+    },
+    "email": {
+      "label": "Email",
+      "placeholder": "your@email.com"
+    },
+    "subject": {
+      "label": "Subject",
+      "placeholder": "What's this about?"
+    },
+    "message": {
+      "label": "Message",
+      "placeholder": "Your message..."
+    },
+    "submit": "Send Message"
+  },
+  "submitted": {
+    "title": "Message Sent!",
+    "description": "Thank you for reaching out. We'll get back to you soon."
+  }
+}

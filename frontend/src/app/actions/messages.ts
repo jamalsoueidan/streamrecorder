@@ -54,3 +54,52 @@ Full Name: ${data.fullName}
     return { success: false, error: "Something went wrong. Please try again." };
   }
 }
+
+// app/actions/messages.ts (add below submitDMCA)
+
+export type ContactFormData = {
+  name: string;
+  email: string;
+  subject?: string;
+  message: string;
+};
+
+export async function submitContact(
+  data: ContactFormData,
+): Promise<ActionResponse> {
+  // Server-side validation
+  if (!data.name?.trim()) {
+    return { success: false, error: "Name is required" };
+  }
+  if (!data.email?.trim()) {
+    return { success: false, error: "Email is required" };
+  }
+  if (!data.message?.trim()) {
+    return { success: false, error: "Message is required" };
+  }
+
+  try {
+    const response = await publicApi.message.postMessages({
+      data: {
+        type: "contact",
+        subject: data.subject?.trim() || `Contact from ${data.name}`,
+        content: `
+Name: ${data.name}
+Email: ${data.email}
+${data.subject ? `Subject: ${data.subject}` : ""}
+Message: ${data.message}
+        `.trim(),
+        state: "pending",
+      },
+    });
+
+    if (response.status >= 200 && response.status < 300) {
+      return { success: true };
+    }
+
+    return { success: false, error: "Failed to submit message" };
+  } catch (error) {
+    console.error("Contact submission error:", error);
+    return { success: false, error: "Something went wrong. Please try again." };
+  }
+}
