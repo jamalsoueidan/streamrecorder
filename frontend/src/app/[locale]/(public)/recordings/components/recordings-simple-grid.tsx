@@ -79,6 +79,7 @@ export async function RecordingsSimpleGrid({
                     variant="filled"
                     size="xl"
                     radius="xl"
+                    aria-label="Play video"
                     style={{
                       position: "absolute",
                       top: "50%",
