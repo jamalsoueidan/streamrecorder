@@ -5,7 +5,6 @@ export default factories.createCoreController(
   ({ strapi }) => ({
     async browse(ctx) {
       const user = ctx.state.user;
-      if (!user) return ctx.unauthorized();
 
       // Parse params
       const scope = ctx.query.scope as string | undefined;
@@ -26,14 +25,17 @@ export default factories.createCoreController(
       const offset = (page - 1) * pageSize;
 
       // Get following IDs
-      const fullUser = await strapi
-        .documents("plugin::users-permissions.user")
-        .findOne({
-          documentId: user.documentId,
-          fields: ["id"],
-          populate: { followers: { fields: ["id"] } },
-        });
-      const followingIds = fullUser?.followers?.map((f) => f.id) || [];
+      let followingIds = [];
+      if (user) {
+        const fullUser = await strapi
+          .documents("plugin::users-permissions.user")
+          .findOne({
+            documentId: user?.documentId,
+            fields: ["id"],
+            populate: { followers: { fields: ["id"] } },
+          });
+        followingIds = fullUser?.followers?.map((f) => f.id) || [];
+      }
 
       if (scope === "following" && followingIds.length === 0) {
         return {
@@ -87,7 +89,7 @@ export default factories.createCoreController(
             q = q.where(function (this: any) {
               this.whereILike("f.username", `%${escaped}%`).orWhereILike(
                 "f.nickname",
-                `%${escaped}%`
+                `%${escaped}%`,
               );
             });
           }
@@ -105,7 +107,7 @@ export default factories.createCoreController(
             .innerJoin(
               "recordings_sources_lnk as rs",
               "rs.recording_id",
-              "r.id"
+              "r.id",
             )
             .innerJoin("sources as s", "rs.source_id", "s.id")
             .whereRaw("rf.follower_id = f.id")
@@ -127,7 +129,7 @@ export default factories.createCoreController(
       LIMIT 1
     ) as avatar_url`),
           knex.raw("COUNT(DISTINCT vr.recording_id) as total_recordings"),
-          knex.raw("MAX(vr.created_at) as latest_recording")
+          knex.raw("MAX(vr.created_at) as latest_recording"),
         )
         .leftJoin(
           knex("recordings as r")
@@ -135,19 +137,19 @@ export default factories.createCoreController(
             .innerJoin(
               "recordings_follower_lnk as rf",
               "rf.recording_id",
-              "r.id"
+              "r.id",
             )
             .innerJoin(
               "recordings_sources_lnk as rs",
               "rs.recording_id",
-              "r.id"
+              "r.id",
             )
             .innerJoin("sources as s", "rs.source_id", "s.id")
             .where("s.state", "!=", "failed")
             .groupBy("r.id", "r.created_at", "rf.follower_id")
             .as("vr"),
           "vr.follower_id",
-          "f.id"
+          "f.id",
         )
         .groupBy("f.id");
 
@@ -163,12 +165,12 @@ export default factories.createCoreController(
       switch (sortField) {
         case "totalRecordings":
           query = query.orderByRaw(
-            `COUNT(DISTINCT vr.recording_id) ${sortDirection}, f.id ASC`
+            `COUNT(DISTINCT vr.recording_id) ${sortDirection}, f.id ASC`,
           );
           break;
         case "latestRecording":
           query = query.orderByRaw(
-            `MAX(vr.created_at) ${sortDirection} NULLS LAST, f.id ASC`
+            `MAX(vr.created_at) ${sortDirection} NULLS LAST, f.id ASC`,
           );
           break;
         case "username":
@@ -239,7 +241,7 @@ export default factories.createCoreController(
           Object.entries(obj).map(([key, value]) => [
             key.replace(/_([a-z])/g, (_, letter) => letter.toUpperCase()),
             value,
-          ])
+          ]),
         );
       };
 
@@ -382,7 +384,7 @@ export default factories.createCoreController(
 
       if (currentUser.role.type === "premium" && totalFollowers >= 100) {
         return ctx.forbidden(
-          "You already follow the maximum of 100 followers."
+          "You already follow the maximum of 100 followers.",
         );
       }
 
@@ -432,7 +434,7 @@ export default factories.createCoreController(
         });
 
       const followerToRemove = fullUser.followers?.find(
-        (f) => f.username === username && f.type === type
+        (f) => f.username === username && f.type === type,
       );
 
       if (!followerToRemove) {
@@ -529,5 +531,5 @@ export default factories.createCoreController(
         deleted: staleFollowers,
       };
     },
-  })
+  }),
 );
