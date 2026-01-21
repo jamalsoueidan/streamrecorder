@@ -18,8 +18,8 @@ const nextConfig: NextConfig = {
       },
       //webmaster tools
       {
-        source: "/pandalive",
-        destination: "/recordings/pandalive",
+        source: "/:platform(pandalive|tiktok|youtube|twitch|kick)",
+        destination: "/recordings/:platform",
         permanent: true,
       },
     ];
