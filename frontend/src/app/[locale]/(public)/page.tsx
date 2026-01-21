@@ -6,7 +6,6 @@ import {
   Container,
   Flex,
   Group,
-  Image,
   Paper,
   SimpleGrid,
   Stack,
@@ -15,6 +14,7 @@ import {
 } from "@mantine/core";
 import { IconArrowRight } from "@tabler/icons-react";
 import { getTranslations } from "next-intl/server";
+import Image from "next/image";
 import ReactMarkdown from "react-markdown";
 import { CreatorsSimpleGrid } from "./creators/components/creators-simple-grid";
 import { RecordingsSimpleGrid } from "./recordings/components/recordings-simple-grid";
@@ -77,12 +77,10 @@ export default async function LandingPage() {
       >
         <Image
           src="/background.svg"
-          alt=""
-          style={{
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
-          }}
+          alt="background"
+          fill
+          priority
+          style={{ objectFit: "cover" }}
         />
       </div>
 
@@ -140,7 +138,13 @@ export default async function LandingPage() {
         <SimpleGrid cols={{ base: 2, sm: 6 }} spacing="xl" mt={20}>
           {streamingPlatforms.map((p) => (
             <Anchor key={p.name} href={`/recordings/${p.name.toLowerCase()}`}>
-              <Image alt={p.name} src={p.file} maw={120} />
+              <Image
+                alt={p.name}
+                src={p.file}
+                width={120}
+                height={120}
+                style={{ maxWidth: 120, height: "auto" }}
+              />
             </Anchor>
           ))}
         </SimpleGrid>
@@ -193,12 +197,24 @@ export default async function LandingPage() {
                 boxShadow: "0 25px 80px -12px rgba(99, 102, 241, 0.25)",
               }}
             >
-              <Image
-                src="/desktop.png"
-                alt="Platform dashboard preview"
-                radius="lg"
-                style={{ boxShadow: "0 8px 32px rgba(0, 0, 0, 0.7)" }}
-              />
+              <div
+                style={{
+                  position: "relative",
+                  width: "100%",
+                  aspectRatio: "16/9",
+                }}
+              >
+                <Image
+                  src="/desktop.png"
+                  alt="Platform dashboard preview"
+                  fill
+                  style={{
+                    borderRadius: "var(--mantine-radius-lg)",
+                    boxShadow: "0 8px 32px rgba(0, 0, 0, 0.7)",
+                    objectFit: "cover",
+                  }}
+                />
+              </div>
             </Paper>
           </div>
         </Flex>
