@@ -1,0 +1,35 @@
+{
+  "meta": {
+    "title": "تواصل معنا",
+    "description": "تواصل معنا"
+  },
+  "header": {
+    "title": "تواصل معنا",
+    "subtitle": "يسعدنا سماع رأيك"
+  },
+  "form": {
+    "title": "أرسل رسالة",
+    "description": "املأ النموذج أدناه وسنرد عليك في أقرب وقت ممكن.",
+    "name": {
+      "label": "الاسم",
+      "placeholder": "اسمك"
+    },
+    "email": {
+      "label": "البريد الإلكتروني",
+      "placeholder": "بريدك@الإلكتروني.com"
+    },
+    "subject": {
+      "label": "الموضوع",
+      "placeholder": "ما موضوع رسالتك؟"
+    },
+    "message": {
+      "label": "الرسالة",
+      "placeholder": "رسالتك..."
+    },
+    "submit": "إرسال الرسالة"
+  },
+  "submitted": {
+    "title": "تم إرسال الرسالة!",
+    "description": "شكراً لتواصلك معنا. سنرد عليك قريباً."
+  }
+}
