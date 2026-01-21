@@ -105,7 +105,7 @@ export function ImageVideoPreview({ recording, type, username }: Props) {
               ? isRecording
                 ? uri + "screenshot.jpg"
                 : uri + "preview.jpg"
-              : "/placeholder/180x280/black/white?text=Recording started"
+              : "/assets/placeholder/180x280/black/white?text=Recording started"
           }
           loading="lazy"
           fill

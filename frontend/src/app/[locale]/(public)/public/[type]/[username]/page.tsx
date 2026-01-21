@@ -1,6 +1,6 @@
 import { ActionIcon, SimpleGrid, Stack, Text, Title } from "@mantine/core";
 import { IconVideo } from "@tabler/icons-react";
-import { getFormatter, getTranslations } from "next-intl/server";
+import { getFormatter, getLocale, getTranslations } from "next-intl/server";
 
 import { fetchProfileRecordings, getFollower } from "./actions/actions";
 
@@ -25,8 +25,8 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { type, username } = await params;
   const t = await getTranslations("profile");
-
-  const follower = await getFollower({ username, type });
+  const locale = await getLocale();
+  const follower = await getFollower({ username, type, locale });
 
   if (!follower) {
     return {
@@ -81,7 +81,10 @@ export default async function Page({ params }: PageProps) {
   const { type, username } = await params;
   const t = await getTranslations("profile");
   const format = await getFormatter();
-  const follower = await getFollower({ username, type });
+  const locale = await getLocale();
+  const follower = await getFollower({ username, type, locale });
+
+  console.log(follower);
   const data = await fetchProfileRecordings(type, username);
   const recordings = data?.data ?? [];
   const hasRecordings = recordings.length > 0;
@@ -124,7 +127,7 @@ export default async function Page({ params }: PageProps) {
                     recording={rec}
                     type={type as unknown as FollowerTypeEnum}
                   />
-                  <Text size="xs">
+                  <Text size="xs" suppressHydrationWarning>
                     {t("recorded", {
                       date: format.dateTime(new Date(rec.createdAt || ""), {
                         year: "numeric",

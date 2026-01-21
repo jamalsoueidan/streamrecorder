@@ -9,7 +9,7 @@ import {
   Title,
   Tooltip,
 } from "@mantine/core";
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import { getFollower } from "./actions/actions";
 
 import { CountryFlag } from "@/app/[locale]/(protected)/components/country-flag";
@@ -28,8 +28,8 @@ export default async function Layout({
 }) {
   const { type, username } = await params;
   const t = await getTranslations("profile");
-
-  const follower = await getFollower({ username, type });
+  const locale = await getLocale();
+  const follower = await getFollower({ username, type, locale });
 
   return (
     <Container size="lg">

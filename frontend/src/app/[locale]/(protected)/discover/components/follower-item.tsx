@@ -189,7 +189,7 @@ export default function FollowerItem({ follower }: Props) {
             <Image
               alt=""
               radius="md"
-              src="/placeholder/180x280/1a1b1e/909296?text=No videos yet"
+              src="/assets/placeholder/180x280/1a1b1e/909296?text=No videos yet"
               w={160}
               h={284}
               loading="lazy"

@@ -11,10 +11,10 @@ export const CountryFlag = ({
   countryCode,
   size = 24,
 }: CountryFlagProps) => {
-  const src =
-    countryCode === "-" || !countryCode || !country
-      ? "/placeholder/24x18?text=NA"
-      : `https://flagcdn.com/w40/${countryCode.toLowerCase()}.png`;
+  if (!countryCode || countryCode == "-") {
+    return null;
+  }
+  const src = `https://flagcdn.com/w40/${countryCode.toLowerCase()}.png`;
 
   return (
     <Tooltip label={country?.toLowerCase()}>
