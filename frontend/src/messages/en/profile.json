@@ -11,7 +11,7 @@
   "defaultTagline": "Watch {nickname}'s recorded streams anytime. Never miss a live stream — we record automatically.",
   "about": "About {nickname}",
   "faq": "FAQ",
-  "recorded": "Recorded {date}",
+  "recorded": "Recorded on {date}",
   "emptyState": {
     "title": "No recordings yet",
     "description": "We haven't captured any streams from this creator yet. Check back later!"

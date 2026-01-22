@@ -132,6 +132,8 @@ export default async function Page({ params }: PageProps) {
                         year: "numeric",
                         month: "short",
                         day: "numeric",
+                        hour: "numeric",
+                        minute: "2-digit",
                       }),
                     })}
                   </Text>
