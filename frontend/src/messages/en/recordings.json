@@ -162,5 +162,5 @@
       "unknown": "Live stream recording from {nickname}"
     }
   },
-  "recordedOn": "recorded on {date}"
+  "recordedOn": "Recorded on {date}"
 }
