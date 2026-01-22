@@ -84,7 +84,6 @@ export default async function Page({ params }: PageProps) {
   const locale = await getLocale();
   const follower = await getFollower({ username, type, locale });
 
-  console.log(follower);
   const data = await fetchProfileRecordings(type, username);
   const recordings = data?.data ?? [];
   const hasRecordings = recordings.length > 0;
