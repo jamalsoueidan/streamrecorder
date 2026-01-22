@@ -56,7 +56,18 @@ export async function RecordingsSimpleGrid({
                 <div style={{ position: "relative" }}>
                   <Image
                     src={uri + "preview.jpg"}
-                    alt={recording.follower?.username}
+                    alt={`${recording.follower?.username} ${t("recordedOn", {
+                      date: format.dateTime(
+                        new Date(recording.createdAt || ""),
+                        {
+                          year: "numeric",
+                          month: "short",
+                          day: "numeric",
+                          hour: "numeric",
+                          minute: "2-digit",
+                        },
+                      ),
+                    })}`}
                     height={160}
                   />
 
@@ -111,6 +122,8 @@ export async function RecordingsSimpleGrid({
                             year: "numeric",
                             month: "short",
                             day: "numeric",
+                            hour: "numeric",
+                            minute: "2-digit",
                           },
                         ),
                       })}
