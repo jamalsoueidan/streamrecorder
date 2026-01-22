@@ -29,6 +29,8 @@ export async function generateMetadata({
     year: "numeric",
     month: "short",
     day: "numeric",
+    hour: "numeric",
+    minute: "2-digit",
   });
 
   const sources = data.sources ?? [];
@@ -46,7 +48,7 @@ export async function generateMetadata({
   )}s`;
 
   const title = `${creatorName}'s Stream - ${recordedDate}`;
-  const description = `Watch ${creatorName}'s recorded ${platformName} live stream from ${recordedDate}. Duration: ${durationFormatted}. Never miss a stream with Live Stream Recorder.`;
+  const description = `Watch ${creatorName}'s recorded ${platformName} live stream from ${recordedDate}. Never miss a stream with Live Stream Recorder.`;
 
   const translation = {
     creatorName,
@@ -120,6 +122,8 @@ export default async function VideoPage({ params }: PageProps) {
     year: "numeric",
     month: "short",
     day: "numeric",
+    hour: "numeric",
+    minute: "2-digit",
   });
 
   const videoJsonLd = {
