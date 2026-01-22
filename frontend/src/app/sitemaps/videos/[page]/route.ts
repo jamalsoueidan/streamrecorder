@@ -108,7 +108,7 @@ export async function GET(
         videoUrl +
         "</video:content_loc>" +
         "<video:duration>" +
-        Math.round(duration) +
+        Math.min(Math.round(duration), 28800) +
         "</video:duration>" +
         "<video:publication_date>" +
         r.createdAt +
