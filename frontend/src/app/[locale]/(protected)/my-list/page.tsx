@@ -31,7 +31,7 @@ export default async function Page({
 
   const initialData = queryClient.getQueryData<
     InfiniteData<Awaited<ReturnType<typeof fetchFollowers>>>
-  >(["creators", filters]);
+  >(["creators", "mylist", filters]);
 
   const filterOptions = await getFollowerFilters();
 
