@@ -31,9 +31,7 @@ export async function RecordingsSimpleGrid({
           recording.sources?.reduce((sum, s) => sum + (s.duration || 0), 0) ||
           0;
 
-        const uri = recording.sources?.length
-          ? "/media" + recording.sources[recording.sources.length - 1].path
-          : null;
+        const previewUrl = `/video/${recording.documentId}/preview.jpg`;
 
         return (
           <div key={recording.id}>
@@ -57,7 +55,7 @@ export async function RecordingsSimpleGrid({
                   style={{ position: "relative", width: "100%", height: 160 }}
                 >
                   <Image
-                    src={uri ? uri + "preview.jpg" : "/assets/placeholder.jpg"}
+                    src={previewUrl}
                     alt={`${recording.follower?.username} ${t("recordedOn", {
                       date: format.dateTime(
                         new Date(recording.createdAt || ""),
