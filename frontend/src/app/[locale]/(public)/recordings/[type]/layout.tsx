@@ -3,7 +3,6 @@ import {
   Button,
   Container,
   Group,
-  Image,
   Paper,
   SimpleGrid,
   Stack,
@@ -11,6 +10,7 @@ import {
   Title,
 } from "@mantine/core";
 import { getTranslations } from "next-intl/server";
+import Image from "next/image";
 import Link from "next/link";
 import Markdown from "react-markdown";
 
@@ -78,7 +78,7 @@ export default async function RecordingPage({ params, children }: PageProps) {
                 padding: "4px",
               }}
             >
-              <Image alt={p.name} src={p.file} maw={120} />
+              <Image alt={p.name} src={p.file} width={120} height={120} />
             </Link>
           ))}
         </SimpleGrid>

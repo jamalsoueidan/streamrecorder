@@ -55,7 +55,7 @@ export async function GET(
       const path =
         generateProfileUrl(r.follower, false) + "/video/" + r.documentId;
       const pageUrl = baseUrl + path;
-      const videoUrl = baseUrl + `/api/playlist/${r.documentId}`;
+      const videoUrl = baseUrl + `/api/playlist/${r.documentId}.m3u8`;
 
       const creatorName =
         r.follower?.nickname || r.follower?.username || "Unknown";

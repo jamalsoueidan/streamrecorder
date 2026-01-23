@@ -8,13 +8,13 @@ import {
   Anchor,
   Card,
   Flex,
-  Image,
   SimpleGrid,
   Stack,
   Text,
 } from "@mantine/core";
 import { IconPlayerPlay } from "@tabler/icons-react";
 import { getFormatter, getTranslations } from "next-intl/server";
+import Image from "next/image";
 
 export async function RecordingsSimpleGrid({
   recordings,
@@ -53,9 +53,11 @@ export async function RecordingsSimpleGrid({
                   cursor: "pointer",
                 }}
               >
-                <div style={{ position: "relative" }}>
+                <div
+                  style={{ position: "relative", width: "100%", height: 160 }}
+                >
                   <Image
-                    src={uri + "preview.jpg"}
+                    src={uri ? uri + "preview.jpg" : "/assets/placeholder.jpg"}
                     alt={`${recording.follower?.username} ${t("recordedOn", {
                       date: format.dateTime(
                         new Date(recording.createdAt || ""),
@@ -68,7 +70,9 @@ export async function RecordingsSimpleGrid({
                         },
                       ),
                     })}`}
-                    height={160}
+                    fill
+                    sizes="(max-width: 640px) 100vw, 25vw"
+                    style={{ objectFit: "cover" }}
                   />
 
                   <Flex

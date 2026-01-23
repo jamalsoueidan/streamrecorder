@@ -30,12 +30,13 @@ export function VideoPlayer({ documentId, previewUrl }: VideoPlayerProps) {
       style={{ width: "100%", height: "clamp(250px, 50vh, 70vh)" }}
     >
       <HlsVideo
-        src={`/api/playlist/${documentId}`}
+        src={`/api/playlist/${documentId}.m3u8`}
         slot="media"
         crossOrigin="anonymous"
         playsInline
         autoPlay
         muted
+        poster={previewUrl}
       >
         <track
           default
@@ -59,7 +60,7 @@ export function VideoPlayer({ documentId, previewUrl }: VideoPlayerProps) {
         <MediaTimeDisplay showduration />
         <Box className="volume-hover-container">
           <MediaVolumeRange />
-          <MediaMuteButton title="" />
+          <MediaMuteButton />
         </Box>
         <MediaFullscreenButton />
       </MediaControlBar>

@@ -5,12 +5,12 @@ import { NextRequest } from "next/server";
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: Promise<{ documentId: string }> }
+  { params }: { params: Promise<{ documentId: string }> },
 ) {
   const { documentId } = await params;
 
   const response = await publicApi.recording.getRecordingsId({
-    id: documentId,
+    id: documentId.replace(/\.m3u8$/, ""),
     populate: {
       sources: {
         fields: ["*"],
@@ -32,7 +32,7 @@ export async function GET(
 
   const playlist = combinePlaylistsFromSources(
     recording.sources || [],
-    "original"
+    "original",
   );
 
   return new Response(playlist, {
