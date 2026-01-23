@@ -89,8 +89,8 @@ export default async function Page({ params, searchParams }: PageProps) {
               <Image
                 src={generateAvatarUrl(follower.avatar?.url)}
                 alt={"Avatar"}
-                width={40}
-                height={40}
+                width={150}
+                height={150}
               />
             )}
           </Avatar>
