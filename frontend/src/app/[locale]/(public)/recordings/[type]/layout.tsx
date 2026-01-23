@@ -78,7 +78,13 @@ export default async function RecordingPage({ params, children }: PageProps) {
                 padding: "4px",
               }}
             >
-              <Image alt={p.name} src={p.file} width={120} height={120} />
+              <Image
+                alt={p.name}
+                src={p.file}
+                width={120}
+                height={120}
+                style={{ maxWidth: 120, height: "auto" }}
+              />
             </Link>
           ))}
         </SimpleGrid>
