@@ -15,6 +15,16 @@ export async function GET() {
   });
 
   const { data: recording } = await publicApi.recording.getRecordings({
+    filters: {
+      sources: {
+        state: {
+          $eq: "done",
+        },
+        duration: {
+          $gt: 60,
+        },
+      },
+    },
     "pagination[page]": 1,
     "pagination[pageSize]": STRAPI_PAGE_SIZE,
   });
