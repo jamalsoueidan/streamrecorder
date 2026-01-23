@@ -24,7 +24,7 @@ export async function GET(
         fields: ["path"],
         filters: {
           state: {
-            $eq: "done",
+            $ne: "failed",
           },
         },
       },

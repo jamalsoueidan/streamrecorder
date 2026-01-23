@@ -46,7 +46,8 @@ export function ImageVideoPreview({ recording, type, username }: Props) {
     (s) => s.state === SourceStateEnum.Recording,
   );
 
-  const uri = `/video/${recording.documentId}/`;
+  const hasSources = sources && sources.length > 0;
+  const uri = hasSources ? `/video/${recording.documentId}/` : null;
 
   const getHref = (time?: number) => {
     const params = new URLSearchParams(searchParams.toString());
@@ -99,7 +100,7 @@ export function ImageVideoPreview({ recording, type, username }: Props) {
         <Image
           alt=""
           src={
-            uri
+            hasSources
               ? isRecording
                 ? uri + "screenshot.jpg"
                 : uri + "preview.jpg"

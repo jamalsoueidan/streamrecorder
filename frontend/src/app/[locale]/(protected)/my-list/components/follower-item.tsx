@@ -14,7 +14,6 @@ import {
   Center,
   Flex,
   Group,
-  Image,
   Loader,
   Pagination,
   SimpleGrid,
@@ -29,6 +28,7 @@ import { generateAvatarUrl } from "@/app/lib/avatar-url";
 import { IconCalendarPlus, IconVideo } from "@tabler/icons-react";
 import { useQuery } from "@tanstack/react-query";
 import { useFormatter, useNow, useTranslations } from "next-intl";
+import Image from "next/image";
 import { useState } from "react";
 import OpenSocial, { getProfileUrl } from "../../../../components/open-social";
 import { CountryFlag } from "../../components/country-flag";
@@ -221,10 +221,9 @@ export default function FollowerItem({ follower, isOpen }: Props) {
           >
             <Image
               alt="no videos"
-              radius="md"
               src="/assets/placeholder/180x280/1a1b1e/909296?text=No videos yet"
-              w={160}
-              h={284}
+              width={160}
+              height={284}
               loading="lazy"
               style={{ objectFit: "cover", opacity: 0.8 }}
             />

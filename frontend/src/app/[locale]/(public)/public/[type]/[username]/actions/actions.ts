@@ -101,6 +101,9 @@ export async function fetchProfileRecordings(type: string, username: string) {
           username: { $eq: decodeURIComponent(username).replace("@", "") },
           type: { $eq: type },
         },
+        sources: {
+          state: { $eq: ["done"] },
+        },
       },
       sort: "createdAt:desc",
       "pagination[page]": 1,
