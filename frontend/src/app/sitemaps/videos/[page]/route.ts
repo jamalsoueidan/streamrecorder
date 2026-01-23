@@ -55,14 +55,12 @@ export async function GET(
       const path =
         generateProfileUrl(r.follower, false) + "/video/" + r.documentId;
       const pageUrl = baseUrl + path;
-      const videoUrl = baseUrl + `/api/playlist/${r.documentId}.m3u8`;
+      const videoUrl = baseUrl + `/video/${r.documentId}/playlist.m3u8`;
+      const thumbnailUrl = baseUrl + `/video/${r.documentId}/screenshot.jpg`;
 
       const creatorName =
         r.follower?.nickname || r.follower?.username || "Unknown";
-      const lastSource = r.sources?.[r.sources.length - 1];
-      const thumbnailUrl = lastSource
-        ? baseUrl + "/media" + lastSource.path + "screenshot.jpg"
-        : "";
+
       const duration =
         r.sources?.reduce(
           (acc: number, s: any) => acc + (s.duration || 0),

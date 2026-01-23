@@ -12,36 +12,20 @@ const s3 = new S3Client({
 
 export async function GET(
   request: Request,
-  { params }: { params: Promise<{ path: string[] }> }
+  { params }: { params: Promise<{ path: string[] }> },
 ) {
   const { path } = await params;
   const filePath = path.join("/");
-  const isVideo = /\.(mp4|webm|mov|avi|mkv)$/i.test(filePath);
 
-  if (isVideo) {
-    /*const token = await getToken();
+  /*const token = await getToken();
     const isLoggedIn = !!token;
     if (!isLoggedIn) {
       return new Response("Unauthorized", { status: 401 });
     }*/
-    const command = new GetObjectCommand({
-      Bucket: process.env.MEDIA_BUCKET!,
-      Key: filePath,
-    });
-    const signedUrl = await getSignedUrl(s3, command, { expiresIn: 1800 });
-    return Response.redirect(signedUrl);
-  } else {
-    const command = new GetObjectCommand({
-      Bucket: process.env.MEDIA_BUCKET!,
-      Key: filePath,
-    });
-    const response = await s3.send(command);
-
-    return new Response(response.Body as ReadableStream, {
-      headers: {
-        "Content-Type": response.ContentType || "application/octet-stream",
-        "Cache-Control": "public, max-age=31536000",
-      },
-    });
-  }
+  const command = new GetObjectCommand({
+    Bucket: process.env.MEDIA_BUCKET!,
+    Key: filePath,
+  });
+  const signedUrl = await getSignedUrl(s3, command, { expiresIn: 1800 });
+  return Response.redirect(signedUrl);
 }

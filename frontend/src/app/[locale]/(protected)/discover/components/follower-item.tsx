@@ -13,7 +13,6 @@ import {
   Flex,
   Grid,
   Group,
-  Image,
   SimpleGrid,
   Stack,
   Text,
@@ -26,6 +25,7 @@ import OpenSocial, { getProfileUrl } from "@/app/components/open-social";
 import { generateAvatarUrl } from "@/app/lib/avatar-url";
 import { IconCalendarPlus, IconVideo } from "@tabler/icons-react";
 import { useFormatter, useNow, useTranslations } from "next-intl";
+import Image from "next/image";
 import { CountryFlag } from "../../components/country-flag";
 import FollowButton from "../../components/follow-button";
 import UnfollowButton from "../../components/unfollow-button";
@@ -55,16 +55,14 @@ export default function FollowerItem({ follower }: Props) {
         <Flex justify="space-between">
           <Group>
             <Anchor component={Link} href={getProfileUrl(follower)}>
-              <Avatar
-                size="lg"
-                src={generateAvatarUrl(follower.avatar?.url)}
-                styles={{
-                  image: {
-                    transform: "scale(2)",
-                    objectFit: "cover",
-                  },
-                }}
-              />
+              <Avatar size="lg">
+                <Image
+                  src={generateAvatarUrl(follower.avatar?.url)}
+                  alt={"Avatar"}
+                  width={60}
+                  height={60}
+                />
+              </Avatar>
             </Anchor>
 
             <Stack gap={2}>
@@ -188,10 +186,9 @@ export default function FollowerItem({ follower }: Props) {
           >
             <Image
               alt=""
-              radius="md"
               src="/assets/placeholder/180x280/1a1b1e/909296?text=No videos yet"
-              w={160}
-              h={284}
+              width={160}
+              height={284}
               loading="lazy"
               style={{ objectFit: "cover", opacity: 0.8 }}
             />
