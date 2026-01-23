@@ -54,7 +54,7 @@ export function ImageVideoPreview({ recording, type, username }: Props) {
     if (time && time > 0) {
       params.set("t", Math.floor(time).toString());
     }
-    return `${getProfileUrl(recording.follower)}/video/${
+    return `${getProfileUrl({ username, type })}/video/${
       recording.documentId
     }?${params.toString()}`;
   };
@@ -106,6 +106,7 @@ export function ImageVideoPreview({ recording, type, username }: Props) {
                 : uri + "preview.jpg"
               : "/assets/placeholder/180x280/black/white?text=Recording started"
           }
+          unoptimized
           loading="lazy"
           fill
           sizes="(max-width: 768px) 180px, 280px"

@@ -34,6 +34,7 @@ export default function CreatorRecordingModal() {
 
   const recordings = data?.pages.flatMap((p) => p.data) ?? [];
 
+  console.log(recordings);
   const handleClose = () => {
     router.back();
   };
@@ -45,7 +46,7 @@ export default function CreatorRecordingModal() {
       const url = search ? `${basePath}?${search}` : basePath;
       window.history.replaceState(null, "", url);
     },
-    [searchParams]
+    [searchParams],
   );
 
   const handleNotFound = () => {

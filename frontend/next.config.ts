@@ -7,6 +7,13 @@ loadEnvConfig(process.cwd());
 const nextConfig: NextConfig = {
   reactCompiler: true,
   output: "standalone",
+  images: {
+    localPatterns: [
+      {
+        pathname: "/**",
+      },
+    ],
+  },
   async redirects() {
     return [
       // non-www to www

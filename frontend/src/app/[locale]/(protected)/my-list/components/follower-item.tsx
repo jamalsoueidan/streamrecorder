@@ -68,12 +68,14 @@ export default function FollowerItem({ follower, isOpen }: Props) {
         <Group>
           <Box pos="relative" visibleFrom="sm">
             <Avatar size="lg">
-              <Image
-                src={generateAvatarUrl(follower.avatar?.url)}
-                alt={"Avatar"}
-                width={60}
-                height={60}
-              />
+              {follower.avatar?.url && (
+                <Image
+                  src={generateAvatarUrl(follower.avatar?.url)}
+                  alt={"Avatar"}
+                  width={60}
+                  height={60}
+                />
+              )}
             </Avatar>
 
             {follower.type && (
@@ -93,16 +95,16 @@ export default function FollowerItem({ follower, isOpen }: Props) {
           <Stack gap={2}>
             <Group gap="xs">
               <Box pos="relative" hiddenFrom="sm">
-                <Avatar
-                  size="md"
-                  src={generateAvatarUrl(follower.avatar?.url)}
-                  styles={{
-                    image: {
-                      transform: "scale(2)",
-                      objectFit: "cover",
-                    },
-                  }}
-                />
+                <Avatar size="md">
+                  {follower.avatar?.url && (
+                    <Image
+                      src={generateAvatarUrl(follower.avatar?.url)}
+                      alt={"Avatar"}
+                      width={40}
+                      height={40}
+                    />
+                  )}
+                </Avatar>
 
                 {follower.type && (
                   <FollowerTypeIcon
@@ -222,6 +224,7 @@ export default function FollowerItem({ follower, isOpen }: Props) {
             <Image
               alt="no videos"
               src="/assets/placeholder/180x280/1a1b1e/909296?text=No videos yet"
+              unoptimized
               width={160}
               height={284}
               loading="lazy"

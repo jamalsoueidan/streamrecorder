@@ -145,12 +145,14 @@ export default async function Page({ params }: PageProps) {
                   },
                 }}
               >
-                <Image
-                  src={generateAvatarUrl(follower.avatar?.url)}
-                  alt={follower.nickname || follower.username}
-                  width={72}
-                  height={72}
-                />
+                {follower.avatar?.url && (
+                  <Image
+                    src={generateAvatarUrl(follower.avatar?.url)}
+                    alt={follower.nickname || follower.username}
+                    width={72}
+                    height={72}
+                  />
+                )}
               </Avatar>
 
               <Stack gap="0">
