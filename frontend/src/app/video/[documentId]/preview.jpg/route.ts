@@ -37,7 +37,7 @@ export async function GET(
 
   const recording = data.data as unknown as Recording;
 
-  const path = recording.sources?.at(0)?.path;
+  const path = recording.sources?.at(-1)?.path;
   if (!path) {
     return new Response("Not found", { status: 404 });
   }
