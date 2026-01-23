@@ -140,7 +140,7 @@ export default async function VideoPage({ params }: PageProps) {
     duration: `PT${Math.floor(duration / 60)}M${Math.round(duration % 60)}S`,
     contentUrl: `${
       process.env.NEXT_PUBLIC_BASE_URL
-    }/api/playlist/${data.documentId}`,
+    }/api/playlist/${data.documentId}.m3u8`,
     embedUrl: `${generateProfileUrl(data.follower, true)}/video/${
       data.documentId
     }`,
@@ -166,16 +166,16 @@ export default async function VideoPage({ params }: PageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(videoJsonLd) }}
       />
       <Flex gap="xs" justify="center" align="center" direction="column">
-        <Title order={2} c="dimmed" size="sm" fw="400">
-          {t("jsonLd.description", { creatorName, recordedDate })}
-        </Title>
-
         <VideoPlayer previewUrl={previewUrl} documentId={id} />
+
+        <Title order={1} c="dimmed" size="xl" fw="400">
+          {t("jsonLd.name", { creatorName, recordedDate })}
+        </Title>
 
         <Button
           component="a"
           href={generateProfileUrl(data.follower)}
-          variant="subtle"
+          variant="light"
           leftSection={
             locale === "ar" ? (
               <IconArrowRight size={16} />
