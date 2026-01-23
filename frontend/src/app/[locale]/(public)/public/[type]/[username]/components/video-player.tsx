@@ -30,7 +30,7 @@ export function VideoPlayer({ documentId, previewUrl }: VideoPlayerProps) {
       style={{ width: "100%", height: "clamp(250px, 50vh, 70vh)" }}
     >
       <HlsVideo
-        src={`/api/playlist/${documentId}.m3u8`}
+        src={`/video/${documentId}/playlist.m3u8`}
         slot="media"
         crossOrigin="anonymous"
         playsInline

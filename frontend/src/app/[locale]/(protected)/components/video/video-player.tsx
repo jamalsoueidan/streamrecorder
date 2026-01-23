@@ -29,10 +29,7 @@ export function VideoPlayer({ recording }: { recording: Recording }) {
   const sources = useMemo(() => recording.sources ?? [], [recording.sources]);
   const videoRanges = useMemo(() => buildVideoRanges(sources), [sources]);
 
-  const previewUrl = useMemo(() => {
-    if (sources.length === 0) return null;
-    return `/media${sources[sources.length - 1].path}screenshot.jpg`;
-  }, [sources]);
+  const previewUrl = `/video/${recording.documentId}/screenshot.jpg`;
 
   const vttDataUrl = useMemo(() => {
     if (!videoRanges.length) return null;
