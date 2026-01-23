@@ -46,9 +46,7 @@ export function ImageVideoPreview({ recording, type, username }: Props) {
     (s) => s.state === SourceStateEnum.Recording,
   );
 
-  const uri = sources?.length
-    ? "/media" + sources[sources.length - 1].path
-    : null;
+  const uri = `/video/${recording.documentId}/`;
 
   const getHref = (time?: number) => {
     const params = new URLSearchParams(searchParams.toString());

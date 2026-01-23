@@ -34,10 +34,7 @@ export async function generateMetadata({
   });
 
   const sources = data.sources ?? [];
-  const lastSource = sources[sources.length - 1];
-  const thumbnailUrl = lastSource
-    ? `${process.env.NEXT_PUBLIC_BASE_URL}/media${lastSource.path}screenshot.jpg`
-    : null;
+  const thumbnailUrl = `${process.env.NEXT_PUBLIC_BASE_URL}/video/${data.documentId}/screenshot.jpg`;
 
   const duration = sources.reduce(
     (acc, source) => acc + (source.duration || 0),
@@ -46,9 +43,6 @@ export async function generateMetadata({
   const durationFormatted = `${Math.floor(duration / 60)}m ${Math.round(
     duration % 60,
   )}s`;
-
-  const title = `${creatorName}'s Stream - ${recordedDate}`;
-  const description = `Watch ${creatorName}'s recorded ${platformName} live stream from ${recordedDate}. Never miss a stream with Live Stream Recorder.`;
 
   const translation = {
     creatorName,
@@ -63,8 +57,8 @@ export async function generateMetadata({
     description: t("meta.description", translation),
     keywords: t("meta.keywords", translation).split(", "),
     openGraph: {
-      title: `${title} | Live Stream Recorder`,
-      description,
+      title: t("meta.title", translation),
+      description: t("meta.description", translation),
       type: "video.other",
       url: generateProfileUrl(data.follower, true) + `/video/${id}`,
       siteName: "Live Stream Recorder",
@@ -79,7 +73,7 @@ export async function generateMetadata({
         ],
         videos: [
           {
-            url: `${generateProfileUrl(data.follower, true)}/video/${id}`,
+            url: `${generateProfileUrl(data.follower, true)}/video/${id}/playlist.m3u8`,
             width: 1280,
             height: 720,
             type: "text/html",
@@ -89,8 +83,8 @@ export async function generateMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title: `${title} | Live Stream Recorder`,
-      description,
+      title: t("meta.title", translation),
+      description: t("meta.description", translation),
       ...(thumbnailUrl && {
         images: [thumbnailUrl],
       }),
@@ -108,8 +102,8 @@ export default async function VideoPage({ params }: PageProps) {
   const data = await getRecordingById(id);
   const format = await getFormatter();
   const sources = data.sources ?? [];
-  const lastSource = sources[sources.length - 1];
-  const previewUrl = lastSource ? `/media${lastSource.path}screenshot.jpg` : "";
+
+  const previewUrl = `/video/${data.documentId}/screenshot.jpg`;
 
   const duration = sources.reduce(
     (acc, source) => acc + (source.duration || 0),
@@ -131,16 +125,14 @@ export default async function VideoPage({ params }: PageProps) {
     "@type": "VideoObject",
     name: t("jsonLd.name", { creatorName, recordedDate }),
     description: t("jsonLd.description", { creatorName, recordedDate }),
-    thumbnailUrl: sources?.length
-      ? `${process.env.NEXT_PUBLIC_BASE_URL}/media${
-          sources[sources.length - 1].path
-        }screenshot.jpg`
-      : null,
+    thumbnailUrl: `${
+      process.env.NEXT_PUBLIC_BASE_URL
+    }/video/${data.documentId}/screenshot.jpg`,
     uploadDate: data.createdAt,
     duration: `PT${Math.floor(duration / 60)}M${Math.round(duration % 60)}S`,
     contentUrl: `${
       process.env.NEXT_PUBLIC_BASE_URL
-    }/api/playlist/${data.documentId}.m3u8`,
+    }/video/${data.documentId}/playlist.m3u8`,
     embedUrl: `${generateProfileUrl(data.follower, true)}/video/${
       data.documentId
     }`,

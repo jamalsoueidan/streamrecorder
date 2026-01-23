@@ -27,9 +27,7 @@ export async function ImageVideoPreview({ recording, type }: Props) {
     (s) => s.state === SourceStateEnum.Recording,
   );
 
-  const uri = sources?.length
-    ? "/media" + sources[sources.length - 1].path
-    : null;
+  const uri = `/video/${recording.documentId}/`;
 
   return (
     <div

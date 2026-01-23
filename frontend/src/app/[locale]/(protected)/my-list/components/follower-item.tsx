@@ -67,16 +67,14 @@ export default function FollowerItem({ follower, isOpen }: Props) {
       <AccordionControl follower={follower}>
         <Group>
           <Box pos="relative" visibleFrom="sm">
-            <Avatar
-              size="lg"
-              src={generateAvatarUrl(follower.avatar?.url)}
-              styles={{
-                image: {
-                  transform: "scale(2)",
-                  objectFit: "cover",
-                },
-              }}
-            />
+            <Avatar size="lg">
+              <Image
+                src={generateAvatarUrl(follower.avatar?.url)}
+                alt={"Avatar"}
+                width={60}
+                height={60}
+              />
+            </Avatar>
 
             {follower.type && (
               <FollowerTypeIcon

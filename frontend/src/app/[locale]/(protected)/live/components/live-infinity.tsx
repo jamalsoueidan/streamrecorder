@@ -35,6 +35,7 @@ import { generateAvatarUrl } from "@/app/lib/avatar-url";
 import { Role } from "@/app/providers/ability-provider";
 
 import { getProfileUrl } from "@/app/components/open-social";
+import Image from "next/image";
 import { ImageVideoPreview } from "../../components/image-video-preview";
 import { fetchLiveRecordings } from "../actions/fetch-live-recordings";
 
@@ -187,16 +188,14 @@ export default function LiveInfinity({ scope }: Props) {
             <Grid.Col span={12}>
               <Group gap="xs">
                 <Anchor component={Link} href={getProfileUrl(rec.follower)}>
-                  <Avatar
-                    size={38}
-                    src={generateAvatarUrl(rec.follower?.avatar?.url)}
-                    styles={{
-                      image: {
-                        transform: "scale(2)",
-                        objectFit: "cover",
-                      },
-                    }}
-                  />
+                  <Avatar size="md">
+                    <Image
+                      src={generateAvatarUrl(rec.follower?.avatar?.url)}
+                      alt={"Avatar"}
+                      width={38}
+                      height={38}
+                    />
+                  </Avatar>
                 </Anchor>
 
                 <Stack gap="0">

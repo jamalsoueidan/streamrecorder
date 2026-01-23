@@ -19,7 +19,7 @@ export async function GET(
             $eq: "done",
           },
         },
-        populate: ["videoSmall", "videoOriginal"], // we ask for original because sometime small is null while encoding for mini-player
+        populate: ["videoSmall", "videoOriginal"],
       },
     },
   });
@@ -38,6 +38,7 @@ export async function GET(
   return new Response(playlist, {
     headers: {
       "Content-Type": "application/vnd.apple.mpegurl",
+      "Cache-Control": "public, max-age=31536000",
     },
   });
 }
