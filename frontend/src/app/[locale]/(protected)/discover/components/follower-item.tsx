@@ -56,12 +56,14 @@ export default function FollowerItem({ follower }: Props) {
           <Group>
             <Anchor component={Link} href={getProfileUrl(follower)}>
               <Avatar size="lg">
-                <Image
-                  src={generateAvatarUrl(follower.avatar?.url)}
-                  alt={"Avatar"}
-                  width={60}
-                  height={60}
-                />
+                {follower.avatar?.url && (
+                  <Image
+                    src={generateAvatarUrl(follower.avatar?.url)}
+                    alt={"Avatar"}
+                    width={60}
+                    height={60}
+                  />
+                )}
               </Avatar>
             </Anchor>
 
@@ -187,6 +189,7 @@ export default function FollowerItem({ follower }: Props) {
             <Image
               alt=""
               src="/assets/placeholder/180x280/1a1b1e/909296?text=No videos yet"
+              unoptimized
               width={160}
               height={284}
               loading="lazy"

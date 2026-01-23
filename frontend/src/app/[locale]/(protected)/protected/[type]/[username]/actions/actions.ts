@@ -109,3 +109,86 @@ export async function fetchProfileRecordings(
     meta: response.data?.meta,
   };
 }
+
+// actions.ts
+
+export async function fetchRecordingWithContext(
+  type: string,
+  username: string,
+  filters: ProfileFilters,
+  targetDocumentId: string,
+  pageParam: number,
+  pageSize: number = 15,
+) {
+  const locale = await getLocale();
+  const decodedUsername = decodeURIComponent(username).replace("@", "");
+  const isDesc = !filters.sort?.includes(":asc");
+
+  // Special case: pageParam === 1 means "find the target video's page"
+  // Any other pageParam means "fetch that specific page"
+  let actualPage = pageParam;
+
+  if (pageParam === 1) {
+    // 1. Get the target video to find its createdAt
+    const targetResponse = await api.recording.browseRecordings(
+      deepMerge(defaultOptions, {
+        filters: {
+          documentId: { $eq: targetDocumentId },
+        },
+        locale,
+      }),
+    );
+
+    const targetVideo = targetResponse.data?.data?.[0];
+
+    if (!targetVideo) {
+      return {
+        data: [],
+        meta: { pagination: { page: 1, pageCount: 0, total: 0, pageSize } },
+      };
+    }
+
+    // 2. Count how many videos come BEFORE this one
+    const countResponse = await api.recording.browseRecordings({
+      filters: {
+        follower: {
+          username: { $eq: decodedUsername },
+          type: { $eq: type },
+        },
+        sources: {
+          state: { $in: ["done", "recording"] },
+        },
+        createdAt: isDesc
+          ? { $gt: targetVideo.createdAt }
+          : { $lt: targetVideo.createdAt },
+      },
+      "pagination[page]": 1,
+      "pagination[pageSize]": 1,
+      locale,
+    });
+
+    const countBefore = countResponse.data?.meta?.pagination?.total || 0;
+    actualPage = Math.floor(countBefore / pageSize) + 1;
+  }
+
+  // 3. Fetch the actual page
+  const response = await api.recording.browseRecordings(
+    deepMerge(defaultOptions, {
+      filters: {
+        follower: {
+          username: { $eq: decodedUsername },
+          type: { $eq: type },
+        },
+      },
+      sort: filters.sort,
+      "pagination[page]": actualPage,
+      "pagination[pageSize]": pageSize,
+      locale,
+    }),
+  );
+
+  return {
+    data: response.data?.data || [],
+    meta: response.data?.meta,
+  };
+}

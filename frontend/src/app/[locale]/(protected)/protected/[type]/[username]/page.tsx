@@ -10,12 +10,7 @@ import {
   Text,
   Title,
 } from "@mantine/core";
-import {
-  IconClock,
-  IconStar,
-  IconVideo,
-  IconWorldSearch,
-} from "@tabler/icons-react";
+import { IconClock, IconVideo, IconWorldSearch } from "@tabler/icons-react";
 import {
   dehydrate,
   HydrationBoundary,
@@ -34,6 +29,7 @@ import { FollowerTypeIcon } from "@/app/[locale]/(protected)/components/follower
 import UnfollowButton from "@/app/[locale]/(protected)/components/unfollow-button";
 import OpenSocial from "@/app/components/open-social";
 import { generateAvatarUrl } from "@/app/lib/avatar-url";
+import Image from "next/image";
 import { fetchProfileRecordings, getFollower } from "./actions/actions";
 import { AdminMenu } from "./components/admin-menu";
 import ProfileRecordings from "./components/profile-recordings";
@@ -85,18 +81,18 @@ export default async function Page({ params, searchParams }: PageProps) {
         <Box pos="relative">
           <Avatar
             size={150}
-            src={generateAvatarUrl(follower.avatar?.url)}
             style={{
               ...(isRecording ? { border: "3px solid red" } : {}),
             }}
-            styles={{
-              image: {
-                transform: "scale(2)",
-                objectFit: "cover",
-              },
-            }}
           >
-            <IconStar size={1} />
+            {follower.avatar?.url && (
+              <Image
+                src={generateAvatarUrl(follower.avatar?.url)}
+                alt={"Avatar"}
+                width={40}
+                height={40}
+              />
+            )}
           </Avatar>
 
           {follower.type && (

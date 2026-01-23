@@ -20,7 +20,7 @@ export async function fetchFollowers(filters: CreatorFilters, page: number) {
       sort: filters.sort,
       hasRecordings: filters.hasRecordings,
       "pagination[page]": page,
-    })
+    }),
   );
 
   return {
@@ -33,12 +33,12 @@ export async function getRecordings(
   username: string,
   type: string,
   page: number = 1,
-  pageSize: number = 8
+  pageSize: number = 8,
 ) {
   const response = await api.recording.getRecordings({
     filters: {
       follower: {
-        username: { $eq: username },
+        username: { $eq: decodeURIComponent(username).replace("@", "") },
         type: { $eq: type },
       },
       sources: {

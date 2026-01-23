@@ -16,7 +16,14 @@ import {
   IconVideoOff,
   IconX,
 } from "@tabler/icons-react";
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import {
+  useCallback,
+  useEffect,
+  useLayoutEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
 import { VideoPlayer } from "./video-player";
 
 interface VideoScrollPlayerProps {
@@ -24,8 +31,11 @@ interface VideoScrollPlayerProps {
   initialId: string;
   isLoading?: boolean;
   hasNextPage?: boolean;
+  hasPreviousPage?: boolean;
   isFetchingNextPage?: boolean;
+  isFetchingPreviousPage?: boolean;
   onFetchNextPage?: () => void;
+  onFetchPreviousPage?: () => void;
   onVisibleChange?: (recording: Recording) => void;
   onClose?: () => void;
   onNotFound?: () => void;
@@ -38,8 +48,11 @@ export function VideoScrollPlayer({
   initialId,
   isLoading,
   hasNextPage,
+  hasPreviousPage,
   isFetchingNextPage,
+  isFetchingPreviousPage,
   onFetchNextPage,
+  onFetchPreviousPage,
   onVisibleChange,
   onClose,
   onNotFound,
@@ -51,10 +64,14 @@ export function VideoScrollPlayer({
   const [visibleIndex, setVisibleIndex] = useState<number | null>(null);
   const hasScrolledToInitial = useRef(false);
 
-  // Find initial index - returns -1 if not found
+  // Track the currently visible video's documentId (not index, since index can shift)
+  const visibleDocumentId = useRef<string | null>(null);
+  const prevRecordingsLength = useRef(recordings.length);
+
+  // Find initial index
   const initialIndex = useMemo(
     () => recordings.findIndex((r) => r.documentId === initialId),
-    [recordings, initialId]
+    [recordings, initialId],
   );
 
   // Handle not found case
@@ -66,45 +83,87 @@ export function VideoScrollPlayer({
     }
   }, [isNotFound, onNotFound]);
 
+  // When recordings change (new page loaded), maintain scroll position
+  useLayoutEffect(() => {
+    // If videos were prepended (previous page loaded)
+    if (
+      visibleDocumentId.current &&
+      recordings.length > prevRecordingsLength.current
+    ) {
+      // Find where our current video is now
+      const newIndex = recordings.findIndex(
+        (r) => r.documentId === visibleDocumentId.current,
+      );
+
+      if (newIndex !== -1 && newIndex !== visibleIndex) {
+        // Scroll to maintain position (instant, no animation)
+        requestAnimationFrame(() => {
+          const target = slideRefs.current.get(newIndex);
+          target?.scrollIntoView({ behavior: "instant" });
+        });
+      }
+    }
+
+    prevRecordingsLength.current = recordings.length;
+  }, [recordings, visibleIndex]);
+
   // Scroll to initial recording once when data loads
   useEffect(() => {
-    // Already scrolled
     if (hasScrolledToInitial.current) return;
-
-    // No data yet
     if (recordings.length === 0) return;
-
-    // Recording not found - don't scroll, let not found handler deal with it
     if (initialIndex === -1) return;
 
-    // Index 0 is already visible, no scroll needed - just mark as done
     if (initialIndex === 0) {
       hasScrolledToInitial.current = true;
+      visibleDocumentId.current = recordings[0]?.documentId || null;
       return;
     }
 
-    // Scroll to the initial recording
     requestAnimationFrame(() => {
       const target = slideRefs.current.get(initialIndex);
       target?.scrollIntoView({ behavior: "instant" });
     });
 
     hasScrolledToInitial.current = true;
-  }, [initialIndex, recordings.length]);
+    visibleDocumentId.current = recordings[initialIndex]?.documentId || null;
+  }, [initialIndex, recordings]);
 
   const goToPrev = useCallback(() => {
-    if (visibleIndex !== null && visibleIndex > 0) {
+    if (visibleIndex === null) return;
+
+    if (visibleIndex > 0) {
+      // There's a previous video in array, scroll to it
       const target = slideRefs.current.get(visibleIndex - 1);
       target?.scrollIntoView({ behavior: "smooth" });
+    } else if (hasPreviousPage && !isFetchingPreviousPage) {
+      // At start of array, fetch previous page
+      // After it loads, useLayoutEffect will handle scroll position
+      onFetchPreviousPage?.();
     }
-  }, [visibleIndex]);
+  }, [
+    visibleIndex,
+    hasPreviousPage,
+    isFetchingPreviousPage,
+    onFetchPreviousPage,
+  ]);
 
   const goToNext = useCallback(() => {
-    if (visibleIndex !== null && visibleIndex < recordings.length - 1) {
+    if (visibleIndex === null) return;
+
+    if (visibleIndex < recordings.length - 1) {
       const target = slideRefs.current.get(visibleIndex + 1);
       target?.scrollIntoView({ behavior: "smooth" });
+    } else if (hasNextPage && !isFetchingNextPage) {
+      // At end of array, fetch next page
+      onFetchNextPage?.();
     }
-  }, [visibleIndex, recordings.length]);
+  }, [
+    visibleIndex,
+    recordings.length,
+    hasNextPage,
+    isFetchingNextPage,
+    onFetchNextPage,
+  ]);
 
   // Keyboard navigation
   useEffect(() => {
@@ -130,6 +189,9 @@ export function VideoScrollPlayer({
       const recording = recordings[index];
       if (!recording) return;
 
+      // Track by documentId so we can find it after array changes
+      visibleDocumentId.current = recording.documentId!;
+
       onVisibleChange?.(recording);
 
       // Prefetch next page when near end
@@ -137,14 +199,23 @@ export function VideoScrollPlayer({
       if (isNearEnd && hasNextPage && !isFetchingNextPage) {
         onFetchNextPage?.();
       }
+
+      // Prefetch previous page when near start
+      const isNearStart = index <= 2;
+      if (isNearStart && hasPreviousPage && !isFetchingPreviousPage) {
+        onFetchPreviousPage?.();
+      }
     },
     [
       recordings,
       hasNextPage,
+      hasPreviousPage,
       isFetchingNextPage,
+      isFetchingPreviousPage,
       onFetchNextPage,
+      onFetchPreviousPage,
       onVisibleChange,
-    ]
+    ],
   );
 
   if (isLoading) {
@@ -155,7 +226,6 @@ export function VideoScrollPlayer({
     );
   }
 
-  // Show not found state
   if (isNotFound) {
     return (
       <Flex h={height} justify="center" align="center">
@@ -174,17 +244,18 @@ export function VideoScrollPlayer({
     );
   }
 
-  // Safe initial index for isInitiallyVisible (use 0 as fallback)
   const safeInitialIndex = initialIndex === -1 ? 0 : initialIndex;
 
-  const showPrev = visibleIndex !== null && visibleIndex > 0;
+  // Show prev if there's a video before OR if there's a previous page to load
+  const showPrev =
+    visibleIndex !== null && (visibleIndex > 0 || hasPreviousPage);
   const showNext =
     visibleIndex !== null &&
     (visibleIndex < recordings.length - 1 || hasNextPage);
 
   return (
     <Box pos="relative" h={height}>
-      {/* Close button - top left */}
+      {/* Close button */}
       {showCloseButton && onClose && (
         <ActionIcon
           variant="filled"
@@ -199,13 +270,13 @@ export function VideoScrollPlayer({
           pos="absolute"
           top={20}
           left={20}
-          style={{ zIndex: 100 }} // Higher z-index
+          style={{ zIndex: 100 }}
         >
           <IconX />
         </ActionIcon>
       )}
 
-      {/* Navigation buttons - right side */}
+      {/* Navigation buttons */}
       <Group
         pos="absolute"
         right={20}
@@ -214,7 +285,7 @@ export function VideoScrollPlayer({
         style={{
           transform: "translateY(-50%)",
           flexDirection: "column",
-          zIndex: 100, // Higher z-index
+          zIndex: 100,
         }}
       >
         {showPrev && (
@@ -225,6 +296,7 @@ export function VideoScrollPlayer({
             bg="rgb(20 20 30 / 0.7)"
             color="gray"
             onClick={goToPrev}
+            loading={isFetchingPreviousPage}
           >
             <IconChevronUp />
           </ActionIcon>
@@ -244,7 +316,7 @@ export function VideoScrollPlayer({
         )}
       </Group>
 
-      {/* Scroll container with snap - lower z-index */}
+      {/* Scroll container */}
       <Box
         ref={containerRef}
         h="100%"
@@ -256,8 +328,8 @@ export function VideoScrollPlayer({
           scrollbarWidth: "none",
           msOverflowStyle: "none",
           overscrollBehavior: "contain",
-          position: "relative", // Add this
-          zIndex: 1, // Add this - keeps it below buttons
+          position: "relative",
+          zIndex: 1,
         }}
       >
         {recordings.map((recording, index) => (
@@ -278,6 +350,7 @@ export function VideoScrollPlayer({
   );
 }
 
+// VideoSlide component stays the same
 function VideoSlide({
   recording,
   index,
@@ -295,7 +368,6 @@ function VideoSlide({
   const [isVisible, setIsVisible] = useState(isInitiallyVisible);
   const onVisibleRef = useRef(onVisible);
 
-  // Keep ref updated with latest callback
   useEffect(() => {
     onVisibleRef.current = onVisible;
   }, [onVisible]);
@@ -313,15 +385,15 @@ function VideoSlide({
       ([entry]) => {
         setIsVisible(entry.isIntersecting);
         if (entry.isIntersecting) {
-          onVisibleRef.current(index); // Use ref instead of callback directly
+          onVisibleRef.current(index);
         }
       },
-      { threshold: 0.5 }
+      { threshold: 0.5 },
     );
 
     observer.observe(element);
     return () => observer.disconnect();
-  }, [index]); // Remove onVisible from dependencies
+  }, [index]);
 
   return (
     <Flex
