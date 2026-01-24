@@ -29,6 +29,7 @@ import { FollowerTypeIcon } from "@/app/[locale]/(protected)/components/follower
 import UnfollowButton from "@/app/[locale]/(protected)/components/unfollow-button";
 import OpenSocial from "@/app/components/open-social";
 import { generateAvatarUrl } from "@/app/lib/avatar-url";
+import { safeRelativeTime } from "@/app/lib/safe-relative-time";
 import Image from "next/image";
 import { fetchProfileRecordings, getFollower } from "./actions/actions";
 import { AdminMenu } from "./components/admin-menu";
@@ -138,14 +139,12 @@ export default async function Page({ params, searchParams }: PageProps) {
           <div>
             <Text size="sm" c="dimmed" suppressHydrationWarning>
               {t("addedAgo", {
-                time: format.relativeTime(new Date(follower.createdAt || "")),
+                time: safeRelativeTime(format, follower.createdAt),
               })}
             </Text>
             <Text size="sm" c="dimmed" suppressHydrationWarning>
               {t("lastCheckedAgo", {
-                time: format.relativeTime(
-                  new Date(follower.lastCheckedAt || ""),
-                ),
+                time: safeRelativeTime(format, follower.lastCheckedAt),
               })}
             </Text>
           </div>
