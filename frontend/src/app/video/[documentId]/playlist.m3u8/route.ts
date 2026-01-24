@@ -207,7 +207,7 @@ export function buildVideoRanges(sources: Source[]) {
     ranges.push({
       start: cumTime,
       end: cumTime + dur,
-      path: process.env.NEXT_PUBLIC_BASE_URL + "/media" + source.path || "",
+      path: process.env.NEXT_PUBLIC_BASE_URL + "/media" + source.path,
       interval: source.thumbnailInterval || 10,
       cols: source.thumbnailCols || 10,
     });
