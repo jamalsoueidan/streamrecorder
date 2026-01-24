@@ -15,7 +15,6 @@ const defaultOptions = {
         sources: {
           fields: ["*"],
           filters: { state: { $ne: "failed" } },
-          populate: ["videoSmall", "videoOriginal"],
         },
       },
     },
@@ -29,7 +28,7 @@ export async function fetchFollowers(filters: CreatorFilters, page: number) {
       sort: filters.sort,
       hasRecordings: filters.hasRecordings,
       "pagination[page]": page,
-    })
+    }),
   );
 
   return {

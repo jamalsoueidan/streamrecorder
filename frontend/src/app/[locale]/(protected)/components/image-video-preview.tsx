@@ -168,9 +168,12 @@ export function ImageVideoPreview({ recording, type, username }: Props) {
         </Badge>
       ) : null}
 
-      {showVideo && sources && (
-        <MiniPlayer sources={sources} onTimeClick={handleTimeClick} />
-      )}
+      {showVideo && !isRecording && recording.documentId ? (
+        <MiniPlayer
+          documentId={recording.documentId}
+          onTimeClick={handleTimeClick}
+        />
+      ) : null}
 
       <FollowerTypeIcon
         type={type}
