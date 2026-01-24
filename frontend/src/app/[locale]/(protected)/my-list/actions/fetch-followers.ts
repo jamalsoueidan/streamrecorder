@@ -55,7 +55,6 @@ export async function getRecordings(
             $ne: "failed",
           },
         },
-        populate: ["videoSmall", "videoOriginal"],
       },
       follower: {
         populate: {
