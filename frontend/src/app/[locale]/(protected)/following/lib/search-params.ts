@@ -25,7 +25,6 @@ export const followingDefaultOptions = {
           $eq: "done",
         },
       },
-      populate: ["videoSmall", "videoOriginal"], // we ask for original because sometime small is null while encoding for mini-player
     },
     follower: {
       fields: ["username", "type"],
@@ -45,10 +44,10 @@ export enum FollowingSortOptions {
 
 export const followingParsers = {
   sort: parseAsStringEnum<FollowingSortOptions>(
-    Object.values(FollowingSortOptions)
+    Object.values(FollowingSortOptions),
   ).withDefault(FollowingSortOptions.updatedAtDesc),
   scope: parseAsStringEnum<ScopeEnum>(Object.values(ScopeEnum)).withDefault(
-    ScopeEnum.Following
+    ScopeEnum.Following,
   ),
   gender: parseAsString,
   country: parseAsString,
