@@ -1,7 +1,6 @@
 import { streamingPlatforms } from "@/app/lib/streaming-platforms";
 import publicApi from "@/lib/public-api";
 import {
-  Anchor,
   Button,
   Container,
   Flex,
@@ -15,6 +14,7 @@ import {
 import { IconArrowRight } from "@tabler/icons-react";
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
+import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 import { CreatorsSimpleGrid } from "./creators/components/creators-simple-grid";
 import { RecordingsSimpleGrid } from "./recordings/components/recordings-simple-grid";
@@ -137,7 +137,16 @@ export default async function LandingPage() {
 
         <SimpleGrid cols={{ base: 2, sm: 6 }} spacing="xl" mt={20}>
           {streamingPlatforms.map((p) => (
-            <Anchor key={p.name} href={`/recordings/${p.name.toLowerCase()}`}>
+            <Link
+              key={p.name}
+              href={`/recordings/${p.name.toLowerCase()}`}
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                borderRadius: "8px",
+                padding: "4px",
+              }}
+            >
               <Image
                 alt={p.name}
                 src={p.file}
@@ -145,7 +154,7 @@ export default async function LandingPage() {
                 height={120}
                 style={{ maxWidth: 120, height: "auto" }}
               />
-            </Anchor>
+            </Link>
           ))}
         </SimpleGrid>
       </Stack>

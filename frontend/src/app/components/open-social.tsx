@@ -9,7 +9,7 @@ export const SOCIAL_URL_PATTERNS: Record<
   [FollowerTypeEnum.Tiktok]: (username) =>
     `https://www.tiktok.com/@${decodeURIComponent(username).replace(
       /^@/,
-      ""
+      "",
     )}/live`,
   [FollowerTypeEnum.Twitch]: (username) => `https://www.twitch.tv/${username}`,
   [FollowerTypeEnum.Kick]: (username) => `https://www.kick.com/${username}`,
@@ -25,16 +25,18 @@ export const URL_PATTERNS: Record<
   FollowerTypeEnum,
   (username: string) => string
 > = {
-  [FollowerTypeEnum.Tiktok]: (username) => `/tiktok/@${username}`,
+  [FollowerTypeEnum.Tiktok]: (username) =>
+    `/tiktok/@${username.replace(/^(%40|@)/, "")}`,
   [FollowerTypeEnum.Twitch]: (username) => `/twitch/${username}`,
   [FollowerTypeEnum.Kick]: (username) => `/kick/${username}`,
-  [FollowerTypeEnum.Youtube]: (username) => `/youtube/@${username}`,
+  [FollowerTypeEnum.Youtube]: (username) =>
+    `/youtube/@${username.replace(/^(%40|@)/, "")}`,
   [FollowerTypeEnum.Afreecatv]: (username) => `/afreecatv/${username}`,
   [FollowerTypeEnum.Pandalive]: (username) => `/pandalive/${username}`,
 };
 
 export const getSocialUrl = (
-  follower?: Partial<Pick<Follower, "username" | "type">>
+  follower?: Partial<Pick<Follower, "username" | "type">>,
 ) => {
   const patternFn =
     SOCIAL_URL_PATTERNS[follower?.type || FollowerTypeEnum.Tiktok];
@@ -42,7 +44,7 @@ export const getSocialUrl = (
 };
 
 export const getProfileUrl = (
-  follower?: Partial<Pick<Follower, "username" | "type">>
+  follower?: Partial<Pick<Follower, "username" | "type">>,
 ) => {
   const patternFn = URL_PATTERNS[follower?.type || FollowerTypeEnum.Tiktok];
   return patternFn ? patternFn(follower?.username || "unknown") : "/404";

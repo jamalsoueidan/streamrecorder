@@ -20,7 +20,7 @@ export enum SortOptions {
 
 export const exploreParsers = {
   sort: parseAsStringEnum<SortOptions>(Object.values(SortOptions)).withDefault(
-    SortOptions.createdAtDesc
+    SortOptions.createdAtDesc,
   ),
   hasRecordings: parseAsBoolean.withDefault(true),
   gender: parseAsString,
@@ -44,12 +44,12 @@ export const buildCreatorsFilters = (filters: CreatorFilters) => ({
     $or: [
       {
         username: {
-          $containsi: decodeURIComponent(filters.search).replace("@", ""),
+          $containsi: filters.search.replace(/^(%40|@)/, ""),
         },
       },
       {
         nickname: {
-          $containsi: decodeURIComponent(filters.search).replace("@", ""),
+          $containsi: filters.search.replace(/^(%40|@)/, ""),
         },
       },
     ],
