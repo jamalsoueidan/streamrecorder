@@ -25,6 +25,7 @@ import Link from "next/link";
 
 import { ImageVideoPreview } from "@/app/[locale]/(protected)/components/image-video-preview";
 import { generateAvatarUrl } from "@/app/lib/avatar-url";
+import { safeRelativeTime } from "@/app/lib/safe-relative-time";
 import { IconCalendarPlus, IconVideo } from "@tabler/icons-react";
 import { useQuery } from "@tanstack/react-query";
 import { useFormatter, useNow, useTranslations } from "next-intl";
@@ -137,10 +138,9 @@ export default function FollowerItem({ follower, isOpen }: Props) {
                 <IconCalendarPlus size={14} />
                 <Text size="sm" c="dimmed" suppressHydrationWarning>
                   {t("followers.addedAgo", {
-                    time: format.relativeTime(
-                      new Date(follower.createdAt || ""),
-                      { now },
-                    ),
+                    time: safeRelativeTime(format, follower.createdAt, {
+                      now,
+                    }),
                   })}
                 </Text>
               </Group>
@@ -180,19 +180,15 @@ export default function FollowerItem({ follower, isOpen }: Props) {
                     <Text size="xs" suppressHydrationWarning>
                       {isRecording
                         ? t("recordings.liveAgo", {
-                            time: format.relativeTime(
-                              new Date(rec.createdAt || ""),
-                              {
-                                style: "narrow",
-                                now,
-                              },
-                            ),
+                            time: safeRelativeTime(format, rec.createdAt, {
+                              style: "narrow",
+                              now,
+                            }),
                           })
                         : t("recordings.recordedAgo", {
-                            time: format.relativeTime(
-                              new Date(rec.createdAt || ""),
-                              { now },
-                            ),
+                            time: safeRelativeTime(format, rec.createdAt, {
+                              now,
+                            }),
                           })}
                     </Text>
                   </Stack>

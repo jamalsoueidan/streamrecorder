@@ -19,6 +19,7 @@ import { useParams } from "next/navigation";
 import { useQueryStates } from "nuqs";
 import { useEffect } from "react";
 
+import { safeRelativeTime } from "@/app/lib/safe-relative-time";
 import { useFormatter, useNow, useTranslations } from "next-intl";
 import { fetchProfileRecordings } from "../actions/actions";
 import { profileParsers, SortOptions } from "../lib/search-params";
@@ -95,13 +96,13 @@ export default function ProfileRecordings() {
               <Text size="xs" suppressHydrationWarning>
                 {isRecording
                   ? t("recordings.liveAgo", {
-                      time: format.relativeTime(new Date(rec.createdAt || ""), {
+                      time: safeRelativeTime(format, rec.createdAt, {
                         style: "narrow",
                         now,
                       }),
                     })
                   : t("recordings.recordedAgo", {
-                      time: format.relativeTime(new Date(rec.createdAt || ""), {
+                      time: safeRelativeTime(format, rec.createdAt, {
                         now,
                       }),
                     })}

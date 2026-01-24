@@ -367,13 +367,184 @@ export interface ChangeLogResponse {
   meta?: object;
 }
 
+export interface EmailTemplateRequest {
+  data: {
+    subjectMatcher: string;
+    subject: string;
+    text?: string;
+    html?: string;
+    locale?: string;
+    localizations?: (number | string)[];
+  };
+}
+
+export interface EmailTemplateListResponse {
+  data?: EmailTemplate[];
+  meta?: {
+    pagination?: {
+      page?: number;
+      /** @min 25 */
+      pageSize?: number;
+      /** @max 1 */
+      pageCount?: number;
+      total?: number;
+    };
+  };
+}
+
+export interface EmailTemplate {
+  id?: number;
+  documentId?: string;
+  subjectMatcher: string;
+  subject: string;
+  text?: string;
+  html?: string;
+  /** @format date-time */
+  createdAt?: string;
+  /** @format date-time */
+  updatedAt?: string;
+  /** @format date-time */
+  publishedAt?: string;
+  createdBy?: {
+    id?: number;
+    documentId?: string;
+    firstname?: string;
+    lastname?: string;
+    username?: string;
+    /** @format email */
+    email?: string;
+    resetPasswordToken?: string;
+    registrationToken?: string;
+    isActive?: boolean;
+    roles?: {
+      id?: number;
+      documentId?: string;
+      name?: string;
+      code?: string;
+      description?: string;
+      users?: {
+        id?: number;
+        documentId?: string;
+      }[];
+      permissions?: {
+        id?: number;
+        documentId?: string;
+        action?: string;
+        actionParameters?: any;
+        subject?: string;
+        properties?: any;
+        conditions?: any;
+        role?: {
+          id?: number;
+          documentId?: string;
+        };
+        /** @format date-time */
+        createdAt?: string;
+        /** @format date-time */
+        updatedAt?: string;
+        /** @format date-time */
+        publishedAt?: string;
+        createdBy?: {
+          id?: number;
+          documentId?: string;
+        };
+        updatedBy?: {
+          id?: number;
+          documentId?: string;
+        };
+        locale?: string;
+        localizations?: {
+          id?: number;
+          documentId?: string;
+        }[];
+      }[];
+      /** @format date-time */
+      createdAt?: string;
+      /** @format date-time */
+      updatedAt?: string;
+      /** @format date-time */
+      publishedAt?: string;
+      createdBy?: {
+        id?: number;
+        documentId?: string;
+      };
+      updatedBy?: {
+        id?: number;
+        documentId?: string;
+      };
+      locale?: string;
+      localizations?: {
+        id?: number;
+        documentId?: string;
+      }[];
+    }[];
+    blocked?: boolean;
+    preferedLanguage?: string;
+    /** @format date-time */
+    createdAt?: string;
+    /** @format date-time */
+    updatedAt?: string;
+    /** @format date-time */
+    publishedAt?: string;
+    createdBy?: {
+      id?: number;
+      documentId?: string;
+    };
+    updatedBy?: {
+      id?: number;
+      documentId?: string;
+    };
+    locale?: string;
+    localizations?: {
+      id?: number;
+      documentId?: string;
+    }[];
+  };
+  updatedBy?: {
+    id?: number;
+    documentId?: string;
+  };
+  locale?: string;
+  localizations?: {
+    id?: number;
+    documentId?: string;
+    subjectMatcher?: string;
+    subject?: string;
+    text?: string;
+    html?: string;
+    /** @format date-time */
+    createdAt?: string;
+    /** @format date-time */
+    updatedAt?: string;
+    /** @format date-time */
+    publishedAt?: string;
+    createdBy?: {
+      id?: number;
+      documentId?: string;
+    };
+    updatedBy?: {
+      id?: number;
+      documentId?: string;
+    };
+    locale?: string;
+    localizations?: {
+      id?: number;
+      documentId?: string;
+    }[];
+  }[];
+}
+
+export interface EmailTemplateResponse {
+  data?: EmailTemplate;
+  meta?: object;
+}
+
 export interface FollowerRequest {
   data: {
     nickname?: string;
     username: string;
     type: FollowerRequestTypeEnum;
     gender?: FollowerRequestGenderEnum;
-    description?: string;
     country?: string;
     countryCode?: string;
     language?: string;
@@ -384,9 +555,10 @@ export interface FollowerRequest {
     lastCheckedAt?: string;
     protected?: boolean;
     pause?: boolean;
+    description?: string;
+    tagline?: string;
     faq?: any;
     category?: string;
-    tagline?: string;
     migration?: number;
     locale?: string;
     localizations?: (number | string)[];
@@ -414,7 +586,6 @@ export interface Follower {
   username: string;
   type: FollowerTypeEnum;
   gender?: FollowerGenderEnum;
-  description?: string;
   country?: string;
   countryCode?: string;
   language?: string;
@@ -638,9 +809,10 @@ export interface Follower {
   lastCheckedAt?: string;
   protected?: boolean;
   pause?: boolean;
+  description?: string;
+  tagline?: string;
   faq?: any;
   category?: string;
-  tagline?: string;
   migration?: number;
   /** @format date-time */
   createdAt?: string;
@@ -664,7 +836,6 @@ export interface Follower {
     username?: string;
     type?: FollowerTypeEnum;
     gender?: FollowerGenderEnum1;
-    description?: string;
     country?: string;
     countryCode?: string;
     language?: string;
@@ -720,9 +891,10 @@ export interface Follower {
     lastCheckedAt?: string;
     protected?: boolean;
     pause?: boolean;
+    description?: string;
+    tagline?: string;
     faq?: any;
     category?: string;
-    tagline?: string;
     migration?: number;
     /** @format date-time */
     createdAt?: string;
@@ -951,7 +1123,6 @@ export interface Message {
       username?: string;
       type?: MessageTypeEnum;
       gender?: MessageGenderEnum;
-      description?: string;
       country?: string;
       countryCode?: string;
       language?: string;
@@ -1084,9 +1255,10 @@ export interface Message {
       lastCheckedAt?: string;
       protected?: boolean;
       pause?: boolean;
+      description?: string;
+      tagline?: string;
       faq?: any;
       category?: string;
-      tagline?: string;
       migration?: number;
       /** @format date-time */
       createdAt?: string;
@@ -1220,7 +1392,6 @@ export interface Recording {
     username?: string;
     type?: FollowerTypeEnum;
     gender?: RecordingGenderEnum;
-    description?: string;
     country?: string;
     countryCode?: string;
     language?: string;
@@ -1444,9 +1615,10 @@ export interface Recording {
     lastCheckedAt?: string;
     protected?: boolean;
     pause?: boolean;
+    description?: string;
+    tagline?: string;
     faq?: any;
     category?: string;
-    tagline?: string;
     migration?: number;
     /** @format date-time */
     createdAt?: string;
@@ -1524,7 +1696,6 @@ export interface RecordingResponse {
 
 export interface VideosVideoComponent {
   id?: number;
-  playlist?: string;
   width?: number;
   height?: number;
   /**
@@ -2007,6 +2178,52 @@ export interface DeleteChangeLogsIdParams {
 
 /** @format int64 */
 export type DeleteChangeLogsIdData = number;
+
+export interface GetEmailTemplatesParams {
+  /** Sort by attributes ascending (asc) or descending (desc) */
+  sort?: string;
+  /** Return page/pageSize (default: true) */
+  "pagination[withCount]"?: boolean;
+  /** Page number (default: 0) */
+  "pagination[page]"?: number;
+  /** Page size (default: 25) */
+  "pagination[pageSize]"?: number;
+  /** Offset value (default: 0) */
+  "pagination[start]"?: number;
+  /** Number of entities to return (default: 25) */
+  "pagination[limit]"?: number;
+  /** Fields to return (ex: title,author) */
+  fields?: string;
+  /** Relations to return */
+  populate?: string | string[] | object;
+  /** Filters to apply */
+  filters?: Record<string, any>;
+  /** Locale to apply */
+  locale?: string;
+}
+
+export type GetEmailTemplatesData = EmailTemplateListResponse;
+
+export type PostEmailTemplatesData = EmailTemplateResponse;
+
+export interface GetEmailTemplatesIdParams {
+  id: string;
+}
+
+export type GetEmailTemplatesIdData = EmailTemplateResponse;
+
+export interface PutEmailTemplatesIdParams {
+  id: string;
+}
+
+export type PutEmailTemplatesIdData = EmailTemplateResponse;
+
+export interface DeleteEmailTemplatesIdParams {
+  id: string;
+}
+
+/** @format int64 */
+export type DeleteEmailTemplatesIdData = number;
 
 export interface GetFollowersParams {
   /** Sort by attributes ascending (asc) or descending (desc) */
@@ -2697,6 +2914,110 @@ export namespace ChangeLog {
     export type RequestBody = never;
     export type RequestHeaders = {};
     export type ResponseBody = DeleteChangeLogsIdData;
+  }
+}
+
+export namespace EmailTemplate {
+  /**
+   * No description
+   * @tags Email-template
+   * @name GetEmailTemplates
+   * @request GET:/email-templates
+   * @secure
+   */
+  export namespace GetEmailTemplates {
+    export type RequestParams = {};
+    export type RequestQuery = {
+      /** Sort by attributes ascending (asc) or descending (desc) */
+      sort?: string;
+      /** Return page/pageSize (default: true) */
+      "pagination[withCount]"?: boolean;
+      /** Page number (default: 0) */
+      "pagination[page]"?: number;
+      /** Page size (default: 25) */
+      "pagination[pageSize]"?: number;
+      /** Offset value (default: 0) */
+      "pagination[start]"?: number;
+      /** Number of entities to return (default: 25) */
+      "pagination[limit]"?: number;
+      /** Fields to return (ex: title,author) */
+      fields?: string;
+      /** Relations to return */
+      populate?: string | string[] | object;
+      /** Filters to apply */
+      filters?: Record<string, any>;
+      /** Locale to apply */
+      locale?: string;
+    };
+    export type RequestBody = never;
+    export type RequestHeaders = {};
+    export type ResponseBody = GetEmailTemplatesData;
+  }
+
+  /**
+   * No description
+   * @tags Email-template
+   * @name PostEmailTemplates
+   * @request POST:/email-templates
+   * @secure
+   */
+  export namespace PostEmailTemplates {
+    export type RequestParams = {};
+    export type RequestQuery = {};
+    export type RequestBody = EmailTemplateRequest;
+    export type RequestHeaders = {};
+    export type ResponseBody = PostEmailTemplatesData;
+  }
+
+  /**
+   * No description
+   * @tags Email-template
+   * @name GetEmailTemplatesId
+   * @request GET:/email-templates/{id}
+   * @secure
+   */
+  export namespace GetEmailTemplatesId {
+    export type RequestParams = {
+      id: string;
+    };
+    export type RequestQuery = {};
+    export type RequestBody = never;
+    export type RequestHeaders = {};
+    export type ResponseBody = GetEmailTemplatesIdData;
+  }
+
+  /**
+   * No description
+   * @tags Email-template
+   * @name PutEmailTemplatesId
+   * @request PUT:/email-templates/{id}
+   * @secure
+   */
+  export namespace PutEmailTemplatesId {
+    export type RequestParams = {
+      id: string;
+    };
+    export type RequestQuery = {};
+    export type RequestBody = EmailTemplateRequest;
+    export type RequestHeaders = {};
+    export type ResponseBody = PutEmailTemplatesIdData;
+  }
+
+  /**
+   * No description
+   * @tags Email-template
+   * @name DeleteEmailTemplatesId
+   * @request DELETE:/email-templates/{id}
+   * @secure
+   */
+  export namespace DeleteEmailTemplatesId {
+    export type RequestParams = {
+      id: string;
+    };
+    export type RequestQuery = {};
+    export type RequestBody = never;
+    export type RequestHeaders = {};
+    export type ResponseBody = DeleteEmailTemplatesIdData;
   }
 }
 
@@ -4115,6 +4436,113 @@ export class Api<
     ) =>
       this.request<DeleteChangeLogsIdData, Error>({
         path: `/change-logs/${id}`,
+        method: "DELETE",
+        secure: true,
+        format: "json",
+        ...params,
+      }),
+  };
+  emailTemplate = {
+    /**
+     * No description
+     *
+     * @tags Email-template
+     * @name GetEmailTemplates
+     * @request GET:/email-templates
+     * @secure
+     */
+    getEmailTemplates: (
+      query: GetEmailTemplatesParams,
+      params: RequestParams = {},
+    ) =>
+      this.request<GetEmailTemplatesData, Error>({
+        path: `/email-templates`,
+        method: "GET",
+        query: query,
+        secure: true,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Email-template
+     * @name PostEmailTemplates
+     * @request POST:/email-templates
+     * @secure
+     */
+    postEmailTemplates: (
+      data: EmailTemplateRequest,
+      params: RequestParams = {},
+    ) =>
+      this.request<PostEmailTemplatesData, Error>({
+        path: `/email-templates`,
+        method: "POST",
+        body: data,
+        secure: true,
+        type: ContentType.Json,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Email-template
+     * @name GetEmailTemplatesId
+     * @request GET:/email-templates/{id}
+     * @secure
+     */
+    getEmailTemplatesId: (
+      { id, ...query }: GetEmailTemplatesIdParams,
+      params: RequestParams = {},
+    ) =>
+      this.request<GetEmailTemplatesIdData, Error>({
+        path: `/email-templates/${id}`,
+        method: "GET",
+        secure: true,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Email-template
+     * @name PutEmailTemplatesId
+     * @request PUT:/email-templates/{id}
+     * @secure
+     */
+    putEmailTemplatesId: (
+      { id, ...query }: PutEmailTemplatesIdParams,
+      data: EmailTemplateRequest,
+      params: RequestParams = {},
+    ) =>
+      this.request<PutEmailTemplatesIdData, Error>({
+        path: `/email-templates/${id}`,
+        method: "PUT",
+        body: data,
+        secure: true,
+        type: ContentType.Json,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Email-template
+     * @name DeleteEmailTemplatesId
+     * @request DELETE:/email-templates/{id}
+     * @secure
+     */
+    deleteEmailTemplatesId: (
+      { id, ...query }: DeleteEmailTemplatesIdParams,
+      params: RequestParams = {},
+    ) =>
+      this.request<DeleteEmailTemplatesIdData, Error>({
+        path: `/email-templates/${id}`,
         method: "DELETE",
         secure: true,
         format: "json",

@@ -35,6 +35,7 @@ import { generateAvatarUrl } from "@/app/lib/avatar-url";
 import { Role } from "@/app/providers/ability-provider";
 
 import { getProfileUrl } from "@/app/components/open-social";
+import { safeRelativeTime } from "@/app/lib/safe-relative-time";
 import Image from "next/image";
 import { ImageVideoPreview } from "../../components/image-video-preview";
 import { fetchLiveRecordings } from "../actions/fetch-live-recordings";
@@ -211,7 +212,7 @@ export default function LiveInfinity({ scope }: Props) {
                   </Anchor>
                   <Text size="xs" suppressHydrationWarning>
                     {tc("recordings.liveAgo", {
-                      time: format.relativeTime(new Date(rec.updatedAt || ""), {
+                      time: safeRelativeTime(format, rec.updatedAt, {
                         now,
                       }),
                     })}
