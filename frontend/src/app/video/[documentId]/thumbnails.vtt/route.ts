@@ -91,7 +91,7 @@ function buildVideoRanges(sources: Source[]) {
     ranges.push({
       start: cumTime,
       end: cumTime + dur,
-      path: "/media" + source.path || "",
+      path: "/media" + source.path,
       interval: source.thumbnailInterval || 10,
       cols: source.thumbnailCols || 10,
     });

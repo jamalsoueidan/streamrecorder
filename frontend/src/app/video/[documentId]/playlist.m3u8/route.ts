@@ -66,7 +66,15 @@ async function fetchFromS3(key: string): Promise<string | null> {
     });
     const response = await s3.send(command);
     return (await response.Body?.transformToString()) ?? null;
-  } catch {
+  } catch (error) {
+    console.error(
+      "Error fetching playlist from S3",
+      {
+        bucket: process.env.MEDIA_BUCKET,
+        key,
+      },
+      error,
+    );
     return null;
   }
 }
@@ -137,9 +145,6 @@ export function combinePlaylistsFromSources(
         continue;
       }
 
-      const baseUrl =
-        typeof window !== "undefined" ? window.location.origin : "";
-
       if (line.startsWith("#EXT-X-MAP")) {
         if (!isFirst) {
           combined += "#EXT-X-DISCONTINUITY\n";
@@ -148,15 +153,17 @@ export function combinePlaylistsFromSources(
         combined +=
           line.replace(
             /URI="([^"]+)"/,
-            `URI="${baseUrl}/media${source.path}$1"`,
+            `URI="${process.env.NEXT_PUBLIC_BASE_URL}/media${source.path}$1"`,
           ) + "\n";
         continue;
       }
 
       if (line.includes(".mp4")) {
         combined +=
-          line.replace(/(\S+\.mp4)/g, `${baseUrl}/media${source.path}$1`) +
-          "\n";
+          line.replace(
+            /(\S+\.mp4)/g,
+            `${process.env.NEXT_PUBLIC_BASE_URL}/media${source.path}$1`,
+          ) + "\n";
       } else if (line.trim()) {
         combined += line + "\n";
       }
@@ -194,15 +201,13 @@ export function buildVideoRanges(sources: Source[]) {
     cols: number;
   }[] = [];
 
-  const baseUrl = typeof window !== "undefined" ? window.location.origin : "";
-
   let cumTime = 0;
   for (const source of [...sources].reverse()) {
     const dur = source.duration || 0;
     ranges.push({
       start: cumTime,
       end: cumTime + dur,
-      path: baseUrl + "/media" + source.path || "",
+      path: process.env.NEXT_PUBLIC_BASE_URL + "/media" + source.path || "",
       interval: source.thumbnailInterval || 10,
       cols: source.thumbnailCols || 10,
     });
