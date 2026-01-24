@@ -19,7 +19,6 @@ const defaultOptions = {
           $eq: ["done"],
         },
       },
-      populate: ["videoSmall", "videoOriginal"], // we ask for original because sometime small is null while encoding for mini-player
     },
     follower: {
       fields: ["username", "type"],
