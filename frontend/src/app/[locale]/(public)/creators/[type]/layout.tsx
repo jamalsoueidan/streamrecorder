@@ -83,6 +83,8 @@ export default async function Page({ params, children }: PageProps) {
               key={p.name}
               href={`/creators/${p.name.toLowerCase()}`}
               style={{
+                display: "flex",
+                justifyContent: "center",
                 border: p.name.toLowerCase() === type ? "1px solid" : "none",
                 borderRadius: "8px",
                 padding: "4px",

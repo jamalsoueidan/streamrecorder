@@ -41,7 +41,7 @@ export const getFollower = cache(async function getFollower({
   locale?: string;
 }) {
   const filters = {
-    username: decodeURIComponent(username).replace("@", ""),
+    username: username.replace(/^(%40|@)/, ""),
     type,
   };
 
@@ -97,7 +97,7 @@ export async function fetchProfileRecordings(type: string, username: string) {
     deepMerge(defaultOptions, {
       filters: {
         follower: {
-          username: { $eq: decodeURIComponent(username).replace("@", "") },
+          username: { $eq: username.replace(/^(%40|@)/, "") },
           type: { $eq: type },
         },
         sources: {

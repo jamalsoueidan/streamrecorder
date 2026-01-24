@@ -90,7 +90,9 @@ async function fetchPlaylistsFromS3(
   const playlists = await Promise.all(
     sources.map((source) =>
       source.path
-        ? fetchFromS3(`${source.path.substring(1)}${filename}`)
+        ? fetchFromS3(
+            `${decodeURIComponent(source.path.substring(1))}${filename}`,
+          )
         : Promise.resolve(null),
     ),
   );
@@ -100,7 +102,9 @@ async function fetchPlaylistsFromS3(
     const originalPlaylists = await Promise.all(
       sources.map((source) =>
         source.path
-          ? fetchFromS3(`${source.path.substring(1)}playlist.m3u8`)
+          ? fetchFromS3(
+              `${decodeURIComponent(source.path.substring(1))}playlist.m3u8`,
+            )
           : Promise.resolve(null),
       ),
     );

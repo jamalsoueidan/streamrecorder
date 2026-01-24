@@ -44,7 +44,7 @@ export async function GET(
 
   const command = new GetObjectCommand({
     Bucket: process.env.MEDIA_BUCKET!,
-    Key: `${path.substring(1)}screenshot.jpg`, // substring(1) just remove the start "/"
+    Key: decodeURIComponent(`${path.substring(1)}screenshot.jpg`),
   });
   const response = await s3.send(command);
 
