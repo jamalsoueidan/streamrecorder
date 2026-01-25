@@ -118,11 +118,6 @@ export default function AddFollowerForm() {
   // Handle follow success/error notifications
   useEffect(() => {
     if (state?.success) {
-      trackEvent("follow", {
-        platform: searchResult?.type,
-        username: state.username,
-      });
-
       notifications.show({
         title: t("actions.successTitle"),
         message: t("actions.successMessage", { username: state.username }),
@@ -142,6 +137,11 @@ export default function AddFollowerForm() {
 
   // Handle clicking on a user result
   const handleUserSelect = (user: UserSearchResult) => {
+    trackEvent("follow", {
+      platform: searchResult?.type,
+      username: searchResult?.username,
+    });
+
     spotlight.close();
     setQuery("");
     setSearchResult(null);

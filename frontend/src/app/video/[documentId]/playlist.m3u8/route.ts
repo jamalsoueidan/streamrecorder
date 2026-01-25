@@ -59,22 +59,34 @@ export async function GET(
 }
 
 async function fetchFromS3(key: string): Promise<string | null> {
+  const abortController = new AbortController();
+
   try {
     const command = new GetObjectCommand({
       Bucket: process.env.MEDIA_BUCKET!,
       Key: key,
     });
-    const response = await s3.send(command);
-    return (await response.Body?.transformToString()) ?? null;
+    const response = await s3.send(command, {
+      abortSignal: abortController.signal,
+    });
+
+    if (!response.Body) {
+      abortController.abort();
+      return null;
+    }
+
+    return await response.Body.transformToString();
   } catch (error) {
-    console.error(
-      "Error fetching playlist from S3",
-      {
-        bucket: process.env.MEDIA_BUCKET,
-        key,
-      },
-      error,
-    );
+    abortController.abort();
+
+    // Only log if not NoSuchKey (reduce noise)
+    if (
+      (error as any).Code !== "NoSuchKey" &&
+      (error as any).name !== "NoSuchKey"
+    ) {
+      console.error("Error fetching playlist from S3", { key }, error);
+    }
+
     return null;
   }
 }

@@ -17,15 +17,20 @@ export async function GET(
   const { path } = await params;
   const filePath = path.join("/");
 
-  /*const token = await getToken();
+  try {
+    /*const token = await getToken();
     const isLoggedIn = !!token;
     if (!isLoggedIn) {
       return new Response("Unauthorized", { status: 401 });
     }*/
-  const command = new GetObjectCommand({
-    Bucket: process.env.MEDIA_BUCKET!,
-    Key: filePath,
-  });
-  const signedUrl = await getSignedUrl(s3, command, { expiresIn: 1800 });
-  return Response.redirect(signedUrl);
+    const command = new GetObjectCommand({
+      Bucket: process.env.MEDIA_BUCKET!,
+      Key: filePath,
+    });
+    const signedUrl = await getSignedUrl(s3, command, { expiresIn: 1800 });
+    return Response.redirect(signedUrl);
+  } catch (error) {
+    console.error("Error generating signed URL:", error);
+    return new Response("Error", { status: 500 });
+  }
 }

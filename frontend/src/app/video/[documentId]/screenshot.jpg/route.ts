@@ -42,16 +42,31 @@ export async function GET(
     return new Response("Not found", { status: 404 });
   }
 
-  const command = new GetObjectCommand({
-    Bucket: process.env.MEDIA_BUCKET!,
-    Key: decodeURIComponent(`${path.substring(1)}screenshot.jpg`),
-  });
-  const response = await s3.send(command);
+  const abortController = new AbortController();
 
-  return new Response(response.Body as ReadableStream, {
-    headers: {
-      "Content-Type": response.ContentType || "application/octet-stream",
-      "Cache-Control": "public, max-age=31536000",
-    },
-  });
+  try {
+    const command = new GetObjectCommand({
+      Bucket: process.env.MEDIA_BUCKET!,
+      Key: decodeURIComponent(`${path.substring(1)}screenshot.jpg`),
+    });
+    const response = await s3.send(command, {
+      abortSignal: abortController.signal,
+    });
+
+    return new Response(response.Body as ReadableStream, {
+      headers: {
+        "Content-Type": response.ContentType || "application/octet-stream",
+        "Cache-Control": "public, max-age=31536000",
+      },
+    });
+  } catch (error: any) {
+    abortController.abort();
+
+    if (error.Code === "NoSuchKey" || error.name === "NoSuchKey") {
+      return new Response("Not found", { status: 404 });
+    }
+
+    console.error("Error fetching screenshot:", error);
+    return new Response("Error", { status: 500 });
+  }
 }
