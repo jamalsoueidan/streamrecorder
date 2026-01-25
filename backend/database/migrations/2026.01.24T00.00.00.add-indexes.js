@@ -1,4 +1,8 @@
 async function up(knex) {
+  if (knex.client.config.client === "sqlite") {
+    return;
+  }
+
   // followers table
   await knex.raw(
     `CREATE INDEX IF NOT EXISTS idx_followers_type ON followers(type)`,
@@ -59,6 +63,10 @@ async function up(knex) {
 }
 
 async function down(knex) {
+  if (knex.client.config.client === "sqlite") {
+    return;
+  }
+
   await knex.raw(`DROP INDEX IF EXISTS idx_followers_type`);
   await knex.raw(`DROP INDEX IF EXISTS idx_followers_country`);
   await knex.raw(`DROP INDEX IF EXISTS idx_followers_country_code`);
