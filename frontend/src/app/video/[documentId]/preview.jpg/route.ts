@@ -55,7 +55,8 @@ export async function GET(
 
     return new Response(response.Body as ReadableStream, {
       headers: {
-        "Content-Type": response.ContentType || "application/octet-stream",
+        "Content-Type": "image/jpeg",
+        "Content-Length": response.ContentLength?.toString() || "",
         "Cache-Control": "public, max-age=31536000",
       },
     });
