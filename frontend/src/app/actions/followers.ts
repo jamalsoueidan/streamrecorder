@@ -18,7 +18,6 @@ export async function follow(prevState: any, formData: FormData) {
     });
 
     revalidatePath("/following");
-    revalidatePath(`/${type}/${username}`);
 
     return { success: true, username, type };
   } catch (err: any) {

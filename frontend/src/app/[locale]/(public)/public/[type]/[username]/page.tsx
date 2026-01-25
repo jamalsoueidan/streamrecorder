@@ -130,58 +130,59 @@ export default async function Page({ params }: PageProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      {!hasRecordings ? (
-        <EmptyState />
-      ) : (
-        <Container size="lg">
-          <Stack gap="xl">
-            <Flex gap="md">
-              <Avatar
-                size="xl"
-                radius="xl"
-                styles={{
-                  root: {
-                    overflow: "hidden",
-                  },
-                }}
-              >
-                {follower.avatar?.url && (
-                  <Image
-                    src={generateAvatarUrl(follower.avatar?.url)}
-                    alt={follower.nickname || follower.username}
-                    width={72}
-                    height={72}
+
+      <Container size="lg">
+        <Stack gap="xl">
+          <Flex gap="md">
+            <Avatar
+              size="xl"
+              radius="xl"
+              styles={{
+                root: {
+                  overflow: "hidden",
+                },
+              }}
+            >
+              {follower.avatar?.url && (
+                <Image
+                  src={generateAvatarUrl(follower.avatar?.url)}
+                  alt={follower.nickname || follower.username}
+                  width={72}
+                  height={72}
+                />
+              )}
+            </Avatar>
+
+            <Stack gap="0">
+              <Group>
+                <Title>{follower.nickname}</Title>
+                <Tooltip label={follower.type}>
+                  <FollowerTypeIcon
+                    color="transparent"
+                    type={follower.type}
+                    size={30}
+                  />
+                </Tooltip>
+                {follower.country && (
+                  <CountryFlag
+                    country={follower.country}
+                    countryCode={follower.countryCode}
+                    size={30}
                   />
                 )}
-              </Avatar>
+              </Group>
+              <Text>
+                {follower.tagline ||
+                  t("defaultTagline", { nickname: follower.nickname || "" })}
+              </Text>
+            </Stack>
+          </Flex>
 
-              <Stack gap="0">
-                <Group>
-                  <Title>{follower.nickname}</Title>
-                  <Tooltip label={follower.type}>
-                    <FollowerTypeIcon
-                      color="transparent"
-                      type={follower.type}
-                      size={30}
-                    />
-                  </Tooltip>
-                  {follower.country && (
-                    <CountryFlag
-                      country={follower.country}
-                      countryCode={follower.countryCode}
-                      size={30}
-                    />
-                  )}
-                </Group>
-                <Text>
-                  {follower.tagline ||
-                    t("defaultTagline", { nickname: follower.nickname || "" })}
-                </Text>
-              </Stack>
-            </Flex>
-
-            <Stack gap="xl">
-              <Stack gap="md">
+          <Stack gap="xl">
+            <Stack gap="md">
+              {!hasRecordings ? (
+                <EmptyState />
+              ) : (
                 <SimpleGrid cols={{ base: 1, sm: 2 }} spacing="lg">
                   {recordings?.map((rec) => (
                     <Stack key={rec.documentId} gap={4}>
@@ -203,60 +204,60 @@ export default async function Page({ params }: PageProps) {
                     </Stack>
                   ))}
                 </SimpleGrid>
-              </Stack>
+              )}
             </Stack>
+          </Stack>
 
-            {follower.description ? (
-              <Stack gap="xl">
-                <div>
-                  <Title order={2}>
-                    {t("about", { nickname: follower.nickname || "" })}
-                  </Title>
-                  <Text c="dimmed" size="lg" mt="sm">
-                    {follower.description}
-                  </Text>
-                </div>
-              </Stack>
-            ) : null}
+          {follower.description ? (
+            <Stack gap="xl">
+              <div>
+                <Title order={2}>
+                  {t("about", { nickname: follower.nickname || "" })}
+                </Title>
+                <Text c="dimmed" size="lg" mt="sm">
+                  {follower.description}
+                </Text>
+              </div>
+            </Stack>
+          ) : null}
 
-            {follower.faq ? (
-              <>
-                <Title order={3}>{t("faq")}</Title>
-                {follower.faq.map((item: { q: string; a: string }) => (
-                  <Paper
-                    key={item.q}
-                    p="md"
-                    radius="lg"
+          {follower.faq ? (
+            <>
+              <Title order={3}>{t("faq")}</Title>
+              {follower.faq.map((item: { q: string; a: string }) => (
+                <Paper
+                  key={item.q}
+                  p="md"
+                  radius="lg"
+                  style={{
+                    background: "rgba(255, 255, 255, 0.02)",
+                    border: "1px solid rgba(255, 255, 255, 0.06)",
+                    cursor: "pointer",
+                  }}
+                >
+                  <Flex justify="space-between" align="center" gap="md">
+                    <Text fw={500} style={{ color: "#f1f5f9" }}>
+                      {item.q}
+                    </Text>
+                  </Flex>
+
+                  <Text
+                    mt="md"
                     style={{
-                      background: "rgba(255, 255, 255, 0.02)",
-                      border: "1px solid rgba(255, 255, 255, 0.06)",
-                      cursor: "pointer",
+                      color: "#94a3b8",
+                      lineHeight: 1.7,
+                      borderTop: "1px solid rgba(255, 255, 255, 0.06)",
+                      paddingTop: 12,
                     }}
                   >
-                    <Flex justify="space-between" align="center" gap="md">
-                      <Text fw={500} style={{ color: "#f1f5f9" }}>
-                        {item.q}
-                      </Text>
-                    </Flex>
-
-                    <Text
-                      mt="md"
-                      style={{
-                        color: "#94a3b8",
-                        lineHeight: 1.7,
-                        borderTop: "1px solid rgba(255, 255, 255, 0.06)",
-                        paddingTop: 12,
-                      }}
-                    >
-                      {item.a}
-                    </Text>
-                  </Paper>
-                ))}
-              </>
-            ) : null}
-          </Stack>
-        </Container>
-      )}
+                    {item.a}
+                  </Text>
+                </Paper>
+              ))}
+            </>
+          ) : null}
+        </Stack>
+      </Container>
     </>
   );
 }
