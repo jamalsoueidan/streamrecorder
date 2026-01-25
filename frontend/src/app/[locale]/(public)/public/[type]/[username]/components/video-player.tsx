@@ -36,13 +36,14 @@ export function VideoPlayer({ documentId, previewUrl }: VideoPlayerProps) {
         playsInline
         autoPlay
         muted
+        preload="metadata"
         poster={previewUrl}
       >
         <track
           default
           kind="metadata"
           label="thumbnails"
-          src={`/api/vtt/${documentId}`}
+          src={`/video/${documentId}/thumbnails.vtt`}
         />
       </HlsVideo>
 

@@ -73,7 +73,7 @@ export async function generateMetadata({
         ],
         videos: [
           {
-            url: `${generateProfileUrl(data.follower, true)}/video/${id}/playlist.m3u8`,
+            url: `${generateProfileUrl(data.follower, true)}/video/${id}`,
             width: 1280,
             height: 720,
             type: "text/html",
