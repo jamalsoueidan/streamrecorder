@@ -1,7 +1,7 @@
 async function up(knex) {
-  if (knex.client.config.client === "sqlite") {
-    return;
-  }
+  const hasTable = await knex.schema.hasTable("sources");
+
+  if (!hasTable) return;
 
   // followers table
   await knex.raw(
@@ -63,9 +63,9 @@ async function up(knex) {
 }
 
 async function down(knex) {
-  if (knex.client.config.client === "sqlite") {
-    return;
-  }
+  const hasTable = await knex.schema.hasTable("sources");
+
+  if (!hasTable) return;
 
   await knex.raw(`DROP INDEX IF EXISTS idx_followers_type`);
   await knex.raw(`DROP INDEX IF EXISTS idx_followers_country`);
