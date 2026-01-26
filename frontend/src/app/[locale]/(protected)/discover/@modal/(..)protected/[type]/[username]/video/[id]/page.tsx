@@ -25,7 +25,7 @@ export default function CreatorRecordingModal() {
 
   const { data, fetchNextPage, hasNextPage, isFetchingNextPage, isLoading } =
     useInfiniteQuery({
-      queryKey: ["creators", filters],
+      queryKey: ["creators", "discover", filters],
       queryFn: ({ pageParam }) => fetchFollowers(filters, pageParam),
       initialPageParam: 1,
       getNextPageParam: (lastPage) => {
@@ -45,7 +45,7 @@ export default function CreatorRecordingModal() {
           type: follower.type,
           avatar: follower.avatar,
         },
-      }))
+      })),
     );
   }, [data]);
 
@@ -60,7 +60,7 @@ export default function CreatorRecordingModal() {
       const url = search ? `${basePath}?${search}` : basePath;
       window.history.replaceState(null, "", url);
     },
-    [searchParams]
+    [searchParams],
   );
 
   const handleNotFound = () => {
