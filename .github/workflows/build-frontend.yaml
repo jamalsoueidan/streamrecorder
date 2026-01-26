@@ -47,6 +47,7 @@ jobs:
             NEXT_PUBLIC_BASE_URL=${{ secrets.NEXT_PUBLIC_BASE_URL }}
             STRAPI_URL=${{ secrets.STRAPI_URL }}
             SENTRY_AUTH_TOKEN=${{ secrets.SENTRY_AUTH_TOKEN }}
+            GITHUB_SHA=${{ github.sha }}
 
       - name: Trigger Coolify Deploy
         run: |

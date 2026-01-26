@@ -69,8 +69,10 @@ export default withSentryConfig(withNextIntl(nextConfig), {
 
   // For all available options, see:
   // https://docs.sentry.io/platforms/javascript/guides/nextjs/manual-setup/
-
   authToken: process.env.SENTRY_AUTH_TOKEN,
+  release: {
+    name: process.env.GITHUB_SHA || "dev",
+  },
 
   // Upload a larger set of source mapsauthToken: process.env.SENTRY_AUTH_TOKEN, for prettier stack traces (increases build time)
   widenClientFileUpload: true,
