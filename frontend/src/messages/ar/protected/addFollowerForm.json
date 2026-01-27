@@ -24,7 +24,16 @@
     "follow": "متابعة",
     "successTitle": "تمت المتابعة!",
     "successMessage": "أنت الآن تتابع {username}",
-    "errorTitle": "خطأ"
+    "errorTitle": "خطأ",
+    "cancel": "إلغاء"
   },
-  "inputLabel": "أدخل اسم أو الرابط"
+  "inputLabel": "أدخل اسم أو الرابط",
+  "notFollowing": {
+    "title": "أنت لا تتابع هذا الستريمر",
+    "description": "حاولت الوصول إلى ستريمر غير موجود في قائمة متابعاتك.",
+    "followToAccess": "تابعه لمشاهدة تسجيلاته والحصول على إشعارات عندما يبدأ البث المباشر.",
+    "notFoundTitle": "الستريمر غير موجود",
+    "notFoundDescription": "@{username} غير موجود على {platform} أو الحساب خاص.",
+    "trySearch": "جرب البحث عن ستريمر آخر:"
+  }
 }
