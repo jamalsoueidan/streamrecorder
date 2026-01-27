@@ -31,7 +31,7 @@ const defaultOptions = {
   },
 };
 
-export const getFollower = cache(async function getFollower({
+export const getFollower = cache(async function ({
   username,
   type,
   locale = "en",
@@ -92,7 +92,10 @@ export async function getRecordingById(id: string) {
   return response.data.data?.[0];
 }
 
-export async function fetchProfileRecordings(type: string, username: string) {
+export const fetchProfileRecordings = cache(async function (
+  type: string,
+  username: string,
+) {
   const response = await publicApi.recording.getRecordings(
     deepMerge(defaultOptions, {
       filters: {
@@ -114,4 +117,4 @@ export async function fetchProfileRecordings(type: string, username: string) {
     data: response.data?.data || [],
     meta: response.data?.meta,
   };
-}
+});

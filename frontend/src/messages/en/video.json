@@ -9,5 +9,6 @@
     "name": "{creatorName} Stream - {recordedDate}",
     "description": "Recorded live stream from {creatorName} on {recordedDate}"
   },
-  "backToProfile": "Back to {username} profile"
+  "backToProfile": "Back to {username} profile",
+  "otherRecordingsBy": "Other recordings by {username}"
 }
