@@ -13,8 +13,8 @@ import {
   MediaTimeRange,
   MediaVolumeRange,
 } from "@/app/[locale]/(protected)/components/video/media-chrome";
-import { isBot } from "@/app/pwa-updater";
 import { Box } from "@mantine/core";
+import { isbot } from "isbot";
 
 import "hls-video-element";
 import "media-chrome";
@@ -33,7 +33,7 @@ export function VideoPlayer({
 }: VideoPlayerProps) {
   return (
     <>
-      {isBot.test(userAgent) ? (
+      {isbot(userAgent) ? (
         <video
           poster={previewUrl}
           controls
