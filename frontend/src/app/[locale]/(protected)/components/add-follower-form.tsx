@@ -313,8 +313,6 @@ export default function AddFollowerForm() {
               leftSection={<IconClipboard size={14} />}
               onClick={async () => {
                 try {
-                  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-                  // @ts-ignore
                   const text = await navigator.clipboard.readText();
                   if (text?.trim()) {
                     setQuery(text);
