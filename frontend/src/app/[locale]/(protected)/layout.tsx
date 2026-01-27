@@ -32,7 +32,7 @@ export default async function DashboardLayout({
   });
 
   const rules = buildRulesFromStrapi(
-    (permissions.data?.role as any)?.permissions || {}
+    (permissions.data?.role as any)?.permissions || {},
   );
 
   return (

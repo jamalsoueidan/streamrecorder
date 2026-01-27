@@ -14,7 +14,7 @@ const defaultLocale = routing.defaultLocale;
 const handleI18nRouting = createIntlMiddleware(routing);
 
 const STATIC_EXT =
-  /\.(js|css|ico|png|jpg|jpeg|gif|svg|webp|webm|mp4|mp3|woff|woff2|m3u8|ttf|eot|otf|json|xml|txt|map|pdf|zip)$/i;
+  /\.(js|json|css|ico|png|jpg|jpeg|gif|svg|webp|webm|mp4|mp3|woff|woff2|m3u8|ttf|eot|otf|json|xml|txt|map|pdf|zip)$/i;
 
 export function proxy(request: NextRequest) {
   const path = request.nextUrl.pathname;

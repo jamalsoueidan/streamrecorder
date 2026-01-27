@@ -17,12 +17,6 @@ export async function generateMetadata(): Promise<Metadata> {
     },
     description: t("description"),
     keywords: t("keywords").split(", "),
-    manifest: "/manifest.json",
-    appleWebApp: {
-      capable: true,
-      statusBarStyle: "black-translucent",
-      title: "Live Stream Recorder",
-    },
     openGraph: {
       title: t("ogTitle"),
       description: t("ogDescription"),
