@@ -313,9 +313,11 @@ export default function AddFollowerForm() {
               leftSection={<IconClipboard size={14} />}
               onClick={async () => {
                 try {
-                  const text = await navigator.clipboard.readText();
-                  if (text?.trim()) {
-                    setQuery(text);
+                  if ("clipboard" in navigator && navigator.clipboard) {
+                    const text = await navigator.clipboard.readText();
+                    if (text?.trim()) {
+                      setQuery(text);
+                    }
                   }
                 } catch {
                   notifications.show({
