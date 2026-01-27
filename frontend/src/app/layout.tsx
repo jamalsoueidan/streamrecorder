@@ -9,6 +9,7 @@ import {
 import "@mantine/core/styles.css";
 import { Notifications } from "@mantine/notifications";
 import "@mantine/notifications/styles.css";
+import { isbot } from "isbot";
 import type { Metadata, Viewport } from "next";
 import { headers } from "next/headers";
 import Script from "next/script";
@@ -44,6 +45,8 @@ export default async function RootLayout({
 }>) {
   const headersList = await headers();
   const locale = headersList.get("x-next-intl-locale") || "en";
+  const userAgent = headersList.get("user-agent") || "";
+
   const dir = locale === "ar" ? "rtl" : "ltr";
 
   return (
@@ -70,11 +73,13 @@ export default async function RootLayout({
           href={`${process.env.NEXT_PUBLIC_BASE_URL}`}
         />
         <ColorSchemeScript defaultColorScheme="dark" />
-        <Script
-          defer
-          src="/script.js"
-          data-website-id={process.env.NEXT_PUBLIC_UMAMI_ID}
-        />
+        {!isbot(userAgent) ? (
+          <Script
+            defer
+            src="/script.js"
+            data-website-id={process.env.NEXT_PUBLIC_UMAMI_ID}
+          />
+        ) : null}
         <link rel="apple-touch-icon" href="/icons/icon-192.png" />
       </head>
       <body>

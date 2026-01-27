@@ -7,7 +7,7 @@ import { AbilityProvider } from "@/app/providers/ability-provider";
 import { QueryProvider } from "@/app/providers/query-provider";
 import { UserProvider } from "@/app/providers/user-provider";
 import api from "@/lib/api";
-import { SerwistProvider } from "@serwist/turbopack/react";
+import { SerwistProvider } from "../../serwist";
 import { Shell } from "./components/shell";
 
 export default async function DashboardLayout({

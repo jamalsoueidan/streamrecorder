@@ -68,6 +68,7 @@ export async function RecordingsSimpleGrid({
                       ),
                     })}`}
                     fill
+                    unoptimized
                     sizes="(max-width: 640px) 100vw, 25vw"
                     style={{ objectFit: "cover" }}
                   />

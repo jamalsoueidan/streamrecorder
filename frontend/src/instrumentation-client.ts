@@ -6,6 +6,15 @@ import * as Sentry from "@sentry/nextjs";
 
 Sentry.init({
   dsn: "https://e5faa356a989f58ca3db2839f66cb790@o4510771670417408.ingest.de.sentry.io/4510771671531600",
+  beforeSend(event) {
+    if (
+      typeof navigator !== "undefined" &&
+      /bot|crawler|spider|googlebot/i.test(navigator.userAgent)
+    ) {
+      return null;
+    }
+    return event;
+  },
 
   // Define how likely traces are sampled. Adjust this value in production, or use tracesSampler for greater control.
   tracesSampleRate: 1,
