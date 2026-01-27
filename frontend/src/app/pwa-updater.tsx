@@ -2,11 +2,14 @@
 
 import { useEffect } from "react";
 
+export const isBot =
+  /googlebot|bingbot|yandex|baiduspider|facebookexternalhit|twitterbot|linkedinbot/i;
+
 export function PWAUpdater() {
   useEffect(() => {
     if (!("serviceWorker" in navigator)) return;
 
-    if (/bot|crawl|spider|googlebot/i.test(navigator.userAgent)) return;
+    if (isBot.test(navigator.userAgent)) return;
 
     navigator.serviceWorker
       .register("/sw.js")
