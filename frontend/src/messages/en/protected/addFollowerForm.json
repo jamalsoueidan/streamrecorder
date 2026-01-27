@@ -24,7 +24,16 @@
     "follow": "Follow",
     "successTitle": "Followed!",
     "successMessage": "You are now following {username}",
-    "errorTitle": "Error"
+    "errorTitle": "Error",
+    "cancel": "Cancel"
   },
-  "inputLabel": "Enter creators name or link"
+  "inputLabel": "Enter creators name or link",
+  "notFollowing": {
+    "title": "You're not following this creator",
+    "description": "You tried to access a creator that's not in your following list.",
+    "followToAccess": "Follow them to see their recordings and get notified when they go live.",
+    "notFoundTitle": "Creator not found",
+    "notFoundDescription": "@{username} doesn't exist on {platform} or the account is private.",
+    "trySearch": "Try searching for a different creator:"
+  }
 }
