@@ -7,6 +7,7 @@ import { AbilityProvider } from "@/app/providers/ability-provider";
 import { QueryProvider } from "@/app/providers/query-provider";
 import { UserProvider } from "@/app/providers/user-provider";
 import api from "@/lib/api";
+import { SerwistProvider } from "@serwist/turbopack/react";
 import { Shell } from "./components/shell";
 
 export default async function DashboardLayout({
@@ -36,12 +37,14 @@ export default async function DashboardLayout({
   );
 
   return (
-    <QueryProvider>
-      <UserProvider user={user?.data}>
-        <AbilityProvider rules={rules} role={role}>
-          <Shell>{children}</Shell>
-        </AbilityProvider>
-      </UserProvider>
-    </QueryProvider>
+    <SerwistProvider swUrl="/serwist/sw.js">
+      <QueryProvider>
+        <UserProvider user={user?.data}>
+          <AbilityProvider rules={rules} role={role}>
+            <Shell>{children}</Shell>
+          </AbilityProvider>
+        </UserProvider>
+      </QueryProvider>
+    </SerwistProvider>
   );
 }
