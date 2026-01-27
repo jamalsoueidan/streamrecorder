@@ -57,7 +57,7 @@ export default function AddFollowerForm() {
   const [isSearching, setIsSearching] = useState(false);
   const [searchError, setSearchError] = useState<string | null>(null);
 
-  const [state, formAction, pending] = useActionState(follow, null);
+  const [state, formAction] = useActionState(follow, null);
   const [isPending, startTransition] = useTransition();
 
   // The effective platform: use detected (from URL) if available, otherwise use selected
@@ -313,7 +313,9 @@ export default function AddFollowerForm() {
               leftSection={<IconClipboard size={14} />}
               onClick={async () => {
                 try {
-                  const text = await window.navigator.clipboard.readText();
+                  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                  // @ts-ignore
+                  const text = await navigator.clipboard.readText();
                   if (text?.trim()) {
                     setQuery(text);
                   }
