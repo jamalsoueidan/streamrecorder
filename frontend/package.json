@@ -41,6 +41,7 @@
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "react-markdown": "^10.1.0",
+    "react-use-pwa-install": "^1.0.3",
     "swagger-typescript-api": "^13.2.16"
   },
   "devDependencies": {
