@@ -14,7 +14,6 @@ import { headers } from "next/headers";
 import Script from "next/script";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
 import "./globals.css";
-import { PWAUpdater } from "./pwa-updater";
 
 const theme = createTheme({});
 
@@ -82,10 +81,7 @@ export default async function RootLayout({
         <DirectionProvider initialDirection={dir} detectDirection={false}>
           <MantineProvider theme={theme} defaultColorScheme="dark">
             <Notifications color="red" position="bottom-center" />
-            <NuqsAdapter>
-              {children}
-              <PWAUpdater />
-            </NuqsAdapter>
+            <NuqsAdapter>{children}</NuqsAdapter>
           </MantineProvider>
         </DirectionProvider>
       </body>
