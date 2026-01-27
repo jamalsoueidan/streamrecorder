@@ -2,38 +2,23 @@
 
 import { useChangeLanguage } from "@/app/hooks/use-change-language";
 import { useUser } from "@/app/providers/user-provider";
-import {
-  Group,
-  Menu,
-  Modal,
-  SegmentedControl,
-  Stack,
-  Text,
-} from "@mantine/core";
-import { useDisclosure } from "@mantine/hooks";
+import { Menu, SegmentedControl, Stack, Text } from "@mantine/core";
 import { spotlight } from "@mantine/spotlight";
 import {
   IconDotsVertical,
   IconDownload,
   IconLogout,
   IconPlayerPlayFilled,
-  IconShare,
-  IconSquarePlus,
   IconUser,
   IconUserPlus,
   IconWorldSearch,
 } from "@tabler/icons-react";
 import { useLocale, useTranslations } from "next-intl";
 import { usePathname, useRouter } from "next/navigation";
-import { useEffect, useState, useTransition } from "react";
+import { useTransition } from "react";
+import { usePWAInstall } from "react-use-pwa-install";
 import { navConfig } from "../../(public)/components/nav";
 import { navigation } from "./navbar";
-
-// Check if running in standalone mode (outside component)
-const getIsInstalled = () => {
-  if (typeof window === "undefined") return false;
-  return window.matchMedia("(display-mode: standalone)").matches;
-};
 
 export function MobileBar() {
   const [, startTransition] = useTransition();
@@ -44,50 +29,8 @@ export function MobileBar() {
   const locale = useLocale();
   const { switchLocale } = useChangeLanguage();
 
-  const [deferredPrompt, setDeferredPrompt] = useState<{
-    platforms: string[];
-    userChoice: Promise<{
-      outcome: "accepted" | "dismissed";
-      platform: string;
-    }>;
-    prompt(): Promise<void>;
-  } | null>(null);
-  const [isInstalled, setIsInstalled] = useState(getIsInstalled);
-  const [iosModalOpened, { open: openIosModal, close: closeIosModal }] =
-    useDisclosure(false);
-
-  useEffect(() => {
-    const handlePrompt = (e: Event) => {
-      e.preventDefault();
-      setDeferredPrompt(e as never);
-    };
-
-    const handleInstalled = () => {
-      setIsInstalled(true);
-      setDeferredPrompt(null);
-    };
-
-    window.addEventListener("beforeinstallprompt", handlePrompt);
-    window.addEventListener("appinstalled", handleInstalled);
-
-    return () => {
-      window.removeEventListener("beforeinstallprompt", handlePrompt);
-      window.removeEventListener("appinstalled", handleInstalled);
-    };
-  }, []);
-
-  const handleInstall = async () => {
-    if (!deferredPrompt) {
-      openIosModal();
-      return;
-    }
-
-    deferredPrompt.prompt();
-    const { outcome } = await deferredPrompt.userChoice;
-    if (outcome === "accepted") {
-      setDeferredPrompt(null);
-    }
-  };
+  // null = not supported OR already installed OR doesn't meet PWA criteria
+  const install = usePWAInstall();
 
   const iconProps = {
     style: { display: "block" },
@@ -155,119 +98,95 @@ export function MobileBar() {
     }) || [];
 
   return (
-    <>
-      <Modal
-        opened={iosModalOpened}
-        onClose={closeIosModal}
-        title={t("installModal.title")}
-      >
-        <Stack gap="md">
-          <Text>{t("installModal.description")}</Text>
-          <Group gap="xs">
-            <Text>1. {t("installModal.step1")}</Text>
-            <IconShare size={20} />
-            <Text>{t("installModal.shareButton")}</Text>
-          </Group>
-          <Group gap="xs">
-            <Text>2. {t("installModal.step2")}</Text>
-            <IconSquarePlus size={20} />
-            <Text>&quot;{t("installModal.addToHomeScreen")}&quot;</Text>
-          </Group>
-          <Text>3. {t("installModal.step3")}</Text>
-        </Stack>
-      </Modal>
+    <SegmentedControl
+      size="xl"
+      fullWidth
+      value={currentValue}
+      onChange={handleChange}
+      data={[
+        ...links,
+        {
+          value: "menu",
+          label: (
+            <Menu offset={15} position="top-start">
+              <Menu.Target>
+                <Stack gap={4} align="center">
+                  <IconDotsVertical
+                    {...iconProps}
+                    style={{ width: "18px", height: "18px" }}
+                  />
+                  <Text c="dimmed" size="xs">
+                    {t("actions.more")}
+                  </Text>
+                </Stack>
+              </Menu.Target>
 
-      <SegmentedControl
-        size="xl"
-        fullWidth
-        value={currentValue}
-        onChange={handleChange}
-        data={[
-          ...links,
-          {
-            value: "menu",
-            label: (
-              <Menu offset={15} position="top-start">
-                <Menu.Target>
-                  <Stack gap={4} align="center">
-                    <IconDotsVertical
-                      {...iconProps}
-                      style={{ width: "18px", height: "18px" }}
-                    />
-                    <Text c="dimmed" size="xs">
-                      {t("actions.more")}
-                    </Text>
-                  </Stack>
-                </Menu.Target>
+              <Menu.Dropdown>
+                <Menu.Label>
+                  <IconUser
+                    size={14}
+                    style={{ marginRight: 8, verticalAlign: "middle" }}
+                  />
+                  {user?.username || t("actions.guest")}
+                </Menu.Label>
 
-                <Menu.Dropdown>
-                  <Menu.Label>
-                    <IconUser
-                      size={14}
-                      style={{ marginRight: 8, verticalAlign: "middle" }}
-                    />
-                    {user?.username || t("actions.guest")}
-                  </Menu.Label>
+                <Menu.Divider />
 
-                  <Menu.Divider />
+                <Menu.Item
+                  leftSection={<IconUserPlus size={16} />}
+                  onClick={() => spotlight.open()}
+                >
+                  {t("actions.addCreator")}
+                </Menu.Item>
 
+                {/* Only show if install is available (not null) */}
+                {install && (
                   <Menu.Item
-                    leftSection={<IconUserPlus size={16} />}
-                    onClick={() => spotlight.open()}
+                    leftSection={<IconDownload size={16} />}
+                    onClick={install}
                   >
-                    {t("actions.addCreator")}
+                    {t("actions.installApp")}
                   </Menu.Item>
+                )}
 
-                  {!isInstalled && (
-                    <Menu.Item
-                      leftSection={<IconDownload size={16} />}
-                      onClick={handleInstall}
-                    >
-                      {t("actions.installApp")}
-                    </Menu.Item>
-                  )}
+                <Menu.Divider />
 
-                  <Menu.Divider />
+                <Menu.Sub openDelay={120} closeDelay={150}>
+                  <Menu.Sub.Target>
+                    <Menu.Sub.Item leftSection={<IconWorldSearch size={16} />}>
+                      {t("actions.language")} {locale.toUpperCase()}
+                    </Menu.Sub.Item>
+                  </Menu.Sub.Target>
 
-                  <Menu.Sub openDelay={120} closeDelay={150}>
-                    <Menu.Sub.Target>
-                      <Menu.Sub.Item
-                        leftSection={<IconWorldSearch size={16} />}
-                      >
-                        {t("actions.language")} {locale.toUpperCase()}
-                      </Menu.Sub.Item>
-                    </Menu.Sub.Target>
-
-                    <Menu.Sub.Dropdown>
-                      {navConfig.languages
-                        .filter((lang) => locale !== lang.code)
-                        .map((lang) => (
-                          <Menu.Item
-                            key={lang.code}
-                            onClick={() => switchLocale(lang.code)}
-                          >
-                            {lang.label}
-                          </Menu.Item>
-                        ))}
-                    </Menu.Sub.Dropdown>
-                  </Menu.Sub>
-                  <Menu.Divider />
-                  <Menu.Item
-                    color="red"
-                    leftSection={<IconLogout size={16} />}
-                    onClick={async () => {
-                      await fetch("/api/logout", { method: "POST" });
-                      window.location.href = "/";
-                    }}
-                  >
-                    {t("actions.logout")}
-                  </Menu.Item>
-                </Menu.Dropdown>
-              </Menu>
-            ),
-          },
-        ]}
-      />
-    </>
+                  <Menu.Sub.Dropdown>
+                    {navConfig.languages
+                      .filter((lang) => locale !== lang.code)
+                      .map((lang) => (
+                        <Menu.Item
+                          key={lang.code}
+                          onClick={() => switchLocale(lang.code)}
+                        >
+                          {lang.label}
+                        </Menu.Item>
+                      ))}
+                  </Menu.Sub.Dropdown>
+                </Menu.Sub>
+                <Menu.Divider />
+                <Menu.Item
+                  color="red"
+                  leftSection={<IconLogout size={16} />}
+                  onClick={async () => {
+                    await fetch("/api/logout", { method: "POST" });
+                    window.location.href = "/";
+                  }}
+                >
+                  {t("actions.logout")}
+                </Menu.Item>
+              </Menu.Dropdown>
+            </Menu>
+          ),
+        },
+      ]}
+    />
   );
 }
