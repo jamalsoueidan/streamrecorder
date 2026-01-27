@@ -15,6 +15,7 @@ declare const self: ServiceWorkerGlobalScope;
 const serwist = new Serwist({
   skipWaiting: true,
   clientsClaim: true,
+  disableDevLogs: true,
 });
 
 serwist.addEventListeners();
