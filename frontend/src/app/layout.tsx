@@ -9,7 +9,7 @@ import {
 import "@mantine/core/styles.css";
 import { Notifications } from "@mantine/notifications";
 import "@mantine/notifications/styles.css";
-import type { Viewport } from "next";
+import type { Metadata, Viewport } from "next";
 import { headers } from "next/headers";
 import Script from "next/script";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
@@ -17,6 +17,17 @@ import "./globals.css";
 import { PWAUpdater } from "./pwa-updater";
 
 const theme = createTheme({});
+
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    manifest: "/manifest.json",
+    appleWebApp: {
+      capable: true,
+      statusBarStyle: "black-translucent",
+      title: "Live Stream Recorder",
+    },
+  };
+}
 
 export const viewport: Viewport = {
   width: "device-width",

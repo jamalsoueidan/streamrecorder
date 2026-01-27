@@ -24,6 +24,7 @@
     "@mantine/spotlight": "^8.3.10",
     "@next/env": "^16.1.1",
     "@sentry/nextjs": "10",
+    "@serwist/next": "^9.5.0",
     "@tabler/icons-react": "^3.36.0",
     "@tanstack/react-query": "^5.90.16",
     "@use-gesture/react": "^10.3.1",
@@ -42,6 +43,7 @@
     "react-dom": "19.2.3",
     "react-markdown": "^10.1.0",
     "react-use-pwa-install": "^1.0.3",
+    "serwist": "^9.5.0",
     "swagger-typescript-api": "^13.2.16"
   },
   "devDependencies": {

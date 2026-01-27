@@ -15,7 +15,7 @@ import {
 } from "@tabler/icons-react";
 import { useLocale, useTranslations } from "next-intl";
 import { usePathname, useRouter } from "next/navigation";
-import { useTransition } from "react";
+import { useEffect, useTransition } from "react";
 import { usePWAInstall } from "react-use-pwa-install";
 import { navConfig } from "../../(public)/components/nav";
 import { navigation } from "./navbar";
@@ -31,6 +31,19 @@ export function MobileBar() {
 
   // null = not supported OR already installed OR doesn't meet PWA criteria
   const install = usePWAInstall();
+
+  useEffect(() => {
+    console.log("🔍 install value:", install);
+    console.log(
+      "🔍 standalone mode:",
+      window.matchMedia("(display-mode: standalone)").matches,
+    );
+
+    // Listen for the event manually to debug
+    window.addEventListener("beforeinstallprompt", (e) => {
+      console.log("✅ beforeinstallprompt FIRED!", e);
+    });
+  }, [install]);
 
   const iconProps = {
     style: { display: "block" },
