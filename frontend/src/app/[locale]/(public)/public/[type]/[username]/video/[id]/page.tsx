@@ -38,7 +38,7 @@ export async function generateMetadata({
 
   const platformName = type.charAt(0).toUpperCase() + type.slice(1);
   const creatorName =
-    data.follower?.nickname || data.follower?.username || username;
+    data.follower?.username|| data.follower?.nickname || "unknown";
   const recordedDate = format.dateTime(new Date(data.createdAt || ""), {
     year: "numeric",
     month: "short",
@@ -133,7 +133,7 @@ export default async function VideoPage({ params }: PageProps) {
   );
 
   const creatorName =
-    data.follower?.nickname || data.follower?.username || "Unknown";
+    data.follower?.username|| data.follower?.nickname || "Unknown";
   const recordedDate = format.dateTime(new Date(data.createdAt || ""), {
     year: "numeric",
     month: "short",
