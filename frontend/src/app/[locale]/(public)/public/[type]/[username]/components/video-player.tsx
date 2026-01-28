@@ -20,15 +20,16 @@ import "hls-video-element";
 import "media-chrome";
 
 interface VideoPlayerProps {
-  documentId: string;
+  src: string;
   previewUrl: string;
-  startTime?: number;
+  thumbnailsUrl?: string;
   userAgent: string;
 }
 
 export function VideoPlayer({
-  documentId,
+  src,
   previewUrl,
+  thumbnailsUrl,
   userAgent,
 }: VideoPlayerProps) {
   return (
@@ -41,45 +42,59 @@ export function VideoPlayer({
           width="auto"
           height="500px"
         >
-          <source
-            src={`/video/${documentId}/playlist.m3u8`}
-            type="application/x-mpegURL"
-          />
+          <source src={src} type="application/x-mpegURL" />
         </video>
       ) : (
         <MediaController
           style={{ width: "100%", height: "clamp(250px, 50vh, 70vh)" }}
         >
-          <HlsVideo
-            src={`/video/${documentId}/playlist.m3u8`}
-            slot="media"
-            crossOrigin="anonymous"
-            playsInline
-            autoPlay
-            muted
-            preload="metadata"
-            poster={previewUrl}
-          >
-            <track
-              default
-              kind="metadata"
-              label="thumbnails"
-              src={`/video/${documentId}/thumbnails.vtt`}
+          {src.includes(".mp4") ? (
+            <video
+              src={src}
+              slot="media"
+              crossOrigin="anonymous"
+              playsInline
+              preload="metadata"
+              poster={previewUrl}
             />
-          </HlsVideo>
+          ) : (
+            <HlsVideo
+              src={src}
+              slot="media"
+              crossOrigin="anonymous"
+              playsInline
+              autoPlay
+              muted
+              preload="metadata"
+              poster={previewUrl}
+            >
+              {thumbnailsUrl ? (
+                <track
+                  default
+                  kind="metadata"
+                  label="thumbnails"
+                  src={thumbnailsUrl}
+                />
+              ) : null}
+            </HlsVideo>
+          )}
 
           {previewUrl && <MediaPosterImage slot="poster" src={previewUrl} />}
 
-          <MediaLoadingIndicator
-            slot="centered-chrome"
-            loadingdelay="0"
-            style={{ "--media-loading-indicator-transition-delay": "0ms" }}
-          />
+          {src.includes(".mp4") ? (
+            <MediaPlayButton slot="centered-chrome" />
+          ) : (
+            <MediaLoadingIndicator
+              slot="centered-chrome"
+              loadingdelay="0"
+              style={{ "--media-loading-indicator-transition-delay": "0ms" }}
+            />
+          )}
 
           <MediaControlBar>
-            <MediaPlayButton />
+            {src.includes(".m3u8") ? <MediaPlayButton /> : null}
             <MediaTimeRange />
-            <MediaTimeDisplay showduration />
+            {src.includes(".m3u8") ? <MediaTimeDisplay showduration /> : null}
             <Box className="volume-hover-container">
               <MediaVolumeRange />
               <MediaMuteButton />
