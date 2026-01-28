@@ -176,6 +176,12 @@
         }
       },
       "default": 0
+    },
+    "clips": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::clip.clip",
+      "mappedBy": "follower"
     }
   }
 }
