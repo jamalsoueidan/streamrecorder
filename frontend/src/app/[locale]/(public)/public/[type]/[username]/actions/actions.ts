@@ -86,7 +86,7 @@ export async function getRecordingById(id: string) {
   });
 
   if (!response.data.data?.[0]) {
-    throw new Error("Recording not found");
+    return null;
   }
 
   return response.data.data?.[0];
