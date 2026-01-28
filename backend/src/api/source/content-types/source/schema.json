@@ -14,11 +14,7 @@
     "state": {
       "type": "enumeration",
       "required": true,
-      "enum": [
-        "recording",
-        "done",
-        "failed"
-      ]
+      "enum": ["recording", "done", "failed"]
     },
     "executionId": {
       "type": "integer"

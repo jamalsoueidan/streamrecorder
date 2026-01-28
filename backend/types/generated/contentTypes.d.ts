@@ -518,6 +518,93 @@ export interface ApiChangeLogChangeLog extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiClipClip extends Struct.CollectionTypeSchema {
+  collectionName: 'clips';
+  info: {
+    displayName: 'Clip';
+    pluralName: 'clips';
+    singularName: 'clip';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    duration: Schema.Attribute.Integer &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    end: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    follower: Schema.Attribute.Relation<'manyToOne', 'api::follower.follower'>;
+    hook_text: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::clip.clip'>;
+    publishedAt: Schema.Attribute.DateTime;
+    recording: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::recording.recording'
+    >;
+    start: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    tags: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    thumbnail_timestamp: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    title: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    viral_score: Schema.Attribute.Integer &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+  };
+}
+
 export interface ApiEmailTemplateEmailTemplate
   extends Struct.CollectionTypeSchema {
   collectionName: 'email_templates';
@@ -604,6 +691,7 @@ export interface ApiFollowerFollower extends Struct.CollectionTypeSchema {
           localized: false;
         };
       }>;
+    clips: Schema.Attribute.Relation<'oneToMany', 'api::clip.clip'>;
     country: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -763,9 +851,11 @@ export interface ApiRecordingRecording extends Struct.CollectionTypeSchema {
     draftAndPublish: false;
   };
   attributes: {
+    clips: Schema.Attribute.Relation<'oneToMany', 'api::clip.clip'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    description: Schema.Attribute.Text;
     follower: Schema.Attribute.Relation<'manyToOne', 'api::follower.follower'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -775,6 +865,7 @@ export interface ApiRecordingRecording extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
     sources: Schema.Attribute.Relation<'oneToMany', 'api::source.source'>;
+    title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1334,6 +1425,7 @@ declare module '@strapi/strapi' {
       'admin::user': AdminUser;
       'api::article.article': ApiArticleArticle;
       'api::change-log.change-log': ApiChangeLogChangeLog;
+      'api::clip.clip': ApiClipClip;
       'api::email-template.email-template': ApiEmailTemplateEmailTemplate;
       'api::follower.follower': ApiFollowerFollower;
       'api::message.message': ApiMessageMessage;

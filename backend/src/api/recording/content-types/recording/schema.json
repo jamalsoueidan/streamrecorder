@@ -11,6 +11,12 @@
   },
   "pluginOptions": {},
   "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
     "follower": {
       "type": "relation",
       "relation": "manyToOne",
@@ -20,6 +26,12 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::source.source"
+    },
+    "clips": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::clip.clip",
+      "mappedBy": "recording"
     }
   }
 }
