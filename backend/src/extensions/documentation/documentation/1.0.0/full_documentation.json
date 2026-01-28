@@ -20,7 +20,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2026-01-28T14:40:03.717Z"
+    "x-generation-date": "2026-01-28T19:15:09.566Z"
   },
   "servers": [
     {
@@ -7167,12 +7167,6 @@
           "data": {
             "type": "object",
             "properties": {
-              "start": {
-                "type": "string"
-              },
-              "end": {
-                "type": "string"
-              },
               "title": {
                 "type": "string"
               },
@@ -7193,6 +7187,15 @@
               },
               "duration": {
                 "type": "integer"
+              },
+              "end": {
+                "type": "string"
+              },
+              "start": {
+                "type": "string"
+              },
+              "path": {
+                "type": "string"
               },
               "recording": {
                 "oneOf": [
@@ -7281,12 +7284,6 @@
           "documentId": {
             "type": "string"
           },
-          "start": {
-            "type": "string"
-          },
-          "end": {
-            "type": "string"
-          },
           "title": {
             "type": "string"
           },
@@ -7307,6 +7304,15 @@
           },
           "duration": {
             "type": "integer"
+          },
+          "end": {
+            "type": "string"
+          },
+          "start": {
+            "type": "string"
+          },
+          "path": {
+            "type": "string"
           },
           "recording": {
             "type": "object",
@@ -8001,12 +8007,6 @@
                         "documentId": {
                           "type": "string"
                         },
-                        "start": {
-                          "type": "string"
-                        },
-                        "end": {
-                          "type": "string"
-                        },
                         "title": {
                           "type": "string"
                         },
@@ -8027,6 +8027,15 @@
                         },
                         "duration": {
                           "type": "integer"
+                        },
+                        "end": {
+                          "type": "string"
+                        },
+                        "start": {
+                          "type": "string"
+                        },
+                        "path": {
+                          "type": "string"
                         },
                         "recording": {
                           "type": "object",
@@ -9730,12 +9739,6 @@
                 "documentId": {
                   "type": "string"
                 },
-                "start": {
-                  "type": "string"
-                },
-                "end": {
-                  "type": "string"
-                },
                 "title": {
                   "type": "string"
                 },
@@ -9756,6 +9759,15 @@
                 },
                 "duration": {
                   "type": "integer"
+                },
+                "end": {
+                  "type": "string"
+                },
+                "start": {
+                  "type": "string"
+                },
+                "path": {
+                  "type": "string"
                 },
                 "recording": {
                   "type": "object",
@@ -11313,12 +11325,6 @@
                           "documentId": {
                             "type": "string"
                           },
-                          "start": {
-                            "type": "string"
-                          },
-                          "end": {
-                            "type": "string"
-                          },
                           "title": {
                             "type": "string"
                           },
@@ -11339,6 +11345,15 @@
                           },
                           "duration": {
                             "type": "integer"
+                          },
+                          "end": {
+                            "type": "string"
+                          },
+                          "start": {
+                            "type": "string"
+                          },
+                          "path": {
+                            "type": "string"
                           },
                           "recording": {
                             "type": "object",
@@ -12654,12 +12669,6 @@
                     "documentId": {
                       "type": "string"
                     },
-                    "start": {
-                      "type": "string"
-                    },
-                    "end": {
-                      "type": "string"
-                    },
                     "title": {
                       "type": "string"
                     },
@@ -12680,6 +12689,15 @@
                     },
                     "duration": {
                       "type": "integer"
+                    },
+                    "end": {
+                      "type": "string"
+                    },
+                    "start": {
+                      "type": "string"
+                    },
+                    "path": {
+                      "type": "string"
                     },
                     "recording": {
                       "type": "object",
