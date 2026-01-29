@@ -1,6 +1,6 @@
 "use client";
 
-import { ImageVideoPreview } from "@/app/[locale]/(protected)/components/image-video-preview";
+import { ImageSpritePreview } from "@/app/[locale]/(protected)/components/image-sprite-preview";
 import {
   FollowerTypeEnum,
   SourceStateEnum,
@@ -87,7 +87,7 @@ export default function ProfileRecordings() {
 
           return (
             <Stack key={rec.documentId} gap={4}>
-              <ImageVideoPreview
+              <ImageSpritePreview
                 recording={rec}
                 username={params.username}
                 type={params.type}
