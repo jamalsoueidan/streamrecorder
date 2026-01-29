@@ -20,7 +20,7 @@ import {
 } from "@mantine/core";
 import Link from "next/link";
 
-import { ImageVideoPreview } from "@/app/[locale]/(protected)/components/image-video-preview";
+import { ImageSpritePreview } from "@/app/[locale]/(protected)/components/image-sprite-preview";
 import OpenSocial, { getProfileUrl } from "@/app/components/open-social";
 import { generateAvatarUrl } from "@/app/lib/avatar-url";
 import { safeRelativeTime } from "@/app/lib/safe-relative-time";
@@ -144,7 +144,7 @@ export default function FollowerItem({ follower }: Props) {
                     gap="4"
                     visibleFrom={getVisibleFrom(index)}
                   >
-                    <ImageVideoPreview
+                    <ImageSpritePreview
                       recording={rec}
                       username={follower.username}
                       type={follower.type}

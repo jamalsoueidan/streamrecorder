@@ -9,7 +9,7 @@ import {
 import { Anchor, Badge, Box, Button, CopyButton } from "@mantine/core";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import { useRef, useState } from "react";
 
 import {
@@ -19,7 +19,7 @@ import {
 import Image from "next/image";
 import { useIsNew } from "../hooks/use-is-new";
 import { FollowerTypeIcon } from "./follower-type-icon";
-import { MiniPlayer } from "./video/mini-player";
+import { SpritePreview } from "./sprite-preview";
 import { formatDuration } from "./video/player-utils";
 
 interface Props {
@@ -28,7 +28,7 @@ interface Props {
   type: FollowerTypeEnum;
 }
 
-export function ImageVideoPreview({ recording, type, username }: Props) {
+export function ImageSpritePreview({ recording, type, username }: Props) {
   const { isNew } = useIsNew();
   const t = useTranslations("protected.common");
 
@@ -36,7 +36,6 @@ export function ImageVideoPreview({ recording, type, username }: Props) {
   const searchParams = useSearchParams();
   const [showVideo, setShowVideo] = useState(false);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
-  const router = useRouter();
 
   const sources = recording.sources;
   const totalDuration =
@@ -63,7 +62,7 @@ export function ImageVideoPreview({ recording, type, username }: Props) {
     if (!sources || sources.length === 0 || isRecording) return;
     timeoutRef.current = setTimeout(() => {
       setShowVideo(true);
-    }, 1500);
+    }, 500);
   };
 
   const handleMouseLeave = () => {
@@ -72,10 +71,6 @@ export function ImageVideoPreview({ recording, type, username }: Props) {
       timeoutRef.current = null;
     }
     setShowVideo(false);
-  };
-
-  const handleTimeClick = (currentTime: number) => {
-    router.push(getHref(currentTime));
   };
 
   return (
@@ -114,12 +109,17 @@ export function ImageVideoPreview({ recording, type, username }: Props) {
             borderRadius: "var(--mantine-radius-md)",
             objectFit: "cover",
             objectPosition: "center center",
-            display: showVideo ? "none" : "block",
             ...(isRecording && {
               border: "2px solid red",
             }),
           }}
         />
+        {showVideo && !isRecording && sources && sources.length > 0 && (
+          <SpritePreview
+            baseUrl={`/video/${recording.documentId}/thumbnails.jpg`}
+            sources={sources}
+          />
+        )}
       </Anchor>
 
       {isRecording && (
@@ -168,13 +168,6 @@ export function ImageVideoPreview({ recording, type, username }: Props) {
         </Badge>
       ) : null}
 
-      {showVideo && !isRecording && recording.documentId ? (
-        <MiniPlayer
-          documentId={recording.documentId}
-          onTimeClick={handleTimeClick}
-        />
-      ) : null}
-
       <FollowerTypeIcon
         type={type}
         color="black"
@@ -215,7 +208,7 @@ export function ImageVideoPreview({ recording, type, username }: Props) {
         </CopyButton>
       ) : null}
 
-      {totalDuration > 0 && !showVideo && !isRecording && (
+      {totalDuration > 0 && !isRecording && (
         <div
           style={{
             position: "absolute",

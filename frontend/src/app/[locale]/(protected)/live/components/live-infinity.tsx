@@ -37,7 +37,7 @@ import { Role } from "@/app/providers/ability-provider";
 import { getProfileUrl } from "@/app/components/open-social";
 import { safeRelativeTime } from "@/app/lib/safe-relative-time";
 import Image from "next/image";
-import { ImageVideoPreview } from "../../components/image-video-preview";
+import { ImageSpritePreview } from "../../components/image-sprite-preview";
 import { fetchLiveRecordings } from "../actions/fetch-live-recordings";
 
 interface Props {
@@ -178,7 +178,7 @@ export default function LiveInfinity({ scope }: Props) {
           <Grid gutter="xs" key={rec.documentId} w="100%">
             {rec.follower && (
               <Grid.Col span={12}>
-                <ImageVideoPreview
+                <ImageSpritePreview
                   key={rec.documentId}
                   username={rec.follower?.username || "unknown"}
                   type={rec.follower?.type || FollowerTypeEnum.Tiktok}
