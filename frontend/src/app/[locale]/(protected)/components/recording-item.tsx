@@ -8,7 +8,7 @@ import { useFormatter, useNow, useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 import { getProfileUrl } from "../../../components/open-social";
-import { ImageVideoPreview } from "./image-video-preview";
+import { ImageSpritePreview } from "./image-sprite-preview";
 
 interface Props {
   recording: Recording;
@@ -23,7 +23,7 @@ export default function RecordingItem({ recording }: Props) {
     <Grid gutter="xs" key={recording.documentId} w="100%">
       {recording.follower && (
         <Grid.Col span={12}>
-          <ImageVideoPreview
+          <ImageSpritePreview
             username={recording.follower?.username || "unknown"}
             type={recording.follower?.type || FollowerTypeEnum.Tiktok}
             recording={recording}
