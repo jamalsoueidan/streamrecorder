@@ -19,10 +19,6 @@ export async function GET(
   { params }: { params: Promise<{ documentId: string }> },
 ) {
   const { documentId } = await params;
-  const quality =
-    request.nextUrl.searchParams.get("quality") === "small"
-      ? "small"
-      : "original";
 
   const response = await publicApi.recording.getRecordingsId({
     id: documentId.replace(/\.m3u8$/, ""),
@@ -46,7 +42,7 @@ export async function GET(
   const sources = recording.sources || [];
 
   // Fetch all playlists from S3
-  const sourcesWithPlaylists = await fetchPlaylistsFromS3(sources, quality);
+  const sourcesWithPlaylists = await fetchPlaylistsFromS3(sources, "original");
 
   const playlist = combinePlaylistsFromSources(sourcesWithPlaylists);
 
@@ -95,8 +91,7 @@ async function fetchPlaylistsFromS3(
   sources: Source[],
   quality: "original" | "small",
 ): Promise<SourceWithPlaylist[]> {
-  const filename =
-    quality === "original" ? "playlist.m3u8" : "playlist_small.m3u8";
+  const filename = "playlist.m3u8";
 
   // Fetch all playlists in parallel
   const playlists = await Promise.all(
@@ -108,23 +103,6 @@ async function fetchPlaylistsFromS3(
         : Promise.resolve(null),
     ),
   );
-
-  // If requesting small and ANY failed, fallback to original for ALL
-  if (quality === "small" && playlists.some((p) => p === null)) {
-    const originalPlaylists = await Promise.all(
-      sources.map((source) =>
-        source.path
-          ? fetchFromS3(
-              `${decodeURIComponent(source.path.substring(1))}playlist.m3u8`,
-            )
-          : Promise.resolve(null),
-      ),
-    );
-    return sources.map((source, i) => ({
-      ...source,
-      playlist: originalPlaylists[i],
-    }));
-  }
 
   return sources.map((source, i) => ({
     ...source,
