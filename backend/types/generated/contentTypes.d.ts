@@ -903,6 +903,10 @@ export interface ApiSourceSource extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     path: Schema.Attribute.String & Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
+    recording: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::recording.recording'
+    >;
     state: Schema.Attribute.Enumeration<['recording', 'done', 'failed']> &
       Schema.Attribute.Required;
     thumbnailCols: Schema.Attribute.Integer;

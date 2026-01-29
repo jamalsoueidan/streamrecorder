@@ -105,11 +105,11 @@ export default factories.createCoreController(
             .from("recordings_follower_lnk as rf")
             .innerJoin("recordings as r", "rf.recording_id", "r.id")
             .innerJoin(
-              "recordings_sources_lnk as rs",
-              "rs.recording_id",
+              "sources_recording_lnk as srl",
+              "srl.recording_id",
               "r.id",
             )
-            .innerJoin("sources as s", "rs.source_id", "s.id")
+            .innerJoin("sources as s", "srl.source_id", "s.id")
             .whereRaw("rf.follower_id = f.id")
             .where("s.state", "!=", "failed");
         });
@@ -140,11 +140,11 @@ export default factories.createCoreController(
               "r.id",
             )
             .innerJoin(
-              "recordings_sources_lnk as rs",
-              "rs.recording_id",
+              "sources_recording_lnk as srl",
+              "srl.recording_id",
               "r.id",
             )
-            .innerJoin("sources as s", "rs.source_id", "s.id")
+            .innerJoin("sources as s", "srl.source_id", "s.id")
             .where("s.state", "!=", "failed")
             .groupBy("r.id", "r.created_at", "rf.follower_id")
             .as("vr"),

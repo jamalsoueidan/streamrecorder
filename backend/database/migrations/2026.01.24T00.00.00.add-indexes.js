@@ -44,12 +44,12 @@ async function up(knex) {
   await knex.raw(
     `CREATE INDEX IF NOT EXISTS idx_recordings_follower_lnk_recording ON recordings_follower_lnk(recording_id)`,
   );
-  await knex.raw(
+  /*await knex.raw(
     `CREATE INDEX IF NOT EXISTS idx_recordings_sources_lnk_recording ON recordings_sources_lnk(recording_id)`,
   );
   await knex.raw(
     `CREATE INDEX IF NOT EXISTS idx_recordings_sources_lnk_source ON recordings_sources_lnk(source_id)`,
-  );
+  );*/
 
   // files_related_mph (for avatar lookups)
   await knex.raw(
@@ -79,8 +79,8 @@ async function down(knex) {
   await knex.raw(`DROP INDEX IF EXISTS idx_followers_nickname_lower`);
   await knex.raw(`DROP INDEX IF EXISTS idx_recordings_follower_lnk_follower`);
   await knex.raw(`DROP INDEX IF EXISTS idx_recordings_follower_lnk_recording`);
-  await knex.raw(`DROP INDEX IF EXISTS idx_recordings_sources_lnk_recording`);
-  await knex.raw(`DROP INDEX IF EXISTS idx_recordings_sources_lnk_source`);
+  //await knex.raw(`DROP INDEX IF EXISTS idx_recordings_sources_lnk_recording`);
+  //await knex.raw(`DROP INDEX IF EXISTS idx_recordings_sources_lnk_source`);
   await knex.raw(`DROP INDEX IF EXISTS idx_files_related_mph_lookup`);
   await knex.raw(`DROP INDEX IF EXISTS idx_recordings_created_at`);
 }
