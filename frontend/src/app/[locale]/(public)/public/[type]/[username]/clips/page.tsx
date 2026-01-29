@@ -31,6 +31,7 @@ import Image from "next/image";
 
 import PaginationControls from "@/app/components/pagination";
 import { Link } from "@/i18n/navigation";
+import { notFound } from "next/navigation";
 import { getFollower } from "../actions/actions";
 import { ImageClipPreview } from "../components/image-clip-preview";
 
@@ -111,6 +112,10 @@ export default async function Page({ params, searchParams }: PageProps) {
   const locale = await getLocale();
   const follower = await getFollower({ username, type, locale });
 
+  if (!follower) {
+    return notFound();
+  }
+
   const {
     data: { data: clips, meta },
   } = await publicApi.clip.getClips({
@@ -120,7 +125,7 @@ export default async function Page({ params, searchParams }: PageProps) {
       },
     },
     "pagination[pageSize]": 10,
-    "pagination[page]": parseInt(page || "1"),
+    "pagination[page]": parseInt(page || "1", 10),
   });
 
   const totalPages = meta?.pagination?.pageCount || 1;
