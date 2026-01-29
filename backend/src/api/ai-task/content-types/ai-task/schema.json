@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ai_tasks",
+  "info": {
+    "singularName": "ai-task",
+    "pluralName": "ai-tasks",
+    "displayName": "AiTask"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ai_request": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::ai-request.ai-request",
+      "inversedBy": "ai_tasks"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "merge",
+        "upload",
+        "clips",
+        "memes",
+        "profile"
+      ]
+    },
+    "state": {
+      "type": "enumeration",
+      "enum": [
+        "running",
+        "completed",
+        "failed"
+      ]
+    },
+    "output": {
+      "type": "json"
+    },
+    "executionId": {
+      "type": "integer"
+    }
+  }
+}

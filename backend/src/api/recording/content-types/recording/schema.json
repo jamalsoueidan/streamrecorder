@@ -33,6 +33,12 @@
       "relation": "oneToMany",
       "target": "api::clip.clip",
       "mappedBy": "recording"
+    },
+    "ai_requests": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::ai-request.ai-request",
+      "mappedBy": "recording"
     }
   }
 }

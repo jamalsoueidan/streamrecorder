@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ai_requests",
+  "info": {
+    "singularName": "ai-request",
+    "pluralName": "ai-requests",
+    "displayName": "AiRequest"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "recording": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::recording.recording",
+      "inversedBy": "ai_requests"
+    },
+    "generateClips": {
+      "type": "boolean",
+      "default": false
+    },
+    "generateMemes": {
+      "type": "boolean",
+      "default": false
+    },
+    "generateProfile": {
+      "type": "boolean",
+      "default": false
+    },
+    "state": {
+      "type": "enumeration",
+      "default": "pending",
+      "enum": [
+        "pending",
+        "processing",
+        "completed",
+        "failed"
+      ]
+    },
+    "ai_tasks": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::ai-task.ai-task",
+      "mappedBy": "ai_request"
+    }
+  }
+}
