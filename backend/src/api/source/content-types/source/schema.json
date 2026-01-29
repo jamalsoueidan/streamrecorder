@@ -45,6 +45,12 @@
       "type": "component",
       "component": "videos.video",
       "repeatable": false
+    },
+    "recording": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::recording.recording",
+      "inversedBy": "sources"
     }
   }
 }

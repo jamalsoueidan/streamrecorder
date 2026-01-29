@@ -25,7 +25,8 @@
     "sources": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::source.source"
+      "target": "api::source.source",
+      "mappedBy": "recording"
     },
     "clips": {
       "type": "relation",
