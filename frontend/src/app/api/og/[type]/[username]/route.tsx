@@ -15,7 +15,7 @@ const platformColors: Record<string, { from: string; to: string }> = {
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: Promise<{ type: string; username: string }> }
+  { params }: { params: Promise<{ type: string; username: string }> },
 ) {
   const { type, username } = await params;
 
@@ -26,185 +26,183 @@ export async function GET(
   const avatarUrl = follower?.avatar?.url;
 
   return new ImageResponse(
-    (
+    <div
+      style={{
+        width: "100%",
+        height: "100%",
+        display: "flex",
+        flexDirection: "column",
+        background: `linear-gradient(135deg, ${colors.from} 0%, ${colors.to} 100%)`,
+      }}
+    >
+      {/* Main content */}
       <div
         style={{
-          width: "100%",
-          height: "100%",
           display: "flex",
-          flexDirection: "column",
-          background: `linear-gradient(135deg, ${colors.from} 0%, ${colors.to} 100%)`,
+          flex: 1,
+          alignItems: "center",
+          justifyContent: "center",
+          padding: "60px",
+          gap: "60px",
         }}
       >
-        {/* Main content */}
+        {/* Avatar */}
         <div
           style={{
+            width: "280px",
+            height: "280px",
+            borderRadius: "140px",
+            background: "rgba(255,255,255,0.2)",
             display: "flex",
-            flex: 1,
             alignItems: "center",
             justifyContent: "center",
-            padding: "60px",
-            gap: "60px",
+            padding: "8px",
           }}
         >
-          {/* Avatar */}
-          <div
-            style={{
-              width: "280px",
-              height: "280px",
-              borderRadius: "140px",
-              background: "rgba(255,255,255,0.2)",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              padding: "8px",
-            }}
-          >
-            {avatarUrl ? (
-              <img
-                src={avatarUrl}
-                width={264}
-                height={264}
-                alt=""
-                style={{
-                  borderRadius: "132px",
-                  objectFit: "cover",
-                }}
-              />
-            ) : (
-              <div
-                style={{
-                  width: "264px",
-                  height: "264px",
-                  borderRadius: "132px",
-                  background: "rgba(255,255,255,0.3)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  fontSize: "120px",
-                  color: "white",
-                }}
-              >
-                {displayName[0]?.toUpperCase() || "?"}
-              </div>
-            )}
-          </div>
-
-          {/* Text */}
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              gap: "16px",
-              maxWidth: "600px",
-            }}
-          >
-            {/* Platform badge */}
-            <div
+          {avatarUrl ? (
+            <img
+              src={avatarUrl}
+              width={264}
+              height={264}
+              alt=""
               style={{
-                display: "flex",
-              }}
-            >
-              <div
-                style={{
-                  background: "rgba(0,0,0,0.3)",
-                  padding: "8px 16px",
-                  borderRadius: "20px",
-                  fontSize: "24px",
-                  color: "white",
-                  textTransform: "capitalize",
-                  display: "flex",
-                }}
-              >
-                {type}
-              </div>
-            </div>
-
-            {/* Name */}
-            <div
-              style={{
-                fontSize: "72px",
-                fontWeight: "bold",
-                color: "white",
-                lineHeight: 1.1,
-                display: "flex",
-              }}
-            >
-              {displayName}
-            </div>
-
-            {/* Username */}
-            <div
-              style={{
-                fontSize: "32px",
-                color: "rgba(255,255,255,0.8)",
-                display: "flex",
-              }}
-            >
-              @{username.replace("@", "")}
-            </div>
-
-            {/* Tagline */}
-            <div
-              style={{
-                fontSize: "24px",
-                color: "rgba(255,255,255,0.9)",
-                marginTop: "12px",
-                display: "flex",
-              }}
-            >
-              {follower.tagline ||
-                "Recording your live streams so you don't have to!"}
-            </div>
-          </div>
-        </div>
-
-        {/* Bottom bar */}
-        <div
-          style={{
-            height: "60px",
-            background: "rgba(0,0,0,0.4)",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-            padding: "0 40px",
-          }}
-        >
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: "12px",
-              color: "white",
-              fontSize: "24px",
-            }}
-          >
-            <div
-              style={{
-                width: "12px",
-                height: "12px",
-                borderRadius: "6px",
-                background: "#ef4444",
-                display: "flex",
+                borderRadius: "132px",
+                objectFit: "cover",
               }}
             />
-            <span>LiveStreamRecorder</span>
-          </div>
+          ) : (
+            <div
+              style={{
+                width: "264px",
+                height: "264px",
+                borderRadius: "132px",
+                background: "rgba(255,255,255,0.3)",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                fontSize: "120px",
+                color: "white",
+              }}
+            >
+              {displayName[0]?.toUpperCase() || "?"}
+            </div>
+          )}
+        </div>
+
+        {/* Text */}
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            gap: "16px",
+            maxWidth: "600px",
+          }}
+        >
+          {/* Platform badge */}
           <div
             style={{
-              color: "rgba(255,255,255,0.7)",
-              fontSize: "20px",
               display: "flex",
             }}
           >
-            Never miss a stream
+            <div
+              style={{
+                background: "rgba(0,0,0,0.3)",
+                padding: "8px 16px",
+                borderRadius: "20px",
+                fontSize: "24px",
+                color: "white",
+                textTransform: "capitalize",
+                display: "flex",
+              }}
+            >
+              {type}
+            </div>
+          </div>
+
+          {/* Name */}
+          <div
+            style={{
+              fontSize: "72px",
+              fontWeight: "bold",
+              color: "white",
+              lineHeight: 1.1,
+              display: "flex",
+            }}
+          >
+            {displayName}
+          </div>
+
+          {/* Username */}
+          <div
+            style={{
+              fontSize: "32px",
+              color: "rgba(255,255,255,0.8)",
+              display: "flex",
+            }}
+          >
+            @{username.replace("@", "")}
+          </div>
+
+          {/* Tagline */}
+          <div
+            style={{
+              fontSize: "24px",
+              color: "rgba(255,255,255,0.9)",
+              marginTop: "12px",
+              display: "flex",
+            }}
+          >
+            {follower?.tagline ||
+              "Recording your live streams so you don't have to!"}
           </div>
         </div>
       </div>
-    ),
+
+      {/* Bottom bar */}
+      <div
+        style={{
+          height: "60px",
+          background: "rgba(0,0,0,0.4)",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          padding: "0 40px",
+        }}
+      >
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "12px",
+            color: "white",
+            fontSize: "24px",
+          }}
+        >
+          <div
+            style={{
+              width: "12px",
+              height: "12px",
+              borderRadius: "6px",
+              background: "#ef4444",
+              display: "flex",
+            }}
+          />
+          <span>LiveStreamRecorder</span>
+        </div>
+        <div
+          style={{
+            color: "rgba(255,255,255,0.7)",
+            fontSize: "20px",
+            display: "flex",
+          }}
+        >
+          Never miss a stream
+        </div>
+      </div>
+    </div>,
     {
       width: 1200,
       height: 630,
-    }
+    },
   );
 }
