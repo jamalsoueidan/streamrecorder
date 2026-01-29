@@ -62,8 +62,8 @@ export default factories.createCoreController(
         )
         .leftJoin("recordings_follower_lnk as rfl", "rfl.follower_id", "f.id")
         .leftJoin("recordings as r", "r.id", "rfl.recording_id")
-        .leftJoin("recordings_sources_lnk as rsl", "rsl.recording_id", "r.id")
-        .leftJoin("sources as s", "s.id", "rsl.source_id")
+        .leftJoin("sources_recording_lnk as srl", "srl.recording_id", "r.id")
+        .leftJoin("sources as s", "s.id", "srl.source_id")
         .leftJoin("sources_cmps as sc", "sc.entity_id", "s.id")
         .leftJoin("components_videos_videos as cv", "cv.id", "sc.cmp_id")
         .whereIn("f.type", [
@@ -90,8 +90,8 @@ export default factories.createCoreController(
         )
         .leftJoin("recordings_follower_lnk as rfl", "rfl.follower_id", "f.id")
         .leftJoin("recordings as r", "r.id", "rfl.recording_id")
-        .leftJoin("recordings_sources_lnk as rsl", "rsl.recording_id", "r.id")
-        .leftJoin("sources as s", "s.id", "rsl.source_id")
+        .leftJoin("sources_recording_lnk as srl", "srl.recording_id", "r.id")
+        .leftJoin("sources as s", "s.id", "srl.source_id")
         .leftJoin("sources_cmps as sc", "sc.entity_id", "s.id")
         .leftJoin("components_videos_videos as cv", "cv.id", "sc.cmp_id")
         .first()) as any;
