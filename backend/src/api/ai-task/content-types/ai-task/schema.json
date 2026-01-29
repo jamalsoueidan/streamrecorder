@@ -19,21 +19,11 @@
     },
     "type": {
       "type": "enumeration",
-      "enum": [
-        "merge",
-        "upload",
-        "clips",
-        "memes",
-        "profile"
-      ]
+      "enum": ["merge", "upload", "clips", "memes", "profile"]
     },
     "state": {
       "type": "enumeration",
-      "enum": [
-        "running",
-        "completed",
-        "failed"
-      ]
+      "enum": ["pending", "processing", "completed", "failed"]
     },
     "output": {
       "type": "json"

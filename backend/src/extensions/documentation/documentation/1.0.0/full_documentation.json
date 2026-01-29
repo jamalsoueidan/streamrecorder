@@ -20,7 +20,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2026-01-29T21:21:30.935Z"
+    "x-generation-date": "2026-01-29T22:20:06.713Z"
   },
   "servers": [
     {
@@ -8438,7 +8438,8 @@
                           "state": {
                             "type": "string",
                             "enum": [
-                              "running",
+                              "pending",
+                              "processing",
                               "completed",
                               "failed"
                             ]
@@ -8756,7 +8757,8 @@
               "state": {
                 "type": "string",
                 "enum": [
-                  "running",
+                  "pending",
+                  "processing",
                   "completed",
                   "failed"
                 ]
@@ -9935,7 +9937,8 @@
                     "state": {
                       "type": "string",
                       "enum": [
-                        "running",
+                        "pending",
+                        "processing",
                         "completed",
                         "failed"
                       ]
@@ -10064,7 +10067,8 @@
           "state": {
             "type": "string",
             "enum": [
-              "running",
+              "pending",
+              "processing",
               "completed",
               "failed"
             ]
@@ -12270,7 +12274,8 @@
                           "state": {
                             "type": "string",
                             "enum": [
-                              "running",
+                              "pending",
+                              "processing",
                               "completed",
                               "failed"
                             ]
@@ -14337,7 +14342,8 @@
                                 "state": {
                                   "type": "string",
                                   "enum": [
-                                    "running",
+                                    "pending",
+                                    "processing",
                                     "completed",
                                     "failed"
                                   ]
@@ -15872,7 +15878,8 @@
                                           "state": {
                                             "type": "string",
                                             "enum": [
-                                              "running",
+                                              "pending",
+                                              "processing",
                                               "completed",
                                               "failed"
                                             ]
@@ -17433,7 +17440,8 @@
                                     "state": {
                                       "type": "string",
                                       "enum": [
-                                        "running",
+                                        "pending",
+                                        "processing",
                                         "completed",
                                         "failed"
                                       ]
@@ -19033,7 +19041,8 @@
                           "state": {
                             "type": "string",
                             "enum": [
-                              "running",
+                              "pending",
+                              "processing",
                               "completed",
                               "failed"
                             ]
