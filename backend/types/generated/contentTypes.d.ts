@@ -430,6 +430,83 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiAiRequestAiRequest extends Struct.CollectionTypeSchema {
+  collectionName: 'ai_requests';
+  info: {
+    displayName: 'AiRequest';
+    pluralName: 'ai-requests';
+    singularName: 'ai-request';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    ai_tasks: Schema.Attribute.Relation<'oneToMany', 'api::ai-task.ai-task'>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    generateClips: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    generateMemes: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    generateProfile: Schema.Attribute.Boolean &
+      Schema.Attribute.DefaultTo<false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::ai-request.ai-request'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    recording: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::recording.recording'
+    >;
+    state: Schema.Attribute.Enumeration<
+      ['pending', 'processing', 'completed', 'failed']
+    > &
+      Schema.Attribute.DefaultTo<'pending'>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiAiTaskAiTask extends Struct.CollectionTypeSchema {
+  collectionName: 'ai_tasks';
+  info: {
+    displayName: 'AiTask';
+    pluralName: 'ai-tasks';
+    singularName: 'ai-task';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    ai_request: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::ai-request.ai-request'
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    executionId: Schema.Attribute.Integer;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::ai-task.ai-task'
+    > &
+      Schema.Attribute.Private;
+    output: Schema.Attribute.JSON;
+    publishedAt: Schema.Attribute.DateTime;
+    state: Schema.Attribute.Enumeration<['running', 'completed', 'failed']>;
+    type: Schema.Attribute.Enumeration<
+      ['merge', 'upload', 'clips', 'memes', 'profile']
+    >;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
   collectionName: 'articles';
   info: {
@@ -857,6 +934,10 @@ export interface ApiRecordingRecording extends Struct.CollectionTypeSchema {
     draftAndPublish: false;
   };
   attributes: {
+    ai_requests: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::ai-request.ai-request'
+    >;
     clips: Schema.Attribute.Relation<'oneToMany', 'api::clip.clip'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -1433,6 +1514,8 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::ai-request.ai-request': ApiAiRequestAiRequest;
+      'api::ai-task.ai-task': ApiAiTaskAiTask;
       'api::article.article': ApiArticleArticle;
       'api::change-log.change-log': ApiChangeLogChangeLog;
       'api::clip.clip': ApiClipClip;
