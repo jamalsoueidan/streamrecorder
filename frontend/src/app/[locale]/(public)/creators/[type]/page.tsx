@@ -87,7 +87,7 @@ export default async function Page({ params, searchParams }: PageProps) {
   } = await publicApi.follower.getFollowers({
     ...(!platform.name ? {} : { filters: { type } }),
     "pagination[pageSize]": 20,
-    "pagination[page]": parseInt(page || "1"),
+    "pagination[page]": parseInt(page || "1", 10),
     sort: "createdAt:desc",
     populate: { avatar: true },
   });

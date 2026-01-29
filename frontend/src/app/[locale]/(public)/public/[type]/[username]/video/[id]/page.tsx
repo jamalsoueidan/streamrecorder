@@ -195,7 +195,8 @@ export default async function VideoPage({ params }: PageProps) {
         <Flex gap="xs" justify="center" align="center" direction="column">
           <VideoPlayer
             previewUrl={previewUrl}
-            documentId={id}
+            src={`/video/${data.documentId}/playlist.m3u8`}
+            thumbnailsUrl={`/video/${data.documentId}/thumbnails.vtt`}
             userAgent={userAgent}
           />
 

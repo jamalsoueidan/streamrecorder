@@ -367,6 +367,454 @@ export interface ChangeLogResponse {
   meta?: object;
 }
 
+export interface ClipRequest {
+  data: {
+    title?: string;
+    description?: string;
+    hook_text?: string;
+    tags?: string;
+    viral_score?: number;
+    thumbnail_timestamp?: string;
+    duration?: number;
+    end?: string;
+    start?: string;
+    path?: string;
+    /** @example "string or id" */
+    recording?: number | string;
+    /** @example "string or id" */
+    follower?: number | string;
+    locale?: string;
+    localizations?: (number | string)[];
+  };
+}
+
+export interface ClipListResponse {
+  data?: Clip[];
+  meta?: {
+    pagination?: {
+      page?: number;
+      /** @min 25 */
+      pageSize?: number;
+      /** @max 1 */
+      pageCount?: number;
+      total?: number;
+    };
+  };
+}
+
+export interface Clip {
+  id?: number;
+  documentId?: string;
+  title?: string;
+  description?: string;
+  hook_text?: string;
+  tags?: string;
+  viral_score?: number;
+  thumbnail_timestamp?: string;
+  duration?: number;
+  end?: string;
+  start?: string;
+  path?: string;
+  recording?: {
+    id?: number;
+    documentId?: string;
+    title?: string;
+    description?: string;
+    follower?: {
+      id?: number;
+      documentId?: string;
+      nickname?: string;
+      username?: string;
+      type?: ClipTypeEnum;
+      gender?: ClipGenderEnum;
+      country?: string;
+      countryCode?: string;
+      language?: string;
+      languageCode?: string;
+      avatar?: {
+        id?: number;
+        documentId?: string;
+        name?: string;
+        alternativeText?: string;
+        caption?: string;
+        width?: number;
+        height?: number;
+        formats?: any;
+        hash?: string;
+        ext?: string;
+        mime?: string;
+        /** @format float */
+        size?: number;
+        url?: string;
+        previewUrl?: string;
+        provider?: string;
+        provider_metadata?: any;
+        related?: {
+          id?: number;
+          documentId?: string;
+        }[];
+        folder?: {
+          id?: number;
+          documentId?: string;
+          name?: string;
+          pathId?: number;
+          parent?: {
+            id?: number;
+            documentId?: string;
+          };
+          children?: {
+            id?: number;
+            documentId?: string;
+          }[];
+          files?: {
+            id?: number;
+            documentId?: string;
+            name?: string;
+            alternativeText?: string;
+            caption?: string;
+            width?: number;
+            height?: number;
+            formats?: any;
+            hash?: string;
+            ext?: string;
+            mime?: string;
+            /** @format float */
+            size?: number;
+            url?: string;
+            previewUrl?: string;
+            provider?: string;
+            provider_metadata?: any;
+            related?: {
+              id?: number;
+              documentId?: string;
+            }[];
+            folder?: {
+              id?: number;
+              documentId?: string;
+            };
+            folderPath?: string;
+            /** @format date-time */
+            createdAt?: string;
+            /** @format date-time */
+            updatedAt?: string;
+            /** @format date-time */
+            publishedAt?: string;
+            createdBy?: {
+              id?: number;
+              documentId?: string;
+              firstname?: string;
+              lastname?: string;
+              username?: string;
+              /** @format email */
+              email?: string;
+              resetPasswordToken?: string;
+              registrationToken?: string;
+              isActive?: boolean;
+              roles?: {
+                id?: number;
+                documentId?: string;
+                name?: string;
+                code?: string;
+                description?: string;
+                users?: {
+                  id?: number;
+                  documentId?: string;
+                }[];
+                permissions?: {
+                  id?: number;
+                  documentId?: string;
+                  action?: string;
+                  actionParameters?: any;
+                  subject?: string;
+                  properties?: any;
+                  conditions?: any;
+                  role?: {
+                    id?: number;
+                    documentId?: string;
+                  };
+                  /** @format date-time */
+                  createdAt?: string;
+                  /** @format date-time */
+                  updatedAt?: string;
+                  /** @format date-time */
+                  publishedAt?: string;
+                  createdBy?: {
+                    id?: number;
+                    documentId?: string;
+                  };
+                  updatedBy?: {
+                    id?: number;
+                    documentId?: string;
+                  };
+                  locale?: string;
+                  localizations?: {
+                    id?: number;
+                    documentId?: string;
+                  }[];
+                }[];
+                /** @format date-time */
+                createdAt?: string;
+                /** @format date-time */
+                updatedAt?: string;
+                /** @format date-time */
+                publishedAt?: string;
+                createdBy?: {
+                  id?: number;
+                  documentId?: string;
+                };
+                updatedBy?: {
+                  id?: number;
+                  documentId?: string;
+                };
+                locale?: string;
+                localizations?: {
+                  id?: number;
+                  documentId?: string;
+                }[];
+              }[];
+              blocked?: boolean;
+              preferedLanguage?: string;
+              /** @format date-time */
+              createdAt?: string;
+              /** @format date-time */
+              updatedAt?: string;
+              /** @format date-time */
+              publishedAt?: string;
+              createdBy?: {
+                id?: number;
+                documentId?: string;
+              };
+              updatedBy?: {
+                id?: number;
+                documentId?: string;
+              };
+              locale?: string;
+              localizations?: {
+                id?: number;
+                documentId?: string;
+              }[];
+            };
+            updatedBy?: {
+              id?: number;
+              documentId?: string;
+            };
+            locale?: string;
+            localizations?: {
+              id?: number;
+              documentId?: string;
+            }[];
+          }[];
+          path?: string;
+          /** @format date-time */
+          createdAt?: string;
+          /** @format date-time */
+          updatedAt?: string;
+          /** @format date-time */
+          publishedAt?: string;
+          createdBy?: {
+            id?: number;
+            documentId?: string;
+          };
+          updatedBy?: {
+            id?: number;
+            documentId?: string;
+          };
+          locale?: string;
+          localizations?: {
+            id?: number;
+            documentId?: string;
+          }[];
+        };
+        folderPath?: string;
+        /** @format date-time */
+        createdAt?: string;
+        /** @format date-time */
+        updatedAt?: string;
+        /** @format date-time */
+        publishedAt?: string;
+        createdBy?: {
+          id?: number;
+          documentId?: string;
+        };
+        updatedBy?: {
+          id?: number;
+          documentId?: string;
+        };
+        locale?: string;
+        localizations?: {
+          id?: number;
+          documentId?: string;
+        }[];
+      };
+      /** @format date-time */
+      lastCheckedAt?: string;
+      protected?: boolean;
+      pause?: boolean;
+      description?: string;
+      tagline?: string;
+      faq?: any;
+      category?: string;
+      migration?: number;
+      clips?: {
+        id?: number;
+        documentId?: string;
+        title?: string;
+        description?: string;
+        hook_text?: string;
+        tags?: string;
+        viral_score?: number;
+        thumbnail_timestamp?: string;
+        duration?: number;
+        end?: string;
+        start?: string;
+        path?: string;
+        recording?: {
+          id?: number;
+          documentId?: string;
+        };
+        follower?: {
+          id?: number;
+          documentId?: string;
+        };
+        /** @format date-time */
+        createdAt?: string;
+        /** @format date-time */
+        updatedAt?: string;
+        /** @format date-time */
+        publishedAt?: string;
+        createdBy?: {
+          id?: number;
+          documentId?: string;
+        };
+        updatedBy?: {
+          id?: number;
+          documentId?: string;
+        };
+        locale?: string;
+        localizations?: {
+          id?: number;
+          documentId?: string;
+        }[];
+      }[];
+      /** @format date-time */
+      createdAt?: string;
+      /** @format date-time */
+      updatedAt?: string;
+      /** @format date-time */
+      publishedAt?: string;
+      createdBy?: {
+        id?: number;
+        documentId?: string;
+      };
+      updatedBy?: {
+        id?: number;
+        documentId?: string;
+      };
+      locale?: string;
+      localizations?: {
+        id?: number;
+        documentId?: string;
+      }[];
+    };
+    sources?: {
+      id?: number;
+      documentId?: string;
+      state?: ClipStateEnum;
+      executionId?: number;
+      /** @format date-time */
+      finishedAt?: string;
+      path?: string;
+      /** @format float */
+      duration?: number;
+      thumbnailInterval?: number;
+      thumbnailCols?: number;
+      videoOriginal?: VideosVideoComponent;
+      videoSmall?: VideosVideoComponent;
+      /** @format date-time */
+      createdAt?: string;
+      /** @format date-time */
+      updatedAt?: string;
+      /** @format date-time */
+      publishedAt?: string;
+      createdBy?: {
+        id?: number;
+        documentId?: string;
+      };
+      updatedBy?: {
+        id?: number;
+        documentId?: string;
+      };
+      locale?: string;
+      localizations?: {
+        id?: number;
+        documentId?: string;
+      }[];
+    }[];
+    clips?: {
+      id?: number;
+      documentId?: string;
+    }[];
+    /** @format date-time */
+    createdAt?: string;
+    /** @format date-time */
+    updatedAt?: string;
+    /** @format date-time */
+    publishedAt?: string;
+    createdBy?: {
+      id?: number;
+      documentId?: string;
+    };
+    updatedBy?: {
+      id?: number;
+      documentId?: string;
+    };
+    locale?: string;
+    localizations?: {
+      id?: number;
+      documentId?: string;
+    }[];
+  };
+  follower?: {
+    id?: number;
+    documentId?: string;
+  };
+  /** @format date-time */
+  createdAt?: string;
+  /** @format date-time */
+  updatedAt?: string;
+  /** @format date-time */
+  publishedAt?: string;
+  createdBy?: {
+    id?: number;
+    documentId?: string;
+  };
+  updatedBy?: {
+    id?: number;
+    documentId?: string;
+  };
+  locale?: string;
+  localizations?: {
+    id?: number;
+    documentId?: string;
+  }[];
+}
+
+export interface ClipResponse {
+  data?: Clip;
+  meta?: object;
+}
+
+export interface VideosVideoComponent {
+  id?: number;
+  width?: number;
+  height?: number;
+  /**
+   * @pattern ^\d*$
+   * @example "123456789"
+   */
+  sizeBytes?: string;
+}
+
 export interface EmailTemplateRequest {
   data: {
     subjectMatcher: string;
@@ -560,6 +1008,7 @@ export interface FollowerRequest {
     faq?: any;
     category?: string;
     migration?: number;
+    clips?: (number | string)[];
     locale?: string;
     localizations?: (number | string)[];
   };
@@ -814,59 +1263,153 @@ export interface Follower {
   faq?: any;
   category?: string;
   migration?: number;
-  /** @format date-time */
-  createdAt?: string;
-  /** @format date-time */
-  updatedAt?: string;
-  /** @format date-time */
-  publishedAt?: string;
-  createdBy?: {
+  clips?: {
     id?: number;
     documentId?: string;
-  };
-  updatedBy?: {
-    id?: number;
-    documentId?: string;
-  };
-  locale?: string;
-  localizations?: {
-    id?: number;
-    documentId?: string;
-    nickname?: string;
-    username?: string;
-    type?: FollowerTypeEnum;
-    gender?: FollowerGenderEnum1;
-    country?: string;
-    countryCode?: string;
-    language?: string;
-    languageCode?: string;
-    avatar?: {
+    title?: string;
+    description?: string;
+    hook_text?: string;
+    tags?: string;
+    viral_score?: number;
+    thumbnail_timestamp?: string;
+    duration?: number;
+    end?: string;
+    start?: string;
+    path?: string;
+    recording?: {
       id?: number;
       documentId?: string;
-      name?: string;
-      alternativeText?: string;
-      caption?: string;
-      width?: number;
-      height?: number;
-      formats?: any;
-      hash?: string;
-      ext?: string;
-      mime?: string;
-      /** @format float */
-      size?: number;
-      url?: string;
-      previewUrl?: string;
-      provider?: string;
-      provider_metadata?: any;
-      related?: {
+      title?: string;
+      description?: string;
+      follower?: {
+        id?: number;
+        documentId?: string;
+        nickname?: string;
+        username?: string;
+        type?: FollowerTypeEnum;
+        gender?: FollowerGenderEnum1;
+        country?: string;
+        countryCode?: string;
+        language?: string;
+        languageCode?: string;
+        avatar?: {
+          id?: number;
+          documentId?: string;
+          name?: string;
+          alternativeText?: string;
+          caption?: string;
+          width?: number;
+          height?: number;
+          formats?: any;
+          hash?: string;
+          ext?: string;
+          mime?: string;
+          /** @format float */
+          size?: number;
+          url?: string;
+          previewUrl?: string;
+          provider?: string;
+          provider_metadata?: any;
+          related?: {
+            id?: number;
+            documentId?: string;
+          }[];
+          folder?: {
+            id?: number;
+            documentId?: string;
+          };
+          folderPath?: string;
+          /** @format date-time */
+          createdAt?: string;
+          /** @format date-time */
+          updatedAt?: string;
+          /** @format date-time */
+          publishedAt?: string;
+          createdBy?: {
+            id?: number;
+            documentId?: string;
+          };
+          updatedBy?: {
+            id?: number;
+            documentId?: string;
+          };
+          locale?: string;
+          localizations?: {
+            id?: number;
+            documentId?: string;
+          }[];
+        };
+        /** @format date-time */
+        lastCheckedAt?: string;
+        protected?: boolean;
+        pause?: boolean;
+        description?: string;
+        tagline?: string;
+        faq?: any;
+        category?: string;
+        migration?: number;
+        clips?: {
+          id?: number;
+          documentId?: string;
+        }[];
+        /** @format date-time */
+        createdAt?: string;
+        /** @format date-time */
+        updatedAt?: string;
+        /** @format date-time */
+        publishedAt?: string;
+        createdBy?: {
+          id?: number;
+          documentId?: string;
+        };
+        updatedBy?: {
+          id?: number;
+          documentId?: string;
+        };
+        locale?: string;
+        localizations?: {
+          id?: number;
+          documentId?: string;
+        }[];
+      };
+      sources?: {
+        id?: number;
+        documentId?: string;
+        state?: FollowerStateEnum;
+        executionId?: number;
+        /** @format date-time */
+        finishedAt?: string;
+        path?: string;
+        /** @format float */
+        duration?: number;
+        thumbnailInterval?: number;
+        thumbnailCols?: number;
+        videoOriginal?: VideosVideoComponent;
+        videoSmall?: VideosVideoComponent;
+        /** @format date-time */
+        createdAt?: string;
+        /** @format date-time */
+        updatedAt?: string;
+        /** @format date-time */
+        publishedAt?: string;
+        createdBy?: {
+          id?: number;
+          documentId?: string;
+        };
+        updatedBy?: {
+          id?: number;
+          documentId?: string;
+        };
+        locale?: string;
+        localizations?: {
+          id?: number;
+          documentId?: string;
+        }[];
+      }[];
+      clips?: {
         id?: number;
         documentId?: string;
       }[];
-      folder?: {
-        id?: number;
-        documentId?: string;
-      };
-      folderPath?: string;
       /** @format date-time */
       createdAt?: string;
       /** @format date-time */
@@ -887,15 +1430,10 @@ export interface Follower {
         documentId?: string;
       }[];
     };
-    /** @format date-time */
-    lastCheckedAt?: string;
-    protected?: boolean;
-    pause?: boolean;
-    description?: string;
-    tagline?: string;
-    faq?: any;
-    category?: string;
-    migration?: number;
+    follower?: {
+      id?: number;
+      documentId?: string;
+    };
     /** @format date-time */
     createdAt?: string;
     /** @format date-time */
@@ -915,6 +1453,25 @@ export interface Follower {
       id?: number;
       documentId?: string;
     }[];
+  }[];
+  /** @format date-time */
+  createdAt?: string;
+  /** @format date-time */
+  updatedAt?: string;
+  /** @format date-time */
+  publishedAt?: string;
+  createdBy?: {
+    id?: number;
+    documentId?: string;
+  };
+  updatedBy?: {
+    id?: number;
+    documentId?: string;
+  };
+  locale?: string;
+  localizations?: {
+    id?: number;
+    documentId?: string;
   }[];
 }
 
@@ -1260,6 +1817,110 @@ export interface Message {
       faq?: any;
       category?: string;
       migration?: number;
+      clips?: {
+        id?: number;
+        documentId?: string;
+        title?: string;
+        description?: string;
+        hook_text?: string;
+        tags?: string;
+        viral_score?: number;
+        thumbnail_timestamp?: string;
+        duration?: number;
+        end?: string;
+        start?: string;
+        path?: string;
+        recording?: {
+          id?: number;
+          documentId?: string;
+          title?: string;
+          description?: string;
+          follower?: {
+            id?: number;
+            documentId?: string;
+          };
+          sources?: {
+            id?: number;
+            documentId?: string;
+            state?: MessageStateEnum;
+            executionId?: number;
+            /** @format date-time */
+            finishedAt?: string;
+            path?: string;
+            /** @format float */
+            duration?: number;
+            thumbnailInterval?: number;
+            thumbnailCols?: number;
+            videoOriginal?: VideosVideoComponent;
+            videoSmall?: VideosVideoComponent;
+            /** @format date-time */
+            createdAt?: string;
+            /** @format date-time */
+            updatedAt?: string;
+            /** @format date-time */
+            publishedAt?: string;
+            createdBy?: {
+              id?: number;
+              documentId?: string;
+            };
+            updatedBy?: {
+              id?: number;
+              documentId?: string;
+            };
+            locale?: string;
+            localizations?: {
+              id?: number;
+              documentId?: string;
+            }[];
+          }[];
+          clips?: {
+            id?: number;
+            documentId?: string;
+          }[];
+          /** @format date-time */
+          createdAt?: string;
+          /** @format date-time */
+          updatedAt?: string;
+          /** @format date-time */
+          publishedAt?: string;
+          createdBy?: {
+            id?: number;
+            documentId?: string;
+          };
+          updatedBy?: {
+            id?: number;
+            documentId?: string;
+          };
+          locale?: string;
+          localizations?: {
+            id?: number;
+            documentId?: string;
+          }[];
+        };
+        follower?: {
+          id?: number;
+          documentId?: string;
+        };
+        /** @format date-time */
+        createdAt?: string;
+        /** @format date-time */
+        updatedAt?: string;
+        /** @format date-time */
+        publishedAt?: string;
+        createdBy?: {
+          id?: number;
+          documentId?: string;
+        };
+        updatedBy?: {
+          id?: number;
+          documentId?: string;
+        };
+        locale?: string;
+        localizations?: {
+          id?: number;
+          documentId?: string;
+        }[];
+      }[];
       /** @format date-time */
       createdAt?: string;
       /** @format date-time */
@@ -1360,9 +2021,12 @@ export interface MessageResponse {
 
 export interface RecordingRequest {
   data: {
+    title?: string;
+    description?: string;
     /** @example "string or id" */
     follower?: number | string;
     sources?: (number | string)[];
+    clips?: (number | string)[];
     locale?: string;
     localizations?: (number | string)[];
   };
@@ -1385,6 +2049,8 @@ export interface RecordingListResponse {
 export interface Recording {
   id?: number;
   documentId?: string;
+  title?: string;
+  description?: string;
   follower?: {
     id?: number;
     documentId?: string;
@@ -1620,6 +2286,110 @@ export interface Recording {
     faq?: any;
     category?: string;
     migration?: number;
+    clips?: {
+      id?: number;
+      documentId?: string;
+      title?: string;
+      description?: string;
+      hook_text?: string;
+      tags?: string;
+      viral_score?: number;
+      thumbnail_timestamp?: string;
+      duration?: number;
+      end?: string;
+      start?: string;
+      path?: string;
+      recording?: {
+        id?: number;
+        documentId?: string;
+        title?: string;
+        description?: string;
+        follower?: {
+          id?: number;
+          documentId?: string;
+        };
+        sources?: {
+          id?: number;
+          documentId?: string;
+          state?: RecordingStateEnum;
+          executionId?: number;
+          /** @format date-time */
+          finishedAt?: string;
+          path?: string;
+          /** @format float */
+          duration?: number;
+          thumbnailInterval?: number;
+          thumbnailCols?: number;
+          videoOriginal?: VideosVideoComponent;
+          videoSmall?: VideosVideoComponent;
+          /** @format date-time */
+          createdAt?: string;
+          /** @format date-time */
+          updatedAt?: string;
+          /** @format date-time */
+          publishedAt?: string;
+          createdBy?: {
+            id?: number;
+            documentId?: string;
+          };
+          updatedBy?: {
+            id?: number;
+            documentId?: string;
+          };
+          locale?: string;
+          localizations?: {
+            id?: number;
+            documentId?: string;
+          }[];
+        }[];
+        clips?: {
+          id?: number;
+          documentId?: string;
+        }[];
+        /** @format date-time */
+        createdAt?: string;
+        /** @format date-time */
+        updatedAt?: string;
+        /** @format date-time */
+        publishedAt?: string;
+        createdBy?: {
+          id?: number;
+          documentId?: string;
+        };
+        updatedBy?: {
+          id?: number;
+          documentId?: string;
+        };
+        locale?: string;
+        localizations?: {
+          id?: number;
+          documentId?: string;
+        }[];
+      };
+      follower?: {
+        id?: number;
+        documentId?: string;
+      };
+      /** @format date-time */
+      createdAt?: string;
+      /** @format date-time */
+      updatedAt?: string;
+      /** @format date-time */
+      publishedAt?: string;
+      createdBy?: {
+        id?: number;
+        documentId?: string;
+      };
+      updatedBy?: {
+        id?: number;
+        documentId?: string;
+      };
+      locale?: string;
+      localizations?: {
+        id?: number;
+        documentId?: string;
+      }[];
+    }[];
     /** @format date-time */
     createdAt?: string;
     /** @format date-time */
@@ -1640,6 +2410,10 @@ export interface Recording {
       documentId?: string;
     }[];
   };
+  clips?: {
+    id?: number;
+    documentId?: string;
+  }[];
   /** @format date-time */
   createdAt?: string;
   /** @format date-time */
@@ -1658,33 +2432,6 @@ export interface Recording {
   localizations?: {
     id?: number;
     documentId?: string;
-    follower?: {
-      id?: number;
-      documentId?: string;
-    };
-    sources?: {
-      id?: number;
-      documentId?: string;
-    }[];
-    /** @format date-time */
-    createdAt?: string;
-    /** @format date-time */
-    updatedAt?: string;
-    /** @format date-time */
-    publishedAt?: string;
-    createdBy?: {
-      id?: number;
-      documentId?: string;
-    };
-    updatedBy?: {
-      id?: number;
-      documentId?: string;
-    };
-    locale?: string;
-    localizations?: {
-      id?: number;
-      documentId?: string;
-    }[];
   }[];
   sources?: Source[];
 }
@@ -1692,17 +2439,6 @@ export interface Recording {
 export interface RecordingResponse {
   data?: Recording;
   meta?: object;
-}
-
-export interface VideosVideoComponent {
-  id?: number;
-  width?: number;
-  height?: number;
-  /**
-   * @pattern ^\d*$
-   * @example "123456789"
-   */
-  sizeBytes?: string;
 }
 
 export interface SourceRequest {
@@ -2021,6 +2757,27 @@ export interface FiltersResponse {
   types?: FilterOption[];
 }
 
+export enum ClipTypeEnum {
+  Tiktok = "tiktok",
+  Twitch = "twitch",
+  Kick = "kick",
+  Youtube = "youtube",
+  Afreecatv = "afreecatv",
+  Pandalive = "pandalive",
+}
+
+export enum ClipGenderEnum {
+  Male = "male",
+  Female = "female",
+  Unknown = "unknown",
+}
+
+export enum ClipStateEnum {
+  Recording = "recording",
+  Done = "done",
+  Failed = "failed",
+}
+
 export enum FollowerRequestTypeEnum {
   Tiktok = "tiktok",
   Twitch = "twitch",
@@ -2048,6 +2805,12 @@ export enum FollowerGenderEnum1 {
   Unknown = "unknown",
 }
 
+export enum FollowerStateEnum {
+  Recording = "recording",
+  Done = "done",
+  Failed = "failed",
+}
+
 export enum MessageTypeEnum {
   Tiktok = "tiktok",
   Twitch = "twitch",
@@ -2063,10 +2826,22 @@ export enum MessageGenderEnum {
   Unknown = "unknown",
 }
 
+export enum MessageStateEnum {
+  Recording = "recording",
+  Done = "done",
+  Failed = "failed",
+}
+
 export enum RecordingGenderEnum {
   Male = "male",
   Female = "female",
   Unknown = "unknown",
+}
+
+export enum RecordingStateEnum {
+  Recording = "recording",
+  Done = "done",
+  Failed = "failed",
 }
 
 export enum SourceRequestStateEnum {
@@ -2178,6 +2953,52 @@ export interface DeleteChangeLogsIdParams {
 
 /** @format int64 */
 export type DeleteChangeLogsIdData = number;
+
+export interface GetClipsParams {
+  /** Sort by attributes ascending (asc) or descending (desc) */
+  sort?: string;
+  /** Return page/pageSize (default: true) */
+  "pagination[withCount]"?: boolean;
+  /** Page number (default: 0) */
+  "pagination[page]"?: number;
+  /** Page size (default: 25) */
+  "pagination[pageSize]"?: number;
+  /** Offset value (default: 0) */
+  "pagination[start]"?: number;
+  /** Number of entities to return (default: 25) */
+  "pagination[limit]"?: number;
+  /** Fields to return (ex: title,author) */
+  fields?: string;
+  /** Relations to return */
+  populate?: string | string[] | object;
+  /** Filters to apply */
+  filters?: Record<string, any>;
+  /** Locale to apply */
+  locale?: string;
+}
+
+export type GetClipsData = ClipListResponse;
+
+export type PostClipsData = ClipResponse;
+
+export interface GetClipsIdParams {
+  id: string;
+}
+
+export type GetClipsIdData = ClipResponse;
+
+export interface PutClipsIdParams {
+  id: string;
+}
+
+export type PutClipsIdData = ClipResponse;
+
+export interface DeleteClipsIdParams {
+  id: string;
+}
+
+/** @format int64 */
+export type DeleteClipsIdData = number;
 
 export interface GetEmailTemplatesParams {
   /** Sort by attributes ascending (asc) or descending (desc) */
@@ -2914,6 +3735,110 @@ export namespace ChangeLog {
     export type RequestBody = never;
     export type RequestHeaders = {};
     export type ResponseBody = DeleteChangeLogsIdData;
+  }
+}
+
+export namespace Clip {
+  /**
+   * No description
+   * @tags Clip
+   * @name GetClips
+   * @request GET:/clips
+   * @secure
+   */
+  export namespace GetClips {
+    export type RequestParams = {};
+    export type RequestQuery = {
+      /** Sort by attributes ascending (asc) or descending (desc) */
+      sort?: string;
+      /** Return page/pageSize (default: true) */
+      "pagination[withCount]"?: boolean;
+      /** Page number (default: 0) */
+      "pagination[page]"?: number;
+      /** Page size (default: 25) */
+      "pagination[pageSize]"?: number;
+      /** Offset value (default: 0) */
+      "pagination[start]"?: number;
+      /** Number of entities to return (default: 25) */
+      "pagination[limit]"?: number;
+      /** Fields to return (ex: title,author) */
+      fields?: string;
+      /** Relations to return */
+      populate?: string | string[] | object;
+      /** Filters to apply */
+      filters?: Record<string, any>;
+      /** Locale to apply */
+      locale?: string;
+    };
+    export type RequestBody = never;
+    export type RequestHeaders = {};
+    export type ResponseBody = GetClipsData;
+  }
+
+  /**
+   * No description
+   * @tags Clip
+   * @name PostClips
+   * @request POST:/clips
+   * @secure
+   */
+  export namespace PostClips {
+    export type RequestParams = {};
+    export type RequestQuery = {};
+    export type RequestBody = ClipRequest;
+    export type RequestHeaders = {};
+    export type ResponseBody = PostClipsData;
+  }
+
+  /**
+   * No description
+   * @tags Clip
+   * @name GetClipsId
+   * @request GET:/clips/{id}
+   * @secure
+   */
+  export namespace GetClipsId {
+    export type RequestParams = {
+      id: string;
+    };
+    export type RequestQuery = {};
+    export type RequestBody = never;
+    export type RequestHeaders = {};
+    export type ResponseBody = GetClipsIdData;
+  }
+
+  /**
+   * No description
+   * @tags Clip
+   * @name PutClipsId
+   * @request PUT:/clips/{id}
+   * @secure
+   */
+  export namespace PutClipsId {
+    export type RequestParams = {
+      id: string;
+    };
+    export type RequestQuery = {};
+    export type RequestBody = ClipRequest;
+    export type RequestHeaders = {};
+    export type ResponseBody = PutClipsIdData;
+  }
+
+  /**
+   * No description
+   * @tags Clip
+   * @name DeleteClipsId
+   * @request DELETE:/clips/{id}
+   * @secure
+   */
+  export namespace DeleteClipsId {
+    export type RequestParams = {
+      id: string;
+    };
+    export type RequestQuery = {};
+    export type RequestBody = never;
+    export type RequestHeaders = {};
+    export type ResponseBody = DeleteClipsIdData;
   }
 }
 
@@ -4436,6 +5361,107 @@ export class Api<
     ) =>
       this.request<DeleteChangeLogsIdData, Error>({
         path: `/change-logs/${id}`,
+        method: "DELETE",
+        secure: true,
+        format: "json",
+        ...params,
+      }),
+  };
+  clip = {
+    /**
+     * No description
+     *
+     * @tags Clip
+     * @name GetClips
+     * @request GET:/clips
+     * @secure
+     */
+    getClips: (query: GetClipsParams, params: RequestParams = {}) =>
+      this.request<GetClipsData, Error>({
+        path: `/clips`,
+        method: "GET",
+        query: query,
+        secure: true,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Clip
+     * @name PostClips
+     * @request POST:/clips
+     * @secure
+     */
+    postClips: (data: ClipRequest, params: RequestParams = {}) =>
+      this.request<PostClipsData, Error>({
+        path: `/clips`,
+        method: "POST",
+        body: data,
+        secure: true,
+        type: ContentType.Json,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Clip
+     * @name GetClipsId
+     * @request GET:/clips/{id}
+     * @secure
+     */
+    getClipsId: (
+      { id, ...query }: GetClipsIdParams,
+      params: RequestParams = {},
+    ) =>
+      this.request<GetClipsIdData, Error>({
+        path: `/clips/${id}`,
+        method: "GET",
+        secure: true,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Clip
+     * @name PutClipsId
+     * @request PUT:/clips/{id}
+     * @secure
+     */
+    putClipsId: (
+      { id, ...query }: PutClipsIdParams,
+      data: ClipRequest,
+      params: RequestParams = {},
+    ) =>
+      this.request<PutClipsIdData, Error>({
+        path: `/clips/${id}`,
+        method: "PUT",
+        body: data,
+        secure: true,
+        type: ContentType.Json,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Clip
+     * @name DeleteClipsId
+     * @request DELETE:/clips/{id}
+     * @secure
+     */
+    deleteClipsId: (
+      { id, ...query }: DeleteClipsIdParams,
+      params: RequestParams = {},
+    ) =>
+      this.request<DeleteClipsIdData, Error>({
+        path: `/clips/${id}`,
         method: "DELETE",
         secure: true,
         format: "json",

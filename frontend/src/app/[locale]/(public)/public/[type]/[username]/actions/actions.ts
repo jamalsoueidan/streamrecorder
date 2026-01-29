@@ -65,7 +65,7 @@ export const getFollower = cache(async function ({
   }
 
   if (!follower) {
-    throw new Error("Follower not found");
+    return null;
   }
 
   return follower;
