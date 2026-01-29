@@ -23,7 +23,7 @@ import {
 } from "@mantine/core";
 import Link from "next/link";
 
-import { ImageVideoPreview } from "@/app/[locale]/(protected)/components/image-video-preview";
+import { ImageSpritePreview } from "@/app/[locale]/(protected)/components/image-sprite-preview";
 import { generateAvatarUrl } from "@/app/lib/avatar-url";
 import { safeRelativeTime } from "@/app/lib/safe-relative-time";
 import { IconCalendarPlus, IconVideo } from "@tabler/icons-react";
@@ -171,7 +171,7 @@ export default function FollowerItem({ follower, isOpen }: Props) {
 
                 return (
                   <Stack key={rec.documentId} gap="4">
-                    <ImageVideoPreview
+                    <ImageSpritePreview
                       recording={rec}
                       username={follower.username}
                       type={follower.type}

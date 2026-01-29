@@ -18,6 +18,7 @@ const STATIC_EXT =
 
 export function proxy(request: NextRequest) {
   const path = request.nextUrl.pathname;
+  const search = request.nextUrl.search;
 
   if (STATIC_EXT.test(path)) {
     return NextResponse.next();
@@ -39,7 +40,7 @@ export function proxy(request: NextRequest) {
   if (PLATFORMS.includes(platformSegment)) {
     const token = request.cookies.get("strapi_jwt");
     const destination = token ? "protected" : "public";
-    const rewriteUrl = `/${locale}/${destination}${pathWithoutLocale}`;
+    const rewriteUrl = `/${locale}/${destination}${pathWithoutLocale}${search}`;
 
     // Only redirect if they want a NON-default locale
     if (!hasLocalePrefix) {
@@ -50,7 +51,7 @@ export function proxy(request: NextRequest) {
         cookieLocale !== defaultLocale &&
         locales.includes(cookieLocale as any)
       ) {
-        const redirectUrl = `/${cookieLocale}${pathWithoutLocale}`;
+        const redirectUrl = `/${cookieLocale}${pathWithoutLocale}${search}`;
         return NextResponse.redirect(new URL(redirectUrl, request.url));
       }
     }
@@ -64,5 +65,5 @@ export function proxy(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/((?!api|_next|media|avatar|assets|video|serwist).*)"],
+  matcher: ["/((?!api|_next|media|avatar|assets|video|clip|serwist).*)"],
 };
