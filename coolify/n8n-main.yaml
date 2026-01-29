@@ -1,6 +1,6 @@
 services:
   n8n:
-    image: "docker.n8n.io/n8nio/n8n:1.123.5"
+    image: "docker.n8n.io/n8nio/n8n:1.123.16"
     environment:
       - SERVICE_URL_N8N_5678
       - "N8N_EDITOR_BASE_URL=${SERVICE_URL_N8N}"
@@ -29,6 +29,8 @@ services:
       - "NODE_FUNCTION_ALLOW_EXTERNAL=*"
       - "NODE_FUNCTION_ALLOW_BUILTIN=*"
       - N8N_INSECURE_DISABLE_WEBHOOK_IFRAME_SANDBOX=true
+      - EXECUTIONS_DATA_MAX_AGE=12
+      - EXECUTIONS_DATA_PRUNE_MAX_COUNT=50000
     volumes:
       - "n8n-data:/home/node/.n8n"
     depends_on:

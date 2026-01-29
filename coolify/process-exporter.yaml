@@ -1,71 +1,10 @@
 services:
   init-configs:
-    image: alpine:latest
+    image: "alpine:latest"
     restart: "no"
     volumes:
-      - config_data:/config
-    command: |
-      sh -c '
-      cat > /config/process-exporter.yml << "EOF"
-      process_names:
-        - name: "ffmpeg:screenshot"
-          comm:
-            - ffmpeg
-          cmdline:
-            - "screenshot.jpg"
-
-        - name: "ffmpeg:thumbnails"
-          comm:
-            - ffmpeg
-          cmdline:
-            - "thumbnails.jpg"
-
-        - name: "ffmpeg:thumb"
-          comm:
-            - ffmpeg
-          cmdline:
-            - "thumb_"
-
-        - name: "ffmpeg:preview"
-          comm:
-            - ffmpeg
-          cmdline:
-            - "preview.jpg"
-
-        - name: "ffmpeg:video_small"
-          comm:
-            - ffmpeg
-          cmdline:
-            - "video_small.mp4"
-
-        - name: "ffmpeg:video"
-          comm:
-            - ffmpeg
-          cmdline:
-            - "video.mp4"
-
-        - name: "ffmpeg:other"
-          comm:
-            - ffmpeg
-
-        - name: "node"
-          comm:
-            - node
-
-        - name: "python"
-          comm:
-            - python
-            - python3
-
-        - name: "curl"
-          comm:
-            - curl
-
-        - name: "streamlink"
-          comm:
-            - streamlink
-      EOF
-      '
+      - "config_data:/config"
+    command: "sh -c '\ncat > /config/process-exporter.yml << \"EOF\"\nprocess_names:\n  - name: \"ffmpeg:screenshot\"\n    comm:\n      - ffmpeg\n    cmdline:\n      - \"screenshot.jpg\"\n\n  - name: \"ffmpeg:thumbnails\"\n    comm:\n      - ffmpeg\n    cmdline:\n      - \"thumbnails.jpg\"\n\n  - name: \"ffmpeg:thumb\"\n    comm:\n      - ffmpeg\n    cmdline:\n      - \"thumb_\"\n\n  - name: \"ffmpeg:preview\"\n    comm:\n      - ffmpeg\n    cmdline:\n      - \"preview.jpg\"\n\n  - name: \"ffmpeg:video_small\"\n    comm:\n      - ffmpeg\n    cmdline:\n      - \"video_small.mp4\"\n\n  - name: \"ffmpeg:video\"\n    comm:\n      - ffmpeg\n    cmdline:\n      - \"video.mp4\"\n\n  - name: \"ffmpeg:other\"\n    comm:\n      - ffmpeg\n\n  - name: \"node\"\n    comm:\n      - node\n\n  - name: \"python\"\n    comm:\n      - python\n      - python3\n\n  - name: \"curl\"\n    comm:\n      - curl\n\n  - name: \"streamlink\"\n    comm:\n      - streamlink\nEOF\n'\n"
   node-exporter:
     image: "prom/node-exporter:latest"
     command:

@@ -9,7 +9,7 @@ services:
   n8n-worker:
     build:
       context: .
-      dockerfile_inline: "FROM docker.n8n.io/n8nio/n8n:1.123.5\nUSER root\nRUN apk update && \\\n    apk add --no-cache ffmpeg python3 py3-pip curl aws-cli && \\\n    pip3 install --break-system-packages streamlink\nRUN npm install -g bcrypt\nUSER node\n"
+      dockerfile_inline: "FROM docker.n8n.io/n8nio/n8n:1.123.16\nUSER root\nRUN apk update && \\\n    apk add --no-cache ffmpeg python3 py3-pip curl aws-cli && \\\n    pip3 install --break-system-packages streamlink\nRUN npm install -g bcrypt\nUSER node\n"
     command: "worker --concurrency=120"
     stop_grace_period: 37m
     environment:

@@ -46,7 +46,7 @@ export function ImageSpritePreview({ recording, type, username }: Props) {
   );
 
   const hasSources = sources && sources.length > 0;
-  const uri = hasSources ? `/video/${recording.documentId}/` : null;
+  const uri = `/video/${recording.documentId}/`;
 
   const getHref = (time?: number) => {
     const params = new URLSearchParams(searchParams.toString());
