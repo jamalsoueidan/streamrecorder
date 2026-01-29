@@ -497,7 +497,9 @@ export interface ApiAiTaskAiTask extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     output: Schema.Attribute.JSON;
     publishedAt: Schema.Attribute.DateTime;
-    state: Schema.Attribute.Enumeration<['running', 'completed', 'failed']>;
+    state: Schema.Attribute.Enumeration<
+      ['pending', 'processing', 'completed', 'failed']
+    >;
     type: Schema.Attribute.Enumeration<
       ['merge', 'upload', 'clips', 'memes', 'profile']
     >;
