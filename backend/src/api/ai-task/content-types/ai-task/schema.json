@@ -7,7 +7,7 @@
     "displayName": "AiTask"
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {

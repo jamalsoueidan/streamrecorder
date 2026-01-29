@@ -438,7 +438,7 @@ export interface ApiAiRequestAiRequest extends Struct.CollectionTypeSchema {
     singularName: 'ai-request';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     ai_tasks: Schema.Attribute.Relation<'oneToMany', 'api::ai-task.ai-task'>;
@@ -478,7 +478,7 @@ export interface ApiAiTaskAiTask extends Struct.CollectionTypeSchema {
     singularName: 'ai-task';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     ai_request: Schema.Attribute.Relation<
