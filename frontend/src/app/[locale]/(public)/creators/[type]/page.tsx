@@ -94,6 +94,12 @@ export default async function Page({ params, searchParams }: PageProps) {
 
   const totalPages = meta?.pagination?.pageCount || 1;
 
+  const regionNames = new Intl.DisplayNames(["en"], { type: "region" });
+  const getCountryName = (countryCode?: string) => {
+    if (!countryCode || countryCode === "-") return undefined;
+    return regionNames.of(countryCode.toUpperCase());
+  };
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
@@ -119,7 +125,12 @@ export default async function Page({ params, searchParams }: PageProps) {
           description: creator.tagline || creator.description,
           image: generateAvatarUrl(creator.avatar?.url, true),
           url: generateProfileUrl(creator, true),
-          nationality: creator.country,
+          ...(getCountryName(creator.countryCode) && {
+            nationality: {
+              "@type": "Country",
+              name: getCountryName(creator.countryCode),
+            },
+          }),
           sameAs: [getSocialUrl(creator)],
         },
       })),

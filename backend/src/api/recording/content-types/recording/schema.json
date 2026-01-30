@@ -39,6 +39,12 @@
       "relation": "oneToMany",
       "target": "api::ai-request.ai-request",
       "mappedBy": "recording"
+    },
+    "memes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::meme.meme",
+      "mappedBy": "recording"
     }
   }
 }

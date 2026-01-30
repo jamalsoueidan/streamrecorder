@@ -112,12 +112,8 @@ export default async function Page({ params, searchParams }: PageProps) {
         <Stack gap="xs">
           <Group>
             <Title order={2}>{decodeURIComponent(follower.username)}</Title>
-            {follower.country && (
-              <CountryFlag
-                country={follower.country}
-                countryCode={follower.countryCode}
-                size={40}
-              />
+            {follower.countryCode && (
+              <CountryFlag countryCode={follower.countryCode} size={40} />
             )}
           </Group>
 

@@ -63,23 +63,7 @@
         "unknown"
       ]
     },
-    "country": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      }
-    },
     "countryCode": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      }
-    },
-    "language": {
       "type": "string",
       "pluginOptions": {
         "i18n": {
@@ -181,6 +165,12 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::clip.clip",
+      "mappedBy": "follower"
+    },
+    "memes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::meme.meme",
       "mappedBy": "follower"
     }
   }

@@ -79,11 +79,8 @@ export default function FollowerItem({ follower }: Props) {
                     {follower.username}
                   </Text>
                 </Anchor>
-                {follower.country ? (
-                  <CountryFlag
-                    country={follower.country}
-                    countryCode={follower?.countryCode}
-                  />
+                {follower.countryCode ? (
+                  <CountryFlag countryCode={follower?.countryCode} />
                 ) : null}
               </Group>
 

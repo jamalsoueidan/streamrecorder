@@ -130,6 +130,14 @@ export default async function Page({ params, searchParams }: PageProps) {
 
   const totalPages = meta?.pagination?.pageCount || 1;
 
+  const regionNames = new Intl.DisplayNames(["en"], { type: "region" });
+  const getCountryName = (countryCode?: string) => {
+    if (!countryCode || countryCode === "-") return undefined;
+    return regionNames.of(countryCode.toUpperCase());
+  };
+
+  const countryName = getCountryName(follower.countryCode);
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Person",
@@ -138,7 +146,12 @@ export default async function Page({ params, searchParams }: PageProps) {
     description: follower.tagline || follower.description,
     image: generateAvatarUrl(follower.avatar?.url, true),
     url: generateProfileUrl(follower, true),
-    nationality: follower.country,
+    ...(countryName && {
+      nationality: {
+        "@type": "Country",
+        name: countryName,
+      },
+    }),
     sameAs: [getSocialUrl(follower)],
     mainContentOfPage: {
       "@type": "ItemList",
@@ -189,12 +202,8 @@ export default async function Page({ params, searchParams }: PageProps) {
                     size={30}
                   />
                 </Tooltip>
-                {follower.country && (
-                  <CountryFlag
-                    country={follower.country}
-                    countryCode={follower.countryCode}
-                    size={30}
-                  />
+                {follower.countryCode && (
+                  <CountryFlag countryCode={follower.countryCode} size={30} />
                 )}
               </Group>
               <Text>

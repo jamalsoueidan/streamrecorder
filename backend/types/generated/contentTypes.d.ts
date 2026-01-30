@@ -500,9 +500,7 @@ export interface ApiAiTaskAiTask extends Struct.CollectionTypeSchema {
     state: Schema.Attribute.Enumeration<
       ['pending', 'processing', 'completed', 'failed']
     >;
-    type: Schema.Attribute.Enumeration<
-      ['merge', 'upload', 'clips', 'memes', 'profile']
-    >;
+    type: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -777,12 +775,6 @@ export interface ApiFollowerFollower extends Struct.CollectionTypeSchema {
         };
       }>;
     clips: Schema.Attribute.Relation<'oneToMany', 'api::clip.clip'>;
-    country: Schema.Attribute.String &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: false;
-        };
-      }>;
     countryCode: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -810,12 +802,6 @@ export interface ApiFollowerFollower extends Struct.CollectionTypeSchema {
           localized: false;
         };
       }>;
-    language: Schema.Attribute.String &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: false;
-        };
-      }>;
     languageCode: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -833,6 +819,7 @@ export interface ApiFollowerFollower extends Struct.CollectionTypeSchema {
       'oneToMany',
       'api::follower.follower'
     >;
+    memes: Schema.Attribute.Relation<'oneToMany', 'api::meme.meme'>;
     migration: Schema.Attribute.Integer &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -887,6 +874,41 @@ export interface ApiFollowerFollower extends Struct.CollectionTypeSchema {
           localized: false;
         };
       }>;
+  };
+}
+
+export interface ApiMemeMeme extends Struct.CollectionTypeSchema {
+  collectionName: 'memes';
+  info: {
+    displayName: 'Meme';
+    pluralName: 'memes';
+    singularName: 'meme';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    duration: Schema.Attribute.Integer;
+    end: Schema.Attribute.String;
+    follower: Schema.Attribute.Relation<'manyToOne', 'api::follower.follower'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::meme.meme'> &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    recording: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::recording.recording'
+    >;
+    start: Schema.Attribute.String;
+    tags: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    viral_score: Schema.Attribute.Integer;
   };
 }
 
@@ -952,6 +974,7 @@ export interface ApiRecordingRecording extends Struct.CollectionTypeSchema {
       'api::recording.recording'
     > &
       Schema.Attribute.Private;
+    memes: Schema.Attribute.Relation<'oneToMany', 'api::meme.meme'>;
     publishedAt: Schema.Attribute.DateTime;
     sources: Schema.Attribute.Relation<'oneToMany', 'api::source.source'>;
     title: Schema.Attribute.String;
@@ -1523,6 +1546,7 @@ declare module '@strapi/strapi' {
       'api::clip.clip': ApiClipClip;
       'api::email-template.email-template': ApiEmailTemplateEmailTemplate;
       'api::follower.follower': ApiFollowerFollower;
+      'api::meme.meme': ApiMemeMeme;
       'api::message.message': ApiMessageMessage;
       'api::recording.recording': ApiRecordingRecording;
       'api::source.source': ApiSourceSource;
