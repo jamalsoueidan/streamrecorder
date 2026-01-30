@@ -20,7 +20,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2026-01-30T13:04:52.596Z"
+    "x-generation-date": "2026-01-30T23:51:33.318Z"
   },
   "servers": [
     {
@@ -8710,19 +8710,26 @@
                         "documentId": {
                           "type": "string"
                         },
-                        "start": {
-                          "type": "string"
-                        },
-                        "end": {
-                          "type": "string"
-                        },
                         "title": {
+                          "type": "string"
+                        },
+                        "tags": {
+                          "type": "string"
+                        },
+                        "type": {
+                          "type": "string",
+                          "enum": [
+                            "video",
+                            "gif"
+                          ]
+                        },
+                        "start": {
                           "type": "string"
                         },
                         "duration": {
                           "type": "integer"
                         },
-                        "tags": {
+                        "end": {
                           "type": "string"
                         },
                         "viral_score": {
@@ -10263,19 +10270,26 @@
                             "documentId": {
                               "type": "string"
                             },
-                            "start": {
-                              "type": "string"
-                            },
-                            "end": {
-                              "type": "string"
-                            },
                             "title": {
+                              "type": "string"
+                            },
+                            "tags": {
+                              "type": "string"
+                            },
+                            "type": {
+                              "type": "string",
+                              "enum": [
+                                "video",
+                                "gif"
+                              ]
+                            },
+                            "start": {
                               "type": "string"
                             },
                             "duration": {
                               "type": "integer"
                             },
-                            "tags": {
+                            "end": {
                               "type": "string"
                             },
                             "viral_score": {
@@ -12744,19 +12758,26 @@
                         "documentId": {
                           "type": "string"
                         },
-                        "start": {
-                          "type": "string"
-                        },
-                        "end": {
-                          "type": "string"
-                        },
                         "title": {
+                          "type": "string"
+                        },
+                        "tags": {
+                          "type": "string"
+                        },
+                        "type": {
+                          "type": "string",
+                          "enum": [
+                            "video",
+                            "gif"
+                          ]
+                        },
+                        "start": {
                           "type": "string"
                         },
                         "duration": {
                           "type": "integer"
                         },
-                        "tags": {
+                        "end": {
                           "type": "string"
                         },
                         "viral_score": {
@@ -14920,19 +14941,26 @@
                               "documentId": {
                                 "type": "string"
                               },
-                              "start": {
-                                "type": "string"
-                              },
-                              "end": {
-                                "type": "string"
-                              },
                               "title": {
+                                "type": "string"
+                              },
+                              "tags": {
+                                "type": "string"
+                              },
+                              "type": {
+                                "type": "string",
+                                "enum": [
+                                  "video",
+                                  "gif"
+                                ]
+                              },
+                              "start": {
                                 "type": "string"
                               },
                               "duration": {
                                 "type": "integer"
                               },
-                              "tags": {
+                              "end": {
                                 "type": "string"
                               },
                               "viral_score": {
@@ -15596,19 +15624,26 @@
           "data": {
             "type": "object",
             "properties": {
-              "start": {
-                "type": "string"
-              },
-              "end": {
-                "type": "string"
-              },
               "title": {
+                "type": "string"
+              },
+              "tags": {
+                "type": "string"
+              },
+              "type": {
+                "type": "string",
+                "enum": [
+                  "video",
+                  "gif"
+                ]
+              },
+              "start": {
                 "type": "string"
               },
               "duration": {
                 "type": "integer"
               },
-              "tags": {
+              "end": {
                 "type": "string"
               },
               "viral_score": {
@@ -15701,19 +15736,26 @@
           "documentId": {
             "type": "string"
           },
-          "start": {
-            "type": "string"
-          },
-          "end": {
-            "type": "string"
-          },
           "title": {
+            "type": "string"
+          },
+          "tags": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "video",
+              "gif"
+            ]
+          },
+          "start": {
             "type": "string"
           },
           "duration": {
             "type": "integer"
           },
-          "tags": {
+          "end": {
             "type": "string"
           },
           "viral_score": {
@@ -16523,19 +16565,26 @@
                         "documentId": {
                           "type": "string"
                         },
-                        "start": {
-                          "type": "string"
-                        },
-                        "end": {
-                          "type": "string"
-                        },
                         "title": {
+                          "type": "string"
+                        },
+                        "tags": {
+                          "type": "string"
+                        },
+                        "type": {
+                          "type": "string",
+                          "enum": [
+                            "video",
+                            "gif"
+                          ]
+                        },
+                        "start": {
                           "type": "string"
                         },
                         "duration": {
                           "type": "integer"
                         },
-                        "tags": {
+                        "end": {
                           "type": "string"
                         },
                         "viral_score": {
@@ -18474,19 +18523,26 @@
                                     "documentId": {
                                       "type": "string"
                                     },
-                                    "start": {
-                                      "type": "string"
-                                    },
-                                    "end": {
-                                      "type": "string"
-                                    },
                                     "title": {
+                                      "type": "string"
+                                    },
+                                    "tags": {
+                                      "type": "string"
+                                    },
+                                    "type": {
+                                      "type": "string",
+                                      "enum": [
+                                        "video",
+                                        "gif"
+                                      ]
+                                    },
+                                    "start": {
                                       "type": "string"
                                     },
                                     "duration": {
                                       "type": "integer"
                                     },
-                                    "tags": {
+                                    "end": {
                                       "type": "string"
                                     },
                                     "viral_score": {
@@ -20156,19 +20212,26 @@
                               "documentId": {
                                 "type": "string"
                               },
-                              "start": {
-                                "type": "string"
-                              },
-                              "end": {
-                                "type": "string"
-                              },
                               "title": {
+                                "type": "string"
+                              },
+                              "tags": {
+                                "type": "string"
+                              },
+                              "type": {
+                                "type": "string",
+                                "enum": [
+                                  "video",
+                                  "gif"
+                                ]
+                              },
+                              "start": {
                                 "type": "string"
                               },
                               "duration": {
                                 "type": "integer"
                               },
-                              "tags": {
+                              "end": {
                                 "type": "string"
                               },
                               "viral_score": {
@@ -21514,19 +21577,26 @@
                         "documentId": {
                           "type": "string"
                         },
-                        "start": {
-                          "type": "string"
-                        },
-                        "end": {
-                          "type": "string"
-                        },
                         "title": {
+                          "type": "string"
+                        },
+                        "tags": {
+                          "type": "string"
+                        },
+                        "type": {
+                          "type": "string",
+                          "enum": [
+                            "video",
+                            "gif"
+                          ]
+                        },
+                        "start": {
                           "type": "string"
                         },
                         "duration": {
                           "type": "integer"
                         },
-                        "tags": {
+                        "end": {
                           "type": "string"
                         },
                         "viral_score": {
