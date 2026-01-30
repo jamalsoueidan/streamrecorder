@@ -20,7 +20,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2026-01-29T22:20:06.713Z"
+    "x-generation-date": "2026-01-30T00:42:33.736Z"
   },
   "servers": [
     {
@@ -8426,14 +8426,7 @@
                             }
                           },
                           "type": {
-                            "type": "string",
-                            "enum": [
-                              "merge",
-                              "upload",
-                              "clips",
-                              "memes",
-                              "profile"
-                            ]
+                            "type": "string"
                           },
                           "state": {
                             "type": "string",
@@ -8745,14 +8738,7 @@
                 "example": "string or id"
               },
               "type": {
-                "type": "string",
-                "enum": [
-                  "merge",
-                  "upload",
-                  "clips",
-                  "memes",
-                  "profile"
-                ]
+                "type": "string"
               },
               "state": {
                 "type": "string",
@@ -9925,14 +9911,7 @@
                       }
                     },
                     "type": {
-                      "type": "string",
-                      "enum": [
-                        "merge",
-                        "upload",
-                        "clips",
-                        "memes",
-                        "profile"
-                      ]
+                      "type": "string"
                     },
                     "state": {
                       "type": "string",
@@ -10055,14 +10034,7 @@
             }
           },
           "type": {
-            "type": "string",
-            "enum": [
-              "merge",
-              "upload",
-              "clips",
-              "memes",
-              "profile"
-            ]
+            "type": "string"
           },
           "state": {
             "type": "string",
@@ -12262,14 +12234,7 @@
                             }
                           },
                           "type": {
-                            "type": "string",
-                            "enum": [
-                              "merge",
-                              "upload",
-                              "clips",
-                              "memes",
-                              "profile"
-                            ]
+                            "type": "string"
                           },
                           "state": {
                             "type": "string",
@@ -14330,14 +14295,7 @@
                                   }
                                 },
                                 "type": {
-                                  "type": "string",
-                                  "enum": [
-                                    "merge",
-                                    "upload",
-                                    "clips",
-                                    "memes",
-                                    "profile"
-                                  ]
+                                  "type": "string"
                                 },
                                 "state": {
                                   "type": "string",
@@ -15866,14 +15824,7 @@
                                             }
                                           },
                                           "type": {
-                                            "type": "string",
-                                            "enum": [
-                                              "merge",
-                                              "upload",
-                                              "clips",
-                                              "memes",
-                                              "profile"
-                                            ]
+                                            "type": "string"
                                           },
                                           "state": {
                                             "type": "string",
@@ -17428,14 +17379,7 @@
                                       }
                                     },
                                     "type": {
-                                      "type": "string",
-                                      "enum": [
-                                        "merge",
-                                        "upload",
-                                        "clips",
-                                        "memes",
-                                        "profile"
-                                      ]
+                                      "type": "string"
                                     },
                                     "state": {
                                       "type": "string",
@@ -19029,14 +18973,7 @@
                             }
                           },
                           "type": {
-                            "type": "string",
-                            "enum": [
-                              "merge",
-                              "upload",
-                              "clips",
-                              "memes",
-                              "profile"
-                            ]
+                            "type": "string"
                           },
                           "state": {
                             "type": "string",
