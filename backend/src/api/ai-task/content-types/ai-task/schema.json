@@ -18,8 +18,7 @@
       "inversedBy": "ai_tasks"
     },
     "type": {
-      "type": "enumeration",
-      "enum": ["merge", "upload", "clips", "memes", "profile"]
+      "type": "string"
     },
     "state": {
       "type": "enumeration",
