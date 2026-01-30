@@ -35,6 +35,1070 @@ export interface Error {
   };
 }
 
+export interface AiRequestRequest {
+  data: {
+    /** @example "string or id" */
+    recording?: number | string;
+    generateClips?: boolean;
+    generateMemes?: boolean;
+    generateProfile?: boolean;
+    state?: AiRequestRequestStateEnum;
+    ai_tasks?: (number | string)[];
+    locale?: string;
+    localizations?: (number | string)[];
+  };
+}
+
+export interface AiRequestListResponse {
+  data?: AiRequest[];
+  meta?: {
+    pagination?: {
+      page?: number;
+      /** @min 25 */
+      pageSize?: number;
+      /** @max 1 */
+      pageCount?: number;
+      total?: number;
+    };
+  };
+}
+
+export interface AiRequest {
+  id?: number;
+  documentId?: string;
+  recording?: {
+    id?: number;
+    documentId?: string;
+    title?: string;
+    description?: string;
+    follower?: {
+      id?: number;
+      documentId?: string;
+      nickname?: string;
+      username?: string;
+      type?: AiRequestTypeEnum;
+      gender?: AiRequestGenderEnum;
+      countryCode?: string;
+      languageCode?: string;
+      avatar?: {
+        id?: number;
+        documentId?: string;
+        name?: string;
+        alternativeText?: string;
+        caption?: string;
+        width?: number;
+        height?: number;
+        formats?: any;
+        hash?: string;
+        ext?: string;
+        mime?: string;
+        /** @format float */
+        size?: number;
+        url?: string;
+        previewUrl?: string;
+        provider?: string;
+        provider_metadata?: any;
+        related?: {
+          id?: number;
+          documentId?: string;
+        }[];
+        folder?: {
+          id?: number;
+          documentId?: string;
+          name?: string;
+          pathId?: number;
+          parent?: {
+            id?: number;
+            documentId?: string;
+          };
+          children?: {
+            id?: number;
+            documentId?: string;
+          }[];
+          files?: {
+            id?: number;
+            documentId?: string;
+            name?: string;
+            alternativeText?: string;
+            caption?: string;
+            width?: number;
+            height?: number;
+            formats?: any;
+            hash?: string;
+            ext?: string;
+            mime?: string;
+            /** @format float */
+            size?: number;
+            url?: string;
+            previewUrl?: string;
+            provider?: string;
+            provider_metadata?: any;
+            related?: {
+              id?: number;
+              documentId?: string;
+            }[];
+            folder?: {
+              id?: number;
+              documentId?: string;
+            };
+            folderPath?: string;
+            /** @format date-time */
+            createdAt?: string;
+            /** @format date-time */
+            updatedAt?: string;
+            /** @format date-time */
+            publishedAt?: string;
+            createdBy?: {
+              id?: number;
+              documentId?: string;
+              firstname?: string;
+              lastname?: string;
+              username?: string;
+              /** @format email */
+              email?: string;
+              resetPasswordToken?: string;
+              registrationToken?: string;
+              isActive?: boolean;
+              roles?: {
+                id?: number;
+                documentId?: string;
+                name?: string;
+                code?: string;
+                description?: string;
+                users?: {
+                  id?: number;
+                  documentId?: string;
+                }[];
+                permissions?: {
+                  id?: number;
+                  documentId?: string;
+                  action?: string;
+                  actionParameters?: any;
+                  subject?: string;
+                  properties?: any;
+                  conditions?: any;
+                  role?: {
+                    id?: number;
+                    documentId?: string;
+                  };
+                  /** @format date-time */
+                  createdAt?: string;
+                  /** @format date-time */
+                  updatedAt?: string;
+                  /** @format date-time */
+                  publishedAt?: string;
+                  createdBy?: {
+                    id?: number;
+                    documentId?: string;
+                  };
+                  updatedBy?: {
+                    id?: number;
+                    documentId?: string;
+                  };
+                  locale?: string;
+                  localizations?: {
+                    id?: number;
+                    documentId?: string;
+                  }[];
+                }[];
+                /** @format date-time */
+                createdAt?: string;
+                /** @format date-time */
+                updatedAt?: string;
+                /** @format date-time */
+                publishedAt?: string;
+                createdBy?: {
+                  id?: number;
+                  documentId?: string;
+                };
+                updatedBy?: {
+                  id?: number;
+                  documentId?: string;
+                };
+                locale?: string;
+                localizations?: {
+                  id?: number;
+                  documentId?: string;
+                }[];
+              }[];
+              blocked?: boolean;
+              preferedLanguage?: string;
+              /** @format date-time */
+              createdAt?: string;
+              /** @format date-time */
+              updatedAt?: string;
+              /** @format date-time */
+              publishedAt?: string;
+              createdBy?: {
+                id?: number;
+                documentId?: string;
+              };
+              updatedBy?: {
+                id?: number;
+                documentId?: string;
+              };
+              locale?: string;
+              localizations?: {
+                id?: number;
+                documentId?: string;
+              }[];
+            };
+            updatedBy?: {
+              id?: number;
+              documentId?: string;
+            };
+            locale?: string;
+            localizations?: {
+              id?: number;
+              documentId?: string;
+            }[];
+          }[];
+          path?: string;
+          /** @format date-time */
+          createdAt?: string;
+          /** @format date-time */
+          updatedAt?: string;
+          /** @format date-time */
+          publishedAt?: string;
+          createdBy?: {
+            id?: number;
+            documentId?: string;
+          };
+          updatedBy?: {
+            id?: number;
+            documentId?: string;
+          };
+          locale?: string;
+          localizations?: {
+            id?: number;
+            documentId?: string;
+          }[];
+        };
+        folderPath?: string;
+        /** @format date-time */
+        createdAt?: string;
+        /** @format date-time */
+        updatedAt?: string;
+        /** @format date-time */
+        publishedAt?: string;
+        createdBy?: {
+          id?: number;
+          documentId?: string;
+        };
+        updatedBy?: {
+          id?: number;
+          documentId?: string;
+        };
+        locale?: string;
+        localizations?: {
+          id?: number;
+          documentId?: string;
+        }[];
+      };
+      /** @format date-time */
+      lastCheckedAt?: string;
+      protected?: boolean;
+      pause?: boolean;
+      description?: string;
+      tagline?: string;
+      faq?: any;
+      category?: string;
+      migration?: number;
+      clips?: {
+        id?: number;
+        documentId?: string;
+        title?: string;
+        description?: string;
+        hook_text?: string;
+        tags?: string;
+        viral_score?: number;
+        thumbnail_timestamp?: string;
+        duration?: number;
+        end?: string;
+        start?: string;
+        path?: string;
+        recording?: {
+          id?: number;
+          documentId?: string;
+        };
+        follower?: {
+          id?: number;
+          documentId?: string;
+        };
+        /** @format date-time */
+        createdAt?: string;
+        /** @format date-time */
+        updatedAt?: string;
+        /** @format date-time */
+        publishedAt?: string;
+        createdBy?: {
+          id?: number;
+          documentId?: string;
+        };
+        updatedBy?: {
+          id?: number;
+          documentId?: string;
+        };
+        locale?: string;
+        localizations?: {
+          id?: number;
+          documentId?: string;
+        }[];
+      }[];
+      memes?: {
+        id?: number;
+        documentId?: string;
+        start?: string;
+        end?: string;
+        title?: string;
+        duration?: number;
+        tags?: string;
+        viral_score?: number;
+        recording?: {
+          id?: number;
+          documentId?: string;
+        };
+        follower?: {
+          id?: number;
+          documentId?: string;
+        };
+        /** @format date-time */
+        createdAt?: string;
+        /** @format date-time */
+        updatedAt?: string;
+        /** @format date-time */
+        publishedAt?: string;
+        createdBy?: {
+          id?: number;
+          documentId?: string;
+        };
+        updatedBy?: {
+          id?: number;
+          documentId?: string;
+        };
+        locale?: string;
+        localizations?: {
+          id?: number;
+          documentId?: string;
+        }[];
+      }[];
+      /** @format date-time */
+      createdAt?: string;
+      /** @format date-time */
+      updatedAt?: string;
+      /** @format date-time */
+      publishedAt?: string;
+      createdBy?: {
+        id?: number;
+        documentId?: string;
+      };
+      updatedBy?: {
+        id?: number;
+        documentId?: string;
+      };
+      locale?: string;
+      localizations?: {
+        id?: number;
+        documentId?: string;
+      }[];
+    };
+    sources?: {
+      id?: number;
+      documentId?: string;
+      state?: AiRequestStateEnum;
+      executionId?: number;
+      /** @format date-time */
+      finishedAt?: string;
+      path?: string;
+      /** @format float */
+      duration?: number;
+      thumbnailInterval?: number;
+      thumbnailCols?: number;
+      videoOriginal?: VideosVideoComponent;
+      videoSmall?: VideosVideoComponent;
+      recording?: {
+        id?: number;
+        documentId?: string;
+      };
+      /** @format date-time */
+      createdAt?: string;
+      /** @format date-time */
+      updatedAt?: string;
+      /** @format date-time */
+      publishedAt?: string;
+      createdBy?: {
+        id?: number;
+        documentId?: string;
+      };
+      updatedBy?: {
+        id?: number;
+        documentId?: string;
+      };
+      locale?: string;
+      localizations?: {
+        id?: number;
+        documentId?: string;
+      }[];
+    }[];
+    clips?: {
+      id?: number;
+      documentId?: string;
+    }[];
+    ai_requests?: {
+      id?: number;
+      documentId?: string;
+      recording?: {
+        id?: number;
+        documentId?: string;
+      };
+      generateClips?: boolean;
+      generateMemes?: boolean;
+      generateProfile?: boolean;
+      state?: AiRequestStateEnum1;
+      ai_tasks?: {
+        id?: number;
+        documentId?: string;
+        ai_request?: {
+          id?: number;
+          documentId?: string;
+        };
+        type?: string;
+        state?: AiRequestStateEnum2;
+        output?: any;
+        executionId?: number;
+        /** @format date-time */
+        createdAt?: string;
+        /** @format date-time */
+        updatedAt?: string;
+        /** @format date-time */
+        publishedAt?: string;
+        createdBy?: {
+          id?: number;
+          documentId?: string;
+        };
+        updatedBy?: {
+          id?: number;
+          documentId?: string;
+        };
+        locale?: string;
+        localizations?: {
+          id?: number;
+          documentId?: string;
+        }[];
+      }[];
+      /** @format date-time */
+      createdAt?: string;
+      /** @format date-time */
+      updatedAt?: string;
+      /** @format date-time */
+      publishedAt?: string;
+      createdBy?: {
+        id?: number;
+        documentId?: string;
+      };
+      updatedBy?: {
+        id?: number;
+        documentId?: string;
+      };
+      locale?: string;
+      localizations?: {
+        id?: number;
+        documentId?: string;
+      }[];
+    }[];
+    memes?: {
+      id?: number;
+      documentId?: string;
+    }[];
+    /** @format date-time */
+    createdAt?: string;
+    /** @format date-time */
+    updatedAt?: string;
+    /** @format date-time */
+    publishedAt?: string;
+    createdBy?: {
+      id?: number;
+      documentId?: string;
+    };
+    updatedBy?: {
+      id?: number;
+      documentId?: string;
+    };
+    locale?: string;
+    localizations?: {
+      id?: number;
+      documentId?: string;
+    }[];
+  };
+  generateClips?: boolean;
+  generateMemes?: boolean;
+  generateProfile?: boolean;
+  state?: AiRequestStateEnum3;
+  ai_tasks?: {
+    id?: number;
+    documentId?: string;
+  }[];
+  /** @format date-time */
+  createdAt?: string;
+  /** @format date-time */
+  updatedAt?: string;
+  /** @format date-time */
+  publishedAt?: string;
+  createdBy?: {
+    id?: number;
+    documentId?: string;
+  };
+  updatedBy?: {
+    id?: number;
+    documentId?: string;
+  };
+  locale?: string;
+  localizations?: {
+    id?: number;
+    documentId?: string;
+  }[];
+}
+
+export interface AiRequestResponse {
+  data?: AiRequest;
+  meta?: object;
+}
+
+export interface VideosVideoComponent {
+  id?: number;
+  width?: number;
+  height?: number;
+  /**
+   * @pattern ^\d*$
+   * @example "123456789"
+   */
+  sizeBytes?: string;
+}
+
+export interface AiTaskRequest {
+  data: {
+    /** @example "string or id" */
+    ai_request?: number | string;
+    type?: string;
+    state?: AiTaskRequestStateEnum;
+    output?: any;
+    executionId?: number;
+    locale?: string;
+    localizations?: (number | string)[];
+  };
+}
+
+export interface AiTaskListResponse {
+  data?: AiTask[];
+  meta?: {
+    pagination?: {
+      page?: number;
+      /** @min 25 */
+      pageSize?: number;
+      /** @max 1 */
+      pageCount?: number;
+      total?: number;
+    };
+  };
+}
+
+export interface AiTask {
+  id?: number;
+  documentId?: string;
+  ai_request?: {
+    id?: number;
+    documentId?: string;
+    recording?: {
+      id?: number;
+      documentId?: string;
+      title?: string;
+      description?: string;
+      follower?: {
+        id?: number;
+        documentId?: string;
+        nickname?: string;
+        username?: string;
+        type?: AiTaskTypeEnum;
+        gender?: AiTaskGenderEnum;
+        countryCode?: string;
+        languageCode?: string;
+        avatar?: {
+          id?: number;
+          documentId?: string;
+          name?: string;
+          alternativeText?: string;
+          caption?: string;
+          width?: number;
+          height?: number;
+          formats?: any;
+          hash?: string;
+          ext?: string;
+          mime?: string;
+          /** @format float */
+          size?: number;
+          url?: string;
+          previewUrl?: string;
+          provider?: string;
+          provider_metadata?: any;
+          related?: {
+            id?: number;
+            documentId?: string;
+          }[];
+          folder?: {
+            id?: number;
+            documentId?: string;
+            name?: string;
+            pathId?: number;
+            parent?: {
+              id?: number;
+              documentId?: string;
+            };
+            children?: {
+              id?: number;
+              documentId?: string;
+            }[];
+            files?: {
+              id?: number;
+              documentId?: string;
+              name?: string;
+              alternativeText?: string;
+              caption?: string;
+              width?: number;
+              height?: number;
+              formats?: any;
+              hash?: string;
+              ext?: string;
+              mime?: string;
+              /** @format float */
+              size?: number;
+              url?: string;
+              previewUrl?: string;
+              provider?: string;
+              provider_metadata?: any;
+              related?: {
+                id?: number;
+                documentId?: string;
+              }[];
+              folder?: {
+                id?: number;
+                documentId?: string;
+              };
+              folderPath?: string;
+              /** @format date-time */
+              createdAt?: string;
+              /** @format date-time */
+              updatedAt?: string;
+              /** @format date-time */
+              publishedAt?: string;
+              createdBy?: {
+                id?: number;
+                documentId?: string;
+                firstname?: string;
+                lastname?: string;
+                username?: string;
+                /** @format email */
+                email?: string;
+                resetPasswordToken?: string;
+                registrationToken?: string;
+                isActive?: boolean;
+                roles?: {
+                  id?: number;
+                  documentId?: string;
+                  name?: string;
+                  code?: string;
+                  description?: string;
+                  users?: {
+                    id?: number;
+                    documentId?: string;
+                  }[];
+                  permissions?: {
+                    id?: number;
+                    documentId?: string;
+                    action?: string;
+                    actionParameters?: any;
+                    subject?: string;
+                    properties?: any;
+                    conditions?: any;
+                    role?: {
+                      id?: number;
+                      documentId?: string;
+                    };
+                    /** @format date-time */
+                    createdAt?: string;
+                    /** @format date-time */
+                    updatedAt?: string;
+                    /** @format date-time */
+                    publishedAt?: string;
+                    createdBy?: {
+                      id?: number;
+                      documentId?: string;
+                    };
+                    updatedBy?: {
+                      id?: number;
+                      documentId?: string;
+                    };
+                    locale?: string;
+                    localizations?: {
+                      id?: number;
+                      documentId?: string;
+                    }[];
+                  }[];
+                  /** @format date-time */
+                  createdAt?: string;
+                  /** @format date-time */
+                  updatedAt?: string;
+                  /** @format date-time */
+                  publishedAt?: string;
+                  createdBy?: {
+                    id?: number;
+                    documentId?: string;
+                  };
+                  updatedBy?: {
+                    id?: number;
+                    documentId?: string;
+                  };
+                  locale?: string;
+                  localizations?: {
+                    id?: number;
+                    documentId?: string;
+                  }[];
+                }[];
+                blocked?: boolean;
+                preferedLanguage?: string;
+                /** @format date-time */
+                createdAt?: string;
+                /** @format date-time */
+                updatedAt?: string;
+                /** @format date-time */
+                publishedAt?: string;
+                createdBy?: {
+                  id?: number;
+                  documentId?: string;
+                };
+                updatedBy?: {
+                  id?: number;
+                  documentId?: string;
+                };
+                locale?: string;
+                localizations?: {
+                  id?: number;
+                  documentId?: string;
+                }[];
+              };
+              updatedBy?: {
+                id?: number;
+                documentId?: string;
+              };
+              locale?: string;
+              localizations?: {
+                id?: number;
+                documentId?: string;
+              }[];
+            }[];
+            path?: string;
+            /** @format date-time */
+            createdAt?: string;
+            /** @format date-time */
+            updatedAt?: string;
+            /** @format date-time */
+            publishedAt?: string;
+            createdBy?: {
+              id?: number;
+              documentId?: string;
+            };
+            updatedBy?: {
+              id?: number;
+              documentId?: string;
+            };
+            locale?: string;
+            localizations?: {
+              id?: number;
+              documentId?: string;
+            }[];
+          };
+          folderPath?: string;
+          /** @format date-time */
+          createdAt?: string;
+          /** @format date-time */
+          updatedAt?: string;
+          /** @format date-time */
+          publishedAt?: string;
+          createdBy?: {
+            id?: number;
+            documentId?: string;
+          };
+          updatedBy?: {
+            id?: number;
+            documentId?: string;
+          };
+          locale?: string;
+          localizations?: {
+            id?: number;
+            documentId?: string;
+          }[];
+        };
+        /** @format date-time */
+        lastCheckedAt?: string;
+        protected?: boolean;
+        pause?: boolean;
+        description?: string;
+        tagline?: string;
+        faq?: any;
+        category?: string;
+        migration?: number;
+        clips?: {
+          id?: number;
+          documentId?: string;
+          title?: string;
+          description?: string;
+          hook_text?: string;
+          tags?: string;
+          viral_score?: number;
+          thumbnail_timestamp?: string;
+          duration?: number;
+          end?: string;
+          start?: string;
+          path?: string;
+          recording?: {
+            id?: number;
+            documentId?: string;
+          };
+          follower?: {
+            id?: number;
+            documentId?: string;
+          };
+          /** @format date-time */
+          createdAt?: string;
+          /** @format date-time */
+          updatedAt?: string;
+          /** @format date-time */
+          publishedAt?: string;
+          createdBy?: {
+            id?: number;
+            documentId?: string;
+          };
+          updatedBy?: {
+            id?: number;
+            documentId?: string;
+          };
+          locale?: string;
+          localizations?: {
+            id?: number;
+            documentId?: string;
+          }[];
+        }[];
+        memes?: {
+          id?: number;
+          documentId?: string;
+          start?: string;
+          end?: string;
+          title?: string;
+          duration?: number;
+          tags?: string;
+          viral_score?: number;
+          recording?: {
+            id?: number;
+            documentId?: string;
+          };
+          follower?: {
+            id?: number;
+            documentId?: string;
+          };
+          /** @format date-time */
+          createdAt?: string;
+          /** @format date-time */
+          updatedAt?: string;
+          /** @format date-time */
+          publishedAt?: string;
+          createdBy?: {
+            id?: number;
+            documentId?: string;
+          };
+          updatedBy?: {
+            id?: number;
+            documentId?: string;
+          };
+          locale?: string;
+          localizations?: {
+            id?: number;
+            documentId?: string;
+          }[];
+        }[];
+        /** @format date-time */
+        createdAt?: string;
+        /** @format date-time */
+        updatedAt?: string;
+        /** @format date-time */
+        publishedAt?: string;
+        createdBy?: {
+          id?: number;
+          documentId?: string;
+        };
+        updatedBy?: {
+          id?: number;
+          documentId?: string;
+        };
+        locale?: string;
+        localizations?: {
+          id?: number;
+          documentId?: string;
+        }[];
+      };
+      sources?: {
+        id?: number;
+        documentId?: string;
+        state?: AiTaskStateEnum;
+        executionId?: number;
+        /** @format date-time */
+        finishedAt?: string;
+        path?: string;
+        /** @format float */
+        duration?: number;
+        thumbnailInterval?: number;
+        thumbnailCols?: number;
+        videoOriginal?: VideosVideoComponent;
+        videoSmall?: VideosVideoComponent;
+        recording?: {
+          id?: number;
+          documentId?: string;
+        };
+        /** @format date-time */
+        createdAt?: string;
+        /** @format date-time */
+        updatedAt?: string;
+        /** @format date-time */
+        publishedAt?: string;
+        createdBy?: {
+          id?: number;
+          documentId?: string;
+        };
+        updatedBy?: {
+          id?: number;
+          documentId?: string;
+        };
+        locale?: string;
+        localizations?: {
+          id?: number;
+          documentId?: string;
+        }[];
+      }[];
+      clips?: {
+        id?: number;
+        documentId?: string;
+      }[];
+      ai_requests?: {
+        id?: number;
+        documentId?: string;
+      }[];
+      memes?: {
+        id?: number;
+        documentId?: string;
+      }[];
+      /** @format date-time */
+      createdAt?: string;
+      /** @format date-time */
+      updatedAt?: string;
+      /** @format date-time */
+      publishedAt?: string;
+      createdBy?: {
+        id?: number;
+        documentId?: string;
+      };
+      updatedBy?: {
+        id?: number;
+        documentId?: string;
+      };
+      locale?: string;
+      localizations?: {
+        id?: number;
+        documentId?: string;
+      }[];
+    };
+    generateClips?: boolean;
+    generateMemes?: boolean;
+    generateProfile?: boolean;
+    state?: AiTaskStateEnum1;
+    ai_tasks?: {
+      id?: number;
+      documentId?: string;
+      ai_request?: {
+        id?: number;
+        documentId?: string;
+      };
+      type?: string;
+      state?: AiTaskStateEnum2;
+      output?: any;
+      executionId?: number;
+      /** @format date-time */
+      createdAt?: string;
+      /** @format date-time */
+      updatedAt?: string;
+      /** @format date-time */
+      publishedAt?: string;
+      createdBy?: {
+        id?: number;
+        documentId?: string;
+      };
+      updatedBy?: {
+        id?: number;
+        documentId?: string;
+      };
+      locale?: string;
+      localizations?: {
+        id?: number;
+        documentId?: string;
+      }[];
+    }[];
+    /** @format date-time */
+    createdAt?: string;
+    /** @format date-time */
+    updatedAt?: string;
+    /** @format date-time */
+    publishedAt?: string;
+    createdBy?: {
+      id?: number;
+      documentId?: string;
+    };
+    updatedBy?: {
+      id?: number;
+      documentId?: string;
+    };
+    locale?: string;
+    localizations?: {
+      id?: number;
+      documentId?: string;
+    }[];
+  };
+  type?: string;
+  state?: AiTaskStateEnum3;
+  output?: any;
+  executionId?: number;
+  /** @format date-time */
+  createdAt?: string;
+  /** @format date-time */
+  updatedAt?: string;
+  /** @format date-time */
+  publishedAt?: string;
+  createdBy?: {
+    id?: number;
+    documentId?: string;
+  };
+  updatedBy?: {
+    id?: number;
+    documentId?: string;
+  };
+  locale?: string;
+  localizations?: {
+    id?: number;
+    documentId?: string;
+  }[];
+}
+
+export interface AiTaskResponse {
+  data?: AiTask;
+  meta?: object;
+}
+
 export interface ArticleRequest {
   data: {
     title: string;
@@ -427,9 +1491,7 @@ export interface Clip {
       username?: string;
       type?: ClipTypeEnum;
       gender?: ClipGenderEnum;
-      country?: string;
       countryCode?: string;
-      language?: string;
       languageCode?: string;
       avatar?: {
         id?: number;
@@ -696,6 +1758,43 @@ export interface Clip {
           documentId?: string;
         }[];
       }[];
+      memes?: {
+        id?: number;
+        documentId?: string;
+        start?: string;
+        end?: string;
+        title?: string;
+        duration?: number;
+        tags?: string;
+        viral_score?: number;
+        recording?: {
+          id?: number;
+          documentId?: string;
+        };
+        follower?: {
+          id?: number;
+          documentId?: string;
+        };
+        /** @format date-time */
+        createdAt?: string;
+        /** @format date-time */
+        updatedAt?: string;
+        /** @format date-time */
+        publishedAt?: string;
+        createdBy?: {
+          id?: number;
+          documentId?: string;
+        };
+        updatedBy?: {
+          id?: number;
+          documentId?: string;
+        };
+        locale?: string;
+        localizations?: {
+          id?: number;
+          documentId?: string;
+        }[];
+      }[];
       /** @format date-time */
       createdAt?: string;
       /** @format date-time */
@@ -758,6 +1857,72 @@ export interface Clip {
       id?: number;
       documentId?: string;
     }[];
+    ai_requests?: {
+      id?: number;
+      documentId?: string;
+      recording?: {
+        id?: number;
+        documentId?: string;
+      };
+      generateClips?: boolean;
+      generateMemes?: boolean;
+      generateProfile?: boolean;
+      state?: ClipStateEnum1;
+      ai_tasks?: {
+        id?: number;
+        documentId?: string;
+        ai_request?: {
+          id?: number;
+          documentId?: string;
+        };
+        type?: string;
+        state?: ClipStateEnum2;
+        output?: any;
+        executionId?: number;
+        /** @format date-time */
+        createdAt?: string;
+        /** @format date-time */
+        updatedAt?: string;
+        /** @format date-time */
+        publishedAt?: string;
+        createdBy?: {
+          id?: number;
+          documentId?: string;
+        };
+        updatedBy?: {
+          id?: number;
+          documentId?: string;
+        };
+        locale?: string;
+        localizations?: {
+          id?: number;
+          documentId?: string;
+        }[];
+      }[];
+      /** @format date-time */
+      createdAt?: string;
+      /** @format date-time */
+      updatedAt?: string;
+      /** @format date-time */
+      publishedAt?: string;
+      createdBy?: {
+        id?: number;
+        documentId?: string;
+      };
+      updatedBy?: {
+        id?: number;
+        documentId?: string;
+      };
+      locale?: string;
+      localizations?: {
+        id?: number;
+        documentId?: string;
+      }[];
+    }[];
+    memes?: {
+      id?: number;
+      documentId?: string;
+    }[];
     /** @format date-time */
     createdAt?: string;
     /** @format date-time */
@@ -806,17 +1971,6 @@ export interface Clip {
 export interface ClipResponse {
   data?: Clip;
   meta?: object;
-}
-
-export interface VideosVideoComponent {
-  id?: number;
-  width?: number;
-  height?: number;
-  /**
-   * @pattern ^\d*$
-   * @example "123456789"
-   */
-  sizeBytes?: string;
 }
 
 export interface EmailTemplateRequest {
@@ -997,9 +2151,7 @@ export interface FollowerRequest {
     username: string;
     type: FollowerRequestTypeEnum;
     gender?: FollowerRequestGenderEnum;
-    country?: string;
     countryCode?: string;
-    language?: string;
     languageCode?: string;
     /** @example "string or id" */
     avatar?: number | string;
@@ -1013,6 +2165,7 @@ export interface FollowerRequest {
     category?: string;
     migration?: number;
     clips?: (number | string)[];
+    memes?: (number | string)[];
     locale?: string;
     localizations?: (number | string)[];
   };
@@ -1039,9 +2192,7 @@ export interface Follower {
   username: string;
   type: FollowerTypeEnum;
   gender?: FollowerGenderEnum;
-  country?: string;
   countryCode?: string;
-  language?: string;
   languageCode?: string;
   avatar?: {
     id?: number;
@@ -1292,9 +2443,7 @@ export interface Follower {
         username?: string;
         type?: FollowerTypeEnum;
         gender?: FollowerGenderEnum1;
-        country?: string;
         countryCode?: string;
-        language?: string;
         languageCode?: string;
         avatar?: {
           id?: number;
@@ -1355,6 +2504,43 @@ export interface Follower {
         clips?: {
           id?: number;
           documentId?: string;
+        }[];
+        memes?: {
+          id?: number;
+          documentId?: string;
+          start?: string;
+          end?: string;
+          title?: string;
+          duration?: number;
+          tags?: string;
+          viral_score?: number;
+          recording?: {
+            id?: number;
+            documentId?: string;
+          };
+          follower?: {
+            id?: number;
+            documentId?: string;
+          };
+          /** @format date-time */
+          createdAt?: string;
+          /** @format date-time */
+          updatedAt?: string;
+          /** @format date-time */
+          publishedAt?: string;
+          createdBy?: {
+            id?: number;
+            documentId?: string;
+          };
+          updatedBy?: {
+            id?: number;
+            documentId?: string;
+          };
+          locale?: string;
+          localizations?: {
+            id?: number;
+            documentId?: string;
+          }[];
         }[];
         /** @format date-time */
         createdAt?: string;
@@ -1418,6 +2604,72 @@ export interface Follower {
         id?: number;
         documentId?: string;
       }[];
+      ai_requests?: {
+        id?: number;
+        documentId?: string;
+        recording?: {
+          id?: number;
+          documentId?: string;
+        };
+        generateClips?: boolean;
+        generateMemes?: boolean;
+        generateProfile?: boolean;
+        state?: FollowerStateEnum1;
+        ai_tasks?: {
+          id?: number;
+          documentId?: string;
+          ai_request?: {
+            id?: number;
+            documentId?: string;
+          };
+          type?: string;
+          state?: FollowerStateEnum2;
+          output?: any;
+          executionId?: number;
+          /** @format date-time */
+          createdAt?: string;
+          /** @format date-time */
+          updatedAt?: string;
+          /** @format date-time */
+          publishedAt?: string;
+          createdBy?: {
+            id?: number;
+            documentId?: string;
+          };
+          updatedBy?: {
+            id?: number;
+            documentId?: string;
+          };
+          locale?: string;
+          localizations?: {
+            id?: number;
+            documentId?: string;
+          }[];
+        }[];
+        /** @format date-time */
+        createdAt?: string;
+        /** @format date-time */
+        updatedAt?: string;
+        /** @format date-time */
+        publishedAt?: string;
+        createdBy?: {
+          id?: number;
+          documentId?: string;
+        };
+        updatedBy?: {
+          id?: number;
+          documentId?: string;
+        };
+        locale?: string;
+        localizations?: {
+          id?: number;
+          documentId?: string;
+        }[];
+      }[];
+      memes?: {
+        id?: number;
+        documentId?: string;
+      }[];
       /** @format date-time */
       createdAt?: string;
       /** @format date-time */
@@ -1462,6 +2714,10 @@ export interface Follower {
       documentId?: string;
     }[];
   }[];
+  memes?: {
+    id?: number;
+    documentId?: string;
+  }[];
   /** @format date-time */
   createdAt?: string;
   /** @format date-time */
@@ -1485,6 +2741,540 @@ export interface Follower {
 
 export interface FollowerResponse {
   data?: Follower;
+  meta?: object;
+}
+
+export interface MemeRequest {
+  data: {
+    start?: string;
+    end?: string;
+    title?: string;
+    duration?: number;
+    tags?: string;
+    viral_score?: number;
+    /** @example "string or id" */
+    recording?: number | string;
+    /** @example "string or id" */
+    follower?: number | string;
+    locale?: string;
+    localizations?: (number | string)[];
+  };
+}
+
+export interface MemeListResponse {
+  data?: Meme[];
+  meta?: {
+    pagination?: {
+      page?: number;
+      /** @min 25 */
+      pageSize?: number;
+      /** @max 1 */
+      pageCount?: number;
+      total?: number;
+    };
+  };
+}
+
+export interface Meme {
+  id?: number;
+  documentId?: string;
+  start?: string;
+  end?: string;
+  title?: string;
+  duration?: number;
+  tags?: string;
+  viral_score?: number;
+  recording?: {
+    id?: number;
+    documentId?: string;
+    title?: string;
+    description?: string;
+    follower?: {
+      id?: number;
+      documentId?: string;
+      nickname?: string;
+      username?: string;
+      type?: MemeTypeEnum;
+      gender?: MemeGenderEnum;
+      countryCode?: string;
+      languageCode?: string;
+      avatar?: {
+        id?: number;
+        documentId?: string;
+        name?: string;
+        alternativeText?: string;
+        caption?: string;
+        width?: number;
+        height?: number;
+        formats?: any;
+        hash?: string;
+        ext?: string;
+        mime?: string;
+        /** @format float */
+        size?: number;
+        url?: string;
+        previewUrl?: string;
+        provider?: string;
+        provider_metadata?: any;
+        related?: {
+          id?: number;
+          documentId?: string;
+        }[];
+        folder?: {
+          id?: number;
+          documentId?: string;
+          name?: string;
+          pathId?: number;
+          parent?: {
+            id?: number;
+            documentId?: string;
+          };
+          children?: {
+            id?: number;
+            documentId?: string;
+          }[];
+          files?: {
+            id?: number;
+            documentId?: string;
+            name?: string;
+            alternativeText?: string;
+            caption?: string;
+            width?: number;
+            height?: number;
+            formats?: any;
+            hash?: string;
+            ext?: string;
+            mime?: string;
+            /** @format float */
+            size?: number;
+            url?: string;
+            previewUrl?: string;
+            provider?: string;
+            provider_metadata?: any;
+            related?: {
+              id?: number;
+              documentId?: string;
+            }[];
+            folder?: {
+              id?: number;
+              documentId?: string;
+            };
+            folderPath?: string;
+            /** @format date-time */
+            createdAt?: string;
+            /** @format date-time */
+            updatedAt?: string;
+            /** @format date-time */
+            publishedAt?: string;
+            createdBy?: {
+              id?: number;
+              documentId?: string;
+              firstname?: string;
+              lastname?: string;
+              username?: string;
+              /** @format email */
+              email?: string;
+              resetPasswordToken?: string;
+              registrationToken?: string;
+              isActive?: boolean;
+              roles?: {
+                id?: number;
+                documentId?: string;
+                name?: string;
+                code?: string;
+                description?: string;
+                users?: {
+                  id?: number;
+                  documentId?: string;
+                }[];
+                permissions?: {
+                  id?: number;
+                  documentId?: string;
+                  action?: string;
+                  actionParameters?: any;
+                  subject?: string;
+                  properties?: any;
+                  conditions?: any;
+                  role?: {
+                    id?: number;
+                    documentId?: string;
+                  };
+                  /** @format date-time */
+                  createdAt?: string;
+                  /** @format date-time */
+                  updatedAt?: string;
+                  /** @format date-time */
+                  publishedAt?: string;
+                  createdBy?: {
+                    id?: number;
+                    documentId?: string;
+                  };
+                  updatedBy?: {
+                    id?: number;
+                    documentId?: string;
+                  };
+                  locale?: string;
+                  localizations?: {
+                    id?: number;
+                    documentId?: string;
+                  }[];
+                }[];
+                /** @format date-time */
+                createdAt?: string;
+                /** @format date-time */
+                updatedAt?: string;
+                /** @format date-time */
+                publishedAt?: string;
+                createdBy?: {
+                  id?: number;
+                  documentId?: string;
+                };
+                updatedBy?: {
+                  id?: number;
+                  documentId?: string;
+                };
+                locale?: string;
+                localizations?: {
+                  id?: number;
+                  documentId?: string;
+                }[];
+              }[];
+              blocked?: boolean;
+              preferedLanguage?: string;
+              /** @format date-time */
+              createdAt?: string;
+              /** @format date-time */
+              updatedAt?: string;
+              /** @format date-time */
+              publishedAt?: string;
+              createdBy?: {
+                id?: number;
+                documentId?: string;
+              };
+              updatedBy?: {
+                id?: number;
+                documentId?: string;
+              };
+              locale?: string;
+              localizations?: {
+                id?: number;
+                documentId?: string;
+              }[];
+            };
+            updatedBy?: {
+              id?: number;
+              documentId?: string;
+            };
+            locale?: string;
+            localizations?: {
+              id?: number;
+              documentId?: string;
+            }[];
+          }[];
+          path?: string;
+          /** @format date-time */
+          createdAt?: string;
+          /** @format date-time */
+          updatedAt?: string;
+          /** @format date-time */
+          publishedAt?: string;
+          createdBy?: {
+            id?: number;
+            documentId?: string;
+          };
+          updatedBy?: {
+            id?: number;
+            documentId?: string;
+          };
+          locale?: string;
+          localizations?: {
+            id?: number;
+            documentId?: string;
+          }[];
+        };
+        folderPath?: string;
+        /** @format date-time */
+        createdAt?: string;
+        /** @format date-time */
+        updatedAt?: string;
+        /** @format date-time */
+        publishedAt?: string;
+        createdBy?: {
+          id?: number;
+          documentId?: string;
+        };
+        updatedBy?: {
+          id?: number;
+          documentId?: string;
+        };
+        locale?: string;
+        localizations?: {
+          id?: number;
+          documentId?: string;
+        }[];
+      };
+      /** @format date-time */
+      lastCheckedAt?: string;
+      protected?: boolean;
+      pause?: boolean;
+      description?: string;
+      tagline?: string;
+      faq?: any;
+      category?: string;
+      migration?: number;
+      clips?: {
+        id?: number;
+        documentId?: string;
+        title?: string;
+        description?: string;
+        hook_text?: string;
+        tags?: string;
+        viral_score?: number;
+        thumbnail_timestamp?: string;
+        duration?: number;
+        end?: string;
+        start?: string;
+        path?: string;
+        recording?: {
+          id?: number;
+          documentId?: string;
+        };
+        follower?: {
+          id?: number;
+          documentId?: string;
+        };
+        /** @format date-time */
+        createdAt?: string;
+        /** @format date-time */
+        updatedAt?: string;
+        /** @format date-time */
+        publishedAt?: string;
+        createdBy?: {
+          id?: number;
+          documentId?: string;
+        };
+        updatedBy?: {
+          id?: number;
+          documentId?: string;
+        };
+        locale?: string;
+        localizations?: {
+          id?: number;
+          documentId?: string;
+        }[];
+      }[];
+      memes?: {
+        id?: number;
+        documentId?: string;
+        start?: string;
+        end?: string;
+        title?: string;
+        duration?: number;
+        tags?: string;
+        viral_score?: number;
+        recording?: {
+          id?: number;
+          documentId?: string;
+        };
+        follower?: {
+          id?: number;
+          documentId?: string;
+        };
+        /** @format date-time */
+        createdAt?: string;
+        /** @format date-time */
+        updatedAt?: string;
+        /** @format date-time */
+        publishedAt?: string;
+        createdBy?: {
+          id?: number;
+          documentId?: string;
+        };
+        updatedBy?: {
+          id?: number;
+          documentId?: string;
+        };
+        locale?: string;
+        localizations?: {
+          id?: number;
+          documentId?: string;
+        }[];
+      }[];
+      /** @format date-time */
+      createdAt?: string;
+      /** @format date-time */
+      updatedAt?: string;
+      /** @format date-time */
+      publishedAt?: string;
+      createdBy?: {
+        id?: number;
+        documentId?: string;
+      };
+      updatedBy?: {
+        id?: number;
+        documentId?: string;
+      };
+      locale?: string;
+      localizations?: {
+        id?: number;
+        documentId?: string;
+      }[];
+    };
+    sources?: {
+      id?: number;
+      documentId?: string;
+      state?: MemeStateEnum;
+      executionId?: number;
+      /** @format date-time */
+      finishedAt?: string;
+      path?: string;
+      /** @format float */
+      duration?: number;
+      thumbnailInterval?: number;
+      thumbnailCols?: number;
+      videoOriginal?: VideosVideoComponent;
+      videoSmall?: VideosVideoComponent;
+      recording?: {
+        id?: number;
+        documentId?: string;
+      };
+      /** @format date-time */
+      createdAt?: string;
+      /** @format date-time */
+      updatedAt?: string;
+      /** @format date-time */
+      publishedAt?: string;
+      createdBy?: {
+        id?: number;
+        documentId?: string;
+      };
+      updatedBy?: {
+        id?: number;
+        documentId?: string;
+      };
+      locale?: string;
+      localizations?: {
+        id?: number;
+        documentId?: string;
+      }[];
+    }[];
+    clips?: {
+      id?: number;
+      documentId?: string;
+    }[];
+    ai_requests?: {
+      id?: number;
+      documentId?: string;
+      recording?: {
+        id?: number;
+        documentId?: string;
+      };
+      generateClips?: boolean;
+      generateMemes?: boolean;
+      generateProfile?: boolean;
+      state?: MemeStateEnum1;
+      ai_tasks?: {
+        id?: number;
+        documentId?: string;
+        ai_request?: {
+          id?: number;
+          documentId?: string;
+        };
+        type?: string;
+        state?: MemeStateEnum2;
+        output?: any;
+        executionId?: number;
+        /** @format date-time */
+        createdAt?: string;
+        /** @format date-time */
+        updatedAt?: string;
+        /** @format date-time */
+        publishedAt?: string;
+        createdBy?: {
+          id?: number;
+          documentId?: string;
+        };
+        updatedBy?: {
+          id?: number;
+          documentId?: string;
+        };
+        locale?: string;
+        localizations?: {
+          id?: number;
+          documentId?: string;
+        }[];
+      }[];
+      /** @format date-time */
+      createdAt?: string;
+      /** @format date-time */
+      updatedAt?: string;
+      /** @format date-time */
+      publishedAt?: string;
+      createdBy?: {
+        id?: number;
+        documentId?: string;
+      };
+      updatedBy?: {
+        id?: number;
+        documentId?: string;
+      };
+      locale?: string;
+      localizations?: {
+        id?: number;
+        documentId?: string;
+      }[];
+    }[];
+    memes?: {
+      id?: number;
+      documentId?: string;
+    }[];
+    /** @format date-time */
+    createdAt?: string;
+    /** @format date-time */
+    updatedAt?: string;
+    /** @format date-time */
+    publishedAt?: string;
+    createdBy?: {
+      id?: number;
+      documentId?: string;
+    };
+    updatedBy?: {
+      id?: number;
+      documentId?: string;
+    };
+    locale?: string;
+    localizations?: {
+      id?: number;
+      documentId?: string;
+    }[];
+  };
+  follower?: {
+    id?: number;
+    documentId?: string;
+  };
+  /** @format date-time */
+  createdAt?: string;
+  /** @format date-time */
+  updatedAt?: string;
+  /** @format date-time */
+  publishedAt?: string;
+  createdBy?: {
+    id?: number;
+    documentId?: string;
+  };
+  updatedBy?: {
+    id?: number;
+    documentId?: string;
+  };
+  locale?: string;
+  localizations?: {
+    id?: number;
+    documentId?: string;
+  }[];
+}
+
+export interface MemeResponse {
+  data?: Meme;
   meta?: object;
 }
 
@@ -1688,9 +3478,7 @@ export interface Message {
       username?: string;
       type?: MessageTypeEnum;
       gender?: MessageGenderEnum;
-      country?: string;
       countryCode?: string;
-      language?: string;
       languageCode?: string;
       avatar?: {
         id?: number;
@@ -1889,6 +3677,105 @@ export interface Message {
             id?: number;
             documentId?: string;
           }[];
+          ai_requests?: {
+            id?: number;
+            documentId?: string;
+            recording?: {
+              id?: number;
+              documentId?: string;
+            };
+            generateClips?: boolean;
+            generateMemes?: boolean;
+            generateProfile?: boolean;
+            state?: MessageStateEnum1;
+            ai_tasks?: {
+              id?: number;
+              documentId?: string;
+              ai_request?: {
+                id?: number;
+                documentId?: string;
+              };
+              type?: string;
+              state?: MessageStateEnum2;
+              output?: any;
+              executionId?: number;
+              /** @format date-time */
+              createdAt?: string;
+              /** @format date-time */
+              updatedAt?: string;
+              /** @format date-time */
+              publishedAt?: string;
+              createdBy?: {
+                id?: number;
+                documentId?: string;
+              };
+              updatedBy?: {
+                id?: number;
+                documentId?: string;
+              };
+              locale?: string;
+              localizations?: {
+                id?: number;
+                documentId?: string;
+              }[];
+            }[];
+            /** @format date-time */
+            createdAt?: string;
+            /** @format date-time */
+            updatedAt?: string;
+            /** @format date-time */
+            publishedAt?: string;
+            createdBy?: {
+              id?: number;
+              documentId?: string;
+            };
+            updatedBy?: {
+              id?: number;
+              documentId?: string;
+            };
+            locale?: string;
+            localizations?: {
+              id?: number;
+              documentId?: string;
+            }[];
+          }[];
+          memes?: {
+            id?: number;
+            documentId?: string;
+            start?: string;
+            end?: string;
+            title?: string;
+            duration?: number;
+            tags?: string;
+            viral_score?: number;
+            recording?: {
+              id?: number;
+              documentId?: string;
+            };
+            follower?: {
+              id?: number;
+              documentId?: string;
+            };
+            /** @format date-time */
+            createdAt?: string;
+            /** @format date-time */
+            updatedAt?: string;
+            /** @format date-time */
+            publishedAt?: string;
+            createdBy?: {
+              id?: number;
+              documentId?: string;
+            };
+            updatedBy?: {
+              id?: number;
+              documentId?: string;
+            };
+            locale?: string;
+            localizations?: {
+              id?: number;
+              documentId?: string;
+            }[];
+          }[];
           /** @format date-time */
           createdAt?: string;
           /** @format date-time */
@@ -1932,6 +3819,10 @@ export interface Message {
           id?: number;
           documentId?: string;
         }[];
+      }[];
+      memes?: {
+        id?: number;
+        documentId?: string;
       }[];
       /** @format date-time */
       createdAt?: string;
@@ -2039,6 +3930,8 @@ export interface RecordingRequest {
     follower?: number | string;
     sources?: (number | string)[];
     clips?: (number | string)[];
+    ai_requests?: (number | string)[];
+    memes?: (number | string)[];
     locale?: string;
     localizations?: (number | string)[];
   };
@@ -2070,9 +3963,7 @@ export interface Recording {
     username?: string;
     type?: FollowerTypeEnum;
     gender?: RecordingGenderEnum;
-    country?: string;
     countryCode?: string;
-    language?: string;
     languageCode?: string;
     avatar?: {
       id?: number;
@@ -2362,6 +4253,105 @@ export interface Recording {
           id?: number;
           documentId?: string;
         }[];
+        ai_requests?: {
+          id?: number;
+          documentId?: string;
+          recording?: {
+            id?: number;
+            documentId?: string;
+          };
+          generateClips?: boolean;
+          generateMemes?: boolean;
+          generateProfile?: boolean;
+          state?: RecordingStateEnum1;
+          ai_tasks?: {
+            id?: number;
+            documentId?: string;
+            ai_request?: {
+              id?: number;
+              documentId?: string;
+            };
+            type?: string;
+            state?: RecordingStateEnum2;
+            output?: any;
+            executionId?: number;
+            /** @format date-time */
+            createdAt?: string;
+            /** @format date-time */
+            updatedAt?: string;
+            /** @format date-time */
+            publishedAt?: string;
+            createdBy?: {
+              id?: number;
+              documentId?: string;
+            };
+            updatedBy?: {
+              id?: number;
+              documentId?: string;
+            };
+            locale?: string;
+            localizations?: {
+              id?: number;
+              documentId?: string;
+            }[];
+          }[];
+          /** @format date-time */
+          createdAt?: string;
+          /** @format date-time */
+          updatedAt?: string;
+          /** @format date-time */
+          publishedAt?: string;
+          createdBy?: {
+            id?: number;
+            documentId?: string;
+          };
+          updatedBy?: {
+            id?: number;
+            documentId?: string;
+          };
+          locale?: string;
+          localizations?: {
+            id?: number;
+            documentId?: string;
+          }[];
+        }[];
+        memes?: {
+          id?: number;
+          documentId?: string;
+          start?: string;
+          end?: string;
+          title?: string;
+          duration?: number;
+          tags?: string;
+          viral_score?: number;
+          recording?: {
+            id?: number;
+            documentId?: string;
+          };
+          follower?: {
+            id?: number;
+            documentId?: string;
+          };
+          /** @format date-time */
+          createdAt?: string;
+          /** @format date-time */
+          updatedAt?: string;
+          /** @format date-time */
+          publishedAt?: string;
+          createdBy?: {
+            id?: number;
+            documentId?: string;
+          };
+          updatedBy?: {
+            id?: number;
+            documentId?: string;
+          };
+          locale?: string;
+          localizations?: {
+            id?: number;
+            documentId?: string;
+          }[];
+        }[];
         /** @format date-time */
         createdAt?: string;
         /** @format date-time */
@@ -2406,6 +4396,10 @@ export interface Recording {
         documentId?: string;
       }[];
     }[];
+    memes?: {
+      id?: number;
+      documentId?: string;
+    }[];
     /** @format date-time */
     createdAt?: string;
     /** @format date-time */
@@ -2427,6 +4421,14 @@ export interface Recording {
     }[];
   };
   clips?: {
+    id?: number;
+    documentId?: string;
+  }[];
+  ai_requests?: {
+    id?: number;
+    documentId?: string;
+  }[];
+  memes?: {
     id?: number;
     documentId?: string;
   }[];
@@ -2517,9 +4519,7 @@ export interface Source {
       username?: string;
       type?: SourceTypeEnum;
       gender?: SourceGenderEnum;
-      country?: string;
       countryCode?: string;
-      language?: string;
       languageCode?: string;
       avatar?: {
         id?: number;
@@ -2786,6 +4786,43 @@ export interface Source {
           documentId?: string;
         }[];
       }[];
+      memes?: {
+        id?: number;
+        documentId?: string;
+        start?: string;
+        end?: string;
+        title?: string;
+        duration?: number;
+        tags?: string;
+        viral_score?: number;
+        recording?: {
+          id?: number;
+          documentId?: string;
+        };
+        follower?: {
+          id?: number;
+          documentId?: string;
+        };
+        /** @format date-time */
+        createdAt?: string;
+        /** @format date-time */
+        updatedAt?: string;
+        /** @format date-time */
+        publishedAt?: string;
+        createdBy?: {
+          id?: number;
+          documentId?: string;
+        };
+        updatedBy?: {
+          id?: number;
+          documentId?: string;
+        };
+        locale?: string;
+        localizations?: {
+          id?: number;
+          documentId?: string;
+        }[];
+      }[];
       /** @format date-time */
       createdAt?: string;
       /** @format date-time */
@@ -2845,6 +4882,72 @@ export interface Source {
       }[];
     }[];
     clips?: {
+      id?: number;
+      documentId?: string;
+    }[];
+    ai_requests?: {
+      id?: number;
+      documentId?: string;
+      recording?: {
+        id?: number;
+        documentId?: string;
+      };
+      generateClips?: boolean;
+      generateMemes?: boolean;
+      generateProfile?: boolean;
+      state?: SourceStateEnum2;
+      ai_tasks?: {
+        id?: number;
+        documentId?: string;
+        ai_request?: {
+          id?: number;
+          documentId?: string;
+        };
+        type?: string;
+        state?: SourceStateEnum3;
+        output?: any;
+        executionId?: number;
+        /** @format date-time */
+        createdAt?: string;
+        /** @format date-time */
+        updatedAt?: string;
+        /** @format date-time */
+        publishedAt?: string;
+        createdBy?: {
+          id?: number;
+          documentId?: string;
+        };
+        updatedBy?: {
+          id?: number;
+          documentId?: string;
+        };
+        locale?: string;
+        localizations?: {
+          id?: number;
+          documentId?: string;
+        }[];
+      }[];
+      /** @format date-time */
+      createdAt?: string;
+      /** @format date-time */
+      updatedAt?: string;
+      /** @format date-time */
+      publishedAt?: string;
+      createdBy?: {
+        id?: number;
+        documentId?: string;
+      };
+      updatedBy?: {
+        id?: number;
+        documentId?: string;
+      };
+      locale?: string;
+      localizations?: {
+        id?: number;
+        documentId?: string;
+      }[];
+    }[];
+    memes?: {
       id?: number;
       documentId?: string;
     }[];
@@ -3017,6 +5120,104 @@ export interface FiltersResponse {
   types?: FilterOption[];
 }
 
+export enum AiRequestRequestStateEnum {
+  Pending = "pending",
+  Processing = "processing",
+  Completed = "completed",
+  Failed = "failed",
+}
+
+export enum AiRequestTypeEnum {
+  Tiktok = "tiktok",
+  Twitch = "twitch",
+  Kick = "kick",
+  Youtube = "youtube",
+  Afreecatv = "afreecatv",
+  Pandalive = "pandalive",
+}
+
+export enum AiRequestGenderEnum {
+  Male = "male",
+  Female = "female",
+  Unknown = "unknown",
+}
+
+export enum AiRequestStateEnum {
+  Recording = "recording",
+  Done = "done",
+  Failed = "failed",
+}
+
+export enum AiRequestStateEnum1 {
+  Pending = "pending",
+  Processing = "processing",
+  Completed = "completed",
+  Failed = "failed",
+}
+
+export enum AiRequestStateEnum2 {
+  Pending = "pending",
+  Processing = "processing",
+  Completed = "completed",
+  Failed = "failed",
+}
+
+export enum AiRequestStateEnum3 {
+  Pending = "pending",
+  Processing = "processing",
+  Completed = "completed",
+  Failed = "failed",
+}
+
+export enum AiTaskRequestStateEnum {
+  Pending = "pending",
+  Processing = "processing",
+  Completed = "completed",
+  Failed = "failed",
+}
+
+export enum AiTaskTypeEnum {
+  Tiktok = "tiktok",
+  Twitch = "twitch",
+  Kick = "kick",
+  Youtube = "youtube",
+  Afreecatv = "afreecatv",
+  Pandalive = "pandalive",
+}
+
+export enum AiTaskGenderEnum {
+  Male = "male",
+  Female = "female",
+  Unknown = "unknown",
+}
+
+export enum AiTaskStateEnum {
+  Recording = "recording",
+  Done = "done",
+  Failed = "failed",
+}
+
+export enum AiTaskStateEnum1 {
+  Pending = "pending",
+  Processing = "processing",
+  Completed = "completed",
+  Failed = "failed",
+}
+
+export enum AiTaskStateEnum2 {
+  Pending = "pending",
+  Processing = "processing",
+  Completed = "completed",
+  Failed = "failed",
+}
+
+export enum AiTaskStateEnum3 {
+  Pending = "pending",
+  Processing = "processing",
+  Completed = "completed",
+  Failed = "failed",
+}
+
 export enum ClipTypeEnum {
   Tiktok = "tiktok",
   Twitch = "twitch",
@@ -3035,6 +5236,20 @@ export enum ClipGenderEnum {
 export enum ClipStateEnum {
   Recording = "recording",
   Done = "done",
+  Failed = "failed",
+}
+
+export enum ClipStateEnum1 {
+  Pending = "pending",
+  Processing = "processing",
+  Completed = "completed",
+  Failed = "failed",
+}
+
+export enum ClipStateEnum2 {
+  Pending = "pending",
+  Processing = "processing",
+  Completed = "completed",
   Failed = "failed",
 }
 
@@ -3071,6 +5286,55 @@ export enum FollowerStateEnum {
   Failed = "failed",
 }
 
+export enum FollowerStateEnum1 {
+  Pending = "pending",
+  Processing = "processing",
+  Completed = "completed",
+  Failed = "failed",
+}
+
+export enum FollowerStateEnum2 {
+  Pending = "pending",
+  Processing = "processing",
+  Completed = "completed",
+  Failed = "failed",
+}
+
+export enum MemeTypeEnum {
+  Tiktok = "tiktok",
+  Twitch = "twitch",
+  Kick = "kick",
+  Youtube = "youtube",
+  Afreecatv = "afreecatv",
+  Pandalive = "pandalive",
+}
+
+export enum MemeGenderEnum {
+  Male = "male",
+  Female = "female",
+  Unknown = "unknown",
+}
+
+export enum MemeStateEnum {
+  Recording = "recording",
+  Done = "done",
+  Failed = "failed",
+}
+
+export enum MemeStateEnum1 {
+  Pending = "pending",
+  Processing = "processing",
+  Completed = "completed",
+  Failed = "failed",
+}
+
+export enum MemeStateEnum2 {
+  Pending = "pending",
+  Processing = "processing",
+  Completed = "completed",
+  Failed = "failed",
+}
+
 export enum MessageTypeEnum {
   Tiktok = "tiktok",
   Twitch = "twitch",
@@ -3092,6 +5356,20 @@ export enum MessageStateEnum {
   Failed = "failed",
 }
 
+export enum MessageStateEnum1 {
+  Pending = "pending",
+  Processing = "processing",
+  Completed = "completed",
+  Failed = "failed",
+}
+
+export enum MessageStateEnum2 {
+  Pending = "pending",
+  Processing = "processing",
+  Completed = "completed",
+  Failed = "failed",
+}
+
 export enum RecordingGenderEnum {
   Male = "male",
   Female = "female",
@@ -3101,6 +5379,20 @@ export enum RecordingGenderEnum {
 export enum RecordingStateEnum {
   Recording = "recording",
   Done = "done",
+  Failed = "failed",
+}
+
+export enum RecordingStateEnum1 {
+  Pending = "pending",
+  Processing = "processing",
+  Completed = "completed",
+  Failed = "failed",
+}
+
+export enum RecordingStateEnum2 {
+  Pending = "pending",
+  Processing = "processing",
+  Completed = "completed",
   Failed = "failed",
 }
 
@@ -3136,6 +5428,112 @@ export enum SourceStateEnum1 {
   Done = "done",
   Failed = "failed",
 }
+
+export enum SourceStateEnum2 {
+  Pending = "pending",
+  Processing = "processing",
+  Completed = "completed",
+  Failed = "failed",
+}
+
+export enum SourceStateEnum3 {
+  Pending = "pending",
+  Processing = "processing",
+  Completed = "completed",
+  Failed = "failed",
+}
+
+export interface GetAiRequestsParams {
+  /** Sort by attributes ascending (asc) or descending (desc) */
+  sort?: string;
+  /** Return page/pageSize (default: true) */
+  "pagination[withCount]"?: boolean;
+  /** Page number (default: 0) */
+  "pagination[page]"?: number;
+  /** Page size (default: 25) */
+  "pagination[pageSize]"?: number;
+  /** Offset value (default: 0) */
+  "pagination[start]"?: number;
+  /** Number of entities to return (default: 25) */
+  "pagination[limit]"?: number;
+  /** Fields to return (ex: title,author) */
+  fields?: string;
+  /** Relations to return */
+  populate?: string | string[] | object;
+  /** Filters to apply */
+  filters?: Record<string, any>;
+  /** Locale to apply */
+  locale?: string;
+}
+
+export type GetAiRequestsData = AiRequestListResponse;
+
+export type PostAiRequestsData = AiRequestResponse;
+
+export interface GetAiRequestsIdParams {
+  id: string;
+}
+
+export type GetAiRequestsIdData = AiRequestResponse;
+
+export interface PutAiRequestsIdParams {
+  id: string;
+}
+
+export type PutAiRequestsIdData = AiRequestResponse;
+
+export interface DeleteAiRequestsIdParams {
+  id: string;
+}
+
+/** @format int64 */
+export type DeleteAiRequestsIdData = number;
+
+export interface GetAiTasksParams {
+  /** Sort by attributes ascending (asc) or descending (desc) */
+  sort?: string;
+  /** Return page/pageSize (default: true) */
+  "pagination[withCount]"?: boolean;
+  /** Page number (default: 0) */
+  "pagination[page]"?: number;
+  /** Page size (default: 25) */
+  "pagination[pageSize]"?: number;
+  /** Offset value (default: 0) */
+  "pagination[start]"?: number;
+  /** Number of entities to return (default: 25) */
+  "pagination[limit]"?: number;
+  /** Fields to return (ex: title,author) */
+  fields?: string;
+  /** Relations to return */
+  populate?: string | string[] | object;
+  /** Filters to apply */
+  filters?: Record<string, any>;
+  /** Locale to apply */
+  locale?: string;
+}
+
+export type GetAiTasksData = AiTaskListResponse;
+
+export type PostAiTasksData = AiTaskResponse;
+
+export interface GetAiTasksIdParams {
+  id: string;
+}
+
+export type GetAiTasksIdData = AiTaskResponse;
+
+export interface PutAiTasksIdParams {
+  id: string;
+}
+
+export type PutAiTasksIdData = AiTaskResponse;
+
+export interface DeleteAiTasksIdParams {
+  id: string;
+}
+
+/** @format int64 */
+export type DeleteAiTasksIdData = number;
 
 export interface GetArticlesParams {
   /** Sort by attributes ascending (asc) or descending (desc) */
@@ -3366,6 +5764,52 @@ export interface DeleteFollowersIdParams {
 
 /** @format int64 */
 export type DeleteFollowersIdData = number;
+
+export interface GetMemesParams {
+  /** Sort by attributes ascending (asc) or descending (desc) */
+  sort?: string;
+  /** Return page/pageSize (default: true) */
+  "pagination[withCount]"?: boolean;
+  /** Page number (default: 0) */
+  "pagination[page]"?: number;
+  /** Page size (default: 25) */
+  "pagination[pageSize]"?: number;
+  /** Offset value (default: 0) */
+  "pagination[start]"?: number;
+  /** Number of entities to return (default: 25) */
+  "pagination[limit]"?: number;
+  /** Fields to return (ex: title,author) */
+  fields?: string;
+  /** Relations to return */
+  populate?: string | string[] | object;
+  /** Filters to apply */
+  filters?: Record<string, any>;
+  /** Locale to apply */
+  locale?: string;
+}
+
+export type GetMemesData = MemeListResponse;
+
+export type PostMemesData = MemeResponse;
+
+export interface GetMemesIdParams {
+  id: string;
+}
+
+export type GetMemesIdData = MemeResponse;
+
+export interface PutMemesIdParams {
+  id: string;
+}
+
+export type PutMemesIdData = MemeResponse;
+
+export interface DeleteMemesIdParams {
+  id: string;
+}
+
+/** @format int64 */
+export type DeleteMemesIdData = number;
 
 export interface GetMessagesParams {
   /** Sort by attributes ascending (asc) or descending (desc) */
@@ -3804,6 +6248,214 @@ export interface UnfollowCreateData {
 }
 
 export type GetFollowerFiltersData = FiltersResponse;
+
+export namespace AiRequest {
+  /**
+   * No description
+   * @tags Ai-request
+   * @name GetAiRequests
+   * @request GET:/ai-requests
+   * @secure
+   */
+  export namespace GetAiRequests {
+    export type RequestParams = {};
+    export type RequestQuery = {
+      /** Sort by attributes ascending (asc) or descending (desc) */
+      sort?: string;
+      /** Return page/pageSize (default: true) */
+      "pagination[withCount]"?: boolean;
+      /** Page number (default: 0) */
+      "pagination[page]"?: number;
+      /** Page size (default: 25) */
+      "pagination[pageSize]"?: number;
+      /** Offset value (default: 0) */
+      "pagination[start]"?: number;
+      /** Number of entities to return (default: 25) */
+      "pagination[limit]"?: number;
+      /** Fields to return (ex: title,author) */
+      fields?: string;
+      /** Relations to return */
+      populate?: string | string[] | object;
+      /** Filters to apply */
+      filters?: Record<string, any>;
+      /** Locale to apply */
+      locale?: string;
+    };
+    export type RequestBody = never;
+    export type RequestHeaders = {};
+    export type ResponseBody = GetAiRequestsData;
+  }
+
+  /**
+   * No description
+   * @tags Ai-request
+   * @name PostAiRequests
+   * @request POST:/ai-requests
+   * @secure
+   */
+  export namespace PostAiRequests {
+    export type RequestParams = {};
+    export type RequestQuery = {};
+    export type RequestBody = AiRequestRequest;
+    export type RequestHeaders = {};
+    export type ResponseBody = PostAiRequestsData;
+  }
+
+  /**
+   * No description
+   * @tags Ai-request
+   * @name GetAiRequestsId
+   * @request GET:/ai-requests/{id}
+   * @secure
+   */
+  export namespace GetAiRequestsId {
+    export type RequestParams = {
+      id: string;
+    };
+    export type RequestQuery = {};
+    export type RequestBody = never;
+    export type RequestHeaders = {};
+    export type ResponseBody = GetAiRequestsIdData;
+  }
+
+  /**
+   * No description
+   * @tags Ai-request
+   * @name PutAiRequestsId
+   * @request PUT:/ai-requests/{id}
+   * @secure
+   */
+  export namespace PutAiRequestsId {
+    export type RequestParams = {
+      id: string;
+    };
+    export type RequestQuery = {};
+    export type RequestBody = AiRequestRequest;
+    export type RequestHeaders = {};
+    export type ResponseBody = PutAiRequestsIdData;
+  }
+
+  /**
+   * No description
+   * @tags Ai-request
+   * @name DeleteAiRequestsId
+   * @request DELETE:/ai-requests/{id}
+   * @secure
+   */
+  export namespace DeleteAiRequestsId {
+    export type RequestParams = {
+      id: string;
+    };
+    export type RequestQuery = {};
+    export type RequestBody = never;
+    export type RequestHeaders = {};
+    export type ResponseBody = DeleteAiRequestsIdData;
+  }
+}
+
+export namespace AiTask {
+  /**
+   * No description
+   * @tags Ai-task
+   * @name GetAiTasks
+   * @request GET:/ai-tasks
+   * @secure
+   */
+  export namespace GetAiTasks {
+    export type RequestParams = {};
+    export type RequestQuery = {
+      /** Sort by attributes ascending (asc) or descending (desc) */
+      sort?: string;
+      /** Return page/pageSize (default: true) */
+      "pagination[withCount]"?: boolean;
+      /** Page number (default: 0) */
+      "pagination[page]"?: number;
+      /** Page size (default: 25) */
+      "pagination[pageSize]"?: number;
+      /** Offset value (default: 0) */
+      "pagination[start]"?: number;
+      /** Number of entities to return (default: 25) */
+      "pagination[limit]"?: number;
+      /** Fields to return (ex: title,author) */
+      fields?: string;
+      /** Relations to return */
+      populate?: string | string[] | object;
+      /** Filters to apply */
+      filters?: Record<string, any>;
+      /** Locale to apply */
+      locale?: string;
+    };
+    export type RequestBody = never;
+    export type RequestHeaders = {};
+    export type ResponseBody = GetAiTasksData;
+  }
+
+  /**
+   * No description
+   * @tags Ai-task
+   * @name PostAiTasks
+   * @request POST:/ai-tasks
+   * @secure
+   */
+  export namespace PostAiTasks {
+    export type RequestParams = {};
+    export type RequestQuery = {};
+    export type RequestBody = AiTaskRequest;
+    export type RequestHeaders = {};
+    export type ResponseBody = PostAiTasksData;
+  }
+
+  /**
+   * No description
+   * @tags Ai-task
+   * @name GetAiTasksId
+   * @request GET:/ai-tasks/{id}
+   * @secure
+   */
+  export namespace GetAiTasksId {
+    export type RequestParams = {
+      id: string;
+    };
+    export type RequestQuery = {};
+    export type RequestBody = never;
+    export type RequestHeaders = {};
+    export type ResponseBody = GetAiTasksIdData;
+  }
+
+  /**
+   * No description
+   * @tags Ai-task
+   * @name PutAiTasksId
+   * @request PUT:/ai-tasks/{id}
+   * @secure
+   */
+  export namespace PutAiTasksId {
+    export type RequestParams = {
+      id: string;
+    };
+    export type RequestQuery = {};
+    export type RequestBody = AiTaskRequest;
+    export type RequestHeaders = {};
+    export type ResponseBody = PutAiTasksIdData;
+  }
+
+  /**
+   * No description
+   * @tags Ai-task
+   * @name DeleteAiTasksId
+   * @request DELETE:/ai-tasks/{id}
+   * @secure
+   */
+  export namespace DeleteAiTasksId {
+    export type RequestParams = {
+      id: string;
+    };
+    export type RequestQuery = {};
+    export type RequestBody = never;
+    export type RequestHeaders = {};
+    export type ResponseBody = DeleteAiTasksIdData;
+  }
+}
 
 export namespace Article {
   /**
@@ -4411,6 +7063,110 @@ export namespace Follower {
     export type RequestBody = never;
     export type RequestHeaders = {};
     export type ResponseBody = GetFollowerFiltersData;
+  }
+}
+
+export namespace Meme {
+  /**
+   * No description
+   * @tags Meme
+   * @name GetMemes
+   * @request GET:/memes
+   * @secure
+   */
+  export namespace GetMemes {
+    export type RequestParams = {};
+    export type RequestQuery = {
+      /** Sort by attributes ascending (asc) or descending (desc) */
+      sort?: string;
+      /** Return page/pageSize (default: true) */
+      "pagination[withCount]"?: boolean;
+      /** Page number (default: 0) */
+      "pagination[page]"?: number;
+      /** Page size (default: 25) */
+      "pagination[pageSize]"?: number;
+      /** Offset value (default: 0) */
+      "pagination[start]"?: number;
+      /** Number of entities to return (default: 25) */
+      "pagination[limit]"?: number;
+      /** Fields to return (ex: title,author) */
+      fields?: string;
+      /** Relations to return */
+      populate?: string | string[] | object;
+      /** Filters to apply */
+      filters?: Record<string, any>;
+      /** Locale to apply */
+      locale?: string;
+    };
+    export type RequestBody = never;
+    export type RequestHeaders = {};
+    export type ResponseBody = GetMemesData;
+  }
+
+  /**
+   * No description
+   * @tags Meme
+   * @name PostMemes
+   * @request POST:/memes
+   * @secure
+   */
+  export namespace PostMemes {
+    export type RequestParams = {};
+    export type RequestQuery = {};
+    export type RequestBody = MemeRequest;
+    export type RequestHeaders = {};
+    export type ResponseBody = PostMemesData;
+  }
+
+  /**
+   * No description
+   * @tags Meme
+   * @name GetMemesId
+   * @request GET:/memes/{id}
+   * @secure
+   */
+  export namespace GetMemesId {
+    export type RequestParams = {
+      id: string;
+    };
+    export type RequestQuery = {};
+    export type RequestBody = never;
+    export type RequestHeaders = {};
+    export type ResponseBody = GetMemesIdData;
+  }
+
+  /**
+   * No description
+   * @tags Meme
+   * @name PutMemesId
+   * @request PUT:/memes/{id}
+   * @secure
+   */
+  export namespace PutMemesId {
+    export type RequestParams = {
+      id: string;
+    };
+    export type RequestQuery = {};
+    export type RequestBody = MemeRequest;
+    export type RequestHeaders = {};
+    export type ResponseBody = PutMemesIdData;
+  }
+
+  /**
+   * No description
+   * @tags Meme
+   * @name DeleteMemesId
+   * @request DELETE:/memes/{id}
+   * @secure
+   */
+  export namespace DeleteMemesId {
+    export type RequestParams = {
+      id: string;
+    };
+    export type RequestQuery = {};
+    export type RequestBody = never;
+    export type RequestHeaders = {};
+    export type ResponseBody = DeleteMemesIdData;
   }
 }
 
@@ -5440,6 +8196,208 @@ export class HttpClient<SecurityDataType = unknown> {
 export class Api<
   SecurityDataType extends unknown,
 > extends HttpClient<SecurityDataType> {
+  aiRequest = {
+    /**
+     * No description
+     *
+     * @tags Ai-request
+     * @name GetAiRequests
+     * @request GET:/ai-requests
+     * @secure
+     */
+    getAiRequests: (query: GetAiRequestsParams, params: RequestParams = {}) =>
+      this.request<GetAiRequestsData, Error>({
+        path: `/ai-requests`,
+        method: "GET",
+        query: query,
+        secure: true,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Ai-request
+     * @name PostAiRequests
+     * @request POST:/ai-requests
+     * @secure
+     */
+    postAiRequests: (data: AiRequestRequest, params: RequestParams = {}) =>
+      this.request<PostAiRequestsData, Error>({
+        path: `/ai-requests`,
+        method: "POST",
+        body: data,
+        secure: true,
+        type: ContentType.Json,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Ai-request
+     * @name GetAiRequestsId
+     * @request GET:/ai-requests/{id}
+     * @secure
+     */
+    getAiRequestsId: (
+      { id, ...query }: GetAiRequestsIdParams,
+      params: RequestParams = {},
+    ) =>
+      this.request<GetAiRequestsIdData, Error>({
+        path: `/ai-requests/${id}`,
+        method: "GET",
+        secure: true,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Ai-request
+     * @name PutAiRequestsId
+     * @request PUT:/ai-requests/{id}
+     * @secure
+     */
+    putAiRequestsId: (
+      { id, ...query }: PutAiRequestsIdParams,
+      data: AiRequestRequest,
+      params: RequestParams = {},
+    ) =>
+      this.request<PutAiRequestsIdData, Error>({
+        path: `/ai-requests/${id}`,
+        method: "PUT",
+        body: data,
+        secure: true,
+        type: ContentType.Json,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Ai-request
+     * @name DeleteAiRequestsId
+     * @request DELETE:/ai-requests/{id}
+     * @secure
+     */
+    deleteAiRequestsId: (
+      { id, ...query }: DeleteAiRequestsIdParams,
+      params: RequestParams = {},
+    ) =>
+      this.request<DeleteAiRequestsIdData, Error>({
+        path: `/ai-requests/${id}`,
+        method: "DELETE",
+        secure: true,
+        format: "json",
+        ...params,
+      }),
+  };
+  aiTask = {
+    /**
+     * No description
+     *
+     * @tags Ai-task
+     * @name GetAiTasks
+     * @request GET:/ai-tasks
+     * @secure
+     */
+    getAiTasks: (query: GetAiTasksParams, params: RequestParams = {}) =>
+      this.request<GetAiTasksData, Error>({
+        path: `/ai-tasks`,
+        method: "GET",
+        query: query,
+        secure: true,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Ai-task
+     * @name PostAiTasks
+     * @request POST:/ai-tasks
+     * @secure
+     */
+    postAiTasks: (data: AiTaskRequest, params: RequestParams = {}) =>
+      this.request<PostAiTasksData, Error>({
+        path: `/ai-tasks`,
+        method: "POST",
+        body: data,
+        secure: true,
+        type: ContentType.Json,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Ai-task
+     * @name GetAiTasksId
+     * @request GET:/ai-tasks/{id}
+     * @secure
+     */
+    getAiTasksId: (
+      { id, ...query }: GetAiTasksIdParams,
+      params: RequestParams = {},
+    ) =>
+      this.request<GetAiTasksIdData, Error>({
+        path: `/ai-tasks/${id}`,
+        method: "GET",
+        secure: true,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Ai-task
+     * @name PutAiTasksId
+     * @request PUT:/ai-tasks/{id}
+     * @secure
+     */
+    putAiTasksId: (
+      { id, ...query }: PutAiTasksIdParams,
+      data: AiTaskRequest,
+      params: RequestParams = {},
+    ) =>
+      this.request<PutAiTasksIdData, Error>({
+        path: `/ai-tasks/${id}`,
+        method: "PUT",
+        body: data,
+        secure: true,
+        type: ContentType.Json,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Ai-task
+     * @name DeleteAiTasksId
+     * @request DELETE:/ai-tasks/{id}
+     * @secure
+     */
+    deleteAiTasksId: (
+      { id, ...query }: DeleteAiTasksIdParams,
+      params: RequestParams = {},
+    ) =>
+      this.request<DeleteAiTasksIdData, Error>({
+        path: `/ai-tasks/${id}`,
+        method: "DELETE",
+        secure: true,
+        format: "json",
+        ...params,
+      }),
+  };
   article = {
     /**
      * No description
@@ -6026,6 +8984,107 @@ export class Api<
       this.request<GetFollowerFiltersData, void>({
         path: `/followers/filters`,
         method: "GET",
+        secure: true,
+        format: "json",
+        ...params,
+      }),
+  };
+  meme = {
+    /**
+     * No description
+     *
+     * @tags Meme
+     * @name GetMemes
+     * @request GET:/memes
+     * @secure
+     */
+    getMemes: (query: GetMemesParams, params: RequestParams = {}) =>
+      this.request<GetMemesData, Error>({
+        path: `/memes`,
+        method: "GET",
+        query: query,
+        secure: true,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Meme
+     * @name PostMemes
+     * @request POST:/memes
+     * @secure
+     */
+    postMemes: (data: MemeRequest, params: RequestParams = {}) =>
+      this.request<PostMemesData, Error>({
+        path: `/memes`,
+        method: "POST",
+        body: data,
+        secure: true,
+        type: ContentType.Json,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Meme
+     * @name GetMemesId
+     * @request GET:/memes/{id}
+     * @secure
+     */
+    getMemesId: (
+      { id, ...query }: GetMemesIdParams,
+      params: RequestParams = {},
+    ) =>
+      this.request<GetMemesIdData, Error>({
+        path: `/memes/${id}`,
+        method: "GET",
+        secure: true,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Meme
+     * @name PutMemesId
+     * @request PUT:/memes/{id}
+     * @secure
+     */
+    putMemesId: (
+      { id, ...query }: PutMemesIdParams,
+      data: MemeRequest,
+      params: RequestParams = {},
+    ) =>
+      this.request<PutMemesIdData, Error>({
+        path: `/memes/${id}`,
+        method: "PUT",
+        body: data,
+        secure: true,
+        type: ContentType.Json,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Meme
+     * @name DeleteMemesId
+     * @request DELETE:/memes/{id}
+     * @secure
+     */
+    deleteMemesId: (
+      { id, ...query }: DeleteMemesIdParams,
+      params: RequestParams = {},
+    ) =>
+      this.request<DeleteMemesIdData, Error>({
+        path: `/memes/${id}`,
+        method: "DELETE",
         secure: true,
         format: "json",
         ...params,

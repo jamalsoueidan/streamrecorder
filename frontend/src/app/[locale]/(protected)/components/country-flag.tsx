@@ -1,26 +1,27 @@
 import { Image, Tooltip } from "@mantine/core";
+import { useLocale } from "next-intl";
 
 interface CountryFlagProps {
-  country?: string;
   countryCode?: string;
   size?: number;
 }
 
-export const CountryFlag = ({
-  country,
-  countryCode,
-  size = 24,
-}: CountryFlagProps) => {
-  if (!countryCode || countryCode == "-") {
+export const CountryFlag = ({ countryCode, size = 24 }: CountryFlagProps) => {
+  const locale = useLocale();
+  const regionNames = new Intl.DisplayNames([locale], { type: "region" });
+
+  if (!countryCode || countryCode === "-") {
     return null;
   }
+
+  const country = regionNames.of(countryCode.toUpperCase());
   const src = `https://flagcdn.com/w40/${countryCode.toLowerCase()}.png`;
 
   return (
-    <Tooltip label={country?.toLowerCase()}>
+    <Tooltip label={country}>
       <Image
         src={src}
-        alt={country?.toLowerCase()}
+        alt={country}
         style={{
           width: size,
           height: size * 0.75,

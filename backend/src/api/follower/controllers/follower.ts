@@ -268,22 +268,7 @@ export default factories.createCoreController(
     async filters(cxt) {
       const knex = strapi.db.connection;
 
-      const [
-        countries,
-        countryCodes,
-        genders,
-        languages,
-        languageCodes,
-        types,
-      ] = await Promise.all([
-        knex("followers")
-          .select("country as value")
-          .count("* as count")
-          .whereNotNull("country")
-          .where("country", "!=", "")
-          .groupBy("country")
-          .orderBy("count", "desc"),
-
+      const [countryCodes, genders, languageCodes, types] = await Promise.all([
         knex("followers")
           .select("country_code as value")
           .count("* as count")
@@ -298,14 +283,6 @@ export default factories.createCoreController(
           .whereNotNull("gender")
           .where("gender", "!=", "")
           .groupBy("gender")
-          .orderBy("count", "desc"),
-
-        knex("followers")
-          .select("language as value")
-          .count("* as count")
-          .whereNotNull("language")
-          .where("language", "!=", "")
-          .groupBy("language")
           .orderBy("count", "desc"),
 
         knex("followers")
@@ -326,10 +303,8 @@ export default factories.createCoreController(
       ]);
 
       return {
-        countries,
         countryCodes,
         genders,
-        languages,
         languageCodes,
         types,
       };

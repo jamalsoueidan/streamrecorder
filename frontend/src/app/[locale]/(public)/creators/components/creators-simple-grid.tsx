@@ -67,12 +67,8 @@ export function CreatorsSimpleGrid({
                   </Text>
                 </div>
                 <div style={{ minHeight: 24 }}>
-                  {creator.country && (
-                    <CountryFlag
-                      country={creator.country}
-                      countryCode={creator.countryCode}
-                      size={20}
-                    />
+                  {creator.countryCode && (
+                    <CountryFlag countryCode={creator.countryCode} size={20} />
                   )}
                 </div>
               </Stack>

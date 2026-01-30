@@ -13,6 +13,8 @@ export async function GET() {
     { url: "/changelog", priority: 0.4, changefreq: "weekly" },
     { url: "/pricing", priority: 0.6, changefreq: "weekly" },
     { url: "/faq", priority: 0.6, changefreq: "monthly" },
+    { url: "/login", priority: 0.6, changefreq: "monthly" },
+    { url: "/register", priority: 0.6, changefreq: "monthly" },
     { url: "/privacy", priority: 0.3, changefreq: "yearly" },
     { url: "/terms", priority: 0.3, changefreq: "yearly" },
     { url: `/creators/all`, priority: 0.8, changefreq: "daily" },
