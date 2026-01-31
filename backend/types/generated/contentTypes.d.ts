@@ -938,12 +938,13 @@ export interface ApiMemeMeme extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
-    type: Schema.Attribute.Enumeration<['video', 'gif']> &
+    type: Schema.Attribute.Enumeration<['.mp4', '.gif']> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: false;
         };
-      }>;
+      }> &
+      Schema.Attribute.DefaultTo<'.mp4'>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

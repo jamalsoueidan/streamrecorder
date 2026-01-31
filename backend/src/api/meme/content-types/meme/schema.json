@@ -38,9 +38,10 @@
           "localized": false
         }
       },
+      "default": ".mp4",
       "enum": [
-        "video",
-        "gif"
+        ".mp4",
+        ".gif"
       ]
     },
     "start": {
