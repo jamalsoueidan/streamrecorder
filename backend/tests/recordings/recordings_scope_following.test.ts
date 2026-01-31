@@ -19,7 +19,7 @@ const followers: any[] = [];
 async function followStreamer(
   token: string,
   username: string,
-  type = "tiktok"
+  type = "tiktok",
 ) {
   const res = await request(getServer())
     .post("/api/followers/follow")
@@ -41,20 +41,20 @@ beforeAll(async () => {
       "api::recording.recording.browse",
       "api::source.source.find",
     ],
-    "premium"
+    "premium",
   );
 
   const { jwt: userJwt } = await createTestUser(
     "user@test.com",
     "testuser",
-    "premium"
+    "premium",
   );
   jwt = userJwt;
 
   const { jwt: userJwt2 } = await createTestUser(
     "user2@test.com",
     "testuser2",
-    "premium"
+    "premium",
   );
   jwt2 = userJwt2;
 
@@ -130,7 +130,7 @@ describe("Recordings Browse (scope=following)", () => {
       .expect(200);
 
     const alice = res.body.data.find(
-      (r: any) => r.follower.username === "alice"
+      (r: any) => r.follower.username === "alice",
     );
     expect(alice.sources).toHaveLength(1);
     expect(alice.sources[0].state).toBe("done");
@@ -154,7 +154,7 @@ describe("Recordings Browse (scope=following)", () => {
       .expect(200);
 
     const alice = res.body.data.find(
-      (r: any) => r.follower.username === "alice"
+      (r: any) => r.follower.username === "alice",
     );
     expect(alice.sources).toHaveLength(1);
     expect(alice.sources[0].state).toBe("done");
@@ -172,7 +172,7 @@ describe("Recordings Browse (scope=following)", () => {
       .expect(200);
 
     const dates = res.body.data.map((r: any) =>
-      new Date(r.createdAt).getTime()
+      new Date(r.createdAt).getTime(),
     );
     for (let i = 0; i < dates.length - 1; i++) {
       expect(dates[i]).toBeGreaterThanOrEqual(dates[i + 1]);

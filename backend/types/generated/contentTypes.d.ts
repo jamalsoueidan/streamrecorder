@@ -774,7 +774,6 @@ export interface ApiFollowerFollower extends Struct.CollectionTypeSchema {
           localized: false;
         };
       }>;
-    clips: Schema.Attribute.Relation<'oneToMany', 'api::clip.clip'>;
     countryCode: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -819,7 +818,6 @@ export interface ApiFollowerFollower extends Struct.CollectionTypeSchema {
       'oneToMany',
       'api::follower.follower'
     >;
-    memes: Schema.Attribute.Relation<'oneToMany', 'api::meme.meme'>;
     migration: Schema.Attribute.Integer &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -997,27 +995,35 @@ export interface ApiRecordingRecording extends Struct.CollectionTypeSchema {
   options: {
     draftAndPublish: false;
   };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
   attributes: {
-    ai_requests: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::ai-request.ai-request'
-    >;
-    clips: Schema.Attribute.Relation<'oneToMany', 'api::clip.clip'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    description: Schema.Attribute.Text;
+    description: Schema.Attribute.Text &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     follower: Schema.Attribute.Relation<'manyToOne', 'api::follower.follower'>;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::recording.recording'
-    > &
-      Schema.Attribute.Private;
-    memes: Schema.Attribute.Relation<'oneToMany', 'api::meme.meme'>;
+    >;
     publishedAt: Schema.Attribute.DateTime;
     sources: Schema.Attribute.Relation<'oneToMany', 'api::source.source'>;
-    title: Schema.Attribute.String;
+    title: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
