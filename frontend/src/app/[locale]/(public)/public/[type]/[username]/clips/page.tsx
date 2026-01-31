@@ -124,6 +124,7 @@ export default async function Page({ params, searchParams }: PageProps) {
         documentId: follower.documentId,
       },
     },
+    locale,
     "pagination[pageSize]": 10,
     "pagination[page]": parseInt(page || "1", 10),
   });
