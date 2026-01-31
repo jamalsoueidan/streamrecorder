@@ -27,7 +27,8 @@ interface VideoPlayerProps {
   src: string;
   previewUrl: string;
   thumbnailsUrl?: string;
-  userAgent: string;
+  userAgent?: string;
+  fit?: boolean;
 }
 
 export function VideoPlayer({
@@ -35,6 +36,7 @@ export function VideoPlayer({
   previewUrl,
   thumbnailsUrl,
   userAgent,
+  fit = false,
 }: VideoPlayerProps) {
   const controllerRef = useRef<HTMLElement>(null);
 
@@ -79,7 +81,7 @@ export function VideoPlayer({
     };
   }, []);
 
-  if (isbot(userAgent)) {
+  if (userAgent && isbot(userAgent)) {
     return (
       <video
         poster={previewUrl}
@@ -96,7 +98,10 @@ export function VideoPlayer({
   return (
     <MediaController
       ref={controllerRef}
-      style={{ width: "100%", height: "clamp(250px, 50vh, 70vh)" }}
+      style={{
+        width: "100%",
+        height: fit ? "100%" : "clamp(250px, 50vh, 70vh)",
+      }}
     >
       {src.includes(".mp4") ? (
         <video

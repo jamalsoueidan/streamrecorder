@@ -304,84 +304,6 @@ export interface AiRequest {
       faq?: any;
       category?: string;
       migration?: number;
-      clips?: {
-        id?: number;
-        documentId?: string;
-        title?: string;
-        description?: string;
-        hook_text?: string;
-        tags?: string;
-        viral_score?: number;
-        thumbnail_timestamp?: string;
-        duration?: number;
-        end?: string;
-        start?: string;
-        path?: string;
-        recording?: {
-          id?: number;
-          documentId?: string;
-        };
-        follower?: {
-          id?: number;
-          documentId?: string;
-        };
-        /** @format date-time */
-        createdAt?: string;
-        /** @format date-time */
-        updatedAt?: string;
-        /** @format date-time */
-        publishedAt?: string;
-        createdBy?: {
-          id?: number;
-          documentId?: string;
-        };
-        updatedBy?: {
-          id?: number;
-          documentId?: string;
-        };
-        locale?: string;
-        localizations?: {
-          id?: number;
-          documentId?: string;
-        }[];
-      }[];
-      memes?: {
-        id?: number;
-        documentId?: string;
-        start?: string;
-        end?: string;
-        title?: string;
-        duration?: number;
-        tags?: string;
-        viral_score?: number;
-        recording?: {
-          id?: number;
-          documentId?: string;
-        };
-        follower?: {
-          id?: number;
-          documentId?: string;
-        };
-        /** @format date-time */
-        createdAt?: string;
-        /** @format date-time */
-        updatedAt?: string;
-        /** @format date-time */
-        publishedAt?: string;
-        createdBy?: {
-          id?: number;
-          documentId?: string;
-        };
-        updatedBy?: {
-          id?: number;
-          documentId?: string;
-        };
-        locale?: string;
-        localizations?: {
-          id?: number;
-          documentId?: string;
-        }[];
-      }[];
       /** @format date-time */
       createdAt?: string;
       /** @format date-time */
@@ -440,76 +362,6 @@ export interface AiRequest {
         documentId?: string;
       }[];
     }[];
-    clips?: {
-      id?: number;
-      documentId?: string;
-    }[];
-    ai_requests?: {
-      id?: number;
-      documentId?: string;
-      recording?: {
-        id?: number;
-        documentId?: string;
-      };
-      generateClips?: boolean;
-      generateMemes?: boolean;
-      generateProfile?: boolean;
-      state?: AiRequestStateEnum1;
-      ai_tasks?: {
-        id?: number;
-        documentId?: string;
-        ai_request?: {
-          id?: number;
-          documentId?: string;
-        };
-        type?: string;
-        state?: AiRequestStateEnum2;
-        output?: any;
-        executionId?: number;
-        /** @format date-time */
-        createdAt?: string;
-        /** @format date-time */
-        updatedAt?: string;
-        /** @format date-time */
-        publishedAt?: string;
-        createdBy?: {
-          id?: number;
-          documentId?: string;
-        };
-        updatedBy?: {
-          id?: number;
-          documentId?: string;
-        };
-        locale?: string;
-        localizations?: {
-          id?: number;
-          documentId?: string;
-        }[];
-      }[];
-      /** @format date-time */
-      createdAt?: string;
-      /** @format date-time */
-      updatedAt?: string;
-      /** @format date-time */
-      publishedAt?: string;
-      createdBy?: {
-        id?: number;
-        documentId?: string;
-      };
-      updatedBy?: {
-        id?: number;
-        documentId?: string;
-      };
-      locale?: string;
-      localizations?: {
-        id?: number;
-        documentId?: string;
-      }[];
-    }[];
-    memes?: {
-      id?: number;
-      documentId?: string;
-    }[];
     /** @format date-time */
     createdAt?: string;
     /** @format date-time */
@@ -533,10 +385,68 @@ export interface AiRequest {
   generateClips?: boolean;
   generateMemes?: boolean;
   generateProfile?: boolean;
-  state?: AiRequestStateEnum3;
+  state?: AiRequestStateEnum1;
   ai_tasks?: {
     id?: number;
     documentId?: string;
+    ai_request?: {
+      id?: number;
+      documentId?: string;
+      recording?: {
+        id?: number;
+        documentId?: string;
+      };
+      generateClips?: boolean;
+      generateMemes?: boolean;
+      generateProfile?: boolean;
+      state?: AiRequestStateEnum2;
+      ai_tasks?: {
+        id?: number;
+        documentId?: string;
+      }[];
+      /** @format date-time */
+      createdAt?: string;
+      /** @format date-time */
+      updatedAt?: string;
+      /** @format date-time */
+      publishedAt?: string;
+      createdBy?: {
+        id?: number;
+        documentId?: string;
+      };
+      updatedBy?: {
+        id?: number;
+        documentId?: string;
+      };
+      locale?: string;
+      localizations?: {
+        id?: number;
+        documentId?: string;
+      }[];
+    };
+    type?: string;
+    state?: AiRequestStateEnum3;
+    output?: any;
+    executionId?: number;
+    /** @format date-time */
+    createdAt?: string;
+    /** @format date-time */
+    updatedAt?: string;
+    /** @format date-time */
+    publishedAt?: string;
+    createdBy?: {
+      id?: number;
+      documentId?: string;
+    };
+    updatedBy?: {
+      id?: number;
+      documentId?: string;
+    };
+    locale?: string;
+    localizations?: {
+      id?: number;
+      documentId?: string;
+    }[];
   }[];
   /** @format date-time */
   createdAt?: string;
@@ -846,84 +756,6 @@ export interface AiTask {
         faq?: any;
         category?: string;
         migration?: number;
-        clips?: {
-          id?: number;
-          documentId?: string;
-          title?: string;
-          description?: string;
-          hook_text?: string;
-          tags?: string;
-          viral_score?: number;
-          thumbnail_timestamp?: string;
-          duration?: number;
-          end?: string;
-          start?: string;
-          path?: string;
-          recording?: {
-            id?: number;
-            documentId?: string;
-          };
-          follower?: {
-            id?: number;
-            documentId?: string;
-          };
-          /** @format date-time */
-          createdAt?: string;
-          /** @format date-time */
-          updatedAt?: string;
-          /** @format date-time */
-          publishedAt?: string;
-          createdBy?: {
-            id?: number;
-            documentId?: string;
-          };
-          updatedBy?: {
-            id?: number;
-            documentId?: string;
-          };
-          locale?: string;
-          localizations?: {
-            id?: number;
-            documentId?: string;
-          }[];
-        }[];
-        memes?: {
-          id?: number;
-          documentId?: string;
-          start?: string;
-          end?: string;
-          title?: string;
-          duration?: number;
-          tags?: string;
-          viral_score?: number;
-          recording?: {
-            id?: number;
-            documentId?: string;
-          };
-          follower?: {
-            id?: number;
-            documentId?: string;
-          };
-          /** @format date-time */
-          createdAt?: string;
-          /** @format date-time */
-          updatedAt?: string;
-          /** @format date-time */
-          publishedAt?: string;
-          createdBy?: {
-            id?: number;
-            documentId?: string;
-          };
-          updatedBy?: {
-            id?: number;
-            documentId?: string;
-          };
-          locale?: string;
-          localizations?: {
-            id?: number;
-            documentId?: string;
-          }[];
-        }[];
         /** @format date-time */
         createdAt?: string;
         /** @format date-time */
@@ -981,18 +813,6 @@ export interface AiTask {
           id?: number;
           documentId?: string;
         }[];
-      }[];
-      clips?: {
-        id?: number;
-        documentId?: string;
-      }[];
-      ai_requests?: {
-        id?: number;
-        documentId?: string;
-      }[];
-      memes?: {
-        id?: number;
-        documentId?: string;
       }[];
       /** @format date-time */
       createdAt?: string;
@@ -1717,84 +1537,6 @@ export interface Clip {
       faq?: any;
       category?: string;
       migration?: number;
-      clips?: {
-        id?: number;
-        documentId?: string;
-        title?: string;
-        description?: string;
-        hook_text?: string;
-        tags?: string;
-        viral_score?: number;
-        thumbnail_timestamp?: string;
-        duration?: number;
-        end?: string;
-        start?: string;
-        path?: string;
-        recording?: {
-          id?: number;
-          documentId?: string;
-        };
-        follower?: {
-          id?: number;
-          documentId?: string;
-        };
-        /** @format date-time */
-        createdAt?: string;
-        /** @format date-time */
-        updatedAt?: string;
-        /** @format date-time */
-        publishedAt?: string;
-        createdBy?: {
-          id?: number;
-          documentId?: string;
-        };
-        updatedBy?: {
-          id?: number;
-          documentId?: string;
-        };
-        locale?: string;
-        localizations?: {
-          id?: number;
-          documentId?: string;
-        }[];
-      }[];
-      memes?: {
-        id?: number;
-        documentId?: string;
-        start?: string;
-        end?: string;
-        title?: string;
-        duration?: number;
-        tags?: string;
-        viral_score?: number;
-        recording?: {
-          id?: number;
-          documentId?: string;
-        };
-        follower?: {
-          id?: number;
-          documentId?: string;
-        };
-        /** @format date-time */
-        createdAt?: string;
-        /** @format date-time */
-        updatedAt?: string;
-        /** @format date-time */
-        publishedAt?: string;
-        createdBy?: {
-          id?: number;
-          documentId?: string;
-        };
-        updatedBy?: {
-          id?: number;
-          documentId?: string;
-        };
-        locale?: string;
-        localizations?: {
-          id?: number;
-          documentId?: string;
-        }[];
-      }[];
       /** @format date-time */
       createdAt?: string;
       /** @format date-time */
@@ -1853,76 +1595,6 @@ export interface Clip {
         documentId?: string;
       }[];
     }[];
-    clips?: {
-      id?: number;
-      documentId?: string;
-    }[];
-    ai_requests?: {
-      id?: number;
-      documentId?: string;
-      recording?: {
-        id?: number;
-        documentId?: string;
-      };
-      generateClips?: boolean;
-      generateMemes?: boolean;
-      generateProfile?: boolean;
-      state?: ClipStateEnum1;
-      ai_tasks?: {
-        id?: number;
-        documentId?: string;
-        ai_request?: {
-          id?: number;
-          documentId?: string;
-        };
-        type?: string;
-        state?: ClipStateEnum2;
-        output?: any;
-        executionId?: number;
-        /** @format date-time */
-        createdAt?: string;
-        /** @format date-time */
-        updatedAt?: string;
-        /** @format date-time */
-        publishedAt?: string;
-        createdBy?: {
-          id?: number;
-          documentId?: string;
-        };
-        updatedBy?: {
-          id?: number;
-          documentId?: string;
-        };
-        locale?: string;
-        localizations?: {
-          id?: number;
-          documentId?: string;
-        }[];
-      }[];
-      /** @format date-time */
-      createdAt?: string;
-      /** @format date-time */
-      updatedAt?: string;
-      /** @format date-time */
-      publishedAt?: string;
-      createdBy?: {
-        id?: number;
-        documentId?: string;
-      };
-      updatedBy?: {
-        id?: number;
-        documentId?: string;
-      };
-      locale?: string;
-      localizations?: {
-        id?: number;
-        documentId?: string;
-      }[];
-    }[];
-    memes?: {
-      id?: number;
-      documentId?: string;
-    }[];
     /** @format date-time */
     createdAt?: string;
     /** @format date-time */
@@ -1965,6 +1637,43 @@ export interface Clip {
   localizations?: {
     id?: number;
     documentId?: string;
+    title?: string;
+    description?: string;
+    hook_text?: string;
+    tags?: string;
+    viral_score?: number;
+    thumbnail_timestamp?: string;
+    duration?: number;
+    end?: string;
+    start?: string;
+    path?: string;
+    recording?: {
+      id?: number;
+      documentId?: string;
+    };
+    follower?: {
+      id?: number;
+      documentId?: string;
+    };
+    /** @format date-time */
+    createdAt?: string;
+    /** @format date-time */
+    updatedAt?: string;
+    /** @format date-time */
+    publishedAt?: string;
+    createdBy?: {
+      id?: number;
+      documentId?: string;
+    };
+    updatedBy?: {
+      id?: number;
+      documentId?: string;
+    };
+    locale?: string;
+    localizations?: {
+      id?: number;
+      documentId?: string;
+    }[];
   }[];
 }
 
@@ -2164,8 +1873,6 @@ export interface FollowerRequest {
     faq?: any;
     category?: string;
     migration?: number;
-    clips?: (number | string)[];
-    memes?: (number | string)[];
     locale?: string;
     localizations?: (number | string)[];
   };
@@ -2418,258 +2125,57 @@ export interface Follower {
   faq?: any;
   category?: string;
   migration?: number;
-  clips?: {
+  /** @format date-time */
+  createdAt?: string;
+  /** @format date-time */
+  updatedAt?: string;
+  /** @format date-time */
+  publishedAt?: string;
+  createdBy?: {
     id?: number;
     documentId?: string;
-    title?: string;
-    description?: string;
-    hook_text?: string;
-    tags?: string;
-    viral_score?: number;
-    thumbnail_timestamp?: string;
-    duration?: number;
-    end?: string;
-    start?: string;
-    path?: string;
-    recording?: {
+  };
+  updatedBy?: {
+    id?: number;
+    documentId?: string;
+  };
+  locale?: string;
+  localizations?: {
+    id?: number;
+    documentId?: string;
+    nickname?: string;
+    username?: string;
+    type?: FollowerTypeEnum;
+    gender?: FollowerGenderEnum1;
+    countryCode?: string;
+    languageCode?: string;
+    avatar?: {
       id?: number;
       documentId?: string;
-      title?: string;
-      description?: string;
-      follower?: {
+      name?: string;
+      alternativeText?: string;
+      caption?: string;
+      width?: number;
+      height?: number;
+      formats?: any;
+      hash?: string;
+      ext?: string;
+      mime?: string;
+      /** @format float */
+      size?: number;
+      url?: string;
+      previewUrl?: string;
+      provider?: string;
+      provider_metadata?: any;
+      related?: {
         id?: number;
         documentId?: string;
-        nickname?: string;
-        username?: string;
-        type?: FollowerTypeEnum;
-        gender?: FollowerGenderEnum1;
-        countryCode?: string;
-        languageCode?: string;
-        avatar?: {
-          id?: number;
-          documentId?: string;
-          name?: string;
-          alternativeText?: string;
-          caption?: string;
-          width?: number;
-          height?: number;
-          formats?: any;
-          hash?: string;
-          ext?: string;
-          mime?: string;
-          /** @format float */
-          size?: number;
-          url?: string;
-          previewUrl?: string;
-          provider?: string;
-          provider_metadata?: any;
-          related?: {
-            id?: number;
-            documentId?: string;
-          }[];
-          folder?: {
-            id?: number;
-            documentId?: string;
-          };
-          folderPath?: string;
-          /** @format date-time */
-          createdAt?: string;
-          /** @format date-time */
-          updatedAt?: string;
-          /** @format date-time */
-          publishedAt?: string;
-          createdBy?: {
-            id?: number;
-            documentId?: string;
-          };
-          updatedBy?: {
-            id?: number;
-            documentId?: string;
-          };
-          locale?: string;
-          localizations?: {
-            id?: number;
-            documentId?: string;
-          }[];
-        };
-        /** @format date-time */
-        lastCheckedAt?: string;
-        protected?: boolean;
-        pause?: boolean;
-        description?: string;
-        tagline?: string;
-        faq?: any;
-        category?: string;
-        migration?: number;
-        clips?: {
-          id?: number;
-          documentId?: string;
-        }[];
-        memes?: {
-          id?: number;
-          documentId?: string;
-          start?: string;
-          end?: string;
-          title?: string;
-          duration?: number;
-          tags?: string;
-          viral_score?: number;
-          recording?: {
-            id?: number;
-            documentId?: string;
-          };
-          follower?: {
-            id?: number;
-            documentId?: string;
-          };
-          /** @format date-time */
-          createdAt?: string;
-          /** @format date-time */
-          updatedAt?: string;
-          /** @format date-time */
-          publishedAt?: string;
-          createdBy?: {
-            id?: number;
-            documentId?: string;
-          };
-          updatedBy?: {
-            id?: number;
-            documentId?: string;
-          };
-          locale?: string;
-          localizations?: {
-            id?: number;
-            documentId?: string;
-          }[];
-        }[];
-        /** @format date-time */
-        createdAt?: string;
-        /** @format date-time */
-        updatedAt?: string;
-        /** @format date-time */
-        publishedAt?: string;
-        createdBy?: {
-          id?: number;
-          documentId?: string;
-        };
-        updatedBy?: {
-          id?: number;
-          documentId?: string;
-        };
-        locale?: string;
-        localizations?: {
-          id?: number;
-          documentId?: string;
-        }[];
+      }[];
+      folder?: {
+        id?: number;
+        documentId?: string;
       };
-      sources?: {
-        id?: number;
-        documentId?: string;
-        state?: FollowerStateEnum;
-        executionId?: number;
-        /** @format date-time */
-        finishedAt?: string;
-        path?: string;
-        /** @format float */
-        duration?: number;
-        thumbnailInterval?: number;
-        thumbnailCols?: number;
-        videoOriginal?: VideosVideoComponent;
-        videoSmall?: VideosVideoComponent;
-        recording?: {
-          id?: number;
-          documentId?: string;
-        };
-        /** @format date-time */
-        createdAt?: string;
-        /** @format date-time */
-        updatedAt?: string;
-        /** @format date-time */
-        publishedAt?: string;
-        createdBy?: {
-          id?: number;
-          documentId?: string;
-        };
-        updatedBy?: {
-          id?: number;
-          documentId?: string;
-        };
-        locale?: string;
-        localizations?: {
-          id?: number;
-          documentId?: string;
-        }[];
-      }[];
-      clips?: {
-        id?: number;
-        documentId?: string;
-      }[];
-      ai_requests?: {
-        id?: number;
-        documentId?: string;
-        recording?: {
-          id?: number;
-          documentId?: string;
-        };
-        generateClips?: boolean;
-        generateMemes?: boolean;
-        generateProfile?: boolean;
-        state?: FollowerStateEnum1;
-        ai_tasks?: {
-          id?: number;
-          documentId?: string;
-          ai_request?: {
-            id?: number;
-            documentId?: string;
-          };
-          type?: string;
-          state?: FollowerStateEnum2;
-          output?: any;
-          executionId?: number;
-          /** @format date-time */
-          createdAt?: string;
-          /** @format date-time */
-          updatedAt?: string;
-          /** @format date-time */
-          publishedAt?: string;
-          createdBy?: {
-            id?: number;
-            documentId?: string;
-          };
-          updatedBy?: {
-            id?: number;
-            documentId?: string;
-          };
-          locale?: string;
-          localizations?: {
-            id?: number;
-            documentId?: string;
-          }[];
-        }[];
-        /** @format date-time */
-        createdAt?: string;
-        /** @format date-time */
-        updatedAt?: string;
-        /** @format date-time */
-        publishedAt?: string;
-        createdBy?: {
-          id?: number;
-          documentId?: string;
-        };
-        updatedBy?: {
-          id?: number;
-          documentId?: string;
-        };
-        locale?: string;
-        localizations?: {
-          id?: number;
-          documentId?: string;
-        }[];
-      }[];
-      memes?: {
-        id?: number;
-        documentId?: string;
-      }[];
+      folderPath?: string;
       /** @format date-time */
       createdAt?: string;
       /** @format date-time */
@@ -2690,10 +2196,15 @@ export interface Follower {
         documentId?: string;
       }[];
     };
-    follower?: {
-      id?: number;
-      documentId?: string;
-    };
+    /** @format date-time */
+    lastCheckedAt?: string;
+    protected?: boolean;
+    pause?: boolean;
+    description?: string;
+    tagline?: string;
+    faq?: any;
+    category?: string;
+    migration?: number;
     /** @format date-time */
     createdAt?: string;
     /** @format date-time */
@@ -2714,29 +2225,6 @@ export interface Follower {
       documentId?: string;
     }[];
   }[];
-  memes?: {
-    id?: number;
-    documentId?: string;
-  }[];
-  /** @format date-time */
-  createdAt?: string;
-  /** @format date-time */
-  updatedAt?: string;
-  /** @format date-time */
-  publishedAt?: string;
-  createdBy?: {
-    id?: number;
-    documentId?: string;
-  };
-  updatedBy?: {
-    id?: number;
-    documentId?: string;
-  };
-  locale?: string;
-  localizations?: {
-    id?: number;
-    documentId?: string;
-  }[];
 }
 
 export interface FollowerResponse {
@@ -2746,16 +2234,18 @@ export interface FollowerResponse {
 
 export interface MemeRequest {
   data: {
-    start?: string;
-    end?: string;
     title?: string;
-    duration?: number;
     tags?: string;
+    type?: MemeRequestTypeEnum;
+    start?: string;
+    duration?: number;
+    end?: string;
     viral_score?: number;
     /** @example "string or id" */
     recording?: number | string;
     /** @example "string or id" */
     follower?: number | string;
+    path?: string;
     locale?: string;
     localizations?: (number | string)[];
   };
@@ -2778,11 +2268,12 @@ export interface MemeListResponse {
 export interface Meme {
   id?: number;
   documentId?: string;
-  start?: string;
-  end?: string;
   title?: string;
-  duration?: number;
   tags?: string;
+  type?: MemeTypeEnum;
+  start?: string;
+  duration?: number;
+  end?: string;
   viral_score?: number;
   recording?: {
     id?: number;
@@ -2794,7 +2285,7 @@ export interface Meme {
       documentId?: string;
       nickname?: string;
       username?: string;
-      type?: MemeTypeEnum;
+      type?: MemeTypeEnum1;
       gender?: MemeGenderEnum;
       countryCode?: string;
       languageCode?: string;
@@ -3022,84 +2513,6 @@ export interface Meme {
       faq?: any;
       category?: string;
       migration?: number;
-      clips?: {
-        id?: number;
-        documentId?: string;
-        title?: string;
-        description?: string;
-        hook_text?: string;
-        tags?: string;
-        viral_score?: number;
-        thumbnail_timestamp?: string;
-        duration?: number;
-        end?: string;
-        start?: string;
-        path?: string;
-        recording?: {
-          id?: number;
-          documentId?: string;
-        };
-        follower?: {
-          id?: number;
-          documentId?: string;
-        };
-        /** @format date-time */
-        createdAt?: string;
-        /** @format date-time */
-        updatedAt?: string;
-        /** @format date-time */
-        publishedAt?: string;
-        createdBy?: {
-          id?: number;
-          documentId?: string;
-        };
-        updatedBy?: {
-          id?: number;
-          documentId?: string;
-        };
-        locale?: string;
-        localizations?: {
-          id?: number;
-          documentId?: string;
-        }[];
-      }[];
-      memes?: {
-        id?: number;
-        documentId?: string;
-        start?: string;
-        end?: string;
-        title?: string;
-        duration?: number;
-        tags?: string;
-        viral_score?: number;
-        recording?: {
-          id?: number;
-          documentId?: string;
-        };
-        follower?: {
-          id?: number;
-          documentId?: string;
-        };
-        /** @format date-time */
-        createdAt?: string;
-        /** @format date-time */
-        updatedAt?: string;
-        /** @format date-time */
-        publishedAt?: string;
-        createdBy?: {
-          id?: number;
-          documentId?: string;
-        };
-        updatedBy?: {
-          id?: number;
-          documentId?: string;
-        };
-        locale?: string;
-        localizations?: {
-          id?: number;
-          documentId?: string;
-        }[];
-      }[];
       /** @format date-time */
       createdAt?: string;
       /** @format date-time */
@@ -3158,76 +2571,6 @@ export interface Meme {
         documentId?: string;
       }[];
     }[];
-    clips?: {
-      id?: number;
-      documentId?: string;
-    }[];
-    ai_requests?: {
-      id?: number;
-      documentId?: string;
-      recording?: {
-        id?: number;
-        documentId?: string;
-      };
-      generateClips?: boolean;
-      generateMemes?: boolean;
-      generateProfile?: boolean;
-      state?: MemeStateEnum1;
-      ai_tasks?: {
-        id?: number;
-        documentId?: string;
-        ai_request?: {
-          id?: number;
-          documentId?: string;
-        };
-        type?: string;
-        state?: MemeStateEnum2;
-        output?: any;
-        executionId?: number;
-        /** @format date-time */
-        createdAt?: string;
-        /** @format date-time */
-        updatedAt?: string;
-        /** @format date-time */
-        publishedAt?: string;
-        createdBy?: {
-          id?: number;
-          documentId?: string;
-        };
-        updatedBy?: {
-          id?: number;
-          documentId?: string;
-        };
-        locale?: string;
-        localizations?: {
-          id?: number;
-          documentId?: string;
-        }[];
-      }[];
-      /** @format date-time */
-      createdAt?: string;
-      /** @format date-time */
-      updatedAt?: string;
-      /** @format date-time */
-      publishedAt?: string;
-      createdBy?: {
-        id?: number;
-        documentId?: string;
-      };
-      updatedBy?: {
-        id?: number;
-        documentId?: string;
-      };
-      locale?: string;
-      localizations?: {
-        id?: number;
-        documentId?: string;
-      }[];
-    }[];
-    memes?: {
-      id?: number;
-      documentId?: string;
-    }[];
     /** @format date-time */
     createdAt?: string;
     /** @format date-time */
@@ -3252,6 +2595,7 @@ export interface Meme {
     id?: number;
     documentId?: string;
   };
+  path?: string;
   /** @format date-time */
   createdAt?: string;
   /** @format date-time */
@@ -3270,6 +2614,41 @@ export interface Meme {
   localizations?: {
     id?: number;
     documentId?: string;
+    title?: string;
+    tags?: string;
+    type?: MemeTypeEnum2;
+    start?: string;
+    duration?: number;
+    end?: string;
+    viral_score?: number;
+    recording?: {
+      id?: number;
+      documentId?: string;
+    };
+    follower?: {
+      id?: number;
+      documentId?: string;
+    };
+    path?: string;
+    /** @format date-time */
+    createdAt?: string;
+    /** @format date-time */
+    updatedAt?: string;
+    /** @format date-time */
+    publishedAt?: string;
+    createdBy?: {
+      id?: number;
+      documentId?: string;
+    };
+    updatedBy?: {
+      id?: number;
+      documentId?: string;
+    };
+    locale?: string;
+    localizations?: {
+      id?: number;
+      documentId?: string;
+    }[];
   }[];
 }
 
@@ -3613,217 +2992,6 @@ export interface Message {
       faq?: any;
       category?: string;
       migration?: number;
-      clips?: {
-        id?: number;
-        documentId?: string;
-        title?: string;
-        description?: string;
-        hook_text?: string;
-        tags?: string;
-        viral_score?: number;
-        thumbnail_timestamp?: string;
-        duration?: number;
-        end?: string;
-        start?: string;
-        path?: string;
-        recording?: {
-          id?: number;
-          documentId?: string;
-          title?: string;
-          description?: string;
-          follower?: {
-            id?: number;
-            documentId?: string;
-          };
-          sources?: {
-            id?: number;
-            documentId?: string;
-            state?: MessageStateEnum;
-            executionId?: number;
-            /** @format date-time */
-            finishedAt?: string;
-            path?: string;
-            /** @format float */
-            duration?: number;
-            thumbnailInterval?: number;
-            thumbnailCols?: number;
-            videoOriginal?: VideosVideoComponent;
-            videoSmall?: VideosVideoComponent;
-            recording?: {
-              id?: number;
-              documentId?: string;
-            };
-            /** @format date-time */
-            createdAt?: string;
-            /** @format date-time */
-            updatedAt?: string;
-            /** @format date-time */
-            publishedAt?: string;
-            createdBy?: {
-              id?: number;
-              documentId?: string;
-            };
-            updatedBy?: {
-              id?: number;
-              documentId?: string;
-            };
-            locale?: string;
-            localizations?: {
-              id?: number;
-              documentId?: string;
-            }[];
-          }[];
-          clips?: {
-            id?: number;
-            documentId?: string;
-          }[];
-          ai_requests?: {
-            id?: number;
-            documentId?: string;
-            recording?: {
-              id?: number;
-              documentId?: string;
-            };
-            generateClips?: boolean;
-            generateMemes?: boolean;
-            generateProfile?: boolean;
-            state?: MessageStateEnum1;
-            ai_tasks?: {
-              id?: number;
-              documentId?: string;
-              ai_request?: {
-                id?: number;
-                documentId?: string;
-              };
-              type?: string;
-              state?: MessageStateEnum2;
-              output?: any;
-              executionId?: number;
-              /** @format date-time */
-              createdAt?: string;
-              /** @format date-time */
-              updatedAt?: string;
-              /** @format date-time */
-              publishedAt?: string;
-              createdBy?: {
-                id?: number;
-                documentId?: string;
-              };
-              updatedBy?: {
-                id?: number;
-                documentId?: string;
-              };
-              locale?: string;
-              localizations?: {
-                id?: number;
-                documentId?: string;
-              }[];
-            }[];
-            /** @format date-time */
-            createdAt?: string;
-            /** @format date-time */
-            updatedAt?: string;
-            /** @format date-time */
-            publishedAt?: string;
-            createdBy?: {
-              id?: number;
-              documentId?: string;
-            };
-            updatedBy?: {
-              id?: number;
-              documentId?: string;
-            };
-            locale?: string;
-            localizations?: {
-              id?: number;
-              documentId?: string;
-            }[];
-          }[];
-          memes?: {
-            id?: number;
-            documentId?: string;
-            start?: string;
-            end?: string;
-            title?: string;
-            duration?: number;
-            tags?: string;
-            viral_score?: number;
-            recording?: {
-              id?: number;
-              documentId?: string;
-            };
-            follower?: {
-              id?: number;
-              documentId?: string;
-            };
-            /** @format date-time */
-            createdAt?: string;
-            /** @format date-time */
-            updatedAt?: string;
-            /** @format date-time */
-            publishedAt?: string;
-            createdBy?: {
-              id?: number;
-              documentId?: string;
-            };
-            updatedBy?: {
-              id?: number;
-              documentId?: string;
-            };
-            locale?: string;
-            localizations?: {
-              id?: number;
-              documentId?: string;
-            }[];
-          }[];
-          /** @format date-time */
-          createdAt?: string;
-          /** @format date-time */
-          updatedAt?: string;
-          /** @format date-time */
-          publishedAt?: string;
-          createdBy?: {
-            id?: number;
-            documentId?: string;
-          };
-          updatedBy?: {
-            id?: number;
-            documentId?: string;
-          };
-          locale?: string;
-          localizations?: {
-            id?: number;
-            documentId?: string;
-          }[];
-        };
-        follower?: {
-          id?: number;
-          documentId?: string;
-        };
-        /** @format date-time */
-        createdAt?: string;
-        /** @format date-time */
-        updatedAt?: string;
-        /** @format date-time */
-        publishedAt?: string;
-        createdBy?: {
-          id?: number;
-          documentId?: string;
-        };
-        updatedBy?: {
-          id?: number;
-          documentId?: string;
-        };
-        locale?: string;
-        localizations?: {
-          id?: number;
-          documentId?: string;
-        }[];
-      }[];
-      memes?: {
-        id?: number;
-        documentId?: string;
-      }[];
       /** @format date-time */
       createdAt?: string;
       /** @format date-time */
@@ -3929,9 +3097,6 @@ export interface RecordingRequest {
     /** @example "string or id" */
     follower?: number | string;
     sources?: (number | string)[];
-    clips?: (number | string)[];
-    ai_requests?: (number | string)[];
-    memes?: (number | string)[];
     locale?: string;
     localizations?: (number | string)[];
   };
@@ -4189,217 +3354,6 @@ export interface Recording {
     faq?: any;
     category?: string;
     migration?: number;
-    clips?: {
-      id?: number;
-      documentId?: string;
-      title?: string;
-      description?: string;
-      hook_text?: string;
-      tags?: string;
-      viral_score?: number;
-      thumbnail_timestamp?: string;
-      duration?: number;
-      end?: string;
-      start?: string;
-      path?: string;
-      recording?: {
-        id?: number;
-        documentId?: string;
-        title?: string;
-        description?: string;
-        follower?: {
-          id?: number;
-          documentId?: string;
-        };
-        sources?: {
-          id?: number;
-          documentId?: string;
-          state?: RecordingStateEnum;
-          executionId?: number;
-          /** @format date-time */
-          finishedAt?: string;
-          path?: string;
-          /** @format float */
-          duration?: number;
-          thumbnailInterval?: number;
-          thumbnailCols?: number;
-          videoOriginal?: VideosVideoComponent;
-          videoSmall?: VideosVideoComponent;
-          recording?: {
-            id?: number;
-            documentId?: string;
-          };
-          /** @format date-time */
-          createdAt?: string;
-          /** @format date-time */
-          updatedAt?: string;
-          /** @format date-time */
-          publishedAt?: string;
-          createdBy?: {
-            id?: number;
-            documentId?: string;
-          };
-          updatedBy?: {
-            id?: number;
-            documentId?: string;
-          };
-          locale?: string;
-          localizations?: {
-            id?: number;
-            documentId?: string;
-          }[];
-        }[];
-        clips?: {
-          id?: number;
-          documentId?: string;
-        }[];
-        ai_requests?: {
-          id?: number;
-          documentId?: string;
-          recording?: {
-            id?: number;
-            documentId?: string;
-          };
-          generateClips?: boolean;
-          generateMemes?: boolean;
-          generateProfile?: boolean;
-          state?: RecordingStateEnum1;
-          ai_tasks?: {
-            id?: number;
-            documentId?: string;
-            ai_request?: {
-              id?: number;
-              documentId?: string;
-            };
-            type?: string;
-            state?: RecordingStateEnum2;
-            output?: any;
-            executionId?: number;
-            /** @format date-time */
-            createdAt?: string;
-            /** @format date-time */
-            updatedAt?: string;
-            /** @format date-time */
-            publishedAt?: string;
-            createdBy?: {
-              id?: number;
-              documentId?: string;
-            };
-            updatedBy?: {
-              id?: number;
-              documentId?: string;
-            };
-            locale?: string;
-            localizations?: {
-              id?: number;
-              documentId?: string;
-            }[];
-          }[];
-          /** @format date-time */
-          createdAt?: string;
-          /** @format date-time */
-          updatedAt?: string;
-          /** @format date-time */
-          publishedAt?: string;
-          createdBy?: {
-            id?: number;
-            documentId?: string;
-          };
-          updatedBy?: {
-            id?: number;
-            documentId?: string;
-          };
-          locale?: string;
-          localizations?: {
-            id?: number;
-            documentId?: string;
-          }[];
-        }[];
-        memes?: {
-          id?: number;
-          documentId?: string;
-          start?: string;
-          end?: string;
-          title?: string;
-          duration?: number;
-          tags?: string;
-          viral_score?: number;
-          recording?: {
-            id?: number;
-            documentId?: string;
-          };
-          follower?: {
-            id?: number;
-            documentId?: string;
-          };
-          /** @format date-time */
-          createdAt?: string;
-          /** @format date-time */
-          updatedAt?: string;
-          /** @format date-time */
-          publishedAt?: string;
-          createdBy?: {
-            id?: number;
-            documentId?: string;
-          };
-          updatedBy?: {
-            id?: number;
-            documentId?: string;
-          };
-          locale?: string;
-          localizations?: {
-            id?: number;
-            documentId?: string;
-          }[];
-        }[];
-        /** @format date-time */
-        createdAt?: string;
-        /** @format date-time */
-        updatedAt?: string;
-        /** @format date-time */
-        publishedAt?: string;
-        createdBy?: {
-          id?: number;
-          documentId?: string;
-        };
-        updatedBy?: {
-          id?: number;
-          documentId?: string;
-        };
-        locale?: string;
-        localizations?: {
-          id?: number;
-          documentId?: string;
-        }[];
-      };
-      follower?: {
-        id?: number;
-        documentId?: string;
-      };
-      /** @format date-time */
-      createdAt?: string;
-      /** @format date-time */
-      updatedAt?: string;
-      /** @format date-time */
-      publishedAt?: string;
-      createdBy?: {
-        id?: number;
-        documentId?: string;
-      };
-      updatedBy?: {
-        id?: number;
-        documentId?: string;
-      };
-      locale?: string;
-      localizations?: {
-        id?: number;
-        documentId?: string;
-      }[];
-    }[];
-    memes?: {
-      id?: number;
-      documentId?: string;
-    }[];
     /** @format date-time */
     createdAt?: string;
     /** @format date-time */
@@ -4420,18 +3374,6 @@ export interface Recording {
       documentId?: string;
     }[];
   };
-  clips?: {
-    id?: number;
-    documentId?: string;
-  }[];
-  ai_requests?: {
-    id?: number;
-    documentId?: string;
-  }[];
-  memes?: {
-    id?: number;
-    documentId?: string;
-  }[];
   /** @format date-time */
   createdAt?: string;
   /** @format date-time */
@@ -4745,84 +3687,6 @@ export interface Source {
       faq?: any;
       category?: string;
       migration?: number;
-      clips?: {
-        id?: number;
-        documentId?: string;
-        title?: string;
-        description?: string;
-        hook_text?: string;
-        tags?: string;
-        viral_score?: number;
-        thumbnail_timestamp?: string;
-        duration?: number;
-        end?: string;
-        start?: string;
-        path?: string;
-        recording?: {
-          id?: number;
-          documentId?: string;
-        };
-        follower?: {
-          id?: number;
-          documentId?: string;
-        };
-        /** @format date-time */
-        createdAt?: string;
-        /** @format date-time */
-        updatedAt?: string;
-        /** @format date-time */
-        publishedAt?: string;
-        createdBy?: {
-          id?: number;
-          documentId?: string;
-        };
-        updatedBy?: {
-          id?: number;
-          documentId?: string;
-        };
-        locale?: string;
-        localizations?: {
-          id?: number;
-          documentId?: string;
-        }[];
-      }[];
-      memes?: {
-        id?: number;
-        documentId?: string;
-        start?: string;
-        end?: string;
-        title?: string;
-        duration?: number;
-        tags?: string;
-        viral_score?: number;
-        recording?: {
-          id?: number;
-          documentId?: string;
-        };
-        follower?: {
-          id?: number;
-          documentId?: string;
-        };
-        /** @format date-time */
-        createdAt?: string;
-        /** @format date-time */
-        updatedAt?: string;
-        /** @format date-time */
-        publishedAt?: string;
-        createdBy?: {
-          id?: number;
-          documentId?: string;
-        };
-        updatedBy?: {
-          id?: number;
-          documentId?: string;
-        };
-        locale?: string;
-        localizations?: {
-          id?: number;
-          documentId?: string;
-        }[];
-      }[];
       /** @format date-time */
       createdAt?: string;
       /** @format date-time */
@@ -4880,76 +3744,6 @@ export interface Source {
         id?: number;
         documentId?: string;
       }[];
-    }[];
-    clips?: {
-      id?: number;
-      documentId?: string;
-    }[];
-    ai_requests?: {
-      id?: number;
-      documentId?: string;
-      recording?: {
-        id?: number;
-        documentId?: string;
-      };
-      generateClips?: boolean;
-      generateMemes?: boolean;
-      generateProfile?: boolean;
-      state?: SourceStateEnum2;
-      ai_tasks?: {
-        id?: number;
-        documentId?: string;
-        ai_request?: {
-          id?: number;
-          documentId?: string;
-        };
-        type?: string;
-        state?: SourceStateEnum3;
-        output?: any;
-        executionId?: number;
-        /** @format date-time */
-        createdAt?: string;
-        /** @format date-time */
-        updatedAt?: string;
-        /** @format date-time */
-        publishedAt?: string;
-        createdBy?: {
-          id?: number;
-          documentId?: string;
-        };
-        updatedBy?: {
-          id?: number;
-          documentId?: string;
-        };
-        locale?: string;
-        localizations?: {
-          id?: number;
-          documentId?: string;
-        }[];
-      }[];
-      /** @format date-time */
-      createdAt?: string;
-      /** @format date-time */
-      updatedAt?: string;
-      /** @format date-time */
-      publishedAt?: string;
-      createdBy?: {
-        id?: number;
-        documentId?: string;
-      };
-      updatedBy?: {
-        id?: number;
-        documentId?: string;
-      };
-      locale?: string;
-      localizations?: {
-        id?: number;
-        documentId?: string;
-      }[];
-    }[];
-    memes?: {
-      id?: number;
-      documentId?: string;
     }[];
     /** @format date-time */
     createdAt?: string;
@@ -5239,20 +4033,6 @@ export enum ClipStateEnum {
   Failed = "failed",
 }
 
-export enum ClipStateEnum1 {
-  Pending = "pending",
-  Processing = "processing",
-  Completed = "completed",
-  Failed = "failed",
-}
-
-export enum ClipStateEnum2 {
-  Pending = "pending",
-  Processing = "processing",
-  Completed = "completed",
-  Failed = "failed",
-}
-
 export enum FollowerRequestTypeEnum {
   Tiktok = "tiktok",
   Twitch = "twitch",
@@ -5280,27 +4060,17 @@ export enum FollowerGenderEnum1 {
   Unknown = "unknown",
 }
 
-export enum FollowerStateEnum {
-  Recording = "recording",
-  Done = "done",
-  Failed = "failed",
-}
-
-export enum FollowerStateEnum1 {
-  Pending = "pending",
-  Processing = "processing",
-  Completed = "completed",
-  Failed = "failed",
-}
-
-export enum FollowerStateEnum2 {
-  Pending = "pending",
-  Processing = "processing",
-  Completed = "completed",
-  Failed = "failed",
+export enum MemeRequestTypeEnum {
+  ValueMp4 = ".mp4",
+  ValueGif = ".gif",
 }
 
 export enum MemeTypeEnum {
+  ValueMp4 = ".mp4",
+  ValueGif = ".gif",
+}
+
+export enum MemeTypeEnum1 {
   Tiktok = "tiktok",
   Twitch = "twitch",
   Kick = "kick",
@@ -5321,18 +4091,9 @@ export enum MemeStateEnum {
   Failed = "failed",
 }
 
-export enum MemeStateEnum1 {
-  Pending = "pending",
-  Processing = "processing",
-  Completed = "completed",
-  Failed = "failed",
-}
-
-export enum MemeStateEnum2 {
-  Pending = "pending",
-  Processing = "processing",
-  Completed = "completed",
-  Failed = "failed",
+export enum MemeTypeEnum2 {
+  ValueMp4 = ".mp4",
+  ValueGif = ".gif",
 }
 
 export enum MessageTypeEnum {
@@ -5350,50 +4111,10 @@ export enum MessageGenderEnum {
   Unknown = "unknown",
 }
 
-export enum MessageStateEnum {
-  Recording = "recording",
-  Done = "done",
-  Failed = "failed",
-}
-
-export enum MessageStateEnum1 {
-  Pending = "pending",
-  Processing = "processing",
-  Completed = "completed",
-  Failed = "failed",
-}
-
-export enum MessageStateEnum2 {
-  Pending = "pending",
-  Processing = "processing",
-  Completed = "completed",
-  Failed = "failed",
-}
-
 export enum RecordingGenderEnum {
   Male = "male",
   Female = "female",
   Unknown = "unknown",
-}
-
-export enum RecordingStateEnum {
-  Recording = "recording",
-  Done = "done",
-  Failed = "failed",
-}
-
-export enum RecordingStateEnum1 {
-  Pending = "pending",
-  Processing = "processing",
-  Completed = "completed",
-  Failed = "failed",
-}
-
-export enum RecordingStateEnum2 {
-  Pending = "pending",
-  Processing = "processing",
-  Completed = "completed",
-  Failed = "failed",
 }
 
 export enum SourceRequestStateEnum {
@@ -5426,20 +4147,6 @@ export enum SourceGenderEnum {
 export enum SourceStateEnum1 {
   Recording = "recording",
   Done = "done",
-  Failed = "failed",
-}
-
-export enum SourceStateEnum2 {
-  Pending = "pending",
-  Processing = "processing",
-  Completed = "completed",
-  Failed = "failed",
-}
-
-export enum SourceStateEnum3 {
-  Pending = "pending",
-  Processing = "processing",
-  Completed = "completed",
   Failed = "failed",
 }
 

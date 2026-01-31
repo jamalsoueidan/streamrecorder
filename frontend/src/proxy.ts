@@ -65,5 +65,5 @@ export function proxy(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/((?!api|_next|media|avatar|assets|video|clip|serwist).*)"],
+  matcher: ["/((?!api|_next|media|avatar|assets|video|clip|serwist|meme).*)"],
 };
