@@ -20,11 +20,11 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2026-01-31T02:46:41.816Z"
+    "x-generation-date": "2026-01-31T11:24:22.079Z"
   },
   "servers": [
     {
-      "url": "http://0.0.0.0:1337/api",
+      "url": "http://localhost:1337/api",
       "description": "Development server"
     }
   ],
@@ -14112,6 +14112,9 @@
                 ],
                 "example": "string or id"
               },
+              "path": {
+                "type": "string"
+              },
               "locale": {
                 "type": "string"
               },
@@ -15105,6 +15108,9 @@
               }
             }
           },
+          "path": {
+            "type": "string"
+          },
           "createdAt": {
             "type": "string",
             "format": "date-time"
@@ -15199,6 +15205,9 @@
                       "type": "string"
                     }
                   }
+                },
+                "path": {
+                  "type": "string"
                 },
                 "createdAt": {
                   "type": "string",

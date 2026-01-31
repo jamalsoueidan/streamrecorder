@@ -909,6 +909,12 @@ export interface ApiMemeMeme extends Struct.CollectionTypeSchema {
     follower: Schema.Attribute.Relation<'manyToOne', 'api::follower.follower'>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::meme.meme'>;
+    path: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
     publishedAt: Schema.Attribute.DateTime;
     recording: Schema.Attribute.Relation<
       'manyToOne',
