@@ -623,13 +623,13 @@ export interface ApiClipClip extends Struct.CollectionTypeSchema {
     duration: Schema.Attribute.Integer &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     end: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     follower: Schema.Attribute.Relation<'manyToOne', 'api::follower.follower'>;
@@ -644,7 +644,7 @@ export interface ApiClipClip extends Struct.CollectionTypeSchema {
     path: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     publishedAt: Schema.Attribute.DateTime;
@@ -655,19 +655,19 @@ export interface ApiClipClip extends Struct.CollectionTypeSchema {
     start: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     tags: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     thumbnail_timestamp: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     title: Schema.Attribute.String &
@@ -682,7 +682,7 @@ export interface ApiClipClip extends Struct.CollectionTypeSchema {
     viral_score: Schema.Attribute.Integer &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
   };
@@ -899,13 +899,13 @@ export interface ApiMemeMeme extends Struct.CollectionTypeSchema {
     duration: Schema.Attribute.Integer &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     end: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     follower: Schema.Attribute.Relation<'manyToOne', 'api::follower.follower'>;
@@ -919,13 +919,13 @@ export interface ApiMemeMeme extends Struct.CollectionTypeSchema {
     start: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     tags: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     title: Schema.Attribute.String &
@@ -937,7 +937,7 @@ export interface ApiMemeMeme extends Struct.CollectionTypeSchema {
     type: Schema.Attribute.Enumeration<['video', 'gif']> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     updatedAt: Schema.Attribute.DateTime;
@@ -946,7 +946,7 @@ export interface ApiMemeMeme extends Struct.CollectionTypeSchema {
     viral_score: Schema.Attribute.Integer &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
   };
