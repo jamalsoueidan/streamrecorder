@@ -14,8 +14,7 @@
     "recording": {
       "type": "relation",
       "relation": "manyToOne",
-      "target": "api::recording.recording",
-      "inversedBy": "ai_requests"
+      "target": "api::recording.recording"
     },
     "generateClips": {
       "type": "boolean",
@@ -32,12 +31,7 @@
     "state": {
       "type": "enumeration",
       "default": "pending",
-      "enum": [
-        "pending",
-        "processing",
-        "completed",
-        "failed"
-      ]
+      "enum": ["pending", "processing", "completed", "failed"]
     },
     "ai_tasks": {
       "type": "relation",

@@ -9,13 +9,27 @@
   "options": {
     "draftAndPublish": false
   },
-  "pluginOptions": {},
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "description": {
-      "type": "text"
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "follower": {
       "type": "relation",
@@ -26,24 +40,6 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::source.source",
-      "mappedBy": "recording"
-    },
-    "clips": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::clip.clip",
-      "mappedBy": "recording"
-    },
-    "ai_requests": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::ai-request.ai-request",
-      "mappedBy": "recording"
-    },
-    "memes": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::meme.meme",
       "mappedBy": "recording"
     }
   }
