@@ -38,7 +38,10 @@
           "localized": false
         }
       },
-      "enum": ["video", "gif"]
+      "enum": [
+        "video",
+        "gif"
+      ]
     },
     "start": {
       "type": "string",
@@ -81,6 +84,14 @@
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::follower.follower"
+    },
+    "path": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
     }
   }
 }
