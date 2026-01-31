@@ -212,6 +212,7 @@ export async function createRecording(
         state: sourceState,
         duration: 120,
         publishedAt: new Date(),
+        locale: "en",
       },
     });
 
@@ -220,6 +221,7 @@ export async function createRecording(
         follower: followerId,
         sources: [source.id],
         publishedAt: new Date(),
+        locale: "en",
       },
     });
   }
@@ -228,6 +230,7 @@ export async function createRecording(
     data: {
       follower: followerId,
       publishedAt: new Date(),
+      locale: "en",
     },
   });
 }
