@@ -98,14 +98,12 @@
     "recording": {
       "type": "relation",
       "relation": "manyToOne",
-      "target": "api::recording.recording",
-      "inversedBy": "clips"
+      "target": "api::recording.recording"
     },
     "follower": {
       "type": "relation",
       "relation": "manyToOne",
-      "target": "api::follower.follower",
-      "inversedBy": "clips"
+      "target": "api::follower.follower"
     }
   }
 }

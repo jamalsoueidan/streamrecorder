@@ -38,10 +38,7 @@
           "localized": false
         }
       },
-      "enum": [
-        "video",
-        "gif"
-      ]
+      "enum": ["video", "gif"]
     },
     "start": {
       "type": "string",
@@ -78,14 +75,12 @@
     "recording": {
       "type": "relation",
       "relation": "manyToOne",
-      "target": "api::recording.recording",
-      "inversedBy": "memes"
+      "target": "api::recording.recording"
     },
     "follower": {
       "type": "relation",
       "relation": "manyToOne",
-      "target": "api::follower.follower",
-      "inversedBy": "memes"
+      "target": "api::follower.follower"
     }
   }
 }
