@@ -20,7 +20,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2026-01-31T11:24:22.079Z"
+    "x-generation-date": "2026-01-31T12:00:33.254Z"
   },
   "servers": [
     {
@@ -14074,8 +14074,8 @@
               "type": {
                 "type": "string",
                 "enum": [
-                  "video",
-                  "gif"
+                  ".mp4",
+                  ".gif"
                 ]
               },
               "start": {
@@ -14189,8 +14189,8 @@
           "type": {
             "type": "string",
             "enum": [
-              "video",
-              "gif"
+              ".mp4",
+              ".gif"
             ]
           },
           "start": {
@@ -15168,8 +15168,8 @@
                 "type": {
                   "type": "string",
                   "enum": [
-                    "video",
-                    "gif"
+                    ".mp4",
+                    ".gif"
                   ]
                 },
                 "start": {
