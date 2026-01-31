@@ -110,7 +110,6 @@ export function VideoPlayer({
           crossOrigin="anonymous"
           playsInline
           preload="metadata"
-          poster={previewUrl}
         />
       ) : (
         <HlsVideo

@@ -19,7 +19,12 @@ export async function ImageClipPreview({ clip, type }: Props) {
   const previewUrl = `/clip/${clip.documentId}/thumbnail.jpg`;
 
   return (
-    <div style={{ position: "relative" }}>
+    <div
+      style={{
+        position: "relative",
+        overflow: "hidden",
+      }}
+    >
       <VideoPlayer
         previewUrl={previewUrl}
         src={`/clip/${clip.documentId}/short.mp4`}
