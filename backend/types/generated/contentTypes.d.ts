@@ -676,7 +676,7 @@ export interface ApiClipClip extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
-    transcript: Schema.Attribute.Text &
+    transcript: Schema.Attribute.JSON &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -939,6 +939,12 @@ export interface ApiMemeMeme extends Struct.CollectionTypeSchema {
         };
       }>;
     title: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    transcript: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;

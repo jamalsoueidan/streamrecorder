@@ -20,7 +20,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2026-02-01T00:05:33.204Z"
+    "x-generation-date": "2026-02-01T00:25:34.987Z"
   },
   "servers": [
     {
@@ -11312,12 +11312,10 @@
               "description": {
                 "type": "string"
               },
-              "transcript": {
-                "type": "string"
-              },
               "hook_text": {
                 "type": "string"
               },
+              "transcript": {},
               "tags": {
                 "type": "string"
               },
@@ -11432,12 +11430,10 @@
           "description": {
             "type": "string"
           },
-          "transcript": {
-            "type": "string"
-          },
           "hook_text": {
             "type": "string"
           },
+          "transcript": {},
           "tags": {
             "type": "string"
           },
@@ -12416,12 +12412,10 @@
                 "description": {
                   "type": "string"
                 },
-                "transcript": {
-                  "type": "string"
-                },
                 "hook_text": {
                   "type": "string"
                 },
+                "transcript": {},
                 "tags": {
                   "type": "string"
                 },
@@ -14118,6 +14112,9 @@
               "title": {
                 "type": "string"
               },
+              "transcript": {
+                "type": "string"
+              },
               "tags": {
                 "type": "string"
               },
@@ -14231,6 +14228,9 @@
             "type": "string"
           },
           "title": {
+            "type": "string"
+          },
+          "transcript": {
             "type": "string"
           },
           "tags": {
@@ -15210,6 +15210,9 @@
                   "type": "string"
                 },
                 "title": {
+                  "type": "string"
+                },
+                "transcript": {
                   "type": "string"
                 },
                 "tags": {
