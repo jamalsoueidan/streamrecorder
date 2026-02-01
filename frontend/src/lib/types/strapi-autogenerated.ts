@@ -1256,6 +1256,7 @@ export interface ClipRequest {
     title?: string;
     description?: string;
     hook_text?: string;
+    transcript?: any;
     tags?: string;
     viral_score?: number;
     thumbnail_timestamp?: string;
@@ -1292,6 +1293,7 @@ export interface Clip {
   title?: string;
   description?: string;
   hook_text?: string;
+  transcript?: any;
   tags?: string;
   viral_score?: number;
   thumbnail_timestamp?: string;
@@ -1640,6 +1642,7 @@ export interface Clip {
     title?: string;
     description?: string;
     hook_text?: string;
+    transcript?: any;
     tags?: string;
     viral_score?: number;
     thumbnail_timestamp?: string;
@@ -2235,6 +2238,7 @@ export interface FollowerResponse {
 export interface MemeRequest {
   data: {
     title?: string;
+    transcript?: string;
     tags?: string;
     type?: MemeRequestTypeEnum;
     start?: string;
@@ -2269,6 +2273,7 @@ export interface Meme {
   id?: number;
   documentId?: string;
   title?: string;
+  transcript?: string;
   tags?: string;
   type?: MemeTypeEnum;
   start?: string;
@@ -2615,6 +2620,7 @@ export interface Meme {
     id?: number;
     documentId?: string;
     title?: string;
+    transcript?: string;
     tags?: string;
     type?: MemeTypeEnum2;
     start?: string;
@@ -4890,6 +4896,18 @@ export type GetUsersPermissionsUsersRolesData = UsersPermissionsUser & {
 
 export type CountListData = number;
 
+export interface GetRandomClipsParams {
+  /**
+   * Number of clips to return
+   * @default 12
+   */
+  limit?: number;
+}
+
+export interface GetRandomClipsData {
+  data?: Clip[];
+}
+
 export interface BrowseFollowersParams {
   /** Sort by attributes ascending (asc) or descending (desc) */
   sort?: string;
@@ -5473,6 +5491,28 @@ export namespace Clip {
     export type RequestBody = never;
     export type RequestHeaders = {};
     export type ResponseBody = DeleteClipsIdData;
+  }
+
+  /**
+   * No description
+   * @tags Clip
+   * @name GetRandomClips
+   * @summary Get random clips (one per user)
+   * @request GET:/clips/random
+   * @secure
+   */
+  export namespace GetRandomClips {
+    export type RequestParams = {};
+    export type RequestQuery = {
+      /**
+       * Number of clips to return
+       * @default 12
+       */
+      limit?: number;
+    };
+    export type RequestBody = never;
+    export type RequestHeaders = {};
+    export type ResponseBody = GetRandomClipsData;
   }
 }
 
@@ -7403,6 +7443,25 @@ export class Api<
       this.request<DeleteClipsIdData, Error>({
         path: `/clips/${id}`,
         method: "DELETE",
+        secure: true,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Clip
+     * @name GetRandomClips
+     * @summary Get random clips (one per user)
+     * @request GET:/clips/random
+     * @secure
+     */
+    getRandomClips: (query: GetRandomClipsParams, params: RequestParams = {}) =>
+      this.request<GetRandomClipsData, any>({
+        path: `/clips/random`,
+        method: "GET",
+        query: query,
         secure: true,
         format: "json",
         ...params,
