@@ -100,3 +100,37 @@ media-volume-range {
       0 0 30px rgba(255, 215, 0, 0.8);
   }
 }
+
+.responsive-badge {
+  --badge-height: var(--badge-height-xl);
+  --badge-fz: var(--badge-fz-lg);
+  --badge-padding-x: var(--badge-padding-x-sm);
+  cursor: pointer;
+  width: 100%;
+}
+
+.responsive-badge .mantine-Badge-section span {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background-color: currentColor;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+}
+
+@media (min-width: 48em) {
+  .responsive-badge {
+    --badge-fz: var(--badge-fz-xl);
+    --badge-padding-x: var(--badge-padding-x-xl);
+    width: auto;
+  }
+
+  .responsive-badge .mantine-Badge-section span {
+    width: 18px;
+    height: 18px;
+  }
+}

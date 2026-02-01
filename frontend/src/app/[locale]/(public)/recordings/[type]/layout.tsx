@@ -1,16 +1,16 @@
 import { streamingPlatforms } from "@/app/lib/streaming-platforms";
 import {
+  Badge,
   Button,
   Container,
-  Group,
+  Grid,
+  GridCol,
   Paper,
-  SimpleGrid,
   Stack,
   Text,
   Title,
 } from "@mantine/core";
 import { getTranslations } from "next-intl/server";
-import Image from "next/image";
 import Link from "next/link";
 import Markdown from "react-markdown";
 
@@ -66,31 +66,44 @@ export default async function RecordingPage({ params, children }: PageProps) {
           {}
           {t(`hero.subtitle.${platformName.toLowerCase()}`)}
         </Text>
-
-        <SimpleGrid cols={{ base: 2, sm: 6 }} spacing="xl" mt={20}>
-          {streamingPlatforms.map((p) => (
-            <Link
-              key={p.name}
-              href={`/recordings/${p.name.toLowerCase()}`}
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                border: p.name.toLowerCase() === type ? "1px solid" : "none",
-                borderRadius: "8px",
-                padding: "4px",
-              }}
-            >
-              <Image
-                alt={p.name}
-                src={p.file}
-                width={120}
-                height={120}
-                style={{ maxWidth: 120, height: "auto" }}
-              />
-            </Link>
-          ))}
-        </SimpleGrid>
       </Stack>
+
+      <Grid align="center" justify="center">
+        {streamingPlatforms.map((p) => (
+          <GridCol key={p.name} span={{ base: 4, sm: "content" }}>
+            <Link href={`/recordings/${p.name.toLowerCase()}`}>
+              <Badge
+                variant={p.name.toLowerCase() === type ? "filled" : "outline"}
+                leftSection={
+                  <span
+                    style={{
+                      maskImage: `url(${p.file})`,
+                      WebkitMaskImage: `url(${p.file})`,
+                    }}
+                  />
+                }
+                color={p.color}
+                style={{
+                  outline:
+                    p.name.toLowerCase() === type
+                      ? `2px solid ${p.color}`
+                      : undefined,
+                  outlineOffset:
+                    p.name.toLowerCase() === type ? "2px" : undefined,
+                  filter:
+                    p.name.toLowerCase() === type
+                      ? `drop-shadow(0 0 10px ${p.color})`
+                      : undefined,
+                  transition: "all 0.2s ease",
+                }}
+              >
+                {p.name}
+              </Badge>
+            </Link>
+          </GridCol>
+        ))}
+      </Grid>
+
       {children}
 
       {/* CTA Section */}
@@ -136,20 +149,20 @@ export default async function RecordingPage({ params, children }: PageProps) {
               {t(`cta.title.${platformName.toLowerCase()}`)}
             </Title>
             <Text size="lg" style={{ color: "#94a3b8", lineHeight: 1.7 }}>
-              {t("cta.subtitle")}
+              {t(`cta.subtitle.${platformName.toLowerCase()}`)}
             </Text>
-            <Group gap={16} mt={16}>
-              <Button
-                component="a"
-                size="lg"
-                variant="gradient"
-                gradient={{ from: "#6366f1", to: "#a855f7", deg: 135 }}
-                style={{ fontWeight: 600 }}
-                href="/register"
-              >
-                {t("cta.button")}
-              </Button>
-            </Group>
+
+            <Button
+              component="a"
+              href="/register"
+              size="lg"
+              radius="lg"
+              variant="gradient"
+              gradient={{ from: "#6366f1", to: "#a855f7", deg: 135 }}
+              style={{ fontWeight: 600 }}
+            >
+              {t("cta.button")}
+            </Button>
           </Stack>
         </Paper>
       </div>

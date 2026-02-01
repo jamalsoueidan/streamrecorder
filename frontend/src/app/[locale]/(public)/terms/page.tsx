@@ -30,7 +30,7 @@ export async function generateMetadata() {
 
 export default function TermsAndConditions() {
   const t = useTranslations("terms");
-  const lastUpdated = "January 13, 2026";
+  const lastUpdated = "January 29, 2026";
 
   return (
     <Container size="md" style={{ position: "relative", zIndex: 1 }}>

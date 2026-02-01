@@ -1,12 +1,13 @@
 import { streamingPlatforms } from "@/app/lib/streaming-platforms";
 import publicApi from "@/lib/public-api";
 import {
+  Badge,
   Button,
   Container,
   Flex,
-  Group,
+  Grid,
+  GridCol,
   Paper,
-  SimpleGrid,
   Stack,
   Text,
   Title,
@@ -16,7 +17,8 @@ import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import Link from "next/link";
 import ReactMarkdown from "react-markdown";
-import { CreatorsSimpleGrid } from "./creators/components/creators-simple-grid";
+import { ClipSlider } from "./components/clip-slider";
+import { CreatorsSlider } from "./creators/components/creators-slider";
 import { RecordingsSimpleGrid } from "./recordings/components/recordings-simple-grid";
 
 export default async function LandingPage() {
@@ -28,7 +30,7 @@ export default async function LandingPage() {
     filters: {
       description: { $notNull: true },
     },
-    "pagination[limit]": 10,
+    "pagination[limit]": 30,
     sort: "updatedAt:desc",
     populate: { avatar: true },
   });
@@ -65,12 +67,12 @@ export default async function LandingPage() {
   const {
     data: { data: clips },
   } = await publicApi.clip.getRandomClips({
-    limit: 16,
+    limit: 12,
   });
 
   return (
     <>
-      <Container size="lg">
+      <Container size="xl" my="sm">
         <div
           style={{
             position: "absolute",
@@ -91,21 +93,46 @@ export default async function LandingPage() {
           />
         </div>
 
-        <Stack align="center" style={{ position: "relative", zIndex: 1 }}>
+        <Grid align="center" justify="center">
+          {streamingPlatforms.map((p) => (
+            <GridCol key={p.name} span={{ base: 4, sm: "content" }}>
+              <Link href={`/recordings/${p.name.toLowerCase()}`}>
+                <Badge
+                  variant="outline"
+                  leftSection={
+                    <span
+                      style={{
+                        maskImage: `url(${p.file})`,
+                        WebkitMaskImage: `url(${p.file})`,
+                      }}
+                    />
+                  }
+                  color={p.color}
+                >
+                  {p.name}
+                </Badge>
+              </Link>
+            </GridCol>
+          ))}
+        </Grid>
+
+        <Stack
+          align="center"
+          style={{ position: "relative", zIndex: 1 }}
+          mt="md"
+        >
           <div>
             <Title
               order={1}
               ta="center"
               style={{
-                fontSize: "clamp(2.5rem, 6vw, 4.5rem)",
-                fontWeight: 600,
-                lineHeight: 1.3,
+                fontSize: "clamp(2.4rem, 6vw, 5.4rem)",
+                fontWeight: 700,
                 letterSpacing: "-0.03em",
                 background:
                   "linear-gradient(135deg, #ffffff 0%, #e2e8f0 50%, #94a3b8 100%)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
-                maxWidth: "800px",
               }}
             >
               {t("hero.title")}
@@ -114,10 +141,8 @@ export default async function LandingPage() {
               order={2}
               ta="center"
               style={{
-                fontSize: "clamp(2.5rem, 6vw, 3.5rem)",
-                fontWeight: 600,
-                lineHeight: 1.3,
-                marginTop: "-0.3em",
+                fontSize: "clamp(2.2rem, 6vw, 4.4rem)",
+                fontWeight: 700,
                 letterSpacing: "-0.03em",
                 background: "linear-gradient(135deg, #6366f1, #a855f7)",
                 WebkitBackgroundClip: "text",
@@ -131,10 +156,10 @@ export default async function LandingPage() {
           <Text
             size="xl"
             ta="center"
-            c="dimmed"
-            maw={700}
+            c="#cbd5e1"
+            maw={800}
             style={{
-              fontSize: "clamp(1rem, 2vw, 1.25rem)",
+              fontSize: "clamp(1rem, 2vw, 1.45rem)",
               lineHeight: 1.7,
               color: "#94a3b8",
             }}
@@ -142,31 +167,27 @@ export default async function LandingPage() {
             {t("hero.description")}
           </Text>
 
-          <SimpleGrid cols={{ base: 2, sm: 6 }} spacing="xl" mt={20}>
-            {streamingPlatforms.map((p) => (
-              <Link
-                key={p.name}
-                href={`/recordings/${p.name.toLowerCase()}`}
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  borderRadius: "8px",
-                  padding: "4px",
-                }}
-              >
-                <Image
-                  alt={p.name}
-                  src={p.file}
-                  width={120}
-                  height={120}
-                  style={{ maxWidth: 120, height: "auto" }}
-                />
-              </Link>
-            ))}
-          </SimpleGrid>
+          <Button
+            component="a"
+            size="xl"
+            variant="gradient"
+            gradient={{ from: "#6366f1", to: "#a855f7", deg: 135 }}
+            radius="lg"
+            style={{
+              outline: "2px solid rgba(168, 85, 247, 0.5)",
+              outlineOffset: "3px",
+            }}
+            mt="lg"
+          >
+            {t("cta.button")}
+          </Button>
         </Stack>
+      </Container>
 
-        <div style={{ marginTop: 80 }}>
+      {clips ? <ClipSlider clips={clips} /> : null}
+
+      <Container size="lg">
+        <div style={{ marginTop: 100 }}>
           <Flex
             gap={60}
             align="center"
@@ -272,26 +293,32 @@ export default async function LandingPage() {
           <RecordingsSimpleGrid recordings={recordings} />
         </div>
 
-        <div style={{ marginTop: 100 }}>
-          <Flex justify="space-between" align="center" mb={40}>
-            <Stack gap={8}>
-              <Title
-                order={2}
-                style={{
-                  fontSize: "clamp(1.5rem, 3vw, 2rem)",
-                  fontWeight: 700,
-                  color: "#f1f5f9",
-                }}
-              >
-                {t("featuredCreators.title")}
-              </Title>
-              <Text size="md" c="dimmed">
-                {t("featuredCreators.subtitle")}
-              </Text>
-            </Stack>
+        <div style={{ marginTop: 100, marginBottom: 50 }}>
+          <Flex gap={8} align="center" direction="column">
+            <Title
+              order={2}
+              style={{
+                fontSize: "clamp(1.5rem, 3vw, 2.5rem)",
+                fontWeight: 700,
+                color: "#f1f5f9",
+                letterSpacing: "-0.03em",
+                background:
+                  "linear-gradient(135deg, #ffffff 0%, #e2e8f0 50%, #94a3b8 100%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                maxWidth: "800px",
+              }}
+            >
+              {t("featuredCreators.title")}
+            </Title>
+            <Text size="xl" c="#cbd5e1">
+              {t("featuredCreators.subtitle")}
+            </Text>
+
             <Button
               component="a"
               variant="subtle"
+              size="compact-lg"
               color="gray"
               href="/creators"
               rightSection={<IconArrowRight size={16} />}
@@ -300,10 +327,12 @@ export default async function LandingPage() {
               {t("featuredCreators.browseAll")}
             </Button>
           </Flex>
-
-          <CreatorsSimpleGrid followers={followers} />
         </div>
+      </Container>
 
+      <CreatorsSlider followers={followers} />
+
+      <Container size="lg">
         <div style={{ marginTop: 100 }}>
           <Paper
             p={60}
@@ -347,23 +376,27 @@ export default async function LandingPage() {
               </Title>
               <Text
                 size="lg"
-                maw={500}
                 style={{ color: "#94a3b8", lineHeight: 1.7 }}
+                maw={700}
               >
                 {t("cta.description")}
               </Text>
-              <Group gap={16} mt={16}>
-                <Button
-                  component="a"
-                  size="lg"
-                  variant="gradient"
-                  gradient={{ from: "#6366f1", to: "#a855f7", deg: 135 }}
-                  style={{ fontWeight: 600 }}
-                  href="/register"
-                >
-                  {t("cta.button")}
-                </Button>
-              </Group>
+
+              <Button
+                component="a"
+                href="/register"
+                size="xl"
+                variant="gradient"
+                gradient={{ from: "#6366f1", to: "#a855f7", deg: 135 }}
+                radius="lg"
+                style={{
+                  outline: "2px solid rgba(168, 85, 247, 0.5)",
+                  outlineOffset: "3px",
+                }}
+                mt="lg"
+              >
+                {t("cta.button")}
+              </Button>
             </Stack>
           </Paper>
         </div>

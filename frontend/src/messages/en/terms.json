@@ -13,15 +13,22 @@
   },
   "serviceDescription": {
     "title": "Service Description",
-    "content1": "LiveStreamRecorder provides a cloud-based platform that enables users to utilize our servers to perform recording tasks that would typically require local execution on their own computers.",
-    "content2": "By handling the recording, archiving, and storage of streaming content remotely on our servers, users benefit from enhanced convenience, faster processing, and reduced reliance on personal hardware — without needing to install software or leave their devices running.",
+    "content1": "LiveStreamRecorder provides a cloud-based platform that enables content creators to automatically record, archive, and store their live streams from platforms such as TikTok, Twitch, YouTube, Kick, AfreecaTV, and Pandalive.",
+    "content2": "By handling the recording and storage remotely on our servers, users benefit from enhanced convenience and reduced reliance on personal hardware — without needing to install software or leave their devices running.",
     "content3": "LiveStreamRecorder is a technical service provider. We do not host, own, or control the content of third-party streaming platforms."
   },
-  "privateUse": {
-    "title": "Private Use Only",
-    "content1": "The services provided by LiveStreamRecorder are intended solely for personal, private, and non-commercial use.",
-    "content2": "Any commercial use of the Service is strictly prohibited without prior written consent from LiveStreamRecorder. By using this Service, you represent that you are accessing it in your capacity as a private individual and not for any commercial purposes.",
-    "content3": "LiveStreamRecorder reserves the right to monitor account activity to ensure compliance with this policy. If violations are detected, appropriate actions may be taken, including account suspension or termination."
+  "userContent": {
+    "title": "User Content & License",
+    "content1": "You retain your intellectual property ownership rights over content you submit to us or record through our Service. We will never claim ownership of your content.",
+    "content2": "By using our Service to record, upload, or otherwise transmit content, you grant LiveStreamRecorder a non-exclusive, royalty-free, transferable, sub-licensable, worldwide license to use, host, store, display, distribute, and make available your content for the purpose of operating and providing the Service.",
+    "content3": "This license continues until you delete your content or account. However, content that has been shared, downloaded, or cached by other users may remain available.",
+    "content4": "You represent and warrant that you own or have the necessary rights to all content you record through our Service, and that you have the authority to grant this license."
+  },
+  "contentVisibility": {
+    "title": "Content Visibility",
+    "content1": "By using LiveStreamRecorder, you understand and agree that recordings made through our Service may be publicly visible to other users on the platform.",
+    "content2": "You are solely responsible for the content you record and make available. If you do not wish your recordings to be public, you may adjust your privacy settings where available or refrain from using the Service.",
+    "content3": "You may request removal of your content at any time by contacting us or using the available controls in your account settings."
   },
   "ageRequirement": {
     "title": "Age Requirement",
@@ -42,38 +49,24 @@
   },
   "intellectualProperty": {
     "title": "Intellectual Property & Copyright",
-    "intro": "LiveStreamRecorder respects the intellectual property rights of others and expects users to do the same. We do not claim ownership of any content that users record or access. All rights to such content remain with the original creators or rights holders.",
-    "agreementIntro": "By using LiveStreamRecorder, you acknowledge and agree that:",
-    "items": {
-      "responsible": "You are solely responsible",
-      "responsibleDesc": "for obtaining all necessary rights and permissions from copyright owners before recording or accessing any content",
-      "confirm": "You confirm",
-      "confirmDesc": "that your use of the Service complies with applicable copyright laws and the terms of third-party streaming platforms",
-      "notUse": "You will not use",
-      "notUseDesc": "LiveStreamRecorder to create unauthorized copies of copyrighted streams or infringe upon the rights of third-party content creators",
-      "legalConsequences": "You are responsible",
-      "legalConsequencesDesc": "for any legal consequences arising from the unauthorized use of streamed content",
-      "indemnify": "You will indemnify",
-      "indemnifyDesc": "and hold LiveStreamRecorder harmless from any claims related to your use of the Service",
-      "misuse": "Any misuse",
-      "misuseDesc": "may lead to termination of your access and potential legal action from rights holders"
-    },
-    "footer": "LiveStreamRecorder reserves the right to remove or disable access to any content alleged to be infringing and may terminate repeat infringers' access to the Service."
+    "content1": "LiveStreamRecorder respects the intellectual property rights of others and expects users to do the same.",
+    "content2": "By using our Service, you confirm that you have the right to record the content you add to our platform. You are solely responsible for ensuring that your use complies with applicable copyright laws and the terms of service of third-party streaming platforms.",
+    "content3": "You agree not to use LiveStreamRecorder to record content that you do not own or have authorization to record. Any misuse may result in termination of your account and potential legal action from rights holders.",
+    "content4": "LiveStreamRecorder reserves the right to remove or disable access to any content alleged to be infringing and may terminate repeat infringers' access to the Service."
   },
   "prohibitedActivities": {
     "title": "Prohibited Activities",
     "intro": "You may not use this platform to:",
     "items": {
-      "minors": "Follow or record minors (anyone under 18)",
+      "noRights": "Record content you do not own or have rights to",
+      "minors": "Record content involving minors (anyone under 18) without proper authorization",
       "exploit": "Access content that exploits, endangers, or sexualizes minors",
-      "infringe": "Infringe on intellectual property rights without authorization",
       "illegal": "Engage in any illegal activity",
       "harass": "Harass, stalk, or harm others",
       "bots": "Use bots, scripts, or automated tools to abuse the Service",
       "multipleAccounts": "Create multiple accounts to circumvent restrictions",
       "malware": "Upload malware or harmful software",
-      "reverseEngineer": "Reverse engineer or tamper with our systems",
-      "commercial": "Use the Service for any commercial purpose without authorization"
+      "reverseEngineer": "Reverse engineer or tamper with our systems"
     },
     "footer": "Violations may result in immediate account termination without notice and may lead to legal action."
   },
@@ -85,9 +78,17 @@
   },
   "thirdPartyPlatforms": {
     "title": "Third-Party Platforms",
-    "content1": "Our services may rely on integrations with third-party streaming platforms (such as TikTok, Twitch, YouTube, Kick, etc.). We do not guarantee uninterrupted access to these platforms.",
-    "content2": "Changes or restrictions imposed by third-party platforms (e.g., API changes, content removal, platform bans) may affect the availability or functionality of our services. LiveStreamRecorder is not responsible for any disruptions caused by third-party platforms.",
-    "content3": "By using our services, you acknowledge that any interaction with third-party platforms is at your own risk, and you are solely responsible for complying with their terms and conditions."
+    "content1": "Our services integrate with third-party streaming platforms. By using our Service, you acknowledge that you are also bound by the terms and policies of these platforms:",
+    "platforms": {
+      "tiktok": "TikTok Terms of Service",
+      "twitch": "Twitch Terms of Service",
+      "youtube": "YouTube Terms of Service",
+      "kick": "Kick Terms of Service",
+      "google": "Google Terms of Service",
+      "googlePrivacy": "Google Privacy Policy"
+    },
+    "content2": "You are solely responsible for reviewing and complying with these third-party terms. LiveStreamRecorder is not responsible for any actions taken by third-party platforms, including content removal, API changes, or account restrictions.",
+    "content3": "Changes or restrictions imposed by third-party platforms may affect the availability or functionality of our services. LiveStreamRecorder is not responsible for any disruptions caused by third-party platforms."
   },
   "payments": {
     "title": "Payments & Subscriptions",
@@ -138,5 +139,6 @@
     "title": "Contact Us",
     "content": "Questions or concerns about these terms? Contact us at contact@livestreamrecorder.com"
   },
-  "footerNote": "By using LiveStreamRecorder, you acknowledge that you have read, understood, and agree to be bound by these Terms and Conditions."
+  "footerNote": "By using LiveStreamRecorder, you acknowledge that you have read, understood, and agree to be bound by these Terms and Conditions.",
+  "disclaimer": "TikTok, Twitch, YouTube, Kick, AfreecaTV, and Pandalive product names, logos, and brands are property of their respective owners. All company, product and service names used in this website are for identification purposes only. Use of these names, trademarks and brands does not imply endorsement. LiveStreamRecorder is in no way associated with TikTok, Twitch, YouTube, Kick, AfreecaTV, or Pandalive."
 }
