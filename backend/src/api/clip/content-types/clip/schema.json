@@ -31,6 +31,14 @@
         }
       }
     },
+    "transcript": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
     "hook_text": {
       "type": "string",
       "pluginOptions": {

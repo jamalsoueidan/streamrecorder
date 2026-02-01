@@ -90,6 +90,41 @@ export default ({ env }) => ({
             }
           });
 
+          draft.paths["/clips/random"] = {
+            get: {
+              tags: ["Clip"],
+              operationId: "getRandomClips",
+              summary: "Get random clips (one per user)",
+              parameters: [
+                {
+                  name: "limit",
+                  in: "query",
+                  required: false,
+                  schema: { type: "integer", default: 12 },
+                  description: "Number of clips to return",
+                },
+              ],
+              responses: {
+                "200": {
+                  description: "OK",
+                  content: {
+                    "application/json": {
+                      schema: {
+                        type: "object",
+                        properties: {
+                          data: {
+                            type: "array",
+                            items: { $ref: "#/components/schemas/Clip" },
+                          },
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          };
+
           // Add populate to /XXX/{id}
           const populateParam = draft.paths["/recordings"].get.parameters.find(
             (param: any) => param.name === "populate",

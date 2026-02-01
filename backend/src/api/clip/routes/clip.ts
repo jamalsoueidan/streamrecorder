@@ -1,7 +1,3 @@
-/**
- * clip router
- */
+import { factories } from "@strapi/strapi";
 
-import { factories } from '@strapi/strapi';
-
-export default factories.createCoreRouter('api::clip.clip');
+export default factories.createCoreRouter("api::clip.clip");
