@@ -31,16 +31,16 @@
         }
       }
     },
-    "transcript": {
-      "type": "text",
+    "hook_text": {
+      "type": "string",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       }
     },
-    "hook_text": {
-      "type": "string",
+    "transcript": {
+      "type": "json",
       "pluginOptions": {
         "i18n": {
           "localized": true
