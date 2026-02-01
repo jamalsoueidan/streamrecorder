@@ -15,20 +15,15 @@ import {
 } from "@/app/[locale]/(protected)/components/video/media-chrome";
 import { Box } from "@mantine/core";
 import { isbot } from "isbot";
-import { useEffect, useRef } from "react";
 
 import "hls-video-element";
 import "media-chrome";
-
-// Global set of all video pause functions
-const activeVideos = new Set<() => void>();
 
 interface VideoPlayerProps {
   src: string;
   previewUrl: string;
   thumbnailsUrl?: string;
-  userAgent?: string;
-  fit?: boolean;
+  userAgent: string;
 }
 
 export function VideoPlayer({
@@ -36,52 +31,8 @@ export function VideoPlayer({
   previewUrl,
   thumbnailsUrl,
   userAgent,
-  fit = false,
 }: VideoPlayerProps) {
-  const controllerRef = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const controller = controllerRef.current;
-    if (!controller) return;
-
-    const media = controller.querySelector(
-      "video, hls-video",
-    ) as HTMLVideoElement;
-    if (!media) return;
-
-    const pause = () => media.pause();
-
-    // Register this video
-    activeVideos.add(pause);
-
-    // Pause all others when this plays
-    const handlePlay = () => {
-      activeVideos.forEach((p) => {
-        if (p !== pause) p();
-      });
-    };
-
-    // Pause when scrolled out of view
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (!entry.isIntersecting) {
-          media.pause();
-        }
-      },
-      { threshold: 0.5 },
-    );
-
-    media.addEventListener("play", handlePlay);
-    observer.observe(controller);
-
-    return () => {
-      activeVideos.delete(pause);
-      media.removeEventListener("play", handlePlay);
-      observer.disconnect();
-    };
-  }, []);
-
-  if (userAgent && isbot(userAgent)) {
+  if (isbot(userAgent)) {
     return (
       <video
         poster={previewUrl}
@@ -97,58 +48,40 @@ export function VideoPlayer({
 
   return (
     <MediaController
-      ref={controllerRef}
-      style={{
-        width: "100%",
-        height: fit ? "100%" : "clamp(250px, 50vh, 70vh)",
-      }}
+      style={{ width: "100%", height: "clamp(250px, 50vh, 70vh)" }}
     >
-      {src.includes(".mp4") ? (
-        <video
-          src={src}
-          slot="media"
-          crossOrigin="anonymous"
-          playsInline
-          preload="metadata"
-        />
-      ) : (
-        <HlsVideo
-          src={src}
-          slot="media"
-          crossOrigin="anonymous"
-          playsInline
-          autoPlay
-          muted
-          preload="metadata"
-          poster={previewUrl}
-        >
-          {thumbnailsUrl ? (
-            <track
-              default
-              kind="metadata"
-              label="thumbnails"
-              src={thumbnailsUrl}
-            />
-          ) : null}
-        </HlsVideo>
-      )}
+      <HlsVideo
+        src={src}
+        slot="media"
+        crossOrigin="anonymous"
+        playsInline
+        autoPlay
+        muted
+        preload="metadata"
+        poster={previewUrl}
+      >
+        {thumbnailsUrl ? (
+          <track
+            default
+            kind="metadata"
+            label="thumbnails"
+            src={thumbnailsUrl}
+          />
+        ) : null}
+      </HlsVideo>
 
       {previewUrl && <MediaPosterImage slot="poster" src={previewUrl} />}
 
-      {src.includes(".mp4") ? (
-        <MediaPlayButton slot="centered-chrome" />
-      ) : (
-        <MediaLoadingIndicator
-          slot="centered-chrome"
-          loadingdelay="0"
-          style={{ "--media-loading-indicator-transition-delay": "0ms" }}
-        />
-      )}
+      <MediaLoadingIndicator
+        slot="centered-chrome"
+        loadingdelay="0"
+        style={{ "--media-loading-indicator-transition-delay": "0ms" }}
+      />
 
       <MediaControlBar>
-        {src.includes(".m3u8") ? <MediaPlayButton /> : null}
+        <MediaPlayButton />
         <MediaTimeRange />
-        {src.includes(".m3u8") ? <MediaTimeDisplay showduration /> : null}
+        <MediaTimeDisplay showduration />
         <Box className="volume-hover-container">
           <MediaVolumeRange />
           <MediaMuteButton />
