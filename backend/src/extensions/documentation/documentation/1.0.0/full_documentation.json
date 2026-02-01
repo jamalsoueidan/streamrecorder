@@ -20,7 +20,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2026-01-31T12:00:33.254Z"
+    "x-generation-date": "2026-02-01T00:05:33.204Z"
   },
   "servers": [
     {
@@ -7223,6 +7223,47 @@
         }
       }
     },
+    "/clips/random": {
+      "get": {
+        "tags": [
+          "Clip"
+        ],
+        "operationId": "getRandomClips",
+        "summary": "Get random clips (one per user)",
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "default": 12
+            },
+            "description": "Number of clips to return"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/Clip"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/followers/browse": {
       "get": {
         "responses": {
@@ -11271,6 +11312,9 @@
               "description": {
                 "type": "string"
               },
+              "transcript": {
+                "type": "string"
+              },
               "hook_text": {
                 "type": "string"
               },
@@ -11386,6 +11430,9 @@
             "type": "string"
           },
           "description": {
+            "type": "string"
+          },
+          "transcript": {
             "type": "string"
           },
           "hook_text": {
@@ -12367,6 +12414,9 @@
                   "type": "string"
                 },
                 "description": {
+                  "type": "string"
+                },
+                "transcript": {
                   "type": "string"
                 },
                 "hook_text": {
