@@ -16,7 +16,6 @@ import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import Link from "next/link";
 import ReactMarkdown from "react-markdown";
-import { ClipSlider } from "./components/clip-slider";
 import { CreatorsSimpleGrid } from "./creators/components/creators-simple-grid";
 import { RecordingsSimpleGrid } from "./recordings/components/recordings-simple-grid";
 
@@ -166,10 +165,7 @@ export default async function LandingPage() {
             ))}
           </SimpleGrid>
         </Stack>
-      </Container>
 
-      {clips ? <ClipSlider clips={clips} /> : null}
-      <Container size="lg">
         <div style={{ marginTop: 80 }}>
           <Flex
             gap={60}
