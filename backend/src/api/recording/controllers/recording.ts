@@ -24,6 +24,8 @@ export default factories.createCoreController(
           status: "published",
         });
 
+      ctx.query.locale = ctx.query.locale || "en";
+
       const followingIds = fullUser?.followers?.map((f) => f.id) || [];
 
       const scopeFilters: Record<string, object | null> = {

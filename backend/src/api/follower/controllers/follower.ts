@@ -55,6 +55,8 @@ export default factories.createCoreController(
 
       // Shared filter function
       const applyBaseFilters = (q: any) => {
+        q = q.where("f.locale", ctx.query.locale || "en");
+
         if (scope === "following" && followingIds.length > 0) {
           q = q.whereIn("f.id", followingIds);
         } else if (scope === "discover" && followingIds.length > 0) {
