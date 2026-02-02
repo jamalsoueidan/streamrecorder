@@ -1,5 +1,4 @@
 import { CountryFlag } from "@/app/[locale]/(protected)/components/country-flag";
-import { FollowerTypeIcon } from "@/app/[locale]/(protected)/components/follower-type-icon";
 import { getProfileUrl } from "@/app/components/open-social";
 
 import { generateAvatarUrl } from "@/app/lib/avatar-url";
@@ -30,8 +29,8 @@ export function CreatorsSlider({
                 style={{
                   cursor: "pointer",
                   textAlign: "center",
-                  width: "160px",
                 }}
+                mx="md"
               >
                 <Stack align="center" gap={12}>
                   <div style={{ position: "relative" }}>
@@ -44,18 +43,6 @@ export function CreatorsSlider({
                         quality={75}
                       />
                     </Avatar>
-                    {creator.type && (
-                      <FollowerTypeIcon
-                        pos="absolute"
-                        color="transparent"
-                        type={creator.type}
-                        top="50%"
-                        left="50%"
-                        size={40}
-                        opacity={0.5}
-                        style={{ transform: "translate(-50%, -50%)" }}
-                      />
-                    )}
                   </div>
                   <div>
                     <Text fw={600} size="sm" style={{ color: "#f1f5f9" }}>

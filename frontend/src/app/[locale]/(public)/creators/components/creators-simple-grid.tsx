@@ -53,7 +53,7 @@ export function CreatorsSimpleGrid({
                       top="50%"
                       left="50%"
                       size={40}
-                      opacity={0.5}
+                      opacity={0.8}
                       style={{ transform: "translate(-50%, -50%)" }}
                     />
                   )}

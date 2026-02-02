@@ -18,12 +18,13 @@ export async function login(prevState: any, formData: FormData) {
       identifier,
       password,
     });
+
     await setToken(data.jwt!);
+
+    return { success: true, user: data.user };
   } catch (err: any) {
     return { error: err.response?.data?.error?.message || "Login failed" };
   }
-
-  return { success: true };
 }
 
 export async function register(prevState: any, formData: FormData) {

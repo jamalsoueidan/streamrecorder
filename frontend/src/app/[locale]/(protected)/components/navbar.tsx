@@ -19,6 +19,7 @@ import { useRouter } from "next/navigation";
 
 import { useChangeLanguage } from "@/app/hooks/use-change-language";
 import { useUser } from "@/app/providers/user-provider";
+import * as Sentry from "@sentry/nextjs";
 import { useLocale, useTranslations } from "next-intl";
 import { navConfig } from "../../(public)/components/nav";
 import AddFollowerForm from "./add-follower-form";
@@ -175,6 +176,7 @@ export function Navbar({
             </Menu.Sub>
             <Menu.Item
               onClick={async (e) => {
+                Sentry.setUser(null);
                 await fetch("/api/logout", { method: "POST" });
                 window.location.href = "/";
               }}

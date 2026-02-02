@@ -14,6 +14,7 @@ import {
   TextInput,
   Title,
 } from "@mantine/core";
+import * as Sentry from "@sentry/nextjs";
 import { IconLock, IconMail } from "@tabler/icons-react";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
@@ -26,7 +27,12 @@ export function LoginForm() {
   const router = useRouter();
 
   useEffect(() => {
-    if (state?.success) {
+    if (state && state?.success) {
+      Sentry.setUser({
+        id: state?.user?.id,
+        email: state?.user?.email,
+        username: state?.user?.username,
+      });
       trackEvent("login");
       router.push("/following");
     }
