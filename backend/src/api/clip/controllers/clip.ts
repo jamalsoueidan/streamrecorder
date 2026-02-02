@@ -6,6 +6,7 @@ export default factories.createCoreController(
     async shuffle(ctx) {
       console.log("RANDOM HIT");
       const limit = ctx.query.limit || 12;
+      const maxPerUser = 1;
 
       const clips = await strapi.documents("api::clip.clip").findMany({
         limit: 100,
@@ -18,18 +19,22 @@ export default factories.createCoreController(
 
       const shuffled = clips.sort(() => Math.random() - 0.5);
 
-      const seen = new Set<string>();
-      const unique: typeof clips = [];
+      const userCount = new Map<string, number>();
+      const result: typeof clips = [];
+
       for (const clip of shuffled) {
         const userId = clip.follower?.documentId;
-        if (userId && !seen.has(userId)) {
-          seen.add(userId);
-          unique.push(clip);
-          if (unique.length >= (limit as number)) break;
+        if (userId) {
+          const count = userCount.get(userId) || 0;
+          if (count < maxPerUser) {
+            userCount.set(userId, count + 1);
+            result.push(clip);
+            if (result.length >= (limit as number)) break;
+          }
         }
       }
 
-      return { data: unique };
+      return { data: result };
     },
   }),
 );
