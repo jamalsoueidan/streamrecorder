@@ -1,40 +1,32 @@
 import { factories } from "@strapi/strapi";
+import _ from "lodash";
+
+const toCamelCase = (obj: Record<string, any>) =>
+  _.mapKeys(obj, (_v, k) => _.camelCase(k));
 
 export default factories.createCoreController(
   "api::clip.clip",
   ({ strapi }) => ({
     async shuffle(ctx) {
-      console.log("RANDOM HIT");
-      const limit = ctx.query.limit || 12;
-      const maxPerUser = 1;
+      const limit = Number(ctx.query.limit) || 12;
+      const knex = strapi.db.connection;
 
-      const clips = await strapi.documents("api::clip.clip").findMany({
-        limit: 100,
-        populate: {
-          follower: {
-            fields: "documentId",
-          },
-        },
-      });
+      const { rows } = await knex.raw(
+        `
+  SELECT DISTINCT ON (f.document_id) c.*, f.document_id as follower_document_id
+  FROM clips c
+  INNER JOIN clips_follower_lnk lnk ON c.id = lnk.clip_id
+  INNER JOIN followers f ON lnk.follower_id = f.id
+  ORDER BY f.document_id, RANDOM()
+  `,
+      );
 
-      const shuffled = clips.sort(() => Math.random() - 0.5);
+      const shuffled = rows
+        .sort(() => Math.random() - 0.5)
+        .slice(0, limit)
+        .map(toCamelCase);
 
-      const userCount = new Map<string, number>();
-      const result: typeof clips = [];
-
-      for (const clip of shuffled) {
-        const userId = clip.follower?.documentId;
-        if (userId) {
-          const count = userCount.get(userId) || 0;
-          if (count < maxPerUser) {
-            userCount.set(userId, count + 1);
-            result.push(clip);
-            if (result.length >= (limit as number)) break;
-          }
-        }
-      }
-
-      return { data: result };
+      return { data: shuffled };
     },
   }),
 );
