@@ -21,13 +21,13 @@
   },
   "latestRecordings": {
     "title": "Latest Recordings",
-    "subtitle": "Recently saved streams",
-    "viewAll": "View All"
+    "subtitle": "Stream recordings saved in the last 24 hours",
+    "browseAll": "Browse all recordings"
   },
   "featuredCreators": {
     "title": "Join 10,000+ Creators",
     "subtitle": "Streamers turning their live streams into viral clips",
-    "browseAll": "See more"
+    "browseAll": "Browse all creators"
   },
   "cta": {
     "title": "Record Your Live Streams",
