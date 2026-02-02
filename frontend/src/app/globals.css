@@ -1,3 +1,6 @@
+@import "./mantine-css/badge.css";
+@import "./mantine-css/button.css";
+
 @keyframes pulse {
   0%,
   100% {

@@ -1,0 +1,40 @@
+.mantine-Badge-root[data-variant="platform"] {
+  --badge-height: var(--badge-height-xl);
+  --badge-fz: var(--badge-fz-lg);
+  --badge-padding-x: var(--badge-padding-x-sm);
+  cursor: pointer;
+  width: 100%;
+
+  /* outline variant styles */
+  background-color: transparent;
+  border: 1px solid var(--badge-color);
+  color: var(--badge-color);
+
+  font-weight: 600;
+}
+
+.mantine-Badge-root[data-variant="platform"] .mantine-Badge-section span {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background-color: currentColor;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+}
+
+@media (min-width: 48em) {
+  .mantine-Badge-root[data-variant="platform"] {
+    --badge-fz: var(--badge-fz-lg);
+    --badge-padding-x: var(--badge-padding-x-lg);
+    width: auto;
+  }
+
+  .mantine-Badge-root[data-variant="platform"] .mantine-Badge-section span {
+    width: 18px;
+    height: 18px;
+  }
+}

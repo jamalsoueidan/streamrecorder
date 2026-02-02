@@ -1,164 +1,180 @@
 {
   "meta": {
     "all": {
-      "title": "All Live Stream Recordings",
-      "description": "Browse all live stream recordings from your favorite creators.",
+      "title": "Live Stream Recordings",
+      "description": "Browse live stream recordings from creators on LiveStreamRecorder. TikTok, Twitch, YouTube, Kick recordings saved and ready to watch.",
       "keywords": [
-        "recordings",
-        "live stream",
-        "record streams",
-        "vod",
+        "live stream recordings",
+        "stream recordings",
+        "tiktok live recording",
+        "twitch vod",
         "live stream recorder",
-        "stream recording"
+        "stream archive"
       ]
     },
     "tiktok": {
-      "title": "TikTok Live Stream Recordings",
-      "description": "Browse TikTok live stream recordings from your favorite creators.",
+      "title": "TikTok Live Recordings",
+      "description": "Browse TikTok live stream recordings from creators on LiveStreamRecorder. Watch TikTok Lives, download recordings, and discover new creators.",
       "keywords": [
-        "tiktok recordings",
+        "tiktok live recording",
         "tiktok live stream",
-        "record tiktok streams",
+        "record tiktok live",
         "tiktok vod",
-        "live stream recorder",
-        "stream recording"
+        "tiktok stream recording",
+        "save tiktok live"
       ]
     },
     "twitch": {
-      "title": "Twitch Live Stream Recordings",
-      "description": "Browse Twitch live stream recordings from your favorite creators.",
+      "title": "Twitch Stream Recordings & VODs",
+      "description": "Browse Twitch stream recordings from creators on LiveStreamRecorder. Watch Twitch VODs, download streams, and discover new streamers.",
       "keywords": [
-        "twitch recordings",
-        "twitch live stream",
-        "record twitch streams",
         "twitch vod",
-        "live stream recorder",
-        "stream recording"
+        "twitch recording",
+        "twitch stream download",
+        "twitch vod download",
+        "twitch archive",
+        "save twitch stream"
       ]
     },
     "youtube": {
-      "title": "YouTube Live Stream Recordings",
-      "description": "Browse YouTube live stream recordings from your favorite creators.",
+      "title": "YouTube Live Recordings",
+      "description": "Browse YouTube live stream recordings from creators on LiveStreamRecorder. Watch YouTube Lives, download recordings, and discover new channels.",
       "keywords": [
-        "youtube recordings",
+        "youtube live recording",
         "youtube live stream",
-        "record youtube streams",
-        "youtube vod",
-        "live stream recorder",
-        "stream recording"
+        "record youtube live",
+        "youtube stream download",
+        "youtube live archive",
+        "save youtube live"
       ]
     },
     "kick": {
-      "title": "Kick Live Stream Recordings",
-      "description": "Browse Kick live stream recordings from your favorite creators.",
+      "title": "Kick Stream Recordings",
+      "description": "Browse Kick stream recordings from creators on LiveStreamRecorder. Watch Kick VODs, download streams, and discover new streamers.",
       "keywords": [
-        "kick recordings",
-        "kick live stream",
-        "record kick streams",
+        "kick recording",
         "kick vod",
-        "live stream recorder",
-        "stream recording"
+        "kick stream download",
+        "record kick stream",
+        "kick archive",
+        "save kick stream"
       ]
     },
     "afreecatv": {
-      "title": "AfreecaTV Live Stream Recordings",
-      "description": "Browse AfreecaTV live stream recordings from your favorite creators.",
+      "title": "AfreecaTV Stream Recordings",
+      "description": "Browse AfreecaTV stream recordings from creators on LiveStreamRecorder. Watch AfreecaTV VODs and download Korean streams.",
       "keywords": [
-        "afreecatv recordings",
-        "afreecatv live stream",
-        "record afreecatv streams",
+        "afreecatv recording",
         "afreecatv vod",
-        "live stream recorder",
-        "stream recording"
+        "afreecatv download",
+        "korean stream recording",
+        "afreecatv archive",
+        "save afreecatv stream"
       ]
     },
     "pandalive": {
-      "title": "PandaLive Live Stream Recordings",
-      "description": "Browse PandaLive live stream recordings from your favorite creators.",
+      "title": "Pandalive Stream Recordings",
+      "description": "Browse Pandalive stream recordings from creators on LiveStreamRecorder. Watch Pandalive VODs and download Korean streams.",
       "keywords": [
-        "pandalive recordings",
-        "pandalive live stream",
-        "record pandalive streams",
+        "pandalive recording",
         "pandalive vod",
-        "live stream recorder",
-        "stream recording"
+        "pandalive download",
+        "korean stream recording",
+        "pandalive archive",
+        "save pandalive stream"
       ]
     }
   },
   "hero": {
     "title": {
-      "all": "All Recordings",
+      "all": "Recordings",
       "tiktok": "TikTok Recordings",
       "twitch": "Twitch Recordings",
       "youtube": "YouTube Recordings",
       "kick": "Kick Recordings",
       "afreecatv": "AfreecaTV Recordings",
-      "pandalive": "PandaLive Recordings"
+      "pandalive": "Pandalive Recordings"
     },
     "subtitle": {
-      "all": "Never miss a stream again. We automatically record your favorite creators so you can watch anytime.",
-      "tiktok": "Never miss a TikTok stream again. We automatically record your favorite creators so you can watch anytime.",
-      "twitch": "Never miss a Twitch stream again. We automatically record your favorite creators so you can watch anytime.",
-      "youtube": "Never miss a YouTube stream again. We automatically record your favorite creators so you can watch anytime.",
-      "kick": "Never miss a Kick stream again. We automatically record your favorite creators so you can watch anytime.",
-      "afreecatv": "Never miss an AfreecaTV stream again. We automatically record your favorite creators so you can watch anytime.",
-      "pandalive": "Never miss a PandaLive stream again. We automatically record your favorite creators so you can watch anytime."
+      "all": "Browse live stream recordings from creators on our platform. Watch, download, and discover new content.",
+      "tiktok": "Browse TikTok live recordings from creators on our platform. Watch, download, and discover new content.",
+      "twitch": "Browse Twitch stream recordings from creators on our platform. Watch, download, and discover new content.",
+      "youtube": "Browse YouTube live recordings from creators on our platform. Watch, download, and discover new content.",
+      "kick": "Browse Kick stream recordings from creators on our platform. Watch, download, and discover new content.",
+      "afreecatv": "Browse AfreecaTV recordings from creators on our platform. Watch, download, and discover new content.",
+      "pandalive": "Browse Pandalive recordings from creators on our platform. Watch, download, and discover new content."
     }
   },
   "cta": {
     "title": {
-      "all": "Never miss a stream again",
-      "tiktok": "Never miss a TikTok stream again",
-      "twitch": "Never miss a Twitch stream again",
-      "youtube": "Never miss a YouTube stream again",
-      "kick": "Never miss a Kick stream again",
-      "afreecatv": "Never miss an AfreecaTV stream again",
-      "pandalive": "Never miss a PandaLive stream again"
+      "all": "Record Your Live Streams",
+      "tiktok": "Record Your TikTok Lives",
+      "twitch": "Record Your Twitch Streams",
+      "youtube": "Record Your YouTube Lives",
+      "kick": "Record Your Kick Streams",
+      "afreecatv": "Record Your AfreecaTV Streams",
+      "pandalive": "Record Your Pandalive Streams"
     },
-    "subtitle": "Sign up for free and start recording your favorite creators today.",
-    "button": "Get Started Free"
+    "subtitle": {
+      "all": "Join thousands of creators. Save your streams, create short clips with ClipAI, and grow your audience.",
+      "tiktok": "Join thousands of TikTok creators. Save your Lives, create short clips with ClipAI, and grow your following.",
+      "twitch": "Join thousands of Twitch streamers. Save your VODs, create short clips with ClipAI, and grow your channel.",
+      "youtube": "Join thousands of YouTube creators. Save your Lives, turn them into Shorts with ClipAI, and grow your subscribers.",
+      "kick": "Join thousands of Kick streamers. Save your streams, create short clips with ClipAI, and grow your audience.",
+      "afreecatv": "Join thousands of AfreecaTV creators. Save your streams and create short clips with ClipAI.",
+      "pandalive": "Join thousands of Pandalive creators. Save your streams and create short clips with ClipAI."
+    },
+    "button": "Start Recording Free"
   },
   "empty": {
     "title": "No recordings yet",
-    "description": "Be the first to record a {platform} stream!",
+    "description": {
+      "all": "Be the first creator to record a stream!",
+      "tiktok": "Be the first creator to record a TikTok Live!",
+      "twitch": "Be the first creator to record a Twitch stream!",
+      "youtube": "Be the first creator to record a YouTube Live!",
+      "kick": "Be the first creator to record a Kick stream!",
+      "afreecatv": "Be the first creator to record an AfreecaTV stream!",
+      "pandalive": "Be the first creator to record a Pandalive stream!"
+    },
     "button": "Get Started"
   },
   "about": {
-    "all": "## About Live Stream Recorder\n\nNever miss a moment from your favorite creators. Our live stream recorder automatically captures broadcasts so you can watch them on your own schedule.\n\n### Follow Your Favorite Streamers\n\nSimply follow the creators you love, and we handle the rest. Our service works around the clock, recording streaming video in the background and making it available on-demand. No stream recording software to install, no manual scheduling, just follow and we capture every broadcast automatically.\n\n### Watch Anytime, Anywhere\n\nBusy schedule? Different time zone? No problem. With our livestream recording service, you can catch up on live content whenever it suits you. Access your recordings through our built-in player or download them for offline viewing.\n\n### Securely Stored in the Cloud\n\nYour recorded streams are saved securely on our servers. No storage fees, no lost files, just reliable access to your favorite content whenever you need it. From Twitch VOD downloads to TikTok live stream captures, everything is organized and ready to watch.\n\n### One Platform, Every Stream\n\nWhether you want to record TikTok streams, capture Twitch live broadcasts, save YouTube lives, or catch Kick streams, our stream recording service has you covered. We are continuously expanding to support more platforms so you never miss out.\n\n### Free to Get Started\n\nCreate an account and start recording your favorite streamers today. Upgrade to premium for higher quality recordings, more simultaneous follows, and faster downloads.",
-    "tiktok": "## About TikTok Live Recordings\n\nWatch TikTok Lives you missed. Our service automatically records TikTok live streams so you can catch up on your favorite creators anytime.\n\n### Why TikTok Live Recordings?\n\nTikTok Lives disappear the moment they end. That viral dance, that heartfelt Q&A, that collab you've been waiting for — gone forever. Our recordings let you relive every moment, pause, rewind, and watch on your own time.\n\n### Browse TikTok Recordings\n\nExplore our library of recorded TikTok Lives. Find your favorite creators or discover new ones. Every recording is timestamped and organized for easy browsing.\n\n### Never Miss Another TikTok Live\n\nFollow your favorite TikTok creators and we'll automatically record their streams. Wake up to fresh recordings, catch up during lunch, or binge-watch on weekends.\n\n### Download for Offline\n\nPremium users can download TikTok recordings for offline viewing. Perfect for flights, commutes, or anywhere without internet.\n\n### Start Recording TikTok Today\n\nCreate a free account and follow your first TikTok creator. We'll handle the rest.",
-    "twitch": "## About Twitch Stream Recordings\n\nWatch Twitch streams you missed. Our service automatically records Twitch broadcasts so you can catch up on your favorite streamers anytime.\n\n### Why Twitch Recordings?\n\nTwitch VODs expire. Streamers delete archives. That epic speedrun, that tournament final, that hilarious moment — they don't last forever on Twitch. Our recordings are yours to keep, organized and ready whenever you want to watch.\n\n### Browse Twitch Recordings\n\nExplore our library of recorded Twitch streams. From gaming marathons to just chatting sessions, find exactly what you're looking for. Every recording shows duration, date, and streamer info.\n\n### Better Than Twitch VODs\n\nNo ads interrupting your viewing. No expiring content. No deleted archives. Just pure, uninterrupted Twitch content saved forever.\n\n### Download Twitch Streams\n\nPremium users can download full Twitch recordings. Keep your favorite streams locally, create clips, or watch offline.\n\n### Start Recording Twitch Today\n\nCreate a free account and follow your first Twitch streamer. Never miss a broadcast again.",
-    "youtube": "## About YouTube Live Recordings\n\nWatch YouTube Lives and premieres you missed. Our service automatically records YouTube live streams so you can catch up on your favorite channels anytime.\n\n### Why YouTube Live Recordings?\n\nNot all YouTube Lives are saved. Creators sometimes delete streams, or set them to private. Live premieres happen once and the live chat experience is gone. Our recordings capture everything so you never miss out.\n\n### Browse YouTube Recordings\n\nExplore our library of recorded YouTube Lives. From gaming streams to music premieres, from tech reveals to creator Q&As — find it all here, organized and searchable.\n\n### Catch Every Premiere\n\nYouTube premieres happen once. The live reactions, the chat experience, the excitement — our recordings let you experience it even if you couldn't be there live.\n\n### Download YouTube Lives\n\nPremium users can download YouTube recordings for offline viewing. Perfect for long streams you want to watch on the go.\n\n### Start Recording YouTube Today\n\nCreate a free account and follow your first YouTube channel. We'll capture every live stream automatically.",
-    "kick": "## About Kick Stream Recordings\n\nWatch Kick streams you missed. Our service automatically records Kick broadcasts so you can catch up on your favorite streamers anytime.\n\n### Why Kick Recordings?\n\nKick is where the biggest creators are going. xQc, Adin Ross, and more have made the switch. Our recordings ensure you never miss their Kick-exclusive content, even if you can't watch live.\n\n### Browse Kick Recordings\n\nExplore our library of recorded Kick streams. The platform is growing fast, and so is our collection. Find your favorite streamers or discover Kick's rising stars.\n\n### Kick VODs Made Easy\n\nKick's VOD system is still evolving. Our recordings give you reliable access to past streams without worrying about what's available on the platform.\n\n### Download Kick Streams\n\nPremium users can download Kick recordings for offline viewing. Keep your favorite moments saved locally.\n\n### Start Recording Kick Today\n\nCreate a free account and follow your first Kick streamer. Be part of the Kick revolution without missing a stream.",
-    "pandalive": "## About PandaLive Recordings\n\nWatch PandaLive streams you missed. Our service automatically records PandaLive broadcasts so you can catch up on your favorite Korean creators anytime.\n\n### Why PandaLive Recordings?\n\nPandaLive streams happen on Korean time. For international fans, that means streams at 3 AM, 4 AM, or worse. Our recordings let you enjoy Korean content on your schedule, not theirs.\n\n### Browse PandaLive Recordings\n\nExplore our library of recorded PandaLive streams. Discover Korean creators, explore trending content, and find hidden gems — all organized and ready to watch.\n\n### Bridge the Time Zone Gap\n\nKorea is 13-17 hours ahead of the Americas. Our recordings bridge that gap so you never miss your favorite PandaLive creators.\n\n### Start Recording PandaLive Today\n\nCreate a free account and follow your first PandaLive creator. Korean content, on your time.",
-    "afreecatv": "## About AfreecaTV Recordings\n\nWatch AfreecaTV streams you missed. Our service automatically records AfreecaTV broadcasts so you can catch up on your favorite BJs anytime.\n\n### Why AfreecaTV Recordings?\n\nAfreecaTV is Korea's original streaming platform. From legendary esports moments to viral mukbang sessions, AfreecaTV has content you won't find anywhere else. Our recordings make it accessible worldwide.\n\n### Browse AfreecaTV Recordings\n\nExplore our library of recorded AfreecaTV streams. Whether you're into gaming, mukbang, or talk shows, find Korean content organized and ready to watch.\n\n### Korean Content, Global Access\n\nAfreecaTV streams happen on Korean time. Our recordings remove the time zone barrier so international fans can enjoy authentic Korean streaming culture.\n\n### Start Recording AfreecaTV Today\n\nCreate a free account and follow your first AfreecaTV BJ. Experience Korean streaming on your schedule."
+    "all": "## Live Stream Recordings\n\nBrowse recordings from creators who use LiveStreamRecorder to save their live streams.\n\n### What You'll Find Here\n\nCreators use our platform to automatically record their TikTok Lives, Twitch streams, YouTube broadcasts, and Kick streams. Browse their content, watch recordings, and discover new creators.\n\n### Watch and Download\n\nEvery recording is available to watch instantly. Premium users can download recordings for offline viewing.\n\n### For Creators\n\nWant your streams here? Sign up free and start recording. Paste your channel URL, go live, and we save everything automatically. Use ClipAI to turn your streams into short clips and grow your audience.\n\n### Supported Platforms\n\nWe support TikTok live recording, Twitch VOD saving, YouTube live recording, Kick stream recording, AfreecaTV recording, and Pandalive recording. More platforms coming soon.",
+    "tiktok": "## TikTok Live Recordings\n\nBrowse TikTok live recordings from creators who use LiveStreamRecorder to save their Lives.\n\n### TikTok Lives Saved\n\nTikTok Lives disappear when they end. Creators use our TikTok live recorder to save their broadcasts automatically. Browse their content here.\n\n### Watch TikTok Recordings\n\nEvery TikTok live recording is available to watch instantly. Premium users can download TikTok recordings for offline viewing.\n\n### Record Your TikTok Lives\n\nWant your TikTok Lives here? Sign up free and add your username. We record every Live automatically. Use ClipAI to turn your Lives into short clips and grow your following.\n\n### TikTok Live Recorder\n\nNo screen recorder needed. No phone running all night. Just add your TikTok and we capture every Live in high quality.",
+    "twitch": "## Twitch Stream Recordings\n\nBrowse Twitch recordings from creators who use LiveStreamRecorder to save their streams.\n\n### Twitch VODs That Don't Expire\n\nTwitch VODs expire after 14-60 days. Creators use our Twitch recorder to save their streams permanently. Browse their content here.\n\n### Watch Twitch Recordings\n\nEvery Twitch recording is available to watch instantly. No ads, no interruptions. Premium users can download Twitch VODs for offline viewing.\n\n### Record Your Twitch Streams\n\nWant your Twitch streams here? Sign up free and add your channel. We record every broadcast automatically. Use ClipAI to turn your streams into short clips and grow your channel.\n\n### Twitch VOD Downloader\n\nSave Twitch streams permanently. No more expired VODs, no more deleted archives. Your content, saved forever.",
+    "youtube": "## YouTube Live Recordings\n\nBrowse YouTube live recordings from creators who use LiveStreamRecorder to save their broadcasts.\n\n### YouTube Lives Saved\n\nNot all YouTube Lives are saved by creators. Some get deleted, some go private. Creators use our YouTube live recorder to keep a permanent copy. Browse their content here.\n\n### Watch YouTube Recordings\n\nEvery YouTube live recording is available to watch instantly. Premium users can download recordings for offline viewing.\n\n### Record Your YouTube Lives\n\nWant your YouTube Lives here? Sign up free and add your channel. We record every live stream automatically. Use ClipAI to turn your Lives into Shorts and grow your subscribers.\n\n### YouTube Live Recorder\n\nAutomatic recording for every YouTube Live. No software to install, no manual saving. Just go live and we capture everything.",
+    "kick": "## Kick Stream Recordings\n\nBrowse Kick recordings from creators who use LiveStreamRecorder to save their streams.\n\n### Kick VODs Saved\n\nKick is growing fast. Creators use our Kick recorder to save their streams and build their content library. Browse their content here.\n\n### Watch Kick Recordings\n\nEvery Kick recording is available to watch instantly. Premium users can download Kick VODs for offline viewing.\n\n### Record Your Kick Streams\n\nWant your Kick streams here? Sign up free and add your channel. We record every broadcast automatically. Use ClipAI to turn your streams into short clips and grow your audience.\n\n### Kick Stream Recorder\n\nAutomatic recording for every Kick stream. No software needed. Just go live and we save everything.",
+    "pandalive": "## Pandalive Recordings\n\nBrowse Pandalive recordings from creators who use LiveStreamRecorder to save their streams.\n\n### Korean Streams Saved\n\nPandalive creators use our recorder to save their broadcasts. Browse Korean content here.\n\n### Watch Pandalive Recordings\n\nEvery Pandalive recording is available to watch instantly. Premium users can download recordings for offline viewing.\n\n### Record Your Pandalive Streams\n\nWant your streams here? Sign up free and add your channel. We record every broadcast automatically.",
+    "afreecatv": "## AfreecaTV Recordings\n\nBrowse AfreecaTV recordings from creators who use LiveStreamRecorder to save their streams.\n\n### Korean Streams Saved\n\nAfreecaTV creators use our recorder to save their broadcasts. Browse Korean content here.\n\n### Watch AfreecaTV Recordings\n\nEvery AfreecaTV recording is available to watch instantly. Premium users can download recordings for offline viewing.\n\n### Record Your AfreecaTV Streams\n\nWant your streams here? Sign up free and add your channel. We record every broadcast automatically."
   },
   "jsonLd": {
     "name": {
       "all": "Live Stream Recordings",
-      "tiktok": "TikTok Live Stream Recordings",
-      "twitch": "Twitch Live Stream Recordings",
-      "youtube": "YouTube Live Stream Recordings",
-      "kick": "Kick Live Stream Recordings",
-      "afreecatv": "AfreecaTV Live Stream Recordings",
-      "pandalive": "PandaLive Live Stream Recordings"
+      "tiktok": "TikTok Live Recordings",
+      "twitch": "Twitch Stream Recordings",
+      "youtube": "YouTube Live Recordings",
+      "kick": "Kick Stream Recordings",
+      "afreecatv": "AfreecaTV Stream Recordings",
+      "pandalive": "Pandalive Stream Recordings"
     },
     "description": {
-      "all": "Browse live stream recordings. Never miss a stream again.",
-      "tiktok": "Browse live stream recordings from TikTok. Never miss a stream again.",
-      "twitch": "Browse live stream recordings from Twitch. Never miss a stream again.",
-      "youtube": "Browse live stream recordings from YouTube. Never miss a stream again.",
-      "kick": "Browse live stream recordings from Kick. Never miss a stream again.",
-      "afreecatv": "Browse live stream recordings from AfreecaTV. Never miss a stream again.",
-      "pandalive": "Browse live stream recordings from PandaLive. Never miss a stream again."
+      "all": "Browse live stream recordings from creators on LiveStreamRecorder.",
+      "tiktok": "Browse TikTok live recordings from creators on LiveStreamRecorder.",
+      "twitch": "Browse Twitch stream recordings from creators on LiveStreamRecorder.",
+      "youtube": "Browse YouTube live recordings from creators on LiveStreamRecorder.",
+      "kick": "Browse Kick stream recordings from creators on LiveStreamRecorder.",
+      "afreecatv": "Browse AfreecaTV recordings from creators on LiveStreamRecorder.",
+      "pandalive": "Browse Pandalive recordings from creators on LiveStreamRecorder."
     },
     "streamTitle": "{nickname} Stream - {date}",
     "streamDescription": {
-      "tiktok": "Live stream recording from {nickname} on TikTok",
-      "twitch": "Live stream recording from {nickname} on Twitch",
-      "youtube": "Live stream recording from {nickname} on YouTube",
-      "kick": "Live stream recording from {nickname} on Kick",
-      "afreecatv": "Live stream recording from {nickname} on AfreecaTV",
-      "pandalive": "Live stream recording from {nickname} on PandaLive",
+      "tiktok": "TikTok live recording from {nickname}",
+      "twitch": "Twitch stream recording from {nickname}",
+      "youtube": "YouTube live recording from {nickname}",
+      "kick": "Kick stream recording from {nickname}",
+      "afreecatv": "AfreecaTV recording from {nickname}",
+      "pandalive": "Pandalive recording from {nickname}",
       "unknown": "Live stream recording from {nickname}"
     }
   },

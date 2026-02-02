@@ -1,175 +1,168 @@
 {
   "meta": {
     "all": {
-      "title": "All Streamers & Creators",
-      "description": "Browse all streamers and creators on our platform. Follow your favorites and never miss a live stream from TikTok, Twitch, YouTube, Kick, and more.",
+      "title": "Creators on LiveStreamRecorder",
+      "description": "Discover creators who use LiveStreamRecorder to record their live streams and turn them into short clips. Join thousands of creators on TikTok, Twitch, YouTube, Kick, and more.",
       "keywords": [
-        "streamers",
-        "creators",
+        "content creators",
         "live stream",
-        "record streams",
+        "stream recording",
         "live stream recorder"
       ]
     },
     "tiktok": {
-      "title": "TikTok Streamers & Creators",
-      "description": "Discover TikTok streamers and creators. Follow your favorites and their live streams are automatically captured so you never miss a moment.",
+      "title": "TikTok Creators",
+      "description": "Discover TikTok creators who use LiveStreamRecorder to record their live streams and turn them into short clips.",
       "keywords": [
-        "tiktok streamers",
         "tiktok creators",
-        "tiktok live",
-        "record tiktok",
-        "tiktok live stream recorder"
+        "tiktok live stream",
+        "tiktok recording",
+        "tiktok stream recorder"
       ]
     },
     "twitch": {
-      "title": "Twitch Streamers & Creators",
-      "description": "Discover Twitch streamers and creators. Follow your favorites and their live streams are automatically captured so you never miss a moment.",
+      "title": "Twitch Creators",
+      "description": "Discover Twitch creators who use LiveStreamRecorder to record their live streams and turn them into short clips.",
       "keywords": [
-        "twitch streamers",
         "twitch creators",
-        "twitch live",
-        "record twitch",
+        "twitch live stream",
+        "twitch recording",
         "twitch stream recorder"
       ]
     },
     "youtube": {
-      "title": "YouTube Streamers & Creators",
-      "description": "Discover YouTube streamers and creators. Follow your favorites and their live streams are automatically captured so you never miss a moment.",
+      "title": "YouTube Creators",
+      "description": "Discover YouTube creators who use LiveStreamRecorder to record their live streams and turn them into short clips.",
       "keywords": [
-        "youtube streamers",
         "youtube creators",
-        "youtube live",
-        "record youtube",
-        "youtube live stream recorder"
+        "youtube live stream",
+        "youtube recording",
+        "youtube stream recorder"
       ]
     },
     "kick": {
-      "title": "Kick Streamers & Creators",
-      "description": "Discover Kick streamers and creators. Follow your favorites and their live streams are automatically captured so you never miss a moment.",
+      "title": "Kick Creators",
+      "description": "Discover Kick creators who use LiveStreamRecorder to record their live streams and turn them into short clips.",
       "keywords": [
-        "kick streamers",
         "kick creators",
-        "kick live",
-        "record kick",
+        "kick live stream",
+        "kick recording",
         "kick stream recorder"
       ]
     },
     "pandalive": {
-      "title": "PandaLive Streamers & Creators",
-      "description": "Discover PandaLive streamers and creators. Follow your favorites and their live streams are automatically captured so you never miss a moment.",
+      "title": "Pandalive Creators",
+      "description": "Discover Pandalive creators who use LiveStreamRecorder to record their live streams and turn them into short clips.",
       "keywords": [
-        "pandalive streamers",
         "pandalive creators",
-        "pandalive live",
-        "record pandalive",
+        "korean live stream",
+        "pandalive recording",
         "korean stream recorder"
       ]
     },
     "afreecatv": {
-      "title": "AfreecaTV Streamers & Creators",
-      "description": "Discover AfreecaTV streamers and creators. Follow your favorites and their live streams are automatically captured so you never miss a moment.",
+      "title": "AfreecaTV Creators",
+      "description": "Discover AfreecaTV creators who use LiveStreamRecorder to record their live streams and turn them into short clips.",
       "keywords": [
-        "afreecatv streamers",
         "afreecatv creators",
-        "afreecatv live",
-        "record afreecatv",
+        "korean live stream",
+        "afreecatv recording",
         "korean stream recorder"
       ]
     }
   },
   "hero": {
     "title": {
-      "all": "All Creators",
+      "all": "Creators",
       "tiktok": "TikTok Creators",
       "twitch": "Twitch Creators",
       "youtube": "YouTube Creators",
       "kick": "Kick Creators",
-      "pandalive": "PandaLive Creators",
+      "pandalive": "Pandalive Creators",
       "afreecatv": "AfreecaTV Creators"
     },
     "subtitle": {
-      "all": "Never miss a stream again. Your favorite creators are automatically recorded so you can watch anytime.",
-      "tiktok": "Never miss a TikTok stream again. Your favorite creators are automatically recorded so you can watch anytime.",
-      "twitch": "Never miss a Twitch stream again. Your favorite creators are automatically recorded so you can watch anytime.",
-      "youtube": "Never miss a YouTube stream again. Your favorite creators are automatically recorded so you can watch anytime.",
-      "kick": "Never miss a Kick stream again. Your favorite creators are automatically recorded so you can watch anytime.",
-      "pandalive": "Never miss a PandaLive stream again. Your favorite creators are automatically recorded so you can watch anytime.",
-      "afreecatv": "Never miss an AfreecaTV stream again. Your favorite creators are automatically recorded so you can watch anytime."
+      "all": "Join thousands of creators who use LiveStreamRecorder to save their streams and create short clips.",
+      "tiktok": "Join thousands of TikTok creators who use LiveStreamRecorder to save their streams and create short clips.",
+      "twitch": "Join thousands of Twitch creators who use LiveStreamRecorder to save their streams and create short clips.",
+      "youtube": "Join thousands of YouTube creators who use LiveStreamRecorder to save their streams and create short clips.",
+      "kick": "Join thousands of Kick creators who use LiveStreamRecorder to save their streams and create short clips.",
+      "pandalive": "Join thousands of Pandalive creators who use LiveStreamRecorder to save their streams and create short clips.",
+      "afreecatv": "Join thousands of AfreecaTV creators who use LiveStreamRecorder to save their streams and create short clips."
     }
   },
   "features": {
     "badge": "How It Works",
     "title": {
-      "all": "Record Streams Automatically",
-      "tiktok": "Record TikTok Streams Automatically",
-      "twitch": "Record Twitch Streams Automatically",
-      "youtube": "Record YouTube Streams Automatically",
-      "kick": "Record Kick Streams Automatically",
-      "pandalive": "Record PandaLive Streams Automatically",
-      "afreecatv": "Record AfreecaTV Streams Automatically"
+      "all": "Record Your Streams Automatically",
+      "tiktok": "Record Your TikTok Streams Automatically",
+      "twitch": "Record Your Twitch Streams Automatically",
+      "youtube": "Record Your YouTube Streams Automatically",
+      "kick": "Record Your Kick Streams Automatically",
+      "pandalive": "Record Your Pandalive Streams Automatically",
+      "afreecatv": "Record Your AfreecaTV Streams Automatically"
     },
-    "subtitle": "Our service runs 24/7 so you never miss a moment",
+    "subtitle": "From live stream to short clips in minutes",
     "items": {
-      "follow": {
-        "title": "Follow Your Favorite Streamers",
-        "description": "Simply follow the creators you love, and our cloud servers handle the rest. Streaming video is recorded in the background and made available on-demand."
+      "add": {
+        "title": "Add Your Channel",
+        "description": "Paste your streaming channel URL and we'll start recording every time you go live. No software needed."
       },
       "watch": {
-        "title": "Watch Anytime, Anywhere",
-        "description": "Busy schedule? Different time zone? No problem. Catch up on live content whenever it suits you. Access your recordings through our built-in player or download them for offline viewing."
+        "title": "Rewatch Your Streams",
+        "description": "Every stream is saved automatically. Watch your recordings anytime or download them for editing."
       },
-      "cloud": {
-        "title": "Securely Stored in the Cloud",
-        "description": "Your recorded streams are saved securely on our servers. No storage fees, no lost files, just reliable access to your favorite content whenever you need it."
+      "clip": {
+        "title": "Get Highlights with ClipAI",
+        "description": "ClipAI finds your best moments and turns them into short clips — ready in minutes."
       },
-      "platform": {
-        "title": "One Platform, Every Stream",
-        "description": "Whether you want to record TikTok streams, capture Twitch live broadcasts, save YouTube lives, or catch Kick streams, our stream recording service has you covered."
+      "edit": {
+        "title": "Edit and Share Everywhere",
+        "description": "Customize your clips however you want. Add captions, trim, and share across all your platforms."
       }
     }
   },
   "cta": {
     "title": {
-      "all": "Start Recording Today",
-      "tiktok": "Start Recording TikTok Today",
-      "twitch": "Start Recording Twitch Today",
-      "youtube": "Start Recording YouTube Today",
-      "kick": "Start Recording Kick Today",
-      "pandalive": "Start Recording PandaLive Today",
-      "afreecatv": "Start Recording AfreecaTV Today"
+      "all": "Record Your Live Streams Today",
+      "tiktok": "Record TikTok Live Streams",
+      "twitch": "Record Twitch Streams & VODs",
+      "youtube": "Record YouTube Live Streams",
+      "kick": "Record Kick Streams",
+      "pandalive": "Record Pandalive Streams",
+      "afreecatv": "Record AfreecaTV Streams"
     },
     "subtitle": {
-      "all": "Join thousands of users who never miss their favorite streams. Free to get started.",
-      "tiktok": "Join thousands of users who never miss their favorite TikTok streams. Free to get started.",
-      "twitch": "Join thousands of users who never miss their favorite Twitch streams. Free to get started.",
-      "youtube": "Join thousands of users who never miss their favorite YouTube streams. Free to get started.",
-      "kick": "Join thousands of users who never miss their favorite Kick streams. Free to get started.",
-      "pandalive": "Join thousands of users who never miss their favorite PandaLive streams. Free to get started.",
-      "afreecatv": "Join thousands of users who never miss their favorite AfreecaTV streams. Free to get started."
+      "all": "Automatically save your TikTok, Twitch, YouTube, and Kick streams. Download recordings, create short clips, and grow your audience.",
+      "tiktok": "Automatically save your TikTok Lives. Download recordings, create short clips with ClipAI, and grow your following.",
+      "twitch": "Automatically save your Twitch streams. Download VODs, create short clips with ClipAI, and grow your channel.",
+      "youtube": "Automatically save your YouTube Lives. Download recordings, turn them into Shorts with ClipAI, and grow your subscribers.",
+      "kick": "Automatically save your Kick streams. Download recordings, create short clips with ClipAI, and grow your audience.",
+      "pandalive": "Automatically save your Pandalive streams. Download recordings and create short clips with ClipAI.",
+      "afreecatv": "Automatically save your AfreecaTV streams. Download recordings and create short clips with ClipAI."
     },
-    "button": "Create Free Account"
+    "button": "Start Recording Free"
   },
   "empty": {
-    "title": "No creators yet",
+    "title": "No Creators Yet",
     "description": {
-      "all": "Be the first to add a streamer!",
-      "tiktok": "Be the first to add a TikTok streamer!",
-      "twitch": "Be the first to add a Twitch streamer!",
-      "youtube": "Be the first to add a YouTube streamer!",
-      "kick": "Be the first to add a Kick streamer!",
-      "pandalive": "Be the first to add a PandaLive streamer!",
-      "afreecatv": "Be the first to add an AfreecaTV streamer!"
+      "all": "Be the first creator to join!",
+      "tiktok": "Be the first TikTok creator to join!",
+      "twitch": "Be the first Twitch creator to join!",
+      "youtube": "Be the first YouTube creator to join!",
+      "kick": "Be the first Kick creator to join!",
+      "pandalive": "Be the first Pandalive creator to join!",
+      "afreecatv": "Be the first AfreecaTV creator to join!"
     },
     "button": "Get Started"
   },
   "about": {
-    "all": "## About Live Stream Recorder\n\nNever miss a moment from your favorite creators. Our cloud-based platform lets you capture live streams automatically so you can watch them on your own schedule.\n\n### Automatic Livestream Recording\n\nSimply follow the creators you love, and our cloud servers handle the rest. Stream recording happens automatically in the background — no software to install, no manual scheduling. Just follow a creator and their live streams are captured for your personal use.\n\n### Watch Anytime, Anywhere\n\nBusy schedule? Different time zone? No problem. With cloud-based recording of streaming video, you can catch up on live content whenever it suits you. Access your recordings through our built-in player or download them for offline viewing.\n\n### Securely Stored in the Cloud\n\nYour recorded streams are saved securely on our servers. No storage fees, no lost files — just reliable access to your favorite content whenever you need it. Capture video streams from multiple platforms, all organized and ready to watch.\n\n### Record TikTok, Twitch, YouTube, Kick & More\n\nWhether you want to record TikTok live streams, record Twitch streams, capture YouTube lives, or save Kick broadcasts — our cloud-based service has you covered. Support for more platforms is continuously being added.\n\n### No Screen Recorder Needed\n\nUnlike a live stream screen recorder that requires your computer to stay on, our cloud service runs 24/7. No need for livestream screen recorder software or leaving your PC running. Streams are recorded even while you sleep.\n\n### Free to Get Started\n\nCreate an account and start recording your favorite streamers today. Upgrade to premium for higher quality recordings, more simultaneous follows, and faster downloads.",
-    "tiktok": "## About TikTok Live Stream Recording\n\nNever miss a TikTok Live again. Our cloud-based platform automatically captures TikTok live streams from your favorite creators so you can watch them on your own schedule.\n\n### Why Record TikTok Lives?\n\nTikTok Live is packed with exclusive content — from trending challenges to candid moments with your favorite creators. Live streams on TikTok are ephemeral, and once they end, they are gone forever. With our service, you will never miss a moment.\n\n### Automatic TikTok Live Recording\n\nSimply follow the TikTok creators you love, and our cloud servers handle the rest. TikTok Live recording happens automatically in the background — no software to install, no manual scheduling. Just follow a creator and their TikTok live streams are captured for your personal use.\n\n### Watch TikTok Lives Anytime\n\nBusy schedule? Different time zone? No problem. With cloud-based TikTok recording, you can catch up on live content whenever it suits you. Access your TikTok recordings through our built-in player or download them for offline viewing.\n\n### TikTok Streams Securely Stored\n\nYour recorded TikTok streams are saved securely on our servers. No storage fees, no lost files — just reliable access to your favorite TikTok content whenever you need it.\n\n### No Screen Recorder Needed\n\nUnlike a TikTok screen recorder that requires your phone or computer to stay on, our cloud service runs 24/7. No need for screen recording software or leaving your device running. TikTok Lives are recorded even while you sleep.\n\n### Free to Get Started\n\nCreate an account and start recording your favorite TikTok streamers today. Upgrade to premium for higher quality recordings, more simultaneous follows, and faster downloads.",
-    "twitch": "## About Twitch Stream Recording\n\nNever miss a Twitch stream again. Our cloud-based platform automatically captures Twitch live streams from your favorite streamers so you can watch them on your own schedule.\n\n### Why Record Twitch Streams?\n\nTwitch is home to gaming, esports, and massive communities. Streams run for hours, and VODs expire or get deleted. With our service, save every moment from esports tournaments, speedrun sessions, or your favorite streamer's broadcast — forever.\n\n### Automatic Twitch VOD Recording\n\nSimply follow the Twitch streamers you love, and our cloud servers handle the rest. Twitch stream recording happens automatically in the background — no software to install, no manual scheduling. Just follow a streamer and their Twitch broadcasts are captured for your personal use.\n\n### Watch Twitch Streams Anytime\n\nBusy schedule? Different time zone? No problem. With cloud-based Twitch recording, you can catch up on live content whenever it suits you. Access your Twitch VODs through our built-in player or download them for offline viewing.\n\n### Twitch Streams Securely Stored\n\nYour recorded Twitch streams are saved securely on our servers. No storage fees, no lost files — just reliable access to your favorite Twitch content whenever you need it. Never worry about VODs expiring or being deleted.\n\n### No Screen Recorder Needed\n\nUnlike a Twitch screen recorder that requires your computer to stay on, our cloud service runs 24/7. No need for OBS or screen recording software. Twitch streams are recorded even while you sleep.\n\n### Free to Get Started\n\nCreate an account and start recording your favorite Twitch streamers today. Upgrade to premium for higher quality recordings, more simultaneous follows, and faster downloads.",
-    "youtube": "## About YouTube Live Stream Recording\n\nNever miss a YouTube Live again. Our cloud-based platform automatically captures live streams and premieres from your favorite YouTube channels.\n\n### Why Record YouTube Lives?\n\nYouTube Live brings everything together — from live concerts and sports events to Q&A sessions with creators and movie premieres. Some live streams are not saved or get deleted later. With our service, save every moment.\n\n### Automatic YouTube Live Recording\n\nSimply follow the YouTube channels you love, and our cloud servers handle the rest. YouTube Live recording happens automatically in the background — no software to install, no manual scheduling. Just follow a channel and their live streams are captured for your personal use.\n\n### Watch YouTube Lives Anytime\n\nBusy schedule? Different time zone? No problem. With cloud-based YouTube recording, you can catch up on concerts, sports events, or creator streams whenever it suits you.\n\n### YouTube Streams Securely Stored\n\nYour recorded YouTube streams are saved securely on our servers. No storage fees, no lost files — even if the creator deletes the original stream.\n\n### No Screen Recorder Needed\n\nUnlike a YouTube screen recorder that requires your computer to stay on, our cloud service runs 24/7. YouTube streams are recorded even while you sleep.\n\n### Free to Get Started\n\nCreate an account and start recording your favorite YouTube channels today. Upgrade to premium for higher quality recordings, more simultaneous follows, and faster downloads.",
-    "kick": "## About Kick Stream Recording\n\nNever miss a Kick stream again. Our cloud-based platform automatically captures Kick live streams from your favorite creators.\n\n### Why Record Kick Streams?\n\nKick is the rising platform where big creators are migrating. With better revenue splits for streamers and fewer restrictions, Kick has become home to unique content you will not find anywhere else. Do not miss exclusive streams from Kick's biggest stars.\n\n### Automatic Kick Recording\n\nSimply follow the Kick streamers you love, and our cloud servers handle the rest. Kick stream recording happens automatically in the background — no software to install, no manual scheduling.\n\n### Watch Kick Streams Anytime\n\nBusy schedule? Different time zone? No problem. With cloud-based Kick recording, you can catch up on live content whenever it suits you. Access your Kick recordings through our built-in player or download them for offline viewing.\n\n### Kick Streams Securely Stored\n\nYour recorded Kick streams are saved securely on our servers. No storage fees, no lost files — just reliable access to your favorite Kick content whenever you need it.\n\n### No Screen Recorder Needed\n\nUnlike a screen recorder that requires your computer to stay on, our cloud service runs 24/7. Kick streams are recorded even while you sleep.\n\n### Free to Get Started\n\nCreate an account and start recording your favorite Kick streamers today. Upgrade to premium for higher quality recordings, more simultaneous follows, and faster downloads.",
-    "pandalive": "## About PandaLive Stream Recording\n\nNever miss a PandaLive stream again. Our cloud-based platform automatically captures PandaLive streams from your favorite creators.\n\n### Why Record PandaLive Streams?\n\nPandaLive is the popular Korean streaming platform, home to exclusive Korean content and Asian creators. If you are a fan of Korean content, PandaLive offers a unique experience you will not find on Western platforms.\n\n### Automatic PandaLive Recording\n\nSimply follow the PandaLive creators you love, and our cloud servers handle the rest. PandaLive recording happens automatically in the background — no software to install, no manual scheduling.\n\n### Watch PandaLive Streams Anytime\n\nBusy schedule? Big time difference with Korea? No problem. With cloud-based PandaLive recording, you can catch up on Korean content whenever it suits you.\n\n### PandaLive Streams Securely Stored\n\nYour recorded PandaLive streams are saved securely on our servers. No storage fees, no lost files.\n\n### Free to Get Started\n\nCreate an account and start recording your favorite PandaLive streamers today.",
-    "afreecatv": "## About AfreecaTV Stream Recording\n\nNever miss an AfreecaTV stream again. Our cloud-based platform automatically captures AfreecaTV streams from your favorite BJs.\n\n### Why Record AfreecaTV Streams?\n\nAfreecaTV is the original Korean streaming giant — the platform that birthed Korea's live streaming culture. From esports tournaments to mukbang shows, AfreecaTV delivers authentic Korean content you will not find anywhere else.\n\n### Automatic AfreecaTV Recording\n\nSimply follow the AfreecaTV BJs you love, and our cloud servers handle the rest. AfreecaTV recording happens automatically in the background — no software to install, no manual scheduling.\n\n### Watch AfreecaTV Streams Anytime\n\nBusy schedule? Big time difference with Korea? No problem. With cloud-based AfreecaTV recording, you can catch up on Korean content whenever it suits you.\n\n### AfreecaTV Streams Securely Stored\n\nYour recorded AfreecaTV streams are saved securely on our servers. No storage fees, no lost files.\n\n### Free to Get Started\n\nCreate an account and start recording your favorite AfreecaTV BJs today."
+    "all": "## About LiveStreamRecorder\n\nStop losing your best content. We record your live streams automatically so you can turn them into short clips and grow your audience.\n\n### Automatic Stream Recording\n\nJust paste your channel URL and go live. We handle the recording — no software to install, nothing to set up. Every stream is saved automatically.\n\n### Rewatch and Download\n\nFinished streaming? Your recording is ready. Watch it back, download it, or send it to your editor.\n\n### ClipAI Finds Your Best Moments\n\nDon't waste hours scrubbing through footage. ClipAI highlights your best moments and turns them into short clips — ready in minutes.\n\n### Grow Your Audience\n\nTurn one live stream into dozens of clips. Share them on TikTok, YouTube Shorts, Instagram Reels, and everywhere else. More content, more views, more followers.\n\n### Record TikTok, Twitch, YouTube, Kick & More\n\nStream anywhere — we record everywhere. TikTok, Twitch, YouTube, Kick, and more platforms coming soon.\n\n### Free to Start\n\nCreate an account and start recording today. Upgrade for higher quality, more recordings, and faster downloads.",
+    "tiktok": "## About TikTok Stream Recording\n\nStop losing your TikTok Lives. We record them automatically so you can turn your best moments into clips and grow your following.\n\n### Why Record Your TikTok Lives?\n\nYour Lives are full of great content — funny moments, viewer interactions, viral potential. But once they end, they're gone. We save every Live so you can clip and repost.\n\n### Automatic Recording\n\nJust add your TikTok username and go live. We record automatically — no screen recorder, no phone running all night.\n\n### Rewatch and Download\n\nFinished streaming? Your recording is ready. Watch it back or download it for editing.\n\n### ClipAI Finds Your Best Moments\n\nClipAI scans your Live and pulls out the highlights. Short clips ready in minutes — just edit and post.\n\n### Grow Your Following\n\nTurn one TikTok Live into multiple clips. Post them as TikToks, Reels, or Shorts. More content = more followers.\n\n### Free to Start\n\nCreate an account and start recording your TikTok Lives today.",
+    "twitch": "## About Twitch Stream Recording\n\nStop losing your Twitch streams. We record them automatically so you can turn your best moments into clips and grow your channel.\n\n### Why Record Your Twitch Streams?\n\nTwitch VODs expire. Highlights take forever to make. We save every stream automatically — ready to clip and share.\n\n### Automatic Recording\n\nJust add your Twitch channel and go live. We record automatically — no OBS export, no manual saving.\n\n### Rewatch and Download\n\nFinished streaming? Your recording is ready. Watch it back or download it for editing. No more expired VODs.\n\n### ClipAI Finds Your Best Moments\n\nClipAI scans your stream and pulls out the highlights. Short clips ready in minutes — just edit and post.\n\n### Grow Your Channel\n\nTurn one stream into dozens of clips. Post them on TikTok, YouTube Shorts, Twitter. More clips = more viewers.\n\n### Free to Start\n\nCreate an account and start recording your Twitch streams today.",
+    "youtube": "## About YouTube Stream Recording\n\nStop losing your YouTube Lives. We record them automatically so you can turn your best moments into Shorts and grow your channel.\n\n### Why Record Your YouTube Lives?\n\nYouTube Lives are great for engagement but hard to repurpose. We save every Live so you can clip the best parts into Shorts.\n\n### Automatic Recording\n\nJust add your YouTube channel and go live. We record automatically — nothing to install, nothing to set up.\n\n### Rewatch and Download\n\nFinished streaming? Your recording is ready. Watch it back or download it for editing.\n\n### ClipAI Finds Your Best Moments\n\nClipAI scans your Live and pulls out the highlights. Short clips ready in minutes.\n\n### Grow Your Channel\n\nTurn one Live into multiple Shorts. More Shorts = more subscribers.\n\n### Free to Start\n\nCreate an account and start recording your YouTube Lives today.",
+    "kick": "## About Kick Stream Recording\n\nStop losing your Kick streams. We record them automatically so you can turn your best moments into clips and grow your audience.\n\n### Why Record Your Kick Streams?\n\nKick is growing fast. Your best content deserves to live beyond the stream. We save everything so you can clip and share.\n\n### Automatic Recording\n\nJust add your Kick channel and go live. We record automatically — nothing to install.\n\n### Rewatch and Download\n\nFinished streaming? Your recording is ready. Watch it back or download it for editing.\n\n### ClipAI Finds Your Best Moments\n\nClipAI scans your stream and pulls out the highlights. Short clips ready in minutes.\n\n### Grow Your Audience\n\nTurn one stream into dozens of clips. Share everywhere.\n\n### Free to Start\n\nCreate an account and start recording your Kick streams today.",
+    "pandalive": "## About Pandalive Stream Recording\n\nStop losing your Pandalive streams. We record them automatically so you can turn your best moments into clips.\n\n### Why Record Your Pandalive Streams?\n\nYour best content deserves to live beyond the stream. We save everything so you can clip and share.\n\n### Automatic Recording\n\nJust add your Pandalive channel and go live. We record automatically.\n\n### Rewatch and Download\n\nFinished streaming? Your recording is ready. Watch it back or download it.\n\n### ClipAI Finds Your Best Moments\n\nClipAI scans your stream and pulls out the highlights. Short clips ready in minutes.\n\n### Free to Start\n\nCreate an account and start recording your Pandalive streams today.",
+    "afreecatv": "## About AfreecaTV Stream Recording\n\nStop losing your AfreecaTV streams. We record them automatically so you can turn your best moments into clips.\n\n### Why Record Your AfreecaTV Streams?\n\nYour best content deserves to live beyond the stream. We save everything so you can clip and share.\n\n### Automatic Recording\n\nJust add your AfreecaTV channel and go live. We record automatically.\n\n### Rewatch and Download\n\nFinished streaming? Your recording is ready. Watch it back or download it.\n\n### ClipAI Finds Your Best Moments\n\nClipAI scans your stream and pulls out the highlights. Short clips ready in minutes.\n\n### Free to Start\n\nCreate an account and start recording your AfreecaTV streams today."
   }
 }

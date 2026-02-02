@@ -5,7 +5,6 @@ import {
   Container,
   Flex,
   Paper,
-  SimpleGrid,
   Stack,
   Text,
   Title,
@@ -14,16 +13,14 @@ import {
   IconCloud,
   IconDeviceTv,
   IconPlayerPlay,
-  IconUserPlus,
   IconUsers,
 } from "@tabler/icons-react";
 import { getTranslations } from "next-intl/server";
-import Image from "next/image";
-import Link from "next/link";
 import ReactMarkdown from "react-markdown";
+import { PlatformBadges } from "../../components/platform-badge";
 
 const featureIcons = [IconUsers, IconPlayerPlay, IconCloud, IconDeviceTv];
-const featureKeys = ["follow", "watch", "cloud", "platform"] as const;
+const featureKeys = ["add", "watch", "clip", "edit"] as const;
 
 interface PageProps {
   params: Promise<{
@@ -76,31 +73,9 @@ export default async function Page({ params, children }: PageProps) {
         >
           {t(`hero.subtitle.${platformKey}`)}
         </Text>
-
-        <SimpleGrid cols={{ base: 2, sm: 6 }} spacing="xl" mt={20}>
-          {streamingPlatforms.map((p) => (
-            <Link
-              key={p.name}
-              href={`/creators/${p.name.toLowerCase()}`}
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                border: p.name.toLowerCase() === type ? "1px solid" : "none",
-                borderRadius: "8px",
-                padding: "4px",
-              }}
-            >
-              <Image
-                alt={p.name}
-                src={p.file}
-                width={120}
-                height={120}
-                style={{ maxWidth: 120, height: "auto" }}
-              />
-            </Link>
-          ))}
-        </SimpleGrid>
       </Stack>
+
+      <PlatformBadges href={`/creators/`} activePlatform={type} />
 
       {children}
 
@@ -228,7 +203,7 @@ export default async function Page({ params, children }: PageProps) {
             </Title>
             <Text
               size="lg"
-              maw={500}
+              maw={600}
               style={{ color: "#94a3b8", lineHeight: 1.7 }}
             >
               {t(`cta.subtitle.${platformKey}`)}
@@ -243,10 +218,10 @@ export default async function Page({ params, children }: PageProps) {
               <Button
                 component="a"
                 href="/register"
-                size="lg"
+                size="responsive"
+                radius="lg"
                 variant="gradient"
                 gradient={{ from: "#6366f1", to: "#a855f7", deg: 135 }}
-                leftSection={<IconUserPlus size={20} />}
                 style={{ fontWeight: 600 }}
               >
                 {t("cta.button")}

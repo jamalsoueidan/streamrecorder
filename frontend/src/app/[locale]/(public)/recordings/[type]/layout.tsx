@@ -1,18 +1,8 @@
 import { streamingPlatforms } from "@/app/lib/streaming-platforms";
-import {
-  Button,
-  Container,
-  Group,
-  Paper,
-  SimpleGrid,
-  Stack,
-  Text,
-  Title,
-} from "@mantine/core";
+import { Button, Container, Paper, Stack, Text, Title } from "@mantine/core";
 import { getTranslations } from "next-intl/server";
-import Image from "next/image";
-import Link from "next/link";
 import Markdown from "react-markdown";
+import { PlatformBadges } from "../../components/platform-badge";
 
 interface PageProps {
   params: Promise<{
@@ -63,34 +53,12 @@ export default async function RecordingPage({ params, children }: PageProps) {
           maw={600}
           style={{ color: "#94a3b8", lineHeight: 1.7 }}
         >
-          {}
           {t(`hero.subtitle.${platformName.toLowerCase()}`)}
         </Text>
-
-        <SimpleGrid cols={{ base: 2, sm: 6 }} spacing="xl" mt={20}>
-          {streamingPlatforms.map((p) => (
-            <Link
-              key={p.name}
-              href={`/recordings/${p.name.toLowerCase()}`}
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                border: p.name.toLowerCase() === type ? "1px solid" : "none",
-                borderRadius: "8px",
-                padding: "4px",
-              }}
-            >
-              <Image
-                alt={p.name}
-                src={p.file}
-                width={120}
-                height={120}
-                style={{ maxWidth: 120, height: "auto" }}
-              />
-            </Link>
-          ))}
-        </SimpleGrid>
       </Stack>
+
+      <PlatformBadges href={`/recordings/`} activePlatform={type} />
+
       {children}
 
       {/* CTA Section */}
@@ -136,20 +104,20 @@ export default async function RecordingPage({ params, children }: PageProps) {
               {t(`cta.title.${platformName.toLowerCase()}`)}
             </Title>
             <Text size="lg" style={{ color: "#94a3b8", lineHeight: 1.7 }}>
-              {t("cta.subtitle")}
+              {t(`cta.subtitle.${platformName.toLowerCase()}`)}
             </Text>
-            <Group gap={16} mt={16}>
-              <Button
-                component="a"
-                size="lg"
-                variant="gradient"
-                gradient={{ from: "#6366f1", to: "#a855f7", deg: 135 }}
-                style={{ fontWeight: 600 }}
-                href="/register"
-              >
-                {t("cta.button")}
-              </Button>
-            </Group>
+
+            <Button
+              component="a"
+              href="/register"
+              size="responsive"
+              radius="lg"
+              variant="gradient"
+              gradient={{ from: "#6366f1", to: "#a855f7", deg: 135 }}
+              style={{ fontWeight: 600 }}
+            >
+              {t("cta.button")}
+            </Button>
           </Stack>
         </Paper>
       </div>
