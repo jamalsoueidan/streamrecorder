@@ -1,0 +1,13 @@
+:root {
+  --button-height-responsive: 2.625rem;
+  --button-padding-x-responsive: var(--mantine-spacing-md);
+  --mantine-font-size-responsive: var(--mantine-font-size-sm);
+}
+
+@media (min-width: 48em) {
+  :root {
+    --button-height-responsive: 3.75rem;
+    --button-padding-x-responsive: var(--mantine-spacing-xl);
+    --mantine-font-size-responsive: var(--mantine-font-size-xl);
+  }
+}

@@ -1,12 +1,8 @@
-import { streamingPlatforms } from "@/app/lib/streaming-platforms";
 import publicApi from "@/lib/public-api";
 import {
-  Badge,
   Button,
   Container,
   Flex,
-  Grid,
-  GridCol,
   Paper,
   Stack,
   Text,
@@ -15,9 +11,9 @@ import {
 import { IconArrowRight } from "@tabler/icons-react";
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
-import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 import { ClipSlider } from "./components/clip-slider";
+import { PlatformBadges } from "./components/platform-badge";
 import { CreatorsSlider } from "./creators/components/creators-slider";
 import { RecordingsSimpleGrid } from "./recordings/components/recordings-simple-grid";
 
@@ -93,28 +89,7 @@ export default async function LandingPage() {
           />
         </div>
 
-        <Grid align="center" justify="center">
-          {streamingPlatforms.map((p) => (
-            <GridCol key={p.name} span={{ base: 4, sm: "content" }}>
-              <Link href={`/recordings/${p.name.toLowerCase()}`}>
-                <Badge
-                  variant="outline"
-                  leftSection={
-                    <span
-                      style={{
-                        maskImage: `url(${p.file})`,
-                        WebkitMaskImage: `url(${p.file})`,
-                      }}
-                    />
-                  }
-                  color={p.color}
-                >
-                  {p.name}
-                </Badge>
-              </Link>
-            </GridCol>
-          ))}
-        </Grid>
+        <PlatformBadges href={`/recordings/`} activePlatform={"type"} />
 
         <Stack
           align="center"
@@ -169,7 +144,8 @@ export default async function LandingPage() {
 
           <Button
             component="a"
-            size="xl"
+            href="/register"
+            size="responsive"
             variant="gradient"
             gradient={{ from: "#6366f1", to: "#a855f7", deg: 135 }}
             radius="lg"

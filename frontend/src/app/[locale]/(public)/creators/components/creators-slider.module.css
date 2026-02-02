@@ -20,7 +20,12 @@
 }
 
 .slide {
-  flex-shrink: 0;
+  text-decoration: none;
+  color: inherit;
+}
+
+.slide:hover {
+  text-decoration: none;
 }
 
 @keyframes scroll-ltr {

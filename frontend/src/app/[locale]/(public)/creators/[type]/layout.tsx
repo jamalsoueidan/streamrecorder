@@ -4,8 +4,6 @@ import {
   Button,
   Container,
   Flex,
-  Grid,
-  GridCol,
   Paper,
   Stack,
   Text,
@@ -18,8 +16,8 @@ import {
   IconUsers,
 } from "@tabler/icons-react";
 import { getTranslations } from "next-intl/server";
-import Link from "next/link";
 import ReactMarkdown from "react-markdown";
+import { PlatformBadges } from "../../components/platform-badge";
 
 const featureIcons = [IconUsers, IconPlayerPlay, IconCloud, IconDeviceTv];
 const featureKeys = ["add", "watch", "clip", "edit"] as const;
@@ -77,41 +75,7 @@ export default async function Page({ params, children }: PageProps) {
         </Text>
       </Stack>
 
-      <Grid align="center" justify="center">
-        {streamingPlatforms.map((p) => (
-          <GridCol key={p.name} span={{ base: 4, sm: "content" }}>
-            <Link href={`/creators/${p.name.toLowerCase()}`}>
-              <Badge
-                variant={p.name.toLowerCase() === type ? "filled" : "outline"}
-                leftSection={
-                  <span
-                    style={{
-                      maskImage: `url(${p.file})`,
-                      WebkitMaskImage: `url(${p.file})`,
-                    }}
-                  />
-                }
-                color={p.color}
-                style={{
-                  outline:
-                    p.name.toLowerCase() === type
-                      ? `2px solid ${p.color}`
-                      : undefined,
-                  outlineOffset:
-                    p.name.toLowerCase() === type ? "2px" : undefined,
-                  filter:
-                    p.name.toLowerCase() === type
-                      ? `drop-shadow(0 0 10px ${p.color})`
-                      : undefined,
-                  transition: "all 0.2s ease",
-                }}
-              >
-                {p.name}
-              </Badge>
-            </Link>
-          </GridCol>
-        ))}
-      </Grid>
+      <PlatformBadges href={`/creators/`} activePlatform={type} />
 
       {children}
 
@@ -254,7 +218,7 @@ export default async function Page({ params, children }: PageProps) {
               <Button
                 component="a"
                 href="/register"
-                size="lg"
+                size="responsive"
                 radius="lg"
                 variant="gradient"
                 gradient={{ from: "#6366f1", to: "#a855f7", deg: 135 }}

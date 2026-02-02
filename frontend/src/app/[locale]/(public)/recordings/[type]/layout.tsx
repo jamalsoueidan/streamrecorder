@@ -1,18 +1,8 @@
 import { streamingPlatforms } from "@/app/lib/streaming-platforms";
-import {
-  Badge,
-  Button,
-  Container,
-  Grid,
-  GridCol,
-  Paper,
-  Stack,
-  Text,
-  Title,
-} from "@mantine/core";
+import { Button, Container, Paper, Stack, Text, Title } from "@mantine/core";
 import { getTranslations } from "next-intl/server";
-import Link from "next/link";
 import Markdown from "react-markdown";
+import { PlatformBadges } from "../../components/platform-badge";
 
 interface PageProps {
   params: Promise<{
@@ -63,46 +53,11 @@ export default async function RecordingPage({ params, children }: PageProps) {
           maw={600}
           style={{ color: "#94a3b8", lineHeight: 1.7 }}
         >
-          {}
           {t(`hero.subtitle.${platformName.toLowerCase()}`)}
         </Text>
       </Stack>
 
-      <Grid align="center" justify="center">
-        {streamingPlatforms.map((p) => (
-          <GridCol key={p.name} span={{ base: 4, sm: "content" }}>
-            <Link href={`/recordings/${p.name.toLowerCase()}`}>
-              <Badge
-                variant={p.name.toLowerCase() === type ? "filled" : "outline"}
-                leftSection={
-                  <span
-                    style={{
-                      maskImage: `url(${p.file})`,
-                      WebkitMaskImage: `url(${p.file})`,
-                    }}
-                  />
-                }
-                color={p.color}
-                style={{
-                  outline:
-                    p.name.toLowerCase() === type
-                      ? `2px solid ${p.color}`
-                      : undefined,
-                  outlineOffset:
-                    p.name.toLowerCase() === type ? "2px" : undefined,
-                  filter:
-                    p.name.toLowerCase() === type
-                      ? `drop-shadow(0 0 10px ${p.color})`
-                      : undefined,
-                  transition: "all 0.2s ease",
-                }}
-              >
-                {p.name}
-              </Badge>
-            </Link>
-          </GridCol>
-        ))}
-      </Grid>
+      <PlatformBadges href={`/recordings/`} activePlatform={type} />
 
       {children}
 
@@ -155,7 +110,7 @@ export default async function RecordingPage({ params, children }: PageProps) {
             <Button
               component="a"
               href="/register"
-              size="lg"
+              size="responsive"
               radius="lg"
               variant="gradient"
               gradient={{ from: "#6366f1", to: "#a855f7", deg: 135 }}

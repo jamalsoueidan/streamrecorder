@@ -1,32 +1,38 @@
 export const streamingPlatforms = [
   {
     color: "pink.5",
+    colorCss: "var(--mantine-color-pink-5)",
     name: "TikTok",
     file: "/simple/tiktok.svg",
   },
   {
     color: "violet.6",
+    colorCss: "var(--mantine-color-violet-6)",
     name: "Twitch",
     file: "/simple/twitch.svg",
   },
   {
     color: "lime.5",
+    colorCss: "var(--mantine-color-lime-5)",
     name: "Kick",
     file: "/simple/kick.svg",
   },
   {
     color: "red.6",
+    colorCss: "var(--mantine-color-red-6)",
     name: "YouTube",
     file: "/simple/youtube.svg",
   },
   {
     color: "red.4",
+    colorCss: "var(--mantine-color-red-4)",
     name: "AfreecaTV",
     file: "/simple/afreecatv.svg",
   },
   {
     color: "blue.5",
+    colorCss: "var(--mantine-color-blue-5)",
     name: "Pandalive",
-    file: "/simple/foodpanda.svg",
+    file: "/simple/pandalive.svg",
   },
 ];

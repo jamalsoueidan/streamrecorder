@@ -16,15 +16,7 @@ import Script from "next/script";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
 import "./globals.css";
 
-export const theme = createTheme({
-  components: {
-    Badge: {
-      classNames: {
-        root: "responsive-badge",
-      },
-    },
-  },
-});
+export const theme = createTheme({});
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
