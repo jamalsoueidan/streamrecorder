@@ -20,12 +20,12 @@ export const theme = createTheme({
   components: {
     Button: {
       vars: (theme, props) => {
-        if (props.size === 'responsive') {
+        if (props.size === "responsive") {
           return {
             root: {
-              '--button-height': 'var(--button-height-responsive)',
-              '--button-padding-x': 'var(--button-padding-x-responsive)',
-              '--button-fz': 'var(--mantine-font-size-responsive)',
+              "--button-height": "var(--button-height-responsive)",
+              "--button-padding-x": "var(--button-padding-x-responsive)",
+              "--button-fz": "var(--mantine-font-size-responsive)",
             },
           };
         }
