@@ -16,7 +16,24 @@ import Script from "next/script";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
 import "./globals.css";
 
-export const theme = createTheme({});
+export const theme = createTheme({
+  components: {
+    Button: {
+      vars: (theme, props) => {
+        if (props.size === 'responsive') {
+          return {
+            root: {
+              '--button-height': 'var(--button-height-responsive)',
+              '--button-padding-x': 'var(--button-padding-x-responsive)',
+              '--button-fz': 'var(--mantine-font-size-responsive)',
+            },
+          };
+        }
+        return { root: {} };
+      },
+    },
+  },
+});
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
