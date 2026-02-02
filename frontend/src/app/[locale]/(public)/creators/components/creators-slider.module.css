@@ -1,0 +1,47 @@
+.sliderContainer {
+  overflow: hidden;
+  overflow-x: clip;
+  margin-inline: -32px;
+}
+
+.sliderTrack {
+  display: flex;
+  width: max-content;
+  animation: scroll-ltr 60s linear infinite;
+}
+
+/* RTL support */
+[dir="rtl"] .sliderTrack {
+  animation-name: scroll-rtl;
+}
+
+.sliderTrack:hover {
+  animation-play-state: paused;
+}
+
+.slide {
+  text-decoration: none;
+  color: inherit;
+}
+
+.slide:hover {
+  text-decoration: none;
+}
+
+@keyframes scroll-ltr {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scroll-rtl {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(50%);
+  }
+}

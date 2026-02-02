@@ -87,7 +87,7 @@ export async function fetchProfileRecordings(
   filters: ProfileFilters,
   page: number = 1,
 ) {
-  const locale = await getLocale();
+  //const locale = await getLocale();
   const response = await api.recording.browseRecordings(
     deepMerge(defaultOptions, {
       filters: {
@@ -99,7 +99,7 @@ export async function fetchProfileRecordings(
       sort: filters.sort,
       "pagination[page]": page,
       "pagination[pageSize]": 15,
-      locale,
+      //locale,
     }),
   );
 

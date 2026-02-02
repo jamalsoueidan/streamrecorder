@@ -14,7 +14,7 @@ import {
   Title,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
-import { IconChevronDown, IconGlobe, IconUser } from "@tabler/icons-react";
+import { IconChevronDown, IconUser, IconWorld } from "@tabler/icons-react";
 import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
 import { navConfig } from "./nav";
@@ -50,7 +50,7 @@ export function Header({ isLoggedIn = false }: HeaderProps) {
                 textDecoration: "none",
                 display: "flex",
                 alignItems: "center",
-                gap: 10,
+                gap: 5,
               }}
             >
               <span
@@ -60,7 +60,7 @@ export function Header({ isLoggedIn = false }: HeaderProps) {
                   gap: 4,
                   background: "#e53935",
                   color: "white",
-                  padding: "4px 10px",
+                  padding: "2px 8px",
                   borderRadius: 4,
                   fontSize: "0.8rem",
                   fontWeight: 700,
@@ -110,7 +110,7 @@ export function Header({ isLoggedIn = false }: HeaderProps) {
                   <Button
                     variant="subtle"
                     c="white"
-                    leftSection={<IconGlobe size={18} />}
+                    leftSection={<IconWorld size={18} />}
                     rightSection={<IconChevronDown size={14} />}
                   >
                     {t("header.language")} {locale.toUpperCase()}
@@ -155,7 +155,11 @@ export function Header({ isLoggedIn = false }: HeaderProps) {
                     href="/register"
                     variant="gradient"
                     gradient={{ from: "#6366f1", to: "#a855f7", deg: 135 }}
-                    radius="md"
+                    radius="lg"
+                    style={{
+                      outline: "2px solid rgba(168, 85, 247, 0.5)",
+                      outlineOffset: "3px",
+                    }}
                   >
                     {t("header.signUp")}
                   </Button>

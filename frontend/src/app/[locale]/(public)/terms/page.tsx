@@ -1,10 +1,18 @@
-import { Container, Flex, Paper, Stack, Text, Title } from "@mantine/core";
+import {
+  Anchor,
+  Container,
+  Flex,
+  Paper,
+  Stack,
+  Text,
+  Title,
+} from "@mantine/core";
 import {
   IconAlertTriangle,
   IconBan,
-  IconCloud,
   IconCopyright,
   IconCreditCard,
+  IconEye,
   IconFileText,
   IconGavel,
   IconLock,
@@ -13,9 +21,9 @@ import {
   IconScale,
   IconShield,
   IconShieldCheck,
-  IconUser,
   IconUserCheck,
   IconWorld,
+  IconWriting,
 } from "@tabler/icons-react";
 import { useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
@@ -30,7 +38,7 @@ export async function generateMetadata() {
 
 export default function TermsAndConditions() {
   const t = useTranslations("terms");
-  const lastUpdated = "January 13, 2026";
+  const lastUpdated = "February 2, 2026";
 
   return (
     <Container size="md" style={{ position: "relative", zIndex: 1 }}>
@@ -114,7 +122,7 @@ export default function TermsAndConditions() {
                 color: "#6366f1",
               }}
             >
-              <IconCloud size={20} />
+              <IconWriting size={20} />
             </div>
             <Title order={3} style={{ color: "#f1f5f9", fontWeight: 600 }}>
               {t("serviceDescription.title")}
@@ -131,7 +139,7 @@ export default function TermsAndConditions() {
           </Text>
         </Paper>
 
-        {/* Private Use Only */}
+        {/* User Content & License */}
         <Paper
           p="xl"
           radius="lg"
@@ -153,24 +161,27 @@ export default function TermsAndConditions() {
                 color: "#a855f7",
               }}
             >
-              <IconUser size={20} />
+              <IconCopyright size={20} />
             </div>
             <Title order={3} style={{ color: "#f1f5f9", fontWeight: 600 }}>
-              {t("privateUse.title")}
+              {t("userContent.title")}
             </Title>
           </Flex>
           <Text style={{ color: "#94a3b8", lineHeight: 1.7 }} mb="md">
-            {t("privateUse.content1")}
+            {t("userContent.content1")}
           </Text>
           <Text style={{ color: "#94a3b8", lineHeight: 1.7 }} mb="md">
-            {t("privateUse.content2")}
+            {t("userContent.content2")}
+          </Text>
+          <Text style={{ color: "#94a3b8", lineHeight: 1.7 }} mb="md">
+            {t("userContent.content3")}
           </Text>
           <Text style={{ color: "#94a3b8", lineHeight: 1.7 }}>
-            {t("privateUse.content3")}
+            {t("userContent.content4")}
           </Text>
         </Paper>
 
-        {/* Age Requirement */}
+        {/* Content Visibility */}
         <Paper
           p="xl"
           radius="lg"
@@ -190,6 +201,45 @@ export default function TermsAndConditions() {
                 alignItems: "center",
                 justifyContent: "center",
                 color: "#3b82f6",
+              }}
+            >
+              <IconEye size={20} />
+            </div>
+            <Title order={3} style={{ color: "#f1f5f9", fontWeight: 600 }}>
+              {t("contentVisibility.title")}
+            </Title>
+          </Flex>
+          <Text style={{ color: "#94a3b8", lineHeight: 1.7 }} mb="md">
+            {t("contentVisibility.content1")}
+          </Text>
+          <Text style={{ color: "#94a3b8", lineHeight: 1.7 }} mb="md">
+            {t("contentVisibility.content2")}
+          </Text>
+          <Text style={{ color: "#94a3b8", lineHeight: 1.7 }}>
+            {t("contentVisibility.content3")}
+          </Text>
+        </Paper>
+
+        {/* Age Requirement */}
+        <Paper
+          p="xl"
+          radius="lg"
+          style={{
+            background: "rgba(255, 255, 255, 0.02)",
+            border: "1px solid rgba(255, 255, 255, 0.06)",
+          }}
+        >
+          <Flex gap={12} align="center" mb="md">
+            <div
+              style={{
+                width: 40,
+                height: 40,
+                borderRadius: 10,
+                background: "rgba(16, 185, 129, 0.2)",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                color: "#10b981",
               }}
             >
               <IconUserCheck size={20} />
@@ -218,11 +268,11 @@ export default function TermsAndConditions() {
                 width: 40,
                 height: 40,
                 borderRadius: 10,
-                background: "rgba(16, 185, 129, 0.2)",
+                background: "rgba(6, 182, 212, 0.2)",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                color: "#10b981",
+                color: "#06b6d4",
               }}
             >
               <IconLock size={20} />
@@ -284,67 +334,23 @@ export default function TermsAndConditions() {
                 color: "#ef4444",
               }}
             >
-              <IconCopyright size={20} />
+              <IconShield size={20} />
             </div>
             <Title order={3} style={{ color: "#f1f5f9", fontWeight: 600 }}>
               {t("intellectualProperty.title")}
             </Title>
           </Flex>
           <Text style={{ color: "#94a3b8", lineHeight: 1.7 }} mb="md">
-            {t("intellectualProperty.intro")}
+            {t("intellectualProperty.content1")}
           </Text>
-          <Text
-            style={{ color: "#94a3b8", lineHeight: 1.7, fontWeight: 500 }}
-            mb="sm"
-          >
-            {t("intellectualProperty.agreementIntro")}
+          <Text style={{ color: "#94a3b8", lineHeight: 1.7 }} mb="md">
+            {t("intellectualProperty.content2")}
           </Text>
-          <Stack gap={12} mx={16}>
-            <Text style={{ color: "#94a3b8" }}>
-              •{" "}
-              <Text component="span" fw={600} style={{ color: "#f1f5f9" }}>
-                {t("intellectualProperty.items.responsible")}
-              </Text>{" "}
-              {t("intellectualProperty.items.responsibleDesc")}
-            </Text>
-            <Text style={{ color: "#94a3b8" }}>
-              •{" "}
-              <Text component="span" fw={600} style={{ color: "#f1f5f9" }}>
-                {t("intellectualProperty.items.confirm")}
-              </Text>{" "}
-              {t("intellectualProperty.items.confirmDesc")}
-            </Text>
-            <Text style={{ color: "#94a3b8" }}>
-              •{" "}
-              <Text component="span" fw={600} style={{ color: "#f1f5f9" }}>
-                {t("intellectualProperty.items.notUse")}
-              </Text>{" "}
-              {t("intellectualProperty.items.notUseDesc")}
-            </Text>
-            <Text style={{ color: "#94a3b8" }}>
-              •{" "}
-              <Text component="span" fw={600} style={{ color: "#f1f5f9" }}>
-                {t("intellectualProperty.items.legalConsequences")}
-              </Text>{" "}
-              {t("intellectualProperty.items.legalConsequencesDesc")}
-            </Text>
-            <Text style={{ color: "#94a3b8" }}>
-              •{" "}
-              <Text component="span" fw={600} style={{ color: "#f1f5f9" }}>
-                {t("intellectualProperty.items.indemnify")}
-              </Text>{" "}
-              {t("intellectualProperty.items.indemnifyDesc")}
-            </Text>
-            <Text style={{ color: "#94a3b8" }}>
-              •{" "}
-              <Text component="span" fw={600} style={{ color: "#f1f5f9" }}>
-                {t("intellectualProperty.items.misuse")}
-              </Text>{" "}
-              {t("intellectualProperty.items.misuseDesc")}
-            </Text>
-          </Stack>
-          <Text mt="md" style={{ color: "#64748b" }} size="sm">
-            {t("intellectualProperty.footer")}
+          <Text style={{ color: "#94a3b8", lineHeight: 1.7 }} mb="md">
+            {t("intellectualProperty.content3")}
+          </Text>
+          <Text style={{ color: "#94a3b8", lineHeight: 1.7 }}>
+            {t("intellectualProperty.content4")}
           </Text>
         </Paper>
 
@@ -384,13 +390,13 @@ export default function TermsAndConditions() {
           </Text>
           <Stack gap={8} mx={16}>
             <Text style={{ color: "#94a3b8" }}>
+              • {t("prohibitedActivities.items.noRights")}
+            </Text>
+            <Text style={{ color: "#94a3b8" }}>
               • {t("prohibitedActivities.items.minors")}
             </Text>
             <Text style={{ color: "#94a3b8" }}>
               • {t("prohibitedActivities.items.exploit")}
-            </Text>
-            <Text style={{ color: "#94a3b8" }}>
-              • {t("prohibitedActivities.items.infringe")}
             </Text>
             <Text style={{ color: "#94a3b8" }}>
               • {t("prohibitedActivities.items.illegal")}
@@ -409,9 +415,6 @@ export default function TermsAndConditions() {
             </Text>
             <Text style={{ color: "#94a3b8" }}>
               • {t("prohibitedActivities.items.reverseEngineer")}
-            </Text>
-            <Text style={{ color: "#94a3b8" }}>
-              • {t("prohibitedActivities.items.commercial")}
             </Text>
           </Stack>
           <Text mt="md" style={{ color: "#64748b" }} size="sm">
@@ -489,6 +492,50 @@ export default function TermsAndConditions() {
           <Text style={{ color: "#94a3b8", lineHeight: 1.7 }} mb="md">
             {t("thirdPartyPlatforms.content1")}
           </Text>
+          <Stack gap={8} mx={16} mb="md">
+            <Anchor
+              href="https://www.tiktok.com/legal/terms-of-service"
+              target="_blank"
+              style={{ color: "#60a5fa" }}
+            >
+              • {t("thirdPartyPlatforms.platforms.tiktok")}
+            </Anchor>
+            <Anchor
+              href="https://www.twitch.tv/p/legal/terms-of-service"
+              target="_blank"
+              style={{ color: "#60a5fa" }}
+            >
+              • {t("thirdPartyPlatforms.platforms.twitch")}
+            </Anchor>
+            <Anchor
+              href="https://www.youtube.com/t/terms"
+              target="_blank"
+              style={{ color: "#60a5fa" }}
+            >
+              • {t("thirdPartyPlatforms.platforms.youtube")}
+            </Anchor>
+            <Anchor
+              href="https://kick.com/terms-of-service"
+              target="_blank"
+              style={{ color: "#60a5fa" }}
+            >
+              • {t("thirdPartyPlatforms.platforms.kick")}
+            </Anchor>
+            <Anchor
+              href="https://policies.google.com/terms"
+              target="_blank"
+              style={{ color: "#60a5fa" }}
+            >
+              • {t("thirdPartyPlatforms.platforms.google")}
+            </Anchor>
+            <Anchor
+              href="https://policies.google.com/privacy"
+              target="_blank"
+              style={{ color: "#60a5fa" }}
+            >
+              • {t("thirdPartyPlatforms.platforms.googlePrivacy")}
+            </Anchor>
+          </Stack>
           <Text style={{ color: "#94a3b8", lineHeight: 1.7 }} mb="md">
             {t("thirdPartyPlatforms.content2")}
           </Text>
@@ -775,7 +822,7 @@ export default function TermsAndConditions() {
                 color: "#10b981",
               }}
             >
-              <IconShield size={20} />
+              <IconFileText size={20} />
             </div>
             <Title order={3} style={{ color: "#f1f5f9", fontWeight: 600 }}>
               {t("contact.title")}
@@ -794,8 +841,11 @@ export default function TermsAndConditions() {
             marginTop: 16,
           }}
         >
-          <Text size="sm" ta="center" style={{ color: "#64748b" }}>
+          <Text size="sm" ta="center" style={{ color: "#64748b" }} mb="md">
             {t("footerNote")}
+          </Text>
+          <Text size="xs" ta="center" style={{ color: "#475569" }}>
+            {t("disclaimer")}
           </Text>
         </div>
       </Stack>
