@@ -1,0 +1,13 @@
+/* Minimal CSS - only for things Mantine can't do */
+
+/* Hide scrollbar across browsers */
+.clips-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Safe area handling for mobile notches */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  .clip-info {
+    padding-bottom: calc(24px + env(safe-area-inset-bottom));
+  }
+}

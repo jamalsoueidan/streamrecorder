@@ -11,15 +11,12 @@ export default factories.createCoreController(
       const limit = Number(ctx.query.limit) || 12;
       const knex = strapi.db.connection;
 
-      const { rows } = await knex.raw(
-        `
-  SELECT DISTINCT ON (f.document_id) c.*, f.document_id as follower_document_id
-  FROM clips c
-  INNER JOIN clips_follower_lnk lnk ON c.id = lnk.clip_id
-  INNER JOIN followers f ON lnk.follower_id = f.id
-  ORDER BY f.document_id, RANDOM()
-  `,
-      );
+      const { rows } = await knex.raw(`
+        SELECT DISTINCT ON (f.document_id) c.*, f.document_id as follower_document_id
+        FROM clips c
+        INNER JOIN clips_follower_lnk lnk ON c.id = lnk.clip_id
+        INNER JOIN followers f ON lnk.follower_id = f.id
+        ORDER BY f.document_id, RANDOM()`);
 
       const shuffled = rows
         .sort(() => Math.random() - 0.5)
