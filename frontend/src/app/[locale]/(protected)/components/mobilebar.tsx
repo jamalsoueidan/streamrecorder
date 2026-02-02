@@ -4,6 +4,7 @@ import { useChangeLanguage } from "@/app/hooks/use-change-language";
 import { useUser } from "@/app/providers/user-provider";
 import { Menu, SegmentedControl, Stack, Text } from "@mantine/core";
 import { spotlight } from "@mantine/spotlight";
+import * as Sentry from "@sentry/nextjs";
 import {
   IconDotsVertical,
   IconDownload,
@@ -176,6 +177,7 @@ export function MobileBar() {
                   color="red"
                   leftSection={<IconLogout size={16} />}
                   onClick={async () => {
+                    Sentry.setUser(null);
                     await fetch("/api/logout", { method: "POST" });
                     window.location.href = "/";
                   }}

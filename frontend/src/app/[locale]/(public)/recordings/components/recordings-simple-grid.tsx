@@ -113,7 +113,7 @@ export async function RecordingsSimpleGrid({
                       borderRadius: "2px",
                     }}
                   >
-                    <FollowerTypeText type={recording.follower?.type} w={70} />
+                    <FollowerTypeText type={recording.follower?.type} />
                   </Flex>
                 </div>
                 <Flex p="xs" align="center" justify="space-between">

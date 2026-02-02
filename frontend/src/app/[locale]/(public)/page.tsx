@@ -1,3 +1,4 @@
+import { generateProfileUrl } from "@/app/lib/profile-url";
 import publicApi from "@/lib/public-api";
 import {
   Button,
@@ -66,8 +67,54 @@ export default async function LandingPage() {
     limit: 12,
   });
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": `${process.env.NEXT_PUBLIC_BASE_URL}/#website`,
+        name: "Live Stream Recorder",
+        url: process.env.NEXT_PUBLIC_BASE_URL,
+        description: t("hero.description"),
+      },
+      {
+        "@type": "Organization",
+        "@id": `${process.env.NEXT_PUBLIC_BASE_URL}/#organization`,
+        name: "Live Stream Recorder",
+        url: process.env.NEXT_PUBLIC_BASE_URL,
+        logo: `${process.env.NEXT_PUBLIC_BASE_URL}/og-image.png`,
+      },
+      {
+        "@type": "ItemList",
+        name: t("featuredCreators.title"),
+        numberOfItems: followers?.length || 0,
+        itemListElement: followers?.map((follower, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          url: generateProfileUrl(follower, true),
+        })),
+      },
+      {
+        "@type": "ItemList",
+        name: t("latestRecordings.title"),
+        numberOfItems: recordings?.length || 0,
+        itemListElement: recordings?.map((recording, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          url:
+            generateProfileUrl(recording.follower, true) +
+            `/video/${recording.documentId}`,
+        })),
+      },
+    ],
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Container size="xl" my="sm">
         <div
           style={{
@@ -219,12 +266,15 @@ export default async function LandingPage() {
                     position: "relative",
                     width: "100%",
                     aspectRatio: "16/9",
+                    height: "auto",
+                    minHeight: 200,
                   }}
                 >
                   <Image
                     src="/desktop.png"
                     alt="Platform dashboard preview"
                     fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
                     style={{
                       borderRadius: "var(--mantine-radius-lg)",
                       boxShadow: "0 8px 32px rgba(0, 0, 0, 0.7)",
