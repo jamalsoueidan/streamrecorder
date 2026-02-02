@@ -312,7 +312,7 @@ export default async function LandingPage() {
               style={{ color: "#94a3b8" }}
               href="/recordings"
             >
-              {t("latestRecordings.viewAll")}
+              {t("latestRecordings.browseAll")}
             </Button>
           </Flex>
 
@@ -411,7 +411,7 @@ export default async function LandingPage() {
               <Button
                 component="a"
                 href="/register"
-                size="xl"
+                size="responsive"
                 variant="gradient"
                 gradient={{ from: "#6366f1", to: "#a855f7", deg: 135 }}
                 radius="lg"
