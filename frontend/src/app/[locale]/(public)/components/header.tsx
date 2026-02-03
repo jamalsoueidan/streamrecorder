@@ -14,7 +14,7 @@ import {
   Title,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
-import { IconChevronDown, IconUser, IconWorld } from "@tabler/icons-react";
+import { IconChevronDown, IconWorld } from "@tabler/icons-react";
 import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
 import { navConfig } from "./nav";
@@ -43,65 +43,76 @@ export function Header({ isLoggedIn = false }: HeaderProps) {
       <header>
         <Container size="xl" py={12}>
           <Flex justify="space-between" align="center">
-            {/* Logo */}
-            <Link
-              href="/"
-              style={{
-                textDecoration: "none",
-                display: "flex",
-                alignItems: "center",
-                gap: 5,
-              }}
-            >
-              <span
+            <Group gap={50}>
+              <Link
+                href="/"
                 style={{
-                  display: "inline-flex",
+                  textDecoration: "none",
+                  display: "flex",
                   alignItems: "center",
-                  gap: 4,
-                  background: "#e53935",
-                  color: "white",
-                  padding: "2px 8px",
-                  borderRadius: 4,
-                  fontSize: "0.8rem",
-                  fontWeight: 700,
-                  textTransform: "uppercase",
-                  letterSpacing: "0.5px",
+                  gap: 5,
                 }}
               >
                 <span
                   style={{
-                    width: 6,
-                    height: 6,
-                    borderRadius: "50%",
-                    background: "#ffffff",
-                    animation: "blink 1s ease-in-out infinite",
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: 4,
+                    background: "#e53935",
+                    color: "white",
+                    padding: "1px 6px",
+                    borderRadius: 4,
+                    fontSize: "var(--mantine-font-size-md)",
+                    fontWeight: 700,
+                    textTransform: "uppercase",
+                    letterSpacing: "0.5px",
                   }}
-                />
-                Live
-              </span>
-              <Title order={4} c="white" fw={700}>
-                Stream Recorder
-              </Title>
-            </Link>
+                >
+                  <span
+                    style={{
+                      width: 8,
+                      height: 8,
+                      borderRadius: "50%",
+                      background: "#ffffff",
+                      animation: "blink 1s ease-in-out infinite",
+                    }}
+                  />
+                  Live
+                </span>
+                <Title order={2} size="lg" c="white" fw={700}>
+                  Stream Recorder
+                </Title>
+              </Link>
 
-            {/* Desktop Nav */}
-            <Group gap={8} visibleFrom="md">
-              <Button
-                variant="subtle"
-                c="white"
-                component={Link}
-                href="/creators/all"
-              >
-                {t("header.creators")}
-              </Button>
-              <Button
-                variant="subtle"
-                c="white"
-                component={Link}
-                href="/recordings/all"
-              >
-                {t("header.recordings")}
-              </Button>
+              <Group gap={8} visibleFrom="md">
+                <Button
+                  variant="subtle"
+                  c="white"
+                  size="compact-md"
+                  component={Link}
+                  href="/creators/all"
+                >
+                  {t("header.creators")}
+                </Button>
+                <Button
+                  variant="subtle"
+                  c="white"
+                  size="compact-md"
+                  component={Link}
+                  href="/recordings/all"
+                >
+                  {t("header.recordings")}
+                </Button>
+                <Button
+                  variant="subtle"
+                  c="white"
+                  size="compact-md"
+                  component={Link}
+                  href="/shorts"
+                >
+                  {t("header.shorts")}
+                </Button>
+              </Group>
             </Group>
 
             <Group gap={12} visibleFrom="md">
@@ -221,7 +232,7 @@ export function Header({ isLoggedIn = false }: HeaderProps) {
               />
               Live
             </span>
-            <Title order={4} fw={700} c="white">
+            <Title order={2} size="lg" c="white" fw={700}>
               Stream Recorder
             </Title>
           </Link>
@@ -237,6 +248,13 @@ export function Header({ isLoggedIn = false }: HeaderProps) {
           <NavLink
             label={t("header.recordings")}
             href="/recordings/all"
+            component={Link}
+            onClick={closeDrawer}
+          />
+
+          <NavLink
+            label={t("header.shorts")}
+            href="/shorts"
             component={Link}
             onClick={closeDrawer}
           />
@@ -260,28 +278,42 @@ export function Header({ isLoggedIn = false }: HeaderProps) {
           </NavLink>
 
           <Group gap={12} mt="xl">
-            <Button
-              variant="gradient"
-              gradient={{ from: "#6366f1", to: "#a855f7", deg: 135 }}
-              radius="lg"
-              fullWidth
-              component={Link}
-              href="/register"
-              onClick={closeDrawer}
-            >
-              {t("header.signUp")}
-            </Button>
-            <Button
-              variant="default"
-              radius="lg"
-              fullWidth
-              leftSection={<IconUser size={18} />}
-              component={Link}
-              href="/login"
-              onClick={closeDrawer}
-            >
-              {t("header.login")}
-            </Button>
+            {isLoggedIn ? (
+              <Button
+                fullWidth
+                component={Link}
+                href="/following"
+                variant="gradient"
+                gradient={{ from: "#6366f1", to: "#a855f7", deg: 135 }}
+                radius="md"
+              >
+                {t("header.dashboard")}
+              </Button>
+            ) : (
+              <>
+                <Button
+                  fullWidth
+                  component={Link}
+                  href="/register"
+                  variant="gradient"
+                  gradient={{ from: "#6366f1", to: "#a855f7", deg: 135 }}
+                  radius="md"
+                  onClick={closeDrawer}
+                >
+                  {t("header.signUp")}
+                </Button>
+                <Button
+                  fullWidth
+                  component={Link}
+                  href="/login"
+                  variant="default"
+                  radius="md"
+                  onClick={closeDrawer}
+                >
+                  {t("header.login")}
+                </Button>
+              </>
+            )}
           </Group>
         </Stack>
       </Drawer>
