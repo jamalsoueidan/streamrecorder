@@ -23,9 +23,11 @@ export function SpritePreview({ baseUrl, sources }: SpritePreviewProps) {
 
   const allFrames = useMemo(() => {
     const frames: FrameInfo[] = [];
-    const reversed = [...sources].reverse();
+    sources.sort((a, b) =>
+      (a.createdAt || "").localeCompare(b.createdAt || ""),
+    );
 
-    for (const source of reversed) {
+    for (const source of sources) {
       const cols = source.thumbnailCols || 5;
       const total = cols * cols;
 

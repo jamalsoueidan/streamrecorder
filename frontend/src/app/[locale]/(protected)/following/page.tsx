@@ -18,7 +18,6 @@ export default async function Page({
 }: {
   searchParams: Promise<FollowingFilters>;
 }) {
-  console.log("PAGE EXECUTING");
   const t = await getTranslations("protected.following");
   const filters = await followingParamsCache.parse(searchParams);
 
