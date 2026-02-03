@@ -139,7 +139,6 @@ export default function AddFollowerForm() {
   const handleUserSelect = (user: UserSearchResult) => {
     trackEvent("follow", {
       platform: searchResult?.type,
-      username: searchResult?.username,
     });
 
     spotlight.close();
