@@ -124,6 +124,11 @@ export default async function Page({ params, searchParams }: PageProps) {
         documentId: follower.documentId,
       },
     },
+    populate: {
+      follower: {
+        populate: { avatar: true },
+      },
+    },
     locale,
     "pagination[pageSize]": 10,
     "pagination[page]": parseInt(page || "1", 10),
@@ -238,10 +243,7 @@ export default async function Page({ params, searchParams }: PageProps) {
               {clips?.map((clip) => (
                 <Card key={clip.documentId} radius="md">
                   <SimpleGrid cols={{ base: 1, sm: 2 }} spacing="lg">
-                    <ImageClipPreview
-                      clip={{ ...clip, follower }}
-                      type={follower.type}
-                    />
+                    <ImageClipPreview clip={clip} type={follower.type} />
                     <Stack>
                       <Badge size="xl">{clip.viral_score}/100</Badge>
                       <Title order={2}>{clip.title}</Title>
