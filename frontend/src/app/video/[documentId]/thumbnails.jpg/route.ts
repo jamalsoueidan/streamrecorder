@@ -13,16 +13,20 @@ const s3 = new S3Client({
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: Promise<{ documentId: string; file: string }> },
+  { params }: { params: Promise<{ documentId: string }> },
 ) {
-  const { documentId, file } = await params;
+  const { documentId } = await params;
   const sourceId = request.nextUrl.searchParams.get("sourceId");
 
   const { data } = await publicApi.source.getSources({
     filters: {
-      recording: {
-        documentId,
-      },
+      ...(sourceId
+        ? { documentId: sourceId }
+        : {
+            recording: {
+              documentId,
+            },
+          }),
       state: {
         $ne: "failed",
       },
@@ -35,11 +39,7 @@ export async function GET(
     return new Response("Not found", { status: 404 });
   }
 
-  const sources = data.data;
-
-  const source = sourceId
-    ? sources.find((s) => s.documentId === sourceId)
-    : sources.at(-1);
+  const source = data.data[0];
 
   if (!source?.path) {
     return new Response("Not found", { status: 404 });
@@ -50,7 +50,7 @@ export async function GET(
   try {
     const command = new GetObjectCommand({
       Bucket: process.env.MEDIA_BUCKET!,
-      Key: decodeURIComponent(`${source.path.substring(1)}${file}`),
+      Key: decodeURIComponent(`${source.path.substring(1)}thumbnails.jpg`),
     });
     const response = await s3.send(command, {
       abortSignal: abortController.signal,

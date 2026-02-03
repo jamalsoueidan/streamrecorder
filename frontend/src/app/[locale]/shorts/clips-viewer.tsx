@@ -82,7 +82,14 @@ function ClipCard({ clip, isActive }: ClipCardProps) {
         overflow: "hidden",
       }}
     >
-      <Card pos="relative" maw={480} radius="lg" p="0" m="xs">
+      <Card
+        bg="black"
+        pos="relative"
+        miw={{ base: "100%", sm: "480px" }}
+        radius="lg"
+        p="0"
+        m="0"
+      >
         <video
           ref={videoRef}
           src={`/clip/${clip.documentId}/clip.mp4`}
@@ -114,7 +121,6 @@ function ClipCard({ clip, isActive }: ClipCardProps) {
         left={0}
         right={0}
         bottom={0}
-        bg="rgba(0,0,0,0.3)"
         c="rgba(255,255,255,0.9)"
         style={{
           opacity: isPlaying ? 0 : 1,
@@ -129,18 +135,7 @@ function ClipCard({ clip, isActive }: ClipCardProps) {
         )}
       </Center>
 
-      <Box
-        pos="absolute"
-        bottom={0}
-        left={0}
-        right={0}
-        p="lg"
-        pb="xl"
-        style={{
-          background:
-            "linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%)",
-        }}
-      >
+      <Box pos="absolute" bottom={0} left={0} right={0} p="lg" pb="xl">
         <Stack gap="xs" align="center">
           <Avatar
             src={clip.follower?.avatar?.url || undefined}

@@ -35,7 +35,6 @@ export default function CreatorRecordingModal() {
 
   const recordings = data?.pages.flatMap((p) => p.data) ?? [];
 
-  console.log(recordings);
   const handleClose = () => {
     router.back();
   };

@@ -29,7 +29,7 @@ export async function GET(
         $eq: "done",
       },
     },
-
+    sort: "createdAt:asc",
     fields: "path",
   });
 
@@ -38,8 +38,6 @@ export async function GET(
   }
 
   const sources = response.data.data;
-
-  // Fetch all playlists from S3
   const sourcesWithPlaylists = await fetchPlaylistsFromS3(sources, "original");
 
   const playlist = combinePlaylistsFromSources(sourcesWithPlaylists);
@@ -118,7 +116,7 @@ export function combinePlaylistsFromSources(
   let isFirst = true;
 
   // Reverse to go from oldest to newest
-  for (const source of [...sources].reverse()) {
+  for (const source of sources) {
     const playlist = source.playlist;
 
     if (!playlist) continue;
