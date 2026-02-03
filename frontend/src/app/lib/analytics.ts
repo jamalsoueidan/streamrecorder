@@ -5,7 +5,7 @@ export function trackEvent(name: string, data?: Record<string, unknown>) {
       website: process.env.NEXT_PUBLIC_UMAMI_ID,
       name,
       url: window.location.pathname,
-      ...data,
+      data,
     },
   });
   navigator.sendBeacon("/api/send", payload);
