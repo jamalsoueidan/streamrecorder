@@ -63,3 +63,24 @@ export async function getRandomClips(count: number) {
     (c): c is Clip & { follower: Follower | null } => c !== null,
   );
 }
+
+export async function getClipById(documentId: string) {
+  const {
+    data: { data },
+  } = await publicApi.clip.getClips({
+    filters: {
+      documentId: { $eq: documentId },
+    },
+    populate: {
+      follower: {
+        populate: { avatar: true },
+      },
+    },
+    "pagination[limit]": 1,
+  });
+
+  if (!data) {
+    return null;
+  }
+  return data[0] || null;
+}
