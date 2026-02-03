@@ -79,7 +79,7 @@ export function Header({ isLoggedIn = false }: HeaderProps) {
                   />
                   Live
                 </span>
-                <Title order={1} size="lg" c="white" fw={700}>
+                <Title order={2} size="lg" c="white" fw={700}>
                   Stream Recorder
                 </Title>
               </Link>
@@ -232,7 +232,7 @@ export function Header({ isLoggedIn = false }: HeaderProps) {
               />
               Live
             </span>
-            <Title order={4} fw={700} c="white">
+            <Title order={2} size="lg" c="white" fw={700}>
               Stream Recorder
             </Title>
           </Link>

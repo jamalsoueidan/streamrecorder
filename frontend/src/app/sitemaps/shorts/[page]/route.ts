@@ -12,7 +12,7 @@ export async function GET(
   { params }: { params: Promise<{ page: string }> },
 ) {
   const { page } = await params;
-  const sitemapPage = parseInt(page);
+  const sitemapPage = Number.parseInt(page, 10);
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
   const startPage = (sitemapPage - 1) * STRAPI_PAGES_PER_SITEMAP + 1;
@@ -80,7 +80,7 @@ export async function GET(
             "Watch " +
               creatorName +
               "'s " +
-              clip.follower?.type +
+              (clip.follower?.type ?? "video") +
               " clip from " +
               clip.createdAt?.split("T")[0],
         ) +
