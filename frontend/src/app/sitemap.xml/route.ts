@@ -1,3 +1,4 @@
+// app/sitemap.xml/route.ts
 import publicApi from "@/lib/public-api";
 
 const URLS_PER_SITEMAP = 1000;
@@ -29,6 +30,11 @@ export async function GET() {
     "pagination[pageSize]": STRAPI_PAGE_SIZE,
   });
 
+  const { data: clips } = await publicApi.clip.getClips({
+    "pagination[page]": 1,
+    "pagination[pageSize]": STRAPI_PAGE_SIZE,
+  });
+
   // Calculate how many sitemap files we need
   const followerSitemapCount = Math.ceil(
     (follower.meta?.pagination?.pageCount || 1) / STRAPI_PAGES_PER_SITEMAP,
@@ -36,6 +42,10 @@ export async function GET() {
 
   const recordingSitemapCount = Math.ceil(
     (recording.meta?.pagination?.pageCount || 1) / STRAPI_PAGES_PER_SITEMAP,
+  );
+
+  const clipsSitemapCount = Math.ceil(
+    (clips.meta?.pagination?.pageCount || 1) / STRAPI_PAGES_PER_SITEMAP,
   );
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
@@ -47,9 +57,7 @@ export async function GET() {
         { length: followerSitemapCount },
         (_, i) => `
         <sitemap>
-          <loc>${process.env.NEXT_PUBLIC_BASE_URL}/sitemaps/followers/${
-            i + 1
-          }.xml</loc>
+          <loc>${process.env.NEXT_PUBLIC_BASE_URL}/sitemaps/followers/${i + 1}.xml</loc>
         </sitemap>
       `,
       ).join("")}
@@ -57,9 +65,15 @@ export async function GET() {
         { length: recordingSitemapCount },
         (_, i) => `
         <sitemap>
-          <loc>${process.env.NEXT_PUBLIC_BASE_URL}/sitemaps/videos/${
-            i + 1
-          }.xml</loc>
+          <loc>${process.env.NEXT_PUBLIC_BASE_URL}/sitemaps/videos/${i + 1}.xml</loc>
+        </sitemap>
+      `,
+      ).join("")}
+      ${Array.from(
+        { length: clipsSitemapCount },
+        (_, i) => `
+        <sitemap>
+          <loc>${process.env.NEXT_PUBLIC_BASE_URL}/sitemaps/shorts/${i + 1}.xml</loc>
         </sitemap>
       `,
       ).join("")}

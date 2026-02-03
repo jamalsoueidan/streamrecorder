@@ -1,5 +1,6 @@
 import { streamingPlatforms } from "@/app/lib/streaming-platforms";
 import { Badge, Grid, GridCol } from "@mantine/core";
+import { getTranslations } from "next-intl/server";
 import Link from "next/link";
 
 type PlatformBadgesProps = {
@@ -7,7 +8,12 @@ type PlatformBadgesProps = {
   activePlatform?: string;
 };
 
-export function PlatformBadges({ href, activePlatform }: PlatformBadgesProps) {
+export async function PlatformBadges({
+  href,
+  activePlatform,
+}: PlatformBadgesProps) {
+  const t = await getTranslations("protected.filters.platforms");
+
   return (
     <Grid align="center" justify="center">
       {streamingPlatforms.map((p) => {
@@ -36,7 +42,7 @@ export function PlatformBadges({ href, activePlatform }: PlatformBadgesProps) {
                   transition: "all 0.2s ease",
                 }}
               >
-                {p.name}
+                {t(p.name.toLowerCase())}
               </Badge>
             </Link>
           </GridCol>

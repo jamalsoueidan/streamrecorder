@@ -64,15 +64,15 @@ export interface AiRequestListResponse {
 }
 
 export interface AiRequest {
-  id?: number;
+  id?: string | number;
   documentId?: string;
   recording?: {
-    id?: number;
+    id?: string | number;
     documentId?: string;
     title?: string;
     description?: string;
     follower?: {
-      id?: number;
+      id?: string | number;
       documentId?: string;
       nickname?: string;
       username?: string;
@@ -81,7 +81,7 @@ export interface AiRequest {
       countryCode?: string;
       languageCode?: string;
       avatar?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
         name?: string;
         alternativeText?: string;
@@ -99,24 +99,24 @@ export interface AiRequest {
         provider?: string;
         provider_metadata?: any;
         related?: {
-          id?: number;
+          id?: string | number;
           documentId?: string;
         }[];
         folder?: {
-          id?: number;
+          id?: string | number;
           documentId?: string;
           name?: string;
           pathId?: number;
           parent?: {
-            id?: number;
+            id?: string | number;
             documentId?: string;
           };
           children?: {
-            id?: number;
+            id?: string | number;
             documentId?: string;
           }[];
           files?: {
-            id?: number;
+            id?: string | number;
             documentId?: string;
             name?: string;
             alternativeText?: string;
@@ -134,11 +134,11 @@ export interface AiRequest {
             provider?: string;
             provider_metadata?: any;
             related?: {
-              id?: number;
+              id?: string | number;
               documentId?: string;
             }[];
             folder?: {
-              id?: number;
+              id?: string | number;
               documentId?: string;
             };
             folderPath?: string;
@@ -149,7 +149,7 @@ export interface AiRequest {
             /** @format date-time */
             publishedAt?: string;
             createdBy?: {
-              id?: number;
+              id?: string | number;
               documentId?: string;
               firstname?: string;
               lastname?: string;
@@ -160,17 +160,17 @@ export interface AiRequest {
               registrationToken?: string;
               isActive?: boolean;
               roles?: {
-                id?: number;
+                id?: string | number;
                 documentId?: string;
                 name?: string;
                 code?: string;
                 description?: string;
                 users?: {
-                  id?: number;
+                  id?: string | number;
                   documentId?: string;
                 }[];
                 permissions?: {
-                  id?: number;
+                  id?: string | number;
                   documentId?: string;
                   action?: string;
                   actionParameters?: any;
@@ -178,7 +178,7 @@ export interface AiRequest {
                   properties?: any;
                   conditions?: any;
                   role?: {
-                    id?: number;
+                    id?: string | number;
                     documentId?: string;
                   };
                   /** @format date-time */
@@ -188,16 +188,16 @@ export interface AiRequest {
                   /** @format date-time */
                   publishedAt?: string;
                   createdBy?: {
-                    id?: number;
+                    id?: string | number;
                     documentId?: string;
                   };
                   updatedBy?: {
-                    id?: number;
+                    id?: string | number;
                     documentId?: string;
                   };
                   locale?: string;
                   localizations?: {
-                    id?: number;
+                    id?: string | number;
                     documentId?: string;
                   }[];
                 }[];
@@ -208,16 +208,16 @@ export interface AiRequest {
                 /** @format date-time */
                 publishedAt?: string;
                 createdBy?: {
-                  id?: number;
+                  id?: string | number;
                   documentId?: string;
                 };
                 updatedBy?: {
-                  id?: number;
+                  id?: string | number;
                   documentId?: string;
                 };
                 locale?: string;
                 localizations?: {
-                  id?: number;
+                  id?: string | number;
                   documentId?: string;
                 }[];
               }[];
@@ -230,26 +230,26 @@ export interface AiRequest {
               /** @format date-time */
               publishedAt?: string;
               createdBy?: {
-                id?: number;
+                id?: string | number;
                 documentId?: string;
               };
               updatedBy?: {
-                id?: number;
+                id?: string | number;
                 documentId?: string;
               };
               locale?: string;
               localizations?: {
-                id?: number;
+                id?: string | number;
                 documentId?: string;
               }[];
             };
             updatedBy?: {
-              id?: number;
+              id?: string | number;
               documentId?: string;
             };
             locale?: string;
             localizations?: {
-              id?: number;
+              id?: string | number;
               documentId?: string;
             }[];
           }[];
@@ -261,16 +261,16 @@ export interface AiRequest {
           /** @format date-time */
           publishedAt?: string;
           createdBy?: {
-            id?: number;
+            id?: string | number;
             documentId?: string;
           };
           updatedBy?: {
-            id?: number;
+            id?: string | number;
             documentId?: string;
           };
           locale?: string;
           localizations?: {
-            id?: number;
+            id?: string | number;
             documentId?: string;
           }[];
         };
@@ -282,16 +282,16 @@ export interface AiRequest {
         /** @format date-time */
         publishedAt?: string;
         createdBy?: {
-          id?: number;
+          id?: string | number;
           documentId?: string;
         };
         updatedBy?: {
-          id?: number;
+          id?: string | number;
           documentId?: string;
         };
         locale?: string;
         localizations?: {
-          id?: number;
+          id?: string | number;
           documentId?: string;
         }[];
       };
@@ -311,21 +311,21 @@ export interface AiRequest {
       /** @format date-time */
       publishedAt?: string;
       createdBy?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
       };
       updatedBy?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
       };
       locale?: string;
       localizations?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
       }[];
     };
     sources?: {
-      id?: number;
+      id?: string | number;
       documentId?: string;
       state?: AiRequestStateEnum;
       executionId?: number;
@@ -339,7 +339,7 @@ export interface AiRequest {
       videoOriginal?: VideosVideoComponent;
       videoSmall?: VideosVideoComponent;
       recording?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
       };
       /** @format date-time */
@@ -349,16 +349,16 @@ export interface AiRequest {
       /** @format date-time */
       publishedAt?: string;
       createdBy?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
       };
       updatedBy?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
       };
       locale?: string;
       localizations?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
       }[];
     }[];
@@ -369,16 +369,16 @@ export interface AiRequest {
     /** @format date-time */
     publishedAt?: string;
     createdBy?: {
-      id?: number;
+      id?: string | number;
       documentId?: string;
     };
     updatedBy?: {
-      id?: number;
+      id?: string | number;
       documentId?: string;
     };
     locale?: string;
     localizations?: {
-      id?: number;
+      id?: string | number;
       documentId?: string;
     }[];
   };
@@ -387,13 +387,13 @@ export interface AiRequest {
   generateProfile?: boolean;
   state?: AiRequestStateEnum1;
   ai_tasks?: {
-    id?: number;
+    id?: string | number;
     documentId?: string;
     ai_request?: {
-      id?: number;
+      id?: string | number;
       documentId?: string;
       recording?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
       };
       generateClips?: boolean;
@@ -401,7 +401,7 @@ export interface AiRequest {
       generateProfile?: boolean;
       state?: AiRequestStateEnum2;
       ai_tasks?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
       }[];
       /** @format date-time */
@@ -411,16 +411,16 @@ export interface AiRequest {
       /** @format date-time */
       publishedAt?: string;
       createdBy?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
       };
       updatedBy?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
       };
       locale?: string;
       localizations?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
       }[];
     };
@@ -435,16 +435,16 @@ export interface AiRequest {
     /** @format date-time */
     publishedAt?: string;
     createdBy?: {
-      id?: number;
+      id?: string | number;
       documentId?: string;
     };
     updatedBy?: {
-      id?: number;
+      id?: string | number;
       documentId?: string;
     };
     locale?: string;
     localizations?: {
-      id?: number;
+      id?: string | number;
       documentId?: string;
     }[];
   }[];
@@ -455,16 +455,16 @@ export interface AiRequest {
   /** @format date-time */
   publishedAt?: string;
   createdBy?: {
-    id?: number;
+    id?: string | number;
     documentId?: string;
   };
   updatedBy?: {
-    id?: number;
+    id?: string | number;
     documentId?: string;
   };
   locale?: string;
   localizations?: {
-    id?: number;
+    id?: string | number;
     documentId?: string;
   }[];
 }
@@ -475,7 +475,7 @@ export interface AiRequestResponse {
 }
 
 export interface VideosVideoComponent {
-  id?: number;
+  id?: string | number;
   width?: number;
   height?: number;
   /**
@@ -513,18 +513,18 @@ export interface AiTaskListResponse {
 }
 
 export interface AiTask {
-  id?: number;
+  id?: string | number;
   documentId?: string;
   ai_request?: {
-    id?: number;
+    id?: string | number;
     documentId?: string;
     recording?: {
-      id?: number;
+      id?: string | number;
       documentId?: string;
       title?: string;
       description?: string;
       follower?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
         nickname?: string;
         username?: string;
@@ -533,7 +533,7 @@ export interface AiTask {
         countryCode?: string;
         languageCode?: string;
         avatar?: {
-          id?: number;
+          id?: string | number;
           documentId?: string;
           name?: string;
           alternativeText?: string;
@@ -551,24 +551,24 @@ export interface AiTask {
           provider?: string;
           provider_metadata?: any;
           related?: {
-            id?: number;
+            id?: string | number;
             documentId?: string;
           }[];
           folder?: {
-            id?: number;
+            id?: string | number;
             documentId?: string;
             name?: string;
             pathId?: number;
             parent?: {
-              id?: number;
+              id?: string | number;
               documentId?: string;
             };
             children?: {
-              id?: number;
+              id?: string | number;
               documentId?: string;
             }[];
             files?: {
-              id?: number;
+              id?: string | number;
               documentId?: string;
               name?: string;
               alternativeText?: string;
@@ -586,11 +586,11 @@ export interface AiTask {
               provider?: string;
               provider_metadata?: any;
               related?: {
-                id?: number;
+                id?: string | number;
                 documentId?: string;
               }[];
               folder?: {
-                id?: number;
+                id?: string | number;
                 documentId?: string;
               };
               folderPath?: string;
@@ -601,7 +601,7 @@ export interface AiTask {
               /** @format date-time */
               publishedAt?: string;
               createdBy?: {
-                id?: number;
+                id?: string | number;
                 documentId?: string;
                 firstname?: string;
                 lastname?: string;
@@ -612,17 +612,17 @@ export interface AiTask {
                 registrationToken?: string;
                 isActive?: boolean;
                 roles?: {
-                  id?: number;
+                  id?: string | number;
                   documentId?: string;
                   name?: string;
                   code?: string;
                   description?: string;
                   users?: {
-                    id?: number;
+                    id?: string | number;
                     documentId?: string;
                   }[];
                   permissions?: {
-                    id?: number;
+                    id?: string | number;
                     documentId?: string;
                     action?: string;
                     actionParameters?: any;
@@ -630,7 +630,7 @@ export interface AiTask {
                     properties?: any;
                     conditions?: any;
                     role?: {
-                      id?: number;
+                      id?: string | number;
                       documentId?: string;
                     };
                     /** @format date-time */
@@ -640,16 +640,16 @@ export interface AiTask {
                     /** @format date-time */
                     publishedAt?: string;
                     createdBy?: {
-                      id?: number;
+                      id?: string | number;
                       documentId?: string;
                     };
                     updatedBy?: {
-                      id?: number;
+                      id?: string | number;
                       documentId?: string;
                     };
                     locale?: string;
                     localizations?: {
-                      id?: number;
+                      id?: string | number;
                       documentId?: string;
                     }[];
                   }[];
@@ -660,16 +660,16 @@ export interface AiTask {
                   /** @format date-time */
                   publishedAt?: string;
                   createdBy?: {
-                    id?: number;
+                    id?: string | number;
                     documentId?: string;
                   };
                   updatedBy?: {
-                    id?: number;
+                    id?: string | number;
                     documentId?: string;
                   };
                   locale?: string;
                   localizations?: {
-                    id?: number;
+                    id?: string | number;
                     documentId?: string;
                   }[];
                 }[];
@@ -682,26 +682,26 @@ export interface AiTask {
                 /** @format date-time */
                 publishedAt?: string;
                 createdBy?: {
-                  id?: number;
+                  id?: string | number;
                   documentId?: string;
                 };
                 updatedBy?: {
-                  id?: number;
+                  id?: string | number;
                   documentId?: string;
                 };
                 locale?: string;
                 localizations?: {
-                  id?: number;
+                  id?: string | number;
                   documentId?: string;
                 }[];
               };
               updatedBy?: {
-                id?: number;
+                id?: string | number;
                 documentId?: string;
               };
               locale?: string;
               localizations?: {
-                id?: number;
+                id?: string | number;
                 documentId?: string;
               }[];
             }[];
@@ -713,16 +713,16 @@ export interface AiTask {
             /** @format date-time */
             publishedAt?: string;
             createdBy?: {
-              id?: number;
+              id?: string | number;
               documentId?: string;
             };
             updatedBy?: {
-              id?: number;
+              id?: string | number;
               documentId?: string;
             };
             locale?: string;
             localizations?: {
-              id?: number;
+              id?: string | number;
               documentId?: string;
             }[];
           };
@@ -734,16 +734,16 @@ export interface AiTask {
           /** @format date-time */
           publishedAt?: string;
           createdBy?: {
-            id?: number;
+            id?: string | number;
             documentId?: string;
           };
           updatedBy?: {
-            id?: number;
+            id?: string | number;
             documentId?: string;
           };
           locale?: string;
           localizations?: {
-            id?: number;
+            id?: string | number;
             documentId?: string;
           }[];
         };
@@ -763,21 +763,21 @@ export interface AiTask {
         /** @format date-time */
         publishedAt?: string;
         createdBy?: {
-          id?: number;
+          id?: string | number;
           documentId?: string;
         };
         updatedBy?: {
-          id?: number;
+          id?: string | number;
           documentId?: string;
         };
         locale?: string;
         localizations?: {
-          id?: number;
+          id?: string | number;
           documentId?: string;
         }[];
       };
       sources?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
         state?: AiTaskStateEnum;
         executionId?: number;
@@ -791,7 +791,7 @@ export interface AiTask {
         videoOriginal?: VideosVideoComponent;
         videoSmall?: VideosVideoComponent;
         recording?: {
-          id?: number;
+          id?: string | number;
           documentId?: string;
         };
         /** @format date-time */
@@ -801,16 +801,16 @@ export interface AiTask {
         /** @format date-time */
         publishedAt?: string;
         createdBy?: {
-          id?: number;
+          id?: string | number;
           documentId?: string;
         };
         updatedBy?: {
-          id?: number;
+          id?: string | number;
           documentId?: string;
         };
         locale?: string;
         localizations?: {
-          id?: number;
+          id?: string | number;
           documentId?: string;
         }[];
       }[];
@@ -821,16 +821,16 @@ export interface AiTask {
       /** @format date-time */
       publishedAt?: string;
       createdBy?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
       };
       updatedBy?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
       };
       locale?: string;
       localizations?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
       }[];
     };
@@ -839,10 +839,10 @@ export interface AiTask {
     generateProfile?: boolean;
     state?: AiTaskStateEnum1;
     ai_tasks?: {
-      id?: number;
+      id?: string | number;
       documentId?: string;
       ai_request?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
       };
       type?: string;
@@ -856,16 +856,16 @@ export interface AiTask {
       /** @format date-time */
       publishedAt?: string;
       createdBy?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
       };
       updatedBy?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
       };
       locale?: string;
       localizations?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
       }[];
     }[];
@@ -876,16 +876,16 @@ export interface AiTask {
     /** @format date-time */
     publishedAt?: string;
     createdBy?: {
-      id?: number;
+      id?: string | number;
       documentId?: string;
     };
     updatedBy?: {
-      id?: number;
+      id?: string | number;
       documentId?: string;
     };
     locale?: string;
     localizations?: {
-      id?: number;
+      id?: string | number;
       documentId?: string;
     }[];
   };
@@ -900,16 +900,16 @@ export interface AiTask {
   /** @format date-time */
   publishedAt?: string;
   createdBy?: {
-    id?: number;
+    id?: string | number;
     documentId?: string;
   };
   updatedBy?: {
-    id?: number;
+    id?: string | number;
     documentId?: string;
   };
   locale?: string;
   localizations?: {
-    id?: number;
+    id?: string | number;
     documentId?: string;
   }[];
 }
@@ -943,7 +943,7 @@ export interface ArticleListResponse {
 }
 
 export interface Article {
-  id?: number;
+  id?: string | number;
   documentId?: string;
   title: string;
   content: string;
@@ -954,7 +954,7 @@ export interface Article {
   /** @format date-time */
   publishedAt?: string;
   createdBy?: {
-    id?: number;
+    id?: string | number;
     documentId?: string;
     firstname?: string;
     lastname?: string;
@@ -965,17 +965,17 @@ export interface Article {
     registrationToken?: string;
     isActive?: boolean;
     roles?: {
-      id?: number;
+      id?: string | number;
       documentId?: string;
       name?: string;
       code?: string;
       description?: string;
       users?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
       }[];
       permissions?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
         action?: string;
         actionParameters?: any;
@@ -983,7 +983,7 @@ export interface Article {
         properties?: any;
         conditions?: any;
         role?: {
-          id?: number;
+          id?: string | number;
           documentId?: string;
         };
         /** @format date-time */
@@ -993,16 +993,16 @@ export interface Article {
         /** @format date-time */
         publishedAt?: string;
         createdBy?: {
-          id?: number;
+          id?: string | number;
           documentId?: string;
         };
         updatedBy?: {
-          id?: number;
+          id?: string | number;
           documentId?: string;
         };
         locale?: string;
         localizations?: {
-          id?: number;
+          id?: string | number;
           documentId?: string;
         }[];
       }[];
@@ -1013,16 +1013,16 @@ export interface Article {
       /** @format date-time */
       publishedAt?: string;
       createdBy?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
       };
       updatedBy?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
       };
       locale?: string;
       localizations?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
       }[];
     }[];
@@ -1035,26 +1035,26 @@ export interface Article {
     /** @format date-time */
     publishedAt?: string;
     createdBy?: {
-      id?: number;
+      id?: string | number;
       documentId?: string;
     };
     updatedBy?: {
-      id?: number;
+      id?: string | number;
       documentId?: string;
     };
     locale?: string;
     localizations?: {
-      id?: number;
+      id?: string | number;
       documentId?: string;
     }[];
   };
   updatedBy?: {
-    id?: number;
+    id?: string | number;
     documentId?: string;
   };
   locale?: string;
   localizations?: {
-    id?: number;
+    id?: string | number;
     documentId?: string;
     title?: string;
     content?: string;
@@ -1065,16 +1065,16 @@ export interface Article {
     /** @format date-time */
     publishedAt?: string;
     createdBy?: {
-      id?: number;
+      id?: string | number;
       documentId?: string;
     };
     updatedBy?: {
-      id?: number;
+      id?: string | number;
       documentId?: string;
     };
     locale?: string;
     localizations?: {
-      id?: number;
+      id?: string | number;
       documentId?: string;
     }[];
   }[];
@@ -1109,7 +1109,7 @@ export interface ChangeLogListResponse {
 }
 
 export interface ChangeLog {
-  id?: number;
+  id?: string | number;
   documentId?: string;
   version?: string;
   body?: string;
@@ -1120,7 +1120,7 @@ export interface ChangeLog {
   /** @format date-time */
   publishedAt?: string;
   createdBy?: {
-    id?: number;
+    id?: string | number;
     documentId?: string;
     firstname?: string;
     lastname?: string;
@@ -1131,17 +1131,17 @@ export interface ChangeLog {
     registrationToken?: string;
     isActive?: boolean;
     roles?: {
-      id?: number;
+      id?: string | number;
       documentId?: string;
       name?: string;
       code?: string;
       description?: string;
       users?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
       }[];
       permissions?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
         action?: string;
         actionParameters?: any;
@@ -1149,7 +1149,7 @@ export interface ChangeLog {
         properties?: any;
         conditions?: any;
         role?: {
-          id?: number;
+          id?: string | number;
           documentId?: string;
         };
         /** @format date-time */
@@ -1159,16 +1159,16 @@ export interface ChangeLog {
         /** @format date-time */
         publishedAt?: string;
         createdBy?: {
-          id?: number;
+          id?: string | number;
           documentId?: string;
         };
         updatedBy?: {
-          id?: number;
+          id?: string | number;
           documentId?: string;
         };
         locale?: string;
         localizations?: {
-          id?: number;
+          id?: string | number;
           documentId?: string;
         }[];
       }[];
@@ -1179,16 +1179,16 @@ export interface ChangeLog {
       /** @format date-time */
       publishedAt?: string;
       createdBy?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
       };
       updatedBy?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
       };
       locale?: string;
       localizations?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
       }[];
     }[];
@@ -1201,26 +1201,26 @@ export interface ChangeLog {
     /** @format date-time */
     publishedAt?: string;
     createdBy?: {
-      id?: number;
+      id?: string | number;
       documentId?: string;
     };
     updatedBy?: {
-      id?: number;
+      id?: string | number;
       documentId?: string;
     };
     locale?: string;
     localizations?: {
-      id?: number;
+      id?: string | number;
       documentId?: string;
     }[];
   };
   updatedBy?: {
-    id?: number;
+    id?: string | number;
     documentId?: string;
   };
   locale?: string;
   localizations?: {
-    id?: number;
+    id?: string | number;
     documentId?: string;
     version?: string;
     body?: string;
@@ -1231,16 +1231,16 @@ export interface ChangeLog {
     /** @format date-time */
     publishedAt?: string;
     createdBy?: {
-      id?: number;
+      id?: string | number;
       documentId?: string;
     };
     updatedBy?: {
-      id?: number;
+      id?: string | number;
       documentId?: string;
     };
     locale?: string;
     localizations?: {
-      id?: number;
+      id?: string | number;
       documentId?: string;
     }[];
   }[];
@@ -1265,9 +1265,9 @@ export interface ClipRequest {
     start?: string;
     path?: string;
     /** @example "string or id" */
-    recording?: number | string;
-    /** @example "string or id" */
     follower?: number | string;
+    /** @example "string or id" */
+    recording?: number | string;
     locale?: string;
     localizations?: (number | string)[];
   };
@@ -1288,7 +1288,7 @@ export interface ClipListResponse {
 }
 
 export interface Clip {
-  id?: number;
+  id?: string | number;
   documentId?: string;
   title?: string;
   description?: string;
@@ -1301,194 +1301,77 @@ export interface Clip {
   end?: string;
   start?: string;
   path?: string;
-  recording?: {
-    id?: number;
+  follower?: {
+    id?: string | number;
     documentId?: string;
-    title?: string;
-    description?: string;
-    follower?: {
-      id?: number;
+    nickname?: string;
+    username?: string;
+    type?: ClipTypeEnum;
+    gender?: ClipGenderEnum;
+    countryCode?: string;
+    languageCode?: string;
+    avatar?: {
+      id?: string | number;
       documentId?: string;
-      nickname?: string;
-      username?: string;
-      type?: ClipTypeEnum;
-      gender?: ClipGenderEnum;
-      countryCode?: string;
-      languageCode?: string;
-      avatar?: {
-        id?: number;
+      name?: string;
+      alternativeText?: string;
+      caption?: string;
+      width?: number;
+      height?: number;
+      formats?: any;
+      hash?: string;
+      ext?: string;
+      mime?: string;
+      /** @format float */
+      size?: number;
+      url?: string;
+      previewUrl?: string;
+      provider?: string;
+      provider_metadata?: any;
+      related?: {
+        id?: string | number;
+        documentId?: string;
+      }[];
+      folder?: {
+        id?: string | number;
         documentId?: string;
         name?: string;
-        alternativeText?: string;
-        caption?: string;
-        width?: number;
-        height?: number;
-        formats?: any;
-        hash?: string;
-        ext?: string;
-        mime?: string;
-        /** @format float */
-        size?: number;
-        url?: string;
-        previewUrl?: string;
-        provider?: string;
-        provider_metadata?: any;
-        related?: {
-          id?: number;
+        pathId?: number;
+        parent?: {
+          id?: string | number;
+          documentId?: string;
+        };
+        children?: {
+          id?: string | number;
           documentId?: string;
         }[];
-        folder?: {
-          id?: number;
+        files?: {
+          id?: string | number;
           documentId?: string;
           name?: string;
-          pathId?: number;
-          parent?: {
-            id?: number;
+          alternativeText?: string;
+          caption?: string;
+          width?: number;
+          height?: number;
+          formats?: any;
+          hash?: string;
+          ext?: string;
+          mime?: string;
+          /** @format float */
+          size?: number;
+          url?: string;
+          previewUrl?: string;
+          provider?: string;
+          provider_metadata?: any;
+          related?: {
+            id?: string | number;
+            documentId?: string;
+          }[];
+          folder?: {
+            id?: string | number;
             documentId?: string;
           };
-          children?: {
-            id?: number;
-            documentId?: string;
-          }[];
-          files?: {
-            id?: number;
-            documentId?: string;
-            name?: string;
-            alternativeText?: string;
-            caption?: string;
-            width?: number;
-            height?: number;
-            formats?: any;
-            hash?: string;
-            ext?: string;
-            mime?: string;
-            /** @format float */
-            size?: number;
-            url?: string;
-            previewUrl?: string;
-            provider?: string;
-            provider_metadata?: any;
-            related?: {
-              id?: number;
-              documentId?: string;
-            }[];
-            folder?: {
-              id?: number;
-              documentId?: string;
-            };
-            folderPath?: string;
-            /** @format date-time */
-            createdAt?: string;
-            /** @format date-time */
-            updatedAt?: string;
-            /** @format date-time */
-            publishedAt?: string;
-            createdBy?: {
-              id?: number;
-              documentId?: string;
-              firstname?: string;
-              lastname?: string;
-              username?: string;
-              /** @format email */
-              email?: string;
-              resetPasswordToken?: string;
-              registrationToken?: string;
-              isActive?: boolean;
-              roles?: {
-                id?: number;
-                documentId?: string;
-                name?: string;
-                code?: string;
-                description?: string;
-                users?: {
-                  id?: number;
-                  documentId?: string;
-                }[];
-                permissions?: {
-                  id?: number;
-                  documentId?: string;
-                  action?: string;
-                  actionParameters?: any;
-                  subject?: string;
-                  properties?: any;
-                  conditions?: any;
-                  role?: {
-                    id?: number;
-                    documentId?: string;
-                  };
-                  /** @format date-time */
-                  createdAt?: string;
-                  /** @format date-time */
-                  updatedAt?: string;
-                  /** @format date-time */
-                  publishedAt?: string;
-                  createdBy?: {
-                    id?: number;
-                    documentId?: string;
-                  };
-                  updatedBy?: {
-                    id?: number;
-                    documentId?: string;
-                  };
-                  locale?: string;
-                  localizations?: {
-                    id?: number;
-                    documentId?: string;
-                  }[];
-                }[];
-                /** @format date-time */
-                createdAt?: string;
-                /** @format date-time */
-                updatedAt?: string;
-                /** @format date-time */
-                publishedAt?: string;
-                createdBy?: {
-                  id?: number;
-                  documentId?: string;
-                };
-                updatedBy?: {
-                  id?: number;
-                  documentId?: string;
-                };
-                locale?: string;
-                localizations?: {
-                  id?: number;
-                  documentId?: string;
-                }[];
-              }[];
-              blocked?: boolean;
-              preferedLanguage?: string;
-              /** @format date-time */
-              createdAt?: string;
-              /** @format date-time */
-              updatedAt?: string;
-              /** @format date-time */
-              publishedAt?: string;
-              createdBy?: {
-                id?: number;
-                documentId?: string;
-              };
-              updatedBy?: {
-                id?: number;
-                documentId?: string;
-              };
-              locale?: string;
-              localizations?: {
-                id?: number;
-                documentId?: string;
-              }[];
-            };
-            updatedBy?: {
-              id?: number;
-              documentId?: string;
-            };
-            locale?: string;
-            localizations?: {
-              id?: number;
-              documentId?: string;
-            }[];
-          }[];
-          path?: string;
+          folderPath?: string;
           /** @format date-time */
           createdAt?: string;
           /** @format date-time */
@@ -1496,20 +1379,111 @@ export interface Clip {
           /** @format date-time */
           publishedAt?: string;
           createdBy?: {
-            id?: number;
+            id?: string | number;
             documentId?: string;
+            firstname?: string;
+            lastname?: string;
+            username?: string;
+            /** @format email */
+            email?: string;
+            resetPasswordToken?: string;
+            registrationToken?: string;
+            isActive?: boolean;
+            roles?: {
+              id?: string | number;
+              documentId?: string;
+              name?: string;
+              code?: string;
+              description?: string;
+              users?: {
+                id?: string | number;
+                documentId?: string;
+              }[];
+              permissions?: {
+                id?: string | number;
+                documentId?: string;
+                action?: string;
+                actionParameters?: any;
+                subject?: string;
+                properties?: any;
+                conditions?: any;
+                role?: {
+                  id?: string | number;
+                  documentId?: string;
+                };
+                /** @format date-time */
+                createdAt?: string;
+                /** @format date-time */
+                updatedAt?: string;
+                /** @format date-time */
+                publishedAt?: string;
+                createdBy?: {
+                  id?: string | number;
+                  documentId?: string;
+                };
+                updatedBy?: {
+                  id?: string | number;
+                  documentId?: string;
+                };
+                locale?: string;
+                localizations?: {
+                  id?: string | number;
+                  documentId?: string;
+                }[];
+              }[];
+              /** @format date-time */
+              createdAt?: string;
+              /** @format date-time */
+              updatedAt?: string;
+              /** @format date-time */
+              publishedAt?: string;
+              createdBy?: {
+                id?: string | number;
+                documentId?: string;
+              };
+              updatedBy?: {
+                id?: string | number;
+                documentId?: string;
+              };
+              locale?: string;
+              localizations?: {
+                id?: string | number;
+                documentId?: string;
+              }[];
+            }[];
+            blocked?: boolean;
+            preferedLanguage?: string;
+            /** @format date-time */
+            createdAt?: string;
+            /** @format date-time */
+            updatedAt?: string;
+            /** @format date-time */
+            publishedAt?: string;
+            createdBy?: {
+              id?: string | number;
+              documentId?: string;
+            };
+            updatedBy?: {
+              id?: string | number;
+              documentId?: string;
+            };
+            locale?: string;
+            localizations?: {
+              id?: string | number;
+              documentId?: string;
+            }[];
           };
           updatedBy?: {
-            id?: number;
+            id?: string | number;
             documentId?: string;
           };
           locale?: string;
           localizations?: {
-            id?: number;
+            id?: string | number;
             documentId?: string;
           }[];
-        };
-        folderPath?: string;
+        }[];
+        path?: string;
         /** @format date-time */
         createdAt?: string;
         /** @format date-time */
@@ -1517,28 +1491,20 @@ export interface Clip {
         /** @format date-time */
         publishedAt?: string;
         createdBy?: {
-          id?: number;
+          id?: string | number;
           documentId?: string;
         };
         updatedBy?: {
-          id?: number;
+          id?: string | number;
           documentId?: string;
         };
         locale?: string;
         localizations?: {
-          id?: number;
+          id?: string | number;
           documentId?: string;
         }[];
       };
-      /** @format date-time */
-      lastCheckedAt?: string;
-      protected?: boolean;
-      pause?: boolean;
-      description?: string;
-      tagline?: string;
-      faq?: any;
-      category?: string;
-      migration?: number;
+      folderPath?: string;
       /** @format date-time */
       createdAt?: string;
       /** @format date-time */
@@ -1546,21 +1512,59 @@ export interface Clip {
       /** @format date-time */
       publishedAt?: string;
       createdBy?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
       };
       updatedBy?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
       };
       locale?: string;
       localizations?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
       }[];
     };
+    /** @format date-time */
+    lastCheckedAt?: string;
+    protected?: boolean;
+    pause?: boolean;
+    description?: string;
+    tagline?: string;
+    faq?: any;
+    category?: string;
+    migration?: number;
+    /** @format date-time */
+    createdAt?: string;
+    /** @format date-time */
+    updatedAt?: string;
+    /** @format date-time */
+    publishedAt?: string;
+    createdBy?: {
+      id?: string | number;
+      documentId?: string;
+    };
+    updatedBy?: {
+      id?: string | number;
+      documentId?: string;
+    };
+    locale?: string;
+    localizations?: {
+      id?: string | number;
+      documentId?: string;
+    }[];
+  };
+  recording?: {
+    id?: string | number;
+    documentId?: string;
+    title?: string;
+    description?: string;
+    follower?: {
+      id?: string | number;
+      documentId?: string;
+    };
     sources?: {
-      id?: number;
+      id?: string | number;
       documentId?: string;
       state?: ClipStateEnum;
       executionId?: number;
@@ -1574,7 +1578,7 @@ export interface Clip {
       videoOriginal?: VideosVideoComponent;
       videoSmall?: VideosVideoComponent;
       recording?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
       };
       /** @format date-time */
@@ -1584,16 +1588,16 @@ export interface Clip {
       /** @format date-time */
       publishedAt?: string;
       createdBy?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
       };
       updatedBy?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
       };
       locale?: string;
       localizations?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
       }[];
     }[];
@@ -1604,22 +1608,18 @@ export interface Clip {
     /** @format date-time */
     publishedAt?: string;
     createdBy?: {
-      id?: number;
+      id?: string | number;
       documentId?: string;
     };
     updatedBy?: {
-      id?: number;
+      id?: string | number;
       documentId?: string;
     };
     locale?: string;
     localizations?: {
-      id?: number;
+      id?: string | number;
       documentId?: string;
     }[];
-  };
-  follower?: {
-    id?: number;
-    documentId?: string;
   };
   /** @format date-time */
   createdAt?: string;
@@ -1628,16 +1628,16 @@ export interface Clip {
   /** @format date-time */
   publishedAt?: string;
   createdBy?: {
-    id?: number;
+    id?: string | number;
     documentId?: string;
   };
   updatedBy?: {
-    id?: number;
+    id?: string | number;
     documentId?: string;
   };
   locale?: string;
   localizations?: {
-    id?: number;
+    id?: string | number;
     documentId?: string;
     title?: string;
     description?: string;
@@ -1650,12 +1650,12 @@ export interface Clip {
     end?: string;
     start?: string;
     path?: string;
-    recording?: {
-      id?: number;
+    follower?: {
+      id?: string | number;
       documentId?: string;
     };
-    follower?: {
-      id?: number;
+    recording?: {
+      id?: string | number;
       documentId?: string;
     };
     /** @format date-time */
@@ -1665,16 +1665,16 @@ export interface Clip {
     /** @format date-time */
     publishedAt?: string;
     createdBy?: {
-      id?: number;
+      id?: string | number;
       documentId?: string;
     };
     updatedBy?: {
-      id?: number;
+      id?: string | number;
       documentId?: string;
     };
     locale?: string;
     localizations?: {
-      id?: number;
+      id?: string | number;
       documentId?: string;
     }[];
   }[];
@@ -1711,7 +1711,7 @@ export interface EmailTemplateListResponse {
 }
 
 export interface EmailTemplate {
-  id?: number;
+  id?: string | number;
   documentId?: string;
   subjectMatcher: string;
   subject: string;
@@ -1724,7 +1724,7 @@ export interface EmailTemplate {
   /** @format date-time */
   publishedAt?: string;
   createdBy?: {
-    id?: number;
+    id?: string | number;
     documentId?: string;
     firstname?: string;
     lastname?: string;
@@ -1735,17 +1735,17 @@ export interface EmailTemplate {
     registrationToken?: string;
     isActive?: boolean;
     roles?: {
-      id?: number;
+      id?: string | number;
       documentId?: string;
       name?: string;
       code?: string;
       description?: string;
       users?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
       }[];
       permissions?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
         action?: string;
         actionParameters?: any;
@@ -1753,7 +1753,7 @@ export interface EmailTemplate {
         properties?: any;
         conditions?: any;
         role?: {
-          id?: number;
+          id?: string | number;
           documentId?: string;
         };
         /** @format date-time */
@@ -1763,16 +1763,16 @@ export interface EmailTemplate {
         /** @format date-time */
         publishedAt?: string;
         createdBy?: {
-          id?: number;
+          id?: string | number;
           documentId?: string;
         };
         updatedBy?: {
-          id?: number;
+          id?: string | number;
           documentId?: string;
         };
         locale?: string;
         localizations?: {
-          id?: number;
+          id?: string | number;
           documentId?: string;
         }[];
       }[];
@@ -1783,16 +1783,16 @@ export interface EmailTemplate {
       /** @format date-time */
       publishedAt?: string;
       createdBy?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
       };
       updatedBy?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
       };
       locale?: string;
       localizations?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
       }[];
     }[];
@@ -1805,26 +1805,26 @@ export interface EmailTemplate {
     /** @format date-time */
     publishedAt?: string;
     createdBy?: {
-      id?: number;
+      id?: string | number;
       documentId?: string;
     };
     updatedBy?: {
-      id?: number;
+      id?: string | number;
       documentId?: string;
     };
     locale?: string;
     localizations?: {
-      id?: number;
+      id?: string | number;
       documentId?: string;
     }[];
   };
   updatedBy?: {
-    id?: number;
+    id?: string | number;
     documentId?: string;
   };
   locale?: string;
   localizations?: {
-    id?: number;
+    id?: string | number;
     documentId?: string;
     subjectMatcher?: string;
     subject?: string;
@@ -1837,16 +1837,16 @@ export interface EmailTemplate {
     /** @format date-time */
     publishedAt?: string;
     createdBy?: {
-      id?: number;
+      id?: string | number;
       documentId?: string;
     };
     updatedBy?: {
-      id?: number;
+      id?: string | number;
       documentId?: string;
     };
     locale?: string;
     localizations?: {
-      id?: number;
+      id?: string | number;
       documentId?: string;
     }[];
   }[];
@@ -1896,7 +1896,7 @@ export interface FollowerListResponse {
 }
 
 export interface Follower {
-  id?: number;
+  id?: string | number;
   documentId?: string;
   nickname?: string;
   username: string;
@@ -1905,7 +1905,7 @@ export interface Follower {
   countryCode?: string;
   languageCode?: string;
   avatar?: {
-    id?: number;
+    id?: string | number;
     documentId?: string;
     name?: string;
     alternativeText?: string;
@@ -1923,24 +1923,24 @@ export interface Follower {
     provider?: string;
     provider_metadata?: any;
     related?: {
-      id?: number;
+      id?: string | number;
       documentId?: string;
     }[];
     folder?: {
-      id?: number;
+      id?: string | number;
       documentId?: string;
       name?: string;
       pathId?: number;
       parent?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
       };
       children?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
       }[];
       files?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
         name?: string;
         alternativeText?: string;
@@ -1958,11 +1958,11 @@ export interface Follower {
         provider?: string;
         provider_metadata?: any;
         related?: {
-          id?: number;
+          id?: string | number;
           documentId?: string;
         }[];
         folder?: {
-          id?: number;
+          id?: string | number;
           documentId?: string;
         };
         folderPath?: string;
@@ -1973,7 +1973,7 @@ export interface Follower {
         /** @format date-time */
         publishedAt?: string;
         createdBy?: {
-          id?: number;
+          id?: string | number;
           documentId?: string;
           firstname?: string;
           lastname?: string;
@@ -1984,17 +1984,17 @@ export interface Follower {
           registrationToken?: string;
           isActive?: boolean;
           roles?: {
-            id?: number;
+            id?: string | number;
             documentId?: string;
             name?: string;
             code?: string;
             description?: string;
             users?: {
-              id?: number;
+              id?: string | number;
               documentId?: string;
             }[];
             permissions?: {
-              id?: number;
+              id?: string | number;
               documentId?: string;
               action?: string;
               actionParameters?: any;
@@ -2002,7 +2002,7 @@ export interface Follower {
               properties?: any;
               conditions?: any;
               role?: {
-                id?: number;
+                id?: string | number;
                 documentId?: string;
               };
               /** @format date-time */
@@ -2012,16 +2012,16 @@ export interface Follower {
               /** @format date-time */
               publishedAt?: string;
               createdBy?: {
-                id?: number;
+                id?: string | number;
                 documentId?: string;
               };
               updatedBy?: {
-                id?: number;
+                id?: string | number;
                 documentId?: string;
               };
               locale?: string;
               localizations?: {
-                id?: number;
+                id?: string | number;
                 documentId?: string;
               }[];
             }[];
@@ -2032,16 +2032,16 @@ export interface Follower {
             /** @format date-time */
             publishedAt?: string;
             createdBy?: {
-              id?: number;
+              id?: string | number;
               documentId?: string;
             };
             updatedBy?: {
-              id?: number;
+              id?: string | number;
               documentId?: string;
             };
             locale?: string;
             localizations?: {
-              id?: number;
+              id?: string | number;
               documentId?: string;
             }[];
           }[];
@@ -2054,26 +2054,26 @@ export interface Follower {
           /** @format date-time */
           publishedAt?: string;
           createdBy?: {
-            id?: number;
+            id?: string | number;
             documentId?: string;
           };
           updatedBy?: {
-            id?: number;
+            id?: string | number;
             documentId?: string;
           };
           locale?: string;
           localizations?: {
-            id?: number;
+            id?: string | number;
             documentId?: string;
           }[];
         };
         updatedBy?: {
-          id?: number;
+          id?: string | number;
           documentId?: string;
         };
         locale?: string;
         localizations?: {
-          id?: number;
+          id?: string | number;
           documentId?: string;
         }[];
       }[];
@@ -2085,16 +2085,16 @@ export interface Follower {
       /** @format date-time */
       publishedAt?: string;
       createdBy?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
       };
       updatedBy?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
       };
       locale?: string;
       localizations?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
       }[];
     };
@@ -2106,16 +2106,16 @@ export interface Follower {
     /** @format date-time */
     publishedAt?: string;
     createdBy?: {
-      id?: number;
+      id?: string | number;
       documentId?: string;
     };
     updatedBy?: {
-      id?: number;
+      id?: string | number;
       documentId?: string;
     };
     locale?: string;
     localizations?: {
-      id?: number;
+      id?: string | number;
       documentId?: string;
     }[];
   };
@@ -2135,16 +2135,16 @@ export interface Follower {
   /** @format date-time */
   publishedAt?: string;
   createdBy?: {
-    id?: number;
+    id?: string | number;
     documentId?: string;
   };
   updatedBy?: {
-    id?: number;
+    id?: string | number;
     documentId?: string;
   };
   locale?: string;
   localizations?: {
-    id?: number;
+    id?: string | number;
     documentId?: string;
     nickname?: string;
     username?: string;
@@ -2153,7 +2153,7 @@ export interface Follower {
     countryCode?: string;
     languageCode?: string;
     avatar?: {
-      id?: number;
+      id?: string | number;
       documentId?: string;
       name?: string;
       alternativeText?: string;
@@ -2171,11 +2171,11 @@ export interface Follower {
       provider?: string;
       provider_metadata?: any;
       related?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
       }[];
       folder?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
       };
       folderPath?: string;
@@ -2186,16 +2186,16 @@ export interface Follower {
       /** @format date-time */
       publishedAt?: string;
       createdBy?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
       };
       updatedBy?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
       };
       locale?: string;
       localizations?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
       }[];
     };
@@ -2215,16 +2215,16 @@ export interface Follower {
     /** @format date-time */
     publishedAt?: string;
     createdBy?: {
-      id?: number;
+      id?: string | number;
       documentId?: string;
     };
     updatedBy?: {
-      id?: number;
+      id?: string | number;
       documentId?: string;
     };
     locale?: string;
     localizations?: {
-      id?: number;
+      id?: string | number;
       documentId?: string;
     }[];
   }[];
@@ -2270,7 +2270,7 @@ export interface MemeListResponse {
 }
 
 export interface Meme {
-  id?: number;
+  id?: string | number;
   documentId?: string;
   title?: string;
   transcript?: string;
@@ -2281,12 +2281,12 @@ export interface Meme {
   end?: string;
   viral_score?: number;
   recording?: {
-    id?: number;
+    id?: string | number;
     documentId?: string;
     title?: string;
     description?: string;
     follower?: {
-      id?: number;
+      id?: string | number;
       documentId?: string;
       nickname?: string;
       username?: string;
@@ -2295,7 +2295,7 @@ export interface Meme {
       countryCode?: string;
       languageCode?: string;
       avatar?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
         name?: string;
         alternativeText?: string;
@@ -2313,24 +2313,24 @@ export interface Meme {
         provider?: string;
         provider_metadata?: any;
         related?: {
-          id?: number;
+          id?: string | number;
           documentId?: string;
         }[];
         folder?: {
-          id?: number;
+          id?: string | number;
           documentId?: string;
           name?: string;
           pathId?: number;
           parent?: {
-            id?: number;
+            id?: string | number;
             documentId?: string;
           };
           children?: {
-            id?: number;
+            id?: string | number;
             documentId?: string;
           }[];
           files?: {
-            id?: number;
+            id?: string | number;
             documentId?: string;
             name?: string;
             alternativeText?: string;
@@ -2348,11 +2348,11 @@ export interface Meme {
             provider?: string;
             provider_metadata?: any;
             related?: {
-              id?: number;
+              id?: string | number;
               documentId?: string;
             }[];
             folder?: {
-              id?: number;
+              id?: string | number;
               documentId?: string;
             };
             folderPath?: string;
@@ -2363,7 +2363,7 @@ export interface Meme {
             /** @format date-time */
             publishedAt?: string;
             createdBy?: {
-              id?: number;
+              id?: string | number;
               documentId?: string;
               firstname?: string;
               lastname?: string;
@@ -2374,17 +2374,17 @@ export interface Meme {
               registrationToken?: string;
               isActive?: boolean;
               roles?: {
-                id?: number;
+                id?: string | number;
                 documentId?: string;
                 name?: string;
                 code?: string;
                 description?: string;
                 users?: {
-                  id?: number;
+                  id?: string | number;
                   documentId?: string;
                 }[];
                 permissions?: {
-                  id?: number;
+                  id?: string | number;
                   documentId?: string;
                   action?: string;
                   actionParameters?: any;
@@ -2392,7 +2392,7 @@ export interface Meme {
                   properties?: any;
                   conditions?: any;
                   role?: {
-                    id?: number;
+                    id?: string | number;
                     documentId?: string;
                   };
                   /** @format date-time */
@@ -2402,16 +2402,16 @@ export interface Meme {
                   /** @format date-time */
                   publishedAt?: string;
                   createdBy?: {
-                    id?: number;
+                    id?: string | number;
                     documentId?: string;
                   };
                   updatedBy?: {
-                    id?: number;
+                    id?: string | number;
                     documentId?: string;
                   };
                   locale?: string;
                   localizations?: {
-                    id?: number;
+                    id?: string | number;
                     documentId?: string;
                   }[];
                 }[];
@@ -2422,16 +2422,16 @@ export interface Meme {
                 /** @format date-time */
                 publishedAt?: string;
                 createdBy?: {
-                  id?: number;
+                  id?: string | number;
                   documentId?: string;
                 };
                 updatedBy?: {
-                  id?: number;
+                  id?: string | number;
                   documentId?: string;
                 };
                 locale?: string;
                 localizations?: {
-                  id?: number;
+                  id?: string | number;
                   documentId?: string;
                 }[];
               }[];
@@ -2444,26 +2444,26 @@ export interface Meme {
               /** @format date-time */
               publishedAt?: string;
               createdBy?: {
-                id?: number;
+                id?: string | number;
                 documentId?: string;
               };
               updatedBy?: {
-                id?: number;
+                id?: string | number;
                 documentId?: string;
               };
               locale?: string;
               localizations?: {
-                id?: number;
+                id?: string | number;
                 documentId?: string;
               }[];
             };
             updatedBy?: {
-              id?: number;
+              id?: string | number;
               documentId?: string;
             };
             locale?: string;
             localizations?: {
-              id?: number;
+              id?: string | number;
               documentId?: string;
             }[];
           }[];
@@ -2475,16 +2475,16 @@ export interface Meme {
           /** @format date-time */
           publishedAt?: string;
           createdBy?: {
-            id?: number;
+            id?: string | number;
             documentId?: string;
           };
           updatedBy?: {
-            id?: number;
+            id?: string | number;
             documentId?: string;
           };
           locale?: string;
           localizations?: {
-            id?: number;
+            id?: string | number;
             documentId?: string;
           }[];
         };
@@ -2496,16 +2496,16 @@ export interface Meme {
         /** @format date-time */
         publishedAt?: string;
         createdBy?: {
-          id?: number;
+          id?: string | number;
           documentId?: string;
         };
         updatedBy?: {
-          id?: number;
+          id?: string | number;
           documentId?: string;
         };
         locale?: string;
         localizations?: {
-          id?: number;
+          id?: string | number;
           documentId?: string;
         }[];
       };
@@ -2525,21 +2525,21 @@ export interface Meme {
       /** @format date-time */
       publishedAt?: string;
       createdBy?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
       };
       updatedBy?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
       };
       locale?: string;
       localizations?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
       }[];
     };
     sources?: {
-      id?: number;
+      id?: string | number;
       documentId?: string;
       state?: MemeStateEnum;
       executionId?: number;
@@ -2553,7 +2553,7 @@ export interface Meme {
       videoOriginal?: VideosVideoComponent;
       videoSmall?: VideosVideoComponent;
       recording?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
       };
       /** @format date-time */
@@ -2563,16 +2563,16 @@ export interface Meme {
       /** @format date-time */
       publishedAt?: string;
       createdBy?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
       };
       updatedBy?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
       };
       locale?: string;
       localizations?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
       }[];
     }[];
@@ -2583,21 +2583,21 @@ export interface Meme {
     /** @format date-time */
     publishedAt?: string;
     createdBy?: {
-      id?: number;
+      id?: string | number;
       documentId?: string;
     };
     updatedBy?: {
-      id?: number;
+      id?: string | number;
       documentId?: string;
     };
     locale?: string;
     localizations?: {
-      id?: number;
+      id?: string | number;
       documentId?: string;
     }[];
   };
   follower?: {
-    id?: number;
+    id?: string | number;
     documentId?: string;
   };
   path?: string;
@@ -2608,16 +2608,16 @@ export interface Meme {
   /** @format date-time */
   publishedAt?: string;
   createdBy?: {
-    id?: number;
+    id?: string | number;
     documentId?: string;
   };
   updatedBy?: {
-    id?: number;
+    id?: string | number;
     documentId?: string;
   };
   locale?: string;
   localizations?: {
-    id?: number;
+    id?: string | number;
     documentId?: string;
     title?: string;
     transcript?: string;
@@ -2628,11 +2628,11 @@ export interface Meme {
     end?: string;
     viral_score?: number;
     recording?: {
-      id?: number;
+      id?: string | number;
       documentId?: string;
     };
     follower?: {
-      id?: number;
+      id?: string | number;
       documentId?: string;
     };
     path?: string;
@@ -2643,16 +2643,16 @@ export interface Meme {
     /** @format date-time */
     publishedAt?: string;
     createdBy?: {
-      id?: number;
+      id?: string | number;
       documentId?: string;
     };
     updatedBy?: {
-      id?: number;
+      id?: string | number;
       documentId?: string;
     };
     locale?: string;
     localizations?: {
-      id?: number;
+      id?: string | number;
       documentId?: string;
     }[];
   }[];
@@ -2691,13 +2691,13 @@ export interface MessageListResponse {
 }
 
 export interface Message {
-  id?: number;
+  id?: string | number;
   documentId?: string;
   type?: string;
   subject?: string;
   content?: string;
   user?: {
-    id?: number;
+    id?: string | number;
     documentId?: string;
     username?: string;
     /** @format email */
@@ -2708,17 +2708,17 @@ export interface Message {
     confirmed?: boolean;
     blocked?: boolean;
     role?: {
-      id?: number;
+      id?: string | number;
       documentId?: string;
       name?: string;
       description?: string;
       type?: string;
       permissions?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
         action?: string;
         role?: {
-          id?: number;
+          id?: string | number;
           documentId?: string;
         };
         /** @format date-time */
@@ -2728,7 +2728,7 @@ export interface Message {
         /** @format date-time */
         publishedAt?: string;
         createdBy?: {
-          id?: number;
+          id?: string | number;
           documentId?: string;
           firstname?: string;
           lastname?: string;
@@ -2739,17 +2739,17 @@ export interface Message {
           registrationToken?: string;
           isActive?: boolean;
           roles?: {
-            id?: number;
+            id?: string | number;
             documentId?: string;
             name?: string;
             code?: string;
             description?: string;
             users?: {
-              id?: number;
+              id?: string | number;
               documentId?: string;
             }[];
             permissions?: {
-              id?: number;
+              id?: string | number;
               documentId?: string;
               action?: string;
               actionParameters?: any;
@@ -2757,7 +2757,7 @@ export interface Message {
               properties?: any;
               conditions?: any;
               role?: {
-                id?: number;
+                id?: string | number;
                 documentId?: string;
               };
               /** @format date-time */
@@ -2767,16 +2767,16 @@ export interface Message {
               /** @format date-time */
               publishedAt?: string;
               createdBy?: {
-                id?: number;
+                id?: string | number;
                 documentId?: string;
               };
               updatedBy?: {
-                id?: number;
+                id?: string | number;
                 documentId?: string;
               };
               locale?: string;
               localizations?: {
-                id?: number;
+                id?: string | number;
                 documentId?: string;
               }[];
             }[];
@@ -2787,16 +2787,16 @@ export interface Message {
             /** @format date-time */
             publishedAt?: string;
             createdBy?: {
-              id?: number;
+              id?: string | number;
               documentId?: string;
             };
             updatedBy?: {
-              id?: number;
+              id?: string | number;
               documentId?: string;
             };
             locale?: string;
             localizations?: {
-              id?: number;
+              id?: string | number;
               documentId?: string;
             }[];
           }[];
@@ -2809,31 +2809,31 @@ export interface Message {
           /** @format date-time */
           publishedAt?: string;
           createdBy?: {
-            id?: number;
+            id?: string | number;
             documentId?: string;
           };
           updatedBy?: {
-            id?: number;
+            id?: string | number;
             documentId?: string;
           };
           locale?: string;
           localizations?: {
-            id?: number;
+            id?: string | number;
             documentId?: string;
           }[];
         };
         updatedBy?: {
-          id?: number;
+          id?: string | number;
           documentId?: string;
         };
         locale?: string;
         localizations?: {
-          id?: number;
+          id?: string | number;
           documentId?: string;
         }[];
       }[];
       users?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
       }[];
       /** @format date-time */
@@ -2843,21 +2843,21 @@ export interface Message {
       /** @format date-time */
       publishedAt?: string;
       createdBy?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
       };
       updatedBy?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
       };
       locale?: string;
       localizations?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
       }[];
     };
     followers?: {
-      id?: number;
+      id?: string | number;
       documentId?: string;
       nickname?: string;
       username?: string;
@@ -2866,7 +2866,7 @@ export interface Message {
       countryCode?: string;
       languageCode?: string;
       avatar?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
         name?: string;
         alternativeText?: string;
@@ -2884,24 +2884,24 @@ export interface Message {
         provider?: string;
         provider_metadata?: any;
         related?: {
-          id?: number;
+          id?: string | number;
           documentId?: string;
         }[];
         folder?: {
-          id?: number;
+          id?: string | number;
           documentId?: string;
           name?: string;
           pathId?: number;
           parent?: {
-            id?: number;
+            id?: string | number;
             documentId?: string;
           };
           children?: {
-            id?: number;
+            id?: string | number;
             documentId?: string;
           }[];
           files?: {
-            id?: number;
+            id?: string | number;
             documentId?: string;
             name?: string;
             alternativeText?: string;
@@ -2919,11 +2919,11 @@ export interface Message {
             provider?: string;
             provider_metadata?: any;
             related?: {
-              id?: number;
+              id?: string | number;
               documentId?: string;
             }[];
             folder?: {
-              id?: number;
+              id?: string | number;
               documentId?: string;
             };
             folderPath?: string;
@@ -2934,16 +2934,16 @@ export interface Message {
             /** @format date-time */
             publishedAt?: string;
             createdBy?: {
-              id?: number;
+              id?: string | number;
               documentId?: string;
             };
             updatedBy?: {
-              id?: number;
+              id?: string | number;
               documentId?: string;
             };
             locale?: string;
             localizations?: {
-              id?: number;
+              id?: string | number;
               documentId?: string;
             }[];
           }[];
@@ -2955,16 +2955,16 @@ export interface Message {
           /** @format date-time */
           publishedAt?: string;
           createdBy?: {
-            id?: number;
+            id?: string | number;
             documentId?: string;
           };
           updatedBy?: {
-            id?: number;
+            id?: string | number;
             documentId?: string;
           };
           locale?: string;
           localizations?: {
-            id?: number;
+            id?: string | number;
             documentId?: string;
           }[];
         };
@@ -2976,16 +2976,16 @@ export interface Message {
         /** @format date-time */
         publishedAt?: string;
         createdBy?: {
-          id?: number;
+          id?: string | number;
           documentId?: string;
         };
         updatedBy?: {
-          id?: number;
+          id?: string | number;
           documentId?: string;
         };
         locale?: string;
         localizations?: {
-          id?: number;
+          id?: string | number;
           documentId?: string;
         }[];
       };
@@ -3005,27 +3005,27 @@ export interface Message {
       /** @format date-time */
       publishedAt?: string;
       createdBy?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
       };
       updatedBy?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
       };
       locale?: string;
       localizations?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
       }[];
     }[];
     messages?: {
-      id?: number;
+      id?: string | number;
       documentId?: string;
       type?: string;
       subject?: string;
       content?: string;
       user?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
       };
       state?: string;
@@ -3036,16 +3036,16 @@ export interface Message {
       /** @format date-time */
       publishedAt?: string;
       createdBy?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
       };
       updatedBy?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
       };
       locale?: string;
       localizations?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
       }[];
     }[];
@@ -3056,16 +3056,16 @@ export interface Message {
     /** @format date-time */
     publishedAt?: string;
     createdBy?: {
-      id?: number;
+      id?: string | number;
       documentId?: string;
     };
     updatedBy?: {
-      id?: number;
+      id?: string | number;
       documentId?: string;
     };
     locale?: string;
     localizations?: {
-      id?: number;
+      id?: string | number;
       documentId?: string;
     }[];
   };
@@ -3077,16 +3077,16 @@ export interface Message {
   /** @format date-time */
   publishedAt?: string;
   createdBy?: {
-    id?: number;
+    id?: string | number;
     documentId?: string;
   };
   updatedBy?: {
-    id?: number;
+    id?: string | number;
     documentId?: string;
   };
   locale?: string;
   localizations?: {
-    id?: number;
+    id?: string | number;
     documentId?: string;
   }[];
 }
@@ -3123,12 +3123,12 @@ export interface RecordingListResponse {
 }
 
 export interface Recording {
-  id?: number;
+  id?: string | number;
   documentId?: string;
   title?: string;
   description?: string;
   follower?: {
-    id?: number;
+    id?: string | number;
     documentId?: string;
     nickname?: string;
     username?: string;
@@ -3137,7 +3137,7 @@ export interface Recording {
     countryCode?: string;
     languageCode?: string;
     avatar?: {
-      id?: number;
+      id?: string | number;
       documentId?: string;
       name?: string;
       alternativeText?: string;
@@ -3155,24 +3155,24 @@ export interface Recording {
       provider?: string;
       provider_metadata?: any;
       related?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
       }[];
       folder?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
         name?: string;
         pathId?: number;
         parent?: {
-          id?: number;
+          id?: string | number;
           documentId?: string;
         };
         children?: {
-          id?: number;
+          id?: string | number;
           documentId?: string;
         }[];
         files?: {
-          id?: number;
+          id?: string | number;
           documentId?: string;
           name?: string;
           alternativeText?: string;
@@ -3190,11 +3190,11 @@ export interface Recording {
           provider?: string;
           provider_metadata?: any;
           related?: {
-            id?: number;
+            id?: string | number;
             documentId?: string;
           }[];
           folder?: {
-            id?: number;
+            id?: string | number;
             documentId?: string;
           };
           folderPath?: string;
@@ -3205,7 +3205,7 @@ export interface Recording {
           /** @format date-time */
           publishedAt?: string;
           createdBy?: {
-            id?: number;
+            id?: string | number;
             documentId?: string;
             firstname?: string;
             lastname?: string;
@@ -3216,17 +3216,17 @@ export interface Recording {
             registrationToken?: string;
             isActive?: boolean;
             roles?: {
-              id?: number;
+              id?: string | number;
               documentId?: string;
               name?: string;
               code?: string;
               description?: string;
               users?: {
-                id?: number;
+                id?: string | number;
                 documentId?: string;
               }[];
               permissions?: {
-                id?: number;
+                id?: string | number;
                 documentId?: string;
                 action?: string;
                 actionParameters?: any;
@@ -3234,7 +3234,7 @@ export interface Recording {
                 properties?: any;
                 conditions?: any;
                 role?: {
-                  id?: number;
+                  id?: string | number;
                   documentId?: string;
                 };
                 /** @format date-time */
@@ -3244,16 +3244,16 @@ export interface Recording {
                 /** @format date-time */
                 publishedAt?: string;
                 createdBy?: {
-                  id?: number;
+                  id?: string | number;
                   documentId?: string;
                 };
                 updatedBy?: {
-                  id?: number;
+                  id?: string | number;
                   documentId?: string;
                 };
                 locale?: string;
                 localizations?: {
-                  id?: number;
+                  id?: string | number;
                   documentId?: string;
                 }[];
               }[];
@@ -3264,16 +3264,16 @@ export interface Recording {
               /** @format date-time */
               publishedAt?: string;
               createdBy?: {
-                id?: number;
+                id?: string | number;
                 documentId?: string;
               };
               updatedBy?: {
-                id?: number;
+                id?: string | number;
                 documentId?: string;
               };
               locale?: string;
               localizations?: {
-                id?: number;
+                id?: string | number;
                 documentId?: string;
               }[];
             }[];
@@ -3286,26 +3286,26 @@ export interface Recording {
             /** @format date-time */
             publishedAt?: string;
             createdBy?: {
-              id?: number;
+              id?: string | number;
               documentId?: string;
             };
             updatedBy?: {
-              id?: number;
+              id?: string | number;
               documentId?: string;
             };
             locale?: string;
             localizations?: {
-              id?: number;
+              id?: string | number;
               documentId?: string;
             }[];
           };
           updatedBy?: {
-            id?: number;
+            id?: string | number;
             documentId?: string;
           };
           locale?: string;
           localizations?: {
-            id?: number;
+            id?: string | number;
             documentId?: string;
           }[];
         }[];
@@ -3317,16 +3317,16 @@ export interface Recording {
         /** @format date-time */
         publishedAt?: string;
         createdBy?: {
-          id?: number;
+          id?: string | number;
           documentId?: string;
         };
         updatedBy?: {
-          id?: number;
+          id?: string | number;
           documentId?: string;
         };
         locale?: string;
         localizations?: {
-          id?: number;
+          id?: string | number;
           documentId?: string;
         }[];
       };
@@ -3338,16 +3338,16 @@ export interface Recording {
       /** @format date-time */
       publishedAt?: string;
       createdBy?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
       };
       updatedBy?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
       };
       locale?: string;
       localizations?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
       }[];
     };
@@ -3367,16 +3367,16 @@ export interface Recording {
     /** @format date-time */
     publishedAt?: string;
     createdBy?: {
-      id?: number;
+      id?: string | number;
       documentId?: string;
     };
     updatedBy?: {
-      id?: number;
+      id?: string | number;
       documentId?: string;
     };
     locale?: string;
     localizations?: {
-      id?: number;
+      id?: string | number;
       documentId?: string;
     }[];
   };
@@ -3387,16 +3387,16 @@ export interface Recording {
   /** @format date-time */
   publishedAt?: string;
   createdBy?: {
-    id?: number;
+    id?: string | number;
     documentId?: string;
   };
   updatedBy?: {
-    id?: number;
+    id?: string | number;
     documentId?: string;
   };
   locale?: string;
   localizations?: {
-    id?: number;
+    id?: string | number;
     documentId?: string;
   }[];
   sources?: Source[];
@@ -3442,7 +3442,7 @@ export interface SourceListResponse {
 }
 
 export interface Source {
-  id?: number;
+  id?: string | number;
   documentId?: string;
   state: SourceStateEnum;
   executionId?: number;
@@ -3456,12 +3456,12 @@ export interface Source {
   videoOriginal?: VideosVideoComponent;
   videoSmall?: VideosVideoComponent;
   recording?: {
-    id?: number;
+    id?: string | number;
     documentId?: string;
     title?: string;
     description?: string;
     follower?: {
-      id?: number;
+      id?: string | number;
       documentId?: string;
       nickname?: string;
       username?: string;
@@ -3470,7 +3470,7 @@ export interface Source {
       countryCode?: string;
       languageCode?: string;
       avatar?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
         name?: string;
         alternativeText?: string;
@@ -3488,24 +3488,24 @@ export interface Source {
         provider?: string;
         provider_metadata?: any;
         related?: {
-          id?: number;
+          id?: string | number;
           documentId?: string;
         }[];
         folder?: {
-          id?: number;
+          id?: string | number;
           documentId?: string;
           name?: string;
           pathId?: number;
           parent?: {
-            id?: number;
+            id?: string | number;
             documentId?: string;
           };
           children?: {
-            id?: number;
+            id?: string | number;
             documentId?: string;
           }[];
           files?: {
-            id?: number;
+            id?: string | number;
             documentId?: string;
             name?: string;
             alternativeText?: string;
@@ -3523,11 +3523,11 @@ export interface Source {
             provider?: string;
             provider_metadata?: any;
             related?: {
-              id?: number;
+              id?: string | number;
               documentId?: string;
             }[];
             folder?: {
-              id?: number;
+              id?: string | number;
               documentId?: string;
             };
             folderPath?: string;
@@ -3538,7 +3538,7 @@ export interface Source {
             /** @format date-time */
             publishedAt?: string;
             createdBy?: {
-              id?: number;
+              id?: string | number;
               documentId?: string;
               firstname?: string;
               lastname?: string;
@@ -3549,17 +3549,17 @@ export interface Source {
               registrationToken?: string;
               isActive?: boolean;
               roles?: {
-                id?: number;
+                id?: string | number;
                 documentId?: string;
                 name?: string;
                 code?: string;
                 description?: string;
                 users?: {
-                  id?: number;
+                  id?: string | number;
                   documentId?: string;
                 }[];
                 permissions?: {
-                  id?: number;
+                  id?: string | number;
                   documentId?: string;
                   action?: string;
                   actionParameters?: any;
@@ -3567,7 +3567,7 @@ export interface Source {
                   properties?: any;
                   conditions?: any;
                   role?: {
-                    id?: number;
+                    id?: string | number;
                     documentId?: string;
                   };
                   /** @format date-time */
@@ -3577,16 +3577,16 @@ export interface Source {
                   /** @format date-time */
                   publishedAt?: string;
                   createdBy?: {
-                    id?: number;
+                    id?: string | number;
                     documentId?: string;
                   };
                   updatedBy?: {
-                    id?: number;
+                    id?: string | number;
                     documentId?: string;
                   };
                   locale?: string;
                   localizations?: {
-                    id?: number;
+                    id?: string | number;
                     documentId?: string;
                   }[];
                 }[];
@@ -3597,16 +3597,16 @@ export interface Source {
                 /** @format date-time */
                 publishedAt?: string;
                 createdBy?: {
-                  id?: number;
+                  id?: string | number;
                   documentId?: string;
                 };
                 updatedBy?: {
-                  id?: number;
+                  id?: string | number;
                   documentId?: string;
                 };
                 locale?: string;
                 localizations?: {
-                  id?: number;
+                  id?: string | number;
                   documentId?: string;
                 }[];
               }[];
@@ -3619,26 +3619,26 @@ export interface Source {
               /** @format date-time */
               publishedAt?: string;
               createdBy?: {
-                id?: number;
+                id?: string | number;
                 documentId?: string;
               };
               updatedBy?: {
-                id?: number;
+                id?: string | number;
                 documentId?: string;
               };
               locale?: string;
               localizations?: {
-                id?: number;
+                id?: string | number;
                 documentId?: string;
               }[];
             };
             updatedBy?: {
-              id?: number;
+              id?: string | number;
               documentId?: string;
             };
             locale?: string;
             localizations?: {
-              id?: number;
+              id?: string | number;
               documentId?: string;
             }[];
           }[];
@@ -3650,16 +3650,16 @@ export interface Source {
           /** @format date-time */
           publishedAt?: string;
           createdBy?: {
-            id?: number;
+            id?: string | number;
             documentId?: string;
           };
           updatedBy?: {
-            id?: number;
+            id?: string | number;
             documentId?: string;
           };
           locale?: string;
           localizations?: {
-            id?: number;
+            id?: string | number;
             documentId?: string;
           }[];
         };
@@ -3671,16 +3671,16 @@ export interface Source {
         /** @format date-time */
         publishedAt?: string;
         createdBy?: {
-          id?: number;
+          id?: string | number;
           documentId?: string;
         };
         updatedBy?: {
-          id?: number;
+          id?: string | number;
           documentId?: string;
         };
         locale?: string;
         localizations?: {
-          id?: number;
+          id?: string | number;
           documentId?: string;
         }[];
       };
@@ -3700,21 +3700,21 @@ export interface Source {
       /** @format date-time */
       publishedAt?: string;
       createdBy?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
       };
       updatedBy?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
       };
       locale?: string;
       localizations?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
       }[];
     };
     sources?: {
-      id?: number;
+      id?: string | number;
       documentId?: string;
       state?: SourceStateEnum1;
       executionId?: number;
@@ -3728,7 +3728,7 @@ export interface Source {
       videoOriginal?: VideosVideoComponent;
       videoSmall?: VideosVideoComponent;
       recording?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
       };
       /** @format date-time */
@@ -3738,16 +3738,16 @@ export interface Source {
       /** @format date-time */
       publishedAt?: string;
       createdBy?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
       };
       updatedBy?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
       };
       locale?: string;
       localizations?: {
-        id?: number;
+        id?: string | number;
         documentId?: string;
       }[];
     }[];
@@ -3758,16 +3758,16 @@ export interface Source {
     /** @format date-time */
     publishedAt?: string;
     createdBy?: {
-      id?: number;
+      id?: string | number;
       documentId?: string;
     };
     updatedBy?: {
-      id?: number;
+      id?: string | number;
       documentId?: string;
     };
     locale?: string;
     localizations?: {
-      id?: number;
+      id?: string | number;
       documentId?: string;
     }[];
   };
@@ -3778,16 +3778,16 @@ export interface Source {
   /** @format date-time */
   publishedAt?: string;
   createdBy?: {
-    id?: number;
+    id?: string | number;
     documentId?: string;
   };
   updatedBy?: {
-    id?: number;
+    id?: string | number;
     documentId?: string;
   };
   locale?: string;
   localizations?: {
-    id?: number;
+    id?: string | number;
     documentId?: string;
   }[];
 }

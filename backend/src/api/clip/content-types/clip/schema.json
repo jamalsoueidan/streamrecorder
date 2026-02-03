@@ -103,15 +103,15 @@
         }
       }
     },
-    "recording": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::recording.recording"
-    },
     "follower": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::follower.follower"
+    },
+    "recording": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::recording.recording"
     }
   }
 }
