@@ -24,6 +24,7 @@ import {
   IconVolume,
   IconVolumeOff,
 } from "@tabler/icons-react";
+import { useLocale } from "next-intl";
 import { useCallback, useEffect, useRef, useState, useTransition } from "react";
 import "./clips-viewer.css";
 
@@ -33,6 +34,7 @@ interface ClipCardProps {
 }
 
 function ClipCard({ clip, isActive }: ClipCardProps) {
+  const locale = useLocale();
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
@@ -149,7 +151,7 @@ function ClipCard({ clip, isActive }: ClipCardProps) {
         >
           <track
             kind="subtitles"
-            src={`/clip/${clip.documentId}/subtitles.vtt`}
+            src={`/clip/${clip.documentId}/subtitles.vtt?locale=${locale}`}
             srcLang="en"
             label="Subtitles"
             default
