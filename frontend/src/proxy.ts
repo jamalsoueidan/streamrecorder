@@ -6,8 +6,6 @@ import { streamingPlatforms } from "./app/lib/streaming-platforms";
 import { routing } from "./i18n/routing";
 
 const PLATFORMS = streamingPlatforms.map((p) => p.name.toLowerCase());
-
-// Get locales from your config
 const locales = routing.locales;
 const defaultLocale = routing.defaultLocale;
 

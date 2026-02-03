@@ -11,6 +11,7 @@ export default factories.createCoreController(
       const limit = Number(ctx.query.limit) || 12;
       const knex = strapi.db.connection;
 
+      // raw SQL query to select distinct clips based on follower_document_id
       const { rows } = await knex.raw(`
         SELECT DISTINCT ON (f.document_id) c.*, f.document_id as follower_document_id
         FROM clips c
