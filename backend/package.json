@@ -17,9 +17,9 @@
     "test:users": "yarn test --testPathPatterns=tests/recordings/"
   },
   "dependencies": {
-    "@strapi/plugin-cloud": "5.33.0",
+    "@strapi/plugin-cloud": "5.34.0",
     "@strapi/plugin-documentation": "^5.34.0",
-    "@strapi/plugin-users-permissions": "5.33.0",
+    "@strapi/plugin-users-permissions": "5.34.0",
     "@strapi/provider-upload-aws-s3": "^5.34.0",
     "@strapi/strapi": "5.34.0",
     "crypto": "^1.0.1",
