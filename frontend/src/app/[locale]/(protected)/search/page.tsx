@@ -130,6 +130,8 @@ export default function Page() {
         color: "green",
         icon: <IconCheck size={16} />,
       });
+
+      router.push(`/${state.type}/${state.username}`);
     }
 
     if (state?.error) {
@@ -139,7 +141,7 @@ export default function Page() {
         color: "red",
       });
     }
-  }, [searchResult?.type, state, t]);
+  }, [router, state, t]);
 
   // Handle clicking on a user result
   const handleUserSelect = (user: UserSearchResult) => {
@@ -159,9 +161,6 @@ export default function Page() {
     startTransition(() => {
       formAction(formData);
     });
-
-    // Redirect to user page
-    router.push(`/${user.type}/${user.username}`);
   };
 
   // Render the search results
