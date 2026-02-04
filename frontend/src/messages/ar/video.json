@@ -9,6 +9,6 @@
     "name": "بث {creatorName} - {recordedDate}",
     "description": "بث مباشر مسجل من {creatorName} في {recordedDate}"
   },
-  "backToProfile": "العودة إلى ملف {username}",
+  "backToProfile": "العودة إلى الملف الشخصي لـ {username}",
   "otherRecordingsBy": "تسجيلات أخرى بواسطة {username}"
 }

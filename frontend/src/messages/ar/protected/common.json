@@ -18,12 +18,12 @@
     "all": "الكل"
   },
   "recordings": {
-    "liveAgo": "بدأ البث {time}",
+    "liveAgo": "بدأ التسجيل {time}",
     "recordedAgo": "تم التسجيل {time}",
     "recordCount": "تسجيل {count}",
     "newRecording": "جديد",
     "videoCount": "{count, plural, zero {لا فيديوهات} one {فيديو واحد} two {فيديوهان} few {# فيديوهات} many {# فيديو} other {# فيديو}}",
-    "noRecordings": "لا توجد تسجيلات أخرى "
+    "noRecordings": "لا توجد تسجيلات أخرى للتحميل."
   },
   "followers": {
     "addedAgo": "تم الإضافة {time}"
