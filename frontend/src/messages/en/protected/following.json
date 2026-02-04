@@ -1,13 +1,13 @@
 {
   "title": "My Recordings",
-  "description": "Recordings from your streams",
+  "description": "Recordings from your creators",
   "emptyFiltered": {
     "title": "No recordings match your filters",
     "description": "Try adjusting or clearing your filters"
   },
   "emptyDefault": {
     "title": "No recordings yet",
-    "description": "Your stream recordings will appear here once you add your channel"
+    "description": "Your recordings will appear here once you add a creator"
   },
   "noMoreToLoad": "You've reached the end"
 }

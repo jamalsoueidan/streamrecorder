@@ -1,12 +1,12 @@
 {
   "follow": {
-    "tooltip": "إضافة بث",
+    "tooltip": "إضافة صانع محتوى",
     "successTitle": "تمت الإضافة!",
     "successMessage": "تمت إضافة {username}",
     "errorTitle": "خطأ"
   },
   "unfollow": {
-    "tooltip": "إزالة البث",
+    "tooltip": "إزالة صانع المحتوى",
     "successTitle": "تمت الإزالة",
     "successMessage": "تمت إزالة {username}",
     "successMessageGeneric": "تمت الإزالة بنجاح"

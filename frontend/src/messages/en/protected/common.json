@@ -1,12 +1,12 @@
 {
   "follow": {
-    "tooltip": "Add Broadcast",
+    "tooltip": "Add Creator",
     "successTitle": "Added!",
     "successMessage": "{username} has been added",
     "errorTitle": "Error"
   },
   "unfollow": {
-    "tooltip": "Remove Broadcast",
+    "tooltip": "Remove Creator",
     "successTitle": "Removed",
     "successMessage": "You removed {username}",
     "successMessageGeneric": "Successfully removed"
@@ -28,7 +28,7 @@
     "noRecordings": "You've reached the end"
   },
   "followers": {
-    "addedAgo_context": "For when a broadcast was added to user's list. Shows 'Added 3 days ago'",
+    "addedAgo_context": "For when a creator was added to user's list. Shows 'Added 3 days ago'",
     "addedAgo": "Added {time}"
   },
   "newest": "Newest",

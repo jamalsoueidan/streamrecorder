@@ -1,13 +1,13 @@
 {
   "title": "My List ({count})",
-  "description": "Manage your broadcasts",
+  "description": "Manage your creators",
   "emptyFiltered": {
-    "title": "No broadcasts match your filters",
+    "title": "No creators match your filters",
     "description": "Try adjusting or clearing your filters"
   },
   "emptyDefault": {
-    "title": "You have not added any broadcasts",
-    "description": "Switch to Friends to find content creators on our platform"
+    "title": "You haven't added any creators yet",
+    "description": "Browse Friends to discover creators on our platform"
   },
   "noMoreToLoad": "You've reached the end"
 }
