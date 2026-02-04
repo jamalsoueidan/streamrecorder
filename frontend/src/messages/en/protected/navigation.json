@@ -13,7 +13,8 @@
   "actions": {
     "logout": "Logout",
     "addCreator": "Add Creator",
-    "search": "Enter your stream URL",
+    "search": "Search",
+    "searchPlaceholder": "Enter your stream URL",
     "installApp": "Install App",
     "more": "More",
     "language": "Language"

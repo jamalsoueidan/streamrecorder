@@ -11,7 +11,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
   // mount and headerHeight is fix for SSR and the video player page
   const mounted = useMounted();
   const headerHeight = useMatches({
-    base: 61,
+    base: 63,
     sm: 0,
   });
 

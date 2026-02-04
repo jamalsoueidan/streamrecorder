@@ -157,7 +157,7 @@ export function Navbar({
           >
             <Group>
               <IconLink size={24} color="gray" />
-              <Text c="gray.3">{t("actions.search")}</Text>
+              <Text c="gray.3">{t("actions.searchPlaceholder")}</Text>
             </Group>
           </Paper>
         </Link>

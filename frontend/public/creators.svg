@@ -1,0 +1,189 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 600" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <!-- Glow that fades toward bottom -->
+    <radialGradient id="glowTop" cx="50%" cy="30%" r="60%">
+      <stop offset="0%" style="stop-color:#a855f7;stop-opacity:0.18"/>
+      <stop offset="60%" style="stop-color:#a855f7;stop-opacity:0.05"/>
+      <stop offset="100%" style="stop-color:#a855f7;stop-opacity:0"/>
+    </radialGradient>
+
+    <radialGradient id="glowTop2" cx="50%" cy="30%" r="50%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:0.12"/>
+      <stop offset="70%" style="stop-color:#6366f1;stop-opacity:0.03"/>
+      <stop offset="100%" style="stop-color:#6366f1;stop-opacity:0"/>
+    </radialGradient>
+
+    <!-- Avatar symbol - simple person silhouette -->
+    <symbol id="avatar" viewBox="0 0 24 24">
+      <circle cx="12" cy="7" r="5"/>
+      <path d="M12 14c-6 0-9 3-9 6v2h18v-2c0-3-3-6-9-6z"/>
+    </symbol>
+
+    <!-- Avatar with longer hair variant -->
+    <symbol id="avatarAlt" viewBox="0 0 24 24">
+      <circle cx="12" cy="7" r="5"/>
+      <ellipse cx="12" cy="9" rx="6" ry="3"/>
+      <path d="M12 14c-6 0-9 3-9 6v2h18v-2c0-3-3-6-9-6z"/>
+    </symbol>
+  </defs>
+
+  <!-- Background glows - positioned high, fade naturally -->
+  <ellipse cx="25%" cy="25%" rx="500" ry="350" fill="url(#glowTop)"/>
+  <ellipse cx="75%" cy="20%" rx="450" ry="300" fill="url(#glowTop2)"/>
+  <ellipse cx="50%" cy="35%" rx="400" ry="280" fill="url(#glowTop)"/>
+
+  <!-- Floating Avatars - Top row (brightest) -->
+  <g opacity="0.6">
+    <use href="#avatar" x="6%" y="6%" width="28" height="28" fill="#a855f7">
+      <animate attributeName="y" values="6%;3%;9%;6%" dur="8s" repeatCount="indefinite"/>
+    </use>
+    <animateTransform attributeName="transform" type="rotate" values="-5,0,0;5,0,0;-5,0,0" dur="6s" repeatCount="indefinite"/>
+  </g>
+
+  <g opacity="0.5">
+    <use href="#avatarAlt" x="20%" y="10%" width="24" height="24" fill="#6366f1">
+      <animate attributeName="y" values="10%;7%;13%;10%" dur="7s" repeatCount="indefinite"/>
+    </use>
+    <animateTransform attributeName="transform" type="rotate" values="3,0,0;-3,0,0;3,0,0" dur="5s" repeatCount="indefinite"/>
+  </g>
+
+  <g opacity="0.55">
+    <use href="#avatar" x="36%" y="8%" width="26" height="26" fill="#a855f7">
+      <animate attributeName="y" values="8%;5%;11%;8%" dur="9s" repeatCount="indefinite"/>
+    </use>
+  </g>
+
+  <g opacity="0.6">
+    <use href="#avatarAlt" x="50%" y="5%" width="22" height="22" fill="#ff4444">
+      <animate attributeName="y" values="5%;2%;8%;5%" dur="6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0.7;1" dur="3s" repeatCount="indefinite"/>
+    </use>
+  </g>
+
+  <g opacity="0.5">
+    <use href="#avatar" x="66%" y="9%" width="28" height="28" fill="#6366f1">
+      <animate attributeName="y" values="9%;6%;12%;9%" dur="8s" repeatCount="indefinite"/>
+    </use>
+  </g>
+
+  <g opacity="0.55">
+    <use href="#avatarAlt" x="80%" y="7%" width="24" height="24" fill="#a855f7">
+      <animate attributeName="y" values="7%;4%;10%;7%" dur="7s" repeatCount="indefinite"/>
+    </use>
+  </g>
+
+  <g opacity="0.45">
+    <use href="#avatar" x="93%" y="12%" width="22" height="22" fill="#6366f1">
+      <animate attributeName="y" values="12%;9%;15%;12%" dur="9s" repeatCount="indefinite"/>
+    </use>
+  </g>
+
+  <!-- Second row -->
+  <g opacity="0.45">
+    <use href="#avatarAlt" x="4%" y="26%" width="22" height="22" fill="#ff4444">
+      <animate attributeName="y" values="26%;23%;29%;26%" dur="8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0.6;1" dur="2.5s" repeatCount="indefinite"/>
+    </use>
+  </g>
+
+  <g opacity="0.4">
+    <use href="#avatar" x="16%" y="22%" width="26" height="26" fill="#a855f7">
+      <animate attributeName="y" values="22%;19%;25%;22%" dur="6s" repeatCount="indefinite"/>
+    </use>
+  </g>
+
+  <g opacity="0.35">
+    <use href="#avatarAlt" x="32%" y="28%" width="20" height="20" fill="#6366f1">
+      <animate attributeName="y" values="28%;25%;31%;28%" dur="10s" repeatCount="indefinite"/>
+    </use>
+  </g>
+
+  <g opacity="0.4">
+    <use href="#avatar" x="44%" y="24%" width="24" height="24" fill="#a855f7">
+      <animate attributeName="y" values="24%;21%;27%;24%" dur="7s" repeatCount="indefinite"/>
+    </use>
+  </g>
+
+  <g opacity="0.35">
+    <use href="#avatarAlt" x="58%" y="26%" width="22" height="22" fill="#6366f1">
+      <animate attributeName="y" values="26%;23%;29%;26%" dur="8s" repeatCount="indefinite"/>
+    </use>
+  </g>
+
+  <g opacity="0.4">
+    <use href="#avatar" x="74%" y="20%" width="26" height="26" fill="#a855f7">
+      <animate attributeName="y" values="20%;17%;23%;20%" dur="6s" repeatCount="indefinite"/>
+    </use>
+  </g>
+
+  <g opacity="0.35">
+    <use href="#avatarAlt" x="90%" y="24%" width="20" height="20" fill="#6366f1">
+      <animate attributeName="y" values="24%;21%;27%;24%" dur="9s" repeatCount="indefinite"/>
+    </use>
+  </g>
+
+  <!-- Third row - fainter -->
+  <g opacity="0.28">
+    <use href="#avatar" x="10%" y="40%" width="20" height="20" fill="#a855f7">
+      <animate attributeName="y" values="40%;37%;43%;40%" dur="9s" repeatCount="indefinite"/>
+    </use>
+  </g>
+
+  <g opacity="0.25">
+    <use href="#avatarAlt" x="28%" y="38%" width="18" height="18" fill="#6366f1">
+      <animate attributeName="y" values="38%;35%;41%;38%" dur="7s" repeatCount="indefinite"/>
+    </use>
+  </g>
+
+  <g opacity="0.3">
+    <use href="#avatar" x="48%" y="42%" width="20" height="20" fill="#ff4444">
+      <animate attributeName="y" values="42%;39%;45%;42%" dur="8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0.6;1" dur="2s" repeatCount="indefinite"/>
+    </use>
+  </g>
+
+  <g opacity="0.25">
+    <use href="#avatarAlt" x="68%" y="36%" width="18" height="18" fill="#a855f7">
+      <animate attributeName="y" values="36%;33%;39%;36%" dur="6s" repeatCount="indefinite"/>
+    </use>
+  </g>
+
+  <g opacity="0.22">
+    <use href="#avatar" x="86%" y="40%" width="20" height="20" fill="#6366f1">
+      <animate attributeName="y" values="40%;37%;43%;40%" dur="10s" repeatCount="indefinite"/>
+    </use>
+  </g>
+
+  <!-- Bottom area - very faint -->
+  <g opacity="0.12">
+    <use href="#avatarAlt" x="18%" y="56%" width="16" height="16" fill="#6366f1">
+      <animate attributeName="y" values="56%;53%;59%;56%" dur="10s" repeatCount="indefinite"/>
+    </use>
+  </g>
+
+  <g opacity="0.1">
+    <use href="#avatar" x="48%" y="54%" width="16" height="16" fill="#a855f7">
+      <animate attributeName="y" values="54%;51%;57%;54%" dur="8s" repeatCount="indefinite"/>
+    </use>
+  </g>
+
+  <g opacity="0.08">
+    <use href="#avatarAlt" x="76%" y="52%" width="14" height="14" fill="#6366f1">
+      <animate attributeName="y" values="52%;49%;55%;52%" dur="9s" repeatCount="indefinite"/>
+    </use>
+  </g>
+
+  <!-- Small accent particles between avatars -->
+  <circle cx="15%" cy="15%" r="1.5" fill="#a855f7" opacity="0.4">
+    <animate attributeName="cy" values="15%;12%;18%;15%" dur="5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="42%" cy="18%" r="1" fill="#6366f1" opacity="0.35">
+    <animate attributeName="cy" values="18%;15%;21%;18%" dur="6s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="72%" cy="14%" r="1.5" fill="#a855f7" opacity="0.4">
+    <animate attributeName="cy" values="14%;11%;17%;14%" dur="7s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="88%" cy="30%" r="1" fill="#ff4444" opacity="0.35">
+    <animate attributeName="cy" values="30%;27%;33%;30%" dur="4s" repeatCount="indefinite"/>
+  </circle>
+</svg>

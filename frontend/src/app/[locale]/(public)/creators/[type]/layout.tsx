@@ -16,6 +16,7 @@ import {
   IconUsers,
 } from "@tabler/icons-react";
 import { getTranslations } from "next-intl/server";
+import Image from "next/image";
 import ReactMarkdown from "react-markdown";
 import { PlatformBadges } from "../../components/platform-badge";
 
@@ -45,7 +46,25 @@ export default async function Page({ params, children }: PageProps) {
 
   return (
     <Container size="lg">
-      {/* Hero Section */}
+      <div
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: 700,
+          zIndex: 0,
+          pointerEvents: "none",
+        }}
+      >
+        <Image
+          src="/creators.svg"
+          alt="background"
+          fill
+          priority
+          style={{ objectFit: "cover" }}
+        />
+      </div>
       <Stack align="center" gap={24} mb={60}>
         <Title
           order={1}
