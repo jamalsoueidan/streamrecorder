@@ -1,20 +1,20 @@
 {
   "meta": {
-    "title": "{nickname} (@{username}) VODs & Recordings",
-    "notFoundTitle": "Streamer Not Found",
+    "title": "{nickname} (@{username}) Videos & Recordings",
+    "notFoundTitle": "Creator Not Found",
     "notFoundDescription": "This creator profile could not be found.",
-    "description": "Watch {nickname}'s recorded {platform} streams anytime. Never miss a live stream — we record automatically so you can watch later or download for free.",
-    "ogTitle": "{nickname} — Watch Recorded Streams | Live Stream Recorder",
-    "twitterTitle": "{nickname} — Recorded {platform} Streams",
-    "keywords": "{nickname} vods, {nickname} streams, {nickname} recordings, {nickname} {platform}, watch {nickname}, {nickname} live stream, {platform} vod downloader, {platform} stream recorder"
+    "description": "Watch {nickname}'s {platform} live recordings and clips. {nickname} uses Live Stream Recorder to save and share their live streams.",
+    "ogTitle": "{nickname} — Videos & Clips | Live Stream Recorder",
+    "twitterTitle": "{nickname} — {platform} Videos & Clips",
+    "keywords": "{nickname} videos, {nickname} clips, {nickname} {platform}, watch {nickname}, {nickname} live stream, {nickname} recordings"
   },
-  "defaultTagline": "Watch {nickname}'s recorded streams anytime. Never miss a live stream — we record automatically.",
+  "defaultTagline": "{nickname} saves their live streams here. Watch recordings and clips anytime.",
   "about": "About {nickname}",
   "faq": "FAQ",
   "recorded": "Recorded on {date}",
   "emptyState": {
     "title": "No recordings yet",
-    "description": "We haven't captured any streams from this creator yet. Check back later!"
+    "description": "This creator hasn't saved any streams yet. Check back later!"
   },
   "jsonLd": {
     "streamTitle": "{nickname}'s Stream - {date}"

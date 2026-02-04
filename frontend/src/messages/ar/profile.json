@@ -1,20 +1,20 @@
 {
   "meta": {
-    "title": "تسجيلات {nickname} (@{username})",
-    "notFoundTitle": "المذيع غير موجود",
-    "notFoundDescription": "لم يتم العثور على ملف هذا المذيع.",
-    "description": "شاهد بث {nickname} المسجل على {platform} في أي وقت. لا تفوت أي بث مباشر — نسجل تلقائياً حتى تتمكن من المشاهدة لاحقاً أو التحميل مجاناً.",
-    "ogTitle": "{nickname} — شاهد البث المسجل | مسجل البث المباشر",
-    "twitterTitle": "{nickname} — بث {platform} المسجل",
-    "keywords": "{nickname} بثوث محفوظة, {nickname} بثوث, {nickname} تسجيلات, {nickname} {platform}, شاهد {nickname}, {nickname} بث مباشر, تحميل بثوث {platform}, مسجل بثوث {platform}"
+    "title": "فيديوهات وتسجيلات {nickname} (@{username})",
+    "notFoundTitle": "صانع المحتوى غير موجود",
+    "notFoundDescription": "لم يتم العثور على هذا الملف الشخصي.",
+    "description": "شاهد تسجيلات ومقاطع {nickname} على {platform}. يستخدم {nickname} مسجل البث المباشر لحفظ ومشاركة بثوثه.",
+    "ogTitle": "{nickname} — فيديوهات ومقاطع | مسجل البث المباشر",
+    "twitterTitle": "{nickname} — فيديوهات ومقاطع {platform}",
+    "keywords": "{nickname} فيديوهات, {nickname} مقاطع, {nickname} {platform}, شاهد {nickname}, {nickname} بث مباشر, {nickname} تسجيلات"
   },
-  "defaultTagline": "شاهد بث {nickname} المسجل في أي وقت. لا تفوت أي بث مباشر — نسجل تلقائياً.",
+  "defaultTagline": "{nickname} يحفظ بثوثه المباشرة هنا. شاهد التسجيلات والمقاطع في أي وقت.",
   "about": "عن {nickname}",
   "faq": "الأسئلة الشائعة",
   "recorded": "تم التسجيل {date}",
   "emptyState": {
     "title": "لا توجد تسجيلات بعد",
-    "description": "لم نلتقط أي بث من هذا المذيع بعد. تحقق لاحقاً!"
+    "description": "لم يحفظ صانع المحتوى أي بثوث بعد. تحقق لاحقاً!"
   },
   "jsonLd": {
     "streamTitle": "بث {nickname} - {date}"
