@@ -9,7 +9,7 @@ services:
   n8n-worker:
     build:
       context: .
-      dockerfile_inline: "FROM docker.n8n.io/n8nio/n8n:1.123.16\nUSER root\nRUN apk update && \\\n    apk add --no-cache ffmpeg python3 py3-pip curl aws-cli && \\\n    pip3 install --break-system-packages streamlink\nRUN npm install -g bcrypt\nUSER node\n"
+       dockerfile_inline: "FROM docker.n8n.io/n8nio/n8n:1.123.16\nUSER root\nRUN apk update && \\\n    apk add --no-cache ffmpeg python3 py3-pip curl aws-cli \\\n    build-base cairo-dev pango-dev jpeg-dev giflib-dev librsvg-dev pkgconfig pixman-dev \\\n    chromium nss freetype harfbuzz ca-certificates ttf-freefont && \\\n    curl -sL https://github.com/peak/s5cmd/releases/download/v2.2.2/s5cmd_2.2.2_Linux-64bit.tar.gz | tar xz -C /usr/local/bin && \\\n    pip3 install --break-system-packages streamlink \"yt-dlp[curl-cffi]\"\nRUN npm install -g bcrypt @tobyg74/tiktok-api-dl puppeteer-core\nUSER node\n"
     command: "worker --concurrency=120"
     stop_grace_period: 37m
     environment:
@@ -36,6 +36,7 @@ services:
       - "NODE_FUNCTION_ALLOW_EXTERNAL=*"
       - "NODE_FUNCTION_ALLOW_BUILTIN=*"
       - N8N_GRACEFUL_SHUTDOWN_TIMEOUT=2100
+      - N8N_RUNNERS_ENABLED=false
     volumes:
       - "./downloads:/files"
     depends_on:
