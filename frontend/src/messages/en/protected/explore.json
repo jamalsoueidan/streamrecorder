@@ -1,13 +1,13 @@
 {
   "title": "Explore",
-  "description": "Discover new creators to follow",
+  "description": "Browse recordings from other creators",
   "emptyFiltered": {
     "title": "No recordings match your filters",
     "description": "Try adjusting or clearing your filters"
   },
   "emptyDefault": {
-    "title": "No recordings is available",
+    "title": "No recordings available",
     "description": "-"
   },
-  "noMoreToLoad": "No more to load"
+  "noMoreToLoad": "You've reached the end"
 }

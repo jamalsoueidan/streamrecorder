@@ -13,8 +13,8 @@
     "label": "ترتيب حسب",
     "usernameAsc": "أ-ي",
     "usernameDesc": "ي-أ",
-    "createdAtDesc": "المتابعة مؤخراً",
-    "createdAtAsc": "المتابعة أولاً",
+    "createdAtDesc": "أُضيف مؤخراً",
+    "createdAtAsc": "أُضيف أولاً",
     "totalRecordingsDesc": "الأكثر تسجيلات",
     "totalRecordingsAsc": "الأقل تسجيلات",
     "latestRecordingDesc": "بث مؤخراً",
@@ -55,6 +55,6 @@
     "done": "تم"
   },
   "options": {
-    "hasRecordings": "إظهار صناع المحتوى بدون تسجيلات"
+    "hasRecordings": "إظهار البثوث بدون تسجيلات"
   }
 }

@@ -1,12 +1,12 @@
 {
   "title": "Live Now",
-  "subtitle": "Watch live streams from your followed creators",
+  "subtitle": "Live streams from your broadcasts",
   "streamingCount": "{count, plural, one {# streaming} other {# streaming}}",
   "refresh": "Refresh",
   "showAll": "Show all",
-  "discoverStreamers": "Discover Streamers",
+  "discoverStreamers": "Find Friends",
   "emptyState": {
     "title": "No live recordings yet",
-    "description": "Your followed streamers live status appears here"
+    "description": "Live status from your broadcasts will appear here"
   }
 }

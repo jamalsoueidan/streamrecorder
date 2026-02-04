@@ -1,18 +1,19 @@
 {
   "sections": {
-    "recordings": "التسجيلات",
-    "creators": "صناع المحتوى"
+    "studio": "الاستوديو",
+    "community": "المجتمع"
   },
   "links": {
-    "explore": "استكشف",
-    "following": "المتابَعون",
+    "myRecordings": "تسجيلاتي",
+    "myList": "قائمتي",
     "live": "مباشر",
-    "discover": "اكتشف",
-    "myList": "قائمتي"
+    "explore": "استكشف",
+    "friends": "الأصدقاء"
   },
   "actions": {
     "logout": "تسجيل الخروج",
     "addCreator": "إضافة صانع محتوى",
+    "search": "أدخل رابط البث المباشر الخاص بك",
     "installApp": "تثبيت التطبيق",
     "more": "المزيد",
     "language": "اللغة"

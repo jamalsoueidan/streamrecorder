@@ -3,7 +3,6 @@
 import { useChangeLanguage } from "@/app/hooks/use-change-language";
 import { useUser } from "@/app/providers/user-provider";
 import { Menu, SegmentedControl, Stack, Text } from "@mantine/core";
-import { spotlight } from "@mantine/spotlight";
 import * as Sentry from "@sentry/nextjs";
 import {
   IconDotsVertical,
@@ -11,7 +10,6 @@ import {
   IconLogout,
   IconPlayerPlayFilled,
   IconUser,
-  IconUserPlus,
   IconWorldSearch,
 } from "@tabler/icons-react";
 import { useLocale, useTranslations } from "next-intl";
@@ -132,13 +130,6 @@ export function MobileBar() {
                 </Menu.Label>
 
                 <Menu.Divider />
-
-                <Menu.Item
-                  leftSection={<IconUserPlus size={16} />}
-                  onClick={() => spotlight.open()}
-                >
-                  {t("actions.addCreator")}
-                </Menu.Item>
 
                 {/* Only show if install is available (not null) */}
                 {install && (

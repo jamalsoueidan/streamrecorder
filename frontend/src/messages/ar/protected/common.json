@@ -1,20 +1,20 @@
 {
   "follow": {
-    "tooltip": "إضافة متابعة",
-    "successTitle": "تمت المتابعة!",
-    "successMessage": "أنت الآن تتابع {username}",
+    "tooltip": "إضافة بث",
+    "successTitle": "تمت الإضافة!",
+    "successMessage": "تمت إضافة {username}",
     "errorTitle": "خطأ"
   },
   "unfollow": {
-    "tooltip": "إلغاء المتابعة",
-    "successTitle": "تم إلغاء المتابعة",
-    "successMessage": "ألغيت متابعة {username}",
-    "successMessageGeneric": "تم إلغاء المتابعة بنجاح"
+    "tooltip": "إزالة البث",
+    "successTitle": "تمت الإزالة",
+    "successMessage": "تمت إزالة {username}",
+    "successMessageGeneric": "تمت الإزالة بنجاح"
   },
   "scopeFilter": {
     "label": "تصفية:",
-    "following": "المتابَعون",
-    "discover": "اكتشف",
+    "following": "تسجيلاتي",
+    "discover": "الأصدقاء",
     "all": "الكل"
   },
   "recordings": {
@@ -23,7 +23,7 @@
     "recordCount": "تسجيل {count}",
     "newRecording": "جديد",
     "videoCount": "{count, plural, zero {لا فيديوهات} one {فيديو واحد} two {فيديوهان} few {# فيديوهات} many {# فيديو} other {# فيديو}}",
-    "noRecordings": "لا توجد تسجيلات أخرى للتحميل."
+    "noRecordings": "لقد وصلت إلى النهاية"
   },
   "followers": {
     "addedAgo": "تم الإضافة {time}"

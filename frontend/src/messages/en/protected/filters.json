@@ -13,8 +13,8 @@
     "label": "Sort by",
     "usernameAsc": "A-Z",
     "usernameDesc": "Z-A",
-    "createdAtDesc": "Recently followed",
-    "createdAtAsc": "First followed",
+    "createdAtDesc": "Recently added",
+    "createdAtAsc": "First added",
     "totalRecordingsDesc": "Most recordings",
     "totalRecordingsAsc": "Fewest recordings",
     "latestRecordingDesc": "Recently Streamed",
@@ -55,6 +55,6 @@
     "done": "Done"
   },
   "options": {
-    "hasRecordings": "Show creators without recordings"
+    "hasRecordings": "Show broadcasts without recordings"
   }
 }

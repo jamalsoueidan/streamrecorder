@@ -10,11 +10,9 @@ import { trackEvent } from "@/app/lib/analytics";
 import {
   Avatar,
   Badge,
-  Box,
   Button,
   Card,
   Center,
-  Flex,
   Group,
   Loader,
   Stack,
@@ -31,8 +29,8 @@ import {
 import { useTranslations } from "next-intl";
 import { useRouter, useSearchParams } from "next/navigation";
 
+import Link from "next/link";
 import { useActionState, useEffect, useState, useTransition } from "react";
-import AddFollowerForm from "../components/add-follower-form";
 
 export default function AddPage() {
   const t = useTranslations("protected.addFollowerForm");
@@ -107,9 +105,18 @@ export default function AddPage() {
     });
   };
 
-  // No params - show normal form
+  // No params - redirect to search page
   if (!username || !type) {
-    return <AddFollowerForm />;
+    return (
+      <Center py="xl">
+        <Stack align="center" gap="md">
+          <Text c="dimmed">{t("notFollowing.trySearch")}</Text>
+          <Button component={Link} href="/search">
+            {t("search.placeholder")}
+          </Button>
+        </Stack>
+      </Center>
+    );
   }
 
   // Loading
@@ -141,15 +148,11 @@ export default function AddPage() {
           </Stack>
         </Card>
 
-        <Text ta="center" c="dimmed" size="sm">
-          {t("notFollowing.trySearch")}
-        </Text>
-
-        <Flex align="center" justify="center">
-          <Box maw={300}>
-            <AddFollowerForm />
-          </Box>
-        </Flex>
+        <Center>
+          <Button component={Link} href="/search">
+            {t("notFollowing.trySearch")}
+          </Button>
+        </Center>
       </Stack>
     );
   }
