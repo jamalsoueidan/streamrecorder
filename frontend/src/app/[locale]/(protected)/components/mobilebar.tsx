@@ -59,7 +59,7 @@ export function MobileBar() {
         label: (
           <Menu position="top-start" offset={15}>
             <Menu.Target>
-              <Stack gap={4} align="center">
+              <Stack gap={0} align="center">
                 <Icon
                   {...iconProps}
                   style={{ width: "18px", height: "18px" }}
@@ -102,6 +102,7 @@ export function MobileBar() {
       fullWidth
       value={currentValue}
       onChange={handleChange}
+      styles={{ label: { height: 52 } }}
       data={[
         ...links,
         {
@@ -109,7 +110,7 @@ export function MobileBar() {
           label: (
             <Menu offset={15} position="top-start">
               <Menu.Target>
-                <Stack gap={4} align="center">
+                <Stack gap={0} align="center">
                   <IconDotsVertical
                     {...iconProps}
                     style={{ width: "18px", height: "18px" }}

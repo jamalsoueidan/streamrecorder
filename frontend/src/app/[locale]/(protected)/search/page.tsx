@@ -225,7 +225,7 @@ export default function Page() {
         disabled={isPending}
         w="100%"
       >
-        <Paper p="sm" radius="md" withBorder>
+        <Paper p="sm" radius="lg" withBorder bg="blue.8">
           <Group wrap="nowrap" w="100%">
             <Center>
               <Avatar
@@ -240,17 +240,15 @@ export default function Page() {
               <Text opacity={0.6} size="xs">
                 @{searchResult.username}
               </Text>
-              <Badge variant="light" size="md">
-                {searchResult.type}
-              </Badge>
+              <Text size="md">{searchResult.type.toUpperCase()}</Text>
             </div>
 
             <Group gap="xs">
               <Badge
                 variant="filled"
-                color="red"
                 size="xl"
                 leftSection={<IconUsersPlus size={28} />}
+                style={{ pointerEvents: "none" }}
               >
                 {t("actions.follow")}
               </Badge>
@@ -378,9 +376,7 @@ export default function Page() {
         </Stack>
       </Card>
 
-      <Stack w="100%" pt="md">
-        {renderContent()}
-      </Stack>
+      <Stack w="100%">{renderContent()}</Stack>
     </Stack>
   );
 }
