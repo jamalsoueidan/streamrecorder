@@ -4,9 +4,9 @@
   "streamingCount": "{count, plural, zero {لا أحد يبث} one {# يبث} two {# يبثان} few {# يبثون} many {# يبث} other {# يبث}}",
   "refresh": "تحديث",
   "showAll": "عرض الكل",
-  "discoverStreamers": "اكتشف المذيعين",
+  "discoverStreamers": "اكتشف صناع المحتوى",
   "emptyState": {
-    "title": "لا توجد بثوث مباشرة بعد",
-    "description": "تظهر حالة البث المباشر للمذيعين الذين تتابعهم هنا"
+    "title": "لا توجد تسجيلات مباشرة بعد",
+    "description": "تظهر حالة البث المباشر لصناع المحتوى الذين تتابعهم هنا"
   }
 }
