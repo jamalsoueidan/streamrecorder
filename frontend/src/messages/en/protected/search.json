@@ -1,4 +1,6 @@
 {
+  "title": "Search",
+  "description": "Add your live streams from TikTok, Twitch, YouTube to your list.",
   "platforms": {
     "tiktok": "TikTok",
     "twitch": "Twitch",
@@ -8,7 +10,8 @@
     "pandalive": "PandaLive"
   },
   "search": {
-    "placeholder": "Enter @username or profile link",
+    "actionButton": "Search",
+    "placeholder": "Enter your stream URL or @username",
     "searching": "Searching on {platform}...",
     "pasteButton": "Paste",
     "pasteError": "Paste manually using Ctrl+V or long-press",
@@ -17,21 +20,21 @@
     "autoDetected": "Platform auto-detected from URL"
   },
   "hints": {
-    "tryFormats": "Try these formats:",
+    "tryFormats": "Try these examples:",
     "enterUsername": "Enter a @username or paste a profile URL"
   },
   "actions": {
-    "follow": "Follow",
-    "successTitle": "Followed!",
-    "successMessage": "You are now following {username}",
+    "follow": "Add",
+    "successTitle": "Added!",
+    "successMessage": "{username} has been added",
     "errorTitle": "Error",
     "cancel": "Cancel"
   },
-  "inputLabel": "Enter creators name or link",
+  "inputLabel": "Paste a stream link from Twitch, TikTok, or YouTube here",
   "notFollowing": {
-    "title": "You're not following this creator",
-    "description": "You tried to access a creator that's not in your following list.",
-    "followToAccess": "Follow them to see their recordings and get notified when they go live.",
+    "title": "This creator is not in your list",
+    "description": "You tried to access a creator that's not in your list.",
+    "followToAccess": "Add them to see recordings and get notified when they go live.",
     "notFoundTitle": "Creator not found",
     "notFoundDescription": "@{username} doesn't exist on {platform} or the account is private.",
     "trySearch": "Try searching for a different creator:"

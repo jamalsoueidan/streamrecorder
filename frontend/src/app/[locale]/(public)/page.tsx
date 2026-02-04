@@ -64,7 +64,7 @@ export default async function LandingPage() {
   const {
     data: { data: clips },
   } = await publicApi.clip.getRandomClips({
-    limit: 12,
+    limit: 8,
   });
 
   const jsonLd = {

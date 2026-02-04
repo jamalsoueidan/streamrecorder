@@ -6,43 +6,44 @@ import {
   UserSearchResult,
 } from "@/app/actions/check-user";
 import { follow } from "@/app/actions/followers";
-import { useKeyboardHeight } from "@/app/hooks/use-keyboard-height";
 import { trackEvent } from "@/app/lib/analytics";
 import { parseUsername } from "@/app/lib/parse-username";
 
 import {
+  ActionIcon,
   Avatar,
   Badge,
   Button,
+  Card,
   Center,
   Divider,
+  Flex,
   Group,
   Loader,
   Paper,
   SegmentedControl,
   Stack,
   Text,
+  TextInput,
+  Title,
   UnstyledButton,
   useMatches,
 } from "@mantine/core";
 import { useDebouncedValue } from "@mantine/hooks";
 import { notifications } from "@mantine/notifications";
-import { Spotlight, spotlight } from "@mantine/spotlight";
-import "@mantine/spotlight/styles.css";
 import {
   IconCheck,
   IconClipboard,
-  IconLink,
   IconSearch,
   IconUsersPlus,
+  IconX,
 } from "@tabler/icons-react";
 import { useTranslations } from "next-intl";
 import { useRouter } from "next/navigation";
 import { useActionState, useEffect, useState, useTransition } from "react";
 
-export default function AddFollowerForm() {
-  const t = useTranslations("protected.addFollowerForm");
-  const keyboardHeight = useKeyboardHeight();
+export default function Page() {
+  const t = useTranslations("protected.search");
   const router = useRouter();
   const [query, setQuery] = useState("");
   const [debouncedQuery] = useDebouncedValue(query, 500);
@@ -71,6 +72,11 @@ export default function AddFollowerForm() {
     { label: t("platforms.afreecatv"), value: "afreecatv" },
     { label: t("platforms.pandalive"), value: "pandalive" },
   ];
+
+  const isMobile = useMatches({
+    base: true,
+    sm: false,
+  });
 
   // Search for user when debounced query changes
   useEffect(() => {
@@ -124,6 +130,8 @@ export default function AddFollowerForm() {
         color: "green",
         icon: <IconCheck size={16} />,
       });
+
+      router.push(`/${state.type}/${state.username}`);
     }
 
     if (state?.error) {
@@ -133,7 +141,7 @@ export default function AddFollowerForm() {
         color: "red",
       });
     }
-  }, [searchResult?.type, state, t]);
+  }, [router, state, t]);
 
   // Handle clicking on a user result
   const handleUserSelect = (user: UserSearchResult) => {
@@ -141,7 +149,6 @@ export default function AddFollowerForm() {
       platform: searchResult?.type,
     });
 
-    spotlight.close();
     setQuery("");
     setSearchResult(null);
     setDetectedPlatform(null);
@@ -154,17 +161,16 @@ export default function AddFollowerForm() {
     startTransition(() => {
       formAction(formData);
     });
-
-    // Redirect to user page (adjust the path as needed)
-    router.push(`/${user.type}/${user.username}`);
   };
 
   // Render the search results
   const renderContent = () => {
+    if (query.trim().length === 0) return null;
+
     // Show loader while searching
     if (isSearching) {
       return (
-        <Center py="xl">
+        <Center py="md">
           <Group gap="xs">
             <Loader size="sm" />
             <Text size="sm" c="dimmed">
@@ -179,202 +185,197 @@ export default function AddFollowerForm() {
     if (!searchResult) {
       if (query.includes(" ") || query.length > 30) {
         return (
-          <Spotlight.Empty>
-            <Stack align="center" gap="xs">
-              <Text size="xs" c="dimmed">
-                {t("hints.enterUsername")}
-              </Text>
-              <Text size="xs" c="dimmed">
-                @mrbeast
-              </Text>
-              <Text size="xs" c="dimmed">
-                twitch.tv/mrbeast
-              </Text>
-              <Text size="xs" c="dimmed">
-                https://www.tiktok.com/@mrbeast
-              </Text>
-            </Stack>
-          </Spotlight.Empty>
+          <Stack align="center" gap="xs" py="md">
+            <Text size="xs" c="dimmed">
+              {t("hints.enterUsername")}
+            </Text>
+            <Text size="xs" c="dimmed">
+              @mrbeast
+            </Text>
+            <Text size="xs" c="dimmed">
+              twitch.tv/mrbeast
+            </Text>
+            <Text size="xs" c="dimmed">
+              https://www.tiktok.com/@mrbeast
+            </Text>
+          </Stack>
         );
       }
 
-      if (query.trim().length === 0) {
-        return <Spotlight.Empty></Spotlight.Empty>;
-      }
-
       if (searchError) {
-        return <Spotlight.Empty>{searchError}</Spotlight.Empty>;
+        return (
+          <Text size="sm" c="dimmed" ta="center" py="md">
+            {searchError}
+          </Text>
+        );
       }
 
-      return <Spotlight.Empty>{t("search.notFound")}</Spotlight.Empty>;
+      return (
+        <Text size="sm" c="dimmed" ta="center" py="md">
+          {t("search.notFound")}
+        </Text>
+      );
     }
 
     // Show the found user
     return (
-      <Spotlight.Action
+      <UnstyledButton
         onClick={() => handleUserSelect(searchResult)}
         disabled={isPending}
+        w="100%"
       >
-        <Group wrap="nowrap" w="100%">
-          <Center>
-            <Avatar
-              src={`/api/image/${searchResult.avatar}`}
-              alt={searchResult.nickname}
-              size={80}
-            />
-          </Center>
+        <Paper p="sm" radius="lg" withBorder bg="blue.8">
+          <Group wrap="nowrap" w="100%">
+            <Center>
+              <Avatar
+                src={`/api/image/${searchResult.avatar}`}
+                alt={searchResult.nickname}
+                size={80}
+              />
+            </Center>
 
-          <div style={{ flex: 1 }}>
-            <Text fw={500}>{searchResult.nickname}</Text>
-            <Text opacity={0.6} size="xs">
-              @{searchResult.username}
-            </Text>
-            <Badge variant="light" size="md">
-              {searchResult.type}
-            </Badge>
-          </div>
+            <div style={{ flex: 1 }}>
+              <Text fw={500}>{searchResult.nickname}</Text>
+              <Text opacity={0.6} size="xs">
+                @{searchResult.username}
+              </Text>
+              <Text size="md">{searchResult.type.toUpperCase()}</Text>
+            </div>
 
-          <Group gap="xs">
-            <Badge
-              variant="filled"
-              color="red"
-              size="xl"
-              leftSection={<IconUsersPlus size={28} />}
-            >
-              {t("actions.follow")}
-            </Badge>
+            <Group gap="xs">
+              <Badge
+                variant="filled"
+                size="xl"
+                leftSection={<IconUsersPlus size={28} />}
+                style={{ pointerEvents: "none" }}
+              >
+                {t("actions.follow")}
+              </Badge>
+            </Group>
           </Group>
-        </Group>
-      </Spotlight.Action>
+        </Paper>
+      </UnstyledButton>
     );
   };
 
-  const isMobile = useMatches({
-    base: true,
-    sm: false,
-  });
-
   return (
-    <section>
-      <Spotlight.Root
-        query={query}
-        onQueryChange={setQuery}
-        styles={{
-          content: {
-            ...(isMobile && {
-              position: "fixed",
-              bottom: keyboardHeight,
-              left: 0,
-              right: 0,
-              borderRadius: "16px 16px 0 0",
-              maxHeight: `calc(80dvh - ${keyboardHeight}px)`,
-              transition: "bottom 0.15s ease-out, max-height 0.15s ease-out",
-            }),
-          },
-        }}
+    <Stack w="100%">
+      <Group justify="space-between" w="100%">
+        <Stack gap={2}>
+          <Group gap="xs">
+            <IconSearch size={32} />
+            <Title order={1} size="h3">
+              {t("title")}
+            </Title>
+          </Group>
+          <Text size="xs" c="dimmed">
+            {t("description")}
+          </Text>
+        </Stack>
+      </Group>
+
+      <Divider mx={{ base: "-xs", sm: "-md" }} />
+
+      {query.trim().length === 0 && (
+        <Group gap="xs">
+          <Text size="xs" c="dimmed" ta="center">
+            {t("hints.tryFormats")}
+          </Text>
+          <Badge
+            variant="outline"
+            style={{ cursor: "pointer" }}
+            onClick={() => setQuery("@mrbeast")}
+          >
+            @mrbeast
+          </Badge>
+          <Badge
+            variant="outline"
+            style={{ cursor: "pointer" }}
+            onClick={() => setQuery("tiktok.com/@mrbeast")}
+          >
+            tiktok.com/@mrbeast
+          </Badge>
+        </Group>
+      )}
+
+      <Card
+        p="md"
+        radius="lg"
+        withBorder
+        bg="transparent"
+        style={{ borderWidth: "10px" }}
       >
-        {query.trim().length === 0 && (
-          <>
-            <Group justify="center" gap="xs" py="xs">
-              <Text size="xs" c="dimmed" ta="center">
-                {t("hints.tryFormats")}
-              </Text>
-
-              <Badge
-                variant="outline"
-                style={{ cursor: "pointer" }}
-                onClick={() => setQuery("@username")}
-              >
-                @mrbeast
-              </Badge>
-              <Badge
-                variant="outline"
-                style={{ cursor: "pointer" }}
-                onClick={() => setQuery("tiktok.com/@username")}
-              >
-                tiktok.com/@mrbeast
-              </Badge>
-            </Group>
-
-            <Divider />
-          </>
-        )}
-        <Spotlight.Search
-          placeholder={t("search.placeholder")}
-          leftSection={<IconSearch stroke={1.5} />}
-          rightSectionPointerEvents="auto"
-          rightSectionWidth={80}
-          rightSection={
-            <Button
-              variant="subtle"
-              size="compact-xs"
-              color="gray.6"
-              leftSection={<IconClipboard size={14} />}
-              onClick={async () => {
-                try {
-                  const text = await navigator.clipboard.readText();
-                  if (text?.trim()) {
-                    setQuery(text);
-                  }
-                } catch {
-                  notifications.show({
-                    message: t("search.pasteError"),
-                    color: "yellow",
-                  });
-                }
-              }}
-            >
-              {t("search.pasteButton")}
+        <Stack>
+          <Flex gap="md">
+            <TextInput
+              w="100%"
+              value={query}
+              c="white"
+              size="lg"
+              onChange={(e) => setQuery(e.currentTarget.value)}
+              placeholder={t("search.placeholder")}
+              rightSectionPointerEvents="auto"
+              rightSectionWidth={query.trim().length === 0 ? 100 : 42}
+              rightSection={
+                query.trim().length === 0 ? (
+                  <Button
+                    variant="subtle"
+                    size="compact-lg"
+                    color="gray.6"
+                    leftSection={<IconClipboard size={14} />}
+                    onClick={async () => {
+                      try {
+                        const text = await navigator.clipboard.readText();
+                        if (text?.trim()) {
+                          setQuery(text);
+                        }
+                      } catch {
+                        notifications.show({
+                          message: t("search.pasteError"),
+                          color: "yellow",
+                        });
+                      }
+                    }}
+                  >
+                    {t("search.pasteButton")}
+                  </Button>
+                ) : (
+                  <ActionIcon
+                    variant="subtle"
+                    size="lg"
+                    color="gray.6"
+                    onClick={async () => {
+                      setQuery("");
+                    }}
+                  >
+                    <IconX />
+                  </ActionIcon>
+                )
+              }
+            />
+            <Button variant="default" size="lg" miw="110px">
+              {t("search.actionButton")}
             </Button>
-          }
-        />
+          </Flex>
 
-        {/* Move SegmentedControl here, after Search */}
-        <Stack gap="0" p="xs">
           <SegmentedControl
             value={detectedPlatform ?? selectedPlatform}
             onChange={(value) => setSelectedPlatform(value as PlatformType)}
             disabled={detectedPlatform !== null}
             data={data}
             fullWidth
-            size={isMobile ? "xs" : "sm"}
+            size={isMobile ? "xs" : "md"}
           />
+
           {detectedPlatform && (
-            <Text size="xs" c="dimmed" ta="center" my="xs">
+            <Text size="xs" c="dimmed" ta="center">
               {t("search.autoDetected")}
             </Text>
           )}
         </Stack>
+      </Card>
 
-        <Spotlight.ActionsList
-          display={query.trim().length === 0 ? "none" : "block"}
-        >
-          {renderContent()}
-        </Spotlight.ActionsList>
-      </Spotlight.Root>
-
-      <UnstyledButton
-        onClick={() => {
-          trackEvent("open-follow-search");
-          spotlight.open();
-        }}
-        w="100%"
-      >
-        <Paper
-          p="sm"
-          radius="md"
-          style={{
-            cursor: "pointer",
-            border: "1px solid gold",
-            animation: "glow 1.5s ease-in-out 3 forwards",
-          }}
-        >
-          <Group>
-            <IconLink size={24} color="gray" />
-            <Text c="gray.3">{t("inputLabel")}</Text>
-          </Group>
-        </Paper>
-      </UnstyledButton>
-    </section>
+      <Stack w="100%">{renderContent()}</Stack>
+    </Stack>
   );
 }

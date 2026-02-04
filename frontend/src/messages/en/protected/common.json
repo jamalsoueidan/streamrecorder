@@ -1,20 +1,20 @@
 {
   "follow": {
-    "tooltip": "Add Follower",
-    "successTitle": "Followed!",
-    "successMessage": "You are now following {username}",
+    "tooltip": "Add Creator",
+    "successTitle": "Added!",
+    "successMessage": "{username} has been added",
     "errorTitle": "Error"
   },
   "unfollow": {
-    "tooltip": "Remove Follower",
-    "successTitle": "Unfollowed",
-    "successMessage": "You unfollowed {username}",
-    "successMessageGeneric": "Successfully unfollowed"
+    "tooltip": "Remove Creator",
+    "successTitle": "Removed",
+    "successMessage": "You removed {username}",
+    "successMessageGeneric": "Successfully removed"
   },
   "scopeFilter": {
     "label": "Filter:",
-    "following": "Following",
-    "discover": "Discover",
+    "following": "My Recordings",
+    "discover": "Friends",
     "all": "All"
   },
   "recordings": {
@@ -25,10 +25,10 @@
     "recordCount": "REC {count}",
     "newRecording": "New",
     "videoCount": "{count, plural, one {# video} other {# videos}}",
-    "noRecordings": "No more recordings to load."
+    "noRecordings": "You've reached the end"
   },
   "followers": {
-    "addedAgo_context": "For when a creator/follower was added to user's list. Shows 'Added 3 days ago'",
+    "addedAgo_context": "For when a creator was added to user's list. Shows 'Added 3 days ago'",
     "addedAgo": "Added {time}"
   },
   "newest": "Newest",

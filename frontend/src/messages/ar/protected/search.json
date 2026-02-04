@@ -1,4 +1,6 @@
 {
+  "title": "بحث",
+  "description": "أضف بثوثك المباشرة من تيك توك، تويتش، يوتيوب إلى قائمتك.",
   "platforms": {
     "tiktok": "تيك توك",
     "twitch": "تويتش",
@@ -8,7 +10,8 @@
     "pandalive": "باندا لايف"
   },
   "search": {
-    "placeholder": "أدخل @اسم_المستخدم أو رابط الملف الشخصي",
+    "actionButton": "ابحث",
+    "placeholder": "ابحث...",
     "searching": "جاري البحث في {platform}...",
     "pasteButton": "لصق",
     "pasteError": "الصق يدوياً باستخدام Ctrl+V أو الضغط المطول",
@@ -17,21 +20,21 @@
     "autoDetected": "تم اكتشاف المنصة تلقائياً من الرابط"
   },
   "hints": {
-    "tryFormats": "جرب هذه الصيغ:",
+    "tryFormats": "جرب هذه الأمثلة:",
     "enterUsername": "أدخل @اسم_المستخدم أو الصق رابط الملف الشخصي"
   },
   "actions": {
-    "follow": "متابعة",
-    "successTitle": "تمت المتابعة!",
-    "successMessage": "أنت الآن تتابع {username}",
+    "follow": "إضافة",
+    "successTitle": "تمت الإضافة!",
+    "successMessage": "تمت إضافة {username}",
     "errorTitle": "خطأ",
     "cancel": "إلغاء"
   },
-  "inputLabel": "أدخل اسم صانع المحتوى أو الرابط",
+  "inputLabel": "ضع رابط بث من تويتش أو تيك توك أو يوتيوب هنا",
   "notFollowing": {
-    "title": "أنت لا تتابع صانع المحتوى هذا",
-    "description": "حاولت الوصول إلى صانع محتوى غير موجود في قائمة متابعاتك.",
-    "followToAccess": "تابعه لمشاهدة تسجيلاته والحصول على إشعارات عندما يبدأ البث المباشر.",
+    "title": "صانع المحتوى هذا ليس في قائمتك",
+    "description": "حاولت الوصول إلى صانع محتوى غير موجود في قائمتك.",
+    "followToAccess": "أضفه لمشاهدة التسجيلات والحصول على إشعارات عند البث المباشر.",
     "notFoundTitle": "صانع المحتوى غير موجود",
     "notFoundDescription": "@{username} غير موجود على {platform} أو الحساب خاص.",
     "trySearch": "جرب البحث عن صانع محتوى آخر:"

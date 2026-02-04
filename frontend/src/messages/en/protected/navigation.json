@@ -1,18 +1,19 @@
 {
   "sections": {
-    "recordings": "Recordings",
-    "creators": "Creators"
+    "studio": "Studio",
+    "community": "Community"
   },
   "links": {
-    "explore": "Explore",
-    "following": "Following",
+    "myRecordings": "My Recordings",
+    "myList": "My List",
     "live": "Live",
-    "discover": "Discover",
-    "myList": "My List"
+    "explore": "Explore",
+    "friends": "Friends"
   },
   "actions": {
     "logout": "Logout",
     "addCreator": "Add Creator",
+    "search": "Enter your stream URL",
     "installApp": "Install App",
     "more": "More",
     "language": "Language"
