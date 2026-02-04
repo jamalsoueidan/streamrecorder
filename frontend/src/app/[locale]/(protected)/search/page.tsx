@@ -353,9 +353,6 @@ export default function Page() {
                 )
               }
             />
-            <Button variant="default" size="lg" miw="110px">
-              {t("search.actionButton")}
-            </Button>
           </Flex>
 
           <SegmentedControl
