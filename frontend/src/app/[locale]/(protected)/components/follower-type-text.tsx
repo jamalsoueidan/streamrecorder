@@ -10,7 +10,7 @@ type FollowerTypeTextProps = {
 } & ImageProps;
 
 export const FollowerTypeText = ({ type, ...props }: FollowerTypeTextProps) => {
-  const t = useTranslations("protected.addFollowerForm");
+  const t = useTranslations("protected.search");
 
   const platform = streamingPlatforms.find(
     (p) => p.name.toLowerCase() === type?.toLowerCase(),
