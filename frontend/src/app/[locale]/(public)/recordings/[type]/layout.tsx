@@ -1,6 +1,7 @@
 import { streamingPlatforms } from "@/app/lib/streaming-platforms";
 import { Button, Container, Paper, Stack, Text, Title } from "@mantine/core";
 import { getTranslations } from "next-intl/server";
+import Image from "next/image";
 import Markdown from "react-markdown";
 import { PlatformBadges } from "../../components/platform-badge";
 
@@ -28,6 +29,25 @@ export default async function RecordingPage({ params, children }: PageProps) {
 
   return (
     <Container size="lg">
+      <div
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: 700,
+          zIndex: 0,
+          pointerEvents: "none",
+        }}
+      >
+        <Image
+          src="/recordings.svg"
+          alt="background"
+          fill
+          priority
+          style={{ objectFit: "cover" }}
+        />
+      </div>
       <Stack align="center" gap={24} mb={60}>
         <Title
           order={1}

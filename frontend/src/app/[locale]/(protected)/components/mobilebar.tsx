@@ -7,6 +7,7 @@ import * as Sentry from "@sentry/nextjs";
 import {
   IconDotsVertical,
   IconDownload,
+  IconLink,
   IconLogout,
   IconPlayerPlayFilled,
   IconUser,
@@ -59,7 +60,7 @@ export function MobileBar() {
         label: (
           <Menu position="top-start" offset={15}>
             <Menu.Target>
-              <Stack gap={0} align="center">
+              <Stack gap={2} align="center">
                 <Icon
                   {...iconProps}
                   style={{ width: "18px", height: "18px" }}
@@ -102,15 +103,29 @@ export function MobileBar() {
       fullWidth
       value={currentValue}
       onChange={handleChange}
-      styles={{ label: { height: 52 } }}
+      styles={{ label: { height: 54 } }}
       data={[
         ...links,
+        {
+          value: "search",
+          label: (
+            <Stack gap={2} align="center">
+              <IconLink
+                {...iconProps}
+                style={{ width: "18px", height: "18px" }}
+              />
+              <Text c="dimmed" size="xs">
+                {t("actions.search")}
+              </Text>
+            </Stack>
+          ),
+        },
         {
           value: "menu",
           label: (
             <Menu offset={15} position="top-start">
               <Menu.Target>
-                <Stack gap={0} align="center">
+                <Stack gap={2} align="center">
                   <IconDotsVertical
                     {...iconProps}
                     style={{ width: "18px", height: "18px" }}
@@ -134,15 +149,16 @@ export function MobileBar() {
 
                 {/* Only show if install is available (not null) */}
                 {install && (
-                  <Menu.Item
-                    leftSection={<IconDownload size={16} />}
-                    onClick={install}
-                  >
-                    {t("actions.installApp")}
-                  </Menu.Item>
+                  <>
+                    <Menu.Item
+                      leftSection={<IconDownload size={16} />}
+                      onClick={install}
+                    >
+                      {t("actions.installApp")}
+                    </Menu.Item>
+                    <Menu.Divider />
+                  </>
                 )}
-
-                <Menu.Divider />
 
                 <Menu.Sub openDelay={120} closeDelay={150}>
                   <Menu.Sub.Target>
