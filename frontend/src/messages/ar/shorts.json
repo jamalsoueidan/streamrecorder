@@ -4,7 +4,7 @@
     "defaultDescription": "شاهد فيديوهات قصيرة من صناع المحتوى المفضلين لديك",
     "title": "{title} - {creatorName} | فيديوهات قصيرة",
     "description": "شاهد هذا الفيديو القصير ({duration}) لـ {creatorName} على {platform}",
-    "keywords": "{creatorName}, فيديوهات قصيرة, كليبات, {platform}, بث مباشر"
+    "keywords": "{creatorName}, فيديوهات قصيرة, مقاطع, {platform}, بث مباشر"
   },
   "jsonLd": {
     "name": "فيديو قصير لـ {creatorName} - {createdDate}",
