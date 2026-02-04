@@ -140,7 +140,6 @@ export function Navbar({
     <nav className={classes.navbar}>
       <div className={classes.navbarMain}>
         <Divider my="4px" color="transparent" />
-
         <Link
           href="/search"
           style={{ textDecoration: "none" }}
@@ -152,7 +151,11 @@ export function Navbar({
             style={{
               cursor: "pointer",
               border: "1px solid gold",
-              animation: "glow 1.5s ease-in-out 3 forwards",
+              ...(pathname.includes("/search")
+                ? {}
+                : {
+                    animation: "glow 2s ease-in-out 2 forwards",
+                  }),
             }}
           >
             <Group>
