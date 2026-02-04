@@ -1,10 +1,19 @@
 "use client";
 
-import { Button, Divider, Group, Menu, Stack, Text } from "@mantine/core";
+import {
+  Button,
+  Divider,
+  Group,
+  Menu,
+  Paper,
+  Stack,
+  Text,
+} from "@mantine/core";
 import {
   IconArrowDown,
   IconBrandSafari,
   IconHeart,
+  IconLink,
   IconLogout,
   IconPlayerRecordFilled,
   IconUsers,
@@ -22,25 +31,24 @@ import { useUser } from "@/app/providers/user-provider";
 import * as Sentry from "@sentry/nextjs";
 import { useLocale, useTranslations } from "next-intl";
 import { navConfig } from "../../(public)/components/nav";
-import AddFollowerForm from "./add-follower-form";
 import classes from "./navbar.module.css";
 import { RoleBadge } from "./role-badge";
 
 export const navigation = [
   {
-    titleKey: "sections.recordings",
+    titleKey: "sections.studio",
     icon: IconVideo,
     links: [
       {
-        labelKey: "links.explore",
-        url: "/explore",
-        icon: IconBrandSafari,
+        labelKey: "links.myRecordings",
+        url: "/following",
+        icon: IconVideo,
         color: null,
       },
       {
-        labelKey: "links.following",
-        url: "/following",
-        icon: IconUsers,
+        labelKey: "links.myList",
+        url: "/my-list",
+        icon: IconHeart,
         color: null,
       },
       {
@@ -52,19 +60,19 @@ export const navigation = [
     ],
   },
   {
-    titleKey: "sections.creators",
+    titleKey: "sections.community",
     icon: IconUsers,
     links: [
       {
-        labelKey: "links.discover",
-        url: "/discover",
-        icon: IconWorldSearch,
+        labelKey: "links.explore",
+        url: "/explore",
+        icon: IconBrandSafari,
         color: null,
       },
       {
-        labelKey: "links.myList",
-        url: "/my-list",
-        icon: IconHeart,
+        labelKey: "links.friends",
+        url: "/discover",
+        icon: IconWorldSearch,
         color: null,
       },
     ],
@@ -132,7 +140,27 @@ export function Navbar({
     <nav className={classes.navbar}>
       <div className={classes.navbarMain}>
         <Divider my="4px" color="transparent" />
-        <AddFollowerForm />
+
+        <Link
+          href="/search"
+          style={{ textDecoration: "none" }}
+          onClick={(e) => handleLinkClick(e, "/search")}
+        >
+          <Paper
+            p="sm"
+            radius="md"
+            style={{
+              cursor: "pointer",
+              border: "1px solid gold",
+              animation: "glow 1.5s ease-in-out 3 forwards",
+            }}
+          >
+            <Group>
+              <IconLink size={24} color="gray" />
+              <Text c="gray.3">{t("actions.search")}</Text>
+            </Group>
+          </Paper>
+        </Link>
 
         <Divider my="xs" color="transparent" />
         <Stack>{links}</Stack>

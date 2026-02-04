@@ -3,7 +3,6 @@
 import { useChangeLanguage } from "@/app/hooks/use-change-language";
 import { useUser } from "@/app/providers/user-provider";
 import { Menu, SegmentedControl, Stack, Text } from "@mantine/core";
-import { spotlight } from "@mantine/spotlight";
 import * as Sentry from "@sentry/nextjs";
 import {
   IconDotsVertical,
@@ -11,7 +10,6 @@ import {
   IconLogout,
   IconPlayerPlayFilled,
   IconUser,
-  IconUserPlus,
   IconWorldSearch,
 } from "@tabler/icons-react";
 import { useLocale, useTranslations } from "next-intl";
@@ -61,7 +59,7 @@ export function MobileBar() {
         label: (
           <Menu position="top-start" offset={15}>
             <Menu.Target>
-              <Stack gap={4} align="center">
+              <Stack gap={0} align="center">
                 <Icon
                   {...iconProps}
                   style={{ width: "18px", height: "18px" }}
@@ -104,6 +102,7 @@ export function MobileBar() {
       fullWidth
       value={currentValue}
       onChange={handleChange}
+      styles={{ label: { height: 52 } }}
       data={[
         ...links,
         {
@@ -111,7 +110,7 @@ export function MobileBar() {
           label: (
             <Menu offset={15} position="top-start">
               <Menu.Target>
-                <Stack gap={4} align="center">
+                <Stack gap={0} align="center">
                   <IconDotsVertical
                     {...iconProps}
                     style={{ width: "18px", height: "18px" }}
@@ -132,13 +131,6 @@ export function MobileBar() {
                 </Menu.Label>
 
                 <Menu.Divider />
-
-                <Menu.Item
-                  leftSection={<IconUserPlus size={16} />}
-                  onClick={() => spotlight.open()}
-                >
-                  {t("actions.addCreator")}
-                </Menu.Item>
 
                 {/* Only show if install is available (not null) */}
                 {install && (

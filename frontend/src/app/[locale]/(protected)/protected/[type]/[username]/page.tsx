@@ -53,7 +53,7 @@ export default async function Page({ params, searchParams }: PageProps) {
   const follower = await getFollower({ username, type });
 
   if (!follower) {
-    redirect(`/add-follower?username=${username}&type=${type}`);
+    redirect(`/search?username=${username}&type=${type}`);
   }
 
   const queryClient = new QueryClient();

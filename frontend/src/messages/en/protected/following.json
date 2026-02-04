@@ -1,13 +1,13 @@
 {
-  "title": "Following",
-  "description": "Recordings from creators you follow",
+  "title": "My Recordings",
+  "description": "Recordings from your creators",
   "emptyFiltered": {
     "title": "No recordings match your filters",
     "description": "Try adjusting or clearing your filters"
   },
   "emptyDefault": {
-    "title": "Your followers have not made a recording yet",
-    "description": "Switch to Discover to find more creators to follow"
+    "title": "No recordings yet",
+    "description": "Your recordings will appear here once you add a creator"
   },
-  "noMoreToLoad": "No more to load"
+  "noMoreToLoad": "You've reached the end"
 }
