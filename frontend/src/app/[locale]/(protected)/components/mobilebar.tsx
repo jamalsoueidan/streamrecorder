@@ -46,6 +46,8 @@ export function MobileBar() {
   };
 
   const currentValue = (() => {
+    if (pathname.startsWith("/search")) return "search";
+
     const section = navigation.find((section) =>
       section.links?.some((link) => pathname.startsWith(link.url || "")),
     );

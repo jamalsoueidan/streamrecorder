@@ -217,7 +217,6 @@ export default function Page() {
       );
     }
 
-    // Show the found user
     return (
       <UnstyledButton
         onClick={() => handleUserSelect(searchResult)}
@@ -276,34 +275,11 @@ export default function Page() {
 
       <Divider mx={{ base: "-xs", sm: "-md" }} />
 
-      {query.trim().length === 0 && (
-        <Group gap="xs">
-          <Text size="xs" c="dimmed" ta="center">
-            {t("hints.tryFormats")}
-          </Text>
-          <Badge
-            variant="outline"
-            style={{ cursor: "pointer" }}
-            onClick={() => setQuery("@mrbeast")}
-          >
-            @mrbeast
-          </Badge>
-          <Badge
-            variant="outline"
-            style={{ cursor: "pointer" }}
-            onClick={() => setQuery("tiktok.com/@mrbeast")}
-          >
-            tiktok.com/@mrbeast
-          </Badge>
-        </Group>
-      )}
-
       <Card
-        p="md"
+        p={{ base: "xs", sm: "lg" }}
         radius="lg"
         withBorder
         bg="transparent"
-        style={{ borderWidth: "10px" }}
       >
         <Stack>
           <Flex gap="md">
@@ -312,6 +288,8 @@ export default function Page() {
               value={query}
               c="white"
               size="lg"
+              radius="lg"
+              autoFocus
               onChange={(e) => setQuery(e.currentTarget.value)}
               placeholder={t("search.placeholder")}
               rightSectionPointerEvents="auto"
@@ -343,9 +321,11 @@ export default function Page() {
                   <ActionIcon
                     variant="subtle"
                     size="lg"
+                    radius="xl"
                     color="gray.6"
                     onClick={async () => {
                       setQuery("");
+                      setSelectedPlatform("tiktok");
                     }}
                   >
                     <IconX />
@@ -354,6 +334,29 @@ export default function Page() {
               }
             />
           </Flex>
+
+          <Group gap="xs">
+            <Text size="xs" c="dimmed" ta="center">
+              {t("hints.tryFormats")}
+            </Text>
+            <Badge
+              variant="outline"
+              style={{ cursor: "pointer" }}
+              onClick={() => {
+                setSelectedPlatform("twitch");
+                setQuery("chocotaco");
+              }}
+            >
+              chocotaco
+            </Badge>
+            <Badge
+              variant="outline"
+              style={{ cursor: "pointer" }}
+              onClick={() => setQuery("https://www.tiktok.com/@mrbeast")}
+            >
+              https://www.tiktok.com/@mrbeast
+            </Badge>
+          </Group>
 
           <SegmentedControl
             value={detectedPlatform ?? selectedPlatform}
