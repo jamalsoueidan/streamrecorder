@@ -1,0 +1,233 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 600" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <!-- Warmer, more inviting glow -->
+    <radialGradient id="glowTop" cx="50%" cy="30%" r="60%">
+      <stop offset="0%" style="stop-color:#a855f7;stop-opacity:0.20"/>
+      <stop offset="60%" style="stop-color:#a855f7;stop-opacity:0.06"/>
+      <stop offset="100%" style="stop-color:#a855f7;stop-opacity:0"/>
+    </radialGradient>
+
+    <radialGradient id="glowTop2" cx="50%" cy="30%" r="50%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:0.14"/>
+      <stop offset="70%" style="stop-color:#6366f1;stop-opacity:0.04"/>
+      <stop offset="100%" style="stop-color:#6366f1;stop-opacity:0"/>
+    </radialGradient>
+
+    <!-- Golden accent glow for premium feel -->
+    <radialGradient id="glowGold" cx="50%" cy="25%" r="45%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:0.08"/>
+      <stop offset="60%" style="stop-color:#f59e0b;stop-opacity:0.02"/>
+      <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:0"/>
+    </radialGradient>
+
+    <!-- 4-point star/sparkle -->
+    <symbol id="sparkle" viewBox="0 0 24 24">
+      <path d="M12 2 L14 9 L21 12 L14 15 L12 22 L10 15 L3 12 L10 9 Z" fill="currentColor"/>
+    </symbol>
+
+    <!-- Small diamond -->
+    <symbol id="diamond" viewBox="0 0 24 24">
+      <path d="M12 2 L18 12 L12 22 L6 12 Z" fill="currentColor"/>
+    </symbol>
+
+    <!-- Crown/premium symbol -->
+    <symbol id="crown" viewBox="0 0 24 24">
+      <path d="M2 18 L4 8 L8 12 L12 4 L16 12 L20 8 L22 18 Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+      <rect x="2" y="18" width="20" height="3" rx="1" fill="currentColor" opacity="0.4"/>
+    </symbol>
+
+    <!-- Check/badge -->
+    <symbol id="badge" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.5"/>
+      <path d="M8 12 L11 15 L17 9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+  </defs>
+
+  <!-- Background glows -->
+  <ellipse cx="25%" cy="25%" rx="500" ry="350" fill="url(#glowTop)"/>
+  <ellipse cx="75%" cy="20%" rx="450" ry="300" fill="url(#glowTop2)"/>
+  <ellipse cx="50%" cy="30%" rx="500" ry="300" fill="url(#glowGold)"/>
+
+  <!-- === RISING SPARKLES - float upward for aspirational feel === -->
+
+  <!-- Top row - brightest sparkles -->
+  <g opacity="0.65" color="#f59e0b">
+    <use href="#sparkle" x="7%" y="8%" width="18" height="18">
+      <animate attributeName="y" values="8%;5%;11%;8%" dur="7s" repeatCount="indefinite"/>
+    </use>
+    <animate attributeName="opacity" values="0.65;0.9;0.65" dur="3s" repeatCount="indefinite"/>
+  </g>
+
+  <g opacity="0.55" color="#a855f7">
+    <use href="#diamond" x="19%" y="10%" width="14" height="14">
+      <animate attributeName="y" values="10%;7%;13%;10%" dur="8s" repeatCount="indefinite"/>
+    </use>
+  </g>
+
+  <g opacity="0.5" color="#6366f1">
+    <use href="#sparkle" x="32%" y="6%" width="20" height="20">
+      <animate attributeName="y" values="6%;3%;9%;6%" dur="6s" repeatCount="indefinite"/>
+    </use>
+  </g>
+
+  <g opacity="0.6" color="#f59e0b">
+    <use href="#crown" x="46%" y="4%" width="28" height="28">
+      <animate attributeName="y" values="4%;1%;7%;4%" dur="9s" repeatCount="indefinite"/>
+    </use>
+    <animate attributeName="opacity" values="0.6;0.8;0.6" dur="4s" repeatCount="indefinite"/>
+  </g>
+
+  <g opacity="0.5" color="#a855f7">
+    <use href="#sparkle" x="60%" y="9%" width="16" height="16">
+      <animate attributeName="y" values="9%;6%;12%;9%" dur="7s" repeatCount="indefinite"/>
+    </use>
+  </g>
+
+  <g opacity="0.55" color="#6366f1">
+    <use href="#badge" x="74%" y="7%" width="22" height="22">
+      <animate attributeName="y" values="7%;4%;10%;7%" dur="8s" repeatCount="indefinite"/>
+    </use>
+  </g>
+
+  <g opacity="0.5" color="#f59e0b">
+    <use href="#sparkle" x="88%" y="10%" width="18" height="18">
+      <animate attributeName="y" values="10%;7%;13%;10%" dur="6s" repeatCount="indefinite"/>
+    </use>
+    <animate attributeName="opacity" values="0.5;0.75;0.5" dur="3.5s" repeatCount="indefinite"/>
+  </g>
+
+  <!-- Second row -->
+  <g opacity="0.45" color="#a855f7">
+    <use href="#sparkle" x="4%" y="24%" width="16" height="16">
+      <animate attributeName="y" values="24%;21%;27%;24%" dur="8s" repeatCount="indefinite"/>
+    </use>
+  </g>
+
+  <g opacity="0.4" color="#f59e0b">
+    <use href="#diamond" x="15%" y="22%" width="12" height="12">
+      <animate attributeName="y" values="22%;19%;25%;22%" dur="6s" repeatCount="indefinite"/>
+    </use>
+    <animate attributeName="opacity" values="0.4;0.65;0.4" dur="2.5s" repeatCount="indefinite"/>
+  </g>
+
+  <g opacity="0.35" color="#6366f1">
+    <use href="#badge" x="28%" y="28%" width="20" height="20">
+      <animate attributeName="y" values="28%;25%;31%;28%" dur="9s" repeatCount="indefinite"/>
+    </use>
+  </g>
+
+  <g opacity="0.4" color="#a855f7">
+    <use href="#sparkle" x="42%" y="24%" width="18" height="18">
+      <animate attributeName="y" values="24%;21%;27%;24%" dur="7s" repeatCount="indefinite"/>
+    </use>
+  </g>
+
+  <g opacity="0.45" color="#f59e0b">
+    <use href="#crown" x="56%" y="20%" width="24" height="24">
+      <animate attributeName="y" values="20%;17%;23%;20%" dur="10s" repeatCount="indefinite"/>
+    </use>
+  </g>
+
+  <g opacity="0.35" color="#6366f1">
+    <use href="#sparkle" x="70%" y="26%" width="14" height="14">
+      <animate attributeName="y" values="26%;23%;29%;26%" dur="6s" repeatCount="indefinite"/>
+    </use>
+  </g>
+
+  <g opacity="0.4" color="#a855f7">
+    <use href="#diamond" x="82%" y="22%" width="12" height="12">
+      <animate attributeName="y" values="22%;19%;25%;22%" dur="8s" repeatCount="indefinite"/>
+    </use>
+  </g>
+
+  <g opacity="0.35" color="#f59e0b">
+    <use href="#sparkle" x="94%" y="26%" width="16" height="16">
+      <animate attributeName="y" values="26%;23%;29%;26%" dur="7s" repeatCount="indefinite"/>
+    </use>
+    <animate attributeName="opacity" values="0.35;0.55;0.35" dur="3s" repeatCount="indefinite"/>
+  </g>
+
+  <!-- Third row - fainter -->
+  <g opacity="0.28" color="#f59e0b">
+    <use href="#sparkle" x="10%" y="40%" width="14" height="14">
+      <animate attributeName="y" values="40%;37%;43%;40%" dur="9s" repeatCount="indefinite"/>
+    </use>
+  </g>
+
+  <g opacity="0.22" color="#6366f1">
+    <use href="#diamond" x="24%" y="38%" width="10" height="10">
+      <animate attributeName="y" values="38%;35%;41%;38%" dur="7s" repeatCount="indefinite"/>
+    </use>
+  </g>
+
+  <g opacity="0.28" color="#a855f7">
+    <use href="#badge" x="38%" y="42%" width="18" height="18">
+      <animate attributeName="y" values="42%;39%;45%;42%" dur="8s" repeatCount="indefinite"/>
+    </use>
+  </g>
+
+  <g opacity="0.25" color="#f59e0b">
+    <use href="#sparkle" x="54%" y="38%" width="16" height="16">
+      <animate attributeName="y" values="38%;35%;41%;38%" dur="6s" repeatCount="indefinite"/>
+    </use>
+    <animate attributeName="opacity" values="0.25;0.4;0.25" dur="2s" repeatCount="indefinite"/>
+  </g>
+
+  <g opacity="0.22" color="#6366f1">
+    <use href="#sparkle" x="68%" y="40%" width="12" height="12">
+      <animate attributeName="y" values="40%;37%;43%;40%" dur="10s" repeatCount="indefinite"/>
+    </use>
+  </g>
+
+  <g opacity="0.25" color="#a855f7">
+    <use href="#crown" x="82%" y="36%" width="20" height="20">
+      <animate attributeName="y" values="36%;33%;39%;36%" dur="8s" repeatCount="indefinite"/>
+    </use>
+  </g>
+
+  <!-- Bottom area - very faint -->
+  <g opacity="0.12" color="#f59e0b">
+    <use href="#sparkle" x="18%" y="56%" width="12" height="12">
+      <animate attributeName="y" values="56%;53%;59%;56%" dur="10s" repeatCount="indefinite"/>
+    </use>
+  </g>
+
+  <g opacity="0.1" color="#a855f7">
+    <use href="#diamond" x="48%" y="54%" width="10" height="10">
+      <animate attributeName="y" values="54%;51%;57%;54%" dur="8s" repeatCount="indefinite"/>
+    </use>
+  </g>
+
+  <g opacity="0.08" color="#6366f1">
+    <use href="#sparkle" x="76%" y="52%" width="12" height="12">
+      <animate attributeName="y" values="52%;49%;55%;52%" dur="9s" repeatCount="indefinite"/>
+    </use>
+  </g>
+
+  <!-- Twinkling dot particles for extra magic -->
+  <circle cx="12%" cy="14%" r="2" fill="#f59e0b" opacity="0.5">
+    <animate attributeName="opacity" values="0.5;0.9;0.5" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="14%;11%;17%;14%" dur="6s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="35%" cy="16%" r="1.5" fill="#a855f7" opacity="0.4">
+    <animate attributeName="cy" values="16%;13%;19%;16%" dur="5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="52%" cy="15%" r="2" fill="#f59e0b" opacity="0.45">
+    <animate attributeName="opacity" values="0.45;0.8;0.45" dur="1.8s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="15%;12%;18%;15%" dur="7s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="78%" cy="16%" r="1.5" fill="#6366f1" opacity="0.4">
+    <animate attributeName="cy" values="16%;13%;19%;16%" dur="6s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="90%" cy="18%" r="2" fill="#f59e0b" opacity="0.4">
+    <animate attributeName="opacity" values="0.4;0.7;0.4" dur="2.2s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="18%;15%;21%;18%" dur="8s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="44%" cy="32%" r="1" fill="#f59e0b" opacity="0.35">
+    <animate attributeName="opacity" values="0.35;0.6;0.35" dur="1.5s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="32%;29%;35%;32%" dur="5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="65%" cy="34%" r="1.5" fill="#a855f7" opacity="0.3">
+    <animate attributeName="cy" values="34%;31%;37%;34%" dur="7s" repeatCount="indefinite"/>
+  </circle>
+</svg>
