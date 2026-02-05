@@ -21,6 +21,7 @@ import {
   IconDownload,
   IconEye,
   IconEyeOff,
+  IconGif,
   IconLanguage,
   IconMessageStar,
   IconSearch,
@@ -68,6 +69,11 @@ const PLANS = [
       {
         icon: IconSparkles,
         text: "AI highlights & best moments",
+        included: false,
+      },
+      {
+        icon: IconGif,
+        text: "AI meme & GIF creator",
         included: false,
       },
       {
@@ -137,6 +143,11 @@ const PLANS = [
         included: false,
       },
       {
+        icon: IconGif,
+        text: "AI meme & GIF creator",
+        included: false,
+      },
+      {
         icon: IconLanguage,
         text: "AI subtitles & translation",
         included: false,
@@ -190,6 +201,11 @@ const PLANS = [
       {
         icon: IconSparkles,
         text: "AI highlights & best moments",
+        included: true,
+      },
+      {
+        icon: IconGif,
+        text: "AI meme & GIF creator",
         included: true,
       },
       {
