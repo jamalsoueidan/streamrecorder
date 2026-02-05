@@ -31,6 +31,7 @@ import {
   IconVideo,
   IconX,
 } from "@tabler/icons-react";
+import Image from "next/image";
 import { useState } from "react";
 
 const PLANS = [
@@ -266,7 +267,26 @@ export default function PricingPage() {
   const [billing, setBilling] = useState("monthly");
 
   return (
-    <Container size="xl" style={{ position: "relative", zIndex: 1 }}>
+    <Container size="xl">
+      <div
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: 700,
+          zIndex: 0,
+          pointerEvents: "none",
+        }}
+      >
+        <Image
+          src="/pricing.svg"
+          alt="background"
+          fill
+          priority
+          style={{ objectFit: "cover" }}
+        />
+      </div>
       <Stack gap={48}>
         {/* Header */}
         <Stack align="center" gap={16} mb={8}>
@@ -285,12 +305,12 @@ export default function PricingPage() {
               paddingBottom: "0.1em",
             }}
           >
-            Simple, Transparent Pricing
+            Pricing
           </Title>
           <Text
             size="lg"
             ta="center"
-            style={{ color: "#94a3b8", maxWidth: 500 }}
+            style={{ color: "#94a3b8", maxWidth: 400 }}
           >
             Start recording for free. Upgrade for full control over your content
             and powerful AI tools.
