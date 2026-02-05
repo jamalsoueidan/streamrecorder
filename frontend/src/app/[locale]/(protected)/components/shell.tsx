@@ -1,5 +1,6 @@
 "use client";
 
+import { IsNewProvider } from "@/app/providers/is-new-provider";
 import { AppShell, useMatches } from "@mantine/core";
 import { useDisclosure, useMounted } from "@mantine/hooks";
 import { MobileBar } from "./mobilebar";
@@ -40,7 +41,9 @@ export function Shell({ children }: { children: React.ReactNode }) {
       <AppShell.Navbar>
         <Navbar opened={opened} close={close} />
       </AppShell.Navbar>
-      <AppShell.Main>{children}</AppShell.Main>
+      <AppShell.Main>
+        <IsNewProvider>{children}</IsNewProvider>
+      </AppShell.Main>
       <AppShell.Footer>
         <MobileBar />
       </AppShell.Footer>
