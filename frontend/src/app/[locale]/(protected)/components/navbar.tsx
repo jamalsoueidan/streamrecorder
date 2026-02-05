@@ -1,18 +1,17 @@
 "use client";
 
 import {
-  Button,
   Divider,
-  Group,
+  Flex,
   Menu,
-  Paper,
   Stack,
   Text,
+  UnstyledButton,
 } from "@mantine/core";
 import {
-  IconArrowDown,
   IconBrandSafari,
-  IconHeart,
+  IconBrowser,
+  IconDots,
   IconLink,
   IconLogout,
   IconPlayerRecordFilled,
@@ -48,7 +47,7 @@ export const navigation = [
       {
         labelKey: "links.myList",
         url: "/my-list",
-        icon: IconHeart,
+        icon: IconBrowser,
         color: null,
       },
       {
@@ -103,121 +102,107 @@ export function Navbar({
   };
 
   const links = navigation?.map((section) => {
-    const html = section.links?.map((item) => {
+    return section.links?.map((item) => {
       const Icon = item.icon || IconPlayerRecordFilled;
       return (
-        <Link
-          className={classes.link}
+        <UnstyledButton
+          component={Link}
           data-active={pathname.startsWith(item.url || "") || undefined}
           key={item.labelKey}
           href={item.url || "#"}
+          className={classes.link}
           onClick={(e) => handleLinkClick(e, item.url || "#")}
         >
-          <Group gap="xs">
+          <Stack gap="2px" justify="center" align="center">
             <Icon
-              className={classes.linkIcon}
               stroke={2}
-              style={{ width: "28px", height: "28px" }}
+              style={{ width: "24px", height: "24px" }}
               color={item.color ? item.color : undefined}
             />
-            <span>{t(item.labelKey)}</span>
-          </Group>
-        </Link>
+            <Text size="md">{t(item.labelKey)}</Text>
+          </Stack>
+        </UnstyledButton>
       );
     });
-
-    return (
-      <div key={section.titleKey}>
-        <Text size="md" fw={400} c="dimmed" mb="xs">
-          {t(section.titleKey)}
-        </Text>
-        {html}
-      </div>
-    );
   });
 
   return (
-    <nav className={classes.navbar}>
-      <div className={classes.navbarMain}>
-        <Divider my="4px" color="transparent" />
-        <Link
-          href="/search"
-          style={{ textDecoration: "none" }}
-          onClick={(e) => handleLinkClick(e, "/search")}
-        >
-          <Paper
-            p="sm"
-            radius="md"
-            style={{
-              cursor: "pointer",
-              border: "1px solid gold",
-              ...(pathname.includes("/search")
-                ? {}
-                : {
-                    animation: "glow 2s ease-in-out 2 forwards",
-                  }),
-            }}
+    <nav>
+      <Flex direction="column" justify="space-between" h="100dvh" px="xs">
+        <Stack mt="xs" gap="xs">
+          <UnstyledButton
+            data-active={pathname.startsWith("/search") || undefined}
+            component={Link}
+            href="/search"
+            onClick={(e) => handleLinkClick(e, "/search")}
+            className={classes.link}
           >
-            <Group>
-              <IconLink size={24} color="gray" />
-              <Text c="gray.3">{t("actions.searchPlaceholder")}</Text>
-            </Group>
-          </Paper>
-        </Link>
+            <Stack gap="2px" justify="center" align="center">
+              <IconLink stroke={2} style={{ width: "24px", height: "24px" }} />
+              <Text size="md">{t("actions.search")}</Text>
+            </Stack>
+          </UnstyledButton>
 
-        <Divider my="xs" color="transparent" />
-        <Stack>{links}</Stack>
-      </div>
+          {links}
+        </Stack>
 
-      <div className={classes.footer}>
-        <Menu width={280}>
-          <Menu.Target>
-            <Button
-              fullWidth
-              size="lg"
-              variant="outline"
-              c="white"
-              color="gray.7"
-              leftSection={<IconArrowDown size="18" stroke={1.5} />}
-              rightSection={user?.role ? <RoleBadge role={user.role} /> : null}
-            >
-              {user?.username}
-            </Button>
-          </Menu.Target>
-          <Menu.Dropdown>
-            <Menu.Sub openDelay={120} closeDelay={150}>
-              <Menu.Sub.Target>
-                <Menu.Sub.Item leftSection={<IconWorldSearch size={16} />}>
-                  {t("actions.language")} {locale.toUpperCase()}
-                </Menu.Sub.Item>
-              </Menu.Sub.Target>
+        <div>
+          <Divider my="sm" />
+          <Menu width={280}>
+            <Menu.Target>
+              <UnstyledButton className={classes.link} w="100%">
+                <Stack gap="2px" justify="center" align="center">
+                  <IconDots
+                    stroke={2}
+                    style={{ width: "24px", height: "24px" }}
+                  />
+                  <Text size="md">Menu</Text>
+                </Stack>
+              </UnstyledButton>
+            </Menu.Target>
+            <Menu.Dropdown>
+              <Menu.Sub openDelay={120} closeDelay={150}>
+                {user?.role && (
+                  <Menu.Label>
+                    <Flex justify="space-between">
+                      <Text>{user.username}</Text>
+                      <RoleBadge role={user?.role} size="sm" />
+                    </Flex>
+                  </Menu.Label>
+                )}
+                <Menu.Sub.Target>
+                  <Menu.Sub.Item leftSection={<IconWorldSearch size={16} />}>
+                    {t("actions.language")} {locale.toUpperCase()}
+                  </Menu.Sub.Item>
+                </Menu.Sub.Target>
 
-              <Menu.Sub.Dropdown>
-                {navConfig.languages
-                  .filter((lang) => locale !== lang.code)
-                  .map((lang) => (
-                    <Menu.Item
-                      key={lang.code}
-                      onClick={() => switchLocale(lang.code)}
-                    >
-                      {lang.label}
-                    </Menu.Item>
-                  ))}
-              </Menu.Sub.Dropdown>
-            </Menu.Sub>
-            <Menu.Item
-              onClick={async (e) => {
-                Sentry.setUser(null);
-                await fetch("/api/logout", { method: "POST" });
-                window.location.href = "/";
-              }}
-              leftSection={<IconLogout size={16} />}
-            >
-              {t("actions.logout")}
-            </Menu.Item>
-          </Menu.Dropdown>
-        </Menu>
-      </div>
+                <Menu.Sub.Dropdown>
+                  {navConfig.languages
+                    .filter((lang) => locale !== lang.code)
+                    .map((lang) => (
+                      <Menu.Item
+                        key={lang.code}
+                        onClick={() => switchLocale(lang.code)}
+                      >
+                        {lang.label}
+                      </Menu.Item>
+                    ))}
+                </Menu.Sub.Dropdown>
+              </Menu.Sub>
+              <Menu.Item
+                onClick={async (e) => {
+                  Sentry.setUser(null);
+                  await fetch("/api/logout", { method: "POST" });
+                  window.location.href = "/";
+                }}
+                leftSection={<IconLogout size={16} />}
+              >
+                {t("actions.logout")}
+              </Menu.Item>
+            </Menu.Dropdown>
+          </Menu>
+        </div>
+      </Flex>
     </nav>
   );
 }

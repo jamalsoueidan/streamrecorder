@@ -4,8 +4,8 @@
     "community": "Community"
   },
   "links": {
-    "myRecordings": "My Recordings",
-    "myList": "My List",
+    "myRecordings": "Recordings",
+    "myList": "Library",
     "live": "Live",
     "explore": "Explore",
     "friends": "Friends"

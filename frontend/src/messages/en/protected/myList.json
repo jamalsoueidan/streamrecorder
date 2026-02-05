@@ -1,5 +1,5 @@
 {
-  "title": "My List ({count})",
+  "title": "Library ({count})",
   "description": "Manage your creators",
   "emptyFiltered": {
     "title": "No creators match your filters",

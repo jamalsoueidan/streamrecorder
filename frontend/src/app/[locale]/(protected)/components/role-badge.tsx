@@ -1,4 +1,10 @@
-import { Badge, MantineColor, MantineGradient, Tooltip } from "@mantine/core";
+import {
+  Badge,
+  BadgeProps,
+  MantineColor,
+  MantineGradient,
+  Tooltip,
+} from "@mantine/core";
 import {
   IconAward,
   IconCrown,
@@ -68,7 +74,10 @@ const defaultStyle: RoleStyle = {
   size: "md",
 };
 
-export const RoleBadge = ({ role }: { role: RoleBadgeProps }) => {
+export const RoleBadge = ({
+  role,
+  ...props
+}: { role: RoleBadgeProps } & BadgeProps) => {
   const roleName = role.name?.toLowerCase() ?? "";
   const style = roleStyles[roleName] ?? defaultStyle;
 
@@ -80,6 +89,7 @@ export const RoleBadge = ({ role }: { role: RoleBadgeProps }) => {
         fw="400"
         color={style.color}
         gradient={style.gradient}
+        {...props}
       >
         {role.name}
       </Badge>
