@@ -18,7 +18,9 @@
     "all": "الكل"
   },
   "recordings": {
+    "liveAgo_context": "For live streams showing when recording started. Shows 'started recording 15 minutes ago'",
     "liveAgo": "بدأ التسجيل {time}",
+    "recordedAgo_context": "For recorded streams showing when recording was made. Shows 'recorded 3 days ago'",
     "recordedAgo": "تم التسجيل {time}",
     "recordCount": "تسجيل {count}",
     "newRecording": "جديد",
@@ -26,6 +28,7 @@
     "noRecordings": "لقد وصلت إلى النهاية"
   },
   "followers": {
+    "addedAgo_context": "For when a creator was added to user's list. Shows 'Added 3 days ago'",
     "addedAgo": "تم الإضافة {time}"
   },
   "newest": "الأحدث",
