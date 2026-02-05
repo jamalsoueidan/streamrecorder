@@ -1,118 +1,280 @@
+"use client";
+
 import {
   Badge,
   Button,
   Container,
   Flex,
+  Grid,
+  GridCol,
   Paper,
+  SegmentedControl,
   Stack,
   Text,
   Title,
 } from "@mantine/core";
 import {
+  IconBell,
   IconCheck,
   IconCrown,
+  IconDiamond,
   IconDownload,
-  IconHdr,
-  IconPlayerPlay,
+  IconEye,
+  IconEyeOff,
+  IconLanguage,
+  IconMessageStar,
+  IconSearch,
+  IconShield,
+  IconSparkles,
+  IconStar,
   IconUsers,
+  IconVideo,
   IconX,
 } from "@tabler/icons-react";
+import { useState } from "react";
 
 const PLANS = [
   {
-    name: "Basic",
-    price: "Free",
-    period: "",
-    description: "Get started with the essentials",
-    featured: false,
+    name: "Free",
+    icon: IconEye,
+    iconColor: "#94a3b8",
+    iconBg: "rgba(148, 163, 184, 0.15)",
+    description: "Perfect for getting started with live stream recording.",
+    monthlyPrice: 0,
+    yearlyPrice: 0,
+    badge: null,
+    borderColor: "rgba(255, 255, 255, 0.06)",
+    background: "rgba(255, 255, 255, 0.02)",
+    priceColor: "#f1f5f9",
+    priceGradient: undefined,
+    ctaLabel: "Get Started Free",
+    ctaVariant: "outline" as const,
+    ctaStyle: {
+      borderColor: "rgba(255, 255, 255, 0.1)",
+      color: "#94a3b8",
+    },
+    glow: false,
     features: [
-      { text: "Follow up to 3 creators", included: true },
-      { text: "Live stream recording", included: true },
-      { text: "Watch recordings (3 days)", included: true },
-      { text: "Standard quality (480p)", included: true },
-      { text: "HD and Original quality", included: false },
-      { text: "Explore other creators", included: false },
-      { text: "Search all creators", included: false },
-      { text: "Download videos", included: false },
-      { text: "Favorite videos", included: false },
-      { text: "Watch later list", included: false },
-      { text: "Notification false", included: true },
+      { icon: IconUsers, text: "Add up to 3 creators", included: true },
+      { icon: IconVideo, text: "Standard recording quality", included: true },
+      { icon: IconDownload, text: "Download recordings", included: false },
+      { icon: IconEyeOff, text: "Delete / Hide recordings", included: false },
+      {
+        icon: IconBell,
+        text: "Notifications when recording is ready",
+        included: false,
+      },
+      {
+        icon: IconSparkles,
+        text: "AI highlights & best moments",
+        included: false,
+      },
+      {
+        icon: IconLanguage,
+        text: "AI subtitles & translation",
+        included: false,
+      },
+      {
+        icon: IconSearch,
+        text: "SEO-optimized public profile",
+        included: false,
+      },
+      { icon: IconCrown, text: "Premium badge on profile", included: false },
+      {
+        icon: IconMessageStar,
+        text: "Request features to develop",
+        included: false,
+      },
+      { icon: IconStar, text: "Priority support", included: false },
     ],
-    cta: "Current Plan",
-    ctaVariant: "default" as const,
-    disabled: true,
+  },
+  {
+    name: "Champion",
+    icon: IconShield,
+    iconColor: "#f59e0b",
+    iconBg: "rgba(245, 158, 11, 0.2)",
+    description: "Full recording control and privacy.",
+    monthlyPrice: 10,
+    yearlyPrice: 90,
+    badge: null,
+    borderColor: "rgba(245, 158, 11, 0.2)",
+    background:
+      "linear-gradient(135deg, rgba(245, 158, 11, 0.06) 0%, rgba(234, 179, 8, 0.03) 100%)",
+    priceColor: "#f59e0b",
+    priceGradient: undefined,
+    ctaLabel: "Get Champion",
+    ctaVariant: "filled" as const,
+    ctaStyle: {
+      background: "linear-gradient(135deg, #f59e0b 0%, #d97706 100%)",
+      border: "none",
+      fontWeight: 600,
+      color: "#ffffff",
+    },
+    glow: false,
+    features: [
+      { icon: IconUsers, text: "Add up to 20 creators", included: true },
+      {
+        icon: IconVideo,
+        text: "Best available recording quality",
+        included: true,
+      },
+      { icon: IconDownload, text: "Download recordings", included: true },
+      { icon: IconEyeOff, text: "Delete / Hide recordings", included: true },
+      {
+        icon: IconBell,
+        text: "Notifications when recording is ready",
+        included: true,
+      },
+      {
+        icon: IconSearch,
+        text: "SEO-optimized public profile",
+        included: true,
+      },
+      {
+        icon: IconSparkles,
+        text: "AI highlights & best moments",
+        included: false,
+      },
+      {
+        icon: IconLanguage,
+        text: "AI subtitles & translation",
+        included: false,
+      },
+      { icon: IconCrown, text: "Premium badge on profile", included: false },
+      {
+        icon: IconMessageStar,
+        text: "Request features to develop",
+        included: false,
+      },
+      { icon: IconStar, text: "Priority support", included: false },
+    ],
   },
   {
     name: "Premium",
-    price: "$9.99",
-    period: "/month",
-    description: "Unlock the full experience",
-    featured: true,
+    icon: IconDiamond,
+    iconColor: "#a78bfa",
+    iconBg: "rgba(139, 92, 246, 0.2)",
+    description: "Everything you need to grow.",
+    monthlyPrice: 20,
+    yearlyPrice: 180,
+    badge: "Most Popular",
+    borderColor: "rgba(139, 92, 246, 0.25)",
+    background:
+      "linear-gradient(135deg, rgba(139, 92, 246, 0.08) 0%, rgba(99, 102, 241, 0.05) 100%)",
+    priceColor: undefined,
+    priceGradient: "linear-gradient(135deg, #a78bfa 0%, #818cf8 100%)",
+    ctaLabel: "Upgrade to Premium",
+    ctaVariant: "filled" as const,
+    ctaStyle: {
+      background: "linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%)",
+      border: "none",
+      fontWeight: 600,
+      color: "#ffffff",
+    },
+    glow: true,
     features: [
-      { text: "Follow up to 100 creators", included: true },
-      { text: "Live stream recording", included: true },
-      { text: "Watch recordings (14 days)", included: true },
-      { text: "Standard quality (480p)", included: true },
-      { text: "HD and Original quality", included: true },
-      { text: "Explore other creators", included: true },
-      { text: "Search all creators", included: true },
-      { text: "Download videos", included: true },
-      { text: "Favorite videos", included: true },
-      { text: "Watch later list", included: true },
-      { text: "Notification alerts", included: true },
+      { icon: IconUsers, text: "Add up to 100 creators", included: true },
+      {
+        icon: IconVideo,
+        text: "Best available recording quality",
+        included: true,
+      },
+      { icon: IconDownload, text: "Download recordings", included: true },
+      { icon: IconEyeOff, text: "Delete / Hide recordings", included: true },
+      {
+        icon: IconBell,
+        text: "Notifications when recording is ready",
+        included: true,
+      },
+      {
+        icon: IconSparkles,
+        text: "AI highlights & best moments",
+        included: true,
+      },
+      {
+        icon: IconLanguage,
+        text: "AI subtitles & translation",
+        included: true,
+      },
+      {
+        icon: IconSearch,
+        text: "SEO-optimized public profile",
+        included: true,
+      },
+      { icon: IconCrown, text: "Premium badge on profile", included: true },
+      {
+        icon: IconMessageStar,
+        text: "Request features to develop",
+        included: true,
+      },
+      { icon: IconStar, text: "Priority support", included: true },
     ],
-    cta: "Upgrade Now",
-    ctaVariant: "gradient" as const,
-    disabled: false,
   },
 ];
 
-const PREMIUM_HIGHLIGHTS = [
-  {
-    icon: IconUsers,
-    title: "100 Creators",
-    description: "Follow up to 100 of your favorite streamers",
-  },
-  {
-    icon: IconPlayerPlay,
-    title: "14 Days History",
-    description: "Access recordings from the past 2 weeks",
-  },
-  {
-    icon: IconHdr,
-    title: "Best Quality",
-    description: "Watch in HD or original stream quality",
-  },
-  {
-    icon: IconDownload,
-    title: "Download Videos",
-    description: "Save videos offline to watch anytime",
-  },
-];
-
-const COMPARISON_ROWS = [
-  { feature: "Creators you can follow", basic: "3", premium: "100" },
-  { feature: "Recording history", basic: "3 days", premium: "14 days" },
-  { feature: "Video quality", basic: "480p", premium: "1080p+" },
-  { feature: "Live alerts", basic: true, premium: true },
-  { feature: "Following feed", basic: true, premium: true },
-  { feature: "Explore creators", basic: false, premium: true },
-  { feature: "Search creators", basic: false, premium: true },
-  { feature: "Download videos", basic: false, premium: true },
-  { feature: "Favorites", basic: false, premium: true },
-  { feature: "Watch later", basic: false, premium: true },
-];
+function FeatureRow({
+  icon: Icon,
+  text,
+  included,
+}: {
+  icon: React.ElementType;
+  text: string;
+  included: boolean;
+}) {
+  return (
+    <Flex gap={12} align="center">
+      <div
+        style={{
+          width: 28,
+          height: 28,
+          borderRadius: 7,
+          background: included
+            ? "rgba(16, 185, 129, 0.15)"
+            : "rgba(100, 116, 139, 0.1)",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          flexShrink: 0,
+        }}
+      >
+        {included ? (
+          <IconCheck size={14} color="#10b981" />
+        ) : (
+          <IconX size={14} color="#475569" />
+        )}
+      </div>
+      <Flex gap={8} align="center">
+        <Icon
+          size={16}
+          style={{ color: included ? "#94a3b8" : "#475569", flexShrink: 0 }}
+        />
+        <Text
+          size="sm"
+          style={{
+            color: included ? "#e2e8f0" : "#475569",
+            lineHeight: 1.5,
+          }}
+        >
+          {text}
+        </Text>
+      </Flex>
+    </Flex>
+  );
+}
 
 export default function PricingPage() {
+  const [billing, setBilling] = useState("monthly");
+
   return (
-    <Container size="lg" style={{ position: "relative", zIndex: 1 }}>
+    <Container size="xl" style={{ position: "relative", zIndex: 1 }}>
       <Stack gap={48}>
         {/* Header */}
-        <Stack align="center" gap={12} ta="center">
+        <Stack align="center" gap={16} mb={8}>
           <Title
             order={1}
+            ta="center"
             style={{
-              fontSize: "clamp(2rem, 5vw, 3rem)",
+              fontSize: "clamp(2rem, 5vw, 3.5rem)",
               fontWeight: 800,
               lineHeight: 1.3,
               letterSpacing: "-0.03em",
@@ -123,377 +285,317 @@ export default function PricingPage() {
               paddingBottom: "0.1em",
             }}
           >
-            Never miss a stream again
+            Simple, Transparent Pricing
           </Title>
           <Text
             size="lg"
-            maw={500}
-            style={{ color: "#94a3b8", lineHeight: 1.7 }}
+            ta="center"
+            style={{ color: "#94a3b8", maxWidth: 500 }}
           >
-            Choose the plan that works for you. Upgrade anytime to unlock all
-            features.
+            Start recording for free. Upgrade for full control over your content
+            and powerful AI tools.
           </Text>
         </Stack>
 
-        {/* Plan Cards */}
-        <Flex
-          gap={32}
-          justify="center"
-          align="stretch"
-          direction={{ base: "column", sm: "row" }}
-          wrap="wrap"
-        >
-          {PLANS.map((plan) => (
-            <Paper
-              key={plan.name}
-              p="xl"
-              radius="lg"
-              style={{
-                flex: "1 1 340px",
-                maxWidth: 420,
-                background: "rgba(255, 255, 255, 0.02)",
-                border: plan.featured
-                  ? "2px solid #8b5cf6"
-                  : "1px solid rgba(255, 255, 255, 0.06)",
-                position: "relative",
-                overflow: "visible",
+        {/* Billing Toggle */}
+        <Flex justify="center">
+          <Flex align="center" gap={12}>
+            <SegmentedControl
+              value={billing}
+              onChange={setBilling}
+              data={[
+                { label: "Monthly", value: "monthly" },
+                { label: "Yearly", value: "yearly" },
+              ]}
+              styles={{
+                root: {
+                  background: "rgba(255, 255, 255, 0.05)",
+                  border: "1px solid rgba(255, 255, 255, 0.08)",
+                  borderRadius: 10,
+                },
+                label: {
+                  color: "#94a3b8",
+                  fontWeight: 500,
+                  padding: "8px 20px",
+                },
+                indicator: {
+                  background: "rgba(139, 92, 246, 0.2)",
+                  borderRadius: 8,
+                },
               }}
-            >
-              {plan.featured && (
-                <Badge
-                  size="lg"
-                  variant="gradient"
-                  gradient={{ from: "#8b5cf6", to: "#06b6d4" }}
-                  leftSection={<IconCrown size={14} />}
-                  style={{
-                    position: "absolute",
-                    top: -12,
-                    left: "50%",
-                    transform: "translateX(-50%)",
-                  }}
-                >
-                  Most Popular
-                </Badge>
-              )}
-
-              <Stack gap="lg">
-                {/* Plan Header */}
-                <Stack gap={4}>
-                  <Text size="xl" fw={600} style={{ color: "#f1f5f9" }}>
-                    {plan.name}
-                  </Text>
-                  <Text size="sm" style={{ color: "#64748b" }}>
-                    {plan.description}
-                  </Text>
-                </Stack>
-
-                {/* Price */}
-                <Flex align="baseline" gap={4}>
-                  <Text
-                    style={{
-                      fontSize: "3rem",
-                      fontWeight: 700,
-                      lineHeight: 1,
-                      color: "#f1f5f9",
-                    }}
-                  >
-                    {plan.price}
-                  </Text>
-                  {plan.period && (
-                    <Text size="lg" style={{ color: "#64748b" }}>
-                      {plan.period}
-                    </Text>
-                  )}
-                </Flex>
-
-                <div
-                  style={{
-                    borderTop: "1px solid rgba(255, 255, 255, 0.06)",
-                    margin: "8px 0",
-                  }}
-                />
-
-                {/* Features */}
-                <Stack gap={12}>
-                  {plan.features.map((feature, index) => (
-                    <Flex key={index} gap={12} align="center">
-                      <div
-                        style={{
-                          width: 22,
-                          height: 22,
-                          borderRadius: "50%",
-                          background: feature.included
-                            ? "rgba(20, 184, 166, 0.2)"
-                            : "rgba(100, 116, 139, 0.2)",
-                          display: "flex",
-                          alignItems: "center",
-                          justifyContent: "center",
-                          color: feature.included ? "#14b8a6" : "#64748b",
-                          flexShrink: 0,
-                        }}
-                      >
-                        {feature.included ? (
-                          <IconCheck size={14} />
-                        ) : (
-                          <IconX size={14} />
-                        )}
-                      </div>
-                      <Text
-                        size="sm"
-                        style={{
-                          color: feature.included ? "#94a3b8" : "#64748b",
-                          textDecoration: feature.included
-                            ? "none"
-                            : "line-through",
-                        }}
-                      >
-                        {feature.text}
-                      </Text>
-                    </Flex>
-                  ))}
-                </Stack>
-
-                {/* CTA */}
-                <Button
-                  size="lg"
-                  radius="md"
-                  variant={plan.ctaVariant}
-                  gradient={{ from: "#8b5cf6", to: "#06b6d4" }}
-                  disabled={plan.disabled}
-                  fullWidth
-                  style={{ fontWeight: 600 }}
-                >
-                  {plan.cta}
-                </Button>
-              </Stack>
-            </Paper>
-          ))}
+            />
+            {billing === "yearly" && (
+              <Badge
+                size="sm"
+                variant="light"
+                style={{
+                  background: "rgba(16, 185, 129, 0.15)",
+                  color: "#10b981",
+                  border: "1px solid rgba(16, 185, 129, 0.3)",
+                  fontWeight: 700,
+                }}
+              >
+                Save 25%
+              </Badge>
+            )}
+          </Flex>
         </Flex>
 
-        {/* Premium Highlights */}
-        <div style={{ marginTop: 32 }}>
-          <Stack align="center" gap={8} mb={32}>
-            <Title order={2} style={{ color: "#f1f5f9" }}>
-              Why go Premium?
-            </Title>
-            <Text style={{ color: "#64748b" }}>
-              Everything you need to stay connected
-            </Text>
-          </Stack>
+        {/* Pricing Cards */}
+        <Grid gutter={24} justify="center">
+          {PLANS.map((plan) => {
+            const price =
+              billing === "monthly" ? plan.monthlyPrice : plan.yearlyPrice;
+            const period = billing === "monthly" ? "/month" : "/year";
 
-          <Flex gap={24} wrap="wrap" justify="center">
-            {PREMIUM_HIGHLIGHTS.map((highlight, index) => {
-              const Icon = highlight.icon;
-              return (
+            return (
+              <GridCol
+                span={{ base: 12, md: 4 }}
+                key={plan.name}
+                style={{ maxWidth: 420 }}
+              >
                 <Paper
-                  key={index}
-                  p="lg"
+                  p="xl"
                   radius="lg"
+                  h="100%"
                   style={{
-                    flex: "1 1 220px",
-                    maxWidth: 280,
-                    background: "rgba(255, 255, 255, 0.02)",
-                    border: "1px solid rgba(255, 255, 255, 0.06)",
+                    background: plan.background,
+                    border: `1px solid ${plan.borderColor}`,
+                    display: "flex",
+                    flexDirection: "column",
+                    position: "relative",
+                    overflow: "hidden",
                   }}
                 >
-                  <Stack align="center" ta="center" gap="sm">
+                  {/* Glow effect for premium */}
+                  {plan.glow && (
                     <div
                       style={{
-                        width: 56,
-                        height: 56,
+                        position: "absolute",
+                        top: -80,
+                        right: -80,
+                        width: 200,
+                        height: 200,
                         borderRadius: "50%",
-                        background: "linear-gradient(135deg, #8b5cf6, #06b6d4)",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        color: "#ffffff",
+                        background:
+                          "radial-gradient(circle, rgba(139, 92, 246, 0.15), transparent 70%)",
+                        pointerEvents: "none",
                       }}
-                    >
-                      <Icon size={28} />
+                    />
+                  )}
+
+                  <Stack gap={24} style={{ flex: 1, position: "relative" }}>
+                    {/* Plan Header */}
+                    <Stack gap={8}>
+                      <Flex align="center" gap={10} justify="space-between">
+                        <Flex align="center" gap={10}>
+                          <div
+                            style={{
+                              width: 40,
+                              height: 40,
+                              borderRadius: 10,
+                              background: plan.iconBg,
+                              display: "flex",
+                              alignItems: "center",
+                              justifyContent: "center",
+                            }}
+                          >
+                            <plan.icon size={20} color={plan.iconColor} />
+                          </div>
+                          <Title
+                            order={3}
+                            style={{
+                              color: "#f1f5f9",
+                              fontWeight: 600,
+                            }}
+                          >
+                            {plan.name}
+                          </Title>
+                        </Flex>
+                        {plan.badge && (
+                          <Badge
+                            size="sm"
+                            variant="light"
+                            style={{
+                              background: "rgba(139, 92, 246, 0.15)",
+                              color: "#a78bfa",
+                              border: "1px solid rgba(139, 92, 246, 0.3)",
+                              textTransform: "uppercase",
+                              fontWeight: 700,
+                              letterSpacing: "0.05em",
+                            }}
+                          >
+                            {plan.badge}
+                          </Badge>
+                        )}
+                      </Flex>
+                      <Text size="sm" style={{ color: "#64748b" }}>
+                        {plan.description}
+                      </Text>
+                    </Stack>
+
+                    {/* Price */}
+                    <div>
+                      <Flex align="baseline" gap={4}>
+                        <Text
+                          style={{
+                            fontSize: 48,
+                            fontWeight: 800,
+                            lineHeight: 1,
+                            ...(plan.priceGradient
+                              ? {
+                                  background: plan.priceGradient,
+                                  WebkitBackgroundClip: "text",
+                                  WebkitTextFillColor: "transparent",
+                                }
+                              : {
+                                  color: plan.priceColor || "#f1f5f9",
+                                }),
+                          }}
+                        >
+                          ${price}
+                        </Text>
+                        <Text style={{ color: "#64748b" }}>{period}</Text>
+                      </Flex>
+
+                      {/* Yearly savings note */}
+                      {billing === "yearly" && plan.monthlyPrice > 0 && (
+                        <Text
+                          size="xs"
+                          style={{ color: "#10b981", marginTop: 4 }}
+                        >
+                          Save ${plan.monthlyPrice * 12 - plan.yearlyPrice}/year
+                          vs monthly
+                        </Text>
+                      )}
                     </div>
-                    <Text fw={600} style={{ color: "#f1f5f9" }}>
-                      {highlight.title}
-                    </Text>
-                    <Text size="sm" style={{ color: "#64748b" }}>
-                      {highlight.description}
-                    </Text>
+
+                    {/* Features */}
+                    <Stack gap={12}>
+                      {plan.features.map((feature) => (
+                        <FeatureRow key={feature.text} {...feature} />
+                      ))}
+                    </Stack>
+
+                    {/* CTA */}
+                    <div style={{ marginTop: "auto", paddingTop: 16 }}>
+                      <Button
+                        fullWidth
+                        size="lg"
+                        radius="md"
+                        variant={plan.ctaVariant}
+                        style={plan.ctaStyle}
+                      >
+                        {plan.ctaLabel}
+                      </Button>
+                    </div>
                   </Stack>
                 </Paper>
-              );
-            })}
-          </Flex>
-        </div>
+              </GridCol>
+            );
+          })}
+        </Grid>
 
-        {/* Feature Comparison Table */}
-        <div style={{ marginTop: 32 }}>
-          <Stack align="center" gap={8} mb={32}>
-            <Title order={2} style={{ color: "#f1f5f9" }}>
-              Compare Plans
-            </Title>
-            <Text style={{ color: "#64748b" }}>See exactly what you get</Text>
-          </Stack>
-
+        {/* FAQ */}
+        <Stack align="center" gap={16}>
           <Paper
+            p="xl"
             radius="lg"
             style={{
               background: "rgba(255, 255, 255, 0.02)",
               border: "1px solid rgba(255, 255, 255, 0.06)",
-              overflow: "hidden",
+              maxWidth: 700,
+              width: "100%",
             }}
           >
-            {/* Table Header */}
-            <Flex
-              p="md"
-              style={{
-                background: "rgba(255, 255, 255, 0.03)",
-                borderBottom: "1px solid rgba(255, 255, 255, 0.06)",
-              }}
-            >
-              <div style={{ flex: 2 }}>
-                <Text fw={600} style={{ color: "#f1f5f9" }}>
-                  Feature
-                </Text>
-              </div>
-              <div style={{ flex: 1, textAlign: "center" }}>
-                <Text fw={600} style={{ color: "#f1f5f9" }}>
-                  Basic
-                </Text>
-              </div>
-              <div style={{ flex: 1, textAlign: "center" }}>
-                <Text fw={600} style={{ color: "#f1f5f9" }}>
-                  Premium
-                </Text>
-              </div>
-            </Flex>
-
-            {/* Table Rows */}
-            {COMPARISON_ROWS.map((row, index) => (
-              <Flex
-                key={index}
-                p="md"
-                align="center"
-                style={{
-                  borderTop:
-                    index > 0 ? "1px solid rgba(255, 255, 255, 0.04)" : "none",
-                }}
+            <Stack gap={16}>
+              <Title
+                order={4}
+                ta="center"
+                style={{ color: "#f1f5f9", fontWeight: 600 }}
               >
-                <div style={{ flex: 2 }}>
-                  <Text size="sm" style={{ color: "#94a3b8" }}>
-                    {row.feature}
+                Frequently Asked Questions
+              </Title>
+
+              <Stack gap={12}>
+                <div>
+                  <Text fw={500} style={{ color: "#e2e8f0" }} mb={4}>
+                    Can I cancel anytime?
+                  </Text>
+                  <Text size="sm" style={{ color: "#64748b" }}>
+                    Yes. You can cancel your subscription at any time from your
+                    account settings. Your features will remain active until the
+                    end of your billing period.
                   </Text>
                 </div>
-                <div
-                  style={{
-                    flex: 1,
-                    display: "flex",
-                    justifyContent: "center",
-                  }}
-                >
-                  {typeof row.basic === "boolean" ? (
-                    <div
-                      style={{
-                        width: 22,
-                        height: 22,
-                        borderRadius: "50%",
-                        background: row.basic
-                          ? "rgba(20, 184, 166, 0.2)"
-                          : "rgba(100, 116, 139, 0.2)",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        color: row.basic ? "#14b8a6" : "#64748b",
-                      }}
-                    >
-                      {row.basic ? (
-                        <IconCheck size={14} />
-                      ) : (
-                        <IconX size={14} />
-                      )}
-                    </div>
-                  ) : (
-                    <Text size="sm" ta="center" style={{ color: "#94a3b8" }}>
-                      {row.basic}
-                    </Text>
-                  )}
-                </div>
-                <div
-                  style={{
-                    flex: 1,
-                    display: "flex",
-                    justifyContent: "center",
-                  }}
-                >
-                  {typeof row.premium === "boolean" ? (
-                    <div
-                      style={{
-                        width: 22,
-                        height: 22,
-                        borderRadius: "50%",
-                        background: row.premium
-                          ? "rgba(20, 184, 166, 0.2)"
-                          : "rgba(100, 116, 139, 0.2)",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        color: row.premium ? "#14b8a6" : "#64748b",
-                      }}
-                    >
-                      {row.premium ? (
-                        <IconCheck size={14} />
-                      ) : (
-                        <IconX size={14} />
-                      )}
-                    </div>
-                  ) : (
-                    <Badge
-                      variant="gradient"
-                      gradient={{ from: "#8b5cf6", to: "#06b6d4" }}
-                    >
-                      {row.premium}
-                    </Badge>
-                  )}
-                </div>
-              </Flex>
-            ))}
-          </Paper>
-        </div>
 
-        {/* Final CTA */}
-        <Paper
-          radius="lg"
-          p="xl"
-          mt={32}
-          style={{
-            background: "linear-gradient(135deg, #5b21b6 0%, #0e7490 100%)",
-          }}
-        >
-          <Flex
-            justify="space-between"
-            align="center"
-            wrap="wrap"
-            gap="lg"
-            direction={{ base: "column", sm: "row" }}
-          >
-            <Stack gap={4} style={{ textAlign: "center" }}>
-              <Title order={3} style={{ color: "#ffffff" }}>
-                Ready to unlock everything?
-              </Title>
-              <Text style={{ color: "rgba(255, 255, 255, 0.9)" }}>
-                Join thousands of users who never miss their favorite streams.
-              </Text>
+                <div
+                  style={{
+                    borderTop: "1px solid rgba(255, 255, 255, 0.06)",
+                    paddingTop: 12,
+                  }}
+                >
+                  <Text fw={500} style={{ color: "#e2e8f0" }} mb={4}>
+                    What&apos;s the difference between Champion and Premium?
+                  </Text>
+                  <Text size="sm" style={{ color: "#64748b" }}>
+                    Champion gives you full recording control — download,
+                    delete, hide, and notifications. Premium adds AI-powered
+                    features like highlights, subtitles, translation, request
+                    features to develop and a premium badge.
+                  </Text>
+                </div>
+
+                <div
+                  style={{
+                    borderTop: "1px solid rgba(255, 255, 255, 0.06)",
+                    paddingTop: 12,
+                  }}
+                >
+                  <Text fw={500} style={{ color: "#e2e8f0" }} mb={4}>
+                    What platforms do you support?
+                  </Text>
+                  <Text size="sm" style={{ color: "#64748b" }}>
+                    We support TikTok, Twitch, YouTube, Kick, AfreecaTV, and
+                    Pandalive — with more platforms coming soon.
+                  </Text>
+                </div>
+
+                <div
+                  style={{
+                    borderTop: "1px solid rgba(255, 255, 255, 0.06)",
+                    paddingTop: 12,
+                  }}
+                >
+                  <Text fw={500} style={{ color: "#e2e8f0" }} mb={4}>
+                    How do AI highlights work?
+                  </Text>
+                  <Text size="sm" style={{ color: "#64748b" }}>
+                    Our AI analyzes your recorded streams and automatically
+                    identifies the most engaging moments — perfect for creating
+                    clips to share on social media.
+                  </Text>
+                </div>
+
+                <div
+                  style={{
+                    borderTop: "1px solid rgba(255, 255, 255, 0.06)",
+                    paddingTop: 12,
+                  }}
+                >
+                  <Text fw={500} style={{ color: "#e2e8f0" }} mb={4}>
+                    Do subscriptions auto-renew?
+                  </Text>
+                  <Text size="sm" style={{ color: "#64748b" }}>
+                    Yes, all subscriptions auto-renew unless you cancel before
+                    the next billing date. You can manage this in your account
+                    settings at any time.
+                  </Text>
+                </div>
+              </Stack>
             </Stack>
-            <Button
-              size="lg"
-              radius="md"
-              variant="white"
-              color="dark"
-              leftSection={<IconCrown size={20} />}
-              style={{ fontWeight: 600 }}
-            >
-              Get Premium
-            </Button>
-          </Flex>
-        </Paper>
+          </Paper>
+        </Stack>
       </Stack>
     </Container>
   );

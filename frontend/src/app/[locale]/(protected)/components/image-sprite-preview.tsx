@@ -17,7 +17,7 @@ import {
   SOCIAL_URL_PATTERNS,
 } from "@/app/components/open-social";
 import Image from "next/image";
-import { useIsNew } from "../hooks/use-is-new";
+import { useIsNew } from "@/app/providers/is-new-provider";
 import { FollowerTypeIcon } from "./follower-type-icon";
 import { SpritePreview } from "./sprite-preview";
 import { formatDuration } from "./video/player-utils";
