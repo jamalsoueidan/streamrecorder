@@ -28,7 +28,9 @@
     "successTitle": "Added!",
     "successMessage": "{username} has been added",
     "errorTitle": "Error",
-    "cancel": "Cancel"
+    "cancel": "Cancel",
+    "willRecord": "Will be recorded when they go live",
+    "viewPage": "View page"
   },
   "inputLabel": "Paste a stream link from Twitch, TikTok, or YouTube here",
   "notFollowing": {
