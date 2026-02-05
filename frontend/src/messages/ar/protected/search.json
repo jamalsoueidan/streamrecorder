@@ -28,7 +28,9 @@
     "successTitle": "تمت الإضافة!",
     "successMessage": "تمت إضافة {username}",
     "errorTitle": "خطأ",
-    "cancel": "إلغاء"
+    "cancel": "إلغاء",
+    "willRecord": "سيتم التسجيل عندما يبدأ البث المباشر",
+    "viewPage": "عرض الصفحة"
   },
   "inputLabel": "ضع رابط بث من تويتش أو تيك توك أو يوتيوب هنا",
   "notFollowing": {

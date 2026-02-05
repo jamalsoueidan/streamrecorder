@@ -9,17 +9,12 @@ import {
 import * as Sentry from "@sentry/nextjs";
 import { revalidatePath } from "next/cache";
 
-export async function follow(prevState: any, formData: FormData) {
-  const username = formData.get("username") as string;
-  const type = formData.get("type") as FollowerTypeEnum;
-
+export async function follow(username: string, type: FollowerTypeEnum) {
   try {
     await api.follower.followCreate({
       username,
       type,
     });
-
-    revalidatePath("/following");
 
     return { success: true, username, type };
   } catch (err: any) {
