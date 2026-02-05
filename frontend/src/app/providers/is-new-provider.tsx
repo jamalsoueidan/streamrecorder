@@ -1,13 +1,13 @@
 "use client";
 
 import dayjs from "@/app/lib/dayjs";
-import { useLocalStorage } from "@mantine/hooks";
 import {
   createContext,
   useCallback,
   useContext,
   useEffect,
   useRef,
+  useState,
 } from "react";
 
 const SESSION_GAP_MINUTES = 10;
@@ -19,18 +19,7 @@ type IsNewContextValue = {
 const IsNewContext = createContext<IsNewContextValue | null>(null);
 
 export function IsNewProvider({ children }: { children: React.ReactNode }) {
-  const [lastVisitedAt, setLastVisitedAt] = useLocalStorage<string | null>({
-    key: "last-visited",
-    defaultValue: null,
-  });
-
-  const [sessionStartedAt, setSessionStartedAt] = useLocalStorage<
-    string | null
-  >({
-    key: "session-started",
-    defaultValue: null,
-  });
-
+  const [sessionStartedAt, setSessionStartedAt] = useState<string | null>(null);
   const initializedRef = useRef(false);
 
   useEffect(() => {
@@ -38,18 +27,24 @@ export function IsNewProvider({ children }: { children: React.ReactNode }) {
     initializedRef.current = true;
 
     const now = dayjs();
+    const storedLastVisited = localStorage.getItem("last-visited");
+    const storedSessionStarted = localStorage.getItem("session-started");
 
-    if (!lastVisitedAt) {
+    if (!storedLastVisited) {
+      // First time visitor
+      localStorage.setItem("session-started", now.toISOString());
+      localStorage.setItem("last-visited", now.toISOString());
       setSessionStartedAt(now.toISOString());
-      setLastVisitedAt(now.toISOString());
       return;
     }
 
+    const lastVisitedAt = storedLastVisited;
+
     // Migration: user has old lastVisitedAt but no sessionStartedAt
-    // Treat as new session, use lastVisitedAt as the baseline
-    if (!sessionStartedAt) {
+    if (!storedSessionStarted) {
+      localStorage.setItem("session-started", lastVisitedAt);
+      localStorage.setItem("last-visited", now.toISOString());
       setSessionStartedAt(lastVisitedAt);
-      setLastVisitedAt(now.toISOString());
       return;
     }
 
@@ -58,12 +53,14 @@ export function IsNewProvider({ children }: { children: React.ReactNode }) {
 
     if (gap > SESSION_GAP_MINUTES) {
       // New session! Move sessionStartedAt to where lastVisitedAt was
-      // This means: "show as NEW anything that came after user's last visit"
+      localStorage.setItem("session-started", lastVisitedAt);
       setSessionStartedAt(lastVisitedAt);
+    } else {
+      setSessionStartedAt(storedSessionStarted);
     }
 
-    setLastVisitedAt(now.toISOString());
-  }, [lastVisitedAt, sessionStartedAt, setLastVisitedAt, setSessionStartedAt]);
+    localStorage.setItem("last-visited", now.toISOString());
+  }, []);
 
   const isNew = useCallback(
     (item: { updatedAt?: string | null }) => {
