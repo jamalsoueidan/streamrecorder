@@ -14,38 +14,163 @@
     },
     "tiktok": {
       "title": "TikTok Live Recordings",
-      "description": "Browse TikTok live stream recordings from creators on LiveStreamRecorder. Watch TikTok Lives, download recordings, and discover new creators.",
+      "description": "Watch and download TikTok live recordings on LiveStreamRecorder. Every TikTok Live is captured automatically — no screen recorder needed. Browse saved TikTok Lives from your favorite creators.",
       "keywords": [
         "tiktok live recording",
         "tiktok live stream",
         "record tiktok live",
+        "tiktok recorder",
+        "how to record tiktok live",
+        "screen recorder for tiktok",
+        "can you record tiktok live",
+        "how to record a live on tiktok",
         "tiktok vod",
-        "tiktok stream recording",
-        "save tiktok live"
+        "save tiktok live",
+        "screen record tiktok live",
+        "record tiktok on computer",
+        "can you screen record tiktok live"
+      ],
+      "faqs": [
+        {
+          "question": "How do I record my TikTok Lives?",
+          "answer": "With LiveStreamRecorder, your TikTok Lives are recorded automatically in the cloud. Just sign up, add your TikTok username, and every Live you go on is captured — no screen recorder for TikTok needed, no phone running overnight."
+        },
+        {
+          "question": "Do I need a screen recorder for TikTok Lives?",
+          "answer": "No. LiveStreamRecorder captures your TikTok Lives server-side in high quality, so there's no need to screen record on TikTok at all. No dropped frames, no notifications interrupting, no unreliable phone recording. Your Lives are saved automatically to your account."
+        },
+        {
+          "question": "Can I record my TikTok Lives on a computer or laptop?",
+          "answer": "Yes. LiveStreamRecorder works entirely in the cloud, so you can record your TikTok Lives from any device with a browser — PC, laptop, or mobile. There's nothing to install, no desktop screen recorder or browser extension needed. Just add your username and your Lives are recorded automatically."
+        },
+        {
+          "question": "How do I download my TikTok Live recordings?",
+          "answer": "All your TikTok live recordings on LiveStreamRecorder can be watched instantly in your browser. Premium users can download their recordings as video files for offline viewing — no watermark added to your downloads."
+        },
+        {
+          "question": "Do TikTok Lives disappear after they end?",
+          "answer": "Yes, TikTok does not save Lives after the broadcast ends. That's why creators use LiveStreamRecorder as their TikTok recorder — every Live is captured and stored so you can watch, download, or repurpose your content later."
+        },
+        {
+          "question": "What's the best way to record my TikTok Lives?",
+          "answer": "The best way to record your TikTok Lives is with a cloud-based recorder like LiveStreamRecorder. Unlike phone screen recording or desktop capture software, cloud recording captures your full stream in high quality even if your phone dies or you lose connection. It's the best screen recorder alternative for TikTok Lives."
+        },
+        {
+          "question": "Can I turn my recorded TikTok Lives into short clips?",
+          "answer": "Yes. Premium users can use ClipAI to automatically turn their TikTok live recordings into short highlight clips. This is a great way to repurpose your Lives into TikTok videos, Reels, or Shorts to grow your following."
+        }
       ]
     },
     "twitch": {
       "title": "Twitch Stream Recordings & VODs",
-      "description": "Browse Twitch stream recordings from creators on LiveStreamRecorder. Watch Twitch VODs, download streams, and discover new streamers.",
+      "description": "Watch and download Twitch stream recordings on LiveStreamRecorder. Your Twitch streams are captured automatically — no screen recorder needed. The best Twitch recorder for creators who want permanent VODs.",
       "keywords": [
+        "twitch recorder",
+        "twitch stream recorder",
+        "twitch vod recorder",
+        "record twitch stream",
+        "capture twitch stream",
+        "twitch live recorder",
+        "record my twitch stream",
+        "record your twitch stream",
+        "record twitch stream automatically",
+        "screen recorder for twitch",
+        "best screen recorder for twitch",
+        "twitch video recorder",
+        "saving twitch streams",
+        "twitch stream capture",
+        "twitch record live stream",
+        "record stream on twitch",
         "twitch vod",
-        "twitch recording",
-        "twitch stream download",
-        "twitch vod download",
-        "twitch archive",
         "save twitch stream"
+      ],
+      "faqs": [
+        {
+          "question": "How do I record my Twitch streams automatically?",
+          "answer": "LiveStreamRecorder is a cloud-based Twitch recorder that captures your streams automatically. Sign up, add your Twitch channel, and every time you go live your stream is recorded. No screen recorder for Twitch needed — everything happens server-side."
+        },
+        {
+          "question": "Do Twitch VODs expire?",
+          "answer": "Yes. Twitch VODs expire after 14 days for regular streamers and 60 days for Partners and Turbo users. LiveStreamRecorder saves your Twitch streams permanently — your recordings never expire and are always available to watch or download."
+        },
+        {
+          "question": "What's the best Twitch stream recorder for creators?",
+          "answer": "For automatic recording, a cloud-based Twitch recorder like LiveStreamRecorder is the best option. Traditional screen recorders for Twitch require your PC to stay on and recording software running in the background. LiveStreamRecorder captures your Twitch streams from the cloud — even if OBS crashes or your PC restarts, your recording is safe."
+        },
+        {
+          "question": "Do I need a screen recorder to save my Twitch streams?",
+          "answer": "No. LiveStreamRecorder captures your Twitch streams server-side, so there's no need for screen capture software. No Bandicam, no desktop app, no extra CPU usage while streaming. Your streams are saved automatically in high quality to the cloud."
+        },
+        {
+          "question": "Can I record my Twitch streams for free?",
+          "answer": "Yes. Sign up for LiveStreamRecorder free and start recording your Twitch streams right away. Premium plans unlock downloading your recordings, ClipAI for automatic highlight clips, and extended storage."
+        },
+        {
+          "question": "How is this different from Twitch's built-in VOD system?",
+          "answer": "Twitch VODs expire, can be muted due to DMCA, and are deleted if you delete your channel. LiveStreamRecorder gives you an independent backup of your Twitch streams. Your recordings are stored separately, never expire, and stay available even if something happens to your Twitch account."
+        },
+        {
+          "question": "Can I turn my Twitch recordings into clips?",
+          "answer": "Yes. Premium users can use ClipAI to automatically turn their Twitch stream recordings into short highlight clips. Post them as YouTube Shorts, TikTok videos, or Reels to grow your audience across platforms."
+        },
+        {
+          "question": "Does LiveStreamRecorder capture my Twitch stream even if I forget to save the VOD?",
+          "answer": "Yes. Once your channel is connected, LiveStreamRecorder records every Twitch live stream automatically — regardless of your Twitch VOD settings. Even if you have VODs disabled on Twitch, your streams are still captured and saved to your account."
+        }
       ]
     },
     "youtube": {
       "title": "YouTube Live Recordings",
-      "description": "Browse YouTube live stream recordings from creators on LiveStreamRecorder. Watch YouTube Lives, download recordings, and discover new channels.",
+      "description": "Watch and download YouTube live recordings on LiveStreamRecorder. Your YouTube Lives are captured automatically — no screen recorder for YouTube needed. The easiest YouTube live recorder for creators.",
       "keywords": [
         "youtube live recording",
         "youtube live stream",
-        "record youtube live",
-        "youtube stream download",
-        "youtube live archive",
+        "record youtube live stream",
+        "youtube recorder",
+        "screen recorder for youtube",
+        "youtube recording",
+        "youtube live record",
+        "capture live youtube stream",
+        "youtube live stream capture",
+        "best screen recorder for youtube",
+        "recording live youtube stream",
+        "youtube video recorder",
+        "online youtube recorder",
         "save youtube live"
+      ],
+      "faqs": [
+        {
+          "question": "How do I record my YouTube Live streams?",
+          "answer": "With LiveStreamRecorder, your YouTube Lives are recorded automatically in the cloud. Sign up, add your YouTube channel, and every live stream you start is captured. No YouTube recording software to install, no manual saving — it just works."
+        },
+        {
+          "question": "Do I need a screen recorder for YouTube Lives?",
+          "answer": "No. LiveStreamRecorder is a cloud-based YouTube recorder that captures your live streams server-side. Unlike screen recording software for YouTube, there are no dropped frames, no desktop app running in the background, and no storage eating up your hard drive. Your Lives are saved automatically in high quality."
+        },
+        {
+          "question": "What's the best recording software for YouTube Lives?",
+          "answer": "For live streams specifically, a cloud-based YouTube recorder like LiveStreamRecorder is the best option. Traditional screen recorders for YouTube require your computer to stay on during the entire stream. LiveStreamRecorder captures your YouTube Lives from the cloud — even if your PC crashes or you lose power, your recording is safe."
+        },
+        {
+          "question": "Can I record my YouTube Lives for free?",
+          "answer": "Yes. You can sign up for LiveStreamRecorder free and start recording your YouTube live streams right away. Premium plans unlock downloading your recordings, ClipAI for automatic highlight clips, and extended storage."
+        },
+        {
+          "question": "Do YouTube Lives get saved automatically by YouTube?",
+          "answer": "YouTube can save live stream replays to your channel, but creators sometimes delete them, or streams can fail to process. LiveStreamRecorder gives you an independent backup — your YouTube live recordings are captured and stored separately so you always have a copy of your content."
+        },
+        {
+          "question": "Can I turn my YouTube Live recordings into Shorts?",
+          "answer": "Yes. Premium users can use ClipAI to automatically turn YouTube live recordings into short highlight clips perfect for YouTube Shorts, TikTok, or Reels. It's the easiest way to repurpose your live content and grow your subscribers."
+        },
+        {
+          "question": "Is LiveStreamRecorder an online YouTube recorder?",
+          "answer": "Yes. LiveStreamRecorder is a fully online YouTube recorder — everything runs in the cloud. No software to download, no browser extension. Just connect your channel and your YouTube Lives are recorded automatically from any device."
+        },
+        {
+          "question": "How do I capture my YouTube live stream if I forget to hit record?",
+          "answer": "That's exactly what LiveStreamRecorder solves. Once your channel is connected, every YouTube live stream you start is captured automatically. You never need to remember to hit record — your Lives are always saved."
+        }
       ]
     },
     "kick": {
@@ -85,15 +210,52 @@
       ]
     },
     "bigo": {
-      "title": "Bigo Stream Recordings",
-      "description": "Browse Bigo stream recordings from creators on LiveStreamRecorder. Watch Bigo VODs and download streams.",
+      "title": "Bigo Live Recordings",
+      "description": "Watch and download Bigo Live recordings on LiveStreamRecorder. Your Bigo Lives are captured automatically in the cloud — no black screen issues, no screen recorder needed. The easiest Bigo Live recorder for creators.",
       "keywords": [
-        "bigo recording",
-        "bigo vod",
-        "bigo download",
-        "bigo stream recording",
-        "bigo archive",
-        "save bigo stream"
+        "bigo recorder",
+        "bigo live recorder",
+        "bigo live record",
+        "bigo live screen recorder",
+        "screen record bigo live",
+        "screen recorder for bigo live",
+        "bigo screen record",
+        "bigo black screen recording",
+        "bigo live screen recorder black screen",
+        "bigo record black screen",
+        "bigo screen recorder black screen",
+        "record bigo black screen",
+        "save bigo live"
+      ],
+      "faqs": [
+        {
+          "question": "How do I record my Bigo Lives?",
+          "answer": "With LiveStreamRecorder, your Bigo Lives are recorded automatically in the cloud. Sign up, add your Bigo Live username, and every time you go live it's captured. No Bigo Live recorder APK to install, no screen recording — everything happens server-side."
+        },
+        {
+          "question": "Why do I get a black screen when recording Bigo Live?",
+          "answer": "Black screen issues are common when using screen recorders on Bigo Live. LiveStreamRecorder avoids this entirely because it captures your Bigo Lives directly from the cloud — no black screen, no workarounds, no unreliable screen recording apps."
+        },
+        {
+          "question": "How do I fix the Bigo Live screen recorder black screen?",
+          "answer": "The easiest fix is to skip screen recording altogether. LiveStreamRecorder is a cloud-based Bigo recorder that captures your Lives server-side in high quality. No black screen problems, no apps to configure — just add your username and your Bigo Lives are recorded automatically."
+        },
+        {
+          "question": "Do I need a screen recorder for Bigo Live?",
+          "answer": "No. Screen recorders for Bigo Live often result in black screen issues or low quality captures. LiveStreamRecorder is a cloud-based Bigo Live recorder that captures your streams automatically in high quality — no app to install, no black screen."
+        },
+        {
+          "question": "Can I record my Bigo Lives for free?",
+          "answer": "Yes. Sign up for LiveStreamRecorder free and start recording your Bigo Lives right away. Premium plans unlock downloading your recordings, ClipAI for automatic highlight clips, and extended storage."
+        },
+        {
+          "question": "Can I download my Bigo Live recordings?",
+          "answer": "Yes. Premium users can download their Bigo Live recordings as video files for offline viewing. Every recording can also be watched instantly in your browser without downloading."
+        },
+        {
+          "question": "Can I turn my Bigo Live recordings into short clips?",
+          "answer": "Yes. Premium users can use ClipAI to automatically turn their Bigo Live recordings into short highlight clips ready for TikTok, YouTube Shorts, or Reels. It's a great way to repurpose your live content and grow your following across platforms."
+        }
       ]
     }
   },
@@ -121,24 +283,24 @@
   },
   "cta": {
     "title": {
-      "all": "Record Your Live Streams",
-      "tiktok": "Record Your TikTok Lives",
-      "twitch": "Record Your Twitch Streams",
-      "youtube": "Record Your YouTube Lives",
-      "kick": "Record Your Kick Streams",
-      "afreecatv": "Record Your AfreecaTV Streams",
-      "pandalive": "Record Your Pandalive Streams",
-      "bigo": "Record Your Bigo Streams"
+      "all": "Record Your Live Streams Today",
+      "tiktok": "Record TikTok Live Streams",
+      "twitch": "Record Twitch Streams & VODs",
+      "youtube": "Record YouTube Live Streams",
+      "kick": "Record Kick Streams",
+      "pandalive": "Record Pandalive Streams",
+      "afreecatv": "Record AfreecaTV Streams",
+      "bigo": "Record Bigo Streams"
     },
     "subtitle": {
-      "all": "Join thousands of creators. Save your streams, create short clips with ClipAI, and grow your audience.",
-      "tiktok": "Join thousands of TikTok creators. Save your Lives, create short clips with ClipAI, and grow your following.",
-      "twitch": "Join thousands of Twitch streamers. Save your VODs, create short clips with ClipAI, and grow your channel.",
-      "youtube": "Join thousands of YouTube creators. Save your Lives, turn them into Shorts with ClipAI, and grow your subscribers.",
-      "kick": "Join thousands of Kick streamers. Save your streams, create short clips with ClipAI, and grow your audience.",
-      "afreecatv": "Join thousands of AfreecaTV creators. Save your streams and create short clips with ClipAI.",
-      "pandalive": "Join thousands of Pandalive creators. Save your streams and create short clips with ClipAI.",
-      "bigo": "Join thousands of Bigo creators. Save your streams and create short clips with ClipAI."
+      "all": "Automatically save your TikTok, Twitch, YouTube, and Kick streams. Download recordings, create short clips, and grow your audience.",
+      "tiktok": "Automatically save your TikTok Lives. Download recordings, create short clips with ClipAI, and grow your following.",
+      "twitch": "Automatically save your Twitch streams. Download VODs, create short clips with ClipAI, and grow your channel.",
+      "youtube": "Automatically save your YouTube Lives. Download recordings, turn them into Shorts with ClipAI, and grow your subscribers.",
+      "kick": "Automatically save your Kick streams. Download recordings, create short clips with ClipAI, and grow your audience.",
+      "pandalive": "Automatically save your Pandalive streams. Download recordings and create short clips with ClipAI.",
+      "afreecatv": "Automatically save your AfreecaTV streams. Download recordings and create short clips with ClipAI.",
+      "bigo": "Automatically save your Bigo streams. Download recordings and create short clips with ClipAI."
     },
     "button": "Start Recording Free"
   },
@@ -158,13 +320,13 @@
   },
   "about": {
     "all": "## Live Stream Recordings\n\nBrowse recordings from creators who use LiveStreamRecorder to save their live streams.\n\n### What You'll Find Here\n\nCreators use our platform to automatically record their TikTok Lives, Twitch streams, YouTube broadcasts, and Kick streams. Browse their content, watch recordings, and discover new creators.\n\n### Watch and Download\n\nEvery recording is available to watch instantly. Premium users can download recordings for offline viewing.\n\n### For Creators\n\nWant your streams here? Sign up free and start recording. Paste your channel URL, go live, and we save everything automatically. Use ClipAI to turn your streams into short clips and grow your audience.\n\n### Supported Platforms\n\nWe support TikTok live recording, Twitch VOD saving, YouTube live recording, Kick stream recording, AfreecaTV recording, and Pandalive recording. More platforms coming soon.",
-    "tiktok": "## TikTok Live Recordings\n\nBrowse TikTok live recordings from creators who use LiveStreamRecorder to save their Lives.\n\n### TikTok Lives Saved\n\nTikTok Lives disappear when they end. Creators use our TikTok live recorder to save their broadcasts automatically. Browse their content here.\n\n### Watch TikTok Recordings\n\nEvery TikTok live recording is available to watch instantly. Premium users can download TikTok recordings for offline viewing.\n\n### Record Your TikTok Lives\n\nWant your TikTok Lives here? Sign up free and add your username. We record every Live automatically. Use ClipAI to turn your Lives into short clips and grow your following.\n\n### TikTok Live Recorder\n\nNo screen recorder needed. No phone running all night. Just add your TikTok and we capture every Live in high quality.",
-    "twitch": "## Twitch Stream Recordings\n\nBrowse Twitch recordings from creators who use LiveStreamRecorder to save their streams.\n\n### Twitch VODs That Don't Expire\n\nTwitch VODs expire after 14-60 days. Creators use our Twitch recorder to save their streams permanently. Browse their content here.\n\n### Watch Twitch Recordings\n\nEvery Twitch recording is available to watch instantly. No ads, no interruptions. Premium users can download Twitch VODs for offline viewing.\n\n### Record Your Twitch Streams\n\nWant your Twitch streams here? Sign up free and add your channel. We record every broadcast automatically. Use ClipAI to turn your streams into short clips and grow your channel.\n\n### Twitch VOD Downloader\n\nSave Twitch streams permanently. No more expired VODs, no more deleted archives. Your content, saved forever.",
-    "youtube": "## YouTube Live Recordings\n\nBrowse YouTube live recordings from creators who use LiveStreamRecorder to save their broadcasts.\n\n### YouTube Lives Saved\n\nNot all YouTube Lives are saved by creators. Some get deleted, some go private. Creators use our YouTube live recorder to keep a permanent copy. Browse their content here.\n\n### Watch YouTube Recordings\n\nEvery YouTube live recording is available to watch instantly. Premium users can download recordings for offline viewing.\n\n### Record Your YouTube Lives\n\nWant your YouTube Lives here? Sign up free and add your channel. We record every live stream automatically. Use ClipAI to turn your Lives into Shorts and grow your subscribers.\n\n### YouTube Live Recorder\n\nAutomatic recording for every YouTube Live. No software to install, no manual saving. Just go live and we capture everything.",
+    "tiktok": "## TikTok Live Recordings\n\nBrowse TikTok live recordings from creators who use LiveStreamRecorder to save their own Lives. Every TikTok Live is captured automatically and stored for on-demand viewing.\n\n### TikTok Lives Saved Automatically\n\nTikTok Lives disappear the moment they end — there's no built-in way to save them. Creators use our TikTok recorder to capture their own TikTok Lives automatically in the cloud. No screen recorder for TikTok needed, no phone left running all night. Just add your username and your Lives are recorded.\n\n### Watch and Download Your TikTok Recordings\n\nEvery TikTok live recording is available to watch instantly in your browser. Premium users can download their TikTok recordings as video files for offline viewing — perfect for repurposing your own content or keeping a personal archive.\n\n### Record Your TikTok Lives on Any Device\n\nWondering how to record your TikTok Lives on a computer or laptop? LiveStreamRecorder works entirely in the cloud. There's nothing to install — no desktop app, no browser extension. Whether you're on PC, laptop, or mobile, your TikTok Lives are captured in high quality automatically.\n\n### Turn Your Lives Into Clips with ClipAI\n\nWant to turn your TikTok live recordings into short clips? ClipAI analyzes your recorded Lives and creates highlight clips you can post as TikTok videos, Reels, or Shorts. It's the best way to grow your following from your live content.\n\n### Your TikTok Recorder — No Screen Recording Required\n\nForget unreliable screen recording apps and desktop capture tools. LiveStreamRecorder is a purpose-built TikTok recorder that captures your Lives server-side. Sign up free, add your TikTok username, and never lose a Live again.",
+    "twitch": "## Twitch Stream Recordings\n\nBrowse Twitch stream recordings from creators who use LiveStreamRecorder to save their own streams. Every Twitch live stream is captured automatically and stored permanently.\n\n### Twitch VODs That Never Expire\n\nTwitch VODs expire after 14–60 days, and DMCA can mute your archived streams. Our Twitch recorder saves your streams permanently in the cloud — no expiry, no muted audio, no deleted archives. Your content stays yours.\n\n### Watch and Download Your Twitch Recordings\n\nEvery Twitch stream recording is available to watch instantly in your browser — no ads, no interruptions. Premium users can download their Twitch recordings as video files for offline viewing or content repurposing.\n\n### Record Your Twitch Streams — No Screen Recorder Needed\n\nForget running screen capture software alongside OBS. LiveStreamRecorder is a cloud-based Twitch stream recorder that captures your live streams server-side. No extra CPU load, no desktop app, no Bandicam running in the background. Whether you stream from PC, console, or mobile, your Twitch streams are recorded automatically in high quality.\n\n### Turn Your Streams Into Clips with ClipAI\n\nWant to turn your Twitch stream recordings into short clips? ClipAI analyzes your recorded streams and creates highlight clips ready to post as YouTube Shorts, TikTok videos, or Reels. Grow your audience across platforms from your Twitch content.\n\n### The Best Twitch Recorder for Creators\n\nLiveStreamRecorder is purpose-built for saving Twitch streams. Sign up free, connect your channel, and never lose a stream to expired VODs again. Every live stream is recorded automatically — your permanent Twitch archive.",
+    "youtube": "## YouTube Live Recordings\n\nBrowse YouTube live recordings from creators who use LiveStreamRecorder to save their own live streams. Every YouTube Live is captured automatically and stored for on-demand viewing.\n\n### YouTube Lives Saved Automatically\n\nYouTube live stream replays can disappear — creators delete them, streams fail to process, or channels go private. Our YouTube recorder captures your Lives automatically in the cloud so you always have a copy of your content.\n\n### Watch and Download Your YouTube Recordings\n\nEvery YouTube live recording is available to watch instantly in your browser. Premium users can download their recordings as video files for offline viewing — perfect for repurposing your live content.\n\n### Record Your YouTube Lives — No Screen Recorder Needed\n\nForget traditional screen recording software for YouTube. LiveStreamRecorder is an online YouTube recorder that captures your live streams server-side. No desktop app, no browser extension, no computer left running all night. Whether you're on PC, laptop, or mobile, your YouTube Lives are recorded in high quality.\n\n### Turn Your Lives Into YouTube Shorts with ClipAI\n\nWant to turn your YouTube live recordings into Shorts? ClipAI analyzes your recorded Lives and creates highlight clips ready to post. It's the best way to grow your subscribers from your live content.\n\n### The Best YouTube Live Recorder for Creators\n\nLiveStreamRecorder is purpose-built for capturing YouTube live streams. Sign up free, connect your channel, and never lose a Live again. Every stream is recorded automatically — even if you forget to hit record.",
     "kick": "## Kick Stream Recordings\n\nBrowse Kick recordings from creators who use LiveStreamRecorder to save their streams.\n\n### Kick VODs Saved\n\nKick is growing fast. Creators use our Kick recorder to save their streams and build their content library. Browse their content here.\n\n### Watch Kick Recordings\n\nEvery Kick recording is available to watch instantly. Premium users can download Kick VODs for offline viewing.\n\n### Record Your Kick Streams\n\nWant your Kick streams here? Sign up free and add your channel. We record every broadcast automatically. Use ClipAI to turn your streams into short clips and grow your audience.\n\n### Kick Stream Recorder\n\nAutomatic recording for every Kick stream. No software needed. Just go live and we save everything.",
     "pandalive": "## Pandalive Recordings\n\nBrowse Pandalive recordings from creators who use LiveStreamRecorder to save their streams.\n\n### Korean Streams Saved\n\nPandalive creators use our recorder to save their broadcasts. Browse Korean content here.\n\n### Watch Pandalive Recordings\n\nEvery Pandalive recording is available to watch instantly. Premium users can download recordings for offline viewing.\n\n### Record Your Pandalive Streams\n\nWant your streams here? Sign up free and add your channel. We record every broadcast automatically.",
     "afreecatv": "## AfreecaTV Recordings\n\nBrowse AfreecaTV recordings from creators who use LiveStreamRecorder to save their streams.\n\n### Korean Streams Saved\n\nAfreecaTV creators use our recorder to save their broadcasts. Browse Korean content here.\n\n### Watch AfreecaTV Recordings\n\nEvery AfreecaTV recording is available to watch instantly. Premium users can download recordings for offline viewing.\n\n### Record Your AfreecaTV Streams\n\nWant your streams here? Sign up free and add your channel. We record every broadcast automatically.",
-    "bigo": "## Bigo Recordings\n\nBrowse Bigo recordings from creators who use LiveStreamRecorder to save their streams.\n\n### Bigo Streams Saved\n\nBigo creators use our recorder to save their broadcasts. Browse content here.\n\n### Watch Bigo Recordings\n\nEvery Bigo recording is available to watch instantly. Premium users can download recordings for offline viewing.\n\n### Record Your Bigo Streams\n\nWant your streams here? Sign up free and add your channel. We record every broadcast automatically."
+    "bigo": "## Bigo Live Recordings\n\nBrowse Bigo Live recordings from creators who use LiveStreamRecorder to save their own Lives. Every Bigo Live is captured automatically in the cloud and stored for on-demand viewing.\n\n### Bigo Lives Saved Automatically\n\nBigo Lives disappear when they end, and screen recording apps often cause black screen issues. Our Bigo Live recorder captures your Lives directly from the cloud — no black screen, no screen recording apps, no hassle. Just add your username and your Lives are recorded.\n\n### Watch and Download Your Bigo Recordings\n\nEvery Bigo Live recording is available to watch instantly in your browser. Premium users can download their recordings as video files for offline viewing — perfect for repurposing your live content.\n\n### No Black Screen — Ever\n\nTired of black screen issues when trying to record your Bigo Lives? LiveStreamRecorder captures everything server-side in high quality. No screen recorder for Bigo Live needed, no APK downloads, no black screen frustration. It just works.\n\n### Turn Your Bigo Lives Into Clips with ClipAI\n\nWant to turn your Bigo Live recordings into short clips? ClipAI analyzes your recorded Lives and creates highlights ready to post as TikTok videos, YouTube Shorts, or Reels. Grow your audience beyond Bigo.\n\n### The Easiest Bigo Live Recorder for Creators\n\nLiveStreamRecorder is a cloud-based Bigo recorder — no app to install, no phone left running, no black screen to deal with. Sign up free, add your Bigo username, and never lose a Live again."
   },
   "jsonLd": {
     "name": {
@@ -199,5 +361,6 @@
       "unknown": "Live stream recording from {nickname}"
     }
   },
-  "recordedOn": "Recorded on {date}"
+  "recordedOn": "Recorded on {date}",
+  "faq": "Frequently Asked Questions"
 }

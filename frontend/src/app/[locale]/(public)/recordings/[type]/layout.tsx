@@ -3,6 +3,7 @@ import { Button, Container, Paper, Stack, Text, Title } from "@mantine/core";
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import Markdown from "react-markdown";
+import { FAQSection } from "../../components/faq-section";
 import { PlatformBadges } from "../../components/platform-badge";
 
 interface PageProps {
@@ -141,6 +142,21 @@ export default async function RecordingPage({ params, children }: PageProps) {
           </Stack>
         </Paper>
       </div>
+
+      {/* FAQ Section */}
+      {(() => {
+        const faqs = t.raw(`meta.${type}.faqs`) as
+          | { question: string; answer: string }[]
+          | undefined;
+        if (faqs && Array.isArray(faqs) && faqs.length > 0) {
+          return (
+            <div style={{ marginTop: 100 }}>
+              <FAQSection faqs={faqs} title={t("faq")} />
+            </div>
+          );
+        }
+        return null;
+      })()}
 
       <div style={{ marginTop: "100px" }}>
         <Markdown

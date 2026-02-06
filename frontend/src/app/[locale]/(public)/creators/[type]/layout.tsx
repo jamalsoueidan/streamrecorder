@@ -1,14 +1,5 @@
 import { streamingPlatforms } from "@/app/lib/streaming-platforms";
-import {
-  Badge,
-  Button,
-  Container,
-  Flex,
-  Paper,
-  Stack,
-  Text,
-  Title,
-} from "@mantine/core";
+import { Button, Container, Paper, Stack, Text, Title } from "@mantine/core";
 import {
   IconCloud,
   IconDeviceTv,
@@ -18,6 +9,7 @@ import {
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import ReactMarkdown from "react-markdown";
+import { FAQSection } from "../../components/faq-section";
 import { PlatformBadges } from "../../components/platform-badge";
 
 const featureIcons = [IconUsers, IconPlayerPlay, IconCloud, IconDeviceTv];
@@ -98,96 +90,15 @@ export default async function Page({ params, children }: PageProps) {
 
       {children}
 
-      {/* Features Section */}
-      <div style={{ marginTop: 120 }}>
-        <Stack align="center" gap={8} mb={48}>
-          <Badge
-            size="lg"
-            variant="gradient"
-            gradient={{ from: "#6366f1", to: "#a855f7", deg: 135 }}
-          >
-            {t("features.badge")}
-          </Badge>
-          <Title
-            order={2}
-            ta="center"
-            style={{
-              fontSize: "clamp(1.75rem, 4vw, 2.5rem)",
-              fontWeight: 700,
-              color: "#f1f5f9",
-            }}
-          >
-            {t(`features.title.${platformKey}`)}
-          </Title>
-          <Text
-            ta="center"
-            maw={500}
-            style={{ color: "#94a3b8", lineHeight: 1.7 }}
-          >
-            {t("features.subtitle")}
-          </Text>
-        </Stack>
-
-        <Flex gap={24} wrap="wrap" justify="center">
-          {featureKeys.map((key, index) => {
-            const Icon = featureIcons[index];
-            return (
-              <Paper
-                key={key}
-                p="xl"
-                radius="lg"
-                style={{
-                  flex: "1 1 calc(50% - 12px)",
-                  background: "rgba(255, 255, 255, 0.02)",
-                  border: "1px solid rgba(255, 255, 255, 0.06)",
-                }}
-              >
-                <Flex gap={16} align="flex-start">
-                  <div
-                    style={{
-                      width: 48,
-                      height: 48,
-                      borderRadius: 12,
-                      background: "rgba(99, 102, 241, 0.2)",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      color: "#6366f1",
-                      flexShrink: 0,
-                    }}
-                  >
-                    <Icon size={24} />
-                  </div>
-                  <div>
-                    <Title
-                      order={4}
-                      mb={8}
-                      style={{ color: "#f1f5f9", fontWeight: 600 }}
-                    >
-                      {t(`features.items.${key}.title`)}
-                    </Title>
-                    <Text
-                      size="sm"
-                      style={{ color: "#94a3b8", lineHeight: 1.7 }}
-                    >
-                      {t(`features.items.${key}.description`)}
-                    </Text>
-                  </div>
-                </Flex>
-              </Paper>
-            );
-          })}
-        </Flex>
-      </div>
-
       {/* CTA Section */}
-      <div style={{ marginTop: 120 }}>
+      <div style={{ marginTop: 100 }}>
         <Paper
           p={60}
-          radius="xl"
           style={{
-            background: `linear-gradient(135deg, ${platform.color}20 0%, rgba(168, 85, 247, 0.1) 100%)`,
-            border: `1px solid ${platform.color}30`,
+            background:
+              "linear-gradient(135deg, rgba(99, 102, 241, 0.15) 0%, rgba(168, 85, 247, 0.1) 100%)",
+            border: "1px solid rgba(99, 102, 241, 0.2)",
+            borderRadius: "32px",
             textAlign: "center",
             position: "relative",
             overflow: "hidden",
@@ -201,7 +112,8 @@ export default async function Page({ params, children }: PageProps) {
               transform: "translateX(-50%)",
               width: "100%",
               height: "200%",
-              background: `radial-gradient(ellipse at center, ${platform.color}10 0%, transparent 50%)`,
+              background:
+                "radial-gradient(ellipse at center, rgba(99, 102, 241, 0.1) 0%, transparent 50%)",
               pointerEvents: "none",
             }}
           />
@@ -220,35 +132,39 @@ export default async function Page({ params, children }: PageProps) {
             >
               {t(`cta.title.${platformKey}`)}
             </Title>
-            <Text
-              size="lg"
-              maw={600}
-              style={{ color: "#94a3b8", lineHeight: 1.7 }}
-            >
+            <Text size="lg" style={{ color: "#94a3b8", lineHeight: 1.7 }}>
               {t(`cta.subtitle.${platformKey}`)}
             </Text>
-            <Flex
-              gap={16}
-              mt={8}
-              direction="column"
-              justify="center"
-              align="center"
+
+            <Button
+              component="a"
+              href="/register"
+              size="responsive"
+              radius="lg"
+              variant="gradient"
+              gradient={{ from: "#6366f1", to: "#a855f7", deg: 135 }}
+              style={{ fontWeight: 600 }}
             >
-              <Button
-                component="a"
-                href="/register"
-                size="responsive"
-                radius="lg"
-                variant="gradient"
-                gradient={{ from: "#6366f1", to: "#a855f7", deg: 135 }}
-                style={{ fontWeight: 600 }}
-              >
-                {t("cta.button")}
-              </Button>
-            </Flex>
+              {t("cta.button")}
+            </Button>
           </Stack>
         </Paper>
       </div>
+
+      {/* FAQ Section */}
+      {(() => {
+        const faqs = t.raw(`meta.${type}.faqs`) as
+          | { question: string; answer: string }[]
+          | undefined;
+        if (faqs && Array.isArray(faqs) && faqs.length > 0) {
+          return (
+            <div style={{ marginTop: 100 }}>
+              <FAQSection faqs={faqs} title={t("faq")} />
+            </div>
+          );
+        }
+        return null;
+      })()}
 
       <div style={{ marginTop: 100 }}>
         <ReactMarkdown
