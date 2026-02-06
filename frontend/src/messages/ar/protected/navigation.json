@@ -1,9 +1,11 @@
 {
   "sections": {
+    "home": "الرئيسية",
     "studio": "الاستوديو",
     "community": "المجتمع"
   },
   "links": {
+    "dashboard": "لوحة التحكم",
     "myRecordings": "تسجيلاتي",
     "myList": "قائمتي",
     "live": "مباشر",
