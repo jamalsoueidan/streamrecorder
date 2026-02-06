@@ -40,6 +40,7 @@ const platformMap: Record<string, FollowerTypeEnum> = {
   YouTube: FollowerTypeEnum.Youtube,
   AfreecaTV: FollowerTypeEnum.Afreecatv,
   Pandalive: FollowerTypeEnum.Pandalive,
+  Bigo: FollowerTypeEnum.Bigo,
 };
 
 export default async function Page() {
