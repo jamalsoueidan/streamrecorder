@@ -17,36 +17,36 @@ export function Shell({ children }: { children: React.ReactNode }) {
   });
 
   return (
-    <AppShell
-      styles={{
-        footer: !headerHeight
-          ? {
-              display: "none",
-            }
-          : {},
-      }}
-      layout="alt"
-      footer={{
-        height: mounted ? headerHeight : 0,
-        collapsed: headerHeight === 0,
-      }}
-      navbar={{
-        width: 310,
-        breakpoint: "sm",
-        collapsed: { mobile: !opened },
-      }}
-      padding={{ base: "xs", sm: "md" }}
-    >
-      <AppShell.Header></AppShell.Header>
-      <AppShell.Navbar>
-        <Navbar opened={opened} close={close} />
-      </AppShell.Navbar>
-      <AppShell.Main>
-        <IsNewProvider>{children}</IsNewProvider>
-      </AppShell.Main>
-      <AppShell.Footer>
-        <MobileBar />
-      </AppShell.Footer>
-    </AppShell>
+    <IsNewProvider>
+      <AppShell
+        styles={{
+          footer: !headerHeight
+            ? {
+                display: "none",
+              }
+            : {},
+        }}
+        layout="alt"
+        footer={{
+          height: mounted ? headerHeight : 0,
+          collapsed: headerHeight === 0,
+        }}
+        navbar={{
+          width: 310,
+          breakpoint: "sm",
+          collapsed: { mobile: !opened },
+        }}
+        padding={{ base: "xs", sm: "md" }}
+      >
+        <AppShell.Header></AppShell.Header>
+        <AppShell.Navbar>
+          <Navbar opened={opened} close={close} />
+        </AppShell.Navbar>
+        <AppShell.Main>{children}</AppShell.Main>
+        <AppShell.Footer>
+          <MobileBar />
+        </AppShell.Footer>
+      </AppShell>
+    </IsNewProvider>
   );
 }
