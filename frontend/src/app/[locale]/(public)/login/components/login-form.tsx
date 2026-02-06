@@ -21,6 +21,8 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useActionState, useEffect } from "react";
 
+export const redirectLoginUri = "/dashboard";
+
 export function LoginForm() {
   const t = useTranslations("login");
   const [state, formAction, pending] = useActionState(login, null);
@@ -34,7 +36,7 @@ export function LoginForm() {
         username: state?.user?.username,
       });
       trackEvent("login");
-      router.push("/dashboard");
+      router.push(redirectLoginUri);
     }
   }, [state, router]);
 

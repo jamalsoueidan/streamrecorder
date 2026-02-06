@@ -17,6 +17,7 @@ import { useDisclosure } from "@mantine/hooks";
 import { IconChevronDown, IconWorld } from "@tabler/icons-react";
 import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
+import { redirectLoginUri } from "../login/components/login-form";
 import { navConfig } from "./nav";
 
 interface HeaderProps {
@@ -144,7 +145,7 @@ export function Header({ isLoggedIn = false }: HeaderProps) {
               {isLoggedIn ? (
                 <Button
                   component={Link}
-                  href="/following"
+                  href={redirectLoginUri}
                   variant="gradient"
                   gradient={{ from: "#6366f1", to: "#a855f7", deg: 135 }}
                   radius="md"
@@ -282,7 +283,7 @@ export function Header({ isLoggedIn = false }: HeaderProps) {
               <Button
                 fullWidth
                 component={Link}
-                href="/following"
+                href={redirectLoginUri}
                 variant="gradient"
                 gradient={{ from: "#6366f1", to: "#a855f7", deg: 135 }}
                 radius="md"
