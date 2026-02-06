@@ -83,6 +83,18 @@
         "pandalive archive",
         "save pandalive stream"
       ]
+    },
+    "bigo": {
+      "title": "Bigo Stream Recordings",
+      "description": "Browse Bigo stream recordings from creators on LiveStreamRecorder. Watch Bigo VODs and download streams.",
+      "keywords": [
+        "bigo recording",
+        "bigo vod",
+        "bigo download",
+        "bigo stream recording",
+        "bigo archive",
+        "save bigo stream"
+      ]
     }
   },
   "hero": {
@@ -93,7 +105,8 @@
       "youtube": "YouTube Recordings",
       "kick": "Kick Recordings",
       "afreecatv": "AfreecaTV Recordings",
-      "pandalive": "Pandalive Recordings"
+      "pandalive": "Pandalive Recordings",
+      "bigo": "Bigo Recordings"
     },
     "subtitle": {
       "all": "Browse live stream recordings from creators on our platform. Watch, download, and discover new content.",
@@ -102,7 +115,8 @@
       "youtube": "Browse YouTube live recordings from creators on our platform. Watch, download, and discover new content.",
       "kick": "Browse Kick stream recordings from creators on our platform. Watch, download, and discover new content.",
       "afreecatv": "Browse AfreecaTV recordings from creators on our platform. Watch, download, and discover new content.",
-      "pandalive": "Browse Pandalive recordings from creators on our platform. Watch, download, and discover new content."
+      "pandalive": "Browse Pandalive recordings from creators on our platform. Watch, download, and discover new content.",
+      "bigo": "Browse Bigo recordings from creators on our platform. Watch, download, and discover new content."
     }
   },
   "cta": {
@@ -113,7 +127,8 @@
       "youtube": "Record Your YouTube Lives",
       "kick": "Record Your Kick Streams",
       "afreecatv": "Record Your AfreecaTV Streams",
-      "pandalive": "Record Your Pandalive Streams"
+      "pandalive": "Record Your Pandalive Streams",
+      "bigo": "Record Your Bigo Streams"
     },
     "subtitle": {
       "all": "Join thousands of creators. Save your streams, create short clips with ClipAI, and grow your audience.",
@@ -122,7 +137,8 @@
       "youtube": "Join thousands of YouTube creators. Save your Lives, turn them into Shorts with ClipAI, and grow your subscribers.",
       "kick": "Join thousands of Kick streamers. Save your streams, create short clips with ClipAI, and grow your audience.",
       "afreecatv": "Join thousands of AfreecaTV creators. Save your streams and create short clips with ClipAI.",
-      "pandalive": "Join thousands of Pandalive creators. Save your streams and create short clips with ClipAI."
+      "pandalive": "Join thousands of Pandalive creators. Save your streams and create short clips with ClipAI.",
+      "bigo": "Join thousands of Bigo creators. Save your streams and create short clips with ClipAI."
     },
     "button": "Start Recording Free"
   },
@@ -135,7 +151,8 @@
       "youtube": "Be the first creator to record a YouTube Live!",
       "kick": "Be the first creator to record a Kick stream!",
       "afreecatv": "Be the first creator to record an AfreecaTV stream!",
-      "pandalive": "Be the first creator to record a Pandalive stream!"
+      "pandalive": "Be the first creator to record a Pandalive stream!",
+      "bigo": "Be the first creator to record a Bigo stream!"
     },
     "button": "Get Started"
   },
@@ -146,7 +163,8 @@
     "youtube": "## YouTube Live Recordings\n\nBrowse YouTube live recordings from creators who use LiveStreamRecorder to save their broadcasts.\n\n### YouTube Lives Saved\n\nNot all YouTube Lives are saved by creators. Some get deleted, some go private. Creators use our YouTube live recorder to keep a permanent copy. Browse their content here.\n\n### Watch YouTube Recordings\n\nEvery YouTube live recording is available to watch instantly. Premium users can download recordings for offline viewing.\n\n### Record Your YouTube Lives\n\nWant your YouTube Lives here? Sign up free and add your channel. We record every live stream automatically. Use ClipAI to turn your Lives into Shorts and grow your subscribers.\n\n### YouTube Live Recorder\n\nAutomatic recording for every YouTube Live. No software to install, no manual saving. Just go live and we capture everything.",
     "kick": "## Kick Stream Recordings\n\nBrowse Kick recordings from creators who use LiveStreamRecorder to save their streams.\n\n### Kick VODs Saved\n\nKick is growing fast. Creators use our Kick recorder to save their streams and build their content library. Browse their content here.\n\n### Watch Kick Recordings\n\nEvery Kick recording is available to watch instantly. Premium users can download Kick VODs for offline viewing.\n\n### Record Your Kick Streams\n\nWant your Kick streams here? Sign up free and add your channel. We record every broadcast automatically. Use ClipAI to turn your streams into short clips and grow your audience.\n\n### Kick Stream Recorder\n\nAutomatic recording for every Kick stream. No software needed. Just go live and we save everything.",
     "pandalive": "## Pandalive Recordings\n\nBrowse Pandalive recordings from creators who use LiveStreamRecorder to save their streams.\n\n### Korean Streams Saved\n\nPandalive creators use our recorder to save their broadcasts. Browse Korean content here.\n\n### Watch Pandalive Recordings\n\nEvery Pandalive recording is available to watch instantly. Premium users can download recordings for offline viewing.\n\n### Record Your Pandalive Streams\n\nWant your streams here? Sign up free and add your channel. We record every broadcast automatically.",
-    "afreecatv": "## AfreecaTV Recordings\n\nBrowse AfreecaTV recordings from creators who use LiveStreamRecorder to save their streams.\n\n### Korean Streams Saved\n\nAfreecaTV creators use our recorder to save their broadcasts. Browse Korean content here.\n\n### Watch AfreecaTV Recordings\n\nEvery AfreecaTV recording is available to watch instantly. Premium users can download recordings for offline viewing.\n\n### Record Your AfreecaTV Streams\n\nWant your streams here? Sign up free and add your channel. We record every broadcast automatically."
+    "afreecatv": "## AfreecaTV Recordings\n\nBrowse AfreecaTV recordings from creators who use LiveStreamRecorder to save their streams.\n\n### Korean Streams Saved\n\nAfreecaTV creators use our recorder to save their broadcasts. Browse Korean content here.\n\n### Watch AfreecaTV Recordings\n\nEvery AfreecaTV recording is available to watch instantly. Premium users can download recordings for offline viewing.\n\n### Record Your AfreecaTV Streams\n\nWant your streams here? Sign up free and add your channel. We record every broadcast automatically.",
+    "bigo": "## Bigo Recordings\n\nBrowse Bigo recordings from creators who use LiveStreamRecorder to save their streams.\n\n### Bigo Streams Saved\n\nBigo creators use our recorder to save their broadcasts. Browse content here.\n\n### Watch Bigo Recordings\n\nEvery Bigo recording is available to watch instantly. Premium users can download recordings for offline viewing.\n\n### Record Your Bigo Streams\n\nWant your streams here? Sign up free and add your channel. We record every broadcast automatically."
   },
   "jsonLd": {
     "name": {
@@ -156,7 +174,8 @@
       "youtube": "YouTube Live Recordings",
       "kick": "Kick Stream Recordings",
       "afreecatv": "AfreecaTV Stream Recordings",
-      "pandalive": "Pandalive Stream Recordings"
+      "pandalive": "Pandalive Stream Recordings",
+      "bigo": "Bigo Stream Recordings"
     },
     "description": {
       "all": "Browse live stream recordings from creators on LiveStreamRecorder.",
@@ -165,7 +184,8 @@
       "youtube": "Browse YouTube live recordings from creators on LiveStreamRecorder.",
       "kick": "Browse Kick stream recordings from creators on LiveStreamRecorder.",
       "afreecatv": "Browse AfreecaTV recordings from creators on LiveStreamRecorder.",
-      "pandalive": "Browse Pandalive recordings from creators on LiveStreamRecorder."
+      "pandalive": "Browse Pandalive recordings from creators on LiveStreamRecorder.",
+      "bigo": "Browse Bigo recordings from creators on LiveStreamRecorder."
     },
     "streamTitle": "{nickname} Stream - {date}",
     "streamDescription": {
@@ -175,6 +195,7 @@
       "kick": "Kick stream recording from {nickname}",
       "afreecatv": "AfreecaTV recording from {nickname}",
       "pandalive": "Pandalive recording from {nickname}",
+      "bigo": "Bigo recording from {nickname}",
       "unknown": "Live stream recording from {nickname}"
     }
   },

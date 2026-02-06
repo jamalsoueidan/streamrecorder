@@ -53,6 +53,7 @@ const ALL_PLATFORMS: PlatformType[] = [
   "youtube",
   "afreecatv",
   "pandalive",
+  "bigo",
 ];
 
 export default function Page() {

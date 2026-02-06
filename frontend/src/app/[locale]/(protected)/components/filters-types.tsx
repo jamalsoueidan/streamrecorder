@@ -120,6 +120,11 @@ export const PLATFORM_OPTIONS = [
     labelKey: "platforms.pandalive",
     icon: IconBrandFunimation,
   },
+  {
+    value: "bigo",
+    labelKey: "platforms.bigo",
+    icon: IconBrandFunimation,
+  },
 ];
 
 export const typeIcons: Record<string, React.ReactNode> = {

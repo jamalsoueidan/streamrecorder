@@ -41,7 +41,15 @@
       },
       "required": true,
       "default": "tiktok",
-      "enum": ["tiktok", "twitch", "kick", "youtube", "afreecatv", "pandalive"]
+      "enum": [
+        "tiktok",
+        "twitch",
+        "kick",
+        "youtube",
+        "afreecatv",
+        "pandalive",
+        "bigo"
+      ]
     },
     "gender": {
       "type": "enumeration",
@@ -50,7 +58,11 @@
           "localized": false
         }
       },
-      "enum": ["male", "female", "unknown"]
+      "enum": [
+        "male",
+        "female",
+        "unknown"
+      ]
     },
     "countryCode": {
       "type": "string",
@@ -76,7 +88,12 @@
         }
       },
       "multiple": false,
-      "allowedTypes": ["images", "files", "videos", "audios"]
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     },
     "lastCheckedAt": {
       "type": "datetime",

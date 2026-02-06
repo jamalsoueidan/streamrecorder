@@ -17,6 +17,7 @@ export enum FollowerTypeEnum {
   Youtube = "youtube",
   Afreecatv = "afreecatv",
   Pandalive = "pandalive",
+  Bigo = "bigo",
 }
 
 /** Filter by follow status */
@@ -3934,6 +3935,7 @@ export enum AiRequestTypeEnum {
   Youtube = "youtube",
   Afreecatv = "afreecatv",
   Pandalive = "pandalive",
+  Bigo = "bigo",
 }
 
 export enum AiRequestGenderEnum {
@@ -3983,6 +3985,7 @@ export enum AiTaskTypeEnum {
   Youtube = "youtube",
   Afreecatv = "afreecatv",
   Pandalive = "pandalive",
+  Bigo = "bigo",
 }
 
 export enum AiTaskGenderEnum {
@@ -4025,6 +4028,7 @@ export enum ClipTypeEnum {
   Youtube = "youtube",
   Afreecatv = "afreecatv",
   Pandalive = "pandalive",
+  Bigo = "bigo",
 }
 
 export enum ClipGenderEnum {
@@ -4046,6 +4050,7 @@ export enum FollowerRequestTypeEnum {
   Youtube = "youtube",
   Afreecatv = "afreecatv",
   Pandalive = "pandalive",
+  Bigo = "bigo",
 }
 
 export enum FollowerRequestGenderEnum {
@@ -4083,6 +4088,7 @@ export enum MemeTypeEnum1 {
   Youtube = "youtube",
   Afreecatv = "afreecatv",
   Pandalive = "pandalive",
+  Bigo = "bigo",
 }
 
 export enum MemeGenderEnum {
@@ -4109,6 +4115,7 @@ export enum MessageTypeEnum {
   Youtube = "youtube",
   Afreecatv = "afreecatv",
   Pandalive = "pandalive",
+  Bigo = "bigo",
 }
 
 export enum MessageGenderEnum {
@@ -4142,6 +4149,7 @@ export enum SourceTypeEnum {
   Youtube = "youtube",
   Afreecatv = "afreecatv",
   Pandalive = "pandalive",
+  Bigo = "bigo",
 }
 
 export enum SourceGenderEnum {

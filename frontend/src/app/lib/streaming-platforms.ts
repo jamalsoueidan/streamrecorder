@@ -35,4 +35,10 @@ export const streamingPlatforms = [
     name: "Pandalive",
     file: "/simple/pandalive.svg",
   },
+  {
+    color: "teal.5",
+    colorCss: "var(--mantine-color-teal-5)",
+    name: "Bigo",
+    file: "/simple/bigo.svg",
+  },
 ];

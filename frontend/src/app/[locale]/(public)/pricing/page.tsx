@@ -16,13 +16,16 @@ import {
 import {
   IconBell,
   IconCheck,
+  IconClock,
   IconCrown,
   IconDiamond,
   IconDownload,
   IconEye,
   IconEyeOff,
   IconGif,
+  IconHeart,
   IconLanguage,
+  IconMessage,
   IconMessageStar,
   IconSearch,
   IconShield,
@@ -93,6 +96,21 @@ const PLANS = [
         included: false,
       },
       { icon: IconStar, text: "Priority support", included: false },
+      {
+        icon: IconMessage,
+        text: "Live chat message",
+        included: false,
+      },
+      {
+        icon: IconHeart,
+        text: "Add to favorites",
+        included: false,
+      },
+      {
+        icon: IconClock,
+        text: "Watch later",
+        included: false,
+      },
     ],
   },
   {
@@ -138,6 +156,16 @@ const PLANS = [
         included: true,
       },
       {
+        icon: IconHeart,
+        text: "Add to favorites",
+        included: true,
+      },
+      {
+        icon: IconClock,
+        text: "Watch later",
+        included: true,
+      },
+      {
         icon: IconSparkles,
         text: "AI highlights & best moments",
         included: false,
@@ -159,6 +187,11 @@ const PLANS = [
         included: false,
       },
       { icon: IconStar, text: "Priority support", included: false },
+      {
+        icon: IconMessage,
+        text: "Live chat message",
+        included: false,
+      },
     ],
   },
   {
@@ -199,6 +232,21 @@ const PLANS = [
         included: true,
       },
       {
+        icon: IconSearch,
+        text: "SEO-optimized public profile",
+        included: true,
+      },
+      {
+        icon: IconHeart,
+        text: "Add to favorites",
+        included: true,
+      },
+      {
+        icon: IconClock,
+        text: "Watch later",
+        included: true,
+      },
+      {
         icon: IconSparkles,
         text: "AI highlights & best moments",
         included: true,
@@ -213,11 +261,6 @@ const PLANS = [
         text: "AI subtitles & translation",
         included: true,
       },
-      {
-        icon: IconSearch,
-        text: "SEO-optimized public profile",
-        included: true,
-      },
       { icon: IconCrown, text: "Premium badge on profile", included: true },
       {
         icon: IconMessageStar,
@@ -225,6 +268,11 @@ const PLANS = [
         included: true,
       },
       { icon: IconStar, text: "Priority support", included: true },
+      {
+        icon: IconMessage,
+        text: "Live chat message",
+        included: true,
+      },
     ],
   },
 ];

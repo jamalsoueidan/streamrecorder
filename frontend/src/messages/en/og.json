@@ -10,7 +10,8 @@
       "youtube": "YouTube Creators",
       "kick": "Kick Creators",
       "pandalive": "PandaLive Creators",
-      "afreecatv": "AfreecaTV Creators"
+      "afreecatv": "AfreecaTV Creators",
+      "bigo": "Bigo Creators"
     },
     "subtitle": {
       "all": "Browse all streamers and creators",
@@ -19,7 +20,8 @@
       "youtube": "Discover YouTube creators",
       "kick": "Discover Kick streamers",
       "pandalive": "Discover PandaLive creators",
-      "afreecatv": "Discover AfreecaTV creators"
+      "afreecatv": "Discover AfreecaTV creators",
+      "bigo": "Discover Bigo creators"
     }
   },
   "recordings": {
@@ -30,7 +32,8 @@
       "youtube": "YouTube Recordings",
       "kick": "Kick Recordings",
       "pandalive": "PandaLive Recordings",
-      "afreecatv": "AfreecaTV Recordings"
+      "afreecatv": "AfreecaTV Recordings",
+      "bigo": "Bigo Recordings"
     },
     "subtitle": {
       "all": "Watch recorded live streams",
@@ -39,7 +42,8 @@
       "youtube": "Watch recorded YouTube lives",
       "kick": "Watch recorded Kick streams",
       "pandalive": "Watch recorded PandaLive streams",
-      "afreecatv": "Watch recorded AfreecaTV streams"
+      "afreecatv": "Watch recorded AfreecaTV streams",
+      "bigo": "Watch recorded Bigo streams"
     }
   },
   "home": {
