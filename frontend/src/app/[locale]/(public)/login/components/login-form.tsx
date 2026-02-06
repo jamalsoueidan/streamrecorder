@@ -34,7 +34,7 @@ export function LoginForm() {
         username: state?.user?.username,
       });
       trackEvent("login");
-      router.push("/following");
+      router.push("/dashboard");
     }
   }, [state, router]);
 

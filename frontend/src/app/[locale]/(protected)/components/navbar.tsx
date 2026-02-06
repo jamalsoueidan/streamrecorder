@@ -13,6 +13,7 @@ import {
   IconArrowDown,
   IconBrandSafari,
   IconHeart,
+  IconLayoutDashboard,
   IconLink,
   IconLogout,
   IconPlayerRecordFilled,
@@ -35,6 +36,18 @@ import classes from "./navbar.module.css";
 import { RoleBadge } from "./role-badge";
 
 export const navigation = [
+  {
+    titleKey: "sections.home",
+    icon: IconLayoutDashboard,
+    links: [
+      {
+        labelKey: "links.dashboard",
+        url: "/dashboard",
+        icon: IconLayoutDashboard,
+        color: null,
+      },
+    ],
+  },
   {
     titleKey: "sections.studio",
     icon: IconVideo,

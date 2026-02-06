@@ -1,9 +1,11 @@
 {
   "sections": {
+    "home": "Home",
     "studio": "Studio",
     "community": "Community"
   },
   "links": {
+    "dashboard": "Dashboard",
     "myRecordings": "My Recordings",
     "myList": "My List",
     "live": "Live",
