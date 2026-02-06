@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: Promise<{ b64: string }> },
+  { params }: { params: Promise<{ b64: string[] }> },
 ) {
   try {
     const { b64 } = await params;
