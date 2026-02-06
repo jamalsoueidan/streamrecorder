@@ -859,7 +859,7 @@ export interface ApiFollowerFollower extends Struct.CollectionTypeSchema {
         };
       }>;
     type: Schema.Attribute.Enumeration<
-      ['tiktok', 'twitch', 'kick', 'youtube', 'afreecatv', 'pandalive']
+      ['tiktok', 'twitch', 'kick', 'youtube', 'afreecatv', 'pandalive', 'bigo']
     > &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{

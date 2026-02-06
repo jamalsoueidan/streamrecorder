@@ -20,7 +20,8 @@
     "kick": "Kick creators",
     "youtube": "YouTube creators",
     "afreecatv": "AfreecaTV creators",
-    "pandalive": "Pandalive creators"
+    "pandalive": "Pandalive creators",
+    "bigo": "Bigo creators"
   },
   "watchRecordings": {
     "title": "Watch Recordings",
@@ -30,7 +31,8 @@
     "kick": "Kick recordings",
     "youtube": "YouTube recordings",
     "afreecatv": "AfreecaTV recordings",
-    "pandalive": "Pandalive recordings"
+    "pandalive": "Pandalive recordings",
+    "bigo": "Bigo recordings"
   },
   "legal": {
     "title": "Legal",

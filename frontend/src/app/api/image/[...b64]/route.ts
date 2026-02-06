@@ -7,23 +7,26 @@ export async function GET(
   try {
     const { b64 } = await params;
 
-    if (!b64) {
-      return NextResponse.json({ error: "Missing b64 param" }, { status: 400 });
-    }
+    const b64String = Array.isArray(b64) ? b64.join("/") : b64;
 
     // Decode base64
     let imageUrl: string;
     try {
-      imageUrl = Buffer.from(b64, "base64").toString("utf-8");
+      imageUrl = Buffer.from(b64String, "base64").toString("utf-8");
     } catch {
       return NextResponse.json({ error: "Invalid base64" }, { status: 400 });
     }
+
+    console.log(imageUrl);
+
+    const url = new URL(imageUrl);
+    const referer = `${url.protocol}//${url.hostname}/`;
 
     const response = await fetch(imageUrl, {
       headers: {
         "User-Agent":
           "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-        Referer: "https://www.tiktok.com/",
+        Referer: referer,
         Accept: "image/webp,image/apng,image/*,*/*;q=0.8",
       },
     });

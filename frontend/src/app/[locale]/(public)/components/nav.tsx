@@ -31,6 +31,7 @@ export const navConfig = {
     { key: "youtube", label: "YouTube", href: "/creators/youtube" },
     { key: "afreecatv", label: "AfreecaTV", href: "/creators/afreecatv" },
     { key: "pandalive", label: "PandaLive", href: "/creators/pandalive" },
+    { key: "bigo", label: "Bigo", href: "/creators/bigo" },
   ],
   watchRecordings: [
     { key: "browse", label: "Browse All", href: "/recordings/all" },
@@ -40,6 +41,7 @@ export const navConfig = {
     { key: "youtube", label: "YouTube", href: "/recordings/youtube" },
     { key: "afreecatv", label: "AfreecaTV", href: "/recordings/afreecatv" },
     { key: "pandalive", label: "PandaLive", href: "/recordings/pandalive" },
+    { key: "bigo", label: "Bigo", href: "/recordings/bigo" },
   ],
   legal: [
     { key: "privacy", label: "Privacy Policy", href: "/privacy" },

@@ -97,6 +97,16 @@ export function parseUsername(input: string): ParsedUsername {
     };
   }
 
+  const bigoRegex = /(?:https?:\/\/)?(?:www\.)?bigo\.tv\/([^\/\s?]+)/i;
+  const bigoMatch = trimmed.match(bigoRegex);
+
+  if (bigoMatch) {
+    return {
+      username: bigoMatch[1],
+      platform: "bigo",
+    };
+  }
+
   // Plain username - remove @ if present
   const username = trimmed.startsWith("@") ? trimmed.slice(1) : trimmed;
 
