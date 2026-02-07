@@ -6,11 +6,13 @@ import Link from "next/link";
 type PlatformBadgesProps = {
   href: string;
   activePlatform?: string;
+  countrySuffix?: string;
 };
 
 export async function PlatformBadges({
   href,
   activePlatform,
+  countrySuffix = "",
 }: PlatformBadgesProps) {
   const t = await getTranslations("protected.filters.platforms");
 
@@ -21,7 +23,7 @@ export async function PlatformBadges({
 
         return (
           <GridCol key={p.name} span={{ base: 4, sm: "content" }}>
-            <Link href={`${href}${p.name.toLowerCase()}`}>
+            <Link href={`${href}${p.name.toLowerCase()}${countrySuffix}`}>
               <Badge
                 variant="platform"
                 leftSection={

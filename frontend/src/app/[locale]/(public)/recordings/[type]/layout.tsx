@@ -144,19 +144,18 @@ export default async function RecordingPage({ params, children }: PageProps) {
       </div>
 
       {/* FAQ Section */}
-      {(() => {
-        const faqs = t.raw(`meta.${type}.faqs`) as
-          | { question: string; answer: string }[]
-          | undefined;
-        if (faqs && Array.isArray(faqs) && faqs.length > 0) {
-          return (
+      {t.has(`meta.${type}.faqs`) &&
+        (() => {
+          const faqs = t.raw(`meta.${type}.faqs`) as {
+            question: string;
+            answer: string;
+          }[];
+          return faqs.length > 0 ? (
             <div style={{ marginTop: 100 }}>
               <FAQSection faqs={faqs} title={t("faq")} />
             </div>
-          );
-        }
-        return null;
-      })()}
+          ) : null;
+        })()}
 
       <div style={{ marginTop: "100px" }}>
         <Markdown

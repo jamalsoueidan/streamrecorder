@@ -318,5 +318,18 @@
     "afreecatv": "## About AfreecaTV Stream Recording\n\nStop losing your AfreecaTV streams. We record them automatically so you can turn your best moments into clips.\n\n### Why Record Your AfreecaTV Streams?\n\nYour best content deserves to live beyond the stream. We save everything so you can clip and share.\n\n### Automatic Recording\n\nJust add your AfreecaTV channel and go live. We record automatically.\n\n### Rewatch and Download\n\nFinished streaming? Your recording is ready. Watch it back or download it.\n\n### ClipAI Finds Your Best Moments\n\nClipAI scans your stream and pulls out the highlights. Short clips ready in minutes.\n\n### Free to Start\n\nCreate an account and start recording your AfreecaTV streams today.",
     "bigo": "## About Bigo Stream Recording\n\nStop losing your Bigo streams. We record them automatically so you can turn your best moments into clips.\n\n### Why Record Your Bigo Streams?\n\nYour best content deserves to live beyond the stream. We save everything so you can clip and share.\n\n### Automatic Recording\n\nJust add your Bigo channel and go live. We record automatically.\n\n### Rewatch and Download\n\nFinished streaming? Your recording is ready. Watch it back or download it.\n\n### ClipAI Finds Your Best Moments\n\nClipAI scans your stream and pulls out the highlights. Short clips ready in minutes.\n\n### Free to Start\n\nCreate an account and start recording your Bigo streams today."
   },
-  "faq": "Frequently Asked Questions"
+  "faq": "Frequently Asked Questions",
+  "country": {
+    "title": "{platform} from {country}",
+    "description": "Discover {platform} from {country} who record their live streams on LiveStreamRecorder. Browse creators, watch their recordings, and find new streamers to follow.",
+    "heroTitle": "{platform} in {country}",
+    "heroSubtitle": "Discover {platform} from {country} who use LiveStreamRecorder to save their streams and create short clips.",
+    "empty": {
+      "title": "No Creators Yet",
+      "description": "No {platform} from {country} have joined yet. Be the first!"
+    },
+    "browseByCountry": "Browse {platform} by Country",
+    "browseLink": "{platform} from {country}",
+    "backToPlatform": "Back to all {platform}"
+  }
 }

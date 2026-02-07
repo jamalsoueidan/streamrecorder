@@ -10,13 +10,13 @@ import {
   Text,
 } from "@mantine/core";
 import {
-  IconArrowDown,
   IconBrandSafari,
   IconHeart,
   IconLayoutDashboard,
   IconLink,
   IconLogout,
   IconPlayerRecordFilled,
+  IconSettings,
   IconUsers,
   IconVideo,
   IconWorldSearch,
@@ -33,7 +33,6 @@ import * as Sentry from "@sentry/nextjs";
 import { useLocale, useTranslations } from "next-intl";
 import { navConfig } from "../../(public)/components/nav";
 import classes from "./navbar.module.css";
-import { RoleBadge } from "./role-badge";
 
 export const navigation = [
   {
@@ -191,8 +190,7 @@ export function Navbar({
               variant="outline"
               c="white"
               color="gray.7"
-              leftSection={<IconArrowDown size="18" stroke={1.5} />}
-              rightSection={user?.role ? <RoleBadge role={user.role} /> : null}
+              leftSection={<IconSettings />}
             >
               {user?.username}
             </Button>

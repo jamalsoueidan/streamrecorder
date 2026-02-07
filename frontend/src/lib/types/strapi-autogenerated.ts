@@ -1688,6 +1688,7 @@ export interface ClipResponse {
 
 export interface EmailTemplateRequest {
   data: {
+    from?: string;
     subjectMatcher: string;
     subject: string;
     text?: string;
@@ -1714,6 +1715,7 @@ export interface EmailTemplateListResponse {
 export interface EmailTemplate {
   id?: string | number;
   documentId?: string;
+  from?: string;
   subjectMatcher: string;
   subject: string;
   text?: string;
@@ -1827,6 +1829,7 @@ export interface EmailTemplate {
   localizations?: {
     id?: string | number;
     documentId?: string;
+    from?: string;
     subjectMatcher?: string;
     subject?: string;
     text?: string;
@@ -2664,439 +2667,6 @@ export interface MemeResponse {
   meta?: object;
 }
 
-export interface MessageRequest {
-  data: {
-    type?: string;
-    subject?: string;
-    content?: string;
-    /** @example "string or id" */
-    user?: number | string;
-    state?: string;
-    locale?: string;
-    localizations?: (number | string)[];
-  };
-}
-
-export interface MessageListResponse {
-  data?: Message[];
-  meta?: {
-    pagination?: {
-      page?: number;
-      /** @min 25 */
-      pageSize?: number;
-      /** @max 1 */
-      pageCount?: number;
-      total?: number;
-    };
-  };
-}
-
-export interface Message {
-  id?: string | number;
-  documentId?: string;
-  type?: string;
-  subject?: string;
-  content?: string;
-  user?: {
-    id?: string | number;
-    documentId?: string;
-    username?: string;
-    /** @format email */
-    email?: string;
-    provider?: string;
-    resetPasswordToken?: string;
-    confirmationToken?: string;
-    confirmed?: boolean;
-    blocked?: boolean;
-    role?: {
-      id?: string | number;
-      documentId?: string;
-      name?: string;
-      description?: string;
-      type?: string;
-      permissions?: {
-        id?: string | number;
-        documentId?: string;
-        action?: string;
-        role?: {
-          id?: string | number;
-          documentId?: string;
-        };
-        /** @format date-time */
-        createdAt?: string;
-        /** @format date-time */
-        updatedAt?: string;
-        /** @format date-time */
-        publishedAt?: string;
-        createdBy?: {
-          id?: string | number;
-          documentId?: string;
-          firstname?: string;
-          lastname?: string;
-          username?: string;
-          /** @format email */
-          email?: string;
-          resetPasswordToken?: string;
-          registrationToken?: string;
-          isActive?: boolean;
-          roles?: {
-            id?: string | number;
-            documentId?: string;
-            name?: string;
-            code?: string;
-            description?: string;
-            users?: {
-              id?: string | number;
-              documentId?: string;
-            }[];
-            permissions?: {
-              id?: string | number;
-              documentId?: string;
-              action?: string;
-              actionParameters?: any;
-              subject?: string;
-              properties?: any;
-              conditions?: any;
-              role?: {
-                id?: string | number;
-                documentId?: string;
-              };
-              /** @format date-time */
-              createdAt?: string;
-              /** @format date-time */
-              updatedAt?: string;
-              /** @format date-time */
-              publishedAt?: string;
-              createdBy?: {
-                id?: string | number;
-                documentId?: string;
-              };
-              updatedBy?: {
-                id?: string | number;
-                documentId?: string;
-              };
-              locale?: string;
-              localizations?: {
-                id?: string | number;
-                documentId?: string;
-              }[];
-            }[];
-            /** @format date-time */
-            createdAt?: string;
-            /** @format date-time */
-            updatedAt?: string;
-            /** @format date-time */
-            publishedAt?: string;
-            createdBy?: {
-              id?: string | number;
-              documentId?: string;
-            };
-            updatedBy?: {
-              id?: string | number;
-              documentId?: string;
-            };
-            locale?: string;
-            localizations?: {
-              id?: string | number;
-              documentId?: string;
-            }[];
-          }[];
-          blocked?: boolean;
-          preferedLanguage?: string;
-          /** @format date-time */
-          createdAt?: string;
-          /** @format date-time */
-          updatedAt?: string;
-          /** @format date-time */
-          publishedAt?: string;
-          createdBy?: {
-            id?: string | number;
-            documentId?: string;
-          };
-          updatedBy?: {
-            id?: string | number;
-            documentId?: string;
-          };
-          locale?: string;
-          localizations?: {
-            id?: string | number;
-            documentId?: string;
-          }[];
-        };
-        updatedBy?: {
-          id?: string | number;
-          documentId?: string;
-        };
-        locale?: string;
-        localizations?: {
-          id?: string | number;
-          documentId?: string;
-        }[];
-      }[];
-      users?: {
-        id?: string | number;
-        documentId?: string;
-      }[];
-      /** @format date-time */
-      createdAt?: string;
-      /** @format date-time */
-      updatedAt?: string;
-      /** @format date-time */
-      publishedAt?: string;
-      createdBy?: {
-        id?: string | number;
-        documentId?: string;
-      };
-      updatedBy?: {
-        id?: string | number;
-        documentId?: string;
-      };
-      locale?: string;
-      localizations?: {
-        id?: string | number;
-        documentId?: string;
-      }[];
-    };
-    followers?: {
-      id?: string | number;
-      documentId?: string;
-      nickname?: string;
-      username?: string;
-      type?: MessageTypeEnum;
-      gender?: MessageGenderEnum;
-      countryCode?: string;
-      languageCode?: string;
-      avatar?: {
-        id?: string | number;
-        documentId?: string;
-        name?: string;
-        alternativeText?: string;
-        caption?: string;
-        width?: number;
-        height?: number;
-        formats?: any;
-        hash?: string;
-        ext?: string;
-        mime?: string;
-        /** @format float */
-        size?: number;
-        url?: string;
-        previewUrl?: string;
-        provider?: string;
-        provider_metadata?: any;
-        related?: {
-          id?: string | number;
-          documentId?: string;
-        }[];
-        folder?: {
-          id?: string | number;
-          documentId?: string;
-          name?: string;
-          pathId?: number;
-          parent?: {
-            id?: string | number;
-            documentId?: string;
-          };
-          children?: {
-            id?: string | number;
-            documentId?: string;
-          }[];
-          files?: {
-            id?: string | number;
-            documentId?: string;
-            name?: string;
-            alternativeText?: string;
-            caption?: string;
-            width?: number;
-            height?: number;
-            formats?: any;
-            hash?: string;
-            ext?: string;
-            mime?: string;
-            /** @format float */
-            size?: number;
-            url?: string;
-            previewUrl?: string;
-            provider?: string;
-            provider_metadata?: any;
-            related?: {
-              id?: string | number;
-              documentId?: string;
-            }[];
-            folder?: {
-              id?: string | number;
-              documentId?: string;
-            };
-            folderPath?: string;
-            /** @format date-time */
-            createdAt?: string;
-            /** @format date-time */
-            updatedAt?: string;
-            /** @format date-time */
-            publishedAt?: string;
-            createdBy?: {
-              id?: string | number;
-              documentId?: string;
-            };
-            updatedBy?: {
-              id?: string | number;
-              documentId?: string;
-            };
-            locale?: string;
-            localizations?: {
-              id?: string | number;
-              documentId?: string;
-            }[];
-          }[];
-          path?: string;
-          /** @format date-time */
-          createdAt?: string;
-          /** @format date-time */
-          updatedAt?: string;
-          /** @format date-time */
-          publishedAt?: string;
-          createdBy?: {
-            id?: string | number;
-            documentId?: string;
-          };
-          updatedBy?: {
-            id?: string | number;
-            documentId?: string;
-          };
-          locale?: string;
-          localizations?: {
-            id?: string | number;
-            documentId?: string;
-          }[];
-        };
-        folderPath?: string;
-        /** @format date-time */
-        createdAt?: string;
-        /** @format date-time */
-        updatedAt?: string;
-        /** @format date-time */
-        publishedAt?: string;
-        createdBy?: {
-          id?: string | number;
-          documentId?: string;
-        };
-        updatedBy?: {
-          id?: string | number;
-          documentId?: string;
-        };
-        locale?: string;
-        localizations?: {
-          id?: string | number;
-          documentId?: string;
-        }[];
-      };
-      /** @format date-time */
-      lastCheckedAt?: string;
-      protected?: boolean;
-      pause?: boolean;
-      description?: string;
-      tagline?: string;
-      faq?: any;
-      category?: string;
-      migration?: number;
-      /** @format date-time */
-      createdAt?: string;
-      /** @format date-time */
-      updatedAt?: string;
-      /** @format date-time */
-      publishedAt?: string;
-      createdBy?: {
-        id?: string | number;
-        documentId?: string;
-      };
-      updatedBy?: {
-        id?: string | number;
-        documentId?: string;
-      };
-      locale?: string;
-      localizations?: {
-        id?: string | number;
-        documentId?: string;
-      }[];
-    }[];
-    messages?: {
-      id?: string | number;
-      documentId?: string;
-      type?: string;
-      subject?: string;
-      content?: string;
-      user?: {
-        id?: string | number;
-        documentId?: string;
-      };
-      state?: string;
-      /** @format date-time */
-      createdAt?: string;
-      /** @format date-time */
-      updatedAt?: string;
-      /** @format date-time */
-      publishedAt?: string;
-      createdBy?: {
-        id?: string | number;
-        documentId?: string;
-      };
-      updatedBy?: {
-        id?: string | number;
-        documentId?: string;
-      };
-      locale?: string;
-      localizations?: {
-        id?: string | number;
-        documentId?: string;
-      }[];
-    }[];
-    /** @format date-time */
-    createdAt?: string;
-    /** @format date-time */
-    updatedAt?: string;
-    /** @format date-time */
-    publishedAt?: string;
-    createdBy?: {
-      id?: string | number;
-      documentId?: string;
-    };
-    updatedBy?: {
-      id?: string | number;
-      documentId?: string;
-    };
-    locale?: string;
-    localizations?: {
-      id?: string | number;
-      documentId?: string;
-    }[];
-  };
-  state?: string;
-  /** @format date-time */
-  createdAt?: string;
-  /** @format date-time */
-  updatedAt?: string;
-  /** @format date-time */
-  publishedAt?: string;
-  createdBy?: {
-    id?: string | number;
-    documentId?: string;
-  };
-  updatedBy?: {
-    id?: string | number;
-    documentId?: string;
-  };
-  locale?: string;
-  localizations?: {
-    id?: string | number;
-    documentId?: string;
-  }[];
-}
-
-export interface MessageResponse {
-  data?: Message;
-  meta?: object;
-}
-
 export interface RecordingRequest {
   data: {
     title?: string;
@@ -3405,6 +2975,184 @@ export interface Recording {
 
 export interface RecordingResponse {
   data?: Recording;
+  meta?: object;
+}
+
+export interface ReportRequest {
+  data: {
+    type?: string;
+    subject?: string;
+    content?: string;
+    email?: string;
+    fullName?: string;
+    state?: string;
+    locale?: string;
+    localizations?: (number | string)[];
+  };
+}
+
+export interface ReportListResponse {
+  data?: Report[];
+  meta?: {
+    pagination?: {
+      page?: number;
+      /** @min 25 */
+      pageSize?: number;
+      /** @max 1 */
+      pageCount?: number;
+      total?: number;
+    };
+  };
+}
+
+export interface Report {
+  id?: string | number;
+  documentId?: string;
+  type?: string;
+  subject?: string;
+  content?: string;
+  email?: string;
+  fullName?: string;
+  state?: string;
+  /** @format date-time */
+  createdAt?: string;
+  /** @format date-time */
+  updatedAt?: string;
+  /** @format date-time */
+  publishedAt?: string;
+  createdBy?: {
+    id?: string | number;
+    documentId?: string;
+    firstname?: string;
+    lastname?: string;
+    username?: string;
+    /** @format email */
+    email?: string;
+    resetPasswordToken?: string;
+    registrationToken?: string;
+    isActive?: boolean;
+    roles?: {
+      id?: string | number;
+      documentId?: string;
+      name?: string;
+      code?: string;
+      description?: string;
+      users?: {
+        id?: string | number;
+        documentId?: string;
+      }[];
+      permissions?: {
+        id?: string | number;
+        documentId?: string;
+        action?: string;
+        actionParameters?: any;
+        subject?: string;
+        properties?: any;
+        conditions?: any;
+        role?: {
+          id?: string | number;
+          documentId?: string;
+        };
+        /** @format date-time */
+        createdAt?: string;
+        /** @format date-time */
+        updatedAt?: string;
+        /** @format date-time */
+        publishedAt?: string;
+        createdBy?: {
+          id?: string | number;
+          documentId?: string;
+        };
+        updatedBy?: {
+          id?: string | number;
+          documentId?: string;
+        };
+        locale?: string;
+        localizations?: {
+          id?: string | number;
+          documentId?: string;
+        }[];
+      }[];
+      /** @format date-time */
+      createdAt?: string;
+      /** @format date-time */
+      updatedAt?: string;
+      /** @format date-time */
+      publishedAt?: string;
+      createdBy?: {
+        id?: string | number;
+        documentId?: string;
+      };
+      updatedBy?: {
+        id?: string | number;
+        documentId?: string;
+      };
+      locale?: string;
+      localizations?: {
+        id?: string | number;
+        documentId?: string;
+      }[];
+    }[];
+    blocked?: boolean;
+    preferedLanguage?: string;
+    /** @format date-time */
+    createdAt?: string;
+    /** @format date-time */
+    updatedAt?: string;
+    /** @format date-time */
+    publishedAt?: string;
+    createdBy?: {
+      id?: string | number;
+      documentId?: string;
+    };
+    updatedBy?: {
+      id?: string | number;
+      documentId?: string;
+    };
+    locale?: string;
+    localizations?: {
+      id?: string | number;
+      documentId?: string;
+    }[];
+  };
+  updatedBy?: {
+    id?: string | number;
+    documentId?: string;
+  };
+  locale?: string;
+  localizations?: {
+    id?: string | number;
+    documentId?: string;
+    type?: string;
+    subject?: string;
+    content?: string;
+    email?: string;
+    fullName?: string;
+    state?: string;
+    /** @format date-time */
+    createdAt?: string;
+    /** @format date-time */
+    updatedAt?: string;
+    /** @format date-time */
+    publishedAt?: string;
+    createdBy?: {
+      id?: string | number;
+      documentId?: string;
+    };
+    updatedBy?: {
+      id?: string | number;
+      documentId?: string;
+    };
+    locale?: string;
+    localizations?: {
+      id?: string | number;
+      documentId?: string;
+    }[];
+  }[];
+}
+
+export interface ReportResponse {
+  data?: Report;
   meta?: object;
 }
 
@@ -4108,22 +3856,6 @@ export enum MemeTypeEnum2 {
   ValueGif = ".gif",
 }
 
-export enum MessageTypeEnum {
-  Tiktok = "tiktok",
-  Twitch = "twitch",
-  Kick = "kick",
-  Youtube = "youtube",
-  Afreecatv = "afreecatv",
-  Pandalive = "pandalive",
-  Bigo = "bigo",
-}
-
-export enum MessageGenderEnum {
-  Male = "male",
-  Female = "female",
-  Unknown = "unknown",
-}
-
 export enum RecordingGenderEnum {
   Male = "male",
   Female = "female",
@@ -4532,52 +4264,6 @@ export interface DeleteMemesIdParams {
 /** @format int64 */
 export type DeleteMemesIdData = number;
 
-export interface GetMessagesParams {
-  /** Sort by attributes ascending (asc) or descending (desc) */
-  sort?: string;
-  /** Return page/pageSize (default: true) */
-  "pagination[withCount]"?: boolean;
-  /** Page number (default: 0) */
-  "pagination[page]"?: number;
-  /** Page size (default: 25) */
-  "pagination[pageSize]"?: number;
-  /** Offset value (default: 0) */
-  "pagination[start]"?: number;
-  /** Number of entities to return (default: 25) */
-  "pagination[limit]"?: number;
-  /** Fields to return (ex: title,author) */
-  fields?: string;
-  /** Relations to return */
-  populate?: string | string[] | object;
-  /** Filters to apply */
-  filters?: Record<string, any>;
-  /** Locale to apply */
-  locale?: string;
-}
-
-export type GetMessagesData = MessageListResponse;
-
-export type PostMessagesData = MessageResponse;
-
-export interface GetMessagesIdParams {
-  id: string;
-}
-
-export type GetMessagesIdData = MessageResponse;
-
-export interface PutMessagesIdParams {
-  id: string;
-}
-
-export type PutMessagesIdData = MessageResponse;
-
-export interface DeleteMessagesIdParams {
-  id: string;
-}
-
-/** @format int64 */
-export type DeleteMessagesIdData = number;
-
 export interface GetRecordingsParams {
   /** Sort by attributes ascending (asc) or descending (desc) */
   sort?: string;
@@ -4625,6 +4311,52 @@ export interface DeleteRecordingsIdParams {
 
 /** @format int64 */
 export type DeleteRecordingsIdData = number;
+
+export interface GetReportsParams {
+  /** Sort by attributes ascending (asc) or descending (desc) */
+  sort?: string;
+  /** Return page/pageSize (default: true) */
+  "pagination[withCount]"?: boolean;
+  /** Page number (default: 0) */
+  "pagination[page]"?: number;
+  /** Page size (default: 25) */
+  "pagination[pageSize]"?: number;
+  /** Offset value (default: 0) */
+  "pagination[start]"?: number;
+  /** Number of entities to return (default: 25) */
+  "pagination[limit]"?: number;
+  /** Fields to return (ex: title,author) */
+  fields?: string;
+  /** Relations to return */
+  populate?: string | string[] | object;
+  /** Filters to apply */
+  filters?: Record<string, any>;
+  /** Locale to apply */
+  locale?: string;
+}
+
+export type GetReportsData = ReportListResponse;
+
+export type PostReportsData = ReportResponse;
+
+export interface GetReportsIdParams {
+  id: string;
+}
+
+export type GetReportsIdData = ReportResponse;
+
+export interface PutReportsIdParams {
+  id: string;
+}
+
+export type PutReportsIdData = ReportResponse;
+
+export interface DeleteReportsIdParams {
+  id: string;
+}
+
+/** @format int64 */
+export type DeleteReportsIdData = number;
 
 export interface GetSourcesParams {
   /** Sort by attributes ascending (asc) or descending (desc) */
@@ -4904,6 +4636,18 @@ export type GetUsersPermissionsUsersRolesData = UsersPermissionsUser & {
 
 export type CountListData = number;
 
+export interface SendEmailPayload {
+  name?: string;
+  /** @format email */
+  email: string;
+  subject?: string;
+  message: string;
+}
+
+export interface SendEmailData {
+  message?: string;
+}
+
 export interface GetRandomClipsParams {
   /**
    * Number of clips to return
@@ -4978,6 +4722,11 @@ export interface FollowCreateData {
 
 export interface UnfollowCreateData {
   success?: boolean;
+}
+
+export interface GetFollowerFiltersParams {
+  /** Filter all results by follower type */
+  type?: FollowerTypeEnum;
 }
 
 export type GetFollowerFiltersData = FiltersResponse;
@@ -5814,7 +5563,10 @@ export namespace Follower {
    */
   export namespace GetFollowerFilters {
     export type RequestParams = {};
-    export type RequestQuery = {};
+    export type RequestQuery = {
+      /** Filter all results by follower type */
+      type?: FollowerTypeEnum;
+    };
     export type RequestBody = never;
     export type RequestHeaders = {};
     export type ResponseBody = GetFollowerFiltersData;
@@ -5922,110 +5674,6 @@ export namespace Meme {
     export type RequestBody = never;
     export type RequestHeaders = {};
     export type ResponseBody = DeleteMemesIdData;
-  }
-}
-
-export namespace Message {
-  /**
-   * No description
-   * @tags Message
-   * @name GetMessages
-   * @request GET:/messages
-   * @secure
-   */
-  export namespace GetMessages {
-    export type RequestParams = {};
-    export type RequestQuery = {
-      /** Sort by attributes ascending (asc) or descending (desc) */
-      sort?: string;
-      /** Return page/pageSize (default: true) */
-      "pagination[withCount]"?: boolean;
-      /** Page number (default: 0) */
-      "pagination[page]"?: number;
-      /** Page size (default: 25) */
-      "pagination[pageSize]"?: number;
-      /** Offset value (default: 0) */
-      "pagination[start]"?: number;
-      /** Number of entities to return (default: 25) */
-      "pagination[limit]"?: number;
-      /** Fields to return (ex: title,author) */
-      fields?: string;
-      /** Relations to return */
-      populate?: string | string[] | object;
-      /** Filters to apply */
-      filters?: Record<string, any>;
-      /** Locale to apply */
-      locale?: string;
-    };
-    export type RequestBody = never;
-    export type RequestHeaders = {};
-    export type ResponseBody = GetMessagesData;
-  }
-
-  /**
-   * No description
-   * @tags Message
-   * @name PostMessages
-   * @request POST:/messages
-   * @secure
-   */
-  export namespace PostMessages {
-    export type RequestParams = {};
-    export type RequestQuery = {};
-    export type RequestBody = MessageRequest;
-    export type RequestHeaders = {};
-    export type ResponseBody = PostMessagesData;
-  }
-
-  /**
-   * No description
-   * @tags Message
-   * @name GetMessagesId
-   * @request GET:/messages/{id}
-   * @secure
-   */
-  export namespace GetMessagesId {
-    export type RequestParams = {
-      id: string;
-    };
-    export type RequestQuery = {};
-    export type RequestBody = never;
-    export type RequestHeaders = {};
-    export type ResponseBody = GetMessagesIdData;
-  }
-
-  /**
-   * No description
-   * @tags Message
-   * @name PutMessagesId
-   * @request PUT:/messages/{id}
-   * @secure
-   */
-  export namespace PutMessagesId {
-    export type RequestParams = {
-      id: string;
-    };
-    export type RequestQuery = {};
-    export type RequestBody = MessageRequest;
-    export type RequestHeaders = {};
-    export type ResponseBody = PutMessagesIdData;
-  }
-
-  /**
-   * No description
-   * @tags Message
-   * @name DeleteMessagesId
-   * @request DELETE:/messages/{id}
-   * @secure
-   */
-  export namespace DeleteMessagesId {
-    export type RequestParams = {
-      id: string;
-    };
-    export type RequestQuery = {};
-    export type RequestBody = never;
-    export type RequestHeaders = {};
-    export type ResponseBody = DeleteMessagesIdData;
   }
 }
 
@@ -6172,6 +5820,110 @@ export namespace Recording {
     export type RequestBody = never;
     export type RequestHeaders = {};
     export type ResponseBody = BrowseRecordingsData;
+  }
+}
+
+export namespace Report {
+  /**
+   * No description
+   * @tags Report
+   * @name GetReports
+   * @request GET:/reports
+   * @secure
+   */
+  export namespace GetReports {
+    export type RequestParams = {};
+    export type RequestQuery = {
+      /** Sort by attributes ascending (asc) or descending (desc) */
+      sort?: string;
+      /** Return page/pageSize (default: true) */
+      "pagination[withCount]"?: boolean;
+      /** Page number (default: 0) */
+      "pagination[page]"?: number;
+      /** Page size (default: 25) */
+      "pagination[pageSize]"?: number;
+      /** Offset value (default: 0) */
+      "pagination[start]"?: number;
+      /** Number of entities to return (default: 25) */
+      "pagination[limit]"?: number;
+      /** Fields to return (ex: title,author) */
+      fields?: string;
+      /** Relations to return */
+      populate?: string | string[] | object;
+      /** Filters to apply */
+      filters?: Record<string, any>;
+      /** Locale to apply */
+      locale?: string;
+    };
+    export type RequestBody = never;
+    export type RequestHeaders = {};
+    export type ResponseBody = GetReportsData;
+  }
+
+  /**
+   * No description
+   * @tags Report
+   * @name PostReports
+   * @request POST:/reports
+   * @secure
+   */
+  export namespace PostReports {
+    export type RequestParams = {};
+    export type RequestQuery = {};
+    export type RequestBody = ReportRequest;
+    export type RequestHeaders = {};
+    export type ResponseBody = PostReportsData;
+  }
+
+  /**
+   * No description
+   * @tags Report
+   * @name GetReportsId
+   * @request GET:/reports/{id}
+   * @secure
+   */
+  export namespace GetReportsId {
+    export type RequestParams = {
+      id: string;
+    };
+    export type RequestQuery = {};
+    export type RequestBody = never;
+    export type RequestHeaders = {};
+    export type ResponseBody = GetReportsIdData;
+  }
+
+  /**
+   * No description
+   * @tags Report
+   * @name PutReportsId
+   * @request PUT:/reports/{id}
+   * @secure
+   */
+  export namespace PutReportsId {
+    export type RequestParams = {
+      id: string;
+    };
+    export type RequestQuery = {};
+    export type RequestBody = ReportRequest;
+    export type RequestHeaders = {};
+    export type ResponseBody = PutReportsIdData;
+  }
+
+  /**
+   * No description
+   * @tags Report
+   * @name DeleteReportsId
+   * @request DELETE:/reports/{id}
+   * @secure
+   */
+  export namespace DeleteReportsId {
+    export type RequestParams = {
+      id: string;
+    };
+    export type RequestQuery = {};
+    export type RequestBody = never;
+    export type RequestHeaders = {};
+    export type ResponseBody = DeleteReportsIdData;
   }
 }
 
@@ -6761,6 +6513,24 @@ export namespace UsersPermissionsUsersRoles {
     export type RequestBody = never;
     export type RequestHeaders = {};
     export type ResponseBody = CountListData;
+  }
+}
+
+export namespace Email {
+  /**
+   * No description
+   * @tags Email
+   * @name SendEmail
+   * @summary Send a contact form email
+   * @request POST:/send-email
+   * @secure
+   */
+  export namespace SendEmail {
+    export type RequestParams = {};
+    export type RequestQuery = {};
+    export type RequestBody = SendEmailPayload;
+    export type RequestHeaders = {};
+    export type ResponseBody = SendEmailData;
   }
 }
 
@@ -7754,10 +7524,14 @@ export class Api<
      * @request GET:/followers/filters
      * @secure
      */
-    getFollowerFilters: (params: RequestParams = {}) =>
+    getFollowerFilters: (
+      query: GetFollowerFiltersParams,
+      params: RequestParams = {},
+    ) =>
       this.request<GetFollowerFiltersData, void>({
         path: `/followers/filters`,
         method: "GET",
+        query: query,
         secure: true,
         format: "json",
         ...params,
@@ -7858,107 +7632,6 @@ export class Api<
     ) =>
       this.request<DeleteMemesIdData, Error>({
         path: `/memes/${id}`,
-        method: "DELETE",
-        secure: true,
-        format: "json",
-        ...params,
-      }),
-  };
-  message = {
-    /**
-     * No description
-     *
-     * @tags Message
-     * @name GetMessages
-     * @request GET:/messages
-     * @secure
-     */
-    getMessages: (query: GetMessagesParams, params: RequestParams = {}) =>
-      this.request<GetMessagesData, Error>({
-        path: `/messages`,
-        method: "GET",
-        query: query,
-        secure: true,
-        format: "json",
-        ...params,
-      }),
-
-    /**
-     * No description
-     *
-     * @tags Message
-     * @name PostMessages
-     * @request POST:/messages
-     * @secure
-     */
-    postMessages: (data: MessageRequest, params: RequestParams = {}) =>
-      this.request<PostMessagesData, Error>({
-        path: `/messages`,
-        method: "POST",
-        body: data,
-        secure: true,
-        type: ContentType.Json,
-        format: "json",
-        ...params,
-      }),
-
-    /**
-     * No description
-     *
-     * @tags Message
-     * @name GetMessagesId
-     * @request GET:/messages/{id}
-     * @secure
-     */
-    getMessagesId: (
-      { id, ...query }: GetMessagesIdParams,
-      params: RequestParams = {},
-    ) =>
-      this.request<GetMessagesIdData, Error>({
-        path: `/messages/${id}`,
-        method: "GET",
-        secure: true,
-        format: "json",
-        ...params,
-      }),
-
-    /**
-     * No description
-     *
-     * @tags Message
-     * @name PutMessagesId
-     * @request PUT:/messages/{id}
-     * @secure
-     */
-    putMessagesId: (
-      { id, ...query }: PutMessagesIdParams,
-      data: MessageRequest,
-      params: RequestParams = {},
-    ) =>
-      this.request<PutMessagesIdData, Error>({
-        path: `/messages/${id}`,
-        method: "PUT",
-        body: data,
-        secure: true,
-        type: ContentType.Json,
-        format: "json",
-        ...params,
-      }),
-
-    /**
-     * No description
-     *
-     * @tags Message
-     * @name DeleteMessagesId
-     * @request DELETE:/messages/{id}
-     * @secure
-     */
-    deleteMessagesId: (
-      { id, ...query }: DeleteMessagesIdParams,
-      params: RequestParams = {},
-    ) =>
-      this.request<DeleteMessagesIdData, Error>({
-        path: `/messages/${id}`,
         method: "DELETE",
         secure: true,
         format: "json",
@@ -8084,6 +7757,107 @@ export class Api<
         path: `/recordings/browse`,
         method: "GET",
         query: query,
+        secure: true,
+        format: "json",
+        ...params,
+      }),
+  };
+  report = {
+    /**
+     * No description
+     *
+     * @tags Report
+     * @name GetReports
+     * @request GET:/reports
+     * @secure
+     */
+    getReports: (query: GetReportsParams, params: RequestParams = {}) =>
+      this.request<GetReportsData, Error>({
+        path: `/reports`,
+        method: "GET",
+        query: query,
+        secure: true,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Report
+     * @name PostReports
+     * @request POST:/reports
+     * @secure
+     */
+    postReports: (data: ReportRequest, params: RequestParams = {}) =>
+      this.request<PostReportsData, Error>({
+        path: `/reports`,
+        method: "POST",
+        body: data,
+        secure: true,
+        type: ContentType.Json,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Report
+     * @name GetReportsId
+     * @request GET:/reports/{id}
+     * @secure
+     */
+    getReportsId: (
+      { id, ...query }: GetReportsIdParams,
+      params: RequestParams = {},
+    ) =>
+      this.request<GetReportsIdData, Error>({
+        path: `/reports/${id}`,
+        method: "GET",
+        secure: true,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Report
+     * @name PutReportsId
+     * @request PUT:/reports/{id}
+     * @secure
+     */
+    putReportsId: (
+      { id, ...query }: PutReportsIdParams,
+      data: ReportRequest,
+      params: RequestParams = {},
+    ) =>
+      this.request<PutReportsIdData, Error>({
+        path: `/reports/${id}`,
+        method: "PUT",
+        body: data,
+        secure: true,
+        type: ContentType.Json,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Report
+     * @name DeleteReportsId
+     * @request DELETE:/reports/{id}
+     * @secure
+     */
+    deleteReportsId: (
+      { id, ...query }: DeleteReportsIdParams,
+      params: RequestParams = {},
+    ) =>
+      this.request<DeleteReportsIdData, Error>({
+        path: `/reports/${id}`,
+        method: "DELETE",
         secure: true,
         format: "json",
         ...params,
@@ -8763,6 +8537,27 @@ export class Api<
         path: `/users/count`,
         method: "GET",
         secure: true,
+        format: "json",
+        ...params,
+      }),
+  };
+  email = {
+    /**
+     * No description
+     *
+     * @tags Email
+     * @name SendEmail
+     * @summary Send a contact form email
+     * @request POST:/send-email
+     * @secure
+     */
+    sendEmail: (data: SendEmailPayload, params: RequestParams = {}) =>
+      this.request<SendEmailData, void>({
+        path: `/send-email`,
+        method: "POST",
+        body: data,
+        secure: true,
+        type: ContentType.Json,
         format: "json",
         ...params,
       }),

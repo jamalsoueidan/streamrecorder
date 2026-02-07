@@ -1,6 +1,10 @@
 import { getSocialUrl } from "@/app/components/open-social";
 import PaginationControls from "@/app/components/pagination";
 import { generateAvatarUrl } from "@/app/lib/avatar-url";
+import {
+  countrySlugToCode,
+  getCountryName,
+} from "@/app/lib/country-utils";
 import { generateProfileUrl } from "@/app/lib/profile-url";
 import { streamingPlatforms } from "@/app/lib/streaming-platforms";
 import publicApi from "@/lib/public-api";
@@ -15,11 +19,13 @@ import {
 } from "@mantine/core";
 import { Metadata } from "next";
 import { getLocale, getTranslations } from "next-intl/server";
-import { CreatorsSimpleGrid } from "../components/creators-simple-grid";
+import { notFound } from "next/navigation";
+import { CreatorsSimpleGrid } from "../../components/creators-simple-grid";
 
 interface PageProps {
   params: Promise<{
     type: string;
+    country: string;
   }>;
   searchParams: Promise<{
     page?: string;
@@ -29,22 +35,35 @@ interface PageProps {
 export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
-  const { type } = await params;
+  const { type, country } = await params;
+  const locale = await getLocale();
   const t = await getTranslations("creators");
 
   const platform = streamingPlatforms.find(
     (p) => p.name.toLowerCase() === type,
   );
   const platformKey = platform ? type : "all";
+  const countryCode = countrySlugToCode(country, locale);
+  const countryName = countryCode
+    ? getCountryName(countryCode, locale)
+    : getCountryName(country, locale);
+
+  const title = t("country.title", {
+    platform: t(`hero.title.${platformKey}`),
+    country: countryName,
+  });
+  const description = t("country.description", {
+    platform: t(`hero.title.${platformKey}`),
+    country: countryName,
+  });
 
   return {
-    title: t(`meta.${platformKey}.title`),
-    description: t(`meta.${platformKey}.description`),
-    keywords: t.raw(`meta.${platformKey}.keywords`),
+    title,
+    description,
     openGraph: {
-      title: t(`meta.${platformKey}.title`),
-      description: t(`meta.${platformKey}.description`),
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}/creators/${type}`,
+      title,
+      description,
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}/creators/${type}/${country}`,
       type: "website",
       images: [
         {
@@ -56,18 +75,18 @@ export async function generateMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title: t(`meta.${platformKey}.title`),
-      description: t(`meta.${platformKey}.description`),
+      title,
+      description,
       images: ["/og-image.png"],
     },
     alternates: {
-      canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/creators/${type}`,
+      canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/creators/${type}/${country}`,
     },
   };
 }
 
 export default async function Page({ params, searchParams }: PageProps) {
-  const { type } = await params;
+  const { type, country } = await params;
   const { page } = await searchParams;
   const locale = await getLocale();
   const t = await getTranslations("creators");
@@ -82,10 +101,21 @@ export default async function Page({ params, searchParams }: PageProps) {
 
   const platformKey = platform.name ? type : "all";
 
+  // Convert country slug to ISO code
+  const countryCode = countrySlugToCode(country, locale);
+  if (!countryCode) {
+    notFound();
+  }
+
+  const countryName = getCountryName(countryCode, locale);
+
   const {
     data: { data: followers, meta },
   } = await publicApi.follower.getFollowers({
-    ...(!platform.name ? {} : { filters: { type } }),
+    filters: {
+      ...(platform.name ? { type } : {}),
+      countryCode: countryCode,
+    },
     "pagination[pageSize]": 20,
     "pagination[page]": parseInt(page || "1", 10),
     sort: "createdAt:desc",
@@ -94,24 +124,28 @@ export default async function Page({ params, searchParams }: PageProps) {
 
   const totalPages = meta?.pagination?.pageCount || 1;
 
-  const regionNames = new Intl.DisplayNames(["en"], { type: "region" });
-  const getCountryName = (countryCode?: string) => {
-    if (!countryCode || countryCode === "-") return undefined;
-    return regionNames.of(countryCode.toUpperCase());
-  };
-
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    name: t(`meta.${platformKey}.title`),
-    description: t(`meta.${platformKey}.description`),
-    url: `${process.env.NEXT_PUBLIC_BASE_URL}/creators/${type}`,
+    name: t("country.title", {
+      platform: t(`hero.title.${platformKey}`),
+      country: countryName,
+    }),
+    description: t("country.description", {
+      platform: t(`hero.title.${platformKey}`),
+      country: countryName,
+    }),
+    url: `${process.env.NEXT_PUBLIC_BASE_URL}/creators/${type}/${country}`,
     isPartOf: {
       "@type": "WebSite",
       name: "Live Stream Recorder",
       url: `${process.env.NEXT_PUBLIC_BASE_URL}`,
     },
     inLanguage: locale,
+    about: {
+      "@type": "Country",
+      name: countryName,
+    },
     mainEntity: {
       "@type": "ItemList",
       numberOfItems: followers?.length || 0,
@@ -125,12 +159,10 @@ export default async function Page({ params, searchParams }: PageProps) {
           description: creator.tagline || creator.description,
           image: generateAvatarUrl(creator.avatar?.url, true),
           url: generateProfileUrl(creator, true),
-          ...(getCountryName(creator.countryCode) && {
-            nationality: {
-              "@type": "Country",
-              name: getCountryName(creator.countryCode),
-            },
-          }),
+          nationality: {
+            "@type": "Country",
+            name: countryName,
+          },
           sameAs: [getSocialUrl(creator)],
         },
       })),
@@ -183,10 +215,13 @@ export default async function Page({ params, searchParams }: PageProps) {
                 />
               </div>
               <Title order={3} style={{ color: "#f1f5f9" }}>
-                {t("empty.title")}
+                {t("country.empty.title")}
               </Title>
               <Text style={{ color: "#64748b" }}>
-                {t(`empty.description.${platformKey}`)}
+                {t("country.empty.description", {
+                  platform: t(`hero.title.${platformKey}`),
+                  country: countryName,
+                })}
               </Text>
               <Button
                 component="a"

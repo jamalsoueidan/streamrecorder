@@ -35,13 +35,15 @@ export function CreatorsSlider({
                 <Stack align="center" gap={12}>
                   <div style={{ position: "relative" }}>
                     <Avatar size={72} radius="xl">
-                      <Image
-                        src={generateAvatarUrl(creator.avatar?.url)}
-                        alt={`${creator.username} avatar`}
-                        width={72}
-                        height={72}
-                        quality={75}
-                      />
+                      {creator.avatar?.url ? (
+                        <Image
+                          src={generateAvatarUrl(creator.avatar?.url)}
+                          alt={`${creator.username} avatar`}
+                          width={72}
+                          height={72}
+                          quality={75}
+                        />
+                      ) : null}
                     </Avatar>
                   </div>
                   <div>

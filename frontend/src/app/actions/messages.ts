@@ -15,7 +15,6 @@ export type ActionResponse = {
 };
 
 export async function submitDMCA(data: DMCAFormData): Promise<ActionResponse> {
-  // Server-side validation
   if (!data.content?.trim()) {
     return { success: false, error: "Content is required" };
   }
@@ -30,32 +29,34 @@ export async function submitDMCA(data: DMCAFormData): Promise<ActionResponse> {
   }
 
   try {
-    const response = await publicApi.message.postMessages({
+    // Save to database
+    await publicApi.report.postReports({
       data: {
         type: "dmca",
         subject: `DMCA Request from ${data.fullName}`,
-        content: `
-Content: ${data.content}
-Copyright Type: ${data.copyrightType}
-Email: ${data.email}
-Full Name: ${data.fullName}
-        `.trim(),
+        content:
+          `Copyright Type: ${data.copyrightType}\nContent: ${data.content}`.trim(),
+        email: data.email,
+        fullName: data.fullName,
         state: "pending",
       },
     });
 
-    if (response.status >= 200 && response.status < 300) {
-      return { success: true };
-    }
+    // Send email notification
+    await publicApi.email.sendEmail({
+      name: data.fullName,
+      email: data.email,
+      subject: `DMCA Request from ${data.fullName}`,
+      message:
+        `Copyright Type: ${data.copyrightType}\nContent: ${data.content}`.trim(),
+    });
 
-    return { success: false, error: "Failed to submit request" };
+    return { success: true };
   } catch (error) {
     console.error("DMCA submission error:", error);
     return { success: false, error: "Something went wrong. Please try again." };
   }
 }
-
-// app/actions/messages.ts (add below submitDMCA)
 
 export type ContactFormData = {
   name: string;
@@ -67,30 +68,25 @@ export type ContactFormData = {
 export async function submitContact(
   data: ContactFormData,
 ): Promise<ActionResponse> {
-  // Server-side validation
   if (!data.name?.trim()) {
     return { success: false, error: "Name is required" };
   }
   if (!data.email?.trim()) {
     return { success: false, error: "Email is required" };
   }
+  if (!data.subject?.trim()) {
+    return { success: false, error: "Subject is required" };
+  }
   if (!data.message?.trim()) {
     return { success: false, error: "Message is required" };
   }
 
   try {
-    const response = await publicApi.message.postMessages({
-      data: {
-        type: "contact",
-        subject: data.subject?.trim() || `Contact from ${data.name}`,
-        content: `
-Name: ${data.name}
-Email: ${data.email}
-${data.subject ? `Subject: ${data.subject}` : ""}
-Message: ${data.message}
-        `.trim(),
-        state: "pending",
-      },
+    const response = await publicApi.email.sendEmail({
+      name: data.name,
+      email: data.email,
+      subject: data.subject,
+      message: data.message,
     });
 
     if (response.status >= 200 && response.status < 300) {

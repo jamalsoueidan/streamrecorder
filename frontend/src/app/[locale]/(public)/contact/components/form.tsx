@@ -145,7 +145,8 @@ export function ContactForm() {
             label={t("message.label")}
             placeholder={t("message.placeholder")}
             required
-            minRows={4}
+            autosize
+            minRows={10}
             value={formData.message}
             onChange={(e) =>
               setFormData({ ...formData, message: e.target.value })
