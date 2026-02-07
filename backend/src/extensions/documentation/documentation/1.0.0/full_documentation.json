@@ -20,7 +20,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2026-02-07T14:36:48.568Z"
+    "x-generation-date": "2026-02-07T14:51:46.719Z"
   },
   "servers": [
     {
@@ -7828,6 +7828,17 @@
         "security": [
           {
             "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "type",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/FollowerTypeEnum"
+            },
+            "description": "Filter all results by follower type"
           }
         ],
         "responses": {

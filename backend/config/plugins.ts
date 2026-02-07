@@ -508,6 +508,15 @@ export default ({ env }) => ({
                 operationId: "getFollowerFilters",
                 summary: "Get available filter options with counts",
                 security: [{ bearerAuth: [] }],
+                parameters: [
+                  {
+                    name: "type",
+                    in: "query",
+                    required: false,
+                    schema: { $ref: "#/components/schemas/FollowerTypeEnum" },
+                    description: "Filter all results by follower type",
+                  },
+                ],
                 responses: {
                   "200": {
                     description: "OK",
