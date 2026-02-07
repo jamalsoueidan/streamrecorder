@@ -15,6 +15,14 @@
     }
   },
   "attributes": {
+    "from": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
     "subjectMatcher": {
       "type": "string",
       "pluginOptions": {

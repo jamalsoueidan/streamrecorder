@@ -1,4 +1,10 @@
 export default ({ env }) => ({
+  admin: {
+    forgotPassword: {
+      from: "noreply@livestreamrecorder.com",
+      replyTo: "contact@livestreamrecorder.com",
+    },
+  },
   email: {
     config: {
       provider: "strapi-provider-email-extra",
@@ -19,6 +25,7 @@ export default ({ env }) => ({
         },
       },
       settings: {
+        defaultTo: "contact@livestreamrecorder.com",
         defaultFrom: "noreply@livestreamrecorder.com",
         defaultFromName: "Live Stream Recorder",
       },
@@ -49,6 +56,50 @@ export default ({ env }) => ({
     config: {
       "x-strapi-config": {
         mutateDocumentation: (draft) => {
+          // Endpoint: POST /send-email
+          draft.paths["/send-email"] = {
+            post: {
+              tags: ["Email"],
+              operationId: "sendEmail",
+              summary: "Send a contact form email",
+              security: [{ bearerAuth: [] }],
+              requestBody: {
+                required: true,
+                content: {
+                  "application/json": {
+                    schema: {
+                      type: "object",
+                      required: ["email", "message"],
+                      properties: {
+                        name: { type: "string" },
+                        email: { type: "string", format: "email" },
+                        subject: { type: "string" },
+                        message: { type: "string" },
+                      },
+                    },
+                  },
+                },
+              },
+              responses: {
+                "200": {
+                  description: "Email sent successfully",
+                  content: {
+                    "application/json": {
+                      schema: {
+                        type: "object",
+                        properties: {
+                          message: { type: "string" },
+                        },
+                      },
+                    },
+                  },
+                },
+                "400": { description: "Missing required fields" },
+                "500": { description: "Failed to send email" },
+              },
+            },
+          };
+
           // Fix populate parameter type for all GET endpoints
           Object.keys(draft.paths).forEach((path) => {
             const get = draft.paths[path]?.get;
