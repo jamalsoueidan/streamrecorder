@@ -19,7 +19,9 @@
     "searchPlaceholder": "أدخل رابط البث الخاص بك",
     "installApp": "تثبيت التطبيق",
     "more": "المزيد",
-    "language": "اللغة"
+    "language": "اللغة",
+    "collapse": "طي الشريط الجانبي",
+    "expand": "توسيع الشريط الجانبي"
   },
   "installModal": {
     "title": "تثبيت التطبيق",

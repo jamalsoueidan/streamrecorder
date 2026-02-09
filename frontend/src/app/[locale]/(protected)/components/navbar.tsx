@@ -1,18 +1,23 @@
 "use client";
 
 import {
+  ActionIcon,
   Button,
   Divider,
+  Flex,
   Group,
   Menu,
   Paper,
   Stack,
   Text,
+  Tooltip,
 } from "@mantine/core";
 import {
   IconBrandSafari,
-  IconHeart,
-  IconLayoutDashboard,
+  IconHome,
+  IconLayoutSidebarLeftCollapse,
+  IconLayoutSidebarLeftExpand,
+  IconLibrary,
   IconLink,
   IconLogout,
   IconPlayerRecordFilled,
@@ -37,12 +42,12 @@ import classes from "./navbar.module.css";
 export const navigation = [
   {
     titleKey: "sections.home",
-    icon: IconLayoutDashboard,
+    icon: IconHome,
     links: [
       {
         labelKey: "links.dashboard",
         url: "/dashboard",
-        icon: IconLayoutDashboard,
+        icon: IconHome,
         color: null,
       },
     ],
@@ -60,7 +65,7 @@ export const navigation = [
       {
         labelKey: "links.myList",
         url: "/my-list",
-        icon: IconHeart,
+        icon: IconLibrary,
         color: null,
       },
       {
@@ -94,9 +99,13 @@ export const navigation = [
 export function Navbar({
   close,
   opened,
+  collapsed,
+  onToggleCollapse,
 }: {
   close: () => void;
   opened: boolean;
+  collapsed: boolean;
+  onToggleCollapse: () => void;
 }) {
   const router = useRouter();
   const user = useUser();
@@ -117,117 +126,211 @@ export function Navbar({
   const links = navigation?.map((section) => {
     const html = section.links?.map((item) => {
       const Icon = item.icon || IconPlayerRecordFilled;
-      return (
+      const isActive = pathname.startsWith(item.url || "");
+
+      const linkContent = (
         <Link
           className={classes.link}
-          data-active={pathname.startsWith(item.url || "") || undefined}
+          data-active={isActive || undefined}
+          data-collapsed={collapsed || undefined}
           key={item.labelKey}
           href={item.url || "#"}
           onClick={(e) => handleLinkClick(e, item.url || "#")}
         >
-          <Group gap="xs">
+          {collapsed ? (
             <Icon
               className={classes.linkIcon}
               stroke={2}
               style={{ width: "28px", height: "28px" }}
               color={item.color ? item.color : undefined}
             />
-            <span>{t(item.labelKey)}</span>
-          </Group>
+          ) : (
+            <Group gap="xs">
+              <Icon
+                className={classes.linkIcon}
+                stroke={2}
+                style={{ width: "28px", height: "28px" }}
+                color={item.color ? item.color : undefined}
+              />
+              <span>{t(item.labelKey)}</span>
+            </Group>
+          )}
         </Link>
       );
+
+      if (collapsed) {
+        return (
+          <Tooltip
+            key={item.labelKey}
+            label={t(item.labelKey)}
+            position="right"
+            withArrow
+          >
+            {linkContent}
+          </Tooltip>
+        );
+      }
+
+      return linkContent;
     });
 
     return (
       <div key={section.titleKey}>
-        <Text size="md" fw={400} c="dimmed" mb="xs">
-          {t(section.titleKey)}
-        </Text>
-        {html}
+        {!collapsed && (
+          <Text size="md" fw={400} c="dimmed" mb="xs">
+            {t(section.titleKey)}
+          </Text>
+        )}
+        <Stack
+          gap={collapsed ? 4 : "xs"}
+          align={collapsed ? "center" : "stretch"}
+        >
+          {html}
+        </Stack>
       </div>
     );
   });
 
+  const searchContent = collapsed ? (
+    <Tooltip label={t("actions.searchPlaceholder")} position="right" withArrow>
+      <ActionIcon
+        component={Link}
+        href="/search"
+        size="xl"
+        variant="light"
+        color="yellow"
+        onClick={(e: React.MouseEvent<HTMLAnchorElement>) =>
+          handleLinkClick(e, "/search")
+        }
+        style={{
+          border: pathname.includes("/search") ? "1px solid gold" : undefined,
+        }}
+      >
+        <IconLink size={24} />
+      </ActionIcon>
+    </Tooltip>
+  ) : (
+    <Link
+      href="/search"
+      style={{ textDecoration: "none" }}
+      onClick={(e) => handleLinkClick(e, "/search")}
+    >
+      <Paper
+        p="sm"
+        radius="md"
+        style={{
+          cursor: "pointer",
+          border: "1px solid gold",
+          ...(pathname.includes("/search")
+            ? {}
+            : {
+                animation: "glow 2s ease-in-out 2 forwards",
+              }),
+        }}
+      >
+        <Group>
+          <IconLink size={24} color="gray" />
+          <Text c="gray.3">{t("actions.searchPlaceholder")}</Text>
+        </Group>
+      </Paper>
+    </Link>
+  );
+
   return (
-    <nav className={classes.navbar}>
+    <nav className={classes.navbar} data-collapsed={collapsed || undefined}>
       <div className={classes.navbarMain}>
-        <Divider my="4px" color="transparent" />
-        <Link
-          href="/search"
-          style={{ textDecoration: "none" }}
-          onClick={(e) => handleLinkClick(e, "/search")}
-        >
-          <Paper
-            p="sm"
-            radius="md"
-            style={{
-              cursor: "pointer",
-              border: "1px solid gold",
-              ...(pathname.includes("/search")
-                ? {}
-                : {
-                    animation: "glow 2s ease-in-out 2 forwards",
-                  }),
-            }}
-          >
-            <Group>
-              <IconLink size={24} color="gray" />
-              <Text c="gray.3">{t("actions.searchPlaceholder")}</Text>
-            </Group>
-          </Paper>
-        </Link>
+        <Stack align={collapsed ? "center" : "stretch"}>{searchContent}</Stack>
 
         <Divider my="xs" color="transparent" />
-        <Stack>{links}</Stack>
+        <Stack gap="md">{links}</Stack>
       </div>
 
       <div className={classes.footer}>
-        <Menu width={280}>
-          <Menu.Target>
-            <Button
-              fullWidth
+        <Flex
+          direction={collapsed ? "column" : "row"}
+          align="center"
+          gap="xs"
+          w="100%"
+        >
+          <Tooltip
+            label={collapsed ? t("actions.expand") : t("actions.collapse")}
+            position="right"
+            withArrow
+          >
+            <ActionIcon
+              variant="subtle"
+              color="gray"
+              onClick={onToggleCollapse}
               size="lg"
-              variant="outline"
-              c="white"
-              color="gray.7"
-              leftSection={<IconSettings />}
             >
-              {user?.username}
-            </Button>
-          </Menu.Target>
-          <Menu.Dropdown>
-            <Menu.Sub openDelay={120} closeDelay={150}>
-              <Menu.Sub.Target>
-                <Menu.Sub.Item leftSection={<IconWorldSearch size={16} />}>
-                  {t("actions.language")} {locale.toUpperCase()}
-                </Menu.Sub.Item>
-              </Menu.Sub.Target>
+              {collapsed ? (
+                <IconLayoutSidebarLeftExpand />
+              ) : (
+                <IconLayoutSidebarLeftCollapse />
+              )}
+            </ActionIcon>
+          </Tooltip>
 
-              <Menu.Sub.Dropdown>
-                {navConfig.languages
-                  .filter((lang) => locale !== lang.code)
-                  .map((lang) => (
-                    <Menu.Item
-                      key={lang.code}
-                      onClick={() => switchLocale(lang.code)}
-                    >
-                      {lang.label}
-                    </Menu.Item>
-                  ))}
-              </Menu.Sub.Dropdown>
-            </Menu.Sub>
-            <Menu.Item
-              onClick={async (e) => {
-                Sentry.setUser(null);
-                await fetch("/api/logout", { method: "POST" });
-                window.location.href = "/";
-              }}
-              leftSection={<IconLogout size={16} />}
-            >
-              {t("actions.logout")}
-            </Menu.Item>
-          </Menu.Dropdown>
-        </Menu>
+          <Menu>
+            <Menu.Target>
+              {collapsed ? (
+                <Tooltip
+                  label={user?.username}
+                  position="right"
+                  withArrow
+                  closeDelay={500}
+                >
+                  <ActionIcon size="xl" variant="outline" color="gray.7">
+                    <IconSettings size={20} />
+                  </ActionIcon>
+                </Tooltip>
+              ) : (
+                <Button
+                  w="100%"
+                  size="lg"
+                  variant="outline"
+                  c="white"
+                  color="gray.7"
+                  leftSection={<IconSettings />}
+                >
+                  {user?.username}
+                </Button>
+              )}
+            </Menu.Target>
+            <Menu.Dropdown>
+              <Menu.Sub openDelay={120} closeDelay={150}>
+                <Menu.Sub.Target>
+                  <Menu.Sub.Item leftSection={<IconWorldSearch size={16} />}>
+                    {t("actions.language")} {locale.toUpperCase()}
+                  </Menu.Sub.Item>
+                </Menu.Sub.Target>
+
+                <Menu.Sub.Dropdown>
+                  {navConfig.languages
+                    .filter((lang) => locale !== lang.code)
+                    .map((lang) => (
+                      <Menu.Item
+                        key={lang.code}
+                        onClick={() => switchLocale(lang.code)}
+                      >
+                        {lang.label}
+                      </Menu.Item>
+                    ))}
+                </Menu.Sub.Dropdown>
+              </Menu.Sub>
+              <Menu.Item
+                onClick={async (e) => {
+                  Sentry.setUser(null);
+                  await fetch("/api/logout", { method: "POST" });
+                  window.location.href = "/";
+                }}
+                leftSection={<IconLogout size={16} />}
+              >
+                {t("actions.logout")}
+              </Menu.Item>
+            </Menu.Dropdown>
+          </Menu>
+        </Flex>
       </div>
     </nav>
   );

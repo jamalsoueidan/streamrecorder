@@ -6,8 +6,8 @@
   },
   "links": {
     "dashboard": "Dashboard",
-    "myRecordings": "My Recordings",
-    "myList": "My List",
+    "myRecordings": "Recordings",
+    "myList": "Library",
     "live": "Live",
     "explore": "Explore",
     "friends": "Friends"
@@ -19,7 +19,9 @@
     "searchPlaceholder": "Enter your stream URL",
     "installApp": "Install App",
     "more": "More",
-    "language": "Language"
+    "language": "Language",
+    "collapse": "Collapse sidebar",
+    "expand": "Expand sidebar"
   },
   "installModal": {
     "title": "Install App",

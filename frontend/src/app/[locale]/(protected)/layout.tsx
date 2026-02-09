@@ -1,5 +1,5 @@
 import { getToken } from "@/lib/token";
-
+import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 
 import { buildRulesFromStrapi } from "@/app/lib/ability";
@@ -21,6 +21,9 @@ export default async function DashboardLayout({
     redirect("/login");
   }
 
+  const cookieStore = await cookies();
+  const navbarCollapsed = cookieStore.get("navbar-collapsed")?.value === "true";
+
   const user =
     await api.usersPermissionsUsersRoles.getUsersPermissionsUsersRoles({
       populate: "role",
@@ -41,7 +44,7 @@ export default async function DashboardLayout({
       <QueryProvider>
         <UserProvider user={user?.data}>
           <AbilityProvider rules={rules} role={role}>
-            <Shell>{children}</Shell>
+            <Shell initialCollapsed={navbarCollapsed}>{children}</Shell>
           </AbilityProvider>
         </UserProvider>
       </QueryProvider>
