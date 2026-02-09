@@ -30,16 +30,26 @@ export function VideoPlayer({ recording }: { recording: Recording }) {
     const video = videoRef.current;
     if (!video) return;
 
+    const safePlay = () => {
+      const playPromise = video.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(() => {
+          // Autoplay was prevented - this is expected behavior in some browsers
+          // User can manually click to play
+        });
+      }
+    };
+
     const handleLoaded = () => {
       if (startTime > 0) {
         video.currentTime = startTime;
       } else {
-        video.play().catch(() => {});
+        safePlay();
       }
     };
 
     const handleSeeked = () => {
-      video.play().catch(() => {});
+      safePlay();
     };
 
     video.addEventListener("loadedmetadata", handleLoaded, { once: true });
@@ -58,7 +68,14 @@ export function VideoPlayer({ recording }: { recording: Recording }) {
     if (document.fullscreenElement) {
       document.exitFullscreen();
     } else {
-      controller.requestFullscreen();
+      const el = controller as HTMLElement & {
+        webkitRequestFullscreen?: () => Promise<void>;
+      };
+      if (el.requestFullscreen) {
+        el.requestFullscreen();
+      } else if (el.webkitRequestFullscreen) {
+        el.webkitRequestFullscreen();
+      }
     }
   };
 

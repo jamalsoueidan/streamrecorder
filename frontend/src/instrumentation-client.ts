@@ -13,6 +13,11 @@ Sentry.init({
     ) {
       return null;
     }
+    const message = event.exception?.values?.[0]?.value || "";
+    if (message.includes("play() request was interrupted") ||
+        message.includes("play method is not allowed")) {
+      return null;
+    }
     return event;
   },
   beforeBreadcrumb(breadcrumb) {
