@@ -22,16 +22,22 @@ export default function RecordingModal() {
   const searchParams = useSearchParams();
   const [filters] = useQueryStates(followingParsers);
 
-  const { data, fetchNextPage, hasNextPage, isFetchingNextPage, isLoading } =
-    useInfiniteQuery({
-      queryKey: ["explore", filters],
-      queryFn: ({ pageParam }) => fetchRecordings(filters, pageParam),
-      initialPageParam: 1,
-      getNextPageParam: (lastPage) => {
-        const { page = 1, pageCount = 0 } = lastPage.meta?.pagination ?? {};
-        return page < pageCount ? page + 1 : undefined;
-      },
-    });
+  const {
+    data,
+    fetchNextPage,
+    hasNextPage,
+    isFetchingNextPage,
+    isLoading,
+    isFetching,
+  } = useInfiniteQuery({
+    queryKey: ["explore", filters],
+    queryFn: ({ pageParam }) => fetchRecordings(filters, pageParam),
+    initialPageParam: 1,
+    getNextPageParam: (lastPage) => {
+      const { page = 1, pageCount = 0 } = lastPage.meta?.pagination ?? {};
+      return page < pageCount ? page + 1 : undefined;
+    },
+  });
 
   const recordings = useMemo(
     () => data?.pages.flatMap((p) => p.data) ?? [],
@@ -56,7 +62,12 @@ export default function RecordingModal() {
     router.replace("/explore");
   };
 
-  if (isLoading) {
+  // Check if the video exists in loaded recordings
+  const videoExists = recordings.some((r) => r.documentId === params.id);
+
+  // Show loading if: initial load, OR still fetching and video not found yet
+  // This prevents false "not found" during cache hydration
+  if (isLoading || (isFetching && !videoExists)) {
     return (
       <Modal.Root opened={true} onClose={handleClose} fullScreen>
         <Modal.Content>
