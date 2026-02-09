@@ -2,7 +2,7 @@
 /// <reference lib="esnext" />
 /// <reference lib="webworker" />
 import type { PrecacheEntry, SerwistGlobalConfig } from "serwist";
-import { CacheFirst, NetworkFirst, Serwist } from "serwist";
+import { CacheFirst, Serwist } from "serwist";
 
 declare global {
   interface WorkerGlobalScope extends SerwistGlobalConfig {
@@ -19,15 +19,7 @@ const serwist = new Serwist({
   navigationPreload: true,
   disableDevLogs: true,
   runtimeCaching: [
-    // API requests - network first, fallback to cache
-    {
-      matcher: ({ url }) => url.pathname.startsWith("/api/"),
-      handler: new NetworkFirst({
-        cacheName: "api-cache",
-        networkTimeoutSeconds: 10,
-      }),
-    },
-    // Static assets - cache first
+    // Static assets - cache first (images, fonts, styles)
     {
       matcher: ({ request }) =>
         request.destination === "image" ||
