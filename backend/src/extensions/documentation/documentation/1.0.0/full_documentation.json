@@ -20,7 +20,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2026-02-09T06:37:33.571Z"
+    "x-generation-date": "2026-02-09T07:00:04.900Z"
   },
   "servers": [
     {
@@ -8435,14 +8435,6 @@
           "data": {
             "type": "object",
             "properties": {
-              "startedAt": {
-                "type": "string",
-                "format": "date-time"
-              },
-              "endedAt": {
-                "type": "string",
-                "format": "date-time"
-              },
               "follower": {
                 "oneOf": [
                   {
@@ -8525,14 +8517,6 @@
           },
           "documentId": {
             "type": "string"
-          },
-          "startedAt": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "endedAt": {
-            "type": "string",
-            "format": "date-time"
           },
           "follower": {
             "type": "object",
@@ -9555,14 +9539,6 @@
                 },
                 "documentId": {
                   "type": "string"
-                },
-                "startedAt": {
-                  "type": "string",
-                  "format": "date-time"
-                },
-                "endedAt": {
-                  "type": "string",
-                  "format": "date-time"
                 },
                 "follower": {
                   "type": "object",

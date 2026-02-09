@@ -11,12 +11,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "startedAt": {
-      "type": "datetime"
-    },
-    "endedAt": {
-      "type": "datetime"
-    },
     "follower": {
       "type": "relation",
       "relation": "manyToOne",
