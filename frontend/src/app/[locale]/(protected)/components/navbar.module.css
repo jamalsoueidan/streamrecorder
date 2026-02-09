@@ -4,6 +4,12 @@
   padding: var(--mantine-spacing-md);
   display: flex;
   flex-direction: column;
+  transition: padding 200ms ease;
+}
+
+.navbar[data-collapsed] {
+  padding: var(--mantine-spacing-sm);
+  align-items: center;
 }
 
 .navbarMain {
@@ -22,6 +28,8 @@
   margin-top: var(--mantine-spacing-md);
   border-top: 1px solid
     light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
+  display: flex;
+  justify-content: center;
 }
 
 .link {
@@ -33,6 +41,7 @@
   padding: var(--mantine-spacing-xs) var(--mantine-spacing-sm);
   border-radius: var(--mantine-radius-sm);
   font-weight: 500;
+  transition: padding 200ms ease, justify-content 200ms ease;
 
   @mixin hover {
     background-color: light-dark(
@@ -56,6 +65,11 @@
         color: var(--mantine-color-red-7);
       }
     }
+  }
+
+  &[data-collapsed] {
+    justify-content: center;
+    padding: var(--mantine-spacing-sm);
   }
 }
 

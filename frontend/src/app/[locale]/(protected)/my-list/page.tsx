@@ -1,6 +1,6 @@
 import { getFollowerFilters } from "@/app/actions/followers";
 import { Divider, Group, Stack, Text, Title } from "@mantine/core";
-import { IconHeart } from "@tabler/icons-react";
+import { IconLibrary } from "@tabler/icons-react";
 import {
   dehydrate,
   HydrationBoundary,
@@ -43,7 +43,7 @@ export default async function Page({
         <Group justify="space-between" w="100%">
           <Stack gap={2}>
             <Group gap="xs">
-              <IconHeart size={32} />
+              <IconLibrary size={32} />
               <Title order={1} size="h3">
                 {t("title", { count })}
               </Title>

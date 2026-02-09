@@ -21,7 +21,7 @@ import {
 import {
   IconBrandSafari,
   IconChevronRight,
-  IconLayoutDashboard,
+  IconHome,
   IconVideo,
   IconWorldSearch,
 } from "@tabler/icons-react";
@@ -88,7 +88,7 @@ export default async function Page() {
       <Flex justify="space-between" align="center" w="100%">
         <Stack gap={2}>
           <Flex gap="xs" align="center">
-            <IconLayoutDashboard size={32} />
+            <IconHome size={32} />
             <Title order={1} size="h3">
               {t("title")}
             </Title>

@@ -1,5 +1,5 @@
 import { Divider, Group, Stack, Text, Title } from "@mantine/core";
-import { IconUsers } from "@tabler/icons-react";
+import { IconVideo } from "@tabler/icons-react";
 import {
   dehydrate,
   HydrationBoundary,
@@ -37,7 +37,7 @@ export default async function Page({
         <Group justify="space-between" w="100%">
           <Stack gap={2}>
             <Group gap="xs">
-              <IconUsers size={32} />
+              <IconVideo size={32} />
               <Title order={1} size="h3">
                 {t("title")}
               </Title>
