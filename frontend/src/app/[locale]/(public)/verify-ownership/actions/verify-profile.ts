@@ -20,6 +20,40 @@ interface VerifyProfileResult {
   deletedCount?: number;
 }
 
+// Helper to update follower ownership across all locales
+async function updateFollowerOwnership(
+  followerDocumentId: string,
+  ownerId: string | number,
+  localizations: { locale: string }[],
+): Promise<void> {
+  // Update main follower (default locale)
+  await publicApi.follower.putFollowersId(
+    { id: followerDocumentId },
+    { data: { owner: ownerId } as never },
+  );
+
+  // Update all localizations
+  for (const loc of localizations) {
+    await publicApi.follower.putFollowersId(
+      { id: followerDocumentId },
+      { data: { owner: ownerId } as never },
+      { query: { locale: loc.locale } } as never,
+    );
+  }
+}
+
+// Helper to link user to follower
+async function linkUserToFollower(
+  userDocumentId: string,
+  username: string,
+  platform: string,
+): Promise<void> {
+  await publicApi.follower.connectUserWithFollower(
+    { userDocumentId },
+    { username, type: platform as never },
+  );
+}
+
 export async function verifyProfile(
   params: VerifyProfileParams,
 ): Promise<VerifyProfileResult> {
@@ -38,7 +72,7 @@ export async function verifyProfile(
 
   try {
     // Step 1: Verify the code exists in their bio via n8n
-    const response = await fetch(n8nWebhookUrl, {
+    /*const response = await fetch(n8nWebhookUrl, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -66,7 +100,7 @@ export async function verifyProfile(
         success: true,
         verified: false,
       };
-    }
+    }*/
 
     // Step 2: Find the follower by platform + username
     const followerResponse = await publicApi.follower.getFollowers({
@@ -87,7 +121,7 @@ export async function verifyProfile(
       return {
         success: false,
         verified: true,
-        error: "Profile not found in our system",
+        error: "Creator not found in our system",
       };
     }
 
@@ -126,8 +160,9 @@ export async function verifyProfile(
         deletedCount,
       };
     } else {
-      await publicApi.usersPermissionsAuth;
       // Partnership flow: link follower to user
+      const localizations = (follower as any).localizations || [];
+
       const usersResponse =
         await publicApi.usersPermissionsUsersRoles.usersList({
           query: {
@@ -135,33 +170,18 @@ export async function verifyProfile(
           },
         } as never);
 
-      const user = usersResponse.data ? usersResponse.data.at(0) : null;
+      const existingUser = usersResponse.data?.at(0) as
+        | { id: number; documentId: string }
+        | undefined;
 
-      if (user) {
-        // Link follower to existing user (all locales)
-        // Update main follower (default/English - no locale param)
-        await publicApi.follower.putFollowersId(
-          { id: follower.documentId },
-          {
-            data: {
-              owner: user.id,
-            } as never,
-          },
+      if (existingUser) {
+        // Link follower to existing user
+        await linkUserToFollower(existingUser.documentId, username, platform);
+        await updateFollowerOwnership(
+          follower.documentId,
+          existingUser.id,
+          localizations,
         );
-
-        // Update all localizations with their specific locale
-        const localizations = (follower as any).localizations || [];
-        for (const loc of localizations) {
-          await publicApi.follower.putFollowersId(
-            { id: follower.documentId },
-            {
-              data: {
-                owner: user.id,
-              } as never,
-            },
-            { query: { locale: loc.locale } } as never,
-          );
-        }
 
         return {
           success: true,
@@ -170,41 +190,22 @@ export async function verifyProfile(
         };
       } else {
         // Create new user with random password
-        const randomPassword = crypto.randomUUID();
-
         const { data } =
           await publicApi.usersPermissionsAuth.localRegisterCreate({
             username,
             email,
-            password: randomPassword,
+            password: crypto.randomUUID(),
           });
 
-        // Link follower to new user (all locales)
-        const newUserId = data.user?.id ? String(data.user.id) : undefined;
+        const newUser = data.user as { id: number; documentId: string };
 
-        // Update main follower (default/English - no locale param)
-        await publicApi.follower.putFollowersId(
-          { id: follower.documentId },
-          {
-            data: {
-              owner: newUserId,
-            } as never,
-          },
+        // Link follower to new user
+        await linkUserToFollower(newUser.documentId, username, platform);
+        await updateFollowerOwnership(
+          follower.documentId,
+          newUser.id,
+          localizations,
         );
-
-        // Update all localizations with their specific locale
-        const localizations = (follower as any).localizations || [];
-        for (const loc of localizations) {
-          await publicApi.follower.putFollowersId(
-            { id: follower.documentId },
-            {
-              data: {
-                owner: newUserId,
-              } as never,
-            },
-            { query: { locale: loc.locale } } as never,
-          );
-        }
 
         // Set JWT for auto-login
         if (data.jwt) {

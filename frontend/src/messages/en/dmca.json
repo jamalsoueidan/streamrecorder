@@ -28,7 +28,7 @@
     },
     "clips": {
       "title": "Clip Creator",
-      "description": "Download clips to share on TikTok, YouTube, Instagram, and more"
+      "description": "Download clips to share on TikTok, YouTube, and more"
     },
     "translation": {
       "title": "Multi-Language Support",
@@ -44,7 +44,7 @@
     },
     "control": {
       "title": "Full Privacy Control",
-      "description": "Delete any video, go private, or disable future recordings anytime"
+      "description": "Delete any video, hide any video, control your recordings"
     },
     "cta": "Claim Your Profile & Become a Partner",
     "ctaSubtext": "Takes 2 minutes • Full control over your content"
@@ -53,9 +53,9 @@
     "title": "Notification of Claimed Infringement",
     "description": "Please use this form to request the removal of recordings under the DMCA.",
     "verifyFirst": {
-      "title": "Verification Required",
-      "message": "To protect against unauthorized removal requests, you must verify you own this account before submitting a DMCA request.",
-      "button": "Verify Account Ownership"
+      "title": "Quick Verification",
+      "message": "Verify account ownership to instantly remove your recordings. If you can't verify, use the DMCA form below — manual requests are processed within 10 business days.",
+      "button": "Verify & Remove Instantly"
     },
     "content": {
       "label": "The following content",

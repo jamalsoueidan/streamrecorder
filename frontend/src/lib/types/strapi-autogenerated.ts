@@ -5776,6 +5776,20 @@ export type GetUsersPermissionsUsersRolesData = UsersPermissionsUser & {
 
 export type CountListData = number;
 
+export interface ConnectUserWithFollowerPayload {
+  username: string;
+  type: FollowerTypeEnum;
+}
+
+export interface ConnectUserWithFollowerParams {
+  /** The user's document ID */
+  userDocumentId: string;
+}
+
+export interface ConnectUserWithFollowerData {
+  data?: Follower;
+}
+
 export interface SendEmailPayload {
   name?: string;
   /** @format email */
@@ -6722,6 +6736,25 @@ export namespace Follower {
     export type RequestBody = never;
     export type RequestHeaders = {};
     export type ResponseBody = DeleteFollowersIdData;
+  }
+
+  /**
+   * No description
+   * @tags Follower
+   * @name ConnectUserWithFollower
+   * @summary Connect a user with a follower
+   * @request POST:/followers/connect-user-with-follower/{userDocumentId}
+   * @secure
+   */
+  export namespace ConnectUserWithFollower {
+    export type RequestParams = {
+      /** The user's document ID */
+      userDocumentId: string;
+    };
+    export type RequestQuery = {};
+    export type RequestBody = ConnectUserWithFollowerPayload;
+    export type RequestHeaders = {};
+    export type ResponseBody = ConnectUserWithFollowerData;
   }
 
   /**
@@ -8794,6 +8827,30 @@ export class Api<
         path: `/followers/${id}`,
         method: "DELETE",
         secure: true,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Follower
+     * @name ConnectUserWithFollower
+     * @summary Connect a user with a follower
+     * @request POST:/followers/connect-user-with-follower/{userDocumentId}
+     * @secure
+     */
+    connectUserWithFollower: (
+      { userDocumentId, ...query }: ConnectUserWithFollowerParams,
+      data: ConnectUserWithFollowerPayload,
+      params: RequestParams = {},
+    ) =>
+      this.request<ConnectUserWithFollowerData, void>({
+        path: `/followers/connect-user-with-follower/${userDocumentId}`,
+        method: "POST",
+        body: data,
+        secure: true,
+        type: ContentType.Json,
         format: "json",
         ...params,
       }),
