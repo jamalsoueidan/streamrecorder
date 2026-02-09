@@ -1,0 +1,84 @@
+{
+  "meta": {
+    "title": "Verify Your Account",
+    "description": "Verify ownership of your streaming profile to claim your account or manage your content."
+  },
+  "header": {
+    "title": "Verify Ownership",
+    "subtitle": "Prove you own this account to claim your profile or manage your content"
+  },
+  "common": {
+    "copy": "Copy",
+    "copied": "Copied!"
+  },
+  "steps": {
+    "enterUrl": {
+      "label": "Your Profile",
+      "description": "Enter your streaming profile URL",
+      "intro": "Enter the URL of your streaming profile.",
+      "input": {
+        "label": "Profile URL",
+        "placeholder": "https://tiktok.com/@yourusername"
+      },
+      "detected": "Detected: {platform} - @{username}",
+      "continue": "Continue",
+      "email": {
+        "label": "Email Address",
+        "placeholder": "you@example.com"
+      },
+      "error": {
+        "required": "Please enter your profile URL",
+        "invalid": "We couldn't recognize this URL",
+        "emailRequired": "Please enter your email address",
+        "emailInvalid": "Please enter a valid email address"
+      }
+    },
+    "verify": {
+      "label": "Verify",
+      "description": "Add code to your bio",
+      "intro": "To prove you own this account, add the verification code below to your profile bio. You can remove it after verification.",
+      "codeLabel": "Your Verification Code",
+      "instructions": "Copy this code and add it anywhere in your profile bio. It can be at the beginning, end, or middle - we'll find it.",
+      "openProfile": "Open {platform} Profile",
+      "verifyButton": "I've Added the Code - Verify Now",
+      "failed": {
+        "title": "Couldn't find the code",
+        "message": "We couldn't find the verification code in your bio. Make sure you've saved your profile after adding the code. If you're having trouble, you can request manual verification.",
+        "manualButton": "Request Manual Verification"
+      },
+      "manual": {
+        "title": "Manual Verification",
+        "description": "Our team will manually verify your account within 24-48 hours. Please provide any additional information that can help us verify you own this account (e.g., screenshot of your profile settings, email associated with the account).",
+        "input": {
+          "label": "Additional Information",
+          "placeholder": "Any additional details that can help verify your ownership..."
+        },
+        "submit": "Submit for Manual Review"
+      }
+    },
+    "complete": {
+      "pending": {
+        "title": "Verification Pending",
+        "message": "We've received your verification request. Our team will review it and get back to you within 24-48 hours via email."
+      },
+      "created": {
+        "title": "Welcome!",
+        "message": "Your account has been created and your profile is now linked.",
+        "button": "Dashboard"
+      },
+      "linked": {
+        "title": "Profile Linked",
+        "message": "Your profile has been linked to your account. Please login to access your dashboard.",
+        "button": "Go to Login"
+      },
+      "deleted": {
+        "title": "Recordings Deleted",
+        "message": "{count, plural, =0 {No recordings found.} =1 {1 recording has been deleted.} other {# recordings have been deleted.}}"
+      },
+      "notFound": {
+        "title": "Profile Not Found",
+        "message": "Your ownership was verified, but this content creator doesn't exist in our system."
+      }
+    }
+  }
+}

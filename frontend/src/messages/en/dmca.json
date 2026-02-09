@@ -7,10 +7,56 @@
     "title": "Digital Millennium Copyright Act",
     "subtitle": "DMCA Policy"
   },
+  "divider": "Or proceed with DMCA removal",
   "footer": "We respond to all valid DMCA requests. Abuse of this process may result in legal consequences.",
+  "partner": {
+    "title": "Wait! Become a Partner Instead",
+    "badge": "Recommended",
+    "subtitle": "Take control of your content and grow your audience",
+    "publicMessage": "You're already streaming publicly. We help your fans find you on Google and watch your best moments.",
+    "discovery": {
+      "title": "Google Search",
+      "description": "Your streams appear in search results and we send fans directly to your profile"
+    },
+    "analytics": {
+      "title": "Analytics Dashboard",
+      "description": "Track views, watch time, audience location, and growth trends"
+    },
+    "highlights": {
+      "title": "AI-Powered Highlights",
+      "description": "We automatically find and showcase your best streaming moments"
+    },
+    "clips": {
+      "title": "Clip Creator",
+      "description": "Download clips to share on TikTok, YouTube, Instagram, and more"
+    },
+    "translation": {
+      "title": "Multi-Language Support",
+      "description": "Reach global fans with auto-translated subtitles and descriptions"
+    },
+    "rankings": {
+      "title": "Streamer Rankings",
+      "description": "Get featured in top streamer lists and category pages"
+    },
+    "brands": {
+      "title": "Brand Opportunities",
+      "description": "Get discovered by sponsors looking for creators like you"
+    },
+    "control": {
+      "title": "Full Privacy Control",
+      "description": "Delete any video, go private, or disable future recordings anytime"
+    },
+    "cta": "Claim Your Profile & Become a Partner",
+    "ctaSubtext": "Takes 2 minutes • Full control over your content"
+  },
   "form": {
     "title": "Notification of Claimed Infringement",
     "description": "Please use this form to request the removal of recordings under the DMCA.",
+    "verifyFirst": {
+      "title": "Verification Required",
+      "message": "To protect against unauthorized removal requests, you must verify you own this account before submitting a DMCA request.",
+      "button": "Verify Account Ownership"
+    },
     "content": {
       "label": "The following content",
       "description": "Provide the URL(s) or description of the infringing content",

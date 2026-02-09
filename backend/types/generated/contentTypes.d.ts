@@ -871,6 +871,10 @@ export interface ApiFollowerFollower extends Struct.CollectionTypeSchema {
           localized: false;
         };
       }>;
+    owner: Schema.Attribute.Relation<
+      'oneToOne',
+      'plugin::users-permissions.user'
+    >;
     pause: Schema.Attribute.Boolean &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
