@@ -44,11 +44,23 @@ const serwist = new Serwist({
 self.addEventListener("activate", (event) => {
   event.waitUntil(
     (async () => {
-      const clients = await self.clients.matchAll({ type: "window" });
+      // Claim clients first so they're controlled by this SW
+      await self.clients.claim();
+
+      // includeUncontrolled ensures we find windows even if claim() is still propagating
+      const clients = await self.clients.matchAll({
+        type: "window",
+        includeUncontrolled: true,
+      });
+
       for (const client of clients) {
-        // Navigate to the same URL to force reload
         if (client.url && "navigate" in client) {
-          await (client as WindowClient).navigate(client.url);
+          try {
+            await (client as WindowClient).navigate(client.url);
+          } catch {
+            // Navigation can fail (e.g., client not in navigable state)
+            // Continue with other clients
+          }
         }
       }
     })()
