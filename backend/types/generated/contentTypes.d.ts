@@ -438,7 +438,7 @@ export interface ApiActivityActivity extends Struct.CollectionTypeSchema {
     singularName: 'activity';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     createdAt: Schema.Attribute.DateTime;
