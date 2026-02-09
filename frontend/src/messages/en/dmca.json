@@ -54,7 +54,7 @@
     "description": "Please use this form to request the removal of recordings under the DMCA.",
     "verifyFirst": {
       "title": "Quick Verification",
-      "message": "Verify account ownership to instantly remove your recordings. If you can't verify, use the DMCA form below — manual requests are processed within 10 business days.",
+      "message": "Verify account ownership to instantly remove your recordings. If you can't verify, use the DMCA form — manual requests are processed within 10 business days.",
       "button": "Verify & Remove Instantly"
     },
     "content": {

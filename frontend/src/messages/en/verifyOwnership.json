@@ -43,24 +43,11 @@
       "verifyButton": "I've Added the Code - Verify Now",
       "failed": {
         "title": "Couldn't find the code",
-        "message": "We couldn't find the verification code in your bio. Make sure you've saved your profile after adding the code. If you're having trouble, you can request manual verification.",
-        "manualButton": "Request Manual Verification"
-      },
-      "manual": {
-        "title": "Manual Verification",
-        "description": "Our team will manually verify your account within 24-48 hours. Please provide any additional information that can help us verify you own this account (e.g., screenshot of your profile settings, email associated with the account).",
-        "input": {
-          "label": "Additional Information",
-          "placeholder": "Any additional details that can help verify your ownership..."
-        },
-        "submit": "Submit for Manual Review"
+        "message": "We couldn't find the verification code in your bio. Make sure you've saved your profile after adding the code. If you can't add the code to your bio, go back and use the DMCA form instead.",
+        "backToForm": "Back to DMCA Form"
       }
     },
     "complete": {
-      "pending": {
-        "title": "Verification Pending",
-        "message": "We've received your verification request. Our team will review it and get back to you within 24-48 hours via email."
-      },
       "created": {
         "title": "Welcome!",
         "message": "Your account has been created and your profile is now linked.",

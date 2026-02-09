@@ -11,28 +11,21 @@ import {
   Stack,
   Stepper,
   Text,
-  Textarea,
   TextInput,
   Title,
   Tooltip,
 } from "@mantine/core";
 import {
-  Icon123,
   IconAlertCircle,
   IconCheck,
   IconClipboard,
-  IconClock,
   IconExternalLink,
-  IconUpload,
 } from "@tabler/icons-react";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import { parseUsername } from "@/app/lib/parse-username";
-import {
-  verifyProfile,
-  submitManualVerification,
-} from "../actions/verify-profile";
+import { verifyProfile } from "../actions/verify-profile";
 
 function generateVerificationCode() {
   const chars = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
@@ -53,10 +46,6 @@ export function VerificationFlow({ intent }: { intent: string }) {
   const [verificationCode] = useState(() => generateVerificationCode());
   const [verifying, setVerifying] = useState(false);
   const [verificationFailed, setVerificationFailed] = useState(false);
-  const [manualRequest, setManualRequest] = useState(false);
-  const [submittingManual, setSubmittingManual] = useState(false);
-  const [additionalInfo, setAdditionalInfo] = useState("");
-  const [submitted, setSubmitted] = useState(false);
   const [actionResult, setActionResult] = useState<
     "created" | "linked" | "deleted" | "not_found" | null
   >(null);
@@ -126,28 +115,6 @@ export function VerificationFlow({ intent }: { intent: string }) {
       setActive(2);
     } else {
       setVerificationFailed(true);
-    }
-  };
-
-  const handleManualRequest = async () => {
-    if (!profileInfo) return;
-
-    setSubmittingManual(true);
-
-    const result = await submitManualVerification({
-      profileUrl,
-      platform: profileInfo.platform,
-      username: profileInfo.username,
-      verificationCode,
-      additionalInfo,
-      intent,
-    });
-
-    setSubmittingManual(false);
-
-    if (result.success) {
-      setSubmitted(true);
-      setActive(2);
     }
   };
 
@@ -337,7 +304,7 @@ export function VerificationFlow({ intent }: { intent: string }) {
               {t("steps.verify.verifyButton")}
             </Button>
 
-            {verificationFailed && !manualRequest && (
+            {verificationFailed && (
               <Alert
                 icon={<IconAlertCircle size={18} />}
                 color="yellow"
@@ -346,60 +313,18 @@ export function VerificationFlow({ intent }: { intent: string }) {
               >
                 <Stack gap="md">
                   <Text size="sm">{t("steps.verify.failed.message")}</Text>
-                  <Button
-                    variant="light"
-                    color="yellow"
-                    leftSection={<IconUpload size={16} />}
-                    onClick={() => setManualRequest(true)}
-                  >
-                    {t("steps.verify.failed.manualButton")}
-                  </Button>
+                  {intent === "dmca" && (
+                    <Button
+                      component={Link}
+                      href="/dmca"
+                      variant="light"
+                      color="yellow"
+                    >
+                      {t("steps.verify.failed.backToForm")}
+                    </Button>
+                  )}
                 </Stack>
               </Alert>
-            )}
-
-            {manualRequest && (
-              <Card
-                padding="lg"
-                radius="md"
-                style={{
-                  background: "rgba(255, 255, 255, 0.02)",
-                  border: "1px solid rgba(255, 255, 255, 0.06)",
-                }}
-              >
-                <Stack gap="md">
-                  <Title order={4} style={{ color: "#f1f5f9" }}>
-                    {t("steps.verify.manual.title")}
-                  </Title>
-                  <Text size="sm" style={{ color: "#94a3b8" }}>
-                    {t("steps.verify.manual.description")}
-                  </Text>
-                  <Textarea
-                    label={t("steps.verify.manual.input.label")}
-                    placeholder={t("steps.verify.manual.input.placeholder")}
-                    value={additionalInfo}
-                    onChange={(e) => setAdditionalInfo(e.target.value)}
-                    minRows={3}
-                    styles={{
-                      label: { color: "#f1f5f9" },
-                      input: {
-                        background: "rgba(255, 255, 255, 0.03)",
-                        border: "1px solid rgba(255, 255, 255, 0.1)",
-                        color: "#f1f5f9",
-                      },
-                    }}
-                  />
-                  <Button
-                    variant="gradient"
-                    gradient={{ from: "#6366f1", to: "#a855f7" }}
-                    leftSection={<IconClock size={16} />}
-                    onClick={handleManualRequest}
-                    loading={submittingManual}
-                  >
-                    {t("steps.verify.manual.submit")}
-                  </Button>
-                </Stack>
-              </Card>
             )}
           </Stack>
         </Stepper.Step>
@@ -407,29 +332,7 @@ export function VerificationFlow({ intent }: { intent: string }) {
         {/* Step 3: Complete */}
         <Stepper.Completed>
           <Stack gap="lg" mt="xl" align="center">
-            {submitted ? (
-              <>
-                <div
-                  style={{
-                    width: 80,
-                    height: 80,
-                    borderRadius: "50%",
-                    background: "rgba(99, 102, 241, 0.2)",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}
-                >
-                  <IconClock size={40} style={{ color: "#a5b4fc" }} />
-                </div>
-                <Title order={2} ta="center" style={{ color: "#f1f5f9" }}>
-                  {t("steps.complete.pending.title")}
-                </Title>
-                <Text ta="center" style={{ color: "#94a3b8" }} maw={400}>
-                  {t("steps.complete.pending.message")}
-                </Text>
-              </>
-            ) : actionResult === "deleted" ? (
+            {actionResult === "deleted" ? (
               <>
                 <div
                   style={{

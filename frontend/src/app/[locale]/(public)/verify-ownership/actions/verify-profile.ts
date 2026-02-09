@@ -72,7 +72,7 @@ export async function verifyProfile(
 
   try {
     // Step 1: Verify the code exists in their bio via n8n
-    /*const response = await fetch(n8nWebhookUrl, {
+    const response = await fetch(n8nWebhookUrl, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -100,7 +100,7 @@ export async function verifyProfile(
         success: true,
         verified: false,
       };
-    }*/
+    }
 
     // Step 2: Find the follower by platform + username
     const followerResponse = await publicApi.follower.getFollowers({
@@ -225,55 +225,6 @@ export async function verifyProfile(
       success: false,
       verified: false,
       error: "Verification failed",
-    };
-  }
-}
-
-interface SubmitManualVerificationParams {
-  profileUrl: string;
-  platform: string;
-  username: string;
-  verificationCode: string;
-  additionalInfo: string;
-  intent: string;
-}
-
-export async function submitManualVerification(
-  params: SubmitManualVerificationParams,
-): Promise<{ success: boolean; error?: string }> {
-  // This could send an email, create a ticket in your system, etc.
-  // For now, we'll just call an n8n webhook for manual review
-
-  const n8nManualWebhookUrl = process.env.N8N_MANUAL_VERIFY_WEBHOOK_URL;
-
-  if (!n8nManualWebhookUrl) {
-    // If no webhook configured, just return success (manual review will happen elsewhere)
-    console.log("Manual verification request:", params);
-    return { success: true };
-  }
-
-  try {
-    const response = await fetch(n8nManualWebhookUrl, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(params),
-    });
-
-    if (!response.ok) {
-      return {
-        success: false,
-        error: "Failed to submit manual verification request",
-      };
-    }
-
-    return { success: true };
-  } catch (error) {
-    console.error("Error submitting manual verification:", error);
-    return {
-      success: false,
-      error: "Failed to submit request",
     };
   }
 }
