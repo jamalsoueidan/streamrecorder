@@ -34,15 +34,14 @@ export default function RecordingItem({ recording }: Props) {
         <Group gap="xs">
           <Anchor component={Link} href={getProfileUrl(recording.follower)}>
             <Avatar size={38}>
-              <Image
-                src={
-                  generateAvatarUrl(recording.follower?.avatar?.url) ||
-                  "/default-avatar.png"
-                }
-                alt={"Avatar"}
-                width={38}
-                height={38}
-              />
+              {recording.follower?.avatar?.url && (
+                <Image
+                  src={generateAvatarUrl(recording.follower?.avatar?.url)}
+                  alt={"Avatar"}
+                  width={38}
+                  height={38}
+                />
+              )}
             </Avatar>
           </Anchor>
           <Stack gap="0">

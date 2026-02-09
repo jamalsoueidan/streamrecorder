@@ -22,16 +22,22 @@ export default function RecordingModal() {
   const searchParams = useSearchParams();
   const [filters] = useQueryStates(followingParsers);
 
-  const { data, fetchNextPage, hasNextPage, isFetchingNextPage, isLoading } =
-    useInfiniteQuery({
-      queryKey: ["following", filters],
-      queryFn: ({ pageParam }) => fetchRecordings(filters, pageParam),
-      initialPageParam: 1,
-      getNextPageParam: (lastPage) => {
-        const { page = 1, pageCount = 0 } = lastPage.meta?.pagination ?? {};
-        return page < pageCount ? page + 1 : undefined;
-      },
-    });
+  const {
+    data,
+    fetchNextPage,
+    hasNextPage,
+    isFetchingNextPage,
+    isLoading,
+    isFetching,
+  } = useInfiniteQuery({
+    queryKey: ["following", filters],
+    queryFn: ({ pageParam }) => fetchRecordings(filters, pageParam),
+    initialPageParam: 1,
+    getNextPageParam: (lastPage) => {
+      const { page = 1, pageCount = 0 } = lastPage.meta?.pagination ?? {};
+      return page < pageCount ? page + 1 : undefined;
+    },
+  });
 
   const recordings = useMemo(
     () => data?.pages.flatMap((p) => p.data) ?? [],
@@ -56,7 +62,9 @@ export default function RecordingModal() {
     router.replace("/following");
   };
 
-  if (isLoading) {
+  const videoExists = recordings.some((r) => r.documentId === params.id);
+
+  if (isLoading || (isFetching && !videoExists)) {
     return (
       <Modal.Root opened={true} onClose={handleClose} fullScreen>
         <Modal.Content>

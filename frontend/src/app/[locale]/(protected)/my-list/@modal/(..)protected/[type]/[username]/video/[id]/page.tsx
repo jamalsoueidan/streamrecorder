@@ -21,17 +21,23 @@ export default function CreatorRecordingModal() {
   }>();
   const searchParams = useSearchParams();
 
-  const { data, fetchNextPage, hasNextPage, isFetchingNextPage, isLoading } =
-    useInfiniteQuery({
-      queryKey: ["recordings", params.username, params.type],
-      queryFn: ({ pageParam }) =>
-        getRecordings(params.username, params.type, pageParam),
-      initialPageParam: 1,
-      getNextPageParam: (lastPage) => {
-        const { page = 1, pageCount = 0 } = lastPage.meta?.pagination ?? {};
-        return page < pageCount ? page + 1 : undefined;
-      },
-    });
+  const {
+    data,
+    fetchNextPage,
+    hasNextPage,
+    isFetchingNextPage,
+    isLoading,
+    isFetching,
+  } = useInfiniteQuery({
+    queryKey: ["recordings", params.username, params.type],
+    queryFn: ({ pageParam }) =>
+      getRecordings(params.username, params.type, pageParam),
+    initialPageParam: 1,
+    getNextPageParam: (lastPage) => {
+      const { page = 1, pageCount = 0 } = lastPage.meta?.pagination ?? {};
+      return page < pageCount ? page + 1 : undefined;
+    },
+  });
 
   const recordings = data?.pages.flatMap((p) => p.data) ?? [];
 
@@ -53,7 +59,9 @@ export default function CreatorRecordingModal() {
     router.replace("/discover");
   };
 
-  if (isLoading) {
+  const videoExists = recordings.some((r) => r.documentId === params.id);
+
+  if (isLoading || (isFetching && !videoExists)) {
     return (
       <Modal.Root opened={true} onClose={handleClose} fullScreen>
         <Modal.Content>

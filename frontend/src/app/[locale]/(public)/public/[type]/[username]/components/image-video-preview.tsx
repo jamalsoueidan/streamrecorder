@@ -34,6 +34,12 @@ export async function ImageVideoPreview({ recording, type }: Props) {
         href={
           getProfileUrl(recording.follower) + `/video/${recording.documentId}`
         }
+        style={{
+          position: "relative",
+          display: "block",
+          width: "100%",
+          height: "100%",
+        }}
       >
         <Image
           alt={t("jsonLd.streamTitle", {

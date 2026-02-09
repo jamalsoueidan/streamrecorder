@@ -15,6 +15,18 @@ Sentry.init({
     }
     return event;
   },
+  beforeBreadcrumb(breadcrumb) {
+    // Skip UI click breadcrumbs on media-chrome/hls-video elements to prevent
+    // infinite recursion in Shadow DOM traversal (causes Maximum call stack size exceeded)
+    if (
+      breadcrumb.category === "ui.click" &&
+      (breadcrumb.message?.includes("media-") ||
+        breadcrumb.message?.includes("hls-video"))
+    ) {
+      return null;
+    }
+    return breadcrumb;
+  },
 
   // Define how likely traces are sampled. Adjust this value in production, or use tracesSampler for greater control.
   tracesSampleRate: 1,

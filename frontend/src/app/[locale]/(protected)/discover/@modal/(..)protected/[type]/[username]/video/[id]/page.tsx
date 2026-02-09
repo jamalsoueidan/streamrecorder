@@ -24,16 +24,22 @@ export default function CreatorRecordingModal() {
   const searchParams = useSearchParams();
   const [filters] = useQueryStates(exploreParsers);
 
-  const { data, fetchNextPage, hasNextPage, isFetchingNextPage, isLoading } =
-    useInfiniteQuery({
-      queryKey: ["creators", "discover", filters],
-      queryFn: ({ pageParam }) => fetchFollowers(filters, pageParam),
-      initialPageParam: 1,
-      getNextPageParam: (lastPage) => {
-        const { page = 1, pageCount = 0 } = lastPage.meta?.pagination ?? {};
-        return page < pageCount ? page + 1 : undefined;
-      },
-    });
+  const {
+    data,
+    fetchNextPage,
+    hasNextPage,
+    isFetchingNextPage,
+    isLoading,
+    isFetching,
+  } = useInfiniteQuery({
+    queryKey: ["creators", "discover", filters],
+    queryFn: ({ pageParam }) => fetchFollowers(filters, pageParam),
+    initialPageParam: 1,
+    getNextPageParam: (lastPage) => {
+      const { page = 1, pageCount = 0 } = lastPage.meta?.pagination ?? {};
+      return page < pageCount ? page + 1 : undefined;
+    },
+  });
 
   // Flatten followers -> recordings, keeping follower reference
   const recordings: Recording[] = useMemo(() => {
@@ -68,7 +74,9 @@ export default function CreatorRecordingModal() {
     router.replace("/discover");
   };
 
-  if (isLoading) {
+  const videoExists = recordings.some((r) => r.documentId === params.id);
+
+  if (isLoading || (isFetching && !videoExists)) {
     return (
       <Modal.Root opened={true} onClose={handleClose} fullScreen>
         <Modal.Content>

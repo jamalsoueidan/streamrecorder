@@ -62,11 +62,8 @@ export default function RecordingModal() {
     router.replace("/explore");
   };
 
-  // Check if the video exists in loaded recordings
   const videoExists = recordings.some((r) => r.documentId === params.id);
 
-  // Show loading if: initial load, OR still fetching and video not found yet
-  // This prevents false "not found" during cache hydration
   if (isLoading || (isFetching && !videoExists)) {
     return (
       <Modal.Root opened={true} onClose={handleClose} fullScreen>

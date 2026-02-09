@@ -23,17 +23,23 @@ export default function ProfileRecordingModal() {
   const searchParams = useSearchParams();
   const [filters] = useQueryStates(profileParsers);
 
-  const { data, fetchNextPage, hasNextPage, isFetchingNextPage, isLoading } =
-    useInfiniteQuery({
-      queryKey: ["profile-recordings", type, username, filters],
-      queryFn: ({ pageParam }) =>
-        fetchProfileRecordings(type, username, filters, pageParam),
-      initialPageParam: 1,
-      getNextPageParam: (lastPage) => {
-        const { page = 1, pageCount = 0 } = lastPage.meta?.pagination ?? {};
-        return page < pageCount ? page + 1 : undefined;
-      },
-    });
+  const {
+    data,
+    fetchNextPage,
+    hasNextPage,
+    isFetchingNextPage,
+    isLoading,
+    isFetching,
+  } = useInfiniteQuery({
+    queryKey: ["profile-recordings", type, username, filters],
+    queryFn: ({ pageParam }) =>
+      fetchProfileRecordings(type, username, filters, pageParam),
+    initialPageParam: 1,
+    getNextPageParam: (lastPage) => {
+      const { page = 1, pageCount = 0 } = lastPage.meta?.pagination ?? {};
+      return page < pageCount ? page + 1 : undefined;
+    },
+  });
 
   const recordings = useMemo(
     () => data?.pages.flatMap((p) => p.data) ?? [],
@@ -55,7 +61,9 @@ export default function ProfileRecordingModal() {
     router.replace(`/${type}/${decodeURIComponent(username)}`);
   };
 
-  if (isLoading) {
+  const videoExists = recordings.some((r) => r.documentId === id);
+
+  if (isLoading || (isFetching && !videoExists)) {
     return (
       <Modal.Root opened={true} onClose={handleClose} fullScreen>
         <Modal.Content>

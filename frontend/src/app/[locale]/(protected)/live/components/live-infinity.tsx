@@ -190,12 +190,14 @@ export default function LiveInfinity({ scope }: Props) {
               <Group gap="xs">
                 <Anchor component={Link} href={getProfileUrl(rec.follower)}>
                   <Avatar size="md">
-                    <Image
-                      src={generateAvatarUrl(rec.follower?.avatar?.url)}
-                      alt={"Avatar"}
-                      width={38}
-                      height={38}
-                    />
+                    {rec.follower?.avatar?.url && (
+                      <Image
+                        src={generateAvatarUrl(rec.follower?.avatar?.url)}
+                        alt={"Avatar"}
+                        width={38}
+                        height={38}
+                      />
+                    )}
                   </Avatar>
                 </Anchor>
 

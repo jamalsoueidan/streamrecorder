@@ -88,6 +88,10 @@ export function ImageSpritePreview({ recording, type, username }: Props) {
         component={Link}
         href={getHref()}
         style={{
+          position: "relative",
+          display: "block",
+          width: "100%",
+          height: "100%",
           pointerEvents: isRecording ? "none" : "auto",
           cursor: isRecording ? "not-allowed" : "pointer",
         }}
