@@ -20,7 +20,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2026-02-09T14:29:10.534Z"
+    "x-generation-date": "2026-02-09T18:24:23.372Z"
   },
   "servers": [
     {
@@ -7738,6 +7738,76 @@
                 }
               }
             }
+          }
+        }
+      }
+    },
+    "/followers/connect-user-with-follower/{userDocumentId}": {
+      "post": {
+        "tags": [
+          "Follower"
+        ],
+        "operationId": "connectUserWithFollower",
+        "summary": "Connect a user with a follower",
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "userDocumentId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "The user's document ID"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "username",
+                  "type"
+                ],
+                "properties": {
+                  "username": {
+                    "type": "string"
+                  },
+                  "type": {
+                    "$ref": "#/components/schemas/FollowerTypeEnum"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "$ref": "#/components/schemas/Follower"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Follower not found"
           }
         }
       }

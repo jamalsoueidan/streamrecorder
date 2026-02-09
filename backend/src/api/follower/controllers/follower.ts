@@ -396,6 +396,61 @@ export default factories.createCoreController(
 
       return { data: follower };
     },
+    async connectUserWithFollower(ctx) {
+      const body = ctx.request.body;
+
+      const username = body.username.trim();
+      const type = body.type.trim();
+      const userDocumentId = ctx.params.userDocumentId;
+
+      const currentUser = await strapi
+        .documents("plugin::users-permissions.user")
+        .findOne({
+          documentId: userDocumentId,
+          populate: ["followers"],
+        });
+
+      if (!currentUser) {
+        return ctx.notFound("User not found");
+      }
+
+      let follower = await strapi
+        .documents("api::follower.follower")
+        .findFirst({
+          filters: {
+            username: { $eqi: username },
+            type,
+          },
+        });
+
+      if (!follower) {
+        return ctx.notFound("Follower not found");
+      }
+
+      // Get all existing documentIds + new one
+      const existingDocIds =
+        currentUser.followers?.map((f) => f.documentId) || [];
+
+      if (!existingDocIds.includes(follower.documentId)) {
+        existingDocIds.push(follower.documentId);
+      }
+
+      // Update with connect using documentIds
+      const updatePayload = {
+        documentId: userDocumentId,
+        data: {
+          followers: {
+            connect: existingDocIds,
+          },
+        },
+      };
+
+      await strapi
+        .documents("plugin::users-permissions.user")
+        .update(updatePayload);
+
+      return { data: follower };
+    },
     async unfollow(ctx) {
       const user = ctx.state.user;
       if (!user) return ctx.unauthorized();
