@@ -877,6 +877,7 @@ export interface AiRequest {
         documentId?: string;
       }[];
     }[];
+    hidden?: boolean;
     /** @format date-time */
     createdAt?: string;
     /** @format date-time */
@@ -1422,6 +1423,7 @@ export interface AiTask {
           documentId?: string;
         }[];
       }[];
+      hidden?: boolean;
       /** @format date-time */
       createdAt?: string;
       /** @format date-time */
@@ -2302,6 +2304,7 @@ export interface Clip {
         documentId?: string;
       }[];
     }[];
+    hidden?: boolean;
     /** @format date-time */
     createdAt?: string;
     /** @format date-time */
@@ -3472,6 +3475,7 @@ export interface Meme {
         documentId?: string;
       }[];
     }[];
+    hidden?: boolean;
     /** @format date-time */
     createdAt?: string;
     /** @format date-time */
@@ -3566,6 +3570,7 @@ export interface RecordingRequest {
     /** @example "string or id" */
     follower?: number | string;
     sources?: (number | string)[];
+    hidden?: boolean;
     locale?: string;
     localizations?: (number | string)[];
   };
@@ -3936,6 +3941,7 @@ export interface Recording {
       documentId?: string;
     }[];
   };
+  hidden?: boolean;
   /** @format date-time */
   createdAt?: string;
   /** @format date-time */
@@ -4578,6 +4584,7 @@ export interface Source {
         documentId?: string;
       }[];
     }[];
+    hidden?: boolean;
     /** @format date-time */
     createdAt?: string;
     /** @format date-time */

@@ -27,6 +27,7 @@
     "videoCount": "{count, plural, zero {لا فيديوهات} one {فيديو واحد} two {فيديوهان} few {# فيديوهات} many {# فيديو} other {# فيديو}}",
     "noRecordings": "لقد وصلت إلى النهاية",
     "hide": "إخفاء من الصفحة العامة",
+    "show": "إظهار في الصفحة العامة",
     "delete": "حذف الفيديو"
   },
   "followers": {

@@ -27,6 +27,7 @@
     "videoCount": "{count, plural, one {# video} other {# videos}}",
     "noRecordings": "You've reached the end",
     "hide": "Hide from public",
+    "show": "Show on public",
     "delete": "Delete video"
   },
   "followers": {

@@ -27,7 +27,7 @@ import { ImageSpritePreview } from "@/app/[locale]/(protected)/components/image-
 import { generateAvatarUrl } from "@/app/lib/avatar-url";
 import { safeRelativeTime } from "@/app/lib/safe-relative-time";
 import { useUser } from "@/app/providers/user-provider";
-import { IconCalendarPlus, IconVideo } from "@tabler/icons-react";
+import { IconCalendarPlus, IconEyeOff, IconVideo } from "@tabler/icons-react";
 import { useQuery } from "@tanstack/react-query";
 import { useFormatter, useNow, useTranslations } from "next-intl";
 import Image from "next/image";
@@ -159,11 +159,25 @@ export default function FollowerItem({ follower, isOpen }: Props) {
 
                 return (
                   <Stack key={rec.documentId} gap="4">
-                    <ImageSpritePreview
-                      recording={rec}
-                      username={follower.username}
-                      type={follower.type}
-                    />
+                    <Box pos="relative" style={{ opacity: rec.hidden ? 0.5 : 1 }}>
+                      <ImageSpritePreview
+                        recording={rec}
+                        username={follower.username}
+                        type={follower.type}
+                      />
+                      {rec.hidden && (
+                        <Box
+                          pos="absolute"
+                          top={8}
+                          left={8}
+                          bg="dark"
+                          p={4}
+                          style={{ borderRadius: "var(--mantine-radius-sm)" }}
+                        >
+                          <IconEyeOff size={16} />
+                        </Box>
+                      )}
+                    </Box>
 
                     <Group justify="space-between" align="center">
                       <Text size="xs" suppressHydrationWarning>
@@ -181,7 +195,7 @@ export default function FollowerItem({ follower, isOpen }: Props) {
                             })}
                       </Text>
 
-                      <RecordingMenu recording={rec} />
+                      <RecordingMenu recording={rec} username={follower.username} type={follower.type} />
                     </Group>
                   </Stack>
                 );

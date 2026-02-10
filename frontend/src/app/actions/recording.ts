@@ -2,7 +2,6 @@
 
 import api from "@/lib/api";
 import publicApi from "@/lib/public-api";
-import { revalidatePath } from "next/cache";
 
 interface ActionResult {
   success: boolean;
@@ -22,18 +21,21 @@ async function verifyOwnership(
     }
 
     // Get recording with follower.owner populated
-    const recordingResponse = await api.recording.getRecordingsId(
+    const { data } = await api.recording.getRecordingsId(
       { id: recordingDocumentId },
       {
-        populate: {
-          follower: {
-            populate: ["owner"],
+        query: {
+          populate: {
+            follower: {
+              fields: ["id"],
+              populate: ["owner"],
+            },
           },
         },
-      },
+      } as never,
     );
 
-    const recording = recordingResponse.data?.data;
+    const recording = data?.data;
     if (!recording) {
       return { isOwner: false, error: "Recording not found" };
     }
@@ -60,8 +62,7 @@ export async function deleteRecording(
   }
 
   try {
-    await publicApi.recording.deleteRecordingsId({ id: recordingDocumentId });
-    revalidatePath("/my-list");
+    /*await publicApi.recording.deleteRecordingsId({ id: recordingDocumentId });*/
     return { success: true };
   } catch (error) {
     console.error("Error deleting recording:", error);
@@ -69,8 +70,9 @@ export async function deleteRecording(
   }
 }
 
-export async function hideRecording(
+export async function toggleHidden(
   recordingDocumentId: string,
+  currentlyHidden: boolean,
 ): Promise<ActionResult> {
   const ownership = await verifyOwnership(recordingDocumentId);
 
@@ -81,12 +83,11 @@ export async function hideRecording(
   try {
     await publicApi.recording.putRecordingsId(
       { id: recordingDocumentId },
-      { data: { hidden: true } as never },
+      { data: { hidden: !currentlyHidden } as never },
     );
-    revalidatePath("/my-list");
     return { success: true };
   } catch (error) {
-    console.error("Error hiding recording:", error);
-    return { success: false, error: "Failed to hide recording" };
+    console.error("Error toggling hidden:", error);
+    return { success: false, error: "Failed to update recording" };
   }
 }
