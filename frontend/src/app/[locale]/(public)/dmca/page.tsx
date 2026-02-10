@@ -1,12 +1,4 @@
-import {
-  Anchor,
-  Container,
-  Divider,
-  Flex,
-  Stack,
-  Text,
-  Title,
-} from "@mantine/core";
+import { Container, Divider, Flex, Stack, Text, Title } from "@mantine/core";
 import { IconChevronDown, IconScale } from "@tabler/icons-react";
 import { getTranslations } from "next-intl/server";
 import { DMCAForm } from "./components/form";

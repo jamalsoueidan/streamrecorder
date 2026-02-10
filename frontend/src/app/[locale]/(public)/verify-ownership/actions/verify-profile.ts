@@ -153,10 +153,11 @@ export async function verifyProfile(
         action: "linked",
       };
     } else {
-      // Create new user with random password
+      // Create new user with random password and unique username
+      const uniqueUsername = `${username}_${Math.floor(1000 + Math.random() * 9000)}`;
       const { data } =
         await publicApi.usersPermissionsAuth.localRegisterCreate({
-          username,
+          username: uniqueUsername,
           email,
           password: crypto.randomUUID(),
         });
