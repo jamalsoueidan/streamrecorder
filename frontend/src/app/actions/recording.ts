@@ -62,7 +62,45 @@ export async function deleteRecording(
   }
 
   try {
-    /*await publicApi.recording.deleteRecordingsId({ id: recordingDocumentId });*/
+    // Get recording with sources
+    const { data } = await publicApi.recording.getRecordingsId(
+      { id: recordingDocumentId },
+      {
+        query: {
+          populate: {
+            sources: { fields: ["documentId"] },
+            localizations: {
+              fields: "locale",
+            },
+          },
+        },
+      } as never,
+    );
+
+    const recording = data?.data;
+    const sources = (recording?.sources as { documentId: string }[]) || [];
+    const localizations =
+      (recording?.localizations as { locale: string }[]) || [];
+
+    // Delete all sources first
+    await Promise.all(
+      sources.map((source) =>
+        publicApi.source.deleteSourcesId({ id: source.documentId }),
+      ),
+    );
+
+    // Delete main recording with its locale
+    await publicApi.recording.deleteRecordingsId({ id: recordingDocumentId });
+
+    // Delete all localizations
+    await Promise.all(
+      localizations.map((loc) =>
+        publicApi.recording.deleteRecordingsId({ id: recordingDocumentId }, {
+          query: { locale: loc.locale },
+        } as never),
+      ),
+    );
+
     return { success: true };
   } catch (error) {
     console.error("Error deleting recording:", error);

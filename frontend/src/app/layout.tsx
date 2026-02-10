@@ -7,6 +7,7 @@ import {
   mantineHtmlProps,
 } from "@mantine/core";
 import "@mantine/core/styles.css";
+import { ModalsProvider } from "@mantine/modals";
 import { Notifications } from "@mantine/notifications";
 import "@mantine/notifications/styles.css";
 import { isbot } from "isbot";
@@ -85,8 +86,10 @@ export default async function RootLayout({
       <body>
         <DirectionProvider initialDirection={dir} detectDirection={false}>
           <MantineProvider theme={theme} defaultColorScheme="dark">
-            <Notifications color="red" position="bottom-center" />
-            <NuqsAdapter>{children}</NuqsAdapter>
+            <ModalsProvider>
+              <Notifications color="red" position="bottom-center" />
+              <NuqsAdapter>{children}</NuqsAdapter>
+            </ModalsProvider>
           </MantineProvider>
         </DirectionProvider>
       </body>

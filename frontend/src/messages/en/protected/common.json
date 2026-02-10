@@ -28,7 +28,13 @@
     "noRecordings": "You've reached the end",
     "hide": "Hide from public",
     "show": "Show on public",
-    "delete": "Delete video"
+    "delete": "Delete video",
+    "deleteConfirm": {
+      "title": "Delete video",
+      "message": "Are you sure you want to delete this video? This action cannot be undone.",
+      "confirm": "Delete",
+      "cancel": "Cancel"
+    }
   },
   "followers": {
     "addedAgo_context": "For when a creator was added to user's list. Shows 'Added 3 days ago'",
