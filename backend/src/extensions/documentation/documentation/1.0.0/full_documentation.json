@@ -20,7 +20,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2026-02-09T18:24:23.372Z"
+    "x-generation-date": "2026-02-10T04:48:35.207Z"
   },
   "servers": [
     {
@@ -11694,6 +11694,9 @@
                   }
                 }
               },
+              "hidden": {
+                "type": "boolean"
+              },
               "createdAt": {
                 "type": "string",
                 "format": "date-time"
@@ -13763,6 +13766,9 @@
                         }
                       }
                     }
+                  },
+                  "hidden": {
+                    "type": "boolean"
                   },
                   "createdAt": {
                     "type": "string",
@@ -17033,6 +17039,9 @@
                     }
                   }
                 }
+              },
+              "hidden": {
+                "type": "boolean"
               },
               "createdAt": {
                 "type": "string",
@@ -21403,6 +21412,9 @@
                   }
                 }
               },
+              "hidden": {
+                "type": "boolean"
+              },
               "createdAt": {
                 "type": "string",
                 "format": "date-time"
@@ -21761,6 +21773,9 @@
                   ],
                   "example": "string or id"
                 }
+              },
+              "hidden": {
+                "type": "boolean"
               },
               "locale": {
                 "type": "string"
@@ -23150,6 +23165,9 @@
                 }
               }
             }
+          },
+          "hidden": {
+            "type": "boolean"
           },
           "createdAt": {
             "type": "string",
@@ -25533,6 +25551,9 @@
                     }
                   }
                 }
+              },
+              "hidden": {
+                "type": "boolean"
               },
               "createdAt": {
                 "type": "string",

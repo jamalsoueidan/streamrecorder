@@ -41,6 +41,15 @@
       "relation": "oneToMany",
       "target": "api::source.source",
       "mappedBy": "recording"
+    },
+    "hidden": {
+      "type": "boolean",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "default": false
     }
   }
 }

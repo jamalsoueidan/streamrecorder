@@ -121,6 +121,7 @@ export default factories.createCoreController(
       let query = knex("followers as f")
         .select(
           "f.*",
+          "fol.user_id as owner_id",
           knex.raw(`(
       SELECT files.url
       FROM files_related_mph frm
@@ -133,6 +134,7 @@ export default factories.createCoreController(
           knex.raw("COUNT(DISTINCT vr.recording_id) as total_recordings"),
           knex.raw("MAX(vr.created_at) as latest_recording"),
         )
+        .leftJoin("followers_owner_lnk as fol", "fol.follower_id", "f.id")
         .leftJoin(
           knex("recordings as r")
             .select("r.id as recording_id", "r.created_at", "rf.follower_id")
@@ -153,7 +155,7 @@ export default factories.createCoreController(
           "vr.follower_id",
           "f.id",
         )
-        .groupBy("f.id");
+        .groupBy("f.id", "fol.user_id");
 
       // Apply base filters
       query = applyBaseFilters(query);
@@ -251,6 +253,7 @@ export default factories.createCoreController(
         ...snakeToCamel(row),
         totalRecordings: Number(row.total_recordings),
         avatar: row.avatar_url ? { url: row.avatar_url } : null,
+        owner: row.owner_id ? { id: row.owner_id } : null,
         recordings: recordingsMap.get(row.id) || [],
         isFollowing: followingIds.includes(row.id),
       }));

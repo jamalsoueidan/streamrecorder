@@ -1033,6 +1033,13 @@ export interface ApiRecordingRecording extends Struct.CollectionTypeSchema {
         };
       }>;
     follower: Schema.Attribute.Relation<'manyToOne', 'api::follower.follower'>;
+    hidden: Schema.Attribute.Boolean &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<false>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
