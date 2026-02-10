@@ -25,7 +25,16 @@
     "recordCount": "تسجيل {count}",
     "newRecording": "جديد",
     "videoCount": "{count, plural, zero {لا فيديوهات} one {فيديو واحد} two {فيديوهان} few {# فيديوهات} many {# فيديو} other {# فيديو}}",
-    "noRecordings": "لقد وصلت إلى النهاية"
+    "noRecordings": "لقد وصلت إلى النهاية",
+    "hide": "إخفاء من الصفحة العامة",
+    "show": "إظهار في الصفحة العامة",
+    "delete": "حذف الفيديو",
+    "deleteConfirm": {
+      "title": "حذف الفيديو",
+      "message": "هل أنت متأكد من حذف هذا الفيديو؟ لا يمكن التراجع عن هذا الإجراء.",
+      "confirm": "حذف",
+      "cancel": "إلغاء"
+    }
   },
   "followers": {
     "addedAgo_context": "For when a creator was added to user's list. Shows 'Added 3 days ago'",

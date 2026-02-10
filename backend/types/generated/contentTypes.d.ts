@@ -871,6 +871,10 @@ export interface ApiFollowerFollower extends Struct.CollectionTypeSchema {
           localized: false;
         };
       }>;
+    owner: Schema.Attribute.Relation<
+      'oneToOne',
+      'plugin::users-permissions.user'
+    >;
     pause: Schema.Attribute.Boolean &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -1029,6 +1033,13 @@ export interface ApiRecordingRecording extends Struct.CollectionTypeSchema {
         };
       }>;
     follower: Schema.Attribute.Relation<'manyToOne', 'api::follower.follower'>;
+    hidden: Schema.Attribute.Boolean &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<false>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',

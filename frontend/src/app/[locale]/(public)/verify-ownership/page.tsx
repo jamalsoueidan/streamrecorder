@@ -1,22 +1,27 @@
-import { Container, Divider, Flex, Stack, Text, Title } from "@mantine/core";
-import { IconChevronDown, IconScale } from "@tabler/icons-react";
+import { Container, Stack, Text, Title, Flex } from "@mantine/core";
+import { IconShieldCheck } from "@tabler/icons-react";
 import { getTranslations } from "next-intl/server";
-import { DMCAForm } from "./components/form";
-import { PartnerBenefits } from "./components/partner-benefits";
+import { VerificationFlow } from "./components/verification-flow";
 
 export async function generateMetadata() {
-  const t = await getTranslations("dmca");
+  const t = await getTranslations("verifyOwnership");
   return {
     title: t("meta.title"),
     description: t("meta.description"),
   };
 }
 
-export default async function DMCAPolicy() {
-  const t = await getTranslations("dmca");
+export default async function VerifyOwnershipPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ intent?: string }>;
+}) {
+  const t = await getTranslations("verifyOwnership");
+  const params = await searchParams;
+  const intent = params.intent || "partnership";
 
   return (
-    <Container size="md" style={{ position: "relative", zIndex: 1 }}>
+    <Container size="sm" style={{ position: "relative", zIndex: 1 }}>
       <Stack gap={32}>
         <Stack align="center" gap={12} mb={24}>
           <Flex gap={12} align="center" justify="center">
@@ -25,14 +30,14 @@ export default async function DMCAPolicy() {
                 width: 48,
                 height: 48,
                 borderRadius: 12,
-                background: "rgba(59, 130, 246, 0.2)",
+                background: "rgba(16, 185, 129, 0.2)",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                color: "#3b82f6",
+                color: "#10b981",
               }}
             >
-              <IconScale size={24} />
+              <IconShieldCheck size={24} />
             </div>
             <Title
               order={1}
@@ -51,32 +56,12 @@ export default async function DMCAPolicy() {
               {t("header.title")}
             </Title>
           </Flex>
-          <Text size="sm" style={{ color: "#64748b" }}>
+          <Text size="sm" style={{ color: "#64748b" }} ta="center">
             {t("header.subtitle")}
           </Text>
         </Stack>
 
-        <PartnerBenefits />
-
-        <Divider
-          label={
-            <Flex align="center" gap={4}>
-              <IconChevronDown size={16} style={{ color: "#64748b" }} />
-              <Text size="sm" style={{ color: "#64748b" }}>
-                {t("divider")}
-              </Text>
-              <IconChevronDown size={16} style={{ color: "#64748b" }} />
-            </Flex>
-          }
-          labelPosition="center"
-          style={{ borderColor: "rgba(255, 255, 255, 0.1)" }}
-        />
-
-        <DMCAForm />
-
-        <Text size="sm" ta="center" style={{ color: "#64748b" }}>
-          {t("footer")}
-        </Text>
+        <VerificationFlow intent={intent} />
       </Stack>
     </Container>
   );

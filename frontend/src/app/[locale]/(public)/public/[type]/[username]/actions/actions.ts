@@ -99,6 +99,7 @@ export const fetchProfileRecordings = cache(async function (
   const response = await publicApi.recording.getRecordings(
     deepMerge(defaultOptions, {
       filters: {
+        hidden: { $ne: true },
         follower: {
           username: { $eq: username.replace(/^(%40|@)/, "") },
           type: { $eq: type },

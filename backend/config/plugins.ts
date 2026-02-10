@@ -56,7 +56,58 @@ export default ({ env }) => ({
     config: {
       "x-strapi-config": {
         mutateDocumentation: (draft) => {
-          // Endpoint: POST /send-email
+          draft.paths[
+            "/followers/connect-user-with-follower/{userDocumentId}"
+          ] = {
+            post: {
+              tags: ["Follower"],
+              operationId: "connectUserWithFollower",
+              summary: "Connect a user with a follower",
+              security: [{ bearerAuth: [] }],
+              parameters: [
+                {
+                  name: "userDocumentId",
+                  in: "path",
+                  required: true,
+                  schema: { type: "string" },
+                  description: "The user's document ID",
+                },
+              ],
+              requestBody: {
+                required: true,
+                content: {
+                  "application/json": {
+                    schema: {
+                      type: "object",
+                      required: ["username", "type"],
+                      properties: {
+                        username: { type: "string" },
+                        type: { $ref: "#/components/schemas/FollowerTypeEnum" },
+                      },
+                    },
+                  },
+                },
+              },
+              responses: {
+                "200": {
+                  description: "Success",
+                  content: {
+                    "application/json": {
+                      schema: {
+                        type: "object",
+                        properties: {
+                          data: { $ref: "#/components/schemas/Follower" },
+                        },
+                      },
+                    },
+                  },
+                },
+                "401": { description: "Unauthorized" },
+                "404": { description: "Follower not found" },
+              },
+            },
+          };
+
           draft.paths["/send-email"] = {
             post: {
               tags: ["Email"],

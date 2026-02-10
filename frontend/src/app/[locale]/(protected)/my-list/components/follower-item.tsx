@@ -26,7 +26,8 @@ import Link from "next/link";
 import { ImageSpritePreview } from "@/app/[locale]/(protected)/components/image-sprite-preview";
 import { generateAvatarUrl } from "@/app/lib/avatar-url";
 import { safeRelativeTime } from "@/app/lib/safe-relative-time";
-import { IconCalendarPlus, IconVideo } from "@tabler/icons-react";
+import { useUser } from "@/app/providers/user-provider";
+import { IconCalendarPlus, IconEyeOff, IconVideo } from "@tabler/icons-react";
 import { useQuery } from "@tanstack/react-query";
 import { useFormatter, useNow, useTranslations } from "next-intl";
 import Image from "next/image";
@@ -35,6 +36,7 @@ import OpenSocial, { getProfileUrl } from "../../../../components/open-social";
 import { CountryFlag } from "../../components/country-flag";
 import FollowButton from "../../components/follow-button";
 import { FollowerTypeIcon } from "../../components/follower-type-icon";
+import { RecordingMenu } from "../../components/recording-menu";
 import UnfollowButton from "../../components/unfollow-button";
 import { getRecordings } from "../actions/fetch-followers";
 
@@ -48,6 +50,7 @@ export default function FollowerItem({ follower, isOpen }: Props) {
   const t = useTranslations("protected.common");
   const now = useNow({ updateInterval: 1000 * 30 });
   const format = useFormatter();
+  const user = useUser();
   const isMobile = useMatches({
     base: true,
     sm: false,
@@ -67,18 +70,31 @@ export default function FollowerItem({ follower, isOpen }: Props) {
     <Accordion.Item key={follower.documentId} value={follower.username}>
       <AccordionControl follower={follower}>
         <Group>
-          <Box pos="relative" visibleFrom="sm">
-            <Avatar size="lg">
-              {follower.avatar?.url && (
-                <Image
-                  src={generateAvatarUrl(follower.avatar?.url)}
-                  alt={"Avatar"}
-                  width={60}
-                  height={60}
-                />
-              )}
+          <Box pos="relative">
+            <Avatar
+              size={isMobile ? "md" : "lg"}
+              name="%20"
+              style={
+                follower?.owner?.id === user?.id
+                  ? {
+                      border: "4px solid transparent",
+                      background:
+                        "linear-gradient(var(--mantine-color-body), var(--mantine-color-body)) padding-box, linear-gradient(135deg, #f97316, #ec4899, #8b5cf6, #3b82f6, #10b981) border-box",
+                    }
+                  : undefined
+              }
+            >
+              <Image
+                src={
+                  follower.avatar?.url
+                    ? generateAvatarUrl(follower.avatar.url)
+                    : "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                }
+                alt="Avatar"
+                width={60}
+                height={60}
+              />
             </Avatar>
-
             {follower.type && (
               <FollowerTypeIcon
                 pos="absolute"
@@ -86,8 +102,8 @@ export default function FollowerItem({ follower, isOpen }: Props) {
                 type={follower.type}
                 top="50%"
                 left="50%"
-                size={50}
-                opacity={0.5}
+                size="100%"
+                opacity={0.1}
                 style={{ transform: "translate(-50%, -50%)" }}
               />
             )}
@@ -95,31 +111,6 @@ export default function FollowerItem({ follower, isOpen }: Props) {
 
           <Stack gap={2}>
             <Group gap="xs">
-              <Box pos="relative" hiddenFrom="sm">
-                <Avatar size="md">
-                  {follower.avatar?.url && (
-                    <Image
-                      src={generateAvatarUrl(follower.avatar?.url)}
-                      alt={"Avatar"}
-                      width={40}
-                      height={40}
-                    />
-                  )}
-                </Avatar>
-
-                {follower.type && (
-                  <FollowerTypeIcon
-                    pos="absolute"
-                    color="transparent"
-                    type={follower.type}
-                    top="50%"
-                    left="50%"
-                    size={25}
-                    style={{ transform: "translate(-50%, -50%)" }}
-                  />
-                )}
-              </Box>
-
               <Anchor component={Link} href={getProfileUrl(follower)} size="md">
                 <Text size="lg" truncate maw={isMobile ? 100 : 200} fw="bold">
                   {follower.username}
@@ -168,26 +159,44 @@ export default function FollowerItem({ follower, isOpen }: Props) {
 
                 return (
                   <Stack key={rec.documentId} gap="4">
-                    <ImageSpritePreview
-                      recording={rec}
-                      username={follower.username}
-                      type={follower.type}
-                    />
+                    <Box pos="relative" style={{ opacity: rec.hidden ? 0.5 : 1 }}>
+                      <ImageSpritePreview
+                        recording={rec}
+                        username={follower.username}
+                        type={follower.type}
+                      />
+                      {rec.hidden && (
+                        <Box
+                          pos="absolute"
+                          top={8}
+                          left={8}
+                          bg="dark"
+                          p={4}
+                          style={{ borderRadius: "var(--mantine-radius-sm)" }}
+                        >
+                          <IconEyeOff size={16} />
+                        </Box>
+                      )}
+                    </Box>
 
-                    <Text size="xs" suppressHydrationWarning>
-                      {isRecording
-                        ? t("recordings.liveAgo", {
-                            time: safeRelativeTime(format, rec.createdAt, {
-                              style: "narrow",
-                              now,
-                            }),
-                          })
-                        : t("recordings.recordedAgo", {
-                            time: safeRelativeTime(format, rec.createdAt, {
-                              now,
-                            }),
-                          })}
-                    </Text>
+                    <Group justify="space-between" align="center">
+                      <Text size="xs" suppressHydrationWarning>
+                        {isRecording
+                          ? t("recordings.liveAgo", {
+                              time: safeRelativeTime(format, rec.createdAt, {
+                                style: "narrow",
+                                now,
+                              }),
+                            })
+                          : t("recordings.recordedAgo", {
+                              time: safeRelativeTime(format, rec.createdAt, {
+                                now,
+                              }),
+                            })}
+                      </Text>
+
+                      <RecordingMenu recording={rec} username={follower.username} type={follower.type} />
+                    </Group>
                   </Stack>
                 );
               })}

@@ -152,6 +152,11 @@
         }
       },
       "default": 0
+    },
+    "owner": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
     }
   }
 }

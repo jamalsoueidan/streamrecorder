@@ -2,6 +2,7 @@
 
 import { submitDMCA } from "@/app/actions/messages";
 import {
+  Alert,
   Button,
   Checkbox,
   Flex,
@@ -12,8 +13,9 @@ import {
   TextInput,
   Title,
 } from "@mantine/core";
-import { IconAlertCircle, IconRefresh } from "@tabler/icons-react";
+import { IconAlertCircle, IconRefresh, IconShieldCheck } from "@tabler/icons-react";
 import { useTranslations } from "next-intl";
+import Link from "next/link";
 import { useState } from "react";
 import { Submitted } from "./submitted";
 
@@ -98,6 +100,27 @@ export function DMCAForm() {
       <Text style={{ color: "#64748b" }} mb="lg">
         {t("description")}
       </Text>
+
+      <Alert
+        icon={<IconShieldCheck size={18} />}
+        color="blue"
+        variant="light"
+        mb="lg"
+        title={t("verifyFirst.title")}
+      >
+        <Stack gap="sm">
+          <Text size="sm">{t("verifyFirst.message")}</Text>
+          <Button
+            component={Link}
+            href="/verify-ownership?intent=dmca"
+            variant="light"
+            color="blue"
+            size="sm"
+          >
+            {t("verifyFirst.button")}
+          </Button>
+        </Stack>
+      </Alert>
 
       <form onSubmit={handleSubmit}>
         <Stack gap="lg">
