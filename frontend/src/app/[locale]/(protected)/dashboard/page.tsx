@@ -219,7 +219,7 @@ export default async function Page() {
                       {platform.name}
                     </Title>
                   </Flex>
-                  <Link href={`/explore?type=${platform.type}`}>
+                  <Link href={`/following?type=${platform.type}`}>
                     <Button
                       variant="subtle"
                       color="gray"

@@ -13,6 +13,7 @@
     "friends": "Friends"
   },
   "actions": {
+    "settings": "Settings",
     "logout": "Logout",
     "addCreator": "Add Creator",
     "search": "Search",

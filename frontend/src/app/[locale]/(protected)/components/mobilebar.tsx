@@ -11,6 +11,7 @@ import {
   IconLink,
   IconLogout,
   IconPlayerPlayFilled,
+  IconSettings,
   IconUser,
   IconWorldSearch,
 } from "@tabler/icons-react";
@@ -179,6 +180,13 @@ export function MobileBar() {
                     <Menu.Divider />
                   </>
                 )}
+
+                <Menu.Item
+                  leftSection={<IconSettings size={16} />}
+                  onClick={() => handleChange("/settings")}
+                >
+                  {t("actions.settings")}
+                </Menu.Item>
 
                 <Menu.Sub openDelay={120} closeDelay={150}>
                   <Menu.Sub.Target>

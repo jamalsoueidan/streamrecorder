@@ -1,0 +1,32 @@
+{
+  "title": "الإعدادات",
+  "description": "إدارة إعدادات حسابك",
+  "profile": {
+    "title": "الملف الشخصي",
+    "username": "اسم المستخدم",
+    "usernamePlaceholder": "أدخل اسم المستخدم",
+    "usernameMinLength": "يجب أن يكون اسم المستخدم 3 أحرف على الأقل",
+    "usernameMaxLength": "يجب أن يكون اسم المستخدم 30 حرفًا كحد أقصى",
+    "saveChanges": "حفظ التغييرات",
+    "updateSuccess": "تم بنجاح",
+    "usernameUpdated": "تم تحديث اسم المستخدم",
+    "updateError": "خطأ"
+  },
+  "subscription": {
+    "title": "الاشتراك",
+    "currentPlan": "الخطة الحالية",
+    "description": "يحدد اشتراكك الميزات التي يمكنك الوصول إليها."
+  },
+  "dangerZone": {
+    "title": "منطقة الخطر",
+    "description": "بمجرد حذف حسابك، لا يمكن التراجع. يرجى التأكد.",
+    "deleteAccount": "حذف الحساب",
+    "deleteConfirm": {
+      "title": "حذف الحساب",
+      "message": "هل أنت متأكد من حذف حسابك؟ لا يمكن التراجع عن هذا الإجراء وسيتم حذف جميع بياناتك نهائيًا.",
+      "confirm": "حذف الحساب",
+      "cancel": "إلغاء"
+    },
+    "deleteError": "خطأ"
+  }
+}

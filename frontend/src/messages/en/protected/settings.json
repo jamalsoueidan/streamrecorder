@@ -1,0 +1,32 @@
+{
+  "title": "Settings",
+  "description": "Manage your account settings",
+  "profile": {
+    "title": "Profile",
+    "username": "Username",
+    "usernamePlaceholder": "Enter your username",
+    "usernameMinLength": "Username must be at least 3 characters",
+    "usernameMaxLength": "Username must be at most 30 characters",
+    "saveChanges": "Save Changes",
+    "updateSuccess": "Success",
+    "usernameUpdated": "Your username has been updated",
+    "updateError": "Error"
+  },
+  "subscription": {
+    "title": "Subscription",
+    "currentPlan": "Current Plan",
+    "description": "Your subscription determines what features you have access to."
+  },
+  "dangerZone": {
+    "title": "Danger Zone",
+    "description": "Once you delete your account, there is no going back. Please be certain.",
+    "deleteAccount": "Delete Account",
+    "deleteConfirm": {
+      "title": "Delete Account",
+      "message": "Are you sure you want to delete your account? This action cannot be undone and all your data will be permanently removed.",
+      "confirm": "Delete Account",
+      "cancel": "Cancel"
+    },
+    "deleteError": "Error"
+  }
+}

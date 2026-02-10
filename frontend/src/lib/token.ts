@@ -17,3 +17,8 @@ export async function setToken(token: string): Promise<void> {
     maxAge: 60 * 60 * 24 * 7,
   });
 }
+
+export async function deleteToken(): Promise<void> {
+  const cookieStore = await cookies();
+  cookieStore.delete(TOKEN_KEY);
+}

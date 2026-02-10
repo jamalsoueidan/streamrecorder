@@ -271,7 +271,7 @@ export function Navbar({
             </ActionIcon>
           </Tooltip>
 
-          <Menu>
+          <Menu trigger="click-hover">
             <Menu.Target>
               {collapsed ? (
                 <Tooltip
@@ -298,6 +298,13 @@ export function Navbar({
               )}
             </Menu.Target>
             <Menu.Dropdown>
+              <Menu.Item
+                component={Link}
+                href="/settings"
+                leftSection={<IconSettings size={16} />}
+              >
+                {t("actions.settings")}
+              </Menu.Item>
               <Menu.Sub openDelay={120} closeDelay={150}>
                 <Menu.Sub.Target>
                   <Menu.Sub.Item leftSection={<IconWorldSearch size={16} />}>

@@ -151,6 +151,86 @@ export default ({ env }) => ({
             },
           };
 
+          // Endpoint: PUT /user/update
+          draft.paths["/user/update"] = {
+            put: {
+              tags: ["User"],
+              operationId: "updateUser",
+              summary: "Update current user's username",
+              security: [{ bearerAuth: [] }],
+              requestBody: {
+                required: true,
+                content: {
+                  "application/json": {
+                    schema: {
+                      type: "object",
+                      required: ["username"],
+                      properties: {
+                        username: {
+                          type: "string",
+                          minLength: 3,
+                          maxLength: 30,
+                          description: "New username (3-30 characters)",
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+              responses: {
+                "200": {
+                  description: "Username updated successfully",
+                  content: {
+                    "application/json": {
+                      schema: {
+                        type: "object",
+                        properties: {
+                          data: {
+                            type: "object",
+                            properties: {
+                              id: { type: "integer" },
+                              documentId: { type: "string" },
+                              username: { type: "string" },
+                              email: { type: "string", format: "email" },
+                            },
+                          },
+                        },
+                      },
+                    },
+                  },
+                },
+                "400": { description: "Invalid username or username already taken" },
+                "401": { description: "Unauthorized - must be logged in" },
+              },
+            },
+          };
+
+          // Endpoint: DELETE /user/destroy
+          draft.paths["/user/destroy"] = {
+            delete: {
+              tags: ["User"],
+              operationId: "destroyUser",
+              summary: "Delete current user's account",
+              security: [{ bearerAuth: [] }],
+              responses: {
+                "200": {
+                  description: "Account deleted successfully",
+                  content: {
+                    "application/json": {
+                      schema: {
+                        type: "object",
+                        properties: {
+                          success: { type: "boolean" },
+                        },
+                      },
+                    },
+                  },
+                },
+                "401": { description: "Unauthorized - must be logged in" },
+              },
+            },
+          };
+
           // Fix populate parameter type for all GET endpoints
           Object.keys(draft.paths).forEach((path) => {
             const get = draft.paths[path]?.get;

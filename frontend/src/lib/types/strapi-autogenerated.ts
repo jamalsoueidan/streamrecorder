@@ -5809,6 +5809,29 @@ export interface SendEmailData {
   message?: string;
 }
 
+export interface UpdateUserPayload {
+  /**
+   * New username (3-30 characters)
+   * @minLength 3
+   * @maxLength 30
+   */
+  username: string;
+}
+
+export interface UpdateUserData {
+  data?: {
+    id?: number;
+    documentId?: string;
+    username?: string;
+    /** @format email */
+    email?: string;
+  };
+}
+
+export interface DestroyUserData {
+  success?: boolean;
+}
+
 export interface GetRandomClipsParams {
   /**
    * Number of clips to return
@@ -7815,6 +7838,40 @@ export namespace Email {
     export type RequestBody = SendEmailPayload;
     export type RequestHeaders = {};
     export type ResponseBody = SendEmailData;
+  }
+}
+
+export namespace User {
+  /**
+   * No description
+   * @tags User
+   * @name UpdateUser
+   * @summary Update current user's username
+   * @request PUT:/user/update
+   * @secure
+   */
+  export namespace UpdateUser {
+    export type RequestParams = {};
+    export type RequestQuery = {};
+    export type RequestBody = UpdateUserPayload;
+    export type RequestHeaders = {};
+    export type ResponseBody = UpdateUserData;
+  }
+
+  /**
+   * No description
+   * @tags User
+   * @name DestroyUser
+   * @summary Delete current user's account
+   * @request DELETE:/user/destroy
+   * @secure
+   */
+  export namespace DestroyUser {
+    export type RequestParams = {};
+    export type RequestQuery = {};
+    export type RequestBody = never;
+    export type RequestHeaders = {};
+    export type ResponseBody = DestroyUserData;
   }
 }
 
@@ -9967,6 +10024,45 @@ export class Api<
         body: data,
         secure: true,
         type: ContentType.Json,
+        format: "json",
+        ...params,
+      }),
+  };
+  user = {
+    /**
+     * No description
+     *
+     * @tags User
+     * @name UpdateUser
+     * @summary Update current user's username
+     * @request PUT:/user/update
+     * @secure
+     */
+    updateUser: (data: UpdateUserPayload, params: RequestParams = {}) =>
+      this.request<UpdateUserData, void>({
+        path: `/user/update`,
+        method: "PUT",
+        body: data,
+        secure: true,
+        type: ContentType.Json,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags User
+     * @name DestroyUser
+     * @summary Delete current user's account
+     * @request DELETE:/user/destroy
+     * @secure
+     */
+    destroyUser: (params: RequestParams = {}) =>
+      this.request<DestroyUserData, void>({
+        path: `/user/destroy`,
+        method: "DELETE",
+        secure: true,
         format: "json",
         ...params,
       }),
