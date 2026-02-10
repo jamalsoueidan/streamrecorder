@@ -58,11 +58,7 @@
         "message": "Your profile has been linked to your account. Please login to access your dashboard.",
         "button": "Go to Login"
       },
-      "deleted": {
-        "title": "Recordings Deleted",
-        "message": "{count, plural, =0 {No recordings found.} =1 {1 recording has been deleted.} other {# recordings have been deleted.}}"
-      },
-      "notFound": {
+            "notFound": {
         "title": "Profile Not Found",
         "message": "Your ownership was verified, but this content creator doesn't exist in our system."
       }

@@ -16,8 +16,7 @@ interface VerifyProfileResult {
   success: boolean;
   verified: boolean;
   error?: string;
-  action?: "created" | "linked" | "deleted";
-  deletedCount?: number;
+  action?: "created" | "linked";
 }
 
 // Helper to update follower ownership across all locales
@@ -125,99 +124,63 @@ export async function verifyProfile(
       };
     }
 
-    // Step 3: Handle based on intent
-    if (intent === "dmca") {
-      // Delete all recordings for this follower
-      const recordingsResponse = await publicApi.recording.getRecordings({
-        filters: {
-          follower: { id: { $eq: follower.documentId } },
+    // Step 3: Link follower to user account (same flow for dmca and partnership)
+    const localizations = (follower as any).localizations || [];
+
+    const usersResponse =
+      await publicApi.usersPermissionsUsersRoles.usersList({
+        query: {
+          "filters[email][$eqi]": email,
         },
-        "pagination[pageSize]": 100,
-      });
+      } as never);
 
-      const recordings = recordingsResponse.data?.data || [];
-      let deletedCount = 0;
+    const existingUser = usersResponse.data?.at(0) as
+      | { id: number; documentId: string }
+      | undefined;
 
-      for (const recording of recordings) {
-        if (!recording.documentId) continue;
-        try {
-          await publicApi.recording.deleteRecordingsId({
-            id: String(recording.documentId),
-          });
-          deletedCount++;
-        } catch (e) {
-          console.error(
-            `Failed to delete recording ${recording.documentId}:`,
-            e,
-          );
-        }
+    if (existingUser) {
+      // Link follower to existing user
+      await linkUserToFollower(existingUser.documentId, username, platform);
+      await updateFollowerOwnership(
+        follower.documentId,
+        existingUser.id,
+        localizations,
+      );
+
+      return {
+        success: true,
+        verified: true,
+        action: "linked",
+      };
+    } else {
+      // Create new user with random password
+      const { data } =
+        await publicApi.usersPermissionsAuth.localRegisterCreate({
+          username,
+          email,
+          password: crypto.randomUUID(),
+        });
+
+      const newUser = data.user as { id: number; documentId: string };
+
+      // Link follower to new user
+      await linkUserToFollower(newUser.documentId, username, platform);
+      await updateFollowerOwnership(
+        follower.documentId,
+        newUser.id,
+        localizations,
+      );
+
+      // Set JWT for auto-login
+      if (data.jwt) {
+        await setToken(data.jwt);
       }
 
       return {
         success: true,
         verified: true,
-        action: "deleted",
-        deletedCount,
+        action: "created",
       };
-    } else {
-      // Partnership flow: link follower to user
-      const localizations = (follower as any).localizations || [];
-
-      const usersResponse =
-        await publicApi.usersPermissionsUsersRoles.usersList({
-          query: {
-            "filters[email][$eqi]": email,
-          },
-        } as never);
-
-      const existingUser = usersResponse.data?.at(0) as
-        | { id: number; documentId: string }
-        | undefined;
-
-      if (existingUser) {
-        // Link follower to existing user
-        await linkUserToFollower(existingUser.documentId, username, platform);
-        await updateFollowerOwnership(
-          follower.documentId,
-          existingUser.id,
-          localizations,
-        );
-
-        return {
-          success: true,
-          verified: true,
-          action: "linked",
-        };
-      } else {
-        // Create new user with random password
-        const { data } =
-          await publicApi.usersPermissionsAuth.localRegisterCreate({
-            username,
-            email,
-            password: crypto.randomUUID(),
-          });
-
-        const newUser = data.user as { id: number; documentId: string };
-
-        // Link follower to new user
-        await linkUserToFollower(newUser.documentId, username, platform);
-        await updateFollowerOwnership(
-          follower.documentId,
-          newUser.id,
-          localizations,
-        );
-
-        // Set JWT for auto-login
-        if (data.jwt) {
-          await setToken(data.jwt);
-        }
-
-        return {
-          success: true,
-          verified: true,
-          action: "created",
-        };
-      }
     }
   } catch (error) {
     console.error("Error in verification:", error);

@@ -47,9 +47,8 @@ export function VerificationFlow({ intent }: { intent: string }) {
   const [verifying, setVerifying] = useState(false);
   const [verificationFailed, setVerificationFailed] = useState(false);
   const [actionResult, setActionResult] = useState<
-    "created" | "linked" | "deleted" | "not_found" | null
+    "created" | "linked" | "not_found" | null
   >(null);
-  const [deletedCount, setDeletedCount] = useState(0);
 
   const profileInfo = useMemo(() => {
     if (!profileUrl) return null;
@@ -105,9 +104,6 @@ export function VerificationFlow({ intent }: { intent: string }) {
     if (result.verified) {
       if (result.success && result.action) {
         setActionResult(result.action);
-        if (result.deletedCount !== undefined) {
-          setDeletedCount(result.deletedCount);
-        }
       } else if (!result.success && result.error) {
         // Profile verified but not found in our system
         setActionResult("not_found");
@@ -332,29 +328,7 @@ export function VerificationFlow({ intent }: { intent: string }) {
         {/* Step 3: Complete */}
         <Stepper.Completed>
           <Stack gap="lg" mt="xl" align="center">
-            {actionResult === "deleted" ? (
-              <>
-                <div
-                  style={{
-                    width: 80,
-                    height: 80,
-                    borderRadius: "50%",
-                    background: "rgba(16, 185, 129, 0.2)",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}
-                >
-                  <IconCheck size={40} style={{ color: "#10b981" }} />
-                </div>
-                <Title order={2} ta="center" style={{ color: "#f1f5f9" }}>
-                  {t("steps.complete.deleted.title")}
-                </Title>
-                <Text ta="center" style={{ color: "#94a3b8" }} maw={400}>
-                  {t("steps.complete.deleted.message", { count: deletedCount })}
-                </Text>
-              </>
-            ) : actionResult === "linked" ? (
+            {actionResult === "linked" ? (
               <>
                 <div
                   style={{
