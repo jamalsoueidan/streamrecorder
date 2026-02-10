@@ -25,7 +25,9 @@
     "recordCount": "REC {count}",
     "newRecording": "New",
     "videoCount": "{count, plural, one {# video} other {# videos}}",
-    "noRecordings": "You've reached the end"
+    "noRecordings": "You've reached the end",
+    "hide": "Hide from public",
+    "delete": "Delete video"
   },
   "followers": {
     "addedAgo_context": "For when a creator was added to user's list. Shows 'Added 3 days ago'",

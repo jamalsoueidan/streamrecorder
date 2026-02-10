@@ -25,7 +25,9 @@
     "recordCount": "تسجيل {count}",
     "newRecording": "جديد",
     "videoCount": "{count, plural, zero {لا فيديوهات} one {فيديو واحد} two {فيديوهان} few {# فيديوهات} many {# فيديو} other {# فيديو}}",
-    "noRecordings": "لقد وصلت إلى النهاية"
+    "noRecordings": "لقد وصلت إلى النهاية",
+    "hide": "إخفاء من الصفحة العامة",
+    "delete": "حذف الفيديو"
   },
   "followers": {
     "addedAgo_context": "For when a creator was added to user's list. Shows 'Added 3 days ago'",

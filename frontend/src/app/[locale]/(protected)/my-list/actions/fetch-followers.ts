@@ -57,8 +57,9 @@ export async function getRecordings(
         },
       },
       follower: {
+        fields: ["id"],
         populate: {
-          avatar: { fields: ["url"] },
+          owner: { fields: ["id"] },
         },
       },
     },
