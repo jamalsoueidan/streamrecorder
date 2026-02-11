@@ -45,7 +45,17 @@ export async function checkUser(
       return { success: false, error: "User not found" };
     }
 
-    const data = await response.json();
+    const text = await response.text();
+    if (!text) {
+      return { success: false, error: "User not found" };
+    }
+
+    let data;
+    try {
+      data = JSON.parse(text);
+    } catch {
+      return { success: false, error: "User not found" };
+    }
 
     // Handle case where API returns empty or invalid data
     if (!data || !data.username) {
