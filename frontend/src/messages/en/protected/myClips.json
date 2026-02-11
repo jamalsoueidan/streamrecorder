@@ -1,0 +1,8 @@
+{
+  "title": "Clips",
+  "description": "AI-generated clips from your recordings",
+  "emptyState": {
+    "title": "No clips yet",
+    "description": "Clips will appear here once they are generated from your recordings"
+  }
+}

@@ -21,6 +21,7 @@ import {
   IconLink,
   IconLogout,
   IconPlayerRecordFilled,
+  IconScissors,
   IconSettings,
   IconUsers,
   IconVideo,
@@ -60,6 +61,12 @@ export const navigation = [
         labelKey: "links.myRecordings",
         url: "/following",
         icon: IconVideo,
+        color: null,
+      },
+      {
+        labelKey: "links.myClips",
+        url: "/my-clips",
+        icon: IconScissors,
         color: null,
       },
       {
