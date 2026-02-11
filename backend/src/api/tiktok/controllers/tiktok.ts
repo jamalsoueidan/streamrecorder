@@ -7,7 +7,7 @@ import { factories } from "@strapi/strapi";
 export default factories.createCoreController(
   "api::tiktok.tiktok",
   ({ strapi }) => ({
-    async me(ctx) {
+    async meFind(ctx) {
       const user = ctx.state.user;
       if (!user) {
         return ctx.unauthorized();
@@ -19,7 +19,7 @@ export default factories.createCoreController(
 
       return { data: tiktok || null };
     },
-    async create(ctx) {
+    async meCreate(ctx) {
       const user = ctx.state.user;
       if (!user) {
         return ctx.unauthorized();
@@ -47,7 +47,7 @@ export default factories.createCoreController(
 
       return { data: tiktok };
     },
-    async update(ctx) {
+    async meUpdate(ctx) {
       const user = ctx.state.user;
       if (!user) {
         return ctx.unauthorized();
@@ -72,7 +72,7 @@ export default factories.createCoreController(
       return super.update(ctx);
     },
 
-    async delete(ctx) {
+    async meDelete(ctx) {
       const user = ctx.state.user;
       if (!user) {
         return ctx.unauthorized();

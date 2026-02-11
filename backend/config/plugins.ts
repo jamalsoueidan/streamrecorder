@@ -237,7 +237,7 @@ export default ({ env }) => ({
           draft.paths["/tiktoks/me"] = {
             get: {
               tags: ["Tiktok"],
-              operationId: "getTiktokMe",
+              operationId: "meGetTiktoks",
               summary: "Get current user's TikTok account",
               security: [{ bearerAuth: [] }],
               responses: {
@@ -255,6 +255,44 @@ export default ({ env }) => ({
                   },
                 },
                 "401": { description: "Unauthorized" },
+              },
+            },
+            post: {
+              ...draft.paths["/tiktoks"]?.post,
+              operationId: "mePostTiktoks",
+              summary: "Create TikTok account for current user (max 1)",
+              security: [{ bearerAuth: [] }],
+              responses: {
+                ...draft.paths["/tiktoks"]?.post?.responses,
+                "400": {
+                  description: "You already have a TikTok account linked",
+                },
+                "401": { description: "Unauthorized" },
+              },
+            },
+          };
+
+          draft.paths["/tiktoks/me/{id}"] = {
+            put: {
+              ...draft.paths["/tiktoks/{id}"]?.put,
+              operationId: "meUpdateTiktoksId",
+              summary: "Update current user's TikTok account",
+              security: [{ bearerAuth: [] }],
+              responses: {
+                ...draft.paths["/tiktoks/{id}"]?.put?.responses,
+                "401": { description: "Unauthorized" },
+                "403": { description: "Forbidden - not your TikTok account" },
+              },
+            },
+            delete: {
+              ...draft.paths["/tiktoks/{id}"]?.delete,
+              operationId: "meDeleteTiktoksId",
+              summary: "Delete current user's TikTok account",
+              security: [{ bearerAuth: [] }],
+              responses: {
+                ...draft.paths["/tiktoks/{id}"]?.delete?.responses,
+                "401": { description: "Unauthorized" },
+                "403": { description: "Forbidden - not your TikTok account" },
               },
             },
           };
@@ -281,7 +319,7 @@ export default ({ env }) => ({
           draft.paths["/clips/me"] = {
             get: {
               ...draft.paths["/clips"].get,
-              operationId: "getClipsMe",
+              operationId: "meGetClips",
               summary: "Get clips belonging to current user's followers",
               security: [{ bearerAuth: [] }],
               responses: {
@@ -306,6 +344,73 @@ export default ({ env }) => ({
                   },
                 },
                 "401": { description: "Unauthorized" },
+              },
+            },
+          };
+
+          draft.paths["/clips/me/{id}"] = {
+            get: {
+              ...draft.paths["/clips/{id}"]?.get,
+              operationId: "meGetClipOne",
+              summary:
+                "Get a single clip belonging to current user's followers",
+              security: [{ bearerAuth: [] }],
+              responses: {
+                "200": {
+                  description: "OK",
+                  content: {
+                    "application/json": {
+                      schema: {
+                        type: "object",
+                        properties: {
+                          data: { $ref: "#/components/schemas/ClipWithShare" },
+                        },
+                      },
+                    },
+                  },
+                },
+                "401": { description: "Unauthorized" },
+                "404": { description: "Not found" },
+              },
+            },
+          };
+
+          // Endpoint: POST /clip-shares/me
+
+          draft.paths["/clip-shares/me"] = {
+            post: {
+              ...draft.paths["/clip-shares"].post,
+              operationId: "mePostClipShares",
+              summary: "Create a clip share for current user",
+              security: [{ bearerAuth: [] }],
+              responses: {
+                ...draft.paths["/clip-shares"].post.responses,
+                "401": { description: "Unauthorized" },
+              },
+            },
+          };
+
+          draft.paths["/clip-shares/me/{id}"] = {
+            put: {
+              ...draft.paths["/clip-shares/{id}"].put,
+              operationId: "meUpdateClipSharesId",
+              summary: "Update current user's clip share",
+              security: [{ bearerAuth: [] }],
+              responses: {
+                ...draft.paths["/clip-shares/{id}"].put.responses,
+                "401": { description: "Unauthorized" },
+                "403": { description: "Forbidden - not your clip share" },
+              },
+            },
+            delete: {
+              ...draft.paths["/clip-shares/{id}"].delete,
+              operationId: "meDeleteClipSharesId",
+              summary: "Delete current user's clip share",
+              security: [{ bearerAuth: [] }],
+              responses: {
+                ...draft.paths["/clip-shares/{id}"].delete.responses,
+                "401": { description: "Unauthorized" },
+                "403": { description: "Forbidden - not your clip share" },
               },
             },
           };

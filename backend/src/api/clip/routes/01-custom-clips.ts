@@ -2,8 +2,13 @@ export default {
   routes: [
     {
       method: "GET",
+      path: "/clips/me/:id",
+      handler: "clip.meFindOne",
+    },
+    {
+      method: "GET",
       path: "/clips/me",
-      handler: "clip.me",
+      handler: "clip.meFind",
     },
     {
       method: "GET",
