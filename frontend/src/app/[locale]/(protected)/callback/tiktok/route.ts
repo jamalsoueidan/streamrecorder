@@ -12,6 +12,7 @@ interface TikTokTokenResponse {
   error_description?: string;
 }
 
+
 const PKCE_COOKIE = "tiktok_pkce_verifier";
 
 export async function GET(request: NextRequest) {
@@ -31,6 +32,15 @@ export async function GET(request: NextRequest) {
   }
 
   try {
+    // Check if already connected (handles duplicate requests)
+    const existingConnection = await api.tiktok.meGetTiktoks();
+    if (existingConnection.data?.data) {
+      console.log("TikTok callback: Already connected, skipping duplicate request");
+      const response = NextResponse.redirect(`${baseUrl}/settings?tiktok=connected`);
+      response.cookies.delete(PKCE_COOKIE);
+      return response;
+    }
+
     const clientKey = process.env.TIKTOK_CLIENT_KEY;
     const clientSecret = process.env.TIKTOK_CLIENT_SECRET;
     const redirectUri = `${baseUrl}/callback/tiktok`;

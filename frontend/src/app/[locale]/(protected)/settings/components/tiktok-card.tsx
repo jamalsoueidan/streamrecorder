@@ -1,20 +1,22 @@
 "use client";
 
 import {
-  Badge,
+  Avatar,
   Button,
   Card,
   Group,
   Loader,
+  Paper,
   Stack,
   Text,
   Title,
 } from "@mantine/core";
 import { notifications } from "@mantine/notifications";
-import { IconBrandTiktok, IconLink, IconLinkOff } from "@tabler/icons-react";
+import { IconBrandTiktok, IconLinkOff, IconPlus } from "@tabler/icons-react";
 import { useTranslations } from "next-intl";
 import { useRouter, useSearchParams } from "next/navigation";
 import { startTransition, useEffect, useState } from "react";
+import { getCreatorInfo } from "../../my-clips/actions/share-tiktok";
 import {
   disconnectTikTok,
   getTikTokAuthUrl,
@@ -27,8 +29,12 @@ export function TikTokCard() {
   const searchParams = useSearchParams();
   const [tiktokConnection, setTiktokConnection] = useState<{
     documentId: string;
-    openId: string;
     connected: boolean;
+  } | null>(null);
+  const [creatorInfo, setCreatorInfo] = useState<{
+    username: string;
+    nickname: string;
+    avatarUrl: string;
   } | null>(null);
   const [tiktokLoading, setTiktokLoading] = useState(true);
   const [tiktokDisconnecting, setTiktokDisconnecting] = useState(false);
@@ -59,8 +65,21 @@ export function TikTokCard() {
     }
 
     // Fetch connection status
-    getTikTokConnection().then((data) => {
+    getTikTokConnection().then(async (data) => {
       setTiktokConnection(data);
+
+      // If connected, fetch creator info from TikTok API
+      if (data?.connected) {
+        const info = await getCreatorInfo();
+        if (info.success && info.data) {
+          setCreatorInfo({
+            username: info.data.creator_username,
+            nickname: info.data.creator_nickname,
+            avatarUrl: info.data.creator_avatar_url,
+          });
+        }
+      }
+
       setTiktokLoading(false);
       // Clear URL params after successful callback
       if (tiktokStatus === "connected") {
@@ -81,6 +100,7 @@ export function TikTokCard() {
     setTiktokDisconnecting(false);
     if (result.success) {
       setTiktokConnection(null);
+      setCreatorInfo(null);
       notifications.show({
         title: t("tiktok.disconnectSuccess"),
         message: t("tiktok.disconnectSuccessMessage"),
@@ -104,36 +124,51 @@ export function TikTokCard() {
         </Group>
 
         <Text size="md" c="dimmed">
-          {t("tiktok.description")}
+          {tiktokConnection
+            ? t("tiktok.descriptionConnected")
+            : t("tiktok.description")}
         </Text>
 
         {tiktokLoading ? (
           <Loader size="sm" />
         ) : tiktokConnection ? (
-          <Group justify="space-between">
-            <Badge
-              size="lg"
-              variant="light"
-              color="green"
-              leftSection={<IconBrandTiktok size={14} />}
-            >
-              {t("tiktok.connected")}
-            </Badge>
-            <Button
-              size="md"
-              variant="outline"
-              color="red"
-              leftSection={<IconLinkOff size={18} />}
-              loading={tiktokDisconnecting}
-              onClick={handleDisconnectTikTok}
-            >
-              {t("tiktok.disconnect")}
-            </Button>
-          </Group>
+          <Paper withBorder p="md" radius="md">
+            <Group justify="space-between">
+              <Group gap="sm">
+                <Avatar src={creatorInfo?.avatarUrl} size="lg" radius="xl">
+                  <IconBrandTiktok />
+                </Avatar>
+                <Stack gap={0}>
+                  <Text size="lg" fw={500}>
+                    {creatorInfo?.nickname ||
+                      creatorInfo?.username ||
+                      t("tiktok.connected")}
+                  </Text>
+                  {creatorInfo?.username && (
+                    <Text size="md" c="dimmed">
+                      @{creatorInfo.username}
+                    </Text>
+                  )}
+                </Stack>
+              </Group>
+              <Button
+                size="md"
+                radius="sm"
+                variant="outline"
+                color="red"
+                leftSection={<IconLinkOff size={18} />}
+                loading={tiktokDisconnecting}
+                onClick={handleDisconnectTikTok}
+              >
+                {t("tiktok.disconnect")}
+              </Button>
+            </Group>
+          </Paper>
         ) : (
           <Button
-            size="md"
-            leftSection={<IconLink size={18} />}
+            size="lg"
+            radius="sm"
+            rightSection={<IconPlus />}
             onClick={handleConnectTikTok}
           >
             {t("tiktok.connect")}

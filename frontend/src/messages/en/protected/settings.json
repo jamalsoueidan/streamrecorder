@@ -19,7 +19,8 @@
   },
   "tiktok": {
     "title": "TikTok",
-    "description": "Connect your TikTok account to upload clips directly to TikTok.",
+    "description": "Connect your TikTok account to post clips and grow your audience.",
+    "descriptionConnected": "Your TikTok account is connected.",
     "connect": "Connect TikTok",
     "disconnect": "Disconnect",
     "connected": "Connected",

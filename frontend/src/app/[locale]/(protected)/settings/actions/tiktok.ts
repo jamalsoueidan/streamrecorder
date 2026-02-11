@@ -47,7 +47,6 @@ export async function getTikTokConnection() {
     // Only return non-sensitive fields
     return {
       documentId: data.documentId!,
-      openId: data.openId || "",
       connected: true,
     };
   } catch {
