@@ -231,6 +231,48 @@ export default ({ env }) => ({
             },
           };
 
+          // Endpoint: GET /tiktoks/me
+          draft.paths["/tiktoks/me"] = {
+            get: {
+              tags: ["Tiktok"],
+              operationId: "getTiktokMe",
+              summary: "Get current user's TikTok account",
+              security: [{ bearerAuth: [] }],
+              responses: {
+                "200": {
+                  description: "TikTok account or null",
+                  content: {
+                    "application/json": {
+                      schema: {
+                        type: "object",
+                        properties: {
+                          data: { $ref: "#/components/schemas/Tiktok" },
+                        },
+                      },
+                    },
+                  },
+                },
+                "401": { description: "Unauthorized" },
+              },
+            },
+          };
+
+          // Endpoint: GET /clips/me
+          if (draft.paths["/clips"]?.get) {
+            draft.paths["/clips/me"] = {
+              get: {
+                ...draft.paths["/clips"].get,
+                operationId: "getClipsMe",
+                summary: "Get clips belonging to current user's followers",
+                security: [{ bearerAuth: [] }],
+                responses: {
+                  ...draft.paths["/clips"].get.responses,
+                  "401": { description: "Unauthorized" },
+                },
+              },
+            };
+          }
+
           // Fix populate parameter type for all GET endpoints
           Object.keys(draft.paths).forEach((path) => {
             const get = draft.paths[path]?.get;

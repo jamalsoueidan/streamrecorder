@@ -7,6 +7,36 @@ const toCamelCase = (obj: Record<string, any>) =>
 export default factories.createCoreController(
   "api::clip.clip",
   ({ strapi }) => ({
+    async me(ctx) {
+      const user = ctx.state.user;
+      if (!user) {
+        return ctx.unauthorized();
+      }
+
+      // Get followers owned by this user
+      const followers = await strapi.documents("api::follower.follower").findMany({
+        filters: { owner: { id: user.id } },
+        fields: ["id"],
+      });
+
+      const followerIds = followers.map((f) => f.id);
+
+      if (followerIds.length === 0) {
+        return { data: [], meta: { pagination: { page: 1, pageSize: 25, pageCount: 0, total: 0 } } };
+      }
+
+      // Filter clips by those followers
+      ctx.query = {
+        ...ctx.query,
+        filters: {
+          ...((ctx.query.filters as object) || {}),
+          follower: { id: { $in: followerIds } },
+        },
+      };
+
+      return super.find(ctx);
+    },
+
     async shuffle(ctx) {
       const limit = Number(ctx.query.limit) || 12;
       const knex = strapi.db.connection;

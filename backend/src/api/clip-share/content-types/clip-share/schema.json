@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "clip_shares",
+  "info": {
+    "singularName": "clip-share",
+    "pluralName": "clip-shares",
+    "displayName": "ClipShare"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "clip": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::clip.clip"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "platform": {
+      "type": "string",
+      "required": true
+    },
+    "data": {
+      "type": "json"
+    },
+    "state": {
+      "type": "enumeration",
+      "enum": [
+        "completed",
+        "failed",
+        "processing"
+      ]
+    }
+  }
+}

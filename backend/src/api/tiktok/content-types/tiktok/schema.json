@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tiktoks",
+  "info": {
+    "singularName": "tiktok",
+    "pluralName": "tiktoks",
+    "displayName": "Tiktok"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "openId": {
+      "type": "string"
+    },
+    "accessToken": {
+      "type": "string",
+      "required": true
+    },
+    "refreshToken": {
+      "type": "string",
+      "required": true
+    },
+    "expiresAt": {
+      "type": "datetime",
+      "required": true
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "tiktok"
+    }
+  }
+}
