@@ -4,11 +4,6 @@ import api from "@/lib/api";
 import crypto from "crypto";
 import { cookies } from "next/headers";
 
-interface ActionResult {
-  success: boolean;
-  error?: string;
-}
-
 const PKCE_COOKIE = "tiktok_pkce_verifier";
 
 // Generate PKCE code verifier (43-128 characters)
@@ -21,7 +16,7 @@ function generateCodeChallenge(verifier: string): string {
   return crypto.createHash("sha256").update(verifier).digest("hex");
 }
 
-export async function getTikTokAuthUrl(): Promise<string> {
+export async function getTikTokAuthUrl() {
   const clientKey = process.env.TIKTOK_CLIENT_KEY;
   const redirectUri = `${process.env.NEXT_PUBLIC_BASE_URL}/callback/tiktok`;
   const state = crypto.randomBytes(16).toString("hex");
@@ -46,13 +41,21 @@ export async function getTikTokAuthUrl(): Promise<string> {
 export async function getTikTokConnection() {
   try {
     const response = await api.tiktok.meGetTiktoks();
-    return response.data?.data || null;
+    const data = response.data?.data;
+    if (!data) return null;
+
+    // Only return non-sensitive fields
+    return {
+      documentId: data.documentId!,
+      openId: data.openId || "",
+      connected: true,
+    };
   } catch {
     return null;
   }
 }
 
-export async function disconnectTikTok(id: string): Promise<ActionResult> {
+export async function disconnectTikTok(id: string) {
   try {
     await api.tiktok.meDeleteTiktoksId({ id });
     return { success: true };

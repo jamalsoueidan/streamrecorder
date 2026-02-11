@@ -26,9 +26,9 @@ export function TikTokCard() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const [tiktokConnection, setTiktokConnection] = useState<{
-    id?: string | number;
-    documentId?: string;
-    openId?: string;
+    documentId: string;
+    openId: string;
+    connected: boolean;
   } | null>(null);
   const [tiktokLoading, setTiktokLoading] = useState(true);
   const [tiktokDisconnecting, setTiktokDisconnecting] = useState(false);
@@ -60,7 +60,6 @@ export function TikTokCard() {
 
     // Fetch connection status
     getTikTokConnection().then((data) => {
-      console.log(data);
       setTiktokConnection(data);
       setTiktokLoading(false);
       // Clear URL params after successful callback

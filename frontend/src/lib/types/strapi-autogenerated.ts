@@ -7261,11 +7261,11 @@ export interface MeGetTiktoksData {
 
 export type MePostTiktoksData = TiktokResponse;
 
-export interface MeUpdateTiktoksIdParams {
+export interface MePutTiktoksIdParams {
   id: string;
 }
 
-export type MeUpdateTiktoksIdData = TiktokResponse;
+export type MePutTiktoksIdData = TiktokResponse;
 
 export interface MeDeleteTiktoksIdParams {
   id: string;
@@ -9189,19 +9189,19 @@ export namespace Tiktok {
   /**
    * No description
    * @tags Tiktok
-   * @name MeUpdateTiktoksId
+   * @name MePutTiktoksId
    * @summary Update current user's TikTok account
    * @request PUT:/tiktoks/me/{id}
    * @secure
    */
-  export namespace MeUpdateTiktoksId {
+  export namespace MePutTiktoksId {
     export type RequestParams = {
       id: string;
     };
     export type RequestQuery = {};
     export type RequestBody = TiktokRequest;
     export type RequestHeaders = {};
-    export type ResponseBody = MeUpdateTiktoksIdData;
+    export type ResponseBody = MePutTiktoksIdData;
   }
 
   /**
@@ -11664,17 +11664,17 @@ export class Api<
      * No description
      *
      * @tags Tiktok
-     * @name MeUpdateTiktoksId
+     * @name MePutTiktoksId
      * @summary Update current user's TikTok account
      * @request PUT:/tiktoks/me/{id}
      * @secure
      */
-    meUpdateTiktoksId: (
-      { id, ...query }: MeUpdateTiktoksIdParams,
+    mePutTiktoksId: (
+      { id, ...query }: MePutTiktoksIdParams,
       data: TiktokRequest,
       params: RequestParams = {},
     ) =>
-      this.request<MeUpdateTiktoksIdData, Error | void>({
+      this.request<MePutTiktoksIdData, Error | void>({
         path: `/tiktoks/me/${id}`,
         method: "PUT",
         body: data,

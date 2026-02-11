@@ -275,7 +275,7 @@ export default ({ env }) => ({
           draft.paths["/tiktoks/me/{id}"] = {
             put: {
               ...draft.paths["/tiktoks/{id}"]?.put,
-              operationId: "meUpdateTiktoksId",
+              operationId: "mePutTiktoksId",
               summary: "Update current user's TikTok account",
               security: [{ bearerAuth: [] }],
               responses: {
@@ -393,7 +393,7 @@ export default ({ env }) => ({
           draft.paths["/clip-shares/me/{id}"] = {
             put: {
               ...draft.paths["/clip-shares/{id}"].put,
-              operationId: "meUpdateClipSharesId",
+              operationId: "mePutClipSharesId",
               summary: "Update current user's clip share",
               security: [{ bearerAuth: [] }],
               responses: {

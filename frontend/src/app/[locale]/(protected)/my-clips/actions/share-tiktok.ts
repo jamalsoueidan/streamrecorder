@@ -114,12 +114,30 @@ export async function checkTikTokStatus(publishId: string): Promise<{
       return { status: "error", error: "No TikTok connection" };
     }
 
+    let accessToken = tiktokData.accessToken;
+
+    // Check if token is expired and refresh if needed
+    const expiresAt = new Date(tiktokData.expiresAt || 0);
+    if (new Date() >= expiresAt) {
+      const refreshResult = await refreshTikTokToken(
+        tiktokData.refreshToken!,
+        tiktokData.documentId!,
+      );
+      if (!refreshResult.success || !refreshResult.accessToken) {
+        return {
+          status: "error",
+          error: "TikTok session expired. Please reconnect in Settings.",
+        };
+      }
+      accessToken = refreshResult.accessToken;
+    }
+
     const response = await fetch(
       "https://open.tiktokapis.com/v2/post/publish/status/fetch/",
       {
         method: "POST",
         headers: {
-          Authorization: `Bearer ${tiktokData.accessToken}`,
+          Authorization: `Bearer ${accessToken}`,
           "Content-Type": "application/json",
         },
         body: JSON.stringify({ publish_id: publishId }),
@@ -357,7 +375,7 @@ async function refreshTikTokToken(
       Date.now() + data.expires_in * 1000,
     ).toISOString();
 
-    await api.tiktok.putTiktoksId(
+    await api.tiktok.mePutTiktoksId(
       { id: documentId },
       {
         data: {

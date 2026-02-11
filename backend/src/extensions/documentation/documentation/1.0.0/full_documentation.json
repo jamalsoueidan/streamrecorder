@@ -20,7 +20,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2026-02-11T14:08:04.501Z"
+    "x-generation-date": "2026-02-11T15:41:00.594Z"
   },
   "servers": [
     {
@@ -9193,7 +9193,7 @@
             }
           }
         ],
-        "operationId": "meUpdateTiktoksId",
+        "operationId": "mePutTiktoksId",
         "requestBody": {
           "required": true,
           "content": {
