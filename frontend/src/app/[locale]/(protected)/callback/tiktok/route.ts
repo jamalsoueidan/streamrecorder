@@ -40,6 +40,7 @@ export async function GET(request: NextRequest) {
     const codeVerifier = cookieStore.get(PKCE_COOKIE)?.value;
 
     if (!codeVerifier) {
+      console.error("TikTok callback: PKCE cookie not found");
       return NextResponse.redirect(`${baseUrl}/settings?tiktok=error`);
     }
 
@@ -88,13 +89,15 @@ export async function GET(request: NextRequest) {
       },
     });
 
+    console.log("TikTok callback: Connection saved, redirecting to success");
+
     const response = NextResponse.redirect(
       `${baseUrl}/settings?tiktok=connected`,
     );
     response.cookies.delete(PKCE_COOKIE);
     return response;
   } catch (error) {
-    console.error("Error exchanging TikTok code:", error);
+    console.error("TikTok callback error:", error);
     const response = NextResponse.redirect(`${baseUrl}/settings?tiktok=error`);
     response.cookies.delete(PKCE_COOKIE);
     return response;

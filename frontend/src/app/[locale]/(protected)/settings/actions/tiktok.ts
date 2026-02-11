@@ -57,6 +57,26 @@ export async function getTikTokConnection() {
 
 export async function disconnectTikTok(id: string) {
   try {
+    // Get the TikTok record to access the token
+    const response = await api.tiktok.meGetTiktoks();
+    const tiktokData = response.data?.data;
+
+    if (tiktokData?.accessToken) {
+      // Revoke the token on TikTok's side
+      await fetch("https://open.tiktokapis.com/v2/oauth/revoke/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: new URLSearchParams({
+          token: tiktokData.accessToken,
+          client_key: process.env.TIKTOK_CLIENT_KEY!,
+          client_secret: process.env.TIKTOK_CLIENT_SECRET!,
+        }),
+      });
+    }
+
+    // Delete local record
     await api.tiktok.meDeleteTiktoksId({ id });
     return { success: true };
   } catch (error) {
