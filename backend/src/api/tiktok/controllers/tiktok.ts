@@ -19,7 +19,6 @@ export default factories.createCoreController(
 
       return { data: tiktok || null };
     },
-
     async create(ctx) {
       const user = ctx.state.user;
       if (!user) {
@@ -48,7 +47,6 @@ export default factories.createCoreController(
 
       return { data: tiktok };
     },
-
     async update(ctx) {
       const user = ctx.state.user;
       if (!user) {

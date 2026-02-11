@@ -199,7 +199,9 @@ export default ({ env }) => ({
                     },
                   },
                 },
-                "400": { description: "Invalid username or username already taken" },
+                "400": {
+                  description: "Invalid username or username already taken",
+                },
                 "401": { description: "Unauthorized - must be logged in" },
               },
             },
@@ -257,21 +259,56 @@ export default ({ env }) => ({
             },
           };
 
-          // Endpoint: GET /clips/me
-          if (draft.paths["/clips"]?.get) {
-            draft.paths["/clips/me"] = {
-              get: {
-                ...draft.paths["/clips"].get,
-                operationId: "getClipsMe",
-                summary: "Get clips belonging to current user's followers",
-                security: [{ bearerAuth: [] }],
-                responses: {
-                  ...draft.paths["/clips"].get.responses,
-                  "401": { description: "Unauthorized" },
+          // ClipWithShare schema for /clips/me
+          draft.components.schemas.ClipWithShare = {
+            allOf: [
+              { $ref: "#/components/schemas/Clip" },
+              {
+                type: "object",
+                properties: {
+                  clipShare: {
+                    oneOf: [
+                      { $ref: "#/components/schemas/ClipShare" },
+                      { type: "null" },
+                    ],
+                    description: "User's latest share for this clip",
+                  },
                 },
               },
-            };
-          }
+            ],
+          };
+
+          draft.paths["/clips/me"] = {
+            get: {
+              ...draft.paths["/clips"].get,
+              operationId: "getClipsMe",
+              summary: "Get clips belonging to current user's followers",
+              security: [{ bearerAuth: [] }],
+              responses: {
+                "200": {
+                  description: "OK",
+                  content: {
+                    "application/json": {
+                      schema: {
+                        type: "object",
+                        properties: {
+                          data: {
+                            type: "array",
+                            items: {
+                              $ref: "#/components/schemas/ClipWithShare",
+                            },
+                          },
+                          meta: draft.components.schemas.FollowerListResponse
+                            .properties.meta,
+                        },
+                      },
+                    },
+                  },
+                },
+                "401": { description: "Unauthorized" },
+              },
+            },
+          };
 
           // Fix populate parameter type for all GET endpoints
           Object.keys(draft.paths).forEach((path) => {

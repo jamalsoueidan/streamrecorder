@@ -34,7 +34,38 @@ export default factories.createCoreController(
         },
       };
 
-      return super.find(ctx);
+      const result = await super.find(ctx);
+
+      // Get latest clip share per clip for this user
+      if (result.data?.length > 0) {
+        const clipIds = result.data.map((c: any) => c.id);
+
+        const clipShares = await strapi.documents("api::clip-share.clip-share").findMany({
+          filters: {
+            clip: { id: { $in: clipIds } },
+            user: { id: user.id },
+          },
+          populate: { clip: { fields: ["id"] } },
+          sort: { createdAt: "desc" },
+          limit: 1,
+        });
+
+        const shareByClipId = new Map<string | number, any>();
+        for (const share of clipShares) {
+          const clipId = share.clip?.id;
+          if (clipId && !shareByClipId.has(clipId)) {
+            const { clip, ...shareData } = share;
+            shareByClipId.set(clipId, shareData);
+          }
+        }
+
+        result.data = result.data.map((clip: any) => ({
+          ...clip,
+          clipShare: shareByClipId.get(clip.id) || null,
+        }));
+      }
+
+      return result;
     },
 
     async shuffle(ctx) {

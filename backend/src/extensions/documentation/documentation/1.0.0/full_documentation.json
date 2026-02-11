@@ -20,7 +20,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2026-02-11T00:28:03.546Z"
+    "x-generation-date": "2026-02-11T01:23:58.317Z"
   },
   "servers": [
     {
@@ -9065,53 +9065,45 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ClipListResponse"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/ClipWithShare"
+                      }
+                    },
+                    "meta": {
+                      "type": "object",
+                      "properties": {
+                        "pagination": {
+                          "type": "object",
+                          "properties": {
+                            "page": {
+                              "type": "integer"
+                            },
+                            "pageSize": {
+                              "type": "integer",
+                              "minimum": 25
+                            },
+                            "pageCount": {
+                              "type": "integer",
+                              "maximum": 1
+                            },
+                            "total": {
+                              "type": "integer"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
                 }
               }
             }
           },
           "401": {
             "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Internal Server Error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
           }
         },
         "tags": [
@@ -32044,6 +32036,29 @@
             }
           }
         }
+      },
+      "ClipWithShare": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Clip"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "clipShare": {
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/ClipShare"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "description": "User's latest share for this clip"
+              }
+            }
+          }
+        ]
       },
       "ScopeEnum": {
         "type": "string",
