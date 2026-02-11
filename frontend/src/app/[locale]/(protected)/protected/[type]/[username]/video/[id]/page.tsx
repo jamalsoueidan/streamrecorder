@@ -61,6 +61,7 @@ export default function VideoPage() {
     },
   });
 
+  console.log(data);
   // Use the ACTUAL page numbers from responses for sorting
   const recordings = useMemo(() => {
     if (!data) return [];

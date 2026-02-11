@@ -6,6 +6,7 @@ import qs from "qs";
 
 const api = new Api({
   baseURL: (process.env.STRAPI_URL || "http://localhost:1337") + "/api",
+  timeout: 30000,
   paramsSerializer: {
     serialize: (params) => qs.stringify(params, { encodeValuesOnly: true }),
   },
@@ -23,10 +24,17 @@ const api = new Api({
 });
 
 api.instance.interceptors.request.use((config) => {
-  //console.log("REQUEST URL:", config.baseURL + ":" + config.url);
-  //console.log("PARAMS:", JSON.stringify(config.params));
-  // console.log("FULL URL:", api.instance.getUri(config));
   return config;
 });
+
+api.instance.interceptors.response.use(
+  (response) => response,
+  (error) => {
+    if (error.response?.status === 403) {
+      console.error("403 Forbidden:", error.config?.url, error.config?.params);
+    }
+    return Promise.reject(error);
+  }
+);
 
 export default api;

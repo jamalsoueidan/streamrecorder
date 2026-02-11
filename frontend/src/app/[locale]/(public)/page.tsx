@@ -209,7 +209,7 @@ export default async function LandingPage() {
 
       {clips ? <ClipSlider clips={clips} /> : null}
 
-      <Container size="lg">
+      <Container size="xl">
         <div style={{ marginTop: 100 }}>
           <Flex
             gap={60}
@@ -358,7 +358,7 @@ export default async function LandingPage() {
 
       <CreatorsSlider followers={followers} />
 
-      <Container size="lg">
+      <Container size="xl">
         <div style={{ marginTop: 100 }}>
           <Paper
             p={60}

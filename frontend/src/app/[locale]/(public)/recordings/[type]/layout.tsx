@@ -29,7 +29,7 @@ export default async function RecordingPage({ params, children }: PageProps) {
   const aboutKey = type === "all" ? "all" : type;
 
   return (
-    <Container size="lg">
+    <Container size="xl">
       <div
         style={{
           position: "absolute",

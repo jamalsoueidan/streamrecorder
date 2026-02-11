@@ -5,6 +5,7 @@ import qs from "qs";
 
 const publicApi = new Api({
   baseURL: (process.env.STRAPI_URL || "http://localhost:1337") + "/api",
+  timeout: 30000,
   paramsSerializer: {
     serialize: (params) => qs.stringify(params, { encodeValuesOnly: true }),
   },
@@ -16,5 +17,15 @@ const publicApi = new Api({
     };
   },
 });
+
+publicApi.instance.interceptors.response.use(
+  (response) => response,
+  (error) => {
+    if (error.response?.status === 403) {
+      console.error("403 Forbidden:", error.config?.url, error.config?.params);
+    }
+    return Promise.reject(error);
+  }
+);
 
 export default publicApi;

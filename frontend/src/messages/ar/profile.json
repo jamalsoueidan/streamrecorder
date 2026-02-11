@@ -18,5 +18,10 @@
   },
   "jsonLd": {
     "streamTitle": "بث {nickname} - {date}"
+  },
+  "cta": {
+    "title": "أنت تشاهد معاينة فقط من @{username}",
+    "description": "@{username} يشارك تسجيلاته هنا. سجّل لحفظ ومشاركة بثوثك الخاصة.",
+    "button": "إنشاء حساب مجاني"
   }
 }

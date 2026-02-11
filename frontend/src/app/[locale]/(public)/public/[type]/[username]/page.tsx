@@ -28,6 +28,7 @@ import Image from "next/image";
 
 import { notFound } from "next/navigation";
 import { ImageVideoPreview } from "./components/image-video-preview";
+import { SignupCta } from "./components/signup-cta";
 
 interface PageProps {
   params: Promise<{
@@ -173,7 +174,7 @@ export default async function Page({ params }: PageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <Container size="lg">
+      <Container size="xl">
         <Stack gap="xl">
           <Flex gap="md">
             <Avatar
@@ -241,6 +242,10 @@ export default async function Page({ params }: PageProps) {
                       </Text>
                     </Stack>
                   ))}
+                  <SignupCta
+                    username={follower.username}
+                    recordings={recordings}
+                  />
                 </SimpleGrid>
               )}
             </Stack>

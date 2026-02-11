@@ -57,7 +57,7 @@ export default async function Layout({ params, children }: PageProps) {
     .sort((a, b) => a.name.localeCompare(b.name, locale));
 
   return (
-    <Container size="lg">
+    <Container size="xl">
       <div
         style={{
           position: "absolute",

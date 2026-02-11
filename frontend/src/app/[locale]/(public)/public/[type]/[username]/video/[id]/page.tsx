@@ -20,6 +20,7 @@ import {
   getRecordingById,
 } from "../../actions/actions";
 import { ImageVideoPreview } from "../../components/image-video-preview";
+import { SignupCta } from "../../components/signup-cta";
 import { VideoPlayer } from "../../components/video-player";
 
 interface PageProps {
@@ -191,7 +192,7 @@ export default async function VideoPage({ params }: PageProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(videoJsonLd) }}
       />
-      <Container size="lg">
+      <Container size="xl">
         <Flex gap="xs" justify="center" align="center" direction="column">
           <VideoPlayer
             previewUrl={previewUrl}
@@ -244,6 +245,7 @@ export default async function VideoPage({ params }: PageProps) {
                   </Text>
                 </Stack>
               ))}
+              <SignupCta username={username} recordings={recordings} />
             </SimpleGrid>
           </Stack>
         ) : null}

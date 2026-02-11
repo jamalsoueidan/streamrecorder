@@ -110,7 +110,7 @@ export const fetchProfileRecordings = cache(async function (
       },
       sort: "createdAt:desc",
       "pagination[page]": 1,
-      "pagination[pageSize]": 6,
+      "pagination[pageSize]": 5,
     }),
   );
 

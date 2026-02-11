@@ -18,5 +18,10 @@
   },
   "jsonLd": {
     "streamTitle": "{nickname}'s Stream - {date}"
+  },
+  "cta": {
+    "title": "You're only seeing a preview from @{username}",
+    "description": "@{username} shares their recordings here. Sign up to save and share your own streams.",
+    "button": "Create Free Account"
   }
 }

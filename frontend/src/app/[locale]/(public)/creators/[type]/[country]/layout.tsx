@@ -53,7 +53,7 @@ export default async function Layout({ params, children }: LayoutProps) {
   );
 
   return (
-    <Container size="lg">
+    <Container size="xl">
       <div
         style={{
           position: "absolute",

@@ -17,8 +17,6 @@ export async function GET(
       return NextResponse.json({ error: "Invalid base64" }, { status: 400 });
     }
 
-    console.log(imageUrl);
-
     const url = new URL(imageUrl);
     const referer = `${url.protocol}//${url.hostname}/`;
 
