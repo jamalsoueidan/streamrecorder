@@ -2,6 +2,7 @@
 
 import {
   ActionIcon,
+  Anchor,
   Button,
   Divider,
   Flex,
@@ -21,6 +22,7 @@ import {
   IconLink,
   IconLogout,
   IconPlayerRecordFilled,
+  IconScissors,
   IconSettings,
   IconUsers,
   IconVideo,
@@ -60,6 +62,12 @@ export const navigation = [
         labelKey: "links.myRecordings",
         url: "/following",
         icon: IconVideo,
+        color: null,
+      },
+      {
+        labelKey: "links.myClips",
+        url: "/my-clips",
+        icon: IconScissors,
         color: null,
       },
       {
@@ -112,6 +120,7 @@ export function Navbar({
   const locale = useLocale();
   const pathname = usePathname();
   const t = useTranslations("protected.navigation");
+  const tFooter = useTranslations("footer");
   const { switchLocale } = useChangeLanguage();
 
   const handleLinkClick = (e: React.MouseEvent, url: string) => {
@@ -123,56 +132,64 @@ export function Navbar({
     }
   };
 
-  const links = navigation?.map((section) => {
-    const html = section.links?.map((item) => {
-      const Icon = item.icon || IconPlayerRecordFilled;
-      const isActive = pathname.startsWith(item.url || "");
+  const isAdmin = user?.role?.type === "admin";
 
-      const linkContent = (
-        <Link
-          className={classes.link}
-          data-active={isActive || undefined}
-          data-collapsed={collapsed || undefined}
-          key={item.labelKey}
-          href={item.url || "#"}
-          onClick={(e) => handleLinkClick(e, item.url || "#")}
-        >
-          {collapsed ? (
-            <Icon
-              className={classes.linkIcon}
-              stroke={2}
-              style={{ width: "28px", height: "28px" }}
-              color={item.color ? item.color : undefined}
-            />
-          ) : (
-            <Group gap="xs">
+  const links = navigation?.map((section) => {
+    const html = section.links
+      ?.filter((item) => {
+        // Hide my-clips for non-admin users (TikTok not verified yet)
+        if (item.url === "/my-clips" && !isAdmin) return false;
+        return true;
+      })
+      .map((item) => {
+        const Icon = item.icon || IconPlayerRecordFilled;
+        const isActive = pathname.startsWith(item.url || "");
+
+        const linkContent = (
+          <Link
+            className={classes.link}
+            data-active={isActive || undefined}
+            data-collapsed={collapsed || undefined}
+            key={item.labelKey}
+            href={item.url || "#"}
+            onClick={(e) => handleLinkClick(e, item.url || "#")}
+          >
+            {collapsed ? (
               <Icon
                 className={classes.linkIcon}
                 stroke={2}
                 style={{ width: "28px", height: "28px" }}
                 color={item.color ? item.color : undefined}
               />
-              <span>{t(item.labelKey)}</span>
-            </Group>
-          )}
-        </Link>
-      );
-
-      if (collapsed) {
-        return (
-          <Tooltip
-            key={item.labelKey}
-            label={t(item.labelKey)}
-            position="right"
-            withArrow
-          >
-            {linkContent}
-          </Tooltip>
+            ) : (
+              <Group gap="xs">
+                <Icon
+                  className={classes.linkIcon}
+                  stroke={2}
+                  style={{ width: "28px", height: "28px" }}
+                  color={item.color ? item.color : undefined}
+                />
+                <span>{t(item.labelKey)}</span>
+              </Group>
+            )}
+          </Link>
         );
-      }
 
-      return linkContent;
-    });
+        if (collapsed) {
+          return (
+            <Tooltip
+              key={item.labelKey}
+              label={t(item.labelKey)}
+              position="right"
+              withArrow
+            >
+              {linkContent}
+            </Tooltip>
+          );
+        }
+
+        return linkContent;
+      });
 
     return (
       <div key={section.titleKey}>
@@ -244,6 +261,23 @@ export function Navbar({
         <Divider my="xs" color="transparent" />
         <Stack gap="md">{links}</Stack>
       </div>
+
+      {!collapsed && (
+        <Stack gap={4} mb="md">
+          <Anchor href="/contact" size="md" c="dimmed">
+            {tFooter("company.contact")}
+          </Anchor>
+          <Anchor href="/privacy" size="md" c="dimmed">
+            {tFooter("legal.privacy")}
+          </Anchor>
+          <Anchor href="/terms" size="md" c="dimmed">
+            {tFooter("legal.terms")}
+          </Anchor>
+          <Text size="sm" c="dimmed">
+            @2026 LiveStreamRecorder
+          </Text>
+        </Stack>
+      )}
 
       <div className={classes.footer}>
         <Flex

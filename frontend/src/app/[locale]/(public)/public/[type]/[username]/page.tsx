@@ -118,14 +118,16 @@ export default async function Page({ params }: PageProps) {
 
   const countryName = getCountryName(follower.countryCode);
 
-  const jsonLd = {
-    "@context": "https://schema.org",
+  const profileUrl = generateProfileUrl(follower, true);
+
+  const personSchema = {
     "@type": "Person",
+    "@id": `${profileUrl}#person`,
     name: follower.nickname || follower.username,
     alternateName: `@${follower.username}`,
     description: follower.tagline || follower.description,
     image: generateAvatarUrl(follower.avatar?.url, true),
-    url: generateProfileUrl(follower, true),
+    url: profileUrl,
     ...(countryName && {
       nationality: {
         "@type": "Country",
@@ -138,9 +140,30 @@ export default async function Page({ params }: PageProps) {
       itemListElement: recordings.slice(0, 5).map((video, index) => ({
         "@type": "ListItem",
         position: index + 1,
-        url: `${generateProfileUrl(follower, true)}/video/${video.documentId}`,
+        url: `${profileUrl}/video/${video.documentId}`,
       })),
     },
+  };
+
+  const faqSchema = follower.faq?.length
+    ? {
+        "@type": "FAQPage",
+        "@id": `${profileUrl}#faq`,
+        about: { "@id": `${profileUrl}#person` },
+        mainEntity: follower.faq.map((item: { q: string; a: string }) => ({
+          "@type": "Question",
+          name: item.q,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: item.a,
+          },
+        })),
+      }
+    : null;
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [personSchema, ...(faqSchema ? [faqSchema] : [])],
   };
 
   return (

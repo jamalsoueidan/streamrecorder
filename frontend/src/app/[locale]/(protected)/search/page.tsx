@@ -323,7 +323,7 @@ export default function Page() {
               {t("title")}
             </Title>
           </Group>
-          <Text size="xs" c="dimmed">
+          <Text size="sm" c="dimmed">
             {t("description")}
           </Text>
         </Stack>

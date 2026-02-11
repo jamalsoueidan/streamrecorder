@@ -17,6 +17,20 @@
     "currentPlan": "Current Plan",
     "description": "Your subscription determines what features you have access to."
   },
+  "tiktok": {
+    "title": "TikTok",
+    "description": "Connect your TikTok account to upload clips directly to TikTok.",
+    "connect": "Connect TikTok",
+    "disconnect": "Disconnect",
+    "connected": "Connected",
+    "connectSuccess": "Success",
+    "connectSuccessMessage": "Your TikTok account has been connected",
+    "connectError": "Error",
+    "connectErrorMessage": "Failed to connect TikTok account",
+    "disconnectSuccess": "Disconnected",
+    "disconnectSuccessMessage": "Your TikTok account has been disconnected",
+    "disconnectError": "Error"
+  },
   "dangerZone": {
     "title": "Danger Zone",
     "description": "Once you delete your account, there is no going back. Please be certain.",

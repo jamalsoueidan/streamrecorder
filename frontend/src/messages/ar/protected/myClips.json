@@ -1,0 +1,63 @@
+{
+  "title": "المقاطع",
+  "description": "مقاطع مولدة بالذكاء الاصطناعي من تسجيلاتك",
+  "emptyState": {
+    "title": "لا توجد مقاطع بعد",
+    "description": "ستظهر المقاطع هنا بمجرد إنشائها من تسجيلاتك"
+  },
+  "share": {
+    "tiktok": "نشر على تيك توك",
+    "uploaded": "تم النشر على تيك توك",
+    "processing": "جاري النشر...",
+    "completed": "تم النشر على تيك توك",
+    "shared": "تم النشر",
+    "failed": "فشل",
+    "retry": "إعادة المحاولة",
+    "failedTooltip": "فشل النشر. انقر لإعادة المحاولة.",
+    "check": "تحقق",
+    "checkStatus": "تحقق من حالة تيك توك"
+  },
+  "actions": {
+    "edit": "تعديل الفيديو",
+    "delete": "حذف"
+  },
+  "publishPage": {
+    "title": "نشر على تيك توك",
+    "description": "راجع الفيديو واختر كيف تريد مشاركته على تيك توك",
+    "loadingCreator": "جاري تحميل حساب تيك توك...",
+    "publishingTo": "النشر إلى",
+    "descriptionLabel": "الوصف",
+    "descriptionPlaceholder": "اكتب وصفاً للفيديو...",
+    "privacyLabel": "من يمكنه مشاهدة هذا الفيديو",
+    "privacyPlaceholder": "اختر إعداد الخصوصية",
+    "privacy": {
+      "PUBLIC_TO_EVERYONE": "الجميع",
+      "MUTUAL_FOLLOW_FRIENDS": "الأصدقاء",
+      "FOLLOWER_OF_CREATOR": "المتابعون",
+      "SELF_ONLY": "أنا فقط"
+    },
+    "interactionSettings": "السماح للمستخدمين بـ",
+    "allowComments": "التعليق",
+    "allowDuet": "الديو",
+    "allowStitch": "الستيتش",
+    "disabledByCreator": "معطل في إعدادات تيك توك الخاصة بك",
+    "commercialContent": "الإفصاح عن المحتوى",
+    "commercialContentDescription": "قم بتشغيله للإفصاح عن أن هذا الفيديو يروج لسلع أو خدمات مقابل شيء ذي قيمة. يمكن أن يروج الفيديو لنفسك أو لطرف ثالث أو كليهما.",
+    "brandContentToggle": "علامتك التجارية",
+    "brandContentDescription": "أنت تروج لنفسك أو لعملك الخاص",
+    "brandOrganicToggle": "محتوى برعاية",
+    "brandOrganicDescription": "أنت تروج لعلامة تجارية أخرى أو طرف ثالث",
+    "musicConfirmation": "بالنشر، أنت توافق على تأكيد استخدام الموسيقى من تيك توك",
+    "publishButton": "نشر على تيك توك",
+    "cancel": "إلغاء",
+    "backToClips": "العودة للمقاطع",
+    "success": "جاري النشر",
+    "successMessage": "يتم نشر الفيديو على تيك توك",
+    "error": "خطأ",
+    "errorMessage": "فشل في النشر على تيك توك",
+    "validation": {
+      "privacyRequired": "يرجى اختيار من يمكنه مشاهدة هذا الفيديو",
+      "musicConfirmationRequired": "يجب الموافقة على تأكيد استخدام الموسيقى"
+    }
+  }
+}

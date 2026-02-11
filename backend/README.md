@@ -9,4 +9,6 @@ psql -U postgres -c "CREATE DATABASE strapi;"
 psql -U postgres -d strapi < backup.sql
 ```
 
+# FIRST THING DELETE THE WEBHOOK SO NO TRIGGER FROM LOCALHOST
+
 # test

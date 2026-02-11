@@ -17,6 +17,20 @@
     "currentPlan": "الخطة الحالية",
     "description": "يحدد اشتراكك الميزات التي يمكنك الوصول إليها."
   },
+  "tiktok": {
+    "title": "تيك توك",
+    "description": "اربط حسابك على تيك توك لرفع المقاطع مباشرة.",
+    "connect": "ربط تيك توك",
+    "disconnect": "إلغاء الربط",
+    "connected": "متصل",
+    "connectSuccess": "تم بنجاح",
+    "connectSuccessMessage": "تم ربط حسابك على تيك توك",
+    "connectError": "خطأ",
+    "connectErrorMessage": "فشل ربط حساب تيك توك",
+    "disconnectSuccess": "تم إلغاء الربط",
+    "disconnectSuccessMessage": "تم إلغاء ربط حسابك على تيك توك",
+    "disconnectError": "خطأ"
+  },
   "dangerZone": {
     "title": "منطقة الخطر",
     "description": "بمجرد حذف حسابك، لا يمكن التراجع. يرجى التأكد.",

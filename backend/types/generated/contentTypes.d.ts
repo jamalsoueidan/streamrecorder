@@ -623,6 +623,41 @@ export interface ApiChangeLogChangeLog extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiClipShareClipShare extends Struct.CollectionTypeSchema {
+  collectionName: 'clip_shares';
+  info: {
+    displayName: 'ClipShare';
+    pluralName: 'clip-shares';
+    singularName: 'clip-share';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    clip: Schema.Attribute.Relation<'manyToOne', 'api::clip.clip'>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    data: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::clip-share.clip-share'
+    > &
+      Schema.Attribute.Private;
+    platform: Schema.Attribute.String & Schema.Attribute.Required;
+    publishedAt: Schema.Attribute.DateTime;
+    state: Schema.Attribute.Enumeration<['completed', 'failed', 'processing']>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    user: Schema.Attribute.Relation<
+      'manyToOne',
+      'plugin::users-permissions.user'
+    >;
+  };
+}
+
 export interface ApiClipClip extends Struct.CollectionTypeSchema {
   collectionName: 'clips';
   info: {
@@ -1133,6 +1168,41 @@ export interface ApiSourceSource extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiTiktokTiktok extends Struct.CollectionTypeSchema {
+  collectionName: 'tiktoks';
+  info: {
+    displayName: 'Tiktok';
+    pluralName: 'tiktoks';
+    singularName: 'tiktok';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    accessToken: Schema.Attribute.String & Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    expiresAt: Schema.Attribute.DateTime & Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::tiktok.tiktok'
+    > &
+      Schema.Attribute.Private;
+    openId: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    refreshToken: Schema.Attribute.String & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    user: Schema.Attribute.Relation<
+      'oneToOne',
+      'plugin::users-permissions.user'
+    >;
+  };
+}
+
 export interface PluginContentReleasesRelease
   extends Struct.CollectionTypeSchema {
   collectionName: 'strapi_releases';
@@ -1623,6 +1693,7 @@ export interface PluginUsersPermissionsUser
       'manyToOne',
       'plugin::users-permissions.role'
     >;
+    tiktok: Schema.Attribute.Relation<'oneToOne', 'api::tiktok.tiktok'>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1651,6 +1722,7 @@ declare module '@strapi/strapi' {
       'api::ai-task.ai-task': ApiAiTaskAiTask;
       'api::article.article': ApiArticleArticle;
       'api::change-log.change-log': ApiChangeLogChangeLog;
+      'api::clip-share.clip-share': ApiClipShareClipShare;
       'api::clip.clip': ApiClipClip;
       'api::email-template.email-template': ApiEmailTemplateEmailTemplate;
       'api::follower.follower': ApiFollowerFollower;
@@ -1658,6 +1730,7 @@ declare module '@strapi/strapi' {
       'api::recording.recording': ApiRecordingRecording;
       'api::report.report': ApiReportReport;
       'api::source.source': ApiSourceSource;
+      'api::tiktok.tiktok': ApiTiktokTiktok;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

@@ -368,6 +368,38 @@ export interface Activity {
         id?: string | number;
         documentId?: string;
       }[];
+      tiktok?: {
+        id?: string | number;
+        documentId?: string;
+        openId?: string;
+        accessToken?: string;
+        refreshToken?: string;
+        /** @format date-time */
+        expiresAt?: string;
+        user?: {
+          id?: string | number;
+          documentId?: string;
+        };
+        /** @format date-time */
+        createdAt?: string;
+        /** @format date-time */
+        updatedAt?: string;
+        /** @format date-time */
+        publishedAt?: string;
+        createdBy?: {
+          id?: string | number;
+          documentId?: string;
+        };
+        updatedBy?: {
+          id?: string | number;
+          documentId?: string;
+        };
+        locale?: string;
+        localizations?: {
+          id?: string | number;
+          documentId?: string;
+        }[];
+      };
       /** @format date-time */
       createdAt?: string;
       /** @format date-time */
@@ -799,6 +831,38 @@ export interface AiRequest {
           id?: string | number;
           documentId?: string;
         }[];
+        tiktok?: {
+          id?: string | number;
+          documentId?: string;
+          openId?: string;
+          accessToken?: string;
+          refreshToken?: string;
+          /** @format date-time */
+          expiresAt?: string;
+          user?: {
+            id?: string | number;
+            documentId?: string;
+          };
+          /** @format date-time */
+          createdAt?: string;
+          /** @format date-time */
+          updatedAt?: string;
+          /** @format date-time */
+          publishedAt?: string;
+          createdBy?: {
+            id?: string | number;
+            documentId?: string;
+          };
+          updatedBy?: {
+            id?: string | number;
+            documentId?: string;
+          };
+          locale?: string;
+          localizations?: {
+            id?: string | number;
+            documentId?: string;
+          }[];
+        };
         /** @format date-time */
         createdAt?: string;
         /** @format date-time */
@@ -1345,6 +1409,38 @@ export interface AiTask {
             id?: string | number;
             documentId?: string;
           }[];
+          tiktok?: {
+            id?: string | number;
+            documentId?: string;
+            openId?: string;
+            accessToken?: string;
+            refreshToken?: string;
+            /** @format date-time */
+            expiresAt?: string;
+            user?: {
+              id?: string | number;
+              documentId?: string;
+            };
+            /** @format date-time */
+            createdAt?: string;
+            /** @format date-time */
+            updatedAt?: string;
+            /** @format date-time */
+            publishedAt?: string;
+            createdBy?: {
+              id?: string | number;
+              documentId?: string;
+            };
+            updatedBy?: {
+              id?: string | number;
+              documentId?: string;
+            };
+            locale?: string;
+            localizations?: {
+              id?: string | number;
+              documentId?: string;
+            }[];
+          };
           /** @format date-time */
           createdAt?: string;
           /** @format date-time */
@@ -2217,6 +2313,38 @@ export interface Clip {
         id?: string | number;
         documentId?: string;
       }[];
+      tiktok?: {
+        id?: string | number;
+        documentId?: string;
+        openId?: string;
+        accessToken?: string;
+        refreshToken?: string;
+        /** @format date-time */
+        expiresAt?: string;
+        user?: {
+          id?: string | number;
+          documentId?: string;
+        };
+        /** @format date-time */
+        createdAt?: string;
+        /** @format date-time */
+        updatedAt?: string;
+        /** @format date-time */
+        publishedAt?: string;
+        createdBy?: {
+          id?: string | number;
+          documentId?: string;
+        };
+        updatedBy?: {
+          id?: string | number;
+          documentId?: string;
+        };
+        locale?: string;
+        localizations?: {
+          id?: string | number;
+          documentId?: string;
+        }[];
+      };
       /** @format date-time */
       createdAt?: string;
       /** @format date-time */
@@ -2386,6 +2514,580 @@ export interface Clip {
 
 export interface ClipResponse {
   data?: Clip;
+  meta?: object;
+}
+
+export interface ClipShareRequest {
+  data: {
+    /** @example "string or id" */
+    clip?: number | string;
+    /** @example "string or id" */
+    user?: number | string;
+    platform: string;
+    data?: any;
+    state?: ClipShareRequestStateEnum;
+    locale?: string;
+    localizations?: (number | string)[];
+  };
+}
+
+export interface ClipShareListResponse {
+  data?: ClipShare[];
+  meta?: {
+    pagination?: {
+      page?: number;
+      /** @min 25 */
+      pageSize?: number;
+      /** @max 1 */
+      pageCount?: number;
+      total?: number;
+    };
+  };
+}
+
+export interface ClipShare {
+  id?: string | number;
+  documentId?: string;
+  clip?: {
+    id?: string | number;
+    documentId?: string;
+    title?: string;
+    description?: string;
+    hook_text?: string;
+    transcript?: any;
+    tags?: string;
+    viral_score?: number;
+    thumbnail_timestamp?: string;
+    duration?: number;
+    end?: string;
+    start?: string;
+    path?: string;
+    follower?: {
+      id?: string | number;
+      documentId?: string;
+      nickname?: string;
+      username?: string;
+      type?: ClipShareTypeEnum;
+      gender?: ClipShareGenderEnum;
+      countryCode?: string;
+      languageCode?: string;
+      avatar?: {
+        id?: string | number;
+        documentId?: string;
+        name?: string;
+        alternativeText?: string;
+        caption?: string;
+        width?: number;
+        height?: number;
+        formats?: any;
+        hash?: string;
+        ext?: string;
+        mime?: string;
+        /** @format float */
+        size?: number;
+        url?: string;
+        previewUrl?: string;
+        provider?: string;
+        provider_metadata?: any;
+        related?: {
+          id?: string | number;
+          documentId?: string;
+        }[];
+        folder?: {
+          id?: string | number;
+          documentId?: string;
+          name?: string;
+          pathId?: number;
+          parent?: {
+            id?: string | number;
+            documentId?: string;
+          };
+          children?: {
+            id?: string | number;
+            documentId?: string;
+          }[];
+          files?: {
+            id?: string | number;
+            documentId?: string;
+            name?: string;
+            alternativeText?: string;
+            caption?: string;
+            width?: number;
+            height?: number;
+            formats?: any;
+            hash?: string;
+            ext?: string;
+            mime?: string;
+            /** @format float */
+            size?: number;
+            url?: string;
+            previewUrl?: string;
+            provider?: string;
+            provider_metadata?: any;
+            related?: {
+              id?: string | number;
+              documentId?: string;
+            }[];
+            folder?: {
+              id?: string | number;
+              documentId?: string;
+            };
+            folderPath?: string;
+            /** @format date-time */
+            createdAt?: string;
+            /** @format date-time */
+            updatedAt?: string;
+            /** @format date-time */
+            publishedAt?: string;
+            createdBy?: {
+              id?: string | number;
+              documentId?: string;
+              firstname?: string;
+              lastname?: string;
+              username?: string;
+              /** @format email */
+              email?: string;
+              resetPasswordToken?: string;
+              registrationToken?: string;
+              isActive?: boolean;
+              roles?: {
+                id?: string | number;
+                documentId?: string;
+                name?: string;
+                code?: string;
+                description?: string;
+                users?: {
+                  id?: string | number;
+                  documentId?: string;
+                }[];
+                permissions?: {
+                  id?: string | number;
+                  documentId?: string;
+                  action?: string;
+                  actionParameters?: any;
+                  subject?: string;
+                  properties?: any;
+                  conditions?: any;
+                  role?: {
+                    id?: string | number;
+                    documentId?: string;
+                  };
+                  /** @format date-time */
+                  createdAt?: string;
+                  /** @format date-time */
+                  updatedAt?: string;
+                  /** @format date-time */
+                  publishedAt?: string;
+                  createdBy?: {
+                    id?: string | number;
+                    documentId?: string;
+                  };
+                  updatedBy?: {
+                    id?: string | number;
+                    documentId?: string;
+                  };
+                  locale?: string;
+                  localizations?: {
+                    id?: string | number;
+                    documentId?: string;
+                  }[];
+                }[];
+                /** @format date-time */
+                createdAt?: string;
+                /** @format date-time */
+                updatedAt?: string;
+                /** @format date-time */
+                publishedAt?: string;
+                createdBy?: {
+                  id?: string | number;
+                  documentId?: string;
+                };
+                updatedBy?: {
+                  id?: string | number;
+                  documentId?: string;
+                };
+                locale?: string;
+                localizations?: {
+                  id?: string | number;
+                  documentId?: string;
+                }[];
+              }[];
+              blocked?: boolean;
+              preferedLanguage?: string;
+              /** @format date-time */
+              createdAt?: string;
+              /** @format date-time */
+              updatedAt?: string;
+              /** @format date-time */
+              publishedAt?: string;
+              createdBy?: {
+                id?: string | number;
+                documentId?: string;
+              };
+              updatedBy?: {
+                id?: string | number;
+                documentId?: string;
+              };
+              locale?: string;
+              localizations?: {
+                id?: string | number;
+                documentId?: string;
+              }[];
+            };
+            updatedBy?: {
+              id?: string | number;
+              documentId?: string;
+            };
+            locale?: string;
+            localizations?: {
+              id?: string | number;
+              documentId?: string;
+            }[];
+          }[];
+          path?: string;
+          /** @format date-time */
+          createdAt?: string;
+          /** @format date-time */
+          updatedAt?: string;
+          /** @format date-time */
+          publishedAt?: string;
+          createdBy?: {
+            id?: string | number;
+            documentId?: string;
+          };
+          updatedBy?: {
+            id?: string | number;
+            documentId?: string;
+          };
+          locale?: string;
+          localizations?: {
+            id?: string | number;
+            documentId?: string;
+          }[];
+        };
+        folderPath?: string;
+        /** @format date-time */
+        createdAt?: string;
+        /** @format date-time */
+        updatedAt?: string;
+        /** @format date-time */
+        publishedAt?: string;
+        createdBy?: {
+          id?: string | number;
+          documentId?: string;
+        };
+        updatedBy?: {
+          id?: string | number;
+          documentId?: string;
+        };
+        locale?: string;
+        localizations?: {
+          id?: string | number;
+          documentId?: string;
+        }[];
+      };
+      /** @format date-time */
+      lastCheckedAt?: string;
+      protected?: boolean;
+      pause?: boolean;
+      description?: string;
+      tagline?: string;
+      faq?: any;
+      category?: string;
+      migration?: number;
+      owner?: {
+        id?: string | number;
+        documentId?: string;
+        username?: string;
+        /** @format email */
+        email?: string;
+        provider?: string;
+        resetPasswordToken?: string;
+        confirmationToken?: string;
+        confirmed?: boolean;
+        blocked?: boolean;
+        role?: {
+          id?: string | number;
+          documentId?: string;
+          name?: string;
+          description?: string;
+          type?: string;
+          permissions?: {
+            id?: string | number;
+            documentId?: string;
+            action?: string;
+            role?: {
+              id?: string | number;
+              documentId?: string;
+            };
+            /** @format date-time */
+            createdAt?: string;
+            /** @format date-time */
+            updatedAt?: string;
+            /** @format date-time */
+            publishedAt?: string;
+            createdBy?: {
+              id?: string | number;
+              documentId?: string;
+            };
+            updatedBy?: {
+              id?: string | number;
+              documentId?: string;
+            };
+            locale?: string;
+            localizations?: {
+              id?: string | number;
+              documentId?: string;
+            }[];
+          }[];
+          users?: {
+            id?: string | number;
+            documentId?: string;
+          }[];
+          /** @format date-time */
+          createdAt?: string;
+          /** @format date-time */
+          updatedAt?: string;
+          /** @format date-time */
+          publishedAt?: string;
+          createdBy?: {
+            id?: string | number;
+            documentId?: string;
+          };
+          updatedBy?: {
+            id?: string | number;
+            documentId?: string;
+          };
+          locale?: string;
+          localizations?: {
+            id?: string | number;
+            documentId?: string;
+          }[];
+        };
+        followers?: {
+          id?: string | number;
+          documentId?: string;
+        }[];
+        tiktok?: {
+          id?: string | number;
+          documentId?: string;
+          openId?: string;
+          accessToken?: string;
+          refreshToken?: string;
+          /** @format date-time */
+          expiresAt?: string;
+          user?: {
+            id?: string | number;
+            documentId?: string;
+          };
+          /** @format date-time */
+          createdAt?: string;
+          /** @format date-time */
+          updatedAt?: string;
+          /** @format date-time */
+          publishedAt?: string;
+          createdBy?: {
+            id?: string | number;
+            documentId?: string;
+          };
+          updatedBy?: {
+            id?: string | number;
+            documentId?: string;
+          };
+          locale?: string;
+          localizations?: {
+            id?: string | number;
+            documentId?: string;
+          }[];
+        };
+        /** @format date-time */
+        createdAt?: string;
+        /** @format date-time */
+        updatedAt?: string;
+        /** @format date-time */
+        publishedAt?: string;
+        createdBy?: {
+          id?: string | number;
+          documentId?: string;
+        };
+        updatedBy?: {
+          id?: string | number;
+          documentId?: string;
+        };
+        locale?: string;
+        localizations?: {
+          id?: string | number;
+          documentId?: string;
+        }[];
+      };
+      /** @format date-time */
+      createdAt?: string;
+      /** @format date-time */
+      updatedAt?: string;
+      /** @format date-time */
+      publishedAt?: string;
+      createdBy?: {
+        id?: string | number;
+        documentId?: string;
+      };
+      updatedBy?: {
+        id?: string | number;
+        documentId?: string;
+      };
+      locale?: string;
+      localizations?: {
+        id?: string | number;
+        documentId?: string;
+      }[];
+    };
+    recording?: {
+      id?: string | number;
+      documentId?: string;
+      title?: string;
+      description?: string;
+      follower?: {
+        id?: string | number;
+        documentId?: string;
+      };
+      sources?: {
+        id?: string | number;
+        documentId?: string;
+        state?: ClipShareStateEnum;
+        executionId?: number;
+        /** @format date-time */
+        finishedAt?: string;
+        path?: string;
+        /** @format float */
+        duration?: number;
+        thumbnailInterval?: number;
+        thumbnailCols?: number;
+        videoOriginal?: VideosVideoComponent;
+        videoSmall?: VideosVideoComponent;
+        recording?: {
+          id?: string | number;
+          documentId?: string;
+        };
+        /** @format date-time */
+        createdAt?: string;
+        /** @format date-time */
+        updatedAt?: string;
+        /** @format date-time */
+        publishedAt?: string;
+        createdBy?: {
+          id?: string | number;
+          documentId?: string;
+        };
+        updatedBy?: {
+          id?: string | number;
+          documentId?: string;
+        };
+        locale?: string;
+        localizations?: {
+          id?: string | number;
+          documentId?: string;
+        }[];
+      }[];
+      hidden?: boolean;
+      /** @format date-time */
+      createdAt?: string;
+      /** @format date-time */
+      updatedAt?: string;
+      /** @format date-time */
+      publishedAt?: string;
+      createdBy?: {
+        id?: string | number;
+        documentId?: string;
+      };
+      updatedBy?: {
+        id?: string | number;
+        documentId?: string;
+      };
+      locale?: string;
+      localizations?: {
+        id?: string | number;
+        documentId?: string;
+      }[];
+    };
+    /** @format date-time */
+    createdAt?: string;
+    /** @format date-time */
+    updatedAt?: string;
+    /** @format date-time */
+    publishedAt?: string;
+    createdBy?: {
+      id?: string | number;
+      documentId?: string;
+    };
+    updatedBy?: {
+      id?: string | number;
+      documentId?: string;
+    };
+    locale?: string;
+    localizations?: {
+      id?: string | number;
+      documentId?: string;
+    }[];
+  };
+  user?: {
+    id?: string | number;
+    documentId?: string;
+  };
+  platform: string;
+  data?: any;
+  state?: ClipShareStateEnum1;
+  /** @format date-time */
+  createdAt?: string;
+  /** @format date-time */
+  updatedAt?: string;
+  /** @format date-time */
+  publishedAt?: string;
+  createdBy?: {
+    id?: string | number;
+    documentId?: string;
+  };
+  updatedBy?: {
+    id?: string | number;
+    documentId?: string;
+  };
+  locale?: string;
+  localizations?: {
+    id?: string | number;
+    documentId?: string;
+    clip?: {
+      id?: string | number;
+      documentId?: string;
+    };
+    user?: {
+      id?: string | number;
+      documentId?: string;
+    };
+    platform?: string;
+    data?: any;
+    state?: ClipShareStateEnum2;
+    /** @format date-time */
+    createdAt?: string;
+    /** @format date-time */
+    updatedAt?: string;
+    /** @format date-time */
+    publishedAt?: string;
+    createdBy?: {
+      id?: string | number;
+      documentId?: string;
+    };
+    updatedBy?: {
+      id?: string | number;
+      documentId?: string;
+    };
+    locale?: string;
+    localizations?: {
+      id?: string | number;
+      documentId?: string;
+    }[];
+  }[];
+}
+
+export interface ClipShareResponse {
+  data?: ClipShare;
   meta?: object;
 }
 
@@ -2995,6 +3697,38 @@ export interface Follower {
         documentId?: string;
       }[];
     }[];
+    tiktok?: {
+      id?: string | number;
+      documentId?: string;
+      openId?: string;
+      accessToken?: string;
+      refreshToken?: string;
+      /** @format date-time */
+      expiresAt?: string;
+      user?: {
+        id?: string | number;
+        documentId?: string;
+      };
+      /** @format date-time */
+      createdAt?: string;
+      /** @format date-time */
+      updatedAt?: string;
+      /** @format date-time */
+      publishedAt?: string;
+      createdBy?: {
+        id?: string | number;
+        documentId?: string;
+      };
+      updatedBy?: {
+        id?: string | number;
+        documentId?: string;
+      };
+      locale?: string;
+      localizations?: {
+        id?: string | number;
+        documentId?: string;
+      }[];
+    };
     /** @format date-time */
     createdAt?: string;
     /** @format date-time */
@@ -3397,6 +4131,38 @@ export interface Meme {
           id?: string | number;
           documentId?: string;
         }[];
+        tiktok?: {
+          id?: string | number;
+          documentId?: string;
+          openId?: string;
+          accessToken?: string;
+          refreshToken?: string;
+          /** @format date-time */
+          expiresAt?: string;
+          user?: {
+            id?: string | number;
+            documentId?: string;
+          };
+          /** @format date-time */
+          createdAt?: string;
+          /** @format date-time */
+          updatedAt?: string;
+          /** @format date-time */
+          publishedAt?: string;
+          createdBy?: {
+            id?: string | number;
+            documentId?: string;
+          };
+          updatedBy?: {
+            id?: string | number;
+            documentId?: string;
+          };
+          locale?: string;
+          localizations?: {
+            id?: string | number;
+            documentId?: string;
+          }[];
+        };
         /** @format date-time */
         createdAt?: string;
         /** @format date-time */
@@ -3901,6 +4667,38 @@ export interface Recording {
         id?: string | number;
         documentId?: string;
       }[];
+      tiktok?: {
+        id?: string | number;
+        documentId?: string;
+        openId?: string;
+        accessToken?: string;
+        refreshToken?: string;
+        /** @format date-time */
+        expiresAt?: string;
+        user?: {
+          id?: string | number;
+          documentId?: string;
+        };
+        /** @format date-time */
+        createdAt?: string;
+        /** @format date-time */
+        updatedAt?: string;
+        /** @format date-time */
+        publishedAt?: string;
+        createdBy?: {
+          id?: string | number;
+          documentId?: string;
+        };
+        updatedBy?: {
+          id?: string | number;
+          documentId?: string;
+        };
+        locale?: string;
+        localizations?: {
+          id?: string | number;
+          documentId?: string;
+        }[];
+      };
       /** @format date-time */
       createdAt?: string;
       /** @format date-time */
@@ -4506,6 +5304,38 @@ export interface Source {
           id?: string | number;
           documentId?: string;
         }[];
+        tiktok?: {
+          id?: string | number;
+          documentId?: string;
+          openId?: string;
+          accessToken?: string;
+          refreshToken?: string;
+          /** @format date-time */
+          expiresAt?: string;
+          user?: {
+            id?: string | number;
+            documentId?: string;
+          };
+          /** @format date-time */
+          createdAt?: string;
+          /** @format date-time */
+          updatedAt?: string;
+          /** @format date-time */
+          publishedAt?: string;
+          createdBy?: {
+            id?: string | number;
+            documentId?: string;
+          };
+          updatedBy?: {
+            id?: string | number;
+            documentId?: string;
+          };
+          locale?: string;
+          localizations?: {
+            id?: string | number;
+            documentId?: string;
+          }[];
+        };
         /** @format date-time */
         createdAt?: string;
         /** @format date-time */
@@ -4631,6 +5461,446 @@ export interface SourceResponse {
   meta?: object;
 }
 
+export interface TiktokRequest {
+  data: {
+    openId?: string;
+    accessToken: string;
+    refreshToken: string;
+    /** @format date-time */
+    expiresAt: string;
+    /** @example "string or id" */
+    user?: number | string;
+    locale?: string;
+    localizations?: (number | string)[];
+  };
+}
+
+export interface TiktokListResponse {
+  data?: Tiktok[];
+  meta?: {
+    pagination?: {
+      page?: number;
+      /** @min 25 */
+      pageSize?: number;
+      /** @max 1 */
+      pageCount?: number;
+      total?: number;
+    };
+  };
+}
+
+export interface Tiktok {
+  id?: string | number;
+  documentId?: string;
+  openId?: string;
+  accessToken: string;
+  refreshToken: string;
+  /** @format date-time */
+  expiresAt: string;
+  user?: {
+    id?: string | number;
+    documentId?: string;
+    username?: string;
+    /** @format email */
+    email?: string;
+    provider?: string;
+    resetPasswordToken?: string;
+    confirmationToken?: string;
+    confirmed?: boolean;
+    blocked?: boolean;
+    role?: {
+      id?: string | number;
+      documentId?: string;
+      name?: string;
+      description?: string;
+      type?: string;
+      permissions?: {
+        id?: string | number;
+        documentId?: string;
+        action?: string;
+        role?: {
+          id?: string | number;
+          documentId?: string;
+        };
+        /** @format date-time */
+        createdAt?: string;
+        /** @format date-time */
+        updatedAt?: string;
+        /** @format date-time */
+        publishedAt?: string;
+        createdBy?: {
+          id?: string | number;
+          documentId?: string;
+          firstname?: string;
+          lastname?: string;
+          username?: string;
+          /** @format email */
+          email?: string;
+          resetPasswordToken?: string;
+          registrationToken?: string;
+          isActive?: boolean;
+          roles?: {
+            id?: string | number;
+            documentId?: string;
+            name?: string;
+            code?: string;
+            description?: string;
+            users?: {
+              id?: string | number;
+              documentId?: string;
+            }[];
+            permissions?: {
+              id?: string | number;
+              documentId?: string;
+              action?: string;
+              actionParameters?: any;
+              subject?: string;
+              properties?: any;
+              conditions?: any;
+              role?: {
+                id?: string | number;
+                documentId?: string;
+              };
+              /** @format date-time */
+              createdAt?: string;
+              /** @format date-time */
+              updatedAt?: string;
+              /** @format date-time */
+              publishedAt?: string;
+              createdBy?: {
+                id?: string | number;
+                documentId?: string;
+              };
+              updatedBy?: {
+                id?: string | number;
+                documentId?: string;
+              };
+              locale?: string;
+              localizations?: {
+                id?: string | number;
+                documentId?: string;
+              }[];
+            }[];
+            /** @format date-time */
+            createdAt?: string;
+            /** @format date-time */
+            updatedAt?: string;
+            /** @format date-time */
+            publishedAt?: string;
+            createdBy?: {
+              id?: string | number;
+              documentId?: string;
+            };
+            updatedBy?: {
+              id?: string | number;
+              documentId?: string;
+            };
+            locale?: string;
+            localizations?: {
+              id?: string | number;
+              documentId?: string;
+            }[];
+          }[];
+          blocked?: boolean;
+          preferedLanguage?: string;
+          /** @format date-time */
+          createdAt?: string;
+          /** @format date-time */
+          updatedAt?: string;
+          /** @format date-time */
+          publishedAt?: string;
+          createdBy?: {
+            id?: string | number;
+            documentId?: string;
+          };
+          updatedBy?: {
+            id?: string | number;
+            documentId?: string;
+          };
+          locale?: string;
+          localizations?: {
+            id?: string | number;
+            documentId?: string;
+          }[];
+        };
+        updatedBy?: {
+          id?: string | number;
+          documentId?: string;
+        };
+        locale?: string;
+        localizations?: {
+          id?: string | number;
+          documentId?: string;
+        }[];
+      }[];
+      users?: {
+        id?: string | number;
+        documentId?: string;
+      }[];
+      /** @format date-time */
+      createdAt?: string;
+      /** @format date-time */
+      updatedAt?: string;
+      /** @format date-time */
+      publishedAt?: string;
+      createdBy?: {
+        id?: string | number;
+        documentId?: string;
+      };
+      updatedBy?: {
+        id?: string | number;
+        documentId?: string;
+      };
+      locale?: string;
+      localizations?: {
+        id?: string | number;
+        documentId?: string;
+      }[];
+    };
+    followers?: {
+      id?: string | number;
+      documentId?: string;
+      nickname?: string;
+      username?: string;
+      type?: TiktokTypeEnum;
+      gender?: TiktokGenderEnum;
+      countryCode?: string;
+      languageCode?: string;
+      avatar?: {
+        id?: string | number;
+        documentId?: string;
+        name?: string;
+        alternativeText?: string;
+        caption?: string;
+        width?: number;
+        height?: number;
+        formats?: any;
+        hash?: string;
+        ext?: string;
+        mime?: string;
+        /** @format float */
+        size?: number;
+        url?: string;
+        previewUrl?: string;
+        provider?: string;
+        provider_metadata?: any;
+        related?: {
+          id?: string | number;
+          documentId?: string;
+        }[];
+        folder?: {
+          id?: string | number;
+          documentId?: string;
+          name?: string;
+          pathId?: number;
+          parent?: {
+            id?: string | number;
+            documentId?: string;
+          };
+          children?: {
+            id?: string | number;
+            documentId?: string;
+          }[];
+          files?: {
+            id?: string | number;
+            documentId?: string;
+            name?: string;
+            alternativeText?: string;
+            caption?: string;
+            width?: number;
+            height?: number;
+            formats?: any;
+            hash?: string;
+            ext?: string;
+            mime?: string;
+            /** @format float */
+            size?: number;
+            url?: string;
+            previewUrl?: string;
+            provider?: string;
+            provider_metadata?: any;
+            related?: {
+              id?: string | number;
+              documentId?: string;
+            }[];
+            folder?: {
+              id?: string | number;
+              documentId?: string;
+            };
+            folderPath?: string;
+            /** @format date-time */
+            createdAt?: string;
+            /** @format date-time */
+            updatedAt?: string;
+            /** @format date-time */
+            publishedAt?: string;
+            createdBy?: {
+              id?: string | number;
+              documentId?: string;
+            };
+            updatedBy?: {
+              id?: string | number;
+              documentId?: string;
+            };
+            locale?: string;
+            localizations?: {
+              id?: string | number;
+              documentId?: string;
+            }[];
+          }[];
+          path?: string;
+          /** @format date-time */
+          createdAt?: string;
+          /** @format date-time */
+          updatedAt?: string;
+          /** @format date-time */
+          publishedAt?: string;
+          createdBy?: {
+            id?: string | number;
+            documentId?: string;
+          };
+          updatedBy?: {
+            id?: string | number;
+            documentId?: string;
+          };
+          locale?: string;
+          localizations?: {
+            id?: string | number;
+            documentId?: string;
+          }[];
+        };
+        folderPath?: string;
+        /** @format date-time */
+        createdAt?: string;
+        /** @format date-time */
+        updatedAt?: string;
+        /** @format date-time */
+        publishedAt?: string;
+        createdBy?: {
+          id?: string | number;
+          documentId?: string;
+        };
+        updatedBy?: {
+          id?: string | number;
+          documentId?: string;
+        };
+        locale?: string;
+        localizations?: {
+          id?: string | number;
+          documentId?: string;
+        }[];
+      };
+      /** @format date-time */
+      lastCheckedAt?: string;
+      protected?: boolean;
+      pause?: boolean;
+      description?: string;
+      tagline?: string;
+      faq?: any;
+      category?: string;
+      migration?: number;
+      owner?: {
+        id?: string | number;
+        documentId?: string;
+      };
+      /** @format date-time */
+      createdAt?: string;
+      /** @format date-time */
+      updatedAt?: string;
+      /** @format date-time */
+      publishedAt?: string;
+      createdBy?: {
+        id?: string | number;
+        documentId?: string;
+      };
+      updatedBy?: {
+        id?: string | number;
+        documentId?: string;
+      };
+      locale?: string;
+      localizations?: {
+        id?: string | number;
+        documentId?: string;
+      }[];
+    }[];
+    tiktok?: {
+      id?: string | number;
+      documentId?: string;
+      openId?: string;
+      accessToken?: string;
+      refreshToken?: string;
+      /** @format date-time */
+      expiresAt?: string;
+      user?: {
+        id?: string | number;
+        documentId?: string;
+      };
+      /** @format date-time */
+      createdAt?: string;
+      /** @format date-time */
+      updatedAt?: string;
+      /** @format date-time */
+      publishedAt?: string;
+      createdBy?: {
+        id?: string | number;
+        documentId?: string;
+      };
+      updatedBy?: {
+        id?: string | number;
+        documentId?: string;
+      };
+      locale?: string;
+      localizations?: {
+        id?: string | number;
+        documentId?: string;
+      }[];
+    };
+    /** @format date-time */
+    createdAt?: string;
+    /** @format date-time */
+    updatedAt?: string;
+    /** @format date-time */
+    publishedAt?: string;
+    createdBy?: {
+      id?: string | number;
+      documentId?: string;
+    };
+    updatedBy?: {
+      id?: string | number;
+      documentId?: string;
+    };
+    locale?: string;
+    localizations?: {
+      id?: string | number;
+      documentId?: string;
+    }[];
+  };
+  /** @format date-time */
+  createdAt?: string;
+  /** @format date-time */
+  updatedAt?: string;
+  /** @format date-time */
+  publishedAt?: string;
+  createdBy?: {
+    id?: string | number;
+    documentId?: string;
+  };
+  updatedBy?: {
+    id?: string | number;
+    documentId?: string;
+  };
+  locale?: string;
+  localizations?: {
+    id?: string | number;
+    documentId?: string;
+  }[];
+}
+
+export interface TiktokResponse {
+  data?: Tiktok;
+  meta?: object;
+}
+
 export interface UploadFile {
   id?: number;
   name?: string;
@@ -4714,6 +5984,11 @@ export type UsersPermissionsPermissionsTree = Record<
     >;
   }
 >;
+
+export type ClipWithShare = Clip & {
+  /** User's latest share for this clip */
+  clipShare?: ClipShare | null;
+};
 
 export type FollowerWithMeta = {
   isFollowing?: boolean;
@@ -4892,6 +6167,46 @@ export enum ClipStateEnum {
   Failed = "failed",
 }
 
+export enum ClipShareRequestStateEnum {
+  Completed = "completed",
+  Failed = "failed",
+  Processing = "processing",
+}
+
+export enum ClipShareTypeEnum {
+  Tiktok = "tiktok",
+  Twitch = "twitch",
+  Kick = "kick",
+  Youtube = "youtube",
+  Afreecatv = "afreecatv",
+  Pandalive = "pandalive",
+  Bigo = "bigo",
+}
+
+export enum ClipShareGenderEnum {
+  Male = "male",
+  Female = "female",
+  Unknown = "unknown",
+}
+
+export enum ClipShareStateEnum {
+  Recording = "recording",
+  Done = "done",
+  Failed = "failed",
+}
+
+export enum ClipShareStateEnum1 {
+  Completed = "completed",
+  Failed = "failed",
+  Processing = "processing",
+}
+
+export enum ClipShareStateEnum2 {
+  Completed = "completed",
+  Failed = "failed",
+  Processing = "processing",
+}
+
 export enum FollowerRequestTypeEnum {
   Tiktok = "tiktok",
   Twitch = "twitch",
@@ -4995,6 +6310,22 @@ export enum SourceStateEnum1 {
   Recording = "recording",
   Done = "done",
   Failed = "failed",
+}
+
+export enum TiktokTypeEnum {
+  Tiktok = "tiktok",
+  Twitch = "twitch",
+  Kick = "kick",
+  Youtube = "youtube",
+  Afreecatv = "afreecatv",
+  Pandalive = "pandalive",
+  Bigo = "bigo",
+}
+
+export enum TiktokGenderEnum {
+  Male = "male",
+  Female = "female",
+  Unknown = "unknown",
 }
 
 export interface GetActivitiesParams {
@@ -5273,6 +6604,52 @@ export interface DeleteClipsIdParams {
 /** @format int64 */
 export type DeleteClipsIdData = number;
 
+export interface GetClipSharesParams {
+  /** Sort by attributes ascending (asc) or descending (desc) */
+  sort?: string;
+  /** Return page/pageSize (default: true) */
+  "pagination[withCount]"?: boolean;
+  /** Page number (default: 0) */
+  "pagination[page]"?: number;
+  /** Page size (default: 25) */
+  "pagination[pageSize]"?: number;
+  /** Offset value (default: 0) */
+  "pagination[start]"?: number;
+  /** Number of entities to return (default: 25) */
+  "pagination[limit]"?: number;
+  /** Fields to return (ex: title,author) */
+  fields?: string;
+  /** Relations to return */
+  populate?: string | string[] | object;
+  /** Filters to apply */
+  filters?: Record<string, any>;
+  /** Locale to apply */
+  locale?: string;
+}
+
+export type GetClipSharesData = ClipShareListResponse;
+
+export type PostClipSharesData = ClipShareResponse;
+
+export interface GetClipSharesIdParams {
+  id: string;
+}
+
+export type GetClipSharesIdData = ClipShareResponse;
+
+export interface PutClipSharesIdParams {
+  id: string;
+}
+
+export type PutClipSharesIdData = ClipShareResponse;
+
+export interface DeleteClipSharesIdParams {
+  id: string;
+}
+
+/** @format int64 */
+export type DeleteClipSharesIdData = number;
+
 export interface GetEmailTemplatesParams {
   /** Sort by attributes ascending (asc) or descending (desc) */
   sort?: string;
@@ -5550,6 +6927,52 @@ export interface DeleteSourcesIdParams {
 
 /** @format int64 */
 export type DeleteSourcesIdData = number;
+
+export interface GetTiktoksParams {
+  /** Sort by attributes ascending (asc) or descending (desc) */
+  sort?: string;
+  /** Return page/pageSize (default: true) */
+  "pagination[withCount]"?: boolean;
+  /** Page number (default: 0) */
+  "pagination[page]"?: number;
+  /** Page size (default: 25) */
+  "pagination[pageSize]"?: number;
+  /** Offset value (default: 0) */
+  "pagination[start]"?: number;
+  /** Number of entities to return (default: 25) */
+  "pagination[limit]"?: number;
+  /** Fields to return (ex: title,author) */
+  fields?: string;
+  /** Relations to return */
+  populate?: string | string[] | object;
+  /** Filters to apply */
+  filters?: Record<string, any>;
+  /** Locale to apply */
+  locale?: string;
+}
+
+export type GetTiktoksData = TiktokListResponse;
+
+export type PostTiktoksData = TiktokResponse;
+
+export interface GetTiktoksIdParams {
+  id: string;
+}
+
+export type GetTiktoksIdData = TiktokResponse;
+
+export interface PutTiktoksIdParams {
+  id: string;
+}
+
+export type PutTiktoksIdData = TiktokResponse;
+
+export interface DeleteTiktoksIdParams {
+  id: string;
+}
+
+/** @format int64 */
+export type DeleteTiktoksIdData = number;
 
 /** Upload files */
 export interface UploadCreatePayload {
@@ -5831,6 +7254,85 @@ export interface UpdateUserData {
 export interface DestroyUserData {
   success?: boolean;
 }
+
+export interface MeGetTiktoksData {
+  data?: Tiktok;
+}
+
+export type MePostTiktoksData = TiktokResponse;
+
+export interface MePutTiktoksIdParams {
+  id: string;
+}
+
+export type MePutTiktoksIdData = TiktokResponse;
+
+export interface MeDeleteTiktoksIdParams {
+  id: string;
+}
+
+/** @format int64 */
+export type MeDeleteTiktoksIdData = number;
+
+export interface MeGetClipsParams {
+  /** Sort by attributes ascending (asc) or descending (desc) */
+  sort?: string;
+  /** Return page/pageSize (default: true) */
+  "pagination[withCount]"?: boolean;
+  /** Page number (default: 0) */
+  "pagination[page]"?: number;
+  /** Page size (default: 25) */
+  "pagination[pageSize]"?: number;
+  /** Offset value (default: 0) */
+  "pagination[start]"?: number;
+  /** Number of entities to return (default: 25) */
+  "pagination[limit]"?: number;
+  /** Fields to return (ex: title,author) */
+  fields?: string;
+  /** Relations to return */
+  populate?: string | string[] | object;
+  /** Filters to apply */
+  filters?: Record<string, any>;
+  /** Locale to apply */
+  locale?: string;
+}
+
+export interface MeGetClipsData {
+  data?: ClipWithShare[];
+  meta?: {
+    pagination?: {
+      page?: number;
+      /** @min 25 */
+      pageSize?: number;
+      /** @max 1 */
+      pageCount?: number;
+      total?: number;
+    };
+  };
+}
+
+export interface MeGetClipOneParams {
+  id: string;
+}
+
+export interface MeGetClipOneData {
+  data?: ClipWithShare;
+}
+
+export type MePostClipSharesData = ClipShareResponse;
+
+export interface MeUpdateClipSharesIdParams {
+  id: string;
+}
+
+export type MeUpdateClipSharesIdData = ClipShareResponse;
+
+export interface MeDeleteClipSharesIdParams {
+  id: string;
+}
+
+/** @format int64 */
+export type MeDeleteClipSharesIdData = number;
 
 export interface GetRandomClipsParams {
   /**
@@ -6541,6 +8043,61 @@ export namespace Clip {
   /**
    * No description
    * @tags Clip
+   * @name MeGetClips
+   * @summary Get clips belonging to current user's followers
+   * @request GET:/clips/me
+   * @secure
+   */
+  export namespace MeGetClips {
+    export type RequestParams = {};
+    export type RequestQuery = {
+      /** Sort by attributes ascending (asc) or descending (desc) */
+      sort?: string;
+      /** Return page/pageSize (default: true) */
+      "pagination[withCount]"?: boolean;
+      /** Page number (default: 0) */
+      "pagination[page]"?: number;
+      /** Page size (default: 25) */
+      "pagination[pageSize]"?: number;
+      /** Offset value (default: 0) */
+      "pagination[start]"?: number;
+      /** Number of entities to return (default: 25) */
+      "pagination[limit]"?: number;
+      /** Fields to return (ex: title,author) */
+      fields?: string;
+      /** Relations to return */
+      populate?: string | string[] | object;
+      /** Filters to apply */
+      filters?: Record<string, any>;
+      /** Locale to apply */
+      locale?: string;
+    };
+    export type RequestBody = never;
+    export type RequestHeaders = {};
+    export type ResponseBody = MeGetClipsData;
+  }
+
+  /**
+   * No description
+   * @tags Clip
+   * @name MeGetClipOne
+   * @summary Get a single clip belonging to current user's followers
+   * @request GET:/clips/me/{id}
+   * @secure
+   */
+  export namespace MeGetClipOne {
+    export type RequestParams = {
+      id: string;
+    };
+    export type RequestQuery = {};
+    export type RequestBody = never;
+    export type RequestHeaders = {};
+    export type ResponseBody = MeGetClipOneData;
+  }
+
+  /**
+   * No description
+   * @tags Clip
    * @name GetRandomClips
    * @summary Get random clips (one per user)
    * @request GET:/clips/random
@@ -6558,6 +8115,162 @@ export namespace Clip {
     export type RequestBody = never;
     export type RequestHeaders = {};
     export type ResponseBody = GetRandomClipsData;
+  }
+}
+
+export namespace ClipShare {
+  /**
+   * No description
+   * @tags Clip-share
+   * @name GetClipShares
+   * @request GET:/clip-shares
+   * @secure
+   */
+  export namespace GetClipShares {
+    export type RequestParams = {};
+    export type RequestQuery = {
+      /** Sort by attributes ascending (asc) or descending (desc) */
+      sort?: string;
+      /** Return page/pageSize (default: true) */
+      "pagination[withCount]"?: boolean;
+      /** Page number (default: 0) */
+      "pagination[page]"?: number;
+      /** Page size (default: 25) */
+      "pagination[pageSize]"?: number;
+      /** Offset value (default: 0) */
+      "pagination[start]"?: number;
+      /** Number of entities to return (default: 25) */
+      "pagination[limit]"?: number;
+      /** Fields to return (ex: title,author) */
+      fields?: string;
+      /** Relations to return */
+      populate?: string | string[] | object;
+      /** Filters to apply */
+      filters?: Record<string, any>;
+      /** Locale to apply */
+      locale?: string;
+    };
+    export type RequestBody = never;
+    export type RequestHeaders = {};
+    export type ResponseBody = GetClipSharesData;
+  }
+
+  /**
+   * No description
+   * @tags Clip-share
+   * @name PostClipShares
+   * @request POST:/clip-shares
+   * @secure
+   */
+  export namespace PostClipShares {
+    export type RequestParams = {};
+    export type RequestQuery = {};
+    export type RequestBody = ClipShareRequest;
+    export type RequestHeaders = {};
+    export type ResponseBody = PostClipSharesData;
+  }
+
+  /**
+   * No description
+   * @tags Clip-share
+   * @name GetClipSharesId
+   * @request GET:/clip-shares/{id}
+   * @secure
+   */
+  export namespace GetClipSharesId {
+    export type RequestParams = {
+      id: string;
+    };
+    export type RequestQuery = {};
+    export type RequestBody = never;
+    export type RequestHeaders = {};
+    export type ResponseBody = GetClipSharesIdData;
+  }
+
+  /**
+   * No description
+   * @tags Clip-share
+   * @name PutClipSharesId
+   * @request PUT:/clip-shares/{id}
+   * @secure
+   */
+  export namespace PutClipSharesId {
+    export type RequestParams = {
+      id: string;
+    };
+    export type RequestQuery = {};
+    export type RequestBody = ClipShareRequest;
+    export type RequestHeaders = {};
+    export type ResponseBody = PutClipSharesIdData;
+  }
+
+  /**
+   * No description
+   * @tags Clip-share
+   * @name DeleteClipSharesId
+   * @request DELETE:/clip-shares/{id}
+   * @secure
+   */
+  export namespace DeleteClipSharesId {
+    export type RequestParams = {
+      id: string;
+    };
+    export type RequestQuery = {};
+    export type RequestBody = never;
+    export type RequestHeaders = {};
+    export type ResponseBody = DeleteClipSharesIdData;
+  }
+
+  /**
+   * No description
+   * @tags Clip-share
+   * @name MePostClipShares
+   * @summary Create a clip share for current user
+   * @request POST:/clip-shares/me
+   * @secure
+   */
+  export namespace MePostClipShares {
+    export type RequestParams = {};
+    export type RequestQuery = {};
+    export type RequestBody = ClipShareRequest;
+    export type RequestHeaders = {};
+    export type ResponseBody = MePostClipSharesData;
+  }
+
+  /**
+   * No description
+   * @tags Clip-share
+   * @name MeUpdateClipSharesId
+   * @summary Update current user's clip share
+   * @request PUT:/clip-shares/me/{id}
+   * @secure
+   */
+  export namespace MeUpdateClipSharesId {
+    export type RequestParams = {
+      id: string;
+    };
+    export type RequestQuery = {};
+    export type RequestBody = ClipShareRequest;
+    export type RequestHeaders = {};
+    export type ResponseBody = MeUpdateClipSharesIdData;
+  }
+
+  /**
+   * No description
+   * @tags Clip-share
+   * @name MeDeleteClipSharesId
+   * @summary Delete current user's clip share
+   * @request DELETE:/clip-shares/me/{id}
+   * @secure
+   */
+  export namespace MeDeleteClipSharesId {
+    export type RequestParams = {
+      id: string;
+    };
+    export type RequestQuery = {};
+    export type RequestBody = never;
+    export type RequestHeaders = {};
+    export type ResponseBody = MeDeleteClipSharesIdData;
   }
 }
 
@@ -7335,6 +9048,178 @@ export namespace Source {
     export type RequestBody = never;
     export type RequestHeaders = {};
     export type ResponseBody = DeleteSourcesIdData;
+  }
+}
+
+export namespace Tiktok {
+  /**
+   * No description
+   * @tags Tiktok
+   * @name GetTiktoks
+   * @request GET:/tiktoks
+   * @secure
+   */
+  export namespace GetTiktoks {
+    export type RequestParams = {};
+    export type RequestQuery = {
+      /** Sort by attributes ascending (asc) or descending (desc) */
+      sort?: string;
+      /** Return page/pageSize (default: true) */
+      "pagination[withCount]"?: boolean;
+      /** Page number (default: 0) */
+      "pagination[page]"?: number;
+      /** Page size (default: 25) */
+      "pagination[pageSize]"?: number;
+      /** Offset value (default: 0) */
+      "pagination[start]"?: number;
+      /** Number of entities to return (default: 25) */
+      "pagination[limit]"?: number;
+      /** Fields to return (ex: title,author) */
+      fields?: string;
+      /** Relations to return */
+      populate?: string | string[] | object;
+      /** Filters to apply */
+      filters?: Record<string, any>;
+      /** Locale to apply */
+      locale?: string;
+    };
+    export type RequestBody = never;
+    export type RequestHeaders = {};
+    export type ResponseBody = GetTiktoksData;
+  }
+
+  /**
+   * No description
+   * @tags Tiktok
+   * @name PostTiktoks
+   * @request POST:/tiktoks
+   * @secure
+   */
+  export namespace PostTiktoks {
+    export type RequestParams = {};
+    export type RequestQuery = {};
+    export type RequestBody = TiktokRequest;
+    export type RequestHeaders = {};
+    export type ResponseBody = PostTiktoksData;
+  }
+
+  /**
+   * No description
+   * @tags Tiktok
+   * @name GetTiktoksId
+   * @request GET:/tiktoks/{id}
+   * @secure
+   */
+  export namespace GetTiktoksId {
+    export type RequestParams = {
+      id: string;
+    };
+    export type RequestQuery = {};
+    export type RequestBody = never;
+    export type RequestHeaders = {};
+    export type ResponseBody = GetTiktoksIdData;
+  }
+
+  /**
+   * No description
+   * @tags Tiktok
+   * @name PutTiktoksId
+   * @request PUT:/tiktoks/{id}
+   * @secure
+   */
+  export namespace PutTiktoksId {
+    export type RequestParams = {
+      id: string;
+    };
+    export type RequestQuery = {};
+    export type RequestBody = TiktokRequest;
+    export type RequestHeaders = {};
+    export type ResponseBody = PutTiktoksIdData;
+  }
+
+  /**
+   * No description
+   * @tags Tiktok
+   * @name DeleteTiktoksId
+   * @request DELETE:/tiktoks/{id}
+   * @secure
+   */
+  export namespace DeleteTiktoksId {
+    export type RequestParams = {
+      id: string;
+    };
+    export type RequestQuery = {};
+    export type RequestBody = never;
+    export type RequestHeaders = {};
+    export type ResponseBody = DeleteTiktoksIdData;
+  }
+
+  /**
+   * No description
+   * @tags Tiktok
+   * @name MeGetTiktoks
+   * @summary Get current user's TikTok account
+   * @request GET:/tiktoks/me
+   * @secure
+   */
+  export namespace MeGetTiktoks {
+    export type RequestParams = {};
+    export type RequestQuery = {};
+    export type RequestBody = never;
+    export type RequestHeaders = {};
+    export type ResponseBody = MeGetTiktoksData;
+  }
+
+  /**
+   * No description
+   * @tags Tiktok
+   * @name MePostTiktoks
+   * @summary Create TikTok account for current user (max 1)
+   * @request POST:/tiktoks/me
+   * @secure
+   */
+  export namespace MePostTiktoks {
+    export type RequestParams = {};
+    export type RequestQuery = {};
+    export type RequestBody = TiktokRequest;
+    export type RequestHeaders = {};
+    export type ResponseBody = MePostTiktoksData;
+  }
+
+  /**
+   * No description
+   * @tags Tiktok
+   * @name MePutTiktoksId
+   * @summary Update current user's TikTok account
+   * @request PUT:/tiktoks/me/{id}
+   * @secure
+   */
+  export namespace MePutTiktoksId {
+    export type RequestParams = {
+      id: string;
+    };
+    export type RequestQuery = {};
+    export type RequestBody = TiktokRequest;
+    export type RequestHeaders = {};
+    export type ResponseBody = MePutTiktoksIdData;
+  }
+
+  /**
+   * No description
+   * @tags Tiktok
+   * @name MeDeleteTiktoksId
+   * @summary Delete current user's TikTok account
+   * @request DELETE:/tiktoks/me/{id}
+   * @secure
+   */
+  export namespace MeDeleteTiktoksId {
+    export type RequestParams = {
+      id: string;
+    };
+    export type RequestQuery = {};
+    export type RequestBody = never;
+    export type RequestHeaders = {};
+    export type ResponseBody = MeDeleteTiktoksIdData;
   }
 }
 
@@ -8672,6 +10557,46 @@ export class Api<
      * No description
      *
      * @tags Clip
+     * @name MeGetClips
+     * @summary Get clips belonging to current user's followers
+     * @request GET:/clips/me
+     * @secure
+     */
+    meGetClips: (query: MeGetClipsParams, params: RequestParams = {}) =>
+      this.request<MeGetClipsData, void>({
+        path: `/clips/me`,
+        method: "GET",
+        query: query,
+        secure: true,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Clip
+     * @name MeGetClipOne
+     * @summary Get a single clip belonging to current user's followers
+     * @request GET:/clips/me/{id}
+     * @secure
+     */
+    meGetClipOne: (
+      { id, ...query }: MeGetClipOneParams,
+      params: RequestParams = {},
+    ) =>
+      this.request<MeGetClipOneData, void>({
+        path: `/clips/me/${id}`,
+        method: "GET",
+        secure: true,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Clip
      * @name GetRandomClips
      * @summary Get random clips (one per user)
      * @request GET:/clips/random
@@ -8682,6 +10607,172 @@ export class Api<
         path: `/clips/random`,
         method: "GET",
         query: query,
+        secure: true,
+        format: "json",
+        ...params,
+      }),
+  };
+  clipShare = {
+    /**
+     * No description
+     *
+     * @tags Clip-share
+     * @name GetClipShares
+     * @request GET:/clip-shares
+     * @secure
+     */
+    getClipShares: (query: GetClipSharesParams, params: RequestParams = {}) =>
+      this.request<GetClipSharesData, Error>({
+        path: `/clip-shares`,
+        method: "GET",
+        query: query,
+        secure: true,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Clip-share
+     * @name PostClipShares
+     * @request POST:/clip-shares
+     * @secure
+     */
+    postClipShares: (data: ClipShareRequest, params: RequestParams = {}) =>
+      this.request<PostClipSharesData, Error>({
+        path: `/clip-shares`,
+        method: "POST",
+        body: data,
+        secure: true,
+        type: ContentType.Json,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Clip-share
+     * @name GetClipSharesId
+     * @request GET:/clip-shares/{id}
+     * @secure
+     */
+    getClipSharesId: (
+      { id, ...query }: GetClipSharesIdParams,
+      params: RequestParams = {},
+    ) =>
+      this.request<GetClipSharesIdData, Error>({
+        path: `/clip-shares/${id}`,
+        method: "GET",
+        secure: true,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Clip-share
+     * @name PutClipSharesId
+     * @request PUT:/clip-shares/{id}
+     * @secure
+     */
+    putClipSharesId: (
+      { id, ...query }: PutClipSharesIdParams,
+      data: ClipShareRequest,
+      params: RequestParams = {},
+    ) =>
+      this.request<PutClipSharesIdData, Error>({
+        path: `/clip-shares/${id}`,
+        method: "PUT",
+        body: data,
+        secure: true,
+        type: ContentType.Json,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Clip-share
+     * @name DeleteClipSharesId
+     * @request DELETE:/clip-shares/{id}
+     * @secure
+     */
+    deleteClipSharesId: (
+      { id, ...query }: DeleteClipSharesIdParams,
+      params: RequestParams = {},
+    ) =>
+      this.request<DeleteClipSharesIdData, Error>({
+        path: `/clip-shares/${id}`,
+        method: "DELETE",
+        secure: true,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Clip-share
+     * @name MePostClipShares
+     * @summary Create a clip share for current user
+     * @request POST:/clip-shares/me
+     * @secure
+     */
+    mePostClipShares: (data: ClipShareRequest, params: RequestParams = {}) =>
+      this.request<MePostClipSharesData, Error | void>({
+        path: `/clip-shares/me`,
+        method: "POST",
+        body: data,
+        secure: true,
+        type: ContentType.Json,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Clip-share
+     * @name MeUpdateClipSharesId
+     * @summary Update current user's clip share
+     * @request PUT:/clip-shares/me/{id}
+     * @secure
+     */
+    meUpdateClipSharesId: (
+      { id, ...query }: MeUpdateClipSharesIdParams,
+      data: ClipShareRequest,
+      params: RequestParams = {},
+    ) =>
+      this.request<MeUpdateClipSharesIdData, Error | void>({
+        path: `/clip-shares/me/${id}`,
+        method: "PUT",
+        body: data,
+        secure: true,
+        type: ContentType.Json,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Clip-share
+     * @name MeDeleteClipSharesId
+     * @summary Delete current user's clip share
+     * @request DELETE:/clip-shares/me/{id}
+     * @secure
+     */
+    meDeleteClipSharesId: (
+      { id, ...query }: MeDeleteClipSharesIdParams,
+      params: RequestParams = {},
+    ) =>
+      this.request<MeDeleteClipSharesIdData, Error | void>({
+        path: `/clip-shares/me/${id}`,
+        method: "DELETE",
         secure: true,
         format: "json",
         ...params,
@@ -9424,6 +11515,190 @@ export class Api<
     ) =>
       this.request<DeleteSourcesIdData, Error>({
         path: `/sources/${id}`,
+        method: "DELETE",
+        secure: true,
+        format: "json",
+        ...params,
+      }),
+  };
+  tiktok = {
+    /**
+     * No description
+     *
+     * @tags Tiktok
+     * @name GetTiktoks
+     * @request GET:/tiktoks
+     * @secure
+     */
+    getTiktoks: (query: GetTiktoksParams, params: RequestParams = {}) =>
+      this.request<GetTiktoksData, Error>({
+        path: `/tiktoks`,
+        method: "GET",
+        query: query,
+        secure: true,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Tiktok
+     * @name PostTiktoks
+     * @request POST:/tiktoks
+     * @secure
+     */
+    postTiktoks: (data: TiktokRequest, params: RequestParams = {}) =>
+      this.request<PostTiktoksData, Error>({
+        path: `/tiktoks`,
+        method: "POST",
+        body: data,
+        secure: true,
+        type: ContentType.Json,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Tiktok
+     * @name GetTiktoksId
+     * @request GET:/tiktoks/{id}
+     * @secure
+     */
+    getTiktoksId: (
+      { id, ...query }: GetTiktoksIdParams,
+      params: RequestParams = {},
+    ) =>
+      this.request<GetTiktoksIdData, Error>({
+        path: `/tiktoks/${id}`,
+        method: "GET",
+        secure: true,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Tiktok
+     * @name PutTiktoksId
+     * @request PUT:/tiktoks/{id}
+     * @secure
+     */
+    putTiktoksId: (
+      { id, ...query }: PutTiktoksIdParams,
+      data: TiktokRequest,
+      params: RequestParams = {},
+    ) =>
+      this.request<PutTiktoksIdData, Error>({
+        path: `/tiktoks/${id}`,
+        method: "PUT",
+        body: data,
+        secure: true,
+        type: ContentType.Json,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Tiktok
+     * @name DeleteTiktoksId
+     * @request DELETE:/tiktoks/{id}
+     * @secure
+     */
+    deleteTiktoksId: (
+      { id, ...query }: DeleteTiktoksIdParams,
+      params: RequestParams = {},
+    ) =>
+      this.request<DeleteTiktoksIdData, Error>({
+        path: `/tiktoks/${id}`,
+        method: "DELETE",
+        secure: true,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Tiktok
+     * @name MeGetTiktoks
+     * @summary Get current user's TikTok account
+     * @request GET:/tiktoks/me
+     * @secure
+     */
+    meGetTiktoks: (params: RequestParams = {}) =>
+      this.request<MeGetTiktoksData, void>({
+        path: `/tiktoks/me`,
+        method: "GET",
+        secure: true,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Tiktok
+     * @name MePostTiktoks
+     * @summary Create TikTok account for current user (max 1)
+     * @request POST:/tiktoks/me
+     * @secure
+     */
+    mePostTiktoks: (data: TiktokRequest, params: RequestParams = {}) =>
+      this.request<MePostTiktoksData, void | Error>({
+        path: `/tiktoks/me`,
+        method: "POST",
+        body: data,
+        secure: true,
+        type: ContentType.Json,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Tiktok
+     * @name MePutTiktoksId
+     * @summary Update current user's TikTok account
+     * @request PUT:/tiktoks/me/{id}
+     * @secure
+     */
+    mePutTiktoksId: (
+      { id, ...query }: MePutTiktoksIdParams,
+      data: TiktokRequest,
+      params: RequestParams = {},
+    ) =>
+      this.request<MePutTiktoksIdData, Error | void>({
+        path: `/tiktoks/me/${id}`,
+        method: "PUT",
+        body: data,
+        secure: true,
+        type: ContentType.Json,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Tiktok
+     * @name MeDeleteTiktoksId
+     * @summary Delete current user's TikTok account
+     * @request DELETE:/tiktoks/me/{id}
+     * @secure
+     */
+    meDeleteTiktoksId: (
+      { id, ...query }: MeDeleteTiktoksIdParams,
+      params: RequestParams = {},
+    ) =>
+      this.request<MeDeleteTiktoksIdData, Error | void>({
+        path: `/tiktoks/me/${id}`,
         method: "DELETE",
         secure: true,
         format: "json",
