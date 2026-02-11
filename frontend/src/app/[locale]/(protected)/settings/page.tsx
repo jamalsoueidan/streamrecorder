@@ -23,7 +23,7 @@ export default function SettingsPage() {
               {t("title")}
             </Title>
           </Flex>
-          <Text size="xs" c="dimmed">
+          <Text size="sm" c="dimmed">
             {t("description")}
           </Text>
         </Stack>
@@ -34,7 +34,7 @@ export default function SettingsPage() {
       <SimpleGrid cols={{ sm: 1, md: 2 }}>
         <ProfileCard />
         <SubscriptionCard />
-        <TikTokCard />
+        {user?.role?.type === "admin" && <TikTokCard />}
         {user?.role?.type !== "admin" && <DangerZoneCard />}
       </SimpleGrid>
     </Stack>

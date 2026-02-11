@@ -33,7 +33,7 @@ export async function GET(request: NextRequest) {
   try {
     const clientKey = process.env.TIKTOK_CLIENT_KEY;
     const clientSecret = process.env.TIKTOK_CLIENT_SECRET;
-    const redirectUri = `${baseUrl}/authorized/tiktok`;
+    const redirectUri = `${baseUrl}/callback/tiktok`;
 
     // Get code verifier from cookie
     const cookieStore = await cookies();
@@ -66,7 +66,9 @@ export async function GET(request: NextRequest) {
 
     if (data.error) {
       console.error("TikTok token exchange failed:", data.error_description);
-      const response = NextResponse.redirect(`${baseUrl}/settings?tiktok=error`);
+      const response = NextResponse.redirect(
+        `${baseUrl}/settings?tiktok=error`,
+      );
       response.cookies.delete(PKCE_COOKIE);
       return response;
     }
@@ -77,7 +79,7 @@ export async function GET(request: NextRequest) {
     ).toISOString();
 
     // Save to backend
-    await api.tiktok.postTiktoks({
+    await api.tiktok.mePostTiktoks({
       data: {
         openId: data.open_id,
         accessToken: data.access_token,
@@ -86,7 +88,9 @@ export async function GET(request: NextRequest) {
       },
     });
 
-    const response = NextResponse.redirect(`${baseUrl}/settings?tiktok=connected`);
+    const response = NextResponse.redirect(
+      `${baseUrl}/settings?tiktok=connected`,
+    );
     response.cookies.delete(PKCE_COOKIE);
     return response;
   } catch (error) {

@@ -7255,11 +7255,26 @@ export interface DestroyUserData {
   success?: boolean;
 }
 
-export interface GetTiktokMeData {
+export interface MeGetTiktoksData {
   data?: Tiktok;
 }
 
-export interface GetClipsMeParams {
+export type MePostTiktoksData = TiktokResponse;
+
+export interface MeUpdateTiktoksIdParams {
+  id: string;
+}
+
+export type MeUpdateTiktoksIdData = TiktokResponse;
+
+export interface MeDeleteTiktoksIdParams {
+  id: string;
+}
+
+/** @format int64 */
+export type MeDeleteTiktoksIdData = number;
+
+export interface MeGetClipsParams {
   /** Sort by attributes ascending (asc) or descending (desc) */
   sort?: string;
   /** Return page/pageSize (default: true) */
@@ -7282,7 +7297,7 @@ export interface GetClipsMeParams {
   locale?: string;
 }
 
-export interface GetClipsMeData {
+export interface MeGetClipsData {
   data?: ClipWithShare[];
   meta?: {
     pagination?: {
@@ -7295,6 +7310,29 @@ export interface GetClipsMeData {
     };
   };
 }
+
+export interface MeGetClipOneParams {
+  id: string;
+}
+
+export interface MeGetClipOneData {
+  data?: ClipWithShare;
+}
+
+export type MePostClipSharesData = ClipShareResponse;
+
+export interface MeUpdateClipSharesIdParams {
+  id: string;
+}
+
+export type MeUpdateClipSharesIdData = ClipShareResponse;
+
+export interface MeDeleteClipSharesIdParams {
+  id: string;
+}
+
+/** @format int64 */
+export type MeDeleteClipSharesIdData = number;
 
 export interface GetRandomClipsParams {
   /**
@@ -8005,12 +8043,12 @@ export namespace Clip {
   /**
    * No description
    * @tags Clip
-   * @name GetClipsMe
+   * @name MeGetClips
    * @summary Get clips belonging to current user's followers
    * @request GET:/clips/me
    * @secure
    */
-  export namespace GetClipsMe {
+  export namespace MeGetClips {
     export type RequestParams = {};
     export type RequestQuery = {
       /** Sort by attributes ascending (asc) or descending (desc) */
@@ -8036,7 +8074,25 @@ export namespace Clip {
     };
     export type RequestBody = never;
     export type RequestHeaders = {};
-    export type ResponseBody = GetClipsMeData;
+    export type ResponseBody = MeGetClipsData;
+  }
+
+  /**
+   * No description
+   * @tags Clip
+   * @name MeGetClipOne
+   * @summary Get a single clip belonging to current user's followers
+   * @request GET:/clips/me/{id}
+   * @secure
+   */
+  export namespace MeGetClipOne {
+    export type RequestParams = {
+      id: string;
+    };
+    export type RequestQuery = {};
+    export type RequestBody = never;
+    export type RequestHeaders = {};
+    export type ResponseBody = MeGetClipOneData;
   }
 
   /**
@@ -8163,6 +8219,58 @@ export namespace ClipShare {
     export type RequestBody = never;
     export type RequestHeaders = {};
     export type ResponseBody = DeleteClipSharesIdData;
+  }
+
+  /**
+   * No description
+   * @tags Clip-share
+   * @name MePostClipShares
+   * @summary Create a clip share for current user
+   * @request POST:/clip-shares/me
+   * @secure
+   */
+  export namespace MePostClipShares {
+    export type RequestParams = {};
+    export type RequestQuery = {};
+    export type RequestBody = ClipShareRequest;
+    export type RequestHeaders = {};
+    export type ResponseBody = MePostClipSharesData;
+  }
+
+  /**
+   * No description
+   * @tags Clip-share
+   * @name MeUpdateClipSharesId
+   * @summary Update current user's clip share
+   * @request PUT:/clip-shares/me/{id}
+   * @secure
+   */
+  export namespace MeUpdateClipSharesId {
+    export type RequestParams = {
+      id: string;
+    };
+    export type RequestQuery = {};
+    export type RequestBody = ClipShareRequest;
+    export type RequestHeaders = {};
+    export type ResponseBody = MeUpdateClipSharesIdData;
+  }
+
+  /**
+   * No description
+   * @tags Clip-share
+   * @name MeDeleteClipSharesId
+   * @summary Delete current user's clip share
+   * @request DELETE:/clip-shares/me/{id}
+   * @secure
+   */
+  export namespace MeDeleteClipSharesId {
+    export type RequestParams = {
+      id: string;
+    };
+    export type RequestQuery = {};
+    export type RequestBody = never;
+    export type RequestHeaders = {};
+    export type ResponseBody = MeDeleteClipSharesIdData;
   }
 }
 
@@ -9049,17 +9157,69 @@ export namespace Tiktok {
   /**
    * No description
    * @tags Tiktok
-   * @name GetTiktokMe
+   * @name MeGetTiktoks
    * @summary Get current user's TikTok account
    * @request GET:/tiktoks/me
    * @secure
    */
-  export namespace GetTiktokMe {
+  export namespace MeGetTiktoks {
     export type RequestParams = {};
     export type RequestQuery = {};
     export type RequestBody = never;
     export type RequestHeaders = {};
-    export type ResponseBody = GetTiktokMeData;
+    export type ResponseBody = MeGetTiktoksData;
+  }
+
+  /**
+   * No description
+   * @tags Tiktok
+   * @name MePostTiktoks
+   * @summary Create TikTok account for current user (max 1)
+   * @request POST:/tiktoks/me
+   * @secure
+   */
+  export namespace MePostTiktoks {
+    export type RequestParams = {};
+    export type RequestQuery = {};
+    export type RequestBody = TiktokRequest;
+    export type RequestHeaders = {};
+    export type ResponseBody = MePostTiktoksData;
+  }
+
+  /**
+   * No description
+   * @tags Tiktok
+   * @name MeUpdateTiktoksId
+   * @summary Update current user's TikTok account
+   * @request PUT:/tiktoks/me/{id}
+   * @secure
+   */
+  export namespace MeUpdateTiktoksId {
+    export type RequestParams = {
+      id: string;
+    };
+    export type RequestQuery = {};
+    export type RequestBody = TiktokRequest;
+    export type RequestHeaders = {};
+    export type ResponseBody = MeUpdateTiktoksIdData;
+  }
+
+  /**
+   * No description
+   * @tags Tiktok
+   * @name MeDeleteTiktoksId
+   * @summary Delete current user's TikTok account
+   * @request DELETE:/tiktoks/me/{id}
+   * @secure
+   */
+  export namespace MeDeleteTiktoksId {
+    export type RequestParams = {
+      id: string;
+    };
+    export type RequestQuery = {};
+    export type RequestBody = never;
+    export type RequestHeaders = {};
+    export type ResponseBody = MeDeleteTiktoksIdData;
   }
 }
 
@@ -10397,16 +10557,37 @@ export class Api<
      * No description
      *
      * @tags Clip
-     * @name GetClipsMe
+     * @name MeGetClips
      * @summary Get clips belonging to current user's followers
      * @request GET:/clips/me
      * @secure
      */
-    getClipsMe: (query: GetClipsMeParams, params: RequestParams = {}) =>
-      this.request<GetClipsMeData, void>({
+    meGetClips: (query: MeGetClipsParams, params: RequestParams = {}) =>
+      this.request<MeGetClipsData, void>({
         path: `/clips/me`,
         method: "GET",
         query: query,
+        secure: true,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Clip
+     * @name MeGetClipOne
+     * @summary Get a single clip belonging to current user's followers
+     * @request GET:/clips/me/{id}
+     * @secure
+     */
+    meGetClipOne: (
+      { id, ...query }: MeGetClipOneParams,
+      params: RequestParams = {},
+    ) =>
+      this.request<MeGetClipOneData, void>({
+        path: `/clips/me/${id}`,
+        method: "GET",
         secure: true,
         format: "json",
         ...params,
@@ -10526,6 +10707,71 @@ export class Api<
     ) =>
       this.request<DeleteClipSharesIdData, Error>({
         path: `/clip-shares/${id}`,
+        method: "DELETE",
+        secure: true,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Clip-share
+     * @name MePostClipShares
+     * @summary Create a clip share for current user
+     * @request POST:/clip-shares/me
+     * @secure
+     */
+    mePostClipShares: (data: ClipShareRequest, params: RequestParams = {}) =>
+      this.request<MePostClipSharesData, Error | void>({
+        path: `/clip-shares/me`,
+        method: "POST",
+        body: data,
+        secure: true,
+        type: ContentType.Json,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Clip-share
+     * @name MeUpdateClipSharesId
+     * @summary Update current user's clip share
+     * @request PUT:/clip-shares/me/{id}
+     * @secure
+     */
+    meUpdateClipSharesId: (
+      { id, ...query }: MeUpdateClipSharesIdParams,
+      data: ClipShareRequest,
+      params: RequestParams = {},
+    ) =>
+      this.request<MeUpdateClipSharesIdData, Error | void>({
+        path: `/clip-shares/me/${id}`,
+        method: "PUT",
+        body: data,
+        secure: true,
+        type: ContentType.Json,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Clip-share
+     * @name MeDeleteClipSharesId
+     * @summary Delete current user's clip share
+     * @request DELETE:/clip-shares/me/{id}
+     * @secure
+     */
+    meDeleteClipSharesId: (
+      { id, ...query }: MeDeleteClipSharesIdParams,
+      params: RequestParams = {},
+    ) =>
+      this.request<MeDeleteClipSharesIdData, Error | void>({
+        path: `/clip-shares/me/${id}`,
         method: "DELETE",
         secure: true,
         format: "json",
@@ -11380,15 +11626,80 @@ export class Api<
      * No description
      *
      * @tags Tiktok
-     * @name GetTiktokMe
+     * @name MeGetTiktoks
      * @summary Get current user's TikTok account
      * @request GET:/tiktoks/me
      * @secure
      */
-    getTiktokMe: (params: RequestParams = {}) =>
-      this.request<GetTiktokMeData, void>({
+    meGetTiktoks: (params: RequestParams = {}) =>
+      this.request<MeGetTiktoksData, void>({
         path: `/tiktoks/me`,
         method: "GET",
+        secure: true,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Tiktok
+     * @name MePostTiktoks
+     * @summary Create TikTok account for current user (max 1)
+     * @request POST:/tiktoks/me
+     * @secure
+     */
+    mePostTiktoks: (data: TiktokRequest, params: RequestParams = {}) =>
+      this.request<MePostTiktoksData, void | Error>({
+        path: `/tiktoks/me`,
+        method: "POST",
+        body: data,
+        secure: true,
+        type: ContentType.Json,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Tiktok
+     * @name MeUpdateTiktoksId
+     * @summary Update current user's TikTok account
+     * @request PUT:/tiktoks/me/{id}
+     * @secure
+     */
+    meUpdateTiktoksId: (
+      { id, ...query }: MeUpdateTiktoksIdParams,
+      data: TiktokRequest,
+      params: RequestParams = {},
+    ) =>
+      this.request<MeUpdateTiktoksIdData, Error | void>({
+        path: `/tiktoks/me/${id}`,
+        method: "PUT",
+        body: data,
+        secure: true,
+        type: ContentType.Json,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Tiktok
+     * @name MeDeleteTiktoksId
+     * @summary Delete current user's TikTok account
+     * @request DELETE:/tiktoks/me/{id}
+     * @secure
+     */
+    meDeleteTiktoksId: (
+      { id, ...query }: MeDeleteTiktoksIdParams,
+      params: RequestParams = {},
+    ) =>
+      this.request<MeDeleteTiktoksIdData, Error | void>({
+        path: `/tiktoks/me/${id}`,
+        method: "DELETE",
         secure: true,
         format: "json",
         ...params,

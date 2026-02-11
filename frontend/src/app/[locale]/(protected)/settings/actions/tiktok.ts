@@ -23,7 +23,7 @@ function generateCodeChallenge(verifier: string): string {
 
 export async function getTikTokAuthUrl(): Promise<string> {
   const clientKey = process.env.TIKTOK_CLIENT_KEY;
-  const redirectUri = `${process.env.NEXT_PUBLIC_BASE_URL}/authorized/tiktok`;
+  const redirectUri = `${process.env.NEXT_PUBLIC_BASE_URL}/callback/tiktok`;
   const state = crypto.randomBytes(16).toString("hex");
   const scope = "user.info.basic,video.publish,video.upload";
 
@@ -45,7 +45,7 @@ export async function getTikTokAuthUrl(): Promise<string> {
 
 export async function getTikTokConnection() {
   try {
-    const response = await api.tiktok.getTiktokMe();
+    const response = await api.tiktok.meGetTiktoks();
     return response.data?.data || null;
   } catch {
     return null;
@@ -54,7 +54,7 @@ export async function getTikTokConnection() {
 
 export async function disconnectTikTok(id: string): Promise<ActionResult> {
   try {
-    await api.tiktok.deleteTiktoksId({ id });
+    await api.tiktok.meDeleteTiktoksId({ id });
     return { success: true };
   } catch (error) {
     console.error("Error disconnecting TikTok:", error);

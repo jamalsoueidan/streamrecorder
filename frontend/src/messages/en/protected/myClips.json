@@ -4,5 +4,60 @@
   "emptyState": {
     "title": "No clips yet",
     "description": "Clips will appear here once they are generated from your recordings"
+  },
+  "share": {
+    "tiktok": "Publish to TikTok",
+    "uploaded": "Published to TikTok",
+    "processing": "Publishing...",
+    "completed": "Published on TikTok",
+    "shared": "Published",
+    "failed": "Failed",
+    "retry": "Retry",
+    "failedTooltip": "Publish failed. Click to retry.",
+    "check": "Check",
+    "checkStatus": "Check TikTok status"
+  },
+  "actions": {
+    "edit": "Edit video",
+    "delete": "Delete"
+  },
+  "publishPage": {
+    "title": "Publish to TikTok",
+    "description": "Review your video and choose how you want to share it on TikTok",
+    "loadingCreator": "Loading your TikTok account...",
+    "publishingTo": "Publishing to",
+    "descriptionLabel": "Description",
+    "descriptionPlaceholder": "Write a description for your video...",
+    "privacyLabel": "Who can view this video",
+    "privacyPlaceholder": "Select privacy setting",
+    "privacy": {
+      "PUBLIC_TO_EVERYONE": "Everyone",
+      "MUTUAL_FOLLOW_FRIENDS": "Friends",
+      "FOLLOWER_OF_CREATOR": "Followers",
+      "SELF_ONLY": "Only me"
+    },
+    "interactionSettings": "Allow users to",
+    "allowComments": "Comment",
+    "allowDuet": "Duet",
+    "allowStitch": "Stitch",
+    "disabledByCreator": "Disabled in your TikTok settings",
+    "commercialContent": "Content disclosure",
+    "commercialContentDescription": "Turn on to disclose that this video promotes goods or services in exchange for something of value. Your video could promote yourself, a third party, or both.",
+    "brandContentToggle": "Your brand",
+    "brandContentDescription": "You are promoting yourself or your own business",
+    "brandOrganicToggle": "Branded content",
+    "brandOrganicDescription": "You are promoting another brand or a third party",
+    "musicConfirmation": "By posting, you agree to TikTok's Music Usage Confirmation",
+    "publishButton": "Publish to TikTok",
+    "cancel": "Cancel",
+    "backToClips": "Back to Clips",
+    "success": "Publishing",
+    "successMessage": "Your video is being published to TikTok",
+    "error": "Error",
+    "errorMessage": "Failed to publish to TikTok",
+    "validation": {
+      "privacyRequired": "Please select who can view this video",
+      "musicConfirmationRequired": "You must agree to the Music Usage Confirmation"
+    }
   }
 }
