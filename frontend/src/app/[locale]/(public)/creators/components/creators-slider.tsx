@@ -42,6 +42,7 @@ export function CreatorsSlider({
                           width={72}
                           height={72}
                           quality={75}
+                          loading="lazy"
                         />
                       ) : null}
                     </Avatar>
