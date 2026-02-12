@@ -23,7 +23,13 @@ export async function GET(
 
   const colors = platformColors[type?.toLowerCase()] || platformColors.default;
   const displayName = follower?.nickname || username.replace("@", "");
-  const avatarUrl = follower?.avatar?.url;
+  const rawAvatarUrl = follower?.avatar?.url;
+  // OG image generator only supports png, jpg, jpeg, gif
+  const supportedFormats = [".png", ".jpg", ".jpeg", ".gif"];
+  const isSupported = supportedFormats.some((ext) =>
+    rawAvatarUrl?.toLowerCase().endsWith(ext)
+  );
+  const avatarUrl = isSupported ? rawAvatarUrl : null;
 
   return new ImageResponse(
     <div

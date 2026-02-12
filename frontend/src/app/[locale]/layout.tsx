@@ -1,6 +1,5 @@
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
-import { UpdateBanner } from "../components/update-banner";
 
 export default async function LocaleLayout({
   children,
@@ -16,7 +15,6 @@ export default async function LocaleLayout({
 
   return (
     <NextIntlClientProvider messages={messages}>
-      <UpdateBanner />
       {children}
     </NextIntlClientProvider>
   );
