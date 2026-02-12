@@ -44,6 +44,7 @@ function ClipCard({ clip, isActive }: ClipCardProps) {
   const [isMuted, setIsMuted] = useState(false);
   const [progress, setProgress] = useState(0);
   const [showSubtitles, setShowSubtitles] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
 
   // Control play/pause based on isActive
   useEffect(() => {
@@ -54,10 +55,11 @@ function ClipCard({ clip, isActive }: ClipCardProps) {
     } else {
       videoRef.current.pause();
       videoRef.current.currentTime = 0;
+      setIsLoading(true);
     }
   }, [isActive]);
 
-  // Listen to video events to track playing state and progress
+  // Listen to video events to track playing state, progress, and loading
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
@@ -69,15 +71,24 @@ function ClipCard({ clip, isActive }: ClipCardProps) {
         setProgress((video.currentTime / video.duration) * 100);
       }
     };
+    const onWaiting = () => setIsLoading(true);
+    const onCanPlay = () => setIsLoading(false);
+    const onPlaying = () => setIsLoading(false);
 
     video.addEventListener("play", onPlay);
     video.addEventListener("pause", onPause);
     video.addEventListener("timeupdate", onTimeUpdate);
+    video.addEventListener("waiting", onWaiting);
+    video.addEventListener("canplay", onCanPlay);
+    video.addEventListener("playing", onPlaying);
 
     return () => {
       video.removeEventListener("play", onPlay);
       video.removeEventListener("pause", onPause);
       video.removeEventListener("timeupdate", onTimeUpdate);
+      video.removeEventListener("waiting", onWaiting);
+      video.removeEventListener("canplay", onCanPlay);
+      video.removeEventListener("playing", onPlaying);
     };
   }, []);
 
@@ -143,6 +154,7 @@ function ClipCard({ clip, isActive }: ClipCardProps) {
         <video
           ref={videoRef}
           src={`/clip/${clip.documentId}/clip.mp4`}
+          poster={`/clip/${clip.documentId}/thumbnail.jpg`}
           loop
           muted={isMuted}
           playsInline
@@ -161,6 +173,20 @@ function ClipCard({ clip, isActive }: ClipCardProps) {
             default
           />
         </video>
+
+        {/* Loading indicator */}
+        {isActive && isLoading && (
+          <Center
+            pos="absolute"
+            top={0}
+            left={0}
+            right={0}
+            bottom={0}
+            style={{ pointerEvents: "none" }}
+          >
+            <Loader color="white" size="lg" />
+          </Center>
+        )}
       </Card>
 
       {/* Play/Pause overlay */}
@@ -172,7 +198,7 @@ function ClipCard({ clip, isActive }: ClipCardProps) {
         bottom={0}
         c="rgba(255,255,255,0.9)"
         style={{
-          opacity: isPlaying ? 0 : 1,
+          opacity: isPlaying || isLoading ? 0 : 1,
           transition: "opacity 0.2s",
           pointerEvents: "none",
         }}
