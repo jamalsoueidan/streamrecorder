@@ -133,7 +133,7 @@ export async function fetchRecordingWithContext(
         filters: {
           documentId: { $eq: targetDocumentId },
         },
-        locale,
+        //locale,
       }),
     );
 
@@ -162,7 +162,7 @@ export async function fetchRecordingWithContext(
       },
       "pagination[page]": 1,
       "pagination[pageSize]": 1,
-      locale,
+      //locale,
     });
 
     const countBefore = countResponse.data?.meta?.pagination?.total || 0;
@@ -181,7 +181,7 @@ export async function fetchRecordingWithContext(
       sort: filters.sort,
       "pagination[page]": actualPage,
       "pagination[pageSize]": pageSize,
-      locale,
+      //locale,
     }),
   );
 
