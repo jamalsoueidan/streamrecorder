@@ -14,7 +14,7 @@ import FollowerItem from "./follower-item";
 
 export default function CreatorsInfinity() {
   const [filters] = useQueryStates(exploreParsers);
-  const t = useTranslations("protected.disocver");
+  const t = useTranslations("protected.discover");
 
   const { data, fetchNextPage, hasNextPage, isFetchingNextPage, isLoading } =
     useInfiniteQuery({

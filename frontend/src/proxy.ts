@@ -1,6 +1,8 @@
+import { readdirSync, statSync } from "fs";
 import createIntlMiddleware from "next-intl/middleware";
 import type { NextRequest } from "next/server";
 import { NextResponse } from "next/server";
+import { join } from "path";
 
 import { streamingPlatforms } from "./app/lib/streaming-platforms";
 import { routing } from "./i18n/routing";
@@ -13,6 +15,21 @@ const handleI18nRouting = createIntlMiddleware(routing);
 
 const STATIC_EXT =
   /\.(js|json|css|ico|png|jpg|jpeg|gif|svg|webp|webm|mp4|mp3|woff|woff2|m3u8|ttf|eot|otf|json|xml|txt|map|pdf|zip)$/i;
+
+// Auto-scan (protected) folder to get protected routes
+function getProtectedRoutes(): string[] {
+  try {
+    const protectedDir = join(process.cwd(), "src/app/[locale]/(protected)");
+    return readdirSync(protectedDir).filter((item) => {
+      const fullPath = join(protectedDir, item);
+      return statSync(fullPath).isDirectory() && !item.startsWith(".");
+    });
+  } catch {
+    return [];
+  }
+}
+
+const PROTECTED_ROUTES = getProtectedRoutes();
 
 export function proxy(request: NextRequest) {
   const path = request.nextUrl.pathname;
@@ -32,10 +49,21 @@ export function proxy(request: NextRequest) {
     ? "/" + pathSegments.slice(2).join("/") || "/"
     : path;
 
-  const platformSegment = pathWithoutLocale.split("/")[1];
+  const firstPathSegment = pathWithoutLocale.split("/")[1];
+
+  // Protected routes — check auth before any rendering
+  if (PROTECTED_ROUTES.includes(firstPathSegment)) {
+    const token = request.cookies.get("strapi_jwt");
+
+    if (!token) {
+      const response = NextResponse.redirect(new URL("/login", request.url));
+      response.cookies.delete("strapi_jwt");
+      return response;
+    }
+  }
 
   // Platform routes — ALWAYS rewrite
-  if (PLATFORMS.includes(platformSegment)) {
+  if (PLATFORMS.includes(firstPathSegment)) {
     const token = request.cookies.get("strapi_jwt");
     const destination = token ? "protected" : "public";
     const rewriteUrl = `/${locale}/${destination}${pathWithoutLocale}${search}`;
