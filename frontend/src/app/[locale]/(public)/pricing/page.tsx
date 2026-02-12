@@ -15,6 +15,7 @@ import {
 } from "@mantine/core";
 import {
   IconBell,
+  IconBrandTiktok,
   IconCheck,
   IconClock,
   IconCrown,
@@ -111,6 +112,11 @@ const PLANS = [
         text: "Watch later",
         included: false,
       },
+      {
+        icon: IconBrandTiktok,
+        text: "Post clips directly to TikTok",
+        included: false,
+      },
     ],
   },
   {
@@ -163,6 +169,11 @@ const PLANS = [
       {
         icon: IconClock,
         text: "Watch later",
+        included: true,
+      },
+      {
+        icon: IconBrandTiktok,
+        text: "Post clips directly to TikTok",
         included: true,
       },
       {
@@ -244,6 +255,11 @@ const PLANS = [
       {
         icon: IconClock,
         text: "Watch later",
+        included: true,
+      },
+      {
+        icon: IconBrandTiktok,
+        text: "Post clips directly to TikTok",
         included: true,
       },
       {
