@@ -26,7 +26,7 @@ import { notifications } from "@mantine/notifications";
 import {
   IconAlertCircle,
   IconArrowLeft,
-  IconBrandTiktok,
+  IconInfoCircle,
   IconLock,
 } from "@tabler/icons-react";
 import { useTranslations } from "next-intl";
@@ -190,14 +190,11 @@ export function PublishForm({ clip, videoUrl }: PublishFormProps) {
                     size="lg"
                     radius="xl"
                   />
-                  <Stack gap={2}>
-                    <Text size="xs" c="dimmed">
-                      {t("publishingTo")}
-                    </Text>
-                    <Text size="md" fw={600}>
+                  <Stack gap={0}>
+                    <Text size="lg" fw={600}>
                       {creatorInfo.creator_nickname}
                     </Text>
-                    <Text size="sm" c="dimmed">
+                    <Text size="md" c="dimmed">
                       @{creatorInfo.creator_username}
                     </Text>
                   </Stack>
@@ -210,9 +207,9 @@ export function PublishForm({ clip, videoUrl }: PublishFormProps) {
               label={t("descriptionLabel")}
               placeholder={t("descriptionPlaceholder")}
               maxLength={150}
-              size="md"
+              size="lg"
               rightSection={
-                <Text size="xs" c="dimmed" pr="xs">
+                <Text size="sm" c="dimmed" pr="xs">
                   {form.values.description.length}/150
                 </Text>
               }
@@ -227,7 +224,7 @@ export function PublishForm({ clip, videoUrl }: PublishFormProps) {
               label={t("privacyLabel")}
               placeholder={t("privacyPlaceholder")}
               data={privacyOptions}
-              size="md"
+              size="lg"
               leftSection={<IconLock size={16} />}
               withAsterisk
               {...form.getInputProps("privacyLevel")}
@@ -244,10 +241,11 @@ export function PublishForm({ clip, videoUrl }: PublishFormProps) {
 
             {/* Interaction Settings */}
             <Stack gap="sm">
-              <Title order={5}>{t("interactionSettings")}</Title>
+              <Title order={4}>{t("interactionSettings")}</Title>
 
               <Checkbox
                 label={t("allowComments")}
+                size="md"
                 disabled={creatorInfo?.comment_disabled}
                 description={
                   creatorInfo?.comment_disabled
@@ -259,6 +257,7 @@ export function PublishForm({ clip, videoUrl }: PublishFormProps) {
 
               <Checkbox
                 label={t("allowDuet")}
+                size="md"
                 disabled={creatorInfo?.duet_disabled}
                 description={
                   creatorInfo?.duet_disabled
@@ -270,6 +269,7 @@ export function PublishForm({ clip, videoUrl }: PublishFormProps) {
 
               <Checkbox
                 label={t("allowStitch")}
+                size="md"
                 disabled={creatorInfo?.stitch_disabled}
                 description={
                   creatorInfo?.stitch_disabled
@@ -285,7 +285,7 @@ export function PublishForm({ clip, videoUrl }: PublishFormProps) {
             {/* Commercial Content */}
             <Stack gap="sm">
               <Title order={5}>{t("commercialContent")}</Title>
-              <Text size="sm" c="dimmed">
+              <Text size="md" c="dimmed">
                 {t("commercialContentDescription")}
               </Text>
 
@@ -298,7 +298,7 @@ export function PublishForm({ clip, videoUrl }: PublishFormProps) {
                 onChange={(e) => {
                   form.setFieldValue(
                     "commercialContentEnabled",
-                    e.currentTarget.checked
+                    e.currentTarget.checked,
                   );
                   // Reset sub-options when turning off
                   if (!e.currentTarget.checked) {
@@ -312,6 +312,7 @@ export function PublishForm({ clip, videoUrl }: PublishFormProps) {
                 <Stack gap="xs" ml="md">
                   <Checkbox
                     label={t("brandContentToggle")}
+                    size="md"
                     description={t("brandContentDescription")}
                     {...form.getInputProps("brandContentToggle", {
                       type: "checkbox",
@@ -320,6 +321,7 @@ export function PublishForm({ clip, videoUrl }: PublishFormProps) {
 
                   <Checkbox
                     label={t("brandOrganicToggle")}
+                    size="md"
                     description={t("brandOrganicDescription")}
                     disabled={form.values.privacyLevel === "SELF_ONLY"}
                     {...form.getInputProps("brandOrganicToggle", {
@@ -327,17 +329,26 @@ export function PublishForm({ clip, videoUrl }: PublishFormProps) {
                     })}
                   />
                   {form.values.privacyLevel === "SELF_ONLY" && (
-                    <Text size="xs" c="orange">
+                    <Text size="sm" c="orange">
                       {t("brandedContentPrivacyWarning")}
                     </Text>
                   )}
                   {(form.values.brandContentToggle ||
                     form.values.brandOrganicToggle) && (
-                    <Alert variant="light" color="blue" py="xs" mt="xs">
-                      <Text size="sm">
+                    <Alert
+                      variant="light"
+                      color="blue"
+                      py="xs"
+                      mt="xs"
+                      icon={<IconInfoCircle />}
+                    >
+                      <Text size="md">
                         {form.values.brandOrganicToggle
                           ? t("paidPartnershipLabel")
                           : t("promotionalContentLabel")}
+                      </Text>
+                      <Text size="md" mt={4}>
+                        {t("cannotChangeWarning")}
                       </Text>
                     </Alert>
                   )}
@@ -348,7 +359,7 @@ export function PublishForm({ clip, videoUrl }: PublishFormProps) {
             <Divider />
 
             {/* Music Usage Confirmation Declaration */}
-            <Text size="sm" c="dimmed" ta="center">
+            <Text size="md" c="dimmed" ta="center">
               {form.values.brandOrganicToggle
                 ? t("brandedContentConfirmationPrefix")
                 : t("musicConfirmationPrefix")}{" "}
@@ -393,12 +404,11 @@ export function PublishForm({ clip, videoUrl }: PublishFormProps) {
                   <Button
                     type="submit"
                     loading={loading}
-                    leftSection={<IconBrandTiktok size={20} />}
                     size="lg"
                     disabled={isPublishDisabled}
                     fullWidth
                   >
-                    {t("publishButton")}
+                    {t("uploadButton")}
                   </Button>
                 </span>
               </Tooltip>

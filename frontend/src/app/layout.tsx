@@ -17,7 +17,16 @@ import Script from "next/script";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
 import "./globals.css";
 
-export const theme = createTheme({});
+export const theme = createTheme({
+  components: {
+    Notification: {
+      styles: {
+        title: { fontSize: 20, fontWeight: 600 },
+        description: { fontSize: 18 },
+      },
+    },
+  },
+});
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -87,7 +96,7 @@ export default async function RootLayout({
         <DirectionProvider initialDirection={dir} detectDirection={false}>
           <MantineProvider theme={theme} defaultColorScheme="dark">
             <ModalsProvider>
-              <Notifications color="red" position="bottom-center" />
+              <Notifications position="bottom-center" />
               <NuqsAdapter>{children}</NuqsAdapter>
             </ModalsProvider>
           </MantineProvider>
