@@ -31,6 +31,8 @@ export async function GET(
   { params }: { params: Promise<{ documentId: string; file: string }> },
 ) {
   const { documentId, file } = await params;
+  const url = new URL(request.url);
+  const isTikTokProxy = url.searchParams.has("tiktok");
 
   const ext = getExtension(file);
   if (!ext) {
@@ -51,20 +53,22 @@ export async function GET(
   const abortController = new AbortController();
 
   try {
-    // MP4 → redirect
-    if (ext === ".mp4") {
+    // MP4 → redirect (unless TikTok proxy mode)
+    if (ext === ".mp4" && !isTikTokProxy) {
       const signedUrl = await getSignedUrl(s3, command, { expiresIn: 3600 });
       return Response.redirect(signedUrl, 302);
     }
 
-    // Stream for images
+    // Stream for images or TikTok proxy mode
     const response = await s3.send(command, {
       abortSignal: abortController.signal,
     });
 
+    const contentType = ext === ".mp4" ? "video/mp4" : "image/jpeg";
+
     return new Response(response.Body as ReadableStream, {
       headers: {
-        "Content-Type": "image/jpeg",
+        "Content-Type": contentType,
         "Content-Length": response.ContentLength?.toString() || "",
         "Cache-Control": "public, max-age=31536000, immutable",
       },

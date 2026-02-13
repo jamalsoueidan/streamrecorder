@@ -79,25 +79,27 @@ export function MobileBar() {
               </Menu.Target>
 
               <Menu.Dropdown>
-                {section.links?.map((item) => {
-                  const Icon = item.icon || IconPlayerPlayFilled;
+                {section.links
+                  ?.filter((item) => item.labelKey !== "links.myClips")
+                  .map((item) => {
+                    const Icon = item.icon || IconPlayerPlayFilled;
 
-                  return (
-                    <Menu.Item
-                      key={item.labelKey}
-                      leftSection={
-                        <Icon
-                          {...iconProps}
-                          style={{ width: "18px", height: "18px" }}
-                          color={item.color ? item.color : undefined}
-                        />
-                      }
-                      onClick={() => handleChange(item.url || "#")}
-                    >
-                      {t(item.labelKey)}
-                    </Menu.Item>
-                  );
-                })}
+                    return (
+                      <Menu.Item
+                        key={item.labelKey}
+                        leftSection={
+                          <Icon
+                            {...iconProps}
+                            style={{ width: "18px", height: "18px" }}
+                            color={item.color ? item.color : undefined}
+                          />
+                        }
+                        onClick={() => handleChange(item.url || "#")}
+                      >
+                        {t(item.labelKey)}
+                      </Menu.Item>
+                    );
+                  })}
               </Menu.Dropdown>
             </Menu>
           ),

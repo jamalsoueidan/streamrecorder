@@ -143,10 +143,17 @@ export function PublishForm({ clip, videoUrl }: PublishFormProps) {
 
   // Build privacy options from creator info
   const privacyOptions =
-    creatorInfo?.privacy_level_options.map((level) => ({
-      value: level,
-      label: t(`privacy.${level}`),
-    })) || [];
+    creatorInfo?.privacy_level_options.map((level) => {
+      const isDisabled =
+        level === "SELF_ONLY" && form.values.brandOrganicToggle;
+      return {
+        value: level,
+        label: isDisabled
+          ? `${t(`privacy.${level}`)} (${t("selfOnlyDisabledBranded")})`
+          : t(`privacy.${level}`),
+        disabled: isDisabled,
+      };
+    }) || [];
 
   if (loadingCreator) {
     return (
@@ -162,6 +169,49 @@ export function PublishForm({ clip, videoUrl }: PublishFormProps) {
       <Stack gap="md">
         <Alert icon={<IconAlertCircle size={16} />} color="red">
           {creatorError}
+        </Alert>
+        <Button
+          component={Link}
+          href="/my-clips"
+          variant="light"
+          leftSection={<IconArrowLeft size={16} />}
+        >
+          {t("backToClips")}
+        </Button>
+      </Stack>
+    );
+  }
+
+  // Check if creator cannot post at this moment (daily limit reached)
+  if (creatorInfo && creatorInfo.max_video_post_duration_sec === 0) {
+    return (
+      <Stack gap="md">
+        <Alert icon={<IconAlertCircle size={16} />} color="orange">
+          {t("cannotPostNow")}
+        </Alert>
+        <Button
+          component={Link}
+          href="/my-clips"
+          variant="light"
+          leftSection={<IconArrowLeft size={16} />}
+        >
+          {t("backToClips")}
+        </Button>
+      </Stack>
+    );
+  }
+
+  // Check if video duration exceeds TikTok's allowed maximum
+  const clipDuration = clip.duration || 0;
+  const maxDuration = creatorInfo?.max_video_post_duration_sec || 0;
+  if (creatorInfo && maxDuration > 0 && clipDuration > maxDuration) {
+    return (
+      <Stack gap="md">
+        <Alert icon={<IconAlertCircle size={16} />} color="red">
+          {t("videoTooLong", {
+            duration: Math.ceil(clipDuration),
+            maxDuration: maxDuration,
+          })}
         </Alert>
         <Button
           component={Link}
@@ -346,9 +396,6 @@ export function PublishForm({ clip, videoUrl }: PublishFormProps) {
                         {form.values.brandOrganicToggle
                           ? t("paidPartnershipLabel")
                           : t("promotionalContentLabel")}
-                      </Text>
-                      <Text size="md" mt={4}>
-                        {t("cannotChangeWarning")}
                       </Text>
                     </Alert>
                   )}

@@ -17,7 +17,7 @@ export function ClipSlider({ clips }: { clips: Clip[] }) {
           {clips.map((clip) => (
             <Link href={`/shorts/${clip.documentId}`} key={clip.id}>
               <video
-                poster={`/clip/${clip.documentId}/thumbnail.jpg`}
+                //poster={`/clip/${clip.documentId}/thumbnail.jpg`}
                 preload="metadata"
                 autoPlay
                 muted

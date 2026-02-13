@@ -161,6 +161,67 @@ export async function checkTikTokStatus(publishId: string): Promise<{
   }
 }
 
+// Check TikTok status and update database if final status reached
+export async function checkAndUpdateTikTokStatus(
+  clipShareId: string,
+  publishId: string,
+): Promise<{
+  status: string;
+  updated: boolean;
+  postId?: string;
+  error?: string;
+}> {
+  const result = await checkTikTokStatus(publishId);
+
+  if (result.status === "error") {
+    return { status: "error", updated: false, error: result.error };
+  }
+
+  // Map TikTok status to our state
+  let newState: ClipShareRequestStateEnum | null = null;
+
+  if (result.status === "PUBLISH_COMPLETE") {
+    newState = ClipShareRequestStateEnum.Completed;
+  } else if (result.status === "FAILED") {
+    newState = ClipShareRequestStateEnum.Failed;
+  }
+
+  // Update database if final status reached
+  if (newState) {
+    try {
+      await api.clipShare.meUpdateClipSharesId({ id: clipShareId }, {
+        data: {
+          state: newState,
+          data: {
+            publishId,
+            postId: result.postId,
+            tiktokStatus: result.status,
+            updatedAt: new Date().toISOString(),
+          },
+        },
+      } as never);
+      return {
+        status: result.status,
+        updated: true,
+        postId: result.postId,
+      };
+    } catch (error) {
+      console.error("Error updating clip share state:", error);
+      return {
+        status: result.status,
+        updated: false,
+        error: "Failed to update database",
+      };
+    }
+  }
+
+  return {
+    status: result.status,
+    updated: false,
+    postId: result.postId,
+  };
+}
+
 interface ShareToTikTokInput {
   clipDocumentId: string;
   title: string;
@@ -181,7 +242,7 @@ interface ShareResult {
 interface TikTokInitResponse {
   data?: {
     publish_id: string;
-    upload_url: string;
+    upload_url?: string; // Only returned for FILE_UPLOAD, not PULL_FROM_URL
   };
   error?: {
     code: string;
@@ -237,24 +298,11 @@ export async function shareToTikTok({
       return { success: false, error: "Clip not found" };
     }
 
-    // 4. Get the video from our endpoint (follows redirect to S3)
+    // 4. Build video URL for TikTok to pull from (with ?tiktok for proxy mode)
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
-    const videoUrl = `${baseUrl}/clip/${clipDocumentId}/clip.mp4`;
+    const videoUrl = `${baseUrl}/clip/${clipDocumentId}/clip.mp4?tiktok`;
 
-    // First get the redirect URL
-    const redirectResponse = await fetch(videoUrl, { redirect: "manual" });
-    const s3Url = redirectResponse.headers.get("location");
-
-    if (!s3Url) {
-      return { success: false, error: "Could not get video URL" };
-    }
-
-    // Download the video
-    const videoResponse = await fetch(s3Url);
-    const videoBuffer = await videoResponse.arrayBuffer();
-    const videoSize = videoBuffer.byteLength;
-
-    // 5. Initialize TikTok upload
+    // 5. Initialize TikTok upload with PULL_FROM_URL
     const initResponse = await fetch(
       "https://open.tiktokapis.com/v2/post/publish/video/init/",
       {
@@ -274,10 +322,8 @@ export async function shareToTikTok({
             brand_organic_toggle: brandOrganicToggle,
           },
           source_info: {
-            source: "FILE_UPLOAD",
-            video_size: videoSize,
-            chunk_size: videoSize, // Upload as single chunk since < 64MB
-            total_chunk_count: 1,
+            source: "PULL_FROM_URL",
+            video_url: videoUrl,
           },
         }),
       },
@@ -293,25 +339,8 @@ export async function shareToTikTok({
       };
     }
 
-    if (!initData.data?.upload_url) {
-      return { success: false, error: "No upload URL returned from TikTok" };
-    }
-
-    // 6. Upload video to TikTok
-    const uploadResponse = await fetch(initData.data.upload_url, {
-      method: "PUT",
-      headers: {
-        "Content-Type": "video/mp4",
-        "Content-Length": videoSize.toString(),
-        "Content-Range": `bytes 0-${videoSize - 1}/${videoSize}`,
-      },
-      body: videoBuffer,
-    });
-
-    if (!uploadResponse.ok) {
-      const errorText = await uploadResponse.text();
-      console.error("TikTok upload error:", errorText);
-      return { success: false, error: "Failed to upload video to TikTok" };
+    if (!initData.data?.publish_id) {
+      return { success: false, error: "No publish ID returned from TikTok" };
     }
 
     // 7. Create clip-share record

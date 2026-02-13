@@ -26,10 +26,10 @@
     "description": "Review your video and choose how you want to share it on TikTok",
     "loadingCreator": "Loading your TikTok account...",
     "publishingTo": "Publishing to",
-    "descriptionLabel": "Description",
-    "descriptionPlaceholder": "Write a description for your video...",
-    "privacyLabel": "Who can view this video",
-    "privacyPlaceholder": "Select privacy setting",
+    "descriptionLabel": "Title",
+    "descriptionPlaceholder": "Write a title for your video...",
+    "privacyLabel": "Privacy status",
+    "privacyPlaceholder": "Select privacy status",
     "privacy": {
       "PUBLIC_TO_EVERYONE": "Everyone",
       "MUTUAL_FOLLOW_FRIENDS": "Friends",
@@ -41,12 +41,12 @@
     "allowDuet": "Duet",
     "allowStitch": "Stitch",
     "disabledByCreator": "Disabled in your TikTok settings",
-    "commercialContent": "Disclose video content",
+    "commercialContent": "Content disclosure setting",
     "commercialContentDescription": "Turn on to disclose that this video promotes goods or services in exchange for something of value. Your video could promote yourself, a third party, or both.",
     "brandContentToggle": "Your brand",
-    "brandContentDescription": "You are promoting yourself or your own business. This video will be classified as Brand Organic.",
+    "brandContentDescription": "You are promoting yourself or your own business. This content will be classified as Brand Organic.",
     "brandOrganicToggle": "Branded content",
-    "brandOrganicDescription": "You are promoting another brand or a third party. This video will be classified as Branded Content.",
+    "brandOrganicDescription": "You are promoting another brand or a third party. This content will be classified as Branded Content.",
     "promotionalContentLabel": "Your video will be labeled as 'Promotional content'.",
     "paidPartnershipLabel": "Your video will be labeled as 'Paid partnership'.",
     "cannotChangeWarning": "This cannot be changed once your video is posted.",
@@ -60,7 +60,7 @@
     "commercialContentRequired": "You need to indicate if your content promotes yourself, a third party, or both",
     "brandedContentPrivacyWarning": "Branded content cannot be set to private visibility",
     "publishButton": "Publish to TikTok",
-    "uploadButton": "Upload",
+    "uploadButton": "Publish",
     "cancel": "Cancel",
     "backToClips": "Back to Clips",
     "success": "Publishing",
@@ -70,6 +70,9 @@
     "validation": {
       "privacyRequired": "Please select who can view this video",
       "musicConfirmationRequired": "You must agree to the Music Usage Confirmation"
-    }
+    },
+    "cannotPostNow": "You've reached your daily posting limit on TikTok. Please try again later.",
+    "videoTooLong": "This video is {duration} seconds long, but TikTok only allows videos up to {maxDuration} seconds for your account.",
+    "selfOnlyDisabledBranded": "Branded content visibility cannot be set to private"
   }
 }
