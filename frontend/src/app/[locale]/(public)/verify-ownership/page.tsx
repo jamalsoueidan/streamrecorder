@@ -1,13 +1,16 @@
+import { generateAlternates } from "@/app/lib/seo";
 import { Container, Stack, Text, Title, Flex } from "@mantine/core";
 import { IconShieldCheck } from "@tabler/icons-react";
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import { VerificationFlow } from "./components/verification-flow";
 
 export async function generateMetadata() {
   const t = await getTranslations("verifyOwnership");
+  const locale = await getLocale();
   return {
     title: t("meta.title"),
     description: t("meta.description"),
+    alternates: generateAlternates("/verify-ownership", locale),
   };
 }
 

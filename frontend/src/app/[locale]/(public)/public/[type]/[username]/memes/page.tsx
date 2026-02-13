@@ -25,6 +25,7 @@ import { getProfileUrl, getSocialUrl } from "@/app/components/open-social";
 import { generateAvatarUrl } from "@/app/lib/avatar-url";
 
 import { generateProfileUrl } from "@/app/lib/profile-url";
+import { generateAlternates } from "@/app/lib/seo";
 import publicApi from "@/lib/public-api";
 import { Metadata } from "next";
 import Image from "next/image";
@@ -99,9 +100,7 @@ export async function generateMetadata({
         )}`,
       ],
     },
-    alternates: {
-      canonical: generateProfileUrl(follower, true),
-    },
+    alternates: generateAlternates(`/${type}/${follower.username}/memes`, locale),
   };
 }
 

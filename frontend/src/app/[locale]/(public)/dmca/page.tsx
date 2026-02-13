@@ -1,14 +1,17 @@
 import { Container, Divider, Flex, Stack, Text, Title } from "@mantine/core";
 import { IconChevronDown, IconScale } from "@tabler/icons-react";
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
+import { generateAlternates } from "@/app/lib/seo";
 import { DMCAForm } from "./components/form";
 import { PartnerBenefits } from "./components/partner-benefits";
 
 export async function generateMetadata() {
   const t = await getTranslations("dmca");
+  const locale = await getLocale();
   return {
     title: t("meta.title"),
     description: t("meta.description"),
+    alternates: generateAlternates("/dmca", locale),
   };
 }
 

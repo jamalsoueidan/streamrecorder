@@ -1,4 +1,3 @@
-import { routing } from "@/i18n/routing";
 import {
   ColorSchemeScript,
   DirectionProvider,
@@ -62,26 +61,6 @@ export default async function RootLayout({
   return (
     <html lang={locale} dir={dir} {...mantineHtmlProps}>
       <head>
-        <link
-          rel="alternate"
-          hrefLang="en"
-          href={`${process.env.NEXT_PUBLIC_BASE_URL}`}
-        />
-        {routing.locales
-          .filter((l) => l !== "en")
-          .map((locale) => (
-            <link
-              key={locale}
-              rel="alternate"
-              hrefLang={locale}
-              href={`${process.env.NEXT_PUBLIC_BASE_URL}/${locale}`}
-            />
-          ))}
-        <link
-          rel="alternate"
-          hrefLang="x-default"
-          href={`${process.env.NEXT_PUBLIC_BASE_URL}`}
-        />
         <ColorSchemeScript defaultColorScheme="dark" />
         {!isbot(userAgent) ? (
           <Script

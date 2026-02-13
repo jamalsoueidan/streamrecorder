@@ -3,8 +3,9 @@ import { generateProfileUrl } from "@/app/lib/profile-url";
 import publicApi from "@/lib/public-api";
 import { Center } from "@mantine/core";
 import { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 
+import { generateAlternates } from "@/app/lib/seo";
 import { streamingPlatforms } from "@/app/lib/streaming-platforms";
 import { RecordingsSimpleGrid } from "../../components/recordings-simple-grid";
 
@@ -21,6 +22,7 @@ export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
   const { type } = await params;
+  const locale = await getLocale();
   const t = await getTranslations("recordings");
 
   const metaKey = type === "all" ? "all" : type;
@@ -51,9 +53,7 @@ export async function generateMetadata({
       description,
       images: ["/og-image.png"],
     },
-    alternates: {
-      canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/recordings/${type}`,
-    },
+    alternates: generateAlternates(`/recordings/${type}`, locale),
   };
 }
 

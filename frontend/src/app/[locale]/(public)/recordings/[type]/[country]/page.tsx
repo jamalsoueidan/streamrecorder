@@ -1,5 +1,6 @@
 import PaginationControls from "@/app/components/pagination";
 import { generateProfileUrl } from "@/app/lib/profile-url";
+import { generateAlternates } from "@/app/lib/seo";
 import {
   countrySlugToCode,
   getCountryName,
@@ -77,9 +78,7 @@ export async function generateMetadata({
       description,
       images: ["/og-image.png"],
     },
-    alternates: {
-      canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/recordings/${type}/${country}`,
-    },
+    alternates: generateAlternates(`/recordings/${type}/${country}`, locale),
   };
 }
 

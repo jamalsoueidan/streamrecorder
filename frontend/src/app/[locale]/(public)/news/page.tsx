@@ -1,4 +1,5 @@
 import dayjs from "@/app/lib/dayjs";
+import { generateAlternates } from "@/app/lib/seo";
 import publicApi from "@/lib/public-api";
 import { Container, Flex, Paper, Stack, Text, Title } from "@mantine/core";
 import { IconArticle } from "@tabler/icons-react";
@@ -7,9 +8,11 @@ import ReactMarkdown from "react-markdown";
 
 export async function generateMetadata() {
   const t = await getTranslations("news");
+  const locale = await getLocale();
   return {
     title: t("meta.title"),
     description: t("meta.description"),
+    alternates: generateAlternates("/news", locale),
   };
 }
 

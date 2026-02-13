@@ -6,6 +6,7 @@ import {
   getCountryName,
 } from "@/app/lib/country-utils";
 import { generateProfileUrl } from "@/app/lib/profile-url";
+import { generateAlternates } from "@/app/lib/seo";
 import { streamingPlatforms } from "@/app/lib/streaming-platforms";
 import publicApi from "@/lib/public-api";
 import {
@@ -79,9 +80,7 @@ export async function generateMetadata({
       description,
       images: ["/og-image.png"],
     },
-    alternates: {
-      canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/creators/${type}/${country}`,
-    },
+    alternates: generateAlternates(`/creators/${type}/${country}`, locale),
   };
 }
 

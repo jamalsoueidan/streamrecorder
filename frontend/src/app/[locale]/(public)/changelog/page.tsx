@@ -1,4 +1,5 @@
 import dayjs from "@/app/lib/dayjs";
+import { generateAlternates } from "@/app/lib/seo";
 import publicApi from "@/lib/public-api";
 import {
   Badge,
@@ -15,9 +16,11 @@ import ReactMarkdown from "react-markdown";
 
 export async function generateMetadata() {
   const t = await getTranslations("changelog");
+  const locale = await getLocale();
   return {
     title: t("meta.title"),
     description: t("meta.description"),
+    alternates: generateAlternates("/changelog", locale),
   };
 }
 

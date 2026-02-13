@@ -2,6 +2,7 @@ import { getSocialUrl } from "@/app/components/open-social";
 import PaginationControls from "@/app/components/pagination";
 import { generateAvatarUrl } from "@/app/lib/avatar-url";
 import { generateProfileUrl } from "@/app/lib/profile-url";
+import { generateAlternates } from "@/app/lib/seo";
 import { streamingPlatforms } from "@/app/lib/streaming-platforms";
 import publicApi from "@/lib/public-api";
 import {
@@ -30,6 +31,7 @@ export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
   const { type } = await params;
+  const locale = await getLocale();
   const t = await getTranslations("creators");
 
   const platform = streamingPlatforms.find(
@@ -60,9 +62,7 @@ export async function generateMetadata({
       description: t(`meta.${platformKey}.description`),
       images: ["/og-image.png"],
     },
-    alternates: {
-      canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/creators/${type}`,
-    },
+    alternates: generateAlternates(`/creators/${type}`, locale),
   };
 }
 

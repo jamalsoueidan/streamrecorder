@@ -1,3 +1,4 @@
+import { generateAlternates } from "@/app/lib/seo";
 import { getToken } from "@/lib/token";
 import { Box } from "@mantine/core";
 import { Metadata } from "next";
@@ -50,6 +51,7 @@ export async function generateMetadata(): Promise<Metadata> {
         "max-snippet": -1,
       },
     },
+    alternates: generateAlternates("/", locale),
   };
 }
 

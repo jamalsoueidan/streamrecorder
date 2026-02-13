@@ -1,13 +1,16 @@
 // app/[locale]/contact/page.tsx
+import { generateAlternates } from "@/app/lib/seo";
 import { Container, Stack, Text, Title } from "@mantine/core";
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import { ContactForm } from "./components/form";
 
 export async function generateMetadata() {
   const t = await getTranslations("contact");
+  const locale = await getLocale();
   return {
     title: t("meta.title"),
     description: t("meta.description"),
+    alternates: generateAlternates("/contact", locale),
   };
 }
 

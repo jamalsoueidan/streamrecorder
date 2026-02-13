@@ -1,13 +1,16 @@
 import { Container, Flex, Paper, Stack, Text, Title } from "@mantine/core";
 import { IconChevronDown, IconQuestionMark } from "@tabler/icons-react";
 import { useTranslations } from "next-intl";
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
+import { generateAlternates } from "@/app/lib/seo";
 
 export async function generateMetadata() {
   const t = await getTranslations("faq");
+  const locale = await getLocale();
   return {
     title: t("meta.title"),
     description: t("meta.description"),
+    alternates: generateAlternates("/faq", locale),
   };
 }
 
