@@ -6,7 +6,7 @@ import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 
 import { streamingPlatforms } from "@/app/lib/streaming-platforms";
-import { RecordingsSimpleGrid } from "../components/recordings-simple-grid";
+import { RecordingsSimpleGrid } from "../../components/recordings-simple-grid";
 
 interface PageProps {
   params: Promise<{

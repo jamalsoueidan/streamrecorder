@@ -245,7 +245,7 @@ export default async function VideoPage({ params }: PageProps) {
                   </Text>
                 </Stack>
               ))}
-              <SignupCta username={username} recordings={recordings} />
+              <SignupCta username={creatorName} recordings={recordings} />
             </SimpleGrid>
           </Stack>
         ) : null}
