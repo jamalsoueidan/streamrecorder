@@ -14,11 +14,7 @@ import {
   Stack,
   Title,
 } from "@mantine/core";
-import {
-  IconBrandTiktok,
-  IconEdit,
-  IconTrash,
-} from "@tabler/icons-react";
+import { IconBrandTiktok, IconEdit, IconTrash } from "@tabler/icons-react";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -97,7 +93,7 @@ export function ClipCard({ clip, locale }: ClipCardProps) {
       return (
         <Progress.Root size={40} radius="md">
           <Progress.Section value={100} color="yellow" animated>
-            <Progress.Label>{t("share.processing")}</Progress.Label>
+            <Progress.Label lh={1.4}>{t("share.processing")}</Progress.Label>
           </Progress.Section>
         </Progress.Root>
       );
@@ -172,6 +168,7 @@ export function ClipCard({ clip, locale }: ClipCardProps) {
               variant="light"
               color="gray"
               leftSection={<IconEdit size={16} />}
+              disabled={currentState === ClipShareStateEnum1.Processing}
             >
               {t("actions.edit")}
             </Button>
@@ -180,6 +177,7 @@ export function ClipCard({ clip, locale }: ClipCardProps) {
               variant="light"
               color="red"
               leftSection={<IconTrash size={16} />}
+              disabled={currentState === ClipShareStateEnum1.Processing}
             >
               {t("actions.delete")}
             </Button>

@@ -360,7 +360,7 @@ export function Navbar({
                 </Menu.Sub.Dropdown>
               </Menu.Sub>
               <Menu.Item
-                onClick={async (e) => {
+                onClick={async () => {
                   Sentry.setUser(null);
                   await fetch("/api/logout", { method: "POST" });
                   window.location.href = "/";
