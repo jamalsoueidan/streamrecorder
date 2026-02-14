@@ -146,11 +146,16 @@ export default async function ShortsPage({ params }: Props) {
         author: {
           "@type": "Person",
           name: creatorName,
+          identifier: specificClip.follower?.username,
           alternateName: [specificClip.follower?.nickname, `@${specificClip.follower?.username}`].filter(Boolean),
           url: generateProfileUrl(specificClip.follower as never, true),
         },
       }),
       inLanguage: locale,
+      potentialAction: {
+        "@type": "WatchAction",
+        target: `${process.env.NEXT_PUBLIC_BASE_URL}/shorts/${specificClip.documentId}`,
+      },
     };
   } else {
     initialClips = await getRandomClips(3);

@@ -195,6 +195,7 @@ export default async function Page({ params, searchParams }: PageProps) {
           "@type": "Person",
           "@id": `${profileUrl}#person`,
           name: follower.username,
+          identifier: follower.username,
           alternateName: [follower.nickname, `@${follower.username}`].filter(Boolean),
           description: follower.tagline || follower.description,
           image: generateAvatarUrl(follower.avatar?.url, true),

@@ -146,6 +146,7 @@ export default async function Page({ params, searchParams }: PageProps) {
             item: {
               "@type": "Person",
               name: creator.username,
+              identifier: creator.username,
               alternateName: [creator.nickname, `@${creator.username}`].filter(Boolean),
               description: creator.tagline || creator.description,
               image: generateAvatarUrl(creator.avatar?.url, true),

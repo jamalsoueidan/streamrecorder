@@ -218,11 +218,16 @@ export default async function VideoPage({ params }: PageProps) {
           author: {
             "@type": "Person",
             name: creatorName,
+            identifier: data.follower?.username,
             alternateName: [data.follower?.nickname, `@${data.follower?.username}`].filter(Boolean),
             url: profileUrl,
           },
         }),
         inLanguage: locale,
+        potentialAction: {
+          "@type": "WatchAction",
+          target: videoUrl,
+        },
       },
     ],
   };
