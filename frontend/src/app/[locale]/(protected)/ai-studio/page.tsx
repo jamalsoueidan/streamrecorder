@@ -8,13 +8,13 @@ import {
   Text,
   Title,
 } from "@mantine/core";
-import { IconScissors } from "@tabler/icons-react";
-import { getLocale, getTranslations } from "next-intl/server";
+import { IconSparkles } from "@tabler/icons-react";
+import { getTranslations } from "next-intl/server";
 
 import PaginationControls from "@/app/components/pagination";
 import api from "@/lib/api";
-import { ClipCard } from "./components/clip-card";
-import { MyClipsGuard } from "./components/my-clips-guard";
+import { AiRequestCard } from "./components/ai-request-card";
+import { AiStudioGuard } from "./components/ai-studio-guard";
 
 interface PageProps {
   searchParams: Promise<{
@@ -24,22 +24,24 @@ interface PageProps {
 
 export default async function Page({ searchParams }: PageProps) {
   const { page } = await searchParams;
-  const t = await getTranslations("protected.myClips");
-  const locale = await getLocale();
+  const t = await getTranslations("protected.aiStudio");
 
-  const response = await api.clip
-    .meGetClips({
+  // Try to fetch AI requests - will fail with 403 if user doesn't have permission
+  const response = await api.aiRequest
+    .meGetAiRequests({
       populate: {
         follower: {
           populate: { avatar: true },
         },
+        recording: true,
       },
       "pagination[pageSize]": 12,
       "pagination[page]": parseInt(page || "1", 10),
+      sort: "createdAt:desc",
     })
     .catch(() => null);
 
-  const clips = response?.data?.data;
+  const aiRequests = response?.data?.data;
   const meta = response?.data?.meta;
   const totalPages = meta?.pagination?.pageCount || 1;
 
@@ -51,7 +53,7 @@ export default async function Page({ searchParams }: PageProps) {
       <Flex justify="space-between" align="center">
         <Stack gap={2}>
           <Flex gap="xs" align="center">
-            <IconScissors size={32} />
+            <IconSparkles size={32} />
             <Title order={1} size="h3">
               {t("title")}
             </Title>
@@ -64,8 +66,8 @@ export default async function Page({ searchParams }: PageProps) {
 
       <Divider mx={{ base: "-xs", sm: "-md" }} />
 
-      <MyClipsGuard>
-        {!clips || clips.length === 0 ? (
+      <AiStudioGuard>
+        {!aiRequests || aiRequests.length === 0 ? (
           <EmptyState />
         ) : (
           <Stack gap="xl">
@@ -75,8 +77,8 @@ export default async function Page({ searchParams }: PageProps) {
               </Center>
             )}
             <SimpleGrid cols={{ base: 1, md: 2 }}>
-              {clips?.map((clip) => (
-                <ClipCard key={clip.documentId} clip={clip} locale={locale} />
+              {aiRequests?.map((request) => (
+                <AiRequestCard key={request.documentId} aiRequest={request} />
               ))}
             </SimpleGrid>
             {totalPages > 1 && (
@@ -86,18 +88,18 @@ export default async function Page({ searchParams }: PageProps) {
             )}
           </Stack>
         )}
-      </MyClipsGuard>
+      </AiStudioGuard>
     </Stack>
   );
 }
 
 async function EmptyState() {
-  const t = await getTranslations("protected.myClips");
+  const t = await getTranslations("protected.aiStudio");
 
   return (
     <Stack align="center" justify="center" py={80} gap="lg">
-      <ActionIcon variant="transparent" size={120} radius="xl" color="white">
-        <IconScissors size={90} stroke={2} />
+      <ActionIcon variant="transparent" size={120} radius="xl" color="violet">
+        <IconSparkles size={90} stroke={2} />
       </ActionIcon>
       <Stack align="center" gap={12}>
         <Title order={2} fw={600}>

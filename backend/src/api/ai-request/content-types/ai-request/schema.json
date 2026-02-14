@@ -11,6 +11,11 @@
   },
   "pluginOptions": {},
   "attributes": {
+    "follower": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::follower.follower"
+    },
     "recording": {
       "type": "relation",
       "relation": "manyToOne",
@@ -38,6 +43,11 @@
       "relation": "oneToMany",
       "target": "api::ai-task.ai-task",
       "mappedBy": "ai_request"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user"
     }
   }
 }

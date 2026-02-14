@@ -10,7 +10,7 @@ import { useInfiniteQuery } from "@tanstack/react-query";
 
 import { useTranslations } from "next-intl";
 import { EmptyState } from "../../components/empty-state";
-import RecordingItem from "../../components/recording-item";
+import RecordingItem from "./recording-item";
 import { fetchRecordings } from "../actions/fetch-recordings";
 import { followingParsers } from "../lib/search-params";
 

@@ -189,7 +189,7 @@ export async function checkAndUpdateTikTokStatus(
   // Update database if final status reached
   if (newState) {
     try {
-      await api.clipShare.meUpdateClipSharesId({ id: clipShareId }, {
+      await api.clipShare.mePutClipSharesId({ id: clipShareId }, {
         data: {
           state: newState,
           data: {

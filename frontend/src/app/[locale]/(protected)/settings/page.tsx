@@ -1,6 +1,6 @@
 "use client";
 
-import { useUser } from "@/app/providers/user-provider";
+import { Can, Role } from "@/app/providers/ability-provider";
 import { Divider, Flex, SimpleGrid, Stack, Text, Title } from "@mantine/core";
 import { IconSettings } from "@tabler/icons-react";
 import { useTranslations } from "next-intl";
@@ -10,7 +10,6 @@ import { SubscriptionCard } from "./components/subscription-card";
 import { TikTokCard } from "./components/tiktok-card";
 
 export default function SettingsPage() {
-  const user = useUser();
   const t = useTranslations("protected.settings");
 
   return (
@@ -34,8 +33,12 @@ export default function SettingsPage() {
       <SimpleGrid cols={{ sm: 1, md: 2 }}>
         <ProfileCard />
         <SubscriptionCard />
-        {user?.role?.type === "admin" && <TikTokCard />}
-        {user?.role?.type !== "admin" && <DangerZoneCard />}
+        <Can I="meCreate" a="Tiktok">
+          <TikTokCard />
+        </Can>
+        <Role is="admin" not>
+          <DangerZoneCard />
+        </Role>
       </SimpleGrid>
     </Stack>
   );

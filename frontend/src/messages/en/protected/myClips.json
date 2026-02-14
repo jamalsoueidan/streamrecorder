@@ -74,5 +74,16 @@
     "cannotPostNow": "You've reached your daily posting limit on TikTok. Please try again later.",
     "videoTooLong": "This video is {duration} seconds long, but TikTok only allows videos up to {maxDuration} seconds for your account.",
     "selfOnlyDisabledBranded": "Branded content visibility cannot be set to private"
+  },
+  "upgrade": {
+    "title": "Publish & Automate Your Clips",
+    "subtitle": "Share your content across social media platforms",
+    "features": {
+      "publish": "Publish directly to TikTok, Reels, and Shorts",
+      "schedule": "Schedule posts and automate your content",
+      "edit": "Edit videos with captions and effects"
+    },
+    "upgradeButton": "Upgrade Now",
+    "hint": "Unlock clip publishing with a premium subscription"
   }
 }

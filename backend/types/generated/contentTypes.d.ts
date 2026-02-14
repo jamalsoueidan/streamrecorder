@@ -473,6 +473,7 @@ export interface ApiAiRequestAiRequest extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    follower: Schema.Attribute.Relation<'manyToOne', 'api::follower.follower'>;
     generateClips: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     generateMemes: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     generateProfile: Schema.Attribute.Boolean &
@@ -495,6 +496,10 @@ export interface ApiAiRequestAiRequest extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    user: Schema.Attribute.Relation<
+      'manyToOne',
+      'plugin::users-permissions.user'
+    >;
   };
 }
 
