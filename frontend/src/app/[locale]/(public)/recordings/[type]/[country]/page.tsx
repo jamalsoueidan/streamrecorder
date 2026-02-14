@@ -148,39 +148,74 @@ export default async function Page({ params, searchParams }: PageProps) {
 
   const totalPages = meta?.pagination?.pageCount || 1;
 
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    name: t("country.title", {
-      platform: t(`hero.title.${platformKey}`),
-      country: countryName,
-    }),
-    description: t("country.description", {
-      platform: t(`hero.title.${platformKey}`),
-      country: countryName,
-    }),
-    url: `${process.env.NEXT_PUBLIC_BASE_URL}/recordings/${type}/${country}`,
-    isPartOf: {
-      "@type": "WebSite",
-      name: "Live Stream Recorder",
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}`,
-    },
-    inLanguage: locale,
-    about: {
-      "@type": "Country",
-      name: countryName,
-    },
-    mainEntity: {
-      "@type": "ItemList",
-      numberOfItems: recordings?.length || 0,
-      itemListElement: recordings?.slice(0, 10).map((recording, index) => ({
-        "@type": "ListItem",
-        position: index + 1,
-        url:
-          generateProfileUrl(recording.follower, true) +
-          `/video/${recording.documentId}`,
-      })),
-    },
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            item: {
+              "@id": baseUrl,
+              name: "Home",
+            },
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            item: {
+              "@id": `${baseUrl}/recordings/${type}`,
+              name: t(`hero.title.${platformKey}`),
+            },
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            item: {
+              "@id": `${baseUrl}/recordings/${type}/${country}`,
+              name: countryName,
+            },
+          },
+        ],
+      },
+      {
+        "@type": "CollectionPage",
+        name: t("country.title", {
+          platform: t(`hero.title.${platformKey}`),
+          country: countryName,
+        }),
+        description: t("country.description", {
+          platform: t(`hero.title.${platformKey}`),
+          country: countryName,
+        }),
+        url: `${baseUrl}/recordings/${type}/${country}`,
+        isPartOf: {
+          "@type": "WebSite",
+          name: "Live Stream Recorder",
+          url: baseUrl,
+        },
+        inLanguage: locale,
+        about: {
+          "@type": "Country",
+          name: countryName,
+        },
+        mainEntity: {
+          "@type": "ItemList",
+          numberOfItems: recordings?.length || 0,
+          itemListElement: recordings?.slice(0, 10).map((recording, index) => ({
+            "@type": "ListItem",
+            position: index + 1,
+            url:
+              generateProfileUrl(recording.follower, true) +
+              `/video/${recording.documentId}`,
+          })),
+        },
+      },
+    ],
   };
 
   return (
