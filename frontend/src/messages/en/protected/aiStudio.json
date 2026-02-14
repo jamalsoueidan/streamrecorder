@@ -9,6 +9,7 @@
     "message": "The original recording has been deleted. You can still view the AI-generated content."
   },
   "createdAgo": "Created {time}",
+  "viewDetails": "View Details",
   "state": {
     "pending": "Pending",
     "processing": "Processing",

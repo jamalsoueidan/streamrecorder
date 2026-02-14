@@ -139,64 +139,56 @@ export function Navbar({
     }
   };
 
-  const isAdmin = user?.role?.type === "admin";
-
   const links = navigation?.map((section) => {
-    const html = section.links
-      ?.filter((item) => {
-        // Hide my-clips for non-admin users (TikTok not verified yet)
-        if (item.url === "/my-clips" && !isAdmin) return false;
-        return true;
-      })
-      .map((item) => {
-        const Icon = item.icon || IconPlayerRecordFilled;
-        const isActive = pathname.startsWith(item.url || "");
+    const html = section.links.map((item) => {
+      const Icon = item.icon || IconPlayerRecordFilled;
+      const isActive = pathname.startsWith(item.url || "");
 
-        const linkContent = (
-          <Link
-            className={classes.link}
-            data-active={isActive || undefined}
-            data-collapsed={collapsed || undefined}
-            key={item.labelKey}
-            href={item.url || "#"}
-            onClick={(e) => handleLinkClick(e, item.url || "#")}
-          >
-            {collapsed ? (
+      const linkContent = (
+        <Link
+          className={classes.link}
+          data-active={isActive || undefined}
+          data-collapsed={collapsed || undefined}
+          key={item.labelKey}
+          href={item.url || "#"}
+          onClick={(e) => handleLinkClick(e, item.url || "#")}
+        >
+          {collapsed ? (
+            <Icon
+              className={classes.linkIcon}
+              stroke={2}
+              style={{ width: "28px", height: "28px" }}
+              color={item.color ? item.color : undefined}
+            />
+          ) : (
+            <Group gap="xs">
               <Icon
                 className={classes.linkIcon}
                 stroke={2}
                 style={{ width: "28px", height: "28px" }}
                 color={item.color ? item.color : undefined}
               />
-            ) : (
-              <Group gap="xs">
-                <Icon
-                  className={classes.linkIcon}
-                  stroke={2}
-                  style={{ width: "28px", height: "28px" }}
-                  color={item.color ? item.color : undefined}
-                />
-                <span>{t(item.labelKey)}</span>
-              </Group>
-            )}
-          </Link>
+              <span>{t(item.labelKey)}</span>
+            </Group>
+          )}
+        </Link>
+      );
+
+      if (collapsed) {
+        return (
+          <Tooltip
+            key={item.labelKey}
+            label={t(item.labelKey)}
+            position="right"
+            withArrow
+          >
+            {linkContent}
+          </Tooltip>
         );
+      }
 
-        if (collapsed) {
-          return (
-            <Tooltip
-              key={item.labelKey}
-              label={t(item.labelKey)}
-              position="right"
-              withArrow
-            >
-              {linkContent}
-            </Tooltip>
-          );
-        }
-
-        return linkContent;
-      });
+      return linkContent;
+    });
 
     return (
       <div key={section.titleKey}>

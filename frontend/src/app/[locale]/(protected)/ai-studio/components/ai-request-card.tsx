@@ -7,13 +7,16 @@ import {
   Avatar,
   Badge,
   Box,
+  Button,
   Card,
   Center,
+  Flex,
   Group,
+  Progress,
   Stack,
   Text,
 } from "@mantine/core";
-import { IconSparkles, IconTrash } from "@tabler/icons-react";
+import { IconEye, IconTrash } from "@tabler/icons-react";
 import { useFormatter, useNow, useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
@@ -38,90 +41,103 @@ export function AiRequestCard({ aiRequest }: Props) {
   const follower = aiRequest.follower;
   const recording = aiRequest.recording;
   const isRecordingDeleted = !recording;
+  const state = aiRequest.state || "pending";
+
+  const renderStatus = () => {
+    const isAnimated = state === "pending" || state === "processing";
+
+    return (
+      <Progress.Root size={40} radius="md">
+        <Progress.Section
+          value={100}
+          color={stateColors[state]}
+          animated={isAnimated}
+        >
+          <Progress.Label lh={1.4}>{t(`state.${state}`)}</Progress.Label>
+        </Progress.Section>
+      </Progress.Root>
+    );
+  };
 
   return (
-    <Card padding="md" radius="md" withBorder>
-      {/* Video Preview */}
-      <Box pos="relative" style={{ aspectRatio: "16/9" }} mb="sm">
-        {isRecordingDeleted ? (
-          <Center
-            h="100%"
-            bg="dark.6"
-            style={{ borderRadius: "var(--mantine-radius-md)" }}
-          >
-            <Stack align="center" gap="xs">
-              <IconTrash size={32} color="var(--mantine-color-gray-6)" />
-              <Text size="sm" c="dimmed">
-                {t("recordingDeleted.badge")}
-              </Text>
-            </Stack>
-          </Center>
-        ) : (
-          <MiniPlayer documentId={recording?.documentId!} />
-        )}
-        <Badge
-          color={stateColors[aiRequest.state || "pending"]}
-          variant="filled"
-          size="sm"
-          pos="absolute"
-          top={8}
-          right={8}
-          style={{ zIndex: 10 }}
-        >
-          {t(`state.${aiRequest.state || "pending"}`)}
-        </Badge>
-      </Box>
-
-      {/* Info */}
-      <Link
-        href={`/ai-studio/${aiRequest.documentId}`}
-        style={{ textDecoration: "none", color: "inherit" }}
-      >
-        <Group justify="space-between" wrap="nowrap">
+    <Card radius="md" withBorder>
+      <Stack gap="xs">
+        {/* Header: Avatar, username, time, options */}
+        <Flex justify="space-between" align="center">
           <Group gap="sm" wrap="nowrap">
-            <Avatar size={40} radius="xl">
+            <Avatar size={36} radius="xl">
               {follower?.avatar?.url && (
                 <Image
                   src={generateAvatarUrl(follower.avatar.url)}
                   alt={follower.username || "Avatar"}
-                  width={40}
-                  height={40}
+                  width={36}
+                  height={36}
                 />
               )}
             </Avatar>
-            <Stack gap={2}>
-              <Group gap="xs">
-                <IconSparkles size={14} color="var(--mantine-color-violet-6)" />
-                <Text fw={500} size="sm" truncate maw={120}>
-                  {follower?.username || t("unknownCreator")}
-                </Text>
-              </Group>
+            <Stack gap={0}>
+              <Text fw={500} size="sm" truncate maw={140}>
+                {follower?.username || t("unknownCreator")}
+              </Text>
               <Text size="xs" c="dimmed" suppressHydrationWarning>
-                {t("createdAgo", {
-                  time: safeRelativeTime(format, aiRequest.createdAt, { now }),
-                })}
+                {safeRelativeTime(format, aiRequest.createdAt, { now })}
               </Text>
             </Stack>
           </Group>
-          <Group gap="xs" mt="xs">
+          <Group gap={4}>
             {aiRequest.generateClips && (
-              <Badge variant="outline" size="xs">
+              <Badge variant="light" size="xs">
                 {t("options.clips")}
               </Badge>
             )}
             {aiRequest.generateMemes && (
-              <Badge variant="outline" size="xs">
+              <Badge variant="light" size="xs">
                 {t("options.memes")}
               </Badge>
             )}
             {aiRequest.generateProfile && (
-              <Badge variant="outline" size="xs">
+              <Badge variant="light" size="xs">
                 {t("options.profile")}
               </Badge>
             )}
           </Group>
-        </Group>
-      </Link>
+        </Flex>
+
+        {/* Video Preview */}
+        <Box pos="relative" style={{ aspectRatio: "16/9" }}>
+          {isRecordingDeleted ? (
+            <Center
+              h="100%"
+              bg="dark.6"
+              style={{ borderRadius: "var(--mantine-radius-md)" }}
+            >
+              <Stack align="center" gap="xs">
+                <IconTrash size={32} color="var(--mantine-color-gray-6)" />
+                <Text size="sm" c="dimmed">
+                  {t("recordingDeleted.badge")}
+                </Text>
+              </Stack>
+            </Center>
+          ) : (
+            <MiniPlayer documentId={recording?.documentId!} />
+          )}
+        </Box>
+
+        {/* Status and View Details */}
+        <Stack gap="xs">
+          {renderStatus()}
+          <Button
+            component={Link}
+            href={`/ai-studio/${aiRequest.documentId}`}
+            size="md"
+            variant="light"
+            leftSection={<IconEye size={18} />}
+            fullWidth
+          >
+            {t("viewDetails")}
+          </Button>
+        </Stack>
+      </Stack>
     </Card>
   );
 }
