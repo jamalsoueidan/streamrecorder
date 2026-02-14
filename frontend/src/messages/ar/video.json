@@ -9,6 +9,9 @@
     "name": "تسجيل بث {creatorName} - {recordedDate}",
     "description": "بث مباشر مسجل من {creatorName} في {recordedDate}"
   },
+  "watch": {
+    "title": "شاهد بث {username} المباشر - {date}"
+  },
   "backToProfile": "العودة إلى الملف الشخصي لـ {username}",
   "otherRecordingsBy": "تسجيلات أخرى بواسطة {username}"
 }

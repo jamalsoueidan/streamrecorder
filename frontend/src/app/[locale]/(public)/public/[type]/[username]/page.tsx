@@ -235,7 +235,7 @@ export default async function Page({ params }: PageProps) {
 
             <Stack gap="0">
               <Group>
-                <Title>{follower.nickname}</Title>
+                <Title order={1}>{follower.username}</Title>
                 <Tooltip label={follower.type}>
                   <FollowerTypeIcon
                     color="transparent"
@@ -247,6 +247,11 @@ export default async function Page({ params }: PageProps) {
                   <CountryFlag countryCode={follower.countryCode} size={30} />
                 )}
               </Group>
+              {follower.nickname && (
+                <Title order={2} size="lg" fw={400} c="dimmed">
+                  {follower.nickname}
+                </Title>
+              )}
               <Text>
                 {follower.tagline ||
                   t("defaultTagline", { nickname: follower.nickname || "" })}
@@ -294,9 +299,9 @@ export default async function Page({ params }: PageProps) {
                 <Title order={2}>
                   {t("about", { nickname: follower.nickname || "" })}
                 </Title>
-                <Text c="dimmed" size="lg" mt="sm">
+                <Title order={2} size="lg" fw={400} c="dimmed" mt="sm">
                   {follower.description}
-                </Text>
+                </Title>
               </div>
             </Stack>
           ) : null}

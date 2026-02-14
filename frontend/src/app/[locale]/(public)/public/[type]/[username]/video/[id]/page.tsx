@@ -47,8 +47,7 @@ export async function generateMetadata({
   const format = await getFormatter();
 
   const platformName = type.charAt(0).toUpperCase() + type.slice(1);
-  const creatorName =
-    data.follower?.username || data.follower?.nickname || "unknown";
+  const creatorName = data.follower?.username || "unknown";
   const recordedDate = format.dateTime(new Date(data.createdAt || ""), {
     year: "numeric",
     month: "short",
@@ -145,8 +144,7 @@ export default async function VideoPage({ params }: PageProps) {
     0,
   );
 
-  const creatorName =
-    data.follower?.username || data.follower?.nickname || "Unknown";
+  const creatorName = data.follower?.username || "Unknown";
   const recordedDate = format.dateTime(new Date(data.createdAt || ""), {
     year: "numeric",
     month: "short",
@@ -219,7 +217,10 @@ export default async function VideoPage({ params }: PageProps) {
             "@type": "Person",
             name: creatorName,
             identifier: data.follower?.username,
-            alternateName: [data.follower?.nickname, `@${data.follower?.username}`].filter(Boolean),
+            alternateName: [
+              data.follower?.nickname,
+              `@${data.follower?.username}`,
+            ].filter(Boolean),
             url: profileUrl,
           },
         }),
@@ -248,7 +249,7 @@ export default async function VideoPage({ params }: PageProps) {
           />
 
           <Title order={1} c="dimmed" size="xl" fw="400">
-            {t("jsonLd.name", { creatorName, recordedDate })}
+            {t("watch.title", { username: creatorName, date: recordedDate })}
           </Title>
 
           <Button
