@@ -415,6 +415,44 @@ export default ({ env }) => ({
             },
           };
 
+          // Endpoint: GET/POST /ai-requests/me
+          draft.paths["/ai-requests/me"] = {
+            get: {
+              ...draft.paths["/ai-requests"]?.get,
+              operationId: "meGetAiRequests",
+              summary: "Get current user's AI requests",
+              security: [{ bearerAuth: [] }],
+              responses: {
+                ...draft.paths["/ai-requests"]?.get?.responses,
+                "401": { description: "Unauthorized" },
+              },
+            },
+            post: {
+              ...draft.paths["/ai-requests"]?.post,
+              operationId: "mePostAiRequests",
+              summary: "Create an AI request for current user",
+              security: [{ bearerAuth: [] }],
+              responses: {
+                ...draft.paths["/ai-requests"]?.post?.responses,
+                "401": { description: "Unauthorized" },
+              },
+            },
+          };
+
+          draft.paths["/ai-requests/me/{id}"] = {
+            get: {
+              ...draft.paths["/ai-requests/{id}"]?.get,
+              operationId: "meGetAiRequestsId",
+              summary: "Get a specific AI request for current user",
+              security: [{ bearerAuth: [] }],
+              responses: {
+                ...draft.paths["/ai-requests/{id}"]?.get?.responses,
+                "401": { description: "Unauthorized" },
+                "403": { description: "Forbidden - not your AI request" },
+              },
+            },
+          };
+
           // Fix populate parameter type for all GET endpoints
           Object.keys(draft.paths).forEach((path) => {
             const get = draft.paths[path]?.get;
