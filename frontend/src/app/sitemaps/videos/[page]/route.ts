@@ -58,8 +58,7 @@ export async function GET(
       const videoUrl = baseUrl + `/video/${r.documentId}/playlist.m3u8`;
       const thumbnailUrl = baseUrl + `/video/${r.documentId}/screenshot.jpg`;
 
-      const creatorName =
-        r.follower?.nickname || r.follower?.username || "Unknown";
+      const creatorName = r.follower?.username;
 
       const duration =
         r.sources?.reduce(
