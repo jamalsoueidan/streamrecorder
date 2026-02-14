@@ -20,10 +20,10 @@ import Link from "next/link";
 function SkeletonCard() {
   return (
     <Card withBorder padding="md" radius="md">
-      <Skeleton height={160} radius="md" mb="sm" />
+      <Skeleton height={160} radius="md" mb="sm" animate={false} />
       <Stack gap="xs">
-        <Skeleton height={14} width="60%" />
-        <Skeleton height={10} width="40%" />
+        <Skeleton height={14} width="60%" animate={false} />
+        <Skeleton height={10} width="40%" animate={false} />
       </Stack>
     </Card>
   );
@@ -34,8 +34,8 @@ export function UpgradeOverlay() {
 
   return (
     <Box pos="relative" w="100%" h="100%">
-      <Box style={{ filter: "blur(2px)", opacity: 0.6 }}>
-        <SimpleGrid cols={{ base: 1, md: 2 }} spacing="md">
+      <Box style={{ filter: "blur(2px)", opacity: 0.3 }}>
+        <SimpleGrid cols={2} spacing="md">
           <SkeletonCard />
           <SkeletonCard />
           <SkeletonCard />
@@ -50,7 +50,7 @@ export function UpgradeOverlay() {
           p="xl"
           pos="absolute"
           maw={500}
-          top="30%"
+          top="40%"
           left="50%"
           w="90%"
           style={{

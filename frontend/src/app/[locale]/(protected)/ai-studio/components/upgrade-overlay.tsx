@@ -23,17 +23,17 @@ function SkeletonCard() {
     <Card withBorder padding="md" radius="md">
       <Group justify="space-between" wrap="nowrap">
         <Group gap="sm" wrap="nowrap">
-          <Skeleton height={48} circle />
+          <Skeleton height={48} circle animate={false} />
           <Stack gap={4}>
-            <Skeleton height={14} width={120} />
-            <Skeleton height={10} width={80} />
+            <Skeleton height={14} width={120} animate={false} />
+            <Skeleton height={10} width={80} animate={false} />
           </Stack>
         </Group>
-        <Skeleton height={22} width={70} radius="xl" />
+        <Skeleton height={22} width={70} radius="xl" animate={false} />
       </Group>
       <Group gap="xs" mt="sm">
-        <Skeleton height={18} width={50} radius="xl" />
-        <Skeleton height={18} width={60} radius="xl" />
+        <Skeleton height={18} width={50} radius="xl" animate={false} />
+        <Skeleton height={18} width={60} radius="xl" animate={false} />
       </Group>
     </Card>
   );
@@ -44,8 +44,8 @@ export function UpgradeOverlay() {
 
   return (
     <Box pos="relative" w="100%" h="100%">
-      <Box style={{ filter: "blur(2px)", opacity: 0.6 }}>
-        <SimpleGrid cols={{ base: 1, md: 2 }} spacing="md">
+      <Box style={{ filter: "blur(2px)", opacity: 0.3 }}>
+        <SimpleGrid cols={2} spacing="md">
           <SkeletonCard />
           <SkeletonCard />
           <SkeletonCard />
