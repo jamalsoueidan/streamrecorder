@@ -6,7 +6,7 @@ export type AppAbility = MongoAbility;
 export type AppRules = RawRuleOf<AppAbility>[];
 
 export function buildRulesFromStrapi(
-  permissions: UsersPermissionsPermissionsTree
+  permissions: UsersPermissionsPermissionsTree,
 ): AppRules {
   const rules: AppRules = [];
 

@@ -492,12 +492,16 @@ export interface ActivityResponse {
 export interface AiRequestRequest {
   data: {
     /** @example "string or id" */
+    follower?: number | string;
+    /** @example "string or id" */
     recording?: number | string;
     generateClips?: boolean;
     generateMemes?: boolean;
     generateProfile?: boolean;
     state?: AiRequestRequestStateEnum;
     ai_tasks?: (number | string)[];
+    /** @example "string or id" */
+    user?: number | string;
     locale?: string;
     localizations?: (number | string)[];
   };
@@ -520,6 +524,384 @@ export interface AiRequestListResponse {
 export interface AiRequest {
   id?: string | number;
   documentId?: string;
+  follower?: {
+    id?: string | number;
+    documentId?: string;
+    nickname?: string;
+    username?: string;
+    type?: AiRequestTypeEnum;
+    gender?: AiRequestGenderEnum;
+    countryCode?: string;
+    languageCode?: string;
+    avatar?: {
+      id?: string | number;
+      documentId?: string;
+      name?: string;
+      alternativeText?: string;
+      caption?: string;
+      width?: number;
+      height?: number;
+      formats?: any;
+      hash?: string;
+      ext?: string;
+      mime?: string;
+      /** @format float */
+      size?: number;
+      url?: string;
+      previewUrl?: string;
+      provider?: string;
+      provider_metadata?: any;
+      related?: {
+        id?: string | number;
+        documentId?: string;
+      }[];
+      folder?: {
+        id?: string | number;
+        documentId?: string;
+        name?: string;
+        pathId?: number;
+        parent?: {
+          id?: string | number;
+          documentId?: string;
+        };
+        children?: {
+          id?: string | number;
+          documentId?: string;
+        }[];
+        files?: {
+          id?: string | number;
+          documentId?: string;
+          name?: string;
+          alternativeText?: string;
+          caption?: string;
+          width?: number;
+          height?: number;
+          formats?: any;
+          hash?: string;
+          ext?: string;
+          mime?: string;
+          /** @format float */
+          size?: number;
+          url?: string;
+          previewUrl?: string;
+          provider?: string;
+          provider_metadata?: any;
+          related?: {
+            id?: string | number;
+            documentId?: string;
+          }[];
+          folder?: {
+            id?: string | number;
+            documentId?: string;
+          };
+          folderPath?: string;
+          /** @format date-time */
+          createdAt?: string;
+          /** @format date-time */
+          updatedAt?: string;
+          /** @format date-time */
+          publishedAt?: string;
+          createdBy?: {
+            id?: string | number;
+            documentId?: string;
+            firstname?: string;
+            lastname?: string;
+            username?: string;
+            /** @format email */
+            email?: string;
+            resetPasswordToken?: string;
+            registrationToken?: string;
+            isActive?: boolean;
+            roles?: {
+              id?: string | number;
+              documentId?: string;
+              name?: string;
+              code?: string;
+              description?: string;
+              users?: {
+                id?: string | number;
+                documentId?: string;
+              }[];
+              permissions?: {
+                id?: string | number;
+                documentId?: string;
+                action?: string;
+                actionParameters?: any;
+                subject?: string;
+                properties?: any;
+                conditions?: any;
+                role?: {
+                  id?: string | number;
+                  documentId?: string;
+                };
+                /** @format date-time */
+                createdAt?: string;
+                /** @format date-time */
+                updatedAt?: string;
+                /** @format date-time */
+                publishedAt?: string;
+                createdBy?: {
+                  id?: string | number;
+                  documentId?: string;
+                };
+                updatedBy?: {
+                  id?: string | number;
+                  documentId?: string;
+                };
+                locale?: string;
+                localizations?: {
+                  id?: string | number;
+                  documentId?: string;
+                }[];
+              }[];
+              /** @format date-time */
+              createdAt?: string;
+              /** @format date-time */
+              updatedAt?: string;
+              /** @format date-time */
+              publishedAt?: string;
+              createdBy?: {
+                id?: string | number;
+                documentId?: string;
+              };
+              updatedBy?: {
+                id?: string | number;
+                documentId?: string;
+              };
+              locale?: string;
+              localizations?: {
+                id?: string | number;
+                documentId?: string;
+              }[];
+            }[];
+            blocked?: boolean;
+            preferedLanguage?: string;
+            /** @format date-time */
+            createdAt?: string;
+            /** @format date-time */
+            updatedAt?: string;
+            /** @format date-time */
+            publishedAt?: string;
+            createdBy?: {
+              id?: string | number;
+              documentId?: string;
+            };
+            updatedBy?: {
+              id?: string | number;
+              documentId?: string;
+            };
+            locale?: string;
+            localizations?: {
+              id?: string | number;
+              documentId?: string;
+            }[];
+          };
+          updatedBy?: {
+            id?: string | number;
+            documentId?: string;
+          };
+          locale?: string;
+          localizations?: {
+            id?: string | number;
+            documentId?: string;
+          }[];
+        }[];
+        path?: string;
+        /** @format date-time */
+        createdAt?: string;
+        /** @format date-time */
+        updatedAt?: string;
+        /** @format date-time */
+        publishedAt?: string;
+        createdBy?: {
+          id?: string | number;
+          documentId?: string;
+        };
+        updatedBy?: {
+          id?: string | number;
+          documentId?: string;
+        };
+        locale?: string;
+        localizations?: {
+          id?: string | number;
+          documentId?: string;
+        }[];
+      };
+      folderPath?: string;
+      /** @format date-time */
+      createdAt?: string;
+      /** @format date-time */
+      updatedAt?: string;
+      /** @format date-time */
+      publishedAt?: string;
+      createdBy?: {
+        id?: string | number;
+        documentId?: string;
+      };
+      updatedBy?: {
+        id?: string | number;
+        documentId?: string;
+      };
+      locale?: string;
+      localizations?: {
+        id?: string | number;
+        documentId?: string;
+      }[];
+    };
+    /** @format date-time */
+    lastCheckedAt?: string;
+    protected?: boolean;
+    pause?: boolean;
+    description?: string;
+    tagline?: string;
+    faq?: any;
+    category?: string;
+    migration?: number;
+    owner?: {
+      id?: string | number;
+      documentId?: string;
+      username?: string;
+      /** @format email */
+      email?: string;
+      provider?: string;
+      resetPasswordToken?: string;
+      confirmationToken?: string;
+      confirmed?: boolean;
+      blocked?: boolean;
+      role?: {
+        id?: string | number;
+        documentId?: string;
+        name?: string;
+        description?: string;
+        type?: string;
+        permissions?: {
+          id?: string | number;
+          documentId?: string;
+          action?: string;
+          role?: {
+            id?: string | number;
+            documentId?: string;
+          };
+          /** @format date-time */
+          createdAt?: string;
+          /** @format date-time */
+          updatedAt?: string;
+          /** @format date-time */
+          publishedAt?: string;
+          createdBy?: {
+            id?: string | number;
+            documentId?: string;
+          };
+          updatedBy?: {
+            id?: string | number;
+            documentId?: string;
+          };
+          locale?: string;
+          localizations?: {
+            id?: string | number;
+            documentId?: string;
+          }[];
+        }[];
+        users?: {
+          id?: string | number;
+          documentId?: string;
+        }[];
+        /** @format date-time */
+        createdAt?: string;
+        /** @format date-time */
+        updatedAt?: string;
+        /** @format date-time */
+        publishedAt?: string;
+        createdBy?: {
+          id?: string | number;
+          documentId?: string;
+        };
+        updatedBy?: {
+          id?: string | number;
+          documentId?: string;
+        };
+        locale?: string;
+        localizations?: {
+          id?: string | number;
+          documentId?: string;
+        }[];
+      };
+      followers?: {
+        id?: string | number;
+        documentId?: string;
+      }[];
+      tiktok?: {
+        id?: string | number;
+        documentId?: string;
+        openId?: string;
+        accessToken?: string;
+        refreshToken?: string;
+        /** @format date-time */
+        expiresAt?: string;
+        user?: {
+          id?: string | number;
+          documentId?: string;
+        };
+        /** @format date-time */
+        createdAt?: string;
+        /** @format date-time */
+        updatedAt?: string;
+        /** @format date-time */
+        publishedAt?: string;
+        createdBy?: {
+          id?: string | number;
+          documentId?: string;
+        };
+        updatedBy?: {
+          id?: string | number;
+          documentId?: string;
+        };
+        locale?: string;
+        localizations?: {
+          id?: string | number;
+          documentId?: string;
+        }[];
+      };
+      /** @format date-time */
+      createdAt?: string;
+      /** @format date-time */
+      updatedAt?: string;
+      /** @format date-time */
+      publishedAt?: string;
+      createdBy?: {
+        id?: string | number;
+        documentId?: string;
+      };
+      updatedBy?: {
+        id?: string | number;
+        documentId?: string;
+      };
+      locale?: string;
+      localizations?: {
+        id?: string | number;
+        documentId?: string;
+      }[];
+    };
+    /** @format date-time */
+    createdAt?: string;
+    /** @format date-time */
+    updatedAt?: string;
+    /** @format date-time */
+    publishedAt?: string;
+    createdBy?: {
+      id?: string | number;
+      documentId?: string;
+    };
+    updatedBy?: {
+      id?: string | number;
+      documentId?: string;
+    };
+    locale?: string;
+    localizations?: {
+      id?: string | number;
+      documentId?: string;
+    }[];
+  };
   recording?: {
     id?: string | number;
     documentId?: string;
@@ -528,10 +910,221 @@ export interface AiRequest {
     follower?: {
       id?: string | number;
       documentId?: string;
+    };
+    sources?: {
+      id?: string | number;
+      documentId?: string;
+      state?: AiRequestStateEnum;
+      executionId?: number;
+      /** @format date-time */
+      finishedAt?: string;
+      path?: string;
+      /** @format float */
+      duration?: number;
+      thumbnailInterval?: number;
+      thumbnailCols?: number;
+      videoOriginal?: VideosVideoComponent;
+      videoSmall?: VideosVideoComponent;
+      recording?: {
+        id?: string | number;
+        documentId?: string;
+      };
+      /** @format date-time */
+      createdAt?: string;
+      /** @format date-time */
+      updatedAt?: string;
+      /** @format date-time */
+      publishedAt?: string;
+      createdBy?: {
+        id?: string | number;
+        documentId?: string;
+      };
+      updatedBy?: {
+        id?: string | number;
+        documentId?: string;
+      };
+      locale?: string;
+      localizations?: {
+        id?: string | number;
+        documentId?: string;
+      }[];
+    }[];
+    hidden?: boolean;
+    /** @format date-time */
+    createdAt?: string;
+    /** @format date-time */
+    updatedAt?: string;
+    /** @format date-time */
+    publishedAt?: string;
+    createdBy?: {
+      id?: string | number;
+      documentId?: string;
+    };
+    updatedBy?: {
+      id?: string | number;
+      documentId?: string;
+    };
+    locale?: string;
+    localizations?: {
+      id?: string | number;
+      documentId?: string;
+    }[];
+  };
+  generateClips?: boolean;
+  generateMemes?: boolean;
+  generateProfile?: boolean;
+  state?: AiRequestStateEnum1;
+  ai_tasks?: {
+    id?: string | number;
+    documentId?: string;
+    ai_request?: {
+      id?: string | number;
+      documentId?: string;
+      follower?: {
+        id?: string | number;
+        documentId?: string;
+      };
+      recording?: {
+        id?: string | number;
+        documentId?: string;
+      };
+      generateClips?: boolean;
+      generateMemes?: boolean;
+      generateProfile?: boolean;
+      state?: AiRequestStateEnum2;
+      ai_tasks?: {
+        id?: string | number;
+        documentId?: string;
+      }[];
+      user?: {
+        id?: string | number;
+        documentId?: string;
+      };
+      /** @format date-time */
+      createdAt?: string;
+      /** @format date-time */
+      updatedAt?: string;
+      /** @format date-time */
+      publishedAt?: string;
+      createdBy?: {
+        id?: string | number;
+        documentId?: string;
+      };
+      updatedBy?: {
+        id?: string | number;
+        documentId?: string;
+      };
+      locale?: string;
+      localizations?: {
+        id?: string | number;
+        documentId?: string;
+      }[];
+    };
+    type?: string;
+    state?: AiRequestStateEnum3;
+    output?: any;
+    executionId?: number;
+    /** @format date-time */
+    createdAt?: string;
+    /** @format date-time */
+    updatedAt?: string;
+    /** @format date-time */
+    publishedAt?: string;
+    createdBy?: {
+      id?: string | number;
+      documentId?: string;
+    };
+    updatedBy?: {
+      id?: string | number;
+      documentId?: string;
+    };
+    locale?: string;
+    localizations?: {
+      id?: string | number;
+      documentId?: string;
+    }[];
+  }[];
+  user?: {
+    id?: string | number;
+    documentId?: string;
+  };
+  /** @format date-time */
+  createdAt?: string;
+  /** @format date-time */
+  updatedAt?: string;
+  /** @format date-time */
+  publishedAt?: string;
+  createdBy?: {
+    id?: string | number;
+    documentId?: string;
+  };
+  updatedBy?: {
+    id?: string | number;
+    documentId?: string;
+  };
+  locale?: string;
+  localizations?: {
+    id?: string | number;
+    documentId?: string;
+  }[];
+}
+
+export interface AiRequestResponse {
+  data?: AiRequest;
+  meta?: object;
+}
+
+export interface VideosVideoComponent {
+  id?: string | number;
+  width?: number;
+  height?: number;
+  /**
+   * @pattern ^\d*$
+   * @example "123456789"
+   */
+  sizeBytes?: string;
+}
+
+export interface AiTaskRequest {
+  data: {
+    /** @example "string or id" */
+    ai_request?: number | string;
+    type?: string;
+    state?: AiTaskRequestStateEnum;
+    output?: any;
+    executionId?: number;
+    locale?: string;
+    localizations?: (number | string)[];
+  };
+}
+
+export interface AiTaskListResponse {
+  data?: AiTask[];
+  meta?: {
+    pagination?: {
+      page?: number;
+      /** @min 25 */
+      pageSize?: number;
+      /** @max 1 */
+      pageCount?: number;
+      total?: number;
+    };
+  };
+}
+
+export interface AiTask {
+  id?: string | number;
+  documentId?: string;
+  ai_request?: {
+    id?: string | number;
+    documentId?: string;
+    follower?: {
+      id?: string | number;
+      documentId?: string;
       nickname?: string;
       username?: string;
-      type?: AiRequestTypeEnum;
-      gender?: AiRequestGenderEnum;
+      type?: AiTaskTypeEnum;
+      gender?: AiTaskGenderEnum;
       countryCode?: string;
       languageCode?: string;
       avatar?: {
@@ -903,201 +1496,6 @@ export interface AiRequest {
         documentId?: string;
       }[];
     };
-    sources?: {
-      id?: string | number;
-      documentId?: string;
-      state?: AiRequestStateEnum;
-      executionId?: number;
-      /** @format date-time */
-      finishedAt?: string;
-      path?: string;
-      /** @format float */
-      duration?: number;
-      thumbnailInterval?: number;
-      thumbnailCols?: number;
-      videoOriginal?: VideosVideoComponent;
-      videoSmall?: VideosVideoComponent;
-      recording?: {
-        id?: string | number;
-        documentId?: string;
-      };
-      /** @format date-time */
-      createdAt?: string;
-      /** @format date-time */
-      updatedAt?: string;
-      /** @format date-time */
-      publishedAt?: string;
-      createdBy?: {
-        id?: string | number;
-        documentId?: string;
-      };
-      updatedBy?: {
-        id?: string | number;
-        documentId?: string;
-      };
-      locale?: string;
-      localizations?: {
-        id?: string | number;
-        documentId?: string;
-      }[];
-    }[];
-    hidden?: boolean;
-    /** @format date-time */
-    createdAt?: string;
-    /** @format date-time */
-    updatedAt?: string;
-    /** @format date-time */
-    publishedAt?: string;
-    createdBy?: {
-      id?: string | number;
-      documentId?: string;
-    };
-    updatedBy?: {
-      id?: string | number;
-      documentId?: string;
-    };
-    locale?: string;
-    localizations?: {
-      id?: string | number;
-      documentId?: string;
-    }[];
-  };
-  generateClips?: boolean;
-  generateMemes?: boolean;
-  generateProfile?: boolean;
-  state?: AiRequestStateEnum1;
-  ai_tasks?: {
-    id?: string | number;
-    documentId?: string;
-    ai_request?: {
-      id?: string | number;
-      documentId?: string;
-      recording?: {
-        id?: string | number;
-        documentId?: string;
-      };
-      generateClips?: boolean;
-      generateMemes?: boolean;
-      generateProfile?: boolean;
-      state?: AiRequestStateEnum2;
-      ai_tasks?: {
-        id?: string | number;
-        documentId?: string;
-      }[];
-      /** @format date-time */
-      createdAt?: string;
-      /** @format date-time */
-      updatedAt?: string;
-      /** @format date-time */
-      publishedAt?: string;
-      createdBy?: {
-        id?: string | number;
-        documentId?: string;
-      };
-      updatedBy?: {
-        id?: string | number;
-        documentId?: string;
-      };
-      locale?: string;
-      localizations?: {
-        id?: string | number;
-        documentId?: string;
-      }[];
-    };
-    type?: string;
-    state?: AiRequestStateEnum3;
-    output?: any;
-    executionId?: number;
-    /** @format date-time */
-    createdAt?: string;
-    /** @format date-time */
-    updatedAt?: string;
-    /** @format date-time */
-    publishedAt?: string;
-    createdBy?: {
-      id?: string | number;
-      documentId?: string;
-    };
-    updatedBy?: {
-      id?: string | number;
-      documentId?: string;
-    };
-    locale?: string;
-    localizations?: {
-      id?: string | number;
-      documentId?: string;
-    }[];
-  }[];
-  /** @format date-time */
-  createdAt?: string;
-  /** @format date-time */
-  updatedAt?: string;
-  /** @format date-time */
-  publishedAt?: string;
-  createdBy?: {
-    id?: string | number;
-    documentId?: string;
-  };
-  updatedBy?: {
-    id?: string | number;
-    documentId?: string;
-  };
-  locale?: string;
-  localizations?: {
-    id?: string | number;
-    documentId?: string;
-  }[];
-}
-
-export interface AiRequestResponse {
-  data?: AiRequest;
-  meta?: object;
-}
-
-export interface VideosVideoComponent {
-  id?: string | number;
-  width?: number;
-  height?: number;
-  /**
-   * @pattern ^\d*$
-   * @example "123456789"
-   */
-  sizeBytes?: string;
-}
-
-export interface AiTaskRequest {
-  data: {
-    /** @example "string or id" */
-    ai_request?: number | string;
-    type?: string;
-    state?: AiTaskRequestStateEnum;
-    output?: any;
-    executionId?: number;
-    locale?: string;
-    localizations?: (number | string)[];
-  };
-}
-
-export interface AiTaskListResponse {
-  data?: AiTask[];
-  meta?: {
-    pagination?: {
-      page?: number;
-      /** @min 25 */
-      pageSize?: number;
-      /** @max 1 */
-      pageCount?: number;
-      total?: number;
-    };
-  };
-}
-
-export interface AiTask {
-  id?: string | number;
-  documentId?: string;
-  ai_request?: {
-    id?: string | number;
-    documentId?: string;
     recording?: {
       id?: string | number;
       documentId?: string;
@@ -1106,380 +1504,6 @@ export interface AiTask {
       follower?: {
         id?: string | number;
         documentId?: string;
-        nickname?: string;
-        username?: string;
-        type?: AiTaskTypeEnum;
-        gender?: AiTaskGenderEnum;
-        countryCode?: string;
-        languageCode?: string;
-        avatar?: {
-          id?: string | number;
-          documentId?: string;
-          name?: string;
-          alternativeText?: string;
-          caption?: string;
-          width?: number;
-          height?: number;
-          formats?: any;
-          hash?: string;
-          ext?: string;
-          mime?: string;
-          /** @format float */
-          size?: number;
-          url?: string;
-          previewUrl?: string;
-          provider?: string;
-          provider_metadata?: any;
-          related?: {
-            id?: string | number;
-            documentId?: string;
-          }[];
-          folder?: {
-            id?: string | number;
-            documentId?: string;
-            name?: string;
-            pathId?: number;
-            parent?: {
-              id?: string | number;
-              documentId?: string;
-            };
-            children?: {
-              id?: string | number;
-              documentId?: string;
-            }[];
-            files?: {
-              id?: string | number;
-              documentId?: string;
-              name?: string;
-              alternativeText?: string;
-              caption?: string;
-              width?: number;
-              height?: number;
-              formats?: any;
-              hash?: string;
-              ext?: string;
-              mime?: string;
-              /** @format float */
-              size?: number;
-              url?: string;
-              previewUrl?: string;
-              provider?: string;
-              provider_metadata?: any;
-              related?: {
-                id?: string | number;
-                documentId?: string;
-              }[];
-              folder?: {
-                id?: string | number;
-                documentId?: string;
-              };
-              folderPath?: string;
-              /** @format date-time */
-              createdAt?: string;
-              /** @format date-time */
-              updatedAt?: string;
-              /** @format date-time */
-              publishedAt?: string;
-              createdBy?: {
-                id?: string | number;
-                documentId?: string;
-                firstname?: string;
-                lastname?: string;
-                username?: string;
-                /** @format email */
-                email?: string;
-                resetPasswordToken?: string;
-                registrationToken?: string;
-                isActive?: boolean;
-                roles?: {
-                  id?: string | number;
-                  documentId?: string;
-                  name?: string;
-                  code?: string;
-                  description?: string;
-                  users?: {
-                    id?: string | number;
-                    documentId?: string;
-                  }[];
-                  permissions?: {
-                    id?: string | number;
-                    documentId?: string;
-                    action?: string;
-                    actionParameters?: any;
-                    subject?: string;
-                    properties?: any;
-                    conditions?: any;
-                    role?: {
-                      id?: string | number;
-                      documentId?: string;
-                    };
-                    /** @format date-time */
-                    createdAt?: string;
-                    /** @format date-time */
-                    updatedAt?: string;
-                    /** @format date-time */
-                    publishedAt?: string;
-                    createdBy?: {
-                      id?: string | number;
-                      documentId?: string;
-                    };
-                    updatedBy?: {
-                      id?: string | number;
-                      documentId?: string;
-                    };
-                    locale?: string;
-                    localizations?: {
-                      id?: string | number;
-                      documentId?: string;
-                    }[];
-                  }[];
-                  /** @format date-time */
-                  createdAt?: string;
-                  /** @format date-time */
-                  updatedAt?: string;
-                  /** @format date-time */
-                  publishedAt?: string;
-                  createdBy?: {
-                    id?: string | number;
-                    documentId?: string;
-                  };
-                  updatedBy?: {
-                    id?: string | number;
-                    documentId?: string;
-                  };
-                  locale?: string;
-                  localizations?: {
-                    id?: string | number;
-                    documentId?: string;
-                  }[];
-                }[];
-                blocked?: boolean;
-                preferedLanguage?: string;
-                /** @format date-time */
-                createdAt?: string;
-                /** @format date-time */
-                updatedAt?: string;
-                /** @format date-time */
-                publishedAt?: string;
-                createdBy?: {
-                  id?: string | number;
-                  documentId?: string;
-                };
-                updatedBy?: {
-                  id?: string | number;
-                  documentId?: string;
-                };
-                locale?: string;
-                localizations?: {
-                  id?: string | number;
-                  documentId?: string;
-                }[];
-              };
-              updatedBy?: {
-                id?: string | number;
-                documentId?: string;
-              };
-              locale?: string;
-              localizations?: {
-                id?: string | number;
-                documentId?: string;
-              }[];
-            }[];
-            path?: string;
-            /** @format date-time */
-            createdAt?: string;
-            /** @format date-time */
-            updatedAt?: string;
-            /** @format date-time */
-            publishedAt?: string;
-            createdBy?: {
-              id?: string | number;
-              documentId?: string;
-            };
-            updatedBy?: {
-              id?: string | number;
-              documentId?: string;
-            };
-            locale?: string;
-            localizations?: {
-              id?: string | number;
-              documentId?: string;
-            }[];
-          };
-          folderPath?: string;
-          /** @format date-time */
-          createdAt?: string;
-          /** @format date-time */
-          updatedAt?: string;
-          /** @format date-time */
-          publishedAt?: string;
-          createdBy?: {
-            id?: string | number;
-            documentId?: string;
-          };
-          updatedBy?: {
-            id?: string | number;
-            documentId?: string;
-          };
-          locale?: string;
-          localizations?: {
-            id?: string | number;
-            documentId?: string;
-          }[];
-        };
-        /** @format date-time */
-        lastCheckedAt?: string;
-        protected?: boolean;
-        pause?: boolean;
-        description?: string;
-        tagline?: string;
-        faq?: any;
-        category?: string;
-        migration?: number;
-        owner?: {
-          id?: string | number;
-          documentId?: string;
-          username?: string;
-          /** @format email */
-          email?: string;
-          provider?: string;
-          resetPasswordToken?: string;
-          confirmationToken?: string;
-          confirmed?: boolean;
-          blocked?: boolean;
-          role?: {
-            id?: string | number;
-            documentId?: string;
-            name?: string;
-            description?: string;
-            type?: string;
-            permissions?: {
-              id?: string | number;
-              documentId?: string;
-              action?: string;
-              role?: {
-                id?: string | number;
-                documentId?: string;
-              };
-              /** @format date-time */
-              createdAt?: string;
-              /** @format date-time */
-              updatedAt?: string;
-              /** @format date-time */
-              publishedAt?: string;
-              createdBy?: {
-                id?: string | number;
-                documentId?: string;
-              };
-              updatedBy?: {
-                id?: string | number;
-                documentId?: string;
-              };
-              locale?: string;
-              localizations?: {
-                id?: string | number;
-                documentId?: string;
-              }[];
-            }[];
-            users?: {
-              id?: string | number;
-              documentId?: string;
-            }[];
-            /** @format date-time */
-            createdAt?: string;
-            /** @format date-time */
-            updatedAt?: string;
-            /** @format date-time */
-            publishedAt?: string;
-            createdBy?: {
-              id?: string | number;
-              documentId?: string;
-            };
-            updatedBy?: {
-              id?: string | number;
-              documentId?: string;
-            };
-            locale?: string;
-            localizations?: {
-              id?: string | number;
-              documentId?: string;
-            }[];
-          };
-          followers?: {
-            id?: string | number;
-            documentId?: string;
-          }[];
-          tiktok?: {
-            id?: string | number;
-            documentId?: string;
-            openId?: string;
-            accessToken?: string;
-            refreshToken?: string;
-            /** @format date-time */
-            expiresAt?: string;
-            user?: {
-              id?: string | number;
-              documentId?: string;
-            };
-            /** @format date-time */
-            createdAt?: string;
-            /** @format date-time */
-            updatedAt?: string;
-            /** @format date-time */
-            publishedAt?: string;
-            createdBy?: {
-              id?: string | number;
-              documentId?: string;
-            };
-            updatedBy?: {
-              id?: string | number;
-              documentId?: string;
-            };
-            locale?: string;
-            localizations?: {
-              id?: string | number;
-              documentId?: string;
-            }[];
-          };
-          /** @format date-time */
-          createdAt?: string;
-          /** @format date-time */
-          updatedAt?: string;
-          /** @format date-time */
-          publishedAt?: string;
-          createdBy?: {
-            id?: string | number;
-            documentId?: string;
-          };
-          updatedBy?: {
-            id?: string | number;
-            documentId?: string;
-          };
-          locale?: string;
-          localizations?: {
-            id?: string | number;
-            documentId?: string;
-          }[];
-        };
-        /** @format date-time */
-        createdAt?: string;
-        /** @format date-time */
-        updatedAt?: string;
-        /** @format date-time */
-        publishedAt?: string;
-        createdBy?: {
-          id?: string | number;
-          documentId?: string;
-        };
-        updatedBy?: {
-          id?: string | number;
-          documentId?: string;
-        };
-        locale?: string;
-        localizations?: {
-          id?: string | number;
-          documentId?: string;
-        }[];
       };
       sources?: {
         id?: string | number;
@@ -1575,6 +1599,10 @@ export interface AiTask {
         documentId?: string;
       }[];
     }[];
+    user?: {
+      id?: string | number;
+      documentId?: string;
+    };
     /** @format date-time */
     createdAt?: string;
     /** @format date-time */
@@ -7321,11 +7349,11 @@ export interface MeGetClipOneData {
 
 export type MePostClipSharesData = ClipShareResponse;
 
-export interface MeUpdateClipSharesIdParams {
+export interface MePutClipSharesIdParams {
   id: string;
 }
 
-export type MeUpdateClipSharesIdData = ClipShareResponse;
+export type MePutClipSharesIdData = ClipShareResponse;
 
 export interface MeDeleteClipSharesIdParams {
   id: string;
@@ -7333,6 +7361,39 @@ export interface MeDeleteClipSharesIdParams {
 
 /** @format int64 */
 export type MeDeleteClipSharesIdData = number;
+
+export interface MeGetAiRequestsParams {
+  /** Sort by attributes ascending (asc) or descending (desc) */
+  sort?: string;
+  /** Return page/pageSize (default: true) */
+  "pagination[withCount]"?: boolean;
+  /** Page number (default: 0) */
+  "pagination[page]"?: number;
+  /** Page size (default: 25) */
+  "pagination[pageSize]"?: number;
+  /** Offset value (default: 0) */
+  "pagination[start]"?: number;
+  /** Number of entities to return (default: 25) */
+  "pagination[limit]"?: number;
+  /** Fields to return (ex: title,author) */
+  fields?: string;
+  /** Relations to return */
+  populate?: string | string[] | object;
+  /** Filters to apply */
+  filters?: Record<string, any>;
+  /** Locale to apply */
+  locale?: string;
+}
+
+export type MeGetAiRequestsData = AiRequestListResponse;
+
+export type MePostAiRequestsData = AiRequestResponse;
+
+export interface MeGetAiRequestsIdParams {
+  id: string;
+}
+
+export type MeGetAiRequestsIdData = AiRequestResponse;
 
 export interface GetRandomClipsParams {
   /**
@@ -7622,6 +7683,77 @@ export namespace AiRequest {
     export type RequestBody = never;
     export type RequestHeaders = {};
     export type ResponseBody = DeleteAiRequestsIdData;
+  }
+
+  /**
+   * No description
+   * @tags Ai-request
+   * @name MeGetAiRequests
+   * @summary Get current user's AI requests
+   * @request GET:/ai-requests/me
+   * @secure
+   */
+  export namespace MeGetAiRequests {
+    export type RequestParams = {};
+    export type RequestQuery = {
+      /** Sort by attributes ascending (asc) or descending (desc) */
+      sort?: string;
+      /** Return page/pageSize (default: true) */
+      "pagination[withCount]"?: boolean;
+      /** Page number (default: 0) */
+      "pagination[page]"?: number;
+      /** Page size (default: 25) */
+      "pagination[pageSize]"?: number;
+      /** Offset value (default: 0) */
+      "pagination[start]"?: number;
+      /** Number of entities to return (default: 25) */
+      "pagination[limit]"?: number;
+      /** Fields to return (ex: title,author) */
+      fields?: string;
+      /** Relations to return */
+      populate?: string | string[] | object;
+      /** Filters to apply */
+      filters?: Record<string, any>;
+      /** Locale to apply */
+      locale?: string;
+    };
+    export type RequestBody = never;
+    export type RequestHeaders = {};
+    export type ResponseBody = MeGetAiRequestsData;
+  }
+
+  /**
+   * No description
+   * @tags Ai-request
+   * @name MePostAiRequests
+   * @summary Create an AI request for current user
+   * @request POST:/ai-requests/me
+   * @secure
+   */
+  export namespace MePostAiRequests {
+    export type RequestParams = {};
+    export type RequestQuery = {};
+    export type RequestBody = AiRequestRequest;
+    export type RequestHeaders = {};
+    export type ResponseBody = MePostAiRequestsData;
+  }
+
+  /**
+   * No description
+   * @tags Ai-request
+   * @name MeGetAiRequestsId
+   * @summary Get a specific AI request for current user
+   * @request GET:/ai-requests/me/{id}
+   * @secure
+   */
+  export namespace MeGetAiRequestsId {
+    export type RequestParams = {
+      id: string;
+    };
+    export type RequestQuery = {};
+    export type RequestBody = never;
+    export type RequestHeaders = {};
+    export type ResponseBody = MeGetAiRequestsIdData;
   }
 }
 
@@ -8240,19 +8372,19 @@ export namespace ClipShare {
   /**
    * No description
    * @tags Clip-share
-   * @name MeUpdateClipSharesId
+   * @name MePutClipSharesId
    * @summary Update current user's clip share
    * @request PUT:/clip-shares/me/{id}
    * @secure
    */
-  export namespace MeUpdateClipSharesId {
+  export namespace MePutClipSharesId {
     export type RequestParams = {
       id: string;
     };
     export type RequestQuery = {};
     export type RequestBody = ClipShareRequest;
     export type RequestHeaders = {};
-    export type ResponseBody = MeUpdateClipSharesIdData;
+    export type ResponseBody = MePutClipSharesIdData;
   }
 
   /**
@@ -10148,6 +10280,69 @@ export class Api<
         format: "json",
         ...params,
       }),
+
+    /**
+     * No description
+     *
+     * @tags Ai-request
+     * @name MeGetAiRequests
+     * @summary Get current user's AI requests
+     * @request GET:/ai-requests/me
+     * @secure
+     */
+    meGetAiRequests: (
+      query: MeGetAiRequestsParams,
+      params: RequestParams = {},
+    ) =>
+      this.request<MeGetAiRequestsData, Error | void>({
+        path: `/ai-requests/me`,
+        method: "GET",
+        query: query,
+        secure: true,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Ai-request
+     * @name MePostAiRequests
+     * @summary Create an AI request for current user
+     * @request POST:/ai-requests/me
+     * @secure
+     */
+    mePostAiRequests: (data: AiRequestRequest, params: RequestParams = {}) =>
+      this.request<MePostAiRequestsData, Error | void>({
+        path: `/ai-requests/me`,
+        method: "POST",
+        body: data,
+        secure: true,
+        type: ContentType.Json,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Ai-request
+     * @name MeGetAiRequestsId
+     * @summary Get a specific AI request for current user
+     * @request GET:/ai-requests/me/{id}
+     * @secure
+     */
+    meGetAiRequestsId: (
+      { id, ...query }: MeGetAiRequestsIdParams,
+      params: RequestParams = {},
+    ) =>
+      this.request<MeGetAiRequestsIdData, Error | void>({
+        path: `/ai-requests/me/${id}`,
+        method: "GET",
+        secure: true,
+        format: "json",
+        ...params,
+      }),
   };
   aiTask = {
     /**
@@ -10737,17 +10932,17 @@ export class Api<
      * No description
      *
      * @tags Clip-share
-     * @name MeUpdateClipSharesId
+     * @name MePutClipSharesId
      * @summary Update current user's clip share
      * @request PUT:/clip-shares/me/{id}
      * @secure
      */
-    meUpdateClipSharesId: (
-      { id, ...query }: MeUpdateClipSharesIdParams,
+    mePutClipSharesId: (
+      { id, ...query }: MePutClipSharesIdParams,
       data: ClipShareRequest,
       params: RequestParams = {},
     ) =>
-      this.request<MeUpdateClipSharesIdData, Error | void>({
+      this.request<MePutClipSharesIdData, Error | void>({
         path: `/clip-shares/me/${id}`,
         method: "PUT",
         body: data,

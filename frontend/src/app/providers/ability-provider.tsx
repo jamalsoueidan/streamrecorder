@@ -64,14 +64,16 @@ export function Can({ I: action, a: subject, not, children }: CanProps) {
 
 type RoleProps = {
   is: string | string[];
+  not?: boolean;
   children: ReactNode;
 };
 
-export function Role({ is, children }: RoleProps) {
+export function Role({ is, not, children }: RoleProps) {
   const role = useRole();
   const types = Array.isArray(is) ? is : [is];
+  const matches = types.includes(role?.type || "");
 
-  if (types.includes(role?.type || "")) {
+  if (not ? !matches : matches) {
     return <>{children}</>;
   }
 

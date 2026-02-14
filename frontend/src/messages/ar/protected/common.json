@@ -34,7 +34,8 @@
       "message": "هل أنت متأكد من حذف هذا الفيديو؟ لا يمكن التراجع عن هذا الإجراء.",
       "confirm": "حذف",
       "cancel": "إلغاء"
-    }
+    },
+    "createWithAI": "إنشاء مقاطع بالذكاء الاصطناعي"
   },
   "followers": {
     "addedAgo_context": "For when a creator was added to user's list. Shows 'Added 3 days ago'",

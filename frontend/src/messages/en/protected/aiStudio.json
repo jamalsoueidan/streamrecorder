@@ -1,0 +1,79 @@
+{
+  "title": "AI Studio",
+  "description": "Create clips and memes from your recordings with AI",
+  "unknownCreator": "Unknown Creator",
+  "unknownRecording": "Unknown Recording",
+  "recordingDeleted": {
+    "badge": "Recording deleted",
+    "title": "Recording Deleted",
+    "message": "The original recording has been deleted. You can still view the AI-generated content."
+  },
+  "createdAgo": "Created {time}",
+  "state": {
+    "pending": "Pending",
+    "processing": "Processing",
+    "completed": "Completed",
+    "failed": "Failed"
+  },
+  "options": {
+    "clips": "Clips",
+    "memes": "Memes",
+    "profile": "Profile"
+  },
+  "emptyState": {
+    "title": "No AI requests yet",
+    "description": "Go to your recordings and click the AI button to create clips and memes"
+  },
+  "create": {
+    "title": "Create AI Request",
+    "description": "Select what you want to generate from this recording",
+    "selectOptions": "What would you like to create?",
+    "options": {
+      "clips": {
+        "label": "Generate Clips",
+        "description": "AI will find the best moments and create short clips"
+      },
+      "memes": {
+        "label": "Generate Memes",
+        "description": "AI will create meme-worthy screenshots with captions"
+      },
+      "profile": {
+        "label": "Generate Profile",
+        "description": "AI will analyze and suggest profile improvements"
+      }
+    },
+    "sizeWarning": {
+      "title": "Video too large",
+      "message": "This video is {size}GB. Videos larger than 2GB need to be processed in parts."
+    },
+    "submit": "Start Processing"
+  },
+  "status": {
+    "title": "AI Request Status",
+    "description": "Track the progress of your AI request",
+    "progress": "Progress",
+    "tasks": "Tasks",
+    "state": {
+      "pending": "Pending",
+      "processing": "Processing",
+      "completed": "Completed",
+      "failed": "Failed"
+    },
+    "options": {
+      "clips": "Clips",
+      "memes": "Memes",
+      "profile": "Profile"
+    }
+  },
+  "upgrade": {
+    "title": "Turn Long Videos into Viral Clips",
+    "subtitle": "Let AI find the best moments from your recordings",
+    "features": {
+      "clips": "Auto-generate short clips from long recordings",
+      "memes": "Create viral memes with AI-generated captions",
+      "viral": "Optimized for TikTok, Reels, and Shorts"
+    },
+    "upgradeButton": "Upgrade Now",
+    "hint": "Unlock AI Studio with a premium subscription"
+  }
+}

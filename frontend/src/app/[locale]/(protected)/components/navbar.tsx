@@ -24,6 +24,7 @@ import {
   IconPlayerRecordFilled,
   IconScissors,
   IconSettings,
+  IconSparkles,
   IconUsers,
   IconVideo,
   IconWorldSearch,
@@ -69,6 +70,12 @@ export const navigation = [
         url: "/my-clips",
         icon: IconScissors,
         color: null,
+      },
+      {
+        labelKey: "links.aiStudio",
+        url: "/ai-studio",
+        icon: IconSparkles,
+        color: "violet",
       },
       {
         labelKey: "links.myList",
