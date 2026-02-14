@@ -139,29 +139,80 @@ export default async function Page({ params, searchParams }: PageProps) {
 
   const countryName = getCountryName(follower.countryCode);
 
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  const profileUrl = generateProfileUrl(follower, true);
+  const platformName = type.charAt(0).toUpperCase() + type.slice(1);
+
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Person",
-    name: follower.nickname || follower.username,
-    alternateName: `@${follower.username}`,
-    description: follower.tagline || follower.description,
-    image: generateAvatarUrl(follower.avatar?.url, true),
-    url: generateProfileUrl(follower, true),
-    ...(countryName && {
-      nationality: {
-        "@type": "Country",
-        name: countryName,
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            item: {
+              "@id": baseUrl,
+              name: "Home",
+            },
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            item: {
+              "@id": `${baseUrl}/creators/${type}`,
+              name: `${platformName} Creators`,
+            },
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            item: {
+              "@id": profileUrl,
+              name: follower.nickname || `@${follower.username}`,
+            },
+          },
+          {
+            "@type": "ListItem",
+            position: 4,
+            item: {
+              "@id": `${profileUrl}/memes`,
+              name: "Memes",
+            },
+          },
+        ],
       },
-    }),
-    sameAs: [getSocialUrl(follower)],
-    mainContentOfPage: {
-      "@type": "ItemList",
-      itemListElement: clips?.map((video, index) => ({
-        "@type": "ListItem",
-        position: index + 1,
-        url: `${generateProfileUrl(follower, true)}/clips/${video.documentId}`,
-      })),
-    },
+      {
+        "@type": "ProfilePage",
+        "@id": `${profileUrl}/memes`,
+        url: `${profileUrl}/memes`,
+        mainEntity: {
+          "@type": "Person",
+          "@id": `${profileUrl}#person`,
+          name: follower.username,
+          alternateName: [follower.nickname, `@${follower.username}`].filter(Boolean),
+          description: follower.tagline || follower.description,
+          image: generateAvatarUrl(follower.avatar?.url, true),
+          url: profileUrl,
+          ...(countryName && {
+            nationality: {
+              "@type": "Country",
+              name: countryName,
+            },
+          }),
+          sameAs: [getSocialUrl(follower)],
+        },
+        hasPart: clips?.length ? {
+          "@type": "ItemList",
+          itemListElement: clips.map((meme, index) => ({
+            "@type": "ListItem",
+            position: index + 1,
+            url: `${profileUrl}/memes/${meme.documentId}`,
+          })),
+        } : undefined,
+      },
+    ],
   };
 
   return (

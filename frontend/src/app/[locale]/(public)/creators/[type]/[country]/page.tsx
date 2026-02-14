@@ -123,49 +123,84 @@ export default async function Page({ params, searchParams }: PageProps) {
 
   const totalPages = meta?.pagination?.pageCount || 1;
 
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    name: t("country.title", {
-      platform: t(`hero.title.${platformKey}`),
-      country: countryName,
-    }),
-    description: t("country.description", {
-      platform: t(`hero.title.${platformKey}`),
-      country: countryName,
-    }),
-    url: `${process.env.NEXT_PUBLIC_BASE_URL}/creators/${type}/${country}`,
-    isPartOf: {
-      "@type": "WebSite",
-      name: "Live Stream Recorder",
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}`,
-    },
-    inLanguage: locale,
-    about: {
-      "@type": "Country",
-      name: countryName,
-    },
-    mainEntity: {
-      "@type": "ItemList",
-      numberOfItems: followers?.length || 0,
-      itemListElement: followers?.slice(0, 20).map((creator, index) => ({
-        "@type": "ListItem",
-        position: index + 1,
-        item: {
-          "@type": "Person",
-          name: creator.nickname || creator.username,
-          alternateName: `@${creator.username}`,
-          description: creator.tagline || creator.description,
-          image: generateAvatarUrl(creator.avatar?.url, true),
-          url: generateProfileUrl(creator, true),
-          nationality: {
-            "@type": "Country",
-            name: countryName,
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            item: {
+              "@id": baseUrl,
+              name: "Home",
+            },
           },
-          sameAs: [getSocialUrl(creator)],
+          {
+            "@type": "ListItem",
+            position: 2,
+            item: {
+              "@id": `${baseUrl}/creators/${type}`,
+              name: t(`hero.title.${platformKey}`),
+            },
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            item: {
+              "@id": `${baseUrl}/creators/${type}/${country}`,
+              name: countryName,
+            },
+          },
+        ],
+      },
+      {
+        "@type": "CollectionPage",
+        name: t("country.title", {
+          platform: t(`hero.title.${platformKey}`),
+          country: countryName,
+        }),
+        description: t("country.description", {
+          platform: t(`hero.title.${platformKey}`),
+          country: countryName,
+        }),
+        url: `${baseUrl}/creators/${type}/${country}`,
+        isPartOf: {
+          "@type": "WebSite",
+          name: "Live Stream Recorder",
+          url: baseUrl,
         },
-      })),
-    },
+        inLanguage: locale,
+        about: {
+          "@type": "Country",
+          name: countryName,
+        },
+        mainEntity: {
+          "@type": "ItemList",
+          numberOfItems: followers?.length || 0,
+          itemListElement: followers?.slice(0, 20).map((creator, index) => ({
+            "@type": "ListItem",
+            position: index + 1,
+            item: {
+              "@type": "Person",
+              name: creator.username,
+              alternateName: [creator.nickname, `@${creator.username}`].filter(Boolean),
+              description: creator.tagline || creator.description,
+              image: generateAvatarUrl(creator.avatar?.url, true),
+              url: generateProfileUrl(creator, true),
+              nationality: {
+                "@type": "Country",
+                name: countryName,
+              },
+              sameAs: [getSocialUrl(creator)],
+            },
+          })),
+        },
+      },
+    ],
   };
 
   return (

@@ -155,35 +155,76 @@ export default async function VideoPage({ params }: PageProps) {
     minute: "2-digit",
   });
 
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  const profileUrl = generateProfileUrl(data.follower, true);
+  const platformName = type.charAt(0).toUpperCase() + type.slice(1);
+  const videoUrl = `${profileUrl}/video/${data.documentId}`;
+
   const videoJsonLd = {
     "@context": "https://schema.org",
-    "@type": "VideoObject",
-    name: t("jsonLd.name", { creatorName, recordedDate }),
-    description: t("jsonLd.description", { creatorName, recordedDate }),
-    thumbnailUrl: `${
-      process.env.NEXT_PUBLIC_BASE_URL
-    }/video/${data.documentId}/screenshot.jpg`,
-    uploadDate: data.createdAt,
-    duration: `PT${Math.floor(duration / 60)}M${Math.round(duration % 60)}S`,
-    contentUrl: `${
-      process.env.NEXT_PUBLIC_BASE_URL
-    }/video/${data.documentId}/playlist.m3u8`,
-    embedUrl: `${generateProfileUrl(data.follower, true)}/video/${
-      data.documentId
-    }`,
-    publisher: {
-      "@type": "Organization",
-      name: "Live Stream Recorder",
-      url: process.env.NEXT_PUBLIC_BASE_URL,
-    },
-    ...(data.follower && {
-      author: {
-        "@type": "Person",
-        name: creatorName,
-        url: generateProfileUrl(data.follower, true),
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            item: {
+              "@id": baseUrl,
+              name: "Home",
+            },
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            item: {
+              "@id": `${baseUrl}/creators/${type}`,
+              name: `${platformName} Creators`,
+            },
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            item: {
+              "@id": profileUrl,
+              name: data.follower?.username || creatorName,
+            },
+          },
+          {
+            "@type": "ListItem",
+            position: 4,
+            item: {
+              "@id": videoUrl,
+              name: t("jsonLd.name", { creatorName, recordedDate }),
+            },
+          },
+        ],
       },
-    }),
-    inLanguage: locale,
+      {
+        "@type": "VideoObject",
+        name: t("jsonLd.name", { creatorName, recordedDate }),
+        description: t("jsonLd.description", { creatorName, recordedDate }),
+        thumbnailUrl: `${baseUrl}/video/${data.documentId}/screenshot.jpg`,
+        uploadDate: data.createdAt,
+        duration: `PT${Math.floor(duration / 60)}M${Math.round(duration % 60)}S`,
+        contentUrl: `${baseUrl}/video/${data.documentId}/playlist.m3u8`,
+        embedUrl: videoUrl,
+        publisher: {
+          "@type": "Organization",
+          name: "Live Stream Recorder",
+          url: baseUrl,
+        },
+        ...(data.follower && {
+          author: {
+            "@type": "Person",
+            name: creatorName,
+            alternateName: [data.follower?.nickname, `@${data.follower?.username}`].filter(Boolean),
+            url: profileUrl,
+          },
+        }),
+        inLanguage: locale,
+      },
+    ],
   };
 
   return (

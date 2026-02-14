@@ -112,8 +112,8 @@ export default async function ShortsPage({ params }: Props) {
     initialClips = [specificClip, ...randomClips];
 
     const creatorName =
-      specificClip.follower?.nickname ||
       specificClip.follower?.username ||
+      specificClip.follower?.nickname ||
       "Unknown";
     const createdDate = format.dateTime(
       new Date(specificClip.createdAt || ""),
@@ -146,6 +146,7 @@ export default async function ShortsPage({ params }: Props) {
         author: {
           "@type": "Person",
           name: creatorName,
+          alternateName: [specificClip.follower?.nickname, `@${specificClip.follower?.username}`].filter(Boolean),
           url: generateProfileUrl(specificClip.follower as never, true),
         },
       }),

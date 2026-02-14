@@ -120,36 +120,73 @@ export default async function Page({ params }: PageProps) {
 
   const profileUrl = generateProfileUrl(follower, true);
 
-  const personSchema = {
-    "@type": "Person",
-    "@id": `${profileUrl}#person`,
-    name: follower.nickname || follower.username,
-    alternateName: `@${follower.username}`,
-    description: follower.tagline || follower.description,
-    image: generateAvatarUrl(follower.avatar?.url, true),
-    url: profileUrl,
-    ...(countryName && {
-      nationality: {
-        "@type": "Country",
-        name: countryName,
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  const platformName = type.charAt(0).toUpperCase() + type.slice(1);
+
+  const breadcrumbSchema = {
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        item: {
+          "@id": baseUrl,
+          name: "Home",
+        },
       },
-    }),
-    sameAs: [getSocialUrl(follower)],
-    mainContentOfPage: {
+      {
+        "@type": "ListItem",
+        position: 2,
+        item: {
+          "@id": `${baseUrl}/creators/${type}`,
+          name: `${platformName} Creators`,
+        },
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        item: {
+          "@id": profileUrl,
+          name: follower.nickname || `@${follower.username}`,
+        },
+      },
+    ],
+  };
+
+  const profilePageSchema = {
+    "@type": "ProfilePage",
+    "@id": profileUrl,
+    url: profileUrl,
+    mainEntity: {
+      "@type": "Person",
+      "@id": `${profileUrl}#person`,
+      name: follower.username,
+      alternateName: [follower.nickname, `@${follower.username}`].filter(Boolean),
+      description: follower.tagline || follower.description,
+      image: generateAvatarUrl(follower.avatar?.url, true),
+      url: profileUrl,
+      ...(countryName && {
+        nationality: {
+          "@type": "Country",
+          name: countryName,
+        },
+      }),
+      sameAs: [getSocialUrl(follower)],
+    },
+    hasPart: recordings.length > 0 ? {
       "@type": "ItemList",
       itemListElement: recordings.slice(0, 5).map((video, index) => ({
         "@type": "ListItem",
         position: index + 1,
         url: `${profileUrl}/video/${video.documentId}`,
       })),
-    },
+    } : undefined,
   };
 
   const faqSchema = follower.faq?.length
     ? {
         "@type": "FAQPage",
-        "@id": `${profileUrl}#faq`,
-        about: { "@id": `${profileUrl}#person` },
+        name: `FAQ - ${follower.nickname || follower.username}`,
         mainEntity: follower.faq.map((item: { q: string; a: string }) => ({
           "@type": "Question",
           name: item.q,
@@ -163,7 +200,7 @@ export default async function Page({ params }: PageProps) {
 
   const jsonLd = {
     "@context": "https://schema.org",
-    "@graph": [personSchema, ...(faqSchema ? [faqSchema] : [])],
+    "@graph": [breadcrumbSchema, profilePageSchema, ...(faqSchema ? [faqSchema] : [])],
   };
 
   return (

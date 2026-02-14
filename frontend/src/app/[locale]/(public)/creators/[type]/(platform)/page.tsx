@@ -100,41 +100,68 @@ export default async function Page({ params, searchParams }: PageProps) {
     return regionNames.of(countryCode.toUpperCase());
   };
 
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    name: t(`meta.${platformKey}.title`),
-    description: t(`meta.${platformKey}.description`),
-    url: `${process.env.NEXT_PUBLIC_BASE_URL}/creators/${type}`,
-    isPartOf: {
-      "@type": "WebSite",
-      name: "Live Stream Recorder",
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}`,
-    },
-    inLanguage: locale,
-    mainEntity: {
-      "@type": "ItemList",
-      numberOfItems: followers?.length || 0,
-      itemListElement: followers?.slice(0, 20).map((creator, index) => ({
-        "@type": "ListItem",
-        position: index + 1,
-        item: {
-          "@type": "Person",
-          name: creator.nickname || creator.username,
-          alternateName: `@${creator.username}`,
-          description: creator.tagline || creator.description,
-          image: generateAvatarUrl(creator.avatar?.url, true),
-          url: generateProfileUrl(creator, true),
-          ...(getCountryName(creator.countryCode) && {
-            nationality: {
-              "@type": "Country",
-              name: getCountryName(creator.countryCode),
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            item: {
+              "@id": baseUrl,
+              name: "Home",
             },
-          }),
-          sameAs: [getSocialUrl(creator)],
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            item: {
+              "@id": `${baseUrl}/creators/${type}`,
+              name: t(`hero.title.${platformKey}`),
+            },
+          },
+        ],
+      },
+      {
+        "@type": "CollectionPage",
+        name: t(`meta.${platformKey}.title`),
+        description: t(`meta.${platformKey}.description`),
+        url: `${baseUrl}/creators/${type}`,
+        isPartOf: {
+          "@type": "WebSite",
+          name: "Live Stream Recorder",
+          url: baseUrl,
         },
-      })),
-    },
+        inLanguage: locale,
+        mainEntity: {
+          "@type": "ItemList",
+          numberOfItems: followers?.length || 0,
+          itemListElement: followers?.slice(0, 20).map((creator, index) => ({
+            "@type": "ListItem",
+            position: index + 1,
+            item: {
+              "@type": "Person",
+              name: creator.username,
+              alternateName: [creator.nickname, `@${creator.username}`].filter(Boolean),
+              description: creator.tagline || creator.description,
+              image: generateAvatarUrl(creator.avatar?.url, true),
+              url: generateProfileUrl(creator, true),
+              ...(getCountryName(creator.countryCode) && {
+                nationality: {
+                  "@type": "Country",
+                  name: getCountryName(creator.countryCode),
+                },
+              }),
+              sameAs: [getSocialUrl(creator)],
+            },
+          })),
+        },
+      },
+    ],
   };
 
   return (
