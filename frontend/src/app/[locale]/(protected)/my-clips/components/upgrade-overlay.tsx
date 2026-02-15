@@ -1,10 +1,8 @@
 "use client";
 
 import {
-  Box,
   Button,
   Card,
-  Center,
   List,
   SimpleGrid,
   Skeleton,
@@ -33,79 +31,88 @@ export function UpgradeOverlay() {
   const t = useTranslations("protected.myClips.upgrade");
 
   return (
-    <Box pos="relative" w="100%" h="100%" style={{ overflow: "hidden" }}>
+    <div style={{ position: "relative" }}>
       {/* Background skeleton cards */}
-      <Box
-        style={{ filter: "blur(2px)", opacity: 0.3, pointerEvents: "none" }}
+      <div
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          inset: 0,
+          overflow: "hidden",
+          filter: "blur(2px)",
+          opacity: 0.3,
+          pointerEvents: "none",
+        }}
       >
-        <SimpleGrid cols={{ base: 1, sm: 2 }} spacing="md">
-          <SkeletonCard />
-          <SkeletonCard />
+        <SimpleGrid cols={2} spacing="md">
           <SkeletonCard />
           <SkeletonCard />
         </SimpleGrid>
-      </Box>
+      </div>
 
-      {/* Centered upgrade card */}
-      <Center pos="absolute" top={0} left={0} right={0} bottom={0} pb={{ base: "10%", sm: "25%" }}>
-        <Card withBorder radius="lg" p="xl" maw={500} w="90%">
-          <Stack gap="lg" align="center">
-            <ThemeIcon
-              size={80}
-              radius="xl"
-              variant="gradient"
-              gradient={{ from: "pink", to: "violet" }}
-            >
-              <IconScissors size={40} />
-            </ThemeIcon>
+      {/* Upgrade card */}
+      <Card
+        withBorder
+        radius="lg"
+        p="xl"
+        maw={500}
+        mx="auto"
+        style={{ position: "relative", zIndex: 1 }}
+      >
+        <Stack gap="lg" align="center">
+          <ThemeIcon
+            size={80}
+            radius="xl"
+            variant="gradient"
+            gradient={{ from: "pink", to: "violet" }}
+          >
+            <IconScissors size={40} />
+          </ThemeIcon>
 
-            <Stack gap={4} align="center">
-              <Title order={2} ta="center">
-                {t("title")}
-              </Title>
-              <Text c="dimmed" ta="center" size="lg">
-                {t("subtitle")}
-              </Text>
-            </Stack>
+          <Title order={3} ta="center">
+            {t("title")}
+          </Title>
 
-            <List
-              spacing="sm"
-              center
-              icon={
-                <ThemeIcon color="green" size={24} radius="xl">
-                  <IconCheck size={16} />
-                </ThemeIcon>
-              }
-            >
-              <List.Item>
-                <Text>{t("features.publish")}</Text>
-              </List.Item>
-              <List.Item>
-                <Text>{t("features.schedule")}</Text>
-              </List.Item>
-              <List.Item>
-                <Text>{t("features.edit")}</Text>
-              </List.Item>
-            </List>
+          <List
+            spacing="sm"
+            center
+            icon={
+              <ThemeIcon color="green" size={24} radius="xl">
+                <IconCheck size={16} />
+              </ThemeIcon>
+            }
+          >
+            <List.Item>
+              <Text>{t("features.publish")}</Text>
+            </List.Item>
+            <List.Item>
+              <Text>{t("features.schedule")}</Text>
+            </List.Item>
+            <List.Item>
+              <Text>{t("features.edit")}</Text>
+            </List.Item>
+          </List>
 
-            <Button
-              component={Link}
-              href="/settings?upgrade=clips"
-              size="lg"
-              leftSection={<IconCrown size={20} />}
-              variant="gradient"
-              gradient={{ from: "pink", to: "violet" }}
-              fullWidth
-            >
-              {t("upgradeButton")}
-            </Button>
+          <Button
+            component={Link}
+            href="/settings?upgrade=clips"
+            size="lg"
+            leftSection={<IconCrown size={20} />}
+            variant="gradient"
+            gradient={{ from: "pink", to: "violet" }}
+            fullWidth
+          >
+            {t("upgradeButton")}
+          </Button>
 
-            <Text size="xs" c="dimmed" ta="center">
-              {t("hint")}
-            </Text>
-          </Stack>
-        </Card>
-      </Center>
-    </Box>
+          <Text size="xs" c="dimmed" ta="center">
+            {t("hint")}
+          </Text>
+        </Stack>
+      </Card>
+    </div>
   );
 }

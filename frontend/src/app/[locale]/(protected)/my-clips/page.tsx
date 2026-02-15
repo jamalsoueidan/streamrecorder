@@ -44,10 +44,7 @@ export default async function Page({ searchParams }: PageProps) {
   const totalPages = meta?.pagination?.pageCount || 1;
 
   return (
-    <Stack
-      w="100%"
-      h="calc(100vh - var(--app-shell-header-height, 0px) - var(--app-shell-footer-height, 0px) - var(--app-shell-padding) * 2)"
-    >
+    <Stack w="100%">
       <Flex justify="space-between" align="center">
         <Stack gap={2}>
           <Flex gap="xs" align="center">

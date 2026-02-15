@@ -67,12 +67,11 @@
     }
   },
   "upgrade": {
-    "title": "Turn Long Videos into Viral Clips",
-    "subtitle": "Let AI find the best moments from your recordings",
+    "title": "Your AI Video Studio",
     "features": {
-      "clips": "Auto-generate short clips from long recordings",
-      "memes": "Create viral memes with AI-generated captions",
-      "viral": "Optimized for TikTok, Reels, and Shorts"
+      "clips": "Smart clips from long recordings — ready to share",
+      "memes": "AI-generated memes and photos from your videos",
+      "viral": "Instant video translation in dozens of languages"
     },
     "upgradeButton": "Upgrade Now",
     "hint": "Unlock AI Studio with a premium subscription"

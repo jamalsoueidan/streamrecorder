@@ -142,7 +142,7 @@ export function Navbar({
   const links = navigation?.map((section) => {
     const html = section.links.map((item) => {
       const Icon = item.icon || IconPlayerRecordFilled;
-      const isActive = pathname.startsWith(item.url || "");
+      const isActive = pathname.includes(item.url || "");
 
       const linkContent = (
         <Link

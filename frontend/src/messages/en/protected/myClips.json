@@ -76,12 +76,11 @@
     "selfOnlyDisabledBranded": "Branded content visibility cannot be set to private"
   },
   "upgrade": {
-    "title": "Publish & Automate Your Clips",
-    "subtitle": "Share your content across social media platforms",
+    "title": "From recording to TikTok in seconds",
     "features": {
-      "publish": "Publish directly to TikTok, Reels, and Shorts",
-      "schedule": "Schedule posts and automate your content",
-      "edit": "Edit videos with captions and effects"
+      "publish": "Post directly to TikTok, Reels, and Shorts",
+      "schedule": "Schedule your clips — stay consistent on autopilot",
+      "edit": "Add captions, effects, and make it yours"
     },
     "upgradeButton": "Upgrade Now",
     "hint": "Unlock clip publishing with a premium subscription"

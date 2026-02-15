@@ -31,31 +31,4 @@ const serwist = new Serwist({
   ],
 });
 
-// Force reload all clients when new SW activates
-self.addEventListener("activate", (event) => {
-  event.waitUntil(
-    (async () => {
-      // Claim clients first so they're controlled by this SW
-      await self.clients.claim();
-
-      // includeUncontrolled ensures we find windows even if claim() is still propagating
-      const clients = await self.clients.matchAll({
-        type: "window",
-        includeUncontrolled: true,
-      });
-
-      for (const client of clients) {
-        if (client.url && "navigate" in client) {
-          try {
-            await (client as WindowClient).navigate(client.url);
-          } catch {
-            // Navigation can fail (e.g., client not in navigable state)
-            // Continue with other clients
-          }
-        }
-      }
-    })()
-  );
-});
-
 serwist.addEventListeners();
