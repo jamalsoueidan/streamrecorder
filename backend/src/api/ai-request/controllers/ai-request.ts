@@ -28,7 +28,7 @@ export default factories.createCoreController(
         }
 
         const data = ctx.request.body.data || {};
-        const recordingId = data.recording?.connect?.[0] || data.recording;
+        const recordingId = data.recording;
 
         if (!recordingId) {
           return ctx.badRequest("Recording is required");
@@ -45,13 +45,18 @@ export default factories.createCoreController(
           return ctx.badRequest("Recording or follower not found");
         }
 
-        ctx.request.body.data = {
-          ...data,
-          user: { connect: [user.documentId] },
-          follower: { connect: [recording.follower.documentId] },
-        };
+        const aiRequest = await strapi
+          .documents("api::ai-request.ai-request")
+          .create({
+            data: {
+              ...data,
+              recording: { connect: [recordingId] },
+              user: { connect: [user.documentId] },
+              follower: { connect: [recording.follower.documentId] },
+            },
+          });
 
-        return super.create(ctx);
+        return { data: aiRequest };
       },
 
       async meFind(ctx) {
@@ -79,7 +84,8 @@ export default factories.createCoreController(
 
         const pagination = (query.pagination || {}) as Record<string, unknown>;
         const page = Number(pagination.page) || 1;
-        const pageSize = Number(pagination.pageSize) || Number(pagination.limit) || 25;
+        const pageSize =
+          Number(pagination.pageSize) || Number(pagination.limit) || 25;
 
         return {
           data: results,
