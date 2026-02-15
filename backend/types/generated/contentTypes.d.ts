@@ -946,6 +946,12 @@ export interface ApiFollowerFollower extends Struct.CollectionTypeSchema {
         };
       }> &
       Schema.Attribute.DefaultTo<'tiktok'>;
+    uniqueId: Schema.Attribute.BigInteger &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

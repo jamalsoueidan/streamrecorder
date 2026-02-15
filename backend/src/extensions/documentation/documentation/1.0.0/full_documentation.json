@@ -20,7 +20,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2026-02-14T21:13:54.983Z"
+    "x-generation-date": "2026-02-15T17:59:57.319Z"
   },
   "servers": [
     {
@@ -10813,6 +10813,11 @@
               "documentId": {
                 "type": "string"
               },
+              "uniqueId": {
+                "type": "string",
+                "pattern": "^\\d*$",
+                "example": "123456789"
+              },
               "nickname": {
                 "type": "string"
               },
@@ -12574,6 +12579,11 @@
               },
               "documentId": {
                 "type": "string"
+              },
+              "uniqueId": {
+                "type": "string",
+                "pattern": "^\\d*$",
+                "example": "123456789"
               },
               "nickname": {
                 "type": "string"
@@ -14840,6 +14850,11 @@
                   },
                   "documentId": {
                     "type": "string"
+                  },
+                  "uniqueId": {
+                    "type": "string",
+                    "pattern": "^\\d*$",
+                    "example": "123456789"
                   },
                   "nickname": {
                     "type": "string"
@@ -18253,6 +18268,11 @@
               "documentId": {
                 "type": "string"
               },
+              "uniqueId": {
+                "type": "string",
+                "pattern": "^\\d*$",
+                "example": "123456789"
+              },
               "nickname": {
                 "type": "string"
               },
@@ -20347,6 +20367,11 @@
                   },
                   "documentId": {
                     "type": "string"
+                  },
+                  "uniqueId": {
+                    "type": "string",
+                    "pattern": "^\\d*$",
+                    "example": "123456789"
                   },
                   "nickname": {
                     "type": "string"
@@ -22991,6 +23016,11 @@
             ],
             "type": "object",
             "properties": {
+              "uniqueId": {
+                "type": "string",
+                "pattern": "^\\d*$",
+                "example": "123456789"
+              },
               "nickname": {
                 "type": "string"
               },
@@ -23143,6 +23173,11 @@
           },
           "documentId": {
             "type": "string"
+          },
+          "uniqueId": {
+            "type": "string",
+            "pattern": "^\\d*$",
+            "example": "123456789"
           },
           "nickname": {
             "type": "string"
@@ -24288,6 +24323,11 @@
                     "documentId": {
                       "type": "string"
                     },
+                    "uniqueId": {
+                      "type": "string",
+                      "pattern": "^\\d*$",
+                      "example": "123456789"
+                    },
                     "nickname": {
                       "type": "string"
                     },
@@ -25086,6 +25126,11 @@
                   },
                   "documentId": {
                     "type": "string"
+                  },
+                  "uniqueId": {
+                    "type": "string",
+                    "pattern": "^\\d*$",
+                    "example": "123456789"
                   },
                   "nickname": {
                     "type": "string"
@@ -27115,6 +27160,11 @@
               },
               "documentId": {
                 "type": "string"
+              },
+              "uniqueId": {
+                "type": "string",
+                "pattern": "^\\d*$",
+                "example": "123456789"
               },
               "nickname": {
                 "type": "string"
@@ -29468,6 +29518,11 @@
                   },
                   "documentId": {
                     "type": "string"
+                  },
+                  "uniqueId": {
+                    "type": "string",
+                    "pattern": "^\\d*$",
+                    "example": "123456789"
                   },
                   "nickname": {
                     "type": "string"
@@ -31961,6 +32016,11 @@
                     },
                     "documentId": {
                       "type": "string"
+                    },
+                    "uniqueId": {
+                      "type": "string",
+                      "pattern": "^\\d*$",
+                      "example": "123456789"
                     },
                     "nickname": {
                       "type": "string"

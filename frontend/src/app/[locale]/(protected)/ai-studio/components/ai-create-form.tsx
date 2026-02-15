@@ -53,7 +53,7 @@ export function AiCreateForm({ recording }: Props) {
       });
 
       if (result.success && result.documentId) {
-        router.push(`/ai-studio`);
+        router.push(`/ai-studio/${result.documentId}/view`);
       }
     });
   };

@@ -15,6 +15,14 @@
     }
   },
   "attributes": {
+    "uniqueId": {
+      "type": "biginteger",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
     "nickname": {
       "type": "string",
       "pluginOptions": {

@@ -78,7 +78,7 @@ export default function RecordingItem({ recording }: Props) {
           <Tooltip label={t("createWithAI")}>
             <ActionIcon
               component={Link}
-              href={`/ai-studio/${recording.documentId}`}
+              href={`/ai-studio/${recording.documentId}/create`}
               variant="outline"
               color="violet"
               size="lg"

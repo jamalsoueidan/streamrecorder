@@ -1,9 +1,7 @@
 import {
   ActionIcon,
-  Center,
   Divider,
   Flex,
-  SimpleGrid,
   Stack,
   Text,
   Title,
@@ -11,22 +9,14 @@ import {
 import { IconSparkles } from "@tabler/icons-react";
 import { getTranslations } from "next-intl/server";
 
-import PaginationControls from "@/app/components/pagination";
 import api from "@/lib/api";
-import { AiRequestCard } from "./components/ai-request-card";
+import { AiRequestList } from "./components/ai-request-list";
 import { AiStudioGuard } from "./components/ai-studio-guard";
 
-interface PageProps {
-  searchParams: Promise<{
-    page?: string;
-  }>;
-}
-
-export default async function Page({ searchParams }: PageProps) {
-  const { page } = await searchParams;
+export default async function Page() {
   const t = await getTranslations("protected.aiStudio");
 
-  // Try to fetch AI requests - will fail with 403 if user doesn't have permission
+  // Fetch all AI requests
   const response = await api.aiRequest
     .meGetAiRequests({
       populate: {
@@ -34,16 +24,14 @@ export default async function Page({ searchParams }: PageProps) {
           populate: { avatar: true },
         },
         recording: true,
+        ai_tasks: true,
       },
-      "pagination[pageSize]": 12,
-      "pagination[page]": parseInt(page || "1", 10),
+      "pagination[pageSize]": 100,
       sort: "createdAt:desc",
     })
     .catch(() => null);
 
-  const aiRequests = response?.data?.data;
-  const meta = response?.data?.meta;
-  const totalPages = meta?.pagination?.pageCount || 1;
+  const aiRequests = response?.data?.data || [];
 
   return (
     <Stack w="100%">
@@ -64,26 +52,10 @@ export default async function Page({ searchParams }: PageProps) {
       <Divider mx={{ base: "-xs", sm: "-md" }} />
 
       <AiStudioGuard>
-        {!aiRequests || aiRequests.length === 0 ? (
+        {aiRequests.length === 0 ? (
           <EmptyState />
         ) : (
-          <Stack gap="xl">
-            {totalPages > 1 && (
-              <Center>
-                <PaginationControls total={totalPages} size="lg" />
-              </Center>
-            )}
-            <SimpleGrid cols={{ base: 1, md: 2 }}>
-              {aiRequests?.map((request) => (
-                <AiRequestCard key={request.documentId} aiRequest={request} />
-              ))}
-            </SimpleGrid>
-            {totalPages > 1 && (
-              <Center>
-                <PaginationControls total={totalPages} size="lg" />
-              </Center>
-            )}
-          </Stack>
+          <AiRequestList aiRequests={aiRequests} />
         )}
       </AiStudioGuard>
     </Stack>
