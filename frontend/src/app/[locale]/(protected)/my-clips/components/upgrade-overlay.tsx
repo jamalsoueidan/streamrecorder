@@ -4,8 +4,8 @@ import {
   Box,
   Button,
   Card,
+  Center,
   List,
-  Overlay,
   SimpleGrid,
   Skeleton,
   Stack,
@@ -33,9 +33,12 @@ export function UpgradeOverlay() {
   const t = useTranslations("protected.myClips.upgrade");
 
   return (
-    <Box pos="relative" w="100%" h="100%">
-      <Box style={{ filter: "blur(2px)", opacity: 0.3 }}>
-        <SimpleGrid cols={2} spacing="md">
+    <Box pos="relative" w="100%" h="100%" style={{ overflow: "hidden" }}>
+      {/* Background skeleton cards */}
+      <Box
+        style={{ filter: "blur(2px)", opacity: 0.3, pointerEvents: "none" }}
+      >
+        <SimpleGrid cols={{ base: 1, sm: 2 }} spacing="md">
           <SkeletonCard />
           <SkeletonCard />
           <SkeletonCard />
@@ -43,20 +46,9 @@ export function UpgradeOverlay() {
         </SimpleGrid>
       </Box>
 
-      <Overlay color="#000" backgroundOpacity={0.1} blur={0.4} radius="xl">
-        <Card
-          withBorder
-          radius="lg"
-          p="xl"
-          pos="absolute"
-          maw={500}
-          top="40%"
-          left="50%"
-          w="90%"
-          style={{
-            transform: "translate(-50%, -50%)",
-          }}
-        >
+      {/* Centered upgrade card */}
+      <Center pos="absolute" top={0} left={0} right={0} bottom={0} pb={{ base: "10%", sm: "25%" }}>
+        <Card withBorder radius="lg" p="xl" maw={500} w="90%">
           <Stack gap="lg" align="center">
             <ThemeIcon
               size={80}
@@ -98,7 +90,7 @@ export function UpgradeOverlay() {
 
             <Button
               component={Link}
-              href="/settings"
+              href="/settings?upgrade=clips"
               size="lg"
               leftSection={<IconCrown size={20} />}
               variant="gradient"
@@ -113,7 +105,7 @@ export function UpgradeOverlay() {
             </Text>
           </Stack>
         </Card>
-      </Overlay>
+      </Center>
     </Box>
   );
 }
