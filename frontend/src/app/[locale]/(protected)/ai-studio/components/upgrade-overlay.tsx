@@ -60,7 +60,7 @@ export function UpgradeOverlay() {
           p="xl"
           pos="absolute"
           maw={500}
-          top="30%"
+          top="50%"
           left="50%"
           w="90%"
           style={{
