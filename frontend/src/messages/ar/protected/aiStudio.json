@@ -57,6 +57,13 @@
     "tasks": "المهام",
     "pendingTitle": "في انتظار البدء",
     "pendingMessage": "طلبك في قائمة الانتظار وسيبدأ المعالجة قريباً.",
+    "clipsCount": "{count} مقاطع",
+    "memesCount": "{count} ميمز",
+    "localesCount": "{count} لغات",
+    "clipFallback": "مقطع {index}",
+    "default": "افتراضي",
+    "tagline": "الشعار",
+    "description": "الوصف",
     "state": {
       "pending": "قيد الانتظار",
       "processing": "جاري المعالجة",

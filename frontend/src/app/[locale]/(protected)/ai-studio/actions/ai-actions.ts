@@ -41,7 +41,5 @@ export const getFollower = async function ({
     },
   } as never);
 
-  console.log(data);
-
   return data;
 };

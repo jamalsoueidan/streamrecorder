@@ -42,7 +42,9 @@ export default async function Page({ params }: PageProps) {
       populate: {
         recording: {
           populate: {
-            follower: true,
+            follower: {
+              fields: ["documentId"],
+            },
             sources: {
               populate: { videoOriginal: true },
             },

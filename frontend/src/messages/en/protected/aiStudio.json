@@ -57,6 +57,13 @@
     "tasks": "Tasks",
     "pendingTitle": "Waiting to Start",
     "pendingMessage": "Your request is queued and will begin processing shortly.",
+    "clipsCount": "{count} clips",
+    "memesCount": "{count} memes",
+    "localesCount": "{count} locales",
+    "clipFallback": "Clip {index}",
+    "default": "Default",
+    "tagline": "Tagline",
+    "description": "Description",
     "state": {
       "pending": "Pending",
       "processing": "Processing",

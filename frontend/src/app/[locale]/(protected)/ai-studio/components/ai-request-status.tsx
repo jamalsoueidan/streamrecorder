@@ -30,6 +30,10 @@ import {
 import { useFormatter, useLocale, useTranslations } from "next-intl";
 import { useState } from "react";
 import { ClipPreview } from "../../my-clips/components/clip-preview";
+import {
+  deriveRequestState,
+  getVisibleTaskCounts,
+} from "../utils/derive-state";
 
 interface Props {
   aiRequest: AiRequest;
@@ -51,15 +55,15 @@ function getTaskOutputInfo(task: {
   type?: string;
   state?: string;
   output?: any;
-}): string | null {
+}): { type: "clips" | "memes"; count: number } | null {
   if (task.state !== "completed" || !task.output) return null;
 
   const data: any = task.output;
   if (task.type === "clips::prompt" && data.clips) {
-    return `${data.clips.length} clips`;
+    return { type: "clips", count: data.clips.length };
   }
   if (task.type === "memes::prompt" && data.memes) {
-    return `${data.memes.length} memes`;
+    return { type: "memes", count: data.memes.length };
   }
 
   return null;
@@ -125,40 +129,12 @@ export function AiRequestStatus({ aiRequest, follower }: Props) {
     });
   };
 
-  // Calculate expected total tasks based on selected options
-  // Base: 2 (video workflow) + 2 per feature
-  // For non-admins, exclude profile tasks from the count
-  const expectedTotal =
-    2 +
-    (aiRequest.generateClips ? 2 : 0) +
-    (aiRequest.generateMemes ? 2 : 0) +
-    (aiRequest.generateProfile && isAdmin ? 2 : 0);
-
   const tasks = aiRequest.ai_tasks || [];
-
-  // Filter tasks for counting based on admin status
-  const visibleTasks = isAdmin
-    ? tasks
-    : tasks.filter((t) => !t.type?.startsWith("profile::"));
-
-  const completedTasks = visibleTasks.filter(
-    (t) => t.state === "completed",
-  ).length;
-  const failedTasks = visibleTasks.filter((t) => t.state === "failed").length;
-  const processingTasks = visibleTasks.filter(
-    (t) => t.state === "processing",
-  ).length;
-
-  // Derive state from tasks
-  const derivedState =
-    failedTasks > 0
-      ? "failed"
-      : completedTasks >= expectedTotal
-        ? "completed"
-        : processingTasks > 0 || completedTasks > 0
-          ? "processing"
-          : "pending";
-
+  const derivedState = deriveRequestState(aiRequest, isAdmin);
+  const { expectedTotal, completedTasks } = getVisibleTaskCounts(
+    aiRequest,
+    isAdmin,
+  );
   const progress =
     expectedTotal > 0 ? (completedTasks / expectedTotal) * 100 : 0;
 
@@ -259,7 +235,9 @@ export function AiRequestStatus({ aiRequest, follower }: Props) {
                     <Group gap="xs">
                       {outputInfo && (
                         <Text size="xs" c="dimmed">
-                          {outputInfo}
+                          {outputInfo.type === "clips"
+                            ? t("clipsCount", { count: outputInfo.count })
+                            : t("memesCount", { count: outputInfo.count })}
                         </Text>
                       )}
                       {hasExpandableContent && (
@@ -269,8 +247,8 @@ export function AiRequestStatus({ aiRequest, follower }: Props) {
                           <Group gap={4}>
                             <Text size="xs" c="blue">
                               {hasClips
-                                ? `${clips.length} clips`
-                                : `${localizedFollowers.length} locales`}
+                                ? t("clipsCount", { count: clips.length })
+                                : t("localesCount", { count: localizedFollowers.length })}
                             </Text>
                             {isExpanded ? (
                               <IconChevronDown
@@ -311,7 +289,7 @@ export function AiRequestStatus({ aiRequest, follower }: Props) {
                               <Stack gap={4} p="xs">
                                 <Group justify="space-between" wrap="nowrap">
                                   <Text size="sm" fw={500} lineClamp={1}>
-                                    {clip.title || `Clip ${index + 1}`}
+                                    {clip.title || t("clipFallback", { index: index + 1 })}
                                   </Text>
                                   {clip.viral_score && (
                                     <Badge
@@ -357,13 +335,13 @@ export function AiRequestStatus({ aiRequest, follower }: Props) {
                               <Stack gap="xs">
                                 <Group justify="space-between">
                                   <Badge size="sm" variant="light">
-                                    {f.locale?.toUpperCase() || "DEFAULT"}
+                                    {f.locale?.toUpperCase() || t("default")}
                                   </Badge>
                                 </Group>
                                 {f.tagline && (
                                   <Box>
                                     <Text size="xs" c="dimmed" mb={2}>
-                                      Tagline
+                                      {t("tagline")}
                                     </Text>
                                     <Text size="sm">{f.tagline}</Text>
                                   </Box>
@@ -371,7 +349,7 @@ export function AiRequestStatus({ aiRequest, follower }: Props) {
                                 {f.description && (
                                   <Box>
                                     <Text size="xs" c="dimmed" mb={2}>
-                                      Description
+                                      {t("description")}
                                     </Text>
                                     <Text size="sm">{f.description}</Text>
                                   </Box>

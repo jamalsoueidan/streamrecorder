@@ -13,10 +13,17 @@ import api from "@/lib/api";
 import { AiRequestList } from "./components/ai-request-list";
 import { AiStudioGuard } from "./components/ai-studio-guard";
 
-export default async function Page() {
-  const t = await getTranslations("protected.aiStudio");
+interface PageProps {
+  searchParams: Promise<{
+    page?: string;
+  }>;
+}
 
-  // Fetch all AI requests
+export default async function Page({ searchParams }: PageProps) {
+  const { page } = await searchParams;
+  const t = await getTranslations("protected.aiStudio");
+  const currentPage = parseInt(page || "1", 10);
+
   const response = await api.aiRequest
     .meGetAiRequests({
       populate: {
@@ -26,12 +33,14 @@ export default async function Page() {
         recording: true,
         ai_tasks: true,
       },
-      "pagination[pageSize]": 100,
+      "pagination[pageSize]": 12,
+      "pagination[page]": currentPage,
       sort: "createdAt:desc",
     })
     .catch(() => null);
 
   const aiRequests = response?.data?.data || [];
+  const totalPages = response?.data?.meta?.pagination?.pageCount || 1;
 
   return (
     <Stack w="100%">
@@ -52,10 +61,14 @@ export default async function Page() {
       <Divider mx={{ base: "-xs", sm: "-md" }} />
 
       <AiStudioGuard>
-        {aiRequests.length === 0 ? (
+        {aiRequests.length === 0 && currentPage === 1 ? (
           <EmptyState />
         ) : (
-          <AiRequestList aiRequests={aiRequests} />
+          <AiRequestList
+            aiRequests={aiRequests}
+            currentPage={currentPage}
+            totalPages={totalPages}
+          />
         )}
       </AiStudioGuard>
     </Stack>

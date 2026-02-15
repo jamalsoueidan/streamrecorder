@@ -20,6 +20,7 @@ import { useFormatter, useNow, useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 import { MiniPlayer } from "../../components/video/mini-player";
+import { deriveRequestState } from "../utils/derive-state";
 
 interface Props {
   aiRequest: AiRequest;
@@ -42,38 +43,7 @@ export function AiRequestCard({ aiRequest }: Props) {
   const recording = aiRequest.recording;
   const isRecordingDeleted = !recording;
 
-  // Calculate expected total tasks based on selected options
-  // For non-admins, exclude profile tasks
-  const expectedTotal =
-    2 +
-    (aiRequest.generateClips ? 2 : 0) +
-    (aiRequest.generateMemes ? 2 : 0) +
-    (aiRequest.generateProfile && isAdmin ? 2 : 0);
-
-  const tasks = aiRequest.ai_tasks || [];
-
-  // Filter tasks for counting based on admin status
-  const visibleTasks = isAdmin
-    ? tasks
-    : tasks.filter((t) => !t.type?.startsWith("profile::"));
-
-  const completedTasks = visibleTasks.filter(
-    (t) => t.state === "completed",
-  ).length;
-  const failedTasks = visibleTasks.filter((t) => t.state === "failed").length;
-  const processingTasks = visibleTasks.filter(
-    (t) => t.state === "processing",
-  ).length;
-
-  // Derive state from tasks
-  const derivedState =
-    failedTasks > 0
-      ? "failed"
-      : completedTasks >= expectedTotal
-        ? "completed"
-        : processingTasks > 0 || completedTasks > 0
-          ? "processing"
-          : "pending";
+  const derivedState = deriveRequestState(aiRequest, isAdmin);
 
   return (
     <Card radius="md" withBorder padding="sm">
