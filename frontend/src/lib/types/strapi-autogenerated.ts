@@ -65,6 +65,11 @@ export interface Activity {
   follower?: {
     id?: string | number;
     documentId?: string;
+    /**
+     * @pattern ^\d*$
+     * @example "123456789"
+     */
+    uniqueId?: string;
     nickname?: string;
     username?: string;
     type?: ActivityTypeEnum;
@@ -527,6 +532,11 @@ export interface AiRequest {
   follower?: {
     id?: string | number;
     documentId?: string;
+    /**
+     * @pattern ^\d*$
+     * @example "123456789"
+     */
+    uniqueId?: string;
     nickname?: string;
     username?: string;
     type?: AiRequestTypeEnum;
@@ -1121,6 +1131,11 @@ export interface AiTask {
     follower?: {
       id?: string | number;
       documentId?: string;
+      /**
+       * @pattern ^\d*$
+       * @example "123456789"
+       */
+      uniqueId?: string;
       nickname?: string;
       username?: string;
       type?: AiTaskTypeEnum;
@@ -2038,6 +2053,11 @@ export interface Clip {
   follower?: {
     id?: string | number;
     documentId?: string;
+    /**
+     * @pattern ^\d*$
+     * @example "123456789"
+     */
+    uniqueId?: string;
     nickname?: string;
     username?: string;
     type?: ClipTypeEnum;
@@ -2593,6 +2613,11 @@ export interface ClipShare {
     follower?: {
       id?: string | number;
       documentId?: string;
+      /**
+       * @pattern ^\d*$
+       * @example "123456789"
+       */
+      uniqueId?: string;
       nickname?: string;
       username?: string;
       type?: ClipShareTypeEnum;
@@ -3296,6 +3321,11 @@ export interface EmailTemplateResponse {
 
 export interface FollowerRequest {
   data: {
+    /**
+     * @pattern ^\d*$
+     * @example "123456789"
+     */
+    uniqueId?: string;
     nickname?: string;
     username: string;
     type: FollowerRequestTypeEnum;
@@ -3337,6 +3367,11 @@ export interface FollowerListResponse {
 export interface Follower {
   id?: string | number;
   documentId?: string;
+  /**
+   * @pattern ^\d*$
+   * @example "123456789"
+   */
+  uniqueId?: string;
   nickname?: string;
   username: string;
   type: FollowerTypeEnum;
@@ -3639,6 +3674,11 @@ export interface Follower {
     followers?: {
       id?: string | number;
       documentId?: string;
+      /**
+       * @pattern ^\d*$
+       * @example "123456789"
+       */
+      uniqueId?: string;
       nickname?: string;
       username?: string;
       type?: FollowerTypeEnum;
@@ -3856,6 +3896,11 @@ export interface Meme {
     follower?: {
       id?: string | number;
       documentId?: string;
+      /**
+       * @pattern ^\d*$
+       * @example "123456789"
+       */
+      uniqueId?: string;
       nickname?: string;
       username?: string;
       type?: MemeTypeEnum1;
@@ -4392,6 +4437,11 @@ export interface Recording {
   follower?: {
     id?: string | number;
     documentId?: string;
+    /**
+     * @pattern ^\d*$
+     * @example "123456789"
+     */
+    uniqueId?: string;
     nickname?: string;
     username?: string;
     type?: FollowerTypeEnum;
@@ -5029,6 +5079,11 @@ export interface Source {
     follower?: {
       id?: string | number;
       documentId?: string;
+      /**
+       * @pattern ^\d*$
+       * @example "123456789"
+       */
+      uniqueId?: string;
       nickname?: string;
       username?: string;
       type?: SourceTypeEnum;
@@ -5688,6 +5743,11 @@ export interface Tiktok {
     followers?: {
       id?: string | number;
       documentId?: string;
+      /**
+       * @pattern ^\d*$
+       * @example "123456789"
+       */
+      uniqueId?: string;
       nickname?: string;
       username?: string;
       type?: TiktokTypeEnum;

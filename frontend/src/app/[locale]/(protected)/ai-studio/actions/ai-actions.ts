@@ -9,7 +9,7 @@ export async function createAiRequest(
     generateClips: boolean;
     generateMemes: boolean;
     generateProfile: boolean;
-  }
+  },
 ) {
   try {
     const { data } = await api.aiRequest.mePostAiRequests({
@@ -28,3 +28,18 @@ export async function createAiRequest(
     return { success: false, error: "Failed to create AI request" };
   }
 }
+
+export const getFollower = async function ({
+  documentId,
+}: {
+  documentId: string;
+}) {
+  // Try requested locale first
+  let { data } = await api.follower.getFollowersId({ id: documentId }, {
+    query: {
+      populate: ["avatar", "localizations"],
+    },
+  } as never);
+
+  return data;
+};

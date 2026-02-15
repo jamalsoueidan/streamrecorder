@@ -1,14 +1,13 @@
 {
   "title": "AI Studio",
   "description": "Create clips and memes from your recordings with AI",
+  "requestDetails": "Request Details",
+  "createRequest": "Create Request",
   "unknownCreator": "Unknown Creator",
   "unknownRecording": "Unknown Recording",
   "recordingDeleted": {
-    "badge": "Recording deleted",
-    "title": "Recording Deleted",
-    "message": "The original recording has been deleted. You can still view the AI-generated content."
+    "badge": "Recording deleted"
   },
-  "createdAgo": "Created {time}",
   "viewDetails": "View Details",
   "state": {
     "pending": "Pending",
@@ -21,13 +20,17 @@
     "memes": "Memes",
     "profile": "Profile"
   },
+  "filters": {
+    "all": "All",
+    "pending": "Pending",
+    "processing": "In Progress",
+    "completed": "Completed"
+  },
   "emptyState": {
     "title": "No AI requests yet",
     "description": "Go to your recordings and click the AI button to create clips and memes"
   },
   "create": {
-    "title": "Create AI Request",
-    "description": "Select what you want to generate from this recording",
     "selectOptions": "What would you like to create?",
     "options": {
       "clips": {
@@ -50,20 +53,22 @@
     "submit": "Start Processing"
   },
   "status": {
-    "title": "AI Request Status",
-    "description": "Track the progress of your AI request",
     "progress": "Progress",
     "tasks": "Tasks",
+    "pendingTitle": "Waiting to Start",
+    "pendingMessage": "Your request is queued and will begin processing shortly.",
+    "clipsCount": "{count} clips",
+    "memesCount": "{count} memes",
+    "localesCount": "{count} locales",
+    "clipFallback": "Clip {index}",
+    "default": "Default",
+    "tagline": "Tagline",
+    "description": "Description",
     "state": {
       "pending": "Pending",
       "processing": "Processing",
       "completed": "Completed",
       "failed": "Failed"
-    },
-    "options": {
-      "clips": "Clips",
-      "memes": "Memes",
-      "profile": "Profile"
     }
   },
   "upgrade": {

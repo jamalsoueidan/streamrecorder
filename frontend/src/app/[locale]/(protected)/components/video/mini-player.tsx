@@ -6,6 +6,7 @@ import {
   HlsVideo,
   MediaControlBar,
   MediaController,
+  MediaFullscreenButton,
   MediaLoadingIndicator,
   MediaMuteButton,
   MediaPlayButton,
@@ -76,6 +77,7 @@ export function MiniPlayer({ documentId }: Props) {
             <MediaVolumeRange />
             <MediaMuteButton title="" />
           </div>
+          <MediaFullscreenButton />
         </MediaControlBar>
       </MediaController>
     </>

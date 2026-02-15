@@ -1,14 +1,13 @@
 {
   "title": "استوديو الذكاء الاصطناعي",
   "description": "أنشئ مقاطع وصور من تسجيلاتك باستخدام الذكاء الاصطناعي",
+  "requestDetails": "تفاصيل الطلب",
+  "createRequest": "إنشاء طلب",
   "unknownCreator": "صانع محتوى غير معروف",
   "unknownRecording": "تسجيل غير معروف",
   "recordingDeleted": {
-    "badge": "تم حذف التسجيل",
-    "title": "تم حذف التسجيل",
-    "message": "تم حذف التسجيل الأصلي. لا يزال بإمكانك عرض المحتوى الذي تم إنشاؤه بالذكاء الاصطناعي."
+    "badge": "تم حذف التسجيل"
   },
-  "createdAgo": "تم الإنشاء {time}",
   "viewDetails": "عرض التفاصيل",
   "state": {
     "pending": "قيد الانتظار",
@@ -21,13 +20,17 @@
     "memes": "ميمز",
     "profile": "الملف الشخصي"
   },
+  "filters": {
+    "all": "الكل",
+    "pending": "قيد الانتظار",
+    "processing": "جاري المعالجة",
+    "completed": "مكتمل"
+  },
   "emptyState": {
     "title": "لا توجد طلبات ذكاء اصطناعي",
     "description": "اذهب إلى تسجيلاتك واضغط على زر الذكاء الاصطناعي لإنشاء مقاطع وصور"
   },
   "create": {
-    "title": "إنشاء طلب ذكاء اصطناعي",
-    "description": "اختر ما تريد إنشاءه من هذا التسجيل",
     "selectOptions": "ماذا تريد أن تنشئ؟",
     "options": {
       "clips": {
@@ -50,20 +53,22 @@
     "submit": "بدء المعالجة"
   },
   "status": {
-    "title": "حالة طلب الذكاء الاصطناعي",
-    "description": "تتبع تقدم طلب الذكاء الاصطناعي الخاص بك",
     "progress": "التقدم",
     "tasks": "المهام",
+    "pendingTitle": "في انتظار البدء",
+    "pendingMessage": "طلبك في قائمة الانتظار وسيبدأ المعالجة قريباً.",
+    "clipsCount": "{count} مقاطع",
+    "memesCount": "{count} ميمز",
+    "localesCount": "{count} لغات",
+    "clipFallback": "مقطع {index}",
+    "default": "افتراضي",
+    "tagline": "الشعار",
+    "description": "الوصف",
     "state": {
       "pending": "قيد الانتظار",
       "processing": "جاري المعالجة",
       "completed": "مكتمل",
       "failed": "فشل"
-    },
-    "options": {
-      "clips": "مقاطع",
-      "memes": "ميمز",
-      "profile": "الملف الشخصي"
     }
   },
   "upgrade": {
