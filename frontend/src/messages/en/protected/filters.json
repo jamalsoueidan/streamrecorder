@@ -56,6 +56,6 @@
     "done": "Done"
   },
   "options": {
-    "hasRecordings": "Show creators without recordings"
+    "hasRecordings": "Only show creators with recordings"
   }
 }

@@ -21,10 +21,9 @@ import {
 import Link from "next/link";
 
 import { ImageSpritePreview } from "@/app/[locale]/(protected)/components/image-sprite-preview";
-import OpenSocial, { getProfileUrl } from "@/app/components/open-social";
+import { getProfileUrl } from "@/app/components/open-social";
 import { generateAvatarUrl } from "@/app/lib/avatar-url";
 import { safeRelativeTime } from "@/app/lib/safe-relative-time";
-import { IconCalendarPlus, IconVideo } from "@tabler/icons-react";
 import { useFormatter, useNow, useTranslations } from "next-intl";
 import Image from "next/image";
 import { CountryFlag } from "../../components/country-flag";
@@ -54,9 +53,9 @@ export default function FollowerItem({ follower }: Props) {
     <Grid.Col key={follower.documentId} span={12}>
       <Card shadow="sm" padding={cardPadding} radius="md" h="100%" withBorder>
         <Flex justify="space-between">
-          <Group>
+          <Group gap="xs">
             <Anchor component={Link} href={getProfileUrl(follower)}>
-              <Avatar size="lg">
+              <Avatar size="md">
                 {follower.avatar?.url && (
                   <Image
                     src={generateAvatarUrl(follower.avatar?.url)}
@@ -85,31 +84,26 @@ export default function FollowerItem({ follower }: Props) {
               </Group>
 
               <Group gap="xs">
-                <Group gap={4}>
-                  <IconCalendarPlus size={14} />
-                  <Text size="sm" c="dimmed" suppressHydrationWarning>
-                    {t("followers.addedAgo", {
-                      time: safeRelativeTime(format, follower.createdAt, {
-                        now,
-                      }),
-                    })}
-                  </Text>
-                </Group>
-                <Group gap={4}>
-                  <IconVideo size={14} />
-                  <Text size="sm" c="dimmed" suppressHydrationWarning>
-                    {t("recordings.videoCount", {
-                      count: follower.totalRecordings!,
-                    })}
-                  </Text>
-                </Group>
+                <Text size="sm" c="dimmed" suppressHydrationWarning>
+                  {t("followers.addedAgo", {
+                    time: safeRelativeTime(format, follower.createdAt, {
+                      now,
+                    }),
+                  })}
+                </Text>
+                <Text size="xs" color="dimmed">
+                  |
+                </Text>
+                <Text size="sm" c="dimmed" suppressHydrationWarning>
+                  {t("recordings.videoCount", {
+                    count: follower.totalRecordings!,
+                  })}
+                </Text>
               </Group>
             </Stack>
           </Group>
 
           <Flex gap="xs" justify="right" align="center">
-            <OpenSocial follower={follower} />
-
             {follower.isFollowing ? (
               <>
                 <UnfollowButton
@@ -128,7 +122,7 @@ export default function FollowerItem({ follower }: Props) {
           </Flex>
         </Flex>
         {follower.recordings && follower.recordings?.length > 0 ? (
-          <Box mt="lg">
+          <Box mt="xs">
             <SimpleGrid cols={{ base: 1, sm: 2, md: 3, xl: 4 }} spacing="lg">
               {follower.recordings?.map((rec, index) => {
                 const isRecording = rec.sources?.some(

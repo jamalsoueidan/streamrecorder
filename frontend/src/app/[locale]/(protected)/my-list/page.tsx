@@ -56,6 +56,7 @@ export default async function Page({
           <Filters filterOptions={filterOptions} />
         </Group>
         <Divider mx={{ base: "-xs", sm: "-md" }} />
+
         <CreatorsInfinity />
       </Stack>
     </HydrationBoundary>

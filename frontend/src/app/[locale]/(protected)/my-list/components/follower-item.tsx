@@ -27,12 +27,12 @@ import { ImageSpritePreview } from "@/app/[locale]/(protected)/components/image-
 import { generateAvatarUrl } from "@/app/lib/avatar-url";
 import { safeRelativeTime } from "@/app/lib/safe-relative-time";
 import { useUser } from "@/app/providers/user-provider";
-import { IconCalendarPlus, IconEyeOff, IconVideo } from "@tabler/icons-react";
+import { IconEyeOff } from "@tabler/icons-react";
 import { useQuery } from "@tanstack/react-query";
 import { useFormatter, useNow, useTranslations } from "next-intl";
 import Image from "next/image";
-import { useState } from "react";
-import OpenSocial, { getProfileUrl } from "../../../../components/open-social";
+import { useRef, useState } from "react";
+import { getProfileUrl } from "../../../../components/open-social";
 import { CountryFlag } from "../../components/country-flag";
 import FollowButton from "../../components/follow-button";
 import { FollowerTypeIcon } from "../../components/follower-type-icon";
@@ -47,6 +47,7 @@ interface Props {
 
 export default function FollowerItem({ follower, isOpen }: Props) {
   const [page, setPage] = useState(1);
+  const accordionRef = useRef<HTMLDivElement>(null);
   const t = useTranslations("protected.common");
   const now = useNow({ updateInterval: 1000 * 30 });
   const format = useFormatter();
@@ -66,14 +67,19 @@ export default function FollowerItem({ follower, isOpen }: Props) {
   const recordings = data?.data ?? [];
   const totalPages = data?.meta?.pagination?.pageCount ?? 1;
 
+  const handlePageChange = (newPage: number) => {
+    setPage(newPage);
+    // Scroll to top of accordion item when pagination changes
+    accordionRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
   return (
-    <Accordion.Item key={follower.documentId} value={follower.username}>
+    <Accordion.Item ref={accordionRef} key={follower.documentId} value={follower.username}>
       <AccordionControl follower={follower}>
-        <Group>
+        <Group gap="xs">
           <Box pos="relative">
             <Avatar
               size={isMobile ? "md" : "lg"}
-              name="%20"
               style={
                 follower?.owner?.id === user?.id
                   ? {
@@ -123,7 +129,6 @@ export default function FollowerItem({ follower, isOpen }: Props) {
 
             <Group gap="xs">
               <Group gap={4}>
-                <IconCalendarPlus size={14} />
                 <Text size="sm" c="dimmed" suppressHydrationWarning>
                   {t("followers.addedAgo", {
                     time: safeRelativeTime(format, follower.createdAt, {
@@ -131,9 +136,9 @@ export default function FollowerItem({ follower, isOpen }: Props) {
                     }),
                   })}
                 </Text>
-              </Group>
-              <Group gap={4}>
-                <IconVideo size={14} />
+                <Text size="xs" color="dimmed">
+                  |
+                </Text>
                 <Text size="sm" c="dimmed" suppressHydrationWarning>
                   {t("recordings.videoCount", {
                     count: follower.totalRecordings!,
@@ -159,7 +164,10 @@ export default function FollowerItem({ follower, isOpen }: Props) {
 
                 return (
                   <Stack key={rec.documentId} gap="4">
-                    <Box pos="relative" style={{ opacity: rec.hidden ? 0.5 : 1 }}>
+                    <Box
+                      pos="relative"
+                      style={{ opacity: rec.hidden ? 0.5 : 1 }}
+                    >
                       <ImageSpritePreview
                         recording={rec}
                         username={follower.username}
@@ -195,7 +203,11 @@ export default function FollowerItem({ follower, isOpen }: Props) {
                             })}
                       </Text>
 
-                      <RecordingMenu recording={rec} username={follower.username} type={follower.type} />
+                      <RecordingMenu
+                        recording={rec}
+                        username={follower.username}
+                        type={follower.type}
+                      />
                     </Group>
                   </Stack>
                 );
@@ -205,7 +217,7 @@ export default function FollowerItem({ follower, isOpen }: Props) {
             {totalPages > 1 && (
               <Pagination
                 value={page}
-                onChange={setPage}
+                onChange={handlePageChange}
                 total={totalPages}
                 siblings={1}
                 style={{ alignSelf: "center" }}
@@ -243,16 +255,10 @@ function AccordionControl({
   follower,
   ...props
 }: AccordionControlProps & { follower: FollowerWithMeta }) {
-  const isMobile = useMatches({
-    base: true,
-    sm: false,
-  });
   return (
     <Center>
-      <Accordion.Control {...props} />
+      <Accordion.Control {...props} disabled={follower.totalRecordings === 0} />
       <Flex gap="xs" align="center" mx="md">
-        {isMobile ? null : <OpenSocial follower={follower} />}
-
         {follower.isFollowing ? (
           <>
             <UnfollowButton username={follower.username} type={follower.type} />

@@ -1,6 +1,7 @@
 {
   "title": "Library ({count})",
   "description": "Manage your creators",
+  "disabledHint": "Disabled items have no recordings yet",
   "emptyFiltered": {
     "title": "No creators match your filters",
     "description": "Try adjusting or clearing your filters"
