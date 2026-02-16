@@ -1,7 +1,7 @@
 import api from "@/lib/api";
 import { Divider, Flex, Stack, Text, Title } from "@mantine/core";
 import { IconBrandTiktok } from "@tabler/icons-react";
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { PublishForm } from "./publish-form";
 
@@ -16,9 +16,16 @@ export default async function PublishPage({ params }: PageProps) {
   const t = await getTranslations("protected.myClips.publishPage");
 
   // Fetch clip data
-  const clipResponse = await api.clip.meGetClipOne({
-    id: documentId,
-  });
+  const clipResponse = await api.clip.meGetClipOne(
+    {
+      id: documentId,
+    },
+    {
+      query: {
+        locale: await getLocale(),
+      },
+    } as never,
+  );
 
   const clip = clipResponse.data?.data;
 
