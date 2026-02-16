@@ -38,20 +38,15 @@ export default function FollowerItem({ follower }: Props) {
   const t = useTranslations("protected.common");
   const now = useNow({ updateInterval: 1000 * 30 });
   const format = useFormatter();
-  const cardPadding = useMatches({
-    base: "sm",
-    sm: "md",
-    md: "lg",
-  });
 
   const mawTruncate = useMatches({
-    base: 200,
-    md: 100,
+    base: 100,
+    sm: 200,
   });
 
   return (
     <Grid.Col key={follower.documentId} span={12}>
-      <Card shadow="sm" padding={cardPadding} radius="md" h="100%" withBorder>
+      <Card shadow="sm" padding="sm" radius="md" h="100%" withBorder>
         <Flex justify="space-between">
           <Group gap="xs">
             <Anchor component={Link} href={getProfileUrl(follower)}>
