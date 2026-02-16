@@ -162,7 +162,9 @@ export default async function Page({ params }: PageProps) {
       "@id": `${profileUrl}#person`,
       name: follower.username,
       identifier: follower.username,
-      alternateName: [follower.nickname, `@${follower.username}`].filter(Boolean),
+      alternateName: [follower.nickname, `@${follower.username}`].filter(
+        Boolean,
+      ),
       description: follower.tagline || follower.description,
       image: generateAvatarUrl(follower.avatar?.url, true),
       url: profileUrl,
@@ -174,14 +176,17 @@ export default async function Page({ params }: PageProps) {
       }),
       sameAs: [getSocialUrl(follower)],
     },
-    hasPart: recordings.length > 0 ? {
-      "@type": "ItemList",
-      itemListElement: recordings.slice(0, 5).map((video, index) => ({
-        "@type": "ListItem",
-        position: index + 1,
-        url: `${profileUrl}/video/${video.documentId}`,
-      })),
-    } : undefined,
+    hasPart:
+      recordings.length > 0
+        ? {
+            "@type": "ItemList",
+            itemListElement: recordings.slice(0, 5).map((video, index) => ({
+              "@type": "ListItem",
+              position: index + 1,
+              url: `${profileUrl}/video/${video.documentId}`,
+            })),
+          }
+        : undefined,
   };
 
   const faqSchema = follower.faq?.length
@@ -201,7 +206,11 @@ export default async function Page({ params }: PageProps) {
 
   const jsonLd = {
     "@context": "https://schema.org",
-    "@graph": [breadcrumbSchema, profilePageSchema, ...(faqSchema ? [faqSchema] : [])],
+    "@graph": [
+      breadcrumbSchema,
+      profilePageSchema,
+      ...(faqSchema ? [faqSchema] : []),
+    ],
   };
 
   return (
@@ -213,10 +222,15 @@ export default async function Page({ params }: PageProps) {
 
       <Container size="xl">
         <Stack gap="xl">
-          <Flex gap="md">
+          <Flex
+            gap="md"
+            justify={{ base: "center", sm: "flex-start" }}
+            direction={{ base: "column", sm: "row" }}
+            align="center"
+          >
             <Avatar
-              size="xl"
-              radius="xl"
+              size={100}
+              radius={100}
               styles={{
                 root: {
                   overflow: "hidden",
@@ -227,15 +241,23 @@ export default async function Page({ params }: PageProps) {
                 <Image
                   src={generateAvatarUrl(follower.avatar?.url)}
                   alt={follower.nickname || follower.username}
-                  width={72}
-                  height={72}
+                  width={100}
+                  height={100}
                 />
               )}
             </Avatar>
 
-            <Stack gap="0">
+            <Stack gap="xs">
               <Group>
                 <Title order={1}>{follower.username}</Title>
+                {follower.nickname && (
+                  <Title order={2} size="lg" fw={400} c="dimmed">
+                    {follower.nickname}
+                  </Title>
+                )}
+                {follower.countryCode && (
+                  <CountryFlag countryCode={follower.countryCode} size={30} />
+                )}
                 <Tooltip label={follower.type}>
                   <FollowerTypeIcon
                     color="transparent"
@@ -243,15 +265,8 @@ export default async function Page({ params }: PageProps) {
                     size={30}
                   />
                 </Tooltip>
-                {follower.countryCode && (
-                  <CountryFlag countryCode={follower.countryCode} size={30} />
-                )}
               </Group>
-              {follower.nickname && (
-                <Title order={2} size="lg" fw={400} c="dimmed">
-                  {follower.nickname}
-                </Title>
-              )}
+
               <Text>
                 {follower.tagline ||
                   t("defaultTagline", { nickname: follower.nickname || "" })}

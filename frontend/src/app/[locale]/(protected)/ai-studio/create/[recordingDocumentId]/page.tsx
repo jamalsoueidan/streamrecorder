@@ -19,17 +19,17 @@ import { AiStudioGuard } from "../../components/ai-studio-guard";
 
 interface PageProps {
   params: Promise<{
-    id: string;
+    recordingDocumentId: string;
   }>;
 }
 
 export default async function Page({ params }: PageProps) {
-  const { id } = await params;
+  const { recordingDocumentId } = await params;
   const t = await getTranslations("protected.aiStudio");
 
   const { data: recordingResponse } = await api.recording
     .getRecordingsId({
-      id,
+      id: recordingDocumentId,
       populate: {
         follower: {
           populate: { avatar: true },
@@ -70,20 +70,19 @@ export default async function Page({ params }: PageProps) {
               style={{ textDecoration: "none", color: "inherit" }}
             >
               <Group gap="sm">
-                <Avatar size={48} radius="xl">
+                <Avatar size="md" radius="100%">
                   {follower.avatar?.url && (
                     <Image
                       src={generateAvatarUrl(follower.avatar.url)}
                       alt={follower.username || "Avatar"}
-                      width={48}
-                      height={48}
+                      width={36}
+                      height={36}
                     />
                   )}
                 </Avatar>
                 <Stack gap={2}>
-                  <Text fw={500}>{follower.username}</Text>
-                  <Text size="xs" c="dimmed">
-                    {recording.title || t("unknownRecording")}
+                  <Text fw={500} size="xl">
+                    {follower.username}
                   </Text>
                 </Stack>
               </Group>

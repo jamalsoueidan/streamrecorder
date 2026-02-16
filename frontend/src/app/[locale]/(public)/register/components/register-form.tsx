@@ -29,7 +29,10 @@ export function RegisterForm() {
 
   useEffect(() => {
     if (state?.success) {
-      trackEvent("signup");
+      trackEvent("signup", {
+        language: navigator.language,
+        timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+      });
       router.push("/discover");
     }
   }, [state, router]);

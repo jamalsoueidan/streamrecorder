@@ -16,7 +16,7 @@ import {
 import { IconAlertCircle, IconRefresh, IconShieldCheck } from "@tabler/icons-react";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Submitted } from "./submitted";
 
 export function DMCAForm() {
@@ -310,44 +310,46 @@ export function DMCAForm() {
             }}
           />
 
-          <div>
-            <Flex gap="xs" align="flex-end">
-              <TextInput
-                label={t("captcha.label")}
-                description={t("captcha.description", {
-                  question: captcha.question,
-                })}
-                placeholder={t("captcha.placeholder")}
-                required
-                value={captchaInput}
-                onChange={(e) => setCaptchaInput(e.target.value)}
-                error={captchaError && t("captcha.error")}
-                style={{ flex: 1 }}
-                styles={{
-                  label: { color: "#f1f5f9" },
-                  description: { color: "#64748b" },
-                  input: {
-                    background: "rgba(255, 255, 255, 0.03)",
-                    border: "1px solid rgba(255, 255, 255, 0.1)",
-                    color: "#f1f5f9",
-                  },
-                }}
-              />
-              <Button
-                variant="subtle"
-                color="gray"
-                onClick={() => {
-                  generateCaptcha();
-                  setCaptchaInput("");
-                  setCaptchaError(false);
-                }}
-                title="New question"
-                style={{ color: "#94a3b8" }}
-              >
-                <IconRefresh size={18} />
-              </Button>
-            </Flex>
-          </div>
+          {captcha.question && (
+            <div>
+              <Flex gap="xs" align="flex-end">
+                <TextInput
+                  label={t("captcha.label")}
+                  description={t("captcha.description", {
+                    question: captcha.question,
+                  })}
+                  placeholder={t("captcha.placeholder")}
+                  required
+                  value={captchaInput}
+                  onChange={(e) => setCaptchaInput(e.target.value)}
+                  error={captchaError && t("captcha.error")}
+                  style={{ flex: 1 }}
+                  styles={{
+                    label: { color: "#f1f5f9" },
+                    description: { color: "#64748b" },
+                    input: {
+                      background: "rgba(255, 255, 255, 0.03)",
+                      border: "1px solid rgba(255, 255, 255, 0.1)",
+                      color: "#f1f5f9",
+                    },
+                  }}
+                />
+                <Button
+                  variant="subtle"
+                  color="gray"
+                  onClick={() => {
+                    generateCaptcha();
+                    setCaptchaInput("");
+                    setCaptchaError(false);
+                  }}
+                  title="New question"
+                  style={{ color: "#94a3b8" }}
+                >
+                  <IconRefresh size={18} />
+                </Button>
+              </Flex>
+            </div>
+          )}
 
           <Button
             type="submit"
@@ -380,7 +382,11 @@ function createCaptcha() {
 }
 
 function useSimpleCaptcha() {
-  const [captcha, setCaptcha] = useState(createCaptcha);
+  const [captcha, setCaptcha] = useState({ question: "", answer: 0 });
+
+  useEffect(() => {
+    setCaptcha(createCaptcha());
+  }, []);
 
   const generateCaptcha = () => {
     setCaptcha(createCaptcha());

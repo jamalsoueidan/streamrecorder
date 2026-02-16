@@ -313,6 +313,7 @@ export default function Filters({ filterOptions }: Props) {
           disabled={activeFilterCount === 0}
           label={activeFilterCount}
           size={18}
+          zIndex={1}
         >
           <Button
             variant="light"

@@ -116,7 +116,7 @@ export function AiRequestCard({ aiRequest }: Props) {
           </Badge>
           <Button
             component={Link}
-            href={`/ai-studio/${aiRequest.documentId}/view`}
+            href={`/ai-studio/view/${aiRequest.documentId}`}
             size="xs"
             variant="light"
             leftSection={<IconEye size={14} />}

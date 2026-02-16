@@ -106,6 +106,8 @@ export default function Page() {
       let completedCount = 0;
       let foundAny = false;
 
+      const foundPlatforms: string[] = [];
+
       const promises = platformsToSearch.map(async (platform) => {
         try {
           const result = await checkUser(parsed.username, platform);
@@ -113,6 +115,7 @@ export default function Page() {
 
           if (result.success && result.user) {
             foundAny = true;
+            foundPlatforms.push(platform);
             setSearchResults((prev) => [...prev, result.user!]);
           }
         } finally {
@@ -122,6 +125,14 @@ export default function Page() {
             !cancelSearchRef.current
           ) {
             setIsSearching(false);
+
+            // Track search completion
+            trackEvent("search", {
+              keyword: parsed.username,
+              platform: parsed.platform || "all",
+              found: foundAny ? "yes" : "no",
+            });
+
             if (!foundAny) {
               setSearchError(t("search.notFound"));
             }

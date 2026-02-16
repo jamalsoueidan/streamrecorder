@@ -25,19 +25,19 @@ import { AiStudioGuard } from "../../components/ai-studio-guard";
 
 interface PageProps {
   params: Promise<{
-    id: string;
+    aiRequestDocumentId: string;
   }>;
 }
 
 export default async function Page({ params }: PageProps) {
-  const { id } = await params;
+  const { aiRequestDocumentId } = await params;
   const t = await getTranslations("protected.aiStudio");
   const format = await getFormatter();
 
   const { data: response } = await api.aiRequest
     .meGetAiRequests({
       filters: {
-        documentId: { $eq: id },
+        documentId: { $eq: aiRequestDocumentId },
       },
       populate: {
         recording: {

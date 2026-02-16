@@ -9,14 +9,13 @@ import {
   Group,
   Stack,
   Text,
-  Title,
 } from "@mantine/core";
 import { IconAlertTriangle, IconSparkles } from "@tabler/icons-react";
 import { useTranslations } from "next-intl";
 import { useRouter } from "next/navigation";
 import { useState, useTransition } from "react";
-import { createAiRequest } from "../actions/ai-actions";
 import { MiniPlayer } from "../../components/video/mini-player";
+import { createAiRequest } from "../actions/ai-actions";
 
 interface Props {
   recording: Recording;
@@ -53,7 +52,7 @@ export function AiCreateForm({ recording }: Props) {
       });
 
       if (result.success && result.documentId) {
-        router.push(`/ai-studio/${result.documentId}/view`);
+        router.push(`/ai-studio/view/${result.documentId}`);
       }
     });
   };
@@ -62,11 +61,6 @@ export function AiCreateForm({ recording }: Props) {
 
   return (
     <Stack gap="lg">
-      <Stack gap={4}>
-        <Title order={2}>{t("title")}</Title>
-        <Text c="dimmed">{t("description")}</Text>
-      </Stack>
-
       <Box maw={600} pos="relative" style={{ aspectRatio: "16/9" }}>
         <MiniPlayer documentId={recording.documentId!} />
       </Box>
@@ -82,20 +76,25 @@ export function AiCreateForm({ recording }: Props) {
       )}
 
       <Stack gap="sm">
-        <Text fw={500}>{t("selectOptions")}</Text>
+        <Text fw={500} size="lg">
+          {t("selectOptions")}
+        </Text>
         <Checkbox
+          size="lg"
           label={t("options.clips.label")}
           description={t("options.clips.description")}
           checked={generateClips}
           onChange={(e) => setGenerateClips(e.currentTarget.checked)}
         />
         <Checkbox
+          size="lg"
           label={t("options.memes.label")}
           description={t("options.memes.description")}
           checked={generateMemes}
           onChange={(e) => setGenerateMemes(e.currentTarget.checked)}
         />
         <Checkbox
+          size="lg"
           label={t("options.profile.label")}
           description={t("options.profile.description")}
           checked={generateProfile}
@@ -108,6 +107,7 @@ export function AiCreateForm({ recording }: Props) {
           leftSection={<IconSparkles size={18} />}
           onClick={handleSubmit}
           loading={isPending}
+          size="lg"
           disabled={!isValid || isOverLimit}
           color="violet"
         >

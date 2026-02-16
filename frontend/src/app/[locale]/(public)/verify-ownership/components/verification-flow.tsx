@@ -23,7 +23,7 @@ import {
 } from "@tabler/icons-react";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { parseUsername } from "@/app/lib/parse-username";
 import { verifyProfile } from "../actions/verify-profile";
 
@@ -43,8 +43,12 @@ export function VerificationFlow({ intent }: { intent: string }) {
   const [email, setEmail] = useState("");
   const [urlError, setUrlError] = useState("");
   const [emailError, setEmailError] = useState("");
-  const [verificationCode] = useState(() => generateVerificationCode());
+  const [verificationCode, setVerificationCode] = useState("");
   const [verifying, setVerifying] = useState(false);
+
+  useEffect(() => {
+    setVerificationCode(generateVerificationCode());
+  }, []);
   const [verificationFailed, setVerificationFailed] = useState(false);
   const [actionResult, setActionResult] = useState<
     "created" | "linked" | "not_found" | null
@@ -237,38 +241,40 @@ export function VerificationFlow({ intent }: { intent: string }) {
                 <Text fw={600} style={{ color: "#f1f5f9" }}>
                   {t("steps.verify.codeLabel")}
                 </Text>
-                <Flex align="center" gap="md">
-                  <Text
-                    size="xl"
-                    fw={700}
-                    style={{
-                      color: "#a5b4fc",
-                      fontFamily: "monospace",
-                      letterSpacing: "0.1em",
-                    }}
-                  >
-                    {verificationCode}
-                  </Text>
-                  <CopyButton value={verificationCode}>
-                    {({ copied, copy }) => (
-                      <Tooltip
-                        label={copied ? t("common.copied") : t("common.copy")}
-                      >
-                        <ActionIcon
-                          variant="subtle"
-                          color={copied ? "teal" : "gray"}
-                          onClick={copy}
+                {verificationCode && (
+                  <Flex align="center" gap="md">
+                    <Text
+                      size="xl"
+                      fw={700}
+                      style={{
+                        color: "#a5b4fc",
+                        fontFamily: "monospace",
+                        letterSpacing: "0.1em",
+                      }}
+                    >
+                      {verificationCode}
+                    </Text>
+                    <CopyButton value={verificationCode}>
+                      {({ copied, copy }) => (
+                        <Tooltip
+                          label={copied ? t("common.copied") : t("common.copy")}
                         >
-                          {copied ? (
-                            <IconCheck size={18} />
-                          ) : (
-                            <IconClipboard size={18} />
-                          )}
-                        </ActionIcon>
-                      </Tooltip>
-                    )}
-                  </CopyButton>
-                </Flex>
+                          <ActionIcon
+                            variant="subtle"
+                            color={copied ? "teal" : "gray"}
+                            onClick={copy}
+                          >
+                            {copied ? (
+                              <IconCheck size={18} />
+                            ) : (
+                              <IconClipboard size={18} />
+                            )}
+                          </ActionIcon>
+                        </Tooltip>
+                      )}
+                    </CopyButton>
+                  </Flex>
+                )}
                 <Text size="sm" style={{ color: "#94a3b8" }}>
                   {t("steps.verify.instructions")}
                 </Text>
