@@ -12,13 +12,18 @@
   },
   "search": {
     "actionButton": "Search",
+    "submitButton": "Search",
     "placeholder": "Enter your stream URL or @username",
     "searching": "Searching on {platform}...",
     "pasteButton": "Paste",
     "pasteError": "Paste manually using Ctrl+V or long-press",
     "parseError": "Could not parse username",
     "notFound": "Nothing found...",
-    "autoDetected": "Platform auto-detected from URL"
+    "autoDetected": "Platform auto-detected from URL",
+    "enterUsername": "Enter your stream URL or username",
+    "selectPlatform": "Select the platform you stream on",
+    "changeUsername": "Change username",
+    "newSearch": "New Search"
   },
   "hints": {
     "tryFormats": "Try these examples:",

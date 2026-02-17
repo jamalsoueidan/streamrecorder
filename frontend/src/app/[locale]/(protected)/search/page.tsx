@@ -23,9 +23,8 @@ import {
   Divider,
   Group,
   Image,
-  Loader,
-  LoadingOverlay,
   Paper,
+  SimpleGrid,
   Stack,
   Text,
   TextInput,
@@ -33,7 +32,6 @@ import {
   Tooltip,
   UnstyledButton,
 } from "@mantine/core";
-import { useDebouncedValue } from "@mantine/hooks";
 import { notifications } from "@mantine/notifications";
 import {
   IconCheck,
@@ -44,7 +42,7 @@ import {
 } from "@tabler/icons-react";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useRef, useState } from "react";
 
 const ALL_PLATFORMS: PlatformType[] = [
   "tiktok",
@@ -56,15 +54,21 @@ const ALL_PLATFORMS: PlatformType[] = [
   "bigo",
 ];
 
+type SearchStep = "input" | "selectPlatform" | "results";
+
 export default function Page() {
   const t = useTranslations("protected.search");
   const [query, setQuery] = useState("");
-  const [debouncedQuery] = useDebouncedValue(query, 500);
+  const [parsedUsername, setParsedUsername] = useState("");
+  const [step, setStep] = useState<SearchStep>("input");
   const [searchResults, setSearchResults] = useState<UserSearchResult[]>([]);
   const [isSearching, setIsSearching] = useState(false);
   const [searchError, setSearchError] = useState<string | null>(null);
   const [isFollowing, setIsFollowing] = useState(false);
   const [followedUser, setFollowedUser] = useState<UserSearchResult | null>(
+    null,
+  );
+  const [selectedPlatform, setSelectedPlatform] = useState<PlatformType | null>(
     null,
   );
   const cancelSearchRef = useRef(false);
@@ -74,79 +78,79 @@ export default function Page() {
     setIsSearching(false);
   }, []);
 
-  // Search for user when debounced query changes
-  useEffect(() => {
-    cancelSearchRef.current = false;
+  // Handle form submission
+  const handleSubmit = (e?: React.FormEvent) => {
+    e?.preventDefault();
+
+    if (!query.trim()) return;
+
+    const parsed = parseUsername(query);
+
+    if (!parsed.username) {
+      setSearchError(t("search.parseError"));
+      return;
+    }
+
+    setParsedUsername(parsed.username);
+    setSearchError(null);
+    setSearchResults([]);
     setFollowedUser(null);
 
-    const searchUser = async () => {
-      if (!debouncedQuery || debouncedQuery.trim().length === 0) {
-        setSearchResults([]);
-        setSearchError(null);
-        return;
+    // If URL detected, search that platform directly
+    if (parsed.platform) {
+      executeSearch(parsed.username, parsed.platform);
+    } else {
+      // Show platform selection
+      setStep("selectPlatform");
+    }
+  };
+
+  // Execute search for a specific platform
+  const executeSearch = async (username: string, platform: PlatformType) => {
+    cancelSearchRef.current = false;
+    setStep("results");
+    setIsSearching(true);
+    setSearchError(null);
+    setSearchResults([]);
+
+    try {
+      const result = await checkUser(username, platform);
+
+      if (cancelSearchRef.current) return;
+
+      if (result.success && result.user) {
+        setSearchResults([result.user]);
+        trackEvent("search", {
+          keyword: username,
+          platform: platform,
+          found: "yes",
+        });
+      } else {
+        setSearchError(t("search.notFound"));
+        trackEvent("search", {
+          keyword: username,
+          platform: platform,
+          found: "no",
+        });
       }
+    } catch {
+      setSearchError(t("search.notFound"));
+    } finally {
+      setIsSearching(false);
+    }
+  };
 
-      setIsSearching(true);
-      setSearchError(null);
-      setSearchResults([]);
-
-      const parsed = parseUsername(debouncedQuery);
-
-      if (!parsed.username) {
-        setSearchError(t("search.parseError"));
-        setIsSearching(false);
-        return;
-      }
-
-      // If URL detected, search only that platform. Otherwise search all.
-      const platformsToSearch = parsed.platform
-        ? [parsed.platform]
-        : ALL_PLATFORMS;
-
-      let completedCount = 0;
-      let foundAny = false;
-
-      const promises = platformsToSearch.map(async (platform) => {
-        try {
-          const result = await checkUser(parsed.username, platform);
-          if (cancelSearchRef.current) return;
-
-          if (result.success && result.user) {
-            foundAny = true;
-
-            setSearchResults((prev) => [...prev, result.user!]);
-          }
-        } finally {
-          completedCount++;
-          if (
-            completedCount === platformsToSearch.length &&
-            !cancelSearchRef.current
-          ) {
-            setIsSearching(false);
-
-            // Track search completion
-            trackEvent("search", {
-              keyword: parsed.username,
-              platform: parsed.platform || "all",
-              found: foundAny ? "yes" : "no",
-            });
-
-            if (!foundAny) {
-              setSearchError(t("search.notFound"));
-            }
-          }
-        }
-      });
-
-      await Promise.allSettled(promises);
-    };
-
-    searchUser();
-
-    return () => {
-      cancelSearchRef.current = true;
-    };
-  }, [debouncedQuery, t]);
+  // Reset to input step
+  const resetSearch = () => {
+    setQuery("");
+    setParsedUsername("");
+    setStep("input");
+    setSearchResults([]);
+    setSearchError(null);
+    setFollowedUser(null);
+    setSelectedPlatform(null);
+    cancelSearchRef.current = true;
+  };
 
   // Handle clicking on a user result
   const handleUserSelect = async (user: UserSearchResult) => {
@@ -173,152 +177,218 @@ export default function Page() {
     }
   };
 
+  // Get platform info for display
+  const getPlatformInfo = (platform: PlatformType) => {
+    return streamingPlatforms.find(
+      (p) => p.name.toLowerCase() === platform.toLowerCase(),
+    );
+  };
+
+  // Handle platform selection
+  const handlePlatformSelect = (platform: PlatformType) => {
+    setSelectedPlatform(platform);
+    executeSearch(parsedUsername, platform);
+  };
+
+  // Render platform selection buttons
+  const renderPlatformSelection = () => {
+    return (
+      <SimpleGrid cols={{ base: 2, xs: 3, sm: 4 }} spacing="sm">
+        {ALL_PLATFORMS.map((platform) => {
+          const info = getPlatformInfo(platform);
+          const isSelected = selectedPlatform === platform;
+          return (
+            <Button
+              key={platform}
+              variant={isSelected ? "filled" : "default"}
+              size="md"
+              radius="md"
+              loading={isSelected && isSearching}
+              leftSection={
+                info && (
+                  <Image
+                    src={info.file}
+                    alt={info.name}
+                    w={20}
+                    h={20}
+                    style={{ filter: "brightness(0) invert(1)" }}
+                  />
+                )
+              }
+              onClick={() => handlePlatformSelect(platform)}
+            >
+              {t(`platforms.${platform}`)}
+            </Button>
+          );
+        })}
+      </SimpleGrid>
+    );
+  };
+
   // Render the search results
   const renderContent = () => {
-    if (query.trim().length === 0) return null;
-
-    // Show hint if input looks invalid
-    if (
-      !isSearching &&
-      searchResults.length === 0 &&
-      !searchError &&
-      (query.includes(" ") || query.length > 30)
-    ) {
-      return (
-        <Stack align="center" gap="xs" py="md">
-          <Text size="xs" c="dimmed">
-            {t("hints.enterUsername")}
-          </Text>
-          <Text size="xs" c="dimmed">
-            @mrbeast
-          </Text>
-          <Text size="xs" c="dimmed">
-            twitch.tv/mrbeast
-          </Text>
-          <Text size="xs" c="dimmed">
-            https://www.tiktok.com/@mrbeast
-          </Text>
-        </Stack>
-      );
-    }
+    // Only show content when not in input step
+    if (step === "input") return null;
 
     return (
-      <Box pos="relative">
-        <LoadingOverlay
-          visible={isFollowing}
-          overlayProps={{ radius: "lg", blur: 1 }}
-        />
-        <Stack w="100%">
-          {searchResults.map((user) => {
-            const isFollowed =
-              followedUser?.username === user.username &&
-              followedUser?.type === user.type;
+      <>
+        <Card p="md" radius="lg" withBorder bg="transparent">
+          <Stack gap="sm">
+            {/* Header */}
+            <Group justify="space-between" align="center">
+              <Text size="md" c="white" fw={500}>
+                {t("search.selectPlatform")}
+              </Text>
+              <Badge variant="outline" size="sm">
+                @{parsedUsername}
+              </Badge>
+            </Group>
 
-            if (isFollowed) {
-              return (
-                <Paper
-                  key={`${user.type}-${user.username}`}
-                  p="sm"
-                  radius="lg"
-                  withBorder
-                >
-                  <Group wrap="nowrap" w="100%">
-                    <Avatar
-                      src={`/api/image/${user.avatar}`}
-                      alt={user.nickname}
-                      size={60}
-                    />
+            {renderPlatformSelection()}
+          </Stack>
+        </Card>
 
-                    <div style={{ flex: 1 }}>
-                      <Text fw={500}>{user.nickname}</Text>
-                      <Text opacity={0.6} size="xs">
-                        @{user.username}
-                      </Text>
-                      <Badge variant="outline" color="white">
-                        {t(`platforms.${user.type}`)}
-                      </Badge>
-                    </div>
+        {/* Results section */}
+        {step === "results" && (
+          <>
+            <Box pos="relative">
+              <Stack w="100%">
+                {searchResults.map((user) => {
+                  const isFollowed =
+                    followedUser?.username === user.username &&
+                    followedUser?.type === user.type;
 
-                    <Badge
-                      variant="filled"
-                      size="lg"
-                      color="green"
-                      leftSection={<IconCheck size={18} />}
-                      style={{ pointerEvents: "none" }}
+                  if (isFollowed) {
+                    return (
+                      <Paper
+                        p="sm"
+                        radius="lg"
+                        withBorder
+                        key={`${user.type}-${user.username}`}
+                      >
+                        <Group wrap="nowrap" w="100%">
+                          <Avatar
+                            src={`/api/image/${user.avatar}`}
+                            alt={user.nickname}
+                            size={60}
+                          />
+
+                          <div style={{ flex: 1 }}>
+                            <Text fw={500}>{user.nickname}</Text>
+                            <Text opacity={0.6} size="xs">
+                              @{user.username}
+                            </Text>
+                            <Badge variant="outline" color="white">
+                              {t(`platforms.${user.type}`)}
+                            </Badge>
+                          </div>
+
+                          <Badge
+                            variant="filled"
+                            size="lg"
+                            color="green"
+                            leftSection={<IconCheck size={18} />}
+                            style={{ pointerEvents: "none" }}
+                          >
+                            {t("actions.successTitle")}
+                          </Badge>
+                        </Group>
+
+                        <Text size="xs" c="dimmed" ta="center" mt="xs">
+                          {t("actions.willRecord")}
+                        </Text>
+                        <Center mt="xs">
+                          <Button
+                            component={Link}
+                            href={getProfileUrl(user as never)}
+                            variant="subtle"
+                            size="compact-sm"
+                          >
+                            {t("actions.viewPage")}
+                          </Button>
+                        </Center>
+                      </Paper>
+                    );
+                  }
+
+                  return (
+                    <UnstyledButton
+                      key={`${user.type}-${user.username}`}
+                      onClick={() => handleUserSelect(user)}
+                      disabled={isFollowing}
+                      w="100%"
                     >
-                      {t("actions.successTitle")}
-                    </Badge>
-                  </Group>
+                      <Paper
+                        p="sm"
+                        radius="lg"
+                        withBorder
+                        key={`${user.type}-${user.username}`}
+                      >
+                        <Group wrap="nowrap" w="100%">
+                          <Avatar
+                            src={`/api/image/${user.avatar}`}
+                            alt={user.nickname}
+                            size={60}
+                          />
 
-                  <Text size="xs" c="dimmed" ta="center" mt="xs">
-                    {t("actions.willRecord")}
+                          <div style={{ flex: 1 }}>
+                            <Text fw={500}>{user.nickname}</Text>
+                            <Text opacity={0.6} size="xs">
+                              @{user.username}
+                            </Text>
+                            <Badge variant="outline" color="white">
+                              {t(`platforms.${user.type}`)}
+                            </Badge>
+                          </div>
+
+                          <Badge
+                            variant="filled"
+                            size="lg"
+                            leftSection={<IconUsersPlus size={18} />}
+                            style={{ pointerEvents: "none" }}
+                          >
+                            {t("actions.follow")}
+                          </Badge>
+                        </Group>
+                      </Paper>
+                    </UnstyledButton>
+                  );
+                })}
+
+                {!isSearching && searchError && searchResults.length === 0 && (
+                  <Text size="sm" c="dimmed" ta="center" py="md">
+                    {searchError}
                   </Text>
-                  <Center mt="xs">
-                    <Button
-                      component={Link}
-                      href={getProfileUrl(user as never)}
-                      variant="subtle"
-                      size="compact-sm"
-                    >
-                      {t("actions.viewPage")}
-                    </Button>
-                  </Center>
-                </Paper>
-              );
-            }
+                )}
+              </Stack>
+            </Box>
+          </>
+        )}
 
-            return (
-              <UnstyledButton
-                key={`${user.type}-${user.username}`}
-                onClick={() => handleUserSelect(user)}
-                disabled={isFollowing}
-                w="100%"
-              >
-                <Paper p="sm" radius="lg" withBorder>
-                  <Group wrap="nowrap" w="100%">
-                    <Avatar
-                      src={`/api/image/${user.avatar}`}
-                      alt={user.nickname}
-                      size={60}
-                    />
-
-                    <div style={{ flex: 1 }}>
-                      <Text fw={500}>{user.nickname}</Text>
-                      <Text opacity={0.6} size="xs">
-                        @{user.username}
-                      </Text>
-                      <Badge variant="outline" color="white">
-                        {t(`platforms.${user.type}`)}
-                      </Badge>
-                    </div>
-
-                    <Badge
-                      variant="filled"
-                      size="lg"
-                      leftSection={<IconUsersPlus size={18} />}
-                      style={{ pointerEvents: "none" }}
-                    >
-                      {t("actions.follow")}
-                    </Badge>
-                  </Group>
-                </Paper>
-              </UnstyledButton>
-            );
-          })}
-
-          {isSearching && (
-            <Center py="md">
-              <Loader size="sm" />
-            </Center>
+        {/* Action buttons */}
+        <Group justify="center" gap="sm">
+          {step === "selectPlatform" && (
+            <Button
+              variant="subtle"
+              color="gray"
+              size="compact-sm"
+              onClick={resetSearch}
+            >
+              {t("search.changeUsername")}
+            </Button>
           )}
-
-          {!isSearching && searchError && searchResults.length === 0 && (
-            <Text size="sm" c="dimmed" ta="center" py="md">
-              {searchError}
-            </Text>
+          {step === "results" && (
+            <Button
+              variant="light"
+              size="sm"
+              leftSection={<IconSearch size={16} />}
+              onClick={resetSearch}
+            >
+              {t("search.newSearch")}
+            </Button>
           )}
-        </Stack>
-      </Box>
+        </Group>
+      </>
     );
   };
 
@@ -359,75 +429,113 @@ export default function Page() {
         withBorder
         bg="transparent"
       >
-        <Stack>
-          <TextInput
-            w="100%"
-            value={query}
-            c="white"
-            size="lg"
-            radius="lg"
-            autoFocus
-            onChange={(e) => setQuery(e.currentTarget.value)}
-            placeholder={t("search.placeholder")}
-            rightSectionPointerEvents="auto"
-            rightSectionWidth={query.trim().length === 0 ? 100 : 42}
-            rightSection={
-              query.trim().length === 0 ? (
-                <Button
-                  variant="subtle"
-                  size="compact-lg"
-                  color="gray.6"
-                  leftSection={<IconClipboard size={14} />}
-                  onClick={async () => {
-                    try {
-                      const text = await navigator.clipboard.readText();
-                      if (text?.trim()) {
-                        setQuery(text);
-                      }
-                    } catch {
-                      notifications.show({
-                        message: t("search.pasteError"),
-                        color: "yellow",
-                      });
-                    }
-                  }}
-                >
-                  {t("search.pasteButton")}
-                </Button>
-              ) : (
-                <ActionIcon
-                  variant="subtle"
-                  size="lg"
-                  radius="xl"
-                  color="gray.6"
-                  onClick={() => setQuery("")}
-                >
-                  <IconX />
-                </ActionIcon>
-              )
-            }
-          />
-
-          <Group gap="xs">
-            <Text size="xs" c="dimmed">
-              {t("hints.tryFormats")}
+        <form onSubmit={handleSubmit}>
+          <Stack gap="xs">
+            <Text size="md" c="white" fw={500}>
+              {t("search.enterUsername")}
             </Text>
-            <Badge
-              variant="outline"
-              style={{ cursor: "pointer" }}
-              onClick={() => setQuery("mrbeast")}
-            >
-              mrbeast
-            </Badge>
-            <Badge
-              variant="outline"
-              style={{ cursor: "pointer" }}
-              onClick={() => setQuery("https://www.tiktok.com/@mrbeast")}
-            >
-              https://www.tiktok.com/@mrbeast
-            </Badge>
-          </Group>
-        </Stack>
+            <Group gap="xs" align="flex-end">
+              <TextInput
+                flex={1}
+                value={query}
+                c="white"
+                size="md"
+                radius="md"
+                autoFocus
+                disabled={step !== "input"}
+                onChange={(e) => setQuery(e.currentTarget.value)}
+                rightSectionPointerEvents="auto"
+                rightSectionWidth={
+                  step !== "input" ? 42 : query.trim().length === 0 ? 100 : 42
+                }
+                rightSection={
+                  step !== "input" ? (
+                    <ActionIcon
+                      variant="subtle"
+                      size="lg"
+                      radius="xl"
+                      color="gray.6"
+                      onClick={resetSearch}
+                    >
+                      <IconX />
+                    </ActionIcon>
+                  ) : query.trim().length === 0 ? (
+                    <Button
+                      variant="subtle"
+                      size="compact-lg"
+                      color="gray.6"
+                      leftSection={<IconClipboard size={14} />}
+                      onClick={async () => {
+                        try {
+                          const text = await navigator.clipboard.readText();
+                          if (text?.trim()) {
+                            setQuery(text);
+                          }
+                        } catch {
+                          notifications.show({
+                            message: t("search.pasteError"),
+                            color: "yellow",
+                          });
+                        }
+                      }}
+                    >
+                      {t("search.pasteButton")}
+                    </Button>
+                  ) : (
+                    <ActionIcon
+                      variant="subtle"
+                      size="lg"
+                      radius="xl"
+                      color="gray.6"
+                      onClick={() => setQuery("")}
+                    >
+                      <IconX />
+                    </ActionIcon>
+                  )
+                }
+              />
+              {step === "input" && (
+                <Button
+                  type="submit"
+                  size="md"
+                  radius="md"
+                  disabled={!query.trim()}
+                  leftSection={<IconSearch size={20} />}
+                >
+                  {t("search.submitButton")}
+                </Button>
+              )}
+            </Group>
+
+            {step === "input" && (
+              <Group gap="xs">
+                <Text size="xs" c="dimmed">
+                  {t("hints.tryFormats")}
+                </Text>
+                <Badge
+                  variant="outline"
+                  style={{ cursor: "pointer" }}
+                  onClick={() => setQuery("mrbeast")}
+                >
+                  mrbeast
+                </Badge>
+                <Badge
+                  variant="outline"
+                  style={{ cursor: "pointer" }}
+                  onClick={() => setQuery("https://www.tiktok.com/@mrbeast")}
+                >
+                  https://www.tiktok.com/@mrbeast
+                </Badge>
+              </Group>
+            )}
+
+            {searchError && step === "input" && (
+              <Text size="sm" c="red" ta="center">
+                {searchError}
+              </Text>
+            )}
+          </Stack>
+        </form>
       </Card>
 
       {renderContent()}

@@ -12,13 +12,18 @@
   },
   "search": {
     "actionButton": "ابحث",
+    "submitButton": "ابحث",
     "placeholder": "ابحث...",
     "searching": "جاري البحث في {platform}...",
     "pasteButton": "لصق",
     "pasteError": "الصق يدوياً باستخدام Ctrl+V أو الضغط المطول",
     "parseError": "تعذر تحليل اسم المستخدم",
     "notFound": "لم يتم العثور على شيء...",
-    "autoDetected": "تم اكتشاف المنصة تلقائياً من الرابط"
+    "autoDetected": "تم اكتشاف المنصة تلقائياً من الرابط",
+    "enterUsername": "أدخل رابط البث أو اسم المستخدم الخاص بك",
+    "selectPlatform": "اختر المنصة التي تبث عليها",
+    "changeUsername": "تغيير اسم المستخدم",
+    "newSearch": "بحث جديد"
   },
   "hints": {
     "tryFormats": "جرب هذه الأمثلة:",
