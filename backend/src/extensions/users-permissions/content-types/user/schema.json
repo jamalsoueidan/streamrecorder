@@ -76,6 +76,23 @@
       "relation": "oneToOne",
       "target": "api::tiktok.tiktok",
       "mappedBy": "user"
+    },
+    "subscriptionStatus": {
+      "type": "enumeration",
+      "enum": [
+        "active",
+        "cancelled",
+        "expired"
+      ]
+    },
+    "billingPeriod": {
+      "type": "string"
+    },
+    "subscriptionEndDate": {
+      "type": "datetime"
+    },
+    "freemius": {
+      "type": "json"
     }
   }
 }

@@ -6224,6 +6224,11 @@ react-style-singleton@^2.2.2, react-style-singleton@^2.2.3:
     get-nonce "^1.0.0"
     tslib "^2.0.0"
 
+react-svg-credit-card-payment-icons@^5.1.2:
+  version "5.1.2"
+  resolved "https://registry.yarnpkg.com/react-svg-credit-card-payment-icons/-/react-svg-credit-card-payment-icons-5.1.2.tgz#d7defbfcdc71836fd8ebd01b36b5b442803ec8d3"
+  integrity sha512-KnCrg0U5v6SPqDw1DJ0zKCrxg1fuSaaWNn1Ls08x0fWCeqaRVctAOrKNUFE6RVaEgsvg81GOJb0bYHQaxhozNQ==
+
 react-textarea-autosize@8.5.9:
   version "8.5.9"
   resolved "https://registry.yarnpkg.com/react-textarea-autosize/-/react-textarea-autosize-8.5.9.tgz#ab8627b09aa04d8a2f45d5b5cd94c84d1d4a8893"

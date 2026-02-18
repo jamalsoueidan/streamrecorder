@@ -1,5 +1,6 @@
 import { createHmac, timingSafeEqual } from "crypto";
 import { NextRequest, NextResponse } from "next/server";
+import publicApi from "@/lib/public-api";
 
 // Verify webhook signature from Freemius
 function verifySignature(body: string, signature: string | null): boolean {
@@ -53,23 +54,49 @@ type FreemiusEvent =
 interface FreemiusWebhookPayload {
   id: string;
   type: FreemiusEvent;
+  plugin_id: string;
+  user_id: string;
+  install_id: string | null;
+  created: string;
+  is_live: boolean;
   data: {
-    id: string;
-    user_id: string;
-    plan_id: string;
-    pricing_id: string;
-    billing_cycle: number; // 1 = monthly, 3 = quarterly, 12 = yearly
-    next_payment?: string;
-    canceled_at?: string;
-    created_at: string;
-    user?: {
+    subscription_id: string;
+    license_id: string;
+    reason_ids?: string | null;
+    reason?: string | null;
+  };
+  objects: {
+    user: {
       id: string;
       email: string;
       first?: string;
       last?: string;
+      ip?: string;
+      is_verified?: boolean;
+      created?: string;
     };
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    [key: string]: any;
+    subscription: {
+      id: string;
+      user_id: string;
+      plan_id: string;
+      pricing_id: string;
+      license_id: string;
+      billing_cycle: number; // 1 = monthly, 12 = yearly
+      next_payment?: string;
+      canceled_at?: string | null;
+      amount_per_cycle: number;
+      currency: string;
+      created: string;
+    };
+    license: {
+      id: string;
+      user_id: string;
+      plan_id: string;
+      pricing_id: string;
+      expiration: string;
+      secret_key: string;
+      is_cancelled: boolean;
+    };
   };
 }
 
@@ -100,68 +127,87 @@ export async function POST(request: NextRequest) {
     console.log("Full Payload:", JSON.stringify(payload, null, 2));
     console.log("===========================================");
 
-    const { type, data } = payload;
+    const { type, objects } = payload;
+    const { user, subscription, license } = objects;
 
     switch (type) {
       case "subscription.created": {
         console.log("📦 SUBSCRIPTION CREATED");
-        console.log("User ID:", data.user_id);
-        console.log("User Email:", data.user?.email);
-        console.log("Plan ID:", data.plan_id);
-        console.log("Billing Cycle:", data.billing_cycle, "months");
-        console.log("Next Payment:", data.next_payment);
+        console.log("Freemius User ID:", user.id);
+        console.log("User Email:", user.email);
+        console.log("User Name:", `${user.first || ""} ${user.last || ""}`.trim());
+        console.log("Plan ID:", subscription.plan_id);
+        console.log("Billing Cycle:", subscription.billing_cycle, "months");
+        console.log("Next Payment:", subscription.next_payment);
+        console.log("License Expiration:", license.expiration);
 
-        // TODO: Update user in Strapi
-        // await updateUserSubscription({
-        //   email: data.user?.email,
-        //   plan: getPlanFromPlanId(data.plan_id),
-        //   billing_period: getBillingPeriod(data.billing_cycle),
-        //   subscription_status: "active",
-        //   subscription_end_date: data.next_payment,
-        //   freemius_subscription_id: data.id,
-        // });
+        // Find user in our system by Freemius ID
+        const strapiUser = await findUserByFreemiusId(user.id);
+        if (strapiUser) {
+          console.log("Found Strapi user:", strapiUser.id);
+          await updateUserSubscription(strapiUser.id, {
+            subscriptionStatus: "active",
+            subscriptionEndDate: subscription.next_payment || license.expiration,
+            billingPeriod: getBillingPeriod(subscription.billing_cycle),
+            freemius: {
+              userId: user.id,
+              subscriptionId: subscription.id,
+              billingPeriod: getBillingPeriod(subscription.billing_cycle),
+            },
+          });
+          // TODO: Update user role to premium
+          console.log("User subscription updated");
+        } else {
+          console.log("⚠️ No Strapi user found for Freemius ID:", user.id);
+        }
 
         break;
       }
 
       case "subscription.cancelled": {
         console.log("❌ SUBSCRIPTION CANCELLED");
-        console.log("User ID:", data.user_id);
-        console.log("User Email:", data.user?.email);
-        console.log("Cancelled At:", data.canceled_at);
-        console.log("Still Active Until:", data.next_payment);
+        console.log("Freemius User ID:", user.id);
+        console.log("User Email:", user.email);
+        console.log("Cancelled At:", subscription.canceled_at);
+        console.log("Still Active Until:", subscription.next_payment);
 
-        // TODO: Update user in Strapi - mark as cancelled but keep active until end date
-        // await updateUserSubscription({
-        //   email: data.user?.email,
-        //   subscription_status: "cancelled",
-        //   // Keep plan active until subscription_end_date
-        // });
+        // Find user and mark as cancelled (still active until end date)
+        const cancelledUser = await findUserByFreemiusId(user.id);
+        if (cancelledUser) {
+          await updateUserSubscription(cancelledUser.id, {
+            subscriptionStatus: "cancelled",
+            // Keep role as premium until subscriptionEndDate
+          });
+          console.log("User marked as cancelled");
+        }
 
         break;
       }
 
       case "subscription.renewal.failed.last": {
         console.log("💀 SUBSCRIPTION ENDED - FINAL RENEWAL FAILED");
-        console.log("User ID:", data.user_id);
-        console.log("User Email:", data.user?.email);
+        console.log("Freemius User ID:", user.id);
+        console.log("User Email:", user.email);
 
-        // TODO: Update user in Strapi - set to free
-        // await updateUserSubscription({
-        //   email: data.user?.email,
-        //   plan: "free",
-        //   subscription_status: "expired",
-        //   billing_period: null,
-        //   freemius_subscription_id: null,
-        // });
+        // Set user back to free
+        const expiredUser = await findUserByFreemiusId(user.id);
+        if (expiredUser) {
+          await updateUserSubscription(expiredUser.id, {
+            subscriptionStatus: "expired",
+            subscriptionEndDate: null,
+            billingPeriod: null,
+          });
+          // TODO: Update user role to free/authenticated
+          console.log("User subscription expired");
+        }
 
         break;
       }
 
       case "subscription.renewal.retry": {
         console.log("🔄 SUBSCRIPTION RENEWAL RETRY");
-        console.log("User ID:", data.user_id);
-        console.log("User Email:", data.user?.email);
+        console.log("Freemius User ID:", user.id);
+        console.log("User Email:", user.email);
         // Just log, no action needed yet
         break;
       }
@@ -182,42 +228,64 @@ export async function POST(request: NextRequest) {
   }
 }
 
-// Helper functions - uncomment and implement when ready
+// Helper functions
 
-// function getPlanFromPlanId(planId: string): "champion" | "premium" {
-//   // Map Freemius plan IDs to your plan names
-//   const planMap: Record<string, "champion" | "premium"> = {
-//     "40816": "champion", // Update with your actual plan IDs
-//     "40817": "premium",
-//   };
-//   return planMap[planId] || "champion";
-// }
+function getBillingPeriod(billingCycle: number): string {
+  switch (billingCycle) {
+    case 1:
+      return "monthly";
+    case 12:
+      return "annual";
+    case 0:
+      return "lifetime";
+    default:
+      return "monthly";
+  }
+}
 
-// function getBillingPeriod(billingCycle: number): "1month" | "3months" | "12months" {
-//   switch (billingCycle) {
-//     case 1: return "1month";
-//     case 3: return "3months";
-//     case 12: return "12months";
-//     default: return "1month";
-//   }
-// }
+async function findUserByFreemiusId(freemiusUserId: string) {
+  try {
+    const response = await publicApi.usersPermissionsUsersRoles.usersList({
+      filters: {
+        freemius: {
+          userId: {
+            $eq: freemiusUserId,
+          },
+        },
+      },
+    });
 
-// async function updateUserSubscription(data: {
-//   email?: string;
-//   plan?: string;
-//   billing_period?: string | null;
-//   subscription_status?: string;
-//   subscription_end_date?: string;
-//   freemius_subscription_id?: string | null;
-// }) {
-//   // Call Strapi API to update user
-//   const response = await fetch(`${process.env.STRAPI_URL}/api/users/update-subscription`, {
-//     method: "POST",
-//     headers: {
-//       "Content-Type": "application/json",
-//       "Authorization": `Bearer ${process.env.STRAPI_API_TOKEN}`,
-//     },
-//     body: JSON.stringify(data),
-//   });
-//   return response.json();
-// }
+    const users = response.data;
+    return users[0] || null;
+  } catch (error) {
+    console.error("Failed to find user:", error);
+    return null;
+  }
+}
+
+interface SubscriptionUpdate {
+  subscriptionStatus?: "active" | "cancelled" | "expired";
+  subscriptionEndDate?: string | null;
+  billingPeriod?: string | null;
+  freemius?: {
+    userId: string;
+    subscriptionId?: string;
+    billingPeriod?: string;
+  };
+}
+
+async function updateUserSubscription(
+  strapiUserId: number,
+  data: SubscriptionUpdate
+) {
+  try {
+    const response = await publicApi.usersPermissionsUsersRoles.usersUpdate(
+      { id: strapiUserId },
+      data
+    );
+    return response.data;
+  } catch (error) {
+    console.error("Failed to update user:", error);
+    return null;
+  }
+}

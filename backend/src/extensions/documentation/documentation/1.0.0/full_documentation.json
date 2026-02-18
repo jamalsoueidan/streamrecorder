@@ -20,7 +20,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2026-02-16T12:45:10.443Z"
+    "x-generation-date": "2026-02-18T13:49:53.530Z"
   },
   "servers": [
     {
@@ -12095,6 +12095,22 @@
                       }
                     }
                   },
+                  "subscriptionStatus": {
+                    "type": "string",
+                    "enum": [
+                      "active",
+                      "cancelled",
+                      "expired"
+                    ]
+                  },
+                  "billingPeriod": {
+                    "type": "string"
+                  },
+                  "subscriptionEndDate": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "freemius": {},
                   "createdAt": {
                     "type": "string",
                     "format": "date-time"
@@ -13862,6 +13878,22 @@
                       }
                     }
                   },
+                  "subscriptionStatus": {
+                    "type": "string",
+                    "enum": [
+                      "active",
+                      "cancelled",
+                      "expired"
+                    ]
+                  },
+                  "billingPeriod": {
+                    "type": "string"
+                  },
+                  "subscriptionEndDate": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "freemius": {},
                   "createdAt": {
                     "type": "string",
                     "format": "date-time"
@@ -16133,6 +16165,22 @@
                           }
                         }
                       },
+                      "subscriptionStatus": {
+                        "type": "string",
+                        "enum": [
+                          "active",
+                          "cancelled",
+                          "expired"
+                        ]
+                      },
+                      "billingPeriod": {
+                        "type": "string"
+                      },
+                      "subscriptionEndDate": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "freemius": {},
                       "createdAt": {
                         "type": "string",
                         "format": "date-time"
@@ -19550,6 +19598,22 @@
                       }
                     }
                   },
+                  "subscriptionStatus": {
+                    "type": "string",
+                    "enum": [
+                      "active",
+                      "cancelled",
+                      "expired"
+                    ]
+                  },
+                  "billingPeriod": {
+                    "type": "string"
+                  },
+                  "subscriptionEndDate": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "freemius": {},
                   "createdAt": {
                     "type": "string",
                     "format": "date-time"
@@ -21650,6 +21714,22 @@
                           }
                         }
                       },
+                      "subscriptionStatus": {
+                        "type": "string",
+                        "enum": [
+                          "active",
+                          "cancelled",
+                          "expired"
+                        ]
+                      },
+                      "billingPeriod": {
+                        "type": "string"
+                      },
+                      "subscriptionEndDate": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "freemius": {},
                       "createdAt": {
                         "type": "string",
                         "format": "date-time"
@@ -24768,6 +24848,22 @@
                   }
                 }
               },
+              "subscriptionStatus": {
+                "type": "string",
+                "enum": [
+                  "active",
+                  "cancelled",
+                  "expired"
+                ]
+              },
+              "billingPeriod": {
+                "type": "string"
+              },
+              "subscriptionEndDate": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "freemius": {},
               "createdAt": {
                 "type": "string",
                 "format": "date-time"
@@ -26409,6 +26505,22 @@
                           }
                         }
                       },
+                      "subscriptionStatus": {
+                        "type": "string",
+                        "enum": [
+                          "active",
+                          "cancelled",
+                          "expired"
+                        ]
+                      },
+                      "billingPeriod": {
+                        "type": "string"
+                      },
+                      "subscriptionEndDate": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "freemius": {},
                       "createdAt": {
                         "type": "string",
                         "format": "date-time"
@@ -28434,6 +28546,22 @@
                       }
                     }
                   },
+                  "subscriptionStatus": {
+                    "type": "string",
+                    "enum": [
+                      "active",
+                      "cancelled",
+                      "expired"
+                    ]
+                  },
+                  "billingPeriod": {
+                    "type": "string"
+                  },
+                  "subscriptionEndDate": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "freemius": {},
                   "createdAt": {
                     "type": "string",
                     "format": "date-time"
@@ -30801,6 +30929,22 @@
                           }
                         }
                       },
+                      "subscriptionStatus": {
+                        "type": "string",
+                        "enum": [
+                          "active",
+                          "cancelled",
+                          "expired"
+                        ]
+                      },
+                      "billingPeriod": {
+                        "type": "string"
+                      },
+                      "subscriptionEndDate": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "freemius": {},
                       "createdAt": {
                         "type": "string",
                         "format": "date-time"
@@ -32756,6 +32900,22 @@
                   }
                 }
               },
+              "subscriptionStatus": {
+                "type": "string",
+                "enum": [
+                  "active",
+                  "cancelled",
+                  "expired"
+                ]
+              },
+              "billingPeriod": {
+                "type": "string"
+              },
+              "subscriptionEndDate": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "freemius": {},
               "createdAt": {
                 "type": "string",
                 "format": "date-time"

@@ -1671,6 +1671,7 @@ export interface PluginUsersPermissionsUser
     draftAndPublish: false;
   };
   attributes: {
+    billingPeriod: Schema.Attribute.String;
     blocked: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     confirmationToken: Schema.Attribute.String & Schema.Attribute.Private;
     confirmed: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
@@ -1686,6 +1687,7 @@ export interface PluginUsersPermissionsUser
       'manyToMany',
       'api::follower.follower'
     >;
+    freemius: Schema.Attribute.JSON;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -1703,6 +1705,10 @@ export interface PluginUsersPermissionsUser
     role: Schema.Attribute.Relation<
       'manyToOne',
       'plugin::users-permissions.role'
+    >;
+    subscriptionEndDate: Schema.Attribute.DateTime;
+    subscriptionStatus: Schema.Attribute.Enumeration<
+      ['active', 'cancelled', 'expired']
     >;
     tiktok: Schema.Attribute.Relation<'oneToOne', 'api::tiktok.tiktok'>;
     updatedAt: Schema.Attribute.DateTime;
