@@ -1,5 +1,6 @@
 "use client";
 
+import { trackEvent } from "@/app/lib/analytics";
 import { Button, ButtonProps } from "@mantine/core";
 import Script from "next/script";
 import { useEffect, useRef, useState } from "react";
@@ -72,6 +73,12 @@ export function FreemiusPaymentButton({
   const handlePurchase = async () => {
     if (!handlerRef.current) return;
 
+    // Track checkout opened
+    trackEvent("premium_checkout_opened", {
+      plan: planLabel,
+      billing_cycle: billingCycle,
+    });
+
     try {
       // Only fetch sandbox params in development
       let sandbox = undefined;
@@ -96,6 +103,13 @@ export function FreemiusPaymentButton({
                 ? "annual"
                 : "lifetime";
 
+          // Track purchase completed
+          trackEvent("premium_purchase_completed", {
+            plan: planLabel,
+            billing_cycle: billingCycle,
+            billing_period: billingPeriod,
+          });
+
           // Activate premium via server action
           const result = await activatePremium({
             freemiusUserId: response.user.id,
@@ -107,8 +121,16 @@ export function FreemiusPaymentButton({
 
           if (!result.success) {
             console.error("Failed to activate premium:", result.error);
+            trackEvent("premium_activation_failed", {
+              plan: planLabel,
+              error: result.error || "Unknown error",
+            });
             onError?.(result.error || "Failed to activate premium");
           } else {
+            trackEvent("premium_activation_success", {
+              plan: planLabel,
+              billing_cycle: billingCycle,
+            });
             onSuccess?.();
           }
         },
@@ -118,6 +140,10 @@ export function FreemiusPaymentButton({
       });
     } catch (error) {
       console.error("Failed to open checkout:", error);
+      trackEvent("premium_checkout_error", {
+        plan: planLabel,
+        error: "Failed to open checkout",
+      });
       onError?.("Failed to open checkout");
     }
   };
