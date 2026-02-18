@@ -37,8 +37,7 @@ import {
   IconUsers,
   IconVideo,
 } from "@tabler/icons-react";
-import Script from "next/script";
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import {
   AmexIcon,
   DiscoverIcon,
@@ -46,7 +45,8 @@ import {
   PaypalIcon,
   VisaIcon,
 } from "react-svg-credit-card-payment-icons";
-import { activatePremium, cancelSubscription } from "./actions";
+import { cancelSubscription } from "./actions";
+import { FreemiusPaymentButton } from "./components/freemius-payment-button";
 
 // Extend user type with subscription fields from schema
 type UserWithSubscription = GetUsersPermissionsUsersRolesData & {
@@ -54,32 +54,6 @@ type UserWithSubscription = GetUsersPermissionsUsersRolesData & {
   subscriptionEndDate?: string;
   billingPeriod?: string;
 };
-
-interface FSCheckoutHandler {
-  open: (options: {
-    sandbox?: unknown;
-    name?: string;
-    billing_cycle?: "monthly" | "annual" | "lifetime";
-    licenses?: number;
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    purchaseCompleted?: (response: any) => void;
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    success?: (response: any) => void;
-  }) => void;
-}
-
-declare global {
-  interface Window {
-    FS: {
-      Checkout: new (options: {
-        product_id: string;
-        plan_id: string;
-        public_key: string;
-        image?: string;
-      }) => FSCheckoutHandler;
-    };
-  }
-}
 
 const BILLING_OPTIONS = [
   {
@@ -144,13 +118,11 @@ const PAYMENT_PROVIDERS = [
   },
 ];
 
-export default function PricingPage() {
+export default function PremiumPage() {
   const [selectedBilling, setSelectedBilling] = useState("12months");
   const [selectedPayment, setSelectedPayment] = useState<string | null>(
     "freemius",
   );
-  const [fsReady, setFsReady] = useState(false);
-  const handlerRef = useRef<FSCheckoutHandler | null>(null);
 
   const user = useUser() as UserWithSubscription | null;
   const role = useRole();
@@ -170,9 +142,6 @@ export default function PricingPage() {
   const isPremium = isPremiumRole || hasActiveSubscription;
   const canCancel = user?.subscriptionStatus === "active" && !isPremiumRole;
 
-  // Set to false in production to disable sandbox mode
-  const isSandbox = process.env.NODE_ENV === "development";
-
   const handleCancelSubscription = async () => {
     setCancelling(true);
     const result = await cancelSubscription();
@@ -186,92 +155,8 @@ export default function PricingPage() {
     }
   };
 
-  useEffect(() => {
-    if (fsReady && window.FS) {
-      handlerRef.current = new window.FS.Checkout({
-        product_id: "24577",
-        plan_id: "40817",
-        public_key: "pk_de5cf8f11ea2d0037fb0c50ca1818",
-        image: "https://www.livestreamrecorder.com/icon_clean.png",
-      });
-    }
-  }, [fsReady]);
-
-  const handlePurchase = async () => {
-    if (!handlerRef.current) return;
-
-    try {
-      // Only fetch sandbox params in development
-      let sandbox = undefined;
-      if (isSandbox) {
-        sandbox = await fetch("/api/freemius/sandbox").then((res) =>
-          res.json(),
-        );
-        console.log("🧪 SANDBOX MODE ENABLED");
-      }
-
-      const selectedPlan = BILLING_OPTIONS.find(
-        (o) => o.id === selectedBilling,
-      );
-
-      handlerRef.current.open({
-        // Sandbox only in development - remove/undefined in production
-        ...(sandbox && { sandbox }),
-        name: selectedPlan?.label || "Premium",
-        billing_cycle: selectedPlan?.billingCycle,
-        licenses: 1,
-        purchaseCompleted: async (response: {
-          user: { id: string };
-          purchase: {
-            subscription_id: string;
-            billing_cycle: number;
-            next_payment: string;
-          };
-          license: { expiration: string };
-        }) => {
-          console.log("Purchase completed:", response);
-
-          // Map billing cycle number to string
-          const billingPeriod =
-            response.purchase.billing_cycle === 1
-              ? "monthly"
-              : response.purchase.billing_cycle === 12
-                ? "annual"
-                : "lifetime";
-
-          // Immediately activate premium
-          const result = await activatePremium({
-            freemiusUserId: response.user.id,
-            subscriptionId: response.purchase.subscription_id,
-            billingPeriod,
-            subscriptionEndDate:
-              response.purchase.next_payment || response.license.expiration,
-          });
-
-          if (!result.success) {
-            console.error("Failed to activate premium:", result.error);
-          } else {
-            // Refresh page to show premium status
-            window.location.reload();
-          }
-        },
-        success: () => {
-          console.log("Checkout closed after successful purchase");
-        },
-      });
-    } catch (error) {
-      console.error("Failed to open checkout:", error);
-    }
-  };
-
   return (
     <Stack w="100%">
-      <Script
-        src="https://checkout.freemius.com/js/v1/"
-        strategy="afterInteractive"
-        onLoad={() => setFsReady(true)}
-      />
-
       {/* Header */}
       <Stack gap={4}>
         <Group gap="xs">
@@ -292,7 +177,7 @@ export default function PricingPage() {
 
       <Divider mx={{ base: "-xs", sm: "-md" }} />
 
-      <Grid gutter="xl">
+      <Grid gutter="xl" overflow="hidden">
         {/* Left Column - Plan & Features */}
         <GridCol span={{ base: 12, md: isPremium ? 12 : 7 }}>
           <Stack gap="lg">
@@ -673,11 +558,13 @@ export default function PricingPage() {
                 </Text>
 
                 {/* Pay Button */}
-                <Button
+                <FreemiusPaymentButton
+                  billingCycle={selectedPlan?.billingCycle || "annual"}
+                  planLabel={selectedPlan?.label || "Premium"}
+                  onSuccess={() => window.location.reload()}
                   fullWidth
                   size="lg"
                   radius="md"
-                  onClick={handlePurchase}
                   disabled={!selectedPayment}
                   style={{
                     background:
@@ -685,7 +572,7 @@ export default function PricingPage() {
                   }}
                 >
                   Start 7-Day Free Trial
-                </Button>
+                </FreemiusPaymentButton>
 
                 {/* Security Note */}
                 <Flex gap="xs" align="center" justify="center">

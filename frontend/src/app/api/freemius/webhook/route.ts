@@ -147,12 +147,49 @@ export async function POST(request: NextRequest) {
 
     switch (type) {
       case "subscription.created": {
-        // User is upgraded immediately via client-side callback
-        // This webhook is just for logging/confirmation
-        console.log("📦 SUBSCRIPTION CREATED (handled client-side)");
+        console.log("📦 SUBSCRIPTION CREATED");
         console.log("Freemius User ID:", user.id);
         console.log("User Email:", user.email);
+        console.log("Subscription ID:", subscription.id);
         console.log("Billing Cycle:", subscription.billing_cycle, "months");
+
+        // Check if subscription is already claimed
+        const alreadyClaimed = await isSubscriptionClaimed(subscription.id);
+        if (alreadyClaimed) {
+          console.log("⚠️ Subscription already claimed by a user, skipping");
+          break;
+        }
+
+        // Try to find user by Freemius ID first (if client-side partially succeeded)
+        let createdUser = await findUserByFreemiusId(user.id);
+
+        // If not found, try by email (fallback for when client-side completely failed)
+        if (!createdUser) {
+          console.log("User not found by Freemius ID, trying email...");
+          createdUser = await findUserByEmail(user.email);
+        }
+
+        if (createdUser?.id) {
+          // Get premium role ID
+          const premiumRoleId = await getRoleIdByName("premium");
+          const billingPeriod = getBillingPeriod(subscription.billing_cycle);
+
+          await updateUserSubscription(createdUser.id.toString(), {
+            role: premiumRoleId || undefined,
+            subscriptionStatus: "active",
+            subscriptionEndDate: subscription.next_payment || license.expiration,
+            billingPeriod,
+            freemius: {
+              userId: user.id,
+              subscriptionId: subscription.id,
+              billingPeriod,
+            },
+          });
+          console.log("✅ User upgraded to premium via webhook");
+        } else {
+          console.log("⚠️ Could not find user to upgrade - email mismatch?");
+        }
+
         break;
       }
 
@@ -258,7 +295,54 @@ async function findUserByFreemiusId(freemiusUserId: string) {
   }
 }
 
+async function findUserByEmail(email: string) {
+  try {
+    const response = await publicApi.usersPermissionsUsersRoles.usersList({
+      filters: {
+        email: {
+          $eqi: email, // case-insensitive
+        },
+      },
+    } as never);
+
+    const users = response.data;
+    return users[0] || null;
+  } catch (error) {
+    console.error("Failed to find user by email:", error);
+    return null;
+  }
+}
+
+async function isSubscriptionClaimed(
+  subscriptionId: string,
+  excludeUserId?: number,
+): Promise<boolean> {
+  try {
+    const response = await publicApi.usersPermissionsUsersRoles.usersList({
+      filters: {
+        freemius: {
+          subscriptionId: {
+            $eq: subscriptionId,
+          },
+        },
+        ...(excludeUserId && {
+          id: {
+            $ne: excludeUserId,
+          },
+        }),
+      },
+    } as never);
+
+    const users = response.data;
+    return users && users.length > 0;
+  } catch (error) {
+    console.error("Failed to check subscription claim:", error);
+    return false;
+  }
+}
+
 interface SubscriptionUpdate {
+  role?: number;
   subscriptionStatus?: "active" | "cancelled" | "expired";
   subscriptionEndDate?: string | null;
   billingPeriod?: string | null;
