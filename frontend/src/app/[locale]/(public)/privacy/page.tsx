@@ -1,3 +1,4 @@
+import { generateAlternates } from "@/app/lib/seo";
 import { Container, Flex, Paper, Stack, Text, Title } from "@mantine/core";
 import {
   IconBabyCarriage,
@@ -18,7 +19,6 @@ import {
 } from "@tabler/icons-react";
 import { useTranslations } from "next-intl";
 import { getLocale, getTranslations } from "next-intl/server";
-import { generateAlternates } from "@/app/lib/seo";
 
 export async function generateMetadata() {
   const t = await getTranslations("privacy");

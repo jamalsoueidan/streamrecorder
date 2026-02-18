@@ -1,6 +1,21 @@
+import publicApi from "@/lib/public-api";
 import { createHmac, timingSafeEqual } from "crypto";
 import { NextRequest, NextResponse } from "next/server";
-import publicApi from "@/lib/public-api";
+
+// Get role ID by name from Strapi
+async function getRoleIdByName(name: string): Promise<number | null> {
+  try {
+    const response = await publicApi.usersPermissionsUsersRoles.rolesList();
+    const roles = response.data?.roles;
+    const role = roles?.find(
+      (r: { name?: string }) => r.name?.toLowerCase() === name.toLowerCase(),
+    );
+    return role?.id || null;
+  } catch (error) {
+    console.error("Failed to fetch role:", error);
+    return null;
+  }
+}
 
 // Verify webhook signature from Freemius
 function verifySignature(body: string, signature: string | null): boolean {
@@ -132,35 +147,12 @@ export async function POST(request: NextRequest) {
 
     switch (type) {
       case "subscription.created": {
-        console.log("📦 SUBSCRIPTION CREATED");
+        // User is upgraded immediately via client-side callback
+        // This webhook is just for logging/confirmation
+        console.log("📦 SUBSCRIPTION CREATED (handled client-side)");
         console.log("Freemius User ID:", user.id);
         console.log("User Email:", user.email);
-        console.log("User Name:", `${user.first || ""} ${user.last || ""}`.trim());
-        console.log("Plan ID:", subscription.plan_id);
         console.log("Billing Cycle:", subscription.billing_cycle, "months");
-        console.log("Next Payment:", subscription.next_payment);
-        console.log("License Expiration:", license.expiration);
-
-        // Find user in our system by Freemius ID
-        const strapiUser = await findUserByFreemiusId(user.id);
-        if (strapiUser) {
-          console.log("Found Strapi user:", strapiUser.id);
-          await updateUserSubscription(strapiUser.id, {
-            subscriptionStatus: "active",
-            subscriptionEndDate: subscription.next_payment || license.expiration,
-            billingPeriod: getBillingPeriod(subscription.billing_cycle),
-            freemius: {
-              userId: user.id,
-              subscriptionId: subscription.id,
-              billingPeriod: getBillingPeriod(subscription.billing_cycle),
-            },
-          });
-          // TODO: Update user role to premium
-          console.log("User subscription updated");
-        } else {
-          console.log("⚠️ No Strapi user found for Freemius ID:", user.id);
-        }
-
         break;
       }
 
@@ -173,8 +165,8 @@ export async function POST(request: NextRequest) {
 
         // Find user and mark as cancelled (still active until end date)
         const cancelledUser = await findUserByFreemiusId(user.id);
-        if (cancelledUser) {
-          await updateUserSubscription(cancelledUser.id, {
+        if (cancelledUser?.id) {
+          await updateUserSubscription(cancelledUser.id.toString(), {
             subscriptionStatus: "cancelled",
             // Keep role as premium until subscriptionEndDate
           });
@@ -191,14 +183,17 @@ export async function POST(request: NextRequest) {
 
         // Set user back to free
         const expiredUser = await findUserByFreemiusId(user.id);
-        if (expiredUser) {
-          await updateUserSubscription(expiredUser.id, {
+        if (expiredUser?.id) {
+          // Get basic role ID
+          const basicRoleId = await getRoleIdByName("basic");
+
+          await updateUserSubscription(expiredUser.id.toString(), {
             subscriptionStatus: "expired",
             subscriptionEndDate: null,
             billingPeriod: null,
+            ...(basicRoleId && { role: basicRoleId }),
           });
-          // TODO: Update user role to free/authenticated
-          console.log("User subscription expired");
+          console.log("User subscription expired, role set to basic");
         }
 
         break;
@@ -223,7 +218,7 @@ export async function POST(request: NextRequest) {
     console.error("❌ WEBHOOK ERROR:", error);
     return NextResponse.json(
       { error: "Webhook processing failed" },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }
@@ -253,7 +248,7 @@ async function findUserByFreemiusId(freemiusUserId: string) {
           },
         },
       },
-    });
+    } as never);
 
     const users = response.data;
     return users[0] || null;
@@ -275,13 +270,13 @@ interface SubscriptionUpdate {
 }
 
 async function updateUserSubscription(
-  strapiUserId: number,
-  data: SubscriptionUpdate
+  strapiUserId: string,
+  data: SubscriptionUpdate,
 ) {
   try {
     const response = await publicApi.usersPermissionsUsersRoles.usersUpdate(
       { id: strapiUserId },
-      data
+      data as never,
     );
     return response.data;
   } catch (error) {

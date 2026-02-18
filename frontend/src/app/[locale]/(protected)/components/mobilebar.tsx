@@ -7,7 +7,7 @@ import * as Sentry from "@sentry/nextjs";
 import {
   IconDotsVertical,
   IconDownload,
-  IconLayoutDashboard,
+  IconHome,
   IconLink,
   IconLogout,
   IconPlayerPlayFilled,
@@ -49,7 +49,6 @@ export function MobileBar() {
 
   const currentValue = (() => {
     if (pathname.startsWith("/search")) return "/search";
-    if (pathname.startsWith("/dashboard")) return "/dashboard";
 
     const section = navigation.find((section) =>
       section.links?.some((link) => pathname.startsWith(link.url || "")),
@@ -59,7 +58,6 @@ export function MobileBar() {
 
   const links =
     navigation
-      .filter((p) => p.titleKey !== "sections.home")
       .map((section) => {
         const Icon = section.icon || IconPlayerPlayFilled;
         return {
@@ -112,20 +110,6 @@ export function MobileBar() {
       onChange={handleChange}
       styles={{ label: { height: 46, padding: "4px" } }}
       data={[
-        {
-          value: "/dashboard",
-          label: (
-            <Stack gap={2} align="center">
-              <IconLayoutDashboard
-                {...iconProps}
-                style={{ width: "18px", height: "18px" }}
-              />
-              <Text c="dimmed" size="xs">
-                {t("sections.home")}
-              </Text>
-            </Stack>
-          ),
-        },
         ...links,
         {
           value: "/search",

@@ -15,6 +15,7 @@ import {
 } from "@mantine/core";
 import {
   IconBrandSafari,
+  IconCrown,
   IconHome,
   IconLayoutSidebarLeftCollapse,
   IconLayoutSidebarLeftExpand,
@@ -52,6 +53,12 @@ export const navigation = [
         url: "/dashboard",
         icon: IconHome,
         color: null,
+      },
+      {
+        labelKey: "links.premium",
+        url: "/premium",
+        icon: IconCrown,
+        color: "gold",
       },
     ],
   },
