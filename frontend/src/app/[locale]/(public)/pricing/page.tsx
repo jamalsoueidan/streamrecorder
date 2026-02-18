@@ -64,10 +64,7 @@ const PLANS = [
       {
         title: "Library",
         icon: IconLibrary,
-        features: [
-          "Favorites",
-          "Watch later",
-        ],
+        features: ["Favorites", "Watch later"],
       },
     ],
   },
@@ -113,10 +110,7 @@ const PLANS = [
       {
         title: "Clips",
         icon: IconScissors,
-        features: [
-          "Publish to social media",
-          "Schedule posts",
-        ],
+        features: ["Publish to social media", "Schedule posts"],
       },
       {
         title: "Exclusive",
@@ -179,14 +173,8 @@ export default function PricingPage() {
   return (
     <Stack
       gap={48}
-      w="100%"
-      pt="xl"
-      pb={80}
-      pos="relative"
       style={{
-        borderRadius: "var(--mantine-radius-lg)",
         overflow: "hidden",
-        background: "linear-gradient(180deg, rgba(139, 92, 246, 0.08) 0%, transparent 50%)",
       }}
     >
       {/* Background SVG animation - only at top */}
@@ -204,12 +192,17 @@ export default function PricingPage() {
           pointerEvents: "none",
           zIndex: 0,
           maskImage: "linear-gradient(to bottom, black 60%, transparent 100%)",
-          WebkitMaskImage: "linear-gradient(to bottom, black 60%, transparent 100%)",
+          WebkitMaskImage:
+            "linear-gradient(to bottom, black 60%, transparent 100%)",
         }}
       />
 
       {/* Header */}
-      <Stack align="center" gap={16} style={{ position: "relative", zIndex: 2 }}>
+      <Stack
+        align="center"
+        gap={16}
+        style={{ position: "relative", zIndex: 2 }}
+      >
         <Title
           order={1}
           ta="center"
@@ -233,7 +226,11 @@ export default function PricingPage() {
       </Stack>
 
       {/* Billing Toggle */}
-      <Stack align="center" gap="xs" style={{ position: "relative", zIndex: 1 }}>
+      <Stack
+        align="center"
+        gap="xs"
+        style={{ position: "relative", zIndex: 1 }}
+      >
         <SegmentedControl
           value={billing}
           onChange={setBilling}
@@ -260,7 +257,11 @@ export default function PricingPage() {
       </Stack>
 
       {/* Pricing Cards */}
-      <Grid gutter={24} justify="center" style={{ position: "relative", zIndex: 1 }}>
+      <Grid
+        gutter={24}
+        justify="center"
+        style={{ position: "relative", zIndex: 1 }}
+      >
         {PLANS.map((plan) => {
           const price =
             billing === "monthly" ? plan.monthlyPrice : plan.yearlyPrice;
@@ -412,7 +413,11 @@ export default function PricingPage() {
       </Grid>
 
       {/* FAQ */}
-      <Stack align="center" gap={16} style={{ position: "relative", zIndex: 1 }}>
+      <Stack
+        align="center"
+        gap={16}
+        style={{ position: "relative", zIndex: 1 }}
+      >
         <Paper
           p="xl"
           radius="lg"
@@ -499,8 +504,8 @@ export default function PricingPage() {
                 </Text>
                 <Text size="sm" c="dimmed">
                   Yes, all subscriptions auto-renew unless you cancel before the
-                  next billing date. You can manage this in your account settings
-                  at any time.
+                  next billing date. You can manage this in your account
+                  settings at any time.
                 </Text>
               </div>
             </Stack>
