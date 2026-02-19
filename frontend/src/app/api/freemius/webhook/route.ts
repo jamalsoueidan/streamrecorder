@@ -153,13 +153,6 @@ export async function POST(request: NextRequest) {
         console.log("Subscription ID:", subscription.id);
         console.log("Billing Cycle:", subscription.billing_cycle, "months");
 
-        // Check if subscription is already claimed
-        const alreadyClaimed = await isSubscriptionClaimed(subscription.id);
-        if (alreadyClaimed) {
-          console.log("⚠️ Subscription already claimed by a user, skipping");
-          break;
-        }
-
         // Try to find user by Freemius ID first (if client-side partially succeeded)
         let createdUser = await findUserByFreemiusId(user.id);
 
@@ -170,6 +163,18 @@ export async function POST(request: NextRequest) {
         }
 
         if (createdUser?.id) {
+          // Check if subscription is already claimed by another user
+          const alreadyClaimed = await isSubscriptionClaimed(
+            subscription.id,
+            createdUser.id,
+          );
+          if (alreadyClaimed) {
+            console.log(
+              "⚠️ Subscription already claimed by another user, skipping",
+            );
+            break;
+          }
+
           // Get premium role ID
           const premiumRoleId = await getRoleIdByName("premium");
           const billingPeriod = getBillingPeriod(subscription.billing_cycle);
@@ -177,7 +182,8 @@ export async function POST(request: NextRequest) {
           await updateUserSubscription(createdUser.id.toString(), {
             role: premiumRoleId || undefined,
             subscriptionStatus: "active",
-            subscriptionEndDate: subscription.next_payment || license.expiration,
+            subscriptionEndDate:
+              subscription.next_payment || license.expiration,
             billingPeriod,
             freemius: {
               userId: user.id,

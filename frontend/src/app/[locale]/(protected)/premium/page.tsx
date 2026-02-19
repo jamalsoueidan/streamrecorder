@@ -38,6 +38,7 @@ import {
   IconUsers,
   IconVideo,
 } from "@tabler/icons-react";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import {
   AmexIcon,
@@ -127,6 +128,7 @@ export default function PremiumPage() {
 
   const user = useUser() as UserWithSubscription | null;
   const role = useRole();
+  const router = useRouter();
   const [
     cancelModalOpened,
     { open: openCancelModal, close: closeCancelModal },
@@ -162,7 +164,7 @@ export default function PremiumPage() {
 
     if (result.success) {
       closeCancelModal();
-      window.location.reload();
+      router.refresh();
     } else {
       console.error("Failed to cancel:", result.error);
     }
@@ -574,7 +576,6 @@ export default function PremiumPage() {
                 <FreemiusPaymentButton
                   billingCycle={selectedPlan?.billingCycle || "annual"}
                   planLabel={selectedPlan?.label || "Premium"}
-                  onSuccess={() => window.location.reload()}
                   fullWidth
                   size="lg"
                   radius="md"

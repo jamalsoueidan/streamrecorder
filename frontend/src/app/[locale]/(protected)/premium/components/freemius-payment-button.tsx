@@ -2,6 +2,7 @@
 
 import { trackEvent } from "@/app/lib/analytics";
 import { Button, ButtonProps } from "@mantine/core";
+import { useRouter } from "next/navigation";
 import Script from "next/script";
 import { useEffect, useRef, useState } from "react";
 import { activatePremium } from "../actions";
@@ -57,6 +58,7 @@ export function FreemiusPaymentButton({
 }: FreemiusPaymentButtonProps) {
   const [fsReady, setFsReady] = useState(false);
   const handlerRef = useRef<FSCheckoutHandler | null>(null);
+  const router = useRouter();
   const isSandbox = process.env.NODE_ENV === "development";
 
   useEffect(() => {
@@ -131,6 +133,7 @@ export function FreemiusPaymentButton({
               plan: planLabel,
               billing_cycle: billingCycle,
             });
+            router.refresh();
             onSuccess?.();
           }
         },
