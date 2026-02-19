@@ -92,7 +92,7 @@
       "type": "datetime"
     },
     "freemius": {
-      "type": "json"
+      "type": "text"
     }
   }
 }

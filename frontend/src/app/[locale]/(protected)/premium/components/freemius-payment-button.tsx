@@ -19,13 +19,13 @@ interface FSCheckoutHandler {
 }
 
 interface FreemiusPurchaseResponse {
-  user: { id: string };
+  user: { id: string; email: string };
   purchase: {
-    subscription_id: string;
+    id: string;
     billing_cycle: number;
     next_payment: string;
+    license_id: string;
   };
-  license: { expiration: string };
 }
 
 declare global {
@@ -97,6 +97,8 @@ export function FreemiusPaymentButton({
         billing_cycle: billingCycle,
         licenses: 1,
         purchaseCompleted: async (response: FreemiusPurchaseResponse) => {
+          console.log("Freemius purchaseCompleted response:", response);
+
           // Map billing cycle number to string
           const billingPeriod =
             response.purchase.billing_cycle === 1
@@ -112,13 +114,18 @@ export function FreemiusPaymentButton({
             billing_period: billingPeriod,
           });
 
+          console.log("Activating premium for user:", {
+            freemiusUserId: response.user.id,
+            subscriptionId: response.purchase.id,
+            billingPeriod,
+            subscriptionEndDate: response.purchase.next_payment,
+          });
           // Activate premium via server action
           const result = await activatePremium({
             freemiusUserId: response.user.id,
-            subscriptionId: response.purchase.subscription_id,
+            subscriptionId: response.purchase.id,
             billingPeriod,
-            subscriptionEndDate:
-              response.purchase.next_payment || response.license.expiration,
+            subscriptionEndDate: response.purchase.next_payment,
           });
 
           if (!result.success) {
