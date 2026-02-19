@@ -7,7 +7,6 @@ import * as Sentry from "@sentry/nextjs";
 import {
   IconDotsVertical,
   IconDownload,
-  IconHome,
   IconLink,
   IconLogout,
   IconPlayerPlayFilled,
@@ -57,50 +56,49 @@ export function MobileBar() {
   })();
 
   const links =
-    navigation
-      .map((section) => {
-        const Icon = section.icon || IconPlayerPlayFilled;
-        return {
-          value: "menu" + section.titleKey,
-          label: (
-            <Menu position="top-start" offset={15}>
-              <Menu.Target>
-                <Stack gap={2} align="center">
-                  <Icon
-                    {...iconProps}
-                    style={{ width: "18px", height: "18px" }}
-                  />
-                  <Text c="dimmed" size="xs">
-                    {t(section.titleKey)}
-                  </Text>
-                </Stack>
-              </Menu.Target>
+    navigation.map((section) => {
+      const Icon = section.icon || IconPlayerPlayFilled;
+      return {
+        value: "menu" + section.titleKey,
+        label: (
+          <Menu position="top-start" offset={15}>
+            <Menu.Target>
+              <Stack gap={2} align="center">
+                <Icon
+                  {...iconProps}
+                  style={{ width: "18px", height: "18px" }}
+                />
+                <Text c="dimmed" size="xs">
+                  {t(section.titleKey)}
+                </Text>
+              </Stack>
+            </Menu.Target>
 
-              <Menu.Dropdown>
-                {section.links.map((item) => {
-                  const Icon = item.icon || IconPlayerPlayFilled;
+            <Menu.Dropdown>
+              {section.links.map((item) => {
+                const Icon = item.icon || IconPlayerPlayFilled;
 
-                  return (
-                    <Menu.Item
-                      key={item.labelKey}
-                      leftSection={
-                        <Icon
-                          {...iconProps}
-                          style={{ width: "18px", height: "18px" }}
-                          color={item.color ? item.color : undefined}
-                        />
-                      }
-                      onClick={() => handleChange(item.url || "#")}
-                    >
-                      {t(item.labelKey)}
-                    </Menu.Item>
-                  );
-                })}
-              </Menu.Dropdown>
-            </Menu>
-          ),
-        };
-      }) || [];
+                return (
+                  <Menu.Item
+                    key={item.labelKey}
+                    leftSection={
+                      <Icon
+                        {...iconProps}
+                        style={{ width: "18px", height: "18px" }}
+                        color={item.color ? item.color : undefined}
+                      />
+                    }
+                    onClick={() => handleChange(item.url || "#")}
+                  >
+                    {t(item.labelKey)}
+                  </Menu.Item>
+                );
+              })}
+            </Menu.Dropdown>
+          </Menu>
+        ),
+      };
+    }) || [];
 
   return (
     <SegmentedControl
