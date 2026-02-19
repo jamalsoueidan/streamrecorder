@@ -38,6 +38,7 @@ import {
   IconUsers,
   IconVideo,
 } from "@tabler/icons-react";
+import { useTranslations } from "next-intl";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import {
@@ -57,70 +58,8 @@ type UserWithSubscription = GetUsersPermissionsUsersRolesData & {
   billingPeriod?: string;
 };
 
-const BILLING_OPTIONS = [
-  {
-    id: "1month",
-    label: "1 Month",
-    price: 10,
-    perMonth: 10,
-    savings: null,
-    badge: null,
-    billingCycle: "monthly" as const,
-  },
-  {
-    id: "12months",
-    label: "12 Months",
-    price: 84,
-    perMonth: 7,
-    savings: "3 months free",
-    badge: "Best Value",
-    billingCycle: "annual" as const,
-  },
-  {
-    id: "lifetime",
-    label: "Lifetime",
-    price: 300,
-    perMonth: null,
-    savings: "Pay once, use forever",
-    badge: "Limited",
-    billingCycle: "lifetime" as const,
-  },
-];
-
-const CURRENT_PLAN_FEATURES = [
-  { icon: IconUsers, label: "Record up to 3 of your own channels" },
-  { icon: IconEye, label: "Watch your recordings" },
-];
-
-const PREMIUM_FEATURES = [
-  {
-    icon: IconUsers,
-    label: "Record up to 100 of your own channels",
-    color: "#a78bfa",
-  },
-  {
-    icon: IconDownload,
-    label: "Full control over your recordings",
-    color: "#60a5fa",
-  },
-  { icon: IconBell, label: "Notifications when ready", color: "#fbbf24" },
-  { icon: IconMovie, label: "AI highlights & clips", color: "#34d399" },
-  { icon: IconLanguage, label: "AI subtitles & translation", color: "#f472b6" },
-  { icon: IconSparkles, label: "AI memes & GIFs", color: "#fb923c" },
-  { icon: IconScissors, label: "Publish to social media", color: "#38bdf8" },
-  { icon: IconVideo, label: "Watch later & favorites", color: "#c084fc" },
-  { icon: IconHeadset, label: "Priority support", color: "#a78bfa" },
-];
-
-const PAYMENT_PROVIDERS = [
-  {
-    id: "freemius",
-    label: "Freemius",
-    description: "Credit Card, PayPal, and more",
-  },
-];
-
 export default function PremiumPage() {
+  const t = useTranslations("protected.premium");
   const [selectedBilling, setSelectedBilling] = useState("12months");
   const [selectedPayment, setSelectedPayment] = useState<string | null>(
     "freemius",
@@ -135,7 +74,68 @@ export default function PremiumPage() {
   ] = useDisclosure(false);
   const [cancelling, setCancelling] = useState(false);
 
+  const BILLING_OPTIONS = [
+    {
+      id: "1month",
+      label: t("billing1MonthLabel"),
+      price: 10,
+      perMonth: 10,
+      savings: null,
+      badge: null,
+      billingCycle: "monthly" as const,
+    },
+    {
+      id: "12months",
+      label: t("billing12MonthsLabel"),
+      price: 84,
+      perMonth: 7,
+      savings: t("billing12MonthsSavings"),
+      badge: t("billing12MonthsBadge"),
+      billingCycle: "annual" as const,
+    },
+    {
+      id: "lifetime",
+      label: t("billingLifetimeLabel"),
+      price: 200,
+      perMonth: null,
+      savings: t("billingLifetimeSavings"),
+      badge: t("billingLifetimeBadge"),
+      billingCycle: "lifetime" as const,
+    },
+  ];
+
+  const CURRENT_PLAN_FEATURES = [
+    { icon: IconUsers, label: t("currentPlanRecord") },
+    { icon: IconEye, label: t("currentPlanWatch") },
+  ];
+
+  const PREMIUM_FEATURES = [
+    { icon: IconUsers, label: t("premiumRecord100"), color: "#a78bfa" },
+    { icon: IconDownload, label: t("premiumFullControl"), color: "#60a5fa" },
+    { icon: IconBell, label: t("premiumNotifications"), color: "#fbbf24" },
+    { icon: IconMovie, label: t("premiumAiHighlights"), color: "#34d399" },
+    { icon: IconLanguage, label: t("premiumAiSubtitles"), color: "#f472b6" },
+    { icon: IconSparkles, label: t("premiumAiMemes"), color: "#fb923c" },
+    { icon: IconScissors, label: t("premiumPublishSocial"), color: "#38bdf8" },
+    { icon: IconVideo, label: t("premiumWatchLater"), color: "#c084fc" },
+    { icon: IconHeadset, label: t("premiumPrioritySupport"), color: "#a78bfa" },
+  ];
+
   const selectedPlan = BILLING_OPTIONS.find((o) => o.id === selectedBilling);
+
+  // Translate billing period
+  const getTranslatedBillingPeriod = (period?: string) => {
+    switch (period) {
+      case "monthly":
+        return t("billingPeriodMonthly");
+      case "annual":
+        return t("billingPeriodAnnual");
+      case "lifetime":
+        return t("billingPeriodLifetime");
+      default:
+        return period || "";
+    }
+  };
 
   // Determine if user is premium (admin, champion, or has active/cancelled subscription)
   const isPremiumRole = role?.type === "admin" || role?.type === "champion";
@@ -176,17 +176,15 @@ export default function PremiumPage() {
       <Stack gap={4}>
         <Group gap="xs">
           <IconCrown size={28} color="#fbbf24" />
-          <Title order={2}>Premium</Title>
+          <Title order={2}>{t("title")}</Title>
           {!isPremium && (
             <Badge size="lg" variant="filled" color="green">
-              7 Days Free
+              {t("badge7DaysFree")}
             </Badge>
           )}
         </Group>
         <Text size="sm" c="dimmed">
-          {isPremium
-            ? "You have access to everything LiveStreamRecorder has to offer"
-            : "Get instant access to everything LiveStreamRecorder has to offer"}
+          {isPremium ? t("descriptionPremium") : t("descriptionNonPremium")}
         </Text>
       </Stack>
 
@@ -212,49 +210,36 @@ export default function PremiumPage() {
                   <Group gap="xs">
                     <IconCrown size={20} color="#fbbf24" />
                     <Text fw={600} size="lg">
-                      {isPremiumRole ? role?.name : "Premium"}
+                      {isPremiumRole ? role?.name : t("title")}
                     </Text>
                     {user?.subscriptionStatus === "cancelled" && (
                       <Badge size="sm" variant="light" color="orange">
-                        Cancelled
+                        {t("cancelled")}
                       </Badge>
                     )}
                   </Group>
 
                   <Alert color="violet" variant="light">
                     <Text size="sm">
-                      {isPremiumRole ? (
-                        "You have full premium access as an admin/champion."
-                      ) : user?.subscriptionStatus === "cancelled" ? (
-                        <>
-                          Your{" "}
-                          <Text span fw={700}>
-                            {user?.billingPeriod}
-                          </Text>{" "}
-                          subscription has been cancelled. You still have access
-                          until{" "}
-                          <Text span fw={700}>
-                            {new Date(
-                              user.subscriptionEndDate!,
-                            ).toLocaleDateString()}
-                          </Text>
-                          .
-                        </>
-                      ) : (
-                        <>
-                          You are on the{" "}
-                          <Text span fw={700}>
-                            {user?.billingPeriod}
-                          </Text>{" "}
-                          plan. Your subscription renews on{" "}
-                          <Text span fw={700}>
-                            {new Date(
-                              user?.subscriptionEndDate || "",
-                            ).toLocaleDateString()}
-                          </Text>
-                          .
-                        </>
-                      )}
+                      {isPremiumRole
+                        ? t("adminAccess")
+                        : user?.subscriptionStatus === "cancelled"
+                          ? t("cancelledMessage", {
+                              billingPeriod: getTranslatedBillingPeriod(
+                                user?.billingPeriod,
+                              ),
+                              endDate: new Date(
+                                user.subscriptionEndDate!,
+                              ).toLocaleDateString(),
+                            })
+                          : t("activeMessage", {
+                              billingPeriod: getTranslatedBillingPeriod(
+                                user?.billingPeriod,
+                              ),
+                              renewDate: new Date(
+                                user?.subscriptionEndDate || "",
+                              ).toLocaleDateString(),
+                            })}
                     </Text>
                   </Alert>
 
@@ -265,7 +250,7 @@ export default function PremiumPage() {
                       size="xs"
                       onClick={openCancelModal}
                     >
-                      Cancel subscription
+                      {t("cancelSubscription")}
                     </Button>
                   )}
                 </Stack>
@@ -287,13 +272,13 @@ export default function PremiumPage() {
                       <Group gap="xs">
                         <IconVideo size={20} color="#94a3b8" />
                         <Text fw={600} size="lg">
-                          Your Current Plan
+                          {t("yourCurrentPlan")}
                         </Text>
                       </Group>
                     </div>
                     <div style={{ textAlign: "right" }}>
                       <Text size="md" c="dimmed">
-                        Free
+                        {t("free")}
                       </Text>
                     </div>
                   </Group>
@@ -317,9 +302,7 @@ export default function PremiumPage() {
                   </Grid>
 
                   <Text size="xs" c="dimmed">
-                    LiveStreamRecorder is a one-person project. Your support
-                    helps keep the servers running and new features coming.
-                    Thank you!
+                    {t("supportMessage")}
                   </Text>
                 </Stack>
               </Card>
@@ -341,7 +324,7 @@ export default function PremiumPage() {
                   <Group gap="xs">
                     <IconDeviceAnalytics size={20} color="#60a5fa" />
                     <Text fw={600} size="lg">
-                      Choose Your Plan
+                      {t("choosePlan")}
                     </Text>
                   </Group>
 
@@ -402,7 +385,7 @@ export default function PremiumPage() {
                                 </Text>
                               ) : (
                                 <Text size="xs" c="dimmed">
-                                  one-time
+                                  {t("oneTime")}
                                 </Text>
                               )}
                             </div>
@@ -431,8 +414,8 @@ export default function PremiumPage() {
                   <IconSparkles size={20} color="#a78bfa" />
                   <Text fw={600} size="lg">
                     {isPremium
-                      ? "Your Premium Features"
-                      : "Unlock Premium Features"}
+                      ? t("yourPremiumFeatures")
+                      : t("unlockPremiumFeatures")}
                   </Text>
                 </Group>
 
@@ -448,9 +431,9 @@ export default function PremiumPage() {
                 </Grid>
 
                 <Text size="xs" c="dimmed">
-                  Premium includes all future features as they&apos;re released.{" "}
+                  {t("futureFeatures")}{" "}
                   <Anchor href="/changelog" size="xs">
-                    See what&apos;s new
+                    {t("seeWhatsNew")}
                   </Anchor>
                 </Text>
               </Stack>
@@ -477,7 +460,7 @@ export default function PremiumPage() {
                 <Group gap="xs">
                   <IconCrown size={20} color="#fbbf24" />
                   <Text fw={600} size="lg">
-                    Payment Method
+                    {t("paymentMethod")}
                   </Text>
                 </Group>
 
@@ -486,48 +469,45 @@ export default function PremiumPage() {
                   onChange={setSelectedPayment}
                 >
                   <Stack gap="sm">
-                    {PAYMENT_PROVIDERS.map((provider) => (
-                      <Paper
-                        key={provider.id}
-                        p="md"
-                        radius="md"
-                        withBorder
-                        style={{
-                          cursor: "pointer",
-                          borderColor:
-                            selectedPayment === provider.id
-                              ? "var(--mantine-color-green-6)"
-                              : "rgba(255,255,255,0.1)",
-                          background:
-                            selectedPayment === provider.id
-                              ? "rgba(34, 197, 94, 0.1)"
-                              : "rgba(0,0,0,0.2)",
-                        }}
-                        onClick={() => setSelectedPayment(provider.id)}
-                      >
-                        <Stack gap="sm">
-                          <Group justify="space-between" wrap="nowrap">
-                            <Group gap="md" wrap="nowrap">
-                              <Radio value={provider.id} color="green" />
-                              <div>
-                                <Text fw={500}>{provider.label}</Text>
-                                <Text size="xs" c="dimmed">
-                                  {provider.description}
-                                </Text>
-                              </div>
-                            </Group>
+                    <Paper
+                      p="md"
+                      radius="md"
+                      withBorder
+                      style={{
+                        cursor: "pointer",
+                        borderColor:
+                          selectedPayment === "freemius"
+                            ? "var(--mantine-color-green-6)"
+                            : "rgba(255,255,255,0.1)",
+                        background:
+                          selectedPayment === "freemius"
+                            ? "rgba(34, 197, 94, 0.1)"
+                            : "rgba(0,0,0,0.2)",
+                      }}
+                      onClick={() => setSelectedPayment("freemius")}
+                    >
+                      <Stack gap="sm">
+                        <Group justify="space-between" wrap="nowrap">
+                          <Group gap="md" wrap="nowrap">
+                            <Radio value="freemius" color="green" />
+                            <div>
+                              <Text fw={500}>Freemius</Text>
+                              <Text size="xs" c="dimmed">
+                                {t("freemiusDescription")}
+                              </Text>
+                            </div>
                           </Group>
+                        </Group>
 
-                          <Group gap="xs" mt="xs">
-                            <VisaIcon width={40} />
-                            <MastercardIcon width={40} />
-                            <AmexIcon width={40} />
-                            <DiscoverIcon width={40} />
-                            <PaypalIcon width={40} />
-                          </Group>
-                        </Stack>
-                      </Paper>
-                    ))}
+                        <Group gap="xs" mt="xs">
+                          <VisaIcon width={40} />
+                          <MastercardIcon width={40} />
+                          <AmexIcon width={40} />
+                          <DiscoverIcon width={40} />
+                          <PaypalIcon width={40} />
+                        </Group>
+                      </Stack>
+                    </Paper>
                   </Stack>
                 </Radio.Group>
 
@@ -537,20 +517,20 @@ export default function PremiumPage() {
                 <Stack gap="xs">
                   <Group justify="space-between">
                     <Text size="sm" c="dimmed">
-                      Plan
+                      {t("plan")}
                     </Text>
                     <Text size="sm">{selectedPlan?.label}</Text>
                   </Group>
                   <Group justify="space-between">
                     <Text size="sm" c="dimmed">
-                      Subtotal
+                      {t("subtotal")}
                     </Text>
                     <Text size="sm">${selectedPlan?.price}</Text>
                   </Group>
                   {selectedPlan?.savings && (
                     <Group justify="space-between">
                       <Text size="sm" c="dimmed">
-                        Discount
+                        {t("discount")}
                       </Text>
                       <Text size="sm" c="green">
                         {selectedPlan.savings}
@@ -559,7 +539,7 @@ export default function PremiumPage() {
                   )}
                   <Divider my="xs" />
                   <Group justify="space-between">
-                    <Text fw={600}>Total</Text>
+                    <Text fw={600}>{t("total")}</Text>
                     <Text fw={700} size="xl" c="violet">
                       ${selectedPlan?.price}
                     </Text>
@@ -568,8 +548,7 @@ export default function PremiumPage() {
 
                 {/* VAT Notice */}
                 <Text size="xs" c="dimmed" ta="center">
-                  * The applicable Value Added Tax (VAT) will be calculated and
-                  added to your total during the final payment process.
+                  {t("vatNotice")}
                 </Text>
 
                 {/* Pay Button */}
@@ -585,14 +564,14 @@ export default function PremiumPage() {
                       "linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%)",
                   }}
                 >
-                  Start 7-Day Free Trial
+                  {t("startFreeTrial")}
                 </FreemiusPaymentButton>
 
                 {/* Security Note */}
                 <Flex gap="xs" align="center" justify="center">
                   <IconCheck size={14} color="var(--mantine-color-green-6)" />
                   <Text size="xs" c="dimmed">
-                    Secure payment powered by Freemius
+                    {t("securePayment")}
                   </Text>
                 </Flex>
               </Stack>
@@ -605,33 +584,30 @@ export default function PremiumPage() {
       <Modal
         opened={cancelModalOpened}
         onClose={closeCancelModal}
-        title="Cancel Subscription"
+        title={t("cancelModalTitle")}
         centered
       >
         <Stack gap="md">
           <Text size="sm">
-            We&apos;re sorry to see you go! If you cancel, you&apos;ll still
-            have access to premium features until{" "}
-            <Text span fw={700}>
-              {user?.subscriptionEndDate
+            {t("cancelModalMessage", {
+              endDate: user?.subscriptionEndDate
                 ? new Date(user.subscriptionEndDate).toLocaleDateString()
-                : "the end of your billing period"}
-            </Text>
-            .
+                : "",
+            })}
           </Text>
           <Text size="sm" c="dimmed">
-            After that, your account will return to the free plan.
+            {t("cancelModalAfter")}
           </Text>
           <Group justify="flex-end" mt="md">
             <Button variant="default" onClick={closeCancelModal}>
-              Keep subscription
+              {t("keepSubscription")}
             </Button>
             <Button
               color="red"
               onClick={handleCancelSubscription}
               loading={cancelling}
             >
-              Yes, cancel
+              {t("yesCancel")}
             </Button>
           </Group>
         </Stack>

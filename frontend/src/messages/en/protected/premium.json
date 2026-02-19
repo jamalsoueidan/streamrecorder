@@ -1,0 +1,67 @@
+{
+  "title": "Premium",
+  "badge7DaysFree": "7 Days Free",
+  "descriptionPremium": "You have access to everything LiveStreamRecorder has to offer",
+  "descriptionNonPremium": "Get instant access to everything LiveStreamRecorder has to offer",
+
+  "billingPeriodMonthly": "monthly",
+  "billingPeriodAnnual": "annual",
+  "billingPeriodLifetime": "lifetime",
+
+  "billing1MonthLabel": "1 Month",
+  "billing12MonthsLabel": "12 Months",
+  "billing12MonthsSavings": "3 months free",
+  "billing12MonthsBadge": "Best Value",
+  "billingLifetimeLabel": "Lifetime",
+  "billingLifetimeSavings": "Pay once, use forever",
+  "billingLifetimeBadge": "Limited",
+
+  "currentPlanRecord": "Record up to 3 of your own channels",
+  "currentPlanWatch": "Watch your recordings",
+
+  "premiumRecord100": "Record up to 100 of your own channels",
+  "premiumFullControl": "Full control over your recordings",
+  "premiumNotifications": "Notifications when ready",
+  "premiumAiHighlights": "AI highlights & clips",
+  "premiumAiSubtitles": "AI subtitles & translation",
+  "premiumAiMemes": "AI memes & GIFs",
+  "premiumPublishSocial": "Publish to social media",
+  "premiumWatchLater": "Watch later & favorites",
+  "premiumPrioritySupport": "Priority support",
+
+  "paymentMethod": "Payment Method",
+  "freemiusDescription": "Credit Card, PayPal, and more",
+
+  "yourCurrentPlan": "Your Current Plan",
+  "free": "Free",
+  "cancelled": "Cancelled",
+  "adminAccess": "You have full premium access as an admin/champion.",
+  "cancelledMessage": "Your {billingPeriod} subscription has been cancelled. You still have access until {endDate}.",
+  "activeMessage": "You are on the {billingPeriod} plan. Your subscription renews on {renewDate}.",
+  "cancelSubscription": "Cancel subscription",
+  "supportMessage": "LiveStreamRecorder is a one-person project. Your support helps keep the servers running and new features coming. Thank you!",
+
+  "choosePlan": "Choose Your Plan",
+  "perMonth": "${price}/mo",
+  "oneTime": "one-time",
+
+  "yourPremiumFeatures": "Your Premium Features",
+  "unlockPremiumFeatures": "Unlock Premium Features",
+  "futureFeatures": "Premium includes all future features as they're released.",
+  "seeWhatsNew": "See what's new",
+
+  "plan": "Plan",
+  "subtotal": "Subtotal",
+  "discount": "Discount",
+  "total": "Total",
+
+  "vatNotice": "* The applicable Value Added Tax (VAT) will be calculated and added to your total during the final payment process.",
+  "startFreeTrial": "Start 7-Day Free Trial",
+  "securePayment": "Secure payment powered by Freemius",
+
+  "cancelModalTitle": "Cancel Subscription",
+  "cancelModalMessage": "We're sorry to see you go! If you cancel, you'll still have access to premium features until {endDate}.",
+  "cancelModalAfter": "After that, your account will return to the free plan.",
+  "keepSubscription": "Keep subscription",
+  "yesCancel": "Yes, cancel"
+}

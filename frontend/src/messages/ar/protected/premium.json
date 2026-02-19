@@ -1,0 +1,67 @@
+{
+  "title": "بريميوم",
+  "badge7DaysFree": "7 أيام مجاناً",
+  "descriptionPremium": "لديك صلاحية الوصول لكل ما يقدمه LiveStreamRecorder",
+  "descriptionNonPremium": "احصل على صلاحية فورية لكل ما يقدمه LiveStreamRecorder",
+
+  "billingPeriodMonthly": "الشهري",
+  "billingPeriodAnnual": "السنوي",
+  "billingPeriodLifetime": "مدى الحياة",
+
+  "billing1MonthLabel": "شهر واحد",
+  "billing12MonthsLabel": "12 شهر",
+  "billing12MonthsSavings": "3 أشهر مجاناً",
+  "billing12MonthsBadge": "أفضل قيمة",
+  "billingLifetimeLabel": "مدى الحياة",
+  "billingLifetimeSavings": "ادفع مرة واحدة، استخدم للأبد",
+  "billingLifetimeBadge": "محدود",
+
+  "currentPlanRecord": "سجّل حتى 3 من قنواتك",
+  "currentPlanWatch": "شاهد تسجيلاتك",
+
+  "premiumRecord100": "سجّل حتى 100 من قنواتك",
+  "premiumFullControl": "تحكم كامل في تسجيلاتك",
+  "premiumNotifications": "إشعارات عند الجاهزية",
+  "premiumAiHighlights": "مقاطع وأبرز اللحظات بالذكاء الاصطناعي",
+  "premiumAiSubtitles": "ترجمة نصية بالذكاء الاصطناعي",
+  "premiumAiMemes": "ميمز وصور متحركة بالذكاء الاصطناعي",
+  "premiumPublishSocial": "انشر على وسائل التواصل الاجتماعي",
+  "premiumWatchLater": "شاهد لاحقاً والمفضلة",
+  "premiumPrioritySupport": "دعم ذو أولوية",
+
+  "paymentMethod": "طريقة الدفع",
+  "freemiusDescription": "بطاقة ائتمان، باي بال، والمزيد",
+
+  "yourCurrentPlan": "اشتراكك الحالي",
+  "free": "مجاني",
+  "cancelled": "ملغى",
+  "adminAccess": "لديك صلاحية بريميوم كاملة كمسؤول/بطل.",
+  "cancelledMessage": "تم إلغاء اشتراكك {billingPeriod}. لا يزال لديك صلاحية حتى {endDate}.",
+  "activeMessage": "أنت على الاشتراك {billingPeriod}. يتجدد اشتراكك في {renewDate}.",
+  "cancelSubscription": "إلغاء الاشتراك",
+  "supportMessage": "LiveStreamRecorder مشروع شخص واحد. دعمك يساعد في إبقاء الخوادم تعمل وإضافة ميزات جديدة. شكراً لك!",
+
+  "choosePlan": "اختر اشتراكك",
+  "perMonth": "${price}/شهر",
+  "oneTime": "دفعة واحدة",
+
+  "yourPremiumFeatures": "ميزاتك البريميوم",
+  "unlockPremiumFeatures": "افتح ميزات البريميوم",
+  "futureFeatures": "البريميوم يشمل جميع الميزات المستقبلية عند إصدارها.",
+  "seeWhatsNew": "شاهد الجديد",
+
+  "plan": "الاشتراك",
+  "subtotal": "المجموع الفرعي",
+  "discount": "الخصم",
+  "total": "الإجمالي",
+
+  "vatNotice": "* سيتم احتساب ضريبة القيمة المضافة (VAT) المطبقة وإضافتها إلى إجماليك أثناء عملية الدفع النهائية.",
+  "startFreeTrial": "ابدأ تجربة 7 أيام مجانية",
+  "securePayment": "دفع آمن مدعوم من Freemius",
+
+  "cancelModalTitle": "إلغاء الاشتراك",
+  "cancelModalMessage": "نأسف لرؤيتك تذهب! إذا ألغيت، ستظل لديك صلاحية ميزات البريميوم حتى {endDate}.",
+  "cancelModalAfter": "بعد ذلك، سيعود حسابك إلى الاشتراك المجاني.",
+  "keepSubscription": "احتفظ بالاشتراك",
+  "yesCancel": "نعم، إلغاء"
+}

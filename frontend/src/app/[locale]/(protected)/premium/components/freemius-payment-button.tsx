@@ -1,5 +1,6 @@
 "use client";
 
+import { getBillingPeriod } from "@/app/api/freemius/utils";
 import { trackEvent } from "@/app/lib/analytics";
 import { Button, ButtonProps } from "@mantine/core";
 import { useRouter } from "next/navigation";
@@ -99,13 +100,7 @@ export function FreemiusPaymentButton({
         purchaseCompleted: async (response: FreemiusPurchaseResponse) => {
           console.log("Freemius purchaseCompleted response:", response);
 
-          // Map billing cycle number to string
-          const billingPeriod =
-            response.purchase.billing_cycle === 1
-              ? "monthly"
-              : response.purchase.billing_cycle === 12
-                ? "annual"
-                : "lifetime";
+          const billingPeriod = getBillingPeriod(response.purchase.billing_cycle);
 
           // Track purchase completed
           trackEvent("premium_purchase_completed", {
