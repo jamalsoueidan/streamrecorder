@@ -45,10 +45,11 @@ jobs:
             NEXT_PUBLIC_UMAMI_ID=${{ secrets.NEXT_PUBLIC_UMAMI_ID }}
             NEXT_PUBLIC_UMAMI_URL=${{ secrets.NEXT_PUBLIC_UMAMI_URL }}
             NEXT_PUBLIC_BASE_URL=${{ secrets.NEXT_PUBLIC_BASE_URL }}
+            NEXT_PUBLIC_FREEMIUS_PRODUCT_ID=${{ secrets.NEXT_PUBLIC_FREEMIUS_PRODUCT_ID }}
+            NEXT_PUBLIC_FREEMIUS_PLAN_ID=${{ secrets.NEXT_PUBLIC_FREEMIUS_PLAN_ID }}
+            NEXT_PUBLIC_FREEMIUS_PUBLIC_KEY=${{ secrets.NEXT_PUBLIC_FREEMIUS_PUBLIC_KEY }}
             STRAPI_URL=${{ secrets.STRAPI_URL }}
             SENTRY_AUTH_TOKEN=${{ secrets.SENTRY_AUTH_TOKEN }}
-            TIKTOK_CLIENT_KEY=${{ secrets.TIKTOK_CLIENT_KEY }}
-            TIKTOK_CLIENT_SECRET=${{ secrets.TIKTOK_CLIENT_SECRET }}
             GITHUB_SHA=${{ github.sha }}
 
       - name: Trigger Coolify Deploy

@@ -3,9 +3,9 @@ import { NextResponse } from "next/server";
 
 export async function GET() {
   try {
-    const productId = process.env.FREEMIUS_PRODUCT_ID!;
+    const productId = process.env.NEXT_PUBLIC_FREEMIUS_PRODUCT_ID!;
     const secretKey = process.env.FREEMIUS_SECRET_KEY!;
-    const publicKey = process.env.FREEMIUS_PUBLIC_KEY!;
+    const publicKey = process.env.NEXT_PUBLIC_FREEMIUS_PUBLIC_KEY!;
 
     // Generate timestamp
     const timestamp = Math.floor(Date.now() / 1000).toString();

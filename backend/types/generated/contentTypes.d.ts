@@ -1687,7 +1687,7 @@ export interface PluginUsersPermissionsUser
       'manyToMany',
       'api::follower.follower'
     >;
-    freemius: Schema.Attribute.JSON;
+    freemius: Schema.Attribute.Text;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',

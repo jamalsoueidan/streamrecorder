@@ -20,7 +20,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2026-02-18T13:49:53.530Z"
+    "x-generation-date": "2026-02-19T02:03:42.613Z"
   },
   "servers": [
     {
@@ -12110,7 +12110,9 @@
                     "type": "string",
                     "format": "date-time"
                   },
-                  "freemius": {},
+                  "freemius": {
+                    "type": "string"
+                  },
                   "createdAt": {
                     "type": "string",
                     "format": "date-time"
@@ -13893,7 +13895,9 @@
                     "type": "string",
                     "format": "date-time"
                   },
-                  "freemius": {},
+                  "freemius": {
+                    "type": "string"
+                  },
                   "createdAt": {
                     "type": "string",
                     "format": "date-time"
@@ -16180,7 +16184,9 @@
                         "type": "string",
                         "format": "date-time"
                       },
-                      "freemius": {},
+                      "freemius": {
+                        "type": "string"
+                      },
                       "createdAt": {
                         "type": "string",
                         "format": "date-time"
@@ -19613,7 +19619,9 @@
                     "type": "string",
                     "format": "date-time"
                   },
-                  "freemius": {},
+                  "freemius": {
+                    "type": "string"
+                  },
                   "createdAt": {
                     "type": "string",
                     "format": "date-time"
@@ -21729,7 +21737,9 @@
                         "type": "string",
                         "format": "date-time"
                       },
-                      "freemius": {},
+                      "freemius": {
+                        "type": "string"
+                      },
                       "createdAt": {
                         "type": "string",
                         "format": "date-time"
@@ -24863,7 +24873,9 @@
                 "type": "string",
                 "format": "date-time"
               },
-              "freemius": {},
+              "freemius": {
+                "type": "string"
+              },
               "createdAt": {
                 "type": "string",
                 "format": "date-time"
@@ -26520,7 +26532,9 @@
                         "type": "string",
                         "format": "date-time"
                       },
-                      "freemius": {},
+                      "freemius": {
+                        "type": "string"
+                      },
                       "createdAt": {
                         "type": "string",
                         "format": "date-time"
@@ -28561,7 +28575,9 @@
                     "type": "string",
                     "format": "date-time"
                   },
-                  "freemius": {},
+                  "freemius": {
+                    "type": "string"
+                  },
                   "createdAt": {
                     "type": "string",
                     "format": "date-time"
@@ -30944,7 +30960,9 @@
                         "type": "string",
                         "format": "date-time"
                       },
-                      "freemius": {},
+                      "freemius": {
+                        "type": "string"
+                      },
                       "createdAt": {
                         "type": "string",
                         "format": "date-time"
@@ -32915,7 +32933,9 @@
                 "type": "string",
                 "format": "date-time"
               },
-              "freemius": {},
+              "freemius": {
+                "type": "string"
+              },
               "createdAt": {
                 "type": "string",
                 "format": "date-time"

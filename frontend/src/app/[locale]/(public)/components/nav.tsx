@@ -17,7 +17,7 @@ export const navConfig = {
   ],
   navLinks: [
     { key: "blogs", label: "Blogs", href: "/blogs" },
-    { key: "pricing", label: "Pricing", href: "/pricing" },
+    { key: "premium", label: "Premium", href: "/premium" },
   ],
   languages: [
     { code: "en", label: "English" },

@@ -6,6 +6,7 @@
   },
   "links": {
     "dashboard": "Dashboard",
+    "premium": "Premium",
     "myRecordings": "Recordings",
     "myClips": "Clips",
     "aiStudio": "AI Studio",
