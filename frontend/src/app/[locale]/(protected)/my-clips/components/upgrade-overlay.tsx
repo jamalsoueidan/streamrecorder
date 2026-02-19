@@ -98,7 +98,7 @@ export function UpgradeOverlay() {
 
           <Button
             component={Link}
-            href="/settings?upgrade=clips"
+            href="/premium"
             size="lg"
             leftSection={<IconCrown size={20} />}
             variant="gradient"

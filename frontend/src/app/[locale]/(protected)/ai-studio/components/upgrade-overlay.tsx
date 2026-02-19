@@ -100,7 +100,7 @@ export function UpgradeOverlay() {
 
           <Button
             component={Link}
-            href="/settings?upgrade=ai"
+            href="/premium"
             size="lg"
             leftSection={<IconCrown size={20} />}
             variant="gradient"
