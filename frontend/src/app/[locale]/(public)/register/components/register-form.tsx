@@ -20,6 +20,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 import { useActionState, useEffect, useState } from "react";
+import { redirectLoginUri } from "../../login/components/login-form";
 
 export function RegisterForm() {
   const t = useTranslations("register");
@@ -33,7 +34,7 @@ export function RegisterForm() {
         language: navigator.language,
         timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
       });
-      router.push("/discover");
+      router.push(redirectLoginUri);
     }
   }, [state, router]);
 
