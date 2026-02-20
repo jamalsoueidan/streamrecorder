@@ -8,14 +8,13 @@ import {
 } from "../lib/search-params";
 
 export async function fetchRecordings(filters: FollowingFilters, page: number) {
-  const response = await api.recording.browseRecordings(
+  const response = await api.recording.exploreRecordings(
     deepMerge(followingDefaultOptions, {
       filters: buildFollowingFilters(filters),
-      scope: filters.scope,
       sort: filters.sort,
       "pagination[page]": page,
       "pagination[pageSize]": 15,
-    })
+    }),
   );
 
   return {

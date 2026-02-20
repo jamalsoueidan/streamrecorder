@@ -67,11 +67,18 @@ export const navigation = [
     icon: IconVideo,
     links: [
       {
+        labelKey: "links.myList",
+        url: "/my-list",
+        icon: IconLibrary,
+        color: null,
+      },
+      {
         labelKey: "links.myRecordings",
         url: "/following",
         icon: IconVideo,
         color: null,
       },
+
       {
         labelKey: "links.myClips",
         url: "/my-clips",
@@ -83,12 +90,6 @@ export const navigation = [
         url: "/ai-studio",
         icon: IconSparkles,
         color: "violet",
-      },
-      {
-        labelKey: "links.myList",
-        url: "/my-list",
-        icon: IconLibrary,
-        color: null,
       },
       {
         labelKey: "links.live",

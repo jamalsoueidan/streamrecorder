@@ -92,7 +92,7 @@ export async function getRecordingById(id: string) {
   return response.data.data?.[0];
 }
 
-export const fetchProfileRecordings = cache(async function (
+export const fetchPublicProfileRecordings = cache(async function (
   type: string,
   username: string,
 ) {

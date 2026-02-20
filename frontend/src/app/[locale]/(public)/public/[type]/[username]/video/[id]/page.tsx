@@ -17,7 +17,7 @@ import { getFormatter, getLocale, getTranslations } from "next-intl/server";
 import { headers } from "next/headers";
 import { redirect } from "next/navigation";
 import {
-  fetchProfileRecordings,
+  fetchPublicProfileRecordings,
   getRecordingById,
 } from "../../actions/actions";
 import { ImageVideoPreview } from "../../components/image-video-preview";
@@ -133,7 +133,10 @@ export default async function VideoPage({ params }: PageProps) {
   const format = await getFormatter();
   const sources = data.sources ?? [];
 
-  const { data: recordingsData } = await fetchProfileRecordings(type, username);
+  const { data: recordingsData } = await fetchPublicProfileRecordings(
+    type,
+    username,
+  );
   const recordings = recordingsData ?? [];
   const hasRecordings = recordings.length > 0;
 

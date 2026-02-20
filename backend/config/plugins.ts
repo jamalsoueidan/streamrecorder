@@ -630,6 +630,63 @@ export default ({ env }) => ({
                 },
               },
             };
+
+            // Endpoint: GET /followers/following - get followed accounts
+            draft.paths["/followers/following"] = {
+              get: {
+                ...draft.paths["/followers"].get,
+                operationId: "followingFollowers",
+                summary: "Get followed accounts (auth required)",
+                security: [{ bearerAuth: [] }],
+                parameters: [
+                  ...(draft.paths["/followers"].get.parameters || []),
+                  hasRecordingsParam,
+                ],
+                responses: {
+                  ...draft.paths["/followers"].get.responses,
+                  "200": {
+                    description: "OK",
+                    content: {
+                      "application/json": {
+                        schema: {
+                          $ref: "#/components/schemas/BrowseFollowersResponse",
+                        },
+                      },
+                    },
+                  },
+                  "401": { description: "Unauthorized" },
+                },
+              },
+            };
+
+            // Endpoint: GET /followers/discover - discover non-followed accounts
+            draft.paths["/followers/discover"] = {
+              get: {
+                ...draft.paths["/followers"].get,
+                operationId: "discoverFollowers",
+                summary:
+                  "Discover non-followed accounts with recordings (auth required)",
+                security: [{ bearerAuth: [] }],
+                parameters: [
+                  ...(draft.paths["/followers"].get.parameters || []),
+                  hasRecordingsParam,
+                ],
+                responses: {
+                  ...draft.paths["/followers"].get.responses,
+                  "200": {
+                    description: "OK",
+                    content: {
+                      "application/json": {
+                        schema: {
+                          $ref: "#/components/schemas/BrowseFollowersResponse",
+                        },
+                      },
+                    },
+                  },
+                  "401": { description: "Unauthorized" },
+                },
+              },
+            };
           }
 
           // Fix Recording.sources schema
@@ -652,18 +709,53 @@ export default ({ env }) => ({
               };
           }
 
-          // Endpoint: GET /recordings/browse - copy from /recordings and add scope
+          // Endpoint: GET /recordings/browse - browse with optional scope
           if (draft.paths["/recordings"]?.get) {
             draft.paths["/recordings/browse"] = {
               get: {
                 ...draft.paths["/recordings"].get,
                 operationId: "browseRecordings",
                 summary:
-                  "Browse recordings with scope filtering (auth required)",
+                  "Browse recordings with optional scope filtering (auth required)",
                 security: [{ bearerAuth: [] }],
                 parameters: [
                   ...(draft.paths["/recordings"].get.parameters || []),
                   scopeParam,
+                ],
+                responses: {
+                  ...draft.paths["/recordings"].get.responses,
+                  "401": { description: "Unauthorized" },
+                },
+              },
+            };
+
+            // Endpoint: GET /recordings/following - recordings from followed accounts
+            draft.paths["/recordings/following"] = {
+              get: {
+                ...draft.paths["/recordings"].get,
+                operationId: "followingRecordings",
+                summary: "Get recordings from followed accounts (auth required)",
+                security: [{ bearerAuth: [] }],
+                parameters: [
+                  ...(draft.paths["/recordings"].get.parameters || []),
+                ],
+                responses: {
+                  ...draft.paths["/recordings"].get.responses,
+                  "401": { description: "Unauthorized" },
+                },
+              },
+            };
+
+            // Endpoint: GET /recordings/explore - recordings from non-followed accounts
+            draft.paths["/recordings/explore"] = {
+              get: {
+                ...draft.paths["/recordings"].get,
+                operationId: "exploreRecordings",
+                summary:
+                  "Explore recordings from non-followed accounts (auth required)",
+                security: [{ bearerAuth: [] }],
+                parameters: [
+                  ...(draft.paths["/recordings"].get.parameters || []),
                 ],
                 responses: {
                   ...draft.paths["/recordings"].get.responses,

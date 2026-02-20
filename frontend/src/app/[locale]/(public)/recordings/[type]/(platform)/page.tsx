@@ -94,7 +94,6 @@ export default async function RecordingTypePage({
     },
     "pagination[pageSize]": 20,
     "pagination[page]": parseInt(page || "1", 10),
-
     sort: "createdAt:desc",
     populate: {
       sources: {

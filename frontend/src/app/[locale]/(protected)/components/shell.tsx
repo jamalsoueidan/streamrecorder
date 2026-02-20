@@ -2,7 +2,7 @@
 
 import { useNavbarCollapsed } from "@/app/hooks/use-navbar-collapsed";
 import { IsNewProvider } from "@/app/providers/is-new-provider";
-import { AppShell, useMatches } from "@mantine/core";
+import { AppShell, Center, useMatches } from "@mantine/core";
 import { useDisclosure, useMounted } from "@mantine/hooks";
 import { MobileBar } from "./mobilebar";
 import { Navbar } from "./navbar";
@@ -40,7 +40,7 @@ export function Shell({
             transition: "width 200ms ease",
           },
         }}
-        layout="alt"
+        header={{ height: 30 }}
         footer={{
           height: mounted ? headerHeight : 0,
           collapsed: headerHeight === 0,
@@ -52,7 +52,9 @@ export function Shell({
         }}
         padding={{ base: "xs", sm: "md" }}
       >
-        <AppShell.Header></AppShell.Header>
+        <AppShell.Header>
+          <Center>Upgrade to Premium to continue using the site.</Center>
+        </AppShell.Header>
         <AppShell.Navbar>
           <Navbar
             opened={opened}

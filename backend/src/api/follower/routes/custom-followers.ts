@@ -11,6 +11,16 @@ export default {
       handler: "follower.browse",
     },
     {
+      method: "GET",
+      path: "/followers/following",
+      handler: "follower.following",
+    },
+    {
+      method: "GET",
+      path: "/followers/discover",
+      handler: "follower.discover",
+    },
+    {
       method: "POST",
       path: "/followers/follow",
       handler: "follower.follow",

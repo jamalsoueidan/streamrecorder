@@ -14,7 +14,7 @@ import {
   Tooltip,
 } from "@mantine/core";
 import { getFormatter, getLocale, getTranslations } from "next-intl/server";
-import { fetchProfileRecordings, getFollower } from "./actions/actions";
+import { fetchPublicProfileRecordings, getFollower } from "./actions/actions";
 
 import { CountryFlag } from "@/app/[locale]/(protected)/components/country-flag";
 import { FollowerTypeIcon } from "@/app/[locale]/(protected)/components/follower-type-icon";
@@ -106,7 +106,7 @@ export default async function Page({ params }: PageProps) {
     notFound();
   }
 
-  const data = await fetchProfileRecordings(type, username);
+  const data = await fetchPublicProfileRecordings(type, username);
   const recordings = data?.data ?? [];
   const hasRecordings = recordings.length > 0;
 

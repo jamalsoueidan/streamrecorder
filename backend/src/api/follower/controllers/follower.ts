@@ -2,12 +2,43 @@ import { factories } from "@strapi/strapi";
 
 export default factories.createCoreController(
   "api::follower.follower",
-  ({ strapi }) => ({
-    async browse(ctx) {
-      const user = ctx.state.user;
+  ({ strapi }) => {
+    // Shared helper to get following IDs for user
+    const getFollowingIds = async (userDocumentId: string | undefined) => {
+      if (!userDocumentId) return [];
+      const fullUser = await strapi
+        .documents("plugin::users-permissions.user")
+        .findOne({
+          documentId: userDocumentId,
+          fields: ["id"],
+          populate: { followers: { fields: ["id"] } },
+        });
+      return fullUser?.followers?.map((f) => f.id) || [];
+    };
 
-      // Parse params
-      const scope = ctx.query.scope as string | undefined;
+    const escapeLikePattern = (value: string): string => {
+      return value
+        .replace(/\\/g, "\\\\")
+        .replace(/%/g, "\\%")
+        .replace(/_/g, "\\_");
+    };
+
+    const snakeToCamel = (obj: any): any => {
+      if (obj === null || typeof obj !== "object") return obj;
+      return Object.fromEntries(
+        Object.entries(obj).map(([key, value]) => [
+          key.replace(/_([a-z])/g, (_, letter) => letter.toUpperCase()),
+          value,
+        ]),
+      );
+    };
+
+    // Core browse logic
+    const executeBrowse = async (
+      ctx: any,
+      scope: "following" | "discover" | undefined,
+      followingIds: (string | number)[],
+    ) => {
       const hasRecordings = ctx.query.hasRecordings === "true";
       const sort = ctx.query.sort as string | undefined;
       const includeRecordings = scope === "discover";
@@ -24,19 +55,6 @@ export default factories.createCoreController(
       const pageSize = parseInt(pagination?.pageSize || "25");
       const offset = (page - 1) * pageSize;
 
-      // Get following IDs
-      let followingIds = [];
-      if (user) {
-        const fullUser = await strapi
-          .documents("plugin::users-permissions.user")
-          .findOne({
-            documentId: user?.documentId,
-            fields: ["id"],
-            populate: { followers: { fields: ["id"] } },
-          });
-        followingIds = fullUser?.followers?.map((f) => f.id) || [];
-      }
-
       if (scope === "following" && followingIds.length === 0) {
         return {
           data: [],
@@ -45,13 +63,6 @@ export default factories.createCoreController(
           },
         };
       }
-
-      const escapeLikePattern = (value: string): string => {
-        return value
-          .replace(/\\/g, "\\\\")
-          .replace(/%/g, "\\%")
-          .replace(/_/g, "\\_");
-      };
 
       // Shared filter function
       const applyBaseFilters = (q: any) => {
@@ -210,7 +221,7 @@ export default factories.createCoreController(
 
       const followerIds = rows.map((r: any) => r.id);
 
-      // Fetch recordings if needed (discover only)
+      // Fetch recordings if needed (discover/explore only)
       let recordingsMap = new Map<number | string, any[]>();
       if (includeRecordings) {
         const recordings = await strapi
@@ -238,17 +249,6 @@ export default factories.createCoreController(
         }
       }
 
-      const snakeToCamel = (obj: any): any => {
-        if (obj === null || typeof obj !== "object") return obj;
-
-        return Object.fromEntries(
-          Object.entries(obj).map(([key, value]) => [
-            key.replace(/_([a-z])/g, (_, letter) => letter.toUpperCase()),
-            value,
-          ]),
-        );
-      };
-
       const data = rows.map((row: any) => ({
         ...snakeToCamel(row),
         totalRecordings: Number(row.total_recordings),
@@ -269,309 +269,342 @@ export default factories.createCoreController(
           },
         },
       };
-    },
-    async filters(ctx) {
-      const knex = strapi.db.connection;
-      const { type } = ctx.query;
+    };
 
-      const baseQuery = () => {
-        const q = knex("followers");
-        if (type) q.where("type", type);
-        return q;
-      };
+    return {
+      async browse(ctx) {
+        const user = ctx.state.user;
+        const scope = ctx.query.scope as "following" | "discover" | undefined;
+        const followingIds = await getFollowingIds(user?.documentId);
+        return executeBrowse(ctx, scope, followingIds);
+      },
+      async following(ctx) {
+        const user = ctx.state.user;
+        if (!user) return ctx.unauthorized();
+        const followingIds = await getFollowingIds(user.documentId);
+        return executeBrowse(ctx, "following", followingIds);
+      },
+      async discover(ctx) {
+        const user = ctx.state.user;
+        if (!user) return ctx.unauthorized();
+        const followingIds = await getFollowingIds(user.documentId);
+        return executeBrowse(ctx, "discover", followingIds);
+      },
+      async filters(ctx) {
+        const knex = strapi.db.connection;
+        const { type } = ctx.query;
 
-      const [countryCodes, genders, languageCodes, types] = await Promise.all([
-        baseQuery()
-          .select("country_code as value")
-          .count("* as count")
-          .whereNotNull("country_code")
-          .where("country_code", "!=", "")
-          .groupBy("country_code")
-          .orderBy("count", "desc"),
+        const baseQuery = () => {
+          const q = knex("followers");
+          if (type) q.where("type", type);
+          return q;
+        };
 
-        baseQuery()
-          .select("gender as value")
-          .count("* as count")
-          .whereNotNull("gender")
-          .where("gender", "!=", "")
-          .groupBy("gender")
-          .orderBy("count", "desc"),
+        const [countryCodes, genders, languageCodes, types] = await Promise.all(
+          [
+            baseQuery()
+              .select("country_code as value")
+              .count("* as count")
+              .whereNotNull("country_code")
+              .where("country_code", "!=", "")
+              .groupBy("country_code")
+              .orderBy("count", "desc"),
 
-        baseQuery()
-          .select("language_code as value")
-          .count("* as count")
-          .whereNotNull("language_code")
-          .where("language_code", "!=", "")
-          .groupBy("language_code")
-          .orderBy("count", "desc"),
+            baseQuery()
+              .select("gender as value")
+              .count("* as count")
+              .whereNotNull("gender")
+              .where("gender", "!=", "")
+              .groupBy("gender")
+              .orderBy("count", "desc"),
 
-        baseQuery()
-          .select("type as value")
-          .count("* as count")
-          .whereNotNull("type")
-          .where("type", "!=", "")
-          .groupBy("type")
-          .orderBy("count", "desc"),
-      ]);
+            baseQuery()
+              .select("language_code as value")
+              .count("* as count")
+              .whereNotNull("language_code")
+              .where("language_code", "!=", "")
+              .groupBy("language_code")
+              .orderBy("count", "desc"),
 
-      return {
-        countryCodes,
-        genders,
-        languageCodes,
-        types,
-      };
-    },
-    async follow(ctx) {
-      const user = ctx.state.user;
-      if (!user) return ctx.unauthorized();
-
-      const body = ctx.request.body;
-
-      const username = body.username.trim(); // ✅ Keep original casing
-      const type = body.type.trim();
-
-      const currentUser = await strapi
-        .documents("plugin::users-permissions.user")
-        .findOne({
-          documentId: user.documentId,
-          populate: ["followers", "role"],
-        });
-
-      let follower = await strapi
-        .documents("api::follower.follower")
-        .findFirst({
-          filters: {
-            username: { $eqi: username }, // ✅ Case-insensitive search
-            type,
-          },
-        });
-
-      if (!follower) {
-        follower = await strapi.documents("api::follower.follower").create({
-          data: { username, type },
-        });
-      } else {
-        follower = await strapi.documents("api::follower.follower").update({
-          documentId: follower.documentId,
-          data: { lastCheckedAt: new Date() },
-        });
-      }
-
-      const totalFollowers = currentUser.followers
-        ? currentUser.followers.length
-        : 0;
-
-      if (currentUser.role.type === "authenticated" && totalFollowers >= 3) {
-        return ctx.forbidden("You already follow the maximum of 3 followers.");
-      }
-
-      if (currentUser.role.type === "champion" && totalFollowers >= 50) {
-        return ctx.forbidden("You already follow the maximum of 50 followers.");
-      }
-
-      if (currentUser.role.type === "premium" && totalFollowers >= 100) {
-        return ctx.forbidden(
-          "You already follow the maximum of 100 followers.",
+            baseQuery()
+              .select("type as value")
+              .count("* as count")
+              .whereNotNull("type")
+              .where("type", "!=", "")
+              .groupBy("type")
+              .orderBy("count", "desc"),
+          ],
         );
-      }
 
-      // Get all existing documentIds + new one
-      const existingDocIds =
-        currentUser.followers?.map((f) => f.documentId) || [];
+        return {
+          countryCodes,
+          genders,
+          languageCodes,
+          types,
+        };
+      },
+      async follow(ctx) {
+        const user = ctx.state.user;
+        if (!user) return ctx.unauthorized();
 
-      if (!existingDocIds.includes(follower.documentId)) {
-        existingDocIds.push(follower.documentId);
-      }
+        const body = ctx.request.body;
 
-      // Update with connect using documentIds
-      const updatePayload = {
-        documentId: user.documentId,
-        data: {
-          followers: {
-            connect: existingDocIds,
-          },
-        },
-      };
+        const username = body.username.trim(); // ✅ Keep original casing
+        const type = body.type.trim();
 
-      await strapi
-        .documents("plugin::users-permissions.user")
-        .update(updatePayload);
+        const currentUser = await strapi
+          .documents("plugin::users-permissions.user")
+          .findOne({
+            documentId: user.documentId,
+            populate: ["followers", "role"],
+          });
 
-      return { data: follower };
-    },
-    async connectUserWithFollower(ctx) {
-      const body = ctx.request.body;
+        let follower = await strapi
+          .documents("api::follower.follower")
+          .findFirst({
+            filters: {
+              username: { $eqi: username }, // ✅ Case-insensitive search
+              type,
+            },
+          });
 
-      const username = body.username.trim();
-      const type = body.type.trim();
-      const userDocumentId = ctx.params.userDocumentId;
+        if (!follower) {
+          follower = await strapi.documents("api::follower.follower").create({
+            data: { username, type },
+          });
+        } else {
+          follower = await strapi.documents("api::follower.follower").update({
+            documentId: follower.documentId,
+            data: { lastCheckedAt: new Date() },
+          });
+        }
 
-      const currentUser = await strapi
-        .documents("plugin::users-permissions.user")
-        .findOne({
-          documentId: userDocumentId,
-          populate: ["followers"],
-        });
+        const totalFollowers = currentUser.followers
+          ? currentUser.followers.length
+          : 0;
 
-      if (!currentUser) {
-        return ctx.notFound("User not found");
-      }
+        if (currentUser.role.type === "authenticated" && totalFollowers >= 3) {
+          return ctx.forbidden(
+            "You already follow the maximum of 3 followers.",
+          );
+        }
 
-      let follower = await strapi
-        .documents("api::follower.follower")
-        .findFirst({
-          filters: {
-            username: { $eqi: username },
-            type,
-          },
-        });
+        if (currentUser.role.type === "champion" && totalFollowers >= 50) {
+          return ctx.forbidden(
+            "You already follow the maximum of 50 followers.",
+          );
+        }
 
-      if (!follower) {
-        return ctx.notFound("Follower not found");
-      }
+        if (currentUser.role.type === "premium" && totalFollowers >= 100) {
+          return ctx.forbidden(
+            "You already follow the maximum of 100 followers.",
+          );
+        }
 
-      // Get all existing documentIds + new one
-      const existingDocIds =
-        currentUser.followers?.map((f) => f.documentId) || [];
+        // Get all existing documentIds + new one
+        const existingDocIds =
+          currentUser.followers?.map((f) => f.documentId) || [];
 
-      if (!existingDocIds.includes(follower.documentId)) {
-        existingDocIds.push(follower.documentId);
-      }
+        if (!existingDocIds.includes(follower.documentId)) {
+          existingDocIds.push(follower.documentId);
+        }
 
-      // Update with connect using documentIds
-      const updatePayload = {
-        documentId: userDocumentId,
-        data: {
-          followers: {
-            connect: existingDocIds,
-          },
-        },
-      };
-
-      await strapi
-        .documents("plugin::users-permissions.user")
-        .update(updatePayload);
-
-      return { data: follower };
-    },
-    async unfollow(ctx) {
-      const user = ctx.state.user;
-      if (!user) return ctx.unauthorized();
-
-      const { username, type } = ctx.request.body;
-
-      const fullUser = await strapi
-        .documents("plugin::users-permissions.user")
-        .findOne({
+        // Update with connect using documentIds
+        const updatePayload = {
           documentId: user.documentId,
-          populate: {
+          data: {
             followers: {
-              fields: ["id", "documentId", "username", "type"],
-              filters: {
-                username,
-                type,
+              connect: existingDocIds,
+            },
+          },
+        };
+
+        await strapi
+          .documents("plugin::users-permissions.user")
+          .update(updatePayload);
+
+        return { data: follower };
+      },
+      async connectUserWithFollower(ctx) {
+        const body = ctx.request.body;
+
+        const username = body.username.trim();
+        const type = body.type.trim();
+        const userDocumentId = ctx.params.userDocumentId;
+
+        const currentUser = await strapi
+          .documents("plugin::users-permissions.user")
+          .findOne({
+            documentId: userDocumentId,
+            populate: ["followers"],
+          });
+
+        if (!currentUser) {
+          return ctx.notFound("User not found");
+        }
+
+        let follower = await strapi
+          .documents("api::follower.follower")
+          .findFirst({
+            filters: {
+              username: { $eqi: username },
+              type,
+            },
+          });
+
+        if (!follower) {
+          return ctx.notFound("Follower not found");
+        }
+
+        // Get all existing documentIds + new one
+        const existingDocIds =
+          currentUser.followers?.map((f) => f.documentId) || [];
+
+        if (!existingDocIds.includes(follower.documentId)) {
+          existingDocIds.push(follower.documentId);
+        }
+
+        // Update with connect using documentIds
+        const updatePayload = {
+          documentId: userDocumentId,
+          data: {
+            followers: {
+              connect: existingDocIds,
+            },
+          },
+        };
+
+        await strapi
+          .documents("plugin::users-permissions.user")
+          .update(updatePayload);
+
+        return { data: follower };
+      },
+      async unfollow(ctx) {
+        const user = ctx.state.user;
+        if (!user) return ctx.unauthorized();
+
+        const { username, type } = ctx.request.body;
+
+        const fullUser = await strapi
+          .documents("plugin::users-permissions.user")
+          .findOne({
+            documentId: user.documentId,
+            populate: {
+              followers: {
+                fields: ["id", "documentId", "username", "type"],
+                filters: {
+                  username,
+                  type,
+                },
               },
+            },
+          });
+
+        const followerToRemove = fullUser.followers?.find(
+          (f) => f.username === username && f.type === type,
+        );
+
+        if (!followerToRemove) {
+          return ctx.notFound();
+        }
+
+        await strapi.documents("plugin::users-permissions.user").update({
+          documentId: user.documentId,
+          data: {
+            followers: {
+              disconnect: [followerToRemove.documentId],
             },
           },
         });
 
-      const followerToRemove = fullUser.followers?.find(
-        (f) => f.username === username && f.type === type,
-      );
+        return { success: true };
+      },
+      async bulkUpdateLastChecked(ctx) {
+        const { documentIds } = ctx.request.body;
 
-      if (!followerToRemove) {
-        return ctx.notFound();
-      }
+        const result = await strapi.db
+          .query("api::follower.follower")
+          .updateMany({
+            where: { documentId: { $in: documentIds } },
+            data: { lastCheckedAt: new Date() },
+          });
 
-      await strapi.documents("plugin::users-permissions.user").update({
-        documentId: user.documentId,
-        data: {
-          followers: {
-            disconnect: [followerToRemove.documentId],
-          },
-        },
-      });
-
-      return { success: true };
-    },
-    async bulkUpdateLastChecked(ctx) {
-      const { documentIds } = ctx.request.body;
-
-      const result = await strapi.db
-        .query("api::follower.follower")
-        .updateMany({
-          where: { documentId: { $in: documentIds } },
-          data: { lastCheckedAt: new Date() },
-        });
-
-      return {
-        requested: documentIds.length,
-        updated: result.count,
-      };
-    },
-    async cleanup(ctx) {
-      // delete users who is 7 days old and still have no recordings
-      const days = parseInt(ctx.query.days as string) || 7;
-      const limit = parseInt(ctx.query.limit as string) || 50;
-      const destroy = ctx.query.destroy === "true";
-
-      const knex = strapi.db.connection;
-
-      const cutoffDate = new Date();
-      cutoffDate.setDate(cutoffDate.getDate() - days);
-
-      const staleFollowers = await knex("followers as f")
-        .select("f.id", "f.document_id", "f.username", "f.type", "f.created_at")
-        .leftJoin("recordings_follower_lnk as rfl", "rfl.follower_id", "f.id")
-        .where("f.created_at", "<", cutoffDate.toISOString())
-        .groupBy("f.id")
-        .having(knex.raw("COUNT(rfl.recording_id) = 0"))
-        .limit(limit);
-
-      if (!destroy) {
         return {
-          message: "Preview - no deletions",
-          count: staleFollowers.length,
-          cutoffDate: cutoffDate.toISOString(),
-          followers: staleFollowers,
+          requested: documentIds.length,
+          updated: result.count,
         };
-      }
+      },
+      async cleanup(ctx) {
+        // delete users who is 7 days old and still have no recordings
+        const days = parseInt(ctx.query.days as string) || 7;
+        const limit = parseInt(ctx.query.limit as string) || 50;
+        const destroy = ctx.query.destroy === "true";
 
-      const ids = staleFollowers.map((f: any) => f.id);
-      let deletedAvatars = 0;
+        const knex = strapi.db.connection;
 
-      if (ids.length > 0) {
-        const avatarFiles = await knex("files as f")
-          .select("f.*")
-          .innerJoin("files_related_mph as frm", "frm.file_id", "f.id")
-          .whereIn("frm.related_id", ids)
-          .where("frm.related_type", "api::follower.follower")
-          .where("frm.field", "avatar");
+        const cutoffDate = new Date();
+        cutoffDate.setDate(cutoffDate.getDate() - days);
 
-        for (const file of avatarFiles) {
-          try {
-            await strapi.plugin("upload").service("upload").remove(file);
-            deletedAvatars++;
-          } catch (err) {
-            console.error(`Failed to delete avatar ${file.id}:`, err);
-          }
+        const staleFollowers = await knex("followers as f")
+          .select(
+            "f.id",
+            "f.document_id",
+            "f.username",
+            "f.type",
+            "f.created_at",
+          )
+          .leftJoin("recordings_follower_lnk as rfl", "rfl.follower_id", "f.id")
+          .where("f.created_at", "<", cutoffDate.toISOString())
+          .groupBy("f.id")
+          .having(knex.raw("COUNT(rfl.recording_id) = 0"))
+          .limit(limit);
+
+        if (!destroy) {
+          return {
+            message: "Preview - no deletions",
+            count: staleFollowers.length,
+            cutoffDate: cutoffDate.toISOString(),
+            followers: staleFollowers,
+          };
         }
 
-        await knex("files_related_mph")
-          .whereIn("related_id", ids)
-          .where("related_type", "api::follower.follower")
-          .delete();
+        const ids = staleFollowers.map((f: any) => f.id);
+        let deletedAvatars = 0;
 
-        await knex("followers").whereIn("id", ids).delete();
-      }
+        if (ids.length > 0) {
+          const avatarFiles = await knex("files as f")
+            .select("f.*")
+            .innerJoin("files_related_mph as frm", "frm.file_id", "f.id")
+            .whereIn("frm.related_id", ids)
+            .where("frm.related_type", "api::follower.follower")
+            .where("frm.field", "avatar");
 
-      return {
-        message: "Deleted stale followers and their avatars",
-        followersDeleted: ids.length,
-        avatarsDeleted: deletedAvatars,
-        cutoffDate: cutoffDate.toISOString(),
-        deleted: staleFollowers,
-      };
-    },
-  }),
+          for (const file of avatarFiles) {
+            try {
+              await strapi.plugin("upload").service("upload").remove(file);
+              deletedAvatars++;
+            } catch (err) {
+              console.error(`Failed to delete avatar ${file.id}:`, err);
+            }
+          }
+
+          await knex("files_related_mph")
+            .whereIn("related_id", ids)
+            .where("related_type", "api::follower.follower")
+            .delete();
+
+          await knex("followers").whereIn("id", ids).delete();
+        }
+
+        return {
+          message: "Deleted stale followers and their avatars",
+          followersDeleted: ids.length,
+          avatarsDeleted: deletedAvatars,
+          cutoffDate: cutoffDate.toISOString(),
+          deleted: staleFollowers,
+        };
+      },
+    };
+  },
 );
