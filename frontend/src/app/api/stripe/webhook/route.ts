@@ -1,10 +1,7 @@
+import publicApi from "@/lib/public-api";
 import { NextRequest, NextResponse } from "next/server";
 import Stripe from "stripe";
-import {
-  getRoleIdByName,
-  updateUserSubscription,
-} from "../../freemius/utils";
-import publicApi from "@/lib/public-api";
+import { getRoleIdByName, updateUserSubscription } from "../../freemius/utils";
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
 const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET!;
@@ -36,10 +33,7 @@ export async function POST(request: NextRequest) {
     const signature = request.headers.get("stripe-signature");
 
     if (!signature) {
-      return NextResponse.json(
-        { error: "Missing signature" },
-        { status: 400 },
-      );
+      return NextResponse.json({ error: "Missing signature" }, { status: 400 });
     }
 
     // Verify webhook signature
@@ -48,10 +42,7 @@ export async function POST(request: NextRequest) {
       event = stripe.webhooks.constructEvent(body, signature, webhookSecret);
     } catch (err) {
       console.error("Webhook signature verification failed:", err);
-      return NextResponse.json(
-        { error: "Invalid signature" },
-        { status: 400 },
-      );
+      return NextResponse.json({ error: "Invalid signature" }, { status: 400 });
     }
 
     switch (event.type) {
@@ -97,20 +88,17 @@ export async function POST(request: NextRequest) {
         const premiumRoleId = await getRoleIdByName("premium");
 
         // Update user - use publicApi directly since we have the user ID
-        await publicApi.usersPermissionsUsersRoles.usersUpdate(
-          { id: userId },
-          {
-            role: premiumRoleId || undefined,
-            subscriptionStatus: "active",
-            subscriptionEndDate,
-            billingPeriod: billingCycle,
-            paymentProvider: "stripe",
-            stripe: JSON.stringify({
-              customerId,
-              subscriptionId,
-            }),
-          } as never,
-        );
+        await publicApi.usersPermissionsUsersRoles.usersUpdate({ id: userId }, {
+          role: premiumRoleId || undefined,
+          subscriptionStatus: "active",
+          subscriptionEndDate,
+          billingPeriod: billingCycle,
+          paymentProvider: "stripe",
+          stripe: JSON.stringify({
+            customerId,
+            subscriptionId,
+          }),
+        } as never);
 
         break;
       }
@@ -218,17 +206,30 @@ export async function POST(request: NextRequest) {
         // Invoice paid successfully (renewal confirmation)
         const invoice = event.data.object as Stripe.Invoice;
         const customerId = invoice.customer as string;
-        const subscriptionId = invoice.subscription as string;
+
+        // Only process subscription renewals, not manual or one-time invoices
+        const billingReason = invoice.billing_reason;
+        if (
+          billingReason !== "subscription_cycle" &&
+          billingReason !== "subscription_create"
+        ) {
+          break;
+        }
+
+        // Get subscription ID from line items
+        const firstLine = invoice.lines?.data?.[0];
+        const subscriptionId =
+          firstLine?.parent?.subscription_item_details?.subscription;
 
         if (!subscriptionId) {
-          // One-time payment, not a subscription renewal
           break;
         }
 
         const user = await findUserByStripeCustomerId(customerId);
         if (user?.id) {
           // Fetch subscription to get updated period end
-          const subscription = await stripe.subscriptions.retrieve(subscriptionId);
+          const subscription =
+            await stripe.subscriptions.retrieve(subscriptionId);
           const firstItem = subscription.items.data[0];
           const subscriptionEndDate = firstItem?.current_period_end
             ? new Date(firstItem.current_period_end * 1000).toISOString()
