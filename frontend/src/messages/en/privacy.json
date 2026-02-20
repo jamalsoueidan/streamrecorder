@@ -9,7 +9,7 @@
   },
   "overview": {
     "title": "Overview",
-    "content": "We keep things simple. We collect minimal data and do not track you. No invasive analytics, no selling data to third parties. Your privacy matters to us."
+    "content": "We keep things simple. We collect minimal data and do not sell it to third parties. No invasive analytics, no advertising tracking. Your privacy matters to us."
   },
   "dataController": {
     "title": "Data Controller",
@@ -45,15 +45,14 @@
   },
   "payment": {
     "title": "Payment Processing",
-    "content": "For paid subscriptions, we use Stripe as our payment processor. Stripe collects and processes your payment information directly. We do not store your credit card details on our servers.",
-    "stripePolicy": "Stripe's privacy policy can be found at: stripe.com/privacy"
+    "content": "For paid subscriptions, we use Freemius as our payment processor and merchant of record. Freemius collects and processes your payment information directly. We do not store your credit card details on our servers.",
+    "stripePolicy": "Freemius's privacy policy can be found at: freemius.com/privacy"
   },
   "analytics": {
     "title": "Analytics",
     "intro": "We use Umami, a privacy-focused analytics tool, to understand how our site is used. This helps us improve the experience.",
     "notCollect": "What Umami does NOT collect:",
     "notCollectItems": {
-      "cookies": "No cookies",
       "personal": "No personal information",
       "tracking": "No cross-site tracking"
     },
@@ -65,6 +64,12 @@
       "country": "Country (not precise location)"
     },
     "footer": "All data is anonymized and stored on our own servers in Europe."
+  },
+  "accessControl": {
+    "title": "Access Control & Usage Tracking",
+    "content1": "To enforce viewing limits, we track the first 5 recordings viewed by public visitors (not logged in) and basic users (logged in with a free account). After reaching this limit, access is restricted and no further tracking occurs.",
+    "content2": "For public visitors, we use an anonymous device fingerprint stored in a cookie. For basic users viewing content from creators they do not follow, we use your account ID.",
+    "content3": "Premium subscribers are never tracked. Basic users viewing content from creators they follow are also not tracked. This data is used solely to operate our freemium service and is not shared with third parties or used for advertising purposes."
   },
   "dataRetention": {
     "title": "Data Retention",
@@ -88,8 +93,8 @@
     "title": "Third Parties",
     "intro": "We do not sell your data to anyone. We only share data with:",
     "items": {
-      "stripe": "Stripe",
-      "stripeDesc": "For payment processing (if you subscribe)"
+      "freemius": "Freemius",
+      "freemiusDesc": "For payment processing and subscription management (if you subscribe)"
     },
     "footer": "We do not use third-party advertising networks or sell your personal information."
   },
@@ -100,9 +105,11 @@
       "session": "Session cookies",
       "sessionDesc": "To keep you logged in",
       "preference": "Preference cookies",
-      "preferenceDesc": "To remember your settings"
+      "preferenceDesc": "To remember your settings",
+      "access": "Access control cookies",
+      "accessDesc": "To enforce viewing limits for free users"
     },
-    "footer": "We do not use tracking cookies, advertising cookies, or third-party analytics cookies."
+    "footer": "We do not use advertising cookies or third-party tracking cookies. The access control cookie is strictly necessary to operate our freemium service."
   },
   "rights": {
     "title": "Your Rights (GDPR)",

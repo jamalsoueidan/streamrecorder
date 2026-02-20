@@ -6,6 +6,7 @@ import {
   IconClock,
   IconCreditCard,
   IconDatabase,
+  IconEye,
   IconFileText,
   IconLock,
   IconMail,
@@ -32,7 +33,7 @@ export async function generateMetadata() {
 
 export default function PrivacyPolicy() {
   const t = useTranslations("privacy");
-  const lastUpdated = "January 13, 2026";
+  const lastUpdated = "February 20, 2026";
 
   return (
     <Container size="md" style={{ position: "relative", zIndex: 1 }}>
@@ -350,12 +351,6 @@ export default function PrivacyPolicy() {
             <Text style={{ color: "#94a3b8" }}>
               •{" "}
               <Text component="span" fw={500} style={{ color: "#f1f5f9" }}>
-                {t("analytics.notCollectItems.cookies")}
-              </Text>
-            </Text>
-            <Text style={{ color: "#94a3b8" }}>
-              •{" "}
-              <Text component="span" fw={500} style={{ color: "#f1f5f9" }}>
                 {t("analytics.notCollectItems.personal")}
               </Text>
             </Text>
@@ -400,6 +395,45 @@ export default function PrivacyPolicy() {
           </Stack>
           <Text mt="md" style={{ color: "#64748b" }} size="sm">
             {t("analytics.footer")}
+          </Text>
+        </Paper>
+
+        {/* Access Control & Usage Tracking */}
+        <Paper
+          p="xl"
+          radius="lg"
+          style={{
+            background: "rgba(255, 255, 255, 0.02)",
+            border: "1px solid rgba(255, 255, 255, 0.06)",
+          }}
+        >
+          <Flex gap={12} align="center" mb="md">
+            <div
+              style={{
+                width: 40,
+                height: 40,
+                borderRadius: 10,
+                background: "rgba(234, 179, 8, 0.2)",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                color: "#eab308",
+              }}
+            >
+              <IconEye size={20} />
+            </div>
+            <Title order={3} style={{ color: "#f1f5f9", fontWeight: 600 }}>
+              {t("accessControl.title")}
+            </Title>
+          </Flex>
+          <Text style={{ color: "#94a3b8", lineHeight: 1.7 }} mb="md">
+            {t("accessControl.content1")}
+          </Text>
+          <Text style={{ color: "#94a3b8", lineHeight: 1.7 }} mb="md">
+            {t("accessControl.content2")}
+          </Text>
+          <Text style={{ color: "#94a3b8", lineHeight: 1.7 }}>
+            {t("accessControl.content3")}
           </Text>
         </Paper>
 
@@ -546,11 +580,11 @@ export default function PrivacyPolicy() {
             <Text style={{ color: "#94a3b8" }}>
               •{" "}
               <Text component="span" fw={500} style={{ color: "#f1f5f9" }}>
-                {t("thirdParties.items.stripe")}
+                {t("thirdParties.items.freemius")}
               </Text>
               <Text component="span" style={{ color: "#64748b" }}>
                 {" "}
-                — {t("thirdParties.items.stripeDesc")}
+                — {t("thirdParties.items.freemiusDesc")}
               </Text>
             </Text>
           </Stack>
@@ -609,6 +643,16 @@ export default function PrivacyPolicy() {
               <Text component="span" style={{ color: "#64748b" }}>
                 {" "}
                 — {t("cookies.items.preferenceDesc")}
+              </Text>
+            </Text>
+            <Text style={{ color: "#94a3b8" }}>
+              •{" "}
+              <Text component="span" fw={500} style={{ color: "#f1f5f9" }}>
+                {t("cookies.items.access")}
+              </Text>
+              <Text component="span" style={{ color: "#64748b" }}>
+                {" "}
+                — {t("cookies.items.accessDesc")}
               </Text>
             </Text>
           </Stack>

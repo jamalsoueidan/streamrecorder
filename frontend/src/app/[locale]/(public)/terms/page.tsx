@@ -21,6 +21,7 @@ import {
   IconScale,
   IconShield,
   IconShieldCheck,
+  IconStack2,
   IconUserCheck,
   IconWorld,
   IconWriting,
@@ -41,7 +42,7 @@ export async function generateMetadata() {
 
 export default function TermsAndConditions() {
   const t = useTranslations("terms");
-  const lastUpdated = "February 2, 2026";
+  const lastUpdated = "February 20, 2026";
 
   return (
     <Container size="md" style={{ position: "relative", zIndex: 1 }}>
@@ -352,8 +353,14 @@ export default function TermsAndConditions() {
           <Text style={{ color: "#94a3b8", lineHeight: 1.7 }} mb="md">
             {t("intellectualProperty.content3")}
           </Text>
-          <Text style={{ color: "#94a3b8", lineHeight: 1.7 }}>
+          <Text style={{ color: "#94a3b8", lineHeight: 1.7 }} mb="md">
             {t("intellectualProperty.content4")}
+          </Text>
+          <Text style={{ color: "#94a3b8", lineHeight: 1.7 }} mb="md">
+            {t("intellectualProperty.content5")}
+          </Text>
+          <Text style={{ color: "#94a3b8", lineHeight: 1.7 }}>
+            {t("intellectualProperty.content6")}
           </Text>
         </Paper>
 
@@ -544,6 +551,48 @@ export default function TermsAndConditions() {
           </Text>
           <Text style={{ color: "#94a3b8", lineHeight: 1.7 }}>
             {t("thirdPartyPlatforms.content3")}
+          </Text>
+        </Paper>
+
+        {/* Service Tiers & Access */}
+        <Paper
+          p="xl"
+          radius="lg"
+          style={{
+            background: "rgba(255, 255, 255, 0.02)",
+            border: "1px solid rgba(255, 255, 255, 0.06)",
+          }}
+        >
+          <Flex gap={12} align="center" mb="md">
+            <div
+              style={{
+                width: 40,
+                height: 40,
+                borderRadius: 10,
+                background: "rgba(139, 92, 246, 0.2)",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                color: "#8b5cf6",
+              }}
+            >
+              <IconStack2 size={20} />
+            </div>
+            <Title order={3} style={{ color: "#f1f5f9", fontWeight: 600 }}>
+              {t("serviceTiers.title")}
+            </Title>
+          </Flex>
+          <Text style={{ color: "#94a3b8", lineHeight: 1.7 }} mb="md">
+            {t("serviceTiers.content1")}
+          </Text>
+          <Text style={{ color: "#94a3b8", lineHeight: 1.7 }} mb="md">
+            {t("serviceTiers.content2")}
+          </Text>
+          <Text style={{ color: "#94a3b8", lineHeight: 1.7 }} mb="md">
+            {t("serviceTiers.content3")}
+          </Text>
+          <Text style={{ color: "#94a3b8", lineHeight: 1.7 }}>
+            {t("serviceTiers.content4")}
           </Text>
         </Paper>
 

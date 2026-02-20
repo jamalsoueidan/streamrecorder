@@ -51,15 +51,17 @@
     "title": "Intellectual Property & Copyright",
     "content1": "LiveStreamRecorder respects the intellectual property rights of others and expects users to do the same.",
     "content2": "By using our Service, you confirm that you have the right to record the content you add to our platform. You are solely responsible for ensuring that your use complies with applicable copyright laws and the terms of service of third-party streaming platforms.",
-    "content3": "You agree not to use LiveStreamRecorder to record content that you do not own or have authorization to record. Any misuse may result in termination of your account and potential legal action from rights holders.",
-    "content4": "LiveStreamRecorder reserves the right to remove or disable access to any content alleged to be infringing and may terminate repeat infringers' access to the Service."
+    "content3": "Recording, reproducing, or redistributing live stream content without the creator's consent may constitute copyright infringement and could expose you to legal liability. LiveStreamRecorder is a technical tool only — you bear full legal responsibility for how you use it.",
+    "content4": "You agree not to use LiveStreamRecorder to record content that you do not own or have explicit authorization to record. If you add a creator to your account, you represent that you are the creator or have obtained their consent.",
+    "content5": "Any misuse may result in termination of your account and potential legal action from rights holders. LiveStreamRecorder assumes no liability for unauthorized recordings made by users.",
+    "content6": "LiveStreamRecorder reserves the right to remove or disable access to any content alleged to be infringing and may terminate repeat infringers' access to the Service."
   },
   "prohibitedActivities": {
     "title": "Prohibited Activities",
     "intro": "You may not use this platform to:",
     "items": {
       "noRights": "Record content you do not own or have rights to",
-      "minors": "Record content involving minors (anyone under 18) without proper authorization",
+      "minors": "Record content featuring minors (anyone under 18)",
       "exploit": "Access content that exploits, endangers, or sexualizes minors",
       "illegal": "Engage in any illegal activity",
       "harass": "Harass, stalk, or harm others",
@@ -89,6 +91,13 @@
     },
     "content2": "You are solely responsible for reviewing and complying with these third-party terms. LiveStreamRecorder is not responsible for any actions taken by third-party platforms, including content removal, API changes, or account restrictions.",
     "content3": "Changes or restrictions imposed by third-party platforms may affect the availability or functionality of our services. LiveStreamRecorder is not responsible for any disruptions caused by third-party platforms."
+  },
+  "serviceTiers": {
+    "title": "Service Tiers & Access",
+    "content1": "LiveStreamRecorder offers both free and premium access tiers with different features and limitations.",
+    "content2": "Free users have access to basic features with usage limits. Premium subscribers enjoy access to all features including AI tools, extended storage, and priority support.",
+    "content3": "Anonymous visitors may view a limited number of recordings before being required to create an account. Registered free users may have additional viewing limitations based on their account activity.",
+    "content4": "We reserve the right to modify tier benefits, features, and limitations at any time. Significant changes will be communicated to existing users."
   },
   "payments": {
     "title": "Payments & Subscriptions",
@@ -124,7 +133,7 @@
   },
   "indemnification": {
     "title": "Indemnification",
-    "content": "You agree to defend, indemnify, and hold harmless LiveStreamRecorder and its affiliates, officers, agents, and employees from any claims, damages, losses, liabilities, costs, or expenses (including legal fees) arising from your use of the platform, your violation of these terms, or your infringement of any third-party rights."
+    "content": "You agree to defend, indemnify, and hold harmless LiveStreamRecorder and its affiliates, officers, agents, and employees from any claims, damages, losses, liabilities, costs, or expenses (including legal fees) arising from your use of the platform, your violation of these terms, your infringement of any third-party rights, or any unauthorized recordings you make using the Service."
   },
   "modifications": {
     "title": "Modifications",
