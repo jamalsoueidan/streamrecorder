@@ -15,7 +15,7 @@ const s3 = new S3Client({
 });
 
 const FINGERPRINT_COOKIE = "_pxvid";
-const MAX_PUBLIC_VIEWS = 1; // TODO: Change to 5 for production
+const MAX_PUBLIC_VIEWS = 3; // TODO: Change to 5 for production
 
 // Files that bypass access control (placeholders)
 const PUBLIC_FILES = [
