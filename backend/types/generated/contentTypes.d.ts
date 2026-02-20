@@ -1731,6 +1731,7 @@ export interface PluginUsersPermissionsUser
       Schema.Attribute.SetMinMaxLength<{
         minLength: 6;
       }>;
+    paymentProvider: Schema.Attribute.Enumeration<['freemius', 'stripe']>;
     provider: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     resetPasswordToken: Schema.Attribute.String & Schema.Attribute.Private;
@@ -1738,6 +1739,7 @@ export interface PluginUsersPermissionsUser
       'manyToOne',
       'plugin::users-permissions.role'
     >;
+    stripe: Schema.Attribute.Text;
     subscriptionEndDate: Schema.Attribute.DateTime;
     subscriptionStatus: Schema.Attribute.Enumeration<
       ['active', 'cancelled', 'expired']

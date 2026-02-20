@@ -86,17 +86,45 @@ export async function isSubscriptionClaimed(
   }
 }
 
+// Check if license is already claimed by another user
+export async function isLicenseClaimed(
+  licenseId: string,
+  excludeUserId?: number,
+): Promise<boolean> {
+  try {
+    const response = await publicApi.usersPermissionsUsersRoles.usersList({
+      query: {
+        filters: {
+          freemius: {
+            $contains: `"licenseId":"${licenseId}"`,
+          },
+          ...(excludeUserId && {
+            id: {
+              $ne: excludeUserId,
+            },
+          }),
+        },
+      },
+    } as never);
+
+    const users = response.data;
+    return users && users.length > 0;
+  } catch (error) {
+    console.error("Failed to check license claim:", error);
+    return false;
+  }
+}
+
 // Get billing period string from billing cycle number
+// Note: Freemius lifetime purchases don't set billing_cycle, so default to "lifetime"
 export function getBillingPeriod(billingCycle: number): string {
   switch (billingCycle) {
     case 1:
       return "monthly";
     case 12:
       return "annual";
-    case 0:
-      return "lifetime";
     default:
-      return "monthly";
+      return "lifetime";
   }
 }
 

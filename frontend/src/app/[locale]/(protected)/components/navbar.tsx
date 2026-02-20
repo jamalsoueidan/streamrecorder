@@ -3,12 +3,14 @@
 import {
   ActionIcon,
   Anchor,
+  AppShell,
   Button,
   Divider,
   Flex,
   Group,
   Menu,
   Paper,
+  ScrollArea,
   Stack,
   Text,
   Tooltip,
@@ -67,6 +69,12 @@ export const navigation = [
     icon: IconVideo,
     links: [
       {
+        labelKey: "links.myList",
+        url: "/my-list",
+        icon: IconLibrary,
+        color: null,
+      },
+      {
         labelKey: "links.myRecordings",
         url: "/following",
         icon: IconVideo,
@@ -83,12 +91,6 @@ export const navigation = [
         url: "/ai-studio",
         icon: IconSparkles,
         color: "violet",
-      },
-      {
-        labelKey: "links.myList",
-        url: "/my-list",
-        icon: IconLibrary,
-        color: null,
       },
       {
         labelKey: "links.live",
@@ -204,10 +206,7 @@ export function Navbar({
             {t(section.titleKey)}
           </Text>
         )}
-        <Stack
-          gap={collapsed ? 4 : "xs"}
-          align={collapsed ? "center" : "stretch"}
-        >
+        <Stack gap={collapsed ? 4 : 2} align={collapsed ? "center" : "stretch"}>
           {html}
         </Stack>
       </div>
@@ -261,12 +260,13 @@ export function Navbar({
 
   return (
     <nav className={classes.navbar} data-collapsed={collapsed || undefined}>
-      <div className={classes.navbarMain}>
+      <AppShell.Section>
         <Stack align={collapsed ? "center" : "stretch"}>{searchContent}</Stack>
-
+      </AppShell.Section>
+      <AppShell.Section grow component={ScrollArea}>
         <Divider my="xs" color="transparent" />
         <Stack gap="md">{links}</Stack>
-      </div>
+      </AppShell.Section>
 
       {!collapsed && (
         <Stack gap={4} mb="md">
@@ -285,7 +285,7 @@ export function Navbar({
         </Stack>
       )}
 
-      <div className={classes.footer}>
+      <AppShell.Section>
         <Flex
           direction={collapsed ? "column" : "row"}
           align="center"
@@ -311,7 +311,7 @@ export function Navbar({
             </ActionIcon>
           </Tooltip>
 
-          <Menu trigger="click-hover">
+          <Menu trigger="click">
             <Menu.Target>
               {collapsed ? (
                 <Tooltip
@@ -378,7 +378,7 @@ export function Navbar({
             </Menu.Dropdown>
           </Menu>
         </Flex>
-      </div>
+      </AppShell.Section>
     </nav>
   );
 }

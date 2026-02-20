@@ -20,7 +20,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2026-02-20T03:32:06.053Z"
+    "x-generation-date": "2026-02-20T20:53:11.813Z"
   },
   "servers": [
     {
@@ -12632,6 +12632,16 @@
                   "freemius": {
                     "type": "string"
                   },
+                  "stripe": {
+                    "type": "string"
+                  },
+                  "paymentProvider": {
+                    "type": "string",
+                    "enum": [
+                      "freemius",
+                      "stripe"
+                    ]
+                  },
                   "createdAt": {
                     "type": "string",
                     "format": "date-time"
@@ -14416,6 +14426,16 @@
                   },
                   "freemius": {
                     "type": "string"
+                  },
+                  "stripe": {
+                    "type": "string"
+                  },
+                  "paymentProvider": {
+                    "type": "string",
+                    "enum": [
+                      "freemius",
+                      "stripe"
+                    ]
                   },
                   "createdAt": {
                     "type": "string",
@@ -16705,6 +16725,16 @@
                       },
                       "freemius": {
                         "type": "string"
+                      },
+                      "stripe": {
+                        "type": "string"
+                      },
+                      "paymentProvider": {
+                        "type": "string",
+                        "enum": [
+                          "freemius",
+                          "stripe"
+                        ]
                       },
                       "createdAt": {
                         "type": "string",
@@ -20141,6 +20171,16 @@
                   "freemius": {
                     "type": "string"
                   },
+                  "stripe": {
+                    "type": "string"
+                  },
+                  "paymentProvider": {
+                    "type": "string",
+                    "enum": [
+                      "freemius",
+                      "stripe"
+                    ]
+                  },
                   "createdAt": {
                     "type": "string",
                     "format": "date-time"
@@ -22258,6 +22298,16 @@
                       },
                       "freemius": {
                         "type": "string"
+                      },
+                      "stripe": {
+                        "type": "string"
+                      },
+                      "paymentProvider": {
+                        "type": "string",
+                        "enum": [
+                          "freemius",
+                          "stripe"
+                        ]
                       },
                       "createdAt": {
                         "type": "string",
@@ -25395,6 +25445,16 @@
               "freemius": {
                 "type": "string"
               },
+              "stripe": {
+                "type": "string"
+              },
+              "paymentProvider": {
+                "type": "string",
+                "enum": [
+                  "freemius",
+                  "stripe"
+                ]
+              },
               "createdAt": {
                 "type": "string",
                 "format": "date-time"
@@ -27053,6 +27113,16 @@
                       },
                       "freemius": {
                         "type": "string"
+                      },
+                      "stripe": {
+                        "type": "string"
+                      },
+                      "paymentProvider": {
+                        "type": "string",
+                        "enum": [
+                          "freemius",
+                          "stripe"
+                        ]
                       },
                       "createdAt": {
                         "type": "string",
@@ -29096,6 +29166,16 @@
                   },
                   "freemius": {
                     "type": "string"
+                  },
+                  "stripe": {
+                    "type": "string"
+                  },
+                  "paymentProvider": {
+                    "type": "string",
+                    "enum": [
+                      "freemius",
+                      "stripe"
+                    ]
                   },
                   "createdAt": {
                     "type": "string",
@@ -31482,6 +31562,16 @@
                       "freemius": {
                         "type": "string"
                       },
+                      "stripe": {
+                        "type": "string"
+                      },
+                      "paymentProvider": {
+                        "type": "string",
+                        "enum": [
+                          "freemius",
+                          "stripe"
+                        ]
+                      },
                       "createdAt": {
                         "type": "string",
                         "format": "date-time"
@@ -33455,6 +33545,16 @@
               "freemius": {
                 "type": "string"
               },
+              "stripe": {
+                "type": "string"
+              },
+              "paymentProvider": {
+                "type": "string",
+                "enum": [
+                  "freemius",
+                  "stripe"
+                ]
+              },
               "createdAt": {
                 "type": "string",
                 "format": "date-time"
@@ -35049,6 +35149,16 @@
                       },
                       "freemius": {
                         "type": "string"
+                      },
+                      "stripe": {
+                        "type": "string"
+                      },
+                      "paymentProvider": {
+                        "type": "string",
+                        "enum": [
+                          "freemius",
+                          "stripe"
+                        ]
                       },
                       "createdAt": {
                         "type": "string",

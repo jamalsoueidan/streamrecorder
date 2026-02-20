@@ -93,6 +93,16 @@
     },
     "freemius": {
       "type": "text"
+    },
+    "stripe": {
+      "type": "text"
+    },
+    "paymentProvider": {
+      "type": "enumeration",
+      "enum": [
+        "freemius",
+        "stripe"
+      ]
     }
   }
 }

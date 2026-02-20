@@ -3,7 +3,7 @@
 import api from "@/lib/api";
 import publicApi from "@/lib/public-api";
 import { revalidatePath } from "next/cache";
-import { getRoleIdByName, isSubscriptionClaimed, getBillingPeriod } from "@/app/api/freemius/utils";
+import { getRoleIdByName, isSubscriptionClaimed, isLicenseClaimed, getBillingPeriod } from "@/app/api/freemius/utils";
 
 // Freemius API config
 const FREEMIUS_API_URL = "https://api.freemius.com/v1";
@@ -13,6 +13,7 @@ const FREEMIUS_API_KEY = process.env.FREEMIUS_API_KEY;
 interface ActivatePremiumParams {
   freemiusUserId: string;
   subscriptionId: string;
+  licenseId: string;
   billingPeriod: string;
   subscriptionEndDate: string;
 }
@@ -29,6 +30,14 @@ interface FreemiusSubscription {
   billing_cycle: number;
   next_payment?: string;
   canceled_at?: string | null;
+}
+
+interface FreemiusLicense {
+  id: string;
+  user_id: string;
+  plan_id: string;
+  expiration: string;
+  is_cancelled: boolean;
 }
 
 // Verify subscription exists and is active
@@ -74,6 +83,50 @@ async function verifySubscription(
   }
 }
 
+// Verify license exists and is valid (for lifetime purchases)
+async function verifyLicense(
+  licenseId: string,
+): Promise<{
+  valid: boolean;
+  license?: FreemiusLicense;
+  error?: string;
+}> {
+  try {
+    const response = await fetch(
+      `${FREEMIUS_API_URL}/products/${FREEMIUS_PRODUCT_ID}/licenses/${licenseId}.json`,
+      {
+        headers: {
+          Authorization: `Bearer ${FREEMIUS_API_KEY}`,
+        },
+      },
+    );
+
+    if (!response.ok) {
+      console.error("Failed to verify license:", await response.text());
+      return { valid: false, error: "License not found" };
+    }
+
+    const data = await response.json();
+
+    // API might return license directly or nested
+    const license = (data.license || data) as FreemiusLicense;
+
+    if (!license || !license.id) {
+      return { valid: false, error: "Invalid license data" };
+    }
+
+    // Check if license is cancelled
+    if (license.is_cancelled) {
+      return { valid: false, error: "License is cancelled" };
+    }
+
+    return { valid: true, license };
+  } catch (error) {
+    console.error("Error verifying license:", error);
+    return { valid: false, error: "Failed to verify license" };
+  }
+}
+
 export async function activatePremium(
   params: ActivatePremiumParams,
 ): Promise<ActivatePremiumResult> {
@@ -88,45 +141,71 @@ export async function activatePremium(
 
     const user = currentUser.data as { id: number };
 
-    // Verify subscription with Freemius API
-    const verification = await verifySubscription(params.subscriptionId);
-    if (!verification.valid) {
-      return { success: false, error: verification.error };
-    }
-
-    const subscription = verification.subscription!;
-
-    // Check if subscription is already claimed by another user
-    const alreadyClaimed = await isSubscriptionClaimed(
-      subscription.id,
-      user.id,
-    );
-    if (alreadyClaimed) {
-      return { success: false, error: "Subscription already in use" };
-    }
-
     // Get premium role ID
     const premiumRoleId = await getRoleIdByName("premium");
     if (!premiumRoleId) {
       return { success: false, error: "Premium role not found" };
     }
 
-    // Determine billing period from verified subscription data
-    const billingPeriod = getBillingPeriod(subscription.billing_cycle);
+    let billingPeriod = params.billingPeriod;
+    let subscriptionEndDate = params.subscriptionEndDate;
 
-    // Upgrade user to premium using verified data
-    // freemius is a Text field containing stringified JSON for $contains search
+    // Lifetime purchases use license verification, subscriptions use subscription verification
+    if (params.billingPeriod === "lifetime") {
+      // Verify license with Freemius API
+      const licenseVerification = await verifyLicense(params.licenseId);
+      if (!licenseVerification.valid) {
+        return { success: false, error: licenseVerification.error };
+      }
+
+      // Check if license is already claimed by another user
+      const licenseClaimed = await isLicenseClaimed(
+        params.licenseId,
+        user.id,
+      );
+      if (licenseClaimed) {
+        return { success: false, error: "License already in use" };
+      }
+
+      // Lifetime = far future date
+      billingPeriod = "lifetime";
+      subscriptionEndDate = "2099-12-31T23:59:59Z";
+    } else {
+      // Verify subscription with Freemius API
+      const verification = await verifySubscription(params.subscriptionId);
+      if (!verification.valid) {
+        return { success: false, error: verification.error };
+      }
+
+      const subscription = verification.subscription!;
+
+      // Check if subscription is already claimed by another user
+      const alreadyClaimed = await isSubscriptionClaimed(
+        subscription.id,
+        user.id,
+      );
+      if (alreadyClaimed) {
+        return { success: false, error: "Subscription already in use" };
+      }
+
+      // Use verified subscription data
+      billingPeriod = getBillingPeriod(subscription.billing_cycle);
+      subscriptionEndDate = subscription.next_payment || params.subscriptionEndDate;
+    }
+
+    // Upgrade user to premium
     await publicApi.usersPermissionsUsersRoles.usersUpdate(
       { id: user.id.toString() },
       {
         role: premiumRoleId,
         subscriptionStatus: "active",
-        subscriptionEndDate:
-          subscription.next_payment || params.subscriptionEndDate,
+        subscriptionEndDate,
         billingPeriod,
+        paymentProvider: "freemius",
         freemius: JSON.stringify({
-          userId: subscription.user_id,
-          subscriptionId: subscription.id,
+          userId: params.freemiusUserId,
+          subscriptionId: params.subscriptionId,
+          licenseId: params.licenseId,
           billingPeriod,
         }),
       } as never,
@@ -148,7 +227,7 @@ interface CancelSubscriptionResult {
   error?: string;
 }
 
-export async function cancelSubscription(): Promise<CancelSubscriptionResult> {
+export async function cancelFreemiusSubscription(): Promise<CancelSubscriptionResult> {
   try {
     // Get logged-in user
     const currentUser =
