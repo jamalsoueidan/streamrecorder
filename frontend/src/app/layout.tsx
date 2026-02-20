@@ -15,6 +15,7 @@ import { headers } from "next/headers";
 import Script from "next/script";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
 import "./globals.css";
+import { FingerprintProvider } from "./providers/fingerprint-provider";
 
 export const theme = createTheme({
   components: {
@@ -76,7 +77,9 @@ export default async function RootLayout({
           <MantineProvider theme={theme} defaultColorScheme="dark">
             <ModalsProvider>
               <Notifications position="bottom-center" />
-              <NuqsAdapter>{children}</NuqsAdapter>
+              <NuqsAdapter>
+                <FingerprintProvider>{children}</FingerprintProvider>
+              </NuqsAdapter>
             </ModalsProvider>
           </MantineProvider>
         </DirectionProvider>

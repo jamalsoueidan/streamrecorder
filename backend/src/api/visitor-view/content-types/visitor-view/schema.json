@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "visitor_views",
+  "info": {
+    "singularName": "visitor-view",
+    "pluralName": "visitor-views",
+    "displayName": "VisitorView"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "fingerprint": {
+      "type": "string"
+    },
+    "recording": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::recording.recording"
+    }
+  }
+}

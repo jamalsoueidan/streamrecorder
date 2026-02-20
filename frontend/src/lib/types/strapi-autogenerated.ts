@@ -405,6 +405,11 @@ export interface Activity {
           documentId?: string;
         }[];
       };
+      subscriptionStatus?: ActivitySubscriptionStatusEnum;
+      billingPeriod?: string;
+      /** @format date-time */
+      subscriptionEndDate?: string;
+      freemius?: string;
       /** @format date-time */
       createdAt?: string;
       /** @format date-time */
@@ -872,6 +877,11 @@ export interface AiRequest {
           documentId?: string;
         }[];
       };
+      subscriptionStatus?: AiRequestSubscriptionStatusEnum;
+      billingPeriod?: string;
+      /** @format date-time */
+      subscriptionEndDate?: string;
+      freemius?: string;
       /** @format date-time */
       createdAt?: string;
       /** @format date-time */
@@ -1471,6 +1481,11 @@ export interface AiTask {
             documentId?: string;
           }[];
         };
+        subscriptionStatus?: AiTaskSubscriptionStatusEnum;
+        billingPeriod?: string;
+        /** @format date-time */
+        subscriptionEndDate?: string;
+        freemius?: string;
         /** @format date-time */
         createdAt?: string;
         /** @format date-time */
@@ -2393,6 +2408,11 @@ export interface Clip {
           documentId?: string;
         }[];
       };
+      subscriptionStatus?: ClipSubscriptionStatusEnum;
+      billingPeriod?: string;
+      /** @format date-time */
+      subscriptionEndDate?: string;
+      freemius?: string;
       /** @format date-time */
       createdAt?: string;
       /** @format date-time */
@@ -2953,6 +2973,11 @@ export interface ClipShare {
             documentId?: string;
           }[];
         };
+        subscriptionStatus?: ClipShareSubscriptionStatusEnum;
+        billingPeriod?: string;
+        /** @format date-time */
+        subscriptionEndDate?: string;
+        freemius?: string;
         /** @format date-time */
         createdAt?: string;
         /** @format date-time */
@@ -3797,6 +3822,11 @@ export interface Follower {
         documentId?: string;
       }[];
     };
+    subscriptionStatus?: FollowerSubscriptionStatusEnum;
+    billingPeriod?: string;
+    /** @format date-time */
+    subscriptionEndDate?: string;
+    freemius?: string;
     /** @format date-time */
     createdAt?: string;
     /** @format date-time */
@@ -4236,6 +4266,11 @@ export interface Meme {
             documentId?: string;
           }[];
         };
+        subscriptionStatus?: MemeSubscriptionStatusEnum;
+        billingPeriod?: string;
+        /** @format date-time */
+        subscriptionEndDate?: string;
+        freemius?: string;
         /** @format date-time */
         createdAt?: string;
         /** @format date-time */
@@ -4777,6 +4812,11 @@ export interface Recording {
           documentId?: string;
         }[];
       };
+      subscriptionStatus?: RecordingSubscriptionStatusEnum;
+      billingPeriod?: string;
+      /** @format date-time */
+      subscriptionEndDate?: string;
+      freemius?: string;
       /** @format date-time */
       createdAt?: string;
       /** @format date-time */
@@ -5419,6 +5459,11 @@ export interface Source {
             documentId?: string;
           }[];
         };
+        subscriptionStatus?: SourceSubscriptionStatusEnum;
+        billingPeriod?: string;
+        /** @format date-time */
+        subscriptionEndDate?: string;
+        freemius?: string;
         /** @format date-time */
         createdAt?: string;
         /** @format date-time */
@@ -5943,6 +5988,11 @@ export interface Tiktok {
         documentId?: string;
       }[];
     };
+    subscriptionStatus?: TiktokSubscriptionStatusEnum;
+    billingPeriod?: string;
+    /** @format date-time */
+    subscriptionEndDate?: string;
+    freemius?: string;
     /** @format date-time */
     createdAt?: string;
     /** @format date-time */
@@ -5986,6 +6036,536 @@ export interface Tiktok {
 
 export interface TiktokResponse {
   data?: Tiktok;
+  meta?: object;
+}
+
+export interface VisitorViewRequest {
+  data: {
+    fingerprint?: string;
+    /** @example "string or id" */
+    recording?: number | string;
+    locale?: string;
+    localizations?: (number | string)[];
+  };
+}
+
+export interface VisitorViewListResponse {
+  data?: VisitorView[];
+  meta?: {
+    pagination?: {
+      page?: number;
+      /** @min 25 */
+      pageSize?: number;
+      /** @max 1 */
+      pageCount?: number;
+      total?: number;
+    };
+  };
+}
+
+export interface VisitorView {
+  id?: string | number;
+  documentId?: string;
+  fingerprint?: string;
+  recording?: {
+    id?: string | number;
+    documentId?: string;
+    title?: string;
+    description?: string;
+    follower?: {
+      id?: string | number;
+      documentId?: string;
+      /**
+       * @pattern ^\d*$
+       * @example "123456789"
+       */
+      uniqueId?: string;
+      nickname?: string;
+      username?: string;
+      type?: VisitorViewTypeEnum;
+      gender?: VisitorViewGenderEnum;
+      countryCode?: string;
+      languageCode?: string;
+      avatar?: {
+        id?: string | number;
+        documentId?: string;
+        name?: string;
+        alternativeText?: string;
+        caption?: string;
+        width?: number;
+        height?: number;
+        formats?: any;
+        hash?: string;
+        ext?: string;
+        mime?: string;
+        /** @format float */
+        size?: number;
+        url?: string;
+        previewUrl?: string;
+        provider?: string;
+        provider_metadata?: any;
+        related?: {
+          id?: string | number;
+          documentId?: string;
+        }[];
+        folder?: {
+          id?: string | number;
+          documentId?: string;
+          name?: string;
+          pathId?: number;
+          parent?: {
+            id?: string | number;
+            documentId?: string;
+          };
+          children?: {
+            id?: string | number;
+            documentId?: string;
+          }[];
+          files?: {
+            id?: string | number;
+            documentId?: string;
+            name?: string;
+            alternativeText?: string;
+            caption?: string;
+            width?: number;
+            height?: number;
+            formats?: any;
+            hash?: string;
+            ext?: string;
+            mime?: string;
+            /** @format float */
+            size?: number;
+            url?: string;
+            previewUrl?: string;
+            provider?: string;
+            provider_metadata?: any;
+            related?: {
+              id?: string | number;
+              documentId?: string;
+            }[];
+            folder?: {
+              id?: string | number;
+              documentId?: string;
+            };
+            folderPath?: string;
+            /** @format date-time */
+            createdAt?: string;
+            /** @format date-time */
+            updatedAt?: string;
+            /** @format date-time */
+            publishedAt?: string;
+            createdBy?: {
+              id?: string | number;
+              documentId?: string;
+              firstname?: string;
+              lastname?: string;
+              username?: string;
+              /** @format email */
+              email?: string;
+              resetPasswordToken?: string;
+              registrationToken?: string;
+              isActive?: boolean;
+              roles?: {
+                id?: string | number;
+                documentId?: string;
+                name?: string;
+                code?: string;
+                description?: string;
+                users?: {
+                  id?: string | number;
+                  documentId?: string;
+                }[];
+                permissions?: {
+                  id?: string | number;
+                  documentId?: string;
+                  action?: string;
+                  actionParameters?: any;
+                  subject?: string;
+                  properties?: any;
+                  conditions?: any;
+                  role?: {
+                    id?: string | number;
+                    documentId?: string;
+                  };
+                  /** @format date-time */
+                  createdAt?: string;
+                  /** @format date-time */
+                  updatedAt?: string;
+                  /** @format date-time */
+                  publishedAt?: string;
+                  createdBy?: {
+                    id?: string | number;
+                    documentId?: string;
+                  };
+                  updatedBy?: {
+                    id?: string | number;
+                    documentId?: string;
+                  };
+                  locale?: string;
+                  localizations?: {
+                    id?: string | number;
+                    documentId?: string;
+                  }[];
+                }[];
+                /** @format date-time */
+                createdAt?: string;
+                /** @format date-time */
+                updatedAt?: string;
+                /** @format date-time */
+                publishedAt?: string;
+                createdBy?: {
+                  id?: string | number;
+                  documentId?: string;
+                };
+                updatedBy?: {
+                  id?: string | number;
+                  documentId?: string;
+                };
+                locale?: string;
+                localizations?: {
+                  id?: string | number;
+                  documentId?: string;
+                }[];
+              }[];
+              blocked?: boolean;
+              preferedLanguage?: string;
+              /** @format date-time */
+              createdAt?: string;
+              /** @format date-time */
+              updatedAt?: string;
+              /** @format date-time */
+              publishedAt?: string;
+              createdBy?: {
+                id?: string | number;
+                documentId?: string;
+              };
+              updatedBy?: {
+                id?: string | number;
+                documentId?: string;
+              };
+              locale?: string;
+              localizations?: {
+                id?: string | number;
+                documentId?: string;
+              }[];
+            };
+            updatedBy?: {
+              id?: string | number;
+              documentId?: string;
+            };
+            locale?: string;
+            localizations?: {
+              id?: string | number;
+              documentId?: string;
+            }[];
+          }[];
+          path?: string;
+          /** @format date-time */
+          createdAt?: string;
+          /** @format date-time */
+          updatedAt?: string;
+          /** @format date-time */
+          publishedAt?: string;
+          createdBy?: {
+            id?: string | number;
+            documentId?: string;
+          };
+          updatedBy?: {
+            id?: string | number;
+            documentId?: string;
+          };
+          locale?: string;
+          localizations?: {
+            id?: string | number;
+            documentId?: string;
+          }[];
+        };
+        folderPath?: string;
+        /** @format date-time */
+        createdAt?: string;
+        /** @format date-time */
+        updatedAt?: string;
+        /** @format date-time */
+        publishedAt?: string;
+        createdBy?: {
+          id?: string | number;
+          documentId?: string;
+        };
+        updatedBy?: {
+          id?: string | number;
+          documentId?: string;
+        };
+        locale?: string;
+        localizations?: {
+          id?: string | number;
+          documentId?: string;
+        }[];
+      };
+      /** @format date-time */
+      lastCheckedAt?: string;
+      protected?: boolean;
+      pause?: boolean;
+      description?: string;
+      tagline?: string;
+      faq?: any;
+      category?: string;
+      migration?: number;
+      owner?: {
+        id?: string | number;
+        documentId?: string;
+        username?: string;
+        /** @format email */
+        email?: string;
+        provider?: string;
+        resetPasswordToken?: string;
+        confirmationToken?: string;
+        confirmed?: boolean;
+        blocked?: boolean;
+        role?: {
+          id?: string | number;
+          documentId?: string;
+          name?: string;
+          description?: string;
+          type?: string;
+          permissions?: {
+            id?: string | number;
+            documentId?: string;
+            action?: string;
+            role?: {
+              id?: string | number;
+              documentId?: string;
+            };
+            /** @format date-time */
+            createdAt?: string;
+            /** @format date-time */
+            updatedAt?: string;
+            /** @format date-time */
+            publishedAt?: string;
+            createdBy?: {
+              id?: string | number;
+              documentId?: string;
+            };
+            updatedBy?: {
+              id?: string | number;
+              documentId?: string;
+            };
+            locale?: string;
+            localizations?: {
+              id?: string | number;
+              documentId?: string;
+            }[];
+          }[];
+          users?: {
+            id?: string | number;
+            documentId?: string;
+          }[];
+          /** @format date-time */
+          createdAt?: string;
+          /** @format date-time */
+          updatedAt?: string;
+          /** @format date-time */
+          publishedAt?: string;
+          createdBy?: {
+            id?: string | number;
+            documentId?: string;
+          };
+          updatedBy?: {
+            id?: string | number;
+            documentId?: string;
+          };
+          locale?: string;
+          localizations?: {
+            id?: string | number;
+            documentId?: string;
+          }[];
+        };
+        followers?: {
+          id?: string | number;
+          documentId?: string;
+        }[];
+        tiktok?: {
+          id?: string | number;
+          documentId?: string;
+          openId?: string;
+          accessToken?: string;
+          refreshToken?: string;
+          /** @format date-time */
+          expiresAt?: string;
+          user?: {
+            id?: string | number;
+            documentId?: string;
+          };
+          /** @format date-time */
+          createdAt?: string;
+          /** @format date-time */
+          updatedAt?: string;
+          /** @format date-time */
+          publishedAt?: string;
+          createdBy?: {
+            id?: string | number;
+            documentId?: string;
+          };
+          updatedBy?: {
+            id?: string | number;
+            documentId?: string;
+          };
+          locale?: string;
+          localizations?: {
+            id?: string | number;
+            documentId?: string;
+          }[];
+        };
+        subscriptionStatus?: VisitorViewSubscriptionStatusEnum;
+        billingPeriod?: string;
+        /** @format date-time */
+        subscriptionEndDate?: string;
+        freemius?: string;
+        /** @format date-time */
+        createdAt?: string;
+        /** @format date-time */
+        updatedAt?: string;
+        /** @format date-time */
+        publishedAt?: string;
+        createdBy?: {
+          id?: string | number;
+          documentId?: string;
+        };
+        updatedBy?: {
+          id?: string | number;
+          documentId?: string;
+        };
+        locale?: string;
+        localizations?: {
+          id?: string | number;
+          documentId?: string;
+        }[];
+      };
+      /** @format date-time */
+      createdAt?: string;
+      /** @format date-time */
+      updatedAt?: string;
+      /** @format date-time */
+      publishedAt?: string;
+      createdBy?: {
+        id?: string | number;
+        documentId?: string;
+      };
+      updatedBy?: {
+        id?: string | number;
+        documentId?: string;
+      };
+      locale?: string;
+      localizations?: {
+        id?: string | number;
+        documentId?: string;
+      }[];
+    };
+    sources?: {
+      id?: string | number;
+      documentId?: string;
+      state?: VisitorViewStateEnum;
+      executionId?: number;
+      /** @format date-time */
+      finishedAt?: string;
+      path?: string;
+      /** @format float */
+      duration?: number;
+      thumbnailInterval?: number;
+      thumbnailCols?: number;
+      videoOriginal?: VideosVideoComponent;
+      videoSmall?: VideosVideoComponent;
+      recording?: {
+        id?: string | number;
+        documentId?: string;
+      };
+      /** @format date-time */
+      createdAt?: string;
+      /** @format date-time */
+      updatedAt?: string;
+      /** @format date-time */
+      publishedAt?: string;
+      createdBy?: {
+        id?: string | number;
+        documentId?: string;
+      };
+      updatedBy?: {
+        id?: string | number;
+        documentId?: string;
+      };
+      locale?: string;
+      localizations?: {
+        id?: string | number;
+        documentId?: string;
+      }[];
+    }[];
+    hidden?: boolean;
+    /** @format date-time */
+    createdAt?: string;
+    /** @format date-time */
+    updatedAt?: string;
+    /** @format date-time */
+    publishedAt?: string;
+    createdBy?: {
+      id?: string | number;
+      documentId?: string;
+    };
+    updatedBy?: {
+      id?: string | number;
+      documentId?: string;
+    };
+    locale?: string;
+    localizations?: {
+      id?: string | number;
+      documentId?: string;
+    }[];
+  };
+  /** @format date-time */
+  createdAt?: string;
+  /** @format date-time */
+  updatedAt?: string;
+  /** @format date-time */
+  publishedAt?: string;
+  createdBy?: {
+    id?: string | number;
+    documentId?: string;
+  };
+  updatedBy?: {
+    id?: string | number;
+    documentId?: string;
+  };
+  locale?: string;
+  localizations?: {
+    id?: string | number;
+    documentId?: string;
+    fingerprint?: string;
+    recording?: {
+      id?: string | number;
+      documentId?: string;
+    };
+    /** @format date-time */
+    createdAt?: string;
+    /** @format date-time */
+    updatedAt?: string;
+    /** @format date-time */
+    publishedAt?: string;
+    createdBy?: {
+      id?: string | number;
+      documentId?: string;
+    };
+    updatedBy?: {
+      id?: string | number;
+      documentId?: string;
+    };
+    locale?: string;
+    localizations?: {
+      id?: string | number;
+      documentId?: string;
+    }[];
+  }[];
+}
+
+export interface VisitorViewResponse {
+  data?: VisitorView;
   meta?: object;
 }
 
@@ -6133,6 +6713,12 @@ export enum ActivityGenderEnum {
   Unknown = "unknown",
 }
 
+export enum ActivitySubscriptionStatusEnum {
+  Active = "active",
+  Cancelled = "cancelled",
+  Expired = "expired",
+}
+
 export enum AiRequestRequestStateEnum {
   Pending = "pending",
   Processing = "processing",
@@ -6154,6 +6740,12 @@ export enum AiRequestGenderEnum {
   Male = "male",
   Female = "female",
   Unknown = "unknown",
+}
+
+export enum AiRequestSubscriptionStatusEnum {
+  Active = "active",
+  Cancelled = "cancelled",
+  Expired = "expired",
 }
 
 export enum AiRequestStateEnum {
@@ -6206,6 +6798,12 @@ export enum AiTaskGenderEnum {
   Unknown = "unknown",
 }
 
+export enum AiTaskSubscriptionStatusEnum {
+  Active = "active",
+  Cancelled = "cancelled",
+  Expired = "expired",
+}
+
 export enum AiTaskStateEnum {
   Recording = "recording",
   Done = "done",
@@ -6249,6 +6847,12 @@ export enum ClipGenderEnum {
   Unknown = "unknown",
 }
 
+export enum ClipSubscriptionStatusEnum {
+  Active = "active",
+  Cancelled = "cancelled",
+  Expired = "expired",
+}
+
 export enum ClipStateEnum {
   Recording = "recording",
   Done = "done",
@@ -6275,6 +6879,12 @@ export enum ClipShareGenderEnum {
   Male = "male",
   Female = "female",
   Unknown = "unknown",
+}
+
+export enum ClipShareSubscriptionStatusEnum {
+  Active = "active",
+  Cancelled = "cancelled",
+  Expired = "expired",
 }
 
 export enum ClipShareStateEnum {
@@ -6323,6 +6933,12 @@ export enum FollowerGenderEnum1 {
   Unknown = "unknown",
 }
 
+export enum FollowerSubscriptionStatusEnum {
+  Active = "active",
+  Cancelled = "cancelled",
+  Expired = "expired",
+}
+
 export enum MemeRequestTypeEnum {
   ValueMp4 = ".mp4",
   ValueGif = ".gif",
@@ -6349,6 +6965,12 @@ export enum MemeGenderEnum {
   Unknown = "unknown",
 }
 
+export enum MemeSubscriptionStatusEnum {
+  Active = "active",
+  Cancelled = "cancelled",
+  Expired = "expired",
+}
+
 export enum MemeStateEnum {
   Recording = "recording",
   Done = "done",
@@ -6364,6 +6986,12 @@ export enum RecordingGenderEnum {
   Male = "male",
   Female = "female",
   Unknown = "unknown",
+}
+
+export enum RecordingSubscriptionStatusEnum {
+  Active = "active",
+  Cancelled = "cancelled",
+  Expired = "expired",
 }
 
 export enum SourceRequestStateEnum {
@@ -6394,6 +7022,12 @@ export enum SourceGenderEnum {
   Unknown = "unknown",
 }
 
+export enum SourceSubscriptionStatusEnum {
+  Active = "active",
+  Cancelled = "cancelled",
+  Expired = "expired",
+}
+
 export enum SourceStateEnum1 {
   Recording = "recording",
   Done = "done",
@@ -6414,6 +7048,40 @@ export enum TiktokGenderEnum {
   Male = "male",
   Female = "female",
   Unknown = "unknown",
+}
+
+export enum TiktokSubscriptionStatusEnum {
+  Active = "active",
+  Cancelled = "cancelled",
+  Expired = "expired",
+}
+
+export enum VisitorViewTypeEnum {
+  Tiktok = "tiktok",
+  Twitch = "twitch",
+  Kick = "kick",
+  Youtube = "youtube",
+  Afreecatv = "afreecatv",
+  Pandalive = "pandalive",
+  Bigo = "bigo",
+}
+
+export enum VisitorViewGenderEnum {
+  Male = "male",
+  Female = "female",
+  Unknown = "unknown",
+}
+
+export enum VisitorViewSubscriptionStatusEnum {
+  Active = "active",
+  Cancelled = "cancelled",
+  Expired = "expired",
+}
+
+export enum VisitorViewStateEnum {
+  Recording = "recording",
+  Done = "done",
+  Failed = "failed",
 }
 
 export interface GetActivitiesParams {
@@ -7061,6 +7729,52 @@ export interface DeleteTiktoksIdParams {
 
 /** @format int64 */
 export type DeleteTiktoksIdData = number;
+
+export interface GetVisitorViewsParams {
+  /** Sort by attributes ascending (asc) or descending (desc) */
+  sort?: string;
+  /** Return page/pageSize (default: true) */
+  "pagination[withCount]"?: boolean;
+  /** Page number (default: 0) */
+  "pagination[page]"?: number;
+  /** Page size (default: 25) */
+  "pagination[pageSize]"?: number;
+  /** Offset value (default: 0) */
+  "pagination[start]"?: number;
+  /** Number of entities to return (default: 25) */
+  "pagination[limit]"?: number;
+  /** Fields to return (ex: title,author) */
+  fields?: string;
+  /** Relations to return */
+  populate?: string | string[] | object;
+  /** Filters to apply */
+  filters?: Record<string, any>;
+  /** Locale to apply */
+  locale?: string;
+}
+
+export type GetVisitorViewsData = VisitorViewListResponse;
+
+export type PostVisitorViewsData = VisitorViewResponse;
+
+export interface GetVisitorViewsIdParams {
+  id: string;
+}
+
+export type GetVisitorViewsIdData = VisitorViewResponse;
+
+export interface PutVisitorViewsIdParams {
+  id: string;
+}
+
+export type PutVisitorViewsIdData = VisitorViewResponse;
+
+export interface DeleteVisitorViewsIdParams {
+  id: string;
+}
+
+/** @format int64 */
+export type DeleteVisitorViewsIdData = number;
 
 /** Upload files */
 export interface UploadCreatePayload {
@@ -9412,6 +10126,110 @@ export namespace Tiktok {
     export type RequestBody = never;
     export type RequestHeaders = {};
     export type ResponseBody = MeDeleteTiktoksIdData;
+  }
+}
+
+export namespace VisitorView {
+  /**
+   * No description
+   * @tags Visitor-view
+   * @name GetVisitorViews
+   * @request GET:/visitor-views
+   * @secure
+   */
+  export namespace GetVisitorViews {
+    export type RequestParams = {};
+    export type RequestQuery = {
+      /** Sort by attributes ascending (asc) or descending (desc) */
+      sort?: string;
+      /** Return page/pageSize (default: true) */
+      "pagination[withCount]"?: boolean;
+      /** Page number (default: 0) */
+      "pagination[page]"?: number;
+      /** Page size (default: 25) */
+      "pagination[pageSize]"?: number;
+      /** Offset value (default: 0) */
+      "pagination[start]"?: number;
+      /** Number of entities to return (default: 25) */
+      "pagination[limit]"?: number;
+      /** Fields to return (ex: title,author) */
+      fields?: string;
+      /** Relations to return */
+      populate?: string | string[] | object;
+      /** Filters to apply */
+      filters?: Record<string, any>;
+      /** Locale to apply */
+      locale?: string;
+    };
+    export type RequestBody = never;
+    export type RequestHeaders = {};
+    export type ResponseBody = GetVisitorViewsData;
+  }
+
+  /**
+   * No description
+   * @tags Visitor-view
+   * @name PostVisitorViews
+   * @request POST:/visitor-views
+   * @secure
+   */
+  export namespace PostVisitorViews {
+    export type RequestParams = {};
+    export type RequestQuery = {};
+    export type RequestBody = VisitorViewRequest;
+    export type RequestHeaders = {};
+    export type ResponseBody = PostVisitorViewsData;
+  }
+
+  /**
+   * No description
+   * @tags Visitor-view
+   * @name GetVisitorViewsId
+   * @request GET:/visitor-views/{id}
+   * @secure
+   */
+  export namespace GetVisitorViewsId {
+    export type RequestParams = {
+      id: string;
+    };
+    export type RequestQuery = {};
+    export type RequestBody = never;
+    export type RequestHeaders = {};
+    export type ResponseBody = GetVisitorViewsIdData;
+  }
+
+  /**
+   * No description
+   * @tags Visitor-view
+   * @name PutVisitorViewsId
+   * @request PUT:/visitor-views/{id}
+   * @secure
+   */
+  export namespace PutVisitorViewsId {
+    export type RequestParams = {
+      id: string;
+    };
+    export type RequestQuery = {};
+    export type RequestBody = VisitorViewRequest;
+    export type RequestHeaders = {};
+    export type ResponseBody = PutVisitorViewsIdData;
+  }
+
+  /**
+   * No description
+   * @tags Visitor-view
+   * @name DeleteVisitorViewsId
+   * @request DELETE:/visitor-views/{id}
+   * @secure
+   */
+  export namespace DeleteVisitorViewsId {
+    export type RequestParams = {
+      id: string;
+    };
+    export type RequestQuery = {};
+    export type RequestBody = never;
+    export type RequestHeaders = {};
+    export type ResponseBody = DeleteVisitorViewsIdData;
   }
 }
 
@@ -11954,6 +12772,110 @@ export class Api<
     ) =>
       this.request<MeDeleteTiktoksIdData, Error | void>({
         path: `/tiktoks/me/${id}`,
+        method: "DELETE",
+        secure: true,
+        format: "json",
+        ...params,
+      }),
+  };
+  visitorView = {
+    /**
+     * No description
+     *
+     * @tags Visitor-view
+     * @name GetVisitorViews
+     * @request GET:/visitor-views
+     * @secure
+     */
+    getVisitorViews: (
+      query: GetVisitorViewsParams,
+      params: RequestParams = {},
+    ) =>
+      this.request<GetVisitorViewsData, Error>({
+        path: `/visitor-views`,
+        method: "GET",
+        query: query,
+        secure: true,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Visitor-view
+     * @name PostVisitorViews
+     * @request POST:/visitor-views
+     * @secure
+     */
+    postVisitorViews: (data: VisitorViewRequest, params: RequestParams = {}) =>
+      this.request<PostVisitorViewsData, Error>({
+        path: `/visitor-views`,
+        method: "POST",
+        body: data,
+        secure: true,
+        type: ContentType.Json,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Visitor-view
+     * @name GetVisitorViewsId
+     * @request GET:/visitor-views/{id}
+     * @secure
+     */
+    getVisitorViewsId: (
+      { id, ...query }: GetVisitorViewsIdParams,
+      params: RequestParams = {},
+    ) =>
+      this.request<GetVisitorViewsIdData, Error>({
+        path: `/visitor-views/${id}`,
+        method: "GET",
+        secure: true,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Visitor-view
+     * @name PutVisitorViewsId
+     * @request PUT:/visitor-views/{id}
+     * @secure
+     */
+    putVisitorViewsId: (
+      { id, ...query }: PutVisitorViewsIdParams,
+      data: VisitorViewRequest,
+      params: RequestParams = {},
+    ) =>
+      this.request<PutVisitorViewsIdData, Error>({
+        path: `/visitor-views/${id}`,
+        method: "PUT",
+        body: data,
+        secure: true,
+        type: ContentType.Json,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Visitor-view
+     * @name DeleteVisitorViewsId
+     * @request DELETE:/visitor-views/{id}
+     * @secure
+     */
+    deleteVisitorViewsId: (
+      { id, ...query }: DeleteVisitorViewsIdParams,
+      params: RequestParams = {},
+    ) =>
+      this.request<DeleteVisitorViewsIdData, Error>({
+        path: `/visitor-views/${id}`,
         method: "DELETE",
         secure: true,
         format: "json",

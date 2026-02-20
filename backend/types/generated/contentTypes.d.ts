@@ -1214,6 +1214,38 @@ export interface ApiTiktokTiktok extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiVisitorViewVisitorView extends Struct.CollectionTypeSchema {
+  collectionName: 'visitor_views';
+  info: {
+    displayName: 'VisitorView';
+    pluralName: 'visitor-views';
+    singularName: 'visitor-view';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    fingerprint: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::visitor-view.visitor-view'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    recording: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::recording.recording'
+    >;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface PluginContentReleasesRelease
   extends Struct.CollectionTypeSchema {
   collectionName: 'strapi_releases';
@@ -1748,6 +1780,7 @@ declare module '@strapi/strapi' {
       'api::report.report': ApiReportReport;
       'api::source.source': ApiSourceSource;
       'api::tiktok.tiktok': ApiTiktokTiktok;
+      'api::visitor-view.visitor-view': ApiVisitorViewVisitorView;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

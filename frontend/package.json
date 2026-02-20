@@ -14,6 +14,7 @@
     "@aws-sdk/s3-request-presigner": "^3.975.0",
     "@casl/ability": "^6.8.0",
     "@casl/react": "^5.0.1",
+    "@fingerprintjs/fingerprintjs": "^5.0.1",
     "@mantine/core": "^8.3.13",
     "@mantine/dates": "^8.3.13",
     "@mantine/form": "^8.3.13",
