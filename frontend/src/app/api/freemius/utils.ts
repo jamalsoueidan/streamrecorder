@@ -22,7 +22,7 @@ export async function findUserByFreemiusUserId(freemiusUserId: string) {
       query: {
         filters: {
           freemius: {
-            $contains: `"userId":"${freemiusUserId}"`,
+            $contains: `"userId":${JSON.stringify(freemiusUserId)}`,
           },
         },
       },
@@ -67,7 +67,7 @@ export async function isSubscriptionClaimed(
       query: {
         filters: {
           freemius: {
-            $contains: `"subscriptionId":"${subscriptionId}"`,
+            $contains: `"subscriptionId":${JSON.stringify(subscriptionId)}`,
           },
           ...(excludeUserId && {
             id: {
@@ -96,7 +96,7 @@ export async function isLicenseClaimed(
       query: {
         filters: {
           freemius: {
-            $contains: `"licenseId":"${licenseId}"`,
+            $contains: `"licenseId":${JSON.stringify(licenseId)}`,
           },
           ...(excludeUserId && {
             id: {
@@ -134,6 +134,7 @@ export interface SubscriptionUpdate {
   subscriptionStatus?: "active" | "cancelled" | "expired";
   subscriptionEndDate?: string | null;
   billingPeriod?: string | null;
+  paymentProvider?: "freemius" | "stripe";
   freemius?: string;
 }
 

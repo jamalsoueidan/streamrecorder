@@ -31,7 +31,7 @@
 
   "paymentMethod": "طريقة الدفع",
   "freemiusDescription": "بطاقة ائتمان، باي بال، والمزيد",
-  "stripeDescription": "دفع بالبطاقة عبر Stripe",
+  "stripeDescription": "بطاقة ائتمان، Google Pay، Apple Pay والمزيد",
 
   "yourCurrentPlan": "اشتراكك الحالي",
   "free": "مجاني",
@@ -59,7 +59,7 @@
 
   "vatNotice": "* سيتم احتساب ضريبة القيمة المضافة (VAT) المطبقة وإضافتها إلى إجماليك أثناء عملية الدفع النهائية.",
   "startFreeTrial": "ابدأ تجربة 7 أيام مجانية",
-  "securePayment": "دفع آمن ",
+  "securePayment": "دفع آمن",
 
   "cancelModalTitle": "إلغاء الاشتراك",
   "cancelModalMessage": "نأسف لرؤيتك تذهب! إذا ألغيت، ستظل لديك صلاحية ميزات البريميوم حتى {endDate}.",

@@ -139,6 +139,7 @@ export async function POST(request: NextRequest) {
             subscriptionStatus: "active",
             subscriptionEndDate,
             billingPeriod,
+            paymentProvider: "freemius",
             freemius: JSON.stringify({
               userId: user.id,
               subscriptionId: subscription.id,

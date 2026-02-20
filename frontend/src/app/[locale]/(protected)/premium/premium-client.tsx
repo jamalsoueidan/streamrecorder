@@ -143,7 +143,10 @@ export default function PremiumClient() {
     user?.subscriptionStatus === "active" ||
     user?.subscriptionStatus === "cancelled";
   const isPremium = isPremiumRole || hasActiveSubscription;
-  const canCancel = user?.subscriptionStatus === "active" && !isPremiumRole && user?.billingPeriod !== "lifetime";
+  const canCancel =
+    user?.subscriptionStatus === "active" &&
+    !isPremiumRole &&
+    user?.billingPeriod !== "lifetime";
 
   const handlePlanSelect = (planId: string) => {
     const plan = BILLING_OPTIONS.find((o) => o.id === planId);
@@ -522,16 +525,6 @@ export default function PremiumClient() {
                             px="xs"
                           >
                             <IconBrandMastercard stroke={1.5} />
-                          </Card>
-                          <Card
-                            withBorder
-                            radius="sm"
-                            bg="transparent"
-                            c="green"
-                            py={2}
-                            px="xs"
-                          >
-                            <IconBrandPaypal stroke={1.5} />
                           </Card>
                           <Card
                             withBorder

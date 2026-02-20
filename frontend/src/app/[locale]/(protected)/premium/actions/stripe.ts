@@ -25,13 +25,31 @@ export async function activateStripePremium(
       return { success: false, error: "Not authenticated" };
     }
 
-    const user = currentUser.data as { id: number };
+    const user = currentUser.data as {
+      id: number;
+      stripe?: string;
+      subscriptionStatus?: string;
+    };
+
+    // Check if user already has an active subscription (replay protection)
+    if (user.subscriptionStatus === "active" && user.stripe) {
+      const existingStripe = JSON.parse(user.stripe);
+      // If already activated with any subscription, skip
+      if (existingStripe.subscriptionId) {
+        return { success: true }; // Already premium, silently succeed
+      }
+    }
 
     // Verify the checkout session with Stripe
     const session = await stripe.checkout.sessions.retrieve(sessionId);
 
     if (session.payment_status !== "paid") {
       return { success: false, error: "Payment not completed" };
+    }
+
+    // Verify session belongs to this user (prevent session sharing)
+    if (session.metadata?.userId !== user.id.toString()) {
+      return { success: false, error: "Session does not belong to this user" };
     }
 
     const billingCycle = session.metadata?.billingCycle || "monthly";
@@ -43,27 +61,18 @@ export async function activateStripePremium(
     let subscriptionId: string | null = null;
 
     if (session.subscription && !isLifetime) {
-      // Fetch full subscription with items expanded
       const subscriptionData = await stripe.subscriptions.retrieve(
         session.subscription as string,
-        { expand: ["items.data"] }
       );
       subscriptionId = subscriptionData.id;
 
-      // In Stripe API 2025+, current_period_end moved to subscription items level
-      const firstItem = subscriptionData.items?.data?.[0] as { current_period_end?: number } | undefined;
-      const periodEnd = firstItem?.current_period_end;
-
-      if (periodEnd) {
-        subscriptionEndDate = new Date(periodEnd * 1000).toISOString();
+      // current_period_end is on SubscriptionItem, not Subscription
+      const firstItem = subscriptionData.items.data[0];
+      if (firstItem?.current_period_end) {
+        subscriptionEndDate = new Date(
+          firstItem.current_period_end * 1000,
+        ).toISOString();
       }
-
-      console.log("Stripe subscription debug:", {
-        subscriptionId,
-        periodEnd,
-        subscriptionEndDate,
-        itemsCount: subscriptionData.items?.data?.length,
-      });
     } else if (isLifetime) {
       // Lifetime = far future date (2099)
       subscriptionEndDate = new Date("2099-12-31T23:59:59Z").toISOString();
@@ -95,7 +104,6 @@ export async function activateStripePremium(
       } as never,
     );
 
-    //revalidatePath("/premium");
     return { success: true };
   } catch (error: unknown) {
     console.error("Stripe activation error:", error);

@@ -16,7 +16,7 @@ async function findUserByStripeCustomerId(customerId: string) {
       query: {
         filters: {
           stripe: {
-            $contains: `"customerId":"${customerId}"`,
+            $contains: `"customerId":${JSON.stringify(customerId)}`,
           },
         },
       },
@@ -55,6 +55,100 @@ export async function POST(request: NextRequest) {
     }
 
     switch (event.type) {
+      case "checkout.session.completed": {
+        // Handles both subscription and lifetime (payment mode) purchases
+        const session = event.data.object as Stripe.Checkout.Session;
+
+        if (session.payment_status !== "paid") {
+          break;
+        }
+
+        const userId = session.metadata?.userId;
+        const billingCycle = session.metadata?.billingCycle || "monthly";
+        const isLifetime = billingCycle === "lifetime";
+        const customerId = session.customer as string;
+
+        if (!userId) {
+          console.error("No userId in session metadata");
+          break;
+        }
+
+        // Determine subscription end date
+        let subscriptionEndDate: string | null = null;
+        let subscriptionId: string | null = null;
+
+        if (session.subscription && !isLifetime) {
+          const subscriptionData = await stripe.subscriptions.retrieve(
+            session.subscription as string,
+          );
+          subscriptionId = subscriptionData.id;
+
+          const firstItem = subscriptionData.items.data[0];
+          if (firstItem?.current_period_end) {
+            subscriptionEndDate = new Date(
+              firstItem.current_period_end * 1000,
+            ).toISOString();
+          }
+        } else if (isLifetime) {
+          subscriptionEndDate = "2099-12-31T23:59:59Z";
+          subscriptionId = session.id;
+        }
+
+        const premiumRoleId = await getRoleIdByName("premium");
+
+        // Update user - use publicApi directly since we have the user ID
+        await publicApi.usersPermissionsUsersRoles.usersUpdate(
+          { id: userId },
+          {
+            role: premiumRoleId || undefined,
+            subscriptionStatus: "active",
+            subscriptionEndDate,
+            billingPeriod: billingCycle,
+            paymentProvider: "stripe",
+            stripe: JSON.stringify({
+              customerId,
+              subscriptionId,
+            }),
+          } as never,
+        );
+
+        break;
+      }
+
+      case "customer.subscription.created": {
+        // Subscription created (e.g., after trial ends or new subscription)
+        const subscription = event.data.object as Stripe.Subscription;
+        const customerId = subscription.customer as string;
+
+        // Get billing cycle from subscription metadata
+        const billingCycle = subscription.metadata?.billingCycle || "monthly";
+
+        const user = await findUserByStripeCustomerId(customerId);
+        if (user?.id) {
+          const premiumRoleId = await getRoleIdByName("premium");
+          const firstItem = subscription.items.data[0];
+          const subscriptionEndDate = firstItem?.current_period_end
+            ? new Date(firstItem.current_period_end * 1000).toISOString()
+            : null;
+
+          await publicApi.usersPermissionsUsersRoles.usersUpdate(
+            { id: user.id.toString() },
+            {
+              role: premiumRoleId || undefined,
+              subscriptionStatus: "active",
+              subscriptionEndDate,
+              billingPeriod: billingCycle,
+              paymentProvider: "stripe",
+              stripe: JSON.stringify({
+                customerId,
+                subscriptionId: subscription.id,
+              }),
+            } as never,
+          );
+        }
+        break;
+      }
+
       case "customer.subscription.deleted": {
         // Subscription was cancelled and period ended
         const subscription = event.data.object as Stripe.Subscription;
@@ -87,16 +181,17 @@ export async function POST(request: NextRequest) {
               subscriptionStatus: "cancelled",
             });
           } else if (subscription.status === "active") {
-            // Subscription renewed or reactivated
-            const firstItem = subscription.items?.data?.[0] as { current_period_end?: number } | undefined;
-            const periodEnd = firstItem?.current_period_end;
-            const subscriptionEndDate = periodEnd
-              ? new Date(periodEnd * 1000).toISOString()
+            // Subscription renewed or reactivated - restore premium role
+            const premiumRoleId = await getRoleIdByName("premium");
+            const firstItem = subscription.items.data[0];
+            const subscriptionEndDate = firstItem?.current_period_end
+              ? new Date(firstItem.current_period_end * 1000).toISOString()
               : null;
 
             await updateUserSubscription(user.id.toString(), {
               subscriptionStatus: "active",
               ...(subscriptionEndDate && { subscriptionEndDate }),
+              ...(premiumRoleId && { role: premiumRoleId }),
             });
           }
         }
@@ -115,6 +210,63 @@ export async function POST(request: NextRequest) {
           await updateUserSubscription(user.id.toString(), {
             subscriptionStatus: "cancelled",
           });
+        }
+        break;
+      }
+
+      case "invoice.paid": {
+        // Invoice paid successfully (renewal confirmation)
+        const invoice = event.data.object as Stripe.Invoice;
+        const customerId = invoice.customer as string;
+        const subscriptionId = invoice.subscription as string;
+
+        if (!subscriptionId) {
+          // One-time payment, not a subscription renewal
+          break;
+        }
+
+        const user = await findUserByStripeCustomerId(customerId);
+        if (user?.id) {
+          // Fetch subscription to get updated period end
+          const subscription = await stripe.subscriptions.retrieve(subscriptionId);
+          const firstItem = subscription.items.data[0];
+          const subscriptionEndDate = firstItem?.current_period_end
+            ? new Date(firstItem.current_period_end * 1000).toISOString()
+            : null;
+
+          await updateUserSubscription(user.id.toString(), {
+            subscriptionStatus: "active",
+            ...(subscriptionEndDate && { subscriptionEndDate }),
+          });
+        }
+        break;
+      }
+
+      case "charge.refunded": {
+        // Refund issued - revoke premium access
+        const charge = event.data.object as Stripe.Charge;
+        const customerId = charge.customer as string;
+
+        if (!customerId) {
+          break;
+        }
+
+        const user = await findUserByStripeCustomerId(customerId);
+        if (user?.id) {
+          const basicRoleId = await getRoleIdByName("basic");
+
+          // Reset user to basic - clear all subscription data
+          await publicApi.usersPermissionsUsersRoles.usersUpdate(
+            { id: user.id.toString() },
+            {
+              role: basicRoleId || undefined,
+              subscriptionStatus: null,
+              subscriptionEndDate: null,
+              billingPeriod: null,
+              paymentProvider: null,
+              stripe: null,
+            } as never,
+          );
         }
         break;
       }
