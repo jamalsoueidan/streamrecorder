@@ -72,6 +72,7 @@ export default function Page() {
     null,
   );
   const cancelSearchRef = useRef(false);
+  const inputRef = useRef<HTMLInputElement>(null);
 
   const cancelSearch = useCallback(() => {
     cancelSearchRef.current = true;
@@ -79,12 +80,13 @@ export default function Page() {
   }, []);
 
   // Handle form submission
-  const handleSubmit = (e?: React.FormEvent) => {
+  const handleSubmit = (e?: React.FormEvent, overrideQuery?: string) => {
     e?.preventDefault();
 
-    if (!query.trim()) return;
+    const q = (overrideQuery ?? query).trim();
+    if (!q) return;
 
-    const parsed = parseUsername(query);
+    const parsed = parseUsername(q);
 
     if (!parsed.username) {
       setSearchError(t("search.parseError"));
@@ -98,6 +100,7 @@ export default function Page() {
 
     // If URL detected, search that platform directly
     if (parsed.platform) {
+      setSelectedPlatform(parsed.platform);
       executeSearch(parsed.username, parsed.platform);
     } else {
       // Show platform selection
@@ -150,6 +153,7 @@ export default function Page() {
     setFollowedUser(null);
     setSelectedPlatform(null);
     cancelSearchRef.current = true;
+    setTimeout(() => inputRef.current?.focus(), 0);
   };
 
   // Handle clicking on a user result
@@ -237,7 +241,9 @@ export default function Page() {
             {/* Header */}
             <Group justify="space-between" align="center">
               <Text size="md" c="white" fw={500}>
-                {t("search.selectPlatform")}
+                {step === "results" && selectedPlatform
+                  ? t(`platforms.${selectedPlatform}`)
+                  : t("search.selectPlatform")}
               </Text>
               <Badge variant="outline" size="sm">
                 @{parsedUsername}
@@ -436,6 +442,7 @@ export default function Page() {
             </Text>
             <Group gap="xs" align="flex-end">
               <TextInput
+                ref={inputRef}
                 flex={1}
                 value={query}
                 c="white"
@@ -444,6 +451,14 @@ export default function Page() {
                 autoFocus
                 disabled={step !== "input"}
                 onChange={(e) => setQuery(e.currentTarget.value)}
+                onPaste={(e) => {
+                  const text = e.clipboardData.getData("text");
+                  if (text?.trim()) {
+                    e.preventDefault();
+                    setQuery(text);
+                    handleSubmit(undefined, text);
+                  }
+                }}
                 rightSectionPointerEvents="auto"
                 rightSectionWidth={
                   step !== "input" ? 42 : query.trim().length === 0 ? 100 : 42
@@ -470,6 +485,7 @@ export default function Page() {
                           const text = await navigator.clipboard.readText();
                           if (text?.trim()) {
                             setQuery(text);
+                            handleSubmit(undefined, text);
                           }
                         } catch {
                           notifications.show({
@@ -515,14 +531,20 @@ export default function Page() {
                 <Badge
                   variant="outline"
                   style={{ cursor: "pointer" }}
-                  onClick={() => setQuery("mrbeast")}
+                  onClick={() => {
+                    setQuery("mrbeast");
+                    handleSubmit(undefined, "mrbeast");
+                  }}
                 >
                   mrbeast
                 </Badge>
                 <Badge
                   variant="outline"
                   style={{ cursor: "pointer" }}
-                  onClick={() => setQuery("https://www.tiktok.com/@mrbeast")}
+                  onClick={() => {
+                    setQuery("https://www.tiktok.com/@mrbeast");
+                    handleSubmit(undefined, "https://www.tiktok.com/@mrbeast");
+                  }}
                 >
                   https://www.tiktok.com/@mrbeast
                 </Badge>
