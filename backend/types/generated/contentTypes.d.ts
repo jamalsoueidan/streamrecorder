@@ -1742,7 +1742,7 @@ export interface PluginUsersPermissionsUser
     stripe: Schema.Attribute.Text;
     subscriptionEndDate: Schema.Attribute.DateTime;
     subscriptionStatus: Schema.Attribute.Enumeration<
-      ['active', 'cancelled', 'expired']
+      ['active', 'cancelled', 'trialing', 'expired']
     >;
     tiktok: Schema.Attribute.Relation<'oneToOne', 'api::tiktok.tiktok'>;
     trialClaimed: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;

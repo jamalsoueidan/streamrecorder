@@ -38,7 +38,8 @@
   "cancelled": "ملغى",
   "adminAccess": "لديك صلاحية بريميوم كاملة كمسؤول/بطل.",
   "cancelledMessage": "تم إلغاء اشتراكك {billingPeriod}. لا يزال لديك صلاحية حتى {endDate}.",
-  "activeMessage": "أنت على الاشتراك {billingPeriod}. يتجدد اشتراكك في {renewDate}.",
+  "trialingMessage": "أنت في فترة تجريبية مجانية. تنتهي في {trialEndDate}، ثم تبدأ الفوترة.",
+  "activeMessage": "أنت على الاشتراك {billingPeriod}. تاريخ الفوترة القادم: {renewDate}.",
   "lifetimeMessage": "لديك صلاحية مدى الحياة لجميع ميزات البريميوم. شكراً لدعمك!",
   "cancelSubscription": "إلغاء الاشتراك",
   "supportMessage": "LiveStreamRecorder مشروع شخص واحد. دعمك يساعد في إبقاء الخوادم تعمل وإضافة ميزات جديدة. شكراً لك!",
@@ -58,11 +59,14 @@
   "total": "الإجمالي",
 
   "vatNotice": "* سيتم احتساب ضريبة القيمة المضافة (VAT) المطبقة وإضافتها إلى إجماليك أثناء عملية الدفع النهائية.",
-  "startFreeTrial": "ابدأ تجربة 7 أيام مجانية",
+  "startFreeTrial": "ابدأ الفترة التجريبية المجانية",
+  "subscribe": "اشترك الآن",
+  "buyNow": "اشتري الآن",
   "securePayment": "دفع آمن",
 
   "cancelModalTitle": "إلغاء الاشتراك",
   "cancelModalMessage": "نأسف لرؤيتك تذهب! إذا ألغيت، ستظل لديك صلاحية ميزات البريميوم حتى {endDate}.",
+  "cancelModalMessageTrial": "إذا ألغيت الفترة التجريبية، ستفقد صلاحية ميزات البريميوم فوراً. لن يتم محاسبتك.",
   "cancelModalAfter": "بعد ذلك، سيعود حسابك إلى الاشتراك المجاني.",
   "keepSubscription": "احتفظ بالاشتراك",
   "yesCancel": "نعم، إلغاء"
