@@ -14,7 +14,7 @@ interface FSCheckoutHandler {
     name?: string;
     billing_cycle?: "monthly" | "annual" | "lifetime";
     licenses?: number;
-    trial?: boolean;
+    trial?: boolean | "free" | "paid";
     purchaseCompleted?: (response: FreemiusPurchaseResponse) => void;
     success?: () => void;
   }) => void;

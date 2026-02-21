@@ -37,7 +37,8 @@ export async function activateStripePremium(
     // Verify the checkout session with Stripe
     const session = await stripe.checkout.sessions.retrieve(sessionId);
 
-    if (session.payment_status !== "paid") {
+    // Accept "paid" for actual payments, "no_payment_required" for free trials
+    if (session.payment_status !== "paid" && session.payment_status !== "no_payment_required") {
       return { success: false, error: "Payment not completed" };
     }
 

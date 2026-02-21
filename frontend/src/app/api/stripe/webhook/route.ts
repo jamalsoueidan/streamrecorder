@@ -50,7 +50,8 @@ export async function POST(request: NextRequest) {
         // Handles both subscription and lifetime (payment mode) purchases
         const session = event.data.object as Stripe.Checkout.Session;
 
-        if (session.payment_status !== "paid") {
+        // Accept "paid" for actual payments, "no_payment_required" for free trials
+        if (session.payment_status !== "paid" && session.payment_status !== "no_payment_required") {
           break;
         }
 
@@ -115,26 +116,34 @@ export async function POST(request: NextRequest) {
       }
 
       case "customer.subscription.created": {
-        // Subscription created (e.g., after trial ends or new subscription)
+        // Subscription created (e.g., new subscription with or without trial)
         const subscription = event.data.object as Stripe.Subscription;
         const customerId = subscription.customer as string;
 
         // Get billing cycle from subscription metadata
         const billingCycle = subscription.metadata?.billingCycle || "monthly";
+        const isTrialing = subscription.status === "trialing";
 
         const user = await findUserByStripeCustomerId(customerId);
         if (user?.id) {
           const premiumRoleId = await getRoleIdByName("premium");
-          const firstItem = subscription.items.data[0];
-          const subscriptionEndDate = firstItem?.current_period_end
-            ? new Date(firstItem.current_period_end * 1000).toISOString()
-            : null;
+
+          // For trial: use trial_end, for paid: use current_period_end
+          let subscriptionEndDate: string | null = null;
+          if (isTrialing && subscription.trial_end) {
+            subscriptionEndDate = new Date(subscription.trial_end * 1000).toISOString();
+          } else {
+            const firstItem = subscription.items.data[0];
+            subscriptionEndDate = firstItem?.current_period_end
+              ? new Date(firstItem.current_period_end * 1000).toISOString()
+              : null;
+          }
 
           await publicApi.usersPermissionsUsersRoles.usersUpdate(
             { id: user.id.toString() },
             {
               role: premiumRoleId || undefined,
-              subscriptionStatus: "active",
+              subscriptionStatus: isTrialing ? "trialing" : "active",
               subscriptionEndDate,
               billingPeriod: billingCycle,
               paymentProvider: "stripe",
@@ -169,7 +178,7 @@ export async function POST(request: NextRequest) {
       }
 
       case "customer.subscription.updated": {
-        // Subscription was updated (cancelled at period end, renewed, etc.)
+        // Subscription was updated (cancelled at period end, renewed, trial ended, etc.)
         const subscription = event.data.object as Stripe.Subscription;
         const customerId = subscription.customer as string;
 
@@ -180,8 +189,18 @@ export async function POST(request: NextRequest) {
             await updateUserSubscription(user.id.toString(), {
               subscriptionStatus: "cancelled",
             });
+          } else if (subscription.status === "trialing") {
+            // Still in trial
+            const subscriptionEndDate = subscription.trial_end
+              ? new Date(subscription.trial_end * 1000).toISOString()
+              : null;
+
+            await updateUserSubscription(user.id.toString(), {
+              subscriptionStatus: "trialing",
+              ...(subscriptionEndDate && { subscriptionEndDate }),
+            });
           } else if (subscription.status === "active") {
-            // Subscription renewed or reactivated - restore premium role
+            // Subscription active (trial ended or renewed) - restore premium role
             const premiumRoleId = await getRoleIdByName("premium");
             const firstItem = subscription.items.data[0];
             const subscriptionEndDate = firstItem?.current_period_end
