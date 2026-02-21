@@ -38,7 +38,8 @@
   "cancelled": "Cancelled",
   "adminAccess": "You have full premium access as an admin/champion.",
   "cancelledMessage": "Your {billingPeriod} subscription has been cancelled. You still have access until {endDate}.",
-  "activeMessage": "You are on the {billingPeriod} plan. Your subscription renews on {renewDate}.",
+  "trialingMessage": "You are on a free trial. Your trial ends on {trialEndDate}, then billing starts.",
+  "activeMessage": "You are on the {billingPeriod} plan. Next billing date: {renewDate}.",
   "lifetimeMessage": "You have lifetime access to all premium features. Thank you for your support!",
   "cancelSubscription": "Cancel subscription",
   "supportMessage": "LiveStreamRecorder is a one-person project. Your support helps keep the servers running and new features coming. Thank you!",
@@ -59,10 +60,13 @@
 
   "vatNotice": "* The applicable Value Added Tax (VAT) will be calculated and added to your total during the final payment process.",
   "startFreeTrial": "Start 7-Day Free Trial",
+  "subscribe": "Subscribe Now",
+  "buyNow": "Buy Now",
   "securePayment": "Secure payment",
 
   "cancelModalTitle": "Cancel Subscription",
   "cancelModalMessage": "We're sorry to see you go! If you cancel, you'll still have access to premium features until {endDate}.",
+  "cancelModalMessageTrial": "If you cancel your trial, you'll lose access to premium features immediately. You won't be charged.",
   "cancelModalAfter": "After that, your account will return to the free plan.",
   "keepSubscription": "Keep subscription",
   "yesCancel": "Yes, cancel"

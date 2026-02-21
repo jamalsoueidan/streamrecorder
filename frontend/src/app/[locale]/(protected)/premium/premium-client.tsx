@@ -53,9 +53,10 @@ import { StripePaymentButton } from "./components/stripe-payment-button";
 
 // Extend user type with subscription fields from schema
 type UserWithSubscription = GetUsersPermissionsUsersRolesData & {
-  subscriptionStatus?: "active" | "cancelled" | "expired";
+  subscriptionStatus?: "active" | "cancelled" | "expired" | "trialing";
   subscriptionEndDate?: string;
   billingPeriod?: string;
+  trialClaimed?: boolean;
 };
 
 export default function PremiumClient() {
@@ -137,16 +138,19 @@ export default function PremiumClient() {
     }
   };
 
-  // Determine if user is premium (admin, champion, or has active/cancelled subscription)
+  // Determine if user is premium (admin, champion, or has active/cancelled/trialing subscription)
   const isPremiumRole = role?.type === "admin" || role?.type === "champion";
   const hasActiveSubscription =
     user?.subscriptionStatus === "active" ||
-    user?.subscriptionStatus === "cancelled";
+    user?.subscriptionStatus === "cancelled" ||
+    user?.subscriptionStatus === "trialing";
   const isPremium = isPremiumRole || hasActiveSubscription;
+  const isTrialing = user?.subscriptionStatus === "trialing";
   const canCancel =
-    user?.subscriptionStatus === "active" &&
+    (user?.subscriptionStatus === "active" || user?.subscriptionStatus === "trialing") &&
     !isPremiumRole &&
     user?.billingPeriod !== "lifetime";
+  const canUseTrial = !user?.trialClaimed;
 
   const handlePlanSelect = (planId: string) => {
     const plan = BILLING_OPTIONS.find((o) => o.id === planId);
@@ -180,7 +184,7 @@ export default function PremiumClient() {
         <Group gap="xs">
           <IconCrown size={28} color="#fbbf24" />
           <Title order={2}>{t("title")}</Title>
-          {!isPremium && (
+          {!isPremium && canUseTrial && selectedBilling !== "lifetime" && (
             <Badge size="lg" variant="filled" color="green">
               {t("badge7DaysFree")}
             </Badge>
@@ -237,14 +241,20 @@ export default function PremiumClient() {
                             })
                           : user?.billingPeriod === "lifetime"
                             ? t("lifetimeMessage")
-                            : t("activeMessage", {
-                                billingPeriod: getTranslatedBillingPeriod(
-                                  user?.billingPeriod,
-                                ),
-                                renewDate: new Date(
-                                  user?.subscriptionEndDate || "",
-                                ).toLocaleDateString(),
-                              })}
+                            : isTrialing
+                              ? t("trialingMessage", {
+                                  trialEndDate: new Date(
+                                    user?.subscriptionEndDate || "",
+                                  ).toLocaleDateString(),
+                                })
+                              : t("activeMessage", {
+                                  billingPeriod: getTranslatedBillingPeriod(
+                                    user?.billingPeriod,
+                                  ),
+                                  renewDate: new Date(
+                                    user?.subscriptionEndDate || "",
+                                  ).toLocaleDateString(),
+                                })}
                     </Text>
                   </Alert>
 
@@ -684,12 +694,13 @@ export default function PremiumClient() {
                         "linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%)",
                     }}
                   >
-                    {t("startFreeTrial")}
+                    {selectedBilling === "lifetime" ? t("buyNow") : canUseTrial ? t("startFreeTrial") : t("subscribe")}
                   </StripePaymentButton>
                 ) : (
                   <FreemiusPaymentButton
                     billingCycle={selectedPlan?.billingCycle || "annual"}
                     planLabel={selectedPlan?.label || "Premium"}
+                    canUseTrial={canUseTrial}
                     fullWidth
                     size="lg"
                     radius="md"
@@ -699,7 +710,7 @@ export default function PremiumClient() {
                         "linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%)",
                     }}
                   >
-                    {t("startFreeTrial")}
+                    {selectedBilling === "lifetime" ? t("buyNow") : canUseTrial ? t("startFreeTrial") : t("subscribe")}
                   </FreemiusPaymentButton>
                 )}
 
@@ -725,15 +736,19 @@ export default function PremiumClient() {
       >
         <Stack gap="md">
           <Text size="sm">
-            {t("cancelModalMessage", {
-              endDate: user?.subscriptionEndDate
-                ? new Date(user.subscriptionEndDate).toLocaleDateString()
-                : "",
-            })}
+            {isTrialing
+              ? t("cancelModalMessageTrial")
+              : t("cancelModalMessage", {
+                  endDate: user?.subscriptionEndDate
+                    ? new Date(user.subscriptionEndDate).toLocaleDateString()
+                    : "",
+                })}
           </Text>
-          <Text size="sm" c="dimmed">
-            {t("cancelModalAfter")}
-          </Text>
+          {!isTrialing && (
+            <Text size="sm" c="dimmed">
+              {t("cancelModalAfter")}
+            </Text>
+          )}
           <Group justify="flex-end" mt="md">
             <Button variant="default" onClick={closeCancelModal}>
               {t("keepSubscription")}

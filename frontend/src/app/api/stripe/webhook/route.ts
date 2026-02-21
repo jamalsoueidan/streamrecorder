@@ -68,17 +68,27 @@ export async function POST(request: NextRequest) {
         let subscriptionEndDate: string | null = null;
         let subscriptionId: string | null = null;
 
+        let isTrialing = false;
+
         if (session.subscription && !isLifetime) {
           const subscriptionData = await stripe.subscriptions.retrieve(
             session.subscription as string,
           );
           subscriptionId = subscriptionData.id;
+          isTrialing = subscriptionData.status === "trialing";
 
-          const firstItem = subscriptionData.items.data[0];
-          if (firstItem?.current_period_end) {
+          // For trial: use trial_end, for paid: use current_period_end
+          if (isTrialing && subscriptionData.trial_end) {
             subscriptionEndDate = new Date(
-              firstItem.current_period_end * 1000,
+              subscriptionData.trial_end * 1000,
             ).toISOString();
+          } else {
+            const firstItem = subscriptionData.items.data[0];
+            if (firstItem?.current_period_end) {
+              subscriptionEndDate = new Date(
+                firstItem.current_period_end * 1000,
+              ).toISOString();
+            }
           }
         } else if (isLifetime) {
           subscriptionEndDate = "2099-12-31T23:59:59Z";
@@ -90,7 +100,7 @@ export async function POST(request: NextRequest) {
         // Update user - use publicApi directly since we have the user ID
         await publicApi.usersPermissionsUsersRoles.usersUpdate({ id: userId }, {
           role: premiumRoleId || undefined,
-          subscriptionStatus: "active",
+          subscriptionStatus: isTrialing ? "trialing" : "active",
           subscriptionEndDate,
           billingPeriod: billingCycle,
           paymentProvider: "stripe",
