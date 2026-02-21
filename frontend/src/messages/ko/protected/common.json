@@ -36,8 +36,10 @@
       "cancel": "취소"
     },
     "createWithAI": "AI로 클립 만들기",
-    "addToWatchLater": "나중에 보기",
-    "removeFromWatchLater": "나중에 보기에서 삭제"
+    "addToWatchLater": "나중에 볼 목록에 추가",
+    "removeFromWatchLater": "나중에 볼 목록에서 삭제",
+    "addedToWatchLater": "나중에 볼 목록에 추가됨",
+    "removedFromWatchLater": "나중에 볼 목록에서 삭제됨"
   },
   "followers": {
     "addedAgo_context": "크리에이터가 사용자 목록에 추가된 시점. '3일 전 추가됨'으로 표시됨",

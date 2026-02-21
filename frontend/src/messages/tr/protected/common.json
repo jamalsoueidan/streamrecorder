@@ -36,8 +36,10 @@
       "cancel": "İptal"
     },
     "createWithAI": "AI ile klip oluştur",
-    "addToWatchLater": "Daha sonra izle",
-    "removeFromWatchLater": "Daha sonra izle'den kaldır"
+    "addToWatchLater": "Sonraya İzlemeye Ekle",
+    "removeFromWatchLater": "Sonraya İzlemeden Kaldır",
+    "addedToWatchLater": "Sonraya İzlemeye Eklendi",
+    "removedFromWatchLater": "Sonraya İzlemeden Kaldırıldı"
   },
   "followers": {
     "addedAgo_context": "For when a creator was added to user's list. Shows 'Added 3 days ago'",
