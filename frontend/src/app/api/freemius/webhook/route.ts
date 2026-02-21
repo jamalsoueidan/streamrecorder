@@ -129,15 +129,22 @@ export async function POST(request: NextRequest) {
           const premiumRoleId = await getRoleIdByName("premium");
           const billingPeriod = getBillingPeriod(subscription.billing_cycle);
 
+          // For lifetime (billing_cycle 0), use far-future date
+          const subscriptionEndDate = billingPeriod === "lifetime"
+            ? "2099-12-31T23:59:59Z"
+            : (subscription.next_payment || license.expiration);
+
           await updateUserSubscription(createdUser.id.toString(), {
             role: premiumRoleId || undefined,
             subscriptionStatus: "active",
-            subscriptionEndDate:
-              subscription.next_payment || license.expiration,
+            subscriptionEndDate,
             billingPeriod,
+            paymentProvider: "freemius",
+            trialClaimed: true,
             freemius: JSON.stringify({
               userId: user.id,
               subscriptionId: subscription.id,
+              licenseId: license.id,
               billingPeriod,
             }),
           });

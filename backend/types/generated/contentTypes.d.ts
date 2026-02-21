@@ -1731,6 +1731,7 @@ export interface PluginUsersPermissionsUser
       Schema.Attribute.SetMinMaxLength<{
         minLength: 6;
       }>;
+    paymentProvider: Schema.Attribute.Enumeration<['freemius', 'stripe']>;
     provider: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     resetPasswordToken: Schema.Attribute.String & Schema.Attribute.Private;
@@ -1738,11 +1739,13 @@ export interface PluginUsersPermissionsUser
       'manyToOne',
       'plugin::users-permissions.role'
     >;
+    stripe: Schema.Attribute.Text;
     subscriptionEndDate: Schema.Attribute.DateTime;
     subscriptionStatus: Schema.Attribute.Enumeration<
       ['active', 'cancelled', 'expired']
     >;
     tiktok: Schema.Attribute.Relation<'oneToOne', 'api::tiktok.tiktok'>;
+    trialClaimed: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

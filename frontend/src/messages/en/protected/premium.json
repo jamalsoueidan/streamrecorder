@@ -31,6 +31,7 @@
 
   "paymentMethod": "Payment Method",
   "freemiusDescription": "Credit Card, PayPal, and more",
+  "stripeDescription": "Credit Card, Google Pay, Apple Pay and more",
 
   "yourCurrentPlan": "Your Current Plan",
   "free": "Free",
@@ -38,6 +39,7 @@
   "adminAccess": "You have full premium access as an admin/champion.",
   "cancelledMessage": "Your {billingPeriod} subscription has been cancelled. You still have access until {endDate}.",
   "activeMessage": "You are on the {billingPeriod} plan. Your subscription renews on {renewDate}.",
+  "lifetimeMessage": "You have lifetime access to all premium features. Thank you for your support!",
   "cancelSubscription": "Cancel subscription",
   "supportMessage": "LiveStreamRecorder is a one-person project. Your support helps keep the servers running and new features coming. Thank you!",
 
@@ -57,7 +59,7 @@
 
   "vatNotice": "* The applicable Value Added Tax (VAT) will be calculated and added to your total during the final payment process.",
   "startFreeTrial": "Start 7-Day Free Trial",
-  "securePayment": "Secure payment powered by Freemius",
+  "securePayment": "Secure payment",
 
   "cancelModalTitle": "Cancel Subscription",
   "cancelModalMessage": "We're sorry to see you go! If you cancel, you'll still have access to premium features until {endDate}.",

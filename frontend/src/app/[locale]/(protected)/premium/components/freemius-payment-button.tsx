@@ -116,11 +116,17 @@ export function FreemiusPaymentButton({
             subscriptionEndDate: response.purchase.next_payment,
           });
           // Activate premium via server action
+          // For lifetime, set far-future date since there's no next_payment
+          const endDate = billingPeriod === "lifetime"
+            ? "2099-12-31T23:59:59Z"
+            : response.purchase.next_payment;
+
           const result = await activatePremium({
             freemiusUserId: response.user.id,
             subscriptionId: response.purchase.id,
+            licenseId: response.purchase.license_id,
             billingPeriod,
-            subscriptionEndDate: response.purchase.next_payment,
+            subscriptionEndDate: endDate,
           });
 
           if (!result.success) {

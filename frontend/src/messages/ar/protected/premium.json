@@ -31,6 +31,7 @@
 
   "paymentMethod": "طريقة الدفع",
   "freemiusDescription": "بطاقة ائتمان، باي بال، والمزيد",
+  "stripeDescription": "بطاقة ائتمان، Google Pay، Apple Pay والمزيد",
 
   "yourCurrentPlan": "اشتراكك الحالي",
   "free": "مجاني",
@@ -38,6 +39,7 @@
   "adminAccess": "لديك صلاحية بريميوم كاملة كمسؤول/بطل.",
   "cancelledMessage": "تم إلغاء اشتراكك {billingPeriod}. لا يزال لديك صلاحية حتى {endDate}.",
   "activeMessage": "أنت على الاشتراك {billingPeriod}. يتجدد اشتراكك في {renewDate}.",
+  "lifetimeMessage": "لديك صلاحية مدى الحياة لجميع ميزات البريميوم. شكراً لدعمك!",
   "cancelSubscription": "إلغاء الاشتراك",
   "supportMessage": "LiveStreamRecorder مشروع شخص واحد. دعمك يساعد في إبقاء الخوادم تعمل وإضافة ميزات جديدة. شكراً لك!",
 
@@ -57,7 +59,7 @@
 
   "vatNotice": "* سيتم احتساب ضريبة القيمة المضافة (VAT) المطبقة وإضافتها إلى إجماليك أثناء عملية الدفع النهائية.",
   "startFreeTrial": "ابدأ تجربة 7 أيام مجانية",
-  "securePayment": "دفع آمن مدعوم من Freemius",
+  "securePayment": "دفع آمن",
 
   "cancelModalTitle": "إلغاء الاشتراك",
   "cancelModalMessage": "نأسف لرؤيتك تذهب! إذا ألغيت، ستظل لديك صلاحية ميزات البريميوم حتى {endDate}.",

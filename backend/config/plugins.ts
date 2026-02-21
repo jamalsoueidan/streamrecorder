@@ -792,7 +792,7 @@ export default ({ env }) => ({
                 "application/json"
               ].schema;
 
-            // Extend it with role (inline the role properties since $ref isn't resolving)
+            // Extend it with role and subscription fields
             draft.paths["/users/me"].get.responses["200"].content[
               "application/json"
             ].schema = {
@@ -809,6 +809,49 @@ export default ({ env }) => ({
                         description: { type: "string" },
                         type: { type: "string" },
                       },
+                    },
+                    followers: {
+                      type: "array",
+                      items: { $ref: "#/components/schemas/Follower" },
+                    },
+                    tiktok: {
+                      oneOf: [
+                        { $ref: "#/components/schemas/Tiktok" },
+                        { type: "null" },
+                      ],
+                    },
+                    subscriptionStatus: {
+                      type: "string",
+                      enum: ["active", "cancelled", "expired"],
+                      nullable: true,
+                    },
+                    billingPeriod: {
+                      type: "string",
+                      nullable: true,
+                    },
+                    subscriptionEndDate: {
+                      type: "string",
+                      format: "date-time",
+                      nullable: true,
+                    },
+                    freemius: {
+                      type: "string",
+                      nullable: true,
+                      description: "JSON string with Freemius subscription data",
+                    },
+                    stripe: {
+                      type: "string",
+                      nullable: true,
+                      description: "JSON string with Stripe subscription data",
+                    },
+                    paymentProvider: {
+                      type: "string",
+                      enum: ["freemius", "stripe"],
+                      nullable: true,
+                    },
+                    trialClaimed: {
+                      type: "boolean",
+                      default: false,
                     },
                   },
                 },

@@ -20,7 +20,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2026-02-20T03:32:06.053Z"
+    "x-generation-date": "2026-02-21T00:19:07.206Z"
   },
   "servers": [
     {
@@ -9213,6 +9213,62 @@
                               "type": "string"
                             }
                           }
+                        },
+                        "followers": {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/components/schemas/Follower"
+                          }
+                        },
+                        "tiktok": {
+                          "oneOf": [
+                            {
+                              "$ref": "#/components/schemas/Tiktok"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "subscriptionStatus": {
+                          "type": "string",
+                          "enum": [
+                            "active",
+                            "cancelled",
+                            "expired"
+                          ],
+                          "nullable": true
+                        },
+                        "billingPeriod": {
+                          "type": "string",
+                          "nullable": true
+                        },
+                        "subscriptionEndDate": {
+                          "type": "string",
+                          "format": "date-time",
+                          "nullable": true
+                        },
+                        "freemius": {
+                          "type": "string",
+                          "nullable": true,
+                          "description": "JSON string with Freemius subscription data"
+                        },
+                        "stripe": {
+                          "type": "string",
+                          "nullable": true,
+                          "description": "JSON string with Stripe subscription data"
+                        },
+                        "paymentProvider": {
+                          "type": "string",
+                          "enum": [
+                            "freemius",
+                            "stripe"
+                          ],
+                          "nullable": true
+                        },
+                        "trialClaimed": {
+                          "type": "boolean",
+                          "default": false
                         }
                       }
                     }
@@ -12632,6 +12688,19 @@
                   "freemius": {
                     "type": "string"
                   },
+                  "stripe": {
+                    "type": "string"
+                  },
+                  "paymentProvider": {
+                    "type": "string",
+                    "enum": [
+                      "freemius",
+                      "stripe"
+                    ]
+                  },
+                  "trialClaimed": {
+                    "type": "boolean"
+                  },
                   "createdAt": {
                     "type": "string",
                     "format": "date-time"
@@ -14416,6 +14485,19 @@
                   },
                   "freemius": {
                     "type": "string"
+                  },
+                  "stripe": {
+                    "type": "string"
+                  },
+                  "paymentProvider": {
+                    "type": "string",
+                    "enum": [
+                      "freemius",
+                      "stripe"
+                    ]
+                  },
+                  "trialClaimed": {
+                    "type": "boolean"
                   },
                   "createdAt": {
                     "type": "string",
@@ -16705,6 +16787,19 @@
                       },
                       "freemius": {
                         "type": "string"
+                      },
+                      "stripe": {
+                        "type": "string"
+                      },
+                      "paymentProvider": {
+                        "type": "string",
+                        "enum": [
+                          "freemius",
+                          "stripe"
+                        ]
+                      },
+                      "trialClaimed": {
+                        "type": "boolean"
                       },
                       "createdAt": {
                         "type": "string",
@@ -20141,6 +20236,19 @@
                   "freemius": {
                     "type": "string"
                   },
+                  "stripe": {
+                    "type": "string"
+                  },
+                  "paymentProvider": {
+                    "type": "string",
+                    "enum": [
+                      "freemius",
+                      "stripe"
+                    ]
+                  },
+                  "trialClaimed": {
+                    "type": "boolean"
+                  },
                   "createdAt": {
                     "type": "string",
                     "format": "date-time"
@@ -22258,6 +22366,19 @@
                       },
                       "freemius": {
                         "type": "string"
+                      },
+                      "stripe": {
+                        "type": "string"
+                      },
+                      "paymentProvider": {
+                        "type": "string",
+                        "enum": [
+                          "freemius",
+                          "stripe"
+                        ]
+                      },
+                      "trialClaimed": {
+                        "type": "boolean"
                       },
                       "createdAt": {
                         "type": "string",
@@ -25395,6 +25516,19 @@
               "freemius": {
                 "type": "string"
               },
+              "stripe": {
+                "type": "string"
+              },
+              "paymentProvider": {
+                "type": "string",
+                "enum": [
+                  "freemius",
+                  "stripe"
+                ]
+              },
+              "trialClaimed": {
+                "type": "boolean"
+              },
               "createdAt": {
                 "type": "string",
                 "format": "date-time"
@@ -27053,6 +27187,19 @@
                       },
                       "freemius": {
                         "type": "string"
+                      },
+                      "stripe": {
+                        "type": "string"
+                      },
+                      "paymentProvider": {
+                        "type": "string",
+                        "enum": [
+                          "freemius",
+                          "stripe"
+                        ]
+                      },
+                      "trialClaimed": {
+                        "type": "boolean"
                       },
                       "createdAt": {
                         "type": "string",
@@ -29096,6 +29243,19 @@
                   },
                   "freemius": {
                     "type": "string"
+                  },
+                  "stripe": {
+                    "type": "string"
+                  },
+                  "paymentProvider": {
+                    "type": "string",
+                    "enum": [
+                      "freemius",
+                      "stripe"
+                    ]
+                  },
+                  "trialClaimed": {
+                    "type": "boolean"
                   },
                   "createdAt": {
                     "type": "string",
@@ -31482,6 +31642,19 @@
                       "freemius": {
                         "type": "string"
                       },
+                      "stripe": {
+                        "type": "string"
+                      },
+                      "paymentProvider": {
+                        "type": "string",
+                        "enum": [
+                          "freemius",
+                          "stripe"
+                        ]
+                      },
+                      "trialClaimed": {
+                        "type": "boolean"
+                      },
                       "createdAt": {
                         "type": "string",
                         "format": "date-time"
@@ -33455,6 +33628,19 @@
               "freemius": {
                 "type": "string"
               },
+              "stripe": {
+                "type": "string"
+              },
+              "paymentProvider": {
+                "type": "string",
+                "enum": [
+                  "freemius",
+                  "stripe"
+                ]
+              },
+              "trialClaimed": {
+                "type": "boolean"
+              },
               "createdAt": {
                 "type": "string",
                 "format": "date-time"
@@ -35049,6 +35235,19 @@
                       },
                       "freemius": {
                         "type": "string"
+                      },
+                      "stripe": {
+                        "type": "string"
+                      },
+                      "paymentProvider": {
+                        "type": "string",
+                        "enum": [
+                          "freemius",
+                          "stripe"
+                        ]
+                      },
+                      "trialClaimed": {
+                        "type": "boolean"
                       },
                       "createdAt": {
                         "type": "string",
