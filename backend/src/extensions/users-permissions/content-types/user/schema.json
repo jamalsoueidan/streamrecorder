@@ -103,6 +103,10 @@
         "freemius",
         "stripe"
       ]
+    },
+    "trialClaimed": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

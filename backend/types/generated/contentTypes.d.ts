@@ -1745,6 +1745,7 @@ export interface PluginUsersPermissionsUser
       ['active', 'cancelled', 'expired']
     >;
     tiktok: Schema.Attribute.Relation<'oneToOne', 'api::tiktok.tiktok'>;
+    trialClaimed: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
