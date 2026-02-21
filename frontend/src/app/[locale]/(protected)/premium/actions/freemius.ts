@@ -1,9 +1,14 @@
 "use server";
 
+import {
+  getBillingPeriod,
+  getRoleIdByName,
+  isLicenseClaimed,
+  isSubscriptionClaimed,
+} from "@/app/api/freemius/utils";
 import api from "@/lib/api";
 import publicApi from "@/lib/public-api";
 import { revalidatePath } from "next/cache";
-import { getRoleIdByName, isSubscriptionClaimed, isLicenseClaimed, getBillingPeriod } from "@/app/api/freemius/utils";
 
 // Freemius API config
 const FREEMIUS_API_URL = "https://api.freemius.com/v1";
@@ -41,9 +46,7 @@ interface FreemiusLicense {
 }
 
 // Verify subscription exists and is active
-async function verifySubscription(
-  subscriptionId: string,
-): Promise<{
+async function verifySubscription(subscriptionId: string): Promise<{
   valid: boolean;
   subscription?: FreemiusSubscription;
   error?: string;
@@ -84,9 +87,7 @@ async function verifySubscription(
 }
 
 // Verify license exists and is valid (for lifetime purchases)
-async function verifyLicense(
-  licenseId: string,
-): Promise<{
+async function verifyLicense(licenseId: string): Promise<{
   valid: boolean;
   license?: FreemiusLicense;
   error?: string;
@@ -132,14 +133,12 @@ export async function activatePremium(
 ): Promise<ActivatePremiumResult> {
   try {
     // Get logged-in user from their JWT (trusted source)
-    const currentUser =
+    const { data: user } =
       await api.usersPermissionsUsersRoles.getUsersPermissionsUsersRoles({});
 
-    if (!currentUser?.data?.id) {
+    if (!user?.id) {
       return { success: false, error: "Not authenticated" };
     }
-
-    const user = currentUser.data as { id: number };
 
     // Get premium role ID
     const premiumRoleId = await getRoleIdByName("premium");
@@ -159,10 +158,7 @@ export async function activatePremium(
       }
 
       // Check if license is already claimed by another user
-      const licenseClaimed = await isLicenseClaimed(
-        params.licenseId,
-        user.id,
-      );
+      const licenseClaimed = await isLicenseClaimed(params.licenseId, user.id);
       if (licenseClaimed) {
         return { success: false, error: "License already in use" };
       }
@@ -190,7 +186,8 @@ export async function activatePremium(
 
       // Use verified subscription data
       billingPeriod = getBillingPeriod(subscription.billing_cycle);
-      subscriptionEndDate = subscription.next_payment || params.subscriptionEndDate;
+      subscriptionEndDate =
+        subscription.next_payment || params.subscriptionEndDate;
     }
 
     // Upgrade user to premium
@@ -202,6 +199,7 @@ export async function activatePremium(
         subscriptionEndDate,
         billingPeriod,
         paymentProvider: "freemius",
+        trialClaimed: true,
         freemius: JSON.stringify({
           userId: params.freemiusUserId,
           subscriptionId: params.subscriptionId,
@@ -230,17 +228,12 @@ interface CancelSubscriptionResult {
 export async function cancelFreemiusSubscription(): Promise<CancelSubscriptionResult> {
   try {
     // Get logged-in user
-    const currentUser =
+    const { data: user } =
       await api.usersPermissionsUsersRoles.getUsersPermissionsUsersRoles({});
 
-    if (!currentUser?.data?.id) {
+    if (!user.id) {
       return { success: false, error: "Not authenticated" };
     }
-
-    const user = currentUser.data as {
-      id: number;
-      freemius?: string;
-    };
 
     // freemius is stored as stringified JSON
     const freemiusData = user.freemius ? JSON.parse(user.freemius) : null;

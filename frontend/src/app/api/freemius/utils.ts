@@ -135,6 +135,7 @@ export interface SubscriptionUpdate {
   subscriptionEndDate?: string | null;
   billingPeriod?: string | null;
   paymentProvider?: "freemius" | "stripe";
+  trialClaimed?: boolean;
   freemius?: string;
 }
 

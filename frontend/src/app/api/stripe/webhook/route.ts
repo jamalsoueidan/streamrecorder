@@ -94,6 +94,7 @@ export async function POST(request: NextRequest) {
           subscriptionEndDate,
           billingPeriod: billingCycle,
           paymentProvider: "stripe",
+          trialClaimed: true,
           stripe: JSON.stringify({
             customerId,
             subscriptionId,
@@ -127,6 +128,7 @@ export async function POST(request: NextRequest) {
               subscriptionEndDate,
               billingPeriod: billingCycle,
               paymentProvider: "stripe",
+              trialClaimed: true,
               stripe: JSON.stringify({
                 customerId,
                 subscriptionId: subscription.id,

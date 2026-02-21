@@ -5,16 +5,18 @@ import { cancelFreemiusSubscription } from "./freemius";
 import { cancelStripeSubscription } from "./stripe";
 
 // Generic cancel that detects provider
-export async function cancelSubscription(): Promise<{ success: boolean; error?: string }> {
+export async function cancelSubscription(): Promise<{
+  success: boolean;
+  error?: string;
+}> {
   try {
-    const currentUser =
+    const { data: user } =
       await api.usersPermissionsUsersRoles.getUsersPermissionsUsersRoles({});
 
-    if (!currentUser?.data) {
+    if (!user?.id) {
       return { success: false, error: "Not authenticated" };
     }
 
-    const user = currentUser.data as { paymentProvider?: string };
     const provider = user.paymentProvider;
 
     if (provider === "stripe") {

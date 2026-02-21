@@ -412,6 +412,7 @@ export interface Activity {
       freemius?: string;
       stripe?: string;
       paymentProvider?: ActivityPaymentProviderEnum;
+      trialClaimed?: boolean;
       /** @format date-time */
       createdAt?: string;
       /** @format date-time */
@@ -886,6 +887,7 @@ export interface AiRequest {
       freemius?: string;
       stripe?: string;
       paymentProvider?: AiRequestPaymentProviderEnum;
+      trialClaimed?: boolean;
       /** @format date-time */
       createdAt?: string;
       /** @format date-time */
@@ -1492,6 +1494,7 @@ export interface AiTask {
         freemius?: string;
         stripe?: string;
         paymentProvider?: AiTaskPaymentProviderEnum;
+        trialClaimed?: boolean;
         /** @format date-time */
         createdAt?: string;
         /** @format date-time */
@@ -2421,6 +2424,7 @@ export interface Clip {
       freemius?: string;
       stripe?: string;
       paymentProvider?: ClipPaymentProviderEnum;
+      trialClaimed?: boolean;
       /** @format date-time */
       createdAt?: string;
       /** @format date-time */
@@ -2988,6 +2992,7 @@ export interface ClipShare {
         freemius?: string;
         stripe?: string;
         paymentProvider?: ClipSharePaymentProviderEnum;
+        trialClaimed?: boolean;
         /** @format date-time */
         createdAt?: string;
         /** @format date-time */
@@ -3839,6 +3844,7 @@ export interface Follower {
     freemius?: string;
     stripe?: string;
     paymentProvider?: FollowerPaymentProviderEnum;
+    trialClaimed?: boolean;
     /** @format date-time */
     createdAt?: string;
     /** @format date-time */
@@ -4285,6 +4291,7 @@ export interface Meme {
         freemius?: string;
         stripe?: string;
         paymentProvider?: MemePaymentProviderEnum;
+        trialClaimed?: boolean;
         /** @format date-time */
         createdAt?: string;
         /** @format date-time */
@@ -4833,6 +4840,7 @@ export interface Recording {
       freemius?: string;
       stripe?: string;
       paymentProvider?: RecordingPaymentProviderEnum;
+      trialClaimed?: boolean;
       /** @format date-time */
       createdAt?: string;
       /** @format date-time */
@@ -5482,6 +5490,7 @@ export interface Source {
         freemius?: string;
         stripe?: string;
         paymentProvider?: SourcePaymentProviderEnum;
+        trialClaimed?: boolean;
         /** @format date-time */
         createdAt?: string;
         /** @format date-time */
@@ -6013,6 +6022,7 @@ export interface Tiktok {
     freemius?: string;
     stripe?: string;
     paymentProvider?: TiktokPaymentProviderEnum;
+    trialClaimed?: boolean;
     /** @format date-time */
     createdAt?: string;
     /** @format date-time */
@@ -6442,6 +6452,7 @@ export interface VisitorView {
         freemius?: string;
         stripe?: string;
         paymentProvider?: VisitorViewPaymentProviderEnum;
+        trialClaimed?: boolean;
         /** @format date-time */
         createdAt?: string;
         /** @format date-time */
@@ -8069,6 +8080,17 @@ export interface UsersDeleteParams {
 
 export type UsersDeleteData = UsersPermissionsUser;
 
+export enum SubscriptionStatusEnum {
+  Active = "active",
+  Cancelled = "cancelled",
+  Expired = "expired",
+}
+
+export enum PaymentProviderEnum {
+  Freemius = "freemius",
+  Stripe = "stripe",
+}
+
 export interface GetUsersPermissionsUsersRolesParams {
   /** Relations to populate */
   populate?: string | string[] | object;
@@ -8081,6 +8103,19 @@ export type GetUsersPermissionsUsersRolesData = UsersPermissionsUser & {
     description?: string;
     type?: string;
   };
+  followers?: Follower[];
+  tiktok?: Tiktok | null;
+  subscriptionStatus?: SubscriptionStatusEnum;
+  billingPeriod?: string | null;
+  /** @format date-time */
+  subscriptionEndDate?: string | null;
+  /** JSON string with Freemius subscription data */
+  freemius?: string | null;
+  /** JSON string with Stripe subscription data */
+  stripe?: string | null;
+  paymentProvider?: PaymentProviderEnum;
+  /** @default false */
+  trialClaimed?: boolean;
 };
 
 export type CountListData = number;

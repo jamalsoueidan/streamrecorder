@@ -18,18 +18,12 @@ export async function activateStripePremium(
 ): Promise<ActivateStripeResult> {
   try {
     // Get logged-in user
-    const currentUser =
+    const { data: user } =
       await api.usersPermissionsUsersRoles.getUsersPermissionsUsersRoles({});
 
-    if (!currentUser?.data?.id) {
+    if (!user?.id) {
       return { success: false, error: "Not authenticated" };
     }
-
-    const user = currentUser.data as {
-      id: number;
-      stripe?: string;
-      subscriptionStatus?: string;
-    };
 
     // Check if user already has an active subscription (replay protection)
     if (user.subscriptionStatus === "active" && user.stripe) {
@@ -100,6 +94,7 @@ export async function activateStripePremium(
         subscriptionEndDate: subscriptionEndDate,
         billingPeriod: billingCycle,
         paymentProvider: "stripe",
+        trialClaimed: true,
         stripe: JSON.stringify(stripeData),
       } as never,
     );
@@ -123,17 +118,12 @@ interface CancelStripeResult {
 export async function cancelStripeSubscription(): Promise<CancelStripeResult> {
   try {
     // Get logged-in user
-    const currentUser =
+    const { data: user } =
       await api.usersPermissionsUsersRoles.getUsersPermissionsUsersRoles({});
 
-    if (!currentUser?.data?.id) {
+    if (!user?.id) {
       return { success: false, error: "Not authenticated" };
     }
-
-    const user = currentUser.data as {
-      id: number;
-      stripe?: string;
-    };
 
     // stripe is stored as stringified JSON
     const stripeData = user.stripe ? JSON.parse(user.stripe) : null;
