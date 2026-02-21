@@ -27,7 +27,6 @@ interface FreemiusPurchaseResponse {
     billing_cycle: number;
     next_payment: string;
     license_id: string;
-    trial_ends: string | null;
   };
 }
 
@@ -47,7 +46,6 @@ declare global {
 interface FreemiusPaymentButtonProps extends Omit<ButtonProps, "onClick"> {
   billingCycle: "monthly" | "annual" | "lifetime";
   planLabel: string;
-  canUseTrial?: boolean;
   onSuccess?: () => void;
   onError?: (error: string) => void;
 }
@@ -55,7 +53,6 @@ interface FreemiusPaymentButtonProps extends Omit<ButtonProps, "onClick"> {
 export function FreemiusPaymentButton({
   billingCycle,
   planLabel,
-  canUseTrial = true,
   onSuccess,
   onError,
   children,
@@ -96,18 +93,13 @@ export function FreemiusPaymentButton({
         console.log("🧪 SANDBOX MODE ENABLED");
       }
 
-      console.log("canUseTrial:", canUseTrial);
       handlerRef.current.open({
         ...(sandbox && { sandbox }),
         name: planLabel,
         billing_cycle: billingCycle,
         licenses: 1,
-        trial: canUseTrial ? "paid" : false,
+        trial: false,
         purchaseCompleted: async (response: FreemiusPurchaseResponse) => {
-          console.log("Freemius purchaseCompleted response:", JSON.stringify(response, null, 2));
-          console.log("trial_ends:", response.purchase.trial_ends);
-          console.log("Is trial:", !!response.purchase.trial_ends);
-
           const billingPeriod = getBillingPeriod(response.purchase.billing_cycle);
 
           // Track purchase completed
@@ -117,12 +109,6 @@ export function FreemiusPaymentButton({
             billing_period: billingPeriod,
           });
 
-          console.log("Activating premium for user:", {
-            freemiusUserId: response.user.id,
-            subscriptionId: response.purchase.id,
-            billingPeriod,
-            subscriptionEndDate: response.purchase.next_payment,
-          });
           // Activate premium via server action
           // For lifetime, set far-future date since there's no next_payment
           const endDate = billingPeriod === "lifetime"
@@ -135,7 +121,6 @@ export function FreemiusPaymentButton({
             licenseId: response.purchase.license_id,
             billingPeriod,
             subscriptionEndDate: endDate,
-            trialEnds: response.purchase.trial_ends,
           });
 
           if (!result.success) {

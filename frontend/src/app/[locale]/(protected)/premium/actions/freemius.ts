@@ -21,7 +21,6 @@ interface ActivatePremiumParams {
   licenseId: string;
   billingPeriod: string;
   subscriptionEndDate: string;
-  trialEnds?: string | null;
 }
 
 interface ActivatePremiumResult {
@@ -36,7 +35,6 @@ interface FreemiusSubscription {
   billing_cycle: number;
   next_payment?: string;
   canceled_at?: string | null;
-  trial_ends?: string | null;
 }
 
 interface FreemiusLicense {
@@ -150,7 +148,6 @@ export async function activatePremium(
 
     let billingPeriod = params.billingPeriod;
     let subscriptionEndDate = params.subscriptionEndDate;
-    let isTrialing = false;
 
     // Lifetime purchases use license verification, subscriptions use subscription verification
     if (params.billingPeriod === "lifetime") {
@@ -189,16 +186,7 @@ export async function activatePremium(
 
       // Use verified subscription data
       billingPeriod = getBillingPeriod(subscription.billing_cycle);
-
-      // Check if it's a trial (trial_ends is not null)
-      isTrialing = !!(subscription.trial_ends || params.trialEnds);
-
-      if (isTrialing) {
-        // For trial, use trial_ends as the end date
-        subscriptionEndDate = subscription.trial_ends || params.trialEnds || params.subscriptionEndDate;
-      } else {
-        subscriptionEndDate = subscription.next_payment || params.subscriptionEndDate;
-      }
+      subscriptionEndDate = subscription.next_payment || params.subscriptionEndDate;
     }
 
     // Upgrade user to premium
@@ -206,11 +194,10 @@ export async function activatePremium(
       { id: user.id.toString() },
       {
         role: premiumRoleId,
-        subscriptionStatus: isTrialing ? "trialing" : "active",
+        subscriptionStatus: "active",
         subscriptionEndDate,
         billingPeriod,
         paymentProvider: "freemius",
-        trialClaimed: true,
         freemius: JSON.stringify({
           userId: params.freemiusUserId,
           subscriptionId: params.subscriptionId,
@@ -270,31 +257,13 @@ export async function cancelFreemiusSubscription(): Promise<CancelSubscriptionRe
       return { success: false, error: "Failed to cancel subscription" };
     }
 
-    // Check if user is in trial
-    const isTrialing = user.subscriptionStatus === "trialing";
-
-    if (isTrialing) {
-      // Trial - downgrade to basic immediately
-      const basicRoleId = await getRoleIdByName("basic");
-      await publicApi.usersPermissionsUsersRoles.usersUpdate(
-        { id: user.id.toString() },
-        {
-          role: basicRoleId || undefined,
-          subscriptionStatus: "expired",
-          subscriptionEndDate: null,
-          billingPeriod: null,
-          freemius: null,
-        } as never,
-      );
-    } else {
-      // Paid - keep access until period ends
-      await publicApi.usersPermissionsUsersRoles.usersUpdate(
-        { id: user.id.toString() },
-        {
-          subscriptionStatus: "cancelled",
-        } as never,
-      );
-    }
+    // Keep access until period ends
+    await publicApi.usersPermissionsUsersRoles.usersUpdate(
+      { id: user.id.toString() },
+      {
+        subscriptionStatus: "cancelled",
+      } as never,
+    );
 
     revalidatePath("/premium");
     return { success: true };

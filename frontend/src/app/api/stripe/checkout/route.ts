@@ -22,11 +22,9 @@ export async function POST(request: NextRequest) {
     const user = currentUser.data as {
       id: number;
       email: string;
-      trialClaimed?: boolean;
     };
     const userId = user.id.toString();
     const userEmail = user.email;
-    const canUseTrial = !user.trialClaimed;
 
     const { billingCycle } = await request.json();
 
@@ -62,10 +60,8 @@ export async function POST(request: NextRequest) {
       },
     };
 
-    // Add subscription metadata and trial for recurring payments
     if (!isLifetime) {
       sessionConfig.subscription_data = {
-        ...(canUseTrial && { trial_period_days: 7 }),
         metadata: {
           userId,
           billingCycle,

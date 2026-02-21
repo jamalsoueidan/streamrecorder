@@ -1,6 +1,5 @@
 {
   "title": "Premium",
-  "badge7DaysFree": "7 Gün Ücretsiz",
   "descriptionPremium": "LiveStreamRecorder'ın sunduğu her şeye erişiminiz var",
   "descriptionNonPremium": "LiveStreamRecorder'ın sunduğu her şeye anında erişin",
 
@@ -10,7 +9,7 @@
 
   "billing1MonthLabel": "1 Ay",
   "billing12MonthsLabel": "12 Ay",
-  "billing12MonthsSavings": "3 ay ücretsiz",
+  "billing12MonthsSavings": "neredeyse 4 ay ücretsiz",
   "billing12MonthsBadge": "En İyi Değer",
   "billingLifetimeLabel": "Ömür Boyu",
   "billingLifetimeSavings": "Bir kez öde, sonsuza kadar kullan",
@@ -34,11 +33,11 @@
   "stripeDescription": "Kredi Kartı, Google Pay, Apple Pay ve daha fazlası",
 
   "yourCurrentPlan": "Mevcut Aboneliğiniz",
+  "currentPlan": "Mevcut Plan",
   "free": "Ücretsiz",
   "cancelled": "İptal Edildi",
   "adminAccess": "Yönetici/şampiyon olarak tam premium erişiminiz var.",
   "cancelledMessage": "{billingPeriod} aboneliğiniz iptal edildi. {endDate} tarihine kadar erişiminiz devam ediyor.",
-  "trialingMessage": "Ücretsiz deneme sürecindesiniz. Denemeniz {trialEndDate} tarihinde sona erecek, ardından faturalandırma başlayacak.",
   "activeMessage": "{billingPeriod} aboneliğindesiniz. Sonraki fatura tarihi: {renewDate}.",
   "lifetimeMessage": "Tüm premium özelliklere ömür boyu erişiminiz var. Desteğiniz için teşekkürler!",
   "cancelSubscription": "Aboneliği iptal et",
@@ -59,14 +58,12 @@
   "total": "Toplam",
 
   "vatNotice": "* Uygulanabilir Katma Değer Vergisi (KDV) hesaplanacak ve son ödeme işlemi sırasında toplamınıza eklenecektir.",
-  "startFreeTrial": "7 Günlük Ücretsiz Denemeyi Başlat",
   "subscribe": "Şimdi Abone Ol",
   "buyNow": "Şimdi Satın Al",
   "securePayment": "Güvenli ödeme",
 
   "cancelModalTitle": "Aboneliği İptal Et",
   "cancelModalMessage": "Gittiğinizi görmek bizi üzüyor! İptal ederseniz, {endDate} tarihine kadar premium özelliklere erişiminiz devam edecek.",
-  "cancelModalMessageTrial": "Denemenizi iptal ederseniz, premium özelliklere erişiminizi hemen kaybedersiniz. Ücret alınmayacak.",
   "cancelModalAfter": "Bundan sonra hesabınız ücretsiz plana dönecek.",
   "keepSubscription": "Aboneliği koru",
   "yesCancel": "Evet, iptal et"

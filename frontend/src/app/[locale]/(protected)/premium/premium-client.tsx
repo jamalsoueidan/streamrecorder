@@ -33,9 +33,7 @@ import {
   IconBrandVisa,
   IconCheck,
   IconCrown,
-  IconDeviceAnalytics,
   IconDownload,
-  IconEye,
   IconHeadset,
   IconLanguage,
   IconMovie,
@@ -53,10 +51,9 @@ import { StripePaymentButton } from "./components/stripe-payment-button";
 
 // Extend user type with subscription fields from schema
 type UserWithSubscription = GetUsersPermissionsUsersRolesData & {
-  subscriptionStatus?: "active" | "cancelled" | "expired" | "trialing";
+  subscriptionStatus?: "active" | "cancelled" | "expired";
   subscriptionEndDate?: string;
   billingPeriod?: string;
-  trialClaimed?: boolean;
 };
 
 export default function PremiumClient() {
@@ -97,17 +94,12 @@ export default function PremiumClient() {
     {
       id: "lifetime",
       label: t("billingLifetimeLabel"),
-      price: 200,
+      price: 199,
       perMonth: null,
       savings: t("billingLifetimeSavings"),
       badge: t("billingLifetimeBadge"),
       billingCycle: "lifetime" as const,
     },
-  ];
-
-  const CURRENT_PLAN_FEATURES = [
-    { icon: IconUsers, label: t("currentPlanRecord") },
-    { icon: IconEye, label: t("currentPlanWatch") },
   ];
 
   const PREMIUM_FEATURES = [
@@ -138,19 +130,16 @@ export default function PremiumClient() {
     }
   };
 
-  // Determine if user is premium (admin, champion, or has active/cancelled/trialing subscription)
+  // Determine if user is premium (admin, champion, or has active/cancelled subscription)
   const isPremiumRole = role?.type === "admin" || role?.type === "champion";
   const hasActiveSubscription =
     user?.subscriptionStatus === "active" ||
-    user?.subscriptionStatus === "cancelled" ||
-    user?.subscriptionStatus === "trialing";
+    user?.subscriptionStatus === "cancelled";
   const isPremium = isPremiumRole || hasActiveSubscription;
-  const isTrialing = user?.subscriptionStatus === "trialing";
   const canCancel =
-    (user?.subscriptionStatus === "active" || user?.subscriptionStatus === "trialing") &&
+    user?.subscriptionStatus === "active" &&
     !isPremiumRole &&
     user?.billingPeriod !== "lifetime";
-  const canUseTrial = !user?.trialClaimed;
 
   const handlePlanSelect = (planId: string) => {
     const plan = BILLING_OPTIONS.find((o) => o.id === planId);
@@ -184,11 +173,6 @@ export default function PremiumClient() {
         <Group gap="xs">
           <IconCrown size={28} color="#fbbf24" />
           <Title order={2}>{t("title")}</Title>
-          {!isPremium && canUseTrial && selectedBilling !== "lifetime" && (
-            <Badge size="lg" variant="filled" color="green">
-              {t("badge7DaysFree")}
-            </Badge>
-          )}
         </Group>
         <Text size="sm" c="dimmed">
           {isPremium ? t("descriptionPremium") : t("descriptionNonPremium")}
@@ -197,12 +181,12 @@ export default function PremiumClient() {
 
       <Divider mx={{ base: "-xs", sm: "-md" }} />
 
-      <Grid gutter="xl" overflow="hidden">
+      <Grid gutter="md" overflow="hidden">
         {/* Left Column - Plan & Features */}
         <GridCol span={{ base: 12, md: isPremium ? 12 : 7 }}>
           <Stack gap="lg">
-            {/* Current Plan */}
-            {isPremium ? (
+            {/* Current Plan (premium users) */}
+            {isPremium && (
               <Card
                 padding="lg"
                 radius="md"
@@ -241,20 +225,14 @@ export default function PremiumClient() {
                             })
                           : user?.billingPeriod === "lifetime"
                             ? t("lifetimeMessage")
-                            : isTrialing
-                              ? t("trialingMessage", {
-                                  trialEndDate: new Date(
-                                    user?.subscriptionEndDate || "",
-                                  ).toLocaleDateString(),
-                                })
-                              : t("activeMessage", {
-                                  billingPeriod: getTranslatedBillingPeriod(
-                                    user?.billingPeriod,
-                                  ),
-                                  renewDate: new Date(
-                                    user?.subscriptionEndDate || "",
-                                  ).toLocaleDateString(),
-                                })}
+                            : t("activeMessage", {
+                                billingPeriod: getTranslatedBillingPeriod(
+                                  user?.billingPeriod,
+                                ),
+                                renewDate: new Date(
+                                  user?.subscriptionEndDate || "",
+                                ).toLocaleDateString(),
+                              })}
                     </Text>
                   </Alert>
 
@@ -270,147 +248,105 @@ export default function PremiumClient() {
                   )}
                 </Stack>
               </Card>
-            ) : (
-              <Card
-                padding="lg"
-                radius="md"
-                withBorder
-                style={{
-                  background:
-                    "linear-gradient(135deg, rgba(100, 116, 139, 0.15) 0%, rgba(71, 85, 105, 0.08) 100%)",
-                  borderColor: "rgba(100, 116, 139, 0.3)",
-                }}
-              >
-                <Stack gap="md">
-                  <Group justify="space-between">
-                    <div>
-                      <Group gap="xs">
-                        <IconVideo size={20} color="#94a3b8" />
-                        <Text fw={600} size="lg">
-                          {t("yourCurrentPlan")}
-                        </Text>
-                      </Group>
-                    </div>
-                    <div style={{ textAlign: "right" }}>
-                      <Text size="md" c="dimmed">
-                        {t("free")}
-                      </Text>
-                    </div>
-                  </Group>
-
-                  <Divider
-                    style={{ borderColor: "rgba(100, 116, 139, 0.3)" }}
-                  />
-
-                  <Grid gutter="xs">
-                    {CURRENT_PLAN_FEATURES.map((feature) => (
-                      <GridCol span={6} key={feature.label}>
-                        <Group gap="xs" wrap="nowrap">
-                          <feature.icon
-                            size={16}
-                            color="var(--mantine-color-green-6)"
-                          />
-                          <Text size="sm">{feature.label}</Text>
-                        </Group>
-                      </GridCol>
-                    ))}
-                  </Grid>
-
-                  <Text size="xs" c="dimmed">
-                    {t("supportMessage")}
-                  </Text>
-                </Stack>
-              </Card>
             )}
 
-            {/* Billing Options - Only show for non-premium users */}
+            {/* Choose Plan (non-premium users) */}
             {!isPremium && (
-              <Card
-                padding="lg"
-                radius="md"
-                withBorder
-                style={{
-                  background:
-                    "linear-gradient(135deg, rgba(59, 130, 246, 0.12) 0%, rgba(37, 99, 235, 0.06) 100%)",
-                  borderColor: "rgba(59, 130, 246, 0.3)",
-                }}
-              >
-                <Stack gap="md">
-                  <Group gap="xs">
-                    <IconDeviceAnalytics size={20} color="#60a5fa" />
-                    <Text fw={600} size="lg">
-                      {t("choosePlan")}
+              <Stack gap="sm">
+                {/* Free tier - current plan */}
+                <Paper
+                  p="md"
+                  radius="md"
+                  withBorder
+                  style={{
+                    borderColor: "rgba(100, 116, 139, 0.4)",
+                    background: "rgba(100, 116, 139, 0.06)",
+                  }}
+                >
+                  <Group justify="space-between" wrap="nowrap">
+                    <Group gap="md" wrap="nowrap" ml="xl">
+                      <Text fw={500}>{t("currentPlan")}</Text>
+                    </Group>
+                    <Text fw={700} size="lg" c="dimmed">
+                      {t("free")}
                     </Text>
                   </Group>
+                </Paper>
 
-                  <Radio.Group
-                    value={selectedBilling}
-                    onChange={handlePlanSelect}
-                  >
-                    <Stack gap="sm">
-                      {BILLING_OPTIONS.map((option) => (
-                        <Paper
-                          key={option.id}
-                          p="md"
-                          radius="md"
-                          withBorder
-                          style={{
-                            cursor: "pointer",
-                            borderColor:
-                              selectedBilling === option.id
-                                ? "var(--mantine-color-violet-6)"
-                                : undefined,
-                            background:
-                              selectedBilling === option.id
-                                ? "rgba(139, 92, 246, 0.08)"
-                                : undefined,
-                          }}
-                          onClick={() => handlePlanSelect(option.id)}
-                        >
-                          <Group justify="space-between" wrap="nowrap">
-                            <Group gap="md" wrap="nowrap">
-                              <Radio value={option.id} />
-                              <div>
-                                <Group gap="xs">
-                                  <Text fw={500}>{option.label}</Text>
-                                  {option.badge && (
-                                    <Badge
-                                      size="xs"
-                                      variant="filled"
-                                      color="violet"
-                                    >
-                                      {option.badge}
-                                    </Badge>
-                                  )}
-                                </Group>
-                                {option.savings && (
-                                  <Text size="xs" c="green">
-                                    {option.savings}
-                                  </Text>
+                <Radio.Group
+                  value={selectedBilling}
+                  onChange={handlePlanSelect}
+                >
+                  <Stack gap="sm">
+                    {BILLING_OPTIONS.map((option) => (
+                      <Paper
+                        key={option.id}
+                        p="md"
+                        radius="md"
+                        withBorder
+                        style={{
+                          cursor: "pointer",
+                          borderColor:
+                            selectedBilling === option.id
+                              ? "var(--mantine-color-violet-6)"
+                              : undefined,
+                          background:
+                            selectedBilling === option.id
+                              ? "rgba(139, 92, 246, 0.08)"
+                              : undefined,
+                        }}
+                        onClick={() => handlePlanSelect(option.id)}
+                      >
+                        <Group justify="space-between" wrap="nowrap">
+                          <Group gap="md" wrap="nowrap">
+                            <Radio value={option.id} />
+                            <div>
+                              <Group gap="xs">
+                                <Text fw={500}>{option.label}</Text>
+                                {option.badge && (
+                                  <Badge
+                                    size="xs"
+                                    variant="filled"
+                                    color="violet"
+                                  >
+                                    {option.badge}
+                                  </Badge>
                                 )}
-                              </div>
-                            </Group>
-                            <div style={{ textAlign: "right" }}>
-                              <Text fw={700} size="lg">
-                                ${option.price}
-                              </Text>
-                              {option.perMonth ? (
-                                <Text size="xs" c="dimmed">
-                                  ${option.perMonth.toFixed(2)}/mo
-                                </Text>
-                              ) : (
-                                <Text size="xs" c="dimmed">
-                                  {t("oneTime")}
+                              </Group>
+                              {option.savings && (
+                                <Text size="xs" c="green">
+                                  {option.savings}
                                 </Text>
                               )}
                             </div>
                           </Group>
-                        </Paper>
-                      ))}
-                    </Stack>
-                  </Radio.Group>
-                </Stack>
-              </Card>
+                          <div style={{ textAlign: "right" }}>
+                            {option.perMonth ? (
+                              <>
+                                <Text fw={700} size="lg">
+                                  ${option.perMonth}/month
+                                </Text>
+                                <Text size="xs" c="dimmed">
+                                  ${option.price} total
+                                </Text>
+                              </>
+                            ) : (
+                              <>
+                                <Text fw={700} size="lg">
+                                  ${option.price}
+                                </Text>
+                                <Text size="xs" c="dimmed">
+                                  {t("oneTime")}
+                                </Text>
+                              </>
+                            )}
+                          </div>
+                        </Group>
+                      </Paper>
+                    ))}
+                  </Stack>
+                </Radio.Group>
+              </Stack>
             )}
 
             {/* Premium Features */}
@@ -450,6 +386,10 @@ export default function PremiumClient() {
                   <Anchor href="/changelog" size="xs">
                     {t("seeWhatsNew")}
                   </Anchor>
+                </Text>
+
+                <Text size="xs" c="dimmed">
+                  {t("supportMessage")}
                 </Text>
               </Stack>
             </Card>
@@ -694,13 +634,14 @@ export default function PremiumClient() {
                         "linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%)",
                     }}
                   >
-                    {selectedBilling === "lifetime" ? t("buyNow") : canUseTrial ? t("startFreeTrial") : t("subscribe")}
+                    {selectedBilling === "lifetime"
+                      ? t("buyNow")
+                      : t("subscribe")}
                   </StripePaymentButton>
                 ) : (
                   <FreemiusPaymentButton
                     billingCycle={selectedPlan?.billingCycle || "annual"}
                     planLabel={selectedPlan?.label || "Premium"}
-                    canUseTrial={canUseTrial}
                     fullWidth
                     size="lg"
                     radius="md"
@@ -710,7 +651,9 @@ export default function PremiumClient() {
                         "linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%)",
                     }}
                   >
-                    {selectedBilling === "lifetime" ? t("buyNow") : canUseTrial ? t("startFreeTrial") : t("subscribe")}
+                    {selectedBilling === "lifetime"
+                      ? t("buyNow")
+                      : t("subscribe")}
                   </FreemiusPaymentButton>
                 )}
 
@@ -736,19 +679,15 @@ export default function PremiumClient() {
       >
         <Stack gap="md">
           <Text size="sm">
-            {isTrialing
-              ? t("cancelModalMessageTrial")
-              : t("cancelModalMessage", {
-                  endDate: user?.subscriptionEndDate
-                    ? new Date(user.subscriptionEndDate).toLocaleDateString()
-                    : "",
-                })}
+            {t("cancelModalMessage", {
+              endDate: user?.subscriptionEndDate
+                ? new Date(user.subscriptionEndDate).toLocaleDateString()
+                : "",
+            })}
           </Text>
-          {!isTrialing && (
-            <Text size="sm" c="dimmed">
-              {t("cancelModalAfter")}
-            </Text>
-          )}
+          <Text size="sm" c="dimmed">
+            {t("cancelModalAfter")}
+          </Text>
           <Group justify="flex-end" mt="md">
             <Button variant="default" onClick={closeCancelModal}>
               {t("keepSubscription")}

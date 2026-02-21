@@ -1,6 +1,5 @@
 {
   "title": "Premium",
-  "badge7DaysFree": "7 Days Free",
   "descriptionPremium": "You have access to everything LiveStreamRecorder has to offer",
   "descriptionNonPremium": "Get instant access to everything LiveStreamRecorder has to offer",
 
@@ -10,7 +9,7 @@
 
   "billing1MonthLabel": "1 Month",
   "billing12MonthsLabel": "12 Months",
-  "billing12MonthsSavings": "3 months free",
+  "billing12MonthsSavings": "nearly 4 months free",
   "billing12MonthsBadge": "Best Value",
   "billingLifetimeLabel": "Lifetime",
   "billingLifetimeSavings": "Pay once, use forever",
@@ -34,11 +33,11 @@
   "stripeDescription": "Credit Card, Google Pay, Apple Pay and more",
 
   "yourCurrentPlan": "Your Current Plan",
+  "currentPlan": "Current Plan",
   "free": "Free",
   "cancelled": "Cancelled",
   "adminAccess": "You have full premium access as an admin/champion.",
   "cancelledMessage": "Your {billingPeriod} subscription has been cancelled. You still have access until {endDate}.",
-  "trialingMessage": "You are on a free trial. Your trial ends on {trialEndDate}, then billing starts.",
   "activeMessage": "You are on the {billingPeriod} plan. Next billing date: {renewDate}.",
   "lifetimeMessage": "You have lifetime access to all premium features. Thank you for your support!",
   "cancelSubscription": "Cancel subscription",
@@ -59,14 +58,12 @@
   "total": "Total",
 
   "vatNotice": "* The applicable Value Added Tax (VAT) will be calculated and added to your total during the final payment process.",
-  "startFreeTrial": "Start 7-Day Free Trial",
   "subscribe": "Subscribe Now",
   "buyNow": "Buy Now",
   "securePayment": "Secure payment",
 
   "cancelModalTitle": "Cancel Subscription",
   "cancelModalMessage": "We're sorry to see you go! If you cancel, you'll still have access to premium features until {endDate}.",
-  "cancelModalMessageTrial": "If you cancel your trial, you'll lose access to premium features immediately. You won't be charged.",
   "cancelModalAfter": "After that, your account will return to the free plan.",
   "keepSubscription": "Keep subscription",
   "yesCancel": "Yes, cancel"

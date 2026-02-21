@@ -37,8 +37,7 @@ export async function activateStripePremium(
     // Verify the checkout session with Stripe
     const session = await stripe.checkout.sessions.retrieve(sessionId);
 
-    // Accept "paid" for actual payments, "no_payment_required" for free trials
-    if (session.payment_status !== "paid" && session.payment_status !== "no_payment_required") {
+    if (session.payment_status !== "paid") {
       return { success: false, error: "Payment not completed" };
     }
 
@@ -55,29 +54,17 @@ export async function activateStripePremium(
     let subscriptionEndDate: string | null = null;
     let subscriptionId: string | null = null;
 
-    // Track if user is in trial
-    let isTrialing = false;
-
     if (session.subscription && !isLifetime) {
       const subscriptionData = await stripe.subscriptions.retrieve(
         session.subscription as string,
       );
       subscriptionId = subscriptionData.id;
-      isTrialing = subscriptionData.status === "trialing";
 
-      // For trial: use trial_end as the end date
-      // For paid: use current_period_end as the next billing date
-      if (isTrialing && subscriptionData.trial_end) {
+      const firstItem = subscriptionData.items.data[0];
+      if (firstItem?.current_period_end) {
         subscriptionEndDate = new Date(
-          subscriptionData.trial_end * 1000,
+          firstItem.current_period_end * 1000,
         ).toISOString();
-      } else {
-        const firstItem = subscriptionData.items.data[0];
-        if (firstItem?.current_period_end) {
-          subscriptionEndDate = new Date(
-            firstItem.current_period_end * 1000,
-          ).toISOString();
-        }
       }
     } else if (isLifetime) {
       // Lifetime = far future date (2099)
@@ -102,11 +89,10 @@ export async function activateStripePremium(
       { id: user.id.toString() },
       {
         role: premiumRoleId,
-        subscriptionStatus: isTrialing ? "trialing" : "active",
+        subscriptionStatus: "active",
         subscriptionEndDate: subscriptionEndDate,
         billingPeriod: billingCycle,
         paymentProvider: "stripe",
-        trialClaimed: true,
         stripe: JSON.stringify(stripeData),
       } as never,
     );
@@ -147,39 +133,18 @@ export async function cancelStripeSubscription(): Promise<CancelStripeResult> {
       return { success: false, error: "No active subscription found" };
     }
 
-    // Check subscription status
-    const subscription = await stripe.subscriptions.retrieve(subscriptionId);
+    // Cancel at period end, keep access until then
+    await stripe.subscriptions.update(subscriptionId, {
+      cancel_at_period_end: true,
+    });
 
-    if (subscription.status === "trialing") {
-      // Trial - cancel immediately, user never paid
-      await stripe.subscriptions.cancel(subscriptionId);
-
-      // Downgrade to basic immediately
-      const basicRoleId = await getRoleIdByName("basic");
-      await publicApi.usersPermissionsUsersRoles.usersUpdate(
-        { id: user.id.toString() },
-        {
-          role: basicRoleId || undefined,
-          subscriptionStatus: "expired",
-          subscriptionEndDate: null,
-          billingPeriod: null,
-          stripe: null,
-        } as never,
-      );
-    } else {
-      // Paid - cancel at period end, keep access until then
-      await stripe.subscriptions.update(subscriptionId, {
-        cancel_at_period_end: true,
-      });
-
-      // Update user status to cancelled (webhook will downgrade when period ends)
-      await publicApi.usersPermissionsUsersRoles.usersUpdate(
-        { id: user.id.toString() },
-        {
-          subscriptionStatus: "cancelled",
-        } as never,
-      );
-    }
+    // Update user status to cancelled (webhook will downgrade when period ends)
+    await publicApi.usersPermissionsUsersRoles.usersUpdate(
+      { id: user.id.toString() },
+      {
+        subscriptionStatus: "cancelled",
+      } as never,
+    );
 
     revalidatePath("/premium");
     return { success: true };
