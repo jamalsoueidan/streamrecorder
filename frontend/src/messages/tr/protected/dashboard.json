@@ -1,6 +1,10 @@
 {
   "title": "Kontrol Paneli",
   "description": "Tekrar hoş geldiniz! İşte yenilikler",
+  "greetingMorning": "Günaydın, {username}!",
+  "greetingAfternoon": "İyi günler, {username}!",
+  "greetingEvening": "İyi akşamlar, {username}!",
+  "greetingSubtitle": "Beslemenizde yeni neler var",
   "noRecordings": "Kayıt bulunamadı",
   "browseAll": "Tümüne göz at",
   "newCreators": "Yeni İçerik Üreticileri",

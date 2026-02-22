@@ -1,6 +1,10 @@
 {
   "title": "대시보드",
   "description": "다시 오셨군요! 새로운 소식입니다",
+  "greetingMorning": "좋은 아침이에요, {username}!",
+  "greetingAfternoon": "좋은 오후예요, {username}!",
+  "greetingEvening": "좋은 저녁이에요, {username}!",
+  "greetingSubtitle": "피드에 새로운 소식이 있어요",
   "noRecordings": "녹화 영상이 없습니다",
   "browseAll": "전체 보기",
   "newCreators": "새로운 크리에이터",

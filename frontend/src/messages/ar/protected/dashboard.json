@@ -1,6 +1,10 @@
 {
   "title": "لوحة التحكم",
   "description": "مرحباً بعودتك! إليك الجديد",
+  "greetingMorning": "صباح الخير يا {username}!",
+  "greetingAfternoon": "مساء الخير يا {username}!",
+  "greetingEvening": "مساء الخير يا {username}!",
+  "greetingSubtitle": "إليك الجديد في خلاصتك",
   "noRecordings": "لا توجد تسجيلات",
   "browseAll": "عرض الكل",
   "newCreators": "صناع محتوى جدد",

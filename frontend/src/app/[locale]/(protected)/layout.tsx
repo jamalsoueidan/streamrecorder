@@ -2,6 +2,7 @@ import { getToken } from "@/lib/token";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 
+import { getUser } from "@/app/actions/user";
 import { buildRulesFromStrapi } from "@/app/lib/ability";
 import { AbilityProvider } from "@/app/providers/ability-provider";
 import { QueryProvider } from "@/app/providers/query-provider";
@@ -24,15 +25,7 @@ export default async function DashboardLayout({
   const cookieStore = await cookies();
   const navbarCollapsed = cookieStore.get("navbar-collapsed")?.value === "true";
 
-  const user =
-    await api.usersPermissionsUsersRoles.getUsersPermissionsUsersRoles({
-      populate: {
-        role: true,
-        followers: {
-          fields: ["id", "documentId"],
-        },
-      },
-    });
+  const user = await getUser();
 
   const role = user?.data?.role || null;
 

@@ -1,14 +1,14 @@
 "use client";
 
 import { useNavbarCollapsed } from "@/app/hooks/use-navbar-collapsed";
+import { trackEvent } from "@/app/lib/analytics";
 import { IsNewProvider } from "@/app/providers/is-new-provider";
 import { useUser } from "@/app/providers/user-provider";
+import { Link } from "@/i18n/navigation";
 import { AppShell, Button, Flex, Text, useMatches } from "@mantine/core";
 import { useDisclosure, useMounted } from "@mantine/hooks";
 import { IconCrown } from "@tabler/icons-react";
-import { trackEvent } from "@/app/lib/analytics";
 import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/navigation";
 import { MobileBar } from "./mobilebar";
 import { Navbar } from "./navbar";
 
