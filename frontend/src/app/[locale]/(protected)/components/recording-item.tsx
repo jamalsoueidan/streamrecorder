@@ -55,7 +55,7 @@ export default function RecordingItem({ recording }: Props) {
                 maw={110}
                 display="inline-block"
               >
-                {recording.follower?.username}
+                {decodeURIComponent(recording.follower?.username || "")}
               </Anchor>
               <Text size="xs" suppressHydrationWarning>
                 {t("recordedAgo", {

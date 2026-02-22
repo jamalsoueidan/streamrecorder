@@ -126,7 +126,7 @@ export default function FollowerItem({ follower, isOpen }: Props) {
             <Group gap="xs">
               <Anchor component={Link} href={getProfileUrl(follower)} size="md">
                 <Text size="lg" truncate maw={isMobile ? 100 : 200} fw="bold">
-                  {follower.username}
+                  {decodeURIComponent(follower.username)}
                 </Text>
               </Anchor>
               {follower.countryCode ? (
