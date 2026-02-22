@@ -362,17 +362,15 @@ export default factories.createCoreController(
         : 0;
 
       if (currentUser.role.type === "authenticated" && totalFollowers >= 3) {
-        return ctx.forbidden("You already follow the maximum of 3 followers.");
+        return ctx.forbidden("MAX_3_FOLLOWERS");
       }
 
       if (currentUser.role.type === "champion" && totalFollowers >= 50) {
-        return ctx.forbidden("You already follow the maximum of 50 followers.");
+        return ctx.forbidden("MAX_50_FOLLOWERS");
       }
 
       if (currentUser.role.type === "premium" && totalFollowers >= 100) {
-        return ctx.forbidden(
-          "You already follow the maximum of 100 followers.",
-        );
+        return ctx.forbidden("MAX_100_FOLLOWERS");
       }
 
       // Get all existing documentIds + new one
@@ -414,7 +412,7 @@ export default factories.createCoreController(
         });
 
       if (!currentUser) {
-        return ctx.notFound("User not found");
+        return ctx.notFound("USER_NOT_FOUND");
       }
 
       let follower = await strapi
@@ -427,7 +425,7 @@ export default factories.createCoreController(
         });
 
       if (!follower) {
-        return ctx.notFound("Follower not found");
+        return ctx.notFound("FOLLOWER_NOT_FOUND");
       }
 
       // Get all existing documentIds + new one
@@ -480,7 +478,7 @@ export default factories.createCoreController(
       );
 
       if (!followerToRemove) {
-        return ctx.notFound();
+        return ctx.notFound("FOLLOWER_NOT_FOUND");
       }
 
       await strapi.documents("plugin::users-permissions.user").update({

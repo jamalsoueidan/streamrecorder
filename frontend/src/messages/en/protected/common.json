@@ -43,7 +43,15 @@
   },
   "followers": {
     "addedAgo_context": "For when a creator was added to user's list. Shows 'Added 3 days ago'",
-    "addedAgo": "Added {time}"
+    "addedAgo": "Added {time}",
+    "limitReachedTitle": "Creator limit reached",
+    "upgradeModalHeadline": "Never miss a live stream again",
+    "max3Message": "You've reached the 3 creator limit on the free plan.",
+    "max50Message": "You've reached your limit of 50 creators on this plan.",
+    "max100Message": "You've reached your limit of 100 creators on this plan.",
+    "upgradeButton": "Upgrade to Premium",
+    "upgradeModalDiscount": "25% off your first month",
+    "upgradeModalCodeNote": "Apply at checkout"
   },
   "newest": "Newest",
   "oldest": "Oldest"

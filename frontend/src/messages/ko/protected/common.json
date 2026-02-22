@@ -43,7 +43,15 @@
   },
   "followers": {
     "addedAgo_context": "크리에이터가 사용자 목록에 추가된 시점. '3일 전 추가됨'으로 표시됨",
-    "addedAgo": "{time} 전 추가됨"
+    "addedAgo": "{time} 전 추가됨",
+    "limitReachedTitle": "크리에이터 한도에 도달했습니다",
+    "upgradeModalHeadline": "다시는 라이브 방송을 놓치지 마세요",
+    "max3Message": "무료 플랜에서 크리에이터 3명 한도에 도달했습니다.",
+    "max50Message": "이 플랜에서 크리에이터 50명 한도에 도달했습니다.",
+    "max100Message": "이 플랜에서 크리에이터 100명 한도에 도달했습니다.",
+    "upgradeButton": "Premium으로 업그레이드",
+    "upgradeModalDiscount": "첫 달 25% 할인",
+    "upgradeModalCodeNote": "결제 시 코드를 입력하세요"
   },
   "newest": "최신순",
   "oldest": "오래된순"

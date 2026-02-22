@@ -43,7 +43,15 @@
   },
   "followers": {
     "addedAgo_context": "For when a creator was added to user's list. Shows 'Added 3 days ago'",
-    "addedAgo": "{time} önce eklendi"
+    "addedAgo": "{time} önce eklendi",
+    "limitReachedTitle": "İçerik üreticisi limitinize ulaştınız",
+    "upgradeModalHeadline": "Artık hiçbir canlı yayını kaçırmayın",
+    "max3Message": "Ücretsiz planda 3 içerik üreticisi limitine ulaştınız.",
+    "max50Message": "Bu planda 50 içerik üreticisi limitine ulaştınız.",
+    "max100Message": "Bu planda 100 içerik üreticisi limitine ulaştınız.",
+    "upgradeButton": "Premium'a Yükselt",
+    "upgradeModalDiscount": "İlk ayınızda %25 indirim",
+    "upgradeModalCodeNote": "Ödeme sırasında kodu girin"
   },
   "newest": "En Yeni",
   "oldest": "En Eski"

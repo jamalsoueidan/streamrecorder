@@ -6,6 +6,7 @@ import {
   UserSearchResult,
 } from "@/app/actions/check-user";
 import { follow } from "@/app/actions/followers";
+import { UpgradeModal } from "@/app/[locale]/(protected)/components/upgrade-modal";
 import { getProfileUrl } from "@/app/components/open-social";
 import { trackEvent } from "@/app/lib/analytics";
 import { parseUsername } from "@/app/lib/parse-username";
@@ -32,6 +33,7 @@ import {
   Tooltip,
   UnstyledButton,
 } from "@mantine/core";
+import { useDisclosure } from "@mantine/hooks";
 import { notifications } from "@mantine/notifications";
 import {
   IconCheck,
@@ -58,6 +60,8 @@ type SearchStep = "input" | "selectPlatform" | "results";
 
 export default function Page() {
   const t = useTranslations("protected.search");
+  const tCommon = useTranslations("protected.common");
+  const [upgradeOpened, { open: openUpgrade, close: closeUpgrade }] = useDisclosure(false);
   const [query, setQuery] = useState("");
   const [parsedUsername, setParsedUsername] = useState("");
   const [step, setStep] = useState<SearchStep>("input");
@@ -172,9 +176,23 @@ export default function Page() {
 
     if (result.success) {
       setFollowedUser(user);
+    } else if (result.error === "MAX_3_FOLLOWERS") {
+      openUpgrade();
+    } else if (result.error === "MAX_50_FOLLOWERS") {
+      notifications.show({
+        title: tCommon("follow.errorTitle"),
+        message: tCommon("followers.max50Message"),
+        color: "red",
+      });
+    } else if (result.error === "MAX_100_FOLLOWERS") {
+      notifications.show({
+        title: tCommon("follow.errorTitle"),
+        message: tCommon("followers.max100Message"),
+        color: "red",
+      });
     } else {
       notifications.show({
-        title: t("actions.errorTitle"),
+        title: tCommon("follow.errorTitle"),
         message: result.error,
         color: "red",
       });
@@ -399,7 +417,10 @@ export default function Page() {
   };
 
   return (
-    <Stack w="100%">
+    <>
+      <UpgradeModal opened={upgradeOpened} onClose={closeUpgrade} />
+
+      <Stack w="100%">
       <Group justify="space-between" w="100%">
         <Stack gap={2}>
           <Group gap="xs">
@@ -562,5 +583,6 @@ export default function Page() {
 
       {renderContent()}
     </Stack>
+    </>
   );
 }

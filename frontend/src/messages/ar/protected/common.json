@@ -41,7 +41,15 @@
   },
   "followers": {
     "addedAgo_context": "For when a creator was added to user's list. Shows 'Added 3 days ago'",
-    "addedAgo": "تم الإضافة {time}"
+    "addedAgo": "تم الإضافة {time}",
+    "limitReachedTitle": "وصلت إلى الحد الأقصى للمنشئين",
+    "upgradeModalHeadline": "لا تفوّت أي بث مباشر بعد الآن",
+    "max3Message": "لقد وصلت إلى الحد الأقصى وهو 3 منشئين في الاشتراك المجاني.",
+    "max50Message": "لقد وصلت إلى الحد الأقصى وهو 50 منشئاً في هذا الاشتراك.",
+    "max100Message": "لقد وصلت إلى الحد الأقصى وهو 100 منشئ في هذا الاشتراك.",
+    "upgradeButton": "الترقية إلى Premium",
+    "upgradeModalDiscount": "خصم 25% على شهرك الأول",
+    "upgradeModalCodeNote": "أدخل الكود عند الدفع"
   },
   "newest": "الأحدث",
   "oldest": "الأقدم"

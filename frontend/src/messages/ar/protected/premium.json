@@ -1,8 +1,8 @@
 {
   "title": "بريميوم",
   "descriptionPremium": "لديك صلاحية الوصول لكل ما يقدمه LiveStreamRecorder",
-  "descriptionNonPremium": "احصل على صلاحية فورية لكل ما يقدمه LiveStreamRecorder",
-  "descriptionShort": "احصل على صلاحية فورية لكل شيء",
+  "descriptionNonPremium": "اشترك الآن واستمتع بكل ما يقدمه LiveStreamRecorder",
+  "descriptionShort": "اشترك واستمتع بكل الميزات",
 
   "billingPeriodMonthly": "الشهري",
   "billingPeriodAnnual": "السنوي",
@@ -19,7 +19,7 @@
   "currentPlanRecord": "سجّل حتى 3 من قنواتك",
   "currentPlanWatch": "شاهد تسجيلاتك",
 
-  "premiumRecord100": "سجّل حتى 100 من قنواتك",
+  "premiumRecord100": "سجّل 100 من قنواتك",
   "premiumFullControl": "تحكم كامل في تسجيلاتك",
   "premiumNotifications": "إشعارات عند الجاهزية",
   "premiumAiHighlights": "مقاطع وأبرز اللحظات بالذكاء الاصطناعي",
