@@ -101,13 +101,7 @@ export default async function Page() {
   return (
     <Stack w="100%">
       <Card radius="lg" withBorder p="0">
-        <Flex
-          justify="space-between"
-          align="center"
-          w="100%"
-          style={{ background: "linear-gradient(150deg, #6366f1, #10b981)" }}
-          p="xl"
-        >
+        <Flex justify="space-between" align="center" w="100%" p="xl">
           <Stack gap={2}>
             <Flex gap="xs" align="center">
               <Title order={1} size="h1" c="white">
