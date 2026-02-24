@@ -13,6 +13,9 @@
     },
     "sizeBytes": {
       "type": "biginteger"
+    },
+    "startedAt": {
+      "type": "biginteger"
     }
   },
   "config": {}
