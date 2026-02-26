@@ -13,7 +13,6 @@ interface EarningsChartProps {
 export function EarningsChart({ earningsPromise }: EarningsChartProps) {
   const t = useTranslations("protected.profileInsights");
   const earnings = use(earningsPromise);
-  const seriesLabel = t("earnings.seriesLabel");
 
   const header = (
     <Box
@@ -41,7 +40,7 @@ export function EarningsChart({ earningsPromise }: EarningsChartProps) {
 
   const data = [...earnings].reverse().map((e) => ({
     date: e.date ?? "",
-    [seriesLabel]: e.diamonds ?? 0,
+    diamonds: e.diamonds ?? 0,
   }));
 
   return (
@@ -53,7 +52,7 @@ export function EarningsChart({ earningsPromise }: EarningsChartProps) {
           w="100%"
           data={data}
           dataKey="date"
-          series={[{ name: seriesLabel, color: "yellow.5" }]}
+          series={[{ name: "diamonds", label: t("earnings.seriesLabel"), color: "yellow.5" }]}
           curveType="monotone"
           tickLine="xy"
           gridAxis="xy"
