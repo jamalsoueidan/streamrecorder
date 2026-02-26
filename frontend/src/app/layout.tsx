@@ -9,6 +9,7 @@ import "@mantine/core/styles.css";
 import { ModalsProvider } from "@mantine/modals";
 import { Notifications } from "@mantine/notifications";
 import "@mantine/notifications/styles.css";
+import '@mantine/charts/styles.css';
 import { isbot } from "isbot";
 import type { Metadata, Viewport } from "next";
 import { headers } from "next/headers";

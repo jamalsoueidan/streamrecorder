@@ -1,0 +1,73 @@
+{
+  "beta": "Insights is currently in beta. Data may be incomplete or change as we continue to improve this feature.",
+  "tabs": {
+    "videos": "Videos",
+    "insights": "Insights"
+  },
+  "stats": {
+    "totalDiamonds": "Total Diamonds",
+    "battleDiamonds": "Diamonds through battles",
+    "nonBattleDiamonds": "Diamonds outside battles",
+    "battles": "Battles",
+    "won": "Won",
+    "lost": "Lost",
+    "winRate": "Win Rate",
+    "gifters": "Gifters",
+    "chatParticipants": "Chat Participants"
+  },
+  "battleHistory": {
+    "title": "Battle History",
+    "empty": "No battles recorded yet.",
+    "colDate": "Date",
+    "colType": "Type",
+    "colOpponents": "Opponent(s)",
+    "colScore": "Score",
+    "colDiamonds": "Diamonds",
+    "colResult": "Result",
+    "vs": "vs",
+    "live": "LIVE",
+    "interrupted": "Interrupted",
+    "won": "Won",
+    "draw": "Draw",
+    "lost": "Lost"
+  },
+  "streamActivity": {
+    "title": "Recent Streams",
+    "empty": "No stream sessions available.",
+    "colDate": "Date",
+    "colDuration": "Duration",
+    "colPeakViewers": "Peak Viewers",
+    "colAvgViewers": "Avg Viewers",
+    "colDiamonds": "Diamonds",
+    "colBattles": "Battles",
+    "durationMinutes": "{m}m",
+    "durationHoursMinutes": "{h}h {m}m"
+  },
+  "topGifters": {
+    "title": "Top Gifters",
+    "empty": "No gifters data available.",
+    "giftCount": "{count} gifts"
+  },
+  "topOpponents": {
+    "title": "Top Opponents",
+    "empty": "No battle data available.",
+    "wins": "{count}W",
+    "losses": "{count}L",
+    "battleCount": "{count} battles"
+  },
+  "earnings": {
+    "title": "Earnings",
+    "empty": "No earnings data available.",
+    "seriesLabel": "Diamonds"
+  },
+  "schedule": {
+    "title": "When They Go Live",
+    "mon": "Mon",
+    "tue": "Tue",
+    "wed": "Wed",
+    "thu": "Thu",
+    "fri": "Fri",
+    "sat": "Sat",
+    "sun": "Sun"
+  }
+}

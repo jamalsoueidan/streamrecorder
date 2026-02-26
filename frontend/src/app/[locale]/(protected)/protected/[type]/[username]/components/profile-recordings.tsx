@@ -9,7 +9,6 @@ import {
 import {
   Group,
   Loader,
-  SegmentedControl,
   SimpleGrid,
   Stack,
   Text,
@@ -23,14 +22,14 @@ import { useEffect } from "react";
 import { safeRelativeTime } from "@/app/lib/safe-relative-time";
 import { useFormatter, useNow, useTranslations } from "next-intl";
 import { fetchProfileRecordings } from "../actions/actions";
-import { profileParsers, SortOptions } from "../lib/search-params";
+import { profileParsers } from "../lib/search-params";
 
 export default function ProfileRecordings() {
   const t = useTranslations("protected.common");
   const format = useFormatter();
   const now = useNow();
   const params = useParams<{ type: FollowerTypeEnum; username: string }>();
-  const [filters, setFilters] = useQueryStates(profileParsers);
+  const [filters] = useQueryStates(profileParsers);
 
   const { data, fetchNextPage, hasNextPage, isFetchingNextPage, isLoading } =
     useInfiniteQuery({
@@ -69,17 +68,6 @@ export default function ProfileRecordings() {
 
   return (
     <Stack gap="md">
-      <Group justify="flex-end">
-        <SegmentedControl
-          value={filters.sort}
-          onChange={(value) => setFilters({ sort: value as SortOptions })}
-          data={[
-            { label: t("newest"), value: SortOptions.createdAtDesc },
-            { label: t("oldest"), value: SortOptions.createdAtAsc },
-          ]}
-        />
-      </Group>
-
       <SimpleGrid cols={{ base: 1, sm: 2, md: 3, xl: 4 }} spacing="lg">
         {recordings.map((rec) => {
           const isRecording = rec.sources?.some(

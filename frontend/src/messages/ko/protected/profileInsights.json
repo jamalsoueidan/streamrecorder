@@ -1,0 +1,73 @@
+{
+  "beta": "인사이트는 현재 베타 버전입니다. 기능 개선이 계속됨에 따라 데이터가 불완전하거나 변경될 수 있습니다.",
+  "tabs": {
+    "videos": "영상",
+    "insights": "인사이트"
+  },
+  "stats": {
+    "totalDiamonds": "총 다이아몬드",
+    "battleDiamonds": "배틀 다이아몬드",
+    "nonBattleDiamonds": "일반 다이아몬드",
+    "battles": "배틀",
+    "won": "승리",
+    "lost": "패배",
+    "winRate": "승률",
+    "gifters": "선물 후원자",
+    "chatParticipants": "채팅 참여자"
+  },
+  "battleHistory": {
+    "title": "배틀 기록",
+    "empty": "아직 기록된 배틀이 없습니다.",
+    "colDate": "날짜",
+    "colType": "유형",
+    "colOpponents": "상대방",
+    "colScore": "점수",
+    "colDiamonds": "다이아몬드",
+    "colResult": "결과",
+    "vs": "vs",
+    "live": "LIVE",
+    "interrupted": "중단됨",
+    "won": "승리",
+    "draw": "무승부",
+    "lost": "패배"
+  },
+  "streamActivity": {
+    "title": "최근 방송",
+    "empty": "방송 기록이 없습니다.",
+    "colDate": "날짜",
+    "colDuration": "방송 시간",
+    "colPeakViewers": "최대 시청자",
+    "colAvgViewers": "평균 시청자",
+    "colDiamonds": "다이아몬드",
+    "colBattles": "배틀",
+    "durationMinutes": "{m}분",
+    "durationHoursMinutes": "{h}시간 {m}분"
+  },
+  "topGifters": {
+    "title": "인기 선물러",
+    "empty": "선물 데이터가 없습니다.",
+    "giftCount": "선물 {count}개"
+  },
+  "topOpponents": {
+    "title": "주요 배틀 상대",
+    "empty": "배틀 데이터가 없습니다.",
+    "wins": "{count}승",
+    "losses": "{count}패",
+    "battleCount": "배틀 {count}회"
+  },
+  "earnings": {
+    "title": "수익",
+    "empty": "수익 데이터가 없습니다.",
+    "seriesLabel": "다이아몬드"
+  },
+  "schedule": {
+    "title": "방송 시간대",
+    "mon": "월",
+    "tue": "화",
+    "wed": "수",
+    "thu": "목",
+    "fri": "금",
+    "sat": "토",
+    "sun": "일"
+  }
+}

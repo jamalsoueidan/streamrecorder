@@ -1,0 +1,73 @@
+{
+  "beta": "هذه الميزة في مرحلة تجريبية. قد تكون البيانات غير مكتملة أو تتغير بينما نواصل تحسينها.",
+  "tabs": {
+    "videos": "فيديوهات",
+    "insights": "رؤى"
+  },
+  "stats": {
+    "totalDiamonds": "إجمالي الماسات",
+    "battleDiamonds": "ماسات المعارك",
+    "nonBattleDiamonds": "ماسات خارج المعارك",
+    "battles": "المعارك",
+    "won": "فاز",
+    "lost": "خسر",
+    "winRate": "نسبة الفوز",
+    "gifters": "المُهدون",
+    "chatParticipants": "المشاركون في الدردشة"
+  },
+  "battleHistory": {
+    "title": "سجل المعارك",
+    "empty": "لا توجد معارك مسجلة حتى الآن.",
+    "colDate": "التاريخ",
+    "colType": "النوع",
+    "colOpponents": "المنافس(ون)",
+    "colScore": "النتيجة",
+    "colDiamonds": "الماسات",
+    "colResult": "الحكم",
+    "vs": "ضد",
+    "live": "مباشر",
+    "interrupted": "متوقف",
+    "won": "فاز",
+    "draw": "تعادل",
+    "lost": "خسر"
+  },
+  "streamActivity": {
+    "title": "البث الأخير",
+    "empty": "لا توجد جلسات بث متاحة.",
+    "colDate": "التاريخ",
+    "colDuration": "المدة",
+    "colPeakViewers": "أعلى عدد مشاهدين",
+    "colAvgViewers": "متوسط المشاهدين",
+    "colDiamonds": "الماسات",
+    "colBattles": "المعارك",
+    "durationMinutes": "{m} د",
+    "durationHoursMinutes": "{h} س {m} د"
+  },
+  "topGifters": {
+    "title": "أبرز المُهدين",
+    "empty": "لا تتوفر بيانات الهدايا.",
+    "giftCount": "{count} هدايا"
+  },
+  "topOpponents": {
+    "title": "أبرز المنافسين",
+    "empty": "لا تتوفر بيانات المعارك.",
+    "wins": "{count} ف",
+    "losses": "{count} خ",
+    "battleCount": "{count} معارك"
+  },
+  "earnings": {
+    "title": "الأرباح",
+    "empty": "لا تتوفر بيانات الأرباح.",
+    "seriesLabel": "الماسات"
+  },
+  "schedule": {
+    "title": "أوقات البث المباشر",
+    "mon": "اثن",
+    "tue": "ثلا",
+    "wed": "أرب",
+    "thu": "خمي",
+    "fri": "جمع",
+    "sat": "سبت",
+    "sun": "أحد"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "beta": "İstatistikler şu an beta aşamasındadır. Geliştirmeye devam ederken veriler eksik ya da değişebilir.",
+  "tabs": {
+    "videos": "Videolar",
+    "insights": "İstatistikler"
+  },
+  "stats": {
+    "totalDiamonds": "Toplam Elmas",
+    "battleDiamonds": "Savaşlardan Kazanılan Elmas",
+    "nonBattleDiamonds": "Savaş Dışı Elmas",
+    "battles": "Savaşlar",
+    "won": "Kazandı",
+    "lost": "Kaybetti",
+    "winRate": "Kazanma Oranı",
+    "gifters": "Hediye Gönderenler",
+    "chatParticipants": "Sohbet Katılımcıları"
+  },
+  "battleHistory": {
+    "title": "Savaş Geçmişi",
+    "empty": "Henüz kayıtlı savaş bulunmuyor.",
+    "colDate": "Tarih",
+    "colType": "Tür",
+    "colOpponents": "Rakip(ler)",
+    "colScore": "Skor",
+    "colDiamonds": "Elmas",
+    "colResult": "Sonuç",
+    "vs": "vs",
+    "live": "CANLI",
+    "interrupted": "Yarıda Kesildi",
+    "won": "Kazandı",
+    "draw": "Berabere",
+    "lost": "Kaybetti"
+  },
+  "streamActivity": {
+    "title": "Son Yayınlar",
+    "empty": "Henüz yayın kaydı bulunmuyor.",
+    "colDate": "Tarih",
+    "colDuration": "Süre",
+    "colPeakViewers": "En Yüksek İzleyici",
+    "colAvgViewers": "Ort. İzleyici",
+    "colDiamonds": "Elmas",
+    "colBattles": "Savaş",
+    "durationMinutes": "{m} dk",
+    "durationHoursMinutes": "{h} sa {m} dk"
+  },
+  "topGifters": {
+    "title": "En Çok Hediye Gönderenler",
+    "empty": "Henüz hediye verisi bulunmuyor.",
+    "giftCount": "{count} hediye"
+  },
+  "topOpponents": {
+    "title": "Sık Karşılaşılan Rakipler",
+    "empty": "Henüz savaş verisi bulunmuyor.",
+    "wins": "{count}G",
+    "losses": "{count}M",
+    "battleCount": "{count} savaş"
+  },
+  "earnings": {
+    "title": "Kazanç",
+    "empty": "Henüz kazanç verisi bulunmuyor.",
+    "seriesLabel": "Elmas"
+  },
+  "schedule": {
+    "title": "Yayın Saatleri",
+    "mon": "Pzt",
+    "tue": "Sal",
+    "wed": "Çar",
+    "thu": "Per",
+    "fri": "Cum",
+    "sat": "Cmt",
+    "sun": "Paz"
+  }
+}
