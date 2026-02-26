@@ -65,16 +65,17 @@ export default async function InsightsPage({ params }: PageProps) {
           <StatsOverview statsPromise={statsPromise} />
         </Suspense>
 
-        <Suspense fallback={<Skeleton h={160} radius="md" />}>
-          <ScheduleChart schedulePromise={schedulePromise} />
-        </Suspense>
+        <SimpleGrid cols={{ base: 1, md: 2 }} spacing="lg">
+          <Suspense fallback={<Skeleton h={160} radius="md" />}>
+            <ScheduleChart schedulePromise={schedulePromise} />
+          </Suspense>
+          <Suspense fallback={<Skeleton h={280} radius="md" />}>
+            <EarningsChart earningsPromise={earningsPromise} />
+          </Suspense>
+        </SimpleGrid>
 
         <Suspense fallback={<Skeleton h={200} radius="md" />}>
           <StreamActivity username={decodedUsername} activityPromise={activityPromise} />
-        </Suspense>
-
-        <Suspense fallback={<Skeleton h={280} radius="md" />}>
-          <EarningsChart earningsPromise={earningsPromise} />
         </Suspense>
 
         <Suspense fallback={<Skeleton h={200} radius="md" />}>
