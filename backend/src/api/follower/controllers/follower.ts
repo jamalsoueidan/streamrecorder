@@ -117,12 +117,7 @@ export default factories.createCoreController(
         });
       };
 
-      // Main query - select all follower fields + avatar + stats
-      let query = knex("followers as f")
-        .select(
-          "f.*",
-          "fol.user_id as owner_id",
-          knex.raw(`(
+      const avatarSubquery = knex.raw(`(
       SELECT files.url
       FROM files_related_mph frm
       JOIN files ON files.id = frm.file_id
@@ -130,62 +125,33 @@ export default factories.createCoreController(
       AND frm.related_type = 'api::follower.follower'
       AND frm.field = 'avatar'
       LIMIT 1
-    ) as avatar_url`),
-          knex.raw("COUNT(DISTINCT vr.recording_id) as total_recordings"),
-          knex.raw("MAX(vr.created_at) as latest_recording"),
-        )
-        .leftJoin("followers_owner_lnk as fol", "fol.follower_id", "f.id")
-        .leftJoin(
-          knex("recordings as r")
-            .select("r.id as recording_id", "r.created_at", "rf.follower_id")
-            .innerJoin(
-              "recordings_follower_lnk as rf",
-              "rf.recording_id",
-              "r.id",
-            )
-            .innerJoin(
-              "sources_recording_lnk as srl",
-              "srl.recording_id",
-              "r.id",
-            )
-            .innerJoin("sources as s", "srl.source_id", "s.id")
-            .where("s.state", "!=", "failed")
-            .groupBy("r.id", "r.created_at", "rf.follower_id")
-            .as("vr"),
-          "vr.follower_id",
-          "f.id",
-        )
-        .groupBy("f.id", "fol.user_id");
+    ) as avatar_url`);
 
-      // Apply base filters
-      query = applyBaseFilters(query);
+      const buildVrSubquery = (ids?: number[]) => {
+        let vr = knex("recordings as r")
+          .select("r.id as recording_id", "r.created_at", "rf.follower_id")
+          .innerJoin("recordings_follower_lnk as rf", "rf.recording_id", "r.id")
+          .innerJoin("sources_recording_lnk as srl", "srl.recording_id", "r.id")
+          .innerJoin("sources as s", "srl.source_id", "s.id")
+          .where("s.state", "!=", "failed")
+          .groupBy("r.id", "r.created_at", "rf.follower_id");
+        if (ids) vr = vr.whereIn("rf.follower_id", ids);
+        return vr.as("vr");
+      };
 
-      // hasRecordings - use HAVING for main query
-      if (hasRecordings) {
-        query = query.having(knex.raw("COUNT(DISTINCT vr.recording_id) > 0"));
-      }
-
-      // Sort
-      switch (sortField) {
-        case "totalRecordings":
-          query = query.orderByRaw(
-            `COUNT(DISTINCT vr.recording_id) ${sortDirection}, f.id ASC`,
-          );
-          break;
-        case "latestRecording":
-          query = query.orderByRaw(
-            `MAX(vr.created_at) ${sortDirection} NULLS LAST, f.id ASC`,
-          );
-          break;
-        case "username":
-          query = query.orderByRaw(`f.username ${sortDirection}, f.id ASC`);
-          break;
-        default:
-          query = query.orderByRaw(`f.created_at ${sortDirection}, f.id ASC`);
-      }
-
-      // Pagination
-      query = query.limit(pageSize).offset(offset);
+      const buildDataQuery = (ids: number[]) =>
+        knex("followers as f")
+          .select(
+            "f.*",
+            "fol.user_id as owner_id",
+            avatarSubquery,
+            knex.raw("COUNT(DISTINCT vr.recording_id) as total_recordings"),
+            knex.raw("MAX(vr.created_at) as latest_recording"),
+          )
+          .leftJoin("followers_owner_lnk as fol", "fol.follower_id", "f.id")
+          .leftJoin(buildVrSubquery(ids), "vr.follower_id", "f.id")
+          .whereIn("f.id", ids)
+          .groupBy("f.id", "fol.user_id");
 
       // Count query - separate, no GROUP BY
       let countQuery = knex("followers as f").countDistinct("f.id as total");
@@ -194,12 +160,103 @@ export default factories.createCoreController(
         countQuery = applyHasRecordingsExists(countQuery);
       }
 
-      // Execute both
-      const [rows, countResult] = await Promise.all([
-        query,
-        countQuery.first(),
-      ]);
-      const total = Number(countResult?.total || 0);
+      let rows: any[];
+      let total: number;
+
+      const needsAggregateSort =
+        sortField === "totalRecordings" || sortField === "latestRecording";
+
+      if (needsAggregateSort) {
+        // Can't split — sort depends on aggregates, must compute everything at once
+        let query = knex("followers as f")
+          .select(
+            "f.*",
+            "fol.user_id as owner_id",
+            avatarSubquery,
+            knex.raw("COUNT(DISTINCT vr.recording_id) as total_recordings"),
+            knex.raw("MAX(vr.created_at) as latest_recording"),
+          )
+          .leftJoin("followers_owner_lnk as fol", "fol.follower_id", "f.id")
+          .leftJoin(buildVrSubquery(), "vr.follower_id", "f.id")
+          .groupBy("f.id", "fol.user_id");
+
+        query = applyBaseFilters(query);
+
+        if (hasRecordings) {
+          query = query.having(knex.raw("COUNT(DISTINCT vr.recording_id) > 0"));
+        }
+
+        if (sortField === "totalRecordings") {
+          query = query.orderByRaw(
+            `COUNT(DISTINCT vr.recording_id) ${sortDirection}, f.id ASC`,
+          );
+        } else {
+          query = query.orderByRaw(
+            `MAX(vr.created_at) ${sortDirection} NULLS LAST, f.id ASC`,
+          );
+        }
+
+        query = query.limit(pageSize).offset(offset);
+
+        const [queryRows, countResult] = await Promise.all([
+          query,
+          countQuery.first(),
+        ]);
+        rows = queryRows;
+        total = Number(countResult?.total || 0);
+      } else {
+        // Two-stage: Stage 1 gets IDs fast, Stage 2 computes stats only for those IDs
+        let idQuery = knex("followers as f")
+          .select("f.id")
+          .leftJoin("followers_owner_lnk as fol", "fol.follower_id", "f.id");
+
+        idQuery = applyBaseFilters(idQuery);
+
+        if (hasRecordings) {
+          idQuery = applyHasRecordingsExists(idQuery);
+        }
+
+        if (sortField === "username") {
+          idQuery = idQuery.orderByRaw(`f.username ${sortDirection}, f.id ASC`);
+        } else {
+          idQuery = idQuery.orderByRaw(
+            `f.created_at ${sortDirection}, f.id ASC`,
+          );
+        }
+
+        idQuery = idQuery.limit(pageSize).offset(offset);
+
+        const [idRows, countResult] = await Promise.all([
+          idQuery,
+          countQuery.first(),
+        ]);
+
+        total = Number(countResult?.total || 0);
+
+        if (idRows.length === 0) {
+          return {
+            data: [],
+            meta: { pagination: { page, pageSize, pageCount: 0, total: 0 } },
+          };
+        }
+
+        const pagedIds = idRows.map((r: any) => r.id);
+
+        // Stage 2: full data only for the 25 paginated IDs
+        let dataQuery = buildDataQuery(pagedIds);
+
+        if (sortField === "username") {
+          dataQuery = dataQuery.orderByRaw(
+            `f.username ${sortDirection}, f.id ASC`,
+          );
+        } else {
+          dataQuery = dataQuery.orderByRaw(
+            `f.created_at ${sortDirection}, f.id ASC`,
+          );
+        }
+
+        rows = await dataQuery;
+      }
 
       if (rows.length === 0) {
         return {
@@ -213,28 +270,49 @@ export default factories.createCoreController(
       // Fetch recordings if needed (discover only)
       let recordingsMap = new Map<number | string, any[]>();
       if (includeRecordings) {
-        const recordings = await strapi
-          .documents("api::recording.recording")
-          .findMany({
-            filters: { follower: { id: { $in: followerIds } } },
-            populate: {
-              sources: {
-                filters: { state: { $ne: "failed" } },
-                populate: ["videoSmall", "videoOriginal"],
-              },
-              follower: { fields: ["id"] },
-            },
-            sort: { createdAt: "desc" },
-          });
+        const placeholders = followerIds.map(() => "?").join(", ");
+        const result = await knex.raw(
+          `
+          WITH ranked AS (
+            SELECT
+              r.id,
+              r.document_id,
+              r.created_at,
+              rf.follower_id,
+              ROW_NUMBER() OVER (PARTITION BY rf.follower_id ORDER BY r.created_at DESC) AS rn
+            FROM recordings r
+            INNER JOIN recordings_follower_lnk rf ON rf.recording_id = r.id
+            WHERE rf.follower_id IN (${placeholders})
+              AND EXISTS (
+                SELECT 1 FROM sources_recording_lnk srl
+                JOIN sources s ON srl.source_id = s.id
+                WHERE srl.recording_id = r.id AND s.state != 'failed'
+              )
+          )
+          SELECT
+            ranked.document_id,
+            ranked.created_at,
+            ranked.follower_id,
+            json_agg(json_build_object('documentId', s.document_id, 'state', s.state)) AS sources
+          FROM ranked
+          INNER JOIN sources_recording_lnk srl ON srl.recording_id = ranked.id
+          INNER JOIN sources s ON srl.source_id = s.id
+          WHERE ranked.rn <= 5
+            AND s.state != 'failed'
+          GROUP BY ranked.document_id, ranked.created_at, ranked.follower_id
+          `,
+          followerIds,
+        );
 
-        for (const rec of recordings) {
-          if (rec.sources?.length > 0) {
-            const fId = rec.follower?.id;
-            if (!recordingsMap.has(fId)) recordingsMap.set(fId, []);
-            if (recordingsMap.get(fId)!.length < 5) {
-              recordingsMap.get(fId)!.push(rec);
-            }
-          }
+        for (const row of result.rows) {
+          const rec = {
+            documentId: row.document_id,
+            createdAt: row.created_at,
+            sources: row.sources,
+          };
+          const fId = row.follower_id;
+          if (!recordingsMap.has(fId)) recordingsMap.set(fId, []);
+          recordingsMap.get(fId)!.push(rec);
         }
       }
 
