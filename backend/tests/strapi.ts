@@ -1,6 +1,5 @@
 import type { Core } from "@strapi/strapi";
 import { createStrapi } from "@strapi/strapi";
-import fs from "fs";
 import path from "path";
 import { Client } from "pg";
 import request from "supertest";
@@ -8,7 +7,6 @@ import request from "supertest";
 let instance: Core.Strapi | null = null;
 
 const TEST_DB_NAME = "streamrecorder_test";
-const isCI = process.env.CI === "true";
 
 // Set test environment
 process.env.NODE_ENV = "test";
@@ -22,20 +20,6 @@ process.env.RESEND_API_KEY = "re_ABasdsadsadsad";
 export type RoleType = "authenticated" | "premium" | "champion" | "public";
 
 async function createTestDatabase() {
-  if (isCI) {
-    // SQLite in CI - ensure .tmp directory exists
-    const tmpDir = path.resolve(__dirname, "..", ".tmp");
-    if (!fs.existsSync(tmpDir)) {
-      fs.mkdirSync(tmpDir, { recursive: true });
-    }
-    const dbPath = path.resolve(tmpDir, "test.db");
-    if (fs.existsSync(dbPath)) {
-      fs.unlinkSync(dbPath);
-    }
-    return;
-  }
-
-  // PostgreSQL locally
   const client = new Client({
     host: process.env.DATABASE_HOST || "localhost",
     port: Number(process.env.DATABASE_PORT) || 5432,
@@ -51,14 +35,6 @@ async function createTestDatabase() {
 }
 
 async function dropTestDatabase() {
-  if (isCI) {
-    const dbPath = path.resolve(__dirname, "..", ".tmp", "test.db");
-    if (fs.existsSync(dbPath)) {
-      fs.unlinkSync(dbPath);
-    }
-    return;
-  }
-
   const client = new Client({
     host: process.env.DATABASE_HOST || "localhost",
     port: Number(process.env.DATABASE_PORT) || 5432,
