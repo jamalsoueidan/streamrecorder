@@ -42,9 +42,8 @@ export default function ProfileRecordings() {
           pageParam,
         ),
       initialPageParam: 1,
-      getNextPageParam: (lastPage) => {
-        const { page = 1, pageCount = 0 } = lastPage.meta?.pagination ?? {};
-        return page < pageCount ? page + 1 : undefined;
+      getNextPageParam: (lastPage, allPages) => {
+        return lastPage.data.length === 15 ? allPages.length + 1 : undefined;
       },
     });
 

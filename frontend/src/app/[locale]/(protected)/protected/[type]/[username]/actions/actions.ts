@@ -98,6 +98,7 @@ export async function fetchProfileRecordings(
       sort: filters.sort,
       "pagination[page]": page,
       "pagination[pageSize]": 15,
+      "pagination[withCount]": false,
     }),
   );
 
