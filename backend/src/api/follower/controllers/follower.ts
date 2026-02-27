@@ -12,7 +12,16 @@ export default factories.createCoreController(
       const sort = ctx.query.sort as string | undefined;
       const includeRecordings = scope === "discover";
 
-      const sortField = sort?.split(":")[0] || "createdAt";
+      const ALLOWED_SORT_FIELDS = new Set([
+        "createdAt",
+        "username",
+        "totalRecordings",
+        "latestRecording",
+      ]);
+      const rawSortField = sort?.split(":")[0] || "createdAt";
+      const sortField = ALLOWED_SORT_FIELDS.has(rawSortField)
+        ? rawSortField
+        : "createdAt";
       const sortDirection = sort?.includes(":desc") ? "DESC" : "ASC";
 
       const knex = strapi.db.connection;
@@ -167,7 +176,7 @@ export default factories.createCoreController(
         sortField === "totalRecordings" || sortField === "latestRecording";
 
       if (needsAggregateSort) {
-        // Can't split — sort depends on aggregates, must compute everything at once
+        // Aggregate sort requires computing counts for all matching followers first
         let query = knex("followers as f")
           .select(
             "f.*",
@@ -236,13 +245,20 @@ export default factories.createCoreController(
         if (idRows.length === 0) {
           return {
             data: [],
-            meta: { pagination: { page, pageSize, pageCount: 0, total: 0 } },
+            meta: {
+              pagination: {
+                page,
+                pageSize,
+                pageCount: Math.ceil(total / pageSize),
+                total,
+              },
+            },
           };
         }
 
         const pagedIds = idRows.map((r: any) => r.id);
 
-        // Stage 2: full data only for the 25 paginated IDs
+        // Stage 2: full data only for the paginated IDs
         let dataQuery = buildDataQuery(pagedIds);
 
         if (sortField === "username") {
@@ -261,7 +277,14 @@ export default factories.createCoreController(
       if (rows.length === 0) {
         return {
           data: [],
-          meta: { pagination: { page, pageSize, pageCount: 0, total: 0 } },
+          meta: {
+            pagination: {
+              page,
+              pageSize,
+              pageCount: Math.ceil(total / pageSize),
+              total,
+            },
+          },
         };
       }
 
@@ -300,6 +323,7 @@ export default factories.createCoreController(
           WHERE ranked.rn <= 5
             AND s.state != 'failed'
           GROUP BY ranked.document_id, ranked.created_at, ranked.follower_id
+          ORDER BY ranked.created_at DESC
           `,
           followerIds,
         );
