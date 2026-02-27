@@ -60,7 +60,6 @@ export default function VideoEditor({ recording }: Props) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const timeRangeRef = useRef<HTMLElement>(null);
   const timeDisplayRef = useRef<HTMLElement>(null);
-  const seekWrapperRef = useRef<HTMLDivElement>(null);
 
   const [duration, setDuration] = useState(0);
   const [startTime, setStartTime] = useState(0);
@@ -72,7 +71,7 @@ export default function VideoEditor({ recording }: Props) {
   const profileUrl = getProfileUrl({ username: params.username, type: params.type as any });
   const clipDuration = endTime - startTime;
 
-  // Use refs so the event listener below always sees current values without re-registration
+  // Stable refs so event listeners don't need re-registration when values change
   const startTimeRef = useRef(startTime);
   const clipDurationRef = useRef(clipDuration);
   useEffect(() => { startTimeRef.current = startTime; }, [startTime]);
@@ -113,17 +112,20 @@ export default function VideoEditor({ recording }: Props) {
     return () => video.removeEventListener("timeupdate", handleTimeUpdate);
   }, [startTime, endTime]);
 
-  // Intercept mediaseekrequest from MediaTimeRange and translate to absolute video time.
-  // Registered once — uses refs internally so no re-registration needed.
+  // MediaTimeRange is OUTSIDE the MediaController so the controller can never push
+  // its own mediacurrenttime/mediaduration onto it. Our useLayoutEffect is the sole writer.
+  // We still intercept mediaseekrequest here and translate to absolute video time.
   useEffect(() => {
-    const el = seekWrapperRef.current;
+    const el = timeRangeRef.current;
     if (!el) return;
 
     const handleSeekRequest = (e: Event) => {
       e.stopPropagation();
+      e.preventDefault();
       const video = videoRef.current;
       if (!video) return;
       const seekTo = (e as CustomEvent).detail.seekTo as number;
+      if (!isFinite(seekTo)) return;
       video.currentTime = startTimeRef.current + Math.max(0, Math.min(clipDurationRef.current, seekTo));
     };
 
@@ -131,17 +133,15 @@ export default function VideoEditor({ recording }: Props) {
     return () => el.removeEventListener("mediaseekrequest", handleSeekRequest);
   }, []);
 
-  // After every render, override media-chrome's automatic attributes with clip-relative values.
-  // useLayoutEffect runs before paint, so the controller's writes (which happen on timeupdate)
-  // are overwritten before the browser draws the frame — no visible flicker.
+  // After every render, push clip-relative values onto the detached time elements.
+  // Since they're outside the MediaController, nothing races against these writes.
   useLayoutEffect(() => {
     const tr = timeRangeRef.current as any;
     const td = timeDisplayRef.current as any;
-    const seekable = `0:${clipDuration}`;
     if (tr) {
       tr.setAttribute("mediacurrenttime", String(clipCurrentTime));
       tr.setAttribute("mediaduration", String(clipDuration));
-      tr.setAttribute("mediaseekable", seekable);
+      tr.setAttribute("mediaseekable", `0:${clipDuration}`);
     }
     if (td) {
       td.setAttribute("mediacurrenttime", String(clipCurrentTime));
@@ -219,33 +219,41 @@ export default function VideoEditor({ recording }: Props) {
         )}
       </Group>
 
-      {/* Video Player — native media-chrome controls show clip-relative time */}
-      <Box mx="auto" style={{ aspectRatio: "9/16", maxHeight: "55vh", width: "auto", borderRadius: "var(--mantine-radius-md)", overflow: "hidden", background: "#000" }}>
+      {/* Video Player
+          MediaTimeRange and MediaTimeDisplay live OUTSIDE the MediaController so the
+          controller's MutationObserver never registers them as state receivers.
+          Our useLayoutEffect is therefore the sole writer of their media attributes. */}
+      <Box mx="auto" style={{ width: "fit-content", borderRadius: "var(--mantine-radius-md)", overflow: "hidden", background: "#000" }}>
         <style>{`
           media-controller:not([mediapaused]) media-play-button[slot="centered-chrome"] { display: none !important; }
           media-controller[mediapaused] media-loading-indicator[slot="centered-chrome"] { display: none !important; }
         `}</style>
-        <MediaController style={{ width: "100%", height: "100%", background: "#000" }}>
-          <HlsVideo ref={videoRef} src={`/video/${recording.documentId}/playlist.m3u8`} slot="media" playsInline>
-            <track default kind="metadata" label="thumbnails" src={`/video/${recording.documentId}/thumbnails.vtt`} />
-          </HlsVideo>
-          <MediaPlayButton slot="centered-chrome" />
-          <MediaLoadingIndicator slot="centered-chrome" />
-          <MediaControlBar>
-            <MediaPlayButton />
-            <MediaSeekBackwardButton seekoffset="10" />
-            <MediaSeekForwardButton seekoffset="10" />
-            {/* Wrapper intercepts seek requests and translates to absolute video time */}
-            <div ref={seekWrapperRef} style={{ display: "contents" }}>
-              <MediaTimeRange ref={timeRangeRef as any} />
-              <MediaTimeDisplay showduration ref={timeDisplayRef as any} />
-            </div>
-            <div className="volume-hover-container">
-              <MediaVolumeRange />
-              <MediaMuteButton title="" />
-            </div>
-          </MediaControlBar>
-        </MediaController>
+
+        {/* Video portion — no time range inside */}
+        <Box style={{ aspectRatio: "9/16", maxHeight: "52vh", width: "auto" }}>
+          <MediaController style={{ width: "100%", height: "100%", background: "#000" }}>
+            <HlsVideo ref={videoRef} src={`/video/${recording.documentId}/playlist.m3u8`} slot="media" playsInline>
+              <track default kind="metadata" label="thumbnails" src={`/video/${recording.documentId}/thumbnails.vtt`} />
+            </HlsVideo>
+            <MediaPlayButton slot="centered-chrome" />
+            <MediaLoadingIndicator slot="centered-chrome" />
+            <MediaControlBar>
+              <MediaPlayButton />
+              <MediaSeekBackwardButton seekoffset="10" />
+              <MediaSeekForwardButton seekoffset="10" />
+              <div className="volume-hover-container">
+                <MediaVolumeRange />
+                <MediaMuteButton title="" />
+              </div>
+            </MediaControlBar>
+          </MediaController>
+        </Box>
+
+        {/* Detached time bar — outside MediaController, we own mediacurrenttime 100% */}
+        <div style={{ display: "flex", alignItems: "center", padding: "2px 8px 4px", gap: 4, background: "#000" }}>
+          <MediaTimeRange ref={timeRangeRef as any} style={{ flex: 1 }} />
+          <MediaTimeDisplay showduration ref={timeDisplayRef as any} />
+        </div>
       </Box>
 
       {/* Clip Range */}
