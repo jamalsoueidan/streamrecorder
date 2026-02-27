@@ -131,7 +131,7 @@ export default function FollowerItem({ follower }: Props) {
                     />
 
                     <Group justify="space-between">
-                      <Text size="xs" suppressHydrationWarning>
+                      <Text size="sm" suppressHydrationWarning>
                         {isRecording
                           ? t("recordings.liveAgo", {
                               time: safeRelativeTime(format, rec.createdAt, {
@@ -139,10 +139,9 @@ export default function FollowerItem({ follower }: Props) {
                                 now,
                               }),
                             })
-                          : t("recordings.recordedAgo", {
-                              time: safeRelativeTime(format, rec.createdAt, {
-                                now,
-                              }),
+                          : format.dateTime(new Date(rec.createdAt || ""), {
+                              dateStyle: "medium",
+                              timeStyle: "short",
                             })}
                       </Text>
                       <RecordingMenu

@@ -190,7 +190,7 @@ export default function FollowerItem({ follower, isOpen }: Props) {
                     </Box>
 
                     <Group justify="space-between" align="center">
-                      <Text size="xs" suppressHydrationWarning>
+                      <Text size="sm" suppressHydrationWarning>
                         {isRecording
                           ? t("recordings.liveAgo", {
                               time: safeRelativeTime(format, rec.createdAt, {
@@ -198,10 +198,9 @@ export default function FollowerItem({ follower, isOpen }: Props) {
                                 now,
                               }),
                             })
-                          : t("recordings.recordedAgo", {
-                              time: safeRelativeTime(format, rec.createdAt, {
-                                now,
-                              }),
+                          : format.dateTime(new Date(rec.createdAt || ""), {
+                              dateStyle: "medium",
+                              timeStyle: "short",
                             })}
                       </Text>
 
