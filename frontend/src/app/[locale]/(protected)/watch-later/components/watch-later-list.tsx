@@ -84,7 +84,7 @@ export default function WatchLaterList({ initialIds }: Props) {
                 />
               ) : null}
 
-              <Group justify="space-between">
+              <Group justify="space-between" align="center">
                 <Text size="xs" suppressHydrationWarning>
                   {isRecording
                     ? tCommon("liveAgo", {
@@ -93,10 +93,9 @@ export default function WatchLaterList({ initialIds }: Props) {
                           now,
                         }),
                       })
-                    : tCommon("recordedAgo", {
-                        time: safeRelativeTime(format, rec.createdAt, {
-                          now,
-                        }),
+                    : format.dateTime(new Date(rec.createdAt || ""), {
+                        dateStyle: "medium",
+                        timeStyle: "short",
                       })}
                 </Text>
                 <RecordingMenu
