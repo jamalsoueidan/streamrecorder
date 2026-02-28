@@ -163,11 +163,14 @@ export function CustomSlider({
     <Box py="md" px={20}>
       {/* Outer container for positioning */}
       <Box ref={containerRef} style={{ position: "relative", height: 142 }}>
-        {/* Thumbnail filmstrip background */}
+        {/* Thumbnail filmstrip background - full width */}
         <Box
           style={{
             position: "absolute",
-            inset: 0,
+            top: 0,
+            left: -20,
+            right: -20,
+            height: "100%",
             background: "#333",
             overflow: "hidden",
             borderRadius: 6,
@@ -218,9 +221,9 @@ export function CustomSlider({
           <Box
             style={{
               position: "absolute",
-              left: 0,
+              left: -20,
               top: 0,
-              width: `${startPercent}%`,
+              width: `calc(${startPercent}% + 20px)`,
               height: "100%",
               background: "rgba(0, 0, 0, 0.8)",
               borderRadius: "6px 0 0 6px",
@@ -237,7 +240,7 @@ export function CustomSlider({
               position: "absolute",
               left: `${endPercent}%`,
               top: 0,
-              width: `${100 - endPercent}%`,
+              width: `calc(${100 - endPercent}% + 20px)`,
               height: "100%",
               background: "rgba(0, 0, 0, 0.8)",
               borderRadius: "0 6px 6px 0",
