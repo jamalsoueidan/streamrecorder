@@ -85,6 +85,7 @@
     "badge": "今月 {used} / {total} 回",
     "limitReachedNote": "今月の上限に達しました · {date} にリセット",
     "alertTitle": "今月の上限に達しました",
-    "alertBody": "今月の AI 生成 {total} 回をすべて使い切りました。{date} にリセットされます。"
+    "alertBody": "今月の AI 生成 {total} 回をすべて使い切りました。{date} にリセットされます。",
+    "editButton": "自分で動画を編集"
   }
 }

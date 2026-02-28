@@ -85,6 +85,7 @@
     "badge": "{used} / {total} bulan ini",
     "limitReachedNote": "Batas tercapai · diperbarui {date}",
     "alertTitle": "Batas bulanan tercapai",
-    "alertBody": "Kamu sudah menggunakan semua {total} generasi AI bulan ini. Batasmu diperbarui pada {date}."
+    "alertBody": "Kamu sudah menggunakan semua {total} generasi AI bulan ini. Batasmu diperbarui pada {date}.",
+    "editButton": "Edit video sendiri"
   }
 }

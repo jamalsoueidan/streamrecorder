@@ -1,12 +1,12 @@
 "use client";
 
+import { CreatorUpgradeModal } from "@/app/[locale]/(protected)/components/creator-upgrade-modal";
 import {
   checkUser,
   PlatformType,
   UserSearchResult,
 } from "@/app/actions/check-user";
 import { follow } from "@/app/actions/followers";
-import { CreatorUpgradeModal } from "@/app/[locale]/(protected)/components/creator-upgrade-modal";
 import { getProfileUrl } from "@/app/components/open-social";
 import { trackEvent } from "@/app/lib/analytics";
 import { parseUsername } from "@/app/lib/parse-username";
@@ -32,6 +32,7 @@ import {
   Title,
   Tooltip,
   UnstyledButton,
+  useMatches,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { notifications } from "@mantine/notifications";
@@ -61,7 +62,8 @@ type SearchStep = "input" | "selectPlatform" | "results";
 export default function Page() {
   const t = useTranslations("protected.search");
   const tCommon = useTranslations("protected.common");
-  const [upgradeOpened, { open: openUpgrade, close: closeUpgrade }] = useDisclosure(false);
+  const [upgradeOpened, { open: openUpgrade, close: closeUpgrade }] =
+    useDisclosure(false);
   const [query, setQuery] = useState("");
   const [parsedUsername, setParsedUsername] = useState("");
   const [step, setStep] = useState<SearchStep>("input");
@@ -75,6 +77,10 @@ export default function Page() {
   const [selectedPlatform, setSelectedPlatform] = useState<PlatformType | null>(
     null,
   );
+  const isMobile = useMatches({
+    base: true,
+    sm: false,
+  });
   const cancelSearchRef = useRef(false);
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -421,168 +427,171 @@ export default function Page() {
       <CreatorUpgradeModal opened={upgradeOpened} onClose={closeUpgrade} />
 
       <Stack w="100%">
-      <Group justify="space-between" w="100%">
-        <Stack gap={2}>
-          <Group gap="xs">
-            <IconSearch size={32} />
-            <Title order={1} size="h3">
-              {t("title")}
-            </Title>
-          </Group>
-          <Text size="sm" c="dimmed">
-            {t("description")}
-          </Text>
-        </Stack>
-        <Group gap="lg" justify="center">
-          {streamingPlatforms.map((platform) => (
-            <Tooltip key={platform.name} label={platform.name}>
-              <Image
-                src={platform.file}
-                alt={platform.name}
-                w={24}
-                h={24}
-                style={{ opacity: 0.5, filter: "brightness(0) invert(1)" }}
-              />
-            </Tooltip>
-          ))}
-        </Group>
-      </Group>
-
-      <Divider mx={{ base: "-xs", sm: "-md" }} />
-
-      <Card
-        p={{ base: "xs", sm: "lg" }}
-        radius="lg"
-        withBorder
-        bg="transparent"
-      >
-        <form onSubmit={handleSubmit}>
-          <Stack gap="xs">
-            <Text size="md" c="white" fw={500}>
-              {t("search.enterUsername")}
-            </Text>
-            <Group gap="xs" align="flex-end">
-              <TextInput
-                ref={inputRef}
-                flex={1}
-                value={query}
-                c="white"
-                size="md"
-                radius="md"
-                autoFocus
-                disabled={step !== "input"}
-                onChange={(e) => setQuery(e.currentTarget.value)}
-                onPaste={(e) => {
-                  const text = e.clipboardData.getData("text");
-                  if (text?.trim()) {
-                    e.preventDefault();
-                    setQuery(text);
-                    handleSubmit(undefined, text);
-                  }
-                }}
-                rightSectionPointerEvents="auto"
-                rightSectionWidth={
-                  step !== "input" ? 42 : query.trim().length === 0 ? 100 : 42
-                }
-                rightSection={
-                  step !== "input" ? (
-                    <ActionIcon
-                      variant="subtle"
-                      size="lg"
-                      radius="xl"
-                      color="gray.6"
-                      onClick={resetSearch}
-                    >
-                      <IconX />
-                    </ActionIcon>
-                  ) : query.trim().length === 0 ? (
-                    <Button
-                      variant="subtle"
-                      size="compact-lg"
-                      color="gray.6"
-                      leftSection={<IconClipboard size={14} />}
-                      onClick={async () => {
-                        try {
-                          const text = await navigator.clipboard.readText();
-                          if (text?.trim()) {
-                            setQuery(text);
-                            handleSubmit(undefined, text);
-                          }
-                        } catch {
-                          notifications.show({
-                            message: t("search.pasteError"),
-                            color: "yellow",
-                          });
-                        }
-                      }}
-                    >
-                      {t("search.pasteButton")}
-                    </Button>
-                  ) : (
-                    <ActionIcon
-                      variant="subtle"
-                      size="lg"
-                      radius="xl"
-                      color="gray.6"
-                      onClick={() => setQuery("")}
-                    >
-                      <IconX />
-                    </ActionIcon>
-                  )
-                }
-              />
-              {step === "input" && (
-                <Button
-                  type="submit"
-                  size="md"
-                  radius="md"
-                  disabled={!query.trim()}
-                  leftSection={<IconSearch size={20} />}
-                >
-                  {t("search.submitButton")}
-                </Button>
-              )}
+        <Group justify="space-between" w="100%">
+          <Stack gap={2}>
+            <Group gap="xs">
+              <IconSearch size={32} />
+              <Title order={1} size="h3">
+                {t("title")}
+              </Title>
             </Group>
-
-            {step === "input" && (
-              <Group gap="xs">
-                <Text size="xs" c="dimmed">
-                  {t("hints.tryFormats")}
-                </Text>
-                <Badge
-                  variant="outline"
-                  style={{ cursor: "pointer" }}
-                  onClick={() => {
-                    setQuery("mrbeast");
-                    handleSubmit(undefined, "mrbeast");
-                  }}
-                >
-                  mrbeast
-                </Badge>
-                <Badge
-                  variant="outline"
-                  style={{ cursor: "pointer" }}
-                  onClick={() => {
-                    setQuery("https://www.tiktok.com/@mrbeast");
-                    handleSubmit(undefined, "https://www.tiktok.com/@mrbeast");
-                  }}
-                >
-                  https://www.tiktok.com/@mrbeast
-                </Badge>
-              </Group>
-            )}
-
-            {searchError && step === "input" && (
-              <Text size="sm" c="red" ta="center">
-                {searchError}
-              </Text>
-            )}
+            <Text size="sm" c="dimmed">
+              {t("description")}
+            </Text>
           </Stack>
-        </form>
-      </Card>
+          <Group gap="lg" justify="center">
+            {streamingPlatforms.map((platform) => (
+              <Tooltip key={platform.name} label={platform.name}>
+                <Image
+                  src={platform.file}
+                  alt={platform.name}
+                  w={24}
+                  h={24}
+                  style={{ opacity: 0.5, filter: "brightness(0) invert(1)" }}
+                />
+              </Tooltip>
+            ))}
+          </Group>
+        </Group>
 
-      {renderContent()}
-    </Stack>
+        <Divider mx={{ base: "-xs", sm: "-md" }} />
+
+        <Card
+          p={{ base: "xs", sm: "lg" }}
+          radius="lg"
+          withBorder
+          bg="transparent"
+        >
+          <form onSubmit={handleSubmit}>
+            <Stack gap="xs">
+              <Text size="md" c="white" fw={500}>
+                {t("search.enterUsername")}
+              </Text>
+              <Group gap="xs" align="flex-end">
+                <TextInput
+                  ref={inputRef}
+                  flex={1}
+                  value={query}
+                  c="white"
+                  size={isMobile ? "sm" : "md"}
+                  radius="md"
+                  autoFocus
+                  disabled={step !== "input"}
+                  onChange={(e) => setQuery(e.currentTarget.value)}
+                  onPaste={(e) => {
+                    const text = e.clipboardData.getData("text");
+                    if (text?.trim()) {
+                      e.preventDefault();
+                      setQuery(text);
+                      handleSubmit(undefined, text);
+                    }
+                  }}
+                  rightSectionPointerEvents="auto"
+                  rightSectionWidth={
+                    step !== "input" ? 42 : query.trim().length === 0 ? 100 : 42
+                  }
+                  rightSection={
+                    step !== "input" ? (
+                      <ActionIcon
+                        variant="subtle"
+                        size={isMobile ? "sm" : "lg"}
+                        radius={isMobile ? "md" : "xl"}
+                        color="gray.6"
+                        onClick={resetSearch}
+                      >
+                        <IconX />
+                      </ActionIcon>
+                    ) : query.trim().length === 0 ? (
+                      <Button
+                        variant="subtle"
+                        size={isMobile ? "compact-sm" : "compact.lg"}
+                        color="gray.6"
+                        leftSection={<IconClipboard size={14} />}
+                        onClick={async () => {
+                          try {
+                            const text = await navigator.clipboard.readText();
+                            if (text?.trim()) {
+                              setQuery(text);
+                              handleSubmit(undefined, text);
+                            }
+                          } catch {
+                            notifications.show({
+                              message: t("search.pasteError"),
+                              color: "yellow",
+                            });
+                          }
+                        }}
+                      >
+                        {t("search.pasteButton")}
+                      </Button>
+                    ) : (
+                      <ActionIcon
+                        variant="subtle"
+                        size={isMobile ? "sm" : "lg"}
+                        radius={isMobile ? "md" : "xl"}
+                        color="gray.6"
+                        onClick={() => setQuery("")}
+                      >
+                        <IconX />
+                      </ActionIcon>
+                    )
+                  }
+                />
+                {step === "input" && (
+                  <Button
+                    type="submit"
+                    size={isMobile ? "sm" : "md"}
+                    radius="md"
+                    disabled={!query.trim()}
+                    leftSection={<IconSearch size={isMobile ? 14 : 20} />}
+                  >
+                    {t("search.submitButton")}
+                  </Button>
+                )}
+              </Group>
+
+              {step === "input" && (
+                <Group gap="xs">
+                  <Text size="xs" c="dimmed">
+                    {t("hints.tryFormats")}
+                  </Text>
+                  <Badge
+                    variant="outline"
+                    style={{ cursor: "pointer" }}
+                    onClick={() => {
+                      setQuery("mrbeast");
+                      handleSubmit(undefined, "mrbeast");
+                    }}
+                  >
+                    mrbeast
+                  </Badge>
+                  <Badge
+                    variant="outline"
+                    style={{ cursor: "pointer" }}
+                    onClick={() => {
+                      setQuery("https://www.tiktok.com/@mrbeast");
+                      handleSubmit(
+                        undefined,
+                        "https://www.tiktok.com/@mrbeast",
+                      );
+                    }}
+                  >
+                    https://www.tiktok.com/@mrbeast
+                  </Badge>
+                </Group>
+              )}
+
+              {searchError && step === "input" && (
+                <Text size="sm" c="red" ta="center">
+                  {searchError}
+                </Text>
+              )}
+            </Stack>
+          </form>
+        </Card>
+
+        {renderContent()}
+      </Stack>
     </>
   );
 }

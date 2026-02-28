@@ -85,6 +85,7 @@
     "badge": "{used} / {total} this month",
     "limitReachedNote": "Limit reached · resets {date}",
     "alertTitle": "Monthly limit reached",
-    "alertBody": "You've used all {total} AI generations this month. Your limit resets on {date}."
+    "alertBody": "You've used all {total} AI generations this month. Your limit resets on {date}.",
+    "editButton": "Edit video manually"
   }
 }

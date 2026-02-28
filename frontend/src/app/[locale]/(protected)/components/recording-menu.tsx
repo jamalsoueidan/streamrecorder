@@ -134,11 +134,7 @@ export function RecordingMenu({
         <Menu.Dropdown>
           <Menu.Item
             leftSection={
-              inWatchLater ? (
-                <IconBookmarkFilled size={14} />
-              ) : (
-                <IconBookmark size={14} />
-              )
+              inWatchLater ? <IconBookmarkFilled /> : <IconBookmark />
             }
             onClick={handleToggleWatchLater}
           >
@@ -148,7 +144,7 @@ export function RecordingMenu({
             <Menu.Item
               component={Link}
               href={`/ai-studio/create/${recording.documentId}`}
-              leftSection={<IconSparkles size={14} />}
+              leftSection={<IconSparkles />}
             >
               {t("createWithAI")}
             </Menu.Item>
@@ -157,33 +153,24 @@ export function RecordingMenu({
           <Menu.Item
             component={Link}
             href={editHref}
-            leftSection={<IconScissors size={14} />}
+            leftSection={<IconScissors />}
           >
             Edit clip
           </Menu.Item>
-          <Menu.Item
-            leftSection={<IconDownload size={14} />}
-            onClick={handleDownload}
-          >
+          <Menu.Item leftSection={<IconDownload />} onClick={handleDownload}>
             {t("download")}
           </Menu.Item>
           {isOwner && (
             <>
               <Menu.Item
-                leftSection={
-                  recording.hidden ? (
-                    <IconEye size={14} />
-                  ) : (
-                    <IconEyeOff size={14} />
-                  )
-                }
+                leftSection={recording.hidden ? <IconEye /> : <IconEyeOff />}
                 onClick={handleToggleHidden}
               >
                 {recording.hidden ? t("show") : t("hide")}
               </Menu.Item>
               <Menu.Item
                 color="red"
-                leftSection={<IconTrash size={14} />}
+                leftSection={<IconTrash />}
                 onClick={handleDelete}
               >
                 {t("delete")}

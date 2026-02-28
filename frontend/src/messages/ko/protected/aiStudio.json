@@ -85,6 +85,7 @@
     "badge": "이번 달 {used} / {total}",
     "limitReachedNote": "한도 소진 · {date} 초기화",
     "alertTitle": "이번 달 한도를 모두 사용했어요",
-    "alertBody": "이번 달 AI 생성 {total}회를 모두 사용했습니다. {date}에 초기화됩니다."
+    "alertBody": "이번 달 AI 생성 {total}회를 모두 사용했습니다. {date}에 초기화됩니다.",
+    "editButton": "직접 영상 편집하기"
   }
 }

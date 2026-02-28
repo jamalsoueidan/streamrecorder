@@ -1,3 +1,4 @@
+import { getProfileUrl } from "@/app/components/open-social";
 import { generateAvatarUrl } from "@/app/lib/avatar-url";
 import api from "@/lib/api";
 import {
@@ -5,13 +6,18 @@ import {
   Alert,
   Avatar,
   Box,
+  Button,
   Card,
   Group,
   Stack,
   Text,
   Title,
 } from "@mantine/core";
-import { IconAlertCircle, IconArrowLeft } from "@tabler/icons-react";
+import {
+  IconAlertCircle,
+  IconArrowLeft,
+  IconScissors,
+} from "@tabler/icons-react";
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import Link from "next/link";
@@ -131,6 +137,24 @@ export default async function Page({ params }: PageProps) {
             >
               {t("quota.alertBody", { total: MONTHLY_QUOTA, date: resetDate })}
             </Alert>
+            {follower && (
+              <Link
+                href={
+                  getProfileUrl(follower) +
+                  `/video/${recording.documentId}/edit`
+                }
+              >
+                <Button
+                  variant="light"
+                  size="xl"
+                  radius="lg"
+                  leftSection={<IconScissors size={16} />}
+                  w="fit-content"
+                >
+                  {t("quota.editButton")}
+                </Button>
+              </Link>
+            )}
           </Stack>
         ) : (
           <AiCreateForm recording={recording} />

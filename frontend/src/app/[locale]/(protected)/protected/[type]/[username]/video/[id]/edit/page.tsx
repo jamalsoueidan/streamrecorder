@@ -1,7 +1,8 @@
 import { getProfileUrl } from "@/app/components/open-social";
 import publicApi from "@/lib/public-api";
 import { ActionIcon, Divider, Group, Stack, Text, Title } from "@mantine/core";
-import { IconArrowLeft, IconScissors } from "@tabler/icons-react";
+import { IconArrowLeft } from "@tabler/icons-react";
+import { getFormatter } from "next-intl/server";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import VideoEditor from "./video-editor";
@@ -12,7 +13,7 @@ interface Props {
 
 export default async function EditVideoPage({ params }: Props) {
   const { id } = await params;
-
+  const format = await getFormatter();
   const { data } = await publicApi.recording.getRecordingsId({ id }, {
     query: {
       populate: {
@@ -39,16 +40,24 @@ export default async function EditVideoPage({ params }: Props) {
   return (
     <Stack w="100%">
       <Group w="100%">
-        <ActionIcon component={Link} href={profileUrl} variant="subtle" size="lg">
-          <IconArrowLeft />
-        </ActionIcon>
         <Stack gap={2}>
           <Group gap="xs">
-            <IconScissors size={24} />
-            <Title order={1} size="h3">Edit Clip</Title>
+            <Link href={profileUrl}>
+              <ActionIcon variant="subtle" size="lg">
+                <IconArrowLeft />
+              </ActionIcon>
+            </Link>
+            <Title order={1} size="h3">
+              Edit Clip{" "}
+              {format.dateTime(new Date(recording.createdAt || ""), {
+                dateStyle: "medium",
+                timeStyle: "short",
+              })}
+            </Title>
           </Group>
           <Text size="sm" c="dimmed">
-            Trim and export a clip from {decodeURIComponent(recording.follower?.username || "")}
+            Trim and export a clip from{" "}
+            {decodeURIComponent(recording.follower?.username || "")}
           </Text>
         </Stack>
       </Group>
