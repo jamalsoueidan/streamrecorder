@@ -110,7 +110,9 @@ export function CustomSlider({
   const clampedTime = Math.max(startTime, Math.min(currentTime, endTime));
   const startPercent = duration > 0 ? (startTime / duration) * 100 : 0;
   const endPercent = duration > 0 ? (endTime / duration) * 100 : 100;
-  const rangeDuration = endTime - startTime;
+
+  // Minimum gap in time to prevent visual overlap (40px = 2 grips)
+  const minGapTime = containerWidth > 0 ? (40 / containerWidth) * duration : 0;
 
   // Thumbnail display size (half of 160x284)
   const thumbDisplayWidth = 80;
@@ -125,21 +127,16 @@ export function CustomSlider({
     spriteCols.set(cue.url, Math.max(existing, col));
   }
 
-  // Grip width in pixels
-  const gripWidth = 20;
-  // Time equivalent of grip widths (2 grips)
-  const gripTimeOffset = containerWidth > 0 ? (gripWidth * 2 / containerWidth) * duration : 0;
-
   const handleMove = (x: number) => {
     if (!activeGrip.current) return;
     if (duration <= 0) return;
 
     if (activeGrip.current === "start") {
-      const newStart = Math.floor(clamp(x * duration, 0, endTimeRef.current));
+      const newStart = Math.floor(clamp(x * duration, 0, endTimeRef.current - minGapTime));
       onRangeChange(newStart, endTimeRef.current);
       onSeek(newStart);
     } else if (activeGrip.current === "end") {
-      const newEnd = Math.floor(clamp(x * duration, startTimeRef.current, duration));
+      const newEnd = Math.floor(clamp(x * duration, startTimeRef.current + minGapTime, duration));
       onRangeChange(startTimeRef.current, newEnd);
       onSeek(newEnd);
     } else if (activeGrip.current === "track") {
@@ -363,7 +360,7 @@ export function CustomSlider({
 
       <div style={{ marginTop: 10, color: "#888" }}>
         Start: {formatTime(startTime)} | End: {formatTime(endTime)} | Duration:{" "}
-        {formatTime(Math.max(0, endTime - startTime - gripTimeOffset))}
+        {formatTime(Math.max(0, endTime - startTime - minGapTime))}
       </div>
     </Box>
   );
