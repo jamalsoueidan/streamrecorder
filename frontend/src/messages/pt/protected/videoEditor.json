@@ -1,0 +1,20 @@
+{
+  "modal": {
+    "title": "Editar clipe",
+    "description": "Cortar e exportar um clipe de {username}"
+  },
+  "actions": {
+    "downloadClip": "Baixar clipe",
+    "export": "Exportar"
+  },
+  "notifications": {
+    "exportStarted": {
+      "title": "Exportação iniciada",
+      "message": "Seu clipe está sendo processado e será salvo no seu armazenamento"
+    },
+    "downloadQueued": {
+      "title": "Download na fila",
+      "message": "Seu clipe será enviado por e-mail quando estiver pronto"
+    }
+  }
+}

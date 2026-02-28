@@ -504,7 +504,7 @@ export default function Page() {
                     ) : query.trim().length === 0 ? (
                       <Button
                         variant="subtle"
-                        size={isMobile ? "compact-sm" : "compact.lg"}
+                        size={isMobile ? "compact-sm" : "compact-lg"}
                         color="gray.6"
                         leftSection={<IconClipboard size={14} />}
                         onClick={async () => {

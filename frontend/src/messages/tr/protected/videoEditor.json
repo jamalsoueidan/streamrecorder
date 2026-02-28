@@ -1,0 +1,20 @@
+{
+  "modal": {
+    "title": "Klibi Düzenle",
+    "description": "{username} yayınından klip kes ve dışa aktar"
+  },
+  "actions": {
+    "downloadClip": "Klibi indir",
+    "export": "Dışa aktar"
+  },
+  "notifications": {
+    "exportStarted": {
+      "title": "Dışa aktarma başladı",
+      "message": "Klibiniz işleniyor ve depolama alanınıza kaydedilecek"
+    },
+    "downloadQueued": {
+      "title": "İndirme sıraya alındı",
+      "message": "Klibiniz hazır olduğunda e-posta ile gönderilecek"
+    }
+  }
+}

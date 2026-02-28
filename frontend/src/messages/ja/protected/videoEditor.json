@@ -1,0 +1,20 @@
+{
+  "modal": {
+    "title": "クリップを編集",
+    "description": "{username}からクリップをトリミングしてエクスポート"
+  },
+  "actions": {
+    "downloadClip": "クリップをダウンロード",
+    "export": "エクスポート"
+  },
+  "notifications": {
+    "exportStarted": {
+      "title": "エクスポート開始",
+      "message": "クリップを処理中です。完了後、ストレージに保存されます"
+    },
+    "downloadQueued": {
+      "title": "ダウンロード待機中",
+      "message": "準備ができ次第、クリップをメールでお送りします"
+    }
+  }
+}

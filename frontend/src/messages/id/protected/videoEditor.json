@@ -1,0 +1,20 @@
+{
+  "modal": {
+    "title": "Edit Klip",
+    "description": "Potong dan ekspor klip dari {username}"
+  },
+  "actions": {
+    "downloadClip": "Unduh klip",
+    "export": "Ekspor"
+  },
+  "notifications": {
+    "exportStarted": {
+      "title": "Ekspor dimulai",
+      "message": "Klip Anda sedang diproses dan akan disimpan ke penyimpanan Anda"
+    },
+    "downloadQueued": {
+      "title": "Unduhan dalam antrean",
+      "message": "Klip Anda akan dikirim melalui email saat siap"
+    }
+  }
+}

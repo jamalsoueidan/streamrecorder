@@ -28,6 +28,12 @@ interface CustomSliderProps {
 
 function parseVTTTime(time: string): number {
   const parts = time.split(":");
+  if (parts.length === 2) {
+    // MM:SS.mmm format
+    const [sec, ms] = parts[1].split(".");
+    return parseInt(parts[0]) * 60 + parseInt(sec) + parseInt(ms) / 1000;
+  }
+  // HH:MM:SS.mmm format
   const [sec, ms] = parts[2].split(".");
   return (
     parseInt(parts[0]) * 3600 +
@@ -180,17 +186,15 @@ export function CustomSlider({
           {thumbnailCues.length > 0 &&
             duration > 0 &&
             (() => {
-              // Calculate how many thumbnails needed to fill width (add 1 for safety)
-              const numThumbs =
-                Math.ceil(containerWidth / thumbDisplayWidth) + 1;
-              // Sample cues evenly across timeline
+              // Calculate how many thumbnails fit in extended width
+              const totalWidth = containerWidth + 40;
+              const numThumbs = Math.ceil(totalWidth / thumbDisplayWidth);
+              // Sample cues evenly from the array
               const sampledCues: ThumbnailCue[] = [];
+              const step = thumbnailCues.length / numThumbs;
               for (let i = 0; i < numThumbs; i++) {
-                const time = (i / numThumbs) * duration;
-                const cue =
-                  thumbnailCues.find((c) => time >= c.start && time < c.end) ||
-                  thumbnailCues[0];
-                sampledCues.push(cue);
+                const index = Math.min(Math.floor(i * step), thumbnailCues.length - 1);
+                sampledCues.push(thumbnailCues[index]);
               }
 
               return sampledCues.map((cue, i) => {

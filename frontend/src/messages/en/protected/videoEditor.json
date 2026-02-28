@@ -1,0 +1,20 @@
+{
+  "modal": {
+    "title": "Edit Clip",
+    "description": "Trim and export a clip from {username}"
+  },
+  "actions": {
+    "downloadClip": "Download clip",
+    "export": "Export"
+  },
+  "notifications": {
+    "exportStarted": {
+      "title": "Export started",
+      "message": "Your clip is being processed and will be saved to your storage"
+    },
+    "downloadQueued": {
+      "title": "Download queued",
+      "message": "Your clip will be emailed to you when ready"
+    }
+  }
+}

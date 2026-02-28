@@ -1,0 +1,20 @@
+{
+  "modal": {
+    "title": "클립 편집",
+    "description": "{username}에서 클립 자르기 및 내보내기"
+  },
+  "actions": {
+    "downloadClip": "클립 다운로드",
+    "export": "내보내기"
+  },
+  "notifications": {
+    "exportStarted": {
+      "title": "내보내기 시작",
+      "message": "클립을 처리 중이며 저장소에 저장됩니다"
+    },
+    "downloadQueued": {
+      "title": "다운로드 대기 중",
+      "message": "준비되면 클립이 이메일로 전송됩니다"
+    }
+  }
+}

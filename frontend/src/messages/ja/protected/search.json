@@ -1,6 +1,6 @@
 {
   "title": "検索",
-  "description": "TikTok、Twitch、YouTube のライブ配信をリストに追加しましょう。",
+  "description": "ライブ配信をリストに追加しましょう",
   "platforms": {
     "tiktok": "TikTok",
     "twitch": "Twitch",
