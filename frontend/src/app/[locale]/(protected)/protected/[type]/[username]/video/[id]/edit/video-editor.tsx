@@ -30,12 +30,7 @@ import {
   Title,
 } from "@mantine/core";
 import { notifications } from "@mantine/notifications";
-import {
-  IconArrowLeft,
-  IconCut,
-  IconDownload,
-  IconFlag,
-} from "@tabler/icons-react";
+import { IconArrowLeft, IconCut, IconDownload } from "@tabler/icons-react";
 import "hls-video-element";
 import "media-chrome";
 import Link from "next/link";
@@ -176,35 +171,6 @@ export default function VideoEditor({ recording }: Props) {
     setEndTime(value[1]);
   };
 
-  const handleSetStart = () => {
-    const video = videoRef.current;
-    if (!video) return;
-    const t = Math.floor(video.currentTime);
-    if (t >= endTime) {
-      notifications.show({
-        message: "Start time must be before end time",
-        color: "red",
-      });
-      return;
-    }
-    setStartTime(t);
-    setClipCurrentTime(0);
-  };
-
-  const handleSetEnd = () => {
-    const video = videoRef.current;
-    if (!video) return;
-    const actual = Math.ceil(video.currentTime);
-    if (actual <= startTime) {
-      notifications.show({
-        message: "End time must be after start time",
-        color: "red",
-      });
-      return;
-    }
-    setEndTime(actual);
-  };
-
   const handleExport = async () => {
     if (!user?.id || !recording.documentId || clipDuration <= 0) return;
     setIsExporting(true);
@@ -298,8 +264,12 @@ export default function VideoEditor({ recording }: Props) {
             <MediaPlayButton />
             <MediaSeekBackwardButton seekoffset="10" />
             <MediaSeekForwardButton seekoffset="10" />
-            <MediaTimeRange ref={timeRangeRef as any} mediacontroller="__clip__" />
-            <MediaTimeDisplay showduration ref={timeDisplayRef as any} mediacontroller="__clip__" />
+            <MediaTimeRange ref={timeRangeRef} mediacontroller="__clip__" />
+            <MediaTimeDisplay
+              showduration
+              ref={timeDisplayRef}
+              mediacontroller="__clip__"
+            />
             <div className="volume-hover-container">
               <MediaVolumeRange />
               <MediaMuteButton title="" />
@@ -341,46 +311,6 @@ export default function VideoEditor({ recording }: Props) {
               mb="xl"
             />
           </Box>
-
-          <Group grow>
-            <Stack gap={4}>
-              <Group justify="space-between">
-                <Text size="xs" c="dimmed">
-                  Start
-                </Text>
-                <Text size="xs" fw={600} c="blue">
-                  {formatTime(startTime)}
-                </Text>
-              </Group>
-              <Button
-                variant="light"
-                size="xs"
-                leftSection={<IconFlag size={12} />}
-                onClick={handleSetStart}
-              >
-                Mark current as start
-              </Button>
-            </Stack>
-
-            <Stack gap={4}>
-              <Group justify="space-between">
-                <Text size="xs" c="dimmed">
-                  End
-                </Text>
-                <Text size="xs" fw={600} c="blue">
-                  {formatTime(endTime)}
-                </Text>
-              </Group>
-              <Button
-                variant="light"
-                size="xs"
-                leftSection={<IconFlag size={12} />}
-                onClick={handleSetEnd}
-              >
-                Mark current as end
-              </Button>
-            </Stack>
-          </Group>
         </Stack>
       </Card>
 
