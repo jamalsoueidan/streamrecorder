@@ -58,8 +58,12 @@ export default async function Page({ params }: PageProps) {
       .meGetAiRequests({
         "pagination[pageSize]": 1,
         "pagination[page]": 1,
-        "filters[createdAt][$gte]": startOfMonth,
-      } as any)
+        filters: {
+          createdAt: {
+            $gte: startOfMonth,
+          },
+        },
+      })
       .catch(() => null),
   ]);
 
@@ -123,10 +127,9 @@ export default async function Page({ params }: PageProps) {
               icon={<IconAlertCircle />}
               color="orange"
               variant="light"
-              title="Monthly limit reached"
+              title={t("quota.alertTitle")}
             >
-              You've used all {MONTHLY_QUOTA} AI generations for this month. Your
-              limit resets on {resetDate}.
+              {t("quota.alertBody", { total: MONTHLY_QUOTA, date: resetDate })}
             </Alert>
           </Stack>
         ) : (

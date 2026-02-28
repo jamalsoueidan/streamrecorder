@@ -66,6 +66,11 @@ export default async function Page({ searchParams }: PageProps) {
   const remaining = Math.max(0, MONTHLY_QUOTA - usedThisMonth);
   const usageColor =
     remaining === 0 ? "red" : remaining === 1 ? "orange" : "violet";
+  const resetDate = new Date(
+    now.getFullYear(),
+    now.getMonth() + 1,
+    1,
+  ).toLocaleDateString("en", { month: "short", day: "numeric" });
 
   return (
     <Stack w="100%">
@@ -83,16 +88,11 @@ export default async function Page({ searchParams }: PageProps) {
         </Stack>
         <Stack gap={4} align="flex-end">
           <Badge size="lg" color={usageColor} variant="light">
-            {usedThisMonth} / {MONTHLY_QUOTA} this month
+            {t("quota.badge", { used: usedThisMonth, total: MONTHLY_QUOTA })}
           </Badge>
           {remaining === 0 && (
             <Text size="xs" c="dimmed">
-              Limit reached · resets{" "}
-              {new Date(
-                now.getFullYear(),
-                now.getMonth() + 1,
-                1,
-              ).toLocaleDateString("en", { month: "short", day: "numeric" })}
+              {t("quota.limitReachedNote", { date: resetDate })}
             </Text>
           )}
         </Stack>

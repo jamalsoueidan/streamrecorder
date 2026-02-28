@@ -80,5 +80,11 @@
     },
     "upgradeButton": "Şimdi Yükselt",
     "hint": "Premium abonelik ile AI Stüdyo'nun kilidini açın"
+  },
+  "quota": {
+    "badge": "Bu ay {used} / {total}",
+    "limitReachedNote": "Limit doldu · {date} yenileniyor",
+    "alertTitle": "Aylık limit doldu",
+    "alertBody": "Bu ayki {total} AI oluşturma hakkınızı kullandınız. {date} tarihinde yenileniyor."
   }
 }

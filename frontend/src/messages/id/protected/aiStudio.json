@@ -80,5 +80,11 @@
     },
     "upgradeButton": "Upgrade Sekarang",
     "hint": "Buka AI Studio dengan langganan premium"
+  },
+  "quota": {
+    "badge": "{used} / {total} bulan ini",
+    "limitReachedNote": "Batas tercapai · reset {date}",
+    "alertTitle": "Batas bulanan tercapai",
+    "alertBody": "Kamu sudah memakai semua {total} sesi AI bulan ini. Batas diperbarui pada {date}."
   }
 }

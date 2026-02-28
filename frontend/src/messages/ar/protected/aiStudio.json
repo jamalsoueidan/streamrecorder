@@ -80,5 +80,11 @@
     },
     "upgradeButton": "اشترك الآن",
     "hint": "للمشتركين فقط"
+  },
+  "quota": {
+    "badge": "{used} / {total} هذا الشهر",
+    "limitReachedNote": "انتهت الحصة · تتجدد {date}",
+    "alertTitle": "وصلت للحد الشهري",
+    "alertBody": "استخدمت جميع {total} جلسات الذكاء الاصطناعي هذا الشهر. تتجدد حصتك في {date}."
   }
 }

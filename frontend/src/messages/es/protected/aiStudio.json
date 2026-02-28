@@ -80,5 +80,11 @@
     },
     "upgradeButton": "Actualizar Ahora",
     "hint": "Desbloquea AI Studio con una suscripción premium"
+  },
+  "quota": {
+    "badge": "{used} / {total} este mes",
+    "limitReachedNote": "Límite alcanzado · se renueva el {date}",
+    "alertTitle": "Límite mensual alcanzado",
+    "alertBody": "Usaste las {total} generaciones de IA de este mes. Tu límite se renueva el {date}."
   }
 }

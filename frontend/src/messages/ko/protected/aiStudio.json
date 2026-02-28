@@ -80,5 +80,11 @@
     },
     "upgradeButton": "지금 업그레이드",
     "hint": "프리미엄 구독으로 AI 스튜디오 잠금 해제"
+  },
+  "quota": {
+    "badge": "이번 달 {used} / {total}",
+    "limitReachedNote": "한도 도달 · {date} 초기화",
+    "alertTitle": "이번 달 한도에 도달했습니다",
+    "alertBody": "이번 달 AI 생성 {total}회를 모두 사용했습니다. {date}에 초기화됩니다."
   }
 }
