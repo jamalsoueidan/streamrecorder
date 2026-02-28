@@ -160,7 +160,7 @@ export function CustomSlider({
   const { ref: trackRef } = useMove(({ x }) => handleMove(x));
 
   return (
-    <Box py="md" px={20}>
+    <Box pt="md" pb={40} px={20}>
       {/* Outer container for positioning */}
       <Box ref={containerRef} style={{ position: "relative", height: 142 }}>
         {/* Thumbnail filmstrip background - full width */}
@@ -292,6 +292,23 @@ export function CustomSlider({
             }}
           >
             <IconGripVertical size={14} color="white" />
+            {/* Start time label - hidden when grips are close */}
+            {endPercent - startPercent > 15 && (
+              <Box
+                style={{
+                  position: "absolute",
+                  bottom: -24,
+                  left: "50%",
+                  transform: "translateX(-50%)",
+                  fontSize: 12,
+                  color: "#3b82f6",
+                  whiteSpace: "nowrap",
+                  fontWeight: 500,
+                }}
+              >
+                {formatTime(startTime)}
+              </Box>
+            )}
           </Box>
 
           {/* End grip - extends RIGHT into overlay */}
@@ -315,6 +332,23 @@ export function CustomSlider({
             }}
           >
             <IconGripVertical size={14} color="white" />
+            {/* End time label - hidden when grips are close */}
+            {endPercent - startPercent > 15 && (
+              <Box
+                style={{
+                  position: "absolute",
+                  bottom: -24,
+                  left: "50%",
+                  transform: "translateX(-50%)",
+                  fontSize: 12,
+                  color: "#3b82f6",
+                  whiteSpace: "nowrap",
+                  fontWeight: 500,
+                }}
+              >
+                {formatTime(endTime)}
+              </Box>
+            )}
           </Box>
         </Box>
 
@@ -363,12 +397,23 @@ export function CustomSlider({
             style={{ width: "100%" }}
           />
         </Box>
-      </Box>
 
-      <div style={{ marginTop: 10, color: "#888" }}>
-        Start: {formatTime(startTime)} | End: {formatTime(endTime)} | Duration:{" "}
-        {formatTime(endTime - startTime)}
-      </div>
+        {/* Duration label - centered below slider */}
+        <Box
+          style={{
+            position: "absolute",
+            bottom: -24,
+            left: `${(startPercent + endPercent) / 2}%`,
+            transform: "translateX(-50%)",
+            fontSize: 12,
+            color: "#888",
+            whiteSpace: "nowrap",
+            fontWeight: 500,
+          }}
+        >
+          {formatTime(endTime - startTime)}
+        </Box>
+      </Box>
     </Box>
   );
 }
