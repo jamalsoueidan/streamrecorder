@@ -28,7 +28,11 @@ export default async function Page({ searchParams }: PageProps) {
   const currentPage = parseInt(page || "1", 10);
 
   const now = new Date();
-  const startOfMonth = new Date(now.getFullYear(), now.getMonth(), 1).toISOString();
+  const startOfMonth = new Date(
+    now.getFullYear(),
+    now.getMonth(),
+    1,
+  ).toISOString();
 
   const [response, usageResponse] = await Promise.all([
     api.aiRequest
@@ -47,16 +51,21 @@ export default async function Page({ searchParams }: PageProps) {
       .meGetAiRequests({
         "pagination[pageSize]": 1,
         "pagination[page]": 1,
-        "filters[createdAt][$gte]": startOfMonth,
-      } as any)
+        filters: {
+          createdAt: {
+            $gte: startOfMonth,
+          },
+        },
+      })
       .catch(() => null),
   ]);
 
   const aiRequests = response?.data?.data || [];
   const totalPages = response?.data?.meta?.pagination?.pageCount || 1;
-  const usedThisMonth = usageResponse?.data?.meta?.pagination?.total ?? 0;
+  const usedThisMonth = Math.min(usageResponse?.data?.meta?.pagination?.total ?? 0, MONTHLY_QUOTA);
   const remaining = Math.max(0, MONTHLY_QUOTA - usedThisMonth);
-  const usageColor = remaining === 0 ? "red" : remaining === 1 ? "orange" : "violet";
+  const usageColor =
+    remaining === 0 ? "red" : remaining === 1 ? "orange" : "violet";
 
   return (
     <Stack w="100%">
@@ -77,7 +86,14 @@ export default async function Page({ searchParams }: PageProps) {
             {usedThisMonth} / {MONTHLY_QUOTA} this month
           </Badge>
           {remaining === 0 && (
-            <Text size="xs" c="dimmed">Limit reached · resets {new Date(now.getFullYear(), now.getMonth() + 1, 1).toLocaleDateString("en", { month: "short", day: "numeric" })}</Text>
+            <Text size="xs" c="dimmed">
+              Limit reached · resets{" "}
+              {new Date(
+                now.getFullYear(),
+                now.getMonth() + 1,
+                1,
+              ).toLocaleDateString("en", { month: "short", day: "numeric" })}
+            </Text>
           )}
         </Stack>
       </Flex>
