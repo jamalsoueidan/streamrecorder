@@ -261,14 +261,12 @@ export default function VideoEditor({ recording }: Props) {
         )}
       </Group>
 
-      {/* Video Player
-          MediaTimeRange and MediaTimeDisplay live OUTSIDE the MediaController so the
-          controller's MutationObserver never registers them as state receivers.
-          Our useLayoutEffect is therefore the sole writer of their media attributes. */}
       <Box
         mx="auto"
         style={{
-          width: "fit-content",
+          aspectRatio: "9/16",
+          maxHeight: "55vh",
+          width: "auto",
           borderRadius: "var(--mantine-radius-md)",
           overflow: "hidden",
           background: "#000",
@@ -278,52 +276,36 @@ export default function VideoEditor({ recording }: Props) {
           media-controller:not([mediapaused]) media-play-button[slot="centered-chrome"] { display: none !important; }
           media-controller[mediapaused] media-loading-indicator[slot="centered-chrome"] { display: none !important; }
         `}</style>
-
-        {/* Video portion — no time range inside */}
-        <Box style={{ aspectRatio: "9/16", maxHeight: "52vh", width: "auto" }}>
-          <MediaController
-            style={{ width: "100%", height: "100%", background: "#000" }}
-          >
-            <HlsVideo
-              ref={videoRef}
-              src={`/video/${recording.documentId}/playlist.m3u8`}
-              slot="media"
-              playsInline
-            >
-              <track
-                default
-                kind="metadata"
-                label="thumbnails"
-                src={`/video/${recording.documentId}/thumbnails.vtt`}
-              />
-            </HlsVideo>
-            <MediaPlayButton slot="centered-chrome" />
-            <MediaLoadingIndicator slot="centered-chrome" />
-            <MediaControlBar>
-              <MediaPlayButton />
-              <MediaSeekBackwardButton seekoffset="10" />
-              <MediaSeekForwardButton seekoffset="10" />
-              <div className="volume-hover-container">
-                <MediaVolumeRange />
-                <MediaMuteButton title="" />
-              </div>
-            </MediaControlBar>
-          </MediaController>
-        </Box>
-
-        {/* Detached time bar — outside MediaController, we own mediacurrenttime 100% */}
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            padding: "2px 8px 4px",
-            gap: 4,
-            background: "#000",
-          }}
+        <MediaController
+          style={{ width: "100%", height: "100%", background: "#000" }}
         >
-          <MediaTimeRange ref={timeRangeRef as any} style={{ flex: 1 }} />
-          <MediaTimeDisplay showduration ref={timeDisplayRef as any} />
-        </div>
+          <HlsVideo
+            ref={videoRef}
+            src={`/video/${recording.documentId}/playlist.m3u8`}
+            slot="media"
+            playsInline
+          >
+            <track
+              default
+              kind="metadata"
+              label="thumbnails"
+              src={`/video/${recording.documentId}/thumbnails.vtt`}
+            />
+          </HlsVideo>
+          <MediaPlayButton slot="centered-chrome" />
+          <MediaLoadingIndicator slot="centered-chrome" />
+          <MediaControlBar>
+            <MediaPlayButton />
+            <MediaSeekBackwardButton seekoffset="10" />
+            <MediaSeekForwardButton seekoffset="10" />
+            <MediaTimeRange ref={timeRangeRef as any} mediacontroller="__clip__" />
+            <MediaTimeDisplay showduration ref={timeDisplayRef as any} mediacontroller="__clip__" />
+            <div className="volume-hover-container">
+              <MediaVolumeRange />
+              <MediaMuteButton title="" />
+            </div>
+          </MediaControlBar>
+        </MediaController>
       </Box>
 
       {/* Clip Range */}
