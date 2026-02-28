@@ -38,13 +38,13 @@ export async function checkVideoAccess(
     });
 
   const roleType = (user?.data?.role as any)?.type;
-  const subscriptionStatus = (user?.data as any)?.subscriptionStatus;
+  //const subscriptionStatus = (user?.data as any)?.subscriptionStatus;
   const userId = (user?.data as any)?.documentId;
 
   if (
     roleType === "admin" ||
     roleType === "champion" ||
-    subscriptionStatus === "active"
+    roleType === "premium"
   ) {
     return { allowed: true };
   }

@@ -81,13 +81,12 @@ export async function GET(
 
       const role = user?.data?.role;
       const roleType = (role as any)?.type;
-      const subscriptionStatus = (user?.data as any)?.subscriptionStatus;
 
       // Admin, champion, or active subscription = full access
       if (
         roleType === "admin" ||
         roleType === "champion" ||
-        subscriptionStatus === "active"
+        roleType === "premium"
       ) {
         const command = new GetObjectCommand({
           Bucket: process.env.MEDIA_BUCKET!,

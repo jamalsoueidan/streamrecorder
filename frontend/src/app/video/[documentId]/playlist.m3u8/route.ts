@@ -43,13 +43,13 @@ async function checkAccess(
 
     const role = user?.data?.role;
     const roleType = (role as any)?.type;
-    const subscriptionStatus = (user?.data as any)?.subscriptionStatus;
+    //const subscriptionStatus = (user?.data as any)?.subscriptionStatus;
 
     // Admin, champion, or active subscription = full access
     if (
       roleType === "admin" ||
       roleType === "champion" ||
-      subscriptionStatus === "active"
+      roleType === "premium"
     ) {
       return { allowed: true };
     }
