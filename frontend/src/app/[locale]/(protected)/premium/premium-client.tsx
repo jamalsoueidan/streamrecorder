@@ -39,6 +39,7 @@ import {
   IconLanguage,
   IconMovie,
   IconScissors,
+  IconShare,
   IconSparkles,
   IconUsers,
   IconVideo,
@@ -110,8 +111,10 @@ export default function PremiumClient() {
     { icon: IconMovie, label: t("premiumAiHighlights"), color: "#34d399" },
     { icon: IconLanguage, label: t("premiumAiSubtitles"), color: "#f472b6" },
     { icon: IconSparkles, label: t("premiumAiMemes"), color: "#fb923c" },
-    { icon: IconScissors, label: t("premiumPublishSocial"), color: "#38bdf8" },
+    { icon: IconShare, label: t("premiumPublishSocial"), color: "#38bdf8" },
+    { icon: IconScissors, label: t("premiumClipEditor"), color: "#ef4444"},
     { icon: IconVideo, label: t("premiumWatchLater"), color: "#c084fc" },
+
     { icon: IconChartBar, label: t("premiumTiktokInsights"), color: "#22d3ee" },
     {
       icon: IconDownload,
@@ -383,7 +386,7 @@ export default function PremiumClient() {
                       <Group gap="xs" wrap="nowrap">
                         <feature.icon size={18} color={feature.color} />
                         <Text size="sm">{feature.label}</Text>
-                      </Group>
+                                              </Group>
                     </GridCol>
                   ))}
                 </Grid>
