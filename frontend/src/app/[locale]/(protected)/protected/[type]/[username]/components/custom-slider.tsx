@@ -138,7 +138,6 @@ export function CustomSlider({
     } else if (activeGrip.current === "end") {
       const newEnd = Math.floor(clamp(x * duration, startTimeRef.current + minGapTime, duration));
       onRangeChange(startTimeRef.current, newEnd);
-      onSeek(newEnd);
     } else if (activeGrip.current === "track") {
       const delta = x - dragStartX.current;
       const deltaTime = Math.floor(delta * duration);
