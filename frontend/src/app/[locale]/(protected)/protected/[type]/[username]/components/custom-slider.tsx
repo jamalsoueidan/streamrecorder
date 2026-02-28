@@ -111,9 +111,6 @@ export function CustomSlider({
   const startPercent = duration > 0 ? (startTime / duration) * 100 : 0;
   const endPercent = duration > 0 ? (endTime / duration) * 100 : 100;
 
-  // Minimum gap in time to prevent visual overlap (40px = 2 grips)
-  const minGapTime = containerWidth > 0 ? (40 / containerWidth) * duration : 0;
-
   // Thumbnail display size (half of 160x284)
   const thumbDisplayWidth = 80;
   const thumbDisplayHeight = 142;
@@ -132,11 +129,11 @@ export function CustomSlider({
     if (duration <= 0) return;
 
     if (activeGrip.current === "start") {
-      const newStart = Math.floor(clamp(x * duration, 0, endTimeRef.current - minGapTime));
+      const newStart = Math.floor(clamp(x * duration, 0, endTimeRef.current - 1));
       onRangeChange(newStart, endTimeRef.current);
       onSeek(newStart);
     } else if (activeGrip.current === "end") {
-      const newEnd = Math.floor(clamp(x * duration, startTimeRef.current + minGapTime, duration));
+      const newEnd = Math.floor(clamp(x * duration, startTimeRef.current + 1, duration));
       onRangeChange(startTimeRef.current, newEnd);
     } else if (activeGrip.current === "track") {
       const delta = x - dragStartX.current;
@@ -163,7 +160,7 @@ export function CustomSlider({
   const { ref: trackRef } = useMove(({ x }) => handleMove(x));
 
   return (
-    <Box py="md">
+    <Box py="md" px={20}>
       {/* Outer container for positioning */}
       <Box ref={containerRef} style={{ position: "relative", height: 142 }}>
         {/* Thumbnail filmstrip background */}
@@ -181,12 +178,15 @@ export function CustomSlider({
             duration > 0 &&
             (() => {
               // Calculate how many thumbnails needed to fill width (add 1 for safety)
-              const numThumbs = Math.ceil(containerWidth / thumbDisplayWidth) + 1;
+              const numThumbs =
+                Math.ceil(containerWidth / thumbDisplayWidth) + 1;
               // Sample cues evenly across timeline
               const sampledCues: ThumbnailCue[] = [];
               for (let i = 0; i < numThumbs; i++) {
                 const time = (i / numThumbs) * duration;
-                const cue = thumbnailCues.find((c) => time >= c.start && time < c.end) || thumbnailCues[0];
+                const cue =
+                  thumbnailCues.find((c) => time >= c.start && time < c.end) ||
+                  thumbnailCues[0];
                 sampledCues.push(cue);
               }
 
@@ -222,7 +222,7 @@ export function CustomSlider({
               top: 0,
               width: `${startPercent}%`,
               height: "100%",
-              background: "rgba(0, 0, 0, 0.5)",
+              background: "rgba(0, 0, 0, 0.8)",
               borderRadius: "6px 0 0 6px",
               pointerEvents: "none",
               zIndex: 5,
@@ -239,7 +239,7 @@ export function CustomSlider({
               top: 0,
               width: `${100 - endPercent}%`,
               height: "100%",
-              background: "rgba(0, 0, 0, 0.5)",
+              background: "rgba(0, 0, 0, 0.8)",
               borderRadius: "0 6px 6px 0",
               pointerEvents: "none",
               zIndex: 5,
@@ -267,7 +267,7 @@ export function CustomSlider({
             cursor: "grab",
           }}
         >
-          {/* Start grip - positioned inside */}
+          {/* Start grip - extends LEFT into overlay */}
           <Box
             onMouseDown={() => {
               activeGrip.current = "start";
@@ -276,6 +276,7 @@ export function CustomSlider({
               position: "absolute",
               left: `${startPercent}%`,
               top: 0,
+              transform: "translateX(-100%)",
               width: 20,
               height: "100%",
               background: "#3b82f6",
@@ -290,7 +291,7 @@ export function CustomSlider({
             <IconGripVertical size={14} color="white" />
           </Box>
 
-          {/* End grip - positioned inside */}
+          {/* End grip - extends RIGHT into overlay */}
           <Box
             onMouseDown={() => {
               activeGrip.current = "end";
@@ -299,7 +300,6 @@ export function CustomSlider({
               position: "absolute",
               left: `${endPercent}%`,
               top: 0,
-              transform: "translateX(-100%)",
               width: 20,
               height: "100%",
               background: "#3b82f6",
@@ -315,12 +315,12 @@ export function CustomSlider({
           </Box>
         </Box>
 
-        {/* Slider - OUTSIDE trackRef so useMove doesn't intercept its events */}
+        {/* Slider - spans from start to end */}
         <Box
           style={{
             position: "absolute",
-            left: `calc(${startPercent}% + 20px)`,
-            width: `calc(max(0px, ${endPercent - startPercent}% - 40px))`,
+            left: `${startPercent}%`,
+            width: `${endPercent - startPercent}%`,
             top: 0,
             height: "100%",
             display: "flex",
@@ -342,7 +342,12 @@ export function CustomSlider({
             radius={0}
             styles={{
               root: { padding: 0 },
-              track: { margin: 0, height: 142, "--track-bg": "transparent", "--slider-track-bg": "transparent" },
+              track: {
+                margin: 0,
+                height: 142,
+                "--track-bg": "transparent",
+                "--slider-track-bg": "transparent",
+              },
               bar: { backgroundColor: "transparent" },
               thumb: {
                 width: 1,
@@ -359,7 +364,7 @@ export function CustomSlider({
 
       <div style={{ marginTop: 10, color: "#888" }}>
         Start: {formatTime(startTime)} | End: {formatTime(endTime)} | Duration:{" "}
-        {formatTime(Math.max(0, endTime - startTime - minGapTime))}
+        {formatTime(endTime - startTime)}
       </div>
     </Box>
   );

@@ -24,6 +24,7 @@ import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
 import { useState } from "react";
 import { DownloadUpgradeModal } from "./download-upgrade-modal";
+import { VideoEditorModal } from "./video-editor-modal";
 
 interface RecordingMenuProps {
   recording: Recording;
@@ -42,6 +43,7 @@ export function RecordingMenu({
   const { isInWatchLater, toggleWatchLater } = useWatchLater();
   const locale = useLocale();
   const [downloadUpgradeOpened, setDownloadUpgradeOpened] = useState(false);
+  const [editorOpened, setEditorOpened] = useState(false);
 
   const isOwner = user?.id && recording.follower?.owner?.id === user.id;
   const isFollowing = user?.followers?.some(
@@ -56,9 +58,6 @@ export function RecordingMenu({
     ? isInWatchLater(recording.documentId)
     : false;
 
-  const recType = type || recording.follower?.type;
-  const recUsername = username || recording.follower?.username;
-  const editHref = `/${recType}/${recUsername}/video/${recording.documentId}/edit`;
 
   const handleDelete = () => {
     if (!recording.documentId) return;
@@ -151,9 +150,8 @@ export function RecordingMenu({
           )}
           <Menu.Divider />
           <Menu.Item
-            component={Link}
-            href={editHref}
             leftSection={<IconScissors />}
+            onClick={() => setEditorOpened(true)}
           >
             Edit clip
           </Menu.Item>
@@ -182,6 +180,11 @@ export function RecordingMenu({
       <DownloadUpgradeModal
         opened={downloadUpgradeOpened}
         onClose={() => setDownloadUpgradeOpened(false)}
+      />
+      <VideoEditorModal
+        recording={recording}
+        opened={editorOpened}
+        onClose={() => setEditorOpened(false)}
       />
     </>
   );
