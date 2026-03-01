@@ -245,7 +245,14 @@ export default factories.createCoreController(
         if (idRows.length === 0) {
           return {
             data: [],
-            meta: { pagination: { page, pageSize, pageCount: Math.ceil(total / pageSize), total } },
+            meta: {
+              pagination: {
+                page,
+                pageSize,
+                pageCount: Math.ceil(total / pageSize),
+                total,
+              },
+            },
           };
         }
 
@@ -270,7 +277,14 @@ export default factories.createCoreController(
       if (rows.length === 0) {
         return {
           data: [],
-          meta: { pagination: { page, pageSize, pageCount: Math.ceil(total / pageSize), total } },
+          meta: {
+            pagination: {
+              page,
+              pageSize,
+              pageCount: Math.ceil(total / pageSize),
+              total,
+            },
+          },
         };
       }
 
@@ -435,12 +449,12 @@ export default factories.createCoreController(
 
       if (!follower) {
         follower = await strapi.documents("api::follower.follower").create({
-          data: { username, type },
+          data: { username, type, pause: false },
         });
       } else {
         follower = await strapi.documents("api::follower.follower").update({
           documentId: follower.documentId,
-          data: { lastCheckedAt: new Date() },
+          data: { lastCheckedAt: new Date(), pause: false },
         });
       }
 
@@ -597,7 +611,10 @@ export default factories.createCoreController(
     async cleanup(ctx) {
       // delete users who is 7 days old and still have no recordings
       const days = Math.max(1, parseInt(ctx.query.days as string) || 14);
-      const limit = Math.min(100, Math.max(1, parseInt(ctx.query.limit as string) || 50));
+      const limit = Math.min(
+        100,
+        Math.max(1, parseInt(ctx.query.limit as string) || 50),
+      );
       const destroy = ctx.query.destroy === "true";
 
       const knex = strapi.db.connection;
@@ -606,21 +623,28 @@ export default factories.createCoreController(
       cutoffDate.setDate(cutoffDate.getDate() - days);
 
       // Step 1: get all follower integer IDs that have any recording link (no join, fast scan)
-      console.log("[cleanup] Step 1/2 - Fetching follower IDs with recordings...");
+      console.log(
+        "[cleanup] Step 1/2 - Fetching follower IDs with recordings...",
+      );
       const linkedFollowerIds = await knex("recordings_follower_lnk")
         .distinct("follower_id")
         .pluck("follower_id");
-      console.log(`[cleanup] ${linkedFollowerIds.length} follower IDs have recordings.`);
+      console.log(
+        `[cleanup] ${linkedFollowerIds.length} follower IDs have recordings.`,
+      );
 
       // Step 2: resolve their document_ids so we exclude all locales of those documents
       console.log("[cleanup] Step 2/2 - Resolving document IDs...");
-      const docIdsWithRecordings = linkedFollowerIds.length > 0
-        ? await knex("followers")
-            .whereIn("id", linkedFollowerIds)
-            .distinct("document_id")
-            .pluck("document_id")
-        : [];
-      console.log(`[cleanup] ${docIdsWithRecordings.length} unique follower documents have recordings, excluding them.`);
+      const docIdsWithRecordings =
+        linkedFollowerIds.length > 0
+          ? await knex("followers")
+              .whereIn("id", linkedFollowerIds)
+              .distinct("document_id")
+              .pluck("document_id")
+          : [];
+      console.log(
+        `[cleanup] ${docIdsWithRecordings.length} unique follower documents have recordings, excluding them.`,
+      );
 
       const baseQuery = () => {
         let q = knex("followers as f")
@@ -635,7 +659,13 @@ export default factories.createCoreController(
       console.log("[cleanup] Counting stale followers...");
       const [staleFollowers, countResult] = await Promise.all([
         baseQuery()
-          .select("f.id", "f.document_id", "f.username", "f.type", "f.created_at")
+          .select(
+            "f.id",
+            "f.document_id",
+            "f.username",
+            "f.type",
+            "f.created_at",
+          )
           .limit(limit),
         baseQuery().countDistinct("f.id as total").first(),
       ]);
@@ -643,7 +673,9 @@ export default factories.createCoreController(
       const total = Number(countResult?.total || 0);
 
       if (!destroy) {
-        const previewDocumentIds = staleFollowers.map((f: any) => f.document_id);
+        const previewDocumentIds = staleFollowers.map(
+          (f: any) => f.document_id,
+        );
         let previewAvatars = [];
 
         if (previewDocumentIds.length > 0) {
@@ -673,7 +705,9 @@ export default factories.createCoreController(
       const enIds = staleFollowers.map((f: any) => f.id);
       let deletedAvatars = 0;
 
-      console.log(`[cleanup] Processing ${documentIds.length} stale followers...`);
+      console.log(
+        `[cleanup] Processing ${documentIds.length} stale followers...`,
+      );
 
       if (documentIds.length > 0) {
         console.log("[cleanup] Finding avatar files...");
@@ -685,11 +719,14 @@ export default factories.createCoreController(
           .where("frm.field", "avatar")
           .then((rows: any[]) => rows.map((r) => r.id));
 
-        const avatarFiles = avatarFileIds.length > 0
-          ? await knex("files").whereIn("id", avatarFileIds)
-          : [];
+        const avatarFiles =
+          avatarFileIds.length > 0
+            ? await knex("files").whereIn("id", avatarFileIds)
+            : [];
 
-        console.log(`[cleanup] Deleting ${avatarFiles.length} avatar files from S3...`);
+        console.log(
+          `[cleanup] Deleting ${avatarFiles.length} avatar files from S3...`,
+        );
         const results = await Promise.allSettled(
           avatarFiles.map((file) =>
             strapi.plugin("upload").service("upload").remove(file),
@@ -698,10 +735,15 @@ export default factories.createCoreController(
         deletedAvatars = results.filter((r) => r.status === "fulfilled").length;
         results.forEach((r, i) => {
           if (r.status === "rejected") {
-            console.error(`[cleanup] Failed to delete avatar ${avatarFiles[i].id}:`, r.reason);
+            console.error(
+              `[cleanup] Failed to delete avatar ${avatarFiles[i].id}:`,
+              r.reason,
+            );
           }
         });
-        console.log(`[cleanup] Deleted ${deletedAvatars}/${avatarFiles.length} avatars.`);
+        console.log(
+          `[cleanup] Deleted ${deletedAvatars}/${avatarFiles.length} avatars.`,
+        );
 
         console.log("[cleanup] Cleaning up file relations...");
         await knex("files_related_mph")
