@@ -79,6 +79,7 @@ export default async function LandingPage() {
       description: { $notNull: true },
     },
     "pagination[limit]": 30,
+    "pagination[withCount]": false,
     sort: "updatedAt:desc",
     populate: { avatar: true },
   });
@@ -94,6 +95,7 @@ export default async function LandingPage() {
       },
     },
     "pagination[limit]": 8,
+    "pagination[withCount]": false,
     sort: "createdAt:desc",
     populate: {
       sources: {
