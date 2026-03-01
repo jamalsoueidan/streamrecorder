@@ -131,6 +131,7 @@ export function CustomSlider({
   }
 
   const handleMove = (x: number) => {
+    console.log("handleMove", { x, activeGrip: activeGrip.current, duration });
     if (!activeGrip.current) return;
     if (duration <= 0) return;
 
@@ -258,7 +259,7 @@ export function CustomSlider({
         {/* Track with useMove - for grips and range dragging */}
         <Box
           ref={trackRef}
-          onMouseDown={(e) => {
+          onPointerDown={(e) => {
             if (activeGrip.current === null) {
               const rect = e.currentTarget.getBoundingClientRect();
               dragStartX.current = (e.clientX - rect.left) / rect.width;
@@ -266,18 +267,20 @@ export function CustomSlider({
               activeGrip.current = "track";
             }
           }}
-          onMouseUp={() => {
+          onPointerUp={() => {
             activeGrip.current = null;
           }}
           style={{
             position: "absolute",
             inset: 0,
             cursor: "grab",
+            touchAction: "none",
           }}
         >
           {/* Start grip - extends LEFT into overlay */}
           <Box
-            onMouseDown={() => {
+            onPointerDown={(e) => {
+              e.stopPropagation();
               activeGrip.current = "start";
             }}
             style={{
@@ -289,11 +292,12 @@ export function CustomSlider({
               height: "100%",
               background: "#3b82f6",
               cursor: "ew-resize",
-              zIndex: 10,
+              zIndex: 20,
               borderRadius: "6px 0 0 6px",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
+              touchAction: "none",
             }}
           >
             <IconGripVertical size={14} color="white" />
@@ -318,7 +322,8 @@ export function CustomSlider({
 
           {/* End grip - extends RIGHT into overlay */}
           <Box
-            onMouseDown={() => {
+            onPointerDown={(e) => {
+              e.stopPropagation();
               activeGrip.current = "end";
             }}
             style={{
@@ -329,11 +334,12 @@ export function CustomSlider({
               height: "100%",
               background: "#3b82f6",
               cursor: "ew-resize",
-              zIndex: 10,
+              zIndex: 20,
               borderRadius: "0 6px 6px 0",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
+              touchAction: "none",
             }}
           >
             <IconGripVertical size={14} color="white" />

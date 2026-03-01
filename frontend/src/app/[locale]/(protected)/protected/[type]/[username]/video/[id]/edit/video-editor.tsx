@@ -60,12 +60,22 @@ export default function VideoEditor({ recording }: Props) {
     trackEvent("video_editor_open");
     const video = videoRef.current;
     if (!video) return;
+
     const handleMetadata = () => {
       const dur = Math.floor(video.duration || 0);
-      setDuration(dur);
-      setEndTime(dur);
+      if (dur > 0) {
+        setDuration(dur);
+        setEndTime(dur);
+      }
     };
-    video.addEventListener("loadedmetadata", handleMetadata, { once: true });
+
+    // Check if metadata is already loaded (cached video)
+    if (video.readyState >= 1 && video.duration > 0) {
+      handleMetadata();
+    } else {
+      video.addEventListener("loadedmetadata", handleMetadata);
+    }
+
     return () => video.removeEventListener("loadedmetadata", handleMetadata);
   }, []);
 
