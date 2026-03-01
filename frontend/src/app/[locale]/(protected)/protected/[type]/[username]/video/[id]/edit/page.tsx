@@ -32,10 +32,7 @@ export default async function EditVideoPage({ params }: Props) {
     notFound();
   }
 
-  const profileUrl = getProfileUrl({
-    username: recording.follower?.username,
-    type: recording.follower?.type as any,
-  });
+  const profileUrl = getProfileUrl(recording.follower);
 
   return (
     <Stack w="100%">
