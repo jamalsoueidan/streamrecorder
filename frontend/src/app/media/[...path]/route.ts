@@ -38,7 +38,13 @@ export async function GET(
         Key: s3Key,
       });
       const signedUrl = await getSignedUrl(s3, command, { expiresIn: 1800 });
-      return Response.redirect(signedUrl);
+      return new Response(null, {
+        status: 302,
+        headers: {
+          Location: signedUrl,
+          "Cache-Control": "no-store",
+        },
+      });
     }
 
     // Extract source path from file path
@@ -93,7 +99,13 @@ export async function GET(
           Key: s3Key,
         });
         const signedUrl = await getSignedUrl(s3, command, { expiresIn: 1800 });
-        return Response.redirect(signedUrl);
+        return new Response(null, {
+          status: 302,
+          headers: {
+            Location: signedUrl,
+            "Cache-Control": "no-store",
+          },
+        });
       }
 
       // Basic user - check if following
@@ -111,7 +123,13 @@ export async function GET(
           const signedUrl = await getSignedUrl(s3, command, {
             expiresIn: 1800,
           });
-          return Response.redirect(signedUrl);
+          return new Response(null, {
+            status: 302,
+            headers: {
+              Location: signedUrl,
+              "Cache-Control": "no-store",
+            },
+          });
         }
       }
 
@@ -144,7 +162,13 @@ export async function GET(
           const signedUrl = await getSignedUrl(s3, command, {
             expiresIn: 1800,
           });
-          return Response.redirect(signedUrl);
+          return new Response(null, {
+            status: 302,
+            headers: {
+              Location: signedUrl,
+              "Cache-Control": "no-store",
+            },
+          });
         }
       }
 
@@ -163,7 +187,13 @@ export async function GET(
         Key: s3Key,
       });
       const signedUrl = await getSignedUrl(s3, command, { expiresIn: 1800 });
-      return Response.redirect(signedUrl);
+      return new Response(null, {
+        status: 302,
+        headers: {
+          Location: signedUrl,
+          "Cache-Control": "no-store",
+        },
+      });
     }
 
     // Check view count
@@ -187,7 +217,13 @@ export async function GET(
         Key: s3Key,
       });
       const signedUrl = await getSignedUrl(s3, command, { expiresIn: 1800 });
-      return Response.redirect(signedUrl);
+      return new Response(null, {
+        status: 302,
+        headers: {
+          Location: signedUrl,
+          "Cache-Control": "no-store",
+        },
+      });
     }
 
     // Limit exceeded - deny
