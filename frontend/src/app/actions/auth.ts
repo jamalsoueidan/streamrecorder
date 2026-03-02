@@ -33,16 +33,29 @@ export async function register(prevState: any, formData: FormData) {
   const username = formData.get("username") as string;
   const email = validator.normalizeEmail(formData.get("email") as string) || "";
   const password = formData.get("password") as string;
+  const locale = await getLocale();
 
   try {
-    await publicApi.usersPermissionsAuth.localRegisterCreate({
-      username,
-      email,
-      password,
-    });
-  } catch (err: any) {
+    const response = await fetch(
+      `${process.env.STRAPI_URL || "http://localhost:1337"}/api/auth/local/register?locale=${locale}`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ username, email, password }),
+      },
+    );
+
+    if (!response.ok) {
+      const data = await response.json();
+      return {
+        error: data?.error?.message || "Registration failed",
+      };
+    }
+  } catch {
     return {
-      error: err.response?.data?.error?.message || "Registration failed",
+      error: "Unable to connect to server",
     };
   }
 

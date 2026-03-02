@@ -785,7 +785,7 @@ export interface ApiEmailTemplateEmailTemplate
     from: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     html: Schema.Attribute.Text &
@@ -811,7 +811,7 @@ export interface ApiEmailTemplateEmailTemplate
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     text: Schema.Attribute.Text &
