@@ -6,10 +6,11 @@ import {
   QueryClient,
 } from "@tanstack/react-query";
 
-import { getFollowerFilters } from "@/app/actions/followers";
 import { getTranslations } from "next-intl/server";
+import { Suspense } from "react";
 import { fetchRecordings } from "./actions/fetch-recordings";
 import Filters from "./components/filters";
+import { FiltersWrapper } from "./components/filters-wrapper";
 import FollowingInfinity from "./components/following-infinity";
 import { FollowingFilters, followingParamsCache } from "./lib/search-params";
 
@@ -21,16 +22,15 @@ export default async function Page({
   const t = await getTranslations("protected.explore");
   const filters = await followingParamsCache.parse(searchParams);
 
-const queryClient = new QueryClient();
+  const queryClient = new QueryClient();
 
   const initialData = await fetchRecordings(filters, 1);
+
   queryClient.setQueryData(
     ["explore", filters],
     { pages: [initialData], pageParams: [1] },
     { updatedAt: 0 },
   );
-
-  const filterOptions = await getFollowerFilters();
 
   return (
     <HydrationBoundary state={dehydrate(queryClient)}>
@@ -48,7 +48,9 @@ const queryClient = new QueryClient();
             </Text>
           </Stack>
 
-          <Filters filterOptions={filterOptions} />
+          <Suspense fallback={<Filters />}>
+            <FiltersWrapper />
+          </Suspense>
         </Group>
         <Divider mx={{ base: "-xs", sm: "-md" }} />
         <FollowingInfinity />

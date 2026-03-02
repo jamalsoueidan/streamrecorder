@@ -1,4 +1,3 @@
-import { getFollowerFilters } from "@/app/actions/followers";
 import { Divider, Group, Stack, Text, Title } from "@mantine/core";
 import { IconWorldSearch } from "@tabler/icons-react";
 import {
@@ -7,9 +6,11 @@ import {
   QueryClient,
 } from "@tanstack/react-query";
 import { getTranslations } from "next-intl/server";
+import { Suspense } from "react";
 import { fetchFollowers } from "./actions/fetch-followers";
 import CreatorsInfinity from "./components/creators-infinity";
 import Filters from "./components/filters";
+import { FiltersWrapper } from "./components/filters-wrapper";
 import { CreatorFilters, creatorsParamsCache } from "./lib/search-params";
 
 export default async function Page({
@@ -28,8 +29,6 @@ export default async function Page({
     initialPageParam: 1,
   });
 
-  const filterOptions = await getFollowerFilters();
-
   return (
     <HydrationBoundary state={dehydrate(queryClient)}>
       <Stack w="100%">
@@ -46,7 +45,9 @@ export default async function Page({
             </Text>
           </Stack>
 
-          <Filters filterOptions={filterOptions} />
+          <Suspense fallback={<Filters />}>
+            <FiltersWrapper />
+          </Suspense>
         </Group>
         <Divider mx={{ base: "-xs", sm: "-md" }} />
         <CreatorsInfinity />
