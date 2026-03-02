@@ -29,7 +29,6 @@ import {
   IconBrandApple,
   IconBrandGoogle,
   IconBrandMastercard,
-  IconBrandPaypal,
   IconBrandVisa,
   IconChartBar,
   IconCheck,
@@ -112,7 +111,7 @@ export default function PremiumClient() {
     { icon: IconLanguage, label: t("premiumAiSubtitles"), color: "#f472b6" },
     { icon: IconSparkles, label: t("premiumAiMemes"), color: "#fb923c" },
     { icon: IconShare, label: t("premiumPublishSocial"), color: "#38bdf8" },
-    { icon: IconScissors, label: t("premiumClipEditor"), color: "#ef4444"},
+    { icon: IconScissors, label: t("premiumClipEditor"), color: "#ef4444" },
     { icon: IconVideo, label: t("premiumWatchLater"), color: "#c084fc" },
 
     { icon: IconChartBar, label: t("premiumTiktokInsights"), color: "#22d3ee" },
@@ -386,7 +385,7 @@ export default function PremiumClient() {
                       <Group gap="xs" wrap="nowrap">
                         <feature.icon size={18} color={feature.color} />
                         <Text size="sm">{feature.label}</Text>
-                                              </Group>
+                      </Group>
                     </GridCol>
                   ))}
                 </Grid>
@@ -521,7 +520,7 @@ export default function PremiumClient() {
                     </Paper>
 
                     {/* Freemius Option */}
-                    <Paper
+                    {/*<Paper
                       p="md"
                       radius="md"
                       withBorder
@@ -584,7 +583,7 @@ export default function PremiumClient() {
                           </Card>
                         </Group>
                       </Stack>
-                    </Paper>
+                    </Paper>*/}
                   </Stack>
                 </Radio.Group>
 
