@@ -44,7 +44,15 @@
     "download": "Unduh video",
     "downloadEmailSent": "Tautan unduhan sedang dikirim ke email Anda",
     "downloadFeatureMessage": "Mengunduh video adalah fitur premium.",
-    "editClip": "Edit Klip"
+    "editClip": "Edit Klip",
+    "deleteSources": "Hapus sumber",
+    "deleteSourcesConfirm": {
+      "title": "Hapus sumber",
+      "message": "Apakah Anda yakin ingin menghapus semua file sumber? Rekaman akan tetap ada tetapi video akan dihapus.",
+      "confirm": "Hapus sumber",
+      "cancel": "Batal"
+    },
+    "deleteSourcesSuccess": "{count} sumber dihapus"
   },
   "followers": {
     "addedAgo_context": "Untuk kapan kreator ditambahkan ke daftar pengguna. Menampilkan 'Ditambahkan 3 hari lalu'",

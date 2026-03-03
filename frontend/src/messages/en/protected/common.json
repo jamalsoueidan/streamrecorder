@@ -44,7 +44,15 @@
     "download": "Download video",
     "downloadEmailSent": "Download link on its way to your email",
     "downloadFeatureMessage": "Downloading videos is a premium feature.",
-    "editClip": "Edit Clip"
+    "editClip": "Edit Clip",
+    "deleteSources": "Delete sources",
+    "deleteSourcesConfirm": {
+      "title": "Delete sources",
+      "message": "Are you sure you want to delete all source files? The recording will remain but videos will be removed.",
+      "confirm": "Delete sources",
+      "cancel": "Cancel"
+    },
+    "deleteSourcesSuccess": "Deleted {count} sources"
   },
   "followers": {
     "addedAgo_context": "For when a creator was added to user's list. Shows 'Added 3 days ago'",

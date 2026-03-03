@@ -44,7 +44,15 @@
     "download": "Videoyu indir",
     "downloadEmailSent": "İndirme bağlantısı e-postanıza gönderildi",
     "downloadFeatureMessage": "Video indirme premium bir özelliktir.",
-    "editClip": "Klibi Düzenle"
+    "editClip": "Klibi Düzenle",
+    "deleteSources": "Kaynakları sil",
+    "deleteSourcesConfirm": {
+      "title": "Kaynakları sil",
+      "message": "Tüm kaynak dosyalarını silmek istediğinizden emin misiniz? Kayıt kalacak ancak videolar kaldırılacak.",
+      "confirm": "Kaynakları sil",
+      "cancel": "İptal"
+    },
+    "deleteSourcesSuccess": "{count} kaynak silindi"
   },
   "followers": {
     "addedAgo_context": "For when a creator was added to user's list. Shows 'Added 3 days ago'",
