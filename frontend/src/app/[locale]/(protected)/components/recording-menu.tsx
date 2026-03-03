@@ -98,7 +98,9 @@ export function RecordingMenu({
         const result = await deleteRecordingSources(recording.documentId!);
         if (result.success) {
           notifications.show({
-            title: t("deleteSourcesSuccess", { count: result.deletedCount }),
+            title: t("deleteSourcesSuccess", {
+              count: result.deletedCount || 0,
+            }),
             message: null,
             color: "green",
           });
