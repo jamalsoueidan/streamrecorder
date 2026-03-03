@@ -29,35 +29,77 @@ export default factories.createCoreController(
       let user: any;
       let isNewUser = false;
 
-      if (existingTiktok?.user) {
-        if (existingTiktok.user.blocked) {
-          return ctx.badRequest("Your account has been blocked");
-        }
-
+      if (existingTiktok) {
+        // Update tokens
         await strapi.documents("api::tiktok.tiktok").update({
           documentId: existingTiktok.documentId,
           data: { accessToken, refreshToken, expiresAt },
         });
 
-        user = existingTiktok.user;
+        if (existingTiktok.user) {
+          if (existingTiktok.user.blocked) {
+            return ctx.badRequest("Your account has been blocked");
+          }
+          user = existingTiktok.user;
+        } else {
+          // Orphaned tiktok record — find user by email or create one
+          isNewUser = true;
+          const email = `tiktok_${openId}@noreply.tiktok`;
+
+          user = await strapi
+            .documents("plugin::users-permissions.user")
+            .findFirst({ filters: { email } });
+
+          if (!user) {
+            const defaultRole = await strapi
+              .documents("plugin::users-permissions.role")
+              .findFirst({ filters: { type: "authenticated" } });
+
+            user = await strapi
+              .documents("plugin::users-permissions.user")
+              .create({
+                data: {
+                  username: username || `tiktok_${openId.slice(0, 8)}`,
+                  email,
+                  provider: "tiktok",
+                  confirmed: true,
+                  role: defaultRole?.documentId,
+                } as any,
+              });
+          }
+
+          // Link tiktok record to user
+          await strapi.documents("api::tiktok.tiktok").update({
+            documentId: existingTiktok.documentId,
+            data: { user: user.documentId },
+          });
+        }
       } else {
         isNewUser = true;
+        const email = `tiktok_${openId}@noreply.tiktok`;
 
-        const defaultRole = await strapi
-          .documents("plugin::users-permissions.role")
-          .findFirst({ filters: { type: "authenticated" } });
-
+        // Check if user already exists (e.g. from a previous failed attempt)
         user = await strapi
           .documents("plugin::users-permissions.user")
-          .create({
-            data: {
-              username: username || `tiktok_${openId.slice(0, 8)}`,
-              email: `tiktok_${openId}@noreply.tiktok`,
-              provider: "tiktok",
-              confirmed: true,
-              role: defaultRole?.documentId,
-            } as any,
-          });
+          .findFirst({ filters: { email } });
+
+        if (!user) {
+          const defaultRole = await strapi
+            .documents("plugin::users-permissions.role")
+            .findFirst({ filters: { type: "authenticated" } });
+
+          user = await strapi
+            .documents("plugin::users-permissions.user")
+            .create({
+              data: {
+                username: username || `tiktok_${openId.slice(0, 8)}`,
+                email,
+                provider: "tiktok",
+                confirmed: true,
+                role: defaultRole?.documentId,
+              } as any,
+            });
+        }
 
         await strapi.documents("api::tiktok.tiktok").create({
           data: {
