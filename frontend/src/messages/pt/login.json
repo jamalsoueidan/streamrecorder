@@ -21,6 +21,7 @@
   },
   "choices": {
     "emailPassword": "Usar E-mail / Senha",
+    "google": "Continuar com Google",
     "tiktok": "Continuar com TikTok"
   },
   "terms": {

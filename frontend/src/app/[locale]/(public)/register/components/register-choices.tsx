@@ -1,5 +1,6 @@
 "use client";
 
+import { getGoogleAuthUrl } from "@/app/actions/google";
 import { getTikTokAuthUrl } from "@/app/actions/tiktok";
 import { trackEvent } from "@/app/lib/analytics";
 import {
@@ -11,7 +12,11 @@ import {
   Text,
   Title,
 } from "@mantine/core";
-import { IconBrandTiktok, IconMail } from "@tabler/icons-react";
+import {
+  IconBrandGoogle,
+  IconBrandTiktok,
+  IconMail,
+} from "@tabler/icons-react";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { useState } from "react";
@@ -19,11 +24,19 @@ import { useState } from "react";
 export function RegisterChoices() {
   const t = useTranslations("register");
   const [tiktokLoading, setTiktokLoading] = useState(false);
+  const [googleLoading, setGoogleLoading] = useState(false);
 
   const handleTikTokSignup = async () => {
     trackEvent("signup_method", { method: "tiktok" });
     setTiktokLoading(true);
     const url = await getTikTokAuthUrl("signup");
+    window.location.href = url;
+  };
+
+  const handleGoogleSignup = async () => {
+    trackEvent("signup_method", { method: "google" });
+    setGoogleLoading(true);
+    const url = await getGoogleAuthUrl("signup");
     window.location.href = url;
   };
 
@@ -88,14 +101,33 @@ export function RegisterChoices() {
               size="lg"
               radius="md"
               fullWidth
+              leftSection={<IconBrandGoogle />}
+              loading={googleLoading}
+              onClick={handleGoogleSignup}
+              style={{
+                fontWeight: 600,
+                height: 48,
+                background: "#ffffff",
+                color: "#1f1f1f",
+                border: "1px solid rgba(0, 0, 0, 0.1)",
+              }}
+            >
+              {t("choices.google")}
+            </Button>
+
+            <Button
+              size="lg"
+              radius="md"
+              fullWidth
               leftSection={<IconBrandTiktok />}
               loading={tiktokLoading}
               onClick={handleTikTokSignup}
               style={{
                 fontWeight: 600,
                 height: 48,
-                background: "#000000",
-                border: "1px solid rgba(255, 255, 255, 0.1)",
+                background: "#ffffff",
+                color: "#1f1f1f",
+                border: "1px solid rgba(0, 0, 0, 0.1)",
               }}
             >
               {t("choices.tiktok")}

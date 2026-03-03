@@ -20,6 +20,7 @@
   },
   "choices": {
     "emailPassword": "Usar Correo / Contraseña",
+    "google": "Continuar con Google",
     "tiktok": "Continuar con TikTok"
   },
   "terms": {

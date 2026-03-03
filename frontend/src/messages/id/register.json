@@ -20,6 +20,7 @@
   },
   "choices": {
     "emailPassword": "Gunakan Email / Kata Sandi",
+    "google": "Lanjutkan dengan Google",
     "tiktok": "Lanjutkan dengan TikTok"
   },
   "terms": {

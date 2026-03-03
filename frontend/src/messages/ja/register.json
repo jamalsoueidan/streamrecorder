@@ -20,6 +20,7 @@
   },
   "choices": {
     "emailPassword": "メール / パスワードを使用",
+    "google": "Googleで続ける",
     "tiktok": "TikTokで続ける"
   },
   "terms": {

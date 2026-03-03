@@ -77,14 +77,16 @@
       "target": "api::tiktok.tiktok",
       "mappedBy": "user"
     },
+    "socialAccounts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::social-account.social-account",
+      "mappedBy": "user"
+    },
+
     "subscriptionStatus": {
       "type": "enumeration",
-      "enum": [
-        "active",
-        "cancelled",
-        "trialing",
-        "expired"
-      ]
+      "enum": ["active", "cancelled", "trialing", "expired"]
     },
     "billingPeriod": {
       "type": "string"
@@ -100,10 +102,7 @@
     },
     "paymentProvider": {
       "type": "enumeration",
-      "enum": [
-        "freemius",
-        "stripe"
-      ]
+      "enum": ["freemius", "stripe"]
     },
     "trialClaimed": {
       "type": "boolean",

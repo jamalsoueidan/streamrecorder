@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "social_accounts",
+  "info": {
+    "singularName": "social-account",
+    "pluralName": "social-accounts",
+    "displayName": "SocialAccount"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "provider": {
+      "type": "enumeration",
+      "enum": ["google", "apple", "facebook"],
+      "required": true
+    },
+    "providerId": {
+      "type": "string",
+      "required": true
+    },
+    "accessToken": {
+      "type": "text",
+      "required": true
+    },
+    "refreshToken": {
+      "type": "text"
+    },
+    "expiresAt": {
+      "type": "datetime",
+      "required": true
+    },
+    "email": {
+      "type": "string"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "socialAccounts"
+    }
+  }
+}

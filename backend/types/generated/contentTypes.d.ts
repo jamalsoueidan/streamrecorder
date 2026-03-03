@@ -1138,6 +1138,45 @@ export interface ApiReportReport extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiSocialAccountSocialAccount
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'social_accounts';
+  info: {
+    displayName: 'SocialAccount';
+    pluralName: 'social-accounts';
+    singularName: 'social-account';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    accessToken: Schema.Attribute.Text & Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    email: Schema.Attribute.String;
+    expiresAt: Schema.Attribute.DateTime & Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::social-account.social-account'
+    > &
+      Schema.Attribute.Private;
+    provider: Schema.Attribute.Enumeration<['google', 'apple', 'facebook']> &
+      Schema.Attribute.Required;
+    providerId: Schema.Attribute.String & Schema.Attribute.Required;
+    publishedAt: Schema.Attribute.DateTime;
+    refreshToken: Schema.Attribute.Text;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    user: Schema.Attribute.Relation<
+      'manyToOne',
+      'plugin::users-permissions.user'
+    >;
+  };
+}
+
 export interface ApiSourceSource extends Struct.CollectionTypeSchema {
   collectionName: 'sources';
   info: {
@@ -1739,6 +1778,10 @@ export interface PluginUsersPermissionsUser
       'manyToOne',
       'plugin::users-permissions.role'
     >;
+    socialAccounts: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::social-account.social-account'
+    >;
     stripe: Schema.Attribute.Text;
     subscriptionEndDate: Schema.Attribute.DateTime;
     subscriptionStatus: Schema.Attribute.Enumeration<
@@ -1781,6 +1824,7 @@ declare module '@strapi/strapi' {
       'api::meme.meme': ApiMemeMeme;
       'api::recording.recording': ApiRecordingRecording;
       'api::report.report': ApiReportReport;
+      'api::social-account.social-account': ApiSocialAccountSocialAccount;
       'api::source.source': ApiSourceSource;
       'api::tiktok.tiktok': ApiTiktokTiktok;
       'api::visitor-view.visitor-view': ApiVisitorViewVisitorView;

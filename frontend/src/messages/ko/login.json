@@ -21,6 +21,7 @@
   },
   "choices": {
     "emailPassword": "이메일 / 비밀번호 사용",
+    "google": "Google로 계속하기",
     "tiktok": "TikTok으로 계속하기"
   },
   "terms": {
