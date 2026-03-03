@@ -22,7 +22,8 @@
   "choices": {
     "emailPassword": "이메일 / 비밀번호 사용",
     "google": "Google로 계속하기",
-    "tiktok": "TikTok으로 계속하기"
+    "tiktok": "TikTok으로 계속하기",
+    "facebook": "Facebook으로 계속하기"
   },
   "terms": {
     "text": "계속하면 Live Stream Recorder의",

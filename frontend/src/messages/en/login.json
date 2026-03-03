@@ -22,7 +22,8 @@
   "choices": {
     "emailPassword": "Use Email / Password",
     "google": "Continue with Google",
-    "tiktok": "Continue with TikTok"
+    "tiktok": "Continue with TikTok",
+    "facebook": "Continue with Facebook"
   },
   "terms": {
     "text": "By continuing, you agree to Live Stream Recorder's",

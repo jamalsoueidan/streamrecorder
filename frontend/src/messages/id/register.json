@@ -21,7 +21,8 @@
   "choices": {
     "emailPassword": "Gunakan Email / Kata Sandi",
     "google": "Lanjutkan dengan Google",
-    "tiktok": "Lanjutkan dengan TikTok"
+    "tiktok": "Lanjutkan dengan TikTok",
+    "facebook": "Lanjutkan dengan Facebook"
   },
   "terms": {
     "agree": "Saya setuju dengan",

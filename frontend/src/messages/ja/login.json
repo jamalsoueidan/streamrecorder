@@ -22,7 +22,8 @@
   "choices": {
     "emailPassword": "メール / パスワードを使用",
     "google": "Googleで続ける",
-    "tiktok": "TikTokで続ける"
+    "tiktok": "TikTokで続ける",
+    "facebook": "Facebookで続ける"
   },
   "terms": {
     "text": "続行することで、Live Stream Recorderの",

@@ -21,7 +21,8 @@
   "choices": {
     "emailPassword": "メール / パスワードを使用",
     "google": "Googleで続ける",
-    "tiktok": "TikTokで続ける"
+    "tiktok": "TikTokで続ける",
+    "facebook": "Facebookで続ける"
   },
   "terms": {
     "agree": "以下に同意します：",

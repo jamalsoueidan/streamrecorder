@@ -21,7 +21,8 @@
   "choices": {
     "emailPassword": "E-posta / Şifre Kullan",
     "google": "Google ile Devam Et",
-    "tiktok": "TikTok ile Devam Et"
+    "tiktok": "TikTok ile Devam Et",
+    "facebook": "Facebook ile Devam Et"
   },
   "terms": {
     "agree": "Kabul ediyorum:",

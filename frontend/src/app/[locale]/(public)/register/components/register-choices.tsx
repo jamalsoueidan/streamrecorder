@@ -1,5 +1,6 @@
 "use client";
 
+import { getFacebookAuthUrl } from "@/app/actions/facebook";
 import { getGoogleAuthUrl } from "@/app/actions/google";
 import { getTikTokAuthUrl } from "@/app/actions/tiktok";
 import { trackEvent } from "@/app/lib/analytics";
@@ -13,6 +14,7 @@ import {
   Title,
 } from "@mantine/core";
 import {
+  IconBrandFacebook,
   IconBrandGoogle,
   IconBrandTiktok,
   IconMail,
@@ -25,6 +27,7 @@ export function RegisterChoices() {
   const t = useTranslations("register");
   const [tiktokLoading, setTiktokLoading] = useState(false);
   const [googleLoading, setGoogleLoading] = useState(false);
+  const [facebookLoading, setFacebookLoading] = useState(false);
 
   const handleTikTokSignup = async () => {
     trackEvent("signup_method", { method: "tiktok" });
@@ -37,6 +40,13 @@ export function RegisterChoices() {
     trackEvent("signup_method", { method: "google" });
     setGoogleLoading(true);
     const url = await getGoogleAuthUrl("signup");
+    window.location.href = url;
+  };
+
+  const handleFacebookSignup = async () => {
+    trackEvent("signup_method", { method: "facebook" });
+    setFacebookLoading(true);
+    const url = await getFacebookAuthUrl("signup");
     window.location.href = url;
   };
 
@@ -131,6 +141,24 @@ export function RegisterChoices() {
               }}
             >
               {t("choices.tiktok")}
+            </Button>
+
+            <Button
+              size="lg"
+              radius="md"
+              fullWidth
+              leftSection={<IconBrandFacebook />}
+              loading={facebookLoading}
+              onClick={handleFacebookSignup}
+              style={{
+                fontWeight: 600,
+                height: 48,
+                background: "#ffffff",
+                color: "#1f1f1f",
+                border: "1px solid rgba(0, 0, 0, 0.1)",
+              }}
+            >
+              {t("choices.facebook")}
             </Button>
 
             <Text ta="center" mt="xs" style={{ color: "#64748b" }}>
