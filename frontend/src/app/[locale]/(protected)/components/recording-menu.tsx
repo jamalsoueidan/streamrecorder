@@ -57,12 +57,11 @@ export function RecordingMenu({
   const isPremium =
     user?.role?.type === "admin" ||
     user?.role?.type === "champion" ||
-    user?.subscriptionStatus === "active";
+    user?.role?.type === "premium";
 
   const inWatchLater = recording.documentId
     ? isInWatchLater(recording.documentId)
     : false;
-
 
   const handleDelete = () => {
     if (!recording.documentId) return;
