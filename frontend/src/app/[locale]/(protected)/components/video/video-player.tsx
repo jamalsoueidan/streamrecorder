@@ -19,48 +19,51 @@ import {
   MediaVolumeRange,
 } from "./media-chrome";
 
-export function VideoPlayer({ recording }: { recording: Recording }) {
+interface VideoPlayerProps {
+  recording: Recording;
+  defaultMuted?: boolean;
+  onMuteChange?: (muted: boolean) => void;
+}
+
+export function VideoPlayer({
+  recording,
+  defaultMuted = true,
+  onMuteChange,
+}: VideoPlayerProps) {
   const searchParams = useSearchParams();
   const startTime = Number(searchParams.get("t")) || 0;
 
   const controllerRef = useRef<HTMLElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
 
-  // Handle seek and autoplay
+  // Handle seek to start time
   useEffect(() => {
     const video = videoRef.current;
-    if (!video) return;
-
-    const safePlay = () => {
-      const playPromise = video.play();
-      if (playPromise !== undefined) {
-        playPromise.catch(() => {
-          // Autoplay was prevented - this is expected behavior in some browsers
-          // User can manually click to play
-        });
-      }
-    };
+    if (!video || !startTime) return;
 
     const handleLoaded = () => {
-      if (startTime > 0) {
-        video.currentTime = startTime;
-      } else {
-        safePlay();
-      }
-    };
-
-    const handleSeeked = () => {
-      safePlay();
+      video.currentTime = startTime;
     };
 
     video.addEventListener("loadedmetadata", handleLoaded, { once: true });
-    video.addEventListener("seeked", handleSeeked, { once: true });
 
     return () => {
       video.removeEventListener("loadedmetadata", handleLoaded);
-      video.removeEventListener("seeked", handleSeeked);
     };
   }, [startTime]);
+
+  // Track mute changes
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video || !onMuteChange) return;
+
+    const handleVolumeChange = () => {
+      onMuteChange(video.muted);
+    };
+
+    video.addEventListener("volumechange", handleVolumeChange);
+    return () => video.removeEventListener("volumechange", handleVolumeChange);
+  }, [onMuteChange]);
 
   const handleDoubleClick = () => {
     const controller = controllerRef.current;
@@ -98,7 +101,7 @@ export function VideoPlayer({ recording }: { recording: Recording }) {
           crossOrigin="anonymous"
           playsInline
           autoPlay
-          muted
+          muted={defaultMuted}
         >
           <track
             default

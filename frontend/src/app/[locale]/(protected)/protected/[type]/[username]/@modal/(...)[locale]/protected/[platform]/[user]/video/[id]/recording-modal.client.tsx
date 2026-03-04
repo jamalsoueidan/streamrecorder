@@ -71,7 +71,12 @@ export default function ProfileRecordingModalClient() {
 
   const videoExists = recordings.some((r) => r.documentId === id);
 
-  if (isLoading || isAccessLoading || (isFetching && !videoExists)) {
+  // Only block on access loading for the initial video.
+  // After scrolling, currentVideoId changes — don't unmount the player
+  // or it will remount with the original initialId and jump back.
+  const isInitialAccessLoading = isAccessLoading && currentVideoId === id;
+
+  if (isLoading || isInitialAccessLoading || (isFetching && !videoExists)) {
     return (
       <Modal.Root opened={true} onClose={handleClose} fullScreen>
         <Modal.Content>

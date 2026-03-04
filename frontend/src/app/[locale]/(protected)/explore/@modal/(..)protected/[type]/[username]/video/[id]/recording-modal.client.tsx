@@ -69,7 +69,11 @@ export default function RecordingModalClient() {
     router.replace("/explore");
   };
 
-  if (isLoading || isAccessLoading) {
+  // Only block on access loading for the initial video — not after scrolling,
+  // otherwise the player unmounts and remounts with the original initialId.
+  const isInitialAccessLoading = isAccessLoading && currentVideoId === params.id;
+
+  if (isLoading || isInitialAccessLoading) {
     return (
       <Modal.Root opened={true} onClose={handleClose} fullScreen>
         <Modal.Content>

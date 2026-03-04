@@ -11,7 +11,7 @@ import { Flex, Loader, Modal } from "@mantine/core";
 import { useInfiniteQuery, useQuery } from "@tanstack/react-query";
 import { useParams, useRouter, useSearchParams } from "next/navigation";
 import { useQueryStates } from "nuqs";
-import { useCallback, useMemo } from "react";
+import { useCallback, useMemo, useState } from "react";
 
 export default function DiscoverRecordingModalClient() {
   const router = useRouter();
@@ -20,12 +20,13 @@ export default function DiscoverRecordingModalClient() {
     username: string;
     type: string;
   }>();
+  const [currentVideoId, setCurrentVideoId] = useState(params.id);
   const searchParams = useSearchParams();
   const [filters] = useQueryStates(exploreParsers);
 
   const { data: access, isLoading: isAccessLoading } = useQuery({
-    queryKey: ["video-access", params.id],
-    queryFn: () => checkVideoAccess(params.id),
+    queryKey: ["video-access", currentVideoId],
+    queryFn: () => checkVideoAccess(currentVideoId),
   });
 
   const {
@@ -66,6 +67,7 @@ export default function DiscoverRecordingModalClient() {
 
   const handleVisibleChange = useCallback(
     (recording: Recording) => {
+      setCurrentVideoId(recording.documentId!);
       const basePath = `${getProfileUrl(recording.follower)}/video/${recording.documentId}`;
       const search = searchParams.toString();
       const url = search ? `${basePath}?${search}` : basePath;
@@ -80,7 +82,9 @@ export default function DiscoverRecordingModalClient() {
 
   const videoExists = recordings.some((r) => r.documentId === params.id);
 
-  if (isLoading || isAccessLoading || (isFetching && !videoExists)) {
+  const isInitialAccessLoading = isAccessLoading && currentVideoId === params.id;
+
+  if (isLoading || isInitialAccessLoading || (isFetching && !videoExists)) {
     return (
       <Modal.Root opened={true} onClose={handleClose} fullScreen>
         <Modal.Content>

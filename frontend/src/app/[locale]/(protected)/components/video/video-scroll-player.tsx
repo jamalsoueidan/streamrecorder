@@ -63,6 +63,7 @@ export function VideoScrollPlayer({
   const slideRefs = useRef<Map<number, HTMLDivElement>>(new Map());
   const [visibleIndex, setVisibleIndex] = useState<number | null>(null);
   const hasScrolledToInitial = useRef(false);
+  const [isMuted, setIsMuted] = useState(true);
 
   // Track the currently visible video's documentId (not index, since index can shift)
   const visibleDocumentId = useRef<string | null>(null);
@@ -343,6 +344,8 @@ export function VideoScrollPlayer({
             index={index}
             isInitiallyVisible={index === safeInitialIndex}
             onVisible={handleVisibleChange}
+            isMuted={isMuted}
+            onMuteChange={setIsMuted}
             registerRef={(el) => {
               if (el) slideRefs.current.set(index, el);
               else slideRefs.current.delete(index);
@@ -360,12 +363,16 @@ function VideoSlide({
   index,
   isInitiallyVisible,
   onVisible,
+  isMuted,
+  onMuteChange,
   registerRef,
 }: {
   recording: Recording;
   index: number;
   isInitiallyVisible: boolean;
   onVisible: (index: number) => void;
+  isMuted: boolean;
+  onMuteChange: (muted: boolean) => void;
   registerRef: (el: HTMLDivElement | null) => void;
 }) {
   const ref = useRef<HTMLDivElement>(null);
@@ -411,7 +418,12 @@ function VideoSlide({
       }}
     >
       {isVisible ? (
-        <VideoPlayer recording={recording} key={recording.documentId} />
+        <VideoPlayer
+          recording={recording}
+          key={recording.documentId}
+          defaultMuted={isMuted}
+          onMuteChange={onMuteChange}
+        />
       ) : (
         <Box w="100%" h="100%" bg="dark.9" />
       )}
