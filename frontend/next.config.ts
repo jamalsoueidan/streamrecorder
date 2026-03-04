@@ -6,6 +6,9 @@ import createNextIntlPlugin from "next-intl/plugin";
 loadEnvConfig(process.cwd());
 
 const nextConfig: NextConfig = {
+  env: {
+    NEXT_PUBLIC_BUILD_ID: Date.now().toString(),
+  },
   serverExternalPackages: ["esbuild-wasm"],
   reactCompiler: true,
   output: "standalone",
