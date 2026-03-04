@@ -1,5 +1,6 @@
 "use client";
 
+import type { HlsVideoElement } from "hls-video-element";
 import { Flex, Loader, Modal } from "@mantine/core";
 import { useQuery } from "@tanstack/react-query";
 import { useParams, useRouter, useSearchParams } from "next/navigation";
@@ -47,7 +48,16 @@ export default function CreatorRecordingModal() {
   }, []);
 
   const handleClose = () => {
-    router.back();
+    document.querySelectorAll<HlsVideoElement>("hls-video").forEach((el) => {
+      el.pause();
+      if (el.api) {
+        el.api.stopLoad();
+        el.api.detachMedia();
+        el.api.destroy();
+        el.api = null;
+      }
+    });
+    setTimeout(() => router.back(), 50);
   };
 
   const handleVisibleChange = useCallback(

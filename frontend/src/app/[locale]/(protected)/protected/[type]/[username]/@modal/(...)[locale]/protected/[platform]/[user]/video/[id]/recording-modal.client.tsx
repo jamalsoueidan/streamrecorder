@@ -1,5 +1,6 @@
 "use client";
 
+import type { HlsVideoElement } from "hls-video-element";
 import { checkVideoAccess } from "@/app/actions/video-access";
 import { VideoUpgradeModal } from "@/app/[locale]/(protected)/components/video-upgrade-modal";
 import { VideoScrollPlayer } from "@/app/[locale]/(protected)/components/video/video-scroll-player";
@@ -54,7 +55,16 @@ export default function ProfileRecordingModalClient() {
   );
 
   const handleClose = () => {
-    router.back();
+    document.querySelectorAll<HlsVideoElement>("hls-video").forEach((el) => {
+      el.pause();
+      if (el.api) {
+        el.api.stopLoad();
+        el.api.detachMedia();
+        el.api.destroy();
+        el.api = null;
+      }
+    });
+    setTimeout(() => router.back(), 50);
   };
 
   const handleVisibleChange = useCallback((recording: Recording) => {

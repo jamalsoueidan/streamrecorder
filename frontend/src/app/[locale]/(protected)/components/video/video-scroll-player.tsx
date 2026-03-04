@@ -64,6 +64,7 @@ export function VideoScrollPlayer({
   const [visibleIndex, setVisibleIndex] = useState<number | null>(null);
   const hasScrolledToInitial = useRef(false);
   const [isMuted, setIsMuted] = useState(true);
+  const [hasPlayed, setHasPlayed] = useState(false);
 
   // Track the currently visible video's documentId (not index, since index can shift)
   const visibleDocumentId = useRef<string | null>(null);
@@ -170,23 +171,6 @@ export function VideoScrollPlayer({
     onFetchNextPage,
   ]);
 
-  // Keyboard navigation
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "ArrowUp" || e.key === "ArrowLeft") {
-        e.preventDefault();
-        goToPrev();
-      } else if (e.key === "ArrowDown" || e.key === "ArrowRight") {
-        e.preventDefault();
-        goToNext();
-      } else if (e.key === "Escape" && onClose) {
-        onClose();
-      }
-    };
-    window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [goToPrev, goToNext, onClose]);
-
   const handleVisibleChange = useCallback(
     (index: number) => {
       setVisibleIndex(index);
@@ -222,6 +206,23 @@ export function VideoScrollPlayer({
       onVisibleChange,
     ],
   );
+
+  // Keyboard navigation
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "ArrowUp" || e.key === "ArrowLeft") {
+        e.preventDefault();
+        goToPrev();
+      } else if (e.key === "ArrowDown" || e.key === "ArrowRight") {
+        e.preventDefault();
+        goToNext();
+      } else if (e.key === "Escape" && onClose) {
+        onClose();
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [goToPrev, goToNext, onClose]);
 
   if (isLoading) {
     return (
@@ -346,6 +347,8 @@ export function VideoScrollPlayer({
             onVisible={handleVisibleChange}
             isMuted={isMuted}
             onMuteChange={setIsMuted}
+            autoPlay={hasPlayed}
+            onPlay={() => setHasPlayed(true)}
             registerRef={(el) => {
               if (el) slideRefs.current.set(index, el);
               else slideRefs.current.delete(index);
@@ -365,6 +368,8 @@ function VideoSlide({
   onVisible,
   isMuted,
   onMuteChange,
+  autoPlay,
+  onPlay,
   registerRef,
 }: {
   recording: Recording;
@@ -373,6 +378,8 @@ function VideoSlide({
   onVisible: (index: number) => void;
   isMuted: boolean;
   onMuteChange: (muted: boolean) => void;
+  autoPlay: boolean;
+  onPlay: () => void;
   registerRef: (el: HTMLDivElement | null) => void;
 }) {
   const ref = useRef<HTMLDivElement>(null);
@@ -423,6 +430,8 @@ function VideoSlide({
           key={recording.documentId}
           defaultMuted={isMuted}
           onMuteChange={onMuteChange}
+          autoPlay={autoPlay}
+          onPlay={onPlay}
         />
       ) : (
         <Box w="100%" h="100%" bg="dark.9" />

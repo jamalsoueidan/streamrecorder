@@ -10,7 +10,7 @@ import { Anchor, Badge, Box, Button, CopyButton } from "@mantine/core";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import {
   getProfileUrl,
@@ -58,6 +58,15 @@ export function ImageSpritePreview({ recording, type, username }: Props) {
     }?${params.toString()}`;
   };
 
+  // Clear hover timeout if component unmounts or user navigates away
+  useEffect(() => {
+    return () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+    };
+  }, []);
+
   const handleMouseEnter = () => {
     if (!sources || sources.length === 0 || isRecording) return;
     timeoutRef.current = setTimeout(() => {
@@ -87,6 +96,13 @@ export function ImageSpritePreview({ recording, type, username }: Props) {
       <Anchor
         component={Link}
         href={getHref()}
+        onClick={() => {
+          if (timeoutRef.current) {
+            clearTimeout(timeoutRef.current);
+            timeoutRef.current = null;
+          }
+          setShowVideo(false);
+        }}
         style={{
           position: "relative",
           display: "block",
