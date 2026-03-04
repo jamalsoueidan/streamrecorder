@@ -147,14 +147,15 @@ export function VideoPlayer({
           preload={initialAutoPlay ? undefined : "none"}
           muted={defaultMuted}
         >
-          {window.matchMedia("(pointer: fine)").matches && (
-            <track
-              default
-              kind="metadata"
-              label="thumbnails"
-              src={`/video/${recording.documentId}/thumbnails.vtt`}
-            />
-          )}
+          {typeof window !== "undefined" &&
+            window.matchMedia("(pointer: fine)").matches && (
+              <track
+                default
+                kind="metadata"
+                label="thumbnails"
+                src={`/video/${recording.documentId}/thumbnails.vtt`}
+              />
+            )}
         </HlsVideo>
 
         <MediaPosterImage
