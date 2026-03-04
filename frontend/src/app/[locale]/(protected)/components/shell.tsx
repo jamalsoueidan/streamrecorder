@@ -5,7 +5,7 @@ import { trackEvent } from "@/app/lib/analytics";
 import { IsNewProvider } from "@/app/providers/is-new-provider";
 import { useUser } from "@/app/providers/user-provider";
 import { Link } from "@/i18n/navigation";
-import { AppShell, Button, Card, Flex, Text, useMatches } from "@mantine/core";
+import { AppShell, Button, Flex, Text, useMatches } from "@mantine/core";
 import { useDisclosure, useMounted } from "@mantine/hooks";
 import { IconCrown } from "@tabler/icons-react";
 import { useTranslations } from "next-intl";
@@ -23,7 +23,7 @@ export function Shell({
   initialCollapsed?: boolean;
 }) {
   const t = useTranslations("protected.premium");
-  const tShell = useTranslations("protected.shell");
+  //const tShell = useTranslations("protected.shell");
   const user = useUser();
   const isBasic = user?.role?.type === "authenticated";
   const [opened, { close, open }] = useDisclosure(false);
@@ -108,11 +108,11 @@ export function Shell({
           />
         </AppShell.Navbar>
         <AppShell.Main>
-          <Card radius="lg" bg="red" px="2px" py="2px" mb="sm">
+          {/*<Card radius="lg" bg="red" px="2px" py="2px" mb="sm">
             <Text c="white" fw={600} size="sm" ta="center">
               {tShell("highDemandBanner")}
             </Text>
-          </Card>
+          </Card> */}
           {children}
         </AppShell.Main>
         <AppShell.Footer>
