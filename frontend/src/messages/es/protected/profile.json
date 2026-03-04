@@ -6,6 +6,7 @@
     "title": "¡{username} ha sido agregado!",
     "description": "Empezaremos a grabar sus transmisiones automáticamente."
   },
+  "paused": "La grabación está pausada — este creador necesita un suscriptor premium para mantenerse activo.",
   "emptyDefault": {
     "title": "Sin grabaciones todavía",
     "description": "Aún no hay grabaciones de {username}. ¡Vuelve más tarde!"

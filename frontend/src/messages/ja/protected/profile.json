@@ -6,6 +6,7 @@
     "title": "{username} を追加しました！",
     "description": "配信を自動録画します。"
   },
+  "paused": "録画は一時停止中 — このクリエイターが配信を続けるにはプレミアムサポーターが必要です。",
   "emptyDefault": {
     "title": "まだ録画はありません",
     "description": "{username} の録画はまだありません。後ほど確認してください！"

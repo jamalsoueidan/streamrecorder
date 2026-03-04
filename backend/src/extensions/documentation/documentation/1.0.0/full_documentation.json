@@ -20,7 +20,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2026-03-03T11:05:46.508Z"
+    "x-generation-date": "2026-03-03T21:56:48.742Z"
   },
   "servers": [
     {
@@ -11204,6 +11204,40 @@
           },
           "404": {
             "description": "Not found"
+          }
+        }
+      }
+    },
+    "/followers/unpause-my-followers": {
+      "post": {
+        "tags": [
+          "Follower"
+        ],
+        "operationId": "unpauseMyFollowers",
+        "summary": "Unpause all followers for the current user",
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "updated": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
           }
         }
       }

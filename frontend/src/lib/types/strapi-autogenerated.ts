@@ -8512,6 +8512,10 @@ export interface UnfollowCreateData {
   success?: boolean;
 }
 
+export interface UnpauseMyFollowersData {
+  updated?: number;
+}
+
 export interface GetFollowerFiltersParams {
   /** Filter all results by follower type */
   type?: FollowerTypeEnum;
@@ -9744,6 +9748,22 @@ export namespace Follower {
     export type RequestBody = FollowRequestBody;
     export type RequestHeaders = {};
     export type ResponseBody = UnfollowCreateData;
+  }
+
+  /**
+   * No description
+   * @tags Follower
+   * @name UnpauseMyFollowers
+   * @summary Unpause all followers for the current user
+   * @request POST:/followers/unpause-my-followers
+   * @secure
+   */
+  export namespace UnpauseMyFollowers {
+    export type RequestParams = {};
+    export type RequestQuery = {};
+    export type RequestBody = never;
+    export type RequestHeaders = {};
+    export type ResponseBody = UnpauseMyFollowersData;
   }
 
   /**
@@ -12411,6 +12431,24 @@ export class Api<
         body: data,
         secure: true,
         type: ContentType.Json,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Follower
+     * @name UnpauseMyFollowers
+     * @summary Unpause all followers for the current user
+     * @request POST:/followers/unpause-my-followers
+     * @secure
+     */
+    unpauseMyFollowers: (params: RequestParams = {}) =>
+      this.request<UnpauseMyFollowersData, void>({
+        path: `/followers/unpause-my-followers`,
+        method: "POST",
+        secure: true,
         format: "json",
         ...params,
       }),

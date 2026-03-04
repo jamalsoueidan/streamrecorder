@@ -6,6 +6,7 @@
     "title": "{username} telah ditambahkan!",
     "description": "Kami akan mulai merekam stream mereka secara otomatis."
   },
+  "paused": "Perekaman dijeda — kreator ini membutuhkan pendukung premium untuk tetap aktif.",
   "emptyDefault": {
     "title": "Belum ada rekaman",
     "description": "Belum ada rekaman dari {username}. Cek lagi nanti!"

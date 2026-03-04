@@ -26,6 +26,11 @@ export default {
       handler: "follower.bulkUpdateLastChecked",
     },
     {
+      method: "POST",
+      path: "/followers/unpause-my-followers",
+      handler: "follower.unpauseMyFollowers",
+    },
+    {
       method: "DELETE",
       path: "/followers/cleanup",
       handler: "follower.cleanup",

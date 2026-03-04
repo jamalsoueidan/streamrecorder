@@ -54,10 +54,7 @@ export function RecordingMenu({
   const isFollowing = user?.followers?.some(
     (f) => f.documentId === recording.follower?.documentId,
   );
-  const isPremium =
-    user?.role?.type === "admin" ||
-    user?.role?.type === "champion" ||
-    user?.role?.type === "premium";
+  const isPremium = user?.role?.type !== "authenticated";
 
   const inWatchLater = recording.documentId
     ? isInWatchLater(recording.documentId)

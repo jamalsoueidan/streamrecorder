@@ -6,6 +6,7 @@
     "title": "{username} eklendi!",
     "description": "Yayınlarını otomatik olarak kaydetmeye başlayacağız."
   },
+  "paused": "Kayıt duraklatıldı — bu içerik üreticisinin aktif kalması için bir premium destekçiye ihtiyacı var.",
   "emptyDefault": {
     "title": "Henüz kayıt yok",
     "description": "{username}'dan henüz kayıt yok. Daha sonra tekrar kontrol edin!"
