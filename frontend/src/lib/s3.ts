@@ -1,6 +1,6 @@
 import { S3Client } from "@aws-sdk/client-s3";
 
-const s3Fsn1 = new S3Client({
+export const s3Fsn1 = new S3Client({
   region: "fsn1",
   endpoint: "https://fsn1.your-objectstorage.com",
   credentials: {
@@ -9,7 +9,7 @@ const s3Fsn1 = new S3Client({
   },
 });
 
-const s3Nbg1 = new S3Client({
+export const s3Nbg1 = new S3Client({
   region: "nbg1",
   endpoint: "https://nbg1.your-objectstorage.com",
   credentials: {
