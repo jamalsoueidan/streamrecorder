@@ -1,13 +1,5 @@
-import { GetObjectCommand, S3Client } from "@aws-sdk/client-s3";
-
-const s3 = new S3Client({
-  region: "fsn1",
-  endpoint: "https://fsn1.your-objectstorage.com",
-  credentials: {
-    accessKeyId: process.env.S3_ACCESS_KEY!,
-    secretAccessKey: process.env.S3_SECRET_KEY!,
-  },
-});
+import { getS3 } from "@/lib/s3";
+import { GetObjectCommand } from "@aws-sdk/client-s3";
 
 export async function GET(
   _: Request,
@@ -23,7 +15,7 @@ export async function GET(
       Bucket: process.env.AVATAR_BUCKET!,
       Key: filePath,
     });
-    const response = await s3.send(command, {
+    const response = await getS3().send(command, {
       abortSignal: abortController.signal,
     });
 

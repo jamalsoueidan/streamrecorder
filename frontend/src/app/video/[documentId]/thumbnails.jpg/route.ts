@@ -1,15 +1,7 @@
 import publicApi from "@/lib/public-api";
-import { GetObjectCommand, S3Client } from "@aws-sdk/client-s3";
+import { getBucket, getS3 } from "@/lib/s3";
+import { GetObjectCommand } from "@aws-sdk/client-s3";
 import { NextRequest } from "next/server";
-
-const s3 = new S3Client({
-  region: "fsn1",
-  endpoint: "https://fsn1.your-objectstorage.com",
-  credentials: {
-    accessKeyId: process.env.S3_ACCESS_KEY!,
-    secretAccessKey: process.env.S3_SECRET_KEY!,
-  },
-});
 
 export async function GET(
   request: NextRequest,
@@ -48,8 +40,9 @@ export async function GET(
   const abortController = new AbortController();
 
   try {
+    const s3 = getS3(source.createdAt);
     const command = new GetObjectCommand({
-      Bucket: process.env.MEDIA_BUCKET!,
+      Bucket: getBucket(process.env.MEDIA_BUCKET!, source.createdAt),
       Key: decodeURIComponent(`${source.path.substring(1)}thumbnails.jpg`),
     });
     const response = await s3.send(command, {
