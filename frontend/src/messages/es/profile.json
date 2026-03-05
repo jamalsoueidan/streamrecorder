@@ -19,6 +19,7 @@
   "jsonLd": {
     "streamTitle": "Transmisión de {nickname} - {date}"
   },
+  "report": "Reportar",
   "cta": {
     "title": "Solo estás viendo una vista previa de @{username}",
     "description": "@{username} comparte sus grabaciones aquí. Crea una cuenta para guardar y compartir tus propias transmisiones.",

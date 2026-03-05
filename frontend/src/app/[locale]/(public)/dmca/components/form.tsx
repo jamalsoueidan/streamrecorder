@@ -16,13 +16,15 @@ import {
 import { IconAlertCircle, IconRefresh, IconShieldCheck } from "@tabler/icons-react";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Submitted } from "./submitted";
 
 export function DMCAForm() {
   const t = useTranslations("dmca.form");
+  const searchParams = useSearchParams();
   const [formData, setFormData] = useState({
-    content: "",
+    content: searchParams.get("url") || "",
     copyrightType: "",
     email: "",
     fullName: "",

@@ -19,6 +19,7 @@
   "jsonLd": {
     "streamTitle": "Stream {nickname} - {date}"
   },
+  "report": "Laporkan",
   "cta": {
     "title": "Anda hanya melihat pratinjau dari @{username}",
     "description": "@{username} membagikan rekaman mereka di sini. Daftar untuk menyimpan dan membagikan stream Anda sendiri.",

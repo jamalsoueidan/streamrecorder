@@ -59,7 +59,7 @@ export default async function DMCAPolicy() {
           </Text>
         </Stack>
 
-        <PartnerBenefits />
+        <DMCAForm />
 
         <Divider
           label={
@@ -75,7 +75,7 @@ export default async function DMCAPolicy() {
           style={{ borderColor: "rgba(255, 255, 255, 0.1)" }}
         />
 
-        <DMCAForm />
+        <PartnerBenefits />
 
         <Text size="sm" ta="center" style={{ color: "#64748b" }}>
           {t("footer")}
