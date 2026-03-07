@@ -3,4 +3,6 @@ android/*.keystore
 android/*.apk
 android/*.apk.idsig
 android/*.aab
+android/.gradle/
 android/build/
+android/app/build/
