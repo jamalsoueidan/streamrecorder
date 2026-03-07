@@ -55,7 +55,20 @@ export default {
       return ctx.unauthorized("You must be logged in");
     }
 
-    // Delete the user (Strapi should cascade the link table)
+    // Delete social accounts linked to this user
+    const socialAccounts = await strapi
+      .documents("api::social-account.social-account")
+      .findMany({
+        filters: { user: { documentId: user.documentId } },
+      });
+
+    for (const account of socialAccounts) {
+      await strapi
+        .documents("api::social-account.social-account")
+        .delete({ documentId: account.documentId });
+    }
+
+    // Delete the user
     await strapi.documents("plugin::users-permissions.user").delete({
       documentId: user.documentId,
     });
