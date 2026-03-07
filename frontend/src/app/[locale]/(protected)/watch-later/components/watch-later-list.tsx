@@ -71,7 +71,9 @@ export default function WatchLaterList({ initialIds }: Props) {
       <SimpleGrid cols={{ base: 1, sm: 2, md: 3, xl: 4 }} spacing="lg">
         {sortedRecordings.map((rec) => {
           const isRecording = rec.sources?.some(
-            (s) => s.state === SourceStateEnum.Recording,
+            (s) =>
+              s.state === SourceStateEnum.Recording ||
+              s.state === SourceStateEnum.Uploading,
           );
 
           return (

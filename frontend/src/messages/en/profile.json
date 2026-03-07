@@ -19,6 +19,7 @@
   "jsonLd": {
     "streamTitle": "{nickname}'s Stream - {date}"
   },
+  "report": "Report",
   "cta": {
     "title": "You're only seeing a preview from @{username}",
     "description": "@{username} shares their recordings here. Sign up to save and share your own streams.",

@@ -1,5 +1,6 @@
 "use client";
 
+import type { HlsVideoElement } from "hls-video-element";
 import { checkVideoAccess } from "@/app/actions/video-access";
 import { VideoUpgradeModal } from "@/app/[locale]/(protected)/components/video-upgrade-modal";
 import { VideoScrollPlayer } from "@/app/[locale]/(protected)/components/video/video-scroll-player";
@@ -54,7 +55,16 @@ export default function ProfileRecordingModalClient() {
   );
 
   const handleClose = () => {
-    router.back();
+    document.querySelectorAll<HlsVideoElement>("hls-video").forEach((el) => {
+      el.pause();
+      if (el.api) {
+        el.api.stopLoad();
+        el.api.detachMedia();
+        el.api.destroy();
+        el.api = null;
+      }
+    });
+    setTimeout(() => router.back(), 50);
   };
 
   const handleVisibleChange = useCallback((recording: Recording) => {
@@ -71,7 +81,12 @@ export default function ProfileRecordingModalClient() {
 
   const videoExists = recordings.some((r) => r.documentId === id);
 
-  if (isLoading || isAccessLoading || (isFetching && !videoExists)) {
+  // Only block on access loading for the initial video.
+  // After scrolling, currentVideoId changes — don't unmount the player
+  // or it will remount with the original initialId and jump back.
+  const isInitialAccessLoading = isAccessLoading && currentVideoId === id;
+
+  if (isLoading || isInitialAccessLoading || (isFetching && !videoExists)) {
     return (
       <Modal.Root opened={true} onClose={handleClose} fullScreen>
         <Modal.Content>

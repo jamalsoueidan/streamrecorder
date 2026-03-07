@@ -10,14 +10,14 @@ import { Anchor, Badge, Box, Button, CopyButton } from "@mantine/core";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import {
   getProfileUrl,
   SOCIAL_URL_PATTERNS,
 } from "@/app/components/open-social";
-import Image from "next/image";
 import { useIsNew } from "@/app/providers/is-new-provider";
+import Image from "next/image";
 import { FollowerTypeIcon } from "./follower-type-icon";
 import { SpritePreview } from "./sprite-preview";
 import { formatDuration } from "./video/player-utils";
@@ -42,7 +42,9 @@ export function ImageSpritePreview({ recording, type, username }: Props) {
     sources?.reduce((sum, s) => sum + (s.duration || 0), 0) || 0;
 
   const isRecording = sources?.some(
-    (s) => s.state === SourceStateEnum.Recording,
+    (s) =>
+      s.state === SourceStateEnum.Recording ||
+      s.state === SourceStateEnum.Uploading,
   );
 
   const hasSources = sources && sources.length > 0;
@@ -57,6 +59,15 @@ export function ImageSpritePreview({ recording, type, username }: Props) {
       recording.documentId
     }?${params.toString()}`;
   };
+
+  // Clear hover timeout if component unmounts or user navigates away
+  useEffect(() => {
+    return () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+    };
+  }, []);
 
   const handleMouseEnter = () => {
     if (!sources || sources.length === 0 || isRecording) return;
@@ -87,6 +98,13 @@ export function ImageSpritePreview({ recording, type, username }: Props) {
       <Anchor
         component={Link}
         href={getHref()}
+        onClick={() => {
+          if (timeoutRef.current) {
+            clearTimeout(timeoutRef.current);
+            timeoutRef.current = null;
+          }
+          setShowVideo(false);
+        }}
         style={{
           position: "relative",
           display: "block",
@@ -188,7 +206,11 @@ export function ImageSpritePreview({ recording, type, username }: Props) {
         <CopyButton
           value={
             recording.sources
-              ?.find((s) => s.state === "recording")
+              ?.find(
+                (s) =>
+                  s.state === SourceStateEnum.Recording ||
+                  s.state === SourceStateEnum.Uploading,
+              )
               ?.executionId?.toString() || ""
           }
         >
@@ -204,8 +226,11 @@ export function ImageSpritePreview({ recording, type, username }: Props) {
               onClick={copy}
             >
               {
-                recording.sources?.find((s) => s.state === "recording")
-                  ?.executionId
+                recording.sources?.find(
+                  (s) =>
+                    s.state === SourceStateEnum.Recording ||
+                    s.state === SourceStateEnum.Uploading,
+                )?.executionId
               }
             </Button>
           )}

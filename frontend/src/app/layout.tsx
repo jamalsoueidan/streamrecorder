@@ -71,6 +71,7 @@ export default async function RootLayout({
             data-website-id={process.env.NEXT_PUBLIC_UMAMI_ID}
           />
         ) : null}
+        <meta name="format-detection" content="telephone=no" />
         <link rel="apple-touch-icon" href="/icons/icon-192.png" />
       </head>
       <body>

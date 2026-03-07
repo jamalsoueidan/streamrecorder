@@ -108,6 +108,39 @@ export async function deleteRecording(
   }
 }
 
+export async function deleteRecordingSources(
+  recordingDocumentId: string,
+): Promise<ActionResult & { deletedCount?: number }> {
+  try {
+    // Get recording with sources
+    const { data } = await api.recording.getRecordingsId(
+      { id: recordingDocumentId },
+      {
+        query: {
+          populate: {
+            sources: { fields: ["documentId"] },
+          },
+        },
+      } as never,
+    );
+
+    const recording = data?.data;
+    const sources = (recording?.sources as { documentId: string }[]) || [];
+
+    // Delete all sources
+    await Promise.all(
+      sources.map((source) =>
+        api.source.deleteSourcesId({ id: source.documentId }),
+      ),
+    );
+
+    return { success: true, deletedCount: sources.length };
+  } catch (error) {
+    console.error("Error deleting recording sources:", error);
+    return { success: false, error: "Failed to delete sources" };
+  }
+}
+
 export async function toggleHidden(
   recordingDocumentId: string,
   currentlyHidden: boolean,

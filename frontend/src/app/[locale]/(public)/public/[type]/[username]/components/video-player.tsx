@@ -53,7 +53,6 @@ export function VideoPlayer({
       <HlsVideo
         src={src}
         slot="media"
-        crossOrigin="anonymous"
         playsInline
         autoPlay
         muted

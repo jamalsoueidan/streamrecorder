@@ -19,6 +19,7 @@
   "jsonLd": {
     "streamTitle": "بث {nickname} - {date}"
   },
+  "report": "إبلاغ",
   "cta": {
     "title": "أنت تشاهد معاينة فقط من @{username}",
     "description": "@{username} يشارك تسجيلاته هنا. سجّل لحفظ ومشاركة بثوثك الخاصة.",

@@ -42,9 +42,7 @@ export async function getRecordings(
         type: { $eq: type },
       },
       sources: {
-        state: {
-          $in: ["done", "recording"],
-        },
+        state: { $ne: "failed" },
       },
     },
     populate: {

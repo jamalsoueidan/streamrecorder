@@ -19,6 +19,7 @@
   "jsonLd": {
     "streamTitle": "{nickname} の配信 - {date}"
   },
+  "report": "報告",
   "cta": {
     "title": "@{username} のプレビューのみ表示中",
     "description": "@{username} が録画を共有しています。無料登録して自分の配信を保存・共有しましょう。",

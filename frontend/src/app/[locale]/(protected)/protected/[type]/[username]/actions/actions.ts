@@ -10,7 +10,7 @@ const defaultOptions = {
     // give me all recordings that are done or recording
     sources: {
       state: {
-        $in: ["done", "recording"],
+        $ne: "failed",
       },
     },
   },
@@ -154,7 +154,7 @@ export async function fetchRecordingWithContext(
           type: { $eq: type },
         },
         sources: {
-          state: { $in: ["done", "recording"] },
+          state: { $ne: "failed" },
         },
         createdAt: isDesc
           ? { $gt: targetVideo.createdAt }

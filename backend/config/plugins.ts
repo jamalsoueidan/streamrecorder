@@ -778,6 +778,31 @@ export default ({ env }) => ({
             },
           };
 
+          draft.paths["/followers/unpause-my-followers"] = {
+            post: {
+              tags: ["Follower"],
+              operationId: "unpauseMyFollowers",
+              summary: "Unpause all followers for the current user",
+              security: [{ bearerAuth: [] }],
+              responses: {
+                "200": {
+                  description: "Success",
+                  content: {
+                    "application/json": {
+                      schema: {
+                        type: "object",
+                        properties: {
+                          updated: { type: "integer" },
+                        },
+                      },
+                    },
+                  },
+                },
+                "401": { description: "Unauthorized" },
+              },
+            },
+          };
+
           if (draft.paths["/users/me"]?.get) {
             const populateParam = {
               name: "populate",

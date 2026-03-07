@@ -9,6 +9,7 @@ import { DiscoverSection } from "./components/discover-section";
 import { GreetingSection } from "./components/greeting-section";
 import { LatestFollowersSection } from "./components/latest-followers-section";
 import { MyFeedSection } from "./components/my-feed-section";
+import { UnpauseFollowers } from "./components/unpause-followers";
 import {
   fetchLatestFollowers,
   fetchRecordingsByPlatform,
@@ -55,6 +56,7 @@ export default async function Page() {
 
   return (
     <Stack w="100%">
+      <UnpauseFollowers />
       <Card radius="lg" withBorder p="0">
         <Suspense fallback={<Skeleton h={80} m="xl" radius="md" />}>
           <GreetingSection userPromise={userPromise} />

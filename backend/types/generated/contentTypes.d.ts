@@ -1208,7 +1208,9 @@ export interface ApiSourceSource extends Struct.CollectionTypeSchema {
       'manyToOne',
       'api::recording.recording'
     >;
-    state: Schema.Attribute.Enumeration<['recording', 'done', 'failed']> &
+    state: Schema.Attribute.Enumeration<
+      ['recording', 'uploading', 'done', 'failed']
+    > &
       Schema.Attribute.Required;
     thumbnailCols: Schema.Attribute.Integer;
     thumbnailInterval: Schema.Attribute.Integer;

@@ -608,6 +608,35 @@ export default factories.createCoreController(
         updated: result.count,
       };
     },
+    async unpauseMyFollowers(ctx) {
+      const user = ctx.state.user;
+      if (!user) return ctx.unauthorized();
+
+      const fullUser = await strapi
+        .documents("plugin::users-permissions.user")
+        .findOne({
+          documentId: user.documentId,
+          populate: { followers: { fields: ["id", "documentId", "pause"] } },
+        });
+
+      const pausedFollowers =
+        fullUser?.followers?.filter((f) => f.pause) || [];
+
+      if (pausedFollowers.length === 0) {
+        return { updated: 0 };
+      }
+
+      const documentIds = pausedFollowers.map((f) => f.documentId);
+
+      const result = await strapi.db
+        .query("api::follower.follower")
+        .updateMany({
+          where: { documentId: { $in: documentIds } },
+          data: { pause: false },
+        });
+
+      return { updated: result.count };
+    },
     async cleanup(ctx) {
       // delete users who is 7 days old and still have no recordings
       const days = Math.max(1, parseInt(ctx.query.days as string) || 14);

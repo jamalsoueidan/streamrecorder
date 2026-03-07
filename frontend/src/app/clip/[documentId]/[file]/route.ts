@@ -1,16 +1,8 @@
 // app/clip/[documentId]/[file]/route.ts
 import publicApi from "@/lib/public-api";
-import { GetObjectCommand, S3Client } from "@aws-sdk/client-s3";
+import { getBucket, getS3 } from "@/lib/s3";
+import { GetObjectCommand } from "@aws-sdk/client-s3";
 import { getSignedUrl } from "@aws-sdk/s3-request-presigner";
-
-const s3 = new S3Client({
-  region: "fsn1",
-  endpoint: "https://fsn1.your-objectstorage.com",
-  credentials: {
-    accessKeyId: process.env.S3_ACCESS_KEY!,
-    secretAccessKey: process.env.S3_SECRET_KEY!,
-  },
-});
 
 const ALLOWED_EXTENSIONS = [".jpg", ".mp4"] as const;
 type AllowedExt = (typeof ALLOWED_EXTENSIONS)[number];
@@ -46,7 +38,8 @@ export async function GET(
   }
 
   const clip = data.data;
-  const bucket = process.env.CLIP_BUCKET!;
+  const s3 = getS3(clip.createdAt);
+  const bucket = getBucket(process.env.CLIP_BUCKET!, clip.createdAt);
   const key = `${clip.path?.substring(1)}${documentId}/${file}`;
   const command = new GetObjectCommand({ Bucket: bucket, Key: key });
 

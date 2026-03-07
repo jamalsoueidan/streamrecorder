@@ -63,6 +63,11 @@ export function VideoScrollPlayer({
   const slideRefs = useRef<Map<number, HTMLDivElement>>(new Map());
   const [visibleIndex, setVisibleIndex] = useState<number | null>(null);
   const hasScrolledToInitial = useRef(false);
+  const [isSafari] = useState(
+    () => typeof navigator !== "undefined" && /^((?!chrome|android).)*safari/i.test(navigator.userAgent),
+  );
+  const [isMuted, setIsMuted] = useState(isSafari);
+  const [hasPlayed, setHasPlayed] = useState(!isSafari);
 
   // Track the currently visible video's documentId (not index, since index can shift)
   const visibleDocumentId = useRef<string | null>(null);
@@ -169,23 +174,6 @@ export function VideoScrollPlayer({
     onFetchNextPage,
   ]);
 
-  // Keyboard navigation
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "ArrowUp" || e.key === "ArrowLeft") {
-        e.preventDefault();
-        goToPrev();
-      } else if (e.key === "ArrowDown" || e.key === "ArrowRight") {
-        e.preventDefault();
-        goToNext();
-      } else if (e.key === "Escape" && onClose) {
-        onClose();
-      }
-    };
-    window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [goToPrev, goToNext, onClose]);
-
   const handleVisibleChange = useCallback(
     (index: number) => {
       setVisibleIndex(index);
@@ -221,6 +209,23 @@ export function VideoScrollPlayer({
       onVisibleChange,
     ],
   );
+
+  // Keyboard navigation
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "ArrowUp" || e.key === "ArrowLeft") {
+        e.preventDefault();
+        goToPrev();
+      } else if (e.key === "ArrowDown" || e.key === "ArrowRight") {
+        e.preventDefault();
+        goToNext();
+      } else if (e.key === "Escape" && onClose) {
+        onClose();
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [goToPrev, goToNext, onClose]);
 
   if (isLoading) {
     return (
@@ -343,6 +348,10 @@ export function VideoScrollPlayer({
             index={index}
             isInitiallyVisible={index === safeInitialIndex}
             onVisible={handleVisibleChange}
+            isMuted={isMuted}
+            onMuteChange={setIsMuted}
+            autoPlay={hasPlayed}
+            onPlay={() => setHasPlayed(true)}
             registerRef={(el) => {
               if (el) slideRefs.current.set(index, el);
               else slideRefs.current.delete(index);
@@ -360,12 +369,20 @@ function VideoSlide({
   index,
   isInitiallyVisible,
   onVisible,
+  isMuted,
+  onMuteChange,
+  autoPlay,
+  onPlay,
   registerRef,
 }: {
   recording: Recording;
   index: number;
   isInitiallyVisible: boolean;
   onVisible: (index: number) => void;
+  isMuted: boolean;
+  onMuteChange: (muted: boolean) => void;
+  autoPlay: boolean;
+  onPlay: () => void;
   registerRef: (el: HTMLDivElement | null) => void;
 }) {
   const ref = useRef<HTMLDivElement>(null);
@@ -411,7 +428,14 @@ function VideoSlide({
       }}
     >
       {isVisible ? (
-        <VideoPlayer recording={recording} key={recording.documentId} />
+        <VideoPlayer
+          recording={recording}
+          key={recording.documentId}
+          defaultMuted={isMuted}
+          onMuteChange={onMuteChange}
+          autoPlay={autoPlay}
+          onPlay={onPlay}
+        />
       ) : (
         <Box w="100%" h="100%" bg="dark.9" />
       )}

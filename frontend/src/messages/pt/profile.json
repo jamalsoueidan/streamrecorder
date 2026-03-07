@@ -19,6 +19,7 @@
   "jsonLd": {
     "streamTitle": "Live de {nickname} - {date}"
   },
+  "report": "Denunciar",
   "cta": {
     "title": "Você está vendo apenas uma prévia de @{username}",
     "description": "@{username} compartilha suas gravações aqui. Crie uma conta para salvar e compartilhar suas próprias lives.",

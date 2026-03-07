@@ -19,6 +19,7 @@
   "jsonLd": {
     "streamTitle": "{nickname}의 방송 - {date}"
   },
+  "report": "신고",
   "cta": {
     "title": "@{username}의 미리보기만 보고 있습니다",
     "description": "@{username}이(가) 여기서 녹화 영상을 공유합니다. 가입하여 나만의 방송을 저장하고 공유하세요.",

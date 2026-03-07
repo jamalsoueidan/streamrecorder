@@ -115,7 +115,9 @@ export default function FollowerItem({ follower }: Props) {
             <SimpleGrid cols={{ base: 1, sm: 2, md: 3, xl: 4 }} spacing="lg">
               {follower.recordings?.map((rec, index) => {
                 const isRecording = rec.sources?.some(
-                  (s) => s.state === SourceStateEnum.Recording,
+                  (s) =>
+                    s.state === SourceStateEnum.Recording ||
+                    s.state === SourceStateEnum.Uploading,
                 );
 
                 return (

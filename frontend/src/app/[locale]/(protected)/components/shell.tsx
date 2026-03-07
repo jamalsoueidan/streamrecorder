@@ -23,6 +23,7 @@ export function Shell({
   initialCollapsed?: boolean;
 }) {
   const t = useTranslations("protected.premium");
+  //const tShell = useTranslations("protected.shell");
   const user = useUser();
   const isBasic = user?.role?.type === "authenticated";
   const [opened, { close, open }] = useDisclosure(false);
@@ -106,7 +107,14 @@ export function Shell({
             onToggleCollapse={toggle}
           />
         </AppShell.Navbar>
-        <AppShell.Main>{children}</AppShell.Main>
+        <AppShell.Main>
+          {/*<Card radius="lg" bg="red" px="2px" py="2px" mb="sm">
+            <Text c="white" fw={600} size="sm" ta="center">
+              {tShell("highDemandBanner")}
+            </Text>
+          </Card> */}
+          {children}
+        </AppShell.Main>
         <AppShell.Footer>
           <MobileBar />
         </AppShell.Footer>

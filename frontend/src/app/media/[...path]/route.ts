@@ -1,19 +1,11 @@
 import api from "@/lib/api";
 import { FINGERPRINT_COOKIE, MAX_PUBLIC_VIEWS } from "@/lib/constants";
 import publicApi from "@/lib/public-api";
+import { getBucket, getS3 } from "@/lib/s3";
 import { getToken } from "@/lib/token";
-import { GetObjectCommand, S3Client } from "@aws-sdk/client-s3";
+import { GetObjectCommand } from "@aws-sdk/client-s3";
 import { getSignedUrl } from "@aws-sdk/s3-request-presigner";
 import { cookies } from "next/headers";
-
-const s3 = new S3Client({
-  region: "fsn1",
-  endpoint: "https://fsn1.your-objectstorage.com",
-  credentials: {
-    accessKeyId: process.env.S3_ACCESS_KEY!,
-    secretAccessKey: process.env.S3_SECRET_KEY!,
-  },
-});
 
 // Files that bypass access control (placeholders)
 const PUBLIC_FILES = [
@@ -37,7 +29,7 @@ export async function GET(
         Bucket: process.env.MEDIA_BUCKET!,
         Key: s3Key,
       });
-      const signedUrl = await getSignedUrl(s3, command, { expiresIn: 1800 });
+      const signedUrl = await getSignedUrl(getS3(), command, { expiresIn: 1800 });
       return new Response(null, {
         status: 302,
         headers: {
@@ -70,6 +62,9 @@ export async function GET(
       return new Response("Not found", { status: 404 });
     }
 
+    const s3 = getS3(source.createdAt);
+    const mediaBucket = getBucket(process.env.MEDIA_BUCKET!, source.createdAt);
+
     // Check if user is logged in
     const token = await getToken();
     const isLoggedIn = !!token;
@@ -95,7 +90,7 @@ export async function GET(
         roleType === "premium"
       ) {
         const command = new GetObjectCommand({
-          Bucket: process.env.MEDIA_BUCKET!,
+          Bucket: mediaBucket,
           Key: s3Key,
         });
         const signedUrl = await getSignedUrl(s3, command, { expiresIn: 1800 });
@@ -117,7 +112,7 @@ export async function GET(
 
         if (isFollowing) {
           const command = new GetObjectCommand({
-            Bucket: process.env.MEDIA_BUCKET!,
+            Bucket: mediaBucket,
             Key: s3Key,
           });
           const signedUrl = await getSignedUrl(s3, command, {
@@ -156,7 +151,7 @@ export async function GET(
 
         if (alreadyViewed || viewedRecordings.size < MAX_PUBLIC_VIEWS) {
           const command = new GetObjectCommand({
-            Bucket: process.env.MEDIA_BUCKET!,
+            Bucket: mediaBucket,
             Key: s3Key,
           });
           const signedUrl = await getSignedUrl(s3, command, {
@@ -183,7 +178,7 @@ export async function GET(
     if (!fingerprint) {
       // No fingerprint, allow (first visit)
       const command = new GetObjectCommand({
-        Bucket: process.env.MEDIA_BUCKET!,
+        Bucket: mediaBucket,
         Key: s3Key,
       });
       const signedUrl = await getSignedUrl(s3, command, { expiresIn: 1800 });
@@ -213,7 +208,7 @@ export async function GET(
 
     if (alreadyViewed || viewedRecordings.size < MAX_PUBLIC_VIEWS) {
       const command = new GetObjectCommand({
-        Bucket: process.env.MEDIA_BUCKET!,
+        Bucket: mediaBucket,
         Key: s3Key,
       });
       const signedUrl = await getSignedUrl(s3, command, { expiresIn: 1800 });

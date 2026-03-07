@@ -19,6 +19,7 @@
   "jsonLd": {
     "streamTitle": "{nickname} Yayını - {date}"
   },
+  "report": "Bildir",
   "cta": {
     "title": "@{username}'dan sadece bir önizleme görüyorsunuz",
     "description": "@{username} kayıtlarını burada paylaşıyor. Kendi yayınlarınızı kaydetmek ve paylaşmak için kaydolun.",

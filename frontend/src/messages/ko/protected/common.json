@@ -44,7 +44,9 @@
     "download": "영상 다운로드",
     "downloadEmailSent": "다운로드 링크가 이메일로 전송됩니다",
     "downloadFeatureMessage": "영상 다운로드는 프리미엄 기능입니다.",
-    "editClip": "클립 편집"
+    "editClip": "클립 편집",
+    "deleteSources": "소스 삭제",
+    "deleteSourcesSuccess": "{count}개 소스 삭제됨"
   },
   "followers": {
     "addedAgo_context": "크리에이터가 사용자 목록에 추가된 시점. '3일 전 추가됨'으로 표시됨",
