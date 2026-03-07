@@ -1,1 +1,6 @@
 backup.sql
+android/*.keystore
+android/*.apk
+android/*.apk.idsig
+android/*.aab
+android/build/
