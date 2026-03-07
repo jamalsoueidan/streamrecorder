@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.livestreamrecorder.twa",
+      "sha256_cert_fingerprints": [
+        "52:C1:E4:18:AB:54:2B:57:33:9E:1E:F8:BC:46:43:27:57:EC:BF:5D:2B:37:97:9C:6E:5D:C4:7D:AA:D8:65:E0"
+      ]
+    }
+  }
+]
