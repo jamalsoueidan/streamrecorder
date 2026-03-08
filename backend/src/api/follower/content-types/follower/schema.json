@@ -110,7 +110,8 @@
         "i18n": {
           "localized": false
         }
-      }
+      },
+      "default": "2026-02-28T23:00:00.000Z"
     },
     "protected": {
       "type": "boolean",

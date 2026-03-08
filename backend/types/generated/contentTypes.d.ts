@@ -892,7 +892,8 @@ export interface ApiFollowerFollower extends Struct.CollectionTypeSchema {
         i18n: {
           localized: false;
         };
-      }>;
+      }> &
+      Schema.Attribute.DefaultTo<'2026-02-28T23:00:00.000Z'>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',

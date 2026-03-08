@@ -3,8 +3,6 @@ import { Metadata } from "next";
 import { Footer } from "./components/footer";
 import { Header } from "./components/header";
 
-export const revalidate = 1800; // 30 minutes
-
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL!),
 };
