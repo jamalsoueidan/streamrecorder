@@ -17,8 +17,7 @@ Sentry.init({
     const message = event.exception?.values?.[0]?.value || "";
     if (message.includes("play() request was interrupted") ||
         message.includes("play method is not allowed") ||
-        message.includes("Minified React error #418") ||
-        message.includes("Minified React error #423")) {
+        message.includes("Minified React error")) {
       return null;
     }
     return event;
