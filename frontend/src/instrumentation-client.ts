@@ -5,7 +5,8 @@
 import * as Sentry from "@sentry/nextjs";
 
 Sentry.init({
-  dsn: "https://e5faa356a989f58ca3db2839f66cb790@o4510771670417408.ingest.de.sentry.io/4510771671531600",
+  dsn: "https://1b9bd2e727a84cf09c443321fd53797a@glitchtip.livestreamrecorder.com/1",
+  tunnel: "/api/glitchtip-tunnel",
   beforeSend(event) {
     if (
       typeof navigator !== "undefined" &&
@@ -35,12 +36,5 @@ Sentry.init({
 
   // Define how likely traces are sampled. Adjust this value in production, or use tracesSampler for greater control.
   tracesSampleRate: 1,
-  // Enable logs to be sent to Sentry
-  enableLogs: true,
-
-  // Enable sending user PII (Personally Identifiable Information)
-  // https://docs.sentry.io/platforms/javascript/guides/nextjs/configuration/options/#sendDefaultPii
   sendDefaultPii: true,
 });
-
-export const onRouterTransitionStart = Sentry.captureRouterTransitionStart;
