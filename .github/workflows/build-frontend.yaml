@@ -50,7 +50,9 @@ jobs:
             NEXT_PUBLIC_FREEMIUS_PUBLIC_KEY=${{ secrets.NEXT_PUBLIC_FREEMIUS_PUBLIC_KEY }}
             NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=${{ secrets.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY }}
             STRAPI_URL=${{ secrets.STRAPI_URL }}
-            SENTRY_AUTH_TOKEN=${{ secrets.SENTRY_AUTH_TOKEN }}
+            GLITCHTIP_AUTH_TOKEN=${{ secrets.GLITCHTIP_AUTH_TOKEN }}
+            GLITCHTIP_ORG=${{ secrets.GLITCHTIP_ORG }}
+            GLITCHTIP_PROJECT=${{ secrets.GLITCHTIP_PROJECT }}
             GITHUB_SHA=${{ github.sha }}
 
       - name: Trigger Coolify Deploy
