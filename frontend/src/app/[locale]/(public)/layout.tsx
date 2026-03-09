@@ -1,5 +1,6 @@
 import { Box } from "@mantine/core";
 import { Metadata } from "next";
+import { Suspense } from "react";
 import { Footer } from "./components/footer";
 import { Header } from "./components/header";
 
@@ -17,7 +18,9 @@ export default async function MainLayout({
       display="flex"
       style={{ flexDirection: "column", position: "relative", zIndex: 1 }}
     >
-      <Header />
+      <Suspense>
+        <Header />
+      </Suspense>
       <Box flex={1} mt="xl">
         {children}
       </Box>

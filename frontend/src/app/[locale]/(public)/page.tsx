@@ -1,7 +1,11 @@
 import { generateProfileUrl } from "@/app/lib/profile-url";
 import { generateAlternates } from "@/app/lib/seo";
 import { getAlternateOgLocales, getOgLocale } from "@/i18n/routing";
-import publicApi from "@/lib/public-api";
+import {
+  getHomeClips,
+  getHomeFollowers,
+  getHomeRecordings,
+} from "./cached-data";
 import {
   Button,
   Container,
@@ -72,53 +76,11 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function LandingPage() {
   const t = await getTranslations("home");
 
-  const {
-    data: { data: followers },
-  } = await publicApi.follower.getFollowers({
-    filters: {
-      description: { $notNull: true },
-    },
-    "pagination[limit]": 30,
-    "pagination[withCount]": false,
-    sort: "updatedAt:desc",
-    populate: { avatar: true },
-  });
-
-  const {
-    data: { data: recordings },
-  } = await publicApi.recording.getRecordings({
-    filters: {
-      sources: {
-        state: {
-          $eq: ["done"],
-        },
-      },
-    },
-    "pagination[limit]": 8,
-    "pagination[withCount]": false,
-    sort: "createdAt:desc",
-    populate: {
-      sources: {
-        fields: ["*"],
-        filters: {
-          state: {
-            $eq: "done",
-          },
-        },
-      },
-      follower: {
-        populate: {
-          avatar: true,
-        },
-      },
-    },
-  });
-
-  const {
-    data: { data: clips },
-  } = await publicApi.clip.getRandomClips({
-    limit: 8,
-  });
+  const [followers, recordings, clips] = await Promise.all([
+    getHomeFollowers(),
+    getHomeRecordings(),
+    getHomeClips(),
+  ]);
 
   const jsonLd = {
     "@context": "https://schema.org",

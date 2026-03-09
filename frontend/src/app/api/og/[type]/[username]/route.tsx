@@ -3,7 +3,6 @@ import { getFollower } from "@/app/[locale]/(public)/public/[type]/[username]/ac
 import { ImageResponse } from "next/og";
 import { NextRequest } from "next/server";
 
-export const runtime = "edge";
 
 const platformColors: Record<string, { from: string; to: string }> = {
   tiktok: { from: "#00f2ea", to: "#ff0050" },

@@ -6,6 +6,7 @@ import createNextIntlPlugin from "next-intl/plugin";
 loadEnvConfig(process.cwd());
 
 const nextConfig: NextConfig = {
+  cacheComponents: true,
   env: {
     NEXT_PUBLIC_BUILD_ID: Date.now().toString(),
   },
