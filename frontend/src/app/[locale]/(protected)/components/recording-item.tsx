@@ -31,7 +31,7 @@ export default function RecordingItem({ recording }: Props) {
       <Grid.Col span={12}>
         <Group gap="xs" justify="space-between">
           <Group gap="xs">
-            <Anchor component={Link} href={getProfileUrl(recording.follower)}>
+            <Anchor component={Link} prefetch={false} href={getProfileUrl(recording.follower)}>
               <Avatar size={38}>
                 {recording.follower?.avatar?.url && (
                   <Image
@@ -46,6 +46,7 @@ export default function RecordingItem({ recording }: Props) {
             <Stack gap="0">
               <Anchor
                 component={Link}
+                prefetch={false}
                 href={getProfileUrl(recording.follower)}
                 size="md"
                 truncate

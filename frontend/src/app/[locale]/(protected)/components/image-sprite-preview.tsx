@@ -97,6 +97,7 @@ export function ImageSpritePreview({ recording, type, username }: Props) {
     >
       <Anchor
         component={Link}
+        prefetch={false}
         href={getHref()}
         onClick={() => {
           if (timeoutRef.current) {
