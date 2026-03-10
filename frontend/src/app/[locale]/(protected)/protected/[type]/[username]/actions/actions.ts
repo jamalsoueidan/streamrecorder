@@ -98,8 +98,7 @@ export async function fetchProfileRecordings(
       sort: filters.sort,
       "pagination[page]": page,
       "pagination[pageSize]": 15,
-      "pagination[withCount]": false,
-    }),
+      }),
   );
 
   return {
@@ -133,7 +132,7 @@ export async function fetchRecordingWithContext(
         filters: {
           documentId: { $eq: targetDocumentId },
         },
-        //locale,
+            //locale,
       }),
     );
 
@@ -181,7 +180,7 @@ export async function fetchRecordingWithContext(
       sort: filters.sort,
       "pagination[page]": actualPage,
       "pagination[pageSize]": pageSize,
-      //locale,
+        //locale,
     }),
   );
 

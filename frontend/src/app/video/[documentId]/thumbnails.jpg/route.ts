@@ -1,7 +1,32 @@
 import publicApi from "@/lib/public-api";
 import { getBucket, getS3 } from "@/lib/s3";
 import { GetObjectCommand } from "@aws-sdk/client-s3";
+import { unstable_cache } from "next/cache";
 import { NextRequest } from "next/server";
+
+const getSource = unstable_cache(
+  async (documentId: string, sourceId: string | null) => {
+    const { data } = await publicApi.source.getSources({
+      filters: {
+        ...(sourceId
+          ? { documentId: sourceId }
+          : {
+              recording: {
+                documentId,
+              },
+            }),
+        state: {
+          $ne: "failed",
+        },
+      },
+      sort: "createdAt:asc",
+      "pagination[limit]": 1,
+    });
+    return data.data?.[0] ?? null;
+  },
+  ["thumbnail-source"],
+  { revalidate: 3600 },
+);
 
 export async function GET(
   request: NextRequest,
@@ -10,28 +35,7 @@ export async function GET(
   const { documentId } = await params;
   const sourceId = request.nextUrl.searchParams.get("sourceId");
 
-  const { data } = await publicApi.source.getSources({
-    filters: {
-      ...(sourceId
-        ? { documentId: sourceId }
-        : {
-            recording: {
-              documentId,
-            },
-          }),
-      state: {
-        $ne: "failed",
-      },
-    },
-    sort: "createdAt:asc",
-    "pagination[limit]": 1,
-  });
-
-  if (!data.data) {
-    return new Response("Not found", { status: 404 });
-  }
-
-  const source = data.data[0];
+  const source = await getSource(documentId, sourceId);
 
   if (!source?.path) {
     return new Response("Not found", { status: 404 });

@@ -57,6 +57,7 @@ export const getRecordings = unstable_cache(
       },
       "pagination[pageSize]": 20,
       "pagination[page]": page,
+      "pagination[withCount]": true,
       sort: "createdAt:desc",
       populate: {
         sources: {
@@ -104,6 +105,7 @@ export const getRecordingsByCountry = unstable_cache(
       },
       "pagination[pageSize]": 20,
       "pagination[page]": page,
+      "pagination[withCount]": true,
       sort: "createdAt:desc",
       populate: {
         sources: {

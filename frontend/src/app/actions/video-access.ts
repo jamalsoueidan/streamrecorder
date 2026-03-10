@@ -20,7 +20,6 @@ export async function checkVideoAccess(
     filters: { documentId: { $eq: recordingDocumentId } },
     populate: "follower",
     "pagination[limit]": 1,
-    "pagination[withCount]": false,
   });
 
   const recording = recordingResponse.data.data?.[0];
@@ -69,7 +68,6 @@ export async function checkVideoAccess(
     filters: { fingerprint: { $eq: userFingerprint } },
     populate: "recording",
     "pagination[limit]": MAX_PUBLIC_VIEWS + 1,
-    "pagination[withCount]": false,
   });
 
   const viewedRecordings = new Set(

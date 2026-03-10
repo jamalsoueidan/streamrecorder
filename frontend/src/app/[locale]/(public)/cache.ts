@@ -12,7 +12,6 @@ export const getFeaturedFollowers = unstable_cache(
         description: { $notNull: true },
       },
       "pagination[limit]": 30,
-      "pagination[withCount]": false,
       sort: "updatedAt:desc",
       populate: { avatar: true },
     });
@@ -35,7 +34,6 @@ export const getLatestRecordings = unstable_cache(
         },
       },
       "pagination[limit]": 8,
-      "pagination[withCount]": false,
       sort: "createdAt:desc",
       populate: {
         sources: {

@@ -1,7 +1,28 @@
 import publicApi from "@/lib/public-api";
 import { getBucket, getS3 } from "@/lib/s3";
 import { GetObjectCommand } from "@aws-sdk/client-s3";
+import { unstable_cache } from "next/cache";
 import { NextRequest } from "next/server";
+
+const getSources = unstable_cache(
+  async (documentId: string) => {
+    const { data } = await publicApi.source.getSources({
+      filters: {
+        recording: {
+          documentId,
+        },
+        state: {
+          $ne: "failed",
+        },
+      },
+      sort: "createdAt:asc",
+      "pagination[limit]": 1,
+    });
+    return data.data ?? [];
+  },
+  ["video-file-source"],
+  { revalidate: 3600 },
+);
 
 export async function GET(
   request: NextRequest,
@@ -10,24 +31,7 @@ export async function GET(
   const { documentId, file } = await params;
   const sourceId = request.nextUrl.searchParams.get("sourceId");
 
-  const { data } = await publicApi.source.getSources({
-    filters: {
-      recording: {
-        documentId,
-      },
-      state: {
-        $ne: "failed",
-      },
-    },
-    sort: "createdAt:asc",
-    "pagination[limit]": 1,
-  });
-
-  if (!data.data) {
-    return new Response("Not found", { status: 404 });
-  }
-
-  const sources = data.data;
+  const sources = await getSources(documentId);
 
   const source = sourceId
     ? sources.find((s) => s.documentId === sourceId)

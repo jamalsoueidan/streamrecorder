@@ -44,6 +44,7 @@ export const getCreators = unstable_cache(
       ...(type === "all" ? {} : { filters: { type } }),
       "pagination[pageSize]": 20,
       "pagination[page]": page,
+      "pagination[withCount]": true,
       sort: "createdAt:desc",
       populate: { avatar: true },
     });
@@ -64,6 +65,7 @@ export const getCreatorsByCountry = unstable_cache(
       },
       "pagination[pageSize]": 20,
       "pagination[page]": page,
+      "pagination[withCount]": true,
       sort: "createdAt:desc",
       populate: { avatar: true },
     });
