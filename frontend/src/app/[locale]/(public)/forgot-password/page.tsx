@@ -1,10 +1,14 @@
 import { generateAlternates } from "@/app/lib/seo";
-import { getLocale, getTranslations } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
 import { ForgotPasswordForm } from "./components/forgot-password-form";
 
-export async function generateMetadata() {
-  const t = await getTranslations("forgotPassword");
-  const locale = await getLocale();
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "forgotPassword" });
   return {
     title: t("meta.title"),
     description: t("meta.description"),

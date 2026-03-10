@@ -2,11 +2,6 @@ import { generateProfileUrl } from "@/app/lib/profile-url";
 import { generateAlternates } from "@/app/lib/seo";
 import { getAlternateOgLocales, getOgLocale } from "@/i18n/routing";
 import {
-  getHomeClips,
-  getHomeFollowers,
-  getHomeRecordings,
-} from "./cached-data";
-import {
   Button,
   Container,
   Flex,
@@ -17,17 +12,24 @@ import {
 } from "@mantine/core";
 import { IconArrowRight } from "@tabler/icons-react";
 import { Metadata } from "next";
-import { getLocale, getTranslations } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import ReactMarkdown from "react-markdown";
+import { getHomeClips, getHomeFollowers, getHomeRecordings } from "./cache";
 import { ClipSlider } from "./components/clip-slider";
 import { PlatformBadges } from "./components/platform-badge";
 import { CreatorsSlider } from "./creators/components/creators-slider";
 import { RecordingsSimpleGrid } from "./recordings/components/recordings-simple-grid";
 
-export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations("home.meta");
-  const locale = await getLocale();
+interface PageProps {
+  params: Promise<{ locale: string }>;
+}
+
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "home.meta" });
 
   return {
     title: {
@@ -73,8 +75,9 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-export default async function LandingPage() {
-  const t = await getTranslations("home");
+export default async function LandingPage({ params }: PageProps) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "home" });
 
   const [followers, recordings, clips] = await Promise.all([
     getHomeFollowers(),
@@ -151,7 +154,11 @@ export default async function LandingPage() {
           />
         </div>
 
-        <PlatformBadges href={`/recordings/`} activePlatform={"type"} />
+        <PlatformBadges
+          href={`/recordings/`}
+          activePlatform={"type"}
+          locale={locale}
+        />
 
         <Stack
           align="center"
@@ -331,7 +338,7 @@ export default async function LandingPage() {
             </Button>
           </Flex>
 
-          <RecordingsSimpleGrid recordings={recordings} />
+          <RecordingsSimpleGrid recordings={recordings} locale={locale} />
         </div>
 
         <div style={{ marginTop: 100, marginBottom: 50 }}>

@@ -8,7 +8,6 @@ import {
 import { generateProfileUrl } from "@/app/lib/profile-url";
 import { generateAlternates } from "@/app/lib/seo";
 import { streamingPlatforms } from "@/app/lib/streaming-platforms";
-import publicApi from "@/lib/public-api";
 import {
   Button,
   Center,
@@ -19,12 +18,18 @@ import {
   Title,
 } from "@mantine/core";
 import { Metadata } from "next";
-import { getLocale, getTranslations } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { CreatorsSimpleGrid } from "../../components/creators-simple-grid";
+import { getCreatorsByCountry } from "../../cache";
+
+export function generateStaticParams() {
+  return [];
+}
 
 interface PageProps {
   params: Promise<{
+    locale: string;
     type: string;
     country: string;
   }>;
@@ -36,9 +41,8 @@ interface PageProps {
 export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
-  const { type, country } = await params;
-  const locale = await getLocale();
-  const t = await getTranslations("creators");
+  const { type, country, locale } = await params;
+  const t = await getTranslations({ locale, namespace: "creators" });
 
   const platform = streamingPlatforms.find(
     (p) => p.name.toLowerCase() === type,
@@ -85,10 +89,9 @@ export async function generateMetadata({
 }
 
 export default async function Page({ params, searchParams }: PageProps) {
-  const { type, country } = await params;
+  const { type, country, locale } = await params;
   const { page } = await searchParams;
-  const locale = await getLocale();
-  const t = await getTranslations("creators");
+  const t = await getTranslations({ locale, namespace: "creators" });
 
   const platform = streamingPlatforms.find(
     (p) => p.name.toLowerCase() === type,
@@ -108,18 +111,11 @@ export default async function Page({ params, searchParams }: PageProps) {
 
   const countryName = getCountryName(countryCode, locale);
 
-  const {
-    data: { data: followers, meta },
-  } = await publicApi.follower.getFollowers({
-    filters: {
-      ...(platform.name ? { type } : {}),
-      countryCode: countryCode,
-    },
-    "pagination[pageSize]": 20,
-    "pagination[page]": parseInt(page || "1", 10),
-    sort: "createdAt:desc",
-    populate: { avatar: true },
-  });
+  const { followers, meta } = await getCreatorsByCountry(
+    platform.name ? type : "all",
+    countryCode,
+    parseInt(page || "1", 10),
+  );
 
   const totalPages = meta?.pagination?.pageCount || 1;
 

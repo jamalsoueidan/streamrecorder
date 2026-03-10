@@ -3,12 +3,16 @@ import { generateAlternates } from "@/app/lib/seo";
 import publicApi from "@/lib/public-api";
 import { Container, Flex, Paper, Stack, Text, Title } from "@mantine/core";
 import { IconArticle } from "@tabler/icons-react";
-import { getLocale, getTranslations } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
 import ReactMarkdown from "react-markdown";
 
-export async function generateMetadata() {
-  const t = await getTranslations("news");
-  const locale = await getLocale();
+interface PageProps {
+  params: Promise<{ locale: string }>;
+}
+
+export async function generateMetadata({ params }: PageProps) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "news" });
   return {
     title: t("meta.title"),
     description: t("meta.description"),
@@ -16,9 +20,9 @@ export async function generateMetadata() {
   };
 }
 
-export default async function NewsPage() {
-  const t = await getTranslations("news");
-  const locale = await getLocale();
+export default async function NewsPage({ params }: PageProps) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "news" });
 
   const response = await publicApi.article.getArticles({
     "pagination[limit]": 10,

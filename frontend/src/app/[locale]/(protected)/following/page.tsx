@@ -13,12 +13,14 @@ import Filters from "./components/filters";
 import FollowingInfinity from "./components/following-infinity";
 import { FollowingFilters, followingParamsCache } from "./lib/search-params";
 
-export default async function Page({
-  searchParams,
-}: {
+interface PageProps {
+  params: Promise<{ locale: string }>;
   searchParams: Promise<FollowingFilters>;
-}) {
-  const t = await getTranslations("protected.following");
+}
+
+export default async function Page({ params, searchParams }: PageProps) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "protected.following" });
   const filters = await followingParamsCache.parse(searchParams);
 
   const queryClient = new QueryClient();

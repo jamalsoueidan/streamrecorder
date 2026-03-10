@@ -6,7 +6,6 @@ import {
   getCountryName,
 } from "@/app/lib/country-utils";
 import { streamingPlatforms } from "@/app/lib/streaming-platforms";
-import publicApi from "@/lib/public-api";
 import {
   Button,
   Center,
@@ -17,12 +16,18 @@ import {
   Title,
 } from "@mantine/core";
 import { Metadata } from "next";
-import { getLocale, getTranslations } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { RecordingsSimpleGrid } from "../../components/recordings-simple-grid";
+import { getRecordingsByCountry } from "../../cache";
+
+export function generateStaticParams() {
+  return [];
+}
 
 interface PageProps {
   params: Promise<{
+    locale: string;
     type: string;
     country: string;
   }>;
@@ -34,9 +39,8 @@ interface PageProps {
 export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
-  const { type, country } = await params;
-  const locale = await getLocale();
-  const t = await getTranslations("recordings");
+  const { type, country, locale } = await params;
+  const t = await getTranslations({ locale, namespace: "recordings" });
 
   const platform = streamingPlatforms.find(
     (p) => p.name.toLowerCase() === type,
@@ -83,10 +87,9 @@ export async function generateMetadata({
 }
 
 export default async function Page({ params, searchParams }: PageProps) {
-  const { type, country } = await params;
+  const { type, country, locale } = await params;
   const { page } = await searchParams;
-  const locale = await getLocale();
-  const t = await getTranslations("recordings");
+  const t = await getTranslations({ locale, namespace: "recordings" });
 
   const platform = streamingPlatforms.find(
     (p) => p.name.toLowerCase() === type,
@@ -106,45 +109,11 @@ export default async function Page({ params, searchParams }: PageProps) {
 
   const countryName = getCountryName(countryCode, locale);
 
-  const {
-    data: { data: recordings, meta },
-  } = await publicApi.recording.getRecordings({
-    filters: {
-      ...(platform.name
-        ? {
-            follower: {
-              type,
-              countryCode: countryCode,
-            },
-          }
-        : {
-            follower: {
-              countryCode: countryCode,
-            },
-          }),
-      sources: {
-        state: {
-          $eq: ["done"],
-        },
-      },
-    },
-    "pagination[pageSize]": 20,
-    "pagination[page]": parseInt(page || "1", 10),
-    sort: "createdAt:desc",
-    populate: {
-      sources: {
-        fields: ["*"],
-        filters: {
-          state: {
-            $eq: "done",
-          },
-        },
-      },
-      follower: {
-        fields: ["*"],
-      },
-    },
-  });
+  const { recordings, meta } = await getRecordingsByCountry(
+    platform.name ? type : "all",
+    countryCode,
+    parseInt(page || "1", 10),
+  );
 
   const totalPages = meta?.pagination?.pageCount || 1;
 
@@ -227,7 +196,7 @@ export default async function Page({ params, searchParams }: PageProps) {
       <div style={{ marginTop: 60 }}>
         {recordings && recordings.length > 0 ? (
           <>
-            <RecordingsSimpleGrid recordings={recordings} />
+            <RecordingsSimpleGrid recordings={recordings} locale={locale} />
             {totalPages > 1 && (
               <Center mt={40}>
                 <PaginationControls total={totalPages} size="lg" />

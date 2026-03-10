@@ -8,10 +8,13 @@ import Link from "next/link";
 interface SignupCtaProps {
   username: string;
   recordings: Recording[];
+  locale?: string;
 }
 
-export async function SignupCta({ username, recordings }: SignupCtaProps) {
-  const t = await getTranslations("profile");
+export async function SignupCta({ username, recordings, locale }: SignupCtaProps) {
+  const t = locale
+    ? await getTranslations({ locale, namespace: "profile" })
+    : await getTranslations("profile");
 
   // Only show CTA if there are recordings
   if (recordings.length === 0) {

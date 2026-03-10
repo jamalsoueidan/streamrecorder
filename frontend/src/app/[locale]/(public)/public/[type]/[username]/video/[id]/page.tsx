@@ -13,7 +13,7 @@ import {
 } from "@mantine/core";
 import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
 import { Metadata } from "next";
-import { getFormatter, getLocale, getTranslations } from "next-intl/server";
+import { getFormatter, getTranslations } from "next-intl/server";
 import { headers } from "next/headers";
 import { redirect } from "next/navigation";
 import {
@@ -26,6 +26,7 @@ import { VideoPlayer } from "../../components/video-player";
 
 interface PageProps {
   params: Promise<{
+    locale: string;
     username: string;
     type: FollowerTypeEnum;
     id: string;
@@ -35,16 +36,15 @@ interface PageProps {
 export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
-  const t = await getTranslations("video");
-  const locale = await getLocale();
-  const { id, username, type } = await params;
+  const { id, username, type, locale } = await params;
+  const t = await getTranslations({ locale, namespace: "video" });
   const data = await getRecordingById(id);
 
   if (!data) {
     return {};
   }
 
-  const format = await getFormatter();
+  const format = await getFormatter({ locale });
 
   const platformName = type.charAt(0).toUpperCase() + type.slice(1);
   const creatorName = decodeURIComponent(data.follower?.username || "unknown");
@@ -120,17 +120,16 @@ export default async function VideoPage({ params }: PageProps) {
   const headersList = await headers();
   const userAgent = headersList.get("user-agent") || "";
 
-  const { id, type, username } = await params;
-  const locale = await getLocale();
-  const tp = await getTranslations("profile");
-  const t = await getTranslations("video");
+  const { id, type, username, locale } = await params;
+  const tp = await getTranslations({ locale, namespace: "profile" });
+  const t = await getTranslations({ locale, namespace: "video" });
   const data = await getRecordingById(id);
 
   if (!data) {
     return redirect(getProfileUrl({ type, username }));
   }
 
-  const format = await getFormatter();
+  const format = await getFormatter({ locale });
   const sources = data.sources ?? [];
 
   const { data: recordingsData } = await fetchProfileRecordings(type, username);
@@ -277,6 +276,7 @@ export default async function VideoPage({ params }: PageProps) {
                   <ImageVideoPreview
                     recording={rec}
                     type={type as unknown as FollowerTypeEnum}
+                    locale={locale}
                   />
                   <Text size="xs" suppressHydrationWarning>
                     {tp("recorded", {
@@ -291,7 +291,7 @@ export default async function VideoPage({ params }: PageProps) {
                   </Text>
                 </Stack>
               ))}
-              <SignupCta username={creatorName} recordings={recordings} />
+              <SignupCta username={creatorName} recordings={recordings} locale={locale} />
             </SimpleGrid>
           </Stack>
         ) : null}

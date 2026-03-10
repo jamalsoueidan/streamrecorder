@@ -17,7 +17,7 @@ import {
   Title,
   Tooltip,
 } from "@mantine/core";
-import { getFormatter, getLocale, getTranslations } from "next-intl/server";
+import { getFormatter, getTranslations } from "next-intl/server";
 
 import { CountryFlag } from "@/app/[locale]/(protected)/components/country-flag";
 import { FollowerTypeIcon } from "@/app/[locale]/(protected)/components/follower-type-icon";
@@ -39,6 +39,7 @@ import { VideoPlayer } from "../components/video-player";
 
 interface PageProps {
   params: Promise<{
+    locale: string;
     username: string;
     type: string;
   }>;
@@ -50,11 +51,10 @@ interface PageProps {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ username: string; type: string }>;
+  params: Promise<{ locale: string; username: string; type: string }>;
 }): Promise<Metadata> {
-  const { type, username } = await params;
-  const t = await getTranslations("profile");
-  const locale = await getLocale();
+  const { type, username, locale } = await params;
+  const t = await getTranslations({ locale, namespace: "profile" });
   const follower = await getFollower({ username, type, locale });
 
   if (!follower) {
@@ -105,11 +105,10 @@ export async function generateMetadata({
 }
 
 export default async function Page({ params, searchParams }: PageProps) {
-  const { type, username } = await params;
+  const { type, username, locale } = await params;
   const { page } = await searchParams;
-  const t = await getTranslations("profile");
-  const format = await getFormatter();
-  const locale = await getLocale();
+  const t = await getTranslations({ locale, namespace: "profile" });
+  const format = await getFormatter({ locale });
   const follower = await getFollower({ username, type, locale });
 
   if (!follower) {
@@ -279,7 +278,7 @@ export default async function Page({ params, searchParams }: PageProps) {
           </Group>
 
           {!clips || clips.length === 0 ? (
-            <EmptyState />
+            <EmptyState locale={locale} />
           ) : (
             <Stack gap="xl">
               {totalPages > 1 && (
@@ -350,8 +349,8 @@ export default async function Page({ params, searchParams }: PageProps) {
   );
 }
 
-async function EmptyState() {
-  const t = await getTranslations("profile");
+async function EmptyState({ locale }: { locale: string }) {
+  const t = await getTranslations({ locale, namespace: "profile" });
 
   return (
     <Stack align="center" justify="center" py={80} gap="lg">

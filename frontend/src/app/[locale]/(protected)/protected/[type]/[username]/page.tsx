@@ -19,6 +19,7 @@ import { ProfileFilters, profileParamsCache } from "./lib/search-params";
 
 interface PageProps {
   params: Promise<{
+    locale: string;
     username: string;
     type: string;
   }>;
@@ -26,7 +27,7 @@ interface PageProps {
 }
 
 export default async function Page({ params, searchParams }: PageProps) {
-  const { type, username } = await params;
+  const { locale, type, username } = await params;
   const filters = await profileParamsCache.parse(searchParams);
 
   const follower = await getFollower({ username, type });
@@ -64,7 +65,7 @@ export default async function Page({ params, searchParams }: PageProps) {
       <ProfileHeader follower={follower} isRecording={isRecording} />
 
       {!hasRecordings ? (
-        <EmptyState follower={follower} />
+        <EmptyState follower={follower} locale={locale} />
       ) : (
         <HydrationBoundary state={dehydrate(queryClient)}>
           <ProfileRecordings />
@@ -74,8 +75,8 @@ export default async function Page({ params, searchParams }: PageProps) {
   );
 }
 
-async function EmptyState({ follower }: { follower: Follower }) {
-  const t = await getTranslations("protected.profile");
+async function EmptyState({ follower, locale }: { follower: Follower; locale: string }) {
+  const t = await getTranslations({ locale, namespace: "protected.profile" });
   const isNewlyAdded = dayjs().diff(dayjs(follower.createdAt), "minute") < 5;
 
   if (isNewlyAdded) {

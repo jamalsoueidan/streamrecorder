@@ -3,12 +3,21 @@
 
 import { Pagination, PaginationProps } from "@mantine/core";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { Suspense } from "react";
 
 type PaginationControlsProps = {
   total: number;
 } & PaginationProps;
 
-export default function PaginationControls({
+export default function PaginationControls(props: PaginationControlsProps) {
+  return (
+    <Suspense>
+      <PaginationInner {...props} />
+    </Suspense>
+  );
+}
+
+function PaginationInner({
   total,
   ...props
 }: PaginationControlsProps) {

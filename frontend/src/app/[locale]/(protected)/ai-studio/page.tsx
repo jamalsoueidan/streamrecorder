@@ -17,14 +17,16 @@ import { AiStudioGuard } from "./components/ai-studio-guard";
 const MONTHLY_QUOTA = 6;
 
 interface PageProps {
+  params: Promise<{ locale: string }>;
   searchParams: Promise<{
     page?: string;
   }>;
 }
 
-export default async function Page({ searchParams }: PageProps) {
+export default async function Page({ params, searchParams }: PageProps) {
+  const { locale } = await params;
   const { page } = await searchParams;
-  const t = await getTranslations("protected.aiStudio");
+  const t = await getTranslations({ locale, namespace: "protected.aiStudio" });
   const currentPage = parseInt(page || "1", 10);
 
   const now = new Date();
@@ -102,7 +104,7 @@ export default async function Page({ searchParams }: PageProps) {
 
       <AiStudioGuard>
         {aiRequests.length === 0 && currentPage === 1 ? (
-          <EmptyState />
+          <EmptyState locale={locale} />
         ) : (
           <AiRequestList
             aiRequests={aiRequests}
@@ -115,8 +117,8 @@ export default async function Page({ searchParams }: PageProps) {
   );
 }
 
-async function EmptyState() {
-  const t = await getTranslations("protected.aiStudio");
+async function EmptyState({ locale }: { locale: string }) {
+  const t = await getTranslations({ locale, namespace: "protected.aiStudio" });
 
   return (
     <Stack align="center" justify="center" py={80} gap="lg">

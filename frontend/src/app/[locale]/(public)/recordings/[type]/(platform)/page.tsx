@@ -1,16 +1,29 @@
-import PaginationControls from "@/app/components/pagination";
 import { generateProfileUrl } from "@/app/lib/profile-url";
-import publicApi from "@/lib/public-api";
-import { Center } from "@mantine/core";
 import { Metadata } from "next";
-import { getLocale, getTranslations } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
 
+import PaginationControls from "@/app/components/pagination";
 import { generateAlternates } from "@/app/lib/seo";
 import { streamingPlatforms } from "@/app/lib/streaming-platforms";
+import { routing } from "@/i18n/routing";
+import { Center } from "@mantine/core";
+import { getRecordings } from "../../cache";
 import { RecordingsSimpleGrid } from "../../components/recordings-simple-grid";
+
+const platformTypes = [
+  "all",
+  ...streamingPlatforms.map((p) => p.name.toLowerCase()),
+];
+
+export function generateStaticParams() {
+  return routing.locales.flatMap((locale) =>
+    platformTypes.map((type) => ({ locale, type })),
+  );
+}
 
 interface PageProps {
   params: Promise<{
+    locale: string;
     type: string;
   }>;
   searchParams: Promise<{
@@ -21,9 +34,8 @@ interface PageProps {
 export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
-  const { type } = await params;
-  const locale = await getLocale();
-  const t = await getTranslations("recordings");
+  const { type, locale } = await params;
+  const t = await getTranslations({ locale, namespace: "recordings" });
 
   const metaKey = type === "all" ? "all" : type;
 
@@ -61,9 +73,9 @@ export default async function RecordingTypePage({
   params,
   searchParams,
 }: PageProps) {
-  const { type } = await params;
+  const { type, locale } = await params;
   const { page } = await searchParams;
-  const t = await getTranslations("recordings");
+  const t = await getTranslations({ locale, namespace: "recordings" });
 
   const platform = streamingPlatforms.find(
     (p) => p.name.toLowerCase() === type,
@@ -75,41 +87,10 @@ export default async function RecordingTypePage({
 
   const platformName = platform.name || "All";
 
-  const {
-    data: { data: recordings, meta },
-  } = await publicApi.recording.getRecordings({
-    filters: {
-      ...(type === "all"
-        ? {}
-        : {
-            follower: {
-              type,
-            },
-          }),
-      sources: {
-        state: {
-          $eq: ["done"],
-        },
-      },
-    },
-    "pagination[pageSize]": 20,
-    "pagination[page]": parseInt(page || "1", 10),
-
-    sort: "createdAt:desc",
-    populate: {
-      sources: {
-        fields: ["*"],
-        filters: {
-          state: {
-            $eq: "done",
-          },
-        },
-      },
-      follower: {
-        fields: ["*"],
-      },
-    },
-  });
+  const { recordings, meta } = await getRecordings(
+    type,
+    parseInt(page || "1", 10),
+  );
 
   const totalPages = meta?.pagination?.pageCount || 1;
 
@@ -171,7 +152,7 @@ export default async function RecordingTypePage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <div style={{ marginTop: 60 }}>
-        <RecordingsSimpleGrid recordings={recordings} />
+        <RecordingsSimpleGrid recordings={recordings} locale={locale} />
         {totalPages > 1 && (
           <Center mt={40}>
             <PaginationControls total={totalPages} size="lg" />

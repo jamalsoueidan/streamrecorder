@@ -13,8 +13,13 @@ import { getWatchLaterIds } from "./lib/get-watch-later-ids";
 
 const PAGE_SIZE = 12;
 
-export default async function Page() {
-  const t = await getTranslations("protected.watchLater");
+interface PageProps {
+  params: Promise<{ locale: string }>;
+}
+
+export default async function Page({ params }: PageProps) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "protected.watchLater" });
   const watchLaterIds = await getWatchLaterIds();
   const idsToFetch = watchLaterIds.slice(0, PAGE_SIZE);
 

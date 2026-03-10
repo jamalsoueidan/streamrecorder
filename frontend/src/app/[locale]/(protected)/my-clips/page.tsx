@@ -9,7 +9,7 @@ import {
   Title,
 } from "@mantine/core";
 import { IconScissors } from "@tabler/icons-react";
-import { getLocale, getTranslations } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
 
 import PaginationControls from "@/app/components/pagination";
 import api from "@/lib/api";
@@ -17,15 +17,16 @@ import { ClipCard } from "./components/clip-card";
 import { MyClipsGuard } from "./components/my-clips-guard";
 
 interface PageProps {
+  params: Promise<{ locale: string }>;
   searchParams: Promise<{
     page?: string;
   }>;
 }
 
-export default async function Page({ searchParams }: PageProps) {
+export default async function Page({ params, searchParams }: PageProps) {
+  const { locale } = await params;
   const { page } = await searchParams;
-  const t = await getTranslations("protected.myClips");
-  const locale = await getLocale();
+  const t = await getTranslations({ locale, namespace: "protected.myClips" });
 
   const pageNumber = parseInt(page || "1", 10);
   const limit = 12;
@@ -68,7 +69,7 @@ export default async function Page({ searchParams }: PageProps) {
 
       <MyClipsGuard>
         {!clips || clips.length === 0 ? (
-          <EmptyState />
+          <EmptyState locale={locale} />
         ) : (
           <Stack gap="md">
             {totalPages > 1 && (
@@ -93,8 +94,8 @@ export default async function Page({ searchParams }: PageProps) {
   );
 }
 
-async function EmptyState() {
-  const t = await getTranslations("protected.myClips");
+async function EmptyState({ locale }: { locale: string }) {
+  const t = await getTranslations({ locale, namespace: "protected.myClips" });
 
   return (
     <Stack align="center" justify="center" py={80} gap="lg">

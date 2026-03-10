@@ -17,11 +17,17 @@ import Image from "next/image";
 
 export async function RecordingsSimpleGrid({
   recordings,
+  locale,
 }: {
   recordings: Recording[] | undefined;
+  locale?: string;
 }) {
-  const t = await getTranslations("recordings");
-  const format = await getFormatter();
+  const t = locale
+    ? await getTranslations({ locale, namespace: "recordings" })
+    : await getTranslations("recordings");
+  const format = locale
+    ? await getFormatter({ locale })
+    : await getFormatter();
 
   return (
     <SimpleGrid cols={{ base: 1, sm: 4 }}>

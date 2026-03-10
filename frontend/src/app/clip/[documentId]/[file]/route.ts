@@ -3,6 +3,14 @@ import publicApi from "@/lib/public-api";
 import { getBucket, getS3 } from "@/lib/s3";
 import { GetObjectCommand } from "@aws-sdk/client-s3";
 import { getSignedUrl } from "@aws-sdk/s3-request-presigner";
+import { cacheLife } from "next/cache";
+
+async function getCachedClip(documentId: string) {
+  "use cache";
+  cacheLife({ stale: 300, revalidate: 1800, expire: 3600 });
+  const { data } = await publicApi.clip.getClipsId({ id: documentId });
+  return data.data ?? null;
+}
 
 const ALLOWED_EXTENSIONS = [".jpg", ".mp4"] as const;
 type AllowedExt = (typeof ALLOWED_EXTENSIONS)[number];
@@ -31,13 +39,11 @@ export async function GET(
     return new Response("Invalid file", { status: 400 });
   }
 
-  const { data } = await publicApi.clip.getClipsId({ id: documentId });
+  const clip = await getCachedClip(documentId);
 
-  if (!data.data) {
+  if (!clip) {
     return new Response("Not found", { status: 404 });
   }
-
-  const clip = data.data;
   const s3 = getS3(clip.createdAt);
   const bucket = getBucket(process.env.CLIP_BUCKET!, clip.createdAt);
   const key = `${clip.path?.substring(1)}${documentId}/${file}`;

@@ -10,11 +10,16 @@ import Image from "next/image";
 interface Props {
   recording: Recording;
   type: FollowerTypeEnum;
+  locale?: string;
 }
 
-export async function ImageVideoPreview({ recording, type }: Props) {
-  const t = await getTranslations("profile");
-  const format = await getFormatter();
+export async function ImageVideoPreview({ recording, type, locale }: Props) {
+  const t = locale
+    ? await getTranslations({ locale, namespace: "profile" })
+    : await getTranslations("profile");
+  const format = locale
+    ? await getFormatter({ locale })
+    : await getFormatter();
   const sources = recording.sources;
   const totalDuration =
     sources?.reduce((sum, s) => sum + (s.duration || 0), 0) || 0;

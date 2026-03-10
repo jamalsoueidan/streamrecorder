@@ -27,12 +27,16 @@ import {
   IconWriting,
 } from "@tabler/icons-react";
 import { useTranslations } from "next-intl";
-import { getLocale, getTranslations } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
 import { generateAlternates } from "@/app/lib/seo";
 
-export async function generateMetadata() {
-  const t = await getTranslations("terms");
-  const locale = await getLocale();
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "terms" });
   return {
     title: t("meta.title"),
     description: t("meta.description"),

@@ -13,7 +13,7 @@ import {
   Title,
   Tooltip,
 } from "@mantine/core";
-import { getFormatter, getLocale, getTranslations } from "next-intl/server";
+import { getFormatter, getTranslations } from "next-intl/server";
 import { fetchProfileRecordings, getFollower } from "./actions/actions";
 
 import { CountryFlag } from "@/app/[locale]/(protected)/components/country-flag";
@@ -34,6 +34,7 @@ import { SignupCta } from "./components/signup-cta";
 
 interface PageProps {
   params: Promise<{
+    locale: string;
     username: string;
     type: string;
   }>;
@@ -42,11 +43,10 @@ interface PageProps {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ username: string; type: string }>;
+  params: Promise<{ locale: string; username: string; type: string }>;
 }): Promise<Metadata> {
-  const { type, username } = await params;
-  const t = await getTranslations("profile");
-  const locale = await getLocale();
+  const { type, username, locale } = await params;
+  const t = await getTranslations({ locale, namespace: "profile" });
   const follower = await getFollower({ username, type, locale });
 
   if (!follower) {
@@ -98,10 +98,9 @@ export async function generateMetadata({
 }
 
 export default async function Page({ params }: PageProps) {
-  const { type, username } = await params;
-  const t = await getTranslations("profile");
-  const format = await getFormatter();
-  const locale = await getLocale();
+  const { type, username, locale } = await params;
+  const t = await getTranslations({ locale, namespace: "profile" });
+  const format = await getFormatter({ locale });
   const follower = await getFollower({ username, type, locale });
 
   if (!follower) {
@@ -287,7 +286,7 @@ export default async function Page({ params }: PageProps) {
           <Stack gap="xl">
             <Stack gap="md">
               {!hasRecordings ? (
-                <EmptyState />
+                <EmptyState locale={locale} />
               ) : (
                 <SimpleGrid cols={{ base: 1, sm: 2 }} spacing="lg">
                   {recordings?.map((rec) => (
@@ -295,6 +294,7 @@ export default async function Page({ params }: PageProps) {
                       <ImageVideoPreview
                         recording={rec}
                         type={type as unknown as FollowerTypeEnum}
+                        locale={locale}
                       />
                       <Text size="xs" suppressHydrationWarning>
                         {t("recorded", {
@@ -309,7 +309,7 @@ export default async function Page({ params }: PageProps) {
                       </Text>
                     </Stack>
                   ))}
-                  <SignupCta username={creatorName} recordings={recordings} />
+                  <SignupCta username={creatorName} recordings={recordings} locale={locale} />
                 </SimpleGrid>
               )}
             </Stack>
@@ -370,8 +370,8 @@ export default async function Page({ params }: PageProps) {
   );
 }
 
-async function EmptyState() {
-  const t = await getTranslations("profile");
+async function EmptyState({ locale }: { locale: string }) {
+  const t = await getTranslations({ locale, namespace: "profile" });
 
   return (
     <Stack align="center" justify="center" py={80} gap="lg">

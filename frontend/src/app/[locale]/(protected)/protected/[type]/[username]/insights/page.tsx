@@ -24,13 +24,14 @@ import { TopOpponents } from "./components/top-opponents";
 
 interface PageProps {
   params: Promise<{
+    locale: string;
     username: string;
     type: string;
   }>;
 }
 
 export default async function InsightsPage({ params }: PageProps) {
-  const { type, username } = await params;
+  const { locale, type, username } = await params;
 
   if (type !== "tiktok") {
     redirect(`/protected/${type}/${username}`);
@@ -42,7 +43,7 @@ export default async function InsightsPage({ params }: PageProps) {
     redirect(`/protected/${type}/${username}`);
   }
 
-  const t = await getTranslations("protected.profileInsights");
+  const t = await getTranslations({ locale, namespace: "protected.profileInsights" });
   const decodedUsername = decodeURIComponent(username).replace("@", "");
 
   const statsPromise = getStreamerStats(decodedUsername);

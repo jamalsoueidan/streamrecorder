@@ -1,11 +1,19 @@
-import { getToken } from "@/lib/token";
 import { cookies } from "next/headers";
-import { redirect } from "next/navigation";
+import { connection } from "next/server";
 import { getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
+import { Suspense } from "react";
 
-export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations("protected.dashboard");
+interface LayoutProps {
+  params: Promise<{ locale: string }>;
+  children: React.ReactNode;
+}
+
+export async function generateMetadata({
+  params,
+}: LayoutProps): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "protected.dashboard" });
   return {
     title: `${t("title")} | LiveStreamRecorder`,
   };
@@ -20,16 +28,24 @@ import api from "@/lib/api";
 import { SerwistProvider } from "../../serwist";
 import { Shell } from "./components/shell";
 
-export default async function DashboardLayout({
+export default function DashboardLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const token = await getToken();
+  return (
+    <Suspense>
+      <DashboardLayoutInner>{children}</DashboardLayoutInner>
+    </Suspense>
+  );
+}
 
-  if (!token) {
-    redirect("/login");
-  }
+async function DashboardLayoutInner({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  await connection();
 
   const cookieStore = await cookies();
   const navbarCollapsed = cookieStore.get("navbar-collapsed")?.value === "true";

@@ -25,14 +25,15 @@ import { AiStudioGuard } from "../../components/ai-studio-guard";
 
 interface PageProps {
   params: Promise<{
+    locale: string;
     aiRequestDocumentId: string;
   }>;
 }
 
 export default async function Page({ params }: PageProps) {
-  const { aiRequestDocumentId } = await params;
-  const t = await getTranslations("protected.aiStudio");
-  const format = await getFormatter();
+  const { locale, aiRequestDocumentId } = await params;
+  const t = await getTranslations({ locale, namespace: "protected.aiStudio" });
+  const format = await getFormatter({ locale });
 
   const { data: response } = await api.aiRequest
     .meGetAiRequests({

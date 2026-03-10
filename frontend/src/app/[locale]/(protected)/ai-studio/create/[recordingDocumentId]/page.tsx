@@ -30,13 +30,14 @@ const MONTHLY_QUOTA = 6;
 
 interface PageProps {
   params: Promise<{
+    locale: string;
     recordingDocumentId: string;
   }>;
 }
 
 export default async function Page({ params }: PageProps) {
-  const { recordingDocumentId } = await params;
-  const t = await getTranslations("protected.aiStudio");
+  const { locale, recordingDocumentId } = await params;
+  const t = await getTranslations({ locale, namespace: "protected.aiStudio" });
 
   const now = new Date();
   const startOfMonth = new Date(

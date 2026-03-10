@@ -25,8 +25,13 @@ const platformMap: Record<string, FollowerTypeEnum> = {
   Bigo: FollowerTypeEnum.Bigo,
 };
 
-export default async function Page() {
-  const t = await getTranslations("protected.dashboard");
+interface PageProps {
+  params: Promise<{ locale: string }>;
+}
+
+export default async function Page({ params }: PageProps) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "protected.dashboard" });
 
   // Start all promises without awaiting - they run in parallel
   const userPromise = getUser();

@@ -13,12 +13,14 @@ import Filters from "./components/filters";
 import { FiltersWrapper } from "./components/filters-wrapper";
 import { CreatorFilters, creatorsParamsCache } from "./lib/search-params";
 
-export default async function Page({
-  searchParams,
-}: {
+interface PageProps {
+  params: Promise<{ locale: string }>;
   searchParams: Promise<CreatorFilters>;
-}) {
-  const t = await getTranslations("protected.discover");
+}
+
+export default async function Page({ params, searchParams }: PageProps) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "protected.discover" });
   const filters = await creatorsParamsCache.parse(searchParams);
 
   const queryClient = new QueryClient();

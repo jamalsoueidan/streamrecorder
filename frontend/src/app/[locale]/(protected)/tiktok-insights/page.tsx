@@ -31,8 +31,13 @@ import { LanguageLeaderboard } from "./components/language-leaderboard";
 import { MostLive } from "./components/most-live";
 import { TopEarners } from "./components/top-earners";
 
-export default async function TikTokInsightsPage() {
-  const t = await getTranslations("protected.tiktokInsights");
+interface PageProps {
+  params: Promise<{ locale: string }>;
+}
+
+export default async function TikTokInsightsPage({ params }: PageProps) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "protected.tiktokInsights" });
 
   const statsPromise = getGlobalStats();
   const countriesPromise = getAvailableCountries();

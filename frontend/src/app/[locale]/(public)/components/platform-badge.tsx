@@ -7,14 +7,18 @@ type PlatformBadgesProps = {
   href: string;
   activePlatform?: string;
   countrySuffix?: string;
+  locale?: string;
 };
 
 export async function PlatformBadges({
   href,
   activePlatform,
   countrySuffix = "",
+  locale,
 }: PlatformBadgesProps) {
-  const t = await getTranslations("protected.filters.platforms");
+  const t = locale
+    ? await getTranslations({ locale, namespace: "protected.filters.platforms" })
+    : await getTranslations("protected.filters.platforms");
 
   return (
     <Grid align="center" justify="center">

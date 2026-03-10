@@ -1,12 +1,16 @@
 // app/[locale]/contact/page.tsx
 import { generateAlternates } from "@/app/lib/seo";
 import { Container, Stack, Text, Title } from "@mantine/core";
-import { getLocale, getTranslations } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
 import { ContactForm } from "./components/form";
 
-export async function generateMetadata() {
-  const t = await getTranslations("contact");
-  const locale = await getLocale();
+interface PageProps {
+  params: Promise<{ locale: string }>;
+}
+
+export async function generateMetadata({ params }: PageProps) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "contact" });
   return {
     title: t("meta.title"),
     description: t("meta.description"),
@@ -14,8 +18,9 @@ export async function generateMetadata() {
   };
 }
 
-export default async function ContactPage() {
-  const t = await getTranslations("contact");
+export default async function ContactPage({ params }: PageProps) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "contact" });
 
   return (
     <Container size="md" style={{ position: "relative", zIndex: 1 }}>
