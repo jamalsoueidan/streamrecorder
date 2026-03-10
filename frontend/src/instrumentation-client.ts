@@ -15,8 +15,10 @@ Sentry.init({
       return null;
     }
     const message = event.exception?.values?.[0]?.value || "";
-    if (message.includes("play() request was interrupted") ||
-        message.includes("play method is not allowed")) {
+    if (
+      message.includes("play() request was interrupted") ||
+      message.includes("play method is not allowed")
+    ) {
       return null;
     }
     return event;
@@ -35,6 +37,6 @@ Sentry.init({
   },
 
   // Define how likely traces are sampled. Adjust this value in production, or use tracesSampler for greater control.
-  tracesSampleRate: 1,
+  tracesSampleRate: 0.1,
   sendDefaultPii: true,
 });
