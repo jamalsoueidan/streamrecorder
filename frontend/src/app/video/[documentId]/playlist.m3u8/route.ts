@@ -16,7 +16,11 @@ async function getRecordingByDocumentId(documentId: string) {
     filters: {
       documentId: { $eq: documentId },
     },
-    populate: "follower",
+    populate: {
+      follower: {
+        fields: ["documentId"],
+      },
+    },
     "pagination[limit]": 1,
   });
   return response.data.data?.[0] ?? null;
