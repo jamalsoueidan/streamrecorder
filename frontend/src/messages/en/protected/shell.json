@@ -1,5 +1,7 @@
 {
   "highDemandBanner": "Due to high demand, you may experience occasional slowdowns or timeouts. I'm actively working on expanding capacity — thank you for your patience!",
   "androidTestBanner": "Help us launch on Android! You've been selected to test the app — even a quick install helps us get approved.",
-  "androidTestButton": "Join Test"
+  "androidTestButton": "Join Test",
+  "chromeBanner": "NEW: Add your stream with one click using our Chrome Extension",
+  "chromeButton": "Install"
 }

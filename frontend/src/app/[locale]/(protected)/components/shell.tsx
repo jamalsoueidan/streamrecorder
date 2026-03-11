@@ -14,7 +14,11 @@ import {
   useMatches,
 } from "@mantine/core";
 import { useDisclosure, useLocalStorage, useMounted } from "@mantine/hooks";
-import { IconBrandGooglePlay, IconCrown } from "@tabler/icons-react";
+import {
+  IconBrandChrome,
+  IconBrandGooglePlay,
+  IconCrown,
+} from "@tabler/icons-react";
 import { useTranslations } from "next-intl";
 import { MobileBar } from "./mobilebar";
 import { Navbar } from "./navbar";
@@ -40,12 +44,22 @@ export function Shell({
     key: "android-test-banner-dismissed",
     defaultValue: false,
   });
+  const [chromeBannerDismissed, setChromeBannerDismissed] = useLocalStorage({
+    key: "chrome-extension-banner-dismissed",
+    defaultValue: false,
+  });
   const showAndroidBanner =
     !isBasic &&
     !androidBannerDismissed &&
     user?.email?.endsWith("@gmail.com") &&
     !!user?.createdAt &&
     new Date(user.createdAt) < ANDROID_TEST_CUTOFF;
+  const isMobile = useMatches({
+    base: true,
+    sm: false,
+  });
+  const showChromeBanner =
+    !isMobile && !showAndroidBanner && !chromeBannerDismissed;
 
   // mount and headerHeight is fix for SSR and the video player page
   const mounted = useMounted();
@@ -126,6 +140,45 @@ export function Shell({
           />
         </AppShell.Navbar>
         <AppShell.Main>
+          {showChromeBanner && (
+            <Flex
+              align="center"
+              justify="center"
+              gap="sm"
+              px="md"
+              py={6}
+              mb="sm"
+              style={{
+                background: "linear-gradient(150deg, #2563eb, #3b82f6)",
+                borderRadius: 8,
+              }}
+            >
+              <IconBrandChrome size={18} color="white" />
+              <Text c="white" fw={600} size="sm" truncate>
+                {tShell("chromeBanner")}
+              </Text>
+              <Button
+                component="a"
+                href="https://chromewebstore.google.com/detail/livestreamrecorder/jdofemnojahamgnbncleoekppkddnahi?utm_source=item-share-cb"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => trackEvent("chrome_extension_banner_click")}
+                variant="white"
+                radius="md"
+                size="xs"
+                color="blue"
+                style={{ flexShrink: 0 }}
+              >
+                {tShell("chromeButton")}
+              </Button>
+              <CloseButton
+                c="white"
+                size="sm"
+                onClick={() => setChromeBannerDismissed(true)}
+                style={{ flexShrink: 0 }}
+              />
+            </Flex>
+          )}
           {showAndroidBanner && (
             <Flex
               align="center"

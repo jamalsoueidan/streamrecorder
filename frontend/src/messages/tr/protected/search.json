@@ -38,6 +38,7 @@
     "willRecord": "Canlı yayına geçtiğinde kaydedilecek",
     "viewPage": "Sayfayı görüntüle"
   },
+  "chromeExtension": "Chrome Eklentisini Yükle",
   "inputLabel": "Twitch, TikTok veya YouTube'dan bir yayın bağlantısı yapıştırın",
   "notFollowing": {
     "title": "Bu içerik üreticisi listenizde değil",

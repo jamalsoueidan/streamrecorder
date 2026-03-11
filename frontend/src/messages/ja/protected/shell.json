@@ -1,5 +1,7 @@
 {
   "highDemandBanner": "アクセスが集中しているため、一時的に速度低下やタイムアウトが発生する場合があります。現在、容量の拡張に取り組んでおります。ご理解いただきありがとうございます！",
   "androidTestBanner": "Androidアプリのリリースにご協力ください！テスターに選ばれました。短時間のインストールでも承認に役立ちます。",
-  "androidTestButton": "テストに参加"
+  "androidTestButton": "テストに参加",
+  "chromeBanner": "NEW: Chrome拡張機能でワンクリックで配信を追加",
+  "chromeButton": "インストール"
 }

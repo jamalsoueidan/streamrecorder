@@ -38,6 +38,7 @@
     "willRecord": "라이브를 시작하면 녹화됩니다",
     "viewPage": "페이지 보기"
   },
+  "chromeExtension": "Chrome 확장 프로그램 설치",
   "inputLabel": "트위치, 틱톡 또는 유튜브에서 방송 링크를 여기에 붙여넣으세요",
   "notFollowing": {
     "title": "이 크리에이터는 목록에 없습니다",

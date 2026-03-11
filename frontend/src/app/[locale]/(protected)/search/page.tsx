@@ -37,8 +37,10 @@ import {
 import { useDisclosure } from "@mantine/hooks";
 import { notifications } from "@mantine/notifications";
 import {
+  IconBrandChrome,
   IconCheck,
   IconClipboard,
+  IconExternalLink,
   IconSearch,
   IconUsersPlus,
   IconX,
@@ -455,6 +457,33 @@ export default function Page() {
         </Group>
 
         <Divider mx={{ base: "-xs", sm: "-md" }} />
+
+        {!isMobile && (
+          <Paper
+            component="a"
+            href="https://chromewebstore.google.com/detail/livestreamrecorder/jdofemnojahamgnbncleoekppkddnahi?utm_source=item-share-cb"
+            target="_blank"
+            rel="noopener noreferrer"
+            p="sm"
+            radius="lg"
+            withBorder
+            style={{
+              cursor: "pointer",
+              textDecoration: "none",
+            }}
+          >
+            <Group gap="sm" justify="center">
+              <IconBrandChrome size={20} />
+              <Text size="sm" fw={500}>
+                {t("chromeExtension")}
+              </Text>
+              <Badge size="sm" color="green" variant="filled">
+                NEW
+              </Badge>
+              <IconExternalLink size={14} opacity={0.5} />
+            </Group>
+          </Paper>
+        )}
 
         <Card
           p={{ base: "xs", sm: "lg" }}

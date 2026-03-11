@@ -38,6 +38,7 @@
     "willRecord": "Akan direkam saat mereka live",
     "viewPage": "Lihat halaman"
   },
+  "chromeExtension": "Instal Ekstensi Chrome",
   "inputLabel": "Tempel tautan stream dari Twitch, TikTok, atau YouTube di sini",
   "notFollowing": {
     "title": "Kreator ini tidak ada di daftar Anda",

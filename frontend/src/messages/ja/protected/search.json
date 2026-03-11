@@ -38,6 +38,7 @@
     "willRecord": "ライブ開始時に録画されます",
     "viewPage": "ページを見る"
   },
+  "chromeExtension": "Chrome拡張機能をインストール",
   "inputLabel": "Twitch、TikTok、YouTube の配信リンクをここに貼り付けてください",
   "notFollowing": {
     "title": "このクリエイターはリストにいません",

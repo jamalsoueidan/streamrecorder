@@ -38,6 +38,7 @@
     "willRecord": "Se grabará cuando esté en vivo",
     "viewPage": "Ver página"
   },
+  "chromeExtension": "Instalar extensión de Chrome",
   "inputLabel": "Pega un enlace de stream de Twitch, TikTok o YouTube aquí",
   "notFollowing": {
     "title": "Este creador no está en tu lista",

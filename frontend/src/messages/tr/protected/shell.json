@@ -1,5 +1,7 @@
 {
   "highDemandBanner": "Yoğun talep nedeniyle zaman zaman yavaşlamalar veya zaman aşımları yaşayabilirsiniz. Kapasiteyi artırmak için aktif olarak çalışıyorum — sabrınız için teşekkürler!",
   "androidTestBanner": "Android'de yayınlamamıza yardım edin! Uygulamayı test etmek için seçildiniz — kısa bir yükleme bile onay almamıza yardımcı olur.",
-  "androidTestButton": "Teste Katıl"
+  "androidTestButton": "Teste Katıl",
+  "chromeBanner": "YENİ: Chrome Eklentimizi kullanarak yayınınızı tek tıkla ekleyin",
+  "chromeButton": "Yükle"
 }

@@ -38,6 +38,7 @@
     "willRecord": "Será gravado quando entrar ao vivo",
     "viewPage": "Ver perfil"
   },
+  "chromeExtension": "Instalar extensão do Chrome",
   "inputLabel": "Cole aqui o link da transmissão do Twitch, TikTok ou YouTube",
   "notFollowing": {
     "title": "Este criador não está na sua lista",

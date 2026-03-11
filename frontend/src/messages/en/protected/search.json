@@ -38,6 +38,7 @@
     "willRecord": "Will be recorded when they go live",
     "viewPage": "View page"
   },
+  "chromeExtension": "Install Chrome Extension",
   "inputLabel": "Paste a stream link from Twitch, TikTok, or YouTube here",
   "notFollowing": {
     "title": "This creator is not in your list",
