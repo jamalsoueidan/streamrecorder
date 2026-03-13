@@ -150,7 +150,9 @@ export default function PremiumClient() {
     { icon: IconHeadset, label: t("premiumPrioritySupport"), color: "#a78bfa" },
   ];
 
-  const selectedPlan = BILLING_OPTIONS.find((o) => o.id === selectedBilling);
+  const selectedPlan = filteredBillingOptions.find(
+    (o) => o.id === selectedBilling,
+  );
 
   // Translate billing period
   const getTranslatedBillingPeriod = (period?: string) => {
@@ -478,7 +480,7 @@ export default function PremiumClient() {
                             ? "rgba(34, 197, 94, 0.1)"
                             : "rgba(0,0,0,0.2)",
                       }}
-                      onClick={() => setSelectedPayment("stripe")}
+                      onClick={() => handlePaymentChange("stripe")}
                     >
                       <Stack gap="sm">
                         <Group justify="space-between" wrap="nowrap">
@@ -565,7 +567,7 @@ export default function PremiumClient() {
                               ? "rgba(34, 197, 94, 0.1)"
                               : "rgba(0,0,0,0.2)",
                         }}
-                        onClick={() => setSelectedPayment("freemius")}
+                        onClick={() => handlePaymentChange("freemius")}
                       >
                         <Stack gap="sm">
                           <Group justify="space-between" wrap="nowrap">
