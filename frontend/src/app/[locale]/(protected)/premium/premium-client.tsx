@@ -65,6 +65,14 @@ export default function PremiumClient() {
     "stripe",
   );
 
+  const handlePaymentChange = (value: string | null) => {
+    setSelectedPayment(value);
+    // Reset to 12months if switching away from stripe while 3months is selected
+    if (value !== "stripe" && selectedBilling === "3months") {
+      setSelectedBilling("12months");
+    }
+  };
+
   const user = useUser() as UserWithSubscription | null;
   const role = useRole();
   const router = useRouter();
@@ -78,20 +86,32 @@ export default function PremiumClient() {
     {
       id: "1month",
       label: t("billing1MonthLabel"),
-      price: 10,
-      perMonth: 10,
+      price: 14,
+      perMonth: 14,
       savings: null,
       badge: null,
       billingCycle: "monthly" as const,
+      stripeOnly: false,
+    },
+    {
+      id: "3months",
+      label: t("billing3MonthsLabel"),
+      price: 36,
+      perMonth: 12,
+      savings: t("billing3MonthsSavings"),
+      badge: null,
+      billingCycle: "quarterly" as const,
+      stripeOnly: true,
     },
     {
       id: "12months",
       label: t("billing12MonthsLabel"),
-      price: 84,
-      perMonth: 7,
+      price: 120,
+      perMonth: 10,
       savings: t("billing12MonthsSavings"),
       badge: t("billing12MonthsBadge"),
       billingCycle: "annual" as const,
+      stripeOnly: false,
     },
     {
       id: "lifetime",
@@ -101,8 +121,14 @@ export default function PremiumClient() {
       savings: t("billingLifetimeSavings"),
       badge: t("billingLifetimeBadge"),
       billingCycle: "lifetime" as const,
+      stripeOnly: false,
     },
   ];
+
+  const filteredBillingOptions =
+    selectedPayment === "stripe"
+      ? BILLING_OPTIONS
+      : BILLING_OPTIONS.filter((o) => !o.stripeOnly);
 
   const PREMIUM_FEATURES = [
     { icon: IconUsers, label: t("premiumRecord100"), color: "#a78bfa" },
@@ -131,6 +157,8 @@ export default function PremiumClient() {
     switch (period) {
       case "monthly":
         return t("billingPeriodMonthly");
+      case "quarterly":
+        return t("billingPeriodQuarterly");
       case "annual":
         return t("billingPeriodAnnual");
       case "lifetime":
@@ -288,7 +316,7 @@ export default function PremiumClient() {
                   onChange={handlePlanSelect}
                 >
                   <Stack gap="sm">
-                    {BILLING_OPTIONS.map((option) => (
+                    {filteredBillingOptions.map((option) => (
                       <Paper
                         key={option.id}
                         p="md"
@@ -431,7 +459,7 @@ export default function PremiumClient() {
 
                 <Radio.Group
                   value={selectedPayment}
-                  onChange={setSelectedPayment}
+                  onChange={handlePaymentChange}
                 >
                   <Stack gap="sm">
                     {/* Stripe Option */}

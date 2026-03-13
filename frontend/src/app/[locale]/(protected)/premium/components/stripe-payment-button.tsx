@@ -5,7 +5,7 @@ import { Button, ButtonProps } from "@mantine/core";
 import { useState } from "react";
 
 interface StripePaymentButtonProps extends Omit<ButtonProps, "onClick"> {
-  billingCycle: "monthly" | "annual" | "lifetime";
+  billingCycle: "monthly" | "quarterly" | "annual" | "lifetime";
   planLabel: string;
   userEmail: string;
   userId: string;

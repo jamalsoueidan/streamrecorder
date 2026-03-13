@@ -5,12 +5,15 @@
   "descriptionShort": "Acesso imediato a todos os recursos",
 
   "billingPeriodMonthly": "mensal",
+  "billingPeriodQuarterly": "trimestral",
   "billingPeriodAnnual": "anual",
   "billingPeriodLifetime": "vitalício",
 
   "billing1MonthLabel": "1 Mês",
+  "billing3MonthsLabel": "3 Meses",
+  "billing3MonthsSavings": "economize $3/mês",
   "billing12MonthsLabel": "12 Meses",
-  "billing12MonthsSavings": "quase 4 meses grátis",
+  "billing12MonthsSavings": "4 meses grátis",
   "billing12MonthsBadge": "Melhor Custo-Benefício",
   "billingLifetimeLabel": "Vitalício",
   "billingLifetimeSavings": "Pague uma vez, use para sempre",

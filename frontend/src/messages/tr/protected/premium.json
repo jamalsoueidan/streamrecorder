@@ -5,12 +5,15 @@
   "descriptionShort": "Her şeye anında erişin",
 
   "billingPeriodMonthly": "aylık",
+  "billingPeriodQuarterly": "3 aylık",
   "billingPeriodAnnual": "yıllık",
   "billingPeriodLifetime": "ömür boyu",
 
   "billing1MonthLabel": "1 Ay",
+  "billing3MonthsLabel": "3 Ay",
+  "billing3MonthsSavings": "$3/ay tasarruf",
   "billing12MonthsLabel": "12 Ay",
-  "billing12MonthsSavings": "neredeyse 4 ay ücretsiz",
+  "billing12MonthsSavings": "4 ay ücretsiz",
   "billing12MonthsBadge": "En İyi Değer",
   "billingLifetimeLabel": "Ömür Boyu",
   "billingLifetimeSavings": "Bir kez öde, sonsuza kadar kullan",

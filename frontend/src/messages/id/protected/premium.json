@@ -5,12 +5,15 @@
   "descriptionShort": "Dapatkan akses instan ke semuanya",
 
   "billingPeriodMonthly": "bulanan",
+  "billingPeriodQuarterly": "3 bulanan",
   "billingPeriodAnnual": "tahunan",
   "billingPeriodLifetime": "seumur hidup",
 
   "billing1MonthLabel": "1 Bulan",
+  "billing3MonthsLabel": "3 Bulan",
+  "billing3MonthsSavings": "hemat $3/bln",
   "billing12MonthsLabel": "12 Bulan",
-  "billing12MonthsSavings": "hampir 4 bulan gratis",
+  "billing12MonthsSavings": "4 bulan gratis",
   "billing12MonthsBadge": "Nilai Terbaik",
   "billingLifetimeLabel": "Seumur Hidup",
   "billingLifetimeSavings": "Bayar sekali, gunakan selamanya",

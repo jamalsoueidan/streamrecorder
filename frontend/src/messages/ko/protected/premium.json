@@ -5,12 +5,15 @@
   "descriptionShort": "모든 기능에 바로 접근하세요",
 
   "billingPeriodMonthly": "월간",
+  "billingPeriodQuarterly": "분기",
   "billingPeriodAnnual": "연간",
   "billingPeriodLifetime": "평생",
 
   "billing1MonthLabel": "1개월",
+  "billing3MonthsLabel": "3개월",
+  "billing3MonthsSavings": "$3/월 절약",
   "billing12MonthsLabel": "12개월",
-  "billing12MonthsSavings": "거의 4개월 무료",
+  "billing12MonthsSavings": "4개월 무료",
   "billing12MonthsBadge": "최고 가성비",
   "billingLifetimeLabel": "평생",
   "billingLifetimeSavings": "한 번 결제, 평생 이용",

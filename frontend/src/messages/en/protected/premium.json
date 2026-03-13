@@ -5,12 +5,15 @@
   "descriptionShort": "Get instant access to everything",
 
   "billingPeriodMonthly": "monthly",
+  "billingPeriodQuarterly": "quarterly",
   "billingPeriodAnnual": "annual",
   "billingPeriodLifetime": "lifetime",
 
   "billing1MonthLabel": "1 Month",
+  "billing3MonthsLabel": "3 Months",
+  "billing3MonthsSavings": "save $3/mo",
   "billing12MonthsLabel": "12 Months",
-  "billing12MonthsSavings": "nearly 4 months free",
+  "billing12MonthsSavings": "4 months free",
   "billing12MonthsBadge": "Best Value",
   "billingLifetimeLabel": "Lifetime",
   "billingLifetimeSavings": "Pay once, use forever",

@@ -5,12 +5,15 @@
   "descriptionShort": "اشترك واستمتع بكل الميزات",
 
   "billingPeriodMonthly": "الشهري",
+  "billingPeriodQuarterly": "ربع سنوي",
   "billingPeriodAnnual": "السنوي",
   "billingPeriodLifetime": "مدى الحياة",
 
   "billing1MonthLabel": "شهر واحد",
+  "billing3MonthsLabel": "3 أشهر",
+  "billing3MonthsSavings": "وفّر $3/شهر",
   "billing12MonthsLabel": "12 شهر",
-  "billing12MonthsSavings": "ما يقارب 4 أشهر مجاناً",
+  "billing12MonthsSavings": "4 أشهر مجاناً",
   "billing12MonthsBadge": "أفضل قيمة",
   "billingLifetimeLabel": "مدى الحياة",
   "billingLifetimeSavings": "ادفع مرة واحدة، استخدم للأبد",
