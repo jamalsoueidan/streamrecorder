@@ -67,10 +67,6 @@ export default function PremiumClient() {
 
   const handlePaymentChange = (value: string | null) => {
     setSelectedPayment(value);
-    // Reset to 12months if switching away from stripe while 3months is selected
-    if (value !== "stripe" && selectedBilling === "3months") {
-      setSelectedBilling("12months");
-    }
   };
 
   const user = useUser() as UserWithSubscription | null;
@@ -86,8 +82,8 @@ export default function PremiumClient() {
     {
       id: "1month",
       label: t("billing1MonthLabel"),
-      price: 14,
-      perMonth: 14,
+      price: 15,
+      perMonth: 15,
       savings: null,
       badge: null,
       billingCycle: "monthly" as const,
@@ -96,8 +92,8 @@ export default function PremiumClient() {
     {
       id: "3months",
       label: t("billing3MonthsLabel"),
-      price: 36,
-      perMonth: 12,
+      price: 30,
+      perMonth: 10,
       savings: t("billing3MonthsSavings"),
       badge: null,
       billingCycle: "quarterly" as const,
@@ -106,14 +102,14 @@ export default function PremiumClient() {
     {
       id: "12months",
       label: t("billing12MonthsLabel"),
-      price: 120,
-      perMonth: 10,
+      price: 96,
+      perMonth: 8,
       savings: t("billing12MonthsSavings"),
       badge: t("billing12MonthsBadge"),
       billingCycle: "annual" as const,
       stripeOnly: false,
     },
-    {
+    /*{
       id: "lifetime",
       label: t("billingLifetimeLabel"),
       price: 199,
@@ -122,7 +118,7 @@ export default function PremiumClient() {
       badge: t("billingLifetimeBadge"),
       billingCycle: "lifetime" as const,
       stripeOnly: false,
-    },
+    },*/
   ];
 
   const filteredBillingOptions =
@@ -191,6 +187,10 @@ export default function PremiumClient() {
       });
     }
     setSelectedBilling(planId);
+    // 3 months is only available via Stripe, so auto-switch payment method
+    if (plan?.stripeOnly && selectedPayment !== "stripe") {
+      setSelectedPayment("stripe");
+    }
   };
 
   const handleCancelSubscription = async () => {
@@ -444,8 +444,6 @@ export default function PremiumClient() {
               radius="md"
               withBorder
               style={{
-                position: "sticky",
-                top: 20,
                 background:
                   "linear-gradient(135deg, rgba(34, 197, 94, 0.1) 0%, rgba(22, 163, 74, 0.05) 100%)",
                 borderColor: "rgba(34, 197, 94, 0.3)",
@@ -550,8 +548,8 @@ export default function PremiumClient() {
                       </Stack>
                     </Paper>
 
-                    {/* Freemius Option */}
-                    {
+                    {/* Freemius Option - hidden when 3 months (Stripe-only) is selected */}
+                    {selectedBilling !== "3months" && (
                       <Paper
                         p="md"
                         radius="md"
@@ -616,7 +614,7 @@ export default function PremiumClient() {
                           </Group>
                         </Stack>
                       </Paper>
-                    }
+                    )}
                   </Stack>
                 </Radio.Group>
 

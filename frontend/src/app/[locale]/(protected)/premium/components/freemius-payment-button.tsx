@@ -44,7 +44,7 @@ declare global {
 }
 
 interface FreemiusPaymentButtonProps extends Omit<ButtonProps, "onClick"> {
-  billingCycle: "monthly" | "annual" | "lifetime";
+  billingCycle: "monthly" | "quarterly" | "annual" | "lifetime";
   planLabel: string;
   onSuccess?: () => void;
   onError?: (error: string) => void;
@@ -100,7 +100,9 @@ export function FreemiusPaymentButton({
         licenses: 1,
         trial: false,
         purchaseCompleted: async (response: FreemiusPurchaseResponse) => {
-          const billingPeriod = getBillingPeriod(response.purchase.billing_cycle);
+          const billingPeriod = getBillingPeriod(
+            response.purchase.billing_cycle,
+          );
 
           // Track purchase completed
           trackEvent("premium_purchase_completed", {
@@ -111,9 +113,10 @@ export function FreemiusPaymentButton({
 
           // Activate premium via server action
           // For lifetime, set far-future date since there's no next_payment
-          const endDate = billingPeriod === "lifetime"
-            ? "2099-12-31T23:59:59Z"
-            : response.purchase.next_payment;
+          const endDate =
+            billingPeriod === "lifetime"
+              ? "2099-12-31T23:59:59Z"
+              : response.purchase.next_payment;
 
           const result = await activatePremium({
             freemiusUserId: response.user.id,
