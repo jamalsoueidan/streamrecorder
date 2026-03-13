@@ -20,7 +20,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2026-03-08T09:32:28.181Z"
+    "x-generation-date": "2026-03-13T21:14:15.376Z"
   },
   "servers": [
     {
@@ -11459,7 +11459,8 @@
                   "youtube",
                   "afreecatv",
                   "pandalive",
-                  "bigo"
+                  "bigo",
+                  "tango"
                 ]
               },
               "gender": {
@@ -12289,6 +12290,9 @@
                 "format": "date-time"
               },
               "protected": {
+                "type": "boolean"
+              },
+              "blocked": {
                 "type": "boolean"
               },
               "pause": {
@@ -13273,7 +13277,8 @@
                   "youtube",
                   "afreecatv",
                   "pandalive",
-                  "bigo"
+                  "bigo",
+                  "tango"
                 ]
               },
               "gender": {
@@ -14103,6 +14108,9 @@
                 "format": "date-time"
               },
               "protected": {
+                "type": "boolean"
+              },
+              "blocked": {
                 "type": "boolean"
               },
               "pause": {
@@ -15597,7 +15605,8 @@
                       "youtube",
                       "afreecatv",
                       "pandalive",
-                      "bigo"
+                      "bigo",
+                      "tango"
                     ]
                   },
                   "gender": {
@@ -16427,6 +16436,9 @@
                     "format": "date-time"
                   },
                   "protected": {
+                    "type": "boolean"
+                  },
+                  "blocked": {
                     "type": "boolean"
                   },
                   "pause": {
@@ -19062,7 +19074,8 @@
                   "youtube",
                   "afreecatv",
                   "pandalive",
-                  "bigo"
+                  "bigo",
+                  "tango"
                 ]
               },
               "gender": {
@@ -19892,6 +19905,9 @@
                 "format": "date-time"
               },
               "protected": {
+                "type": "boolean"
+              },
+              "blocked": {
                 "type": "boolean"
               },
               "pause": {
@@ -21210,7 +21226,8 @@
                       "youtube",
                       "afreecatv",
                       "pandalive",
-                      "bigo"
+                      "bigo",
+                      "tango"
                     ]
                   },
                   "gender": {
@@ -22040,6 +22057,9 @@
                     "format": "date-time"
                   },
                   "protected": {
+                    "type": "boolean"
+                  },
+                  "blocked": {
                     "type": "boolean"
                   },
                   "pause": {
@@ -23906,7 +23926,8 @@
                   "youtube",
                   "afreecatv",
                   "pandalive",
-                  "bigo"
+                  "bigo",
+                  "tango"
                 ]
               },
               "gender": {
@@ -23939,6 +23960,9 @@
                 "format": "date-time"
               },
               "protected": {
+                "type": "boolean"
+              },
+              "blocked": {
                 "type": "boolean"
               },
               "pause": {
@@ -24887,6 +24911,9 @@
           "protected": {
             "type": "boolean"
           },
+          "blocked": {
+            "type": "boolean"
+          },
           "pause": {
             "type": "boolean"
           },
@@ -25213,7 +25240,8 @@
                         "youtube",
                         "afreecatv",
                         "pandalive",
-                        "bigo"
+                        "bigo",
+                        "tango"
                       ]
                     },
                     "gender": {
@@ -25406,6 +25434,9 @@
                       "format": "date-time"
                     },
                     "protected": {
+                      "type": "boolean"
+                    },
+                    "blocked": {
                       "type": "boolean"
                     },
                     "pause": {
@@ -26064,7 +26095,8 @@
                       "youtube",
                       "afreecatv",
                       "pandalive",
-                      "bigo"
+                      "bigo",
+                      "tango"
                     ]
                   },
                   "gender": {
@@ -26894,6 +26926,9 @@
                     "format": "date-time"
                   },
                   "protected": {
+                    "type": "boolean"
+                  },
+                  "blocked": {
                     "type": "boolean"
                   },
                   "pause": {
@@ -28967,6 +29002,9 @@
                 "format": "date-time"
               },
               "protected": {
+                "type": "boolean"
+              },
+              "blocked": {
                 "type": "boolean"
               },
               "pause": {
@@ -31130,7 +31168,8 @@
                         "youtube",
                         "afreecatv",
                         "pandalive",
-                        "bigo"
+                        "bigo",
+                        "tango"
                       ]
                     },
                     "gender": {
@@ -31617,6 +31656,9 @@
                       "format": "date-time"
                     },
                     "protected": {
+                      "type": "boolean"
+                    },
+                    "blocked": {
                       "type": "boolean"
                     },
                     "pause": {
@@ -32285,7 +32327,8 @@
                       "youtube",
                       "afreecatv",
                       "pandalive",
-                      "bigo"
+                      "bigo",
+                      "tango"
                     ]
                   },
                   "gender": {
@@ -33115,6 +33158,9 @@
                     "format": "date-time"
                   },
                   "protected": {
+                    "type": "boolean"
+                  },
+                  "blocked": {
                     "type": "boolean"
                   },
                   "pause": {
@@ -34206,7 +34252,8 @@
                       "youtube",
                       "afreecatv",
                       "pandalive",
-                      "bigo"
+                      "bigo",
+                      "tango"
                     ]
                   },
                   "gender": {
@@ -35036,6 +35083,9 @@
                     "format": "date-time"
                   },
                   "protected": {
+                    "type": "boolean"
+                  },
+                  "blocked": {
                     "type": "boolean"
                   },
                   "pause": {
@@ -36327,7 +36377,8 @@
           "youtube",
           "afreecatv",
           "pandalive",
-          "bigo"
+          "bigo",
+          "tango"
         ]
       },
       "FollowRequestBody": {

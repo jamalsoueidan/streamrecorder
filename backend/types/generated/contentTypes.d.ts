@@ -848,6 +848,13 @@ export interface ApiFollowerFollower extends Struct.CollectionTypeSchema {
           localized: false;
         };
       }>;
+    blocked: Schema.Attribute.Boolean &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<false>;
     category: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -938,7 +945,16 @@ export interface ApiFollowerFollower extends Struct.CollectionTypeSchema {
         };
       }>;
     type: Schema.Attribute.Enumeration<
-      ['tiktok', 'twitch', 'kick', 'youtube', 'afreecatv', 'pandalive', 'bigo']
+      [
+        'tiktok',
+        'twitch',
+        'kick',
+        'youtube',
+        'afreecatv',
+        'pandalive',
+        'bigo',
+        'tango',
+      ]
     > &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{

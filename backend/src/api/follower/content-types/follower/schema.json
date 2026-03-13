@@ -114,6 +114,15 @@
       },
       "default": false
     },
+    "blocked": {
+      "type": "boolean",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "default": false
+    },
     "pause": {
       "type": "boolean",
       "pluginOptions": {
