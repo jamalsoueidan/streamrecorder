@@ -18,6 +18,7 @@ async function getTotalClips() {
     data: { meta },
   } = await publicApi.clip.getClips({
     "pagination[limit]": 1,
+    "pagination[withCount]": true,
   });
 
   cachedTotal = { value: meta?.pagination?.total || 0, timestamp: now };
