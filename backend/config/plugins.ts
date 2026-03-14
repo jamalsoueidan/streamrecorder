@@ -42,7 +42,7 @@ export default ({ env }) => ({
             secretAccessKey: env("AWS_SECRET_ACCESS_KEY"),
           },
           endpoint: env("AWS_ENDPOINT"),
-          region: "eu-central-1",
+          region: env("AWS_REGION"),
           params: {
             Bucket: env("AWS_BUCKET"),
           },
@@ -245,7 +245,10 @@ export default ({ env }) => ({
                   name: "provider",
                   in: "query",
                   required: false,
-                  schema: { type: "string", enum: ["google", "apple", "facebook", "tiktok"] },
+                  schema: {
+                    type: "string",
+                    enum: ["google", "apple", "facebook", "tiktok"],
+                  },
                   description: "Filter by provider",
                 },
               ],
@@ -259,7 +262,9 @@ export default ({ env }) => ({
                         properties: {
                           data: {
                             type: "array",
-                            items: { $ref: "#/components/schemas/SocialAccount" },
+                            items: {
+                              $ref: "#/components/schemas/SocialAccount",
+                            },
                           },
                         },
                       },
