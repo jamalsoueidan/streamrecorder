@@ -39,13 +39,15 @@ export async function LatestFollowersSection({
               <Stack align="center" gap={8}>
                 <div style={{ position: "relative" }}>
                   <Avatar size={64} radius="xl">
-                    <NextImage
-                      src={generateAvatarUrl(follower.avatar?.url)}
-                      alt={follower.username}
-                      width={64}
-                      height={64}
-                      quality={75}
-                    />
+                    {follower.avatar?.url && (
+                      <NextImage
+                        src={generateAvatarUrl(follower.avatar.url)}
+                        alt={follower.username}
+                        width={64}
+                        height={64}
+                        quality={75}
+                      />
+                    )}
                   </Avatar>
                   <FollowerTypeIcon
                     pos="absolute"
