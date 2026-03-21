@@ -62,7 +62,7 @@ export const getRandomClips = unstable_cache(
     const {
       data: { data: clips },
     } = await publicApi.clip.getRandomClips({
-      limit: 8,
+      limit: 16,
     });
     return clips;
   },
