@@ -26,7 +26,7 @@ async function getRecordingByDocumentId(documentId: string) {
   return response.data.data?.[0] ?? null;
 }
 
-const buildPlaylist = unstable_cache(
+const fetchSourcePlaylists = unstable_cache(
   async (documentId: string, _updatedAt: string) => {
     const response = await publicApi.source.getSources({
       filters: {
@@ -49,11 +49,20 @@ const buildPlaylist = unstable_cache(
       "original",
     );
 
-    return combinePlaylistsWithSignedUrls(s3Client, bucket, sourcesWithPlaylists);
+    return { sourcesWithPlaylists, createdAt: sources[0].createdAt };
   },
-  ["playlist-build"],
+  ["playlist-sources"],
   { revalidate: 3600 },
 );
+
+async function buildPlaylist(documentId: string, updatedAt: string) {
+  const cached = await fetchSourcePlaylists(documentId, updatedAt);
+  if (!cached) return null;
+
+  const s3Client = getS3(cached.createdAt);
+  const bucket = getBucket(process.env.MEDIA_BUCKET!, cached.createdAt);
+  return combinePlaylistsWithSignedUrls(s3Client, bucket, cached.sourcesWithPlaylists);
+}
 
 export type SourceWithPlaylist = Source & { playlist?: string | null };
 
@@ -366,7 +375,7 @@ async function combinePlaylistsWithSignedUrls(
   const signedEntries = await Promise.all(
     toSign.map(async ({ mapKey, s3Key }) => {
       const command = new GetObjectCommand({ Bucket: bucket, Key: s3Key });
-      const url = await getSignedUrl(s3Client, command, { expiresIn: 7200 });
+      const url = await getSignedUrl(s3Client, command, { expiresIn: 14400 });
       return [mapKey, url] as const;
     }),
   );
