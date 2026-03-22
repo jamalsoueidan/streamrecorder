@@ -92,11 +92,13 @@ export default function ProfileRecordings() {
                         timeStyle: "short",
                       })}
                 </Text>
-                <RecordingMenu
-                  recording={rec}
-                  username={params.username}
-                  type={params.type}
-                />
+                {!isRecording ? (
+                  <RecordingMenu
+                    recording={rec}
+                    username={params.username}
+                    type={params.type}
+                  />
+                ) : null}
               </Group>
             </Stack>
           );
