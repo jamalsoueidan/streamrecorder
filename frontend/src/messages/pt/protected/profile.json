@@ -7,6 +7,7 @@
     "description": "Vamos começar a gravar as lives automaticamente."
   },
   "paused": "A gravação está pausada — este criador precisa de um assinante premium para continuar ativo.",
+  "blocked": "Este criador enviou uma solicitação DMCA. Suas lives não serão mais gravadas.",
   "emptyDefault": {
     "title": "Nenhuma gravação ainda",
     "description": "Nenhuma gravação de {username} ainda. Volte mais tarde!"

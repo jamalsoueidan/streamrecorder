@@ -7,6 +7,7 @@
     "description": "Kami akan mulai merekam stream mereka secara otomatis."
   },
   "paused": "Perekaman dijeda — kreator ini membutuhkan pendukung premium untuk tetap aktif.",
+  "blocked": "Kreator ini telah mengajukan permintaan DMCA. Stream mereka tidak akan direkam lagi.",
   "emptyDefault": {
     "title": "Belum ada rekaman",
     "description": "Belum ada rekaman dari {username}. Cek lagi nanti!"

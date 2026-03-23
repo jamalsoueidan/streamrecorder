@@ -7,6 +7,7 @@
     "description": "Empezaremos a grabar sus transmisiones automáticamente."
   },
   "paused": "La grabación está pausada — este creador necesita un suscriptor premium para mantenerse activo.",
+  "blocked": "Este creador ha enviado una solicitud DMCA. Sus transmisiones ya no serán grabadas.",
   "emptyDefault": {
     "title": "Sin grabaciones todavía",
     "description": "Aún no hay grabaciones de {username}. ¡Vuelve más tarde!"

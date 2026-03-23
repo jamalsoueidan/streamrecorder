@@ -7,6 +7,7 @@
     "description": "We'll start recording their streams automatically."
   },
   "paused": "Recording is paused — this creator needs a premium supporter to stay active.",
+  "blocked": "This creator has submitted a DMCA request. Their streams will no longer be recorded.",
   "emptyDefault": {
     "title": "No recordings yet",
     "description": "No recordings from {username} yet. Check back later!"
