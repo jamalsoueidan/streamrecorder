@@ -2,5 +2,6 @@
   "newVersion": {
     "title": "We've made some improvements! Please refresh to get the latest version.",
     "refresh": "Refresh"
-  }
+  },
+  "banner": "Our storage provider is currently experiencing issues. Some videos and images may not load. Service should be back within 2 hours."
 }
