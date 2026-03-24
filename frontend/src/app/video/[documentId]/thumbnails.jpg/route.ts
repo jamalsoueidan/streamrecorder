@@ -44,7 +44,7 @@ export async function GET(
   const abortController = new AbortController();
 
   try {
-    const s3 = getS3(source.createdAt);
+    const s3 = getS3();
     const command = new GetObjectCommand({
       Bucket: getBucket(process.env.MEDIA_BUCKET!, source.createdAt),
       Key: decodeURIComponent(`${source.path.substring(1)}thumbnails.jpg`),

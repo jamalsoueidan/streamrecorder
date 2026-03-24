@@ -47,8 +47,8 @@ export async function GET(
     return new Response("Not found", { status: 404 });
   }
 
-  const s3 = getS3(clip.createdAt);
-  const bucket = getBucket(process.env.CLIP_BUCKET!, clip.createdAt);
+  const s3 = getS3();
+  const bucket = `${process.env.CLIP_BUCKET!}-nbg`;
   const key = `${clip.path?.substring(1)}${documentId}/${file}`;
   const command = new GetObjectCommand({ Bucket: bucket, Key: key });
 

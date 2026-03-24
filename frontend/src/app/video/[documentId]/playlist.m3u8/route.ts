@@ -40,7 +40,7 @@ const fetchSourcePlaylists = unstable_cache(
     const sources = response.data.data ?? [];
     if (!sources.length) return null;
 
-    const s3Client = getS3(sources[0].createdAt);
+    const s3Client = getS3();
     const bucket = getBucket(process.env.MEDIA_BUCKET!, sources[0].createdAt);
     const sourcesWithPlaylists = await fetchPlaylistsFromS3(
       s3Client,
@@ -59,7 +59,7 @@ async function buildPlaylist(documentId: string, updatedAt: string) {
   const cached = await fetchSourcePlaylists(documentId, updatedAt);
   if (!cached) return null;
 
-  const s3Client = getS3(cached.createdAt);
+  const s3Client = getS3();
   const bucket = getBucket(process.env.MEDIA_BUCKET!, cached.createdAt);
   return combinePlaylistsWithSignedUrls(s3Client, bucket, cached.sourcesWithPlaylists);
 }

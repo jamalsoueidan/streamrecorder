@@ -23,18 +23,14 @@ export async function GET(
   const s3Key = decodeURIComponent(filePath);
 
   try {
-    // Allow placeholder files without access control
+    // Allow placeholder files without access control — served from public folder
     if (PUBLIC_FILES.includes(filePath)) {
-      const command = new GetObjectCommand({
-        Bucket: process.env.MEDIA_BUCKET!,
-        Key: s3Key,
-      });
-      const signedUrl = await getSignedUrl(getS3(), command, { expiresIn: 1800 });
+      const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "";
       return new Response(null, {
         status: 302,
         headers: {
-          Location: signedUrl,
-          "Cache-Control": "no-store",
+          Location: `${baseUrl}/videos/${filePath}`,
+          "Cache-Control": "public, max-age=86400",
         },
       });
     }
@@ -62,7 +58,7 @@ export async function GET(
       return new Response("Not found", { status: 404 });
     }
 
-    const s3 = getS3(source.createdAt);
+    const s3 = getS3();
     const mediaBucket = getBucket(process.env.MEDIA_BUCKET!, source.createdAt);
 
     // Check if user is logged in
