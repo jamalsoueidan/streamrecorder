@@ -18,7 +18,7 @@ export enum FollowerTypeEnum {
   Afreecatv = "afreecatv",
   Pandalive = "pandalive",
   Bigo = "bigo",
-
+  Tango = "tango",
 }
 
 /** Filter by follow status */
@@ -437,6 +437,8 @@ export interface Activity {
         documentId?: string;
       }[];
     };
+    lsr?: boolean;
+    sar?: boolean;
     /** @format date-time */
     createdAt?: string;
     /** @format date-time */
@@ -915,6 +917,8 @@ export interface AiRequest {
         documentId?: string;
       }[];
     };
+    lsr?: boolean;
+    sar?: boolean;
     /** @format date-time */
     createdAt?: string;
     /** @format date-time */
@@ -1530,6 +1534,8 @@ export interface AiTask {
           documentId?: string;
         }[];
       };
+      lsr?: boolean;
+      sar?: boolean;
       /** @format date-time */
       createdAt?: string;
       /** @format date-time */
@@ -2463,6 +2469,8 @@ export interface Clip {
         documentId?: string;
       }[];
     };
+    lsr?: boolean;
+    sar?: boolean;
     /** @format date-time */
     createdAt?: string;
     /** @format date-time */
@@ -3034,6 +3042,8 @@ export interface ClipShare {
           documentId?: string;
         }[];
       };
+      lsr?: boolean;
+      sar?: boolean;
       /** @format date-time */
       createdAt?: string;
       /** @format date-time */
@@ -3407,6 +3417,8 @@ export interface FollowerRequest {
     migration?: number;
     /** @example "string or id" */
     owner?: number | string;
+    lsr?: boolean;
+    sar?: boolean;
     locale?: string;
     localizations?: (number | string)[];
   };
@@ -3809,6 +3821,8 @@ export interface Follower {
         id?: string | number;
         documentId?: string;
       };
+      lsr?: boolean;
+      sar?: boolean;
       /** @format date-time */
       createdAt?: string;
       /** @format date-time */
@@ -3891,6 +3905,8 @@ export interface Follower {
       documentId?: string;
     }[];
   };
+  lsr?: boolean;
+  sar?: boolean;
   /** @format date-time */
   createdAt?: string;
   /** @format date-time */
@@ -4341,6 +4357,8 @@ export interface Meme {
           documentId?: string;
         }[];
       };
+      lsr?: boolean;
+      sar?: boolean;
       /** @format date-time */
       createdAt?: string;
       /** @format date-time */
@@ -4893,6 +4911,8 @@ export interface Recording {
         documentId?: string;
       }[];
     };
+    lsr?: boolean;
+    sar?: boolean;
     /** @format date-time */
     createdAt?: string;
     /** @format date-time */
@@ -5471,6 +5491,8 @@ export interface SocialAccount {
         id?: string | number;
         documentId?: string;
       };
+      lsr?: boolean;
+      sar?: boolean;
       /** @format date-time */
       createdAt?: string;
       /** @format date-time */
@@ -6006,6 +6028,8 @@ export interface Source {
           documentId?: string;
         }[];
       };
+      lsr?: boolean;
+      sar?: boolean;
       /** @format date-time */
       createdAt?: string;
       /** @format date-time */
@@ -6518,6 +6542,8 @@ export interface VisitorView {
           documentId?: string;
         }[];
       };
+      lsr?: boolean;
+      sar?: boolean;
       /** @format date-time */
       createdAt?: string;
       /** @format date-time */
@@ -6783,7 +6809,7 @@ export enum ActivityTypeEnum {
   Afreecatv = "afreecatv",
   Pandalive = "pandalive",
   Bigo = "bigo",
-
+  Tango = "tango",
 }
 
 export enum ActivityGenderEnum {
@@ -6826,7 +6852,7 @@ export enum AiRequestTypeEnum {
   Afreecatv = "afreecatv",
   Pandalive = "pandalive",
   Bigo = "bigo",
-
+  Tango = "tango",
 }
 
 export enum AiRequestGenderEnum {
@@ -6897,7 +6923,7 @@ export enum AiTaskTypeEnum {
   Afreecatv = "afreecatv",
   Pandalive = "pandalive",
   Bigo = "bigo",
-
+  Tango = "tango",
 }
 
 export enum AiTaskGenderEnum {
@@ -6961,7 +6987,7 @@ export enum ClipTypeEnum {
   Afreecatv = "afreecatv",
   Pandalive = "pandalive",
   Bigo = "bigo",
-
+  Tango = "tango",
 }
 
 export enum ClipGenderEnum {
@@ -7010,7 +7036,7 @@ export enum ClipShareTypeEnum {
   Afreecatv = "afreecatv",
   Pandalive = "pandalive",
   Bigo = "bigo",
-
+  Tango = "tango",
 }
 
 export enum ClipShareGenderEnum {
@@ -7065,7 +7091,7 @@ export enum FollowerRequestTypeEnum {
   Afreecatv = "afreecatv",
   Pandalive = "pandalive",
   Bigo = "bigo",
-
+  Tango = "tango",
 }
 
 export enum FollowerRequestGenderEnum {
@@ -7123,7 +7149,7 @@ export enum MemeTypeEnum1 {
   Afreecatv = "afreecatv",
   Pandalive = "pandalive",
   Bigo = "bigo",
-
+  Tango = "tango",
 }
 
 export enum MemeGenderEnum {
@@ -7210,7 +7236,7 @@ export enum SocialAccountTypeEnum {
   Afreecatv = "afreecatv",
   Pandalive = "pandalive",
   Bigo = "bigo",
-
+  Tango = "tango",
 }
 
 export enum SocialAccountGenderEnum {
@@ -7260,7 +7286,7 @@ export enum SourceTypeEnum {
   Afreecatv = "afreecatv",
   Pandalive = "pandalive",
   Bigo = "bigo",
-
+  Tango = "tango",
 }
 
 export enum SourceGenderEnum {
@@ -7303,7 +7329,7 @@ export enum VisitorViewTypeEnum {
   Afreecatv = "afreecatv",
   Pandalive = "pandalive",
   Bigo = "bigo",
-
+  Tango = "tango",
 }
 
 export enum VisitorViewGenderEnum {

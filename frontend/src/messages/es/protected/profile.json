@@ -6,6 +6,7 @@
     "title": "¡{username} ha sido agregado!",
     "description": "Empezaremos a grabar sus transmisiones automáticamente."
   },
+  "checkLastChecked": "Ver cuándo se verificó por última vez",
   "paused": "La grabación está pausada — este creador necesita un suscriptor premium para mantenerse activo.",
   "blocked": "Este creador ha enviado una solicitud DMCA. Sus transmisiones ya no serán grabadas.",
   "emptyDefault": {

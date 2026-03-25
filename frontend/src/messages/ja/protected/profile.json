@@ -6,6 +6,7 @@
     "title": "{username} を追加しました！",
     "description": "配信を自動録画します。"
   },
+  "checkLastChecked": "最終確認日時を見る",
   "paused": "録画は一時停止中 — このクリエイターが配信を続けるにはプレミアムサポーターが必要です。",
   "blocked": "このクリエイターはDMCA申請を行いました。今後、配信の録画は行われません。",
   "emptyDefault": {

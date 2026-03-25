@@ -6,6 +6,7 @@
     "title": "{username} eklendi!",
     "description": "Yayınlarını otomatik olarak kaydetmeye başlayacağız."
   },
+  "checkLastChecked": "Son kontrol zamanını gör",
   "paused": "Kayıt duraklatıldı — bu içerik üreticisinin aktif kalması için bir premium destekçiye ihtiyacı var.",
   "blocked": "Bu içerik üreticisi DMCA talebi gönderdi. Yayınları artık kaydedilmeyecektir.",
   "emptyDefault": {

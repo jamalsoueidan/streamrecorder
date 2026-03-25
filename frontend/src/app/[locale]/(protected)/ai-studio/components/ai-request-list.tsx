@@ -40,6 +40,15 @@ export function AiRequestList({
     return state === filter;
   });
 
+  const handleFilterChange = (value: string) => {
+    setFilter(value);
+    if (currentPage !== 1) {
+      const params = new URLSearchParams(searchParams.toString());
+      params.set("page", "1");
+      router.push(`?${params.toString()}`);
+    }
+  };
+
   const handlePageChange = (page: number) => {
     const params = new URLSearchParams(searchParams.toString());
     params.set("page", page.toString());
@@ -50,7 +59,7 @@ export function AiRequestList({
     <Stack gap="md">
       <SegmentedControl
         value={filter}
-        onChange={setFilter}
+        onChange={handleFilterChange}
         data={[
           { label: t("filters.all"), value: "all" },
           { label: t("filters.pending"), value: "pending" },

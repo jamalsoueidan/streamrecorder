@@ -6,6 +6,7 @@
     "title": "{username}님이 추가되었습니다!",
     "description": "방송을 자동으로 녹화하기 시작합니다."
   },
+  "checkLastChecked": "마지막 확인 시점 보기",
   "paused": "녹화가 일시 중지됨 — 이 크리에이터가 활성 상태를 유지하려면 프리미엄 서포터가 필요합니다.",
   "blocked": "이 크리에이터가 DMCA 요청을 제출했습니다. 더 이상 방송이 녹화되지 않습니다.",
   "emptyDefault": {

@@ -6,6 +6,7 @@
     "title": "{username} foi adicionado!",
     "description": "Vamos começar a gravar as lives automaticamente."
   },
+  "checkLastChecked": "Ver quando foi verificado pela última vez",
   "paused": "A gravação está pausada — este criador precisa de um assinante premium para continuar ativo.",
   "blocked": "Este criador enviou uma solicitação DMCA. Suas lives não serão mais gravadas.",
   "emptyDefault": {

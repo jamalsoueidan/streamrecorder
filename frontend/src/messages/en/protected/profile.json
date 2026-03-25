@@ -6,6 +6,7 @@
     "title": "{username} has been added!",
     "description": "We'll start recording their streams automatically."
   },
+  "checkLastChecked": "Check when last checked",
   "paused": "Recording is paused — this creator needs a premium supporter to stay active.",
   "blocked": "This creator has submitted a DMCA request. Their streams will no longer be recorded.",
   "emptyDefault": {

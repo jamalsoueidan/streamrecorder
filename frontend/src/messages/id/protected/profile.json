@@ -6,6 +6,7 @@
     "title": "{username} telah ditambahkan!",
     "description": "Kami akan mulai merekam stream mereka secara otomatis."
   },
+  "checkLastChecked": "Lihat kapan terakhir diperiksa",
   "paused": "Perekaman dijeda — kreator ini membutuhkan pendukung premium untuk tetap aktif.",
   "blocked": "Kreator ini telah mengajukan permintaan DMCA. Stream mereka tidak akan direkam lagi.",
   "emptyDefault": {

@@ -148,7 +148,7 @@ export function ImageSpritePreview({ recording, type, username }: Props) {
       {isRecording && (
         <Badge
           component="a"
-          href={SOCIAL_URL_PATTERNS[type](username)}
+          href={SOCIAL_URL_PATTERNS[type]?.(username) || "#"}
           target="_blank"
           rel="noopener noreferrer"
           pos="absolute"
