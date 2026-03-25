@@ -20,7 +20,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2026-03-13T21:14:15.376Z"
+    "x-generation-date": "2026-03-25T08:41:17.639Z"
   },
   "servers": [
     {
@@ -12846,6 +12846,12 @@
                   }
                 }
               },
+              "lsr": {
+                "type": "boolean"
+              },
+              "sar": {
+                "type": "boolean"
+              },
               "createdAt": {
                 "type": "string",
                 "format": "date-time"
@@ -14663,6 +14669,12 @@
                     }
                   }
                 }
+              },
+              "lsr": {
+                "type": "boolean"
+              },
+              "sar": {
+                "type": "boolean"
               },
               "createdAt": {
                 "type": "string",
@@ -16991,6 +17003,12 @@
                         }
                       }
                     }
+                  },
+                  "lsr": {
+                    "type": "boolean"
+                  },
+                  "sar": {
+                    "type": "boolean"
                   },
                   "createdAt": {
                     "type": "string",
@@ -20461,6 +20479,12 @@
                   }
                 }
               },
+              "lsr": {
+                "type": "boolean"
+              },
+              "sar": {
+                "type": "boolean"
+              },
               "createdAt": {
                 "type": "string",
                 "format": "date-time"
@@ -22613,6 +22637,12 @@
                       }
                     }
                   },
+                  "lsr": {
+                    "type": "boolean"
+                  },
+                  "sar": {
+                    "type": "boolean"
+                  },
                   "createdAt": {
                     "type": "string",
                     "format": "date-time"
@@ -23991,6 +24021,12 @@
                   }
                 ],
                 "example": "string or id"
+              },
+              "lsr": {
+                "type": "boolean"
+              },
+              "sar": {
+                "type": "boolean"
               },
               "locale": {
                 "type": "string"
@@ -25473,6 +25509,12 @@
                         }
                       }
                     },
+                    "lsr": {
+                      "type": "boolean"
+                    },
+                    "sar": {
+                      "type": "boolean"
+                    },
                     "createdAt": {
                       "type": "string",
                       "format": "date-time"
@@ -25789,6 +25831,12 @@
                 }
               }
             }
+          },
+          "lsr": {
+            "type": "boolean"
+          },
+          "sar": {
+            "type": "boolean"
           },
           "createdAt": {
             "type": "string",
@@ -27481,6 +27529,12 @@
                         }
                       }
                     }
+                  },
+                  "lsr": {
+                    "type": "boolean"
+                  },
+                  "sar": {
+                    "type": "boolean"
                   },
                   "createdAt": {
                     "type": "string",
@@ -29557,6 +29611,12 @@
                     }
                   }
                 }
+              },
+              "lsr": {
+                "type": "boolean"
+              },
+              "sar": {
+                "type": "boolean"
               },
               "createdAt": {
                 "type": "string",
@@ -31695,6 +31755,12 @@
                         }
                       }
                     },
+                    "lsr": {
+                      "type": "boolean"
+                    },
+                    "sar": {
+                      "type": "boolean"
+                    },
                     "createdAt": {
                       "type": "string",
                       "format": "date-time"
@@ -33714,6 +33780,12 @@
                       }
                     }
                   },
+                  "lsr": {
+                    "type": "boolean"
+                  },
+                  "sar": {
+                    "type": "boolean"
+                  },
                   "createdAt": {
                     "type": "string",
                     "format": "date-time"
@@ -35638,6 +35710,12 @@
                         }
                       }
                     }
+                  },
+                  "lsr": {
+                    "type": "boolean"
+                  },
+                  "sar": {
+                    "type": "boolean"
                   },
                   "createdAt": {
                     "type": "string",

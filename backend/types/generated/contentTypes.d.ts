@@ -906,6 +906,14 @@ export interface ApiFollowerFollower extends Struct.CollectionTypeSchema {
       'oneToMany',
       'api::follower.follower'
     >;
+    lsr: Schema.Attribute.Boolean &
+      Schema.Attribute.Private &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<false>;
     migration: Schema.Attribute.Integer &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -938,6 +946,14 @@ export interface ApiFollowerFollower extends Struct.CollectionTypeSchema {
       }> &
       Schema.Attribute.DefaultTo<false>;
     publishedAt: Schema.Attribute.DateTime;
+    sar: Schema.Attribute.Boolean &
+      Schema.Attribute.Private &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<false>;
     tagline: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
