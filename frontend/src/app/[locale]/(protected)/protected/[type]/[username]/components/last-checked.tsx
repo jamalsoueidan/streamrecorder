@@ -1,7 +1,7 @@
 "use client";
 
-import { ActionIcon, Loader, Text, Tooltip } from "@mantine/core";
-import { IconClock } from "@tabler/icons-react";
+import { ActionIcon, Text, Tooltip } from "@mantine/core";
+import { IconClock, IconLoader } from "@tabler/icons-react";
 import { useFormatter, useTranslations } from "next-intl";
 import { useState } from "react";
 import { fetchLastChecked } from "../actions/fetch-last-checked";
@@ -29,12 +29,10 @@ export function LastCheckedButton({
 }) {
   const t = useTranslations("protected.profile");
 
-  if (loading) return <Loader size="xs" />;
-
   return (
     <Tooltip label={t("checkLastChecked")}>
-      <ActionIcon variant="subtle" size="sm" color="gray" onClick={onClick}>
-        <IconClock size={16} />
+      <ActionIcon size="lg" onClick={onClick}>
+        {loading ? <IconLoader size={24} /> : <IconClock size={24} />}
       </ActionIcon>
     </Tooltip>
   );
@@ -45,7 +43,12 @@ export function LastCheckedText({ value }: { value: string | null }) {
   const format = useFormatter();
 
   return (
-    <Text size="sm" c="dimmed" suppressHydrationWarning style={{ minHeight: 20 }}>
+    <Text
+      size="sm"
+      c="dimmed"
+      suppressHydrationWarning
+      style={{ minHeight: 20 }}
+    >
       {value
         ? t("lastCheckedAgo", {
             time: format.relativeTime(new Date(value), new Date()),
