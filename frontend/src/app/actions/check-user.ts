@@ -23,7 +23,7 @@ interface CheckUserResponse {
 
 export async function checkUser(
   username: string,
-  type: PlatformType
+  type: PlatformType,
 ): Promise<CheckUserResponse> {
   if (!username || username.trim().length === 0) {
     return { success: false, error: "Username is required" };
@@ -38,6 +38,7 @@ export async function checkUser(
       body: JSON.stringify({
         username: username.trim(),
         type: type,
+        platform: process.env.NEXT_PUBLIC_PLATFORM!,
       }),
     });
 

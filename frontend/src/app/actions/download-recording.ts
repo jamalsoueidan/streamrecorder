@@ -3,7 +3,7 @@
 export async function downloadRecording(
   videoDocumentId: string,
   userId: number,
-  locale: string
+  locale: string,
 ): Promise<void> {
   await fetch(process.env.N8N_URL + "/webhook/download", {
     method: "POST",
@@ -11,6 +11,11 @@ export async function downloadRecording(
       "Content-Type": "application/json",
       "X-Webhook-Token": process.env.N8N_TOKEN!,
     },
-    body: JSON.stringify({ videoDocumentId, userId, locale }),
+    body: JSON.stringify({
+      videoDocumentId,
+      userId,
+      locale,
+      platform: process.env.NEXT_PUBLIC_PLATFORM!,
+    }),
   });
 }

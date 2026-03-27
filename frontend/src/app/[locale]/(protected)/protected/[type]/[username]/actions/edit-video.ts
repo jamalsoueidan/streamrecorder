@@ -4,9 +4,10 @@ import api from "@/lib/api";
 
 async function checkNotBasic(): Promise<boolean> {
   try {
-    const user = await api.usersPermissionsUsersRoles.getUsersPermissionsUsersRoles({
-      populate: { role: true },
-    });
+    const user =
+      await api.usersPermissionsUsersRoles.getUsersPermissionsUsersRoles({
+        populate: { role: true },
+      });
     const roleType = (user?.data?.role as any)?.type;
     return roleType !== "authenticated";
   } catch {
@@ -32,6 +33,7 @@ export async function cropExportVideo(
       startTime,
       endTime,
       action: "export",
+      platform: process.env.NEXT_PUBLIC_PLATFORM!,
     }),
   });
 }
@@ -60,6 +62,7 @@ export async function cropDownloadVideo(
       locale,
       startTime,
       duration: endTime - startTime,
+      platform: process.env.NEXT_PUBLIC_PLATFORM!,
     }),
   });
 }
