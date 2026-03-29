@@ -59,7 +59,7 @@ export async function GET(
     }
 
     const s3 = getS3();
-    const mediaBucket = getBucket(process.env.MEDIA_BUCKET!, source.createdAt);
+    const mediaBucket = getBucket(process.env.MEDIA_BUCKET!, source.createdAt, source.path);
 
     // Check if user is logged in
     const token = await getToken();

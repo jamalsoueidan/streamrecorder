@@ -46,7 +46,7 @@ export async function GET(
   try {
     const s3 = getS3();
     const command = new GetObjectCommand({
-      Bucket: getBucket(process.env.MEDIA_BUCKET!, source.createdAt),
+      Bucket: getBucket(process.env.MEDIA_BUCKET!, source.createdAt, source.path),
       Key: decodeURIComponent(`${source.path.substring(1)}${file}`),
     });
     const response = await s3.send(command, {
