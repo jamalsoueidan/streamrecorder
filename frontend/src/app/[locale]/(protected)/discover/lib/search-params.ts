@@ -44,12 +44,12 @@ export const buildCreatorsFilters = (filters: CreatorFilters) => ({
     $or: [
       {
         username: {
-          $containsi: filters.search.replace(/^(%40|@)/, ""),
+          $containsi: decodeURIComponent(filters.search).replace(/^@/, ""),
         },
       },
       {
         nickname: {
-          $containsi: filters.search.replace(/^(%40|@)/, ""),
+          $containsi: decodeURIComponent(filters.search).replace(/^@/, ""),
         },
       },
     ],

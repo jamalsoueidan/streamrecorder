@@ -38,7 +38,7 @@ export async function getRecordings(
   const response = await api.recording.getRecordings({
     filters: {
       follower: {
-        username: { $eq: username.replace(/^(%40|@)/, "") },
+        username: { $eq: decodeURIComponent(username).replace(/^@/, "") },
         type: { $eq: type },
       },
       sources: {

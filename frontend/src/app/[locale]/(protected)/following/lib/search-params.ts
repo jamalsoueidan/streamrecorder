@@ -76,7 +76,7 @@ export const buildFollowingFilters = (filters: FollowingFilters) =>
       ? {
           follower: {
             username: {
-              $containsi: filters.search.replace(/^(%40|@)/, ""),
+              $containsi: decodeURIComponent(filters.search).replace(/^@/, ""),
             },
           },
         }

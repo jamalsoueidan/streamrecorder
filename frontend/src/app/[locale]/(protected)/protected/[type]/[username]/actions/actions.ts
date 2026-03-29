@@ -44,7 +44,7 @@ export async function getFollower({
 }) {
   const response = await api.follower.getFollowers({
     filters: {
-      username: username.replace(/^(%40|@)/, ""),
+      username: decodeURIComponent(username).replace(/^@/, ""),
       type,
     },
     populate: ["avatar"],
@@ -91,7 +91,7 @@ export async function fetchProfileRecordings(
     deepMerge(defaultOptions, {
       filters: {
         follower: {
-          username: { $eq: username.replace(/^(%40|@)/, "") },
+          username: { $eq: decodeURIComponent(username).replace(/^@/, "") },
           type: { $eq: type },
         },
       },
@@ -118,7 +118,7 @@ export async function fetchRecordingWithContext(
   pageSize: number = 15,
 ) {
   const locale = await getLocale();
-  const decodedUsername = username.replace(/^(%40|@)/, "");
+  const decodedUsername = decodeURIComponent(username).replace(/^@/, "");
   const isDesc = !filters.sort?.includes(":asc");
 
   // Special case: pageParam === 1 means "find the target video's page"
