@@ -77,10 +77,14 @@
       "target": "api::social-account.social-account",
       "mappedBy": "user"
     },
-
     "subscriptionStatus": {
       "type": "enumeration",
-      "enum": ["active", "cancelled", "trialing", "expired"]
+      "enum": [
+        "active",
+        "cancelled",
+        "trialing",
+        "expired"
+      ]
     },
     "billingPeriod": {
       "type": "string"
@@ -94,9 +98,16 @@
     "stripe": {
       "type": "text"
     },
+    "mollie": {
+      "type": "string"
+    },
     "paymentProvider": {
       "type": "enumeration",
-      "enum": ["freemius", "stripe"]
+      "enum": [
+        "freemius",
+        "stripe",
+        "mollie"
+      ]
     },
     "trialClaimed": {
       "type": "boolean",
