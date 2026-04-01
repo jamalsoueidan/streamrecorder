@@ -4,7 +4,7 @@ import { ActionIcon, Tooltip } from "@mantine/core";
 import { IconStar, IconStarFilled } from "@tabler/icons-react";
 import { useQueryClient } from "@tanstack/react-query";
 import { useTranslations } from "next-intl";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { toggleFavorite } from "../actions/toggle-favorite";
 
 interface FavoriteButtonProps {
@@ -12,21 +12,29 @@ interface FavoriteButtonProps {
   isFavorite: boolean;
 }
 
-export function FavoriteButton({ documentId, isFavorite: initialFavorite }: FavoriteButtonProps) {
-  const [optimistic, setOptimistic] = useState(initialFavorite);
+export function FavoriteButton({
+  documentId,
+  isFavorite,
+}: FavoriteButtonProps) {
+  const [optimistic, setOptimistic] = useState(isFavorite);
   const [pending, setPending] = useState(false);
   const queryClient = useQueryClient();
   const t = useTranslations("protected.myList");
 
+  // Sync with prop when it changes (refetch, navigation)
+  useEffect(() => {
+    setOptimistic(isFavorite);
+  }, [isFavorite]);
+
   const handleClick = async () => {
     setPending(true);
-    setOptimistic(!optimistic);
+    setOptimistic((prev) => !prev);
 
     try {
-      await toggleFavorite(documentId, optimistic);
+      await toggleFavorite(documentId, isFavorite);
       queryClient.invalidateQueries({ queryKey: ["creators", "mylist"] });
     } catch {
-      setOptimistic(optimistic); // revert on error
+      setOptimistic((prev) => !prev); // revert
     } finally {
       setPending(false);
     }
@@ -40,11 +48,7 @@ export function FavoriteButton({ documentId, isFavorite: initialFavorite }: Favo
         loading={pending}
         onClick={handleClick}
       >
-        {optimistic ? (
-          <IconStarFilled size={20} />
-        ) : (
-          <IconStar size={20} />
-        )}
+        {optimistic ? <IconStarFilled size={20} /> : <IconStar size={20} />}
       </ActionIcon>
     </Tooltip>
   );

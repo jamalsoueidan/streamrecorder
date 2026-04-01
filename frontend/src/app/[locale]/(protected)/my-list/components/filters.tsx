@@ -152,6 +152,7 @@ export default function Filters({ filterOptions }: Props) {
     filters.type,
     filters.dateRange,
     filters.hasRecordings,
+    filters.favorites,
   ].filter(Boolean).length;
 
   const clearFilters = () => {
@@ -162,6 +163,7 @@ export default function Filters({ filterOptions }: Props) {
       type: null,
       dateRange: null,
       hasRecordings: true,
+      favorites: false,
       sort: SortOptions.createdAtDesc,
     });
   };

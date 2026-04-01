@@ -146,6 +146,7 @@ export default function Filters({ filterOptions }: Props) {
     filters.language,
     filters.type,
     filters.dateRange,
+    filters.favorites,
   ].filter(Boolean).length;
 
   const clearFilters = () => {
