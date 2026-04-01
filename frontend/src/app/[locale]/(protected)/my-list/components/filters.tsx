@@ -35,6 +35,7 @@ import {
   IconSortAZ,
   IconSortDescendingNumbers,
   IconSortZA,
+  IconStarFilled,
   IconUsers,
   IconX,
 } from "@tabler/icons-react";
@@ -329,6 +330,16 @@ export default function Filters({ filterOptions }: Props) {
             )}
           </Group>
         ) : null}
+
+        <Button
+          variant={filters.favorites ? "filled" : "light"}
+          color={filters.favorites ? "yellow" : "gray"}
+          size="md"
+          leftSection={<IconStarFilled size={20} />}
+          onClick={() => setFilters({ favorites: !filters.favorites })}
+        >
+          {t("actions.favorites")}
+        </Button>
 
         <Indicator
           disabled={activeFilterCount === 0}

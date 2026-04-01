@@ -71,6 +71,11 @@
       "relation": "manyToMany",
       "target": "api::follower.follower"
     },
+    "favorites": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::follower.follower"
+    },
     "socialAccounts": {
       "type": "relation",
       "relation": "oneToMany",
@@ -79,12 +84,7 @@
     },
     "subscriptionStatus": {
       "type": "enumeration",
-      "enum": [
-        "active",
-        "cancelled",
-        "trialing",
-        "expired"
-      ]
+      "enum": ["active", "cancelled", "trialing", "expired"]
     },
     "billingPeriod": {
       "type": "string"
@@ -103,11 +103,7 @@
     },
     "paymentProvider": {
       "type": "enumeration",
-      "enum": [
-        "freemius",
-        "stripe",
-        "mollie"
-      ]
+      "enum": ["freemius", "stripe", "mollie"]
     },
     "trialClaimed": {
       "type": "boolean",

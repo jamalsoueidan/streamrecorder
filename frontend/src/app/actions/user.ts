@@ -8,6 +8,9 @@ export const getUser = cache(() =>
       followers: {
         fields: ["id", "documentId"],
       },
+      favorites: {
+        fields: ["id", "documentId"],
+      },
     },
   }),
 );

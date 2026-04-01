@@ -20,7 +20,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2026-03-31T08:54:19.434Z"
+    "x-generation-date": "2026-04-01T14:28:27.199Z"
   },
   "servers": [
     {
@@ -9739,6 +9739,12 @@
                             "$ref": "#/components/schemas/Follower"
                           }
                         },
+                        "favorites": {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/components/schemas/Follower"
+                          }
+                        },
                         "socialAccounts": {
                           "type": "array",
                           "items": {
@@ -9769,6 +9775,11 @@
                           "nullable": true,
                           "description": "JSON string with Freemius subscription data"
                         },
+                        "mollie": {
+                          "type": "string",
+                          "nullable": true,
+                          "description": "JSON string with Mollie subscription data"
+                        },
                         "stripe": {
                           "type": "string",
                           "nullable": true,
@@ -9778,7 +9789,8 @@
                           "type": "string",
                           "enum": [
                             "freemius",
-                            "stripe"
+                            "stripe",
+                            "mollie"
                           ],
                           "nullable": true
                         },
@@ -11727,6 +11739,113 @@
         }
       }
     },
+    "/followers/favorite": {
+      "post": {
+        "tags": [
+          "Follower"
+        ],
+        "operationId": "favoriteFollower",
+        "summary": "Add a follower to favorites",
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "documentId"
+                ],
+                "properties": {
+                  "documentId": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": {
+                      "type": "boolean"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Must be following the creator first"
+          }
+        }
+      }
+    },
+    "/followers/unfavorite": {
+      "post": {
+        "tags": [
+          "Follower"
+        ],
+        "operationId": "unfavoriteFollower",
+        "summary": "Remove a follower from favorites",
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "documentId"
+                ],
+                "properties": {
+                  "documentId": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": {
+                      "type": "boolean"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
     "/followers/unpause-my-followers": {
       "post": {
         "tags": [
@@ -13103,6 +13222,27 @@
                     }
                   },
                   "followers": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "oneOf": [
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "number"
+                            }
+                          ]
+                        },
+                        "documentId": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  },
+                  "favorites": {
                     "type": "array",
                     "items": {
                       "type": "object",
@@ -14931,6 +15071,27 @@
                     }
                   },
                   "followers": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "oneOf": [
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "number"
+                            }
+                          ]
+                        },
+                        "documentId": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  },
+                  "favorites": {
                     "type": "array",
                     "items": {
                       "type": "object",
@@ -17269,6 +17430,27 @@
                         }
                       },
                       "followers": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "oneOf": [
+                                {
+                                  "type": "string"
+                                },
+                                {
+                                  "type": "number"
+                                }
+                              ]
+                            },
+                            "documentId": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      },
+                      "favorites": {
                         "type": "array",
                         "items": {
                           "type": "object",
@@ -21385,6 +21567,27 @@
                       }
                     }
                   },
+                  "favorites": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "oneOf": [
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "number"
+                            }
+                          ]
+                        },
+                        "documentId": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  },
                   "socialAccounts": {
                     "type": "array",
                     "items": {
@@ -23527,6 +23730,27 @@
                         }
                       },
                       "followers": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "oneOf": [
+                                {
+                                  "type": "string"
+                                },
+                                {
+                                  "type": "number"
+                                }
+                              ]
+                            },
+                            "documentId": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      },
+                      "favorites": {
                         "type": "array",
                         "items": {
                           "type": "object",
@@ -26746,6 +26970,27 @@
                   }
                 }
               },
+              "favorites": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "oneOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "number"
+                        }
+                      ]
+                    },
+                    "documentId": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
               "socialAccounts": {
                 "type": "array",
                 "items": {
@@ -28428,6 +28673,27 @@
                         }
                       },
                       "followers": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "oneOf": [
+                                {
+                                  "type": "string"
+                                },
+                                {
+                                  "type": "number"
+                                }
+                              ]
+                            },
+                            "documentId": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      },
+                      "favorites": {
                         "type": "array",
                         "items": {
                           "type": "object",
@@ -30514,6 +30780,27 @@
                     }
                   },
                   "followers": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "oneOf": [
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "number"
+                            }
+                          ]
+                        },
+                        "documentId": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  },
+                  "favorites": {
                     "type": "array",
                     "items": {
                       "type": "object",
@@ -33004,6 +33291,27 @@
                   }
                 }
               },
+              "favorites": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "oneOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "number"
+                        }
+                      ]
+                    },
+                    "documentId": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
               "socialAccounts": {
                 "type": "array",
                 "items": {
@@ -34690,6 +34998,27 @@
                         }
                       },
                       "followers": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "oneOf": [
+                                {
+                                  "type": "string"
+                                },
+                                {
+                                  "type": "number"
+                                }
+                              ]
+                            },
+                            "documentId": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      },
+                      "favorites": {
                         "type": "array",
                         "items": {
                           "type": "object",
@@ -36645,6 +36974,27 @@
                           }
                         }
                       },
+                      "favorites": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "oneOf": [
+                                {
+                                  "type": "string"
+                                },
+                                {
+                                  "type": "number"
+                                }
+                              ]
+                            },
+                            "documentId": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      },
                       "socialAccounts": {
                         "type": "array",
                         "items": {
@@ -37563,7 +37913,8 @@
         "type": "string",
         "enum": [
           "following",
-          "discover"
+          "discover",
+          "favorites"
         ],
         "description": "Filter by follow status"
       },
@@ -37573,6 +37924,9 @@
             "type": "object",
             "properties": {
               "isFollowing": {
+                "type": "boolean"
+              },
+              "isFavorite": {
                 "type": "boolean"
               },
               "totalRecordings": {

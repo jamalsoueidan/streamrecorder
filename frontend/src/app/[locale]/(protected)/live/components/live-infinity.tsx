@@ -214,9 +214,11 @@ export default function LiveInfinity({ scope }: Props) {
                   </Anchor>
                   <Text size="xs" suppressHydrationWarning>
                     {tc("recordings.liveAgo", {
-                      time: safeRelativeTime(format, rec.updatedAt, {
-                        now,
-                      }),
+                      time: safeRelativeTime(
+                        format,
+                        rec.sources?.[0]?.createdAt || rec.updatedAt,
+                        { now },
+                      ),
                     })}
                   </Text>
                 </Stack>

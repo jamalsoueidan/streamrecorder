@@ -10,5 +10,7 @@
     "title": "You haven't added any creators yet",
     "description": "Browse Friends to discover creators on our platform"
   },
-  "noMoreToLoad": "You've reached the end"
+  "noMoreToLoad": "You've reached the end",
+  "favorite": "Add to favorites",
+  "unfavorite": "Remove from favorites"
 }

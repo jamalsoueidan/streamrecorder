@@ -556,7 +556,7 @@ export default ({ env }) => ({
           // Define scope enum once
           draft.components.schemas.ScopeEnum = {
             type: "string",
-            enum: ["following", "discover"],
+            enum: ["following", "discover", "favorites"],
             description: "Filter by follow status",
           };
 
@@ -589,6 +589,7 @@ export default ({ env }) => ({
                 type: "object",
                 properties: {
                   isFollowing: { type: "boolean" },
+                  isFavorite: { type: "boolean" },
                   totalRecordings: { type: "integer" },
                   recordings: {
                     type: "array",
@@ -783,6 +784,87 @@ export default ({ env }) => ({
             },
           };
 
+          // Endpoint: POST /followers/favorite
+          draft.paths["/followers/favorite"] = {
+            post: {
+              tags: ["Follower"],
+              operationId: "favoriteFollower",
+              summary: "Add a follower to favorites",
+              security: [{ bearerAuth: [] }],
+              requestBody: {
+                required: true,
+                content: {
+                  "application/json": {
+                    schema: {
+                      type: "object",
+                      required: ["documentId"],
+                      properties: {
+                        documentId: { type: "string" },
+                      },
+                    },
+                  },
+                },
+              },
+              responses: {
+                "200": {
+                  description: "Success",
+                  content: {
+                    "application/json": {
+                      schema: {
+                        type: "object",
+                        properties: {
+                          success: { type: "boolean" },
+                        },
+                      },
+                    },
+                  },
+                },
+                "401": { description: "Unauthorized" },
+                "403": { description: "Must be following the creator first" },
+              },
+            },
+          };
+
+          // Endpoint: POST /followers/unfavorite
+          draft.paths["/followers/unfavorite"] = {
+            post: {
+              tags: ["Follower"],
+              operationId: "unfavoriteFollower",
+              summary: "Remove a follower from favorites",
+              security: [{ bearerAuth: [] }],
+              requestBody: {
+                required: true,
+                content: {
+                  "application/json": {
+                    schema: {
+                      type: "object",
+                      required: ["documentId"],
+                      properties: {
+                        documentId: { type: "string" },
+                      },
+                    },
+                  },
+                },
+              },
+              responses: {
+                "200": {
+                  description: "Success",
+                  content: {
+                    "application/json": {
+                      schema: {
+                        type: "object",
+                        properties: {
+                          success: { type: "boolean" },
+                        },
+                      },
+                    },
+                  },
+                },
+                "401": { description: "Unauthorized" },
+              },
+            },
+          };
+
           draft.paths["/followers/unpause-my-followers"] = {
             post: {
               tags: ["Follower"],
@@ -856,6 +938,10 @@ export default ({ env }) => ({
                       type: "array",
                       items: { $ref: "#/components/schemas/Follower" },
                     },
+                    favorites: {
+                      type: "array",
+                      items: { $ref: "#/components/schemas/Follower" },
+                    },
                     socialAccounts: {
                       type: "array",
                       items: { $ref: "#/components/schemas/SocialAccount" },
@@ -880,6 +966,11 @@ export default ({ env }) => ({
                       description:
                         "JSON string with Freemius subscription data",
                     },
+                    mollie: {
+                      type: "string",
+                      nullable: true,
+                      description: "JSON string with Mollie subscription data",
+                    },
                     stripe: {
                       type: "string",
                       nullable: true,
@@ -887,7 +978,7 @@ export default ({ env }) => ({
                     },
                     paymentProvider: {
                       type: "string",
-                      enum: ["freemius", "stripe"],
+                      enum: ["freemius", "stripe", "mollie"],
                       nullable: true,
                     },
                     trialClaimed: {

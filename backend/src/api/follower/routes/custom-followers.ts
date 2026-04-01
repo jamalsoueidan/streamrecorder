@@ -22,6 +22,16 @@ export default {
     },
     {
       method: "POST",
+      path: "/followers/favorite",
+      handler: "follower.favorite",
+    },
+    {
+      method: "POST",
+      path: "/followers/unfavorite",
+      handler: "follower.unfavorite",
+    },
+    {
+      method: "POST",
       path: "/followers/bulk-update-checked",
       handler: "follower.bulkUpdateLastChecked",
     },
