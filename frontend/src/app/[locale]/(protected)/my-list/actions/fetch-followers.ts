@@ -19,7 +19,7 @@ export async function fetchFollowers(filters: CreatorFilters, page: number) {
       filters: buildCreatorsFilters(filters),
       sort: filters.sort,
       hasRecordings: filters.hasRecordings,
-      scope: filters.favorites ? "favorites" : ScopeEnum.Following,
+      favorites: filters.favorites,
       "pagination[page]": page,
     }),
   );

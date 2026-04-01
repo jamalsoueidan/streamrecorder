@@ -556,7 +556,7 @@ export default ({ env }) => ({
           // Define scope enum once
           draft.components.schemas.ScopeEnum = {
             type: "string",
-            enum: ["following", "discover", "favorites"],
+            enum: ["following", "discover"],
             description: "Filter by follow status",
           };
 
@@ -580,6 +580,14 @@ export default ({ env }) => ({
             schema: { type: "boolean" },
             description:
               "Filter to only return followers with at least 1 recording",
+          };
+
+          const favoritesParam = {
+            name: "favorites",
+            in: "query",
+            required: false,
+            schema: { type: "boolean" },
+            description: "Filter to only return favorited followers",
           };
 
           // Extend Follower with isFollowing and totalRecordings
@@ -631,6 +639,7 @@ export default ({ env }) => ({
                   ...(draft.paths["/followers"].get.parameters || []),
                   scopeParam,
                   hasRecordingsParam,
+                  favoritesParam,
                 ],
                 responses: {
                   ...draft.paths["/followers"].get.responses,
@@ -682,6 +691,7 @@ export default ({ env }) => ({
                 parameters: [
                   ...(draft.paths["/recordings"].get.parameters || []),
                   scopeParam,
+                  favoritesParam,
                 ],
                 responses: {
                   ...draft.paths["/recordings"].get.responses,

@@ -9,6 +9,7 @@ export default factories.createCoreController(
       // Parse params
       const scope = ctx.query.scope as string | undefined;
       const hasRecordings = ctx.query.hasRecordings === "true";
+      const favoritesOnly = ctx.query.favorites === "true";
       const sort = ctx.query.sort as string | undefined;
       const includeRecordings = scope === "discover";
 
@@ -51,11 +52,11 @@ export default factories.createCoreController(
         favoriteIds = fullUser?.favorites?.map((f) => f.id) || [];
       }
 
-      if (scope === "favorites" && favoriteIds.length === 0) {
+      if (favoritesOnly && favoriteIds.length === 0) {
         return {
           data: [],
           meta: {
-            pagination: { page: 1, pageSize: 25, pageCount: 0, total: 0 },
+            pagination: { page, pageSize, pageCount: 0, total: 0 },
           },
         };
       }
@@ -80,12 +81,14 @@ export default factories.createCoreController(
       const applyBaseFilters = (q: any) => {
         q = q.where("f.locale", ctx.query.locale || "en");
 
-        if (scope === "favorites" && favoriteIds.length > 0) {
-          q = q.whereIn("f.id", favoriteIds);
-        } else if (scope === "following" && followingIds.length > 0) {
+        if (scope === "following" && followingIds.length > 0) {
           q = q.whereIn("f.id", followingIds);
         } else if (scope === "discover" && followingIds.length > 0) {
           q = q.whereNotIn("f.id", followingIds);
+        }
+
+        if (favoritesOnly && favoriteIds.length > 0) {
+          q = q.whereIn("f.id", favoriteIds);
         }
 
         if (filters?.country?.$eq) {
@@ -578,6 +581,9 @@ export default factories.createCoreController(
       if (!user) return ctx.unauthorized();
 
       const { documentId } = ctx.request.body;
+      if (!documentId || typeof documentId !== "string") {
+        return ctx.badRequest("INVALID_DOCUMENT_ID");
+      }
 
       const fullUser = await strapi
         .documents("plugin::users-permissions.user")
@@ -622,6 +628,9 @@ export default factories.createCoreController(
       if (!user) return ctx.unauthorized();
 
       const { documentId } = ctx.request.body;
+      if (!documentId || typeof documentId !== "string") {
+        return ctx.badRequest("INVALID_DOCUMENT_ID");
+      }
 
       await strapi.documents("plugin::users-permissions.user").update({
         documentId: user.documentId,

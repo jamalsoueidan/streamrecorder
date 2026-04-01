@@ -12,6 +12,7 @@ export default factories.createCoreController(
       if (!user) return ctx.unauthorized();
 
       const scope = ctx.query.scope as string | undefined;
+      const favoritesOnly = ctx.query.favorites === "true";
 
       const fullUser = await strapi
         .documents("plugin::users-permissions.user")
@@ -20,6 +21,7 @@ export default factories.createCoreController(
           fields: ["id"],
           populate: {
             followers: { fields: ["id"] },
+            favorites: { fields: ["id"] },
           },
           status: "published",
         });
@@ -27,20 +29,27 @@ export default factories.createCoreController(
       ctx.query.locale = ctx.query.locale || "en";
 
       const followingIds = fullUser?.followers?.map((f) => f.id) || [];
+      const favoriteIds = fullUser?.favorites?.map((f) => f.id) || [];
 
-      const scopeFilters: Record<string, object | null> = {
-        following: { $in: followingIds.length === 0 ? [0] : followingIds }, // 0 is when user have no followers so he dont get all videos
-        discover: followingIds.length > 0 ? { $notIn: followingIds } : null,
-      };
+      // Determine which follower IDs to filter by
+      let followerIdFilter: object | null = null;
 
-      if (scope && scopeFilters[scope]) {
+      if (favoritesOnly) {
+        followerIdFilter = { $in: favoriteIds.length === 0 ? [0] : favoriteIds };
+      } else if (scope === "following") {
+        followerIdFilter = { $in: followingIds.length === 0 ? [0] : followingIds };
+      } else if (scope === "discover" && followingIds.length > 0) {
+        followerIdFilter = { $notIn: followingIds };
+      }
+
+      if (followerIdFilter) {
         const filters = (ctx.query.filters ?? {}) as Record<string, any>;
 
         ctx.query.filters = {
           ...filters,
           follower: {
             ...(filters.follower ?? {}),
-            id: scopeFilters[scope],
+            id: followerIdFilter,
           },
         };
       }

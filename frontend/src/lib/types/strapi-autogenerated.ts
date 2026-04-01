@@ -25,7 +25,6 @@ export enum FollowerTypeEnum {
 export enum ScopeEnum {
   Following = "following",
   Discover = "discover",
-  Favorites = "favorites",
 }
 
 export interface Error {
@@ -8822,6 +8821,8 @@ export interface BrowseFollowersParams {
   scope?: ScopeEnum;
   /** Filter to only return followers with at least 1 recording */
   hasRecordings?: boolean;
+  /** Filter to only return favorited followers */
+  favorites?: boolean;
 }
 
 export type BrowseFollowersData = BrowseFollowersResponse;
@@ -8849,6 +8850,8 @@ export interface BrowseRecordingsParams {
   locale?: string;
   /** Filter by follow status: 'following' (only followed), 'discover' (not followed), or omit for all */
   scope?: ScopeEnum;
+  /** Filter to only return favorited followers */
+  favorites?: boolean;
 }
 
 export type BrowseRecordingsData = RecordingListResponse;
@@ -10181,6 +10184,8 @@ export namespace Follower {
       scope?: ScopeEnum;
       /** Filter to only return followers with at least 1 recording */
       hasRecordings?: boolean;
+      /** Filter to only return favorited followers */
+      favorites?: boolean;
     };
     export type RequestBody = never;
     export type RequestHeaders = {};
@@ -10530,6 +10535,8 @@ export namespace Recording {
       locale?: string;
       /** Filter by follow status: 'following' (only followed), 'discover' (not followed), or omit for all */
       scope?: ScopeEnum;
+      /** Filter to only return favorited followers */
+      favorites?: boolean;
     };
     export type RequestBody = never;
     export type RequestHeaders = {};

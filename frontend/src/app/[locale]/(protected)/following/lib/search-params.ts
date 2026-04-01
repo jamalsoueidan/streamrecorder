@@ -5,6 +5,7 @@ import { deepMerge } from "@mantine/core";
 import {
   createSearchParamsCache,
   inferParserType,
+  parseAsBoolean,
   parseAsString,
   parseAsStringEnum,
 } from "nuqs/server";
@@ -56,6 +57,7 @@ export const followingParsers = {
   type: parseAsString,
   search: parseAsString,
   dateRange: parseAsString,
+  favorites: parseAsBoolean.withDefault(false),
 };
 
 export const followingParamsCache = createSearchParamsCache(followingParsers);

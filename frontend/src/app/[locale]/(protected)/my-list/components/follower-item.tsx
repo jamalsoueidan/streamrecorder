@@ -83,7 +83,7 @@ export default function FollowerItem({ follower, isOpen }: Props) {
       key={follower.documentId}
       value={follower.username}
       style={
-        (follower as any).isFavorite
+        follower.isFavorite ?? false
           ? {
               borderColor: "rgba(251, 191, 36, 0.4)",
               background: "rgba(251, 191, 36, 0.03)",
@@ -274,7 +274,7 @@ function AccordionControl({
         {follower.isFollowing && (
           <FavoriteButton
             documentId={follower.documentId!}
-            isFavorite={(follower as any).isFavorite}
+            isFavorite={follower.isFavorite ?? false}
           />
         )}
         {follower.isFollowing ? (

@@ -13,6 +13,7 @@ export async function fetchRecordings(filters: FollowingFilters, page: number) {
       filters: buildFollowingFilters(filters),
       scope: filters.scope,
       sort: filters.sort,
+      favorites: filters.favorites,
       "pagination[page]": page,
       "pagination[pageSize]": 15,
     }),
