@@ -81,14 +81,13 @@ export default factories.createCoreController(
       const applyBaseFilters = (q: any) => {
         q = q.where("f.locale", ctx.query.locale || "en");
 
-        if (scope === "following" && followingIds.length > 0) {
+        if (favoritesOnly && favoriteIds.length > 0) {
+          // Favorites override scope — favorites are always from followed creators
+          q = q.whereIn("f.id", favoriteIds);
+        } else if (scope === "following" && followingIds.length > 0) {
           q = q.whereIn("f.id", followingIds);
         } else if (scope === "discover" && followingIds.length > 0) {
           q = q.whereNotIn("f.id", followingIds);
-        }
-
-        if (favoritesOnly && favoriteIds.length > 0) {
-          q = q.whereIn("f.id", favoriteIds);
         }
 
         if (filters?.country?.$eq) {

@@ -53,6 +53,7 @@
   "actions": {
     "clearAll": "Tümünü temizle",
     "filters": "Filtreler",
+    "favorites": "Favoriler",
     "done": "Tamam"
   },
   "options": {

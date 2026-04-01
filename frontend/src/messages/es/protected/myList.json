@@ -10,5 +10,7 @@
     "title": "Aún no has agregado ningún creador",
     "description": "Explora Amigos para descubrir creadores en nuestra plataforma"
   },
-  "noMoreToLoad": "Has llegado al final"
+  "noMoreToLoad": "Has llegado al final",
+  "favorite": "Añadir a favoritos",
+  "unfavorite": "Quitar de favoritos"
 }

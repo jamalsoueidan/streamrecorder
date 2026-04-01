@@ -10,5 +10,7 @@
     "title": "아직 추가한 크리에이터가 없습니다",
     "description": "친구를 둘러보며 플랫폼의 크리에이터를 찾아보세요"
   },
-  "noMoreToLoad": "끝에 도달했습니다"
+  "noMoreToLoad": "끝에 도달했습니다",
+  "favorite": "즐겨찾기에 추가",
+  "unfavorite": "즐겨찾기에서 제거"
 }

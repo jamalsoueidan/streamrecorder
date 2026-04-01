@@ -10,5 +10,7 @@
     "title": "Henüz içerik üreticisi eklemediniz",
     "description": "Platformumuzdaki içerik üreticilerini keşfetmek için Arkadaşlar'a göz atın"
   },
-  "noMoreToLoad": "Sona ulaştınız"
+  "noMoreToLoad": "Sona ulaştınız",
+  "favorite": "Favorilere ekle",
+  "unfavorite": "Favorilerden kaldır"
 }

@@ -53,6 +53,7 @@
   "actions": {
     "clearAll": "مسح الكل",
     "filters": "الفلاتر",
+    "favorites": "المفضلة",
     "done": "تم"
   },
   "options": {

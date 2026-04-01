@@ -14,22 +14,28 @@ export default factories.createCoreController(
       const scope = ctx.query.scope as string | undefined;
       const favoritesOnly = ctx.query.favorites === "true";
 
+      const populateFields: Record<string, { fields: string[] }> = {
+        followers: { fields: ["id"] },
+      };
+      if (favoritesOnly) {
+        populateFields.favorites = { fields: ["id"] };
+      }
+
       const fullUser = await strapi
         .documents("plugin::users-permissions.user")
         .findOne({
           documentId: user.documentId,
           fields: ["id"],
-          populate: {
-            followers: { fields: ["id"] },
-            favorites: { fields: ["id"] },
-          },
+          populate: populateFields,
           status: "published",
         });
 
       ctx.query.locale = ctx.query.locale || "en";
 
-      const followingIds = fullUser?.followers?.map((f) => f.id) || [];
-      const favoriteIds = fullUser?.favorites?.map((f) => f.id) || [];
+      const followingIds = (fullUser as any)?.followers?.map((f: any) => f.id) || [];
+      const favoriteIds = favoritesOnly
+        ? (fullUser as any)?.favorites?.map((f: any) => f.id) || []
+        : [];
 
       // Determine which follower IDs to filter by
       let followerIdFilter: object | null = null;

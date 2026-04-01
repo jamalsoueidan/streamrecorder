@@ -10,5 +10,7 @@
     "title": "Você ainda não adicionou nenhum criador",
     "description": "Explore a seção Amigos para descobrir criadores na plataforma"
   },
-  "noMoreToLoad": "Você chegou ao fim"
+  "noMoreToLoad": "Você chegou ao fim",
+  "favorite": "Adicionar aos favoritos",
+  "unfavorite": "Remover dos favoritos"
 }

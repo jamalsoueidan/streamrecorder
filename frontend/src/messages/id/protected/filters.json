@@ -53,6 +53,7 @@
   "actions": {
     "clearAll": "Hapus semua",
     "filters": "Filter",
+    "favorites": "Favorit",
     "done": "Selesai"
   },
   "options": {

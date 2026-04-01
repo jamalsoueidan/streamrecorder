@@ -53,6 +53,7 @@
   "actions": {
     "clearAll": "すべてクリア",
     "filters": "フィルター",
+    "favorites": "お気に入り",
     "done": "完了"
   },
   "options": {

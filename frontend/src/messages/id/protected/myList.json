@@ -10,5 +10,7 @@
     "title": "Anda belum menambahkan kreator",
     "description": "Jelajahi Teman untuk menemukan kreator di platform kami"
   },
-  "noMoreToLoad": "Anda sudah mencapai akhir"
+  "noMoreToLoad": "Anda sudah mencapai akhir",
+  "favorite": "Tambah ke favorit",
+  "unfavorite": "Hapus dari favorit"
 }
