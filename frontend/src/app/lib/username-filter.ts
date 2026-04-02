@@ -1,20 +1,9 @@
 /**
- * Build a Strapi filter for username that matches both decoded and URL-encoded versions.
- * Needed because some usernames are stored encoded in the DB (e.g. Korean characters).
- */
-export function usernameFilter(username: string) {
-  const decoded = decodeURIComponent(username).replace(/^@/, "");
-  const encoded = encodeURIComponent(decoded);
-  if (decoded === encoded) {
-    // ASCII username — no encoding difference
-    return { $eqi: decoded };
-  }
-  // Unicode username — search both
-  return { $eqi: decoded, $or: undefined } as never;
-}
-
-/**
- * Build a $or filter for username matching both decoded and encoded versions.
+ * Build a Strapi username filter that matches both decoded and URL-encoded versions.
+ * Returns a filter object to spread inside a follower filter.
+ *
+ * For ASCII usernames: { username: { $eqi: "mrbeast" } }
+ * For encoded usernames: { username: { $in: ["파타야피키누", "%ED%8C%8C..."] } }
  */
 export function usernameOrFilter(username: string) {
   const decoded = decodeURIComponent(username).replace(/^@/, "");
@@ -22,12 +11,8 @@ export function usernameOrFilter(username: string) {
   if (decoded === encoded) {
     return { username: { $eqi: decoded } };
   }
-  return {
-    $or: [
-      { username: { $eqi: decoded } },
-      { username: { $eqi: encoded } },
-    ],
-  };
+  // Use $in to match either version within the username field
+  return { username: { $in: [decoded, encoded] } };
 }
 
 /**
