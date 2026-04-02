@@ -1,4 +1,5 @@
 "use server";
+import { usernameOrFilter } from "@/app/lib/username-filter";
 import publicApi from "@/lib/public-api";
 import { deepMerge } from "@mantine/core";
 import { cache } from "react";
@@ -41,7 +42,7 @@ export const getFollower = cache(async function ({
   locale?: string;
 }) {
   const filters = {
-    username: { $eqi: decodeURIComponent(username).replace(/^@/, "") },
+    ...usernameOrFilter(username),
     type,
   };
 
@@ -101,7 +102,7 @@ export const fetchProfileRecordings = cache(async function (
       filters: {
         hidden: { $ne: true },
         follower: {
-          username: { $eqi: decodeURIComponent(username).replace(/^@/, "") },
+          ...usernameOrFilter(username),
           type: { $eq: type },
         },
         sources: {

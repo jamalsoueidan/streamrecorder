@@ -1,3 +1,4 @@
+import { usernameOrFilter } from "@/app/lib/username-filter";
 import PaginationControls from "@/app/components/pagination";
 import publicApi from "@/lib/public-api";
 import {
@@ -37,7 +38,6 @@ export default async function Page({ params, searchParams }: PageProps) {
     redirect(`/search?username=${username}&type=${type}`);
   }
 
-  const decodedUsername = decodeURIComponent(username).replace(/^@/, "");
   const pageNumber = parseInt(page || "1", 10);
   const limit = 6;
 
@@ -45,7 +45,7 @@ export default async function Page({ params, searchParams }: PageProps) {
     .getClips({
       filters: {
         follower: {
-          username: { $eqi: decodedUsername },
+          ...usernameOrFilter(username),
           type: { $eq: type },
         },
       },

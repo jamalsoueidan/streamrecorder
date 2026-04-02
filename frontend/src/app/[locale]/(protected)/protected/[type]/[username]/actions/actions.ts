@@ -5,6 +5,8 @@ import { deepMerge } from "@mantine/core";
 import { getLocale } from "next-intl/server";
 import { ProfileFilters } from "../lib/search-params";
 
+import { usernameOrFilter } from "@/app/lib/username-filter";
+
 const defaultOptions = {
   filters: {
     // give me all recordings that are done or recording
@@ -42,14 +44,9 @@ export async function getFollower({
   username: string;
   type: string;
 }) {
-  const decoded = decodeURIComponent(username).replace(/^@/, "");
-  const encoded = encodeURIComponent(decoded);
   const response = await api.follower.getFollowers({
     filters: {
-      $or: [
-        { username: { $eqi: decoded } },
-        { username: { $eqi: encoded } },
-      ],
+      ...usernameOrFilter(username),
       type,
     },
     populate: ["avatar"],
@@ -60,6 +57,7 @@ export async function getFollower({
   if (!follower) {
     return null;
   }
+
 
   // Check if current user is following
   const { data: user } =
@@ -96,7 +94,7 @@ export async function fetchProfileRecordings(
     deepMerge(defaultOptions, {
       filters: {
         follower: {
-          username: { $eqi: decodeURIComponent(username).replace(/^@/, "") },
+          ...usernameOrFilter(username),
           type: { $eq: type },
         },
       },
@@ -123,7 +121,7 @@ export async function fetchRecordingWithContext(
   pageSize: number = 15,
 ) {
   const locale = await getLocale();
-  const decodedUsername = decodeURIComponent(username).replace(/^@/, "");
+  const _usernameFilter = usernameOrFilter(username);
   const isDesc = !filters.sort?.includes(":asc");
 
   // Special case: pageParam === 1 means "find the target video's page"
@@ -154,7 +152,7 @@ export async function fetchRecordingWithContext(
     const countResponse = await api.recording.browseRecordings({
       filters: {
         follower: {
-          username: { $eqi: decodedUsername },
+          ..._usernameFilter,
           type: { $eq: type },
         },
         sources: {
@@ -178,7 +176,7 @@ export async function fetchRecordingWithContext(
     deepMerge(defaultOptions, {
       filters: {
         follower: {
-          username: { $eqi: decodedUsername },
+          ..._usernameFilter,
           type: { $eq: type },
         },
       },

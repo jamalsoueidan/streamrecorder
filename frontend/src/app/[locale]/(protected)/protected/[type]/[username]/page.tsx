@@ -1,4 +1,5 @@
 import dayjs from "@/app/lib/dayjs";
+import { decodeUsername, usernameOrFilter } from "@/app/lib/username-filter";
 import { ActionIcon, Anchor, Button, Stack, Text, Title } from "@mantine/core";
 import { IconClock, IconVideo, IconWorldSearch } from "@tabler/icons-react";
 import {
@@ -60,12 +61,11 @@ export default async function Page({ params, searchParams }: PageProps) {
   );
   const hasRecordings = recordings.length > 0;
 
-  const decodedUsername = decodeURIComponent(username).replace(/^@/, "");
   const clipsResponse = await publicApi.clip
     .getClips({
       filters: {
         follower: {
-          username: { $eqi: decodedUsername },
+          ...usernameOrFilter(username),
           type: { $eq: type },
         },
       },
@@ -102,7 +102,7 @@ async function EmptyState({ follower }: { follower: Follower }) {
         </ActionIcon>
         <Stack align="center" gap={12}>
           <Title order={2} fw={600}>
-            {t("emptyNewlyAdded.title", { username: follower.username })}
+            {t("emptyNewlyAdded.title", { username: decodeUsername(follower.username!) })}
           </Title>
           <Text size="xl" c="dimmed" maw={450} ta="center">
             {t("emptyNewlyAdded.description")}
@@ -122,7 +122,7 @@ async function EmptyState({ follower }: { follower: Follower }) {
           {t("emptyDefault.title")}
         </Title>
         <Text size="xl" c="dimmed" maw={450} ta="center">
-          {t("emptyDefault.description", { username: follower.username })}
+          {t("emptyDefault.description", { username: decodeUsername(follower.username!) })}
         </Text>
       </Stack>
       <Anchor href="/discover" underline="never">
