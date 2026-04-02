@@ -42,9 +42,14 @@ export async function getFollower({
   username: string;
   type: string;
 }) {
+  const decoded = decodeURIComponent(username).replace(/^@/, "");
+  const raw = username.replace(/^@/, "");
   const response = await api.follower.getFollowers({
     filters: {
-      username: { $eqi: decodeURIComponent(username).replace(/^@/, "") },
+      $or: [
+        { username: { $eqi: decoded } },
+        { username: { $eqi: raw } },
+      ],
       type,
     },
     populate: ["avatar"],
