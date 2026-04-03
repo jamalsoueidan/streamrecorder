@@ -10,7 +10,7 @@ import { useQueryStates } from "nuqs";
 import { profileParsers, SortOptions } from "../lib/search-params";
 
 interface ProfileTabsProps {
-  type: string;
+  type: FollowerTypeEnum;
   username: string;
   clipsCount?: number;
 }
