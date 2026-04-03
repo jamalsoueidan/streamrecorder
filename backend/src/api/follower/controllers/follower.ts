@@ -447,7 +447,7 @@ export default factories.createCoreController(
 
       const body = ctx.request.body;
 
-      const username = body.username.trim(); // ✅ Keep original casing
+      const username = decodeURIComponent(body.username.trim()); // ✅ Decode Unicode + keep original casing
       const type = body.type.trim();
 
       const currentUser = await strapi
@@ -457,11 +457,15 @@ export default factories.createCoreController(
           populate: ["followers", "role"],
         });
 
+      const encoded = encodeURIComponent(username);
       let follower = await strapi
         .documents("api::follower.follower")
         .findFirst({
           filters: {
-            username: { $eqi: username }, // ✅ Case-insensitive search
+            $or: [
+              { username: { $eqi: username } },
+              { username: { $eqi: encoded } },
+            ],
             type,
           },
         });
@@ -523,7 +527,7 @@ export default factories.createCoreController(
     async connectUserWithFollower(ctx) {
       const body = ctx.request.body;
 
-      const username = body.username.trim();
+      const username = decodeURIComponent(body.username.trim());
       const type = body.type.trim();
       const userDocumentId = ctx.params.userDocumentId;
 
@@ -538,11 +542,15 @@ export default factories.createCoreController(
         return ctx.notFound("USER_NOT_FOUND");
       }
 
+      const encodedUsername = encodeURIComponent(username);
       let follower = await strapi
         .documents("api::follower.follower")
         .findFirst({
           filters: {
-            username: { $eqi: username },
+            $or: [
+              { username: { $eqi: username } },
+              { username: { $eqi: encodedUsername } },
+            ],
             type,
           },
         });
@@ -644,7 +652,9 @@ export default factories.createCoreController(
       const user = ctx.state.user;
       if (!user) return ctx.unauthorized();
 
-      const { username, type } = ctx.request.body;
+      const { username: rawUsername, type } = ctx.request.body;
+      const decodedUsername = decodeURIComponent(rawUsername.trim());
+      const encodedUsername = encodeURIComponent(decodedUsername);
 
       const fullUser = await strapi
         .documents("plugin::users-permissions.user")
@@ -653,16 +663,14 @@ export default factories.createCoreController(
           populate: {
             followers: {
               fields: ["id", "documentId", "username", "type"],
-              filters: {
-                username,
-                type,
-              },
             },
           },
         });
 
       const followerToRemove = fullUser.followers?.find(
-        (f) => f.username === username && f.type === type,
+        (f) =>
+          (f.username === decodedUsername || f.username === encodedUsername) &&
+          f.type === type,
       );
 
       if (!followerToRemove) {
