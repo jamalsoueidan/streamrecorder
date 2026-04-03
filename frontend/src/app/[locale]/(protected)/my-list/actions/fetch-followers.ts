@@ -66,6 +66,7 @@ export async function getRecordings(
     sort: "createdAt:desc",
     "pagination[page]": page,
     "pagination[pageSize]": pageSize,
+    "pagination[withCount]": true,
   });
 
   return {
