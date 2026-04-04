@@ -74,7 +74,17 @@ export function CustomSlider({
   vttUrl,
 }: CustomSliderProps) {
   const [thumbnailCues, setThumbnailCues] = useState<ThumbnailCue[]>([]);
+  const [trackWidth, setTrackWidth] = useState(800);
   const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+    const observer = new ResizeObserver(([entry]) => setTrackWidth(entry.contentRect.width));
+    observer.observe(el);
+    setTrackWidth(el.offsetWidth);
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     if (!vttUrl) return;
@@ -169,31 +179,47 @@ export function CustomSlider({
             return cues;
           })().map((cue, i) => {
             const scale = TRACK_HEIGHT / cue.h;
+            const cellW = Math.round(cue.w * scale);
+            const cueDuration = cue.end - cue.start;
+            const cueWidth = duration > 0 ? Math.round((cueDuration / duration) * trackWidth) : cellW;
+            const repeats = Math.max(1, Math.ceil(cueWidth / cellW));
             return (
               <div
                 key={`thumb-${i}`}
                 style={{
-                  flex: 1,
-                  minWidth: 0,
+                  width: cueWidth,
+                  flexShrink: 0,
                   height: TRACK_HEIGHT,
                   overflow: "hidden",
-                  position: "relative",
-                  marginLeft: i > 0 ? -1 : 0,
+                  display: "flex",
                 }}
               >
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={cue.url}
-                  alt=""
-                  style={{
-                    position: "absolute",
-                    left: 0,
-                    top: 0,
-                    transform: `scale(${scale}) translate(${-cue.x}px, ${-cue.y}px)`,
-                    transformOrigin: "0 0",
-                    maxWidth: "none",
-                  }}
-                />
+                {Array.from({ length: repeats }).map((_, j) => (
+                  <div
+                    key={j}
+                    style={{
+                      width: cellW,
+                      flexShrink: 0,
+                      height: TRACK_HEIGHT,
+                      overflow: "hidden",
+                      position: "relative",
+                    }}
+                  >
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={cue.url}
+                      alt=""
+                      style={{
+                        position: "absolute",
+                        left: 0,
+                        top: 0,
+                        transform: `scale(${scale}) translate(${-cue.x}px, ${-cue.y}px)`,
+                        transformOrigin: "0 0",
+                        maxWidth: "none",
+                      }}
+                    />
+                  </div>
+                ))}
               </div>
             );
           })}

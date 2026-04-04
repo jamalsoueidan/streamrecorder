@@ -181,7 +181,7 @@ export default function VideoEditor({ recording }: Props) {
 
   return (
     <>
-      <div style={{ color: "red", fontSize: 24 }}>V15 - IMG TRANSFORM + OVERLAP</div>
+      <div style={{ color: "red", fontSize: 24 }}>V16 - REPEAT PER DURATION</div>
       <style>{`
         /* Hide play button when playing */
         media-controller:not([mediapaused]) media-play-button[slot="centered-chrome"] {
