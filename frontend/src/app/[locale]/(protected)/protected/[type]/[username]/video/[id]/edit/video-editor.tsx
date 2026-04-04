@@ -181,7 +181,6 @@ export default function VideoEditor({ recording }: Props) {
 
   return (
     <>
-      <div style={{ color: "red", fontSize: 24 }}>V28 - CLAMP SPRITE</div>
       <style>{`
         /* Hide play button when playing */
         media-controller:not([mediapaused]) media-play-button[slot="centered-chrome"] {
@@ -233,7 +232,7 @@ export default function VideoEditor({ recording }: Props) {
       </Box>
 
       {duration === 0 && (
-        <Skeleton height={142} radius="md" />
+        <Skeleton height={142} radius="md" my="md" />
       )}
       {duration > 0 && (
         <CustomSlider
@@ -249,7 +248,7 @@ export default function VideoEditor({ recording }: Props) {
         />
       )}
 
-      <Text size="xs" c="dimmed" ta="center">
+      <Text size="xs" c="dimmed" ta="center" mb="md">
         {t("maxDuration", { minutes: MAX_CLIP_DURATION / 60 })} — {formatTime(clipDuration)} / {formatTime(MAX_CLIP_DURATION)}
       </Text>
 

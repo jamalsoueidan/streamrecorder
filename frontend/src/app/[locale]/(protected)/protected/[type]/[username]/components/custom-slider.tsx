@@ -74,6 +74,7 @@ export function CustomSlider({
   vttUrl,
 }: CustomSliderProps) {
   const [thumbnailCues, setThumbnailCues] = useState<ThumbnailCue[]>([]);
+  const [resolvedUrls, setResolvedUrls] = useState<Map<string, string>>(new Map());
   const [trackWidth, setTrackWidth] = useState(800);
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -90,7 +91,23 @@ export function CustomSlider({
     if (!vttUrl) return;
     fetch(vttUrl)
       .then((res) => res.text())
-      .then((text) => setThumbnailCues(parseVTT(text)))
+      .then((text) => {
+        const cues = parseVTT(text);
+        setThumbnailCues(cues);
+        // Preload unique sprite URLs and resolve redirects
+        const uniqueUrls = [...new Set(cues.map((c) => c.url))];
+        Promise.all(
+          uniqueUrls.map(async (url) => {
+            try {
+              const res = await fetch(url, { redirect: "follow" });
+              const blob = await res.blob();
+              return [url, URL.createObjectURL(blob)] as const;
+            } catch {
+              return [url, url] as const;
+            }
+          })
+        ).then((entries) => setResolvedUrls(new Map(entries)));
+      })
       .catch(() => {});
   }, [vttUrl]);
 
@@ -217,7 +234,7 @@ export function CustomSlider({
                   >
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
-                      src={cue.url}
+                      src={resolvedUrls.get(cue.url) || cue.url}
                       alt=""
                       style={{
                         position: "absolute",
