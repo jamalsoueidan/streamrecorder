@@ -168,22 +168,33 @@ export function CustomSlider({
                 );
             return cues;
           })().map((cue, i) => {
-            const meta = spriteMeta.get(cue.url) || { cols: 2, rows: 2 };
             const scale = TRACK_HEIGHT / cue.h;
             return (
-              <Box
+              <div
                 key={`thumb-${i}`}
                 style={{
                   flex: 1,
                   minWidth: 0,
                   height: TRACK_HEIGHT,
                   overflow: "hidden",
-                  backgroundImage: `url(${cue.url})`,
-                  backgroundSize: `${meta.cols * cue.w * scale}px ${meta.rows * cue.h * scale}px`,
-                  backgroundPosition: `${-cue.x * scale}px ${-cue.y * scale}px`,
-                  backgroundRepeat: "no-repeat",
+                  position: "relative",
+                  marginLeft: i > 0 ? -1 : 0,
                 }}
-              />
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={cue.url}
+                  alt=""
+                  style={{
+                    position: "absolute",
+                    left: 0,
+                    top: 0,
+                    transform: `scale(${scale}) translate(${-cue.x}px, ${-cue.y}px)`,
+                    transformOrigin: "0 0",
+                    maxWidth: "none",
+                  }}
+                />
+              </div>
             );
           })}
         </Box>
