@@ -109,6 +109,13 @@ export function CustomSlider({
         ).then((entries) => setResolvedUrls(new Map(entries)));
       })
       .catch(() => {});
+
+    return () => {
+      // Revoke blob URLs on cleanup
+      resolvedUrls.forEach((url) => {
+        if (url.startsWith("blob:")) URL.revokeObjectURL(url);
+      });
+    };
   }, [vttUrl]);
 
   const spriteMeta = useMemo(() => {
@@ -197,8 +204,8 @@ export function CustomSlider({
             return cues;
           })().map((cue, i) => {
             const meta = spriteMeta.get(cue.url) || { cols: 2, rows: 2 };
-            // Sprite is cols×cols grid. Clamp to last valid cell.
-            const totalCells = meta.cols * meta.cols;
+            // Clamp to last valid cell in cols×rows grid (workflow uses cols×cols tile).
+            const totalCells = meta.cols * meta.cols; // sprite is always cols×cols from ffmpeg tile
             const cellIndex = Math.floor(cue.y / cue.h) * meta.cols + Math.floor(cue.x / cue.w);
             const clampedIndex = Math.min(cellIndex, totalCells - 1);
             const clampedCol = clampedIndex % meta.cols;

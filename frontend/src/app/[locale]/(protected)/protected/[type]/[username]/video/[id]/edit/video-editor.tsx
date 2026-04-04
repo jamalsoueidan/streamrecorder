@@ -117,11 +117,12 @@ export default function VideoEditor({ recording }: Props) {
   const handleSeek = (time: number) => {
     const video = videoRef.current;
     if (!video) return;
-    video.currentTime = time;
-    setCurrentTime(time);
+    const clampedTime = Math.min(Math.round(time), duration - 1);
+    video.currentTime = clampedTime;
+    setCurrentTime(clampedTime);
 
     // If seeking outside the range, move the range to include this position
-    if (time < startTime || time > endTime) {
+    if (clampedTime < startTime || clampedTime >= endTime) {
       const rangeSize = endTime - startTime;
       let newStart = Math.round(Math.max(0, time - rangeSize / 2));
       let newEnd = Math.round(newStart + rangeSize);
