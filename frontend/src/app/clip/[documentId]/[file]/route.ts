@@ -19,6 +19,16 @@ function getExtension(file: string): AllowedExt | null {
     : null;
 }
 
+function buildDownloadFilename(clip: { path?: string; createdAt?: string }) {
+  // path is like /tiktok/username/recordings/...
+  const parts = clip.path?.split("/").filter(Boolean) || [];
+  const username = parts[1] || "clip";
+  const date = clip.createdAt
+    ? new Date(clip.createdAt).toISOString().slice(0, 10)
+    : "clip";
+  return `${username}_${date}_clip.mp4`;
+}
+
 export async function GET(
   request: Request,
   { params }: { params: Promise<{ documentId: string; file: string }> },
@@ -26,6 +36,7 @@ export async function GET(
   const { documentId, file } = await params;
   const url = new URL(request.url);
   const isTikTokProxy = url.searchParams.has("tiktok");
+  const isDownload = url.searchParams.has("download");
 
   const ext = getExtension(file);
   if (!ext) {
@@ -50,7 +61,13 @@ export async function GET(
   const s3 = getS3();
   const bucket = `${process.env.CLIP_BUCKET!}-nbg`;
   const key = `${clip.path?.substring(1)}${documentId}/${file}`;
-  const command = new GetObjectCommand({ Bucket: bucket, Key: key });
+  const command = new GetObjectCommand({
+    Bucket: bucket,
+    Key: key,
+    ...(isDownload && {
+      ResponseContentDisposition: `attachment; filename="${buildDownloadFilename(clip)}"`,
+    }),
+  });
 
   const abortController = new AbortController();
 
