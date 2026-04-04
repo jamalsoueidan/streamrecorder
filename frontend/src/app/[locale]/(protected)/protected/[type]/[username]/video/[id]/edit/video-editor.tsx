@@ -123,11 +123,11 @@ export default function VideoEditor({ recording }: Props) {
     // If seeking outside the range, move the range to include this position
     if (time < startTime || time > endTime) {
       const rangeSize = endTime - startTime;
-      let newStart = Math.max(0, time - rangeSize / 2);
-      let newEnd = newStart + rangeSize;
+      let newStart = Math.round(Math.max(0, time - rangeSize / 2));
+      let newEnd = Math.round(newStart + rangeSize);
       if (newEnd > duration) {
-        newEnd = duration;
-        newStart = Math.max(0, newEnd - rangeSize);
+        newEnd = Math.round(duration);
+        newStart = Math.round(Math.max(0, newEnd - rangeSize));
       }
       setStartTime(newStart);
       setEndTime(newEnd);

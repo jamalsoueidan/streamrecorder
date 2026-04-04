@@ -1,7 +1,7 @@
 "use client";
 
 import { Box, RangeSlider, Slider } from "@mantine/core";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 interface ThumbnailCue {
   start: number;
@@ -84,16 +84,19 @@ export function CustomSlider({
       .catch(() => {});
   }, [vttUrl]);
 
-  const spriteMeta = new Map<string, { cols: number; rows: number }>();
-  for (const cue of thumbnailCues) {
-    const col = Math.floor(cue.x / cue.w) + 1;
-    const row = Math.floor(cue.y / cue.h) + 1;
-    const existing = spriteMeta.get(cue.url) || { cols: 0, rows: 0 };
-    spriteMeta.set(cue.url, {
-      cols: Math.max(existing.cols, col),
-      rows: Math.max(existing.rows, row),
-    });
-  }
+  const spriteMeta = useMemo(() => {
+    const meta = new Map<string, { cols: number; rows: number }>();
+    for (const cue of thumbnailCues) {
+      const col = Math.floor(cue.x / cue.w) + 1;
+      const row = Math.floor(cue.y / cue.h) + 1;
+      const existing = meta.get(cue.url) || { cols: 0, rows: 0 };
+      meta.set(cue.url, {
+        cols: Math.max(existing.cols, col),
+        rows: Math.max(existing.rows, row),
+      });
+    }
+    return meta;
+  }, [thumbnailCues]);
 
   const startPct = duration > 0 ? (startTime / duration) * 100 : 0;
   const endPct = duration > 0 ? (endTime / duration) * 100 : 100;
@@ -144,7 +147,7 @@ export function CustomSlider({
         onClick={(e) => {
           const rect = e.currentTarget.getBoundingClientRect();
           const x = (e.clientX - rect.left) / rect.width;
-          const time = Math.round(x * duration);
+          const time = Math.min(Math.round(x * duration), duration - 1);
           onSeek(time);
         }}
         style={{
@@ -156,7 +159,15 @@ export function CustomSlider({
         }}
       >
         <Box style={{ position: "absolute", inset: 0, background: "#333", display: "flex" }}>
-          {thumbnailCues.map((cue, i) => {
+          {(() => {
+            const maxThumbs = 30;
+            const cues = thumbnailCues.length <= maxThumbs
+              ? thumbnailCues
+              : Array.from({ length: maxThumbs }, (_, i) =>
+                  thumbnailCues[Math.floor(i * thumbnailCues.length / maxThumbs)]
+                );
+            return cues;
+          })().map((cue, i) => {
             const meta = spriteMeta.get(cue.url) || { cols: 2, rows: 2 };
             const scale = TRACK_HEIGHT / cue.h;
             return (
@@ -261,7 +272,11 @@ export function CustomSlider({
         max={duration || 1}
         step={1}
         value={[startTime, endTime]}
-        onChange={([s, e]) => onRangeChange(s, e)}
+        onChange={([s, e]) => {
+          onRangeChange(s, e);
+          if (currentTime < s) onSeek(s);
+          else if (currentTime > e) onSeek(e - 1);
+        }}
         maxRange={maxRange}
         minRange={1}
         label={formatTime}
