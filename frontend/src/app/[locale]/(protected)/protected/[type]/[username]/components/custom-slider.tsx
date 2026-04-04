@@ -111,6 +111,33 @@ export function CustomSlider({
 
   return (
     <Box pt="md" pb={8}>
+      {/* Position scroll bar - above */}
+      {duration > 0 && scrollMax > scrollMin && (
+        <Slider
+          value={Math.round(rangeMid)}
+          onChange={handleScroll}
+          min={scrollMin}
+          max={scrollMax}
+          step={1}
+          label={null}
+          size={12}
+          mb={8}
+          styles={{
+            track: {
+              backgroundColor: "rgba(255,255,255,0.1)",
+              borderColor: "transparent",
+            },
+            bar: { display: "none" },
+            thumb: {
+              height: 16,
+              borderRadius: 6,
+              backgroundColor: "rgba(59, 130, 246, 0.6)",
+              border: "1px solid rgba(59, 130, 246, 0.8)",
+            },
+          }}
+        />
+      )}
+
       {/* Thumbnails with overlays */}
       <Box
         ref={containerRef}
@@ -228,7 +255,7 @@ export function CustomSlider({
         </Box>
       </Box>
 
-      {/* Range slider - default Mantine */}
+      {/* Range slider - overlapping bottom of thumbnails */}
       <RangeSlider
         min={0}
         max={duration || 1}
@@ -238,35 +265,11 @@ export function CustomSlider({
         maxRange={maxRange}
         minRange={1}
         label={formatTime}
-        mt={4}
+        thumbSize={24}
+        mt={-10}
+        style={{ position: "relative", zIndex: 25 }}
       />
 
-      {/* Position scroll bar */}
-      {duration > 0 && scrollMax > scrollMin && (
-        <Slider
-          value={Math.round(rangeMid)}
-          onChange={handleScroll}
-          min={scrollMin}
-          max={scrollMax}
-          step={1}
-          label={null}
-          size={12}
-          mt={8}
-          styles={{
-            track: {
-              backgroundColor: "rgba(255,255,255,0.1)",
-              borderColor: "transparent",
-            },
-            bar: { display: "none" },
-            thumb: {
-              height: 16,
-              borderRadius: 6,
-              backgroundColor: "rgba(59, 130, 246, 0.6)",
-              border: "1px solid rgba(59, 130, 246, 0.8)",
-            },
-          }}
-        />
-      )}
     </Box>
   );
 }

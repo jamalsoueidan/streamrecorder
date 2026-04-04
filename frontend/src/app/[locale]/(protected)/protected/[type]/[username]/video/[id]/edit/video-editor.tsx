@@ -194,7 +194,7 @@ export default function VideoEditor({ recording }: Props) {
       <Box
         style={{
           width: "100%",
-          height: "55vh",
+          height: "clamp(200px, 35vh, 400px)",
           borderRadius: "var(--mantine-radius-md)",
           overflow: "hidden",
           background: "#000",
