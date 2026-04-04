@@ -1,8 +1,6 @@
 "use client";
 
-import { Box, Slider } from "@mantine/core";
-import { clamp, useMove } from "@mantine/hooks";
-import { IconGripVertical } from "@tabler/icons-react";
+import { Box, RangeSlider, Slider } from "@mantine/core";
 import { useEffect, useRef, useState } from "react";
 
 interface ThumbnailCue {
@@ -30,11 +28,9 @@ interface CustomSliderProps {
 function parseVTTTime(time: string): number {
   const parts = time.split(":");
   if (parts.length === 2) {
-    // MM:SS.mmm format
     const [sec, ms] = parts[1].split(".");
     return parseInt(parts[0]) * 60 + parseInt(sec) + parseInt(ms) / 1000;
   }
-  // HH:MM:SS.mmm format
   const [sec, ms] = parts[2].split(".");
   return (
     parseInt(parts[0]) * 3600 +
@@ -47,14 +43,12 @@ function parseVTTTime(time: string): number {
 function parseVTT(vttText: string): ThumbnailCue[] {
   const cues: ThumbnailCue[] = [];
   const lines = vttText.trim().split("\n");
-
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i];
     if (line.includes("-->")) {
       const [startStr, endStr] = line.split("-->").map((s) => s.trim());
       const start = parseVTTTime(startStr);
       const end = parseVTTTime(endStr);
-
       const nextLine = lines[i + 1];
       if (nextLine && nextLine.includes("#xywh=")) {
         const [url, fragment] = nextLine.split("#xywh=");
@@ -66,22 +60,22 @@ function parseVTT(vttText: string): ThumbnailCue[] {
   return cues;
 }
 
+const TRACK_HEIGHT = 120;
+
 export function CustomSlider({
   duration,
   currentTime,
   startTime,
   endTime,
+  maxRange,
   onRangeChange,
   onSeek,
   formatTime,
   vttUrl,
-  maxRange,
 }: CustomSliderProps) {
   const [thumbnailCues, setThumbnailCues] = useState<ThumbnailCue[]>([]);
-  const [containerWidth, setContainerWidth] = useState(800);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  // Fetch and parse VTT
   useEffect(() => {
     if (!vttUrl) return;
     fetch(vttUrl)
@@ -90,358 +84,189 @@ export function CustomSlider({
       .catch(() => {});
   }, [vttUrl]);
 
-  // Track container width for responsive thumbnails
-  useEffect(() => {
-    const container = containerRef.current;
-    if (!container) return;
-
-    const updateWidth = () => setContainerWidth(container.offsetWidth);
-    updateWidth();
-
-    const observer = new ResizeObserver(updateWidth);
-    observer.observe(container);
-    return () => observer.disconnect();
-  }, []);
-
-  const activeGrip = useRef<"start" | "end" | "track" | null>(null);
-  const dragStartX = useRef(0);
-  const dragStartRange = useRef({ start: 0, end: 0 });
-
-  // Keep refs in sync via useEffect
-  const startTimeRef = useRef(startTime);
-  const endTimeRef = useRef(endTime);
-  useEffect(() => {
-    startTimeRef.current = startTime;
-    endTimeRef.current = endTime;
-  }, [startTime, endTime]);
-
-  const clampedTime = Math.max(startTime, Math.min(currentTime, endTime));
-  const startPercent = duration > 0 ? (startTime / duration) * 100 : 0;
-  const endPercent = duration > 0 ? (endTime / duration) * 100 : 100;
-
-  // Thumbnail display size (half of 160x284)
-  const thumbDisplayWidth = 80;
-  const thumbDisplayHeight = 142;
-
-  // Group cues by sprite URL and calculate cols per sprite
-  // NOTE: Sprite is always cols x cols (square grid)
-  const spriteCols = new Map<string, number>();
+  const spriteMeta = new Map<string, { cols: number; rows: number }>();
   for (const cue of thumbnailCues) {
     const col = Math.floor(cue.x / cue.w) + 1;
-    const existing = spriteCols.get(cue.url) || 0;
-    spriteCols.set(cue.url, Math.max(existing, col));
+    const row = Math.floor(cue.y / cue.h) + 1;
+    const existing = spriteMeta.get(cue.url) || { cols: 0, rows: 0 };
+    spriteMeta.set(cue.url, {
+      cols: Math.max(existing.cols, col),
+      rows: Math.max(existing.rows, row),
+    });
   }
 
-  const handleMove = (x: number) => {
-    if (!activeGrip.current) return;
-    if (duration <= 0) return;
+  const startPct = duration > 0 ? (startTime / duration) * 100 : 0;
+  const endPct = duration > 0 ? (endTime / duration) * 100 : 100;
 
-    if (activeGrip.current === "start") {
-      const newStart = Math.floor(
-        clamp(x * duration, 0, endTimeRef.current - 1),
-      );
-      let newEnd = endTimeRef.current;
-      if (maxRange && newEnd - newStart > maxRange) {
-        newEnd = Math.min(newStart + maxRange, duration);
-      }
-      onRangeChange(newStart, newEnd);
-      onSeek(newStart);
-    } else if (activeGrip.current === "end") {
-      const newEnd = Math.floor(
-        clamp(x * duration, startTimeRef.current + 1, duration),
-      );
-      let newStart = startTimeRef.current;
-      if (maxRange && newEnd - newStart > maxRange) {
-        newStart = Math.max(newEnd - maxRange, 0);
-      }
-      onRangeChange(newStart, newEnd);
-    } else if (activeGrip.current === "track") {
-      const delta = x - dragStartX.current;
-      const deltaTime = Math.floor(delta * duration);
+  const rangeSize = endTime - startTime;
+  const rangeMid = startTime + rangeSize / 2;
+  const scrollMin = Math.round(rangeSize / 2);
+  const scrollMax = Math.round(duration - rangeSize / 2);
 
-      let newStart = dragStartRange.current.start + deltaTime;
-      let newEnd = dragStartRange.current.end + deltaTime;
-      const range = dragStartRange.current.end - dragStartRange.current.start;
-
-      if (newStart < 0) {
-        newStart = 0;
-        newEnd = range;
-      }
-      if (newEnd > duration) {
-        newEnd = duration;
-        newStart = duration - range;
-      }
-
-      onRangeChange(newStart, newEnd);
-      onSeek(newStart);
-    }
+  const handleScroll = (mid: number) => {
+    const newStart = Math.max(0, Math.round(mid - rangeSize / 2));
+    const newEnd = Math.min(duration, newStart + rangeSize);
+    onRangeChange(newStart, newEnd);
   };
 
-  const { ref: trackRef } = useMove(({ x }) => handleMove(x));
-
   return (
-    <Box pt="md" pb={40} px={20}>
-      {/* Outer container for positioning */}
-      <Box ref={containerRef} style={{ position: "relative", height: 142 }}>
-        {/* Thumbnail filmstrip background - full width */}
-        <Box
-          style={{
-            position: "absolute",
-            top: 0,
-            left: -20,
-            right: -20,
-            height: "100%",
-            background: "#333",
-            overflow: "hidden",
-            borderRadius: 6,
-            display: "flex",
-          }}
-        >
-          {thumbnailCues.length > 0 &&
-            (() => {
-              // Calculate exact number of thumbnails and their width to fill container perfectly
-              const totalWidth = containerWidth + 40;
-              const numThumbs = Math.round(totalWidth / thumbDisplayWidth);
-              const exactThumbWidth = totalWidth / numThumbs;
-
-              // Sample cues evenly from the array
-              const sampledCues: ThumbnailCue[] = [];
-              const step = thumbnailCues.length / numThumbs;
-              for (let i = 0; i < numThumbs; i++) {
-                const index = Math.min(
-                  Math.floor(i * step),
-                  thumbnailCues.length - 1,
-                );
-                sampledCues.push(thumbnailCues[index]);
-              }
-
-              return sampledCues.map((cue, i) => {
-                const scale = thumbDisplayHeight / cue.h;
-                const widthScale = exactThumbWidth / cue.w;
-                const cols = spriteCols.get(cue.url) || 10;
-
-                return (
-                  <Box
-                    key={`thumb-${i}`}
-                    style={{
-                      width: exactThumbWidth,
-                      height: thumbDisplayHeight,
-                      flexShrink: 0,
-                      overflow: "hidden",
-                      backgroundImage: `url(${cue.url})`,
-                      backgroundSize: `${cols * exactThumbWidth}px ${cols * thumbDisplayHeight}px`,
-                      backgroundPosition: `${-cue.x * widthScale}px ${-cue.y * scale}px`,
-                      backgroundRepeat: "no-repeat",
-                    }}
-                  />
-                );
-              });
-            })()}
+    <Box pt="md" pb={8}>
+      {/* Thumbnails with overlays */}
+      <Box
+        ref={containerRef}
+        onClick={(e) => {
+          const rect = e.currentTarget.getBoundingClientRect();
+          const x = (e.clientX - rect.left) / rect.width;
+          const time = Math.round(x * duration);
+          onSeek(time);
+        }}
+        style={{
+          position: "relative",
+          height: TRACK_HEIGHT,
+          borderRadius: 6,
+          overflow: "hidden",
+          cursor: "pointer",
+        }}
+      >
+        <Box style={{ position: "absolute", inset: 0, background: "#333", display: "flex" }}>
+          {thumbnailCues.map((cue, i) => {
+            const meta = spriteMeta.get(cue.url) || { cols: 2, rows: 2 };
+            const scale = TRACK_HEIGHT / cue.h;
+            return (
+              <Box
+                key={`thumb-${i}`}
+                style={{
+                  flex: 1,
+                  minWidth: 0,
+                  height: TRACK_HEIGHT,
+                  overflow: "hidden",
+                  backgroundImage: `url(${cue.url})`,
+                  backgroundSize: `${meta.cols * cue.w * scale}px ${meta.rows * cue.h * scale}px`,
+                  backgroundPosition: `${-cue.x * scale}px ${-cue.y * scale}px`,
+                  backgroundRepeat: "no-repeat",
+                }}
+              />
+            );
+          })}
         </Box>
 
-        {/* Overlay for excluded area - before start */}
-        {startPercent > 0 && (
+        {startPct > 0 && (
           <Box
             style={{
               position: "absolute",
-              left: -20,
+              left: 0,
               top: 0,
-              width: `calc(${startPercent}% + 20px)`,
+              width: `${startPct}%`,
               height: "100%",
-              background: "rgba(0, 0, 0, 0.8)",
-              borderRadius: "6px 0 0 6px",
+              background: "rgba(0, 0, 0, 0.75)",
               pointerEvents: "none",
-              zIndex: 5,
             }}
           />
         )}
 
-        {/* Overlay for excluded area - after end */}
-        {endPercent < 100 && (
+        {endPct < 100 && (
           <Box
             style={{
               position: "absolute",
-              left: `${endPercent}%`,
+              left: `${endPct}%`,
               top: 0,
-              width: `calc(${100 - endPercent}% + 20px)`,
+              width: `${100 - endPct}%`,
               height: "100%",
-              background: "rgba(0, 0, 0, 0.8)",
-              borderRadius: "0 6px 6px 0",
+              background: "rgba(0, 0, 0, 0.75)",
               pointerEvents: "none",
-              zIndex: 5,
             }}
           />
         )}
 
-        {/* Track with useMove - for grips and range dragging */}
-        <Box
-          ref={trackRef}
-          onPointerDown={(e) => {
-            if (activeGrip.current === null) {
-              const rect = e.currentTarget.getBoundingClientRect();
-              dragStartX.current = (e.clientX - rect.left) / rect.width;
-              dragStartRange.current = { start: startTime, end: endTime };
-              activeGrip.current = "track";
-            }
-          }}
-          onPointerUp={() => {
-            activeGrip.current = null;
-          }}
-          style={{
-            position: "absolute",
-            inset: 0,
-            cursor: "grab",
-            touchAction: "none",
-          }}
-        >
-          {/* Start grip - extends LEFT into overlay */}
-          <Box
-            onPointerDown={(e) => {
-              e.stopPropagation();
-              activeGrip.current = "start";
-            }}
-            style={{
-              position: "absolute",
-              left: `${startPercent}%`,
-              top: 0,
-              transform: "translateX(-100%)",
-              width: 20,
-              height: "100%",
-              background: "#3b82f6",
-              cursor: "ew-resize",
-              zIndex: 20,
-              borderRadius: "6px 0 0 6px",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              touchAction: "none",
-            }}
-          >
-            <IconGripVertical size={14} color="white" />
-            {/* Start time label - hidden when grips are close */}
-            {endPercent - startPercent > 15 && (
-              <Box
-                style={{
-                  position: "absolute",
-                  bottom: -24,
-                  left: "50%",
-                  transform: "translateX(-50%)",
-                  fontSize: 12,
-                  color: "#3b82f6",
-                  whiteSpace: "nowrap",
-                  fontWeight: 500,
-                }}
-              >
-                {formatTime(startTime)}
-              </Box>
-            )}
-          </Box>
-
-          {/* End grip - extends RIGHT into overlay */}
-          <Box
-            onPointerDown={(e) => {
-              e.stopPropagation();
-              activeGrip.current = "end";
-            }}
-            style={{
-              position: "absolute",
-              left: `${endPercent}%`,
-              top: 0,
-              width: 20,
-              height: "100%",
-              background: "#3b82f6",
-              cursor: "ew-resize",
-              zIndex: 20,
-              borderRadius: "0 6px 6px 0",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              touchAction: "none",
-            }}
-          >
-            <IconGripVertical size={14} color="white" />
-            {/* End time label - hidden when grips are close */}
-            {endPercent - startPercent > 15 && (
-              <Box
-                style={{
-                  position: "absolute",
-                  bottom: -24,
-                  left: "50%",
-                  transform: "translateX(-50%)",
-                  fontSize: 12,
-                  color: "#3b82f6",
-                  whiteSpace: "nowrap",
-                  fontWeight: 500,
-                }}
-              >
-                {formatTime(endTime)}
-              </Box>
-            )}
-          </Box>
-        </Box>
-
-        {/* Slider - spans from start to end */}
         <Box
           style={{
             position: "absolute",
-            left: `${startPercent}%`,
-            width: `${endPercent - startPercent}%`,
+            left: `${startPct}%`,
+            width: `${endPct - startPct}%`,
             top: 0,
             height: "100%",
-            display: "flex",
-            alignItems: "center",
-            zIndex: 15,
-            pointerEvents: "auto",
+            border: "2px solid #3b82f6",
+            borderRadius: 2,
+            pointerEvents: "none",
           }}
-        >
-          <Slider
-            value={clampedTime}
-            onChange={onSeek}
-            min={startTime}
-            max={endTime || 1}
-            step={1}
-            label={formatTime}
-            size={3}
-            thumbSize={20}
-            labelAlwaysOn
-            radius={0}
-            styles={{
-              root: { padding: 0 },
-              track: {
-                margin: 0,
-                height: 142,
-                "--track-bg": "transparent",
-                "--slider-track-bg": "transparent",
-              },
-              bar: { backgroundColor: "transparent" },
-              thumb: {
-                width: 1,
-                height: 142,
-                borderRadius: 0,
-                border: "none",
-                backgroundColor: "white",
-              },
-            }}
-            style={{ width: "100%" }}
-          />
-        </Box>
+        />
 
-        {/* Duration label - centered below slider */}
+        {/* Playhead line */}
+        {duration > 0 && (
+          <Box
+            style={{
+              position: "absolute",
+              left: `${(currentTime / duration) * 100}%`,
+              top: 0,
+              width: 2,
+              height: "100%",
+              backgroundColor: "white",
+              pointerEvents: "none",
+              zIndex: 3,
+              transition: "left 0.1s linear",
+            }}
+          />
+        )}
+
         <Box
           style={{
             position: "absolute",
-            bottom: -24,
-            left: `${(startPercent + endPercent) / 2}%`,
+            bottom: 4,
+            left: `${(startPct + endPct) / 2}%`,
             transform: "translateX(-50%)",
             fontSize: 12,
-            color: "#888",
+            color: "rgba(255,255,255,0.8)",
             whiteSpace: "nowrap",
-            fontWeight: 500,
+            fontWeight: 600,
+            pointerEvents: "none",
+            background: "rgba(0,0,0,0.5)",
+            padding: "1px 6px",
+            borderRadius: 4,
           }}
         >
           {formatTime(endTime - startTime)}
         </Box>
       </Box>
+
+      {/* Range slider - default Mantine */}
+      <RangeSlider
+        min={0}
+        max={duration || 1}
+        step={1}
+        value={[startTime, endTime]}
+        onChange={([s, e]) => onRangeChange(s, e)}
+        maxRange={maxRange}
+        minRange={1}
+        label={formatTime}
+        mt={4}
+      />
+
+      {/* Position scroll bar */}
+      {duration > 0 && scrollMax > scrollMin && (
+        <Slider
+          value={Math.round(rangeMid)}
+          onChange={handleScroll}
+          min={scrollMin}
+          max={scrollMax}
+          step={1}
+          label={null}
+          size={12}
+          mt={8}
+          styles={{
+            track: {
+              backgroundColor: "rgba(255,255,255,0.1)",
+              borderColor: "transparent",
+            },
+            bar: { display: "none" },
+            thumb: {
+              height: 16,
+              borderRadius: 6,
+              backgroundColor: "rgba(59, 130, 246, 0.6)",
+              border: "1px solid rgba(59, 130, 246, 0.8)",
+            },
+          }}
+        />
+      )}
     </Box>
   );
 }

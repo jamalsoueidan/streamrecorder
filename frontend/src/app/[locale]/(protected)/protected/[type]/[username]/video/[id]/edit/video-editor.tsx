@@ -119,6 +119,19 @@ export default function VideoEditor({ recording }: Props) {
     if (!video) return;
     video.currentTime = time;
     setCurrentTime(time);
+
+    // If seeking outside the range, move the range to include this position
+    if (time < startTime || time > endTime) {
+      const rangeSize = endTime - startTime;
+      let newStart = Math.max(0, time - rangeSize / 2);
+      let newEnd = newStart + rangeSize;
+      if (newEnd > duration) {
+        newEnd = duration;
+        newStart = Math.max(0, newEnd - rangeSize);
+      }
+      setStartTime(newStart);
+      setEndTime(newEnd);
+    }
   };
 
   const handleExport = async () => {
