@@ -108,6 +108,7 @@ export function CustomSlider({
     return meta;
   }, [thumbnailCues]);
 
+  const vttDuration = thumbnailCues.length > 0 ? thumbnailCues[thumbnailCues.length - 1].end : duration;
   const startPct = duration > 0 ? (startTime / duration) * 100 : 0;
   const endPct = duration > 0 ? (endTime / duration) * 100 : 100;
 
@@ -178,17 +179,26 @@ export function CustomSlider({
                 );
             return cues;
           })().map((cue, i) => {
+            const meta = spriteMeta.get(cue.url) || { cols: 2, rows: 2 };
+            // Sprite is cols×cols grid. Clamp to last valid cell.
+            const totalCells = meta.cols * meta.cols;
+            const cellIndex = Math.floor(cue.y / cue.h) * meta.cols + Math.floor(cue.x / cue.w);
+            const clampedIndex = Math.min(cellIndex, totalCells - 1);
+            const clampedCol = clampedIndex % meta.cols;
+            const clampedRow = Math.floor(clampedIndex / meta.cols);
+            const clampedX = clampedCol * cue.w;
+            const clampedY = clampedRow * cue.h;
             const scale = TRACK_HEIGHT / cue.h;
             const cellW = Math.round(cue.w * scale);
             const cueDuration = cue.end - cue.start;
-            const cueWidth = duration > 0 ? Math.round((cueDuration / duration) * trackWidth) : cellW;
-            const repeats = Math.max(1, Math.ceil(cueWidth / cellW));
+            const flexGrow = vttDuration > 0 ? cueDuration / vttDuration : 1;
+            const cueWidthEstimate = Math.round(flexGrow * trackWidth);
+            const repeats = Math.max(1, Math.ceil(cueWidthEstimate / cellW) + 1);
             return (
               <div
                 key={`thumb-${i}`}
                 style={{
-                  width: cueWidth,
-                  flexShrink: 0,
+                  flex: `${flexGrow} 0 0px`,
                   height: TRACK_HEIGHT,
                   overflow: "hidden",
                   display: "flex",
@@ -213,7 +223,7 @@ export function CustomSlider({
                         position: "absolute",
                         left: 0,
                         top: 0,
-                        transform: `scale(${scale}) translate(${-cue.x}px, ${-cue.y}px)`,
+                        transform: `scale(${scale}) translate(${-clampedX}px, ${-clampedY}px)`,
                         transformOrigin: "0 0",
                         maxWidth: "none",
                       }}
