@@ -9,7 +9,7 @@ import {
 import { Group, Loader, SimpleGrid, Stack, Text } from "@mantine/core";
 import { useIntersection } from "@mantine/hooks";
 import { useInfiniteQuery } from "@tanstack/react-query";
-import { useParams } from "next/navigation";
+import { useParams, usePathname } from "next/navigation";
 import { useQueryStates } from "nuqs";
 import { useEffect } from "react";
 
@@ -24,6 +24,7 @@ export default function ProfileRecordings() {
   const now = useNow();
   const params = useParams<{ type: FollowerTypeEnum; username: string }>();
   const [filters] = useQueryStates(profileParsers);
+  const pathname = usePathname();
 
   const { data, fetchNextPage, hasNextPage, isFetchingNextPage, isLoading } =
     useInfiniteQuery({
@@ -45,10 +46,29 @@ export default function ProfileRecordings() {
   const { ref, entry } = useIntersection({ threshold: 0.5 });
 
   useEffect(() => {
-    if (entry?.isIntersecting && hasNextPage && !isFetchingNextPage) {
+    // Guard: only fetch next page when user is actually on the profile page.
+    // When a video modal opens on top (intercepted route), Mantine Modal adds
+    // overflow:hidden to body which causes a layout shift. That re-fires the
+    // intersection observer, falsely triggering fetchNextPage and loading new
+    // recordings (and their preview.jpg images) while the user is watching a
+    // video. Checking pathname prevents this.
+    const isOnPage = !pathname.includes("/video/");
+    if (
+      entry?.isIntersecting &&
+      hasNextPage &&
+      !isFetchingNextPage &&
+      isOnPage
+    ) {
       fetchNextPage();
     }
-  }, [entry?.isIntersecting, hasNextPage, isFetchingNextPage, fetchNextPage]);
+  }, [
+    entry?.isIntersecting,
+    hasNextPage,
+    isFetchingNextPage,
+    fetchNextPage,
+    pathname,
+    params.type,
+  ]);
 
   const recordings = data?.pages.flatMap((p) => p.data) ?? [];
 

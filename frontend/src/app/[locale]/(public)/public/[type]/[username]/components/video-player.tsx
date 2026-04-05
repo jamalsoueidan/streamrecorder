@@ -9,6 +9,8 @@ import {
   MediaMuteButton,
   MediaPlayButton,
   MediaPosterImage,
+  MediaSeekBackwardButton,
+  MediaSeekForwardButton,
   MediaTimeDisplay,
   MediaTimeRange,
   MediaVolumeRange,
@@ -79,6 +81,8 @@ export function VideoPlayer({
 
       <MediaControlBar>
         <MediaPlayButton />
+        <MediaSeekBackwardButton seekoffset="30" />
+        <MediaSeekForwardButton seekoffset="30" />
         <MediaTimeRange />
         <MediaTimeDisplay showduration />
         <Box className="volume-hover-container">
