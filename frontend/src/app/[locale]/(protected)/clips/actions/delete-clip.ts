@@ -5,7 +5,10 @@ import api from "@/lib/api";
 export async function deleteClip(documentId: string) {
   try {
     // Get clip with localizations
-    const { data } = await api.clip.getClipsId({ id: documentId });
+    const { data } = await api.clip.getClipsId({
+      id: documentId,
+      populate: "localizations",
+    } as never);
     const clip = data?.data;
     const localizations =
       (clip?.localizations as { locale: string }[]) || [];

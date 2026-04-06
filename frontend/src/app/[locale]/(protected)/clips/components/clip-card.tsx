@@ -78,7 +78,7 @@ export function ClipCard({ clip, locale }: ClipCardProps) {
                   {follower.avatar?.url && (
                     <Image
                       src={generateAvatarUrl(follower.avatar?.url)}
-                      alt=""
+                      alt={follower.username || ""}
                       width={28}
                       height={28}
                       unoptimized

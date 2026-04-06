@@ -33,13 +33,17 @@ export default async function Page({ searchParams }: PageProps) {
     .getClips({
       populate: {
         follower: {
-          populate: { avatar: true },
+          populate: {
+            avatar: true,
+            owner: { fields: ["id"] },
+          },
         },
       },
       "pagination[pageSize]": limit,
       "pagination[page]": pageNumber,
       "pagination[withCount]": true,
       sort: "createdAt:desc",
+      locale,
     })
     .catch(() => null);
 
