@@ -130,7 +130,6 @@ export function ClipPreview({ clip, type, locale }: Props) {
             />
           </video>
 
-          <MediaPosterImage slot="poster" src={previewUrl} />
           <MediaPlayButton slot="centered-chrome" />
 
           <MediaControlBar>
