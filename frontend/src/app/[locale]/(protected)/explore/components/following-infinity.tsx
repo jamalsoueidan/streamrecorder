@@ -9,7 +9,7 @@ import { useQueryStates } from "nuqs";
 import { useInfiniteQuery } from "@tanstack/react-query";
 
 import { useTranslations } from "next-intl";
-import { usePathname } from "next/navigation";
+
 import { EmptyState } from "../../components/empty-state";
 import RecordingItem from "../../components/recording-item";
 import { fetchRecordings } from "../actions/fetch-recordings";
@@ -18,7 +18,6 @@ import { followingParsers } from "../lib/search-params";
 export default function FollowingInfinity() {
   const [filters] = useQueryStates(followingParsers);
   const t = useTranslations("protected.explore");
-  const pathname = usePathname();
 
   const { data, fetchNextPage, hasNextPage, isFetchingNextPage, isLoading } =
     useInfiniteQuery({
@@ -42,7 +41,7 @@ export default function FollowingInfinity() {
     // intersection observer, falsely triggering fetchNextPage and loading new
     // recordings (and their preview.jpg images) while the user is watching a
     // video. Checking pathname prevents this.
-    const isOnExplorePage = pathname.endsWith("/explore");
+    const isOnExplorePage = window.location.pathname.endsWith("/explore");
     if (
       entry?.isIntersecting &&
       hasNextPage &&
@@ -51,13 +50,7 @@ export default function FollowingInfinity() {
     ) {
       fetchNextPage();
     }
-  }, [
-    entry?.isIntersecting,
-    hasNextPage,
-    isFetchingNextPage,
-    fetchNextPage,
-    pathname,
-  ]);
+  }, [entry?.isIntersecting, hasNextPage, isFetchingNextPage, fetchNextPage]);
 
   const recordings = data?.pages.flatMap((p) => p.data) ?? [];
 

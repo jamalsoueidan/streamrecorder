@@ -8,7 +8,7 @@ import { useQueryStates } from "nuqs";
 
 import { useInfiniteQuery } from "@tanstack/react-query";
 import { useTranslations } from "next-intl";
-import { usePathname } from "next/navigation";
+
 import { fetchFollowers } from "../actions/fetch-followers";
 import { exploreParsers } from "../lib/search-params";
 import FollowerItem from "./follower-item";
@@ -16,7 +16,6 @@ import FollowerItem from "./follower-item";
 export default function CreatorsInfinity() {
   const [filters] = useQueryStates(exploreParsers);
   const t = useTranslations("protected.discover");
-  const pathname = usePathname();
 
   const { data, fetchNextPage, hasNextPage, isFetchingNextPage, isLoading } =
     useInfiniteQuery({
@@ -40,7 +39,7 @@ export default function CreatorsInfinity() {
     // intersection observer, falsely triggering fetchNextPage and loading new
     // creators (and their preview images) while the user is watching a video.
     // Checking pathname prevents this.
-    const isOnPage = pathname.endsWith("/discover");
+    const isOnPage = window.location.pathname.endsWith("/discover");
     if (
       entry?.isIntersecting &&
       hasNextPage &&
@@ -49,13 +48,7 @@ export default function CreatorsInfinity() {
     ) {
       fetchNextPage();
     }
-  }, [
-    entry?.isIntersecting,
-    hasNextPage,
-    isFetchingNextPage,
-    fetchNextPage,
-    pathname,
-  ]);
+  }, [entry?.isIntersecting, hasNextPage, isFetchingNextPage, fetchNextPage]);
 
   const allFollowers = data?.pages.flatMap((p) => p.data) ?? [];
 

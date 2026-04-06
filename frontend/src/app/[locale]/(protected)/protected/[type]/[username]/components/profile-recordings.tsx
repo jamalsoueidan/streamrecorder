@@ -9,7 +9,7 @@ import {
 import { Group, Loader, SimpleGrid, Stack, Text } from "@mantine/core";
 import { useIntersection } from "@mantine/hooks";
 import { useInfiniteQuery } from "@tanstack/react-query";
-import { useParams, usePathname } from "next/navigation";
+import { useParams } from "next/navigation";
 import { useQueryStates } from "nuqs";
 import { useEffect } from "react";
 
@@ -24,7 +24,6 @@ export default function ProfileRecordings() {
   const now = useNow();
   const params = useParams<{ type: FollowerTypeEnum; username: string }>();
   const [filters] = useQueryStates(profileParsers);
-  const pathname = usePathname();
 
   const { data, fetchNextPage, hasNextPage, isFetchingNextPage, isLoading } =
     useInfiniteQuery({
@@ -46,29 +45,16 @@ export default function ProfileRecordings() {
   const { ref, entry } = useIntersection({ threshold: 0.5 });
 
   useEffect(() => {
-    // Guard: only fetch next page when user is actually on the profile page.
-    // When a video modal opens on top (intercepted route), Mantine Modal adds
-    // overflow:hidden to body which causes a layout shift. That re-fires the
-    // intersection observer, falsely triggering fetchNextPage and loading new
-    // recordings (and their preview.jpg images) while the user is watching a
-    // video. Checking pathname prevents this.
-    const isOnPage = !pathname.includes("/video/");
-    if (
-      entry?.isIntersecting &&
-      hasNextPage &&
-      !isFetchingNextPage &&
-      isOnPage
-    ) {
+    // Guard: only fetch next page when no video modal is open.
+    // When a video modal opens (intercepted route), Mantine Modal adds
+    // overflow:hidden to body causing a layout shift that re-fires the
+    // intersection observer. Using window.location instead of usePathname
+    // to avoid subscribing to URL changes (which causes re-renders).
+    const isOnPage = !window.location.pathname.includes("/video/");
+    if (entry?.isIntersecting && hasNextPage && !isFetchingNextPage && isOnPage) {
       fetchNextPage();
     }
-  }, [
-    entry?.isIntersecting,
-    hasNextPage,
-    isFetchingNextPage,
-    fetchNextPage,
-    pathname,
-    params.type,
-  ]);
+  }, [entry?.isIntersecting, hasNextPage, isFetchingNextPage, fetchNextPage]);
 
   const recordings = data?.pages.flatMap((p) => p.data) ?? [];
 
