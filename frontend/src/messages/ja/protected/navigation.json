@@ -8,13 +8,14 @@
     "dashboard": "ダッシュボード",
     "premium": "プレミアム",
     "myRecordings": "録画",
-    "myClips": "クリップ",
+    "myClips": "マイクリップ",
     "watchLater": "後で見る",
     "aiStudio": "AI スタジオ",
     "myList": "ライブラリ",
     "live": "ライブ",
     "tiktokInsights": "TikTok インサイト",
     "explore": "探索",
+    "clips": "クリップ",
     "friends": "フレンド"
   },
   "actions": {

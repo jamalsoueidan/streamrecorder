@@ -8,13 +8,14 @@
     "dashboard": "لوحة التحكم",
     "premium": "بريميوم",
     "myRecordings": "تسجيلاتي",
-    "myClips": "المقاطع",
+    "myClips": "مقاطعي",
     "watchLater": "شاهد لاحقاً",
     "aiStudio": "ستوديو AI",
     "myList": "قائمتي",
     "live": "مباشر",
     "tiktokInsights": "إحصائيات TikTok المباشر",
     "explore": "استكشف",
+    "clips": "مقاطع",
     "friends": "الأصدقاء"
   },
   "actions": {

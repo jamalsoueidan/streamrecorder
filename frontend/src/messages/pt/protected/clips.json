@@ -1,0 +1,17 @@
+{
+  "title": "Clipes",
+  "description": "Clipes recentes da comunidade",
+  "emptyState": {
+    "title": "Nenhum clipe ainda",
+    "description": "Os clipes aparecerão aqui conforme forem criados pela comunidade."
+  },
+  "menu": {
+    "delete": "Excluir clipe",
+    "deleteTitle": "Excluir clipe",
+    "deleteConfirm": "Tem certeza de que deseja excluir este clipe? Esta ação não pode ser desfeita.",
+    "deleteButton": "Excluir",
+    "cancel": "Cancelar",
+    "deleteSuccess": "Clipe excluído",
+    "deleteError": "Falha ao excluir o clipe"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "title": "Clips",
+  "description": "Recent clips from the community",
+  "emptyState": {
+    "title": "No clips yet",
+    "description": "Clips will appear here as they are created by the community."
+  },
+  "menu": {
+    "delete": "Delete Clip",
+    "deleteTitle": "Delete Clip",
+    "deleteConfirm": "Are you sure you want to delete this clip? This action cannot be undone.",
+    "deleteButton": "Delete",
+    "cancel": "Cancel",
+    "deleteSuccess": "Clip deleted",
+    "deleteError": "Failed to delete clip"
+  }
+}

@@ -8,13 +8,14 @@
     "dashboard": "Dasbor",
     "premium": "Premium",
     "myRecordings": "Rekaman",
-    "myClips": "Klip",
+    "myClips": "Klip Saya",
     "watchLater": "Tonton Nanti",
     "aiStudio": "AI Studio",
     "myList": "Perpustakaan",
     "live": "Live",
     "tiktokInsights": "TikTok Insights",
     "explore": "Jelajahi",
+    "clips": "Klip",
     "friends": "Teman"
   },
   "actions": {

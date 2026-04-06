@@ -1,5 +1,5 @@
 {
-  "title": "クリップ",
+  "title": "マイクリップ",
   "description": "録画から AI が生成したクリップ",
   "emptyState": {
     "title": "まだクリップはありません",

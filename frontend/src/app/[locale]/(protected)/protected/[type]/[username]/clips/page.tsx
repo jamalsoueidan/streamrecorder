@@ -1,5 +1,5 @@
-import { usernameOrFilter } from "@/app/lib/username-filter";
 import PaginationControls from "@/app/components/pagination";
+import { usernameOrFilter } from "@/app/lib/username-filter";
 import publicApi from "@/lib/public-api";
 import {
   ActionIcon,
@@ -68,7 +68,11 @@ export default async function Page({ params, searchParams }: PageProps) {
 
   return (
     <section>
-      <ProfileHeader follower={follower} isRecording={false} clipsCount={clipsCount} />
+      <ProfileHeader
+        follower={follower}
+        isRecording={false}
+        clipsCount={clipsCount}
+      />
 
       {clips.length === 0 ? (
         <Stack align="center" justify="center" py={80} gap="lg">
@@ -93,7 +97,12 @@ export default async function Page({ params, searchParams }: PageProps) {
         <Stack gap="md">
           {totalPages > 1 && (
             <Center>
-              <PaginationControls total={totalPages} size="lg" />
+              <PaginationControls
+                siblings={1}
+                boundaries={1}
+                total={totalPages}
+                size="md"
+              />
             </Center>
           )}
           <SimpleGrid cols={{ base: 1, md: 2, xl: 3 }}>
@@ -107,7 +116,12 @@ export default async function Page({ params, searchParams }: PageProps) {
           </SimpleGrid>
           {totalPages > 1 && (
             <Center>
-              <PaginationControls total={totalPages} size="lg" />
+              <PaginationControls
+                siblings={1}
+                boundaries={1}
+                total={totalPages}
+                size="md"
+              />
             </Center>
           )}
         </Stack>

@@ -1,0 +1,17 @@
+{
+  "title": "クリップ",
+  "description": "コミュニティの最新クリップ",
+  "emptyState": {
+    "title": "クリップはまだありません",
+    "description": "コミュニティがクリップを作成すると、ここに表示されます。"
+  },
+  "menu": {
+    "delete": "クリップを削除",
+    "deleteTitle": "クリップを削除",
+    "deleteConfirm": "このクリップを削除してもよろしいですか？この操作は元に戻せません。",
+    "deleteButton": "削除",
+    "cancel": "キャンセル",
+    "deleteSuccess": "クリップを削除しました",
+    "deleteError": "クリップの削除に失敗しました"
+  }
+}

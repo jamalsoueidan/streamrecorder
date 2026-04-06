@@ -1,0 +1,17 @@
+{
+  "title": "Klip",
+  "description": "Klip terbaru dari komunitas",
+  "emptyState": {
+    "title": "Belum ada klip",
+    "description": "Klip akan muncul di sini saat dibuat oleh komunitas."
+  },
+  "menu": {
+    "delete": "Hapus Klip",
+    "deleteTitle": "Hapus Klip",
+    "deleteConfirm": "Apakah Anda yakin ingin menghapus klip ini? Tindakan ini tidak dapat dibatalkan.",
+    "deleteButton": "Hapus",
+    "cancel": "Batal",
+    "deleteSuccess": "Klip dihapus",
+    "deleteError": "Gagal menghapus klip"
+  }
+}
