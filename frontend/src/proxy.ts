@@ -104,5 +104,5 @@ export function proxy(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/((?!api|_next|media|avatar|assets|video|clip|serwist|meme).*)"],
+  matcher: ["/((?!api|_next|media|avatar|assets|video|clip/|serwist|meme).*)"],
 };

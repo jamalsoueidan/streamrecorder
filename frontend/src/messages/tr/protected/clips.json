@@ -1,0 +1,17 @@
+{
+  "title": "Klipler",
+  "description": "Topluluktan son klipler",
+  "emptyState": {
+    "title": "Henüz klip yok",
+    "description": "Topluluk tarafından oluşturulan klipler burada görünecektir."
+  },
+  "menu": {
+    "delete": "Klibi Sil",
+    "deleteTitle": "Klibi Sil",
+    "deleteConfirm": "Bu klibi silmek istediğinizden emin misiniz? Bu işlem geri alınamaz.",
+    "deleteButton": "Sil",
+    "cancel": "İptal",
+    "deleteSuccess": "Klip silindi",
+    "deleteError": "Klip silinemedi"
+  }
+}

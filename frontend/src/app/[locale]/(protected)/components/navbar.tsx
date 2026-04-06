@@ -131,6 +131,12 @@ export const navigation = [
         icon: IconWorldSearch,
         color: null,
       },
+      {
+        labelKey: "links.clips",
+        url: "/clips",
+        icon: IconScissors,
+        color: null,
+      },
     ],
   },
 ];
@@ -181,7 +187,7 @@ export function Navbar({
             <Icon
               className={classes.linkIcon}
               stroke={2}
-              style={{ width: "28px", height: "28px" }}
+              style={{ width: "24px", height: "24px" }}
               color={item.color ? item.color : undefined}
             />
           ) : (
@@ -189,7 +195,7 @@ export function Navbar({
               <Icon
                 className={classes.linkIcon}
                 stroke={2}
-                style={{ width: "28px", height: "28px" }}
+                style={{ width: "24px", height: "24px" }}
                 color={item.color ? item.color : undefined}
               />
               <span>{t(item.labelKey)}</span>
@@ -217,11 +223,11 @@ export function Navbar({
     return (
       <div key={section.titleKey}>
         {!collapsed && (
-          <Text size="md" fw={400} c="dimmed" mb="xs">
+          <Text size="sm" fw={400} c="dimmed">
             {t(section.titleKey)}
           </Text>
         )}
-        <Stack gap={collapsed ? 4 : 2} align={collapsed ? "center" : "stretch"}>
+        <Stack gap={collapsed ? 4 : 0} align={collapsed ? "center" : "stretch"}>
           {html}
         </Stack>
       </div>
@@ -253,7 +259,7 @@ export function Navbar({
       onClick={(e) => handleLinkClick(e, "/search")}
     >
       <Paper
-        p="sm"
+        p="xs"
         radius="md"
         style={{
           cursor: "pointer",
@@ -284,14 +290,14 @@ export function Navbar({
       </AppShell.Section>
 
       {!collapsed && (
-        <Stack gap={4} mb="md">
-          <Anchor href="/contact" size="md" c="dimmed">
+        <Stack gap={4} my="xs">
+          <Anchor href="/contact" size="xs" c="dimmed">
             {tFooter("company.contact")}
           </Anchor>
-          <Anchor href="/privacy" size="md" c="dimmed">
+          <Anchor href="/privacy" size="xs" c="dimmed">
             {tFooter("legal.privacy")}
           </Anchor>
-          <Anchor href="/terms" size="md" c="dimmed">
+          <Anchor href="/terms" size="xs" c="dimmed">
             {tFooter("legal.terms")}
           </Anchor>
         </Stack>
@@ -333,7 +339,7 @@ export function Navbar({
                   closeDelay={500}
                 >
                   <ActionIcon size="xl" variant="outline" color="gray.7">
-                    <IconSettings size={20} />
+                    <IconSettings size={24} />
                   </ActionIcon>
                 </Tooltip>
               ) : (
@@ -353,13 +359,13 @@ export function Navbar({
               <Menu.Item
                 component={Link}
                 href="/settings"
-                leftSection={<IconSettings size={16} />}
+                leftSection={<IconSettings size={24} />}
               >
                 {t("actions.settings")}
               </Menu.Item>
               <Menu.Sub openDelay={120} closeDelay={150}>
                 <Menu.Sub.Target>
-                  <Menu.Sub.Item leftSection={<IconWorldSearch size={16} />}>
+                  <Menu.Sub.Item leftSection={<IconWorldSearch size={24} />}>
                     {t("actions.language")} {locale.toUpperCase()}
                   </Menu.Sub.Item>
                 </Menu.Sub.Target>
@@ -392,7 +398,7 @@ export function Navbar({
                   await fetch("/api/logout", { method: "POST" });
                   window.location.href = "/";
                 }}
-                leftSection={<IconLogout size={16} />}
+                leftSection={<IconLogout size={24} />}
               >
                 {t("actions.logout")}
               </Menu.Item>

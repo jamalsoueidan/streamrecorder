@@ -12,9 +12,8 @@ import { IconScissors } from "@tabler/icons-react";
 import { getLocale, getTranslations } from "next-intl/server";
 
 import PaginationControls from "@/app/components/pagination";
-import api from "@/lib/api";
+import publicApi from "@/lib/public-api";
 import { ClipCard } from "./components/clip-card";
-import { MyClipsGuard } from "./components/my-clips-guard";
 
 interface PageProps {
   searchParams: Promise<{
@@ -24,23 +23,23 @@ interface PageProps {
 
 export default async function Page({ searchParams }: PageProps) {
   const { page } = await searchParams;
-  const t = await getTranslations("protected.myClips");
+  const t = await getTranslations("protected.clips");
   const locale = await getLocale();
 
   const pageNumber = parseInt(page || "1", 10);
   const limit = 12;
 
-  const response = await api.clip
-    .meGetClips({
+  const response = await publicApi.clip
+    .getClips({
       populate: {
         follower: {
           populate: { avatar: true },
         },
       },
-      "pagination[limit]": limit,
-      "pagination[start]": (pageNumber - 1) * limit,
+      "pagination[pageSize]": limit,
+      "pagination[page]": pageNumber,
+      "pagination[withCount]": true,
       sort: "createdAt:desc",
-      locale,
     })
     .catch(() => null);
 
@@ -66,45 +65,43 @@ export default async function Page({ searchParams }: PageProps) {
 
       <Divider mx={{ base: "-xs", sm: "-md" }} />
 
-      <MyClipsGuard>
-        {!clips || clips.length === 0 ? (
-          <EmptyState />
-        ) : (
-          <Stack gap="md">
-            {totalPages > 1 && (
-              <Center>
-                <PaginationControls
-                  siblings={1}
-                  boundaries={1}
-                  total={totalPages}
-                  size="md"
-                />
-              </Center>
-            )}
-            <SimpleGrid cols={{ base: 1, sm: 2, md: 3, lg: 4 }}>
-              {clips?.map((clip) => (
-                <ClipCard key={clip.documentId} clip={clip} locale={locale} />
-              ))}
-            </SimpleGrid>
-            {totalPages > 1 && (
-              <Center>
-                <PaginationControls
-                  siblings={1}
-                  boundaries={1}
-                  total={totalPages}
-                  size="md"
-                />
-              </Center>
-            )}
-          </Stack>
-        )}
-      </MyClipsGuard>
+      {!clips || clips.length === 0 ? (
+        <EmptyState />
+      ) : (
+        <Stack gap="md">
+          {totalPages > 1 && (
+            <Center>
+              <PaginationControls
+                siblings={1}
+                boundaries={1}
+                total={totalPages}
+                size="md"
+              />
+            </Center>
+          )}
+          <SimpleGrid cols={{ base: 1, sm: 2, md: 3 }}>
+            {clips.map((clip) => (
+              <ClipCard key={clip.documentId} clip={clip} locale={locale} />
+            ))}
+          </SimpleGrid>
+          {totalPages > 1 && (
+            <Center>
+              <PaginationControls
+                siblings={1}
+                boundaries={1}
+                total={totalPages}
+                size="md"
+              />
+            </Center>
+          )}
+        </Stack>
+      )}
     </Stack>
   );
 }
 
 async function EmptyState() {
-  const t = await getTranslations("protected.myClips");
+  const t = await getTranslations("protected.clips");
 
   return (
     <Stack align="center" justify="center" py={80} gap="lg">

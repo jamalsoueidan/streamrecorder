@@ -8,13 +8,14 @@
     "dashboard": "Dashboard",
     "premium": "Premium",
     "myRecordings": "Recordings",
-    "myClips": "Clips",
+    "myClips": "My Clips",
     "watchLater": "Watch Later",
     "aiStudio": "AI Studio",
     "myList": "Library",
     "live": "Live",
     "tiktokInsights": "TikTok Insights",
     "explore": "Explore",
+    "clips": "Clips",
     "friends": "Friends"
   },
   "actions": {

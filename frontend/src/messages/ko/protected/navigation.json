@@ -8,13 +8,14 @@
     "dashboard": "대시보드",
     "premium": "프리미엄",
     "myRecordings": "녹화 영상",
-    "myClips": "클립",
+    "myClips": "내 클립",
     "watchLater": "나중에 볼 영상",
     "aiStudio": "AI 스튜디오",
     "myList": "라이브러리",
     "live": "라이브",
     "tiktokInsights": "TikTok 라이브 분석",
     "explore": "탐색",
+    "clips": "클립",
     "friends": "친구"
   },
   "actions": {
