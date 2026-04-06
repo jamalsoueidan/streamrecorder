@@ -549,8 +549,8 @@ export default function PremiumClient() {
                     </Paper>
 
                     {/* Freemius Option - hidden when 3 months (Stripe-only) is selected */}
-                    {selectedBilling !== "3months" && (
-                      <Paper
+                    <Paper
+                        display={selectedBilling === "3months" ? "none" : undefined}
                         p="md"
                         radius="md"
                         withBorder
@@ -614,7 +614,6 @@ export default function PremiumClient() {
                           </Group>
                         </Stack>
                       </Paper>
-                    )}
                   </Stack>
                 </Radio.Group>
 
