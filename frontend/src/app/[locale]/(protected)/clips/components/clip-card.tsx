@@ -21,8 +21,8 @@ import { IconDownload } from "@tabler/icons-react";
 import { useFormatter } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
+import { ClipPreview } from "../../my-clips/components/clip-preview";
 import { ClipMenu } from "./clip-menu";
-import { ClipPreview } from "./clip-preview";
 
 interface ClipCardProps {
   clip: Clip;
@@ -50,68 +50,78 @@ export function ClipCard({ clip, locale }: ClipCardProps) {
 
   return (
     <>
-    <DownloadUpgradeModal opened={upgradeOpened} onClose={closeUpgrade} />
-    <Card radius="md" withBorder>
-      <Stack gap="xs">
-        <Flex justify="space-between" align="center">
-          <Text fw="bold" fz="sm" lineClamp={1}>
-            {clip.title}
-          </Text>
-          <Tooltip label="Download">
-            <ActionIcon variant="filled" onClick={handleDownload}>
-              <IconDownload size={18} />
-            </ActionIcon>
-          </Tooltip>
-        </Flex>
+      <DownloadUpgradeModal opened={upgradeOpened} onClose={closeUpgrade} />
+      <Card radius="md" withBorder>
+        <Stack gap="xs">
+          <Flex justify="space-between" align="center">
+            <Text fw="bold" fz="sm" lineClamp={1}>
+              {clip.title}
+            </Text>
+            <Tooltip label="Download">
+              <ActionIcon variant="filled" onClick={handleDownload}>
+                <IconDownload size={18} />
+              </ActionIcon>
+            </Tooltip>
+          </Flex>
 
-        <ClipPreview clip={clip} type={clip.follower?.type} locale={locale} />
+          <ClipPreview clip={clip} type={clip.follower?.type} locale={locale} />
 
-        <Flex justify="space-between" align="center">
-          <Group gap="xs">
-            {follower && (
-              <Anchor
-                component={Link}
-                href={getProfileUrl(follower as unknown as { username?: string; type?: FollowerTypeEnum })}
-                prefetch={false}
-              >
-                <Avatar size="sm">
-                  {follower.avatar?.url && (
-                    <Image
-                      src={generateAvatarUrl(follower.avatar?.url)}
-                      alt={follower.username || ""}
-                      width={28}
-                      height={28}
-                      unoptimized
-                    />
-                  )}
-                </Avatar>
-              </Anchor>
-            )}
-            <Stack gap={0}>
+          <Flex justify="space-between" align="center">
+            <Group gap="xs">
               {follower && (
                 <Anchor
                   component={Link}
-                  href={getProfileUrl(follower as unknown as { username?: string; type?: FollowerTypeEnum })}
+                  href={getProfileUrl(
+                    follower as unknown as {
+                      username?: string;
+                      type?: FollowerTypeEnum;
+                    },
+                  )}
                   prefetch={false}
-                  size="xs"
                 >
-                  @{follower.username}
+                  <Avatar size="sm">
+                    {follower.avatar?.url && (
+                      <Image
+                        src={generateAvatarUrl(follower.avatar?.url)}
+                        alt={follower.username || ""}
+                        width={28}
+                        height={28}
+                        unoptimized
+                      />
+                    )}
+                  </Avatar>
                 </Anchor>
               )}
-              {clip.createdAt && (
-                <Text size="xs" c="dimmed">
-                  {format.dateTime(new Date(clip.createdAt), {
-                    dateStyle: "medium",
-                    timeStyle: "short",
-                  })}
-                </Text>
-              )}
-            </Stack>
-          </Group>
-          <ClipMenu clip={clip} />
-        </Flex>
-      </Stack>
-    </Card>
+              <Stack gap={0}>
+                {follower && (
+                  <Anchor
+                    component={Link}
+                    href={getProfileUrl(
+                      follower as unknown as {
+                        username?: string;
+                        type?: FollowerTypeEnum;
+                      },
+                    )}
+                    prefetch={false}
+                    size="xs"
+                  >
+                    @{follower.username}
+                  </Anchor>
+                )}
+                {clip.createdAt && (
+                  <Text size="xs" c="dimmed">
+                    {format.dateTime(new Date(clip.createdAt), {
+                      dateStyle: "medium",
+                      timeStyle: "short",
+                    })}
+                  </Text>
+                )}
+              </Stack>
+            </Group>
+            <ClipMenu clip={clip} />
+          </Flex>
+        </Stack>
+      </Card>
     </>
   );
 }

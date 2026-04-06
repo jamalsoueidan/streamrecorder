@@ -8,6 +8,7 @@ import {
   MediaMuteButton,
   MediaPlayButton,
   MediaPosterImage,
+  MediaTimeDisplay,
   MediaTimeRange,
   MediaVolumeRange,
 } from "@/app/[locale]/(protected)/components/video/media-chrome";
@@ -99,7 +100,10 @@ export function ClipPreview({ clip, type, locale }: Props) {
   }, [isInView]);
 
   return (
-    <div ref={containerRef} style={{ position: "relative", overflow: "hidden" }}>
+    <div
+      ref={containerRef}
+      style={{ position: "relative", overflow: "hidden" }}
+    >
       {!isInView ? (
         <Skeleton height="clamp(200px, 40vh, 400px)" radius="md" />
       ) : (
@@ -131,6 +135,7 @@ export function ClipPreview({ clip, type, locale }: Props) {
 
           <MediaControlBar>
             <MediaTimeRange />
+            <MediaTimeDisplay showduration />
             <Box className="volume-hover-container">
               <MediaVolumeRange />
               <MediaMuteButton />
