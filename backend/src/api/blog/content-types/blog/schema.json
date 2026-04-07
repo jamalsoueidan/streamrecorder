@@ -23,8 +23,8 @@
         }
       }
     },
-    "short": {
-      "type": "text",
+    "excerpt": {
+      "type": "string",
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -47,6 +47,39 @@
         }
       },
       "targetField": "title"
+    },
+    "keywords": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "cover_image": {
+      "type": "media",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "card_image": {
+      "type": "media",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "multiple": false,
+      "allowedTypes": [
+        "files",
+        "images"
+      ]
     }
   }
 }
