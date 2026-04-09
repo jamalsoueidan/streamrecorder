@@ -97,7 +97,8 @@ export function parseUsername(input: string): ParsedUsername {
     };
   }
 
-  const bigoRegex = /(?:https?:\/\/)?(?:www\.)?bigo\.tv\/([^\/\s?]+)/i;
+  const bigoRegex =
+    /(?:https?:\/\/)?(?:www\.)?bigo\.tv\/(?:[a-z]{2}\/)?(?:user\/)?([^\/\s?]+)/i;
   const bigoMatch = trimmed.match(bigoRegex);
 
   if (bigoMatch) {
