@@ -21,7 +21,8 @@
     "youtube": "YouTube creators",
     "afreecatv": "AfreecaTV creators",
     "pandalive": "Pandalive creators",
-    "bigo": "Bigo creators"
+    "bigo": "Bigo creators",
+    "buzzcast": "Buzzcast creators"
   },
   "watchRecordings": {
     "title": "Watch Recordings",
@@ -32,7 +33,8 @@
     "youtube": "YouTube recordings",
     "afreecatv": "AfreecaTV recordings",
     "pandalive": "Pandalive recordings",
-    "bigo": "Bigo recordings"
+    "bigo": "Bigo recordings",
+    "buzzcast": "Buzzcast recordings"
   },
   "legal": {
     "title": "Legal",

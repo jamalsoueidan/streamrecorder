@@ -108,6 +108,18 @@ export function parseUsername(input: string): ParsedUsername {
     };
   }
 
+  // Buzzcast URL pattern
+  const buzzcastRegex =
+    /(?:https?:\/\/)?(?:www\.)?buzzcast\.com\/web\/personalInfo\/([^\/\s?]+)/i;
+  const buzzcastMatch = trimmed.match(buzzcastRegex);
+
+  if (buzzcastMatch) {
+    return {
+      username: buzzcastMatch[1],
+      platform: "buzzcast",
+    };
+  }
+
   // Plain username - remove @ if present
   const username = trimmed.startsWith("@") ? trimmed.slice(1) : trimmed;
 

@@ -215,6 +215,16 @@
         "gravação bigo",
         "gravador de stream bigo"
       ]
+    },
+    "buzzcast": {
+      "title": "Criadores do Buzzcast",
+      "description": "Descubra criadores do Buzzcast que usam o LiveStreamRecorder para gravar suas lives e transformá-las em clipes curtos.",
+      "keywords": [
+        "criadores buzzcast",
+        "live stream buzzcast",
+        "gravação buzzcast",
+        "gravador de stream buzzcast"
+      ]
     }
   },
   "hero": {
@@ -226,7 +236,8 @@
       "kick": "Criadores do Kick",
       "pandalive": "Criadores do Pandalive",
       "afreecatv": "Criadores da AfreecaTV",
-      "bigo": "Criadores do Bigo"
+      "bigo": "Criadores do Bigo",
+      "buzzcast": "Criadores do Buzzcast"
     },
     "subtitle": {
       "all": "Junte-se a milhares de criadores que usam o LiveStreamRecorder para salvar suas streams e criar clipes curtos.",
@@ -236,7 +247,8 @@
       "kick": "Junte-se a milhares de criadores do Kick que usam o LiveStreamRecorder para salvar suas streams e criar clipes curtos.",
       "pandalive": "Junte-se a milhares de criadores do Pandalive que usam o LiveStreamRecorder para salvar suas streams e criar clipes curtos.",
       "afreecatv": "Junte-se a milhares de criadores da AfreecaTV que usam o LiveStreamRecorder para salvar suas streams e criar clipes curtos.",
-      "bigo": "Junte-se a milhares de criadores do Bigo que usam o LiveStreamRecorder para salvar suas streams e criar clipes curtos."
+      "bigo": "Junte-se a milhares de criadores do Bigo que usam o LiveStreamRecorder para salvar suas streams e criar clipes curtos.",
+      "buzzcast": "Junte-se a milhares de criadores do Buzzcast que usam o LiveStreamRecorder para salvar suas streams e criar clipes curtos."
     }
   },
   "features": {
@@ -249,7 +261,8 @@
       "kick": "Grave Suas Streams do Kick Automaticamente",
       "pandalive": "Grave Suas Streams do Pandalive Automaticamente",
       "afreecatv": "Grave Suas Streams da AfreecaTV Automaticamente",
-      "bigo": "Grave Suas Streams do Bigo Automaticamente"
+      "bigo": "Grave Suas Streams do Bigo Automaticamente",
+      "buzzcast": "Grave Suas Streams do Buzzcast Automaticamente"
     },
     "subtitle": "Da live ao clipe curto em minutos",
     "items": {
@@ -280,7 +293,8 @@
       "kick": "Grave Suas Streams do Kick",
       "afreecatv": "Grave Suas Streams da AfreecaTV",
       "pandalive": "Grave Suas Streams do Pandalive",
-      "bigo": "Grave Suas Streams do Bigo"
+      "bigo": "Grave Suas Streams do Bigo",
+      "buzzcast": "Grave Suas Streams do Buzzcast"
     },
     "subtitle": {
       "all": "Junte-se a milhares de criadores. Salve suas streams, crie clipes curtos com o ClipAI e faça sua audiência crescer.",
@@ -290,7 +304,8 @@
       "kick": "Junte-se a milhares de streamers do Kick. Salve suas streams, crie clipes curtos com o ClipAI e faça sua audiência crescer.",
       "afreecatv": "Junte-se a milhares de criadores da AfreecaTV. Salve suas streams e crie clipes curtos com o ClipAI.",
       "pandalive": "Junte-se a milhares de criadores do Pandalive. Salve suas streams e crie clipes curtos com o ClipAI.",
-      "bigo": "Junte-se a milhares de criadores do Bigo. Salve suas streams e crie clipes curtos com o ClipAI."
+      "bigo": "Junte-se a milhares de criadores do Bigo. Salve suas streams e crie clipes curtos com o ClipAI.",
+      "buzzcast": "Junte-se a milhares de criadores do Buzzcast. Salve suas streams e crie clipes curtos com o ClipAI."
     },
     "button": "Comece a Gravar Grátis"
   },
@@ -304,7 +319,8 @@
       "kick": "Seja o primeiro criador do Kick a entrar!",
       "pandalive": "Seja o primeiro criador do Pandalive a entrar!",
       "afreecatv": "Seja o primeiro criador da AfreecaTV a entrar!",
-      "bigo": "Seja o primeiro criador do Bigo a entrar!"
+      "bigo": "Seja o primeiro criador do Bigo a entrar!",
+      "buzzcast": "Seja o primeiro criador do Buzzcast a entrar!"
     },
     "button": "Começar"
   },
@@ -316,7 +332,8 @@
     "kick": "## Sobre a Gravação de Streams do Kick\n\nPare de perder suas streams do Kick. Gravamos automaticamente para que você possa transformar seus melhores momentos em clipes e fazer sua audiência crescer.\n\n### Por Que Gravar Suas Streams do Kick?\n\nO Kick está crescendo rápido. Seu melhor conteúdo merece viver além da transmissão. Salvamos tudo para que você possa clipar e compartilhar.\n\n### Gravação Automática\n\nBasta adicionar seu canal do Kick e entrar ao vivo. Gravamos automaticamente — sem precisar instalar nada.\n\n### Reveja e Baixe\n\nTerminou de transmitir? Sua gravação está pronta. Assista ou baixe para edição.\n\n### O ClipAI Encontra Seus Melhores Momentos\n\nO ClipAI analisa sua stream e extrai os destaques. Clipes curtos prontos em minutos.\n\n### Faça Sua Audiência Crescer\n\nTransforme uma stream em dezenas de clipes. Compartilhe em todo lugar.\n\n### Grátis Para Começar\n\nCrie uma conta e comece a gravar suas streams do Kick hoje.",
     "pandalive": "## Sobre a Gravação de Streams do Pandalive\n\nPare de perder suas streams do Pandalive. Gravamos automaticamente para que você possa transformar seus melhores momentos em clipes.\n\n### Por Que Gravar Suas Streams do Pandalive?\n\nSeu melhor conteúdo merece viver além da transmissão. Salvamos tudo para que você possa clipar e compartilhar.\n\n### Gravação Automática\n\nBasta adicionar seu canal do Pandalive e entrar ao vivo. Gravamos automaticamente.\n\n### Reveja e Baixe\n\nTerminou de transmitir? Sua gravação está pronta. Assista ou baixe.\n\n### O ClipAI Encontra Seus Melhores Momentos\n\nO ClipAI analisa sua stream e extrai os destaques. Clipes curtos prontos em minutos.\n\n### Grátis Para Começar\n\nCrie uma conta e comece a gravar suas streams do Pandalive hoje.",
     "afreecatv": "## Sobre a Gravação de Streams da AfreecaTV\n\nPare de perder suas streams da AfreecaTV. Gravamos automaticamente para que você possa transformar seus melhores momentos em clipes.\n\n### Por Que Gravar Suas Streams da AfreecaTV?\n\nSeu melhor conteúdo merece viver além da transmissão. Salvamos tudo para que você possa clipar e compartilhar.\n\n### Gravação Automática\n\nBasta adicionar seu canal da AfreecaTV e entrar ao vivo. Gravamos automaticamente.\n\n### Reveja e Baixe\n\nTerminou de transmitir? Sua gravação está pronta. Assista ou baixe.\n\n### O ClipAI Encontra Seus Melhores Momentos\n\nO ClipAI analisa sua stream e extrai os destaques. Clipes curtos prontos em minutos.\n\n### Grátis Para Começar\n\nCrie uma conta e comece a gravar suas streams da AfreecaTV hoje.",
-    "bigo": "## Sobre a Gravação de Streams do Bigo\n\nPare de perder suas streams do Bigo. Gravamos automaticamente para que você possa transformar seus melhores momentos em clipes.\n\n### Por Que Gravar Suas Streams do Bigo?\n\nSeu melhor conteúdo merece viver além da transmissão. Salvamos tudo para que você possa clipar e compartilhar.\n\n### Gravação Automática\n\nBasta adicionar seu canal do Bigo e entrar ao vivo. Gravamos automaticamente.\n\n### Reveja e Baixe\n\nTerminou de transmitir? Sua gravação está pronta. Assista ou baixe.\n\n### O ClipAI Encontra Seus Melhores Momentos\n\nO ClipAI analisa sua stream e extrai os destaques. Clipes curtos prontos em minutos.\n\n### Grátis Para Começar\n\nCrie uma conta e comece a gravar suas streams do Bigo hoje."
+    "bigo": "## Sobre a Gravação de Streams do Bigo\n\nPare de perder suas streams do Bigo. Gravamos automaticamente para que você possa transformar seus melhores momentos em clipes.\n\n### Por Que Gravar Suas Streams do Bigo?\n\nSeu melhor conteúdo merece viver além da transmissão. Salvamos tudo para que você possa clipar e compartilhar.\n\n### Gravação Automática\n\nBasta adicionar seu canal do Bigo e entrar ao vivo. Gravamos automaticamente.\n\n### Reveja e Baixe\n\nTerminou de transmitir? Sua gravação está pronta. Assista ou baixe.\n\n### O ClipAI Encontra Seus Melhores Momentos\n\nO ClipAI analisa sua stream e extrai os destaques. Clipes curtos prontos em minutos.\n\n### Grátis Para Começar\n\nCrie uma conta e comece a gravar suas streams do Bigo hoje.",
+    "buzzcast": "## Sobre a Gravação de Streams do Buzzcast\n\nPare de perder suas streams do Buzzcast. Gravamos automaticamente para que você possa transformar seus melhores momentos em clipes.\n\n### Por Que Gravar Suas Streams do Buzzcast?\n\nSeu melhor conteúdo merece viver além da transmissão. Salvamos tudo para que você possa clipar e compartilhar.\n\n### Gravação Automática\n\nBasta adicionar seu canal do Buzzcast e entrar ao vivo. Gravamos automaticamente.\n\n### Reveja e Baixe\n\nTerminou de transmitir? Sua gravação está pronta. Assista ou baixe.\n\n### O ClipAI Encontra Seus Melhores Momentos\n\nO ClipAI analisa sua stream e extrai os destaques. Clipes curtos prontos em minutos.\n\n### Grátis Para Começar\n\nCrie uma conta e comece a gravar suas streams do Buzzcast hoje."
   },
   "faq": "Perguntas Frequentes",
   "country": {

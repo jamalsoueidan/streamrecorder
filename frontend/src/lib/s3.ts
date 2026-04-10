@@ -34,6 +34,7 @@ const PLATFORM_BUCKETS = new Set([
   "afreecatv",
   "pandalive",
   "tango",
+  "buzzcast",
 ]);
 
 export function getS3(): S3Client {

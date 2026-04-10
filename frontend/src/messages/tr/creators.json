@@ -179,6 +179,16 @@
         "bigo kaydı",
         "bigo yayın kaydedici"
       ]
+    },
+    "buzzcast": {
+      "title": "Buzzcast İçerik Üreticileri",
+      "description": "Canlı yayınlarını kaydetmek ve kısa kliplere dönüştürmek için LiveStreamRecorder kullanan Buzzcast içerik üreticilerini keşfedin.",
+      "keywords": [
+        "buzzcast içerik üreticileri",
+        "buzzcast canlı yayın",
+        "buzzcast kaydı",
+        "buzzcast yayın kaydedici"
+      ]
     }
   },
   "hero": {
@@ -190,7 +200,8 @@
       "kick": "Kick İçerik Üreticileri",
       "pandalive": "Pandalive İçerik Üreticileri",
       "afreecatv": "AfreecaTV İçerik Üreticileri",
-      "bigo": "Bigo İçerik Üreticileri"
+      "bigo": "Bigo İçerik Üreticileri",
+      "buzzcast": "Buzzcast İçerik Üreticileri"
     },
     "subtitle": {
       "all": "Yayınlarını kaydetmek ve kısa klipler oluşturmak için LiveStreamRecorder kullanan binlerce içerik üreticisine katılın.",
@@ -200,7 +211,8 @@
       "kick": "Yayınlarını kaydetmek ve kısa klipler oluşturmak için LiveStreamRecorder kullanan binlerce Kick içerik üreticisine katılın.",
       "pandalive": "Yayınlarını kaydetmek ve kısa klipler oluşturmak için LiveStreamRecorder kullanan binlerce Pandalive içerik üreticisine katılın.",
       "afreecatv": "Yayınlarını kaydetmek ve kısa klipler oluşturmak için LiveStreamRecorder kullanan binlerce AfreecaTV içerik üreticisine katılın.",
-      "bigo": "Yayınlarını kaydetmek ve kısa klipler oluşturmak için LiveStreamRecorder kullanan binlerce Bigo içerik üreticisine katılın."
+      "bigo": "Yayınlarını kaydetmek ve kısa klipler oluşturmak için LiveStreamRecorder kullanan binlerce Bigo içerik üreticisine katılın.",
+      "buzzcast": "Yayınlarını kaydetmek ve kısa klipler oluşturmak için LiveStreamRecorder kullanan binlerce Buzzcast içerik üreticisine katılın."
     }
   },
   "features": {
@@ -213,7 +225,8 @@
       "kick": "Kick Yayınlarınızı Otomatik Kaydedin",
       "pandalive": "Pandalive Yayınlarınızı Otomatik Kaydedin",
       "afreecatv": "AfreecaTV Yayınlarınızı Otomatik Kaydedin",
-      "bigo": "Bigo Yayınlarınızı Otomatik Kaydedin"
+      "bigo": "Bigo Yayınlarınızı Otomatik Kaydedin",
+      "buzzcast": "Buzzcast Yayınlarınızı Otomatik Kaydedin"
     },
     "subtitle": "Canlı yayından kısa kliplere dakikalar içinde",
     "items": {
@@ -244,7 +257,8 @@
       "kick": "Kick Yayınlarınızı Kaydedin",
       "afreecatv": "AfreecaTV Yayınlarınızı Kaydedin",
       "pandalive": "Pandalive Yayınlarınızı Kaydedin",
-      "bigo": "Bigo Yayınlarınızı Kaydedin"
+      "bigo": "Bigo Yayınlarınızı Kaydedin",
+      "buzzcast": "Buzzcast Yayınlarınızı Kaydedin"
     },
     "subtitle": {
       "all": "Binlerce içerik üreticisine katılın. Yayınlarınızı kaydedin, ClipAI ile kısa klipler oluşturun ve kitlenizi büyütün.",
@@ -254,7 +268,8 @@
       "kick": "Binlerce Kick yayıncısına katılın. Yayınlarınızı kaydedin, ClipAI ile kısa klipler oluşturun ve kitlenizi büyütün.",
       "afreecatv": "Binlerce AfreecaTV içerik üreticisine katılın. Yayınlarınızı kaydedin ve ClipAI ile kısa klipler oluşturun.",
       "pandalive": "Binlerce Pandalive içerik üreticisine katılın. Yayınlarınızı kaydedin ve ClipAI ile kısa klipler oluşturun.",
-      "bigo": "Binlerce Bigo içerik üreticisine katılın. Yayınlarınızı kaydedin ve ClipAI ile kısa klipler oluşturun."
+      "bigo": "Binlerce Bigo içerik üreticisine katılın. Yayınlarınızı kaydedin ve ClipAI ile kısa klipler oluşturun.",
+      "buzzcast": "Binlerce Buzzcast içerik üreticisine katılın. Yayınlarınızı kaydedin ve ClipAI ile kısa klipler oluşturun."
     },
     "button": "Ücretsiz Kayda Başla"
   },
@@ -268,7 +283,8 @@
       "kick": "Katılan ilk Kick içerik üreticisi olun!",
       "pandalive": "Katılan ilk Pandalive içerik üreticisi olun!",
       "afreecatv": "Katılan ilk AfreecaTV içerik üreticisi olun!",
-      "bigo": "Katılan ilk Bigo içerik üreticisi olun!"
+      "bigo": "Katılan ilk Bigo içerik üreticisi olun!",
+      "buzzcast": "Katılan ilk Buzzcast içerik üreticisi olun!"
     },
     "button": "Başlayın"
   },
@@ -280,7 +296,8 @@
     "kick": "## Kick Yayın Kaydı Hakkında\n\nKick yayınlarınızı kaybetmeyi bırakın. Onları otomatik olarak kaydediyoruz, böylece en iyi anlarınızı kliplere dönüştürebilir ve kitlenizi büyütebilirsiniz.\n\n### Kick Yayınlarınızı Neden Kaydetmelisiniz?\n\nKick hızla büyüyor. En iyi içeriğiniz yayının ötesinde yaşamayı hak ediyor. Her şeyi kaydediyoruz, böylece klip yapabilir ve paylaşabilirsiniz.\n\n### Otomatik Kayıt\n\nSadece Kick kanalınızı ekleyin ve canlı yayına geçin. Otomatik olarak kayıt yapıyoruz — kurulacak bir şey yok.\n\n### Tekrar İzleyin ve İndirin\n\nYayını bitirdiniz mi? Kaydınız hazır. Tekrar izleyin veya düzenleme için indirin.\n\n### ClipAI En İyi Anlarınızı Bulur\n\nClipAI yayınınızı tarar ve öne çıkanları çıkarır. Kısa klipler dakikalar içinde hazır.\n\n### Kitlenizi Büyütün\n\nBir yayını düzinelerce klibe dönüştürün. Her yerde paylaşın.\n\n### Başlamak Ücretsiz\n\nBugün bir hesap oluşturun ve Kick yayınlarınızı kaydetmeye başlayın.",
     "pandalive": "## Pandalive Yayın Kaydı Hakkında\n\nPandalive yayınlarınızı kaybetmeyi bırakın. Onları otomatik olarak kaydediyoruz, böylece en iyi anlarınızı kliplere dönüştürebilirsiniz.\n\n### Pandalive Yayınlarınızı Neden Kaydetmelisiniz?\n\nEn iyi içeriğiniz yayının ötesinde yaşamayı hak ediyor. Her şeyi kaydediyoruz, böylece klip yapabilir ve paylaşabilirsiniz.\n\n### Otomatik Kayıt\n\nSadece Pandalive kanalınızı ekleyin ve canlı yayına geçin. Otomatik olarak kayıt yapıyoruz.\n\n### Tekrar İzleyin ve İndirin\n\nYayını bitirdiniz mi? Kaydınız hazır. Tekrar izleyin veya indirin.\n\n### ClipAI En İyi Anlarınızı Bulur\n\nClipAI yayınınızı tarar ve öne çıkanları çıkarır. Kısa klipler dakikalar içinde hazır.\n\n### Başlamak Ücretsiz\n\nBugün bir hesap oluşturun ve Pandalive yayınlarınızı kaydetmeye başlayın.",
     "afreecatv": "## AfreecaTV Yayın Kaydı Hakkında\n\nAfreecaTV yayınlarınızı kaybetmeyi bırakın. Onları otomatik olarak kaydediyoruz, böylece en iyi anlarınızı kliplere dönüştürebilirsiniz.\n\n### AfreecaTV Yayınlarınızı Neden Kaydetmelisiniz?\n\nEn iyi içeriğiniz yayının ötesinde yaşamayı hak ediyor. Her şeyi kaydediyoruz, böylece klip yapabilir ve paylaşabilirsiniz.\n\n### Otomatik Kayıt\n\nSadece AfreecaTV kanalınızı ekleyin ve canlı yayına geçin. Otomatik olarak kayıt yapıyoruz.\n\n### Tekrar İzleyin ve İndirin\n\nYayını bitirdiniz mi? Kaydınız hazır. Tekrar izleyin veya indirin.\n\n### ClipAI En İyi Anlarınızı Bulur\n\nClipAI yayınınızı tarar ve öne çıkanları çıkarır. Kısa klipler dakikalar içinde hazır.\n\n### Başlamak Ücretsiz\n\nBugün bir hesap oluşturun ve AfreecaTV yayınlarınızı kaydetmeye başlayın.",
-    "bigo": "## Bigo Yayın Kaydı Hakkında\n\nBigo yayınlarınızı kaybetmeyi bırakın. Onları otomatik olarak kaydediyoruz, böylece en iyi anlarınızı kliplere dönüştürebilirsiniz.\n\n### Bigo Yayınlarınızı Neden Kaydetmelisiniz?\n\nEn iyi içeriğiniz yayının ötesinde yaşamayı hak ediyor. Her şeyi kaydediyoruz, böylece klip yapabilir ve paylaşabilirsiniz.\n\n### Otomatik Kayıt\n\nSadece Bigo kanalınızı ekleyin ve canlı yayına geçin. Otomatik olarak kayıt yapıyoruz.\n\n### Tekrar İzleyin ve İndirin\n\nYayını bitirdiniz mi? Kaydınız hazır. Tekrar izleyin veya indirin.\n\n### ClipAI En İyi Anlarınızı Bulur\n\nClipAI yayınınızı tarar ve öne çıkanları çıkarır. Kısa klipler dakikalar içinde hazır.\n\n### Başlamak Ücretsiz\n\nBugün bir hesap oluşturun ve Bigo yayınlarınızı kaydetmeye başlayın."
+    "bigo": "## Bigo Yayın Kaydı Hakkında\n\nBigo yayınlarınızı kaybetmeyi bırakın. Onları otomatik olarak kaydediyoruz, böylece en iyi anlarınızı kliplere dönüştürebilirsiniz.\n\n### Bigo Yayınlarınızı Neden Kaydetmelisiniz?\n\nEn iyi içeriğiniz yayının ötesinde yaşamayı hak ediyor. Her şeyi kaydediyoruz, böylece klip yapabilir ve paylaşabilirsiniz.\n\n### Otomatik Kayıt\n\nSadece Bigo kanalınızı ekleyin ve canlı yayına geçin. Otomatik olarak kayıt yapıyoruz.\n\n### Tekrar İzleyin ve İndirin\n\nYayını bitirdiniz mi? Kaydınız hazır. Tekrar izleyin veya indirin.\n\n### ClipAI En İyi Anlarınızı Bulur\n\nClipAI yayınınızı tarar ve öne çıkanları çıkarır. Kısa klipler dakikalar içinde hazır.\n\n### Başlamak Ücretsiz\n\nBugün bir hesap oluşturun ve Bigo yayınlarınızı kaydetmeye başlayın.",
+    "buzzcast": "## Buzzcast Yayın Kaydı Hakkında\n\nBuzzcast yayınlarınızı kaybetmeyi bırakın. Onları otomatik olarak kaydediyoruz, böylece en iyi anlarınızı kliplere dönüştürebilirsiniz.\n\n### Buzzcast Yayınlarınızı Neden Kaydetmelisiniz?\n\nEn iyi içeriğiniz yayının ötesinde yaşamayı hak ediyor. Her şeyi kaydediyoruz, böylece klip yapabilir ve paylaşabilirsiniz.\n\n### Otomatik Kayıt\n\nSadece Buzzcast kanalınızı ekleyin ve canlı yayına geçin. Otomatik olarak kayıt yapıyoruz.\n\n### Tekrar İzleyin ve İndirin\n\nYayını bitirdiniz mi? Kaydınız hazır. Tekrar izleyin veya indirin.\n\n### ClipAI En İyi Anlarınızı Bulur\n\nClipAI yayınınızı tarar ve öne çıkanları çıkarır. Kısa klipler dakikalar içinde hazır.\n\n### Başlamak Ücretsiz\n\nBugün bir hesap oluşturun ve Buzzcast yayınlarınızı kaydetmeye başlayın."
   },
   "faq": "Sıkça Sorulan Sorular",
   "country": {

@@ -21,7 +21,8 @@
     "youtube": "YouTube クリエイター",
     "afreecatv": "AfreecaTV クリエイター",
     "pandalive": "Pandalive クリエイター",
-    "bigo": "Bigo クリエイター"
+    "bigo": "Bigo クリエイター",
+    "buzzcast": "Buzzcast クリエイター"
   },
   "watchRecordings": {
     "title": "録画を視聴",
@@ -32,7 +33,8 @@
     "youtube": "YouTube 録画",
     "afreecatv": "AfreecaTV 録画",
     "pandalive": "Pandalive 録画",
-    "bigo": "Bigo 録画"
+    "bigo": "Bigo 録画",
+    "buzzcast": "Buzzcast 録画"
   },
   "legal": {
     "title": "法的情報",

@@ -19,6 +19,7 @@ export enum FollowerTypeEnum {
   Pandalive = "pandalive",
   Bigo = "bigo",
   Tango = "tango",
+  Buzzcast = "buzzcast",
 }
 
 /** Filter by follow status */
@@ -972,6 +973,7 @@ export interface AiRequest {
       duration?: number;
       thumbnailInterval?: number;
       thumbnailCols?: number;
+      bucket?: string;
       videoOriginal?: VideosVideoComponent;
       videoSmall?: VideosVideoComponent;
       recording?: {
@@ -1595,6 +1597,7 @@ export interface AiTask {
         duration?: number;
         thumbnailInterval?: number;
         thumbnailCols?: number;
+        bucket?: string;
         videoOriginal?: VideosVideoComponent;
         videoSmall?: VideosVideoComponent;
         recording?: {
@@ -2980,6 +2983,7 @@ export interface Clip {
       duration?: number;
       thumbnailInterval?: number;
       thumbnailCols?: number;
+      bucket?: string;
       videoOriginal?: VideosVideoComponent;
       videoSmall?: VideosVideoComponent;
       recording?: {
@@ -3559,6 +3563,7 @@ export interface ClipShare {
         duration?: number;
         thumbnailInterval?: number;
         thumbnailCols?: number;
+        bucket?: string;
         videoOriginal?: VideosVideoComponent;
         videoSmall?: VideosVideoComponent;
         recording?: {
@@ -4879,6 +4884,7 @@ export interface Meme {
       duration?: number;
       thumbnailInterval?: number;
       thumbnailCols?: number;
+      bucket?: string;
       videoOriginal?: VideosVideoComponent;
       videoSmall?: VideosVideoComponent;
       recording?: {
@@ -6112,6 +6118,7 @@ export interface SourceRequest {
     duration: number;
     thumbnailInterval?: number;
     thumbnailCols?: number;
+    bucket?: string;
     videoOriginal?: VideosVideoComponent;
     videoSmall?: VideosVideoComponent;
     /** @example "string or id" */
@@ -6147,6 +6154,7 @@ export interface Source {
   duration: number;
   thumbnailInterval?: number;
   thumbnailCols?: number;
+  bucket?: string;
   videoOriginal?: VideosVideoComponent;
   videoSmall?: VideosVideoComponent;
   recording?: {
@@ -6568,6 +6576,7 @@ export interface Source {
       duration?: number;
       thumbnailInterval?: number;
       thumbnailCols?: number;
+      bucket?: string;
       videoOriginal?: VideosVideoComponent;
       videoSmall?: VideosVideoComponent;
       recording?: {
@@ -7088,6 +7097,7 @@ export interface VisitorView {
       duration?: number;
       thumbnailInterval?: number;
       thumbnailCols?: number;
+      bucket?: string;
       videoOriginal?: VideosVideoComponent;
       videoSmall?: VideosVideoComponent;
       recording?: {
@@ -7323,6 +7333,7 @@ export enum ActivityTypeEnum {
   Pandalive = "pandalive",
   Bigo = "bigo",
   Tango = "tango",
+  Buzzcast = "buzzcast",
 }
 
 export enum ActivityGenderEnum {
@@ -7367,6 +7378,7 @@ export enum AiRequestTypeEnum {
   Pandalive = "pandalive",
   Bigo = "bigo",
   Tango = "tango",
+  Buzzcast = "buzzcast",
 }
 
 export enum AiRequestGenderEnum {
@@ -7439,6 +7451,7 @@ export enum AiTaskTypeEnum {
   Pandalive = "pandalive",
   Bigo = "bigo",
   Tango = "tango",
+  Buzzcast = "buzzcast",
 }
 
 export enum AiTaskGenderEnum {
@@ -7504,6 +7517,7 @@ export enum ClipTypeEnum {
   Pandalive = "pandalive",
   Bigo = "bigo",
   Tango = "tango",
+  Buzzcast = "buzzcast",
 }
 
 export enum ClipGenderEnum {
@@ -7554,6 +7568,7 @@ export enum ClipShareTypeEnum {
   Pandalive = "pandalive",
   Bigo = "bigo",
   Tango = "tango",
+  Buzzcast = "buzzcast",
 }
 
 export enum ClipShareGenderEnum {
@@ -7610,6 +7625,7 @@ export enum FollowerRequestTypeEnum {
   Pandalive = "pandalive",
   Bigo = "bigo",
   Tango = "tango",
+  Buzzcast = "buzzcast",
 }
 
 export enum FollowerRequestGenderEnum {
@@ -7669,6 +7685,7 @@ export enum MemeTypeEnum1 {
   Pandalive = "pandalive",
   Bigo = "bigo",
   Tango = "tango",
+  Buzzcast = "buzzcast",
 }
 
 export enum MemeGenderEnum {
@@ -7758,6 +7775,7 @@ export enum SocialAccountTypeEnum {
   Pandalive = "pandalive",
   Bigo = "bigo",
   Tango = "tango",
+  Buzzcast = "buzzcast",
 }
 
 export enum SocialAccountGenderEnum {
@@ -7809,6 +7827,7 @@ export enum SourceTypeEnum {
   Pandalive = "pandalive",
   Bigo = "bigo",
   Tango = "tango",
+  Buzzcast = "buzzcast",
 }
 
 export enum SourceGenderEnum {
@@ -7853,6 +7872,7 @@ export enum VisitorViewTypeEnum {
   Pandalive = "pandalive",
   Bigo = "bigo",
   Tango = "tango",
+  Buzzcast = "buzzcast",
 }
 
 export enum VisitorViewGenderEnum {

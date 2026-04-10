@@ -257,6 +257,55 @@
           "answer": "Ya. Pengguna premium dapat menggunakan ClipAI untuk secara otomatis mengubah rekaman Live Bigo menjadi klip sorotan pendek siap untuk TikTok, YouTube Shorts, atau Reels. Ini adalah cara yang bagus untuk memanfaatkan konten live Anda dan menumbuhkan pengikut di berbagai platform."
         }
       ]
+    },
+    "buzzcast": {
+      "title": "Rekaman Live Buzzcast",
+      "description": "Tonton dan unduh rekaman Live Buzzcast di LiveStreamRecorder. Live Buzzcast Anda direkam secara otomatis di cloud — tidak ada masalah layar hitam, tidak perlu screen recorder. Perekam Live Buzzcast termudah untuk kreator.",
+      "keywords": [
+        "perekam buzzcast",
+        "perekam live buzzcast",
+        "rekam live buzzcast",
+        "screen recorder live buzzcast",
+        "screen record live buzzcast",
+        "screen recorder untuk live buzzcast",
+        "screen record buzzcast",
+        "rekaman layar hitam buzzcast",
+        "screen recorder live buzzcast layar hitam",
+        "rekaman layar hitam buzzcast",
+        "screen recorder buzzcast layar hitam",
+        "rekam buzzcast layar hitam",
+        "simpan live buzzcast"
+      ],
+      "faqs": [
+        {
+          "question": "Bagaimana cara merekam Live Buzzcast saya?",
+          "answer": "Dengan LiveStreamRecorder, Live Buzzcast Anda direkam secara otomatis di cloud. Daftar, tambahkan username Buzzcast Live Anda, dan setiap kali Anda live akan direkam. Tidak perlu instal APK perekam Buzzcast Live, tidak perlu screen recording — semuanya terjadi dari sisi server."
+        },
+        {
+          "question": "Mengapa saya mendapatkan layar hitam saat merekam Buzzcast Live?",
+          "answer": "Masalah layar hitam umum terjadi saat menggunakan screen recorder di Buzzcast Live. LiveStreamRecorder menghindari ini sepenuhnya karena merekam Live Buzzcast Anda langsung dari cloud — tidak ada layar hitam, tidak ada solusi alternatif, tidak ada aplikasi screen recording yang tidak dapat diandalkan."
+        },
+        {
+          "question": "Bagaimana cara memperbaiki masalah layar hitam screen recorder Buzzcast Live?",
+          "answer": "Solusi termudah adalah melewati screen recording sama sekali. LiveStreamRecorder adalah perekam Buzzcast berbasis cloud yang merekam Live Anda dari sisi server dalam kualitas tinggi. Tidak ada masalah layar hitam, tidak ada aplikasi yang perlu dikonfigurasi — cukup tambahkan username Anda dan Live Buzzcast Anda direkam secara otomatis."
+        },
+        {
+          "question": "Apakah saya perlu screen recorder untuk Buzzcast Live?",
+          "answer": "Tidak. Screen recorder untuk Buzzcast Live sering mengakibatkan masalah layar hitam atau kualitas rekaman yang rendah. LiveStreamRecorder adalah perekam Buzzcast Live berbasis cloud yang merekam stream Anda secara otomatis dalam kualitas tinggi — tidak perlu instal aplikasi, tidak ada layar hitam."
+        },
+        {
+          "question": "Bisakah saya merekam Live Buzzcast saya secara gratis?",
+          "answer": "Ya. Daftar ke LiveStreamRecorder gratis dan mulai merekam Live Buzzcast Anda segera. Paket premium membuka fitur unduhan rekaman, ClipAI untuk klip sorotan otomatis, dan penyimpanan yang diperluas."
+        },
+        {
+          "question": "Bisakah saya mengunduh rekaman Live Buzzcast saya?",
+          "answer": "Ya. Pengguna premium dapat mengunduh rekaman Live Buzzcast sebagai file video untuk ditonton secara offline. Setiap rekaman juga dapat ditonton langsung di browser Anda tanpa perlu mengunduh."
+        },
+        {
+          "question": "Bisakah saya mengubah rekaman Live Buzzcast menjadi klip pendek?",
+          "answer": "Ya. Pengguna premium dapat menggunakan ClipAI untuk secara otomatis mengubah rekaman Live Buzzcast menjadi klip sorotan pendek siap untuk TikTok, YouTube Shorts, atau Reels. Ini adalah cara yang bagus untuk memanfaatkan konten live Anda dan menumbuhkan pengikut di berbagai platform."
+        }
+      ]
     }
   },
   "hero": {
@@ -268,7 +317,8 @@
       "kick": "Rekaman Kick",
       "afreecatv": "Rekaman AfreecaTV",
       "pandalive": "Rekaman Pandalive",
-      "bigo": "Rekaman Bigo"
+      "bigo": "Rekaman Bigo",
+      "buzzcast": "Rekaman Buzzcast"
     },
     "subtitle": {
       "all": "Tonton rekaman live stream dari kreator di platform kami. Unduh dan temukan konten baru.",
@@ -278,7 +328,8 @@
       "kick": "Tonton rekaman stream Kick dari kreator di platform kami. Unduh dan temukan konten baru.",
       "afreecatv": "Tonton rekaman AfreecaTV dari kreator di platform kami. Unduh dan temukan konten baru.",
       "pandalive": "Tonton rekaman Pandalive dari kreator di platform kami. Unduh dan temukan konten baru.",
-      "bigo": "Tonton rekaman Bigo dari kreator di platform kami. Unduh dan temukan konten baru."
+      "bigo": "Tonton rekaman Bigo dari kreator di platform kami. Unduh dan temukan konten baru.",
+      "buzzcast": "Tonton rekaman Buzzcast dari kreator di platform kami. Unduh dan temukan konten baru."
     }
   },
   "cta": {
@@ -290,7 +341,8 @@
       "kick": "Rekam Stream Kick",
       "pandalive": "Rekam Stream Pandalive",
       "afreecatv": "Rekam Stream AfreecaTV",
-      "bigo": "Rekam Stream Bigo"
+      "bigo": "Rekam Stream Bigo",
+      "buzzcast": "Rekam Stream Buzzcast"
     },
     "subtitle": {
       "all": "Simpan stream TikTok, Twitch, YouTube, dan Kick Anda secara otomatis. Unduh rekaman, buat klip pendek, dan kembangkan audiens Anda.",
@@ -300,7 +352,8 @@
       "kick": "Simpan stream Kick Anda secara otomatis. Unduh rekaman, buat klip pendek dengan ClipAI, dan kembangkan audiens Anda.",
       "pandalive": "Simpan stream Pandalive Anda secara otomatis. Unduh rekaman dan buat klip pendek dengan ClipAI.",
       "afreecatv": "Simpan stream AfreecaTV Anda secara otomatis. Unduh rekaman dan buat klip pendek dengan ClipAI.",
-      "bigo": "Simpan stream Bigo Anda secara otomatis. Unduh rekaman dan buat klip pendek dengan ClipAI."
+      "bigo": "Simpan stream Bigo Anda secara otomatis. Unduh rekaman dan buat klip pendek dengan ClipAI.",
+      "buzzcast": "Simpan stream Buzzcast Anda secara otomatis. Unduh rekaman dan buat klip pendek dengan ClipAI."
     },
     "button": "Mulai Rekam Gratis"
   },
@@ -314,7 +367,8 @@
       "kick": "Jadilah kreator pertama yang merekam stream Kick!",
       "afreecatv": "Jadilah kreator pertama yang merekam stream AfreecaTV!",
       "pandalive": "Jadilah kreator pertama yang merekam stream Pandalive!",
-      "bigo": "Jadilah kreator pertama yang merekam stream Bigo!"
+      "bigo": "Jadilah kreator pertama yang merekam stream Bigo!",
+      "buzzcast": "Jadilah kreator pertama yang merekam stream Buzzcast!"
     },
     "button": "Mulai Sekarang"
   },
@@ -326,7 +380,8 @@
     "kick": "## Rekaman Stream Kick\n\nTonton rekaman Kick dari kreator yang menggunakan LiveStreamRecorder untuk menyimpan stream mereka.\n\n### VOD Kick Tersimpan\n\nKick berkembang pesat. Kreator menggunakan perekam Kick kami untuk menyimpan stream dan membangun perpustakaan konten. Tonton konten mereka di sini.\n\n### Tonton Rekaman Kick\n\nSetiap rekaman Kick tersedia untuk ditonton langsung. Pengguna premium dapat mengunduh VOD Kick untuk ditonton secara offline.\n\n### Rekam Stream Kick Anda\n\nIngin stream Kick Anda ada di sini? Daftar gratis dan tambahkan saluran Anda. Kami merekam setiap siaran secara otomatis. Gunakan ClipAI untuk mengubah stream Anda menjadi klip pendek dan menumbuhkan audiens Anda.\n\n### Perekam Stream Kick\n\nRekaman otomatis untuk setiap stream Kick. Tidak perlu software. Cukup live dan kami menyimpan semuanya.",
     "pandalive": "## Rekaman Pandalive\n\nTonton rekaman Pandalive dari kreator yang menggunakan LiveStreamRecorder untuk menyimpan stream mereka.\n\n### Stream Korea Tersimpan\n\nKreator Pandalive menggunakan perekam kami untuk menyimpan siaran mereka. Tonton konten Korea di sini.\n\n### Tonton Rekaman Pandalive\n\nSetiap rekaman Pandalive tersedia untuk ditonton langsung. Pengguna premium dapat mengunduh rekaman untuk ditonton secara offline.\n\n### Rekam Stream Pandalive Anda\n\nIngin stream Anda ada di sini? Daftar gratis dan tambahkan saluran Anda. Kami merekam setiap siaran secara otomatis.",
     "afreecatv": "## Rekaman AfreecaTV\n\nTonton rekaman AfreecaTV dari kreator yang menggunakan LiveStreamRecorder untuk menyimpan stream mereka.\n\n### Stream Korea Tersimpan\n\nKreator AfreecaTV menggunakan perekam kami untuk menyimpan siaran mereka. Tonton konten Korea di sini.\n\n### Tonton Rekaman AfreecaTV\n\nSetiap rekaman AfreecaTV tersedia untuk ditonton langsung. Pengguna premium dapat mengunduh rekaman untuk ditonton secara offline.\n\n### Rekam Stream AfreecaTV Anda\n\nIngin stream Anda ada di sini? Daftar gratis dan tambahkan saluran Anda. Kami merekam setiap siaran secara otomatis.",
-    "bigo": "## Rekaman Live Bigo\n\nTonton rekaman Live Bigo dari kreator yang menggunakan LiveStreamRecorder untuk menyimpan Live mereka sendiri. Setiap Live Bigo direkam secara otomatis di cloud dan disimpan untuk ditonton sesuai permintaan.\n\n### Live Bigo Tersimpan Secara Otomatis\n\nLive Bigo menghilang saat berakhir, dan aplikasi screen recording sering menyebabkan masalah layar hitam. Perekam Live Bigo kami merekam Live Anda langsung dari cloud — tidak ada layar hitam, tidak ada aplikasi screen recording, tidak ada kerumitan. Cukup tambahkan username Anda dan Live Anda direkam.\n\n### Tonton dan Unduh Rekaman Bigo Anda\n\nSetiap rekaman Live Bigo tersedia untuk ditonton langsung di browser Anda. Pengguna premium dapat mengunduh rekaman mereka sebagai file video untuk ditonton secara offline — sempurna untuk memanfaatkan kembali konten live Anda.\n\n### Tanpa Layar Hitam — Selamanya\n\nLelah dengan masalah layar hitam saat mencoba merekam Live Bigo? LiveStreamRecorder merekam semuanya dari sisi server dalam kualitas tinggi. Tidak perlu screen recorder untuk Bigo Live, tidak perlu unduhan APK, tidak ada frustrasi layar hitam. Langsung berjalan.\n\n### Ubah Live Bigo Menjadi Klip dengan ClipAI\n\nIngin mengubah rekaman Live Bigo menjadi klip pendek? ClipAI menganalisis Live yang direkam dan membuat sorotan siap untuk diposting sebagai video TikTok, YouTube Shorts, atau Reels. Kembangkan audiens Anda di luar Bigo.\n\n### Perekam Live Bigo Termudah untuk Kreator\n\nLiveStreamRecorder adalah perekam Bigo berbasis cloud — tidak perlu instal aplikasi, tidak ada ponsel yang dibiarkan menyala, tidak ada layar hitam untuk ditangani. Daftar gratis, tambahkan username Bigo Anda, dan jangan pernah kehilangan Live lagi."
+    "bigo": "## Rekaman Live Bigo\n\nTonton rekaman Live Bigo dari kreator yang menggunakan LiveStreamRecorder untuk menyimpan Live mereka sendiri. Setiap Live Bigo direkam secara otomatis di cloud dan disimpan untuk ditonton sesuai permintaan.\n\n### Live Bigo Tersimpan Secara Otomatis\n\nLive Bigo menghilang saat berakhir, dan aplikasi screen recording sering menyebabkan masalah layar hitam. Perekam Live Bigo kami merekam Live Anda langsung dari cloud — tidak ada layar hitam, tidak ada aplikasi screen recording, tidak ada kerumitan. Cukup tambahkan username Anda dan Live Anda direkam.\n\n### Tonton dan Unduh Rekaman Bigo Anda\n\nSetiap rekaman Live Bigo tersedia untuk ditonton langsung di browser Anda. Pengguna premium dapat mengunduh rekaman mereka sebagai file video untuk ditonton secara offline — sempurna untuk memanfaatkan kembali konten live Anda.\n\n### Tanpa Layar Hitam — Selamanya\n\nLelah dengan masalah layar hitam saat mencoba merekam Live Bigo? LiveStreamRecorder merekam semuanya dari sisi server dalam kualitas tinggi. Tidak perlu screen recorder untuk Bigo Live, tidak perlu unduhan APK, tidak ada frustrasi layar hitam. Langsung berjalan.\n\n### Ubah Live Bigo Menjadi Klip dengan ClipAI\n\nIngin mengubah rekaman Live Bigo menjadi klip pendek? ClipAI menganalisis Live yang direkam dan membuat sorotan siap untuk diposting sebagai video TikTok, YouTube Shorts, atau Reels. Kembangkan audiens Anda di luar Bigo.\n\n### Perekam Live Bigo Termudah untuk Kreator\n\nLiveStreamRecorder adalah perekam Bigo berbasis cloud — tidak perlu instal aplikasi, tidak ada ponsel yang dibiarkan menyala, tidak ada layar hitam untuk ditangani. Daftar gratis, tambahkan username Bigo Anda, dan jangan pernah kehilangan Live lagi.",
+    "buzzcast": "## Rekaman Live Buzzcast\n\nTonton rekaman Live Buzzcast dari kreator yang menggunakan LiveStreamRecorder untuk menyimpan Live mereka sendiri. Setiap Live Buzzcast direkam secara otomatis di cloud dan disimpan untuk ditonton sesuai permintaan.\n\n### Live Buzzcast Tersimpan Secara Otomatis\n\nLive Buzzcast menghilang saat berakhir, dan aplikasi screen recording sering menyebabkan masalah layar hitam. Perekam Live Buzzcast kami merekam Live Anda langsung dari cloud — tidak ada layar hitam, tidak ada aplikasi screen recording, tidak ada kerumitan. Cukup tambahkan username Anda dan Live Anda direkam.\n\n### Tonton dan Unduh Rekaman Buzzcast Anda\n\nSetiap rekaman Live Buzzcast tersedia untuk ditonton langsung di browser Anda. Pengguna premium dapat mengunduh rekaman mereka sebagai file video untuk ditonton secara offline — sempurna untuk memanfaatkan kembali konten live Anda.\n\n### Tanpa Layar Hitam — Selamanya\n\nLelah dengan masalah layar hitam saat mencoba merekam Live Buzzcast? LiveStreamRecorder merekam semuanya dari sisi server dalam kualitas tinggi. Tidak perlu screen recorder untuk Buzzcast Live, tidak perlu unduhan APK, tidak ada frustrasi layar hitam. Langsung berjalan.\n\n### Ubah Live Buzzcast Menjadi Klip dengan ClipAI\n\nIngin mengubah rekaman Live Buzzcast menjadi klip pendek? ClipAI menganalisis Live yang direkam dan membuat sorotan siap untuk diposting sebagai video TikTok, YouTube Shorts, atau Reels. Kembangkan audiens Anda di luar Buzzcast.\n\n### Perekam Live Buzzcast Termudah untuk Kreator\n\nLiveStreamRecorder adalah perekam Buzzcast berbasis cloud — tidak perlu instal aplikasi, tidak ada ponsel yang dibiarkan menyala, tidak ada layar hitam untuk ditangani. Daftar gratis, tambahkan username Buzzcast Anda, dan jangan pernah kehilangan Live lagi."
   },
   "jsonLd": {
     "name": {
@@ -337,7 +392,8 @@
       "kick": "Rekaman Stream Kick",
       "afreecatv": "Rekaman Stream AfreecaTV",
       "pandalive": "Rekaman Stream Pandalive",
-      "bigo": "Rekaman Stream Bigo"
+      "bigo": "Rekaman Stream Bigo",
+      "buzzcast": "Rekaman Stream Buzzcast"
     },
     "description": {
       "all": "Tonton rekaman live stream dari kreator di LiveStreamRecorder.",
@@ -347,7 +403,8 @@
       "kick": "Tonton rekaman stream Kick dari kreator di LiveStreamRecorder.",
       "afreecatv": "Tonton rekaman AfreecaTV dari kreator di LiveStreamRecorder.",
       "pandalive": "Tonton rekaman Pandalive dari kreator di LiveStreamRecorder.",
-      "bigo": "Tonton rekaman Bigo dari kreator di LiveStreamRecorder."
+      "bigo": "Tonton rekaman Bigo dari kreator di LiveStreamRecorder.",
+      "buzzcast": "Tonton rekaman Buzzcast dari kreator di LiveStreamRecorder."
     },
     "streamTitle": "Stream {nickname} - {date}",
     "streamDescription": {
@@ -358,7 +415,8 @@
       "afreecatv": "Rekaman AfreecaTV dari {nickname}",
       "pandalive": "Rekaman Pandalive dari {nickname}",
       "bigo": "Rekaman Bigo dari {nickname}",
-      "unknown": "Rekaman live stream dari {nickname}"
+      "unknown": "Rekaman live stream dari {nickname}",
+      "buzzcast": "Rekaman Buzzcast dari {nickname}"
     }
   },
   "recordedOn": "Direkam pada {date}",

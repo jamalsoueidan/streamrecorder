@@ -215,6 +215,16 @@
         "rekaman bigo",
         "perekam stream bigo"
       ]
+    },
+    "buzzcast": {
+      "title": "Kreator Buzzcast",
+      "description": "Temukan kreator Buzzcast yang menggunakan LiveStreamRecorder untuk merekam live stream mereka dan mengubahnya menjadi klip pendek.",
+      "keywords": [
+        "kreator buzzcast",
+        "live stream buzzcast",
+        "rekaman buzzcast",
+        "perekam stream buzzcast"
+      ]
     }
   },
   "hero": {
@@ -226,7 +236,8 @@
       "kick": "Kreator Kick",
       "pandalive": "Kreator Pandalive",
       "afreecatv": "Kreator AfreecaTV",
-      "bigo": "Kreator Bigo"
+      "bigo": "Kreator Bigo",
+      "buzzcast": "Kreator Buzzcast"
     },
     "subtitle": {
       "all": "Bergabunglah dengan ribuan kreator yang menggunakan LiveStreamRecorder untuk menyimpan stream mereka dan membuat klip pendek.",
@@ -236,7 +247,8 @@
       "kick": "Bergabunglah dengan ribuan kreator Kick yang menggunakan LiveStreamRecorder untuk menyimpan stream mereka dan membuat klip pendek.",
       "pandalive": "Bergabunglah dengan ribuan kreator Pandalive yang menggunakan LiveStreamRecorder untuk menyimpan stream mereka dan membuat klip pendek.",
       "afreecatv": "Bergabunglah dengan ribuan kreator AfreecaTV yang menggunakan LiveStreamRecorder untuk menyimpan stream mereka dan membuat klip pendek.",
-      "bigo": "Bergabunglah dengan ribuan kreator Bigo yang menggunakan LiveStreamRecorder untuk menyimpan stream mereka dan membuat klip pendek."
+      "bigo": "Bergabunglah dengan ribuan kreator Bigo yang menggunakan LiveStreamRecorder untuk menyimpan stream mereka dan membuat klip pendek.",
+      "buzzcast": "Bergabunglah dengan ribuan kreator Buzzcast yang menggunakan LiveStreamRecorder untuk menyimpan stream mereka dan membuat klip pendek."
     }
   },
   "features": {
@@ -249,7 +261,8 @@
       "kick": "Rekam Stream Kick Anda Secara Otomatis",
       "pandalive": "Rekam Stream Pandalive Anda Secara Otomatis",
       "afreecatv": "Rekam Stream AfreecaTV Anda Secara Otomatis",
-      "bigo": "Rekam Stream Bigo Anda Secara Otomatis"
+      "bigo": "Rekam Stream Bigo Anda Secara Otomatis",
+      "buzzcast": "Rekam Stream Buzzcast Anda Secara Otomatis"
     },
     "subtitle": "Dari live stream ke klip pendek dalam hitungan menit",
     "items": {
@@ -280,7 +293,8 @@
       "kick": "Rekam Stream Kick Anda",
       "afreecatv": "Rekam Stream AfreecaTV Anda",
       "pandalive": "Rekam Stream Pandalive Anda",
-      "bigo": "Rekam Stream Bigo Anda"
+      "bigo": "Rekam Stream Bigo Anda",
+      "buzzcast": "Rekam Stream Buzzcast Anda"
     },
     "subtitle": {
       "all": "Bergabunglah dengan ribuan kreator. Simpan stream Anda, buat klip pendek dengan ClipAI, dan kembangkan audiens Anda.",
@@ -290,7 +304,8 @@
       "kick": "Bergabunglah dengan ribuan streamer Kick. Simpan stream Anda, buat klip pendek dengan ClipAI, dan kembangkan audiens Anda.",
       "afreecatv": "Bergabunglah dengan ribuan kreator AfreecaTV. Simpan stream Anda dan buat klip pendek dengan ClipAI.",
       "pandalive": "Bergabunglah dengan ribuan kreator Pandalive. Simpan stream Anda dan buat klip pendek dengan ClipAI.",
-      "bigo": "Bergabunglah dengan ribuan kreator Bigo. Simpan stream Anda dan buat klip pendek dengan ClipAI."
+      "bigo": "Bergabunglah dengan ribuan kreator Bigo. Simpan stream Anda dan buat klip pendek dengan ClipAI.",
+      "buzzcast": "Bergabunglah dengan ribuan kreator Buzzcast. Simpan stream Anda dan buat klip pendek dengan ClipAI."
     },
     "button": "Mulai Rekam Gratis"
   },
@@ -304,7 +319,8 @@
       "kick": "Jadilah kreator Kick pertama yang bergabung!",
       "pandalive": "Jadilah kreator Pandalive pertama yang bergabung!",
       "afreecatv": "Jadilah kreator AfreecaTV pertama yang bergabung!",
-      "bigo": "Jadilah kreator Bigo pertama yang bergabung!"
+      "bigo": "Jadilah kreator Bigo pertama yang bergabung!",
+      "buzzcast": "Jadilah kreator Buzzcast pertama yang bergabung!"
     },
     "button": "Mulai Sekarang"
   },
@@ -316,7 +332,8 @@
     "kick": "## Tentang Rekaman Stream Kick\n\nJangan biarkan stream Kick Anda hilang. Kami merekamnya secara otomatis agar Anda bisa mengubah momen terbaik menjadi klip dan menumbuhkan audiens Anda.\n\n### Mengapa Merekam Stream Kick Anda?\n\nKick berkembang pesat. Konten terbaik Anda berhak untuk hidup lebih dari sekadar stream. Kami menyimpan semuanya agar Anda bisa membuat klip dan membagikannya.\n\n### Rekaman Otomatis\n\nCukup tambahkan saluran Kick Anda dan mulai live. Kami merekam secara otomatis — tidak perlu instal apapun.\n\n### Tonton dan Unduh\n\nSelesai streaming? Rekaman Anda sudah siap. Tonton kembali atau unduh untuk diedit.\n\n### ClipAI Menemukan Momen Terbaik Anda\n\nClipAI memindai stream Anda dan mengambil sorotan. Klip pendek siap dalam hitungan menit.\n\n### Kembangkan Audiens Anda\n\nUbah satu stream menjadi puluhan klip. Bagikan ke mana saja.\n\n### Gratis untuk Memulai\n\nBuat akun dan mulai rekam stream Kick Anda hari ini.",
     "pandalive": "## Tentang Rekaman Stream Pandalive\n\nJangan biarkan stream Pandalive Anda hilang. Kami merekamnya secara otomatis agar Anda bisa mengubah momen terbaik menjadi klip.\n\n### Mengapa Merekam Stream Pandalive Anda?\n\nKonten terbaik Anda berhak untuk hidup lebih dari sekadar stream. Kami menyimpan semuanya agar Anda bisa membuat klip dan membagikannya.\n\n### Rekaman Otomatis\n\nCukup tambahkan saluran Pandalive Anda dan mulai live. Kami merekam secara otomatis.\n\n### Tonton dan Unduh\n\nSelesai streaming? Rekaman Anda sudah siap. Tonton kembali atau unduh.\n\n### ClipAI Menemukan Momen Terbaik Anda\n\nClipAI memindai stream Anda dan mengambil sorotan. Klip pendek siap dalam hitungan menit.\n\n### Gratis untuk Memulai\n\nBuat akun dan mulai rekam stream Pandalive Anda hari ini.",
     "afreecatv": "## Tentang Rekaman Stream AfreecaTV\n\nJangan biarkan stream AfreecaTV Anda hilang. Kami merekamnya secara otomatis agar Anda bisa mengubah momen terbaik menjadi klip.\n\n### Mengapa Merekam Stream AfreecaTV Anda?\n\nKonten terbaik Anda berhak untuk hidup lebih dari sekadar stream. Kami menyimpan semuanya agar Anda bisa membuat klip dan membagikannya.\n\n### Rekaman Otomatis\n\nCukup tambahkan saluran AfreecaTV Anda dan mulai live. Kami merekam secara otomatis.\n\n### Tonton dan Unduh\n\nSelesai streaming? Rekaman Anda sudah siap. Tonton kembali atau unduh.\n\n### ClipAI Menemukan Momen Terbaik Anda\n\nClipAI memindai stream Anda dan mengambil sorotan. Klip pendek siap dalam hitungan menit.\n\n### Gratis untuk Memulai\n\nBuat akun dan mulai rekam stream AfreecaTV Anda hari ini.",
-    "bigo": "## Tentang Rekaman Stream Bigo\n\nJangan biarkan stream Bigo Anda hilang. Kami merekamnya secara otomatis agar Anda bisa mengubah momen terbaik menjadi klip.\n\n### Mengapa Merekam Stream Bigo Anda?\n\nKonten terbaik Anda berhak untuk hidup lebih dari sekadar stream. Kami menyimpan semuanya agar Anda bisa membuat klip dan membagikannya.\n\n### Rekaman Otomatis\n\nCukup tambahkan saluran Bigo Anda dan mulai live. Kami merekam secara otomatis.\n\n### Tonton dan Unduh\n\nSelesai streaming? Rekaman Anda sudah siap. Tonton kembali atau unduh.\n\n### ClipAI Menemukan Momen Terbaik Anda\n\nClipAI memindai stream Anda dan mengambil sorotan. Klip pendek siap dalam hitungan menit.\n\n### Gratis untuk Memulai\n\nBuat akun dan mulai rekam stream Bigo Anda hari ini."
+    "bigo": "## Tentang Rekaman Stream Bigo\n\nJangan biarkan stream Bigo Anda hilang. Kami merekamnya secara otomatis agar Anda bisa mengubah momen terbaik menjadi klip.\n\n### Mengapa Merekam Stream Bigo Anda?\n\nKonten terbaik Anda berhak untuk hidup lebih dari sekadar stream. Kami menyimpan semuanya agar Anda bisa membuat klip dan membagikannya.\n\n### Rekaman Otomatis\n\nCukup tambahkan saluran Bigo Anda dan mulai live. Kami merekam secara otomatis.\n\n### Tonton dan Unduh\n\nSelesai streaming? Rekaman Anda sudah siap. Tonton kembali atau unduh.\n\n### ClipAI Menemukan Momen Terbaik Anda\n\nClipAI memindai stream Anda dan mengambil sorotan. Klip pendek siap dalam hitungan menit.\n\n### Gratis untuk Memulai\n\nBuat akun dan mulai rekam stream Bigo Anda hari ini.",
+    "buzzcast": "## Tentang Rekaman Stream Buzzcast\n\nJangan biarkan stream Buzzcast Anda hilang. Kami merekamnya secara otomatis agar Anda bisa mengubah momen terbaik menjadi klip.\n\n### Mengapa Merekam Stream Buzzcast Anda?\n\nKonten terbaik Anda berhak untuk hidup lebih dari sekadar stream. Kami menyimpan semuanya agar Anda bisa membuat klip dan membagikannya.\n\n### Rekaman Otomatis\n\nCukup tambahkan saluran Buzzcast Anda dan mulai live. Kami merekam secara otomatis.\n\n### Tonton dan Unduh\n\nSelesai streaming? Rekaman Anda sudah siap. Tonton kembali atau unduh.\n\n### ClipAI Menemukan Momen Terbaik Anda\n\nClipAI memindai stream Anda dan mengambil sorotan. Klip pendek siap dalam hitungan menit.\n\n### Gratis untuk Memulai\n\nBuat akun dan mulai rekam stream Buzzcast Anda hari ini."
   },
   "faq": "Pertanyaan yang Sering Diajukan",
   "country": {

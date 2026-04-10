@@ -59,6 +59,7 @@ const ALL_PLATFORMS: PlatformType[] = [
   "afreecatv",
   "pandalive",
   "bigo",
+  "buzzcast",
 ];
 
 type SearchStep = "input" | "selectPlatform" | "results";

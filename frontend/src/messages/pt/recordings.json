@@ -257,6 +257,55 @@
           "answer": "Sim. Usuários premium podem usar o ClipAI para transformar automaticamente suas gravações do Bigo Live em clipes curtos de destaque prontos para TikTok, YouTube Shorts ou Reels. É uma ótima forma de reutilizar seu conteúdo ao vivo e crescer seus seguidores em outras plataformas."
         }
       ]
+    },
+    "buzzcast": {
+      "title": "Gravações do Buzzcast Live",
+      "description": "Assista e baixe gravações do Buzzcast Live no LiveStreamRecorder. Suas lives do Buzzcast são capturadas automaticamente na nuvem — sem tela preta, sem gravador de tela. O gravador do Buzzcast Live mais fácil para criadores.",
+      "keywords": [
+        "gravador buzzcast",
+        "gravador buzzcast live",
+        "gravar buzzcast live",
+        "gravador de tela buzzcast live",
+        "gravar tela buzzcast live",
+        "gravador de tela para buzzcast live",
+        "gravar tela buzzcast",
+        "tela preta gravação buzzcast",
+        "gravador buzzcast live tela preta",
+        "gravar buzzcast tela preta",
+        "gravador de tela buzzcast tela preta",
+        "gravar buzzcast tela preta",
+        "salvar buzzcast live"
+      ],
+      "faqs": [
+        {
+          "question": "Como gravo minhas lives do Buzzcast?",
+          "answer": "Com o LiveStreamRecorder, suas lives do Buzzcast são gravadas automaticamente na nuvem. Cadastre-se, adicione seu nome de usuário do Buzzcast Live e cada vez que você entra ao vivo é capturado. Sem APK de gravador do Buzzcast Live para instalar, sem gravar a tela — tudo acontece no servidor."
+        },
+        {
+          "question": "Por que aparece tela preta ao gravar o Buzzcast Live?",
+          "answer": "Problemas de tela preta são comuns ao usar gravadores de tela no Buzzcast Live. O LiveStreamRecorder evita isso completamente porque captura suas lives do Buzzcast diretamente na nuvem — sem tela preta, sem gambiarras, sem aplicativos de gravação de tela não confiáveis."
+        },
+        {
+          "question": "Como resolvo o problema de tela preta do gravador de tela do Buzzcast Live?",
+          "answer": "A solução mais fácil é abandonar a gravação de tela de vez. O LiveStreamRecorder é um gravador do Buzzcast na nuvem que captura suas lives no servidor em alta qualidade. Sem problemas de tela preta, sem aplicativos para configurar — basta adicionar seu nome de usuário e suas lives do Buzzcast são gravadas automaticamente."
+        },
+        {
+          "question": "Preciso de um gravador de tela para o Buzzcast Live?",
+          "answer": "Não. Gravadores de tela para Buzzcast Live frequentemente resultam em tela preta ou capturas de baixa qualidade. O LiveStreamRecorder é um gravador do Buzzcast Live na nuvem que captura suas streams automaticamente em alta qualidade — sem aplicativo para instalar, sem tela preta."
+        },
+        {
+          "question": "Posso gravar minhas lives do Buzzcast gratuitamente?",
+          "answer": "Sim. Cadastre-se no LiveStreamRecorder gratuitamente e comece a gravar suas lives do Buzzcast agora mesmo. Os planos premium desbloqueiam download das suas gravações, ClipAI para clipes de destaques automáticos e armazenamento estendido."
+        },
+        {
+          "question": "Posso baixar minhas gravações do Buzzcast Live?",
+          "answer": "Sim. Usuários premium podem baixar suas gravações do Buzzcast Live como arquivos de vídeo para visualização offline. Cada gravação também pode ser assistida instantaneamente no navegador sem precisar baixar."
+        },
+        {
+          "question": "Posso transformar minhas gravações do Buzzcast Live em clipes curtos?",
+          "answer": "Sim. Usuários premium podem usar o ClipAI para transformar automaticamente suas gravações do Buzzcast Live em clipes curtos de destaque prontos para TikTok, YouTube Shorts ou Reels. É uma ótima forma de reutilizar seu conteúdo ao vivo e crescer seus seguidores em outras plataformas."
+        }
+      ]
     }
   },
   "hero": {
@@ -268,7 +317,8 @@
       "kick": "Gravações do Kick",
       "afreecatv": "Gravações da AfreecaTV",
       "pandalive": "Gravações do Pandalive",
-      "bigo": "Gravações do Bigo"
+      "bigo": "Gravações do Bigo",
+      "buzzcast": "Gravações do Buzzcast"
     },
     "subtitle": {
       "all": "Assista gravações de lives de criadores na nossa plataforma. Baixe e descubra novos conteúdos.",
@@ -278,7 +328,8 @@
       "kick": "Assista gravações de streams do Kick de criadores na nossa plataforma. Baixe e descubra novos conteúdos.",
       "afreecatv": "Assista gravações da AfreecaTV de criadores na nossa plataforma. Baixe e descubra novos conteúdos.",
       "pandalive": "Assista gravações do Pandalive de criadores na nossa plataforma. Baixe e descubra novos conteúdos.",
-      "bigo": "Assista gravações do Bigo de criadores na nossa plataforma. Baixe e descubra novos conteúdos."
+      "bigo": "Assista gravações do Bigo de criadores na nossa plataforma. Baixe e descubra novos conteúdos.",
+      "buzzcast": "Assista gravações do Buzzcast de criadores na nossa plataforma. Baixe e descubra novos conteúdos."
     }
   },
   "cta": {
@@ -290,7 +341,8 @@
       "kick": "Grave Streams do Kick",
       "pandalive": "Grave Streams do Pandalive",
       "afreecatv": "Grave Streams da AfreecaTV",
-      "bigo": "Grave Streams do Bigo"
+      "bigo": "Grave Streams do Bigo",
+      "buzzcast": "Grave Streams do Buzzcast"
     },
     "subtitle": {
       "all": "Salve automaticamente suas streams do TikTok, Twitch, YouTube e Kick. Baixe gravações, crie clipes curtos e faça sua audiência crescer.",
@@ -300,7 +352,8 @@
       "kick": "Salve automaticamente suas streams do Kick. Baixe gravações, crie clipes curtos com o ClipAI e faça sua audiência crescer.",
       "pandalive": "Salve automaticamente suas streams do Pandalive. Baixe gravações e crie clipes curtos com o ClipAI.",
       "afreecatv": "Salve automaticamente suas streams da AfreecaTV. Baixe gravações e crie clipes curtos com o ClipAI.",
-      "bigo": "Salve automaticamente suas streams do Bigo. Baixe gravações e crie clipes curtos com o ClipAI."
+      "bigo": "Salve automaticamente suas streams do Bigo. Baixe gravações e crie clipes curtos com o ClipAI.",
+      "buzzcast": "Salve automaticamente suas streams do Buzzcast. Baixe gravações e crie clipes curtos com o ClipAI."
     },
     "button": "Comece a Gravar Grátis"
   },
@@ -314,7 +367,8 @@
       "kick": "Seja o primeiro criador a gravar uma stream do Kick!",
       "afreecatv": "Seja o primeiro criador a gravar uma stream da AfreecaTV!",
       "pandalive": "Seja o primeiro criador a gravar uma stream do Pandalive!",
-      "bigo": "Seja o primeiro criador a gravar uma stream do Bigo!"
+      "bigo": "Seja o primeiro criador a gravar uma stream do Bigo!",
+      "buzzcast": "Seja o primeiro criador a gravar uma stream do Buzzcast!"
     },
     "button": "Começar"
   },
@@ -326,7 +380,8 @@
     "kick": "## Gravações de Streams do Kick\n\nAssista gravações do Kick de criadores que usam o LiveStreamRecorder para salvar suas streams.\n\n### VODs do Kick Salvos\n\nO Kick está crescendo rápido. Criadores usam nosso gravador do Kick para salvar suas streams e construir sua biblioteca de conteúdo. Assista ao conteúdo deles aqui.\n\n### Assista Gravações do Kick\n\nCada gravação do Kick está disponível para assistir instantaneamente. Usuários premium podem baixar VODs do Kick para visualização offline.\n\n### Grave Suas Streams do Kick\n\nQuer suas streams do Kick aqui? Cadastre-se gratuitamente e adicione seu canal. Gravamos cada transmissão automaticamente. Use o ClipAI para transformar suas streams em clipes curtos e fazer sua audiência crescer.\n\n### Gravador de Streams do Kick\n\nGravação automática para cada stream do Kick. Sem precisar de software. Basta entrar ao vivo e salvamos tudo.",
     "pandalive": "## Gravações do Pandalive\n\nAssista gravações do Pandalive de criadores que usam o LiveStreamRecorder para salvar suas streams.\n\n### Streams Coreanas Salvas\n\nCriadores do Pandalive usam nosso gravador para salvar suas transmissões. Assista conteúdo coreano aqui.\n\n### Assista Gravações do Pandalive\n\nCada gravação do Pandalive está disponível para assistir instantaneamente. Usuários premium podem baixar gravações para visualização offline.\n\n### Grave Suas Streams do Pandalive\n\nQuer suas streams aqui? Cadastre-se gratuitamente e adicione seu canal. Gravamos cada transmissão automaticamente.",
     "afreecatv": "## Gravações da AfreecaTV\n\nAssista gravações da AfreecaTV de criadores que usam o LiveStreamRecorder para salvar suas streams.\n\n### Streams Coreanas Salvas\n\nCriadores da AfreecaTV usam nosso gravador para salvar suas transmissões. Assista conteúdo coreano aqui.\n\n### Assista Gravações da AfreecaTV\n\nCada gravação da AfreecaTV está disponível para assistir instantaneamente. Usuários premium podem baixar gravações para visualização offline.\n\n### Grave Suas Streams da AfreecaTV\n\nQuer suas streams aqui? Cadastre-se gratuitamente e adicione seu canal. Gravamos cada transmissão automaticamente.",
-    "bigo": "## Gravações do Bigo Live\n\nAssista gravações do Bigo Live de criadores que usam o LiveStreamRecorder para salvar suas próprias lives. Cada live do Bigo é capturada automaticamente na nuvem e armazenada para visualização sob demanda.\n\n### Lives do Bigo Salvas Automaticamente\n\nAs lives do Bigo desaparecem quando terminam, e aplicativos de gravação de tela frequentemente causam tela preta. Nosso gravador do Bigo Live captura suas lives diretamente na nuvem — sem tela preta, sem aplicativos de gravação de tela, sem complicação. Basta adicionar seu nome de usuário e suas lives são gravadas.\n\n### Assista e Baixe Suas Gravações do Bigo\n\nCada gravação do Bigo Live está disponível para assistir instantaneamente no navegador. Usuários premium podem baixar suas gravações como arquivos de vídeo para visualização offline — ideal para reutilizar seu conteúdo ao vivo.\n\n### Sem Tela Preta — Nunca\n\nCansado de problemas de tela preta ao tentar gravar suas lives do Bigo? O LiveStreamRecorder captura tudo no servidor em alta qualidade. Sem gravador de tela para Bigo Live, sem downloads de APK, sem frustração com tela preta. Simplesmente funciona.\n\n### Transforme Suas Lives do Bigo em Clipes com o ClipAI\n\nQuer transformar suas gravações do Bigo Live em clipes curtos? O ClipAI analisa suas lives gravadas e cria destaques prontos para publicar como vídeos do TikTok, YouTube Shorts ou Reels. Faça sua audiência crescer além do Bigo.\n\n### O Gravador do Bigo Live Mais Fácil para Criadores\n\nO LiveStreamRecorder é um gravador do Bigo na nuvem — sem aplicativo para instalar, sem celular ligado, sem tela preta. Cadastre-se gratuitamente, adicione seu nome de usuário do Bigo e nunca mais perca uma live."
+    "bigo": "## Gravações do Bigo Live\n\nAssista gravações do Bigo Live de criadores que usam o LiveStreamRecorder para salvar suas próprias lives. Cada live do Bigo é capturada automaticamente na nuvem e armazenada para visualização sob demanda.\n\n### Lives do Bigo Salvas Automaticamente\n\nAs lives do Bigo desaparecem quando terminam, e aplicativos de gravação de tela frequentemente causam tela preta. Nosso gravador do Bigo Live captura suas lives diretamente na nuvem — sem tela preta, sem aplicativos de gravação de tela, sem complicação. Basta adicionar seu nome de usuário e suas lives são gravadas.\n\n### Assista e Baixe Suas Gravações do Bigo\n\nCada gravação do Bigo Live está disponível para assistir instantaneamente no navegador. Usuários premium podem baixar suas gravações como arquivos de vídeo para visualização offline — ideal para reutilizar seu conteúdo ao vivo.\n\n### Sem Tela Preta — Nunca\n\nCansado de problemas de tela preta ao tentar gravar suas lives do Bigo? O LiveStreamRecorder captura tudo no servidor em alta qualidade. Sem gravador de tela para Bigo Live, sem downloads de APK, sem frustração com tela preta. Simplesmente funciona.\n\n### Transforme Suas Lives do Bigo em Clipes com o ClipAI\n\nQuer transformar suas gravações do Bigo Live em clipes curtos? O ClipAI analisa suas lives gravadas e cria destaques prontos para publicar como vídeos do TikTok, YouTube Shorts ou Reels. Faça sua audiência crescer além do Bigo.\n\n### O Gravador do Bigo Live Mais Fácil para Criadores\n\nO LiveStreamRecorder é um gravador do Bigo na nuvem — sem aplicativo para instalar, sem celular ligado, sem tela preta. Cadastre-se gratuitamente, adicione seu nome de usuário do Bigo e nunca mais perca uma live.",
+    "buzzcast": "## Gravações do Buzzcast Live\n\nAssista gravações do Buzzcast Live de criadores que usam o LiveStreamRecorder para salvar suas próprias lives. Cada live do Buzzcast é capturada automaticamente na nuvem e armazenada para visualização sob demanda.\n\n### Lives do Buzzcast Salvas Automaticamente\n\nAs lives do Buzzcast desaparecem quando terminam, e aplicativos de gravação de tela frequentemente causam tela preta. Nosso gravador do Buzzcast Live captura suas lives diretamente na nuvem — sem tela preta, sem aplicativos de gravação de tela, sem complicação. Basta adicionar seu nome de usuário e suas lives são gravadas.\n\n### Assista e Baixe Suas Gravações do Buzzcast\n\nCada gravação do Buzzcast Live está disponível para assistir instantaneamente no navegador. Usuários premium podem baixar suas gravações como arquivos de vídeo para visualização offline — ideal para reutilizar seu conteúdo ao vivo.\n\n### Sem Tela Preta — Nunca\n\nCansado de problemas de tela preta ao tentar gravar suas lives do Buzzcast? O LiveStreamRecorder captura tudo no servidor em alta qualidade. Sem gravador de tela para Buzzcast Live, sem downloads de APK, sem frustração com tela preta. Simplesmente funciona.\n\n### Transforme Suas Lives do Buzzcast em Clipes com o ClipAI\n\nQuer transformar suas gravações do Buzzcast Live em clipes curtos? O ClipAI analisa suas lives gravadas e cria destaques prontos para publicar como vídeos do TikTok, YouTube Shorts ou Reels. Faça sua audiência crescer além do Buzzcast.\n\n### O Gravador do Buzzcast Live Mais Fácil para Criadores\n\nO LiveStreamRecorder é um gravador do Buzzcast na nuvem — sem aplicativo para instalar, sem celular ligado, sem tela preta. Cadastre-se gratuitamente, adicione seu nome de usuário do Buzzcast e nunca mais perca uma live."
   },
   "jsonLd": {
     "name": {
@@ -337,7 +392,8 @@
       "kick": "Gravações de Streams do Kick",
       "afreecatv": "Gravações de Streams da AfreecaTV",
       "pandalive": "Gravações de Streams do Pandalive",
-      "bigo": "Gravações de Streams do Bigo"
+      "bigo": "Gravações de Streams do Bigo",
+      "buzzcast": "Gravações de Streams do Buzzcast"
     },
     "description": {
       "all": "Assista gravações de lives de criadores no LiveStreamRecorder.",
@@ -347,7 +403,8 @@
       "kick": "Assista gravações de streams do Kick de criadores no LiveStreamRecorder.",
       "afreecatv": "Assista gravações da AfreecaTV de criadores no LiveStreamRecorder.",
       "pandalive": "Assista gravações do Pandalive de criadores no LiveStreamRecorder.",
-      "bigo": "Assista gravações do Bigo de criadores no LiveStreamRecorder."
+      "bigo": "Assista gravações do Bigo de criadores no LiveStreamRecorder.",
+      "buzzcast": "Assista gravações do Buzzcast de criadores no LiveStreamRecorder."
     },
     "streamTitle": "Stream de {nickname} - {date}",
     "streamDescription": {
@@ -358,7 +415,8 @@
       "afreecatv": "Gravação da AfreecaTV de {nickname}",
       "pandalive": "Gravação do Pandalive de {nickname}",
       "bigo": "Gravação do Bigo de {nickname}",
-      "unknown": "Gravação de live de {nickname}"
+      "unknown": "Gravação de live de {nickname}",
+      "buzzcast": "Gravação do Buzzcast de {nickname}"
     }
   },
   "recordedOn": "Gravado em {date}",

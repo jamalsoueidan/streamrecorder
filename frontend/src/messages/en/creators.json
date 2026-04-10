@@ -215,6 +215,16 @@
         "bigo recording",
         "bigo stream recorder"
       ]
+    },
+    "buzzcast": {
+      "title": "Buzzcast Creators",
+      "description": "Discover Buzzcast creators who use LiveStreamRecorder to record their live streams and turn them into short clips.",
+      "keywords": [
+        "buzzcast creators",
+        "buzzcast live stream",
+        "buzzcast recording",
+        "buzzcast stream recorder"
+      ]
     }
   },
   "hero": {
@@ -226,7 +236,8 @@
       "kick": "Kick Creators",
       "pandalive": "Pandalive Creators",
       "afreecatv": "AfreecaTV Creators",
-      "bigo": "Bigo Creators"
+      "bigo": "Bigo Creators",
+      "buzzcast": "Buzzcast Creators"
     },
     "subtitle": {
       "all": "Join thousands of creators who use LiveStreamRecorder to save their streams and create short clips.",
@@ -236,7 +247,8 @@
       "kick": "Join thousands of Kick creators who use LiveStreamRecorder to save their streams and create short clips.",
       "pandalive": "Join thousands of Pandalive creators who use LiveStreamRecorder to save their streams and create short clips.",
       "afreecatv": "Join thousands of AfreecaTV creators who use LiveStreamRecorder to save their streams and create short clips.",
-      "bigo": "Join thousands of Bigo creators who use LiveStreamRecorder to save their streams and create short clips."
+      "bigo": "Join thousands of Bigo creators who use LiveStreamRecorder to save their streams and create short clips.",
+      "buzzcast": "Join thousands of Buzzcast creators who use LiveStreamRecorder to save their streams and create short clips."
     }
   },
   "features": {
@@ -249,7 +261,8 @@
       "kick": "Record Your Kick Streams Automatically",
       "pandalive": "Record Your Pandalive Streams Automatically",
       "afreecatv": "Record Your AfreecaTV Streams Automatically",
-      "bigo": "Record Your Bigo Streams Automatically"
+      "bigo": "Record Your Bigo Streams Automatically",
+      "buzzcast": "Record Your Buzzcast Streams Automatically"
     },
     "subtitle": "From live stream to short clips in minutes",
     "items": {
@@ -280,7 +293,8 @@
       "kick": "Record Your Kick Streams",
       "afreecatv": "Record Your AfreecaTV Streams",
       "pandalive": "Record Your Pandalive Streams",
-      "bigo": "Record Your Bigo Streams"
+      "bigo": "Record Your Bigo Streams",
+      "buzzcast": "Record Your Buzzcast Streams"
     },
     "subtitle": {
       "all": "Join thousands of creators. Save your streams, create short clips with ClipAI, and grow your audience.",
@@ -290,7 +304,8 @@
       "kick": "Join thousands of Kick streamers. Save your streams, create short clips with ClipAI, and grow your audience.",
       "afreecatv": "Join thousands of AfreecaTV creators. Save your streams and create short clips with ClipAI.",
       "pandalive": "Join thousands of Pandalive creators. Save your streams and create short clips with ClipAI.",
-      "bigo": "Join thousands of Bigo creators. Save your streams and create short clips with ClipAI."
+      "bigo": "Join thousands of Bigo creators. Save your streams and create short clips with ClipAI.",
+      "buzzcast": "Join thousands of Buzzcast creators. Save your streams and create short clips with ClipAI."
     },
     "button": "Start Recording Free"
   },
@@ -304,7 +319,8 @@
       "kick": "Be the first Kick creator to join!",
       "pandalive": "Be the first Pandalive creator to join!",
       "afreecatv": "Be the first AfreecaTV creator to join!",
-      "bigo": "Be the first Bigo creator to join!"
+      "bigo": "Be the first Bigo creator to join!",
+      "buzzcast": "Be the first Buzzcast creator to join!"
     },
     "button": "Get Started"
   },
@@ -316,7 +332,8 @@
     "kick": "## About Kick Stream Recording\n\nStop losing your Kick streams. We record them automatically so you can turn your best moments into clips and grow your audience.\n\n### Why Record Your Kick Streams?\n\nKick is growing fast. Your best content deserves to live beyond the stream. We save everything so you can clip and share.\n\n### Automatic Recording\n\nJust add your Kick channel and go live. We record automatically — nothing to install.\n\n### Rewatch and Download\n\nFinished streaming? Your recording is ready. Watch it back or download it for editing.\n\n### ClipAI Finds Your Best Moments\n\nClipAI scans your stream and pulls out the highlights. Short clips ready in minutes.\n\n### Grow Your Audience\n\nTurn one stream into dozens of clips. Share everywhere.\n\n### Free to Start\n\nCreate an account and start recording your Kick streams today.",
     "pandalive": "## About Pandalive Stream Recording\n\nStop losing your Pandalive streams. We record them automatically so you can turn your best moments into clips.\n\n### Why Record Your Pandalive Streams?\n\nYour best content deserves to live beyond the stream. We save everything so you can clip and share.\n\n### Automatic Recording\n\nJust add your Pandalive channel and go live. We record automatically.\n\n### Rewatch and Download\n\nFinished streaming? Your recording is ready. Watch it back or download it.\n\n### ClipAI Finds Your Best Moments\n\nClipAI scans your stream and pulls out the highlights. Short clips ready in minutes.\n\n### Free to Start\n\nCreate an account and start recording your Pandalive streams today.",
     "afreecatv": "## About AfreecaTV Stream Recording\n\nStop losing your AfreecaTV streams. We record them automatically so you can turn your best moments into clips.\n\n### Why Record Your AfreecaTV Streams?\n\nYour best content deserves to live beyond the stream. We save everything so you can clip and share.\n\n### Automatic Recording\n\nJust add your AfreecaTV channel and go live. We record automatically.\n\n### Rewatch and Download\n\nFinished streaming? Your recording is ready. Watch it back or download it.\n\n### ClipAI Finds Your Best Moments\n\nClipAI scans your stream and pulls out the highlights. Short clips ready in minutes.\n\n### Free to Start\n\nCreate an account and start recording your AfreecaTV streams today.",
-    "bigo": "## About Bigo Stream Recording\n\nStop losing your Bigo streams. We record them automatically so you can turn your best moments into clips.\n\n### Why Record Your Bigo Streams?\n\nYour best content deserves to live beyond the stream. We save everything so you can clip and share.\n\n### Automatic Recording\n\nJust add your Bigo channel and go live. We record automatically.\n\n### Rewatch and Download\n\nFinished streaming? Your recording is ready. Watch it back or download it.\n\n### ClipAI Finds Your Best Moments\n\nClipAI scans your stream and pulls out the highlights. Short clips ready in minutes.\n\n### Free to Start\n\nCreate an account and start recording your Bigo streams today."
+    "bigo": "## About Bigo Stream Recording\n\nStop losing your Bigo streams. We record them automatically so you can turn your best moments into clips.\n\n### Why Record Your Bigo Streams?\n\nYour best content deserves to live beyond the stream. We save everything so you can clip and share.\n\n### Automatic Recording\n\nJust add your Bigo channel and go live. We record automatically.\n\n### Rewatch and Download\n\nFinished streaming? Your recording is ready. Watch it back or download it.\n\n### ClipAI Finds Your Best Moments\n\nClipAI scans your stream and pulls out the highlights. Short clips ready in minutes.\n\n### Free to Start\n\nCreate an account and start recording your Bigo streams today.",
+    "buzzcast": "## About Buzzcast Stream Recording\n\nStop losing your Buzzcast streams. We record them automatically so you can turn your best moments into clips.\n\n### Why Record Your Buzzcast Streams?\n\nYour best content deserves to live beyond the stream. We save everything so you can clip and share.\n\n### Automatic Recording\n\nJust add your Buzzcast channel and go live. We record automatically.\n\n### Rewatch and Download\n\nFinished streaming? Your recording is ready. Watch it back or download it.\n\n### ClipAI Finds Your Best Moments\n\nClipAI scans your stream and pulls out the highlights. Short clips ready in minutes.\n\n### Free to Start\n\nCreate an account and start recording your Buzzcast streams today."
   },
   "faq": "Frequently Asked Questions",
   "country": {

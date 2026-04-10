@@ -21,7 +21,8 @@
     "youtube": "유튜브 크리에이터",
     "afreecatv": "아프리카TV 크리에이터",
     "pandalive": "판다라이브 크리에이터",
-    "bigo": "비고 크리에이터"
+    "bigo": "비고 크리에이터",
+    "buzzcast": "버즈캐스트 크리에이터"
   },
   "watchRecordings": {
     "title": "녹화 영상 시청",
@@ -32,7 +33,8 @@
     "youtube": "유튜브 녹화 영상",
     "afreecatv": "아프리카TV 녹화 영상",
     "pandalive": "판다라이브 녹화 영상",
-    "bigo": "비고 녹화 영상"
+    "bigo": "비고 녹화 영상",
+    "buzzcast": "버즈캐스트 녹화 영상"
   },
   "legal": {
     "title": "법적 고지",

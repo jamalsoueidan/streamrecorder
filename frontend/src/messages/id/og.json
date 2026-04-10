@@ -11,7 +11,8 @@
       "kick": "Kreator Kick",
       "pandalive": "Kreator PandaLive",
       "afreecatv": "Kreator AfreecaTV",
-      "bigo": "Kreator Bigo"
+      "bigo": "Kreator Bigo",
+      "buzzcast": "Kreator Buzzcast"
     },
     "subtitle": {
       "all": "Jelajahi semua streamer dan kreator",
@@ -21,7 +22,8 @@
       "kick": "Temukan streamer Kick",
       "pandalive": "Temukan kreator PandaLive",
       "afreecatv": "Temukan kreator AfreecaTV",
-      "bigo": "Temukan kreator Bigo"
+      "bigo": "Temukan kreator Bigo",
+      "buzzcast": "Temukan kreator Buzzcast"
     }
   },
   "recordings": {
@@ -33,7 +35,8 @@
       "kick": "Rekaman Kick",
       "pandalive": "Rekaman PandaLive",
       "afreecatv": "Rekaman AfreecaTV",
-      "bigo": "Rekaman Bigo"
+      "bigo": "Rekaman Bigo",
+      "buzzcast": "Rekaman Buzzcast"
     },
     "subtitle": {
       "all": "Tonton rekaman live stream",
@@ -43,7 +46,8 @@
       "kick": "Tonton stream Kick yang direkam",
       "pandalive": "Tonton stream PandaLive yang direkam",
       "afreecatv": "Tonton stream AfreecaTV yang direkam",
-      "bigo": "Tonton stream Bigo yang direkam"
+      "bigo": "Tonton stream Bigo yang direkam",
+      "buzzcast": "Tonton stream Buzzcast yang direkam"
     }
   },
   "home": {

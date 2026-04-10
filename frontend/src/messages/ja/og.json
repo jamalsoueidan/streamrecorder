@@ -11,7 +11,8 @@
       "kick": "Kick クリエイター",
       "pandalive": "PandaLive クリエイター",
       "afreecatv": "AfreecaTV クリエイター",
-      "bigo": "Bigo クリエイター"
+      "bigo": "Bigo クリエイター",
+      "buzzcast": "Buzzcast クリエイター"
     },
     "subtitle": {
       "all": "すべてのストリーマー・クリエイターを探す",
@@ -21,7 +22,8 @@
       "kick": "Kick ストリーマーを見つける",
       "pandalive": "PandaLive クリエイターを見つける",
       "afreecatv": "AfreecaTV クリエイターを見つける",
-      "bigo": "Bigo クリエイターを見つける"
+      "bigo": "Bigo クリエイターを見つける",
+      "buzzcast": "Buzzcast クリエイターを見つける"
     }
   },
   "recordings": {
@@ -33,7 +35,8 @@
       "kick": "Kick 録画",
       "pandalive": "PandaLive 録画",
       "afreecatv": "AfreecaTV 録画",
-      "bigo": "Bigo 録画"
+      "bigo": "Bigo 録画",
+      "buzzcast": "Buzzcast 録画"
     },
     "subtitle": {
       "all": "録画済みライブ配信を視聴",
@@ -43,7 +46,8 @@
       "kick": "録画された Kick 配信を視聴",
       "pandalive": "録画された PandaLive 配信を視聴",
       "afreecatv": "録画された AfreecaTV 配信を視聴",
-      "bigo": "録画された Bigo 配信を視聴"
+      "bigo": "録画された Bigo 配信を視聴",
+      "buzzcast": "録画された Buzzcast 配信を視聴"
     }
   },
   "home": {
