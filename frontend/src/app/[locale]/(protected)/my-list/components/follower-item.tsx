@@ -8,7 +8,7 @@ import {
 import {
   Accordion,
   AccordionControlProps,
-  Anchor,
+  ActionIcon,
   Avatar,
   Box,
   Center,
@@ -21,18 +21,18 @@ import {
   Text,
   useMatches,
 } from "@mantine/core";
-import Link from "next/link";
 
 import { ImageSpritePreview } from "@/app/[locale]/(protected)/components/image-sprite-preview";
+import { getProfileUrl } from "@/app/components/open-social";
 import { generateAvatarUrl } from "@/app/lib/avatar-url";
 import { safeRelativeTime } from "@/app/lib/safe-relative-time";
 import { useUser } from "@/app/providers/user-provider";
-import { IconEyeOff } from "@tabler/icons-react";
+import { IconArrowRight, IconEyeOff } from "@tabler/icons-react";
 import { useQuery } from "@tanstack/react-query";
 import { useFormatter, useNow, useTranslations } from "next-intl";
 import Image from "next/image";
+import Link from "next/link";
 import { useRef, useState } from "react";
-import { getProfileUrl } from "../../../../components/open-social";
 import { CountryFlag } from "../../components/country-flag";
 import FollowButton from "../../components/follow-button";
 import { FollowerTypeIcon } from "../../components/follower-type-icon";
@@ -83,7 +83,7 @@ export default function FollowerItem({ follower, isOpen }: Props) {
       key={follower.documentId}
       value={follower.username}
       style={
-        follower.isFavorite ?? false
+        (follower.isFavorite ?? false)
           ? {
               borderColor: "rgba(251, 191, 36, 0.4)",
               background: "rgba(251, 191, 36, 0.03)",
@@ -133,11 +133,10 @@ export default function FollowerItem({ follower, isOpen }: Props) {
 
           <Stack gap={2}>
             <Group gap="xs">
-              <Anchor component={Link} href={getProfileUrl(follower)} size="md">
-                <Text size="lg" truncate maw={isMobile ? 100 : 200} fw="bold">
-                  {decodeURIComponent(follower.username)}
-                </Text>
-              </Anchor>
+              <Text size="lg" truncate maw={isMobile ? 100 : 200} fw="bold">
+                {decodeURIComponent(follower.username)}
+              </Text>
+
               {follower.countryCode ? (
                 <CountryFlag countryCode={follower?.countryCode} />
               ) : null}
@@ -282,6 +281,14 @@ function AccordionControl({
         ) : (
           <FollowButton username={follower.username} type={follower.type} />
         )}
+        <ActionIcon
+          component={Link}
+          href={getProfileUrl(follower)}
+          size="lg"
+          color="gray"
+        >
+          <IconArrowRight />
+        </ActionIcon>
       </Flex>
     </Center>
   );

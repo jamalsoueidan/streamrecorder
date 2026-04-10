@@ -4,6 +4,7 @@ import { ActionIcon, Tooltip } from "@mantine/core";
 import { IconStar, IconStarFilled } from "@tabler/icons-react";
 import { useQueryClient } from "@tanstack/react-query";
 import { useTranslations } from "next-intl";
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { toggleFavorite } from "../actions/toggle-favorite";
 
@@ -19,6 +20,7 @@ export function FavoriteButton({
   const [optimistic, setOptimistic] = useState(isFavorite);
   const [pending, setPending] = useState(false);
   const queryClient = useQueryClient();
+  const router = useRouter();
   const t = useTranslations("protected.myList");
 
   // Sync with prop when it changes (refetch, navigation)
@@ -33,6 +35,7 @@ export function FavoriteButton({
     try {
       await toggleFavorite(documentId, isFavorite);
       queryClient.invalidateQueries({ queryKey: ["creators", "mylist"] });
+      router.refresh();
     } catch {
       setOptimistic((prev) => !prev); // revert
     } finally {
