@@ -36,6 +36,9 @@
     "thumbnailCols": {
       "type": "integer"
     },
+    "bucket": {
+      "type": "string"
+    },
     "videoOriginal": {
       "type": "component",
       "component": "videos.video",

@@ -1299,6 +1299,7 @@ export interface ApiSourceSource extends Struct.CollectionTypeSchema {
     draftAndPublish: false;
   };
   attributes: {
+    bucket: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
