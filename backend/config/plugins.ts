@@ -1,8 +1,8 @@
 export default ({ env }) => ({
   admin: {
     forgotPassword: {
-      from: "noreply@livestreamrecorder.com",
-      replyTo: "contact@livestreamrecorder.com",
+      from: env("EMAIL_FROM", "noreply@livestreamrecorder.com"),
+      replyTo: env("EMAIL_REPLY_TO", "contact@livestreamrecorder.com"),
     },
   },
   email: {
@@ -25,9 +25,9 @@ export default ({ env }) => ({
         },
       },
       settings: {
-        defaultTo: "contact@livestreamrecorder.com",
-        defaultFrom: "noreply@livestreamrecorder.com",
-        defaultFromName: "Live Stream Recorder",
+        defaultTo: env("EMAIL_DEFAULT_TO", "contact@livestreamrecorder.com"),
+        defaultFrom: env("EMAIL_FROM", "noreply@livestreamrecorder.com"),
+        defaultFromName: env("EMAIL_FROM_NAME", "Live Stream Recorder"),
       },
     },
   },
