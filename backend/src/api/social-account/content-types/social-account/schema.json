@@ -16,7 +16,8 @@
         "google",
         "apple",
         "facebook",
-        "tiktok"
+        "tiktok",
+        "youtube"
       ],
       "required": true
     },

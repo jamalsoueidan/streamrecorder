@@ -102,13 +102,15 @@ export default async function Page({ params }: PageProps) {
   const t = await getTranslations("profile");
   const format = await getFormatter();
   const locale = await getLocale();
-  const follower = await getFollower({ username, type, locale });
+  const [follower, data] = await Promise.all([
+    getFollower({ username, type, locale }),
+    fetchProfileRecordings(type, username),
+  ]);
 
   if (!follower) {
     notFound();
   }
 
-  const data = await fetchProfileRecordings(type, username);
   const recordings = data?.data ?? [];
   const hasRecordings = recordings.length > 0;
 
@@ -243,6 +245,7 @@ export default async function Page({ params }: PageProps) {
                   alt={creatorName}
                   width={100}
                   height={100}
+                  priority
                 />
               )}
             </Avatar>

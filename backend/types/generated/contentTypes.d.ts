@@ -1272,7 +1272,7 @@ export interface ApiSocialAccountSocialAccount
     > &
       Schema.Attribute.Private;
     provider: Schema.Attribute.Enumeration<
-      ['google', 'apple', 'facebook', 'tiktok']
+      ['google', 'apple', 'facebook', 'tiktok', 'youtube']
     > &
       Schema.Attribute.Required;
     providerId: Schema.Attribute.String & Schema.Attribute.Required;

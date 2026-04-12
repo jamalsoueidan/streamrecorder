@@ -20,7 +20,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2026-04-11T14:40:04.415Z"
+    "x-generation-date": "2026-04-12T04:24:20.559Z"
   },
   "servers": [
     {
@@ -13309,7 +13309,8 @@
                             "google",
                             "apple",
                             "facebook",
-                            "tiktok"
+                            "tiktok",
+                            "youtube"
                           ]
                         },
                         "providerId": {
@@ -15162,7 +15163,8 @@
                             "google",
                             "apple",
                             "facebook",
-                            "tiktok"
+                            "tiktok",
+                            "youtube"
                           ]
                         },
                         "providerId": {
@@ -17528,7 +17530,8 @@
                                 "google",
                                 "apple",
                                 "facebook",
-                                "tiktok"
+                                "tiktok",
+                                "youtube"
                               ]
                             },
                             "providerId": {
@@ -22661,7 +22664,8 @@
                             "google",
                             "apple",
                             "facebook",
-                            "tiktok"
+                            "tiktok",
+                            "youtube"
                           ]
                         },
                         "providerId": {
@@ -24851,7 +24855,8 @@
                                 "google",
                                 "apple",
                                 "facebook",
-                                "tiktok"
+                                "tiktok",
+                                "youtube"
                               ]
                             },
                             "providerId": {
@@ -28085,7 +28090,8 @@
                         "google",
                         "apple",
                         "facebook",
-                        "tiktok"
+                        "tiktok",
+                        "youtube"
                       ]
                     },
                     "providerId": {
@@ -29812,7 +29818,8 @@
                                 "google",
                                 "apple",
                                 "facebook",
-                                "tiktok"
+                                "tiktok",
+                                "youtube"
                               ]
                             },
                             "providerId": {
@@ -31925,7 +31932,8 @@
                             "google",
                             "apple",
                             "facebook",
-                            "tiktok"
+                            "tiktok",
+                            "youtube"
                           ]
                         },
                         "providerId": {
@@ -32977,7 +32985,8 @@
                   "google",
                   "apple",
                   "facebook",
-                  "tiktok"
+                  "tiktok",
+                  "youtube"
                 ]
               },
               "providerId": {
@@ -33091,7 +33100,8 @@
               "google",
               "apple",
               "facebook",
-              "tiktok"
+              "tiktok",
+              "youtube"
             ]
           },
           "providerId": {
@@ -34420,7 +34430,8 @@
                         "google",
                         "apple",
                         "facebook",
-                        "tiktok"
+                        "tiktok",
+                        "youtube"
                       ]
                     },
                     "providerId": {
@@ -36157,7 +36168,8 @@
                                 "google",
                                 "apple",
                                 "facebook",
-                                "tiktok"
+                                "tiktok",
+                                "youtube"
                               ]
                             },
                             "providerId": {
@@ -38120,7 +38132,8 @@
                                 "google",
                                 "apple",
                                 "facebook",
-                                "tiktok"
+                                "tiktok",
+                                "youtube"
                               ]
                             },
                             "providerId": {

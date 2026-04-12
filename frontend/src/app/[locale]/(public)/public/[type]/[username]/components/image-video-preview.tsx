@@ -58,6 +58,7 @@ export async function ImageVideoPreview({ recording, type }: Props) {
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           src={previewUrl}
           fill
+          loading="lazy"
         />
       </Anchor>
       <FollowerTypeIcon

@@ -7347,6 +7347,7 @@ export enum ActivityProviderEnum {
   Apple = "apple",
   Facebook = "facebook",
   Tiktok = "tiktok",
+  Youtube = "youtube",
 }
 
 export enum ActivitySubscriptionStatusEnum {
@@ -7392,6 +7393,7 @@ export enum AiRequestProviderEnum {
   Apple = "apple",
   Facebook = "facebook",
   Tiktok = "tiktok",
+  Youtube = "youtube",
 }
 
 export enum AiRequestSubscriptionStatusEnum {
@@ -7465,6 +7467,7 @@ export enum AiTaskProviderEnum {
   Apple = "apple",
   Facebook = "facebook",
   Tiktok = "tiktok",
+  Youtube = "youtube",
 }
 
 export enum AiTaskSubscriptionStatusEnum {
@@ -7531,6 +7534,7 @@ export enum ClipProviderEnum {
   Apple = "apple",
   Facebook = "facebook",
   Tiktok = "tiktok",
+  Youtube = "youtube",
 }
 
 export enum ClipSubscriptionStatusEnum {
@@ -7582,6 +7586,7 @@ export enum ClipShareProviderEnum {
   Apple = "apple",
   Facebook = "facebook",
   Tiktok = "tiktok",
+  Youtube = "youtube",
 }
 
 export enum ClipShareSubscriptionStatusEnum {
@@ -7651,6 +7656,7 @@ export enum FollowerProviderEnum {
   Apple = "apple",
   Facebook = "facebook",
   Tiktok = "tiktok",
+  Youtube = "youtube",
 }
 
 export enum FollowerSubscriptionStatusEnum {
@@ -7699,6 +7705,7 @@ export enum MemeProviderEnum {
   Apple = "apple",
   Facebook = "facebook",
   Tiktok = "tiktok",
+  Youtube = "youtube",
 }
 
 export enum MemeSubscriptionStatusEnum {
@@ -7737,6 +7744,7 @@ export enum RecordingProviderEnum {
   Apple = "apple",
   Facebook = "facebook",
   Tiktok = "tiktok",
+  Youtube = "youtube",
 }
 
 export enum RecordingSubscriptionStatusEnum {
@@ -7757,6 +7765,7 @@ export enum SocialAccountRequestProviderEnum {
   Apple = "apple",
   Facebook = "facebook",
   Tiktok = "tiktok",
+  Youtube = "youtube",
 }
 
 export enum SocialAccountProviderEnum {
@@ -7764,6 +7773,7 @@ export enum SocialAccountProviderEnum {
   Apple = "apple",
   Facebook = "facebook",
   Tiktok = "tiktok",
+  Youtube = "youtube",
 }
 
 export enum SocialAccountTypeEnum {
@@ -7789,6 +7799,7 @@ export enum SocialAccountProviderEnum1 {
   Apple = "apple",
   Facebook = "facebook",
   Tiktok = "tiktok",
+  Youtube = "youtube",
 }
 
 export enum SocialAccountSubscriptionStatusEnum {
@@ -7841,6 +7852,7 @@ export enum SourceProviderEnum {
   Apple = "apple",
   Facebook = "facebook",
   Tiktok = "tiktok",
+  Youtube = "youtube",
 }
 
 export enum SourceSubscriptionStatusEnum {
@@ -7886,6 +7898,7 @@ export enum VisitorViewProviderEnum {
   Apple = "apple",
   Facebook = "facebook",
   Tiktok = "tiktok",
+  Youtube = "youtube",
 }
 
 export enum VisitorViewSubscriptionStatusEnum {
