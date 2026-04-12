@@ -64,7 +64,9 @@ export function VideoScrollPlayer({
   const [visibleIndex, setVisibleIndex] = useState<number | null>(null);
   const hasScrolledToInitial = useRef(false);
   const [isSafari] = useState(
-    () => typeof navigator !== "undefined" && /^((?!chrome|android).)*safari/i.test(navigator.userAgent),
+    () =>
+      typeof navigator !== "undefined" &&
+      /^((?!chrome|android).)*safari/i.test(navigator.userAgent),
   );
   const [isMuted, setIsMuted] = useState(isSafari);
   const [hasPlayed, setHasPlayed] = useState(!isSafari);
@@ -213,10 +215,10 @@ export function VideoScrollPlayer({
   // Keyboard navigation
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "ArrowUp" || e.key === "ArrowLeft") {
+      if (e.key === "ArrowUp") {
         e.preventDefault();
         goToPrev();
-      } else if (e.key === "ArrowDown" || e.key === "ArrowRight") {
+      } else if (e.key === "ArrowDown") {
         e.preventDefault();
         goToNext();
       } else if (e.key === "Escape" && onClose) {

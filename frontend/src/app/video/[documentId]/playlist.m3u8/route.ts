@@ -27,7 +27,7 @@ async function getRecordingByDocumentId(documentId: string) {
 }
 
 const fetchSourcePlaylists = unstable_cache(
-  async (documentId: string, _updatedAt: string) => {
+  async (documentId: string, _updatedAt: string, quality: "high" | "low" = "high") => {
     const response = await publicApi.source.getSources({
       filters: {
         recording: { documentId },
@@ -46,7 +46,7 @@ const fetchSourcePlaylists = unstable_cache(
       s3Client,
       bucket,
       sources,
-      "original",
+      quality,
     );
 
     return { sourcesWithPlaylists, createdAt: sources[0].createdAt, path: sources[0].path };
@@ -55,13 +55,29 @@ const fetchSourcePlaylists = unstable_cache(
   { revalidate: 3600 },
 );
 
-async function buildPlaylist(documentId: string, updatedAt: string) {
-  const cached = await fetchSourcePlaylists(documentId, updatedAt);
+async function buildPlaylist(documentId: string, updatedAt: string, quality: "high" | "low" = "high") {
+  const cached = await fetchSourcePlaylists(documentId, updatedAt, quality);
   if (!cached) return null;
 
   const s3Client = getS3();
   const bucket = getBucket(process.env.MEDIA_BUCKET!, cached.createdAt, cached.path);
   return combinePlaylistsWithSignedUrls(s3Client, bucket, cached.sourcesWithPlaylists);
+}
+
+async function checkLowQualityExists(documentId: string, updatedAt: string): Promise<boolean> {
+  const cached = await fetchSourcePlaylists(documentId, updatedAt, "low");
+  if (!cached) return false;
+  return cached.sourcesWithPlaylists.some((s) => s.playlist != null);
+}
+
+function buildMasterPlaylist(documentId: string): string {
+  const base = `/video/${documentId}/playlist.m3u8`;
+  return `#EXTM3U
+#EXT-X-STREAM-INF:BANDWIDTH=2000000,NAME="High"
+${base}?q=high
+#EXT-X-STREAM-INF:BANDWIDTH=600000,NAME="Low"
+${base}?q=low
+`;
 }
 
 export type SourceWithPlaylist = Source & { playlist?: string | null };
@@ -246,9 +262,37 @@ export async function GET(
     });
   }
 
-  // Build playlist (cached by documentId + updatedAt)
-  const playlist = await buildPlaylist(documentId, recording.updatedAt || "");
+  const qualityParam = request.nextUrl.searchParams.get("q") as "high" | "low" | null;
 
+  // If specific quality requested, serve that playlist
+  if (qualityParam === "high" || qualityParam === "low") {
+    const playlist = await buildPlaylist(documentId, recording.updatedAt || "", qualityParam);
+    if (!playlist) {
+      return new Response("Not found", { status: 404 });
+    }
+    return new Response(playlist, {
+      headers: {
+        "Content-Type": "application/vnd.apple.mpegurl",
+        "Cache-Control": "no-store",
+      },
+    });
+  }
+
+  // No quality param — check if low quality exists
+  const hasLow = await checkLowQualityExists(documentId, recording.updatedAt || "");
+
+  if (hasLow) {
+    // Serve master playlist with both qualities
+    return new Response(buildMasterPlaylist(documentId), {
+      headers: {
+        "Content-Type": "application/vnd.apple.mpegurl",
+        "Cache-Control": "no-store",
+      },
+    });
+  }
+
+  // No low quality — serve single playlist directly
+  const playlist = await buildPlaylist(documentId, recording.updatedAt || "");
   if (!playlist) {
     return new Response("Not found", { status: 404 });
   }
@@ -302,9 +346,9 @@ async function fetchPlaylistsFromS3(
   s3Client: S3Client,
   bucket: string,
   sources: Source[],
-  quality: "original" | "small",
+  quality: "high" | "low",
 ): Promise<SourceWithPlaylist[]> {
-  const filename = "playlist.m3u8";
+  const filename = quality === "low" ? "playlist_low.m3u8" : "playlist.m3u8";
 
   // Fetch all playlists in parallel
   const playlists = await Promise.all(
