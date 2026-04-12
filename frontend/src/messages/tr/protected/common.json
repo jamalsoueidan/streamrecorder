@@ -46,7 +46,8 @@
     "downloadFeatureMessage": "Video indirme premium bir özelliktir.",
     "editClip": "Klibi Düzenle",
     "deleteSources": "Kaynakları sil",
-    "deleteSourcesSuccess": "{count} kaynak silindi"
+    "deleteSourcesSuccess": "{count} kaynak silindi",
+    "parts": "{count, plural, one {# bölüm} other {# bölüm}}"
   },
   "followers": {
     "addedAgo_context": "For when a creator was added to user's list. Shows 'Added 3 days ago'",

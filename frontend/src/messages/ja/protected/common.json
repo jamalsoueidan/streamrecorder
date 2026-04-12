@@ -46,7 +46,8 @@
     "downloadFeatureMessage": "動画のダウンロードはプレミアム機能です。",
     "editClip": "クリップを編集",
     "deleteSources": "ソースを削除",
-    "deleteSourcesSuccess": "{count} 件のソースを削除しました"
+    "deleteSourcesSuccess": "{count} 件のソースを削除しました",
+    "parts": "{count}パート"
   },
   "followers": {
     "addedAgo_context": "クリエイターがリストに追加された日時を示します。「3 日前に追加」のように表示されます",

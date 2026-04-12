@@ -46,7 +46,8 @@
     "downloadFeatureMessage": "Descargar videos es una función premium.",
     "editClip": "Editar clip",
     "deleteSources": "Eliminar fuentes",
-    "deleteSourcesSuccess": "{count} fuentes eliminadas"
+    "deleteSourcesSuccess": "{count} fuentes eliminadas",
+    "parts": "{count, plural, one {# parte} other {# partes}}"
   },
   "followers": {
     "addedAgo_context": "Para cuando se agregó un creador a la lista del usuario. Muestra 'Agregado hace 3 días'",

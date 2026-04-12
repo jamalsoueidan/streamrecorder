@@ -44,7 +44,8 @@
     "downloadFeatureMessage": "تحميل الفيديوهات ميزة خاصة بالمشتركين المميزين.",
     "editClip": "تعديل المقطع",
     "deleteSources": "حذف المصادر",
-    "deleteSourcesSuccess": "تم حذف {count} مصدر"
+    "deleteSourcesSuccess": "تم حذف {count} مصدر",
+    "parts": "{count, plural, one {جزء واحد} other {# أجزاء}}"
   },
   "followers": {
     "addedAgo_context": "For when a creator was added to user's list. Shows 'Added 3 days ago'",

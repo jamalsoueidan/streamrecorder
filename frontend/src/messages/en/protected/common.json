@@ -24,6 +24,7 @@
     "recordedAgo": "recorded {time}",
     "recordCount": "REC {count}",
     "newRecording": "New",
+    "parts": "{count, plural, one {# part} other {# parts}}",
     "videoCount": "{count, plural, one {# video} other {# videos}}",
     "noRecordings": "You've reached the end",
     "hide": "Hide from public",

@@ -73,9 +73,9 @@ async function checkLowQualityExists(documentId: string, updatedAt: string): Pro
 function buildMasterPlaylist(documentId: string): string {
   const base = `/video/${documentId}/playlist.m3u8`;
   return `#EXTM3U
-#EXT-X-STREAM-INF:BANDWIDTH=2000000,RESOLUTION=960x1920,NAME="High"
+#EXT-X-STREAM-INF:BANDWIDTH=2000000,NAME="Original"
 ${base}?q=high
-#EXT-X-STREAM-INF:BANDWIDTH=600000,RESOLUTION=720x1280,NAME="Low"
+#EXT-X-STREAM-INF:BANDWIDTH=600000,NAME="HD"
 ${base}?q=low
 `;
 }

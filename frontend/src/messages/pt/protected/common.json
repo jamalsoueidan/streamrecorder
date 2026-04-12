@@ -46,7 +46,8 @@
     "downloadFeatureMessage": "Baixar vídeos é um recurso premium.",
     "editClip": "Editar clipe",
     "deleteSources": "Excluir fontes",
-    "deleteSourcesSuccess": "{count} fontes excluídas"
+    "deleteSourcesSuccess": "{count} fontes excluídas",
+    "parts": "{count, plural, one {# parte} other {# partes}}"
   },
   "followers": {
     "addedAgo_context": "Para quando o criador foi adicionado à lista do usuário. Exibe 'Adicionado há 3 dias'",

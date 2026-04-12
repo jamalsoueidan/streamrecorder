@@ -46,7 +46,8 @@
     "downloadFeatureMessage": "Mengunduh video adalah fitur premium.",
     "editClip": "Edit Klip",
     "deleteSources": "Hapus sumber",
-    "deleteSourcesSuccess": "{count} sumber dihapus"
+    "deleteSourcesSuccess": "{count} sumber dihapus",
+    "parts": "{count, plural, one {# bagian} other {# bagian}}"
   },
   "followers": {
     "addedAgo_context": "Untuk kapan kreator ditambahkan ke daftar pengguna. Menampilkan 'Ditambahkan 3 hari lalu'",
