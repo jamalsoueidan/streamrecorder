@@ -122,10 +122,9 @@
       "titleRequired": "Videonuz için bir başlık girin"
     },
     "noYoutubeConnection": {
-      "title": "TikTok hesabı bağlı değil",
-      "description": "TikTok'ta klip yayınlamak için Ayarlar'a gidin ve önce TikTok hesabınızı bağlayın.",
-      "goToSettings": "Ayarlar'a Git",
-      "hint": "Bağlandıktan sonra klibinizi yayınlamak için buraya geri gelin."
+      "title": "YouTube hesabı bağlı değil",
+      "description": "YouTube'a klip yayınlamak için Ayarlar'a gidin ve önce YouTube hesabınızı bağlayın.",
+      "goToSettings": "Ayarlar'a Git"
     }
   }
 }

@@ -122,10 +122,9 @@
       "titleRequired": "영상 제목을 입력해주세요"
     },
     "noYoutubeConnection": {
-      "title": "틱톡 계정이 연결되지 않음",
-      "description": "클립을 틱톡에 게시하려면 설정에서 먼저 틱톡 계정을 연결하세요.",
-      "goToSettings": "설정으로 이동",
-      "hint": "연결되면 여기로 돌아와 클립을 게시하세요."
+      "title": "YouTube 계정이 연결되지 않았습니다",
+      "description": "YouTube에 클립을 게시하려면 설정에서 YouTube 계정을 먼저 연결하세요.",
+      "goToSettings": "설정으로 이동"
     }
   }
 }

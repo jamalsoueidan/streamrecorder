@@ -32,8 +32,11 @@ async function getYouTubeTokens() {
   // Check if token is expired and refresh if needed
   const expiresAt = new Date(data.expiresAt || 0);
   if (new Date() >= expiresAt) {
+    if (!data.refreshToken) {
+      return null;
+    }
     const refreshResult = await refreshYouTubeToken(
-      data.refreshToken!,
+      data.refreshToken,
       data.documentId!,
     );
     if (!refreshResult.success || !refreshResult.accessToken) {
@@ -164,16 +167,16 @@ export async function shareToYouTube({
       return { success: false, error: "Failed to fetch clip video" };
     }
 
-    const videoBuffer = await videoResponse.arrayBuffer();
-
-    // 6. Upload video to YouTube
+    // 6. Upload video to YouTube (stream body to avoid buffering entire file in memory)
     const uploadResponse = await fetch(uploadUrl, {
       method: "PUT",
       headers: {
+        Authorization: `Bearer ${tokens.accessToken}`,
         "Content-Type": "video/mp4",
-        "Content-Length": videoBuffer.byteLength.toString(),
       },
-      body: videoBuffer,
+      body: videoResponse.body,
+      // @ts-expect-error - duplex required for streaming body in Node.js fetch
+      duplex: "half",
     });
 
     if (!uploadResponse.ok) {

@@ -122,10 +122,9 @@
       "titleRequired": "Masukkan judul untuk video"
     },
     "noYoutubeConnection": {
-      "title": "Akun TikTok belum terhubung",
-      "description": "Untuk menerbitkan klip ke TikTok, buka Pengaturan dan hubungkan akun TikTok Anda terlebih dahulu.",
-      "goToSettings": "Buka Pengaturan",
-      "hint": "Setelah terhubung, kembali ke sini untuk menerbitkan klip Anda."
+      "title": "Akun YouTube belum terhubung",
+      "description": "Untuk mempublikasikan klip ke YouTube, buka Pengaturan dan hubungkan akun YouTube terlebih dahulu.",
+      "goToSettings": "Buka Pengaturan"
     }
   }
 }

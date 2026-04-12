@@ -122,10 +122,9 @@
       "titleRequired": "動画のタイトルを入力してください"
     },
     "noYoutubeConnection": {
-      "title": "TikTok アカウントが連携されていません",
-      "description": "TikTok にクリップを投稿するには、設定から TikTok アカウントを連携してください。",
-      "goToSettings": "設定へ",
-      "hint": "連携後にここに戻ってクリップを投稿してください。"
+      "title": "YouTubeアカウントが接続されていません",
+      "description": "YouTubeにクリップを公開するには、設定からYouTubeアカウントを接続してください。",
+      "goToSettings": "設定へ移動"
     }
   }
 }

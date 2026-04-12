@@ -74,11 +74,6 @@ export async function GET(request: NextRequest) {
     ).toISOString();
 
     // Check if YouTube is already connected
-    const existing = await api.socialAccount.meGetSocialAccounts({
-      provider: ProviderEnum.Tiktok, // Will change to YouTube once enum is updated
-    });
-
-    // For now use "youtube" directly since ProviderEnum might not have it yet
     const existingYt = await api.socialAccount.meGetSocialAccounts({
       provider: "youtube" as ProviderEnum,
     });
@@ -90,7 +85,7 @@ export async function GET(request: NextRequest) {
         {
           data: {
             accessToken: data.access_token,
-            refreshToken: data.refresh_token,
+            ...(data.refresh_token && { refreshToken: data.refresh_token }),
             expiresAt,
           },
         } as never,

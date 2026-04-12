@@ -122,10 +122,9 @@
       "titleRequired": "Digite um título para seu vídeo"
     },
     "noYoutubeConnection": {
-      "title": "Nenhuma conta do TikTok conectada",
-      "description": "Para publicar clipes no TikTok, conecte sua conta do TikTok nas configurações.",
-      "goToSettings": "Ir para Configurações",
-      "hint": "Após conectar, volte aqui para publicar seu clipe."
+      "title": "Conta do YouTube não conectada",
+      "description": "Para publicar clipes no YouTube, conecte sua conta do YouTube nas configurações.",
+      "goToSettings": "Ir para Configurações"
     }
   }
 }
