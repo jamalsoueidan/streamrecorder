@@ -321,12 +321,12 @@ export default ({ env }) => ({
               {
                 type: "object",
                 properties: {
-                  clipShare: {
-                    oneOf: [
-                      { $ref: "#/components/schemas/ClipShare" },
-                      { type: "null" },
-                    ],
-                    description: "User's latest share for this clip",
+                  clipShares: {
+                    type: "object",
+                    additionalProperties: {
+                      $ref: "#/components/schemas/ClipShare",
+                    },
+                    description: "Shares grouped by platform (e.g. { tiktok: {...}, youtube: {...} })",
                   },
                 },
               },

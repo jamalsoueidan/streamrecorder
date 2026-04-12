@@ -13,7 +13,11 @@ import {
   Stack,
   Title,
 } from "@mantine/core";
-import { IconBrandTiktok } from "@tabler/icons-react";
+import {
+  IconBrandTiktok,
+  IconBrandYoutube,
+  IconCheck,
+} from "@tabler/icons-react";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -21,131 +25,147 @@ import { useEffect, useState } from "react";
 import { checkAndUpdateTikTokStatus } from "../actions/share-tiktok";
 import { ClipPreview } from "./clip-preview";
 
+interface ClipShareData {
+  documentId?: string;
+  state?: string;
+  platform?: string;
+  data?: { publishId?: string; videoId?: string };
+}
+
 interface ClipCardProps {
-  clip: ClipWithShare;
+  clip: ClipWithShare & {
+    clipShares?: Record<string, ClipShareData>;
+  };
   locale: string;
+}
+
+function PlatformButton({
+  platform,
+  share,
+  clipDocumentId,
+  label,
+  icon,
+  color,
+}: {
+  platform: string;
+  share?: ClipShareData | null;
+  clipDocumentId: string;
+  label: string;
+  icon: React.ReactNode;
+  color: string;
+}) {
+  const t = useTranslations("protected.myClips");
+  const state = share?.state;
+
+  if (state === ClipShareStateEnum1.Processing) {
+    return (
+      <Progress.Root size={40} radius="md">
+        <Progress.Section value={100} color="yellow" animated>
+          <Progress.Label lh={1.4}>{t("share.processing")}</Progress.Label>
+        </Progress.Section>
+      </Progress.Root>
+    );
+  }
+
+  if (state === ClipShareStateEnum1.Completed) {
+    return (
+      <Button
+        size="md"
+        variant="light"
+        color="green"
+        leftSection={icon}
+        rightSection={<IconCheck size={16} />}
+        fullWidth
+        disabled
+      >
+        {t("share.completed")}
+      </Button>
+    );
+  }
+
+  if (state === ClipShareStateEnum1.Failed) {
+    return (
+      <Button
+        component={Link}
+        href={`/my-clips/${clipDocumentId}/publish/${platform}`}
+        size="md"
+        variant="light"
+        color="red"
+        leftSection={icon}
+        fullWidth
+      >
+        {t("share.retry")}
+      </Button>
+    );
+  }
+
+  return (
+    <Button
+      component={Link}
+      href={`/my-clips/${clipDocumentId}/publish/${platform}`}
+      size="md"
+      variant="filled"
+      color={color}
+      leftSection={icon}
+      fullWidth
+    >
+      {label}
+    </Button>
+  );
 }
 
 export function ClipCard({ clip, locale }: ClipCardProps) {
   const t = useTranslations("protected.myClips");
   const router = useRouter();
-  const [currentState, setCurrentState] = useState(clip.clipShare?.state);
 
-  const clipShare = clip.clipShare;
-  const clipShareId = clipShare?.documentId;
-  const publishId = (clipShare?.data as { publishId?: string })?.publishId;
+  const tiktokShare = clip.clipShares?.tiktok;
+  const youtubeShare = clip.clipShares?.youtube;
+
+  const [tiktokState, setTiktokState] = useState(tiktokShare?.state);
+
+  const tiktokPublishId = (tiktokShare?.data as { publishId?: string })
+    ?.publishId;
+  const tiktokShareId = tiktokShare?.documentId;
 
   // Poll TikTok status for processing clips
   useEffect(() => {
-    if (currentState !== "processing" || !publishId || !clipShareId) return;
+    if (tiktokState !== "processing" || !tiktokPublishId || !tiktokShareId)
+      return;
 
     let isMounted = true;
 
     const checkStatus = async () => {
       if (!isMounted) return;
 
-      const result = await checkAndUpdateTikTokStatus(clipShareId, publishId);
+      const result = await checkAndUpdateTikTokStatus(
+        tiktokShareId,
+        tiktokPublishId,
+      );
 
       if (!isMounted) return;
 
-      // Update local state if status changed to final
       if (result.updated) {
         if (result.status === "PUBLISH_COMPLETE") {
-          setCurrentState(ClipShareStateEnum1.Completed);
+          setTiktokState(ClipShareStateEnum1.Completed);
         } else if (result.status === "FAILED") {
-          setCurrentState(ClipShareStateEnum1.Failed);
+          setTiktokState(ClipShareStateEnum1.Failed);
         }
         router.refresh();
       }
     };
 
-    // Initial check immediately
     checkStatus();
-
-    // Then poll every 5 seconds
     const interval = setInterval(checkStatus, 5000);
 
     return () => {
       isMounted = false;
       clearInterval(interval);
     };
-  }, [currentState, publishId, clipShareId, router]);
-
-  // Get border color based on state
-  const getBorderColor = () => {
-    switch (currentState) {
-      case "processing":
-        return "var(--mantine-color-yellow-6)";
-      case "completed":
-        return "var(--mantine-color-green-6)";
-      case "failed":
-        return "var(--mantine-color-red-6)";
-      default:
-        return undefined;
-    }
-  };
-
-  const borderColor = getBorderColor();
-
-  const renderTikTokStatus = () => {
-    if (currentState === ClipShareStateEnum1.Processing) {
-      return (
-        <Progress.Root size={40} radius="md">
-          <Progress.Section value={100} color="yellow" animated>
-            <Progress.Label lh={1.4}>{t("share.processing")}</Progress.Label>
-          </Progress.Section>
-        </Progress.Root>
-      );
-    }
-
-    if (currentState === ClipShareStateEnum1.Completed) {
-      return (
-        <Progress.Root size={40} radius="md">
-          <Progress.Section value={100} color="green">
-            <Progress.Label>{t("share.completed")}</Progress.Label>
-          </Progress.Section>
-        </Progress.Root>
-      );
-    }
-
-    if (currentState === ClipShareStateEnum1.Failed) {
-      return (
-        <Link
-          href={`/my-clips/${clip.documentId}/publish`}
-          style={{ textDecoration: "none" }}
-        >
-          <Progress.Root size={40} radius="md" style={{ cursor: "pointer" }}>
-            <Progress.Section value={100} color="red">
-              <Progress.Label>{t("share.retry")}</Progress.Label>
-            </Progress.Section>
-          </Progress.Root>
-        </Link>
-      );
-    }
-
-    // No share yet - big obvious button
-    return (
-      <Button
-        component={Link}
-        href={`/my-clips/${clip.documentId}/publish`}
-        size="md"
-        variant="filled"
-        leftSection={<IconBrandTiktok size={18} />}
-        fullWidth
-      >
-        {t("share.tiktok")}
-      </Button>
-    );
-  };
+  }, [tiktokState, tiktokPublishId, tiktokShareId, router]);
 
   return (
-    <Card
-      radius="md"
-      withBorder
-      style={borderColor ? { borderColor, borderWidth: 3 } : undefined}
-    >
+    <Card radius="md" withBorder>
       <Stack gap="xs">
-        {/* Title and badge above video */}
         <Flex justify="space-between" align="center">
           <Title order={4} lineClamp={1}>
             {clip.title}
@@ -157,30 +177,27 @@ export function ClipCard({ clip, locale }: ClipCardProps) {
 
         <ClipPreview clip={clip} type={clip.follower?.type} locale={locale} />
 
-        {/* Action buttons */}
         <Stack gap="xs">
-          {renderTikTokStatus()}
-          {/*
-          <Group grow>
-            <Button
-              size="sm"
-              variant="light"
-              color="gray"
-              leftSection={<IconEdit size={16} />}
-              disabled={currentState === ClipShareStateEnum1.Processing}
-            >
-              {t("actions.edit")}
-            </Button>
-            <Button
-              size="sm"
-              variant="light"
-              color="red"
-              leftSection={<IconTrash size={16} />}
-              disabled={currentState === ClipShareStateEnum1.Processing}
-            >
-              {t("actions.delete")}
-            </Button>
-          </Group> */}
+          <PlatformButton
+            platform="tiktok"
+            share={
+              tiktokShare
+                ? { ...tiktokShare, state: tiktokState }
+                : undefined
+            }
+            clipDocumentId={clip.documentId!}
+            label={t("share.tiktok")}
+            icon={<IconBrandTiktok size={18} />}
+            color="dark"
+          />
+          <PlatformButton
+            platform="youtube"
+            share={youtubeShare}
+            clipDocumentId={clip.documentId!}
+            label={t("share.youtube")}
+            icon={<IconBrandYoutube size={18} />}
+            color="red"
+          />
         </Stack>
       </Stack>
     </Card>

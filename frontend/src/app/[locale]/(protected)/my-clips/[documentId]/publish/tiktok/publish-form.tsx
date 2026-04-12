@@ -37,7 +37,7 @@ import {
   CreatorInfo,
   getCreatorInfo,
   shareToTikTok,
-} from "../../actions/share-tiktok";
+} from "../../../actions/share-tiktok";
 
 interface PublishFormProps {
   clip: Clip;

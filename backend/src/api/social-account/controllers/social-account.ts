@@ -278,7 +278,11 @@ export default factories.createCoreController(
         return ctx.forbidden("You can only delete your own social account");
       }
 
-      return super.delete(ctx);
+      await strapi
+        .documents("api::social-account.social-account")
+        .delete({ documentId: id });
+
+      return { data: { documentId: id } };
     },
   }),
 );

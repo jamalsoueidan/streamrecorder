@@ -8,6 +8,7 @@ import { DangerZoneCard } from "./components/danger-zone-card";
 import { ProfileCard } from "./components/profile-card";
 import { SubscriptionCard } from "./components/subscription-card";
 import { TikTokCard } from "./components/tiktok-card";
+import { YouTubeCard } from "./components/youtube-card";
 
 export default function SettingsPage() {
   const t = useTranslations("protected.settings");
@@ -35,6 +36,7 @@ export default function SettingsPage() {
         <SubscriptionCard />
         <Can I="meCreate" a="SocialAccount">
           <TikTokCard />
+          <YouTubeCard />
         </Can>
         <Role is="admin" not>
           <DangerZoneCard />

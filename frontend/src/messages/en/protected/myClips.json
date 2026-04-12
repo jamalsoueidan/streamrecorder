@@ -15,7 +15,8 @@
     "retry": "Retry",
     "failedTooltip": "Publish failed. Click to retry.",
     "check": "Check",
-    "checkStatus": "Check TikTok status"
+    "checkStatus": "Check TikTok status",
+    "youtube": "Publish to YouTube"
   },
   "actions": {
     "edit": "Edit video",
@@ -80,6 +81,37 @@
     "cannotPostNow": "You've reached your daily posting limit on TikTok. Please try again later.",
     "videoTooLong": "This video is {duration} seconds long, but TikTok only allows videos up to {maxDuration} seconds for your account.",
     "selfOnlyDisabledBranded": "Branded content visibility cannot be set to private"
+  },
+  "youtubePublishPage": {
+    "title": "Publish to YouTube",
+    "description": "Review your video and publish it as a YouTube Short",
+    "titleLabel": "Title",
+    "titlePlaceholder": "Enter a title for your video...",
+    "descriptionLabel": "Description",
+    "descriptionPlaceholder": "Add a description (optional)...",
+    "privacyLabel": "Privacy",
+    "privacy": {
+      "public": "Public",
+      "unlisted": "Unlisted",
+      "private": "Private"
+    },
+    "tagsLabel": "Tags",
+    "tagsPlaceholder": "gaming, highlights, live stream",
+    "tagsDescription": "Comma-separated tags to help viewers find your video",
+    "quotaWarning": "YouTube has a daily upload limit. If the upload fails with a quota error, try again tomorrow.",
+    "uploadButton": "Publish to YouTube",
+    "cancel": "Cancel",
+    "success": "Published",
+    "successMessage": "Your video has been uploaded to YouTube.",
+    "error": "Error",
+    "validation": {
+      "titleRequired": "Please enter a title for your video"
+    },
+    "noYoutubeConnection": {
+      "title": "YouTube account not connected",
+      "description": "To publish clips to YouTube, go to Settings and connect your YouTube account first.",
+      "goToSettings": "Go to Settings"
+    }
   },
   "upgrade": {
     "title": "From recording to TikTok in seconds",

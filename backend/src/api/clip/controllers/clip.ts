@@ -43,22 +43,31 @@ export default factories.createCoreController(
           },
           populate: { clip: { fields: ["id"] } },
           sort: { createdAt: "desc" },
-          limit: 1,
         });
 
-      const shareByClipId = new Map<string | number, any>();
+      // Group by clip ID, keep latest share per platform per clip
+      const sharesByClipId = new Map<string | number, Map<string, any>>();
       for (const share of clipShares) {
         const clipId = share.clip?.id;
-        if (clipId && !shareByClipId.has(clipId)) {
+        if (!clipId) continue;
+        if (!sharesByClipId.has(clipId)) {
+          sharesByClipId.set(clipId, new Map());
+        }
+        const platformMap = sharesByClipId.get(clipId)!;
+        // Keep only the latest share per platform (already sorted desc)
+        if (!platformMap.has(share.platform)) {
           const { clip, ...shareData } = share;
-          shareByClipId.set(clipId, shareData);
+          platformMap.set(share.platform, shareData);
         }
       }
 
-      return clips.map((clip) => ({
-        ...clip,
-        clipShare: shareByClipId.get(clip.id) || null,
-      }));
+      return clips.map((clip) => {
+        const platformMap = sharesByClipId.get(clip.id);
+        return {
+          ...clip,
+          clipShares: platformMap ? Object.fromEntries(platformMap) : {},
+        };
+      });
     };
 
     return {

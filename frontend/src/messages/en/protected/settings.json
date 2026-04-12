@@ -32,6 +32,21 @@
     "disconnectSuccessMessage": "Your TikTok account has been disconnected",
     "disconnectError": "Error"
   },
+  "youtube": {
+    "title": "YouTube",
+    "description": "Connect your YouTube account to publish clips directly as YouTube Shorts.",
+    "descriptionConnected": "Your YouTube account is connected. You can now publish clips to YouTube.",
+    "connect": "Connect YouTube",
+    "disconnect": "Disconnect",
+    "connected": "Connected",
+    "connectSuccess": "Success",
+    "connectSuccessMessage": "Your YouTube account has been connected",
+    "connectError": "Error",
+    "connectErrorMessage": "Failed to connect YouTube account",
+    "disconnectSuccess": "Disconnected",
+    "disconnectSuccessMessage": "Your YouTube account has been disconnected",
+    "disconnectError": "Error"
+  },
   "dangerZone": {
     "title": "Danger Zone",
     "description": "Once you delete your account, there is no going back. Please be certain.",
