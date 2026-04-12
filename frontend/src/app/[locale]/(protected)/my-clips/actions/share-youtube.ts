@@ -167,7 +167,7 @@ export async function shareToYouTube({
       return { success: false, error: "Failed to fetch clip video" };
     }
 
-    // 6. Upload video to YouTube (stream body to avoid buffering entire file in memory)
+    // 6. Upload video to YouTube (stream directly to avoid buffering in memory)
     const uploadResponse = await fetch(uploadUrl, {
       method: "PUT",
       headers: {

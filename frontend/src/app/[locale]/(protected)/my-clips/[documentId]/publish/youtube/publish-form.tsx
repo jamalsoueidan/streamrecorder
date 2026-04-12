@@ -9,6 +9,7 @@ import {
   Card,
   Grid,
   Group,
+  Loader,
   Select,
   Stack,
   Text,
@@ -26,7 +27,8 @@ import {
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { getYouTubeConnection } from "../../../../settings/actions/youtube";
 import { shareToYouTube } from "../../../actions/share-youtube";
 
 interface YouTubePublishFormProps {
@@ -39,10 +41,20 @@ export function YouTubePublishForm({ clip, videoUrl }: YouTubePublishFormProps) 
   const router = useRouter();
   const videoRef = useRef<HTMLVideoElement>(null);
   const [loading, setLoading] = useState(false);
+  const [checkingConnection, setCheckingConnection] = useState(true);
+  const [connected, setConnected] = useState(false);
+
+  // Check YouTube connection on mount
+  useEffect(() => {
+    getYouTubeConnection().then((data) => {
+      setConnected(!!data?.connected);
+      setCheckingConnection(false);
+    });
+  }, []);
 
   const form = useForm({
     initialValues: {
-      title: (clip.title || "").substring(0, 100),
+      title: "",
       description: "",
       privacyStatus: "private",
       tags: "",
@@ -74,6 +86,7 @@ export function YouTubePublishForm({ clip, videoUrl }: YouTubePublishFormProps) 
         title: t("success"),
         message: t("successMessage"),
         color: "green",
+        autoClose: 5000,
       });
       router.push("/my-clips");
     } else {
@@ -84,6 +97,43 @@ export function YouTubePublishForm({ clip, videoUrl }: YouTubePublishFormProps) 
       });
     }
   };
+
+  if (checkingConnection) {
+    return (
+      <Stack align="center" py="xl">
+        <Loader size="lg" />
+        <Text c="dimmed">{t("checkingConnection")}</Text>
+      </Stack>
+    );
+  }
+
+  if (!connected) {
+    return (
+      <Stack gap="md" align="center" py="xl">
+        <Alert
+          icon={<IconAlertCircle size={16} />}
+          color="orange"
+          title={t("noYoutubeConnection.title")}
+        >
+          <Text size="sm">{t("noYoutubeConnection.description")}</Text>
+        </Alert>
+        <Group>
+          <Button
+            component={Link}
+            href="/my-clips"
+            variant="light"
+            color="gray"
+            leftSection={<IconArrowLeft size={18} />}
+          >
+            {t("cancel")}
+          </Button>
+          <Button component={Link} href="/settings">
+            {t("noYoutubeConnection.goToSettings")}
+          </Button>
+        </Group>
+      </Stack>
+    );
+  }
 
   return (
     <form onSubmit={form.onSubmit(handleSubmit)}>
