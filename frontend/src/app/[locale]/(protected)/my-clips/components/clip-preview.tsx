@@ -1,7 +1,7 @@
 "use client";
 
 import { FollowerTypeIcon } from "@/app/[locale]/(protected)/components/follower-type-icon";
-import { MediaPosterImage } from "@/app/[locale]/(protected)/components/video/media-chrome";
+import { MediaLoadingIndicator, MediaPosterImage } from "@/app/[locale]/(protected)/components/video/media-chrome";
 import {
   Clip,
   ClipTypeEnum,
@@ -122,6 +122,15 @@ export function ClipPreview({ clip, type, locale }: Props) {
           </video>
 
           <MediaPosterImage slot="poster" src={previewUrl} />
+
+          <MediaLoadingIndicator
+            slot="centered-chrome"
+            noautohide
+            loadingdelay="0"
+            style={{
+              "--media-loading-indicator-transition-delay": "0ms",
+            }}
+          />
         {/* @ts-expect-error - web component */}
         </media-theme-microvideo>
       )}

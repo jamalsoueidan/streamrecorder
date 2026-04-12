@@ -7,7 +7,7 @@ import "media-chrome";
 import "@player.style/yt";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
-import { HlsVideo, MediaPosterImage } from "./media-chrome";
+import { HlsVideo, MediaLoadingIndicator, MediaPosterImage } from "./media-chrome";
 
 interface VideoPlayerProps {
   recording: Recording;
@@ -176,6 +176,15 @@ export function VideoPlayer({
         <MediaPosterImage
           slot="poster"
           src={`/video/${recording.documentId}/screenshot.jpg`}
+        />
+
+        <MediaLoadingIndicator
+          slot="centered-chrome"
+          noautohide
+          loadingdelay="0"
+          style={{
+            "--media-loading-indicator-transition-delay": "0ms",
+          }}
         />
 
       {/* @ts-expect-error - web component */}
