@@ -43,5 +43,20 @@
       "cancel": "İptal"
     },
     "deleteError": "Hata"
+  },
+  "youtube": {
+    "title": "YouTube",
+    "description": "Klipleri YouTube Shorts olarak yayınlamak için YouTube hesabınızı bağlayın.",
+    "descriptionConnected": "YouTube hesabınız bağlı. Artık klipleri YouTube'a yayınlayabilirsiniz.",
+    "connect": "YouTube Bağla",
+    "disconnect": "Bağlantıyı Kes",
+    "connected": "Bağlı",
+    "connectSuccess": "Başarılı",
+    "connectSuccessMessage": "YouTube hesabınız bağlandı",
+    "connectError": "Hata",
+    "connectErrorMessage": "YouTube hesabı bağlanamadı",
+    "disconnectSuccess": "Bağlantı Kesildi",
+    "disconnectSuccessMessage": "YouTube hesabınızın bağlantısı kesildi",
+    "disconnectError": "Hata"
   }
 }

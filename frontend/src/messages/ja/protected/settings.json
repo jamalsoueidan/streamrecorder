@@ -43,5 +43,20 @@
       "cancel": "キャンセル"
     },
     "deleteError": "エラー"
+  },
+  "youtube": {
+    "title": "YouTube",
+    "description": "YouTubeアカウントを接続して、クリップをYouTube Shortとして公開できます。",
+    "descriptionConnected": "YouTubeアカウントが接続されました。クリップをYouTubeに公開できます。",
+    "connect": "YouTubeを接続",
+    "disconnect": "切断",
+    "connected": "接続済み",
+    "connectSuccess": "成功",
+    "connectSuccessMessage": "YouTubeアカウントが接続されました",
+    "connectError": "エラー",
+    "connectErrorMessage": "YouTubeアカウントの接続に失敗しました",
+    "disconnectSuccess": "切断完了",
+    "disconnectSuccessMessage": "YouTubeアカウントが切断されました",
+    "disconnectError": "エラー"
   }
 }

@@ -43,5 +43,20 @@
       "cancel": "취소"
     },
     "deleteError": "오류"
+  },
+  "youtube": {
+    "title": "YouTube",
+    "description": "YouTube 계정을 연결하여 클립을 YouTube Short로 게시하세요.",
+    "descriptionConnected": "YouTube 계정이 연결되었습니다. 이제 클립을 YouTube에 게시할 수 있습니다.",
+    "connect": "YouTube 연결",
+    "disconnect": "연결 해제",
+    "connected": "연결됨",
+    "connectSuccess": "성공",
+    "connectSuccessMessage": "YouTube 계정이 연결되었습니다",
+    "connectError": "오류",
+    "connectErrorMessage": "YouTube 계정 연결에 실패했습니다",
+    "disconnectSuccess": "연결 해제됨",
+    "disconnectSuccessMessage": "YouTube 계정이 연결 해제되었습니다",
+    "disconnectError": "오류"
   }
 }

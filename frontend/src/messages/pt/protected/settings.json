@@ -43,5 +43,20 @@
       "cancel": "Cancelar"
     },
     "deleteError": "Erro"
+  },
+  "youtube": {
+    "title": "YouTube",
+    "description": "Conecte sua conta do YouTube para publicar clipes como YouTube Shorts.",
+    "descriptionConnected": "Sua conta do YouTube está conectada. Agora você pode publicar clipes no YouTube.",
+    "connect": "Conectar YouTube",
+    "disconnect": "Desconectar",
+    "connected": "Conectado",
+    "connectSuccess": "Sucesso",
+    "connectSuccessMessage": "Sua conta do YouTube foi conectada",
+    "connectError": "Erro",
+    "connectErrorMessage": "Falha ao conectar a conta do YouTube",
+    "disconnectSuccess": "Desconectado",
+    "disconnectSuccessMessage": "Sua conta do YouTube foi desconectada",
+    "disconnectError": "Erro"
   }
 }

@@ -43,5 +43,20 @@
       "cancel": "Batal"
     },
     "deleteError": "Galat"
+  },
+  "youtube": {
+    "title": "YouTube",
+    "description": "Hubungkan akun YouTube untuk mempublikasikan klip sebagai YouTube Shorts.",
+    "descriptionConnected": "Akun YouTube terhubung. Kamu sekarang bisa mempublikasikan klip ke YouTube.",
+    "connect": "Hubungkan YouTube",
+    "disconnect": "Putuskan",
+    "connected": "Terhubung",
+    "connectSuccess": "Berhasil",
+    "connectSuccessMessage": "Akun YouTube telah terhubung",
+    "connectError": "Error",
+    "connectErrorMessage": "Gagal menghubungkan akun YouTube",
+    "disconnectSuccess": "Terputus",
+    "disconnectSuccessMessage": "Akun YouTube telah diputuskan",
+    "disconnectError": "Error"
   }
 }

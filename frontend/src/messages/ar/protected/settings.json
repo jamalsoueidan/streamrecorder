@@ -43,5 +43,20 @@
       "cancel": "إلغاء"
     },
     "deleteError": "خطأ"
+  },
+  "youtube": {
+    "title": "يوتيوب",
+    "description": "اربط حسابك على يوتيوب لنشر المقاطع كيوتيوب شورتس.",
+    "descriptionConnected": "حسابك على يوتيوب متصل. يمكنك الآن نشر المقاطع على يوتيوب.",
+    "connect": "ربط يوتيوب",
+    "disconnect": "فصل",
+    "connected": "متصل",
+    "connectSuccess": "تم",
+    "connectSuccessMessage": "تم ربط حسابك على يوتيوب",
+    "connectError": "خطأ",
+    "connectErrorMessage": "فشل ربط حساب يوتيوب",
+    "disconnectSuccess": "تم الفصل",
+    "disconnectSuccessMessage": "تم فصل حسابك على يوتيوب",
+    "disconnectError": "خطأ"
   }
 }

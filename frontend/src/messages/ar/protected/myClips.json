@@ -15,7 +15,8 @@
     "retry": "إعادة المحاولة",
     "failedTooltip": "فشل النشر. انقر لإعادة المحاولة.",
     "check": "تحقق",
-    "checkStatus": "تحقق من حالة تيك توك"
+    "checkStatus": "تحقق من حالة تيك توك",
+    "youtube": "نشر على يوتيوب"
   },
   "actions": {
     "edit": "تعديل الفيديو",
@@ -90,5 +91,41 @@
     },
     "upgradeButton": "اشتراك الآن",
     "hint": "للمشتركين فقط"
+  },
+  "youtubePublishPage": {
+    "title": "النشر على يوتيوب",
+    "description": "راجع الفيديو وانشره كيوتيوب شورت",
+    "titleLabel": "العنوان",
+    "titlePlaceholder": "أدخل عنوان الفيديو...",
+    "descriptionLabel": "الوصف",
+    "descriptionPlaceholder": "أضف وصفاً (اختياري)...",
+    "privacyLabel": "الخصوصية",
+    "privacy": {
+      "public": "عام",
+      "unlisted": "غير مدرج",
+      "private": "خاص"
+    },
+    "tagsLabel": "الوسوم",
+    "tagsPlaceholder": "ألعاب, بث مباشر, مقاطع",
+    "tagsDescription": "وسوم مفصولة بفواصل لمساعدة المشاهدين في إيجاد الفيديو",
+    "quotaWarning": "يوتيوب لديه حد يومي للرفع. إذا فشل الرفع بخطأ حصة، حاول مرة أخرى غداً.",
+    "confirmationPrefix": "بالنشر، أنت توافق على",
+    "termsOfServiceLink": "شروط خدمة LiveStreamRecorder",
+    "andText": "و",
+    "youtubeTermsLink": "شروط خدمة يوتيوب",
+    "uploadButton": "نشر على يوتيوب",
+    "cancel": "إلغاء",
+    "success": "تم النشر",
+    "successMessage": "تم رفع الفيديو على يوتيوب.",
+    "error": "خطأ",
+    "validation": {
+      "titleRequired": "يرجى إدخال عنوان للفيديو"
+    },
+    "noYoutubeConnection": {
+      "title": "حساب TikTok غير متصل",
+      "description": "لنشر المقاطع على TikTok، اذهب إلى الإعدادات وقم بربط حساب TikTok الخاص بك أولاً.",
+      "goToSettings": "الذهاب إلى الإعدادات",
+      "hint": "بعد الربط، عد إلى هنا لنشر مقطعك."
+    }
   }
 }

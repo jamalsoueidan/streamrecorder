@@ -15,7 +15,8 @@
     "retry": "재시도",
     "failedTooltip": "게시 실패. 클릭하여 재시도.",
     "check": "확인",
-    "checkStatus": "틱톡 상태 확인"
+    "checkStatus": "틱톡 상태 확인",
+    "youtube": "YouTube에 게시"
   },
   "actions": {
     "edit": "영상 편집",
@@ -90,5 +91,41 @@
     },
     "upgradeButton": "지금 업그레이드",
     "hint": "프리미엄 구독으로 클립 게시 잠금 해제"
+  },
+  "youtubePublishPage": {
+    "title": "YouTube에 게시",
+    "description": "영상을 확인하고 YouTube Short로 게시하세요",
+    "titleLabel": "제목",
+    "titlePlaceholder": "영상 제목을 입력하세요...",
+    "descriptionLabel": "설명",
+    "descriptionPlaceholder": "설명을 추가하세요 (선택사항)...",
+    "privacyLabel": "공개 설정",
+    "privacy": {
+      "public": "공개",
+      "unlisted": "미등록",
+      "private": "비공개"
+    },
+    "tagsLabel": "태그",
+    "tagsPlaceholder": "게이밍, 하이라이트, 라이브",
+    "tagsDescription": "시청자가 영상을 쉽게 찾을 수 있도록 쉼표로 구분된 태그",
+    "quotaWarning": "YouTube에는 일일 업로드 제한이 있습니다. 할당량 오류가 발생하면 내일 다시 시도해주세요.",
+    "confirmationPrefix": "게시함으로써 다음에 동의합니다:",
+    "termsOfServiceLink": "LiveStreamRecorder 서비스 약관",
+    "andText": "및",
+    "youtubeTermsLink": "YouTube 서비스 약관",
+    "uploadButton": "YouTube에 게시",
+    "cancel": "취소",
+    "success": "게시 완료",
+    "successMessage": "영상이 YouTube에 업로드되었습니다.",
+    "error": "오류",
+    "validation": {
+      "titleRequired": "영상 제목을 입력해주세요"
+    },
+    "noYoutubeConnection": {
+      "title": "틱톡 계정이 연결되지 않음",
+      "description": "클립을 틱톡에 게시하려면 설정에서 먼저 틱톡 계정을 연결하세요.",
+      "goToSettings": "설정으로 이동",
+      "hint": "연결되면 여기로 돌아와 클립을 게시하세요."
+    }
   }
 }

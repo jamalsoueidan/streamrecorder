@@ -15,7 +15,8 @@
     "retry": "再試行",
     "failedTooltip": "投稿に失敗しました。クリックして再試行してください。",
     "check": "確認",
-    "checkStatus": "TikTok のステータスを確認"
+    "checkStatus": "TikTok のステータスを確認",
+    "youtube": "YouTubeに公開"
   },
   "actions": {
     "edit": "動画を編集",
@@ -90,5 +91,41 @@
     },
     "upgradeButton": "今すぐアップグレード",
     "hint": "プレミアムサブスクリプションでクリップ投稿機能をアンロック"
+  },
+  "youtubePublishPage": {
+    "title": "YouTubeに公開",
+    "description": "動画を確認してYouTube Shortとして公開",
+    "titleLabel": "タイトル",
+    "titlePlaceholder": "動画のタイトルを入力...",
+    "descriptionLabel": "説明",
+    "descriptionPlaceholder": "説明を追加（任意）...",
+    "privacyLabel": "プライバシー",
+    "privacy": {
+      "public": "公開",
+      "unlisted": "限定公開",
+      "private": "非公開"
+    },
+    "tagsLabel": "タグ",
+    "tagsPlaceholder": "ゲーム, ハイライト, 配信",
+    "tagsDescription": "視聴者が動画を見つけやすくするためのカンマ区切りのタグ",
+    "quotaWarning": "YouTubeには1日のアップロード制限があります。クォータエラーの場合は明日もう一度お試しください。",
+    "confirmationPrefix": "公開することで、以下に同意したものとみなされます：",
+    "termsOfServiceLink": "LiveStreamRecorderの利用規約",
+    "andText": "および",
+    "youtubeTermsLink": "YouTubeの利用規約",
+    "uploadButton": "YouTubeに公開",
+    "cancel": "キャンセル",
+    "success": "公開完了",
+    "successMessage": "動画がYouTubeにアップロードされました。",
+    "error": "エラー",
+    "validation": {
+      "titleRequired": "動画のタイトルを入力してください"
+    },
+    "noYoutubeConnection": {
+      "title": "TikTok アカウントが連携されていません",
+      "description": "TikTok にクリップを投稿するには、設定から TikTok アカウントを連携してください。",
+      "goToSettings": "設定へ",
+      "hint": "連携後にここに戻ってクリップを投稿してください。"
+    }
   }
 }

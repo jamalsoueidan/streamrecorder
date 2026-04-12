@@ -15,7 +15,8 @@
     "retry": "Tekrar dene",
     "failedTooltip": "Yayınlama başarısız. Tekrar denemek için tıklayın.",
     "check": "Kontrol et",
-    "checkStatus": "TikTok durumunu kontrol et"
+    "checkStatus": "TikTok durumunu kontrol et",
+    "youtube": "YouTube'a Yayınla"
   },
   "actions": {
     "edit": "Videoyu düzenle",
@@ -90,5 +91,41 @@
     },
     "upgradeButton": "Şimdi Yükselt",
     "hint": "Premium abonelik ile klip paylaşımının kilidini açın"
+  },
+  "youtubePublishPage": {
+    "title": "YouTube'a Yayınla",
+    "description": "Videonuzu kontrol edin ve YouTube Short olarak yayınlayın",
+    "titleLabel": "Başlık",
+    "titlePlaceholder": "Video için bir başlık girin...",
+    "descriptionLabel": "Açıklama",
+    "descriptionPlaceholder": "Açıklama ekleyin (isteğe bağlı)...",
+    "privacyLabel": "Gizlilik",
+    "privacy": {
+      "public": "Herkese Açık",
+      "unlisted": "Liste Dışı",
+      "private": "Özel"
+    },
+    "tagsLabel": "Etiketler",
+    "tagsPlaceholder": "oyun, öne çıkanlar, canlı yayın",
+    "tagsDescription": "İzleyicilerin videonuzu bulmasına yardımcı olacak virgülle ayrılmış etiketler",
+    "quotaWarning": "YouTube'un günlük yükleme sınırı vardır. Kota hatası alırsanız yarın tekrar deneyin.",
+    "confirmationPrefix": "Yayınlayarak şunları kabul edersiniz:",
+    "termsOfServiceLink": "LiveStreamRecorder Kullanım Koşulları",
+    "andText": "ve",
+    "youtubeTermsLink": "YouTube Kullanım Koşulları",
+    "uploadButton": "YouTube'a Yayınla",
+    "cancel": "İptal",
+    "success": "Yayınlandı",
+    "successMessage": "Videonuz YouTube'a yüklendi.",
+    "error": "Hata",
+    "validation": {
+      "titleRequired": "Videonuz için bir başlık girin"
+    },
+    "noYoutubeConnection": {
+      "title": "TikTok hesabı bağlı değil",
+      "description": "TikTok'ta klip yayınlamak için Ayarlar'a gidin ve önce TikTok hesabınızı bağlayın.",
+      "goToSettings": "Ayarlar'a Git",
+      "hint": "Bağlandıktan sonra klibinizi yayınlamak için buraya geri gelin."
+    }
   }
 }

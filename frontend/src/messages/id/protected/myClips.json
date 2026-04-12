@@ -15,7 +15,8 @@
     "retry": "Coba lagi",
     "failedTooltip": "Penerbitan gagal. Klik untuk mencoba lagi.",
     "check": "Periksa",
-    "checkStatus": "Periksa status TikTok"
+    "checkStatus": "Periksa status TikTok",
+    "youtube": "Publikasi ke YouTube"
   },
   "actions": {
     "edit": "Edit video",
@@ -90,5 +91,41 @@
     },
     "upgradeButton": "Upgrade Sekarang",
     "hint": "Buka penerbitan klip dengan langganan premium"
+  },
+  "youtubePublishPage": {
+    "title": "Publikasi ke YouTube",
+    "description": "Tinjau video dan publikasikan sebagai YouTube Short",
+    "titleLabel": "Judul",
+    "titlePlaceholder": "Masukkan judul untuk video...",
+    "descriptionLabel": "Deskripsi",
+    "descriptionPlaceholder": "Tambahkan deskripsi (opsional)...",
+    "privacyLabel": "Privasi",
+    "privacy": {
+      "public": "Publik",
+      "unlisted": "Tidak Terdaftar",
+      "private": "Pribadi"
+    },
+    "tagsLabel": "Tag",
+    "tagsPlaceholder": "gaming, highlight, live stream",
+    "tagsDescription": "Tag dipisahkan koma untuk membantu penonton menemukan video",
+    "quotaWarning": "YouTube memiliki batas upload harian. Jika gagal dengan error kuota, coba lagi besok.",
+    "confirmationPrefix": "Dengan mempublikasikan, kamu menyetujui",
+    "termsOfServiceLink": "Ketentuan Layanan LiveStreamRecorder",
+    "andText": "dan",
+    "youtubeTermsLink": "Ketentuan Layanan YouTube",
+    "uploadButton": "Publikasi ke YouTube",
+    "cancel": "Batal",
+    "success": "Dipublikasikan",
+    "successMessage": "Video telah diunggah ke YouTube.",
+    "error": "Error",
+    "validation": {
+      "titleRequired": "Masukkan judul untuk video"
+    },
+    "noYoutubeConnection": {
+      "title": "Akun TikTok belum terhubung",
+      "description": "Untuk menerbitkan klip ke TikTok, buka Pengaturan dan hubungkan akun TikTok Anda terlebih dahulu.",
+      "goToSettings": "Buka Pengaturan",
+      "hint": "Setelah terhubung, kembali ke sini untuk menerbitkan klip Anda."
+    }
   }
 }
