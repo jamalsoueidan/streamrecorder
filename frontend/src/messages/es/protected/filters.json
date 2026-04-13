@@ -40,6 +40,12 @@
     "thisMonth": "Este mes",
     "lastMonth": "El mes pasado"
   },
+  "duration": {
+    "label": "Duración",
+    "short": "Menos de 4 min",
+    "medium": "4-20 min",
+    "long": "Más de 20 min"
+  },
   "country": {
     "label": "País",
     "placeholder": "Más países..."

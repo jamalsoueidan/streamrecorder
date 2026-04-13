@@ -1208,6 +1208,13 @@ export interface ApiRecordingRecording extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
+    totalDuration: Schema.Attribute.Integer &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<0>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

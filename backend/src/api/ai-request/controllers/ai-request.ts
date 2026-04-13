@@ -65,11 +65,15 @@ export default factories.createCoreController(
           return ctx.unauthorized();
         }
 
-        const isAdmin = user.role?.type === "admin";
         const { query } = ctx;
+        const pagination = (query.pagination || {}) as Record<string, unknown>;
+        const page = Number(pagination.page) || 1;
+        const pageSize =
+          Number(pagination.pageSize) || Number(pagination.limit) || 25;
+
         const filters = {
           ...((query.filters as object) || {}),
-          ...(isAdmin ? {} : { user: { documentId: user.documentId } }),
+          user: { documentId: user.documentId },
         };
 
         const results = await strapi
@@ -77,16 +81,13 @@ export default factories.createCoreController(
           .findMany({
             ...query,
             filters,
+            limit: pageSize,
+            start: (page - 1) * pageSize,
           });
 
         const total = await strapi.db
           .query("api::ai-request.ai-request")
           .count({ where: filters });
-
-        const pagination = (query.pagination || {}) as Record<string, unknown>;
-        const page = Number(pagination.page) || 1;
-        const pageSize =
-          Number(pagination.pageSize) || Number(pagination.limit) || 25;
 
         return {
           data: results,

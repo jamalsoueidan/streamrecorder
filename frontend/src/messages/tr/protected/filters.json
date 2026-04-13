@@ -40,6 +40,12 @@
     "thisMonth": "Bu ay",
     "lastMonth": "Geçen ay"
   },
+  "duration": {
+    "label": "Süre",
+    "short": "4 dk altı",
+    "medium": "4-20 dk",
+    "long": "20 dk üstü"
+  },
   "country": {
     "label": "Ülke",
     "placeholder": "Daha fazla ülke..."

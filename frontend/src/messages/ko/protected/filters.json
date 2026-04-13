@@ -40,6 +40,12 @@
     "thisMonth": "이번 달",
     "lastMonth": "지난 달"
   },
+  "duration": {
+    "label": "재생 시간",
+    "short": "4분 미만",
+    "medium": "4-20분",
+    "long": "20분 이상"
+  },
   "country": {
     "label": "국가",
     "placeholder": "더 많은 국가..."

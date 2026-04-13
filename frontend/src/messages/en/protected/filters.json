@@ -40,6 +40,12 @@
     "thisMonth": "This month",
     "lastMonth": "Last month"
   },
+  "duration": {
+    "label": "Duration",
+    "short": "Under 4 min",
+    "medium": "4-20 min",
+    "long": "Over 20 min"
+  },
   "country": {
     "label": "Country",
     "placeholder": "More countries..."

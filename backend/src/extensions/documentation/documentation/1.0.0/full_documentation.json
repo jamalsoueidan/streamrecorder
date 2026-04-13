@@ -20,7 +20,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2026-04-12T04:24:20.559Z"
+    "x-generation-date": "2026-04-13T12:37:53.456Z"
   },
   "servers": [
     {
@@ -15658,6 +15658,9 @@
               "hidden": {
                 "type": "boolean"
               },
+              "totalDuration": {
+                "type": "integer"
+              },
               "createdAt": {
                 "type": "string",
                 "format": "date-time"
@@ -18024,6 +18027,9 @@
                   },
                   "hidden": {
                     "type": "boolean"
+                  },
+                  "totalDuration": {
+                    "type": "integer"
                   },
                   "createdAt": {
                     "type": "string",
@@ -23159,6 +23165,9 @@
               "hidden": {
                 "type": "boolean"
               },
+              "totalDuration": {
+                "type": "integer"
+              },
               "createdAt": {
                 "type": "string",
                 "format": "date-time"
@@ -25349,6 +25358,9 @@
                   },
                   "hidden": {
                     "type": "boolean"
+                  },
+                  "totalDuration": {
+                    "type": "integer"
                   },
                   "createdAt": {
                     "type": "string",
@@ -30273,6 +30285,9 @@
               "hidden": {
                 "type": "boolean"
               },
+              "totalDuration": {
+                "type": "integer"
+              },
               "createdAt": {
                 "type": "string",
                 "format": "date-time"
@@ -30634,6 +30649,9 @@
               },
               "hidden": {
                 "type": "boolean"
+              },
+              "totalDuration": {
+                "type": "integer"
               },
               "locale": {
                 "type": "string"
@@ -32237,6 +32255,9 @@
           },
           "hidden": {
             "type": "boolean"
+          },
+          "totalDuration": {
+            "type": "integer"
           },
           "createdAt": {
             "type": "string",
@@ -36623,6 +36644,9 @@
               "hidden": {
                 "type": "boolean"
               },
+              "totalDuration": {
+                "type": "integer"
+              },
               "createdAt": {
                 "type": "string",
                 "format": "date-time"
@@ -38586,6 +38610,9 @@
               },
               "hidden": {
                 "type": "boolean"
+              },
+              "totalDuration": {
+                "type": "integer"
               },
               "createdAt": {
                 "type": "string",

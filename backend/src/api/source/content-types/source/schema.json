@@ -14,7 +14,12 @@
     "state": {
       "type": "enumeration",
       "required": true,
-      "enum": ["recording", "uploading", "done", "failed"]
+      "enum": [
+        "recording",
+        "uploading",
+        "done",
+        "failed"
+      ]
     },
     "executionId": {
       "type": "integer"
