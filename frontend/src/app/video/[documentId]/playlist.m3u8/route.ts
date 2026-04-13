@@ -26,6 +26,7 @@ async function getRecordingByDocumentId(documentId: string) {
   return response.data.data?.[0] ?? null;
 }
 
+
 const fetchSourcePlaylists = unstable_cache(
   async (documentId: string, _updatedAt: string, quality: "high" | "low" = "high") => {
     const response = await publicApi.source.getSources({
@@ -52,7 +53,7 @@ const fetchSourcePlaylists = unstable_cache(
     return { sourcesWithPlaylists, createdAt: sources[0].createdAt, path: sources[0].path, bucket: sources[0].bucket };
   },
   ["playlist-sources"],
-  { revalidate: 3600 },
+  { revalidate: 300 },
 );
 
 async function buildPlaylist(documentId: string, updatedAt: string, quality: "high" | "low" = "high") {

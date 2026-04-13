@@ -42,6 +42,8 @@
     "removedFromWatchLater": "나중에 볼 목록에서 삭제됨",
     "videoLimitMessage": "무료 동영상 이용 횟수를 모두 사용하셨습니다.",
     "download": "영상 다운로드",
+    "downloadPart": "파트 {part}",
+    "sendToEmail": "이메일로 보내기",
     "downloadEmailSent": "다운로드 링크가 이메일로 전송됩니다",
     "downloadFeatureMessage": "영상 다운로드는 프리미엄 기능입니다.",
     "editClip": "클립 편집",

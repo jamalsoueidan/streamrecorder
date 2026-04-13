@@ -43,6 +43,8 @@
     "removedFromWatchLater": "Removed from Watch Later",
     "videoLimitMessage": "You've reached your free video limit.",
     "download": "Download video",
+    "downloadPart": "Part {part}",
+    "sendToEmail": "Send to email",
     "downloadEmailSent": "Download link on its way to your email",
     "downloadFeatureMessage": "Downloading videos is a premium feature.",
     "editClip": "Edit Clip",

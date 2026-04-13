@@ -42,6 +42,8 @@
     "removedFromWatchLater": "Sonraya İzlemeden Kaldırıldı",
     "videoLimitMessage": "Ücretsiz video hakkınız tükendi.",
     "download": "Videoyu indir",
+    "downloadPart": "Bölüm {part}",
+    "sendToEmail": "E-postaya gönder",
     "downloadEmailSent": "İndirme bağlantısı e-postanıza gönderildi",
     "downloadFeatureMessage": "Video indirme premium bir özelliktir.",
     "editClip": "Klibi Düzenle",

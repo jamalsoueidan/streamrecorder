@@ -20,6 +20,7 @@ import {
   IconDownload,
   IconEye,
   IconEyeOff,
+  IconMail,
   IconScissors,
   IconSparkles,
   IconTrash,
@@ -35,6 +36,13 @@ interface RecordingMenuProps {
   recording: Recording;
   username?: string;
   type?: string;
+}
+
+function formatDuration(seconds?: number | null): string {
+  if (!seconds) return "0:00";
+  const m = Math.floor(seconds / 60);
+  const s = Math.floor(seconds % 60);
+  return `${m}:${s.toString().padStart(2, "0")}`;
 }
 
 export function RecordingMenu({
@@ -135,6 +143,18 @@ export function RecordingMenu({
     });
   };
 
+  const handleDownloadPart = (sourceDocumentId: string) => {
+    if (!recording.documentId) return;
+    if (!isPremium) {
+      setDownloadUpgradeOpened(true);
+      return;
+    }
+    window.open(
+      `/video/${recording.documentId}/video.mp4?sourceId=${sourceDocumentId}&download`,
+      "_blank",
+    );
+  };
+
   return (
     <>
       <Menu shadow="md">
@@ -166,32 +186,66 @@ export function RecordingMenu({
               {t("createWithAI")}
             </Menu.Item>
           )}
-          <Menu.Divider />
           <Menu.Item
             leftSection={<IconScissors />}
             onClick={() => setEditorOpened(true)}
           >
             {t("editClip")}
           </Menu.Item>
-          <Menu.Item leftSection={<IconDownload />} onClick={handleDownload}>
-            {t("download")}
-          </Menu.Item>
-          {isOwner && (
+          <Menu.Divider />
+          <Menu.Label>{t("download")}</Menu.Label>
+          {recording.sources && recording.sources.length > 1 ? (
             <>
-              <Menu.Item
-                leftSection={recording.hidden ? <IconEye /> : <IconEyeOff />}
-                onClick={handleToggleHidden}
-              >
-                {recording.hidden ? t("show") : t("hide")}
-              </Menu.Item>
-              <Menu.Item
-                color="red"
-                leftSection={<IconTrash />}
-                onClick={handleDelete}
-              >
-                {t("delete")}
-              </Menu.Item>
+              {recording.sources.map((source, index) => {
+                const startSeconds = recording
+                  .sources!.slice(0, index)
+                  .reduce((sum, s) => sum + (s.duration || 0), 0);
+                const endSeconds = startSeconds + (source.duration || 0);
+                return (
+                  <Menu.Item
+                    key={source.documentId}
+                    leftSection={<IconDownload />}
+                    onClick={() => handleDownloadPart(source.documentId!)}
+                  >
+                    {t("downloadPart", { part: index + 1 })} (
+                    {formatDuration(startSeconds)} -{" "}
+                    {formatDuration(endSeconds)})
+                  </Menu.Item>
+                );
+              })}
             </>
+          ) : (
+            <Menu.Item
+              leftSection={<IconDownload />}
+              onClick={() =>
+                recording.sources?.[0]?.documentId &&
+                handleDownloadPart(recording.sources[0].documentId)
+              }
+            >
+              {t("downloadPart", { part: 1 })} (
+              {formatDuration(recording.sources?.[0]?.duration)})
+            </Menu.Item>
+          )}
+          <Menu.Item leftSection={<IconMail />} onClick={handleDownload}>
+            {t("sendToEmail")}
+          </Menu.Item>
+          {(isOwner || user?.role?.type === "admin") && <Menu.Divider />}
+          {isOwner && (
+            <Menu.Item
+              leftSection={recording.hidden ? <IconEye /> : <IconEyeOff />}
+              onClick={handleToggleHidden}
+            >
+              {recording.hidden ? t("show") : t("hide")}
+            </Menu.Item>
+          )}
+          {isOwner && (
+            <Menu.Item
+              color="red"
+              leftSection={<IconTrash />}
+              onClick={handleDelete}
+            >
+              {t("delete")}
+            </Menu.Item>
           )}
           {user?.role?.type === "admin" && (
             <Menu.Item

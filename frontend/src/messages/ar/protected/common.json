@@ -40,6 +40,8 @@
     "removedFromWatchLater": "تمت الإزالة من شاهد لاحقاً",
     "videoLimitMessage": "وصلت إلى الحد الأقصى لمشاهدات الفيديو المجانية.",
     "download": "تحميل الفيديو",
+    "downloadPart": "الجزء {part}",
+    "sendToEmail": "إرسال إلى البريد",
     "downloadEmailSent": "رابط التحميل في طريقه إلى بريدك الإلكتروني",
     "downloadFeatureMessage": "تحميل الفيديوهات ميزة خاصة بالمشتركين المميزين.",
     "editClip": "تعديل المقطع",

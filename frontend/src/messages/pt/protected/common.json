@@ -42,6 +42,8 @@
     "removedFromWatchLater": "Removido de assistir depois",
     "videoLimitMessage": "Você atingiu o limite de vídeos gratuitos.",
     "download": "Baixar vídeo",
+    "downloadPart": "Parte {part}",
+    "sendToEmail": "Enviar por e-mail",
     "downloadEmailSent": "O link de download está sendo enviado para o seu e-mail",
     "downloadFeatureMessage": "Baixar vídeos é um recurso premium.",
     "editClip": "Editar clipe",
