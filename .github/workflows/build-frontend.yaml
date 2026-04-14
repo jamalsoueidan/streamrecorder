@@ -43,8 +43,6 @@ jobs:
           cache-to: type=gha,mode=max
           build-args: |
             NEXT_PUBLIC_PLATFORM=${{ secrets.NEXT_PUBLIC_PLATFORM }}
-            NEXT_PUBLIC_UMAMI_ID=${{ secrets.NEXT_PUBLIC_UMAMI_ID }}
-            NEXT_PUBLIC_UMAMI_URL=${{ secrets.NEXT_PUBLIC_UMAMI_URL }}
             NEXT_PUBLIC_BASE_URL=${{ secrets.NEXT_PUBLIC_BASE_URL }}
             NEXT_PUBLIC_FREEMIUS_PRODUCT_ID=${{ secrets.NEXT_PUBLIC_FREEMIUS_PRODUCT_ID }}
             NEXT_PUBLIC_FREEMIUS_PLAN_ID=${{ secrets.NEXT_PUBLIC_FREEMIUS_PLAN_ID }}
