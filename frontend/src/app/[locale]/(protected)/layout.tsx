@@ -1,8 +1,8 @@
 import { getToken } from "@/lib/token";
+import type { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
-import { getTranslations } from "next-intl/server";
-import type { Metadata } from "next";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("protected.dashboard");
@@ -34,7 +34,15 @@ export default async function DashboardLayout({
   const cookieStore = await cookies();
   const navbarCollapsed = cookieStore.get("navbar-collapsed")?.value === "true";
 
-  const user = await getUser();
+  let user;
+  try {
+    user = await getUser();
+  } catch (error: any) {
+    if (error?.response?.status === 401) {
+      redirect("/api/logout");
+    }
+    throw error;
+  }
 
   const role = user?.data?.role || null;
 
