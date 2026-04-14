@@ -17,7 +17,7 @@ const getSources = unstable_cache(
         },
       },
       sort: "createdAt:asc",
-      "pagination[limit]": 1,
+      "pagination[limit]": 100,
     });
     return data.data ?? [];
   },
