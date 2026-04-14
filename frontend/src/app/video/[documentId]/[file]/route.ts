@@ -37,7 +37,9 @@ export async function GET(
 
   const source = sourceId
     ? sources.find((s) => s.documentId === sourceId)
-    : sources.findLast((s) => s.state === "done") || sources.at(-1);
+    : file === "preview.jpg"
+      ? sources.findLast((s) => s.state === "done") || sources.at(-1)
+      : sources.at(-1);
 
   if (!source?.path) {
     return new Response("Not found", { status: 404 });
