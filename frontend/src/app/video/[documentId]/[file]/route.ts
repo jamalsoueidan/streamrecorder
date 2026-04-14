@@ -1,5 +1,5 @@
 import publicApi from "@/lib/public-api";
-import { getBucket, getS3 } from "@/lib/s3";
+import { getBucket, getS3, proxySignedUrl } from "@/lib/s3";
 import { GetObjectCommand } from "@aws-sdk/client-s3";
 import { getSignedUrl } from "@aws-sdk/s3-request-presigner";
 import { unstable_cache } from "next/cache";
@@ -59,7 +59,7 @@ export async function GET(
       ResponseContentDisposition: `attachment; filename="${filename}"`,
     });
     const signedUrl = await getSignedUrl(s3, command, { expiresIn: 3600 });
-    return Response.redirect(signedUrl, 302);
+    return Response.redirect(proxySignedUrl(signedUrl), 302);
   }
 
   const abortController = new AbortController();

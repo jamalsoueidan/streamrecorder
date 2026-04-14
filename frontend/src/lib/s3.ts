@@ -11,6 +11,7 @@ const agent = new https.Agent({
 export const s3Nbg1 = new S3Client({
   region: "nbg1",
   endpoint: "https://nbg1.your-objectstorage.com",
+  forcePathStyle: true,
   credentials: {
     accessKeyId: process.env.S3_ACCESS_KEY!,
     secretAccessKey: process.env.S3_SECRET_KEY!,
@@ -39,6 +40,13 @@ const PLATFORM_BUCKETS = new Set([
 
 export function getS3(): S3Client {
   return s3Nbg1;
+}
+
+const MEDIA_PROXY_HOST = process.env.MEDIA_PROXY_HOST;
+
+export function proxySignedUrl(url: string): string {
+  if (!MEDIA_PROXY_HOST) return url;
+  return url.replace("nbg1.your-objectstorage.com", MEDIA_PROXY_HOST);
 }
 
 export function getBucket(
