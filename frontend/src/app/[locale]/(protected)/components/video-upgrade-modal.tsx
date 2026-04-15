@@ -34,7 +34,7 @@ import {
 } from "@tabler/icons-react";
 import { useTranslations } from "next-intl";
 
-const DISCOUNT_CODE = "FIRST25";
+const DISCOUNT_CODE = "EXTRA20";
 
 interface VideoUpgradeModalProps {
   opened: boolean;
@@ -145,7 +145,7 @@ export function VideoUpgradeModal({ opened, onClose }: VideoUpgradeModalProps) {
               <Group gap="xs">
                 {!isMobile ? (
                   <Badge color="violet" variant="filled" size="sm">
-                    25% OFF
+                    20% OFF
                   </Badge>
                 ) : null}
                 <Text size="sm" fw={600}>

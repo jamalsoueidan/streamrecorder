@@ -5,37 +5,27 @@ import { unstable_cache } from "next/cache";
 import { NextRequest } from "next/server";
 
 const getSource = unstable_cache(
-  async (documentId: string, sourceId: string | null) => {
+  async (documentId: string) => {
     const { data } = await publicApi.source.getSources({
       filters: {
-        ...(sourceId
-          ? { documentId: sourceId }
-          : {
-              recording: {
-                documentId,
-              },
-            }),
-        state: {
-          $ne: "failed",
-        },
+        recording: { documentId },
+        state: { $ne: "failed" },
       },
-      sort: "createdAt:asc",
+      sort: "createdAt:desc",
       "pagination[limit]": 1,
     });
     return data.data?.[0] ?? null;
   },
-  ["thumbnail-source"],
-  { revalidate: 3600 },
+  ["screenshot-source"],
+  { revalidate: 300 },
 );
 
 export async function GET(
-  request: NextRequest,
+  _request: NextRequest,
   { params }: { params: Promise<{ documentId: string }> },
 ) {
   const { documentId } = await params;
-  const sourceId = request.nextUrl.searchParams.get("sourceId");
-
-  const source = await getSource(documentId, sourceId);
+  const source = await getSource(documentId);
 
   if (!source?.path) {
     return new Response("Not found", { status: 404 });
@@ -47,7 +37,7 @@ export async function GET(
     const s3 = getS3();
     const command = new GetObjectCommand({
       Bucket: getBucket(process.env.MEDIA_BUCKET!, source.createdAt, source.path, source.bucket),
-      Key: `${source.path.substring(1)}thumbnails.jpg`,
+      Key: `${source.path.substring(1)}screenshot.jpg`,
     });
     const response = await s3.send(command, {
       abortSignal: abortController.signal,
@@ -57,7 +47,7 @@ export async function GET(
       headers: {
         "Content-Type": "image/jpeg",
         "Content-Length": response.ContentLength?.toString() || "",
-        "Cache-Control": "public, max-age=31536000",
+        "Cache-Control": "public, max-age=300",
       },
     });
   } catch (error: any) {
@@ -67,7 +57,7 @@ export async function GET(
       return new Response("Not found", { status: 404 });
     }
 
-    console.error("Error fetching preview:", error);
+    console.error("Error fetching screenshot:", error);
     return new Response("Error", { status: 500 });
   }
 }

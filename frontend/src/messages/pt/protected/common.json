@@ -3,7 +3,8 @@
     "tooltip": "Adicionar Criador",
     "successTitle": "Adicionado!",
     "successMessage": "{username} foi adicionado",
-    "errorTitle": "Erro"
+    "errorTitle": "Erro",
+    "blockedMessage": "This creator is unavailable due to a DMCA takedown. See our <terms>Terms of Service</terms> for more details."
   },
   "unfollow": {
     "tooltip": "Remover Criador",
@@ -42,11 +43,14 @@
     "removedFromWatchLater": "Removido de assistir depois",
     "videoLimitMessage": "Você atingiu o limite de vídeos gratuitos.",
     "download": "Baixar vídeo",
+    "downloadPart": "Parte {part}",
+    "sendToEmail": "Enviar por e-mail",
     "downloadEmailSent": "O link de download está sendo enviado para o seu e-mail",
     "downloadFeatureMessage": "Baixar vídeos é um recurso premium.",
     "editClip": "Editar clipe",
     "deleteSources": "Excluir fontes",
-    "deleteSourcesSuccess": "{count} fontes excluídas"
+    "deleteSourcesSuccess": "{count} fontes excluídas",
+    "parts": "{count, plural, one {# parte} other {# partes}}"
   },
   "followers": {
     "addedAgo_context": "Para quando o criador foi adicionado à lista do usuário. Exibe 'Adicionado há 3 dias'",
@@ -57,7 +61,7 @@
     "max50Message": "Você atingiu o limite de 50 criadores deste plano.",
     "max100Message": "Você atingiu o limite de 100 criadores deste plano.",
     "upgradeButton": "Fazer upgrade para Premium",
-    "upgradeModalDiscount": "25% de desconto no primeiro mês",
+    "upgradeModalDiscount": "20% de desconto no primeiro mês",
     "upgradeModalCodeNote": "Aplique no checkout",
     "unfollowUpgradeTitle": "Gerencie seus criadores livremente com o premium"
   },

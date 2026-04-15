@@ -1001,6 +1001,7 @@ export interface AiRequest {
       }[];
     }[];
     hidden?: boolean;
+    totalDuration?: number;
     /** @format date-time */
     createdAt?: string;
     /** @format date-time */
@@ -1625,6 +1626,7 @@ export interface AiTask {
         }[];
       }[];
       hidden?: boolean;
+      totalDuration?: number;
       /** @format date-time */
       createdAt?: string;
       /** @format date-time */
@@ -3011,6 +3013,7 @@ export interface Clip {
       }[];
     }[];
     hidden?: boolean;
+    totalDuration?: number;
     /** @format date-time */
     createdAt?: string;
     /** @format date-time */
@@ -3591,6 +3594,7 @@ export interface ClipShare {
         }[];
       }[];
       hidden?: boolean;
+      totalDuration?: number;
       /** @format date-time */
       createdAt?: string;
       /** @format date-time */
@@ -4912,6 +4916,7 @@ export interface Meme {
       }[];
     }[];
     hidden?: boolean;
+    totalDuration?: number;
     /** @format date-time */
     createdAt?: string;
     /** @format date-time */
@@ -5007,6 +5012,7 @@ export interface RecordingRequest {
     follower?: number | string;
     sources?: (number | string)[];
     hidden?: boolean;
+    totalDuration?: number;
     locale?: string;
     localizations?: (number | string)[];
   };
@@ -5434,6 +5440,7 @@ export interface Recording {
     }[];
   };
   hidden?: boolean;
+  totalDuration?: number;
   /** @format date-time */
   createdAt?: string;
   /** @format date-time */
@@ -6604,6 +6611,7 @@ export interface Source {
       }[];
     }[];
     hidden?: boolean;
+    totalDuration?: number;
     /** @format date-time */
     createdAt?: string;
     /** @format date-time */
@@ -7125,6 +7133,7 @@ export interface VisitorView {
       }[];
     }[];
     hidden?: boolean;
+    totalDuration?: number;
     /** @format date-time */
     createdAt?: string;
     /** @format date-time */

@@ -3,7 +3,8 @@
     "tooltip": "크리에이터 추가",
     "successTitle": "추가됨!",
     "successMessage": "{username}님이 추가되었습니다",
-    "errorTitle": "오류"
+    "errorTitle": "오류",
+    "blockedMessage": "This creator is unavailable due to a DMCA takedown. See our <terms>Terms of Service</terms> for more details."
   },
   "unfollow": {
     "tooltip": "크리에이터 삭제",
@@ -42,11 +43,14 @@
     "removedFromWatchLater": "나중에 볼 목록에서 삭제됨",
     "videoLimitMessage": "무료 동영상 이용 횟수를 모두 사용하셨습니다.",
     "download": "영상 다운로드",
+    "downloadPart": "파트 {part}",
+    "sendToEmail": "이메일로 보내기",
     "downloadEmailSent": "다운로드 링크가 이메일로 전송됩니다",
     "downloadFeatureMessage": "영상 다운로드는 프리미엄 기능입니다.",
     "editClip": "클립 편집",
     "deleteSources": "소스 삭제",
-    "deleteSourcesSuccess": "{count}개 소스 삭제됨"
+    "deleteSourcesSuccess": "{count}개 소스 삭제됨",
+    "parts": "{count}파트"
   },
   "followers": {
     "addedAgo_context": "크리에이터가 사용자 목록에 추가된 시점. '3일 전 추가됨'으로 표시됨",
@@ -57,7 +61,7 @@
     "max50Message": "이 플랜에서 크리에이터 50명 한도에 도달했습니다.",
     "max100Message": "이 플랜에서 크리에이터 100명 한도에 도달했습니다.",
     "upgradeButton": "Premium으로 업그레이드",
-    "upgradeModalDiscount": "첫 달 25% 할인",
+    "upgradeModalDiscount": "첫 달 20% 할인",
     "upgradeModalCodeNote": "결제 시 코드를 입력하세요",
     "unfollowUpgradeTitle": "프리미엄으로 크리에이터를 자유롭게 관리하세요"
   },

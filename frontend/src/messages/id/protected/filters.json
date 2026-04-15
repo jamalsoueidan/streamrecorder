@@ -40,6 +40,12 @@
     "thisMonth": "Bulan ini",
     "lastMonth": "Bulan lalu"
   },
+  "duration": {
+    "label": "Durasi",
+    "short": "Kurang dari 4 mnt",
+    "medium": "4-20 mnt",
+    "long": "Lebih dari 20 mnt"
+  },
   "country": {
     "label": "Negara",
     "placeholder": "Negara lainnya..."

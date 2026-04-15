@@ -11,14 +11,15 @@ const agent = new https.Agent({
 export const s3Nbg1 = new S3Client({
   region: "nbg1",
   endpoint: "https://nbg1.your-objectstorage.com",
+  forcePathStyle: true,
   credentials: {
     accessKeyId: process.env.S3_ACCESS_KEY!,
     secretAccessKey: process.env.S3_SECRET_KEY!,
   },
   requestHandler: new NodeHttpHandler({
     httpsAgent: agent,
-    connectionTimeout: 5000,
-    requestTimeout: 15000,
+    connectionTimeout: 10000,
+    requestTimeout: 30000,
   }),
 });
 
@@ -41,11 +42,21 @@ export function getS3(): S3Client {
   return s3Nbg1;
 }
 
+const MEDIA_PROXY_HOST = process.env.MEDIA_PROXY_HOST;
+
+export function proxySignedUrl(url: string): string {
+  if (!MEDIA_PROXY_HOST) return url;
+  return url.replace("nbg1.your-objectstorage.com", MEDIA_PROXY_HOST);
+}
+
 export function getBucket(
   bucket: string,
   createdAt?: Date | string | null,
   path?: string | null,
+  sourceBucket?: string | null,
 ): string {
+  if (sourceBucket) return sourceBucket;
+
   if (!createdAt) return `${bucket}-nbg`;
   const date = new Date(createdAt);
 

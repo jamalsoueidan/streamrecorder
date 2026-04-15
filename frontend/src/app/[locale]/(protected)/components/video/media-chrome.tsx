@@ -126,6 +126,14 @@ export const MediaCaptionsButton = forwardRef<HTMLElement, MediaProps>(
 );
 MediaCaptionsButton.displayName = "MediaCaptionsButton";
 
+export const MediaGestureReceiver = forwardRef<HTMLElement, MediaProps>(
+  (props, ref) => (
+    // @ts-expect-error - web component
+    <media-gesture-receiver ref={ref} suppressHydrationWarning {...props} />
+  ),
+);
+MediaGestureReceiver.displayName = "MediaGestureReceiver";
+
 // HLS Video element
 export const HlsVideo = forwardRef<HTMLVideoElement, VideoProps>(
   (props, ref) => (

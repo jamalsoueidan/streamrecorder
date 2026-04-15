@@ -3,6 +3,7 @@
   "subtitle": "Şu anda kaydedilen yayınlar",
   "streamingCount": "{count, plural, one {# canlı} other {# canlı}}",
   "refresh": "Yenile",
+  "allPlatforms": "Tüm platformlar",
   "showAll": "Tümünü göster",
   "discoverStreamers": "Arkadaş Bul",
   "emptyState": {

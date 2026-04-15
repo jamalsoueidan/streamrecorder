@@ -10,10 +10,8 @@ import { ModalsProvider } from "@mantine/modals";
 import { Notifications } from "@mantine/notifications";
 import "@mantine/notifications/styles.css";
 import '@mantine/charts/styles.css';
-import { isbot } from "isbot";
 import type { Metadata, Viewport } from "next";
 import { headers } from "next/headers";
-import Script from "next/script";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
 import "./globals.css";
 import { FingerprintProvider } from "./providers/fingerprint-provider";
@@ -56,21 +54,12 @@ export default async function RootLayout({
 }>) {
   const headersList = await headers();
   const locale = headersList.get("x-next-intl-locale") || "en";
-  const userAgent = headersList.get("user-agent") || "";
-
   const dir = locale === "ar" ? "rtl" : "ltr";
 
   return (
     <html lang={locale} dir={dir} {...mantineHtmlProps}>
       <head>
         <ColorSchemeScript defaultColorScheme="dark" />
-        {!isbot(userAgent) ? (
-          <Script
-            defer
-            src="/script.js"
-            data-website-id={process.env.NEXT_PUBLIC_UMAMI_ID}
-          />
-        ) : null}
         <meta name="format-detection" content="telephone=no" />
         <link rel="apple-touch-icon" href="/icons/icon-192.png" />
       </head>

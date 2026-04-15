@@ -1,6 +1,6 @@
 // app/clip/[documentId]/[file]/route.ts
 import publicApi from "@/lib/public-api";
-import { getBucket, getS3 } from "@/lib/s3";
+import { getBucket, getS3, proxySignedUrl } from "@/lib/s3";
 import { GetObjectCommand } from "@aws-sdk/client-s3";
 import { getSignedUrl } from "@aws-sdk/s3-request-presigner";
 import { unstable_cache } from "next/cache";
@@ -75,7 +75,7 @@ export async function GET(
     // MP4 → redirect (unless TikTok proxy mode)
     if (ext === ".mp4" && !isTikTokProxy) {
       const signedUrl = await getSignedUrl(s3, command, { expiresIn: 3600 });
-      return Response.redirect(signedUrl, 302);
+      return Response.redirect(proxySignedUrl(signedUrl), 302);
     }
 
     // Stream for images or TikTok proxy mode

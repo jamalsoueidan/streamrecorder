@@ -3,6 +3,7 @@
   "subtitle": "現在録画中の配信",
   "streamingCount": "{count, plural, other {# 配信中}}",
   "refresh": "更新",
+  "allPlatforms": "すべてのプラットフォーム",
   "showAll": "すべて表示",
   "discoverStreamers": "フレンドを探す",
   "emptyState": {

@@ -3,7 +3,8 @@
     "tooltip": "إضافة صانع محتوى",
     "successTitle": "تمت الإضافة!",
     "successMessage": "تمت إضافة {username}",
-    "errorTitle": "خطأ"
+    "errorTitle": "خطأ",
+    "blockedMessage": "This creator is unavailable due to a DMCA takedown. See our <terms>Terms of Service</terms> for more details."
   },
   "unfollow": {
     "tooltip": "إزالة صانع المحتوى",
@@ -40,11 +41,14 @@
     "removedFromWatchLater": "تمت الإزالة من شاهد لاحقاً",
     "videoLimitMessage": "وصلت إلى الحد الأقصى لمشاهدات الفيديو المجانية.",
     "download": "تحميل الفيديو",
+    "downloadPart": "الجزء {part}",
+    "sendToEmail": "إرسال إلى البريد",
     "downloadEmailSent": "رابط التحميل في طريقه إلى بريدك الإلكتروني",
     "downloadFeatureMessage": "تحميل الفيديوهات ميزة خاصة بالمشتركين المميزين.",
     "editClip": "تعديل المقطع",
     "deleteSources": "حذف المصادر",
-    "deleteSourcesSuccess": "تم حذف {count} مصدر"
+    "deleteSourcesSuccess": "تم حذف {count} مصدر",
+    "parts": "{count, plural, one {جزء واحد} other {# أجزاء}}"
   },
   "followers": {
     "addedAgo_context": "For when a creator was added to user's list. Shows 'Added 3 days ago'",
@@ -55,7 +59,7 @@
     "max50Message": "لقد وصلت إلى الحد الأقصى وهو 50 منشئاً في هذا الاشتراك.",
     "max100Message": "لقد وصلت إلى الحد الأقصى وهو 100 منشئ في هذا الاشتراك.",
     "upgradeButton": "الترقية إلى Premium",
-    "upgradeModalDiscount": "خصم 25% على شهرك الأول",
+    "upgradeModalDiscount": "خصم 20% على شهرك الأول",
     "upgradeModalCodeNote": "أدخل الكود عند الدفع",
     "unfollowUpgradeTitle": "أدِر صناع المحتوى بحرية مع الاشتراك المميز"
   },

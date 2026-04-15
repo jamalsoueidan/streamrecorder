@@ -56,6 +56,7 @@ export const followingParsers = {
   type: parseAsString,
   search: parseAsString,
   dateRange: parseAsString,
+  duration: parseAsString,
 };
 
 export const followingParamsCache = createSearchParamsCache(followingParsers);
@@ -76,4 +77,11 @@ export const buildFollowingFilters = (filters: FollowingFilters) =>
       ? { follower: { username: { $containsi: filters.search } } }
       : {},
     filters.dateRange ? getDateRange(filters.dateRange, "updatedAt") : {},
+    filters.duration === "short"
+      ? { totalDuration: { $lt: 240 } }
+      : filters.duration === "medium"
+        ? { totalDuration: { $gte: 240, $lte: 1200 } }
+        : filters.duration === "long"
+          ? { totalDuration: { $gt: 1200 } }
+          : {},
   ].reduce((acc, curr) => deepMerge(acc, curr), {});

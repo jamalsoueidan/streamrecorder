@@ -3,6 +3,7 @@
   "subtitle": "Stream yang sedang direkam",
   "streamingCount": "{count, plural, one {# streaming} other {# streaming}}",
   "refresh": "Perbarui",
+  "allPlatforms": "Semua platform",
   "showAll": "Tampilkan semua",
   "discoverStreamers": "Temukan Teman",
   "emptyState": {

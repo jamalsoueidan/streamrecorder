@@ -3,7 +3,8 @@
     "tooltip": "İçerik Üreticisi Ekle",
     "successTitle": "Eklendi!",
     "successMessage": "{username} eklendi",
-    "errorTitle": "Hata"
+    "errorTitle": "Hata",
+    "blockedMessage": "This creator is unavailable due to a DMCA takedown. See our <terms>Terms of Service</terms> for more details."
   },
   "unfollow": {
     "tooltip": "İçerik Üreticisini Kaldır",
@@ -42,11 +43,14 @@
     "removedFromWatchLater": "Sonraya İzlemeden Kaldırıldı",
     "videoLimitMessage": "Ücretsiz video hakkınız tükendi.",
     "download": "Videoyu indir",
+    "downloadPart": "Bölüm {part}",
+    "sendToEmail": "E-postaya gönder",
     "downloadEmailSent": "İndirme bağlantısı e-postanıza gönderildi",
     "downloadFeatureMessage": "Video indirme premium bir özelliktir.",
     "editClip": "Klibi Düzenle",
     "deleteSources": "Kaynakları sil",
-    "deleteSourcesSuccess": "{count} kaynak silindi"
+    "deleteSourcesSuccess": "{count} kaynak silindi",
+    "parts": "{count, plural, one {# bölüm} other {# bölüm}}"
   },
   "followers": {
     "addedAgo_context": "For when a creator was added to user's list. Shows 'Added 3 days ago'",

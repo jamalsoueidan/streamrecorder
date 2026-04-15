@@ -3,6 +3,7 @@
   "subtitle": "Streams currently being recorded",
   "streamingCount": "{count, plural, one {# streaming} other {# streaming}}",
   "refresh": "Refresh",
+  "allPlatforms": "All platforms",
   "showAll": "Show all",
   "discoverStreamers": "Find Friends",
   "emptyState": {

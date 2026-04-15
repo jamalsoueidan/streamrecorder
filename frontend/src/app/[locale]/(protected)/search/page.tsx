@@ -220,6 +220,22 @@ export default function Page() {
         message: tCommon("followers.max100Message"),
         color: "red",
       });
+    } else if (result.error?.includes("FOLLOWER_BLOCKED")) {
+      notifications.show({
+        title: tCommon("follow.errorTitle"),
+        message: tCommon.rich("follow.blockedMessage", {
+          terms: (chunks) => (
+            <a
+              href="/terms"
+              target="_blank"
+              style={{ color: "white", textDecoration: "underline" }}
+            >
+              {chunks}
+            </a>
+          ),
+        }),
+        color: "red",
+      });
     } else {
       notifications.show({
         title: tCommon("follow.errorTitle"),
@@ -468,14 +484,10 @@ export default function Page() {
         opened={platformUpgradeOpened}
         onClose={closePlatformUpgrade}
         platform={
-          blockedPlatform
-            ? t(`platforms.${blockedPlatform}`)
-            : undefined
+          blockedPlatform ? t(`platforms.${blockedPlatform}`) : undefined
         }
         platformIcon={
-          blockedPlatform
-            ? getPlatformInfo(blockedPlatform)?.file
-            : undefined
+          blockedPlatform ? getPlatformInfo(blockedPlatform)?.file : undefined
         }
       />
 

@@ -40,6 +40,12 @@
     "thisMonth": "هذا الشهر",
     "lastMonth": "الشهر الماضي"
   },
+  "duration": {
+    "label": "المدة",
+    "short": "أقل من 4 دقائق",
+    "medium": "4-20 دقيقة",
+    "long": "أكثر من 20 دقيقة"
+  },
   "country": {
     "label": "البلد",
     "placeholder": "المزيد من البلدان..."

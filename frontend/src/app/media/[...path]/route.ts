@@ -1,7 +1,7 @@
 import api from "@/lib/api";
 import { FINGERPRINT_COOKIE, MAX_PUBLIC_VIEWS } from "@/lib/constants";
 import publicApi from "@/lib/public-api";
-import { getBucket, getS3 } from "@/lib/s3";
+import { getBucket, getS3, proxySignedUrl } from "@/lib/s3";
 import { getToken } from "@/lib/token";
 import { GetObjectCommand } from "@aws-sdk/client-s3";
 import { getSignedUrl } from "@aws-sdk/s3-request-presigner";
@@ -59,7 +59,7 @@ export async function GET(
     }
 
     const s3 = getS3();
-    const mediaBucket = getBucket(process.env.MEDIA_BUCKET!, source.createdAt, source.path);
+    const mediaBucket = getBucket(process.env.MEDIA_BUCKET!, source.createdAt, source.path, source.bucket);
 
     // Check if user is logged in
     const token = await getToken();
@@ -93,7 +93,7 @@ export async function GET(
         return new Response(null, {
           status: 302,
           headers: {
-            Location: signedUrl,
+            Location: proxySignedUrl(signedUrl),
             "Cache-Control": "no-store",
           },
         });
@@ -117,7 +117,7 @@ export async function GET(
           return new Response(null, {
             status: 302,
             headers: {
-              Location: signedUrl,
+              Location: proxySignedUrl(signedUrl),
               "Cache-Control": "no-store",
             },
           });
@@ -156,7 +156,7 @@ export async function GET(
           return new Response(null, {
             status: 302,
             headers: {
-              Location: signedUrl,
+              Location: proxySignedUrl(signedUrl),
               "Cache-Control": "no-store",
             },
           });
@@ -181,7 +181,7 @@ export async function GET(
       return new Response(null, {
         status: 302,
         headers: {
-          Location: signedUrl,
+          Location: proxySignedUrl(signedUrl),
           "Cache-Control": "no-store",
         },
       });
@@ -211,7 +211,7 @@ export async function GET(
       return new Response(null, {
         status: 302,
         headers: {
-          Location: signedUrl,
+          Location: proxySignedUrl(signedUrl),
           "Cache-Control": "no-store",
         },
       });

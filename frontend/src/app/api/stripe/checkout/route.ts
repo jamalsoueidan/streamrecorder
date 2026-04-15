@@ -40,7 +40,7 @@ export async function POST(request: NextRequest) {
     const isLifetime = billingCycle === "lifetime";
 
     const baseUrl =
-      process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+      request.headers.get("origin") || process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
 
     const sessionConfig: Stripe.Checkout.SessionCreateParams = {
       allow_promotion_codes: true,

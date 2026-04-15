@@ -1,6 +1,7 @@
 import publicApi from "@/lib/public-api";
-import { getBucket, getS3 } from "@/lib/s3";
+import { getBucket, getS3, proxySignedUrl } from "@/lib/s3";
 import { GetObjectCommand } from "@aws-sdk/client-s3";
+import { getSignedUrl } from "@aws-sdk/s3-request-presigner";
 import { unstable_cache } from "next/cache";
 import { NextRequest } from "next/server";
 
@@ -16,7 +17,7 @@ const getSources = unstable_cache(
         },
       },
       sort: "createdAt:asc",
-      "pagination[limit]": 1,
+      "pagination[limit]": 100,
     });
     return data.data ?? [];
   },
@@ -30,6 +31,7 @@ export async function GET(
 ) {
   const { documentId, file } = await params;
   const sourceId = request.nextUrl.searchParams.get("sourceId");
+  const isDownload = request.nextUrl.searchParams.has("download");
 
   const sources = await getSources(documentId);
 
@@ -41,14 +43,29 @@ export async function GET(
     return new Response("Not found", { status: 404 });
   }
 
+  const s3 = getS3();
+  const bucket = getBucket(process.env.MEDIA_BUCKET!, source.createdAt, source.path, source.bucket);
+  const key = `${source.path.substring(1)}${file}`;
+
+  if (isDownload && file.endsWith(".mp4")) {
+    const parts = source.path?.split("/").filter(Boolean) || [];
+    const username = parts[1] || "video";
+    const datePart = parts[2] || "";
+    const filename = `${username}_${datePart}.mp4`;
+
+    const command = new GetObjectCommand({
+      Bucket: bucket,
+      Key: key,
+      ResponseContentDisposition: `attachment; filename="${filename}"`,
+    });
+    const signedUrl = await getSignedUrl(s3, command, { expiresIn: 3600 });
+    return Response.redirect(proxySignedUrl(signedUrl), 302);
+  }
+
   const abortController = new AbortController();
 
   try {
-    const s3 = getS3();
-    const command = new GetObjectCommand({
-      Bucket: getBucket(process.env.MEDIA_BUCKET!, source.createdAt, source.path),
-      Key: `${source.path.substring(1)}${file}`,
-    });
+    const command = new GetObjectCommand({ Bucket: bucket, Key: key });
     const response = await s3.send(command, {
       abortSignal: abortController.signal,
     });

@@ -36,12 +36,18 @@ const defaultOptions = {
 export async function fetchLiveRecordings(
   scope: string = ScopeEnum.Following,
   page: number = 1,
+  type?: string,
 ) {
+  const typeFilter = type
+    ? { filters: { follower: { type: { $eq: type } } } }
+    : {};
+
   const response = await api.recording.browseRecordings(
     deepMerge(defaultOptions, {
       "pagination[page]": page,
       "pagination[withCount]": true,
       scope,
+      ...typeFilter,
     }),
   );
 

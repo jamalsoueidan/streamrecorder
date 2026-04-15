@@ -50,6 +50,15 @@
         }
       },
       "default": false
+    },
+    "totalDuration": {
+      "type": "integer",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "default": 0
     }
   }
 }

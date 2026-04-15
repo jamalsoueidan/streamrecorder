@@ -191,6 +191,25 @@ export function ImageSpritePreview({ recording, type, username }: Props) {
         </Badge>
       ) : null}
 
+      {!isRecording && sources && sources.length > 1 && (
+        <div
+          style={{
+            position: "absolute",
+            top: 8,
+            left: 8,
+            backgroundColor: "rgba(0, 0, 0, 0.8)",
+            color: "white",
+            padding: "2px 6px",
+            borderRadius: 4,
+            fontSize: 12,
+            fontWeight: 500,
+            pointerEvents: "none",
+          }}
+        >
+          {t("recordings.parts", { count: sources.length })}
+        </div>
+      )}
+
       <FollowerTypeIcon
         type={type}
         color="black"

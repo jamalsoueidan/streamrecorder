@@ -3,7 +3,8 @@
     "tooltip": "Add Creator",
     "successTitle": "Added!",
     "successMessage": "{username} has been added",
-    "errorTitle": "Error"
+    "errorTitle": "Error",
+    "blockedMessage": "This creator is unavailable due to a DMCA takedown. See our <terms>Terms of Service</terms> for more details."
   },
   "unfollow": {
     "tooltip": "Remove Creator",
@@ -24,6 +25,7 @@
     "recordedAgo": "recorded {time}",
     "recordCount": "REC {count}",
     "newRecording": "New",
+    "parts": "{count, plural, one {# part} other {# parts}}",
     "videoCount": "{count, plural, one {# video} other {# videos}}",
     "noRecordings": "You've reached the end",
     "hide": "Hide from public",
@@ -42,6 +44,8 @@
     "removedFromWatchLater": "Removed from Watch Later",
     "videoLimitMessage": "You've reached your free video limit.",
     "download": "Download video",
+    "downloadPart": "Part {part}",
+    "sendToEmail": "Send to email",
     "downloadEmailSent": "Download link on its way to your email",
     "downloadFeatureMessage": "Downloading videos is a premium feature.",
     "editClip": "Edit Clip",
@@ -57,7 +61,7 @@
     "max50Message": "You've reached your limit of 50 creators on this plan.",
     "max100Message": "You've reached your limit of 100 creators on this plan.",
     "upgradeButton": "Upgrade to Premium",
-    "upgradeModalDiscount": "25% off your first month",
+    "upgradeModalDiscount": "20% off your first month",
     "upgradeModalCodeNote": "Apply at checkout",
     "unfollowUpgradeTitle": "Manage your creators freely with premium"
   },

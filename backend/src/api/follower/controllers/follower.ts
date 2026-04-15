@@ -470,6 +470,10 @@ export default factories.createCoreController(
           },
         });
 
+      if (follower?.blocked) {
+        return ctx.forbidden("FOLLOWER_BLOCKED");
+      }
+
       if (!follower) {
         follower = await strapi.documents("api::follower.follower").create({
           data: { username, type, pause: false },
@@ -557,6 +561,10 @@ export default factories.createCoreController(
 
       if (!follower) {
         return ctx.notFound("FOLLOWER_NOT_FOUND");
+      }
+
+      if (follower.blocked) {
+        return ctx.forbidden("FOLLOWER_BLOCKED");
       }
 
       // Get all existing documentIds + new one

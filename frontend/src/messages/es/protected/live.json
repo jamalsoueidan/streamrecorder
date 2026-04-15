@@ -3,6 +3,7 @@
   "subtitle": "Transmisiones que se están grabando actualmente",
   "streamingCount": "{count, plural, one {# en vivo} other {# en vivo}}",
   "refresh": "Actualizar",
+  "allPlatforms": "Todas las plataformas",
   "showAll": "Ver todo",
   "discoverStreamers": "Buscar Amigos",
   "emptyState": {

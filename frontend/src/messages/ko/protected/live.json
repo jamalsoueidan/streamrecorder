@@ -3,6 +3,7 @@
   "subtitle": "현재 녹화 중인 방송",
   "streamingCount": "{count, plural, one {#명 방송 중} other {#명 방송 중}}",
   "refresh": "새로고침",
+  "allPlatforms": "모든 플랫폼",
   "showAll": "전체 보기",
   "discoverStreamers": "친구 찾기",
   "emptyState": {

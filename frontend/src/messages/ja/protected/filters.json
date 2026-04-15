@@ -40,6 +40,12 @@
     "thisMonth": "今月",
     "lastMonth": "先月"
   },
+  "duration": {
+    "label": "再生時間",
+    "short": "4分未満",
+    "medium": "4〜20分",
+    "long": "20分以上"
+  },
   "country": {
     "label": "国",
     "placeholder": "さらに国を表示..."

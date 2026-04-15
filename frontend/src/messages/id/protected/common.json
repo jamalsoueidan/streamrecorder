@@ -3,7 +3,8 @@
     "tooltip": "Tambah Kreator",
     "successTitle": "Ditambahkan!",
     "successMessage": "{username} telah ditambahkan",
-    "errorTitle": "Galat"
+    "errorTitle": "Galat",
+    "blockedMessage": "This creator is unavailable due to a DMCA takedown. See our <terms>Terms of Service</terms> for more details."
   },
   "unfollow": {
     "tooltip": "Hapus Kreator",
@@ -42,11 +43,14 @@
     "removedFromWatchLater": "Dihapus dari Tonton Nanti",
     "videoLimitMessage": "Anda telah mencapai batas video gratis.",
     "download": "Unduh video",
+    "downloadPart": "Bagian {part}",
+    "sendToEmail": "Kirim ke email",
     "downloadEmailSent": "Tautan unduhan sedang dikirim ke email Anda",
     "downloadFeatureMessage": "Mengunduh video adalah fitur premium.",
     "editClip": "Edit Klip",
     "deleteSources": "Hapus sumber",
-    "deleteSourcesSuccess": "{count} sumber dihapus"
+    "deleteSourcesSuccess": "{count} sumber dihapus",
+    "parts": "{count, plural, one {# bagian} other {# bagian}}"
   },
   "followers": {
     "addedAgo_context": "Untuk kapan kreator ditambahkan ke daftar pengguna. Menampilkan 'Ditambahkan 3 hari lalu'",
@@ -57,7 +61,7 @@
     "max50Message": "Anda telah mencapai batas 50 kreator pada paket ini.",
     "max100Message": "Anda telah mencapai batas 100 kreator pada paket ini.",
     "upgradeButton": "Upgrade ke Premium",
-    "upgradeModalDiscount": "Diskon 25% untuk bulan pertama",
+    "upgradeModalDiscount": "Diskon 20% untuk bulan pertama",
     "upgradeModalCodeNote": "Terapkan saat checkout",
     "unfollowUpgradeTitle": "Kelola kreator sesukamu dengan premium"
   },

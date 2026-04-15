@@ -3,5 +3,6 @@
   "androidTestBanner": "Android 출시를 도와주세요! 앱 테스터로 선정되셨습니다 — 잠깐만 설치해도 승인에 큰 도움이 됩니다.",
   "androidTestButton": "테스트 참여",
   "chromeBanner": "NEW: Chrome 확장 프로그램으로 원클릭으로 방송을 추가하세요",
-  "chromeButton": "설치"
+  "chromeButton": "설치",
+  "mirrorBanner": "느린가요? 미러 사이트를 이용해 보세요"
 }

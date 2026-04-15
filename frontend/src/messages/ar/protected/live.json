@@ -3,6 +3,7 @@
   "subtitle": "البثوث المباشرة التي يتم تسجيلها حالياً",
   "streamingCount": "{count, plural, zero {لا أحد يبث} one {# يبث} two {# يبثان} few {# يبثون} many {# يبث} other {# يبث}}",
   "refresh": "تحديث",
+  "allPlatforms": "جميع المنصات",
   "showAll": "عرض الكل",
   "discoverStreamers": "ابحث عن أصدقاء",
   "emptyState": {

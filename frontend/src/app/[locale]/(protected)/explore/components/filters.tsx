@@ -23,6 +23,7 @@ import {
   IconArrowDown,
   IconArrowUp,
   IconCalendar,
+  IconClock,
   IconFilter,
   IconGenderFemale,
   IconGenderMale,
@@ -145,6 +146,7 @@ export default function Filters({ filterOptions }: Props) {
     filters.language,
     filters.type,
     filters.dateRange,
+    filters.duration,
   ].filter(Boolean).length;
 
   const clearFilters = () => {
@@ -306,6 +308,22 @@ export default function Filters({ filterOptions }: Props) {
                 }
               >
                 {t(dateRangeLabelKeys[filters.dateRange])}
+              </Badge>
+            )}
+            {filters.duration && (
+              <Badge
+                variant="light"
+                size="lg"
+                leftSection={<IconClock size={16} />}
+                rightSection={
+                  <IconX
+                    size={16}
+                    style={{ cursor: "pointer" }}
+                    onClick={() => navigate({ duration: null })}
+                  />
+                }
+              >
+                {t(`duration.${filters.duration}`)}
               </Badge>
             )}
 
@@ -470,6 +488,31 @@ export default function Filters({ filterOptions }: Props) {
                 {DATE_RANGE_VALUES.map((d) => (
                   <Chip key={d} value={d} variant="light">
                     {t(dateRangeLabelKeys[d])}
+                  </Chip>
+                ))}
+              </Group>
+            </Chip.Group>
+          </Stack>
+
+          <Divider />
+
+          {/* Duration */}
+          <Stack gap={4}>
+            <Text size="md" fw={500}>
+              {t("duration.label")}
+            </Text>
+            <Chip.Group
+              value={filters.duration || ""}
+              onChange={(value) =>
+                navigate({
+                  duration: typeof value === "string" ? value || null : null,
+                })
+              }
+            >
+              <Group gap="xs">
+                {["short", "medium", "long"].map((d) => (
+                  <Chip key={d} value={d} variant="light">
+                    {t(`duration.${d}`)}
                   </Chip>
                 ))}
               </Group>

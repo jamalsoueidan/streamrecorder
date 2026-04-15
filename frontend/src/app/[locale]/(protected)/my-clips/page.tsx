@@ -81,7 +81,7 @@ export default async function Page({ searchParams }: PageProps) {
                 />
               </Center>
             )}
-            <SimpleGrid cols={{ base: 1, sm: 2, md: 3, lg: 4 }}>
+            <SimpleGrid cols={{ base: 1, sm: 2, md: 3 }}>
               {clips?.map((clip) => (
                 <ClipCard key={clip.documentId} clip={clip} locale={locale} />
               ))}

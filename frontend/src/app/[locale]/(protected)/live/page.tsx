@@ -11,23 +11,24 @@ import LiveInfinity from "./components/live-infinity";
 interface PageProps {
   searchParams: Promise<{
     scope?: string;
+    type?: string;
   }>;
 }
 
 export default async function LivePage({ searchParams }: PageProps) {
-  const { scope = ScopeEnum.Following } = await searchParams;
+  const { scope = ScopeEnum.Following, type } = await searchParams;
 
   const queryClient = new QueryClient();
 
   await queryClient.prefetchInfiniteQuery({
-    queryKey: ["live-recordings", scope],
-    queryFn: ({ pageParam }) => fetchLiveRecordings(scope, pageParam),
+    queryKey: ["live-recordings", scope, type],
+    queryFn: ({ pageParam }) => fetchLiveRecordings(scope, pageParam, type),
     initialPageParam: 1,
   });
 
   return (
     <HydrationBoundary state={dehydrate(queryClient)}>
-      <LiveInfinity scope={scope} />
+      <LiveInfinity scope={scope} type={type} />
     </HydrationBoundary>
   );
 }

@@ -30,9 +30,20 @@ api.instance.interceptors.request.use((config) => {
 api.instance.interceptors.response.use(
   (response) => response,
   (error) => {
-    if (error.response?.status === 403) {
-      console.error("403 Forbidden:", error.config?.url, error.config?.params);
+    if (
+      error.code === "ECONNRESET" &&
+      error.config &&
+      !error.config.__retried
+    ) {
+      error.config.__retried = true;
+      return api.instance.request(error.config);
     }
+    const status = error.response?.status;
+    if (status && status !== 404 && status !== 401) {
+      console.error(`[API] ${status} ${error.config?.method?.toUpperCase()} ${error.config?.url}`);
+    }
+    error.request = undefined;
+    error.config = undefined;
     return Promise.reject(error);
   }
 );

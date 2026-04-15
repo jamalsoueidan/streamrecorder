@@ -3,5 +3,6 @@
   "androidTestBanner": "Android'de yayınlamamıza yardım edin! Uygulamayı test etmek için seçildiniz — kısa bir yükleme bile onay almamıza yardımcı olur.",
   "androidTestButton": "Teste Katıl",
   "chromeBanner": "YENİ: Chrome Eklentimizi kullanarak yayınınızı tek tıkla ekleyin",
-  "chromeButton": "Yükle"
+  "chromeButton": "Yükle",
+  "mirrorBanner": "Yavaşlık mı yaşıyorsunuz? Ayna sitelerimizi deneyin"
 }
