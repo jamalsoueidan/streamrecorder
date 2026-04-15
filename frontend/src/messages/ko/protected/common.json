@@ -3,7 +3,8 @@
     "tooltip": "크리에이터 추가",
     "successTitle": "추가됨!",
     "successMessage": "{username}님이 추가되었습니다",
-    "errorTitle": "오류"
+    "errorTitle": "오류",
+    "blockedMessage": "This creator is unavailable due to a DMCA takedown. See our <terms>Terms of Service</terms> for more details."
   },
   "unfollow": {
     "tooltip": "크리에이터 삭제",

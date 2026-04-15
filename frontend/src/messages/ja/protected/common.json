@@ -3,7 +3,8 @@
     "tooltip": "クリエイターを追加",
     "successTitle": "追加しました！",
     "successMessage": "{username} を追加しました",
-    "errorTitle": "エラー"
+    "errorTitle": "エラー",
+    "blockedMessage": "This creator is unavailable due to a DMCA takedown. See our <terms>Terms of Service</terms> for more details."
   },
   "unfollow": {
     "tooltip": "クリエイターを削除",

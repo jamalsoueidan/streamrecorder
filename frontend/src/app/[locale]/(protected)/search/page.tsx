@@ -202,6 +202,7 @@ export default function Page() {
 
     const result = await follow(user.username, user.type as FollowerTypeEnum);
 
+    console.log(result);
     setIsFollowing(false);
 
     if (result.success) {
@@ -218,6 +219,18 @@ export default function Page() {
       notifications.show({
         title: tCommon("follow.errorTitle"),
         message: tCommon("followers.max100Message"),
+        color: "red",
+      });
+    } else if (result.error?.includes("FOLLOWER_BLOCKED")) {
+      notifications.show({
+        title: tCommon("follow.errorTitle"),
+        message: tCommon.rich("follow.blockedMessage", {
+          terms: (chunks) => (
+            <a href="/terms" target="_blank" style={{ color: "white", textDecoration: "underline" }}>
+              {chunks}
+            </a>
+          ),
+        }),
         color: "red",
       });
     } else {
@@ -468,14 +481,10 @@ export default function Page() {
         opened={platformUpgradeOpened}
         onClose={closePlatformUpgrade}
         platform={
-          blockedPlatform
-            ? t(`platforms.${blockedPlatform}`)
-            : undefined
+          blockedPlatform ? t(`platforms.${blockedPlatform}`) : undefined
         }
         platformIcon={
-          blockedPlatform
-            ? getPlatformInfo(blockedPlatform)?.file
-            : undefined
+          blockedPlatform ? getPlatformInfo(blockedPlatform)?.file : undefined
         }
       />
 

@@ -3,7 +3,8 @@
     "tooltip": "İçerik Üreticisi Ekle",
     "successTitle": "Eklendi!",
     "successMessage": "{username} eklendi",
-    "errorTitle": "Hata"
+    "errorTitle": "Hata",
+    "blockedMessage": "This creator is unavailable due to a DMCA takedown. See our <terms>Terms of Service</terms> for more details."
   },
   "unfollow": {
     "tooltip": "İçerik Üreticisini Kaldır",

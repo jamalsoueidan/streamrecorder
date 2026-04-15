@@ -3,7 +3,8 @@
     "tooltip": "Tambah Kreator",
     "successTitle": "Ditambahkan!",
     "successMessage": "{username} telah ditambahkan",
-    "errorTitle": "Galat"
+    "errorTitle": "Galat",
+    "blockedMessage": "This creator is unavailable due to a DMCA takedown. See our <terms>Terms of Service</terms> for more details."
   },
   "unfollow": {
     "tooltip": "Hapus Kreator",

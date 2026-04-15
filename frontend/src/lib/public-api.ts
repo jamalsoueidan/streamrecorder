@@ -31,7 +31,9 @@ publicApi.instance.interceptors.response.use(
     if (status && status !== 404) {
       console.error(`[API] ${status} ${error.config?.method?.toUpperCase()} ${error.config?.url}`);
     }
-    return Promise.reject(new Error(`API ${status || error.code}: ${error.config?.url}`));
+    error.request = undefined;
+    error.config = undefined;
+    return Promise.reject(error);
   }
 );
 

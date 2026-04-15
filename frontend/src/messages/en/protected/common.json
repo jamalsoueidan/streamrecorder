@@ -3,7 +3,8 @@
     "tooltip": "Add Creator",
     "successTitle": "Added!",
     "successMessage": "{username} has been added",
-    "errorTitle": "Error"
+    "errorTitle": "Error",
+    "blockedMessage": "This creator is unavailable due to a DMCA takedown. See our <terms>Terms of Service</terms> for more details."
   },
   "unfollow": {
     "tooltip": "Remove Creator",
