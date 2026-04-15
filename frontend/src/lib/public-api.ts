@@ -27,10 +27,11 @@ publicApi.instance.interceptors.response.use(
       error.config.__retried = true;
       return publicApi.instance.request(error.config);
     }
-    if (error.response?.status === 403) {
-      console.error("403 Forbidden:", error.config?.url, error.config?.params);
+    const status = error.response?.status;
+    if (status && status !== 404) {
+      console.error(`[API] ${status} ${error.config?.method?.toUpperCase()} ${error.config?.url}`);
     }
-    return Promise.reject(error);
+    return Promise.reject(new Error(`API ${status || error.code}: ${error.config?.url}`));
   }
 );
 
