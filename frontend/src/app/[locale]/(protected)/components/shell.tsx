@@ -10,6 +10,7 @@ import {
   Button,
   CloseButton,
   Flex,
+  Group,
   Text,
   useMatches,
 } from "@mantine/core";
@@ -18,6 +19,7 @@ import {
   IconBrandChrome,
   IconBrandGooglePlay,
   IconCrown,
+  IconWorld,
 } from "@tabler/icons-react";
 import { useTranslations } from "next-intl";
 import { MobileBar } from "./mobilebar";
@@ -46,6 +48,10 @@ export function Shell({
   });
   const [chromeBannerDismissed, setChromeBannerDismissed] = useLocalStorage({
     key: "chrome-extension-banner-dismissed",
+    defaultValue: false,
+  });
+  const [mirrorBannerDismissed, setMirrorBannerDismissed] = useLocalStorage({
+    key: "mirror-banner-dismissed",
     defaultValue: false,
   });
   const showAndroidBanner =
@@ -140,6 +146,57 @@ export function Shell({
           />
         </AppShell.Navbar>
         <AppShell.Main>
+          {!mirrorBannerDismissed && (
+            <Flex
+              align="center"
+              justify="center"
+              gap="xs"
+              px="md"
+              py={6}
+              mb="sm"
+              wrap="wrap"
+              style={{
+                background: "linear-gradient(150deg, #0d9488, #14b8a6)",
+                borderRadius: 8,
+              }}
+            >
+              <Group gap={4} wrap="nowrap">
+                <IconWorld size={16} color="white" style={{ flexShrink: 0 }} />
+                <Text c="white" fw={600} size="xs">
+                  {tShell("mirrorBanner")}
+                </Text>
+              </Group>
+              <Group gap={4} wrap="nowrap">
+                <Button
+                  component="a"
+                  href="https://www.livestreamrecorder.net"
+                  target="_blank"
+                  variant="white"
+                  radius="md"
+                  size="compact-xs"
+                  color="teal"
+                >
+                  livestreamrecorder.net
+                </Button>
+                <Button
+                  component="a"
+                  href="https://www.livestreamrecorder.org"
+                  target="_blank"
+                  variant="white"
+                  radius="md"
+                  size="compact-xs"
+                  color="teal"
+                >
+                  livestreamrecorder.org
+                </Button>
+                <CloseButton
+                  c="white"
+                  size="sm"
+                  onClick={() => setMirrorBannerDismissed(true)}
+                />
+              </Group>
+            </Flex>
+          )}
           {showChromeBanner && (
             <Flex
               align="center"

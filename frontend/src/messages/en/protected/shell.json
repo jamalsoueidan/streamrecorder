@@ -3,5 +3,6 @@
   "androidTestBanner": "Help us launch on Android! You've been selected to test the app — even a quick install helps us get approved.",
   "androidTestButton": "Join Test",
   "chromeBanner": "NEW: Add your stream with one click using our Chrome Extension",
-  "chromeButton": "Install"
+  "chromeButton": "Install",
+  "mirrorBanner": "Experiencing slowness? Try our mirror sites"
 }
