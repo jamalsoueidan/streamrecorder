@@ -7,7 +7,7 @@ export function generateAvatarUrl(url?: string | null, fullUrl: boolean = false)
   if (!url) return undefined;
   if (MEDIA_PROXY) {
     const filename = url.split("/").pop();
-    return `https://${MEDIA_PROXY}/streamavatars-nbg/thumbnail_${filename}`;
+    return `https://image.livestreamrecorder.net/thumbnail_${filename}`;
   }
   const filename = url.split("/").pop();
   return (

@@ -13,17 +13,7 @@ const nextConfig: NextConfig = {
   reactCompiler: true,
   output: "standalone",
   images: {
-    localPatterns: [
-      {
-        pathname: "/**",
-      },
-    ],
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "flagcdn.com",
-      },
-    ],
+    unoptimized: true,
   },
   async redirects() {
     return [
