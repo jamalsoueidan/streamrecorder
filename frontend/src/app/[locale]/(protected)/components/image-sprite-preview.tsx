@@ -17,6 +17,7 @@ import {
   SOCIAL_URL_PATTERNS,
 } from "@/app/components/open-social";
 import { useIsNew } from "@/app/providers/is-new-provider";
+import { getImageUrl } from "@/app/lib/media-url";
 import Image from "next/image";
 import { FollowerTypeIcon } from "./follower-type-icon";
 import { SpritePreview } from "./sprite-preview";
@@ -48,7 +49,8 @@ export function ImageSpritePreview({ recording, type, username }: Props) {
   );
 
   const hasSources = sources && sources.length > 0;
-  const uri = `/video/${recording.documentId}/`;
+  const lastSource = sources?.at(-1);
+  const firstDoneSource = sources?.find((s) => s.state === "done");
 
   const getHref = (time?: number) => {
     const params = new URLSearchParams(searchParams.toString());
@@ -120,8 +122,8 @@ export function ImageSpritePreview({ recording, type, username }: Props) {
           src={
             hasSources
               ? isRecording
-                ? uri + "screenshot.jpg"
-                : uri + "preview.jpg"
+                ? getImageUrl(recording.documentId!, "screenshot.jpg", lastSource)
+                : getImageUrl(recording.documentId!, "preview.jpg", firstDoneSource)
               : "/assets/placeholder/180x280/black/white?text=Recording started"
           }
           unoptimized
