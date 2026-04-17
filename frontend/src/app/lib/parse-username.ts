@@ -120,6 +120,18 @@ export function parseUsername(input: string): ParsedUsername {
     };
   }
 
+  // LiveMe URL pattern
+  const livemeRegex =
+    /(?:https?:\/\/)?(?:www\.)?liveme\.com\/(?:[a-z]{2}\/)?u\/([^\/\s?]+)/i;
+  const livemeMatch = trimmed.match(livemeRegex);
+
+  if (livemeMatch) {
+    return {
+      username: livemeMatch[1],
+      platform: "liveme",
+    };
+  }
+
   // Plain username - remove @ if present
   const username = trimmed.startsWith("@") ? trimmed.slice(1) : trimmed;
 

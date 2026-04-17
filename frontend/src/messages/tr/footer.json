@@ -22,7 +22,8 @@
     "afreecatv": "AfreecaTV içerik üreticileri",
     "pandalive": "Pandalive içerik üreticileri",
     "bigo": "Bigo içerik üreticileri",
-    "buzzcast": "Buzzcast içerik üreticileri"
+    "buzzcast": "Buzzcast içerik üreticileri",
+    "liveme": "LiveMe içerik üreticileri"
   },
   "watchRecordings": {
     "title": "Kayıtları İzle",
@@ -34,7 +35,8 @@
     "afreecatv": "AfreecaTV kayıtları",
     "pandalive": "Pandalive kayıtları",
     "bigo": "Bigo kayıtları",
-    "buzzcast": "Buzzcast kayıtları"
+    "buzzcast": "Buzzcast kayıtları",
+    "liveme": "LiveMe kayıtları"
   },
   "legal": {
     "title": "Yasal",

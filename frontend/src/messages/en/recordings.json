@@ -318,7 +318,8 @@
       "afreecatv": "AfreecaTV Recordings",
       "pandalive": "Pandalive Recordings",
       "bigo": "Bigo Recordings",
-      "buzzcast": "Buzzcast Recordings"
+      "buzzcast": "Buzzcast Recordings",
+      "liveme": "LiveMe Recordings"
     },
     "subtitle": {
       "all": "Watch live stream recordings from creators on our platform. Download and discover new content.",
@@ -329,7 +330,8 @@
       "afreecatv": "Watch AfreecaTV recordings from creators on our platform. Download and discover new content.",
       "pandalive": "Watch Pandalive recordings from creators on our platform. Download and discover new content.",
       "bigo": "Watch Bigo recordings from creators on our platform. Download and discover new content.",
-      "buzzcast": "Watch Buzzcast recordings from creators on our platform. Download and discover new content."
+      "buzzcast": "Watch Buzzcast recordings from creators on our platform. Download and discover new content.",
+      "liveme": "Watch LiveMe recordings from creators on our platform. Download and discover new content."
     }
   },
   "cta": {
@@ -342,7 +344,8 @@
       "pandalive": "Record Pandalive Streams",
       "afreecatv": "Record AfreecaTV Streams",
       "bigo": "Record Bigo Streams",
-      "buzzcast": "Record Buzzcast Streams"
+      "buzzcast": "Record Buzzcast Streams",
+      "liveme": "Record LiveMe Streams"
     },
     "subtitle": {
       "all": "Automatically save your TikTok, Twitch, YouTube, and Kick streams. Download recordings, create short clips, and grow your audience.",
@@ -353,7 +356,8 @@
       "pandalive": "Automatically save your Pandalive streams. Download recordings and create short clips with ClipAI.",
       "afreecatv": "Automatically save your AfreecaTV streams. Download recordings and create short clips with ClipAI.",
       "bigo": "Automatically save your Bigo streams. Download recordings and create short clips with ClipAI.",
-      "buzzcast": "Automatically save your Buzzcast streams. Download recordings and create short clips with ClipAI."
+      "buzzcast": "Automatically save your Buzzcast streams. Download recordings and create short clips with ClipAI.",
+      "liveme": "Automatically save your LiveMe streams. Download recordings and create short clips with ClipAI."
     },
     "button": "Start Recording Free"
   },
@@ -368,7 +372,8 @@
       "afreecatv": "Be the first creator to record an AfreecaTV stream!",
       "pandalive": "Be the first creator to record a Pandalive stream!",
       "bigo": "Be the first creator to record a Bigo stream!",
-      "buzzcast": "Be the first creator to record a Buzzcast stream!"
+      "buzzcast": "Be the first creator to record a Buzzcast stream!",
+      "liveme": "Be the first creator to record a LiveMe stream!"
     },
     "button": "Get Started"
   },
@@ -381,7 +386,8 @@
     "pandalive": "## Pandalive Live Recordings\n\nWatch Pandalive live recordings from BJs who use LiveStreamRecorder to save their own Lives. Every Pandalive Live is captured automatically and stored for on-demand viewing.\n\n### Pandalive Lives Saved Automatically\n\nPandalive Lives disappear when the stream ends — there's no guaranteed replay system. Our Pandalive recorder saves your Lives automatically in the cloud so nothing is lost once your Live finishes. Dance performances, song covers, talk sessions — everything stays available.\n\n### Watch and Download Your Pandalive Recordings\n\nEvery Pandalive recording is available to watch instantly in your browser. Premium users can download their Pandalive recordings as video files for offline viewing — perfect for repurposing your own content or keeping a personal copy.\n\n### Record Your Pandalive Lives — No Extra Software Needed\n\nForget screen recording apps and mobile capture tools. LiveStreamRecorder is an online Pandalive recorder that captures your Lives server-side. No desktop software, no phone running all night, no browser extension. Whether you stream from a phone, tablet, or PC, your Pandalive Lives are recorded in high quality automatically.\n\n### Turn Your Lives Into Clips with ClipAI\n\nWant to turn your Pandalive Live recordings into short clips? ClipAI analyzes your recorded Lives and creates highlight clips ready to post on TikTok, Instagram Reels, or YouTube Shorts. Grow your fanbase worldwide by repurposing your best Pandalive moments.\n\n### The Best Pandalive Recorder for BJs\n\nLiveStreamRecorder is built for saving Pandalive Lives. Sign up free, add your Pandalive username, and never lose a Live again. Every stream is captured automatically — your permanent Pandalive content library.",
     "afreecatv": "## AfreecaTV Live Recordings\n\nWatch AfreecaTV live recordings from BJs who use LiveStreamRecorder to save their own Lives. Every AfreecaTV Live is captured automatically and stored for on-demand viewing.\n\n### AfreecaTV Lives Saved Independently\n\nAfreecaTV has its own VOD system, but replays aren't always saved, content can be taken down, and storage rules can change. Our AfreecaTV recorder saves your Lives automatically in the cloud as an independent backup — so your content stays intact, no matter what happens on AfreecaTV.\n\n### Watch and Download Your AfreecaTV Recordings\n\nEvery AfreecaTV recording is available to watch instantly in your browser — no ads, no interruptions. Premium users can download their AfreecaTV recordings as video files for offline viewing or content repurposing.\n\n### Record Your AfreecaTV Lives — No Screen Recorder Needed\n\nForget running capture software during long AfreecaTV sessions. LiveStreamRecorder is a cloud-based AfreecaTV recorder that captures your Lives server-side. No desktop app, no background recording, no extra CPU load. Stream from PC or mobile — your AfreecaTV Lives are recorded automatically in high quality.\n\n### Turn Long Lives Into Short Clips with ClipAI\n\nAfreecaTV Lives can run for hours. ClipAI analyzes your recorded Lives and pulls out the best moments — clutch plays, reactions, funny exchanges, highlights. Post them as TikTok clips, YouTube Shorts, or Reels to grow your audience beyond AfreecaTV.\n\n### The Best AfreecaTV Recorder for BJs\n\nLiveStreamRecorder is built for saving AfreecaTV Lives independently. Sign up free, add your AfreecaTV username, and never lose a Live again. Every stream is captured automatically — a permanent backup that doesn't depend on AfreecaTV's VOD system.",
     "bigo": "## Bigo Live Recordings\n\nWatch Bigo Live recordings from creators who use LiveStreamRecorder to save their own Lives. Every Bigo Live is captured automatically and stored for on-demand viewing.\n\n### Bigo Lives Saved Before They Disappear\n\nBigo Lives exist only while they're streaming — once you end the session, the content is gone from the app entirely. Our Bigo recorder saves your Lives automatically in the cloud so your content doesn't vanish the moment your Live ends. Dance performances, singing, chat moments, gift interactions — everything stays available.\n\n### Watch and Download Your Bigo Recordings\n\nEvery Bigo Live recording is available to watch instantly in your browser. Premium users can download their Bigo recordings as video files for offline viewing — perfect for repurposing your own content or keeping a personal copy.\n\n### Record Your Bigo Lives — No Screen Recorder Needed\n\nForget running screen capture on your phone or leaving an extra device recording all night. LiveStreamRecorder is an online Bigo recorder that captures your Lives server-side. No phone battery drain, no manual setup, no extra software. Whether you stream from iPhone, Android, or PC, your Bigo Lives are recorded in high quality automatically.\n\n### Turn Your Lives Into Clips with ClipAI\n\nWant to turn your Bigo Live recordings into short clips? ClipAI analyzes your recorded Lives and creates highlight clips ready to post on TikTok, Instagram Reels, or YouTube Shorts. Grow your audience worldwide by repurposing your best Bigo moments.\n\n### The Best Bigo Recorder for Creators\n\nLiveStreamRecorder is built for saving Bigo Lives. Sign up free, add your Bigo username, and never lose a Live again. Every stream is captured automatically — a permanent place for your Bigo content that doesn't depend on the app keeping it for you.",
-    "buzzcast": "## Buzzcast Live Recordings\n\nWatch Buzzcast live recordings from creators who use LiveStreamRecorder to save their own Lives. Every Buzzcast Live is captured automatically and stored for on-demand viewing.\n\n### Buzzcast Lives Saved Before They Disappear\n\nBuzzcast Lives are live-only — once you end the stream, the content disappears from the app. Our Buzzcast recorder saves your Lives automatically in the cloud so nothing is lost when your Live finishes. Chat sessions, music moments, daily content — everything stays available for fans.\n\n### Watch and Download Your Buzzcast Recordings\n\nEvery Buzzcast Live recording is available to watch instantly in your browser. Premium users can download their Buzzcast recordings as video files for offline viewing — perfect for repurposing your own content or keeping a personal copy.\n\n### Record Your Buzzcast Lives — No Extra Apps Needed\n\nForget screen recording your phone or running capture software in the background. LiveStreamRecorder is an online Buzzcast recorder that captures your Lives server-side. No battery drain, no manual setup, no extra software. Your Buzzcast Lives are recorded in high quality automatically, from any device.\n\n### Turn Your Lives Into Clips with ClipAI\n\nWant to turn your Buzzcast Live recordings into short clips? ClipAI analyzes your recorded Lives and creates highlight clips ready to post on TikTok, Instagram Reels, or YouTube Shorts. Grow your following beyond Buzzcast by repurposing your best moments.\n\n### The Best Buzzcast Recorder for Creators\n\nLiveStreamRecorder is built for saving Buzzcast Lives. Sign up free, add your Buzzcast username, and never lose a Live again. Every stream is captured automatically — your permanent Buzzcast content library."
+    "buzzcast": "## Buzzcast Live Recordings\n\nWatch Buzzcast live recordings from creators who use LiveStreamRecorder to save their own Lives. Every Buzzcast Live is captured automatically and stored for on-demand viewing.\n\n### Buzzcast Lives Saved Before They Disappear\n\nBuzzcast Lives are live-only — once you end the stream, the content disappears from the app. Our Buzzcast recorder saves your Lives automatically in the cloud so nothing is lost when your Live finishes. Chat sessions, music moments, daily content — everything stays available for fans.\n\n### Watch and Download Your Buzzcast Recordings\n\nEvery Buzzcast Live recording is available to watch instantly in your browser. Premium users can download their Buzzcast recordings as video files for offline viewing — perfect for repurposing your own content or keeping a personal copy.\n\n### Record Your Buzzcast Lives — No Extra Apps Needed\n\nForget screen recording your phone or running capture software in the background. LiveStreamRecorder is an online Buzzcast recorder that captures your Lives server-side. No battery drain, no manual setup, no extra software. Your Buzzcast Lives are recorded in high quality automatically, from any device.\n\n### Turn Your Lives Into Clips with ClipAI\n\nWant to turn your Buzzcast Live recordings into short clips? ClipAI analyzes your recorded Lives and creates highlight clips ready to post on TikTok, Instagram Reels, or YouTube Shorts. Grow your following beyond Buzzcast by repurposing your best moments.\n\n### The Best Buzzcast Recorder for Creators\n\nLiveStreamRecorder is built for saving Buzzcast Lives. Sign up free, add your Buzzcast username, and never lose a Live again. Every stream is captured automatically — your permanent Buzzcast content library.",
+    "liveme": "## LiveMe Live Recordings\n\nWatch LiveMe live recordings from creators who use LiveStreamRecorder to save their own Lives. Every LiveMe Live is captured automatically and stored for on-demand viewing.\n\n### LiveMe Lives Saved Before They Disappear\n\nLiveMe Lives are live-only — once you end the stream, the content disappears from the app. Our LiveMe recorder saves your Lives automatically in the cloud so nothing is lost when your Live finishes. Chat sessions, music moments, daily content — everything stays available for fans.\n\n### Watch and Download Your LiveMe Recordings\n\nEvery LiveMe Live recording is available to watch instantly in your browser. Premium users can download their LiveMe recordings as video files for offline viewing — perfect for repurposing your own content or keeping a personal copy.\n\n### Record Your LiveMe Lives — No Extra Apps Needed\n\nForget screen recording your phone or running capture software in the background. LiveStreamRecorder is an online LiveMe recorder that captures your Lives server-side. No battery drain, no manual setup, no extra software. Your LiveMe Lives are recorded in high quality automatically, from any device.\n\n### Turn Your Lives Into Clips with ClipAI\n\nWant to turn your LiveMe Live recordings into short clips? ClipAI analyzes your recorded Lives and creates highlight clips ready to post on TikTok, Instagram Reels, or YouTube Shorts. Grow your following beyond LiveMe by repurposing your best moments.\n\n### The Best LiveMe Recorder for Creators\n\nLiveStreamRecorder is built for saving LiveMe Lives. Sign up free, add your LiveMe username, and never lose a Live again. Every stream is captured automatically — your permanent LiveMe content library."
   },
   "jsonLd": {
     "name": {
@@ -393,7 +399,8 @@
       "afreecatv": "AfreecaTV Stream Recordings",
       "pandalive": "Pandalive Stream Recordings",
       "bigo": "Bigo Stream Recordings",
-      "buzzcast": "Buzzcast Stream Recordings"
+      "buzzcast": "Buzzcast Stream Recordings",
+      "liveme": "LiveMe Stream Recordings"
     },
     "description": {
       "all": "Watch live stream recordings from creators on LiveStreamRecorder.",
@@ -404,7 +411,8 @@
       "afreecatv": "Watch AfreecaTV recordings from creators on LiveStreamRecorder.",
       "pandalive": "Watch Pandalive recordings from creators on LiveStreamRecorder.",
       "bigo": "Watch Bigo recordings from creators on LiveStreamRecorder.",
-      "buzzcast": "Watch Buzzcast recordings from creators on LiveStreamRecorder."
+      "buzzcast": "Watch Buzzcast recordings from creators on LiveStreamRecorder.",
+      "liveme": "Watch LiveMe recordings from creators on LiveStreamRecorder."
     },
     "streamTitle": "{nickname} Stream - {date}",
     "streamDescription": {
@@ -416,7 +424,8 @@
       "pandalive": "Pandalive recording from {nickname}",
       "bigo": "Bigo recording from {nickname}",
       "unknown": "Live stream recording from {nickname}",
-      "buzzcast": "Buzzcast recording from {nickname}"
+      "buzzcast": "Buzzcast recording from {nickname}",
+      "liveme": "LiveMe recording from {nickname}"
     }
   },
   "recordedOn": "Recorded on {date}",

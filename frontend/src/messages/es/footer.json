@@ -22,7 +22,8 @@
     "afreecatv": "Creadores de AfreecaTV",
     "pandalive": "Creadores de Pandalive",
     "bigo": "Creadores de Bigo",
-    "buzzcast": "Creadores de Buzzcast"
+    "buzzcast": "Creadores de Buzzcast",
+    "liveme": "Creadores de LiveMe"
   },
   "watchRecordings": {
     "title": "Ver Grabaciones",
@@ -34,7 +35,8 @@
     "afreecatv": "Grabaciones de AfreecaTV",
     "pandalive": "Grabaciones de Pandalive",
     "bigo": "Grabaciones de Bigo",
-    "buzzcast": "Grabaciones de Buzzcast"
+    "buzzcast": "Grabaciones de Buzzcast",
+    "liveme": "Grabaciones de LiveMe"
   },
   "legal": {
     "title": "Legal",

@@ -12,7 +12,8 @@
       "pandalive": "Kreator PandaLive",
       "afreecatv": "Kreator AfreecaTV",
       "bigo": "Kreator Bigo",
-      "buzzcast": "Kreator Buzzcast"
+      "buzzcast": "Kreator Buzzcast",
+      "liveme": "Kreator LiveMe"
     },
     "subtitle": {
       "all": "Jelajahi semua streamer dan kreator",
@@ -23,7 +24,8 @@
       "pandalive": "Temukan kreator PandaLive",
       "afreecatv": "Temukan kreator AfreecaTV",
       "bigo": "Temukan kreator Bigo",
-      "buzzcast": "Temukan kreator Buzzcast"
+      "buzzcast": "Temukan kreator Buzzcast",
+      "liveme": "Temukan kreator LiveMe"
     }
   },
   "recordings": {
@@ -36,7 +38,8 @@
       "pandalive": "Rekaman PandaLive",
       "afreecatv": "Rekaman AfreecaTV",
       "bigo": "Rekaman Bigo",
-      "buzzcast": "Rekaman Buzzcast"
+      "buzzcast": "Rekaman Buzzcast",
+      "liveme": "Rekaman LiveMe"
     },
     "subtitle": {
       "all": "Tonton rekaman live stream",
@@ -47,7 +50,8 @@
       "pandalive": "Tonton stream PandaLive yang direkam",
       "afreecatv": "Tonton stream AfreecaTV yang direkam",
       "bigo": "Tonton stream Bigo yang direkam",
-      "buzzcast": "Tonton stream Buzzcast yang direkam"
+      "buzzcast": "Tonton stream Buzzcast yang direkam",
+      "liveme": "Tonton stream LiveMe yang direkam"
     }
   },
   "home": {

@@ -22,7 +22,8 @@
     "afreecatv": "Kreator AfreecaTV",
     "pandalive": "Kreator Pandalive",
     "bigo": "Kreator Bigo",
-    "buzzcast": "Kreator Buzzcast"
+    "buzzcast": "Kreator Buzzcast",
+    "liveme": "Kreator LiveMe"
   },
   "watchRecordings": {
     "title": "Tonton Rekaman",
@@ -34,7 +35,8 @@
     "afreecatv": "Rekaman AfreecaTV",
     "pandalive": "Rekaman Pandalive",
     "bigo": "Rekaman Bigo",
-    "buzzcast": "Rekaman Buzzcast"
+    "buzzcast": "Rekaman Buzzcast",
+    "liveme": "Rekaman LiveMe"
   },
   "legal": {
     "title": "Legal",

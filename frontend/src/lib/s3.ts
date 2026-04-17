@@ -36,6 +36,7 @@ const PLATFORM_BUCKETS = new Set([
   "pandalive",
   "tango",
   "buzzcast",
+  "liveme",
 ]);
 
 export function getS3(): S3Client {

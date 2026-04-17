@@ -318,7 +318,8 @@
       "afreecatv": "Grabaciones de AfreecaTV",
       "pandalive": "Grabaciones de Pandalive",
       "bigo": "Grabaciones de Bigo",
-      "buzzcast": "Grabaciones de Buzzcast"
+      "buzzcast": "Grabaciones de Buzzcast",
+      "liveme": "Grabaciones de LiveMe"
     },
     "subtitle": {
       "all": "Mira grabaciones de transmisiones en vivo de creadores en nuestra plataforma. Descarga y descubre nuevo contenido.",
@@ -329,7 +330,8 @@
       "afreecatv": "Mira grabaciones de AfreecaTV de creadores en nuestra plataforma. Descarga y descubre nuevo contenido.",
       "pandalive": "Mira grabaciones de Pandalive de creadores en nuestra plataforma. Descarga y descubre nuevo contenido.",
       "bigo": "Mira grabaciones de Bigo de creadores en nuestra plataforma. Descarga y descubre nuevo contenido.",
-      "buzzcast": "Mira grabaciones de Buzzcast de creadores en nuestra plataforma. Descarga y descubre nuevo contenido."
+      "buzzcast": "Mira grabaciones de Buzzcast de creadores en nuestra plataforma. Descarga y descubre nuevo contenido.",
+      "liveme": "Mira grabaciones de LiveMe de creadores en nuestra plataforma. Descarga y descubre nuevo contenido."
     }
   },
   "cta": {
@@ -342,7 +344,8 @@
       "pandalive": "Graba Tus Streams de Pandalive",
       "afreecatv": "Graba Tus Streams de AfreecaTV",
       "bigo": "Graba Tus Streams de Bigo",
-      "buzzcast": "Graba Tus Streams de Buzzcast"
+      "buzzcast": "Graba Tus Streams de Buzzcast",
+      "liveme": "Graba Tus Streams de LiveMe"
     },
     "subtitle": {
       "all": "Guarda automáticamente tus streams de TikTok, Twitch, YouTube y Kick. Descarga grabaciones, crea clips cortos y haz crecer tu audiencia.",
@@ -353,7 +356,8 @@
       "pandalive": "Guarda automáticamente tus streams de Pandalive. Descarga grabaciones y crea clips cortos con ClipAI.",
       "afreecatv": "Guarda automáticamente tus streams de AfreecaTV. Descarga grabaciones y crea clips cortos con ClipAI.",
       "bigo": "Guarda automáticamente tus streams de Bigo. Descarga grabaciones y crea clips cortos con ClipAI.",
-      "buzzcast": "Guarda automáticamente tus streams de Buzzcast. Descarga grabaciones y crea clips cortos con ClipAI."
+      "buzzcast": "Guarda automáticamente tus streams de Buzzcast. Descarga grabaciones y crea clips cortos con ClipAI.",
+      "liveme": "Guarda automáticamente tus streams de LiveMe. Descarga grabaciones y crea clips cortos con ClipAI."
     },
     "button": "Empieza a Grabar Gratis"
   },
@@ -368,7 +372,8 @@
       "afreecatv": "¡Sé el primer creador en grabar un stream de AfreecaTV!",
       "pandalive": "¡Sé el primer creador en grabar un stream de Pandalive!",
       "bigo": "¡Sé el primer creador en grabar un stream de Bigo!",
-      "buzzcast": "¡Sé el primer creador en grabar un stream de Buzzcast!"
+      "buzzcast": "¡Sé el primer creador en grabar un stream de Buzzcast!",
+      "liveme": "¡Sé el primer creador en grabar un stream de LiveMe!"
     },
     "button": "Comenzar"
   },
@@ -381,7 +386,8 @@
     "pandalive": "## Grabaciones de Directos de Pandalive\n\nMira grabaciones de directos de Pandalive de BJs que usan LiveStreamRecorder para guardar sus propios directos. Cada directo de Pandalive se captura automáticamente y se almacena para verlo cuando quieras.\n\n### Directos de Pandalive guardados automáticamente\n\nLos directos de Pandalive desaparecen cuando termina la emisión: no hay un sistema de repeticiones garantizado. Nuestro grabador de Pandalive guarda tus directos automáticamente en la nube, para que nada se pierda cuando acabe tu emisión. Bailes, canciones, charlas: todo sigue disponible.\n\n### Mira y descarga tus grabaciones de Pandalive\n\nCada grabación de Pandalive se puede ver al instante en el navegador. Los usuarios Premium pueden descargar sus grabaciones de Pandalive como archivos de vídeo para verlas sin conexión: perfecto para reutilizar tu propio contenido o guardar una copia personal.\n\n### Graba tus directos de Pandalive sin software extra\n\nOlvídate de apps de grabación de pantalla y herramientas de captura móvil. LiveStreamRecorder es un grabador de Pandalive en línea que captura tus directos del lado del servidor. Sin software de escritorio, sin móvil corriendo toda la noche, sin extensiones de navegador. Ya sea que transmitas desde el móvil, tablet o PC, tus directos de Pandalive se graban automáticamente en alta calidad.\n\n### Convierte tus directos en clips con ClipAI\n\n¿Quieres convertir tus grabaciones de directos de Pandalive en clips cortos? ClipAI analiza tus directos grabados y crea clips destacados listos para publicar en TikTok, Instagram Reels o YouTube Shorts. Haz crecer tu comunidad en todo el mundo reutilizando tus mejores momentos de Pandalive.\n\n### El mejor grabador de Pandalive para BJs\n\nLiveStreamRecorder está pensado para guardar directos de Pandalive. Regístrate gratis, añade tu usuario de Pandalive y no vuelvas a perder un directo. Cada directo se captura automáticamente: tu biblioteca permanente de contenido de Pandalive.",
     "afreecatv": "## Grabaciones de Directos de AfreecaTV\n\nMira grabaciones de directos de AfreecaTV de BJs que usan LiveStreamRecorder para guardar sus propios directos. Cada directo de AfreecaTV se captura automáticamente y se almacena para verlo cuando quieras.\n\n### Directos de AfreecaTV guardados de forma independiente\n\nAfreecaTV tiene su propio sistema de VOD, pero no siempre se guardan las repeticiones, el contenido puede eliminarse y las políticas de almacenamiento cambian. Nuestro grabador de AfreecaTV guarda tus directos automáticamente en la nube como copia de seguridad independiente: tu contenido permanece intacto, pase lo que pase en AfreecaTV.\n\n### Mira y descarga tus grabaciones de AfreecaTV\n\nCada grabación de AfreecaTV se puede ver al instante en el navegador: sin anuncios, sin interrupciones. Los usuarios Premium pueden descargar sus grabaciones de AfreecaTV como archivos de vídeo para verlas sin conexión o reutilizarlas.\n\n### Graba tus directos de AfreecaTV sin programas adicionales\n\nOlvídate de tener software de captura corriendo durante largas sesiones de AfreecaTV. LiveStreamRecorder es un grabador de AfreecaTV basado en la nube que captura tus directos del lado del servidor. Sin app de escritorio, sin grabación en segundo plano, sin carga extra en tu CPU. Transmite desde PC o móvil: tus directos de AfreecaTV se graban automáticamente en alta calidad.\n\n### Convierte directos largos en clips cortos con ClipAI\n\nLos directos de AfreecaTV pueden durar horas. ClipAI analiza tus grabaciones y extrae los mejores momentos: jugadas clave, reacciones, momentos divertidos, highlights. Publícalos como clips de TikTok, YouTube Shorts o Reels para llegar a audiencias más allá de AfreecaTV.\n\n### El mejor grabador de AfreecaTV para BJs\n\nLiveStreamRecorder está pensado para guardar directos de AfreecaTV de forma independiente. Regístrate gratis, añade tu usuario de AfreecaTV y no vuelvas a perder un directo. Cada directo se captura automáticamente: una copia de seguridad permanente que no depende del sistema de VOD de AfreecaTV.",
     "bigo": "## Grabaciones de Directos de Bigo Live\n\nMira grabaciones de directos de Bigo Live de creadores que usan LiveStreamRecorder para guardar sus propios directos. Cada directo de Bigo se captura automáticamente y se almacena para verlo cuando quieras.\n\n### Directos de Bigo guardados antes de que desaparezcan\n\nLos directos de Bigo existen solo mientras están en vivo: en cuanto cierras la sesión, el contenido desaparece por completo de la app. Nuestro grabador de Bigo guarda tus directos automáticamente en la nube, para que tu contenido no se esfume en cuanto termina el directo. Bailes, canciones, charlas, momentos de regalos: todo sigue disponible.\n\n### Mira y descarga tus grabaciones de Bigo\n\nCada grabación de Bigo se puede ver al instante en el navegador. Los usuarios Premium pueden descargar sus grabaciones de Bigo como archivos de vídeo para verlas sin conexión: perfecto para reutilizar tu propio contenido o guardar una copia personal.\n\n### Graba tus directos de Bigo sin grabación de pantalla\n\nOlvídate de grabar la pantalla del móvil o dejar otro dispositivo grabando toda la noche. LiveStreamRecorder es un grabador de Bigo en línea que captura tus directos del lado del servidor. Sin gasto de batería, sin configuración manual, sin software adicional. Ya sea que transmitas desde iPhone, Android o PC, tus directos de Bigo se graban automáticamente en alta calidad.\n\n### Convierte tus directos en clips con ClipAI\n\n¿Quieres convertir tus grabaciones de directos de Bigo en clips cortos? ClipAI analiza tus directos grabados y crea clips destacados listos para publicar en TikTok, Instagram Reels o YouTube Shorts. Haz crecer tu audiencia global reutilizando tus mejores momentos de Bigo.\n\n### El mejor grabador de Bigo para creadores\n\nLiveStreamRecorder está pensado para guardar directos de Bigo. Regístrate gratis, añade tu usuario de Bigo y no vuelvas a perder un directo. Cada directo se captura automáticamente: un lugar permanente para tu contenido de Bigo que no depende de que la app lo conserve por ti.",
-    "buzzcast": "## Grabaciones de Directos de Buzzcast\n\nMira grabaciones de directos de Buzzcast de creadores que usan LiveStreamRecorder para guardar sus propios directos. Cada directo de Buzzcast se captura automáticamente y se almacena para verlo cuando quieras.\n\n### Directos de Buzzcast guardados antes de que desaparezcan\n\nLos directos de Buzzcast son solo en vivo: en cuanto terminas la emisión, el contenido desaparece de la app. Nuestro grabador de Buzzcast guarda tus directos automáticamente en la nube, para que nada se pierda cuando acabe tu directo. Charlas, momentos musicales, contenido diario: todo sigue disponible para tus fans.\n\n### Mira y descarga tus grabaciones de Buzzcast\n\nCada grabación de Buzzcast se puede ver al instante en el navegador. Los usuarios Premium pueden descargar sus grabaciones de Buzzcast como archivos de vídeo para verlas sin conexión: perfecto para reutilizar tu propio contenido o guardar una copia personal.\n\n### Graba tus directos de Buzzcast sin apps adicionales\n\nOlvídate de grabar la pantalla del móvil o tener software de captura en segundo plano. LiveStreamRecorder es un grabador de Buzzcast en línea que captura tus directos del lado del servidor. Sin gasto de batería, sin configuración manual, sin software adicional. Tus directos de Buzzcast se graban automáticamente en alta calidad desde cualquier dispositivo.\n\n### Convierte tus directos en clips con ClipAI\n\n¿Quieres convertir tus grabaciones de directos de Buzzcast en clips cortos? ClipAI analiza tus directos grabados y crea clips destacados listos para publicar en TikTok, Instagram Reels o YouTube Shorts. Haz crecer tu comunidad más allá de Buzzcast reutilizando tus mejores momentos.\n\n### El mejor grabador de Buzzcast para creadores\n\nLiveStreamRecorder está pensado para guardar directos de Buzzcast. Regístrate gratis, añade tu usuario de Buzzcast y no vuelvas a perder un directo. Cada directo se captura automáticamente: tu biblioteca permanente de contenido de Buzzcast."
+    "buzzcast": "## Grabaciones de Directos de Buzzcast\n\nMira grabaciones de directos de Buzzcast de creadores que usan LiveStreamRecorder para guardar sus propios directos. Cada directo de Buzzcast se captura automáticamente y se almacena para verlo cuando quieras.\n\n### Directos de Buzzcast guardados antes de que desaparezcan\n\nLos directos de Buzzcast son solo en vivo: en cuanto terminas la emisión, el contenido desaparece de la app. Nuestro grabador de Buzzcast guarda tus directos automáticamente en la nube, para que nada se pierda cuando acabe tu directo. Charlas, momentos musicales, contenido diario: todo sigue disponible para tus fans.\n\n### Mira y descarga tus grabaciones de Buzzcast\n\nCada grabación de Buzzcast se puede ver al instante en el navegador. Los usuarios Premium pueden descargar sus grabaciones de Buzzcast como archivos de vídeo para verlas sin conexión: perfecto para reutilizar tu propio contenido o guardar una copia personal.\n\n### Graba tus directos de Buzzcast sin apps adicionales\n\nOlvídate de grabar la pantalla del móvil o tener software de captura en segundo plano. LiveStreamRecorder es un grabador de Buzzcast en línea que captura tus directos del lado del servidor. Sin gasto de batería, sin configuración manual, sin software adicional. Tus directos de Buzzcast se graban automáticamente en alta calidad desde cualquier dispositivo.\n\n### Convierte tus directos en clips con ClipAI\n\n¿Quieres convertir tus grabaciones de directos de Buzzcast en clips cortos? ClipAI analiza tus directos grabados y crea clips destacados listos para publicar en TikTok, Instagram Reels o YouTube Shorts. Haz crecer tu comunidad más allá de Buzzcast reutilizando tus mejores momentos.\n\n### El mejor grabador de Buzzcast para creadores\n\nLiveStreamRecorder está pensado para guardar directos de Buzzcast. Regístrate gratis, añade tu usuario de Buzzcast y no vuelvas a perder un directo. Cada directo se captura automáticamente: tu biblioteca permanente de contenido de Buzzcast.",
+    "liveme": "## Grabaciones de Directos de LiveMe\n\nMira grabaciones de directos de LiveMe de creadores que usan LiveStreamRecorder para guardar sus propios directos. Cada directo de LiveMe se captura automáticamente y se almacena para verlo cuando quieras.\n\n### Directos de LiveMe guardados antes de que desaparezcan\n\nLos directos de LiveMe son solo en vivo: en cuanto terminas la emisión, el contenido desaparece de la app. Nuestro grabador de LiveMe guarda tus directos automáticamente en la nube, para que nada se pierda cuando acabe tu directo. Charlas, momentos musicales, contenido diario: todo sigue disponible para tus fans.\n\n### Mira y descarga tus grabaciones de LiveMe\n\nCada grabación de LiveMe se puede ver al instante en el navegador. Los usuarios Premium pueden descargar sus grabaciones de LiveMe como archivos de vídeo para verlas sin conexión: perfecto para reutilizar tu propio contenido o guardar una copia personal.\n\n### Graba tus directos de LiveMe sin apps adicionales\n\nOlvídate de grabar la pantalla del móvil o tener software de captura en segundo plano. LiveStreamRecorder es un grabador de LiveMe en línea que captura tus directos del lado del servidor. Sin gasto de batería, sin configuración manual, sin software adicional. Tus directos de LiveMe se graban automáticamente en alta calidad desde cualquier dispositivo.\n\n### Convierte tus directos en clips con ClipAI\n\n¿Quieres convertir tus grabaciones de directos de LiveMe en clips cortos? ClipAI analiza tus directos grabados y crea clips destacados listos para publicar en TikTok, Instagram Reels o YouTube Shorts. Haz crecer tu comunidad más allá de LiveMe reutilizando tus mejores momentos.\n\n### El mejor grabador de LiveMe para creadores\n\nLiveStreamRecorder está pensado para guardar directos de LiveMe. Regístrate gratis, añade tu usuario de LiveMe y no vuelvas a perder un directo. Cada directo se captura automáticamente: tu biblioteca permanente de contenido de LiveMe."
   },
   "jsonLd": {
     "name": {
@@ -393,7 +399,8 @@
       "afreecatv": "Grabaciones de Streams de AfreecaTV",
       "pandalive": "Grabaciones de Streams de Pandalive",
       "bigo": "Grabaciones de Streams de Bigo",
-      "buzzcast": "Grabaciones de Streams de Buzzcast"
+      "buzzcast": "Grabaciones de Streams de Buzzcast",
+      "liveme": "Grabaciones de Streams de LiveMe"
     },
     "description": {
       "all": "Mira grabaciones de transmisiones en vivo de creadores en LiveStreamRecorder.",
@@ -404,7 +411,8 @@
       "afreecatv": "Mira grabaciones de AfreecaTV de creadores en LiveStreamRecorder.",
       "pandalive": "Mira grabaciones de Pandalive de creadores en LiveStreamRecorder.",
       "bigo": "Mira grabaciones de Bigo de creadores en LiveStreamRecorder.",
-      "buzzcast": "Mira grabaciones de Buzzcast de creadores en LiveStreamRecorder."
+      "buzzcast": "Mira grabaciones de Buzzcast de creadores en LiveStreamRecorder.",
+      "liveme": "Mira grabaciones de LiveMe de creadores en LiveStreamRecorder."
     },
     "streamTitle": "Stream de {nickname} - {date}",
     "streamDescription": {
@@ -416,7 +424,8 @@
       "pandalive": "Grabación de Pandalive de {nickname}",
       "bigo": "Grabación de Bigo de {nickname}",
       "unknown": "Grabación de transmisión en vivo de {nickname}",
-      "buzzcast": "Grabación de Buzzcast de {nickname}"
+      "buzzcast": "Grabación de Buzzcast de {nickname}",
+      "liveme": "Grabación de LiveMe de {nickname}"
     }
   },
   "recordedOn": "Grabado el {date}",

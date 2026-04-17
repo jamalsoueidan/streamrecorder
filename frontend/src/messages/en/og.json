@@ -12,7 +12,8 @@
       "pandalive": "PandaLive Creators",
       "afreecatv": "AfreecaTV Creators",
       "bigo": "Bigo Creators",
-      "buzzcast": "Buzzcast Creators"
+      "buzzcast": "Buzzcast Creators",
+      "liveme": "LiveMe Creators"
     },
     "subtitle": {
       "all": "Browse all streamers and creators",
@@ -23,7 +24,8 @@
       "pandalive": "Discover PandaLive creators",
       "afreecatv": "Discover AfreecaTV creators",
       "bigo": "Discover Bigo creators",
-      "buzzcast": "Discover Buzzcast creators"
+      "buzzcast": "Discover Buzzcast creators",
+      "liveme": "Discover LiveMe creators"
     }
   },
   "recordings": {
@@ -36,7 +38,8 @@
       "pandalive": "PandaLive Recordings",
       "afreecatv": "AfreecaTV Recordings",
       "bigo": "Bigo Recordings",
-      "buzzcast": "Buzzcast Recordings"
+      "buzzcast": "Buzzcast Recordings",
+      "liveme": "LiveMe Recordings"
     },
     "subtitle": {
       "all": "Watch recorded live streams",
@@ -47,7 +50,8 @@
       "pandalive": "Watch recorded PandaLive streams",
       "afreecatv": "Watch recorded AfreecaTV streams",
       "bigo": "Watch recorded Bigo streams",
-      "buzzcast": "Watch recorded Buzzcast streams"
+      "buzzcast": "Watch recorded Buzzcast streams",
+      "liveme": "Watch recorded LiveMe streams"
     }
   },
   "home": {

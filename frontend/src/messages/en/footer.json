@@ -2,7 +2,7 @@
   "tagline": "Never miss a live stream again",
   "copyright": "Copyright © 2026 LiveStreamRecorder",
   "copyright_text": "LiveStreamRecorder provides cloud-based infrastructure that enables users to record streams for personal, private, non-commercial use. Users are responsible for ensuring their use complies with applicable laws and third-party platform terms.",
-  "association": "Twitch, YouTube, TikTok, Kick, AfreecaTV, PandaTV, Bigo, and Buzzcast product names, logos, and brands are property of their respective owners. All company, product and service names used in this website are for identification purposes only. Use of these names, trademarks and brands does not imply endorsement.",
+  "association": "Twitch, YouTube, TikTok, Kick, AfreecaTV, PandaTV, Bigo, Buzzcast, and LiveMe product names, logos, and brands are property of their respective owners. All company, product and service names used in this website are for identification purposes only. Use of these names, trademarks and brands does not imply endorsement.",
   "header": {
     "creators": "Creators",
     "recordings": "Recordings",
@@ -22,7 +22,8 @@
     "afreecatv": "AfreecaTV creators",
     "pandalive": "Pandalive creators",
     "bigo": "Bigo creators",
-    "buzzcast": "Buzzcast creators"
+    "buzzcast": "Buzzcast creators",
+    "liveme": "LiveMe creators"
   },
   "watchRecordings": {
     "title": "Watch Recordings",
@@ -34,7 +35,8 @@
     "afreecatv": "AfreecaTV recordings",
     "pandalive": "Pandalive recordings",
     "bigo": "Bigo recordings",
-    "buzzcast": "Buzzcast recordings"
+    "buzzcast": "Buzzcast recordings",
+    "liveme": "LiveMe recordings"
   },
   "legal": {
     "title": "Legal",

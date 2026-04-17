@@ -20,6 +20,7 @@ export enum FollowerTypeEnum {
   Bigo = "bigo",
   Tango = "tango",
   Buzzcast = "buzzcast",
+  Liveme = "liveme",
 }
 
 /** Filter by follow status */
@@ -7343,6 +7344,7 @@ export enum ActivityTypeEnum {
   Bigo = "bigo",
   Tango = "tango",
   Buzzcast = "buzzcast",
+  Liveme = "liveme",
 }
 
 export enum ActivityGenderEnum {
@@ -7389,6 +7391,7 @@ export enum AiRequestTypeEnum {
   Bigo = "bigo",
   Tango = "tango",
   Buzzcast = "buzzcast",
+  Liveme = "liveme",
 }
 
 export enum AiRequestGenderEnum {
@@ -7463,6 +7466,7 @@ export enum AiTaskTypeEnum {
   Bigo = "bigo",
   Tango = "tango",
   Buzzcast = "buzzcast",
+  Liveme = "liveme",
 }
 
 export enum AiTaskGenderEnum {
@@ -7530,6 +7534,7 @@ export enum ClipTypeEnum {
   Bigo = "bigo",
   Tango = "tango",
   Buzzcast = "buzzcast",
+  Liveme = "liveme",
 }
 
 export enum ClipGenderEnum {
@@ -7582,6 +7587,7 @@ export enum ClipShareTypeEnum {
   Bigo = "bigo",
   Tango = "tango",
   Buzzcast = "buzzcast",
+  Liveme = "liveme",
 }
 
 export enum ClipShareGenderEnum {
@@ -7640,6 +7646,7 @@ export enum FollowerRequestTypeEnum {
   Bigo = "bigo",
   Tango = "tango",
   Buzzcast = "buzzcast",
+  Liveme = "liveme",
 }
 
 export enum FollowerRequestGenderEnum {
@@ -7701,6 +7708,7 @@ export enum MemeTypeEnum1 {
   Bigo = "bigo",
   Tango = "tango",
   Buzzcast = "buzzcast",
+  Liveme = "liveme",
 }
 
 export enum MemeGenderEnum {
@@ -7795,6 +7803,7 @@ export enum SocialAccountTypeEnum {
   Bigo = "bigo",
   Tango = "tango",
   Buzzcast = "buzzcast",
+  Liveme = "liveme",
 }
 
 export enum SocialAccountGenderEnum {
@@ -7848,6 +7857,7 @@ export enum SourceTypeEnum {
   Bigo = "bigo",
   Tango = "tango",
   Buzzcast = "buzzcast",
+  Liveme = "liveme",
 }
 
 export enum SourceGenderEnum {
@@ -7894,6 +7904,7 @@ export enum VisitorViewTypeEnum {
   Bigo = "bigo",
   Tango = "tango",
   Buzzcast = "buzzcast",
+  Liveme = "liveme",
 }
 
 export enum VisitorViewGenderEnum {

@@ -262,7 +262,8 @@
       "afreecatv": "AfreecaTV Kayıtları",
       "pandalive": "Pandalive Kayıtları",
       "bigo": "Bigo Kayıtları",
-      "buzzcast": "Buzzcast Kayıtları"
+      "buzzcast": "Buzzcast Kayıtları",
+      "liveme": "LiveMe Kayıtları"
     },
     "subtitle": {
       "all": "Platformumuzdaki içerik üreticilerinden canlı yayın kayıtlarını izleyin. İndirin ve yeni içerikler keşfedin.",
@@ -273,7 +274,8 @@
       "afreecatv": "Platformumuzdaki içerik üreticilerinden AfreecaTV kayıtlarını izleyin. İndirin ve yeni içerikler keşfedin.",
       "pandalive": "Platformumuzdaki içerik üreticilerinden Pandalive kayıtlarını izleyin. İndirin ve yeni içerikler keşfedin.",
       "bigo": "Platformumuzdaki içerik üreticilerinden Bigo kayıtlarını izleyin. İndirin ve yeni içerikler keşfedin.",
-      "buzzcast": "Platformumuzdaki içerik üreticilerinden Buzzcast kayıtlarını izleyin. İndirin ve yeni içerikler keşfedin."
+      "buzzcast": "Platformumuzdaki içerik üreticilerinden Buzzcast kayıtlarını izleyin. İndirin ve yeni içerikler keşfedin.",
+      "liveme": "Platformumuzdaki içerik üreticilerinden LiveMe kayıtlarını izleyin. İndirin ve yeni içerikler keşfedin."
     }
   },
   "cta": {
@@ -286,7 +288,8 @@
       "pandalive": "Pandalive Yayınlarını Kaydet",
       "afreecatv": "AfreecaTV Yayınlarını Kaydet",
       "bigo": "Bigo Yayınlarını Kaydet",
-      "buzzcast": "Buzzcast Yayınlarını Kaydet"
+      "buzzcast": "Buzzcast Yayınlarını Kaydet",
+      "liveme": "LiveMe Yayınlarını Kaydet"
     },
     "subtitle": {
       "all": "TikTok, Twitch, YouTube ve Kick yayınlarınızı otomatik olarak kaydedin. Kayıtları indirin, kısa klipler oluşturun ve kitlenizi büyütün.",
@@ -297,7 +300,8 @@
       "pandalive": "Pandalive yayınlarınızı otomatik olarak kaydedin. Kayıtları indirin ve ClipAI ile kısa klipler oluşturun.",
       "afreecatv": "AfreecaTV yayınlarınızı otomatik olarak kaydedin. Kayıtları indirin ve ClipAI ile kısa klipler oluşturun.",
       "bigo": "Bigo yayınlarınızı otomatik olarak kaydedin. Kayıtları indirin ve ClipAI ile kısa klipler oluşturun.",
-      "buzzcast": "Buzzcast yayınlarınızı otomatik olarak kaydedin. Kayıtları indirin ve ClipAI ile kısa klipler oluşturun."
+      "buzzcast": "Buzzcast yayınlarınızı otomatik olarak kaydedin. Kayıtları indirin ve ClipAI ile kısa klipler oluşturun.",
+      "liveme": "LiveMe yayınlarınızı otomatik olarak kaydedin. Kayıtları indirin ve ClipAI ile kısa klipler oluşturun."
     },
     "button": "Ücretsiz Kayda Başla"
   },
@@ -312,7 +316,8 @@
       "afreecatv": "AfreecaTV yayını kaydeden ilk içerik üreticisi olun!",
       "pandalive": "Pandalive yayını kaydeden ilk içerik üreticisi olun!",
       "bigo": "Bigo yayını kaydeden ilk içerik üreticisi olun!",
-      "buzzcast": "Buzzcast yayını kaydeden ilk içerik üreticisi olun!"
+      "buzzcast": "Buzzcast yayını kaydeden ilk içerik üreticisi olun!",
+      "liveme": "LiveMe yayını kaydeden ilk içerik üreticisi olun!"
     },
     "button": "Başlayın"
   },
@@ -325,7 +330,8 @@
     "pandalive": "## Pandalive Yayın Kayıtları\n\nLiveStreamRecorder'ı kullanarak kendi yayınlarını kaydeden Pandalive BJ'lerinin yayın kayıtlarını izle. Her Pandalive yayını otomatik olarak yakalanır ve istediğin zaman izlemek için saklanır.\n\n### Otomatik olarak kaydedilen Pandalive yayınları\n\nPandalive yayınları yayın bittiğinde kaybolur — garantili bir tekrar sistemi yoktur. Pandalive kayıt aracımız, yayınlarını bulutta otomatik olarak saklar; böylece yayının bittiğinde hiçbir şey kaybolmaz. Danslar, şarkılar, sohbetler — hepsi erişilebilir kalır.\n\n### Pandalive kayıtlarını izle ve indir\n\nHer Pandalive kaydı tarayıcıda anında izlenebilir. Premium üyeler, Pandalive kayıtlarını çevrimdışı izleme için video dosyası olarak indirebilir — kendi içeriğini yeniden kullanmak veya kişisel kopya tutmak için ideal.\n\n### Pandalive yayınlarını ekstra yazılım olmadan kaydet\n\nEkran kaydı uygulamalarını ve mobil yakalama araçlarını unut. LiveStreamRecorder, yayınlarını sunucu tarafında yakalayan çevrimiçi bir Pandalive kaydedicisidir. Masaüstü yazılımı yok, gece boyu çalışan telefon yok, tarayıcı eklentisi yok. Telefondan, tabletten veya PC'den yayın yap — Pandalive yayınların otomatik olarak yüksek kalitede kaydedilir.\n\n### Yayınlarını ClipAI ile kısa kliplere dönüştür\n\nPandalive yayın kayıtlarını kısa kliplere dönüştürmek ister misin? ClipAI, kayıtlı yayınlarını analiz eder ve TikTok, Instagram Reels veya YouTube Shorts'ta paylaşmaya hazır öne çıkan klipler oluşturur. En iyi Pandalive anlarını yeniden kullanarak topluluğunu dünya çapında büyüt.\n\n### BJ'ler için en iyi Pandalive kaydedici\n\nLiveStreamRecorder, Pandalive yayınlarını kaydetmek için tasarlandı. Ücretsiz kaydol, Pandalive kullanıcı adını ekle ve bir daha yayın kaybetme. Her yayın otomatik olarak kaydedilir — Pandalive içeriğin için kalıcı bir kütüphane.",
     "afreecatv": "## AfreecaTV Yayın Kayıtları\n\nLiveStreamRecorder'ı kullanarak kendi yayınlarını kaydeden AfreecaTV BJ'lerinin yayın kayıtlarını izle. Her AfreecaTV yayını otomatik olarak yakalanır ve istediğin zaman izlemek için saklanır.\n\n### Bağımsız olarak kaydedilen AfreecaTV yayınları\n\nAfreecaTV'nin kendi VOD sistemi var, ancak her tekrar kaydedilmiyor, içerikler kaldırılabiliyor ve depolama kuralları değişebiliyor. AfreecaTV kayıt aracımız, yayınlarını bulutta bağımsız bir yedek olarak otomatik kaydeder — AfreecaTV'de ne olursa olsun içeriğin bozulmadan kalır.\n\n### AfreecaTV kayıtlarını izle ve indir\n\nHer AfreecaTV kaydı tarayıcıda anında izlenebilir — reklam yok, kesinti yok. Premium üyeler, AfreecaTV kayıtlarını çevrimdışı izleme veya yeniden kullanım için video dosyası olarak indirebilir.\n\n### AfreecaTV yayınlarını ekran kaydı olmadan kaydet\n\nUzun AfreecaTV oturumları sırasında yakalama yazılımı çalıştırmayı unut. LiveStreamRecorder, bulut tabanlı bir AfreecaTV kaydedicisidir ve yayınlarını sunucu tarafında yakalar. Masaüstü uygulaması yok, arka plan kaydı yok, ekstra CPU yükü yok. PC veya mobilden yayın yap — AfreecaTV yayınların otomatik olarak yüksek kalitede kaydedilir.\n\n### Uzun yayınları ClipAI ile kısa kliplere dönüştür\n\nAfreecaTV yayınları saatlerce sürebilir. ClipAI, kayıtlarını analiz eder ve en iyi anları çıkarır — kritik hamleler, tepkiler, komik anlar, öne çıkanlar. Bunları TikTok klipleri, YouTube Shorts veya Reels olarak paylaşarak AfreecaTV'nin ötesinde kitlelere ulaş.\n\n### BJ'ler için en iyi AfreecaTV kaydedici\n\nLiveStreamRecorder, AfreecaTV yayınlarını bağımsız olarak kaydetmek için tasarlandı. Ücretsiz kaydol, AfreecaTV kullanıcı adını ekle ve bir daha yayın kaybetme. Her yayın otomatik olarak kaydedilir — AfreecaTV'nin VOD sistemine bağlı kalmayan kalıcı bir yedek.",
     "bigo": "## Bigo Live Yayın Kayıtları\n\nLiveStreamRecorder'ı kullanarak kendi yayınlarını kaydeden Bigo Live içerik üreticilerinin yayın kayıtlarını izle. Her Bigo yayını otomatik olarak yakalanır ve istediğin zaman izlemek için saklanır.\n\n### Kaybolmadan önce kaydedilen Bigo yayınları\n\nBigo yayınları yalnızca canlı oldukları sürece var olur — oturumu kapattığın anda içerik uygulamadan tamamen kaybolur. Bigo kayıt aracımız, yayınlarını bulutta otomatik olarak saklar; böylece yayının bittiğinde içeriğin kaybolmaz. Danslar, şarkılar, sohbetler, hediye anları — hepsi erişilebilir kalır.\n\n### Bigo kayıtlarını izle ve indir\n\nHer Bigo yayın kaydı tarayıcıda anında izlenebilir. Premium üyeler, Bigo kayıtlarını çevrimdışı izleme için video dosyası olarak indirebilir — kendi içeriğini yeniden kullanmak veya kişisel kopya tutmak için ideal.\n\n### Bigo yayınlarını ekran kaydı olmadan kaydet\n\nTelefon ekranını kaydetmeyi veya başka bir cihazı gece boyu kayıt için açık bırakmayı unut. LiveStreamRecorder, yayınlarını sunucu tarafında yakalayan çevrimiçi bir Bigo kaydedicisidir. Pil tükenmesi yok, manuel kurulum yok, ekstra yazılım yok. iPhone, Android veya PC'den yayın yap — Bigo yayınların otomatik olarak yüksek kalitede kaydedilir.\n\n### Yayınlarını ClipAI ile kısa kliplere dönüştür\n\nBigo yayın kayıtlarını kısa kliplere dönüştürmek ister misin? ClipAI, kayıtlı yayınlarını analiz eder ve TikTok, Instagram Reels veya YouTube Shorts'ta paylaşmaya hazır öne çıkan klipler oluşturur. En iyi Bigo anlarını yeniden kullanarak küresel kitleni büyüt.\n\n### İçerik üreticileri için en iyi Bigo kaydedici\n\nLiveStreamRecorder, Bigo yayınlarını kaydetmek için tasarlandı. Ücretsiz kaydol, Bigo kullanıcı adını ekle ve bir daha yayın kaybetme. Her yayın otomatik olarak kaydedilir — Bigo içeriğin için uygulamanın senin adına saklamasına bağlı kalmayan kalıcı bir yer.",
-    "buzzcast": "## Buzzcast Yayın Kayıtları\n\nLiveStreamRecorder'ı kullanarak kendi yayınlarını kaydeden Buzzcast içerik üreticilerinin yayın kayıtlarını izle. Her Buzzcast yayını otomatik olarak yakalanır ve istediğin zaman izlemek için saklanır.\n\n### Kaybolmadan önce kaydedilen Buzzcast yayınları\n\nBuzzcast yayınları sadece canlıdır — yayını sonlandırdığın anda içerik uygulamadan kaybolur. Buzzcast kayıt aracımız, yayınlarını bulutta otomatik olarak saklar; böylece yayının bittiğinde hiçbir şey kaybolmaz. Sohbetler, müzik anları, günlük içerik — hepsi hayranların için erişilebilir kalır.\n\n### Buzzcast kayıtlarını izle ve indir\n\nHer Buzzcast yayın kaydı tarayıcıda anında izlenebilir. Premium üyeler, Buzzcast kayıtlarını çevrimdışı izleme için video dosyası olarak indirebilir — kendi içeriğini yeniden kullanmak veya kişisel kopya tutmak için ideal.\n\n### Buzzcast yayınlarını ekstra uygulama olmadan kaydet\n\nTelefon ekranını kaydetmeyi veya arka planda yakalama yazılımı çalıştırmayı unut. LiveStreamRecorder, yayınlarını sunucu tarafında yakalayan çevrimiçi bir Buzzcast kaydedicisidir. Pil tükenmesi yok, manuel kurulum yok, ekstra yazılım yok. Buzzcast yayınların herhangi bir cihazdan otomatik olarak yüksek kalitede kaydedilir.\n\n### Yayınlarını ClipAI ile kısa kliplere dönüştür\n\nBuzzcast yayın kayıtlarını kısa kliplere dönüştürmek ister misin? ClipAI, kayıtlı yayınlarını analiz eder ve TikTok, Instagram Reels veya YouTube Shorts'ta paylaşmaya hazır öne çıkan klipler oluşturur. En iyi anlarını yeniden kullanarak topluluğunu Buzzcast'in ötesinde büyüt.\n\n### İçerik üreticileri için en iyi Buzzcast kaydedici\n\nLiveStreamRecorder, Buzzcast yayınlarını kaydetmek için tasarlandı. Ücretsiz kaydol, Buzzcast kullanıcı adını ekle ve bir daha yayın kaybetme. Her yayın otomatik olarak kaydedilir — Buzzcast içeriğin için kalıcı bir kütüphane."
+    "buzzcast": "## Buzzcast Yayın Kayıtları\n\nLiveStreamRecorder'ı kullanarak kendi yayınlarını kaydeden Buzzcast içerik üreticilerinin yayın kayıtlarını izle. Her Buzzcast yayını otomatik olarak yakalanır ve istediğin zaman izlemek için saklanır.\n\n### Kaybolmadan önce kaydedilen Buzzcast yayınları\n\nBuzzcast yayınları sadece canlıdır — yayını sonlandırdığın anda içerik uygulamadan kaybolur. Buzzcast kayıt aracımız, yayınlarını bulutta otomatik olarak saklar; böylece yayının bittiğinde hiçbir şey kaybolmaz. Sohbetler, müzik anları, günlük içerik — hepsi hayranların için erişilebilir kalır.\n\n### Buzzcast kayıtlarını izle ve indir\n\nHer Buzzcast yayın kaydı tarayıcıda anında izlenebilir. Premium üyeler, Buzzcast kayıtlarını çevrimdışı izleme için video dosyası olarak indirebilir — kendi içeriğini yeniden kullanmak veya kişisel kopya tutmak için ideal.\n\n### Buzzcast yayınlarını ekstra uygulama olmadan kaydet\n\nTelefon ekranını kaydetmeyi veya arka planda yakalama yazılımı çalıştırmayı unut. LiveStreamRecorder, yayınlarını sunucu tarafında yakalayan çevrimiçi bir Buzzcast kaydedicisidir. Pil tükenmesi yok, manuel kurulum yok, ekstra yazılım yok. Buzzcast yayınların herhangi bir cihazdan otomatik olarak yüksek kalitede kaydedilir.\n\n### Yayınlarını ClipAI ile kısa kliplere dönüştür\n\nBuzzcast yayın kayıtlarını kısa kliplere dönüştürmek ister misin? ClipAI, kayıtlı yayınlarını analiz eder ve TikTok, Instagram Reels veya YouTube Shorts'ta paylaşmaya hazır öne çıkan klipler oluşturur. En iyi anlarını yeniden kullanarak topluluğunu Buzzcast'in ötesinde büyüt.\n\n### İçerik üreticileri için en iyi Buzzcast kaydedici\n\nLiveStreamRecorder, Buzzcast yayınlarını kaydetmek için tasarlandı. Ücretsiz kaydol, Buzzcast kullanıcı adını ekle ve bir daha yayın kaybetme. Her yayın otomatik olarak kaydedilir — Buzzcast içeriğin için kalıcı bir kütüphane.",
+    "liveme": "## LiveMe Yayın Kayıtları\n\nLiveStreamRecorder'ı kullanarak kendi yayınlarını kaydeden LiveMe içerik üreticilerinin yayın kayıtlarını izle. Her LiveMe yayını otomatik olarak yakalanır ve istediğin zaman izlemek için saklanır.\n\n### Kaybolmadan önce kaydedilen LiveMe yayınları\n\nLiveMe yayınları sadece canlıdır — yayını sonlandırdığın anda içerik uygulamadan kaybolur. LiveMe kayıt aracımız, yayınlarını bulutta otomatik olarak saklar; böylece yayının bittiğinde hiçbir şey kaybolmaz. Sohbetler, müzik anları, günlük içerik — hepsi hayranların için erişilebilir kalır.\n\n### LiveMe kayıtlarını izle ve indir\n\nHer LiveMe yayın kaydı tarayıcıda anında izlenebilir. Premium üyeler, LiveMe kayıtlarını çevrimdışı izleme için video dosyası olarak indirebilir — kendi içeriğini yeniden kullanmak veya kişisel kopya tutmak için ideal.\n\n### LiveMe yayınlarını ekstra uygulama olmadan kaydet\n\nTelefon ekranını kaydetmeyi veya arka planda yakalama yazılımı çalıştırmayı unut. LiveStreamRecorder, yayınlarını sunucu tarafında yakalayan çevrimiçi bir LiveMe kaydedicisidir. Pil tükenmesi yok, manuel kurulum yok, ekstra yazılım yok. LiveMe yayınların herhangi bir cihazdan otomatik olarak yüksek kalitede kaydedilir.\n\n### Yayınlarını ClipAI ile kısa kliplere dönüştür\n\nLiveMe yayın kayıtlarını kısa kliplere dönüştürmek ister misin? ClipAI, kayıtlı yayınlarını analiz eder ve TikTok, Instagram Reels veya YouTube Shorts'ta paylaşmaya hazır öne çıkan klipler oluşturur. En iyi anlarını yeniden kullanarak topluluğunu LiveMe'in ötesinde büyüt.\n\n### İçerik üreticileri için en iyi LiveMe kaydedici\n\nLiveStreamRecorder, LiveMe yayınlarını kaydetmek için tasarlandı. Ücretsiz kaydol, LiveMe kullanıcı adını ekle ve bir daha yayın kaybetme. Her yayın otomatik olarak kaydedilir — LiveMe içeriğin için kalıcı bir kütüphane."
   },
   "jsonLd": {
     "name": {
@@ -337,7 +343,8 @@
       "afreecatv": "AfreecaTV Yayın Kayıtları",
       "pandalive": "Pandalive Yayın Kayıtları",
       "bigo": "Bigo Yayın Kayıtları",
-      "buzzcast": "Buzzcast Yayın Kayıtları"
+      "buzzcast": "Buzzcast Yayın Kayıtları",
+      "liveme": "LiveMe Yayın Kayıtları"
     },
     "description": {
       "all": "LiveStreamRecorder'daki içerik üreticilerinden canlı yayın kayıtlarını izleyin.",
@@ -348,7 +355,8 @@
       "afreecatv": "LiveStreamRecorder'daki içerik üreticilerinden AfreecaTV kayıtlarını izleyin.",
       "pandalive": "LiveStreamRecorder'daki içerik üreticilerinden Pandalive kayıtlarını izleyin.",
       "bigo": "LiveStreamRecorder'daki içerik üreticilerinden Bigo kayıtlarını izleyin.",
-      "buzzcast": "LiveStreamRecorder'daki içerik üreticilerinden Buzzcast kayıtlarını izleyin."
+      "buzzcast": "LiveStreamRecorder'daki içerik üreticilerinden Buzzcast kayıtlarını izleyin.",
+      "liveme": "LiveStreamRecorder'daki içerik üreticilerinden LiveMe kayıtlarını izleyin."
     },
     "streamTitle": "{nickname} Yayını - {date}",
     "streamDescription": {
@@ -360,7 +368,8 @@
       "pandalive": "{nickname}'in Pandalive kaydı",
       "bigo": "{nickname}'in Bigo kaydı",
       "unknown": "{nickname}'in canlı yayın kaydı",
-      "buzzcast": "{nickname}'in Buzzcast kaydı"
+      "buzzcast": "{nickname}'in Buzzcast kaydı",
+      "liveme": "{nickname}'in LiveMe kaydı"
     }
   },
   "recordedOn": "{date} tarihinde kaydedildi",

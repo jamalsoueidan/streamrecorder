@@ -20,7 +20,9 @@
     "*://*.afreecatv.com/*",
     "*://*.sooplive.co.kr/*",
     "*://*.pandalive.co.kr/*",
-    "*://*.bigo.tv/*"
+    "*://*.bigo.tv/*",
+    "*://*.buzzcast.com/*",
+    "*://*.liveme.com/*"
   ],
   "background": {
     "service_worker": "background.js"

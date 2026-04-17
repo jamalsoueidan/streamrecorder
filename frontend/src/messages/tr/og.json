@@ -12,7 +12,8 @@
       "pandalive": "PandaLive İçerik Üreticileri",
       "afreecatv": "AfreecaTV İçerik Üreticileri",
       "bigo": "Bigo İçerik Üreticileri",
-      "buzzcast": "Buzzcast İçerik Üreticileri"
+      "buzzcast": "Buzzcast İçerik Üreticileri",
+      "liveme": "LiveMe İçerik Üreticileri"
     },
     "subtitle": {
       "all": "Tüm yayıncılara ve içerik üreticilerine göz atın",
@@ -23,7 +24,8 @@
       "pandalive": "PandaLive içerik üreticilerini keşfedin",
       "afreecatv": "AfreecaTV içerik üreticilerini keşfedin",
       "bigo": "Bigo içerik üreticilerini keşfedin",
-      "buzzcast": "Buzzcast içerik üreticilerini keşfedin"
+      "buzzcast": "Buzzcast içerik üreticilerini keşfedin",
+      "liveme": "LiveMe içerik üreticilerini keşfedin"
     }
   },
   "recordings": {
@@ -36,7 +38,8 @@
       "pandalive": "PandaLive Kayıtları",
       "afreecatv": "AfreecaTV Kayıtları",
       "bigo": "Bigo Kayıtları",
-      "buzzcast": "Buzzcast Kayıtları"
+      "buzzcast": "Buzzcast Kayıtları",
+      "liveme": "LiveMe Kayıtları"
     },
     "subtitle": {
       "all": "Kaydedilmiş canlı yayınları izleyin",
@@ -47,7 +50,8 @@
       "pandalive": "Kaydedilmiş PandaLive yayınlarını izleyin",
       "afreecatv": "Kaydedilmiş AfreecaTV yayınlarını izleyin",
       "bigo": "Kaydedilmiş Bigo yayınlarını izleyin",
-      "buzzcast": "Kaydedilmiş Buzzcast yayınlarını izleyin"
+      "buzzcast": "Kaydedilmiş Buzzcast yayınlarını izleyin",
+      "liveme": "Kaydedilmiş LiveMe yayınlarını izleyin"
     }
   },
   "home": {

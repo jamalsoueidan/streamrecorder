@@ -23,6 +23,8 @@ export const SOCIAL_URL_PATTERNS: Partial<
   [FollowerTypeEnum.Bigo]: (username) => `https://www.bigo.tv/${username}`,
   [FollowerTypeEnum.Buzzcast]: (username) =>
     `https://www.buzzcast.com/web/personalInfo/${username}`,
+  [FollowerTypeEnum.Liveme]: (username) =>
+    `https://www.liveme.com/u/${username}`,
 };
 
 export const URL_PATTERNS: Partial<Record<FollowerTypeEnum, UrlPattern>> = {
@@ -36,6 +38,7 @@ export const URL_PATTERNS: Partial<Record<FollowerTypeEnum, UrlPattern>> = {
   [FollowerTypeEnum.Pandalive]: (username) => `/pandalive/${username}`,
   [FollowerTypeEnum.Bigo]: (username) => `/bigo/${username}`,
   [FollowerTypeEnum.Buzzcast]: (username) => `/buzzcast/${username}`,
+  [FollowerTypeEnum.Liveme]: (username) => `/liveme/${username}`,
 };
 
 export const getSocialUrl = (
