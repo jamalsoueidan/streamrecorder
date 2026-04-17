@@ -225,6 +225,16 @@
         "gravação buzzcast",
         "gravador de stream buzzcast"
       ]
+    },
+    "liveme": {
+      "title": "Criadores do LiveMe",
+      "description": "Descubra criadores do LiveMe que usam o LiveStreamRecorder para gravar suas lives e transformá-las em clipes curtos.",
+      "keywords": [
+        "criadores liveme",
+        "live stream liveme",
+        "gravação liveme",
+        "gravador de stream liveme"
+      ]
     }
   },
   "hero": {

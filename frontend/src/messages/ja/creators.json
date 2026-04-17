@@ -225,6 +225,16 @@
         "buzzcast録画",
         "buzzcast配信レコーダー"
       ]
+    },
+    "liveme": {
+      "title": "ライブミー クリエイター",
+      "description": "LiveStreamRecorder を使ってライブ配信を録画し、ショートクリップに変換する ライブミー クリエイターを発見しましょう。",
+      "keywords": [
+        "livemeクリエイター",
+        "livemeライブ配信",
+        "liveme録画",
+        "liveme配信レコーダー"
+      ]
     }
   },
   "hero": {

@@ -250,6 +250,46 @@
           "answer": "Evet. Premium kullanıcılar, Buzzcast Live kayıtlarını TikTok, YouTube Shorts veya Reels için hazır kısa öne çıkan kliplere otomatik olarak dönüştürmek için ClipAI'ı kullanabilir. Canlı içeriğinizi yeniden kullanmanın ve platformlar arasında takipçi kitlenizi büyütmenin harika bir yoludur."
         }
       ]
+    },
+    "liveme": {
+      "title": "LiveMe Canlı Kayıtları",
+      "description": "LiveStreamRecorder'da LiveMe Live kayıtlarını izleyin ve indirin. LiveMe canlı yayınlarınız bulutta otomatik olarak yakalanır — siyah ekran sorunu yok, ekran kaydedici gerekmez. İçerik üreticileri için en kolay LiveMe Live kaydedici.",
+      "keywords": [
+        "liveme kaydedici",
+        "liveme live kaydedici",
+        "liveme live kayıt",
+        "liveme ekran kaydedici"
+      ],
+      "faqs": [
+        {
+          "question": "Buzzcast canlı yayınlarımı nasıl kaydederim?",
+          "answer": "LiveStreamRecorder ile Buzzcast canlı yayınlarınız bulutta otomatik olarak kaydedilir. Kaydolun, Buzzcast Live kullanıcı adınızı ekleyin ve canlı yayına her geçtiğinizde yakalanır. Kurulacak Buzzcast Live kaydedici APK'sı yok, ekran kaydı yok — her şey sunucu tarafında gerçekleşir."
+        },
+        {
+          "question": "Buzzcast Live kaydederken neden siyah ekran alıyorum?",
+          "answer": "Siyah ekran sorunları Buzzcast Live'da ekran kaydediciler kullanırken yaygındır. LiveStreamRecorder, Buzzcast canlı yayınlarınızı doğrudan buluttan yakaladığı için bundan tamamen kaçınır — siyah ekran yok, geçici çözümler yok, güvenilmez ekran kayıt uygulamaları yok."
+        },
+        {
+          "question": "Buzzcast Live ekran kaydedici siyah ekranını nasıl düzeltirim?",
+          "answer": "En kolay çözüm ekran kaydını tamamen atlamaktır. LiveStreamRecorder, canlı yayınlarınızı sunucu tarafında yüksek kalitede yakalayan bulut tabanlı bir Buzzcast kaydedicidir. Siyah ekran sorunları yok, yapılandırılacak uygulama yok — sadece kullanıcı adınızı ekleyin ve Buzzcast canlı yayınlarınız otomatik olarak kaydedilir."
+        },
+        {
+          "question": "Buzzcast Live için ekran kaydediciye ihtiyacım var mı?",
+          "answer": "Hayır. Buzzcast Live için ekran kaydediciler genellikle siyah ekran sorunlarına veya düşük kaliteli yakalamalara neden olur. LiveStreamRecorder, yayınlarınızı otomatik olarak yüksek kalitede yakalayan bulut tabanlı bir Buzzcast Live kaydedicidir — kurulacak uygulama yok, siyah ekran yok."
+        },
+        {
+          "question": "Buzzcast canlı yayınlarımı ücretsiz kaydedebilir miyim?",
+          "answer": "Evet. LiveStreamRecorder'a ücretsiz kaydolun ve Buzzcast canlı yayınlarınızı hemen kaydetmeye başlayın. Premium planlar kayıtlarınızı indirme, otomatik öne çıkan klipler için ClipAI ve genişletilmiş depolama alanı sunar."
+        },
+        {
+          "question": "Buzzcast Live kayıtlarımı indirebilir miyim?",
+          "answer": "Evet. Premium kullanıcılar Buzzcast Live kayıtlarını çevrimdışı izlemek için video dosyaları olarak indirebilir. Her kayıt ayrıca indirmeden tarayıcınızda anında izlenebilir."
+        },
+        {
+          "question": "Buzzcast Live kayıtlarımı kısa kliplere dönüştürebilir miyim?",
+          "answer": "Evet. Premium kullanıcılar, Buzzcast Live kayıtlarını TikTok, YouTube Shorts veya Reels için hazır kısa öne çıkan kliplere otomatik olarak dönüştürmek için ClipAI'ı kullanabilir. Canlı içeriğinizi yeniden kullanmanın ve platformlar arasında takipçi kitlenizi büyütmenin harika bir yoludur."
+        }
+      ]
     }
   },
   "hero": {

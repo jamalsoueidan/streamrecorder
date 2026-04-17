@@ -225,6 +225,16 @@
         "rekaman buzzcast",
         "perekam stream buzzcast"
       ]
+    },
+    "liveme": {
+      "title": "Kreator LiveMe",
+      "description": "Temukan kreator LiveMe yang menggunakan LiveStreamRecorder untuk merekam live stream mereka dan mengubahnya menjadi klip pendek.",
+      "keywords": [
+        "kreator liveme",
+        "live stream liveme",
+        "rekaman liveme",
+        "perekam stream liveme"
+      ]
     }
   },
   "hero": {

@@ -189,6 +189,16 @@
         "buzzcast kaydı",
         "buzzcast yayın kaydedici"
       ]
+    },
+    "liveme": {
+      "title": "LiveMe İçerik Üreticileri",
+      "description": "Canlı yayınlarını kaydetmek ve kısa kliplere dönüştürmek için LiveStreamRecorder kullanan LiveMe içerik üreticilerini keşfedin.",
+      "keywords": [
+        "liveme içerik üreticileri",
+        "liveme canlı yayın",
+        "liveme kaydı",
+        "liveme yayın kaydedici"
+      ]
     }
   },
   "hero": {

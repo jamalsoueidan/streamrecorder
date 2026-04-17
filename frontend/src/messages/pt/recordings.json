@@ -306,6 +306,55 @@
           "answer": "Sim. Usuários premium podem usar o ClipAI para transformar automaticamente suas gravações do Buzzcast Live em clipes curtos de destaque prontos para TikTok, YouTube Shorts ou Reels. É uma ótima forma de reutilizar seu conteúdo ao vivo e crescer seus seguidores em outras plataformas."
         }
       ]
+    },
+    "liveme": {
+      "title": "Gravações do LiveMe Live",
+      "description": "Assista e baixe gravações do LiveMe Live no LiveStreamRecorder. Suas lives do LiveMe são capturadas automaticamente na nuvem — sem tela preta, sem gravador de tela. O gravador do LiveMe Live mais fácil para criadores.",
+      "keywords": [
+        "gravador liveme",
+        "gravador liveme live",
+        "gravar liveme live",
+        "gravador de tela liveme live",
+        "gravar tela liveme live",
+        "gravador de tela para liveme live",
+        "gravar tela liveme",
+        "tela preta gravação liveme",
+        "gravador liveme live tela preta",
+        "gravar liveme tela preta",
+        "gravador de tela liveme tela preta",
+        "gravar liveme tela preta",
+        "salvar liveme live"
+      ],
+      "faqs": [
+        {
+          "question": "Como gravo minhas lives do Buzzcast?",
+          "answer": "Com o LiveStreamRecorder, suas lives do Buzzcast são gravadas automaticamente na nuvem. Cadastre-se, adicione seu nome de usuário do Buzzcast Live e cada vez que você entra ao vivo é capturado. Sem APK de gravador do Buzzcast Live para instalar, sem gravar a tela — tudo acontece no servidor."
+        },
+        {
+          "question": "Por que aparece tela preta ao gravar o Buzzcast Live?",
+          "answer": "Problemas de tela preta são comuns ao usar gravadores de tela no Buzzcast Live. O LiveStreamRecorder evita isso completamente porque captura suas lives do Buzzcast diretamente na nuvem — sem tela preta, sem gambiarras, sem aplicativos de gravação de tela não confiáveis."
+        },
+        {
+          "question": "Como resolvo o problema de tela preta do gravador de tela do Buzzcast Live?",
+          "answer": "A solução mais fácil é abandonar a gravação de tela de vez. O LiveStreamRecorder é um gravador do Buzzcast na nuvem que captura suas lives no servidor em alta qualidade. Sem problemas de tela preta, sem aplicativos para configurar — basta adicionar seu nome de usuário e suas lives do Buzzcast são gravadas automaticamente."
+        },
+        {
+          "question": "Preciso de um gravador de tela para o Buzzcast Live?",
+          "answer": "Não. Gravadores de tela para Buzzcast Live frequentemente resultam em tela preta ou capturas de baixa qualidade. O LiveStreamRecorder é um gravador do Buzzcast Live na nuvem que captura suas streams automaticamente em alta qualidade — sem aplicativo para instalar, sem tela preta."
+        },
+        {
+          "question": "Posso gravar minhas lives do Buzzcast gratuitamente?",
+          "answer": "Sim. Cadastre-se no LiveStreamRecorder gratuitamente e comece a gravar suas lives do Buzzcast agora mesmo. Os planos premium desbloqueiam download das suas gravações, ClipAI para clipes de destaques automáticos e armazenamento estendido."
+        },
+        {
+          "question": "Posso baixar minhas gravações do Buzzcast Live?",
+          "answer": "Sim. Usuários premium podem baixar suas gravações do Buzzcast Live como arquivos de vídeo para visualização offline. Cada gravação também pode ser assistida instantaneamente no navegador sem precisar baixar."
+        },
+        {
+          "question": "Posso transformar minhas gravações do Buzzcast Live em clipes curtos?",
+          "answer": "Sim. Usuários premium podem usar o ClipAI para transformar automaticamente suas gravações do Buzzcast Live em clipes curtos de destaque prontos para TikTok, YouTube Shorts ou Reels. É uma ótima forma de reutilizar seu conteúdo ao vivo e crescer seus seguidores em outras plataformas."
+        }
+      ]
     }
   },
   "hero": {

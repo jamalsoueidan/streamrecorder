@@ -306,6 +306,55 @@
           "answer": "Sí. Los usuarios premium pueden usar ClipAI para convertir automáticamente sus grabaciones de Buzzcast Live en clips destacados cortos listos para TikTok, YouTube Shorts o Reels. Es una excelente forma de reutilizar tu contenido en vivo y hacer crecer tu audiencia en todas las plataformas."
         }
       ]
+    },
+    "liveme": {
+      "title": "Grabaciones de LiveMe Live",
+      "description": "Mira y descarga grabaciones de LiveMe Live en LiveStreamRecorder. Tus LiveMe Lives se capturan automáticamente en la nube — sin problemas de pantalla negra, sin grabador de pantalla necesario. El grabador de LiveMe Live más fácil para creadores.",
+      "keywords": [
+        "grabador de liveme",
+        "grabador de liveme live",
+        "grabar liveme live",
+        "grabador de pantalla liveme live",
+        "grabar pantalla liveme live",
+        "grabador de pantalla para liveme live",
+        "grabar pantalla de liveme",
+        "grabación liveme pantalla negra",
+        "grabador de pantalla liveme live pantalla negra",
+        "grabar liveme pantalla negra",
+        "grabador de pantalla liveme pantalla negra",
+        "grabar liveme pantalla negra",
+        "guardar liveme live"
+      ],
+      "faqs": [
+        {
+          "question": "¿Cómo grabo mis Buzzcast Lives?",
+          "answer": "Con LiveStreamRecorder, tus Buzzcast Lives se graban automáticamente en la nube. Regístrate, agrega tu nombre de usuario de Buzzcast Live y cada vez que estés en vivo se captura. Sin APK de grabador de Buzzcast Live que instalar, sin grabar pantalla — todo ocurre en el servidor."
+        },
+        {
+          "question": "¿Por qué me aparece pantalla negra al grabar Buzzcast Live?",
+          "answer": "Los problemas de pantalla negra son comunes al usar grabadores de pantalla en Buzzcast Live. LiveStreamRecorder evita esto por completo porque captura tus Buzzcast Lives directamente desde la nube — sin pantalla negra, sin soluciones alternativas, sin apps de grabación poco confiables."
+        },
+        {
+          "question": "¿Cómo soluciono la pantalla negra del grabador de pantalla de Buzzcast Live?",
+          "answer": "La solución más fácil es dejar de grabar la pantalla del todo. LiveStreamRecorder es un grabador de Buzzcast en la nube que captura tus Lives desde el servidor en alta calidad. Sin problemas de pantalla negra, sin apps que configurar — solo agrega tu nombre de usuario y tus Buzzcast Lives se graban automáticamente."
+        },
+        {
+          "question": "¿Necesito un grabador de pantalla para Buzzcast Live?",
+          "answer": "No. Los grabadores de pantalla para Buzzcast Live suelen resultar en pantalla negra o capturas de baja calidad. LiveStreamRecorder es un grabador de Buzzcast Live en la nube que captura tus streams automáticamente en alta calidad — sin app que instalar, sin pantalla negra."
+        },
+        {
+          "question": "¿Puedo grabar mis Buzzcast Lives gratis?",
+          "answer": "Sí. Regístrate gratis en LiveStreamRecorder y empieza a grabar tus Buzzcast Lives de inmediato. Los planes premium desbloquean la descarga de grabaciones, ClipAI para clips destacados automáticos y almacenamiento extendido."
+        },
+        {
+          "question": "¿Puedo descargar mis grabaciones de Buzzcast Live?",
+          "answer": "Sí. Los usuarios premium pueden descargar sus grabaciones de Buzzcast Live como archivos de video para verlos sin conexión. Cada grabación también se puede ver al instante en tu navegador sin necesidad de descargar."
+        },
+        {
+          "question": "¿Puedo convertir mis grabaciones de Buzzcast Live en clips cortos?",
+          "answer": "Sí. Los usuarios premium pueden usar ClipAI para convertir automáticamente sus grabaciones de Buzzcast Live en clips destacados cortos listos para TikTok, YouTube Shorts o Reels. Es una excelente forma de reutilizar tu contenido en vivo y hacer crecer tu audiencia en todas las plataformas."
+        }
+      ]
     }
   },
   "hero": {
