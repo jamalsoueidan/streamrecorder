@@ -13,7 +13,7 @@
       "afreecatv": "AfreecaTV クリエイター",
       "bigo": "Bigo クリエイター",
       "buzzcast": "Buzzcast クリエイター",
-      "liveme": "LiveMe クリエイター"
+      "liveme": "ライブミー クリエイター"
     },
     "subtitle": {
       "all": "すべてのストリーマー・クリエイターを探す",
@@ -25,7 +25,7 @@
       "afreecatv": "AfreecaTV クリエイターを見つける",
       "bigo": "Bigo クリエイターを見つける",
       "buzzcast": "Buzzcast クリエイターを見つける",
-      "liveme": "LiveMe クリエイターを見つける"
+      "liveme": "ライブミー クリエイターを見つける"
     }
   },
   "recordings": {
@@ -39,7 +39,7 @@
       "afreecatv": "AfreecaTV 録画",
       "bigo": "Bigo 録画",
       "buzzcast": "Buzzcast 録画",
-      "liveme": "LiveMe 録画"
+      "liveme": "ライブミー 録画"
     },
     "subtitle": {
       "all": "録画済みライブ配信を視聴",

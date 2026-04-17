@@ -8,7 +8,8 @@ export function generateAvatarUrl(url?: string | null, fullUrl: boolean = false)
   if (MEDIA_PROXY) {
     const filename = url.split("/").pop();
     const hasThumb = filename?.endsWith(".png") || filename?.endsWith(".jpg") || filename?.endsWith(".jpeg");
-    return `https://image.livestreamrecorder.net/${hasThumb ? "thumbnail_" : ""}${filename}`;
+    const imageHost = MEDIA_PROXY.replace("media.", "image.");
+    return `https://${imageHost}/${hasThumb ? "thumbnail_" : ""}${filename}`;
   }
   const filename = url.split("/").pop();
   return (

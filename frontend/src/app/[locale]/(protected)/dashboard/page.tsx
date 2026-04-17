@@ -31,7 +31,7 @@ const platformMap: Record<string, FollowerTypeEnum> = {
   Pandalive: FollowerTypeEnum.Pandalive,
   Bigo: FollowerTypeEnum.Bigo,
   Buzzcast: FollowerTypeEnum.Buzzcast,
-  Liveme: FollowerTypeEnum.Liveme,
+  LiveMe: FollowerTypeEnum.Liveme,
 };
 
 export default async function Page() {

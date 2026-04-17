@@ -50,7 +50,7 @@ export const streamingPlatforms = [
   {
     color: "yellow.5",
     colorCss: "var(--mantine-color-yellow-5)",
-    name: "Liveme",
+    name: "LiveMe",
     file: "/simple/liveme.svg",
   },
 ];

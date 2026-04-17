@@ -238,7 +238,7 @@
       "afreecatv": "AfreecaTV クリエイター",
       "bigo": "Bigo クリエイター",
       "buzzcast": "Buzzcast クリエイター",
-      "liveme": "LiveMe クリエイター"
+      "liveme": "ライブミー クリエイター"
     },
     "subtitle": {
       "all": "LiveStreamRecorder を使って配信を保存しショートクリップを作成している数千人のクリエイターに参加しましょう。",
@@ -250,7 +250,7 @@
       "afreecatv": "LiveStreamRecorder を使って配信を保存しショートクリップを作成している数千人の AfreecaTV クリエイターに参加しましょう。",
       "bigo": "LiveStreamRecorder を使って配信を保存しショートクリップを作成している数千人の Bigo クリエイターに参加しましょう。",
       "buzzcast": "LiveStreamRecorder を使って配信を保存しショートクリップを作成している数千人の Buzzcast クリエイターに参加しましょう。",
-      "liveme": "LiveStreamRecorder を使って配信を保存しショートクリップを作成している数千人の LiveMe クリエイターに参加しましょう。"
+      "liveme": "LiveStreamRecorder を使って配信を保存しショートクリップを作成している数千人の ライブミー クリエイターに参加しましょう。"
     }
   },
   "features": {
@@ -310,7 +310,7 @@
       "pandalive": "数千人の Pandalive クリエイターに参加して、配信を保存し ClipAI でショートクリップを作りましょう。",
       "bigo": "数千人の Bigo クリエイターに参加して、配信を保存し ClipAI でショートクリップを作りましょう。",
       "buzzcast": "数千人の Buzzcast クリエイターに参加して、配信を保存し ClipAI でショートクリップを作りましょう。",
-      "liveme": "数千人の LiveMe クリエイターに参加して、配信を保存し ClipAI でショートクリップを作りましょう。"
+      "liveme": "数千人の ライブミー クリエイターに参加して、配信を保存し ClipAI でショートクリップを作りましょう。"
     },
     "button": "無料で録画を始める"
   },
@@ -326,7 +326,7 @@
       "afreecatv": "最初の AfreecaTV クリエイターになりましょう！",
       "bigo": "最初の Bigo クリエイターになりましょう！",
       "buzzcast": "最初の Buzzcast クリエイターになりましょう！",
-      "liveme": "最初の LiveMe クリエイターになりましょう！"
+      "liveme": "最初の ライブミー クリエイターになりましょう！"
     },
     "button": "始める"
   },

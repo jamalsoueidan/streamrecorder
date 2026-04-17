@@ -319,7 +319,7 @@
       "pandalive": "Pandalive 録画",
       "bigo": "Bigo 録画",
       "buzzcast": "Buzzcast 録画",
-      "liveme": "LiveMe 録画"
+      "liveme": "ライブミー 録画"
     },
     "subtitle": {
       "all": "プラットフォームのクリエイターによるライブ配信録画を視聴しましょう。ダウンロードして新しいコンテンツを発見できます。",
@@ -331,7 +331,7 @@
       "pandalive": "プラットフォームのクリエイターによる Pandalive 録画を視聴しましょう。ダウンロードして新しいコンテンツを発見できます。",
       "bigo": "プラットフォームのクリエイターによる Bigo 録画を視聴しましょう。ダウンロードして新しいコンテンツを発見できます。",
       "buzzcast": "プラットフォームのクリエイターによる Buzzcast 録画を視聴しましょう。ダウンロードして新しいコンテンツを発見できます。",
-      "liveme": "プラットフォームのクリエイターによる LiveMe 録画を視聴しましょう。ダウンロードして新しいコンテンツを発見できます。"
+      "liveme": "プラットフォームのクリエイターによる ライブミー 録画を視聴しましょう。ダウンロードして新しいコンテンツを発見できます。"
     }
   },
   "cta": {
@@ -412,7 +412,7 @@
       "pandalive": "LiveStreamRecorder のクリエイターによる Pandalive 録画を視聴しましょう。",
       "bigo": "LiveStreamRecorder のクリエイターによる Bigo 録画を視聴しましょう。",
       "buzzcast": "LiveStreamRecorder のクリエイターによる Buzzcast 録画を視聴しましょう。",
-      "liveme": "LiveStreamRecorder のクリエイターによる LiveMe 録画を視聴しましょう。"
+      "liveme": "LiveStreamRecorder のクリエイターによる ライブミー 録画を視聴しましょう。"
     },
     "streamTitle": "{nickname} の配信 - {date}",
     "streamDescription": {
@@ -425,7 +425,7 @@
       "bigo": "{nickname} の Bigo 録画",
       "unknown": "{nickname} のライブ配信録画",
       "buzzcast": "{nickname} の Buzzcast 録画",
-      "liveme": "{nickname} の LiveMe 録画"
+      "liveme": "{nickname} の ライブミー 録画"
     }
   },
   "recordedOn": "{date} に録画",
