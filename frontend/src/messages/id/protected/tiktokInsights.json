@@ -1,7 +1,6 @@
 {
   "title": "TikTok Insights",
   "description": "Analitik Live TikTok seluruh platform",
-
   "globalStats": {
     "title": "Gambaran Umum Platform",
     "totalUsers": "Total Pemberi Hadiah",
@@ -9,7 +8,6 @@
     "totalGifts": "Total Hadiah",
     "totalBattles": "Total Pertempuran"
   },
-
   "dailyEarnings": {
     "title": "Penghasilan Harian",
     "seriesLabel": "Berlian",
@@ -17,7 +15,6 @@
     "allCountries": "Semua Negara",
     "allLanguages": "Semua Bahasa"
   },
-
   "topEarners": {
     "title": "Penghasil Terbaik",
     "username": "Username",
@@ -30,7 +27,6 @@
     "allCountries": "Semua Negara",
     "allLanguages": "Semua Bahasa"
   },
-
   "mostLive": {
     "title": "Streamer Paling Aktif",
     "username": "Username",
@@ -42,7 +38,6 @@
     "allCountries": "Semua Negara",
     "allLanguages": "Semua Bahasa"
   },
-
   "countryLeaderboard": {
     "title": "Papan Peringkat Negara",
     "rank": "#",
@@ -54,7 +49,6 @@
     "empty": "Tidak ada data tersedia",
     "loadMore": "Muat lebih banyak"
   },
-
   "languageLeaderboard": {
     "title": "Papan Peringkat Bahasa",
     "rank": "#",
@@ -66,7 +60,6 @@
     "empty": "Tidak ada data tersedia",
     "loadMore": "Muat lebih banyak"
   },
-
   "topGifters": {
     "title": "Pemberi Hadiah Teratas",
     "description": "Pengguna yang telah mengirim total berlian terbanyak ke semua streamer di TikTok.",
@@ -76,7 +69,6 @@
     "streamers": "Streamer Didukung",
     "empty": "Tidak ada data tersedia"
   },
-
   "battleStats": {
     "title": "Papan Peringkat Pertempuran",
     "description": "Streamer yang diurutkan berdasarkan rekor pertempuran mereka. Pertempuran adalah kompetisi head-to-head langsung di mana hadiah dari audiens menentukan pemenang.",
@@ -88,7 +80,6 @@
     "winRate": "Tingkat Kemenangan",
     "empty": "Tidak ada data tersedia"
   },
-
   "gifterRelationships": {
     "title": "Hubungan Pemberi Hadiah",
     "description": "Pasangan pemberi hadiah–streamer terbaik yang diurutkan berdasarkan berlian yang dikirim. Mengungkapkan siapa pendukung paling setia dari streamer individu.",

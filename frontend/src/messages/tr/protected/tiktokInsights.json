@@ -1,7 +1,6 @@
 {
   "title": "TikTok Canlı İstatistikleri",
   "description": "Platform geneli TikTok Canlı analizleri",
-
   "globalStats": {
     "title": "Platforma Genel Bakış",
     "totalUsers": "Toplam Hediye Gönderen",
@@ -9,7 +8,6 @@
     "totalGifts": "Toplam Hediye",
     "totalBattles": "Toplam Savaş"
   },
-
   "dailyEarnings": {
     "title": "Günlük Kazançlar",
     "seriesLabel": "Elmaslar",
@@ -17,7 +15,6 @@
     "allCountries": "Tüm Ülkeler",
     "allLanguages": "Tüm Diller"
   },
-
   "topEarners": {
     "title": "En Çok Kazananlar",
     "username": "Kullanıcı Adı",
@@ -30,7 +27,6 @@
     "allCountries": "Tüm Ülkeler",
     "allLanguages": "Tüm Diller"
   },
-
   "mostLive": {
     "title": "En Aktif Yayıncılar",
     "username": "Kullanıcı Adı",
@@ -42,7 +38,6 @@
     "allCountries": "Tüm Ülkeler",
     "allLanguages": "Tüm Diller"
   },
-
   "countryLeaderboard": {
     "title": "Ülke Sıralaması",
     "rank": "#",
@@ -54,7 +49,6 @@
     "empty": "Veri bulunmuyor",
     "loadMore": "Daha fazla göster"
   },
-
   "languageLeaderboard": {
     "title": "Dil Sıralaması",
     "rank": "#",
@@ -66,7 +60,6 @@
     "empty": "Veri bulunmuyor",
     "loadMore": "Daha fazla göster"
   },
-
   "topGifters": {
     "title": "En Çok Hediye Gönderenler",
     "description": "TikTok'taki tüm yayıncılara en fazla toplam elmas gönderen kullanıcılar.",
@@ -76,7 +69,6 @@
     "streamers": "Desteklenen Yayıncılar",
     "empty": "Veri bulunmuyor"
   },
-
   "battleStats": {
     "title": "Savaş Sıralaması",
     "description": "Yayıncıların battle performansına göre sıralaması. Battle'lar, izleyicilerin hediyeyle kazananı belirlediği canlı karşılaşmalardır.",
@@ -88,7 +80,6 @@
     "winRate": "Kazanma Oranı",
     "empty": "Veri bulunmuyor"
   },
-
   "gifterRelationships": {
     "title": "Hediye İlişkileri",
     "description": "Gönderilen elmasa göre en güçlü hediyeci–yayıncı çiftleri. Belirli bir yayıncının en sadık destekçilerini ortaya koyar.",

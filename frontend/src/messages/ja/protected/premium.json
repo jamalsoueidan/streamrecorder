@@ -3,12 +3,10 @@
   "descriptionPremium": "LiveStreamRecorder のすべての機能をご利用いただけます",
   "descriptionNonPremium": "LiveStreamRecorder のすべての機能に今すぐアクセスしましょう",
   "descriptionShort": "すべての機能に今すぐアクセス",
-
   "billingPeriodMonthly": "月払い",
   "billingPeriodQuarterly": "3ヶ月払い",
   "billingPeriodAnnual": "年払い",
   "billingPeriodLifetime": "永久",
-
   "billing1MonthLabel": "1 ヶ月",
   "billing3MonthsLabel": "3 ヶ月",
   "billing3MonthsSavings": "1ヶ月分無料",
@@ -18,10 +16,8 @@
   "billingLifetimeLabel": "永久ライセンス",
   "billingLifetimeSavings": "一度の購入で永久に利用可能",
   "billingLifetimeBadge": "限定",
-
   "currentPlanRecord": "自分のチャンネルを最大 3 つ録画",
   "currentPlanWatch": "録画を視聴",
-
   "premiumRecord100": "自分のチャンネルを 100 個録画",
   "premiumFullControl": "録画を完全にコントロール",
   "premiumNotifications": "準備完了時に通知",
@@ -34,11 +30,9 @@
   "premiumPrioritySupport": "優先サポート",
   "premiumTiktokInsights": "TikTok ライブインサイト",
   "premiumDownloadRecordings": "自分の録画をダウンロード",
-
   "paymentMethod": "お支払い方法",
   "freemiusDescription": "クレジットカード、PayPal など",
   "stripeDescription": "クレジットカード、Google Pay、Apple Pay など",
-
   "yourCurrentPlan": "現在のプラン",
   "currentPlan": "現在のプラン",
   "free": "無料",
@@ -49,26 +43,21 @@
   "lifetimeMessage": "すべてのプレミアム機能への永久アクセス権をお持ちです。ご支援ありがとうございます！",
   "cancelSubscription": "サブスクリプションをキャンセル",
   "supportMessage": "LiveStreamRecorder は一人で運営しているプロジェクトです。皆さまのご支援がサーバーの維持と新機能の開発を支えています。ありがとうございます！",
-
   "choosePlan": "プランを選択",
   "perMonth": "${price}/月",
   "oneTime": "一括払い",
-
   "yourPremiumFeatures": "プレミアム機能",
   "unlockPremiumFeatures": "プレミアム機能を有効化",
   "futureFeatures": "プレミアムには今後リリースされるすべての機能が含まれます。",
   "seeWhatsNew": "最新情報を見る",
-
   "plan": "プラン",
   "subtotal": "小計",
   "discount": "割引",
   "total": "合計",
-
   "vatNotice": "* 適用される消費税（VAT）は最終的なお支払い手続き中に計算されて合計に追加されます。",
   "subscribe": "今すぐ購読",
   "buyNow": "今すぐ購入",
   "securePayment": "安全な決済",
-
   "cancelModalTitle": "サブスクリプションをキャンセル",
   "cancelModalMessage": "ご利用いただきありがとうございます！キャンセルした場合、{endDate} までプレミアム機能を引き続き利用できます。",
   "cancelModalAfter": "その後、アカウントは無料プランに戻ります。",

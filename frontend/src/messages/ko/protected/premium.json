@@ -3,12 +3,10 @@
   "descriptionPremium": "LiveStreamRecorder의 모든 기능을 이용할 수 있습니다",
   "descriptionNonPremium": "LiveStreamRecorder의 모든 기능에 바로 접근하세요",
   "descriptionShort": "모든 기능에 바로 접근하세요",
-
   "billingPeriodMonthly": "월간",
   "billingPeriodQuarterly": "분기",
   "billingPeriodAnnual": "연간",
   "billingPeriodLifetime": "평생",
-
   "billing1MonthLabel": "1개월",
   "billing3MonthsLabel": "3개월",
   "billing3MonthsSavings": "1개월 무료",
@@ -18,10 +16,8 @@
   "billingLifetimeLabel": "평생",
   "billingLifetimeSavings": "한 번 결제, 평생 이용",
   "billingLifetimeBadge": "한정",
-
   "currentPlanRecord": "최대 3개 채널 녹화",
   "currentPlanWatch": "녹화 영상 시청",
-
   "premiumRecord100": "100개 채널 녹화",
   "premiumFullControl": "녹화 영상 완전 제어",
   "premiumNotifications": "준비되면 알림 받기",
@@ -34,11 +30,9 @@
   "premiumPrioritySupport": "우선 지원",
   "premiumTiktokInsights": "TikTok 라이브 분석",
   "premiumDownloadRecordings": "내 녹화 다운로드",
-
   "paymentMethod": "결제 방법",
   "freemiusDescription": "신용카드, PayPal 등",
   "stripeDescription": "신용카드, Google Pay, Apple Pay 등",
-
   "yourCurrentPlan": "현재 플랜",
   "currentPlan": "현재 플랜",
   "free": "무료",
@@ -49,26 +43,21 @@
   "lifetimeMessage": "모든 프리미엄 기능에 평생 접근할 수 있습니다. 지원해 주셔서 감사합니다!",
   "cancelSubscription": "구독 취소",
   "supportMessage": "LiveStreamRecorder는 1인 프로젝트입니다. 지원해 주시면 서버 운영과 새로운 기능 개발에 도움이 됩니다. 감사합니다!",
-
   "choosePlan": "플랜 선택",
   "perMonth": "${price}/월",
   "oneTime": "일회성",
-
   "yourPremiumFeatures": "프리미엄 기능",
   "unlockPremiumFeatures": "프리미엄 기능 이용하기",
   "futureFeatures": "프리미엄에는 출시되는 모든 향후 기능이 포함됩니다.",
   "seeWhatsNew": "새로운 기능 보기",
-
   "plan": "플랜",
   "subtotal": "소계",
   "discount": "할인",
   "total": "합계",
-
   "vatNotice": "* 적용되는 부가가치세(VAT)는 최종 결제 과정에서 계산되어 합계에 추가됩니다.",
   "subscribe": "지금 구독",
   "buyNow": "지금 구매",
   "securePayment": "안전한 결제",
-
   "cancelModalTitle": "구독 취소",
   "cancelModalMessage": "떠나시다니 아쉽네요! 취소하시면 {endDate}까지 프리미엄 기능을 계속 이용하실 수 있습니다.",
   "cancelModalAfter": "이후 계정은 무료 플랜으로 전환됩니다.",

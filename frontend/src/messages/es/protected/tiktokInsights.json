@@ -1,7 +1,6 @@
 {
   "title": "TikTok Insights",
   "description": "Estadísticas globales de TikTok Live",
-
   "globalStats": {
     "title": "Resumen de la Plataforma",
     "totalUsers": "Total de Gifters",
@@ -9,7 +8,6 @@
     "totalGifts": "Total de Regalos",
     "totalBattles": "Total de Batallas"
   },
-
   "dailyEarnings": {
     "title": "Ganancias Diarias",
     "seriesLabel": "Diamantes",
@@ -17,7 +15,6 @@
     "allCountries": "Todos los Países",
     "allLanguages": "Todos los Idiomas"
   },
-
   "topEarners": {
     "title": "Mayores Ganadores",
     "username": "Usuario",
@@ -30,7 +27,6 @@
     "allCountries": "Todos los Países",
     "allLanguages": "Todos los Idiomas"
   },
-
   "mostLive": {
     "title": "Streamers Más Activos",
     "username": "Usuario",
@@ -42,7 +38,6 @@
     "allCountries": "Todos los Países",
     "allLanguages": "Todos los Idiomas"
   },
-
   "countryLeaderboard": {
     "title": "Ranking por País",
     "rank": "#",
@@ -54,7 +49,6 @@
     "empty": "No hay datos disponibles",
     "loadMore": "Cargar más"
   },
-
   "languageLeaderboard": {
     "title": "Ranking por Idioma",
     "rank": "#",
@@ -66,7 +60,6 @@
     "empty": "No hay datos disponibles",
     "loadMore": "Cargar más"
   },
-
   "topGifters": {
     "title": "Top Gifters",
     "description": "Usuarios que han enviado más diamantes en total a todos los streamers en TikTok.",
@@ -76,7 +69,6 @@
     "streamers": "Streamers Apoyados",
     "empty": "No hay datos disponibles"
   },
-
   "battleStats": {
     "title": "Ranking de Batallas",
     "description": "Streamers clasificados por su historial de batallas. Las batallas son competencias en vivo cara a cara donde los regalos de la audiencia deciden al ganador.",
@@ -88,7 +80,6 @@
     "winRate": "% Victorias",
     "empty": "No hay datos disponibles"
   },
-
   "gifterRelationships": {
     "title": "Relaciones Gifter",
     "description": "Pares gifter–streamer clasificados por diamantes enviados. Revela quiénes son los seguidores más dedicados de cada streamer.",

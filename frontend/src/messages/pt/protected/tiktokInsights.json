@@ -1,7 +1,6 @@
 {
   "title": "TikTok Insights",
   "description": "Análises de lives do TikTok em toda a plataforma",
-
   "globalStats": {
     "title": "Visão Geral da Plataforma",
     "totalUsers": "Total de Gifters",
@@ -9,7 +8,6 @@
     "totalGifts": "Total de Presentes",
     "totalBattles": "Total de Batalhas"
   },
-
   "dailyEarnings": {
     "title": "Ganhos Diários",
     "seriesLabel": "Diamantes",
@@ -17,7 +15,6 @@
     "allCountries": "Todos os Países",
     "allLanguages": "Todos os Idiomas"
   },
-
   "topEarners": {
     "title": "Top Criadores",
     "username": "Usuário",
@@ -30,7 +27,6 @@
     "allCountries": "Todos os Países",
     "allLanguages": "Todos os Idiomas"
   },
-
   "mostLive": {
     "title": "Criadores Mais Ativos",
     "username": "Usuário",
@@ -42,7 +38,6 @@
     "allCountries": "Todos os Países",
     "allLanguages": "Todos os Idiomas"
   },
-
   "countryLeaderboard": {
     "title": "Ranking por País",
     "rank": "#",
@@ -54,7 +49,6 @@
     "empty": "Nenhum dado disponível",
     "loadMore": "Carregar mais"
   },
-
   "languageLeaderboard": {
     "title": "Ranking por Idioma",
     "rank": "#",
@@ -66,7 +60,6 @@
     "empty": "Nenhum dado disponível",
     "loadMore": "Carregar mais"
   },
-
   "topGifters": {
     "title": "Top Gifters",
     "description": "Usuários que enviaram o maior total de diamantes para streamers no TikTok.",
@@ -76,7 +69,6 @@
     "streamers": "Streamers Apoiados",
     "empty": "Nenhum dado disponível"
   },
-
   "battleStats": {
     "title": "Ranking de Batalhas",
     "description": "Streamers classificados pelo histórico de batalhas. As batalhas são competições ao vivo onde os presentes da audiência decidem o vencedor.",
@@ -88,7 +80,6 @@
     "winRate": "Taxa de Vitória",
     "empty": "Nenhum dado disponível"
   },
-
   "gifterRelationships": {
     "title": "Relações de Gifters",
     "description": "Pares gifter–streamer mais ativos classificados por diamantes enviados. Revela quem são os apoiadores mais dedicados de cada streamer.",

@@ -1,7 +1,6 @@
 {
   "title": "TikTok 라이브 분석",
   "description": "플랫폼 전체 TikTok 라이브 분석",
-
   "globalStats": {
     "title": "플랫폼 현황",
     "totalUsers": "총 선물 발신자",
@@ -9,7 +8,6 @@
     "totalGifts": "총 선물",
     "totalBattles": "총 배틀"
   },
-
   "dailyEarnings": {
     "title": "일별 수익",
     "seriesLabel": "다이아몬드",
@@ -17,7 +15,6 @@
     "allCountries": "전체 국가",
     "allLanguages": "전체 언어"
   },
-
   "topEarners": {
     "title": "수익 상위 스트리머",
     "username": "사용자명",
@@ -30,7 +27,6 @@
     "allCountries": "전체 국가",
     "allLanguages": "전체 언어"
   },
-
   "mostLive": {
     "title": "최다 방송 스트리머",
     "username": "사용자명",
@@ -42,7 +38,6 @@
     "allCountries": "전체 국가",
     "allLanguages": "전체 언어"
   },
-
   "countryLeaderboard": {
     "title": "국가별 순위",
     "rank": "#",
@@ -54,7 +49,6 @@
     "empty": "데이터가 없습니다",
     "loadMore": "더 보기"
   },
-
   "languageLeaderboard": {
     "title": "언어별 순위",
     "rank": "#",
@@ -66,7 +60,6 @@
     "empty": "데이터가 없습니다",
     "loadMore": "더 보기"
   },
-
   "topGifters": {
     "title": "상위 선물 발신자",
     "description": "TikTok의 모든 스트리머에게 가장 많은 총 다이아몬드를 보낸 사용자입니다.",
@@ -76,7 +69,6 @@
     "streamers": "후원한 스트리머",
     "empty": "데이터가 없습니다"
   },
-
   "battleStats": {
     "title": "배틀 순위",
     "description": "배틀 성적 기준 스트리머 순위입니다. 배틀은 시청자의 선물이 승패를 결정하는 실시간 대결입니다.",
@@ -88,7 +80,6 @@
     "winRate": "승률",
     "empty": "데이터가 없습니다"
   },
-
   "gifterRelationships": {
     "title": "선물 발신자 관계",
     "description": "다이아몬드 기준 상위 선물자–스트리머 조합입니다. 특정 스트리머의 가장 충성스러운 후원자를 보여줍니다.",

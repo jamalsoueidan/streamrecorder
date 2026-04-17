@@ -3,12 +3,10 @@
   "descriptionPremium": "LiveStreamRecorder'ın sunduğu her şeye erişiminiz var",
   "descriptionNonPremium": "LiveStreamRecorder'ın sunduğu her şeye anında erişin",
   "descriptionShort": "Her şeye anında erişin",
-
   "billingPeriodMonthly": "aylık",
   "billingPeriodQuarterly": "3 aylık",
   "billingPeriodAnnual": "yıllık",
   "billingPeriodLifetime": "ömür boyu",
-
   "billing1MonthLabel": "1 Ay",
   "billing3MonthsLabel": "3 Ay",
   "billing3MonthsSavings": "1 ay ücretsiz",
@@ -18,10 +16,8 @@
   "billingLifetimeLabel": "Ömür Boyu",
   "billingLifetimeSavings": "Bir kez öde, sonsuza kadar kullan",
   "billingLifetimeBadge": "Sınırlı",
-
   "currentPlanRecord": "Kendi kanallarınızdan 3 tanesini kaydedin",
   "currentPlanWatch": "Kayıtlarınızı izleyin",
-
   "premiumRecord100": "100 kanalı kaydedin",
   "premiumFullControl": "Kayıtlarınız üzerinde tam kontrol",
   "premiumNotifications": "Hazır olunca bildirim al",
@@ -34,11 +30,9 @@
   "premiumPrioritySupport": "Öncelikli destek",
   "premiumTiktokInsights": "TikTok Canlı İstatistikleri",
   "premiumDownloadRecordings": "Kayıtlarını indir",
-
   "paymentMethod": "Ödeme Yöntemi",
   "freemiusDescription": "Kredi Kartı, PayPal ve daha fazlası",
   "stripeDescription": "Kredi Kartı, Google Pay, Apple Pay ve daha fazlası",
-
   "yourCurrentPlan": "Mevcut Aboneliğiniz",
   "currentPlan": "Mevcut Plan",
   "free": "Ücretsiz",
@@ -49,26 +43,21 @@
   "lifetimeMessage": "Tüm premium özelliklere ömür boyu erişiminiz var. Desteğiniz için teşekkürler!",
   "cancelSubscription": "Aboneliği iptal et",
   "supportMessage": "LiveStreamRecorder tek kişilik bir projedir. Desteğiniz sunucuların çalışmasını ve yeni özelliklerin gelmesini sağlıyor. Teşekkürler!",
-
   "choosePlan": "Planınızı Seçin",
   "perMonth": "${price}/ay",
   "oneTime": "tek seferlik",
-
   "yourPremiumFeatures": "Premium Özellikleriniz",
   "unlockPremiumFeatures": "Premium özelliklerin kilidini aç",
   "futureFeatures": "Premium, yayınlandıkça tüm gelecek özellikleri içerir.",
   "seeWhatsNew": "Yeniliklere bakın",
-
   "plan": "Plan",
   "subtotal": "Ara Toplam",
   "discount": "İndirim",
   "total": "Toplam",
-
   "vatNotice": "* Uygulanabilir Katma Değer Vergisi (KDV) hesaplanacak ve son ödeme işlemi sırasında toplamınıza eklenecektir.",
   "subscribe": "Şimdi Abone Ol",
   "buyNow": "Şimdi Satın Al",
   "securePayment": "Güvenli ödeme",
-
   "cancelModalTitle": "Aboneliği İptal Et",
   "cancelModalMessage": "Ayrıldığını görmek bizi üzüyor! İptal ederseniz, {endDate} tarihine kadar premium özelliklere erişiminiz devam edecek.",
   "cancelModalAfter": "Bundan sonra hesabınız ücretsiz plana dönecek.",

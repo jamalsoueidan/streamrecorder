@@ -1,7 +1,6 @@
 {
   "title": "TikTok インサイト",
   "description": "プラットフォーム全体の TikTok ライブアナリティクス",
-
   "globalStats": {
     "title": "プラットフォーム概要",
     "totalUsers": "ギフター合計",
@@ -9,7 +8,6 @@
     "totalGifts": "ギフト合計",
     "totalBattles": "バトル合計"
   },
-
   "dailyEarnings": {
     "title": "日次収益",
     "seriesLabel": "ダイヤモンド",
@@ -17,7 +15,6 @@
     "allCountries": "全国",
     "allLanguages": "全言語"
   },
-
   "topEarners": {
     "title": "トップ収益者",
     "username": "ユーザー名",
@@ -30,7 +27,6 @@
     "allCountries": "全国",
     "allLanguages": "全言語"
   },
-
   "mostLive": {
     "title": "最もアクティブなストリーマー",
     "username": "ユーザー名",
@@ -42,7 +38,6 @@
     "allCountries": "全国",
     "allLanguages": "全言語"
   },
-
   "countryLeaderboard": {
     "title": "国別ランキング",
     "rank": "順位",
@@ -54,7 +49,6 @@
     "empty": "データはありません",
     "loadMore": "もっと読み込む"
   },
-
   "languageLeaderboard": {
     "title": "言語別ランキング",
     "rank": "順位",
@@ -66,7 +60,6 @@
     "empty": "データはありません",
     "loadMore": "もっと読み込む"
   },
-
   "topGifters": {
     "title": "トップギフター",
     "description": "TikTok 上のすべてのストリーマーへの送付ダイヤモンド合計が最も多いユーザー。",
@@ -76,7 +69,6 @@
     "streamers": "支援したストリーマー",
     "empty": "データはありません"
   },
-
   "battleStats": {
     "title": "バトルランキング",
     "description": "バトル成績でランク付けされたストリーマー。バトルはオーディエンスのギフトで勝者が決まるライブ対戦です。",
@@ -88,7 +80,6 @@
     "winRate": "勝率",
     "empty": "データはありません"
   },
-
   "gifterRelationships": {
     "title": "ギフター関係",
     "description": "送付ダイヤモンド数でランク付けされたギフター＆ストリーマーペア。個々のストリーマーへの最も熱心なサポーターを明らかにします。",

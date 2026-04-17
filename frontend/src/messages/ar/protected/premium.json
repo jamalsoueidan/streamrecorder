@@ -3,12 +3,10 @@
   "descriptionPremium": "لديك صلاحية الوصول لكل ما يقدمه LiveStreamRecorder",
   "descriptionNonPremium": "اشترك الآن واستمتع بكل ما يقدمه LiveStreamRecorder",
   "descriptionShort": "اشترك واستمتع بكل الميزات",
-
   "billingPeriodMonthly": "الشهري",
   "billingPeriodQuarterly": "ربع سنوي",
   "billingPeriodAnnual": "السنوي",
   "billingPeriodLifetime": "مدى الحياة",
-
   "billing1MonthLabel": "شهر واحد",
   "billing3MonthsLabel": "3 أشهر",
   "billing3MonthsSavings": "شهر مجاناً",
@@ -18,10 +16,8 @@
   "billingLifetimeLabel": "مدى الحياة",
   "billingLifetimeSavings": "ادفع مرة واحدة، استخدم للأبد",
   "billingLifetimeBadge": "محدود",
-
   "currentPlanRecord": "سجّل حتى 3 من قنواتك",
   "currentPlanWatch": "شاهد تسجيلاتك",
-
   "premiumRecord100": "سجّل 100 من قنواتك",
   "premiumFullControl": "تحكم كامل في تسجيلاتك",
   "premiumNotifications": "إشعار عند الاكتمال",
@@ -34,11 +30,9 @@
   "premiumPrioritySupport": "دعم ذو أولوية",
   "premiumTiktokInsights": "إحصائيات TikTok المباشر",
   "premiumDownloadRecordings": "تنزيل تسجيلاتك",
-
   "paymentMethod": "طريقة الدفع",
   "freemiusDescription": "بطاقة ائتمان، باي بال، والمزيد",
   "stripeDescription": "بطاقة ائتمان، Google Pay، Apple Pay والمزيد",
-
   "yourCurrentPlan": "اشتراكك الحالي",
   "currentPlan": "الاشتراك الحالي",
   "free": "مجاني",
@@ -49,26 +43,21 @@
   "lifetimeMessage": "لديك صلاحية مدى الحياة لجميع ميزات البريميوم. شكراً لدعمك!",
   "cancelSubscription": "إلغاء الاشتراك",
   "supportMessage": "LiveStreamRecorder مشروع شخص واحد. دعمك يساعد في إبقاء الخوادم تعمل وإضافة ميزات جديدة. شكراً لك!",
-
   "choosePlan": "اختر اشتراكك",
   "perMonth": "${price}/شهر",
   "oneTime": "دفعة واحدة",
-
   "yourPremiumFeatures": "ميزاتك البريميوم",
   "unlockPremiumFeatures": "استمتع بجميع المميزات",
   "futureFeatures": "البريميوم يشمل جميع الميزات المستقبلية عند إصدارها.",
   "seeWhatsNew": "شاهد الجديد",
-
   "plan": "الاشتراك",
   "subtotal": "المجموع الفرعي",
   "discount": "الخصم",
   "total": "الإجمالي",
-
   "vatNotice": "* سيتم احتساب ضريبة القيمة المضافة (VAT) المطبقة وإضافتها إلى إجماليك أثناء عملية الدفع النهائية.",
   "subscribe": "اشترك الآن",
   "buyNow": "اشتري الآن",
   "securePayment": "دفع آمن",
-
   "cancelModalTitle": "إلغاء الاشتراك",
   "cancelModalMessage": "يحزننا أن تغادر! إذا ألغيت، ستظل لديك صلاحية ميزات البريميوم حتى {endDate}.",
   "cancelModalAfter": "بعد ذلك، سيعود حسابك إلى الاشتراك المجاني.",

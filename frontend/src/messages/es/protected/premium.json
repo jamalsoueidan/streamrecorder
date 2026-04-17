@@ -3,12 +3,10 @@
   "descriptionPremium": "Tienes acceso a todo lo que LiveStreamRecorder tiene para ofrecer",
   "descriptionNonPremium": "Obtén acceso instantáneo a todo lo que LiveStreamRecorder tiene para ofrecer",
   "descriptionShort": "Obtén acceso instantáneo a todo",
-
   "billingPeriodMonthly": "mensual",
   "billingPeriodQuarterly": "trimestral",
   "billingPeriodAnnual": "anual",
   "billingPeriodLifetime": "de por vida",
-
   "billing1MonthLabel": "1 Mes",
   "billing3MonthsLabel": "3 Meses",
   "billing3MonthsSavings": "1 mes gratis",
@@ -18,10 +16,8 @@
   "billingLifetimeLabel": "De por Vida",
   "billingLifetimeSavings": "Paga una vez, usa para siempre",
   "billingLifetimeBadge": "Limitado",
-
   "currentPlanRecord": "Graba hasta 3 de tus propios canales",
   "currentPlanWatch": "Ve tus grabaciones",
-
   "premiumRecord100": "Graba 100 de tus propios canales",
   "premiumFullControl": "Control total sobre tus grabaciones",
   "premiumNotifications": "Notificaciones cuando esté listo",
@@ -34,11 +30,9 @@
   "premiumPrioritySupport": "Soporte prioritario",
   "premiumTiktokInsights": "Estadísticas de TikTok en vivo",
   "premiumDownloadRecordings": "Descarga tus grabaciones",
-
   "paymentMethod": "Método de Pago",
   "freemiusDescription": "Tarjeta de crédito, PayPal y más",
   "stripeDescription": "Tarjeta de crédito, Google Pay, Apple Pay y más",
-
   "yourCurrentPlan": "Tu Plan Actual",
   "currentPlan": "Plan Actual",
   "free": "Gratis",
@@ -49,26 +43,21 @@
   "lifetimeMessage": "Tienes acceso de por vida a todas las funciones premium. ¡Gracias por tu apoyo!",
   "cancelSubscription": "Cancelar suscripción",
   "supportMessage": "LiveStreamRecorder es un proyecto de una sola persona. Tu apoyo ayuda a mantener los servidores funcionando y las nuevas funciones llegando. ¡Gracias!",
-
   "choosePlan": "Elige Tu Plan",
   "perMonth": "${price}/mes",
   "oneTime": "pago único",
-
   "yourPremiumFeatures": "Tus Funciones Premium",
   "unlockPremiumFeatures": "Activar Funciones Premium",
   "futureFeatures": "Premium incluye todas las funciones futuras a medida que se lanzan.",
   "seeWhatsNew": "Ver novedades",
-
   "plan": "Plan",
   "subtotal": "Subtotal",
   "discount": "Descuento",
   "total": "Total",
-
   "vatNotice": "* El IVA aplicable se calculará y añadirá a tu total durante el proceso de pago final.",
   "subscribe": "Suscribirme Ahora",
   "buyNow": "Comprar Ahora",
   "securePayment": "Pago seguro",
-
   "cancelModalTitle": "Cancelar Suscripción",
   "cancelModalMessage": "¡Lamentamos que te vayas! Si cancelas, seguirás teniendo acceso a las funciones premium hasta el {endDate}.",
   "cancelModalAfter": "Después de eso, tu cuenta volverá al plan gratuito.",
