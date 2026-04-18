@@ -15,7 +15,7 @@ import {
 } from "@mantine/core";
 import { IconBrandSafari, IconChevronRight } from "@tabler/icons-react";
 import { getFormatter, getTranslations } from "next-intl/server";
-import Link from "next/link";
+import Link from "@/app/components/link";
 
 interface PlatformWithRecordings {
   name: string;

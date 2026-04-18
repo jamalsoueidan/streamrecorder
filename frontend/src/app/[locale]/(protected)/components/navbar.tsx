@@ -36,7 +36,7 @@ import {
 } from "@tabler/icons-react";
 
 import Image from "next/image";
-import Link from "next/link";
+import Link from "@/app/components/link";
 import { usePathname } from "next/navigation";
 
 import { useRouter } from "next/navigation";

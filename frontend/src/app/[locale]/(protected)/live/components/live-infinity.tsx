@@ -32,7 +32,7 @@ import {
 } from "@tabler/icons-react";
 import { useInfiniteQuery } from "@tanstack/react-query";
 import { useFormatter, useNow, useTranslations } from "next-intl";
-import Link from "next/link";
+import Link from "@/app/components/link";
 import { useEffect, useRef } from "react";
 
 import { generateAvatarUrl } from "@/app/lib/avatar-url";
