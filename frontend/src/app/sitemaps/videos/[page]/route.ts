@@ -36,7 +36,7 @@ export async function GET(
           fields: ["username", "type", "nickname"],
         },
         sources: {
-          fields: ["path", "duration"],
+          fields: ["state", "path", "duration", "bucket"],
         },
       },
       "pagination[page]": startPage + i,
@@ -56,7 +56,11 @@ export async function GET(
         generateProfileUrl(r.follower, false) + "/video/" + r.documentId;
       const pageUrl = baseUrl + path;
       const videoUrl = baseUrl + `/video/${r.documentId}/playlist.m3u8`;
-      const thumbnailUrl = getImageUrl(r.documentId!, "screenshot.jpg", r.sources?.find((s: any) => s.state === "done"));
+      const thumbnailUrl = getImageUrl(
+        r.documentId!,
+        "screenshot.jpg",
+        r.sources?.find((s: any) => s.state === "done"),
+      );
 
       const creatorName = r.follower?.username;
 
