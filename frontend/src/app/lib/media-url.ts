@@ -1,6 +1,3 @@
-const MEDIA_PROXY =
-  process.env.MEDIA_PROXY_HOST || process.env.NEXT_PUBLIC_MEDIA_PROXY_HOST;
-
 /**
  * Generate a direct URL to an image file through the media proxy.
  * Falls back to the Next.js route if no proxy is configured.
@@ -13,8 +10,10 @@ export function getImageUrl(
     bucket?: string | null;
   } | null,
 ): string {
-  if (MEDIA_PROXY && source?.path && source?.bucket) {
-    return `https://${MEDIA_PROXY}/${source.bucket}${source.path}${file}`;
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  if (baseUrl && source?.path && source?.bucket) {
+    const host = new URL(baseUrl).hostname.replace(/^www\./, "");
+    return `https://media.${host}/${source.bucket}${source.path}${file}`;
   }
   return `/video/${recordingDocumentId}/${file}`;
 }

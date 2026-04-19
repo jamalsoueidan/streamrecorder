@@ -3,7 +3,7 @@ import { Box, Button, Stack, Title } from "@mantine/core";
 import { IconArrowRight } from "@tabler/icons-react";
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
-import Link from "next/link";
+import Link from "@/app/components/link";
 
 interface SignupCtaProps {
   username: string;

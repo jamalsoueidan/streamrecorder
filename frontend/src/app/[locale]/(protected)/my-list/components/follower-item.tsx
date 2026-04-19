@@ -31,7 +31,7 @@ import { IconArrowRight, IconEyeOff } from "@tabler/icons-react";
 import { useQuery } from "@tanstack/react-query";
 import { useFormatter, useNow, useTranslations } from "next-intl";
 import Image from "next/image";
-import Link from "next/link";
+import Link from "@/app/components/link";
 import { useRef, useState } from "react";
 import { CountryFlag } from "../../components/country-flag";
 import FollowButton from "../../components/follow-button";

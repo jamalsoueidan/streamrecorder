@@ -27,7 +27,7 @@ import {
 } from "@tabler/icons-react";
 import { useQueryClient } from "@tanstack/react-query";
 import { useLocale, useTranslations } from "next-intl";
-import Link from "next/link";
+import Link from "@/app/components/link";
 import { useState } from "react";
 import { DownloadUpgradeModal } from "./download-upgrade-modal";
 import { VideoEditorModal } from "./video-editor-modal";

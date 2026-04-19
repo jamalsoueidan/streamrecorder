@@ -15,7 +15,7 @@ import {
 } from "@mantine/core";
 import { IconAlertCircle, IconRefresh, IconShieldCheck } from "@tabler/icons-react";
 import { useTranslations } from "next-intl";
-import Link from "next/link";
+import Link from "@/app/components/link";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Submitted } from "./submitted";

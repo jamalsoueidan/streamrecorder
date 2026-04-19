@@ -30,7 +30,7 @@ import {
   IconLock,
 } from "@tabler/icons-react";
 import { useTranslations } from "next-intl";
-import Link from "next/link";
+import Link from "@/app/components/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import {

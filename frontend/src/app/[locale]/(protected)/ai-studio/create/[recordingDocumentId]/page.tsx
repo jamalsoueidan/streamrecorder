@@ -20,7 +20,7 @@ import {
 } from "@tabler/icons-react";
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
-import Link from "next/link";
+import Link from "@/app/components/link";
 import { notFound } from "next/navigation";
 import { MiniPlayer } from "../../../components/video/mini-player";
 import { AiCreateForm } from "../../components/ai-create-form";

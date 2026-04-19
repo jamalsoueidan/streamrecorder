@@ -20,7 +20,7 @@ import { useDisclosure } from "@mantine/hooks";
 import { IconDownload } from "@tabler/icons-react";
 import { useFormatter } from "next-intl";
 import Image from "next/image";
-import Link from "next/link";
+import Link from "@/app/components/link";
 import { ClipPreview } from "../../my-clips/components/clip-preview";
 import { ClipMenu } from "./clip-menu";
 

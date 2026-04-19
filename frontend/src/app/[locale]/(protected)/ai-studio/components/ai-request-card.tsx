@@ -18,7 +18,7 @@ import {
 import { IconEye, IconTrash } from "@tabler/icons-react";
 import { useFormatter, useNow, useTranslations } from "next-intl";
 import Image from "next/image";
-import Link from "next/link";
+import Link from "@/app/components/link";
 import { MiniPlayer } from "../../components/video/mini-player";
 import { deriveRequestState } from "../utils/derive-state";
 

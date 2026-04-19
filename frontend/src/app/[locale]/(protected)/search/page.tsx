@@ -48,7 +48,7 @@ import {
   IconX,
 } from "@tabler/icons-react";
 import { useTranslations } from "next-intl";
-import Link from "next/link";
+import Link from "@/app/components/link";
 import { useCallback, useRef, useState } from "react";
 
 const ALL_PLATFORMS: PlatformType[] = [

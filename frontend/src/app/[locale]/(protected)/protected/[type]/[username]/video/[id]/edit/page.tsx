@@ -3,7 +3,7 @@ import publicApi from "@/lib/public-api";
 import { ActionIcon, Divider, Group, Stack, Text, Title } from "@mantine/core";
 import { IconArrowLeft } from "@tabler/icons-react";
 import { getFormatter } from "next-intl/server";
-import Link from "next/link";
+import Link from "@/app/components/link";
 import { notFound } from "next/navigation";
 import VideoEditor from "./video-editor";
 

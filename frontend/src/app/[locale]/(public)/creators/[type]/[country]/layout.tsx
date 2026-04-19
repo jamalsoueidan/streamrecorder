@@ -18,7 +18,7 @@ import {
 import { IconArrowLeft, IconMapPin } from "@tabler/icons-react";
 import { getLocale, getTranslations } from "next-intl/server";
 import Image from "next/image";
-import Link from "next/link";
+import Link from "@/app/components/link";
 import { getFollowerFilters } from "../../cache";
 
 interface LayoutProps {

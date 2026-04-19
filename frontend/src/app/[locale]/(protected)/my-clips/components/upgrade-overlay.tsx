@@ -13,7 +13,7 @@ import {
 } from "@mantine/core";
 import { IconCheck, IconCrown, IconScissors } from "@tabler/icons-react";
 import { useTranslations } from "next-intl";
-import Link from "next/link";
+import Link from "@/app/components/link";
 
 function SkeletonCard() {
   return (

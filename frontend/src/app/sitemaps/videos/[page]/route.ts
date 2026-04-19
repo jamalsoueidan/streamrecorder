@@ -1,3 +1,4 @@
+import { getImageUrl } from "@/app/lib/media-url";
 import { generateProfileUrl } from "@/app/lib/profile-url";
 import { routing } from "@/i18n/routing";
 import publicApi from "@/lib/public-api";
@@ -5,7 +6,6 @@ import publicApi from "@/lib/public-api";
 const STRAPI_PAGE_SIZE = 100;
 const STRAPI_PAGES_PER_SITEMAP = 10;
 
-export const dynamic = "force-dynamic";
 export const revalidate = 3600;
 
 export async function GET(
@@ -36,7 +36,7 @@ export async function GET(
           fields: ["username", "type", "nickname"],
         },
         sources: {
-          fields: ["path", "duration"],
+          fields: ["state", "path", "duration", "bucket"],
         },
       },
       "pagination[page]": startPage + i,
@@ -56,7 +56,11 @@ export async function GET(
         generateProfileUrl(r.follower, false) + "/video/" + r.documentId;
       const pageUrl = baseUrl + path;
       const videoUrl = baseUrl + `/video/${r.documentId}/playlist.m3u8`;
-      const thumbnailUrl = baseUrl + `/video/${r.documentId}/screenshot.jpg`;
+      const thumbnailUrl = getImageUrl(
+        r.documentId!,
+        "screenshot.jpg",
+        r.sources?.find((s: any) => s.state === "done"),
+      );
 
       const creatorName = r.follower?.username;
 

@@ -22,7 +22,7 @@ import {
   IconExternalLink,
 } from "@tabler/icons-react";
 import { useTranslations } from "next-intl";
-import Link from "next/link";
+import Link from "@/app/components/link";
 import { useEffect, useMemo, useState } from "react";
 import { parseUsername } from "@/app/lib/parse-username";
 import { verifyProfile } from "../actions/verify-profile";

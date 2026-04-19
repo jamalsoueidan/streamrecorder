@@ -76,22 +76,20 @@ export async function GET(
   const abortController = new AbortController();
 
   try {
-    // MP4 → redirect (unless TikTok proxy mode)
-    if (ext === ".mp4" && !isTikTokProxy) {
+    // Redirect to S3 (unless TikTok proxy mode needs streaming)
+    if (!isTikTokProxy) {
       const signedUrl = await getSignedUrl(s3, command, { expiresIn: 3600 });
       return Response.redirect(proxySignedUrl(signedUrl), 302);
     }
 
-    // Stream for images or TikTok proxy mode
+    // Stream for TikTok proxy mode only
     const response = await s3.send(command, {
       abortSignal: abortController.signal,
     });
 
-    const contentType = ext === ".mp4" ? "video/mp4" : "image/jpeg";
-
     return new Response(response.Body as ReadableStream, {
       headers: {
-        "Content-Type": contentType,
+        "Content-Type": "video/mp4",
         "Content-Length": response.ContentLength?.toString() || "",
         "Cache-Control": "public, max-age=31536000, immutable",
       },

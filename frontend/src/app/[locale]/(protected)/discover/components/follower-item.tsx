@@ -18,7 +18,7 @@ import {
   Text,
   useMatches,
 } from "@mantine/core";
-import Link from "next/link";
+import Link from "@/app/components/link";
 
 import { ImageSpritePreview } from "@/app/[locale]/(protected)/components/image-sprite-preview";
 import { RecordingMenu } from "@/app/[locale]/(protected)/components/recording-menu";

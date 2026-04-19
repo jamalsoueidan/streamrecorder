@@ -15,7 +15,7 @@ import {
 } from "@mantine/core";
 import { getLocale, getTranslations } from "next-intl/server";
 import Image from "next/image";
-import Link from "next/link";
+import Link from "@/app/components/link";
 import ReactMarkdown from "react-markdown";
 import { FAQSection } from "../../../components/faq-section";
 import { PlatformBadges } from "../../../components/platform-badge";

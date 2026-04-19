@@ -1,7 +1,7 @@
 import { streamingPlatforms } from "@/app/lib/streaming-platforms";
 import { Badge, Grid, GridCol } from "@mantine/core";
 import { getTranslations } from "next-intl/server";
-import Link from "next/link";
+import Link from "@/app/components/link";
 
 type PlatformBadgesProps = {
   href: string;
