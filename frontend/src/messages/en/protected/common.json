@@ -66,5 +66,17 @@
     "unfollowUpgradeTitle": "Manage your creators freely with premium"
   },
   "newest": "Newest",
-  "oldest": "Oldest"
+  "oldest": "Oldest",
+  "expired": {
+    "title": "Your Premium Plan Has Ended",
+    "subtitle": "Your creators are no longer being recorded. Renew now to pick up right where you left off — all your creators and settings are still saved.",
+    "renewButton": "Renew Premium — Keep Everything",
+    "or": "or",
+    "loseTitle": "If you downgrade you will permanently lose:",
+    "loseCreators": "All your followed creators and recordings",
+    "loseFavorites": "All your saved favorites",
+    "loseClips": "Clips, downloads, and AI features",
+    "losePremium": "Access to all premium features",
+    "downgradeButton": "Downgrade"
+  }
 }

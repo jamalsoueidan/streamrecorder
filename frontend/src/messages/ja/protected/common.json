@@ -66,5 +66,17 @@
     "unfollowUpgradeTitle": "プレミアムでクリエイターを自由に管理"
   },
   "newest": "新着順",
-  "oldest": "古い順"
+  "oldest": "古い順",
+  "expired": {
+    "title": "プレミアムプランが終了しました",
+    "subtitle": "クリエイターの配信は現在録画されていません。今すぐ更新すれば、すべての設定をそのまま引き継げます。",
+    "renewButton": "プレミアムを更新 — すべてそのまま",
+    "or": "または",
+    "loseTitle": "ダウングレードすると以下を完全に失います：",
+    "loseCreators": "フォロー中のすべてのクリエイターと録画",
+    "loseFavorites": "保存したお気に入り",
+    "loseClips": "クリップ、ダウンロード、AI機能",
+    "losePremium": "すべてのプレミアム機能へのアクセス",
+    "downgradeButton": "ダウングレード"
+  }
 }

@@ -44,6 +44,7 @@ export default async function DashboardLayout({
     throw error;
   }
 
+
   const role = user?.data?.role || null;
 
   const permissions = await api.usersPermissionsUsersRoles.rolesDetail({

@@ -66,5 +66,17 @@
     "unfollowUpgradeTitle": "Gerencie seus criadores livremente com o premium"
   },
   "newest": "Mais recentes",
-  "oldest": "Mais antigos"
+  "oldest": "Mais antigos",
+  "expired": {
+    "title": "Seu plano Premium expirou",
+    "subtitle": "Seus criadores não estão mais sendo gravados. Renove agora e continue de onde parou — todas as suas configurações estão salvas.",
+    "renewButton": "Renovar Premium — Manter tudo",
+    "or": "ou",
+    "loseTitle": "Se fizer downgrade, você perderá permanentemente:",
+    "loseCreators": "Todos os criadores seguidos e gravações",
+    "loseFavorites": "Todos os seus favoritos salvos",
+    "loseClips": "Clipes, downloads e recursos de IA",
+    "losePremium": "Acesso a todos os recursos premium",
+    "downgradeButton": "Fazer downgrade"
+  }
 }
