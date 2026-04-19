@@ -1,10 +1,10 @@
+import { getClipUrl } from "@/app/lib/clip-url";
 import { routing } from "@/i18n/routing";
 import publicApi from "@/lib/public-api";
 
 const STRAPI_PAGE_SIZE = 100;
 const STRAPI_PAGES_PER_SITEMAP = 10;
 
-export const dynamic = "force-dynamic";
 export const revalidate = 3600;
 
 export async function GET(
@@ -40,8 +40,8 @@ export async function GET(
     .map((clip) => {
       const path = "/shorts/" + clip.documentId;
       const pageUrl = baseUrl + path;
-      const videoUrl = baseUrl + `/clip/${clip.documentId}/clip.mp4`;
-      const thumbnailUrl = baseUrl + `/clip/${clip.documentId}/thumbnail.jpg`;
+      const videoUrl = getClipUrl(clip.documentId!, "preview.mp4", clip.path);
+      const thumbnailUrl = getClipUrl(clip.documentId!, "thumbnail.jpg", clip.path);
 
       const creatorName =
         clip.follower?.nickname || clip.follower?.username || "Unknown";

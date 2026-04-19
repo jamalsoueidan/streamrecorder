@@ -1,4 +1,5 @@
 import { getClipById, getRandomClips } from "@/app/actions/clip";
+import { getClipUrl } from "@/app/lib/clip-url";
 import { generateProfileUrl } from "@/app/lib/profile-url";
 import { Metadata } from "next";
 import { getFormatter, getLocale, getTranslations } from "next-intl/server";
@@ -41,7 +42,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     day: "numeric",
   });
 
-  const thumbnailUrl = `${process.env.NEXT_PUBLIC_BASE_URL}/clip/${data.documentId}/thumbnail.jpg`;
+  const thumbnailUrl = getClipUrl(data.documentId!, "thumbnail.jpg", data.path);
   const clipUrl = `${process.env.NEXT_PUBLIC_BASE_URL}/shorts/${data.documentId}`;
 
   const durationFormatted = `${data.duration || 0}s`;
@@ -74,7 +75,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       ],
       videos: [
         {
-          url: `${process.env.NEXT_PUBLIC_BASE_URL}/clip/${data.documentId}/clip.mp4`,
+          url: getClipUrl(data.documentId!, "clip.mp4", data.path),
           width: 720,
           height: 1280,
           type: "video/mp4",
@@ -132,10 +133,10 @@ export default async function ShortsPage({ params }: Props) {
       description:
         specificClip.description ||
         t("jsonLd.description", { creatorName, createdDate }),
-      thumbnailUrl: `${process.env.NEXT_PUBLIC_BASE_URL}/clip/${specificClip.documentId}/thumbnail.jpg`,
+      thumbnailUrl: getClipUrl(specificClip.documentId!, "thumbnail.jpg", specificClip.path),
       uploadDate: specificClip.createdAt,
       duration: `PT${specificClip.duration || 0}S`,
-      contentUrl: `${process.env.NEXT_PUBLIC_BASE_URL}/clip/${specificClip.documentId}/clip.mp4`,
+      contentUrl: getClipUrl(specificClip.documentId!, "clip.mp4", specificClip.path),
       embedUrl: `${process.env.NEXT_PUBLIC_BASE_URL}/shorts/${specificClip.documentId}`,
       publisher: {
         "@type": "Organization",

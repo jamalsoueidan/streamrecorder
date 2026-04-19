@@ -42,11 +42,11 @@ export function getS3(): S3Client {
   return s3Nbg1;
 }
 
-const MEDIA_PROXY_HOST = process.env.MEDIA_PROXY_HOST;
-
 export function proxySignedUrl(url: string): string {
-  if (!MEDIA_PROXY_HOST) return url;
-  return url.replace("nbg1.your-objectstorage.com", MEDIA_PROXY_HOST);
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  if (!baseUrl) return url;
+  const host = new URL(baseUrl).hostname.replace(/^www\./, "");
+  return url.replace("nbg1.your-objectstorage.com", `media.${host}`);
 }
 
 export function getBucket(
