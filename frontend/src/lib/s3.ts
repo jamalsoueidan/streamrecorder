@@ -7,6 +7,7 @@ const agent = new https.Agent({
   keepAlive: true,
   keepAliveMsecs: 1000,
 });
+agent.setMaxListeners(250);
 
 export const s3Nbg1 = new S3Client({
   region: "nbg1",

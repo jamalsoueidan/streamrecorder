@@ -1,4 +1,4 @@
-FROM node:22-alpine AS builder
+FROM node:25-alpine AS builder
 
 WORKDIR /app
 
@@ -33,7 +33,7 @@ ENV GITHUB_SHA=$GITHUB_SHA
 
 RUN yarn build
 
-FROM node:22-alpine AS runner
+FROM node:25-alpine AS runner
 
 WORKDIR /app
 
@@ -47,4 +47,4 @@ COPY --from=builder /app/public ./public
 
 EXPOSE 3000
 
-CMD ["node", "server.js"]
+CMD ["node", "--max-old-space-size=2048", "server.js"]
