@@ -170,8 +170,10 @@ function parseProfileUrl(urlString) {
 
   // Tango: tango.me/username
   if (hostname === "tango.me" || hostname.endsWith(".tango.me")) {
-    const match = path.match(/^\/([A-Za-z0-9_.-]+)/);
-    if (match) return { platform: "tango", username: match[1] };
+    const match = path.match(/^\/([A-Za-z0-9_.-]+)\/?$/);
+    if (match && !IGNORED_PATHS.has(match[1].toLowerCase())) {
+      return { platform: "tango", username: match[1] };
+    }
     return null;
   }
 
