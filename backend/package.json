@@ -17,19 +17,19 @@
     "test:users": "yarn test --testPathPatterns=tests/recordings/"
   },
   "dependencies": {
-    "@strapi/plugin-cloud": "5.34.0",
-    "@strapi/plugin-documentation": "^5.34.0",
-    "@strapi/plugin-users-permissions": "5.34.0",
-    "@strapi/provider-upload-aws-s3": "^5.34.0",
-    "@strapi/strapi": "5.34.0",
+    "@strapi/plugin-cloud": "5.42.1",
+    "@strapi/plugin-documentation": "^5.42.1",
+    "@strapi/plugin-users-permissions": "5.42.1",
+    "@strapi/provider-upload-aws-s3": "^5.42.1",
+    "@strapi/strapi": "5.42.1",
     "crypto": "^1.0.1",
-    "pg": "8.8.0",
+    "pg": "8.20.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.0.0",
     "strapi-provider-email-extra": "^0.6.0",
     "strapi-provider-email-resend": "^1.0.4",
-    "styled-components": "^6.0.0"
+    "styled-components": "^6.4.0"
   },
   "devDependencies": {
     "@types/jest": "^30.0.0",
@@ -37,9 +37,9 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "@types/supertest": "^6.0.3",
-    "jest": "^30.2.0",
-    "supertest": "^7.1.4",
-    "ts-jest": "^29.4.6",
+    "jest": "^30.3.0",
+    "supertest": "^7.2.2",
+    "ts-jest": "^29.4.9",
     "typescript": "^5"
   },
   "engines": {

@@ -219,7 +219,7 @@ export default function LiveInfinity({ scope, type }: Props) {
       {!isLoading && recordings.length > 0 && (
       <SimpleGrid cols={{ base: 1, sm: 2, md: 3, xl: 4 }} spacing="lg">
         {recordings.map((rec) => (
-          <Grid gutter="xs" key={rec.documentId} w="100%">
+          <Grid gap="xs" key={rec.documentId} w="100%">
             {rec.follower && (
               <Grid.Col span={12}>
                 <ImageSpritePreview

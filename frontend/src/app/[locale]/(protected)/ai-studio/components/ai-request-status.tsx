@@ -275,7 +275,7 @@ export function AiRequestStatus({ aiRequest, follower }: Props) {
                   </Group>
 
                   {hasClips && (
-                    <Collapse in={isExpanded}>
+                    <Collapse expanded={isExpanded}>
                       <Box mt="sm">
                         <SimpleGrid cols={{ base: 1, sm: 2 }} spacing="sm">
                           {clips.map((clip, index) => (
@@ -322,7 +322,7 @@ export function AiRequestStatus({ aiRequest, follower }: Props) {
                   )}
 
                   {hasProfile && (
-                    <Collapse in={isExpanded}>
+                    <Collapse expanded={isExpanded}>
                       <Box mt="sm">
                         <Stack gap="sm">
                           {localizedFollowers.map((f) => (

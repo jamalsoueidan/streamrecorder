@@ -20,7 +20,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2026-04-17T13:13:55.501Z"
+    "x-generation-date": "2026-04-20T12:27:43.196Z"
   },
   "servers": [
     {
@@ -12160,6 +12160,7 @@
                   "caption": {
                     "type": "string"
                   },
+                  "focalPoint": {},
                   "width": {
                     "type": "integer"
                   },
@@ -12299,6 +12300,7 @@
                             "caption": {
                               "type": "string"
                             },
+                            "focalPoint": {},
                             "width": {
                               "type": "integer"
                             },
@@ -14015,6 +14017,7 @@
                   "caption": {
                     "type": "string"
                   },
+                  "focalPoint": {},
                   "width": {
                     "type": "integer"
                   },
@@ -14154,6 +14157,7 @@
                             "caption": {
                               "type": "string"
                             },
+                            "focalPoint": {},
                             "width": {
                               "type": "integer"
                             },
@@ -16386,6 +16390,7 @@
                       "caption": {
                         "type": "string"
                       },
+                      "focalPoint": {},
                       "width": {
                         "type": "integer"
                       },
@@ -16525,6 +16530,7 @@
                                 "caption": {
                                   "type": "string"
                                 },
+                                "focalPoint": {},
                                 "width": {
                                   "type": "integer"
                                 },
@@ -19211,6 +19217,7 @@
               "caption": {
                 "type": "string"
               },
+              "focalPoint": {},
               "width": {
                 "type": "integer"
               },
@@ -19350,6 +19357,7 @@
                         "caption": {
                           "type": "string"
                         },
+                        "focalPoint": {},
                         "width": {
                           "type": "integer"
                         },
@@ -20019,6 +20027,7 @@
               "caption": {
                 "type": "string"
               },
+              "focalPoint": {},
               "width": {
                 "type": "integer"
               },
@@ -20274,6 +20283,7 @@
                     "caption": {
                       "type": "string"
                     },
+                    "focalPoint": {},
                     "width": {
                       "type": "integer"
                     },
@@ -20445,6 +20455,7 @@
                     "caption": {
                       "type": "string"
                     },
+                    "focalPoint": {},
                     "width": {
                       "type": "integer"
                     },
@@ -21524,6 +21535,7 @@
                   "caption": {
                     "type": "string"
                   },
+                  "focalPoint": {},
                   "width": {
                     "type": "integer"
                   },
@@ -21663,6 +21675,7 @@
                             "caption": {
                               "type": "string"
                             },
+                            "focalPoint": {},
                             "width": {
                               "type": "integer"
                             },
@@ -23719,6 +23732,7 @@
                       "caption": {
                         "type": "string"
                       },
+                      "focalPoint": {},
                       "width": {
                         "type": "integer"
                       },
@@ -23858,6 +23872,7 @@
                                 "caption": {
                                   "type": "string"
                                 },
+                                "focalPoint": {},
                                 "width": {
                                   "type": "integer"
                                 },
@@ -26623,6 +26638,7 @@
               "caption": {
                 "type": "string"
               },
+              "focalPoint": {},
               "width": {
                 "type": "integer"
               },
@@ -26762,6 +26778,7 @@
                         "caption": {
                           "type": "string"
                         },
+                        "focalPoint": {},
                         "width": {
                           "type": "integer"
                         },
@@ -27790,6 +27807,7 @@
                         "caption": {
                           "type": "string"
                         },
+                        "focalPoint": {},
                         "width": {
                           "type": "integer"
                         },
@@ -28688,6 +28706,7 @@
                       "caption": {
                         "type": "string"
                       },
+                      "focalPoint": {},
                       "width": {
                         "type": "integer"
                       },
@@ -28827,6 +28846,7 @@
                                 "caption": {
                                   "type": "string"
                                 },
+                                "focalPoint": {},
                                 "width": {
                                   "type": "integer"
                                 },
@@ -30808,6 +30828,7 @@
                   "caption": {
                     "type": "string"
                   },
+                  "focalPoint": {},
                   "width": {
                     "type": "integer"
                   },
@@ -30947,6 +30968,7 @@
                             "caption": {
                               "type": "string"
                             },
+                            "focalPoint": {},
                             "width": {
                               "type": "integer"
                             },
@@ -33847,6 +33869,7 @@
                         "caption": {
                           "type": "string"
                         },
+                        "focalPoint": {},
                         "width": {
                           "type": "integer"
                         },
@@ -33986,6 +34009,7 @@
                                   "caption": {
                                     "type": "string"
                                   },
+                                  "focalPoint": {},
                                   "width": {
                                     "type": "integer"
                                   },
@@ -35049,6 +35073,7 @@
                       "caption": {
                         "type": "string"
                       },
+                      "focalPoint": {},
                       "width": {
                         "type": "integer"
                       },
@@ -35188,6 +35213,7 @@
                                 "caption": {
                                   "type": "string"
                                 },
+                                "focalPoint": {},
                                 "width": {
                                   "type": "integer"
                                 },
@@ -37017,6 +37043,7 @@
                       "caption": {
                         "type": "string"
                       },
+                      "focalPoint": {},
                       "width": {
                         "type": "integer"
                       },
@@ -37156,6 +37183,7 @@
                                 "caption": {
                                   "type": "string"
                                 },
+                                "focalPoint": {},
                                 "width": {
                                   "type": "integer"
                                 },

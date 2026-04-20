@@ -287,7 +287,7 @@ export default async function Page({ params, searchParams }: PageProps) {
                   <PaginationControls total={totalPages} size="lg" />
                 </Center>
               )}
-              <Grid gutter="lg">
+              <Grid gap="lg">
                 {clips?.map((clip) => (
                   <GridCol span="content" key={clip.documentId}>
                     <Card radius="md">

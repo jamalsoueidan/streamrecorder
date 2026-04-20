@@ -119,7 +119,7 @@ export function VideoUpgradeModal({ opened, onClose }: VideoUpgradeModalProps) {
           <Text fw={600} size="sm" c="dimmed">
             {tp("unlockPremiumFeatures")}
           </Text>
-          <Grid gutter="xs">
+          <Grid gap="xs">
             {features.map((f) => (
               <GridCol span={6} key={f.label}>
                 <Group gap={6} wrap="nowrap">

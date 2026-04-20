@@ -221,7 +221,7 @@ export default function PremiumClient() {
 
       <Divider mx={{ base: "-xs", sm: "-md" }} />
 
-      <Grid gutter="md" overflow="hidden">
+      <Grid gap="md">
         {/* Left Column - Plan & Features */}
         <GridCol span={{ base: 12, md: isPremium ? 12 : 7 }}>
           <Stack gap="lg">
@@ -410,7 +410,7 @@ export default function PremiumClient() {
                   </Text>
                 </Group>
 
-                <Grid gutter="sm">
+                <Grid gap="sm">
                   {PREMIUM_FEATURES.map((feature) => (
                     <GridCol span={6} key={feature.label}>
                       <Group gap="xs" wrap="nowrap">

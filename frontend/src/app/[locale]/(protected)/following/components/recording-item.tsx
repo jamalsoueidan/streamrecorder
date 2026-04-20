@@ -19,7 +19,7 @@ export default function RecordingItem({ recording }: Props) {
   const t = useTranslations("protected.common.recordings");
 
   return (
-    <Grid gutter="xs" key={recording.documentId} w="100%">
+    <Grid gap="xs" key={recording.documentId} w="100%">
       {recording.follower && (
         <Grid.Col span={12}>
           <ImageSpritePreview

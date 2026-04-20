@@ -138,7 +138,7 @@ export function YouTubePublishForm({
 
   return (
     <form onSubmit={form.onSubmit(handleSubmit)}>
-      <Grid gutter="xl" overflow="hidden">
+      <Grid gap="xl">
         <Grid.Col span={{ base: 12, md: 8 }} order={{ base: 2, sm: 1 }}>
           <Stack gap="lg">
             <TextInput

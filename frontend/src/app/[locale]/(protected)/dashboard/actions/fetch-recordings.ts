@@ -52,12 +52,12 @@ export async function fetchRecordingsByPlatform(
 }
 
 export async function fetchLatestFollowers() {
-  const response = await api.follower.getFollowers({
+  const response = await api.follower.browseFollowers({
     sort: "createdAt:desc",
+    hasRecordings: false,
     "pagination[page]": 1,
-    "pagination[pageSize]": 6,
-    populate: ["avatar"],
+    "pagination[pageSize]": 20,
   });
 
-  return response.data?.data || [];
+  return (response.data?.data || []).filter((f) => f.avatar?.url).slice(0, 10);
 }
