@@ -355,6 +355,55 @@
           "answer": "Sim. Usuários premium podem usar o ClipAI para transformar automaticamente suas gravações do LiveMe Live em clipes curtos de destaque prontos para TikTok, YouTube Shorts ou Reels. É uma ótima forma de reutilizar seu conteúdo ao vivo e crescer seus seguidores em outras plataformas."
         }
       ]
+    },
+    "tango": {
+      "title": "Gravações do Tango Live",
+      "description": "Assista e baixe gravações do Tango Live no LiveStreamRecorder. Suas lives do Tango são capturadas automaticamente na nuvem — sem tela preta, sem gravador de tela. O gravador do Tango Live mais fácil para criadores.",
+      "keywords": [
+        "gravador tango",
+        "gravador tango live",
+        "gravar tango live",
+        "gravador de tela tango live",
+        "gravar tela tango live",
+        "gravador de tela para tango live",
+        "gravar tela tango",
+        "tela preta gravação tango",
+        "gravador tango live tela preta",
+        "gravar tango tela preta",
+        "gravador de tela tango tela preta",
+        "gravar tango tela preta",
+        "salvar tango live"
+      ],
+      "faqs": [
+        {
+          "question": "Como gravo minhas lives do Tango?",
+          "answer": "Com o LiveStreamRecorder, suas lives do Tango são gravadas automaticamente na nuvem. Cadastre-se, adicione seu nome de usuário do Tango Live e cada vez que você entra ao vivo é capturado. Sem APK de gravador do Tango Live para instalar, sem gravar a tela — tudo acontece no servidor."
+        },
+        {
+          "question": "Por que aparece tela preta ao gravar o Tango Live?",
+          "answer": "Problemas de tela preta são comuns ao usar gravadores de tela no Tango Live. O LiveStreamRecorder evita isso completamente porque captura suas lives do Tango diretamente na nuvem — sem tela preta, sem gambiarras, sem aplicativos de gravação de tela não confiáveis."
+        },
+        {
+          "question": "Como resolvo o problema de tela preta do gravador de tela do Tango Live?",
+          "answer": "A solução mais fácil é abandonar a gravação de tela de vez. O LiveStreamRecorder é um gravador do Tango na nuvem que captura suas lives no servidor em alta qualidade. Sem problemas de tela preta, sem aplicativos para configurar — basta adicionar seu nome de usuário e suas lives do Tango são gravadas automaticamente."
+        },
+        {
+          "question": "Preciso de um gravador de tela para o Tango Live?",
+          "answer": "Não. Gravadores de tela para Tango Live frequentemente resultam em tela preta ou capturas de baixa qualidade. O LiveStreamRecorder é um gravador do Tango Live na nuvem que captura suas streams automaticamente em alta qualidade — sem aplicativo para instalar, sem tela preta."
+        },
+        {
+          "question": "Posso gravar minhas lives do Tango gratuitamente?",
+          "answer": "Sim. Cadastre-se no LiveStreamRecorder gratuitamente e comece a gravar suas lives do Tango agora mesmo. Os planos premium desbloqueiam download das suas gravações, ClipAI para clipes de destaques automáticos e armazenamento estendido."
+        },
+        {
+          "question": "Posso baixar minhas gravações do Tango Live?",
+          "answer": "Sim. Usuários premium podem baixar suas gravações do Tango Live como arquivos de vídeo para visualização offline. Cada gravação também pode ser assistida instantaneamente no navegador sem precisar baixar."
+        },
+        {
+          "question": "Posso transformar minhas gravações do Tango Live em clipes curtos?",
+          "answer": "Sim. Usuários premium podem usar o ClipAI para transformar automaticamente suas gravações do Tango Live em clipes curtos de destaque prontos para TikTok, YouTube Shorts ou Reels. É uma ótima forma de reutilizar seu conteúdo ao vivo e crescer seus seguidores em outras plataformas."
+        }
+      ]
     }
   },
   "hero": {
@@ -368,7 +417,8 @@
       "pandalive": "Gravações do Pandalive",
       "bigo": "Gravações do Bigo",
       "buzzcast": "Gravações do Buzzcast",
-      "liveme": "Gravações do LiveMe"
+      "liveme": "Gravações do LiveMe",
+      "tango": "Gravações do Tango"
     },
     "subtitle": {
       "all": "Assista gravações de lives de criadores na nossa plataforma. Baixe e descubra novos conteúdos.",
@@ -380,7 +430,8 @@
       "pandalive": "Assista gravações do Pandalive de criadores na nossa plataforma. Baixe e descubra novos conteúdos.",
       "bigo": "Assista gravações do Bigo de criadores na nossa plataforma. Baixe e descubra novos conteúdos.",
       "buzzcast": "Assista gravações do Buzzcast de criadores na nossa plataforma. Baixe e descubra novos conteúdos.",
-      "liveme": "Assista gravações do LiveMe de criadores na nossa plataforma. Baixe e descubra novos conteúdos."
+      "liveme": "Assista gravações do LiveMe de criadores na nossa plataforma. Baixe e descubra novos conteúdos.",
+      "tango": "Assista gravações do Tango de criadores na nossa plataforma. Baixe e descubra novos conteúdos."
     }
   },
   "cta": {
@@ -394,7 +445,8 @@
       "afreecatv": "Grave Streams da AfreecaTV",
       "bigo": "Grave Streams do Bigo",
       "buzzcast": "Grave Streams do Buzzcast",
-      "liveme": "Grave Streams do LiveMe"
+      "liveme": "Grave Streams do LiveMe",
+      "tango": "Grave Streams do Tango"
     },
     "subtitle": {
       "all": "Salve automaticamente suas streams do TikTok, Twitch, YouTube e Kick. Baixe gravações, crie clipes curtos e faça sua audiência crescer.",
@@ -406,7 +458,8 @@
       "afreecatv": "Salve automaticamente suas streams da AfreecaTV. Baixe gravações e crie clipes curtos com o ClipAI.",
       "bigo": "Salve automaticamente suas streams do Bigo. Baixe gravações e crie clipes curtos com o ClipAI.",
       "buzzcast": "Salve automaticamente suas streams do Buzzcast. Baixe gravações e crie clipes curtos com o ClipAI.",
-      "liveme": "Salve automaticamente suas streams do LiveMe. Baixe gravações e crie clipes curtos com o ClipAI."
+      "liveme": "Salve automaticamente suas streams do LiveMe. Baixe gravações e crie clipes curtos com o ClipAI.",
+      "tango": "Salve automaticamente suas streams do Tango. Baixe gravações e crie clipes curtos com o ClipAI."
     },
     "button": "Comece a Gravar Grátis"
   },
@@ -422,7 +475,8 @@
       "pandalive": "Seja o primeiro criador a gravar uma stream do Pandalive!",
       "bigo": "Seja o primeiro criador a gravar uma stream do Bigo!",
       "buzzcast": "Seja o primeiro criador a gravar uma stream do Buzzcast!",
-      "liveme": "Seja o primeiro criador a gravar uma stream do LiveMe!"
+      "liveme": "Seja o primeiro criador a gravar uma stream do LiveMe!",
+      "tango": "Seja o primeiro criador a gravar uma stream do Tango!"
     },
     "button": "Começar"
   },
@@ -436,7 +490,8 @@
     "afreecatv": "## Gravações de Lives da AfreecaTV\n\nAssista às gravações de lives da AfreecaTV de BJs que usam o LiveStreamRecorder para salvar suas próprias lives. Cada live da AfreecaTV é capturada automaticamente e armazenada para assistir quando quiser.\n\n### Lives da AfreecaTV salvas de forma independente\n\nA AfreecaTV tem seu próprio sistema de VOD, mas nem todo replay é salvo, conteúdo pode ser removido e as regras de armazenamento mudam. Nosso gravador da AfreecaTV salva suas lives automaticamente na nuvem como backup independente — seu conteúdo continua intacto, não importa o que aconteça na AfreecaTV.\n\n### Assista e baixe suas gravações da AfreecaTV\n\nToda gravação da AfreecaTV fica disponível para assistir instantaneamente no navegador — sem anúncios, sem interrupções. Usuários Premium podem baixar suas gravações da AfreecaTV como arquivos de vídeo para assistir offline ou reaproveitar conteúdo.\n\n### Grave suas lives da AfreecaTV sem gravador de tela\n\nEsqueça rodar software de captura durante longas sessões da AfreecaTV. O LiveStreamRecorder é um gravador da AfreecaTV baseado em nuvem que captura suas lives do lado do servidor. Sem app de desktop, sem gravação em segundo plano, sem carga extra na CPU. Stream do PC ou celular — suas lives da AfreecaTV são gravadas automaticamente em alta qualidade.\n\n### Transforme lives longas em cortes curtos com ClipAI\n\nLives da AfreecaTV podem durar horas. O ClipAI analisa suas gravações e extrai os melhores momentos — jogadas incríveis, reações, momentos engraçados, destaques. Poste-os como cortes no TikTok, YouTube Shorts ou Reels para alcançar audiências além da AfreecaTV.\n\n### O melhor gravador de AfreecaTV para BJs\n\nO LiveStreamRecorder foi feito para salvar lives da AfreecaTV de forma independente. Cadastre-se grátis, adicione seu nome de usuário da AfreecaTV e nunca mais perca uma live. Cada live é capturada automaticamente — um backup permanente que não depende do sistema de VOD da AfreecaTV.",
     "bigo": "## Gravações de Lives da Bigo Live\n\nAssista às gravações de lives da Bigo Live de criadores que usam o LiveStreamRecorder para salvar suas próprias lives. Cada live da Bigo é capturada automaticamente e armazenada para assistir quando quiser.\n\n### Lives da Bigo salvas antes de desaparecer\n\nLives da Bigo existem apenas enquanto estão no ar — no momento em que você encerra a sessão, o conteúdo some completamente do app. Nosso gravador da Bigo salva suas lives automaticamente na nuvem, para que seu conteúdo não desapareça quando a live termina. Danças, músicas, bate-papos, momentos de presentes — tudo continua disponível.\n\n### Assista e baixe suas gravações da Bigo\n\nToda gravação de live da Bigo fica disponível para assistir instantaneamente no navegador. Usuários Premium podem baixar suas gravações da Bigo como arquivos de vídeo para assistir offline — perfeito para reaproveitar seu próprio conteúdo ou guardar uma cópia pessoal.\n\n### Grave suas lives da Bigo sem gravação de tela\n\nEsqueça gravar a tela do celular ou deixar outro aparelho gravando a noite toda. O LiveStreamRecorder é um gravador da Bigo online que captura suas lives do lado do servidor. Sem gasto de bateria, sem configuração manual, sem software extra. Stream do iPhone, Android ou PC — suas lives da Bigo são gravadas automaticamente em alta qualidade.\n\n### Transforme suas lives em cortes com ClipAI\n\nQuer transformar suas gravações de lives da Bigo em cortes curtos? O ClipAI analisa suas lives gravadas e cria cortes de destaques prontos para postar no TikTok, Instagram Reels ou YouTube Shorts. Faça sua audiência global crescer reaproveitando seus melhores momentos da Bigo.\n\n### O melhor gravador de Bigo para criadores\n\nO LiveStreamRecorder foi feito para salvar lives da Bigo. Cadastre-se grátis, adicione seu nome de usuário da Bigo e nunca mais perca uma live. Cada live é capturada automaticamente — um lugar permanente para o seu conteúdo da Bigo que não depende do app guardar por você.",
     "buzzcast": "## Gravações de Lives da Buzzcast\n\nAssista às gravações de lives da Buzzcast de criadores que usam o LiveStreamRecorder para salvar suas próprias lives. Cada live da Buzzcast é capturada automaticamente e armazenada para assistir quando quiser.\n\n### Lives da Buzzcast salvas antes de desaparecer\n\nLives da Buzzcast são só ao vivo — no momento em que você encerra a transmissão, o conteúdo desaparece do app. Nosso gravador da Buzzcast salva suas lives automaticamente na nuvem, para que nada se perca quando sua live acabar. Conversas, momentos musicais, conteúdo do dia a dia — tudo continua disponível para os fãs.\n\n### Assista e baixe suas gravações da Buzzcast\n\nToda gravação de live da Buzzcast fica disponível para assistir instantaneamente no navegador. Usuários Premium podem baixar suas gravações da Buzzcast como arquivos de vídeo para assistir offline — perfeito para reaproveitar seu próprio conteúdo ou guardar uma cópia pessoal.\n\n### Grave suas lives da Buzzcast sem apps extras\n\nEsqueça gravar a tela do celular ou rodar software de captura em segundo plano. O LiveStreamRecorder é um gravador da Buzzcast online que captura suas lives do lado do servidor. Sem gasto de bateria, sem configuração manual, sem software extra. Suas lives da Buzzcast são gravadas automaticamente em alta qualidade, de qualquer dispositivo.\n\n### Transforme suas lives em cortes com ClipAI\n\nQuer transformar suas gravações de lives da Buzzcast em cortes curtos? O ClipAI analisa suas lives gravadas e cria cortes de destaques prontos para postar no TikTok, Instagram Reels ou YouTube Shorts. Faça sua comunidade crescer além da Buzzcast reaproveitando seus melhores momentos.\n\n### O melhor gravador de Buzzcast para criadores\n\nO LiveStreamRecorder foi feito para salvar lives da Buzzcast. Cadastre-se grátis, adicione seu nome de usuário da Buzzcast e nunca mais perca uma live. Cada live é capturada automaticamente — sua biblioteca permanente de conteúdo da Buzzcast.",
-    "liveme": "## Gravações de Lives da LiveMe\n\nAssista às gravações de lives da LiveMe de criadores que usam o LiveStreamRecorder para salvar suas próprias lives. Cada live da LiveMe é capturada automaticamente e armazenada para assistir quando quiser.\n\n### Lives da LiveMe salvas antes de desaparecer\n\nLives da LiveMe são só ao vivo — no momento em que você encerra a transmissão, o conteúdo desaparece do app. Nosso gravador da LiveMe salva suas lives automaticamente na nuvem, para que nada se perca quando sua live acabar. Conversas, momentos musicais, conteúdo do dia a dia — tudo continua disponível para os fãs.\n\n### Assista e baixe suas gravações da LiveMe\n\nToda gravação de live da LiveMe fica disponível para assistir instantaneamente no navegador. Usuários Premium podem baixar suas gravações da LiveMe como arquivos de vídeo para assistir offline — perfeito para reaproveitar seu próprio conteúdo ou guardar uma cópia pessoal.\n\n### Grave suas lives da LiveMe sem apps extras\n\nEsqueça gravar a tela do celular ou rodar software de captura em segundo plano. O LiveStreamRecorder é um gravador da LiveMe online que captura suas lives do lado do servidor. Sem gasto de bateria, sem configuração manual, sem software extra. Suas lives da LiveMe são gravadas automaticamente em alta qualidade, de qualquer dispositivo.\n\n### Transforme suas lives em cortes com ClipAI\n\nQuer transformar suas gravações de lives da LiveMe em cortes curtos? O ClipAI analisa suas lives gravadas e cria cortes de destaques prontos para postar no TikTok, Instagram Reels ou YouTube Shorts. Faça sua comunidade crescer além da LiveMe reaproveitando seus melhores momentos.\n\n### O melhor gravador de LiveMe para criadores\n\nO LiveStreamRecorder foi feito para salvar lives da LiveMe. Cadastre-se grátis, adicione seu nome de usuário da LiveMe e nunca mais perca uma live. Cada live é capturada automaticamente — sua biblioteca permanente de conteúdo da LiveMe."
+    "liveme": "## Gravações de Lives da LiveMe\n\nAssista às gravações de lives da LiveMe de criadores que usam o LiveStreamRecorder para salvar suas próprias lives. Cada live da LiveMe é capturada automaticamente e armazenada para assistir quando quiser.\n\n### Lives da LiveMe salvas antes de desaparecer\n\nLives da LiveMe são só ao vivo — no momento em que você encerra a transmissão, o conteúdo desaparece do app. Nosso gravador da LiveMe salva suas lives automaticamente na nuvem, para que nada se perca quando sua live acabar. Conversas, momentos musicais, conteúdo do dia a dia — tudo continua disponível para os fãs.\n\n### Assista e baixe suas gravações da LiveMe\n\nToda gravação de live da LiveMe fica disponível para assistir instantaneamente no navegador. Usuários Premium podem baixar suas gravações da LiveMe como arquivos de vídeo para assistir offline — perfeito para reaproveitar seu próprio conteúdo ou guardar uma cópia pessoal.\n\n### Grave suas lives da LiveMe sem apps extras\n\nEsqueça gravar a tela do celular ou rodar software de captura em segundo plano. O LiveStreamRecorder é um gravador da LiveMe online que captura suas lives do lado do servidor. Sem gasto de bateria, sem configuração manual, sem software extra. Suas lives da LiveMe são gravadas automaticamente em alta qualidade, de qualquer dispositivo.\n\n### Transforme suas lives em cortes com ClipAI\n\nQuer transformar suas gravações de lives da LiveMe em cortes curtos? O ClipAI analisa suas lives gravadas e cria cortes de destaques prontos para postar no TikTok, Instagram Reels ou YouTube Shorts. Faça sua comunidade crescer além da LiveMe reaproveitando seus melhores momentos.\n\n### O melhor gravador de LiveMe para criadores\n\nO LiveStreamRecorder foi feito para salvar lives da LiveMe. Cadastre-se grátis, adicione seu nome de usuário da LiveMe e nunca mais perca uma live. Cada live é capturada automaticamente — sua biblioteca permanente de conteúdo da LiveMe.",
+    "tango": "## Gravações de Lives da Tango\n\nAssista às gravações de lives da Tango de criadores que usam o LiveStreamRecorder para salvar suas próprias lives. Cada live da Tango é capturada automaticamente e armazenada para assistir quando quiser.\n\n### Lives da Tango salvas antes de desaparecer\n\nLives da Tango são só ao vivo — no momento em que você encerra a transmissão, o conteúdo desaparece do app. Nosso gravador da Tango salva suas lives automaticamente na nuvem, para que nada se perca quando sua live acabar. Conversas, momentos musicais, conteúdo do dia a dia — tudo continua disponível para os fãs.\n\n### Assista e baixe suas gravações da Tango\n\nToda gravação de live da Tango fica disponível para assistir instantaneamente no navegador. Usuários Premium podem baixar suas gravações da Tango como arquivos de vídeo para assistir offline — perfeito para reaproveitar seu próprio conteúdo ou guardar uma cópia pessoal.\n\n### Grave suas lives da Tango sem apps extras\n\nEsqueça gravar a tela do celular ou rodar software de captura em segundo plano. O LiveStreamRecorder é um gravador da Tango online que captura suas lives do lado do servidor. Sem gasto de bateria, sem configuração manual, sem software extra. Suas lives da Tango são gravadas automaticamente em alta qualidade, de qualquer dispositivo.\n\n### Transforme suas lives em cortes com ClipAI\n\nQuer transformar suas gravações de lives da Tango em cortes curtos? O ClipAI analisa suas lives gravadas e cria cortes de destaques prontos para postar no TikTok, Instagram Reels ou YouTube Shorts. Faça sua comunidade crescer além da Tango reaproveitando seus melhores momentos.\n\n### O melhor gravador de Tango para criadores\n\nO LiveStreamRecorder foi feito para salvar lives da Tango. Cadastre-se grátis, adicione seu nome de usuário da Tango e nunca mais perca uma live. Cada live é capturada automaticamente — sua biblioteca permanente de conteúdo da Tango."
   },
   "jsonLd": {
     "name": {
@@ -449,7 +504,8 @@
       "pandalive": "Gravações de Streams do Pandalive",
       "bigo": "Gravações de Streams do Bigo",
       "buzzcast": "Gravações de Streams do Buzzcast",
-      "liveme": "Gravações de Streams do LiveMe"
+      "liveme": "Gravações de Streams do LiveMe",
+      "tango": "Gravações de Streams do Tango"
     },
     "description": {
       "all": "Assista gravações de lives de criadores no LiveStreamRecorder.",
@@ -461,7 +517,8 @@
       "pandalive": "Assista gravações do Pandalive de criadores no LiveStreamRecorder.",
       "bigo": "Assista gravações do Bigo de criadores no LiveStreamRecorder.",
       "buzzcast": "Assista gravações do Buzzcast de criadores no LiveStreamRecorder.",
-      "liveme": "Assista gravações do LiveMe de criadores no LiveStreamRecorder."
+      "liveme": "Assista gravações do LiveMe de criadores no LiveStreamRecorder.",
+      "tango": "Assista gravações do Tango de criadores no LiveStreamRecorder."
     },
     "streamTitle": "Stream de {nickname} - {date}",
     "streamDescription": {
@@ -474,7 +531,8 @@
       "bigo": "Gravação do Bigo de {nickname}",
       "unknown": "Gravação de live de {nickname}",
       "buzzcast": "Gravação do Buzzcast de {nickname}",
-      "liveme": "Gravação do LiveMe de {nickname}"
+      "liveme": "Gravação do LiveMe de {nickname}",
+      "tango": "Gravação do Tango de {nickname}"
     }
   },
   "recordedOn": "Gravado em {date}",

@@ -35,6 +35,7 @@ export const navConfig = {
     { key: "pandalive", label: "PandaLive", href: "/creators/pandalive" },
     { key: "bigo", label: "Bigo", href: "/creators/bigo" },
     { key: "buzzcast", label: "Buzzcast", href: "/creators/buzzcast" },
+    { key: "tango", label: "Tango", href: "/creators/tango" },
     { key: "liveme", label: "LiveMe", href: "/creators/liveme" },
   ],
   watchRecordings: [
@@ -47,6 +48,7 @@ export const navConfig = {
     { key: "pandalive", label: "PandaLive", href: "/recordings/pandalive" },
     { key: "bigo", label: "Bigo", href: "/recordings/bigo" },
     { key: "buzzcast", label: "Buzzcast", href: "/recordings/buzzcast" },
+    { key: "tango", label: "Tango", href: "/recordings/tango" },
     { key: "liveme", label: "LiveMe", href: "/recordings/liveme" },
   ],
   legal: [

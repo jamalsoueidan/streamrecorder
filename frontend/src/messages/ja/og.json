@@ -13,7 +13,8 @@
       "afreecatv": "AfreecaTV クリエイター",
       "bigo": "Bigo クリエイター",
       "buzzcast": "Buzzcast クリエイター",
-      "liveme": "ライブミー クリエイター"
+      "liveme": "ライブミー クリエイター",
+      "tango": "Tango クリエイター"
     },
     "subtitle": {
       "all": "すべてのストリーマー・クリエイターを探す",
@@ -25,7 +26,8 @@
       "afreecatv": "AfreecaTV クリエイターを見つける",
       "bigo": "Bigo クリエイターを見つける",
       "buzzcast": "Buzzcast クリエイターを見つける",
-      "liveme": "ライブミー クリエイターを見つける"
+      "liveme": "ライブミー クリエイターを見つける",
+      "tango": "Tango クリエイターを見つける"
     }
   },
   "recordings": {
@@ -39,7 +41,8 @@
       "afreecatv": "AfreecaTV 録画",
       "bigo": "Bigo 録画",
       "buzzcast": "Buzzcast 録画",
-      "liveme": "ライブミー 録画"
+      "liveme": "ライブミー 録画",
+      "tango": "Tango 録画"
     },
     "subtitle": {
       "all": "録画済みライブ配信を視聴",
@@ -51,7 +54,8 @@
       "afreecatv": "録画された AfreecaTV 配信を視聴",
       "bigo": "録画された Bigo 配信を視聴",
       "buzzcast": "録画された Buzzcast 配信を視聴",
-      "liveme": "録画された ライブミー 配信を視聴"
+      "liveme": "録画された ライブミー 配信を視聴",
+      "tango": "録画された Tango 配信を視聴"
     }
   },
   "home": {

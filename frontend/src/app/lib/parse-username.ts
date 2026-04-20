@@ -120,6 +120,17 @@ export function parseUsername(input: string): ParsedUsername {
     };
   }
 
+  // Tango URL pattern
+  const tangoRegex = /(?:https?:\/\/)?(?:www\.)?tango\.me\/([^\/\s?]+)/i;
+  const tangoMatch = trimmed.match(tangoRegex);
+
+  if (tangoMatch) {
+    return {
+      username: tangoMatch[1],
+      platform: "tango",
+    };
+  }
+
   // LiveMe URL pattern
   const livemeRegex =
     /(?:https?:\/\/)?(?:www\.)?liveme\.com\/(?:[a-z]{2}\/)?u\/([^\/\s?]+)/i;

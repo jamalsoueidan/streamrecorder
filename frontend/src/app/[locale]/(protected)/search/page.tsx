@@ -60,6 +60,7 @@ const ALL_PLATFORMS: PlatformType[] = [
   "pandalive",
   "bigo",
   "buzzcast",
+  "tango",
   "liveme",
 ];
 

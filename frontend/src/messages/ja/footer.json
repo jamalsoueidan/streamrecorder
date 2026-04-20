@@ -23,7 +23,8 @@
     "pandalive": "Pandalive クリエイター",
     "bigo": "Bigo クリエイター",
     "buzzcast": "Buzzcast クリエイター",
-    "liveme": "ライブミー クリエイター"
+    "liveme": "ライブミー クリエイター",
+    "tango": "Tango クリエイター"
   },
   "watchRecordings": {
     "title": "録画を視聴",
@@ -36,7 +37,8 @@
     "pandalive": "Pandalive 録画",
     "bigo": "Bigo 録画",
     "buzzcast": "Buzzcast 録画",
-    "liveme": "ライブミー 録画"
+    "liveme": "ライブミー 録画",
+    "tango": "Tango 録画"
   },
   "legal": {
     "title": "法的情報",

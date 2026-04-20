@@ -90,6 +90,15 @@ export const usePlatformOptions = () => {
       ),
     },
     {
+      value: "tango",
+      label: (
+        <Center style={{ gap: 8 }}>
+          <IconBrandFunimation size={18} />
+          <Text size="sm">{t("platforms.tango")}</Text>
+        </Center>
+      ),
+    },
+    {
       value: "liveme",
       label: (
         <Center style={{ gap: 8 }}>
@@ -146,6 +155,11 @@ export const PLATFORM_OPTIONS = [
   {
     value: "buzzcast",
     labelKey: "platforms.buzzcast",
+    icon: IconBrandFunimation,
+  },
+  {
+    value: "tango",
+    labelKey: "platforms.tango",
     icon: IconBrandFunimation,
   },
   {

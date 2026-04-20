@@ -3,12 +3,10 @@
   "descriptionPremium": "You have access to everything LiveStreamRecorder has to offer",
   "descriptionNonPremium": "Get instant access to everything LiveStreamRecorder has to offer",
   "descriptionShort": "Get instant access to everything",
-
   "billingPeriodMonthly": "monthly",
   "billingPeriodQuarterly": "quarterly",
   "billingPeriodAnnual": "annual",
   "billingPeriodLifetime": "lifetime",
-
   "billing1MonthLabel": "1 Month",
   "billing3MonthsLabel": "3 Months",
   "billing3MonthsSavings": "1 month free",
@@ -18,10 +16,8 @@
   "billingLifetimeLabel": "Lifetime",
   "billingLifetimeSavings": "Pay once, use forever",
   "billingLifetimeBadge": "Limited",
-
   "currentPlanRecord": "Record up to 3 of your own channels",
   "currentPlanWatch": "Watch your recordings",
-
   "premiumRecord100": "Record 100 of your own channels",
   "premiumFullControl": "Full control over your recordings",
   "premiumNotifications": "Notifications when ready",
@@ -34,11 +30,9 @@
   "premiumPrioritySupport": "Priority support",
   "premiumTiktokInsights": "TikTok live insights",
   "premiumDownloadRecordings": "Download your recordings",
-
   "paymentMethod": "Payment Method",
   "freemiusDescription": "Credit Card, PayPal, and more",
   "stripeDescription": "Credit Card, Google Pay, Apple Pay and more",
-
   "yourCurrentPlan": "Your Current Plan",
   "currentPlan": "Current Plan",
   "free": "Free",
@@ -49,26 +43,21 @@
   "lifetimeMessage": "You have lifetime access to all premium features. Thank you for your support!",
   "cancelSubscription": "Cancel subscription",
   "supportMessage": "LiveStreamRecorder is a one-person project. Your support helps keep the servers running and new features coming. Thank you!",
-
   "choosePlan": "Choose Your Plan",
   "perMonth": "${price}/mo",
   "oneTime": "one-time",
-
   "yourPremiumFeatures": "Your Premium Features",
   "unlockPremiumFeatures": "Unlock Premium Features",
   "futureFeatures": "Premium includes all future features as they're released.",
   "seeWhatsNew": "See what's new",
-
   "plan": "Plan",
   "subtotal": "Subtotal",
   "discount": "Discount",
   "total": "Total",
-
   "vatNotice": "* The applicable Value Added Tax (VAT) will be calculated and added to your total during the final payment process.",
   "subscribe": "Subscribe Now",
   "buyNow": "Buy Now",
   "securePayment": "Secure payment",
-
   "cancelModalTitle": "Cancel Subscription",
   "cancelModalMessage": "We're sorry to see you go! If you cancel, you'll still have access to premium features until {endDate}.",
   "cancelModalAfter": "After that, your account will return to the free plan.",

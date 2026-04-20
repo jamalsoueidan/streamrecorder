@@ -13,7 +13,8 @@
       "afreecatv": "AfreecaTV Creators",
       "bigo": "Bigo Creators",
       "buzzcast": "Buzzcast Creators",
-      "liveme": "LiveMe Creators"
+      "liveme": "LiveMe Creators",
+      "tango": "Tango Creators"
     },
     "subtitle": {
       "all": "Browse all streamers and creators",
@@ -25,7 +26,8 @@
       "afreecatv": "Discover AfreecaTV creators",
       "bigo": "Discover Bigo creators",
       "buzzcast": "Discover Buzzcast creators",
-      "liveme": "Discover LiveMe creators"
+      "liveme": "Discover LiveMe creators",
+      "tango": "Discover Tango creators"
     }
   },
   "recordings": {
@@ -39,7 +41,8 @@
       "afreecatv": "AfreecaTV Recordings",
       "bigo": "Bigo Recordings",
       "buzzcast": "Buzzcast Recordings",
-      "liveme": "LiveMe Recordings"
+      "liveme": "LiveMe Recordings",
+      "tango": "Tango Recordings"
     },
     "subtitle": {
       "all": "Watch recorded live streams",
@@ -51,7 +54,8 @@
       "afreecatv": "Watch recorded AfreecaTV streams",
       "bigo": "Watch recorded Bigo streams",
       "buzzcast": "Watch recorded Buzzcast streams",
-      "liveme": "Watch recorded LiveMe streams"
+      "liveme": "Watch recorded LiveMe streams",
+      "tango": "Watch recorded Tango streams"
     }
   },
   "home": {
