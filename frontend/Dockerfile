@@ -47,4 +47,4 @@ COPY --from=builder /app/public ./public
 
 EXPOSE 3000
 
-CMD ["node", "--max-old-space-size=2048", "server.js"]
+CMD ["server.js"]
