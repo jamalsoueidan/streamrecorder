@@ -5,6 +5,7 @@ import publicApi from "@/lib/public-api";
 const STRAPI_PAGE_SIZE = 100;
 const URLS_PER_SITEMAP = 1000;
 
+export const dynamic = "force-dynamic";
 export const revalidate = 3600;
 
 export async function GET(

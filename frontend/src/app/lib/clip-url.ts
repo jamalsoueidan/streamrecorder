@@ -12,8 +12,7 @@ export function getClipUrl(
 ): string {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
   if (baseUrl && path && PUBLIC_FILES.has(file)) {
-    const host = new URL(baseUrl).hostname.replace(/^www\./, "");
-    return `https://clip.${host}${path}${documentId}/${file}`;
+    return `https://clip.livestreamrecorder.net${path}${documentId}/${file}`;
   }
   return `/clip/${documentId}/${file}`;
 }

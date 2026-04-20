@@ -66,5 +66,17 @@
     "unfollowUpgradeTitle": "Kelola kreator sesukamu dengan premium"
   },
   "newest": "Terbaru",
-  "oldest": "Terlama"
+  "oldest": "Terlama",
+  "expired": {
+    "title": "Paket Premium Anda Telah Berakhir",
+    "subtitle": "Kreator Anda tidak lagi direkam. Perpanjang sekarang dan lanjutkan dari terakhir kali — semua pengaturan Anda masih tersimpan.",
+    "renewButton": "Perpanjang Premium — Simpan Semuanya",
+    "or": "atau",
+    "loseTitle": "Jika Anda downgrade, Anda akan kehilangan secara permanen:",
+    "loseCreators": "Semua kreator yang diikuti dan rekaman",
+    "loseFavorites": "Semua favorit yang tersimpan",
+    "loseClips": "Klip, unduhan, dan fitur AI",
+    "losePremium": "Akses ke semua fitur premium",
+    "downgradeButton": "Downgrade"
+  }
 }

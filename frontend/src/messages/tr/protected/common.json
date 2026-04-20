@@ -66,5 +66,17 @@
     "unfollowUpgradeTitle": "Premium ile içerik üreticilerinizi istediğiniz gibi yönetin"
   },
   "newest": "En Yeni",
-  "oldest": "En Eski"
+  "oldest": "En Eski",
+  "expired": {
+    "title": "Premium Aboneliğiniz Sona Erdi",
+    "subtitle": "İçerik üreticileriniz artık kaydedilmiyor. Hemen yenileyin ve kaldığınız yerden devam edin — tüm ayarlarınız korunuyor.",
+    "renewButton": "Premium'u Yenile — Her Şeyi Koru",
+    "or": "veya",
+    "loseTitle": "Düşürürseniz kalıcı olarak kaybedersiniz:",
+    "loseCreators": "Tüm takip ettiğiniz içerik üreticileri ve kayıtlar",
+    "loseFavorites": "Tüm kayıtlı favorileriniz",
+    "loseClips": "Klipler, indirmeler ve yapay zeka özellikleri",
+    "losePremium": "Tüm premium özelliklere erişim",
+    "downgradeButton": "Düşür"
+  }
 }

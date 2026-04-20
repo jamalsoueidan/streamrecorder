@@ -22,6 +22,7 @@ import {
   IconWorld,
 } from "@tabler/icons-react";
 import { useTranslations } from "next-intl";
+import { ExpiredSubscriptionModal } from "./expired-subscription-modal";
 import { MobileBar } from "./mobilebar";
 import { Navbar } from "./navbar";
 
@@ -276,6 +277,7 @@ export function Shell({
             </Flex>
           )}
           {children}
+          <ExpiredSubscriptionModal />
         </AppShell.Main>
         <AppShell.Footer>
           <MobileBar />

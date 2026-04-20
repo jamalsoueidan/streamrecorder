@@ -141,7 +141,7 @@ export function ImageSpritePreview({ recording, type, username }: Props) {
         />
         {showVideo && !isRecording && sources && sources.length > 0 && (
           <SpritePreview
-            baseUrl={`/video/${recording.documentId}/thumbnails.jpg`}
+            baseUrl={getImageUrl(recording.documentId!, "thumbnails.jpg", firstDoneSource)}
             sources={sources}
           />
         )}

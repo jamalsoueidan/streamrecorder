@@ -66,5 +66,17 @@
     "unfollowUpgradeTitle": "프리미엄으로 크리에이터를 자유롭게 관리하세요"
   },
   "newest": "최신순",
-  "oldest": "오래된순"
+  "oldest": "오래된순",
+  "expired": {
+    "title": "프리미엄 구독이 만료되었습니다",
+    "subtitle": "크리에이터의 방송이 더 이상 녹화되지 않습니다. 지금 갱신하면 기존 설정 그대로 바로 이어서 이용할 수 있습니다.",
+    "renewButton": "프리미엄 갱신 — 모든 것 유지",
+    "or": "또는",
+    "loseTitle": "다운그레이드 시 영구적으로 잃게 됩니다:",
+    "loseCreators": "팔로우한 모든 크리에이터와 녹화본",
+    "loseFavorites": "저장한 모든 즐겨찾기",
+    "loseClips": "클립, 다운로드 및 AI 기능",
+    "losePremium": "모든 프리미엄 기능 이용",
+    "downgradeButton": "다운그레이드"
+  }
 }

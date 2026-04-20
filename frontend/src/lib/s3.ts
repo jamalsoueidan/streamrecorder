@@ -46,8 +46,7 @@ export function getS3(): S3Client {
 export function proxySignedUrl(url: string): string {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
   if (!baseUrl) return url;
-  const host = new URL(baseUrl).hostname.replace(/^www\./, "");
-  return url.replace("nbg1.your-objectstorage.com", `media.${host}`);
+  return url.replace("nbg1.your-objectstorage.com", "media.livestreamrecorder.net");
 }
 
 export function getBucket(
