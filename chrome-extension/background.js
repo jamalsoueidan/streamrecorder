@@ -76,7 +76,7 @@ function isSupportedSite(urlString) {
   const supported = [
     "tiktok.com", "twitch.tv", "kick.com", "youtube.com",
     "afreecatv.com", "sooplive.co.kr", "pandalive.co.kr", "bigo.tv",
-    "buzzcast.com", "liveme.com",
+    "buzzcast.com", "tango.me", "liveme.com",
   ];
   return supported.some((d) => hostname === d || hostname.endsWith("." + d));
 }
@@ -165,6 +165,13 @@ function parseProfileUrl(urlString) {
   if (hostname === "buzzcast.com" || hostname.endsWith(".buzzcast.com")) {
     const match = path.match(/^\/web\/personalInfo\/([A-Za-z0-9_]+)/);
     if (match) return { platform: "buzzcast", username: match[1] };
+    return null;
+  }
+
+  // Tango: tango.me/username
+  if (hostname === "tango.me" || hostname.endsWith(".tango.me")) {
+    const match = path.match(/^\/([A-Za-z0-9_.-]+)/);
+    if (match) return { platform: "tango", username: match[1] };
     return null;
   }
 
