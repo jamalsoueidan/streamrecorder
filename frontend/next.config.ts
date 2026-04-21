@@ -1,5 +1,4 @@
 import { loadEnvConfig } from "@next/env";
-import { withSentryConfig } from "@sentry/nextjs";
 import type { NextConfig } from "next";
 import createNextIntlPlugin from "next-intl/plugin";
 
@@ -62,11 +61,4 @@ const nextConfig: NextConfig = {
 
 const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 
-export default withSentryConfig(withNextIntl(nextConfig), {
-  sentryUrl: "https://glitchtip.livestreamrecorder.com",
-  org: process.env.GLITCHTIP_ORG,
-  project: process.env.GLITCHTIP_PROJECT,
-  authToken: process.env.GLITCHTIP_AUTH_TOKEN,
-  silent: !process.env.CI,
-  widenClientFileUpload: true,
-});
+export default withNextIntl(nextConfig);

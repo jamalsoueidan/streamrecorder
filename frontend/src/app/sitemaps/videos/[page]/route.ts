@@ -4,7 +4,7 @@ import { routing } from "@/i18n/routing";
 import publicApi from "@/lib/public-api";
 
 const STRAPI_PAGE_SIZE = 100;
-const STRAPI_PAGES_PER_SITEMAP = 10;
+const PAGES_PER_SITEMAP = 5;
 
 export const dynamic = "force-dynamic";
 export const revalidate = 3600;
@@ -17,39 +17,32 @@ export async function GET(
   const sitemapPage = parseInt(page);
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
-  const startPage = (sitemapPage - 1) * STRAPI_PAGES_PER_SITEMAP + 1;
+  const startPage = (sitemapPage - 1) * PAGES_PER_SITEMAP + 1;
 
-  const allRecordings = [];
-  for (let i = 0; i < STRAPI_PAGES_PER_SITEMAP; i++) {
-    const response = await publicApi.recording.getRecordings({
-      filters: {
-        sources: {
-          state: {
-            $eq: "done",
-          },
-          duration: {
-            $gt: 60,
+  const results = await Promise.all(
+    Array.from({ length: PAGES_PER_SITEMAP }, (_, i) =>
+      publicApi.recording.getRecordings({
+        filters: {
+          sources: {
+            state: { $eq: "done" },
+            duration: { $gt: 60 },
           },
         },
-      },
-      populate: {
-        follower: {
-          fields: ["username", "type", "nickname"],
+        populate: {
+          follower: {
+            fields: ["username", "type", "nickname"],
+          },
+          sources: {
+            fields: ["state", "path", "duration", "bucket"],
+          },
         },
-        sources: {
-          fields: ["state", "path", "duration", "bucket"],
-        },
-      },
-      "pagination[page]": startPage + i,
-      "pagination[pageSize]": STRAPI_PAGE_SIZE,
-    });
+        "pagination[page]": startPage + i,
+        "pagination[pageSize]": STRAPI_PAGE_SIZE,
+      }),
+    ),
+  );
 
-    if (response.data.data?.length) {
-      allRecordings.push(...response.data.data);
-    } else {
-      break;
-    }
-  }
+  const allRecordings = results.flatMap((r) => r.data.data || []);
 
   const urls = allRecordings
     .map((r) => {

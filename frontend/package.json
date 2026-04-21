@@ -28,7 +28,6 @@
     "@next/env": "^16.2.4",
     "@player.style/microvideo": "^0.1.2",
     "@player.style/yt": "^0.2.1",
-    "@sentry/nextjs": "10.49.0",
     "@serwist/turbopack": "^9.5.7",
     "@tabler/icons-react": "^3.41.1",
     "@tanstack/react-query": "^5.99.2",
