@@ -306,6 +306,55 @@
           "answer": "Yes. Premium users can use ClipAI to automatically turn their Buzzcast Live recordings into short highlight clips ready for TikTok, YouTube Shorts, or Reels. It's a great way to repurpose your live content and grow your following across platforms."
         }
       ]
+    },
+    "liveme": {
+      "title": "LiveMe Live Recordings",
+      "description": "Watch and download LiveMe Live recordings on LiveStreamRecorder. Your LiveMe Lives are captured automatically in the cloud — no black screen issues, no screen recorder needed. The easiest LiveMe Live recorder for creators.",
+      "keywords": [
+        "liveme recorder",
+        "liveme live recorder",
+        "liveme live record",
+        "liveme live screen recorder",
+        "screen record liveme live",
+        "screen recorder for liveme live",
+        "liveme screen record",
+        "liveme black screen recording",
+        "liveme live screen recorder black screen",
+        "liveme record black screen",
+        "liveme screen recorder black screen",
+        "record liveme black screen",
+        "save liveme live"
+      ],
+      "faqs": [
+        {
+          "question": "How do I record my LiveMe Lives?",
+          "answer": "With LiveStreamRecorder, your LiveMe Lives are recorded automatically in the cloud. Sign up, add your LiveMe Live username, and every time you go live it's captured. No LiveMe Live recorder APK to install, no screen recording — everything happens server-side."
+        },
+        {
+          "question": "Why do I get a black screen when recording LiveMe Live?",
+          "answer": "Black screen issues are common when using screen recorders on LiveMe Live. LiveStreamRecorder avoids this entirely because it captures your LiveMe Lives directly from the cloud — no black screen, no workarounds, no unreliable screen recording apps."
+        },
+        {
+          "question": "How do I fix the LiveMe Live screen recorder black screen?",
+          "answer": "The easiest fix is to skip screen recording altogether. LiveStreamRecorder is a cloud-based LiveMe recorder that captures your Lives server-side in high quality. No black screen problems, no apps to configure — just add your username and your LiveMe Lives are recorded automatically."
+        },
+        {
+          "question": "Do I need a screen recorder for LiveMe Live?",
+          "answer": "No. Screen recorders for LiveMe Live often result in black screen issues or low quality captures. LiveStreamRecorder is a cloud-based LiveMe Live recorder that captures your streams automatically in high quality — no app to install, no black screen."
+        },
+        {
+          "question": "Can I record my LiveMe Lives for free?",
+          "answer": "Yes. Sign up for LiveStreamRecorder free and start recording your LiveMe Lives right away. Premium plans unlock downloading your recordings, ClipAI for automatic highlight clips, and extended storage."
+        },
+        {
+          "question": "Can I download my LiveMe Live recordings?",
+          "answer": "Yes. Premium users can download their LiveMe Live recordings as video files for offline viewing. Every recording can also be watched instantly in your browser without downloading."
+        },
+        {
+          "question": "Can I turn my LiveMe Live recordings into short clips?",
+          "answer": "Yes. Premium users can use ClipAI to automatically turn their LiveMe Live recordings into short highlight clips ready for TikTok, YouTube Shorts, or Reels. It's a great way to repurpose your live content and grow your following across platforms."
+        }
+      ]
     }
   },
   "hero": {
