@@ -52,6 +52,12 @@ export function proxy(request: NextRequest) {
     return NextResponse.next();
   }
 
+  // Skip rewrites for already-forwarded server actions to prevent infinite loops
+  // https://github.com/vercel/next.js/issues/84504
+  if (request.headers.has("x-action-forwarded")) {
+    return NextResponse.next();
+  }
+
   // Check for locale prefix
   const pathSegments = path.split("/");
   const firstSegment = pathSegments[1];
