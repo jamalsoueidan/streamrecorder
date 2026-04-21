@@ -3,7 +3,7 @@ import { routing } from "@/i18n/routing";
 import publicApi from "@/lib/public-api";
 
 const STRAPI_PAGE_SIZE = 100;
-const URLS_PER_SITEMAP = 1000;
+const PAGES_PER_SITEMAP = 5;
 
 export const dynamic = "force-dynamic";
 export const revalidate = 3600;
@@ -16,23 +16,19 @@ export async function GET(
   const sitemapPage = parseInt(page);
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
-  const strapiPagesPerSitemap = URLS_PER_SITEMAP / STRAPI_PAGE_SIZE;
-  const startPage = (sitemapPage - 1) * strapiPagesPerSitemap + 1;
+  const startPage = (sitemapPage - 1) * PAGES_PER_SITEMAP + 1;
 
-  const allFollowers = [];
-  for (let i = 0; i < strapiPagesPerSitemap; i++) {
-    const response = await publicApi.follower.browseFollowers({
-      hasRecordings: true,
-      "pagination[page]": startPage + i,
-      "pagination[pageSize]": 100,
-    });
+  const results = await Promise.all(
+    Array.from({ length: PAGES_PER_SITEMAP }, (_, i) =>
+      publicApi.follower.browseFollowers({
+        hasRecordings: true,
+        "pagination[page]": startPage + i,
+        "pagination[pageSize]": STRAPI_PAGE_SIZE,
+      }),
+    ),
+  );
 
-    if (response.data.data?.length) {
-      allFollowers.push(...response.data.data);
-    } else {
-      break;
-    }
-  }
+  const allFollowers = results.flatMap((r) => r.data.data || []);
 
   const urls = allFollowers
     .map((f) => {
