@@ -235,6 +235,16 @@
         "tango recording",
         "tango stream recorder"
       ]
+    },
+    "liveme": {
+      "title": "LiveMe Creators",
+      "description": "Discover LiveMe creators who use LiveStreamRecorder to record their live streams and turn them into short clips.",
+      "keywords": [
+        "liveme creators",
+        "liveme live stream",
+        "liveme recording",
+        "liveme stream recorder"
+      ]
     }
   },
   "hero": {

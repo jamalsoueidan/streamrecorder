@@ -2,6 +2,11 @@ import { S3Client } from "@aws-sdk/client-s3";
 import { NodeHttpHandler } from "@smithy/node-http-handler";
 import https from "https";
 
+// Suppress MaxListenersExceededWarning from AWS SDK S3 TLS sockets
+// This is a known false positive with Node.js 20+ and AWS SDK v3
+// https://github.com/aws/aws-sdk-js-v3/issues/4978
+process.setMaxListeners(0);
+
 const agent = new https.Agent({
   maxSockets: 200,
   keepAlive: true,

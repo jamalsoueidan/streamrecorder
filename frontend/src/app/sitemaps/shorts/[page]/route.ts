@@ -3,7 +3,7 @@ import { routing } from "@/i18n/routing";
 import publicApi from "@/lib/public-api";
 
 const STRAPI_PAGE_SIZE = 100;
-const STRAPI_PAGES_PER_SITEMAP = 10;
+const PAGES_PER_SITEMAP = 5;
 
 export const dynamic = "force-dynamic";
 export const revalidate = 3600;
@@ -16,26 +16,23 @@ export async function GET(
   const sitemapPage = Number.parseInt(page, 10);
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
-  const startPage = (sitemapPage - 1) * STRAPI_PAGES_PER_SITEMAP + 1;
+  const startPage = (sitemapPage - 1) * PAGES_PER_SITEMAP + 1;
 
-  const allClips = [];
-  for (let i = 0; i < STRAPI_PAGES_PER_SITEMAP; i++) {
-    const response = await publicApi.clip.getClips({
-      populate: {
-        follower: {
-          fields: ["username", "type", "nickname"],
+  const results = await Promise.all(
+    Array.from({ length: PAGES_PER_SITEMAP }, (_, i) =>
+      publicApi.clip.getClips({
+        populate: {
+          follower: {
+            fields: ["username", "type", "nickname"],
+          },
         },
-      },
-      "pagination[page]": startPage + i,
-      "pagination[pageSize]": STRAPI_PAGE_SIZE,
-    });
+        "pagination[page]": startPage + i,
+        "pagination[pageSize]": STRAPI_PAGE_SIZE,
+      }),
+    ),
+  );
 
-    if (response.data?.data?.length) {
-      allClips.push(...response.data.data);
-    } else {
-      break;
-    }
-  }
+  const allClips = results.flatMap((r) => r.data?.data || []);
 
   const urls = allClips
     .map((clip) => {
