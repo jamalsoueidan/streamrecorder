@@ -226,6 +226,16 @@
         "buzzcast stream recorder"
       ]
     },
+    "tango": {
+      "title": "Tango Creators",
+      "description": "Discover Tango creators who use LiveStreamRecorder to record their live streams and turn them into short clips.",
+      "keywords": [
+        "tango creators",
+        "tango live stream",
+        "tango recording",
+        "tango stream recorder"
+      ]
+    },
     "liveme": {
       "title": "LiveMe Creators",
       "description": "Discover LiveMe creators who use LiveStreamRecorder to record their live streams and turn them into short clips.",
@@ -248,7 +258,8 @@
       "afreecatv": "AfreecaTV Creators",
       "bigo": "Bigo Creators",
       "buzzcast": "Buzzcast Creators",
-      "liveme": "LiveMe Creators"
+      "liveme": "LiveMe Creators",
+      "tango": "Tango Creators"
     },
     "subtitle": {
       "all": "Join thousands of creators who use LiveStreamRecorder to save their streams and create short clips.",
@@ -260,7 +271,8 @@
       "afreecatv": "Join thousands of AfreecaTV creators who use LiveStreamRecorder to save their streams and create short clips.",
       "bigo": "Join thousands of Bigo creators who use LiveStreamRecorder to save their streams and create short clips.",
       "buzzcast": "Join thousands of Buzzcast creators who use LiveStreamRecorder to save their streams and create short clips.",
-      "liveme": "Join thousands of LiveMe creators who use LiveStreamRecorder to save their streams and create short clips."
+      "liveme": "Join thousands of LiveMe creators who use LiveStreamRecorder to save their streams and create short clips.",
+      "tango": "Join thousands of Tango creators who use LiveStreamRecorder to save their streams and create short clips."
     }
   },
   "features": {
@@ -275,7 +287,8 @@
       "afreecatv": "Record Your AfreecaTV Streams Automatically",
       "bigo": "Record Your Bigo Streams Automatically",
       "buzzcast": "Record Your Buzzcast Streams Automatically",
-      "liveme": "Record Your LiveMe Streams Automatically"
+      "liveme": "Record Your LiveMe Streams Automatically",
+      "tango": "Record Your Tango Streams Automatically"
     },
     "subtitle": "From live stream to short clips in minutes",
     "items": {
@@ -308,7 +321,8 @@
       "pandalive": "Record Your Pandalive Streams",
       "bigo": "Record Your Bigo Streams",
       "buzzcast": "Record Your Buzzcast Streams",
-      "liveme": "Record Your LiveMe Streams"
+      "liveme": "Record Your LiveMe Streams",
+      "tango": "Record Your Tango Streams"
     },
     "subtitle": {
       "all": "Join thousands of creators. Save your streams, create short clips with ClipAI, and grow your audience.",
@@ -320,7 +334,8 @@
       "pandalive": "Join thousands of Pandalive creators. Save your streams and create short clips with ClipAI.",
       "bigo": "Join thousands of Bigo creators. Save your streams and create short clips with ClipAI.",
       "buzzcast": "Join thousands of Buzzcast creators. Save your streams and create short clips with ClipAI.",
-      "liveme": "Join thousands of LiveMe creators. Save your streams and create short clips with ClipAI."
+      "liveme": "Join thousands of LiveMe creators. Save your streams and create short clips with ClipAI.",
+      "tango": "Join thousands of Tango creators. Save your streams and create short clips with ClipAI."
     },
     "button": "Start Recording Free"
   },
@@ -336,7 +351,8 @@
       "afreecatv": "Be the first AfreecaTV creator to join!",
       "bigo": "Be the first Bigo creator to join!",
       "buzzcast": "Be the first Buzzcast creator to join!",
-      "liveme": "Be the first LiveMe creator to join!"
+      "liveme": "Be the first LiveMe creator to join!",
+      "tango": "Be the first Tango creator to join!"
     },
     "button": "Get Started"
   },
@@ -350,7 +366,8 @@
     "afreecatv": "## AfreecaTV Creators\n\nDiscover AfreecaTV BJs who use LiveStreamRecorder to save their own Lives. Browse Korean creators, watch their recordings, and find new BJs to follow from Korea's original live streaming platform — home to gaming casters, IRL streamers, music performers, and chat personalities.\n\n### Why AfreecaTV BJs Record Their Lives\n\nAfreecaTV has its own VOD system, but replays aren't always saved, content can be taken down, and storage rules can change. AfreecaTV BJs use LiveStreamRecorder as an independent backup — every Live is captured automatically so your streaming history stays intact, no matter what happens on the original platform.\n\n### Browse Top AfreecaTV BJs\n\nExplore our AfreecaTV creators page to find BJs who save their own Lives on LiveStreamRecorder. Watch their recordings, catch up on long sessions you missed, and discover new AfreecaTV creators across StarCraft casting, gaming, IRL, music, and chat categories.\n\n### Your AfreecaTV Creator Page\n\nEvery AfreecaTV BJ on LiveStreamRecorder gets their own page where fans can browse all your recorded Lives. Sign up, add your AfreecaTV username, and your creator page is set up automatically — an independent backup of your content that doesn't depend on AfreecaTV's VOD policies.\n\n### From Long Sessions to Short Clips with ClipAI\n\nAfreecaTV Lives can run for hours. ClipAI analyzes your recorded Lives and pulls out the best moments automatically — clutch plays, reactions, funny exchanges, music highlights. Post them as TikTok clips, YouTube Shorts, or Reels to grow your audience beyond AfreecaTV.\n\n### Become an AfreecaTV Creator on LiveStreamRecorder\n\nSign up free, add your AfreecaTV username, and start saving your Lives today. Every Live is captured automatically — no dependence on AfreecaTV's VOD system, no manual uploads. Join the AfreecaTV BJs already using LiveStreamRecorder to keep every Live and reach fans across the globe.",
     "bigo": "## Bigo Live Creators\n\nDiscover Bigo Live creators who use LiveStreamRecorder to save their own Lives. Browse Bigo streamers, watch their recordings, and find new creators to follow from one of the largest global live streaming platforms — home to dance, music, chat, and entertainment creators from the Middle East, Asia, and beyond.\n\n### Why Bigo Creators Record Their Lives\n\nBigo Lives exist only while they're streaming — once you end the session, the content is gone from the app entirely. Bigo creators use LiveStreamRecorder to save every Live automatically, so your dance performances, singing sessions, chat moments, and gift interactions stay available for fans long after your Live ends.\n\n### Browse Top Bigo Creators\n\nExplore our Bigo creators page to find streamers who save their own Lives on LiveStreamRecorder. Watch their recordings, catch up on Lives you missed, and discover new Bigo creators across every category and language.\n\n### Your Bigo Creator Page\n\nEvery Bigo creator on LiveStreamRecorder gets their own page where fans can browse all your recorded Lives. Sign up, add your Bigo username, and your creator page is set up automatically — a permanent home for your content that lives beyond the disappearing nature of Bigo Lives.\n\n### From Lives to Clips — Grow Your Audience\n\nClipAI turns your recorded Bigo Lives into short highlight clips ready to post on TikTok, Instagram Reels, or YouTube Shorts. Dance moments, duets, fan interactions, musical performances — turn every Live into multiple pieces of content and grow your audience across every platform.\n\n### Become a Bigo Creator on LiveStreamRecorder\n\nSign up free, add your Bigo username, and start saving your Lives today. Every Live is captured automatically — no phone recording, no screen capture. Join the Bigo creators already using LiveStreamRecorder to keep every Live and reach fans worldwide.",
     "buzzcast": "## Buzzcast Creators\n\nDiscover Buzzcast creators who use LiveStreamRecorder to save their own Lives. Browse Buzzcast streamers, watch their recordings, and find new creators to follow from this mobile-first live streaming community.\n\n### Why Buzzcast Creators Record Their Lives\n\nBuzzcast Lives are live-only — once you end the stream, the content disappears from the app. There's no built-in replay system and no way for fans to catch up afterward. Buzzcast creators use LiveStreamRecorder to save every Live automatically, so your chat sessions, music performances, and daily content stay available for fans long after the Live ends.\n\n### Browse Top Buzzcast Creators\n\nExplore our Buzzcast creators page to find streamers who save their own Lives on LiveStreamRecorder. Watch their recordings, catch up on Lives you missed, and discover new Buzzcast creators worth following.\n\n### Your Buzzcast Creator Page\n\nEvery Buzzcast creator on LiveStreamRecorder gets their own page where fans can browse all your recorded Lives. Sign up, add your Buzzcast username, and your creator page is set up automatically — a permanent place for your content that doesn't vanish the moment your Live ends.\n\n### From Lives to Clips — Build Your Following\n\nClipAI turns your recorded Buzzcast Lives into short highlight clips ready to post on TikTok, Instagram Reels, or YouTube Shorts. Turn reactions, music moments, and chat highlights into shareable content and grow your following beyond Buzzcast.\n\n### Become a Buzzcast Creator on LiveStreamRecorder\n\nSign up free, add your Buzzcast username, and start saving your Lives today. Every Live is captured automatically — no manual recording, no extra apps. Join the Buzzcast creators already using LiveStreamRecorder to keep every Live and grow their audience.",
-    "liveme": "## LiveMe Creators\n\nDiscover LiveMe creators who use LiveStreamRecorder to save their own Lives. Browse LiveMe streamers, watch their recordings, and find new creators to follow from this mobile-first live streaming community.\n\n### Why LiveMe Creators Record Their Lives\n\nLiveMe Lives are live-only — once you end the stream, the content disappears from the app. There's no built-in replay system and no way for fans to catch up afterward. LiveMe creators use LiveStreamRecorder to save every Live automatically, so your chat sessions, music performances, and daily content stay available for fans long after the Live ends.\n\n### Browse Top LiveMe Creators\n\nExplore our LiveMe creators page to find streamers who save their own Lives on LiveStreamRecorder. Watch their recordings, catch up on Lives you missed, and discover new LiveMe creators worth following.\n\n### Your LiveMe Creator Page\n\nEvery LiveMe creator on LiveStreamRecorder gets their own page where fans can browse all your recorded Lives. Sign up, add your LiveMe username, and your creator page is set up automatically — a permanent place for your content that doesn't vanish the moment your Live ends.\n\n### From Lives to Clips — Build Your Following\n\nClipAI turns your recorded LiveMe Lives into short highlight clips ready to post on TikTok, Instagram Reels, or YouTube Shorts. Turn reactions, music moments, and chat highlights into shareable content and grow your following beyond LiveMe.\n\n### Become a LiveMe Creator on LiveStreamRecorder\n\nSign up free, add your LiveMe username, and start saving your Lives today. Every Live is captured automatically — no manual recording, no extra apps. Join the LiveMe creators already using LiveStreamRecorder to keep every Live and grow their audience."
+    "liveme": "## LiveMe Creators\n\nDiscover LiveMe creators who use LiveStreamRecorder to save their own Lives. Browse LiveMe streamers, watch their recordings, and find new creators to follow from this mobile-first live streaming community.\n\n### Why LiveMe Creators Record Their Lives\n\nLiveMe Lives are live-only — once you end the stream, the content disappears from the app. There's no built-in replay system and no way for fans to catch up afterward. LiveMe creators use LiveStreamRecorder to save every Live automatically, so your chat sessions, music performances, and daily content stay available for fans long after the Live ends.\n\n### Browse Top LiveMe Creators\n\nExplore our LiveMe creators page to find streamers who save their own Lives on LiveStreamRecorder. Watch their recordings, catch up on Lives you missed, and discover new LiveMe creators worth following.\n\n### Your LiveMe Creator Page\n\nEvery LiveMe creator on LiveStreamRecorder gets their own page where fans can browse all your recorded Lives. Sign up, add your LiveMe username, and your creator page is set up automatically — a permanent place for your content that doesn't vanish the moment your Live ends.\n\n### From Lives to Clips — Build Your Following\n\nClipAI turns your recorded LiveMe Lives into short highlight clips ready to post on TikTok, Instagram Reels, or YouTube Shorts. Turn reactions, music moments, and chat highlights into shareable content and grow your following beyond LiveMe.\n\n### Become a LiveMe Creator on LiveStreamRecorder\n\nSign up free, add your LiveMe username, and start saving your Lives today. Every Live is captured automatically — no manual recording, no extra apps. Join the LiveMe creators already using LiveStreamRecorder to keep every Live and grow their audience.",
+    "tango": "## Tango Creators\n\nDiscover Tango creators who use LiveStreamRecorder to save their own Lives. Browse Tango streamers, watch their recordings, and find new creators to follow from this mobile-first live streaming community.\n\n### Why Tango Creators Record Their Lives\n\nTango Lives are live-only — once you end the stream, the content disappears from the app. There's no built-in replay system and no way for fans to catch up afterward. Tango creators use LiveStreamRecorder to save every Live automatically, so your chat sessions, music performances, and daily content stay available for fans long after the Live ends.\n\n### Browse Top Tango Creators\n\nExplore our Tango creators page to find streamers who save their own Lives on LiveStreamRecorder. Watch their recordings, catch up on Lives you missed, and discover new Tango creators worth following.\n\n### Your Tango Creator Page\n\nEvery Tango creator on LiveStreamRecorder gets their own page where fans can browse all your recorded Lives. Sign up, add your Tango username, and your creator page is set up automatically — a permanent place for your content that doesn't vanish the moment your Live ends.\n\n### From Lives to Clips — Build Your Following\n\nClipAI turns your recorded Tango Lives into short highlight clips ready to post on TikTok, Instagram Reels, or YouTube Shorts. Turn reactions, music moments, and chat highlights into shareable content and grow your following beyond Tango.\n\n### Become a Tango Creator on LiveStreamRecorder\n\nSign up free, add your Tango username, and start saving your Lives today. Every Live is captured automatically — no manual recording, no extra apps. Join the Tango creators already using LiveStreamRecorder to keep every Live and grow their audience."
   },
   "faq": "Frequently Asked Questions",
   "country": {

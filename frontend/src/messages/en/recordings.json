@@ -307,6 +307,55 @@
         }
       ]
     },
+    "tango": {
+      "title": "Tango Live Recordings",
+      "description": "Watch and download Tango Live recordings on LiveStreamRecorder. Your Tango Lives are captured automatically in the cloud — no black screen issues, no screen recorder needed. The easiest Tango Live recorder for creators.",
+      "keywords": [
+        "tango recorder",
+        "tango live recorder",
+        "tango live record",
+        "tango live screen recorder",
+        "screen record tango live",
+        "screen recorder for tango live",
+        "tango screen record",
+        "tango black screen recording",
+        "tango live screen recorder black screen",
+        "tango record black screen",
+        "tango screen recorder black screen",
+        "record tango black screen",
+        "save tango live"
+      ],
+      "faqs": [
+        {
+          "question": "How do I record my Tango Lives?",
+          "answer": "With LiveStreamRecorder, your Tango Lives are recorded automatically in the cloud. Sign up, add your Tango Live username, and every time you go live it's captured. No Tango Live recorder APK to install, no screen recording — everything happens server-side."
+        },
+        {
+          "question": "Why do I get a black screen when recording Tango Live?",
+          "answer": "Black screen issues are common when using screen recorders on Tango Live. LiveStreamRecorder avoids this entirely because it captures your Tango Lives directly from the cloud — no black screen, no workarounds, no unreliable screen recording apps."
+        },
+        {
+          "question": "How do I fix the Tango Live screen recorder black screen?",
+          "answer": "The easiest fix is to skip screen recording altogether. LiveStreamRecorder is a cloud-based Tango recorder that captures your Lives server-side in high quality. No black screen problems, no apps to configure — just add your username and your Tango Lives are recorded automatically."
+        },
+        {
+          "question": "Do I need a screen recorder for Tango Live?",
+          "answer": "No. Screen recorders for Tango Live often result in black screen issues or low quality captures. LiveStreamRecorder is a cloud-based Tango Live recorder that captures your streams automatically in high quality — no app to install, no black screen."
+        },
+        {
+          "question": "Can I record my Tango Lives for free?",
+          "answer": "Yes. Sign up for LiveStreamRecorder free and start recording your Tango Lives right away. Premium plans unlock downloading your recordings, ClipAI for automatic highlight clips, and extended storage."
+        },
+        {
+          "question": "Can I download my Tango Live recordings?",
+          "answer": "Yes. Premium users can download their Tango Live recordings as video files for offline viewing. Every recording can also be watched instantly in your browser without downloading."
+        },
+        {
+          "question": "Can I turn my Tango Live recordings into short clips?",
+          "answer": "Yes. Premium users can use ClipAI to automatically turn their Tango Live recordings into short highlight clips ready for TikTok, YouTube Shorts, or Reels. It's a great way to repurpose your live content and grow your following across platforms."
+        }
+      ]
+    },
     "liveme": {
       "title": "LiveMe Live Recordings",
       "description": "Watch and download LiveMe Live recordings on LiveStreamRecorder. Your LiveMe Lives are captured automatically in the cloud — no black screen issues, no screen recorder needed. The easiest LiveMe Live recorder for creators.",
@@ -368,7 +417,8 @@
       "pandalive": "Pandalive Recordings",
       "bigo": "Bigo Recordings",
       "buzzcast": "Buzzcast Recordings",
-      "liveme": "LiveMe Recordings"
+      "liveme": "LiveMe Recordings",
+      "tango": "Tango Recordings"
     },
     "subtitle": {
       "all": "Watch live stream recordings from creators on our platform. Download and discover new content.",
@@ -380,7 +430,8 @@
       "pandalive": "Watch Pandalive recordings from creators on our platform. Download and discover new content.",
       "bigo": "Watch Bigo recordings from creators on our platform. Download and discover new content.",
       "buzzcast": "Watch Buzzcast recordings from creators on our platform. Download and discover new content.",
-      "liveme": "Watch LiveMe recordings from creators on our platform. Download and discover new content."
+      "liveme": "Watch LiveMe recordings from creators on our platform. Download and discover new content.",
+      "tango": "Watch Tango recordings from creators on our platform. Download and discover new content."
     }
   },
   "cta": {
@@ -394,7 +445,8 @@
       "afreecatv": "Record AfreecaTV Streams",
       "bigo": "Record Bigo Streams",
       "buzzcast": "Record Buzzcast Streams",
-      "liveme": "Record LiveMe Streams"
+      "liveme": "Record LiveMe Streams",
+      "tango": "Record Tango Streams"
     },
     "subtitle": {
       "all": "Automatically save your TikTok, Twitch, YouTube, and Kick streams. Download recordings, create short clips, and grow your audience.",
@@ -406,7 +458,8 @@
       "afreecatv": "Automatically save your AfreecaTV streams. Download recordings and create short clips with ClipAI.",
       "bigo": "Automatically save your Bigo streams. Download recordings and create short clips with ClipAI.",
       "buzzcast": "Automatically save your Buzzcast streams. Download recordings and create short clips with ClipAI.",
-      "liveme": "Automatically save your LiveMe streams. Download recordings and create short clips with ClipAI."
+      "liveme": "Automatically save your LiveMe streams. Download recordings and create short clips with ClipAI.",
+      "tango": "Automatically save your Tango streams. Download recordings and create short clips with ClipAI."
     },
     "button": "Start Recording Free"
   },
@@ -422,7 +475,8 @@
       "pandalive": "Be the first creator to record a Pandalive stream!",
       "bigo": "Be the first creator to record a Bigo stream!",
       "buzzcast": "Be the first creator to record a Buzzcast stream!",
-      "liveme": "Be the first creator to record a LiveMe stream!"
+      "liveme": "Be the first creator to record a LiveMe stream!",
+      "tango": "Be the first creator to record a Tango stream!"
     },
     "button": "Get Started"
   },
@@ -436,7 +490,8 @@
     "afreecatv": "## AfreecaTV Live Recordings\n\nWatch AfreecaTV live recordings from BJs who use LiveStreamRecorder to save their own Lives. Every AfreecaTV Live is captured automatically and stored for on-demand viewing.\n\n### AfreecaTV Lives Saved Independently\n\nAfreecaTV has its own VOD system, but replays aren't always saved, content can be taken down, and storage rules can change. Our AfreecaTV recorder saves your Lives automatically in the cloud as an independent backup — so your content stays intact, no matter what happens on AfreecaTV.\n\n### Watch and Download Your AfreecaTV Recordings\n\nEvery AfreecaTV recording is available to watch instantly in your browser — no ads, no interruptions. Premium users can download their AfreecaTV recordings as video files for offline viewing or content repurposing.\n\n### Record Your AfreecaTV Lives — No Screen Recorder Needed\n\nForget running capture software during long AfreecaTV sessions. LiveStreamRecorder is a cloud-based AfreecaTV recorder that captures your Lives server-side. No desktop app, no background recording, no extra CPU load. Stream from PC or mobile — your AfreecaTV Lives are recorded automatically in high quality.\n\n### Turn Long Lives Into Short Clips with ClipAI\n\nAfreecaTV Lives can run for hours. ClipAI analyzes your recorded Lives and pulls out the best moments — clutch plays, reactions, funny exchanges, highlights. Post them as TikTok clips, YouTube Shorts, or Reels to grow your audience beyond AfreecaTV.\n\n### The Best AfreecaTV Recorder for BJs\n\nLiveStreamRecorder is built for saving AfreecaTV Lives independently. Sign up free, add your AfreecaTV username, and never lose a Live again. Every stream is captured automatically — a permanent backup that doesn't depend on AfreecaTV's VOD system.",
     "bigo": "## Bigo Live Recordings\n\nWatch Bigo Live recordings from creators who use LiveStreamRecorder to save their own Lives. Every Bigo Live is captured automatically and stored for on-demand viewing.\n\n### Bigo Lives Saved Before They Disappear\n\nBigo Lives exist only while they're streaming — once you end the session, the content is gone from the app entirely. Our Bigo recorder saves your Lives automatically in the cloud so your content doesn't vanish the moment your Live ends. Dance performances, singing, chat moments, gift interactions — everything stays available.\n\n### Watch and Download Your Bigo Recordings\n\nEvery Bigo Live recording is available to watch instantly in your browser. Premium users can download their Bigo recordings as video files for offline viewing — perfect for repurposing your own content or keeping a personal copy.\n\n### Record Your Bigo Lives — No Screen Recorder Needed\n\nForget running screen capture on your phone or leaving an extra device recording all night. LiveStreamRecorder is an online Bigo recorder that captures your Lives server-side. No phone battery drain, no manual setup, no extra software. Whether you stream from iPhone, Android, or PC, your Bigo Lives are recorded in high quality automatically.\n\n### Turn Your Lives Into Clips with ClipAI\n\nWant to turn your Bigo Live recordings into short clips? ClipAI analyzes your recorded Lives and creates highlight clips ready to post on TikTok, Instagram Reels, or YouTube Shorts. Grow your audience worldwide by repurposing your best Bigo moments.\n\n### The Best Bigo Recorder for Creators\n\nLiveStreamRecorder is built for saving Bigo Lives. Sign up free, add your Bigo username, and never lose a Live again. Every stream is captured automatically — a permanent place for your Bigo content that doesn't depend on the app keeping it for you.",
     "buzzcast": "## Buzzcast Live Recordings\n\nWatch Buzzcast live recordings from creators who use LiveStreamRecorder to save their own Lives. Every Buzzcast Live is captured automatically and stored for on-demand viewing.\n\n### Buzzcast Lives Saved Before They Disappear\n\nBuzzcast Lives are live-only — once you end the stream, the content disappears from the app. Our Buzzcast recorder saves your Lives automatically in the cloud so nothing is lost when your Live finishes. Chat sessions, music moments, daily content — everything stays available for fans.\n\n### Watch and Download Your Buzzcast Recordings\n\nEvery Buzzcast Live recording is available to watch instantly in your browser. Premium users can download their Buzzcast recordings as video files for offline viewing — perfect for repurposing your own content or keeping a personal copy.\n\n### Record Your Buzzcast Lives — No Extra Apps Needed\n\nForget screen recording your phone or running capture software in the background. LiveStreamRecorder is an online Buzzcast recorder that captures your Lives server-side. No battery drain, no manual setup, no extra software. Your Buzzcast Lives are recorded in high quality automatically, from any device.\n\n### Turn Your Lives Into Clips with ClipAI\n\nWant to turn your Buzzcast Live recordings into short clips? ClipAI analyzes your recorded Lives and creates highlight clips ready to post on TikTok, Instagram Reels, or YouTube Shorts. Grow your following beyond Buzzcast by repurposing your best moments.\n\n### The Best Buzzcast Recorder for Creators\n\nLiveStreamRecorder is built for saving Buzzcast Lives. Sign up free, add your Buzzcast username, and never lose a Live again. Every stream is captured automatically — your permanent Buzzcast content library.",
-    "liveme": "## LiveMe Live Recordings\n\nWatch LiveMe live recordings from creators who use LiveStreamRecorder to save their own Lives. Every LiveMe Live is captured automatically and stored for on-demand viewing.\n\n### LiveMe Lives Saved Before They Disappear\n\nLiveMe Lives are live-only — once you end the stream, the content disappears from the app. Our LiveMe recorder saves your Lives automatically in the cloud so nothing is lost when your Live finishes. Chat sessions, music moments, daily content — everything stays available for fans.\n\n### Watch and Download Your LiveMe Recordings\n\nEvery LiveMe Live recording is available to watch instantly in your browser. Premium users can download their LiveMe recordings as video files for offline viewing — perfect for repurposing your own content or keeping a personal copy.\n\n### Record Your LiveMe Lives — No Extra Apps Needed\n\nForget screen recording your phone or running capture software in the background. LiveStreamRecorder is an online LiveMe recorder that captures your Lives server-side. No battery drain, no manual setup, no extra software. Your LiveMe Lives are recorded in high quality automatically, from any device.\n\n### Turn Your Lives Into Clips with ClipAI\n\nWant to turn your LiveMe Live recordings into short clips? ClipAI analyzes your recorded Lives and creates highlight clips ready to post on TikTok, Instagram Reels, or YouTube Shorts. Grow your following beyond LiveMe by repurposing your best moments.\n\n### The Best LiveMe Recorder for Creators\n\nLiveStreamRecorder is built for saving LiveMe Lives. Sign up free, add your LiveMe username, and never lose a Live again. Every stream is captured automatically — your permanent LiveMe content library."
+    "liveme": "## LiveMe Live Recordings\n\nWatch LiveMe live recordings from creators who use LiveStreamRecorder to save their own Lives. Every LiveMe Live is captured automatically and stored for on-demand viewing.\n\n### LiveMe Lives Saved Before They Disappear\n\nLiveMe Lives are live-only — once you end the stream, the content disappears from the app. Our LiveMe recorder saves your Lives automatically in the cloud so nothing is lost when your Live finishes. Chat sessions, music moments, daily content — everything stays available for fans.\n\n### Watch and Download Your LiveMe Recordings\n\nEvery LiveMe Live recording is available to watch instantly in your browser. Premium users can download their LiveMe recordings as video files for offline viewing — perfect for repurposing your own content or keeping a personal copy.\n\n### Record Your LiveMe Lives — No Extra Apps Needed\n\nForget screen recording your phone or running capture software in the background. LiveStreamRecorder is an online LiveMe recorder that captures your Lives server-side. No battery drain, no manual setup, no extra software. Your LiveMe Lives are recorded in high quality automatically, from any device.\n\n### Turn Your Lives Into Clips with ClipAI\n\nWant to turn your LiveMe Live recordings into short clips? ClipAI analyzes your recorded Lives and creates highlight clips ready to post on TikTok, Instagram Reels, or YouTube Shorts. Grow your following beyond LiveMe by repurposing your best moments.\n\n### The Best LiveMe Recorder for Creators\n\nLiveStreamRecorder is built for saving LiveMe Lives. Sign up free, add your LiveMe username, and never lose a Live again. Every stream is captured automatically — your permanent LiveMe content library.",
+    "tango": "## Tango Live Recordings\n\nWatch Tango live recordings from creators who use LiveStreamRecorder to save their own Lives. Every Tango Live is captured automatically and stored for on-demand viewing.\n\n### Tango Lives Saved Before They Disappear\n\nTango Lives are live-only — once you end the stream, the content disappears from the app. Our Tango recorder saves your Lives automatically in the cloud so nothing is lost when your Live finishes. Chat sessions, music moments, daily content — everything stays available for fans.\n\n### Watch and Download Your Tango Recordings\n\nEvery Tango Live recording is available to watch instantly in your browser. Premium users can download their Tango recordings as video files for offline viewing — perfect for repurposing your own content or keeping a personal copy.\n\n### Record Your Tango Lives — No Extra Apps Needed\n\nForget screen recording your phone or running capture software in the background. LiveStreamRecorder is an online Tango recorder that captures your Lives server-side. No battery drain, no manual setup, no extra software. Your Tango Lives are recorded in high quality automatically, from any device.\n\n### Turn Your Lives Into Clips with ClipAI\n\nWant to turn your Tango Live recordings into short clips? ClipAI analyzes your recorded Lives and creates highlight clips ready to post on TikTok, Instagram Reels, or YouTube Shorts. Grow your following beyond Tango by repurposing your best moments.\n\n### The Best Tango Recorder for Creators\n\nLiveStreamRecorder is built for saving Tango Lives. Sign up free, add your Tango username, and never lose a Live again. Every stream is captured automatically — your permanent Tango content library."
   },
   "jsonLd": {
     "name": {
@@ -449,7 +504,8 @@
       "pandalive": "Pandalive Stream Recordings",
       "bigo": "Bigo Stream Recordings",
       "buzzcast": "Buzzcast Stream Recordings",
-      "liveme": "LiveMe Stream Recordings"
+      "liveme": "LiveMe Stream Recordings",
+      "tango": "Tango Stream Recordings"
     },
     "description": {
       "all": "Watch live stream recordings from creators on LiveStreamRecorder.",
@@ -461,7 +517,8 @@
       "pandalive": "Watch Pandalive recordings from creators on LiveStreamRecorder.",
       "bigo": "Watch Bigo recordings from creators on LiveStreamRecorder.",
       "buzzcast": "Watch Buzzcast recordings from creators on LiveStreamRecorder.",
-      "liveme": "Watch LiveMe recordings from creators on LiveStreamRecorder."
+      "liveme": "Watch LiveMe recordings from creators on LiveStreamRecorder.",
+      "tango": "Watch Tango recordings from creators on LiveStreamRecorder."
     },
     "streamTitle": "{nickname} Stream - {date}",
     "streamDescription": {
@@ -474,7 +531,8 @@
       "bigo": "Bigo recording from {nickname}",
       "unknown": "Live stream recording from {nickname}",
       "buzzcast": "Buzzcast recording from {nickname}",
-      "liveme": "LiveMe recording from {nickname}"
+      "liveme": "LiveMe recording from {nickname}",
+      "tango": "Tango recording from {nickname}"
     }
   },
   "recordedOn": "Recorded on {date}",

@@ -23,7 +23,8 @@
     "pandalive": "Kreator Pandalive",
     "bigo": "Kreator Bigo",
     "buzzcast": "Kreator Buzzcast",
-    "liveme": "Kreator LiveMe"
+    "liveme": "Kreator LiveMe",
+    "tango": "Kreator Tango"
   },
   "watchRecordings": {
     "title": "Tonton Rekaman",
@@ -36,7 +37,8 @@
     "pandalive": "Rekaman Pandalive",
     "bigo": "Rekaman Bigo",
     "buzzcast": "Rekaman Buzzcast",
-    "liveme": "Rekaman LiveMe"
+    "liveme": "Rekaman LiveMe",
+    "tango": "Rekaman Tango"
   },
   "legal": {
     "title": "Legal",

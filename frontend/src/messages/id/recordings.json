@@ -355,6 +355,54 @@
           "answer": "Ya. Pengguna premium dapat menggunakan ClipAI untuk secara otomatis mengubah rekaman Live LiveMe menjadi klip sorotan pendek siap untuk TikTok, YouTube Shorts, atau Reels. Ini adalah cara yang bagus untuk memanfaatkan konten live Anda dan menumbuhkan pengikut di berbagai platform."
         }
       ]
+    },
+    "tango": {
+      "title": "Rekaman Live Tango",
+      "description": "Tonton dan unduh rekaman Live Tango di LiveStreamRecorder. Live Tango Anda direkam secara otomatis di cloud — tidak ada masalah layar hitam, tidak perlu screen recorder. Perekam Live Tango termudah untuk kreator.",
+      "keywords": [
+        "perekam tango",
+        "perekam live tango",
+        "rekam live tango",
+        "screen recorder live tango",
+        "screen record live tango",
+        "screen recorder untuk live tango",
+        "screen record tango",
+        "rekaman layar hitam tango",
+        "screen recorder live tango layar hitam",
+        "screen recorder tango layar hitam",
+        "rekam tango layar hitam",
+        "simpan live tango"
+      ],
+      "faqs": [
+        {
+          "question": "Bagaimana cara merekam Live Tango saya?",
+          "answer": "Dengan LiveStreamRecorder, Live Tango Anda direkam secara otomatis di cloud. Daftar, tambahkan username Tango Live Anda, dan setiap kali Anda live akan direkam. Tidak perlu instal APK perekam Tango Live, tidak perlu screen recording — semuanya terjadi dari sisi server."
+        },
+        {
+          "question": "Mengapa saya mendapatkan layar hitam saat merekam Tango Live?",
+          "answer": "Masalah layar hitam umum terjadi saat menggunakan screen recorder di Tango Live. LiveStreamRecorder menghindari ini sepenuhnya karena merekam Live Tango Anda langsung dari cloud — tidak ada layar hitam, tidak ada solusi alternatif, tidak ada aplikasi screen recording yang tidak dapat diandalkan."
+        },
+        {
+          "question": "Bagaimana cara memperbaiki masalah layar hitam screen recorder Tango Live?",
+          "answer": "Solusi termudah adalah melewati screen recording sama sekali. LiveStreamRecorder adalah perekam Tango berbasis cloud yang merekam Live Anda dari sisi server dalam kualitas tinggi. Tidak ada masalah layar hitam, tidak ada aplikasi yang perlu dikonfigurasi — cukup tambahkan username Anda dan Live Tango Anda direkam secara otomatis."
+        },
+        {
+          "question": "Apakah saya perlu screen recorder untuk Tango Live?",
+          "answer": "Tidak. Screen recorder untuk Tango Live sering mengakibatkan masalah layar hitam atau kualitas rekaman yang rendah. LiveStreamRecorder adalah perekam Tango Live berbasis cloud yang merekam stream Anda secara otomatis dalam kualitas tinggi — tidak perlu instal aplikasi, tidak ada layar hitam."
+        },
+        {
+          "question": "Bisakah saya merekam Live Tango saya secara gratis?",
+          "answer": "Ya. Daftar ke LiveStreamRecorder gratis dan mulai merekam Live Tango Anda segera. Paket premium membuka fitur unduhan rekaman, ClipAI untuk klip sorotan otomatis, dan penyimpanan yang diperluas."
+        },
+        {
+          "question": "Bisakah saya mengunduh rekaman Live Tango saya?",
+          "answer": "Ya. Pengguna premium dapat mengunduh rekaman Live Tango sebagai file video untuk ditonton secara offline. Setiap rekaman juga dapat ditonton langsung di browser Anda tanpa perlu mengunduh."
+        },
+        {
+          "question": "Bisakah saya mengubah rekaman Live Tango menjadi klip pendek?",
+          "answer": "Ya. Pengguna premium dapat menggunakan ClipAI untuk secara otomatis mengubah rekaman Live Tango menjadi klip sorotan pendek siap untuk TikTok, YouTube Shorts, atau Reels. Ini adalah cara yang bagus untuk memanfaatkan konten live Anda dan menumbuhkan pengikut di berbagai platform."
+        }
+      ]
     }
   },
   "hero": {
@@ -368,7 +416,8 @@
       "pandalive": "Rekaman Pandalive",
       "bigo": "Rekaman Bigo",
       "buzzcast": "Rekaman Buzzcast",
-      "liveme": "Rekaman LiveMe"
+      "liveme": "Rekaman LiveMe",
+      "tango": "Rekaman Tango"
     },
     "subtitle": {
       "all": "Tonton rekaman live stream dari kreator di platform kami. Unduh dan temukan konten baru.",
@@ -380,7 +429,8 @@
       "pandalive": "Tonton rekaman Pandalive dari kreator di platform kami. Unduh dan temukan konten baru.",
       "bigo": "Tonton rekaman Bigo dari kreator di platform kami. Unduh dan temukan konten baru.",
       "buzzcast": "Tonton rekaman Buzzcast dari kreator di platform kami. Unduh dan temukan konten baru.",
-      "liveme": "Tonton rekaman LiveMe dari kreator di platform kami. Unduh dan temukan konten baru."
+      "liveme": "Tonton rekaman LiveMe dari kreator di platform kami. Unduh dan temukan konten baru.",
+      "tango": "Tonton rekaman Tango dari kreator di platform kami. Unduh dan temukan konten baru."
     }
   },
   "cta": {
@@ -394,7 +444,8 @@
       "afreecatv": "Rekam Stream AfreecaTV",
       "bigo": "Rekam Stream Bigo",
       "buzzcast": "Rekam Stream Buzzcast",
-      "liveme": "Rekam Stream LiveMe"
+      "liveme": "Rekam Stream LiveMe",
+      "tango": "Rekam Stream Tango"
     },
     "subtitle": {
       "all": "Simpan stream TikTok, Twitch, YouTube, dan Kick Anda secara otomatis. Unduh rekaman, buat klip pendek, dan kembangkan audiens Anda.",
@@ -406,7 +457,8 @@
       "afreecatv": "Simpan stream AfreecaTV Anda secara otomatis. Unduh rekaman dan buat klip pendek dengan ClipAI.",
       "bigo": "Simpan stream Bigo Anda secara otomatis. Unduh rekaman dan buat klip pendek dengan ClipAI.",
       "buzzcast": "Simpan stream Buzzcast Anda secara otomatis. Unduh rekaman dan buat klip pendek dengan ClipAI.",
-      "liveme": "Simpan stream LiveMe Anda secara otomatis. Unduh rekaman dan buat klip pendek dengan ClipAI."
+      "liveme": "Simpan stream LiveMe Anda secara otomatis. Unduh rekaman dan buat klip pendek dengan ClipAI.",
+      "tango": "Simpan stream Tango Anda secara otomatis. Unduh rekaman dan buat klip pendek dengan ClipAI."
     },
     "button": "Mulai Rekam Gratis"
   },
@@ -422,7 +474,8 @@
       "pandalive": "Jadilah kreator pertama yang merekam stream Pandalive!",
       "bigo": "Jadilah kreator pertama yang merekam stream Bigo!",
       "buzzcast": "Jadilah kreator pertama yang merekam stream Buzzcast!",
-      "liveme": "Jadilah kreator pertama yang merekam stream LiveMe!"
+      "liveme": "Jadilah kreator pertama yang merekam stream LiveMe!",
+      "tango": "Jadilah kreator pertama yang merekam stream Tango!"
     },
     "button": "Mulai Sekarang"
   },
@@ -436,7 +489,8 @@
     "afreecatv": "## Rekaman Live AfreecaTV\n\nTonton rekaman live AfreecaTV dari BJ yang menggunakan LiveStreamRecorder untuk menyimpan live mereka sendiri. Setiap live AfreecaTV otomatis tertangkap dan disimpan untuk ditonton kapan saja.\n\n### Live AfreecaTV disimpan secara independen\n\nAfreecaTV punya sistem VOD sendiri, tapi tidak semua replay disimpan, konten bisa dihapus, dan aturan penyimpanan bisa berubah. Perekam AfreecaTV kami menyimpan live-mu secara otomatis di cloud sebagai cadangan independen — kontenmu tetap utuh, apa pun yang terjadi di AfreecaTV.\n\n### Tonton dan unduh rekaman AfreecaTV-mu\n\nSetiap rekaman AfreecaTV bisa langsung ditonton di browser — tanpa iklan, tanpa interupsi. Pengguna Premium bisa mengunduh rekaman AfreecaTV mereka sebagai file video untuk tontonan offline atau pemanfaatan ulang konten.\n\n### Rekam live AfreecaTV-mu tanpa screen recorder\n\nLupakan menjalankan software capture selama sesi AfreecaTV yang panjang. LiveStreamRecorder adalah perekam AfreecaTV berbasis cloud yang menangkap live-mu di sisi server. Tanpa app desktop, tanpa rekaman background, tanpa beban CPU ekstra. Siaran dari PC atau HP — live AfreecaTV-mu otomatis terekam dengan kualitas tinggi.\n\n### Ubah live panjang jadi klip pendek dengan ClipAI\n\nLive AfreecaTV bisa berlangsung berjam-jam. ClipAI menganalisis rekamanmu dan mengambil momen terbaik — permainan penting, reaksi, momen lucu, highlight. Posting sebagai klip TikTok, YouTube Shorts, atau Reels untuk menjangkau audiens di luar AfreecaTV.\n\n### Perekam AfreecaTV terbaik untuk BJ\n\nLiveStreamRecorder dirancang untuk menyimpan live AfreecaTV secara independen. Daftar gratis, tambahkan username AfreecaTV-mu, dan jangan pernah kehilangan live lagi. Setiap live otomatis terekam — cadangan permanen yang tidak bergantung pada sistem VOD AfreecaTV.",
     "bigo": "## Rekaman Live Bigo Live\n\nTonton rekaman live Bigo Live dari kreator yang menggunakan LiveStreamRecorder untuk menyimpan live mereka sendiri. Setiap live Bigo otomatis tertangkap dan disimpan untuk ditonton kapan saja.\n\n### Live Bigo tersimpan sebelum hilang\n\nLive Bigo hanya ada saat sedang on-air — begitu kamu mengakhiri sesi, kontennya hilang sepenuhnya dari app. Perekam Bigo kami menyimpan live-mu secara otomatis di cloud, supaya kontenmu tidak hilang saat live berakhir. Dansa, lagu, ngobrol, momen gift — semuanya tetap tersedia.\n\n### Tonton dan unduh rekaman Bigo-mu\n\nSetiap rekaman live Bigo bisa langsung ditonton di browser. Pengguna Premium bisa mengunduh rekaman Bigo mereka sebagai file video untuk tontonan offline — sempurna untuk memanfaatkan ulang kontenmu sendiri atau menyimpan salinan pribadi.\n\n### Rekam live Bigo-mu tanpa rekam layar\n\nLupakan merekam layar HP atau membiarkan perangkat lain merekam semalaman. LiveStreamRecorder adalah perekam Bigo online yang menangkap live-mu di sisi server. Tanpa baterai terkuras, tanpa setup manual, tanpa software tambahan. Siaran dari iPhone, Android, atau PC — live Bigo-mu otomatis terekam dengan kualitas tinggi.\n\n### Ubah live-mu jadi klip dengan ClipAI\n\nMau ubah rekaman live Bigo-mu jadi klip pendek? ClipAI menganalisis live yang sudah direkam dan membuat klip highlight siap posting di TikTok, Instagram Reels, atau YouTube Shorts. Tumbuhkan audiens globalmu dengan memanfaatkan ulang momen Bigo terbaikmu.\n\n### Perekam Bigo terbaik untuk kreator\n\nLiveStreamRecorder dirancang untuk menyimpan live Bigo. Daftar gratis, tambahkan username Bigo-mu, dan jangan pernah kehilangan live lagi. Setiap live otomatis terekam — tempat permanen untuk konten Bigo-mu yang tidak bergantung pada app menyimpannya untukmu.",
     "buzzcast": "## Rekaman Live Buzzcast\n\nTonton rekaman live Buzzcast dari kreator yang menggunakan LiveStreamRecorder untuk menyimpan live mereka sendiri. Setiap live Buzzcast otomatis tertangkap dan disimpan untuk ditonton kapan saja.\n\n### Live Buzzcast tersimpan sebelum hilang\n\nLive Buzzcast hanya berlangsung secara live — begitu kamu mengakhiri siaran, kontennya hilang dari app. Perekam Buzzcast kami menyimpan live-mu secara otomatis di cloud, supaya tidak ada yang hilang saat siaranmu selesai. Ngobrol, momen musik, konten sehari-hari — semuanya tetap tersedia untuk fans.\n\n### Tonton dan unduh rekaman Buzzcast-mu\n\nSetiap rekaman live Buzzcast bisa langsung ditonton di browser. Pengguna Premium bisa mengunduh rekaman Buzzcast mereka sebagai file video untuk tontonan offline — sempurna untuk memanfaatkan ulang kontenmu sendiri atau menyimpan salinan pribadi.\n\n### Rekam live Buzzcast-mu tanpa app tambahan\n\nLupakan merekam layar HP atau menjalankan software capture di background. LiveStreamRecorder adalah perekam Buzzcast online yang menangkap live-mu di sisi server. Tanpa baterai terkuras, tanpa setup manual, tanpa software tambahan. Live Buzzcast-mu otomatis terekam dengan kualitas tinggi dari perangkat manapun.\n\n### Ubah live-mu jadi klip dengan ClipAI\n\nMau ubah rekaman live Buzzcast-mu jadi klip pendek? ClipAI menganalisis live yang sudah direkam dan membuat klip highlight siap posting di TikTok, Instagram Reels, atau YouTube Shorts. Tumbuhkan komunitasmu di luar Buzzcast dengan memanfaatkan ulang momen terbaikmu.\n\n### Perekam Buzzcast terbaik untuk kreator\n\nLiveStreamRecorder dirancang untuk menyimpan live Buzzcast. Daftar gratis, tambahkan username Buzzcast-mu, dan jangan pernah kehilangan live lagi. Setiap live otomatis terekam — pustaka konten Buzzcast permanen milikmu.",
-    "liveme": "## Rekaman Live LiveMe\n\nTonton rekaman live LiveMe dari kreator yang menggunakan LiveStreamRecorder untuk menyimpan live mereka sendiri. Setiap live LiveMe otomatis tertangkap dan disimpan untuk ditonton kapan saja.\n\n### Live LiveMe tersimpan sebelum hilang\n\nLive LiveMe hanya berlangsung secara live — begitu kamu mengakhiri siaran, kontennya hilang dari app. Perekam LiveMe kami menyimpan live-mu secara otomatis di cloud, supaya tidak ada yang hilang saat siaranmu selesai. Ngobrol, momen musik, konten sehari-hari — semuanya tetap tersedia untuk fans.\n\n### Tonton dan unduh rekaman LiveMe-mu\n\nSetiap rekaman live LiveMe bisa langsung ditonton di browser. Pengguna Premium bisa mengunduh rekaman LiveMe mereka sebagai file video untuk tontonan offline — sempurna untuk memanfaatkan ulang kontenmu sendiri atau menyimpan salinan pribadi.\n\n### Rekam live LiveMe-mu tanpa app tambahan\n\nLupakan merekam layar HP atau menjalankan software capture di background. LiveStreamRecorder adalah perekam LiveMe online yang menangkap live-mu di sisi server. Tanpa baterai terkuras, tanpa setup manual, tanpa software tambahan. Live LiveMe-mu otomatis terekam dengan kualitas tinggi dari perangkat manapun.\n\n### Ubah live-mu jadi klip dengan ClipAI\n\nMau ubah rekaman live LiveMe-mu jadi klip pendek? ClipAI menganalisis live yang sudah direkam dan membuat klip highlight siap posting di TikTok, Instagram Reels, atau YouTube Shorts. Tumbuhkan komunitasmu di luar LiveMe dengan memanfaatkan ulang momen terbaikmu.\n\n### Perekam LiveMe terbaik untuk kreator\n\nLiveStreamRecorder dirancang untuk menyimpan live LiveMe. Daftar gratis, tambahkan username LiveMe-mu, dan jangan pernah kehilangan live lagi. Setiap live otomatis terekam — pustaka konten LiveMe permanen milikmu."
+    "liveme": "## Rekaman Live LiveMe\n\nTonton rekaman live LiveMe dari kreator yang menggunakan LiveStreamRecorder untuk menyimpan live mereka sendiri. Setiap live LiveMe otomatis tertangkap dan disimpan untuk ditonton kapan saja.\n\n### Live LiveMe tersimpan sebelum hilang\n\nLive LiveMe hanya berlangsung secara live — begitu kamu mengakhiri siaran, kontennya hilang dari app. Perekam LiveMe kami menyimpan live-mu secara otomatis di cloud, supaya tidak ada yang hilang saat siaranmu selesai. Ngobrol, momen musik, konten sehari-hari — semuanya tetap tersedia untuk fans.\n\n### Tonton dan unduh rekaman LiveMe-mu\n\nSetiap rekaman live LiveMe bisa langsung ditonton di browser. Pengguna Premium bisa mengunduh rekaman LiveMe mereka sebagai file video untuk tontonan offline — sempurna untuk memanfaatkan ulang kontenmu sendiri atau menyimpan salinan pribadi.\n\n### Rekam live LiveMe-mu tanpa app tambahan\n\nLupakan merekam layar HP atau menjalankan software capture di background. LiveStreamRecorder adalah perekam LiveMe online yang menangkap live-mu di sisi server. Tanpa baterai terkuras, tanpa setup manual, tanpa software tambahan. Live LiveMe-mu otomatis terekam dengan kualitas tinggi dari perangkat manapun.\n\n### Ubah live-mu jadi klip dengan ClipAI\n\nMau ubah rekaman live LiveMe-mu jadi klip pendek? ClipAI menganalisis live yang sudah direkam dan membuat klip highlight siap posting di TikTok, Instagram Reels, atau YouTube Shorts. Tumbuhkan komunitasmu di luar LiveMe dengan memanfaatkan ulang momen terbaikmu.\n\n### Perekam LiveMe terbaik untuk kreator\n\nLiveStreamRecorder dirancang untuk menyimpan live LiveMe. Daftar gratis, tambahkan username LiveMe-mu, dan jangan pernah kehilangan live lagi. Setiap live otomatis terekam — pustaka konten LiveMe permanen milikmu.",
+    "tango": "## Rekaman Live Tango\n\nTonton rekaman live Tango dari kreator yang menggunakan LiveStreamRecorder untuk menyimpan live mereka sendiri. Setiap live Tango otomatis tertangkap dan disimpan untuk ditonton kapan saja.\n\n### Live Tango tersimpan sebelum hilang\n\nLive Tango hanya berlangsung secara live — begitu kamu mengakhiri siaran, kontennya hilang dari app. Perekam Tango kami menyimpan live-mu secara otomatis di cloud, supaya tidak ada yang hilang saat siaranmu selesai. Ngobrol, momen musik, konten sehari-hari — semuanya tetap tersedia untuk fans.\n\n### Tonton dan unduh rekaman Tango-mu\n\nSetiap rekaman live Tango bisa langsung ditonton di browser. Pengguna Premium bisa mengunduh rekaman Tango mereka sebagai file video untuk tontonan offline — sempurna untuk memanfaatkan ulang kontenmu sendiri atau menyimpan salinan pribadi.\n\n### Rekam live Tango-mu tanpa app tambahan\n\nLupakan merekam layar HP atau menjalankan software capture di background. LiveStreamRecorder adalah perekam Tango online yang menangkap live-mu di sisi server. Tanpa baterai terkuras, tanpa setup manual, tanpa software tambahan. Live Tango-mu otomatis terekam dengan kualitas tinggi dari perangkat manapun.\n\n### Ubah live-mu jadi klip dengan ClipAI\n\nMau ubah rekaman live Tango-mu jadi klip pendek? ClipAI menganalisis live yang sudah direkam dan membuat klip highlight siap posting di TikTok, Instagram Reels, atau YouTube Shorts. Tumbuhkan komunitasmu di luar Tango dengan memanfaatkan ulang momen terbaikmu.\n\n### Perekam Tango terbaik untuk kreator\n\nLiveStreamRecorder dirancang untuk menyimpan live Tango. Daftar gratis, tambahkan username Tango-mu, dan jangan pernah kehilangan live lagi. Setiap live otomatis terekam — pustaka konten Tango permanen milikmu."
   },
   "jsonLd": {
     "name": {
@@ -449,7 +503,8 @@
       "pandalive": "Rekaman Stream Pandalive",
       "bigo": "Rekaman Stream Bigo",
       "buzzcast": "Rekaman Stream Buzzcast",
-      "liveme": "Rekaman Stream LiveMe"
+      "liveme": "Rekaman Stream LiveMe",
+      "tango": "Rekaman Stream Tango"
     },
     "description": {
       "all": "Tonton rekaman live stream dari kreator di LiveStreamRecorder.",
@@ -461,7 +516,8 @@
       "pandalive": "Tonton rekaman Pandalive dari kreator di LiveStreamRecorder.",
       "bigo": "Tonton rekaman Bigo dari kreator di LiveStreamRecorder.",
       "buzzcast": "Tonton rekaman Buzzcast dari kreator di LiveStreamRecorder.",
-      "liveme": "Tonton rekaman LiveMe dari kreator di LiveStreamRecorder."
+      "liveme": "Tonton rekaman LiveMe dari kreator di LiveStreamRecorder.",
+      "tango": "Tonton rekaman Tango dari kreator di LiveStreamRecorder."
     },
     "streamTitle": "Stream {nickname} - {date}",
     "streamDescription": {
@@ -474,7 +530,8 @@
       "bigo": "Rekaman Bigo dari {nickname}",
       "unknown": "Rekaman live stream dari {nickname}",
       "buzzcast": "Rekaman Buzzcast dari {nickname}",
-      "liveme": "Rekaman LiveMe dari {nickname}"
+      "liveme": "Rekaman LiveMe dari {nickname}",
+      "tango": "Rekaman Tango dari {nickname}"
     }
   },
   "recordedOn": "Direkam pada {date}",

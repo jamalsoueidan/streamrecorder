@@ -58,7 +58,7 @@
         "message": "Your profile has been linked to your account. Please login to access your dashboard.",
         "button": "Go to Login"
       },
-            "notFound": {
+      "notFound": {
         "title": "Profile Not Found",
         "message": "Your ownership was verified, but this content creator doesn't exist in our system."
       }

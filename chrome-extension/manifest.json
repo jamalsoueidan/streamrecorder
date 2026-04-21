@@ -22,6 +22,7 @@
     "*://*.pandalive.co.kr/*",
     "*://*.bigo.tv/*",
     "*://*.buzzcast.com/*",
+    "*://*.tango.me/*",
     "*://*.liveme.com/*"
   ],
   "background": {

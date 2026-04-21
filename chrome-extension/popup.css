@@ -229,6 +229,7 @@ body {
 .platform-icon-large.pandalive { background-color: #FF6B00; }
 .platform-icon-large.bigo      { background-color: #00D4FF; color: #000; }
 .platform-icon-large.buzzcast  { background-color: #FF8C00; }
+.platform-icon-large.tango     { background-color: #22D3EE; color: #000; }
 .platform-icon-large.liveme    { background-color: #FFD700; color: #000; }
 
 /* ── Tracked badge ───────────────────────────────────────────────────────── */

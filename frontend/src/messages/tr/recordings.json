@@ -290,6 +290,46 @@
           "answer": "Evet. Premium kullanıcılar, LiveMe Live kayıtlarını TikTok, YouTube Shorts veya Reels için hazır kısa öne çıkan kliplere otomatik olarak dönüştürmek için ClipAI'ı kullanabilir. Canlı içeriğinizi yeniden kullanmanın ve platformlar arasında takipçi kitlenizi büyütmenin harika bir yoludur."
         }
       ]
+    },
+    "tango": {
+      "title": "Tango Canlı Kayıtları",
+      "description": "LiveStreamRecorder'da Tango Live kayıtlarını izleyin ve indirin. Tango canlı yayınlarınız bulutta otomatik olarak yakalanır — siyah ekran sorunu yok, ekran kaydedici gerekmez. İçerik üreticileri için en kolay Tango Live kaydedici.",
+      "keywords": [
+        "tango kaydedici",
+        "tango live kaydedici",
+        "tango live kayıt",
+        "tango ekran kaydedici"
+      ],
+      "faqs": [
+        {
+          "question": "Tango canlı yayınlarımı nasıl kaydederim?",
+          "answer": "LiveStreamRecorder ile Tango canlı yayınlarınız bulutta otomatik olarak kaydedilir. Kaydolun, Tango Live kullanıcı adınızı ekleyin ve canlı yayına her geçtiğinizde yakalanır. Kurulacak Tango Live kaydedici APK'sı yok, ekran kaydı yok — her şey sunucu tarafında gerçekleşir."
+        },
+        {
+          "question": "Tango Live kaydederken neden siyah ekran alıyorum?",
+          "answer": "Siyah ekran sorunları Tango Live'da ekran kaydediciler kullanırken yaygındır. LiveStreamRecorder, Tango canlı yayınlarınızı doğrudan buluttan yakaladığı için bundan tamamen kaçınır — siyah ekran yok, geçici çözümler yok, güvenilmez ekran kayıt uygulamaları yok."
+        },
+        {
+          "question": "Tango Live ekran kaydedici siyah ekranını nasıl düzeltirim?",
+          "answer": "En kolay çözüm ekran kaydını tamamen atlamaktır. LiveStreamRecorder, canlı yayınlarınızı sunucu tarafında yüksek kalitede yakalayan bulut tabanlı bir Tango kaydedicidir. Siyah ekran sorunları yok, yapılandırılacak uygulama yok — sadece kullanıcı adınızı ekleyin ve Tango canlı yayınlarınız otomatik olarak kaydedilir."
+        },
+        {
+          "question": "Tango Live için ekran kaydediciye ihtiyacım var mı?",
+          "answer": "Hayır. Tango Live için ekran kaydediciler genellikle siyah ekran sorunlarına veya düşük kaliteli yakalamalara neden olur. LiveStreamRecorder, yayınlarınızı otomatik olarak yüksek kalitede yakalayan bulut tabanlı bir Tango Live kaydedicidir — kurulacak uygulama yok, siyah ekran yok."
+        },
+        {
+          "question": "Tango canlı yayınlarımı ücretsiz kaydedebilir miyim?",
+          "answer": "Evet. LiveStreamRecorder'a ücretsiz kaydolun ve Tango canlı yayınlarınızı hemen kaydetmeye başlayın. Premium planlar kayıtlarınızı indirme, otomatik öne çıkan klipler için ClipAI ve genişletilmiş depolama alanı sunar."
+        },
+        {
+          "question": "Tango Live kayıtlarımı indirebilir miyim?",
+          "answer": "Evet. Premium kullanıcılar Tango Live kayıtlarını çevrimdışı izlemek için video dosyaları olarak indirebilir. Her kayıt ayrıca indirmeden tarayıcınızda anında izlenebilir."
+        },
+        {
+          "question": "Tango Live kayıtlarımı kısa kliplere dönüştürebilir miyim?",
+          "answer": "Evet. Premium kullanıcılar, Tango Live kayıtlarını TikTok, YouTube Shorts veya Reels için hazır kısa öne çıkan kliplere otomatik olarak dönüştürmek için ClipAI'ı kullanabilir. Canlı içeriğinizi yeniden kullanmanın ve platformlar arasında takipçi kitlenizi büyütmenin harika bir yoludur."
+        }
+      ]
     }
   },
   "hero": {
@@ -303,7 +343,8 @@
       "pandalive": "Pandalive Kayıtları",
       "bigo": "Bigo Kayıtları",
       "buzzcast": "Buzzcast Kayıtları",
-      "liveme": "LiveMe Kayıtları"
+      "liveme": "LiveMe Kayıtları",
+      "tango": "Tango Kayıtları"
     },
     "subtitle": {
       "all": "Platformumuzdaki içerik üreticilerinden canlı yayın kayıtlarını izleyin. İndirin ve yeni içerikler keşfedin.",
@@ -315,7 +356,8 @@
       "pandalive": "Platformumuzdaki içerik üreticilerinden Pandalive kayıtlarını izleyin. İndirin ve yeni içerikler keşfedin.",
       "bigo": "Platformumuzdaki içerik üreticilerinden Bigo kayıtlarını izleyin. İndirin ve yeni içerikler keşfedin.",
       "buzzcast": "Platformumuzdaki içerik üreticilerinden Buzzcast kayıtlarını izleyin. İndirin ve yeni içerikler keşfedin.",
-      "liveme": "Platformumuzdaki içerik üreticilerinden LiveMe kayıtlarını izleyin. İndirin ve yeni içerikler keşfedin."
+      "liveme": "Platformumuzdaki içerik üreticilerinden LiveMe kayıtlarını izleyin. İndirin ve yeni içerikler keşfedin.",
+      "tango": "Platformumuzdaki içerik üreticilerinden Tango kayıtlarını izleyin. İndirin ve yeni içerikler keşfedin."
     }
   },
   "cta": {
@@ -329,7 +371,8 @@
       "afreecatv": "AfreecaTV Yayınlarını Kaydet",
       "bigo": "Bigo Yayınlarını Kaydet",
       "buzzcast": "Buzzcast Yayınlarını Kaydet",
-      "liveme": "LiveMe Yayınlarını Kaydet"
+      "liveme": "LiveMe Yayınlarını Kaydet",
+      "tango": "Tango Yayınlarını Kaydet"
     },
     "subtitle": {
       "all": "TikTok, Twitch, YouTube ve Kick yayınlarınızı otomatik olarak kaydedin. Kayıtları indirin, kısa klipler oluşturun ve kitlenizi büyütün.",
@@ -341,7 +384,8 @@
       "afreecatv": "AfreecaTV yayınlarınızı otomatik olarak kaydedin. Kayıtları indirin ve ClipAI ile kısa klipler oluşturun.",
       "bigo": "Bigo yayınlarınızı otomatik olarak kaydedin. Kayıtları indirin ve ClipAI ile kısa klipler oluşturun.",
       "buzzcast": "Buzzcast yayınlarınızı otomatik olarak kaydedin. Kayıtları indirin ve ClipAI ile kısa klipler oluşturun.",
-      "liveme": "LiveMe yayınlarınızı otomatik olarak kaydedin. Kayıtları indirin ve ClipAI ile kısa klipler oluşturun."
+      "liveme": "LiveMe yayınlarınızı otomatik olarak kaydedin. Kayıtları indirin ve ClipAI ile kısa klipler oluşturun.",
+      "tango": "Tango yayınlarınızı otomatik olarak kaydedin. Kayıtları indirin ve ClipAI ile kısa klipler oluşturun."
     },
     "button": "Ücretsiz Kayda Başla"
   },
@@ -357,7 +401,8 @@
       "pandalive": "Pandalive yayını kaydeden ilk içerik üreticisi olun!",
       "bigo": "Bigo yayını kaydeden ilk içerik üreticisi olun!",
       "buzzcast": "Buzzcast yayını kaydeden ilk içerik üreticisi olun!",
-      "liveme": "LiveMe yayını kaydeden ilk içerik üreticisi olun!"
+      "liveme": "LiveMe yayını kaydeden ilk içerik üreticisi olun!",
+      "tango": "Tango yayını kaydeden ilk içerik üreticisi olun!"
     },
     "button": "Başlayın"
   },
@@ -371,7 +416,8 @@
     "afreecatv": "## AfreecaTV Yayın Kayıtları\n\nLiveStreamRecorder'ı kullanarak kendi yayınlarını kaydeden AfreecaTV BJ'lerinin yayın kayıtlarını izle. Her AfreecaTV yayını otomatik olarak yakalanır ve istediğin zaman izlemek için saklanır.\n\n### Bağımsız olarak kaydedilen AfreecaTV yayınları\n\nAfreecaTV'nin kendi VOD sistemi var, ancak her tekrar kaydedilmiyor, içerikler kaldırılabiliyor ve depolama kuralları değişebiliyor. AfreecaTV kayıt aracımız, yayınlarını bulutta bağımsız bir yedek olarak otomatik kaydeder — AfreecaTV'de ne olursa olsun içeriğin bozulmadan kalır.\n\n### AfreecaTV kayıtlarını izle ve indir\n\nHer AfreecaTV kaydı tarayıcıda anında izlenebilir — reklam yok, kesinti yok. Premium üyeler, AfreecaTV kayıtlarını çevrimdışı izleme veya yeniden kullanım için video dosyası olarak indirebilir.\n\n### AfreecaTV yayınlarını ekran kaydı olmadan kaydet\n\nUzun AfreecaTV oturumları sırasında yakalama yazılımı çalıştırmayı unut. LiveStreamRecorder, bulut tabanlı bir AfreecaTV kaydedicisidir ve yayınlarını sunucu tarafında yakalar. Masaüstü uygulaması yok, arka plan kaydı yok, ekstra CPU yükü yok. PC veya mobilden yayın yap — AfreecaTV yayınların otomatik olarak yüksek kalitede kaydedilir.\n\n### Uzun yayınları ClipAI ile kısa kliplere dönüştür\n\nAfreecaTV yayınları saatlerce sürebilir. ClipAI, kayıtlarını analiz eder ve en iyi anları çıkarır — kritik hamleler, tepkiler, komik anlar, öne çıkanlar. Bunları TikTok klipleri, YouTube Shorts veya Reels olarak paylaşarak AfreecaTV'nin ötesinde kitlelere ulaş.\n\n### BJ'ler için en iyi AfreecaTV kaydedici\n\nLiveStreamRecorder, AfreecaTV yayınlarını bağımsız olarak kaydetmek için tasarlandı. Ücretsiz kaydol, AfreecaTV kullanıcı adını ekle ve bir daha yayın kaybetme. Her yayın otomatik olarak kaydedilir — AfreecaTV'nin VOD sistemine bağlı kalmayan kalıcı bir yedek.",
     "bigo": "## Bigo Live Yayın Kayıtları\n\nLiveStreamRecorder'ı kullanarak kendi yayınlarını kaydeden Bigo Live içerik üreticilerinin yayın kayıtlarını izle. Her Bigo yayını otomatik olarak yakalanır ve istediğin zaman izlemek için saklanır.\n\n### Kaybolmadan önce kaydedilen Bigo yayınları\n\nBigo yayınları yalnızca canlı oldukları sürece var olur — oturumu kapattığın anda içerik uygulamadan tamamen kaybolur. Bigo kayıt aracımız, yayınlarını bulutta otomatik olarak saklar; böylece yayının bittiğinde içeriğin kaybolmaz. Danslar, şarkılar, sohbetler, hediye anları — hepsi erişilebilir kalır.\n\n### Bigo kayıtlarını izle ve indir\n\nHer Bigo yayın kaydı tarayıcıda anında izlenebilir. Premium üyeler, Bigo kayıtlarını çevrimdışı izleme için video dosyası olarak indirebilir — kendi içeriğini yeniden kullanmak veya kişisel kopya tutmak için ideal.\n\n### Bigo yayınlarını ekran kaydı olmadan kaydet\n\nTelefon ekranını kaydetmeyi veya başka bir cihazı gece boyu kayıt için açık bırakmayı unut. LiveStreamRecorder, yayınlarını sunucu tarafında yakalayan çevrimiçi bir Bigo kaydedicisidir. Pil tükenmesi yok, manuel kurulum yok, ekstra yazılım yok. iPhone, Android veya PC'den yayın yap — Bigo yayınların otomatik olarak yüksek kalitede kaydedilir.\n\n### Yayınlarını ClipAI ile kısa kliplere dönüştür\n\nBigo yayın kayıtlarını kısa kliplere dönüştürmek ister misin? ClipAI, kayıtlı yayınlarını analiz eder ve TikTok, Instagram Reels veya YouTube Shorts'ta paylaşmaya hazır öne çıkan klipler oluşturur. En iyi Bigo anlarını yeniden kullanarak küresel kitleni büyüt.\n\n### İçerik üreticileri için en iyi Bigo kaydedici\n\nLiveStreamRecorder, Bigo yayınlarını kaydetmek için tasarlandı. Ücretsiz kaydol, Bigo kullanıcı adını ekle ve bir daha yayın kaybetme. Her yayın otomatik olarak kaydedilir — Bigo içeriğin için uygulamanın senin adına saklamasına bağlı kalmayan kalıcı bir yer.",
     "buzzcast": "## Buzzcast Yayın Kayıtları\n\nLiveStreamRecorder'ı kullanarak kendi yayınlarını kaydeden Buzzcast içerik üreticilerinin yayın kayıtlarını izle. Her Buzzcast yayını otomatik olarak yakalanır ve istediğin zaman izlemek için saklanır.\n\n### Kaybolmadan önce kaydedilen Buzzcast yayınları\n\nBuzzcast yayınları sadece canlıdır — yayını sonlandırdığın anda içerik uygulamadan kaybolur. Buzzcast kayıt aracımız, yayınlarını bulutta otomatik olarak saklar; böylece yayının bittiğinde hiçbir şey kaybolmaz. Sohbetler, müzik anları, günlük içerik — hepsi hayranların için erişilebilir kalır.\n\n### Buzzcast kayıtlarını izle ve indir\n\nHer Buzzcast yayın kaydı tarayıcıda anında izlenebilir. Premium üyeler, Buzzcast kayıtlarını çevrimdışı izleme için video dosyası olarak indirebilir — kendi içeriğini yeniden kullanmak veya kişisel kopya tutmak için ideal.\n\n### Buzzcast yayınlarını ekstra uygulama olmadan kaydet\n\nTelefon ekranını kaydetmeyi veya arka planda yakalama yazılımı çalıştırmayı unut. LiveStreamRecorder, yayınlarını sunucu tarafında yakalayan çevrimiçi bir Buzzcast kaydedicisidir. Pil tükenmesi yok, manuel kurulum yok, ekstra yazılım yok. Buzzcast yayınların herhangi bir cihazdan otomatik olarak yüksek kalitede kaydedilir.\n\n### Yayınlarını ClipAI ile kısa kliplere dönüştür\n\nBuzzcast yayın kayıtlarını kısa kliplere dönüştürmek ister misin? ClipAI, kayıtlı yayınlarını analiz eder ve TikTok, Instagram Reels veya YouTube Shorts'ta paylaşmaya hazır öne çıkan klipler oluşturur. En iyi anlarını yeniden kullanarak topluluğunu Buzzcast'in ötesinde büyüt.\n\n### İçerik üreticileri için en iyi Buzzcast kaydedici\n\nLiveStreamRecorder, Buzzcast yayınlarını kaydetmek için tasarlandı. Ücretsiz kaydol, Buzzcast kullanıcı adını ekle ve bir daha yayın kaybetme. Her yayın otomatik olarak kaydedilir — Buzzcast içeriğin için kalıcı bir kütüphane.",
-    "liveme": "## LiveMe Yayın Kayıtları\n\nLiveStreamRecorder'ı kullanarak kendi yayınlarını kaydeden LiveMe içerik üreticilerinin yayın kayıtlarını izle. Her LiveMe yayını otomatik olarak yakalanır ve istediğin zaman izlemek için saklanır.\n\n### Kaybolmadan önce kaydedilen LiveMe yayınları\n\nLiveMe yayınları sadece canlıdır — yayını sonlandırdığın anda içerik uygulamadan kaybolur. LiveMe kayıt aracımız, yayınlarını bulutta otomatik olarak saklar; böylece yayının bittiğinde hiçbir şey kaybolmaz. Sohbetler, müzik anları, günlük içerik — hepsi hayranların için erişilebilir kalır.\n\n### LiveMe kayıtlarını izle ve indir\n\nHer LiveMe yayın kaydı tarayıcıda anında izlenebilir. Premium üyeler, LiveMe kayıtlarını çevrimdışı izleme için video dosyası olarak indirebilir — kendi içeriğini yeniden kullanmak veya kişisel kopya tutmak için ideal.\n\n### LiveMe yayınlarını ekstra uygulama olmadan kaydet\n\nTelefon ekranını kaydetmeyi veya arka planda yakalama yazılımı çalıştırmayı unut. LiveStreamRecorder, yayınlarını sunucu tarafında yakalayan çevrimiçi bir LiveMe kaydedicisidir. Pil tükenmesi yok, manuel kurulum yok, ekstra yazılım yok. LiveMe yayınların herhangi bir cihazdan otomatik olarak yüksek kalitede kaydedilir.\n\n### Yayınlarını ClipAI ile kısa kliplere dönüştür\n\nLiveMe yayın kayıtlarını kısa kliplere dönüştürmek ister misin? ClipAI, kayıtlı yayınlarını analiz eder ve TikTok, Instagram Reels veya YouTube Shorts'ta paylaşmaya hazır öne çıkan klipler oluşturur. En iyi anlarını yeniden kullanarak topluluğunu LiveMe'in ötesinde büyüt.\n\n### İçerik üreticileri için en iyi LiveMe kaydedici\n\nLiveStreamRecorder, LiveMe yayınlarını kaydetmek için tasarlandı. Ücretsiz kaydol, LiveMe kullanıcı adını ekle ve bir daha yayın kaybetme. Her yayın otomatik olarak kaydedilir — LiveMe içeriğin için kalıcı bir kütüphane."
+    "liveme": "## LiveMe Yayın Kayıtları\n\nLiveStreamRecorder'ı kullanarak kendi yayınlarını kaydeden LiveMe içerik üreticilerinin yayın kayıtlarını izle. Her LiveMe yayını otomatik olarak yakalanır ve istediğin zaman izlemek için saklanır.\n\n### Kaybolmadan önce kaydedilen LiveMe yayınları\n\nLiveMe yayınları sadece canlıdır — yayını sonlandırdığın anda içerik uygulamadan kaybolur. LiveMe kayıt aracımız, yayınlarını bulutta otomatik olarak saklar; böylece yayının bittiğinde hiçbir şey kaybolmaz. Sohbetler, müzik anları, günlük içerik — hepsi hayranların için erişilebilir kalır.\n\n### LiveMe kayıtlarını izle ve indir\n\nHer LiveMe yayın kaydı tarayıcıda anında izlenebilir. Premium üyeler, LiveMe kayıtlarını çevrimdışı izleme için video dosyası olarak indirebilir — kendi içeriğini yeniden kullanmak veya kişisel kopya tutmak için ideal.\n\n### LiveMe yayınlarını ekstra uygulama olmadan kaydet\n\nTelefon ekranını kaydetmeyi veya arka planda yakalama yazılımı çalıştırmayı unut. LiveStreamRecorder, yayınlarını sunucu tarafında yakalayan çevrimiçi bir LiveMe kaydedicisidir. Pil tükenmesi yok, manuel kurulum yok, ekstra yazılım yok. LiveMe yayınların herhangi bir cihazdan otomatik olarak yüksek kalitede kaydedilir.\n\n### Yayınlarını ClipAI ile kısa kliplere dönüştür\n\nLiveMe yayın kayıtlarını kısa kliplere dönüştürmek ister misin? ClipAI, kayıtlı yayınlarını analiz eder ve TikTok, Instagram Reels veya YouTube Shorts'ta paylaşmaya hazır öne çıkan klipler oluşturur. En iyi anlarını yeniden kullanarak topluluğunu LiveMe'in ötesinde büyüt.\n\n### İçerik üreticileri için en iyi LiveMe kaydedici\n\nLiveStreamRecorder, LiveMe yayınlarını kaydetmek için tasarlandı. Ücretsiz kaydol, LiveMe kullanıcı adını ekle ve bir daha yayın kaybetme. Her yayın otomatik olarak kaydedilir — LiveMe içeriğin için kalıcı bir kütüphane.",
+    "tango": "## Tango Yayın Kayıtları\n\nLiveStreamRecorder'ı kullanarak kendi yayınlarını kaydeden Tango içerik üreticilerinin yayın kayıtlarını izle. Her Tango yayını otomatik olarak yakalanır ve istediğin zaman izlemek için saklanır.\n\n### Kaybolmadan önce kaydedilen Tango yayınları\n\nTango yayınları sadece canlıdır — yayını sonlandırdığın anda içerik uygulamadan kaybolur. Tango kayıt aracımız, yayınlarını bulutta otomatik olarak saklar; böylece yayının bittiğinde hiçbir şey kaybolmaz. Sohbetler, müzik anları, günlük içerik — hepsi hayranların için erişilebilir kalır.\n\n### Tango kayıtlarını izle ve indir\n\nHer Tango yayın kaydı tarayıcıda anında izlenebilir. Premium üyeler, Tango kayıtlarını çevrimdışı izleme için video dosyası olarak indirebilir — kendi içeriğini yeniden kullanmak veya kişisel kopya tutmak için ideal.\n\n### Tango yayınlarını ekstra uygulama olmadan kaydet\n\nTelefon ekranını kaydetmeyi veya arka planda yakalama yazılımı çalıştırmayı unut. LiveStreamRecorder, yayınlarını sunucu tarafında yakalayan çevrimiçi bir Tango kaydedicisidir. Pil tükenmesi yok, manuel kurulum yok, ekstra yazılım yok. Tango yayınların herhangi bir cihazdan otomatik olarak yüksek kalitede kaydedilir.\n\n### Yayınlarını ClipAI ile kısa kliplere dönüştür\n\nTango yayın kayıtlarını kısa kliplere dönüştürmek ister misin? ClipAI, kayıtlı yayınlarını analiz eder ve TikTok, Instagram Reels veya YouTube Shorts'ta paylaşmaya hazır öne çıkan klipler oluşturur. En iyi anlarını yeniden kullanarak topluluğunu Tango'nun ötesinde büyüt.\n\n### İçerik üreticileri için en iyi Tango kaydedici\n\nLiveStreamRecorder, Tango yayınlarını kaydetmek için tasarlandı. Ücretsiz kaydol, Tango kullanıcı adını ekle ve bir daha yayın kaybetme. Her yayın otomatik olarak kaydedilir — Tango içeriğin için kalıcı bir kütüphane."
   },
   "jsonLd": {
     "name": {
@@ -384,7 +430,8 @@
       "pandalive": "Pandalive Yayın Kayıtları",
       "bigo": "Bigo Yayın Kayıtları",
       "buzzcast": "Buzzcast Yayın Kayıtları",
-      "liveme": "LiveMe Yayın Kayıtları"
+      "liveme": "LiveMe Yayın Kayıtları",
+      "tango": "Tango Yayın Kayıtları"
     },
     "description": {
       "all": "LiveStreamRecorder'daki içerik üreticilerinden canlı yayın kayıtlarını izleyin.",
@@ -396,7 +443,8 @@
       "pandalive": "LiveStreamRecorder'daki içerik üreticilerinden Pandalive kayıtlarını izleyin.",
       "bigo": "LiveStreamRecorder'daki içerik üreticilerinden Bigo kayıtlarını izleyin.",
       "buzzcast": "LiveStreamRecorder'daki içerik üreticilerinden Buzzcast kayıtlarını izleyin.",
-      "liveme": "LiveStreamRecorder'daki içerik üreticilerinden LiveMe kayıtlarını izleyin."
+      "liveme": "LiveStreamRecorder'daki içerik üreticilerinden LiveMe kayıtlarını izleyin.",
+      "tango": "LiveStreamRecorder'daki içerik üreticilerinden Tango kayıtlarını izleyin."
     },
     "streamTitle": "{nickname} Yayını - {date}",
     "streamDescription": {
@@ -409,7 +457,8 @@
       "bigo": "{nickname}'in Bigo kaydı",
       "unknown": "{nickname}'in canlı yayın kaydı",
       "buzzcast": "{nickname}'in Buzzcast kaydı",
-      "liveme": "{nickname}'in LiveMe kaydı"
+      "liveme": "{nickname}'in LiveMe kaydı",
+      "tango": "{nickname}'in Tango kaydı"
     }
   },
   "recordedOn": "{date} tarihinde kaydedildi",

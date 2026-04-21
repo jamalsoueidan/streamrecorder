@@ -20,6 +20,7 @@ const PLATFORM_META = {
   pandalive: { name: "PandaLive", letter: "P",  prefix: "" },
   bigo:      { name: "Bigo",      letter: "B",  prefix: "" },
   buzzcast:  { name: "Buzzcast",  letter: "BC", prefix: "" },
+  tango:     { name: "Tango",     letter: "TG", prefix: "" },
   liveme:    { name: "LiveMe",    letter: "LM", prefix: "" },
 };
 
@@ -33,7 +34,8 @@ const PLATFORM_SVGS = {
   pandalive: `<svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><circle cx="12" cy="10" r="7" fill="none" stroke="#fff" stroke-width="2"/><circle cx="9" cy="9" r="2" fill="#fff"/><circle cx="15" cy="9" r="2" fill="#fff"/><ellipse cx="12" cy="13" rx="3" ry="2" fill="none" stroke="#fff" stroke-width="1.5"/></svg>`,
   bigo: `<svg width="20" height="20" viewBox="0 0 24 24" fill="#000"><circle cx="12" cy="12" r="9" fill="none" stroke="#000" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="#000"/></svg>`,
   buzzcast: `<svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><text x="2" y="17" font-size="12" font-weight="bold" font-family="Arial">BC</text></svg>`,
-  liveme: `<svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><path d="M19.5 8.1 3.5 11.8l7.6 2.5 1.2 7.6 7.2-13.8Z"/><path d="m10.4 4 4 .5-1.9 3.7-2.1-4.2Zm9.4 9.5L16.6 20.6 12 16.1l7.8-2.6Z"/></svg>`,
+  tango: `<svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><text x="3" y="17" font-size="12" font-weight="bold" font-family="Arial">TG</text></svg>`,
+  liveme: `<svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><path d="M19.5 8.1 3.5 11.8l7.6 2.5 1.2 7.6 7.2-13.8Z"/></svg>`,
 };
 
 // ── DOM refs ────────────────────────────────────────────────────────────────
