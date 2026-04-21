@@ -15,9 +15,6 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  experimental: {
-    preloadEntriesOnStart: false,
-  },
   async redirects() {
     return [
       // non-www to www
