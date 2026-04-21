@@ -5,6 +5,7 @@ export default factories.createCoreController(
   ({ strapi }) => ({
     async browse(ctx) {
       const user = ctx.state.user;
+      if (!user) return ctx.unauthorized();
 
       // Parse params
       const scope = ctx.query.scope as string | undefined;
