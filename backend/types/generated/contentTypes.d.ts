@@ -1014,6 +1014,13 @@ export interface ApiFollowerFollower extends Struct.CollectionTypeSchema {
         };
       }> &
       Schema.Attribute.DefaultTo<false>;
+    profileFilled: Schema.Attribute.Boolean &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<false>;
     protected: Schema.Attribute.Boolean &
       Schema.Attribute.SetPluginOptions<{
         i18n: {

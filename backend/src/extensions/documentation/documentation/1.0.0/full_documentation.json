@@ -20,7 +20,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2026-04-20T12:27:43.196Z"
+    "x-generation-date": "2026-04-22T09:24:55.126Z"
   },
   "servers": [
     {
@@ -13541,6 +13541,9 @@
               "sar": {
                 "type": "boolean"
               },
+              "profileFilled": {
+                "type": "boolean"
+              },
               "createdAt": {
                 "type": "string",
                 "format": "date-time"
@@ -15396,6 +15399,9 @@
                 "type": "boolean"
               },
               "sar": {
+                "type": "boolean"
+              },
+              "profileFilled": {
                 "type": "boolean"
               },
               "createdAt": {
@@ -17769,6 +17775,9 @@
                     "type": "boolean"
                   },
                   "sar": {
+                    "type": "boolean"
+                  },
+                  "profileFilled": {
                     "type": "boolean"
                   },
                   "createdAt": {
@@ -22916,6 +22925,9 @@
               "sar": {
                 "type": "boolean"
               },
+              "profileFilled": {
+                "type": "boolean"
+              },
               "createdAt": {
                 "type": "string",
                 "format": "date-time"
@@ -25113,6 +25125,9 @@
                   "sar": {
                     "type": "boolean"
                   },
+                  "profileFilled": {
+                    "type": "boolean"
+                  },
                   "createdAt": {
                     "type": "string",
                     "format": "date-time"
@@ -26507,6 +26522,9 @@
                 "type": "boolean"
               },
               "sar": {
+                "type": "boolean"
+              },
+              "profileFilled": {
                 "type": "boolean"
               },
               "locale": {
@@ -28007,6 +28025,9 @@
                     "sar": {
                       "type": "boolean"
                     },
+                    "profileFilled": {
+                      "type": "boolean"
+                    },
                     "createdAt": {
                       "type": "string",
                       "format": "date-time"
@@ -28354,6 +28375,9 @@
             "type": "boolean"
           },
           "sar": {
+            "type": "boolean"
+          },
+          "profileFilled": {
             "type": "boolean"
           },
           "createdAt": {
@@ -30085,6 +30109,9 @@
                     "type": "boolean"
                   },
                   "sar": {
+                    "type": "boolean"
+                  },
+                  "profileFilled": {
                     "type": "boolean"
                   },
                   "createdAt": {
@@ -32207,6 +32234,9 @@
                 "type": "boolean"
               },
               "sar": {
+                "type": "boolean"
+              },
+              "profileFilled": {
                 "type": "boolean"
               },
               "createdAt": {
@@ -34364,6 +34394,9 @@
                     "sar": {
                       "type": "boolean"
                     },
+                    "profileFilled": {
+                      "type": "boolean"
+                    },
                     "createdAt": {
                       "type": "string",
                       "format": "date-time"
@@ -36454,6 +36487,9 @@
                   "sar": {
                     "type": "boolean"
                   },
+                  "profileFilled": {
+                    "type": "boolean"
+                  },
                   "createdAt": {
                     "type": "string",
                     "format": "date-time"
@@ -38422,6 +38458,9 @@
                     "type": "boolean"
                   },
                   "sar": {
+                    "type": "boolean"
+                  },
+                  "profileFilled": {
                     "type": "boolean"
                   },
                   "createdAt": {

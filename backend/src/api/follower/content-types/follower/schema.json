@@ -206,6 +206,15 @@
         }
       },
       "default": false
+    },
+    "profileFilled": {
+      "type": "boolean",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "default": false
     }
   }
 }
