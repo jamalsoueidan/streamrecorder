@@ -1,4 +1,5 @@
 export default ({ env }) => [
+  "strapi::compression",
   "strapi::logger",
   {
     name: "strapi::security",
