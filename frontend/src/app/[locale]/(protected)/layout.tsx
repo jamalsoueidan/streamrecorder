@@ -1,6 +1,6 @@
 import { getToken } from "@/lib/token";
 import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 
@@ -11,6 +11,7 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
+import { getAnnouncement } from "@/app/actions/announcement";
 import { getUser } from "@/app/actions/user";
 import { buildRulesFromStrapi } from "@/app/lib/ability";
 import { AbilityProvider } from "@/app/providers/ability-provider";
@@ -55,12 +56,15 @@ export default async function DashboardLayout({
     (permissions.data?.role as any)?.permissions || {},
   );
 
+  const locale = await getLocale();
+  const announcement = await getAnnouncement(locale);
+
   return (
     <SerwistProvider swUrl="/serwist/sw.js">
       <QueryProvider>
         <UserProvider user={user?.data}>
           <AbilityProvider rules={rules} role={role}>
-            <Shell initialCollapsed={navbarCollapsed}>{children}</Shell>
+            <Shell initialCollapsed={navbarCollapsed} announcement={announcement}>{children}</Shell>
           </AbilityProvider>
         </UserProvider>
       </QueryProvider>
