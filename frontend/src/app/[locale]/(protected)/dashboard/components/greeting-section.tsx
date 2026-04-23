@@ -23,14 +23,21 @@ export async function GreetingSection({ userPromise }: GreetingSectionProps) {
         : "greetingEvening";
 
   return (
-    <Flex justify="space-between" align="center" w="100%" p="xl" gap="md">
-      <Stack gap={2}>
+    <Flex
+      justify="space-between"
+      align="center"
+      w="100%"
+      p={{ base: "md", sm: "xl" }}
+      gap="sm"
+      wrap="nowrap"
+    >
+      <Stack gap={2} style={{ minWidth: 0, flex: 1 }}>
         <Flex gap="xs" align="center">
-          <Title order={1} size="h1" c="white">
+          <Title order={1} size="h2" c="white" lineClamp={2}>
             {t(greetingKey, { username })}
           </Title>
         </Flex>
-        <Text size="lg" c="white">
+        <Text size="md" c="white" lineClamp={2}>
           {t("greetingSubtitle")}
         </Text>
       </Stack>
@@ -44,12 +51,16 @@ export async function GreetingSection({ userPromise }: GreetingSectionProps) {
         <Image
           src="/google_play.png"
           alt="Get it on Google Play"
-          width={180}
-          height={70}
-          style={{ height: "auto", width: "auto", maxWidth: 180 }}
+          width={140}
+          height={54}
+          className="play-store-badge-img"
+          style={{ height: "auto", width: "100%", maxWidth: 140 }}
         />
       </a>
       <style>{`
+        @media (max-width: 480px) {
+          .play-store-badge-img { max-width: 110px !important; }
+        }
         @media (display-mode: standalone), (display-mode: fullscreen), (display-mode: minimal-ui) {
           .play-store-badge { display: none !important; }
         }

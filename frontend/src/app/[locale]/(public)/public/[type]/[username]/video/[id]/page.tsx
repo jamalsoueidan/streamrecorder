@@ -14,8 +14,11 @@ import {
 } from "@mantine/core";
 import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
 import { Metadata } from "next";
-import { getFormatter, getLocale, getTranslations } from "next-intl/server";
-import { headers } from "next/headers";
+import {
+  getFormatter,
+  getTranslations,
+  setRequestLocale,
+} from "next-intl/server";
 import { redirect } from "next/navigation";
 import {
   fetchProfileRecordings,
@@ -27,18 +30,21 @@ import { VideoPlayer } from "../../components/video-player";
 
 interface PageProps {
   params: Promise<{
+    locale: string;
     username: string;
     type: FollowerTypeEnum;
     id: string;
   }>;
 }
 
+export const revalidate = 86400;
+
 export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
-  const t = await getTranslations("video");
-  const locale = await getLocale();
-  const { id, username, type } = await params;
+  const { locale, id, username, type } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "video" });
   const data = await getRecordingById(id);
 
   if (!data) {
@@ -119,13 +125,10 @@ export async function generateMetadata({
 }
 
 export default async function VideoPage({ params }: PageProps) {
-  const headersList = await headers();
-  const userAgent = headersList.get("user-agent") || "";
-
-  const { id, type, username } = await params;
-  const locale = await getLocale();
-  const tp = await getTranslations("profile");
-  const t = await getTranslations("video");
+  const { locale, id, type, username } = await params;
+  setRequestLocale(locale);
+  const tp = await getTranslations({ locale, namespace: "profile" });
+  const t = await getTranslations({ locale, namespace: "video" });
   const data = await getRecordingById(id);
 
   if (!data) {
@@ -246,7 +249,6 @@ export default async function VideoPage({ params }: PageProps) {
             previewUrl={previewUrl}
             src={`/video/${data.documentId}/playlist.m3u8`}
             thumbnailsUrl={`/video/${data.documentId}/thumbnails.vtt`}
-            userAgent={userAgent}
           />
 
           <Title order={1} c="dimmed" size="xl" fw="400">

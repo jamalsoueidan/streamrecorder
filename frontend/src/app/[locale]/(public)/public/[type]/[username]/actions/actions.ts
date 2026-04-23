@@ -73,25 +73,27 @@ export const getFollower = cache(async function ({
   return follower;
 });
 
-export const getRecordingById = unstable_cache(
-  async (id: string) => {
-    const response = await publicApi.recording.getRecordings({
-      filters: {
-        documentId: id,
-      },
-      populate: {
-        sources: true,
-        follower: {
-          fields: ["username", "type", "nickname"],
-          populate: ["avatar"],
+export const getRecordingById = cache(
+  unstable_cache(
+    async (id: string) => {
+      const response = await publicApi.recording.getRecordings({
+        filters: {
+          documentId: id,
         },
-      },
-    });
+        populate: {
+          sources: true,
+          follower: {
+            fields: ["username", "type", "nickname"],
+            populate: ["avatar"],
+          },
+        },
+      });
 
-    return response.data.data?.[0] ?? null;
-  },
-  ["recording-by-id"],
-  { revalidate: 86400 },
+      return response.data.data?.[0] ?? null;
+    },
+    ["recording-by-id"],
+    { revalidate: 86400 },
+  ),
 );
 
 export const fetchProfileRecordings = cache(async function (
