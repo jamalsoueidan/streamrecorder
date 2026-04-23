@@ -11,20 +11,24 @@ import { unstable_cache } from "next/cache";
 import { cookies } from "next/headers";
 import { NextRequest } from "next/server";
 
-async function getRecordingByDocumentId(documentId: string) {
-  const response = await publicApi.recording.getRecordings({
-    filters: {
-      documentId: { $eq: documentId },
-    },
-    populate: {
-      follower: {
-        fields: ["documentId"],
+const getRecordingByDocumentId = unstable_cache(
+  async (documentId: string) => {
+    const response = await publicApi.recording.getRecordings({
+      filters: {
+        documentId: { $eq: documentId },
       },
-    },
-    "pagination[limit]": 1,
-  });
-  return response.data.data?.[0] ?? null;
-}
+      populate: {
+        follower: {
+          fields: ["documentId"],
+        },
+      },
+      "pagination[limit]": 1,
+    });
+    return response.data.data?.[0] ?? null;
+  },
+  ["recording-doc-id"],
+  { revalidate: 86400 },
+);
 
 
 const fetchSourcePlaylists = unstable_cache(
@@ -53,7 +57,7 @@ const fetchSourcePlaylists = unstable_cache(
     return { sourcesWithPlaylists, createdAt: sources[0].createdAt, path: sources[0].path, bucket: sources[0].bucket };
   },
   ["playlist-sources"],
-  { revalidate: 300 },
+  { revalidate: 86400 },
 );
 
 async function buildPlaylist(documentId: string, updatedAt: string, quality: "high" | "low" = "high") {

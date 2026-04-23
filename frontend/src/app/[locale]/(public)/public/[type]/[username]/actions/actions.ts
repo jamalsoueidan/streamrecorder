@@ -2,6 +2,7 @@
 import { usernameOrFilter } from "@/app/lib/username-filter";
 import publicApi from "@/lib/public-api";
 import { deepMerge } from "@mantine/core";
+import { unstable_cache } from "next/cache";
 import { cache } from "react";
 
 const defaultOptions = {
@@ -72,26 +73,26 @@ export const getFollower = cache(async function ({
   return follower;
 });
 
-export async function getRecordingById(id: string) {
-  const response = await publicApi.recording.getRecordings({
-    filters: {
-      documentId: id,
-    },
-    populate: {
-      sources: true,
-      follower: {
-        fields: ["username", "type", "nickname"],
-        populate: ["avatar"],
+export const getRecordingById = unstable_cache(
+  async (id: string) => {
+    const response = await publicApi.recording.getRecordings({
+      filters: {
+        documentId: id,
       },
-    },
-  });
+      populate: {
+        sources: true,
+        follower: {
+          fields: ["username", "type", "nickname"],
+          populate: ["avatar"],
+        },
+      },
+    });
 
-  if (!response.data.data?.[0]) {
-    return null;
-  }
-
-  return response.data.data?.[0];
-}
+    return response.data.data?.[0] ?? null;
+  },
+  ["recording-by-id"],
+  { revalidate: 86400 },
+);
 
 export const fetchProfileRecordings = cache(async function (
   type: string,
