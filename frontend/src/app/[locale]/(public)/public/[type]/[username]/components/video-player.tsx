@@ -32,9 +32,21 @@ export function VideoPlayer({
   thumbnailsUrl,
 }: VideoPlayerProps) {
   return (
-    <MediaController
-      style={{ width: "100%", height: "clamp(250px, 50vh, 70vh)" }}
-    >
+    <>
+      <noscript>
+        <video
+          poster={previewUrl}
+          controls
+          preload="metadata"
+          width="auto"
+          height="500px"
+        >
+          <source src={src} type="application/x-mpegURL" />
+        </video>
+      </noscript>
+      <MediaController
+        style={{ width: "100%", height: "clamp(250px, 50vh, 70vh)" }}
+      >
       <HlsVideo
         src={src}
         slot="media"
@@ -74,6 +86,7 @@ export function VideoPlayer({
         </Box>
         <MediaFullscreenButton />
       </MediaControlBar>
-    </MediaController>
+      </MediaController>
+    </>
   );
 }

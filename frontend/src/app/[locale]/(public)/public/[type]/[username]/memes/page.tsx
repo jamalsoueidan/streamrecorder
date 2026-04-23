@@ -307,7 +307,6 @@ export default async function Page({ params, searchParams }: PageProps) {
                             <VideoPlayer
                               previewUrl={`/meme/${clip.documentId}/thumbnail.jpg`}
                               src={`/meme/${clip.documentId}/meme.mp4`}
-                              userAgent="asd"
                             />
                           </Box>
                         ) : (

@@ -299,7 +299,7 @@ export default async function Page({ params, searchParams }: PageProps) {
               {clips?.map((clip) => (
                 <Card key={clip.documentId} radius="md">
                   <SimpleGrid cols={{ base: 1, sm: 2 }} spacing="lg">
-                    <ImageClipPreview clip={clip} type={follower.type} />
+                    <ImageClipPreview clip={clip} type={follower.type} locale={locale} />
                     <Stack>
                       <Badge size="xl">{clip.viral_score}/100</Badge>
                       <Title order={2}>{clip.title}</Title>
