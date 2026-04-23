@@ -40,13 +40,15 @@
     "thisWeek": "Esta semana",
     "lastWeek": "La semana pasada",
     "thisMonth": "Este mes",
-    "lastMonth": "El mes pasado"
+    "lastMonth": "El mes pasado",
+    "all": "Todos"
   },
   "duration": {
     "label": "Duración",
     "short": "Menos de 4 min",
     "medium": "4-20 min",
-    "long": "Más de 20 min"
+    "long": "Más de 20 min",
+    "all": "Todos"
   },
   "country": {
     "label": "País",
@@ -67,5 +69,6 @@
   },
   "options": {
     "hasRecordings": "Mostrar solo creadores con grabaciones"
-  }
+  },
+  "excludeMyCreators": "Excluir mis creadores"
 }

@@ -12,7 +12,8 @@ export function getImageUrl(
 ): string {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
   if (baseUrl && source?.path && source?.bucket) {
-    return `https://media.livestreamrecorder.net/${source.bucket}${source.path}${file}`;
+    const host = new URL(baseUrl).hostname.replace(/^www\./, "");
+    return `https://media.${host}/${source.bucket}${source.path}${file}`;
   }
   return `/video/${recordingDocumentId}/${file}`;
 }

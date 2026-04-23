@@ -19,7 +19,8 @@ export function generateAvatarUrl(
       filename?.endsWith(".png") ||
       filename?.endsWith(".jpg") ||
       filename?.endsWith(".jpeg");
-    return `https://image.livestreamrecorder.net/${hasThumb ? "thumbnail_" : ""}${filename}`;
+    const host = new URL(baseUrl).hostname.replace(/^www\./, "");
+    return `https://image.${host}/${hasThumb ? "thumbnail_" : ""}${filename}`;
   }
   return (fullUrl ? baseUrl : "") + `/avatar/${filename}`;
 }

@@ -1,25 +1,19 @@
 "use server";
-import api from "@/lib/api";
-import { deepMerge } from "@mantine/core";
+
+import {
+  fetchCachedRecordings,
+  RecordingScope,
+} from "@/app/actions/recordings";
 import {
   buildFollowingFilters,
-  followingDefaultOptions,
   FollowingFilters,
 } from "../lib/search-params";
 
 export async function fetchRecordings(filters: FollowingFilters, page: number) {
-  const response = await api.recording.browseRecordings(
-    deepMerge(followingDefaultOptions, {
-      filters: buildFollowingFilters(filters),
-      scope: filters.scope,
-      sort: filters.sort,
-      "pagination[page]": page,
-      "pagination[pageSize]": 15,
-    })
-  );
-
-  return {
-    data: response.data?.data || [],
-    meta: response.data?.meta,
-  };
+  return fetchCachedRecordings({
+    scope: (filters.scope as RecordingScope) || "all",
+    filters: buildFollowingFilters(filters),
+    sort: filters.sort,
+    page,
+  });
 }

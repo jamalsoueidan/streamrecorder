@@ -40,13 +40,15 @@
     "thisWeek": "Bu hafta",
     "lastWeek": "Geçen hafta",
     "thisMonth": "Bu ay",
-    "lastMonth": "Geçen ay"
+    "lastMonth": "Geçen ay",
+    "all": "Tümü"
   },
   "duration": {
     "label": "Süre",
     "short": "4 dk altı",
     "medium": "4-20 dk",
-    "long": "20 dk üstü"
+    "long": "20 dk üstü",
+    "all": "Tümü"
   },
   "country": {
     "label": "Ülke",
@@ -67,5 +69,6 @@
   },
   "options": {
     "hasRecordings": "Sadece kayıtları olan içerik üreticilerini göster"
-  }
+  },
+  "excludeMyCreators": "Kreatorlerimi hariç tut"
 }

@@ -40,13 +40,15 @@
     "thisWeek": "Minggu ini",
     "lastWeek": "Minggu lalu",
     "thisMonth": "Bulan ini",
-    "lastMonth": "Bulan lalu"
+    "lastMonth": "Bulan lalu",
+    "all": "Semua"
   },
   "duration": {
     "label": "Durasi",
     "short": "Kurang dari 4 mnt",
     "medium": "4-20 mnt",
-    "long": "Lebih dari 20 mnt"
+    "long": "Lebih dari 20 mnt",
+    "all": "Semua"
   },
   "country": {
     "label": "Negara",
@@ -67,5 +69,6 @@
   },
   "options": {
     "hasRecordings": "Tampilkan hanya kreator dengan rekaman"
-  }
+  },
+  "excludeMyCreators": "Kecualikan kreator saya"
 }

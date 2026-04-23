@@ -20,10 +20,12 @@ import { IconWorldSearch } from "@tabler/icons-react";
 import { getTranslations } from "next-intl/server";
 import { Suspense } from "react";
 import {
+  fetchFavoriteRecordings,
   fetchLatestFollowers,
   fetchRecordingsByPlatform,
 } from "./actions/fetch-recordings";
 import { DiscoverSection } from "./components/discover-section";
+import { FavoritesSection } from "./components/favorites-section";
 import { GreetingSection } from "./components/greeting-section";
 import { LatestFollowersSection } from "./components/latest-followers-section";
 import { MyFeedSection } from "./components/my-feed-section";
@@ -47,6 +49,7 @@ export default async function Page() {
   // Start all promises without awaiting - they run in parallel
   const userPromise = getUser();
   const followersPromise = fetchLatestFollowers();
+  const favoritesPromise = fetchFavoriteRecordings();
 
   const myFeedPromise = Promise.all(
     streamingPlatforms.map(async (platform) => {
@@ -151,6 +154,10 @@ export default async function Page() {
 
         <Suspense fallback={<Skeleton h={120} radius="md" m="md" />}>
           <LatestFollowersSection followersPromise={followersPromise} />
+        </Suspense>
+
+        <Suspense fallback={<Skeleton h={200} radius="md" m="md" />}>
+          <FavoritesSection favoritesPromise={favoritesPromise} />
         </Suspense>
 
         <Suspense fallback={<Skeleton h={360} radius="md" m="md" />}>

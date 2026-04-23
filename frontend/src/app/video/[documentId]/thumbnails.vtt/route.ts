@@ -84,7 +84,9 @@ function buildVideoRanges(sources: Source[]) {
     cols: number;
   }[] = [];
 
-  const mediaHost = "https://media.livestreamrecorder.net";
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  const host = baseUrl ? new URL(baseUrl).hostname.replace(/^www\./, "") : "livestreamrecorder.com";
+  const mediaHost = `https://media.${host}`;
 
   let cumTime = 0;
   for (const source of sources) {
