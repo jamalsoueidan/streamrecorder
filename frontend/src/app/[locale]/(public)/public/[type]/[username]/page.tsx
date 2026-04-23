@@ -13,7 +13,11 @@ import {
   Title,
   Tooltip,
 } from "@mantine/core";
-import { getFormatter, getLocale, getTranslations } from "next-intl/server";
+import {
+  getFormatter,
+  getTranslations,
+  setRequestLocale,
+} from "next-intl/server";
 import { fetchProfileRecordings, getFollower } from "./actions/actions";
 
 import { CountryFlag } from "@/app/[locale]/(protected)/components/country-flag";
@@ -34,19 +38,20 @@ import { SignupCta } from "./components/signup-cta";
 
 interface PageProps {
   params: Promise<{
+    locale: string;
     username: string;
     type: string;
   }>;
 }
 
+export const revalidate = 86400;
+
 export async function generateMetadata({
   params,
-}: {
-  params: Promise<{ username: string; type: string }>;
-}): Promise<Metadata> {
-  const { type, username } = await params;
-  const t = await getTranslations("profile");
-  const locale = await getLocale();
+}: PageProps): Promise<Metadata> {
+  const { locale, type, username } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "profile" });
   const follower = await getFollower({ username, type, locale });
 
   if (!follower) {
@@ -98,10 +103,10 @@ export async function generateMetadata({
 }
 
 export default async function Page({ params }: PageProps) {
-  const { type, username } = await params;
-  const t = await getTranslations("profile");
+  const { locale, type, username } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "profile" });
   const format = await getFormatter();
-  const locale = await getLocale();
   const [follower, data] = await Promise.all([
     getFollower({ username, type, locale }),
     fetchProfileRecordings(type, username),

@@ -18,13 +18,14 @@ import {
   Title,
 } from "@mantine/core";
 import { Metadata } from "next";
-import { getLocale, getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { getCreatorsByCountry } from "../../cache";
 import { CreatorsSimpleGrid } from "../../components/creators-simple-grid";
 
 interface PageProps {
   params: Promise<{
+    locale: string;
     type: string;
     country: string;
   }>;
@@ -33,12 +34,14 @@ interface PageProps {
   }>;
 }
 
+export const revalidate = 86400;
+
 export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
-  const { type, country } = await params;
-  const locale = await getLocale();
-  const t = await getTranslations("creators");
+  const { locale, type, country } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "creators" });
 
   const platform = streamingPlatforms.find(
     (p) => p.name.toLowerCase() === type,
@@ -85,10 +88,10 @@ export async function generateMetadata({
 }
 
 export default async function Page({ params, searchParams }: PageProps) {
-  const { type, country } = await params;
+  const { locale, type, country } = await params;
   const { page } = await searchParams;
-  const locale = await getLocale();
-  const t = await getTranslations("creators");
+  setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "creators" });
 
   const platform = streamingPlatforms.find(
     (p) => p.name.toLowerCase() === type,

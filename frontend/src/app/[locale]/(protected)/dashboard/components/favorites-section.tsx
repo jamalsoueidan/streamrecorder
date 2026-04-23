@@ -57,7 +57,7 @@ export async function FavoritesSection({
       <Divider />
 
       <Stack gap="md" p="md">
-        <SimpleGrid cols={{ base: 2, sm: 2, md: 4 }} spacing="md">
+        <SimpleGrid cols={{ base: 1, sm: 2, md: 4 }} spacing="sm">
           {favorites.map((rec) => (
             <RecordingItem key={rec.documentId} recording={rec} />
           ))}

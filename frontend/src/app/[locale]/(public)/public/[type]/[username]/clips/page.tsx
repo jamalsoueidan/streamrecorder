@@ -17,7 +17,11 @@ import {
   Title,
   Tooltip,
 } from "@mantine/core";
-import { getFormatter, getLocale, getTranslations } from "next-intl/server";
+import {
+  getFormatter,
+  getTranslations,
+  setRequestLocale,
+} from "next-intl/server";
 
 import { CountryFlag } from "@/app/[locale]/(protected)/components/country-flag";
 import { FollowerTypeIcon } from "@/app/[locale]/(protected)/components/follower-type-icon";
@@ -38,6 +42,7 @@ import { ImageClipPreview } from "../components/image-clip-preview";
 
 interface PageProps {
   params: Promise<{
+    locale: string;
     username: string;
     type: string;
   }>;
@@ -46,14 +51,14 @@ interface PageProps {
   }>;
 }
 
+export const revalidate = 86400;
+
 export async function generateMetadata({
   params,
-}: {
-  params: Promise<{ username: string; type: string }>;
-}): Promise<Metadata> {
-  const { type, username } = await params;
-  const t = await getTranslations("profile");
-  const locale = await getLocale();
+}: PageProps): Promise<Metadata> {
+  const { locale, type, username } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "profile" });
   const follower = await getFollower({ username, type, locale });
 
   if (!follower) {
@@ -104,11 +109,11 @@ export async function generateMetadata({
 }
 
 export default async function Page({ params, searchParams }: PageProps) {
-  const { type, username } = await params;
+  const { locale, type, username } = await params;
   const { page } = await searchParams;
-  const t = await getTranslations("profile");
+  setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "profile" });
   const format = await getFormatter();
-  const locale = await getLocale();
   const follower = await getFollower({ username, type, locale });
 
   if (!follower) {
@@ -294,7 +299,7 @@ export default async function Page({ params, searchParams }: PageProps) {
               {clips?.map((clip) => (
                 <Card key={clip.documentId} radius="md">
                   <SimpleGrid cols={{ base: 1, sm: 2 }} spacing="lg">
-                    <ImageClipPreview clip={clip} type={follower.type} />
+                    <ImageClipPreview clip={clip} type={follower.type} locale={locale} />
                     <Stack>
                       <Badge size="xl">{clip.viral_score}/100</Badge>
                       <Title order={2}>{clip.title}</Title>

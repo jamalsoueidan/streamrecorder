@@ -16,7 +16,6 @@ import {
   MediaVolumeRange,
 } from "@/app/[locale]/(protected)/components/video/media-chrome";
 import { Box } from "@mantine/core";
-import { isbot } from "isbot";
 
 import "hls-video-element";
 import "media-chrome";
@@ -25,33 +24,29 @@ interface VideoPlayerProps {
   src: string;
   previewUrl: string;
   thumbnailsUrl?: string;
-  userAgent: string;
 }
 
 export function VideoPlayer({
   src,
   previewUrl,
   thumbnailsUrl,
-  userAgent,
 }: VideoPlayerProps) {
-  if (isbot(userAgent)) {
-    return (
-      <video
-        poster={previewUrl}
-        controls
-        preload="metadata"
-        width="auto"
-        height="500px"
-      >
-        <source src={src} type="application/x-mpegURL" />
-      </video>
-    );
-  }
-
   return (
-    <MediaController
-      style={{ width: "100%", height: "clamp(250px, 50vh, 70vh)" }}
-    >
+    <>
+      <noscript>
+        <video
+          poster={previewUrl}
+          controls
+          preload="metadata"
+          width="auto"
+          height="500px"
+        >
+          <source src={src} type="application/x-mpegURL" />
+        </video>
+      </noscript>
+      <MediaController
+        style={{ width: "100%", height: "clamp(250px, 50vh, 70vh)" }}
+      >
       <HlsVideo
         src={src}
         slot="media"
@@ -91,6 +86,7 @@ export function VideoPlayer({
         </Box>
         <MediaFullscreenButton />
       </MediaControlBar>
-    </MediaController>
+      </MediaController>
+    </>
   );
 }

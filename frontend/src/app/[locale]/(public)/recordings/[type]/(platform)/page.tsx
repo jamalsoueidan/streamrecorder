@@ -2,7 +2,7 @@ import PaginationControls from "@/app/components/pagination";
 import { generateProfileUrl } from "@/app/lib/profile-url";
 import { Center } from "@mantine/core";
 import { Metadata } from "next";
-import { getLocale, getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import { generateAlternates } from "@/app/lib/seo";
 import { streamingPlatforms } from "@/app/lib/streaming-platforms";
@@ -11,6 +11,7 @@ import { RecordingsSimpleGrid } from "../../components/recordings-simple-grid";
 
 interface PageProps {
   params: Promise<{
+    locale: string;
     type: string;
   }>;
   searchParams: Promise<{
@@ -18,12 +19,14 @@ interface PageProps {
   }>;
 }
 
+export const revalidate = 86400;
+
 export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
-  const { type } = await params;
-  const locale = await getLocale();
-  const t = await getTranslations("recordings");
+  const { locale, type } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "recordings" });
 
   const metaKey = type === "all" ? "all" : type;
 
@@ -61,9 +64,10 @@ export default async function RecordingTypePage({
   params,
   searchParams,
 }: PageProps) {
-  const { type } = await params;
+  const { locale, type } = await params;
   const { page } = await searchParams;
-  const t = await getTranslations("recordings");
+  setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "recordings" });
 
   const platform = streamingPlatforms.find(
     (p) => p.name.toLowerCase() === type,

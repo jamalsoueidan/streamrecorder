@@ -11,7 +11,6 @@ import {
   MediaVolumeRange,
 } from "@/app/[locale]/(protected)/components/video/media-chrome";
 import { Box } from "@mantine/core";
-import { isbot } from "isbot";
 import { useEffect, useRef } from "react";
 
 import "hls-video-element";
@@ -24,7 +23,6 @@ interface ClipPlayerProps {
   src: string;
   previewUrl: string;
   subtitlesUrl?: string;
-  userAgent?: string;
   locale?: string;
   fit?: boolean;
 }
@@ -33,7 +31,6 @@ export function ClipPlayer({
   src,
   previewUrl,
   subtitlesUrl,
-  userAgent,
   locale,
   fit = false,
 }: ClipPlayerProps) {
@@ -79,20 +76,6 @@ export function ClipPlayer({
       observer.disconnect();
     };
   }, []);
-
-  if (userAgent && isbot(userAgent)) {
-    return (
-      <video
-        poster={previewUrl}
-        controls
-        preload="metadata"
-        width="auto"
-        height="500px"
-      >
-        <source src={src} type="application/x-mpegURL" />
-      </video>
-    );
-  }
 
   return (
     <MediaController
