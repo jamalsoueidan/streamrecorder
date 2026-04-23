@@ -1,8 +1,8 @@
 "use client";
 
+import { useInvalidateRecordings } from "@/app/hooks/use-invalidate-recordings";
 import { ActionIcon, Button, Tooltip } from "@mantine/core";
 import { IconStar, IconStarFilled } from "@tabler/icons-react";
-import { useQueryClient } from "@tanstack/react-query";
 import { useTranslations } from "next-intl";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -21,7 +21,7 @@ export function FavoriteButton({
 }: FavoriteButtonProps) {
   const [optimistic, setOptimistic] = useState(isFavorite);
   const [pending, setPending] = useState(false);
-  const queryClient = useQueryClient();
+  const invalidateRecordings = useInvalidateRecordings();
   const router = useRouter();
   const t = useTranslations("protected.myList");
 
@@ -36,7 +36,7 @@ export function FavoriteButton({
 
     try {
       await toggleFavorite(documentId, isFavorite);
-      queryClient.invalidateQueries({ queryKey: ["creators", "mylist"] });
+      invalidateRecordings();
       router.refresh();
     } catch {
       setOptimistic((prev) => !prev); // revert

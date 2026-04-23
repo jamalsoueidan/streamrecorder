@@ -1,6 +1,7 @@
 "use server";
 
 import api from "@/lib/api";
+import publicApi from "@/lib/public-api";
 import { deepMerge } from "@mantine/core";
 import { getLocale } from "next-intl/server";
 import { ProfileFilters } from "../lib/search-params";
@@ -90,7 +91,7 @@ export async function fetchProfileRecordings(
   page: number = 1,
 ) {
   //const locale = await getLocale();
-  const response = await api.recording.browseRecordings(
+  const response = await publicApi.recording.getRecordings(
     deepMerge(defaultOptions, {
       filters: {
         follower: {
@@ -130,7 +131,7 @@ export async function fetchRecordingWithContext(
 
   if (pageParam === 1) {
     // 1. Get the target video to find its createdAt
-    const targetResponse = await api.recording.browseRecordings(
+    const targetResponse = await publicApi.recording.getRecordings(
       deepMerge(defaultOptions, {
         filters: {
           documentId: { $eq: targetDocumentId },
@@ -149,7 +150,7 @@ export async function fetchRecordingWithContext(
     }
 
     // 2. Count how many videos come BEFORE this one
-    const countResponse = await api.recording.browseRecordings({
+    const countResponse = await publicApi.recording.getRecordings({
       filters: {
         follower: {
           ..._usernameFilter,
@@ -172,7 +173,7 @@ export async function fetchRecordingWithContext(
   }
 
   // 3. Fetch the actual page
-  const response = await api.recording.browseRecordings(
+  const response = await publicApi.recording.getRecordings(
     deepMerge(defaultOptions, {
       filters: {
         follower: {

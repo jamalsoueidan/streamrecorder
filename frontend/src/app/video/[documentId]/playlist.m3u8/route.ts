@@ -11,7 +11,7 @@ import { unstable_cache } from "next/cache";
 import { cookies } from "next/headers";
 import { NextRequest } from "next/server";
 
-const getRecordingByDocumentId = unstable_cache(
+const getFollowerForRecording = unstable_cache(
   async (documentId: string) => {
     const response = await publicApi.recording.getRecordings({
       filters: {
@@ -24,15 +24,14 @@ const getRecordingByDocumentId = unstable_cache(
       },
       "pagination[limit]": 1,
     });
-    return response.data.data?.[0] ?? null;
+    return response.data.data?.[0]?.follower?.documentId ?? null;
   },
-  ["recording-doc-id"],
-  { revalidate: 86400 },
+  ["recording-follower"],
+  { revalidate: false },
 );
 
-
 const fetchSourcePlaylists = unstable_cache(
-  async (documentId: string, _updatedAt: string, quality: "high" | "low" = "high") => {
+  async (documentId: string, quality: "high" | "low" = "high") => {
     const response = await publicApi.source.getSources({
       filters: {
         recording: { documentId },
@@ -46,7 +45,12 @@ const fetchSourcePlaylists = unstable_cache(
     if (!sources.length) return null;
 
     const s3Client = getS3();
-    const bucket = getBucket(process.env.MEDIA_BUCKET!, sources[0].createdAt, sources[0].path, sources[0].bucket);
+    const bucket = getBucket(
+      process.env.MEDIA_BUCKET!,
+      sources[0].createdAt,
+      sources[0].path,
+      sources[0].bucket,
+    );
     const sourcesWithPlaylists = await fetchPlaylistsFromS3(
       s3Client,
       bucket,
@@ -54,23 +58,40 @@ const fetchSourcePlaylists = unstable_cache(
       quality,
     );
 
-    return { sourcesWithPlaylists, createdAt: sources[0].createdAt, path: sources[0].path, bucket: sources[0].bucket };
+    return {
+      sourcesWithPlaylists,
+      createdAt: sources[0].createdAt,
+      path: sources[0].path,
+      bucket: sources[0].bucket,
+    };
   },
   ["playlist-sources"],
-  { revalidate: 86400 },
+  { revalidate: 3600 },
 );
 
-async function buildPlaylist(documentId: string, updatedAt: string, quality: "high" | "low" = "high") {
-  const cached = await fetchSourcePlaylists(documentId, updatedAt, quality);
+async function buildPlaylist(
+  documentId: string,
+  quality: "high" | "low" = "high",
+) {
+  const cached = await fetchSourcePlaylists(documentId, quality);
   if (!cached) return null;
 
   const s3Client = getS3();
-  const bucket = getBucket(process.env.MEDIA_BUCKET!, cached.createdAt, cached.path, cached.bucket);
-  return combinePlaylistsWithSignedUrls(s3Client, bucket, cached.sourcesWithPlaylists);
+  const bucket = getBucket(
+    process.env.MEDIA_BUCKET!,
+    cached.createdAt,
+    cached.path,
+    cached.bucket,
+  );
+  return combinePlaylistsWithSignedUrls(
+    s3Client,
+    bucket,
+    cached.sourcesWithPlaylists,
+  );
 }
 
-async function checkLowQualityExists(documentId: string, updatedAt: string): Promise<boolean> {
-  const cached = await fetchSourcePlaylists(documentId, updatedAt, "low");
+async function checkLowQualityExists(documentId: string): Promise<boolean> {
+  const cached = await fetchSourcePlaylists(documentId, "low");
   if (!cached) return false;
   return cached.sourcesWithPlaylists.every((s) => s.playlist != null);
 }
@@ -245,16 +266,13 @@ export async function GET(
 ) {
   const { documentId } = await params;
 
-  // Get recording with follower info for access check
-  const recording = await getRecordingByDocumentId(documentId);
-  if (!recording) {
-    return new Response("Not found", { status: 404 });
-  }
+  // Get follower for access check (cached forever — recording always belongs to same follower)
+  const followerDocumentId = await getFollowerForRecording(documentId);
 
   // Check access
   const accessResult = await checkAccess(
-    recording.documentId!,
-    recording.follower?.documentId,
+    documentId,
+    followerDocumentId ?? undefined,
   );
 
   if (!accessResult.allowed) {
@@ -267,11 +285,14 @@ export async function GET(
     });
   }
 
-  const qualityParam = request.nextUrl.searchParams.get("q") as "high" | "low" | null;
+  const qualityParam = request.nextUrl.searchParams.get("q") as
+    | "high"
+    | "low"
+    | null;
 
   // If specific quality requested, serve that playlist
   if (qualityParam === "high" || qualityParam === "low") {
-    const playlist = await buildPlaylist(documentId, recording.updatedAt || "", qualityParam);
+    const playlist = await buildPlaylist(documentId, qualityParam);
     if (!playlist) {
       return new Response("Not found", { status: 404 });
     }
@@ -284,7 +305,7 @@ export async function GET(
   }
 
   // No quality param — check if low quality exists
-  const hasLow = await checkLowQualityExists(documentId, recording.updatedAt || "");
+  const hasLow = await checkLowQualityExists(documentId);
 
   if (hasLow) {
     // Serve master playlist with both qualities
@@ -297,7 +318,7 @@ export async function GET(
   }
 
   // No low quality — serve single playlist directly
-  const playlist = await buildPlaylist(documentId, recording.updatedAt || "");
+  const playlist = await buildPlaylist(documentId);
   if (!playlist) {
     return new Response("Not found", { status: 404 });
   }
@@ -469,8 +490,7 @@ async function combinePlaylistsWithSignedUrls(
         combined +=
           line.replace(
             /(\S+\.mp4)/g,
-            (filename) =>
-              urlMap.get(`${source.path}${filename}`) || filename,
+            (filename) => urlMap.get(`${source.path}${filename}`) || filename,
           ) + "\n";
       } else if (line.trim()) {
         combined += line + "\n";

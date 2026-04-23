@@ -40,13 +40,15 @@
     "thisWeek": "이번 주",
     "lastWeek": "지난 주",
     "thisMonth": "이번 달",
-    "lastMonth": "지난 달"
+    "lastMonth": "지난 달",
+    "all": "전체"
   },
   "duration": {
     "label": "재생 시간",
     "short": "4분 미만",
     "medium": "4-20분",
-    "long": "20분 이상"
+    "long": "20분 이상",
+    "all": "전체"
   },
   "country": {
     "label": "국가",
@@ -67,5 +69,6 @@
   },
   "options": {
     "hasRecordings": "녹화 영상이 있는 크리에이터만 표시"
-  }
+  },
+  "excludeMyCreators": "내 크리에이터 제외"
 }
