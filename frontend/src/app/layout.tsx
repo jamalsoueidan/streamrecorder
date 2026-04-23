@@ -1,20 +1,9 @@
 import "@mantine/charts/styles.css";
-import {
-  ColorSchemeScript,
-  DirectionProvider,
-  MantineProvider,
-  createTheme,
-  mantineHtmlProps,
-} from "@mantine/core";
+import { createTheme } from "@mantine/core";
 import "@mantine/core/styles.css";
-import { ModalsProvider } from "@mantine/modals";
-import { Notifications } from "@mantine/notifications";
 import "@mantine/notifications/styles.css";
 import type { Metadata, Viewport } from "next";
-import { headers } from "next/headers";
-import { NuqsAdapter } from "nuqs/adapters/next/app";
 import "./globals.css";
-import { FingerprintProvider } from "./providers/fingerprint-provider";
 
 export const theme = createTheme({
   components: {
@@ -47,34 +36,10 @@ export const viewport: Viewport = {
   themeColor: "#000000",
 };
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const headersList = await headers();
-  const locale = headersList.get("x-next-intl-locale") || "en";
-  const dir = locale === "ar" ? "rtl" : "ltr";
-
-  return (
-    <html lang={locale} dir={dir} {...mantineHtmlProps}>
-      <head>
-        <ColorSchemeScript defaultColorScheme="dark" />
-        <meta name="format-detection" content="telephone=no" />
-        <link rel="apple-touch-icon" href="/icons/icon-192.png" />
-      </head>
-      <body>
-        <DirectionProvider initialDirection={dir} detectDirection={false}>
-          <MantineProvider theme={theme} defaultColorScheme="dark">
-            <ModalsProvider>
-              <Notifications position="bottom-center" />
-              <NuqsAdapter>
-                <FingerprintProvider>{children}</FingerprintProvider>
-              </NuqsAdapter>
-            </ModalsProvider>
-          </MantineProvider>
-        </DirectionProvider>
-      </body>
-    </html>
-  );
+  return children;
 }

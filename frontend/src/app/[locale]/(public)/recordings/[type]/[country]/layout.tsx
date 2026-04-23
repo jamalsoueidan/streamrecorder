@@ -16,13 +16,14 @@ import {
   Tooltip,
 } from "@mantine/core";
 import { IconArrowLeft, IconMapPin } from "@tabler/icons-react";
-import { getLocale, getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import Image from "next/image";
 import Link from "@/app/components/link";
 import { getFollowerFilters } from "../../cache";
 
 interface LayoutProps {
   params: Promise<{
+    locale: string;
     type: string;
     country: string;
   }>;
@@ -30,9 +31,9 @@ interface LayoutProps {
 }
 
 export default async function Layout({ params, children }: LayoutProps) {
-  const { type, country } = await params;
-  const locale = await getLocale();
-  const t = await getTranslations("recordings");
+  const { locale, type, country } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "recordings" });
 
   const platform = streamingPlatforms.find(
     (p) => p.name.toLowerCase() === type,

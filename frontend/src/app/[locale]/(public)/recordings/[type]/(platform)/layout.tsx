@@ -13,7 +13,7 @@ import {
   Text,
   Title,
 } from "@mantine/core";
-import { getLocale, getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import Image from "next/image";
 import Link from "@/app/components/link";
 import Markdown from "react-markdown";
@@ -22,15 +22,16 @@ import { PlatformBadges } from "../../../components/platform-badge";
 
 interface PageProps {
   params: Promise<{
+    locale: string;
     type: string;
   }>;
   children: React.ReactNode;
 }
 
 export default async function RecordingPage({ params, children }: PageProps) {
-  const { type } = await params;
-  const locale = await getLocale();
-  const t = await getTranslations("recordings");
+  const { locale, type } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "recordings" });
 
   const platform = streamingPlatforms.find(
     (p) => p.name.toLowerCase() === type,
