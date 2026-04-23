@@ -74,7 +74,7 @@ const cachedGetRecordings = unstable_cache(
         sort,
         "pagination[page]": page,
         "pagination[pageSize]": pageSize,
-        "pagination[withCount]": true,
+        "pagination[withCount]": false,
       }),
     );
 
@@ -123,9 +123,10 @@ export async function fetchCachedRecordings({
     const ids = followingIds.length === 0 ? [0] : followingIds;
     followerFilter = JSON.stringify({ $in: ids });
   } else if (scope === "discover") {
-    if (followingIds.length > 0) {
-      followerFilter = JSON.stringify({ $notIn: followingIds });
-    }
+    // Always use a distinct cache key for discover — never fall back to ""
+    // (which would share the "all" cache and leak followed creators through).
+    const ids = followingIds.length > 0 ? followingIds : [-1];
+    followerFilter = JSON.stringify({ $notIn: ids });
   }
 
   return cachedGetRecordings(followerFilter, filterKey, sort, page, pageSize);
