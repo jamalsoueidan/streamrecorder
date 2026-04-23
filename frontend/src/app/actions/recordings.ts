@@ -4,8 +4,9 @@ import api from "@/lib/api";
 import publicApi from "@/lib/public-api";
 import { deepMerge } from "@mantine/core";
 import { unstable_cache } from "next/cache";
+import { cache } from "react";
 
-async function getUserFollowData() {
+const getUserFollowData = cache(async () => {
   const response =
     await api.usersPermissionsUsersRoles.getUsersPermissionsUsersRoles({
       populate: {
@@ -17,7 +18,7 @@ async function getUserFollowData() {
     followingIds: (response.data?.followers?.map((f: any) => f.id) || []).sort(),
     favoriteIds: (response.data?.favorites?.map((f: any) => f.id) || []).sort(),
   };
-}
+});
 
 const defaultOptions = {
   filters: {
