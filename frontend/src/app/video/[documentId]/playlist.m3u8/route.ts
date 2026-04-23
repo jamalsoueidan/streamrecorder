@@ -27,7 +27,7 @@ const getFollowerForRecording = unstable_cache(
     return response.data.data?.[0]?.follower?.documentId ?? null;
   },
   ["recording-follower"],
-  { revalidate: false },
+  { revalidate: 3600 },
 );
 
 const fetchSourcePlaylists = unstable_cache(
@@ -269,11 +269,13 @@ export async function GET(
   // Get follower for access check (cached forever — recording always belongs to same follower)
   const followerDocumentId = await getFollowerForRecording(documentId);
 
+  // Recording doesn't exist — 404 before running access/view bookkeeping
+  if (followerDocumentId === null) {
+    return new Response("Not found", { status: 404 });
+  }
+
   // Check access
-  const accessResult = await checkAccess(
-    documentId,
-    followerDocumentId ?? undefined,
-  );
+  const accessResult = await checkAccess(documentId, followerDocumentId);
 
   if (!accessResult.allowed) {
     const playlist = await getPlaceholderPlaylist(accessResult.reason);

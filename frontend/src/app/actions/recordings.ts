@@ -15,7 +15,9 @@ const getUserFollowData = cache(async () => {
       },
     });
   return {
-    followingIds: (response.data?.followers?.map((f: any) => f.id) || []).sort(),
+    followingIds: (
+      response.data?.followers?.map((f: any) => f.id) || []
+    ).sort(),
     favoriteIds: (response.data?.favorites?.map((f: any) => f.id) || []).sort(),
   };
 });
@@ -65,7 +67,9 @@ const cachedGetRecordings = unstable_cache(
       deepMerge(defaultOptions, {
         filters: {
           ...filters,
-          ...(hasFollowerFilter ? { follower: { ...filters.follower, ...follower } } : {}),
+          ...(hasFollowerFilter
+            ? { follower: { ...filters.follower, ...follower } }
+            : {}),
         },
         sort,
         "pagination[page]": page,
@@ -109,7 +113,6 @@ export async function fetchCachedRecordings({
 
   // Fresh user data every call — no React cache
   const { followingIds, favoriteIds } = await getUserFollowData();
-  console.log("[recordings] scope:", scope, "followingIds:", followingIds.length, "favoriteIds:", favoriteIds.length, "favIds:", favoriteIds.slice(0, 5));
 
   let followerFilter = "";
 
