@@ -1,13 +1,18 @@
 import { Container, Divider, Flex, Stack, Text, Title } from "@mantine/core";
 import { IconChevronDown, IconScale } from "@tabler/icons-react";
-import { getLocale, getTranslations } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
+import { Suspense } from "react";
 import { generateAlternates } from "@/app/lib/seo";
 import { DMCAForm } from "./components/form";
 import { PartnerBenefits } from "./components/partner-benefits";
 
-export async function generateMetadata() {
-  const t = await getTranslations("dmca");
-  const locale = await getLocale();
+interface PageProps {
+  params: Promise<{ locale: string }>;
+}
+
+export async function generateMetadata({ params }: PageProps) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "dmca" });
   return {
     title: t("meta.title"),
     description: t("meta.description"),
@@ -15,8 +20,9 @@ export async function generateMetadata() {
   };
 }
 
-export default async function DMCAPolicy() {
-  const t = await getTranslations("dmca");
+export default async function DMCAPolicy({ params }: PageProps) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "dmca" });
 
   return (
     <Container size="md" style={{ position: "relative", zIndex: 1 }}>
@@ -59,7 +65,9 @@ export default async function DMCAPolicy() {
           </Text>
         </Stack>
 
-        <DMCAForm />
+        <Suspense>
+          <DMCAForm />
+        </Suspense>
 
         <Divider
           label={

@@ -1,12 +1,15 @@
 import { Container, Flex, Paper, Stack, Text, Title } from "@mantine/core";
 import { IconChevronDown, IconQuestionMark } from "@tabler/icons-react";
-import { useTranslations } from "next-intl";
-import { getLocale, getTranslations } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
 import { generateAlternates } from "@/app/lib/seo";
 
-export async function generateMetadata() {
-  const t = await getTranslations("faq");
-  const locale = await getLocale();
+interface PageProps {
+  params: Promise<{ locale: string }>;
+}
+
+export async function generateMetadata({ params }: PageProps) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "faq" });
   return {
     title: t("meta.title"),
     description: t("meta.description"),
@@ -14,8 +17,9 @@ export async function generateMetadata() {
   };
 }
 
-export default function FAQPage() {
-  const t = useTranslations("faq");
+export default async function FAQPage({ params }: PageProps) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "faq" });
 
   const faqs = [
     { question: t("faqs.0.question"), answer: t("faqs.0.answer") },

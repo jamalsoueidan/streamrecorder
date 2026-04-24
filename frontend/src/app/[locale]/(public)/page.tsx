@@ -12,7 +12,7 @@ import {
 } from "@mantine/core";
 import { IconArrowRight } from "@tabler/icons-react";
 import { Metadata } from "next";
-import { getLocale, getTranslations } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import ReactMarkdown from "react-markdown";
 import {
@@ -25,9 +25,15 @@ import { PlatformBadges } from "./components/platform-badge";
 import { CreatorsSlider } from "./creators/components/creators-slider";
 import { RecordingsSimpleGrid } from "./recordings/components/recordings-simple-grid";
 
-export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations("home.meta");
-  const locale = await getLocale();
+interface PageProps {
+  params: Promise<{ locale: string }>;
+}
+
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "home.meta" });
 
   return {
     title: {
@@ -73,8 +79,9 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-export default async function LandingPage() {
-  const t = await getTranslations("home");
+export default async function LandingPage({ params }: PageProps) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "home" });
 
   const followers = await getFeaturedFollowers();
   const recordings = await getLatestRecordings();

@@ -1,6 +1,7 @@
 import { DeploymentChecker } from "@/app/components/deployment-checker";
 import { FingerprintProvider } from "@/app/providers/fingerprint-provider";
 import { theme } from "@/app/layout";
+import { routing } from "@/i18n/routing";
 import {
   ColorSchemeScript,
   DirectionProvider,
@@ -12,6 +13,10 @@ import { Notifications } from "@mantine/notifications";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
+
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
 
 export default async function LocaleLayout({
   children,

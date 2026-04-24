@@ -26,13 +26,16 @@ import {
   IconWorld,
   IconWriting,
 } from "@tabler/icons-react";
-import { useTranslations } from "next-intl";
-import { getLocale, getTranslations } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
 import { generateAlternates } from "@/app/lib/seo";
 
-export async function generateMetadata() {
-  const t = await getTranslations("terms");
-  const locale = await getLocale();
+interface PageProps {
+  params: Promise<{ locale: string }>;
+}
+
+export async function generateMetadata({ params }: PageProps) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "terms" });
   return {
     title: t("meta.title"),
     description: t("meta.description"),
@@ -40,8 +43,9 @@ export async function generateMetadata() {
   };
 }
 
-export default function TermsAndConditions() {
-  const t = useTranslations("terms");
+export default async function TermsAndConditions({ params }: PageProps) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "terms" });
   const lastUpdated = "February 20, 2026";
 
   return (

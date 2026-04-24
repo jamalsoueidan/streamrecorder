@@ -18,12 +18,15 @@ import {
   IconUsers,
   IconWorld,
 } from "@tabler/icons-react";
-import { useTranslations } from "next-intl";
-import { getLocale, getTranslations } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
 
-export async function generateMetadata() {
-  const t = await getTranslations("privacy");
-  const locale = await getLocale();
+interface PageProps {
+  params: Promise<{ locale: string }>;
+}
+
+export async function generateMetadata({ params }: PageProps) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "privacy" });
   return {
     title: t("meta.title"),
     description: t("meta.description"),
@@ -31,8 +34,9 @@ export async function generateMetadata() {
   };
 }
 
-export default function PrivacyPolicy() {
-  const t = useTranslations("privacy");
+export default async function PrivacyPolicy({ params }: PageProps) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "privacy" });
   const lastUpdated = "February 20, 2026";
 
   return (

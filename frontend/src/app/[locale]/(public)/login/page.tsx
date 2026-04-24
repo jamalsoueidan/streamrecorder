@@ -1,5 +1,6 @@
 import { generateAlternates } from "@/app/lib/seo";
 import { getLocale, getTranslations } from "next-intl/server";
+import { Suspense } from "react";
 import { LoginChoices } from "./components/login-choices";
 
 export async function generateMetadata() {
@@ -13,5 +14,9 @@ export async function generateMetadata() {
 }
 
 export default function LoginPage() {
-  return <LoginChoices />;
+  return (
+    <Suspense>
+      <LoginChoices />
+    </Suspense>
+  );
 }

@@ -1,12 +1,17 @@
 import { generateAlternates } from "@/app/lib/seo";
 import { Container, Stack, Text, Title, Flex } from "@mantine/core";
 import { IconShieldCheck } from "@tabler/icons-react";
-import { getLocale, getTranslations } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
 import { VerificationFlow } from "./components/verification-flow";
 
-export async function generateMetadata() {
-  const t = await getTranslations("verifyOwnership");
-  const locale = await getLocale();
+interface PageProps {
+  params: Promise<{ locale: string }>;
+  searchParams: Promise<{ intent?: string }>;
+}
+
+export async function generateMetadata({ params }: PageProps) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "verifyOwnership" });
   return {
     title: t("meta.title"),
     description: t("meta.description"),
@@ -15,13 +20,13 @@ export async function generateMetadata() {
 }
 
 export default async function VerifyOwnershipPage({
+  params,
   searchParams,
-}: {
-  searchParams: Promise<{ intent?: string }>;
-}) {
-  const t = await getTranslations("verifyOwnership");
-  const params = await searchParams;
-  const intent = params.intent || "partnership";
+}: PageProps) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "verifyOwnership" });
+  const sp = await searchParams;
+  const intent = sp.intent || "partnership";
 
   return (
     <Container size="sm" style={{ position: "relative", zIndex: 1 }}>
