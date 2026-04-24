@@ -20,6 +20,14 @@ interface PageProps {
 }
 
 export const revalidate = 86400;
+export const dynamic = "force-static";
+
+export function generateStaticParams() {
+  return [
+    { type: "all" },
+    ...streamingPlatforms.map((p) => ({ type: p.name.toLowerCase() })),
+  ];
+}
 
 export async function generateMetadata({
   params,
