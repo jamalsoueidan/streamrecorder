@@ -1,10 +1,11 @@
 name: Frontend - Build and Push Docker Image
 
+# Auto-build disabled while frontend is hosted on Vercel. The build needs
+# STRAPI_TOKEN at prerender time (generateStaticParams hits the API) and
+# we don't want to bake that secret into the image. Trigger manually if
+# you actually need a Coolify image.
 on:
-  push:
-    branches: [main]
-    paths:
-      - "frontend/**"
+  workflow_dispatch:
 
 env:
   REGISTRY: ghcr.io

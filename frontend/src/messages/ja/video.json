@@ -13,5 +13,18 @@
     "title": "{username} のライブ配信動画を視聴 - {date}"
   },
   "backToProfile": "{username} のプロフィールに戻る",
-  "otherRecordingsBy": "{username} の他の録画"
+  "otherRecordingsBy": "{username} の他の録画",
+  "accessGate": {
+    "signIn": {
+      "title": "続けて視聴するにはサインインしてください",
+      "body": "無料プレビューの上限に達しました。無料アカウントを作成して続行してください。",
+      "primaryCta": "サインイン",
+      "secondaryCta": "アカウント作成"
+    },
+    "upgrade": {
+      "title": "アップグレードして視聴を続ける",
+      "body": "無料プランの上限に達しました。アップグレードで無制限にご利用いただけます。",
+      "primaryCta": "アップグレード"
+    }
+  }
 }

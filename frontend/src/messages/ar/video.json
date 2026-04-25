@@ -13,5 +13,18 @@
     "title": "شاهد بث {username} المباشر - {date}"
   },
   "backToProfile": "العودة إلى الملف الشخصي لـ {username}",
-  "otherRecordingsBy": "تسجيلات أخرى بواسطة {username}"
+  "otherRecordingsBy": "تسجيلات أخرى بواسطة {username}",
+  "accessGate": {
+    "signIn": {
+      "title": "سجّل الدخول للمتابعة",
+      "body": "وصلت إلى الحد الأقصى للمعاينات المجانية. أنشئ حسابًا مجانيًا للمتابعة.",
+      "primaryCta": "تسجيل الدخول",
+      "secondaryCta": "إنشاء حساب"
+    },
+    "upgrade": {
+      "title": "قم بالترقية لمواصلة المشاهدة",
+      "body": "وصلت إلى الحد المجاني. قم بالترقية للوصول غير المحدود.",
+      "primaryCta": "ترقية"
+    }
+  }
 }

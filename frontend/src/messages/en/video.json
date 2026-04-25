@@ -13,5 +13,18 @@
     "title": "Watch {username} video live stream - {date}"
   },
   "backToProfile": "Back to {username} profile",
-  "otherRecordingsBy": "Other recordings by {username}"
+  "otherRecordingsBy": "Other recordings by {username}",
+  "accessGate": {
+    "signIn": {
+      "title": "Sign in to keep watching",
+      "body": "You've reached your free preview limit. Create a free account to continue.",
+      "primaryCta": "Sign in",
+      "secondaryCta": "Create account"
+    },
+    "upgrade": {
+      "title": "Upgrade to keep watching",
+      "body": "You've reached your free limit. Upgrade for unlimited access.",
+      "primaryCta": "Upgrade"
+    }
+  }
 }

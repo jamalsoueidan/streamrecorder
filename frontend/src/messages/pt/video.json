@@ -13,5 +13,18 @@
     "title": "Assistir live de {username} - {date}"
   },
   "backToProfile": "Voltar para o perfil de {username}",
-  "otherRecordingsBy": "Outras gravações de {username}"
+  "otherRecordingsBy": "Outras gravações de {username}",
+  "accessGate": {
+    "signIn": {
+      "title": "Entre para continuar assistindo",
+      "body": "Você atingiu o limite de visualizações gratuitas. Crie uma conta grátis para continuar.",
+      "primaryCta": "Entrar",
+      "secondaryCta": "Criar conta"
+    },
+    "upgrade": {
+      "title": "Atualize para continuar assistindo",
+      "body": "Você atingiu seu limite gratuito. Atualize para acesso ilimitado.",
+      "primaryCta": "Atualizar"
+    }
+  }
 }

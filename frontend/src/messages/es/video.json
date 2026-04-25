@@ -13,5 +13,18 @@
     "title": "Ver transmisión en vivo de {username} - {date}"
   },
   "backToProfile": "Volver al perfil de {username}",
-  "otherRecordingsBy": "Otras grabaciones de {username}"
+  "otherRecordingsBy": "Otras grabaciones de {username}",
+  "accessGate": {
+    "signIn": {
+      "title": "Inicia sesión para seguir viendo",
+      "body": "Has alcanzado el límite de vistas previas gratuitas. Crea una cuenta gratis para continuar.",
+      "primaryCta": "Iniciar sesión",
+      "secondaryCta": "Crear cuenta"
+    },
+    "upgrade": {
+      "title": "Actualiza para seguir viendo",
+      "body": "Has alcanzado tu límite gratuito. Actualiza para obtener acceso ilimitado.",
+      "primaryCta": "Actualizar"
+    }
+  }
 }
