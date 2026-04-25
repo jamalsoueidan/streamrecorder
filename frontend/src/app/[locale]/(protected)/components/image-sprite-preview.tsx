@@ -32,7 +32,7 @@ interface Props {
 
 export function ImageSpritePreview({ recording, type, username }: Props) {
   const { isNew } = useIsNew();
-  const { isWatched, markWatched } = useWatched();
+  const { isWatched } = useWatched();
   const t = useTranslations("protected.common");
   const watched = recording.documentId ? isWatched(recording.documentId) : false;
 
@@ -110,7 +110,6 @@ export function ImageSpritePreview({ recording, type, username }: Props) {
             timeoutRef.current = null;
           }
           setShowVideo(false);
-          if (recording.documentId) markWatched(recording.documentId);
         }}
         style={{
           position: "relative",

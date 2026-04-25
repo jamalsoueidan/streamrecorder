@@ -58,5 +58,20 @@
     "disconnectSuccess": "切断完了",
     "disconnectSuccessMessage": "YouTubeアカウントが切断されました",
     "disconnectError": "エラー"
+  },
+  "watchedHistory": {
+    "title": "視聴済みの動画",
+    "description": "{count} 本の動画を視聴済みとしてマークしています。サムネイルにバッジとして表示されるため、すでに視聴した動画を一目で確認できます。",
+    "clearButton": "視聴履歴を消去",
+    "clearConfirm": {
+      "title": "視聴履歴を消去",
+      "message": "{count} 本の動画から「視聴済み」バッジが削除されます。再び未視聴として表示されます。続行しますか？",
+      "confirm": "消去",
+      "cancel": "キャンセル"
+    },
+    "cleared": {
+      "title": "消去しました",
+      "message": "視聴履歴を消去しました。"
+    }
   }
 }

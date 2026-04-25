@@ -58,5 +58,20 @@
     "disconnectSuccess": "Desconectado",
     "disconnectSuccessMessage": "Sua conta do YouTube foi desconectada",
     "disconnectError": "Erro"
+  },
+  "watchedHistory": {
+    "title": "Vídeos assistidos",
+    "description": "Você marcou {count} vídeos como assistidos. Isso aparece como um selo nas miniaturas para você saber rapidamente quais já viu.",
+    "clearButton": "Limpar histórico de visualizações",
+    "clearConfirm": {
+      "title": "Limpar histórico de visualizações",
+      "message": "Isso removerá o selo ASSISTIDO de {count} vídeos. Eles voltarão a aparecer como não assistidos. Continuar?",
+      "confirm": "Limpar",
+      "cancel": "Cancelar"
+    },
+    "cleared": {
+      "title": "Limpo",
+      "message": "Seu histórico de visualizações foi limpo."
+    }
   }
 }

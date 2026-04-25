@@ -1,6 +1,7 @@
 "use client";
 
 import { checkVideoAccess } from "@/app/actions/video-access";
+import { configureHls } from "@/lib/configure-hls";
 import { useQuery } from "@tanstack/react-query";
 import "hls-video-element";
 import "media-chrome";
@@ -17,6 +18,8 @@ import {
   MediaTimeRange,
   MediaVolumeRange,
 } from "./media-chrome";
+
+configureHls();
 
 interface Props {
   documentId: string;

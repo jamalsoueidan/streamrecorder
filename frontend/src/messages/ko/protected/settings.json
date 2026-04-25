@@ -58,5 +58,20 @@
     "disconnectSuccess": "연결 해제됨",
     "disconnectSuccessMessage": "YouTube 계정이 연결 해제되었습니다",
     "disconnectError": "오류"
+  },
+  "watchedHistory": {
+    "title": "시청한 동영상",
+    "description": "{count}개의 동영상을 시청 완료로 표시했습니다. 썸네일에 배지로 표시되어 이미 시청한 영상을 한눈에 확인할 수 있습니다.",
+    "clearButton": "시청 기록 지우기",
+    "clearConfirm": {
+      "title": "시청 기록 지우기",
+      "message": "{count}개의 동영상에서 '시청함' 배지가 제거됩니다. 다시 미시청으로 표시됩니다. 계속하시겠습니까?",
+      "confirm": "지우기",
+      "cancel": "취소"
+    },
+    "cleared": {
+      "title": "지워짐",
+      "message": "시청 기록이 지워졌습니다."
+    }
   }
 }

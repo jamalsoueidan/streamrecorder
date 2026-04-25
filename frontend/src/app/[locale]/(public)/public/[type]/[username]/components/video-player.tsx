@@ -16,6 +16,7 @@ import {
   MediaVolumeRange,
 } from "@/app/[locale]/(protected)/components/video/media-chrome";
 import { checkVideoAccess, VideoAccessResult } from "@/app/actions/video-access";
+import { configureHls } from "@/lib/configure-hls";
 import { Box, Button, Flex, Group, Loader, Stack, Text, Title } from "@mantine/core";
 import { IconLock } from "@tabler/icons-react";
 import { useTranslations } from "next-intl";
@@ -25,6 +26,8 @@ import { useEffect, useRef, useState } from "react";
 import "hls-video-element";
 import "media-chrome";
 import { VideoLoadingOverlay } from "./video-loading-overlay";
+
+configureHls();
 
 interface VideoPlayerProps {
   documentId?: string;

@@ -58,5 +58,20 @@
       "cancel": "Cancel"
     },
     "deleteError": "Error"
+  },
+  "watchedHistory": {
+    "title": "Watched videos",
+    "description": "You've marked {count} videos as watched. This shows up as a badge on thumbnails so you can tell at a glance which ones you've already seen.",
+    "clearButton": "Clear watched history",
+    "clearConfirm": {
+      "title": "Clear watched history",
+      "message": "This will remove the WATCHED badge from {count} videos. They'll appear unwatched again. Continue?",
+      "confirm": "Clear",
+      "cancel": "Cancel"
+    },
+    "cleared": {
+      "title": "Cleared",
+      "message": "Your watched history has been cleared."
+    }
   }
 }

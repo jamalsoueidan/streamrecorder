@@ -58,5 +58,20 @@
     "disconnectSuccess": "Bağlantı Kesildi",
     "disconnectSuccessMessage": "YouTube hesabınızın bağlantısı kesildi",
     "disconnectError": "Hata"
+  },
+  "watchedHistory": {
+    "title": "İzlenen videolar",
+    "description": "{count} videoyu izlendi olarak işaretlediniz. Hangilerini izlediğinizi tek bakışta görebilmeniz için küçük resimlerde rozet olarak görünür.",
+    "clearButton": "İzleme geçmişini temizle",
+    "clearConfirm": {
+      "title": "İzleme geçmişini temizle",
+      "message": "Bu, {count} videodaki İZLENDİ rozetini kaldıracak. Tekrar izlenmemiş olarak görünecekler. Devam edilsin mi?",
+      "confirm": "Temizle",
+      "cancel": "İptal"
+    },
+    "cleared": {
+      "title": "Temizlendi",
+      "message": "İzleme geçmişiniz temizlendi."
+    }
   }
 }

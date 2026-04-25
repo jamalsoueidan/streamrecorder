@@ -58,5 +58,20 @@
     "disconnectSuccess": "Desconectado",
     "disconnectSuccessMessage": "Tu cuenta de YouTube ha sido desconectada",
     "disconnectError": "Error"
+  },
+  "watchedHistory": {
+    "title": "Vídeos vistos",
+    "description": "Has marcado {count} vídeos como vistos. Aparece una insignia en las miniaturas para saber de un vistazo cuáles ya has visto.",
+    "clearButton": "Borrar historial de vistos",
+    "clearConfirm": {
+      "title": "Borrar historial de vistos",
+      "message": "Se quitará la insignia VISTO de {count} vídeos. Volverán a aparecer como no vistos. ¿Continuar?",
+      "confirm": "Borrar",
+      "cancel": "Cancelar"
+    },
+    "cleared": {
+      "title": "Borrado",
+      "message": "Tu historial de vistos ha sido borrado."
+    }
   }
 }

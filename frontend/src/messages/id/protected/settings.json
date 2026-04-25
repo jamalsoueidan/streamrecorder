@@ -58,5 +58,20 @@
     "disconnectSuccess": "Terputus",
     "disconnectSuccessMessage": "Akun YouTube telah diputuskan",
     "disconnectError": "Error"
+  },
+  "watchedHistory": {
+    "title": "Video yang ditonton",
+    "description": "Anda telah menandai {count} video sebagai sudah ditonton. Ini muncul sebagai lencana pada thumbnail agar Anda dapat melihat sekilas mana yang sudah Anda tonton.",
+    "clearButton": "Hapus riwayat tontonan",
+    "clearConfirm": {
+      "title": "Hapus riwayat tontonan",
+      "message": "Ini akan menghapus lencana DITONTON dari {count} video. Video akan tampak belum ditonton lagi. Lanjutkan?",
+      "confirm": "Hapus",
+      "cancel": "Batal"
+    },
+    "cleared": {
+      "title": "Dihapus",
+      "message": "Riwayat tontonan Anda telah dihapus."
+    }
   }
 }

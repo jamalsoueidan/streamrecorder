@@ -8,6 +8,7 @@ import { DangerZoneCard } from "./components/danger-zone-card";
 import { ProfileCard } from "./components/profile-card";
 import { SubscriptionCard } from "./components/subscription-card";
 import { TikTokCard } from "./components/tiktok-card";
+import { WatchedHistoryCard } from "./components/watched-history-card";
 import { YouTubeCard } from "./components/youtube-card";
 
 export default function SettingsPage() {
@@ -38,6 +39,7 @@ export default function SettingsPage() {
           <TikTokCard />
           <YouTubeCard />
         </Can>
+        <WatchedHistoryCard />
         <Role is="admin" not>
           <DangerZoneCard />
         </Role>

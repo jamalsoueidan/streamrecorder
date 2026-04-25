@@ -27,5 +27,9 @@ export function useWatched() {
     [watched],
   );
 
-  return { watched, markWatched, isWatched };
+  const clearWatched = useCallback(() => {
+    setWatched([]);
+  }, [setWatched]);
+
+  return { watched, markWatched, isWatched, clearWatched };
 }
