@@ -50,26 +50,45 @@ export function VideoLoadIndicator({ containerRef, videoRef }: Props) {
       if (label) setStage(label);
     };
 
+    const stopElapsedTimer = () => {
+      if (rafId !== null) {
+        cancelAnimationFrame(rafId);
+        rafId = null;
+      }
+    };
+
+    const tickElapsed = () => {
+      if (loadStartedAt === null) {
+        rafId = null;
+        return;
+      }
+      setElapsedMs(performance.now() - loadStartedAt);
+      rafId = requestAnimationFrame(tickElapsed);
+    };
+
+    const startElapsedTimer = () => {
+      if (loadStartedAt === null || rafId !== null) return;
+      rafId = requestAnimationFrame(tickElapsed);
+    };
+
     const showLoading = (label?: string) => {
-      if (loadStartedAt === null) loadStartedAt = performance.now();
+      if (loadStartedAt === null) {
+        loadStartedAt = performance.now();
+        startElapsedTimer();
+      }
       setVisible(true);
       if (label) setStage(label);
     };
 
     const hide = () => {
+      stopElapsedTimer();
       setVisible(false);
       setProgress(0);
+      setElapsedMs(0);
       loadStartedAt = null;
     };
 
     const setup = (media: HTMLVideoElement, hlsEl: HlsVideoElement | null) => {
-      const tick = () => {
-        if (loadStartedAt !== null) {
-          setElapsedMs(performance.now() - loadStartedAt);
-        }
-        rafId = requestAnimationFrame(tick);
-      };
-      rafId = requestAnimationFrame(tick);
 
       // --- native media events -----------------------------------------
       const onLoadStart = () => showLoading("Connecting");

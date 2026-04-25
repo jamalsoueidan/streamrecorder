@@ -39,7 +39,7 @@ async function resolveAccess(
       await api.usersPermissionsUsersRoles.getUsersPermissionsUsersRoles({
         populate: {
           role: true,
-          followers: { fields: ["id"] },
+          followers: { fields: ["documentId"] },
         },
       });
 

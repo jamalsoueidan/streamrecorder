@@ -29,40 +29,55 @@ export function VideoLoadingOverlay({ containerRef, videoRef }: Props) {
       null;
     if (!media) return;
 
-    const startedAt = performance.now();
-    let bufferingSince: number | null = startedAt;
+    let bufferingSince: number | null = performance.now();
     let rafId: number | null = null;
 
     const tick = () => {
-      if (bufferingSince !== null) {
-        setElapsedMs(performance.now() - bufferingSince);
-
-        // Update buffered percentage
-        try {
-          if (media.buffered.length > 0 && media.duration > 0) {
-            const end = media.buffered.end(media.buffered.length - 1);
-            setBufferedPct(Math.min(100, (end / media.duration) * 100));
-          }
-        } catch {
-          // buffered can throw on certain states
+      if (bufferingSince === null) {
+        rafId = null;
+        return;
+      }
+      setElapsedMs(performance.now() - bufferingSince);
+      try {
+        if (media.buffered.length > 0 && media.duration > 0) {
+          const end = media.buffered.end(media.buffered.length - 1);
+          setBufferedPct(Math.min(100, (end / media.duration) * 100));
         }
+      } catch {
+        // buffered can throw on certain states
       }
       rafId = requestAnimationFrame(tick);
     };
-    rafId = requestAnimationFrame(tick);
+
+    const startTimer = () => {
+      if (bufferingSince === null || rafId !== null) return;
+      rafId = requestAnimationFrame(tick);
+    };
+
+    const stopTimer = () => {
+      if (rafId !== null) {
+        cancelAnimationFrame(rafId);
+        rafId = null;
+      }
+    };
+
+    startTimer();
 
     const onPlaying = () => {
       bufferingSince = null;
+      stopTimer();
       setState("playing");
     };
 
     const onWaiting = () => {
       bufferingSince = performance.now();
       setState("buffering");
+      startTimer();
     };
 
     const onError = () => {
       bufferingSince = null;
+      stopTimer();
       setState("error");
     };
 
