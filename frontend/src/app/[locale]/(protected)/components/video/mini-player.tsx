@@ -1,5 +1,7 @@
 "use client";
 
+import { checkVideoAccess } from "@/app/actions/video-access";
+import { useQuery } from "@tanstack/react-query";
 import "hls-video-element";
 import "media-chrome";
 import {
@@ -21,6 +23,13 @@ interface Props {
 }
 
 export function MiniPlayer({ documentId }: Props) {
+  // Prime the view_session cookie so the click-to-play works without
+  // an extra round trip. Dedupes with any parent access-check query.
+  useQuery({
+    queryKey: ["video-access", documentId],
+    queryFn: () => checkVideoAccess(documentId),
+    staleTime: 5 * 60 * 1000,
+  });
   return (
     <>
       <style>{`

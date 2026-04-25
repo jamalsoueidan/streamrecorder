@@ -36,6 +36,7 @@ import {
 import { getProfileUrl } from "../../../../components/open-social";
 import { FollowerTypeIcon } from "../follower-type-icon";
 import { formatDuration } from "./player-utils";
+import { VideoLoadIndicator } from "./video-load-indicator";
 import { VideoPlayer } from "./video-player";
 
 interface VideoScrollPlayerProps {
@@ -87,13 +88,10 @@ export function VideoScrollPlayer({
     });
   const isMobile = useMediaQuery("(max-width: 768px)");
   const hasScrolledToInitial = useRef(false);
-  const [isSafari] = useState(
-    () =>
-      typeof navigator !== "undefined" &&
-      /^((?!chrome|android).)*safari/i.test(navigator.userAgent),
-  );
-  const [isMuted, setIsMuted] = useState(isSafari);
-  const [hasPlayed, setHasPlayed] = useState(!isSafari);
+  // Start muted for everyone — browsers only allow unattended autoplay when
+  // muted + playsinline. User can unmute; the state persists across videos.
+  const [isMuted, setIsMuted] = useState(true);
+  const [hasPlayed, setHasPlayed] = useState(true);
 
   // Track the currently visible video's documentId (not index, since index can shift)
   const visibleDocumentId = useRef<string | null>(null);
@@ -655,20 +653,27 @@ function VideoSlide({
       h="100%"
       justify="center"
       align="center"
+      pos="relative"
       style={{
         scrollSnapAlign: "start",
         scrollSnapStop: "always",
       }}
     >
       {isVisible ? (
-        <VideoPlayer
-          recording={recording}
-          key={recording.documentId}
-          defaultMuted={isMuted}
-          onMuteChange={onMuteChange}
-          autoPlay={autoPlay}
-          onPlay={onPlay}
-        />
+        <>
+          <VideoPlayer
+            recording={recording}
+            key={recording.documentId}
+            defaultMuted={isMuted}
+            onMuteChange={onMuteChange}
+            autoPlay={autoPlay}
+            onPlay={onPlay}
+          />
+          <VideoLoadIndicator
+            key={`indicator-${recording.documentId}`}
+            containerRef={ref}
+          />
+        </>
       ) : (
         <Box w="100%" h="100%" bg="dark.9" />
       )}
