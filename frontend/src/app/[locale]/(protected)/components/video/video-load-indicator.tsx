@@ -72,6 +72,9 @@ export function VideoLoadIndicator({ containerRef, videoRef }: Props) {
     };
 
     const showLoading = (label?: string) => {
+      // Clear any stale error from a previous load cycle so the indicator
+      // doesn't get stuck on "Failed to load" after a transient failure.
+      setErrored(false);
       if (loadStartedAt === null) {
         loadStartedAt = performance.now();
         startElapsedTimer();
@@ -83,6 +86,7 @@ export function VideoLoadIndicator({ containerRef, videoRef }: Props) {
     const hide = () => {
       stopElapsedTimer();
       setVisible(false);
+      setErrored(false);
       setProgress(0);
       setElapsedMs(0);
       loadStartedAt = null;

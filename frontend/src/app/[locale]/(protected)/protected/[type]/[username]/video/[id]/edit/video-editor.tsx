@@ -46,13 +46,16 @@ export default function VideoEditor({ recording }: Props) {
   const t = useTranslations("protected.videoEditor");
   const videoRef = useRef<HTMLVideoElement>(null);
 
-  // Prime the view_session cookie before the user hits play
-  useQuery({
+  // Resolve access and set the view_session cookie before the player
+  // loads — otherwise the playlist request can race ahead of the cookie
+  // and 403, leaving a blank player.
+  const { data: videoAccess, isPending: isCheckingVideoAccess } = useQuery({
     queryKey: ["video-access", recording.documentId],
     queryFn: () => checkVideoAccess(recording.documentId!),
     enabled: !!recording.documentId,
     staleTime: 5 * 60 * 1000,
   });
+  const canPlayVideo = videoAccess?.allowed === true;
 
   const [duration, setDuration] = useState(0);
   const [currentTime, setCurrentTime] = useState(0);
@@ -215,19 +218,21 @@ export default function VideoEditor({ recording }: Props) {
         <MediaController
           style={{ width: "100%", height: "100%", background: "#000" }}
         >
-          <HlsVideo
-            ref={videoRef}
-            src={`/video/${recording.documentId}/playlist.m3u8`}
-            slot="media"
-            playsInline
-          >
-            <track
-              default
-              kind="metadata"
-              label="thumbnails"
-              src={`/video/${recording.documentId}/thumbnails.vtt`}
-            />
-          </HlsVideo>
+          {canPlayVideo && (
+            <HlsVideo
+              ref={videoRef}
+              src={`/video/${recording.documentId}/playlist.m3u8`}
+              slot="media"
+              playsInline
+            >
+              <track
+                default
+                kind="metadata"
+                label="thumbnails"
+                src={`/video/${recording.documentId}/thumbnails.vtt`}
+              />
+            </HlsVideo>
+          )}
           <MediaPosterImage
             slot="poster"
             src={getImageUrl(recording.documentId!, "screenshot.jpg", recording.sources?.at(-1))}
@@ -239,7 +244,9 @@ export default function VideoEditor({ recording }: Props) {
               "--media-button-icon-width": "64px",
             }}
           />
-          <MediaLoadingIndicator slot="centered-chrome" />
+          {(isCheckingVideoAccess || canPlayVideo) && (
+            <MediaLoadingIndicator slot="centered-chrome" />
+          )}
         </MediaController>
       </Box>
 
