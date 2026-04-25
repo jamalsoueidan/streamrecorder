@@ -11,7 +11,7 @@ import "hls-video-element";
 import type { HlsVideoElement } from "hls-video-element";
 import "media-chrome";
 import "@player.style/yt";
-import { useSearchParams } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { HlsVideo, MediaPosterImage } from "./media-chrome";
 
@@ -68,6 +68,30 @@ export function VideoPlayer({
       }
     };
   }, [recording.documentId]);
+
+  // Next.js parallel @modal routes don't unmount their content when the
+  // user navigates away (next.js#62430) — the modal slot stays mounted
+  // with a stale URL. Watch the pathname; when it no longer points at
+  // this video, stop the hls.js loader so segments stop streaming in
+  // the background. We only call stopLoad() (not detachMedia/destroy)
+  // to avoid triggering a decode error in the still-visible <video>
+  // element during the modal's close animation. Full destroy still
+  // happens via the unmount cleanup above when React eventually tears
+  // down the tree.
+  const pathname = usePathname();
+  useEffect(() => {
+    if (!recording.documentId) return;
+    if (pathname.includes(recording.documentId)) return;
+
+    const controller = controllerRef.current;
+    if (!controller) return;
+    const hlsEl = controller.querySelector(
+      "hls-video",
+    ) as HlsVideoElement | null;
+    if (!hlsEl?.api) return;
+
+    hlsEl.api.stopLoad();
+  }, [pathname, recording.documentId]);
 
   // Handle seek to start time
   useEffect(() => {
