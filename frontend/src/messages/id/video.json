@@ -13,5 +13,18 @@
     "title": "Tonton video live stream {username} - {date}"
   },
   "backToProfile": "Kembali ke profil {username}",
-  "otherRecordingsBy": "Rekaman lain dari {username}"
+  "otherRecordingsBy": "Rekaman lain dari {username}",
+  "accessGate": {
+    "signIn": {
+      "title": "Masuk untuk terus menonton",
+      "body": "Anda telah mencapai batas pratinjau gratis. Buat akun gratis untuk melanjutkan.",
+      "primaryCta": "Masuk",
+      "secondaryCta": "Buat akun"
+    },
+    "upgrade": {
+      "title": "Tingkatkan untuk terus menonton",
+      "body": "Anda telah mencapai batas gratis. Tingkatkan untuk akses tanpa batas.",
+      "primaryCta": "Tingkatkan"
+    }
+  }
 }

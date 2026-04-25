@@ -13,5 +13,18 @@
     "title": "{username}의 라이브 방송 영상 시청 - {date}"
   },
   "backToProfile": "{username} 프로필로 돌아가기",
-  "otherRecordingsBy": "{username}의 다른 녹화 영상"
+  "otherRecordingsBy": "{username}의 다른 녹화 영상",
+  "accessGate": {
+    "signIn": {
+      "title": "계속 시청하려면 로그인하세요",
+      "body": "무료 미리보기 한도에 도달했습니다. 무료 계정을 만들어 계속하세요.",
+      "primaryCta": "로그인",
+      "secondaryCta": "계정 만들기"
+    },
+    "upgrade": {
+      "title": "계속 시청하려면 업그레이드하세요",
+      "body": "무료 한도에 도달했습니다. 업그레이드하면 무제한으로 이용할 수 있습니다.",
+      "primaryCta": "업그레이드"
+    }
+  }
 }

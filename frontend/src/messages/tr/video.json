@@ -13,5 +13,18 @@
     "title": "{username} video canlı yayınını izle - {date}"
   },
   "backToProfile": "{username} profiline dön",
-  "otherRecordingsBy": "{username} diğer kayıtları"
+  "otherRecordingsBy": "{username} diğer kayıtları",
+  "accessGate": {
+    "signIn": {
+      "title": "İzlemeye devam etmek için giriş yapın",
+      "body": "Ücretsiz önizleme limitinize ulaştınız. Devam etmek için ücretsiz bir hesap oluşturun.",
+      "primaryCta": "Giriş yap",
+      "secondaryCta": "Hesap oluştur"
+    },
+    "upgrade": {
+      "title": "İzlemeye devam etmek için yükseltin",
+      "body": "Ücretsiz limitinize ulaştınız. Sınırsız erişim için yükseltin.",
+      "primaryCta": "Yükselt"
+    }
+  }
 }

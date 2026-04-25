@@ -15,10 +15,12 @@ import {
   MediaTimeRange,
   MediaVolumeRange,
 } from "@/app/[locale]/(protected)/components/video/media-chrome";
-import { checkVideoAccess } from "@/app/actions/video-access";
-import { Box, Flex, Loader } from "@mantine/core";
-import { useQuery } from "@tanstack/react-query";
-import { useRef } from "react";
+import { checkVideoAccess, VideoAccessResult } from "@/app/actions/video-access";
+import { Box, Button, Flex, Group, Loader, Stack, Text, Title } from "@mantine/core";
+import { IconLock } from "@tabler/icons-react";
+import { useTranslations } from "next-intl";
+import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
 
 import "hls-video-element";
 import "media-chrome";
@@ -39,16 +41,39 @@ export function VideoPlayer({
 }: VideoPlayerProps) {
   const controllerRef = useRef<HTMLElement>(null);
 
-  // Only run access check when a documentId is provided — memes and other
-  // direct media URLs reuse this player but don't go through playlist.m3u8.
-  const { data: access, isPending } = useQuery({
-    queryKey: ["video-access", documentId],
-    queryFn: () => checkVideoAccess(documentId!),
-    enabled: !!documentId,
-    staleTime: 5 * 60 * 1000,
-  });
+  // Plain useEffect-based access check — the public route tree doesn't
+  // mount QueryClientProvider, so we can't useQuery here. Memes and other
+  // direct media URLs omit documentId and skip the check entirely.
+  const [access, setAccess] = useState<VideoAccessResult | null>(null);
+  const [isPending, setIsPending] = useState<boolean>(!!documentId);
+
+  useEffect(() => {
+    if (!documentId) return;
+    let cancelled = false;
+    setIsPending(true);
+    checkVideoAccess(documentId)
+      .then((res) => {
+        if (!cancelled) {
+          setAccess(res);
+          setIsPending(false);
+        }
+      })
+      .catch(() => {
+        if (!cancelled) {
+          setAccess({ allowed: false, reason: "upgrade" });
+          setIsPending(false);
+        }
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [documentId]);
+
   const canPlay = !documentId || access?.allowed === true;
   const showAccessSpinner = !!documentId && isPending;
+  const denialReason =
+    !!documentId && access && !access.allowed ? access.reason : null;
+  const t = useTranslations("video.accessGate");
 
   return (
     <>
@@ -81,6 +106,53 @@ export function VideoPlayer({
             style={{ zIndex: 5 }}
           >
             <Loader size="md" color="white" />
+          </Flex>
+        )}
+        {denialReason && (
+          <Flex
+            pos="absolute"
+            inset={0}
+            justify="center"
+            align="center"
+            bg="rgba(0,0,0,0.78)"
+            px="md"
+            style={{ zIndex: 6, backdropFilter: "blur(4px)" }}
+          >
+            <Stack align="center" gap="md" maw={400} ta="center">
+              <IconLock size={48} color="white" stroke={1.5} />
+              <Title order={3} c="white" fw={600}>
+                {denialReason === "upgrade"
+                  ? t("upgrade.title")
+                  : t("signIn.title")}
+              </Title>
+              <Text c="gray.3" size="sm">
+                {denialReason === "upgrade"
+                  ? t("upgrade.body")
+                  : t("signIn.body")}
+              </Text>
+              <Group gap="sm" mt="xs">
+                {denialReason === "upgrade" ? (
+                  <Button component={Link} href="/upgrade" size="md">
+                    {t("upgrade.primaryCta")}
+                  </Button>
+                ) : (
+                  <>
+                    <Button component={Link} href="/login" size="md">
+                      {t("signIn.primaryCta")}
+                    </Button>
+                    <Button
+                      component={Link}
+                      href="/register"
+                      size="md"
+                      variant="white"
+                      color="dark"
+                    >
+                      {t("signIn.secondaryCta")}
+                    </Button>
+                  </>
+                )}
+              </Group>
+            </Stack>
           </Flex>
         )}
         {canPlay && <VideoLoadingOverlay containerRef={controllerRef} />}
