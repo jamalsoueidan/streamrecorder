@@ -21,19 +21,13 @@ export function configureHls() {
   if (configured) return;
   configured = true;
 
-  // FetchLoader uses AbortController, so destroy() actually cancels
-  // in-flight fetches. Cast is safe — FetchLoader handles all contexts.
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   Hls.DefaultConfig.fLoader = FetchLoader as any;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   Hls.DefaultConfig.pLoader = FetchLoader as any;
 
-  // TikTok-style buffer limits. Default is 30s ahead + Infinity behind,
-  // which means each scroll-feed slide loads ~30 chunky segments
-  // (15–45 MB) before stopping. With these caps, only ~5s of segments
-  // are ever in-flight per video — so even if a destroy doesn't abort
-  // every request perfectly, the wasted bandwidth is trivial.
-  Hls.DefaultConfig.maxBufferLength = 5;
-  Hls.DefaultConfig.maxMaxBufferLength = 10;
-  Hls.DefaultConfig.backBufferLength = 0;
+  console.log("[HLS] configured", {
+    fLoader: Hls.DefaultConfig.fLoader?.name,
+    pLoader: Hls.DefaultConfig.pLoader?.name,
+  });
 }
