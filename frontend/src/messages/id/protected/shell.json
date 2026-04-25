@@ -1,8 +1,4 @@
 {
-  "highDemandBanner": "Karena permintaan yang tinggi, Anda mungkin mengalami kelambatan atau waktu tunggu sesekali. Saya sedang aktif bekerja untuk memperluas kapasitas — terima kasih atas kesabaran Anda!",
-  "androidTestBanner": "Bantu kami meluncurkan di Android! Kamu terpilih untuk mencoba aplikasinya — cukup install sebentar saja sudah sangat membantu.",
-  "androidTestButton": "Coba Sekarang",
   "chromeBanner": "BARU: Tambahkan stream Anda dengan satu klik menggunakan Ekstensi Chrome kami",
-  "chromeButton": "Instal",
-  "mirrorBanner": "Mengalami kelambatan? Coba situs mirror kami"
+  "chromeButton": "Instal"
 }

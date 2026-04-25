@@ -1,8 +1,4 @@
 {
-  "highDemandBanner": "Devido à alta demanda, você pode experimentar lentidão ou tempos limite ocasionais. Estou trabalhando ativamente para expandir a capacidade — obrigado pela paciência!",
-  "androidTestBanner": "Nos ajude a lançar no Android! Você foi selecionado para testar o app — até uma instalação rápida nos ajuda a conseguir a aprovação.",
-  "androidTestButton": "Testar",
   "chromeBanner": "NOVO: Adicione sua stream com um clique usando nossa extensão do Chrome",
-  "chromeButton": "Instalar",
-  "mirrorBanner": "Lentidão? Experimente nossos sites espelho"
+  "chromeButton": "Instalar"
 }
