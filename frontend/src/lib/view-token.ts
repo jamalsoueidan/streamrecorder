@@ -1,18 +1,22 @@
 import { createHmac, timingSafeEqual } from "crypto";
 
-const SECRET = (() => {
+let cachedSecret: string | null = null;
+function getSecret(): string {
+  if (cachedSecret !== null) return cachedSecret;
   const v = process.env.VIEW_SESSION_SECRET;
   if (!v) {
     if (process.env.NODE_ENV === "production") {
       throw new Error("VIEW_SESSION_SECRET is required in production");
     }
-    return "dev-view-session-secret";
+    cachedSecret = "dev-view-session-secret";
+    return cachedSecret;
   }
-  return v;
-})();
+  cachedSecret = v;
+  return cachedSecret;
+}
 
 function hmac(payload: string): string {
-  return createHmac("sha256", SECRET).update(payload).digest("base64url");
+  return createHmac("sha256", getSecret()).update(payload).digest("base64url");
 }
 
 /**
