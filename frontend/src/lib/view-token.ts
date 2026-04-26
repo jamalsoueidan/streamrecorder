@@ -1,26 +1,18 @@
 import { createHmac, timingSafeEqual } from "crypto";
 
-// Lazy-evaluated so the check runs at REQUEST time, not at module-load /
-// build time. Otherwise builds in environments that only inject env vars
-// at runtime (Railway with Dockerfile, etc.) fail with the throw below
-// even though the secret would be available when the code actually runs.
-let cachedSecret: string | null = null;
-function getSecret(): string {
-  if (cachedSecret !== null) return cachedSecret;
+const SECRET = (() => {
   const v = process.env.VIEW_SESSION_SECRET;
   if (!v) {
     if (process.env.NODE_ENV === "production") {
       throw new Error("VIEW_SESSION_SECRET is required in production");
     }
-    cachedSecret = "dev-view-session-secret";
-    return cachedSecret;
+    return "dev-view-session-secret";
   }
-  cachedSecret = v;
-  return cachedSecret;
-}
+  return v;
+})();
 
 function hmac(payload: string): string {
-  return createHmac("sha256", getSecret()).update(payload).digest("base64url");
+  return createHmac("sha256", SECRET).update(payload).digest("base64url");
 }
 
 /**
