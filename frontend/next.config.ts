@@ -43,6 +43,54 @@ const nextConfig: NextConfig = {
           { key: "Strict-Transport-Security", value: "max-age=31536000; includeSubDomains; preload" },
         ],
       },
+      // Browser-cache static assets aggressively so they stop re-hitting
+      // Vercel edge. Every request through Vercel = $0.20/M; if a browser
+      // keeps a year of favicon in its local cache, it never asks again.
+      {
+        source: "/favicon.ico",
+        headers: [
+          { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
+        ],
+      },
+      {
+        source: "/icons/:path*",
+        headers: [
+          { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
+        ],
+      },
+      {
+        source: "/simple/:path*",
+        headers: [
+          { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
+        ],
+      },
+      {
+        source: "/videos/:path*",
+        headers: [
+          { key: "Cache-Control", value: "public, max-age=86400" },
+        ],
+      },
+      // Top-level static images / SVGs in /public. Each one is hit
+      // tens of thousands of times per period (logo2.svg, desktop.png,
+      // platform SVGs, etc.). Browser cache for 1 year.
+      {
+        source: "/:file(.*\\.(?:png|jpg|jpeg|svg|webp|gif|ico))",
+        headers: [
+          { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
+        ],
+      },
+      {
+        source: "/robots.txt",
+        headers: [
+          { key: "Cache-Control", value: "public, max-age=86400" },
+        ],
+      },
+      {
+        source: "/manifest.json",
+        headers: [
+          { key: "Cache-Control", value: "public, max-age=86400" },
+        ],
+      },
     ];
   },
   async rewrites() {

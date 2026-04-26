@@ -25,9 +25,4 @@ export function configureHls() {
   Hls.DefaultConfig.fLoader = FetchLoader as any;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   Hls.DefaultConfig.pLoader = FetchLoader as any;
-
-  console.log("[HLS] configured", {
-    fLoader: Hls.DefaultConfig.fLoader?.name,
-    pLoader: Hls.DefaultConfig.pLoader?.name,
-  });
 }
