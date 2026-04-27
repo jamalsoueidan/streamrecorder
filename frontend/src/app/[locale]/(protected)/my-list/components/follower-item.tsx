@@ -58,6 +58,13 @@ export default function FollowerItem({ follower, isOpen }: Props) {
     sm: false,
   });
 
+  const isFollowing = (user?.followers || []).some(
+    (f) => f.documentId === follower.documentId,
+  );
+  const isFavorite = (user?.favorites || []).some(
+    (f) => f.documentId === follower.documentId,
+  );
+
   const { data, isLoading } = useQuery({
     queryKey: ["recordings", follower.username, follower.type, page],
     queryFn: () => getRecordings(follower.username, follower.type, page),
@@ -83,7 +90,7 @@ export default function FollowerItem({ follower, isOpen }: Props) {
       key={follower.documentId}
       value={follower.username}
       style={
-        (follower.isFavorite ?? false)
+        isFavorite
           ? {
               borderColor: "rgba(251, 191, 36, 0.4)",
               background: "rgba(251, 191, 36, 0.03)",
@@ -91,7 +98,11 @@ export default function FollowerItem({ follower, isOpen }: Props) {
           : undefined
       }
     >
-      <AccordionControl follower={follower}>
+      <AccordionControl
+        follower={follower}
+        isFollowing={isFollowing}
+        isFavorite={isFavorite}
+      >
         <Group gap="xs">
           <Box pos="relative">
             <Avatar
@@ -152,7 +163,7 @@ export default function FollowerItem({ follower, isOpen }: Props) {
               </Text>
               <Text size="xs" c="dimmed" suppressHydrationWarning>
                 {t("recordings.videoCount", {
-                  count: follower.totalRecordings!,
+                  count: follower.recordingsCount ?? 0,
                 })}
               </Text>
             </Stack>
@@ -264,19 +275,25 @@ export default function FollowerItem({ follower, isOpen }: Props) {
 
 function AccordionControl({
   follower,
+  isFollowing,
+  isFavorite,
   ...props
-}: AccordionControlProps & { follower: FollowerWithMeta }) {
+}: AccordionControlProps & {
+  follower: FollowerWithMeta;
+  isFollowing: boolean;
+  isFavorite: boolean;
+}) {
   return (
     <Center>
-      <Accordion.Control {...props} disabled={follower.totalRecordings === 0} />
+      <Accordion.Control {...props} disabled={!follower.recordingsCount} />
       <Flex gap="xs" align="center" mx="md">
-        {follower.isFollowing && (
+        {isFollowing && (
           <FavoriteButton
             documentId={follower.documentId!}
-            isFavorite={follower.isFavorite ?? false}
+            isFavorite={isFavorite}
           />
         )}
-        {follower.isFollowing ? (
+        {isFollowing ? (
           <UnfollowButton username={follower.username} type={follower.type} />
         ) : (
           <FollowButton username={follower.username} type={follower.type} />

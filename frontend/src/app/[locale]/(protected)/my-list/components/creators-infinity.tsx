@@ -2,13 +2,14 @@
 
 import { Accordion, Alert, Loader, Stack, Text } from "@mantine/core";
 import { useIntersection } from "@mantine/hooks";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 import { useQueryStates } from "nuqs";
 
 import { useInfiniteQuery } from "@tanstack/react-query";
 import { useTranslations } from "next-intl";
 
+import { useUser } from "@/app/providers/user-provider";
 import { EmptyState } from "../../components/empty-state";
 import { fetchFollowers } from "../actions/fetch-followers";
 import { exploreParsers } from "../lib/search-params";
@@ -16,13 +17,30 @@ import FollowerItem from "./follower-item";
 
 export default function CreatorsInfinity() {
   const t = useTranslations("protected.myList");
+  const user = useUser();
   const [filters] = useQueryStates(exploreParsers);
   const [openItems, setOpenItems] = useState<string[]>([]);
 
+  const followingIds = useMemo(
+    () =>
+      (user?.followers || [])
+        .map((f) => f.id)
+        .filter((id): id is number => typeof id === "number"),
+    [user?.followers],
+  );
+  const favoriteIds = useMemo(
+    () =>
+      (user?.favorites || [])
+        .map((f) => f.id)
+        .filter((id): id is number => typeof id === "number"),
+    [user?.favorites],
+  );
+
   const { data, fetchNextPage, hasNextPage, isFetchingNextPage, isLoading } =
     useInfiniteQuery({
-      queryKey: ["creators", "mylist", filters],
-      queryFn: ({ pageParam }) => fetchFollowers(filters, pageParam),
+      queryKey: ["creators", "mylist", filters, followingIds, favoriteIds],
+      queryFn: ({ pageParam }) =>
+        fetchFollowers(filters, pageParam, followingIds, favoriteIds),
       initialPageParam: 1,
       getNextPageParam: (lastPage) => {
         const { page = 1, pageCount = 0 } = lastPage.meta?.pagination ?? {};

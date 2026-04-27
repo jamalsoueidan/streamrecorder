@@ -151,6 +151,7 @@ export default function Filters({ filterOptions }: Props) {
     filters.type,
     filters.dateRange,
     !filters.hasRecordings,
+    filters.excludeMyCreators,
   ].filter(Boolean).length;
 
   const clearFilters = () => {
@@ -161,6 +162,7 @@ export default function Filters({ filterOptions }: Props) {
       type: null,
       dateRange: null,
       hasRecordings: true,
+      excludeMyCreators: null,
       sort: SortOptions.createdAtDesc,
     });
   };
@@ -599,6 +601,17 @@ export default function Filters({ filterOptions }: Props) {
             checked={filters.hasRecordings}
             onChange={(event) =>
               setFilters({ hasRecordings: event.currentTarget.checked })
+            }
+          />
+
+          <Switch
+            size="md"
+            label={t("excludeMyCreators")}
+            checked={filters.excludeMyCreators}
+            onChange={(event) =>
+              setFilters({
+                excludeMyCreators: event.currentTarget.checked || null,
+              })
             }
           />
 

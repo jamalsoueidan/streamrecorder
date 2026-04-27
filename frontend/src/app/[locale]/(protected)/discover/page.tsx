@@ -1,3 +1,4 @@
+import { getUser } from "@/app/actions/user";
 import { Divider, Group, Stack, Text, Title } from "@mantine/core";
 import { IconWorldSearch } from "@tabler/icons-react";
 import {
@@ -21,11 +22,22 @@ export default async function Page({
   const t = await getTranslations("protected.discover");
   const filters = await creatorsParamsCache.parse(searchParams);
 
+  const userResp = await getUser();
+  const excludeFollowingIds = (userResp.data?.followers || [])
+    .map((f) => f.id)
+    .filter((id): id is number => typeof id === "number");
+
   const queryClient = new QueryClient();
 
   await queryClient.prefetchInfiniteQuery({
-    queryKey: ["creators", "discover", filters],
-    queryFn: ({ pageParam }) => fetchFollowers(filters, pageParam),
+    queryKey: [
+      "creators",
+      "discover",
+      filters,
+      filters.excludeMyCreators ? excludeFollowingIds : null,
+    ],
+    queryFn: ({ pageParam }) =>
+      fetchFollowers(filters, pageParam, excludeFollowingIds),
     initialPageParam: 1,
   });
 

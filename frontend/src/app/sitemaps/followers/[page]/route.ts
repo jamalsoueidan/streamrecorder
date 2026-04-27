@@ -20,8 +20,8 @@ export async function GET(
 
   const results = await Promise.all(
     Array.from({ length: PAGES_PER_SITEMAP }, (_, i) =>
-      publicApi.follower.browseFollowers({
-        hasRecordings: true,
+      publicApi.follower.getFollowers({
+        filters: { recordingsCount: { $gt: 0 } },
         "pagination[page]": startPage + i,
         "pagination[pageSize]": STRAPI_PAGE_SIZE,
       }),

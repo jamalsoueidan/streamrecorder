@@ -1,26 +1,42 @@
 "use client";
 
-import { Grid, Loader, Stack, Text } from "@mantine/core";
+import { Loader, SimpleGrid, Stack, Text } from "@mantine/core";
 import { useIntersection } from "@mantine/hooks";
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 
 import { useQueryStates } from "nuqs";
 
 import { useInfiniteQuery } from "@tanstack/react-query";
 import { useTranslations } from "next-intl";
 
+import { CreatorCard } from "@/app/[locale]/(protected)/components/creator-card";
+import { useUser } from "@/app/providers/user-provider";
 import { fetchFollowers } from "../actions/fetch-followers";
 import { exploreParsers } from "../lib/search-params";
-import FollowerItem from "./follower-item";
 
 export default function CreatorsInfinity() {
   const [filters] = useQueryStates(exploreParsers);
   const t = useTranslations("protected.discover");
+  const user = useUser();
+
+  const excludeFollowingIds = useMemo(
+    () =>
+      (user?.followers || [])
+        .map((f) => f.id)
+        .filter((id): id is number => typeof id === "number"),
+    [user?.followers],
+  );
 
   const { data, fetchNextPage, hasNextPage, isFetchingNextPage, isLoading } =
     useInfiniteQuery({
-      queryKey: ["creators", "discover", filters],
-      queryFn: ({ pageParam }) => fetchFollowers(filters, pageParam),
+      queryKey: [
+        "creators",
+        "discover",
+        filters,
+        filters.excludeMyCreators ? excludeFollowingIds : null,
+      ],
+      queryFn: ({ pageParam }) =>
+        fetchFollowers(filters, pageParam, excludeFollowingIds),
       initialPageParam: 1,
       getNextPageParam: (lastPage) => {
         const { page = 1, pageCount = 0 } = lastPage.meta?.pagination ?? {};
@@ -88,11 +104,19 @@ export default function CreatorsInfinity() {
 
   return (
     <>
-      <Grid justify="flex-start" align="stretch">
+      <SimpleGrid
+        cols={{ base: 2, xs: 3, sm: 4, md: 5, lg: 6 }}
+        spacing="md"
+        verticalSpacing="md"
+      >
         {allFollowers.map((follower) => (
-          <FollowerItem key={follower.documentId} follower={follower} />
+          <CreatorCard
+            key={follower.documentId}
+            follower={follower}
+            width="100%"
+          />
         ))}
-      </Grid>
+      </SimpleGrid>
 
       <div ref={ref} style={{ height: 1 }} />
 

@@ -8,10 +8,11 @@ export const dynamic = "force-dynamic";
 export const revalidate = 3600;
 
 export async function GET() {
-  const { data: follower } = await publicApi.follower.browseFollowers({
-    hasRecordings: true,
+  const { data: follower } = await publicApi.follower.getFollowers({
+    filters: { recordingsCount: { $gt: 0 } },
     "pagination[page]": 1,
     "pagination[pageSize]": STRAPI_PAGE_SIZE,
+    "pagination[withCount]": true,
   });
 
   const { data: recording } = await publicApi.recording.getRecordings({

@@ -298,6 +298,9 @@ export interface Activity {
     };
     /** @format date-time */
     lastCheckedAt?: string;
+    recordingsCount?: number;
+    /** @format date-time */
+    lastRecordingAt?: string;
     protected?: boolean;
     blocked?: boolean;
     pause?: boolean;
@@ -787,6 +790,9 @@ export interface AiRequest {
     };
     /** @format date-time */
     lastCheckedAt?: string;
+    recordingsCount?: number;
+    /** @format date-time */
+    lastRecordingAt?: string;
     protected?: boolean;
     blocked?: boolean;
     pause?: boolean;
@@ -1415,6 +1421,9 @@ export interface AiTask {
       };
       /** @format date-time */
       lastCheckedAt?: string;
+      recordingsCount?: number;
+      /** @format date-time */
+      lastRecordingAt?: string;
       protected?: boolean;
       blocked?: boolean;
       pause?: boolean;
@@ -2976,6 +2985,9 @@ export interface Clip {
     };
     /** @format date-time */
     lastCheckedAt?: string;
+    recordingsCount?: number;
+    /** @format date-time */
+    lastRecordingAt?: string;
     protected?: boolean;
     blocked?: boolean;
     pause?: boolean;
@@ -3560,6 +3572,9 @@ export interface ClipShare {
       };
       /** @format date-time */
       lastCheckedAt?: string;
+      recordingsCount?: number;
+      /** @format date-time */
+      lastRecordingAt?: string;
       protected?: boolean;
       blocked?: boolean;
       pause?: boolean;
@@ -4077,6 +4092,9 @@ export interface FollowerRequest {
     avatar?: number | string;
     /** @format date-time */
     lastCheckedAt?: string;
+    recordingsCount?: number;
+    /** @format date-time */
+    lastRecordingAt?: string;
     protected?: boolean;
     blocked?: boolean;
     pause?: boolean;
@@ -4343,6 +4361,9 @@ export interface Follower {
   };
   /** @format date-time */
   lastCheckedAt?: string;
+  recordingsCount?: number;
+  /** @format date-time */
+  lastRecordingAt?: string;
   protected?: boolean;
   blocked?: boolean;
   pause?: boolean;
@@ -4485,6 +4506,9 @@ export interface Follower {
       };
       /** @format date-time */
       lastCheckedAt?: string;
+      recordingsCount?: number;
+      /** @format date-time */
+      lastRecordingAt?: string;
       protected?: boolean;
       blocked?: boolean;
       pause?: boolean;
@@ -4900,6 +4924,9 @@ export interface Meme {
       };
       /** @format date-time */
       lastCheckedAt?: string;
+      recordingsCount?: number;
+      /** @format date-time */
+      lastRecordingAt?: string;
       protected?: boolean;
       blocked?: boolean;
       pause?: boolean;
@@ -5466,6 +5493,9 @@ export interface Recording {
     };
     /** @format date-time */
     lastCheckedAt?: string;
+    recordingsCount?: number;
+    /** @format date-time */
+    lastRecordingAt?: string;
     protected?: boolean;
     blocked?: boolean;
     pause?: boolean;
@@ -6187,6 +6217,9 @@ export interface SocialAccount {
       };
       /** @format date-time */
       lastCheckedAt?: string;
+      recordingsCount?: number;
+      /** @format date-time */
+      lastRecordingAt?: string;
       protected?: boolean;
       blocked?: boolean;
       pause?: boolean;
@@ -6604,6 +6637,9 @@ export interface Source {
       };
       /** @format date-time */
       lastCheckedAt?: string;
+      recordingsCount?: number;
+      /** @format date-time */
+      lastRecordingAt?: string;
       protected?: boolean;
       blocked?: boolean;
       pause?: boolean;
@@ -7129,6 +7165,9 @@ export interface VisitorView {
       };
       /** @format date-time */
       lastCheckedAt?: string;
+      recordingsCount?: number;
+      /** @format date-time */
+      lastRecordingAt?: string;
       protected?: boolean;
       blocked?: boolean;
       pause?: boolean;

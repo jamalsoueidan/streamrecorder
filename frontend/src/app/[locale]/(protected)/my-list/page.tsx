@@ -1,4 +1,5 @@
 import { getFollowerFilters } from "@/app/actions/followers";
+import { getUser } from "@/app/actions/user";
 import { Divider, Group, Stack, Text, Title } from "@mantine/core";
 import { IconLibrary } from "@tabler/icons-react";
 import {
@@ -21,17 +22,26 @@ export default async function Page({
   const t = await getTranslations("protected.myList");
   const filters = await creatorsParamsCache.parse(searchParams);
 
+  const userResp = await getUser();
+  const followingIds = (userResp.data?.followers || [])
+    .map((f) => f.id)
+    .filter((id): id is number => typeof id === "number");
+  const favoriteIds = (userResp.data?.favorites || [])
+    .map((f) => f.id)
+    .filter((id): id is number => typeof id === "number");
+
   const queryClient = new QueryClient();
 
   await queryClient.prefetchInfiniteQuery({
-    queryKey: ["creators", "mylist", filters],
-    queryFn: ({ pageParam }) => fetchFollowers(filters, pageParam),
+    queryKey: ["creators", "mylist", filters, followingIds, favoriteIds],
+    queryFn: ({ pageParam }) =>
+      fetchFollowers(filters, pageParam, followingIds, favoriteIds),
     initialPageParam: 1,
   });
 
   const initialData = queryClient.getQueryData<
     InfiniteData<Awaited<ReturnType<typeof fetchFollowers>>>
-  >(["creators", "mylist", filters]);
+  >(["creators", "mylist", filters, followingIds, favoriteIds]);
 
   const filterOptions = await getFollowerFilters();
 
