@@ -20,7 +20,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2026-04-22T19:56:32.885Z"
+    "x-generation-date": "2026-04-27T13:02:19.845Z"
   },
   "servers": [
     {
@@ -13468,6 +13468,13 @@
                 "type": "string",
                 "format": "date-time"
               },
+              "recordingsCount": {
+                "type": "integer"
+              },
+              "lastRecordingAt": {
+                "type": "string",
+                "format": "date-time"
+              },
               "protected": {
                 "type": "boolean"
               },
@@ -15325,6 +15332,13 @@
                 }
               },
               "lastCheckedAt": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "recordingsCount": {
+                "type": "integer"
+              },
+              "lastRecordingAt": {
                 "type": "string",
                 "format": "date-time"
               },
@@ -17701,6 +17715,13 @@
                     }
                   },
                   "lastCheckedAt": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "recordingsCount": {
+                    "type": "integer"
+                  },
+                  "lastRecordingAt": {
                     "type": "string",
                     "format": "date-time"
                   },
@@ -23472,6 +23493,13 @@
                 "type": "string",
                 "format": "date-time"
               },
+              "recordingsCount": {
+                "type": "integer"
+              },
+              "lastRecordingAt": {
+                "type": "string",
+                "format": "date-time"
+              },
               "protected": {
                 "type": "boolean"
               },
@@ -25672,6 +25700,13 @@
                     "type": "string",
                     "format": "date-time"
                   },
+                  "recordingsCount": {
+                    "type": "integer"
+                  },
+                  "lastRecordingAt": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
                   "protected": {
                     "type": "boolean"
                   },
@@ -27621,6 +27656,13 @@
                 "type": "string",
                 "format": "date-time"
               },
+              "recordingsCount": {
+                "type": "integer"
+              },
+              "lastRecordingAt": {
+                "type": "string",
+                "format": "date-time"
+              },
               "protected": {
                 "type": "boolean"
               },
@@ -28584,6 +28626,13 @@
             "type": "string",
             "format": "date-time"
           },
+          "recordingsCount": {
+            "type": "integer"
+          },
+          "lastRecordingAt": {
+            "type": "string",
+            "format": "date-time"
+          },
           "protected": {
             "type": "boolean"
           },
@@ -29112,6 +29161,13 @@
                       }
                     },
                     "lastCheckedAt": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "recordingsCount": {
+                      "type": "integer"
+                    },
+                    "lastRecordingAt": {
                       "type": "string",
                       "format": "date-time"
                     },
@@ -30655,6 +30711,13 @@
                     }
                   },
                   "lastCheckedAt": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "recordingsCount": {
+                    "type": "integer"
+                  },
+                  "lastRecordingAt": {
                     "type": "string",
                     "format": "date-time"
                   },
@@ -32780,6 +32843,13 @@
                 }
               },
               "lastCheckedAt": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "recordingsCount": {
+                "type": "integer"
+              },
+              "lastRecordingAt": {
                 "type": "string",
                 "format": "date-time"
               },
@@ -35484,6 +35554,13 @@
                       "type": "string",
                       "format": "date-time"
                     },
+                    "recordingsCount": {
+                      "type": "integer"
+                    },
+                    "lastRecordingAt": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
                     "protected": {
                       "type": "boolean"
                     },
@@ -37031,6 +37108,13 @@
                     }
                   },
                   "lastCheckedAt": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "recordingsCount": {
+                    "type": "integer"
+                  },
+                  "lastRecordingAt": {
                     "type": "string",
                     "format": "date-time"
                   },
@@ -39004,6 +39088,13 @@
                     }
                   },
                   "lastCheckedAt": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "recordingsCount": {
+                    "type": "integer"
+                  },
+                  "lastRecordingAt": {
                     "type": "string",
                     "format": "date-time"
                   },

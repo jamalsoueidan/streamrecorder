@@ -107,6 +107,23 @@
       },
       "default": "2026-02-28T23:00:00.000Z"
     },
+    "recordingsCount": {
+      "type": "integer",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "default": 0
+    },
+    "lastRecordingAt": {
+      "type": "datetime",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
     "protected": {
       "type": "boolean",
       "pluginOptions": {

@@ -37,6 +37,7 @@ export default factories.createCoreController(
       // Get following IDs and favorite IDs
       let followingIds = [];
       let favoriteIds = [];
+
       if (user) {
         const fullUser = await strapi
           .documents("plugin::users-permissions.user")

@@ -1024,6 +1024,12 @@ export interface ApiFollowerFollower extends Struct.CollectionTypeSchema {
         };
       }> &
       Schema.Attribute.DefaultTo<'2026-02-28T23:00:00.000Z'>;
+    lastRecordingAt: Schema.Attribute.DateTime &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -1075,6 +1081,13 @@ export interface ApiFollowerFollower extends Struct.CollectionTypeSchema {
       }> &
       Schema.Attribute.DefaultTo<false>;
     publishedAt: Schema.Attribute.DateTime;
+    recordingsCount: Schema.Attribute.Integer &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<0>;
     sar: Schema.Attribute.Boolean &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
