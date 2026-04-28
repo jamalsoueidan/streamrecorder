@@ -199,16 +199,6 @@
         "liveme kaydı",
         "liveme yayın kaydedici"
       ]
-    },
-    "tango": {
-      "title": "Tango İçerik Üreticileri",
-      "description": "Canlı yayınlarını kaydetmek ve kısa kliplere dönüştürmek için LiveStreamRecorder kullanan Tango içerik üreticilerini keşfedin.",
-      "keywords": [
-        "tango içerik üreticileri",
-        "tango canlı yayın",
-        "tango kaydı",
-        "tango yayın kaydedici"
-      ]
     }
   },
   "hero": {
@@ -222,8 +212,7 @@
       "afreecatv": "AfreecaTV İçerik Üreticileri",
       "bigo": "Bigo İçerik Üreticileri",
       "buzzcast": "Buzzcast İçerik Üreticileri",
-      "liveme": "LiveMe İçerik Üreticileri",
-      "tango": "Tango İçerik Üreticileri"
+      "liveme": "LiveMe İçerik Üreticileri"
     },
     "subtitle": {
       "all": "Yayınlarını kaydetmek ve kısa klipler oluşturmak için LiveStreamRecorder kullanan binlerce içerik üreticisine katılın.",
@@ -235,8 +224,7 @@
       "afreecatv": "Yayınlarını kaydetmek ve kısa klipler oluşturmak için LiveStreamRecorder kullanan binlerce AfreecaTV içerik üreticisine katılın.",
       "bigo": "Yayınlarını kaydetmek ve kısa klipler oluşturmak için LiveStreamRecorder kullanan binlerce Bigo içerik üreticisine katılın.",
       "buzzcast": "Yayınlarını kaydetmek ve kısa klipler oluşturmak için LiveStreamRecorder kullanan binlerce Buzzcast içerik üreticisine katılın.",
-      "liveme": "Yayınlarını kaydetmek ve kısa klipler oluşturmak için LiveStreamRecorder kullanan binlerce LiveMe içerik üreticisine katılın.",
-      "tango": "Yayınlarını kaydetmek ve kısa klipler oluşturmak için LiveStreamRecorder kullanan binlerce Tango içerik üreticisine katılın."
+      "liveme": "Yayınlarını kaydetmek ve kısa klipler oluşturmak için LiveStreamRecorder kullanan binlerce LiveMe içerik üreticisine katılın."
     }
   },
   "features": {
@@ -251,8 +239,7 @@
       "afreecatv": "AfreecaTV Yayınlarınızı Otomatik Kaydedin",
       "bigo": "Bigo Yayınlarınızı Otomatik Kaydedin",
       "buzzcast": "Buzzcast Yayınlarınızı Otomatik Kaydedin",
-      "liveme": "LiveMe Yayınlarınızı Otomatik Kaydedin",
-      "tango": "Tango Yayınlarınızı Otomatik Kaydedin"
+      "liveme": "LiveMe Yayınlarınızı Otomatik Kaydedin"
     },
     "subtitle": "Canlı yayından kısa kliplere dakikalar içinde",
     "items": {
@@ -285,8 +272,7 @@
       "pandalive": "Pandalive Yayınlarınızı Kaydedin",
       "bigo": "Bigo Yayınlarınızı Kaydedin",
       "buzzcast": "Buzzcast Yayınlarınızı Kaydedin",
-      "liveme": "LiveMe Yayınlarınızı Kaydedin",
-      "tango": "Tango Yayınlarınızı Kaydedin"
+      "liveme": "LiveMe Yayınlarınızı Kaydedin"
     },
     "subtitle": {
       "all": "Binlerce içerik üreticisine katılın. Yayınlarınızı kaydedin, ClipAI ile kısa klipler oluşturun ve kitlenizi büyütün.",
@@ -298,8 +284,7 @@
       "pandalive": "Binlerce Pandalive içerik üreticisine katılın. Yayınlarınızı kaydedin ve ClipAI ile kısa klipler oluşturun.",
       "bigo": "Binlerce Bigo içerik üreticisine katılın. Yayınlarınızı kaydedin ve ClipAI ile kısa klipler oluşturun.",
       "buzzcast": "Binlerce Buzzcast içerik üreticisine katılın. Yayınlarınızı kaydedin ve ClipAI ile kısa klipler oluşturun.",
-      "liveme": "Binlerce LiveMe içerik üreticisine katılın. Yayınlarınızı kaydedin ve ClipAI ile kısa klipler oluşturun.",
-      "tango": "Binlerce Tango içerik üreticisine katılın. Yayınlarınızı kaydedin ve ClipAI ile kısa klipler oluşturun."
+      "liveme": "Binlerce LiveMe içerik üreticisine katılın. Yayınlarınızı kaydedin ve ClipAI ile kısa klipler oluşturun."
     },
     "button": "Ücretsiz Kayda Başla"
   },
@@ -315,8 +300,7 @@
       "afreecatv": "Katılan ilk AfreecaTV içerik üreticisi olun!",
       "bigo": "Katılan ilk Bigo içerik üreticisi olun!",
       "buzzcast": "Katılan ilk Buzzcast içerik üreticisi olun!",
-      "liveme": "Katılan ilk LiveMe içerik üreticisi olun!",
-      "tango": "Katılan ilk Tango içerik üreticisi olun!"
+      "liveme": "Katılan ilk LiveMe içerik üreticisi olun!"
     },
     "button": "Başlayın"
   },
@@ -330,8 +314,7 @@
     "afreecatv": "## AfreecaTV İçerik Üreticileri\n\nLiveStreamRecorder'ı kullanarak kendi yayınlarını kaydeden AfreecaTV BJ'lerini keşfet. Kore'nin orijinal canlı yayın platformu — e-spor spikerleri, IRL yayıncıları, müzisyenler ve sohbet kişilikleri dahil — AfreecaTV'nin BJ'lerine göz at, kayıtlarını izle ve yeni içerik üreticilerini keşfet.\n\n### Neden AfreecaTV BJ'leri yayınlarını kaydeder?\n\nAfreecaTV'nin kendi VOD sistemi var, ancak her tekrar kaydedilmiyor, içerikler kaldırılabiliyor ve depolama kuralları değişebiliyor. AfreecaTV BJ'leri bağımsız bir yedek olarak LiveStreamRecorder'ı kullanıyor — her yayın otomatik olarak kaydedilir, böylece yayın geçmişin, orijinal platformda ne olursa olsun bozulmadan kalır.\n\n### En iyi AfreecaTV BJ'lerine göz at\n\nLiveStreamRecorder'da kendi yayınlarını kaydeden BJ'leri bulmak için AfreecaTV içerik üreticileri sayfasını keşfet. Kayıtlarını izle, kaçırdığın uzun oturumları yakala ve StarCraft spikerliği, gaming, IRL, müzik ve sohbet kategorilerinde yeni AfreecaTV içerik üreticilerini keşfet.\n\n### Kendi AfreecaTV içerik üretici sayfan\n\nLiveStreamRecorder'daki her AfreecaTV BJ'si, hayranlarının tüm kayıtlı yayınlarına göz atabileceği kendi sayfasına sahip olur. Kaydol, AfreecaTV kullanıcı adını ekle ve içerik üretici sayfan otomatik olarak hazırlansın — AfreecaTV'nin VOD politikalarına bağlı kalmayan bağımsız bir içerik yedeği.\n\n### Uzun oturumlardan kısa kliplere ClipAI ile\n\nAfreecaTV yayınları saatlerce sürebilir. ClipAI, kayıtlarını analiz eder ve en iyi anları otomatik olarak çıkarır — kritik hamleler, tepkiler, komik anlar, müzik öne çıkanları. Bunları TikTok klipleri, YouTube Shorts veya Reels olarak paylaşarak AfreecaTV'nin ötesinde kitlelere ulaş.\n\n### LiveStreamRecorder'da AfreecaTV içerik üreticisi ol\n\nÜcretsiz kaydol, AfreecaTV kullanıcı adını ekle ve yayınlarını bugünden kaydetmeye başla. Her yayın otomatik olarak kaydedilir — AfreecaTV'nin VOD sistemine bağımlılık yok, manuel yükleme yok. LiveStreamRecorder'ı kullanarak her yayınını koruyan ve dünya çapında hayranlarına ulaşan AfreecaTV BJ'lerine katıl.",
     "bigo": "## Bigo Live İçerik Üreticileri\n\nLiveStreamRecorder'ı kullanarak kendi yayınlarını kaydeden Bigo Live içerik üreticilerini keşfet. Orta Doğu, Asya ve ötesinden dans, müzik, sohbet ve eğlence içerik üreticilerine ev sahipliği yapan dünyanın en büyük küresel canlı yayın platformlarından birinin yayıncılarına göz at, kayıtlarını izle ve yeni takip edebileceklerini keşfet.\n\n### Neden Bigo içerik üreticileri yayınlarını kaydeder?\n\nBigo yayınları yalnızca canlı oldukları sürece var olur — oturumu kapattığın anda içerik uygulamadan tamamen kaybolur. Bigo içerik üreticileri, her yayını otomatik olarak kaydetmek için LiveStreamRecorder'ı kullanıyor; böylece dans performansların, şarkıların, sohbet anların ve hediye etkileşimlerin yayın bittikten çok sonra bile hayranların için erişilebilir kalıyor.\n\n### En iyi Bigo içerik üreticilerine göz at\n\nLiveStreamRecorder'da kendi yayınlarını kaydeden yayıncıları bulmak için Bigo içerik üreticileri sayfasını keşfet. Kayıtlarını izle, kaçırdığın yayınları yakala ve her kategoride ve dilde yeni Bigo içerik üreticilerini keşfet.\n\n### Kendi Bigo içerik üretici sayfan\n\nLiveStreamRecorder'daki her Bigo içerik üreticisi, hayranlarının tüm kayıtlı yayınlarına göz atabileceği kendi sayfasına sahip olur. Kaydol, Bigo kullanıcı adını ekle ve içerik üretici sayfan otomatik olarak hazırlansın — Bigo yayınlarının geçici doğasının ötesinde yaşayan kalıcı bir içerik evi.\n\n### Yayınlardan kısa kliplere: kitleni büyüt\n\nClipAI, kayıtlı Bigo yayınlarını TikTok, Instagram Reels veya YouTube Shorts'ta paylaşmaya hazır kısa öne çıkan kliplere dönüştürür. Dans anları, düetler, hayran etkileşimleri, müzik performansları — her yayını birden fazla içeriğe dönüştür ve kitleni tüm platformlarda büyüt.\n\n### LiveStreamRecorder'da Bigo içerik üreticisi ol\n\nÜcretsiz kaydol, Bigo kullanıcı adını ekle ve yayınlarını bugünden kaydetmeye başla. Her yayın otomatik olarak kaydedilir — telefonla kayıt yok, ekran kaydı yok. LiveStreamRecorder'ı kullanarak her yayınını koruyan ve dünya çapında hayranlarına ulaşan Bigo içerik üreticilerine katıl.",
     "buzzcast": "## Buzzcast İçerik Üreticileri\n\nLiveStreamRecorder'ı kullanarak kendi yayınlarını kaydeden Buzzcast içerik üreticilerini keşfet. Mobile odaklı bu canlı yayın topluluğunun yayıncılarına göz at, kayıtlarını izle ve takip edebileceğin yeni içerik üreticilerini bul.\n\n### Neden Buzzcast içerik üreticileri yayınlarını kaydeder?\n\nBuzzcast yayınları sadece canlıdır — yayını sonlandırdığın anda içerik uygulamadan kaybolur. Tekrar sistemi yok ve hayranların sonradan yakalamasının bir yolu yok. Buzzcast içerik üreticileri, her yayını otomatik olarak kaydetmek için LiveStreamRecorder'ı kullanıyor; böylece sohbetlerin, müzik performansların ve günlük içeriklerin yayın bittikten çok sonra bile hayranların için erişilebilir kalıyor.\n\n### En iyi Buzzcast içerik üreticilerine göz at\n\nLiveStreamRecorder'da kendi yayınlarını kaydeden yayıncıları bulmak için Buzzcast içerik üreticileri sayfasını keşfet. Kayıtlarını izle, kaçırdığın yayınları yakala ve takip etmeye değer yeni Buzzcast içerik üreticilerini bul.\n\n### Kendi Buzzcast içerik üretici sayfan\n\nLiveStreamRecorder'daki her Buzzcast içerik üreticisi, hayranlarının tüm kayıtlı yayınlarına göz atabileceği kendi sayfasına sahip olur. Kaydol, Buzzcast kullanıcı adını ekle ve içerik üretici sayfan otomatik olarak hazırlansın — yayın bittiği anda kaybolmayan kalıcı bir içerik yeri.\n\n### Yayınlardan kısa kliplere: takipçi kitleni büyüt\n\nClipAI, kayıtlı Buzzcast yayınlarını TikTok, Instagram Reels veya YouTube Shorts'ta paylaşmaya hazır kısa öne çıkan kliplere dönüştürür. Tepkileri, müzik anlarını ve sohbet öne çıkanlarını viral içeriğe dönüştür ve takipçi kitleni Buzzcast'in ötesinde büyüt.\n\n### LiveStreamRecorder'da Buzzcast içerik üreticisi ol\n\nÜcretsiz kaydol, Buzzcast kullanıcı adını ekle ve yayınlarını bugünden kaydetmeye başla. Her yayın otomatik olarak kaydedilir — manuel kayıt yok, ekstra uygulama yok. LiveStreamRecorder'ı kullanarak her yayınını koruyan ve kitlesini büyüten Buzzcast içerik üreticilerine katıl.",
-    "liveme": "## LiveMe İçerik Üreticileri\n\nLiveStreamRecorder'ı kullanarak kendi yayınlarını kaydeden LiveMe içerik üreticilerini keşfet. Mobile odaklı bu canlı yayın topluluğunun yayıncılarına göz at, kayıtlarını izle ve takip edebileceğin yeni içerik üreticilerini bul.\n\n### Neden LiveMe içerik üreticileri yayınlarını kaydeder?\n\nLiveMe yayınları sadece canlıdır — yayını sonlandırdığın anda içerik uygulamadan kaybolur. Tekrar sistemi yok ve hayranların sonradan yakalamasının bir yolu yok. LiveMe içerik üreticileri, her yayını otomatik olarak kaydetmek için LiveStreamRecorder'ı kullanıyor; böylece sohbetlerin, müzik performansların ve günlük içeriklerin yayın bittikten çok sonra bile hayranların için erişilebilir kalıyor.\n\n### En iyi LiveMe içerik üreticilerine göz at\n\nLiveStreamRecorder'da kendi yayınlarını kaydeden yayıncıları bulmak için LiveMe içerik üreticileri sayfasını keşfet. Kayıtlarını izle, kaçırdığın yayınları yakala ve takip etmeye değer yeni LiveMe içerik üreticilerini bul.\n\n### Kendi LiveMe içerik üretici sayfan\n\nLiveStreamRecorder'daki her LiveMe içerik üreticisi, hayranlarının tüm kayıtlı yayınlarına göz atabileceği kendi sayfasına sahip olur. Kaydol, LiveMe kullanıcı adını ekle ve içerik üretici sayfan otomatik olarak hazırlansın — yayın bittiği anda kaybolmayan kalıcı bir içerik yeri.\n\n### Yayınlardan kısa kliplere: takipçi kitleni büyüt\n\nClipAI, kayıtlı LiveMe yayınlarını TikTok, Instagram Reels veya YouTube Shorts'ta paylaşmaya hazır kısa öne çıkan kliplere dönüştürür. Tepkileri, müzik anlarını ve sohbet öne çıkanlarını viral içeriğe dönüştür ve takipçi kitleni LiveMe'in ötesinde büyüt.\n\n### LiveStreamRecorder'da LiveMe içerik üreticisi ol\n\nÜcretsiz kaydol, LiveMe kullanıcı adını ekle ve yayınlarını bugünden kaydetmeye başla. Her yayın otomatik olarak kaydedilir — manuel kayıt yok, ekstra uygulama yok. LiveStreamRecorder'ı kullanarak her yayınını koruyan ve kitlesini büyüten LiveMe içerik üreticilerine katıl.",
-    "tango": "## Tango İçerik Üreticileri\n\nLiveStreamRecorder'ı kullanarak kendi yayınlarını kaydeden Tango içerik üreticilerini keşfet. Mobile odaklı bu canlı yayın topluluğunun yayıncılarına göz at, kayıtlarını izle ve takip edebileceğin yeni içerik üreticilerini bul.\n\n### Neden Tango içerik üreticileri yayınlarını kaydeder?\n\nTango yayınları sadece canlıdır — yayını sonlandırdığın anda içerik uygulamadan kaybolur. Tekrar sistemi yok ve hayranların sonradan yakalamasının bir yolu yok. Tango içerik üreticileri, her yayını otomatik olarak kaydetmek için LiveStreamRecorder'ı kullanıyor; böylece sohbetlerin, müzik performansların ve günlük içeriklerin yayın bittikten çok sonra bile hayranların için erişilebilir kalıyor.\n\n### En iyi Tango içerik üreticilerine göz at\n\nLiveStreamRecorder'da kendi yayınlarını kaydeden yayıncıları bulmak için Tango içerik üreticileri sayfasını keşfet. Kayıtlarını izle, kaçırdığın yayınları yakala ve takip etmeye değer yeni Tango içerik üreticilerini bul.\n\n### Kendi Tango içerik üretici sayfan\n\nLiveStreamRecorder'daki her Tango içerik üreticisi, hayranlarının tüm kayıtlı yayınlarına göz atabileceği kendi sayfasına sahip olur. Kaydol, Tango kullanıcı adını ekle ve içerik üretici sayfan otomatik olarak hazırlansın — yayın bittiği anda kaybolmayan kalıcı bir içerik yeri.\n\n### Yayınlardan kısa kliplere: takipçi kitleni büyüt\n\nClipAI, kayıtlı Tango yayınlarını TikTok, Instagram Reels veya YouTube Shorts'ta paylaşmaya hazır kısa öne çıkan kliplere dönüştürür. Tepkileri, müzik anlarını ve sohbet öne çıkanlarını viral içeriğe dönüştür ve takipçi kitleni Tango'nun ötesinde büyüt.\n\n### LiveStreamRecorder'da Tango içerik üreticisi ol\n\nÜcretsiz kaydol, Tango kullanıcı adını ekle ve yayınlarını bugünden kaydetmeye başla. Her yayın otomatik olarak kaydedilir — manuel kayıt yok, ekstra uygulama yok. LiveStreamRecorder'ı kullanarak her yayınını koruyan ve kitlesini büyüten Tango içerik üreticilerine katıl."
+    "liveme": "## LiveMe İçerik Üreticileri\n\nLiveStreamRecorder'ı kullanarak kendi yayınlarını kaydeden LiveMe içerik üreticilerini keşfet. Mobile odaklı bu canlı yayın topluluğunun yayıncılarına göz at, kayıtlarını izle ve takip edebileceğin yeni içerik üreticilerini bul.\n\n### Neden LiveMe içerik üreticileri yayınlarını kaydeder?\n\nLiveMe yayınları sadece canlıdır — yayını sonlandırdığın anda içerik uygulamadan kaybolur. Tekrar sistemi yok ve hayranların sonradan yakalamasının bir yolu yok. LiveMe içerik üreticileri, her yayını otomatik olarak kaydetmek için LiveStreamRecorder'ı kullanıyor; böylece sohbetlerin, müzik performansların ve günlük içeriklerin yayın bittikten çok sonra bile hayranların için erişilebilir kalıyor.\n\n### En iyi LiveMe içerik üreticilerine göz at\n\nLiveStreamRecorder'da kendi yayınlarını kaydeden yayıncıları bulmak için LiveMe içerik üreticileri sayfasını keşfet. Kayıtlarını izle, kaçırdığın yayınları yakala ve takip etmeye değer yeni LiveMe içerik üreticilerini bul.\n\n### Kendi LiveMe içerik üretici sayfan\n\nLiveStreamRecorder'daki her LiveMe içerik üreticisi, hayranlarının tüm kayıtlı yayınlarına göz atabileceği kendi sayfasına sahip olur. Kaydol, LiveMe kullanıcı adını ekle ve içerik üretici sayfan otomatik olarak hazırlansın — yayın bittiği anda kaybolmayan kalıcı bir içerik yeri.\n\n### Yayınlardan kısa kliplere: takipçi kitleni büyüt\n\nClipAI, kayıtlı LiveMe yayınlarını TikTok, Instagram Reels veya YouTube Shorts'ta paylaşmaya hazır kısa öne çıkan kliplere dönüştürür. Tepkileri, müzik anlarını ve sohbet öne çıkanlarını viral içeriğe dönüştür ve takipçi kitleni LiveMe'in ötesinde büyüt.\n\n### LiveStreamRecorder'da LiveMe içerik üreticisi ol\n\nÜcretsiz kaydol, LiveMe kullanıcı adını ekle ve yayınlarını bugünden kaydetmeye başla. Her yayın otomatik olarak kaydedilir — manuel kayıt yok, ekstra uygulama yok. LiveStreamRecorder'ı kullanarak her yayınını koruyan ve kitlesini büyüten LiveMe içerik üreticilerine katıl."
   },
   "faq": "Sıkça Sorulan Sorular",
   "country": {

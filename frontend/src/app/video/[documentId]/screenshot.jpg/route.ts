@@ -36,7 +36,7 @@ export async function GET(
   try {
     const s3 = getS3();
     const command = new GetObjectCommand({
-      Bucket: getBucket(process.env.MEDIA_BUCKET!, source.createdAt, source.path, source.bucket),
+      Bucket: getBucket(process.env.MEDIA_BUCKET!, source.bucket),
       Key: `${source.path.substring(1)}screenshot.jpg`,
     });
     const response = await s3.send(command, {

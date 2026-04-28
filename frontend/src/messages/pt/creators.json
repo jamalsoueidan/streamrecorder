@@ -235,16 +235,6 @@
         "gravação liveme",
         "gravador de stream liveme"
       ]
-    },
-    "tango": {
-      "title": "Criadores do Tango",
-      "description": "Descubra criadores do Tango que usam o LiveStreamRecorder para gravar suas lives e transformá-las em clipes curtos.",
-      "keywords": [
-        "criadores tango",
-        "live stream tango",
-        "gravação tango",
-        "gravador de stream tango"
-      ]
     }
   },
   "hero": {
@@ -258,8 +248,7 @@
       "afreecatv": "Criadores da AfreecaTV",
       "bigo": "Criadores do Bigo",
       "buzzcast": "Criadores do Buzzcast",
-      "liveme": "Criadores do LiveMe",
-      "tango": "Criadores do Tango"
+      "liveme": "Criadores do LiveMe"
     },
     "subtitle": {
       "all": "Junte-se a milhares de criadores que usam o LiveStreamRecorder para salvar suas streams e criar clipes curtos.",
@@ -271,8 +260,7 @@
       "afreecatv": "Junte-se a milhares de criadores da AfreecaTV que usam o LiveStreamRecorder para salvar suas streams e criar clipes curtos.",
       "bigo": "Junte-se a milhares de criadores do Bigo que usam o LiveStreamRecorder para salvar suas streams e criar clipes curtos.",
       "buzzcast": "Junte-se a milhares de criadores do Buzzcast que usam o LiveStreamRecorder para salvar suas streams e criar clipes curtos.",
-      "liveme": "Junte-se a milhares de criadores do LiveMe que usam o LiveStreamRecorder para salvar suas streams e criar clipes curtos.",
-      "tango": "Junte-se a milhares de criadores do Tango que usam o LiveStreamRecorder para salvar suas streams e criar clipes curtos."
+      "liveme": "Junte-se a milhares de criadores do LiveMe que usam o LiveStreamRecorder para salvar suas streams e criar clipes curtos."
     }
   },
   "features": {
@@ -287,8 +275,7 @@
       "afreecatv": "Grave Suas Streams da AfreecaTV Automaticamente",
       "bigo": "Grave Suas Streams do Bigo Automaticamente",
       "buzzcast": "Grave Suas Streams do Buzzcast Automaticamente",
-      "liveme": "Grave Suas Streams do LiveMe Automaticamente",
-      "tango": "Grave Suas Streams do Tango Automaticamente"
+      "liveme": "Grave Suas Streams do LiveMe Automaticamente"
     },
     "subtitle": "Da live ao clipe curto em minutos",
     "items": {
@@ -321,8 +308,7 @@
       "pandalive": "Grave Suas Streams do Pandalive",
       "bigo": "Grave Suas Streams do Bigo",
       "buzzcast": "Grave Suas Streams do Buzzcast",
-      "liveme": "Grave Suas Streams do LiveMe",
-      "tango": "Grave Suas Streams do Tango"
+      "liveme": "Grave Suas Streams do LiveMe"
     },
     "subtitle": {
       "all": "Junte-se a milhares de criadores. Salve suas streams, crie clipes curtos com o ClipAI e faça sua audiência crescer.",
@@ -334,8 +320,7 @@
       "pandalive": "Junte-se a milhares de criadores do Pandalive. Salve suas streams e crie clipes curtos com o ClipAI.",
       "bigo": "Junte-se a milhares de criadores do Bigo. Salve suas streams e crie clipes curtos com o ClipAI.",
       "buzzcast": "Junte-se a milhares de criadores do Buzzcast. Salve suas streams e crie clipes curtos com o ClipAI.",
-      "liveme": "Junte-se a milhares de criadores do LiveMe. Salve suas streams e crie clipes curtos com o ClipAI.",
-      "tango": "Junte-se a milhares de criadores do Tango. Salve suas streams e crie clipes curtos com o ClipAI."
+      "liveme": "Junte-se a milhares de criadores do LiveMe. Salve suas streams e crie clipes curtos com o ClipAI."
     },
     "button": "Comece a Gravar Grátis"
   },
@@ -351,8 +336,7 @@
       "afreecatv": "Seja o primeiro criador da AfreecaTV a entrar!",
       "bigo": "Seja o primeiro criador do Bigo a entrar!",
       "buzzcast": "Seja o primeiro criador do Buzzcast a entrar!",
-      "liveme": "Seja o primeiro criador do LiveMe a entrar!",
-      "tango": "Seja o primeiro criador do Tango a entrar!"
+      "liveme": "Seja o primeiro criador do LiveMe a entrar!"
     },
     "button": "Começar"
   },
@@ -366,8 +350,7 @@
     "afreecatv": "## Criadores da AfreecaTV\n\nDescubra BJs da AfreecaTV que usam o LiveStreamRecorder para salvar suas próprias lives. Explore criadores coreanos, assista às gravações e encontre novos BJs para seguir da plataforma de live streaming original da Coreia — lar de casters de e-sports, streamers IRL, músicos e personalidades de bate-papo.\n\n### Por que BJs da AfreecaTV gravam suas lives\n\nA AfreecaTV tem seu próprio sistema de VOD, mas nem todo replay é salvo, conteúdo pode ser retirado, e as regras de armazenamento mudam. BJs da AfreecaTV usam o LiveStreamRecorder como backup independente — cada live é capturada automaticamente para que seu histórico de transmissões fique intacto, não importa o que aconteça na plataforma original.\n\n### Explore os melhores BJs da AfreecaTV\n\nEntre na página de criadores da AfreecaTV para encontrar BJs que salvam suas próprias lives no LiveStreamRecorder. Assista às gravações, recupere sessões longas que você perdeu e descubra novos criadores da AfreecaTV em categorias como StarCraft, gaming, IRL, música e bate-papo.\n\n### Sua página de criador da AfreecaTV\n\nTodo BJ da AfreecaTV no LiveStreamRecorder ganha sua própria página onde os fãs podem ver todas as suas lives gravadas. Cadastre-se, adicione seu nome de usuário da AfreecaTV e sua página de criador é configurada automaticamente — um backup independente do seu conteúdo que não depende das políticas de VOD da AfreecaTV.\n\n### De sessões longas a cortes curtos com ClipAI\n\nLives da AfreecaTV podem durar horas. O ClipAI analisa suas gravações e extrai os melhores momentos automaticamente — jogadas incríveis, reações, momentos engraçados, destaques musicais. Poste-os como cortes no TikTok, YouTube Shorts ou Reels para alcançar audiências além da AfreecaTV.\n\n### Vire criador da AfreecaTV no LiveStreamRecorder\n\nCadastre-se grátis, adicione seu nome de usuário da AfreecaTV e comece a salvar suas lives hoje. Cada live é capturada automaticamente — sem depender do sistema de VOD da AfreecaTV, sem upload manual. Junte-se aos BJs da AfreecaTV que já usam o LiveStreamRecorder para guardar cada live e alcançar fãs do mundo todo.",
     "bigo": "## Criadores da Bigo Live\n\nDescubra criadores da Bigo Live que usam o LiveStreamRecorder para salvar suas próprias lives. Explore streamers da Bigo, assista às gravações e encontre novos criadores para seguir de uma das maiores plataformas globais de live streaming — casa de criadores de dança, música, bate-papo e entretenimento do Oriente Médio, Ásia e além.\n\n### Por que criadores da Bigo gravam suas lives\n\nLives da Bigo existem apenas enquanto estão no ar — no momento em que você encerra a sessão, o conteúdo some completamente do app. Criadores da Bigo usam o LiveStreamRecorder para salvar cada live automaticamente, para que suas coreografias, apresentações musicais, bate-papos e momentos de presentes continuem disponíveis para os fãs muito depois do fim da live.\n\n### Explore os melhores criadores da Bigo\n\nEntre na página de criadores da Bigo para encontrar streamers que salvam suas próprias lives no LiveStreamRecorder. Assista às gravações, recupere as lives que você perdeu e descubra novos criadores da Bigo de todas as categorias e idiomas.\n\n### Sua página de criador da Bigo\n\nTodo criador da Bigo no LiveStreamRecorder ganha sua própria página onde os fãs podem ver todas as suas lives gravadas. Cadastre-se, adicione seu nome de usuário da Bigo e sua página de criador é configurada automaticamente — uma casa permanente para o seu conteúdo que sobrevive ao caráter efêmero das lives da Bigo.\n\n### De lives a cortes: faça sua audiência crescer\n\nO ClipAI transforma suas lives gravadas da Bigo em cortes curtos prontos para postar no TikTok, Instagram Reels ou YouTube Shorts. Momentos de dança, duetos, interações com fãs, apresentações musicais — transforme cada live em vários conteúdos e faça sua audiência crescer em todas as plataformas.\n\n### Vire criador da Bigo no LiveStreamRecorder\n\nCadastre-se grátis, adicione seu nome de usuário da Bigo e comece a salvar suas lives hoje. Cada live é capturada automaticamente — sem gravar com o celular, sem captura de tela. Junte-se aos criadores da Bigo que já usam o LiveStreamRecorder para guardar cada live e alcançar fãs do mundo todo.",
     "buzzcast": "## Criadores da Buzzcast\n\nDescubra criadores da Buzzcast que usam o LiveStreamRecorder para salvar suas próprias lives. Explore streamers da Buzzcast, assista às gravações e encontre novos criadores para seguir desta comunidade de live streaming feita para o mobile.\n\n### Por que criadores da Buzzcast gravam suas lives\n\nLives da Buzzcast são só ao vivo — no momento em que você encerra a transmissão, o conteúdo desaparece do app. Não há sistema de replay e não há como os fãs recuperarem depois. Criadores da Buzzcast usam o LiveStreamRecorder para salvar cada live automaticamente, para que suas conversas, apresentações musicais e conteúdo do dia a dia continuem disponíveis para os fãs muito depois do fim da live.\n\n### Explore os melhores criadores da Buzzcast\n\nEntre na página de criadores da Buzzcast para encontrar streamers que salvam suas próprias lives no LiveStreamRecorder. Assista às gravações, recupere as lives que você perdeu e descubra novos criadores da Buzzcast que vale a pena seguir.\n\n### Sua página de criador da Buzzcast\n\nTodo criador da Buzzcast no LiveStreamRecorder ganha sua própria página onde os fãs podem ver todas as suas lives gravadas. Cadastre-se, adicione seu nome de usuário da Buzzcast e sua página de criador é configurada automaticamente — um lugar permanente para o seu conteúdo que não some assim que a live termina.\n\n### De lives a cortes: construa sua comunidade\n\nO ClipAI transforma suas lives gravadas da Buzzcast em cortes curtos prontos para postar no TikTok, Instagram Reels ou YouTube Shorts. Transforme reações, momentos musicais e destaques de bate-papo em conteúdo viral e faça sua audiência crescer além da Buzzcast.\n\n### Vire criador da Buzzcast no LiveStreamRecorder\n\nCadastre-se grátis, adicione seu nome de usuário da Buzzcast e comece a salvar suas lives hoje. Cada live é capturada automaticamente — sem gravação manual, sem apps extras. Junte-se aos criadores da Buzzcast que já usam o LiveStreamRecorder para guardar cada live e fazer sua audiência crescer.",
-    "liveme": "## Criadores da LiveMe\n\nDescubra criadores da LiveMe que usam o LiveStreamRecorder para salvar suas próprias lives. Explore streamers da LiveMe, assista às gravações e encontre novos criadores para seguir desta comunidade de live streaming feita para o mobile.\n\n### Por que criadores da LiveMe gravam suas lives\n\nLives da LiveMe são só ao vivo — no momento em que você encerra a transmissão, o conteúdo desaparece do app. Não há sistema de replay e não há como os fãs recuperarem depois. Criadores da LiveMe usam o LiveStreamRecorder para salvar cada live automaticamente, para que suas conversas, apresentações musicais e conteúdo do dia a dia continuem disponíveis para os fãs muito depois do fim da live.\n\n### Explore os melhores criadores da LiveMe\n\nEntre na página de criadores da LiveMe para encontrar streamers que salvam suas próprias lives no LiveStreamRecorder. Assista às gravações, recupere as lives que você perdeu e descubra novos criadores da LiveMe que vale a pena seguir.\n\n### Sua página de criador da LiveMe\n\nTodo criador da LiveMe no LiveStreamRecorder ganha sua própria página onde os fãs podem ver todas as suas lives gravadas. Cadastre-se, adicione seu nome de usuário da LiveMe e sua página de criador é configurada automaticamente — um lugar permanente para o seu conteúdo que não some assim que a live termina.\n\n### De lives a cortes: construa sua comunidade\n\nO ClipAI transforma suas lives gravadas da LiveMe em cortes curtos prontos para postar no TikTok, Instagram Reels ou YouTube Shorts. Transforme reações, momentos musicais e destaques de bate-papo em conteúdo viral e faça sua audiência crescer além da LiveMe.\n\n### Vire criador da LiveMe no LiveStreamRecorder\n\nCadastre-se grátis, adicione seu nome de usuário da LiveMe e comece a salvar suas lives hoje. Cada live é capturada automaticamente — sem gravação manual, sem apps extras. Junte-se aos criadores da LiveMe que já usam o LiveStreamRecorder para guardar cada live e fazer sua audiência crescer.",
-    "tango": "## Criadores da Tango\n\nDescubra criadores da Tango que usam o LiveStreamRecorder para salvar suas próprias lives. Explore streamers da Tango, assista às gravações e encontre novos criadores para seguir desta comunidade de live streaming feita para o mobile.\n\n### Por que criadores da Tango gravam suas lives\n\nLives da Tango são só ao vivo — no momento em que você encerra a transmissão, o conteúdo desaparece do app. Não há sistema de replay e não há como os fãs recuperarem depois. Criadores da Tango usam o LiveStreamRecorder para salvar cada live automaticamente, para que suas conversas, apresentações musicais e conteúdo do dia a dia continuem disponíveis para os fãs muito depois do fim da live.\n\n### Explore os melhores criadores da Tango\n\nEntre na página de criadores da Tango para encontrar streamers que salvam suas próprias lives no LiveStreamRecorder. Assista às gravações, recupere as lives que você perdeu e descubra novos criadores da Tango que vale a pena seguir.\n\n### Sua página de criador da Tango\n\nTodo criador da Tango no LiveStreamRecorder ganha sua própria página onde os fãs podem ver todas as suas lives gravadas. Cadastre-se, adicione seu nome de usuário da Tango e sua página de criador é configurada automaticamente — um lugar permanente para o seu conteúdo que não some assim que a live termina.\n\n### De lives a cortes: construa sua comunidade\n\nO ClipAI transforma suas lives gravadas da Tango em cortes curtos prontos para postar no TikTok, Instagram Reels ou YouTube Shorts. Transforme reações, momentos musicais e destaques de bate-papo em conteúdo viral e faça sua audiência crescer além da Tango.\n\n### Vire criador da Tango no LiveStreamRecorder\n\nCadastre-se grátis, adicione seu nome de usuário da Tango e comece a salvar suas lives hoje. Cada live é capturada automaticamente — sem gravação manual, sem apps extras. Junte-se aos criadores da Tango que já usam o LiveStreamRecorder para guardar cada live e fazer sua audiência crescer."
+    "liveme": "## Criadores da LiveMe\n\nDescubra criadores da LiveMe que usam o LiveStreamRecorder para salvar suas próprias lives. Explore streamers da LiveMe, assista às gravações e encontre novos criadores para seguir desta comunidade de live streaming feita para o mobile.\n\n### Por que criadores da LiveMe gravam suas lives\n\nLives da LiveMe são só ao vivo — no momento em que você encerra a transmissão, o conteúdo desaparece do app. Não há sistema de replay e não há como os fãs recuperarem depois. Criadores da LiveMe usam o LiveStreamRecorder para salvar cada live automaticamente, para que suas conversas, apresentações musicais e conteúdo do dia a dia continuem disponíveis para os fãs muito depois do fim da live.\n\n### Explore os melhores criadores da LiveMe\n\nEntre na página de criadores da LiveMe para encontrar streamers que salvam suas próprias lives no LiveStreamRecorder. Assista às gravações, recupere as lives que você perdeu e descubra novos criadores da LiveMe que vale a pena seguir.\n\n### Sua página de criador da LiveMe\n\nTodo criador da LiveMe no LiveStreamRecorder ganha sua própria página onde os fãs podem ver todas as suas lives gravadas. Cadastre-se, adicione seu nome de usuário da LiveMe e sua página de criador é configurada automaticamente — um lugar permanente para o seu conteúdo que não some assim que a live termina.\n\n### De lives a cortes: construa sua comunidade\n\nO ClipAI transforma suas lives gravadas da LiveMe em cortes curtos prontos para postar no TikTok, Instagram Reels ou YouTube Shorts. Transforme reações, momentos musicais e destaques de bate-papo em conteúdo viral e faça sua audiência crescer além da LiveMe.\n\n### Vire criador da LiveMe no LiveStreamRecorder\n\nCadastre-se grátis, adicione seu nome de usuário da LiveMe e comece a salvar suas lives hoje. Cada live é capturada automaticamente — sem gravação manual, sem apps extras. Junte-se aos criadores da LiveMe que já usam o LiveStreamRecorder para guardar cada live e fazer sua audiência crescer."
   },
   "faq": "Perguntas Frequentes",
   "country": {

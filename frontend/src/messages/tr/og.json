@@ -13,8 +13,7 @@
       "afreecatv": "AfreecaTV İçerik Üreticileri",
       "bigo": "Bigo İçerik Üreticileri",
       "buzzcast": "Buzzcast İçerik Üreticileri",
-      "liveme": "LiveMe İçerik Üreticileri",
-      "tango": "Tango İçerik Üreticileri"
+      "liveme": "LiveMe İçerik Üreticileri"
     },
     "subtitle": {
       "all": "Tüm yayıncılara ve içerik üreticilerine göz atın",
@@ -26,8 +25,7 @@
       "afreecatv": "AfreecaTV içerik üreticilerini keşfedin",
       "bigo": "Bigo içerik üreticilerini keşfedin",
       "buzzcast": "Buzzcast içerik üreticilerini keşfedin",
-      "liveme": "LiveMe içerik üreticilerini keşfedin",
-      "tango": "Tango içerik üreticilerini keşfedin"
+      "liveme": "LiveMe içerik üreticilerini keşfedin"
     }
   },
   "recordings": {
@@ -41,8 +39,7 @@
       "afreecatv": "AfreecaTV Kayıtları",
       "bigo": "Bigo Kayıtları",
       "buzzcast": "Buzzcast Kayıtları",
-      "liveme": "LiveMe Kayıtları",
-      "tango": "Tango Kayıtları"
+      "liveme": "LiveMe Kayıtları"
     },
     "subtitle": {
       "all": "Kaydedilmiş canlı yayınları izleyin",
@@ -54,8 +51,7 @@
       "afreecatv": "Kaydedilmiş AfreecaTV yayınlarını izleyin",
       "bigo": "Kaydedilmiş Bigo yayınlarını izleyin",
       "buzzcast": "Kaydedilmiş Buzzcast yayınlarını izleyin",
-      "liveme": "Kaydedilmiş LiveMe yayınlarını izleyin",
-      "tango": "Kaydedilmiş Tango yayınlarını izleyin"
+      "liveme": "Kaydedilmiş LiveMe yayınlarını izleyin"
     }
   },
   "home": {

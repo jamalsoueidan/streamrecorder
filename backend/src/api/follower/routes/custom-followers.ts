@@ -12,6 +12,11 @@ export default {
     },
     {
       method: "POST",
+      path: "/followers/search",
+      handler: "follower.search",
+    },
+    {
+      method: "POST",
       path: "/followers/follow",
       handler: "follower.follow",
     },

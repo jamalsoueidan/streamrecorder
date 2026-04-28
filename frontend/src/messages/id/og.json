@@ -13,8 +13,7 @@
       "afreecatv": "Kreator AfreecaTV",
       "bigo": "Kreator Bigo",
       "buzzcast": "Kreator Buzzcast",
-      "liveme": "Kreator LiveMe",
-      "tango": "Kreator Tango"
+      "liveme": "Kreator LiveMe"
     },
     "subtitle": {
       "all": "Jelajahi semua streamer dan kreator",
@@ -26,8 +25,7 @@
       "afreecatv": "Temukan kreator AfreecaTV",
       "bigo": "Temukan kreator Bigo",
       "buzzcast": "Temukan kreator Buzzcast",
-      "liveme": "Temukan kreator LiveMe",
-      "tango": "Temukan kreator Tango"
+      "liveme": "Temukan kreator LiveMe"
     }
   },
   "recordings": {
@@ -41,8 +39,7 @@
       "afreecatv": "Rekaman AfreecaTV",
       "bigo": "Rekaman Bigo",
       "buzzcast": "Rekaman Buzzcast",
-      "liveme": "Rekaman LiveMe",
-      "tango": "Rekaman Tango"
+      "liveme": "Rekaman LiveMe"
     },
     "subtitle": {
       "all": "Tonton rekaman live stream",
@@ -54,8 +51,7 @@
       "afreecatv": "Tonton stream AfreecaTV yang direkam",
       "bigo": "Tonton stream Bigo yang direkam",
       "buzzcast": "Tonton stream Buzzcast yang direkam",
-      "liveme": "Tonton stream LiveMe yang direkam",
-      "tango": "Tonton stream Tango yang direkam"
+      "liveme": "Tonton stream LiveMe yang direkam"
     }
   },
   "home": {

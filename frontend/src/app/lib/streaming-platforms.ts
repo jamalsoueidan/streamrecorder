@@ -48,12 +48,6 @@ export const streamingPlatforms = [
     file: "/simple/buzzcast.svg",
   },
   {
-    color: "cyan.5",
-    colorCss: "var(--mantine-color-cyan-5)",
-    name: "Tango",
-    file: "/simple/tango.svg",
-  },
-  {
     color: "yellow.5",
     colorCss: "var(--mantine-color-yellow-5)",
     name: "LiveMe",

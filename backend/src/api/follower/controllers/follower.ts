@@ -391,6 +391,10 @@ export default factories.createCoreController(
         },
       };
     },
+    async search(ctx) {
+      ctx.query = { ...ctx.query, ...((ctx.request.body as any) || {}) };
+      return await (this as any).find(ctx);
+    },
     async filters(ctx) {
       const knex = strapi.db.connection;
       const { type } = ctx.query;

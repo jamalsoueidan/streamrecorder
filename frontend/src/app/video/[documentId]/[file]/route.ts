@@ -44,7 +44,7 @@ export async function GET(
   }
 
   const s3 = getS3();
-  const bucket = getBucket(process.env.MEDIA_BUCKET!, source.createdAt, source.path, source.bucket);
+  const bucket = getBucket(process.env.MEDIA_BUCKET!, source.bucket);
   const key = `${source.path.substring(1)}${file}`;
 
   if (isDownload && file.endsWith(".mp4")) {

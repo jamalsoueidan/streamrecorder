@@ -20,7 +20,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2026-04-27T13:20:13.271Z"
+    "x-generation-date": "2026-04-28T15:02:47.977Z"
   },
   "servers": [
     {
@@ -11770,6 +11770,134 @@
         }
       }
     },
+    "/followers/search": {
+      "post": {
+        "tags": [
+          "Follower"
+        ],
+        "operationId": "searchFollowers",
+        "summary": "Search followers via POST body (bypasses URL length limits)",
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": true,
+                "properties": {
+                  "sort": {
+                    "type": "string"
+                  },
+                  "pagination[withCount]": {
+                    "type": "boolean"
+                  },
+                  "pagination[page]": {
+                    "type": "integer"
+                  },
+                  "pagination[pageSize]": {
+                    "type": "integer"
+                  },
+                  "pagination[start]": {
+                    "type": "integer"
+                  },
+                  "pagination[limit]": {
+                    "type": "integer"
+                  },
+                  "fields": {
+                    "type": "string"
+                  },
+                  "populate": {
+                    "oneOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      {
+                        "type": "object"
+                      }
+                    ]
+                  },
+                  "filters": {
+                    "type": "object",
+                    "additionalProperties": true
+                  },
+                  "locale": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FollowerListResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/followers/browse": {
       "get": {
         "responses": {
@@ -12185,6 +12313,134 @@
             "bearerAuth": []
           }
         ]
+      }
+    },
+    "/recordings/search": {
+      "post": {
+        "tags": [
+          "Recording"
+        ],
+        "operationId": "searchRecordings",
+        "summary": "Search recordings via POST body (bypasses URL length limits)",
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": true,
+                "properties": {
+                  "sort": {
+                    "type": "string"
+                  },
+                  "pagination[withCount]": {
+                    "type": "boolean"
+                  },
+                  "pagination[page]": {
+                    "type": "integer"
+                  },
+                  "pagination[pageSize]": {
+                    "type": "integer"
+                  },
+                  "pagination[start]": {
+                    "type": "integer"
+                  },
+                  "pagination[limit]": {
+                    "type": "integer"
+                  },
+                  "fields": {
+                    "type": "string"
+                  },
+                  "populate": {
+                    "oneOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      {
+                        "type": "object"
+                      }
+                    ]
+                  },
+                  "filters": {
+                    "type": "object",
+                    "additionalProperties": true
+                  },
+                  "locale": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RecordingListResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
       }
     },
     "/followers/follow": {

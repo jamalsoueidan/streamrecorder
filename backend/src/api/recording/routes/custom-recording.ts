@@ -6,9 +6,9 @@ export default {
       handler: "recording.browse",
     },
     {
-      method: "GET",
-      path: "/recordings/storage-stats",
-      handler: "recording.storageStats",
+      method: "POST",
+      path: "/recordings/search",
+      handler: "recording.search",
     },
   ],
 };

@@ -23,8 +23,7 @@
     "pandalive": "Pandalive creators",
     "bigo": "Bigo creators",
     "buzzcast": "Buzzcast creators",
-    "liveme": "LiveMe creators",
-    "tango": "Tango creators"
+    "liveme": "LiveMe creators"
   },
   "watchRecordings": {
     "title": "Watch Recordings",
@@ -37,8 +36,7 @@
     "pandalive": "Pandalive recordings",
     "bigo": "Bigo recordings",
     "buzzcast": "Buzzcast recordings",
-    "liveme": "LiveMe recordings",
-    "tango": "Tango recordings"
+    "liveme": "LiveMe recordings"
   },
   "legal": {
     "title": "Legal",

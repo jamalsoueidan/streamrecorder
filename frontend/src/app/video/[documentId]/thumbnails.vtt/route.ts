@@ -91,12 +91,7 @@ function buildVideoRanges(sources: Source[]) {
   let cumTime = 0;
   for (const source of sources) {
     const dur = source.duration || 0;
-    const bucket = getBucket(
-      "streamrecorder",
-      source.createdAt,
-      source.path,
-      source.bucket,
-    );
+    const bucket = getBucket("streamrecorder", source.bucket);
     ranges.push({
       start: cumTime,
       end: cumTime + dur,

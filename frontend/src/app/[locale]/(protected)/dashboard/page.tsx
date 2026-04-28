@@ -39,7 +39,6 @@ const platformMap: Record<string, FollowerTypeEnum> = {
   Pandalive: FollowerTypeEnum.Pandalive,
   Bigo: FollowerTypeEnum.Bigo,
   Buzzcast: FollowerTypeEnum.Buzzcast,
-  Tango: FollowerTypeEnum.Tango,
   LiveMe: FollowerTypeEnum.Liveme,
 };
 
@@ -86,7 +85,7 @@ export default async function Page() {
           <Group gap="sm" wrap="nowrap">
             {streamingPlatforms.map((platform) => {
               const isNew =
-                platform.name === "Buzzcast" || platform.name === "Tango" || platform.name === "LiveMe";
+                platform.name === "Buzzcast" || platform.name === "LiveMe";
               return (
                 <Link
                   key={platform.name}

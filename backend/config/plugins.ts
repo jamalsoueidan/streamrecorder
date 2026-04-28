@@ -626,6 +626,42 @@ export default ({ env }) => ({
             },
           };
 
+          // POST /followers/search — same query semantics as GET /followers
+          // but body-based, to bypass URL-length limits when filters[id][$in]
+          // contains many values (>~150 IDs hits nginx 8KB request-line cap).
+          if (draft.paths["/followers"]?.get) {
+            const getParams = draft.paths["/followers"].get.parameters || [];
+            const bodyProps = {};
+            for (const p of getParams) {
+              if (p && p.name) {
+                bodyProps[p.name] = p.schema || { type: "string" };
+              }
+            }
+            draft.paths["/followers/search"] = {
+              post: {
+                tags: draft.paths["/followers"].get.tags,
+                operationId: "searchFollowers",
+                summary:
+                  "Search followers via POST body (bypasses URL length limits)",
+                requestBody: {
+                  required: false,
+                  content: {
+                    "application/json": {
+                      schema: {
+                        type: "object",
+                        additionalProperties: true,
+                        properties: bodyProps,
+                      },
+                    },
+                  },
+                },
+                responses: {
+                  ...draft.paths["/followers"].get.responses,
+                },
+              },
+            };
+          }
+
           // Then in the endpoint
           if (draft.paths["/followers"]?.get) {
             draft.paths["/followers/browse"] = {
@@ -696,6 +732,41 @@ export default ({ env }) => ({
                 responses: {
                   ...draft.paths["/recordings"].get.responses,
                   "401": { description: "Unauthorized" },
+                },
+              },
+            };
+          }
+
+          // POST /recordings/search — body-based mirror of GET /recordings
+          // (avoids URL-length limits when filters[follower][id][$in] holds many values)
+          if (draft.paths["/recordings"]?.get) {
+            const recParams = draft.paths["/recordings"].get.parameters || [];
+            const recBodyProps = {};
+            for (const p of recParams) {
+              if (p && p.name) {
+                recBodyProps[p.name] = p.schema || { type: "string" };
+              }
+            }
+            draft.paths["/recordings/search"] = {
+              post: {
+                tags: draft.paths["/recordings"].get.tags,
+                operationId: "searchRecordings",
+                summary:
+                  "Search recordings via POST body (bypasses URL length limits)",
+                requestBody: {
+                  required: false,
+                  content: {
+                    "application/json": {
+                      schema: {
+                        type: "object",
+                        additionalProperties: true,
+                        properties: recBodyProps,
+                      },
+                    },
+                  },
+                },
+                responses: {
+                  ...draft.paths["/recordings"].get.responses,
                 },
               },
             };

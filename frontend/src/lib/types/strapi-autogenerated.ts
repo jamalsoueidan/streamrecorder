@@ -9444,6 +9444,22 @@ export interface GetRandomClipsData {
   data?: Clip[];
 }
 
+export interface SearchFollowersPayload {
+  sort?: string;
+  "pagination[withCount]"?: boolean;
+  "pagination[page]"?: number;
+  "pagination[pageSize]"?: number;
+  "pagination[start]"?: number;
+  "pagination[limit]"?: number;
+  fields?: string;
+  populate?: string | string[] | object;
+  filters?: Record<string, any>;
+  locale?: string;
+  [key: string]: any;
+}
+
+export type SearchFollowersData = FollowerListResponse;
+
 export interface BrowseFollowersParams {
   /** Sort by attributes ascending (asc) or descending (desc) */
   sort?: string;
@@ -9503,6 +9519,22 @@ export interface BrowseRecordingsParams {
 }
 
 export type BrowseRecordingsData = RecordingListResponse;
+
+export interface SearchRecordingsPayload {
+  sort?: string;
+  "pagination[withCount]"?: boolean;
+  "pagination[page]"?: number;
+  "pagination[pageSize]"?: number;
+  "pagination[start]"?: number;
+  "pagination[limit]"?: number;
+  fields?: string;
+  populate?: string | string[] | object;
+  filters?: Record<string, any>;
+  locale?: string;
+  [key: string]: any;
+}
+
+export type SearchRecordingsData = RecordingListResponse;
 
 export interface FollowCreateData {
   data?: Follower;
@@ -10904,6 +10936,22 @@ export namespace Follower {
   /**
    * No description
    * @tags Follower
+   * @name SearchFollowers
+   * @summary Search followers via POST body (bypasses URL length limits)
+   * @request POST:/followers/search
+   * @secure
+   */
+  export namespace SearchFollowers {
+    export type RequestParams = {};
+    export type RequestQuery = {};
+    export type RequestBody = SearchFollowersPayload;
+    export type RequestHeaders = {};
+    export type ResponseBody = SearchFollowersData;
+  }
+
+  /**
+   * No description
+   * @tags Follower
    * @name BrowseFollowers
    * @summary Browse followers with scope filtering (auth required)
    * @request GET:/followers/browse
@@ -11293,6 +11341,22 @@ export namespace Recording {
     export type RequestBody = never;
     export type RequestHeaders = {};
     export type ResponseBody = BrowseRecordingsData;
+  }
+
+  /**
+   * No description
+   * @tags Recording
+   * @name SearchRecordings
+   * @summary Search recordings via POST body (bypasses URL length limits)
+   * @request POST:/recordings/search
+   * @secure
+   */
+  export namespace SearchRecordings {
+    export type RequestParams = {};
+    export type RequestQuery = {};
+    export type RequestBody = SearchRecordingsPayload;
+    export type RequestHeaders = {};
+    export type ResponseBody = SearchRecordingsData;
   }
 }
 
@@ -13824,6 +13888,29 @@ export class Api<
      * No description
      *
      * @tags Follower
+     * @name SearchFollowers
+     * @summary Search followers via POST body (bypasses URL length limits)
+     * @request POST:/followers/search
+     * @secure
+     */
+    searchFollowers: (
+      data?: SearchFollowersPayload,
+      params: RequestParams = {},
+    ) =>
+      this.request<SearchFollowersData, Error>({
+        path: `/followers/search`,
+        method: "POST",
+        body: data,
+        secure: true,
+        type: ContentType.Json,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Follower
      * @name BrowseFollowers
      * @summary Browse followers with scope filtering (auth required)
      * @request GET:/followers/browse
@@ -14183,6 +14270,29 @@ export class Api<
         method: "GET",
         query: query,
         secure: true,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Recording
+     * @name SearchRecordings
+     * @summary Search recordings via POST body (bypasses URL length limits)
+     * @request POST:/recordings/search
+     * @secure
+     */
+    searchRecordings: (
+      data?: SearchRecordingsPayload,
+      params: RequestParams = {},
+    ) =>
+      this.request<SearchRecordingsData, Error>({
+        path: `/recordings/search`,
+        method: "POST",
+        body: data,
+        secure: true,
+        type: ContentType.Json,
         format: "json",
         ...params,
       }),

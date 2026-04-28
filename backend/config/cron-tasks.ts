@@ -62,9 +62,14 @@ export default {
           SELECT srl.recording_id, SUM(s.duration) AS total
           FROM sources_recording_lnk srl
           JOIN sources s ON s.id = srl.source_id
-          JOIN recordings r2 ON r2.id = srl.recording_id
           WHERE s.state = 'done'
-            AND r2.created_at > NOW() - INTERVAL '3 hours'
+            AND srl.recording_id IN (
+              SELECT srl2.recording_id
+              FROM sources_recording_lnk srl2
+              JOIN sources s2 ON s2.id = srl2.source_id
+              WHERE s2.state = 'done'
+                AND s2.updated_at > NOW() - INTERVAL '4 hours'
+            )
           GROUP BY srl.recording_id
         ) sub
         WHERE r.id = sub.recording_id

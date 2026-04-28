@@ -26,12 +26,7 @@ const fetchSourcePlaylists = unstable_cache(
     if (!sources.length) return null;
 
     const s3Client = getS3();
-    const bucket = getBucket(
-      process.env.MEDIA_BUCKET!,
-      sources[0].createdAt,
-      sources[0].path,
-      sources[0].bucket,
-    );
+    const bucket = getBucket(process.env.MEDIA_BUCKET!, sources[0].bucket);
     const sourcesWithPlaylists = await fetchPlaylistsFromS3(
       s3Client,
       bucket,
@@ -41,8 +36,6 @@ const fetchSourcePlaylists = unstable_cache(
 
     return {
       sourcesWithPlaylists,
-      createdAt: sources[0].createdAt,
-      path: sources[0].path,
       bucket: sources[0].bucket,
     };
   },
@@ -59,12 +52,7 @@ const buildSignedPlaylist = unstable_cache(
     if (!cached) return null;
 
     const s3Client = getS3();
-    const bucket = getBucket(
-      process.env.MEDIA_BUCKET!,
-      cached.createdAt,
-      cached.path,
-      cached.bucket,
-    );
+    const bucket = getBucket(process.env.MEDIA_BUCKET!, cached.bucket);
     return combinePlaylistsWithSignedUrls(
       s3Client,
       bucket,

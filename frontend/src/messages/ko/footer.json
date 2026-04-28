@@ -23,8 +23,7 @@
     "pandalive": "판다라이브 크리에이터",
     "bigo": "비고 크리에이터",
     "buzzcast": "버즈캐스트 크리에이터",
-    "liveme": "라이브미 크리에이터",
-    "tango": "탱고 크리에이터"
+    "liveme": "라이브미 크리에이터"
   },
   "watchRecordings": {
     "title": "녹화 영상 시청",
@@ -37,8 +36,7 @@
     "pandalive": "판다라이브 녹화 영상",
     "bigo": "비고 녹화 영상",
     "buzzcast": "버즈캐스트 녹화 영상",
-    "liveme": "라이브미 녹화 영상",
-    "tango": "탱고 녹화 영상"
+    "liveme": "라이브미 녹화 영상"
   },
   "legal": {
     "title": "법적 고지",
