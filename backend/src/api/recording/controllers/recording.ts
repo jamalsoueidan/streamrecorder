@@ -68,8 +68,42 @@ export default factories.createCoreController(
       return super.find(ctx);
     },
     async search(ctx) {
-      ctx.query = { ...ctx.query, ...((ctx.request.body as any) || {}) };
-      return await (this as any).find(ctx);
+      const body = (ctx.request.body as any) || {};
+      const page = Number(body.pagination?.page ?? 1);
+      const pageSize = Number(body.pagination?.pageSize ?? 25);
+      const withCount = body.pagination?.withCount !== false;
+
+      const [data, total] = await Promise.all([
+        strapi.documents("api::recording.recording").findMany({
+          filters: body.filters,
+          sort: body.sort,
+          populate: body.populate,
+          fields: body.fields,
+          locale: body.locale ?? "en",
+          status: "published",
+          start: (page - 1) * pageSize,
+          limit: pageSize,
+        }),
+        withCount
+          ? strapi.documents("api::recording.recording").count({
+              filters: body.filters,
+              locale: body.locale ?? "en",
+              status: "published",
+            })
+          : Promise.resolve(0),
+      ]);
+
+      return {
+        data,
+        meta: {
+          pagination: {
+            page,
+            pageSize,
+            pageCount: withCount ? Math.ceil(total / pageSize) : 0,
+            total: withCount ? total : 0,
+          },
+        },
+      };
     },
   }),
 );
