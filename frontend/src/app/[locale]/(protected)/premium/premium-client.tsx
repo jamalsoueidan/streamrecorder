@@ -58,6 +58,9 @@ type UserWithSubscription = GetUsersPermissionsUsersRolesData & {
   billingPeriod?: string;
 };
 
+// Freemius access was revoked — flip back to true if access is restored.
+const FREEMIUS_ENABLED = false;
+
 export default function PremiumClient() {
   const t = useTranslations("protected.premium");
   const [selectedBilling, setSelectedBilling] = useState("12months");
@@ -548,8 +551,9 @@ export default function PremiumClient() {
                       </Stack>
                     </Paper>
 
-                    {/* Freemius Option - hidden when 3 months (Stripe-only) is selected */}
-                    <Paper
+                    {/* Freemius Option - hidden when access is revoked, or when 3 months (Stripe-only) is selected */}
+                    {FREEMIUS_ENABLED && (
+                      <Paper
                         display={selectedBilling === "3months" ? "none" : undefined}
                         p="md"
                         radius="md"
@@ -614,6 +618,7 @@ export default function PremiumClient() {
                           </Group>
                         </Stack>
                       </Paper>
+                    )}
                   </Stack>
                 </Radio.Group>
 
@@ -658,7 +663,7 @@ export default function PremiumClient() {
                 </Text>
 
                 {/* Pay Button */}
-                {selectedPayment === "stripe" ? (
+                {!FREEMIUS_ENABLED || selectedPayment === "stripe" ? (
                   <StripePaymentButton
                     billingCycle={selectedPlan?.billingCycle || "annual"}
                     planLabel={selectedPlan?.label || "Premium"}
