@@ -12,6 +12,7 @@ import { IconScissors } from "@tabler/icons-react";
 import { getLocale, getTranslations } from "next-intl/server";
 
 import PaginationControls from "@/app/components/pagination";
+import { enrichClipsWithUrls } from "@/app/lib/clip-url.server";
 import api from "@/lib/api";
 import { ClipCard } from "./components/clip-card";
 import { MyClipsGuard } from "./components/my-clips-guard";
@@ -44,7 +45,9 @@ export default async function Page({ searchParams }: PageProps) {
     })
     .catch(() => null);
 
-  const clips = response?.data?.data;
+  const clips = response?.data?.data
+    ? await enrichClipsWithUrls(response.data.data)
+    : null;
   const meta = response?.data?.meta;
   const totalPages = meta?.pagination?.pageCount || 1;
 

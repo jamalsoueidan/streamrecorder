@@ -33,8 +33,10 @@ import Link from "@/app/components/link";
 import { useCallback, useEffect, useRef, useState, useTransition } from "react";
 import "./clips-viewer.css";
 
+type ClipWithSignedUrl = Clip & { signedClipUrl?: string | null };
+
 interface ClipCardProps {
-  clip: Clip;
+  clip: ClipWithSignedUrl;
   isActive: boolean;
 }
 
@@ -154,7 +156,7 @@ function ClipCard({ clip, isActive }: ClipCardProps) {
       >
         <video
           ref={videoRef}
-          src={getClipUrl(clip.documentId!, "clip.mp4", clip.path)}
+          src={clip.signedClipUrl || getClipUrl(clip.documentId!, "clip.mp4", clip.path)}
           poster={getClipUrl(clip.documentId!, "thumbnail.jpg", clip.path)}
           loop
           muted={isMuted}
@@ -292,12 +294,12 @@ function ClipCard({ clip, isActive }: ClipCardProps) {
 }
 
 interface ClipsViewerProps {
-  initialClips: Clip[];
+  initialClips: ClipWithSignedUrl[];
 }
 
 export function ClipsViewer({ initialClips }: ClipsViewerProps) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const [clips, setClips] = useState<Clip[]>(initialClips);
+  const [clips, setClips] = useState<ClipWithSignedUrl[]>(initialClips);
   const [activeIndex, setActiveIndex] = useState(0);
   const [isPending, startTransition] = useTransition();
   const loadingRef = useRef(false);

@@ -16,8 +16,10 @@ import "@player.style/microvideo";
 
 const activeVideos = new Set<() => void>();
 
+type ClipWithSignedUrl = Clip & { signedClipUrl?: string | null };
+
 interface Props {
-  clip: Clip;
+  clip: ClipWithSignedUrl;
   type?: ClipTypeEnum;
   locale: string;
 }
@@ -28,7 +30,9 @@ export function ClipPreview({ clip, type, locale }: Props) {
   const [isInView, setIsInView] = useState(false);
 
   const previewUrl = getClipUrl(clip.documentId!, "thumbnail.jpg", clip.path);
-  const src = getClipUrl(clip.documentId!, "clip.mp4", clip.path);
+  const src =
+    clip.signedClipUrl ||
+    getClipUrl(clip.documentId!, "clip.mp4", clip.path);
   const subtitlesUrl = `/clip/${clip.documentId}/subtitles.vtt?locale=${locale}`;
 
   // Lazy load: only render video when in view

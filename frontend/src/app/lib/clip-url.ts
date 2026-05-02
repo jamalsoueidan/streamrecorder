@@ -1,9 +1,8 @@
 const PUBLIC_FILES = new Set(["thumbnail.jpg", "preview.mp4"]);
 
 /**
- * Generate a direct URL to a clip file through the clip subdomain.
- * Only public files (.jpg, preview.mp4) go through the subdomain.
- * clip.mp4 goes through Next.js route for signing.
+ * Direct URL to a public clip file (thumbnail.jpg / preview.mp4).
+ * For clip.mp4 use getSignedClipPlayUrl from clip-url.server.ts (server-only).
  */
 export function getClipUrl(
   documentId: string,

@@ -39,6 +39,16 @@ export function proxySignedUrl(url: string): string {
   return url.replace("nbg1.your-objectstorage.com", `media.${host}`);
 }
 
+export function proxyClipSignedUrl(url: string): string {
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  if (!baseUrl) return url;
+  const host = new URL(baseUrl).hostname.replace(/^www\./, "");
+  const bucket = `${process.env.CLIP_BUCKET!}-nbg`;
+  return url
+    .replace("nbg1.your-objectstorage.com", `clip.${host}`)
+    .replace(`/${bucket}/`, "/");
+}
+
 export function getBucket(
   bucket: string,
   sourceBucket?: string | null,
