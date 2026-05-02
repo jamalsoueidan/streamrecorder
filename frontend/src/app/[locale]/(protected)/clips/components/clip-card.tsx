@@ -1,6 +1,7 @@
 "use client";
 
 import { DownloadUpgradeModal } from "@/app/[locale]/(protected)/components/download-upgrade-modal";
+import { getClipDownloadUrlAction } from "@/app/actions/clip";
 import { getProfileUrl } from "@/app/components/open-social";
 import { generateAvatarUrl } from "@/app/lib/avatar-url";
 import { useUser } from "@/app/providers/user-provider";
@@ -37,14 +38,15 @@ export function ClipCard({ clip, locale }: ClipCardProps) {
   const [upgradeOpened, { open: openUpgrade, close: closeUpgrade }] =
     useDisclosure(false);
 
-  const handleDownload = () => {
+  const handleDownload = async () => {
     if (!isPremium) {
       openUpgrade();
       return;
     }
+    const url = await getClipDownloadUrlAction(clip.documentId!);
+    if (!url) return;
     const link = document.createElement("a");
-    link.href = `/clip/${clip.documentId}/clip.mp4?download`;
-    link.download = `${clip.title || "clip"}.mp4`;
+    link.href = url;
     link.click();
   };
 

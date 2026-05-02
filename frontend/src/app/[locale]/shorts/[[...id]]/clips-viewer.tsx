@@ -154,7 +154,7 @@ function ClipCard({ clip, isActive }: ClipCardProps) {
       >
         <video
           ref={videoRef}
-          src={getClipUrl(clip.documentId!, "clip.mp4", clip.path)}
+          src={(clip as any).signedClipUrl || getClipUrl(clip.documentId!, "clip.mp4", clip.path)}
           poster={getClipUrl(clip.documentId!, "thumbnail.jpg", clip.path)}
           loop
           muted={isMuted}

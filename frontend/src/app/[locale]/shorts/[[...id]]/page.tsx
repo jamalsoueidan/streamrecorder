@@ -1,5 +1,6 @@
 import { getClipById, getRandomClips } from "@/app/actions/clip";
 import { getClipUrl } from "@/app/lib/clip-url";
+import { getSignedClipPlayUrl } from "@/app/lib/clip-url.server";
 import { generateProfileUrl } from "@/app/lib/profile-url";
 import { Metadata } from "next";
 import { getFormatter, getLocale, getTranslations } from "next-intl/server";
@@ -75,7 +76,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       ],
       videos: [
         {
-          url: getClipUrl(data.documentId!, "clip.mp4", data.path),
+          url:
+            (await getSignedClipPlayUrl(data)) ||
+            getClipUrl(data.documentId!, "clip.mp4", data.path),
           width: 720,
           height: 1280,
           type: "video/mp4",
@@ -136,7 +139,9 @@ export default async function ShortsPage({ params }: Props) {
       thumbnailUrl: getClipUrl(specificClip.documentId!, "thumbnail.jpg", specificClip.path),
       uploadDate: specificClip.createdAt,
       duration: `PT${specificClip.duration || 0}S`,
-      contentUrl: getClipUrl(specificClip.documentId!, "clip.mp4", specificClip.path),
+      contentUrl:
+        (await getSignedClipPlayUrl(specificClip)) ||
+        getClipUrl(specificClip.documentId!, "clip.mp4", specificClip.path),
       embedUrl: `${process.env.NEXT_PUBLIC_BASE_URL}/shorts/${specificClip.documentId}`,
       publisher: {
         "@type": "Organization",

@@ -28,7 +28,9 @@ export function ClipPreview({ clip, type, locale }: Props) {
   const [isInView, setIsInView] = useState(false);
 
   const previewUrl = getClipUrl(clip.documentId!, "thumbnail.jpg", clip.path);
-  const src = getClipUrl(clip.documentId!, "clip.mp4", clip.path);
+  const src =
+    (clip as any).signedClipUrl ||
+    getClipUrl(clip.documentId!, "clip.mp4", clip.path);
   const subtitlesUrl = `/clip/${clip.documentId}/subtitles.vtt?locale=${locale}`;
 
   // Lazy load: only render video when in view

@@ -1,4 +1,5 @@
 import PaginationControls from "@/app/components/pagination";
+import { enrichClipsWithUrls } from "@/app/lib/clip-url.server";
 import { usernameOrFilter } from "@/app/lib/username-filter";
 import publicApi from "@/lib/public-api";
 import {
@@ -62,7 +63,9 @@ export default async function Page({ params, searchParams }: PageProps) {
     })
     .catch(() => null);
 
-  const clips = response?.data?.data || [];
+  const clips = response?.data?.data
+    ? await enrichClipsWithUrls(response.data.data)
+    : [];
   const totalPages = response?.data?.meta?.pagination?.pageCount || 1;
   const clipsCount = response?.data?.meta?.pagination?.total || 0;
 
