@@ -4,6 +4,9 @@ import { GetObjectCommand } from "@aws-sdk/client-s3";
 import { getSignedUrl } from "@aws-sdk/s3-request-presigner";
 import { getS3, proxyClipSignedUrl } from "@/lib/s3";
 
+const DEFAULT_PLAY_TTL = 3600;
+const DEFAULT_DOWNLOAD_TTL = 3600;
+
 /**
  * Sign a clip.mp4 S3 URL and rewrite to clip.<host>.
  * Embed in server-rendered HTML so the browser plays directly through
@@ -11,11 +14,11 @@ import { getS3, proxyClipSignedUrl } from "@/lib/s3";
  */
 export async function getSignedClipPlayUrl(
   clip: { documentId?: string | null; path?: string | null },
-  expiresIn = 14400,
+  expiresIn = DEFAULT_PLAY_TTL,
 ): Promise<string | null> {
   if (!clip.documentId || !clip.path) return null;
   const command = new GetObjectCommand({
-    Bucket: "streamclips-nbg",
+    Bucket: `${process.env.CLIP_BUCKET!}-nbg`,
     Key: `${clip.path.substring(1)}${clip.documentId}/clip.mp4`,
   });
   const signedUrl = await getSignedUrl(getS3(), command, { expiresIn });
@@ -34,12 +37,12 @@ export async function getSignedClipDownloadUrl(
     title?: string | null;
     createdAt?: string | null;
   },
-  expiresIn = 14400,
+  expiresIn = DEFAULT_DOWNLOAD_TTL,
 ): Promise<string | null> {
   if (!clip.documentId || !clip.path) return null;
   const filename = buildClipFilename(clip);
   const command = new GetObjectCommand({
-    Bucket: "streamclips-nbg",
+    Bucket: `${process.env.CLIP_BUCKET!}-nbg`,
     Key: `${clip.path.substring(1)}${clip.documentId}/clip.mp4`,
     ResponseContentDisposition: `attachment; filename="${filename}"`,
   });
@@ -47,16 +50,18 @@ export async function getSignedClipDownloadUrl(
   return proxyClipSignedUrl(signedUrl);
 }
 
+export type ClipWithUrls<T> = T & { signedClipUrl: string | null };
+
 export async function enrichClipWithUrls<
   T extends { documentId?: string | null; path?: string | null },
->(clip: T): Promise<T & { signedClipUrl: string | null }> {
+>(clip: T): Promise<ClipWithUrls<T>> {
   const signedClipUrl = await getSignedClipPlayUrl(clip);
   return { ...clip, signedClipUrl };
 }
 
 export async function enrichClipsWithUrls<
   T extends { documentId?: string | null; path?: string | null },
->(clips: T[]): Promise<(T & { signedClipUrl: string | null })[]> {
+>(clips: T[]): Promise<ClipWithUrls<T>[]> {
   return Promise.all(clips.map((c) => enrichClipWithUrls(c)));
 }
 
