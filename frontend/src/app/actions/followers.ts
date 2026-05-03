@@ -24,8 +24,9 @@ export async function follow(username: string, type: FollowerTypeEnum) {
 export async function followUser(data: FollowRequestBody) {
   try {
     await api.follower.followCreate(data);
-    revalidatePath("/following");
+    revalidatePath("/my/following");
     revalidatePath(`/${data.type}/${data.username}`);
+    revalidatePath(`/my/${data.type}/${data.username}`);
 
     return { success: true };
   } catch (err: any) {
@@ -36,8 +37,9 @@ export async function followUser(data: FollowRequestBody) {
 export async function unfollow(data: FollowRequestBody) {
   try {
     await api.follower.unfollowCreate(data);
-    revalidatePath("/following");
+    revalidatePath("/my/following");
     revalidatePath(`/${data.type}/${data.username}`);
+    revalidatePath(`/my/${data.type}/${data.username}`);
 
     return { success: true };
   } catch (err: any) {

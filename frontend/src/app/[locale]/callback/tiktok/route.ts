@@ -47,7 +47,7 @@ function redirect(path: string): NextResponse {
 
 function errorRedirect(action: string): NextResponse {
   const target =
-    action === "settings" ? "/settings?tiktok=error" : "/login?tiktok=error";
+    action === "settings" ? "/my/settings?tiktok=error" : "/login?tiktok=error";
   return redirect(target);
 }
 
@@ -112,7 +112,7 @@ export async function GET(request: NextRequest) {
         provider: ProviderEnum.Tiktok,
       });
       if (existingConnection.data?.data?.length) {
-        return redirect("/settings?tiktok=connected");
+        return redirect("/my/settings?tiktok=connected");
       }
 
       await api.socialAccount.mePostSocialAccounts({
@@ -125,7 +125,7 @@ export async function GET(request: NextRequest) {
         },
       });
 
-      return redirect("/settings?tiktok=connected");
+      return redirect("/my/settings?tiktok=connected");
     }
 
     // --- Login / Signup: get user info, find or create user ---

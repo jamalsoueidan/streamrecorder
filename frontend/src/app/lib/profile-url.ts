@@ -13,3 +13,13 @@ export function generateProfileUrl(
     (fullURL ? process.env.NEXT_PUBLIC_BASE_URL : ``) + getProfileUrl(follower)
   );
 }
+
+/**
+ * Profile URL prefixed with /my for use inside the logged-in app section.
+ * Public pages should keep using `getProfileUrl` directly.
+ */
+export function getMyProfileUrl(
+  follower?: Partial<Pick<Follower, "username" | "type">>,
+) {
+  return "/my" + getProfileUrl(follower);
+}

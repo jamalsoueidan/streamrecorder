@@ -25,7 +25,7 @@ export async function login(prevState: any, formData: FormData) {
     return { error: err.response?.data?.error?.message || "Login failed" };
   }
 
-  redirect("/dashboard");
+  redirect("/my/dashboard");
 }
 
 export async function register(prevState: any, formData: FormData) {

@@ -19,7 +19,7 @@ import Link from "@/app/components/link";
 import { useSearchParams } from "next/navigation";
 import { useActionState } from "react";
 
-export const redirectLoginUri = "/dashboard";
+export const redirectLoginUri = "/my/dashboard";
 
 export function LoginForm() {
   const t = useTranslations("login");

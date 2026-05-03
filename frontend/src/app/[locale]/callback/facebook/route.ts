@@ -34,7 +34,7 @@ function redirect(path: string): NextResponse {
 function errorRedirect(action: string): NextResponse {
   const target =
     action === "settings"
-      ? "/settings?facebook=error"
+      ? "/my/settings?facebook=error"
       : "/login?facebook=error";
   return redirect(target);
 }
