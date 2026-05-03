@@ -29,6 +29,28 @@ const nextConfig: NextConfig = {
         destination: "/recordings/:platform",
         permanent: true,
       },
+      // Old PWA start_url values cached on installed devices, plus
+      // any historical bookmarks. Match both unprefixed and locale-prefixed.
+      {
+        source: "/:locale(ar|tr|ko|ja|es|pt|id)/dashboard",
+        destination: "/:locale/my/dashboard",
+        permanent: true,
+      },
+      {
+        source: "/dashboard",
+        destination: "/my/dashboard",
+        permanent: true,
+      },
+      {
+        source: "/:locale(ar|tr|ko|ja|es|pt|id)/following",
+        destination: "/:locale/my/following",
+        permanent: true,
+      },
+      {
+        source: "/following",
+        destination: "/my/following",
+        permanent: true,
+      },
     ];
   },
   async headers() {
