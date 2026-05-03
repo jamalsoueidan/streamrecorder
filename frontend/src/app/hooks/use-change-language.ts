@@ -26,7 +26,8 @@ export function useChangeLanguage() {
 
   const switchLocale = useCallback(
     (newLocale: Locale | string) => {
-      document.cookie = `NEXT_LOCALE=${newLocale}; path=/; max-age=31536000`;
+      // Kill any stale NEXT_LOCALE so Cloudflare can cache responses.
+      document.cookie = "NEXT_LOCALE=; path=/; max-age=0";
 
       const href =
         newLocale === DEFAULT_LOCALE
