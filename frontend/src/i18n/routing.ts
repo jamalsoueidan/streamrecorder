@@ -5,6 +5,7 @@ export const routing = defineRouting({
   defaultLocale: "en",
   localePrefix: "as-needed",
   localeCookie: false,
+  localeDetection: false,
 });
 
 // OpenGraph locale mapping for SEO metadata
