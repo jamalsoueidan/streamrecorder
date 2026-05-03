@@ -74,7 +74,7 @@ const hasLowQuality = unstable_cache(
 );
 
 function buildMasterPlaylist(documentId: string): string {
-  const base = `/video/${documentId}/playlist.m3u8`;
+  const base = `/my/video/${documentId}/playlist.m3u8`;
   return `#EXTM3U
 #EXT-X-STREAM-INF:BANDWIDTH=2000000,RESOLUTION=1920x1080,NAME="Original"
 ${base}?q=high
