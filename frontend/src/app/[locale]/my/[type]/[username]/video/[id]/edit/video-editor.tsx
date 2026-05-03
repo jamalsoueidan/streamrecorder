@@ -224,7 +224,7 @@ export default function VideoEditor({ recording }: Props) {
           {canPlayVideo && (
             <HlsVideo
               ref={videoRef}
-              src={`/video/${recording.documentId}/playlist.m3u8`}
+              src={`/my/video/${recording.documentId}/playlist.m3u8`}
               slot="media"
               playsInline
             >

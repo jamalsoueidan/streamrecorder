@@ -55,7 +55,7 @@ export function MiniPlayer({ documentId }: Props) {
         }}
       >
         <HlsVideo
-          src={`/video/${documentId}/playlist.m3u8`}
+          src={`/my/video/${documentId}/playlist.m3u8`}
           slot="media"
           muted
           loop
