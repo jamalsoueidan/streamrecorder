@@ -1,4 +1,4 @@
-import { CountryFlag } from "@/app/[locale]/(protected)/components/country-flag";
+import { CountryFlag } from "@/app/[locale]/my/components/country-flag";
 import { getProfileUrl } from "@/app/components/open-social";
 
 import { generateAvatarUrl } from "@/app/lib/avatar-url";

@@ -1,5 +1,5 @@
-import { CountryFlag } from "@/app/[locale]/(protected)/components/country-flag";
-import { FollowerTypeIcon } from "@/app/[locale]/(protected)/components/follower-type-icon";
+import { CountryFlag } from "@/app/[locale]/my/components/country-flag";
+import { FollowerTypeIcon } from "@/app/[locale]/my/components/follower-type-icon";
 import { getProfileUrl } from "@/app/components/open-social";
 
 import { generateAvatarUrl } from "@/app/lib/avatar-url";

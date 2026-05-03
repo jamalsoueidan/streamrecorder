@@ -28,7 +28,7 @@ export async function GET(request: NextRequest) {
   const state = searchParams.get("state");
 
   if (error || !code) {
-    return redirect("/settings?youtube=error");
+    return redirect("/my/settings?youtube=error");
   }
 
   try {
@@ -43,7 +43,7 @@ export async function GET(request: NextRequest) {
 
     if (!savedState || savedState !== state) {
       console.error("YouTube callback: state mismatch");
-      return redirect("/settings?youtube=error");
+      return redirect("/my/settings?youtube=error");
     }
 
     // Exchange code for tokens
@@ -66,7 +66,7 @@ export async function GET(request: NextRequest) {
 
     if (data.error) {
       console.error("YouTube token exchange failed:", data.error_description);
-      return redirect("/settings?youtube=error");
+      return redirect("/my/settings?youtube=error");
     }
 
     const expiresAt = new Date(
@@ -90,7 +90,7 @@ export async function GET(request: NextRequest) {
           },
         } as never,
       );
-      return redirect("/settings?youtube=connected");
+      return redirect("/my/settings?youtube=connected");
     }
 
     // Create new YouTube social account
@@ -104,9 +104,9 @@ export async function GET(request: NextRequest) {
       },
     });
 
-    return redirect("/settings?youtube=connected");
+    return redirect("/my/settings?youtube=connected");
   } catch (error) {
     console.error("YouTube callback error:", error);
-    return redirect("/settings?youtube=error");
+    return redirect("/my/settings?youtube=error");
   }
 }

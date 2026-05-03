@@ -388,7 +388,7 @@ export function VerificationFlow({ intent }: { intent: string }) {
                 </Text>
                 <Button
                   component={Link}
-                  href="/my-list"
+                  href="/my/my-list"
                   size="md"
                   variant="gradient"
                   gradient={{ from: "#6366f1", to: "#a855f7" }}

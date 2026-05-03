@@ -38,7 +38,7 @@ function redirect(path: string): NextResponse {
 
 function errorRedirect(action: string): NextResponse {
   const target =
-    action === "settings" ? "/settings?google=error" : "/login?google=error";
+    action === "settings" ? "/my/settings?google=error" : "/login?google=error";
   return redirect(target);
 }
 
