@@ -5,8 +5,12 @@ import { IconRefresh } from "@tabler/icons-react";
 import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 
-const POLL_INTERVAL = 10 * 60_000; // 10 minutes
 const CLIENT_BUILD_ID = process.env.NEXT_PUBLIC_BUILD_ID;
+// Poll often enough that users hit the refresh prompt before they trigger
+// a server action with a stale ID. Server action IDs change on every
+// deploy and Vercel doesn't keep old ones working — a stale call fails
+// silently, so we have to force the user onto the new bundle ASAP.
+const POLL_INTERVAL = 2 * 60_000; // 2 minutes
 
 export function DeploymentChecker() {
   const t = useTranslations("common.newVersion");
@@ -15,8 +19,8 @@ export function DeploymentChecker() {
   useEffect(() => {
     let cancelled = false;
     const check = async () => {
-      // Don't poll backgrounded tabs — saves a huge fraction of requests
-      // since users typically leave many tabs open.
+      // Skip backgrounded tabs — they'll re-check on visibilitychange
+      // when the user comes back, and we save the request in the meantime.
       if (document.visibilityState !== "visible") return;
       try {
         const res = await fetch("/api/build-id");
@@ -29,13 +33,11 @@ export function DeploymentChecker() {
       }
     };
 
-    const interval = setInterval(check, POLL_INTERVAL);
-    // Also check immediately when the user comes back to the tab — that's
-    // when they care about a new version, not when it's hidden.
     const onVisible = () => {
       if (document.visibilityState === "visible") check();
     };
     document.addEventListener("visibilitychange", onVisible);
+    const interval = setInterval(check, POLL_INTERVAL);
     return () => {
       cancelled = true;
       clearInterval(interval);

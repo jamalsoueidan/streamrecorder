@@ -17,12 +17,10 @@ interface PageProps {
   params: Promise<{ locale: string }>;
 }
 
-export const revalidate = 86400;
-export const dynamicParams = true;
-
-export async function generateStaticParams() {
-  return [];
-}
+// Always fetch fresh from Strapi. Caching this page caused new entries
+// to not appear until next deploy; Vercel's CDN cache served the stale
+// prerender output even after manual purges.
+export const dynamic = "force-dynamic";
 
 export async function generateMetadata({ params }: PageProps) {
   const { locale } = await params;

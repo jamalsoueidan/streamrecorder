@@ -738,7 +738,7 @@ export interface ApiChangeLogChangeLog extends Struct.CollectionTypeSchema {
     version: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
   };
