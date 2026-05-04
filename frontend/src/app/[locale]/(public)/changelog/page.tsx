@@ -17,6 +17,13 @@ interface PageProps {
   params: Promise<{ locale: string }>;
 }
 
+export const revalidate = 86400;
+export const dynamicParams = true;
+
+export async function generateStaticParams() {
+  return [];
+}
+
 export async function generateMetadata({ params }: PageProps) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "changelog" });
