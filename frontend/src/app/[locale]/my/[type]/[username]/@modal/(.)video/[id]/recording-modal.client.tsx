@@ -12,7 +12,7 @@ import { Flex, Loader, Modal } from "@mantine/core";
 import { useInfiniteQuery, useQuery } from "@tanstack/react-query";
 import { useParams, useRouter, useSearchParams } from "next/navigation";
 import { useQueryStates } from "nuqs";
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 
 export default function ProfileRecordingModalClient() {
   const router = useRouter();
@@ -80,6 +80,17 @@ export default function ProfileRecordingModalClient() {
   };
 
   const videoExists = recordings.some((r) => r.documentId === id);
+
+  // If target video isn't in the cached pages yet (e.g. user opened the
+  // modal via a deep link or scrolled the parent past page 1 before
+  // clicking), keep paging forward until it appears. The parent profile
+  // grid shares this same cache via the queryKey, so any pages we fetch
+  // here also benefit it.
+  useEffect(() => {
+    if (!videoExists && hasNextPage && !isFetchingNextPage) {
+      fetchNextPage();
+    }
+  }, [videoExists, hasNextPage, isFetchingNextPage, fetchNextPage]);
 
   // Only block on access loading for the initial video.
   // After scrolling, currentVideoId changes — don't unmount the player

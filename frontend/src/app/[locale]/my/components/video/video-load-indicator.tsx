@@ -174,7 +174,13 @@ export function VideoLoadIndicator({ containerRef, videoRef }: Props) {
           bump(fragLoadedCount === 1 ? 70 : 80, "Segment loaded");
         };
         const onFragBuffered = () => bump(90, "Almost ready");
-        const onHlsError = () => {
+        const onHlsError = (...args: unknown[]) => {
+          // hls.js fires this for transient/recoverable errors too (e.g. a
+          // single segment 503, level-switch retry). Only flash "Failed to
+          // load" for fatal errors that hls.js can't recover from on its
+          // own, otherwise we briefly show failure right before playback.
+          const data = args[1] as { fatal?: boolean } | undefined;
+          if (!data?.fatal) return;
           setErrored(true);
           setVisible(true);
         };
