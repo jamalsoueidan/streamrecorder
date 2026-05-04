@@ -40,7 +40,9 @@ export async function POST(request: NextRequest) {
     const isLifetime = billingCycle === "lifetime";
 
     const baseUrl =
-      request.headers.get("origin") || process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+      request.headers.get("origin") ||
+      process.env.NEXT_PUBLIC_BASE_URL ||
+      "http://localhost:3000";
 
     const sessionConfig: Stripe.Checkout.SessionCreateParams = {
       allow_promotion_codes: true,
@@ -53,8 +55,8 @@ export async function POST(request: NextRequest) {
         },
       ],
       mode: isLifetime ? "payment" : "subscription",
-      success_url: `${baseUrl}/premium?success=true&session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${baseUrl}/premium?canceled=true`,
+      success_url: `${baseUrl}/my/premium?success=true&session_id={CHECKOUT_SESSION_ID}`,
+      cancel_url: `${baseUrl}/my/premium?canceled=true`,
       metadata: {
         userId,
         billingCycle,
