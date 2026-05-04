@@ -164,7 +164,7 @@ export async function GET(request: NextRequest) {
     const loginData = await loginResponse.json();
 
     // Set JWT cookie and redirect to dashboard
-    const response = NextResponse.redirect(`${baseUrl}/dashboard`);
+    const response = NextResponse.redirect(`${baseUrl}/my/dashboard`);
     response.cookies.set(TOKEN_KEY, loginData.jwt, {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",

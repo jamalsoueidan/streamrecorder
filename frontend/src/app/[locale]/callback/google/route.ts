@@ -70,20 +70,17 @@ export async function GET(request: NextRequest) {
     }
 
     // Exchange code for tokens
-    const tokenResponse = await fetch(
-      "https://oauth2.googleapis.com/token",
-      {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams({
-          client_id: clientId,
-          client_secret: clientSecret,
-          code,
-          grant_type: "authorization_code",
-          redirect_uri: redirectUri,
-        }),
-      },
-    );
+    const tokenResponse = await fetch("https://oauth2.googleapis.com/token", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams({
+        client_id: clientId,
+        client_secret: clientSecret,
+        code,
+        grant_type: "authorization_code",
+        redirect_uri: redirectUri,
+      }),
+    });
 
     const data: GoogleTokenResponse = await tokenResponse.json();
 
@@ -115,7 +112,10 @@ export async function GET(request: NextRequest) {
         refreshToken: data.refresh_token,
         expiresAt,
         email: userInfo.email,
-        displayName: userInfo.name.length < 3 ? userInfo.name.padEnd(3, "_") : userInfo.name,
+        displayName:
+          userInfo.name.length < 3
+            ? userInfo.name.padEnd(3, "_")
+            : userInfo.name,
       }),
     });
 
@@ -131,7 +131,7 @@ export async function GET(request: NextRequest) {
     const loginData = await loginResponse.json();
 
     // Set JWT cookie and redirect to dashboard
-    const response = NextResponse.redirect(`${baseUrl}/dashboard`);
+    const response = NextResponse.redirect(`${baseUrl}/my/dashboard`);
     response.cookies.set(TOKEN_KEY, loginData.jwt, {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
