@@ -17,11 +17,6 @@ interface PageProps {
   params: Promise<{ locale: string }>;
 }
 
-// Always fetch fresh from Strapi. Caching this page caused new entries
-// to not appear until next deploy; Vercel's CDN cache served the stale
-// prerender output even after manual purges.
-export const dynamic = "force-dynamic";
-
 export async function generateMetadata({ params }: PageProps) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "changelog" });

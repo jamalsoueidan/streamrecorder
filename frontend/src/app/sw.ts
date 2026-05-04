@@ -1,34 +1,33 @@
 /// <reference no-default-lib="true" />
 /// <reference lib="esnext" />
 /// <reference lib="webworker" />
-import type { PrecacheEntry, SerwistGlobalConfig } from "serwist";
-import { CacheFirst, Serwist } from "serwist";
 
-declare global {
-  interface WorkerGlobalScope extends SerwistGlobalConfig {
-    __SW_MANIFEST: (PrecacheEntry | string)[] | undefined;
-  }
-}
+// PWA removal: this SW exists ONLY to evict itself from any browser that
+// still has the old Serwist-based service worker installed. Once a client
+// loads this version, the SW unregisters, drops every cache it owns, and
+// triggers a one-time reload so the page renders straight from network
+// going forward.
+//
+// Keep this file shipped (do NOT delete) for at least a few weeks until
+// you're confident the long tail of installed PWAs has updated. After
+// that, the route handler can be removed too.
 
-declare const self: ServiceWorkerGlobalScope;
+const sw = self as unknown as ServiceWorkerGlobalScope;
 
-const serwist = new Serwist({
-  precacheEntries: self.__SW_MANIFEST,
-  skipWaiting: true,
-  clientsClaim: true,
-  disableDevLogs: true,
-  runtimeCaching: [
-    // Static assets - cache first (images, fonts, styles)
-    {
-      matcher: ({ request }) =>
-        request.destination === "image" ||
-        request.destination === "font" ||
-        request.destination === "style",
-      handler: new CacheFirst({
-        cacheName: "static-assets",
-      }),
-    },
-  ],
+sw.addEventListener("install", () => {
+  sw.skipWaiting();
 });
 
-serwist.addEventListeners();
+sw.addEventListener("activate", (event) => {
+  event.waitUntil(
+    (async () => {
+      const cacheNames = await caches.keys();
+      await Promise.all(cacheNames.map((name) => caches.delete(name)));
+      await sw.registration.unregister();
+      const clients = await sw.clients.matchAll({ type: "window" });
+      for (const client of clients) {
+        client.navigate(client.url);
+      }
+    })(),
+  );
+});

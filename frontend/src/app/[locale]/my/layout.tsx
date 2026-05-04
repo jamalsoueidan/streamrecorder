@@ -18,7 +18,6 @@ import { AbilityProvider } from "@/app/providers/ability-provider";
 import { QueryProvider } from "@/app/providers/query-provider";
 import { UserProvider } from "@/app/providers/user-provider";
 import api from "@/lib/api";
-import { SerwistProvider } from "../../serwist";
 import { Shell } from "./components/shell";
 
 export default async function DashboardLayout({
@@ -60,14 +59,12 @@ export default async function DashboardLayout({
   const announcement = await getAnnouncement(locale);
 
   return (
-    <SerwistProvider swUrl="/serwist/sw.js">
-      <QueryProvider>
-        <UserProvider user={user?.data}>
-          <AbilityProvider rules={rules} role={role}>
-            <Shell initialCollapsed={navbarCollapsed} announcement={announcement}>{children}</Shell>
-          </AbilityProvider>
-        </UserProvider>
-      </QueryProvider>
-    </SerwistProvider>
+    <QueryProvider>
+      <UserProvider user={user?.data}>
+        <AbilityProvider rules={rules} role={role}>
+          <Shell initialCollapsed={navbarCollapsed} announcement={announcement}>{children}</Shell>
+        </AbilityProvider>
+      </UserProvider>
+    </QueryProvider>
   );
 }
