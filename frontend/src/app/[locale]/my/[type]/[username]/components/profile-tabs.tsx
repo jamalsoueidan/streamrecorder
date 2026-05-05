@@ -29,8 +29,8 @@ export function ProfileTabs({ type, username, clipsCount }: ProfileTabsProps) {
   const pathname = usePathname();
   const [filters, setFilters] = useQueryStates(profileParsers);
 
-  const isInsights = pathname.endsWith("/my/insights");
-  const isClips = pathname.endsWith("/my/clips");
+  const isInsights = pathname.endsWith("/insights");
+  const isClips = pathname.endsWith("/clips");
   const isTiktok = type === FollowerTypeEnum.Tiktok;
   const activeTab = isInsights ? "insights" : isClips ? "clips" : "videos";
 
