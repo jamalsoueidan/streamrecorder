@@ -16,5 +16,13 @@
   "noClips": {
     "title": "Henüz klip yok",
     "description": "Bu yayıncı için henüz klip oluşturulmamış."
+  },
+  "checkLive": {
+    "button": "Yayını şimdi kontrol et",
+    "liveTitle": "Yayıncı yayında",
+    "liveMessage": "Kayıt şimdi başlıyor.",
+    "offlineTitle": "Yayında değil",
+    "offlineMessage": "Yayıncı şu anda çevrimdışı.",
+    "errorTitle": "Kontrol başarısız"
   }
 }

@@ -16,5 +16,13 @@
   "noClips": {
     "title": "Sem clipes ainda",
     "description": "Nenhum clipe foi criado para este streamer ainda."
+  },
+  "checkLive": {
+    "button": "Verificar ao vivo agora",
+    "liveTitle": "Streamer está ao vivo",
+    "liveMessage": "A gravação está começando.",
+    "offlineTitle": "Offline",
+    "offlineMessage": "O streamer está offline no momento.",
+    "errorTitle": "Falha ao verificar"
   }
 }

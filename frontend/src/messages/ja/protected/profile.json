@@ -16,5 +16,13 @@
   "noClips": {
     "title": "クリップはまだありません",
     "description": "このストリーマーのクリップはまだ作成されていません。"
+  },
+  "checkLive": {
+    "button": "ライブを今すぐ確認",
+    "liveTitle": "配信中です",
+    "liveMessage": "録画を開始しています。",
+    "offlineTitle": "オフライン",
+    "offlineMessage": "配信者は現在オフラインです。",
+    "errorTitle": "確認に失敗しました"
   }
 }

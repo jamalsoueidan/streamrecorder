@@ -16,5 +16,13 @@
   "noClips": {
     "title": "클립이 없습니다",
     "description": "이 스트리머의 클립이 아직 만들어지지 않았습니다."
+  },
+  "checkLive": {
+    "button": "지금 라이브 확인",
+    "liveTitle": "스트리머가 라이브 중",
+    "liveMessage": "녹화를 시작합니다.",
+    "offlineTitle": "오프라인",
+    "offlineMessage": "스트리머가 현재 오프라인입니다.",
+    "errorTitle": "확인 실패"
   }
 }

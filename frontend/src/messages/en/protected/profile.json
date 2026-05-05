@@ -16,5 +16,13 @@
   "noClips": {
     "title": "No clips yet",
     "description": "No clips have been created for this streamer yet."
+  },
+  "checkLive": {
+    "button": "Check live now",
+    "liveTitle": "Streamer is live",
+    "liveMessage": "Recording is starting now.",
+    "offlineTitle": "Not live",
+    "offlineMessage": "Streamer is offline right now.",
+    "errorTitle": "Check failed"
   }
 }

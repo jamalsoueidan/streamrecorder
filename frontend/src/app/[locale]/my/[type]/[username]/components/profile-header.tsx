@@ -17,6 +17,7 @@ import { useFormatter, useTranslations } from "next-intl";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { AdminMenu } from "./admin-menu";
+import { CheckLiveButton } from "./check-live-button";
 import classes from "./profile-header.module.css";
 import { ProfileTabs } from "./profile-tabs";
 
@@ -170,6 +171,7 @@ export function ProfileHeader({
                 showLabel
               />
             )}
+            <CheckLiveButton follower={follower} showLabel />
             <AdminMenu follower={follower} showLabel />
           </Group>
         </Group>
@@ -260,6 +262,7 @@ export function ProfileHeader({
                 showLabel
               />
             )}
+            <CheckLiveButton follower={follower} showLabel />
             <AdminMenu follower={follower} showLabel />
           </Group>
         </Stack>

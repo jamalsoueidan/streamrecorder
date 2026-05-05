@@ -8,8 +8,6 @@ import {
   IconCheck,
   IconLock,
   IconLockOpen2,
-  IconMovie,
-  IconMovieOff,
   IconPlayerPause,
   IconPlayerPlay,
   IconTransformPoint,
@@ -22,7 +20,6 @@ export function AdminMenu({ follower, showLabel }: { follower: Follower; showLab
   const [paused, setPaused] = useState(follower.pause || false);
 
   const [protect, setProtect] = useState(follower.protected || false);
-  const [encode, setEncode] = useState(follower.encode || false);
 
   const handlePaused = () => {
     const nextPaused = !paused;
@@ -50,17 +47,6 @@ export function AdminMenu({ follower, showLabel }: { follower: Follower; showLab
     startTransition(async () => {
       await updateFollower(follower.documentId!, {
         protected: nextProtected,
-      });
-    });
-  };
-
-  const handleEncode = () => {
-    const nextEncode = !encode;
-    setEncode(nextEncode);
-
-    startTransition(async () => {
-      await updateFollower(follower.documentId!, {
-        encode: nextEncode,
       });
     });
   };
@@ -95,14 +81,6 @@ export function AdminMenu({ follower, showLabel }: { follower: Follower; showLab
               onClick={handleProtected}
             >
               {protect ? "Unlock" : "Lock"}
-            </Menu.Item>
-          </Can>
-          <Can I="update" a="Follower">
-            <Menu.Item
-              leftSection={encode ? <IconMovieOff /> : <IconMovie />}
-              onClick={handleEncode}
-            >
-              {encode ? "Disable Encoding" : "Enable Encoding"}
             </Menu.Item>
           </Can>
           <Can I="update" a="Follower">

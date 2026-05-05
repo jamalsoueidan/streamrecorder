@@ -16,5 +16,13 @@
   "noClips": {
     "title": "لا توجد مقاطع بعد",
     "description": "لم يتم إنشاء أي مقاطع لهذا المذيع بعد."
+  },
+  "checkLive": {
+    "button": "تحقق من البث الآن",
+    "liveTitle": "البث مباشر الآن",
+    "liveMessage": "بدأ التسجيل الآن.",
+    "offlineTitle": "غير متصل",
+    "offlineMessage": "المذيع غير متصل حاليًا.",
+    "errorTitle": "فشل التحقق"
   }
 }

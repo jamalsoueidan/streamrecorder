@@ -20,7 +20,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2026-05-04T12:47:56.628Z"
+    "x-generation-date": "2026-05-05T13:16:28.028Z"
   },
   "servers": [
     {
@@ -13746,9 +13746,6 @@
               "tagline": {
                 "type": "string"
               },
-              "encode": {
-                "type": "boolean"
-              },
               "faq": {},
               "category": {
                 "type": "string"
@@ -15612,9 +15609,6 @@
               },
               "tagline": {
                 "type": "string"
-              },
-              "encode": {
-                "type": "boolean"
               },
               "faq": {},
               "category": {
@@ -17995,9 +17989,6 @@
                   },
                   "tagline": {
                     "type": "string"
-                  },
-                  "encode": {
-                    "type": "boolean"
                   },
                   "faq": {},
                   "category": {
@@ -23771,9 +23762,6 @@
               "tagline": {
                 "type": "string"
               },
-              "encode": {
-                "type": "boolean"
-              },
               "faq": {},
               "category": {
                 "type": "string"
@@ -25978,9 +25966,6 @@
                   "tagline": {
                     "type": "string"
                   },
-                  "encode": {
-                    "type": "boolean"
-                  },
                   "faq": {},
                   "category": {
                     "type": "string"
@@ -27934,9 +27919,6 @@
               "tagline": {
                 "type": "string"
               },
-              "encode": {
-                "type": "boolean"
-              },
               "faq": {},
               "category": {
                 "type": "string"
@@ -28904,9 +28886,6 @@
           "tagline": {
             "type": "string"
           },
-          "encode": {
-            "type": "boolean"
-          },
           "faq": {},
           "category": {
             "type": "string"
@@ -29441,9 +29420,6 @@
                     },
                     "tagline": {
                       "type": "string"
-                    },
-                    "encode": {
-                      "type": "boolean"
                     },
                     "faq": {},
                     "category": {
@@ -30991,9 +30967,6 @@
                   },
                   "tagline": {
                     "type": "string"
-                  },
-                  "encode": {
-                    "type": "boolean"
                   },
                   "faq": {},
                   "category": {
@@ -33123,9 +33096,6 @@
               },
               "tagline": {
                 "type": "string"
-              },
-              "encode": {
-                "type": "boolean"
               },
               "faq": {},
               "category": {
@@ -35832,9 +35802,6 @@
                     "tagline": {
                       "type": "string"
                     },
-                    "encode": {
-                      "type": "boolean"
-                    },
                     "faq": {},
                     "category": {
                       "type": "string"
@@ -37388,9 +37355,6 @@
                   },
                   "tagline": {
                     "type": "string"
-                  },
-                  "encode": {
-                    "type": "boolean"
                   },
                   "faq": {},
                   "category": {
@@ -39368,9 +39332,6 @@
                   },
                   "tagline": {
                     "type": "string"
-                  },
-                  "encode": {
-                    "type": "boolean"
                   },
                   "faq": {},
                   "category": {

@@ -16,5 +16,13 @@
   "noClips": {
     "title": "Belum ada klip",
     "description": "Belum ada klip yang dibuat untuk streamer ini."
+  },
+  "checkLive": {
+    "button": "Cek live sekarang",
+    "liveTitle": "Streamer sedang live",
+    "liveMessage": "Perekaman sedang dimulai.",
+    "offlineTitle": "Tidak live",
+    "offlineMessage": "Streamer sedang offline.",
+    "errorTitle": "Pemeriksaan gagal"
   }
 }

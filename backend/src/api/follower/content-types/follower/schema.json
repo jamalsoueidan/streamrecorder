@@ -167,15 +167,6 @@
         }
       }
     },
-    "encode": {
-      "type": "boolean",
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      },
-      "default": false
-    },
     "faq": {
       "type": "json",
       "pluginOptions": {
