@@ -38,9 +38,9 @@ export function ProfileTabs({ type, username, clipsCount }: ProfileTabsProps) {
 
   const handleTabChange = (value: string | null) => {
     if (value === "insights") {
-      router.push(profileUrl + "/my/insights");
+      router.push(profileUrl + "/insights");
     } else if (value === "clips") {
-      router.push(profileUrl + "/my/clips");
+      router.push(profileUrl + "/clips");
     } else {
       router.push(profileUrl);
     }
