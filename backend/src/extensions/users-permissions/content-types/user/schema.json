@@ -108,6 +108,10 @@
     "trialClaimed": {
       "type": "boolean",
       "default": false
+    },
+    "pushSubscription": {
+      "type": "json",
+      "private": true
     }
   }
 }

@@ -10,5 +10,20 @@ export default {
       path: "/user/destroy",
       handler: "user.destroy",
     },
+    {
+      method: "PUT",
+      path: "/user/push-subscription",
+      handler: "user.setPushSubscription",
+    },
+    {
+      method: "DELETE",
+      path: "/user/push-subscription",
+      handler: "user.deletePushSubscription",
+    },
+    {
+      method: "POST",
+      path: "/user/test-push",
+      handler: "user.testPushNotification",
+    },
   ],
 };

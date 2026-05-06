@@ -233,6 +233,120 @@ export default ({ env }) => ({
             },
           };
 
+          // Endpoint: POST /user/test-push
+          draft.paths["/user/test-push"] = {
+            post: {
+              tags: ["User"],
+              operationId: "testPushNotification",
+              summary: "Send a test push notification to the current user",
+              security: [{ bearerAuth: [] }],
+              responses: {
+                "200": {
+                  description: "Notification sent",
+                  content: {
+                    "application/json": {
+                      schema: {
+                        type: "object",
+                        properties: {
+                          success: { type: "boolean" },
+                        },
+                      },
+                    },
+                  },
+                },
+                "400": {
+                  description:
+                    "No subscription saved or subscription has expired",
+                },
+                "401": { description: "Unauthorized - must be logged in" },
+                "500": {
+                  description: "VAPID not configured or push service error",
+                },
+              },
+            },
+          };
+
+          // Endpoint: PUT/DELETE /user/push-subscription
+          draft.paths["/user/push-subscription"] = {
+            put: {
+              tags: ["User"],
+              operationId: "setPushSubscription",
+              summary:
+                "Save the browser's Web Push subscription for the current user",
+              security: [{ bearerAuth: [] }],
+              requestBody: {
+                required: true,
+                content: {
+                  "application/json": {
+                    schema: {
+                      type: "object",
+                      required: ["endpoint", "keys"],
+                      properties: {
+                        endpoint: {
+                          type: "string",
+                          format: "uri",
+                          description: "Push service endpoint URL",
+                        },
+                        expirationTime: {
+                          type: "integer",
+                          nullable: true,
+                        },
+                        keys: {
+                          type: "object",
+                          required: ["p256dh", "auth"],
+                          properties: {
+                            p256dh: { type: "string" },
+                            auth: { type: "string" },
+                          },
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+              responses: {
+                "200": {
+                  description: "Subscription saved",
+                  content: {
+                    "application/json": {
+                      schema: {
+                        type: "object",
+                        properties: {
+                          success: { type: "boolean" },
+                        },
+                      },
+                    },
+                  },
+                },
+                "400": { description: "Invalid push subscription" },
+                "401": { description: "Unauthorized - must be logged in" },
+              },
+            },
+            delete: {
+              tags: ["User"],
+              operationId: "deletePushSubscription",
+              summary:
+                "Clear the saved Web Push subscription for the current user",
+              security: [{ bearerAuth: [] }],
+              responses: {
+                "200": {
+                  description: "Subscription cleared",
+                  content: {
+                    "application/json": {
+                      schema: {
+                        type: "object",
+                        properties: {
+                          success: { type: "boolean" },
+                        },
+                      },
+                    },
+                  },
+                },
+                "401": { description: "Unauthorized - must be logged in" },
+              },
+            },
+          };
+
           // Endpoint: GET/POST /social-accounts/me
           draft.paths["/social-accounts/me"] = {
             get: {
