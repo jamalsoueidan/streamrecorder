@@ -1,3 +1,188 @@
+import { sendPushPerUser } from "../services/push";
+import { getStrings, localizeUrl } from "../services/push-strings";
+
+interface LiveItem {
+  username: string;
+  type: string;
+}
+
+// Background worker for /user/notify-streamers-live. Three knex queries
+// (followers lookup, dedup, subscribers), then concurrency-capped push
+// fan-out. No per-streamer round trips.
+async function processStreamersLive(items: LiveItem[]) {
+  const startedAt = Date.now();
+  const knex = strapi.db.connection;
+
+  // Build the (username, type) tuple list once. We'll use it twice:
+  // for the lookup query and to map results back to incoming items.
+  const usernameLower = items.map((i) => i.username.toLowerCase());
+  const typeSet = Array.from(new Set(items.map((i) => i.type)));
+
+  // Step 1 — resolve (username, type) → follower.id. Username comparison
+  // is case-insensitive to match usernameOrFilter behaviour. Restrict to
+  // the small set of types we received so the index can be used.
+  // Followers have i18n on (one row per locale, same document_id) — pin
+  // to locale=en so we don't return duplicate IDs and overwrite the map.
+  const followers: Array<{ id: number; username: string; type: string }> =
+    await knex("followers")
+      .select("id", "username", "type")
+      .whereIn("type", typeSet)
+      .where("locale", "en")
+      .whereRaw("LOWER(username) = ANY(?)", [usernameLower]);
+
+  if (!followers.length) {
+    strapi.log.info("[notify] no matching followers found");
+    return;
+  }
+
+  const followerIds = followers.map((f) => f.id);
+  // Two-key map: type + lowercased username → id (avoid collisions
+  // across platforms with the same username).
+  const idByKey = new Map<string, number>(
+    followers.map((f) => [`${f.type}::${f.username.toLowerCase()}`, f.id]),
+  );
+  const itemByFollowerId = new Map<number, LiveItem>();
+  for (const it of items) {
+    const id = idByKey.get(`${it.type}::${it.username.toLowerCase()}`);
+    if (id) itemByFollowerId.set(id, it);
+  }
+
+  // Step 2 — dedup. Followers with any source in the last 1h are
+  // mid-session; skip them.
+  const recent: Array<{ follower_id: number }> = await knex("sources as s")
+    .distinct("rfl.follower_id")
+    .join("sources_recording_lnk as srl", "srl.source_id", "s.id")
+    .join("recordings_follower_lnk as rfl", "rfl.recording_id", "srl.recording_id")
+    .whereIn("rfl.follower_id", followerIds)
+    .where("s.created_at", ">", knex.raw("NOW() - INTERVAL '1 hour'"));
+
+  const recentSet = new Set(recent.map((r) => r.follower_id));
+  const eligibleFollowerIds = followerIds.filter((id) => !recentSet.has(id));
+
+  if (!eligibleFollowerIds.length) {
+    strapi.log.info(
+      `[notify] all ${followerIds.length} streamers were mid-session, skipping`,
+    );
+    return;
+  }
+
+  // Step 3 — all subscribers for eligible streamers, in one query.
+  const subRows: Array<{
+    follower_id: number;
+    user_id: number;
+    document_id: string;
+    push_subscription: any;
+  }> = await knex("up_users_followers_lnk as ufl")
+    .select(
+      "ufl.follower_id",
+      "u.id as user_id",
+      "u.document_id",
+      "u.push_subscription",
+    )
+    .join("up_users as u", "u.id", "ufl.user_id")
+    .whereIn("ufl.follower_id", eligibleFollowerIds)
+    .whereNotNull("u.push_subscription");
+
+  // Group by user so we can merge multiple newly-live streamers a user
+  // follows into a single push (avoids the OS coalescing rapid same-origin
+  // notifications and silently dropping some). Also lets us pull the
+  // user's locale once per recipient.
+  interface PerUserBucket {
+    documentId: string;
+    pushSubscription: any;
+    locale: string | undefined;
+    items: LiveItem[];
+  }
+  const byUser = new Map<number, PerUserBucket>();
+
+  for (const r of subRows) {
+    const item = itemByFollowerId.get(r.follower_id);
+    if (!item) continue;
+    if (!eligibleFollowerIds.includes(r.follower_id)) continue;
+
+    let bucket = byUser.get(r.user_id);
+    if (!bucket) {
+      // pushSubscription is jsonb — knex may hand it back as string or
+      // object depending on pg type-parser config. Normalise once here so
+      // we can read .locale safely.
+      let sub = r.push_subscription;
+      if (typeof sub === "string") {
+        try {
+          sub = JSON.parse(sub);
+        } catch {
+          sub = null;
+        }
+      }
+      bucket = {
+        documentId: r.document_id,
+        pushSubscription: sub,
+        locale: sub?.locale,
+        items: [],
+      };
+      byUser.set(r.user_id, bucket);
+    }
+    bucket.items.push(item);
+  }
+
+  // Step 4 — build per-user payloads (single vs merged) in the user's
+  // locale, then fan out with the concurrency-capped sender.
+  const pushItems: Array<{
+    id: number;
+    documentId: string;
+    pushSubscription: any;
+    payload: {
+      title: string;
+      body: string;
+      url?: string;
+      tag?: string;
+      icon?: string;
+    };
+  }> = [];
+
+  for (const [userId, bucket] of byUser) {
+    if (!bucket.items.length) continue;
+    const strings = getStrings(bucket.locale);
+
+    if (bucket.items.length === 1) {
+      const it = bucket.items[0];
+      const { title, body } = strings.single(it.username, it.type);
+      pushItems.push({
+        id: userId,
+        documentId: bucket.documentId,
+        pushSubscription: bucket.pushSubscription,
+        payload: {
+          title,
+          body,
+          url: localizeUrl(bucket.locale, `/${it.type}/${it.username}`),
+          tag: `live-${it.type}-${it.username}`,
+        },
+      });
+    } else {
+      const { title, body } = strings.multi(bucket.items.length);
+      pushItems.push({
+        id: userId,
+        documentId: bucket.documentId,
+        pushSubscription: bucket.pushSubscription,
+        payload: {
+          title,
+          body,
+          url: localizeUrl(bucket.locale, `/live`),
+          // Per-user batch tag so a follow-up batch replaces the previous
+          // banner for the same user instead of stacking.
+          tag: `live-batch-${userId}`,
+        },
+      });
+    }
+  }
+
+  const result = await sendPushPerUser(pushItems);
+
+  const dur = Date.now() - startedAt;
+  strapi.log.info(
+    `[notify] done in ${dur}ms — recipients=${pushItems.length} (streamers=${eligibleFollowerIds.length}/${items.length}) sent=${result.sent} failed=${result.failed} dead=${result.removed}`,
+  );
+}
+
 export default {
   async update(ctx) {
     const user = ctx.state.user;
@@ -72,9 +257,25 @@ export default {
       return ctx.badRequest("Invalid push subscription");
     }
 
+    // Optional locale — used by the live-fan-out to render the push title
+    // in the user's language. Whitelist to the locales we actually have
+    // strings for, otherwise we just store no locale and fall back to en.
+    const ALLOWED_LOCALES = ["en", "ar", "tr", "ko", "ja", "es", "pt", "id"];
+    const locale =
+      typeof subscription.locale === "string" &&
+      ALLOWED_LOCALES.includes(subscription.locale)
+        ? subscription.locale
+        : undefined;
+
+    const toStore: Record<string, any> = {
+      endpoint: subscription.endpoint,
+      keys: subscription.keys,
+    };
+    if (locale) toStore.locale = locale;
+
     await strapi.documents("plugin::users-permissions.user").update({
       documentId: user.documentId,
-      data: { pushSubscription: subscription },
+      data: { pushSubscription: toStore },
     });
 
     return { success: true };
@@ -92,6 +293,44 @@ export default {
     });
 
     return { success: true };
+  },
+
+  // n8n calls this once per check-cycle with the list of streamers it
+  // just confirmed to be live. We dedup against recent recordings (so a
+  // brief offline-online flicker doesn't double-notify) and fan out
+  // pushes to everyone following each remaining streamer.
+  //
+  // Designed for a single bulk request with up to ~100 streamers, with
+  // up to thousands of total subscribers across them. Two SQL queries
+  // total + concurrency-capped HTTP fan-out keep the load bounded.
+  async notifyStreamersLive(ctx) {
+    const items = Array.isArray(ctx.request.body) ? ctx.request.body : null;
+    if (!items?.length) {
+      return ctx.badRequest("Body must be a non-empty array of streamers");
+    }
+
+    // Validate each entry has the fields we need. Reject the whole call
+    // if anything is malformed — n8n should send clean data.
+    for (const it of items) {
+      if (
+        !it ||
+        typeof it.username !== "string" ||
+        typeof it.type !== "string"
+      ) {
+        return ctx.badRequest("Each item needs username and type");
+      }
+    }
+
+    // Respond fast — let n8n move on. Real work runs in the background.
+    ctx.status = 202;
+    ctx.body = { accepted: items.length };
+
+    setImmediate(() => {
+      // eslint-disable-next-line @typescript-eslint/no-floating-promises
+      processStreamersLive(items).catch((err) =>
+        strapi.log.error("[notify] background processing crashed", err),
+      );
+    });
   },
 
   async testPushNotification(ctx) {

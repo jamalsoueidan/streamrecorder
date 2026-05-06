@@ -233,6 +233,56 @@ export default ({ env }) => ({
             },
           };
 
+          // Endpoint: POST /user/notify-streamers-live
+          draft.paths["/user/notify-streamers-live"] = {
+            post: {
+              tags: ["User"],
+              operationId: "notifyStreamersLive",
+              summary:
+                "Bulk notify followers about streamers that just went live",
+              description:
+                "Called by n8n with the list of streamers it just confirmed live. Returns 202 immediately and processes in the background: dedups against recent recordings (last 1h), fetches subscribers, fans out Web Push.",
+              security: [{ bearerAuth: [] }],
+              requestBody: {
+                required: true,
+                content: {
+                  "application/json": {
+                    schema: {
+                      type: "array",
+                      items: {
+                        type: "object",
+                        required: ["username", "type"],
+                        properties: {
+                          username: { type: "string" },
+                          type: {
+                            $ref: "#/components/schemas/FollowerTypeEnum",
+                          },
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+              responses: {
+                "202": {
+                  description: "Accepted — processing in background",
+                  content: {
+                    "application/json": {
+                      schema: {
+                        type: "object",
+                        properties: {
+                          accepted: { type: "integer" },
+                        },
+                      },
+                    },
+                  },
+                },
+                "400": { description: "Body must be a non-empty array" },
+                "401": { description: "Unauthorized" },
+              },
+            },
+          };
+
           // Endpoint: POST /user/test-push
           draft.paths["/user/test-push"] = {
             post: {

@@ -25,5 +25,10 @@ export default {
       path: "/user/test-push",
       handler: "user.testPushNotification",
     },
+    {
+      method: "POST",
+      path: "/user/notify-streamers-live",
+      handler: "user.notifyStreamersLive",
+    },
   ],
 };
