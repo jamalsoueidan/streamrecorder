@@ -12,7 +12,7 @@ import {
 } from "@mantine/core";
 import { notifications as toast } from "@mantine/notifications";
 import { IconBell, IconSend } from "@tabler/icons-react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 
 import {
@@ -42,6 +42,7 @@ type State =
 
 export function NotificationsCard() {
   const t = useTranslations("protected.settings.notifications");
+  const locale = useLocale();
   const [state, setState] = useState<State>({ kind: "loading" });
   const [pending, setPending] = useState(false);
   const [testing, setTesting] = useState(false);
@@ -113,7 +114,10 @@ export function NotificationsCard() {
         applicationServerKey: urlBase64ToUint8Array(VAPID_PUBLIC_KEY)
           .buffer as ArrayBuffer,
       });
-      const result = await enablePushNotifications(sub.toJSON() as any);
+      const result = await enablePushNotifications(
+        sub.toJSON() as any,
+        locale,
+      );
       if (!result.success) throw new Error(result.error ?? "Save failed");
       setState({ kind: "ready", subscribed: true });
       toast.show({ color: "green", title: t("enabled"), message: "" });

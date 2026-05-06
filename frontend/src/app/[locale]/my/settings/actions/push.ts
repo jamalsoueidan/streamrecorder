@@ -13,9 +13,16 @@ export async function enablePushNotifications(
     expirationTime: number | null;
     keys: { p256dh: string; auth: string };
   },
+  locale?: string,
 ): Promise<ActionResult> {
   try {
-    await api.user.setPushSubscription(subscription);
+    // Locale travels alongside endpoint+keys so the backend can render
+    // "X is live" in the language the user sees the app in. The autogen
+    // type doesn't list locale yet — pass through with a cast.
+    await api.user.setPushSubscription({
+      ...subscription,
+      ...(locale ? { locale } : {}),
+    } as any);
     return { success: true };
   } catch (error: any) {
     return {
