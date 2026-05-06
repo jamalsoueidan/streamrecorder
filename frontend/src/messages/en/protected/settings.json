@@ -59,6 +59,23 @@
     },
     "deleteError": "Error"
   },
+  "notifications": {
+    "title": "Notifications",
+    "description": "Get notified when your streamers go live.",
+    "on": "Notifications on",
+    "off": "Notifications off",
+    "enabled": "Notifications enabled",
+    "disabled": "Notifications disabled",
+    "denied": "Notifications are blocked. Enable them in your browser settings.",
+    "unsupported": "Your browser doesn't support notifications.",
+    "error": "Something went wrong",
+    "sendTest": "Send a test notification",
+    "testSent": "Test notification sent",
+    "testSentMessage": "Check your device — a notification should appear shortly.",
+    "helpTitle": "Not seeing notifications?",
+    "helpPermission": "Make sure your browser is allowed to show notifications in your system settings.",
+    "helpFocus": "Turn off Do Not Disturb, Focus, or Focus Assist. They silence notifications on Mac, iPhone, Android, and Windows."
+  },
   "watchedHistory": {
     "title": "Watched videos",
     "description": "You've marked {count} videos as watched. This shows up as a badge on thumbnails so you can tell at a glance which ones you've already seen.",

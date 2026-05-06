@@ -59,6 +59,23 @@
     "disconnectSuccessMessage": "Akun YouTube telah diputuskan",
     "disconnectError": "Error"
   },
+  "notifications": {
+    "title": "Notifikasi",
+    "description": "Dapatkan pemberitahuan saat streamer mulai siaran langsung.",
+    "on": "Notifikasi aktif",
+    "off": "Notifikasi nonaktif",
+    "enabled": "Notifikasi diaktifkan",
+    "disabled": "Notifikasi dinonaktifkan",
+    "denied": "Notifikasi diblokir. Aktifkan di pengaturan browser.",
+    "unsupported": "Browser kamu tidak mendukung notifikasi.",
+    "error": "Terjadi kesalahan",
+    "sendTest": "Kirim notifikasi uji coba",
+    "testSent": "Notifikasi uji coba terkirim",
+    "testSentMessage": "Cek perangkatmu — notifikasi akan segera muncul.",
+    "helpTitle": "Notifikasi tidak muncul?",
+    "helpPermission": "Pastikan browser kamu diizinkan menampilkan notifikasi di pengaturan sistem.",
+    "helpFocus": "Matikan Jangan Ganggu atau mode Fokus. Mode ini membisukan notifikasi di Mac, iPhone, Android, dan Windows."
+  },
   "watchedHistory": {
     "title": "Video yang ditonton",
     "description": "Anda telah menandai {count} video sebagai sudah ditonton. Ini muncul sebagai lencana pada thumbnail agar Anda dapat melihat sekilas mana yang sudah Anda tonton.",

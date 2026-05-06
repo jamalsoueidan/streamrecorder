@@ -5,6 +5,7 @@ import { Divider, Flex, SimpleGrid, Stack, Text, Title } from "@mantine/core";
 import { IconSettings } from "@tabler/icons-react";
 import { useTranslations } from "next-intl";
 import { DangerZoneCard } from "./components/danger-zone-card";
+import { NotificationsCard } from "./components/notifications-card";
 import { ProfileCard } from "./components/profile-card";
 import { SubscriptionCard } from "./components/subscription-card";
 import { TikTokCard } from "./components/tiktok-card";
@@ -39,6 +40,7 @@ export default function SettingsPage() {
           <TikTokCard />
           <YouTubeCard />
         </Can>
+        <NotificationsCard />
         <WatchedHistoryCard />
         <Role is="admin" not>
           <DangerZoneCard />

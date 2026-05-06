@@ -59,6 +59,23 @@
     "disconnectSuccessMessage": "Sua conta do YouTube foi desconectada",
     "disconnectError": "Erro"
   },
+  "notifications": {
+    "title": "Notificações",
+    "description": "Receba um aviso quando seus streamers entrarem ao vivo.",
+    "on": "Notificações ativadas",
+    "off": "Notificações desativadas",
+    "enabled": "Notificações ativadas",
+    "disabled": "Notificações desativadas",
+    "denied": "As notificações estão bloqueadas. Ative-as nas configurações do navegador.",
+    "unsupported": "Seu navegador não suporta notificações.",
+    "error": "Algo deu errado",
+    "sendTest": "Enviar notificação de teste",
+    "testSent": "Notificação de teste enviada",
+    "testSentMessage": "Confira seu dispositivo — a notificação chegará em instantes.",
+    "helpTitle": "Não está vendo as notificações?",
+    "helpPermission": "Verifique se seu navegador tem permissão para mostrar notificações nas configurações do sistema.",
+    "helpFocus": "Desative o Não Perturbe ou o modo Foco. Esses modos silenciam notificações no Mac, iPhone, Android e Windows."
+  },
   "watchedHistory": {
     "title": "Vídeos assistidos",
     "description": "Você marcou {count} vídeos como assistidos. Isso aparece como um selo nas miniaturas para você saber rapidamente quais já viu.",

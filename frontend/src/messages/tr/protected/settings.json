@@ -59,6 +59,23 @@
     "disconnectSuccessMessage": "YouTube hesabınızın bağlantısı kesildi",
     "disconnectError": "Hata"
   },
+  "notifications": {
+    "title": "Bildirimler",
+    "description": "Yayıncıların yayına başladığında bildirim al.",
+    "on": "Bildirimler açık",
+    "off": "Bildirimler kapalı",
+    "enabled": "Bildirimler etkinleştirildi",
+    "disabled": "Bildirimler devre dışı",
+    "denied": "Bildirimler engellenmiş. Tarayıcı ayarlarından izin verin.",
+    "unsupported": "Tarayıcınız bildirimleri desteklemiyor.",
+    "error": "Bir şeyler ters gitti",
+    "sendTest": "Test bildirimi gönder",
+    "testSent": "Test bildirimi gönderildi",
+    "testSentMessage": "Cihazınızı kontrol edin — bildirim birazdan görünecek.",
+    "helpTitle": "Bildirimleri görmüyor musunuz?",
+    "helpPermission": "Tarayıcınızın sistem ayarlarında bildirim göstermesine izin verildiğinden emin olun.",
+    "helpFocus": "Rahatsız Etme veya Odak modunu kapatın. Bu modlar Mac, iPhone, Android ve Windows'ta bildirimleri sessize alır."
+  },
   "watchedHistory": {
     "title": "İzlenen videolar",
     "description": "{count} videoyu izlendi olarak işaretlediniz. Hangilerini izlediğinizi tek bakışta görebilmeniz için küçük resimlerde rozet olarak görünür.",

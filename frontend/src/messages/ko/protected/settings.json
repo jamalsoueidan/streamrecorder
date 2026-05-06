@@ -59,6 +59,23 @@
     "disconnectSuccessMessage": "YouTube 계정이 연결 해제되었습니다",
     "disconnectError": "오류"
   },
+  "notifications": {
+    "title": "알림",
+    "description": "스트리머가 라이브를 시작하면 알림을 받으세요.",
+    "on": "알림 켜짐",
+    "off": "알림 꺼짐",
+    "enabled": "알림이 켜졌습니다",
+    "disabled": "알림이 꺼졌습니다",
+    "denied": "알림이 차단되었습니다. 브라우저 설정에서 허용해 주세요.",
+    "unsupported": "이 브라우저는 알림을 지원하지 않습니다.",
+    "error": "문제가 발생했습니다",
+    "sendTest": "테스트 알림 보내기",
+    "testSent": "테스트 알림을 보냈습니다",
+    "testSentMessage": "잠시 후 알림이 표시됩니다.",
+    "helpTitle": "알림이 보이지 않나요?",
+    "helpPermission": "시스템 설정에서 브라우저의 알림 표시가 허용되어 있는지 확인하세요.",
+    "helpFocus": "방해 금지 또는 집중 모드를 끄세요. Mac, iPhone, Android, Windows에서 알림을 음소거합니다."
+  },
   "watchedHistory": {
     "title": "시청한 동영상",
     "description": "{count}개의 동영상을 시청 완료로 표시했습니다. 썸네일에 배지로 표시되어 이미 시청한 영상을 한눈에 확인할 수 있습니다.",

@@ -13,6 +13,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
 import { getAnnouncement } from "@/app/actions/announcement";
 import { getUser } from "@/app/actions/user";
+import { SwRegister } from "@/app/components/sw-register";
 import { buildRulesFromStrapi } from "@/app/lib/ability";
 import { AbilityProvider } from "@/app/providers/ability-provider";
 import { QueryProvider } from "@/app/providers/query-provider";
@@ -62,6 +63,7 @@ export default async function DashboardLayout({
     <QueryProvider>
       <UserProvider user={user?.data}>
         <AbilityProvider rules={rules} role={role}>
+          <SwRegister />
           <Shell initialCollapsed={navbarCollapsed} announcement={announcement}>{children}</Shell>
         </AbilityProvider>
       </UserProvider>

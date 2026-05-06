@@ -59,6 +59,23 @@
     "disconnectSuccessMessage": "YouTubeアカウントが切断されました",
     "disconnectError": "エラー"
   },
+  "notifications": {
+    "title": "通知",
+    "description": "配信者がライブを開始したら通知を受け取ります。",
+    "on": "通知オン",
+    "off": "通知オフ",
+    "enabled": "通知を有効にしました",
+    "disabled": "通知を無効にしました",
+    "denied": "通知がブロックされています。ブラウザ設定で許可してください。",
+    "unsupported": "このブラウザは通知に対応していません。",
+    "error": "エラーが発生しました",
+    "sendTest": "テスト通知を送る",
+    "testSent": "テスト通知を送信しました",
+    "testSentMessage": "まもなく通知が届きます。",
+    "helpTitle": "通知が表示されませんか？",
+    "helpPermission": "システム設定でブラウザに通知の表示が許可されているか確認してください。",
+    "helpFocus": "おやすみモードや集中モードをオフにしてください。Mac、iPhone、Android、Windows で通知をミュートする原因になります。"
+  },
   "watchedHistory": {
     "title": "視聴済みの動画",
     "description": "{count} 本の動画を視聴済みとしてマークしています。サムネイルにバッジとして表示されるため、すでに視聴した動画を一目で確認できます。",

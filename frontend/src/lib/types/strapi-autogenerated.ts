@@ -306,7 +306,6 @@ export interface Activity {
     pause?: boolean;
     description?: string;
     tagline?: string;
-    encode?: boolean;
     faq?: any;
     category?: string;
     migration?: number;
@@ -430,6 +429,7 @@ export interface Activity {
       mollie?: string;
       paymentProvider?: ActivityPaymentProviderEnum;
       trialClaimed?: boolean;
+      pushSubscription?: any;
       /** @format date-time */
       createdAt?: string;
       /** @format date-time */
@@ -798,7 +798,6 @@ export interface AiRequest {
     pause?: boolean;
     description?: string;
     tagline?: string;
-    encode?: boolean;
     faq?: any;
     category?: string;
     migration?: number;
@@ -922,6 +921,7 @@ export interface AiRequest {
       mollie?: string;
       paymentProvider?: AiRequestPaymentProviderEnum;
       trialClaimed?: boolean;
+      pushSubscription?: any;
       /** @format date-time */
       createdAt?: string;
       /** @format date-time */
@@ -1429,7 +1429,6 @@ export interface AiTask {
       pause?: boolean;
       description?: string;
       tagline?: string;
-      encode?: boolean;
       faq?: any;
       category?: string;
       migration?: number;
@@ -1553,6 +1552,7 @@ export interface AiTask {
         mollie?: string;
         paymentProvider?: AiTaskPaymentProviderEnum;
         trialClaimed?: boolean;
+        pushSubscription?: any;
         /** @format date-time */
         createdAt?: string;
         /** @format date-time */
@@ -2993,7 +2993,6 @@ export interface Clip {
     pause?: boolean;
     description?: string;
     tagline?: string;
-    encode?: boolean;
     faq?: any;
     category?: string;
     migration?: number;
@@ -3117,6 +3116,7 @@ export interface Clip {
       mollie?: string;
       paymentProvider?: ClipPaymentProviderEnum;
       trialClaimed?: boolean;
+      pushSubscription?: any;
       /** @format date-time */
       createdAt?: string;
       /** @format date-time */
@@ -3580,7 +3580,6 @@ export interface ClipShare {
       pause?: boolean;
       description?: string;
       tagline?: string;
-      encode?: boolean;
       faq?: any;
       category?: string;
       migration?: number;
@@ -3704,6 +3703,7 @@ export interface ClipShare {
         mollie?: string;
         paymentProvider?: ClipSharePaymentProviderEnum;
         trialClaimed?: boolean;
+        pushSubscription?: any;
         /** @format date-time */
         createdAt?: string;
         /** @format date-time */
@@ -4100,7 +4100,6 @@ export interface FollowerRequest {
     pause?: boolean;
     description?: string;
     tagline?: string;
-    encode?: boolean;
     faq?: any;
     category?: string;
     migration?: number;
@@ -4369,7 +4368,6 @@ export interface Follower {
   pause?: boolean;
   description?: string;
   tagline?: string;
-  encode?: boolean;
   faq?: any;
   category?: string;
   migration?: number;
@@ -4514,7 +4512,6 @@ export interface Follower {
       pause?: boolean;
       description?: string;
       tagline?: string;
-      encode?: boolean;
       faq?: any;
       category?: string;
       migration?: number;
@@ -4592,6 +4589,7 @@ export interface Follower {
     mollie?: string;
     paymentProvider?: FollowerPaymentProviderEnum;
     trialClaimed?: boolean;
+    pushSubscription?: any;
     /** @format date-time */
     createdAt?: string;
     /** @format date-time */
@@ -4932,7 +4930,6 @@ export interface Meme {
       pause?: boolean;
       description?: string;
       tagline?: string;
-      encode?: boolean;
       faq?: any;
       category?: string;
       migration?: number;
@@ -5056,6 +5053,7 @@ export interface Meme {
         mollie?: string;
         paymentProvider?: MemePaymentProviderEnum;
         trialClaimed?: boolean;
+        pushSubscription?: any;
         /** @format date-time */
         createdAt?: string;
         /** @format date-time */
@@ -5501,7 +5499,6 @@ export interface Recording {
     pause?: boolean;
     description?: string;
     tagline?: string;
-    encode?: boolean;
     faq?: any;
     category?: string;
     migration?: number;
@@ -5625,6 +5622,7 @@ export interface Recording {
       mollie?: string;
       paymentProvider?: RecordingPaymentProviderEnum;
       trialClaimed?: boolean;
+      pushSubscription?: any;
       /** @format date-time */
       createdAt?: string;
       /** @format date-time */
@@ -6225,7 +6223,6 @@ export interface SocialAccount {
       pause?: boolean;
       description?: string;
       tagline?: string;
-      encode?: boolean;
       faq?: any;
       category?: string;
       migration?: number;
@@ -6303,6 +6300,7 @@ export interface SocialAccount {
     mollie?: string;
     paymentProvider?: SocialAccountPaymentProviderEnum;
     trialClaimed?: boolean;
+    pushSubscription?: any;
     /** @format date-time */
     createdAt?: string;
     /** @format date-time */
@@ -6645,7 +6643,6 @@ export interface Source {
       pause?: boolean;
       description?: string;
       tagline?: string;
-      encode?: boolean;
       faq?: any;
       category?: string;
       migration?: number;
@@ -6769,6 +6766,7 @@ export interface Source {
         mollie?: string;
         paymentProvider?: SourcePaymentProviderEnum;
         trialClaimed?: boolean;
+        pushSubscription?: any;
         /** @format date-time */
         createdAt?: string;
         /** @format date-time */
@@ -7173,7 +7171,6 @@ export interface VisitorView {
       pause?: boolean;
       description?: string;
       tagline?: string;
-      encode?: boolean;
       faq?: any;
       category?: string;
       migration?: number;
@@ -7297,6 +7294,7 @@ export interface VisitorView {
         mollie?: string;
         paymentProvider?: VisitorViewPaymentProviderEnum;
         trialClaimed?: boolean;
+        pushSubscription?: any;
         /** @format date-time */
         createdAt?: string;
         /** @format date-time */
@@ -9296,6 +9294,31 @@ export interface UpdateUserData {
 }
 
 export interface DestroyUserData {
+  success?: boolean;
+}
+
+export interface TestPushNotificationData {
+  success?: boolean;
+}
+
+export interface SetPushSubscriptionPayload {
+  /**
+   * Push service endpoint URL
+   * @format uri
+   */
+  endpoint: string;
+  expirationTime?: number | null;
+  keys: {
+    p256dh: string;
+    auth: string;
+  };
+}
+
+export interface SetPushSubscriptionData {
+  success?: boolean;
+}
+
+export interface DeletePushSubscriptionData {
   success?: boolean;
 }
 
@@ -12382,6 +12405,54 @@ export namespace User {
     export type RequestHeaders = {};
     export type ResponseBody = DestroyUserData;
   }
+
+  /**
+   * No description
+   * @tags User
+   * @name TestPushNotification
+   * @summary Send a test push notification to the current user
+   * @request POST:/user/test-push
+   * @secure
+   */
+  export namespace TestPushNotification {
+    export type RequestParams = {};
+    export type RequestQuery = {};
+    export type RequestBody = never;
+    export type RequestHeaders = {};
+    export type ResponseBody = TestPushNotificationData;
+  }
+
+  /**
+   * No description
+   * @tags User
+   * @name SetPushSubscription
+   * @summary Save the browser's Web Push subscription for the current user
+   * @request PUT:/user/push-subscription
+   * @secure
+   */
+  export namespace SetPushSubscription {
+    export type RequestParams = {};
+    export type RequestQuery = {};
+    export type RequestBody = SetPushSubscriptionPayload;
+    export type RequestHeaders = {};
+    export type ResponseBody = SetPushSubscriptionData;
+  }
+
+  /**
+   * No description
+   * @tags User
+   * @name DeletePushSubscription
+   * @summary Clear the saved Web Push subscription for the current user
+   * @request DELETE:/user/push-subscription
+   * @secure
+   */
+  export namespace DeletePushSubscription {
+    export type RequestParams = {};
+    export type RequestQuery = {};
+    export type RequestBody = never;
+    export type RequestHeaders = {};
+    export type ResponseBody = DeletePushSubscriptionData;
+  }
 }
 
 import type {
@@ -15407,6 +15478,65 @@ export class Api<
     destroyUser: (params: RequestParams = {}) =>
       this.request<DestroyUserData, void>({
         path: `/user/destroy`,
+        method: "DELETE",
+        secure: true,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags User
+     * @name TestPushNotification
+     * @summary Send a test push notification to the current user
+     * @request POST:/user/test-push
+     * @secure
+     */
+    testPushNotification: (params: RequestParams = {}) =>
+      this.request<TestPushNotificationData, void>({
+        path: `/user/test-push`,
+        method: "POST",
+        secure: true,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags User
+     * @name SetPushSubscription
+     * @summary Save the browser's Web Push subscription for the current user
+     * @request PUT:/user/push-subscription
+     * @secure
+     */
+    setPushSubscription: (
+      data: SetPushSubscriptionPayload,
+      params: RequestParams = {},
+    ) =>
+      this.request<SetPushSubscriptionData, void>({
+        path: `/user/push-subscription`,
+        method: "PUT",
+        body: data,
+        secure: true,
+        type: ContentType.Json,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags User
+     * @name DeletePushSubscription
+     * @summary Clear the saved Web Push subscription for the current user
+     * @request DELETE:/user/push-subscription
+     * @secure
+     */
+    deletePushSubscription: (params: RequestParams = {}) =>
+      this.request<DeletePushSubscriptionData, void>({
+        path: `/user/push-subscription`,
         method: "DELETE",
         secure: true,
         format: "json",
