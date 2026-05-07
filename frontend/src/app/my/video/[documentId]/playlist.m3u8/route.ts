@@ -12,7 +12,7 @@ import { NextRequest } from "next/server";
 const VIEW_SESSION_COOKIE = "view_session";
 
 const fetchSourcePlaylists = unstable_cache(
-  async (documentId: string, quality: "high" | "low" = "high") => {
+  async (documentId: string) => {
     const response = await publicApi.source.getSources({
       filters: {
         recording: { documentId },
@@ -31,7 +31,6 @@ const fetchSourcePlaylists = unstable_cache(
       s3Client,
       bucket,
       sources,
-      quality,
     );
 
     return {
@@ -47,8 +46,8 @@ const fetchSourcePlaylists = unstable_cache(
 // globally for 3h. Signed URLs expire in 4h so they stay valid across the
 // cache lifetime.
 const buildSignedPlaylist = unstable_cache(
-  async (documentId: string, quality: "high" | "low") => {
-    const cached = await fetchSourcePlaylists(documentId, quality);
+  async (documentId: string) => {
+    const cached = await fetchSourcePlaylists(documentId);
     if (!cached) return null;
 
     const s3Client = getS3();
@@ -63,30 +62,10 @@ const buildSignedPlaylist = unstable_cache(
   { revalidate: 10800 }, // 3h
 );
 
-const hasLowQuality = unstable_cache(
-  async (documentId: string) => {
-    const cached = await fetchSourcePlaylists(documentId, "low");
-    if (!cached) return false;
-    return cached.sourcesWithPlaylists.every((s) => s.playlist != null);
-  },
-  ["playlist-has-low"],
-  { revalidate: 10800 },
-);
-
-function buildMasterPlaylist(documentId: string): string {
-  const base = `/my/video/${documentId}/playlist.m3u8`;
-  return `#EXTM3U
-#EXT-X-STREAM-INF:BANDWIDTH=2000000,RESOLUTION=1920x1080,NAME="Original"
-${base}?q=high
-#EXT-X-STREAM-INF:BANDWIDTH=600000,RESOLUTION=1280x720,NAME="HD"
-${base}?q=low
-`;
-}
-
 export type SourceWithPlaylist = Source & { playlist?: string | null };
 
 export async function GET(
-  request: NextRequest,
+  _request: NextRequest,
   { params }: { params: Promise<{ documentId: string }> },
 ) {
   const { documentId } = await params;
@@ -101,33 +80,7 @@ export async function GET(
     return new Response("Forbidden", { status: 403 });
   }
 
-  const qualityParam = request.nextUrl.searchParams.get("q") as
-    | "high"
-    | "low"
-    | null;
-
-  if (qualityParam === "high" || qualityParam === "low") {
-    const playlist = await buildSignedPlaylist(documentId, qualityParam);
-    if (!playlist) return new Response("Not found", { status: 404 });
-    return new Response(playlist, {
-      headers: {
-        "Content-Type": "application/vnd.apple.mpegurl",
-        "Cache-Control": "private, max-age=60",
-      },
-    });
-  }
-
-  const hasLow = await hasLowQuality(documentId);
-  if (hasLow) {
-    return new Response(buildMasterPlaylist(documentId), {
-      headers: {
-        "Content-Type": "application/vnd.apple.mpegurl",
-        "Cache-Control": "private, max-age=60",
-      },
-    });
-  }
-
-  const playlist = await buildSignedPlaylist(documentId, "high");
+  const playlist = await buildSignedPlaylist(documentId);
   if (!playlist) return new Response("Not found", { status: 404 });
 
   return new Response(playlist, {
@@ -178,17 +131,14 @@ async function fetchPlaylistsFromS3(
   s3Client: S3Client,
   bucket: string,
   sources: Source[],
-  quality: "high" | "low",
 ): Promise<SourceWithPlaylist[]> {
-  const filename = quality === "low" ? "playlist_low.m3u8" : "playlist.m3u8";
-
   const playlists = await Promise.all(
     sources.map((source) =>
       source.path
         ? fetchFromS3(
             s3Client,
             bucket,
-            `${source.path.substring(1)}${filename}`,
+            `${source.path.substring(1)}playlist.m3u8`,
           )
         : Promise.resolve(null),
     ),
