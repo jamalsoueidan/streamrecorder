@@ -35,7 +35,7 @@ export default function RecordingItem({ recording }: Props) {
               <Avatar size={38}>
                 {recording.follower?.avatar?.url && (
                   <Image
-                    src={generateAvatarUrl(recording.follower?.avatar?.url)}
+                    src={generateAvatarUrl(recording.follower?.avatar)}
                     alt={"Avatar"}
                     width={38}
                     height={38}

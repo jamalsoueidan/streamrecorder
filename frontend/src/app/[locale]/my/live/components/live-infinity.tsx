@@ -236,7 +236,7 @@ export default function LiveInfinity({ scope, type }: Props) {
                   <Avatar size="md">
                     {rec.follower?.avatar?.url && (
                       <Image
-                        src={generateAvatarUrl(rec.follower?.avatar?.url)}
+                        src={generateAvatarUrl(rec.follower?.avatar)}
                         alt={"Avatar"}
                         width={38}
                         height={38}

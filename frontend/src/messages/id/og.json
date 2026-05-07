@@ -13,7 +13,8 @@
       "afreecatv": "Kreator AfreecaTV",
       "bigo": "Kreator Bigo",
       "buzzcast": "Kreator Buzzcast",
-      "liveme": "Kreator LiveMe"
+      "liveme": "Kreator LiveMe",
+      "mixch": "Kreator Mixch"
     },
     "subtitle": {
       "all": "Jelajahi semua streamer dan kreator",
@@ -25,7 +26,8 @@
       "afreecatv": "Temukan kreator AfreecaTV",
       "bigo": "Temukan kreator Bigo",
       "buzzcast": "Temukan kreator Buzzcast",
-      "liveme": "Temukan kreator LiveMe"
+      "liveme": "Temukan kreator LiveMe",
+      "mixch": "Temukan kreator Mixch"
     }
   },
   "recordings": {
@@ -39,7 +41,8 @@
       "afreecatv": "Rekaman AfreecaTV",
       "bigo": "Rekaman Bigo",
       "buzzcast": "Rekaman Buzzcast",
-      "liveme": "Rekaman LiveMe"
+      "liveme": "Rekaman LiveMe",
+      "mixch": "Rekaman Mixch"
     },
     "subtitle": {
       "all": "Tonton rekaman live stream",
@@ -51,7 +54,8 @@
       "afreecatv": "Tonton stream AfreecaTV yang direkam",
       "bigo": "Tonton stream Bigo yang direkam",
       "buzzcast": "Tonton stream Buzzcast yang direkam",
-      "liveme": "Tonton stream LiveMe yang direkam"
+      "liveme": "Tonton stream LiveMe yang direkam",
+      "mixch": "Tonton stream Mixch yang direkam"
     }
   },
   "home": {

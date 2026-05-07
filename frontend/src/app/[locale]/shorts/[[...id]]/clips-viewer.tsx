@@ -244,7 +244,7 @@ function ClipCard({ clip, isActive }: ClipCardProps) {
               <Avatar size={36} radius="xl" color="blue">
                 {clip.follower?.avatar?.url && (
                   <Image
-                    src={generateAvatarUrl(clip.follower?.avatar?.url)}
+                    src={generateAvatarUrl(clip.follower?.avatar)}
                     alt={"Avatar"}
                     width={38}
                     height={38}

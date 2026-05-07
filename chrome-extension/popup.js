@@ -21,6 +21,7 @@ const PLATFORM_META = {
   bigo:      { name: "Bigo",      letter: "B",  prefix: "" },
   buzzcast:  { name: "Buzzcast",  letter: "BC", prefix: "" },
   liveme:    { name: "LiveMe",    letter: "LM", prefix: "" },
+  mixch:     { name: "Mixch",     letter: "Mx", prefix: "" },
 };
 
 // ── Platform SVG icons ──────────────────────────────────────────────────────
@@ -34,6 +35,7 @@ const PLATFORM_SVGS = {
   bigo: `<svg width="20" height="20" viewBox="0 0 24 24" fill="#000"><circle cx="12" cy="12" r="9" fill="none" stroke="#000" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="#000"/></svg>`,
   buzzcast: `<svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><text x="2" y="17" font-size="12" font-weight="bold" font-family="Arial">BC</text></svg>`,
   liveme: `<svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><path d="M19.5 8.1 3.5 11.8l7.6 2.5 1.2 7.6 7.2-13.8Z"/></svg>`,
+  mixch: `<svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><text x="2" y="17" font-size="12" font-weight="bold" font-family="Arial">Mx</text></svg>`,
 };
 
 // ── DOM refs ────────────────────────────────────────────────────────────────

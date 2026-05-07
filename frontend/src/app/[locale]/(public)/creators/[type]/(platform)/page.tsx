@@ -155,7 +155,7 @@ export default async function Page({ params, searchParams }: PageProps) {
               identifier: creator.username,
               alternateName: [creator.nickname, `@${creator.username}`].filter(Boolean),
               description: creator.tagline || creator.description,
-              image: generateAvatarUrl(creator.avatar?.url, true),
+              image: generateAvatarUrl(creator.avatar, true),
               url: generateProfileUrl(creator, true),
               ...(getCountryName(creator.countryCode) && {
                 nationality: {

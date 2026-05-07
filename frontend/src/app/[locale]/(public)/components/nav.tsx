@@ -36,6 +36,7 @@ export const navConfig = {
     { key: "bigo", label: "Bigo", href: "/creators/bigo" },
     { key: "buzzcast", label: "Buzzcast", href: "/creators/buzzcast" },
     { key: "liveme", label: "LiveMe", href: "/creators/liveme" },
+    { key: "mixch", label: "Mixch", href: "/creators/mixch" },
   ],
   watchRecordings: [
     { key: "browse", label: "Browse All", href: "/recordings/all" },
@@ -48,6 +49,7 @@ export const navConfig = {
     { key: "bigo", label: "Bigo", href: "/recordings/bigo" },
     { key: "buzzcast", label: "Buzzcast", href: "/recordings/buzzcast" },
     { key: "liveme", label: "LiveMe", href: "/recordings/liveme" },
+    { key: "mixch", label: "Mixch", href: "/recordings/mixch" },
   ],
   legal: [
     { key: "privacy", label: "Privacy Policy", href: "/privacy" },

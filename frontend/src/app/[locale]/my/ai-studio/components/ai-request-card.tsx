@@ -54,7 +54,7 @@ export function AiRequestCard({ aiRequest }: Props) {
             <Avatar size={36} radius="xl">
               {follower?.avatar?.url && (
                 <Image
-                  src={generateAvatarUrl(follower.avatar.url)}
+                  src={generateAvatarUrl(follower.avatar)}
                   alt={follower?.username || "Avatar"}
                   width={36}
                   height={36}

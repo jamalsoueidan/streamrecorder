@@ -132,6 +132,18 @@ export function parseUsername(input: string): ParsedUsername {
     };
   }
 
+  // Mixch URL pattern — usernames are numeric IDs, e.g. mixch.tv/u/15924967
+  const mixchRegex =
+    /(?:https?:\/\/)?(?:www\.)?mixch\.tv\/u\/([^\/\s?]+)/i;
+  const mixchMatch = trimmed.match(mixchRegex);
+
+  if (mixchMatch) {
+    return {
+      username: mixchMatch[1],
+      platform: "mixch",
+    };
+  }
+
   // Plain username - remove @ if present
   const username = trimmed.startsWith("@") ? trimmed.slice(1) : trimmed;
 

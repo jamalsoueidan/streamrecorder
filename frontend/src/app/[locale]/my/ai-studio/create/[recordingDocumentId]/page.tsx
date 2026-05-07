@@ -107,7 +107,7 @@ export default async function Page({ params }: PageProps) {
                 <Avatar size="md" radius="100%">
                   {follower.avatar?.url && (
                     <Image
-                      src={generateAvatarUrl(follower.avatar.url)}
+                      src={generateAvatarUrl(follower.avatar)}
                       alt={follower.username || "Avatar"}
                       width={36}
                       height={36}

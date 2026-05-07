@@ -22,7 +22,8 @@
     "*://*.pandalive.co.kr/*",
     "*://*.bigo.tv/*",
     "*://*.buzzcast.com/*",
-    "*://*.liveme.com/*"
+    "*://*.liveme.com/*",
+    "*://*.mixch.tv/*"
   ],
   "background": {
     "service_worker": "background.js"

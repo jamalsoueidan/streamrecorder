@@ -76,7 +76,7 @@ function isSupportedSite(urlString) {
   const supported = [
     "tiktok.com", "twitch.tv", "kick.com", "youtube.com",
     "afreecatv.com", "sooplive.co.kr", "pandalive.co.kr", "bigo.tv",
-    "buzzcast.com", "liveme.com",
+    "buzzcast.com", "liveme.com", "mixch.tv",
   ];
   return supported.some((d) => hostname === d || hostname.endsWith("." + d));
 }
@@ -172,6 +172,13 @@ function parseProfileUrl(urlString) {
   if (hostname === "liveme.com" || hostname.endsWith(".liveme.com")) {
     const match = path.match(/^\/(?:[a-z]{2}\/)?u\/([A-Za-z0-9_]+)/);
     if (match) return { platform: "liveme", username: match[1] };
+    return null;
+  }
+
+  // Mixch: mixch.tv/u/userId (numeric IDs)
+  if (hostname === "mixch.tv" || hostname.endsWith(".mixch.tv")) {
+    const match = path.match(/^\/u\/([A-Za-z0-9_]+)/);
+    if (match) return { platform: "mixch", username: match[1] };
     return null;
   }
 

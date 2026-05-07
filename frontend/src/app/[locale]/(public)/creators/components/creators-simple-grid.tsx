@@ -25,7 +25,7 @@ export function CreatorsSimpleGrid({
     <Flex gap={20} wrap="wrap">
       {followers?.map((creator) => {
         const avatarUrl = creator.avatar?.url
-          ? generateAvatarUrl(creator.avatar.url)
+          ? generateAvatarUrl(creator.avatar)
           : null;
 
         return (

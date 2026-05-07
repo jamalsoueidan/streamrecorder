@@ -199,7 +199,7 @@ export default async function Page({ params, searchParams }: PageProps) {
           identifier: follower.username,
           alternateName: [follower.nickname, `@${follower.username}`].filter(Boolean),
           description: follower.tagline || follower.description,
-          image: generateAvatarUrl(follower.avatar?.url, true),
+          image: generateAvatarUrl(follower.avatar, true),
           url: profileUrl,
           ...(countryName && {
             nationality: {
@@ -242,7 +242,7 @@ export default async function Page({ params, searchParams }: PageProps) {
             >
               {follower.avatar?.url && (
                 <Image
-                  src={generateAvatarUrl(follower.avatar?.url)}
+                  src={generateAvatarUrl(follower.avatar)}
                   alt={follower.nickname || follower.username}
                   width={72}
                   height={72}

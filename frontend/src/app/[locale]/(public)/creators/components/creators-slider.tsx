@@ -37,7 +37,7 @@ export function CreatorsSlider({
                     <Avatar size={72} radius="xl">
                       {creator.avatar?.url ? (
                         <Image
-                          src={generateAvatarUrl(creator.avatar?.url)}
+                          src={generateAvatarUrl(creator.avatar)}
                           alt={`${creator.username} avatar`}
                           width={72}
                           height={72}

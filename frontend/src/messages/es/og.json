@@ -13,7 +13,8 @@
       "afreecatv": "Creadores de AfreecaTV",
       "bigo": "Creadores de Bigo",
       "buzzcast": "Creadores de Buzzcast",
-      "liveme": "Creadores de LiveMe"
+      "liveme": "Creadores de LiveMe",
+      "mixch": "Creadores de Mixch"
     },
     "subtitle": {
       "all": "Explora todos los streamers y creadores",
@@ -25,7 +26,8 @@
       "afreecatv": "Descubre creadores de AfreecaTV",
       "bigo": "Descubre creadores de Bigo",
       "buzzcast": "Descubre creadores de Buzzcast",
-      "liveme": "Descubre creadores de LiveMe"
+      "liveme": "Descubre creadores de LiveMe",
+      "mixch": "Descubre creadores de Mixch"
     }
   },
   "recordings": {
@@ -39,7 +41,8 @@
       "afreecatv": "Grabaciones de AfreecaTV",
       "bigo": "Grabaciones de Bigo",
       "buzzcast": "Grabaciones de Buzzcast",
-      "liveme": "Grabaciones de LiveMe"
+      "liveme": "Grabaciones de LiveMe",
+      "mixch": "Grabaciones de Mixch"
     },
     "subtitle": {
       "all": "Mira transmisiones en vivo grabadas",
@@ -51,7 +54,8 @@
       "afreecatv": "Mira streams grabados de AfreecaTV",
       "bigo": "Mira streams grabados de Bigo",
       "buzzcast": "Mira streams grabados de Buzzcast",
-      "liveme": "Mira streams grabados de LiveMe"
+      "liveme": "Mira streams grabados de LiveMe",
+      "mixch": "Mira streams grabados de Mixch"
     }
   },
   "home": {

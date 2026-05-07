@@ -21,6 +21,7 @@ export enum FollowerTypeEnum {
   Tango = "tango",
   Buzzcast = "buzzcast",
   Liveme = "liveme",
+  Mixch = "mixch",
 }
 
 /** Filter by follow status */
@@ -7589,6 +7590,7 @@ export enum ActivityTypeEnum {
   Tango = "tango",
   Buzzcast = "buzzcast",
   Liveme = "liveme",
+  Mixch = "mixch",
 }
 
 export enum ActivityGenderEnum {
@@ -7636,6 +7638,7 @@ export enum AiRequestTypeEnum {
   Tango = "tango",
   Buzzcast = "buzzcast",
   Liveme = "liveme",
+  Mixch = "mixch",
 }
 
 export enum AiRequestGenderEnum {
@@ -7711,6 +7714,7 @@ export enum AiTaskTypeEnum {
   Tango = "tango",
   Buzzcast = "buzzcast",
   Liveme = "liveme",
+  Mixch = "mixch",
 }
 
 export enum AiTaskGenderEnum {
@@ -7797,6 +7801,7 @@ export enum ClipTypeEnum {
   Tango = "tango",
   Buzzcast = "buzzcast",
   Liveme = "liveme",
+  Mixch = "mixch",
 }
 
 export enum ClipGenderEnum {
@@ -7850,6 +7855,7 @@ export enum ClipShareTypeEnum {
   Tango = "tango",
   Buzzcast = "buzzcast",
   Liveme = "liveme",
+  Mixch = "mixch",
 }
 
 export enum ClipShareGenderEnum {
@@ -7909,6 +7915,7 @@ export enum FollowerRequestTypeEnum {
   Tango = "tango",
   Buzzcast = "buzzcast",
   Liveme = "liveme",
+  Mixch = "mixch",
 }
 
 export enum FollowerRequestGenderEnum {
@@ -7971,6 +7978,7 @@ export enum MemeTypeEnum1 {
   Tango = "tango",
   Buzzcast = "buzzcast",
   Liveme = "liveme",
+  Mixch = "mixch",
 }
 
 export enum MemeGenderEnum {
@@ -8066,6 +8074,7 @@ export enum SocialAccountTypeEnum {
   Tango = "tango",
   Buzzcast = "buzzcast",
   Liveme = "liveme",
+  Mixch = "mixch",
 }
 
 export enum SocialAccountGenderEnum {
@@ -8120,6 +8129,7 @@ export enum SourceTypeEnum {
   Tango = "tango",
   Buzzcast = "buzzcast",
   Liveme = "liveme",
+  Mixch = "mixch",
 }
 
 export enum SourceGenderEnum {
@@ -8167,6 +8177,7 @@ export enum VisitorViewTypeEnum {
   Tango = "tango",
   Buzzcast = "buzzcast",
   Liveme = "liveme",
+  Mixch = "mixch",
 }
 
 export enum VisitorViewGenderEnum {
@@ -9295,6 +9306,15 @@ export interface UpdateUserData {
 
 export interface DestroyUserData {
   success?: boolean;
+}
+
+export type NotifyStreamersLivePayload = {
+  username: string;
+  type: FollowerTypeEnum;
+}[];
+
+export interface NotifyStreamersLiveData {
+  accepted?: number;
 }
 
 export interface TestPushNotificationData {
@@ -12407,6 +12427,22 @@ export namespace User {
   }
 
   /**
+   * @description Called by n8n with the list of streamers it just confirmed live. Returns 202 immediately and processes in the background: dedups against recent recordings (last 1h), fetches subscribers, fans out Web Push.
+   * @tags User
+   * @name NotifyStreamersLive
+   * @summary Bulk notify followers about streamers that just went live
+   * @request POST:/user/notify-streamers-live
+   * @secure
+   */
+  export namespace NotifyStreamersLive {
+    export type RequestParams = {};
+    export type RequestQuery = {};
+    export type RequestBody = NotifyStreamersLivePayload;
+    export type RequestHeaders = {};
+    export type ResponseBody = NotifyStreamersLiveData;
+  }
+
+  /**
    * No description
    * @tags User
    * @name TestPushNotification
@@ -15480,6 +15516,29 @@ export class Api<
         path: `/user/destroy`,
         method: "DELETE",
         secure: true,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * @description Called by n8n with the list of streamers it just confirmed live. Returns 202 immediately and processes in the background: dedups against recent recordings (last 1h), fetches subscribers, fans out Web Push.
+     *
+     * @tags User
+     * @name NotifyStreamersLive
+     * @summary Bulk notify followers about streamers that just went live
+     * @request POST:/user/notify-streamers-live
+     * @secure
+     */
+    notifyStreamersLive: (
+      data: NotifyStreamersLivePayload,
+      params: RequestParams = {},
+    ) =>
+      this.request<NotifyStreamersLiveData, void>({
+        path: `/user/notify-streamers-live`,
+        method: "POST",
+        body: data,
+        secure: true,
+        type: ContentType.Json,
         format: "json",
         ...params,
       }),

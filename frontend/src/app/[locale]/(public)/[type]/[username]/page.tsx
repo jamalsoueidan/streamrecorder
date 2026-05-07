@@ -178,7 +178,7 @@ export default async function Page({ params }: PageProps) {
       identifier: creatorName,
       alternateName: [follower.nickname, `@${creatorName}`].filter(Boolean),
       description: follower.tagline || follower.description,
-      image: generateAvatarUrl(follower.avatar?.url, true),
+      image: generateAvatarUrl(follower.avatar, true),
       url: profileUrl,
       ...(countryName && {
         nationality: {
@@ -251,7 +251,7 @@ export default async function Page({ params }: PageProps) {
             >
               {follower.avatar?.url && (
                 <Image
-                  src={generateAvatarUrl(follower.avatar?.url)}
+                  src={generateAvatarUrl(follower.avatar)}
                   alt={creatorName}
                   width={100}
                   height={100}

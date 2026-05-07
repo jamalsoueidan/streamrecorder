@@ -98,6 +98,15 @@ export const usePlatformOptions = () => {
         </Center>
       ),
     },
+    {
+      value: "mixch",
+      label: (
+        <Center style={{ gap: 8 }}>
+          <IconBrandFunimation size={18} />
+          <Text size="sm">{t("platforms.mixch")}</Text>
+        </Center>
+      ),
+    },
   ];
 };
 
@@ -151,6 +160,11 @@ export const PLATFORM_OPTIONS = [
   {
     value: "liveme",
     labelKey: "platforms.liveme",
+    icon: IconBrandFunimation,
+  },
+  {
+    value: "mixch",
+    labelKey: "platforms.mixch",
     icon: IconBrandFunimation,
   },
 ];

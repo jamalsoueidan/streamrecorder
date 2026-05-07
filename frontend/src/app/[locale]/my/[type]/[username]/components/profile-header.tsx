@@ -44,7 +44,7 @@ export function ProfileHeader({
     if (!follower.avatar?.url) return;
     const img = new window.Image();
     img.crossOrigin = "anonymous";
-    img.src = generateAvatarUrl(follower.avatar.url);
+    img.src = generateAvatarUrl(follower.avatar);
     img.onload = () => {
       const fac = new FastAverageColor();
       const result = fac.getColor(img, { algorithm: "dominant" });
@@ -85,7 +85,7 @@ export function ProfileHeader({
               >
                 {follower.avatar?.url && (
                   <Image
-                    src={generateAvatarUrl(follower.avatar?.url)}
+                    src={generateAvatarUrl(follower.avatar)}
                     alt={"Avatar"}
                     width={120}
                     height={120}
@@ -191,7 +191,7 @@ export function ProfileHeader({
               >
                 {follower.avatar?.url && (
                   <Image
-                    src={generateAvatarUrl(follower.avatar?.url)}
+                    src={generateAvatarUrl(follower.avatar)}
                     alt={"Avatar"}
                     width={80}
                     height={80}

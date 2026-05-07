@@ -19,7 +19,7 @@ export function CreatorCard({ follower, width = 200 }: CreatorCardProps) {
   const format = useFormatter();
   const now = useNow({ updateInterval: 1000 * 30 });
   const avatarUrl = follower.avatar?.url
-    ? generateAvatarUrl(follower.avatar.url)
+    ? generateAvatarUrl(follower.avatar)
     : null;
 
   return (

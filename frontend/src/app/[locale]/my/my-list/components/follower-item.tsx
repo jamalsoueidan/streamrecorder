@@ -120,7 +120,7 @@ export default function FollowerItem({ follower, isOpen }: Props) {
               <Image
                 src={
                   follower.avatar?.url
-                    ? generateAvatarUrl(follower.avatar.url)
+                    ? generateAvatarUrl(follower.avatar)
                     : "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
                 }
                 alt="Avatar"
