@@ -47,26 +47,9 @@ async function processStreamersLive(items: LiveItem[]) {
     if (id) itemByFollowerId.set(id, it);
   }
 
-  // Step 2 — dedup. Followers with any source in the last 1h are
-  // mid-session; skip them.
-  const recent: Array<{ follower_id: number }> = await knex("sources as s")
-    .distinct("rfl.follower_id")
-    .join("sources_recording_lnk as srl", "srl.source_id", "s.id")
-    .join("recordings_follower_lnk as rfl", "rfl.recording_id", "srl.recording_id")
-    .whereIn("rfl.follower_id", followerIds)
-    .where("s.created_at", ">", knex.raw("NOW() - INTERVAL '1 hour'"));
-
-  const recentSet = new Set(recent.map((r) => r.follower_id));
-  const eligibleFollowerIds = followerIds.filter((id) => !recentSet.has(id));
-
-  if (!eligibleFollowerIds.length) {
-    strapi.log.info(
-      `[notify] all ${followerIds.length} streamers were mid-session, skipping`,
-    );
-    return;
-  }
-
-  // Step 3 — all subscribers for eligible streamers, in one query.
+  // Step 2 — subscribers first. If zero users with push enabled follow
+  // any of these streamers, we can bail before touching the sources table.
+  // Common in early rollout when only a handful of users have opted in.
   const subRows: Array<{
     follower_id: number;
     user_id: number;
@@ -80,8 +63,39 @@ async function processStreamersLive(items: LiveItem[]) {
       "u.push_subscription",
     )
     .join("up_users as u", "u.id", "ufl.user_id")
-    .whereIn("ufl.follower_id", eligibleFollowerIds)
+    .whereIn("ufl.follower_id", followerIds)
     .whereNotNull("u.push_subscription");
+
+  if (!subRows.length) {
+    strapi.log.info(
+      `[notify] no subscribers for any of ${followerIds.length} live streamers, skipping`,
+    );
+    return;
+  }
+
+  // Step 3 — dedup, but only on followers that actually have subscribers.
+  // Followers with any source in the last 1h are mid-session; skip them.
+  const followersWithSubs = Array.from(
+    new Set(subRows.map((r) => r.follower_id)),
+  );
+  const recent: Array<{ follower_id: number }> = await knex("sources as s")
+    .distinct("rfl.follower_id")
+    .join("sources_recording_lnk as srl", "srl.source_id", "s.id")
+    .join("recordings_follower_lnk as rfl", "rfl.recording_id", "srl.recording_id")
+    .whereIn("rfl.follower_id", followersWithSubs)
+    .where("s.created_at", ">", knex.raw("NOW() - INTERVAL '1 hour'"));
+
+  const recentSet = new Set(recent.map((r) => r.follower_id));
+  const eligibleFollowerIds = followersWithSubs.filter(
+    (id) => !recentSet.has(id),
+  );
+
+  if (!eligibleFollowerIds.length) {
+    strapi.log.info(
+      `[notify] all ${followersWithSubs.length} subscribed streamers were mid-session, skipping`,
+    );
+    return;
+  }
 
   // Group by user so we can merge multiple newly-live streamers a user
   // follows into a single push (avoids the OS coalescing rapid same-origin
@@ -153,7 +167,7 @@ async function processStreamersLive(items: LiveItem[]) {
         payload: {
           title,
           body,
-          url: localizeUrl(bucket.locale, `/${it.type}/${it.username}`),
+          url: localizeUrl(bucket.locale, `/my/${it.type}/${it.username}`),
           tag: `live-${it.type}-${it.username}`,
         },
       });
@@ -166,7 +180,7 @@ async function processStreamersLive(items: LiveItem[]) {
         payload: {
           title,
           body,
-          url: localizeUrl(bucket.locale, `/live`),
+          url: localizeUrl(bucket.locale, `/my/live`),
           // Per-user batch tag so a follow-up batch replaces the previous
           // banner for the same user instead of stacking.
           tag: `live-batch-${userId}`,
