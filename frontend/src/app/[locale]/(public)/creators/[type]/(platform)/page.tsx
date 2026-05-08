@@ -5,7 +5,6 @@ import { generateProfileUrl } from "@/app/lib/profile-url";
 import { generateAlternates } from "@/app/lib/seo";
 import { streamingPlatforms } from "@/app/lib/streaming-platforms";
 import {
-  Button,
   Center,
   Image,
   Paper,
@@ -17,7 +16,6 @@ import { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { getCreators } from "../../cache";
 import { CreatorsSimpleGrid } from "../../components/creators-simple-grid";
-import Link from "@/app/components/link";
 import { LinkButton } from "@/app/components/link-button";
 
 interface PageProps {

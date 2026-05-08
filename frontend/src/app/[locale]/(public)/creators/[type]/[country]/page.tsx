@@ -9,7 +9,6 @@ import { generateProfileUrl } from "@/app/lib/profile-url";
 import { generateAlternates } from "@/app/lib/seo";
 import { streamingPlatforms } from "@/app/lib/streaming-platforms";
 import {
-  Button,
   Center,
   Image,
   Paper,
@@ -22,7 +21,6 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { getCreatorsByCountry } from "../../cache";
 import { CreatorsSimpleGrid } from "../../components/creators-simple-grid";
-import Link from "@/app/components/link";
 import { LinkButton } from "@/app/components/link-button";
 
 interface PageProps {

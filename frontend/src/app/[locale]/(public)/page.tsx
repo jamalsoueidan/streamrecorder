@@ -2,7 +2,6 @@ import { generateProfileUrl } from "@/app/lib/profile-url";
 import { generateAlternates } from "@/app/lib/seo";
 import { getAlternateOgLocales, getOgLocale } from "@/i18n/routing";
 import {
-  Button,
   Container,
   Flex,
   Paper,
@@ -24,7 +23,6 @@ import { ClipSlider } from "./components/clip-slider";
 import { PlatformBadges } from "./components/platform-badge";
 import { CreatorsSlider } from "./creators/components/creators-slider";
 import { RecordingsSimpleGrid } from "./recordings/components/recordings-simple-grid";
-import Link from "@/app/components/link";
 import { LinkButton } from "@/app/components/link-button";
 
 interface PageProps {
