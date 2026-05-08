@@ -1,0 +1,13 @@
+{
+  "title": "Jetzt Live",
+  "subtitle": "Streams, die gerade aufgenommen werden",
+  "streamingCount": "{count, plural, one {# streamt} other {# streamen}}",
+  "refresh": "Aktualisieren",
+  "allPlatforms": "Alle Plattformen",
+  "showAll": "Alle anzeigen",
+  "discoverStreamers": "Freunde finden",
+  "emptyState": {
+    "title": "Aktuell keine Live-Streams",
+    "description": "Wenn deine Creator live gehen, erscheinen ihre Streams hier"
+  }
+}

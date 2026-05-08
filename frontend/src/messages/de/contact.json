@@ -1,0 +1,35 @@
+{
+  "meta": {
+    "title": "Kontakt",
+    "description": "Nimm Kontakt mit uns auf"
+  },
+  "header": {
+    "title": "Kontakt",
+    "subtitle": "Wir freuen uns, von dir zu hören"
+  },
+  "form": {
+    "title": "Nachricht senden",
+    "description": "Fülle das Formular aus und wir melden uns so schnell wie möglich bei dir.",
+    "name": {
+      "label": "Name",
+      "placeholder": "Dein Name"
+    },
+    "email": {
+      "label": "E-Mail",
+      "placeholder": "deine@email.de"
+    },
+    "subject": {
+      "label": "Betreff",
+      "placeholder": "Worum geht es?"
+    },
+    "message": {
+      "label": "Nachricht",
+      "placeholder": "Deine Nachricht …"
+    },
+    "submit": "Nachricht senden"
+  },
+  "submitted": {
+    "title": "Nachricht gesendet!",
+    "description": "Danke für deine Anfrage. Wir melden uns bald bei dir."
+  }
+}

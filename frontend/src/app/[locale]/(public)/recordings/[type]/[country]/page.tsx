@@ -20,6 +20,8 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { getRecordingsByCountry } from "../../cache";
 import { RecordingsSimpleGrid } from "../../components/recordings-simple-grid";
+import Link from "@/app/components/link";
+import { LinkButton } from "@/app/components/link-button";
 
 interface PageProps {
   params: Promise<{
@@ -32,9 +34,7 @@ interface PageProps {
   }>;
 }
 
-export const revalidate = 86400;
-export const dynamicParams = true;
-
+export const dynamic = "force-dynamic";
 export async function generateStaticParams() {
   return [];
 }
@@ -246,15 +246,13 @@ export default async function Page({ params, searchParams }: PageProps) {
                   country: countryName,
                 })}
               </Text>
-              <Button
-                component="a"
-                href="/register"
+              <LinkButton href="/register"
                 variant="gradient"
                 gradient={{ from: "#6366f1", to: "#a855f7", deg: 135 }}
                 mt="sm"
               >
                 {t("cta.button")}
-              </Button>
+              </LinkButton>
             </Stack>
           </Paper>
         )}

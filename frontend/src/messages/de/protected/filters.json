@@ -1,0 +1,74 @@
+{
+  "platforms": {
+    "label": "Plattform",
+    "all": "Alle",
+    "tiktok": "TikTok",
+    "twitch": "Twitch",
+    "youtube": "YouTube",
+    "kick": "Kick",
+    "afreecatv": "AfreecaTV",
+    "pandalive": "PandaLive",
+    "bigo": "Bigo",
+    "buzzcast": "Buzzcast",
+    "liveme": "LiveMe",
+    "mixch": "Mixch"
+  },
+  "sort": {
+    "label": "Sortieren nach",
+    "usernameAsc": "A–Z",
+    "usernameDesc": "Z–A",
+    "createdAtDesc": "Zuletzt hinzugefügt",
+    "createdAtAsc": "Zuerst hinzugefügt",
+    "totalRecordingsDesc": "Meiste Aufnahmen",
+    "totalRecordingsAsc": "Wenigste Aufnahmen",
+    "latestRecordingDesc": "Zuletzt gestreamt",
+    "latestRecordingAsc": "Ältester Stream",
+    "updatedAtDesc": "Neueste",
+    "updatedAtAsc": "Älteste"
+  },
+  "gender": {
+    "label": "Geschlecht",
+    "all": "Alle",
+    "female": "Weiblich",
+    "male": "Männlich",
+    "unknown": "Andere"
+  },
+  "dateRange": {
+    "label": "Hinzugefügt",
+    "today": "Heute",
+    "yesterday": "Gestern",
+    "thisWeek": "Diese Woche",
+    "lastWeek": "Letzte Woche",
+    "thisMonth": "Diesen Monat",
+    "lastMonth": "Letzten Monat",
+    "all": "Alle"
+  },
+  "duration": {
+    "label": "Dauer",
+    "short": "Unter 4 Min.",
+    "medium": "4–20 Min.",
+    "long": "Über 20 Min.",
+    "all": "Alle"
+  },
+  "country": {
+    "label": "Land",
+    "placeholder": "Weitere Länder …"
+  },
+  "language": {
+    "label": "Sprache",
+    "placeholder": "Weitere Sprachen …"
+  },
+  "search": {
+    "placeholder": "Benutzernamen suchen …"
+  },
+  "actions": {
+    "clearAll": "Alle zurücksetzen",
+    "filters": "Filter",
+    "favorites": "Favoriten",
+    "done": "Fertig"
+  },
+  "options": {
+    "hasRecordings": "Nur Creator mit Aufnahmen anzeigen"
+  },
+  "excludeMyCreators": "Meine Creator ausschließen"
+}

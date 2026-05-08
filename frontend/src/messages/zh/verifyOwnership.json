@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "title": "验证你的账号",
+    "description": "验证你的直播主页所有权,以认领账号或管理你的内容。"
+  },
+  "header": {
+    "title": "验证所有权",
+    "subtitle": "证明此账号属于你,以认领主页或管理你的内容"
+  },
+  "common": {
+    "copy": "复制",
+    "copied": "已复制！"
+  },
+  "steps": {
+    "enterUrl": {
+      "label": "你的主页",
+      "description": "输入你的直播主页 URL",
+      "intro": "输入你的直播主页 URL。",
+      "input": {
+        "label": "主页 URL",
+        "placeholder": "https://tiktok.com/@yourusername"
+      },
+      "detected": "已检测：{platform} - @{username}",
+      "continue": "继续",
+      "email": {
+        "label": "邮箱地址",
+        "placeholder": "you@example.com"
+      },
+      "error": {
+        "required": "请输入你的主页 URL",
+        "invalid": "我们无法识别此 URL",
+        "emailRequired": "请输入你的邮箱地址",
+        "emailInvalid": "请输入有效的邮箱地址"
+      }
+    },
+    "verify": {
+      "label": "验证",
+      "description": "将代码添加到你的简介中",
+      "intro": "为了证明此账号属于你,请将下方的验证代码添加到你的主页简介中。验证后可以移除。",
+      "codeLabel": "你的验证代码",
+      "instructions": "复制此代码并将其添加到你的主页简介的任何位置。可以放在开头、结尾或中间 — 我们会找到它。",
+      "openProfile": "打开 {platform} 主页",
+      "verifyButton": "我已添加代码 - 立即验证",
+      "failed": {
+        "title": "未找到代码",
+        "message": "我们在你的简介中找不到验证代码。请确保添加代码后已保存主页。如果你无法将代码添加到简介中,请返回并使用 DMCA 表单。",
+        "backToForm": "返回 DMCA 表单"
+      }
+    },
+    "complete": {
+      "created": {
+        "title": "欢迎！",
+        "message": "你的账号已创建,主页已链接。",
+        "button": "仪表盘"
+      },
+      "linked": {
+        "title": "主页已链接",
+        "message": "你的主页已链接到你的账号。请登录以访问仪表盘。",
+        "button": "前往登录"
+      },
+      "notFound": {
+        "title": "未找到主页",
+        "message": "你的所有权已验证,但此创作者在我们的系统中不存在。"
+      }
+    }
+  }
+}

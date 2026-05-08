@@ -1,0 +1,75 @@
+{
+  "beta": "数据洞察目前为测试版。随着我们持续改进此功能,数据可能不完整或会有变化。",
+  "tabs": {
+    "videos": "视频",
+    "clips": "短视频",
+    "insights": "数据"
+  },
+  "stats": {
+    "totalDiamonds": "总钻石数",
+    "battleDiamonds": "PK 获得钻石",
+    "nonBattleDiamonds": "非 PK 钻石",
+    "battles": "PK 场次",
+    "won": "胜利",
+    "lost": "失败",
+    "winRate": "胜率",
+    "gifters": "送礼者",
+    "chatParticipants": "聊天参与者"
+  },
+  "battleHistory": {
+    "title": "PK 历史",
+    "empty": "暂未记录 PK。",
+    "colDate": "日期",
+    "colType": "类型",
+    "colOpponents": "对手",
+    "colScore": "分数",
+    "colDiamonds": "钻石",
+    "colResult": "结果",
+    "vs": "vs",
+    "with": "与",
+    "live": "直播中",
+    "interrupted": "中断",
+    "won": "胜",
+    "draw": "平",
+    "lost": "负"
+  },
+  "streamActivity": {
+    "title": "最近直播",
+    "empty": "暂无直播会话。",
+    "colDate": "日期",
+    "colDuration": "时长",
+    "colPeakViewers": "峰值观众",
+    "colAvgViewers": "平均观众",
+    "colDiamonds": "钻石",
+    "colBattles": "PK",
+    "durationMinutes": "{m} 分钟",
+    "durationHoursMinutes": "{h} 小时 {m} 分钟"
+  },
+  "topGifters": {
+    "title": "顶级送礼者",
+    "empty": "暂无送礼者数据。",
+    "giftCount": "{count} 份礼物"
+  },
+  "topOpponents": {
+    "title": "顶级对手",
+    "empty": "暂无 PK 数据。",
+    "wins": "{count}胜",
+    "losses": "{count}负",
+    "battleCount": "{count} 场 PK"
+  },
+  "earnings": {
+    "title": "收益",
+    "empty": "暂无收益数据。",
+    "seriesLabel": "钻石"
+  },
+  "schedule": {
+    "title": "他们的开播时间",
+    "mon": "周一",
+    "tue": "周二",
+    "wed": "周三",
+    "thu": "周四",
+    "fri": "周五",
+    "sat": "周六",
+    "sun": "周日"
+  }
+}

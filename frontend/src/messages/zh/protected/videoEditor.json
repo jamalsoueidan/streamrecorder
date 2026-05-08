@@ -1,0 +1,22 @@
+{
+  "modal": {
+    "title": "编辑短视频",
+    "description": "从 {username} 的视频剪辑并导出短视频"
+  },
+  "actions": {
+    "saveClip": "保存短视频",
+    "downloadClip": "下载短视频",
+    "export": "导出"
+  },
+  "maxDuration": "短视频最长时长：{minutes} 分钟",
+  "notifications": {
+    "exportStarted": {
+      "title": "已开始导出",
+      "message": "你的短视频正在处理,完成后将保存到你的存储中"
+    },
+    "downloadQueued": {
+      "title": "下载已排队",
+      "message": "你的短视频准备好后将通过邮件发送给你"
+    }
+  }
+}

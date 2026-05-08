@@ -1,0 +1,28 @@
+{
+  "meta": {
+    "title": "{nickname} (@{username}) – Videos & Aufnahmen",
+    "notFoundTitle": "Creator nicht gefunden",
+    "notFoundDescription": "Dieses Creator-Profil konnte nicht gefunden werden.",
+    "description": "Sieh dir die {platform}-Live-Aufnahmen und Clips von {nickname} an. {nickname} nutzt Live Stream Recorder, um Live-Streams zu speichern und zu teilen.",
+    "ogTitle": "{nickname} – Videos & Clips | Live Stream Recorder",
+    "twitterTitle": "{nickname} – {platform} Videos & Clips",
+    "keywords": "{nickname} Videos, {nickname} Clips, {nickname} {platform}, {nickname} ansehen, {nickname} Live-Stream, {nickname} Aufnahmen"
+  },
+  "defaultTagline": "{nickname} speichert hier seine Live-Streams. Sieh dir Aufnahmen und Clips jederzeit an.",
+  "about": "Über {nickname}",
+  "faq": "FAQ",
+  "recorded": "Aufgenommen am {date}",
+  "emptyState": {
+    "title": "Noch keine Aufnahmen",
+    "description": "Dieser Creator hat noch keine Streams gespeichert. Schau später wieder vorbei!"
+  },
+  "jsonLd": {
+    "streamTitle": "Stream von {nickname} – {date}"
+  },
+  "report": "Melden",
+  "cta": {
+    "title": "Du siehst nur eine Vorschau von @{username}",
+    "description": "@{username} teilt seine Aufnahmen hier. Registriere dich, um deine eigenen Streams zu speichern und zu teilen.",
+    "button": "Kostenloses Konto erstellen"
+  }
+}

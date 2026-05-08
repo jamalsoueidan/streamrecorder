@@ -1,0 +1,82 @@
+{
+  "follow": {
+    "tooltip": "Ajouter un créateur",
+    "successTitle": "Ajouté !",
+    "successMessage": "{username} a été ajouté·e",
+    "errorTitle": "Erreur",
+    "blockedMessage": "Ce créateur n'est pas disponible suite à une demande DMCA. Consulte nos <terms>Conditions d'utilisation</terms> pour plus de détails."
+  },
+  "unfollow": {
+    "tooltip": "Retirer le créateur",
+    "successTitle": "Retiré",
+    "successMessage": "Tu as retiré {username}",
+    "successMessageGeneric": "Retiré avec succès"
+  },
+  "scopeFilter": {
+    "label": "Filtre :",
+    "following": "Mes enregistrements",
+    "discover": "Amis",
+    "all": "Tous"
+  },
+  "recordings": {
+    "liveAgo_context": "Pour les lives, indique quand l'enregistrement a commencé. Ex. « enregistrement démarré il y a 15 minutes ».",
+    "liveAgo": "enregistrement démarré {time}",
+    "recordedAgo_context": "Pour les streams enregistrés, indique quand l'enregistrement a été fait. Ex. « enregistré il y a 3 jours ».",
+    "recordedAgo": "enregistré {time}",
+    "recordCount": "REC {count}",
+    "newRecording": "Nouveau",
+    "parts": "{count, plural, one {# partie} other {# parties}}",
+    "videoCount": "{count, plural, one {# vidéo} other {# vidéos}}",
+    "noRecordings": "Tu as atteint la fin",
+    "hide": "Masquer du public",
+    "show": "Afficher au public",
+    "delete": "Supprimer la vidéo",
+    "deleteConfirm": {
+      "title": "Supprimer la vidéo",
+      "message": "Es-tu sûr·e de vouloir supprimer cette vidéo ? Cette action est irréversible.",
+      "confirm": "Supprimer",
+      "cancel": "Annuler"
+    },
+    "createWithAI": "Créer des clips avec l'IA",
+    "addToWatchLater": "Ajouter à À regarder plus tard",
+    "removeFromWatchLater": "Retirer de À regarder plus tard",
+    "addedToWatchLater": "Ajouté à À regarder plus tard",
+    "removedFromWatchLater": "Retiré de À regarder plus tard",
+    "videoLimitMessage": "Tu as atteint ta limite de vidéos gratuites.",
+    "download": "Télécharger la vidéo",
+    "downloadPart": "Partie {part}",
+    "sendToEmail": "Envoyer par e-mail",
+    "downloadEmailSent": "Lien de téléchargement en route vers ton e-mail",
+    "downloadFeatureMessage": "Le téléchargement de vidéos est une fonctionnalité Premium.",
+    "editClip": "Modifier le clip",
+    "deleteSources": "Supprimer les sources",
+    "deleteSourcesSuccess": "{count} sources supprimées"
+  },
+  "followers": {
+    "addedAgo_context": "Quand un créateur a été ajouté à ta liste. Ex. « Ajouté il y a 3 jours ».",
+    "addedAgo": "Ajouté {time}",
+    "limitReachedTitle": "Limite de créateurs atteinte",
+    "upgradeModalHeadline": "Ne rate plus jamais un live",
+    "max3Message": "Tu as atteint la limite de 3 créateurs sur l'offre gratuite.",
+    "max50Message": "Tu as atteint ta limite de 50 créateurs sur cette offre.",
+    "max100Message": "Tu as atteint ta limite de 100 créateurs sur cette offre.",
+    "upgradeButton": "Passer Premium",
+    "upgradeModalDiscount": "20 % de réduction sur ton premier mois",
+    "upgradeModalCodeNote": "À appliquer au paiement",
+    "unfollowUpgradeTitle": "Gère tes créateurs librement avec Premium"
+  },
+  "newest": "Plus récents",
+  "oldest": "Plus anciens",
+  "expired": {
+    "title": "Ton offre Premium est terminée",
+    "subtitle": "Tes créateurs ne sont plus enregistrés. Renouvelle maintenant pour reprendre exactement où tu t'étais arrêté·e — tous tes créateurs et tes réglages sont encore sauvegardés.",
+    "renewButton": "Renouveler Premium — tout garder",
+    "or": "ou",
+    "loseTitle": "Si tu rétrogrades, tu perdras définitivement :",
+    "loseCreators": "Tous les créateurs suivis et leurs enregistrements",
+    "loseFavorites": "Tous tes favoris enregistrés",
+    "loseClips": "Clips, téléchargements et fonctions IA",
+    "losePremium": "L'accès à toutes les fonctionnalités Premium",
+    "downgradeButton": "Rétrograder"
+  }
+}

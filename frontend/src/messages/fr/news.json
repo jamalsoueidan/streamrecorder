@@ -1,0 +1,12 @@
+{
+  "meta": {
+    "title": "Actualités et mises à jour",
+    "description": "Reste informé·e des dernières annonces, fonctionnalités et mises à jour importantes de LiveStreamRecorder."
+  },
+  "title": "Actualités et mises à jour",
+  "subtitle": "Reste informé·e des dernières annonces, fonctionnalités et mises à jour importantes.",
+  "empty": {
+    "title": "Aucune actualité pour l'instant",
+    "description": "Reviens bientôt pour des mises à jour."
+  }
+}

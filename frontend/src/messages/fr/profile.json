@@ -1,0 +1,28 @@
+{
+  "meta": {
+    "title": "{nickname} (@{username}) – Vidéos & enregistrements",
+    "notFoundTitle": "Créateur introuvable",
+    "notFoundDescription": "Ce profil de créateur n'a pas pu être trouvé.",
+    "description": "Regarde les enregistrements de lives {platform} et les clips de {nickname}. {nickname} utilise Live Stream Recorder pour sauvegarder et partager ses lives.",
+    "ogTitle": "{nickname} — Vidéos & clips | Live Stream Recorder",
+    "twitterTitle": "{nickname} — Vidéos & clips {platform}",
+    "keywords": "{nickname} vidéos, {nickname} clips, {nickname} {platform}, regarder {nickname}, {nickname} live, {nickname} enregistrements"
+  },
+  "defaultTagline": "{nickname} sauvegarde ses lives ici. Regarde les enregistrements et les clips à tout moment.",
+  "about": "À propos de {nickname}",
+  "faq": "FAQ",
+  "recorded": "Enregistré le {date}",
+  "emptyState": {
+    "title": "Pas encore d'enregistrements",
+    "description": "Ce créateur n'a encore sauvegardé aucun stream. Reviens plus tard !"
+  },
+  "jsonLd": {
+    "streamTitle": "Stream de {nickname} – {date}"
+  },
+  "report": "Signaler",
+  "cta": {
+    "title": "Tu ne vois qu'un aperçu de @{username}",
+    "description": "@{username} partage ses enregistrements ici. Inscris-toi pour sauvegarder et partager tes propres streams.",
+    "button": "Créer un compte gratuit"
+  }
+}

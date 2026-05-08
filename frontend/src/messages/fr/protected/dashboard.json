@@ -1,0 +1,14 @@
+{
+  "title": "Tableau de bord",
+  "description": "Bon retour ! Voici les nouveautés",
+  "greetingMorning": "Bonjour {username} !",
+  "greetingAfternoon": "Bon après-midi {username} !",
+  "greetingEvening": "Bonsoir {username} !",
+  "greetingSubtitle": "Voici les nouveautés dans ton feed",
+  "noRecordings": "Aucun enregistrement disponible",
+  "browseAll": "Tout parcourir",
+  "newCreators": "Nouveaux créateurs",
+  "myFeed": "Mon feed",
+  "discoverSection": "Découvrir",
+  "favorites": "Favoris"
+}

@@ -1,0 +1,99 @@
+{
+  "meta": {
+    "title": "DMCA-Richtlinie",
+    "description": "Reiche eine DMCA-Aufforderung zur Entfernung von Inhalten ein, die dein Urheberrecht verletzen."
+  },
+  "header": {
+    "title": "Digital Millennium Copyright Act",
+    "subtitle": "DMCA-Richtlinie"
+  },
+  "divider": "Oder übernimm selbst die Kontrolle",
+  "footer": "Wir bearbeiten alle gültigen DMCA-Anfragen. Missbrauch dieses Verfahrens kann rechtliche Konsequenzen haben.",
+  "partner": {
+    "title": "Moment! Werde stattdessen Partner",
+    "badge": "Empfohlen",
+    "subtitle": "Übernimm die Kontrolle über deinen Content und vergrößere deine Reichweite",
+    "publicMessage": "Du streamst bereits öffentlich. Wir helfen deinen Fans, dich auf Google zu finden, und schicken sie direkt zu deinen besten Momenten.",
+    "discovery": {
+      "title": "Google-Suche",
+      "description": "Deine Streams erscheinen in Suchergebnissen und wir leiten Fans direkt zu deinem Profil"
+    },
+    "analytics": {
+      "title": "Analyse-Dashboard",
+      "description": "Verfolge Aufrufe, Wiedergabezeit, Standort der Zuschauer und Wachstumstrends"
+    },
+    "highlights": {
+      "title": "KI-gestützte Highlights",
+      "description": "Wir finden und präsentieren automatisch deine besten Streaming-Momente"
+    },
+    "clips": {
+      "title": "Clip Creator",
+      "description": "Lade Clips herunter, um sie auf TikTok, YouTube und mehr zu teilen"
+    },
+    "translation": {
+      "title": "Mehrsprachige Unterstützung",
+      "description": "Erreiche globale Fans mit automatisch übersetzten Untertiteln und Beschreibungen"
+    },
+    "rankings": {
+      "title": "Streamer-Rankings",
+      "description": "Werde in Top-Streamer-Listen und Kategorieseiten gefeatured"
+    },
+    "brands": {
+      "title": "Marken-Möglichkeiten",
+      "description": "Werde von Sponsoren entdeckt, die nach Creatorn wie dir suchen"
+    },
+    "control": {
+      "title": "Volle Privatsphäre-Kontrolle",
+      "description": "Lösche Videos, verberge Videos, kontrolliere deine Aufnahmen"
+    },
+    "cta": "Profil beanspruchen & Partner werden",
+    "ctaSubtext": "Dauert 2 Minuten • Volle Kontrolle über deinen Content"
+  },
+  "form": {
+    "title": "Mitteilung über behauptete Rechtsverletzung",
+    "description": "Bitte nutze dieses Formular, um die Entfernung von Aufnahmen gemäß DMCA zu beantragen.",
+    "verifyFirst": {
+      "title": "Schnelle Verifizierung",
+      "message": "Verifiziere den Kontobesitz, um deine Aufnahmen sofort zu entfernen. Wenn du dich nicht verifizieren kannst, nutze das DMCA-Formular – manuelle Anfragen werden innerhalb von 10 Werktagen bearbeitet.",
+      "button": "Verifizieren & sofort entfernen"
+    },
+    "content": {
+      "label": "Folgender Inhalt",
+      "description": "Gib die URL(s) oder Beschreibung des rechtsverletzenden Inhalts an",
+      "placeholder": "https://example.com/recording/..."
+    },
+    "copyrightType": {
+      "label": "Bitte wähle eine Option",
+      "personal": "Verletzt mein persönliches Urheberrecht",
+      "authorized": "Verletzt das Urheberrecht von jemandem, den ich rechtlich vertreten darf"
+    },
+    "email": {
+      "label": "Deine E-Mail-Adresse",
+      "description": "Wir verwenden diese, um auf deine Anfrage zu antworten",
+      "placeholder": "du@beispiel.de"
+    },
+    "perjury": {
+      "title": "Indem ich die folgenden Kästchen ankreuze, erkläre ich UNTER STRAFE DES MEINEIDS, dass:",
+      "warning": "Bitte lies jede Erklärung sorgfältig, bevor du sie ankreuzt.",
+      "goodFaith": "Ich erkläre hiermit, dass ich nach Treu und Glauben davon überzeugt bin, dass die Verbreitung des urheberrechtlich geschützten Materials an der oben genannten Stelle nicht vom Urheberrechtsinhaber, seinem Vertreter oder dem Gesetz autorisiert ist (z. B. als Fair Use).",
+      "accurate": "Ich erkläre hiermit, dass die Angaben in dieser Mitteilung korrekt sind, und unter Strafe des Meineids, dass ich der Inhaber oder berechtigt bin, im Namen des Inhabers des Urheberrechts oder eines ausschließlichen Rechts am Urheberrecht, das angeblich verletzt wird, zu handeln.",
+      "acknowledge": "Ich bestätige, dass gemäß Abschnitt 512(f) jede Person, die wissentlich falsche Angaben über die Rechtsverletzung von Material oder Aktivitäten macht, für Schadensersatz haftbar gemacht werden kann."
+    },
+    "signature": {
+      "label": "Digitale Unterschrift",
+      "description": "Die Eingabe deines vollständigen Namens in dieses Feld gilt als deine digitale Unterschrift",
+      "placeholder": "Dein vollständiger rechtlicher Name"
+    },
+    "captcha": {
+      "label": "Verifizierung",
+      "description": "Was ist {question}?",
+      "placeholder": "Deine Antwort",
+      "error": "Falsche Antwort, versuche es erneut"
+    },
+    "submit": "DMCA-Anfrage einreichen"
+  },
+  "submitted": {
+    "title": "DMCA-Anfrage eingereicht",
+    "description": "Wir haben deine DMCA-Aufforderung erhalten. Wir prüfen sie und antworten an die von dir angegebene E-Mail-Adresse."
+  }
+}

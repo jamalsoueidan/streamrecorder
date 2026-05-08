@@ -1,0 +1,156 @@
+{
+  "meta": {
+    "title": "Datenschutzerklärung",
+    "description": "Datenschutzerklärung von LiveStreamRecorder. Erfahre, wie wir deine Daten erheben, nutzen und schützen."
+  },
+  "header": {
+    "title": "Datenschutzerklärung",
+    "lastUpdated": "Zuletzt aktualisiert: {date}"
+  },
+  "overview": {
+    "title": "Überblick",
+    "content": "Wir halten es einfach. Wir erheben minimale Daten und verkaufen sie nicht an Dritte. Keine invasive Analyse, kein Werbe-Tracking. Deine Privatsphäre ist uns wichtig."
+  },
+  "dataController": {
+    "title": "Verantwortlicher",
+    "content": "LiveStreamRecorder.com ist für deine personenbezogenen Daten verantwortlich. Wenn du Fragen zu dieser Datenschutzerklärung oder unseren Datenpraktiken hast, kannst du uns kontaktieren unter:",
+    "email": "contact@livestreamrecorder.com"
+  },
+  "whatWeCollect": {
+    "title": "Was wir erfassen",
+    "intro": "Wenn du ein Konto erstellst, speichern wir:",
+    "items": {
+      "email": "E-Mail-Adresse",
+      "emailDesc": "damit du dich anmelden und dein Konto wiederherstellen kannst",
+      "username": "Benutzername",
+      "usernameDesc": "um dein Konto zu identifizieren",
+      "lastLogin": "Datum der letzten Anmeldung",
+      "lastLoginDesc": "für die einfache Kontoverwaltung",
+      "streamers": "Streamer, denen du folgst",
+      "streamersDesc": "um dir Inhalte von Streamern zu zeigen, die dich interessieren"
+    },
+    "footer": "Das war's. Nichts weiter."
+  },
+  "legalBasis": {
+    "title": "Rechtsgrundlage der Verarbeitung",
+    "intro": "Gemäß DSGVO verarbeiten wir deine personenbezogenen Daten auf folgenden Rechtsgrundlagen:",
+    "items": {
+      "contract": "Vertrag",
+      "contractDesc": "Die Verarbeitung ist erforderlich, um dir unsere Dienste bereitzustellen",
+      "consent": "Einwilligung",
+      "consentDesc": "Du hast für bestimmte Zwecke (z. B. Marketing-E-Mails) eingewilligt",
+      "legitimateInterest": "Berechtigtes Interesse",
+      "legitimateInterestDesc": "Zur Verbesserung unserer Dienste und zum Schutz vor Betrug"
+    }
+  },
+  "payment": {
+    "title": "Zahlungsabwicklung",
+    "content": "Für kostenpflichtige Abonnements nutzen wir Freemius als Zahlungsabwickler und Merchant of Record. Freemius erfasst und verarbeitet deine Zahlungsinformationen direkt. Wir speichern deine Kreditkartendaten nicht auf unseren Servern.",
+    "stripePolicy": "Die Datenschutzerklärung von Freemius findest du unter: freemius.com/privacy"
+  },
+  "analytics": {
+    "title": "Analyse",
+    "intro": "Wir verwenden Umami, ein datenschutzfreundliches Analyse-Tool, um zu verstehen, wie unsere Seite genutzt wird. Das hilft uns, das Erlebnis zu verbessern.",
+    "notCollect": "Was Umami NICHT erfasst:",
+    "notCollectItems": {
+      "personal": "Keine persönlichen Informationen",
+      "tracking": "Kein seitenübergreifendes Tracking"
+    },
+    "collect": "Was wir erfassen:",
+    "collectItems": {
+      "pageViews": "Seitenaufrufe",
+      "referrer": "Referrer (woher du kommst)",
+      "browser": "Browser- und Gerätetyp",
+      "country": "Land (kein präziser Standort)"
+    },
+    "footer": "Alle Daten werden anonymisiert und auf unseren eigenen Servern in Europa gespeichert."
+  },
+  "accessControl": {
+    "title": "Zugriffskontrolle & Nutzungs-Tracking",
+    "content1": "Um Anzeigelimits durchzusetzen, erfassen wir die ersten 5 Aufnahmen, die von öffentlichen Besuchern (nicht angemeldet) und Basis-Nutzern (mit kostenlosem Konto angemeldet) angesehen werden. Nach Erreichen dieses Limits wird der Zugriff eingeschränkt und kein weiteres Tracking durchgeführt.",
+    "content2": "Für öffentliche Besucher verwenden wir einen anonymen Geräte-Fingerprint, der in einem Cookie gespeichert ist. Für Basis-Nutzer, die Inhalte von Creatorn ansehen, denen sie nicht folgen, verwenden wir deine Konto-ID.",
+    "content3": "Premium-Abonnenten werden niemals getrackt. Basis-Nutzer, die Inhalte von Creatorn ansehen, denen sie folgen, werden ebenfalls nicht getrackt. Diese Daten werden ausschließlich zum Betrieb unseres Freemium-Dienstes verwendet und nicht an Dritte weitergegeben oder zu Werbezwecken genutzt."
+  },
+  "dataRetention": {
+    "title": "Datenaufbewahrung",
+    "intro": "Wir bewahren deine Daten nur so lange wie notwendig auf:",
+    "items": {
+      "account": "Kontodaten",
+      "accountDesc": "Bis du dein Konto löschst",
+      "freeStreams": "Aufgenommene Streams (Kostenloser Plan)",
+      "freeStreamsDesc": "7 Tage",
+      "premiumStreams": "Aufgenommene Streams (Premium-Plan)",
+      "premiumStreamsDesc": "60 Tage",
+      "analyticsData": "Analyse-Daten",
+      "analyticsDataDesc": "Anonymisiert, zur Verbesserung des Dienstes aufbewahrt"
+    }
+  },
+  "dataStorage": {
+    "title": "Wo deine Daten gespeichert werden",
+    "content": "Unsere Server befinden sich in Europa. Deine Daten werden in Übereinstimmung mit den Anforderungen der DSGVO verarbeitet und gespeichert. Wir übertragen deine personenbezogenen Daten nicht außerhalb des Europäischen Wirtschaftsraums (EWR), es sei denn, dies ist für die Bereitstellung des Dienstes erforderlich (z. B. Zahlungsabwicklung über Stripe) und mit angemessenen Schutzmaßnahmen versehen."
+  },
+  "thirdParties": {
+    "title": "Dritte",
+    "intro": "Wir verkaufen deine Daten an niemanden. Wir teilen Daten nur mit:",
+    "items": {
+      "freemius": "Freemius",
+      "freemiusDesc": "Für Zahlungsabwicklung und Abo-Verwaltung (wenn du abonnierst)"
+    },
+    "footer": "Wir nutzen keine Werbe-Netzwerke Dritter und verkaufen deine personenbezogenen Daten nicht."
+  },
+  "cookies": {
+    "title": "Cookies",
+    "intro": "Wir verwenden nur essentielle Cookies, die für das ordnungsgemäße Funktionieren der Website notwendig sind:",
+    "items": {
+      "session": "Session-Cookies",
+      "sessionDesc": "Um dich angemeldet zu halten",
+      "preference": "Präferenz-Cookies",
+      "preferenceDesc": "Um deine Einstellungen zu speichern",
+      "access": "Zugriffskontroll-Cookies",
+      "accessDesc": "Um Anzeigelimits für kostenlose Nutzer durchzusetzen"
+    },
+    "footer": "Wir verwenden keine Werbe-Cookies oder Tracking-Cookies von Drittanbietern. Das Zugriffskontroll-Cookie ist strikt notwendig für den Betrieb unseres Freemium-Dienstes."
+  },
+  "rights": {
+    "title": "Deine Rechte (DSGVO)",
+    "intro": "Gemäß DSGVO hast du folgende Rechte:",
+    "items": {
+      "access": "Recht auf Auskunft",
+      "accessDesc": "Erhalt einer Kopie deiner personenbezogenen Daten",
+      "rectification": "Recht auf Berichtigung",
+      "rectificationDesc": "Korrektur falscher oder unvollständiger Daten",
+      "erasure": "Recht auf Löschung",
+      "erasureDesc": "Antrag auf Löschung deiner Daten",
+      "restrict": "Recht auf Einschränkung der Verarbeitung",
+      "restrictDesc": "Einschränken, wie wir deine Daten verwenden",
+      "portability": "Recht auf Datenübertragbarkeit",
+      "portabilityDesc": "Erhalt deiner Daten in einem portablen Format",
+      "object": "Widerspruchsrecht",
+      "objectDesc": "Widerspruch gegen Verarbeitung auf Grundlage berechtigter Interessen",
+      "withdraw": "Recht auf Widerruf der Einwilligung",
+      "withdrawDesc": "Widerruf der Einwilligung jederzeit möglich"
+    },
+    "footer": "Um eines dieser Rechte auszuüben, kontaktiere uns unter contact@livestreamrecorder.com"
+  },
+  "children": {
+    "title": "Datenschutz für Kinder",
+    "content": "Unser Dienst ist nicht für Personen unter 18 Jahren bestimmt. Wir erheben wissentlich keine personenbezogenen Daten von Kindern unter 18 Jahren.",
+    "contact": "Wenn du der Meinung bist, dass uns ein Kind personenbezogene Daten übermittelt hat, kontaktiere uns bitte sofort unter contact@livestreamrecorder.com, und wir werden Schritte unternehmen, um diese Informationen aus unseren Systemen zu löschen."
+  },
+  "security": {
+    "title": "Datensicherheit",
+    "content": "Wir setzen geeignete technische und organisatorische Maßnahmen ein, um deine personenbezogenen Daten vor unbefugtem Zugriff, Veränderung, Offenlegung oder Zerstörung zu schützen. Dazu gehören Verschlüsselung, sichere Server und Zugriffskontrollen. Allerdings ist keine Übertragungsmethode über das Internet zu 100 % sicher, und wir können keine absolute Sicherheit garantieren."
+  },
+  "deleteAccount": {
+    "title": "Konto löschen",
+    "content": "Um dein Konto zu löschen, gehe zu Einstellungen und dann zu Konto löschen.",
+    "footer": "Sobald gelöscht, werden alle deine Daten dauerhaft von unseren Servern entfernt. Diese Aktion kann nicht rückgängig gemacht werden."
+  },
+  "contact": {
+    "title": "Kontakt",
+    "content": "Wenn du Fragen zu dieser Datenschutzerklärung, deinen Daten oder deinen Rechten hast, kontaktiere uns:",
+    "email": "contact@livestreamrecorder.com",
+    "footer": "Du hast außerdem das Recht, Beschwerde bei einer Aufsichtsbehörde einzulegen (z. B. dem Bundesbeauftragten für den Datenschutz und die Informationsfreiheit oder einer Landesdatenschutzbehörde), wenn du der Ansicht bist, dass deine Datenschutzrechte verletzt wurden."
+  },
+  "footerNote": "Wenn wir diese Richtlinie aktualisieren, veröffentlichen wir Änderungen hier mit einem neuen Datum. Die fortgesetzte Nutzung des Dienstes nach Änderungen gilt als Zustimmung zur aktualisierten Richtlinie."
+}

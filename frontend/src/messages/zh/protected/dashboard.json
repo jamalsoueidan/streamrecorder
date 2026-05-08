@@ -1,0 +1,14 @@
+{
+  "title": "仪表盘",
+  "description": "欢迎回来！这是最新动态",
+  "greetingMorning": "早上好,{username}！",
+  "greetingAfternoon": "下午好,{username}！",
+  "greetingEvening": "晚上好,{username}！",
+  "greetingSubtitle": "你的动态有新内容",
+  "noRecordings": "暂无录制内容",
+  "browseAll": "浏览全部",
+  "newCreators": "新创作者",
+  "myFeed": "我的动态",
+  "discoverSection": "发现",
+  "favorites": "收藏"
+}

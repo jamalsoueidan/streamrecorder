@@ -1,0 +1,17 @@
+{
+  "title": "Clips",
+  "description": "Aktuelle Clips aus der Community",
+  "emptyState": {
+    "title": "Noch keine Clips",
+    "description": "Clips erscheinen hier, sobald sie von der Community erstellt werden."
+  },
+  "menu": {
+    "delete": "Clip löschen",
+    "deleteTitle": "Clip löschen",
+    "deleteConfirm": "Möchtest du diesen Clip wirklich löschen? Diese Aktion kann nicht rückgängig gemacht werden.",
+    "deleteButton": "Löschen",
+    "cancel": "Abbrechen",
+    "deleteSuccess": "Clip gelöscht",
+    "deleteError": "Clip konnte nicht gelöscht werden"
+  }
+}

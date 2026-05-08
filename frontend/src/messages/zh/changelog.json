@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "title": "更新日志",
+    "description": "及时了解 LiveStreamRecorder 的最新功能、改进和修复。"
+  },
+  "title": "更新日志",
+  "subtitle": "及时了解最新功能、改进和修复。",
+  "empty": {
+    "title": "暂无更新日志",
+    "description": "请稍后再来查看更新。"
+  },
+  "noDescription": "此版本未提供说明。",
+  "published": "发布于 {date}"
+}

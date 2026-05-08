@@ -1,0 +1,131 @@
+{
+  "title": "Meine Clips",
+  "description": "KI-generierte Clips aus deinen Aufnahmen",
+  "emptyState": {
+    "title": "Noch keine Clips",
+    "description": "Clips erscheinen hier, sobald sie aus deinen Aufnahmen erstellt wurden"
+  },
+  "share": {
+    "tiktok": "Auf TikTok veröffentlichen",
+    "uploaded": "Auf TikTok veröffentlicht",
+    "processing": "Wird veröffentlicht …",
+    "completed": "Veröffentlicht",
+    "shared": "Veröffentlicht",
+    "failed": "Fehlgeschlagen",
+    "retry": "Erneut versuchen",
+    "failedTooltip": "Veröffentlichung fehlgeschlagen. Klicke, um es erneut zu versuchen.",
+    "check": "Prüfen",
+    "checkStatus": "TikTok-Status prüfen",
+    "youtube": "Auf YouTube veröffentlichen"
+  },
+  "actions": {
+    "edit": "Video bearbeiten",
+    "delete": "Löschen"
+  },
+  "publishPage": {
+    "title": "Auf TikTok veröffentlichen",
+    "description": "Überprüfe dein Video und wähle aus, wie du es auf TikTok teilen möchtest",
+    "loadingCreator": "Dein TikTok-Konto wird geladen …",
+    "publishingTo": "Veröffentlichen unter",
+    "descriptionLabel": "Titel",
+    "descriptionPlaceholder": "Schreibe einen Titel für dein Video …",
+    "privacyLabel": "Sichtbarkeit",
+    "privacyPlaceholder": "Sichtbarkeit auswählen",
+    "privacy": {
+      "PUBLIC_TO_EVERYONE": "Alle",
+      "MUTUAL_FOLLOW_FRIENDS": "Freunde",
+      "FOLLOWER_OF_CREATOR": "Follower",
+      "SELF_ONLY": "Nur ich"
+    },
+    "interactionSettings": "Nutzern erlauben:",
+    "allowComments": "Kommentieren",
+    "allowDuet": "Duett",
+    "allowStitch": "Stitch",
+    "disabledByCreator": "In deinen TikTok-Einstellungen deaktiviert",
+    "commercialContent": "Kennzeichnung kommerzieller Inhalte",
+    "commercialContentDescription": "Aktiviere dies, wenn das Video Waren oder Dienstleistungen gegen einen Vorteil bewirbt. Dein Video kann dich selbst, eine andere Marke oder beides bewerben.",
+    "brandContentToggle": "Deine Marke",
+    "brandContentDescription": "Du bewirbst dich selbst oder dein eigenes Geschäft. Dieser Inhalt wird als Brand Organic klassifiziert.",
+    "brandOrganicToggle": "Branded Content",
+    "brandOrganicDescription": "Du bewirbst eine andere Marke oder einen Drittanbieter. Dieser Inhalt wird als Branded Content klassifiziert.",
+    "promotionalContentLabel": "Dein Video wird als Werbeinhalt gekennzeichnet.",
+    "paidPartnershipLabel": "Dein Video wird als Bezahlte Partnerschaft gekennzeichnet.",
+    "cannotChangeWarning": "Dies kann nach der Veröffentlichung nicht mehr geändert werden.",
+    "musicConfirmation": "Mit der Veröffentlichung stimmst du der TikTok-Bestätigung zur Musiknutzung zu",
+    "confirmationPrefix": "Mit der Veröffentlichung stimmst du",
+    "termsOfServiceLink": "den Nutzungsbedingungen von LiveStreamRecorder",
+    "musicConfirmationLink": "der TikTok-Bestätigung zur Musiknutzung",
+    "brandedContentPolicyLink": "der TikTok-Branded-Content-Richtlinie",
+    "andText": "und",
+    "commercialContentToggle": "Dieser Inhalt bewirbt mich selbst, eine Marke, ein Produkt oder eine Dienstleistung",
+    "commercialContentRequired": "Du musst angeben, ob dein Inhalt dich selbst, einen Drittanbieter oder beides bewirbt",
+    "brandedContentPrivacyWarning": "Branded Content kann nicht auf privat gesetzt werden",
+    "publishButton": "Auf TikTok veröffentlichen",
+    "uploadButton": "Veröffentlichen",
+    "cancel": "Abbrechen",
+    "backToClips": "Zurück zu Clips",
+    "noTiktokConnection": {
+      "title": "TikTok-Konto nicht verbunden",
+      "description": "Um Clips auf TikTok zu veröffentlichen, gehe zu den Einstellungen und verbinde zunächst dein TikTok-Konto.",
+      "goToSettings": "Zu den Einstellungen",
+      "hint": "Sobald verbunden, komm hierher zurück, um deinen Clip zu veröffentlichen."
+    },
+    "success": "Wird veröffentlicht",
+    "successMessage": "Dein Video wird auf TikTok veröffentlicht. Es kann einige Minuten dauern, bis es verarbeitet ist und in deinem Profil erscheint.",
+    "error": "Fehler",
+    "errorMessage": "Veröffentlichung auf TikTok fehlgeschlagen",
+    "validation": {
+      "privacyRequired": "Bitte wähle aus, wer dieses Video sehen kann",
+      "musicConfirmationRequired": "Du musst der Bestätigung zur Musiknutzung zustimmen"
+    },
+    "cannotPostNow": "Du hast dein tägliches Posting-Limit auf TikTok erreicht. Bitte versuche es später erneut.",
+    "videoTooLong": "Dieses Video ist {duration} Sekunden lang, aber TikTok erlaubt für dein Konto nur Videos bis zu {maxDuration} Sekunden.",
+    "selfOnlyDisabledBranded": "Branded Content kann nicht auf privat gesetzt werden"
+  },
+  "youtubePublishPage": {
+    "title": "Auf YouTube veröffentlichen",
+    "description": "Überprüfe dein Video und veröffentliche es als YouTube Short",
+    "titleLabel": "Titel",
+    "titlePlaceholder": "Gib einen Titel für dein Video ein …",
+    "descriptionLabel": "Beschreibung",
+    "descriptionPlaceholder": "Beschreibung hinzufügen (optional) …",
+    "privacyLabel": "Sichtbarkeit",
+    "privacy": {
+      "public": "Öffentlich",
+      "unlisted": "Nicht gelistet",
+      "private": "Privat"
+    },
+    "tagsLabel": "Tags",
+    "tagsPlaceholder": "Gaming, Highlights, Live-Stream",
+    "tagsDescription": "Mit Komma getrennte Tags helfen Zuschauern, dein Video zu finden",
+    "checkingConnection": "YouTube-Verbindung wird geprüft …",
+    "quotaWarning": "YouTube hat ein tägliches Upload-Limit. Wenn der Upload mit einem Quota-Fehler fehlschlägt, versuche es morgen erneut.",
+    "confirmationPrefix": "Mit der Veröffentlichung stimmst du",
+    "termsOfServiceLink": "den Nutzungsbedingungen von LiveStreamRecorder",
+    "andText": "und",
+    "youtubeTermsLink": "den Nutzungsbedingungen von YouTube",
+    "uploadButton": "Auf YouTube veröffentlichen",
+    "cancel": "Abbrechen",
+    "success": "Veröffentlicht",
+    "successMessage": "Dein Video wurde auf YouTube hochgeladen.",
+    "error": "Fehler",
+    "validation": {
+      "titleRequired": "Bitte gib einen Titel für dein Video ein"
+    },
+    "noYoutubeConnection": {
+      "title": "YouTube-Konto nicht verbunden",
+      "description": "Um Clips auf YouTube zu veröffentlichen, gehe zu den Einstellungen und verbinde zunächst dein YouTube-Konto.",
+      "goToSettings": "Zu den Einstellungen"
+    }
+  },
+  "upgrade": {
+    "title": "Von der Aufnahme auf TikTok in Sekunden",
+    "features": {
+      "publish": "Direkt auf TikTok, Reels und Shorts posten",
+      "schedule": "Plane deine Clips – bleib auf Autopilot konsistent",
+      "edit": "Untertitel, Effekte hinzufügen und ganz dein eigenes Ding daraus machen"
+    },
+    "upgradeButton": "Jetzt upgraden",
+    "hint": "Schalte das Veröffentlichen von Clips mit einem Premium-Abonnement frei"
+  }
+}

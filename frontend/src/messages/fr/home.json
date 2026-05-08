@@ -1,0 +1,38 @@
+{
+  "meta": {
+    "title": "Live Stream Recorder | Enregistre TikTok, Twitch et plus automatiquement",
+    "titleTemplate": "%s | Live Stream Recorder",
+    "description": "Enregistre automatiquement tes lives et transforme-les en clips viraux. Enregistrement de streams dans le cloud pour TikTok, Twitch, YouTube, Kick et plus. Aucun logiciel requis.",
+    "keywords": "live stream recorder, enregistrement de stream, enregistrer un livestream, capturer un live, enregistrer un stream Twitch, enregistrer un live TikTok, capturer un live YouTube, télécharger VOD Twitch, enregistrement TikTok live, créateur de clips, clips de stream",
+    "ogTitle": "Live Stream Recorder | Sauvegarde tes streams, crée des clips viraux",
+    "ogDescription": "Enregistre automatiquement tes lives et réutilise tes meilleurs moments en clips. Enregistrement dans le cloud pour TikTok, Twitch, YouTube et plus.",
+    "ogAlt": "Live Stream Recorder – Enregistre TikTok, Twitch, YouTube et plus",
+    "twitterDescription": "Sauvegarde tes lives automatiquement. Transforme tes meilleurs moments en clips qui font grandir ta chaîne. Gratuit pour commencer."
+  },
+  "hero": {
+    "title": "Live Stream Recorder",
+    "subtitle": "Enregistre tes lives",
+    "description": "Enregistre tes streams TikTok, Twitch, Kick et YouTube. ClipAI trouve tes meilleurs moments et les transforme en clips courts – prêts à être partagés partout."
+  },
+  "feature": {
+    "title": "Tous tes streams",
+    "subtitle": "Sauvegardés et prêts à être clippés",
+    "description": "Ajoute tes lives depuis n'importe quelle plateforme. Les streams sont enregistrés automatiquement et les VOD sont sauvegardées pour toi. Reviens quand tu veux pour créer des clips, télécharger ou réutiliser ton contenu."
+  },
+  "latestRecordings": {
+    "title": "Derniers enregistrements",
+    "subtitle": "Streams enregistrés ces dernières 24 heures",
+    "browseAll": "Voir tous les enregistrements"
+  },
+  "featuredCreators": {
+    "title": "Rejoins plus de 10 000 créateurs",
+    "subtitle": "Des créateurs de contenu qui transforment leurs lives en clips viraux",
+    "browseAll": "Voir tous les créateurs"
+  },
+  "cta": {
+    "title": "Enregistre tes lives",
+    "description": "Enregistre tes streams TikTok, Twitch, Kick et YouTube. ClipAI trouve tes meilleurs moments et les transforme en clips courts – prêts à être partagés partout.",
+    "button": "Commence gratuitement aujourd'hui"
+  },
+  "about": "## À propos de Live Stream Recorder\n\nTes lives sont une mine d'or de contenu – ne les laisse pas disparaître. Notre plateforme cloud sauvegarde automatiquement tes diffusions pour que tu puisses les réutiliser en clips, en moments forts et en contenus courts.\n\n### Enregistrement automatique de tes lives\n\nConnecte tes chaînes de streaming, on s'occupe du reste. L'enregistrement de stream se fait automatiquement en arrière-plan – aucun logiciel à installer, aucune planification manuelle. Passe en live et tes streams sont capturés et sauvegardés dans le cloud.\n\n### Transforme tes streams en clips\n\nTon stream de 3 heures contient des dizaines de moments viraux. Nos outils t'aident à trouver et à découper les meilleurs passages qui marchent sur TikTok, YouTube Shorts et Instagram Reels. Stream une fois, publie partout.\n\n### Regarde et télécharge à tout moment\n\nTous tes streams enregistrés sont stockés en sécurité sur nos serveurs. Accède à tes enregistrements via notre lecteur intégré, télécharge-les pour les éditer, ou partage-les directement sur les réseaux sociaux.\n\n### Enregistre TikTok, Twitch, YouTube et plus\n\nQue tu streames sur TikTok, Twitch, YouTube, Kick, AfreecaTV ou Pandalive – notre service cloud te couvre. Enregistre sur plusieurs plateformes, tout est organisé au même endroit.\n\n### Pas besoin d'un enregistreur d'écran\n\nContrairement à un enregistreur d'écran qui a besoin que ton ordinateur reste allumé, notre service cloud tourne 24h/24, 7j/7. Aucun logiciel d'enregistrement d'écran nécessaire. Tes streams sont enregistrés même si tu oublies.\n\n### Gratuit pour commencer\n\nCrée un compte et connecte tes chaînes dès aujourd'hui. Passe Premium pour des enregistrements en haute qualité, un stockage illimité et des outils de clipping avancés."
+}

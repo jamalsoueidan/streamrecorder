@@ -27,6 +27,8 @@ import {
 import { ImageVideoPreview } from "../../components/image-video-preview";
 import { SignupCta } from "../../components/signup-cta";
 import { VideoPlayer } from "../../components/video-player";
+import Link from "@/app/components/link";
+import { LinkButton } from "@/app/components/link-button";
 
 interface PageProps {
   params: Promise<{
@@ -37,9 +39,7 @@ interface PageProps {
   }>;
 }
 
-export const revalidate = 86400;
-export const dynamicParams = true;
-
+export const dynamic = "force-dynamic";
 export async function generateStaticParams() {
   return [];
 }
@@ -261,9 +261,7 @@ export default async function VideoPage({ params }: PageProps) {
             {t("watch.title", { username: creatorName, date: recordedDate })}
           </Title>
 
-          <Button
-            component="a"
-            href={generateProfileUrl(data.follower)}
+          <LinkButton href={generateProfileUrl(data.follower)}
             variant="light"
             leftSection={
               locale === "ar" ? (
@@ -274,7 +272,7 @@ export default async function VideoPage({ params }: PageProps) {
             }
           >
             {t("backToProfile", { username: creatorName })}
-          </Button>
+          </LinkButton>
         </Flex>
         {hasRecordings ? (
           <Stack mt={100}>

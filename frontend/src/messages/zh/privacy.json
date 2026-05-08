@@ -1,0 +1,156 @@
+{
+  "meta": {
+    "title": "隐私政策",
+    "description": "LiveStreamRecorder 的隐私政策。了解我们如何收集、使用和保护你的数据。"
+  },
+  "header": {
+    "title": "隐私政策",
+    "lastUpdated": "最后更新：{date}"
+  },
+  "overview": {
+    "title": "概述",
+    "content": "我们坚持简单原则。我们只收集最少的数据,不向第三方出售。没有侵入性的分析,没有广告追踪。你的隐私对我们很重要。"
+  },
+  "dataController": {
+    "title": "数据控制者",
+    "content": "LiveStreamRecorder.com 是负责处理你个人数据的数据控制者。如果你对本隐私政策或我们的数据处理方式有任何疑问,可以联系我们：",
+    "email": "contact@livestreamrecorder.com"
+  },
+  "whatWeCollect": {
+    "title": "我们收集什么",
+    "intro": "当你创建账号时,我们存储：",
+    "items": {
+      "email": "邮箱地址",
+      "emailDesc": "用于登录和恢复账号",
+      "username": "用户名",
+      "usernameDesc": "用于识别你的账号",
+      "lastLogin": "最后登录日期",
+      "lastLoginDesc": "用于基本账号管理",
+      "streamers": "你关注的主播",
+      "streamersDesc": "用于向你展示你感兴趣的主播的内容"
+    },
+    "footer": "就是这些。没有其他内容。"
+  },
+  "legalBasis": {
+    "title": "处理的法律依据",
+    "intro": "根据 GDPR,我们基于以下法律依据处理你的个人数据：",
+    "items": {
+      "contract": "合同",
+      "contractDesc": "处理是为你提供我们的服务所必需的",
+      "consent": "同意",
+      "consentDesc": "你已为特定目的(例如营销邮件)给予同意",
+      "legitimateInterest": "正当利益",
+      "legitimateInterestDesc": "用于改进我们的服务和防止欺诈"
+    }
+  },
+  "payment": {
+    "title": "支付处理",
+    "content": "对于付费订阅,我们使用 Freemius 作为支付处理商和登记商家。Freemius 直接收集和处理你的支付信息。我们不在我们的服务器上存储你的信用卡信息。",
+    "stripePolicy": "Freemius 的隐私政策可在以下位置找到：freemius.com/privacy"
+  },
+  "analytics": {
+    "title": "分析",
+    "intro": "我们使用 Umami,一款注重隐私的分析工具,来了解我们的网站如何被使用。这有助于我们改善体验。",
+    "notCollect": "Umami 不收集的内容：",
+    "notCollectItems": {
+      "personal": "不收集个人信息",
+      "tracking": "不进行跨站追踪"
+    },
+    "collect": "我们收集的内容：",
+    "collectItems": {
+      "pageViews": "页面浏览量",
+      "referrer": "来源(你从哪里来)",
+      "browser": "浏览器和设备类型",
+      "country": "国家(非精确位置)"
+    },
+    "footer": "所有数据均经过匿名处理,并存储在我们位于欧洲的服务器上。"
+  },
+  "accessControl": {
+    "title": "访问控制和使用追踪",
+    "content1": "为了执行观看限制,我们追踪公开访客(未登录)和基础用户(使用免费账号登录)观看的前 5 个录像。达到此限制后,访问将被限制,不再进行进一步追踪。",
+    "content2": "对于公开访客,我们使用存储在 cookie 中的匿名设备指纹。对于观看未关注创作者内容的基础用户,我们使用你的账号 ID。",
+    "content3": "高级订阅用户从不被追踪。观看已关注创作者内容的基础用户也不会被追踪。这些数据仅用于运营我们的免费增值服务,不会与第三方共享或用于广告目的。"
+  },
+  "dataRetention": {
+    "title": "数据保留",
+    "intro": "我们仅在必要的时间内保留你的数据：",
+    "items": {
+      "account": "账号数据",
+      "accountDesc": "直到你删除账号",
+      "freeStreams": "录制的直播(免费套餐)",
+      "freeStreamsDesc": "7 天",
+      "premiumStreams": "录制的直播(高级套餐)",
+      "premiumStreamsDesc": "60 天",
+      "analyticsData": "分析数据",
+      "analyticsDataDesc": "已匿名化,用于服务改进而保留"
+    }
+  },
+  "dataStorage": {
+    "title": "你的数据存储位置",
+    "content": "我们的服务器位于欧洲。你的数据按照 GDPR 要求进行处理和存储。我们不会将你的个人数据传输到欧洲经济区 (EEA) 之外,除非为了提供服务(例如 Stripe 支付处理)所必需,并采取适当的保护措施。"
+  },
+  "thirdParties": {
+    "title": "第三方",
+    "intro": "我们不向任何人出售你的数据。我们仅与以下方共享数据：",
+    "items": {
+      "freemius": "Freemius",
+      "freemiusDesc": "用于支付处理和订阅管理(如果你订阅)"
+    },
+    "footer": "我们不使用第三方广告网络或出售你的个人信息。"
+  },
+  "cookies": {
+    "title": "Cookie",
+    "intro": "我们仅使用网站正常运行所必需的基本 cookie：",
+    "items": {
+      "session": "会话 cookie",
+      "sessionDesc": "保持你的登录状态",
+      "preference": "偏好 cookie",
+      "preferenceDesc": "记住你的设置",
+      "access": "访问控制 cookie",
+      "accessDesc": "对免费用户执行观看限制"
+    },
+    "footer": "我们不使用广告 cookie 或第三方追踪 cookie。访问控制 cookie 是运营我们免费增值服务所严格必需的。"
+  },
+  "rights": {
+    "title": "你的权利 (GDPR)",
+    "intro": "根据 GDPR,你拥有以下权利：",
+    "items": {
+      "access": "访问权",
+      "accessDesc": "请求获取你个人数据的副本",
+      "rectification": "更正权",
+      "rectificationDesc": "更正不准确或不完整的数据",
+      "erasure": "删除权",
+      "erasureDesc": "请求删除你的数据",
+      "restrict": "限制处理权",
+      "restrictDesc": "限制我们使用你的数据的方式",
+      "portability": "数据可携带权",
+      "portabilityDesc": "以可携带的格式接收你的数据",
+      "object": "反对权",
+      "objectDesc": "反对基于正当利益的处理",
+      "withdraw": "撤回同意权",
+      "withdrawDesc": "随时撤回同意"
+    },
+    "footer": "要行使任何这些权利,请联系我们：contact@livestreamrecorder.com"
+  },
+  "children": {
+    "title": "儿童隐私",
+    "content": "我们的服务不适用于 18 岁以下的任何人。我们不会故意收集 18 岁以下儿童的个人信息。",
+    "contact": "如果你认为有儿童向我们提供了个人信息,请立即通过 contact@livestreamrecorder.com 联系我们,我们将采取措施从我们的系统中删除此类信息。"
+  },
+  "security": {
+    "title": "数据安全",
+    "content": "我们采取适当的技术和组织措施来保护你的个人数据,防止未经授权的访问、更改、披露或破坏。这包括加密、安全服务器和访问控制。然而,通过互联网传输的方法都不是 100% 安全的,我们无法保证绝对的安全。"
+  },
+  "deleteAccount": {
+    "title": "删除你的账号",
+    "content": "要删除你的账号,前往设置然后点击删除账号。",
+    "footer": "一旦删除,你的所有数据将从我们的服务器上永久删除。此操作无法撤销。"
+  },
+  "contact": {
+    "title": "联系我们",
+    "content": "如果你对本隐私政策、你的数据或你的权利有任何疑问,请联系我们：",
+    "email": "contact@livestreamrecorder.com",
+    "footer": "如果你认为你的数据保护权利受到侵犯,你也有权向监督机构(如丹麦数据保护局 - Datatilsynet)提出申诉。"
+  },
+  "footerNote": "如果我们更新此政策,我们会在此处发布带有新日期的更改。在更改后继续使用本服务即表示接受更新后的政策。"
+}

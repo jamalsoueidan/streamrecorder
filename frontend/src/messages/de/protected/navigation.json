@@ -1,0 +1,42 @@
+{
+  "sections": {
+    "home": "Startseite",
+    "studio": "Studio",
+    "community": "Community"
+  },
+  "links": {
+    "dashboard": "Dashboard",
+    "premium": "Premium",
+    "myRecordings": "Aufnahmen",
+    "myClips": "Meine Clips",
+    "watchLater": "Später ansehen",
+    "aiStudio": "AI Studio",
+    "myList": "Bibliothek",
+    "live": "Live",
+    "tiktokInsights": "TikTok Insights",
+    "explore": "Entdecken",
+    "clips": "Clips",
+    "friends": "Freunde"
+  },
+  "actions": {
+    "settings": "Einstellungen",
+    "logout": "Abmelden",
+    "addCreator": "Creator hinzufügen",
+    "search": "Suchen",
+    "searchPlaceholder": "Stream-URL eingeben",
+    "installApp": "App installieren",
+    "more": "Mehr",
+    "language": "Sprache",
+    "collapse": "Seitenleiste einklappen",
+    "expand": "Seitenleiste ausklappen"
+  },
+  "installModal": {
+    "title": "App installieren",
+    "description": "So installierst du diese App auf deinem iPhone:",
+    "step1": "Tippe auf das",
+    "shareButton": "Teilen-Symbol",
+    "step2": "Tippe auf",
+    "addToHomeScreen": "Zum Home-Bildschirm",
+    "step3": "Tippe auf Hinzufügen"
+  }
+}

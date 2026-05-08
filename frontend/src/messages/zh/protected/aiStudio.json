@@ -1,0 +1,91 @@
+{
+  "title": "AI Studio",
+  "description": "使用 AI 从你的录制内容创建短视频和表情包",
+  "requestDetails": "请求详情",
+  "createRequest": "创建请求",
+  "unknownCreator": "未知创作者",
+  "unknownRecording": "未知录制",
+  "recordingDeleted": {
+    "badge": "录制已删除"
+  },
+  "viewDetails": "查看详情",
+  "state": {
+    "pending": "待处理",
+    "processing": "处理中",
+    "completed": "已完成",
+    "failed": "失败"
+  },
+  "options": {
+    "clips": "短视频",
+    "memes": "表情包",
+    "profile": "主页"
+  },
+  "filters": {
+    "all": "全部",
+    "pending": "待处理",
+    "processing": "处理中",
+    "completed": "已完成"
+  },
+  "emptyState": {
+    "title": "暂无 AI 请求",
+    "description": "前往你的录制内容并点击 AI 按钮以创建短视频和表情包"
+  },
+  "create": {
+    "selectOptions": "你想创建什么？",
+    "options": {
+      "clips": {
+        "label": "生成短视频",
+        "description": "AI 将找出最精彩的瞬间并创建短视频"
+      },
+      "memes": {
+        "label": "生成表情包",
+        "description": "AI 将创建带有标题的表情包式截图"
+      },
+      "profile": {
+        "label": "生成主页",
+        "description": "AI 将分析并提供主页改进建议"
+      }
+    },
+    "sizeWarning": {
+      "title": "视频太大",
+      "message": "此视频为 {size}GB。大于 2GB 的视频需要分段处理。"
+    },
+    "submit": "开始处理"
+  },
+  "status": {
+    "progress": "进度",
+    "tasks": "任务",
+    "pendingTitle": "等待开始",
+    "pendingMessage": "你的请求已排队,即将开始处理。",
+    "clipsCount": "{count} 个短视频",
+    "memesCount": "{count} 个表情包",
+    "localesCount": "{count} 种语言",
+    "clipFallback": "短视频 {index}",
+    "default": "默认",
+    "tagline": "标语",
+    "description": "描述",
+    "state": {
+      "pending": "待处理",
+      "processing": "处理中",
+      "completed": "已完成",
+      "failed": "失败"
+    }
+  },
+  "upgrade": {
+    "title": "你的 AI 视频工作室",
+    "features": {
+      "clips": "从长直播录像中智能剪辑短视频 — 准备好分享",
+      "memes": "AI 从你的视频生成表情包和图片",
+      "viral": "几十种语言的视频即时翻译"
+    },
+    "upgradeButton": "立即升级",
+    "hint": "通过高级订阅解锁 AI Studio"
+  },
+  "quota": {
+    "badge": "本月 {used} / {total}",
+    "limitReachedNote": "已达到限制 · 将于 {date} 重置",
+    "alertTitle": "已达到月度限制",
+    "alertBody": "你已用完本月所有 {total} 次 AI 生成次数。你的限制将于 {date} 重置。",
+    "editButton": "手动编辑视频"
+  }
+}

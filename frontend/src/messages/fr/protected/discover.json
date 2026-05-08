@@ -1,0 +1,13 @@
+{
+  "title": "Amis",
+  "description": "Découvre d'autres créateurs sur la plateforme",
+  "emptyFiltered": {
+    "title": "Aucun créateur ne correspond à tes filtres",
+    "description": "Essaie d'ajuster ou de réinitialiser tes filtres"
+  },
+  "emptyDefault": {
+    "title": "Aucun créateur trouvé",
+    "description": "..."
+  },
+  "noMoreToLoad": "Tu as atteint la fin"
+}

@@ -1,0 +1,94 @@
+{
+  "title": "设置",
+  "description": "管理你的账号设置",
+  "profile": {
+    "title": "个人资料",
+    "username": "用户名",
+    "usernamePlaceholder": "请输入用户名",
+    "usernameMinLength": "用户名至少需要 3 个字符",
+    "usernameMaxLength": "用户名最多 30 个字符",
+    "saveChanges": "保存更改",
+    "updateSuccess": "成功",
+    "usernameUpdated": "你的用户名已更新",
+    "updateError": "错误"
+  },
+  "subscription": {
+    "title": "订阅",
+    "currentPlan": "当前套餐",
+    "description": "你的订阅决定了你可以访问哪些功能。"
+  },
+  "tiktok": {
+    "title": "TikTok",
+    "description": "连接你的 TikTok 账号以发布短视频并扩大受众。",
+    "descriptionConnected": "你的 TikTok 账号已连接。",
+    "connect": "连接 TikTok",
+    "disconnect": "断开连接",
+    "connected": "已连接",
+    "connectSuccess": "成功",
+    "connectSuccessMessage": "你的 TikTok 账号已连接",
+    "connectError": "错误",
+    "connectErrorMessage": "连接 TikTok 账号失败",
+    "disconnectSuccess": "已断开",
+    "disconnectSuccessMessage": "你的 TikTok 账号已断开",
+    "disconnectError": "错误"
+  },
+  "youtube": {
+    "title": "YouTube",
+    "description": "连接你的 YouTube 账号以将短视频直接发布为 YouTube Shorts。",
+    "descriptionConnected": "你的 YouTube 账号已连接。你现在可以将短视频发布到 YouTube。",
+    "connect": "连接 YouTube",
+    "disconnect": "断开连接",
+    "connected": "已连接",
+    "connectSuccess": "成功",
+    "connectSuccessMessage": "你的 YouTube 账号已连接",
+    "connectError": "错误",
+    "connectErrorMessage": "连接 YouTube 账号失败",
+    "disconnectSuccess": "已断开",
+    "disconnectSuccessMessage": "你的 YouTube 账号已断开",
+    "disconnectError": "错误"
+  },
+  "dangerZone": {
+    "title": "危险区域",
+    "description": "一旦删除账号,将无法恢复。请确认你的选择。",
+    "deleteAccount": "删除账号",
+    "deleteConfirm": {
+      "title": "删除账号",
+      "message": "确定要删除你的账号吗？此操作无法撤销,你的所有数据将被永久删除。",
+      "confirm": "删除账号",
+      "cancel": "取消"
+    },
+    "deleteError": "错误"
+  },
+  "notifications": {
+    "title": "通知",
+    "description": "你关注的主播开播时收到通知。",
+    "on": "通知已开启",
+    "off": "通知已关闭",
+    "enabled": "通知已启用",
+    "disabled": "通知已禁用",
+    "denied": "通知已被阻止。请在浏览器设置中启用。",
+    "unsupported": "你的浏览器不支持通知。",
+    "error": "出错了",
+    "sendTest": "发送测试通知",
+    "testSent": "已发送测试通知",
+    "testSentMessage": "请查看你的设备 — 通知将很快出现。",
+    "helpTitle": "没有看到通知？",
+    "helpPermission": "确保系统设置中允许浏览器显示通知。",
+    "helpFocus": "关闭勿扰模式或专注模式。它们会在 Mac、iPhone、Android 和 Windows 上静音通知。"
+  },
+  "watchedHistory": {
+    "title": "已观看视频",
+    "description": "你已将 {count} 个视频标记为已观看。视频缩略图上会显示一个标记,让你一目了然地知道哪些已经看过。",
+    "clearButton": "清除观看历史",
+    "clearConfirm": {
+      "title": "清除观看历史",
+      "message": "这将从 {count} 个视频中移除已观看标记。它们将再次显示为未观看。是否继续？",
+      "confirm": "清除",
+      "cancel": "取消"
+    },
+    "cleared": {
+      "title": "已清除",
+      "message": "你的观看历史已清除。"
+    }
+  }
+}

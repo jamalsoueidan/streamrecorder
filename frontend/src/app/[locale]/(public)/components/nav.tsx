@@ -18,12 +18,15 @@ export const navConfig = {
   languages: [
     { code: "en", label: "English", flag: "us" },
     { code: "ar", label: "العربية", flag: "sa" },
+    { code: "de", label: "Deutsch", flag: "de" },
     { code: "es", label: "Español", flag: "mx" },
+    { code: "fr", label: "Français", flag: "fr" },
     { code: "id", label: "Bahasa Indonesia", flag: "id" },
     { code: "ja", label: "日本語", flag: "jp" },
     { code: "ko", label: "한국어", flag: "kr" },
     { code: "pt", label: "Português", flag: "br" },
     { code: "tr", label: "Türkçe", flag: "tr" },
+    { code: "zh", label: "中文", flag: "cn" },
   ],
   featuredCreators: [
     { key: "browse", label: "Browse All", href: "/creators/all" },

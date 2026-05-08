@@ -1,0 +1,35 @@
+{
+  "meta": {
+    "title": "Contact",
+    "description": "Prends contact avec nous"
+  },
+  "header": {
+    "title": "Contact",
+    "subtitle": "Nous serions ravis d'avoir de tes nouvelles"
+  },
+  "form": {
+    "title": "Envoyer un message",
+    "description": "Remplis le formulaire ci-dessous et nous te répondrons dès que possible.",
+    "name": {
+      "label": "Nom",
+      "placeholder": "Ton nom"
+    },
+    "email": {
+      "label": "E-mail",
+      "placeholder": "ton@email.fr"
+    },
+    "subject": {
+      "label": "Sujet",
+      "placeholder": "Quel est le sujet ?"
+    },
+    "message": {
+      "label": "Message",
+      "placeholder": "Ton message…"
+    },
+    "submit": "Envoyer le message"
+  },
+  "submitted": {
+    "title": "Message envoyé !",
+    "description": "Merci de ton message. Nous te répondrons bientôt."
+  }
+}

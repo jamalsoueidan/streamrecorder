@@ -1,0 +1,13 @@
+{
+  "title": "好友",
+  "description": "发现平台上的其他创作者",
+  "emptyFiltered": {
+    "title": "没有创作者匹配你的筛选",
+    "description": "尝试调整或清除筛选条件"
+  },
+  "emptyDefault": {
+    "title": "未找到创作者",
+    "description": "..."
+  },
+  "noMoreToLoad": "你已经看到底了"
+}

@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "title": "FAQ",
+    "description": "Antworten auf häufig gestellte Fragen zu LiveStreamRecorder"
+  },
+  "title": "Häufig gestellte Fragen",
+  "subtitle": "Antworten auf die häufigsten Fragen zu unserem Service.",
+  "faqs": [
+    {
+      "question": "Was ist LiveStreamRecorder.com?",
+      "answer": "LiveStreamRecorder.com ist ein Cloud-basierter Service, der deine eigenen Live-Streams automatisch aufnimmt. Füge deinen Benutzernamen von einer unterstützten Plattform hinzu und wir erfassen jede Übertragung – ohne Software-Installation und ohne dass dein Computer dauerhaft laufen muss. Sieh dir deine Aufnahmen jederzeit an oder mache Clips daraus."
+    },
+    {
+      "question": "Wie funktioniert das?",
+      "answer": "Registriere dich kostenlos und füge deinen Benutzernamen von der Plattform hinzu, auf der du streamst. Sobald du live gehst, nimmt unser System deinen Stream automatisch auf. Du kannst die Aufnahmen direkt im Browser ansehen, herunterladen oder Clips daraus erstellen, um sie auf Social Media zu teilen."
+    },
+    {
+      "question": "Ist es wirklich kostenlos?",
+      "answer": "Ja! Mit unserem kostenlosen Plan kannst du von bis zu 3 Plattformen aufnehmen und Aufnahmen werden 5 Tage lang gespeichert. Wenn du mehr brauchst, bietet unser Premium-Plan bessere Videoqualität, 30 Tage Speicherung, Video-Downloads und die Möglichkeit, von bis zu 100 Plattformen aufzunehmen."
+    },
+    {
+      "question": "Welche Plattformen werden unterstützt?",
+      "answer": "Wir unterstützen aktuell TikTok, Twitch, YouTube, Kick, AfreecaTV und Pandalive. Wir arbeiten ständig daran, weitere Plattformen hinzuzufügen – bleib dran für Updates."
+    },
+    {
+      "question": "Wie lange werden Aufnahmen gespeichert?",
+      "answer": "Kostenlose Nutzer haben 5 Tage Speicherung. Premium-Nutzer haben 30 Tage. Lade alle Aufnahmen, die du behalten möchtest, herunter, bevor sie ablaufen."
+    },
+    {
+      "question": "Wie füge ich meinen Benutzernamen hinzu?",
+      "answer": "Klicke in deinem Dashboard auf Hinzufügen, wähle deine Plattform aus und gib deinen Benutzernamen ein. Sobald hinzugefügt, nehmen wir automatisch auf, sobald du live gehst."
+    },
+    {
+      "question": "Kann ich auf mehreren Plattformen aufnehmen?",
+      "answer": "Ja! Wenn du auf TikTok und Twitch streamst, füge einfach deinen Benutzernamen von beiden Plattformen hinzu und alle deine Streams werden an einem Ort gespeichert."
+    },
+    {
+      "question": "Kann ich meine Aufnahmen herunterladen?",
+      "answer": "Der Download steht Premium-Nutzern zur Verfügung. Jede Aufnahme hat einen Download-Button, mit dem du die komplette Videodatei auf deinen Computer speichern kannst."
+    },
+    {
+      "question": "Was ist ClipAI?",
+      "answer": "ClipAI findet automatisch die besten Momente aus deinen Streams und macht daraus kurze Clips – bereit zum Teilen auf TikTok, YouTube Shorts oder Instagram Reels."
+    },
+    {
+      "question": "Was ist im Premium-Plan enthalten?",
+      "answer": "Premium bietet dir bessere Videoqualität, die Möglichkeit Aufnahmen herunterzuladen, 30 Tage Speicherung und Unterstützung für bis zu 100 Creator – perfekt für Agenturen und Management-Teams."
+    },
+    {
+      "question": "Wie upgrade ich auf Premium?",
+      "answer": "Gehe zu deinem Dashboard und klicke auf Upgrade. Wähle den Plan, der zu dir passt, und schließe die Zahlung ab. Wir akzeptieren Kreditkarten, Apple Pay und Google Pay."
+    },
+    {
+      "question": "Wie kontaktiere ich den Support?",
+      "answer": "Du erreichst uns jederzeit über das Kontaktformular auf unserer Website. Wir helfen dir gerne bei Fragen oder Problemen."
+    },
+    {
+      "question": "Wie lösche ich mein Konto?",
+      "answer": "Gehe zu Einstellungen und klicke auf Konto löschen. Dein Konto und alle Daten werden sofort dauerhaft entfernt. Diese Aktion kann nicht rückgängig gemacht werden."
+    },
+    {
+      "question": "Ist meine Privatsphäre geschützt?",
+      "answer": "Ja. Wir speichern nur deine E-Mail-Adresse und deine Benutzernamen. Details findest du in unserer Datenschutzerklärung."
+    },
+    {
+      "question": "Was, wenn ich meinen Benutzernamen auf einer Plattform ändere?",
+      "answer": "Wenn du deinen Benutzernamen änderst, musst du den alten entfernen und den neuen Benutzernamen hinzufügen."
+    }
+  ]
+}

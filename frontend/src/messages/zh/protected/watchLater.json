@@ -1,0 +1,13 @@
+{
+  "title": "稍后观看",
+  "description": "仅保存在此设备上",
+  "empty": "暂未保存视频。从菜单中添加视频以稍后观看。",
+  "clear": "清空",
+  "clearConfirm": {
+    "title": "清空稍后观看",
+    "message": "确定要从稍后观看列表中移除所有视频吗？",
+    "confirm": "全部清空",
+    "cancel": "取消"
+  },
+  "loadMore": "加载更多"
+}

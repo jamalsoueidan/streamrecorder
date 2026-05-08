@@ -1,0 +1,13 @@
+{
+  "title": "Aufnahmen",
+  "description": "Aufnahmen von deinen Creatorn",
+  "emptyFiltered": {
+    "title": "Keine Aufnahmen passen zu deinen Filtern",
+    "description": "Versuche, deine Filter anzupassen oder zurückzusetzen"
+  },
+  "emptyDefault": {
+    "title": "Noch keine Aufnahmen",
+    "description": "Deine Aufnahmen erscheinen hier, sobald du einen Creator hinzugefügt hast"
+  },
+  "noMoreToLoad": "Du hast das Ende erreicht"
+}

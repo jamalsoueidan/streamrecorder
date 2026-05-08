@@ -19,8 +19,7 @@ interface PageProps {
   }>;
 }
 
-export const revalidate = 86400;
-export const dynamic = "force-static";
+export const dynamic = "force-dynamic";
 
 export function generateStaticParams() {
   return [

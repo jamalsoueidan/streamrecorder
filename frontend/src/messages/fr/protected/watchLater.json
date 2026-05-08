@@ -1,0 +1,13 @@
+{
+  "title": "À regarder plus tard",
+  "description": "Enregistré uniquement sur cet appareil",
+  "empty": "Aucune vidéo enregistrée. Ajoute des vidéos depuis le menu pour les regarder plus tard.",
+  "clear": "Tout effacer",
+  "clearConfirm": {
+    "title": "Effacer la liste À regarder plus tard",
+    "message": "Veux-tu vraiment supprimer toutes les vidéos de ta liste ?",
+    "confirm": "Tout effacer",
+    "cancel": "Annuler"
+  },
+  "loadMore": "Charger plus"
+}

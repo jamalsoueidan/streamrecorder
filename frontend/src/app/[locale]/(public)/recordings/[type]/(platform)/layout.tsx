@@ -16,6 +16,7 @@ import {
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import Image from "next/image";
 import Link from "@/app/components/link";
+import { LinkButton } from "@/app/components/link-button";
 import Markdown from "react-markdown";
 import { FAQSection } from "../../../components/faq-section";
 import { PlatformBadges } from "../../../components/platform-badge";
@@ -159,9 +160,7 @@ export default async function RecordingPage({ params, children }: PageProps) {
               {t(`cta.subtitle.${platformName.toLowerCase()}`)}
             </Text>
 
-            <Button
-              component="a"
-              href="/register"
+            <LinkButton href="/register"
               size="responsive"
               radius="lg"
               variant="gradient"
@@ -169,7 +168,7 @@ export default async function RecordingPage({ params, children }: PageProps) {
               style={{ fontWeight: 600 }}
             >
               {t("cta.button")}
-            </Button>
+            </LinkButton>
           </Stack>
         </Paper>
       </div>

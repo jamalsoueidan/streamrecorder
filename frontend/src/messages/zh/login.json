@@ -1,0 +1,41 @@
+{
+  "meta": {
+    "title": "登录",
+    "description": "登录你的 LiveStreamRecorder 账号，访问录制内容和关注的主播。"
+  },
+  "title": "欢迎回来",
+  "subtitle": "登录以继续使用你的账号",
+  "email": {
+    "label": "邮箱地址",
+    "placeholder": "you@example.com"
+  },
+  "password": {
+    "label": "密码",
+    "placeholder": "请输入密码"
+  },
+  "emailConfirmed": "邮箱已确认。你现在可以登录了。",
+  "forgotPassword": "忘记密码？",
+  "submit": {
+    "default": "登录",
+    "loading": "登录中…"
+  },
+  "choices": {
+    "emailPassword": "使用邮箱 / 密码",
+    "google": "使用 Google 继续",
+    "tiktok": "使用 TikTok 继续",
+    "facebook": "使用 Facebook 继续"
+  },
+  "terms": {
+    "text": "继续即表示你同意 Live Stream Recorder 的",
+    "tosLink": "服务条款",
+    "and": "并确认你已阅读 Live Stream Recorder 的",
+    "privacyLink": "隐私政策"
+  },
+  "errors": {
+    "emailTaken": "已存在使用此邮箱的账号。请使用原始登录方式登录。"
+  },
+  "register": {
+    "text": "还没有账号？",
+    "link": "注册"
+  }
+}

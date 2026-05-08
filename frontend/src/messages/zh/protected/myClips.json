@@ -1,0 +1,131 @@
+{
+  "title": "我的短视频",
+  "description": "AI 从你的录制内容生成的短视频",
+  "emptyState": {
+    "title": "暂无短视频",
+    "description": "从你的录制内容生成短视频后,它们将出现在这里"
+  },
+  "share": {
+    "tiktok": "发布到 TikTok",
+    "uploaded": "已发布到 TikTok",
+    "processing": "发布中…",
+    "completed": "已发布",
+    "shared": "已发布",
+    "failed": "失败",
+    "retry": "重试",
+    "failedTooltip": "发布失败。点击重试。",
+    "check": "检查",
+    "checkStatus": "检查 TikTok 状态",
+    "youtube": "发布到 YouTube"
+  },
+  "actions": {
+    "edit": "编辑视频",
+    "delete": "删除"
+  },
+  "publishPage": {
+    "title": "发布到 TikTok",
+    "description": "查看你的视频并选择如何在 TikTok 上分享",
+    "loadingCreator": "加载你的 TikTok 账号中…",
+    "publishingTo": "发布到",
+    "descriptionLabel": "标题",
+    "descriptionPlaceholder": "为你的视频写一个标题…",
+    "privacyLabel": "隐私设置",
+    "privacyPlaceholder": "选择隐私设置",
+    "privacy": {
+      "PUBLIC_TO_EVERYONE": "所有人",
+      "MUTUAL_FOLLOW_FRIENDS": "好友",
+      "FOLLOWER_OF_CREATOR": "粉丝",
+      "SELF_ONLY": "仅自己"
+    },
+    "interactionSettings": "允许用户：",
+    "allowComments": "评论",
+    "allowDuet": "合拍",
+    "allowStitch": "拼接",
+    "disabledByCreator": "已在你的 TikTok 设置中禁用",
+    "commercialContent": "商业内容披露",
+    "commercialContentDescription": "如果此视频以换取等价物的方式推广商品或服务,请开启此选项。你的视频可以推广你自己、第三方或两者。",
+    "brandContentToggle": "你的品牌",
+    "brandContentDescription": "你正在推广自己或自己的业务。此内容将归类为 Brand Organic。",
+    "brandOrganicToggle": "品牌内容",
+    "brandOrganicDescription": "你正在推广其他品牌或第三方。此内容将归类为 Branded Content。",
+    "promotionalContentLabel": "你的视频将被标记为推广内容。",
+    "paidPartnershipLabel": "你的视频将被标记为付费合作。",
+    "cannotChangeWarning": "视频发布后此设置无法更改。",
+    "musicConfirmation": "发布即表示你同意 TikTok 音乐使用确认",
+    "confirmationPrefix": "发布即表示你同意",
+    "termsOfServiceLink": "LiveStreamRecorder 的服务条款",
+    "musicConfirmationLink": "TikTok 音乐使用确认",
+    "brandedContentPolicyLink": "TikTok 品牌内容政策",
+    "andText": "和",
+    "commercialContentToggle": "此内容推广我自己、品牌、产品或服务",
+    "commercialContentRequired": "你需要表明你的内容是否推广你自己、第三方或两者",
+    "brandedContentPrivacyWarning": "品牌内容不能设置为私密可见",
+    "publishButton": "发布到 TikTok",
+    "uploadButton": "发布",
+    "cancel": "取消",
+    "backToClips": "返回短视频",
+    "noTiktokConnection": {
+      "title": "TikTok 账号未连接",
+      "description": "要将短视频发布到 TikTok,请先前往设置并连接你的 TikTok 账号。",
+      "goToSettings": "前往设置",
+      "hint": "连接后,回到这里发布你的短视频。"
+    },
+    "success": "发布中",
+    "successMessage": "你的视频正在发布到 TikTok。可能需要几分钟才能处理并出现在你的主页上。",
+    "error": "错误",
+    "errorMessage": "发布到 TikTok 失败",
+    "validation": {
+      "privacyRequired": "请选择谁可以观看此视频",
+      "musicConfirmationRequired": "你必须同意音乐使用确认"
+    },
+    "cannotPostNow": "你已达到 TikTok 每日发布限制。请稍后再试。",
+    "videoTooLong": "此视频时长 {duration} 秒,但 TikTok 仅允许你的账号上传最长 {maxDuration} 秒的视频。",
+    "selfOnlyDisabledBranded": "品牌内容的可见性不能设置为私密"
+  },
+  "youtubePublishPage": {
+    "title": "发布到 YouTube",
+    "description": "查看你的视频并将其发布为 YouTube Short",
+    "titleLabel": "标题",
+    "titlePlaceholder": "为你的视频输入标题…",
+    "descriptionLabel": "描述",
+    "descriptionPlaceholder": "添加描述(可选)…",
+    "privacyLabel": "隐私",
+    "privacy": {
+      "public": "公开",
+      "unlisted": "不公开列出",
+      "private": "私密"
+    },
+    "tagsLabel": "标签",
+    "tagsPlaceholder": "游戏, 精彩, 直播",
+    "tagsDescription": "用逗号分隔的标签,帮助观众找到你的视频",
+    "checkingConnection": "检查 YouTube 连接中…",
+    "quotaWarning": "YouTube 有每日上传限制。如果上传因配额错误失败,请明天再试。",
+    "confirmationPrefix": "发布即表示你同意",
+    "termsOfServiceLink": "LiveStreamRecorder 的服务条款",
+    "andText": "和",
+    "youtubeTermsLink": "YouTube 的服务条款",
+    "uploadButton": "发布到 YouTube",
+    "cancel": "取消",
+    "success": "已发布",
+    "successMessage": "你的视频已上传到 YouTube。",
+    "error": "错误",
+    "validation": {
+      "titleRequired": "请为你的视频输入标题"
+    },
+    "noYoutubeConnection": {
+      "title": "YouTube 账号未连接",
+      "description": "要将短视频发布到 YouTube,请先前往设置并连接你的 YouTube 账号。",
+      "goToSettings": "前往设置"
+    }
+  },
+  "upgrade": {
+    "title": "几秒钟内从录制到 TikTok",
+    "features": {
+      "publish": "直接发布到 TikTok、Reels 和 Shorts",
+      "schedule": "安排你的短视频 — 自动保持稳定输出",
+      "edit": "添加字幕、特效,打造你的风格"
+    },
+    "upgradeButton": "立即升级",
+    "hint": "通过高级订阅解锁短视频发布功能"
+  }
+}

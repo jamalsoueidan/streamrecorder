@@ -1,0 +1,28 @@
+{
+  "meta": {
+    "title": "{nickname} (@{username}) 视频和录制",
+    "notFoundTitle": "未找到创作者",
+    "notFoundDescription": "找不到此创作者的主页。",
+    "description": "观看 {nickname} 的 {platform} 直播录像和短视频。{nickname} 使用 Live Stream Recorder 保存和分享他们的直播。",
+    "ogTitle": "{nickname} — 视频和短视频 | Live Stream Recorder",
+    "twitterTitle": "{nickname} — {platform} 视频和短视频",
+    "keywords": "{nickname} 视频, {nickname} 短视频, {nickname} {platform}, 观看 {nickname}, {nickname} 直播, {nickname} 录制"
+  },
+  "defaultTagline": "{nickname} 在这里保存他们的直播。随时观看录像和短视频。",
+  "about": "关于 {nickname}",
+  "faq": "常见问题",
+  "recorded": "录制于 {date}",
+  "emptyState": {
+    "title": "暂无录制内容",
+    "description": "此创作者暂未保存任何直播。请稍后再来查看！"
+  },
+  "jsonLd": {
+    "streamTitle": "{nickname} 的直播 - {date}"
+  },
+  "report": "举报",
+  "cta": {
+    "title": "你只能看到 @{username} 的预览",
+    "description": "@{username} 在这里分享他们的录制内容。注册以保存和分享你自己的直播。",
+    "button": "免费创建账号"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "title": "短视频",
+  "description": "社区最新短视频",
+  "emptyState": {
+    "title": "暂无短视频",
+    "description": "社区创建的短视频将显示在这里。"
+  },
+  "menu": {
+    "delete": "删除短视频",
+    "deleteTitle": "删除短视频",
+    "deleteConfirm": "确定要删除这个短视频吗？此操作无法撤销。",
+    "deleteButton": "删除",
+    "cancel": "取消",
+    "deleteSuccess": "短视频已删除",
+    "deleteError": "删除短视频失败"
+  }
+}

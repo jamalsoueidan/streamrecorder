@@ -51,8 +51,6 @@ interface PageProps {
   }>;
 }
 
-export const revalidate = 86400;
-
 export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
@@ -359,3 +357,6 @@ async function EmptyState() {
     </Stack>
   );
 }
+
+
+export const dynamic = "force-dynamic";

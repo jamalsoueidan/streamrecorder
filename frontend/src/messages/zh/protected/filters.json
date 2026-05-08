@@ -1,0 +1,74 @@
+{
+  "platforms": {
+    "label": "平台",
+    "all": "全部",
+    "tiktok": "TikTok",
+    "twitch": "Twitch",
+    "youtube": "YouTube",
+    "kick": "Kick",
+    "afreecatv": "AfreecaTV",
+    "pandalive": "PandaLive",
+    "bigo": "Bigo",
+    "buzzcast": "Buzzcast",
+    "liveme": "LiveMe",
+    "mixch": "Mixch"
+  },
+  "sort": {
+    "label": "排序",
+    "usernameAsc": "A–Z",
+    "usernameDesc": "Z–A",
+    "createdAtDesc": "最近添加",
+    "createdAtAsc": "最早添加",
+    "totalRecordingsDesc": "录制最多",
+    "totalRecordingsAsc": "录制最少",
+    "latestRecordingDesc": "最近开播",
+    "latestRecordingAsc": "最早开播",
+    "updatedAtDesc": "最新",
+    "updatedAtAsc": "最早"
+  },
+  "gender": {
+    "label": "性别",
+    "all": "全部",
+    "female": "女",
+    "male": "男",
+    "unknown": "其他"
+  },
+  "dateRange": {
+    "label": "添加时间",
+    "today": "今天",
+    "yesterday": "昨天",
+    "thisWeek": "本周",
+    "lastWeek": "上周",
+    "thisMonth": "本月",
+    "lastMonth": "上月",
+    "all": "全部"
+  },
+  "duration": {
+    "label": "时长",
+    "short": "4 分钟以内",
+    "medium": "4–20 分钟",
+    "long": "20 分钟以上",
+    "all": "全部"
+  },
+  "country": {
+    "label": "国家/地区",
+    "placeholder": "更多国家/地区…"
+  },
+  "language": {
+    "label": "语言",
+    "placeholder": "更多语言…"
+  },
+  "search": {
+    "placeholder": "搜索用户名…"
+  },
+  "actions": {
+    "clearAll": "清除全部",
+    "filters": "筛选",
+    "favorites": "收藏",
+    "done": "完成"
+  },
+  "options": {
+    "hasRecordings": "仅显示有录制内容的创作者"
+  },
+  "excludeMyCreators": "排除我的创作者"
+}

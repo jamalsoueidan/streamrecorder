@@ -1,0 +1,13 @@
+{
+  "title": "浏览",
+  "description": "浏览其他创作者的录制内容",
+  "emptyFiltered": {
+    "title": "没有录制内容匹配你的筛选",
+    "description": "尝试调整或清除筛选条件"
+  },
+  "emptyDefault": {
+    "title": "暂无录制内容",
+    "description": "-"
+  },
+  "noMoreToLoad": "你已经看到底了"
+}

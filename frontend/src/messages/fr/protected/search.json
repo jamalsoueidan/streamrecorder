@@ -1,0 +1,59 @@
+{
+  "title": "Recherche",
+  "description": "Ajoute tes lives à ta liste",
+  "platforms": {
+    "tiktok": "TikTok",
+    "twitch": "Twitch",
+    "kick": "Kick",
+    "youtube": "YouTube",
+    "afreecatv": "AfreecaTV",
+    "pandalive": "PandaLive",
+    "bigo": "Bigo",
+    "buzzcast": "Buzzcast",
+    "liveme": "LiveMe",
+    "mixch": "Mixch"
+  },
+  "search": {
+    "actionButton": "Rechercher",
+    "submitButton": "Rechercher",
+    "placeholder": "Saisis ton URL de stream ou @nomdutilisateur",
+    "searching": "Recherche sur {platform}…",
+    "pasteButton": "Coller",
+    "pasteError": "Colle manuellement avec Ctrl+V ou un appui long",
+    "parseError": "Impossible de reconnaître le nom d'utilisateur",
+    "notFound": "Rien trouvé…",
+    "autoDetected": "Plateforme détectée automatiquement depuis l'URL",
+    "enterUsername": "Saisis ton URL de stream ou ton nom d'utilisateur",
+    "selectPlatform": "Sélectionne la plateforme sur laquelle tu streames",
+    "changeUsername": "Modifier le nom d'utilisateur",
+    "newSearch": "Nouvelle recherche",
+    "premiumOnly": "Premium uniquement"
+  },
+  "upgrade": {
+    "title": "{platform} nécessite Premium",
+    "description": "Passe Premium pour ajouter des créateurs {platform} et enregistrer leurs lives."
+  },
+  "hints": {
+    "tryFormats": "Essaie ces exemples :",
+    "enterUsername": "Saisis un @nomdutilisateur ou colle une URL de profil"
+  },
+  "actions": {
+    "follow": "Ajouter",
+    "successTitle": "Ajouté !",
+    "successMessage": "{username} a été ajouté·e",
+    "errorTitle": "Erreur",
+    "cancel": "Annuler",
+    "willRecord": "Sera enregistré·e dès le passage en live",
+    "viewPage": "Voir la page"
+  },
+  "chromeExtension": "Installer l'extension Chrome",
+  "inputLabel": "Colle ici un lien de stream Twitch, TikTok ou YouTube",
+  "notFollowing": {
+    "title": "Ce créateur n'est pas dans ta liste",
+    "description": "Tu as essayé d'accéder à un créateur qui n'est pas dans ta liste.",
+    "followToAccess": "Ajoute-le pour voir ses enregistrements et être notifié quand il passe en live.",
+    "notFoundTitle": "Créateur introuvable",
+    "notFoundDescription": "@{username} n'existe pas sur {platform} ou le compte est privé.",
+    "trySearch": "Essaie de chercher un autre créateur :"
+  }
+}

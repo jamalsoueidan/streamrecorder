@@ -32,7 +32,7 @@ const nextConfig: NextConfig = {
       // Old PWA start_url values cached on installed devices, plus
       // any historical bookmarks. Match both unprefixed and locale-prefixed.
       {
-        source: "/:locale(ar|tr|ko|ja|es|pt|id)/dashboard",
+        source: "/:locale(ar|tr|ko|ja|es|pt|id|de|fr|zh)/dashboard",
         destination: "/:locale/my/dashboard",
         permanent: true,
       },
@@ -42,7 +42,7 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
-        source: "/:locale(ar|tr|ko|ja|es|pt|id)/following",
+        source: "/:locale(ar|tr|ko|ja|es|pt|id|de|fr|zh)/following",
         destination: "/:locale/my/following",
         permanent: true,
       },

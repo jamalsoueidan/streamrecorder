@@ -1,0 +1,367 @@
+{
+  "meta": {
+    "all": {
+      "title": "Creator auf LiveStreamRecorder",
+      "description": "Entdecke Creator, die LiveStreamRecorder nutzen, um ihre Live-Streams aufzunehmen und in kurze Clips zu verwandeln. Tritt Tausenden von Creatorn auf TikTok, Twitch, YouTube, Kick und mehr bei.",
+      "keywords": [
+        "Content Creator",
+        "Live-Stream",
+        "Stream-Aufnahme",
+        "Live Stream Recorder"
+      ]
+    },
+    "tiktok": {
+      "title": "TikTok-Creator",
+      "description": "Entdecke TikTok-Creator, die ihre Lives auf LiveStreamRecorder aufnehmen. Stöbere durch Top-TikTok-Creator, sieh dir ihre Live-Aufnahmen an und finde neue Content Creator, denen du folgen möchtest.",
+      "keywords": [
+        "TikTok Creator",
+        "TikTok Content Creator",
+        "TikTok Creator Liste",
+        "Top TikTok Creator",
+        "Beliebte TikTok Creator",
+        "TikTok Creator finden",
+        "Beste TikTok Content Creator",
+        "TikTok für Creator",
+        "TikTok Creator werden",
+        "TikTok Creator Seite"
+      ],
+      "faqs": [
+        {
+          "question": "Wie finde ich TikTok-Creator auf LiveStreamRecorder?",
+          "answer": "Stöbere in unserer TikTok-Creator-Liste und entdecke Content Creator, die ihre Lives auf LiveStreamRecorder aufnehmen. Du kannst nach Namen suchen oder beliebte TikTok-Creator durchstöbern, um neue Streamer zu finden."
+        },
+        {
+          "question": "Wie bekomme ich meine TikTok-Creator-Seite auf LiveStreamRecorder?",
+          "answer": "Registriere dich kostenlos und füge deinen TikTok-Benutzernamen hinzu. Deine TikTok-Creator-Seite wird automatisch erstellt und deine Lives werden aufgenommen. Andere Nutzer können deine Aufnahmen durchstöbern und deinen Content entdecken."
+        },
+        {
+          "question": "Ich bin ein TikTok-Content-Creator – warum sollte ich meine Lives aufnehmen?",
+          "answer": "Deine TikTok-Lives sind weg, sobald sie enden. Als TikTok-Content-Creator kannst du mit aufgenommenen Lives deine besten Momente erneut ansehen, sie zur Bearbeitung herunterladen und mit ClipAI Highlights in TikTok-Clips, Reels oder Shorts verwandeln. Mehr Content aus jedem Live bedeutet mehr Wachstum."
+        },
+        {
+          "question": "Wie werde ich TikTok-Creator auf LiveStreamRecorder?",
+          "answer": "Registriere dich einfach kostenlos und füge deinen TikTok-Benutzernamen hinzu. Jedes Live, das du machst, wird automatisch aufgenommen. Auf deiner Creator-Seite werden alle deine Aufnahmen angezeigt, sodass Fans verpasste Lives leicht nachholen können."
+        },
+        {
+          "question": "Kann ich eine Liste der Top-TikTok-Creator auf LiveStreamRecorder sehen?",
+          "answer": "Ja. Auf dieser Seite findest du beliebte TikTok-Creator, die ihre Lives auf LiveStreamRecorder aufnehmen. Die Liste wird aktualisiert, sobald weitere Content Creator beitreten und live gehen."
+        },
+        {
+          "question": "Ist LiveStreamRecorder kostenlos für TikTok-Creator?",
+          "answer": "Ja. TikTok-Creator können sich registrieren und ihre Lives kostenlos aufnehmen. Premium-Pläne schalten den Download von Aufnahmen, ClipAI für automatische Highlight-Clips und erweiterten Speicher frei."
+        },
+        {
+          "question": "Wie können TikTok-Creator ihre Reichweite mit LiveStreamRecorder vergrößern?",
+          "answer": "Nimm deine TikTok-Lives automatisch auf und nutze ClipAI, um deine besten Momente in kurze Clips zu verwandeln. Poste sie als TikToks, YouTube Shorts oder Reels. Aus einem Live werden mehrere Content-Stücke – mehr Posts, mehr Reichweite, mehr Follower."
+        },
+        {
+          "question": "Kann ich meine Aufnahmen für TikTok-Creator-Kampagnen oder Werbung verwenden?",
+          "answer": "Ja. Deine Live-Aufnahmen sind dein Content. Lade sie herunter und verwende sie, wie du willst – für TikTok-Creator-Kampagnen, Werbeinhalte, Portfolio-Reels oder plattformübergreifende Posts."
+        }
+      ]
+    },
+    "twitch": {
+      "title": "Twitch-Streamer & -Creator",
+      "description": "Entdecke Twitch-Streamer, die ihre Live-Streams auf LiveStreamRecorder aufnehmen. Stöbere durch Top-Twitch-Streamer, sieh dir ihre Stream-Aufnahmen an und finde neue Streamer, denen du folgen möchtest.",
+      "keywords": [
+        "Twitch Streamer",
+        "Twitch Live Streamer",
+        "Top Twitch Streamer",
+        "Beste Twitch Streamer",
+        "Twitch Streaming starten",
+        "Auf Twitch streamen",
+        "IRL Streams",
+        "Twitch IRL Stream",
+        "Für Streamer"
+      ],
+      "faqs": [
+        {
+          "question": "Wie finde ich Twitch-Streamer auf LiveStreamRecorder?",
+          "answer": "Stöbere auf unserer Twitch-Streamer-Seite, um Live-Streamer zu entdecken, die ihre Streams auf LiveStreamRecorder aufnehmen. Suche nach Namen oder durchstöbere die Top-Twitch-Streamer, um neue Kanäle zu finden."
+        },
+        {
+          "question": "Wie bekomme ich meine Twitch-Streamer-Seite auf LiveStreamRecorder?",
+          "answer": "Registriere dich kostenlos und verbinde deinen Twitch-Kanal. Deine Streamer-Seite wird automatisch erstellt und jeder Live-Stream, den du machst, wird aufgenommen. Fans können alle deine Stream-Aufnahmen an einem Ort durchstöbern – auch wenn deine Twitch-VODs abgelaufen sind."
+        },
+        {
+          "question": "Ich fange gerade an, auf Twitch zu streamen – sollte ich meine Streams aufnehmen?",
+          "answer": "Auf jeden Fall. Wenn du mit Twitch-Streaming startest, zählt jeder Stream. Aufgenommene Live-Streams ermöglichen es dir, deinen Content erneut anzusehen, deine Performance zu verbessern und mit ClipAI Highlights in kurze Clips für TikTok, YouTube Shorts oder Reels zu verwandeln. Eine der besten Methoden, um als neuer Twitch-Streamer zu wachsen."
+        },
+        {
+          "question": "Wie können Twitch-Streamer ihre Zuschauer mit LiveStreamRecorder vergrößern?",
+          "answer": "Nimm deine Twitch-Live-Streams automatisch auf und nutze ClipAI, um Highlight-Clips aus deinen besten Momenten zu erstellen. Poste sie auf TikTok, YouTube Shorts und Reels. Die Top-Twitch-Streamer verwerten ihren Content plattformübergreifend – LiveStreamRecorder macht das einfach."
+        },
+        {
+          "question": "Ist LiveStreamRecorder kostenlos für Twitch-Streamer?",
+          "answer": "Ja. Twitch-Streamer können sich registrieren und ihre Live-Streams kostenlos aufnehmen. Premium-Pläne schalten den Download von Aufnahmen, ClipAI für automatische Highlight-Clips und erweiterten Speicher frei."
+        },
+        {
+          "question": "Werden auch IRL-Streams aufgenommen?",
+          "answer": "Ja. LiveStreamRecorder erfasst alle deine Twitch-Streams – Gaming, IRL-Streams, Just Chatting oder jede andere Kategorie. Jedes Mal, wenn du auf Twitch live gehst, wird dein Stream automatisch aufgenommen, unabhängig vom Inhaltstyp."
+        },
+        {
+          "question": "Wie unterscheidet sich das von Twitch-VODs?",
+          "answer": "Twitch-VODs laufen nach 14–60 Tagen ab und können stummgeschaltet werden. LiveStreamRecorder bietet Twitch-Streamern ein dauerhaftes Backup. Deine Stream-Aufnahmen laufen nie ab, bleiben in voller Qualität und sind jederzeit zum Ansehen oder Herunterladen verfügbar."
+        },
+        {
+          "question": "Können Twitch-Streamer ihre Streams in Clips verwandeln?",
+          "answer": "Ja. Premium-Nutzer können ClipAI verwenden, um Twitch-Stream-Aufnahmen automatisch in kurze Highlight-Clips zu verwandeln. Die schnellste Methode für Twitch-Live-Streamer, Content für andere Plattformen zu erstellen, ohne Stunden mit dem Schneiden zu verbringen."
+        }
+      ]
+    },
+    "youtube": {
+      "title": "YouTube-Creator",
+      "description": "Entdecke YouTube-Creator, die ihre Live-Streams auf LiveStreamRecorder aufnehmen. Stöbere durch YouTube-Content-Creator, sieh dir ihre Live-Aufnahmen an und finde neue Kanäle zum Abonnieren.",
+      "keywords": [
+        "YouTube Creator",
+        "YouTube Content Creator",
+        "YouTube Studio",
+        "YouTube Video Creator",
+        "YouTube Shorts Creator",
+        "YouTube Channel Creator",
+        "Content Creation YouTube",
+        "Content für YouTuber"
+      ],
+      "faqs": [
+        {
+          "question": "Wie finde ich YouTube-Creator auf LiveStreamRecorder?",
+          "answer": "Stöbere auf unserer YouTube-Creator-Seite, um Content Creator zu entdecken, die ihre Live-Streams auf LiveStreamRecorder aufnehmen. Suche nach Namen oder durchstöbere beliebte YouTube-Creator, um neue Kanäle zu finden, die ein Abo wert sind."
+        },
+        {
+          "question": "Wie bekomme ich meine YouTube-Creator-Seite auf LiveStreamRecorder?",
+          "answer": "Registriere dich kostenlos und verbinde deinen YouTube-Kanal. Deine Creator-Seite wird automatisch eingerichtet und deine Live-Streams werden aufgenommen. Fans können alle deine aufgezeichneten Lives an einem Ort durchstöbern."
+        },
+        {
+          "question": "Ich bin ein YouTube-Content-Creator – warum sollte ich meine Lives aufnehmen?",
+          "answer": "Als YouTube-Content-Creator stecken in deinen Live-Streams viele Momente, die sich zur Wiederverwertung lohnen. Aufgenommene Lives ermöglichen dir, Highlights erneut anzusehen, sie zur Bearbeitung herunterzuladen und mit ClipAI die besten Teile in YouTube Shorts zu verwandeln. Ein Live kann tagelang Content-Material liefern."
+        },
+        {
+          "question": "Wie können YouTube-Creator Lives in Shorts verwandeln?",
+          "answer": "ClipAI analysiert deine aufgenommenen Live-Streams und extrahiert Highlight-Clips, die für YouTube Shorts formatiert sind. Für YouTube-Creator, die ihren Kanal vergrößern möchten, ist es eine der einfachsten Content-Strategien, ein Live in mehrere Shorts zu verwandeln."
+        },
+        {
+          "question": "Ist LiveStreamRecorder kostenlos für YouTube-Creator?",
+          "answer": "Ja. YouTube-Creator können sich registrieren und ihre Live-Streams kostenlos aufnehmen. Premium-Pläne schalten den Download von Aufnahmen, ClipAI für automatische Shorts-Erstellung und erweiterten Speicher frei."
+        },
+        {
+          "question": "Wie unterscheidet sich das von YouTube Studio?",
+          "answer": "YouTube Studio bietet Kanalverwaltung und Stream-Wiederholungen – aber Wiederholungen können fehlschlagen, gelöscht werden oder Qualität verlieren. LiveStreamRecorder bietet YouTube-Creatorn ein unabhängiges Backup. Deine Live-Streams werden automatisch aufgenommen und separat gespeichert, sodass du immer deinen Content hast."
+        },
+        {
+          "question": "Kann ich meine Aufnahmen für YouTube-Werbung oder Promo verwenden?",
+          "answer": "Ja. Deine Live-Aufnahmen sind dein Content. Lade sie herunter und verwende sie, wie du willst – für YouTube-Werbung, Kanal-Trailer, Compilation-Videos oder plattformübergreifende Posts auf TikTok und Reels."
+        },
+        {
+          "question": "Wie können YouTube-Creator ihren Kanal mit LiveStreamRecorder wachsen lassen?",
+          "answer": "Nimm deine Live-Streams automatisch auf und nutze ClipAI, um YouTube Shorts aus deinen besten Momenten zu erstellen. Konsistente Shorts aus deinen Lives halten deinen Kanal zwischen den Streams aktiv – mehr Content für deine Abonnenten, mehr Chancen, neue Zuschauer zu erreichen."
+        }
+      ]
+    },
+    "kick": {
+      "title": "Kick-Creator",
+      "description": "Entdecke Kick-Creator, die LiveStreamRecorder nutzen, um ihre Live-Streams aufzunehmen und in kurze Clips zu verwandeln.",
+      "keywords": [
+        "Kick Creator",
+        "Kick Live Stream",
+        "Kick Aufnahme",
+        "Kick Stream Recorder"
+      ]
+    },
+    "pandalive": {
+      "title": "Pandalive-Creator",
+      "description": "Entdecke Pandalive-Creator, die LiveStreamRecorder nutzen, um ihre Live-Streams aufzunehmen und in kurze Clips zu verwandeln.",
+      "keywords": [
+        "Pandalive Creator",
+        "Koreanischer Live-Stream",
+        "Pandalive Aufnahme",
+        "Koreanischer Stream Recorder"
+      ]
+    },
+    "afreecatv": {
+      "title": "AfreecaTV-Creator",
+      "description": "Entdecke AfreecaTV-Creator, die LiveStreamRecorder nutzen, um ihre Live-Streams aufzunehmen und in kurze Clips zu verwandeln.",
+      "keywords": [
+        "AfreecaTV Creator",
+        "Koreanischer Live-Stream",
+        "AfreecaTV Aufnahme",
+        "Koreanischer Stream Recorder"
+      ]
+    },
+    "bigo": {
+      "title": "Bigo-Creator",
+      "description": "Entdecke Bigo-Creator, die LiveStreamRecorder nutzen, um ihre Live-Streams aufzunehmen und in kurze Clips zu verwandeln.",
+      "keywords": [
+        "Bigo Creator",
+        "Bigo Live Stream",
+        "Bigo Aufnahme",
+        "Bigo Stream Recorder"
+      ]
+    },
+    "buzzcast": {
+      "title": "Buzzcast-Creator",
+      "description": "Entdecke Buzzcast-Creator, die LiveStreamRecorder nutzen, um ihre Live-Streams aufzunehmen und in kurze Clips zu verwandeln.",
+      "keywords": [
+        "Buzzcast Creator",
+        "Buzzcast Live Stream",
+        "Buzzcast Aufnahme",
+        "Buzzcast Stream Recorder"
+      ]
+    },
+    "liveme": {
+      "title": "LiveMe-Creator",
+      "description": "Entdecke LiveMe-Creator, die LiveStreamRecorder nutzen, um ihre Live-Streams aufzunehmen und in kurze Clips zu verwandeln.",
+      "keywords": [
+        "LiveMe Creator",
+        "LiveMe Live Stream",
+        "LiveMe Aufnahme",
+        "LiveMe Stream Recorder"
+      ]
+    },
+    "mixch": {
+      "title": "Mixch-Creator",
+      "description": "Entdecke Mixch-Creator, die LiveStreamRecorder nutzen, um ihre Live-Streams aufzunehmen und in kurze Clips zu verwandeln.",
+      "keywords": [
+        "Mixch Creator",
+        "Mixch Live Stream",
+        "Mixch Aufnahme",
+        "Mixch Stream Recorder"
+      ]
+    }
+  },
+  "hero": {
+    "title": {
+      "all": "Creator",
+      "tiktok": "TikTok-Creator",
+      "twitch": "Twitch-Creator",
+      "youtube": "YouTube-Creator",
+      "kick": "Kick-Creator",
+      "pandalive": "Pandalive-Creator",
+      "afreecatv": "AfreecaTV-Creator",
+      "bigo": "Bigo-Creator",
+      "buzzcast": "Buzzcast-Creator",
+      "liveme": "LiveMe-Creator",
+      "mixch": "Mixch-Creator"
+    },
+    "subtitle": {
+      "all": "Tritt Tausenden von Creatorn bei, die LiveStreamRecorder nutzen, um ihre Streams zu sichern und kurze Clips zu erstellen.",
+      "tiktok": "Tritt Tausenden von TikTok-Creatorn bei, die LiveStreamRecorder nutzen, um ihre Streams zu sichern und kurze Clips zu erstellen.",
+      "twitch": "Tritt Tausenden von Twitch-Creatorn bei, die LiveStreamRecorder nutzen, um ihre Streams zu sichern und kurze Clips zu erstellen.",
+      "youtube": "Tritt Tausenden von YouTube-Creatorn bei, die LiveStreamRecorder nutzen, um ihre Streams zu sichern und kurze Clips zu erstellen.",
+      "kick": "Tritt Tausenden von Kick-Creatorn bei, die LiveStreamRecorder nutzen, um ihre Streams zu sichern und kurze Clips zu erstellen.",
+      "pandalive": "Tritt Tausenden von Pandalive-Creatorn bei, die LiveStreamRecorder nutzen, um ihre Streams zu sichern und kurze Clips zu erstellen.",
+      "afreecatv": "Tritt Tausenden von AfreecaTV-Creatorn bei, die LiveStreamRecorder nutzen, um ihre Streams zu sichern und kurze Clips zu erstellen.",
+      "bigo": "Tritt Tausenden von Bigo-Creatorn bei, die LiveStreamRecorder nutzen, um ihre Streams zu sichern und kurze Clips zu erstellen.",
+      "buzzcast": "Tritt Tausenden von Buzzcast-Creatorn bei, die LiveStreamRecorder nutzen, um ihre Streams zu sichern und kurze Clips zu erstellen.",
+      "liveme": "Tritt Tausenden von LiveMe-Creatorn bei, die LiveStreamRecorder nutzen, um ihre Streams zu sichern und kurze Clips zu erstellen.",
+      "mixch": "Tritt Tausenden von Mixch-Creatorn bei, die LiveStreamRecorder nutzen, um ihre Streams zu sichern und kurze Clips zu erstellen."
+    }
+  },
+  "features": {
+    "badge": "So funktioniert's",
+    "title": {
+      "all": "Nimm deine Streams automatisch auf",
+      "tiktok": "Nimm deine TikTok-Streams automatisch auf",
+      "twitch": "Nimm deine Twitch-Streams automatisch auf",
+      "youtube": "Nimm deine YouTube-Streams automatisch auf",
+      "kick": "Nimm deine Kick-Streams automatisch auf",
+      "pandalive": "Nimm deine Pandalive-Streams automatisch auf",
+      "afreecatv": "Nimm deine AfreecaTV-Streams automatisch auf",
+      "bigo": "Nimm deine Bigo-Streams automatisch auf",
+      "buzzcast": "Nimm deine Buzzcast-Streams automatisch auf",
+      "liveme": "Nimm deine LiveMe-Streams automatisch auf",
+      "mixch": "Nimm deine Mixch-Streams automatisch auf"
+    },
+    "subtitle": "Vom Live-Stream zu kurzen Clips in Minuten",
+    "items": {
+      "add": {
+        "title": "Kanal hinzufügen",
+        "description": "Füge die URL deines Streaming-Kanals ein und wir starten die Aufnahme jedes Mal, wenn du live gehst. Keine Software nötig."
+      },
+      "watch": {
+        "title": "Streams erneut ansehen",
+        "description": "Jeder Stream wird automatisch gespeichert. Sieh dir deine Aufnahmen jederzeit an oder lade sie zur Bearbeitung herunter."
+      },
+      "clip": {
+        "title": "Highlights mit ClipAI erhalten",
+        "description": "ClipAI findet deine besten Momente und macht daraus kurze Clips – in Minuten fertig."
+      },
+      "edit": {
+        "title": "Bearbeiten und überall teilen",
+        "description": "Passe deine Clips ganz nach deinem Geschmack an. Untertitel hinzufügen, kürzen und auf allen Plattformen teilen."
+      }
+    }
+  },
+  "cta": {
+    "title": {
+      "all": "Nimm deine Live-Streams auf",
+      "tiktok": "Nimm deine TikTok-Lives auf",
+      "twitch": "Nimm deine Twitch-Streams auf",
+      "youtube": "Nimm deine YouTube-Lives auf",
+      "kick": "Nimm deine Kick-Streams auf",
+      "afreecatv": "Nimm deine AfreecaTV-Streams auf",
+      "pandalive": "Nimm deine Pandalive-Streams auf",
+      "bigo": "Nimm deine Bigo-Streams auf",
+      "buzzcast": "Nimm deine Buzzcast-Streams auf",
+      "liveme": "Nimm deine LiveMe-Streams auf",
+      "mixch": "Nimm deine Mixch-Streams auf"
+    },
+    "subtitle": {
+      "all": "Tritt Tausenden von Creatorn bei. Sichere deine Streams, erstelle kurze Clips mit ClipAI und vergrößere dein Publikum.",
+      "tiktok": "Tritt Tausenden von TikTok-Creatorn bei. Sichere deine Lives, erstelle kurze Clips mit ClipAI und gewinne mehr Follower.",
+      "twitch": "Tritt Tausenden von Twitch-Streamern bei. Sichere deine VODs, erstelle kurze Clips mit ClipAI und vergrößere deinen Kanal.",
+      "youtube": "Tritt Tausenden von YouTube-Creatorn bei. Sichere deine Lives, verwandle sie mit ClipAI in Shorts und gewinne mehr Abonnenten.",
+      "kick": "Tritt Tausenden von Kick-Streamern bei. Sichere deine Streams, erstelle kurze Clips mit ClipAI und vergrößere dein Publikum.",
+      "afreecatv": "Tritt Tausenden von AfreecaTV-Creatorn bei. Sichere deine Streams und erstelle kurze Clips mit ClipAI.",
+      "pandalive": "Tritt Tausenden von Pandalive-Creatorn bei. Sichere deine Streams und erstelle kurze Clips mit ClipAI.",
+      "bigo": "Tritt Tausenden von Bigo-Creatorn bei. Sichere deine Streams und erstelle kurze Clips mit ClipAI.",
+      "buzzcast": "Tritt Tausenden von Buzzcast-Creatorn bei. Sichere deine Streams und erstelle kurze Clips mit ClipAI.",
+      "liveme": "Tritt Tausenden von LiveMe-Creatorn bei. Sichere deine Streams und erstelle kurze Clips mit ClipAI.",
+      "mixch": "Tritt Tausenden von Mixch-Creatorn bei. Sichere deine Streams und erstelle kurze Clips mit ClipAI."
+    },
+    "button": "Kostenlos mit der Aufnahme starten"
+  },
+  "empty": {
+    "title": "Noch keine Creator",
+    "description": {
+      "all": "Sei der erste Creator, der beitritt!",
+      "tiktok": "Sei der erste TikTok-Creator, der beitritt!",
+      "twitch": "Sei der erste Twitch-Creator, der beitritt!",
+      "youtube": "Sei der erste YouTube-Creator, der beitritt!",
+      "kick": "Sei der erste Kick-Creator, der beitritt!",
+      "pandalive": "Sei der erste Pandalive-Creator, der beitritt!",
+      "afreecatv": "Sei der erste AfreecaTV-Creator, der beitritt!",
+      "bigo": "Sei der erste Bigo-Creator, der beitritt!",
+      "buzzcast": "Sei der erste Buzzcast-Creator, der beitritt!",
+      "liveme": "Sei der erste LiveMe-Creator, der beitritt!",
+      "mixch": "Sei der erste Mixch-Creator, der beitritt!"
+    },
+    "button": "Los geht's"
+  },
+  "about": {
+    "all": "## Über LiveStreamRecorder\n\nVerliere nie wieder deine besten Inhalte. Wir nehmen deine Live-Streams automatisch auf, damit du sie in kurze Clips verwandeln und dein Publikum vergrößern kannst.\n\n### Automatische Stream-Aufnahme\n\nFüge einfach die URL deines Kanals ein und geh live. Wir kümmern uns um die Aufnahme – keine Software-Installation, kein Setup. Jeder Stream wird automatisch gespeichert.\n\n### Erneut ansehen und herunterladen\n\nFertig mit dem Streamen? Deine Aufnahme ist bereit. Sieh sie dir an, lade sie herunter oder schicke sie an deinen Editor.\n\n### ClipAI findet deine besten Momente\n\nVerschwende keine Stunden damit, durch Aufnahmen zu scrollen. ClipAI hebt deine besten Momente hervor und macht daraus kurze Clips – in Minuten bereit.\n\n### Vergrößere dein Publikum\n\nVerwandle einen Live-Stream in Dutzende Clips. Teile sie auf TikTok, YouTube Shorts, Instagram Reels und überall sonst. Mehr Content, mehr Aufrufe, mehr Follower.\n\n### TikTok, Twitch, YouTube, Kick und mehr aufnehmen\n\nStream überall – wir nehmen überall auf. TikTok, Twitch, YouTube, Kick und weitere Plattformen folgen bald.\n\n### Kostenlos starten\n\nErstelle ein Konto und beginne noch heute mit der Aufnahme. Upgrade für höhere Qualität, mehr Aufnahmen und schnellere Downloads.",
+    "tiktok": "## TikTok-Creator\n\nEntdecke TikTok-Creator, die LiveStreamRecorder nutzen, um ihre Lives zu sichern. Stöbere durch beliebte TikTok-Creator, sieh dir ihre Live-Aufnahmen an und finde neue Content Creator, denen du folgen möchtest.\n\n### Warum TikTok-Creator ihre Lives aufnehmen\n\nTikTok-Lives sind voll von großartigem Content – lustige Momente, Zuschauer-Interaktionen, virales Potenzial. Aber sobald sie enden, sind sie weg. TikTok-Content-Creator nutzen LiveStreamRecorder, um jedes Live automatisch zu sichern, damit nichts verloren geht.\n\n### Stöbere durch Top-TikTok-Creator\n\nErkunde unsere TikTok-Creator-Liste und finde beliebte Creator, die ihre Live-Streams aufnehmen. Sieh dir ihre Aufnahmen an, hole verpasste Lives nach und entdecke neue Content Creator, denen es sich zu folgen lohnt.\n\n### Deine TikTok-Creator-Seite\n\nJeder TikTok-Creator auf LiveStreamRecorder bekommt seine eigene Seite, auf der Fans alle aufgenommenen Lives durchstöbern können. Registriere dich, füge deinen TikTok-Benutzernamen hinzu und deine Creator-Seite wird automatisch erstellt.\n\n### Von Lives zu Clips – mehr Follower gewinnen\n\nTikTok-Content-Creator können ClipAI verwenden, um ihre aufgenommenen Lives in kurze Highlight-Clips zu verwandeln. Poste sie als TikToks, YouTube Shorts oder Reels. Aus einem Live werden mehrere Content-Stücke – mehr Posts, mehr Reichweite, mehr Follower.\n\n### Werde TikTok-Creator auf LiveStreamRecorder\n\nRegistriere dich kostenlos, füge deinen TikTok-Benutzernamen hinzu und beginne noch heute mit der Aufnahme deiner Lives. Jedes Live wird automatisch erfasst – kein Screen Recorder, kein Handy, das die ganze Nacht läuft. Schließe dich den TikTok-Creatorn an, die LiveStreamRecorder bereits nutzen, um ihre Reichweite zu vergrößern.",
+    "twitch": "## Twitch-Streamer & -Creator\n\nEntdecke Twitch-Live-Streamer, die LiveStreamRecorder nutzen, um ihre Streams zu sichern. Stöbere durch Top-Twitch-Streamer, sieh dir ihre Aufnahmen an und finde neue Live-Streamer, denen du folgen möchtest.\n\n### Warum Twitch-Streamer ihre Streams aufnehmen\n\nTwitch-VODs laufen ab und die besten Momente deiner Live-Streams verschwinden in stundenlangem Material. Twitch-Streamer nutzen LiveStreamRecorder, um jeden Stream automatisch zu sichern – damit nichts verloren geht und jeder Live-Stream zu Content wird, den es zu teilen lohnt.\n\n### Stöbere durch Top-Twitch-Live-Streamer\n\nErkunde unsere Twitch-Streamer-Seite, um Live-Streamer zu finden, die ihre Streams aufnehmen. Sieh dir ihre Aufnahmen an, hole verpasste Streams nach und entdecke die besten Twitch-Live-Streamer aus Gaming, IRL-Streams und allen anderen Kategorien.\n\n### Deine Twitch-Streamer-Seite\n\nJeder Twitch-Streamer auf LiveStreamRecorder bekommt seine eigene Seite, auf der Fans alle aufgenommenen Streams durchstöbern können. Registriere dich, verbinde deinen Twitch-Kanal und deine Seite wird automatisch eingerichtet – ein dauerhaftes Zuhause für deinen Content, das nicht wie Twitch-VODs abläuft.\n\n### Von Streams zu Clips – über Twitch hinaus wachsen\n\nDie Top-Twitch-Live-Streamer vergrößern ihr Publikum, indem sie Content plattformübergreifend wiederverwenden. ClipAI verwandelt deine aufgenommenen Streams in kurze Highlight-Clips, bereit für TikTok, YouTube Shorts oder Reels. Aus einem Live-Stream werden Dutzende Clips – mehr Content, mehr Reichweite, mehr Follower.\n\n### Du fängst mit Twitch-Streaming an? Starte mit der Aufnahme.\n\nWenn du gerade erst anfängst, auf Twitch zu streamen, ist es einer der schlauesten Schritte, jeden Stream vom ersten Tag an aufzunehmen. Sieh dir deinen Content an, um besser zu werden, baue eine Clip-Bibliothek auf und beginne sofort, deine Präsenz plattformübergreifend zu vergrößern. Registriere dich kostenlos und jeder Stream wird automatisch erfasst.",
+    "youtube": "## YouTube-Creator\n\nEntdecke YouTube-Creator, die LiveStreamRecorder nutzen, um ihre Live-Streams zu sichern. Stöbere durch YouTube-Content-Creator, sieh dir ihre Aufnahmen an und finde neue Kanäle zum Abonnieren.\n\n### Warum YouTube-Creator ihre Lives aufnehmen\n\nYouTube-Lives sind großartig für Engagement, aber die besten Momente verschwinden in stundenlangem Material. YouTube-Content-Creator nutzen LiveStreamRecorder, um jeden Live-Stream automatisch zu sichern – damit nichts verloren geht und jedes Live zur Content-Creation-Chance wird.\n\n### Stöbere durch YouTube-Creator\n\nErkunde unsere YouTube-Creator-Seite, um Kanäle zu finden, die ihre Live-Streams aufnehmen. Sieh dir ihre Aufnahmen an, hole verpasste Lives nach und entdecke neue YouTube-Content-Creator, denen es sich zu folgen lohnt.\n\n### Deine YouTube-Creator-Seite\n\nJeder YouTube-Creator auf LiveStreamRecorder bekommt seine eigene Seite, auf der Fans alle aufgenommenen Live-Streams durchstöbern können. Registriere dich, verbinde deinen YouTube-Kanal und deine Seite wird automatisch eingerichtet.\n\n### Von Lives zu YouTube Shorts\n\nYouTube-Creator können ClipAI verwenden, um ihre aufgenommenen Lives automatisch in YouTube Shorts zu verwandeln. Aus einem Live-Stream werden mehrere Content-Stücke – die einfachste Content-Strategie, um deinen Kanal zwischen den Streams wachsen zu lassen.\n\n### Mehr als YouTube Studio\n\nYouTube Studio kümmert sich um deine Kanalverwaltung, aber Stream-Wiederholungen können fehlschlagen oder gelöscht werden. LiveStreamRecorder bietet YouTube-Creatorn ein unabhängiges Backup jedes Live-Streams, plus Tools, um diesen Content in Shorts und Clips zu verwandeln.\n\n### Werde YouTube-Creator auf LiveStreamRecorder\n\nRegistriere dich kostenlos, verbinde deinen YouTube-Kanal und beginne noch heute mit der Aufnahme deiner Lives. Jeder Live-Stream wird automatisch erfasst. Schließe dich den YouTube-Creatorn an, die LiveStreamRecorder bereits nutzen, um ihr Publikum zu vergrößern.",
+    "kick": "## Kick-Streamer & -Creator\n\nEntdecke Kick-Streamer, die LiveStreamRecorder nutzen, um ihre eigenen Streams zu sichern. Stöbere durch Kick-Creator, sieh dir ihre Aufnahmen an und finde neue Live-Streamer, denen du folgen möchtest – aus Kicks wachsender Community von Gaming-, IRL- und Just-Chatting-Creatorn.\n\n### Warum Kick-Streamer ihre Streams aufnehmen\n\nKick ist noch jung und VODs sind nicht immer zuverlässig – Wiederholungen können fehlschlagen, Kanäle können sich ändern und deine besten Streams können verschwinden, bevor deine Fans sie nachsehen können. Kick-Streamer nutzen LiveStreamRecorder, um jeden Stream automatisch zu sichern, sodass jeder unvergessliche Moment deiner Live-Streams verfügbar bleibt, selbst wenn das ursprüngliche Kick-VOD weg ist.\n\n### Stöbere durch Top-Kick-Streamer\n\nErkunde unsere Kick-Streamer-Seite, um Live-Streamer zu finden, die ihre Streams auf LiveStreamRecorder sichern. Sieh dir ihre Aufnahmen an, hole verpasste Streams nach und entdecke neue Kick-Creator aus Gaming, IRL-Streams und Just-Chatting.\n\n### Deine Kick-Streamer-Seite\n\nJeder Kick-Streamer auf LiveStreamRecorder bekommt seine eigene Seite, auf der Fans alle aufgenommenen Streams durchstöbern können. Registriere dich, füge deinen Kick-Kanal hinzu und deine Creator-Seite wird automatisch eingerichtet – ein dauerhaftes Zuhause für deinen Content, das nicht von Kicks VOD-System abhängt.\n\n### Von Streams zu Clips – Publikum vergrößern\n\nClipAI verwandelt deine aufgenommenen Kick-Streams in kurze Highlight-Clips, bereit zum Posten auf TikTok, YouTube Shorts oder Reels. Aus einem Live-Stream werden Dutzende Clips – mehr Content, mehr Reichweite, mehr Follower. Die Top-Kick-Streamer verwerten ihre besten Momente auf jeder Plattform.\n\n### Werde Kick-Streamer auf LiveStreamRecorder\n\nRegistriere dich kostenlos, füge deinen Kick-Kanal hinzu und beginne noch heute mit der Aufnahme deiner Streams. Jeder Live-Stream wird automatisch erfasst – kein OBS-Plugin, kein Backup-VOD-Setup, keine zusätzliche Software. Schließe dich den Kick-Streamern an, die LiveStreamRecorder bereits nutzen, um ihren Content zu sichern und ihr Publikum zu vergrößern.",
+    "pandalive": "## Pandalive-Creator\n\nEntdecke Pandalive-BJs, die LiveStreamRecorder nutzen, um ihre eigenen Lives zu sichern. Stöbere durch koreanische Creator, sieh dir ihre Aufnahmen an und finde neue BJs, denen du folgen möchtest – von einer der aktivsten Live-Streaming-Plattformen Koreas.\n\n### Warum Pandalive-BJs ihre Lives aufnehmen\n\nPandalive-Lives bleiben nicht immer verfügbar – sobald ein Live endet, gibt es keinen garantierten Weg, es zurückzubekommen. Pandalive-BJs nutzen LiveStreamRecorder, um jedes Live automatisch zu sichern, damit deine Tanz-Performances, Song-Cover, Talk-Sessions und Fan-Interaktionen nie verloren gehen, wenn der Stream endet.\n\n### Stöbere durch Top-Pandalive-BJs\n\nErkunde unsere Pandalive-Creator-Seite, um BJs zu finden, die ihre eigenen Lives auf LiveStreamRecorder sichern. Sieh dir ihre Aufnahmen an, hole verpasste Lives über Zeitzonen hinweg nach und entdecke neue Pandalive-Creator, denen es sich zu folgen lohnt.\n\n### Deine Pandalive-Creator-Seite\n\nJeder Pandalive-BJ auf LiveStreamRecorder bekommt seine eigene Seite, auf der Fans alle aufgenommenen Lives durchstöbern können. Registriere dich, füge deinen Pandalive-Benutzernamen hinzu und deine Creator-Seite wird automatisch eingerichtet – ein dauerhaftes Zuhause für deinen Content, das nicht verschwindet, wenn dein Live endet.\n\n### Von Lives zu Clips – baue deine Fanbase auf\n\nClipAI verwandelt deine aufgenommenen Pandalive-Lives in kurze Highlight-Clips, bereit zum Posten auf TikTok, Instagram Reels oder YouTube Shorts. Aus einem Live werden mehrere Content-Stücke – Tanz-Clips, Song-Highlights, denkwürdige Reaktionen. Vergrößere deine Fanbase über Pandalive hinaus, indem du deine besten Momente wiederverwendest.\n\n### Werde Pandalive-Creator auf LiveStreamRecorder\n\nRegistriere dich kostenlos, füge deinen Pandalive-Benutzernamen hinzu und beginne noch heute, deine Lives zu sichern. Jedes Live wird automatisch erfasst – keine Bildschirmaufnahme, keine zusätzliche Software. Schließe dich den Pandalive-BJs an, die LiveStreamRecorder bereits nutzen, um jedes Live zu behalten und ihr Publikum weltweit zu vergrößern.",
+    "afreecatv": "## AfreecaTV-Creator\n\nEntdecke AfreecaTV-BJs, die LiveStreamRecorder nutzen, um ihre eigenen Lives zu sichern. Stöbere durch koreanische Creator, sieh dir ihre Aufnahmen an und finde neue BJs, denen du folgen möchtest – von Koreas Original-Live-Streaming-Plattform – Heimat von Gaming-Castern, IRL-Streamern, Musik-Performern und Chat-Persönlichkeiten.\n\n### Warum AfreecaTV-BJs ihre Lives aufnehmen\n\nAfreecaTV hat ein eigenes VOD-System, aber Wiederholungen werden nicht immer gespeichert, Inhalte können entfernt werden und Speicherregeln können sich ändern. AfreecaTV-BJs nutzen LiveStreamRecorder als unabhängiges Backup – jedes Live wird automatisch erfasst, sodass deine Streaming-Historie intakt bleibt, egal was auf der ursprünglichen Plattform passiert.\n\n### Stöbere durch Top-AfreecaTV-BJs\n\nErkunde unsere AfreecaTV-Creator-Seite, um BJs zu finden, die ihre eigenen Lives auf LiveStreamRecorder sichern. Sieh dir ihre Aufnahmen an, hole lange Sessions nach, die du verpasst hast, und entdecke neue AfreecaTV-Creator aus StarCraft-Casting, Gaming, IRL, Musik und Chat.\n\n### Deine AfreecaTV-Creator-Seite\n\nJeder AfreecaTV-BJ auf LiveStreamRecorder bekommt seine eigene Seite, auf der Fans alle aufgenommenen Lives durchstöbern können. Registriere dich, füge deinen AfreecaTV-Benutzernamen hinzu und deine Creator-Seite wird automatisch eingerichtet – ein unabhängiges Backup deines Contents, das nicht von den VOD-Richtlinien von AfreecaTV abhängt.\n\n### Von langen Sessions zu kurzen Clips mit ClipAI\n\nAfreecaTV-Lives können stundenlang dauern. ClipAI analysiert deine aufgenommenen Lives und extrahiert die besten Momente automatisch – Clutch-Plays, Reaktionen, lustige Wortwechsel, Musik-Highlights. Poste sie als TikTok-Clips, YouTube Shorts oder Reels, um dein Publikum über AfreecaTV hinaus zu vergrößern.\n\n### Werde AfreecaTV-Creator auf LiveStreamRecorder\n\nRegistriere dich kostenlos, füge deinen AfreecaTV-Benutzernamen hinzu und beginne noch heute, deine Lives zu sichern. Jedes Live wird automatisch erfasst – keine Abhängigkeit vom AfreecaTV-VOD-System, keine manuellen Uploads. Schließe dich den AfreecaTV-BJs an, die LiveStreamRecorder bereits nutzen, um jedes Live zu behalten und Fans rund um den Globus zu erreichen.",
+    "bigo": "## Bigo-Live-Creator\n\nEntdecke Bigo-Live-Creator, die LiveStreamRecorder nutzen, um ihre eigenen Lives zu sichern. Stöbere durch Bigo-Streamer, sieh dir ihre Aufnahmen an und finde neue Creator, denen du folgen möchtest – von einer der größten globalen Live-Streaming-Plattformen, Heimat von Tanz-, Musik-, Chat- und Entertainment-Creatorn aus dem Nahen Osten, Asien und darüber hinaus.\n\n### Warum Bigo-Creator ihre Lives aufnehmen\n\nBigo-Lives existieren nur, während sie streamen – sobald du die Session beendest, ist der Content komplett aus der App weg. Bigo-Creator nutzen LiveStreamRecorder, um jedes Live automatisch zu sichern, damit deine Tanz-Performances, Gesangs-Sessions, Chat-Momente und Geschenk-Interaktionen für Fans noch lange nach dem Ende deines Lives verfügbar bleiben.\n\n### Stöbere durch Top-Bigo-Creator\n\nErkunde unsere Bigo-Creator-Seite, um Streamer zu finden, die ihre eigenen Lives auf LiveStreamRecorder sichern. Sieh dir ihre Aufnahmen an, hole verpasste Lives nach und entdecke neue Bigo-Creator in jeder Kategorie und Sprache.\n\n### Deine Bigo-Creator-Seite\n\nJeder Bigo-Creator auf LiveStreamRecorder bekommt seine eigene Seite, auf der Fans alle aufgenommenen Lives durchstöbern können. Registriere dich, füge deinen Bigo-Benutzernamen hinzu und deine Creator-Seite wird automatisch eingerichtet – ein dauerhaftes Zuhause für deinen Content, das über die vergängliche Natur von Bigo-Lives hinaus existiert.\n\n### Von Lives zu Clips – Publikum vergrößern\n\nClipAI verwandelt deine aufgenommenen Bigo-Lives in kurze Highlight-Clips, bereit zum Posten auf TikTok, Instagram Reels oder YouTube Shorts. Tanz-Momente, Duette, Fan-Interaktionen, musikalische Performances – verwandle jedes Live in mehrere Content-Stücke und vergrößere dein Publikum auf jeder Plattform.\n\n### Werde Bigo-Creator auf LiveStreamRecorder\n\nRegistriere dich kostenlos, füge deinen Bigo-Benutzernamen hinzu und beginne noch heute, deine Lives zu sichern. Jedes Live wird automatisch erfasst – keine Handy-Aufnahme, keine Bildschirmaufnahme. Schließe dich den Bigo-Creatorn an, die LiveStreamRecorder bereits nutzen, um jedes Live zu behalten und Fans weltweit zu erreichen.",
+    "buzzcast": "## Buzzcast-Creator\n\nEntdecke Buzzcast-Creator, die LiveStreamRecorder nutzen, um ihre eigenen Lives zu sichern. Stöbere durch Buzzcast-Streamer, sieh dir ihre Aufnahmen an und finde neue Creator, denen du folgen möchtest – aus dieser mobile-first Live-Streaming-Community.\n\n### Warum Buzzcast-Creator ihre Lives aufnehmen\n\nBuzzcast-Lives sind nur live verfügbar – sobald du den Stream beendest, verschwindet der Content aus der App. Es gibt kein eingebautes Wiederholungssystem und keinen Weg für Fans, später nachzusehen. Buzzcast-Creator nutzen LiveStreamRecorder, um jedes Live automatisch zu sichern, damit deine Chat-Sessions, Musik-Performances und täglichen Inhalte für Fans noch lange nach dem Ende des Lives verfügbar bleiben.\n\n### Stöbere durch Top-Buzzcast-Creator\n\nErkunde unsere Buzzcast-Creator-Seite, um Streamer zu finden, die ihre eigenen Lives auf LiveStreamRecorder sichern. Sieh dir ihre Aufnahmen an, hole verpasste Lives nach und entdecke neue Buzzcast-Creator, denen es sich zu folgen lohnt.\n\n### Deine Buzzcast-Creator-Seite\n\nJeder Buzzcast-Creator auf LiveStreamRecorder bekommt seine eigene Seite, auf der Fans alle aufgenommenen Lives durchstöbern können. Registriere dich, füge deinen Buzzcast-Benutzernamen hinzu und deine Creator-Seite wird automatisch eingerichtet – ein dauerhafter Ort für deinen Content, der nicht im Moment des Endes deines Lives verschwindet.\n\n### Von Lives zu Clips – baue deine Reichweite auf\n\nClipAI verwandelt deine aufgenommenen Buzzcast-Lives in kurze Highlight-Clips, bereit zum Posten auf TikTok, Instagram Reels oder YouTube Shorts. Verwandle Reaktionen, Musik-Momente und Chat-Highlights in teilbaren Content und vergrößere deine Reichweite über Buzzcast hinaus.\n\n### Werde Buzzcast-Creator auf LiveStreamRecorder\n\nRegistriere dich kostenlos, füge deinen Buzzcast-Benutzernamen hinzu und beginne noch heute, deine Lives zu sichern. Jedes Live wird automatisch erfasst – keine manuelle Aufnahme, keine zusätzlichen Apps. Schließe dich den Buzzcast-Creatorn an, die LiveStreamRecorder bereits nutzen, um jedes Live zu behalten und ihr Publikum zu vergrößern.",
+    "liveme": "## LiveMe-Creator\n\nEntdecke LiveMe-Creator, die LiveStreamRecorder nutzen, um ihre eigenen Lives zu sichern. Stöbere durch LiveMe-Streamer, sieh dir ihre Aufnahmen an und finde neue Creator, denen du folgen möchtest – aus dieser mobile-first Live-Streaming-Community.\n\n### Warum LiveMe-Creator ihre Lives aufnehmen\n\nLiveMe-Lives sind nur live verfügbar – sobald du den Stream beendest, verschwindet der Content aus der App. Es gibt kein eingebautes Wiederholungssystem und keinen Weg für Fans, später nachzusehen. LiveMe-Creator nutzen LiveStreamRecorder, um jedes Live automatisch zu sichern, damit deine Chat-Sessions, Musik-Performances und täglichen Inhalte für Fans noch lange nach dem Ende des Lives verfügbar bleiben.\n\n### Stöbere durch Top-LiveMe-Creator\n\nErkunde unsere LiveMe-Creator-Seite, um Streamer zu finden, die ihre eigenen Lives auf LiveStreamRecorder sichern. Sieh dir ihre Aufnahmen an, hole verpasste Lives nach und entdecke neue LiveMe-Creator, denen es sich zu folgen lohnt.\n\n### Deine LiveMe-Creator-Seite\n\nJeder LiveMe-Creator auf LiveStreamRecorder bekommt seine eigene Seite, auf der Fans alle aufgenommenen Lives durchstöbern können. Registriere dich, füge deinen LiveMe-Benutzernamen hinzu und deine Creator-Seite wird automatisch eingerichtet – ein dauerhafter Ort für deinen Content, der nicht im Moment des Endes deines Lives verschwindet.\n\n### Von Lives zu Clips – baue deine Reichweite auf\n\nClipAI verwandelt deine aufgenommenen LiveMe-Lives in kurze Highlight-Clips, bereit zum Posten auf TikTok, Instagram Reels oder YouTube Shorts. Verwandle Reaktionen, Musik-Momente und Chat-Highlights in teilbaren Content und vergrößere deine Reichweite über LiveMe hinaus.\n\n### Werde LiveMe-Creator auf LiveStreamRecorder\n\nRegistriere dich kostenlos, füge deinen LiveMe-Benutzernamen hinzu und beginne noch heute, deine Lives zu sichern. Jedes Live wird automatisch erfasst – keine manuelle Aufnahme, keine zusätzlichen Apps. Schließe dich den LiveMe-Creatorn an, die LiveStreamRecorder bereits nutzen, um jedes Live zu behalten und ihr Publikum zu vergrößern.",
+    "mixch": "## Mixch-Creator\n\nEntdecke Mixch-Creator, die LiveStreamRecorder nutzen, um ihre eigenen Lives zu sichern. Stöbere durch Mixch-Streamer, sieh dir ihre Aufnahmen an und finde neue Creator, denen du folgen möchtest – aus dieser mobile-first Live-Streaming-Community.\n\n### Warum Mixch-Creator ihre Lives aufnehmen\n\nMixch-Lives sind nur live verfügbar – sobald du den Stream beendest, verschwindet der Content aus der App. Es gibt kein eingebautes Wiederholungssystem und keinen Weg für Fans, später nachzusehen. Mixch-Creator nutzen LiveStreamRecorder, um jedes Live automatisch zu sichern, damit deine Chat-Sessions, Musik-Performances und täglichen Inhalte für Fans noch lange nach dem Ende des Lives verfügbar bleiben.\n\n### Stöbere durch Top-Mixch-Creator\n\nErkunde unsere Mixch-Creator-Seite, um Streamer zu finden, die ihre eigenen Lives auf LiveStreamRecorder sichern. Sieh dir ihre Aufnahmen an, hole verpasste Lives nach und entdecke neue Mixch-Creator, denen es sich zu folgen lohnt.\n\n### Deine Mixch-Creator-Seite\n\nJeder Mixch-Creator auf LiveStreamRecorder bekommt seine eigene Seite, auf der Fans alle aufgenommenen Lives durchstöbern können. Registriere dich, füge deinen Mixch-Benutzernamen hinzu und deine Creator-Seite wird automatisch eingerichtet – ein dauerhafter Ort für deinen Content, der nicht im Moment des Endes deines Lives verschwindet.\n\n### Von Lives zu Clips – baue deine Reichweite auf\n\nClipAI verwandelt deine aufgenommenen Mixch-Lives in kurze Highlight-Clips, bereit zum Posten auf TikTok, Instagram Reels oder YouTube Shorts. Verwandle Reaktionen, Musik-Momente und Chat-Highlights in teilbaren Content und vergrößere deine Reichweite über Mixch hinaus.\n\n### Werde Mixch-Creator auf LiveStreamRecorder\n\nRegistriere dich kostenlos, füge deinen Mixch-Benutzernamen hinzu und beginne noch heute, deine Lives zu sichern. Jedes Live wird automatisch erfasst – keine manuelle Aufnahme, keine zusätzlichen Apps. Schließe dich den Mixch-Creatorn an, die LiveStreamRecorder bereits nutzen, um jedes Live zu behalten und ihr Publikum zu vergrößern."
+  },
+  "faq": "Häufig gestellte Fragen",
+  "country": {
+    "title": "{platform} aus {country}",
+    "description": "Entdecke {platform} aus {country}, die ihre Live-Streams auf LiveStreamRecorder aufnehmen. Stöbere durch Creator, sieh dir ihre Aufnahmen an und finde neue Streamer, denen du folgen möchtest.",
+    "heroTitle": "{platform} in {country}",
+    "heroSubtitle": "Entdecke {platform} aus {country}, die LiveStreamRecorder nutzen, um ihre Streams zu sichern und kurze Clips zu erstellen.",
+    "empty": {
+      "title": "Noch keine Creator",
+      "description": "Aus {country} sind noch keine {platform} dabei. Sei der Erste!"
+    },
+    "browseByCountry": "{platform} nach Land durchstöbern",
+    "browseLink": "{platform} aus {country}",
+    "backToPlatform": "Zurück zu allen {platform}"
+  }
+}

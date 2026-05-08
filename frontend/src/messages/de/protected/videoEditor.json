@@ -1,0 +1,22 @@
+{
+  "modal": {
+    "title": "Clip bearbeiten",
+    "description": "Schneide und exportiere einen Clip von {username}"
+  },
+  "actions": {
+    "saveClip": "Clip speichern",
+    "downloadClip": "Clip herunterladen",
+    "export": "Exportieren"
+  },
+  "maxDuration": "Maximale Cliplänge: {minutes} Minuten",
+  "notifications": {
+    "exportStarted": {
+      "title": "Export gestartet",
+      "message": "Dein Clip wird verarbeitet und in deinem Speicher abgelegt"
+    },
+    "downloadQueued": {
+      "title": "Download in Warteschlange",
+      "message": "Dein Clip wird dir per E-Mail gesendet, sobald er fertig ist"
+    }
+  }
+}

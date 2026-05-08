@@ -1,0 +1,17 @@
+{
+  "title": "Clips",
+  "description": "Clips récents de la communauté",
+  "emptyState": {
+    "title": "Pas encore de clips",
+    "description": "Les clips apparaîtront ici au fur et à mesure que la communauté les crée."
+  },
+  "menu": {
+    "delete": "Supprimer le clip",
+    "deleteTitle": "Supprimer le clip",
+    "deleteConfirm": "Es-tu sûr·e de vouloir supprimer ce clip ? Cette action est irréversible.",
+    "deleteButton": "Supprimer",
+    "cancel": "Annuler",
+    "deleteSuccess": "Clip supprimé",
+    "deleteError": "Échec de la suppression du clip"
+  }
+}

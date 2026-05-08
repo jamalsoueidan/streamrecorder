@@ -1,0 +1,94 @@
+{
+  "title": "Einstellungen",
+  "description": "Verwalte deine Kontoeinstellungen",
+  "profile": {
+    "title": "Profil",
+    "username": "Benutzername",
+    "usernamePlaceholder": "Benutzernamen eingeben",
+    "usernameMinLength": "Der Benutzername muss mindestens 3 Zeichen lang sein",
+    "usernameMaxLength": "Der Benutzername darf höchstens 30 Zeichen lang sein",
+    "saveChanges": "Änderungen speichern",
+    "updateSuccess": "Erfolg",
+    "usernameUpdated": "Dein Benutzername wurde aktualisiert",
+    "updateError": "Fehler"
+  },
+  "subscription": {
+    "title": "Abonnement",
+    "currentPlan": "Aktueller Plan",
+    "description": "Dein Abonnement bestimmt, auf welche Funktionen du Zugriff hast."
+  },
+  "tiktok": {
+    "title": "TikTok",
+    "description": "Verbinde dein TikTok-Konto, um Clips zu posten und deine Reichweite zu erhöhen.",
+    "descriptionConnected": "Dein TikTok-Konto ist verbunden.",
+    "connect": "TikTok verbinden",
+    "disconnect": "Trennen",
+    "connected": "Verbunden",
+    "connectSuccess": "Erfolg",
+    "connectSuccessMessage": "Dein TikTok-Konto wurde verbunden",
+    "connectError": "Fehler",
+    "connectErrorMessage": "TikTok-Konto konnte nicht verbunden werden",
+    "disconnectSuccess": "Getrennt",
+    "disconnectSuccessMessage": "Dein TikTok-Konto wurde getrennt",
+    "disconnectError": "Fehler"
+  },
+  "youtube": {
+    "title": "YouTube",
+    "description": "Verbinde dein YouTube-Konto, um Clips direkt als YouTube Shorts zu veröffentlichen.",
+    "descriptionConnected": "Dein YouTube-Konto ist verbunden. Du kannst jetzt Clips auf YouTube veröffentlichen.",
+    "connect": "YouTube verbinden",
+    "disconnect": "Trennen",
+    "connected": "Verbunden",
+    "connectSuccess": "Erfolg",
+    "connectSuccessMessage": "Dein YouTube-Konto wurde verbunden",
+    "connectError": "Fehler",
+    "connectErrorMessage": "YouTube-Konto konnte nicht verbunden werden",
+    "disconnectSuccess": "Getrennt",
+    "disconnectSuccessMessage": "Dein YouTube-Konto wurde getrennt",
+    "disconnectError": "Fehler"
+  },
+  "dangerZone": {
+    "title": "Gefahrenbereich",
+    "description": "Sobald du dein Konto löschst, gibt es kein Zurück. Sei dir sicher.",
+    "deleteAccount": "Konto löschen",
+    "deleteConfirm": {
+      "title": "Konto löschen",
+      "message": "Möchtest du dein Konto wirklich löschen? Diese Aktion kann nicht rückgängig gemacht werden und alle deine Daten werden dauerhaft entfernt.",
+      "confirm": "Konto löschen",
+      "cancel": "Abbrechen"
+    },
+    "deleteError": "Fehler"
+  },
+  "notifications": {
+    "title": "Benachrichtigungen",
+    "description": "Werde benachrichtigt, wenn deine Streamer live gehen.",
+    "on": "Benachrichtigungen an",
+    "off": "Benachrichtigungen aus",
+    "enabled": "Benachrichtigungen aktiviert",
+    "disabled": "Benachrichtigungen deaktiviert",
+    "denied": "Benachrichtigungen sind blockiert. Aktiviere sie in deinen Browser-Einstellungen.",
+    "unsupported": "Dein Browser unterstützt keine Benachrichtigungen.",
+    "error": "Etwas ist schiefgelaufen",
+    "sendTest": "Test-Benachrichtigung senden",
+    "testSent": "Test-Benachrichtigung gesendet",
+    "testSentMessage": "Schau auf dein Gerät – eine Benachrichtigung sollte gleich erscheinen.",
+    "helpTitle": "Du siehst keine Benachrichtigungen?",
+    "helpPermission": "Stelle sicher, dass dein Browser in den Systemeinstellungen Benachrichtigungen anzeigen darf.",
+    "helpFocus": "Schalte Nicht-stören, Fokus oder Fokus-Modus aus. Sie unterdrücken Benachrichtigungen auf Mac, iPhone, Android und Windows."
+  },
+  "watchedHistory": {
+    "title": "Angesehene Videos",
+    "description": "Du hast {count} Videos als angesehen markiert. Sie werden mit einem Badge auf den Vorschaubildern gekennzeichnet, damit du auf einen Blick siehst, welche du schon gesehen hast.",
+    "clearButton": "Verlauf leeren",
+    "clearConfirm": {
+      "title": "Verlauf leeren",
+      "message": "Damit wird der ANGESEHEN-Badge bei {count} Videos entfernt. Sie erscheinen wieder als ungesehen. Fortfahren?",
+      "confirm": "Leeren",
+      "cancel": "Abbrechen"
+    },
+    "cleared": {
+      "title": "Geleert",
+      "message": "Dein Verlauf wurde geleert."
+    }
+  }
+}

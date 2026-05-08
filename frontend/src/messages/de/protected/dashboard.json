@@ -1,0 +1,14 @@
+{
+  "title": "Dashboard",
+  "description": "Willkommen zurück! Das ist neu",
+  "greetingMorning": "Guten Morgen, {username}!",
+  "greetingAfternoon": "Guten Tag, {username}!",
+  "greetingEvening": "Guten Abend, {username}!",
+  "greetingSubtitle": "Das ist neu in deinem Feed",
+  "noRecordings": "Keine Aufnahmen verfügbar",
+  "browseAll": "Alle ansehen",
+  "newCreators": "Neue Creator",
+  "myFeed": "Mein Feed",
+  "discoverSection": "Entdecken",
+  "favorites": "Favoriten"
+}

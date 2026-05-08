@@ -1,0 +1,13 @@
+{
+  "meta": {
+    "defaultTitle": "短视频",
+    "defaultDescription": "观看你喜爱的主播的短视频",
+    "title": "{title} - {creatorName} | 短视频",
+    "description": "观看 {creatorName} 在 {platform} 上的 {duration} 短视频",
+    "keywords": "{creatorName}, 短视频, 片段, {platform}, 直播"
+  },
+  "jsonLd": {
+    "name": "{creatorName} 短视频 - {createdDate}",
+    "description": "{creatorName} 录制于 {createdDate} 的短视频"
+  }
+}
