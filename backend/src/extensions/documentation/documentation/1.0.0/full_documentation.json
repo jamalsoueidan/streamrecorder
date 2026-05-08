@@ -20,7 +20,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2026-05-07T15:11:41.070Z"
+    "x-generation-date": "2026-05-08T17:38:33.050Z"
   },
   "servers": [
     {
@@ -13106,7 +13106,9 @@
                   "tango",
                   "buzzcast",
                   "liveme",
-                  "mixch"
+                  "mixch",
+                  "twitcast",
+                  "trovo"
                 ]
               },
               "gender": {
@@ -14972,7 +14974,9 @@
                   "tango",
                   "buzzcast",
                   "liveme",
-                  "mixch"
+                  "mixch",
+                  "twitcast",
+                  "trovo"
                 ]
               },
               "gender": {
@@ -17354,7 +17358,9 @@
                       "tango",
                       "buzzcast",
                       "liveme",
-                      "mixch"
+                      "mixch",
+                      "twitcast",
+                      "trovo"
                     ]
                   },
                   "gender": {
@@ -23128,7 +23134,9 @@
                   "tango",
                   "buzzcast",
                   "liveme",
-                  "mixch"
+                  "mixch",
+                  "twitcast",
+                  "trovo"
                 ]
               },
               "gender": {
@@ -25334,7 +25342,9 @@
                       "tango",
                       "buzzcast",
                       "liveme",
-                      "mixch"
+                      "mixch",
+                      "twitcast",
+                      "trovo"
                     ]
                   },
                   "gender": {
@@ -28088,7 +28098,9 @@
                   "tango",
                   "buzzcast",
                   "liveme",
-                  "mixch"
+                  "mixch",
+                  "twitcast",
+                  "trovo"
                 ]
               },
               "gender": {
@@ -29430,7 +29442,9 @@
                         "tango",
                         "buzzcast",
                         "liveme",
-                        "mixch"
+                        "mixch",
+                        "twitcast",
+                        "trovo"
                       ]
                     },
                     "gender": {
@@ -30341,7 +30355,9 @@
                       "tango",
                       "buzzcast",
                       "liveme",
-                      "mixch"
+                      "mixch",
+                      "twitcast",
+                      "trovo"
                     ]
                   },
                   "gender": {
@@ -35521,7 +35537,9 @@
                         "tango",
                         "buzzcast",
                         "liveme",
-                        "mixch"
+                        "mixch",
+                        "twitcast",
+                        "trovo"
                       ]
                     },
                     "gender": {
@@ -36734,7 +36752,9 @@
                       "tango",
                       "buzzcast",
                       "liveme",
-                      "mixch"
+                      "mixch",
+                      "twitcast",
+                      "trovo"
                     ]
                   },
                   "gender": {
@@ -38713,7 +38733,9 @@
                       "tango",
                       "buzzcast",
                       "liveme",
-                      "mixch"
+                      "mixch",
+                      "twitcast",
+                      "trovo"
                     ]
                   },
                   "gender": {
@@ -40891,7 +40913,9 @@
           "tango",
           "buzzcast",
           "liveme",
-          "mixch"
+          "mixch",
+          "twitcast",
+          "trovo"
         ]
       },
       "FollowRequestBody": {
