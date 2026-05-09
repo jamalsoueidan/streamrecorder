@@ -9,7 +9,8 @@ import { Button, ButtonProps } from "@mantine/core";
 import { ComponentProps } from "react";
 import Link from "@/app/components/link";
 
-type Props = ButtonProps & Omit<ComponentProps<typeof Link>, "component">;
+type Props = Omit<ButtonProps, "component"> &
+  Omit<ComponentProps<typeof Link>, "component">;
 
 export function LinkButton(props: Props) {
   return <Button {...props} component={Link} />;
