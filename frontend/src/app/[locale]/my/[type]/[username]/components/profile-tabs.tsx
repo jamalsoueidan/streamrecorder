@@ -12,7 +12,7 @@ import {
 } from "@mantine/core";
 import { IconChartBar, IconScissors, IconVideo } from "@tabler/icons-react";
 import { useTranslations } from "next-intl";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname, useRouter } from "@/i18n/navigation";
 import { useQueryStates } from "nuqs";
 import { profileParsers, SortOptions } from "../lib/search-params";
 

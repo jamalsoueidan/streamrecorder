@@ -3,7 +3,7 @@
 
 import { ActionIcon, Flex } from "@mantine/core";
 import { IconChevronDown, IconChevronUp } from "@tabler/icons-react";
-import { useRouter } from "next/navigation";
+import { useRouter } from "@/i18n/navigation";
 import { useCallback, useEffect } from "react";
 
 interface PlayBackProps {

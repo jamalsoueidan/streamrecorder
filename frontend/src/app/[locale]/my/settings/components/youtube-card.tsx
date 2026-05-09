@@ -14,7 +14,8 @@ import {
 import { notifications } from "@mantine/notifications";
 import { IconBrandYoutube, IconLinkOff, IconPlus } from "@tabler/icons-react";
 import { useTranslations } from "next-intl";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
+import { useRouter } from "@/i18n/navigation";
 import { startTransition, useEffect, useState } from "react";
 import { disconnectYouTube, getYouTubeConnection } from "../actions/youtube";
 

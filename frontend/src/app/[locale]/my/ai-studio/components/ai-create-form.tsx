@@ -13,7 +13,7 @@ import {
 } from "@mantine/core";
 import { IconAlertTriangle, IconSparkles } from "@tabler/icons-react";
 import { useTranslations } from "next-intl";
-import { useRouter } from "next/navigation";
+import { useRouter } from "@/i18n/navigation";
 import { useState, useTransition } from "react";
 import { MiniPlayer } from "../../components/video/mini-player";
 import { createAiRequest } from "../actions/ai-actions";

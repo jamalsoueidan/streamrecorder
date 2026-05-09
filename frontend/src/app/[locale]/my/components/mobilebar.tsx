@@ -15,7 +15,7 @@ import {
 } from "@tabler/icons-react";
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname, useRouter } from "@/i18n/navigation";
 import { useTransition } from "react";
 import { usePWAInstall } from "react-use-pwa-install";
 import { navConfig } from "../../(public)/components/nav";

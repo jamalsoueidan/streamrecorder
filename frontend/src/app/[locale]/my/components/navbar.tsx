@@ -37,9 +37,7 @@ import {
 
 import Image from "next/image";
 import Link from "@/app/components/link";
-import { usePathname } from "next/navigation";
-
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "@/i18n/navigation";
 
 import { useChangeLanguage } from "@/app/hooks/use-change-language";
 import { useUser } from "@/app/providers/user-provider";

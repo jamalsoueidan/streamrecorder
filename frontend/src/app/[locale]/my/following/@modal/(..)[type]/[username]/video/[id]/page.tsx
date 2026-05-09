@@ -3,7 +3,8 @@
 import type { HlsVideoElement } from "hls-video-element";
 import { Flex, Loader, Modal } from "@mantine/core";
 import { useInfiniteQuery } from "@tanstack/react-query";
-import { useParams, useRouter, useSearchParams } from "next/navigation";
+import { useParams, useSearchParams } from "next/navigation";
+import { useRouter } from "@/i18n/navigation";
 import { useQueryStates } from "nuqs";
 import { useCallback, useMemo } from "react";
 

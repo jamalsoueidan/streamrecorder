@@ -25,7 +25,7 @@ import {
 } from "@tabler/icons-react";
 import { useTranslations } from "next-intl";
 import Link from "@/app/components/link";
-import { useRouter } from "next/navigation";
+import { useRouter } from "@/i18n/navigation";
 import { useEffect, useRef, useState } from "react";
 import { getYouTubeConnection } from "../../../../settings/actions/youtube";
 import { shareToYouTube } from "../../../actions/share-youtube";

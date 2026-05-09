@@ -3,7 +3,8 @@
 import type { HlsVideoElement } from "hls-video-element";
 import { Flex, Loader, Modal } from "@mantine/core";
 import { useQuery } from "@tanstack/react-query";
-import { useParams, useRouter, useSearchParams } from "next/navigation";
+import { useParams, useSearchParams } from "next/navigation";
+import { useRouter } from "@/i18n/navigation";
 import { useCallback, useState } from "react";
 
 import { VideoScrollPlayer } from "@/app/[locale]/my/components/video/video-scroll-player";
