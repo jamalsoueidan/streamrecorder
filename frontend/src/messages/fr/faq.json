@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "title": "FAQ",
+    "description": "Trouve les réponses aux questions fréquentes sur LiveStreamRecorder"
+  },
+  "title": "Questions fréquentes",
+  "subtitle": "Réponses aux questions courantes sur notre service.",
+  "faqs": [
+    {
+      "question": "Qu'est-ce que LiveStreamRecorder.com ?",
+      "answer": "LiveStreamRecorder.com est un service basé sur le cloud qui enregistre automatiquement tes propres lives. Ajoute ton nom d'utilisateur depuis n'importe quelle plateforme prise en charge et nous capturons chaque diffusion — sans logiciel à installer, sans que ton ordinateur reste allumé. Regarde tes enregistrements à tout moment ou transforme-les en clips."
+    },
+    {
+      "question": "Comment ça marche ?",
+      "answer": "Inscris-toi gratuitement et ajoute ton nom d'utilisateur de la plateforme sur laquelle tu streames. Dès que tu passes en live, notre système enregistre automatiquement ton stream. Tu peux regarder les enregistrements directement dans ton navigateur, les télécharger ou créer des clips à partager sur les réseaux sociaux."
+    },
+    {
+      "question": "C'est vraiment gratuit ?",
+      "answer": "Oui ! Notre offre gratuite te permet d'enregistrer depuis jusqu'à 3 plateformes, et les enregistrements sont conservés 5 jours. Si tu as besoin de plus, notre offre Premium te donne une meilleure qualité vidéo, un stockage de 30 jours, le téléchargement de vidéos et la possibilité d'enregistrer depuis jusqu'à 100 plateformes."
+    },
+    {
+      "question": "Quelles plateformes sont prises en charge ?",
+      "answer": "Nous prenons actuellement en charge TikTok, Twitch, YouTube, Kick, AfreecaTV et Pandalive. Nous travaillons toujours à en ajouter de nouvelles — reste informé·e des mises à jour."
+    },
+    {
+      "question": "Combien de temps les enregistrements sont-ils conservés ?",
+      "answer": "Les utilisateurs gratuits ont 5 jours de stockage. Les utilisateurs Premium ont 30 jours. Pense à télécharger les enregistrements que tu veux conserver avant qu'ils n'expirent."
+    },
+    {
+      "question": "Comment ajouter mon nom d'utilisateur ?",
+      "answer": "Clique sur Ajouter depuis ton tableau de bord, sélectionne ta plateforme et saisis ton nom d'utilisateur. Une fois ajouté, nous enregistrerons automatiquement dès que tu passes en live."
+    },
+    {
+      "question": "Puis-je enregistrer sur plusieurs plateformes ?",
+      "answer": "Oui ! Si tu streames sur TikTok et Twitch, ajoute simplement ton nom d'utilisateur depuis chaque plateforme et tous tes streams sont sauvegardés au même endroit."
+    },
+    {
+      "question": "Puis-je télécharger mes enregistrements ?",
+      "answer": "Le téléchargement est disponible pour les utilisateurs Premium. Chaque enregistrement a un bouton de téléchargement qui te permet d'enregistrer la vidéo complète sur ton ordinateur."
+    },
+    {
+      "question": "Qu'est-ce que ClipAI ?",
+      "answer": "ClipAI trouve automatiquement les meilleurs moments de tes streams et les transforme en clips courts — prêts à être partagés sur TikTok, YouTube Shorts ou Instagram Reels."
+    },
+    {
+      "question": "Que comprend l'offre Premium ?",
+      "answer": "Premium te donne une meilleure qualité vidéo, la possibilité de télécharger les enregistrements, un stockage de 30 jours et la prise en charge de jusqu'à 100 créateurs — parfait pour les agences et les équipes de management."
+    },
+    {
+      "question": "Comment passer Premium ?",
+      "answer": "Va dans ton tableau de bord et clique sur Passer Premium. Choisis l'offre qui te convient et finalise le paiement. Nous acceptons les cartes bancaires, Apple Pay et Google Pay."
+    },
+    {
+      "question": "Comment contacter le support ?",
+      "answer": "Tu peux nous joindre à tout moment via le formulaire de contact sur notre site. Nous sommes là pour t'aider en cas de questions ou de soucis."
+    },
+    {
+      "question": "Comment supprimer mon compte ?",
+      "answer": "Va dans Paramètres et clique sur Supprimer le compte. Ton compte et toutes tes données sont immédiatement et définitivement supprimés. Cette action est irréversible."
+    },
+    {
+      "question": "Mes données sont-elles protégées ?",
+      "answer": "Oui. Nous stockons uniquement ton e-mail et tes noms d'utilisateur. Consulte notre Politique de confidentialité pour tous les détails."
+    },
+    {
+      "question": "Que faire si je change de nom d'utilisateur sur une plateforme ?",
+      "answer": "Si tu changes de nom d'utilisateur, tu devras retirer l'ancien et ajouter le nouveau."
+    }
+  ]
+}

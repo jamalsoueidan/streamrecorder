@@ -1,0 +1,94 @@
+{
+  "title": "TikTok 数据洞察",
+  "description": "TikTok 直播全平台数据分析",
+  "globalStats": {
+    "title": "平台概览",
+    "totalUsers": "总送礼者",
+    "totalDiamonds": "总钻石数",
+    "totalGifts": "总礼物数",
+    "totalBattles": "总 PK 场次"
+  },
+  "dailyEarnings": {
+    "title": "每日收益",
+    "seriesLabel": "钻石",
+    "empty": "暂无收益数据",
+    "allCountries": "所有国家/地区",
+    "allLanguages": "所有语言"
+  },
+  "topEarners": {
+    "title": "收益排行榜",
+    "username": "用户名",
+    "country": "国家/地区",
+    "language": "语言",
+    "diamonds": "钻石",
+    "gifts": "礼物",
+    "gifters": "送礼者",
+    "empty": "暂无数据",
+    "allCountries": "所有国家/地区",
+    "allLanguages": "所有语言"
+  },
+  "mostLive": {
+    "title": "最活跃主播",
+    "username": "用户名",
+    "country": "国家/地区",
+    "language": "语言",
+    "sessions": "场次",
+    "hours": "小时",
+    "empty": "暂无数据",
+    "allCountries": "所有国家/地区",
+    "allLanguages": "所有语言"
+  },
+  "countryLeaderboard": {
+    "title": "国家/地区排行榜",
+    "rank": "#",
+    "country": "国家/地区",
+    "diamonds": "钻石",
+    "gifts": "礼物",
+    "streamers": "主播",
+    "gifters": "送礼者",
+    "empty": "暂无数据",
+    "loadMore": "加载更多"
+  },
+  "languageLeaderboard": {
+    "title": "语言排行榜",
+    "rank": "#",
+    "language": "语言",
+    "diamonds": "钻石",
+    "gifts": "礼物",
+    "streamers": "主播",
+    "gifters": "送礼者",
+    "empty": "暂无数据",
+    "loadMore": "加载更多"
+  },
+  "topGifters": {
+    "title": "顶级送礼者",
+    "description": "在 TikTok 上向所有主播总共发送了最多钻石的用户。",
+    "username": "用户名",
+    "diamonds": "钻石",
+    "gifts": "礼物",
+    "streamers": "支持的主播",
+    "empty": "暂无数据"
+  },
+  "battleStats": {
+    "title": "PK 排行榜",
+    "description": "按 PK 战绩排名的主播。PK 是实时一对一对决,由观众的礼物决定胜负。",
+    "username": "用户名",
+    "battles": "PK 场次",
+    "wins": "胜利",
+    "losses": "失败",
+    "draws": "平局",
+    "winRate": "胜率",
+    "empty": "暂无数据"
+  },
+  "gifterRelationships": {
+    "title": "送礼者关系",
+    "description": "按发送钻石数排名的顶级送礼者-主播配对。揭示谁是个别主播最忠实的支持者。",
+    "pair": "送礼者 → 主播",
+    "supported": "支持了",
+    "gifter": "送礼者",
+    "streamer": "主播",
+    "diamonds": "钻石",
+    "gifts": "礼物",
+    "empty": "暂无数据"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "title": "Bibliothek ({count})",
+  "description": "Verwalte deine Creator",
+  "disabledHint": "Deaktivierte Einträge haben noch keine Aufnahmen",
+  "emptyFiltered": {
+    "title": "Keine Creator passen zu deinen Filtern",
+    "description": "Versuche, deine Filter anzupassen oder zurückzusetzen"
+  },
+  "emptyDefault": {
+    "title": "Du hast noch keine Creator hinzugefügt",
+    "description": "Stöbere unter Freunde, um Creator auf unserer Plattform zu entdecken"
+  },
+  "noMoreToLoad": "Du hast das Ende erreicht",
+  "favorite": "Zu Favoriten hinzufügen",
+  "unfavorite": "Aus Favoriten entfernen"
+}

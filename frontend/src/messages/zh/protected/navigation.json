@@ -1,0 +1,42 @@
+{
+  "sections": {
+    "home": "首页",
+    "studio": "工作室",
+    "community": "社区"
+  },
+  "links": {
+    "dashboard": "仪表盘",
+    "premium": "会员",
+    "myRecordings": "录制内容",
+    "myClips": "我的片段",
+    "watchLater": "稍后观看",
+    "aiStudio": "AI Studio",
+    "myList": "收藏库",
+    "live": "直播",
+    "tiktokInsights": "TikTok 数据",
+    "explore": "浏览",
+    "clips": "片段",
+    "friends": "好友"
+  },
+  "actions": {
+    "settings": "设置",
+    "logout": "退出登录",
+    "addCreator": "添加创作者",
+    "search": "搜索",
+    "searchPlaceholder": "输入直播 URL",
+    "installApp": "安装应用",
+    "more": "更多",
+    "language": "语言",
+    "collapse": "收起侧边栏",
+    "expand": "展开侧边栏"
+  },
+  "installModal": {
+    "title": "安装应用",
+    "description": "在 iPhone 上安装本应用：",
+    "step1": "点击",
+    "shareButton": "分享按钮",
+    "step2": "点击",
+    "addToHomeScreen": "添加到主屏幕",
+    "step3": "点击添加"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "title": "Konto verifizieren",
+    "description": "Verifiziere den Besitz deines Streaming-Profils, um dein Konto zu beanspruchen oder deine Inhalte zu verwalten."
+  },
+  "header": {
+    "title": "Besitz verifizieren",
+    "subtitle": "Bestätige, dass dieses Konto dir gehört, um dein Profil zu beanspruchen oder deine Inhalte zu verwalten"
+  },
+  "common": {
+    "copy": "Kopieren",
+    "copied": "Kopiert!"
+  },
+  "steps": {
+    "enterUrl": {
+      "label": "Dein Profil",
+      "description": "Gib die URL deines Streaming-Profils ein",
+      "intro": "Gib die URL deines Streaming-Profils ein.",
+      "input": {
+        "label": "Profil-URL",
+        "placeholder": "https://tiktok.com/@deinbenutzername"
+      },
+      "detected": "Erkannt: {platform} – @{username}",
+      "continue": "Weiter",
+      "email": {
+        "label": "E-Mail-Adresse",
+        "placeholder": "du@beispiel.de"
+      },
+      "error": {
+        "required": "Bitte gib deine Profil-URL ein",
+        "invalid": "Wir konnten diese URL nicht erkennen",
+        "emailRequired": "Bitte gib deine E-Mail-Adresse ein",
+        "emailInvalid": "Bitte gib eine gültige E-Mail-Adresse ein"
+      }
+    },
+    "verify": {
+      "label": "Verifizieren",
+      "description": "Code zur Bio hinzufügen",
+      "intro": "Um zu beweisen, dass dieses Konto dir gehört, füge den unten stehenden Verifizierungscode in deine Profilbio ein. Du kannst ihn nach der Verifizierung wieder entfernen.",
+      "codeLabel": "Dein Verifizierungscode",
+      "instructions": "Kopiere diesen Code und füge ihn an einer beliebigen Stelle in deiner Profilbio ein. Er kann am Anfang, Ende oder in der Mitte stehen – wir finden ihn.",
+      "openProfile": "{platform}-Profil öffnen",
+      "verifyButton": "Code hinzugefügt – jetzt verifizieren",
+      "failed": {
+        "title": "Code nicht gefunden",
+        "message": "Wir konnten den Verifizierungscode nicht in deiner Bio finden. Stelle sicher, dass du dein Profil nach dem Hinzufügen des Codes gespeichert hast. Wenn du den Code nicht in deine Bio einfügen kannst, kehre zurück und nutze stattdessen das DMCA-Formular.",
+        "backToForm": "Zurück zum DMCA-Formular"
+      }
+    },
+    "complete": {
+      "created": {
+        "title": "Willkommen!",
+        "message": "Dein Konto wurde erstellt und dein Profil ist jetzt verknüpft.",
+        "button": "Dashboard"
+      },
+      "linked": {
+        "title": "Profil verknüpft",
+        "message": "Dein Profil wurde mit deinem Konto verknüpft. Bitte melde dich an, um dein Dashboard aufzurufen.",
+        "button": "Zur Anmeldung"
+      },
+      "notFound": {
+        "title": "Profil nicht gefunden",
+        "message": "Dein Besitz wurde verifiziert, aber dieser Content Creator existiert nicht in unserem System."
+      }
+    }
+  }
+}

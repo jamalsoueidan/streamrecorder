@@ -1,0 +1,13 @@
+{
+  "meta": {
+    "defaultTitle": "Kurze Clips",
+    "defaultDescription": "Schau dir kurze Clips von deinen Lieblings-Streamern an",
+    "title": "{title} – {creatorName} | Kurze Clips",
+    "description": "Schau dir diesen {duration} kurzen Clip von {creatorName} auf {platform} an",
+    "keywords": "{creatorName}, Shorts, Clips, {platform}, Live-Stream"
+  },
+  "jsonLd": {
+    "name": "{creatorName} kurzer Clip – {createdDate}",
+    "description": "Kurzer Clip von {creatorName}, aufgenommen am {createdDate}"
+  }
+}

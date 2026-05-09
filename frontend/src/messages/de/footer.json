@@ -1,0 +1,58 @@
+{
+  "tagline": "Verpasse nie wieder einen Live-Stream",
+  "copyright": "Copyright © 2026 LiveStreamRecorder",
+  "copyright_text": "LiveStreamRecorder stellt eine Cloud-basierte Infrastruktur bereit, mit der Nutzer Streams für den persönlichen, privaten und nicht-kommerziellen Gebrauch aufnehmen können. Nutzer sind selbst dafür verantwortlich, dass ihre Nutzung mit den geltenden Gesetzen und den Bedingungen der jeweiligen Drittanbieter-Plattformen übereinstimmt.",
+  "association": "Twitch, YouTube, TikTok, Kick, AfreecaTV, PandaTV, Bigo, Buzzcast und LiveMe-Produktnamen, Logos und Marken sind Eigentum der jeweiligen Inhaber. Alle auf dieser Website verwendeten Firmen-, Produkt- und Dienstleistungsnamen dienen nur zu Identifikationszwecken. Die Verwendung dieser Namen, Marken und Brands stellt keine Empfehlung dar.",
+  "header": {
+    "creators": "Creator",
+    "recordings": "Aufnahmen",
+    "shorts": "Kurze Clips",
+    "dashboard": "Dashboard",
+    "login": "Anmelden",
+    "signUp": "Registrieren",
+    "language": "Sprache"
+  },
+  "featuredCreators": {
+    "title": "Empfohlene Creator",
+    "browse": "Alle Creator durchstöbern",
+    "tiktok": "TikTok-Creator",
+    "twitch": "Twitch-Creator",
+    "kick": "Kick-Creator",
+    "youtube": "YouTube-Creator",
+    "afreecatv": "AfreecaTV-Creator",
+    "pandalive": "Pandalive-Creator",
+    "bigo": "Bigo-Creator",
+    "buzzcast": "Buzzcast-Creator",
+    "liveme": "LiveMe-Creator",
+    "mixch": "Mixch-Creator"
+  },
+  "watchRecordings": {
+    "title": "Aufnahmen ansehen",
+    "browse": "Alle Aufnahmen durchstöbern",
+    "tiktok": "TikTok-Aufnahmen",
+    "twitch": "Twitch-Aufnahmen",
+    "kick": "Kick-Aufnahmen",
+    "youtube": "YouTube-Aufnahmen",
+    "afreecatv": "AfreecaTV-Aufnahmen",
+    "pandalive": "Pandalive-Aufnahmen",
+    "bigo": "Bigo-Aufnahmen",
+    "buzzcast": "Buzzcast-Aufnahmen",
+    "liveme": "LiveMe-Aufnahmen",
+    "mixch": "Mixch-Aufnahmen"
+  },
+  "legal": {
+    "title": "Rechtliches",
+    "privacy": "Datenschutzerklärung",
+    "terms": "Nutzungsbedingungen",
+    "dmca": "DMCA-Richtlinie"
+  },
+  "company": {
+    "title": "Unternehmen",
+    "news": "News",
+    "pricing": "Preise",
+    "faq": "FAQ",
+    "updates": "Changelog",
+    "sitemap": "Sitemap",
+    "contact": "Kontakt"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "meta": {
+    "title": "创建账号",
+    "description": "免费创建 LiveStreamRecorder 账号，自动录制你喜爱的创作者的直播。"
+  },
+  "title": "创建账号",
+  "subtitle": "加入我们，开始探索",
+  "username": {
+    "label": "用户名",
+    "placeholder": "请选择用户名"
+  },
+  "email": {
+    "label": "邮箱地址",
+    "placeholder": "you@example.com"
+  },
+  "password": {
+    "label": "密码",
+    "placeholder": "创建密码",
+    "hint": "密码至少需要 6 个字符"
+  },
+  "choices": {
+    "emailPassword": "使用邮箱 / 密码",
+    "google": "使用 Google 继续",
+    "tiktok": "使用 TikTok 继续",
+    "facebook": "使用 Facebook 继续"
+  },
+  "terms": {
+    "agree": "我同意",
+    "link": "条款和条件",
+    "text": "继续即表示你同意 Live Stream Recorder 的",
+    "tosLink": "服务条款",
+    "and": "并确认你已阅读 Live Stream Recorder 的",
+    "privacyLink": "隐私政策"
+  },
+  "submit": {
+    "default": "创建账号",
+    "loading": "创建中…"
+  },
+  "checkEmail": {
+    "title": "请查看你的邮箱",
+    "description": "我们已向你的邮箱发送了确认链接。点击链接以验证账号。",
+    "loginLink": "前往登录"
+  },
+  "login": {
+    "text": "已有账号？",
+    "link": "登录"
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "beta": "Insights est actuellement en bêta. Les données peuvent être incomplètes ou évoluer tandis que nous continuons d'améliorer cette fonctionnalité.",
+  "tabs": {
+    "videos": "Vidéos",
+    "clips": "Clips",
+    "insights": "Insights"
+  },
+  "stats": {
+    "totalDiamonds": "Total de diamants",
+    "battleDiamonds": "Diamants gagnés en battle",
+    "nonBattleDiamonds": "Diamants hors battle",
+    "battles": "Battles",
+    "won": "Victoires",
+    "lost": "Défaites",
+    "winRate": "Taux de victoire",
+    "gifters": "Donateurs",
+    "chatParticipants": "Participants au chat"
+  },
+  "battleHistory": {
+    "title": "Historique des battles",
+    "empty": "Aucune battle enregistrée pour l'instant.",
+    "colDate": "Date",
+    "colType": "Type",
+    "colOpponents": "Adversaire(s)",
+    "colScore": "Score",
+    "colDiamonds": "Diamants",
+    "colResult": "Résultat",
+    "vs": "vs",
+    "with": "avec",
+    "live": "EN DIRECT",
+    "interrupted": "Interrompue",
+    "won": "Victoire",
+    "draw": "Égalité",
+    "lost": "Défaite"
+  },
+  "streamActivity": {
+    "title": "Streams récents",
+    "empty": "Aucune session de stream disponible.",
+    "colDate": "Date",
+    "colDuration": "Durée",
+    "colPeakViewers": "Pic de spectateurs",
+    "colAvgViewers": "Spectateurs moy.",
+    "colDiamonds": "Diamants",
+    "colBattles": "Battles",
+    "durationMinutes": "{m} min",
+    "durationHoursMinutes": "{h} h {m} min"
+  },
+  "topGifters": {
+    "title": "Top donateurs",
+    "empty": "Aucune donnée de donateurs disponible.",
+    "giftCount": "{count} cadeaux"
+  },
+  "topOpponents": {
+    "title": "Top adversaires",
+    "empty": "Aucune donnée de battle disponible.",
+    "wins": "{count}V",
+    "losses": "{count}D",
+    "battleCount": "{count} battles"
+  },
+  "earnings": {
+    "title": "Revenus",
+    "empty": "Aucune donnée de revenus disponible.",
+    "seriesLabel": "Diamants"
+  },
+  "schedule": {
+    "title": "Quand iels passent en live",
+    "mon": "Lun",
+    "tue": "Mar",
+    "wed": "Mer",
+    "thu": "Jeu",
+    "fri": "Ven",
+    "sat": "Sam",
+    "sun": "Dim"
+  }
+}

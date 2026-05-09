@@ -1,0 +1,30 @@
+{
+  "meta": {
+    "title": "{creatorName} 的直播 - {recordedDate}",
+    "description": "观看 {creatorName} 在 {recordedDate} 的 {platform} 直播录像。时长：{duration}。使用 Live Stream Recorder，再也不会错过任何直播。",
+    "ogTitle": "{creatorName} 的直播 - {recordedDate} | Live Stream Recorder",
+    "keywords": "{creatorName} 视频, {creatorName} 直播 {recordedDate}, {creatorName} {platform}, {creatorName} 直播录像, 观看 {creatorName}"
+  },
+  "jsonLd": {
+    "name": "{creatorName} 直播 - {recordedDate}",
+    "description": "{creatorName} 在 {recordedDate} 的直播录像"
+  },
+  "watch": {
+    "title": "观看 {username} 的直播录像 - {date}"
+  },
+  "backToProfile": "返回 {username} 的主页",
+  "otherRecordingsBy": "{username} 的其他录像",
+  "accessGate": {
+    "signIn": {
+      "title": "登录以继续观看",
+      "body": "你已达到免费预览限制。免费创建账号即可继续观看。",
+      "primaryCta": "登录",
+      "secondaryCta": "创建账号"
+    },
+    "upgrade": {
+      "title": "升级以继续观看",
+      "body": "你已达到免费观看限制。升级以获得无限访问权限。",
+      "primaryCta": "升级"
+    }
+  }
+}

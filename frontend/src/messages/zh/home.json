@@ -1,0 +1,38 @@
+{
+  "meta": {
+    "title": "Live Stream Recorder | 自动录制 TikTok、Twitch 等直播",
+    "titleTemplate": "%s | Live Stream Recorder",
+    "description": "自动保存你的直播,并将其转换为热门短视频。云端录制 TikTok、Twitch、YouTube、Kick 等直播。无需安装软件。",
+    "keywords": "直播录制, 录制直播, 直播录像, 录制 TikTok 直播, 录制 Twitch 直播, YouTube 直播录制, Twitch VOD 下载, TikTok 直播录像, 短视频创作者, 直播片段",
+    "ogTitle": "Live Stream Recorder | 保存直播,创作热门短视频",
+    "ogDescription": "自动录制你的直播,将精彩瞬间转换为短视频。云端录制 TikTok、Twitch、YouTube 等直播。",
+    "ogAlt": "Live Stream Recorder - 录制 TikTok、Twitch、YouTube 等直播",
+    "twitterDescription": "自动保存你的直播。把最精彩的瞬间转换为助力频道增长的短视频。免费开始。"
+  },
+  "hero": {
+    "title": "Live Stream Recorder",
+    "subtitle": "录制你的直播",
+    "description": "录制你的 TikTok、Twitch、Kick 和 YouTube 直播。ClipAI 自动找出最精彩的瞬间并制作短视频 — 准备好在任何地方分享。"
+  },
+  "feature": {
+    "title": "你的所有直播",
+    "subtitle": "已保存,随时可剪辑",
+    "description": "添加来自任何平台的直播。直播自动录制,VOD 为你保存。随时回来制作短视频、下载或重新利用你的内容。"
+  },
+  "latestRecordings": {
+    "title": "最新录制",
+    "subtitle": "过去 24 小时内保存的直播录像",
+    "browseAll": "浏览所有录制内容"
+  },
+  "featuredCreators": {
+    "title": "加入 10,000 多位创作者",
+    "subtitle": "把直播转换为热门短视频的内容创作者",
+    "browseAll": "浏览所有创作者"
+  },
+  "cta": {
+    "title": "录制你的直播",
+    "description": "录制你的 TikTok、Twitch、Kick 和 YouTube 直播。ClipAI 自动找出最精彩的瞬间并制作短视频 — 准备好在任何地方分享。",
+    "button": "今天免费开始"
+  },
+  "about": "## 关于 Live Stream Recorder\n\n你的直播是内容金矿 — 不要让它们消失。我们的云端平台自动保存你的直播,让你可以将其重新利用为短视频、精彩片段和短格式内容。\n\n### 自动直播录制\n\n连接你的直播频道,其余的我们处理。直播录制在后台自动进行 — 无需安装软件,无需手动安排。开播后,你的直播会被捕获并保存到云端。\n\n### 把直播转换为短视频\n\n你 3 小时的直播中包含数十个热门瞬间。我们的工具帮助你找到并剪辑出在 TikTok、YouTube Shorts 和 Instagram Reels 上表现最好的精彩片段。一次直播,多处发布。\n\n### 随时观看和下载\n\n你的所有录制直播都安全保存在我们的服务器上。通过我们的内置播放器访问录制内容,下载它们用于编辑,或直接分享到社交平台。\n\n### 录制 TikTok、Twitch、YouTube 等直播\n\n无论你在 TikTok、Twitch、YouTube、Kick、AfreecaTV 还是 Pandalive 直播 — 我们的云端服务都涵盖。跨多个平台录制,所有内容集中管理。\n\n### 无需屏幕录制软件\n\n与需要电脑保持开启的直播屏幕录制软件不同,我们的云端服务 24/7 全天候运行。无需安装任何录制软件。即使你忘记开启,你的直播仍会被录制。\n\n### 免费开始\n\n今天就创建账号并连接你的频道。升级到高级会员,享受更高质量的录制、无限存储和高级剪辑工具。"
+}

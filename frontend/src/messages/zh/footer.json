@@ -1,0 +1,58 @@
+{
+  "tagline": "再也不错过任何直播",
+  "copyright": "Copyright © 2026 LiveStreamRecorder",
+  "copyright_text": "LiveStreamRecorder 提供基于云端的基础设施，使用户能够录制直播以供个人、私人、非商业用途。用户有责任确保其使用符合相关法律和第三方平台条款。",
+  "association": "Twitch、YouTube、TikTok、Kick、AfreecaTV、PandaTV、Bigo、Buzzcast 和 LiveMe 的产品名称、徽标和品牌均为各自所有者的财产。本网站使用的所有公司、产品和服务名称仅用于识别目的。使用这些名称、商标和品牌并不意味着代言。",
+  "header": {
+    "creators": "创作者",
+    "recordings": "录制内容",
+    "shorts": "短视频",
+    "dashboard": "仪表盘",
+    "login": "登录",
+    "signUp": "注册",
+    "language": "语言"
+  },
+  "featuredCreators": {
+    "title": "精选创作者",
+    "browse": "浏览创作者",
+    "tiktok": "TikTok 创作者",
+    "twitch": "Twitch 创作者",
+    "kick": "Kick 创作者",
+    "youtube": "YouTube 创作者",
+    "afreecatv": "AfreecaTV 创作者",
+    "pandalive": "Pandalive 创作者",
+    "bigo": "Bigo 创作者",
+    "buzzcast": "Buzzcast 创作者",
+    "liveme": "LiveMe 创作者",
+    "mixch": "Mixch 创作者"
+  },
+  "watchRecordings": {
+    "title": "观看录制内容",
+    "browse": "浏览录制内容",
+    "tiktok": "TikTok 录制",
+    "twitch": "Twitch 录制",
+    "kick": "Kick 录制",
+    "youtube": "YouTube 录制",
+    "afreecatv": "AfreecaTV 录制",
+    "pandalive": "Pandalive 录制",
+    "bigo": "Bigo 录制",
+    "buzzcast": "Buzzcast 录制",
+    "liveme": "LiveMe 录制",
+    "mixch": "Mixch 录制"
+  },
+  "legal": {
+    "title": "法律",
+    "privacy": "隐私政策",
+    "terms": "服务条款",
+    "dmca": "DMCA 政策"
+  },
+  "company": {
+    "title": "公司",
+    "news": "新闻",
+    "pricing": "价格",
+    "faq": "常见问题",
+    "updates": "更新日志",
+    "sitemap": "站点地图",
+    "contact": "联系我们"
+  }
+}

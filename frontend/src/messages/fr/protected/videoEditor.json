@@ -1,0 +1,22 @@
+{
+  "modal": {
+    "title": "Modifier le clip",
+    "description": "Découpe et exporte un clip de {username}"
+  },
+  "actions": {
+    "saveClip": "Enregistrer le clip",
+    "downloadClip": "Télécharger le clip",
+    "export": "Exporter"
+  },
+  "maxDuration": "Durée maximale du clip : {minutes} minutes",
+  "notifications": {
+    "exportStarted": {
+      "title": "Export lancé",
+      "message": "Ton clip est en cours de traitement et sera enregistré dans ton stockage"
+    },
+    "downloadQueued": {
+      "title": "Téléchargement en file d'attente",
+      "message": "Ton clip te sera envoyé par e-mail une fois prêt"
+    }
+  }
+}

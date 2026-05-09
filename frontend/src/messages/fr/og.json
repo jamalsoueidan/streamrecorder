@@ -1,0 +1,65 @@
+{
+  "brand": "LiveStreamRecorder",
+  "tagline": "Ne rate plus jamais un stream",
+  "defaultDescription": "Les lives sont enregistrés automatiquement pour que tu puisses les regarder à tout moment",
+  "creators": {
+    "title": {
+      "all": "Tous les créateurs",
+      "tiktok": "Créateurs TikTok",
+      "twitch": "Créateurs Twitch",
+      "youtube": "Créateurs YouTube",
+      "kick": "Créateurs Kick",
+      "pandalive": "Créateurs PandaLive",
+      "afreecatv": "Créateurs AfreecaTV",
+      "bigo": "Créateurs Bigo",
+      "buzzcast": "Créateurs Buzzcast",
+      "liveme": "Créateurs LiveMe",
+      "mixch": "Créateurs Mixch"
+    },
+    "subtitle": {
+      "all": "Parcourir tous les streamers et créateurs",
+      "tiktok": "Découvrir les streamers TikTok",
+      "twitch": "Découvrir les streamers Twitch",
+      "youtube": "Découvrir les créateurs YouTube",
+      "kick": "Découvrir les streamers Kick",
+      "pandalive": "Découvrir les créateurs PandaLive",
+      "afreecatv": "Découvrir les créateurs AfreecaTV",
+      "bigo": "Découvrir les créateurs Bigo",
+      "buzzcast": "Découvrir les créateurs Buzzcast",
+      "liveme": "Découvrir les créateurs LiveMe",
+      "mixch": "Découvrir les créateurs Mixch"
+    }
+  },
+  "recordings": {
+    "title": {
+      "all": "Tous les enregistrements",
+      "tiktok": "Enregistrements TikTok",
+      "twitch": "Enregistrements Twitch",
+      "youtube": "Enregistrements YouTube",
+      "kick": "Enregistrements Kick",
+      "pandalive": "Enregistrements PandaLive",
+      "afreecatv": "Enregistrements AfreecaTV",
+      "bigo": "Enregistrements Bigo",
+      "buzzcast": "Enregistrements Buzzcast",
+      "liveme": "Enregistrements LiveMe",
+      "mixch": "Enregistrements Mixch"
+    },
+    "subtitle": {
+      "all": "Regarder les lives enregistrés",
+      "tiktok": "Regarder les lives TikTok enregistrés",
+      "twitch": "Regarder les streams Twitch enregistrés",
+      "youtube": "Regarder les lives YouTube enregistrés",
+      "kick": "Regarder les streams Kick enregistrés",
+      "pandalive": "Regarder les streams PandaLive enregistrés",
+      "afreecatv": "Regarder les streams AfreecaTV enregistrés",
+      "bigo": "Regarder les streams Bigo enregistrés",
+      "buzzcast": "Regarder les streams Buzzcast enregistrés",
+      "liveme": "Regarder les streams LiveMe enregistrés",
+      "mixch": "Regarder les streams Mixch enregistrés"
+    }
+  },
+  "home": {
+    "title": "Live Stream Recorder",
+    "subtitle": "Tes streams préférés enregistrés automatiquement"
+  }
+}

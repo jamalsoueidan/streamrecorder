@@ -13,6 +13,7 @@ import {
   Title,
 } from "@mantine/core";
 import { useTranslations } from "next-intl";
+import Link from "@/app/components/link";
 import { navConfig } from "./nav";
 
 export function Footer() {
@@ -57,7 +58,7 @@ export function Footer() {
       {group.links.map((link) => (
         <Anchor
           key={link.label}
-          component="a"
+          component={Link}
           href={link.link}
           size="md"
           c="white"
@@ -75,7 +76,7 @@ export function Footer() {
       <Container size="xl" py="xl" mt={20}>
         <SimpleGrid cols={{ base: 1, sm: 3, md: 5 }} mb="xl">
           <Stack>
-            <Anchor component="a" href="/" c="white" underline="never">
+            <Anchor component={Link} href="/" c="white" underline="never">
               <Group gap="xs">
                 <Badge
                   size="md"

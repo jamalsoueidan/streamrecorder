@@ -2,7 +2,6 @@ import { generateProfileUrl } from "@/app/lib/profile-url";
 import { generateAlternates } from "@/app/lib/seo";
 import { getAlternateOgLocales, getOgLocale } from "@/i18n/routing";
 import {
-  Button,
   Container,
   Flex,
   Paper,
@@ -24,6 +23,7 @@ import { ClipSlider } from "./components/clip-slider";
 import { PlatformBadges } from "./components/platform-badge";
 import { CreatorsSlider } from "./creators/components/creators-slider";
 import { RecordingsSimpleGrid } from "./recordings/components/recordings-simple-grid";
+import { LinkButton } from "@/app/components/link-button";
 
 interface PageProps {
   params: Promise<{ locale: string }>;
@@ -209,9 +209,7 @@ export default async function LandingPage({ params }: PageProps) {
             {t("hero.description")}
           </Text>
 
-          <Button
-            component="a"
-            href="/register"
+          <LinkButton href="/register"
             size="responsive"
             variant="gradient"
             gradient={{ from: "#6366f1", to: "#a855f7", deg: 135 }}
@@ -223,7 +221,7 @@ export default async function LandingPage({ params }: PageProps) {
             mt="lg"
           >
             {t("cta.button")}
-          </Button>
+          </LinkButton>
         </Stack>
       </Container>
 
@@ -324,16 +322,14 @@ export default async function LandingPage({ params }: PageProps) {
                 {t("latestRecordings.subtitle")}
               </Text>
             </Stack>
-            <Button
-              component="a"
-              variant="subtle"
+            <LinkButton variant="subtle"
               color="gray"
               rightSection={<IconArrowRight size={16} />}
               style={{ color: "#94a3b8" }}
               href="/recordings"
             >
               {t("latestRecordings.browseAll")}
-            </Button>
+            </LinkButton>
           </Flex>
 
           <RecordingsSimpleGrid recordings={recordings} />
@@ -361,9 +357,7 @@ export default async function LandingPage({ params }: PageProps) {
               {t("featuredCreators.subtitle")}
             </Text>
 
-            <Button
-              component="a"
-              variant="subtle"
+            <LinkButton variant="subtle"
               size="compact-lg"
               color="gray"
               href="/creators"
@@ -371,7 +365,7 @@ export default async function LandingPage({ params }: PageProps) {
               style={{ color: "#94a3b8" }}
             >
               {t("featuredCreators.browseAll")}
-            </Button>
+            </LinkButton>
           </Flex>
         </div>
       </Container>
@@ -428,9 +422,7 @@ export default async function LandingPage({ params }: PageProps) {
                 {t("cta.description")}
               </Text>
 
-              <Button
-                component="a"
-                href="/register"
+              <LinkButton href="/register"
                 size="responsive"
                 variant="gradient"
                 gradient={{ from: "#6366f1", to: "#a855f7", deg: 135 }}
@@ -442,7 +434,7 @@ export default async function LandingPage({ params }: PageProps) {
                 mt="lg"
               >
                 {t("cta.button")}
-              </Button>
+              </LinkButton>
             </Stack>
           </Paper>
         </div>

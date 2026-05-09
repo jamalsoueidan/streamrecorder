@@ -1,7 +1,7 @@
 import { defineRouting } from "next-intl/routing";
 
 export const routing = defineRouting({
-  locales: ["en", "ar", "tr", "ko", "ja", "es", "pt", "id"],
+  locales: ["en", "ar", "tr", "ko", "ja", "es", "pt", "id", "de", "fr", "zh"],
   defaultLocale: "en",
   localePrefix: "as-needed",
   localeCookie: false,
@@ -18,6 +18,9 @@ export const OG_LOCALES: Record<string, string> = {
   id: "id_ID", // Indonesian
   ko: "ko_KR", // Korean
   ja: "ja_JP", // Japanese
+  de: "de_DE", // German
+  fr: "fr_FR", // French
+  zh: "zh_CN", // Chinese (Simplified)
 };
 
 export function getOgLocale(locale: string): string {

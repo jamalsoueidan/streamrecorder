@@ -1,0 +1,518 @@
+{
+  "meta": {
+    "all": {
+      "title": "Enregistrements de lives",
+      "description": "Regarde les enregistrements de lives de créateurs sur LiveStreamRecorder. Enregistrements TikTok, Twitch, YouTube, Kick sauvegardés et prêts à regarder.",
+      "keywords": [
+        "enregistrements de lives",
+        "enregistrements de stream",
+        "enregistrement TikTok live",
+        "twitch vod",
+        "live stream recorder",
+        "archive de stream"
+      ]
+    },
+    "tiktok": {
+      "title": "Enregistrements TikTok Live",
+      "description": "Regarde et télécharge les enregistrements TikTok Live sur LiveStreamRecorder. Chaque TikTok Live est capturé automatiquement — aucun enregistreur d'écran nécessaire. Regarde les TikTok Lives sauvegardés de tes créateurs préférés.",
+      "keywords": [
+        "enregistrement TikTok live",
+        "TikTok live stream",
+        "enregistrer TikTok live",
+        "TikTok recorder",
+        "comment enregistrer un TikTok live",
+        "enregistreur d'écran pour TikTok",
+        "peut-on enregistrer TikTok live",
+        "TikTok vod",
+        "sauvegarder TikTok live",
+        "enregistrer TikTok sur ordinateur"
+      ],
+      "faqs": [
+        {
+          "question": "Comment enregistrer mes lives TikTok ?",
+          "answer": "Avec LiveStreamRecorder, tes lives TikTok sont enregistrés automatiquement dans le cloud. Inscris-toi, ajoute ton nom d'utilisateur TikTok, et chaque live que tu fais est capturé — aucun enregistreur d'écran TikTok requis, aucun téléphone qui tourne toute la nuit."
+        },
+        {
+          "question": "Ai-je besoin d'un enregistreur d'écran pour les TikTok Lives ?",
+          "answer": "Non. LiveStreamRecorder capture tes TikTok Lives côté serveur en haute qualité, donc aucune capture d'écran TikTok n'est nécessaire. Pas de pertes d'images, pas de notifications qui interrompent, pas d'enregistrement téléphone peu fiable. Tes lives sont enregistrés automatiquement dans ton compte."
+        },
+        {
+          "question": "Puis-je enregistrer mes TikTok Lives sur un ordinateur ou un laptop ?",
+          "answer": "Oui. LiveStreamRecorder fonctionne entièrement dans le cloud, donc tu peux enregistrer tes TikTok Lives depuis n'importe quel appareil avec un navigateur — PC, laptop ou mobile. Rien à installer, aucun enregistreur d'écran de bureau ni extension de navigateur. Ajoute simplement ton nom d'utilisateur et tes lives sont enregistrés automatiquement."
+        },
+        {
+          "question": "Comment télécharger mes enregistrements TikTok Live ?",
+          "answer": "Tous tes enregistrements TikTok Live sur LiveStreamRecorder peuvent être visionnés instantanément dans ton navigateur. Les utilisateurs Premium peuvent télécharger leurs enregistrements en fichiers vidéo pour la lecture hors ligne — sans filigrane."
+        },
+        {
+          "question": "Les TikTok Lives disparaissent-ils après leur fin ?",
+          "answer": "Oui, TikTok ne sauvegarde pas les lives après la fin de la diffusion. C'est pourquoi les créateurs utilisent LiveStreamRecorder comme leur enregistreur TikTok — chaque live est capturé et stocké pour que tu puisses le regarder, le télécharger ou le réutiliser plus tard."
+        },
+        {
+          "question": "Quelle est la meilleure façon d'enregistrer mes TikTok Lives ?",
+          "answer": "La meilleure façon d'enregistrer tes TikTok Lives est avec un enregistreur cloud comme LiveStreamRecorder. Contrairement à l'enregistrement d'écran téléphone ou aux logiciels de capture, l'enregistrement cloud capture ton live complet en haute qualité même si ton téléphone s'éteint ou si tu perds la connexion. La meilleure alternative à l'enregistreur d'écran pour les TikTok Lives."
+        },
+        {
+          "question": "Puis-je transformer mes TikTok Lives enregistrés en clips courts ?",
+          "answer": "Oui. Les utilisateurs Premium peuvent utiliser ClipAI pour transformer automatiquement leurs enregistrements TikTok Live en clips de moments forts courts. Une excellente façon de réutiliser tes lives en vidéos TikTok, Reels ou Shorts pour gagner plus de followers."
+        }
+      ]
+    },
+    "twitch": {
+      "title": "Enregistrements de streams Twitch & VOD",
+      "description": "Regarde et télécharge les enregistrements de streams Twitch sur LiveStreamRecorder. Tes streams Twitch sont capturés automatiquement — aucun enregistreur d'écran nécessaire. Le meilleur enregistreur Twitch pour les créateurs qui veulent des VOD permanentes.",
+      "keywords": [
+        "Twitch recorder",
+        "enregistreur de stream Twitch",
+        "Twitch VOD recorder",
+        "enregistrer un stream Twitch",
+        "capturer un stream Twitch",
+        "Twitch live recorder",
+        "enregistrer mon stream Twitch",
+        "enregistrer ton stream Twitch",
+        "enregistrement automatique Twitch",
+        "enregistreur d'écran pour Twitch",
+        "meilleur enregistreur d'écran pour Twitch",
+        "enregistreur vidéo Twitch",
+        "sauvegarder les streams Twitch"
+      ],
+      "faqs": [
+        {
+          "question": "Comment enregistrer mes streams Twitch automatiquement ?",
+          "answer": "LiveStreamRecorder est un enregistreur Twitch basé sur le cloud qui capture tes streams automatiquement. Inscris-toi, ajoute ta chaîne Twitch, et chaque fois que tu passes en live ton stream est enregistré. Aucun enregistreur d'écran Twitch nécessaire — tout se passe côté serveur."
+        },
+        {
+          "question": "Les VOD Twitch expirent-elles ?",
+          "answer": "Oui. Les VOD Twitch expirent après 14 jours pour les streamers réguliers et 60 jours pour les Partners et utilisateurs Turbo. LiveStreamRecorder sauvegarde tes streams Twitch de façon permanente — tes enregistrements n'expirent jamais et sont toujours disponibles à regarder ou télécharger."
+        },
+        {
+          "question": "Quel est le meilleur enregistreur de stream Twitch pour les créateurs ?",
+          "answer": "Pour l'enregistrement automatique, un enregistreur Twitch basé sur le cloud comme LiveStreamRecorder est la meilleure option. Les enregistreurs d'écran traditionnels pour Twitch nécessitent que ton PC reste allumé avec un logiciel d'enregistrement en arrière-plan. LiveStreamRecorder capture tes streams Twitch depuis le cloud — même si OBS plante ou si ton PC redémarre, ton enregistrement est en sécurité."
+        },
+        {
+          "question": "Ai-je besoin d'un enregistreur d'écran pour sauvegarder mes streams Twitch ?",
+          "answer": "Non. LiveStreamRecorder capture tes streams Twitch côté serveur, il n'y a donc pas besoin de logiciel de capture. Pas de Bandicam, pas d'app de bureau, pas de charge CPU supplémentaire pendant le streaming. Tes streams sont sauvegardés automatiquement en haute qualité dans le cloud."
+        },
+        {
+          "question": "Puis-je enregistrer mes streams Twitch gratuitement ?",
+          "answer": "Oui. Inscris-toi gratuitement sur LiveStreamRecorder et commence à enregistrer tes streams Twitch immédiatement. Les offres Premium débloquent le téléchargement des enregistrements, ClipAI pour les clips automatiques et un stockage prolongé."
+        },
+        {
+          "question": "En quoi est-ce différent du système VOD intégré de Twitch ?",
+          "answer": "Les VOD Twitch expirent après 14 à 60 jours et sont supprimées si tu supprimes ta chaîne. LiveStreamRecorder te donne une sauvegarde indépendante de tes streams Twitch. Tes enregistrements sont stockés séparément, n'expirent jamais et restent disponibles même si quelque chose arrive à ton compte Twitch."
+        },
+        {
+          "question": "Puis-je transformer mes enregistrements Twitch en clips ?",
+          "answer": "Oui. Les utilisateurs Premium peuvent utiliser ClipAI pour transformer automatiquement leurs enregistrements de streams Twitch en clips de moments forts courts. Publie-les en YouTube Shorts, vidéos TikTok ou Reels pour faire grandir ton audience sur plusieurs plateformes."
+        },
+        {
+          "question": "LiveStreamRecorder capture-t-il mon stream Twitch même si j'oublie de sauvegarder le VOD ?",
+          "answer": "Oui. Une fois ta chaîne connectée, LiveStreamRecorder enregistre chaque live Twitch automatiquement — quels que soient tes paramètres VOD Twitch. Même si tu as désactivé les VOD sur Twitch, tes streams sont quand même capturés et sauvegardés sur ton compte."
+        }
+      ]
+    },
+    "youtube": {
+      "title": "Enregistrements YouTube Live",
+      "description": "Regarde et télécharge les enregistrements YouTube Live sur LiveStreamRecorder. Tes lives YouTube sont capturés automatiquement — aucun enregistreur d'écran YouTube nécessaire. Le plus simple enregistreur YouTube live pour les créateurs.",
+      "keywords": [
+        "enregistrement YouTube live",
+        "YouTube live stream",
+        "enregistrer un YouTube live stream",
+        "YouTube recorder",
+        "enregistreur d'écran pour YouTube",
+        "enregistrement YouTube",
+        "YouTube live record",
+        "capturer un live YouTube",
+        "meilleur enregistreur d'écran pour YouTube",
+        "enregistreur YouTube en ligne",
+        "sauvegarder YouTube live"
+      ],
+      "faqs": [
+        {
+          "question": "Comment enregistrer mes lives YouTube ?",
+          "answer": "Avec LiveStreamRecorder, tes lives YouTube sont enregistrés automatiquement dans le cloud. Inscris-toi, ajoute ta chaîne YouTube, et chaque live que tu démarres est capturé. Aucun logiciel d'enregistrement YouTube à installer, pas de sauvegarde manuelle — ça marche tout simplement."
+        },
+        {
+          "question": "Ai-je besoin d'un enregistreur d'écran pour les lives YouTube ?",
+          "answer": "Non. LiveStreamRecorder est un enregistreur YouTube basé sur le cloud qui capture tes lives côté serveur. Contrairement au logiciel d'enregistrement d'écran pour YouTube, il n'y a pas de pertes d'images, pas d'app de bureau qui tourne en arrière-plan, et pas de stockage qui mange ton disque dur. Tes lives sont sauvegardés automatiquement en haute qualité."
+        },
+        {
+          "question": "Quel est le meilleur logiciel d'enregistrement pour les lives YouTube ?",
+          "answer": "Spécifiquement pour les lives, un enregistreur YouTube basé sur le cloud comme LiveStreamRecorder est la meilleure option. Les enregistreurs d'écran traditionnels pour YouTube nécessitent que ton ordinateur reste allumé pendant tout le live. LiveStreamRecorder capture tes lives YouTube depuis le cloud — même si ton PC plante ou si tu perds le courant, ton enregistrement est en sécurité."
+        },
+        {
+          "question": "Puis-je enregistrer mes lives YouTube gratuitement ?",
+          "answer": "Oui. Tu peux t'inscrire gratuitement sur LiveStreamRecorder et commencer à enregistrer tes lives YouTube immédiatement. Les offres Premium débloquent le téléchargement des enregistrements, ClipAI pour les clips automatiques et un stockage prolongé."
+        },
+        {
+          "question": "Les lives YouTube sont-ils sauvegardés automatiquement par YouTube ?",
+          "answer": "YouTube peut sauvegarder les rediffusions de lives sur ta chaîne, mais les créateurs les suppriment parfois ou les streams peuvent échouer à se traiter. LiveStreamRecorder te donne une sauvegarde indépendante — tes enregistrements YouTube Live sont capturés et stockés séparément, donc tu as toujours une copie de ton contenu."
+        },
+        {
+          "question": "Puis-je transformer mes enregistrements YouTube Live en Shorts ?",
+          "answer": "Oui. Les utilisateurs Premium peuvent utiliser ClipAI pour transformer automatiquement les enregistrements YouTube Live en clips de moments forts courts, parfaits pour YouTube Shorts, TikTok ou Reels. La façon la plus simple de réutiliser ton contenu live et de gagner des abonnés."
+        },
+        {
+          "question": "LiveStreamRecorder est-il un enregistreur YouTube en ligne ?",
+          "answer": "Oui. LiveStreamRecorder est un enregistreur YouTube entièrement en ligne — tout fonctionne dans le cloud. Aucun logiciel à télécharger, aucune extension de navigateur. Connecte simplement ta chaîne et tes lives YouTube sont enregistrés automatiquement depuis n'importe quel appareil."
+        },
+        {
+          "question": "Comment capturer mon live YouTube si j'oublie d'appuyer sur enregistrer ?",
+          "answer": "C'est exactement ce que résout LiveStreamRecorder. Une fois ta chaîne connectée, chaque live YouTube que tu démarres est capturé automatiquement. Tu n'as jamais besoin de te rappeler d'appuyer sur enregistrer — tes lives sont toujours sauvegardés."
+        }
+      ]
+    },
+    "kick": {
+      "title": "Enregistrements de streams Kick",
+      "description": "Regarde les enregistrements de streams Kick de créateurs sur LiveStreamRecorder. Regarde les VOD Kick, télécharge les streams et découvre de nouveaux streamers.",
+      "keywords": [
+        "enregistrement Kick",
+        "Kick vod",
+        "téléchargement de stream Kick",
+        "enregistrer un stream Kick",
+        "archive Kick",
+        "sauvegarder un stream Kick"
+      ]
+    },
+    "afreecatv": {
+      "title": "Enregistrements de streams AfreecaTV",
+      "description": "Regarde les enregistrements de streams AfreecaTV de créateurs sur LiveStreamRecorder. Regarde les VOD AfreecaTV et télécharge des streams coréens.",
+      "keywords": [
+        "enregistrement AfreecaTV",
+        "AfreecaTV vod",
+        "téléchargement AfreecaTV",
+        "enregistrement de stream coréen",
+        "archive AfreecaTV",
+        "sauvegarder un stream AfreecaTV"
+      ]
+    },
+    "pandalive": {
+      "title": "Enregistrements de streams Pandalive",
+      "description": "Regarde les enregistrements de streams Pandalive de créateurs sur LiveStreamRecorder. Regarde les VOD Pandalive et télécharge des streams coréens.",
+      "keywords": [
+        "enregistrement Pandalive",
+        "Pandalive vod",
+        "téléchargement Pandalive",
+        "enregistrement de stream coréen",
+        "archive Pandalive",
+        "sauvegarder un stream Pandalive"
+      ]
+    },
+    "bigo": {
+      "title": "Enregistrements Bigo Live",
+      "description": "Regarde et télécharge les enregistrements Bigo Live sur LiveStreamRecorder. Tes lives Bigo sont capturés automatiquement dans le cloud — aucun problème d'écran noir, aucun enregistreur d'écran nécessaire. Le plus simple enregistreur Bigo Live pour les créateurs.",
+      "keywords": [
+        "Bigo recorder",
+        "Bigo live recorder",
+        "enregistrer Bigo live",
+        "Bigo live screen recorder",
+        "capture d'écran Bigo live",
+        "Bigo écran noir enregistrement",
+        "sauvegarder Bigo live"
+      ],
+      "faqs": [
+        {
+          "question": "Comment enregistrer mes lives Bigo ?",
+          "answer": "Avec LiveStreamRecorder, tes lives Bigo sont enregistrés automatiquement dans le cloud. Inscris-toi, ajoute ton nom d'utilisateur Bigo Live, et chaque fois que tu passes en live, c'est capturé. Aucune APK Bigo Live recorder à installer, aucune capture d'écran — tout se passe côté serveur."
+        },
+        {
+          "question": "Pourquoi est-ce que j'obtiens un écran noir lors de l'enregistrement de Bigo Live ?",
+          "answer": "Les problèmes d'écran noir sont fréquents quand on utilise des enregistreurs d'écran sur Bigo Live. LiveStreamRecorder évite cela complètement parce qu'il capture tes lives Bigo directement depuis le cloud — pas d'écran noir, pas de contournement, pas d'apps d'enregistrement peu fiables."
+        },
+        {
+          "question": "Comment réparer l'écran noir de l'enregistreur d'écran Bigo Live ?",
+          "answer": "La solution la plus simple est de ne pas faire de capture d'écran du tout. LiveStreamRecorder est un enregistreur Bigo basé sur le cloud qui capture tes lives côté serveur en haute qualité. Pas de problèmes d'écran noir, pas d'apps à configurer — ajoute simplement ton nom d'utilisateur et tes lives Bigo sont enregistrés automatiquement."
+        },
+        {
+          "question": "Ai-je besoin d'un enregistreur d'écran pour Bigo Live ?",
+          "answer": "Non. Les enregistreurs d'écran pour Bigo Live entraînent souvent des problèmes d'écran noir ou des captures de basse qualité. LiveStreamRecorder est un enregistreur Bigo Live basé sur le cloud qui capture tes streams automatiquement en haute qualité — aucune app à installer, pas d'écran noir."
+        },
+        {
+          "question": "Puis-je enregistrer mes lives Bigo gratuitement ?",
+          "answer": "Oui. Inscris-toi gratuitement sur LiveStreamRecorder et commence à enregistrer tes lives Bigo immédiatement. Les offres Premium débloquent le téléchargement des enregistrements, ClipAI pour les clips automatiques et un stockage prolongé."
+        },
+        {
+          "question": "Puis-je télécharger mes enregistrements Bigo Live ?",
+          "answer": "Oui. Les utilisateurs Premium peuvent télécharger leurs enregistrements Bigo Live en fichiers vidéo pour la lecture hors ligne. Chaque enregistrement peut aussi être visionné instantanément dans ton navigateur sans téléchargement."
+        },
+        {
+          "question": "Puis-je transformer mes enregistrements Bigo Live en clips courts ?",
+          "answer": "Oui. Les utilisateurs Premium peuvent utiliser ClipAI pour transformer automatiquement leurs enregistrements Bigo Live en clips de moments forts courts prêts pour TikTok, YouTube Shorts ou Reels. Un excellent moyen de réutiliser ton contenu live et de gagner des followers sur plusieurs plateformes."
+        }
+      ]
+    },
+    "buzzcast": {
+      "title": "Enregistrements Buzzcast Live",
+      "description": "Regarde et télécharge les enregistrements Buzzcast Live sur LiveStreamRecorder. Tes lives Buzzcast sont capturés automatiquement dans le cloud — aucun problème d'écran noir, aucun enregistreur d'écran nécessaire. Le plus simple enregistreur Buzzcast Live pour les créateurs.",
+      "keywords": [
+        "Buzzcast recorder",
+        "Buzzcast live recorder",
+        "enregistrer Buzzcast live",
+        "Buzzcast live screen recorder",
+        "capture d'écran Buzzcast live",
+        "Buzzcast écran noir enregistrement",
+        "sauvegarder Buzzcast live"
+      ],
+      "faqs": [
+        {
+          "question": "Comment enregistrer mes lives Buzzcast ?",
+          "answer": "Avec LiveStreamRecorder, tes lives Buzzcast sont enregistrés automatiquement dans le cloud. Inscris-toi, ajoute ton nom d'utilisateur Buzzcast Live, et chaque fois que tu passes en live, c'est capturé. Aucune APK Buzzcast Live recorder à installer, aucune capture d'écran — tout se passe côté serveur."
+        },
+        {
+          "question": "Pourquoi est-ce que j'obtiens un écran noir lors de l'enregistrement de Buzzcast Live ?",
+          "answer": "Les problèmes d'écran noir sont fréquents quand on utilise des enregistreurs d'écran sur Buzzcast Live. LiveStreamRecorder évite cela complètement parce qu'il capture tes lives Buzzcast directement depuis le cloud — pas d'écran noir, pas de contournement, pas d'apps d'enregistrement peu fiables."
+        },
+        {
+          "question": "Comment réparer l'écran noir de l'enregistreur d'écran Buzzcast Live ?",
+          "answer": "La solution la plus simple est de ne pas faire de capture d'écran du tout. LiveStreamRecorder est un enregistreur Buzzcast basé sur le cloud qui capture tes lives côté serveur en haute qualité. Pas de problèmes d'écran noir, pas d'apps à configurer — ajoute simplement ton nom d'utilisateur et tes lives Buzzcast sont enregistrés automatiquement."
+        },
+        {
+          "question": "Ai-je besoin d'un enregistreur d'écran pour Buzzcast Live ?",
+          "answer": "Non. Les enregistreurs d'écran pour Buzzcast Live entraînent souvent des problèmes d'écran noir ou des captures de basse qualité. LiveStreamRecorder est un enregistreur Buzzcast Live basé sur le cloud qui capture tes streams automatiquement en haute qualité — aucune app à installer, pas d'écran noir."
+        },
+        {
+          "question": "Puis-je enregistrer mes lives Buzzcast gratuitement ?",
+          "answer": "Oui. Inscris-toi gratuitement sur LiveStreamRecorder et commence à enregistrer tes lives Buzzcast immédiatement. Les offres Premium débloquent le téléchargement des enregistrements, ClipAI pour les clips automatiques et un stockage prolongé."
+        },
+        {
+          "question": "Puis-je télécharger mes enregistrements Buzzcast Live ?",
+          "answer": "Oui. Les utilisateurs Premium peuvent télécharger leurs enregistrements Buzzcast Live en fichiers vidéo pour la lecture hors ligne. Chaque enregistrement peut aussi être visionné instantanément dans ton navigateur sans téléchargement."
+        },
+        {
+          "question": "Puis-je transformer mes enregistrements Buzzcast Live en clips courts ?",
+          "answer": "Oui. Les utilisateurs Premium peuvent utiliser ClipAI pour transformer automatiquement leurs enregistrements Buzzcast Live en clips de moments forts courts prêts pour TikTok, YouTube Shorts ou Reels. Un excellent moyen de réutiliser ton contenu live et de gagner des followers sur plusieurs plateformes."
+        }
+      ]
+    },
+    "liveme": {
+      "title": "Enregistrements LiveMe Live",
+      "description": "Regarde et télécharge les enregistrements LiveMe Live sur LiveStreamRecorder. Tes lives LiveMe sont capturés automatiquement dans le cloud — aucun problème d'écran noir, aucun enregistreur d'écran nécessaire. Le plus simple enregistreur LiveMe Live pour les créateurs.",
+      "keywords": [
+        "LiveMe recorder",
+        "LiveMe live recorder",
+        "enregistrer LiveMe live",
+        "LiveMe live screen recorder",
+        "capture d'écran LiveMe live",
+        "LiveMe écran noir enregistrement",
+        "sauvegarder LiveMe live"
+      ],
+      "faqs": [
+        {
+          "question": "Comment enregistrer mes lives LiveMe ?",
+          "answer": "Avec LiveStreamRecorder, tes lives LiveMe sont enregistrés automatiquement dans le cloud. Inscris-toi, ajoute ton nom d'utilisateur LiveMe Live, et chaque fois que tu passes en live, c'est capturé. Aucune APK LiveMe Live recorder à installer, aucune capture d'écran — tout se passe côté serveur."
+        },
+        {
+          "question": "Pourquoi est-ce que j'obtiens un écran noir lors de l'enregistrement de LiveMe Live ?",
+          "answer": "Les problèmes d'écran noir sont fréquents quand on utilise des enregistreurs d'écran sur LiveMe Live. LiveStreamRecorder évite cela complètement parce qu'il capture tes lives LiveMe directement depuis le cloud — pas d'écran noir, pas de contournement, pas d'apps d'enregistrement peu fiables."
+        },
+        {
+          "question": "Comment réparer l'écran noir de l'enregistreur d'écran LiveMe Live ?",
+          "answer": "La solution la plus simple est de ne pas faire de capture d'écran du tout. LiveStreamRecorder est un enregistreur LiveMe basé sur le cloud qui capture tes lives côté serveur en haute qualité. Pas de problèmes d'écran noir, pas d'apps à configurer — ajoute simplement ton nom d'utilisateur et tes lives LiveMe sont enregistrés automatiquement."
+        },
+        {
+          "question": "Ai-je besoin d'un enregistreur d'écran pour LiveMe Live ?",
+          "answer": "Non. Les enregistreurs d'écran pour LiveMe Live entraînent souvent des problèmes d'écran noir ou des captures de basse qualité. LiveStreamRecorder est un enregistreur LiveMe Live basé sur le cloud qui capture tes streams automatiquement en haute qualité — aucune app à installer, pas d'écran noir."
+        },
+        {
+          "question": "Puis-je enregistrer mes lives LiveMe gratuitement ?",
+          "answer": "Oui. Inscris-toi gratuitement sur LiveStreamRecorder et commence à enregistrer tes lives LiveMe immédiatement. Les offres Premium débloquent le téléchargement des enregistrements, ClipAI pour les clips automatiques et un stockage prolongé."
+        },
+        {
+          "question": "Puis-je télécharger mes enregistrements LiveMe Live ?",
+          "answer": "Oui. Les utilisateurs Premium peuvent télécharger leurs enregistrements LiveMe Live en fichiers vidéo pour la lecture hors ligne. Chaque enregistrement peut aussi être visionné instantanément dans ton navigateur sans téléchargement."
+        },
+        {
+          "question": "Puis-je transformer mes enregistrements LiveMe Live en clips courts ?",
+          "answer": "Oui. Les utilisateurs Premium peuvent utiliser ClipAI pour transformer automatiquement leurs enregistrements LiveMe Live en clips de moments forts courts prêts pour TikTok, YouTube Shorts ou Reels. Un excellent moyen de réutiliser ton contenu live et de gagner des followers sur plusieurs plateformes."
+        }
+      ]
+    },
+    "mixch": {
+      "title": "Enregistrements Mixch Live",
+      "description": "Regarde et télécharge les enregistrements Mixch Live sur LiveStreamRecorder. Tes lives Mixch sont capturés automatiquement dans le cloud — aucun problème d'écran noir, aucun enregistreur d'écran nécessaire. Le plus simple enregistreur Mixch Live pour les créateurs.",
+      "keywords": [
+        "Mixch recorder",
+        "Mixch live recorder",
+        "enregistrer Mixch live",
+        "Mixch live screen recorder",
+        "capture d'écran Mixch live",
+        "Mixch écran noir enregistrement",
+        "sauvegarder Mixch live"
+      ],
+      "faqs": [
+        {
+          "question": "Comment enregistrer mes lives Mixch ?",
+          "answer": "Avec LiveStreamRecorder, tes lives Mixch sont enregistrés automatiquement dans le cloud. Inscris-toi, ajoute ton nom d'utilisateur Mixch Live, et chaque fois que tu passes en live, c'est capturé. Aucune APK Mixch Live recorder à installer, aucune capture d'écran — tout se passe côté serveur."
+        },
+        {
+          "question": "Pourquoi est-ce que j'obtiens un écran noir lors de l'enregistrement de Mixch Live ?",
+          "answer": "Les problèmes d'écran noir sont fréquents quand on utilise des enregistreurs d'écran sur Mixch Live. LiveStreamRecorder évite cela complètement parce qu'il capture tes lives Mixch directement depuis le cloud — pas d'écran noir, pas de contournement, pas d'apps d'enregistrement peu fiables."
+        },
+        {
+          "question": "Comment réparer l'écran noir de l'enregistreur d'écran Mixch Live ?",
+          "answer": "La solution la plus simple est de ne pas faire de capture d'écran du tout. LiveStreamRecorder est un enregistreur Mixch basé sur le cloud qui capture tes lives côté serveur en haute qualité. Pas de problèmes d'écran noir, pas d'apps à configurer — ajoute simplement ton nom d'utilisateur et tes lives Mixch sont enregistrés automatiquement."
+        },
+        {
+          "question": "Ai-je besoin d'un enregistreur d'écran pour Mixch Live ?",
+          "answer": "Non. Les enregistreurs d'écran pour Mixch Live entraînent souvent des problèmes d'écran noir ou des captures de basse qualité. LiveStreamRecorder est un enregistreur Mixch Live basé sur le cloud qui capture tes streams automatiquement en haute qualité — aucune app à installer, pas d'écran noir."
+        },
+        {
+          "question": "Puis-je enregistrer mes lives Mixch gratuitement ?",
+          "answer": "Oui. Inscris-toi gratuitement sur LiveStreamRecorder et commence à enregistrer tes lives Mixch immédiatement. Les offres Premium débloquent le téléchargement des enregistrements, ClipAI pour les clips automatiques et un stockage prolongé."
+        },
+        {
+          "question": "Puis-je télécharger mes enregistrements Mixch Live ?",
+          "answer": "Oui. Les utilisateurs Premium peuvent télécharger leurs enregistrements Mixch Live en fichiers vidéo pour la lecture hors ligne. Chaque enregistrement peut aussi être visionné instantanément dans ton navigateur sans téléchargement."
+        },
+        {
+          "question": "Puis-je transformer mes enregistrements Mixch Live en clips courts ?",
+          "answer": "Oui. Les utilisateurs Premium peuvent utiliser ClipAI pour transformer automatiquement leurs enregistrements Mixch Live en clips de moments forts courts prêts pour TikTok, YouTube Shorts ou Reels. Un excellent moyen de réutiliser ton contenu live et de gagner des followers sur plusieurs plateformes."
+        }
+      ]
+    }
+  },
+  "hero": {
+    "title": {
+      "all": "Enregistrements",
+      "tiktok": "Enregistrements TikTok",
+      "twitch": "Enregistrements Twitch",
+      "youtube": "Enregistrements YouTube",
+      "kick": "Enregistrements Kick",
+      "afreecatv": "Enregistrements AfreecaTV",
+      "pandalive": "Enregistrements Pandalive",
+      "bigo": "Enregistrements Bigo",
+      "buzzcast": "Enregistrements Buzzcast",
+      "liveme": "Enregistrements LiveMe",
+      "mixch": "Enregistrements Mixch"
+    },
+    "subtitle": {
+      "all": "Regarde les enregistrements de lives de créateurs sur notre plateforme. Télécharge et découvre du nouveau contenu.",
+      "tiktok": "Regarde les enregistrements TikTok Live de créateurs sur notre plateforme. Télécharge et découvre du nouveau contenu.",
+      "twitch": "Regarde les enregistrements de streams Twitch de créateurs sur notre plateforme. Télécharge et découvre du nouveau contenu.",
+      "youtube": "Regarde les enregistrements YouTube Live de créateurs sur notre plateforme. Télécharge et découvre du nouveau contenu.",
+      "kick": "Regarde les enregistrements de streams Kick de créateurs sur notre plateforme. Télécharge et découvre du nouveau contenu.",
+      "afreecatv": "Regarde les enregistrements AfreecaTV de créateurs sur notre plateforme. Télécharge et découvre du nouveau contenu.",
+      "pandalive": "Regarde les enregistrements Pandalive de créateurs sur notre plateforme. Télécharge et découvre du nouveau contenu.",
+      "bigo": "Regarde les enregistrements Bigo de créateurs sur notre plateforme. Télécharge et découvre du nouveau contenu.",
+      "buzzcast": "Regarde les enregistrements Buzzcast de créateurs sur notre plateforme. Télécharge et découvre du nouveau contenu.",
+      "liveme": "Regarde les enregistrements LiveMe de créateurs sur notre plateforme. Télécharge et découvre du nouveau contenu.",
+      "mixch": "Regarde les enregistrements Mixch de créateurs sur notre plateforme. Télécharge et découvre du nouveau contenu."
+    }
+  },
+  "cta": {
+    "title": {
+      "all": "Enregistre tes lives aujourd'hui",
+      "tiktok": "Enregistre les lives TikTok",
+      "twitch": "Enregistre les streams & VOD Twitch",
+      "youtube": "Enregistre les lives YouTube",
+      "kick": "Enregistre les streams Kick",
+      "pandalive": "Enregistre les streams Pandalive",
+      "afreecatv": "Enregistre les streams AfreecaTV",
+      "bigo": "Enregistre les streams Bigo",
+      "buzzcast": "Enregistre les streams Buzzcast",
+      "liveme": "Enregistre les streams LiveMe",
+      "mixch": "Enregistre les streams Mixch"
+    },
+    "subtitle": {
+      "all": "Sauvegarde automatiquement tes streams TikTok, Twitch, YouTube et Kick. Télécharge des enregistrements, crée des clips courts et fais grandir ton audience.",
+      "tiktok": "Sauvegarde automatiquement tes lives TikTok. Télécharge des enregistrements, crée des clips courts avec ClipAI et gagne plus de followers.",
+      "twitch": "Sauvegarde automatiquement tes streams Twitch. Télécharge des VOD, crée des clips courts avec ClipAI et fais grandir ta chaîne.",
+      "youtube": "Sauvegarde automatiquement tes lives YouTube. Télécharge des enregistrements, transforme-les en Shorts avec ClipAI et gagne plus d'abonnés.",
+      "kick": "Sauvegarde automatiquement tes streams Kick. Télécharge des enregistrements, crée des clips courts avec ClipAI et fais grandir ton audience.",
+      "pandalive": "Sauvegarde automatiquement tes streams Pandalive. Télécharge des enregistrements et crée des clips courts avec ClipAI.",
+      "afreecatv": "Sauvegarde automatiquement tes streams AfreecaTV. Télécharge des enregistrements et crée des clips courts avec ClipAI.",
+      "bigo": "Sauvegarde automatiquement tes streams Bigo. Télécharge des enregistrements et crée des clips courts avec ClipAI.",
+      "buzzcast": "Sauvegarde automatiquement tes streams Buzzcast. Télécharge des enregistrements et crée des clips courts avec ClipAI.",
+      "liveme": "Sauvegarde automatiquement tes streams LiveMe. Télécharge des enregistrements et crée des clips courts avec ClipAI.",
+      "mixch": "Sauvegarde automatiquement tes streams Mixch. Télécharge des enregistrements et crée des clips courts avec ClipAI."
+    },
+    "button": "Commencer à enregistrer gratuitement"
+  },
+  "empty": {
+    "title": "Pas encore d'enregistrements",
+    "description": {
+      "all": "Sois le premier créateur à enregistrer un stream !",
+      "tiktok": "Sois le premier créateur à enregistrer un TikTok Live !",
+      "twitch": "Sois le premier créateur à enregistrer un stream Twitch !",
+      "youtube": "Sois le premier créateur à enregistrer un YouTube Live !",
+      "kick": "Sois le premier créateur à enregistrer un stream Kick !",
+      "afreecatv": "Sois le premier créateur à enregistrer un stream AfreecaTV !",
+      "pandalive": "Sois le premier créateur à enregistrer un stream Pandalive !",
+      "bigo": "Sois le premier créateur à enregistrer un stream Bigo !",
+      "buzzcast": "Sois le premier créateur à enregistrer un stream Buzzcast !",
+      "liveme": "Sois le premier créateur à enregistrer un stream LiveMe !",
+      "mixch": "Sois le premier créateur à enregistrer un stream Mixch !"
+    },
+    "button": "Commencer"
+  },
+  "about": {
+    "all": "## Enregistrements de lives\n\nRegarde les enregistrements de créateurs qui utilisent LiveStreamRecorder pour sauvegarder leurs lives.\n\n### Ce que tu trouveras ici\n\nLes créateurs utilisent notre plateforme pour enregistrer automatiquement leurs lives TikTok, leurs streams Twitch, leurs diffusions YouTube et leurs streams Kick. Regarde leur contenu, regarde les enregistrements et découvre de nouveaux créateurs.\n\n### Regarder et télécharger\n\nChaque enregistrement est disponible à regarder instantanément. Les utilisateurs Premium peuvent télécharger les enregistrements pour la lecture hors ligne.\n\n### Pour les créateurs\n\nTu veux que tes streams apparaissent ici ? Inscris-toi gratuitement et commence à enregistrer. Colle l'URL de ta chaîne, passe en live, et nous sauvegardons tout automatiquement. Utilise ClipAI pour transformer tes streams en clips courts et fais grandir ton audience.\n\n### Plateformes prises en charge\n\nNous prenons en charge l'enregistrement TikTok Live, la sauvegarde des VOD Twitch, l'enregistrement YouTube Live, l'enregistrement de streams Kick, l'enregistrement AfreecaTV et l'enregistrement Pandalive. D'autres plateformes arrivent bientôt.",
+    "tiktok": "## Enregistrements TikTok Live\n\nRegarde les enregistrements TikTok Live de créateurs qui utilisent LiveStreamRecorder pour sauvegarder leurs propres lives. Chaque TikTok Live est capturé automatiquement et stocké pour le visionnage à la demande.\n\n### Lives TikTok sauvegardés automatiquement\n\nLes lives TikTok disparaissent au moment où ils se terminent — il n'y a aucune façon intégrée de les sauvegarder. Les créateurs utilisent notre enregistreur TikTok pour capturer automatiquement leurs propres lives TikTok dans le cloud. Aucun enregistreur d'écran TikTok nécessaire, aucun téléphone laissé allumé toute la nuit. Ajoute simplement ton nom d'utilisateur et tes lives sont enregistrés.\n\n### Regarde et télécharge tes enregistrements TikTok\n\nChaque enregistrement TikTok Live est disponible à regarder instantanément dans ton navigateur. Les utilisateurs Premium peuvent télécharger leurs enregistrements TikTok en fichiers vidéo pour la lecture hors ligne — parfait pour réutiliser ton propre contenu ou conserver une archive personnelle.\n\n### Enregistre tes lives TikTok sur n'importe quel appareil\n\nTu te demandes comment enregistrer tes TikTok Lives sur un ordinateur ou un laptop ? LiveStreamRecorder fonctionne entièrement dans le cloud. Rien à installer — pas d'app de bureau, pas d'extension de navigateur. Que tu sois sur PC, laptop ou mobile, tes TikTok Lives sont capturés automatiquement en haute qualité.\n\n### Transforme tes lives en clips avec ClipAI\n\nTu veux transformer tes enregistrements TikTok Live en clips courts ? ClipAI analyse tes lives enregistrés et crée des clips de moments forts que tu peux publier en vidéos TikTok, Reels ou Shorts. La meilleure façon de gagner plus de followers à partir de ton contenu live.\n\n### Ton enregistreur TikTok — sans capture d'écran\n\nOublie les apps d'enregistrement d'écran peu fiables et les outils de capture de bureau. LiveStreamRecorder est un enregistreur TikTok conçu spécialement qui capture tes lives côté serveur. Inscris-toi gratuitement, ajoute ton nom d'utilisateur TikTok, et ne perds plus jamais un live.",
+    "twitch": "## Enregistrements de streams Twitch\n\nRegarde les enregistrements de streams Twitch de créateurs qui utilisent LiveStreamRecorder pour sauvegarder leurs propres streams. Chaque live Twitch est capturé automatiquement et stocké de façon permanente.\n\n### Des VOD Twitch qui n'expirent jamais\n\nLes VOD Twitch expirent après 14 à 60 jours et sont supprimées si tu supprimes ta chaîne. Notre enregistreur Twitch sauvegarde tes streams de façon permanente dans le cloud — pas d'expiration, pas d'archives supprimées. Ton contenu reste à toi.\n\n### Regarde et télécharge tes enregistrements Twitch\n\nChaque enregistrement de stream Twitch est disponible à regarder instantanément dans ton navigateur — pas de pubs, pas d'interruptions. Les utilisateurs Premium peuvent télécharger leurs enregistrements Twitch en fichiers vidéo pour la lecture hors ligne ou la réutilisation de contenu.\n\n### Enregistre tes streams Twitch — aucun enregistreur d'écran nécessaire\n\nOublie le logiciel de capture d'écran qui tourne en parallèle d'OBS. LiveStreamRecorder est un enregistreur de streams Twitch basé sur le cloud qui capture tes lives côté serveur. Pas de charge CPU supplémentaire, pas d'app de bureau, pas de Bandicam qui tourne en arrière-plan. Que tu streames depuis PC, console ou mobile, tes streams Twitch sont enregistrés automatiquement en haute qualité.\n\n### Transforme tes streams en clips avec ClipAI\n\nTu veux transformer tes enregistrements de streams Twitch en clips courts ? ClipAI analyse tes streams enregistrés et crée des clips de moments forts prêts à publier en YouTube Shorts, vidéos TikTok ou Reels. Fais grandir ton audience sur plusieurs plateformes à partir de ton contenu Twitch.\n\n### Le meilleur enregistreur Twitch pour les créateurs\n\nLiveStreamRecorder est conçu spécialement pour sauvegarder les streams Twitch. Inscris-toi gratuitement, connecte ta chaîne, et ne perds plus jamais un stream à cause de VOD expirées. Chaque live est enregistré automatiquement — ton archive Twitch permanente.",
+    "youtube": "## Enregistrements YouTube Live\n\nRegarde les enregistrements YouTube Live de créateurs qui utilisent LiveStreamRecorder pour sauvegarder leurs propres lives. Chaque YouTube Live est capturé automatiquement et stocké pour le visionnage à la demande.\n\n### Lives YouTube sauvegardés automatiquement\n\nLes rediffusions de lives YouTube peuvent disparaître — les créateurs les suppriment, les streams échouent à se traiter, ou les chaînes deviennent privées. Notre enregistreur YouTube capture tes lives automatiquement dans le cloud pour que tu aies toujours une copie de ton contenu.\n\n### Regarde et télécharge tes enregistrements YouTube\n\nChaque enregistrement YouTube Live est disponible à regarder instantanément dans ton navigateur. Les utilisateurs Premium peuvent télécharger leurs enregistrements en fichiers vidéo pour la lecture hors ligne — parfait pour réutiliser ton contenu live.\n\n### Enregistre tes lives YouTube — aucun enregistreur d'écran nécessaire\n\nOublie le logiciel d'enregistrement d'écran traditionnel pour YouTube. LiveStreamRecorder est un enregistreur YouTube en ligne qui capture tes lives côté serveur. Pas d'app de bureau, pas d'extension de navigateur, pas d'ordinateur laissé allumé toute la nuit. Que tu sois sur PC, laptop ou mobile, tes lives YouTube sont enregistrés en haute qualité.\n\n### Transforme tes lives en YouTube Shorts avec ClipAI\n\nTu veux transformer tes enregistrements YouTube Live en Shorts ? ClipAI analyse tes lives enregistrés et crée des clips de moments forts prêts à publier. La meilleure façon de gagner des abonnés à partir de ton contenu live.\n\n### Le meilleur enregistreur YouTube Live pour les créateurs\n\nLiveStreamRecorder est conçu spécialement pour capturer les lives YouTube. Inscris-toi gratuitement, connecte ta chaîne, et ne perds plus jamais un live. Chaque stream est enregistré automatiquement — même si tu oublies d'appuyer sur enregistrer.",
+    "kick": "## Enregistrements de streams Kick\n\nRegarde les enregistrements de streams Kick de créateurs qui utilisent LiveStreamRecorder pour sauvegarder leurs propres streams. Chaque live Kick est capturé automatiquement et stocké de façon permanente.\n\n### Des VOD Kick qui restent à jamais\n\nLes VOD Kick ne sont pas toujours fiables — les rediffusions peuvent échouer, les chaînes peuvent changer, et ton contenu peut disparaître sans avertissement. Notre enregistreur Kick sauvegarde tes streams de façon permanente dans le cloud pour que ton contenu ne dépende pas du système VOD de Kick. Tes streams restent à toi, pour toujours.\n\n### Regarde et télécharge tes enregistrements Kick\n\nChaque enregistrement de stream Kick est disponible à regarder instantanément dans ton navigateur — pas de pubs, pas d'interruptions. Les utilisateurs Premium peuvent télécharger leurs enregistrements Kick en fichiers vidéo pour la lecture hors ligne, l'édition ou la réutilisation de contenu.\n\n### Enregistre tes streams Kick — aucun enregistreur d'écran nécessaire\n\nOublie l'enregistrement OBS qui tourne en parallèle de ton live. LiveStreamRecorder est un enregistreur de streams Kick basé sur le cloud qui capture tes streams côté serveur. Pas de charge CPU supplémentaire, pas de logiciel de capture de bureau, rien qui tourne en arrière-plan. Stream depuis PC, console ou mobile — tes streams Kick sont enregistrés automatiquement en haute qualité.\n\n### Transforme tes streams en clips avec ClipAI\n\nTu veux transformer tes enregistrements de streams Kick en clips courts ? ClipAI analyse tes streams enregistrés et crée des clips de moments forts prêts à publier en vidéos TikTok, YouTube Shorts ou Reels. Fais grandir ton audience au-delà de Kick en transformant ton contenu live en contenu court pour chaque plateforme.\n\n### Le meilleur enregistreur Kick pour les créateurs\n\nLiveStreamRecorder est construit pour sauvegarder les streams Kick indépendamment. Inscris-toi gratuitement, ajoute ta chaîne Kick, et ne perds plus jamais un stream. Chaque live est enregistré automatiquement — une sauvegarde permanente qui ne dépend pas du système VOD de Kick.",
+    "pandalive": "## Enregistrements Pandalive Live\n\nRegarde les enregistrements Pandalive Live de BJ qui utilisent LiveStreamRecorder pour sauvegarder leurs propres lives. Chaque Pandalive Live est capturé automatiquement et stocké pour le visionnage à la demande.\n\n### Lives Pandalive sauvegardés automatiquement\n\nLes lives Pandalive disparaissent quand le stream se termine — il n'y a pas de système de rediffusion garanti. Notre enregistreur Pandalive sauvegarde tes lives automatiquement dans le cloud pour que rien ne soit perdu une fois ton live terminé. Performances de danse, reprises de chansons, talk-sessions — tout reste disponible.\n\n### Regarde et télécharge tes enregistrements Pandalive\n\nChaque enregistrement Pandalive est disponible à regarder instantanément dans ton navigateur. Les utilisateurs Premium peuvent télécharger leurs enregistrements Pandalive en fichiers vidéo pour la lecture hors ligne — parfait pour réutiliser ton propre contenu ou conserver une copie personnelle.\n\n### Enregistre tes lives Pandalive — aucun logiciel supplémentaire nécessaire\n\nOublie les apps d'enregistrement d'écran et les outils de capture mobile. LiveStreamRecorder est un enregistreur Pandalive en ligne qui capture tes lives côté serveur. Pas de logiciel de bureau, pas de téléphone qui tourne toute la nuit, pas d'extension de navigateur. Que tu streames depuis un téléphone, une tablette ou un PC, tes lives Pandalive sont enregistrés automatiquement en haute qualité.\n\n### Transforme tes lives en clips avec ClipAI\n\nTu veux transformer tes enregistrements Pandalive Live en clips courts ? ClipAI analyse tes lives enregistrés et crée des clips de moments forts prêts à publier sur TikTok, Instagram Reels ou YouTube Shorts. Fais grandir ta fanbase dans le monde entier en réutilisant tes meilleurs moments Pandalive.\n\n### Le meilleur enregistreur Pandalive pour les BJ\n\nLiveStreamRecorder est construit pour sauvegarder les lives Pandalive. Inscris-toi gratuitement, ajoute ton nom d'utilisateur Pandalive, et ne perds plus jamais un live. Chaque stream est capturé automatiquement — ta bibliothèque de contenu Pandalive permanente.",
+    "afreecatv": "## Enregistrements AfreecaTV Live\n\nRegarde les enregistrements AfreecaTV Live de BJ qui utilisent LiveStreamRecorder pour sauvegarder leurs propres lives. Chaque AfreecaTV Live est capturé automatiquement et stocké pour le visionnage à la demande.\n\n### Lives AfreecaTV sauvegardés indépendamment\n\nAfreecaTV a son propre système de VOD, mais les rediffusions ne sont pas toujours sauvegardées, du contenu peut être retiré et les règles de stockage peuvent changer. Notre enregistreur AfreecaTV sauvegarde tes lives automatiquement dans le cloud comme sauvegarde indépendante — pour que ton contenu reste intact, peu importe ce qui se passe sur AfreecaTV.\n\n### Regarde et télécharge tes enregistrements AfreecaTV\n\nChaque enregistrement AfreecaTV est disponible à regarder instantanément dans ton navigateur — pas de pubs, pas d'interruptions. Les utilisateurs Premium peuvent télécharger leurs enregistrements AfreecaTV en fichiers vidéo pour la lecture hors ligne ou la réutilisation de contenu.\n\n### Enregistre tes lives AfreecaTV — aucun enregistreur d'écran nécessaire\n\nOublie le logiciel de capture qui tourne pendant les longues sessions AfreecaTV. LiveStreamRecorder est un enregistreur AfreecaTV basé sur le cloud qui capture tes lives côté serveur. Pas d'app de bureau, pas d'enregistrement en arrière-plan, pas de charge CPU supplémentaire. Stream depuis PC ou mobile — tes lives AfreecaTV sont enregistrés automatiquement en haute qualité.\n\n### Transforme tes longs lives en clips courts avec ClipAI\n\nLes lives AfreecaTV peuvent durer des heures. ClipAI analyse tes lives enregistrés et en extrait les meilleurs moments — actions clutch, réactions, échanges drôles, moments forts. Publie-les en clips TikTok, YouTube Shorts ou Reels pour faire grandir ton audience au-delà d'AfreecaTV.\n\n### Le meilleur enregistreur AfreecaTV pour les BJ\n\nLiveStreamRecorder est construit pour sauvegarder les lives AfreecaTV indépendamment. Inscris-toi gratuitement, ajoute ton nom d'utilisateur AfreecaTV, et ne perds plus jamais un live. Chaque stream est capturé automatiquement — une sauvegarde permanente qui ne dépend pas du système VOD d'AfreecaTV.",
+    "bigo": "## Enregistrements Bigo Live\n\nRegarde les enregistrements Bigo Live de créateurs qui utilisent LiveStreamRecorder pour sauvegarder leurs propres lives. Chaque Bigo Live est capturé automatiquement et stocké pour le visionnage à la demande.\n\n### Lives Bigo sauvegardés avant qu'ils ne disparaissent\n\nLes lives Bigo n'existent que pendant qu'ils sont en cours — une fois la session terminée, le contenu disparaît complètement de l'app. Notre enregistreur Bigo sauvegarde tes lives automatiquement dans le cloud pour que ton contenu ne disparaisse pas au moment où ton live se termine. Performances de danse, chant, moments de chat, interactions de cadeaux — tout reste disponible.\n\n### Regarde et télécharge tes enregistrements Bigo\n\nChaque enregistrement Bigo Live est disponible à regarder instantanément dans ton navigateur. Les utilisateurs Premium peuvent télécharger leurs enregistrements Bigo en fichiers vidéo pour la lecture hors ligne — parfait pour réutiliser ton propre contenu ou conserver une copie personnelle.\n\n### Enregistre tes lives Bigo — aucun enregistreur d'écran nécessaire\n\nOublie la capture d'écran sur ton téléphone ou laisser un appareil supplémentaire enregistrer toute la nuit. LiveStreamRecorder est un enregistreur Bigo en ligne qui capture tes lives côté serveur. Pas de drain de batterie de téléphone, pas de configuration manuelle, pas de logiciel supplémentaire. Que tu streames depuis iPhone, Android ou PC, tes lives Bigo sont enregistrés automatiquement en haute qualité.\n\n### Transforme tes lives en clips avec ClipAI\n\nTu veux transformer tes enregistrements Bigo Live en clips courts ? ClipAI analyse tes lives enregistrés et crée des clips de moments forts prêts à publier sur TikTok, Instagram Reels ou YouTube Shorts. Fais grandir ton audience dans le monde entier en réutilisant tes meilleurs moments Bigo.\n\n### Le meilleur enregistreur Bigo pour les créateurs\n\nLiveStreamRecorder est construit pour sauvegarder les lives Bigo. Inscris-toi gratuitement, ajoute ton nom d'utilisateur Bigo, et ne perds plus jamais un live. Chaque stream est capturé automatiquement — un endroit permanent pour ton contenu Bigo qui ne dépend pas de l'app pour le conserver à ta place.",
+    "buzzcast": "## Enregistrements Buzzcast Live\n\nRegarde les enregistrements Buzzcast Live de créateurs qui utilisent LiveStreamRecorder pour sauvegarder leurs propres lives. Chaque Buzzcast Live est capturé automatiquement et stocké pour le visionnage à la demande.\n\n### Lives Buzzcast sauvegardés avant qu'ils ne disparaissent\n\nLes lives Buzzcast ne sont disponibles qu'en direct — une fois le stream terminé, le contenu disparaît de l'app. Notre enregistreur Buzzcast sauvegarde tes lives automatiquement dans le cloud pour que rien ne soit perdu quand ton live se termine. Sessions de chat, moments musicaux, contenu quotidien — tout reste disponible pour les fans.\n\n### Regarde et télécharge tes enregistrements Buzzcast\n\nChaque enregistrement Buzzcast Live est disponible à regarder instantanément dans ton navigateur. Les utilisateurs Premium peuvent télécharger leurs enregistrements Buzzcast en fichiers vidéo pour la lecture hors ligne — parfait pour réutiliser ton propre contenu ou conserver une copie personnelle.\n\n### Enregistre tes lives Buzzcast — aucune app supplémentaire nécessaire\n\nOublie la capture d'écran de ton téléphone ou le logiciel de capture qui tourne en arrière-plan. LiveStreamRecorder est un enregistreur Buzzcast en ligne qui capture tes lives côté serveur. Pas de drain de batterie, pas de configuration manuelle, pas de logiciel supplémentaire. Tes lives Buzzcast sont enregistrés automatiquement en haute qualité, depuis n'importe quel appareil.\n\n### Transforme tes lives en clips avec ClipAI\n\nTu veux transformer tes enregistrements Buzzcast Live en clips courts ? ClipAI analyse tes lives enregistrés et crée des clips de moments forts prêts à publier sur TikTok, Instagram Reels ou YouTube Shorts. Fais grandir ton audience au-delà de Buzzcast en réutilisant tes meilleurs moments.\n\n### Le meilleur enregistreur Buzzcast pour les créateurs\n\nLiveStreamRecorder est construit pour sauvegarder les lives Buzzcast. Inscris-toi gratuitement, ajoute ton nom d'utilisateur Buzzcast, et ne perds plus jamais un live. Chaque stream est capturé automatiquement — ta bibliothèque de contenu Buzzcast permanente.",
+    "liveme": "## Enregistrements LiveMe Live\n\nRegarde les enregistrements LiveMe Live de créateurs qui utilisent LiveStreamRecorder pour sauvegarder leurs propres lives. Chaque LiveMe Live est capturé automatiquement et stocké pour le visionnage à la demande.\n\n### Lives LiveMe sauvegardés avant qu'ils ne disparaissent\n\nLes lives LiveMe ne sont disponibles qu'en direct — une fois le stream terminé, le contenu disparaît de l'app. Notre enregistreur LiveMe sauvegarde tes lives automatiquement dans le cloud pour que rien ne soit perdu quand ton live se termine. Sessions de chat, moments musicaux, contenu quotidien — tout reste disponible pour les fans.\n\n### Regarde et télécharge tes enregistrements LiveMe\n\nChaque enregistrement LiveMe Live est disponible à regarder instantanément dans ton navigateur. Les utilisateurs Premium peuvent télécharger leurs enregistrements LiveMe en fichiers vidéo pour la lecture hors ligne — parfait pour réutiliser ton propre contenu ou conserver une copie personnelle.\n\n### Enregistre tes lives LiveMe — aucune app supplémentaire nécessaire\n\nOublie la capture d'écran de ton téléphone ou le logiciel de capture qui tourne en arrière-plan. LiveStreamRecorder est un enregistreur LiveMe en ligne qui capture tes lives côté serveur. Pas de drain de batterie, pas de configuration manuelle, pas de logiciel supplémentaire. Tes lives LiveMe sont enregistrés automatiquement en haute qualité, depuis n'importe quel appareil.\n\n### Transforme tes lives en clips avec ClipAI\n\nTu veux transformer tes enregistrements LiveMe Live en clips courts ? ClipAI analyse tes lives enregistrés et crée des clips de moments forts prêts à publier sur TikTok, Instagram Reels ou YouTube Shorts. Fais grandir ton audience au-delà de LiveMe en réutilisant tes meilleurs moments.\n\n### Le meilleur enregistreur LiveMe pour les créateurs\n\nLiveStreamRecorder est construit pour sauvegarder les lives LiveMe. Inscris-toi gratuitement, ajoute ton nom d'utilisateur LiveMe, et ne perds plus jamais un live. Chaque stream est capturé automatiquement — ta bibliothèque de contenu LiveMe permanente.",
+    "mixch": "## Enregistrements Mixch Live\n\nRegarde les enregistrements Mixch Live de créateurs qui utilisent LiveStreamRecorder pour sauvegarder leurs propres lives. Chaque Mixch Live est capturé automatiquement et stocké pour le visionnage à la demande.\n\n### Lives Mixch sauvegardés avant qu'ils ne disparaissent\n\nLes lives Mixch ne sont disponibles qu'en direct — une fois le stream terminé, le contenu disparaît de l'app. Notre enregistreur Mixch sauvegarde tes lives automatiquement dans le cloud pour que rien ne soit perdu quand ton live se termine. Sessions de chat, moments musicaux, contenu quotidien — tout reste disponible pour les fans.\n\n### Regarde et télécharge tes enregistrements Mixch\n\nChaque enregistrement Mixch Live est disponible à regarder instantanément dans ton navigateur. Les utilisateurs Premium peuvent télécharger leurs enregistrements Mixch en fichiers vidéo pour la lecture hors ligne — parfait pour réutiliser ton propre contenu ou conserver une copie personnelle.\n\n### Enregistre tes lives Mixch — aucune app supplémentaire nécessaire\n\nOublie la capture d'écran de ton téléphone ou le logiciel de capture qui tourne en arrière-plan. LiveStreamRecorder est un enregistreur Mixch en ligne qui capture tes lives côté serveur. Pas de drain de batterie, pas de configuration manuelle, pas de logiciel supplémentaire. Tes lives Mixch sont enregistrés automatiquement en haute qualité, depuis n'importe quel appareil.\n\n### Transforme tes lives en clips avec ClipAI\n\nTu veux transformer tes enregistrements Mixch Live en clips courts ? ClipAI analyse tes lives enregistrés et crée des clips de moments forts prêts à publier sur TikTok, Instagram Reels ou YouTube Shorts. Fais grandir ton audience au-delà de Mixch en réutilisant tes meilleurs moments.\n\n### Le meilleur enregistreur Mixch pour les créateurs\n\nLiveStreamRecorder est construit pour sauvegarder les lives Mixch. Inscris-toi gratuitement, ajoute ton nom d'utilisateur Mixch, et ne perds plus jamais un live. Chaque stream est capturé automatiquement — ta bibliothèque de contenu Mixch permanente."
+  },
+  "jsonLd": {
+    "name": {
+      "all": "Enregistrements de lives",
+      "tiktok": "Enregistrements TikTok Live",
+      "twitch": "Enregistrements de streams Twitch",
+      "youtube": "Enregistrements YouTube Live",
+      "kick": "Enregistrements de streams Kick",
+      "afreecatv": "Enregistrements de streams AfreecaTV",
+      "pandalive": "Enregistrements de streams Pandalive",
+      "bigo": "Enregistrements de streams Bigo",
+      "buzzcast": "Enregistrements de streams Buzzcast",
+      "liveme": "Enregistrements de streams LiveMe",
+      "mixch": "Enregistrements de streams Mixch"
+    },
+    "description": {
+      "all": "Regarde les enregistrements de lives de créateurs sur LiveStreamRecorder.",
+      "tiktok": "Regarde les enregistrements TikTok Live de créateurs sur LiveStreamRecorder.",
+      "twitch": "Regarde les enregistrements de streams Twitch de créateurs sur LiveStreamRecorder.",
+      "youtube": "Regarde les enregistrements YouTube Live de créateurs sur LiveStreamRecorder.",
+      "kick": "Regarde les enregistrements de streams Kick de créateurs sur LiveStreamRecorder.",
+      "afreecatv": "Regarde les enregistrements AfreecaTV de créateurs sur LiveStreamRecorder.",
+      "pandalive": "Regarde les enregistrements Pandalive de créateurs sur LiveStreamRecorder.",
+      "bigo": "Regarde les enregistrements Bigo de créateurs sur LiveStreamRecorder.",
+      "buzzcast": "Regarde les enregistrements Buzzcast de créateurs sur LiveStreamRecorder.",
+      "liveme": "Regarde les enregistrements LiveMe de créateurs sur LiveStreamRecorder.",
+      "mixch": "Regarde les enregistrements Mixch de créateurs sur LiveStreamRecorder."
+    },
+    "streamTitle": "Stream de {nickname} – {date}",
+    "streamDescription": {
+      "tiktok": "Enregistrement TikTok Live de {nickname}",
+      "twitch": "Enregistrement de stream Twitch de {nickname}",
+      "youtube": "Enregistrement YouTube Live de {nickname}",
+      "kick": "Enregistrement de stream Kick de {nickname}",
+      "afreecatv": "Enregistrement AfreecaTV de {nickname}",
+      "pandalive": "Enregistrement Pandalive de {nickname}",
+      "bigo": "Enregistrement Bigo de {nickname}",
+      "unknown": "Enregistrement de live de {nickname}",
+      "buzzcast": "Enregistrement Buzzcast de {nickname}",
+      "liveme": "Enregistrement LiveMe de {nickname}",
+      "mixch": "Enregistrement Mixch de {nickname}"
+    }
+  },
+  "recordedOn": "Enregistré le {date}",
+  "faq": "Questions fréquentes",
+  "country": {
+    "title": "{platform} de {country}",
+    "description": "Regarde les {platform} de {country} qui enregistrent leurs lives sur LiveStreamRecorder. Regarde leurs enregistrements et découvre du nouveau contenu.",
+    "heroTitle": "{platform} en {country}",
+    "heroSubtitle": "Regarde les dernières vidéos {platform} de {country}.",
+    "empty": {
+      "title": "Pas encore d'enregistrements",
+      "description": "Aucun {platform} de {country} n'a encore d'enregistrements."
+    },
+    "browseByCountry": "Regarder les {platform} par pays",
+    "browseLink": "Regarder les dernières vidéos {platform} de {country}",
+    "backToPlatform": "Retour à tous les {platform}"
+  }
+}

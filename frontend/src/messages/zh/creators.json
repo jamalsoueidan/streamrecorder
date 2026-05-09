@@ -1,0 +1,364 @@
+{
+  "meta": {
+    "all": {
+      "title": "LiveStreamRecorder 上的创作者",
+      "description": "发现使用 LiveStreamRecorder 录制直播并将其转换为短视频的创作者。加入 TikTok、Twitch、YouTube、Kick 等平台的数千名创作者。",
+      "keywords": [
+        "内容创作者",
+        "直播",
+        "直播录制",
+        "live stream recorder"
+      ]
+    },
+    "tiktok": {
+      "title": "TikTok 创作者",
+      "description": "发现在 LiveStreamRecorder 上录制直播的 TikTok 创作者。浏览顶级 TikTok 创作者,观看他们的直播录像,找到值得关注的新创作者。",
+      "keywords": [
+        "TikTok 创作者",
+        "TikTok 内容创作者",
+        "TikTok 创作者列表",
+        "顶级 TikTok 创作者",
+        "热门 TikTok 创作者",
+        "查找 TikTok 创作者",
+        "最佳 TikTok 内容创作者",
+        "TikTok 创作者主页",
+        "成为 TikTok 创作者"
+      ],
+      "faqs": [
+        {
+          "question": "如何在 LiveStreamRecorder 上找到 TikTok 创作者？",
+          "answer": "浏览我们的 TikTok 创作者列表,发现在 LiveStreamRecorder 上录制直播的内容创作者。你可以按名称搜索或浏览热门 TikTok 创作者,找到要观看的新主播。"
+        },
+        {
+          "question": "如何在 LiveStreamRecorder 上获得我的 TikTok 创作者主页？",
+          "answer": "免费注册并添加你的 TikTok 用户名。你的 TikTok 创作者主页将自动创建,你的直播开始录制。其他用户可以浏览你的录像并发现你的内容。"
+        },
+        {
+          "question": "我是 TikTok 内容创作者 — 为什么要录制我的直播？",
+          "answer": "你的 TikTok 直播一结束就消失了。作为 TikTok 内容创作者,录制直播让你可以重温最精彩的瞬间、下载它们进行编辑,并使用 ClipAI 将精彩瞬间转换为 TikTok 短视频、Reels 或 Shorts。每场直播带来更多内容意味着更多增长。"
+        },
+        {
+          "question": "如何在 LiveStreamRecorder 上成为 TikTok 创作者？",
+          "answer": "只需免费注册并添加你的 TikTok 用户名。你的每场直播都会自动录制。你的创作者主页显示所有录像,让粉丝轻松补看错过的直播。"
+        },
+        {
+          "question": "我可以查看使用 LiveStreamRecorder 的顶级 TikTok 创作者列表吗？",
+          "answer": "可以。浏览此页面查看在 LiveStreamRecorder 上录制直播的热门 TikTok 创作者。随着更多内容创作者加入并开播,列表会更新。"
+        },
+        {
+          "question": "LiveStreamRecorder 对 TikTok 创作者免费吗？",
+          "answer": "是的。TikTok 创作者可以免费注册并开始录制直播。高级套餐解锁下载录像、ClipAI 自动精彩瞬间短视频和扩展存储。"
+        },
+        {
+          "question": "TikTok 创作者如何使用 LiveStreamRecorder 增长粉丝？",
+          "answer": "自动录制你的 TikTok 直播,然后使用 ClipAI 将最精彩的瞬间转换为短视频。将它们发布为 TikTok、YouTube Shorts 或 Reels。一场直播可以变成多个内容 — 更多发布、更多曝光、更多粉丝。"
+        },
+        {
+          "question": "我可以将录像用于 TikTok 创作者活动或广告吗？",
+          "answer": "可以。你的直播录像是你的内容。下载它们并以你喜欢的方式重新利用 — 用于 TikTok 创作者活动、广告内容、作品集 Reels 或跨平台发布。"
+        }
+      ]
+    },
+    "twitch": {
+      "title": "Twitch 主播和创作者",
+      "description": "发现在 LiveStreamRecorder 上录制直播的 Twitch 主播。浏览顶级 Twitch 直播主播,观看他们的直播录像,找到值得关注的新主播。",
+      "keywords": [
+        "Twitch 主播",
+        "Twitch 直播主播",
+        "顶级 Twitch 主播",
+        "最佳 Twitch 主播",
+        "开始 Twitch 直播",
+        "在 Twitch 上直播",
+        "IRL 直播",
+        "面向主播"
+      ],
+      "faqs": [
+        {
+          "question": "如何在 LiveStreamRecorder 上找到 Twitch 主播？",
+          "answer": "浏览我们的 Twitch 主播页面,发现在 LiveStreamRecorder 上录制直播的主播。按名称搜索或浏览顶级 Twitch 直播主播,找到要关注的新频道。"
+        },
+        {
+          "question": "如何在 LiveStreamRecorder 上获得我的 Twitch 主播主页？",
+          "answer": "免费注册并连接你的 Twitch 频道。你的主播主页将自动创建,每场直播都会录制。粉丝可以在一个地方浏览你的所有直播录像 — 即使你的 Twitch VOD 已过期。"
+        },
+        {
+          "question": "我刚开始在 Twitch 直播 — 我应该录制我的直播吗？",
+          "answer": "绝对应该。当你开始 Twitch 直播时,每场直播都很重要。录制直播让你可以回看内容、提升表现,并使用 ClipAI 将精彩瞬间转换为 TikTok、YouTube Shorts 或 Reels 的短视频。这是新 Twitch 主播成长的最佳方式之一。"
+        },
+        {
+          "question": "Twitch 主播如何使用 LiveStreamRecorder 扩大受众？",
+          "answer": "自动录制你的 Twitch 直播,然后使用 ClipAI 从最精彩的瞬间创建精彩短视频。在 TikTok、YouTube Shorts 和 Reels 上发布。顶级 Twitch 直播主播在多个平台上重新利用内容 — LiveStreamRecorder 让这变得简单。"
+        },
+        {
+          "question": "LiveStreamRecorder 对 Twitch 主播免费吗？",
+          "answer": "是的。Twitch 主播可以免费注册并开始录制直播。高级套餐解锁下载录像、ClipAI 自动精彩瞬间短视频和扩展存储。"
+        },
+        {
+          "question": "IRL 直播也会被录制吗？",
+          "answer": "是的。LiveStreamRecorder 捕获你所有的 Twitch 直播 — 游戏、IRL 直播、聊天或任何其他类别。每次你在 Twitch 上开播,你的直播都会被自动录制,无论内容类型如何。"
+        },
+        {
+          "question": "这与 Twitch VOD 有何不同？",
+          "answer": "Twitch VOD 在 14-60 天后过期,可能被静音。LiveStreamRecorder 为 Twitch 主播提供永久备份。你的直播录像永不过期,保持完整质量,始终可观看或下载。"
+        },
+        {
+          "question": "Twitch 主播可以将直播转换为短视频吗？",
+          "answer": "可以。高级用户可以使用 ClipAI 将 Twitch 直播录像自动转换为短视频。这是 Twitch 直播主播为其他平台创建内容的最快方式,无需花数小时编辑。"
+        }
+      ]
+    },
+    "youtube": {
+      "title": "YouTube 创作者",
+      "description": "发现在 LiveStreamRecorder 上录制直播的 YouTube 创作者。浏览 YouTube 内容创作者,观看他们的直播录像,找到要订阅的新频道。",
+      "keywords": [
+        "YouTube 创作者",
+        "YouTube 内容创作者",
+        "YouTube Studio",
+        "YouTube 视频创作者",
+        "YouTube Shorts 创作者",
+        "YouTube 频道创作者",
+        "YouTube 内容创作"
+      ],
+      "faqs": [
+        {
+          "question": "如何在 LiveStreamRecorder 上找到 YouTube 创作者？",
+          "answer": "浏览我们的 YouTube 创作者页面,发现在 LiveStreamRecorder 上录制直播的内容创作者。按名称搜索或浏览热门 YouTube 创作者,找到值得订阅的新频道。"
+        },
+        {
+          "question": "如何在 LiveStreamRecorder 上获得我的 YouTube 创作者主页？",
+          "answer": "免费注册并连接你的 YouTube 频道。你的创作者主页将自动设置,你的直播开始录制。粉丝可以在一个地方浏览所有录像。"
+        },
+        {
+          "question": "我是 YouTube 内容创作者 — 为什么要录制我的直播？",
+          "answer": "作为 YouTube 内容创作者,你的直播充满了值得重新利用的瞬间。录制直播让你可以回看精彩瞬间、下载它们进行编辑,并使用 ClipAI 将最精彩的部分转换为 YouTube Shorts。一场直播可以为你的内容创作提供数天素材。"
+        },
+        {
+          "question": "YouTube 创作者如何将直播转换为 Shorts？",
+          "answer": "ClipAI 分析你的直播录像并提取格式化为 YouTube Shorts 的精彩短视频。对于希望增长频道的 YouTube 创作者,将一场直播转换为多个 Shorts 是最简单的内容创作策略之一。"
+        },
+        {
+          "question": "LiveStreamRecorder 对 YouTube 创作者免费吗？",
+          "answer": "是的。YouTube 创作者可以免费注册并开始录制直播。高级套餐解锁下载录像、ClipAI 自动 Shorts 创作和扩展存储。"
+        },
+        {
+          "question": "这与 YouTube Studio 有何不同？",
+          "answer": "YouTube Studio 让你管理频道并访问直播重播 — 但重播可能无法处理、被删除或质量下降。LiveStreamRecorder 为 YouTube 创作者提供独立备份。你的直播自动录制并单独存储,所以你始终拥有你的内容。"
+        },
+        {
+          "question": "我可以将录像用于 YouTube 广告或推广吗？",
+          "answer": "可以。你的直播录像是你的内容。下载它们并以你喜欢的方式重新利用 — 用于 YouTube 广告、频道预告片、合集视频或跨平台发布到 TikTok 和 Reels。"
+        },
+        {
+          "question": "YouTube 创作者如何使用 LiveStreamRecorder 增长频道？",
+          "answer": "自动录制你的直播,然后使用 ClipAI 从最精彩的瞬间创建 YouTube Shorts。从直播来的稳定 Shorts 让你的频道在直播之间保持活跃 — 为订阅者提供更多内容,触达新观众的更多机会。"
+        }
+      ]
+    },
+    "kick": {
+      "title": "Kick 创作者",
+      "description": "发现使用 LiveStreamRecorder 录制直播并将其转换为短视频的 Kick 创作者。",
+      "keywords": [
+        "Kick 创作者",
+        "Kick 直播",
+        "Kick 录制",
+        "Kick 直播录制器"
+      ]
+    },
+    "pandalive": {
+      "title": "Pandalive 创作者",
+      "description": "发现使用 LiveStreamRecorder 录制直播并将其转换为短视频的 Pandalive 创作者。",
+      "keywords": [
+        "Pandalive 创作者",
+        "韩国直播",
+        "Pandalive 录制",
+        "韩国直播录制器"
+      ]
+    },
+    "afreecatv": {
+      "title": "AfreecaTV 创作者",
+      "description": "发现使用 LiveStreamRecorder 录制直播并将其转换为短视频的 AfreecaTV 创作者。",
+      "keywords": [
+        "AfreecaTV 创作者",
+        "韩国直播",
+        "AfreecaTV 录制",
+        "韩国直播录制器"
+      ]
+    },
+    "bigo": {
+      "title": "Bigo 创作者",
+      "description": "发现使用 LiveStreamRecorder 录制直播并将其转换为短视频的 Bigo 创作者。",
+      "keywords": [
+        "Bigo 创作者",
+        "Bigo 直播",
+        "Bigo 录制",
+        "Bigo 直播录制器"
+      ]
+    },
+    "buzzcast": {
+      "title": "Buzzcast 创作者",
+      "description": "发现使用 LiveStreamRecorder 录制直播并将其转换为短视频的 Buzzcast 创作者。",
+      "keywords": [
+        "Buzzcast 创作者",
+        "Buzzcast 直播",
+        "Buzzcast 录制",
+        "Buzzcast 直播录制器"
+      ]
+    },
+    "liveme": {
+      "title": "LiveMe 创作者",
+      "description": "发现使用 LiveStreamRecorder 录制直播并将其转换为短视频的 LiveMe 创作者。",
+      "keywords": [
+        "LiveMe 创作者",
+        "LiveMe 直播",
+        "LiveMe 录制",
+        "LiveMe 直播录制器"
+      ]
+    },
+    "mixch": {
+      "title": "Mixch 创作者",
+      "description": "发现使用 LiveStreamRecorder 录制直播并将其转换为短视频的 Mixch 创作者。",
+      "keywords": [
+        "Mixch 创作者",
+        "Mixch 直播",
+        "Mixch 录制",
+        "Mixch 直播录制器"
+      ]
+    }
+  },
+  "hero": {
+    "title": {
+      "all": "创作者",
+      "tiktok": "TikTok 创作者",
+      "twitch": "Twitch 创作者",
+      "youtube": "YouTube 创作者",
+      "kick": "Kick 创作者",
+      "pandalive": "Pandalive 创作者",
+      "afreecatv": "AfreecaTV 创作者",
+      "bigo": "Bigo 创作者",
+      "buzzcast": "Buzzcast 创作者",
+      "liveme": "LiveMe 创作者",
+      "mixch": "Mixch 创作者"
+    },
+    "subtitle": {
+      "all": "加入数千名使用 LiveStreamRecorder 保存直播并创建短视频的创作者。",
+      "tiktok": "加入数千名使用 LiveStreamRecorder 保存直播并创建短视频的 TikTok 创作者。",
+      "twitch": "加入数千名使用 LiveStreamRecorder 保存直播并创建短视频的 Twitch 创作者。",
+      "youtube": "加入数千名使用 LiveStreamRecorder 保存直播并创建短视频的 YouTube 创作者。",
+      "kick": "加入数千名使用 LiveStreamRecorder 保存直播并创建短视频的 Kick 创作者。",
+      "pandalive": "加入数千名使用 LiveStreamRecorder 保存直播并创建短视频的 Pandalive 创作者。",
+      "afreecatv": "加入数千名使用 LiveStreamRecorder 保存直播并创建短视频的 AfreecaTV 创作者。",
+      "bigo": "加入数千名使用 LiveStreamRecorder 保存直播并创建短视频的 Bigo 创作者。",
+      "buzzcast": "加入数千名使用 LiveStreamRecorder 保存直播并创建短视频的 Buzzcast 创作者。",
+      "liveme": "加入数千名使用 LiveStreamRecorder 保存直播并创建短视频的 LiveMe 创作者。",
+      "mixch": "加入数千名使用 LiveStreamRecorder 保存直播并创建短视频的 Mixch 创作者。"
+    }
+  },
+  "features": {
+    "badge": "工作原理",
+    "title": {
+      "all": "自动录制你的直播",
+      "tiktok": "自动录制你的 TikTok 直播",
+      "twitch": "自动录制你的 Twitch 直播",
+      "youtube": "自动录制你的 YouTube 直播",
+      "kick": "自动录制你的 Kick 直播",
+      "pandalive": "自动录制你的 Pandalive 直播",
+      "afreecatv": "自动录制你的 AfreecaTV 直播",
+      "bigo": "自动录制你的 Bigo 直播",
+      "buzzcast": "自动录制你的 Buzzcast 直播",
+      "liveme": "自动录制你的 LiveMe 直播",
+      "mixch": "自动录制你的 Mixch 直播"
+    },
+    "subtitle": "几分钟内从直播到短视频",
+    "items": {
+      "add": {
+        "title": "添加你的频道",
+        "description": "粘贴你的直播频道 URL,我们会在你每次开播时开始录制。无需软件。"
+      },
+      "watch": {
+        "title": "回看你的直播",
+        "description": "每场直播都自动保存。随时观看你的录像或下载它们进行编辑。"
+      },
+      "clip": {
+        "title": "使用 ClipAI 获取精彩瞬间",
+        "description": "ClipAI 找出你最精彩的瞬间并将其转换为短视频 — 几分钟内准备就绪。"
+      },
+      "edit": {
+        "title": "编辑并随处分享",
+        "description": "随心定制你的短视频。添加字幕、剪辑并在所有平台上分享。"
+      }
+    }
+  },
+  "cta": {
+    "title": {
+      "all": "录制你的直播",
+      "tiktok": "录制你的 TikTok 直播",
+      "twitch": "录制你的 Twitch 直播",
+      "youtube": "录制你的 YouTube 直播",
+      "kick": "录制你的 Kick 直播",
+      "afreecatv": "录制你的 AfreecaTV 直播",
+      "pandalive": "录制你的 Pandalive 直播",
+      "bigo": "录制你的 Bigo 直播",
+      "buzzcast": "录制你的 Buzzcast 直播",
+      "liveme": "录制你的 LiveMe 直播",
+      "mixch": "录制你的 Mixch 直播"
+    },
+    "subtitle": {
+      "all": "加入数千名创作者。保存你的直播,使用 ClipAI 创建短视频,扩大你的受众。",
+      "tiktok": "加入数千名 TikTok 创作者。保存你的直播,使用 ClipAI 创建短视频,获得更多粉丝。",
+      "twitch": "加入数千名 Twitch 主播。保存你的 VOD,使用 ClipAI 创建短视频,增长你的频道。",
+      "youtube": "加入数千名 YouTube 创作者。保存你的直播,使用 ClipAI 将其转换为 Shorts,获得更多订阅者。",
+      "kick": "加入数千名 Kick 主播。保存你的直播,使用 ClipAI 创建短视频,扩大你的受众。",
+      "afreecatv": "加入数千名 AfreecaTV 创作者。保存你的直播并使用 ClipAI 创建短视频。",
+      "pandalive": "加入数千名 Pandalive 创作者。保存你的直播并使用 ClipAI 创建短视频。",
+      "bigo": "加入数千名 Bigo 创作者。保存你的直播并使用 ClipAI 创建短视频。",
+      "buzzcast": "加入数千名 Buzzcast 创作者。保存你的直播并使用 ClipAI 创建短视频。",
+      "liveme": "加入数千名 LiveMe 创作者。保存你的直播并使用 ClipAI 创建短视频。",
+      "mixch": "加入数千名 Mixch 创作者。保存你的直播并使用 ClipAI 创建短视频。"
+    },
+    "button": "免费开始录制"
+  },
+  "empty": {
+    "title": "暂无创作者",
+    "description": {
+      "all": "成为第一个加入的创作者！",
+      "tiktok": "成为第一个加入的 TikTok 创作者！",
+      "twitch": "成为第一个加入的 Twitch 创作者！",
+      "youtube": "成为第一个加入的 YouTube 创作者！",
+      "kick": "成为第一个加入的 Kick 创作者！",
+      "pandalive": "成为第一个加入的 Pandalive 创作者！",
+      "afreecatv": "成为第一个加入的 AfreecaTV 创作者！",
+      "bigo": "成为第一个加入的 Bigo 创作者！",
+      "buzzcast": "成为第一个加入的 Buzzcast 创作者！",
+      "liveme": "成为第一个加入的 LiveMe 创作者！",
+      "mixch": "成为第一个加入的 Mixch 创作者！"
+    },
+    "button": "立即开始"
+  },
+  "about": {
+    "all": "## 关于 LiveStreamRecorder\n\n不再失去你最精彩的内容。我们自动录制你的直播,让你可以将其转换为短视频并扩大受众。\n\n### 自动直播录制\n\n只需粘贴你的频道 URL 并开播。我们处理录制 — 无需安装软件,无需任何设置。每场直播都自动保存。\n\n### 回看和下载\n\n直播完成？你的录像已就绪。回看、下载或发送给你的编辑。\n\n### ClipAI 找出你最精彩的瞬间\n\n不要花数小时翻看素材。ClipAI 突出你最精彩的瞬间并将其转换为短视频 — 几分钟内准备就绪。\n\n### 扩大你的受众\n\n将一场直播转换为数十个短视频。在 TikTok、YouTube Shorts、Instagram Reels 和其他任何地方分享。更多内容、更多观看、更多粉丝。\n\n### 录制 TikTok、Twitch、YouTube、Kick 等直播\n\n在任何地方直播 — 我们在所有地方录制。TikTok、Twitch、YouTube、Kick 和更多即将到来的平台。\n\n### 免费开始\n\n今天就创建账号并开始录制。升级以获得更高质量、更多录制和更快的下载。",
+    "tiktok": "## TikTok 创作者\n\n发现使用 LiveStreamRecorder 保存自己直播的 TikTok 创作者。浏览热门 TikTok 创作者,观看他们的直播录像,找到值得关注的新内容创作者。\n\n### TikTok 创作者为什么录制他们的直播\n\nTikTok 直播充满了精彩内容 — 有趣的瞬间、与观众的互动、热门潜力。但一旦结束,它们就消失了。TikTok 内容创作者使用 LiveStreamRecorder 自动保存每场直播,确保不丢失任何内容。\n\n### 浏览顶级 TikTok 创作者\n\n探索我们的 TikTok 创作者列表,找到录制直播的热门创作者。观看他们的录像、补看错过的直播,发现值得关注的新内容创作者。\n\n### 你的 TikTok 创作者主页\n\n LiveStreamRecorder 上的每位 TikTok 创作者都有自己的主页,粉丝可以浏览所有录制的直播。注册、添加你的 TikTok 用户名,你的创作者主页就会自动设置。\n\n### 从直播到短视频 — 增长你的粉丝\n\nTikTok 内容创作者可以使用 ClipAI 将录制的直播转换为短视频。将其发布为 TikTok、YouTube Shorts 或 Reels。一场直播变成多个内容 — 更多发布、更多曝光、更多粉丝。\n\n### 在 LiveStreamRecorder 上成为 TikTok 创作者\n\n免费注册、添加你的 TikTok 用户名,今天就开始录制你的直播。每场直播都会自动捕获 — 无需屏幕录制器、无需手机彻夜运行。加入已经使用 LiveStreamRecorder 增长受众的 TikTok 创作者。",
+    "twitch": "## Twitch 主播和创作者\n\n发现使用 LiveStreamRecorder 保存自己直播的 Twitch 直播主播。浏览顶级 Twitch 主播,观看他们的录像,找到值得关注的新主播。\n\n### Twitch 主播为什么录制他们的直播\n\nTwitch VOD 会过期,你最精彩的瞬间被埋在数小时的素材中。Twitch 主播使用 LiveStreamRecorder 自动保存每场直播 — 不丢失任何内容,每场直播都成为值得分享的内容。\n\n### 浏览顶级 Twitch 直播主播\n\n探索我们的 Twitch 主播页面,找到录制直播的主播。观看他们的录像、补看错过的直播,发现游戏、IRL 直播和所有其他类别中最好的 Twitch 直播主播。\n\n### 你的 Twitch 主播主页\n\nLiveStreamRecorder 上的每位 Twitch 主播都有自己的主页,粉丝可以浏览所有录制的直播。注册、连接你的 Twitch 频道,你的主页就会自动设置 — 一个不像 Twitch VOD 那样过期的内容永久家园。\n\n### 从直播到短视频 — 超越 Twitch 增长\n\n顶级 Twitch 直播主播通过在多个平台上重新利用内容来增长受众。ClipAI 将你的直播录像转换为准备好用于 TikTok、YouTube Shorts 或 Reels 的短视频。一场直播变成数十个短视频 — 更多内容、更多曝光、更多粉丝。\n\n### 开始 Twitch 直播？开始录制吧。\n\n如果你刚开始在 Twitch 直播,从第一天就录制每场直播是最明智的举动之一。回看你的内容以改进、构建短视频库,并立即开始在各平台上扩大你的存在感。免费注册,每场直播都会自动捕获。",
+    "youtube": "## YouTube 创作者\n\n发现使用 LiveStreamRecorder 保存自己直播的 YouTube 创作者。浏览 YouTube 内容创作者,观看他们的录像,找到要订阅的新频道。\n\n### YouTube 创作者为什么录制他们的直播\n\nYouTube 直播非常适合互动,但最精彩的瞬间被埋在数小时的素材中。YouTube 内容创作者使用 LiveStreamRecorder 自动保存每场直播 — 不丢失任何内容,每场直播都成为内容创作机会。\n\n### 浏览 YouTube 创作者\n\n探索我们的 YouTube 创作者页面,找到录制直播的频道。观看他们的录像、补看错过的直播,发现值得关注的新 YouTube 内容创作者。\n\n### 你的 YouTube 创作者主页\n\nLiveStreamRecorder 上的每位 YouTube 创作者都有自己的主页,粉丝可以浏览所有录制的直播。注册、连接你的 YouTube 频道,你的主页就会自动设置。\n\n### 从直播到 YouTube Shorts\n\nYouTube 创作者可以使用 ClipAI 将录制的直播自动转换为 YouTube Shorts。一场直播变成多个内容 — 增长频道在直播之间最简单的内容创作策略。\n\n### 不仅是 YouTube Studio\n\nYouTube Studio 处理你的频道管理,但直播重播可能失败或被删除。LiveStreamRecorder 为 YouTube 创作者提供每场直播的独立备份,以及将该内容转换为 Shorts 和短视频的工具。\n\n### 在 LiveStreamRecorder 上成为 YouTube 创作者\n\n免费注册、连接你的 YouTube 频道,今天就开始录制你的直播。每场直播都会自动捕获。加入已经使用 LiveStreamRecorder 增长受众的 YouTube 创作者。",
+    "kick": "## Kick 主播和创作者\n\n发现使用 LiveStreamRecorder 保存自己直播的 Kick 主播。浏览 Kick 创作者,观看他们的录像,在 Kick 不断增长的游戏、IRL 和聊天创作者社区中找到要关注的新主播。\n\n### Kick 主播为什么录制他们的直播\n\nKick 还很年轻,VOD 并不总是可靠 — 重播可能无法处理、频道可能更改,你最好的直播可能在粉丝补看之前消失。Kick 主播使用 LiveStreamRecorder 自动保存每场直播,所以你直播中每个值得记忆的瞬间都保持可用,即使原始 Kick VOD 不见了。\n\n### 浏览顶级 Kick 主播\n\n探索我们的 Kick 主播页面,找到在 LiveStreamRecorder 上保存自己直播的主播。观看他们的录像、补看错过的直播,发现游戏、IRL 直播和聊天类别中的新 Kick 创作者。\n\n### 你的 Kick 主播主页\n\nLiveStreamRecorder 上的每位 Kick 主播都有自己的主页,粉丝可以浏览所有录制的直播。注册、添加你的 Kick 频道,你的创作者主页就会自动设置 — 一个不依赖 Kick VOD 系统的内容永久家园。\n\n### 从直播到短视频 — 扩大你的受众\n\nClipAI 将你的 Kick 直播录像转换为准备好发布到 TikTok、YouTube Shorts 或 Reels 的短视频。一场直播变成数十个短视频 — 更多内容、更多曝光、更多粉丝。顶级 Kick 主播在每个平台上重新利用最精彩的瞬间。\n\n### 在 LiveStreamRecorder 上成为 Kick 主播\n\n免费注册、添加你的 Kick 频道,今天就开始录制你的直播。每场直播都会自动捕获 — 无需 OBS 插件、无需备份 VOD 设置、无需额外软件。加入已经使用 LiveStreamRecorder 保存内容并扩大受众的 Kick 主播。",
+    "pandalive": "## Pandalive 创作者\n\n发现使用 LiveStreamRecorder 保存自己直播的 Pandalive BJ。浏览韩国创作者,观看他们的录像,在韩国最活跃的直播平台之一中找到要关注的新 BJ。\n\n### Pandalive BJ 为什么录制他们的直播\n\nPandalive 直播并不总是保留 — 一旦直播结束,就没有保证的方式将其找回。Pandalive BJ 使用 LiveStreamRecorder 自动保存每场直播,所以你的舞蹈表演、歌曲翻唱、聊天会话和粉丝互动在直播结束时永远不会丢失。\n\n### 浏览顶级 Pandalive BJ\n\n探索我们的 Pandalive 创作者页面,找到在 LiveStreamRecorder 上保存自己直播的 BJ。观看他们的录像、跨时区补看错过的直播,发现值得关注的新 Pandalive 创作者。\n\n### 你的 Pandalive 创作者主页\n\nLiveStreamRecorder 上的每位 Pandalive BJ 都有自己的主页,粉丝可以浏览所有录制的直播。注册、添加你的 Pandalive 用户名,你的创作者主页就会自动设置 — 一个不在直播结束时消失的内容永久家园。\n\n### 从直播到短视频 — 建立你的粉丝群\n\nClipAI 将你的 Pandalive 直播录像转换为准备好发布到 TikTok、Instagram Reels 或 YouTube Shorts 的短视频。一场直播变成多个内容 — 舞蹈短视频、歌曲精彩瞬间、值得记忆的反应。通过重新利用最精彩的瞬间,在 Pandalive 之外扩大你的粉丝群。\n\n### 在 LiveStreamRecorder 上成为 Pandalive 创作者\n\n免费注册、添加你的 Pandalive 用户名,今天就开始保存你的直播。每场直播都会自动捕获 — 无需屏幕录制、无需额外软件。加入已经使用 LiveStreamRecorder 保留每场直播并在全球扩大受众的 Pandalive BJ。",
+    "afreecatv": "## AfreecaTV 创作者\n\n发现使用 LiveStreamRecorder 保存自己直播的 AfreecaTV BJ。浏览韩国创作者,观看他们的录像,在韩国原创直播平台中找到要关注的新 BJ — 这里汇集游戏解说员、IRL 主播、音乐表演者和聊天达人。\n\n### AfreecaTV BJ 为什么录制他们的直播\n\nAfreecaTV 有自己的 VOD 系统,但重播并不总是被保存,内容可能被下架,存储规则可能更改。AfreecaTV BJ 使用 LiveStreamRecorder 作为独立备份 — 每场直播都自动捕获,所以无论原平台发生什么,你的直播历史都保持完整。\n\n### 浏览顶级 AfreecaTV BJ\n\n探索我们的 AfreecaTV 创作者页面,找到在 LiveStreamRecorder 上保存自己直播的 BJ。观看他们的录像、补看错过的长会话,发现 StarCraft 解说、游戏、IRL、音乐和聊天类别中的新 AfreecaTV 创作者。\n\n### 你的 AfreecaTV 创作者主页\n\nLiveStreamRecorder 上的每位 AfreecaTV BJ 都有自己的主页,粉丝可以浏览所有录制的直播。注册、添加你的 AfreecaTV 用户名,你的创作者主页就会自动设置 — 一个不依赖 AfreecaTV VOD 政策的独立内容备份。\n\n### 用 ClipAI 将长会话转为短视频\n\nAfreecaTV 直播可以持续数小时。ClipAI 分析你的录制直播并自动提取最精彩的瞬间 — 关键操作、反应、有趣对话、音乐精彩瞬间。将其发布为 TikTok 短视频、YouTube Shorts 或 Reels,在 AfreecaTV 之外扩大你的受众。\n\n### 在 LiveStreamRecorder 上成为 AfreecaTV 创作者\n\n免费注册、添加你的 AfreecaTV 用户名,今天就开始保存你的直播。每场直播都会自动捕获 — 不依赖 AfreecaTV 的 VOD 系统、无需手动上传。加入已经使用 LiveStreamRecorder 保留每场直播并在全球触达粉丝的 AfreecaTV BJ。",
+    "bigo": "## Bigo 直播创作者\n\n发现使用 LiveStreamRecorder 保存自己直播的 Bigo 直播创作者。浏览 Bigo 主播,观看他们的录像,在最大的全球直播平台之一中找到要关注的新创作者 — 来自中东、亚洲及其他地区的舞蹈、音乐、聊天和娱乐创作者的家园。\n\n### Bigo 创作者为什么录制他们的直播\n\nBigo 直播仅在直播时存在 — 一旦你结束会话,内容就完全从应用中消失。Bigo 创作者使用 LiveStreamRecorder 自动保存每场直播,所以你的舞蹈表演、歌唱会话、聊天瞬间和礼物互动在直播结束后很久仍然可供粉丝观看。\n\n### 浏览顶级 Bigo 创作者\n\n探索我们的 Bigo 创作者页面,找到在 LiveStreamRecorder 上保存自己直播的主播。观看他们的录像、补看错过的直播,发现各类别和语言中的新 Bigo 创作者。\n\n### 你的 Bigo 创作者主页\n\nLiveStreamRecorder 上的每位 Bigo 创作者都有自己的主页,粉丝可以浏览所有录制的直播。注册、添加你的 Bigo 用户名,你的创作者主页就会自动设置 — 一个超越 Bigo 直播消失性质的内容永久家园。\n\n### 从直播到短视频 — 扩大你的受众\n\nClipAI 将你的 Bigo 直播录像转换为准备好发布到 TikTok、Instagram Reels 或 YouTube Shorts 的短视频。舞蹈瞬间、合拍、粉丝互动、音乐表演 — 将每场直播转换为多个内容,在每个平台上扩大你的受众。\n\n### 在 LiveStreamRecorder 上成为 Bigo 创作者\n\n免费注册、添加你的 Bigo 用户名,今天就开始保存你的直播。每场直播都会自动捕获 — 无需手机录制、无需屏幕捕获。加入已经使用 LiveStreamRecorder 保留每场直播并在全球触达粉丝的 Bigo 创作者。",
+    "buzzcast": "## Buzzcast 创作者\n\n发现使用 LiveStreamRecorder 保存自己直播的 Buzzcast 创作者。浏览 Buzzcast 主播,观看他们的录像,在这个移动优先的直播社区中找到要关注的新创作者。\n\n### Buzzcast 创作者为什么录制他们的直播\n\nBuzzcast 直播仅在直播时可用 — 一旦你结束直播,内容就从应用中消失。没有内置的重播系统,粉丝也没有事后补看的方式。Buzzcast 创作者使用 LiveStreamRecorder 自动保存每场直播,所以你的聊天会话、音乐表演和日常内容在直播结束后很久仍然可供粉丝观看。\n\n### 浏览顶级 Buzzcast 创作者\n\n探索我们的 Buzzcast 创作者页面,找到在 LiveStreamRecorder 上保存自己直播的主播。观看他们的录像、补看错过的直播,发现值得关注的新 Buzzcast 创作者。\n\n### 你的 Buzzcast 创作者主页\n\nLiveStreamRecorder 上的每位 Buzzcast 创作者都有自己的主页,粉丝可以浏览所有录制的直播。注册、添加你的 Buzzcast 用户名,你的创作者主页就会自动设置 — 一个不会在你直播结束时消失的内容永久家园。\n\n### 从直播到短视频 — 建立你的粉丝\n\nClipAI 将你的 Buzzcast 直播录像转换为准备好发布到 TikTok、Instagram Reels 或 YouTube Shorts 的短视频。将反应、音乐瞬间和聊天精彩瞬间转换为可分享的内容,在 Buzzcast 之外扩大你的粉丝。\n\n### 在 LiveStreamRecorder 上成为 Buzzcast 创作者\n\n免费注册、添加你的 Buzzcast 用户名,今天就开始保存你的直播。每场直播都会自动捕获 — 无需手动录制、无需额外应用。加入已经使用 LiveStreamRecorder 保留每场直播并扩大受众的 Buzzcast 创作者。",
+    "liveme": "## LiveMe 创作者\n\n发现使用 LiveStreamRecorder 保存自己直播的 LiveMe 创作者。浏览 LiveMe 主播,观看他们的录像,在这个移动优先的直播社区中找到要关注的新创作者。\n\n### LiveMe 创作者为什么录制他们的直播\n\nLiveMe 直播仅在直播时可用 — 一旦你结束直播,内容就从应用中消失。没有内置的重播系统,粉丝也没有事后补看的方式。LiveMe 创作者使用 LiveStreamRecorder 自动保存每场直播,所以你的聊天会话、音乐表演和日常内容在直播结束后很久仍然可供粉丝观看。\n\n### 浏览顶级 LiveMe 创作者\n\n探索我们的 LiveMe 创作者页面,找到在 LiveStreamRecorder 上保存自己直播的主播。观看他们的录像、补看错过的直播,发现值得关注的新 LiveMe 创作者。\n\n### 你的 LiveMe 创作者主页\n\nLiveStreamRecorder 上的每位 LiveMe 创作者都有自己的主页,粉丝可以浏览所有录制的直播。注册、添加你的 LiveMe 用户名,你的创作者主页就会自动设置 — 一个不会在你直播结束时消失的内容永久家园。\n\n### 从直播到短视频 — 建立你的粉丝\n\nClipAI 将你的 LiveMe 直播录像转换为准备好发布到 TikTok、Instagram Reels 或 YouTube Shorts 的短视频。将反应、音乐瞬间和聊天精彩瞬间转换为可分享的内容,在 LiveMe 之外扩大你的粉丝。\n\n### 在 LiveStreamRecorder 上成为 LiveMe 创作者\n\n免费注册、添加你的 LiveMe 用户名,今天就开始保存你的直播。每场直播都会自动捕获 — 无需手动录制、无需额外应用。加入已经使用 LiveStreamRecorder 保留每场直播并扩大受众的 LiveMe 创作者。",
+    "mixch": "## Mixch 创作者\n\n发现使用 LiveStreamRecorder 保存自己直播的 Mixch 创作者。浏览 Mixch 主播,观看他们的录像,在这个移动优先的直播社区中找到要关注的新创作者。\n\n### Mixch 创作者为什么录制他们的直播\n\nMixch 直播仅在直播时可用 — 一旦你结束直播,内容就从应用中消失。没有内置的重播系统,粉丝也没有事后补看的方式。Mixch 创作者使用 LiveStreamRecorder 自动保存每场直播,所以你的聊天会话、音乐表演和日常内容在直播结束后很久仍然可供粉丝观看。\n\n### 浏览顶级 Mixch 创作者\n\n探索我们的 Mixch 创作者页面,找到在 LiveStreamRecorder 上保存自己直播的主播。观看他们的录像、补看错过的直播,发现值得关注的新 Mixch 创作者。\n\n### 你的 Mixch 创作者主页\n\nLiveStreamRecorder 上的每位 Mixch 创作者都有自己的主页,粉丝可以浏览所有录制的直播。注册、添加你的 Mixch 用户名,你的创作者主页就会自动设置 — 一个不会在你直播结束时消失的内容永久家园。\n\n### 从直播到短视频 — 建立你的粉丝\n\nClipAI 将你的 Mixch 直播录像转换为准备好发布到 TikTok、Instagram Reels 或 YouTube Shorts 的短视频。将反应、音乐瞬间和聊天精彩瞬间转换为可分享的内容,在 Mixch 之外扩大你的粉丝。\n\n### 在 LiveStreamRecorder 上成为 Mixch 创作者\n\n免费注册、添加你的 Mixch 用户名,今天就开始保存你的直播。每场直播都会自动捕获 — 无需手动录制、无需额外应用。加入已经使用 LiveStreamRecorder 保留每场直播并扩大受众的 Mixch 创作者。"
+  },
+  "faq": "常见问题",
+  "country": {
+    "title": "{country}的{platform}",
+    "description": "发现在 LiveStreamRecorder 上录制直播的{country}{platform}。浏览创作者,观看他们的录像,找到要关注的新主播。",
+    "heroTitle": "{country}的{platform}",
+    "heroSubtitle": "发现使用 LiveStreamRecorder 保存直播并创建短视频的{country}{platform}。",
+    "empty": {
+      "title": "暂无创作者",
+      "description": "暂无{country}的{platform}加入。成为第一个！"
+    },
+    "browseByCountry": "按国家/地区浏览{platform}",
+    "browseLink": "{country}的{platform}",
+    "backToPlatform": "返回所有{platform}"
+  }
+}

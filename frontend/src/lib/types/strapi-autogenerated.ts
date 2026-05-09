@@ -22,6 +22,8 @@ export enum FollowerTypeEnum {
   Buzzcast = "buzzcast",
   Liveme = "liveme",
   Mixch = "mixch",
+  Twitcast = "twitcast",
+  Trovo = "trovo",
 }
 
 /** Filter by follow status */
@@ -7591,6 +7593,8 @@ export enum ActivityTypeEnum {
   Buzzcast = "buzzcast",
   Liveme = "liveme",
   Mixch = "mixch",
+  Twitcast = "twitcast",
+  Trovo = "trovo",
 }
 
 export enum ActivityGenderEnum {
@@ -7639,6 +7643,8 @@ export enum AiRequestTypeEnum {
   Buzzcast = "buzzcast",
   Liveme = "liveme",
   Mixch = "mixch",
+  Twitcast = "twitcast",
+  Trovo = "trovo",
 }
 
 export enum AiRequestGenderEnum {
@@ -7715,6 +7721,8 @@ export enum AiTaskTypeEnum {
   Buzzcast = "buzzcast",
   Liveme = "liveme",
   Mixch = "mixch",
+  Twitcast = "twitcast",
+  Trovo = "trovo",
 }
 
 export enum AiTaskGenderEnum {
@@ -7802,6 +7810,8 @@ export enum ClipTypeEnum {
   Buzzcast = "buzzcast",
   Liveme = "liveme",
   Mixch = "mixch",
+  Twitcast = "twitcast",
+  Trovo = "trovo",
 }
 
 export enum ClipGenderEnum {
@@ -7856,6 +7866,8 @@ export enum ClipShareTypeEnum {
   Buzzcast = "buzzcast",
   Liveme = "liveme",
   Mixch = "mixch",
+  Twitcast = "twitcast",
+  Trovo = "trovo",
 }
 
 export enum ClipShareGenderEnum {
@@ -7916,6 +7928,8 @@ export enum FollowerRequestTypeEnum {
   Buzzcast = "buzzcast",
   Liveme = "liveme",
   Mixch = "mixch",
+  Twitcast = "twitcast",
+  Trovo = "trovo",
 }
 
 export enum FollowerRequestGenderEnum {
@@ -7979,6 +7993,8 @@ export enum MemeTypeEnum1 {
   Buzzcast = "buzzcast",
   Liveme = "liveme",
   Mixch = "mixch",
+  Twitcast = "twitcast",
+  Trovo = "trovo",
 }
 
 export enum MemeGenderEnum {
@@ -8075,6 +8091,8 @@ export enum SocialAccountTypeEnum {
   Buzzcast = "buzzcast",
   Liveme = "liveme",
   Mixch = "mixch",
+  Twitcast = "twitcast",
+  Trovo = "trovo",
 }
 
 export enum SocialAccountGenderEnum {
@@ -8130,6 +8148,8 @@ export enum SourceTypeEnum {
   Buzzcast = "buzzcast",
   Liveme = "liveme",
   Mixch = "mixch",
+  Twitcast = "twitcast",
+  Trovo = "trovo",
 }
 
 export enum SourceGenderEnum {
@@ -8178,6 +8198,8 @@ export enum VisitorViewTypeEnum {
   Buzzcast = "buzzcast",
   Liveme = "liveme",
   Mixch = "mixch",
+  Twitcast = "twitcast",
+  Trovo = "trovo",
 }
 
 export enum VisitorViewGenderEnum {

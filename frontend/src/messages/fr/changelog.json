@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "title": "Journal des modifications",
+    "description": "Reste informé·e des dernières fonctionnalités, améliorations et corrections de LiveStreamRecorder."
+  },
+  "title": "Journal des modifications",
+  "subtitle": "Reste informé·e des dernières fonctionnalités, améliorations et corrections.",
+  "empty": {
+    "title": "Aucune entrée pour l'instant",
+    "description": "Reviens bientôt pour des mises à jour."
+  },
+  "noDescription": "Aucune description fournie pour cette version.",
+  "published": "Publié le {date}"
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Entdecken",
+  "description": "Stöbere in Aufnahmen von anderen Creatorn",
+  "emptyFiltered": {
+    "title": "Keine Aufnahmen passen zu deinen Filtern",
+    "description": "Versuche, deine Filter anzupassen oder zurückzusetzen"
+  },
+  "emptyDefault": {
+    "title": "Keine Aufnahmen verfügbar",
+    "description": "-"
+  },
+  "noMoreToLoad": "Du hast das Ende erreicht"
+}

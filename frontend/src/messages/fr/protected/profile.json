@@ -1,0 +1,28 @@
+{
+  "addedAgo": "ajouté {time}",
+  "lastCheckedAgo": "statut live vérifié {time}",
+  "discoverStreamers": "Trouver des amis",
+  "emptyNewlyAdded": {
+    "title": "{username} a été ajouté·e !",
+    "description": "Nous allons enregistrer ses streams automatiquement."
+  },
+  "checkLastChecked": "Voir la dernière vérification",
+  "paused": "Enregistrement en pause — ce créateur a besoin d'un soutien Premium pour rester actif.",
+  "blocked": "Ce créateur a soumis une demande DMCA. Ses streams ne seront plus enregistrés.",
+  "emptyDefault": {
+    "title": "Pas encore d'enregistrements",
+    "description": "Pas encore d'enregistrements de {username}. Reviens plus tard !"
+  },
+  "noClips": {
+    "title": "Pas encore de clips",
+    "description": "Aucun clip n'a encore été créé pour ce streamer."
+  },
+  "checkLive": {
+    "button": "Vérifier le live maintenant",
+    "liveTitle": "Le streamer est en direct",
+    "liveMessage": "L'enregistrement démarre maintenant.",
+    "offlineTitle": "Pas en direct",
+    "offlineMessage": "Le streamer est hors ligne pour le moment.",
+    "errorTitle": "Échec de la vérification"
+  }
+}

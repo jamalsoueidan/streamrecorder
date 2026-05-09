@@ -1,0 +1,94 @@
+{
+  "title": "Paramètres",
+  "description": "Gère les paramètres de ton compte",
+  "profile": {
+    "title": "Profil",
+    "username": "Nom d'utilisateur",
+    "usernamePlaceholder": "Saisis ton nom d'utilisateur",
+    "usernameMinLength": "Le nom d'utilisateur doit contenir au moins 3 caractères",
+    "usernameMaxLength": "Le nom d'utilisateur ne peut pas dépasser 30 caractères",
+    "saveChanges": "Enregistrer les modifications",
+    "updateSuccess": "Succès",
+    "usernameUpdated": "Ton nom d'utilisateur a été mis à jour",
+    "updateError": "Erreur"
+  },
+  "subscription": {
+    "title": "Abonnement",
+    "currentPlan": "Offre actuelle",
+    "description": "Ton abonnement détermine les fonctionnalités auxquelles tu as accès."
+  },
+  "tiktok": {
+    "title": "TikTok",
+    "description": "Connecte ton compte TikTok pour publier des clips et faire grandir ton audience.",
+    "descriptionConnected": "Ton compte TikTok est connecté.",
+    "connect": "Connecter TikTok",
+    "disconnect": "Déconnecter",
+    "connected": "Connecté",
+    "connectSuccess": "Succès",
+    "connectSuccessMessage": "Ton compte TikTok a été connecté",
+    "connectError": "Erreur",
+    "connectErrorMessage": "Échec de la connexion du compte TikTok",
+    "disconnectSuccess": "Déconnecté",
+    "disconnectSuccessMessage": "Ton compte TikTok a été déconnecté",
+    "disconnectError": "Erreur"
+  },
+  "youtube": {
+    "title": "YouTube",
+    "description": "Connecte ton compte YouTube pour publier directement tes clips en YouTube Shorts.",
+    "descriptionConnected": "Ton compte YouTube est connecté. Tu peux maintenant publier des clips sur YouTube.",
+    "connect": "Connecter YouTube",
+    "disconnect": "Déconnecter",
+    "connected": "Connecté",
+    "connectSuccess": "Succès",
+    "connectSuccessMessage": "Ton compte YouTube a été connecté",
+    "connectError": "Erreur",
+    "connectErrorMessage": "Échec de la connexion du compte YouTube",
+    "disconnectSuccess": "Déconnecté",
+    "disconnectSuccessMessage": "Ton compte YouTube a été déconnecté",
+    "disconnectError": "Erreur"
+  },
+  "dangerZone": {
+    "title": "Zone sensible",
+    "description": "Une fois ton compte supprimé, il n'y a pas de retour en arrière. Réfléchis bien.",
+    "deleteAccount": "Supprimer le compte",
+    "deleteConfirm": {
+      "title": "Supprimer le compte",
+      "message": "Es-tu sûr·e de vouloir supprimer ton compte ? Cette action est irréversible et toutes tes données seront définitivement effacées.",
+      "confirm": "Supprimer le compte",
+      "cancel": "Annuler"
+    },
+    "deleteError": "Erreur"
+  },
+  "notifications": {
+    "title": "Notifications",
+    "description": "Reçois une notification quand tes streamers passent en live.",
+    "on": "Notifications activées",
+    "off": "Notifications désactivées",
+    "enabled": "Notifications activées",
+    "disabled": "Notifications désactivées",
+    "denied": "Les notifications sont bloquées. Active-les dans les paramètres de ton navigateur.",
+    "unsupported": "Ton navigateur ne prend pas en charge les notifications.",
+    "error": "Quelque chose s'est mal passé",
+    "sendTest": "Envoyer une notification test",
+    "testSent": "Notification test envoyée",
+    "testSentMessage": "Regarde ton appareil — une notification devrait apparaître sous peu.",
+    "helpTitle": "Tu ne vois pas les notifications ?",
+    "helpPermission": "Vérifie que ton navigateur est autorisé à afficher des notifications dans les paramètres de ton système.",
+    "helpFocus": "Désactive Ne pas déranger ou le mode Concentration. Ils suppriment les notifications sur Mac, iPhone, Android et Windows."
+  },
+  "watchedHistory": {
+    "title": "Vidéos vues",
+    "description": "Tu as marqué {count} vidéos comme vues. Un badge apparaît sur les miniatures pour que tu repères en un coup d'œil celles que tu as déjà regardées.",
+    "clearButton": "Effacer l'historique des vidéos vues",
+    "clearConfirm": {
+      "title": "Effacer l'historique des vidéos vues",
+      "message": "Cela retirera le badge VUE de {count} vidéos. Elles apparaîtront comme non vues à nouveau. Continuer ?",
+      "confirm": "Effacer",
+      "cancel": "Annuler"
+    },
+    "cleared": {
+      "title": "Effacé",
+      "message": "Ton historique a été effacé."
+    }
+  }
+}

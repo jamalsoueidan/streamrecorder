@@ -1,0 +1,28 @@
+{
+  "addedAgo": "hinzugefügt {time}",
+  "lastCheckedAgo": "Live-Status zuletzt geprüft {time}",
+  "discoverStreamers": "Freunde finden",
+  "emptyNewlyAdded": {
+    "title": "{username} wurde hinzugefügt!",
+    "description": "Wir beginnen automatisch, Streams von ihm/ihr aufzunehmen."
+  },
+  "checkLastChecked": "Letzte Prüfung anzeigen",
+  "paused": "Aufnahme pausiert – dieser Creator braucht einen Premium-Unterstützer, um aktiv zu bleiben.",
+  "blocked": "Dieser Creator hat eine DMCA-Anfrage gestellt. Seine Streams werden nicht mehr aufgenommen.",
+  "emptyDefault": {
+    "title": "Noch keine Aufnahmen",
+    "description": "Noch keine Aufnahmen von {username}. Schau später wieder vorbei!"
+  },
+  "noClips": {
+    "title": "Noch keine Clips",
+    "description": "Für diesen Streamer wurden noch keine Clips erstellt."
+  },
+  "checkLive": {
+    "button": "Jetzt live prüfen",
+    "liveTitle": "Streamer ist live",
+    "liveMessage": "Aufnahme startet jetzt.",
+    "offlineTitle": "Nicht live",
+    "offlineMessage": "Streamer ist gerade offline.",
+    "errorTitle": "Prüfung fehlgeschlagen"
+  }
+}

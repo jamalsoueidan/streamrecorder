@@ -1,0 +1,41 @@
+{
+  "meta": {
+    "title": "Se connecter",
+    "description": "Connecte-toi à ton compte LiveStreamRecorder pour accéder à tes enregistrements et aux streamers que tu suis."
+  },
+  "title": "Bon retour parmi nous",
+  "subtitle": "Connecte-toi pour accéder à ton compte",
+  "email": {
+    "label": "Adresse e-mail",
+    "placeholder": "toi@exemple.fr"
+  },
+  "password": {
+    "label": "Mot de passe",
+    "placeholder": "Saisis ton mot de passe"
+  },
+  "emailConfirmed": "Ton e-mail a été confirmé. Tu peux maintenant te connecter.",
+  "forgotPassword": "Mot de passe oublié ?",
+  "submit": {
+    "default": "Se connecter",
+    "loading": "Connexion en cours…"
+  },
+  "choices": {
+    "emailPassword": "Utiliser e-mail / mot de passe",
+    "google": "Continuer avec Google",
+    "tiktok": "Continuer avec TikTok",
+    "facebook": "Continuer avec Facebook"
+  },
+  "terms": {
+    "text": "En continuant, tu acceptes les",
+    "tosLink": "Conditions d'utilisation",
+    "and": "de Live Stream Recorder et tu confirmes avoir lu la",
+    "privacyLink": "Politique de confidentialité"
+  },
+  "errors": {
+    "emailTaken": "Un compte existe déjà avec cet e-mail. Connecte-toi avec ta méthode d'origine."
+  },
+  "register": {
+    "text": "Pas encore de compte ?",
+    "link": "S'inscrire"
+  }
+}

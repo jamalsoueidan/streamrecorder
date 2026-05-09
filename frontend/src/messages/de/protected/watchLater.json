@@ -1,0 +1,13 @@
+{
+  "title": "Später ansehen",
+  "description": "Nur auf diesem Gerät gespeichert",
+  "empty": "Keine Videos gespeichert. Füge Videos über das Menü hinzu, um sie später anzusehen.",
+  "clear": "Alle löschen",
+  "clearConfirm": {
+    "title": "Später ansehen leeren",
+    "message": "Möchtest du wirklich alle Videos aus deiner Liste entfernen?",
+    "confirm": "Alle löschen",
+    "cancel": "Abbrechen"
+  },
+  "loadMore": "Mehr laden"
+}

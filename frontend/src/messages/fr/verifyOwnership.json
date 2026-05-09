@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "title": "Vérifier ton compte",
+    "description": "Vérifie la propriété de ton profil de streaming pour réclamer ton compte ou gérer ton contenu."
+  },
+  "header": {
+    "title": "Vérifier la propriété",
+    "subtitle": "Prouve que ce compte t'appartient pour réclamer ton profil ou gérer ton contenu"
+  },
+  "common": {
+    "copy": "Copier",
+    "copied": "Copié !"
+  },
+  "steps": {
+    "enterUrl": {
+      "label": "Ton profil",
+      "description": "Saisis l'URL de ton profil de streaming",
+      "intro": "Saisis l'URL de ton profil de streaming.",
+      "input": {
+        "label": "URL du profil",
+        "placeholder": "https://tiktok.com/@tonnomdutilisateur"
+      },
+      "detected": "Détecté : {platform} – @{username}",
+      "continue": "Continuer",
+      "email": {
+        "label": "Adresse e-mail",
+        "placeholder": "toi@exemple.fr"
+      },
+      "error": {
+        "required": "Saisis l'URL de ton profil",
+        "invalid": "Nous n'avons pas pu reconnaître cette URL",
+        "emailRequired": "Saisis ton adresse e-mail",
+        "emailInvalid": "Saisis une adresse e-mail valide"
+      }
+    },
+    "verify": {
+      "label": "Vérifier",
+      "description": "Ajoute le code à ta bio",
+      "intro": "Pour prouver que ce compte t'appartient, ajoute le code de vérification ci-dessous à la bio de ton profil. Tu peux le retirer après la vérification.",
+      "codeLabel": "Ton code de vérification",
+      "instructions": "Copie ce code et ajoute-le n'importe où dans la bio de ton profil. Il peut être au début, à la fin ou au milieu — nous le trouverons.",
+      "openProfile": "Ouvrir le profil {platform}",
+      "verifyButton": "Code ajouté – vérifier maintenant",
+      "failed": {
+        "title": "Code introuvable",
+        "message": "Nous n'avons pas trouvé le code de vérification dans ta bio. Assure-toi d'avoir bien enregistré ton profil après avoir ajouté le code. Si tu ne peux pas ajouter le code à ta bio, reviens et utilise plutôt le formulaire DMCA.",
+        "backToForm": "Retour au formulaire DMCA"
+      }
+    },
+    "complete": {
+      "created": {
+        "title": "Bienvenue !",
+        "message": "Ton compte a été créé et ton profil est maintenant lié.",
+        "button": "Tableau de bord"
+      },
+      "linked": {
+        "title": "Profil lié",
+        "message": "Ton profil a été lié à ton compte. Connecte-toi pour accéder à ton tableau de bord.",
+        "button": "Aller à la connexion"
+      },
+      "notFound": {
+        "title": "Profil introuvable",
+        "message": "Ta propriété a été vérifiée, mais ce créateur n'existe pas dans notre système."
+      }
+    }
+  }
+}

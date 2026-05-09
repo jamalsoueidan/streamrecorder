@@ -1,0 +1,16 @@
+{
+  "title": "收藏库 ({count})",
+  "description": "管理你的创作者",
+  "disabledHint": "禁用的项目暂无录制内容",
+  "emptyFiltered": {
+    "title": "没有创作者匹配你的筛选",
+    "description": "尝试调整或清除筛选条件"
+  },
+  "emptyDefault": {
+    "title": "你还没有添加任何创作者",
+    "description": "浏览好友以发现平台上的创作者"
+  },
+  "noMoreToLoad": "你已经看到底了",
+  "favorite": "添加到收藏",
+  "unfavorite": "从收藏中移除"
+}

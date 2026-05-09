@@ -1,0 +1,82 @@
+{
+  "follow": {
+    "tooltip": "添加创作者",
+    "successTitle": "已添加！",
+    "successMessage": "{username} 已添加",
+    "errorTitle": "错误",
+    "blockedMessage": "由于 DMCA 下架请求,此创作者不可用。详情请参阅我们的<terms>服务条款</terms>。"
+  },
+  "unfollow": {
+    "tooltip": "移除创作者",
+    "successTitle": "已移除",
+    "successMessage": "你已移除 {username}",
+    "successMessageGeneric": "成功移除"
+  },
+  "scopeFilter": {
+    "label": "筛选：",
+    "following": "我的录制",
+    "discover": "好友",
+    "all": "全部"
+  },
+  "recordings": {
+    "liveAgo_context": "用于直播显示开始录制的时间。例：开始录制于 15 分钟前",
+    "liveAgo": "{time}开始录制",
+    "recordedAgo_context": "用于直播录像显示录制时间。例：录制于 3 天前",
+    "recordedAgo": "{time}录制",
+    "recordCount": "REC {count}",
+    "newRecording": "新",
+    "parts": "{count, plural, other {# 部分}}",
+    "videoCount": "{count, plural, other {# 个视频}}",
+    "noRecordings": "你已经看到底了",
+    "hide": "对外隐藏",
+    "show": "对外显示",
+    "delete": "删除视频",
+    "deleteConfirm": {
+      "title": "删除视频",
+      "message": "确定要删除此视频吗？此操作无法撤销。",
+      "confirm": "删除",
+      "cancel": "取消"
+    },
+    "createWithAI": "使用 AI 创建短视频",
+    "addToWatchLater": "保存到稍后观看",
+    "removeFromWatchLater": "从稍后观看移除",
+    "addedToWatchLater": "已保存到稍后观看",
+    "removedFromWatchLater": "已从稍后观看移除",
+    "videoLimitMessage": "你已达到免费视频观看限制。",
+    "download": "下载视频",
+    "downloadPart": "第 {part} 部分",
+    "sendToEmail": "发送到邮箱",
+    "downloadEmailSent": "下载链接正在发送到你的邮箱",
+    "downloadFeatureMessage": "下载视频是高级会员功能。",
+    "editClip": "编辑片段",
+    "deleteSources": "删除源文件",
+    "deleteSourcesSuccess": "已删除 {count} 个源文件"
+  },
+  "followers": {
+    "addedAgo_context": "创作者被添加到用户列表时显示。例：3 天前添加",
+    "addedAgo": "{time}添加",
+    "limitReachedTitle": "已达到创作者上限",
+    "upgradeModalHeadline": "再也不错过任何直播",
+    "max3Message": "你已达到免费版 3 位创作者的上限。",
+    "max50Message": "你已达到此套餐 50 位创作者的上限。",
+    "max100Message": "你已达到此套餐 100 位创作者的上限。",
+    "upgradeButton": "升级到高级会员",
+    "upgradeModalDiscount": "首月 8 折优惠",
+    "upgradeModalCodeNote": "结账时使用",
+    "unfollowUpgradeTitle": "升级到高级版,自由管理你的创作者"
+  },
+  "newest": "最新",
+  "oldest": "最早",
+  "expired": {
+    "title": "你的高级会员已到期",
+    "subtitle": "你关注的创作者已停止录制。立即续订,从中断处继续 — 你的所有创作者和设置仍然保存。",
+    "renewButton": "续订高级会员 — 保留所有内容",
+    "or": "或",
+    "loseTitle": "如果降级,你将永久失去：",
+    "loseCreators": "所有关注的创作者和录制内容",
+    "loseFavorites": "所有收藏",
+    "loseClips": "短视频、下载和 AI 功能",
+    "losePremium": "所有高级功能的访问权限",
+    "downgradeButton": "降级"
+  }
+}

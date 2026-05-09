@@ -1,0 +1,59 @@
+{
+  "title": "搜索",
+  "description": "将你的直播添加到列表中",
+  "platforms": {
+    "tiktok": "TikTok",
+    "twitch": "Twitch",
+    "kick": "Kick",
+    "youtube": "YouTube",
+    "afreecatv": "AfreecaTV",
+    "pandalive": "PandaLive",
+    "bigo": "Bigo",
+    "buzzcast": "Buzzcast",
+    "liveme": "LiveMe",
+    "mixch": "Mixch"
+  },
+  "search": {
+    "actionButton": "搜索",
+    "submitButton": "搜索",
+    "placeholder": "输入你的直播 URL 或 @用户名",
+    "searching": "正在 {platform} 上搜索…",
+    "pasteButton": "粘贴",
+    "pasteError": "使用 Ctrl+V 或长按手动粘贴",
+    "parseError": "无法解析用户名",
+    "notFound": "未找到任何内容…",
+    "autoDetected": "已从 URL 自动检测平台",
+    "enterUsername": "输入你的直播 URL 或用户名",
+    "selectPlatform": "选择你的直播平台",
+    "changeUsername": "修改用户名",
+    "newSearch": "新搜索",
+    "premiumOnly": "仅限高级会员"
+  },
+  "upgrade": {
+    "title": "{platform} 需要高级会员",
+    "description": "升级到高级会员以添加 {platform} 创作者并开始录制他们的直播。"
+  },
+  "hints": {
+    "tryFormats": "试试这些示例：",
+    "enterUsername": "输入 @用户名 或粘贴主页 URL"
+  },
+  "actions": {
+    "follow": "添加",
+    "successTitle": "已添加！",
+    "successMessage": "{username} 已添加",
+    "errorTitle": "错误",
+    "cancel": "取消",
+    "willRecord": "他们开播时将被录制",
+    "viewPage": "查看主页"
+  },
+  "chromeExtension": "安装 Chrome 扩展",
+  "inputLabel": "在此粘贴 Twitch、TikTok 或 YouTube 的直播链接",
+  "notFollowing": {
+    "title": "此创作者不在你的列表中",
+    "description": "你尝试访问一位不在你列表中的创作者。",
+    "followToAccess": "添加他们以查看录制内容,并在他们开播时收到通知。",
+    "notFoundTitle": "未找到创作者",
+    "notFoundDescription": "@{username} 在 {platform} 上不存在或账号为私密。",
+    "trySearch": "尝试搜索其他创作者："
+  }
+}

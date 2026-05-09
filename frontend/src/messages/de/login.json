@@ -1,0 +1,41 @@
+{
+  "meta": {
+    "title": "Anmelden",
+    "description": "Melde dich bei deinem LiveStreamRecorder-Konto an, um auf deine Aufnahmen und gefolgten Streamer zuzugreifen."
+  },
+  "title": "Willkommen zurück",
+  "subtitle": "Melde dich an, um zu deinem Konto zu gelangen",
+  "email": {
+    "label": "E-Mail-Adresse",
+    "placeholder": "du@beispiel.de"
+  },
+  "password": {
+    "label": "Passwort",
+    "placeholder": "Passwort eingeben"
+  },
+  "emailConfirmed": "Deine E-Mail wurde bestätigt. Du kannst dich jetzt anmelden.",
+  "forgotPassword": "Passwort vergessen?",
+  "submit": {
+    "default": "Anmelden",
+    "loading": "Anmeldung läuft …"
+  },
+  "choices": {
+    "emailPassword": "E-Mail / Passwort verwenden",
+    "google": "Mit Google fortfahren",
+    "tiktok": "Mit TikTok fortfahren",
+    "facebook": "Mit Facebook fortfahren"
+  },
+  "terms": {
+    "text": "Indem du fortfährst, stimmst du den",
+    "tosLink": "Nutzungsbedingungen",
+    "and": "von Live Stream Recorder zu und bestätigst, dass du die",
+    "privacyLink": "Datenschutzerklärung"
+  },
+  "errors": {
+    "emailTaken": "Es existiert bereits ein Konto mit dieser E-Mail. Bitte melde dich mit deiner ursprünglichen Methode an."
+  },
+  "register": {
+    "text": "Noch kein Konto?",
+    "link": "Registrieren"
+  }
+}

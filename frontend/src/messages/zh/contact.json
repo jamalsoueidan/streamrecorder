@@ -1,0 +1,35 @@
+{
+  "meta": {
+    "title": "联系我们",
+    "description": "与我们取得联系"
+  },
+  "header": {
+    "title": "联系我们",
+    "subtitle": "我们期待你的来信"
+  },
+  "form": {
+    "title": "发送消息",
+    "description": "填写下方表单，我们会尽快回复你。",
+    "name": {
+      "label": "姓名",
+      "placeholder": "你的姓名"
+    },
+    "email": {
+      "label": "邮箱",
+      "placeholder": "your@email.com"
+    },
+    "subject": {
+      "label": "主题",
+      "placeholder": "关于什么内容？"
+    },
+    "message": {
+      "label": "留言",
+      "placeholder": "你的留言…"
+    },
+    "submit": "发送消息"
+  },
+  "submitted": {
+    "title": "消息已发送！",
+    "description": "感谢联系我们。我们会尽快回复你。"
+  }
+}

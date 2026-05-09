@@ -1,0 +1,13 @@
+{
+  "title": "En direct",
+  "subtitle": "Streams en cours d'enregistrement",
+  "streamingCount": "{count, plural, one {# en direct} other {# en direct}}",
+  "refresh": "Actualiser",
+  "allPlatforms": "Toutes les plateformes",
+  "showAll": "Tout afficher",
+  "discoverStreamers": "Trouver des amis",
+  "emptyState": {
+    "title": "Aucun stream en direct pour le moment",
+    "description": "Quand tes créateurs passent en direct, leurs streams apparaissent ici"
+  }
+}

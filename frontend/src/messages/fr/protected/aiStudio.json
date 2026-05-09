@@ -1,0 +1,91 @@
+{
+  "title": "AI Studio",
+  "description": "Crée des clips et des mèmes à partir de tes enregistrements grâce à l'IA",
+  "requestDetails": "Détails de la demande",
+  "createRequest": "Créer une demande",
+  "unknownCreator": "Créateur inconnu",
+  "unknownRecording": "Enregistrement inconnu",
+  "recordingDeleted": {
+    "badge": "Enregistrement supprimé"
+  },
+  "viewDetails": "Voir les détails",
+  "state": {
+    "pending": "En attente",
+    "processing": "En cours de traitement",
+    "completed": "Terminé",
+    "failed": "Échec"
+  },
+  "options": {
+    "clips": "Clips",
+    "memes": "Mèmes",
+    "profile": "Profil"
+  },
+  "filters": {
+    "all": "Tous",
+    "pending": "En attente",
+    "processing": "En cours",
+    "completed": "Terminés"
+  },
+  "emptyState": {
+    "title": "Aucune demande IA pour l'instant",
+    "description": "Va dans tes enregistrements et clique sur le bouton IA pour créer des clips et des mèmes"
+  },
+  "create": {
+    "selectOptions": "Que veux-tu créer ?",
+    "options": {
+      "clips": {
+        "label": "Générer des clips",
+        "description": "L'IA trouvera les meilleurs moments et créera des clips courts"
+      },
+      "memes": {
+        "label": "Générer des mèmes",
+        "description": "L'IA créera des captures d'écran dignes d'un mème avec des légendes"
+      },
+      "profile": {
+        "label": "Générer un profil",
+        "description": "L'IA analysera et suggérera des améliorations pour ton profil"
+      }
+    },
+    "sizeWarning": {
+      "title": "Vidéo trop lourde",
+      "message": "Cette vidéo fait {size} Go. Les vidéos de plus de 2 Go sont traitées par parties."
+    },
+    "submit": "Lancer le traitement"
+  },
+  "status": {
+    "progress": "Progression",
+    "tasks": "Tâches",
+    "pendingTitle": "En attente de démarrage",
+    "pendingMessage": "Ta demande est dans la file d'attente et sera traitée sous peu.",
+    "clipsCount": "{count} clips",
+    "memesCount": "{count} mèmes",
+    "localesCount": "{count} langues",
+    "clipFallback": "Clip {index}",
+    "default": "Par défaut",
+    "tagline": "Accroche",
+    "description": "Description",
+    "state": {
+      "pending": "En attente",
+      "processing": "En cours de traitement",
+      "completed": "Terminé",
+      "failed": "Échec"
+    }
+  },
+  "upgrade": {
+    "title": "Ton studio vidéo IA",
+    "features": {
+      "clips": "Clips intelligents tirés de longs enregistrements – prêts à partager",
+      "memes": "Mèmes et photos générés par IA à partir de tes vidéos",
+      "viral": "Traduction vidéo instantanée en dizaines de langues"
+    },
+    "upgradeButton": "Passer Premium",
+    "hint": "Débloque AI Studio avec un abonnement Premium"
+  },
+  "quota": {
+    "badge": "{used} / {total} ce mois-ci",
+    "limitReachedNote": "Limite atteinte · réinitialisée le {date}",
+    "alertTitle": "Limite mensuelle atteinte",
+    "alertBody": "Tu as utilisé toutes tes {total} générations IA ce mois-ci. Ta limite sera réinitialisée le {date}.",
+    "editButton": "Modifier la vidéo manuellement"
+  }
+}

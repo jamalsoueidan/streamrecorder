@@ -1,0 +1,65 @@
+{
+  "brand": "LiveStreamRecorder",
+  "tagline": "Verpasse keinen Stream mehr",
+  "defaultDescription": "Live-Streams werden automatisch aufgenommen, damit du sie jederzeit ansehen kannst",
+  "creators": {
+    "title": {
+      "all": "Alle Creator",
+      "tiktok": "TikTok-Creator",
+      "twitch": "Twitch-Creator",
+      "youtube": "YouTube-Creator",
+      "kick": "Kick-Creator",
+      "pandalive": "PandaLive-Creator",
+      "afreecatv": "AfreecaTV-Creator",
+      "bigo": "Bigo-Creator",
+      "buzzcast": "Buzzcast-Creator",
+      "liveme": "LiveMe-Creator",
+      "mixch": "Mixch-Creator"
+    },
+    "subtitle": {
+      "all": "Alle Streamer und Creator durchstöbern",
+      "tiktok": "TikTok-Streamer entdecken",
+      "twitch": "Twitch-Streamer entdecken",
+      "youtube": "YouTube-Creator entdecken",
+      "kick": "Kick-Streamer entdecken",
+      "pandalive": "PandaLive-Creator entdecken",
+      "afreecatv": "AfreecaTV-Creator entdecken",
+      "bigo": "Bigo-Creator entdecken",
+      "buzzcast": "Buzzcast-Creator entdecken",
+      "liveme": "LiveMe-Creator entdecken",
+      "mixch": "Mixch-Creator entdecken"
+    }
+  },
+  "recordings": {
+    "title": {
+      "all": "Alle Aufnahmen",
+      "tiktok": "TikTok-Aufnahmen",
+      "twitch": "Twitch-Aufnahmen",
+      "youtube": "YouTube-Aufnahmen",
+      "kick": "Kick-Aufnahmen",
+      "pandalive": "PandaLive-Aufnahmen",
+      "afreecatv": "AfreecaTV-Aufnahmen",
+      "bigo": "Bigo-Aufnahmen",
+      "buzzcast": "Buzzcast-Aufnahmen",
+      "liveme": "LiveMe-Aufnahmen",
+      "mixch": "Mixch-Aufnahmen"
+    },
+    "subtitle": {
+      "all": "Aufgenommene Live-Streams ansehen",
+      "tiktok": "Aufgenommene TikTok-Lives ansehen",
+      "twitch": "Aufgenommene Twitch-Streams ansehen",
+      "youtube": "Aufgenommene YouTube-Lives ansehen",
+      "kick": "Aufgenommene Kick-Streams ansehen",
+      "pandalive": "Aufgenommene PandaLive-Streams ansehen",
+      "afreecatv": "Aufgenommene AfreecaTV-Streams ansehen",
+      "bigo": "Aufgenommene Bigo-Streams ansehen",
+      "buzzcast": "Aufgenommene Buzzcast-Streams ansehen",
+      "liveme": "Aufgenommene LiveMe-Streams ansehen",
+      "mixch": "Aufgenommene Mixch-Streams ansehen"
+    }
+  },
+  "home": {
+    "title": "Live Stream Recorder",
+    "subtitle": "Deine Lieblings-Streams werden automatisch aufgenommen"
+  }
+}

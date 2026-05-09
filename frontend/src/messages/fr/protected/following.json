@@ -1,0 +1,13 @@
+{
+  "title": "Enregistrements",
+  "description": "Enregistrements de tes créateurs",
+  "emptyFiltered": {
+    "title": "Aucun enregistrement ne correspond à tes filtres",
+    "description": "Essaie d'ajuster ou de réinitialiser tes filtres"
+  },
+  "emptyDefault": {
+    "title": "Pas encore d'enregistrements",
+    "description": "Tes enregistrements apparaîtront ici une fois que tu auras ajouté un créateur"
+  },
+  "noMoreToLoad": "Tu as atteint la fin"
+}

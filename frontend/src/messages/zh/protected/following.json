@@ -1,0 +1,13 @@
+{
+  "title": "录制内容",
+  "description": "你关注的创作者的录制内容",
+  "emptyFiltered": {
+    "title": "没有录制内容匹配你的筛选",
+    "description": "尝试调整或清除筛选条件"
+  },
+  "emptyDefault": {
+    "title": "暂无录制内容",
+    "description": "添加创作者后，他们的录制内容将出现在这里"
+  },
+  "noMoreToLoad": "你已经看到底了"
+}

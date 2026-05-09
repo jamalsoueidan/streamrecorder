@@ -1,0 +1,28 @@
+{
+  "addedAgo": "{time}添加",
+  "lastCheckedAgo": "{time}检查直播状态",
+  "discoverStreamers": "查找好友",
+  "emptyNewlyAdded": {
+    "title": "{username} 已添加！",
+    "description": "我们将自动开始录制他们的直播。"
+  },
+  "checkLastChecked": "查看上次检查时间",
+  "paused": "录制已暂停 — 此创作者需要高级会员支持以保持活跃。",
+  "blocked": "此创作者已提交 DMCA 请求。他们的直播将不再被录制。",
+  "emptyDefault": {
+    "title": "暂无录制内容",
+    "description": "{username} 暂无录制内容。请稍后再来查看！"
+  },
+  "noClips": {
+    "title": "暂无短视频",
+    "description": "暂未为这位主播创建任何短视频。"
+  },
+  "checkLive": {
+    "button": "立即检查直播",
+    "liveTitle": "主播正在直播",
+    "liveMessage": "录制即将开始。",
+    "offlineTitle": "未直播",
+    "offlineMessage": "主播当前未在直播。",
+    "errorTitle": "检查失败"
+  }
+}

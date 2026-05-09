@@ -1,0 +1,75 @@
+{
+  "beta": "Insights ist derzeit in der Beta-Phase. Daten können unvollständig sein oder sich ändern, während wir diese Funktion weiter verbessern.",
+  "tabs": {
+    "videos": "Videos",
+    "clips": "Clips",
+    "insights": "Insights"
+  },
+  "stats": {
+    "totalDiamonds": "Diamanten gesamt",
+    "battleDiamonds": "Diamanten aus Battles",
+    "nonBattleDiamonds": "Diamanten außerhalb von Battles",
+    "battles": "Battles",
+    "won": "Gewonnen",
+    "lost": "Verloren",
+    "winRate": "Siegquote",
+    "gifters": "Schenkende",
+    "chatParticipants": "Chat-Teilnehmer"
+  },
+  "battleHistory": {
+    "title": "Battle-Verlauf",
+    "empty": "Noch keine Battles aufgezeichnet.",
+    "colDate": "Datum",
+    "colType": "Typ",
+    "colOpponents": "Gegner",
+    "colScore": "Punktestand",
+    "colDiamonds": "Diamanten",
+    "colResult": "Ergebnis",
+    "vs": "vs.",
+    "with": "mit",
+    "live": "LIVE",
+    "interrupted": "Unterbrochen",
+    "won": "Gewonnen",
+    "draw": "Unentschieden",
+    "lost": "Verloren"
+  },
+  "streamActivity": {
+    "title": "Letzte Streams",
+    "empty": "Keine Stream-Sitzungen verfügbar.",
+    "colDate": "Datum",
+    "colDuration": "Dauer",
+    "colPeakViewers": "Höchstzuschauer",
+    "colAvgViewers": "Ø Zuschauer",
+    "colDiamonds": "Diamanten",
+    "colBattles": "Battles",
+    "durationMinutes": "{m} Min.",
+    "durationHoursMinutes": "{h} Std. {m} Min."
+  },
+  "topGifters": {
+    "title": "Top-Schenkende",
+    "empty": "Keine Daten zu Schenkenden verfügbar.",
+    "giftCount": "{count} Geschenke"
+  },
+  "topOpponents": {
+    "title": "Top-Gegner",
+    "empty": "Keine Battle-Daten verfügbar.",
+    "wins": "{count}S",
+    "losses": "{count}N",
+    "battleCount": "{count} Battles"
+  },
+  "earnings": {
+    "title": "Einnahmen",
+    "empty": "Keine Einnahmen-Daten verfügbar.",
+    "seriesLabel": "Diamanten"
+  },
+  "schedule": {
+    "title": "Wann sie live gehen",
+    "mon": "Mo",
+    "tue": "Di",
+    "wed": "Mi",
+    "thu": "Do",
+    "fri": "Fr",
+    "sat": "Sa",
+    "sun": "So"
+  }
+}

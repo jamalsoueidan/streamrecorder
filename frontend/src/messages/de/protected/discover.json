@@ -1,0 +1,13 @@
+{
+  "title": "Freunde",
+  "description": "Entdecke andere Creator auf der Plattform",
+  "emptyFiltered": {
+    "title": "Keine Creator passen zu deinen Filtern",
+    "description": "Versuche, deine Filter anzupassen oder zurückzusetzen"
+  },
+  "emptyDefault": {
+    "title": "Keine Creator gefunden",
+    "description": "..."
+  },
+  "noMoreToLoad": "Du hast das Ende erreicht"
+}

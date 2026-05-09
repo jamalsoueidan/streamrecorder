@@ -1,0 +1,13 @@
+{
+  "title": "正在直播",
+  "subtitle": "当前正在录制的直播",
+  "streamingCount": "{count, plural, other {# 个正在直播}}",
+  "refresh": "刷新",
+  "allPlatforms": "所有平台",
+  "showAll": "查看全部",
+  "discoverStreamers": "查找好友",
+  "emptyState": {
+    "title": "目前没有直播",
+    "description": "你关注的创作者开播时,他们的直播会出现在这里"
+  }
+}

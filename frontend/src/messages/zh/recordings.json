@@ -1,0 +1,518 @@
+{
+  "meta": {
+    "all": {
+      "title": "直播录像",
+      "description": "在 LiveStreamRecorder 上观看创作者的直播录像。TikTok、Twitch、YouTube、Kick 录像已保存,随时可观看。",
+      "keywords": [
+        "直播录像",
+        "直播录制",
+        "TikTok 直播录制",
+        "Twitch VOD",
+        "live stream recorder",
+        "直播存档"
+      ]
+    },
+    "tiktok": {
+      "title": "TikTok 直播录像",
+      "description": "在 LiveStreamRecorder 上观看和下载 TikTok 直播录像。每场 TikTok 直播都自动捕获 — 无需屏幕录制器。观看你喜爱创作者的已保存 TikTok 直播。",
+      "keywords": [
+        "TikTok 直播录像",
+        "TikTok 直播",
+        "录制 TikTok 直播",
+        "TikTok 录制器",
+        "如何录制 TikTok 直播",
+        "TikTok 屏幕录制器",
+        "可以录制 TikTok 直播吗",
+        "TikTok VOD",
+        "保存 TikTok 直播",
+        "在电脑上录制 TikTok"
+      ],
+      "faqs": [
+        {
+          "question": "如何录制我的 TikTok 直播？",
+          "answer": "使用 LiveStreamRecorder,你的 TikTok 直播会自动在云端录制。只需注册、添加你的 TikTok 用户名,每场你进行的直播都会被捕获 — 无需 TikTok 屏幕录制器,也无需手机彻夜运行。"
+        },
+        {
+          "question": "我需要 TikTok 直播屏幕录制器吗？",
+          "answer": "不需要。LiveStreamRecorder 在服务器端以高质量捕获你的 TikTok 直播,所以根本不需要在 TikTok 上进行屏幕录制。没有掉帧、没有通知打扰、没有不可靠的手机录制。你的直播会自动以高质量保存到你的账号。"
+        },
+        {
+          "question": "我可以在电脑或笔记本上录制 TikTok 直播吗？",
+          "answer": "可以。LiveStreamRecorder 完全在云端运行,所以你可以从任何带浏览器的设备上录制 TikTok 直播 — PC、笔记本或手机。无需安装任何东西,不需要桌面屏幕录制器或浏览器扩展。只需添加你的用户名,你的直播就会自动录制。"
+        },
+        {
+          "question": "如何下载我的 TikTok 直播录像？",
+          "answer": "你在 LiveStreamRecorder 上的所有 TikTok 直播录像都可以在浏览器中即时观看。高级用户可以将录像下载为视频文件以离线观看 — 下载内容不带水印。"
+        },
+        {
+          "question": "TikTok 直播结束后会消失吗？",
+          "answer": "是的,TikTok 在直播结束后不会保存直播。这就是为什么创作者使用 LiveStreamRecorder 作为他们的 TikTok 录制器 — 每场直播都被捕获和存储,这样你以后可以观看、下载或重新利用你的内容。"
+        },
+        {
+          "question": "录制 TikTok 直播的最佳方式是什么？",
+          "answer": "录制 TikTok 直播的最佳方式是使用基于云端的录制器,如 LiveStreamRecorder。与手机屏幕录制或桌面捕获软件不同,云端录制以高质量捕获你的完整直播,即使你的手机没电或失去连接。这是 TikTok 直播屏幕录制器的最佳替代方案。"
+        },
+        {
+          "question": "我可以将录制的 TikTok 直播转换为短视频吗？",
+          "answer": "可以。高级用户可以使用 ClipAI 将他们的 TikTok 直播录像自动转换为短视频。这是将直播重新利用为 TikTok 视频、Reels 或 Shorts 以增加粉丝的好方法。"
+        }
+      ]
+    },
+    "twitch": {
+      "title": "Twitch 直播录像和 VOD",
+      "description": "在 LiveStreamRecorder 上观看和下载 Twitch 直播录像。你的 Twitch 直播自动捕获 — 无需屏幕录制器。想要永久 VOD 的创作者的最佳 Twitch 录制器。",
+      "keywords": [
+        "Twitch 录制器",
+        "Twitch 直播录制器",
+        "Twitch VOD 录制器",
+        "录制 Twitch 直播",
+        "捕获 Twitch 直播",
+        "Twitch 直播录制",
+        "录制我的 Twitch 直播",
+        "自动录制 Twitch",
+        "Twitch 屏幕录制器",
+        "最佳 Twitch 屏幕录制器",
+        "Twitch 视频录制器",
+        "保存 Twitch 直播"
+      ],
+      "faqs": [
+        {
+          "question": "如何自动录制我的 Twitch 直播？",
+          "answer": "LiveStreamRecorder 是一款基于云端的 Twitch 录制器,它会自动捕获你的直播。注册、添加你的 Twitch 频道,每次开播时都会录制你的直播。无需 Twitch 屏幕录制器 — 一切都在服务器端进行。"
+        },
+        {
+          "question": "Twitch VOD 会过期吗？",
+          "answer": "是的。普通主播的 Twitch VOD 在 14 天后过期,合作伙伴和 Turbo 用户为 60 天。LiveStreamRecorder 永久保存你的 Twitch 直播 — 你的录像永不过期,始终可观看或下载。"
+        },
+        {
+          "question": "对于创作者来说,最佳的 Twitch 直播录制器是什么？",
+          "answer": "对于自动录制,基于云端的 Twitch 录制器(如 LiveStreamRecorder)是最佳选择。传统的 Twitch 屏幕录制器需要你的 PC 保持开启并在后台运行录制软件。LiveStreamRecorder 从云端捕获你的 Twitch 直播 — 即使 OBS 崩溃或你的 PC 重启,你的录制也是安全的。"
+        },
+        {
+          "question": "我需要屏幕录制器来保存我的 Twitch 直播吗？",
+          "answer": "不需要。LiveStreamRecorder 在服务器端捕获你的 Twitch 直播,所以不需要屏幕捕获软件。无需 Bandicam、无需桌面应用、直播时没有额外的 CPU 占用。你的直播会自动以高质量保存到云端。"
+        },
+        {
+          "question": "我可以免费录制我的 Twitch 直播吗？",
+          "answer": "可以。免费注册 LiveStreamRecorder 并立即开始录制你的 Twitch 直播。高级套餐解锁下载录像、ClipAI 自动精彩瞬间短视频和扩展存储。"
+        },
+        {
+          "question": "这与 Twitch 内置的 VOD 系统有何不同？",
+          "answer": "Twitch VOD 在 14-60 天后过期,如果你删除频道也会被删除。LiveStreamRecorder 为你提供 Twitch 直播的独立备份。你的录像单独存储,永不过期,即使你的 Twitch 账号发生问题也能保持可用。"
+        },
+        {
+          "question": "我可以将我的 Twitch 录像转换为短视频吗？",
+          "answer": "可以。高级用户可以使用 ClipAI 将他们的 Twitch 直播录像自动转换为短视频。将其发布为 YouTube Shorts、TikTok 视频或 Reels,在多个平台上扩大你的受众。"
+        },
+        {
+          "question": "即使我忘记保存 VOD,LiveStreamRecorder 也能捕获我的 Twitch 直播吗？",
+          "answer": "可以。一旦你的频道连接,LiveStreamRecorder 会自动录制每场 Twitch 直播 — 无论你的 Twitch VOD 设置如何。即使你在 Twitch 上禁用了 VOD,你的直播仍会被捕获并保存到你的账号。"
+        }
+      ]
+    },
+    "youtube": {
+      "title": "YouTube 直播录像",
+      "description": "在 LiveStreamRecorder 上观看和下载 YouTube 直播录像。你的 YouTube 直播自动捕获 — 无需 YouTube 屏幕录制器。创作者最简单的 YouTube 直播录制器。",
+      "keywords": [
+        "YouTube 直播录像",
+        "YouTube 直播",
+        "录制 YouTube 直播",
+        "YouTube 录制器",
+        "YouTube 屏幕录制器",
+        "YouTube 录制",
+        "YouTube 直播录制",
+        "捕获 YouTube 直播",
+        "最佳 YouTube 屏幕录制器",
+        "在线 YouTube 录制器",
+        "保存 YouTube 直播"
+      ],
+      "faqs": [
+        {
+          "question": "如何录制我的 YouTube 直播？",
+          "answer": "使用 LiveStreamRecorder,你的 YouTube 直播会自动在云端录制。注册、添加你的 YouTube 频道,每场你启动的直播都会被捕获。无需安装 YouTube 录制软件,无需手动保存 — 它就是这么简单。"
+        },
+        {
+          "question": "我需要 YouTube 直播屏幕录制器吗？",
+          "answer": "不需要。LiveStreamRecorder 是一款基于云端的 YouTube 录制器,它在服务器端捕获你的直播。与 YouTube 屏幕录制软件不同,不会有掉帧、不会有桌面应用在后台运行、不会占用你的硬盘存储。你的直播会自动以高质量保存。"
+        },
+        {
+          "question": "录制 YouTube 直播的最佳软件是什么？",
+          "answer": "专门针对直播,基于云端的 YouTube 录制器(如 LiveStreamRecorder)是最佳选择。传统的 YouTube 屏幕录制器需要你的电脑在整个直播期间保持开启。LiveStreamRecorder 从云端捕获你的 YouTube 直播 — 即使你的 PC 崩溃或失去电源,你的录制都是安全的。"
+        },
+        {
+          "question": "我可以免费录制我的 YouTube 直播吗？",
+          "answer": "可以。你可以免费注册 LiveStreamRecorder 并立即开始录制你的 YouTube 直播。高级套餐解锁下载录像、ClipAI 自动精彩瞬间短视频和扩展存储。"
+        },
+        {
+          "question": "YouTube 是否会自动保存 YouTube 直播？",
+          "answer": "YouTube 可以将直播重播保存到你的频道,但创作者有时会删除它们,或直播可能无法处理。LiveStreamRecorder 为你提供独立备份 — 你的 YouTube 直播录像单独捕获和存储,所以你始终拥有内容副本。"
+        },
+        {
+          "question": "我可以将我的 YouTube 直播录像转换为 Shorts 吗？",
+          "answer": "可以。高级用户可以使用 ClipAI 将 YouTube 直播录像自动转换为完美适合 YouTube Shorts、TikTok 或 Reels 的精彩短视频。这是重新利用你的直播内容并增加订阅者的最简单方法。"
+        },
+        {
+          "question": "LiveStreamRecorder 是在线 YouTube 录制器吗？",
+          "answer": "是的。LiveStreamRecorder 是完全在线的 YouTube 录制器 — 一切都在云端运行。无需下载软件、无需浏览器扩展。只需连接你的频道,你的 YouTube 直播就会从任何设备自动录制。"
+        },
+        {
+          "question": "如果我忘记按录制,如何捕获我的 YouTube 直播？",
+          "answer": "这正是 LiveStreamRecorder 解决的问题。一旦你的频道连接,你启动的每场 YouTube 直播都会自动捕获。你永远不需要记得按录制 — 你的直播总会被保存。"
+        }
+      ]
+    },
+    "kick": {
+      "title": "Kick 直播录像",
+      "description": "在 LiveStreamRecorder 上观看创作者的 Kick 直播录像。观看 Kick VOD、下载直播,发现新主播。",
+      "keywords": [
+        "Kick 录制",
+        "Kick VOD",
+        "Kick 直播下载",
+        "录制 Kick 直播",
+        "Kick 存档",
+        "保存 Kick 直播"
+      ]
+    },
+    "afreecatv": {
+      "title": "AfreecaTV 直播录像",
+      "description": "在 LiveStreamRecorder 上观看创作者的 AfreecaTV 直播录像。观看 AfreecaTV VOD,下载韩国直播。",
+      "keywords": [
+        "AfreecaTV 录制",
+        "AfreecaTV VOD",
+        "AfreecaTV 下载",
+        "韩国直播录制",
+        "AfreecaTV 存档",
+        "保存 AfreecaTV 直播"
+      ]
+    },
+    "pandalive": {
+      "title": "Pandalive 直播录像",
+      "description": "在 LiveStreamRecorder 上观看创作者的 Pandalive 直播录像。观看 Pandalive VOD,下载韩国直播。",
+      "keywords": [
+        "Pandalive 录制",
+        "Pandalive VOD",
+        "Pandalive 下载",
+        "韩国直播录制",
+        "Pandalive 存档",
+        "保存 Pandalive 直播"
+      ]
+    },
+    "bigo": {
+      "title": "Bigo 直播录像",
+      "description": "在 LiveStreamRecorder 上观看和下载 Bigo 直播录像。你的 Bigo 直播自动在云端捕获 — 无黑屏问题、无需屏幕录制器。创作者最简单的 Bigo 直播录制器。",
+      "keywords": [
+        "Bigo 录制器",
+        "Bigo 直播录制器",
+        "Bigo 直播录制",
+        "Bigo 直播屏幕录制器",
+        "屏幕录制 Bigo 直播",
+        "Bigo 黑屏录制",
+        "Bigo 直播屏幕录制器黑屏",
+        "保存 Bigo 直播"
+      ],
+      "faqs": [
+        {
+          "question": "如何录制我的 Bigo 直播？",
+          "answer": "使用 LiveStreamRecorder,你的 Bigo 直播会自动在云端录制。注册、添加你的 Bigo 直播用户名,每次开播时都会被捕获。无需安装 Bigo 直播录制器 APK,无需屏幕录制 — 一切都在服务器端进行。"
+        },
+        {
+          "question": "为什么录制 Bigo 直播时出现黑屏？",
+          "answer": "在 Bigo 直播上使用屏幕录制器时,黑屏问题很常见。LiveStreamRecorder 完全避免了这个问题,因为它直接从云端捕获你的 Bigo 直播 — 没有黑屏、没有变通方法、没有不可靠的屏幕录制应用。"
+        },
+        {
+          "question": "如何修复 Bigo 直播屏幕录制器的黑屏？",
+          "answer": "最简单的解决方法是完全跳过屏幕录制。LiveStreamRecorder 是基于云端的 Bigo 录制器,在服务器端以高质量捕获你的直播。没有黑屏问题、无需配置应用 — 只需添加你的用户名,你的 Bigo 直播就会自动录制。"
+        },
+        {
+          "question": "我需要 Bigo 直播屏幕录制器吗？",
+          "answer": "不需要。Bigo 直播的屏幕录制器经常导致黑屏问题或低质量捕获。LiveStreamRecorder 是基于云端的 Bigo 直播录制器,它会自动以高质量捕获你的直播 — 无需安装应用,没有黑屏。"
+        },
+        {
+          "question": "我可以免费录制我的 Bigo 直播吗？",
+          "answer": "可以。免费注册 LiveStreamRecorder 并立即开始录制你的 Bigo 直播。高级套餐解锁下载录像、ClipAI 自动精彩瞬间短视频和扩展存储。"
+        },
+        {
+          "question": "我可以下载我的 Bigo 直播录像吗？",
+          "answer": "可以。高级用户可以将其 Bigo 直播录像下载为视频文件以离线观看。每个录像也可以在浏览器中即时观看,无需下载。"
+        },
+        {
+          "question": "我可以将 Bigo 直播录像转换为短视频吗？",
+          "answer": "可以。高级用户可以使用 ClipAI 将其 Bigo 直播录像自动转换为准备好用于 TikTok、YouTube Shorts 或 Reels 的精彩短视频。这是重新利用直播内容并在各平台上增加粉丝的好方法。"
+        }
+      ]
+    },
+    "buzzcast": {
+      "title": "Buzzcast 直播录像",
+      "description": "在 LiveStreamRecorder 上观看和下载 Buzzcast 直播录像。你的 Buzzcast 直播自动在云端捕获 — 无黑屏问题、无需屏幕录制器。创作者最简单的 Buzzcast 直播录制器。",
+      "keywords": [
+        "Buzzcast 录制器",
+        "Buzzcast 直播录制器",
+        "Buzzcast 直播录制",
+        "Buzzcast 直播屏幕录制器",
+        "屏幕录制 Buzzcast 直播",
+        "Buzzcast 黑屏录制",
+        "保存 Buzzcast 直播"
+      ],
+      "faqs": [
+        {
+          "question": "如何录制我的 Buzzcast 直播？",
+          "answer": "使用 LiveStreamRecorder,你的 Buzzcast 直播会自动在云端录制。注册、添加你的 Buzzcast 直播用户名,每次开播时都会被捕获。无需安装 Buzzcast 直播录制器 APK,无需屏幕录制 — 一切都在服务器端进行。"
+        },
+        {
+          "question": "为什么录制 Buzzcast 直播时出现黑屏？",
+          "answer": "在 Buzzcast 直播上使用屏幕录制器时,黑屏问题很常见。LiveStreamRecorder 完全避免了这个问题,因为它直接从云端捕获你的 Buzzcast 直播 — 没有黑屏、没有变通方法、没有不可靠的屏幕录制应用。"
+        },
+        {
+          "question": "如何修复 Buzzcast 直播屏幕录制器的黑屏？",
+          "answer": "最简单的解决方法是完全跳过屏幕录制。LiveStreamRecorder 是基于云端的 Buzzcast 录制器,在服务器端以高质量捕获你的直播。没有黑屏问题、无需配置应用 — 只需添加你的用户名,你的 Buzzcast 直播就会自动录制。"
+        },
+        {
+          "question": "我需要 Buzzcast 直播屏幕录制器吗？",
+          "answer": "不需要。Buzzcast 直播的屏幕录制器经常导致黑屏问题或低质量捕获。LiveStreamRecorder 是基于云端的 Buzzcast 直播录制器,它会自动以高质量捕获你的直播 — 无需安装应用,没有黑屏。"
+        },
+        {
+          "question": "我可以免费录制我的 Buzzcast 直播吗？",
+          "answer": "可以。免费注册 LiveStreamRecorder 并立即开始录制你的 Buzzcast 直播。高级套餐解锁下载录像、ClipAI 自动精彩瞬间短视频和扩展存储。"
+        },
+        {
+          "question": "我可以下载我的 Buzzcast 直播录像吗？",
+          "answer": "可以。高级用户可以将其 Buzzcast 直播录像下载为视频文件以离线观看。每个录像也可以在浏览器中即时观看,无需下载。"
+        },
+        {
+          "question": "我可以将 Buzzcast 直播录像转换为短视频吗？",
+          "answer": "可以。高级用户可以使用 ClipAI 将其 Buzzcast 直播录像自动转换为准备好用于 TikTok、YouTube Shorts 或 Reels 的精彩短视频。这是重新利用直播内容并在各平台上增加粉丝的好方法。"
+        }
+      ]
+    },
+    "liveme": {
+      "title": "LiveMe 直播录像",
+      "description": "在 LiveStreamRecorder 上观看和下载 LiveMe 直播录像。你的 LiveMe 直播自动在云端捕获 — 无黑屏问题、无需屏幕录制器。创作者最简单的 LiveMe 直播录制器。",
+      "keywords": [
+        "LiveMe 录制器",
+        "LiveMe 直播录制器",
+        "LiveMe 直播录制",
+        "LiveMe 直播屏幕录制器",
+        "屏幕录制 LiveMe 直播",
+        "LiveMe 黑屏录制",
+        "保存 LiveMe 直播"
+      ],
+      "faqs": [
+        {
+          "question": "如何录制我的 LiveMe 直播？",
+          "answer": "使用 LiveStreamRecorder,你的 LiveMe 直播会自动在云端录制。注册、添加你的 LiveMe 直播用户名,每次开播时都会被捕获。无需安装 LiveMe 直播录制器 APK,无需屏幕录制 — 一切都在服务器端进行。"
+        },
+        {
+          "question": "为什么录制 LiveMe 直播时出现黑屏？",
+          "answer": "在 LiveMe 直播上使用屏幕录制器时,黑屏问题很常见。LiveStreamRecorder 完全避免了这个问题,因为它直接从云端捕获你的 LiveMe 直播 — 没有黑屏、没有变通方法、没有不可靠的屏幕录制应用。"
+        },
+        {
+          "question": "如何修复 LiveMe 直播屏幕录制器的黑屏？",
+          "answer": "最简单的解决方法是完全跳过屏幕录制。LiveStreamRecorder 是基于云端的 LiveMe 录制器,在服务器端以高质量捕获你的直播。没有黑屏问题、无需配置应用 — 只需添加你的用户名,你的 LiveMe 直播就会自动录制。"
+        },
+        {
+          "question": "我需要 LiveMe 直播屏幕录制器吗？",
+          "answer": "不需要。LiveMe 直播的屏幕录制器经常导致黑屏问题或低质量捕获。LiveStreamRecorder 是基于云端的 LiveMe 直播录制器,它会自动以高质量捕获你的直播 — 无需安装应用,没有黑屏。"
+        },
+        {
+          "question": "我可以免费录制我的 LiveMe 直播吗？",
+          "answer": "可以。免费注册 LiveStreamRecorder 并立即开始录制你的 LiveMe 直播。高级套餐解锁下载录像、ClipAI 自动精彩瞬间短视频和扩展存储。"
+        },
+        {
+          "question": "我可以下载我的 LiveMe 直播录像吗？",
+          "answer": "可以。高级用户可以将其 LiveMe 直播录像下载为视频文件以离线观看。每个录像也可以在浏览器中即时观看,无需下载。"
+        },
+        {
+          "question": "我可以将 LiveMe 直播录像转换为短视频吗？",
+          "answer": "可以。高级用户可以使用 ClipAI 将其 LiveMe 直播录像自动转换为准备好用于 TikTok、YouTube Shorts 或 Reels 的精彩短视频。这是重新利用直播内容并在各平台上增加粉丝的好方法。"
+        }
+      ]
+    },
+    "mixch": {
+      "title": "Mixch 直播录像",
+      "description": "在 LiveStreamRecorder 上观看和下载 Mixch 直播录像。你的 Mixch 直播自动在云端捕获 — 无黑屏问题、无需屏幕录制器。创作者最简单的 Mixch 直播录制器。",
+      "keywords": [
+        "Mixch 录制器",
+        "Mixch 直播录制器",
+        "Mixch 直播录制",
+        "Mixch 直播屏幕录制器",
+        "屏幕录制 Mixch 直播",
+        "Mixch 黑屏录制",
+        "保存 Mixch 直播"
+      ],
+      "faqs": [
+        {
+          "question": "如何录制我的 Mixch 直播？",
+          "answer": "使用 LiveStreamRecorder,你的 Mixch 直播会自动在云端录制。注册、添加你的 Mixch 直播用户名,每次开播时都会被捕获。无需安装 Mixch 直播录制器 APK,无需屏幕录制 — 一切都在服务器端进行。"
+        },
+        {
+          "question": "为什么录制 Mixch 直播时出现黑屏？",
+          "answer": "在 Mixch 直播上使用屏幕录制器时,黑屏问题很常见。LiveStreamRecorder 完全避免了这个问题,因为它直接从云端捕获你的 Mixch 直播 — 没有黑屏、没有变通方法、没有不可靠的屏幕录制应用。"
+        },
+        {
+          "question": "如何修复 Mixch 直播屏幕录制器的黑屏？",
+          "answer": "最简单的解决方法是完全跳过屏幕录制。LiveStreamRecorder 是基于云端的 Mixch 录制器,在服务器端以高质量捕获你的直播。没有黑屏问题、无需配置应用 — 只需添加你的用户名,你的 Mixch 直播就会自动录制。"
+        },
+        {
+          "question": "我需要 Mixch 直播屏幕录制器吗？",
+          "answer": "不需要。Mixch 直播的屏幕录制器经常导致黑屏问题或低质量捕获。LiveStreamRecorder 是基于云端的 Mixch 直播录制器,它会自动以高质量捕获你的直播 — 无需安装应用,没有黑屏。"
+        },
+        {
+          "question": "我可以免费录制我的 Mixch 直播吗？",
+          "answer": "可以。免费注册 LiveStreamRecorder 并立即开始录制你的 Mixch 直播。高级套餐解锁下载录像、ClipAI 自动精彩瞬间短视频和扩展存储。"
+        },
+        {
+          "question": "我可以下载我的 Mixch 直播录像吗？",
+          "answer": "可以。高级用户可以将其 Mixch 直播录像下载为视频文件以离线观看。每个录像也可以在浏览器中即时观看,无需下载。"
+        },
+        {
+          "question": "我可以将 Mixch 直播录像转换为短视频吗？",
+          "answer": "可以。高级用户可以使用 ClipAI 将其 Mixch 直播录像自动转换为准备好用于 TikTok、YouTube Shorts 或 Reels 的精彩短视频。这是重新利用直播内容并在各平台上增加粉丝的好方法。"
+        }
+      ]
+    }
+  },
+  "hero": {
+    "title": {
+      "all": "录像",
+      "tiktok": "TikTok 录像",
+      "twitch": "Twitch 录像",
+      "youtube": "YouTube 录像",
+      "kick": "Kick 录像",
+      "afreecatv": "AfreecaTV 录像",
+      "pandalive": "Pandalive 录像",
+      "bigo": "Bigo 录像",
+      "buzzcast": "Buzzcast 录像",
+      "liveme": "LiveMe 录像",
+      "mixch": "Mixch 录像"
+    },
+    "subtitle": {
+      "all": "在我们的平台上观看创作者的直播录像。下载并发现新内容。",
+      "tiktok": "在我们的平台上观看创作者的 TikTok 直播录像。下载并发现新内容。",
+      "twitch": "在我们的平台上观看创作者的 Twitch 直播录像。下载并发现新内容。",
+      "youtube": "在我们的平台上观看创作者的 YouTube 直播录像。下载并发现新内容。",
+      "kick": "在我们的平台上观看创作者的 Kick 直播录像。下载并发现新内容。",
+      "afreecatv": "在我们的平台上观看创作者的 AfreecaTV 录像。下载并发现新内容。",
+      "pandalive": "在我们的平台上观看创作者的 Pandalive 录像。下载并发现新内容。",
+      "bigo": "在我们的平台上观看创作者的 Bigo 录像。下载并发现新内容。",
+      "buzzcast": "在我们的平台上观看创作者的 Buzzcast 录像。下载并发现新内容。",
+      "liveme": "在我们的平台上观看创作者的 LiveMe 录像。下载并发现新内容。",
+      "mixch": "在我们的平台上观看创作者的 Mixch 录像。下载并发现新内容。"
+    }
+  },
+  "cta": {
+    "title": {
+      "all": "今天就录制你的直播",
+      "tiktok": "录制 TikTok 直播",
+      "twitch": "录制 Twitch 直播和 VOD",
+      "youtube": "录制 YouTube 直播",
+      "kick": "录制 Kick 直播",
+      "pandalive": "录制 Pandalive 直播",
+      "afreecatv": "录制 AfreecaTV 直播",
+      "bigo": "录制 Bigo 直播",
+      "buzzcast": "录制 Buzzcast 直播",
+      "liveme": "录制 LiveMe 直播",
+      "mixch": "录制 Mixch 直播"
+    },
+    "subtitle": {
+      "all": "自动保存你的 TikTok、Twitch、YouTube 和 Kick 直播。下载录像、创建短视频并扩大你的受众。",
+      "tiktok": "自动保存你的 TikTok 直播。下载录像、使用 ClipAI 创建短视频并增加粉丝。",
+      "twitch": "自动保存你的 Twitch 直播。下载 VOD、使用 ClipAI 创建短视频并增长你的频道。",
+      "youtube": "自动保存你的 YouTube 直播。下载录像、使用 ClipAI 将其转换为 Shorts 并增加订阅者。",
+      "kick": "自动保存你的 Kick 直播。下载录像、使用 ClipAI 创建短视频并扩大你的受众。",
+      "pandalive": "自动保存你的 Pandalive 直播。下载录像并使用 ClipAI 创建短视频。",
+      "afreecatv": "自动保存你的 AfreecaTV 直播。下载录像并使用 ClipAI 创建短视频。",
+      "bigo": "自动保存你的 Bigo 直播。下载录像并使用 ClipAI 创建短视频。",
+      "buzzcast": "自动保存你的 Buzzcast 直播。下载录像并使用 ClipAI 创建短视频。",
+      "liveme": "自动保存你的 LiveMe 直播。下载录像并使用 ClipAI 创建短视频。",
+      "mixch": "自动保存你的 Mixch 直播。下载录像并使用 ClipAI 创建短视频。"
+    },
+    "button": "免费开始录制"
+  },
+  "empty": {
+    "title": "暂无录像",
+    "description": {
+      "all": "成为第一个录制直播的创作者！",
+      "tiktok": "成为第一个录制 TikTok 直播的创作者！",
+      "twitch": "成为第一个录制 Twitch 直播的创作者！",
+      "youtube": "成为第一个录制 YouTube 直播的创作者！",
+      "kick": "成为第一个录制 Kick 直播的创作者！",
+      "afreecatv": "成为第一个录制 AfreecaTV 直播的创作者！",
+      "pandalive": "成为第一个录制 Pandalive 直播的创作者！",
+      "bigo": "成为第一个录制 Bigo 直播的创作者！",
+      "buzzcast": "成为第一个录制 Buzzcast 直播的创作者！",
+      "liveme": "成为第一个录制 LiveMe 直播的创作者！",
+      "mixch": "成为第一个录制 Mixch 直播的创作者！"
+    },
+    "button": "立即开始"
+  },
+  "about": {
+    "all": "## 直播录像\n\n观看使用 LiveStreamRecorder 保存直播的创作者的录像。\n\n### 你将在这里找到什么\n\n创作者使用我们的平台自动录制 TikTok 直播、Twitch 直播、YouTube 广播和 Kick 直播。观看他们的内容、观看录像并发现新创作者。\n\n### 观看和下载\n\n每个录像都可以即时观看。高级用户可以下载录像以离线观看。\n\n### 致创作者\n\n想让你的直播出现在这里？免费注册并开始录制。粘贴你的频道 URL、开播,我们会自动保存一切。使用 ClipAI 将你的直播转换为短视频并扩大你的受众。\n\n### 支持的平台\n\n我们支持 TikTok 直播录制、Twitch VOD 保存、YouTube 直播录制、Kick 直播录制、AfreecaTV 录制和 Pandalive 录制。更多平台即将到来。",
+    "tiktok": "## TikTok 直播录像\n\n观看使用 LiveStreamRecorder 保存自己直播的创作者的 TikTok 直播录像。每场 TikTok 直播都自动捕获并存储以供随时观看。\n\n### TikTok 直播自动保存\n\nTikTok 直播一结束就消失 — 没有内置的方式来保存它们。创作者使用我们的 TikTok 录制器在云端自动捕获自己的 TikTok 直播。无需 TikTok 屏幕录制器,无需手机彻夜运行。只需添加你的用户名,你的直播就会被录制。\n\n### 观看和下载你的 TikTok 录像\n\n每个 TikTok 直播录像都可以在浏览器中即时观看。高级用户可以将 TikTok 录像下载为视频文件以离线观看 — 非常适合重新利用自己的内容或保留个人存档。\n\n### 在任何设备上录制你的 TikTok 直播\n\n想知道如何在电脑或笔记本上录制 TikTok 直播？LiveStreamRecorder 完全在云端运行。无需安装任何东西 — 没有桌面应用、没有浏览器扩展。无论你在 PC、笔记本还是手机上,你的 TikTok 直播都会自动以高质量捕获。\n\n### 使用 ClipAI 将直播转换为短视频\n\n想将你的 TikTok 直播录像转换为短视频？ClipAI 分析你的录制直播并创建你可以发布为 TikTok 视频、Reels 或 Shorts 的精彩短视频。这是从直播内容增长粉丝的最佳方式。\n\n### 你的 TikTok 录制器 — 无需屏幕录制\n\n忘掉不可靠的屏幕录制应用和桌面捕获工具。LiveStreamRecorder 是专为 TikTok 录制构建的,在服务器端捕获你的直播。免费注册、添加你的 TikTok 用户名,再也不会丢失任何直播。",
+    "twitch": "## Twitch 直播录像\n\n观看使用 LiveStreamRecorder 保存自己直播的创作者的 Twitch 直播录像。每场 Twitch 直播都自动捕获并永久存储。\n\n### 永不过期的 Twitch VOD\n\nTwitch VOD 在 14-60 天后过期,如果你删除频道也会被删除。我们的 Twitch 录制器在云端永久保存你的直播 — 无过期、无删除存档。你的内容仍然属于你。\n\n### 观看和下载你的 Twitch 录像\n\n每个 Twitch 直播录像都可以在浏览器中即时观看 — 没有广告、没有中断。高级用户可以将 Twitch 录像下载为视频文件以离线观看或重新利用内容。\n\n### 录制你的 Twitch 直播 — 无需屏幕录制器\n\n忘掉与 OBS 一起运行屏幕捕获软件。LiveStreamRecorder 是基于云端的 Twitch 直播录制器,在服务器端捕获你的直播。无额外 CPU 负载、无桌面应用、无 Bandicam 在后台运行。无论你从 PC、主机还是手机直播,你的 Twitch 直播都会自动以高质量录制。\n\n### 使用 ClipAI 将直播转换为短视频\n\n想将你的 Twitch 直播录像转换为短视频？ClipAI 分析你的录制直播并创建准备好发布为 YouTube Shorts、TikTok 视频或 Reels 的精彩短视频。从你的 Twitch 内容跨平台扩大受众。\n\n### 创作者的最佳 Twitch 录制器\n\nLiveStreamRecorder 专为保存 Twitch 直播而构建。免费注册、连接你的频道,再也不会因 VOD 过期而失去直播。每场直播都自动录制 — 你的永久 Twitch 存档。",
+    "youtube": "## YouTube 直播录像\n\n观看使用 LiveStreamRecorder 保存自己直播的创作者的 YouTube 直播录像。每场 YouTube 直播都自动捕获并存储以供随时观看。\n\n### YouTube 直播自动保存\n\nYouTube 直播重播可能消失 — 创作者删除它们、直播无法处理或频道变为私密。我们的 YouTube 录制器在云端自动捕获你的直播,所以你始终拥有内容副本。\n\n### 观看和下载你的 YouTube 录像\n\n每个 YouTube 直播录像都可以在浏览器中即时观看。高级用户可以将录像下载为视频文件以离线观看 — 非常适合重新利用直播内容。\n\n### 录制你的 YouTube 直播 — 无需屏幕录制器\n\n忘掉传统的 YouTube 屏幕录制软件。LiveStreamRecorder 是在线 YouTube 录制器,在服务器端捕获你的直播。无桌面应用、无浏览器扩展、无电脑彻夜运行。无论你在 PC、笔记本还是手机上,你的 YouTube 直播都会以高质量录制。\n\n### 使用 ClipAI 将直播转换为 YouTube Shorts\n\n想将你的 YouTube 直播录像转换为 Shorts？ClipAI 分析你的录制直播并创建准备好发布的精彩短视频。这是从直播内容增加订阅者的最佳方式。\n\n### 创作者的最佳 YouTube 直播录制器\n\nLiveStreamRecorder 专为捕获 YouTube 直播而构建。免费注册、连接你的频道,再也不会丢失任何直播。每场直播都自动录制 — 即使你忘记按录制。",
+    "kick": "## Kick 直播录像\n\n观看使用 LiveStreamRecorder 保存自己直播的创作者的 Kick 直播录像。每场 Kick 直播都自动捕获并永久存储。\n\n### 永远保留的 Kick VOD\n\nKick VOD 并不总是可靠 — 重播可能无法处理、频道可能更改、你的内容可能毫无预警地消失。我们的 Kick 录制器在云端永久保存你的直播,所以你的内容不依赖 Kick 的 VOD 系统。你的直播永远属于你。\n\n### 观看和下载你的 Kick 录像\n\n每个 Kick 直播录像都可以在浏览器中即时观看 — 没有广告、没有中断。高级用户可以将 Kick 录像下载为视频文件以离线观看、编辑或重新利用内容。\n\n### 录制你的 Kick 直播 — 无需屏幕录制器\n\n忘掉与你的直播一起运行 OBS 录制。LiveStreamRecorder 是基于云端的 Kick 直播录制器,在服务器端捕获你的直播。无额外 CPU 负载、无桌面捕获软件、后台无任何运行。从 PC、主机或手机直播 — 你的 Kick 直播会自动以高质量录制。\n\n### 使用 ClipAI 将直播转换为短视频\n\n想将你的 Kick 直播录像转换为短视频？ClipAI 分析你的录制直播并创建准备好发布为 TikTok 视频、YouTube Shorts 或 Reels 的精彩短视频。通过将直播内容转换为每个平台的短格式内容,在 Kick 之外扩大你的受众。\n\n### 创作者的最佳 Kick 录制器\n\nLiveStreamRecorder 专为独立保存 Kick 直播而构建。免费注册、添加你的 Kick 频道,再也不会丢失任何直播。每场直播都自动录制 — 不依赖 Kick VOD 系统的永久备份。",
+    "pandalive": "## Pandalive 直播录像\n\n观看使用 LiveStreamRecorder 保存自己直播的 BJ 的 Pandalive 直播录像。每场 Pandalive 直播都自动捕获并存储以供随时观看。\n\n### Pandalive 直播自动保存\n\nPandalive 直播在直播结束时消失 — 没有保证的重播系统。我们的 Pandalive 录制器在云端自动保存你的直播,所以一旦你的直播结束,什么都不会丢失。舞蹈表演、歌曲翻唱、聊天会话 — 一切都保持可用。\n\n### 观看和下载你的 Pandalive 录像\n\n每个 Pandalive 录像都可以在浏览器中即时观看。高级用户可以将 Pandalive 录像下载为视频文件以离线观看 — 非常适合重新利用自己的内容或保留个人副本。\n\n### 录制你的 Pandalive 直播 — 无需额外软件\n\n忘掉屏幕录制应用和移动捕获工具。LiveStreamRecorder 是在线 Pandalive 录制器,在服务器端捕获你的直播。无桌面软件、无手机彻夜运行、无浏览器扩展。无论你从手机、平板还是 PC 直播,你的 Pandalive 直播都会自动以高质量录制。\n\n### 使用 ClipAI 将直播转换为短视频\n\n想将你的 Pandalive 直播录像转换为短视频？ClipAI 分析你的录制直播并创建准备好发布到 TikTok、Instagram Reels 或 YouTube Shorts 的精彩短视频。通过重新利用你最精彩的 Pandalive 瞬间,在全球范围内扩大你的粉丝群。\n\n### BJ 的最佳 Pandalive 录制器\n\nLiveStreamRecorder 专为保存 Pandalive 直播而构建。免费注册、添加你的 Pandalive 用户名,再也不会丢失任何直播。每场直播都自动捕获 — 你的永久 Pandalive 内容库。",
+    "afreecatv": "## AfreecaTV 直播录像\n\n观看使用 LiveStreamRecorder 保存自己直播的 BJ 的 AfreecaTV 直播录像。每场 AfreecaTV 直播都自动捕获并存储以供随时观看。\n\n### AfreecaTV 直播独立保存\n\nAfreecaTV 有自己的 VOD 系统,但重播并不总是被保存,内容可能被下架,存储规则可能更改。我们的 AfreecaTV 录制器在云端自动保存你的直播作为独立备份 — 所以无论 AfreecaTV 上发生什么,你的内容都保持完整。\n\n### 观看和下载你的 AfreecaTV 录像\n\n每个 AfreecaTV 录像都可以在浏览器中即时观看 — 没有广告、没有中断。高级用户可以将 AfreecaTV 录像下载为视频文件以离线观看或重新利用内容。\n\n### 录制你的 AfreecaTV 直播 — 无需屏幕录制器\n\n忘掉在长 AfreecaTV 会话期间运行捕获软件。LiveStreamRecorder 是基于云端的 AfreecaTV 录制器,在服务器端捕获你的直播。无桌面应用、无后台录制、无额外 CPU 负载。从 PC 或手机直播 — 你的 AfreecaTV 直播会自动以高质量录制。\n\n### 使用 ClipAI 将长直播转换为短视频\n\nAfreecaTV 直播可能持续数小时。ClipAI 分析你的录制直播并自动提取最精彩的瞬间 — 关键操作、反应、有趣对话、精彩瞬间。将其发布为 TikTok 短视频、YouTube Shorts 或 Reels,在 AfreecaTV 之外扩大你的受众。\n\n### BJ 的最佳 AfreecaTV 录制器\n\nLiveStreamRecorder 专为独立保存 AfreecaTV 直播而构建。免费注册、添加你的 AfreecaTV 用户名,再也不会丢失任何直播。每场直播都自动捕获 — 不依赖 AfreecaTV VOD 系统的永久备份。",
+    "bigo": "## Bigo 直播录像\n\n观看使用 LiveStreamRecorder 保存自己直播的创作者的 Bigo 直播录像。每场 Bigo 直播都自动捕获并存储以供随时观看。\n\n### Bigo 直播在消失前保存\n\nBigo 直播仅在直播时存在 — 一旦你结束会话,内容就完全从应用中消失。我们的 Bigo 录制器在云端自动保存你的直播,所以你的内容不会在直播结束时消失。舞蹈表演、唱歌、聊天瞬间、礼物互动 — 一切都保持可用。\n\n### 观看和下载你的 Bigo 录像\n\n每个 Bigo 直播录像都可以在浏览器中即时观看。高级用户可以将 Bigo 录像下载为视频文件以离线观看 — 非常适合重新利用自己的内容或保留个人副本。\n\n### 录制你的 Bigo 直播 — 无需屏幕录制器\n\n忘掉在手机上运行屏幕捕获或让额外设备彻夜录制。LiveStreamRecorder 是在线 Bigo 录制器,在服务器端捕获你的直播。无手机电池消耗、无手动设置、无额外软件。无论你从 iPhone、Android 还是 PC 直播,你的 Bigo 直播都会自动以高质量录制。\n\n### 使用 ClipAI 将直播转换为短视频\n\n想将你的 Bigo 直播录像转换为短视频？ClipAI 分析你的录制直播并创建准备好发布到 TikTok、Instagram Reels 或 YouTube Shorts 的精彩短视频。通过重新利用你最精彩的 Bigo 瞬间,在全球范围内扩大你的受众。\n\n### 创作者的最佳 Bigo 录制器\n\nLiveStreamRecorder 专为保存 Bigo 直播而构建。免费注册、添加你的 Bigo 用户名,再也不会丢失任何直播。每场直播都自动捕获 — 你的 Bigo 内容的永久家园,不依赖应用为你保留。",
+    "buzzcast": "## Buzzcast 直播录像\n\n观看使用 LiveStreamRecorder 保存自己直播的创作者的 Buzzcast 直播录像。每场 Buzzcast 直播都自动捕获并存储以供随时观看。\n\n### Buzzcast 直播在消失前保存\n\nBuzzcast 直播仅在直播时可用 — 一旦你结束直播,内容就从应用中消失。我们的 Buzzcast 录制器在云端自动保存你的直播,所以一旦你的直播结束,什么都不会丢失。聊天会话、音乐瞬间、日常内容 — 一切都为粉丝保持可用。\n\n### 观看和下载你的 Buzzcast 录像\n\n每个 Buzzcast 直播录像都可以在浏览器中即时观看。高级用户可以将 Buzzcast 录像下载为视频文件以离线观看 — 非常适合重新利用自己的内容或保留个人副本。\n\n### 录制你的 Buzzcast 直播 — 无需额外应用\n\n忘掉在手机上进行屏幕录制或在后台运行捕获软件。LiveStreamRecorder 是在线 Buzzcast 录制器,在服务器端捕获你的直播。无电池消耗、无手动设置、无额外软件。你的 Buzzcast 直播会从任何设备自动以高质量录制。\n\n### 使用 ClipAI 将直播转换为短视频\n\n想将你的 Buzzcast 直播录像转换为短视频？ClipAI 分析你的录制直播并创建准备好发布到 TikTok、Instagram Reels 或 YouTube Shorts 的精彩短视频。通过重新利用你最精彩的瞬间,在 Buzzcast 之外扩大你的粉丝。\n\n### 创作者的最佳 Buzzcast 录制器\n\nLiveStreamRecorder 专为保存 Buzzcast 直播而构建。免费注册、添加你的 Buzzcast 用户名,再也不会丢失任何直播。每场直播都自动捕获 — 你的永久 Buzzcast 内容库。",
+    "liveme": "## LiveMe 直播录像\n\n观看使用 LiveStreamRecorder 保存自己直播的创作者的 LiveMe 直播录像。每场 LiveMe 直播都自动捕获并存储以供随时观看。\n\n### LiveMe 直播在消失前保存\n\nLiveMe 直播仅在直播时可用 — 一旦你结束直播,内容就从应用中消失。我们的 LiveMe 录制器在云端自动保存你的直播,所以一旦你的直播结束,什么都不会丢失。聊天会话、音乐瞬间、日常内容 — 一切都为粉丝保持可用。\n\n### 观看和下载你的 LiveMe 录像\n\n每个 LiveMe 直播录像都可以在浏览器中即时观看。高级用户可以将 LiveMe 录像下载为视频文件以离线观看 — 非常适合重新利用自己的内容或保留个人副本。\n\n### 录制你的 LiveMe 直播 — 无需额外应用\n\n忘掉在手机上进行屏幕录制或在后台运行捕获软件。LiveStreamRecorder 是在线 LiveMe 录制器,在服务器端捕获你的直播。无电池消耗、无手动设置、无额外软件。你的 LiveMe 直播会从任何设备自动以高质量录制。\n\n### 使用 ClipAI 将直播转换为短视频\n\n想将你的 LiveMe 直播录像转换为短视频？ClipAI 分析你的录制直播并创建准备好发布到 TikTok、Instagram Reels 或 YouTube Shorts 的精彩短视频。通过重新利用你最精彩的瞬间,在 LiveMe 之外扩大你的粉丝。\n\n### 创作者的最佳 LiveMe 录制器\n\nLiveStreamRecorder 专为保存 LiveMe 直播而构建。免费注册、添加你的 LiveMe 用户名,再也不会丢失任何直播。每场直播都自动捕获 — 你的永久 LiveMe 内容库。",
+    "mixch": "## Mixch 直播录像\n\n观看使用 LiveStreamRecorder 保存自己直播的创作者的 Mixch 直播录像。每场 Mixch 直播都自动捕获并存储以供随时观看。\n\n### Mixch 直播在消失前保存\n\nMixch 直播仅在直播时可用 — 一旦你结束直播,内容就从应用中消失。我们的 Mixch 录制器在云端自动保存你的直播,所以一旦你的直播结束,什么都不会丢失。聊天会话、音乐瞬间、日常内容 — 一切都为粉丝保持可用。\n\n### 观看和下载你的 Mixch 录像\n\n每个 Mixch 直播录像都可以在浏览器中即时观看。高级用户可以将 Mixch 录像下载为视频文件以离线观看 — 非常适合重新利用自己的内容或保留个人副本。\n\n### 录制你的 Mixch 直播 — 无需额外应用\n\n忘掉在手机上进行屏幕录制或在后台运行捕获软件。LiveStreamRecorder 是在线 Mixch 录制器,在服务器端捕获你的直播。无电池消耗、无手动设置、无额外软件。你的 Mixch 直播会从任何设备自动以高质量录制。\n\n### 使用 ClipAI 将直播转换为短视频\n\n想将你的 Mixch 直播录像转换为短视频？ClipAI 分析你的录制直播并创建准备好发布到 TikTok、Instagram Reels 或 YouTube Shorts 的精彩短视频。通过重新利用你最精彩的瞬间,在 Mixch 之外扩大你的粉丝。\n\n### 创作者的最佳 Mixch 录制器\n\nLiveStreamRecorder 专为保存 Mixch 直播而构建。免费注册、添加你的 Mixch 用户名,再也不会丢失任何直播。每场直播都自动捕获 — 你的永久 Mixch 内容库。"
+  },
+  "jsonLd": {
+    "name": {
+      "all": "直播录像",
+      "tiktok": "TikTok 直播录像",
+      "twitch": "Twitch 直播录像",
+      "youtube": "YouTube 直播录像",
+      "kick": "Kick 直播录像",
+      "afreecatv": "AfreecaTV 直播录像",
+      "pandalive": "Pandalive 直播录像",
+      "bigo": "Bigo 直播录像",
+      "buzzcast": "Buzzcast 直播录像",
+      "liveme": "LiveMe 直播录像",
+      "mixch": "Mixch 直播录像"
+    },
+    "description": {
+      "all": "在 LiveStreamRecorder 上观看创作者的直播录像。",
+      "tiktok": "在 LiveStreamRecorder 上观看创作者的 TikTok 直播录像。",
+      "twitch": "在 LiveStreamRecorder 上观看创作者的 Twitch 直播录像。",
+      "youtube": "在 LiveStreamRecorder 上观看创作者的 YouTube 直播录像。",
+      "kick": "在 LiveStreamRecorder 上观看创作者的 Kick 直播录像。",
+      "afreecatv": "在 LiveStreamRecorder 上观看创作者的 AfreecaTV 录像。",
+      "pandalive": "在 LiveStreamRecorder 上观看创作者的 Pandalive 录像。",
+      "bigo": "在 LiveStreamRecorder 上观看创作者的 Bigo 录像。",
+      "buzzcast": "在 LiveStreamRecorder 上观看创作者的 Buzzcast 录像。",
+      "liveme": "在 LiveStreamRecorder 上观看创作者的 LiveMe 录像。",
+      "mixch": "在 LiveStreamRecorder 上观看创作者的 Mixch 录像。"
+    },
+    "streamTitle": "{nickname} 直播 - {date}",
+    "streamDescription": {
+      "tiktok": "{nickname} 的 TikTok 直播录像",
+      "twitch": "{nickname} 的 Twitch 直播录像",
+      "youtube": "{nickname} 的 YouTube 直播录像",
+      "kick": "{nickname} 的 Kick 直播录像",
+      "afreecatv": "{nickname} 的 AfreecaTV 录像",
+      "pandalive": "{nickname} 的 Pandalive 录像",
+      "bigo": "{nickname} 的 Bigo 录像",
+      "unknown": "{nickname} 的直播录像",
+      "buzzcast": "{nickname} 的 Buzzcast 录像",
+      "liveme": "{nickname} 的 LiveMe 录像",
+      "mixch": "{nickname} 的 Mixch 录像"
+    }
+  },
+  "recordedOn": "录制于 {date}",
+  "faq": "常见问题",
+  "country": {
+    "title": "{country}的{platform}",
+    "description": "观看在 LiveStreamRecorder 上录制直播的{country}{platform}。观看他们的录像并发现新内容。",
+    "heroTitle": "{country}的{platform}",
+    "heroSubtitle": "观看{country}最新的{platform}视频。",
+    "empty": {
+      "title": "暂无录像",
+      "description": "{country}的{platform}暂无录像。"
+    },
+    "browseByCountry": "按国家/地区观看{platform}",
+    "browseLink": "观看{country}最新的{platform}视频",
+    "backToPlatform": "返回所有{platform}"
+  }
+}

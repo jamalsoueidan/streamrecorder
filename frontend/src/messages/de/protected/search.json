@@ -1,0 +1,59 @@
+{
+  "title": "Suche",
+  "description": "Füge deine Live-Streams zu deiner Liste hinzu",
+  "platforms": {
+    "tiktok": "TikTok",
+    "twitch": "Twitch",
+    "kick": "Kick",
+    "youtube": "YouTube",
+    "afreecatv": "AfreecaTV",
+    "pandalive": "PandaLive",
+    "bigo": "Bigo",
+    "buzzcast": "Buzzcast",
+    "liveme": "LiveMe",
+    "mixch": "Mixch"
+  },
+  "search": {
+    "actionButton": "Suchen",
+    "submitButton": "Suchen",
+    "placeholder": "Stream-URL oder @benutzername eingeben",
+    "searching": "Suche auf {platform} …",
+    "pasteButton": "Einfügen",
+    "pasteError": "Manuell mit Strg+V oder langem Drücken einfügen",
+    "parseError": "Benutzername konnte nicht erkannt werden",
+    "notFound": "Nichts gefunden …",
+    "autoDetected": "Plattform automatisch aus URL erkannt",
+    "enterUsername": "Stream-URL oder Benutzernamen eingeben",
+    "selectPlatform": "Wähle die Plattform, auf der du streamst",
+    "changeUsername": "Benutzernamen ändern",
+    "newSearch": "Neue Suche",
+    "premiumOnly": "Nur Premium"
+  },
+  "upgrade": {
+    "title": "{platform} erfordert Premium",
+    "description": "Mach ein Upgrade auf Premium, um {platform}-Creator hinzuzufügen und ihre Live-Streams aufzuzeichnen."
+  },
+  "hints": {
+    "tryFormats": "Probiere diese Beispiele:",
+    "enterUsername": "Gib einen @benutzernamen ein oder füge eine Profil-URL ein"
+  },
+  "actions": {
+    "follow": "Hinzufügen",
+    "successTitle": "Hinzugefügt!",
+    "successMessage": "{username} wurde hinzugefügt",
+    "errorTitle": "Fehler",
+    "cancel": "Abbrechen",
+    "willRecord": "Wird aufgenommen, sobald sie live gehen",
+    "viewPage": "Profil ansehen"
+  },
+  "chromeExtension": "Chrome-Erweiterung installieren",
+  "inputLabel": "Füge hier einen Stream-Link von Twitch, TikTok oder YouTube ein",
+  "notFollowing": {
+    "title": "Dieser Creator ist nicht in deiner Liste",
+    "description": "Du hast versucht, auf einen Creator zuzugreifen, der nicht in deiner Liste ist.",
+    "followToAccess": "Füge ihn hinzu, um Aufnahmen zu sehen und benachrichtigt zu werden, wenn er live geht.",
+    "notFoundTitle": "Creator nicht gefunden",
+    "notFoundDescription": "@{username} existiert nicht auf {platform} oder das Konto ist privat.",
+    "trySearch": "Versuche, nach einem anderen Creator zu suchen:"
+  }
+}

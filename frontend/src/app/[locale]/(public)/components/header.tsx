@@ -18,7 +18,7 @@ import { IconChevronDown, IconWorld } from "@tabler/icons-react";
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "@/app/components/link";
-import { useRouter } from "next/navigation";
+import { useRouter } from "@/i18n/navigation";
 import { useEffect, useState } from "react";
 import { redirectLoginUri } from "../login/components/login-form";
 import { navConfig } from "./nav";

@@ -44,9 +44,7 @@ interface PageProps {
   }>;
 }
 
-export const revalidate = 86400;
-export const dynamicParams = true;
-
+export const dynamic = "force-dynamic";
 export async function generateStaticParams() {
   return [];
 }

@@ -5,7 +5,6 @@ import { generateProfileUrl } from "@/app/lib/profile-url";
 import { generateAlternates } from "@/app/lib/seo";
 import { streamingPlatforms } from "@/app/lib/streaming-platforms";
 import {
-  Button,
   Center,
   Image,
   Paper,
@@ -17,6 +16,7 @@ import { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { getCreators } from "../../cache";
 import { CreatorsSimpleGrid } from "../../components/creators-simple-grid";
+import { LinkButton } from "@/app/components/link-button";
 
 interface PageProps {
   params: Promise<{
@@ -28,8 +28,7 @@ interface PageProps {
   }>;
 }
 
-export const revalidate = 86400;
-export const dynamic = "force-static";
+export const dynamic = "force-dynamic";
 
 export function generateStaticParams() {
   return [
@@ -222,15 +221,13 @@ export default async function Page({ params, searchParams }: PageProps) {
               <Text style={{ color: "#64748b" }}>
                 {t(`empty.description.${platformKey}`)}
               </Text>
-              <Button
-                component="a"
-                href="/register"
+              <LinkButton href="/register"
                 variant="gradient"
                 gradient={{ from: "#6366f1", to: "#a855f7", deg: 135 }}
                 mt="sm"
               >
                 {t("empty.button")}
-              </Button>
+              </LinkButton>
             </Stack>
           </Paper>
         )}

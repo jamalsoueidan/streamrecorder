@@ -1,0 +1,91 @@
+{
+  "title": "AI Studio",
+  "description": "Erstelle Clips und Memes aus deinen Aufnahmen mit KI",
+  "requestDetails": "Auftragsdetails",
+  "createRequest": "Auftrag erstellen",
+  "unknownCreator": "Unbekannter Creator",
+  "unknownRecording": "Unbekannte Aufnahme",
+  "recordingDeleted": {
+    "badge": "Aufnahme gelöscht"
+  },
+  "viewDetails": "Details anzeigen",
+  "state": {
+    "pending": "Ausstehend",
+    "processing": "Wird verarbeitet",
+    "completed": "Abgeschlossen",
+    "failed": "Fehlgeschlagen"
+  },
+  "options": {
+    "clips": "Clips",
+    "memes": "Memes",
+    "profile": "Profil"
+  },
+  "filters": {
+    "all": "Alle",
+    "pending": "Ausstehend",
+    "processing": "In Bearbeitung",
+    "completed": "Abgeschlossen"
+  },
+  "emptyState": {
+    "title": "Noch keine KI-Aufträge",
+    "description": "Gehe zu deinen Aufnahmen und klicke auf den KI-Button, um Clips und Memes zu erstellen"
+  },
+  "create": {
+    "selectOptions": "Was möchtest du erstellen?",
+    "options": {
+      "clips": {
+        "label": "Clips generieren",
+        "description": "Die KI findet die besten Momente und erstellt kurze Clips"
+      },
+      "memes": {
+        "label": "Memes generieren",
+        "description": "Die KI erstellt meme-würdige Screenshots mit Bildunterschriften"
+      },
+      "profile": {
+        "label": "Profil generieren",
+        "description": "Die KI analysiert dein Profil und schlägt Verbesserungen vor"
+      }
+    },
+    "sizeWarning": {
+      "title": "Video zu groß",
+      "message": "Dieses Video ist {size} GB groß. Videos über 2 GB werden in Teilen verarbeitet."
+    },
+    "submit": "Verarbeitung starten"
+  },
+  "status": {
+    "progress": "Fortschritt",
+    "tasks": "Aufgaben",
+    "pendingTitle": "Wartet auf Start",
+    "pendingMessage": "Dein Auftrag ist in der Warteschlange und wird in Kürze verarbeitet.",
+    "clipsCount": "{count} Clips",
+    "memesCount": "{count} Memes",
+    "localesCount": "{count} Sprachen",
+    "clipFallback": "Clip {index}",
+    "default": "Standard",
+    "tagline": "Slogan",
+    "description": "Beschreibung",
+    "state": {
+      "pending": "Ausstehend",
+      "processing": "Wird verarbeitet",
+      "completed": "Abgeschlossen",
+      "failed": "Fehlgeschlagen"
+    }
+  },
+  "upgrade": {
+    "title": "Dein KI-Video-Studio",
+    "features": {
+      "clips": "Smarte Clips aus langen Aufnahmen – bereit zum Teilen",
+      "memes": "KI-generierte Memes und Fotos aus deinen Videos",
+      "viral": "Sofortige Video-Übersetzung in Dutzende Sprachen"
+    },
+    "upgradeButton": "Jetzt upgraden",
+    "hint": "Schalte AI Studio mit einem Premium-Abonnement frei"
+  },
+  "quota": {
+    "badge": "{used} / {total} diesen Monat",
+    "limitReachedNote": "Limit erreicht · zurückgesetzt am {date}",
+    "alertTitle": "Monatliches Limit erreicht",
+    "alertBody": "Du hast alle {total} KI-Generierungen diesen Monat aufgebraucht. Dein Limit wird am {date} zurückgesetzt.",
+    "editButton": "Video manuell bearbeiten"
+  }
+}

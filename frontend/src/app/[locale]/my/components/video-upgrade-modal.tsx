@@ -20,6 +20,7 @@ import {
 } from "@mantine/core";
 import {
   IconBell,
+  IconBroadcast,
   IconChartBar,
   IconCrown,
   IconDownload,
@@ -56,6 +57,11 @@ export function VideoUpgradeModal({ opened, onClose }: VideoUpgradeModalProps) {
     { icon: IconUsers, label: tp("premiumRecord100"), color: "#a78bfa" },
     { icon: IconDownload, label: tp("premiumFullControl"), color: "#60a5fa" },
     { icon: IconBell, label: tp("premiumNotifications"), color: "#fbbf24" },
+    {
+      icon: IconBroadcast,
+      label: tp("premiumLiveNotifications"),
+      color: "#f43f5e",
+    },
     { icon: IconMovie, label: tp("premiumAiHighlights"), color: "#34d399" },
     { icon: IconLanguage, label: tp("premiumAiSubtitles"), color: "#f472b6" },
     { icon: IconShare, label: tp("premiumPublishSocial"), color: "#38bdf8" },

@@ -1,0 +1,82 @@
+{
+  "follow": {
+    "tooltip": "Creator hinzufügen",
+    "successTitle": "Hinzugefügt!",
+    "successMessage": "{username} wurde hinzugefügt",
+    "errorTitle": "Fehler",
+    "blockedMessage": "Dieser Creator ist aufgrund einer DMCA-Aufforderung nicht verfügbar. Siehe unsere <terms>Nutzungsbedingungen</terms> für weitere Details."
+  },
+  "unfollow": {
+    "tooltip": "Creator entfernen",
+    "successTitle": "Entfernt",
+    "successMessage": "Du hast {username} entfernt",
+    "successMessageGeneric": "Erfolgreich entfernt"
+  },
+  "scopeFilter": {
+    "label": "Filter:",
+    "following": "Meine Aufnahmen",
+    "discover": "Freunde",
+    "all": "Alle"
+  },
+  "recordings": {
+    "liveAgo_context": "Für Live-Streams: zeigt, wann die Aufnahme begann. Z. B. Aufnahme vor 15 Minuten gestartet.",
+    "liveAgo": "Aufnahme {time} gestartet",
+    "recordedAgo_context": "Für aufgenommene Streams: zeigt, wann sie aufgenommen wurden. Z. B. vor 3 Tagen aufgenommen.",
+    "recordedAgo": "{time} aufgenommen",
+    "recordCount": "REC {count}",
+    "newRecording": "Neu",
+    "parts": "{count, plural, one {# Teil} other {# Teile}}",
+    "videoCount": "{count, plural, one {# Video} other {# Videos}}",
+    "noRecordings": "Du hast das Ende erreicht",
+    "hide": "Öffentlich verbergen",
+    "show": "Öffentlich anzeigen",
+    "delete": "Video löschen",
+    "deleteConfirm": {
+      "title": "Video löschen",
+      "message": "Möchtest du dieses Video wirklich löschen? Diese Aktion kann nicht rückgängig gemacht werden.",
+      "confirm": "Löschen",
+      "cancel": "Abbrechen"
+    },
+    "createWithAI": "Clips mit KI erstellen",
+    "addToWatchLater": "Zu Später ansehen hinzufügen",
+    "removeFromWatchLater": "Aus Später ansehen entfernen",
+    "addedToWatchLater": "Zu Später ansehen hinzugefügt",
+    "removedFromWatchLater": "Aus Später ansehen entfernt",
+    "videoLimitMessage": "Du hast dein kostenloses Video-Limit erreicht.",
+    "download": "Video herunterladen",
+    "downloadPart": "Teil {part}",
+    "sendToEmail": "Per E-Mail senden",
+    "downloadEmailSent": "Download-Link ist auf dem Weg in dein Postfach",
+    "downloadFeatureMessage": "Das Herunterladen von Videos ist eine Premium-Funktion.",
+    "editClip": "Clip bearbeiten",
+    "deleteSources": "Quellen löschen",
+    "deleteSourcesSuccess": "{count} Quellen gelöscht"
+  },
+  "followers": {
+    "addedAgo_context": "Wann ein Creator zur Liste hinzugefügt wurde. Z. B. Hinzugefügt vor 3 Tagen.",
+    "addedAgo": "Hinzugefügt {time}",
+    "limitReachedTitle": "Creator-Limit erreicht",
+    "upgradeModalHeadline": "Verpasse nie wieder einen Live-Stream",
+    "max3Message": "Du hast das Limit von 3 Creatorn im kostenlosen Plan erreicht.",
+    "max50Message": "Du hast dein Limit von 50 Creatorn in diesem Plan erreicht.",
+    "max100Message": "Du hast dein Limit von 100 Creatorn in diesem Plan erreicht.",
+    "upgradeButton": "Auf Premium upgraden",
+    "upgradeModalDiscount": "20 % Rabatt im ersten Monat",
+    "upgradeModalCodeNote": "Beim Bezahlen anwenden",
+    "unfollowUpgradeTitle": "Verwalte deine Creator frei mit Premium"
+  },
+  "newest": "Neueste",
+  "oldest": "Älteste",
+  "expired": {
+    "title": "Dein Premium-Plan ist beendet",
+    "subtitle": "Deine Creator werden nicht mehr aufgenommen. Verlängere jetzt und mach genau dort weiter, wo du aufgehört hast – alle deine Creator und Einstellungen sind noch gespeichert.",
+    "renewButton": "Premium verlängern – alles behalten",
+    "or": "oder",
+    "loseTitle": "Wenn du downgradest, verlierst du dauerhaft:",
+    "loseCreators": "Alle deine gefolgten Creator und Aufnahmen",
+    "loseFavorites": "Alle deine gespeicherten Favoriten",
+    "loseClips": "Clips, Downloads und KI-Funktionen",
+    "losePremium": "Zugriff auf alle Premium-Funktionen",
+    "downgradeButton": "Downgrade"
+  }
+}
