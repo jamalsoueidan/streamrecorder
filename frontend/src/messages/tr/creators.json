@@ -209,6 +209,26 @@
         "mixch kaydı",
         "mixch yayın kaydedici"
       ]
+    },
+    "trovo": {
+      "title": "Trovo İçerik Üreticileri",
+      "description": "Canlı yayınlarını kaydetmek ve kısa kliplere dönüştürmek için LiveStreamRecorder kullanan Trovo içerik üreticilerini keşfedin.",
+      "keywords": [
+        "trovo içerik üreticileri",
+        "trovo canlı yayın",
+        "trovo kaydı",
+        "trovo yayın kaydedici"
+      ]
+    },
+    "twitcast": {
+      "title": "TwitCasting İçerik Üreticileri",
+      "description": "Canlı yayınlarını kaydetmek ve kısa kliplere dönüştürmek için LiveStreamRecorder kullanan TwitCasting içerik üreticilerini keşfedin.",
+      "keywords": [
+        "twitcast içerik üreticileri",
+        "twitcast canlı yayın",
+        "twitcast kaydı",
+        "twitcast yayın kaydedici"
+      ]
     }
   },
   "hero": {
@@ -223,7 +243,9 @@
       "bigo": "Bigo İçerik Üreticileri",
       "buzzcast": "Buzzcast İçerik Üreticileri",
       "liveme": "LiveMe İçerik Üreticileri",
-      "mixch": "Mixch İçerik Üreticileri"
+      "mixch": "Mixch İçerik Üreticileri",
+      "trovo": "Trovo İçerik Üreticileri",
+      "twitcast": "TwitCasting İçerik Üreticileri"
     },
     "subtitle": {
       "all": "Yayınlarını kaydetmek ve kısa klipler oluşturmak için LiveStreamRecorder kullanan binlerce içerik üreticisine katılın.",
@@ -236,7 +258,9 @@
       "bigo": "Yayınlarını kaydetmek ve kısa klipler oluşturmak için LiveStreamRecorder kullanan binlerce Bigo içerik üreticisine katılın.",
       "buzzcast": "Yayınlarını kaydetmek ve kısa klipler oluşturmak için LiveStreamRecorder kullanan binlerce Buzzcast içerik üreticisine katılın.",
       "liveme": "Yayınlarını kaydetmek ve kısa klipler oluşturmak için LiveStreamRecorder kullanan binlerce LiveMe içerik üreticisine katılın.",
-      "mixch": "Yayınlarını kaydetmek ve kısa klipler oluşturmak için LiveStreamRecorder kullanan binlerce Mixch içerik üreticisine katılın."
+      "mixch": "Yayınlarını kaydetmek ve kısa klipler oluşturmak için LiveStreamRecorder kullanan binlerce Mixch içerik üreticisine katılın.",
+      "trovo": "Yayınlarını kaydetmek ve kısa klipler oluşturmak için LiveStreamRecorder kullanan binlerce Trovo içerik üreticisine katılın.",
+      "twitcast": "Yayınlarını kaydetmek ve kısa klipler oluşturmak için LiveStreamRecorder kullanan binlerce TwitCasting içerik üreticisine katılın."
     }
   },
   "features": {
@@ -252,7 +276,9 @@
       "bigo": "Bigo Yayınlarınızı Otomatik Kaydedin",
       "buzzcast": "Buzzcast Yayınlarınızı Otomatik Kaydedin",
       "liveme": "LiveMe Yayınlarınızı Otomatik Kaydedin",
-      "mixch": "Mixch Yayınlarınızı Otomatik Kaydedin"
+      "mixch": "Mixch Yayınlarınızı Otomatik Kaydedin",
+      "trovo": "Trovo Yayınlarınızı Otomatik Kaydedin",
+      "twitcast": "TwitCasting Yayınlarınızı Otomatik Kaydedin"
     },
     "subtitle": "Canlı yayından kısa kliplere dakikalar içinde",
     "items": {
@@ -286,7 +312,9 @@
       "bigo": "Bigo Yayınlarınızı Kaydedin",
       "buzzcast": "Buzzcast Yayınlarınızı Kaydedin",
       "liveme": "LiveMe Yayınlarınızı Kaydedin",
-      "mixch": "Mixch Yayınlarınızı Kaydedin"
+      "mixch": "Mixch Yayınlarınızı Kaydedin",
+      "trovo": "Trovo Yayınlarınızı Kaydedin",
+      "twitcast": "TwitCasting Yayınlarınızı Kaydedin"
     },
     "subtitle": {
       "all": "Binlerce içerik üreticisine katılın. Yayınlarınızı kaydedin, ClipAI ile kısa klipler oluşturun ve kitlenizi büyütün.",
@@ -299,7 +327,9 @@
       "bigo": "Binlerce Bigo içerik üreticisine katılın. Yayınlarınızı kaydedin ve ClipAI ile kısa klipler oluşturun.",
       "buzzcast": "Binlerce Buzzcast içerik üreticisine katılın. Yayınlarınızı kaydedin ve ClipAI ile kısa klipler oluşturun.",
       "liveme": "Binlerce LiveMe içerik üreticisine katılın. Yayınlarınızı kaydedin ve ClipAI ile kısa klipler oluşturun.",
-      "mixch": "Binlerce Mixch içerik üreticisine katılın. Yayınlarınızı kaydedin ve ClipAI ile kısa klipler oluşturun."
+      "mixch": "Binlerce Mixch içerik üreticisine katılın. Yayınlarınızı kaydedin ve ClipAI ile kısa klipler oluşturun.",
+      "trovo": "Binlerce Trovo içerik üreticisine katılın. Yayınlarınızı kaydedin ve ClipAI ile kısa klipler oluşturun.",
+      "twitcast": "Binlerce TwitCasting içerik üreticisine katılın. Yayınlarınızı kaydedin ve ClipAI ile kısa klipler oluşturun."
     },
     "button": "Ücretsiz Kayda Başla"
   },
@@ -316,7 +346,9 @@
       "bigo": "Katılan ilk Bigo içerik üreticisi olun!",
       "buzzcast": "Katılan ilk Buzzcast içerik üreticisi olun!",
       "liveme": "Katılan ilk LiveMe içerik üreticisi olun!",
-      "mixch": "Katılan ilk Mixch içerik üreticisi olun!"
+      "mixch": "Katılan ilk Mixch içerik üreticisi olun!",
+      "trovo": "Katılan ilk Trovo içerik üreticisi olun!",
+      "twitcast": "Katılan ilk TwitCasting içerik üreticisi olun!"
     },
     "button": "Başlayın"
   },
@@ -331,7 +363,9 @@
     "bigo": "## Bigo Live İçerik Üreticileri\n\nLiveStreamRecorder'ı kullanarak kendi yayınlarını kaydeden Bigo Live içerik üreticilerini keşfet. Orta Doğu, Asya ve ötesinden dans, müzik, sohbet ve eğlence içerik üreticilerine ev sahipliği yapan dünyanın en büyük küresel canlı yayın platformlarından birinin yayıncılarına göz at, kayıtlarını izle ve yeni takip edebileceklerini keşfet.\n\n### Neden Bigo içerik üreticileri yayınlarını kaydeder?\n\nBigo yayınları yalnızca canlı oldukları sürece var olur — oturumu kapattığın anda içerik uygulamadan tamamen kaybolur. Bigo içerik üreticileri, her yayını otomatik olarak kaydetmek için LiveStreamRecorder'ı kullanıyor; böylece dans performansların, şarkıların, sohbet anların ve hediye etkileşimlerin yayın bittikten çok sonra bile hayranların için erişilebilir kalıyor.\n\n### En iyi Bigo içerik üreticilerine göz at\n\nLiveStreamRecorder'da kendi yayınlarını kaydeden yayıncıları bulmak için Bigo içerik üreticileri sayfasını keşfet. Kayıtlarını izle, kaçırdığın yayınları yakala ve her kategoride ve dilde yeni Bigo içerik üreticilerini keşfet.\n\n### Kendi Bigo içerik üretici sayfan\n\nLiveStreamRecorder'daki her Bigo içerik üreticisi, hayranlarının tüm kayıtlı yayınlarına göz atabileceği kendi sayfasına sahip olur. Kaydol, Bigo kullanıcı adını ekle ve içerik üretici sayfan otomatik olarak hazırlansın — Bigo yayınlarının geçici doğasının ötesinde yaşayan kalıcı bir içerik evi.\n\n### Yayınlardan kısa kliplere: kitleni büyüt\n\nClipAI, kayıtlı Bigo yayınlarını TikTok, Instagram Reels veya YouTube Shorts'ta paylaşmaya hazır kısa öne çıkan kliplere dönüştürür. Dans anları, düetler, hayran etkileşimleri, müzik performansları — her yayını birden fazla içeriğe dönüştür ve kitleni tüm platformlarda büyüt.\n\n### LiveStreamRecorder'da Bigo içerik üreticisi ol\n\nÜcretsiz kaydol, Bigo kullanıcı adını ekle ve yayınlarını bugünden kaydetmeye başla. Her yayın otomatik olarak kaydedilir — telefonla kayıt yok, ekran kaydı yok. LiveStreamRecorder'ı kullanarak her yayınını koruyan ve dünya çapında hayranlarına ulaşan Bigo içerik üreticilerine katıl.",
     "buzzcast": "## Buzzcast İçerik Üreticileri\n\nLiveStreamRecorder'ı kullanarak kendi yayınlarını kaydeden Buzzcast içerik üreticilerini keşfet. Mobile odaklı bu canlı yayın topluluğunun yayıncılarına göz at, kayıtlarını izle ve takip edebileceğin yeni içerik üreticilerini bul.\n\n### Neden Buzzcast içerik üreticileri yayınlarını kaydeder?\n\nBuzzcast yayınları sadece canlıdır — yayını sonlandırdığın anda içerik uygulamadan kaybolur. Tekrar sistemi yok ve hayranların sonradan yakalamasının bir yolu yok. Buzzcast içerik üreticileri, her yayını otomatik olarak kaydetmek için LiveStreamRecorder'ı kullanıyor; böylece sohbetlerin, müzik performansların ve günlük içeriklerin yayın bittikten çok sonra bile hayranların için erişilebilir kalıyor.\n\n### En iyi Buzzcast içerik üreticilerine göz at\n\nLiveStreamRecorder'da kendi yayınlarını kaydeden yayıncıları bulmak için Buzzcast içerik üreticileri sayfasını keşfet. Kayıtlarını izle, kaçırdığın yayınları yakala ve takip etmeye değer yeni Buzzcast içerik üreticilerini bul.\n\n### Kendi Buzzcast içerik üretici sayfan\n\nLiveStreamRecorder'daki her Buzzcast içerik üreticisi, hayranlarının tüm kayıtlı yayınlarına göz atabileceği kendi sayfasına sahip olur. Kaydol, Buzzcast kullanıcı adını ekle ve içerik üretici sayfan otomatik olarak hazırlansın — yayın bittiği anda kaybolmayan kalıcı bir içerik yeri.\n\n### Yayınlardan kısa kliplere: takipçi kitleni büyüt\n\nClipAI, kayıtlı Buzzcast yayınlarını TikTok, Instagram Reels veya YouTube Shorts'ta paylaşmaya hazır kısa öne çıkan kliplere dönüştürür. Tepkileri, müzik anlarını ve sohbet öne çıkanlarını viral içeriğe dönüştür ve takipçi kitleni Buzzcast'in ötesinde büyüt.\n\n### LiveStreamRecorder'da Buzzcast içerik üreticisi ol\n\nÜcretsiz kaydol, Buzzcast kullanıcı adını ekle ve yayınlarını bugünden kaydetmeye başla. Her yayın otomatik olarak kaydedilir — manuel kayıt yok, ekstra uygulama yok. LiveStreamRecorder'ı kullanarak her yayınını koruyan ve kitlesini büyüten Buzzcast içerik üreticilerine katıl.",
     "liveme": "## LiveMe İçerik Üreticileri\n\nLiveStreamRecorder'ı kullanarak kendi yayınlarını kaydeden LiveMe içerik üreticilerini keşfet. Mobile odaklı bu canlı yayın topluluğunun yayıncılarına göz at, kayıtlarını izle ve takip edebileceğin yeni içerik üreticilerini bul.\n\n### Neden LiveMe içerik üreticileri yayınlarını kaydeder?\n\nLiveMe yayınları sadece canlıdır — yayını sonlandırdığın anda içerik uygulamadan kaybolur. Tekrar sistemi yok ve hayranların sonradan yakalamasının bir yolu yok. LiveMe içerik üreticileri, her yayını otomatik olarak kaydetmek için LiveStreamRecorder'ı kullanıyor; böylece sohbetlerin, müzik performansların ve günlük içeriklerin yayın bittikten çok sonra bile hayranların için erişilebilir kalıyor.\n\n### En iyi LiveMe içerik üreticilerine göz at\n\nLiveStreamRecorder'da kendi yayınlarını kaydeden yayıncıları bulmak için LiveMe içerik üreticileri sayfasını keşfet. Kayıtlarını izle, kaçırdığın yayınları yakala ve takip etmeye değer yeni LiveMe içerik üreticilerini bul.\n\n### Kendi LiveMe içerik üretici sayfan\n\nLiveStreamRecorder'daki her LiveMe içerik üreticisi, hayranlarının tüm kayıtlı yayınlarına göz atabileceği kendi sayfasına sahip olur. Kaydol, LiveMe kullanıcı adını ekle ve içerik üretici sayfan otomatik olarak hazırlansın — yayın bittiği anda kaybolmayan kalıcı bir içerik yeri.\n\n### Yayınlardan kısa kliplere: takipçi kitleni büyüt\n\nClipAI, kayıtlı LiveMe yayınlarını TikTok, Instagram Reels veya YouTube Shorts'ta paylaşmaya hazır kısa öne çıkan kliplere dönüştürür. Tepkileri, müzik anlarını ve sohbet öne çıkanlarını viral içeriğe dönüştür ve takipçi kitleni LiveMe'in ötesinde büyüt.\n\n### LiveStreamRecorder'da LiveMe içerik üreticisi ol\n\nÜcretsiz kaydol, LiveMe kullanıcı adını ekle ve yayınlarını bugünden kaydetmeye başla. Her yayın otomatik olarak kaydedilir — manuel kayıt yok, ekstra uygulama yok. LiveStreamRecorder'ı kullanarak her yayınını koruyan ve kitlesini büyüten LiveMe içerik üreticilerine katıl.",
-    "mixch": "## Mixch İçerik Üreticileri\n\nLiveStreamRecorder'ı kullanarak kendi yayınlarını kaydeden Mixch içerik üreticilerini keşfet. Mobile odaklı bu canlı yayın topluluğunun yayıncılarına göz at, kayıtlarını izle ve takip edebileceğin yeni içerik üreticilerini bul.\n\n### Neden Mixch içerik üreticileri yayınlarını kaydeder?\n\nMixch yayınları sadece canlıdır — yayını sonlandırdığın anda içerik uygulamadan kaybolur. Tekrar sistemi yok ve hayranların sonradan yakalamasının bir yolu yok. Mixch içerik üreticileri, her yayını otomatik olarak kaydetmek için LiveStreamRecorder'ı kullanıyor; böylece sohbetlerin, müzik performansların ve günlük içeriklerin yayın bittikten çok sonra bile hayranların için erişilebilir kalıyor.\n\n### En iyi Mixch içerik üreticilerine göz at\n\nLiveStreamRecorder'da kendi yayınlarını kaydeden yayıncıları bulmak için Mixch içerik üreticileri sayfasını keşfet. Kayıtlarını izle, kaçırdığın yayınları yakala ve takip etmeye değer yeni Mixch içerik üreticilerini bul.\n\n### Kendi Mixch içerik üretici sayfan\n\nLiveStreamRecorder'daki her Mixch içerik üreticisi, hayranlarının tüm kayıtlı yayınlarına göz atabileceği kendi sayfasına sahip olur. Kaydol, Mixch kullanıcı adını ekle ve içerik üretici sayfan otomatik olarak hazırlansın — yayın bittiği anda kaybolmayan kalıcı bir içerik yeri.\n\n### Yayınlardan kısa kliplere: takipçi kitleni büyüt\n\nClipAI, kayıtlı Mixch yayınlarını TikTok, Instagram Reels veya YouTube Shorts'ta paylaşmaya hazır kısa öne çıkan kliplere dönüştürür. Tepkileri, müzik anlarını ve sohbet öne çıkanlarını viral içeriğe dönüştür ve takipçi kitleni Mixch'in ötesinde büyüt.\n\n### LiveStreamRecorder'da Mixch içerik üreticisi ol\n\nÜcretsiz kaydol, Mixch kullanıcı adını ekle ve yayınlarını bugünden kaydetmeye başla. Her yayın otomatik olarak kaydedilir — manuel kayıt yok, ekstra uygulama yok. LiveStreamRecorder'ı kullanarak her yayınını koruyan ve kitlesini büyüten Mixch içerik üreticilerine katıl."
+    "mixch": "## Mixch İçerik Üreticileri\n\nLiveStreamRecorder'ı kullanarak kendi yayınlarını kaydeden Mixch içerik üreticilerini keşfet. Mobile odaklı bu canlı yayın topluluğunun yayıncılarına göz at, kayıtlarını izle ve takip edebileceğin yeni içerik üreticilerini bul.\n\n### Neden Mixch içerik üreticileri yayınlarını kaydeder?\n\nMixch yayınları sadece canlıdır — yayını sonlandırdığın anda içerik uygulamadan kaybolur. Tekrar sistemi yok ve hayranların sonradan yakalamasının bir yolu yok. Mixch içerik üreticileri, her yayını otomatik olarak kaydetmek için LiveStreamRecorder'ı kullanıyor; böylece sohbetlerin, müzik performansların ve günlük içeriklerin yayın bittikten çok sonra bile hayranların için erişilebilir kalıyor.\n\n### En iyi Mixch içerik üreticilerine göz at\n\nLiveStreamRecorder'da kendi yayınlarını kaydeden yayıncıları bulmak için Mixch içerik üreticileri sayfasını keşfet. Kayıtlarını izle, kaçırdığın yayınları yakala ve takip etmeye değer yeni Mixch içerik üreticilerini bul.\n\n### Kendi Mixch içerik üretici sayfan\n\nLiveStreamRecorder'daki her Mixch içerik üreticisi, hayranlarının tüm kayıtlı yayınlarına göz atabileceği kendi sayfasına sahip olur. Kaydol, Mixch kullanıcı adını ekle ve içerik üretici sayfan otomatik olarak hazırlansın — yayın bittiği anda kaybolmayan kalıcı bir içerik yeri.\n\n### Yayınlardan kısa kliplere: takipçi kitleni büyüt\n\nClipAI, kayıtlı Mixch yayınlarını TikTok, Instagram Reels veya YouTube Shorts'ta paylaşmaya hazır kısa öne çıkan kliplere dönüştürür. Tepkileri, müzik anlarını ve sohbet öne çıkanlarını viral içeriğe dönüştür ve takipçi kitleni Mixch'in ötesinde büyüt.\n\n### LiveStreamRecorder'da Mixch içerik üreticisi ol\n\nÜcretsiz kaydol, Mixch kullanıcı adını ekle ve yayınlarını bugünden kaydetmeye başla. Her yayın otomatik olarak kaydedilir — manuel kayıt yok, ekstra uygulama yok. LiveStreamRecorder'ı kullanarak her yayınını koruyan ve kitlesini büyüten Mixch içerik üreticilerine katıl.",
+    "trovo": "## Trovo İçerik Üreticileri\n\nLiveStreamRecorder'ı kullanarak kendi yayınlarını kaydeden Trovo içerik üreticilerini keşfet. Mobile odaklı bu canlı yayın topluluğunun yayıncılarına göz at, kayıtlarını izle ve takip edebileceğin yeni içerik üreticilerini bul.\n\n### Neden Trovo içerik üreticileri yayınlarını kaydeder?\n\nTrovo yayınları sadece canlıdır — yayını sonlandırdığın anda içerik uygulamadan kaybolur. Tekrar sistemi yok ve hayranların sonradan yakalamasının bir yolu yok. Trovo içerik üreticileri, her yayını otomatik olarak kaydetmek için LiveStreamRecorder'ı kullanıyor; böylece sohbetlerin, müzik performansların ve günlük içeriklerin yayın bittikten çok sonra bile hayranların için erişilebilir kalıyor.\n\n### En iyi Trovo içerik üreticilerine göz at\n\nLiveStreamRecorder'da kendi yayınlarını kaydeden yayıncıları bulmak için Trovo içerik üreticileri sayfasını keşfet. Kayıtlarını izle, kaçırdığın yayınları yakala ve takip etmeye değer yeni Trovo içerik üreticilerini bul.\n\n### Kendi Trovo içerik üretici sayfan\n\nLiveStreamRecorder'daki her Trovo içerik üreticisi, hayranlarının tüm kayıtlı yayınlarına göz atabileceği kendi sayfasına sahip olur. Kaydol, Trovo kullanıcı adını ekle ve içerik üretici sayfan otomatik olarak hazırlansın — yayın bittiği anda kaybolmayan kalıcı bir içerik yeri.\n\n### Yayınlardan kısa kliplere: takipçi kitleni büyüt\n\nClipAI, kayıtlı Trovo yayınlarını TikTok, Instagram Reels veya YouTube Shorts'ta paylaşmaya hazır kısa öne çıkan kliplere dönüştürür. Tepkileri, müzik anlarını ve sohbet öne çıkanlarını viral içeriğe dönüştür ve takipçi kitleni Trovo'in ötesinde büyüt.\n\n### LiveStreamRecorder'da Trovo içerik üreticisi ol\n\nÜcretsiz kaydol, Trovo kullanıcı adını ekle ve yayınlarını bugünden kaydetmeye başla. Her yayın otomatik olarak kaydedilir — manuel kayıt yok, ekstra uygulama yok. LiveStreamRecorder'ı kullanarak her yayınını koruyan ve kitlesini büyüten Trovo içerik üreticilerine katıl.",
+    "twitcast": "## TwitCasting İçerik Üreticileri\n\nLiveStreamRecorder'ı kullanarak kendi yayınlarını kaydeden TwitCasting içerik üreticilerini keşfet. Mobile odaklı bu canlı yayın topluluğunun yayıncılarına göz at, kayıtlarını izle ve takip edebileceğin yeni içerik üreticilerini bul.\n\n### Neden TwitCasting içerik üreticileri yayınlarını kaydeder?\n\nTwitCasting yayınları sadece canlıdır — yayını sonlandırdığın anda içerik uygulamadan kaybolur. Tekrar sistemi yok ve hayranların sonradan yakalamasının bir yolu yok. TwitCasting içerik üreticileri, her yayını otomatik olarak kaydetmek için LiveStreamRecorder'ı kullanıyor; böylece sohbetlerin, müzik performansların ve günlük içeriklerin yayın bittikten çok sonra bile hayranların için erişilebilir kalıyor.\n\n### En iyi TwitCasting içerik üreticilerine göz at\n\nLiveStreamRecorder'da kendi yayınlarını kaydeden yayıncıları bulmak için TwitCasting içerik üreticileri sayfasını keşfet. Kayıtlarını izle, kaçırdığın yayınları yakala ve takip etmeye değer yeni TwitCasting içerik üreticilerini bul.\n\n### Kendi TwitCasting içerik üretici sayfan\n\nLiveStreamRecorder'daki her TwitCasting içerik üreticisi, hayranlarının tüm kayıtlı yayınlarına göz atabileceği kendi sayfasına sahip olur. Kaydol, TwitCasting kullanıcı adını ekle ve içerik üretici sayfan otomatik olarak hazırlansın — yayın bittiği anda kaybolmayan kalıcı bir içerik yeri.\n\n### Yayınlardan kısa kliplere: takipçi kitleni büyüt\n\nClipAI, kayıtlı TwitCasting yayınlarını TikTok, Instagram Reels veya YouTube Shorts'ta paylaşmaya hazır kısa öne çıkan kliplere dönüştürür. Tepkileri, müzik anlarını ve sohbet öne çıkanlarını viral içeriğe dönüştür ve takipçi kitleni TwitCasting'in ötesinde büyüt.\n\n### LiveStreamRecorder'da TwitCasting içerik üreticisi ol\n\nÜcretsiz kaydol, TwitCasting kullanıcı adını ekle ve yayınlarını bugünden kaydetmeye başla. Her yayın otomatik olarak kaydedilir — manuel kayıt yok, ekstra uygulama yok. LiveStreamRecorder'ı kullanarak her yayınını koruyan ve kitlesini büyüten TwitCasting içerik üreticilerine katıl."
   },
   "faq": "Sıkça Sorulan Sorular",
   "country": {

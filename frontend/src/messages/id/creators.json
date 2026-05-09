@@ -245,6 +245,26 @@
         "rekaman mixch",
         "perekam stream mixch"
       ]
+    },
+    "trovo": {
+      "title": "Kreator Trovo",
+      "description": "Temukan kreator Trovo yang menggunakan LiveStreamRecorder untuk merekam live stream mereka dan mengubahnya menjadi klip pendek.",
+      "keywords": [
+        "kreator trovo",
+        "live stream trovo",
+        "rekaman trovo",
+        "perekam stream trovo"
+      ]
+    },
+    "twitcast": {
+      "title": "Kreator TwitCasting",
+      "description": "Temukan kreator TwitCasting yang menggunakan LiveStreamRecorder untuk merekam live stream mereka dan mengubahnya menjadi klip pendek.",
+      "keywords": [
+        "kreator twitcast",
+        "live stream twitcast",
+        "rekaman twitcast",
+        "perekam stream twitcast"
+      ]
     }
   },
   "hero": {
@@ -259,7 +279,9 @@
       "bigo": "Kreator Bigo",
       "buzzcast": "Kreator Buzzcast",
       "liveme": "Kreator LiveMe",
-      "mixch": "Kreator Mixch"
+      "mixch": "Kreator Mixch",
+      "trovo": "Kreator Trovo",
+      "twitcast": "Kreator TwitCasting"
     },
     "subtitle": {
       "all": "Bergabunglah dengan ribuan kreator yang menggunakan LiveStreamRecorder untuk menyimpan stream mereka dan membuat klip pendek.",
@@ -272,7 +294,9 @@
       "bigo": "Bergabunglah dengan ribuan kreator Bigo yang menggunakan LiveStreamRecorder untuk menyimpan stream mereka dan membuat klip pendek.",
       "buzzcast": "Bergabunglah dengan ribuan kreator Buzzcast yang menggunakan LiveStreamRecorder untuk menyimpan stream mereka dan membuat klip pendek.",
       "liveme": "Bergabunglah dengan ribuan kreator LiveMe yang menggunakan LiveStreamRecorder untuk menyimpan stream mereka dan membuat klip pendek.",
-      "mixch": "Bergabunglah dengan ribuan kreator Mixch yang menggunakan LiveStreamRecorder untuk menyimpan stream mereka dan membuat klip pendek."
+      "mixch": "Bergabunglah dengan ribuan kreator Mixch yang menggunakan LiveStreamRecorder untuk menyimpan stream mereka dan membuat klip pendek.",
+      "trovo": "Bergabunglah dengan ribuan kreator Trovo yang menggunakan LiveStreamRecorder untuk menyimpan stream mereka dan membuat klip pendek.",
+      "twitcast": "Bergabunglah dengan ribuan kreator TwitCasting yang menggunakan LiveStreamRecorder untuk menyimpan stream mereka dan membuat klip pendek."
     }
   },
   "features": {
@@ -288,7 +312,9 @@
       "bigo": "Rekam Stream Bigo Anda Secara Otomatis",
       "buzzcast": "Rekam Stream Buzzcast Anda Secara Otomatis",
       "liveme": "Rekam Stream LiveMe Anda Secara Otomatis",
-      "mixch": "Rekam Stream Mixch Anda Secara Otomatis"
+      "mixch": "Rekam Stream Mixch Anda Secara Otomatis",
+      "trovo": "Rekam Stream Trovo Anda Secara Otomatis",
+      "twitcast": "Rekam Stream TwitCasting Anda Secara Otomatis"
     },
     "subtitle": "Dari live stream ke klip pendek dalam hitungan menit",
     "items": {
@@ -322,7 +348,9 @@
       "bigo": "Rekam Stream Bigo Anda",
       "buzzcast": "Rekam Stream Buzzcast Anda",
       "liveme": "Rekam Stream LiveMe Anda",
-      "mixch": "Rekam Stream Mixch Anda"
+      "mixch": "Rekam Stream Mixch Anda",
+      "trovo": "Rekam Stream Trovo Anda",
+      "twitcast": "Rekam Stream TwitCasting Anda"
     },
     "subtitle": {
       "all": "Bergabunglah dengan ribuan kreator. Simpan stream Anda, buat klip pendek dengan ClipAI, dan kembangkan audiens Anda.",
@@ -335,7 +363,9 @@
       "bigo": "Bergabunglah dengan ribuan kreator Bigo. Simpan stream Anda dan buat klip pendek dengan ClipAI.",
       "buzzcast": "Bergabunglah dengan ribuan kreator Buzzcast. Simpan stream Anda dan buat klip pendek dengan ClipAI.",
       "liveme": "Bergabunglah dengan ribuan kreator LiveMe. Simpan stream Anda dan buat klip pendek dengan ClipAI.",
-      "mixch": "Bergabunglah dengan ribuan kreator Mixch. Simpan stream Anda dan buat klip pendek dengan ClipAI."
+      "mixch": "Bergabunglah dengan ribuan kreator Mixch. Simpan stream Anda dan buat klip pendek dengan ClipAI.",
+      "trovo": "Bergabunglah dengan ribuan kreator Trovo. Simpan stream Anda dan buat klip pendek dengan ClipAI.",
+      "twitcast": "Bergabunglah dengan ribuan kreator TwitCasting. Simpan stream Anda dan buat klip pendek dengan ClipAI."
     },
     "button": "Mulai Rekam Gratis"
   },
@@ -352,7 +382,9 @@
       "bigo": "Jadilah kreator Bigo pertama yang bergabung!",
       "buzzcast": "Jadilah kreator Buzzcast pertama yang bergabung!",
       "liveme": "Jadilah kreator LiveMe pertama yang bergabung!",
-      "mixch": "Jadilah kreator Mixch pertama yang bergabung!"
+      "mixch": "Jadilah kreator Mixch pertama yang bergabung!",
+      "trovo": "Jadilah kreator Trovo pertama yang bergabung!",
+      "twitcast": "Jadilah kreator TwitCasting pertama yang bergabung!"
     },
     "button": "Mulai Sekarang"
   },
@@ -367,7 +399,9 @@
     "bigo": "## Kreator Bigo Live\n\nTemukan kreator Bigo Live yang menggunakan LiveStreamRecorder untuk menyimpan live mereka sendiri. Jelajahi streamer Bigo, tonton rekaman mereka, dan temukan kreator baru untuk diikuti dari salah satu platform live streaming global terbesar — rumah bagi kreator dansa, musik, ngobrol, dan hiburan dari Timur Tengah, Asia, dan lainnya.\n\n### Kenapa kreator Bigo merekam live mereka\n\nLive Bigo hanya ada saat sedang on-air — begitu kamu mengakhiri sesi, kontennya hilang sepenuhnya dari app. Kreator Bigo pakai LiveStreamRecorder untuk menyimpan setiap live secara otomatis, supaya performa dansa, lagu, sesi ngobrol, dan momen gift tetap tersedia untuk fans lama setelah live berakhir.\n\n### Jelajahi kreator Bigo terbaik\n\nBuka halaman kreator Bigo untuk menemukan streamer yang menyimpan live mereka sendiri di LiveStreamRecorder. Tonton rekaman mereka, kejar live yang kamu lewatkan, dan temukan kreator Bigo baru di semua kategori dan bahasa.\n\n### Halaman kreator Bigo milikmu\n\nSetiap kreator Bigo di LiveStreamRecorder punya halaman sendiri tempat fans bisa menonton semua live yang sudah direkam. Daftar, tambahkan username Bigo-mu, dan halaman kreatormu langsung siap — rumah permanen untuk kontenmu yang melampaui sifat sementara dari live Bigo.\n\n### Dari live jadi klip: tumbuhkan audiensmu\n\nClipAI mengubah rekaman live Bigo-mu jadi klip pendek siap posting di TikTok, Instagram Reels, atau YouTube Shorts. Momen dansa, duet, interaksi fans, performa musik — ubah setiap live jadi banyak konten dan tumbuhkan audiensmu di semua platform.\n\n### Jadi kreator Bigo di LiveStreamRecorder\n\nDaftar gratis, tambahkan username Bigo-mu, dan mulai simpan live-mu hari ini. Setiap live otomatis tertangkap — tanpa rekam pakai HP, tanpa rekam layar. Gabung dengan kreator Bigo yang sudah pakai LiveStreamRecorder untuk menjaga setiap live dan menjangkau fans di seluruh dunia.",
     "buzzcast": "## Kreator Buzzcast\n\nTemukan kreator Buzzcast yang menggunakan LiveStreamRecorder untuk menyimpan live mereka sendiri. Jelajahi streamer Buzzcast, tonton rekaman mereka, dan temukan kreator baru untuk diikuti dari komunitas live streaming mobile-first ini.\n\n### Kenapa kreator Buzzcast merekam live mereka\n\nLive Buzzcast hanya berlangsung secara live — begitu kamu mengakhiri siaran, kontennya hilang dari app. Tidak ada sistem replay dan fans tidak punya cara untuk menontonnya lagi. Kreator Buzzcast pakai LiveStreamRecorder untuk menyimpan setiap live secara otomatis, supaya sesi ngobrol, performa musik, dan konten sehari-harimu tetap tersedia untuk fans lama setelah live berakhir.\n\n### Jelajahi kreator Buzzcast terbaik\n\nBuka halaman kreator Buzzcast untuk menemukan streamer yang menyimpan live mereka sendiri di LiveStreamRecorder. Tonton rekaman mereka, kejar live yang kamu lewatkan, dan temukan kreator Buzzcast baru yang layak diikuti.\n\n### Halaman kreator Buzzcast milikmu\n\nSetiap kreator Buzzcast di LiveStreamRecorder punya halaman sendiri tempat fans bisa menonton semua live yang sudah direkam. Daftar, tambahkan username Buzzcast-mu, dan halaman kreatormu langsung siap — tempat permanen untuk kontenmu yang tidak hilang saat live berakhir.\n\n### Dari live jadi klip: bangun pengikutmu\n\nClipAI mengubah rekaman live Buzzcast-mu jadi klip pendek siap posting di TikTok, Instagram Reels, atau YouTube Shorts. Ubah reaksi, momen musik, dan highlight ngobrol jadi konten viral dan tumbuhkan pengikutmu di luar Buzzcast.\n\n### Jadi kreator Buzzcast di LiveStreamRecorder\n\nDaftar gratis, tambahkan username Buzzcast-mu, dan mulai simpan live-mu hari ini. Setiap live otomatis tertangkap — tanpa rekam manual, tanpa app tambahan. Gabung dengan kreator Buzzcast yang sudah pakai LiveStreamRecorder untuk menjaga setiap live dan menumbuhkan audiens mereka.",
     "liveme": "## Kreator LiveMe\n\nTemukan kreator LiveMe yang menggunakan LiveStreamRecorder untuk menyimpan live mereka sendiri. Jelajahi streamer LiveMe, tonton rekaman mereka, dan temukan kreator baru untuk diikuti dari komunitas live streaming mobile-first ini.\n\n### Kenapa kreator LiveMe merekam live mereka\n\nLive LiveMe hanya berlangsung secara live — begitu kamu mengakhiri siaran, kontennya hilang dari app. Tidak ada sistem replay dan fans tidak punya cara untuk menontonnya lagi. Kreator LiveMe pakai LiveStreamRecorder untuk menyimpan setiap live secara otomatis, supaya sesi ngobrol, performa musik, dan konten sehari-harimu tetap tersedia untuk fans lama setelah live berakhir.\n\n### Jelajahi kreator LiveMe terbaik\n\nBuka halaman kreator LiveMe untuk menemukan streamer yang menyimpan live mereka sendiri di LiveStreamRecorder. Tonton rekaman mereka, kejar live yang kamu lewatkan, dan temukan kreator LiveMe baru yang layak diikuti.\n\n### Halaman kreator LiveMe milikmu\n\nSetiap kreator LiveMe di LiveStreamRecorder punya halaman sendiri tempat fans bisa menonton semua live yang sudah direkam. Daftar, tambahkan username LiveMe-mu, dan halaman kreatormu langsung siap — tempat permanen untuk kontenmu yang tidak hilang saat live berakhir.\n\n### Dari live jadi klip: bangun pengikutmu\n\nClipAI mengubah rekaman live LiveMe-mu jadi klip pendek siap posting di TikTok, Instagram Reels, atau YouTube Shorts. Ubah reaksi, momen musik, dan highlight ngobrol jadi konten viral dan tumbuhkan pengikutmu di luar LiveMe.\n\n### Jadi kreator LiveMe di LiveStreamRecorder\n\nDaftar gratis, tambahkan username LiveMe-mu, dan mulai simpan live-mu hari ini. Setiap live otomatis tertangkap — tanpa rekam manual, tanpa app tambahan. Gabung dengan kreator LiveMe yang sudah pakai LiveStreamRecorder untuk menjaga setiap live dan menumbuhkan audiens mereka.",
-    "mixch": "## Kreator Mixch\n\nTemukan kreator Mixch yang menggunakan LiveStreamRecorder untuk menyimpan live mereka sendiri. Jelajahi streamer Mixch, tonton rekaman mereka, dan temukan kreator baru untuk diikuti dari komunitas live streaming mobile-first ini.\n\n### Kenapa kreator Mixch merekam live mereka\n\nLive Mixch hanya berlangsung secara live — begitu kamu mengakhiri siaran, kontennya hilang dari app. Tidak ada sistem replay dan fans tidak punya cara untuk menontonnya lagi. Kreator Mixch pakai LiveStreamRecorder untuk menyimpan setiap live secara otomatis, supaya sesi ngobrol, performa musik, dan konten sehari-harimu tetap tersedia untuk fans lama setelah live berakhir.\n\n### Jelajahi kreator Mixch terbaik\n\nBuka halaman kreator Mixch untuk menemukan streamer yang menyimpan live mereka sendiri di LiveStreamRecorder. Tonton rekaman mereka, kejar live yang kamu lewatkan, dan temukan kreator Mixch baru yang layak diikuti.\n\n### Halaman kreator Mixch milikmu\n\nSetiap kreator Mixch di LiveStreamRecorder punya halaman sendiri tempat fans bisa menonton semua live yang sudah direkam. Daftar, tambahkan username Mixch-mu, dan halaman kreatormu langsung siap — tempat permanen untuk kontenmu yang tidak hilang saat live berakhir.\n\n### Dari live jadi klip: bangun pengikutmu\n\nClipAI mengubah rekaman live Mixch-mu jadi klip pendek siap posting di TikTok, Instagram Reels, atau YouTube Shorts. Ubah reaksi, momen musik, dan highlight ngobrol jadi konten viral dan tumbuhkan pengikutmu di luar Mixch.\n\n### Jadi kreator Mixch di LiveStreamRecorder\n\nDaftar gratis, tambahkan username Mixch-mu, dan mulai simpan live-mu hari ini. Setiap live otomatis tertangkap — tanpa rekam manual, tanpa app tambahan. Gabung dengan kreator Mixch yang sudah pakai LiveStreamRecorder untuk menjaga setiap live dan menumbuhkan audiens mereka."
+    "mixch": "## Kreator Mixch\n\nTemukan kreator Mixch yang menggunakan LiveStreamRecorder untuk menyimpan live mereka sendiri. Jelajahi streamer Mixch, tonton rekaman mereka, dan temukan kreator baru untuk diikuti dari komunitas live streaming mobile-first ini.\n\n### Kenapa kreator Mixch merekam live mereka\n\nLive Mixch hanya berlangsung secara live — begitu kamu mengakhiri siaran, kontennya hilang dari app. Tidak ada sistem replay dan fans tidak punya cara untuk menontonnya lagi. Kreator Mixch pakai LiveStreamRecorder untuk menyimpan setiap live secara otomatis, supaya sesi ngobrol, performa musik, dan konten sehari-harimu tetap tersedia untuk fans lama setelah live berakhir.\n\n### Jelajahi kreator Mixch terbaik\n\nBuka halaman kreator Mixch untuk menemukan streamer yang menyimpan live mereka sendiri di LiveStreamRecorder. Tonton rekaman mereka, kejar live yang kamu lewatkan, dan temukan kreator Mixch baru yang layak diikuti.\n\n### Halaman kreator Mixch milikmu\n\nSetiap kreator Mixch di LiveStreamRecorder punya halaman sendiri tempat fans bisa menonton semua live yang sudah direkam. Daftar, tambahkan username Mixch-mu, dan halaman kreatormu langsung siap — tempat permanen untuk kontenmu yang tidak hilang saat live berakhir.\n\n### Dari live jadi klip: bangun pengikutmu\n\nClipAI mengubah rekaman live Mixch-mu jadi klip pendek siap posting di TikTok, Instagram Reels, atau YouTube Shorts. Ubah reaksi, momen musik, dan highlight ngobrol jadi konten viral dan tumbuhkan pengikutmu di luar Mixch.\n\n### Jadi kreator Mixch di LiveStreamRecorder\n\nDaftar gratis, tambahkan username Mixch-mu, dan mulai simpan live-mu hari ini. Setiap live otomatis tertangkap — tanpa rekam manual, tanpa app tambahan. Gabung dengan kreator Mixch yang sudah pakai LiveStreamRecorder untuk menjaga setiap live dan menumbuhkan audiens mereka.",
+    "trovo": "## Kreator Trovo\n\nTemukan kreator Trovo yang menggunakan LiveStreamRecorder untuk menyimpan live mereka sendiri. Jelajahi streamer Trovo, tonton rekaman mereka, dan temukan kreator baru untuk diikuti dari komunitas live streaming mobile-first ini.\n\n### Kenapa kreator Trovo merekam live mereka\n\nLive Trovo hanya berlangsung secara live — begitu kamu mengakhiri siaran, kontennya hilang dari app. Tidak ada sistem replay dan fans tidak punya cara untuk menontonnya lagi. Kreator Trovo pakai LiveStreamRecorder untuk menyimpan setiap live secara otomatis, supaya sesi ngobrol, performa musik, dan konten sehari-harimu tetap tersedia untuk fans lama setelah live berakhir.\n\n### Jelajahi kreator Trovo terbaik\n\nBuka halaman kreator Trovo untuk menemukan streamer yang menyimpan live mereka sendiri di LiveStreamRecorder. Tonton rekaman mereka, kejar live yang kamu lewatkan, dan temukan kreator Trovo baru yang layak diikuti.\n\n### Halaman kreator Trovo milikmu\n\nSetiap kreator Trovo di LiveStreamRecorder punya halaman sendiri tempat fans bisa menonton semua live yang sudah direkam. Daftar, tambahkan username Trovo-mu, dan halaman kreatormu langsung siap — tempat permanen untuk kontenmu yang tidak hilang saat live berakhir.\n\n### Dari live jadi klip: bangun pengikutmu\n\nClipAI mengubah rekaman live Trovo-mu jadi klip pendek siap posting di TikTok, Instagram Reels, atau YouTube Shorts. Ubah reaksi, momen musik, dan highlight ngobrol jadi konten viral dan tumbuhkan pengikutmu di luar Trovo.\n\n### Jadi kreator Trovo di LiveStreamRecorder\n\nDaftar gratis, tambahkan username Trovo-mu, dan mulai simpan live-mu hari ini. Setiap live otomatis tertangkap — tanpa rekam manual, tanpa app tambahan. Gabung dengan kreator Trovo yang sudah pakai LiveStreamRecorder untuk menjaga setiap live dan menumbuhkan audiens mereka.",
+    "twitcast": "## Kreator TwitCasting\n\nTemukan kreator TwitCasting yang menggunakan LiveStreamRecorder untuk menyimpan live mereka sendiri. Jelajahi streamer TwitCasting, tonton rekaman mereka, dan temukan kreator baru untuk diikuti dari komunitas live streaming mobile-first ini.\n\n### Kenapa kreator TwitCasting merekam live mereka\n\nLive TwitCasting hanya berlangsung secara live — begitu kamu mengakhiri siaran, kontennya hilang dari app. Tidak ada sistem replay dan fans tidak punya cara untuk menontonnya lagi. Kreator TwitCasting pakai LiveStreamRecorder untuk menyimpan setiap live secara otomatis, supaya sesi ngobrol, performa musik, dan konten sehari-harimu tetap tersedia untuk fans lama setelah live berakhir.\n\n### Jelajahi kreator TwitCasting terbaik\n\nBuka halaman kreator TwitCasting untuk menemukan streamer yang menyimpan live mereka sendiri di LiveStreamRecorder. Tonton rekaman mereka, kejar live yang kamu lewatkan, dan temukan kreator TwitCasting baru yang layak diikuti.\n\n### Halaman kreator TwitCasting milikmu\n\nSetiap kreator TwitCasting di LiveStreamRecorder punya halaman sendiri tempat fans bisa menonton semua live yang sudah direkam. Daftar, tambahkan username TwitCasting-mu, dan halaman kreatormu langsung siap — tempat permanen untuk kontenmu yang tidak hilang saat live berakhir.\n\n### Dari live jadi klip: bangun pengikutmu\n\nClipAI mengubah rekaman live TwitCasting-mu jadi klip pendek siap posting di TikTok, Instagram Reels, atau YouTube Shorts. Ubah reaksi, momen musik, dan highlight ngobrol jadi konten viral dan tumbuhkan pengikutmu di luar TwitCasting.\n\n### Jadi kreator TwitCasting di LiveStreamRecorder\n\nDaftar gratis, tambahkan username TwitCasting-mu, dan mulai simpan live-mu hari ini. Setiap live otomatis tertangkap — tanpa rekam manual, tanpa app tambahan. Gabung dengan kreator TwitCasting yang sudah pakai LiveStreamRecorder untuk menjaga setiap live dan menumbuhkan audiens mereka."
   },
   "faq": "Pertanyaan yang Sering Diajukan",
   "country": {

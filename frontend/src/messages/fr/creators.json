@@ -226,6 +226,26 @@
         "enregistrement Mixch",
         "Mixch stream recorder"
       ]
+    },
+    "trovo": {
+      "title": "Créateurs Trovo",
+      "description": "Découvre les créateurs Trovo qui utilisent LiveStreamRecorder pour enregistrer leurs lives et les transformer en clips courts.",
+      "keywords": [
+        "créateurs Trovo",
+        "live Trovo",
+        "enregistrement Trovo",
+        "Trovo stream recorder"
+      ]
+    },
+    "twitcast": {
+      "title": "Créateurs TwitCasting",
+      "description": "Découvre les créateurs TwitCasting qui utilisent LiveStreamRecorder pour enregistrer leurs lives et les transformer en clips courts.",
+      "keywords": [
+        "créateurs TwitCasting",
+        "live TwitCasting",
+        "enregistrement TwitCasting",
+        "TwitCasting stream recorder"
+      ]
     }
   },
   "hero": {
@@ -240,7 +260,9 @@
       "bigo": "Créateurs Bigo",
       "buzzcast": "Créateurs Buzzcast",
       "liveme": "Créateurs LiveMe",
-      "mixch": "Créateurs Mixch"
+      "mixch": "Créateurs Mixch",
+      "trovo": "Créateurs Trovo",
+      "twitcast": "Créateurs TwitCasting"
     },
     "subtitle": {
       "all": "Rejoins des milliers de créateurs qui utilisent LiveStreamRecorder pour sauvegarder leurs streams et créer des clips courts.",
@@ -253,7 +275,9 @@
       "bigo": "Rejoins des milliers de créateurs Bigo qui utilisent LiveStreamRecorder pour sauvegarder leurs streams et créer des clips courts.",
       "buzzcast": "Rejoins des milliers de créateurs Buzzcast qui utilisent LiveStreamRecorder pour sauvegarder leurs streams et créer des clips courts.",
       "liveme": "Rejoins des milliers de créateurs LiveMe qui utilisent LiveStreamRecorder pour sauvegarder leurs streams et créer des clips courts.",
-      "mixch": "Rejoins des milliers de créateurs Mixch qui utilisent LiveStreamRecorder pour sauvegarder leurs streams et créer des clips courts."
+      "mixch": "Rejoins des milliers de créateurs Mixch qui utilisent LiveStreamRecorder pour sauvegarder leurs streams et créer des clips courts.",
+      "trovo": "Rejoins des milliers de créateurs Trovo qui utilisent LiveStreamRecorder pour sauvegarder leurs streams et créer des clips courts.",
+      "twitcast": "Rejoins des milliers de créateurs TwitCasting qui utilisent LiveStreamRecorder pour sauvegarder leurs streams et créer des clips courts."
     }
   },
   "features": {
@@ -269,7 +293,9 @@
       "bigo": "Enregistre tes streams Bigo automatiquement",
       "buzzcast": "Enregistre tes streams Buzzcast automatiquement",
       "liveme": "Enregistre tes streams LiveMe automatiquement",
-      "mixch": "Enregistre tes streams Mixch automatiquement"
+      "mixch": "Enregistre tes streams Mixch automatiquement",
+      "trovo": "Enregistre tes streams Trovo automatiquement",
+      "twitcast": "Enregistre tes streams TwitCasting automatiquement"
     },
     "subtitle": "Du live au clip court en quelques minutes",
     "items": {
@@ -303,7 +329,9 @@
       "bigo": "Enregistre tes streams Bigo",
       "buzzcast": "Enregistre tes streams Buzzcast",
       "liveme": "Enregistre tes streams LiveMe",
-      "mixch": "Enregistre tes streams Mixch"
+      "mixch": "Enregistre tes streams Mixch",
+      "trovo": "Enregistre tes streams Trovo",
+      "twitcast": "Enregistre tes streams TwitCasting"
     },
     "subtitle": {
       "all": "Rejoins des milliers de créateurs. Sauvegarde tes streams, crée des clips courts avec ClipAI et fais grandir ton audience.",
@@ -316,7 +344,9 @@
       "bigo": "Rejoins des milliers de créateurs Bigo. Sauvegarde tes streams et crée des clips courts avec ClipAI.",
       "buzzcast": "Rejoins des milliers de créateurs Buzzcast. Sauvegarde tes streams et crée des clips courts avec ClipAI.",
       "liveme": "Rejoins des milliers de créateurs LiveMe. Sauvegarde tes streams et crée des clips courts avec ClipAI.",
-      "mixch": "Rejoins des milliers de créateurs Mixch. Sauvegarde tes streams et crée des clips courts avec ClipAI."
+      "mixch": "Rejoins des milliers de créateurs Mixch. Sauvegarde tes streams et crée des clips courts avec ClipAI.",
+      "trovo": "Rejoins des milliers de créateurs Trovo. Sauvegarde tes streams et crée des clips courts avec ClipAI.",
+      "twitcast": "Rejoins des milliers de créateurs TwitCasting. Sauvegarde tes streams et crée des clips courts avec ClipAI."
     },
     "button": "Commencer à enregistrer gratuitement"
   },
@@ -333,7 +363,9 @@
       "bigo": "Sois le premier créateur Bigo à rejoindre !",
       "buzzcast": "Sois le premier créateur Buzzcast à rejoindre !",
       "liveme": "Sois le premier créateur LiveMe à rejoindre !",
-      "mixch": "Sois le premier créateur Mixch à rejoindre !"
+      "mixch": "Sois le premier créateur Mixch à rejoindre !",
+      "trovo": "Sois le premier créateur Trovo à rejoindre !",
+      "twitcast": "Sois le premier créateur TwitCasting à rejoindre !"
     },
     "button": "Commencer"
   },
@@ -348,7 +380,9 @@
     "bigo": "## Créateurs Bigo Live\n\nDécouvre les créateurs Bigo Live qui utilisent LiveStreamRecorder pour sauvegarder leurs propres lives. Parcours les streamers Bigo, regarde leurs enregistrements et trouve de nouveaux créateurs à suivre depuis l'une des plus grandes plateformes mondiales de live streaming — qui rassemble créateurs de danse, musique, chat et divertissement du Moyen-Orient, d'Asie et au-delà.\n\n### Pourquoi les créateurs Bigo enregistrent leurs lives\n\nLes lives Bigo n'existent que pendant qu'ils sont en cours — une fois la session terminée, le contenu disparaît complètement de l'app. Les créateurs Bigo utilisent LiveStreamRecorder pour sauvegarder chaque live automatiquement, pour que tes performances de danse, sessions de chant, moments de chat et interactions de cadeaux restent disponibles pour les fans longtemps après la fin de ton live.\n\n### Parcours les meilleurs créateurs Bigo\n\nExplore notre page de créateurs Bigo pour trouver des streamers qui sauvegardent leurs propres lives sur LiveStreamRecorder. Regarde leurs enregistrements, rattrape les lives que tu as manqués et découvre de nouveaux créateurs Bigo dans toutes les catégories et langues.\n\n### Ta page créateur Bigo\n\nChaque créateur Bigo sur LiveStreamRecorder a sa propre page où les fans peuvent parcourir tous tes lives enregistrés. Inscris-toi, ajoute ton nom d'utilisateur Bigo et ta page créateur est configurée automatiquement — un foyer permanent pour ton contenu qui dépasse la nature éphémère des lives Bigo.\n\n### Des lives aux clips — fais grandir ton audience\n\nClipAI transforme tes lives Bigo enregistrés en clips de moments forts courts prêts à publier sur TikTok, Instagram Reels ou YouTube Shorts. Moments de danse, duos, interactions avec les fans, performances musicales — transforme chaque live en plusieurs morceaux de contenu et fais grandir ton audience sur toutes les plateformes.\n\n### Deviens créateur·rice Bigo sur LiveStreamRecorder\n\nInscris-toi gratuitement, ajoute ton nom d'utilisateur Bigo et commence à sauvegarder tes lives aujourd'hui. Chaque live est capturé automatiquement — pas d'enregistrement avec ton téléphone, pas de capture d'écran. Rejoins les créateurs Bigo qui utilisent déjà LiveStreamRecorder pour garder chaque live et atteindre des fans dans le monde entier.",
     "buzzcast": "## Créateurs Buzzcast\n\nDécouvre les créateurs Buzzcast qui utilisent LiveStreamRecorder pour sauvegarder leurs propres lives. Parcours les streamers Buzzcast, regarde leurs enregistrements et trouve de nouveaux créateurs à suivre depuis cette communauté de live streaming mobile-first.\n\n### Pourquoi les créateurs Buzzcast enregistrent leurs lives\n\nLes lives Buzzcast ne sont disponibles qu'en direct — une fois le stream terminé, le contenu disparaît de l'app. Il n'y a pas de système de rediffusion intégré et aucun moyen pour les fans de rattraper après. Les créateurs Buzzcast utilisent LiveStreamRecorder pour sauvegarder chaque live automatiquement, pour que tes sessions de chat, performances musicales et contenu quotidien restent disponibles pour les fans longtemps après la fin du live.\n\n### Parcours les meilleurs créateurs Buzzcast\n\nExplore notre page de créateurs Buzzcast pour trouver des streamers qui sauvegardent leurs propres lives sur LiveStreamRecorder. Regarde leurs enregistrements, rattrape les lives que tu as manqués et découvre de nouveaux créateurs Buzzcast à suivre.\n\n### Ta page créateur Buzzcast\n\nChaque créateur Buzzcast sur LiveStreamRecorder a sa propre page où les fans peuvent parcourir tous tes lives enregistrés. Inscris-toi, ajoute ton nom d'utilisateur Buzzcast et ta page créateur est configurée automatiquement — un endroit permanent pour ton contenu qui ne disparaît pas au moment où ton live se termine.\n\n### Des lives aux clips — construis ton audience\n\nClipAI transforme tes lives Buzzcast enregistrés en clips de moments forts courts prêts à publier sur TikTok, Instagram Reels ou YouTube Shorts. Transforme tes réactions, moments musicaux et passages de chat forts en contenu partageable et fais grandir ton audience au-delà de Buzzcast.\n\n### Deviens créateur·rice Buzzcast sur LiveStreamRecorder\n\nInscris-toi gratuitement, ajoute ton nom d'utilisateur Buzzcast et commence à sauvegarder tes lives aujourd'hui. Chaque live est capturé automatiquement — pas d'enregistrement manuel, pas d'apps supplémentaires. Rejoins les créateurs Buzzcast qui utilisent déjà LiveStreamRecorder pour garder chaque live et faire grandir leur audience.",
     "liveme": "## Créateurs LiveMe\n\nDécouvre les créateurs LiveMe qui utilisent LiveStreamRecorder pour sauvegarder leurs propres lives. Parcours les streamers LiveMe, regarde leurs enregistrements et trouve de nouveaux créateurs à suivre depuis cette communauté de live streaming mobile-first.\n\n### Pourquoi les créateurs LiveMe enregistrent leurs lives\n\nLes lives LiveMe ne sont disponibles qu'en direct — une fois le stream terminé, le contenu disparaît de l'app. Il n'y a pas de système de rediffusion intégré et aucun moyen pour les fans de rattraper après. Les créateurs LiveMe utilisent LiveStreamRecorder pour sauvegarder chaque live automatiquement, pour que tes sessions de chat, performances musicales et contenu quotidien restent disponibles pour les fans longtemps après la fin du live.\n\n### Parcours les meilleurs créateurs LiveMe\n\nExplore notre page de créateurs LiveMe pour trouver des streamers qui sauvegardent leurs propres lives sur LiveStreamRecorder. Regarde leurs enregistrements, rattrape les lives que tu as manqués et découvre de nouveaux créateurs LiveMe à suivre.\n\n### Ta page créateur LiveMe\n\nChaque créateur LiveMe sur LiveStreamRecorder a sa propre page où les fans peuvent parcourir tous tes lives enregistrés. Inscris-toi, ajoute ton nom d'utilisateur LiveMe et ta page créateur est configurée automatiquement — un endroit permanent pour ton contenu qui ne disparaît pas au moment où ton live se termine.\n\n### Des lives aux clips — construis ton audience\n\nClipAI transforme tes lives LiveMe enregistrés en clips de moments forts courts prêts à publier sur TikTok, Instagram Reels ou YouTube Shorts. Transforme tes réactions, moments musicaux et passages de chat forts en contenu partageable et fais grandir ton audience au-delà de LiveMe.\n\n### Deviens créateur·rice LiveMe sur LiveStreamRecorder\n\nInscris-toi gratuitement, ajoute ton nom d'utilisateur LiveMe et commence à sauvegarder tes lives aujourd'hui. Chaque live est capturé automatiquement — pas d'enregistrement manuel, pas d'apps supplémentaires. Rejoins les créateurs LiveMe qui utilisent déjà LiveStreamRecorder pour garder chaque live et faire grandir leur audience.",
-    "mixch": "## Créateurs Mixch\n\nDécouvre les créateurs Mixch qui utilisent LiveStreamRecorder pour sauvegarder leurs propres lives. Parcours les streamers Mixch, regarde leurs enregistrements et trouve de nouveaux créateurs à suivre depuis cette communauté de live streaming mobile-first.\n\n### Pourquoi les créateurs Mixch enregistrent leurs lives\n\nLes lives Mixch ne sont disponibles qu'en direct — une fois le stream terminé, le contenu disparaît de l'app. Il n'y a pas de système de rediffusion intégré et aucun moyen pour les fans de rattraper après. Les créateurs Mixch utilisent LiveStreamRecorder pour sauvegarder chaque live automatiquement, pour que tes sessions de chat, performances musicales et contenu quotidien restent disponibles pour les fans longtemps après la fin du live.\n\n### Parcours les meilleurs créateurs Mixch\n\nExplore notre page de créateurs Mixch pour trouver des streamers qui sauvegardent leurs propres lives sur LiveStreamRecorder. Regarde leurs enregistrements, rattrape les lives que tu as manqués et découvre de nouveaux créateurs Mixch à suivre.\n\n### Ta page créateur Mixch\n\nChaque créateur Mixch sur LiveStreamRecorder a sa propre page où les fans peuvent parcourir tous tes lives enregistrés. Inscris-toi, ajoute ton nom d'utilisateur Mixch et ta page créateur est configurée automatiquement — un endroit permanent pour ton contenu qui ne disparaît pas au moment où ton live se termine.\n\n### Des lives aux clips — construis ton audience\n\nClipAI transforme tes lives Mixch enregistrés en clips de moments forts courts prêts à publier sur TikTok, Instagram Reels ou YouTube Shorts. Transforme tes réactions, moments musicaux et passages de chat forts en contenu partageable et fais grandir ton audience au-delà de Mixch.\n\n### Deviens créateur·rice Mixch sur LiveStreamRecorder\n\nInscris-toi gratuitement, ajoute ton nom d'utilisateur Mixch et commence à sauvegarder tes lives aujourd'hui. Chaque live est capturé automatiquement — pas d'enregistrement manuel, pas d'apps supplémentaires. Rejoins les créateurs Mixch qui utilisent déjà LiveStreamRecorder pour garder chaque live et faire grandir leur audience."
+    "mixch": "## Créateurs Mixch\n\nDécouvre les créateurs Mixch qui utilisent LiveStreamRecorder pour sauvegarder leurs propres lives. Parcours les streamers Mixch, regarde leurs enregistrements et trouve de nouveaux créateurs à suivre depuis cette communauté de live streaming mobile-first.\n\n### Pourquoi les créateurs Mixch enregistrent leurs lives\n\nLes lives Mixch ne sont disponibles qu'en direct — une fois le stream terminé, le contenu disparaît de l'app. Il n'y a pas de système de rediffusion intégré et aucun moyen pour les fans de rattraper après. Les créateurs Mixch utilisent LiveStreamRecorder pour sauvegarder chaque live automatiquement, pour que tes sessions de chat, performances musicales et contenu quotidien restent disponibles pour les fans longtemps après la fin du live.\n\n### Parcours les meilleurs créateurs Mixch\n\nExplore notre page de créateurs Mixch pour trouver des streamers qui sauvegardent leurs propres lives sur LiveStreamRecorder. Regarde leurs enregistrements, rattrape les lives que tu as manqués et découvre de nouveaux créateurs Mixch à suivre.\n\n### Ta page créateur Mixch\n\nChaque créateur Mixch sur LiveStreamRecorder a sa propre page où les fans peuvent parcourir tous tes lives enregistrés. Inscris-toi, ajoute ton nom d'utilisateur Mixch et ta page créateur est configurée automatiquement — un endroit permanent pour ton contenu qui ne disparaît pas au moment où ton live se termine.\n\n### Des lives aux clips — construis ton audience\n\nClipAI transforme tes lives Mixch enregistrés en clips de moments forts courts prêts à publier sur TikTok, Instagram Reels ou YouTube Shorts. Transforme tes réactions, moments musicaux et passages de chat forts en contenu partageable et fais grandir ton audience au-delà de Mixch.\n\n### Deviens créateur·rice Mixch sur LiveStreamRecorder\n\nInscris-toi gratuitement, ajoute ton nom d'utilisateur Mixch et commence à sauvegarder tes lives aujourd'hui. Chaque live est capturé automatiquement — pas d'enregistrement manuel, pas d'apps supplémentaires. Rejoins les créateurs Mixch qui utilisent déjà LiveStreamRecorder pour garder chaque live et faire grandir leur audience.",
+    "trovo": "## Créateurs Trovo\n\nDécouvre les créateurs Trovo qui utilisent LiveStreamRecorder pour sauvegarder leurs propres lives. Parcours les streamers Trovo, regarde leurs enregistrements et trouve de nouveaux créateurs à suivre depuis cette communauté de live streaming mobile-first.\n\n### Pourquoi les créateurs Trovo enregistrent leurs lives\n\nLes lives Trovo ne sont disponibles qu'en direct — une fois le stream terminé, le contenu disparaît de l'app. Il n'y a pas de système de rediffusion intégré et aucun moyen pour les fans de rattraper après. Les créateurs Trovo utilisent LiveStreamRecorder pour sauvegarder chaque live automatiquement, pour que tes sessions de chat, performances musicales et contenu quotidien restent disponibles pour les fans longtemps après la fin du live.\n\n### Parcours les meilleurs créateurs Trovo\n\nExplore notre page de créateurs Trovo pour trouver des streamers qui sauvegardent leurs propres lives sur LiveStreamRecorder. Regarde leurs enregistrements, rattrape les lives que tu as manqués et découvre de nouveaux créateurs Trovo à suivre.\n\n### Ta page créateur Trovo\n\nChaque créateur Trovo sur LiveStreamRecorder a sa propre page où les fans peuvent parcourir tous tes lives enregistrés. Inscris-toi, ajoute ton nom d'utilisateur Trovo et ta page créateur est configurée automatiquement — un endroit permanent pour ton contenu qui ne disparaît pas au moment où ton live se termine.\n\n### Des lives aux clips — construis ton audience\n\nClipAI transforme tes lives Trovo enregistrés en clips de moments forts courts prêts à publier sur TikTok, Instagram Reels ou YouTube Shorts. Transforme tes réactions, moments musicaux et passages de chat forts en contenu partageable et fais grandir ton audience au-delà de Trovo.\n\n### Deviens créateur·rice Trovo sur LiveStreamRecorder\n\nInscris-toi gratuitement, ajoute ton nom d'utilisateur Trovo et commence à sauvegarder tes lives aujourd'hui. Chaque live est capturé automatiquement — pas d'enregistrement manuel, pas d'apps supplémentaires. Rejoins les créateurs Trovo qui utilisent déjà LiveStreamRecorder pour garder chaque live et faire grandir leur audience.",
+    "twitcast": "## Créateurs TwitCasting\n\nDécouvre les créateurs TwitCasting qui utilisent LiveStreamRecorder pour sauvegarder leurs propres lives. Parcours les streamers TwitCasting, regarde leurs enregistrements et trouve de nouveaux créateurs à suivre depuis cette communauté de live streaming mobile-first.\n\n### Pourquoi les créateurs TwitCasting enregistrent leurs lives\n\nLes lives TwitCasting ne sont disponibles qu'en direct — une fois le stream terminé, le contenu disparaît de l'app. Il n'y a pas de système de rediffusion intégré et aucun moyen pour les fans de rattraper après. Les créateurs TwitCasting utilisent LiveStreamRecorder pour sauvegarder chaque live automatiquement, pour que tes sessions de chat, performances musicales et contenu quotidien restent disponibles pour les fans longtemps après la fin du live.\n\n### Parcours les meilleurs créateurs TwitCasting\n\nExplore notre page de créateurs TwitCasting pour trouver des streamers qui sauvegardent leurs propres lives sur LiveStreamRecorder. Regarde leurs enregistrements, rattrape les lives que tu as manqués et découvre de nouveaux créateurs TwitCasting à suivre.\n\n### Ta page créateur TwitCasting\n\nChaque créateur TwitCasting sur LiveStreamRecorder a sa propre page où les fans peuvent parcourir tous tes lives enregistrés. Inscris-toi, ajoute ton nom d'utilisateur TwitCasting et ta page créateur est configurée automatiquement — un endroit permanent pour ton contenu qui ne disparaît pas au moment où ton live se termine.\n\n### Des lives aux clips — construis ton audience\n\nClipAI transforme tes lives TwitCasting enregistrés en clips de moments forts courts prêts à publier sur TikTok, Instagram Reels ou YouTube Shorts. Transforme tes réactions, moments musicaux et passages de chat forts en contenu partageable et fais grandir ton audience au-delà de TwitCasting.\n\n### Deviens créateur·rice TwitCasting sur LiveStreamRecorder\n\nInscris-toi gratuitement, ajoute ton nom d'utilisateur TwitCasting et commence à sauvegarder tes lives aujourd'hui. Chaque live est capturé automatiquement — pas d'enregistrement manuel, pas d'apps supplémentaires. Rejoins les créateurs TwitCasting qui utilisent déjà LiveStreamRecorder pour garder chaque live et faire grandir leur audience."
   },
   "faq": "Questions fréquentes",
   "country": {

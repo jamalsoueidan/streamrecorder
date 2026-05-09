@@ -40,6 +40,8 @@ export const navConfig = {
     { key: "buzzcast", label: "Buzzcast", href: "/creators/buzzcast" },
     { key: "liveme", label: "LiveMe", href: "/creators/liveme" },
     { key: "mixch", label: "Mixch", href: "/creators/mixch" },
+    { key: "twitcast", label: "TwitCasting", href: "/creators/twitcast" },
+    { key: "trovo", label: "Trovo", href: "/creators/trovo" },
   ],
   watchRecordings: [
     { key: "browse", label: "Browse All", href: "/recordings/all" },
@@ -53,6 +55,8 @@ export const navConfig = {
     { key: "buzzcast", label: "Buzzcast", href: "/recordings/buzzcast" },
     { key: "liveme", label: "LiveMe", href: "/recordings/liveme" },
     { key: "mixch", label: "Mixch", href: "/recordings/mixch" },
+    { key: "twitcast", label: "TwitCasting", href: "/recordings/twitcast" },
+    { key: "trovo", label: "Trovo", href: "/recordings/trovo" },
   ],
   legal: [
     { key: "privacy", label: "Privacy Policy", href: "/privacy" },

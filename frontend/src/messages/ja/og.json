@@ -14,7 +14,9 @@
       "bigo": "Bigo クリエイター",
       "buzzcast": "Buzzcast クリエイター",
       "liveme": "ライブミー クリエイター",
-      "mixch": "ミクチャ クリエイター"
+      "mixch": "ミクチャ クリエイター",
+      "trovo": "Trovo クリエイター",
+      "twitcast": "ツイキャス クリエイター"
     },
     "subtitle": {
       "all": "すべてのストリーマー・クリエイターを探す",
@@ -27,7 +29,9 @@
       "bigo": "Bigo クリエイターを見つける",
       "buzzcast": "Buzzcast クリエイターを見つける",
       "liveme": "ライブミー クリエイターを見つける",
-      "mixch": "ミクチャ クリエイターを見つける"
+      "mixch": "ミクチャ クリエイターを見つける",
+      "trovo": "Trovo クリエイターを見つける",
+      "twitcast": "ツイキャス クリエイターを見つける"
     }
   },
   "recordings": {
@@ -42,7 +46,9 @@
       "bigo": "Bigo 録画",
       "buzzcast": "Buzzcast 録画",
       "liveme": "ライブミー 録画",
-      "mixch": "ミクチャ 録画"
+      "mixch": "ミクチャ 録画",
+      "trovo": "Trovo 録画",
+      "twitcast": "ツイキャス 録画"
     },
     "subtitle": {
       "all": "録画済みライブ配信を視聴",
@@ -55,7 +61,9 @@
       "bigo": "録画された Bigo 配信を視聴",
       "buzzcast": "録画された Buzzcast 配信を視聴",
       "liveme": "録画された ライブミー 配信を視聴",
-      "mixch": "録画された ミクチャ 配信を視聴"
+      "mixch": "録画された ミクチャ 配信を視聴",
+      "trovo": "録画された Trovo 配信を視聴",
+      "twitcast": "録画された ツイキャス 配信を視聴"
     }
   },
   "home": {

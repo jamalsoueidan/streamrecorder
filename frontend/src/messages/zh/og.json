@@ -14,7 +14,9 @@
       "bigo": "Bigo 创作者",
       "buzzcast": "Buzzcast 创作者",
       "liveme": "LiveMe 创作者",
-      "mixch": "Mixch 创作者"
+      "mixch": "Mixch 创作者",
+      "trovo": "Trovo 创作者",
+      "twitcast": "TwitCasting 创作者"
     },
     "subtitle": {
       "all": "浏览所有主播和创作者",
@@ -27,7 +29,9 @@
       "bigo": "发现 Bigo 创作者",
       "buzzcast": "发现 Buzzcast 创作者",
       "liveme": "发现 LiveMe 创作者",
-      "mixch": "发现 Mixch 创作者"
+      "mixch": "发现 Mixch 创作者",
+      "trovo": "发现 Trovo 创作者",
+      "twitcast": "发现 TwitCasting 创作者"
     }
   },
   "recordings": {
@@ -42,7 +46,9 @@
       "bigo": "Bigo 录制",
       "buzzcast": "Buzzcast 录制",
       "liveme": "LiveMe 录制",
-      "mixch": "Mixch 录制"
+      "mixch": "Mixch 录制",
+      "trovo": "Trovo 录制",
+      "twitcast": "TwitCasting 录制"
     },
     "subtitle": {
       "all": "观看直播录像",
@@ -55,7 +61,9 @@
       "bigo": "观看 Bigo 直播录像",
       "buzzcast": "观看 Buzzcast 直播录像",
       "liveme": "观看 LiveMe 直播录像",
-      "mixch": "观看 Mixch 直播录像"
+      "mixch": "观看 Mixch 直播录像",
+      "trovo": "观看 Trovo 直播录像",
+      "twitcast": "观看 TwitCasting 直播录像"
     }
   },
   "home": {

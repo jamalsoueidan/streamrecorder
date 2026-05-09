@@ -11,7 +11,9 @@
     "bigo": "Bigo",
     "buzzcast": "Buzzcast",
     "liveme": "LiveMe",
-    "mixch": "Mixch"
+    "mixch": "Mixch",
+    "twitcast": "TwitCasting",
+    "trovo": "Trovo"
   },
   "search": {
     "actionButton": "Search",

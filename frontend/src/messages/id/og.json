@@ -14,7 +14,9 @@
       "bigo": "Kreator Bigo",
       "buzzcast": "Kreator Buzzcast",
       "liveme": "Kreator LiveMe",
-      "mixch": "Kreator Mixch"
+      "mixch": "Kreator Mixch",
+      "trovo": "Kreator Trovo",
+      "twitcast": "Kreator TwitCasting"
     },
     "subtitle": {
       "all": "Jelajahi semua streamer dan kreator",
@@ -27,7 +29,9 @@
       "bigo": "Temukan kreator Bigo",
       "buzzcast": "Temukan kreator Buzzcast",
       "liveme": "Temukan kreator LiveMe",
-      "mixch": "Temukan kreator Mixch"
+      "mixch": "Temukan kreator Mixch",
+      "trovo": "Temukan kreator Trovo",
+      "twitcast": "Temukan kreator TwitCasting"
     }
   },
   "recordings": {
@@ -42,7 +46,9 @@
       "bigo": "Rekaman Bigo",
       "buzzcast": "Rekaman Buzzcast",
       "liveme": "Rekaman LiveMe",
-      "mixch": "Rekaman Mixch"
+      "mixch": "Rekaman Mixch",
+      "trovo": "Rekaman Trovo",
+      "twitcast": "Rekaman TwitCasting"
     },
     "subtitle": {
       "all": "Tonton rekaman live stream",
@@ -55,7 +61,9 @@
       "bigo": "Tonton stream Bigo yang direkam",
       "buzzcast": "Tonton stream Buzzcast yang direkam",
       "liveme": "Tonton stream LiveMe yang direkam",
-      "mixch": "Tonton stream Mixch yang direkam"
+      "mixch": "Tonton stream Mixch yang direkam",
+      "trovo": "Tonton stream Trovo yang direkam",
+      "twitcast": "Tonton stream TwitCasting yang direkam"
     }
   },
   "home": {

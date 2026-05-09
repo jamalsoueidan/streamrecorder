@@ -14,7 +14,9 @@
       "bigo": "Bigo Creators",
       "buzzcast": "Buzzcast Creators",
       "liveme": "LiveMe Creators",
-      "mixch": "Mixch Creators"
+      "mixch": "Mixch Creators",
+      "twitcast": "TwitCasting Streamers",
+      "trovo": "Trovo Streamers"
     },
     "subtitle": {
       "all": "Browse all streamers and creators",
@@ -27,7 +29,9 @@
       "bigo": "Discover Bigo creators",
       "buzzcast": "Discover Buzzcast creators",
       "liveme": "Discover LiveMe creators",
-      "mixch": "Discover Mixch creators"
+      "mixch": "Discover Mixch creators",
+      "twitcast": "Discover TwitCasting streamers",
+      "trovo": "Discover Trovo streamers"
     }
   },
   "recordings": {
@@ -42,7 +46,9 @@
       "bigo": "Bigo Recordings",
       "buzzcast": "Buzzcast Recordings",
       "liveme": "LiveMe Recordings",
-      "mixch": "Mixch Recordings"
+      "mixch": "Mixch Recordings",
+      "twitcast": "TwitCasting Recordings",
+      "trovo": "Trovo Recordings"
     },
     "subtitle": {
       "all": "Watch recorded live streams",
@@ -55,7 +61,9 @@
       "bigo": "Watch recorded Bigo streams",
       "buzzcast": "Watch recorded Buzzcast streams",
       "liveme": "Watch recorded LiveMe streams",
-      "mixch": "Watch recorded Mixch streams"
+      "mixch": "Watch recorded Mixch streams",
+      "twitcast": "Watch recorded TwitCasting Lives",
+      "trovo": "Watch recorded Trovo streams"
     }
   },
   "home": {

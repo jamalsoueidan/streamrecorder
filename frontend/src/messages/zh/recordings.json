@@ -369,6 +369,92 @@
           "answer": "可以。高级用户可以使用 ClipAI 将其 Mixch 直播录像自动转换为准备好用于 TikTok、YouTube Shorts 或 Reels 的精彩短视频。这是重新利用直播内容并在各平台上增加粉丝的好方法。"
         }
       ]
+    },
+    "trovo": {
+      "title": "Trovo 直播录像",
+      "description": "在 LiveStreamRecorder 上观看和下载 Trovo 直播录像。你的 Trovo 直播自动在云端捕获 — 无黑屏问题、无需屏幕录制器。创作者最简单的 Trovo 直播录制器。",
+      "keywords": [
+        "Trovo 录制器",
+        "Trovo 直播录制器",
+        "Trovo 直播录制",
+        "Trovo 直播屏幕录制器",
+        "屏幕录制 Trovo 直播",
+        "Trovo 黑屏录制",
+        "保存 Trovo 直播"
+      ],
+      "faqs": [
+        {
+          "question": "如何录制我的 Trovo 直播？",
+          "answer": "使用 LiveStreamRecorder,你的 Trovo 直播会自动在云端录制。注册、添加你的 Trovo 直播用户名,每次开播时都会被捕获。无需安装 Trovo 直播录制器 APK,无需屏幕录制 — 一切都在服务器端进行。"
+        },
+        {
+          "question": "为什么录制 Trovo 直播时出现黑屏？",
+          "answer": "在 Trovo 直播上使用屏幕录制器时,黑屏问题很常见。LiveStreamRecorder 完全避免了这个问题,因为它直接从云端捕获你的 Trovo 直播 — 没有黑屏、没有变通方法、没有不可靠的屏幕录制应用。"
+        },
+        {
+          "question": "如何修复 Trovo 直播屏幕录制器的黑屏？",
+          "answer": "最简单的解决方法是完全跳过屏幕录制。LiveStreamRecorder 是基于云端的 Trovo 录制器,在服务器端以高质量捕获你的直播。没有黑屏问题、无需配置应用 — 只需添加你的用户名,你的 Trovo 直播就会自动录制。"
+        },
+        {
+          "question": "我需要 Trovo 直播屏幕录制器吗？",
+          "answer": "不需要。Trovo 直播的屏幕录制器经常导致黑屏问题或低质量捕获。LiveStreamRecorder 是基于云端的 Trovo 直播录制器,它会自动以高质量捕获你的直播 — 无需安装应用,没有黑屏。"
+        },
+        {
+          "question": "我可以免费录制我的 Trovo 直播吗？",
+          "answer": "可以。免费注册 LiveStreamRecorder 并立即开始录制你的 Trovo 直播。高级套餐解锁下载录像、ClipAI 自动精彩瞬间短视频和扩展存储。"
+        },
+        {
+          "question": "我可以下载我的 Trovo 直播录像吗？",
+          "answer": "可以。高级用户可以将其 Trovo 直播录像下载为视频文件以离线观看。每个录像也可以在浏览器中即时观看,无需下载。"
+        },
+        {
+          "question": "我可以将 Trovo 直播录像转换为短视频吗？",
+          "answer": "可以。高级用户可以使用 ClipAI 将其 Trovo 直播录像自动转换为准备好用于 TikTok、YouTube Shorts 或 Reels 的精彩短视频。这是重新利用直播内容并在各平台上增加粉丝的好方法。"
+        }
+      ]
+    },
+    "twitcast": {
+      "title": "TwitCasting 直播录像",
+      "description": "在 LiveStreamRecorder 上观看和下载 TwitCasting 直播录像。你的 TwitCasting 直播自动在云端捕获 — 无黑屏问题、无需屏幕录制器。创作者最简单的 TwitCasting 直播录制器。",
+      "keywords": [
+        "TwitCasting 录制器",
+        "TwitCasting 直播录制器",
+        "TwitCasting 直播录制",
+        "TwitCasting 直播屏幕录制器",
+        "屏幕录制 TwitCasting 直播",
+        "TwitCasting 黑屏录制",
+        "保存 TwitCasting 直播"
+      ],
+      "faqs": [
+        {
+          "question": "如何录制我的 TwitCasting 直播？",
+          "answer": "使用 LiveStreamRecorder,你的 TwitCasting 直播会自动在云端录制。注册、添加你的 TwitCasting 直播用户名,每次开播时都会被捕获。无需安装 TwitCasting 直播录制器 APK,无需屏幕录制 — 一切都在服务器端进行。"
+        },
+        {
+          "question": "为什么录制 TwitCasting 直播时出现黑屏？",
+          "answer": "在 TwitCasting 直播上使用屏幕录制器时,黑屏问题很常见。LiveStreamRecorder 完全避免了这个问题,因为它直接从云端捕获你的 TwitCasting 直播 — 没有黑屏、没有变通方法、没有不可靠的屏幕录制应用。"
+        },
+        {
+          "question": "如何修复 TwitCasting 直播屏幕录制器的黑屏？",
+          "answer": "最简单的解决方法是完全跳过屏幕录制。LiveStreamRecorder 是基于云端的 TwitCasting 录制器,在服务器端以高质量捕获你的直播。没有黑屏问题、无需配置应用 — 只需添加你的用户名,你的 TwitCasting 直播就会自动录制。"
+        },
+        {
+          "question": "我需要 TwitCasting 直播屏幕录制器吗？",
+          "answer": "不需要。TwitCasting 直播的屏幕录制器经常导致黑屏问题或低质量捕获。LiveStreamRecorder 是基于云端的 TwitCasting 直播录制器,它会自动以高质量捕获你的直播 — 无需安装应用,没有黑屏。"
+        },
+        {
+          "question": "我可以免费录制我的 TwitCasting 直播吗？",
+          "answer": "可以。免费注册 LiveStreamRecorder 并立即开始录制你的 TwitCasting 直播。高级套餐解锁下载录像、ClipAI 自动精彩瞬间短视频和扩展存储。"
+        },
+        {
+          "question": "我可以下载我的 TwitCasting 直播录像吗？",
+          "answer": "可以。高级用户可以将其 TwitCasting 直播录像下载为视频文件以离线观看。每个录像也可以在浏览器中即时观看,无需下载。"
+        },
+        {
+          "question": "我可以将 TwitCasting 直播录像转换为短视频吗？",
+          "answer": "可以。高级用户可以使用 ClipAI 将其 TwitCasting 直播录像自动转换为准备好用于 TikTok、YouTube Shorts 或 Reels 的精彩短视频。这是重新利用直播内容并在各平台上增加粉丝的好方法。"
+        }
+      ]
     }
   },
   "hero": {
@@ -383,7 +469,9 @@
       "bigo": "Bigo 录像",
       "buzzcast": "Buzzcast 录像",
       "liveme": "LiveMe 录像",
-      "mixch": "Mixch 录像"
+      "mixch": "Mixch 录像",
+      "trovo": "Trovo 录像",
+      "twitcast": "TwitCasting 录像"
     },
     "subtitle": {
       "all": "在我们的平台上观看创作者的直播录像。下载并发现新内容。",
@@ -396,7 +484,9 @@
       "bigo": "在我们的平台上观看创作者的 Bigo 录像。下载并发现新内容。",
       "buzzcast": "在我们的平台上观看创作者的 Buzzcast 录像。下载并发现新内容。",
       "liveme": "在我们的平台上观看创作者的 LiveMe 录像。下载并发现新内容。",
-      "mixch": "在我们的平台上观看创作者的 Mixch 录像。下载并发现新内容。"
+      "mixch": "在我们的平台上观看创作者的 Mixch 录像。下载并发现新内容。",
+      "trovo": "在我们的平台上观看创作者的 Trovo 录像。下载并发现新内容。",
+      "twitcast": "在我们的平台上观看创作者的 TwitCasting 录像。下载并发现新内容。"
     }
   },
   "cta": {
@@ -411,7 +501,9 @@
       "bigo": "录制 Bigo 直播",
       "buzzcast": "录制 Buzzcast 直播",
       "liveme": "录制 LiveMe 直播",
-      "mixch": "录制 Mixch 直播"
+      "mixch": "录制 Mixch 直播",
+      "trovo": "录制 Trovo 直播",
+      "twitcast": "录制 TwitCasting 直播"
     },
     "subtitle": {
       "all": "自动保存你的 TikTok、Twitch、YouTube 和 Kick 直播。下载录像、创建短视频并扩大你的受众。",
@@ -424,7 +516,9 @@
       "bigo": "自动保存你的 Bigo 直播。下载录像并使用 ClipAI 创建短视频。",
       "buzzcast": "自动保存你的 Buzzcast 直播。下载录像并使用 ClipAI 创建短视频。",
       "liveme": "自动保存你的 LiveMe 直播。下载录像并使用 ClipAI 创建短视频。",
-      "mixch": "自动保存你的 Mixch 直播。下载录像并使用 ClipAI 创建短视频。"
+      "mixch": "自动保存你的 Mixch 直播。下载录像并使用 ClipAI 创建短视频。",
+      "trovo": "自动保存你的 Trovo 直播。下载录像并使用 ClipAI 创建短视频。",
+      "twitcast": "自动保存你的 TwitCasting 直播。下载录像并使用 ClipAI 创建短视频。"
     },
     "button": "免费开始录制"
   },
@@ -441,7 +535,9 @@
       "bigo": "成为第一个录制 Bigo 直播的创作者！",
       "buzzcast": "成为第一个录制 Buzzcast 直播的创作者！",
       "liveme": "成为第一个录制 LiveMe 直播的创作者！",
-      "mixch": "成为第一个录制 Mixch 直播的创作者！"
+      "mixch": "成为第一个录制 Mixch 直播的创作者！",
+      "trovo": "成为第一个录制 Trovo 直播的创作者！",
+      "twitcast": "成为第一个录制 TwitCasting 直播的创作者！"
     },
     "button": "立即开始"
   },
@@ -456,7 +552,9 @@
     "bigo": "## Bigo 直播录像\n\n观看使用 LiveStreamRecorder 保存自己直播的创作者的 Bigo 直播录像。每场 Bigo 直播都自动捕获并存储以供随时观看。\n\n### Bigo 直播在消失前保存\n\nBigo 直播仅在直播时存在 — 一旦你结束会话,内容就完全从应用中消失。我们的 Bigo 录制器在云端自动保存你的直播,所以你的内容不会在直播结束时消失。舞蹈表演、唱歌、聊天瞬间、礼物互动 — 一切都保持可用。\n\n### 观看和下载你的 Bigo 录像\n\n每个 Bigo 直播录像都可以在浏览器中即时观看。高级用户可以将 Bigo 录像下载为视频文件以离线观看 — 非常适合重新利用自己的内容或保留个人副本。\n\n### 录制你的 Bigo 直播 — 无需屏幕录制器\n\n忘掉在手机上运行屏幕捕获或让额外设备彻夜录制。LiveStreamRecorder 是在线 Bigo 录制器,在服务器端捕获你的直播。无手机电池消耗、无手动设置、无额外软件。无论你从 iPhone、Android 还是 PC 直播,你的 Bigo 直播都会自动以高质量录制。\n\n### 使用 ClipAI 将直播转换为短视频\n\n想将你的 Bigo 直播录像转换为短视频？ClipAI 分析你的录制直播并创建准备好发布到 TikTok、Instagram Reels 或 YouTube Shorts 的精彩短视频。通过重新利用你最精彩的 Bigo 瞬间,在全球范围内扩大你的受众。\n\n### 创作者的最佳 Bigo 录制器\n\nLiveStreamRecorder 专为保存 Bigo 直播而构建。免费注册、添加你的 Bigo 用户名,再也不会丢失任何直播。每场直播都自动捕获 — 你的 Bigo 内容的永久家园,不依赖应用为你保留。",
     "buzzcast": "## Buzzcast 直播录像\n\n观看使用 LiveStreamRecorder 保存自己直播的创作者的 Buzzcast 直播录像。每场 Buzzcast 直播都自动捕获并存储以供随时观看。\n\n### Buzzcast 直播在消失前保存\n\nBuzzcast 直播仅在直播时可用 — 一旦你结束直播,内容就从应用中消失。我们的 Buzzcast 录制器在云端自动保存你的直播,所以一旦你的直播结束,什么都不会丢失。聊天会话、音乐瞬间、日常内容 — 一切都为粉丝保持可用。\n\n### 观看和下载你的 Buzzcast 录像\n\n每个 Buzzcast 直播录像都可以在浏览器中即时观看。高级用户可以将 Buzzcast 录像下载为视频文件以离线观看 — 非常适合重新利用自己的内容或保留个人副本。\n\n### 录制你的 Buzzcast 直播 — 无需额外应用\n\n忘掉在手机上进行屏幕录制或在后台运行捕获软件。LiveStreamRecorder 是在线 Buzzcast 录制器,在服务器端捕获你的直播。无电池消耗、无手动设置、无额外软件。你的 Buzzcast 直播会从任何设备自动以高质量录制。\n\n### 使用 ClipAI 将直播转换为短视频\n\n想将你的 Buzzcast 直播录像转换为短视频？ClipAI 分析你的录制直播并创建准备好发布到 TikTok、Instagram Reels 或 YouTube Shorts 的精彩短视频。通过重新利用你最精彩的瞬间,在 Buzzcast 之外扩大你的粉丝。\n\n### 创作者的最佳 Buzzcast 录制器\n\nLiveStreamRecorder 专为保存 Buzzcast 直播而构建。免费注册、添加你的 Buzzcast 用户名,再也不会丢失任何直播。每场直播都自动捕获 — 你的永久 Buzzcast 内容库。",
     "liveme": "## LiveMe 直播录像\n\n观看使用 LiveStreamRecorder 保存自己直播的创作者的 LiveMe 直播录像。每场 LiveMe 直播都自动捕获并存储以供随时观看。\n\n### LiveMe 直播在消失前保存\n\nLiveMe 直播仅在直播时可用 — 一旦你结束直播,内容就从应用中消失。我们的 LiveMe 录制器在云端自动保存你的直播,所以一旦你的直播结束,什么都不会丢失。聊天会话、音乐瞬间、日常内容 — 一切都为粉丝保持可用。\n\n### 观看和下载你的 LiveMe 录像\n\n每个 LiveMe 直播录像都可以在浏览器中即时观看。高级用户可以将 LiveMe 录像下载为视频文件以离线观看 — 非常适合重新利用自己的内容或保留个人副本。\n\n### 录制你的 LiveMe 直播 — 无需额外应用\n\n忘掉在手机上进行屏幕录制或在后台运行捕获软件。LiveStreamRecorder 是在线 LiveMe 录制器,在服务器端捕获你的直播。无电池消耗、无手动设置、无额外软件。你的 LiveMe 直播会从任何设备自动以高质量录制。\n\n### 使用 ClipAI 将直播转换为短视频\n\n想将你的 LiveMe 直播录像转换为短视频？ClipAI 分析你的录制直播并创建准备好发布到 TikTok、Instagram Reels 或 YouTube Shorts 的精彩短视频。通过重新利用你最精彩的瞬间,在 LiveMe 之外扩大你的粉丝。\n\n### 创作者的最佳 LiveMe 录制器\n\nLiveStreamRecorder 专为保存 LiveMe 直播而构建。免费注册、添加你的 LiveMe 用户名,再也不会丢失任何直播。每场直播都自动捕获 — 你的永久 LiveMe 内容库。",
-    "mixch": "## Mixch 直播录像\n\n观看使用 LiveStreamRecorder 保存自己直播的创作者的 Mixch 直播录像。每场 Mixch 直播都自动捕获并存储以供随时观看。\n\n### Mixch 直播在消失前保存\n\nMixch 直播仅在直播时可用 — 一旦你结束直播,内容就从应用中消失。我们的 Mixch 录制器在云端自动保存你的直播,所以一旦你的直播结束,什么都不会丢失。聊天会话、音乐瞬间、日常内容 — 一切都为粉丝保持可用。\n\n### 观看和下载你的 Mixch 录像\n\n每个 Mixch 直播录像都可以在浏览器中即时观看。高级用户可以将 Mixch 录像下载为视频文件以离线观看 — 非常适合重新利用自己的内容或保留个人副本。\n\n### 录制你的 Mixch 直播 — 无需额外应用\n\n忘掉在手机上进行屏幕录制或在后台运行捕获软件。LiveStreamRecorder 是在线 Mixch 录制器,在服务器端捕获你的直播。无电池消耗、无手动设置、无额外软件。你的 Mixch 直播会从任何设备自动以高质量录制。\n\n### 使用 ClipAI 将直播转换为短视频\n\n想将你的 Mixch 直播录像转换为短视频？ClipAI 分析你的录制直播并创建准备好发布到 TikTok、Instagram Reels 或 YouTube Shorts 的精彩短视频。通过重新利用你最精彩的瞬间,在 Mixch 之外扩大你的粉丝。\n\n### 创作者的最佳 Mixch 录制器\n\nLiveStreamRecorder 专为保存 Mixch 直播而构建。免费注册、添加你的 Mixch 用户名,再也不会丢失任何直播。每场直播都自动捕获 — 你的永久 Mixch 内容库。"
+    "mixch": "## Mixch 直播录像\n\n观看使用 LiveStreamRecorder 保存自己直播的创作者的 Mixch 直播录像。每场 Mixch 直播都自动捕获并存储以供随时观看。\n\n### Mixch 直播在消失前保存\n\nMixch 直播仅在直播时可用 — 一旦你结束直播,内容就从应用中消失。我们的 Mixch 录制器在云端自动保存你的直播,所以一旦你的直播结束,什么都不会丢失。聊天会话、音乐瞬间、日常内容 — 一切都为粉丝保持可用。\n\n### 观看和下载你的 Mixch 录像\n\n每个 Mixch 直播录像都可以在浏览器中即时观看。高级用户可以将 Mixch 录像下载为视频文件以离线观看 — 非常适合重新利用自己的内容或保留个人副本。\n\n### 录制你的 Mixch 直播 — 无需额外应用\n\n忘掉在手机上进行屏幕录制或在后台运行捕获软件。LiveStreamRecorder 是在线 Mixch 录制器,在服务器端捕获你的直播。无电池消耗、无手动设置、无额外软件。你的 Mixch 直播会从任何设备自动以高质量录制。\n\n### 使用 ClipAI 将直播转换为短视频\n\n想将你的 Mixch 直播录像转换为短视频？ClipAI 分析你的录制直播并创建准备好发布到 TikTok、Instagram Reels 或 YouTube Shorts 的精彩短视频。通过重新利用你最精彩的瞬间,在 Mixch 之外扩大你的粉丝。\n\n### 创作者的最佳 Mixch 录制器\n\nLiveStreamRecorder 专为保存 Mixch 直播而构建。免费注册、添加你的 Mixch 用户名,再也不会丢失任何直播。每场直播都自动捕获 — 你的永久 Mixch 内容库。",
+    "trovo": "## Trovo 直播录像\n\n观看使用 LiveStreamRecorder 保存自己直播的创作者的 Trovo 直播录像。每场 Trovo 直播都自动捕获并存储以供随时观看。\n\n### Trovo 直播在消失前保存\n\nTrovo 直播仅在直播时可用 — 一旦你结束直播,内容就从应用中消失。我们的 Trovo 录制器在云端自动保存你的直播,所以一旦你的直播结束,什么都不会丢失。聊天会话、音乐瞬间、日常内容 — 一切都为粉丝保持可用。\n\n### 观看和下载你的 Trovo 录像\n\n每个 Trovo 直播录像都可以在浏览器中即时观看。高级用户可以将 Trovo 录像下载为视频文件以离线观看 — 非常适合重新利用自己的内容或保留个人副本。\n\n### 录制你的 Trovo 直播 — 无需额外应用\n\n忘掉在手机上进行屏幕录制或在后台运行捕获软件。LiveStreamRecorder 是在线 Trovo 录制器,在服务器端捕获你的直播。无电池消耗、无手动设置、无额外软件。你的 Trovo 直播会从任何设备自动以高质量录制。\n\n### 使用 ClipAI 将直播转换为短视频\n\n想将你的 Trovo 直播录像转换为短视频？ClipAI 分析你的录制直播并创建准备好发布到 TikTok、Instagram Reels 或 YouTube Shorts 的精彩短视频。通过重新利用你最精彩的瞬间,在 Trovo 之外扩大你的粉丝。\n\n### 创作者的最佳 Trovo 录制器\n\nLiveStreamRecorder 专为保存 Trovo 直播而构建。免费注册、添加你的 Trovo 用户名,再也不会丢失任何直播。每场直播都自动捕获 — 你的永久 Trovo 内容库。",
+    "twitcast": "## TwitCasting 直播录像\n\n观看使用 LiveStreamRecorder 保存自己直播的创作者的 TwitCasting 直播录像。每场 TwitCasting 直播都自动捕获并存储以供随时观看。\n\n### TwitCasting 直播在消失前保存\n\nTwitCasting 直播仅在直播时可用 — 一旦你结束直播,内容就从应用中消失。我们的 TwitCasting 录制器在云端自动保存你的直播,所以一旦你的直播结束,什么都不会丢失。聊天会话、音乐瞬间、日常内容 — 一切都为粉丝保持可用。\n\n### 观看和下载你的 TwitCasting 录像\n\n每个 TwitCasting 直播录像都可以在浏览器中即时观看。高级用户可以将 TwitCasting 录像下载为视频文件以离线观看 — 非常适合重新利用自己的内容或保留个人副本。\n\n### 录制你的 TwitCasting 直播 — 无需额外应用\n\n忘掉在手机上进行屏幕录制或在后台运行捕获软件。LiveStreamRecorder 是在线 TwitCasting 录制器,在服务器端捕获你的直播。无电池消耗、无手动设置、无额外软件。你的 TwitCasting 直播会从任何设备自动以高质量录制。\n\n### 使用 ClipAI 将直播转换为短视频\n\n想将你的 TwitCasting 直播录像转换为短视频？ClipAI 分析你的录制直播并创建准备好发布到 TikTok、Instagram Reels 或 YouTube Shorts 的精彩短视频。通过重新利用你最精彩的瞬间,在 TwitCasting 之外扩大你的粉丝。\n\n### 创作者的最佳 TwitCasting 录制器\n\nLiveStreamRecorder 专为保存 TwitCasting 直播而构建。免费注册、添加你的 TwitCasting 用户名,再也不会丢失任何直播。每场直播都自动捕获 — 你的永久 TwitCasting 内容库。"
   },
   "jsonLd": {
     "name": {
@@ -470,7 +568,9 @@
       "bigo": "Bigo 直播录像",
       "buzzcast": "Buzzcast 直播录像",
       "liveme": "LiveMe 直播录像",
-      "mixch": "Mixch 直播录像"
+      "mixch": "Mixch 直播录像",
+      "trovo": "Trovo 直播录像",
+      "twitcast": "TwitCasting 直播录像"
     },
     "description": {
       "all": "在 LiveStreamRecorder 上观看创作者的直播录像。",
@@ -483,7 +583,9 @@
       "bigo": "在 LiveStreamRecorder 上观看创作者的 Bigo 录像。",
       "buzzcast": "在 LiveStreamRecorder 上观看创作者的 Buzzcast 录像。",
       "liveme": "在 LiveStreamRecorder 上观看创作者的 LiveMe 录像。",
-      "mixch": "在 LiveStreamRecorder 上观看创作者的 Mixch 录像。"
+      "mixch": "在 LiveStreamRecorder 上观看创作者的 Mixch 录像。",
+      "trovo": "在 LiveStreamRecorder 上观看创作者的 Trovo 录像。",
+      "twitcast": "在 LiveStreamRecorder 上观看创作者的 TwitCasting 录像。"
     },
     "streamTitle": "{nickname} 直播 - {date}",
     "streamDescription": {
@@ -497,7 +599,9 @@
       "unknown": "{nickname} 的直播录像",
       "buzzcast": "{nickname} 的 Buzzcast 录像",
       "liveme": "{nickname} 的 LiveMe 录像",
-      "mixch": "{nickname} 的 Mixch 录像"
+      "mixch": "{nickname} 的 Mixch 录像",
+      "trovo": "{nickname} 的 Trovo 录像",
+      "twitcast": "{nickname} 的 TwitCasting 录像"
     }
   },
   "recordedOn": "录制于 {date}",
