@@ -2,7 +2,7 @@
   "tagline": "Nunca te pierdas una transmisión en vivo",
   "copyright": "Copyright © 2026 LiveStreamRecorder",
   "copyright_text": "LiveStreamRecorder proporciona infraestructura basada en la nube que permite a los usuarios grabar transmisiones para uso personal, privado y no comercial. Los usuarios son responsables de garantizar que su uso cumpla con las leyes aplicables y los términos de las plataformas de terceros.",
-  "association": "Los nombres de productos, logotipos y marcas de Twitch, YouTube, TikTok, Kick, AfreecaTV, PandaTV, Bigo y Buzzcast son propiedad de sus respectivos dueños. Todos los nombres de empresas, productos y servicios utilizados en este sitio web son solo con fines de identificación. El uso de estos nombres, marcas registradas y marcas no implica respaldo.",
+  "association": "Los nombres de productos, logotipos y marcas de Twitch, YouTube, TikTok, Kick, AfreecaTV, PandaTV, Bigo, Buzzcast, LiveMe, Mixch, TwitCasting y Trovo son propiedad de sus respectivos dueños. Todos los nombres de empresas, productos y servicios utilizados en este sitio web son solo con fines de identificación. El uso de estos nombres, marcas registradas y marcas no implica respaldo.",
   "header": {
     "creators": "Creadores",
     "recordings": "Grabaciones",
@@ -24,7 +24,9 @@
     "bigo": "Creadores de Bigo",
     "buzzcast": "Creadores de Buzzcast",
     "liveme": "Creadores de LiveMe",
-    "mixch": "Creadores de Mixch"
+    "mixch": "Creadores de Mixch",
+    "trovo": "Creadores de Trovo",
+    "twitcast": "Creadores de TwitCasting"
   },
   "watchRecordings": {
     "title": "Ver Grabaciones",
@@ -38,7 +40,9 @@
     "bigo": "Grabaciones de Bigo",
     "buzzcast": "Grabaciones de Buzzcast",
     "liveme": "Grabaciones de LiveMe",
-    "mixch": "Grabaciones de Mixch"
+    "mixch": "Grabaciones de Mixch",
+    "trovo": "Grabaciones de Trovo",
+    "twitcast": "Grabaciones de TwitCasting"
   },
   "legal": {
     "title": "Legal",

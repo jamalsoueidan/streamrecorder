@@ -107,6 +107,24 @@ export const usePlatformOptions = () => {
         </Center>
       ),
     },
+    {
+      value: "twitcast",
+      label: (
+        <Center style={{ gap: 8 }}>
+          <IconBrandFunimation size={18} />
+          <Text size="sm">{t("platforms.twitcast")}</Text>
+        </Center>
+      ),
+    },
+    {
+      value: "trovo",
+      label: (
+        <Center style={{ gap: 8 }}>
+          <IconBrandFunimation size={18} />
+          <Text size="sm">{t("platforms.trovo")}</Text>
+        </Center>
+      ),
+    },
   ];
 };
 
@@ -165,6 +183,16 @@ export const PLATFORM_OPTIONS = [
   {
     value: "mixch",
     labelKey: "platforms.mixch",
+    icon: IconBrandFunimation,
+  },
+  {
+    value: "twitcast",
+    labelKey: "platforms.twitcast",
+    icon: IconBrandFunimation,
+  },
+  {
+    value: "trovo",
+    labelKey: "platforms.trovo",
     icon: IconBrandFunimation,
   },
 ];

@@ -223,6 +223,26 @@
         "Mixch 录制",
         "Mixch 直播录制器"
       ]
+    },
+    "trovo": {
+      "title": "Trovo 创作者",
+      "description": "发现使用 LiveStreamRecorder 录制直播并将其转换为短视频的 Trovo 创作者。",
+      "keywords": [
+        "Trovo 创作者",
+        "Trovo 直播",
+        "Trovo 录制",
+        "Trovo 直播录制器"
+      ]
+    },
+    "twitcast": {
+      "title": "TwitCasting 创作者",
+      "description": "发现使用 LiveStreamRecorder 录制直播并将其转换为短视频的 TwitCasting 创作者。",
+      "keywords": [
+        "TwitCasting 创作者",
+        "TwitCasting 直播",
+        "TwitCasting 录制",
+        "TwitCasting 直播录制器"
+      ]
     }
   },
   "hero": {
@@ -237,7 +257,9 @@
       "bigo": "Bigo 创作者",
       "buzzcast": "Buzzcast 创作者",
       "liveme": "LiveMe 创作者",
-      "mixch": "Mixch 创作者"
+      "mixch": "Mixch 创作者",
+      "trovo": "Trovo 创作者",
+      "twitcast": "TwitCasting 创作者"
     },
     "subtitle": {
       "all": "加入数千名使用 LiveStreamRecorder 保存直播并创建短视频的创作者。",
@@ -250,7 +272,9 @@
       "bigo": "加入数千名使用 LiveStreamRecorder 保存直播并创建短视频的 Bigo 创作者。",
       "buzzcast": "加入数千名使用 LiveStreamRecorder 保存直播并创建短视频的 Buzzcast 创作者。",
       "liveme": "加入数千名使用 LiveStreamRecorder 保存直播并创建短视频的 LiveMe 创作者。",
-      "mixch": "加入数千名使用 LiveStreamRecorder 保存直播并创建短视频的 Mixch 创作者。"
+      "mixch": "加入数千名使用 LiveStreamRecorder 保存直播并创建短视频的 Mixch 创作者。",
+      "trovo": "加入数千名使用 LiveStreamRecorder 保存直播并创建短视频的 Trovo 创作者。",
+      "twitcast": "加入数千名使用 LiveStreamRecorder 保存直播并创建短视频的 TwitCasting 创作者。"
     }
   },
   "features": {
@@ -266,7 +290,9 @@
       "bigo": "自动录制你的 Bigo 直播",
       "buzzcast": "自动录制你的 Buzzcast 直播",
       "liveme": "自动录制你的 LiveMe 直播",
-      "mixch": "自动录制你的 Mixch 直播"
+      "mixch": "自动录制你的 Mixch 直播",
+      "trovo": "自动录制你的 Trovo 直播",
+      "twitcast": "自动录制你的 TwitCasting 直播"
     },
     "subtitle": "几分钟内从直播到短视频",
     "items": {
@@ -300,7 +326,9 @@
       "bigo": "录制你的 Bigo 直播",
       "buzzcast": "录制你的 Buzzcast 直播",
       "liveme": "录制你的 LiveMe 直播",
-      "mixch": "录制你的 Mixch 直播"
+      "mixch": "录制你的 Mixch 直播",
+      "trovo": "录制你的 Trovo 直播",
+      "twitcast": "录制你的 TwitCasting 直播"
     },
     "subtitle": {
       "all": "加入数千名创作者。保存你的直播,使用 ClipAI 创建短视频,扩大你的受众。",
@@ -313,7 +341,9 @@
       "bigo": "加入数千名 Bigo 创作者。保存你的直播并使用 ClipAI 创建短视频。",
       "buzzcast": "加入数千名 Buzzcast 创作者。保存你的直播并使用 ClipAI 创建短视频。",
       "liveme": "加入数千名 LiveMe 创作者。保存你的直播并使用 ClipAI 创建短视频。",
-      "mixch": "加入数千名 Mixch 创作者。保存你的直播并使用 ClipAI 创建短视频。"
+      "mixch": "加入数千名 Mixch 创作者。保存你的直播并使用 ClipAI 创建短视频。",
+      "trovo": "加入数千名 Trovo 创作者。保存你的直播并使用 ClipAI 创建短视频。",
+      "twitcast": "加入数千名 TwitCasting 创作者。保存你的直播并使用 ClipAI 创建短视频。"
     },
     "button": "免费开始录制"
   },
@@ -330,7 +360,9 @@
       "bigo": "成为第一个加入的 Bigo 创作者！",
       "buzzcast": "成为第一个加入的 Buzzcast 创作者！",
       "liveme": "成为第一个加入的 LiveMe 创作者！",
-      "mixch": "成为第一个加入的 Mixch 创作者！"
+      "mixch": "成为第一个加入的 Mixch 创作者！",
+      "trovo": "成为第一个加入的 Trovo 创作者！",
+      "twitcast": "成为第一个加入的 TwitCasting 创作者！"
     },
     "button": "立即开始"
   },
@@ -345,7 +377,9 @@
     "bigo": "## Bigo 直播创作者\n\n发现使用 LiveStreamRecorder 保存自己直播的 Bigo 直播创作者。浏览 Bigo 主播,观看他们的录像,在最大的全球直播平台之一中找到要关注的新创作者 — 来自中东、亚洲及其他地区的舞蹈、音乐、聊天和娱乐创作者的家园。\n\n### Bigo 创作者为什么录制他们的直播\n\nBigo 直播仅在直播时存在 — 一旦你结束会话,内容就完全从应用中消失。Bigo 创作者使用 LiveStreamRecorder 自动保存每场直播,所以你的舞蹈表演、歌唱会话、聊天瞬间和礼物互动在直播结束后很久仍然可供粉丝观看。\n\n### 浏览顶级 Bigo 创作者\n\n探索我们的 Bigo 创作者页面,找到在 LiveStreamRecorder 上保存自己直播的主播。观看他们的录像、补看错过的直播,发现各类别和语言中的新 Bigo 创作者。\n\n### 你的 Bigo 创作者主页\n\nLiveStreamRecorder 上的每位 Bigo 创作者都有自己的主页,粉丝可以浏览所有录制的直播。注册、添加你的 Bigo 用户名,你的创作者主页就会自动设置 — 一个超越 Bigo 直播消失性质的内容永久家园。\n\n### 从直播到短视频 — 扩大你的受众\n\nClipAI 将你的 Bigo 直播录像转换为准备好发布到 TikTok、Instagram Reels 或 YouTube Shorts 的短视频。舞蹈瞬间、合拍、粉丝互动、音乐表演 — 将每场直播转换为多个内容,在每个平台上扩大你的受众。\n\n### 在 LiveStreamRecorder 上成为 Bigo 创作者\n\n免费注册、添加你的 Bigo 用户名,今天就开始保存你的直播。每场直播都会自动捕获 — 无需手机录制、无需屏幕捕获。加入已经使用 LiveStreamRecorder 保留每场直播并在全球触达粉丝的 Bigo 创作者。",
     "buzzcast": "## Buzzcast 创作者\n\n发现使用 LiveStreamRecorder 保存自己直播的 Buzzcast 创作者。浏览 Buzzcast 主播,观看他们的录像,在这个移动优先的直播社区中找到要关注的新创作者。\n\n### Buzzcast 创作者为什么录制他们的直播\n\nBuzzcast 直播仅在直播时可用 — 一旦你结束直播,内容就从应用中消失。没有内置的重播系统,粉丝也没有事后补看的方式。Buzzcast 创作者使用 LiveStreamRecorder 自动保存每场直播,所以你的聊天会话、音乐表演和日常内容在直播结束后很久仍然可供粉丝观看。\n\n### 浏览顶级 Buzzcast 创作者\n\n探索我们的 Buzzcast 创作者页面,找到在 LiveStreamRecorder 上保存自己直播的主播。观看他们的录像、补看错过的直播,发现值得关注的新 Buzzcast 创作者。\n\n### 你的 Buzzcast 创作者主页\n\nLiveStreamRecorder 上的每位 Buzzcast 创作者都有自己的主页,粉丝可以浏览所有录制的直播。注册、添加你的 Buzzcast 用户名,你的创作者主页就会自动设置 — 一个不会在你直播结束时消失的内容永久家园。\n\n### 从直播到短视频 — 建立你的粉丝\n\nClipAI 将你的 Buzzcast 直播录像转换为准备好发布到 TikTok、Instagram Reels 或 YouTube Shorts 的短视频。将反应、音乐瞬间和聊天精彩瞬间转换为可分享的内容,在 Buzzcast 之外扩大你的粉丝。\n\n### 在 LiveStreamRecorder 上成为 Buzzcast 创作者\n\n免费注册、添加你的 Buzzcast 用户名,今天就开始保存你的直播。每场直播都会自动捕获 — 无需手动录制、无需额外应用。加入已经使用 LiveStreamRecorder 保留每场直播并扩大受众的 Buzzcast 创作者。",
     "liveme": "## LiveMe 创作者\n\n发现使用 LiveStreamRecorder 保存自己直播的 LiveMe 创作者。浏览 LiveMe 主播,观看他们的录像,在这个移动优先的直播社区中找到要关注的新创作者。\n\n### LiveMe 创作者为什么录制他们的直播\n\nLiveMe 直播仅在直播时可用 — 一旦你结束直播,内容就从应用中消失。没有内置的重播系统,粉丝也没有事后补看的方式。LiveMe 创作者使用 LiveStreamRecorder 自动保存每场直播,所以你的聊天会话、音乐表演和日常内容在直播结束后很久仍然可供粉丝观看。\n\n### 浏览顶级 LiveMe 创作者\n\n探索我们的 LiveMe 创作者页面,找到在 LiveStreamRecorder 上保存自己直播的主播。观看他们的录像、补看错过的直播,发现值得关注的新 LiveMe 创作者。\n\n### 你的 LiveMe 创作者主页\n\nLiveStreamRecorder 上的每位 LiveMe 创作者都有自己的主页,粉丝可以浏览所有录制的直播。注册、添加你的 LiveMe 用户名,你的创作者主页就会自动设置 — 一个不会在你直播结束时消失的内容永久家园。\n\n### 从直播到短视频 — 建立你的粉丝\n\nClipAI 将你的 LiveMe 直播录像转换为准备好发布到 TikTok、Instagram Reels 或 YouTube Shorts 的短视频。将反应、音乐瞬间和聊天精彩瞬间转换为可分享的内容,在 LiveMe 之外扩大你的粉丝。\n\n### 在 LiveStreamRecorder 上成为 LiveMe 创作者\n\n免费注册、添加你的 LiveMe 用户名,今天就开始保存你的直播。每场直播都会自动捕获 — 无需手动录制、无需额外应用。加入已经使用 LiveStreamRecorder 保留每场直播并扩大受众的 LiveMe 创作者。",
-    "mixch": "## Mixch 创作者\n\n发现使用 LiveStreamRecorder 保存自己直播的 Mixch 创作者。浏览 Mixch 主播,观看他们的录像,在这个移动优先的直播社区中找到要关注的新创作者。\n\n### Mixch 创作者为什么录制他们的直播\n\nMixch 直播仅在直播时可用 — 一旦你结束直播,内容就从应用中消失。没有内置的重播系统,粉丝也没有事后补看的方式。Mixch 创作者使用 LiveStreamRecorder 自动保存每场直播,所以你的聊天会话、音乐表演和日常内容在直播结束后很久仍然可供粉丝观看。\n\n### 浏览顶级 Mixch 创作者\n\n探索我们的 Mixch 创作者页面,找到在 LiveStreamRecorder 上保存自己直播的主播。观看他们的录像、补看错过的直播,发现值得关注的新 Mixch 创作者。\n\n### 你的 Mixch 创作者主页\n\nLiveStreamRecorder 上的每位 Mixch 创作者都有自己的主页,粉丝可以浏览所有录制的直播。注册、添加你的 Mixch 用户名,你的创作者主页就会自动设置 — 一个不会在你直播结束时消失的内容永久家园。\n\n### 从直播到短视频 — 建立你的粉丝\n\nClipAI 将你的 Mixch 直播录像转换为准备好发布到 TikTok、Instagram Reels 或 YouTube Shorts 的短视频。将反应、音乐瞬间和聊天精彩瞬间转换为可分享的内容,在 Mixch 之外扩大你的粉丝。\n\n### 在 LiveStreamRecorder 上成为 Mixch 创作者\n\n免费注册、添加你的 Mixch 用户名,今天就开始保存你的直播。每场直播都会自动捕获 — 无需手动录制、无需额外应用。加入已经使用 LiveStreamRecorder 保留每场直播并扩大受众的 Mixch 创作者。"
+    "mixch": "## Mixch 创作者\n\n发现使用 LiveStreamRecorder 保存自己直播的 Mixch 创作者。浏览 Mixch 主播,观看他们的录像,在这个移动优先的直播社区中找到要关注的新创作者。\n\n### Mixch 创作者为什么录制他们的直播\n\nMixch 直播仅在直播时可用 — 一旦你结束直播,内容就从应用中消失。没有内置的重播系统,粉丝也没有事后补看的方式。Mixch 创作者使用 LiveStreamRecorder 自动保存每场直播,所以你的聊天会话、音乐表演和日常内容在直播结束后很久仍然可供粉丝观看。\n\n### 浏览顶级 Mixch 创作者\n\n探索我们的 Mixch 创作者页面,找到在 LiveStreamRecorder 上保存自己直播的主播。观看他们的录像、补看错过的直播,发现值得关注的新 Mixch 创作者。\n\n### 你的 Mixch 创作者主页\n\nLiveStreamRecorder 上的每位 Mixch 创作者都有自己的主页,粉丝可以浏览所有录制的直播。注册、添加你的 Mixch 用户名,你的创作者主页就会自动设置 — 一个不会在你直播结束时消失的内容永久家园。\n\n### 从直播到短视频 — 建立你的粉丝\n\nClipAI 将你的 Mixch 直播录像转换为准备好发布到 TikTok、Instagram Reels 或 YouTube Shorts 的短视频。将反应、音乐瞬间和聊天精彩瞬间转换为可分享的内容,在 Mixch 之外扩大你的粉丝。\n\n### 在 LiveStreamRecorder 上成为 Mixch 创作者\n\n免费注册、添加你的 Mixch 用户名,今天就开始保存你的直播。每场直播都会自动捕获 — 无需手动录制、无需额外应用。加入已经使用 LiveStreamRecorder 保留每场直播并扩大受众的 Mixch 创作者。",
+    "trovo": "## Trovo 创作者\n\n发现使用 LiveStreamRecorder 保存自己直播的 Trovo 创作者。浏览 Trovo 主播,观看他们的录像,在这个移动优先的直播社区中找到要关注的新创作者。\n\n### Trovo 创作者为什么录制他们的直播\n\nTrovo 直播仅在直播时可用 — 一旦你结束直播,内容就从应用中消失。没有内置的重播系统,粉丝也没有事后补看的方式。Trovo 创作者使用 LiveStreamRecorder 自动保存每场直播,所以你的聊天会话、音乐表演和日常内容在直播结束后很久仍然可供粉丝观看。\n\n### 浏览顶级 Trovo 创作者\n\n探索我们的 Trovo 创作者页面,找到在 LiveStreamRecorder 上保存自己直播的主播。观看他们的录像、补看错过的直播,发现值得关注的新 Trovo 创作者。\n\n### 你的 Trovo 创作者主页\n\nLiveStreamRecorder 上的每位 Trovo 创作者都有自己的主页,粉丝可以浏览所有录制的直播。注册、添加你的 Trovo 用户名,你的创作者主页就会自动设置 — 一个不会在你直播结束时消失的内容永久家园。\n\n### 从直播到短视频 — 建立你的粉丝\n\nClipAI 将你的 Trovo 直播录像转换为准备好发布到 TikTok、Instagram Reels 或 YouTube Shorts 的短视频。将反应、音乐瞬间和聊天精彩瞬间转换为可分享的内容,在 Trovo 之外扩大你的粉丝。\n\n### 在 LiveStreamRecorder 上成为 Trovo 创作者\n\n免费注册、添加你的 Trovo 用户名,今天就开始保存你的直播。每场直播都会自动捕获 — 无需手动录制、无需额外应用。加入已经使用 LiveStreamRecorder 保留每场直播并扩大受众的 Trovo 创作者。",
+    "twitcast": "## TwitCasting 创作者\n\n发现使用 LiveStreamRecorder 保存自己直播的 TwitCasting 创作者。浏览 TwitCasting 主播,观看他们的录像,在这个移动优先的直播社区中找到要关注的新创作者。\n\n### TwitCasting 创作者为什么录制他们的直播\n\nTwitCasting 直播仅在直播时可用 — 一旦你结束直播,内容就从应用中消失。没有内置的重播系统,粉丝也没有事后补看的方式。TwitCasting 创作者使用 LiveStreamRecorder 自动保存每场直播,所以你的聊天会话、音乐表演和日常内容在直播结束后很久仍然可供粉丝观看。\n\n### 浏览顶级 TwitCasting 创作者\n\n探索我们的 TwitCasting 创作者页面,找到在 LiveStreamRecorder 上保存自己直播的主播。观看他们的录像、补看错过的直播,发现值得关注的新 TwitCasting 创作者。\n\n### 你的 TwitCasting 创作者主页\n\nLiveStreamRecorder 上的每位 TwitCasting 创作者都有自己的主页,粉丝可以浏览所有录制的直播。注册、添加你的 TwitCasting 用户名,你的创作者主页就会自动设置 — 一个不会在你直播结束时消失的内容永久家园。\n\n### 从直播到短视频 — 建立你的粉丝\n\nClipAI 将你的 TwitCasting 直播录像转换为准备好发布到 TikTok、Instagram Reels 或 YouTube Shorts 的短视频。将反应、音乐瞬间和聊天精彩瞬间转换为可分享的内容,在 TwitCasting 之外扩大你的粉丝。\n\n### 在 LiveStreamRecorder 上成为 TwitCasting 创作者\n\n免费注册、添加你的 TwitCasting 用户名,今天就开始保存你的直播。每场直播都会自动捕获 — 无需手动录制、无需额外应用。加入已经使用 LiveStreamRecorder 保留每场直播并扩大受众的 TwitCasting 创作者。"
   },
   "faq": "常见问题",
   "country": {

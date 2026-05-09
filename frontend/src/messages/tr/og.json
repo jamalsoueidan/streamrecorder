@@ -14,7 +14,9 @@
       "bigo": "Bigo İçerik Üreticileri",
       "buzzcast": "Buzzcast İçerik Üreticileri",
       "liveme": "LiveMe İçerik Üreticileri",
-      "mixch": "Mixch İçerik Üreticileri"
+      "mixch": "Mixch İçerik Üreticileri",
+      "trovo": "Trovo İçerik Üreticileri",
+      "twitcast": "TwitCasting İçerik Üreticileri"
     },
     "subtitle": {
       "all": "Tüm yayıncılara ve içerik üreticilerine göz atın",
@@ -27,7 +29,9 @@
       "bigo": "Bigo içerik üreticilerini keşfedin",
       "buzzcast": "Buzzcast içerik üreticilerini keşfedin",
       "liveme": "LiveMe içerik üreticilerini keşfedin",
-      "mixch": "Mixch içerik üreticilerini keşfedin"
+      "mixch": "Mixch içerik üreticilerini keşfedin",
+      "trovo": "Trovo içerik üreticilerini keşfedin",
+      "twitcast": "TwitCasting içerik üreticilerini keşfedin"
     }
   },
   "recordings": {
@@ -42,7 +46,9 @@
       "bigo": "Bigo Kayıtları",
       "buzzcast": "Buzzcast Kayıtları",
       "liveme": "LiveMe Kayıtları",
-      "mixch": "Mixch Kayıtları"
+      "mixch": "Mixch Kayıtları",
+      "trovo": "Trovo Kayıtları",
+      "twitcast": "TwitCasting Kayıtları"
     },
     "subtitle": {
       "all": "Kaydedilmiş canlı yayınları izleyin",
@@ -55,7 +61,9 @@
       "bigo": "Kaydedilmiş Bigo yayınlarını izleyin",
       "buzzcast": "Kaydedilmiş Buzzcast yayınlarını izleyin",
       "liveme": "Kaydedilmiş LiveMe yayınlarını izleyin",
-      "mixch": "Kaydedilmiş Mixch yayınlarını izleyin"
+      "mixch": "Kaydedilmiş Mixch yayınlarını izleyin",
+      "trovo": "Kaydedilmiş Trovo yayınlarını izleyin",
+      "twitcast": "Kaydedilmiş TwitCasting yayınlarını izleyin"
     }
   },
   "home": {

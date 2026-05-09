@@ -144,6 +144,32 @@ export function parseUsername(input: string): ParsedUsername {
     };
   }
 
+  // TwitCasting URL pattern — twitcasting.tv/{username}, also supports
+  // c:username variants
+  const twitcastRegex =
+    /(?:https?:\/\/)?(?:www\.)?twitcasting\.tv\/(?:c:)?([^\/\s?]+)/i;
+  const twitcastMatch = trimmed.match(twitcastRegex);
+
+  if (twitcastMatch) {
+    return {
+      username: twitcastMatch[1],
+      platform: "twitcast",
+    };
+  }
+
+  // Trovo URL pattern — canonical trovo.live/s/{username}, also accepts
+  // legacy trovo.live/{username}
+  const trovoRegex =
+    /(?:https?:\/\/)?(?:www\.)?trovo\.live\/(?:s\/)?([^\/\s?]+)/i;
+  const trovoMatch = trimmed.match(trovoRegex);
+
+  if (trovoMatch) {
+    return {
+      username: trovoMatch[1],
+      platform: "trovo",
+    };
+  }
+
   // Plain username - remove @ if present
   const username = trimmed.startsWith("@") ? trimmed.slice(1) : trimmed;
 

@@ -30,6 +30,8 @@ import { GreetingSection } from "./components/greeting-section";
 import { LatestFollowersSection } from "./components/latest-followers-section";
 import { MyFeedSection } from "./components/my-feed-section";
 
+const NEW_PLATFORMS = new Set(["Mixch", "Twitcast", "Trovo"]);
+
 const platformMap: Record<string, FollowerTypeEnum> = {
   TikTok: FollowerTypeEnum.Tiktok,
   Twitch: FollowerTypeEnum.Twitch,
@@ -41,6 +43,8 @@ const platformMap: Record<string, FollowerTypeEnum> = {
   Buzzcast: FollowerTypeEnum.Buzzcast,
   LiveMe: FollowerTypeEnum.Liveme,
   Mixch: FollowerTypeEnum.Mixch,
+  Twitcast: FollowerTypeEnum.Twitcast,
+  Trovo: FollowerTypeEnum.Trovo,
 };
 
 export default async function Page() {
@@ -84,11 +88,8 @@ export default async function Page() {
 
         <Scroller px="md" py="md">
           <Group gap="sm" wrap="nowrap">
-            {streamingPlatforms.map((platform) => {
-              const isNew =
-                platform.name === "Buzzcast" ||
-                platform.name === "LiveMe" ||
-                platform.name === "Mixch";
+            {[...streamingPlatforms].reverse().map((platform) => {
+              const isNew = NEW_PLATFORMS.has(platform.name);
               return (
                 <Link
                   key={platform.name}

@@ -62,6 +62,8 @@ const ALL_PLATFORMS: PlatformType[] = [
   "buzzcast",
   "liveme",
   "mixch",
+  "twitcast",
+  "trovo",
 ];
 
 type SearchStep = "input" | "selectPlatform" | "results";

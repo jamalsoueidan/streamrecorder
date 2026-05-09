@@ -59,4 +59,16 @@ export const streamingPlatforms = [
     name: "Mixch",
     file: "/simple/mixch.svg",
   },
+  {
+    color: "cyan.5",
+    colorCss: "var(--mantine-color-cyan-5)",
+    name: "Twitcast",
+    file: "/simple/twitcast.svg",
+  },
+  {
+    color: "green.5",
+    colorCss: "var(--mantine-color-green-5)",
+    name: "Trovo",
+    file: "/simple/trovo.svg",
+  },
 ];

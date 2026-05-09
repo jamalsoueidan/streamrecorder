@@ -245,6 +245,100 @@
         "mixch recording",
         "mixch stream recorder"
       ]
+    },
+    "trovo": {
+      "title": "Trovo Streamers",
+      "description": "Discover Trovo streamers who use LiveStreamRecorder to save their own streams. Browse Trovo creators across gaming, IRL, and music — watch their stream recordings and find new broadcasters to follow.",
+      "keywords": [
+        "trovo streamer",
+        "trovo creator",
+        "trovo streamers list",
+        "top trovo streamers",
+        "popular trovo creators",
+        "find trovo streamers",
+        "trovo creator page",
+        "become a trovo streamer",
+        "trovo for creators",
+        "trovo content creator",
+        "trovo gaming streamer"
+      ],
+      "faqs": [
+        {
+          "question": "How do I find Trovo streamers on LiveStreamRecorder?",
+          "answer": "Browse our Trovo creators page to discover streamers who save their own streams on LiveStreamRecorder. Search by name or browse popular Trovo streamers across gaming, IRL, music, and just-chatting categories to find new broadcasters to follow."
+        },
+        {
+          "question": "How do I get my Trovo creator page on LiveStreamRecorder?",
+          "answer": "Sign up free and add your Trovo channel. Your creator page is created automatically and your streams start saving from the moment you go live. Fans can browse all your stream recordings in one place — independent of Trovo's own VOD system."
+        },
+        {
+          "question": "I'm a Trovo streamer — why should I record my streams?",
+          "answer": "Trovo has its own VOD system, but replays can fail to process, channels can change, and older streams can be removed. As a Trovo streamer, recording your streams on LiveStreamRecorder gives you a reliable independent backup — every clutch play, IRL moment, and music session stays available even if the original Trovo VOD isn't there anymore."
+        },
+        {
+          "question": "How do I become a Trovo creator on LiveStreamRecorder?",
+          "answer": "Just sign up free and add your Trovo channel — that's it. Every stream you go live with is captured automatically. Your creator page lists all your recordings so fans can catch up on streams they missed."
+        },
+        {
+          "question": "Can I see a list of top Trovo streamers using LiveStreamRecorder?",
+          "answer": "Yes. Browse this page to see Trovo streamers who save their own streams on LiveStreamRecorder. Trovo's a younger platform and the list updates as more creators join — a good place to discover streamers building their audience."
+        },
+        {
+          "question": "Is LiveStreamRecorder free for Trovo streamers?",
+          "answer": "Yes. Trovo streamers can sign up and start saving their streams for free. Premium plans unlock downloading recordings, ClipAI for automatic highlight clips, and extended storage."
+        },
+        {
+          "question": "How can Trovo streamers grow their following with LiveStreamRecorder?",
+          "answer": "ClipAI turns your saved Trovo streams into short highlight clips ready for TikTok, YouTube Shorts, or Instagram Reels. Clutch gaming moments, reactions, music highlights, IRL clips — turn one stream into multiple pieces of shareable content and reach viewers beyond Trovo."
+        }
+      ]
+    },
+    "twitcast": {
+      "title": "TwitCasting Streamers",
+      "description": "Discover TwitCasting streamers (ツイキャス) who use LiveStreamRecorder to save their own Lives. Browse TwitCasting creators, watch their archived broadcasts, and find new streamers to follow.",
+      "keywords": [
+        "twitcasting creator",
+        "twitcasting streamer",
+        "twitcasting streamers list",
+        "top twitcasting streamers",
+        "popular twitcasting creators",
+        "find twitcasting streamers",
+        "twitcasting creator page",
+        "become a twitcasting streamer",
+        "twitcasting for creators",
+        "twitcasting live streamer",
+        "twitcasting content creator"
+      ],
+      "faqs": [
+        {
+          "question": "How do I find TwitCasting streamers on LiveStreamRecorder?",
+          "answer": "Browse our TwitCasting creators page to discover streamers who save their own Lives on LiveStreamRecorder. Search by name or browse popular TwitCasting streamers across chat, music, voice, and entertainment categories to find new broadcasters to follow."
+        },
+        {
+          "question": "How do I get my TwitCasting creator page on LiveStreamRecorder?",
+          "answer": "Sign up free and add your TwitCasting username. Your creator page is created automatically and your Lives start saving from the moment you go live. Fans can browse all your recordings in one place — independent of TwitCasting's own archive limits."
+        },
+        {
+          "question": "I'm a TwitCasting streamer — why should I record my Lives?",
+          "answer": "TwitCasting has its own archive system, but free-tier archives are limited in length and older broadcasts can be removed to save space. As a TwitCasting streamer, recording your Lives on LiveStreamRecorder gives you a permanent backup with no length cap — your chat sessions, song covers, voice-only Lives, and special moments stay available long after the platform's archive expires."
+        },
+        {
+          "question": "How do I become a TwitCasting creator on LiveStreamRecorder?",
+          "answer": "Just sign up free and add your TwitCasting username — that's it. Every Live you broadcast is captured automatically. Your creator page lists all your recordings so fans can catch up on Lives they missed across time zones."
+        },
+        {
+          "question": "Can I see a list of top TwitCasting streamers using LiveStreamRecorder?",
+          "answer": "Yes. Browse this page to see TwitCasting streamers who save their own Lives on LiveStreamRecorder. The list updates as more creators join and start broadcasting."
+        },
+        {
+          "question": "Is LiveStreamRecorder free for TwitCasting streamers?",
+          "answer": "Yes. TwitCasting streamers can sign up and start saving their Lives for free. Premium plans unlock downloading recordings, ClipAI for automatic highlight clips, and extended storage."
+        },
+        {
+          "question": "How can TwitCasting streamers grow their following with LiveStreamRecorder?",
+          "answer": "ClipAI turns your saved TwitCasting Lives into short highlight clips ready for TikTok, YouTube Shorts, or Instagram Reels. Best chat moments, song highlights, co-broadcast clips — turn one Live into multiple pieces of shareable content and reach fans beyond the TwitCasting app."
+        }
+      ]
     }
   },
   "hero": {
@@ -259,7 +353,9 @@
       "bigo": "Bigo Creators",
       "buzzcast": "Buzzcast Creators",
       "liveme": "LiveMe Creators",
-      "mixch": "Mixch Creators"
+      "mixch": "Mixch Creators",
+      "twitcast": "TwitCasting Streamers",
+      "trovo": "Trovo Streamers"
     },
     "subtitle": {
       "all": "Join thousands of creators who use LiveStreamRecorder to save their streams and create short clips.",
@@ -272,7 +368,9 @@
       "bigo": "Join thousands of Bigo creators who use LiveStreamRecorder to save their streams and create short clips.",
       "buzzcast": "Join thousands of Buzzcast creators who use LiveStreamRecorder to save their streams and create short clips.",
       "liveme": "Join thousands of LiveMe creators who use LiveStreamRecorder to save their streams and create short clips.",
-      "mixch": "Join thousands of Mixch creators who use LiveStreamRecorder to save their streams and create short clips."
+      "mixch": "Join thousands of Mixch creators who use LiveStreamRecorder to save their streams and create short clips.",
+      "twitcast": "Join TwitCasting streamers who use LiveStreamRecorder to save every broadcast and reach fans beyond the app.",
+      "trovo": "Join Trovo streamers who use LiveStreamRecorder to save every stream and reach viewers beyond Trovo."
     }
   },
   "features": {
@@ -288,7 +386,9 @@
       "bigo": "Record Your Bigo Streams Automatically",
       "buzzcast": "Record Your Buzzcast Streams Automatically",
       "liveme": "Record Your LiveMe Streams Automatically",
-      "mixch": "Record Your Mixch Streams Automatically"
+      "mixch": "Record Your Mixch Streams Automatically",
+      "twitcast": "Save Your TwitCasting Lives Automatically",
+      "trovo": "Save Your Trovo Streams Automatically"
     },
     "subtitle": "From live stream to short clips in minutes",
     "items": {
@@ -322,7 +422,9 @@
       "bigo": "Record Your Bigo Streams",
       "buzzcast": "Record Your Buzzcast Streams",
       "liveme": "Record Your LiveMe Streams",
-      "mixch": "Record Your Mixch Streams"
+      "mixch": "Record Your Mixch Streams",
+      "twitcast": "Save Your TwitCasting Lives",
+      "trovo": "Save Your Trovo Streams"
     },
     "subtitle": {
       "all": "Join thousands of creators. Save your streams, create short clips with ClipAI, and grow your audience.",
@@ -335,7 +437,9 @@
       "bigo": "Join thousands of Bigo creators. Save your streams and create short clips with ClipAI.",
       "buzzcast": "Join thousands of Buzzcast creators. Save your streams and create short clips with ClipAI.",
       "liveme": "Join thousands of LiveMe creators. Save your streams and create short clips with ClipAI.",
-      "mixch": "Join thousands of Mixch creators. Save your streams and create short clips with ClipAI."
+      "mixch": "Join thousands of Mixch creators. Save your streams and create short clips with ClipAI.",
+      "twitcast": "Join TwitCasting streamers who save every Live with LiveStreamRecorder. Create short clips with ClipAI and grow beyond the app.",
+      "trovo": "Join Trovo streamers who save every stream with LiveStreamRecorder. Create short clips with ClipAI and grow beyond Trovo."
     },
     "button": "Start Recording Free"
   },
@@ -352,7 +456,9 @@
       "bigo": "Be the first Bigo creator to join!",
       "buzzcast": "Be the first Buzzcast creator to join!",
       "liveme": "Be the first LiveMe creator to join!",
-      "mixch": "Be the first Mixch creator to join!"
+      "mixch": "Be the first Mixch creator to join!",
+      "twitcast": "Be the first TwitCasting streamer to join!",
+      "trovo": "Be the first Trovo streamer to join!"
     },
     "button": "Get Started"
   },
@@ -367,7 +473,9 @@
     "bigo": "## Bigo Live Creators\n\nDiscover Bigo Live creators who use LiveStreamRecorder to save their own Lives. Browse Bigo streamers, watch their recordings, and find new creators to follow from one of the largest global live streaming platforms — home to dance, music, chat, and entertainment creators from the Middle East, Asia, and beyond.\n\n### Why Bigo Creators Record Their Lives\n\nBigo Lives exist only while they're streaming — once you end the session, the content is gone from the app entirely. Bigo creators use LiveStreamRecorder to save every Live automatically, so your dance performances, singing sessions, chat moments, and gift interactions stay available for fans long after your Live ends.\n\n### Browse Top Bigo Creators\n\nExplore our Bigo creators page to find streamers who save their own Lives on LiveStreamRecorder. Watch their recordings, catch up on Lives you missed, and discover new Bigo creators across every category and language.\n\n### Your Bigo Creator Page\n\nEvery Bigo creator on LiveStreamRecorder gets their own page where fans can browse all your recorded Lives. Sign up, add your Bigo username, and your creator page is set up automatically — a permanent home for your content that lives beyond the disappearing nature of Bigo Lives.\n\n### From Lives to Clips — Grow Your Audience\n\nClipAI turns your recorded Bigo Lives into short highlight clips ready to post on TikTok, Instagram Reels, or YouTube Shorts. Dance moments, duets, fan interactions, musical performances — turn every Live into multiple pieces of content and grow your audience across every platform.\n\n### Become a Bigo Creator on LiveStreamRecorder\n\nSign up free, add your Bigo username, and start saving your Lives today. Every Live is captured automatically — no phone recording, no screen capture. Join the Bigo creators already using LiveStreamRecorder to keep every Live and reach fans worldwide.",
     "buzzcast": "## Buzzcast Creators\n\nDiscover Buzzcast creators who use LiveStreamRecorder to save their own Lives. Browse Buzzcast streamers, watch their recordings, and find new creators to follow from this mobile-first live streaming community.\n\n### Why Buzzcast Creators Record Their Lives\n\nBuzzcast Lives are live-only — once you end the stream, the content disappears from the app. There's no built-in replay system and no way for fans to catch up afterward. Buzzcast creators use LiveStreamRecorder to save every Live automatically, so your chat sessions, music performances, and daily content stay available for fans long after the Live ends.\n\n### Browse Top Buzzcast Creators\n\nExplore our Buzzcast creators page to find streamers who save their own Lives on LiveStreamRecorder. Watch their recordings, catch up on Lives you missed, and discover new Buzzcast creators worth following.\n\n### Your Buzzcast Creator Page\n\nEvery Buzzcast creator on LiveStreamRecorder gets their own page where fans can browse all your recorded Lives. Sign up, add your Buzzcast username, and your creator page is set up automatically — a permanent place for your content that doesn't vanish the moment your Live ends.\n\n### From Lives to Clips — Build Your Following\n\nClipAI turns your recorded Buzzcast Lives into short highlight clips ready to post on TikTok, Instagram Reels, or YouTube Shorts. Turn reactions, music moments, and chat highlights into shareable content and grow your following beyond Buzzcast.\n\n### Become a Buzzcast Creator on LiveStreamRecorder\n\nSign up free, add your Buzzcast username, and start saving your Lives today. Every Live is captured automatically — no manual recording, no extra apps. Join the Buzzcast creators already using LiveStreamRecorder to keep every Live and grow their audience.",
     "liveme": "## LiveMe Creators\n\nDiscover LiveMe creators who use LiveStreamRecorder to save their own Lives. Browse LiveMe streamers, watch their recordings, and find new creators to follow from this mobile-first live streaming community.\n\n### Why LiveMe Creators Record Their Lives\n\nLiveMe Lives are live-only — once you end the stream, the content disappears from the app. There's no built-in replay system and no way for fans to catch up afterward. LiveMe creators use LiveStreamRecorder to save every Live automatically, so your chat sessions, music performances, and daily content stay available for fans long after the Live ends.\n\n### Browse Top LiveMe Creators\n\nExplore our LiveMe creators page to find streamers who save their own Lives on LiveStreamRecorder. Watch their recordings, catch up on Lives you missed, and discover new LiveMe creators worth following.\n\n### Your LiveMe Creator Page\n\nEvery LiveMe creator on LiveStreamRecorder gets their own page where fans can browse all your recorded Lives. Sign up, add your LiveMe username, and your creator page is set up automatically — a permanent place for your content that doesn't vanish the moment your Live ends.\n\n### From Lives to Clips — Build Your Following\n\nClipAI turns your recorded LiveMe Lives into short highlight clips ready to post on TikTok, Instagram Reels, or YouTube Shorts. Turn reactions, music moments, and chat highlights into shareable content and grow your following beyond LiveMe.\n\n### Become a LiveMe Creator on LiveStreamRecorder\n\nSign up free, add your LiveMe username, and start saving your Lives today. Every Live is captured automatically — no manual recording, no extra apps. Join the LiveMe creators already using LiveStreamRecorder to keep every Live and grow their audience.",
-    "mixch": "## Mixch Creators\n\nDiscover Mixch creators who use LiveStreamRecorder to save their own Lives. Browse Mixch streamers, watch their recordings, and find new creators to follow from this mobile-first live streaming community.\n\n### Why Mixch Creators Record Their Lives\n\nMixch Lives are live-only — once you end the stream, the content disappears from the app. There's no built-in replay system and no way for fans to catch up afterward. Mixch creators use LiveStreamRecorder to save every Live automatically, so your chat sessions, music performances, and daily content stay available for fans long after the Live ends.\n\n### Browse Top Mixch Creators\n\nExplore our Mixch creators page to find streamers who save their own Lives on LiveStreamRecorder. Watch their recordings, catch up on Lives you missed, and discover new Mixch creators worth following.\n\n### Your Mixch Creator Page\n\nEvery Mixch creator on LiveStreamRecorder gets their own page where fans can browse all your recorded Lives. Sign up, add your Mixch username, and your creator page is set up automatically — a permanent place for your content that doesn't vanish the moment your Live ends.\n\n### From Lives to Clips — Build Your Following\n\nClipAI turns your recorded Mixch Lives into short highlight clips ready to post on TikTok, Instagram Reels, or YouTube Shorts. Turn reactions, music moments, and chat highlights into shareable content and grow your following beyond Mixch.\n\n### Become a Mixch Creator on LiveStreamRecorder\n\nSign up free, add your Mixch username, and start saving your Lives today. Every Live is captured automatically — no manual recording, no extra apps. Join the Mixch creators already using LiveStreamRecorder to keep every Live and grow their audience."
+    "mixch": "## Mixch Creators\n\nDiscover Mixch creators who use LiveStreamRecorder to save their own Lives. Browse Mixch streamers, watch their recordings, and find new creators to follow from this mobile-first live streaming community.\n\n### Why Mixch Creators Record Their Lives\n\nMixch Lives are live-only — once you end the stream, the content disappears from the app. There's no built-in replay system and no way for fans to catch up afterward. Mixch creators use LiveStreamRecorder to save every Live automatically, so your chat sessions, music performances, and daily content stay available for fans long after the Live ends.\n\n### Browse Top Mixch Creators\n\nExplore our Mixch creators page to find streamers who save their own Lives on LiveStreamRecorder. Watch their recordings, catch up on Lives you missed, and discover new Mixch creators worth following.\n\n### Your Mixch Creator Page\n\nEvery Mixch creator on LiveStreamRecorder gets their own page where fans can browse all your recorded Lives. Sign up, add your Mixch username, and your creator page is set up automatically — a permanent place for your content that doesn't vanish the moment your Live ends.\n\n### From Lives to Clips — Build Your Following\n\nClipAI turns your recorded Mixch Lives into short highlight clips ready to post on TikTok, Instagram Reels, or YouTube Shorts. Turn reactions, music moments, and chat highlights into shareable content and grow your following beyond Mixch.\n\n### Become a Mixch Creator on LiveStreamRecorder\n\nSign up free, add your Mixch username, and start saving your Lives today. Every Live is captured automatically — no manual recording, no extra apps. Join the Mixch creators already using LiveStreamRecorder to keep every Live and grow their audience.",
+    "trovo": "## Trovo Streamers\n\nDiscover Trovo streamers who use LiveStreamRecorder to save their own streams. Browse Trovo creators across gaming, IRL, music, and just-chatting categories — watch their stream recordings and find new broadcasters to follow from this Tencent-backed live streaming community.\n\n### Why Trovo Streamers Record Their Streams\n\nTrovo has its own VOD system, but it isn't always reliable — replays can fail to process, channel changes can affect availability, and older streams can be removed. Trovo streamers use LiveStreamRecorder to keep an independent backup of every stream automatically, so clutch gaming moments, IRL adventures, music sessions, and viewer interactions stay available even if the original Trovo VOD isn't there anymore.\n\n### Browse Top Trovo Streamers\n\nExplore our Trovo creators page to find streamers who save their own streams on LiveStreamRecorder. Watch their recordings, catch up on streams you missed, and discover new Trovo creators across every category — Trovo's a younger platform, so it's a great place to find streamers building their audience.\n\n### Your Trovo Streamer Page\n\nEvery Trovo streamer on LiveStreamRecorder gets their own page where fans can browse all your stream recordings. Sign up, add your Trovo channel, and your creator page is set up automatically — an independent home for your content that doesn't depend on Trovo's VOD reliability.\n\n### From Streams to Clips — Grow Beyond Trovo\n\nClipAI turns your saved Trovo streams into short highlight clips ready to post on TikTok, YouTube Shorts, or Instagram Reels. Clutch plays, funny reactions, IRL moments, music highlights — turn one stream into multiple pieces of shareable content and reach viewers far beyond the Trovo app.\n\n### Become a Trovo Streamer on LiveStreamRecorder\n\nSign up free, add your Trovo channel, and start saving your streams today. Every stream is captured automatically — no OBS recording plugin, no backup VOD setup, no extra software. Join the Trovo streamers already using LiveStreamRecorder to keep every stream and grow their audience.",
+    "twitcast": "## TwitCasting Streamers\n\nDiscover TwitCasting streamers (ツイキャス) who use LiveStreamRecorder to save their own broadcasts. Browse TwitCasting creators, watch their archived Lives, and find new streamers to follow from one of Japan's most active mobile-first streaming communities — home to chat broadcasts (おしゃべり), singing streams, voice-only Lives, and idol/VTuber content.\n\n### Why TwitCasting Streamers Record Their Lives\n\nTwitCasting has its own archive system, but it comes with limits — free archives are capped in length, member-only (メンバー限定) Lives can only be replayed by paying members, and older broadcasts can be removed to free up space. TwitCasting streamers use LiveStreamRecorder to save every Live automatically with no length cap, so your conversations, song covers, voice-only Lives, and special moments stay available even after the original archive expires.\n\n### Browse Top TwitCasting Streamers\n\nExplore our TwitCasting creators page to find streamers who save their own Lives on LiveStreamRecorder. Watch their recordings, catch up on broadcasts you missed across time zones, and discover new TwitCasting creators across chat, music, voice-only, and entertainment categories.\n\n### Your TwitCasting Streamer Page\n\nEvery TwitCasting streamer on LiveStreamRecorder gets their own page where fans can browse all your recorded Lives. Sign up, add your TwitCasting username, and your creator page is set up automatically — an independent home for your content that doesn't depend on TwitCasting's archive limits.\n\n### From Lives to Clips — Grow Beyond TwitCasting\n\nClipAI turns your recorded TwitCasting Lives into short highlight clips ready to post on TikTok, YouTube Shorts, or Instagram Reels. Best chat moments, song highlights, viewer Q&A, co-broadcast clips — turn one Live into multiple pieces of shareable content and reach fans beyond the TwitCasting app.\n\n### Become a TwitCasting Streamer on LiveStreamRecorder\n\nSign up free, add your TwitCasting username, and start saving your broadcasts today. Every Live is captured automatically — no screen recording, no manual archive saving, no app to keep open. Join the TwitCasting streamers already using LiveStreamRecorder to keep every Live and grow their audience worldwide."
   },
   "faq": "Frequently Asked Questions",
   "country": {
