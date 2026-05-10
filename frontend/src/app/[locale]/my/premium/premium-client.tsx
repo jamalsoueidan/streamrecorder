@@ -175,15 +175,22 @@ export default function PremiumClient() {
     }
   };
 
-  // Determine if user is premium (admin, champion, or has active/cancelled subscription)
-  const isPremiumRole = role?.type === "admin" || role?.type === "champion";
+  // Determine if user is premium (admin, champion, or has active/cancelled
+  // Stripe subscription). Freemius subscribers are intentionally excluded
+  // here — Freemius terminated us, refunds are processing, and we need
+  // them to re-subscribe via Stripe. Treating them as "premium" would
+  // hide the payment options.
+  const isAdminOrChampion = role?.type === "admin" || role?.type === "champion";
+  const isStripeSubscriber = user?.paymentProvider === "stripe";
   const hasActiveSubscription =
-    user?.subscriptionStatus === "active" ||
-    user?.subscriptionStatus === "cancelled";
-  const isPremium = isPremiumRole || hasActiveSubscription;
+    isStripeSubscriber &&
+    (user?.subscriptionStatus === "active" ||
+      user?.subscriptionStatus === "cancelled");
+  const isPremium = isAdminOrChampion || hasActiveSubscription;
   const canCancel =
+    isStripeSubscriber &&
     user?.subscriptionStatus === "active" &&
-    !isPremiumRole &&
+    !isAdminOrChampion &&
     user?.billingPeriod !== "lifetime";
 
   const handlePlanSelect = (planId: string) => {
@@ -250,7 +257,7 @@ export default function PremiumClient() {
                   <Group gap="xs">
                     <IconCrown size={20} color="#fbbf24" />
                     <Text fw={600} size="lg">
-                      {isPremiumRole ? role?.name : t("title")}
+                      {isAdminOrChampion ? role?.name : t("title")}
                     </Text>
                     {user?.subscriptionStatus === "cancelled" && (
                       <Badge size="sm" variant="light" color="orange">
@@ -261,7 +268,7 @@ export default function PremiumClient() {
 
                   <Alert color="violet" variant="light">
                     <Text size="sm">
-                      {isPremiumRole
+                      {isAdminOrChampion
                         ? t("adminAccess")
                         : user?.subscriptionStatus === "cancelled"
                           ? t("cancelledMessage", {
