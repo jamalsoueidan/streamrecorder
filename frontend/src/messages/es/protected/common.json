@@ -78,5 +78,25 @@
     "loseClips": "Clips, descargas y funciones de IA",
     "losePremium": "Acceso a todas las funciones premium",
     "downgradeButton": "Bajar de plan"
+  },
+  "freemiusShutdown": {
+    "title": "Tu pago con Freemius está siendo reembolsado",
+    "subtitle": "Vuelve a suscribirte vía Stripe en 30 segundos para mantener tus funciones premium.",
+    "body": "Freemius — uno de mis proveedores de pago — ha terminado su relación conmigo. Están reembolsando todos los pagos que procesaron para mí, incluido el tuyo. Todo lo que me pagaste a través de Freemius te será devuelto. Prácticamente has tenido premium gratis hasta ahora.\n\nEsto ha sido un duro golpe para mí, pero ahora mismo mi preocupación eres tú. Has construido tu lista de creadores, tus grabaciones, tus clips aquí — no quiero que pierdas nada de eso.\n\nStripe siempre ha sido mi otra opción de pago y sigue totalmente disponible. Volver a suscribirte a través de él toma 30 segundos. Mismo plan, mismo precio, sin configuración, sin interrupción.",
+    "renewButton": "Suscríbete con Stripe",
+    "or": "o",
+    "loseTitle": "Si bajas al plan gratuito, perderás permanentemente:",
+    "loseCreators": "Todos los creadores que sigues y sus grabaciones",
+    "loseFavorites": "Todos tus favoritos guardados",
+    "loseClips": "Clips, descargas y funciones de IA",
+    "losePremium": "Acceso a todas las funciones premium",
+    "downgradeButton": "Pasar al plan gratuito",
+    "contact": "¿Preguntas? Escríbeme a <email>contact@livestreamrecorder.com</email> o contacta con Freemius por tu reembolso."
+  },
+  "videoPlayer": {
+    "hevcUnsupportedTitle": "Tu navegador no puede reproducir este video",
+    "hevcUnsupportedMessage": "Esta grabación de TikTok usa HEVC (H.265). Tu navegador no lo soporta. Prueba Safari, Edge en Windows, o instala HEVC Video Extensions desde Microsoft Store.",
+    "playbackFailedTitle": "Error de reproducción",
+    "playbackFailedMessage": "Algo salió mal al reproducir este video. Abre la consola del navegador (F12) y comparte lo que aparece con soporte para que podamos arreglarlo."
   }
 }

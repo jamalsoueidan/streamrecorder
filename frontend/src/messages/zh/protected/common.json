@@ -78,5 +78,25 @@
     "loseClips": "短视频、下载和 AI 功能",
     "losePremium": "所有高级功能的访问权限",
     "downgradeButton": "降级"
+  },
+  "freemiusShutdown": {
+    "title": "你通过 Freemius 支付的款项正在退款",
+    "subtitle": "在 30 秒内通过 Stripe 重新订阅,保留你的高级会员功能。",
+    "body": "Freemius —— 我的支付服务商之一 —— 已终止与我的合作。他们正在退还为我处理过的每一笔款项,包括你的。你通过 Freemius 支付给我的一切都将退还给你。也就是说,到目前为止你实际上是免费使用了高级会员功能。\n\n这对我来说是不小的打击,但我现在最关心的是你。你在这里积累了关注的创作者、录像和短视频 —— 我不希望你失去其中任何一项。\n\nStripe 一直是我另一个支付选项,目前仍完全可用。通过它重新订阅只需 30 秒。同一套餐,同一价格,无需重新设置,不会中断。",
+    "renewButton": "通过 Stripe 订阅",
+    "or": "或",
+    "loseTitle": "如果降级到免费版,你将永久失去:",
+    "loseCreators": "所有关注的创作者及其录像",
+    "loseFavorites": "所有保存的收藏",
+    "loseClips": "短视频、下载和 AI 功能",
+    "losePremium": "所有高级会员功能的使用权",
+    "downgradeButton": "降级到免费版",
+    "contact": "有疑问?请发送邮件至 <email>contact@livestreamrecorder.com</email>,或联系 Freemius 咨询退款事宜。"
+  },
+  "videoPlayer": {
+    "hevcUnsupportedTitle": "你的浏览器无法播放此视频",
+    "hevcUnsupportedMessage": "这条 TikTok 录像使用了 HEVC (H.265) 编码。你的浏览器不支持该编码。请尝试 Safari、Windows 上的 Edge,或者从 Microsoft Store 安装 HEVC Video Extensions。",
+    "playbackFailedTitle": "播放失败",
+    "playbackFailedMessage": "播放此视频时出错。请打开浏览器控制台 (F12),将显示的内容发送给客服,以便我们排查修复。"
   }
 }

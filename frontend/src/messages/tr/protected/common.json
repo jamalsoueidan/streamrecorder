@@ -78,5 +78,25 @@
     "loseClips": "Klipler, indirmeler ve yapay zeka özellikleri",
     "losePremium": "Tüm premium özelliklere erişim",
     "downgradeButton": "Düşür"
+  },
+  "freemiusShutdown": {
+    "title": "Freemius ödemen iade ediliyor",
+    "subtitle": "Premium özelliklerini korumak için 30 saniyede Stripe üzerinden tekrar abone ol.",
+    "body": "Freemius — ödeme sağlayıcılarımdan biri — benimle ilişkisini sonlandırdı. Benim için işledikleri her ödemeyi iade ediyorlar, seninki dahil. Freemius üzerinden bana ödediğin her şey sana geri veriliyor. Şu ana kadar premium erişimi pratik olarak ücretsiz kullanmış oldun.\n\nBu benim için ağır bir darbe oldu, ama şu anki önceliğim sensin. Burada içerik üreticilerini, kayıtlarını, kliplerini biriktirdin — bunların hiçbirini kaybetmeni istemiyorum.\n\nStripe her zaman diğer ödeme seçeneğimdi ve tamamen aktif. Üzerinden tekrar abone olmak 30 saniye sürüyor. Aynı plan, aynı fiyat, kurulum yok, kesinti yok.",
+    "renewButton": "Stripe ile abone ol",
+    "or": "veya",
+    "loseTitle": "Ücretsiz plana geçersen kalıcı olarak kaybedeceklerin:",
+    "loseCreators": "Takip ettiğin tüm içerik üreticileri ve kayıtlar",
+    "loseFavorites": "Kaydettiğin tüm favoriler",
+    "loseClips": "Klipler, indirmeler ve AI özellikleri",
+    "losePremium": "Tüm premium özelliklere erişim",
+    "downgradeButton": "Ücretsize geç",
+    "contact": "Soruların mı var? <email>contact@livestreamrecorder.com</email> adresine yaz ya da iaden için Freemius ile iletişime geç."
+  },
+  "videoPlayer": {
+    "hevcUnsupportedTitle": "Tarayıcınız bu videoyu oynatamıyor",
+    "hevcUnsupportedMessage": "Bu TikTok kaydı HEVC (H.265) kullanıyor. Tarayıcınız bu codec'i desteklemiyor. Safari, Windows'ta Edge'i deneyin ya da Microsoft Store'dan HEVC Video Extensions'ı yükleyin.",
+    "playbackFailedTitle": "Oynatma başarısız",
+    "playbackFailedMessage": "Bu video oynatılırken bir sorun oluştu. Tarayıcı konsolunu açın (F12) ve içerikteki hatayı destek ekibiyle paylaşın ki düzeltebilelim."
   }
 }

@@ -78,5 +78,25 @@
     "loseClips": "클립, 다운로드 및 AI 기능",
     "losePremium": "모든 프리미엄 기능 이용",
     "downgradeButton": "다운그레이드"
+  },
+  "freemiusShutdown": {
+    "title": "Freemius 결제가 환불되고 있습니다",
+    "subtitle": "프리미엄 기능을 유지하려면 Stripe로 30초 안에 다시 구독해주세요.",
+    "body": "제 결제 서비스 제공업체 중 하나인 Freemius가 저와의 관계를 종료했습니다. 그들이 저를 위해 처리한 모든 결제를 환불하고 있으며, 여기에는 회원님의 결제도 포함됩니다. Freemius를 통해 저에게 지불하신 금액이 모두 회원님께 반환됩니다. 지금까지 사실상 무료로 프리미엄을 이용하신 셈입니다.\n\n저에게는 큰 타격이지만, 지금 가장 중요한 것은 회원님입니다. 여기서 팔로우한 크리에이터, 녹화본, 클립을 쌓아오셨는데 — 그 어느 것도 잃지 않으셨으면 합니다.\n\nStripe는 항상 저의 또 다른 결제 옵션이었고 여전히 완전히 사용 가능합니다. Stripe로 다시 구독하는 데 30초면 됩니다. 같은 플랜, 같은 가격, 설정 불필요, 중단 없음.",
+    "renewButton": "Stripe로 구독하기",
+    "or": "또는",
+    "loseTitle": "무료 플랜으로 변경하면 영구적으로 잃게 되는 것:",
+    "loseCreators": "팔로우한 모든 크리에이터와 녹화본",
+    "loseFavorites": "저장된 모든 즐겨찾기",
+    "loseClips": "클립, 다운로드 및 AI 기능",
+    "losePremium": "모든 프리미엄 기능 액세스",
+    "downgradeButton": "무료로 변경",
+    "contact": "문의 사항이 있으신가요? <email>contact@livestreamrecorder.com</email>으로 이메일을 보내시거나 환불 관련하여 Freemius에 문의하세요."
+  },
+  "videoPlayer": {
+    "hevcUnsupportedTitle": "이 브라우저에서는 영상을 재생할 수 없습니다",
+    "hevcUnsupportedMessage": "이 TikTok 녹화본은 HEVC (H.265) 코덱을 사용합니다. 사용하시는 브라우저는 이 코덱을 지원하지 않습니다. Safari, Windows의 Edge를 사용하거나 Microsoft Store에서 HEVC Video Extensions를 설치해주세요.",
+    "playbackFailedTitle": "재생 실패",
+    "playbackFailedMessage": "영상을 재생하는 도중 문제가 발생했습니다. 브라우저 콘솔(F12)을 열어 표시되는 내용을 지원팀에 공유해주시면 빠르게 해결하겠습니다."
   }
 }

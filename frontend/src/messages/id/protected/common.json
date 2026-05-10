@@ -78,5 +78,25 @@
     "loseClips": "Klip, unduhan, dan fitur AI",
     "losePremium": "Akses ke semua fitur premium",
     "downgradeButton": "Downgrade"
+  },
+  "freemiusShutdown": {
+    "title": "Pembayaranmu via Freemius sedang dikembalikan",
+    "subtitle": "Berlangganan ulang via Stripe dalam 30 detik untuk mempertahankan fitur premium.",
+    "body": "Freemius — salah satu penyedia pembayaran saya — telah mengakhiri hubungannya dengan saya. Mereka mengembalikan setiap pembayaran yang pernah mereka proses untuk saya, termasuk milikmu. Apa pun yang kamu bayarkan kepada saya melalui Freemius sedang dikembalikan kepadamu. Kamu pada dasarnya sudah mendapatkan premium secara gratis sampai sekarang.\n\nIni pukulan berat bagi saya, tapi yang saya pikirkan sekarang adalah kamu. Kamu sudah membangun daftar kreator, rekaman, dan klipmu di sini — saya tidak ingin kamu kehilangan satupun.\n\nStripe selalu menjadi opsi pembayaran saya yang lain dan masih sepenuhnya tersedia. Berlangganan ulang melalui Stripe hanya butuh 30 detik. Plan yang sama, harga yang sama, tanpa pengaturan, tanpa gangguan.",
+    "renewButton": "Berlangganan via Stripe",
+    "or": "atau",
+    "loseTitle": "Jika menurunkan ke plan gratis, kamu akan kehilangan secara permanen:",
+    "loseCreators": "Semua kreator yang kamu ikuti dan rekaman",
+    "loseFavorites": "Semua favorit yang tersimpan",
+    "loseClips": "Klip, unduhan, dan fitur AI",
+    "losePremium": "Akses ke semua fitur premium",
+    "downgradeButton": "Turunkan ke gratis",
+    "contact": "Ada pertanyaan? Email saya di <email>contact@livestreamrecorder.com</email> atau hubungi Freemius tentang pengembalian danamu."
+  },
+  "videoPlayer": {
+    "hevcUnsupportedTitle": "Browser kamu tidak bisa memutar video ini",
+    "hevcUnsupportedMessage": "Rekaman TikTok ini menggunakan HEVC (H.265). Browser kamu tidak mendukung codec ini. Coba Safari, Edge di Windows, atau pasang HEVC Video Extensions dari Microsoft Store.",
+    "playbackFailedTitle": "Gagal memutar",
+    "playbackFailedMessage": "Terjadi kesalahan saat memutar video ini. Buka konsol browser (F12) dan bagikan log yang muncul ke support agar kami bisa memperbaikinya."
   }
 }

@@ -78,5 +78,25 @@
     "loseClips": "クリップ、ダウンロード、AI機能",
     "losePremium": "すべてのプレミアム機能へのアクセス",
     "downgradeButton": "ダウングレード"
+  },
+  "freemiusShutdown": {
+    "title": "Freemius でのお支払いが返金されています",
+    "subtitle": "プレミアム機能を維持するために、Stripe で 30 秒以内に再登録してください。",
+    "body": "私の支払いプロバイダーの一つである Freemius が私との関係を終了しました。彼らは私のために処理したすべての支払い（あなたのものを含む）を返金しています。Freemius を通じて私にお支払いいただいた金額はすべて返金されます。これまで実質的に無料でプレミアムをご利用いただいたことになります。\n\n私にとって大きな痛手ですが、今最も大切なのはあなたです。ここでフォローしているクリエイター、録画、クリップを積み上げてこられました — そのどれも失っていただきたくありません。\n\nStripe は常に私のもう一つの支払い方法であり、引き続き完全にご利用いただけます。Stripe での再登録は 30 秒で完了します。同じプラン、同じ価格、設定不要、中断なし。",
+    "renewButton": "Stripe で再登録",
+    "or": "または",
+    "loseTitle": "無料プランにダウングレードすると永久に失われます：",
+    "loseCreators": "フォローしている全クリエイターと録画",
+    "loseFavorites": "保存したすべてのお気に入り",
+    "loseClips": "クリップ、ダウンロード、AI 機能",
+    "losePremium": "すべてのプレミアム機能へのアクセス",
+    "downgradeButton": "無料にダウングレード",
+    "contact": "ご質問は <email>contact@livestreamrecorder.com</email> までメールでご連絡いただくか、返金については Freemius へお問い合わせください。"
+  },
+  "videoPlayer": {
+    "hevcUnsupportedTitle": "このブラウザではこの動画を再生できません",
+    "hevcUnsupportedMessage": "この TikTok の録画は HEVC (H.265) を使用しています。お使いのブラウザはこのコーデックに対応していません。Safari、Windows 版 Edge をお試しいただくか、Microsoft Store から HEVC Video Extensions をインストールしてください。",
+    "playbackFailedTitle": "再生に失敗しました",
+    "playbackFailedMessage": "動画の再生中にエラーが発生しました。ブラウザのコンソール (F12) を開き、ログをサポートまでお送りいただければ対応いたします。"
   }
 }

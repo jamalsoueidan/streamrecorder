@@ -78,5 +78,25 @@
     "loseClips": "Clips, téléchargements et fonctions IA",
     "losePremium": "L'accès à toutes les fonctionnalités Premium",
     "downgradeButton": "Rétrograder"
+  },
+  "freemiusShutdown": {
+    "title": "Ton paiement Freemius est en cours de remboursement",
+    "subtitle": "Réabonne-toi via Stripe en 30 secondes pour garder tes fonctionnalités premium.",
+    "body": "Freemius — l'un de mes prestataires de paiement — a mis fin à sa relation avec moi. Ils remboursent chaque paiement qu'ils ont traité pour moi, y compris le tien. Tout ce que tu m'as payé via Freemius t'est rendu. Tu as pratiquement eu accès au premium gratuitement jusqu'ici.\n\nC'est un coup dur pour moi, mais ma priorité maintenant c'est toi. Tu as construit ici ta liste de créateurs, tes enregistrements, tes clips — je ne veux pas que tu perdes tout ça.\n\nStripe a toujours été mon autre option de paiement et reste pleinement disponible. Se réabonner via Stripe prend 30 secondes. Même plan, même prix, pas de configuration, pas d'interruption.",
+    "renewButton": "S'abonner via Stripe",
+    "or": "ou",
+    "loseTitle": "Si tu passes au plan gratuit, tu perdras définitivement :",
+    "loseCreators": "Tous les créateurs que tu suis et leurs enregistrements",
+    "loseFavorites": "Tous tes favoris enregistrés",
+    "loseClips": "Clips, téléchargements et fonctionnalités IA",
+    "losePremium": "L'accès à toutes les fonctionnalités premium",
+    "downgradeButton": "Passer au plan gratuit",
+    "contact": "Des questions ? Écris-moi à <email>contact@livestreamrecorder.com</email> ou contacte Freemius pour ton remboursement."
+  },
+  "videoPlayer": {
+    "hevcUnsupportedTitle": "Ton navigateur ne peut pas lire cette vidéo",
+    "hevcUnsupportedMessage": "Cet enregistrement TikTok utilise HEVC (H.265). Ton navigateur ne prend pas en charge ce codec. Essaie Safari, Edge sur Windows, ou installe les HEVC Video Extensions depuis le Microsoft Store.",
+    "playbackFailedTitle": "Échec de la lecture",
+    "playbackFailedMessage": "Une erreur est survenue pendant la lecture de cette vidéo. Ouvre la console du navigateur (F12) et partage les logs avec le support pour qu'on puisse corriger le problème."
   }
 }

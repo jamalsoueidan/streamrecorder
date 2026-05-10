@@ -15,12 +15,22 @@ export async function downgradeToFree() {
       },
     });
 
-  if (!user || !user.id || user.subscriptionStatus !== "expired") {
+  if (!user || !user.id) {
     return { error: "Not eligible for downgrade" };
   }
 
   if (user.role?.type !== "premium") {
     return { error: "Not a premium user" };
+  }
+
+  // Allow downgrade when:
+  //   - subscription is already expired (original flow), OR
+  //   - user is on Freemius (we're forcing them off because Freemius
+  //     terminated us — they're still "active" but soon to be refunded)
+  const isExpired = user.subscriptionStatus === "expired";
+  const isFreemius = user.paymentProvider === "freemius";
+  if (!isExpired && !isFreemius) {
+    return { error: "Not eligible for downgrade" };
   }
 
   // Unfollow all followers

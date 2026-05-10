@@ -78,5 +78,25 @@
     "loseClips": "Clipes, downloads e recursos de IA",
     "losePremium": "Acesso a todos os recursos premium",
     "downgradeButton": "Fazer downgrade"
+  },
+  "freemiusShutdown": {
+    "title": "Seu pagamento via Freemius está sendo reembolsado",
+    "subtitle": "Reinscreva-se via Stripe em 30 segundos para manter seus recursos premium.",
+    "body": "O Freemius — um dos meus provedores de pagamento — encerrou o relacionamento comigo. Eles estão reembolsando todos os pagamentos que já processaram para mim, incluindo o seu. Tudo que você me pagou através do Freemius está sendo devolvido a você. Você praticamente teve premium de graça até agora.\n\nIsso foi um golpe duro para mim, mas minha preocupação agora é você. Você construiu sua lista de criadores, suas gravações, seus clipes aqui — não quero que você perca nada disso.\n\nO Stripe sempre foi minha outra opção de pagamento e continua totalmente disponível. Reinscrever-se por ele leva 30 segundos. Mesmo plano, mesmo preço, sem configuração, sem interrupção.",
+    "renewButton": "Assinar via Stripe",
+    "or": "ou",
+    "loseTitle": "Se fizer downgrade para o plano gratuito, você perderá permanentemente:",
+    "loseCreators": "Todos os criadores que você segue e gravações",
+    "loseFavorites": "Todos os favoritos salvos",
+    "loseClips": "Clipes, downloads e recursos de IA",
+    "losePremium": "Acesso a todos os recursos premium",
+    "downgradeButton": "Mudar para o plano gratuito",
+    "contact": "Dúvidas? Escreva para <email>contact@livestreamrecorder.com</email> ou entre em contato com o Freemius sobre seu reembolso."
+  },
+  "videoPlayer": {
+    "hevcUnsupportedTitle": "Seu navegador não consegue reproduzir este vídeo",
+    "hevcUnsupportedMessage": "Esta gravação do TikTok usa HEVC (H.265). Seu navegador não suporta esse codec. Tente Safari, Edge no Windows, ou instale o HEVC Video Extensions na Microsoft Store.",
+    "playbackFailedTitle": "Falha na reprodução",
+    "playbackFailedMessage": "Algo deu errado ao reproduzir este vídeo. Abra o console do navegador (F12) e compartilhe o que aparece com o suporte para podermos corrigir."
   }
 }

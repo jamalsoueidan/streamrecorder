@@ -78,5 +78,25 @@
     "loseClips": "Clips, Downloads und KI-Funktionen",
     "losePremium": "Zugriff auf alle Premium-Funktionen",
     "downgradeButton": "Downgrade"
+  },
+  "freemiusShutdown": {
+    "title": "Deine Freemius-Zahlung wird erstattet",
+    "subtitle": "Abonnier in 30 Sekunden über Stripe neu, um deine Premium-Features zu behalten.",
+    "body": "Freemius — einer meiner Zahlungsanbieter — hat die Beziehung zu mir beendet. Sie erstatten jede Zahlung, die sie jemals für mich verarbeitet haben, deine inklusive. Alles, was du mir über Freemius gezahlt hast, wird dir zurückerstattet. Du hast Premium effektiv bisher kostenlos genutzt.\n\nFür mich ist das ein harter Schlag, aber mein Fokus liegt jetzt auf dir. Du hast hier deine Liste mit Creatorn, deine Aufnahmen, deine Clips aufgebaut — ich möchte nicht, dass du davon irgendetwas verlierst.\n\nStripe war schon immer meine zweite Zahlungsoption und ist weiterhin voll verfügbar. Ein Neuabo darüber dauert 30 Sekunden. Gleicher Plan, gleicher Preis, kein Einrichten, keine Unterbrechung.",
+    "renewButton": "Über Stripe abonnieren",
+    "or": "oder",
+    "loseTitle": "Wenn du auf den kostenlosen Plan wechselst, verlierst du dauerhaft:",
+    "loseCreators": "Alle deine gefolgten Creator und Aufnahmen",
+    "loseFavorites": "Alle gespeicherten Favoriten",
+    "loseClips": "Clips, Downloads und KI-Features",
+    "losePremium": "Zugang zu allen Premium-Features",
+    "downgradeButton": "Auf kostenlos herabstufen",
+    "contact": "Fragen? Schreib mir an <email>contact@livestreamrecorder.com</email> oder kontaktier Freemius wegen deiner Rückerstattung."
+  },
+  "videoPlayer": {
+    "hevcUnsupportedTitle": "Dein Browser kann dieses Video nicht abspielen",
+    "hevcUnsupportedMessage": "Diese TikTok-Aufnahme nutzt HEVC (H.265). Dein Browser unterstützt diesen Codec nicht. Probier Safari, Edge unter Windows, oder installier die HEVC Video Extensions aus dem Microsoft Store.",
+    "playbackFailedTitle": "Wiedergabe fehlgeschlagen",
+    "playbackFailedMessage": "Beim Abspielen ist etwas schiefgelaufen. Öffne die Browser-Konsole (F12) und teil die Log-Ausgabe mit dem Support, damit wir das Problem beheben können."
   }
 }
