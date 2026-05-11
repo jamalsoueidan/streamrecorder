@@ -1,6 +1,7 @@
 "use client";
 
 import { useWatched } from "@/app/hooks/use-watched";
+import { Role } from "@/app/providers/ability-provider";
 import { useUser } from "@/app/providers/user-provider";
 import {
   FollowerTypeEnum,
@@ -14,7 +15,6 @@ import { useSearchParams } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 
 import { getMyProfileUrl } from "@/app/lib/profile-url";
-import { SOCIAL_URL_PATTERNS } from "@/app/components/open-social";
 import { useIsNew } from "@/app/providers/is-new-provider";
 import { getImageUrl } from "@/app/lib/media-url";
 import Image from "next/image";
@@ -150,32 +150,71 @@ export function ImageSpritePreview({ recording, type, username }: Props) {
       </Anchor>
 
       {isRecording && (
-        <Badge
-          component="a"
-          href={SOCIAL_URL_PATTERNS[type]?.(username) || "#"}
-          target="_blank"
-          rel="noopener noreferrer"
-          pos="absolute"
-          top={8}
-          left={8}
-          radius="sm"
-          color="red"
-          variant="filled"
-          size="sm"
-          style={{ cursor: "pointer", zIndex: 10 }}
-          leftSection={
-            <Box
-              w={8}
-              h={8}
-              bg="white"
-              style={{ borderRadius: "50%", animation: "pulse 1s infinite" }}
-            />
-          }
-        >
-          {t("recordings.recordCount", {
-            count: sources && sources?.length > 1 ? `#${sources.length}` : "",
-          })}
-        </Badge>
+        <>
+          <Role is="authenticated" not>
+            <Link
+              href={`/my/${type}/${encodeURIComponent(username)}/live`}
+              style={{ position: "absolute", top: 0, left: 0, zIndex: 10 }}
+            >
+              <Badge
+                pos="absolute"
+                top={8}
+                left={8}
+                radius="sm"
+                color="red"
+                variant="filled"
+                size="sm"
+                style={{ zIndex: 10, cursor: "pointer" }}
+                leftSection={
+                  <Box
+                    w={8}
+                    h={8}
+                    bg="white"
+                    style={{
+                      borderRadius: "50%",
+                      animation: "pulse 1s infinite",
+                    }}
+                  />
+                }
+              >
+                {t("recordings.recordCount", {
+                  count:
+                    sources && sources?.length > 1
+                      ? `#${sources.length}`
+                      : "",
+                })}
+              </Badge>
+            </Link>
+          </Role>
+          <Role is="authenticated">
+            <Badge
+              pos="absolute"
+              top={8}
+              left={8}
+              radius="sm"
+              color="red"
+              variant="filled"
+              size="sm"
+              style={{ zIndex: 10 }}
+              leftSection={
+                <Box
+                  w={8}
+                  h={8}
+                  bg="white"
+                  style={{
+                    borderRadius: "50%",
+                    animation: "pulse 1s infinite",
+                  }}
+                />
+              }
+            >
+              {t("recordings.recordCount", {
+                count:
+                  sources && sources?.length > 1 ? `#${sources.length}` : "",
+              })}
+            </Badge>
+          </Role>
+        </>
       )}
 
       {watched ? (

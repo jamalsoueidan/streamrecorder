@@ -6,13 +6,16 @@ import "xgplayer/dist/index.min.css";
 
 interface LivePlayerProps {
   src: string;
+  format: "flv" | "hls";
 }
 
-// Live FLV player using xgplayer (built by ByteDance, parent of TikTok).
-// Handles Enhanced-FLV with HEVC inside — the format TikTok / Douyin
+// Live player using xgplayer (built by ByteDance). FLV path handles
+// Enhanced-FLV with HEVC inside — the format TikTok / Douyin / Trovo
 // serve their lives in. mpegts.js / flv.js choke on TikTok's HVCC
-// config record; xgplayer parses it correctly out of the box.
-export function LivePlayer({ src }: LivePlayerProps) {
+// config record; xgplayer-flv parses it correctly out of the box.
+// HLS path handles every other platform (Twitch, YouTube, Kick, Bigo,
+// AfreecaTV, Pandalive, LiveMe, Twitcasting, etc.) via xgplayer-hls.
+export function LivePlayer({ src, format }: LivePlayerProps) {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -23,12 +26,20 @@ export function LivePlayer({ src }: LivePlayerProps) {
     let cancelled = false;
 
     (async () => {
-      // Dynamic import — xgplayer touches `window` on import.
-      const [{ default: Player }, { default: FlvPlugin }] = await Promise.all([
+      const [{ default: Player }, { default: Plugin }] = await Promise.all([
         import("xgplayer"),
-        import("xgplayer-flv"),
+        format === "flv" ? import("xgplayer-flv") : import("xgplayer-hls"),
       ]);
       if (cancelled) return;
+
+      const liveTuning = {
+        retryCount: 3,
+        retryDelay: 1000,
+        loadTimeout: 10000,
+        targetLatency: 3,
+        maxLatency: 6,
+        disconnectTime: 6,
+      };
 
       const p = new Player({
         el: container,
@@ -36,16 +47,8 @@ export function LivePlayer({ src }: LivePlayerProps) {
         isLive: true,
         autoplay: true,
         autoplayMuted: true,
-        plugins: [FlvPlugin],
-        // Lower-latency live config
-        flv: {
-          retryCount: 3,
-          retryDelay: 1000,
-          loadTimeout: 10000,
-          targetLatency: 3,
-          maxLatency: 6,
-          disconnectTime: 6,
-        },
+        plugins: [Plugin],
+        ...(format === "flv" ? { flv: liveTuning } : { hls: liveTuning }),
         width: "100%",
         height: "100%",
       });
@@ -63,7 +66,7 @@ export function LivePlayer({ src }: LivePlayerProps) {
         }
       }
     };
-  }, [src]);
+  }, [src, format]);
 
   return (
     <Box

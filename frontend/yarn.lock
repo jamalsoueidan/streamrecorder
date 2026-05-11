@@ -857,7 +857,7 @@
   dependencies:
     "@floating-ui/utils" "^0.2.11"
 
-"@floating-ui/dom@^1.7.6":
+"@floating-ui/dom@^1.6.10", "@floating-ui/dom@^1.7.6":
   version "1.7.6"
   resolved "https://registry.yarnpkg.com/@floating-ui/dom/-/dom-1.7.6.tgz#f915bba5abbb177e1f227cacee1b4d0634b187bf"
   integrity sha512-9gZSAI5XM36880PPMm//9dfiEngYoC6Am2izES1FF406YFsjvyBMmeJ2g4SAju3xWwtuynNRFL2s9hgxpLI5SQ==
@@ -2607,6 +2607,14 @@
   integrity sha512-Yy19y6O2GJq8f7CHf7L0nxL8bf4PZCPaVOCgJrusOeFHY1LvHgYXnmnXg6N5iwAnbgbZCDjo60SiM6IPJi9C5g==
   dependencies:
     "@use-gesture/core" "10.3.1"
+
+"@vidstack/react@1.12.13":
+  version "1.12.13"
+  resolved "https://registry.yarnpkg.com/@vidstack/react/-/react-1.12.13.tgz#db7d27db4a20ad21fd2acfd3f68b200ae098d010"
+  integrity sha512-zyNydy1+HtoK6cJ8EmqFNkPPGHIFMrr2KH+ef3654EqXx4IcJ8A5LCNMXBuALQE8IMxtk040JMoR9OKyeXjBOQ==
+  dependencies:
+    "@floating-ui/dom" "^1.6.10"
+    media-captions "^1.0.4"
 
 acorn-jsx@^5.3.2:
   version "5.3.2"
@@ -4851,6 +4859,11 @@ mdast-util-to-string@^4.0.0:
   dependencies:
     "@types/mdast" "^4.0.0"
 
+media-captions@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/media-captions/-/media-captions-1.0.4.tgz#aaacb6a554f7549fc7308b6b7cf766686cf42fad"
+  integrity sha512-cyDNmuZvvO4H27rcBq2Eudxo9IZRDCOX/I7VEyqbxsEiD2Ei7UYUhG/Sc5fvMZjmathgz3fEK7iAKqvpY+Ux1w==
+
 media-chrome@^4.19.0:
   version "4.19.0"
   resolved "https://registry.yarnpkg.com/media-chrome/-/media-chrome-4.19.0.tgz#90ae067fb8537fcbe4b84d652692fa899ff03f19"
@@ -6758,6 +6771,15 @@ xgplayer-flv@^3.0.24:
   version "3.0.24"
   resolved "https://registry.yarnpkg.com/xgplayer-flv/-/xgplayer-flv-3.0.24.tgz#9afd0f313d716bc3d34907a713fe49c577cad143"
   integrity sha512-a1ITJEyfTLUy6x11Szwmzvxn3VNTx5Ivsgpi9tXvRp0BvfqMyqmWkwyQ1SS1yfKFaZcO57QLiNAYtnKUeNLI1A==
+  dependencies:
+    eventemitter3 "^4.0.7"
+    xgplayer-streaming-shared "3.0.24"
+    xgplayer-transmuxer "3.0.24"
+
+xgplayer-hls@3.0.24:
+  version "3.0.24"
+  resolved "https://registry.yarnpkg.com/xgplayer-hls/-/xgplayer-hls-3.0.24.tgz#314d04955f59267402fc0f89a08771035134bfe6"
+  integrity sha512-R4saQRCnRk5zcYCFGc10BGCIWLXQ4vwjoWKJaPQEr7vGvrxMGLlWt63cmzGnL6HHSzzFna0nIe2BCDHtOQOaVw==
   dependencies:
     eventemitter3 "^4.0.7"
     xgplayer-streaming-shared "3.0.24"

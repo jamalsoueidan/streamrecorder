@@ -32,13 +32,6 @@ export default async function DashTestPage({ params }: PageProps) {
           </Text>
         </Stack>
         <DashTestPlayer documentId={id} />
-        <Text size="xs" c="dimmed">
-          This page serves the same fmp4 segments via a DASH manifest and
-          uses dash.js with the @hevcjs/dashjs-plugin to transcode HEVC →
-          H.264 in the browser. Works in Chrome / Edge / Safari, but NOT
-          Firefox (Firefox lacks the WebCodecs VideoEncoder needed for the
-          transcode).
-        </Text>
       </Stack>
     </Container>
   );
