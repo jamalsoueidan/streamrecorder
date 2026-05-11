@@ -33,10 +33,107 @@ interface SourceManifest {
   initRange: { start: number; length: number };
   segments: SegmentRef[];
   totalDuration: number;
+  codecs: string;
 }
 
-const fetchSourcePlaylists = unstable_cache(
-  async (documentId: string) => {
+// Probe the mp4 init segment for the actual codec string. Reads the
+// `avcC` (H.264 decoder config) or `hvcC` (HEVC decoder config) box
+// right after its anchor and extracts the exact profile/level/etc bytes
+// that MUST match the codec string in the DASH manifest — Chromium
+// strict-checks "Video stream codec X doesn't match SourceBuffer codecs"
+// otherwise.
+//
+// avcC layout: [4 size][4 'avcC'][1 cfgVer][1 profile][1 compat][1 level]…
+// hvcC layout: [4 size][4 'hvcC'][1 cfgVer][1 profile_space|tier|profile_idc]
+//              [4 compat_flags][6 constraint_flags][1 level_idc]…
+async function detectCodecsFromInit(
+  s3Client: S3Client,
+  bucket: string,
+  key: string,
+  initStart: number,
+  initLength: number,
+): Promise<string> {
+  const fallback = "avc1.640028,mp4a.40.2";
+  const hex2 = (n: number) => n.toString(16).padStart(2, "0").toUpperCase();
+  try {
+    const command = new GetObjectCommand({
+      Bucket: bucket,
+      Key: key,
+      Range: `bytes=${initStart}-${initStart + initLength - 1}`,
+    });
+    const response = await s3Client.send(command);
+    if (!response.Body) return fallback;
+    const buf = await response.Body.transformToByteArray();
+    const view = buf instanceof Uint8Array ? buf : new Uint8Array(buf);
+    const text = new TextDecoder("latin1").decode(view);
+
+    // Find the sample entry FourCC (avc1/avc3/hvc1/hev1) — it lives at
+    // offset 16 from each `stsd` anchor.
+    const sampleEntryFourCC = (() => {
+      let i = text.indexOf("stsd");
+      while (i !== -1) {
+        const f = text.slice(i + 16, i + 20);
+        if (f === "hvc1" || f === "hev1" || f === "avc1" || f === "avc3") {
+          return f;
+        }
+        i = text.indexOf("stsd", i + 4);
+      }
+      return null;
+    })();
+
+    let result = fallback;
+    // text.indexOf("avcC"/"hvcC") returns the offset of the *type* field.
+    // The 4-byte box size is BEFORE that, and the config record payload
+    // starts AFTER the type field — so payload begins at `idx + 4`.
+    if (sampleEntryFourCC === "hvc1" || sampleEntryFourCC === "hev1") {
+      const hvccIdx = text.indexOf("hvcC");
+      if (hvccIdx !== -1) {
+        const o = hvccIdx + 4; // payload start
+        const cfg = view[o + 1];
+        const profileSpace = (cfg >> 6) & 0x3;
+        const tierFlag = (cfg >> 5) & 0x1;
+        const profileIdc = cfg & 0x1f;
+        const compat =
+          (view[o + 2] << 24) |
+          (view[o + 3] << 16) |
+          (view[o + 4] << 8) |
+          view[o + 5];
+        const constraint = Array.from(view.slice(o + 6, o + 12))
+          .map((b) => hex2(b))
+          .join("");
+        const levelIdc = view[o + 12];
+        const profilePrefix = ["", "A", "B", "C"][profileSpace] || "";
+        result =
+          `${sampleEntryFourCC}.${profilePrefix}${profileIdc}` +
+          `.${(compat >>> 0).toString(16).toUpperCase()}` +
+          `.${tierFlag ? "H" : "L"}${levelIdc}` +
+          `.${constraint.replace(/0+$/, "") || "B0"},mp4a.40.2`;
+      }
+    }
+    if (sampleEntryFourCC === "avc1" || sampleEntryFourCC === "avc3") {
+      const avccIdx = text.indexOf("avcC");
+      if (avccIdx !== -1) {
+        const o = avccIdx + 4; // payload start
+        const profile = view[o + 1];
+        const compat = view[o + 2];
+        const level = view[o + 3];
+        result = `${sampleEntryFourCC}.${hex2(profile)}${hex2(compat)}${hex2(level)},mp4a.40.2`;
+      }
+    }
+    console.log(
+      `[manifest.mpd] probed key=${key} fourCC=${sampleEntryFourCC} → codecs="${result}"`,
+    );
+    return result;
+  } catch {
+    return fallback;
+  }
+}
+
+// Cache disabled — see comment on buildDashManifest.
+async function fetchSourcePlaylists(documentId: string) {
+  return _fetchSourcePlaylistsImpl(documentId);
+}
+async function _fetchSourcePlaylistsImpl(documentId: string) {
     const response = await publicApi.source.getSources({
       filters: {
         recording: { documentId },
@@ -59,27 +156,22 @@ const fetchSourcePlaylists = unstable_cache(
     );
 
     return { sourcesWithPlaylists, bucket: sources[0].bucket };
-  },
-  ["dash-source-playlists"],
-  { revalidate: 3600 },
-);
+}
 
-const buildDashManifest = unstable_cache(
-  async (documentId: string) => {
-    const cached = await fetchSourcePlaylists(documentId);
-    if (!cached) return null;
-    const s3Client = getS3();
-    const bucket = getBucket(process.env.MEDIA_BUCKET!, cached.bucket);
-    const sourceManifests = await buildSourceManifests(
-      s3Client,
-      bucket,
-      cached.sourcesWithPlaylists,
-    );
-    return renderMpd(sourceManifests);
-  },
-  ["dash-manifest"],
-  { revalidate: 10800 }, // 3h, signed URLs valid 4h
-);
+// Cache disabled while debugging codec detection. The probe runs every
+// request; re-enable unstable_cache once codec strings are correct.
+async function buildDashManifest(documentId: string) {
+  const cached = await fetchSourcePlaylists(documentId);
+  if (!cached) return null;
+  const s3Client = getS3();
+  const bucket = getBucket(process.env.MEDIA_BUCKET!, cached.bucket);
+  const sourceManifests = await buildSourceManifests(
+    s3Client,
+    bucket,
+    cached.sourcesWithPlaylists,
+  );
+  return renderMpd(sourceManifests);
+}
 
 export async function GET(
   _request: NextRequest,
@@ -149,6 +241,7 @@ async function fetchPlaylistsFromS3(
 function parseSourcePlaylist(
   playlist: string,
   signedMp4Url: string,
+  codecs: string,
 ): SourceManifest | null {
   const lines = playlist.split("\n");
   let initStart = 0;
@@ -212,6 +305,7 @@ function parseSourcePlaylist(
     initRange: { start: initStart, length: initLength },
     segments,
     totalDuration,
+    codecs,
   };
 }
 
@@ -238,8 +332,18 @@ async function buildSourceManifests(
     });
     const baseUrl = proxySignedUrl(signedUrl);
 
-    const manifest = parseSourcePlaylist(source.playlist, baseUrl);
-    if (manifest) manifests.push(manifest);
+    // Parse the playlist first so we know the init segment range; then
+    // probe those bytes from S3 for the actual codec FourCC.
+    const partial = parseSourcePlaylist(source.playlist, baseUrl, "");
+    if (!partial) continue;
+    const codecs = await detectCodecsFromInit(
+      s3Client,
+      bucket,
+      s3Key,
+      partial.initRange.start,
+      partial.initRange.length,
+    );
+    manifests.push({ ...partial, codecs });
   }
 
   return manifests;
@@ -279,7 +383,7 @@ function renderMpd(sources: SourceManifest[]): string {
 
       return `  <Period id="p${idx}" duration="${pt(source.totalDuration)}">
     <AdaptationSet contentType="video" mimeType="video/mp4" segmentAlignment="true">
-      <Representation id="r${idx}" codecs="hev1.1.6.L120.B0,mp4a.40.5" bandwidth="2000000">
+      <Representation id="r${idx}" codecs="${source.codecs}" bandwidth="2000000">
         <BaseURL>${escapeXml(source.baseUrl)}</BaseURL>
         <SegmentList timescale="1000">
           <Initialization range="${source.initRange.start}-${source.initRange.start + source.initRange.length - 1}"/>

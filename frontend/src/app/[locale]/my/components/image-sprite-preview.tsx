@@ -152,10 +152,7 @@ export function ImageSpritePreview({ recording, type, username }: Props) {
       {isRecording && (
         <>
           <Role is="authenticated" not>
-            <Link
-              href={`/my/${type}/${encodeURIComponent(username)}/live`}
-              style={{ position: "absolute", top: 0, left: 0, zIndex: 10 }}
-            >
+            <Link href={`/my/${type}/${encodeURIComponent(username)}/live`}>
               <Badge
                 pos="absolute"
                 top={8}
@@ -164,7 +161,7 @@ export function ImageSpritePreview({ recording, type, username }: Props) {
                 color="red"
                 variant="filled"
                 size="sm"
-                style={{ zIndex: 10, cursor: "pointer" }}
+                style={{ cursor: "pointer", zIndex: 10 }}
                 leftSection={
                   <Box
                     w={8}
