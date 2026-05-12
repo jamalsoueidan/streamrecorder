@@ -20,6 +20,12 @@
     "streamTitle": "{nickname} 的直播 - {date}"
   },
   "report": "举报",
+  "blocked": {
+    "metaTitle": "内容已被移除",
+    "metaDescription": "此创作者的内容已被移除。",
+    "title": "内容已被移除",
+    "description": "应已核实的 DMCA 删除请求，此个人资料的录制内容已被移除。"
+  },
   "cta": {
     "title": "你只能看到 @{username} 的预览",
     "description": "@{username} 在这里分享他们的录制内容。注册以保存和分享你自己的直播。",

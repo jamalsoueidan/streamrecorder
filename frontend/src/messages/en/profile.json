@@ -20,6 +20,12 @@
     "streamTitle": "{nickname}'s Stream - {date}"
   },
   "report": "Report",
+  "blocked": {
+    "metaTitle": "Content Removed",
+    "metaDescription": "This creator's content has been removed.",
+    "title": "Content Removed",
+    "description": "This profile's recordings have been removed in response to a verified DMCA takedown request."
+  },
   "cta": {
     "title": "You're only seeing a preview from @{username}",
     "description": "@{username} shares their recordings here. Sign up to save and share your own streams.",

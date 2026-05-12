@@ -20,6 +20,12 @@
     "streamTitle": "Stream de {nickname} – {date}"
   },
   "report": "Signaler",
+  "blocked": {
+    "metaTitle": "Contenu supprimé",
+    "metaDescription": "Le contenu de ce créateur a été supprimé.",
+    "title": "Contenu supprimé",
+    "description": "Les enregistrements de ce profil ont été supprimés à la suite d'une demande de retrait DMCA vérifiée."
+  },
   "cta": {
     "title": "Tu ne vois qu'un aperçu de @{username}",
     "description": "@{username} partage ses enregistrements ici. Inscris-toi pour sauvegarder et partager tes propres streams.",

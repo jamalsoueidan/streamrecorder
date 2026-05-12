@@ -20,6 +20,12 @@
     "streamTitle": "{nickname}의 방송 - {date}"
   },
   "report": "신고",
+  "blocked": {
+    "metaTitle": "콘텐츠가 삭제되었습니다",
+    "metaDescription": "이 크리에이터의 콘텐츠가 삭제되었습니다.",
+    "title": "콘텐츠가 삭제되었습니다",
+    "description": "확인된 DMCA 삭제 요청에 따라 이 프로필의 녹화본이 삭제되었습니다."
+  },
   "cta": {
     "title": "@{username}의 미리보기만 보고 있습니다",
     "description": "@{username}이(가) 여기서 녹화 영상을 공유합니다. 가입하여 나만의 방송을 저장하고 공유하세요.",

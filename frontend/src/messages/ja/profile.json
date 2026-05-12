@@ -20,6 +20,12 @@
     "streamTitle": "{nickname} の配信 - {date}"
   },
   "report": "報告",
+  "blocked": {
+    "metaTitle": "コンテンツは削除されました",
+    "metaDescription": "このクリエイターのコンテンツは削除されました。",
+    "title": "コンテンツは削除されました",
+    "description": "確認済みのDMCA削除要請に応じて、このプロフィールの録画は削除されました。"
+  },
   "cta": {
     "title": "@{username} のプレビューのみ表示中",
     "description": "@{username} が録画を共有しています。無料登録して自分の配信を保存・共有しましょう。",

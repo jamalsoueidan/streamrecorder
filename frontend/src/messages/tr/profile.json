@@ -20,6 +20,12 @@
     "streamTitle": "{nickname} Yayını - {date}"
   },
   "report": "Bildir",
+  "blocked": {
+    "metaTitle": "İçerik Kaldırıldı",
+    "metaDescription": "Bu içerik üreticisinin içeriği kaldırıldı.",
+    "title": "İçerik Kaldırıldı",
+    "description": "Doğrulanmış bir DMCA kaldırma talebine yanıt olarak bu profilin kayıtları kaldırıldı."
+  },
   "cta": {
     "title": "@{username}'dan sadece bir önizleme görüyorsunuz",
     "description": "@{username} kayıtlarını burada paylaşıyor. Kendi yayınlarınızı kaydetmek ve paylaşmak için kaydolun.",

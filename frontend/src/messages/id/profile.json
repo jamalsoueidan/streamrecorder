@@ -20,6 +20,12 @@
     "streamTitle": "Stream {nickname} - {date}"
   },
   "report": "Laporkan",
+  "blocked": {
+    "metaTitle": "Konten Dihapus",
+    "metaDescription": "Konten kreator ini telah dihapus.",
+    "title": "Konten Dihapus",
+    "description": "Rekaman dari profil ini telah dihapus sebagai tanggapan atas permintaan penghapusan DMCA yang terverifikasi."
+  },
   "cta": {
     "title": "Anda hanya melihat pratinjau dari @{username}",
     "description": "@{username} membagikan rekaman mereka di sini. Daftar untuk menyimpan dan membagikan stream Anda sendiri.",

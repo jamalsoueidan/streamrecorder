@@ -20,6 +20,12 @@
     "streamTitle": "Live de {nickname} - {date}"
   },
   "report": "Denunciar",
+  "blocked": {
+    "metaTitle": "Conteúdo removido",
+    "metaDescription": "O conteúdo deste criador foi removido.",
+    "title": "Conteúdo removido",
+    "description": "As gravações deste perfil foram removidas em resposta a uma solicitação verificada de retirada DMCA."
+  },
   "cta": {
     "title": "Você está vendo apenas uma prévia de @{username}",
     "description": "@{username} compartilha suas gravações aqui. Crie uma conta para salvar e compartilhar suas próprias lives.",

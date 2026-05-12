@@ -1,4 +1,4 @@
-import { IconFlag, IconVideo } from "@tabler/icons-react";
+import { IconFlag, IconShieldOff, IconVideo } from "@tabler/icons-react";
 
 import {
   ActionIcon,
@@ -64,6 +64,16 @@ export async function generateMetadata({
     };
   }
 
+  // DMCA-removed profiles: keep the URL stable (no notFound), but tell
+  // search engines to drop it from the index and serve a generic title.
+  if (follower.blocked) {
+    return {
+      title: t("blocked.metaTitle"),
+      description: t("blocked.metaDescription"),
+      robots: { index: false, follow: false },
+    };
+  }
+
   const platformName = type.charAt(0).toUpperCase() + type.slice(1);
   const creatorName = decodeURIComponent(follower.username || "unknown");
   const translation = {
@@ -110,15 +120,32 @@ export default async function Page({ params }: PageProps) {
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "profile" });
   const format = await getFormatter();
-  const [follower, data] = await Promise.all([
-    getFollower({ username, type, locale }),
-    fetchProfileRecordings(type, username),
-  ]);
+  const follower = await getFollower({ username, type, locale });
 
   if (!follower) {
     notFound();
   }
 
+  // DMCA-blocked: skip the recordings fetch and the rich profile shell
+  // entirely. Recordings are gone, so anything we'd populate would be
+  // empty or misleading.
+  if (follower.blocked) {
+    return (
+      <Container size="sm">
+        <Stack align="center" justify="center" py={100} gap="lg">
+          <IconShieldOff size={80} stroke={1.5} color="#94a3b8" />
+          <Title order={1} ta="center">
+            {t("blocked.title")}
+          </Title>
+          <Text size="lg" c="dimmed" ta="center" maw={500}>
+            {t("blocked.description")}
+          </Text>
+        </Stack>
+      </Container>
+    );
+  }
+
+  const data = await fetchProfileRecordings(type, username);
   const recordings = data?.data ?? [];
   const hasRecordings = recordings.length > 0;
 

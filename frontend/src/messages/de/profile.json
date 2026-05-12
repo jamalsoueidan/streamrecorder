@@ -20,6 +20,12 @@
     "streamTitle": "Stream von {nickname} – {date}"
   },
   "report": "Melden",
+  "blocked": {
+    "metaTitle": "Inhalt entfernt",
+    "metaDescription": "Der Inhalt dieses Erstellers wurde entfernt.",
+    "title": "Inhalt entfernt",
+    "description": "Die Aufnahmen dieses Profils wurden aufgrund einer geprüften DMCA-Anfrage entfernt."
+  },
   "cta": {
     "title": "Du siehst nur eine Vorschau von @{username}",
     "description": "@{username} teilt seine Aufnahmen hier. Registriere dich, um deine eigenen Streams zu speichern und zu teilen.",

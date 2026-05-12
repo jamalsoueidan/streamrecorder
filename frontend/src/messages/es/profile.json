@@ -20,6 +20,12 @@
     "streamTitle": "Transmisión de {nickname} - {date}"
   },
   "report": "Reportar",
+  "blocked": {
+    "metaTitle": "Contenido eliminado",
+    "metaDescription": "El contenido de este creador ha sido eliminado.",
+    "title": "Contenido eliminado",
+    "description": "Las grabaciones de este perfil se han eliminado en respuesta a una solicitud de retirada DMCA verificada."
+  },
   "cta": {
     "title": "Solo estás viendo una vista previa de @{username}",
     "description": "@{username} comparte sus grabaciones aquí. Crea una cuenta para guardar y compartir tus propias transmisiones.",
