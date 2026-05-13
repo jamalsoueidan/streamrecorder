@@ -42,25 +42,23 @@ const fetchSourcePlaylists = unstable_cache(
   { revalidate: 3600 },
 );
 
-// Combined + signed playlist is the same bytes for every user. Cache it
-// globally for 3h. Signed URLs expire in 4h so they stay valid across the
-// cache lifetime.
-const buildSignedPlaylist = unstable_cache(
-  async (documentId: string) => {
-    const cached = await fetchSourcePlaylists(documentId);
-    if (!cached) return null;
+// The signed playlist is NOT cached — signing is cheap local HMAC
+// compute (~5-10ms per request), and caching the signed output risks
+// serving URLs that have aged past their 4h S3 TTL when the cache sits
+// idle for hours. The expensive part — fetching raw playlists from S3 —
+// stays cached via `fetchSourcePlaylists` (1h TTL).
+async function buildSignedPlaylist(documentId: string) {
+  const cached = await fetchSourcePlaylists(documentId);
+  if (!cached) return null;
 
-    const s3Client = getS3();
-    const bucket = getBucket(process.env.MEDIA_BUCKET!, cached.bucket);
-    return combinePlaylistsWithSignedUrls(
-      s3Client,
-      bucket,
-      cached.sourcesWithPlaylists,
-    );
-  },
-  ["playlist-signed"],
-  { revalidate: 10800 }, // 3h
-);
+  const s3Client = getS3();
+  const bucket = getBucket(process.env.MEDIA_BUCKET!, cached.bucket);
+  return combinePlaylistsWithSignedUrls(
+    s3Client,
+    bucket,
+    cached.sourcesWithPlaylists,
+  );
+}
 
 export type SourceWithPlaylist = Source & { playlist?: string | null };
 

@@ -150,6 +150,11 @@ export function VideoPlayer({
       // failure has another cause — network, expired URL, etc.).
       const issue = diagnoseCodecIssue(platform, caps, err?.code);
 
+      // Only show user-facing notifications for codec issues the user
+      // can actually act on (switch browser / install codec). For generic
+      // playback errors we log to console for support diagnostics but
+      // don't toast — the toast was firing for transient/recoverable
+      // errors and creating support noise.
       if (issue === "hevc") {
         notifications.show({
           color: "orange",
@@ -163,13 +168,6 @@ export function VideoPlayer({
           autoClose: false,
           title: t("audioCodecUnsupportedTitle"),
           message: t("audioCodecUnsupportedMessage"),
-        });
-      } else if (err) {
-        notifications.show({
-          color: "red",
-          autoClose: 8000,
-          title: t("playbackFailedTitle"),
-          message: t("playbackFailedMessage"),
         });
       }
     };
