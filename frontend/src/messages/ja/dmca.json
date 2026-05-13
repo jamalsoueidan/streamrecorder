@@ -5,71 +5,51 @@
   },
   "header": {
     "title": "デジタルミレニアム著作権法",
-    "subtitle": "DMCA ポリシー"
-  },
-  "divider": "または自分で管理して対応する",
-  "footer": "有効な DMCA 申請にはすべて対応します。この手続きの悪用は法的措置につながる可能性があります。",
-  "partner": {
-    "title": "パートナーになりませんか？",
-    "badge": "おすすめ",
-    "subtitle": "コンテンツを管理してオーディエンスを増やしましょう",
-    "publicMessage": "すでに公開配信を行っています。ファンが Google でお客様を見つけ、ベストモーメントを視聴できるよう支援します。",
-    "discovery": {
-      "title": "Google 検索",
-      "description": "配信が検索結果に表示され、ファンがプロフィールに直接アクセスできます"
-    },
-    "analytics": {
-      "title": "アナリティクスダッシュボード",
-      "description": "視聴数、視聴時間、オーディエンスの所在地、成長トレンドをトラッキングします"
-    },
-    "highlights": {
-      "title": "AI ハイライト",
-      "description": "配信のベストモーメントを自動で抽出・紹介します"
-    },
-    "clips": {
-      "title": "クリップ作成",
-      "description": "TikTok、YouTube などにシェアするクリップをダウンロードできます"
-    },
-    "translation": {
-      "title": "多言語対応",
-      "description": "自動翻訳された字幕・説明文でグローバルなファンにリーチします"
-    },
-    "rankings": {
-      "title": "ストリーマーランキング",
-      "description": "トップストリーマーリストやカテゴリページに掲載されます"
-    },
-    "brands": {
-      "title": "ブランド機会",
-      "description": "あなたのようなクリエイターを探しているスポンサーに発見されます"
-    },
-    "control": {
-      "title": "完全なプライバシー管理",
-      "description": "動画の削除・非表示・録画管理をすべて自分でコントロールできます"
-    },
-    "cta": "プロフィールを確認してパートナーになる",
-    "ctaSubtext": "2 分で完了・コンテンツを完全管理"
+    "subtitle": "削除リクエストを送信してください。すべての通知を確認し、正当な申し立てには迅速に対応します。"
   },
   "form": {
     "title": "著作権侵害申告通知",
-    "description": "DMCA に基づいて録画の削除を申請するにはこのフォームをご使用ください。",
-    "verifyFirst": {
-      "title": "クイック認証",
-      "message": "アカウントのオーナーシップを認証して録画を即時削除できます。認証できない場合は DMCA フォームをご利用ください。手動申請は 10 営業日以内に処理されます。",
-      "button": "認証して即時削除する"
+    "description": "著作権を侵害する録画の削除を申請するには、このフォームをご使用ください。法的に有効な DMCA 通知に対応し、状況に応じて繰り返し侵害を行うアカウントを無効化します。",
+    "sections": {
+      "yourWork": "あなたの著作物",
+      "infringing": "侵害コンテンツ",
+      "yourRole": "あなたの立場",
+      "contact": "連絡先情報",
+      "sworn": "宣誓事項",
+      "signature": "署名"
     },
-    "content": {
-      "label": "対象コンテンツ",
-      "description": "侵害コンテンツの URL または説明を入力してください",
-      "placeholder": "https://example.com/recording/..."
+    "work": {
+      "description": {
+        "label": "著作物の内容を記述してください",
+        "description": "オリジナルコンテンツは何ですか？いつ制作または初めて公開されましたか？詳細な情報をご提供いただくほど、申請内容の確認を迅速に行うことができます。",
+        "placeholder": "例：2024年3月15日午後8時から10時（EST）に Twitch で @mychannel として配信したライブ配信。新曲「タイトル」のリリースに関する内容。"
+      }
+    },
+    "infringing": {
+      "urls": {
+        "label": "侵害録画の URL",
+        "description": "1行に1つの URL を記入してください。LiveStreamRecorder 上で削除を希望される録画の URL です。",
+        "placeholder": "https://www.livestreamrecorder.com/twitch/..."
+      }
     },
     "copyrightType": {
-      "label": "該当する項目を選択してください",
-      "personal": "私個人の著作権を侵害している",
-      "authorized": "代理権限を持つ第三者の著作権を侵害している"
+      "label": "本通知の申請者として該当する項目",
+      "personal": "著作権者本人",
+      "authorized": "著作権者の正規代理人"
+    },
+    "contact": {
+      "firstName": {
+        "label": "名",
+        "placeholder": "太郎"
+      },
+      "lastName": {
+        "label": "姓",
+        "placeholder": "山田"
+      }
     },
     "email": {
       "label": "メールアドレス",
-      "description": "申請に対する返信先として使用します",
+      "description": "申請に対する返信先として使用します。",
       "placeholder": "you@example.com"
     },
     "perjury": {
@@ -80,9 +60,13 @@
       "acknowledge": "第 512 条(f)に基づき、マテリアルまたは活動が侵害であると故意に重大な虚偽表示をした者は損害賠償責任を負う可能性があることを認識しています。"
     },
     "signature": {
-      "label": "デジタル署名",
-      "description": "このボックスに氏名を入力することでデジタル署名となります",
-      "placeholder": "氏名（戸籍上の名前）"
+      "date": {
+        "label": "署名日"
+      },
+      "label": "署名（タイピング）",
+      "description": "法律上の氏名（フルネーム）を入力してください。上記の「姓」と「名」と完全に一致する必要があります。これがデジタル署名として機能します。",
+      "placeholder": "山田 太郎",
+      "mismatch": "署名は「姓」と「名」と完全に一致している必要があります。"
     },
     "captcha": {
       "label": "認証",
@@ -90,7 +74,8 @@
       "placeholder": "答えを入力してください",
       "error": "不正解です。もう一度お試しください"
     },
-    "submit": "DMCA 申請を送信する"
+    "submit": "DMCA 申請を送信する",
+    "footer": "有効な DMCA 申請にはすべて対応します。この手続きの悪用は法的措置につながる可能性があります。"
   },
   "submitted": {
     "title": "DMCA 申請を受け付けました",

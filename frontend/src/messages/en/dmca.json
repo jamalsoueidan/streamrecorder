@@ -5,84 +5,68 @@
   },
   "header": {
     "title": "Digital Millennium Copyright Act",
-    "subtitle": "DMCA Policy"
-  },
-  "divider": "Or take control and do it yourself",
-  "footer": "We respond to all valid DMCA requests. Abuse of this process may result in legal consequences.",
-  "partner": {
-    "title": "Wait! Become a Partner Instead",
-    "badge": "Recommended",
-    "subtitle": "Take control of your content and grow your audience",
-    "publicMessage": "You're already streaming publicly. We help your fans find you on Google and watch your best moments.",
-    "discovery": {
-      "title": "Google Search",
-      "description": "Your streams appear in search results and we send fans directly to your profile"
-    },
-    "analytics": {
-      "title": "Analytics Dashboard",
-      "description": "Track views, watch time, audience location, and growth trends"
-    },
-    "highlights": {
-      "title": "AI-Powered Highlights",
-      "description": "We automatically find and showcase your best streaming moments"
-    },
-    "clips": {
-      "title": "Clip Creator",
-      "description": "Download clips to share on TikTok, YouTube, and more"
-    },
-    "translation": {
-      "title": "Multi-Language Support",
-      "description": "Reach global fans with auto-translated subtitles and descriptions"
-    },
-    "rankings": {
-      "title": "Streamer Rankings",
-      "description": "Get featured in top streamer lists and category pages"
-    },
-    "brands": {
-      "title": "Brand Opportunities",
-      "description": "Get discovered by sponsors looking for creators like you"
-    },
-    "control": {
-      "title": "Full Privacy Control",
-      "description": "Delete any video, hide any video, control your recordings"
-    },
-    "cta": "Claim Your Profile & Become a Partner",
-    "ctaSubtext": "Takes 2 minutes • Full control over your content"
+    "subtitle": "Submit a takedown request. We review every notice and act on legitimate claims promptly."
   },
   "form": {
     "title": "Notification of Claimed Infringement",
-    "description": "Please use this form to request the removal of recordings under the DMCA.",
-    "verifyFirst": {
-      "title": "Quick Verification",
-      "message": "Verify account ownership to instantly remove your recordings. If you can't verify, use the DMCA form — manual requests are processed within 10 business days.",
-      "button": "Verify & Remove Instantly"
+    "description": "Use this form to request the removal of recordings that infringe your copyright. We respond to legally valid DMCA notices and disable accounts of repeat infringers in appropriate circumstances.",
+    "sections": {
+      "yourWork": "Your copyrighted work",
+      "infringing": "Infringing content",
+      "yourRole": "Your role",
+      "contact": "Contact information",
+      "sworn": "Sworn statements",
+      "signature": "Signature"
     },
-    "content": {
-      "label": "The following content",
-      "description": "Provide the URL(s) or description of the infringing content",
-      "placeholder": "https://example.com/recording/..."
+    "work": {
+      "description": {
+        "label": "Describe the copyrighted work",
+        "description": "What is the original content? When was it created or first published? The more detail you give, the faster we can verify your claim.",
+        "placeholder": "e.g. My livestream broadcast on Twitch as @mychannel on March 15, 2024 from 8–10pm EST, covering the launch of my new song 'Title'."
+      }
+    },
+    "infringing": {
+      "urls": {
+        "label": "URLs of the infringing recordings",
+        "description": "One URL per line. These are the recordings on LiveStreamRecorder you are asking us to remove.",
+        "placeholder": "https://www.livestreamrecorder.com/twitch/..."
+      }
     },
     "copyrightType": {
-      "label": "Please choose one",
-      "personal": "Infringes on my personal copyright",
-      "authorized": "Infringes on the copyright of someone I am authorized to represent"
+      "label": "I am submitting this notice as",
+      "personal": "The copyright owner",
+      "authorized": "An authorized representative of the copyright owner"
+    },
+    "contact": {
+      "firstName": {
+        "label": "First name",
+        "placeholder": "Jane"
+      },
+      "lastName": {
+        "label": "Last name",
+        "placeholder": "Doe"
+      }
     },
     "email": {
       "label": "Your email address",
-      "description": "We will use this to respond to your request",
+      "description": "We will use this to respond to your request.",
       "placeholder": "you@example.com"
     },
     "perjury": {
       "title": "By checking the following boxes, I state UNDER PENALTY OF PERJURY that:",
       "warning": "Please read each statement carefully before checking.",
-      "goodFaith": "I hereby state that I have a good faith belief that the sharing of copyrighted material at the location above is not authorized by the copyright owner, its agent, or the law (e.g., as a fair use).",
-      "accurate": "I hereby state that the information in this Notice is accurate and, under penalty of perjury, that I am the owner, or authorized to act on behalf of, the owner, of the copyright or of an exclusive right under the copyright that is allegedly infringed.",
+      "goodFaith": "I have a good faith belief that the use of the copyrighted material described above is not authorized by the copyright owner, its agent, or the law (e.g., as a fair use).",
+      "accurate": "The information in this notice is accurate and, under penalty of perjury, I am the owner or authorized to act on behalf of the owner of an exclusive right that is allegedly infringed.",
       "acknowledge": "I acknowledge that under Section 512(f) any person who knowingly materially misrepresents that material or activity is infringing may be subject to liability for damages."
     },
     "signature": {
-      "label": "Digital Signature",
-      "description": "Typing your full name in this box will act as your digital signature",
-      "placeholder": "Your full legal name"
+      "date": {
+        "label": "Date of signing"
+      },
+      "label": "Typed signature",
+      "description": "Type your full legal name. Must exactly match the First and Last name above — it acts as your digital signature.",
+      "placeholder": "Jane Doe",
+      "mismatch": "Signature must exactly match your First and Last name."
     },
     "captcha": {
       "label": "Verification",
@@ -90,7 +74,8 @@
       "placeholder": "Your answer",
       "error": "Wrong answer, try again"
     },
-    "submit": "Submit DMCA Request"
+    "submit": "Submit DMCA Request",
+    "footer": "We respond to all valid DMCA requests. Abuse of this process may result in legal consequences."
   },
   "submitted": {
     "title": "DMCA Request Submitted",

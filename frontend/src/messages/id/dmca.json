@@ -5,71 +5,51 @@
   },
   "header": {
     "title": "Digital Millennium Copyright Act",
-    "subtitle": "Kebijakan DMCA"
-  },
-  "divider": "Atau ambil kendali dan lakukan sendiri",
-  "footer": "Kami merespons semua permintaan DMCA yang valid. Penyalahgunaan proses ini dapat mengakibatkan konsekuensi hukum.",
-  "partner": {
-    "title": "Tunggu! Jadilah Mitra Kami",
-    "badge": "Direkomendasikan",
-    "subtitle": "Kendalikan konten Anda dan kembangkan audiens Anda",
-    "publicMessage": "Anda sudah streaming secara publik. Kami membantu penggemar menemukan Anda di Google dan menonton momen terbaik Anda.",
-    "discovery": {
-      "title": "Google Search",
-      "description": "Stream Anda muncul di hasil pencarian dan kami mengarahkan penggemar langsung ke profil Anda"
-    },
-    "analytics": {
-      "title": "Dasbor Analitik",
-      "description": "Lacak penayangan, waktu tonton, lokasi audiens, dan tren pertumbuhan"
-    },
-    "highlights": {
-      "title": "Sorotan Bertenaga AI",
-      "description": "Kami secara otomatis menemukan dan menampilkan momen streaming terbaik Anda"
-    },
-    "clips": {
-      "title": "Pembuat Klip",
-      "description": "Unduh klip untuk dibagikan di TikTok, YouTube, dan lainnya"
-    },
-    "translation": {
-      "title": "Dukungan Multi-Bahasa",
-      "description": "Jangkau penggemar global dengan subtitle dan deskripsi terjemahan otomatis"
-    },
-    "rankings": {
-      "title": "Peringkat Streamer",
-      "description": "Tampil dalam daftar streamer terbaik dan halaman kategori"
-    },
-    "brands": {
-      "title": "Peluang Brand",
-      "description": "Ditemukan oleh sponsor yang mencari kreator seperti Anda"
-    },
-    "control": {
-      "title": "Kontrol Privasi Penuh",
-      "description": "Hapus video apa pun, sembunyikan video apa pun, kendalikan rekaman Anda"
-    },
-    "cta": "Klaim Profil Anda & Jadilah Mitra",
-    "ctaSubtext": "Hanya butuh 2 menit • Kontrol penuh atas konten Anda"
+    "subtitle": "Ajukan permintaan penghapusan. Kami meninjau setiap pemberitahuan dan menindaklanjuti klaim yang sah dengan cepat."
   },
   "form": {
     "title": "Pemberitahuan Klaim Pelanggaran",
-    "description": "Gunakan formulir ini untuk meminta penghapusan rekaman berdasarkan DMCA.",
-    "verifyFirst": {
-      "title": "Verifikasi Cepat",
-      "message": "Verifikasi kepemilikan akun untuk menghapus rekaman Anda secara instan. Jika tidak dapat memverifikasi, gunakan formulir DMCA — permintaan manual diproses dalam 10 hari kerja.",
-      "button": "Verifikasi & Hapus Sekarang"
+    "description": "Gunakan formulir ini untuk meminta penghapusan rekaman yang melanggar hak cipta Anda. Kami merespons pemberitahuan DMCA yang sah secara hukum dan menonaktifkan akun pelanggar berulang dalam keadaan yang sesuai.",
+    "sections": {
+      "yourWork": "Karya berhak cipta Anda",
+      "infringing": "Konten yang melanggar",
+      "yourRole": "Peran Anda",
+      "contact": "Informasi kontak",
+      "sworn": "Pernyataan di bawah sumpah",
+      "signature": "Tanda tangan"
     },
-    "content": {
-      "label": "Konten berikut",
-      "description": "Berikan URL atau deskripsi konten yang melanggar",
-      "placeholder": "https://example.com/recording/..."
+    "work": {
+      "description": {
+        "label": "Jelaskan karya berhak cipta tersebut",
+        "description": "Apa konten aslinya? Kapan dibuat atau pertama kali diterbitkan? Semakin banyak detail yang Anda berikan, semakin cepat kami dapat memverifikasi klaim Anda.",
+        "placeholder": "mis. Siaran langsung saya di Twitch sebagai @mychannel pada 15 Maret 2024 pukul 20:00–22:00 EST, mencakup peluncuran lagu baru saya 'Judul'."
+      }
+    },
+    "infringing": {
+      "urls": {
+        "label": "URL rekaman yang melanggar",
+        "description": "Satu URL per baris. Ini adalah rekaman di LiveStreamRecorder yang Anda minta untuk kami hapus.",
+        "placeholder": "https://www.livestreamrecorder.com/twitch/..."
+      }
     },
     "copyrightType": {
-      "label": "Pilih salah satu",
-      "personal": "Melanggar hak cipta pribadi saya",
-      "authorized": "Melanggar hak cipta orang yang saya wakili"
+      "label": "Saya mengajukan pemberitahuan ini sebagai",
+      "personal": "Pemilik hak cipta",
+      "authorized": "Perwakilan resmi pemilik hak cipta"
+    },
+    "contact": {
+      "firstName": {
+        "label": "Nama depan",
+        "placeholder": "Budi"
+      },
+      "lastName": {
+        "label": "Nama belakang",
+        "placeholder": "Santoso"
+      }
     },
     "email": {
       "label": "Alamat email Anda",
-      "description": "Kami akan menggunakannya untuk merespons permintaan Anda",
+      "description": "Kami akan menggunakannya untuk merespons permintaan Anda.",
       "placeholder": "anda@contoh.com"
     },
     "perjury": {
@@ -80,9 +60,13 @@
       "acknowledge": "Saya mengakui bahwa berdasarkan Pasal 512(f) setiap orang yang dengan sengaja salah merepresentasikan bahwa materi atau aktivitas merupakan pelanggaran dapat dikenakan pertanggungjawaban atas ganti rugi."
     },
     "signature": {
-      "label": "Tanda Tangan Digital",
-      "description": "Mengetik nama lengkap Anda di kotak ini akan berfungsi sebagai tanda tangan digital Anda",
-      "placeholder": "Nama lengkap resmi Anda"
+      "date": {
+        "label": "Tanggal penandatanganan"
+      },
+      "label": "Tanda tangan ketik",
+      "description": "Ketik nama lengkap resmi Anda. Harus persis cocok dengan Nama Depan dan Nama Belakang di atas — ini berfungsi sebagai tanda tangan digital Anda.",
+      "placeholder": "Budi Santoso",
+      "mismatch": "Tanda tangan harus persis cocok dengan Nama Depan dan Nama Belakang Anda."
     },
     "captcha": {
       "label": "Verifikasi",
@@ -90,7 +74,8 @@
       "placeholder": "Jawaban Anda",
       "error": "Jawaban salah, coba lagi"
     },
-    "submit": "Kirim Permintaan DMCA"
+    "submit": "Kirim Permintaan DMCA",
+    "footer": "Kami merespons semua permintaan DMCA yang valid. Penyalahgunaan proses ini dapat mengakibatkan konsekuensi hukum."
   },
   "submitted": {
     "title": "Permintaan DMCA Terkirim",

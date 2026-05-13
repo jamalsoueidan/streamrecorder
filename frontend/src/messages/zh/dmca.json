@@ -5,71 +5,51 @@
   },
   "header": {
     "title": "数字千年版权法",
-    "subtitle": "DMCA 政策"
-  },
-  "divider": "或自己掌控,亲自处理",
-  "footer": "我们会回应所有有效的 DMCA 请求。滥用此流程可能导致法律后果。",
-  "partner": {
-    "title": "等等！不如成为合作伙伴",
-    "badge": "推荐",
-    "subtitle": "掌控你的内容,扩大你的受众",
-    "publicMessage": "你已经在公开直播。我们帮助你的粉丝在 Google 上找到你,并直接送他们到你的主页。",
-    "discovery": {
-      "title": "Google 搜索",
-      "description": "你的直播出现在搜索结果中,我们直接将粉丝引导到你的主页"
-    },
-    "analytics": {
-      "title": "分析仪表盘",
-      "description": "跟踪观看量、观看时长、受众位置和增长趋势"
-    },
-    "highlights": {
-      "title": "AI 精彩瞬间",
-      "description": "我们自动找出并展示你最精彩的直播瞬间"
-    },
-    "clips": {
-      "title": "短视频创作",
-      "description": "下载短视频分享到 TikTok、YouTube 等平台"
-    },
-    "translation": {
-      "title": "多语言支持",
-      "description": "通过自动翻译的字幕和描述触达全球粉丝"
-    },
-    "rankings": {
-      "title": "主播排行榜",
-      "description": "出现在顶级主播列表和分类页面"
-    },
-    "brands": {
-      "title": "品牌合作机会",
-      "description": "被寻找像你这样创作者的赞助商发现"
-    },
-    "control": {
-      "title": "完全的隐私控制",
-      "description": "删除任何视频、隐藏任何视频,掌控你的录制内容"
-    },
-    "cta": "认领你的主页并成为合作伙伴",
-    "ctaSubtext": "只需 2 分钟 • 完全掌控你的内容"
+    "subtitle": "提交下架请求。我们会审核每一份通知,并对合法的申诉迅速采取行动。"
   },
   "form": {
     "title": "侵权通知",
-    "description": "请使用此表单根据 DMCA 请求删除录制内容。",
-    "verifyFirst": {
-      "title": "快速验证",
-      "message": "验证账号所有权,即可立即删除你的录制内容。如果无法验证,请使用 DMCA 表单 — 手动请求将在 10 个工作日内处理。",
-      "button": "验证并立即删除"
+    "description": "请使用此表单申请删除侵犯你版权的录制内容。我们会回应所有具有法律效力的 DMCA 通知,并在适当情况下停用重复侵权者的账户。",
+    "sections": {
+      "yourWork": "你的受版权保护作品",
+      "infringing": "侵权内容",
+      "yourRole": "你的身份",
+      "contact": "联系信息",
+      "sworn": "宣誓声明",
+      "signature": "签名"
     },
-    "content": {
-      "label": "以下内容",
-      "description": "提供侵权内容的 URL 或描述",
-      "placeholder": "https://example.com/recording/..."
+    "work": {
+      "description": {
+        "label": "描述受版权保护的作品",
+        "description": "原创内容是什么？是何时创作或首次发布的？你提供的细节越多,我们就能越快核实你的请求。",
+        "placeholder": "例如:我于 2024 年 3 月 15 日东部时间晚上 8 点至 10 点,以 @mychannel 身份在 Twitch 上进行的直播,内容为我的新歌《Title》发布。"
+      }
+    },
+    "infringing": {
+      "urls": {
+        "label": "侵权录制内容的 URL",
+        "description": "每行一个 URL。这些是你要求我们从 LiveStreamRecorder 上删除的录制内容。",
+        "placeholder": "https://www.livestreamrecorder.com/twitch/..."
+      }
     },
     "copyrightType": {
-      "label": "请选择一项",
-      "personal": "侵犯了我的个人版权",
-      "authorized": "侵犯了我有权代表的他人的版权"
+      "label": "我以以下身份提交此通知",
+      "personal": "版权所有者本人",
+      "authorized": "版权所有者的授权代表"
+    },
+    "contact": {
+      "firstName": {
+        "label": "名",
+        "placeholder": "三"
+      },
+      "lastName": {
+        "label": "姓",
+        "placeholder": "张"
+      }
     },
     "email": {
       "label": "你的邮箱地址",
-      "description": "我们将使用此邮箱回复你的请求",
+      "description": "我们将使用此邮箱回复你的请求。",
       "placeholder": "you@example.com"
     },
     "perjury": {
@@ -80,9 +60,13 @@
       "acknowledge": "我承认,根据第 512(f) 节,任何明知故犯地虚假陈述材料或活动正在侵权的人,可能须承担损害赔偿责任。"
     },
     "signature": {
+      "date": {
+        "label": "签署日期"
+      },
       "label": "电子签名",
-      "description": "在此框中输入你的全名将作为你的电子签名",
-      "placeholder": "你的法定全名"
+      "description": "请输入你的法定全名。必须与上方的姓和名完全一致 — 此输入将作为你的电子签名。",
+      "placeholder": "张 三",
+      "mismatch": "签名必须与你输入的姓和名完全一致。"
     },
     "captcha": {
       "label": "验证",
@@ -90,7 +74,8 @@
       "placeholder": "你的答案",
       "error": "答案错误,请重试"
     },
-    "submit": "提交 DMCA 请求"
+    "submit": "提交 DMCA 请求",
+    "footer": "我们会回应所有有效的 DMCA 请求。滥用此流程可能导致法律后果。"
   },
   "submitted": {
     "title": "DMCA 请求已提交",

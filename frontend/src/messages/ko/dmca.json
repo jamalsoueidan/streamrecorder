@@ -5,71 +5,51 @@
   },
   "header": {
     "title": "디지털 밀레니엄 저작권법",
-    "subtitle": "DMCA 정책"
-  },
-  "divider": "또는 직접 관리하고 스스로 처리하세요",
-  "footer": "모든 유효한 DMCA 요청에 응답합니다. 이 절차를 남용하면 법적 결과를 초래할 수 있습니다.",
-  "partner": {
-    "title": "잠깐! 대신 파트너가 되세요",
-    "badge": "추천",
-    "subtitle": "콘텐츠를 제어하고 시청자를 늘리세요",
-    "publicMessage": "이미 공개적으로 방송하고 계십니다. 저희는 팬들이 구글에서 찾고 최고의 순간을 시청할 수 있도록 도와드립니다.",
-    "discovery": {
-      "title": "구글 검색",
-      "description": "방송이 검색 결과에 표시되고 팬들을 프로필로 직접 안내합니다"
-    },
-    "analytics": {
-      "title": "분석 대시보드",
-      "description": "조회수, 시청 시간, 시청자 위치, 성장 추세를 추적하세요"
-    },
-    "highlights": {
-      "title": "AI 기반 하이라이트",
-      "description": "최고의 방송 순간을 자동으로 찾아 보여드립니다"
-    },
-    "clips": {
-      "title": "클립 생성기",
-      "description": "틱톡, 유튜브 등에 공유할 클립을 다운로드하세요"
-    },
-    "translation": {
-      "title": "다국어 지원",
-      "description": "자동 번역 자막과 설명으로 전 세계 팬에게 도달하세요"
-    },
-    "rankings": {
-      "title": "스트리머 순위",
-      "description": "인기 스트리머 목록과 카테고리 페이지에 소개되세요"
-    },
-    "brands": {
-      "title": "브랜드 기회",
-      "description": "크리에이터를 찾는 스폰서에게 발견되세요"
-    },
-    "control": {
-      "title": "완전한 개인정보 제어",
-      "description": "모든 영상 삭제, 숨기기, 녹화 제어"
-    },
-    "cta": "프로필 소유 & 파트너 되기",
-    "ctaSubtext": "2분 소요 • 콘텐츠 완전 제어"
+    "subtitle": "삭제 요청을 제출하세요. 모든 신고를 검토하고 정당한 신고에 대해 신속히 조치합니다."
   },
   "form": {
     "title": "침해 주장 통지",
-    "description": "DMCA에 따라 녹화물 삭제를 요청하려면 이 양식을 사용하세요.",
-    "verifyFirst": {
-      "title": "빠른 인증",
-      "message": "계정 소유권을 인증하면 녹화물을 즉시 삭제할 수 있습니다. 인증할 수 없는 경우 DMCA 양식을 사용하세요 — 수동 요청은 영업일 기준 10일 내에 처리됩니다.",
-      "button": "인증 & 즉시 삭제"
+    "description": "저작권을 침해하는 녹화물의 삭제를 요청하려면 이 양식을 사용하십시오. 법적으로 유효한 DMCA 통지에 응답하며, 적절한 경우 반복 침해자의 계정을 비활성화합니다.",
+    "sections": {
+      "yourWork": "귀하의 저작물",
+      "infringing": "침해 콘텐츠",
+      "yourRole": "귀하의 역할",
+      "contact": "연락처 정보",
+      "sworn": "선서 진술",
+      "signature": "서명"
     },
-    "content": {
-      "label": "다음 콘텐츠",
-      "description": "침해 콘텐츠의 URL 또는 설명을 제공하세요",
-      "placeholder": "https://example.com/recording/..."
+    "work": {
+      "description": {
+        "label": "저작물에 대해 설명하십시오",
+        "description": "원본 콘텐츠는 무엇입니까? 언제 제작되거나 처음 공개되었습니까? 자세한 정보를 제공할수록 신속하게 청구를 확인할 수 있습니다.",
+        "placeholder": "예: 2024년 3월 15일 오후 8시–10시(EST)에 Twitch에서 @mychannel로 진행한 라이브 방송. 신곡 'Title' 발매에 관한 내용."
+      }
+    },
+    "infringing": {
+      "urls": {
+        "label": "침해 녹화물 URL",
+        "description": "한 줄에 하나의 URL을 입력하십시오. LiveStreamRecorder에서 삭제를 요청하는 녹화물입니다.",
+        "placeholder": "https://www.livestreamrecorder.com/twitch/..."
+      }
     },
     "copyrightType": {
-      "label": "하나를 선택하세요",
-      "personal": "내 개인 저작권을 침해함",
-      "authorized": "내가 대리할 권한이 있는 사람의 저작권을 침해함"
+      "label": "본 통지를 다음 자격으로 제출합니다",
+      "personal": "저작권 소유자",
+      "authorized": "저작권 소유자의 정식 대리인"
+    },
+    "contact": {
+      "firstName": {
+        "label": "이름",
+        "placeholder": "길동"
+      },
+      "lastName": {
+        "label": "성",
+        "placeholder": "홍"
+      }
     },
     "email": {
       "label": "이메일 주소",
-      "description": "요청에 응답하는 데 사용됩니다",
+      "description": "요청에 응답하는 데 사용됩니다.",
       "placeholder": "example@email.com"
     },
     "perjury": {
@@ -80,9 +60,13 @@
       "acknowledge": "본인은 512(f)조에 따라 자료 또는 활동이 침해한다고 고의로 중대하게 허위 진술하는 사람은 손해배상 책임을 질 수 있음을 인정합니다."
     },
     "signature": {
-      "label": "디지털 서명",
-      "description": "이 상자에 전체 이름을 입력하면 디지털 서명으로 작용합니다",
-      "placeholder": "법적 성명"
+      "date": {
+        "label": "서명일"
+      },
+      "label": "전자 서명",
+      "description": "법적 전체 이름을 입력하십시오. 위의 이름 및 성과 정확히 일치해야 하며, 이는 전자 서명으로 작용합니다.",
+      "placeholder": "홍 길동",
+      "mismatch": "서명은 입력하신 성과 이름과 정확히 일치해야 합니다."
     },
     "captcha": {
       "label": "인증",
@@ -90,7 +74,8 @@
       "placeholder": "답변을 입력하세요",
       "error": "잘못된 답변입니다, 다시 시도하세요"
     },
-    "submit": "DMCA 요청 제출"
+    "submit": "DMCA 요청 제출",
+    "footer": "모든 유효한 DMCA 요청에 응답합니다. 이 절차를 남용하면 법적 결과를 초래할 수 있습니다."
   },
   "submitted": {
     "title": "DMCA 요청이 제출되었습니다",

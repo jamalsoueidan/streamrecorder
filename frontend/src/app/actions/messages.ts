@@ -3,10 +3,15 @@
 import publicApi from "@/lib/public-api";
 
 export type DMCAFormData = {
-  content: string;
+  workDescription: string;
+  infringingUrls: string;
   copyrightType: string;
+  firstName: string;
+  lastName: string;
   email: string;
-  fullName: string;
+  signature: string;
+  signatureDate: string;
+  locale: string;
 };
 
 export type ActionResponse = {
@@ -15,40 +20,65 @@ export type ActionResponse = {
 };
 
 export async function submitDMCA(data: DMCAFormData): Promise<ActionResponse> {
-  if (!data.content?.trim()) {
-    return { success: false, error: "Content is required" };
+  if (!data.workDescription?.trim()) {
+    return { success: false, error: "Description of the work is required" };
+  }
+  if (!data.infringingUrls?.trim()) {
+    return { success: false, error: "Infringing URLs are required" };
   }
   if (!data.copyrightType) {
     return { success: false, error: "Copyright type is required" };
   }
+  if (!data.firstName?.trim() || !data.lastName?.trim()) {
+    return { success: false, error: "First and last name are required" };
+  }
   if (!data.email?.trim()) {
     return { success: false, error: "Email is required" };
   }
-  if (!data.fullName?.trim()) {
-    return { success: false, error: "Full name is required" };
+  const expectedSignature = `${data.firstName.trim()} ${data.lastName.trim()}`;
+  if (
+    data.signature?.trim().toLowerCase() !== expectedSignature.toLowerCase()
+  ) {
+    return {
+      success: false,
+      error: "Signature must match First and Last name",
+    };
   }
 
+  const fullName = expectedSignature;
+  const subject = `DMCA Request from ${fullName}`;
+  const content = [
+    `Copyright role: ${data.copyrightType === "personal" ? "Copyright owner" : "Authorized representative"}`,
+    `Signer: ${fullName}`,
+    `Email: ${data.email}`,
+    `Locale: ${data.locale}`,
+    `Signed (typed): ${data.signature}`,
+    `Date signed: ${data.signatureDate}`,
+    "",
+    "--- Description of copyrighted work ---",
+    data.workDescription.trim(),
+    "",
+    "--- Infringing URLs (one per line) ---",
+    data.infringingUrls.trim(),
+  ].join("\n");
+
   try {
-    // Save to database
     await publicApi.report.postReports({
       data: {
         type: "dmca",
-        subject: `DMCA Request from ${data.fullName}`,
-        content:
-          `Copyright Type: ${data.copyrightType}\nContent: ${data.content}`.trim(),
+        subject,
+        content,
         email: data.email,
-        fullName: data.fullName,
+        fullName,
         state: "pending",
       },
     });
 
-    // Send email notification
     await publicApi.email.sendEmail({
-      name: data.fullName,
+      name: fullName,
       email: data.email,
-      subject: `DMCA Request from ${data.fullName}`,
-      message:
-        `Copyright Type: ${data.copyrightType}\nContent: ${data.content}`.trim(),
+      subject,
+      message: content,
     });
 
     return { success: true };

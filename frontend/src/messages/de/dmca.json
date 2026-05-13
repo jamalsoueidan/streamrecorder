@@ -5,71 +5,51 @@
   },
   "header": {
     "title": "Digital Millennium Copyright Act",
-    "subtitle": "DMCA-Richtlinie"
-  },
-  "divider": "Oder übernimm selbst die Kontrolle",
-  "footer": "Wir bearbeiten alle gültigen DMCA-Anfragen. Missbrauch dieses Verfahrens kann rechtliche Konsequenzen haben.",
-  "partner": {
-    "title": "Moment! Werde stattdessen Partner",
-    "badge": "Empfohlen",
-    "subtitle": "Übernimm die Kontrolle über deinen Content und vergrößere deine Reichweite",
-    "publicMessage": "Du streamst bereits öffentlich. Wir helfen deinen Fans, dich auf Google zu finden, und schicken sie direkt zu deinen besten Momenten.",
-    "discovery": {
-      "title": "Google-Suche",
-      "description": "Deine Streams erscheinen in Suchergebnissen und wir leiten Fans direkt zu deinem Profil"
-    },
-    "analytics": {
-      "title": "Analyse-Dashboard",
-      "description": "Verfolge Aufrufe, Wiedergabezeit, Standort der Zuschauer und Wachstumstrends"
-    },
-    "highlights": {
-      "title": "KI-gestützte Highlights",
-      "description": "Wir finden und präsentieren automatisch deine besten Streaming-Momente"
-    },
-    "clips": {
-      "title": "Clip Creator",
-      "description": "Lade Clips herunter, um sie auf TikTok, YouTube und mehr zu teilen"
-    },
-    "translation": {
-      "title": "Mehrsprachige Unterstützung",
-      "description": "Erreiche globale Fans mit automatisch übersetzten Untertiteln und Beschreibungen"
-    },
-    "rankings": {
-      "title": "Streamer-Rankings",
-      "description": "Werde in Top-Streamer-Listen und Kategorieseiten gefeatured"
-    },
-    "brands": {
-      "title": "Marken-Möglichkeiten",
-      "description": "Werde von Sponsoren entdeckt, die nach Creatorn wie dir suchen"
-    },
-    "control": {
-      "title": "Volle Privatsphäre-Kontrolle",
-      "description": "Lösche Videos, verberge Videos, kontrolliere deine Aufnahmen"
-    },
-    "cta": "Profil beanspruchen & Partner werden",
-    "ctaSubtext": "Dauert 2 Minuten • Volle Kontrolle über deinen Content"
+    "subtitle": "Reiche einen Antrag auf Entfernung ein. Wir prüfen jede Meldung und handeln bei berechtigten Ansprüchen umgehend."
   },
   "form": {
     "title": "Mitteilung über behauptete Rechtsverletzung",
-    "description": "Bitte nutze dieses Formular, um die Entfernung von Aufnahmen gemäß DMCA zu beantragen.",
-    "verifyFirst": {
-      "title": "Schnelle Verifizierung",
-      "message": "Verifiziere den Kontobesitz, um deine Aufnahmen sofort zu entfernen. Wenn du dich nicht verifizieren kannst, nutze das DMCA-Formular – manuelle Anfragen werden innerhalb von 10 Werktagen bearbeitet.",
-      "button": "Verifizieren & sofort entfernen"
+    "description": "Nutze dieses Formular, um die Entfernung von Aufnahmen zu beantragen, die dein Urheberrecht verletzen. Wir bearbeiten rechtsgültige DMCA-Mitteilungen und deaktivieren in geeigneten Fällen die Konten von Wiederholungstätern.",
+    "sections": {
+      "yourWork": "Dein urheberrechtlich geschütztes Werk",
+      "infringing": "Rechtsverletzender Inhalt",
+      "yourRole": "Deine Rolle",
+      "contact": "Kontaktdaten",
+      "sworn": "Eidesstattliche Erklärungen",
+      "signature": "Unterschrift"
     },
-    "content": {
-      "label": "Folgender Inhalt",
-      "description": "Gib die URL(s) oder Beschreibung des rechtsverletzenden Inhalts an",
-      "placeholder": "https://example.com/recording/..."
+    "work": {
+      "description": {
+        "label": "Beschreibe das urheberrechtlich geschützte Werk",
+        "description": "Was ist der Originalinhalt? Wann wurde er erstellt oder erstmals veröffentlicht? Je mehr Details du angibst, desto schneller können wir deine Forderung prüfen.",
+        "placeholder": "z. B. Mein Livestream auf Twitch als @mychannel am 15. März 2024 von 20–22 Uhr EST, zur Veröffentlichung meines neuen Songs 'Titel'."
+      }
+    },
+    "infringing": {
+      "urls": {
+        "label": "URLs der rechtsverletzenden Aufnahmen",
+        "description": "Eine URL pro Zeile. Dies sind die Aufnahmen auf LiveStreamRecorder, deren Entfernung du beantragst.",
+        "placeholder": "https://www.livestreamrecorder.com/twitch/..."
+      }
     },
     "copyrightType": {
-      "label": "Bitte wähle eine Option",
-      "personal": "Verletzt mein persönliches Urheberrecht",
-      "authorized": "Verletzt das Urheberrecht von jemandem, den ich rechtlich vertreten darf"
+      "label": "Ich reiche diese Mitteilung ein als",
+      "personal": "Urheberrechtsinhaber",
+      "authorized": "Bevollmächtigter Vertreter des Urheberrechtsinhabers"
+    },
+    "contact": {
+      "firstName": {
+        "label": "Vorname",
+        "placeholder": "Anna"
+      },
+      "lastName": {
+        "label": "Nachname",
+        "placeholder": "Müller"
+      }
     },
     "email": {
       "label": "Deine E-Mail-Adresse",
-      "description": "Wir verwenden diese, um auf deine Anfrage zu antworten",
+      "description": "Wir verwenden diese, um auf deine Anfrage zu antworten.",
       "placeholder": "du@beispiel.de"
     },
     "perjury": {
@@ -80,9 +60,13 @@
       "acknowledge": "Ich bestätige, dass gemäß Abschnitt 512(f) jede Person, die wissentlich falsche Angaben über die Rechtsverletzung von Material oder Aktivitäten macht, für Schadensersatz haftbar gemacht werden kann."
     },
     "signature": {
-      "label": "Digitale Unterschrift",
-      "description": "Die Eingabe deines vollständigen Namens in dieses Feld gilt als deine digitale Unterschrift",
-      "placeholder": "Dein vollständiger rechtlicher Name"
+      "date": {
+        "label": "Datum der Unterzeichnung"
+      },
+      "label": "Eingegebene Unterschrift",
+      "description": "Gib deinen vollständigen rechtlichen Namen ein. Muss exakt mit dem oben angegebenen Vor- und Nachnamen übereinstimmen — er gilt als deine digitale Unterschrift.",
+      "placeholder": "Anna Müller",
+      "mismatch": "Die Unterschrift muss exakt mit deinem Vor- und Nachnamen übereinstimmen."
     },
     "captcha": {
       "label": "Verifizierung",
@@ -90,7 +74,8 @@
       "placeholder": "Deine Antwort",
       "error": "Falsche Antwort, versuche es erneut"
     },
-    "submit": "DMCA-Anfrage einreichen"
+    "submit": "DMCA-Anfrage einreichen",
+    "footer": "Wir bearbeiten alle gültigen DMCA-Anfragen. Missbrauch dieses Verfahrens kann rechtliche Konsequenzen haben."
   },
   "submitted": {
     "title": "DMCA-Anfrage eingereicht",
