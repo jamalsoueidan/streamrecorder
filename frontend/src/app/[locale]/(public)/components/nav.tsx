@@ -42,6 +42,7 @@ export const navConfig = {
     { key: "mixch", label: "Mixch", href: "/creators/mixch" },
     { key: "twitcast", label: "TwitCasting", href: "/creators/twitcast" },
     { key: "trovo", label: "Trovo", href: "/creators/trovo" },
+    { key: "joilive", label: "Joilive", href: "/creators/joilive" },
   ],
   watchRecordings: [
     { key: "browse", label: "Browse All", href: "/recordings/all" },
@@ -57,6 +58,7 @@ export const navConfig = {
     { key: "mixch", label: "Mixch", href: "/recordings/mixch" },
     { key: "twitcast", label: "TwitCasting", href: "/recordings/twitcast" },
     { key: "trovo", label: "Trovo", href: "/recordings/trovo" },
+    { key: "joilive", label: "Joilive", href: "/recordings/joilive" },
   ],
   legal: [
     { key: "privacy", label: "Privacy Policy", href: "/privacy" },

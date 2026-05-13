@@ -24,6 +24,7 @@ export enum FollowerTypeEnum {
   Mixch = "mixch",
   Twitcast = "twitcast",
   Trovo = "trovo",
+  Joilive = "joilive",
 }
 
 /** Filter by follow status */
@@ -7595,6 +7596,7 @@ export enum ActivityTypeEnum {
   Mixch = "mixch",
   Twitcast = "twitcast",
   Trovo = "trovo",
+  Joilive = "joilive",
 }
 
 export enum ActivityGenderEnum {
@@ -7645,6 +7647,7 @@ export enum AiRequestTypeEnum {
   Mixch = "mixch",
   Twitcast = "twitcast",
   Trovo = "trovo",
+  Joilive = "joilive",
 }
 
 export enum AiRequestGenderEnum {
@@ -7723,6 +7726,7 @@ export enum AiTaskTypeEnum {
   Mixch = "mixch",
   Twitcast = "twitcast",
   Trovo = "trovo",
+  Joilive = "joilive",
 }
 
 export enum AiTaskGenderEnum {
@@ -7812,6 +7816,7 @@ export enum ClipTypeEnum {
   Mixch = "mixch",
   Twitcast = "twitcast",
   Trovo = "trovo",
+  Joilive = "joilive",
 }
 
 export enum ClipGenderEnum {
@@ -7868,6 +7873,7 @@ export enum ClipShareTypeEnum {
   Mixch = "mixch",
   Twitcast = "twitcast",
   Trovo = "trovo",
+  Joilive = "joilive",
 }
 
 export enum ClipShareGenderEnum {
@@ -7930,6 +7936,7 @@ export enum FollowerRequestTypeEnum {
   Mixch = "mixch",
   Twitcast = "twitcast",
   Trovo = "trovo",
+  Joilive = "joilive",
 }
 
 export enum FollowerRequestGenderEnum {
@@ -7995,6 +8002,7 @@ export enum MemeTypeEnum1 {
   Mixch = "mixch",
   Twitcast = "twitcast",
   Trovo = "trovo",
+  Joilive = "joilive",
 }
 
 export enum MemeGenderEnum {
@@ -8093,6 +8101,7 @@ export enum SocialAccountTypeEnum {
   Mixch = "mixch",
   Twitcast = "twitcast",
   Trovo = "trovo",
+  Joilive = "joilive",
 }
 
 export enum SocialAccountGenderEnum {
@@ -8150,6 +8159,7 @@ export enum SourceTypeEnum {
   Mixch = "mixch",
   Twitcast = "twitcast",
   Trovo = "trovo",
+  Joilive = "joilive",
 }
 
 export enum SourceGenderEnum {
@@ -8200,6 +8210,7 @@ export enum VisitorViewTypeEnum {
   Mixch = "mixch",
   Twitcast = "twitcast",
   Trovo = "trovo",
+  Joilive = "joilive",
 }
 
 export enum VisitorViewGenderEnum {

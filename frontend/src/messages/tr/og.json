@@ -15,6 +15,7 @@
       "buzzcast": "Buzzcast İçerik Üreticileri",
       "liveme": "LiveMe İçerik Üreticileri",
       "mixch": "Mixch İçerik Üreticileri",
+      "joilive": "Joilive Yayıncıları",
       "trovo": "Trovo İçerik Üreticileri",
       "twitcast": "TwitCasting İçerik Üreticileri"
     },
@@ -30,6 +31,7 @@
       "buzzcast": "Buzzcast içerik üreticilerini keşfedin",
       "liveme": "LiveMe içerik üreticilerini keşfedin",
       "mixch": "Mixch içerik üreticilerini keşfedin",
+      "joilive": "Joilive yayıncılarını keşfedin",
       "trovo": "Trovo içerik üreticilerini keşfedin",
       "twitcast": "TwitCasting içerik üreticilerini keşfedin"
     }
@@ -47,6 +49,7 @@
       "buzzcast": "Buzzcast Kayıtları",
       "liveme": "LiveMe Kayıtları",
       "mixch": "Mixch Kayıtları",
+      "joilive": "Joilive Kayıtları",
       "trovo": "Trovo Kayıtları",
       "twitcast": "TwitCasting Kayıtları"
     },
@@ -62,6 +65,7 @@
       "buzzcast": "Kaydedilmiş Buzzcast yayınlarını izleyin",
       "liveme": "Kaydedilmiş LiveMe yayınlarını izleyin",
       "mixch": "Kaydedilmiş Mixch yayınlarını izleyin",
+      "joilive": "Kaydedilmiş Joilive yayınlarını izleyin",
       "trovo": "Kaydedilmiş Trovo yayınlarını izleyin",
       "twitcast": "Kaydedilmiş TwitCasting yayınlarını izleyin"
     }

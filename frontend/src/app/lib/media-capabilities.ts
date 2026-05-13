@@ -96,6 +96,7 @@ export const PLATFORM_CODECS: Record<string, PlatformCodecs> = {
   pandalive: { video: "h264", audio: "aacLc" },
   tango: { video: "h264", audio: "aacLc" },
   trovo: { video: "h264", audio: "aacLc" },
+  joilive: { video: "h264", audio: "aacLc" },
   twitcast: { video: "h264", audio: "aacLc" },
   twitch: { video: "h264", audio: "aacLc" },
   youtube: { video: "h264", audio: "aacLc" },

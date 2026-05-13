@@ -369,6 +369,56 @@
         }
       ]
     },
+    "joilive": {
+      "title": "Joilive-Stream-Aufnahmen – sichere deine eigenen Lives",
+      "description": "Joilive hat kein Replay-System. Als Joilive-Streamer ist das Aufnehmen deiner eigenen Broadcasts auf LiveStreamRecorder der einzige Weg, sie zu behalten. Füge deine User-ID hinzu, geh live wie gewohnt, deine Lives werden automatisch gespeichert – keine App auf dem Handy, kein Recorder auf dem PC.",
+      "keywords": [
+        "Joilive Recorder für Streamer",
+        "meinen Joilive-Broadcast sichern",
+        "Joilive Replay",
+        "Joilive vergangene Streams",
+        "mein Joilive-Live aufnehmen",
+        "Joilive Archiv",
+        "Joilive VOD-Alternative",
+        "Joilive Stream herunterladen",
+        "Joilive Black-Screen-Aufnahme",
+        "Joilive Bildschirmaufnahme Black Screen",
+        "Joilive ohne OBS aufnehmen",
+        "Joilive Cloud-Recorder",
+        "Joilive Historie",
+        "Joilive Backup Live"
+      ],
+      "faqs": [
+        {
+          "question": "Joilive hat keine Replays – wie sichere ich meine eigenen Broadcasts?",
+          "answer": "Genau das löst LiveStreamRecorder für Joilive-Streamer. Du nimmst deine eigenen Lives auf, indem du dich registrierst, einmal deine Joilive-User-ID einfügst und dann ganz normal live gehst. Jeder Broadcast wird serverseitig erfasst und landet automatisch auf deiner Creator-Seite – Joilive behält ihn nicht, also behältst du ihn selbst."
+        },
+        {
+          "question": "Warum gibt mir die Bildschirmaufnahme von Joilive einen schwarzen Bildschirm?",
+          "answer": "Der Joilive-Webplayer nutzt hardwarebeschleunigte Dekodierung (Widevine + GPU-Compositing). Die meisten Desktop-Screen-Recorder sehen einen transparenten oder schwarzen Bereich, wo das Video sein sollte – das ist ein DRM/Compositing-Artefakt, kein Bug in deinem Recorder. Lokal kannst du das nicht beheben. Der zuverlässige Workaround ist, die Bildschirmaufnahme komplett zu überspringen und LiveStreamRecorder den Live-Stream upstream des Players erfassen zu lassen."
+        },
+        {
+          "question": "Muss ich meinen Computer anlassen oder irgendetwas laufen lassen?",
+          "answer": "Nein. Du bist Joilive-Streamer und sendest von deinem Handy oder PC – das ist alles. LiveStreamRecorder läuft nicht auf deinem Gerät. Die Aufnahme passiert in unserer Cloud, in dem Moment, in dem du live gehst. Dein Computer kann in den Ruhezustand, dein Handy kann gesperrt sein, du kannst das Land verlassen – deine Joilive-Lives werden trotzdem gespeichert."
+        },
+        {
+          "question": "Kann ich ein Live herunterladen, das ich letzte Woche, letzten Monat, letztes Jahr gesendet habe?",
+          "answer": "Ja – sobald deine Joilive-Lives auf deiner LiveStreamRecorder-Seite aufgenommen sind, bleiben sie dort. Es gibt kein Joilive-Ablaufdatum, dem man entkommen müsste, weil Joilive sie sowieso nie behalten hat. Premium-Streamer können außerdem die originalen MP4-Dateien zum Bearbeiten, Archivieren oder Wiederveröffentlichen herunterladen."
+        },
+        {
+          "question": "Ich teile meine Joilive-Raum-URL, aber sie hat eine numerische ?s=-ID – kann ich meine Aufnahmen mit einem saubereren Link teilen?",
+          "answer": "Ja. Jede Joilive-Aufnahme auf LiveStreamRecorder bekommt ihre eigene saubere URL – `livestreamrecorder.com/joilive/deine-id/video/...` – die sich viel leichter in Discord, Twitter oder Fan-Chats teilen lässt als die Joilive-Querystring-URL. Das Video läuft inline in jedem Browser, keine Joilive-App nötig."
+        },
+        {
+          "question": "Ist das Aufnehmen meiner Joilive-Lives kostenlos?",
+          "answer": "Ja – kostenlos aufnehmen, kostenlos auf deiner Creator-Seite ansehen. Premium schaltet das Herunterladen deiner rohen Videodateien frei, ClipAI für Auto-Clips für Kurzform-Posts und verlängerte Aufbewahrung. Joilive-Streamer können risikofrei mit dem kostenlosen Tarif starten."
+        },
+        {
+          "question": "Joilives Publikum ist klein – wie erreiche ich Leute woanders?",
+          "answer": "ClipAI schneidet Highlights aus deinen aufgenommenen Joilive-Broadcasts in kurze, untertitelte Clips, formatiert für TikTok, YouTube Shorts und Instagram Reels. Das Schwierige am Wachsen auf Joilive ist, dass die Plattform selbst nicht der Ort ist, an dem die meisten Zuschauer ihre Zeit verbringen. Nutze die Clips, um diese Zuschauer in deinen Joilive-Raum zu bringen, wenn du das nächste Mal live gehst."
+        }
+      ]
+    },
     "trovo": {
       "title": "Trovo Live-Aufnahmen",
       "description": "Sieh dir Trovo-Live-Aufnahmen auf LiveStreamRecorder an und lade sie herunter. Deine Trovo-Lives werden automatisch in der Cloud erfasst – keine Black-Screen-Probleme, kein Screen Recorder nötig. Der einfachste Trovo-Live-Recorder für Creator.",
@@ -470,7 +520,8 @@
       "liveme": "LiveMe-Aufnahmen",
       "mixch": "Mixch-Aufnahmen",
       "trovo": "Trovo-Aufnahmen",
-      "twitcast": "TwitCasting-Aufnahmen"
+      "twitcast": "TwitCasting-Aufnahmen",
+      "joilive": "Joilive-Aufnahmen"
     },
     "subtitle": {
       "all": "Sieh dir Live-Stream-Aufnahmen von Creatorn auf unserer Plattform an. Lade sie herunter und entdecke neue Inhalte.",
@@ -485,7 +536,8 @@
       "liveme": "Sieh dir LiveMe-Aufnahmen von Creatorn auf unserer Plattform an. Lade sie herunter und entdecke neue Inhalte.",
       "mixch": "Sieh dir Mixch-Aufnahmen von Creatorn auf unserer Plattform an. Lade sie herunter und entdecke neue Inhalte.",
       "trovo": "Sieh dir Trovo-Aufnahmen von Creatorn auf unserer Plattform an. Lade sie herunter und entdecke neue Inhalte.",
-      "twitcast": "Sieh dir TwitCasting-Aufnahmen von Creatorn auf unserer Plattform an. Lade sie herunter und entdecke neue Inhalte."
+      "twitcast": "Sieh dir TwitCasting-Aufnahmen von Creatorn auf unserer Plattform an. Lade sie herunter und entdecke neue Inhalte.",
+      "joilive": "Sieh dir Joilive-Stream-Aufnahmen von Streamern auf unserer Plattform an. Lade sie herunter und entdecke neue Broadcaster."
     }
   },
   "cta": {
@@ -502,7 +554,8 @@
       "liveme": "LiveMe-Streams aufnehmen",
       "mixch": "Mixch-Streams aufnehmen",
       "trovo": "Trovo-Streams aufnehmen",
-      "twitcast": "TwitCasting-Streams aufnehmen"
+      "twitcast": "TwitCasting-Streams aufnehmen",
+      "joilive": "Joilive-Streams sichern"
     },
     "subtitle": {
       "all": "Sichere automatisch deine TikTok-, Twitch-, YouTube- und Kick-Streams. Lade Aufnahmen herunter, erstelle kurze Clips und vergrößere dein Publikum.",
@@ -517,7 +570,8 @@
       "liveme": "Sichere automatisch deine LiveMe-Streams. Lade Aufnahmen herunter und erstelle kurze Clips mit ClipAI.",
       "mixch": "Sichere automatisch deine Mixch-Streams. Lade Aufnahmen herunter und erstelle kurze Clips mit ClipAI.",
       "trovo": "Sichere automatisch deine Trovo-Streams. Lade Aufnahmen herunter und erstelle kurze Clips mit ClipAI.",
-      "twitcast": "Sichere automatisch deine TwitCasting-Streams. Lade Aufnahmen herunter und erstelle kurze Clips mit ClipAI."
+      "twitcast": "Sichere automatisch deine TwitCasting-Streams. Lade Aufnahmen herunter und erstelle kurze Clips mit ClipAI.",
+      "joilive": "Sichere automatisch deine Joilive-Streams. Unabhängiges Backup jedes Lives, plus kurze Clips mit ClipAI."
     },
     "button": "Kostenlos mit der Aufnahme starten"
   },
@@ -536,7 +590,8 @@
       "liveme": "Sei der erste Creator, der einen LiveMe-Stream aufnimmt!",
       "mixch": "Sei der erste Creator, der einen Mixch-Stream aufnimmt!",
       "trovo": "Sei der erste Creator, der einen Trovo-Stream aufnimmt!",
-      "twitcast": "Sei der erste Creator, der einen TwitCasting-Stream aufnimmt!"
+      "twitcast": "Sei der erste Creator, der einen TwitCasting-Stream aufnimmt!",
+      "joilive": "Sei der erste Streamer, der einen Joilive-Stream aufnimmt!"
     },
     "button": "Los geht's"
   },
@@ -552,6 +607,7 @@
     "buzzcast": "## Buzzcast Live-Aufnahmen\n\nSieh dir Buzzcast-Live-Aufnahmen von Creatorn an, die LiveStreamRecorder nutzen, um ihre eigenen Lives zu sichern. Jedes Buzzcast-Live wird automatisch erfasst und für die On-Demand-Wiedergabe gespeichert.\n\n### Buzzcast-Lives gesichert, bevor sie verschwinden\n\nBuzzcast-Lives sind nur live verfügbar – sobald du den Stream beendest, verschwindet der Content aus der App. Unser Buzzcast-Recorder sichert deine Lives automatisch in der Cloud, damit nichts verloren geht, wenn dein Live endet. Chat-Sessions, Musik-Momente, täglicher Content – alles bleibt für Fans verfügbar.\n\n### Sieh dir deine Buzzcast-Aufnahmen an und lade sie herunter\n\nJede Buzzcast-Live-Aufnahme ist sofort im Browser verfügbar. Premium-Nutzer können ihre Buzzcast-Aufnahmen als Videodatei für die Offline-Wiedergabe herunterladen – perfekt, um deinen eigenen Content wiederzuverwenden oder eine persönliche Kopie zu behalten.\n\n### Nimm deine Buzzcast-Lives auf – keine zusätzlichen Apps nötig\n\nVergiss Bildschirmaufnahme deines Handys oder Capture-Software im Hintergrund. LiveStreamRecorder ist ein Online-Buzzcast-Recorder, der deine Lives serverseitig erfasst. Keine Akku-Belastung, kein manuelles Setup, keine zusätzliche Software. Deine Buzzcast-Lives werden automatisch in hoher Qualität aufgenommen, von jedem Gerät.\n\n### Verwandle deine Lives mit ClipAI in Clips\n\nWillst du deine Buzzcast-Live-Aufnahmen in kurze Clips verwandeln? ClipAI analysiert deine aufgenommenen Lives und erstellt Highlight-Clips, bereit zum Posten auf TikTok, Instagram Reels oder YouTube Shorts. Vergrößere deine Reichweite über Buzzcast hinaus, indem du deine besten Momente wiederverwendest.\n\n### Der beste Buzzcast-Recorder für Creator\n\nLiveStreamRecorder ist für das Speichern von Buzzcast-Lives gebaut. Registriere dich kostenlos, füge deinen Buzzcast-Benutzernamen hinzu und verliere nie wieder ein Live. Jeder Stream wird automatisch erfasst – deine dauerhafte Buzzcast-Content-Bibliothek.",
     "liveme": "## LiveMe Live-Aufnahmen\n\nSieh dir LiveMe-Live-Aufnahmen von Creatorn an, die LiveStreamRecorder nutzen, um ihre eigenen Lives zu sichern. Jedes LiveMe-Live wird automatisch erfasst und für die On-Demand-Wiedergabe gespeichert.\n\n### LiveMe-Lives gesichert, bevor sie verschwinden\n\nLiveMe-Lives sind nur live verfügbar – sobald du den Stream beendest, verschwindet der Content aus der App. Unser LiveMe-Recorder sichert deine Lives automatisch in der Cloud, damit nichts verloren geht, wenn dein Live endet. Chat-Sessions, Musik-Momente, täglicher Content – alles bleibt für Fans verfügbar.\n\n### Sieh dir deine LiveMe-Aufnahmen an und lade sie herunter\n\nJede LiveMe-Live-Aufnahme ist sofort im Browser verfügbar. Premium-Nutzer können ihre LiveMe-Aufnahmen als Videodatei für die Offline-Wiedergabe herunterladen – perfekt, um deinen eigenen Content wiederzuverwenden oder eine persönliche Kopie zu behalten.\n\n### Nimm deine LiveMe-Lives auf – keine zusätzlichen Apps nötig\n\nVergiss Bildschirmaufnahme deines Handys oder Capture-Software im Hintergrund. LiveStreamRecorder ist ein Online-LiveMe-Recorder, der deine Lives serverseitig erfasst. Keine Akku-Belastung, kein manuelles Setup, keine zusätzliche Software. Deine LiveMe-Lives werden automatisch in hoher Qualität aufgenommen, von jedem Gerät.\n\n### Verwandle deine Lives mit ClipAI in Clips\n\nWillst du deine LiveMe-Live-Aufnahmen in kurze Clips verwandeln? ClipAI analysiert deine aufgenommenen Lives und erstellt Highlight-Clips, bereit zum Posten auf TikTok, Instagram Reels oder YouTube Shorts. Vergrößere deine Reichweite über LiveMe hinaus, indem du deine besten Momente wiederverwendest.\n\n### Der beste LiveMe-Recorder für Creator\n\nLiveStreamRecorder ist für das Speichern von LiveMe-Lives gebaut. Registriere dich kostenlos, füge deinen LiveMe-Benutzernamen hinzu und verliere nie wieder ein Live. Jeder Stream wird automatisch erfasst – deine dauerhafte LiveMe-Content-Bibliothek.",
     "mixch": "## Mixch Live-Aufnahmen\n\nSieh dir Mixch-Live-Aufnahmen von Creatorn an, die LiveStreamRecorder nutzen, um ihre eigenen Lives zu sichern. Jedes Mixch-Live wird automatisch erfasst und für die On-Demand-Wiedergabe gespeichert.\n\n### Mixch-Lives gesichert, bevor sie verschwinden\n\nMixch-Lives sind nur live verfügbar – sobald du den Stream beendest, verschwindet der Content aus der App. Unser Mixch-Recorder sichert deine Lives automatisch in der Cloud, damit nichts verloren geht, wenn dein Live endet. Chat-Sessions, Musik-Momente, täglicher Content – alles bleibt für Fans verfügbar.\n\n### Sieh dir deine Mixch-Aufnahmen an und lade sie herunter\n\nJede Mixch-Live-Aufnahme ist sofort im Browser verfügbar. Premium-Nutzer können ihre Mixch-Aufnahmen als Videodatei für die Offline-Wiedergabe herunterladen – perfekt, um deinen eigenen Content wiederzuverwenden oder eine persönliche Kopie zu behalten.\n\n### Nimm deine Mixch-Lives auf – keine zusätzlichen Apps nötig\n\nVergiss Bildschirmaufnahme deines Handys oder Capture-Software im Hintergrund. LiveStreamRecorder ist ein Online-Mixch-Recorder, der deine Lives serverseitig erfasst. Keine Akku-Belastung, kein manuelles Setup, keine zusätzliche Software. Deine Mixch-Lives werden automatisch in hoher Qualität aufgenommen, von jedem Gerät.\n\n### Verwandle deine Lives mit ClipAI in Clips\n\nWillst du deine Mixch-Live-Aufnahmen in kurze Clips verwandeln? ClipAI analysiert deine aufgenommenen Lives und erstellt Highlight-Clips, bereit zum Posten auf TikTok, Instagram Reels oder YouTube Shorts. Vergrößere deine Reichweite über Mixch hinaus, indem du deine besten Momente wiederverwendest.\n\n### Der beste Mixch-Recorder für Creator\n\nLiveStreamRecorder ist für das Speichern von Mixch-Lives gebaut. Registriere dich kostenlos, füge deinen Mixch-Benutzernamen hinzu und verliere nie wieder ein Live. Jeder Stream wird automatisch erfasst – deine dauerhafte Mixch-Content-Bibliothek.",
+    "joilive": "## Joilive-Stream-Aufnahmen\n\nJoilive archiviert nicht. Es gibt keinen Replay-Tab auf deinem Profil, keine Liste vergangener Streams, kein VOD. Die Plattform ist komplett um den Live-Moment herum gebaut – wenn du aufhörst zu senden, ist der Stream weg. Das funktioniert für gelegentliche kurze Lives, ist aber ein echtes Problem, wenn du regelmäßig streamst und willst, dass deine Arbeit bleibt. LiveStreamRecorder lässt Joilive-Streamer **ihre eigenen Broadcasts aufnehmen**, sodass jedes Live als ansehbares, teilbares Video auf einer persönlichen Creator-Seite landet.\n\n### Das Black-Screen-Problem bei Joilive\n\nWenn du versucht hast, deinen Joilive-Stream selbst mit einem Desktop-Recorder aufzunehmen (Display-Capture von OBS Studio, Xbox Game Bar unter Windows, QuickTime auf dem Mac), hast du wahrscheinlich dasselbe bemerkt: Audio wird sauber aufgenommen, aber das Video erscheint als schwarzes Rechteck. Das ist der Joilive-Webplayer, der hardwarebeschleunigtes Decoding plus Widevine-DRM nutzt. Der Recorder sieht den Player, kann aber das Videobild nicht sehen. Es ist kein Joilive-Bug, dein Recorder ist nicht kaputt – es ist eine Nebenwirkung davon, wie geschütztes Video in modernen Browsern komponiert wird, und es lässt sich nicht durch Einstellungen auf deinem Rechner beheben.\n\nDer praktische Workaround ist, die Bildschirmaufnahme komplett zu überspringen. LiveStreamRecorder erfasst den Joilive-Stream upstream des Browsers, bevor der DRM/Compositing-Pfad ins Spiel kommt. Kein schwarzer Bildschirm, keine Codec-Suche, keine GPU-Acceleration-Toggles – die Aufnahme funktioniert einfach.\n\n### Selbst-Aufnahme, serverseitig\n\nDu nimmst deinen eigenen Stream auf, lässt aber nichts laufen, um das zu tun. Keine App auf dem Handy, keine Software auf dem PC. Wenn du in der Joilive-App live gehst, startet die Aufnahme automatisch in der Cloud. Stream von deiner Couch, deinem Auto, einem Café – dein Laptop kann aus sein, dein Handy kann gesperrt sein. Deine Joilive-Lives landen auf deiner Creator-Seite, wenn jeder Broadcast endet, bereit zum Zurückschauen im Browser.\n\n### Sieh dir deine Joilive-Aufnahmen an und lade sie herunter\n\nJedes aufgenommene Live spielt sofort in jedem modernen Browser, keine App nötig, kein Joilive-Account zum Ansehen erforderlich. Premium-Streamer können die rohe Videodatei zum Bearbeiten, Wiederhochladen oder lokalen Archivieren herunterladen – und ClipAI kann automatisch Kurzform-Clips aus der Aufnahme generieren, zum Posten auf TikTok, YouTube Shorts oder Reels.\n\n### Eine teilbare URL für deine Lives\n\nJoilives eigene Raum-URL ist `joilive.net/user/index.html?s=1880…` – eine lange numerische ID, die niemand tippen oder sich merken kann. Deine LiveStreamRecorder-Aufnahmen nutzen saubere URLs wie `livestreamrecorder.com/joilive/deine-id/video/...`, die du auf Discord posten, in Twitter-Bios einfügen oder Fans per SMS schicken kannst. Derselbe Inhalt, kein Querystring, keine geforderte App-Installation.\n\n### Gebaut für Joilive-Streamer, nicht gegen sie\n\nLiveStreamRecorder lädt keine Broadcasts anderer Leute herunter. Die Aufnahme ist opt-in vom Joilive-Streamer für **seinen eigenen** Account, und nur seine eigenen Lives – nichts anderes. Das Video gehört dir, die Seite gehört dir, das Löschen ist eine Aktion mit einem Klick. Registriere dich kostenlos, füge deine Joilive-User-ID hinzu, und Joilives fehlendes Archiv hört auf, dein Problem zu sein.",
     "trovo": "## Trovo Live-Aufnahmen\n\nSieh dir Trovo-Live-Aufnahmen von Creatorn an, die LiveStreamRecorder nutzen, um ihre eigenen Lives zu sichern. Jedes Trovo-Live wird automatisch erfasst und für die On-Demand-Wiedergabe gespeichert.\n\n### Trovo-Lives gesichert, bevor sie verschwinden\n\nTrovo-Lives sind nur live verfügbar – sobald du den Stream beendest, verschwindet der Content aus der App. Unser Trovo-Recorder sichert deine Lives automatisch in der Cloud, damit nichts verloren geht, wenn dein Live endet. Chat-Sessions, Musik-Momente, täglicher Content – alles bleibt für Fans verfügbar.\n\n### Sieh dir deine Trovo-Aufnahmen an und lade sie herunter\n\nJede Trovo-Live-Aufnahme ist sofort im Browser verfügbar. Premium-Nutzer können ihre Trovo-Aufnahmen als Videodatei für die Offline-Wiedergabe herunterladen – perfekt, um deinen eigenen Content wiederzuverwenden oder eine persönliche Kopie zu behalten.\n\n### Nimm deine Trovo-Lives auf – keine zusätzlichen Apps nötig\n\nVergiss Bildschirmaufnahme deines Handys oder Capture-Software im Hintergrund. LiveStreamRecorder ist ein Online-Trovo-Recorder, der deine Lives serverseitig erfasst. Keine Akku-Belastung, kein manuelles Setup, keine zusätzliche Software. Deine Trovo-Lives werden automatisch in hoher Qualität aufgenommen, von jedem Gerät.\n\n### Verwandle deine Lives mit ClipAI in Clips\n\nWillst du deine Trovo-Live-Aufnahmen in kurze Clips verwandeln? ClipAI analysiert deine aufgenommenen Lives und erstellt Highlight-Clips, bereit zum Posten auf TikTok, Instagram Reels oder YouTube Shorts. Vergrößere deine Reichweite über Trovo hinaus, indem du deine besten Momente wiederverwendest.\n\n### Der beste Trovo-Recorder für Creator\n\nLiveStreamRecorder ist für das Speichern von Trovo-Lives gebaut. Registriere dich kostenlos, füge deinen Trovo-Benutzernamen hinzu und verliere nie wieder ein Live. Jeder Stream wird automatisch erfasst – deine dauerhafte Trovo-Content-Bibliothek.",
     "twitcast": "## TwitCasting Live-Aufnahmen\n\nSieh dir TwitCasting-Live-Aufnahmen von Creatorn an, die LiveStreamRecorder nutzen, um ihre eigenen Lives zu sichern. Jedes TwitCasting-Live wird automatisch erfasst und für die On-Demand-Wiedergabe gespeichert.\n\n### TwitCasting-Lives gesichert, bevor sie verschwinden\n\nTwitCasting-Lives sind nur live verfügbar – sobald du den Stream beendest, verschwindet der Content aus der App. Unser TwitCasting-Recorder sichert deine Lives automatisch in der Cloud, damit nichts verloren geht, wenn dein Live endet. Chat-Sessions, Musik-Momente, täglicher Content – alles bleibt für Fans verfügbar.\n\n### Sieh dir deine TwitCasting-Aufnahmen an und lade sie herunter\n\nJede TwitCasting-Live-Aufnahme ist sofort im Browser verfügbar. Premium-Nutzer können ihre TwitCasting-Aufnahmen als Videodatei für die Offline-Wiedergabe herunterladen – perfekt, um deinen eigenen Content wiederzuverwenden oder eine persönliche Kopie zu behalten.\n\n### Nimm deine TwitCasting-Lives auf – keine zusätzlichen Apps nötig\n\nVergiss Bildschirmaufnahme deines Handys oder Capture-Software im Hintergrund. LiveStreamRecorder ist ein Online-TwitCasting-Recorder, der deine Lives serverseitig erfasst. Keine Akku-Belastung, kein manuelles Setup, keine zusätzliche Software. Deine TwitCasting-Lives werden automatisch in hoher Qualität aufgenommen, von jedem Gerät.\n\n### Verwandle deine Lives mit ClipAI in Clips\n\nWillst du deine TwitCasting-Live-Aufnahmen in kurze Clips verwandeln? ClipAI analysiert deine aufgenommenen Lives und erstellt Highlight-Clips, bereit zum Posten auf TikTok, Instagram Reels oder YouTube Shorts. Vergrößere deine Reichweite über TwitCasting hinaus, indem du deine besten Momente wiederverwendest.\n\n### Der beste TwitCasting-Recorder für Creator\n\nLiveStreamRecorder ist für das Speichern von TwitCasting-Lives gebaut. Registriere dich kostenlos, füge deinen TwitCasting-Benutzernamen hinzu und verliere nie wieder ein Live. Jeder Stream wird automatisch erfasst – deine dauerhafte TwitCasting-Content-Bibliothek."
   },
@@ -569,7 +625,8 @@
       "liveme": "LiveMe-Stream-Aufnahmen",
       "mixch": "Mixch-Stream-Aufnahmen",
       "trovo": "Trovo-Stream-Aufnahmen",
-      "twitcast": "TwitCasting-Stream-Aufnahmen"
+      "twitcast": "TwitCasting-Stream-Aufnahmen",
+      "joilive": "Joilive-Stream-Aufnahmen"
     },
     "description": {
       "all": "Sieh dir Live-Stream-Aufnahmen von Creatorn auf LiveStreamRecorder an.",
@@ -584,7 +641,8 @@
       "liveme": "Sieh dir LiveMe-Aufnahmen von Creatorn auf LiveStreamRecorder an.",
       "mixch": "Sieh dir Mixch-Aufnahmen von Creatorn auf LiveStreamRecorder an.",
       "trovo": "Sieh dir Trovo-Aufnahmen von Creatorn auf LiveStreamRecorder an.",
-      "twitcast": "Sieh dir TwitCasting-Aufnahmen von Creatorn auf LiveStreamRecorder an."
+      "twitcast": "Sieh dir TwitCasting-Aufnahmen von Creatorn auf LiveStreamRecorder an.",
+      "joilive": "Sieh dir Joilive-Stream-Aufnahmen von Streamern auf LiveStreamRecorder an."
     },
     "streamTitle": "Stream von {nickname} – {date}",
     "streamDescription": {
@@ -600,7 +658,8 @@
       "liveme": "LiveMe-Aufnahme von {nickname}",
       "mixch": "Mixch-Aufnahme von {nickname}",
       "trovo": "Trovo-Aufnahme von {nickname}",
-      "twitcast": "TwitCasting-Aufnahme von {nickname}"
+      "twitcast": "TwitCasting-Aufnahme von {nickname}",
+      "joilive": "Joilive-Stream-Aufnahme von {nickname}"
     }
   },
   "recordedOn": "Aufgenommen am {date}",

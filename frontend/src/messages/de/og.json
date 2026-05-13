@@ -16,7 +16,8 @@
       "liveme": "LiveMe-Creator",
       "mixch": "Mixch-Creator",
       "trovo": "Trovo-Creator",
-      "twitcast": "TwitCasting-Creator"
+      "twitcast": "TwitCasting-Creator",
+      "joilive": "Joilive-Streamer"
     },
     "subtitle": {
       "all": "Alle Streamer und Creator durchstöbern",
@@ -31,7 +32,8 @@
       "liveme": "LiveMe-Creator entdecken",
       "mixch": "Mixch-Creator entdecken",
       "trovo": "Trovo-Creator entdecken",
-      "twitcast": "TwitCasting-Creator entdecken"
+      "twitcast": "TwitCasting-Creator entdecken",
+      "joilive": "Joilive-Streamer entdecken"
     }
   },
   "recordings": {
@@ -48,7 +50,8 @@
       "liveme": "LiveMe-Aufnahmen",
       "mixch": "Mixch-Aufnahmen",
       "trovo": "Trovo-Aufnahmen",
-      "twitcast": "TwitCasting-Aufnahmen"
+      "twitcast": "TwitCasting-Aufnahmen",
+      "joilive": "Joilive-Aufnahmen"
     },
     "subtitle": {
       "all": "Aufgenommene Live-Streams ansehen",
@@ -63,7 +66,8 @@
       "liveme": "Aufgenommene LiveMe-Streams ansehen",
       "mixch": "Aufgenommene Mixch-Streams ansehen",
       "trovo": "Aufgenommene Trovo-Streams ansehen",
-      "twitcast": "Aufgenommene TwitCasting-Streams ansehen"
+      "twitcast": "Aufgenommene TwitCasting-Streams ansehen",
+      "joilive": "Aufgenommene Joilive-Streams ansehen"
     }
   },
   "home": {

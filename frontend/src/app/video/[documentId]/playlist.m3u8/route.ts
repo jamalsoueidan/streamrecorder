@@ -39,25 +39,26 @@ const fetchSourcePlaylists = unstable_cache(
   { revalidate: 3600 },
 );
 
-// Combined + signed playlist is the same bytes for every user. Cache it
-// globally for 3h. Signed URLs expire in 4h so they stay valid across the
-// cache lifetime.
-const buildSignedPlaylist = unstable_cache(
-  async (documentId: string, quality: "high" | "low") => {
-    const cached = await fetchSourcePlaylists(documentId, quality);
-    if (!cached) return null;
+// The signed playlist is NOT cached — signing is cheap local HMAC
+// compute (~5-10ms per request), and caching the signed output risks
+// serving URLs that have aged past their 4h S3 TTL when the cache sits
+// idle. The expensive part — fetching raw playlists from S3 — stays
+// cached via `fetchSourcePlaylists` (1h TTL).
+async function buildSignedPlaylist(
+  documentId: string,
+  quality: "high" | "low",
+) {
+  const cached = await fetchSourcePlaylists(documentId, quality);
+  if (!cached) return null;
 
-    const s3Client = getS3();
-    const bucket = getBucket(process.env.MEDIA_BUCKET!, cached.bucket);
-    return combinePlaylistsWithSignedUrls(
-      s3Client,
-      bucket,
-      cached.sourcesWithPlaylists,
-    );
-  },
-  ["playlist-signed"],
-  { revalidate: 10800 }, // 3h
-);
+  const s3Client = getS3();
+  const bucket = getBucket(process.env.MEDIA_BUCKET!, cached.bucket);
+  return combinePlaylistsWithSignedUrls(
+    s3Client,
+    bucket,
+    cached.sourcesWithPlaylists,
+  );
+}
 
 export type SourceWithPlaylist = Source & { playlist?: string | null };
 
@@ -88,10 +89,13 @@ function truncatePlaylist(playlist: string, maxSec: number): string {
   return out.join("\n");
 }
 
+// Short, no-shared-cache. The body contains signed S3 URLs (4h TTL) that
+// must be fresh per viewer — letting CDN cache the playlist serves
+// expired URLs once the response ages past the S3 TTL. The 60s browser
+// cache is enough to dedupe rapid in-tab re-fetches without staling.
 const CACHE_HEADERS = {
   "Content-Type": "application/vnd.apple.mpegurl",
-  "Cache-Control":
-    "public, max-age=600, s-maxage=3600, stale-while-revalidate=86400",
+  "Cache-Control": "private, max-age=60",
 };
 
 export async function GET(

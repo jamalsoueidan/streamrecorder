@@ -170,6 +170,19 @@ export function parseUsername(input: string): ParsedUsername {
     };
   }
 
+  // Joilive URL pattern — joilive.net/user/index.html?s={numericId}.
+  // The `s` query param value is the username.
+  const joiliveRegex =
+    /(?:https?:\/\/)?(?:www\.)?joilive\.net\/user\/index\.html\?s=([^\s&#]+)/i;
+  const joiliveMatch = trimmed.match(joiliveRegex);
+
+  if (joiliveMatch) {
+    return {
+      username: joiliveMatch[1],
+      platform: "joilive",
+    };
+  }
+
   // Plain username - remove @ if present
   const username = trimmed.startsWith("@") ? trimmed.slice(1) : trimmed;
 

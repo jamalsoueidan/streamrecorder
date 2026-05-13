@@ -71,4 +71,10 @@ export const streamingPlatforms = [
     name: "Trovo",
     file: "/simple/trovo.svg",
   },
+  {
+    color: "indigo.6",
+    colorCss: "var(--mantine-color-indigo-6)",
+    name: "Joilive",
+    file: "/simple/joilive.svg",
+  },
 ];

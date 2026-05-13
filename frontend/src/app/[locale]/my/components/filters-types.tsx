@@ -125,6 +125,15 @@ export const usePlatformOptions = () => {
         </Center>
       ),
     },
+    {
+      value: "joilive",
+      label: (
+        <Center style={{ gap: 8 }}>
+          <IconBrandFunimation size={18} />
+          <Text size="sm">{t("platforms.joilive")}</Text>
+        </Center>
+      ),
+    },
   ];
 };
 
@@ -193,6 +202,11 @@ export const PLATFORM_OPTIONS = [
   {
     value: "trovo",
     labelKey: "platforms.trovo",
+    icon: IconBrandFunimation,
+  },
+  {
+    value: "joilive",
+    labelKey: "platforms.joilive",
     icon: IconBrandFunimation,
   },
 ];

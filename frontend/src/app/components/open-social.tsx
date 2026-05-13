@@ -29,6 +29,8 @@ export const SOCIAL_URL_PATTERNS: Partial<
   [FollowerTypeEnum.Twitcast]: (username) =>
     `https://twitcasting.tv/${username}`,
   [FollowerTypeEnum.Trovo]: (username) => `https://trovo.live/s/${username}`,
+  [FollowerTypeEnum.Joilive]: (username) =>
+    `https://www.joilive.net/user/index.html?s=${username}`,
 };
 
 export const URL_PATTERNS: Partial<Record<FollowerTypeEnum, UrlPattern>> = {
@@ -46,6 +48,7 @@ export const URL_PATTERNS: Partial<Record<FollowerTypeEnum, UrlPattern>> = {
   [FollowerTypeEnum.Mixch]: (username) => `/mixch/${username}`,
   [FollowerTypeEnum.Twitcast]: (username) => `/twitcast/${username}`,
   [FollowerTypeEnum.Trovo]: (username) => `/trovo/${username}`,
+  [FollowerTypeEnum.Joilive]: (username) => `/joilive/${username}`,
 };
 
 export const getSocialUrl = (

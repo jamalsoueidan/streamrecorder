@@ -2,7 +2,7 @@
   "tagline": "Ne rate plus jamais un live",
   "copyright": "Copyright © 2026 LiveStreamRecorder",
   "copyright_text": "LiveStreamRecorder fournit une infrastructure basée sur le cloud qui permet aux utilisateurs d'enregistrer des streams pour un usage personnel, privé et non commercial. Les utilisateurs sont responsables de s'assurer que leur usage est conforme aux lois applicables et aux conditions des plateformes tierces.",
-  "association": "Les noms de produits, logos et marques Twitch, YouTube, TikTok, Kick, AfreecaTV, PandaTV, Bigo, Buzzcast, LiveMe, Mixch, TwitCasting et Trovo sont la propriété de leurs détenteurs respectifs. Tous les noms d'entreprises, produits et services utilisés sur ce site le sont à des fins d'identification uniquement. L'utilisation de ces noms, marques et logos ne sous-entend aucune approbation.",
+  "association": "Les noms de produits, logos et marques Twitch, YouTube, TikTok, Kick, AfreecaTV, PandaTV, Bigo, Buzzcast, LiveMe, Mixch, TwitCasting, Trovo et Joilive sont la propriété de leurs détenteurs respectifs. Tous les noms d'entreprises, produits et services utilisés sur ce site le sont à des fins d'identification uniquement. L'utilisation de ces noms, marques et logos ne sous-entend aucune approbation.",
   "header": {
     "creators": "Créateurs",
     "recordings": "Enregistrements",
@@ -26,7 +26,8 @@
     "liveme": "Créateurs LiveMe",
     "mixch": "Créateurs Mixch",
     "trovo": "Créateurs Trovo",
-    "twitcast": "Créateurs TwitCasting"
+    "twitcast": "Créateurs TwitCasting",
+    "joilive": "Créateurs Joilive"
   },
   "watchRecordings": {
     "title": "Regarder les enregistrements",
@@ -42,7 +43,8 @@
     "liveme": "Enregistrements LiveMe",
     "mixch": "Enregistrements Mixch",
     "trovo": "Enregistrements Trovo",
-    "twitcast": "Enregistrements TwitCasting"
+    "twitcast": "Enregistrements TwitCasting",
+    "joilive": "Enregistrements Joilive"
   },
   "legal": {
     "title": "Mentions légales",
