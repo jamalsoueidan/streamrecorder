@@ -256,6 +256,53 @@
         "perekam stream trovo"
       ]
     },
+    "joilive": {
+      "title": "Streamer Joilive — Simpan Siaran Live-mu",
+      "description": "Streamer Joilive (joilive.net) memakai LiveStreamRecorder sebagai arsip pribadi. Setiap Live yang kamu siarkan tersimpan di halaman kreatormu sendiri — bisa dicari lewat Joilive user ID kamu, diakses lewat URL bersih, bukan link numerik ?s=.",
+      "keywords": [
+        "streamer joilive",
+        "profil kreator joilive",
+        "cari joilive user id",
+        "arsip joilive",
+        "cadangan siaran joilive",
+        "cari streamer joilive lewat username",
+        "simpan live joilive",
+        "riwayat live joilive",
+        "halaman kreator joilive",
+        "kreator konten joilive",
+        "profil joilive yang bisa dibagikan"
+      ],
+      "faqs": [
+        {
+          "question": "Joilive pakai user ID numerik — gimana fans bisa nemuin aku?",
+          "answer": "Justru itu yang nggak diselesaikan Joilive. URL platformnya adalah `joilive.net/user/index.html?s=1880…` — nggak mungkin diingat, nggak mungkin dibagikan. Halaman kreator LiveStreamRecorder-mu menggantinya dengan URL bersih yang bisa fans ketik, simpan, dan bagikan. Joilive user ID-nya tetap sama di belakang layar; tapi pintu depannya jauh lebih bagus."
+        },
+        {
+          "question": "Aku streamer Joilive — apa sebenarnya yang dilakukan LiveStreamRecorder buatku?",
+          "answer": "Dua hal. (1) Kamu merekam live-mu sendiri — setiap siaran otomatis tersimpan di halaman kreatormu sebagai arsip yang bisa ditonton. (2) Arsipmu dapat URL yang bisa dibagikan dan ramah pencarian, bukan link ID numerik Joilive. Fans bisa nemuin kamu di antara stream, bukan cuma waktu kamu kebetulan live."
+        },
+        {
+          "question": "Joilive nggak punya arsip. Live lamaku gimana?",
+          "answer": "Di Joilive, begitu kamu offline, siaran itu hilang — nggak ada replay, nggak ada VOD. Sebagai streamer Joilive yang merekam live-mu sendiri di LiveStreamRecorder, setiap siaran tetap bisa ditonton selamanya di halamanmu. Berguna buat fans di zona waktu berbeda, fans yang ketinggalan sesi, dan portofolio kamu sendiri."
+        },
+        {
+          "question": "Apakah aku butuh OBS, screen recording, atau software apa pun?",
+          "answer": "Nggak. Kamu live di Joilive seperti biasa. LiveStreamRecorder menangkap siaran dari sisi server — nggak ada yang berjalan di PC atau HP-mu. Tanpa CPU terkuras, tanpa kipas laptop berisik, tanpa penurunan resolusi di sisimu."
+        },
+        {
+          "question": "Bolehkah aku daftar sebelum punya banyak audiens?",
+          "answer": "Boleh — itu justru waktu terbaiknya. Backlog live Joilive yang rapi memberi penonton baru sesuatu untuk discroll setelah pertama kali nonton stream-mu. Daftar gratis, tambahkan user ID-mu, dan mulai bangun arsipmu sejak hari pertama."
+        },
+        {
+          "question": "Apakah LiveStreamRecorder gratis buat streamer Joilive?",
+          "answer": "Ya, sepenuhnya gratis untuk menyimpan live Joilive-mu. Premium membuka fitur mengunduh file video mentah, ClipAI untuk klip pendek otomatis, dan retensi lebih panjang."
+        },
+        {
+          "question": "Gimana caranya menjangkau penonton di luar app Joilive?",
+          "answer": "ClipAI memindai siaran Joilive yang sudah direkam dan memotong klip highlight berformat TikTok, YouTube Shorts, dan Instagram Reels. Joilive itu kecil — audiensmu ada di tempat lain. Jangkau mereka lewat klip, lalu arahkan kembali ke room Joilive-mu saat kamu live lagi."
+        }
+      ]
+    },
     "twitcast": {
       "title": "Kreator TwitCasting",
       "description": "Temukan kreator TwitCasting yang menggunakan LiveStreamRecorder untuk merekam live stream mereka dan mengubahnya menjadi klip pendek.",
@@ -281,7 +328,8 @@
       "liveme": "Kreator LiveMe",
       "mixch": "Kreator Mixch",
       "trovo": "Kreator Trovo",
-      "twitcast": "Kreator TwitCasting"
+      "twitcast": "Kreator TwitCasting",
+      "joilive": "Streamer Joilive"
     },
     "subtitle": {
       "all": "Bergabunglah dengan ribuan kreator yang menggunakan LiveStreamRecorder untuk menyimpan stream mereka dan membuat klip pendek.",
@@ -296,7 +344,8 @@
       "liveme": "Bergabunglah dengan ribuan kreator LiveMe yang menggunakan LiveStreamRecorder untuk menyimpan stream mereka dan membuat klip pendek.",
       "mixch": "Bergabunglah dengan ribuan kreator Mixch yang menggunakan LiveStreamRecorder untuk menyimpan stream mereka dan membuat klip pendek.",
       "trovo": "Bergabunglah dengan ribuan kreator Trovo yang menggunakan LiveStreamRecorder untuk menyimpan stream mereka dan membuat klip pendek.",
-      "twitcast": "Bergabunglah dengan ribuan kreator TwitCasting yang menggunakan LiveStreamRecorder untuk menyimpan stream mereka dan membuat klip pendek."
+      "twitcast": "Bergabunglah dengan ribuan kreator TwitCasting yang menggunakan LiveStreamRecorder untuk menyimpan stream mereka dan membuat klip pendek.",
+      "joilive": "Gabung dengan streamer Joilive yang pakai LiveStreamRecorder untuk menyimpan setiap stream dan menjangkau penonton di luar Joilive."
     }
   },
   "features": {
@@ -314,7 +363,8 @@
       "liveme": "Rekam Stream LiveMe Anda Secara Otomatis",
       "mixch": "Rekam Stream Mixch Anda Secara Otomatis",
       "trovo": "Rekam Stream Trovo Anda Secara Otomatis",
-      "twitcast": "Rekam Stream TwitCasting Anda Secara Otomatis"
+      "twitcast": "Rekam Stream TwitCasting Anda Secara Otomatis",
+      "joilive": "Simpan Stream Joilive-mu Secara Otomatis"
     },
     "subtitle": "Dari live stream ke klip pendek dalam hitungan menit",
     "items": {
@@ -350,7 +400,8 @@
       "liveme": "Rekam Stream LiveMe Anda",
       "mixch": "Rekam Stream Mixch Anda",
       "trovo": "Rekam Stream Trovo Anda",
-      "twitcast": "Rekam Stream TwitCasting Anda"
+      "twitcast": "Rekam Stream TwitCasting Anda",
+      "joilive": "Simpan Stream Joilive-mu"
     },
     "subtitle": {
       "all": "Bergabunglah dengan ribuan kreator. Simpan stream Anda, buat klip pendek dengan ClipAI, dan kembangkan audiens Anda.",
@@ -365,7 +416,8 @@
       "liveme": "Bergabunglah dengan ribuan kreator LiveMe. Simpan stream Anda dan buat klip pendek dengan ClipAI.",
       "mixch": "Bergabunglah dengan ribuan kreator Mixch. Simpan stream Anda dan buat klip pendek dengan ClipAI.",
       "trovo": "Bergabunglah dengan ribuan kreator Trovo. Simpan stream Anda dan buat klip pendek dengan ClipAI.",
-      "twitcast": "Bergabunglah dengan ribuan kreator TwitCasting. Simpan stream Anda dan buat klip pendek dengan ClipAI."
+      "twitcast": "Bergabunglah dengan ribuan kreator TwitCasting. Simpan stream Anda dan buat klip pendek dengan ClipAI.",
+      "joilive": "Gabung dengan streamer Joilive yang menyimpan setiap stream lewat LiveStreamRecorder. Buat klip pendek dengan ClipAI dan berkembang di luar Joilive."
     },
     "button": "Mulai Rekam Gratis"
   },
@@ -384,7 +436,8 @@
       "liveme": "Jadilah kreator LiveMe pertama yang bergabung!",
       "mixch": "Jadilah kreator Mixch pertama yang bergabung!",
       "trovo": "Jadilah kreator Trovo pertama yang bergabung!",
-      "twitcast": "Jadilah kreator TwitCasting pertama yang bergabung!"
+      "twitcast": "Jadilah kreator TwitCasting pertama yang bergabung!",
+      "joilive": "Jadilah streamer Joilive pertama yang bergabung!"
     },
     "button": "Mulai Sekarang"
   },
@@ -400,6 +453,7 @@
     "buzzcast": "## Kreator Buzzcast\n\nTemukan kreator Buzzcast yang menggunakan LiveStreamRecorder untuk menyimpan live mereka sendiri. Jelajahi streamer Buzzcast, tonton rekaman mereka, dan temukan kreator baru untuk diikuti dari komunitas live streaming mobile-first ini.\n\n### Kenapa kreator Buzzcast merekam live mereka\n\nLive Buzzcast hanya berlangsung secara live — begitu kamu mengakhiri siaran, kontennya hilang dari app. Tidak ada sistem replay dan fans tidak punya cara untuk menontonnya lagi. Kreator Buzzcast pakai LiveStreamRecorder untuk menyimpan setiap live secara otomatis, supaya sesi ngobrol, performa musik, dan konten sehari-harimu tetap tersedia untuk fans lama setelah live berakhir.\n\n### Jelajahi kreator Buzzcast terbaik\n\nBuka halaman kreator Buzzcast untuk menemukan streamer yang menyimpan live mereka sendiri di LiveStreamRecorder. Tonton rekaman mereka, kejar live yang kamu lewatkan, dan temukan kreator Buzzcast baru yang layak diikuti.\n\n### Halaman kreator Buzzcast milikmu\n\nSetiap kreator Buzzcast di LiveStreamRecorder punya halaman sendiri tempat fans bisa menonton semua live yang sudah direkam. Daftar, tambahkan username Buzzcast-mu, dan halaman kreatormu langsung siap — tempat permanen untuk kontenmu yang tidak hilang saat live berakhir.\n\n### Dari live jadi klip: bangun pengikutmu\n\nClipAI mengubah rekaman live Buzzcast-mu jadi klip pendek siap posting di TikTok, Instagram Reels, atau YouTube Shorts. Ubah reaksi, momen musik, dan highlight ngobrol jadi konten viral dan tumbuhkan pengikutmu di luar Buzzcast.\n\n### Jadi kreator Buzzcast di LiveStreamRecorder\n\nDaftar gratis, tambahkan username Buzzcast-mu, dan mulai simpan live-mu hari ini. Setiap live otomatis tertangkap — tanpa rekam manual, tanpa app tambahan. Gabung dengan kreator Buzzcast yang sudah pakai LiveStreamRecorder untuk menjaga setiap live dan menumbuhkan audiens mereka.",
     "liveme": "## Kreator LiveMe\n\nTemukan kreator LiveMe yang menggunakan LiveStreamRecorder untuk menyimpan live mereka sendiri. Jelajahi streamer LiveMe, tonton rekaman mereka, dan temukan kreator baru untuk diikuti dari komunitas live streaming mobile-first ini.\n\n### Kenapa kreator LiveMe merekam live mereka\n\nLive LiveMe hanya berlangsung secara live — begitu kamu mengakhiri siaran, kontennya hilang dari app. Tidak ada sistem replay dan fans tidak punya cara untuk menontonnya lagi. Kreator LiveMe pakai LiveStreamRecorder untuk menyimpan setiap live secara otomatis, supaya sesi ngobrol, performa musik, dan konten sehari-harimu tetap tersedia untuk fans lama setelah live berakhir.\n\n### Jelajahi kreator LiveMe terbaik\n\nBuka halaman kreator LiveMe untuk menemukan streamer yang menyimpan live mereka sendiri di LiveStreamRecorder. Tonton rekaman mereka, kejar live yang kamu lewatkan, dan temukan kreator LiveMe baru yang layak diikuti.\n\n### Halaman kreator LiveMe milikmu\n\nSetiap kreator LiveMe di LiveStreamRecorder punya halaman sendiri tempat fans bisa menonton semua live yang sudah direkam. Daftar, tambahkan username LiveMe-mu, dan halaman kreatormu langsung siap — tempat permanen untuk kontenmu yang tidak hilang saat live berakhir.\n\n### Dari live jadi klip: bangun pengikutmu\n\nClipAI mengubah rekaman live LiveMe-mu jadi klip pendek siap posting di TikTok, Instagram Reels, atau YouTube Shorts. Ubah reaksi, momen musik, dan highlight ngobrol jadi konten viral dan tumbuhkan pengikutmu di luar LiveMe.\n\n### Jadi kreator LiveMe di LiveStreamRecorder\n\nDaftar gratis, tambahkan username LiveMe-mu, dan mulai simpan live-mu hari ini. Setiap live otomatis tertangkap — tanpa rekam manual, tanpa app tambahan. Gabung dengan kreator LiveMe yang sudah pakai LiveStreamRecorder untuk menjaga setiap live dan menumbuhkan audiens mereka.",
     "mixch": "## Kreator Mixch\n\nTemukan kreator Mixch yang menggunakan LiveStreamRecorder untuk menyimpan live mereka sendiri. Jelajahi streamer Mixch, tonton rekaman mereka, dan temukan kreator baru untuk diikuti dari komunitas live streaming mobile-first ini.\n\n### Kenapa kreator Mixch merekam live mereka\n\nLive Mixch hanya berlangsung secara live — begitu kamu mengakhiri siaran, kontennya hilang dari app. Tidak ada sistem replay dan fans tidak punya cara untuk menontonnya lagi. Kreator Mixch pakai LiveStreamRecorder untuk menyimpan setiap live secara otomatis, supaya sesi ngobrol, performa musik, dan konten sehari-harimu tetap tersedia untuk fans lama setelah live berakhir.\n\n### Jelajahi kreator Mixch terbaik\n\nBuka halaman kreator Mixch untuk menemukan streamer yang menyimpan live mereka sendiri di LiveStreamRecorder. Tonton rekaman mereka, kejar live yang kamu lewatkan, dan temukan kreator Mixch baru yang layak diikuti.\n\n### Halaman kreator Mixch milikmu\n\nSetiap kreator Mixch di LiveStreamRecorder punya halaman sendiri tempat fans bisa menonton semua live yang sudah direkam. Daftar, tambahkan username Mixch-mu, dan halaman kreatormu langsung siap — tempat permanen untuk kontenmu yang tidak hilang saat live berakhir.\n\n### Dari live jadi klip: bangun pengikutmu\n\nClipAI mengubah rekaman live Mixch-mu jadi klip pendek siap posting di TikTok, Instagram Reels, atau YouTube Shorts. Ubah reaksi, momen musik, dan highlight ngobrol jadi konten viral dan tumbuhkan pengikutmu di luar Mixch.\n\n### Jadi kreator Mixch di LiveStreamRecorder\n\nDaftar gratis, tambahkan username Mixch-mu, dan mulai simpan live-mu hari ini. Setiap live otomatis tertangkap — tanpa rekam manual, tanpa app tambahan. Gabung dengan kreator Mixch yang sudah pakai LiveStreamRecorder untuk menjaga setiap live dan menumbuhkan audiens mereka.",
+    "joilive": "## Streamer Joilive di LiveStreamRecorder\n\nStreamer Joilive (joilive.net) memakai LiveStreamRecorder untuk **merekam live mereka sendiri** dan memberi channel mereka arsip yang nyata. Joilive sendiri tidak menyimpan siaran setelah kamu offline — tidak ada tab replay, tidak ada VOD, tidak ada daftar stream lampau. Platformnya dibangun seputar chat live dan gifting, artinya semua yang kamu lakukan saat siaran lenyap begitu siaran berakhir. Sebagai kreator Joilive, merekam siaranmu sendiri adalah satu-satunya cara untuk menyimpannya.\n\n### Masalah ID Numerik\n\nJoilive mengidentifikasi setiap streamer lewat ID numerik panjang seperti `1880336239059720193`. URL profilmu adalah `joilive.net/user/index.html?s=1880336239059720193`. Nggak ada yang bookmark itu. Nggak ada yang ngetik itu di Discord. Halaman Joilive nggak benar-benar bisa dibagikan — dan nggak ada cara mencari streamer lewat username karena Joilive nggak punya username. LiveStreamRecorder memberi setiap kreator Joilive URL yang bersih dan mudah diingat, plus halaman kreator yang ramah pencarian yang di belakang layar memetakan ke ID numerikmu. Akun yang sama, pintu depan yang jauh lebih baik.\n\n### Menjangkau Fans di Zona Waktu Lain\n\nJoilive lebih condong ke audiens Asia-Pasifik. Kalau kamu streaming di JST dan fans-mu di Eropa atau Amerika, separuh audiensmu nggak pernah nonton live-mu — dan di Joilive itu artinya mereka nggak pernah nonton sama sekali. Dengan merekam stream-mu sendiri di LiveStreamRecorder, kamu kasih fans di zona waktu lain kesempatan menonton siaran sesuai jadwal mereka. Chatnya memang sudah hilang, tapi kontennya tetap ada.\n\n### Apa Saja yang Tersimpan\n\nVideo lengkap setiap Live, dalam kualitas tinggi, mulai dari saat kamu live. Tanpa rekam layar, tanpa plugin OBS, tanpa pass encoder tambahan — streamer Joilive nggak menjalankan apa pun di sisi mereka. Rekaman langsung masuk ke halaman kreator LiveStreamRecorder-mu secara otomatis dan tetap di sana tanpa batas waktu. Kamu yang putuskan mana yang dibuat publik, disembunyikan, atau dihapus.\n\n### Ubah Stream-mu Jadi Klip yang Bisa Dibagikan\n\nJoilive itu platform kecil. Realitanya kebanyakan audiensmu hidup di TikTok, YouTube Shorts, atau Instagram Reels — mereka nggak punya app Joilive. ClipAI memindai siaran Joilive yang sudah direkam dan memotong klip pendek bercaption untuk format vertikal. Posting di tempat penonton sudah berada, lalu arahkan kembali ke room Joilive-mu saat kamu live lagi.\n\n### Jelajahi dan Temukan Streamer Joilive\n\nHalaman ini menampilkan kreator Joilive yang sudah mendaftarkan diri di LiveStreamRecorder. Karena Joilive tidak mengekspos username atau pencarian publik, ini mungkin salah satu dari sedikit cara untuk benar-benar menemukan streamer Joilive berdasarkan nama di web terbuka. Daftarnya akan terus bertambah seiring lebih banyak penyiar yang mendaftar.\n\n### Jadi Streamer Joilive di LiveStreamRecorder\n\nDaftar gratis, gratis untuk mulai menyimpan live-mu. Tempel Joilive user ID-mu (nilai `?s=…` dari URL profilmu) dan kami urus sisanya. Setiap siaran sejak saat itu tertangkap di halaman kreatormu. Perekaman adalah keputusanmu, kontennya milikmu, dan arsipnya ada di domainmu — `livestreamrecorder.com/joilive/id-mu` alih-alih URL query-string Joilive yang nggak bisa diingat siapa pun.",
     "trovo": "## Kreator Trovo\n\nTemukan kreator Trovo yang menggunakan LiveStreamRecorder untuk menyimpan live mereka sendiri. Jelajahi streamer Trovo, tonton rekaman mereka, dan temukan kreator baru untuk diikuti dari komunitas live streaming mobile-first ini.\n\n### Kenapa kreator Trovo merekam live mereka\n\nLive Trovo hanya berlangsung secara live — begitu kamu mengakhiri siaran, kontennya hilang dari app. Tidak ada sistem replay dan fans tidak punya cara untuk menontonnya lagi. Kreator Trovo pakai LiveStreamRecorder untuk menyimpan setiap live secara otomatis, supaya sesi ngobrol, performa musik, dan konten sehari-harimu tetap tersedia untuk fans lama setelah live berakhir.\n\n### Jelajahi kreator Trovo terbaik\n\nBuka halaman kreator Trovo untuk menemukan streamer yang menyimpan live mereka sendiri di LiveStreamRecorder. Tonton rekaman mereka, kejar live yang kamu lewatkan, dan temukan kreator Trovo baru yang layak diikuti.\n\n### Halaman kreator Trovo milikmu\n\nSetiap kreator Trovo di LiveStreamRecorder punya halaman sendiri tempat fans bisa menonton semua live yang sudah direkam. Daftar, tambahkan username Trovo-mu, dan halaman kreatormu langsung siap — tempat permanen untuk kontenmu yang tidak hilang saat live berakhir.\n\n### Dari live jadi klip: bangun pengikutmu\n\nClipAI mengubah rekaman live Trovo-mu jadi klip pendek siap posting di TikTok, Instagram Reels, atau YouTube Shorts. Ubah reaksi, momen musik, dan highlight ngobrol jadi konten viral dan tumbuhkan pengikutmu di luar Trovo.\n\n### Jadi kreator Trovo di LiveStreamRecorder\n\nDaftar gratis, tambahkan username Trovo-mu, dan mulai simpan live-mu hari ini. Setiap live otomatis tertangkap — tanpa rekam manual, tanpa app tambahan. Gabung dengan kreator Trovo yang sudah pakai LiveStreamRecorder untuk menjaga setiap live dan menumbuhkan audiens mereka.",
     "twitcast": "## Kreator TwitCasting\n\nTemukan kreator TwitCasting yang menggunakan LiveStreamRecorder untuk menyimpan live mereka sendiri. Jelajahi streamer TwitCasting, tonton rekaman mereka, dan temukan kreator baru untuk diikuti dari komunitas live streaming mobile-first ini.\n\n### Kenapa kreator TwitCasting merekam live mereka\n\nLive TwitCasting hanya berlangsung secara live — begitu kamu mengakhiri siaran, kontennya hilang dari app. Tidak ada sistem replay dan fans tidak punya cara untuk menontonnya lagi. Kreator TwitCasting pakai LiveStreamRecorder untuk menyimpan setiap live secara otomatis, supaya sesi ngobrol, performa musik, dan konten sehari-harimu tetap tersedia untuk fans lama setelah live berakhir.\n\n### Jelajahi kreator TwitCasting terbaik\n\nBuka halaman kreator TwitCasting untuk menemukan streamer yang menyimpan live mereka sendiri di LiveStreamRecorder. Tonton rekaman mereka, kejar live yang kamu lewatkan, dan temukan kreator TwitCasting baru yang layak diikuti.\n\n### Halaman kreator TwitCasting milikmu\n\nSetiap kreator TwitCasting di LiveStreamRecorder punya halaman sendiri tempat fans bisa menonton semua live yang sudah direkam. Daftar, tambahkan username TwitCasting-mu, dan halaman kreatormu langsung siap — tempat permanen untuk kontenmu yang tidak hilang saat live berakhir.\n\n### Dari live jadi klip: bangun pengikutmu\n\nClipAI mengubah rekaman live TwitCasting-mu jadi klip pendek siap posting di TikTok, Instagram Reels, atau YouTube Shorts. Ubah reaksi, momen musik, dan highlight ngobrol jadi konten viral dan tumbuhkan pengikutmu di luar TwitCasting.\n\n### Jadi kreator TwitCasting di LiveStreamRecorder\n\nDaftar gratis, tambahkan username TwitCasting-mu, dan mulai simpan live-mu hari ini. Setiap live otomatis tertangkap — tanpa rekam manual, tanpa app tambahan. Gabung dengan kreator TwitCasting yang sudah pakai LiveStreamRecorder untuk menjaga setiap live dan menumbuhkan audiens mereka."
   },

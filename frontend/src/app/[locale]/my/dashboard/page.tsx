@@ -38,6 +38,7 @@ const platformMap: Record<string, FollowerTypeEnum> = {
   Mixch: FollowerTypeEnum.Mixch,
   Twitcast: FollowerTypeEnum.Twitcast,
   Trovo: FollowerTypeEnum.Trovo,
+  Joilive: FollowerTypeEnum.Joilive,
 };
 
 export default async function Page() {

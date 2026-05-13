@@ -2,7 +2,7 @@ import Link from "@/app/components/link";
 import { streamingPlatforms } from "@/app/lib/streaming-platforms";
 import { Group, Image, Scroller, Stack, Text } from "@mantine/core";
 
-const NEW_PLATFORMS = new Set(["Mixch", "Twitcast", "Trovo"]);
+const NEW_PLATFORMS = new Set(["Mixch", "Twitcast", "Trovo", "Joilive"]);
 
 export function PlatformsSection() {
   return (

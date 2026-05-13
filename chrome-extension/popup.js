@@ -22,6 +22,9 @@ const PLATFORM_META = {
   buzzcast:  { name: "Buzzcast",  letter: "BC", prefix: "" },
   liveme:    { name: "LiveMe",    letter: "LM", prefix: "" },
   mixch:     { name: "Mixch",     letter: "Mx", prefix: "" },
+  twitcast:  { name: "TwitCasting", letter: "TC", prefix: "" },
+  trovo:     { name: "Trovo",     letter: "Tv", prefix: "" },
+  joilive:   { name: "Joilive",   letter: "Jo", prefix: "" },
 };
 
 // ── Platform SVG icons ──────────────────────────────────────────────────────
@@ -36,6 +39,9 @@ const PLATFORM_SVGS = {
   buzzcast: `<svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><text x="2" y="17" font-size="12" font-weight="bold" font-family="Arial">BC</text></svg>`,
   liveme: `<svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><path d="M19.5 8.1 3.5 11.8l7.6 2.5 1.2 7.6 7.2-13.8Z"/></svg>`,
   mixch: `<svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><text x="2" y="17" font-size="12" font-weight="bold" font-family="Arial">Mx</text></svg>`,
+  twitcast: `<svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><text x="2" y="17" font-size="12" font-weight="bold" font-family="Arial">TC</text></svg>`,
+  trovo: `<svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><text x="2" y="17" font-size="12" font-weight="bold" font-family="Arial">Tv</text></svg>`,
+  joilive: `<svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><text x="2" y="17" font-size="12" font-weight="bold" font-family="Arial">Jo</text></svg>`,
 };
 
 // ── DOM refs ────────────────────────────────────────────────────────────────
