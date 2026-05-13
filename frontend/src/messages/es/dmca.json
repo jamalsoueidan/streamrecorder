@@ -5,95 +5,80 @@
   },
   "header": {
     "title": "Ley de Derechos de Autor del Milenio Digital",
-    "subtitle": "Política DMCA"
-  },
-  "divider": "O toma el control y hazlo tú mismo",
-  "footer": "Respondemos a todas las solicitudes DMCA válidas. El abuso de este proceso puede tener consecuencias legales.",
-  "partner": {
-    "title": "¡Espera! Conviértete en Socio",
-    "badge": "Recomendado",
-    "subtitle": "Toma el control de tu contenido y haz crecer tu audiencia",
-    "publicMessage": "Ya transmites públicamente. Ayudamos a tus fans a encontrarte en Google y ver tus mejores momentos.",
-    "discovery": {
-      "title": "Búsqueda en Google",
-      "description": "Tus streams aparecen en los resultados de búsqueda y enviamos fans directamente a tu perfil"
-    },
-    "analytics": {
-      "title": "Panel de Estadísticas",
-      "description": "Rastrea vistas, tiempo de visualización, ubicación de la audiencia y tendencias de crecimiento"
-    },
-    "highlights": {
-      "title": "Destacados con IA",
-      "description": "Encontramos y mostramos automáticamente tus mejores momentos de streaming"
-    },
-    "clips": {
-      "title": "Creador de Clips",
-      "description": "Descarga clips para compartir en TikTok, YouTube y más"
-    },
-    "translation": {
-      "title": "Soporte Multiidioma",
-      "description": "Llega a fans de todo el mundo con subtítulos y descripciones traducidos automáticamente"
-    },
-    "rankings": {
-      "title": "Rankings de Streamers",
-      "description": "Aparece en las listas de los mejores streamers y páginas de categorías"
-    },
-    "brands": {
-      "title": "Oportunidades con Marcas",
-      "description": "Sé descubierto por patrocinadores que buscan creadores como tú"
-    },
-    "control": {
-      "title": "Control Total de Privacidad",
-      "description": "Elimina cualquier video, oculta cualquier video, controla tus grabaciones"
-    },
-    "cta": "Reclama Tu Perfil y Conviértete en Socio",
-    "ctaSubtext": "Tarda 2 minutos • Control total sobre tu contenido"
+    "subtitle": "Envíe una solicitud de retirada. Revisamos cada notificación y actuamos con prontitud ante las reclamaciones legítimas."
   },
   "form": {
     "title": "Notificación de Infracción Alegada",
-    "description": "Usa este formulario para solicitar la eliminación de grabaciones bajo la DMCA.",
-    "verifyFirst": {
-      "title": "Verificación Rápida",
-      "message": "Verifica la propiedad de la cuenta para eliminar tus grabaciones al instante. Si no puedes verificar, usa el formulario DMCA — las solicitudes manuales se procesan en un plazo de 10 días hábiles.",
-      "button": "Verificar y Eliminar al Instante"
+    "description": "Utilice este formulario para solicitar la eliminación de grabaciones que infrinjan sus derechos de autor. Respondemos a las notificaciones DMCA legalmente válidas y deshabilitamos las cuentas de infractores reincidentes en las circunstancias apropiadas.",
+    "sections": {
+      "yourWork": "Su obra protegida por derechos de autor",
+      "infringing": "Contenido infractor",
+      "yourRole": "Su rol",
+      "contact": "Información de contacto",
+      "sworn": "Declaraciones bajo juramento",
+      "signature": "Firma"
     },
-    "content": {
-      "label": "El siguiente contenido",
-      "description": "Proporciona la(s) URL(s) o descripción del contenido infractor",
-      "placeholder": "https://ejemplo.com/grabacion/..."
+    "work": {
+      "description": {
+        "label": "Describa la obra protegida por derechos de autor",
+        "description": "¿Cuál es el contenido original? ¿Cuándo fue creado o publicado por primera vez? Cuantos más detalles proporcione, más rápido podremos verificar su reclamación.",
+        "placeholder": "p. ej. Mi transmisión en vivo en Twitch como @micanal el 15 de marzo de 2024 de 8 a 10 p. m. EST, sobre el lanzamiento de mi nueva canción 'Título'."
+      }
+    },
+    "infringing": {
+      "urls": {
+        "label": "URLs de las grabaciones infractoras",
+        "description": "Una URL por línea. Estas son las grabaciones en LiveStreamRecorder cuya eliminación nos solicita.",
+        "placeholder": "https://www.livestreamrecorder.com/twitch/..."
+      }
     },
     "copyrightType": {
-      "label": "Por favor elige una opción",
-      "personal": "Infringe mis derechos de autor personales",
-      "authorized": "Infringe los derechos de autor de alguien que estoy autorizado a representar"
+      "label": "Presento esta notificación como",
+      "personal": "El titular de los derechos de autor",
+      "authorized": "Un representante autorizado del titular de los derechos de autor"
+    },
+    "contact": {
+      "firstName": {
+        "label": "Nombre",
+        "placeholder": "Juan"
+      },
+      "lastName": {
+        "label": "Apellido",
+        "placeholder": "Pérez"
+      }
     },
     "email": {
-      "label": "Tu correo electrónico",
-      "description": "Lo usaremos para responder a tu solicitud",
-      "placeholder": "tu@ejemplo.com"
+      "label": "Su correo electrónico",
+      "description": "Lo usaremos para responder a su solicitud.",
+      "placeholder": "usted@ejemplo.com"
     },
     "perjury": {
       "title": "Al marcar las siguientes casillas, declaro BAJO PENA DE PERJURIO que:",
-      "warning": "Por favor lee cada declaración detenidamente antes de marcarla.",
+      "warning": "Por favor lea cada declaración detenidamente antes de marcarla.",
       "goodFaith": "Por la presente declaro que tengo la creencia de buena fe de que el uso compartido del material protegido por derechos de autor en la ubicación anterior no está autorizado por el titular de los derechos de autor, su agente o la ley (por ejemplo, como uso justo).",
       "accurate": "Por la presente declaro que la información contenida en este Aviso es precisa y, bajo pena de perjurio, que soy el propietario o estoy autorizado para actuar en nombre del propietario de los derechos de autor o de un derecho exclusivo bajo los derechos de autor que supuestamente se infringen.",
       "acknowledge": "Reconozco que bajo la Sección 512(f) cualquier persona que intencionalmente declare falsamente que el material o actividad es infractora puede estar sujeta a responsabilidad por daños."
     },
     "signature": {
-      "label": "Firma Digital",
-      "description": "Escribir tu nombre completo en esta casilla actuará como tu firma digital",
-      "placeholder": "Tu nombre legal completo"
+      "date": {
+        "label": "Fecha de firma"
+      },
+      "label": "Firma escrita",
+      "description": "Escriba su nombre legal completo. Debe coincidir exactamente con el Nombre y Apellido indicados arriba: actúa como su firma digital.",
+      "placeholder": "Juan Pérez",
+      "mismatch": "La firma debe coincidir exactamente con su Nombre y Apellido."
     },
     "captcha": {
       "label": "Verificación",
       "description": "¿Cuánto es {question}?",
-      "placeholder": "Tu respuesta",
-      "error": "Respuesta incorrecta, inténtalo de nuevo"
+      "placeholder": "Su respuesta",
+      "error": "Respuesta incorrecta, inténtelo de nuevo"
     },
-    "submit": "Enviar Solicitud DMCA"
+    "submit": "Enviar Solicitud DMCA",
+    "footer": "Respondemos a todas las solicitudes DMCA válidas. El abuso de este proceso puede tener consecuencias legales."
   },
   "submitted": {
     "title": "Solicitud DMCA Enviada",
-    "description": "Hemos recibido tu solicitud de eliminación DMCA. La revisaremos y responderemos al correo electrónico que proporcionaste."
+    "description": "Hemos recibido su solicitud de eliminación DMCA. La revisaremos y responderemos al correo electrónico que proporcionó."
   }
 }

@@ -1,10 +1,9 @@
-import { Container, Divider, Flex, Stack, Text, Title } from "@mantine/core";
-import { IconChevronDown, IconScale } from "@tabler/icons-react";
+import { Container, Flex, Stack, Text, Title } from "@mantine/core";
+import { IconScale } from "@tabler/icons-react";
 import { getTranslations } from "next-intl/server";
 import { Suspense } from "react";
 import { generateAlternates } from "@/app/lib/seo";
 import { DMCAForm } from "./components/form";
-import { PartnerBenefits } from "./components/partner-benefits";
 
 interface PageProps {
   params: Promise<{ locale: string }>;
@@ -68,26 +67,6 @@ export default async function DMCAPolicy({ params }: PageProps) {
         <Suspense>
           <DMCAForm />
         </Suspense>
-
-        <Divider
-          label={
-            <Flex align="center" gap={4}>
-              <IconChevronDown size={16} style={{ color: "#64748b" }} />
-              <Text size="sm" style={{ color: "#64748b" }}>
-                {t("divider")}
-              </Text>
-              <IconChevronDown size={16} style={{ color: "#64748b" }} />
-            </Flex>
-          }
-          labelPosition="center"
-          style={{ borderColor: "rgba(255, 255, 255, 0.1)" }}
-        />
-
-        <PartnerBenefits />
-
-        <Text size="sm" ta="center" style={{ color: "#64748b" }}>
-          {t("footer")}
-        </Text>
       </Stack>
     </Container>
   );

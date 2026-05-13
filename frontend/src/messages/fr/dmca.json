@@ -1,99 +1,84 @@
 {
   "meta": {
     "title": "Politique DMCA",
-    "description": "Soumets une demande de retrait DMCA pour du contenu qui enfreint tes droits d'auteur."
+    "description": "Soumettez une demande de retrait DMCA pour du contenu qui enfreint vos droits d'auteur."
   },
   "header": {
     "title": "Digital Millennium Copyright Act",
-    "subtitle": "Politique DMCA"
-  },
-  "divider": "Ou prends le contrôle et fais-le toi-même",
-  "footer": "Nous traitons toutes les demandes DMCA valides. Tout abus de cette procédure peut entraîner des conséquences juridiques.",
-  "partner": {
-    "title": "Attends ! Deviens partenaire à la place",
-    "badge": "Recommandé",
-    "subtitle": "Prends le contrôle de ton contenu et fais grandir ton audience",
-    "publicMessage": "Tu streames déjà publiquement. Nous aidons tes fans à te trouver sur Google et nous les envoyons directement vers ton profil.",
-    "discovery": {
-      "title": "Recherche Google",
-      "description": "Tes streams apparaissent dans les résultats de recherche et nous envoyons les fans directement vers ton profil"
-    },
-    "analytics": {
-      "title": "Tableau d'analyse",
-      "description": "Suis les vues, le temps de visionnage, la localisation de ton audience et les tendances de croissance"
-    },
-    "highlights": {
-      "title": "Moments forts par IA",
-      "description": "Nous trouvons et mettons automatiquement en avant tes meilleurs moments de stream"
-    },
-    "clips": {
-      "title": "Créateur de clips",
-      "description": "Télécharge des clips à partager sur TikTok, YouTube et plus"
-    },
-    "translation": {
-      "title": "Support multilingue",
-      "description": "Touche des fans dans le monde entier avec des sous-titres et descriptions traduits automatiquement"
-    },
-    "rankings": {
-      "title": "Classement des streamers",
-      "description": "Apparais dans les listes des meilleurs streamers et les pages de catégories"
-    },
-    "brands": {
-      "title": "Opportunités avec des marques",
-      "description": "Sois découvert·e par des sponsors à la recherche de créateurs comme toi"
-    },
-    "control": {
-      "title": "Contrôle total de la confidentialité",
-      "description": "Supprime n'importe quelle vidéo, masque-la, contrôle tes enregistrements"
-    },
-    "cta": "Réclamer ton profil et devenir partenaire",
-    "ctaSubtext": "2 minutes • Contrôle total de ton contenu"
+    "subtitle": "Soumettez une demande de retrait. Nous examinons chaque notification et donnons suite rapidement aux réclamations légitimes."
   },
   "form": {
     "title": "Notification d'infraction présumée",
-    "description": "Utilise ce formulaire pour demander la suppression d'enregistrements selon le DMCA.",
-    "verifyFirst": {
-      "title": "Vérification rapide",
-      "message": "Vérifie la propriété du compte pour supprimer tes enregistrements instantanément. Si tu ne peux pas te vérifier, utilise le formulaire DMCA — les demandes manuelles sont traitées dans un délai de 10 jours ouvrés.",
-      "button": "Vérifier et supprimer instantanément"
+    "description": "Utilisez ce formulaire pour demander la suppression d'enregistrements qui enfreignent vos droits d'auteur. Nous répondons aux notifications DMCA juridiquement valides et désactivons les comptes des contrevenants récidivistes dans les circonstances appropriées.",
+    "sections": {
+      "yourWork": "Votre œuvre protégée par le droit d'auteur",
+      "infringing": "Contenu en infraction",
+      "yourRole": "Votre rôle",
+      "contact": "Coordonnées",
+      "sworn": "Déclarations sous serment",
+      "signature": "Signature"
     },
-    "content": {
-      "label": "Le contenu suivant",
-      "description": "Indique l'URL ou la description du contenu en infraction",
-      "placeholder": "https://example.com/recording/..."
+    "work": {
+      "description": {
+        "label": "Décrivez l'œuvre protégée par le droit d'auteur",
+        "description": "Quel est le contenu original ? Quand a-t-il été créé ou publié pour la première fois ? Plus vous fournissez de détails, plus nous pourrons vérifier votre réclamation rapidement.",
+        "placeholder": "p. ex. Ma diffusion en direct sur Twitch en tant que @machaine le 15 mars 2024 de 20h à 22h (EST), à l'occasion de la sortie de ma nouvelle chanson « Titre »."
+      }
+    },
+    "infringing": {
+      "urls": {
+        "label": "URLs des enregistrements en infraction",
+        "description": "Une URL par ligne. Il s'agit des enregistrements sur LiveStreamRecorder dont vous demandez la suppression.",
+        "placeholder": "https://www.livestreamrecorder.com/twitch/..."
+      }
     },
     "copyrightType": {
-      "label": "Choisis une option",
-      "personal": "Enfreint mes droits d'auteur personnels",
-      "authorized": "Enfreint les droits d'auteur d'une personne que je suis autorisé·e à représenter"
+      "label": "Je soumets cette notification en tant que",
+      "personal": "Titulaire du droit d'auteur",
+      "authorized": "Représentant autorisé du titulaire du droit d'auteur"
+    },
+    "contact": {
+      "firstName": {
+        "label": "Prénom",
+        "placeholder": "Jean"
+      },
+      "lastName": {
+        "label": "Nom de famille",
+        "placeholder": "Dupont"
+      }
     },
     "email": {
-      "label": "Ton adresse e-mail",
-      "description": "Nous l'utiliserons pour répondre à ta demande",
-      "placeholder": "toi@exemple.fr"
+      "label": "Votre adresse e-mail",
+      "description": "Nous l'utiliserons pour répondre à votre demande.",
+      "placeholder": "vous@exemple.fr"
     },
     "perjury": {
       "title": "En cochant les cases suivantes, je déclare SOUS PEINE DE PARJURE que :",
-      "warning": "Lis attentivement chaque déclaration avant de la cocher.",
+      "warning": "Veuillez lire attentivement chaque déclaration avant de la cocher.",
       "goodFaith": "Je déclare avoir la conviction de bonne foi que le partage du contenu protégé par le droit d'auteur à l'emplacement ci-dessus n'est pas autorisé par le titulaire du droit d'auteur, son représentant ou la loi (par exemple, dans le cadre d'un usage équitable).",
       "accurate": "Je déclare que les informations contenues dans cet avis sont exactes et, sous peine de parjure, que je suis le titulaire ou autorisé·e à agir au nom du titulaire du droit d'auteur ou d'un droit exclusif au titre du droit d'auteur prétendument enfreint.",
       "acknowledge": "Je reconnais qu'en vertu de la section 512(f), toute personne qui déclare sciemment de manière inexacte que du contenu ou une activité enfreint les droits d'auteur peut être tenue responsable des dommages."
     },
     "signature": {
-      "label": "Signature numérique",
-      "description": "Saisir ton nom complet dans ce champ vaut signature numérique",
-      "placeholder": "Ton nom légal complet"
+      "date": {
+        "label": "Date de signature"
+      },
+      "label": "Signature dactylographiée",
+      "description": "Saisissez votre nom légal complet. Il doit correspondre exactement au prénom et au nom de famille indiqués ci-dessus — il tient lieu de signature numérique.",
+      "placeholder": "Jean Dupont",
+      "mismatch": "La signature doit correspondre exactement à votre prénom et à votre nom de famille."
     },
     "captcha": {
       "label": "Vérification",
       "description": "Combien fait {question} ?",
-      "placeholder": "Ta réponse",
-      "error": "Mauvaise réponse, réessaye"
+      "placeholder": "Votre réponse",
+      "error": "Mauvaise réponse, réessayez"
     },
-    "submit": "Soumettre la demande DMCA"
+    "submit": "Soumettre la demande DMCA",
+    "footer": "Nous traitons toutes les demandes DMCA valides. Tout abus de cette procédure peut entraîner des conséquences juridiques."
   },
   "submitted": {
     "title": "Demande DMCA soumise",
-    "description": "Nous avons bien reçu ta demande de retrait DMCA. Nous l'examinerons et te répondrons à l'adresse e-mail que tu as fournie."
+    "description": "Nous avons bien reçu votre demande de retrait DMCA. Nous l'examinerons et vous répondrons à l'adresse e-mail que vous avez fournie."
   }
 }

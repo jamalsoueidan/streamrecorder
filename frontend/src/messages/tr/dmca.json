@@ -5,71 +5,51 @@
   },
   "header": {
     "title": "Dijital Milenyum Telif Hakkı Yasası",
-    "subtitle": "DMCA Politikası"
-  },
-  "divider": "Veya kontrolü elinize alın ve kendiniz yapın",
-  "footer": "Tüm geçerli DMCA taleplerine yanıt veriyoruz. Bu sürecin kötüye kullanılması yasal sonuçlara yol açabilir.",
-  "partner": {
-    "title": "Bekleyin! Bunun Yerine Partner Olun",
-    "badge": "Önerilen",
-    "subtitle": "İçeriğinizin kontrolünü elinize alın ve kitlenizi büyütün",
-    "publicMessage": "Zaten herkese açık yayın yapıyorsunuz. Hayranlarınızın sizi Google'da bulmasına ve en iyi anlarınızı izlemesine yardımcı oluyoruz.",
-    "discovery": {
-      "title": "Google Araması",
-      "description": "Yayınlarınız arama sonuçlarında görünür ve hayranları doğrudan profilinize yönlendiririz"
-    },
-    "analytics": {
-      "title": "Analiz Paneli",
-      "description": "Görüntülemeleri, izleme süresini, kitle konumunu ve büyüme trendlerini takip edin"
-    },
-    "highlights": {
-      "title": "AI Destekli Öne Çıkanlar",
-      "description": "En iyi yayın anlarınızı otomatik olarak bulup sergileriz"
-    },
-    "clips": {
-      "title": "Klip Oluşturucu",
-      "description": "TikTok, YouTube ve daha fazlasında paylaşmak için klipler indirin"
-    },
-    "translation": {
-      "title": "Çoklu Dil Desteği",
-      "description": "Otomatik çevrilmiş altyazılar ve açıklamalarla küresel hayranlarınıza ulaşın"
-    },
-    "rankings": {
-      "title": "Yayıncı Sıralamaları",
-      "description": "En iyi yayıncı listelerinde ve kategori sayfalarında öne çıkın"
-    },
-    "brands": {
-      "title": "Marka Fırsatları",
-      "description": "Sizin gibi içerik üreticileri arayan sponsorlar tarafından keşfedilme imkanı"
-    },
-    "control": {
-      "title": "Tam Gizlilik Kontrolü",
-      "description": "Herhangi bir videoyu silin, gizleyin, kayıtlarınızı kontrol edin"
-    },
-    "cta": "Profilinizi Talep Edin ve Partner Olun",
-    "ctaSubtext": "2 dakika sürer • İçeriğiniz üzerinde tam kontrol"
+    "subtitle": "Kaldırma talebi gönderin. Her bildirimi inceler ve geçerli iddialara hızla işlem yaparız."
   },
   "form": {
     "title": "İhlal İddiası Bildirimi",
-    "description": "DMCA kapsamında kayıtların kaldırılmasını talep etmek için lütfen bu formu kullanın.",
-    "verifyFirst": {
-      "title": "Hızlı Doğrulama",
-      "message": "Kayıtlarınızı anında kaldırmak için hesap sahipliğini doğrulayın. Doğrulayamıyorsanız DMCA formunu kullanın — manuel talepler 10 iş günü içinde işlenir.",
-      "button": "Doğrula ve Anında Kaldır"
+    "description": "Telif hakkınızı ihlal eden kayıtların kaldırılmasını talep etmek için bu formu kullanın. Hukuken geçerli DMCA bildirimlerine yanıt verir ve uygun durumlarda tekrarlayan ihlalcilerin hesaplarını devre dışı bırakırız.",
+    "sections": {
+      "yourWork": "Telif hakkıyla korunan eseriniz",
+      "infringing": "İhlal eden içerik",
+      "yourRole": "Sıfatınız",
+      "contact": "İletişim bilgileri",
+      "sworn": "Yeminli beyanlar",
+      "signature": "İmza"
     },
-    "content": {
-      "label": "Aşağıdaki içerik",
-      "description": "İhlal eden içeriğin URL'lerini veya açıklamasını sağlayın",
-      "placeholder": "https://example.com/recording/..."
+    "work": {
+      "description": {
+        "label": "Telif hakkıyla korunan eseri tanımlayın",
+        "description": "Orijinal içerik nedir? Ne zaman oluşturuldu veya ilk kez yayınlandı? Ne kadar çok ayrıntı verirseniz, talebinizi o kadar hızlı doğrulayabiliriz.",
+        "placeholder": "örn. 15 Mart 2024'te akşam 20:00–22:00 EST arasında Twitch'te @mychannel olarak yaptığım canlı yayın, yeni şarkım 'Başlık'ın lansmanını içeriyor."
+      }
+    },
+    "infringing": {
+      "urls": {
+        "label": "İhlal eden kayıtların URL'leri",
+        "description": "Her satıra bir URL. Bunlar, LiveStreamRecorder üzerinde kaldırmamızı istediğiniz kayıtlardır.",
+        "placeholder": "https://www.livestreamrecorder.com/twitch/..."
+      }
     },
     "copyrightType": {
-      "label": "Lütfen birini seçin",
-      "personal": "Kişisel telif hakkımı ihlal ediyor",
-      "authorized": "Temsil etmeye yetkili olduğum birinin telif hakkını ihlal ediyor"
+      "label": "Bu bildirimi şu sıfatla gönderiyorum:",
+      "personal": "Telif hakkı sahibi",
+      "authorized": "Telif hakkı sahibinin yetkili temsilcisi"
+    },
+    "contact": {
+      "firstName": {
+        "label": "Ad",
+        "placeholder": "Ayşe"
+      },
+      "lastName": {
+        "label": "Soyad",
+        "placeholder": "Yılmaz"
+      }
     },
     "email": {
       "label": "E-posta adresiniz",
-      "description": "Talebinize yanıt vermek için bunu kullanacağız",
+      "description": "Talebinize yanıt vermek için bunu kullanacağız.",
       "placeholder": "siz@ornek.com"
     },
     "perjury": {
@@ -80,9 +60,13 @@
       "acknowledge": "Bölüm 512(f) kapsamında, herhangi bir materyalin veya faaliyetin ihlal oluşturduğunu bilerek maddi olarak yanlış beyan eden herhangi bir kişinin tazminat sorumluluğuna tabi olabileceğini kabul ediyorum."
     },
     "signature": {
-      "label": "Dijital İmza",
-      "description": "Tam adınızı bu kutuya yazmak dijital imzanız olarak işlev görecektir",
-      "placeholder": "Tam yasal adınız"
+      "date": {
+        "label": "İmza tarihi"
+      },
+      "label": "Yazılı imza",
+      "description": "Tam yasal adınızı yazın. Yukarıdaki Ad ve Soyad ile tam olarak eşleşmelidir — dijital imzanız olarak işlev görür.",
+      "placeholder": "Ayşe Yılmaz",
+      "mismatch": "İmza, Adınız ve Soyadınızla tam olarak eşleşmelidir."
     },
     "captcha": {
       "label": "Doğrulama",
@@ -90,7 +74,8 @@
       "placeholder": "Cevabınız",
       "error": "Yanlış cevap, tekrar deneyin"
     },
-    "submit": "DMCA Talebini Gönder"
+    "submit": "DMCA Talebini Gönder",
+    "footer": "Tüm geçerli DMCA taleplerine yanıt veriyoruz. Bu sürecin kötüye kullanılması yasal sonuçlara yol açabilir."
   },
   "submitted": {
     "title": "DMCA Talebi Gönderildi",
