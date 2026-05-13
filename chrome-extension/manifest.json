@@ -23,7 +23,10 @@
     "*://*.bigo.tv/*",
     "*://*.buzzcast.com/*",
     "*://*.liveme.com/*",
-    "*://*.mixch.tv/*"
+    "*://*.mixch.tv/*",
+    "*://*.twitcasting.tv/*",
+    "*://*.trovo.live/*",
+    "*://*.joilive.net/*"
   ],
   "background": {
     "service_worker": "background.js"

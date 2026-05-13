@@ -77,6 +77,7 @@ function isSupportedSite(urlString) {
     "tiktok.com", "twitch.tv", "kick.com", "youtube.com",
     "afreecatv.com", "sooplive.co.kr", "pandalive.co.kr", "bigo.tv",
     "buzzcast.com", "liveme.com", "mixch.tv",
+    "twitcasting.tv", "trovo.live", "joilive.net",
   ];
   return supported.some((d) => hostname === d || hostname.endsWith("." + d));
 }
@@ -179,6 +180,37 @@ function parseProfileUrl(urlString) {
   if (hostname === "mixch.tv" || hostname.endsWith(".mixch.tv")) {
     const match = path.match(/^\/u\/([A-Za-z0-9_]+)/);
     if (match) return { platform: "mixch", username: match[1] };
+    return null;
+  }
+
+  // Twitcasting: twitcasting.tv/username
+  if (hostname === "twitcasting.tv" || hostname.endsWith(".twitcasting.tv")) {
+    const match = path.match(/^\/([A-Za-z0-9_]+)\/?$/);
+    if (match && !IGNORED_PATHS.has(match[1].toLowerCase())) {
+      return { platform: "twitcast", username: match[1] };
+    }
+    return null;
+  }
+
+  // Trovo: trovo.live/s/username (canonical) or trovo.live/username
+  if (hostname === "trovo.live" || hostname.endsWith(".trovo.live")) {
+    const sMatch = path.match(/^\/s\/([A-Za-z0-9_]+)/);
+    if (sMatch) return { platform: "trovo", username: sMatch[1] };
+    const match = path.match(/^\/([A-Za-z0-9_]+)\/?$/);
+    if (match && !IGNORED_PATHS.has(match[1].toLowerCase())) {
+      return { platform: "trovo", username: match[1] };
+    }
+    return null;
+  }
+
+  // Joilive: joilive.net/user/index.html?s=numericUserId
+  if (hostname === "joilive.net" || hostname.endsWith(".joilive.net")) {
+    if (path === "/user/index.html") {
+      const userId = url.searchParams.get("s");
+      if (userId && /^[A-Za-z0-9_]+$/.test(userId)) {
+        return { platform: "joilive", username: userId };
+      }
+    }
     return null;
   }
 
