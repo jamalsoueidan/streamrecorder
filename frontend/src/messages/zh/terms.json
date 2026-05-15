@@ -86,6 +86,16 @@
       "twitch": "Twitch 服务条款",
       "youtube": "YouTube 服务条款",
       "kick": "Kick 服务条款",
+      "afreecatv": "AfreecaTV 服务条款",
+      "bigo": "Bigo Live 服务条款",
+      "buzzcast": "BuzzCast 服务条款",
+      "joilive": "Joi Live 服务条款",
+      "liveme": "LiveMe 服务条款",
+      "mixch": "Mixch 服务条款",
+      "pandalive": "Pandalive 服务条款",
+      "tango": "Tango 服务条款",
+      "trovo": "Trovo 服务条款",
+      "twitcast": "TwitCasting 服务条款",
       "google": "Google 服务条款",
       "googlePrivacy": "Google 隐私政策"
     },
@@ -148,6 +158,5 @@
     "title": "联系我们",
     "content": "对这些条款有任何疑问或顾虑？请通过 contact@livestreamrecorder.com 联系我们"
   },
-  "footerNote": "通过使用 LiveStreamRecorder,你确认你已阅读、理解并同意受这些服务条款的约束。",
-  "disclaimer": "TikTok、Twitch、YouTube、Kick、AfreecaTV 和 Pandalive 的产品名称、徽标和品牌均为各自所有者的财产。本网站使用的所有公司、产品和服务名称仅用于识别目的。使用这些名称、商标和品牌并不意味着代言。LiveStreamRecorder 与 TikTok、Twitch、YouTube、Kick、AfreecaTV 或 Pandalive 没有任何关联。"
+  "footerNote": "通过使用 LiveStreamRecorder,你确认你已阅读、理解并同意受这些服务条款的约束。"
 }

@@ -86,6 +86,16 @@
       "twitch": "Termos de Serviço da Twitch",
       "youtube": "Termos de Serviço do YouTube",
       "kick": "Termos de Serviço do Kick",
+      "afreecatv": "Termos de Serviço do AfreecaTV",
+      "bigo": "Termos de Serviço do Bigo Live",
+      "buzzcast": "Termos de Serviço do BuzzCast",
+      "joilive": "Termos de Serviço do Joi Live",
+      "liveme": "Termos de Serviço do LiveMe",
+      "mixch": "Termos de Serviço do Mixch",
+      "pandalive": "Termos de Serviço do Pandalive",
+      "tango": "Termos de Serviço do Tango",
+      "trovo": "Termos de Serviço do Trovo",
+      "twitcast": "Termos de Serviço do TwitCasting",
       "google": "Termos de Serviço do Google",
       "googlePrivacy": "Política de Privacidade do Google"
     },
@@ -148,6 +158,5 @@
     "title": "Fale Conosco",
     "content": "Dúvidas ou preocupações sobre estes termos? Entre em contato conosco em contact@livestreamrecorder.com"
   },
-  "footerNote": "Ao usar o LiveStreamRecorder, você reconhece que leu, entendeu e concorda em estar vinculado a estes Termos e Condições.",
-  "disclaimer": "Os nomes de produtos, logotipos e marcas do TikTok, Twitch, YouTube, Kick, AfreecaTV e Pandalive são propriedade de seus respectivos proprietários. Todos os nomes de empresas, produtos e serviços usados neste site são apenas para fins de identificação. O uso desses nomes, marcas registradas e marcas não implica endosso. O LiveStreamRecorder não tem nenhuma associação com TikTok, Twitch, YouTube, Kick, AfreecaTV ou Pandalive."
+  "footerNote": "Ao usar o LiveStreamRecorder, você reconhece que leu, entendeu e concorda em estar vinculado a estes Termos e Condições."
 }

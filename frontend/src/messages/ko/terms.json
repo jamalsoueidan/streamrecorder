@@ -86,6 +86,16 @@
       "twitch": "트위치 서비스 약관",
       "youtube": "유튜브 서비스 약관",
       "kick": "키크 서비스 약관",
+      "afreecatv": "AfreecaTV 서비스 약관",
+      "bigo": "Bigo Live 서비스 약관",
+      "buzzcast": "BuzzCast 서비스 약관",
+      "joilive": "Joi Live 서비스 약관",
+      "liveme": "LiveMe 서비스 약관",
+      "mixch": "Mixch 서비스 약관",
+      "pandalive": "Pandalive 서비스 약관",
+      "tango": "Tango 서비스 약관",
+      "trovo": "Trovo 서비스 약관",
+      "twitcast": "TwitCasting 서비스 약관",
       "google": "구글 서비스 약관",
       "googlePrivacy": "구글 개인정보 처리방침"
     },
@@ -148,6 +158,5 @@
     "title": "문의하기",
     "content": "본 약관에 대한 질문이나 우려 사항이 있으시면 contact@livestreamrecorder.com으로 연락해 주세요."
   },
-  "footerNote": "LiveStreamRecorder를 사용함으로써 귀하는 본 이용약관을 읽고 이해했으며 이에 구속되는 것에 동의함을 인정합니다.",
-  "disclaimer": "TikTok, Twitch, YouTube, Kick, AfreecaTV, Pandalive 제품명, 로고 및 브랜드는 각 소유자의 자산입니다. 이 웹사이트에서 사용된 모든 회사, 제품 및 서비스 이름은 식별 목적으로만 사용됩니다. 이러한 이름, 상표 및 브랜드의 사용은 보증을 의미하지 않습니다. LiveStreamRecorder는 TikTok, Twitch, YouTube, Kick, AfreecaTV 또는 Pandalive와 어떠한 방식으로도 관련되어 있지 않습니다."
+  "footerNote": "LiveStreamRecorder를 사용함으로써 귀하는 본 이용약관을 읽고 이해했으며 이에 구속되는 것에 동의함을 인정합니다."
 }

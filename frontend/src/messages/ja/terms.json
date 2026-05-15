@@ -86,6 +86,16 @@
       "twitch": "Twitch 利用規約",
       "youtube": "YouTube 利用規約",
       "kick": "Kick 利用規約",
+      "afreecatv": "AfreecaTV 利用規約",
+      "bigo": "Bigo Live 利用規約",
+      "buzzcast": "BuzzCast 利用規約",
+      "joilive": "Joi Live 利用規約",
+      "liveme": "LiveMe 利用規約",
+      "mixch": "Mixch 利用規約",
+      "pandalive": "Pandalive 利用規約",
+      "tango": "Tango 利用規約",
+      "trovo": "Trovo 利用規約",
+      "twitcast": "TwitCasting 利用規約",
       "google": "Google 利用規約",
       "googlePrivacy": "Google プライバシーポリシー"
     },
@@ -148,6 +158,5 @@
     "title": "お問い合わせ",
     "content": "これらの規約についてご質問やご不明な点がございましたら、contact@livestreamrecorder.com までご連絡ください"
   },
-  "footerNote": "LiveStreamRecorder を使用することにより、お客様はこれらの利用規約を読み、理解し、これらに拘束されることに同意したことを確認します。",
-  "disclaimer": "TikTok、Twitch、YouTube、Kick、AfreecaTV、Pandalive の製品名、ロゴ、ブランドはそれぞれの所有者の財産です。このウェブサイトで使用されているすべての会社名、製品名、サービス名は識別目的のみに使用されています。これらの名称、商標、ブランドの使用は推薦を意味するものではありません。LiveStreamRecorder は TikTok、Twitch、YouTube、Kick、AfreecaTV、Pandalive とは一切関係ありません。"
+  "footerNote": "LiveStreamRecorder を使用することにより、お客様はこれらの利用規約を読み、理解し、これらに拘束されることに同意したことを確認します。"
 }

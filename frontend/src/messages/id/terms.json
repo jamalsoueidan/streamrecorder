@@ -86,6 +86,16 @@
       "twitch": "Ketentuan Layanan Twitch",
       "youtube": "Ketentuan Layanan YouTube",
       "kick": "Ketentuan Layanan Kick",
+      "afreecatv": "Ketentuan Layanan AfreecaTV",
+      "bigo": "Ketentuan Layanan Bigo Live",
+      "buzzcast": "Ketentuan Layanan BuzzCast",
+      "joilive": "Ketentuan Layanan Joi Live",
+      "liveme": "Ketentuan Layanan LiveMe",
+      "mixch": "Ketentuan Layanan Mixch",
+      "pandalive": "Ketentuan Layanan Pandalive",
+      "tango": "Ketentuan Layanan Tango",
+      "trovo": "Ketentuan Layanan Trovo",
+      "twitcast": "Ketentuan Layanan TwitCasting",
       "google": "Ketentuan Layanan Google",
       "googlePrivacy": "Kebijakan Privasi Google"
     },
@@ -148,6 +158,5 @@
     "title": "Hubungi Kami",
     "content": "Ada pertanyaan atau kekhawatiran tentang ketentuan ini? Hubungi kami di contact@livestreamrecorder.com"
   },
-  "footerNote": "Dengan menggunakan LiveStreamRecorder, Anda mengakui bahwa Anda telah membaca, memahami, dan setuju untuk terikat oleh Syarat dan Ketentuan ini.",
-  "disclaimer": "Nama produk, logo, dan merek TikTok, Twitch, YouTube, Kick, AfreecaTV, dan Pandalive adalah milik pemilik masing-masing. Semua nama perusahaan, produk, dan layanan yang digunakan di situs web ini hanya untuk tujuan identifikasi. Penggunaan nama, merek dagang, dan merek ini tidak menyiratkan dukungan. LiveStreamRecorder tidak berafiliasi dengan TikTok, Twitch, YouTube, Kick, AfreecaTV, atau Pandalive."
+  "footerNote": "Dengan menggunakan LiveStreamRecorder, Anda mengakui bahwa Anda telah membaca, memahami, dan setuju untuk terikat oleh Syarat dan Ketentuan ini."
 }

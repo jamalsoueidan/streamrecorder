@@ -536,6 +536,76 @@ export default async function TermsAndConditions({ params }: PageProps) {
               • {t("thirdPartyPlatforms.platforms.kick")}
             </Anchor>
             <Anchor
+              href="https://www.sooplive.co.kr/policy/contents/policy1_en_contents.html"
+              target="_blank"
+              style={{ color: "#60a5fa" }}
+            >
+              • {t("thirdPartyPlatforms.platforms.afreecatv")}
+            </Anchor>
+            <Anchor
+              href="https://www.bigo.tv/agreement.html"
+              target="_blank"
+              style={{ color: "#60a5fa" }}
+            >
+              • {t("thirdPartyPlatforms.platforms.bigo")}
+            </Anchor>
+            <Anchor
+              href="https://www.buzzcast.info/ServicesTerms"
+              target="_blank"
+              style={{ color: "#60a5fa" }}
+            >
+              • {t("thirdPartyPlatforms.platforms.buzzcast")}
+            </Anchor>
+            <Anchor
+              href="https://www.joilive.net/protocol/terms.html"
+              target="_blank"
+              style={{ color: "#60a5fa" }}
+            >
+              • {t("thirdPartyPlatforms.platforms.joilive")}
+            </Anchor>
+            <Anchor
+              href="https://www.liveme.com/protocol/terms.html"
+              target="_blank"
+              style={{ color: "#60a5fa" }}
+            >
+              • {t("thirdPartyPlatforms.platforms.liveme")}
+            </Anchor>
+            <Anchor
+              href="https://mixch.tv/help/terms.html"
+              target="_blank"
+              style={{ color: "#60a5fa" }}
+            >
+              • {t("thirdPartyPlatforms.platforms.mixch")}
+            </Anchor>
+            <Anchor
+              href="https://www.pandalive.co.kr/policy/service"
+              target="_blank"
+              style={{ color: "#60a5fa" }}
+            >
+              • {t("thirdPartyPlatforms.platforms.pandalive")}
+            </Anchor>
+            <Anchor
+              href="https://tango.me/terms-of-use"
+              target="_blank"
+              style={{ color: "#60a5fa" }}
+            >
+              • {t("thirdPartyPlatforms.platforms.tango")}
+            </Anchor>
+            <Anchor
+              href="https://trovo.live/trovo-policy/terms-of-service.html"
+              target="_blank"
+              style={{ color: "#60a5fa" }}
+            >
+              • {t("thirdPartyPlatforms.platforms.trovo")}
+            </Anchor>
+            <Anchor
+              href="https://en.twitcasting.tv/indexlicense.php"
+              target="_blank"
+              style={{ color: "#60a5fa" }}
+            >
+              • {t("thirdPartyPlatforms.platforms.twitcast")}
+            </Anchor>
+            <Anchor
               href="https://policies.google.com/terms"
               target="_blank"
               style={{ color: "#60a5fa" }}
@@ -897,11 +967,8 @@ export default async function TermsAndConditions({ params }: PageProps) {
             marginTop: 16,
           }}
         >
-          <Text size="sm" ta="center" style={{ color: "#64748b" }} mb="md">
+          <Text size="sm" ta="center" style={{ color: "#64748b" }}>
             {t("footerNote")}
-          </Text>
-          <Text size="xs" ta="center" style={{ color: "#475569" }}>
-            {t("disclaimer")}
           </Text>
         </div>
       </Stack>
