@@ -21,12 +21,21 @@ export function useDateFormatter() {
       original: (...args: unknown[]) => string,
       args: unknown[],
     ) => {
-      // The last argument to dateTime/dateTimeRange is the options object
-      // (or a named-format string, which we leave alone). Inject hourCycle
-      // only when callers passed an inline options object.
+      // The optional inline options object is always the last argument.
+      // Inject hourCycle only when it's actually an options object —
+      // Date is also `typeof === "object"`, so a no-options call like
+      // `dateTime(date)` or `dateTimeRange(start, end)` must NOT have
+      // its date arg spread into `{ ...date, hourCycle }` (Date spreads
+      // to `{}`, wiping the argument). Named-format strings are passed
+      // through unchanged.
       const lastIdx = args.length - 1;
       const last = args[lastIdx];
-      if (last && typeof last === "object") {
+      const isOptionsObject =
+        last !== null &&
+        typeof last === "object" &&
+        !(last instanceof Date) &&
+        !Array.isArray(last);
+      if (isOptionsObject) {
         args[lastIdx] = { ...(last as Record<string, unknown>), hourCycle };
       }
       return original(...args);

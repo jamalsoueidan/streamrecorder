@@ -32,7 +32,7 @@ import { UserProvider } from "@/app/providers/user-provider";
 import api from "@/lib/api";
 import { Shell } from "./components/shell";
 import { HourCycleProvider } from "./lib/hour-cycle";
-import { hourCycleFromTimeZone } from "./lib/hour-cycle-type";
+import { hourCycleFromTimeZone } from "./lib/hour-cycle-server";
 
 export default async function DashboardLayout({
   children,

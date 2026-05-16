@@ -19,10 +19,14 @@ export function TimezoneCookie() {
     const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
     if (!tz) return;
 
-    const existing = document.cookie
+    // Some proxies/CDNs percent-encode cookie values on the wire; decode
+    // before comparing to avoid an infinite "set the cookie again on every
+    // mount" loop for zones like America/New_York.
+    const rawExisting = document.cookie
       .split("; ")
       .find((row) => row.startsWith("tz="))
       ?.split("=")[1];
+    const existing = rawExisting ? decodeURIComponent(rawExisting) : undefined;
     if (existing === tz) return;
 
     const secure = window.location.protocol === "https:" ? "; Secure" : "";

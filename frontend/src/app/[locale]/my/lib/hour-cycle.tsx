@@ -1,7 +1,7 @@
 "use client";
 
 import { createContext, ReactNode, useContext } from "react";
-import type { HourCycle } from "./hour-cycle-type";
+import type { HourCycle } from "./hour-cycle-server";
 
 // Carries the user's resolved hour-cycle preference from /my/ layout
 // (where it's computed from the `tz` cookie via `hourCycleFromTimeZone`)
