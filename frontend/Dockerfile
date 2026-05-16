@@ -42,10 +42,7 @@ ENV PORT=3000
 COPY --from=builder /app/.next/standalone ./
 COPY --from=builder /app/.next/static ./.next/static
 COPY --from=builder /app/public ./public
-COPY start.js ./start.js
 
 EXPOSE 3000
 
-# start.js wraps server.js with a SIGTERM handler — old container exits
-# in ~5s on deploy instead of waiting the full Docker stop grace period.
-CMD ["node", "--no-warnings", "start.js"]
+CMD ["node", "--no-warnings", "server.js"]
