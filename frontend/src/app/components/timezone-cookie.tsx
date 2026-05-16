@@ -9,9 +9,12 @@ import { useEffect } from "react";
 // US → 12h), since the browser's resolved hourCycle reflects the OS
 // locale, not the user's physical country.
 //
-// Scoped to `path=/my`: the cookie is only sent on /my/ requests, so it
-// can never reach public routes and can't accidentally pollute the CF
-// cache key for cacheable pages. `Secure` is enabled in production HTTPS.
+// Cookie path is `/`: real routes are locale-prefixed (`/en/my/...`),
+// and per RFC 6265 a cookie with `path=/my` would NOT be sent on
+// `/en/my/...` because the path doesn't prefix-match. The cookie has
+// to be visible at the root for the layout to read it. Public pages
+// don't read it server-side, so the wider scope is harmless. `Secure`
+// is enabled in production HTTPS.
 export function TimezoneCookie() {
   const router = useRouter();
 
@@ -31,7 +34,7 @@ export function TimezoneCookie() {
 
     const secure = window.location.protocol === "https:" ? "; Secure" : "";
     document.cookie =
-      `tz=${tz}; path=/my; max-age=${60 * 60 * 24 * 365}; SameSite=Lax${secure}`;
+      `tz=${tz}; path=/; max-age=${60 * 60 * 24 * 365}; SameSite=Lax${secure}`;
 
     // Only re-fetch server components if the new TZ would actually change
     // the rendered output. UTC == server default, so nothing to refresh.
