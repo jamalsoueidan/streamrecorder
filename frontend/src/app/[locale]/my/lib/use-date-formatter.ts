@@ -17,40 +17,37 @@ export function useDateFormatter() {
 
   return useMemo(() => {
     if (!hourCycle) return format;
-    const inject = (
-      original: (...args: unknown[]) => string,
-      args: unknown[],
-    ) => {
-      // The optional inline options object is always the last argument.
-      // Inject hourCycle only when it's actually an options object —
-      // Date is also `typeof === "object"`, so a no-options call like
-      // `dateTime(date)` or `dateTimeRange(start, end)` must NOT have
-      // its date arg spread into `{ ...date, hourCycle }` (Date spreads
-      // to `{}`, wiping the argument). Named-format strings are passed
-      // through unchanged.
-      const lastIdx = args.length - 1;
-      const last = args[lastIdx];
-      const isOptionsObject =
-        last !== null &&
-        typeof last === "object" &&
-        !(last instanceof Date) &&
-        !Array.isArray(last);
-      if (isOptionsObject) {
-        args[lastIdx] = { ...(last as Record<string, unknown>), hourCycle };
-      }
-      return original(...args);
-    };
-    return new Proxy(format, {
-      get(target, prop, receiver) {
-        if (prop === "dateTime" || prop === "dateTimeRange") {
-          const original = (target as Record<string, unknown>)[
-            prop as string
-          ] as (...args: unknown[]) => string;
-          return (...args: unknown[]) =>
-            inject(original.bind(target), args);
+
+    // The optional inline options object is always the last argument.
+    // Inject hourCycle only when it's actually an options object — Date
+    // is also `typeof === "object"`, so a no-options call like
+    // `dateTime(date)` or `dateTimeRange(start, end)` must NOT have its
+    // date arg spread into `{ ...date, hourCycle }` (Date spreads to
+    // `{}`, wiping the argument). Named-format strings are passed
+    // through unchanged.
+    const wrap =
+      <F extends (...args: never[]) => string>(original: F): F =>
+      ((...args: unknown[]) => {
+        const lastIdx = args.length - 1;
+        const last = args[lastIdx];
+        if (
+          last !== null &&
+          typeof last === "object" &&
+          !(last instanceof Date) &&
+          !Array.isArray(last)
+        ) {
+          args[lastIdx] = { ...(last as Record<string, unknown>), hourCycle };
         }
-        return Reflect.get(target, prop, receiver);
-      },
-    });
+        return (original as unknown as (...a: unknown[]) => string)(...args);
+      }) as unknown as F;
+
+    // Return a plain object (not a Proxy) so each method has a STABLE
+    // reference across reads — required for downstream useMemo /
+    // useCallback dependency arrays that capture `format.dateTime`.
+    return {
+      ...format,
+      dateTime: wrap(format.dateTime),
+      dateTimeRange: wrap(format.dateTimeRange),
+    };
   }, [format, hourCycle]);
 }

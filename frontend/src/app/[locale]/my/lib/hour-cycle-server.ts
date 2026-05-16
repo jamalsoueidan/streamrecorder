@@ -37,18 +37,22 @@ function localeHourCycle(locale: string): HourCycle {
 // So `Europe/Istanbul` -> `TR` -> `tr-Latn-TR` -> "h23",
 //    `America/New_York` -> `US` -> `en-Latn-US` -> "h12",
 //    `America/Mexico_City` -> `MX` -> `es-Latn-MX` -> "h23".
-// If the zone can't be mapped (rare — aliased or new zone not in the
-// `countries-and-timezones` data), fall back to the UI locale's actual
-// resolved default (e.g. en → h12), so en-US users with an obscure zone
-// don't silently flip to 24h.
+// Fallback to the UI locale's actual resolved default (e.g. en → h12)
+// when EITHER:
+//   - the zone isn't in the `countries-and-timezones` data (rare —
+//     aliased or new zone), OR
+//   - the zone is shared across multiple countries with potentially
+//     different conventions (e.g. `Asia/Nicosia` → CY/TR, where CY uses
+//     h12 and TR uses h23). Picking `countries[0]` would silently guess
+//     wrong half the time; the UI locale is the safer signal.
 export function hourCycleFromTimeZone(
   tz: string,
   fallbackLocale: string,
 ): HourCycle {
-  const country = getTimezone(tz)?.countries[0];
-  if (!country) return localeHourCycle(fallbackLocale);
+  const countries = getTimezone(tz)?.countries ?? [];
+  if (countries.length !== 1) return localeHourCycle(fallbackLocale);
 
-  const nativeLocale = new Intl.Locale("und", { region: country })
+  const nativeLocale = new Intl.Locale("und", { region: countries[0] })
     .maximize()
     .toString();
   return localeHourCycle(nativeLocale);
