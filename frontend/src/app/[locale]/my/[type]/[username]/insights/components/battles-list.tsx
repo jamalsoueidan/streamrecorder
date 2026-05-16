@@ -19,9 +19,10 @@ import {
   Text,
   Title,
 } from "@mantine/core";
-import { useFormatter, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 import { use, useState } from "react";
 import { formatCompact } from "../lib";
+import { useDateFormatter } from "../../../../lib/use-date-formatter";
 
 const LIMIT = 10;
 
@@ -46,7 +47,7 @@ function outcomeColor(battleWon: number) {
 
 export function BattlesList({ username, battlesPromise }: BattlesListProps) {
   const t = useTranslations("protected.profileInsights");
-  const format = useFormatter();
+  const format = useDateFormatter();
   const initialData = use(battlesPromise);
   const [battles, setBattles] = useState<Battle[]>(initialData.data);
   const [total, setTotal] = useState(initialData.total);

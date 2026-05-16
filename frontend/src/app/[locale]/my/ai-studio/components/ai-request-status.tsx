@@ -27,9 +27,10 @@ import {
   IconLoader,
   IconX,
 } from "@tabler/icons-react";
-import { useFormatter, useLocale, useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { useState } from "react";
 import { ClipPreview } from "../../my-clips/components/clip-preview";
+import { useDateFormatter } from "../../lib/use-date-formatter";
 import {
   deriveRequestState,
   getVisibleTaskCounts,
@@ -112,7 +113,7 @@ function formatDuration(seconds?: number): string {
 
 export function AiRequestStatus({ aiRequest, follower }: Props) {
   const t = useTranslations("protected.aiStudio.status");
-  const format = useFormatter();
+  const format = useDateFormatter();
   const locale = useLocale();
   const isAdmin = useIsRole("admin");
   const [expandedTasks, setExpandedTasks] = useState<Set<string>>(new Set());

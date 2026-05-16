@@ -1,0 +1,29 @@
+// Pure type + helpers — kept out of the client-tagged `hour-cycle.tsx`
+// so server components (like /my/layout.tsx) can import them.
+import { getTimezone } from "countries-and-timezones";
+
+export type HourCycle = "h11" | "h12" | "h23" | "h24";
+
+// Derive the user's hour cycle from their IANA timezone, fully driven by
+// Intl + IANA + CLDR data:
+//   1. IANA zone → ISO country code (via `countries-and-timezones`,
+//      which embeds CLDR's tz → country mapping).
+//   2. country → that country's native locale via
+//      `Intl.Locale("und", { region }).maximize()` (CLDR likelySubtags).
+//   3. native locale → Intl's default hourCycle for that locale.
+// So `Europe/Istanbul` -> `TR` -> `tr-Latn-TR` -> "h23",
+//    `America/New_York` -> `US` -> `en-Latn-US` -> "h12",
+//    `America/Mexico_City` -> `MX` -> `es-Latn-MX` -> "h23".
+// Country format is what matters even when the UI locale is en.
+export function hourCycleFromTimeZone(tz: string): HourCycle {
+  const country = getTimezone(tz)?.countries[0];
+  if (!country) return "h23";
+
+  const nativeLocale = new Intl.Locale("und", { region: country })
+    .maximize()
+    .toString();
+  const hc = new Intl.DateTimeFormat(nativeLocale, {
+    hour: "numeric",
+  }).resolvedOptions().hourCycle;
+  return hc === "h11" || hc === "h12" || hc === "h24" ? hc : "h23";
+}

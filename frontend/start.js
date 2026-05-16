@@ -31,4 +31,22 @@ function shutdown(signal) {
 process.on("SIGTERM", () => shutdown("SIGTERM"));
 process.on("SIGINT", () => shutdown("SIGINT"));
 
+// Container was exiting cleanly (code 0) with no SIGTERM log — meaning
+// something inside the bundle was tripping Node's default
+// unhandled-rejection-exits-the-process behavior, or calling process.exit
+// directly. Suppress those and log instead, so one bad request doesn't
+// nuke the whole container and wipe the cache.
+process.on("uncaughtException", (err) => {
+  console.error("[start] uncaughtException:", err);
+});
+process.on("unhandledRejection", (reason) => {
+  console.error("[start] unhandledRejection:", reason);
+});
+process.on("beforeExit", (code) => {
+  console.error(
+    `[start] beforeExit code=${code}`,
+    new Error("exit-trace").stack,
+  );
+});
+
 require("./server.js");
