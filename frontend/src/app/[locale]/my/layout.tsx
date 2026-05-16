@@ -50,7 +50,8 @@ export default async function DashboardLayout({
   const cookieTz = cookieStore.get("tz")?.value;
   const timeZone =
     cookieTz && isValidIanaTz(cookieTz) ? cookieTz : "UTC";
-  const hourCycle = hourCycleFromTimeZone(timeZone);
+  const locale = await getLocale();
+  const hourCycle = hourCycleFromTimeZone(timeZone, locale);
 
   let user;
   try {
@@ -73,7 +74,6 @@ export default async function DashboardLayout({
     (permissions.data?.role as any)?.permissions || {},
   );
 
-  const locale = await getLocale();
   const announcement = await getAnnouncement(locale);
   const messages = await getMessages();
 
