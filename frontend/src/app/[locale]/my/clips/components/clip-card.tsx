@@ -19,7 +19,8 @@ import {
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { IconDownload } from "@tabler/icons-react";
-import { useFormatter } from "next-intl";
+import { useDateFormatter } from "../../lib/use-date-formatter";
+
 import Image from "next/image";
 import Link from "@/app/components/link";
 import { ClipPreview } from "../../my-clips/components/clip-preview";
@@ -32,7 +33,7 @@ interface ClipCardProps {
 
 export function ClipCard({ clip, locale }: ClipCardProps) {
   const follower = clip.follower;
-  const format = useFormatter();
+  const format = useDateFormatter();
   const user = useUser();
   const isPremium = user?.role?.type !== "authenticated";
   const [upgradeOpened, { open: openUpgrade, close: closeUpgrade }] =

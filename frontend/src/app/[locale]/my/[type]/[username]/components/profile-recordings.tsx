@@ -12,15 +12,16 @@ import { useInfiniteQuery } from "@tanstack/react-query";
 import { useParams } from "next/navigation";
 import { useQueryStates } from "nuqs";
 import { useEffect } from "react";
+import { useDateFormatter } from "../../../lib/use-date-formatter";
 
 import { safeRelativeTime } from "@/app/lib/safe-relative-time";
-import { useFormatter, useNow, useTranslations } from "next-intl";
+import { useNow, useTranslations } from "next-intl";
 import { fetchProfileRecordings } from "../actions/actions";
 import { profileParsers } from "../lib/search-params";
 
 export default function ProfileRecordings() {
   const t = useTranslations("protected.common");
-  const format = useFormatter();
+  const format = useDateFormatter();
   const now = useNow();
   const params = useParams<{ type: FollowerTypeEnum; username: string }>();
   const [filters] = useQueryStates(profileParsers);

@@ -16,18 +16,19 @@ import {
   Text,
 } from "@mantine/core";
 import { IconEye, IconTrash } from "@tabler/icons-react";
-import { useFormatter, useNow, useTranslations } from "next-intl";
+import { useNow, useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "@/app/components/link";
 import { MiniPlayer } from "../../components/video/mini-player";
 import { deriveRequestState } from "../utils/derive-state";
+import { useDateFormatter } from "../../lib/use-date-formatter";
 
 interface Props {
   aiRequest: AiRequest;
 }
 
 export function AiRequestCard({ aiRequest }: Props) {
-  const format = useFormatter();
+  const format = useDateFormatter();
   const now = useNow({ updateInterval: 1000 * 30 });
   const t = useTranslations("protected.aiStudio");
   const isAdmin = useIsRole("admin");

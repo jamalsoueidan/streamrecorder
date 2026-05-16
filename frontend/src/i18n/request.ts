@@ -41,6 +41,9 @@ export default getRequestConfig(async ({ requestLocale }) => {
     locale = routing.defaultLocale;
   }
 
+  // No cookies() / headers() call here on purpose — keeping this fully
+  // static so public pages stay CDN-cacheable. Per-user timeZone is
+  // handled inside /my/ via a nested NextIntlClientProvider.
   return {
     locale,
     messages: getMessages(locale),

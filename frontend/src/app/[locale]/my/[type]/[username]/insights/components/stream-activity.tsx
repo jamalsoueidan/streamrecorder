@@ -16,9 +16,10 @@ import {
   Text,
   Title,
 } from "@mantine/core";
-import { useFormatter, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 import { use, useState } from "react";
 import { formatCompact } from "../lib";
+import { useDateFormatter } from "../../../../lib/use-date-formatter";
 
 const DATE_FORMAT = {
   year: "numeric",
@@ -40,7 +41,7 @@ export function StreamActivity({
   activityPromise,
 }: StreamActivityProps) {
   const t = useTranslations("protected.profileInsights");
-  const format = useFormatter();
+  const format = useDateFormatter();
   const initialData = use(activityPromise);
   const [sessions, setSessions] = useState<StreamSession[]>(initialData.data);
   const [total, setTotal] = useState(initialData.total);

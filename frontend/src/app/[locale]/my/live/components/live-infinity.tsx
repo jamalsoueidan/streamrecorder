@@ -31,9 +31,10 @@ import {
   IconWorldSearch,
 } from "@tabler/icons-react";
 import { useInfiniteQuery } from "@tanstack/react-query";
-import { useFormatter, useNow, useTranslations } from "next-intl";
+import { useNow, useTranslations } from "next-intl";
 import Link from "@/app/components/link";
 import { useEffect, useRef } from "react";
+import { useDateFormatter } from "../../lib/use-date-formatter";
 
 import { generateAvatarUrl } from "@/app/lib/avatar-url";
 import { Role } from "@/app/providers/ability-provider";
@@ -52,7 +53,7 @@ interface Props {
 export default function LiveInfinity({ scope, type }: Props) {
   const t = useTranslations("protected.live");
   const tc = useTranslations("protected.common");
-  const format = useFormatter();
+  const format = useDateFormatter();
   const now = useNow({ updateInterval: 1000 * 30 });
   const isFetchingRef = useRef(false);
 

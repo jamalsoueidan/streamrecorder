@@ -21,6 +21,7 @@ import {
   Text,
   useMatches,
 } from "@mantine/core";
+import { useDateFormatter } from "../../lib/use-date-formatter";
 
 import { ImageSpritePreview } from "@/app/[locale]/my/components/image-sprite-preview";
 import { getMyProfileUrl } from "@/app/lib/profile-url";
@@ -29,7 +30,7 @@ import { safeRelativeTime } from "@/app/lib/safe-relative-time";
 import { useUser } from "@/app/providers/user-provider";
 import { IconArrowRight, IconEyeOff } from "@tabler/icons-react";
 import { useQuery } from "@tanstack/react-query";
-import { useFormatter, useNow, useTranslations } from "next-intl";
+import { useNow, useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "@/app/components/link";
 import { useRef, useState } from "react";
@@ -51,7 +52,7 @@ export default function FollowerItem({ follower, isOpen }: Props) {
   const accordionRef = useRef<HTMLDivElement>(null);
   const t = useTranslations("protected.common");
   const now = useNow({ updateInterval: 1000 * 30 });
-  const format = useFormatter();
+  const format = useDateFormatter();
   const user = useUser();
   const isMobile = useMatches({
     base: true,

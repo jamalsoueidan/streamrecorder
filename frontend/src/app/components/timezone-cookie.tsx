@@ -1,0 +1,49 @@
+"use client";
+
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
+
+// Captures the browser's IANA timezone into a `tz` cookie so /my/'s
+// layout can format dates in the user's local zone. The TZ also drives
+// the hour-cycle preference server-side (location-based: Turkey → 24h,
+// US → 12h), since the browser's resolved hourCycle reflects the OS
+// locale, not the user's physical country.
+//
+// Cookie path is `/`: real routes are locale-prefixed (`/en/my/...`),
+// and per RFC 6265 a cookie with `path=/my` would NOT be sent on
+// `/en/my/...` because the path doesn't prefix-match. The cookie has
+// to be visible at the root for the layout to read it. Public pages
+// don't read it server-side, so the wider scope is harmless. `Secure`
+// is enabled in production HTTPS.
+export function TimezoneCookie() {
+  const router = useRouter();
+
+  useEffect(() => {
+    const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    if (!tz) return;
+
+    // Some proxies/CDNs percent-encode cookie values on the wire; decode
+    // before comparing to avoid an infinite "set the cookie again on every
+    // mount" loop for zones like America/New_York.
+    const rawExisting = document.cookie
+      .split("; ")
+      .find((row) => row.startsWith("tz="))
+      ?.split("=")[1];
+    const existing = rawExisting ? decodeURIComponent(rawExisting) : undefined;
+    if (existing === tz) return;
+
+    const secure = window.location.protocol === "https:" ? "; Secure" : "";
+    document.cookie =
+      `tz=${tz}; path=/; max-age=${60 * 60 * 24 * 365}; SameSite=Lax${secure}`;
+
+    // Only re-fetch server components if the new TZ would actually change
+    // the rendered output. UTC == server default, so nothing to refresh.
+    // `router.refresh()` re-runs the RSC tree without a full page reload
+    // so there's no white-flash like `location.reload()`.
+    if (!existing && tz !== "UTC") {
+      router.refresh();
+    }
+  }, [router]);
+
+  return null;
+}
