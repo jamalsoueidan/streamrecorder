@@ -13,6 +13,10 @@ import { IconCalendar, IconGitBranch } from "@tabler/icons-react";
 import { getFormatter, getTranslations } from "next-intl/server";
 import ReactMarkdown from "react-markdown";
 
+// Re-fetch from Strapi at most every 60s so newly-added changelog
+// entries appear without a redeploy or manual CF purge.
+export const revalidate = 60;
+
 interface PageProps {
   params: Promise<{ locale: string }>;
 }

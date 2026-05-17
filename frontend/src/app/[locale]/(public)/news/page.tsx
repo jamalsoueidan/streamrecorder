@@ -5,6 +5,10 @@ import { IconArticle } from "@tabler/icons-react";
 import { getFormatter, getTranslations } from "next-intl/server";
 import ReactMarkdown from "react-markdown";
 
+// Re-fetch from Strapi at most every 60s so newly-published articles
+// appear without a redeploy or manual CF purge.
+export const revalidate = 60;
+
 interface PageProps {
   params: Promise<{ locale: string }>;
 }
