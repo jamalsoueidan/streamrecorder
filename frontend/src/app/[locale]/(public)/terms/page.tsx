@@ -413,6 +413,9 @@ export default async function TermsAndConditions({ params }: PageProps) {
               • {t("prohibitedActivities.items.exploit")}
             </Text>
             <Text style={{ color: "#94a3b8" }}>
+              • {t("prohibitedActivities.items.adultContent")}
+            </Text>
+            <Text style={{ color: "#94a3b8" }}>
               • {t("prohibitedActivities.items.illegal")}
             </Text>
             <Text style={{ color: "#94a3b8" }}>

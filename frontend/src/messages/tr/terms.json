@@ -63,6 +63,7 @@
       "noRights": "Sahip olmadığınız veya haklarına sahip olmadığınız içerikleri kaydetmek",
       "minors": "Reşit olmayanları (18 yaş altı) içeren içerikleri kaydetmek",
       "exploit": "Reşit olmayanları istismar eden, tehlikeye atan veya cinselleştiren içeriğe erişmek",
+      "adultContent": "Pornografik, cinsel açıdan müstehcen veya herhangi bir türde yetişkin içeriği kaydetmek, yüklemek veya dağıtmak",
       "illegal": "Herhangi bir yasadışı faaliyette bulunmak",
       "harass": "Başkalarını taciz etmek, takip etmek veya zarar vermek",
       "bots": "Hizmeti kötüye kullanmak için botlar, scriptler veya otomatik araçlar kullanmak",
