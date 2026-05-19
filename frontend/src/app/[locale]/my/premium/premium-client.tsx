@@ -24,6 +24,7 @@ import {
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import {
+  IconArchive,
   IconBell,
   IconBrandAmazon,
   IconBrandApple,
@@ -36,6 +37,7 @@ import {
   IconCheck,
   IconCrown,
   IconDownload,
+  IconEyeOff,
   IconHeadset,
   IconLanguage,
   IconMovie,
@@ -138,6 +140,16 @@ export default function PremiumClient() {
       icon: IconBroadcast,
       label: t("premiumLiveNotifications"),
       color: "#f43f5e",
+    },
+    {
+      icon: IconEyeOff,
+      label: t("premiumWatchAnonymous"),
+      color: "#14b8a6",
+    },
+    {
+      icon: IconArchive,
+      label: t("premiumStorage30Days"),
+      color: "#f59e0b",
     },
     { icon: IconMovie, label: t("premiumAiHighlights"), color: "#34d399" },
     { icon: IconLanguage, label: t("premiumAiSubtitles"), color: "#f472b6" },
