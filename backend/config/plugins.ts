@@ -56,6 +56,102 @@ export default ({ env }) => ({
     config: {
       "x-strapi-config": {
         mutateDocumentation: (draft) => {
+          // STEP 1 — extract the platform enum from Follower.properties.type
+          // into a top-level FollowerTypeEnum schema. This is the SINGLE
+          // source of truth for the platform enum values; do not duplicate
+          // them anywhere else in this file.
+          if (draft.components.schemas.Follower?.properties?.type) {
+            draft.components.schemas.FollowerTypeEnum =
+              draft.components.schemas.Follower.properties.type;
+            draft.components.schemas.Follower.properties.type = {
+              $ref: "#/components/schemas/FollowerTypeEnum",
+            };
+          }
+
+          // STEP 2 — define ApiTokenTypeEnum as a top-level schema so we
+          // can $ref it instead of having the admin api-token's inline
+          // `type` enum (read-only / full-access / custom) re-named to
+          // something that collides with FollowerTypeEnum.
+          draft.components.schemas.ApiTokenTypeEnum = {
+            type: "string",
+            enum: ["read-only", "full-access", "custom"],
+          };
+
+          // STEP 3 — walk the entire spec and replace ALL deeply-nested
+          // inline enums with $refs to the canonical top-level schemas.
+          // Without this, swagger-typescript-api sees N copies of the
+          // inline platform enum (one under each nested follower in
+          // Activity / Recording / etc.) and generates
+          // FollowerTypeEnum1, FollowerTypeEnum2, … which clobber the
+          // canonical FollowerTypeEnum.
+          //
+          // STRICT matching: the platform-enum check compares against the
+          // canonical FollowerTypeEnum.enum set we extracted in step 1.
+          // Loose matching like `enum.includes("tiktok")` accidentally hits
+          // SocialAccount.provider (which lists google/apple/facebook/tiktok)
+          // — that's a different enum and must NOT be rewritten to
+          // FollowerTypeEnum.
+          const canonicalPlatformEnum: string[] =
+            (draft.components.schemas.FollowerTypeEnum &&
+              draft.components.schemas.FollowerTypeEnum.enum) ||
+            [];
+          const canonicalPlatformSet = new Set(canonicalPlatformEnum);
+          const isCanonicalPlatformEnum = (enumArr: string[]) => {
+            if (!Array.isArray(enumArr) || enumArr.length === 0) return false;
+            // Must be exactly the canonical set: same length AND every value
+            // is in the canonical set. This excludes SocialAccount.provider
+            // (which has google/apple/facebook/tiktok — overlaps tiktok but
+            // contains non-platform values and is shorter).
+            if (enumArr.length !== canonicalPlatformSet.size) return false;
+            for (const v of enumArr) if (!canonicalPlatformSet.has(v)) return false;
+            return true;
+          };
+
+          const rewriteInlineEnums = (node: any) => {
+            if (!node || typeof node !== "object") return;
+            if (Array.isArray(node)) {
+              for (const item of node) rewriteInlineEnums(item);
+              return;
+            }
+            for (const key of Object.keys(node)) {
+              // Don't rewrite the canonical enum schemas themselves —
+              // otherwise they get replaced with $refs to themselves.
+              if (key === "FollowerTypeEnum" || key === "ApiTokenTypeEnum") {
+                continue;
+              }
+              const child = node[key];
+              if (
+                child &&
+                typeof child === "object" &&
+                child.type === "string" &&
+                Array.isArray(child.enum)
+              ) {
+                // Access-role enum (admin api-token).
+                if (
+                  child.enum.length === 3 &&
+                  child.enum.includes("read-only") &&
+                  child.enum.includes("full-access") &&
+                  child.enum.includes("custom")
+                ) {
+                  node[key] = {
+                    $ref: "#/components/schemas/ApiTokenTypeEnum",
+                  };
+                  continue;
+                }
+                // Platform enum (Follower.type) — strict match against the
+                // canonical FollowerTypeEnum.enum extracted in step 1.
+                if (isCanonicalPlatformEnum(child.enum)) {
+                  node[key] = {
+                    $ref: "#/components/schemas/FollowerTypeEnum",
+                  };
+                  continue;
+                }
+              }
+              rewriteInlineEnums(child);
+            }
+          };
+          rewriteInlineEnums(draft);
+
           draft.paths[
             "/followers/connect-user-with-follower/{userDocumentId}"
           ] = {
@@ -933,18 +1029,6 @@ export default ({ env }) => ({
                   ...draft.paths["/recordings"].get.responses,
                 },
               },
-            };
-          }
-
-          // Extract the inner data schema from FollowerRequest
-          // First, extract the type enum from Follower and make it reusable
-          if (draft.components.schemas.Follower?.properties?.type) {
-            draft.components.schemas.FollowerTypeEnum =
-              draft.components.schemas.Follower.properties.type;
-
-            // Update Follower to use the ref
-            draft.components.schemas.Follower.properties.type = {
-              $ref: "#/components/schemas/FollowerTypeEnum",
             };
           }
 

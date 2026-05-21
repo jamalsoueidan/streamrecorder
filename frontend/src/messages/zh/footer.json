@@ -27,7 +27,9 @@
     "mixch": "Mixch 创作者",
     "trovo": "Trovo 创作者",
     "twitcast": "TwitCasting 创作者",
-    "joilive": "Joilive 主播"
+    "joilive": "Joilive 主播",
+    "live17": "17live 主播",
+    "kwai": "Kwai 主播"
   },
   "watchRecordings": {
     "title": "观看录制内容",
@@ -44,7 +46,9 @@
     "mixch": "Mixch 录制",
     "trovo": "Trovo 录制",
     "twitcast": "TwitCasting 录制",
-    "joilive": "Joilive 录制"
+    "joilive": "Joilive 录制",
+    "live17": "17live 录制",
+    "kwai": "Kwai 录制"
   },
   "legal": {
     "title": "法律",

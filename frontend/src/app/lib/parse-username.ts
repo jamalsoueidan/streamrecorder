@@ -183,6 +183,33 @@ export function parseUsername(input: string): ParsedUsername {
     };
   }
 
+  // 17live URL patterns — 17.live/{locale}/profile/r/{userId} where locale
+  // can be e.g. en-US, ja-JP. Also accepts 17.live/profile/r/{userId} without locale.
+  // The enum value is "live17" because Strapi enums can't start with a digit.
+  const live17Regex =
+    /(?:https?:\/\/)?(?:www\.)?17\.live\/(?:[a-z]{2}(?:-[A-Z]{2})?\/)?profile\/r\/([^\/\s?]+)/i;
+  const live17Match = trimmed.match(live17Regex);
+
+  if (live17Match) {
+    return {
+      username: live17Match[1],
+      platform: "live17",
+    };
+  }
+
+  // Kwai URL patterns — kwai.com/@username (with optional locale segment, e.g.
+  // kwai.com/en/@username), or kwai.com/profile/{id}.
+  const kwaiRegex =
+    /(?:https?:\/\/)?(?:www\.|live\.|m\.)?kwai\.com\/(?:[a-z]{2}(?:-[A-Z]{2})?\/)?(?:@|profile\/)([^\/\s?]+)/i;
+  const kwaiMatch = trimmed.match(kwaiRegex);
+
+  if (kwaiMatch) {
+    return {
+      username: kwaiMatch[1],
+      platform: "kwai",
+    };
+  }
+
   // Plain username - remove @ if present
   const username = trimmed.startsWith("@") ? trimmed.slice(1) : trimmed;
 

@@ -27,7 +27,9 @@
     "mixch": "Kreator Mixch",
     "trovo": "Kreator Trovo",
     "twitcast": "Kreator TwitCasting",
-    "joilive": "Streamer Joilive"
+    "joilive": "Streamer Joilive",
+    "live17": "Streamer 17live",
+    "kwai": "Streamer Kwai"
   },
   "watchRecordings": {
     "title": "Tonton Rekaman",
@@ -44,7 +46,9 @@
     "mixch": "Rekaman Mixch",
     "trovo": "Rekaman Trovo",
     "twitcast": "Rekaman TwitCasting",
-    "joilive": "Rekaman Joilive"
+    "joilive": "Rekaman Joilive",
+    "live17": "Rekaman 17live",
+    "kwai": "Rekaman Kwai"
   },
   "legal": {
     "title": "Legal",

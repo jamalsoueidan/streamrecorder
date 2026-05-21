@@ -17,7 +17,9 @@
       "mixch": "Créateurs Mixch",
       "trovo": "Créateurs Trovo",
       "twitcast": "Créateurs TwitCasting",
-      "joilive": "Streamers Joilive"
+      "joilive": "Streamers Joilive",
+      "live17": "Streamers 17live",
+      "kwai": "Streamers Kwai"
     },
     "subtitle": {
       "all": "Parcourir tous les streamers et créateurs",
@@ -33,7 +35,9 @@
       "mixch": "Découvrir les créateurs Mixch",
       "trovo": "Découvrir les créateurs Trovo",
       "twitcast": "Découvrir les créateurs TwitCasting",
-      "joilive": "Découvrir les streamers Joilive"
+      "joilive": "Découvrir les streamers Joilive",
+      "live17": "Découvrir les streamers 17live",
+      "kwai": "Découvrir les streamers Kwai"
     }
   },
   "recordings": {
@@ -51,7 +55,9 @@
       "mixch": "Enregistrements Mixch",
       "trovo": "Enregistrements Trovo",
       "twitcast": "Enregistrements TwitCasting",
-      "joilive": "Enregistrements Joilive"
+      "joilive": "Enregistrements Joilive",
+      "live17": "Enregistrements 17live",
+      "kwai": "Enregistrements Kwai"
     },
     "subtitle": {
       "all": "Regarder les lives enregistrés",
@@ -67,7 +73,9 @@
       "mixch": "Regarder les streams Mixch enregistrés",
       "trovo": "Regarder les streams Trovo enregistrés",
       "twitcast": "Regarder les streams TwitCasting enregistrés",
-      "joilive": "Regarder les lives Joilive enregistrés"
+      "joilive": "Regarder les lives Joilive enregistrés",
+      "live17": "Regarder les lives 17live enregistrés",
+      "kwai": "Regarder les lives Kwai enregistrés"
     }
   },
   "home": {

@@ -27,7 +27,9 @@
     "mixch": "Mixch-Creator",
     "trovo": "Trovo-Creator",
     "twitcast": "TwitCasting-Creator",
-    "joilive": "Joilive-Streamer"
+    "joilive": "Joilive-Streamer",
+    "live17": "17live-Streamer",
+    "kwai": "Kwai-Streamer"
   },
   "watchRecordings": {
     "title": "Aufnahmen ansehen",
@@ -44,7 +46,9 @@
     "mixch": "Mixch-Aufnahmen",
     "trovo": "Trovo-Aufnahmen",
     "twitcast": "TwitCasting-Aufnahmen",
-    "joilive": "Joilive-Aufnahmen"
+    "joilive": "Joilive-Aufnahmen",
+    "live17": "17live-Aufnahmen",
+    "kwai": "Kwai-Aufnahmen"
   },
   "legal": {
     "title": "Rechtliches",

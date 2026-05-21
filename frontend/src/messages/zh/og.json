@@ -17,7 +17,9 @@
       "mixch": "Mixch 创作者",
       "trovo": "Trovo 创作者",
       "twitcast": "TwitCasting 创作者",
-      "joilive": "Joilive 主播"
+      "joilive": "Joilive 主播",
+      "live17": "17live 主播",
+      "kwai": "Kwai 主播"
     },
     "subtitle": {
       "all": "浏览所有主播和创作者",
@@ -33,7 +35,9 @@
       "mixch": "发现 Mixch 创作者",
       "trovo": "发现 Trovo 创作者",
       "twitcast": "发现 TwitCasting 创作者",
-      "joilive": "发现 Joilive 主播"
+      "joilive": "发现 Joilive 主播",
+      "live17": "发现 17live 主播",
+      "kwai": "发现 Kwai 主播"
     }
   },
   "recordings": {
@@ -51,7 +55,9 @@
       "mixch": "Mixch 录制",
       "trovo": "Trovo 录制",
       "twitcast": "TwitCasting 录制",
-      "joilive": "Joilive 录制"
+      "joilive": "Joilive 录制",
+      "live17": "17live 录制",
+      "kwai": "Kwai 录制"
     },
     "subtitle": {
       "all": "观看直播录像",
@@ -67,7 +73,9 @@
       "mixch": "观看 Mixch 直播录像",
       "trovo": "观看 Trovo 直播录像",
       "twitcast": "观看 TwitCasting 直播录像",
-      "joilive": "观看 Joilive 直播录像"
+      "joilive": "观看 Joilive 直播录像",
+      "live17": "观看 17live 直播录像",
+      "kwai": "观看 Kwai 直播录像"
     }
   },
   "home": {

@@ -77,4 +77,16 @@ export const streamingPlatforms = [
     name: "Joilive",
     file: "/simple/joilive.svg",
   },
+  {
+    color: "grape.6",
+    colorCss: "var(--mantine-color-grape-6)",
+    name: "Live17",
+    file: "/simple/live17.svg",
+  },
+  {
+    color: "orange.7",
+    colorCss: "var(--mantine-color-orange-7)",
+    name: "Kwai",
+    file: "/simple/kwai.svg",
+  },
 ];

@@ -567,6 +567,20 @@ export default async function TermsAndConditions({ params }: PageProps) {
               • {t("thirdPartyPlatforms.platforms.joilive")}
             </Anchor>
             <Anchor
+              href="https://about.17.live/terms-and-conditions.html"
+              target="_blank"
+              style={{ color: "#60a5fa" }}
+            >
+              • {t("thirdPartyPlatforms.platforms.live17")}
+            </Anchor>
+            <Anchor
+              href="https://www.kwai.com/legal/terms"
+              target="_blank"
+              style={{ color: "#60a5fa" }}
+            >
+              • {t("thirdPartyPlatforms.platforms.kwai")}
+            </Anchor>
+            <Anchor
               href="https://www.liveme.com/protocol/terms.html"
               target="_blank"
               style={{ color: "#60a5fa" }}

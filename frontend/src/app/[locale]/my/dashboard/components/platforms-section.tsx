@@ -2,13 +2,37 @@ import Link from "@/app/components/link";
 import { streamingPlatforms } from "@/app/lib/streaming-platforms";
 import { Group, Image, Scroller, Stack, Text } from "@mantine/core";
 
-const NEW_PLATFORMS = new Set(["Mixch", "Twitcast", "Trovo", "Joilive"]);
+const NEW_PLATFORMS = new Set(["Trovo", "Joilive", "Live17"]);
+// Special "featured" platforms — get a gold pulse animation instead of the
+// regular purple "new" one. Use sparingly.
+const SPECIAL_PLATFORMS = new Set(["Kwai"]);
+
+// Where each platform's streamers mostly come from — purely a visual hint
+// on the dashboard, not used for filtering or anything else.
+const PLATFORM_FLAGS: Record<string, string[]> = {
+  TikTok: ["🌍"],
+  Twitch: ["🌍"],
+  Kick: ["🌍"],
+  YouTube: ["🌍"],
+  AfreecaTV: ["🇰🇷"],
+  Pandalive: ["🇰🇷"],
+  Bigo: ["🌍"],
+  Buzzcast: ["🌍"],
+  LiveMe: ["🌍"],
+  Mixch: ["🇯🇵"],
+  Twitcast: ["🇯🇵"],
+  Trovo: ["🇷🇺", "🇧🇷"],
+  Joilive: ["🇨🇳", "🇹🇼"],
+  Live17: ["🇹🇼", "🇯🇵", "🇭🇰"],
+  Kwai: ["🇧🇷", "🇮🇩", "🇲🇽"],
+};
 
 export function PlatformsSection() {
   return (
     <Scroller px="lg" py="lg">
       <Group gap="md" wrap="nowrap">
         {[...streamingPlatforms].reverse().map((platform) => {
+          const isSpecial = SPECIAL_PLATFORMS.has(platform.name);
           const isNew = NEW_PLATFORMS.has(platform.name);
           const type = platform.name.toLowerCase();
           return (
@@ -26,17 +50,23 @@ export function PlatformsSection() {
                 h={120}
                 style={{
                   borderRadius: "var(--mantine-radius-lg)",
-                  border: isNew
-                    ? "1px solid rgba(139, 92, 246, 0.35)"
-                    : "1px solid rgba(255,255,255,0.1)",
-                  background: isNew
-                    ? "rgba(139, 92, 246, 0.08)"
-                    : "rgba(255,255,255,0.03)",
+                  border: isSpecial
+                    ? "1px solid rgba(251, 191, 36, 0.45)"
+                    : isNew
+                      ? "1px solid rgba(139, 92, 246, 0.35)"
+                      : "1px solid rgba(255,255,255,0.1)",
+                  background: isSpecial
+                    ? "rgba(251, 191, 36, 0.10)"
+                    : isNew
+                      ? "rgba(139, 92, 246, 0.08)"
+                      : "rgba(255,255,255,0.03)",
                   cursor: "pointer",
                   minWidth: 100,
-                  animation: isNew
-                    ? "pulseNew 2.4s ease-in-out infinite"
-                    : undefined,
+                  animation: isSpecial
+                    ? "pulseGold 2.4s ease-in-out infinite"
+                    : isNew
+                      ? "pulseNew 2.4s ease-in-out infinite"
+                      : undefined,
                 }}
               >
                 <Image
@@ -49,6 +79,11 @@ export function PlatformsSection() {
                 <Text size="sm" fw={600} c="white">
                   {platform.name}
                 </Text>
+                {PLATFORM_FLAGS[platform.name] && (
+                  <Text fz={20} style={{ lineHeight: 1, letterSpacing: 2 }}>
+                    {PLATFORM_FLAGS[platform.name].join(" ")}
+                  </Text>
+                )}
               </Stack>
             </Link>
           );

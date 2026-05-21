@@ -20,7 +20,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2026-05-20T17:35:17.757Z"
+    "x-generation-date": "2026-05-21T17:16:10.561Z"
   },
   "servers": [
     {
@@ -13094,24 +13094,7 @@
                 "type": "string"
               },
               "type": {
-                "type": "string",
-                "enum": [
-                  "tiktok",
-                  "twitch",
-                  "kick",
-                  "youtube",
-                  "afreecatv",
-                  "pandalive",
-                  "bigo",
-                  "tango",
-                  "buzzcast",
-                  "liveme",
-                  "mixch",
-                  "twitcast",
-                  "trovo",
-                  "joilive",
-                  "seventeenlive"
-                ]
+                "$ref": "#/components/schemas/FollowerTypeEnum"
               },
               "gender": {
                 "type": "string",
@@ -13538,12 +13521,7 @@
                                                   ]
                                                 },
                                                 "type": {
-                                                  "type": "string",
-                                                  "enum": [
-                                                    "read-only",
-                                                    "full-access",
-                                                    "custom"
-                                                  ]
+                                                  "$ref": "#/components/schemas/ApiTokenTypeEnum"
                                                 },
                                                 "accessKey": {
                                                   "type": "string"
@@ -15268,24 +15246,7 @@
                 "type": "string"
               },
               "type": {
-                "type": "string",
-                "enum": [
-                  "tiktok",
-                  "twitch",
-                  "kick",
-                  "youtube",
-                  "afreecatv",
-                  "pandalive",
-                  "bigo",
-                  "tango",
-                  "buzzcast",
-                  "liveme",
-                  "mixch",
-                  "twitcast",
-                  "trovo",
-                  "joilive",
-                  "seventeenlive"
-                ]
+                "$ref": "#/components/schemas/FollowerTypeEnum"
               },
               "gender": {
                 "type": "string",
@@ -15712,12 +15673,7 @@
                                                   ]
                                                 },
                                                 "type": {
-                                                  "type": "string",
-                                                  "enum": [
-                                                    "read-only",
-                                                    "full-access",
-                                                    "custom"
-                                                  ]
+                                                  "$ref": "#/components/schemas/ApiTokenTypeEnum"
                                                 },
                                                 "accessKey": {
                                                   "type": "string"
@@ -17958,24 +17914,7 @@
                     "type": "string"
                   },
                   "type": {
-                    "type": "string",
-                    "enum": [
-                      "tiktok",
-                      "twitch",
-                      "kick",
-                      "youtube",
-                      "afreecatv",
-                      "pandalive",
-                      "bigo",
-                      "tango",
-                      "buzzcast",
-                      "liveme",
-                      "mixch",
-                      "twitcast",
-                      "trovo",
-                      "joilive",
-                      "seventeenlive"
-                    ]
+                    "$ref": "#/components/schemas/FollowerTypeEnum"
                   },
                   "gender": {
                     "type": "string",
@@ -18402,12 +18341,7 @@
                                                       ]
                                                     },
                                                     "type": {
-                                                      "type": "string",
-                                                      "enum": [
-                                                        "read-only",
-                                                        "full-access",
-                                                        "custom"
-                                                      ]
+                                                      "$ref": "#/components/schemas/ApiTokenTypeEnum"
                                                     },
                                                     "accessKey": {
                                                       "type": "string"
@@ -20672,12 +20606,7 @@
                                 ]
                               },
                               "type": {
-                                "type": "string",
-                                "enum": [
-                                  "read-only",
-                                  "full-access",
-                                  "custom"
-                                ]
+                                "$ref": "#/components/schemas/ApiTokenTypeEnum"
                               },
                               "accessKey": {
                                 "type": "string"
@@ -21588,12 +21517,7 @@
                                 ]
                               },
                               "type": {
-                                "type": "string",
-                                "enum": [
-                                  "read-only",
-                                  "full-access",
-                                  "custom"
-                                ]
+                                "$ref": "#/components/schemas/ApiTokenTypeEnum"
                               },
                               "accessKey": {
                                 "type": "string"
@@ -22769,12 +22693,7 @@
                                               ]
                                             },
                                             "type": {
-                                              "type": "string",
-                                              "enum": [
-                                                "read-only",
-                                                "full-access",
-                                                "custom"
-                                              ]
+                                              "$ref": "#/components/schemas/ApiTokenTypeEnum"
                                             },
                                             "accessKey": {
                                               "type": "string"
@@ -24426,12 +24345,7 @@
                                 ]
                               },
                               "type": {
-                                "type": "string",
-                                "enum": [
-                                  "read-only",
-                                  "full-access",
-                                  "custom"
-                                ]
+                                "$ref": "#/components/schemas/ApiTokenTypeEnum"
                               },
                               "accessKey": {
                                 "type": "string"
@@ -25256,24 +25170,7 @@
                 "type": "string"
               },
               "type": {
-                "type": "string",
-                "enum": [
-                  "tiktok",
-                  "twitch",
-                  "kick",
-                  "youtube",
-                  "afreecatv",
-                  "pandalive",
-                  "bigo",
-                  "tango",
-                  "buzzcast",
-                  "liveme",
-                  "mixch",
-                  "twitcast",
-                  "trovo",
-                  "joilive",
-                  "seventeenlive"
-                ]
+                "$ref": "#/components/schemas/FollowerTypeEnum"
               },
               "gender": {
                 "type": "string",
@@ -25700,12 +25597,7 @@
                                                   ]
                                                 },
                                                 "type": {
-                                                  "type": "string",
-                                                  "enum": [
-                                                    "read-only",
-                                                    "full-access",
-                                                    "custom"
-                                                  ]
+                                                  "$ref": "#/components/schemas/ApiTokenTypeEnum"
                                                 },
                                                 "accessKey": {
                                                   "type": "string"
@@ -27770,24 +27662,7 @@
                     "type": "string"
                   },
                   "type": {
-                    "type": "string",
-                    "enum": [
-                      "tiktok",
-                      "twitch",
-                      "kick",
-                      "youtube",
-                      "afreecatv",
-                      "pandalive",
-                      "bigo",
-                      "tango",
-                      "buzzcast",
-                      "liveme",
-                      "mixch",
-                      "twitcast",
-                      "trovo",
-                      "joilive",
-                      "seventeenlive"
-                    ]
+                    "$ref": "#/components/schemas/FollowerTypeEnum"
                   },
                   "gender": {
                     "type": "string",
@@ -28214,12 +28089,7 @@
                                                       ]
                                                     },
                                                     "type": {
-                                                      "type": "string",
-                                                      "enum": [
-                                                        "read-only",
-                                                        "full-access",
-                                                        "custom"
-                                                      ]
+                                                      "$ref": "#/components/schemas/ApiTokenTypeEnum"
                                                     },
                                                     "accessKey": {
                                                       "type": "string"
@@ -30465,12 +30335,7 @@
                                 ]
                               },
                               "type": {
-                                "type": "string",
-                                "enum": [
-                                  "read-only",
-                                  "full-access",
-                                  "custom"
-                                ]
+                                "$ref": "#/components/schemas/ApiTokenTypeEnum"
                               },
                               "accessKey": {
                                 "type": "string"
@@ -31136,24 +31001,7 @@
                 "type": "string"
               },
               "type": {
-                "type": "string",
-                "enum": [
-                  "tiktok",
-                  "twitch",
-                  "kick",
-                  "youtube",
-                  "afreecatv",
-                  "pandalive",
-                  "bigo",
-                  "tango",
-                  "buzzcast",
-                  "liveme",
-                  "mixch",
-                  "twitcast",
-                  "trovo",
-                  "joilive",
-                  "seventeenlive"
-                ]
+                "$ref": "#/components/schemas/FollowerTypeEnum"
               },
               "gender": {
                 "type": "string",
@@ -31748,12 +31596,7 @@
                                               ]
                                             },
                                             "type": {
-                                              "type": "string",
-                                              "enum": [
-                                                "read-only",
-                                                "full-access",
-                                                "custom"
-                                              ]
+                                              "$ref": "#/components/schemas/ApiTokenTypeEnum"
                                             },
                                             "accessKey": {
                                               "type": "string"
@@ -32786,24 +32629,7 @@
                       "type": "string"
                     },
                     "type": {
-                      "type": "string",
-                      "enum": [
-                        "tiktok",
-                        "twitch",
-                        "kick",
-                        "youtube",
-                        "afreecatv",
-                        "pandalive",
-                        "bigo",
-                        "tango",
-                        "buzzcast",
-                        "liveme",
-                        "mixch",
-                        "twitcast",
-                        "trovo",
-                        "joilive",
-                        "seventeenlive"
-                      ]
+                      "$ref": "#/components/schemas/FollowerTypeEnum"
                     },
                     "gender": {
                       "type": "string",
@@ -33701,24 +33527,7 @@
                     "type": "string"
                   },
                   "type": {
-                    "type": "string",
-                    "enum": [
-                      "tiktok",
-                      "twitch",
-                      "kick",
-                      "youtube",
-                      "afreecatv",
-                      "pandalive",
-                      "bigo",
-                      "tango",
-                      "buzzcast",
-                      "liveme",
-                      "mixch",
-                      "twitcast",
-                      "trovo",
-                      "joilive",
-                      "seventeenlive"
-                    ]
+                    "$ref": "#/components/schemas/FollowerTypeEnum"
                   },
                   "gender": {
                     "type": "string",
@@ -34145,12 +33954,7 @@
                                                       ]
                                                     },
                                                     "type": {
-                                                      "type": "string",
-                                                      "enum": [
-                                                        "read-only",
-                                                        "full-access",
-                                                        "custom"
-                                                      ]
+                                                      "$ref": "#/components/schemas/ApiTokenTypeEnum"
                                                     },
                                                     "accessKey": {
                                                       "type": "string"
@@ -36579,12 +36383,7 @@
                                                   ]
                                                 },
                                                 "type": {
-                                                  "type": "string",
-                                                  "enum": [
-                                                    "read-only",
-                                                    "full-access",
-                                                    "custom"
-                                                  ]
+                                                  "$ref": "#/components/schemas/ApiTokenTypeEnum"
                                                 },
                                                 "accessKey": {
                                                   "type": "string"
@@ -38347,12 +38146,7 @@
                                 ]
                               },
                               "type": {
-                                "type": "string",
-                                "enum": [
-                                  "read-only",
-                                  "full-access",
-                                  "custom"
-                                ]
+                                "$ref": "#/components/schemas/ApiTokenTypeEnum"
                               },
                               "accessKey": {
                                 "type": "string"
@@ -39427,12 +39221,7 @@
                                               ]
                                             },
                                             "type": {
-                                              "type": "string",
-                                              "enum": [
-                                                "read-only",
-                                                "full-access",
-                                                "custom"
-                                              ]
+                                              "$ref": "#/components/schemas/ApiTokenTypeEnum"
                                             },
                                             "accessKey": {
                                               "type": "string"
@@ -40101,24 +39890,7 @@
                       "type": "string"
                     },
                     "type": {
-                      "type": "string",
-                      "enum": [
-                        "tiktok",
-                        "twitch",
-                        "kick",
-                        "youtube",
-                        "afreecatv",
-                        "pandalive",
-                        "bigo",
-                        "tango",
-                        "buzzcast",
-                        "liveme",
-                        "mixch",
-                        "twitcast",
-                        "trovo",
-                        "joilive",
-                        "seventeenlive"
-                      ]
+                      "$ref": "#/components/schemas/FollowerTypeEnum"
                     },
                     "gender": {
                       "type": "string",
@@ -41318,24 +41090,7 @@
                     "type": "string"
                   },
                   "type": {
-                    "type": "string",
-                    "enum": [
-                      "tiktok",
-                      "twitch",
-                      "kick",
-                      "youtube",
-                      "afreecatv",
-                      "pandalive",
-                      "bigo",
-                      "tango",
-                      "buzzcast",
-                      "liveme",
-                      "mixch",
-                      "twitcast",
-                      "trovo",
-                      "joilive",
-                      "seventeenlive"
-                    ]
+                    "$ref": "#/components/schemas/FollowerTypeEnum"
                   },
                   "gender": {
                     "type": "string",
@@ -41762,12 +41517,7 @@
                                                       ]
                                                     },
                                                     "type": {
-                                                      "type": "string",
-                                                      "enum": [
-                                                        "read-only",
-                                                        "full-access",
-                                                        "custom"
-                                                      ]
+                                                      "$ref": "#/components/schemas/ApiTokenTypeEnum"
                                                     },
                                                     "accessKey": {
                                                       "type": "string"
@@ -43605,24 +43355,7 @@
                     "type": "string"
                   },
                   "type": {
-                    "type": "string",
-                    "enum": [
-                      "tiktok",
-                      "twitch",
-                      "kick",
-                      "youtube",
-                      "afreecatv",
-                      "pandalive",
-                      "bigo",
-                      "tango",
-                      "buzzcast",
-                      "liveme",
-                      "mixch",
-                      "twitcast",
-                      "trovo",
-                      "joilive",
-                      "seventeenlive"
-                    ]
+                    "$ref": "#/components/schemas/FollowerTypeEnum"
                   },
                   "gender": {
                     "type": "string",
@@ -44049,12 +43782,7 @@
                                                       ]
                                                     },
                                                     "type": {
-                                                      "type": "string",
-                                                      "enum": [
-                                                        "read-only",
-                                                        "full-access",
-                                                        "custom"
-                                                      ]
+                                                      "$ref": "#/components/schemas/ApiTokenTypeEnum"
                                                     },
                                                     "accessKey": {
                                                       "type": "string"
@@ -46001,6 +45729,35 @@
           }
         }
       },
+      "FollowerTypeEnum": {
+        "type": "string",
+        "enum": [
+          "tiktok",
+          "twitch",
+          "kick",
+          "youtube",
+          "afreecatv",
+          "pandalive",
+          "bigo",
+          "tango",
+          "buzzcast",
+          "liveme",
+          "mixch",
+          "twitcast",
+          "trovo",
+          "joilive",
+          "live17",
+          "kwai"
+        ]
+      },
+      "ApiTokenTypeEnum": {
+        "type": "string",
+        "enum": [
+          "read-only",
+          "full-access",
+          "custom"
+        ]
+      },
       "ClipWithShare": {
         "allOf": [
           {
@@ -46089,26 +45846,6 @@
             }
           }
         }
-      },
-      "FollowerTypeEnum": {
-        "type": "string",
-        "enum": [
-          "tiktok",
-          "twitch",
-          "kick",
-          "youtube",
-          "afreecatv",
-          "pandalive",
-          "bigo",
-          "tango",
-          "buzzcast",
-          "liveme",
-          "mixch",
-          "twitcast",
-          "trovo",
-          "joilive",
-          "seventeenlive"
-        ]
       },
       "FollowRequestBody": {
         "type": "object",

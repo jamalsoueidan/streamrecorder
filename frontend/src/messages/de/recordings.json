@@ -504,6 +504,103 @@
           "answer": "Ja. Premium-Nutzer können ClipAI verwenden, um ihre TwitCasting-Live-Aufnahmen automatisch in kurze Highlight-Clips zu verwandeln, bereit für TikTok, YouTube Shorts oder Reels. Eine großartige Möglichkeit, deinen Live-Content wiederzuverwenden und plattformübergreifend Follower zu gewinnen."
         }
       ]
+    },
+    "live17": {
+      "title": "17live Aufnahmen — öffentliches Web-Archiv für Liver und V-Liver",
+      "description": "17live bietet in seiner App Stream Archive und 15–90 Sekunden Stream Clips, aber beide leben in der App und hinter deinen Berechtigungseinstellungen. LiveStreamRecorder gibt 17live-Livern und V-Livern eine öffentliche, vollständige Aufnahme jeder Übertragung auf einer teilbaren Web-URL — außerhalb der App, von Google indiziert.",
+      "keywords": [
+        "17live Aufnahmen Web-Archiv",
+        "17live volle Länge Übertragung",
+        "17live V-Liver Aufnahmen",
+        "17live Liver Archiv außerhalb der App",
+        "17live profile r id Video",
+        "17live Stream Archive Alternative",
+        "17live Clips länger als 90 Sekunden",
+        "17live yi-qi zusammen",
+        "17live Japan Aufnahmen",
+        "17live Taiwan Aufnahmen",
+        "17live Hongkong Aufnahmen",
+        "17live Talent-Management-Archiv",
+        "17live ohne App speichern"
+      ],
+      "faqs": [
+        {
+          "question": "Was ist anders als 17lives eingebautes Stream Archive?",
+          "answer": "17lives Stream Archive lebt in der 17live-App und wird von deinen Berechtigungseinstellungen gesteuert — Fans müssen sich bei 17live anmelden, um es zu sehen, und es gibt keine teilbare, suchindizierte URL pro Live. LiveStreamRecorder gibt jeder Übertragung eine öffentliche Web-URL, die Fans in jedem Browser öffnen können — kein 17live-Konto oder App-Installation nötig."
+        },
+        {
+          "question": "Stream Clips existieren bereits in 17live — warum ClipAI nutzen?",
+          "answer": "17lives Stream Clips sind in der App großartig, aber auf 15–90 Sekunden begrenzt und bleiben auf 17lives Oberfläche. ClipAI schneidet Highlight-Clips beliebiger Länge aus deinen vollen gespeicherten Lives, formatiert für TikTok / Reels / Shorts — wo deine potenziellen neuen Fans tatsächlich Zeit verbringen. Anderes Ziel: 17live-Clips sind für Fans, die schon in der App sind; ClipAI ist dafür, neue Fans in die App zu trichtern."
+        },
+        {
+          "question": "Ich bin V-Liver — wird mein Avatar korrekt aufgenommen?",
+          "answer": "Ja. Wir nehmen genau das auf, was 17lives Stream tatsächlich an Zuschauer liefert: Live2D/3D-Avatar, OBS-Szenenkomposition, MIDI-Overlays, Stimmverzerrer — alles bleibt in der Aufnahme wie gesendet. Das Capture passiert nach deinem Rendering-Stack und vor 17lives Distribution, also die gleiche Treue, die Fans live gesehen haben."
+        },
+        {
+          "question": "Brauche ich OBS, einen Handy-Recorder oder irgendeine lokale Software?",
+          "answer": "Nein. Du gehst aus der 17live-App von deinem Handy oder PC live, wie du es immer tust. Die Aufnahme passiert serverseitig in unserer Infrastruktur — dein Handy kann schlafen, dein Laptop kann nach Stream-Start aus sein. Keine CPU-, GPU- oder Akku-Belastung auf deinem Gerät."
+        },
+        {
+          "question": "Kann ich die HEVC-Rohvideodatei herunterladen?",
+          "answer": "Premium-Nutzer können das Rohvideo herunterladen für Nachbearbeitung, YouTube-Upload als Langform-VOD oder lokales Archivieren. Free-Nutzer können in jedem Browser zurückschauen, ohne herunterladen zu müssen."
+        },
+        {
+          "question": "Beeinflusst das meine 17live-Talentagentur / Hot Star Punkte / Geschenk-Einnahmen?",
+          "answer": "Nein — null Einfluss auf deinen 17live-Account-Status. LiveStreamRecorder loggt sich nicht in deinen 17live-Account ein, berührt das Ranking nicht und stört keine Talentagentur-Tools. Die Aufnahme wird von dir als 17live-Creator für deinen eigenen Account per Opt-in aktiviert und erfasst nur deine eigenen Lives — nichts anderes."
+        },
+        {
+          "question": "Ist es erlaubt, meine eigenen 17live-Übertragungen aufzunehmen?",
+          "answer": "Du nimmst **deinen eigenen Inhalt** auf **deinem eigenen Profil** auf. Opt-in pro 17live-Creator, nur deine eigenen Lives werden erfasst. Die rechtliche Position ist die gleiche wie das Herunterladen deines eigenen 17live-Archivs aus dem In-App Stream Archive — nur in einem anderen Speicherort."
+        }
+      ]
+    },
+    "kwai": {
+      "title": "Kwai-Aufnahmen — öffentliches Web-Archiv für brasilianische und globale Kwai-Creator",
+      "description": "Kwai (kuài 快 = „schnell\") ist Kuaishous globale Kurzvideo- + Live-Streaming-App, dominant in Brasilien, Indonesien, Mexiko und im Nahen Osten. LiveStreamRecorder nimmt jeden Kwai-Live auf eine öffentliche, web-zugängliche URL auf, damit Fans ohne die Kwai-App trotzdem zusehen können.",
+      "keywords": [
+        "kwai recorder",
+        "kwai live download",
+        "kwai live archiv",
+        "kwai replay alternative",
+        "meinen kwai live speichern",
+        "kwai live aufnahme brasilien",
+        "kuaishou kwai archiv",
+        "kwai ohne app aufnehmen",
+        "kwai live historie",
+        "kwai übertragung backup",
+        "kwai live indonesien",
+        "kwai live mexiko"
+      ],
+      "faqs": [
+        {
+          "question": "Wie speichere ich meine Kwai-Lives?",
+          "answer": "Kostenlos anmelden, deinen Kwai-Username hinzufügen (oder die URL deines Kwai-Profils einfügen) und auf Kwai wie immer live gehen. Jede Übertragung wird serverseitig erfasst und landet automatisch auf deiner Creator-Seite — keine App auf dem Handy, kein Bildschirmrecorder, kein OBS."
+        },
+        {
+          "question": "Was ist das URL-Format für meine gespeicherten Kwai-Lives?",
+          "answer": "Jede Aufnahme bekommt eine saubere Web-URL wie `livestreamrecorder.com/kwai/dein-username/video/...`. Funktioniert in jedem Browser, überall — kein Kwai-Konto oder App-Installation nötig. Füge die URL in WhatsApp, Telegram, Discord oder anderswo ein."
+        },
+        {
+          "question": "Kann ich die Rohvideodatei herunterladen?",
+          "answer": "Ja — Premium-Creator können die HEVC-Rohvideodatei jedes Kwai-Lives herunterladen. Nützlich zum erneuten Hochladen auf YouTube als Langform-Content, Neueditierung in Kompilationen oder lokales Archivieren auf deinem Computer."
+        },
+        {
+          "question": "Ich bin in Deutschland — funktioniert das für Kwai in meiner Region?",
+          "answer": "Ja. Kwai ist die gleiche App weltweit; wir nehmen Kwai-Lives regionsunabhängig auf. Kwai-Creator profitieren tatsächlich am meisten, da LiveStreamRecorder-URLs in Deutsch, Englisch und anderen Sprachen von Google indexierbar sind — was deinen Content für Fans außerhalb der Kwai-App und außerhalb deiner Region entdeckbar macht."
+        },
+        {
+          "question": "Hat Kwai bereits eine Replay-Funktion in der App?",
+          "answer": "Kwais Replay/Archiv-Verhalten in der App hängt von der Region, deinen Kontoeinstellungen und der Plattformrichtlinie ab. LiveStreamRecorder ist von all dem unabhängig — deine Übertragungen bekommen ein externes öffentliches Web-Archiv, das unabhängig davon existiert, was Kwai innerhalb seiner App tut."
+        },
+        {
+          "question": "Beeinflusst das meine Kwai-K-coins, Geschenke oder Creator-Programm-Einnahmen?",
+          "answer": "Nein. LiveStreamRecorder loggt sich nicht in dein Kwai-Konto ein und stört nicht Kwais Geschenke, K-coins, Creator-Programm-Tiers oder Umsatzanteil. Die Aufnahme wird von dir als Kwai-Creator für deinen eigenen Account per Opt-in aktiviert und erfasst nur deine eigenen Lives — nichts anderes."
+        },
+        {
+          "question": "ClipAI verwenden, um Kwai-Lives in TikTok / Reels / Shorts zu verwandeln?",
+          "answer": "Ja. Premium-Creator können ClipAI auf ihren gespeicherten Kwai-Lives ausführen. Es schneidet automatisch Highlight-Clips formatiert für TikTok, Instagram Reels und YouTube Shorts — lustige Momente, Musik, Tanz, Geschenkreaktionen. Verwende sie, um Zuschauer zu erreichen, die nicht auf Kwai sind, und sie zurück zu deinen Kwai-Lives zu trichtern."
+        }
+      ]
     }
   },
   "hero": {
@@ -521,7 +618,9 @@
       "mixch": "Mixch-Aufnahmen",
       "trovo": "Trovo-Aufnahmen",
       "twitcast": "TwitCasting-Aufnahmen",
-      "joilive": "Joilive-Aufnahmen"
+      "joilive": "Joilive-Aufnahmen",
+      "live17": "17live-Aufnahmen",
+      "kwai": "Kwai-Aufnahmen"
     },
     "subtitle": {
       "all": "Sieh dir Live-Stream-Aufnahmen von Creatorn auf unserer Plattform an. Lade sie herunter und entdecke neue Inhalte.",
@@ -537,7 +636,9 @@
       "mixch": "Sieh dir Mixch-Aufnahmen von Creatorn auf unserer Plattform an. Lade sie herunter und entdecke neue Inhalte.",
       "trovo": "Sieh dir Trovo-Aufnahmen von Creatorn auf unserer Plattform an. Lade sie herunter und entdecke neue Inhalte.",
       "twitcast": "Sieh dir TwitCasting-Aufnahmen von Creatorn auf unserer Plattform an. Lade sie herunter und entdecke neue Inhalte.",
-      "joilive": "Sieh dir Joilive-Stream-Aufnahmen von Streamern auf unserer Plattform an. Lade sie herunter und entdecke neue Broadcaster."
+      "joilive": "Sieh dir Joilive-Stream-Aufnahmen von Streamern auf unserer Plattform an. Lade sie herunter und entdecke neue Broadcaster.",
+      "live17": "Sieh dir 17live-Stream-Aufnahmen von Streamern auf unserer Plattform an. Lade sie herunter und entdecke neue Broadcaster.",
+      "kwai": "Sieh dir Kwai-Stream-Aufnahmen von Streamern auf unserer Plattform an. Lade sie herunter und entdecke neue Broadcaster."
     }
   },
   "cta": {
@@ -555,7 +656,9 @@
       "mixch": "Mixch-Streams aufnehmen",
       "trovo": "Trovo-Streams aufnehmen",
       "twitcast": "TwitCasting-Streams aufnehmen",
-      "joilive": "Joilive-Streams sichern"
+      "joilive": "Joilive-Streams sichern",
+      "live17": "17live-Streams sichern",
+      "kwai": "Kwai-Streams sichern"
     },
     "subtitle": {
       "all": "Sichere automatisch deine TikTok-, Twitch-, YouTube- und Kick-Streams. Lade Aufnahmen herunter, erstelle kurze Clips und vergrößere dein Publikum.",
@@ -571,7 +674,9 @@
       "mixch": "Sichere automatisch deine Mixch-Streams. Lade Aufnahmen herunter und erstelle kurze Clips mit ClipAI.",
       "trovo": "Sichere automatisch deine Trovo-Streams. Lade Aufnahmen herunter und erstelle kurze Clips mit ClipAI.",
       "twitcast": "Sichere automatisch deine TwitCasting-Streams. Lade Aufnahmen herunter und erstelle kurze Clips mit ClipAI.",
-      "joilive": "Sichere automatisch deine Joilive-Streams. Unabhängiges Backup jedes Lives, plus kurze Clips mit ClipAI."
+      "joilive": "Sichere automatisch deine Joilive-Streams. Unabhängiges Backup jedes Lives, plus kurze Clips mit ClipAI.",
+      "live17": "Sichere automatisch deine 17live-Streams. Unabhängiges Backup jedes Lives, plus kurze Clips mit ClipAI.",
+      "kwai": "Sichere automatisch deine Kwai-Streams. Unabhängiges Backup jedes Lives, plus kurze Clips mit ClipAI."
     },
     "button": "Kostenlos mit der Aufnahme starten"
   },
@@ -591,7 +696,9 @@
       "mixch": "Sei der erste Creator, der einen Mixch-Stream aufnimmt!",
       "trovo": "Sei der erste Creator, der einen Trovo-Stream aufnimmt!",
       "twitcast": "Sei der erste Creator, der einen TwitCasting-Stream aufnimmt!",
-      "joilive": "Sei der erste Streamer, der einen Joilive-Stream aufnimmt!"
+      "joilive": "Sei der erste Streamer, der einen Joilive-Stream aufnimmt!",
+      "live17": "Sei der erste Streamer, der einen 17live-Stream aufnimmt!",
+      "kwai": "Sei der erste Streamer, der einen Kwai-Stream aufnimmt!"
     },
     "button": "Los geht's"
   },
@@ -609,7 +716,9 @@
     "mixch": "## Mixch Live-Aufnahmen\n\nSieh dir Mixch-Live-Aufnahmen von Creatorn an, die LiveStreamRecorder nutzen, um ihre eigenen Lives zu sichern. Jedes Mixch-Live wird automatisch erfasst und für die On-Demand-Wiedergabe gespeichert.\n\n### Mixch-Lives gesichert, bevor sie verschwinden\n\nMixch-Lives sind nur live verfügbar – sobald du den Stream beendest, verschwindet der Content aus der App. Unser Mixch-Recorder sichert deine Lives automatisch in der Cloud, damit nichts verloren geht, wenn dein Live endet. Chat-Sessions, Musik-Momente, täglicher Content – alles bleibt für Fans verfügbar.\n\n### Sieh dir deine Mixch-Aufnahmen an und lade sie herunter\n\nJede Mixch-Live-Aufnahme ist sofort im Browser verfügbar. Premium-Nutzer können ihre Mixch-Aufnahmen als Videodatei für die Offline-Wiedergabe herunterladen – perfekt, um deinen eigenen Content wiederzuverwenden oder eine persönliche Kopie zu behalten.\n\n### Nimm deine Mixch-Lives auf – keine zusätzlichen Apps nötig\n\nVergiss Bildschirmaufnahme deines Handys oder Capture-Software im Hintergrund. LiveStreamRecorder ist ein Online-Mixch-Recorder, der deine Lives serverseitig erfasst. Keine Akku-Belastung, kein manuelles Setup, keine zusätzliche Software. Deine Mixch-Lives werden automatisch in hoher Qualität aufgenommen, von jedem Gerät.\n\n### Verwandle deine Lives mit ClipAI in Clips\n\nWillst du deine Mixch-Live-Aufnahmen in kurze Clips verwandeln? ClipAI analysiert deine aufgenommenen Lives und erstellt Highlight-Clips, bereit zum Posten auf TikTok, Instagram Reels oder YouTube Shorts. Vergrößere deine Reichweite über Mixch hinaus, indem du deine besten Momente wiederverwendest.\n\n### Der beste Mixch-Recorder für Creator\n\nLiveStreamRecorder ist für das Speichern von Mixch-Lives gebaut. Registriere dich kostenlos, füge deinen Mixch-Benutzernamen hinzu und verliere nie wieder ein Live. Jeder Stream wird automatisch erfasst – deine dauerhafte Mixch-Content-Bibliothek.",
     "joilive": "## Joilive-Stream-Aufnahmen\n\nJoilive archiviert nicht. Es gibt keinen Replay-Tab auf deinem Profil, keine Liste vergangener Streams, kein VOD. Die Plattform ist komplett um den Live-Moment herum gebaut – wenn du aufhörst zu senden, ist der Stream weg. Das funktioniert für gelegentliche kurze Lives, ist aber ein echtes Problem, wenn du regelmäßig streamst und willst, dass deine Arbeit bleibt. LiveStreamRecorder lässt Joilive-Streamer **ihre eigenen Broadcasts aufnehmen**, sodass jedes Live als ansehbares, teilbares Video auf einer persönlichen Creator-Seite landet.\n\n### Das Black-Screen-Problem bei Joilive\n\nWenn du versucht hast, deinen Joilive-Stream selbst mit einem Desktop-Recorder aufzunehmen (Display-Capture von OBS Studio, Xbox Game Bar unter Windows, QuickTime auf dem Mac), hast du wahrscheinlich dasselbe bemerkt: Audio wird sauber aufgenommen, aber das Video erscheint als schwarzes Rechteck. Das ist der Joilive-Webplayer, der hardwarebeschleunigtes Decoding plus Widevine-DRM nutzt. Der Recorder sieht den Player, kann aber das Videobild nicht sehen. Es ist kein Joilive-Bug, dein Recorder ist nicht kaputt – es ist eine Nebenwirkung davon, wie geschütztes Video in modernen Browsern komponiert wird, und es lässt sich nicht durch Einstellungen auf deinem Rechner beheben.\n\nDer praktische Workaround ist, die Bildschirmaufnahme komplett zu überspringen. LiveStreamRecorder erfasst den Joilive-Stream upstream des Browsers, bevor der DRM/Compositing-Pfad ins Spiel kommt. Kein schwarzer Bildschirm, keine Codec-Suche, keine GPU-Acceleration-Toggles – die Aufnahme funktioniert einfach.\n\n### Selbst-Aufnahme, serverseitig\n\nDu nimmst deinen eigenen Stream auf, lässt aber nichts laufen, um das zu tun. Keine App auf dem Handy, keine Software auf dem PC. Wenn du in der Joilive-App live gehst, startet die Aufnahme automatisch in der Cloud. Stream von deiner Couch, deinem Auto, einem Café – dein Laptop kann aus sein, dein Handy kann gesperrt sein. Deine Joilive-Lives landen auf deiner Creator-Seite, wenn jeder Broadcast endet, bereit zum Zurückschauen im Browser.\n\n### Sieh dir deine Joilive-Aufnahmen an und lade sie herunter\n\nJedes aufgenommene Live spielt sofort in jedem modernen Browser, keine App nötig, kein Joilive-Account zum Ansehen erforderlich. Premium-Streamer können die rohe Videodatei zum Bearbeiten, Wiederhochladen oder lokalen Archivieren herunterladen – und ClipAI kann automatisch Kurzform-Clips aus der Aufnahme generieren, zum Posten auf TikTok, YouTube Shorts oder Reels.\n\n### Eine teilbare URL für deine Lives\n\nJoilives eigene Raum-URL ist `joilive.net/user/index.html?s=1880…` – eine lange numerische ID, die niemand tippen oder sich merken kann. Deine LiveStreamRecorder-Aufnahmen nutzen saubere URLs wie `livestreamrecorder.com/joilive/deine-id/video/...`, die du auf Discord posten, in Twitter-Bios einfügen oder Fans per SMS schicken kannst. Derselbe Inhalt, kein Querystring, keine geforderte App-Installation.\n\n### Gebaut für Joilive-Streamer, nicht gegen sie\n\nLiveStreamRecorder lädt keine Broadcasts anderer Leute herunter. Die Aufnahme ist opt-in vom Joilive-Streamer für **seinen eigenen** Account, und nur seine eigenen Lives – nichts anderes. Das Video gehört dir, die Seite gehört dir, das Löschen ist eine Aktion mit einem Klick. Registriere dich kostenlos, füge deine Joilive-User-ID hinzu, und Joilives fehlendes Archiv hört auf, dein Problem zu sein.",
     "trovo": "## Trovo Live-Aufnahmen\n\nSieh dir Trovo-Live-Aufnahmen von Creatorn an, die LiveStreamRecorder nutzen, um ihre eigenen Lives zu sichern. Jedes Trovo-Live wird automatisch erfasst und für die On-Demand-Wiedergabe gespeichert.\n\n### Trovo-Lives gesichert, bevor sie verschwinden\n\nTrovo-Lives sind nur live verfügbar – sobald du den Stream beendest, verschwindet der Content aus der App. Unser Trovo-Recorder sichert deine Lives automatisch in der Cloud, damit nichts verloren geht, wenn dein Live endet. Chat-Sessions, Musik-Momente, täglicher Content – alles bleibt für Fans verfügbar.\n\n### Sieh dir deine Trovo-Aufnahmen an und lade sie herunter\n\nJede Trovo-Live-Aufnahme ist sofort im Browser verfügbar. Premium-Nutzer können ihre Trovo-Aufnahmen als Videodatei für die Offline-Wiedergabe herunterladen – perfekt, um deinen eigenen Content wiederzuverwenden oder eine persönliche Kopie zu behalten.\n\n### Nimm deine Trovo-Lives auf – keine zusätzlichen Apps nötig\n\nVergiss Bildschirmaufnahme deines Handys oder Capture-Software im Hintergrund. LiveStreamRecorder ist ein Online-Trovo-Recorder, der deine Lives serverseitig erfasst. Keine Akku-Belastung, kein manuelles Setup, keine zusätzliche Software. Deine Trovo-Lives werden automatisch in hoher Qualität aufgenommen, von jedem Gerät.\n\n### Verwandle deine Lives mit ClipAI in Clips\n\nWillst du deine Trovo-Live-Aufnahmen in kurze Clips verwandeln? ClipAI analysiert deine aufgenommenen Lives und erstellt Highlight-Clips, bereit zum Posten auf TikTok, Instagram Reels oder YouTube Shorts. Vergrößere deine Reichweite über Trovo hinaus, indem du deine besten Momente wiederverwendest.\n\n### Der beste Trovo-Recorder für Creator\n\nLiveStreamRecorder ist für das Speichern von Trovo-Lives gebaut. Registriere dich kostenlos, füge deinen Trovo-Benutzernamen hinzu und verliere nie wieder ein Live. Jeder Stream wird automatisch erfasst – deine dauerhafte Trovo-Content-Bibliothek.",
-    "twitcast": "## TwitCasting Live-Aufnahmen\n\nSieh dir TwitCasting-Live-Aufnahmen von Creatorn an, die LiveStreamRecorder nutzen, um ihre eigenen Lives zu sichern. Jedes TwitCasting-Live wird automatisch erfasst und für die On-Demand-Wiedergabe gespeichert.\n\n### TwitCasting-Lives gesichert, bevor sie verschwinden\n\nTwitCasting-Lives sind nur live verfügbar – sobald du den Stream beendest, verschwindet der Content aus der App. Unser TwitCasting-Recorder sichert deine Lives automatisch in der Cloud, damit nichts verloren geht, wenn dein Live endet. Chat-Sessions, Musik-Momente, täglicher Content – alles bleibt für Fans verfügbar.\n\n### Sieh dir deine TwitCasting-Aufnahmen an und lade sie herunter\n\nJede TwitCasting-Live-Aufnahme ist sofort im Browser verfügbar. Premium-Nutzer können ihre TwitCasting-Aufnahmen als Videodatei für die Offline-Wiedergabe herunterladen – perfekt, um deinen eigenen Content wiederzuverwenden oder eine persönliche Kopie zu behalten.\n\n### Nimm deine TwitCasting-Lives auf – keine zusätzlichen Apps nötig\n\nVergiss Bildschirmaufnahme deines Handys oder Capture-Software im Hintergrund. LiveStreamRecorder ist ein Online-TwitCasting-Recorder, der deine Lives serverseitig erfasst. Keine Akku-Belastung, kein manuelles Setup, keine zusätzliche Software. Deine TwitCasting-Lives werden automatisch in hoher Qualität aufgenommen, von jedem Gerät.\n\n### Verwandle deine Lives mit ClipAI in Clips\n\nWillst du deine TwitCasting-Live-Aufnahmen in kurze Clips verwandeln? ClipAI analysiert deine aufgenommenen Lives und erstellt Highlight-Clips, bereit zum Posten auf TikTok, Instagram Reels oder YouTube Shorts. Vergrößere deine Reichweite über TwitCasting hinaus, indem du deine besten Momente wiederverwendest.\n\n### Der beste TwitCasting-Recorder für Creator\n\nLiveStreamRecorder ist für das Speichern von TwitCasting-Lives gebaut. Registriere dich kostenlos, füge deinen TwitCasting-Benutzernamen hinzu und verliere nie wieder ein Live. Jeder Stream wird automatisch erfasst – deine dauerhafte TwitCasting-Content-Bibliothek."
+    "twitcast": "## TwitCasting Live-Aufnahmen\n\nSieh dir TwitCasting-Live-Aufnahmen von Creatorn an, die LiveStreamRecorder nutzen, um ihre eigenen Lives zu sichern. Jedes TwitCasting-Live wird automatisch erfasst und für die On-Demand-Wiedergabe gespeichert.\n\n### TwitCasting-Lives gesichert, bevor sie verschwinden\n\nTwitCasting-Lives sind nur live verfügbar – sobald du den Stream beendest, verschwindet der Content aus der App. Unser TwitCasting-Recorder sichert deine Lives automatisch in der Cloud, damit nichts verloren geht, wenn dein Live endet. Chat-Sessions, Musik-Momente, täglicher Content – alles bleibt für Fans verfügbar.\n\n### Sieh dir deine TwitCasting-Aufnahmen an und lade sie herunter\n\nJede TwitCasting-Live-Aufnahme ist sofort im Browser verfügbar. Premium-Nutzer können ihre TwitCasting-Aufnahmen als Videodatei für die Offline-Wiedergabe herunterladen – perfekt, um deinen eigenen Content wiederzuverwenden oder eine persönliche Kopie zu behalten.\n\n### Nimm deine TwitCasting-Lives auf – keine zusätzlichen Apps nötig\n\nVergiss Bildschirmaufnahme deines Handys oder Capture-Software im Hintergrund. LiveStreamRecorder ist ein Online-TwitCasting-Recorder, der deine Lives serverseitig erfasst. Keine Akku-Belastung, kein manuelles Setup, keine zusätzliche Software. Deine TwitCasting-Lives werden automatisch in hoher Qualität aufgenommen, von jedem Gerät.\n\n### Verwandle deine Lives mit ClipAI in Clips\n\nWillst du deine TwitCasting-Live-Aufnahmen in kurze Clips verwandeln? ClipAI analysiert deine aufgenommenen Lives und erstellt Highlight-Clips, bereit zum Posten auf TikTok, Instagram Reels oder YouTube Shorts. Vergrößere deine Reichweite über TwitCasting hinaus, indem du deine besten Momente wiederverwendest.\n\n### Der beste TwitCasting-Recorder für Creator\n\nLiveStreamRecorder ist für das Speichern von TwitCasting-Lives gebaut. Registriere dich kostenlos, füge deinen TwitCasting-Benutzernamen hinzu und verliere nie wieder ein Live. Jeder Stream wird automatisch erfasst – deine dauerhafte TwitCasting-Content-Bibliothek.",
+    "live17": "## 17live-Aufnahmen auf LiveStreamRecorder\n\n17live (ausgesprochen *yi-qi live* — 一起, Mandarin für „zusammen\") ist Asiens drittgrößte Live-Streaming-Plattform, gegründet 2015 in Taiwan, seit 2021 mit Hauptsitz in Japan, an der SGX als **LVR** gelistet. Beherbergt sowohl **Liver** (menschliche Streamer) als auch **V-Liver** (virtuelle Avatar-Streamer — eine Kategorie, die 17live als Pionier eingeführt hat). Besonders stark in Japan, Taiwan, Hongkong, Singapur und den Philippinen. LiveStreamRecorder bewahrt eine vollständige, im Web zugängliche Aufnahme jedes Lives, das du sendest — neben 17lives In-App Stream Archive, aber im offenen Web.\n\n### Warum eine zweite Aufnahme, wenn 17live bereits Stream Archive hat?\n\n17lives eigenes Stream Archive ist in Ordnung — es speichert aktuelle Lives in der 17live-App, kontrolliert durch deine Berechtigungs-Toggles. Aber Fans brauchen die 17live-App zum Ansehen, das Archiv wird nicht von Google indexiert, und es gibt keine stabile öffentliche URL pro Übertragung, die du in Discord oder eine Twitter-Bio einfügen kannst. LiveStreamRecorder ist **komplementär**, nicht konkurrenzierend: dieselbe Übertragung ein zweites Mal aufgenommen, diesmal landend auf einer öffentlichen Web-URL wie `livestreamrecorder.com/live17/your-id/video/...`, die jeder Browser sofort öffnen kann.\n\n### Gleiches Capture für Liver und V-Liver\n\nWir nehmen auf, was 17live tatsächlich überträgt — egal ob du ein Face-Cam-Liver bist, der Chat / Song / Tanz macht, ein OBS-komponierter Liver mit einer Custom-Szene oder ein V-Liver, der Live2D / 3D-Avatare laufen lässt. Das Capture passiert vor 17lives Distribution, also sieht dein finales Video genauso aus, wie deine Fans es live gesehen haben: Avatar, Overlays, Stimmverzerrer, Geschenkanimationen, alles erhalten.\n\n### Keine App auf deinem Handy, kein OBS auf deinem PC\n\nServerseitig. Du streamst von Handy oder PC wie immer, die Aufnahme passiert in unserer Infrastruktur. Nach Live-Start kann dein Handy schlafen, dein Laptop ausgeschaltet sein — die Aufnahme läuft weiter. Keine CPU-Last, keine GPU-Belastung, kein zusätzlicher Akkuverbrauch. Das ist wichtig für lange Gesangs- oder Talk-Lives, die 4+ Stunden gehen.\n\n### Über das 90-Sekunden-Clip-Limit hinaus\n\n17lives In-App Stream Clips sind großartig zum Teilen innerhalb der App, aber auf 15–90 Sekunden begrenzt und verlassen die 17live-Oberfläche nicht. Premium-Streamer können ClipAI auf LiveStreamRecorder verwenden, um Highlight-Clips beliebiger Länge aus vollständig gespeicherten Lives zu schneiden, formatiert für **TikTok, Instagram Reels, YouTube Shorts** — die Plattformen, auf denen die meisten Nicht-17live-Zuschauer tatsächlich leben. Nutze sie als Trichter zurück in dein 17live-Zimmer.\n\n### Gleichberechtigte Unterstützung für talent-gemanagte und Indie-Streamer\n\n17lives Talent-Management-System scoutet und unterstützt Streamer aktiv — das macht die Plattform von rein selbstbedienten Apps unterscheidbar. LiveStreamRecorder berührt nichts davon. Es loggt sich nicht in deinen 17live-Account ein, mischt sich nicht in Hot-Star-Events, Geschenk-Promos oder Talent-Agentur-Tools ein. Es ist eine passive Parallel-Aufnahme — deine Kontrolle, deine URL, dein Archiv.\n\n### Im Browser ansehen, herunterladen, wenn nötig\n\nJede 17live-Aufnahme spielt sofort in jedem modernen Browser. Kein 17live-Konto zum Ansehen erforderlich — teile die URL mit jedem, überall. Premium-Creator können die HEVC-Rohvideodatei jedes Lives für Nachbearbeitung, YouTube-Upload als Langform-VOD oder lokales Archivieren herunterladen.\n\n### Opt-in, dein eigener Inhalt\n\nLiveStreamRecorder nimmt nur dein eigenes Profil auf, nur nachdem du dich angemeldet hast. Die rechtliche Position ist die gleiche wie das Herunterladen deiner eigenen Lives aus 17lives In-App Stream Archive — einfach an einem anderen Speicherort (nicht in der App, sondern an einer öffentlichen Web-URL auf deiner Domain). Aufnahme jederzeit stoppbar, jede Aufnahme mit einem Klick löschbar.",
+    "kwai": "## Kwai-Aufnahmen auf LiveStreamRecorder\n\nKwai (vom Mandarin 快 *kuài*, „schnell\") ist die globale Kurzvideo- + Live-Streaming-App von **Kuaishou Technology** (HKEX 1024), oft als Asiens #2 Kurzvideo-Plattform nach Douyin/TikTok bezeichnet. Außerhalb Chinas ist Kwai dominant in **Brasilien** (sein größter Markt mit weitem Abstand, konkurrierend mit TikTok), plus Indonesien, Mexiko, Argentinien, Kolumbien, Naher Osten und Russland/CIS. LiveStreamRecorder erfasst jeden Kwai-Live in einer **öffentlichen, web-zugänglichen Aufnahme** — außerhalb der Kwai-App, im offenen Web, von Google indexierbar.\n\n### Kwai in der App vs. Kwai im offenen Web\n\nKwai ist um seinen In-App-Feed gebaut: Kurzvideos scrollen, in einen Live einsteigen, Geschenke via K-coins senden, alles in der Kwai-Oberfläche. Das funktioniert großartig für Nutzer, die schon auf Kwai sind. Aber sobald deine Fans nicht auf Kwai sind — brasilianische Fans auf WhatsApp/Instagram, indonesische Follower auf Telegram, Zuschauer in Märkten, wo Kwai nicht einmal installiert ist — ist die Übertragung weg. LiveStreamRecorder nimmt jeden Kwai-Live auf eine öffentliche URL wie `livestreamrecorder.com/kwai/dein-username/video/...` auf, die jeder in jedem Browser öffnen kann. Keine Kwai-Installation zum Ansehen nötig, kein Kwai-Konto, keine App-Schranke.\n\n### Gebaut für Mobile-First, Mobilfunk-First-Creator\n\nKwais größte Märkte — Brasilien, Indonesien, MENA — sind auch Märkte, in denen mobile Daten und Akku kostbare Ressourcen sind. Creator wollen kein Handy, das brennt, indem es OBS oder einen Bildschirmrecorder im Hintergrund ausführt. Wir verstehen. LiveStreamRecorder zeichnet serverseitig auf. Du sendest von deinem Handy aus normal auf Kwai — dein Handy kann den Bildschirm sperren, schlafen, den Anruf abbrechen — die Aufnahme läuft in unserer Infrastruktur weiter. Null CPU, null GPU, null zusätzliche Akkukosten auf deinem Gerät.\n\n### Die Entdeckungslücke des brasilianischen Kwai\n\nKwai BR ist ein riesiges Ökosystem, aber weitgehend unsichtbar im offenen portugiesischsprachigen Web. Such bei Google nach einem brasilianischen Kwai-Creator und du bekommst oft dünne Profilseiten oder Drittanbieter-Tracker-Seiten. LiveStreamRecorder-URLs sind sauber, indexierbar und teilbar — brasilianische Creator bekommen zum ersten Mal einen echten Google-Fußabdruck, mit jedem Kwai-Live als permanente SEO-entdeckbare Seite. Gleiches gilt für indonesische / mexikanische / argentinische Creator in ihren jeweiligen Märkten.\n\n### ClipAI: Vom Kwai-Live zu TikTok / Reels / Shorts\n\nKwai ist in Schwellenmärkten dominant, aber TikTok / Instagram / YouTube dominieren weiterhin die globale Entdeckung. ClipAI scannt deine gespeicherten Kwai-Lives und schneidet vertikale Highlight-Clips formatiert für **TikTok, Instagram Reels, YouTube Shorts** — die Entdeckungsschicht außerhalb von Kwai. Musik-Cover, Tanz, Comedy-Sketches, Geschenkreaktionen, Zuschauer-Interaktionen — Cross-Post sie, um deinen Publikumstrichter zurück zu deinen Kwai-Lives zu erweitern.\n\n### Im Browser ansehen, herunterladen wenn nötig\n\nJede gespeicherte Kwai-Live spielt sofort in jedem modernen Browser. Kein Kwai-Konto für Zuschauer erforderlich. Premium-Creator können die HEVC-Rohvideodatei jedes Lives für Neueditierung in langem YouTube-Content, Kompilationsvideos oder lokales Archivieren herunterladen.\n\n### Berührt nicht dein Kwai-Konto oder deine Einnahmen\n\nLiveStreamRecorder loggt sich nicht in dein Kwai-Konto ein, sieht keine K-coins, liest deine Geschenkeinnahmen nicht, mischt sich nicht in Kwais Creator-Programm-Tiers ein. Die Aufnahme wird von dir als Kwai-Creator für deinen **eigenen** Account per Opt-in aktiviert und erfasst nur deine eigenen Lives — nichts anderes. Der Status deines Kwai-Kontos, Ranking und Umsatzanteil bleiben vollständig in Kwais Domäne.\n\n### Opt-in, dein eigener Inhalt, jederzeit löschbar\n\nLiveStreamRecorder nimmt nur dein eigenes Profil auf, nur nachdem du angemeldet hast. Stoppe den Aufnahmeflow jederzeit. Lösche jede vergangene Kwai-Aufnahme mit einem einzigen Klick. Dein Inhalt, deine URL, deine Kontrolle — unabhängig von der Kwai-App, im offenen öffentlichen Web, wo der Rest deines potenziellen Publikums dich endlich finden kann."
   },
   "jsonLd": {
     "name": {
@@ -626,7 +735,9 @@
       "mixch": "Mixch-Stream-Aufnahmen",
       "trovo": "Trovo-Stream-Aufnahmen",
       "twitcast": "TwitCasting-Stream-Aufnahmen",
-      "joilive": "Joilive-Stream-Aufnahmen"
+      "joilive": "Joilive-Stream-Aufnahmen",
+      "live17": "17live-Stream-Aufnahmen",
+      "kwai": "Kwai-Stream-Aufnahmen"
     },
     "description": {
       "all": "Sieh dir Live-Stream-Aufnahmen von Creatorn auf LiveStreamRecorder an.",
@@ -642,7 +753,9 @@
       "mixch": "Sieh dir Mixch-Aufnahmen von Creatorn auf LiveStreamRecorder an.",
       "trovo": "Sieh dir Trovo-Aufnahmen von Creatorn auf LiveStreamRecorder an.",
       "twitcast": "Sieh dir TwitCasting-Aufnahmen von Creatorn auf LiveStreamRecorder an.",
-      "joilive": "Sieh dir Joilive-Stream-Aufnahmen von Streamern auf LiveStreamRecorder an."
+      "joilive": "Sieh dir Joilive-Stream-Aufnahmen von Streamern auf LiveStreamRecorder an.",
+      "live17": "Sieh dir 17live-Stream-Aufnahmen von Streamern auf LiveStreamRecorder an.",
+      "kwai": "Sieh dir Kwai-Stream-Aufnahmen von Streamern auf LiveStreamRecorder an."
     },
     "streamTitle": "Stream von {nickname} – {date}",
     "streamDescription": {
@@ -659,7 +772,9 @@
       "mixch": "Mixch-Aufnahme von {nickname}",
       "trovo": "Trovo-Aufnahme von {nickname}",
       "twitcast": "TwitCasting-Aufnahme von {nickname}",
-      "joilive": "Joilive-Stream-Aufnahme von {nickname}"
+      "joilive": "Joilive-Stream-Aufnahme von {nickname}",
+      "live17": "17live-Stream-Aufnahme von {nickname}",
+      "kwai": "Kwai-Stream-Aufnahme von {nickname}"
     }
   },
   "recordedOn": "Aufgenommen am {date}",

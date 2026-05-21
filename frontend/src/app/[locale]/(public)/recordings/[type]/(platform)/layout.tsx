@@ -46,7 +46,7 @@ export default async function RecordingPage({ params, children }: PageProps) {
   const platformKey = platform.name ? type : "all";
   const aboutKey = type === "all" ? "all" : type;
 
-  // Only fetch countries when a specific platform is selected
+  // Only fetch countries when a specific platform is selected.
   const { countryCodes } = platform.name
     ? await getFollowerFilters(platform.name.toLowerCase() as FollowerTypeEnum)
     : { countryCodes: [] };

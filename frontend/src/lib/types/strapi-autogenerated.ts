@@ -10,6 +10,18 @@
  * ---------------------------------------------------------------
  */
 
+/** Filter by follow status */
+export enum ScopeEnum {
+  Following = "following",
+  Discover = "discover",
+}
+
+export enum ApiTokenTypeEnum {
+  ReadOnly = "read-only",
+  FullAccess = "full-access",
+  Custom = "custom",
+}
+
 export enum FollowerTypeEnum {
   Tiktok = "tiktok",
   Twitch = "twitch",
@@ -25,12 +37,8 @@ export enum FollowerTypeEnum {
   Twitcast = "twitcast",
   Trovo = "trovo",
   Joilive = "joilive",
-}
-
-/** Filter by follow status */
-export enum ScopeEnum {
-  Following = "following",
-  Discover = "discover",
+  Live17 = "live17",
+  Kwai = "kwai",
 }
 
 export interface Error {
@@ -79,7 +87,7 @@ export interface Activity {
     uniqueId?: string;
     nickname?: string;
     username?: string;
-    type?: ActivityTypeEnum;
+    type?: FollowerTypeEnum;
     gender?: ActivityGenderEnum;
     countryCode?: string;
     languageCode?: string;
@@ -186,6 +194,80 @@ export interface Activity {
                   id?: string | number;
                   documentId?: string;
                 };
+                apiToken?: {
+                  id?: string | number;
+                  documentId?: string;
+                  name?: string;
+                  description?: string;
+                  kind?: ActivityKindEnum;
+                  type?: ApiTokenTypeEnum;
+                  accessKey?: string;
+                  encryptedKey?: string;
+                  /** @format date-time */
+                  lastUsedAt?: string;
+                  permissions?: {
+                    id?: string | number;
+                    documentId?: string;
+                    action?: string;
+                    token?: {
+                      id?: string | number;
+                      documentId?: string;
+                    };
+                    /** @format date-time */
+                    createdAt?: string;
+                    /** @format date-time */
+                    updatedAt?: string;
+                    /** @format date-time */
+                    publishedAt?: string;
+                    createdBy?: {
+                      id?: string | number;
+                      documentId?: string;
+                    };
+                    updatedBy?: {
+                      id?: string | number;
+                      documentId?: string;
+                    };
+                    locale?: string;
+                    localizations?: {
+                      id?: string | number;
+                      documentId?: string;
+                    }[];
+                  }[];
+                  adminPermissions?: {
+                    id?: string | number;
+                    documentId?: string;
+                  }[];
+                  adminUserOwner?: {
+                    id?: string | number;
+                    documentId?: string;
+                  };
+                  /** @format date-time */
+                  expiresAt?: string;
+                  /**
+                   * @pattern ^\d*$
+                   * @example "123456789"
+                   */
+                  lifespan?: string;
+                  /** @format date-time */
+                  createdAt?: string;
+                  /** @format date-time */
+                  updatedAt?: string;
+                  /** @format date-time */
+                  publishedAt?: string;
+                  createdBy?: {
+                    id?: string | number;
+                    documentId?: string;
+                  };
+                  updatedBy?: {
+                    id?: string | number;
+                    documentId?: string;
+                  };
+                  locale?: string;
+                  localizations?: {
+                    id?: string | number;
+                    documentId?: string;
+                  }[];
+                };
                 /** @format date-time */
                 createdAt?: string;
                 /** @format date-time */
@@ -225,6 +307,10 @@ export interface Activity {
                 id?: string | number;
                 documentId?: string;
               }[];
+            }[];
+            apiTokens?: {
+              id?: string | number;
+              documentId?: string;
             }[];
             blocked?: boolean;
             preferedLanguage?: string;
@@ -571,7 +657,7 @@ export interface AiRequest {
     uniqueId?: string;
     nickname?: string;
     username?: string;
-    type?: AiRequestTypeEnum;
+    type?: FollowerTypeEnum;
     gender?: AiRequestGenderEnum;
     countryCode?: string;
     languageCode?: string;
@@ -678,6 +764,80 @@ export interface AiRequest {
                   id?: string | number;
                   documentId?: string;
                 };
+                apiToken?: {
+                  id?: string | number;
+                  documentId?: string;
+                  name?: string;
+                  description?: string;
+                  kind?: AiRequestKindEnum;
+                  type?: ApiTokenTypeEnum;
+                  accessKey?: string;
+                  encryptedKey?: string;
+                  /** @format date-time */
+                  lastUsedAt?: string;
+                  permissions?: {
+                    id?: string | number;
+                    documentId?: string;
+                    action?: string;
+                    token?: {
+                      id?: string | number;
+                      documentId?: string;
+                    };
+                    /** @format date-time */
+                    createdAt?: string;
+                    /** @format date-time */
+                    updatedAt?: string;
+                    /** @format date-time */
+                    publishedAt?: string;
+                    createdBy?: {
+                      id?: string | number;
+                      documentId?: string;
+                    };
+                    updatedBy?: {
+                      id?: string | number;
+                      documentId?: string;
+                    };
+                    locale?: string;
+                    localizations?: {
+                      id?: string | number;
+                      documentId?: string;
+                    }[];
+                  }[];
+                  adminPermissions?: {
+                    id?: string | number;
+                    documentId?: string;
+                  }[];
+                  adminUserOwner?: {
+                    id?: string | number;
+                    documentId?: string;
+                  };
+                  /** @format date-time */
+                  expiresAt?: string;
+                  /**
+                   * @pattern ^\d*$
+                   * @example "123456789"
+                   */
+                  lifespan?: string;
+                  /** @format date-time */
+                  createdAt?: string;
+                  /** @format date-time */
+                  updatedAt?: string;
+                  /** @format date-time */
+                  publishedAt?: string;
+                  createdBy?: {
+                    id?: string | number;
+                    documentId?: string;
+                  };
+                  updatedBy?: {
+                    id?: string | number;
+                    documentId?: string;
+                  };
+                  locale?: string;
+                  localizations?: {
+                    id?: string | number;
+                    documentId?: string;
+                  }[];
+                };
                 /** @format date-time */
                 createdAt?: string;
                 /** @format date-time */
@@ -717,6 +877,10 @@ export interface AiRequest {
                 id?: string | number;
                 documentId?: string;
               }[];
+            }[];
+            apiTokens?: {
+              id?: string | number;
+              documentId?: string;
             }[];
             blocked?: boolean;
             preferedLanguage?: string;
@@ -1202,7 +1366,7 @@ export interface AiTask {
       uniqueId?: string;
       nickname?: string;
       username?: string;
-      type?: AiTaskTypeEnum;
+      type?: FollowerTypeEnum;
       gender?: AiTaskGenderEnum;
       countryCode?: string;
       languageCode?: string;
@@ -1309,6 +1473,80 @@ export interface AiTask {
                     id?: string | number;
                     documentId?: string;
                   };
+                  apiToken?: {
+                    id?: string | number;
+                    documentId?: string;
+                    name?: string;
+                    description?: string;
+                    kind?: AiTaskKindEnum;
+                    type?: ApiTokenTypeEnum;
+                    accessKey?: string;
+                    encryptedKey?: string;
+                    /** @format date-time */
+                    lastUsedAt?: string;
+                    permissions?: {
+                      id?: string | number;
+                      documentId?: string;
+                      action?: string;
+                      token?: {
+                        id?: string | number;
+                        documentId?: string;
+                      };
+                      /** @format date-time */
+                      createdAt?: string;
+                      /** @format date-time */
+                      updatedAt?: string;
+                      /** @format date-time */
+                      publishedAt?: string;
+                      createdBy?: {
+                        id?: string | number;
+                        documentId?: string;
+                      };
+                      updatedBy?: {
+                        id?: string | number;
+                        documentId?: string;
+                      };
+                      locale?: string;
+                      localizations?: {
+                        id?: string | number;
+                        documentId?: string;
+                      }[];
+                    }[];
+                    adminPermissions?: {
+                      id?: string | number;
+                      documentId?: string;
+                    }[];
+                    adminUserOwner?: {
+                      id?: string | number;
+                      documentId?: string;
+                    };
+                    /** @format date-time */
+                    expiresAt?: string;
+                    /**
+                     * @pattern ^\d*$
+                     * @example "123456789"
+                     */
+                    lifespan?: string;
+                    /** @format date-time */
+                    createdAt?: string;
+                    /** @format date-time */
+                    updatedAt?: string;
+                    /** @format date-time */
+                    publishedAt?: string;
+                    createdBy?: {
+                      id?: string | number;
+                      documentId?: string;
+                    };
+                    updatedBy?: {
+                      id?: string | number;
+                      documentId?: string;
+                    };
+                    locale?: string;
+                    localizations?: {
+                      id?: string | number;
+                      documentId?: string;
+                    }[];
+                  };
                   /** @format date-time */
                   createdAt?: string;
                   /** @format date-time */
@@ -1348,6 +1586,10 @@ export interface AiTask {
                   id?: string | number;
                   documentId?: string;
                 }[];
+              }[];
+              apiTokens?: {
+                id?: string | number;
+                documentId?: string;
               }[];
               blocked?: boolean;
               preferedLanguage?: string;
@@ -1826,6 +2068,80 @@ export interface Announcement {
           id?: string | number;
           documentId?: string;
         };
+        apiToken?: {
+          id?: string | number;
+          documentId?: string;
+          name?: string;
+          description?: string;
+          kind?: AnnouncementKindEnum;
+          type?: ApiTokenTypeEnum;
+          accessKey?: string;
+          encryptedKey?: string;
+          /** @format date-time */
+          lastUsedAt?: string;
+          permissions?: {
+            id?: string | number;
+            documentId?: string;
+            action?: string;
+            token?: {
+              id?: string | number;
+              documentId?: string;
+            };
+            /** @format date-time */
+            createdAt?: string;
+            /** @format date-time */
+            updatedAt?: string;
+            /** @format date-time */
+            publishedAt?: string;
+            createdBy?: {
+              id?: string | number;
+              documentId?: string;
+            };
+            updatedBy?: {
+              id?: string | number;
+              documentId?: string;
+            };
+            locale?: string;
+            localizations?: {
+              id?: string | number;
+              documentId?: string;
+            }[];
+          }[];
+          adminPermissions?: {
+            id?: string | number;
+            documentId?: string;
+          }[];
+          adminUserOwner?: {
+            id?: string | number;
+            documentId?: string;
+          };
+          /** @format date-time */
+          expiresAt?: string;
+          /**
+           * @pattern ^\d*$
+           * @example "123456789"
+           */
+          lifespan?: string;
+          /** @format date-time */
+          createdAt?: string;
+          /** @format date-time */
+          updatedAt?: string;
+          /** @format date-time */
+          publishedAt?: string;
+          createdBy?: {
+            id?: string | number;
+            documentId?: string;
+          };
+          updatedBy?: {
+            id?: string | number;
+            documentId?: string;
+          };
+          locale?: string;
+          localizations?: {
+            id?: string | number;
+            documentId?: string;
+          }[];
+        };
         /** @format date-time */
         createdAt?: string;
         /** @format date-time */
@@ -1865,6 +2181,10 @@ export interface Announcement {
         id?: string | number;
         documentId?: string;
       }[];
+    }[];
+    apiTokens?: {
+      id?: string | number;
+      documentId?: string;
     }[];
     blocked?: boolean;
     preferedLanguage?: string;
@@ -1992,6 +2312,80 @@ export interface Article {
           id?: string | number;
           documentId?: string;
         };
+        apiToken?: {
+          id?: string | number;
+          documentId?: string;
+          name?: string;
+          description?: string;
+          kind?: ArticleKindEnum;
+          type?: ApiTokenTypeEnum;
+          accessKey?: string;
+          encryptedKey?: string;
+          /** @format date-time */
+          lastUsedAt?: string;
+          permissions?: {
+            id?: string | number;
+            documentId?: string;
+            action?: string;
+            token?: {
+              id?: string | number;
+              documentId?: string;
+            };
+            /** @format date-time */
+            createdAt?: string;
+            /** @format date-time */
+            updatedAt?: string;
+            /** @format date-time */
+            publishedAt?: string;
+            createdBy?: {
+              id?: string | number;
+              documentId?: string;
+            };
+            updatedBy?: {
+              id?: string | number;
+              documentId?: string;
+            };
+            locale?: string;
+            localizations?: {
+              id?: string | number;
+              documentId?: string;
+            }[];
+          }[];
+          adminPermissions?: {
+            id?: string | number;
+            documentId?: string;
+          }[];
+          adminUserOwner?: {
+            id?: string | number;
+            documentId?: string;
+          };
+          /** @format date-time */
+          expiresAt?: string;
+          /**
+           * @pattern ^\d*$
+           * @example "123456789"
+           */
+          lifespan?: string;
+          /** @format date-time */
+          createdAt?: string;
+          /** @format date-time */
+          updatedAt?: string;
+          /** @format date-time */
+          publishedAt?: string;
+          createdBy?: {
+            id?: string | number;
+            documentId?: string;
+          };
+          updatedBy?: {
+            id?: string | number;
+            documentId?: string;
+          };
+          locale?: string;
+          localizations?: {
+            id?: string | number;
+            documentId?: string;
+          }[];
+        };
         /** @format date-time */
         createdAt?: string;
         /** @format date-time */
@@ -2031,6 +2425,10 @@ export interface Article {
         id?: string | number;
         documentId?: string;
       }[];
+    }[];
+    apiTokens?: {
+      id?: string | number;
+      documentId?: string;
     }[];
     blocked?: boolean;
     preferedLanguage?: string;
@@ -2232,6 +2630,80 @@ export interface Blog {
                 id?: string | number;
                 documentId?: string;
               };
+              apiToken?: {
+                id?: string | number;
+                documentId?: string;
+                name?: string;
+                description?: string;
+                kind?: BlogKindEnum;
+                type?: ApiTokenTypeEnum;
+                accessKey?: string;
+                encryptedKey?: string;
+                /** @format date-time */
+                lastUsedAt?: string;
+                permissions?: {
+                  id?: string | number;
+                  documentId?: string;
+                  action?: string;
+                  token?: {
+                    id?: string | number;
+                    documentId?: string;
+                  };
+                  /** @format date-time */
+                  createdAt?: string;
+                  /** @format date-time */
+                  updatedAt?: string;
+                  /** @format date-time */
+                  publishedAt?: string;
+                  createdBy?: {
+                    id?: string | number;
+                    documentId?: string;
+                  };
+                  updatedBy?: {
+                    id?: string | number;
+                    documentId?: string;
+                  };
+                  locale?: string;
+                  localizations?: {
+                    id?: string | number;
+                    documentId?: string;
+                  }[];
+                }[];
+                adminPermissions?: {
+                  id?: string | number;
+                  documentId?: string;
+                }[];
+                adminUserOwner?: {
+                  id?: string | number;
+                  documentId?: string;
+                };
+                /** @format date-time */
+                expiresAt?: string;
+                /**
+                 * @pattern ^\d*$
+                 * @example "123456789"
+                 */
+                lifespan?: string;
+                /** @format date-time */
+                createdAt?: string;
+                /** @format date-time */
+                updatedAt?: string;
+                /** @format date-time */
+                publishedAt?: string;
+                createdBy?: {
+                  id?: string | number;
+                  documentId?: string;
+                };
+                updatedBy?: {
+                  id?: string | number;
+                  documentId?: string;
+                };
+                locale?: string;
+                localizations?: {
+                  id?: string | number;
+                  documentId?: string;
+                }[];
+              };
               /** @format date-time */
               createdAt?: string;
               /** @format date-time */
@@ -2271,6 +2743,10 @@ export interface Blog {
               id?: string | number;
               documentId?: string;
             }[];
+          }[];
+          apiTokens?: {
+            id?: string | number;
+            documentId?: string;
           }[];
           blocked?: boolean;
           preferedLanguage?: string;
@@ -2607,6 +3083,80 @@ export interface ChangeLog {
           id?: string | number;
           documentId?: string;
         };
+        apiToken?: {
+          id?: string | number;
+          documentId?: string;
+          name?: string;
+          description?: string;
+          kind?: ChangeLogKindEnum;
+          type?: ApiTokenTypeEnum;
+          accessKey?: string;
+          encryptedKey?: string;
+          /** @format date-time */
+          lastUsedAt?: string;
+          permissions?: {
+            id?: string | number;
+            documentId?: string;
+            action?: string;
+            token?: {
+              id?: string | number;
+              documentId?: string;
+            };
+            /** @format date-time */
+            createdAt?: string;
+            /** @format date-time */
+            updatedAt?: string;
+            /** @format date-time */
+            publishedAt?: string;
+            createdBy?: {
+              id?: string | number;
+              documentId?: string;
+            };
+            updatedBy?: {
+              id?: string | number;
+              documentId?: string;
+            };
+            locale?: string;
+            localizations?: {
+              id?: string | number;
+              documentId?: string;
+            }[];
+          }[];
+          adminPermissions?: {
+            id?: string | number;
+            documentId?: string;
+          }[];
+          adminUserOwner?: {
+            id?: string | number;
+            documentId?: string;
+          };
+          /** @format date-time */
+          expiresAt?: string;
+          /**
+           * @pattern ^\d*$
+           * @example "123456789"
+           */
+          lifespan?: string;
+          /** @format date-time */
+          createdAt?: string;
+          /** @format date-time */
+          updatedAt?: string;
+          /** @format date-time */
+          publishedAt?: string;
+          createdBy?: {
+            id?: string | number;
+            documentId?: string;
+          };
+          updatedBy?: {
+            id?: string | number;
+            documentId?: string;
+          };
+          locale?: string;
+          localizations?: {
+            id?: string | number;
+            documentId?: string;
+          }[];
+        };
         /** @format date-time */
         createdAt?: string;
         /** @format date-time */
@@ -2646,6 +3196,10 @@ export interface ChangeLog {
         id?: string | number;
         documentId?: string;
       }[];
+    }[];
+    apiTokens?: {
+      id?: string | number;
+      documentId?: string;
     }[];
     blocked?: boolean;
     preferedLanguage?: string;
@@ -2766,7 +3320,7 @@ export interface Clip {
     uniqueId?: string;
     nickname?: string;
     username?: string;
-    type?: ClipTypeEnum;
+    type?: FollowerTypeEnum;
     gender?: ClipGenderEnum;
     countryCode?: string;
     languageCode?: string;
@@ -2873,6 +3427,80 @@ export interface Clip {
                   id?: string | number;
                   documentId?: string;
                 };
+                apiToken?: {
+                  id?: string | number;
+                  documentId?: string;
+                  name?: string;
+                  description?: string;
+                  kind?: ClipKindEnum;
+                  type?: ApiTokenTypeEnum;
+                  accessKey?: string;
+                  encryptedKey?: string;
+                  /** @format date-time */
+                  lastUsedAt?: string;
+                  permissions?: {
+                    id?: string | number;
+                    documentId?: string;
+                    action?: string;
+                    token?: {
+                      id?: string | number;
+                      documentId?: string;
+                    };
+                    /** @format date-time */
+                    createdAt?: string;
+                    /** @format date-time */
+                    updatedAt?: string;
+                    /** @format date-time */
+                    publishedAt?: string;
+                    createdBy?: {
+                      id?: string | number;
+                      documentId?: string;
+                    };
+                    updatedBy?: {
+                      id?: string | number;
+                      documentId?: string;
+                    };
+                    locale?: string;
+                    localizations?: {
+                      id?: string | number;
+                      documentId?: string;
+                    }[];
+                  }[];
+                  adminPermissions?: {
+                    id?: string | number;
+                    documentId?: string;
+                  }[];
+                  adminUserOwner?: {
+                    id?: string | number;
+                    documentId?: string;
+                  };
+                  /** @format date-time */
+                  expiresAt?: string;
+                  /**
+                   * @pattern ^\d*$
+                   * @example "123456789"
+                   */
+                  lifespan?: string;
+                  /** @format date-time */
+                  createdAt?: string;
+                  /** @format date-time */
+                  updatedAt?: string;
+                  /** @format date-time */
+                  publishedAt?: string;
+                  createdBy?: {
+                    id?: string | number;
+                    documentId?: string;
+                  };
+                  updatedBy?: {
+                    id?: string | number;
+                    documentId?: string;
+                  };
+                  locale?: string;
+                  localizations?: {
+                    id?: string | number;
+                    documentId?: string;
+                  }[];
+                };
                 /** @format date-time */
                 createdAt?: string;
                 /** @format date-time */
@@ -2912,6 +3540,10 @@ export interface Clip {
                 id?: string | number;
                 documentId?: string;
               }[];
+            }[];
+            apiTokens?: {
+              id?: string | number;
+              documentId?: string;
             }[];
             blocked?: boolean;
             preferedLanguage?: string;
@@ -3353,7 +3985,7 @@ export interface ClipShare {
       uniqueId?: string;
       nickname?: string;
       username?: string;
-      type?: ClipShareTypeEnum;
+      type?: FollowerTypeEnum;
       gender?: ClipShareGenderEnum;
       countryCode?: string;
       languageCode?: string;
@@ -3460,6 +4092,80 @@ export interface ClipShare {
                     id?: string | number;
                     documentId?: string;
                   };
+                  apiToken?: {
+                    id?: string | number;
+                    documentId?: string;
+                    name?: string;
+                    description?: string;
+                    kind?: ClipShareKindEnum;
+                    type?: ApiTokenTypeEnum;
+                    accessKey?: string;
+                    encryptedKey?: string;
+                    /** @format date-time */
+                    lastUsedAt?: string;
+                    permissions?: {
+                      id?: string | number;
+                      documentId?: string;
+                      action?: string;
+                      token?: {
+                        id?: string | number;
+                        documentId?: string;
+                      };
+                      /** @format date-time */
+                      createdAt?: string;
+                      /** @format date-time */
+                      updatedAt?: string;
+                      /** @format date-time */
+                      publishedAt?: string;
+                      createdBy?: {
+                        id?: string | number;
+                        documentId?: string;
+                      };
+                      updatedBy?: {
+                        id?: string | number;
+                        documentId?: string;
+                      };
+                      locale?: string;
+                      localizations?: {
+                        id?: string | number;
+                        documentId?: string;
+                      }[];
+                    }[];
+                    adminPermissions?: {
+                      id?: string | number;
+                      documentId?: string;
+                    }[];
+                    adminUserOwner?: {
+                      id?: string | number;
+                      documentId?: string;
+                    };
+                    /** @format date-time */
+                    expiresAt?: string;
+                    /**
+                     * @pattern ^\d*$
+                     * @example "123456789"
+                     */
+                    lifespan?: string;
+                    /** @format date-time */
+                    createdAt?: string;
+                    /** @format date-time */
+                    updatedAt?: string;
+                    /** @format date-time */
+                    publishedAt?: string;
+                    createdBy?: {
+                      id?: string | number;
+                      documentId?: string;
+                    };
+                    updatedBy?: {
+                      id?: string | number;
+                      documentId?: string;
+                    };
+                    locale?: string;
+                    localizations?: {
+                      id?: string | number;
+                      documentId?: string;
+                    }[];
+                  };
                   /** @format date-time */
                   createdAt?: string;
                   /** @format date-time */
@@ -3499,6 +4205,10 @@ export interface ClipShare {
                   id?: string | number;
                   documentId?: string;
                 }[];
+              }[];
+              apiTokens?: {
+                id?: string | number;
+                documentId?: string;
               }[];
               blocked?: boolean;
               preferedLanguage?: string;
@@ -3977,6 +4687,80 @@ export interface EmailTemplate {
           id?: string | number;
           documentId?: string;
         };
+        apiToken?: {
+          id?: string | number;
+          documentId?: string;
+          name?: string;
+          description?: string;
+          kind?: EmailTemplateKindEnum;
+          type?: ApiTokenTypeEnum;
+          accessKey?: string;
+          encryptedKey?: string;
+          /** @format date-time */
+          lastUsedAt?: string;
+          permissions?: {
+            id?: string | number;
+            documentId?: string;
+            action?: string;
+            token?: {
+              id?: string | number;
+              documentId?: string;
+            };
+            /** @format date-time */
+            createdAt?: string;
+            /** @format date-time */
+            updatedAt?: string;
+            /** @format date-time */
+            publishedAt?: string;
+            createdBy?: {
+              id?: string | number;
+              documentId?: string;
+            };
+            updatedBy?: {
+              id?: string | number;
+              documentId?: string;
+            };
+            locale?: string;
+            localizations?: {
+              id?: string | number;
+              documentId?: string;
+            }[];
+          }[];
+          adminPermissions?: {
+            id?: string | number;
+            documentId?: string;
+          }[];
+          adminUserOwner?: {
+            id?: string | number;
+            documentId?: string;
+          };
+          /** @format date-time */
+          expiresAt?: string;
+          /**
+           * @pattern ^\d*$
+           * @example "123456789"
+           */
+          lifespan?: string;
+          /** @format date-time */
+          createdAt?: string;
+          /** @format date-time */
+          updatedAt?: string;
+          /** @format date-time */
+          publishedAt?: string;
+          createdBy?: {
+            id?: string | number;
+            documentId?: string;
+          };
+          updatedBy?: {
+            id?: string | number;
+            documentId?: string;
+          };
+          locale?: string;
+          localizations?: {
+            id?: string | number;
+            documentId?: string;
+          }[];
+        };
         /** @format date-time */
         createdAt?: string;
         /** @format date-time */
@@ -4016,6 +4800,10 @@ export interface EmailTemplate {
         id?: string | number;
         documentId?: string;
       }[];
+    }[];
+    apiTokens?: {
+      id?: string | number;
+      documentId?: string;
     }[];
     blocked?: boolean;
     preferedLanguage?: string;
@@ -4088,7 +4876,7 @@ export interface FollowerRequest {
     uniqueId?: string;
     nickname?: string;
     username: string;
-    type: FollowerRequestTypeEnum;
+    type: FollowerTypeEnum;
     gender?: FollowerRequestGenderEnum;
     countryCode?: string;
     languageCode?: string;
@@ -4248,6 +5036,80 @@ export interface Follower {
                 id?: string | number;
                 documentId?: string;
               };
+              apiToken?: {
+                id?: string | number;
+                documentId?: string;
+                name?: string;
+                description?: string;
+                kind?: FollowerKindEnum;
+                type?: ApiTokenTypeEnum;
+                accessKey?: string;
+                encryptedKey?: string;
+                /** @format date-time */
+                lastUsedAt?: string;
+                permissions?: {
+                  id?: string | number;
+                  documentId?: string;
+                  action?: string;
+                  token?: {
+                    id?: string | number;
+                    documentId?: string;
+                  };
+                  /** @format date-time */
+                  createdAt?: string;
+                  /** @format date-time */
+                  updatedAt?: string;
+                  /** @format date-time */
+                  publishedAt?: string;
+                  createdBy?: {
+                    id?: string | number;
+                    documentId?: string;
+                  };
+                  updatedBy?: {
+                    id?: string | number;
+                    documentId?: string;
+                  };
+                  locale?: string;
+                  localizations?: {
+                    id?: string | number;
+                    documentId?: string;
+                  }[];
+                }[];
+                adminPermissions?: {
+                  id?: string | number;
+                  documentId?: string;
+                }[];
+                adminUserOwner?: {
+                  id?: string | number;
+                  documentId?: string;
+                };
+                /** @format date-time */
+                expiresAt?: string;
+                /**
+                 * @pattern ^\d*$
+                 * @example "123456789"
+                 */
+                lifespan?: string;
+                /** @format date-time */
+                createdAt?: string;
+                /** @format date-time */
+                updatedAt?: string;
+                /** @format date-time */
+                publishedAt?: string;
+                createdBy?: {
+                  id?: string | number;
+                  documentId?: string;
+                };
+                updatedBy?: {
+                  id?: string | number;
+                  documentId?: string;
+                };
+                locale?: string;
+                localizations?: {
+                  id?: string | number;
+                  documentId?: string;
+                }[];
+              };
               /** @format date-time */
               createdAt?: string;
               /** @format date-time */
@@ -4287,6 +5149,10 @@ export interface Follower {
               id?: string | number;
               documentId?: string;
             }[];
+          }[];
+          apiTokens?: {
+            id?: string | number;
+            documentId?: string;
           }[];
           blocked?: boolean;
           preferedLanguage?: string;
@@ -4703,7 +5569,7 @@ export interface Meme {
       uniqueId?: string;
       nickname?: string;
       username?: string;
-      type?: MemeTypeEnum1;
+      type?: FollowerTypeEnum;
       gender?: MemeGenderEnum;
       countryCode?: string;
       languageCode?: string;
@@ -4810,6 +5676,80 @@ export interface Meme {
                     id?: string | number;
                     documentId?: string;
                   };
+                  apiToken?: {
+                    id?: string | number;
+                    documentId?: string;
+                    name?: string;
+                    description?: string;
+                    kind?: MemeKindEnum;
+                    type?: ApiTokenTypeEnum;
+                    accessKey?: string;
+                    encryptedKey?: string;
+                    /** @format date-time */
+                    lastUsedAt?: string;
+                    permissions?: {
+                      id?: string | number;
+                      documentId?: string;
+                      action?: string;
+                      token?: {
+                        id?: string | number;
+                        documentId?: string;
+                      };
+                      /** @format date-time */
+                      createdAt?: string;
+                      /** @format date-time */
+                      updatedAt?: string;
+                      /** @format date-time */
+                      publishedAt?: string;
+                      createdBy?: {
+                        id?: string | number;
+                        documentId?: string;
+                      };
+                      updatedBy?: {
+                        id?: string | number;
+                        documentId?: string;
+                      };
+                      locale?: string;
+                      localizations?: {
+                        id?: string | number;
+                        documentId?: string;
+                      }[];
+                    }[];
+                    adminPermissions?: {
+                      id?: string | number;
+                      documentId?: string;
+                    }[];
+                    adminUserOwner?: {
+                      id?: string | number;
+                      documentId?: string;
+                    };
+                    /** @format date-time */
+                    expiresAt?: string;
+                    /**
+                     * @pattern ^\d*$
+                     * @example "123456789"
+                     */
+                    lifespan?: string;
+                    /** @format date-time */
+                    createdAt?: string;
+                    /** @format date-time */
+                    updatedAt?: string;
+                    /** @format date-time */
+                    publishedAt?: string;
+                    createdBy?: {
+                      id?: string | number;
+                      documentId?: string;
+                    };
+                    updatedBy?: {
+                      id?: string | number;
+                      documentId?: string;
+                    };
+                    locale?: string;
+                    localizations?: {
+                      id?: string | number;
+                      documentId?: string;
+                    }[];
+                  };
                   /** @format date-time */
                   createdAt?: string;
                   /** @format date-time */
@@ -4849,6 +5789,10 @@ export interface Meme {
                   id?: string | number;
                   documentId?: string;
                 }[];
+              }[];
+              apiTokens?: {
+                id?: string | number;
+                documentId?: string;
               }[];
               blocked?: boolean;
               preferedLanguage?: string;
@@ -5188,7 +6132,7 @@ export interface Meme {
     title?: string;
     transcript?: string;
     tags?: string;
-    type?: MemeTypeEnum2;
+    type?: MemeTypeEnum1;
     start?: string;
     duration?: number;
     end?: string;
@@ -5379,6 +6323,80 @@ export interface Recording {
                   id?: string | number;
                   documentId?: string;
                 };
+                apiToken?: {
+                  id?: string | number;
+                  documentId?: string;
+                  name?: string;
+                  description?: string;
+                  kind?: RecordingKindEnum;
+                  type?: ApiTokenTypeEnum;
+                  accessKey?: string;
+                  encryptedKey?: string;
+                  /** @format date-time */
+                  lastUsedAt?: string;
+                  permissions?: {
+                    id?: string | number;
+                    documentId?: string;
+                    action?: string;
+                    token?: {
+                      id?: string | number;
+                      documentId?: string;
+                    };
+                    /** @format date-time */
+                    createdAt?: string;
+                    /** @format date-time */
+                    updatedAt?: string;
+                    /** @format date-time */
+                    publishedAt?: string;
+                    createdBy?: {
+                      id?: string | number;
+                      documentId?: string;
+                    };
+                    updatedBy?: {
+                      id?: string | number;
+                      documentId?: string;
+                    };
+                    locale?: string;
+                    localizations?: {
+                      id?: string | number;
+                      documentId?: string;
+                    }[];
+                  }[];
+                  adminPermissions?: {
+                    id?: string | number;
+                    documentId?: string;
+                  }[];
+                  adminUserOwner?: {
+                    id?: string | number;
+                    documentId?: string;
+                  };
+                  /** @format date-time */
+                  expiresAt?: string;
+                  /**
+                   * @pattern ^\d*$
+                   * @example "123456789"
+                   */
+                  lifespan?: string;
+                  /** @format date-time */
+                  createdAt?: string;
+                  /** @format date-time */
+                  updatedAt?: string;
+                  /** @format date-time */
+                  publishedAt?: string;
+                  createdBy?: {
+                    id?: string | number;
+                    documentId?: string;
+                  };
+                  updatedBy?: {
+                    id?: string | number;
+                    documentId?: string;
+                  };
+                  locale?: string;
+                  localizations?: {
+                    id?: string | number;
+                    documentId?: string;
+                  }[];
+                };
                 /** @format date-time */
                 createdAt?: string;
                 /** @format date-time */
@@ -5418,6 +6436,10 @@ export interface Recording {
                 id?: string | number;
                 documentId?: string;
               }[];
+            }[];
+            apiTokens?: {
+              id?: string | number;
+              documentId?: string;
             }[];
             blocked?: boolean;
             preferedLanguage?: string;
@@ -5774,6 +6796,80 @@ export interface Report {
           id?: string | number;
           documentId?: string;
         };
+        apiToken?: {
+          id?: string | number;
+          documentId?: string;
+          name?: string;
+          description?: string;
+          kind?: ReportKindEnum;
+          type?: ApiTokenTypeEnum;
+          accessKey?: string;
+          encryptedKey?: string;
+          /** @format date-time */
+          lastUsedAt?: string;
+          permissions?: {
+            id?: string | number;
+            documentId?: string;
+            action?: string;
+            token?: {
+              id?: string | number;
+              documentId?: string;
+            };
+            /** @format date-time */
+            createdAt?: string;
+            /** @format date-time */
+            updatedAt?: string;
+            /** @format date-time */
+            publishedAt?: string;
+            createdBy?: {
+              id?: string | number;
+              documentId?: string;
+            };
+            updatedBy?: {
+              id?: string | number;
+              documentId?: string;
+            };
+            locale?: string;
+            localizations?: {
+              id?: string | number;
+              documentId?: string;
+            }[];
+          }[];
+          adminPermissions?: {
+            id?: string | number;
+            documentId?: string;
+          }[];
+          adminUserOwner?: {
+            id?: string | number;
+            documentId?: string;
+          };
+          /** @format date-time */
+          expiresAt?: string;
+          /**
+           * @pattern ^\d*$
+           * @example "123456789"
+           */
+          lifespan?: string;
+          /** @format date-time */
+          createdAt?: string;
+          /** @format date-time */
+          updatedAt?: string;
+          /** @format date-time */
+          publishedAt?: string;
+          createdBy?: {
+            id?: string | number;
+            documentId?: string;
+          };
+          updatedBy?: {
+            id?: string | number;
+            documentId?: string;
+          };
+          locale?: string;
+          localizations?: {
+            id?: string | number;
+            documentId?: string;
+          }[];
+        };
         /** @format date-time */
         createdAt?: string;
         /** @format date-time */
@@ -5813,6 +6909,10 @@ export interface Report {
         id?: string | number;
         documentId?: string;
       }[];
+    }[];
+    apiTokens?: {
+      id?: string | number;
+      documentId?: string;
     }[];
     blocked?: boolean;
     preferedLanguage?: string;
@@ -5981,6 +7081,80 @@ export interface SocialAccount {
                 id?: string | number;
                 documentId?: string;
               };
+              apiToken?: {
+                id?: string | number;
+                documentId?: string;
+                name?: string;
+                description?: string;
+                kind?: SocialAccountKindEnum;
+                type?: ApiTokenTypeEnum;
+                accessKey?: string;
+                encryptedKey?: string;
+                /** @format date-time */
+                lastUsedAt?: string;
+                permissions?: {
+                  id?: string | number;
+                  documentId?: string;
+                  action?: string;
+                  token?: {
+                    id?: string | number;
+                    documentId?: string;
+                  };
+                  /** @format date-time */
+                  createdAt?: string;
+                  /** @format date-time */
+                  updatedAt?: string;
+                  /** @format date-time */
+                  publishedAt?: string;
+                  createdBy?: {
+                    id?: string | number;
+                    documentId?: string;
+                  };
+                  updatedBy?: {
+                    id?: string | number;
+                    documentId?: string;
+                  };
+                  locale?: string;
+                  localizations?: {
+                    id?: string | number;
+                    documentId?: string;
+                  }[];
+                }[];
+                adminPermissions?: {
+                  id?: string | number;
+                  documentId?: string;
+                }[];
+                adminUserOwner?: {
+                  id?: string | number;
+                  documentId?: string;
+                };
+                /** @format date-time */
+                expiresAt?: string;
+                /**
+                 * @pattern ^\d*$
+                 * @example "123456789"
+                 */
+                lifespan?: string;
+                /** @format date-time */
+                createdAt?: string;
+                /** @format date-time */
+                updatedAt?: string;
+                /** @format date-time */
+                publishedAt?: string;
+                createdBy?: {
+                  id?: string | number;
+                  documentId?: string;
+                };
+                updatedBy?: {
+                  id?: string | number;
+                  documentId?: string;
+                };
+                locale?: string;
+                localizations?: {
+                  id?: string | number;
+                  documentId?: string;
+                }[];
+              };
               /** @format date-time */
               createdAt?: string;
               /** @format date-time */
@@ -6020,6 +7194,10 @@ export interface SocialAccount {
               id?: string | number;
               documentId?: string;
             }[];
+          }[];
+          apiTokens?: {
+            id?: string | number;
+            documentId?: string;
           }[];
           blocked?: boolean;
           preferedLanguage?: string;
@@ -6087,7 +7265,7 @@ export interface SocialAccount {
       uniqueId?: string;
       nickname?: string;
       username?: string;
-      type?: SocialAccountTypeEnum;
+      type?: FollowerTypeEnum;
       gender?: SocialAccountGenderEnum;
       countryCode?: string;
       languageCode?: string;
@@ -6416,7 +7594,7 @@ export interface Source {
       uniqueId?: string;
       nickname?: string;
       username?: string;
-      type?: SourceTypeEnum;
+      type?: FollowerTypeEnum;
       gender?: SourceGenderEnum;
       countryCode?: string;
       languageCode?: string;
@@ -6523,6 +7701,80 @@ export interface Source {
                     id?: string | number;
                     documentId?: string;
                   };
+                  apiToken?: {
+                    id?: string | number;
+                    documentId?: string;
+                    name?: string;
+                    description?: string;
+                    kind?: SourceKindEnum;
+                    type?: ApiTokenTypeEnum;
+                    accessKey?: string;
+                    encryptedKey?: string;
+                    /** @format date-time */
+                    lastUsedAt?: string;
+                    permissions?: {
+                      id?: string | number;
+                      documentId?: string;
+                      action?: string;
+                      token?: {
+                        id?: string | number;
+                        documentId?: string;
+                      };
+                      /** @format date-time */
+                      createdAt?: string;
+                      /** @format date-time */
+                      updatedAt?: string;
+                      /** @format date-time */
+                      publishedAt?: string;
+                      createdBy?: {
+                        id?: string | number;
+                        documentId?: string;
+                      };
+                      updatedBy?: {
+                        id?: string | number;
+                        documentId?: string;
+                      };
+                      locale?: string;
+                      localizations?: {
+                        id?: string | number;
+                        documentId?: string;
+                      }[];
+                    }[];
+                    adminPermissions?: {
+                      id?: string | number;
+                      documentId?: string;
+                    }[];
+                    adminUserOwner?: {
+                      id?: string | number;
+                      documentId?: string;
+                    };
+                    /** @format date-time */
+                    expiresAt?: string;
+                    /**
+                     * @pattern ^\d*$
+                     * @example "123456789"
+                     */
+                    lifespan?: string;
+                    /** @format date-time */
+                    createdAt?: string;
+                    /** @format date-time */
+                    updatedAt?: string;
+                    /** @format date-time */
+                    publishedAt?: string;
+                    createdBy?: {
+                      id?: string | number;
+                      documentId?: string;
+                    };
+                    updatedBy?: {
+                      id?: string | number;
+                      documentId?: string;
+                    };
+                    locale?: string;
+                    localizations?: {
+                      id?: string | number;
+                      documentId?: string;
+                    }[];
+                  };
                   /** @format date-time */
                   createdAt?: string;
                   /** @format date-time */
@@ -6562,6 +7814,10 @@ export interface Source {
                   id?: string | number;
                   documentId?: string;
                 }[];
+              }[];
+              apiTokens?: {
+                id?: string | number;
+                documentId?: string;
               }[];
               blocked?: boolean;
               preferedLanguage?: string;
@@ -6944,7 +8200,7 @@ export interface VisitorView {
       uniqueId?: string;
       nickname?: string;
       username?: string;
-      type?: VisitorViewTypeEnum;
+      type?: FollowerTypeEnum;
       gender?: VisitorViewGenderEnum;
       countryCode?: string;
       languageCode?: string;
@@ -7051,6 +8307,80 @@ export interface VisitorView {
                     id?: string | number;
                     documentId?: string;
                   };
+                  apiToken?: {
+                    id?: string | number;
+                    documentId?: string;
+                    name?: string;
+                    description?: string;
+                    kind?: VisitorViewKindEnum;
+                    type?: ApiTokenTypeEnum;
+                    accessKey?: string;
+                    encryptedKey?: string;
+                    /** @format date-time */
+                    lastUsedAt?: string;
+                    permissions?: {
+                      id?: string | number;
+                      documentId?: string;
+                      action?: string;
+                      token?: {
+                        id?: string | number;
+                        documentId?: string;
+                      };
+                      /** @format date-time */
+                      createdAt?: string;
+                      /** @format date-time */
+                      updatedAt?: string;
+                      /** @format date-time */
+                      publishedAt?: string;
+                      createdBy?: {
+                        id?: string | number;
+                        documentId?: string;
+                      };
+                      updatedBy?: {
+                        id?: string | number;
+                        documentId?: string;
+                      };
+                      locale?: string;
+                      localizations?: {
+                        id?: string | number;
+                        documentId?: string;
+                      }[];
+                    }[];
+                    adminPermissions?: {
+                      id?: string | number;
+                      documentId?: string;
+                    }[];
+                    adminUserOwner?: {
+                      id?: string | number;
+                      documentId?: string;
+                    };
+                    /** @format date-time */
+                    expiresAt?: string;
+                    /**
+                     * @pattern ^\d*$
+                     * @example "123456789"
+                     */
+                    lifespan?: string;
+                    /** @format date-time */
+                    createdAt?: string;
+                    /** @format date-time */
+                    updatedAt?: string;
+                    /** @format date-time */
+                    publishedAt?: string;
+                    createdBy?: {
+                      id?: string | number;
+                      documentId?: string;
+                    };
+                    updatedBy?: {
+                      id?: string | number;
+                      documentId?: string;
+                    };
+                    locale?: string;
+                    localizations?: {
+                      id?: string | number;
+                      documentId?: string;
+                    }[];
+                  };
                   /** @format date-time */
                   createdAt?: string;
                   /** @format date-time */
@@ -7090,6 +8420,10 @@ export interface VisitorView {
                   id?: string | number;
                   documentId?: string;
                 }[];
+              }[];
+              apiTokens?: {
+                id?: string | number;
+                documentId?: string;
               }[];
               blocked?: boolean;
               preferedLanguage?: string;
@@ -7582,27 +8916,15 @@ export interface FiltersResponse {
   types?: FilterOption[];
 }
 
-export enum ActivityTypeEnum {
-  Tiktok = "tiktok",
-  Twitch = "twitch",
-  Kick = "kick",
-  Youtube = "youtube",
-  Afreecatv = "afreecatv",
-  Pandalive = "pandalive",
-  Bigo = "bigo",
-  Tango = "tango",
-  Buzzcast = "buzzcast",
-  Liveme = "liveme",
-  Mixch = "mixch",
-  Twitcast = "twitcast",
-  Trovo = "trovo",
-  Joilive = "joilive",
-}
-
 export enum ActivityGenderEnum {
   Male = "male",
   Female = "female",
   Unknown = "unknown",
+}
+
+export enum ActivityKindEnum {
+  ContentApi = "content-api",
+  Admin = "admin",
 }
 
 export enum ActivityProviderEnum {
@@ -7633,27 +8955,15 @@ export enum AiRequestRequestStateEnum {
   Failed = "failed",
 }
 
-export enum AiRequestTypeEnum {
-  Tiktok = "tiktok",
-  Twitch = "twitch",
-  Kick = "kick",
-  Youtube = "youtube",
-  Afreecatv = "afreecatv",
-  Pandalive = "pandalive",
-  Bigo = "bigo",
-  Tango = "tango",
-  Buzzcast = "buzzcast",
-  Liveme = "liveme",
-  Mixch = "mixch",
-  Twitcast = "twitcast",
-  Trovo = "trovo",
-  Joilive = "joilive",
-}
-
 export enum AiRequestGenderEnum {
   Male = "male",
   Female = "female",
   Unknown = "unknown",
+}
+
+export enum AiRequestKindEnum {
+  ContentApi = "content-api",
+  Admin = "admin",
 }
 
 export enum AiRequestProviderEnum {
@@ -7712,27 +9022,15 @@ export enum AiTaskRequestStateEnum {
   Failed = "failed",
 }
 
-export enum AiTaskTypeEnum {
-  Tiktok = "tiktok",
-  Twitch = "twitch",
-  Kick = "kick",
-  Youtube = "youtube",
-  Afreecatv = "afreecatv",
-  Pandalive = "pandalive",
-  Bigo = "bigo",
-  Tango = "tango",
-  Buzzcast = "buzzcast",
-  Liveme = "liveme",
-  Mixch = "mixch",
-  Twitcast = "twitcast",
-  Trovo = "trovo",
-  Joilive = "joilive",
-}
-
 export enum AiTaskGenderEnum {
   Male = "male",
   Female = "female",
   Unknown = "unknown",
+}
+
+export enum AiTaskKindEnum {
+  ContentApi = "content-api",
+  Admin = "admin",
 }
 
 export enum AiTaskProviderEnum {
@@ -7796,33 +9094,41 @@ export enum AnnouncementTypeEnum {
   Important = "important",
 }
 
+export enum AnnouncementKindEnum {
+  ContentApi = "content-api",
+  Admin = "admin",
+}
+
 export enum AnnouncementTypeEnum1 {
   Info = "info",
   Warning = "warning",
   Important = "important",
 }
 
-export enum ClipTypeEnum {
-  Tiktok = "tiktok",
-  Twitch = "twitch",
-  Kick = "kick",
-  Youtube = "youtube",
-  Afreecatv = "afreecatv",
-  Pandalive = "pandalive",
-  Bigo = "bigo",
-  Tango = "tango",
-  Buzzcast = "buzzcast",
-  Liveme = "liveme",
-  Mixch = "mixch",
-  Twitcast = "twitcast",
-  Trovo = "trovo",
-  Joilive = "joilive",
+export enum ArticleKindEnum {
+  ContentApi = "content-api",
+  Admin = "admin",
+}
+
+export enum BlogKindEnum {
+  ContentApi = "content-api",
+  Admin = "admin",
+}
+
+export enum ChangeLogKindEnum {
+  ContentApi = "content-api",
+  Admin = "admin",
 }
 
 export enum ClipGenderEnum {
   Male = "male",
   Female = "female",
   Unknown = "unknown",
+}
+
+export enum ClipKindEnum {
+  ContentApi = "content-api",
+  Admin = "admin",
 }
 
 export enum ClipProviderEnum {
@@ -7859,27 +9165,15 @@ export enum ClipShareRequestStateEnum {
   Processing = "processing",
 }
 
-export enum ClipShareTypeEnum {
-  Tiktok = "tiktok",
-  Twitch = "twitch",
-  Kick = "kick",
-  Youtube = "youtube",
-  Afreecatv = "afreecatv",
-  Pandalive = "pandalive",
-  Bigo = "bigo",
-  Tango = "tango",
-  Buzzcast = "buzzcast",
-  Liveme = "liveme",
-  Mixch = "mixch",
-  Twitcast = "twitcast",
-  Trovo = "trovo",
-  Joilive = "joilive",
-}
-
 export enum ClipShareGenderEnum {
   Male = "male",
   Female = "female",
   Unknown = "unknown",
+}
+
+export enum ClipShareKindEnum {
+  ContentApi = "content-api",
+  Admin = "admin",
 }
 
 export enum ClipShareProviderEnum {
@@ -7922,21 +9216,9 @@ export enum ClipShareStateEnum2 {
   Processing = "processing",
 }
 
-export enum FollowerRequestTypeEnum {
-  Tiktok = "tiktok",
-  Twitch = "twitch",
-  Kick = "kick",
-  Youtube = "youtube",
-  Afreecatv = "afreecatv",
-  Pandalive = "pandalive",
-  Bigo = "bigo",
-  Tango = "tango",
-  Buzzcast = "buzzcast",
-  Liveme = "liveme",
-  Mixch = "mixch",
-  Twitcast = "twitcast",
-  Trovo = "trovo",
-  Joilive = "joilive",
+export enum EmailTemplateKindEnum {
+  ContentApi = "content-api",
+  Admin = "admin",
 }
 
 export enum FollowerRequestGenderEnum {
@@ -7949,6 +9231,11 @@ export enum FollowerGenderEnum {
   Male = "male",
   Female = "female",
   Unknown = "unknown",
+}
+
+export enum FollowerKindEnum {
+  ContentApi = "content-api",
+  Admin = "admin",
 }
 
 export enum FollowerGenderEnum1 {
@@ -7988,27 +9275,15 @@ export enum MemeTypeEnum {
   ValueGif = ".gif",
 }
 
-export enum MemeTypeEnum1 {
-  Tiktok = "tiktok",
-  Twitch = "twitch",
-  Kick = "kick",
-  Youtube = "youtube",
-  Afreecatv = "afreecatv",
-  Pandalive = "pandalive",
-  Bigo = "bigo",
-  Tango = "tango",
-  Buzzcast = "buzzcast",
-  Liveme = "liveme",
-  Mixch = "mixch",
-  Twitcast = "twitcast",
-  Trovo = "trovo",
-  Joilive = "joilive",
-}
-
 export enum MemeGenderEnum {
   Male = "male",
   Female = "female",
   Unknown = "unknown",
+}
+
+export enum MemeKindEnum {
+  ContentApi = "content-api",
+  Admin = "admin",
 }
 
 export enum MemeProviderEnum {
@@ -8039,7 +9314,7 @@ export enum MemeStateEnum {
   Failed = "failed",
 }
 
-export enum MemeTypeEnum2 {
+export enum MemeTypeEnum1 {
   ValueMp4 = ".mp4",
   ValueGif = ".gif",
 }
@@ -8048,6 +9323,11 @@ export enum RecordingGenderEnum {
   Male = "male",
   Female = "female",
   Unknown = "unknown",
+}
+
+export enum RecordingKindEnum {
+  ContentApi = "content-api",
+  Admin = "admin",
 }
 
 export enum RecordingProviderEnum {
@@ -8071,6 +9351,11 @@ export enum RecordingPaymentProviderEnum {
   Mollie = "mollie",
 }
 
+export enum ReportKindEnum {
+  ContentApi = "content-api",
+  Admin = "admin",
+}
+
 export enum SocialAccountRequestProviderEnum {
   Google = "google",
   Apple = "apple",
@@ -8087,21 +9372,9 @@ export enum SocialAccountProviderEnum {
   Youtube = "youtube",
 }
 
-export enum SocialAccountTypeEnum {
-  Tiktok = "tiktok",
-  Twitch = "twitch",
-  Kick = "kick",
-  Youtube = "youtube",
-  Afreecatv = "afreecatv",
-  Pandalive = "pandalive",
-  Bigo = "bigo",
-  Tango = "tango",
-  Buzzcast = "buzzcast",
-  Liveme = "liveme",
-  Mixch = "mixch",
-  Twitcast = "twitcast",
-  Trovo = "trovo",
-  Joilive = "joilive",
+export enum SocialAccountKindEnum {
+  ContentApi = "content-api",
+  Admin = "admin",
 }
 
 export enum SocialAccountGenderEnum {
@@ -8145,27 +9418,15 @@ export enum SourceStateEnum {
   Failed = "failed",
 }
 
-export enum SourceTypeEnum {
-  Tiktok = "tiktok",
-  Twitch = "twitch",
-  Kick = "kick",
-  Youtube = "youtube",
-  Afreecatv = "afreecatv",
-  Pandalive = "pandalive",
-  Bigo = "bigo",
-  Tango = "tango",
-  Buzzcast = "buzzcast",
-  Liveme = "liveme",
-  Mixch = "mixch",
-  Twitcast = "twitcast",
-  Trovo = "trovo",
-  Joilive = "joilive",
-}
-
 export enum SourceGenderEnum {
   Male = "male",
   Female = "female",
   Unknown = "unknown",
+}
+
+export enum SourceKindEnum {
+  ContentApi = "content-api",
+  Admin = "admin",
 }
 
 export enum SourceProviderEnum {
@@ -8196,27 +9457,15 @@ export enum SourceStateEnum1 {
   Failed = "failed",
 }
 
-export enum VisitorViewTypeEnum {
-  Tiktok = "tiktok",
-  Twitch = "twitch",
-  Kick = "kick",
-  Youtube = "youtube",
-  Afreecatv = "afreecatv",
-  Pandalive = "pandalive",
-  Bigo = "bigo",
-  Tango = "tango",
-  Buzzcast = "buzzcast",
-  Liveme = "liveme",
-  Mixch = "mixch",
-  Twitcast = "twitcast",
-  Trovo = "trovo",
-  Joilive = "joilive",
-}
-
 export enum VisitorViewGenderEnum {
   Male = "male",
   Female = "female",
   Unknown = "unknown",
+}
+
+export enum VisitorViewKindEnum {
+  ContentApi = "content-api",
+  Admin = "admin",
 }
 
 export enum VisitorViewProviderEnum {
@@ -9275,7 +10524,7 @@ export type GetUsersPermissionsUsersRolesData = UsersPermissionsUser & {
   followers?: Follower[];
   favorites?: Follower[];
   socialAccounts?: SocialAccount[];
-  subscriptionStatus?: SubscriptionStatusEnum;
+  subscriptionStatus?: SubscriptionStatusEnum | null;
   billingPeriod?: string | null;
   /** @format date-time */
   subscriptionEndDate?: string | null;
@@ -9285,7 +10534,7 @@ export type GetUsersPermissionsUsersRolesData = UsersPermissionsUser & {
   mollie?: string | null;
   /** JSON string with Stripe subscription data */
   stripe?: string | null;
-  paymentProvider?: PaymentProviderEnum;
+  paymentProvider?: PaymentProviderEnum | null;
   /** @default false */
   trialClaimed?: boolean;
 };

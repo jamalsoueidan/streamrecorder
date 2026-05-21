@@ -552,6 +552,103 @@
           "answer": "Ya. Pengguna premium dapat menggunakan ClipAI untuk secara otomatis mengubah rekaman Live TwitCasting menjadi klip sorotan pendek siap untuk TikTok, YouTube Shorts, atau Reels. Ini adalah cara yang bagus untuk memanfaatkan konten live Anda dan menumbuhkan pengikut di berbagai platform."
         }
       ]
+    },
+    "live17": {
+      "title": "Rekaman 17live — arsip web publik untuk Liver dan V-Liver",
+      "description": "17live menyediakan Stream Archive dan Stream Clips 15–90 detik di aplikasinya, tapi keduanya hidup di dalam aplikasi dan di balik pengaturan izin Anda. LiveStreamRecorder memberi Liver dan V-Liver di 17live rekaman publik berdurasi penuh dari setiap siaran di URL web yang dapat dibagikan — di luar aplikasi, terindeks oleh Google.",
+      "keywords": [
+        "rekaman 17live arsip web",
+        "siaran 17live durasi penuh",
+        "rekaman V-Liver 17live",
+        "arsip Liver 17live luar aplikasi",
+        "video 17live profile r id",
+        "alternatif Stream Archive 17live",
+        "klip 17live lebih dari 90 detik",
+        "17live yi-qi bersama",
+        "rekaman 17live Jepang",
+        "rekaman 17live Taiwan",
+        "rekaman 17live Hong Kong",
+        "arsip manajemen talenta 17live",
+        "simpan 17live tanpa aplikasi"
+      ],
+      "faqs": [
+        {
+          "question": "Apa bedanya dengan Stream Archive bawaan 17live?",
+          "answer": "Stream Archive 17live hidup di dalam aplikasi 17live dan diatur oleh pengaturan izin Anda — penggemar harus login ke 17live untuk menonton, dan tidak ada URL publik yang dapat dibagikan dan terindeks mesin pencari per Live. LiveStreamRecorder memberi setiap siaran URL web publik yang dapat dibuka penggemar di browser mana pun — tanpa akun 17live atau instalasi aplikasi."
+        },
+        {
+          "question": "Stream Clips sudah ada di 17live — kenapa pakai ClipAI?",
+          "answer": "Stream Clips 17live bagus di dalam aplikasi, tapi dibatasi 15–90 detik dan tetap di permukaan 17live. ClipAI memotong klip highlight dengan panjang berapa pun dari Live lengkap Anda yang tersimpan, diformat untuk TikTok / Reels / Shorts — tempat calon penggemar baru Anda benar-benar menghabiskan waktu. Tujuan berbeda: Clips 17live untuk penggemar yang sudah di aplikasi; ClipAI untuk menyalurkan penggemar baru ke aplikasi."
+        },
+        {
+          "question": "Saya V-Liver — apakah avatar saya direkam dengan benar?",
+          "answer": "Ya. Kami menangkap persis apa yang stream 17live kirim ke penonton: avatar Live2D/3D, komposisi scene OBS, overlay MIDI, voice changer — semua dipertahankan dalam rekaman sesuai yang disiarkan. Penangkapan terjadi setelah tumpukan render Anda dan sebelum distribusi 17live, jadi kesetiaannya sama dengan yang dilihat penggemar langsung."
+        },
+        {
+          "question": "Apakah saya butuh OBS, perekam HP, atau software lokal apa pun?",
+          "answer": "Tidak. Anda live dari aplikasi 17live di HP atau PC seperti biasa. Perekaman terjadi di sisi server di infrastruktur kami — HP Anda bisa tidur, laptop bisa dimatikan setelah stream dimulai. Tidak ada CPU, GPU, atau pemakaian baterai pada perangkat Anda."
+        },
+        {
+          "question": "Bisakah saya mengunduh file video HEVC mentah?",
+          "answer": "Pengguna Premium dapat mengunduh video mentah untuk diedit ulang, diunggah ke YouTube sebagai VOD panjang, atau diarsipkan secara lokal. Pengguna gratis dapat menonton ulang di browser mana pun tanpa mengunduh."
+        },
+        {
+          "question": "Apakah ini memengaruhi agensi talenta 17live / poin Hot Star / pendapatan hadiah saya?",
+          "answer": "Tidak — nol dampak pada status akun 17live Anda. LiveStreamRecorder tidak login ke akun 17live Anda, tidak menyentuh peringkat, tidak mengganggu alat agensi. Perekaman bersifat opt-in oleh Anda sebagai kreator 17live untuk akun Anda sendiri, dan hanya menangkap Live milik Anda — tidak lebih."
+        },
+        {
+          "question": "Apakah merekam siaran 17live milik sendiri diperbolehkan?",
+          "answer": "Anda merekam **konten Anda** di **profil Anda**. Opt-in per kreator 17live, hanya menangkap Live Anda. Posisi hukum sama seperti mengunduh arsip 17live Anda dari Stream Archive in-app — hanya di lokasi penyimpanan yang berbeda."
+        }
+      ]
+    },
+    "kwai": {
+      "title": "Rekaman Kwai — arsip web publik untuk kreator Kwai Brasil dan global",
+      "description": "Kwai (kuài 快 = «cepat») adalah aplikasi video pendek + live streaming global dari Kuaishou, dominan di Brasil, Indonesia, Meksiko, dan Timur Tengah. LiveStreamRecorder merekam setiap Live Kwai ke URL publik yang dapat diakses web sehingga penggemar tanpa aplikasi Kwai tetap dapat menonton.",
+      "keywords": [
+        "perekam kwai",
+        "unduh live kwai",
+        "arsip live kwai",
+        "alternatif replay kwai",
+        "simpan live kwai saya",
+        "rekaman live kwai brasil",
+        "arsip kuaishou kwai",
+        "rekam kwai tanpa aplikasi",
+        "riwayat live kwai",
+        "cadangan siaran kwai",
+        "live kwai indonesia",
+        "live kwai meksiko"
+      ],
+      "faqs": [
+        {
+          "question": "Bagaimana cara menyimpan Live Kwai saya?",
+          "answer": "Daftar gratis, tambahkan username Kwai (atau tempel URL profil Kwai), dan live di Kwai seperti biasa. Setiap siaran ditangkap di sisi server dan mendarat di halaman kreator Anda otomatis — tanpa aplikasi di HP, tanpa perekam layar, tanpa OBS."
+        },
+        {
+          "question": "Apa format URL untuk Live Kwai yang tersimpan?",
+          "answer": "Setiap rekaman mendapat URL web bersih seperti `livestreamrecorder.com/kwai/username-anda/video/...`. Berfungsi di browser mana pun, di mana pun — tanpa akun Kwai atau instalasi aplikasi. Tempel URL di WhatsApp, Telegram, Discord, atau di mana saja."
+        },
+        {
+          "question": "Bisakah saya mengunduh file video mentah?",
+          "answer": "Ya — kreator Premium dapat mengunduh file video HEVC mentah dari setiap Live Kwai. Berguna untuk diunggah ulang ke YouTube sebagai konten panjang, mengedit ulang menjadi kompilasi, atau pengarsipan lokal di komputer Anda."
+        },
+        {
+          "question": "Saya di Indonesia — apakah ini berfungsi untuk Kwai ID?",
+          "answer": "Ya. Kwai adalah aplikasi yang sama secara global; kami merekam Live Kwai terlepas dari wilayah. Kreator Kwai Indonesia justru paling diuntungkan, karena URL LiveStreamRecorder dapat diindeks Google dalam bahasa Indonesia, Inggris, dan lainnya — membuat konten Anda dapat ditemukan oleh penggemar di luar aplikasi Kwai dan di luar Indonesia."
+        },
+        {
+          "question": "Apakah Kwai sudah memiliki fitur replay di aplikasi?",
+          "answer": "Perilaku replay/arsip Kwai di aplikasi tergantung pada wilayah, pengaturan akun Anda, dan kebijakan platform. LiveStreamRecorder independen dari semua itu — siaran Anda mendapat arsip web publik eksternal yang ada terlepas dari apa yang dilakukan Kwai di dalam aplikasinya."
+        },
+        {
+          "question": "Apakah ini memengaruhi K-coins, gifting, atau pendapatan program kreator Kwai saya?",
+          "answer": "Tidak. LiveStreamRecorder tidak login ke akun Kwai Anda atau mengganggu gifting, K-coins, tingkatan program kreator, atau pembagian pendapatan Kwai. Perekaman bersifat opt-in oleh Anda sebagai kreator Kwai untuk akun Anda sendiri, dan hanya menangkap Live milik Anda — tidak lebih."
+        },
+        {
+          "question": "Gunakan ClipAI untuk mengubah Live Kwai menjadi TikTok / Reels / Shorts?",
+          "answer": "Ya. Kreator Premium dapat menjalankan ClipAI pada Live Kwai mereka yang tersimpan. Ini memotong otomatis klip highlight yang diformat untuk TikTok, Instagram Reels, dan YouTube Shorts — momen lucu, musik, tari, reaksi hadiah. Gunakan untuk menjangkau penonton yang tidak di Kwai, dan corongkan mereka kembali ke Live Kwai Anda."
+        }
+      ]
     }
   },
   "hero": {
@@ -569,7 +666,9 @@
       "mixch": "Rekaman Mixch",
       "trovo": "Rekaman Trovo",
       "twitcast": "Rekaman TwitCasting",
-      "joilive": "Rekaman Joilive"
+      "joilive": "Rekaman Joilive",
+      "live17": "Rekaman 17live",
+      "kwai": "Rekaman Kwai"
     },
     "subtitle": {
       "all": "Tonton rekaman live stream dari kreator di platform kami. Unduh dan temukan konten baru.",
@@ -585,7 +684,9 @@
       "mixch": "Tonton rekaman Mixch dari kreator di platform kami. Unduh dan temukan konten baru.",
       "trovo": "Tonton rekaman Trovo dari kreator di platform kami. Unduh dan temukan konten baru.",
       "twitcast": "Tonton rekaman TwitCasting dari kreator di platform kami. Unduh dan temukan konten baru.",
-      "joilive": "Tonton rekaman stream Joilive dari streamer di platform kami. Unduh dan temukan penyiar baru."
+      "joilive": "Tonton rekaman stream Joilive dari streamer di platform kami. Unduh dan temukan penyiar baru.",
+      "live17": "Tonton rekaman stream 17live dari streamer di platform kami. Unduh dan temukan penyiar baru.",
+      "kwai": "Tonton rekaman stream Kwai dari streamer di platform kami. Unduh dan temukan penyiar baru."
     }
   },
   "cta": {
@@ -603,7 +704,9 @@
       "mixch": "Rekam Stream Mixch",
       "trovo": "Rekam Stream Trovo",
       "twitcast": "Rekam Stream TwitCasting",
-      "joilive": "Simpan Stream Joilive"
+      "joilive": "Simpan Stream Joilive",
+      "live17": "Simpan Stream 17live",
+      "kwai": "Simpan Stream Kwai"
     },
     "subtitle": {
       "all": "Simpan stream TikTok, Twitch, YouTube, dan Kick Anda secara otomatis. Unduh rekaman, buat klip pendek, dan kembangkan audiens Anda.",
@@ -619,7 +722,9 @@
       "mixch": "Simpan stream Mixch Anda secara otomatis. Unduh rekaman dan buat klip pendek dengan ClipAI.",
       "trovo": "Simpan stream Trovo Anda secara otomatis. Unduh rekaman dan buat klip pendek dengan ClipAI.",
       "twitcast": "Simpan stream TwitCasting Anda secara otomatis. Unduh rekaman dan buat klip pendek dengan ClipAI.",
-      "joilive": "Simpan stream Joilive-mu secara otomatis. Cadangan independen untuk setiap Live, plus klip pendek dengan ClipAI."
+      "joilive": "Simpan stream Joilive-mu secara otomatis. Cadangan independen untuk setiap Live, plus klip pendek dengan ClipAI.",
+      "live17": "Simpan stream 17live-mu secara otomatis. Cadangan independen untuk setiap Live, plus klip pendek dengan ClipAI.",
+      "kwai": "Simpan stream Kwai-mu secara otomatis. Cadangan independen untuk setiap Live, plus klip pendek dengan ClipAI."
     },
     "button": "Mulai Rekam Gratis"
   },
@@ -639,7 +744,9 @@
       "mixch": "Jadilah kreator pertama yang merekam stream Mixch!",
       "trovo": "Jadilah kreator pertama yang merekam stream Trovo!",
       "twitcast": "Jadilah kreator pertama yang merekam stream TwitCasting!",
-      "joilive": "Jadilah streamer pertama yang merekam stream Joilive!"
+      "joilive": "Jadilah streamer pertama yang merekam stream Joilive!",
+      "live17": "Jadilah streamer pertama yang merekam stream 17live!",
+      "kwai": "Jadilah streamer pertama yang merekam stream Kwai!"
     },
     "button": "Mulai Sekarang"
   },
@@ -657,7 +764,9 @@
     "mixch": "## Rekaman Live Mixch\n\nTonton rekaman live Mixch dari kreator yang menggunakan LiveStreamRecorder untuk menyimpan live mereka sendiri. Setiap live Mixch otomatis tertangkap dan disimpan untuk ditonton kapan saja.\n\n### Live Mixch tersimpan sebelum hilang\n\nLive Mixch hanya berlangsung secara live — begitu kamu mengakhiri siaran, kontennya hilang dari app. Perekam Mixch kami menyimpan live-mu secara otomatis di cloud, supaya tidak ada yang hilang saat siaranmu selesai. Ngobrol, momen musik, konten sehari-hari — semuanya tetap tersedia untuk fans.\n\n### Tonton dan unduh rekaman Mixch-mu\n\nSetiap rekaman live Mixch bisa langsung ditonton di browser. Pengguna Premium bisa mengunduh rekaman Mixch mereka sebagai file video untuk tontonan offline — sempurna untuk memanfaatkan ulang kontenmu sendiri atau menyimpan salinan pribadi.\n\n### Rekam live Mixch-mu tanpa app tambahan\n\nLupakan merekam layar HP atau menjalankan software capture di background. LiveStreamRecorder adalah perekam Mixch online yang menangkap live-mu di sisi server. Tanpa baterai terkuras, tanpa setup manual, tanpa software tambahan. Live Mixch-mu otomatis terekam dengan kualitas tinggi dari perangkat manapun.\n\n### Ubah live-mu jadi klip dengan ClipAI\n\nMau ubah rekaman live Mixch-mu jadi klip pendek? ClipAI menganalisis live yang sudah direkam dan membuat klip highlight siap posting di TikTok, Instagram Reels, atau YouTube Shorts. Tumbuhkan komunitasmu di luar Mixch dengan memanfaatkan ulang momen terbaikmu.\n\n### Perekam Mixch terbaik untuk kreator\n\nLiveStreamRecorder dirancang untuk menyimpan live Mixch. Daftar gratis, tambahkan username Mixch-mu, dan jangan pernah kehilangan live lagi. Setiap live otomatis terekam — pustaka konten Mixch permanen milikmu.",
     "joilive": "## Rekaman Stream Joilive\n\nJoilive tidak mengarsipkan. Tidak ada tab replay di profilmu, tidak ada daftar stream lampau, tidak ada VOD. Platformnya dibangun sepenuhnya untuk momen live — saat kamu berhenti siaran, stream-nya hilang. Itu nggak masalah untuk live pendek dan santai, tapi jadi problem nyata kalau kamu streaming rutin dan ingin karyamu tetap ada. LiveStreamRecorder membuat streamer Joilive bisa **merekam siaran mereka sendiri** sehingga setiap Live berakhir sebagai video yang bisa ditonton dan dibagikan di halaman kreator pribadi.\n\n### Masalah Layar Hitam di Joilive\n\nKalau kamu pernah coba merekam stream Joilive sendiri dengan perekam desktop (display capture OBS Studio, Xbox Game Bar di Windows, QuickTime di Mac), kamu mungkin sudah memperhatikan hal yang sama: audionya terekam baik, tapi videonya muncul sebagai persegi hitam. Itu karena web player Joilive memakai decoding terakselerasi hardware plus DRM Widevine. Perekam melihat player tapi nggak bisa melihat frame video-nya. Ini bukan bug Joilive, bukan perekammu rusak — itu efek samping dari cara video terlindungi dikomposisi di browser modern, dan nggak bisa diperbaiki dengan mengubah pengaturan di mesinmu.\n\nWorkaround praktisnya adalah melewati screen recording sama sekali. LiveStreamRecorder menangkap stream Joilive upstream dari browser, sebelum jalur DRM/compositing terlibat. Tanpa layar hitam, tanpa berburu codec, tanpa toggle akselerasi GPU — perekaman tinggal jalan.\n\n### Rekam Sendiri, dari Sisi Server\n\nKamu merekam stream-mu sendiri, tapi nggak menjalankan apa pun untuk melakukannya. Tanpa app di HP, tanpa software di PC. Saat kamu live di app Joilive, perekaman dimulai otomatis di cloud. Streaming dari sofa, mobil, atau kafe — laptopmu bisa mati, HP-mu bisa terkunci. Live Joilive-mu masuk ke halaman kreatormu saat tiap siaran berakhir, siap untuk ditonton kembali di browser.\n\n### Tonton dan Unduh Rekaman Joilive-mu\n\nSetiap Live yang sudah direkam langsung diputar di browser modern apa pun, tanpa app, tanpa akun Joilive untuk menonton. Streamer Premium bisa mengunduh file video mentah untuk diedit, diunggah ulang, atau diarsipkan lokal — dan ClipAI bisa otomatis menghasilkan klip format pendek dari rekaman untuk posting di TikTok, YouTube Shorts, atau Reels.\n\n### URL yang Bisa Dibagikan untuk Live-mu\n\nURL room Joilive sendiri adalah `joilive.net/user/index.html?s=1880…` — ID numerik panjang yang nggak bisa siapa pun ketik atau ingat. Rekaman LiveStreamRecorder-mu memakai URL bersih seperti `livestreamrecorder.com/joilive/id-mu/video/...` yang bisa kamu posting di Discord, masukkan ke bio Twitter, atau kirim ke fans lewat SMS. Konten yang sama, tanpa query string, tanpa harus instal app.\n\n### Dibangun untuk Streamer Joilive, Bukan Melawan Mereka\n\nLiveStreamRecorder bukan mengunduh siaran orang lain. Perekaman opt-in oleh streamer Joilive untuk akun **mereka sendiri**, dan hanya live mereka sendiri — bukan yang lain. Video itu milikmu, halaman itu milikmu, penghapusan adalah aksi satu klik. Daftar gratis, tambahkan Joilive user ID-mu, dan arsip Joilive yang hilang berhenti jadi masalahmu.",
     "trovo": "## Rekaman Live Trovo\n\nTonton rekaman live Trovo dari kreator yang menggunakan LiveStreamRecorder untuk menyimpan live mereka sendiri. Setiap live Trovo otomatis tertangkap dan disimpan untuk ditonton kapan saja.\n\n### Live Trovo tersimpan sebelum hilang\n\nLive Trovo hanya berlangsung secara live — begitu kamu mengakhiri siaran, kontennya hilang dari app. Perekam Trovo kami menyimpan live-mu secara otomatis di cloud, supaya tidak ada yang hilang saat siaranmu selesai. Ngobrol, momen musik, konten sehari-hari — semuanya tetap tersedia untuk fans.\n\n### Tonton dan unduh rekaman Trovo-mu\n\nSetiap rekaman live Trovo bisa langsung ditonton di browser. Pengguna Premium bisa mengunduh rekaman Trovo mereka sebagai file video untuk tontonan offline — sempurna untuk memanfaatkan ulang kontenmu sendiri atau menyimpan salinan pribadi.\n\n### Rekam live Trovo-mu tanpa app tambahan\n\nLupakan merekam layar HP atau menjalankan software capture di background. LiveStreamRecorder adalah perekam Trovo online yang menangkap live-mu di sisi server. Tanpa baterai terkuras, tanpa setup manual, tanpa software tambahan. Live Trovo-mu otomatis terekam dengan kualitas tinggi dari perangkat manapun.\n\n### Ubah live-mu jadi klip dengan ClipAI\n\nMau ubah rekaman live Trovo-mu jadi klip pendek? ClipAI menganalisis live yang sudah direkam dan membuat klip highlight siap posting di TikTok, Instagram Reels, atau YouTube Shorts. Tumbuhkan komunitasmu di luar Trovo dengan memanfaatkan ulang momen terbaikmu.\n\n### Perekam Trovo terbaik untuk kreator\n\nLiveStreamRecorder dirancang untuk menyimpan live Trovo. Daftar gratis, tambahkan username Trovo-mu, dan jangan pernah kehilangan live lagi. Setiap live otomatis terekam — pustaka konten Trovo permanen milikmu.",
-    "twitcast": "## Rekaman Live TwitCasting\n\nTonton rekaman live TwitCasting dari kreator yang menggunakan LiveStreamRecorder untuk menyimpan live mereka sendiri. Setiap live TwitCasting otomatis tertangkap dan disimpan untuk ditonton kapan saja.\n\n### Live TwitCasting tersimpan sebelum hilang\n\nLive TwitCasting hanya berlangsung secara live — begitu kamu mengakhiri siaran, kontennya hilang dari app. Perekam TwitCasting kami menyimpan live-mu secara otomatis di cloud, supaya tidak ada yang hilang saat siaranmu selesai. Ngobrol, momen musik, konten sehari-hari — semuanya tetap tersedia untuk fans.\n\n### Tonton dan unduh rekaman TwitCasting-mu\n\nSetiap rekaman live TwitCasting bisa langsung ditonton di browser. Pengguna Premium bisa mengunduh rekaman TwitCasting mereka sebagai file video untuk tontonan offline — sempurna untuk memanfaatkan ulang kontenmu sendiri atau menyimpan salinan pribadi.\n\n### Rekam live TwitCasting-mu tanpa app tambahan\n\nLupakan merekam layar HP atau menjalankan software capture di background. LiveStreamRecorder adalah perekam TwitCasting online yang menangkap live-mu di sisi server. Tanpa baterai terkuras, tanpa setup manual, tanpa software tambahan. Live TwitCasting-mu otomatis terekam dengan kualitas tinggi dari perangkat manapun.\n\n### Ubah live-mu jadi klip dengan ClipAI\n\nMau ubah rekaman live TwitCasting-mu jadi klip pendek? ClipAI menganalisis live yang sudah direkam dan membuat klip highlight siap posting di TikTok, Instagram Reels, atau YouTube Shorts. Tumbuhkan komunitasmu di luar TwitCasting dengan memanfaatkan ulang momen terbaikmu.\n\n### Perekam TwitCasting terbaik untuk kreator\n\nLiveStreamRecorder dirancang untuk menyimpan live TwitCasting. Daftar gratis, tambahkan username TwitCasting-mu, dan jangan pernah kehilangan live lagi. Setiap live otomatis terekam — pustaka konten TwitCasting permanen milikmu."
+    "twitcast": "## Rekaman Live TwitCasting\n\nTonton rekaman live TwitCasting dari kreator yang menggunakan LiveStreamRecorder untuk menyimpan live mereka sendiri. Setiap live TwitCasting otomatis tertangkap dan disimpan untuk ditonton kapan saja.\n\n### Live TwitCasting tersimpan sebelum hilang\n\nLive TwitCasting hanya berlangsung secara live — begitu kamu mengakhiri siaran, kontennya hilang dari app. Perekam TwitCasting kami menyimpan live-mu secara otomatis di cloud, supaya tidak ada yang hilang saat siaranmu selesai. Ngobrol, momen musik, konten sehari-hari — semuanya tetap tersedia untuk fans.\n\n### Tonton dan unduh rekaman TwitCasting-mu\n\nSetiap rekaman live TwitCasting bisa langsung ditonton di browser. Pengguna Premium bisa mengunduh rekaman TwitCasting mereka sebagai file video untuk tontonan offline — sempurna untuk memanfaatkan ulang kontenmu sendiri atau menyimpan salinan pribadi.\n\n### Rekam live TwitCasting-mu tanpa app tambahan\n\nLupakan merekam layar HP atau menjalankan software capture di background. LiveStreamRecorder adalah perekam TwitCasting online yang menangkap live-mu di sisi server. Tanpa baterai terkuras, tanpa setup manual, tanpa software tambahan. Live TwitCasting-mu otomatis terekam dengan kualitas tinggi dari perangkat manapun.\n\n### Ubah live-mu jadi klip dengan ClipAI\n\nMau ubah rekaman live TwitCasting-mu jadi klip pendek? ClipAI menganalisis live yang sudah direkam dan membuat klip highlight siap posting di TikTok, Instagram Reels, atau YouTube Shorts. Tumbuhkan komunitasmu di luar TwitCasting dengan memanfaatkan ulang momen terbaikmu.\n\n### Perekam TwitCasting terbaik untuk kreator\n\nLiveStreamRecorder dirancang untuk menyimpan live TwitCasting. Daftar gratis, tambahkan username TwitCasting-mu, dan jangan pernah kehilangan live lagi. Setiap live otomatis terekam — pustaka konten TwitCasting permanen milikmu.",
+    "live17": "## Rekaman 17live di LiveStreamRecorder\n\n17live (diucapkan *yi-qi live* — 一起, Mandarin untuk «bersama») adalah platform live-streaming terbesar ketiga di Asia, didirikan di Taiwan tahun 2015, berkantor pusat di Jepang sejak 2021, tercatat di SGX dengan kode **LVR**. Menjadi rumah bagi **Liver** (streamer manusia) maupun **V-Liver** (streamer avatar virtual — kategori yang dipelopori 17live). Sangat kuat di Jepang, Taiwan, Hong Kong, Singapura, dan Filipina. LiveStreamRecorder menjaga rekaman lengkap yang dapat diakses lewat web dari setiap Live yang Anda siarkan — bersama Stream Archive in-app dari 17live, namun di web terbuka.\n\n### Mengapa rekaman kedua jika 17live sudah punya Stream Archive?\n\nStream Archive milik 17live sendiri baik-baik saja — menyimpan Live terbaru di dalam aplikasi 17live, dikontrol oleh saklar izin Anda. Tapi penggemar butuh aplikasi 17live untuk melihatnya, arsipnya tidak terindeks Google, dan tidak ada URL publik stabil per siaran yang dapat Anda tempel di Discord atau bio Twitter. LiveStreamRecorder bersifat **pelengkap**, bukan pesaing: siaran yang sama ditangkap kedua kalinya, kali ini mendarat di URL web publik seperti `livestreamrecorder.com/live17/your-id/video/...` yang dapat dibuka semua browser secara instan.\n\n### Penangkapan sama untuk Liver dan V-Liver\n\nKami merekam apa yang 17live siarkan — baik Anda Liver dengan face-cam yang ngobrol / nyanyi / nari, Liver yang disusun OBS dengan scene khusus, atau V-Liver yang menjalankan avatar Live2D / 3D. Penangkapan terjadi sebelum distribusi 17live, jadi video akhir Anda terlihat persis seperti yang penggemar lihat saat live: avatar, overlay, voice changer, animasi hadiah, semua dipertahankan.\n\n### Tanpa aplikasi di HP, tanpa OBS di PC\n\nSisi server. Anda live dari HP atau PC seperti biasa, perekaman terjadi di infrastruktur kami. Setelah Live dimulai, HP Anda bisa tidur, laptop bisa dimatikan — perekaman berlanjut. Tidak ada beban CPU, tidak ada penggunaan GPU, tidak ada biaya baterai tambahan. Ini penting untuk Live panjang seperti nyanyi atau bincang yang berjalan 4+ jam.\n\n### Melampaui batas klip 90 detik\n\nStream Clips in-app 17live bagus untuk berbagi di dalam aplikasi, tapi dibatasi 15–90 detik dan tidak meninggalkan permukaan 17live. Streamer Premium dapat memakai ClipAI di LiveStreamRecorder untuk memotong klip highlight panjang berapa pun dari Live lengkap yang tersimpan, diformat untuk **TikTok, Instagram Reels, YouTube Shorts** — platform di mana mayoritas penonton non-17live benar-benar berada. Gunakan sebagai corong kembali ke ruang 17live Anda.\n\n### Dukungan setara untuk streamer dengan manajemen talenta dan indie\n\nSistem manajemen talenta 17live aktif merekrut dan mendukung streamer — itulah yang membedakan platform dari aplikasi swalayan murni. LiveStreamRecorder tidak menyentuh semua itu. Tidak login ke akun 17live Anda, tidak mengganggu acara Hot Star, promo hadiah, atau alat agensi talenta. Ini perekaman paralel pasif — kontrol Anda, URL Anda, arsip Anda.\n\n### Tonton di browser, unduh jika perlu\n\nSetiap rekaman 17live diputar secara instan di browser modern apa pun. Tidak perlu akun 17live untuk menonton — bagikan URL ke siapa pun, di mana pun. Kreator Premium dapat mengunduh file video HEVC mentah dari setiap Live untuk pengeditan ulang, unggah YouTube sebagai VOD panjang, atau arsip lokal.\n\n### Opt-in, konten Anda sendiri\n\nLiveStreamRecorder hanya merekam profil Anda sendiri, hanya setelah Anda opt-in. Posisi hukumnya sama dengan mengunduh Live Anda sendiri dari Stream Archive in-app 17live — hanya di permukaan yang berbeda (bukan di dalam aplikasi, melainkan di URL web publik di domain Anda). Hentikan perekaman kapan saja, hapus rekaman apa pun dengan satu klik.",
+    "kwai": "## Rekaman Kwai di LiveStreamRecorder\n\nKwai (dari Mandarin 快 *kuài*, berarti «cepat») adalah aplikasi video pendek + live streaming global dari **Kuaishou Technology** (HKEX 1024), sering disebut platform video pendek #2 di Asia setelah Douyin/TikTok. Di luar Tiongkok, Kwai dominan di **Brasil** (pasar terbesarnya dengan jarak jauh, menyaingi TikTok), ditambah Indonesia, Meksiko, Argentina, Kolombia, Timur Tengah, dan Rusia/CIS. LiveStreamRecorder menangkap setiap Live Kwai ke **rekaman publik yang dapat diakses web** — di luar aplikasi Kwai, di web terbuka, dapat diindeks Google.\n\n### Kwai di dalam aplikasi vs. Kwai di web terbuka\n\nKwai dibangun di sekitar feed dalam aplikasinya: gulir video pendek, masuk ke Live, kirim hadiah via K-coins, semua di dalam permukaan Kwai. Itu bekerja bagus untuk pengguna yang sudah di Kwai. Tapi saat penggemar Anda tidak di Kwai — penggemar Brasil di WhatsApp / Instagram, pengikut Indonesia di Telegram, penonton di pasar di mana Kwai bahkan tidak terpasang — siaran itu hilang. LiveStreamRecorder merekam setiap Live Kwai ke URL publik seperti `livestreamrecorder.com/kwai/username-anda/video/...` yang dapat dibuka siapa saja di browser apa saja. Tidak perlu instalasi Kwai untuk menonton, tidak perlu akun Kwai, tidak ada gerbang aplikasi.\n\n### Dibangun untuk kreator mobile-first dan seluler-first\n\nPasar terbesar Kwai — Brasil, Indonesia, MENA — juga pasar di mana data seluler dan baterai adalah sumber daya berharga. Kreator tidak ingin HP terbakar menjalankan OBS atau perekam layar di latar belakang. Kami paham. LiveStreamRecorder merekam di sisi server. Anda menyiarkan di Kwai dari HP seperti biasa — HP Anda dapat mengunci layar, tidur, panggilan terputus — perekaman berlanjut di infrastruktur kami. Nol CPU, nol GPU, nol biaya baterai ekstra di perangkat Anda.\n\n### Celah penemuan Kwai Brasil\n\nKwai BR adalah ekosistem masif, tapi sebagian besar tak terlihat di web terbuka berbahasa Portugis. Cari di Google kreator Kwai Brasil dan Anda akan sering mendapatkan halaman profil tipis atau situs pelacak pihak ketiga. URL LiveStreamRecorder bersih, dapat diindeks, dan dapat dibagikan — kreator Brasil mendapatkan jejak Google nyata untuk pertama kalinya, dengan setiap Live Kwai sebagai halaman permanen yang dapat ditemukan SEO. Sama untuk kreator Indonesia / Meksiko / Argentina di pasar masing-masing.\n\n### ClipAI: dari Live Kwai ke TikTok / Reels / Shorts\n\nKwai dominan di pasar berkembang, tapi TikTok / Instagram / YouTube masih mendominasi penemuan global. ClipAI memindai Live Kwai Anda yang tersimpan dan memotong klip vertikal highlight yang diformat untuk **TikTok, Instagram Reels, YouTube Shorts** — lapisan penemuan di luar Kwai. Cover musik, tari, sketsa komedi, reaksi hadiah, interaksi penonton — cross-post untuk memperluas corong audiens kembali ke Live Kwai Anda.\n\n### Tonton di browser, unduh jika perlu\n\nSetiap Live Kwai yang tersimpan diputar instan di browser modern mana pun. Tidak perlu akun Kwai untuk penonton. Kreator Premium dapat mengunduh file video HEVC mentah dari setiap Live untuk diedit ulang menjadi konten YouTube panjang, video kompilasi, atau pengarsipan lokal.\n\n### Tidak menyentuh akun Kwai atau pendapatan Anda\n\nLiveStreamRecorder tidak login ke akun Kwai Anda, tidak melihat K-coins, tidak membaca pendapatan hadiah Anda, tidak mengganggu tingkatan program kreator Kwai. Perekaman bersifat opt-in oleh Anda sebagai kreator Kwai untuk **akun Anda sendiri**, dan hanya menangkap Live milik Anda — tidak lebih. Status akun Kwai, peringkat, dan pembagian pendapatan Anda tetap sepenuhnya domain Kwai.\n\n### Opt-in, konten Anda, hapus kapan saja\n\nLiveStreamRecorder hanya merekam profil Anda sendiri, hanya setelah Anda opt-in. Hentikan alur perekaman kapan saja. Hapus rekaman Kwai masa lalu dengan satu klik. Konten Anda, URL Anda, kontrol Anda — independen dari aplikasi Kwai, di web publik terbuka di mana sisa audiens potensial Anda akhirnya dapat menemukan Anda."
   },
   "jsonLd": {
     "name": {
@@ -674,7 +783,9 @@
       "mixch": "Rekaman Stream Mixch",
       "trovo": "Rekaman Stream Trovo",
       "twitcast": "Rekaman Stream TwitCasting",
-      "joilive": "Rekaman Stream Joilive"
+      "joilive": "Rekaman Stream Joilive",
+      "live17": "Rekaman Stream 17live",
+      "kwai": "Rekaman Stream Kwai"
     },
     "description": {
       "all": "Tonton rekaman live stream dari kreator di LiveStreamRecorder.",
@@ -690,7 +801,9 @@
       "mixch": "Tonton rekaman Mixch dari kreator di LiveStreamRecorder.",
       "trovo": "Tonton rekaman Trovo dari kreator di LiveStreamRecorder.",
       "twitcast": "Tonton rekaman TwitCasting dari kreator di LiveStreamRecorder.",
-      "joilive": "Tonton rekaman stream Joilive dari streamer di LiveStreamRecorder."
+      "joilive": "Tonton rekaman stream Joilive dari streamer di LiveStreamRecorder.",
+      "live17": "Tonton rekaman stream 17live dari streamer di LiveStreamRecorder.",
+      "kwai": "Tonton rekaman stream Kwai dari streamer di LiveStreamRecorder."
     },
     "streamTitle": "Stream {nickname} - {date}",
     "streamDescription": {
@@ -707,7 +820,9 @@
       "mixch": "Rekaman Mixch dari {nickname}",
       "trovo": "Rekaman Trovo dari {nickname}",
       "twitcast": "Rekaman TwitCasting dari {nickname}",
-      "joilive": "Rekaman stream Joilive dari {nickname}"
+      "joilive": "Rekaman stream Joilive dari {nickname}",
+      "live17": "Rekaman stream 17live dari {nickname}",
+      "kwai": "Rekaman stream Kwai dari {nickname}"
     }
   },
   "recordedOn": "Direkam pada {date}",
