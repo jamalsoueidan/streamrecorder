@@ -27,7 +27,8 @@
     "mixch": "Creadores de Mixch",
     "trovo": "Creadores de Trovo",
     "twitcast": "Creadores de TwitCasting",
-    "joilive": "Creadores de Joilive"
+    "joilive": "Creadores de Joilive",
+    "live17": "Creadores de 17live"
   },
   "watchRecordings": {
     "title": "Ver Grabaciones",
@@ -44,7 +45,8 @@
     "mixch": "Grabaciones de Mixch",
     "trovo": "Grabaciones de Trovo",
     "twitcast": "Grabaciones de TwitCasting",
-    "joilive": "Grabaciones de Joilive"
+    "joilive": "Grabaciones de Joilive",
+    "live17": "Grabaciones de 17live"
   },
   "legal": {
     "title": "Legal",

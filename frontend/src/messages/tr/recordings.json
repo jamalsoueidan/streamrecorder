@@ -460,6 +460,55 @@
           "answer": "Evet. Premium kullanıcılar, TwitCasting Live kayıtlarını TikTok, YouTube Shorts veya Reels için hazır kısa öne çıkan kliplere otomatik olarak dönüştürmek için ClipAI'ı kullanabilir. Canlı içeriğinizi yeniden kullanmanın ve platformlar arasında takipçi kitlenizi büyütmenin harika bir yoludur."
         }
       ]
+    },
+    "live17": {
+      "title": "17live Kayıtları — Liver ve V-Liver için halka açık web arşivi",
+      "description": "17live, uygulamasında Stream Archive ve 15–90 saniyelik Stream Clips sunar; ancak ikisi de uygulamanın içinde ve izin ayarlarınızın arkasındadır. LiveStreamRecorder, 17live Liver'ları ve V-Liver'ları için her yayının tam uzunluklu halka açık kaydını paylaşılabilir bir web URL'sinde sunar — uygulama dışında, Google tarafından indekslenir.",
+      "keywords": [
+        "17live kayıtları web arşivi",
+        "17live tam uzunluklu yayın",
+        "17live V-Liver kayıtları",
+        "17live Liver uygulama dışı arşiv",
+        "17live profile r id video",
+        "17live Stream Archive alternatifi",
+        "17live 90 saniyeden uzun klipler",
+        "17live yi-qi birlikte",
+        "17live Japonya kayıtları",
+        "17live Tayvan kayıtları",
+        "17live Hong Kong kayıtları",
+        "17live yetenek yönetimi arşivi",
+        "uygulamasız 17live kaydet"
+      ],
+      "faqs": [
+        {
+          "question": "17live'ın yerleşik Stream Archive'inden farkı nedir?",
+          "answer": "17live'ın Stream Archive'i 17live uygulamasının içinde yaşar ve izin ayarlarınız tarafından yönetilir — hayranların izlemek için 17live'a giriş yapması gerekir ve her Live için paylaşılabilir, arama indekslenmiş halka açık bir URL yoktur. LiveStreamRecorder her yayına, hayranların herhangi bir tarayıcıda açabileceği halka açık bir web URL'si verir — 17live hesabı veya uygulama kurulumu olmadan."
+        },
+        {
+          "question": "17live'da zaten Stream Clips var — neden ClipAI kullanmalıyım?",
+          "answer": "17live Stream Clips uygulamanın içinde harika, ancak 15–90 saniye ile sınırlı ve 17live yüzeyinde kalıyor. ClipAI, kaydedilmiş tam Live'larınızdan istediğiniz uzunlukta öne çıkan klipler keser ve TikTok / Reels / Shorts için biçimlendirir — potansiyel yeni hayranlarınızın gerçekten zaman geçirdiği platformlar. Farklı amaç: 17live Klipleri zaten uygulamada olan hayranlar için; ClipAI yeni hayranları uygulamaya yönlendirmek için."
+        },
+        {
+          "question": "V-Liver'ım — avatarım doğru kaydediliyor mu?",
+          "answer": "Evet. 17live'ın stream'inin izleyicilere fiilen verdiğini yakalarız: Live2D/3D avatar, OBS sahne kompozisyonu, MIDI bindirmeler, ses değiştirici — her şey yayınlandığı gibi kayıtta korunur. Yakalama, sizin render yığınınızdan sonra ve 17live dağıtımından önce olur, bu yüzden hayranların canlı gördüğü kalitenin aynısıdır."
+        },
+        {
+          "question": "OBS, telefon kaydedici veya herhangi bir yerel yazılıma ihtiyacım var mı?",
+          "answer": "Hayır. 17live uygulamasından telefonunuzdan veya PC'nizden her zamanki gibi canlı yayın yaparsınız. Kayıt sunucu tarafında bizim altyapımızda gerçekleşir — telefonunuz uyuyabilir, dizüstü bilgisayarınız yayın başladıktan sonra kapatılabilir. Cihazınızda CPU, GPU veya pil tüketimi olmaz."
+        },
+        {
+          "question": "Ham HEVC video dosyasını indirebilir miyim?",
+          "answer": "Premium kullanıcılar ham videoyu yeniden düzenleme, YouTube'a uzun VOD olarak yükleme veya yerel arşivleme için indirebilir. Ücretsiz kullanıcılar herhangi bir tarayıcıda indirmeden geri izleyebilir."
+        },
+        {
+          "question": "Bu, 17live yetenek ajansımı / Hot Star puanlarımı / hediye gelirimi etkiler mi?",
+          "answer": "Hayır — 17live hesap durumunuza sıfır etki. LiveStreamRecorder 17live hesabınıza giriş yapmaz, sıralamaya dokunmaz, ajans araçlarına müdahale etmez. Pasif paralel bir kayıttır, bir hayranın yayını bağımsız olarak kaydetmesi gibi — yalnızca yüksek kalitede ve yerel yerine web'de saklanır."
+        },
+        {
+          "question": "Kendi 17live yayınlarımı kaydetmeme izin var mı?",
+          "answer": "Kendi **içeriğinizi** kendi **profilinizde** kaydediyorsunuz. 17live içerik üreticisi başına opt-in, yalnızca kendi Live'larınızı yakalar. Hukuki duruş, uygulama içi Stream Archive'inizden kendi 17live arşivinizi indirmenizle aynıdır — yalnızca farklı bir depolama konumunda."
+        }
+      ]
     }
   },
   "hero": {
@@ -477,7 +526,8 @@
       "mixch": "Mixch Kayıtları",
       "joilive": "Joilive Kayıtları",
       "trovo": "Trovo Kayıtları",
-      "twitcast": "TwitCasting Kayıtları"
+      "twitcast": "TwitCasting Kayıtları",
+      "live17": "17live Kayıtları"
     },
     "subtitle": {
       "all": "Platformumuzdaki içerik üreticilerinden canlı yayın kayıtlarını izleyin. İndirin ve yeni içerikler keşfedin.",
@@ -493,7 +543,8 @@
       "mixch": "Platformumuzdaki içerik üreticilerinden Mixch kayıtlarını izleyin. İndirin ve yeni içerikler keşfedin.",
       "joilive": "Platformumuzdaki yayıncılardan Joilive yayın kayıtlarını izleyin. İndirin ve yeni yayıncılar keşfedin.",
       "trovo": "Platformumuzdaki içerik üreticilerinden Trovo kayıtlarını izleyin. İndirin ve yeni içerikler keşfedin.",
-      "twitcast": "Platformumuzdaki içerik üreticilerinden TwitCasting kayıtlarını izleyin. İndirin ve yeni içerikler keşfedin."
+      "twitcast": "Platformumuzdaki içerik üreticilerinden TwitCasting kayıtlarını izleyin. İndirin ve yeni içerikler keşfedin.",
+      "live17": "Platformumuzdaki yayıncılardan 17live yayın kayıtlarını izleyin. İndirin ve yeni yayıncılar keşfedin."
     }
   },
   "cta": {
@@ -511,7 +562,8 @@
       "mixch": "Mixch Yayınlarını Kaydet",
       "joilive": "Joilive Yayınlarınızı Kaydedin",
       "trovo": "Trovo Yayınlarını Kaydet",
-      "twitcast": "TwitCasting Yayınlarını Kaydet"
+      "twitcast": "TwitCasting Yayınlarını Kaydet",
+      "live17": "17live Yayınlarınızı Kaydedin"
     },
     "subtitle": {
       "all": "TikTok, Twitch, YouTube ve Kick yayınlarınızı otomatik olarak kaydedin. Kayıtları indirin, kısa klipler oluşturun ve kitlenizi büyütün.",
@@ -527,7 +579,8 @@
       "mixch": "Mixch yayınlarınızı otomatik olarak kaydedin. Kayıtları indirin ve ClipAI ile kısa klipler oluşturun.",
       "joilive": "Joilive yayınlarınızı otomatik olarak kaydedin. Her yayın için bağımsız yedek, ClipAI ile kısa klipler.",
       "trovo": "Trovo yayınlarınızı otomatik olarak kaydedin. Kayıtları indirin ve ClipAI ile kısa klipler oluşturun.",
-      "twitcast": "TwitCasting yayınlarınızı otomatik olarak kaydedin. Kayıtları indirin ve ClipAI ile kısa klipler oluşturun."
+      "twitcast": "TwitCasting yayınlarınızı otomatik olarak kaydedin. Kayıtları indirin ve ClipAI ile kısa klipler oluşturun.",
+      "live17": "17live yayınlarınızı otomatik olarak kaydedin. Her yayın için bağımsız yedek, ClipAI ile kısa klipler."
     },
     "button": "Ücretsiz Kayda Başla"
   },
@@ -547,7 +600,8 @@
       "mixch": "Mixch yayını kaydeden ilk içerik üreticisi olun!",
       "joilive": "Joilive yayını kaydeden ilk yayıncı olun!",
       "trovo": "Trovo yayını kaydeden ilk içerik üreticisi olun!",
-      "twitcast": "TwitCasting yayını kaydeden ilk içerik üreticisi olun!"
+      "twitcast": "TwitCasting yayını kaydeden ilk içerik üreticisi olun!",
+      "live17": "17live yayını kaydeden ilk yayıncı olun!"
     },
     "button": "Başlayın"
   },
@@ -565,7 +619,8 @@
     "mixch": "## Mixch Yayın Kayıtları\n\nLiveStreamRecorder'ı kullanarak kendi yayınlarını kaydeden Mixch içerik üreticilerinin yayın kayıtlarını izle. Her Mixch yayını otomatik olarak yakalanır ve istediğin zaman izlemek için saklanır.\n\n### Kaybolmadan önce kaydedilen Mixch yayınları\n\nMixch yayınları sadece canlıdır — yayını sonlandırdığın anda içerik uygulamadan kaybolur. Mixch kayıt aracımız, yayınlarını bulutta otomatik olarak saklar; böylece yayının bittiğinde hiçbir şey kaybolmaz. Sohbetler, müzik anları, günlük içerik — hepsi hayranların için erişilebilir kalır.\n\n### Mixch kayıtlarını izle ve indir\n\nHer Mixch yayın kaydı tarayıcıda anında izlenebilir. Premium üyeler, Mixch kayıtlarını çevrimdışı izleme için video dosyası olarak indirebilir — kendi içeriğini yeniden kullanmak veya kişisel kopya tutmak için ideal.\n\n### Mixch yayınlarını ekstra uygulama olmadan kaydet\n\nTelefon ekranını kaydetmeyi veya arka planda yakalama yazılımı çalıştırmayı unut. LiveStreamRecorder, yayınlarını sunucu tarafında yakalayan çevrimiçi bir Mixch kaydedicisidir. Pil tükenmesi yok, manuel kurulum yok, ekstra yazılım yok. Mixch yayınların herhangi bir cihazdan otomatik olarak yüksek kalitede kaydedilir.\n\n### Yayınlarını ClipAI ile kısa kliplere dönüştür\n\nMixch yayın kayıtlarını kısa kliplere dönüştürmek ister misin? ClipAI, kayıtlı yayınlarını analiz eder ve TikTok, Instagram Reels veya YouTube Shorts'ta paylaşmaya hazır öne çıkan klipler oluşturur. En iyi anlarını yeniden kullanarak topluluğunu Mixch'in ötesinde büyüt.\n\n### İçerik üreticileri için en iyi Mixch kaydedici\n\nLiveStreamRecorder, Mixch yayınlarını kaydetmek için tasarlandı. Ücretsiz kaydol, Mixch kullanıcı adını ekle ve bir daha yayın kaybetme. Her yayın otomatik olarak kaydedilir — Mixch içeriğin için kalıcı bir kütüphane.",
     "joilive": "## Joilive Yayın Kayıtları\n\nJoilive arşivlemiyor. Profilinizde tekrar sekmesi yok, geçmiş yayın listesi yok, VOD yok. Platform tamamen canlı an etrafında kuruludur — yayını durdurduğunuzda yayın gider. Bu, gündelik kısa yayınlar için iyi çalışır ama düzenli yayın yapıyorsanız ve işinizin kalmasını istiyorsanız gerçek bir sorundur. LiveStreamRecorder, Joilive yayıncılarının **kendi yayınlarını kaydetmesine** izin verir, böylece her canlı yayın kişisel bir yayıncı sayfasında izlenebilir, paylaşılabilir bir video olarak biter.\n\n### Joilive ile Siyah Ekran Sorunu\n\nJoilive yayınınızı bir masaüstü kaydediciyle kendiniz kaydetmeyi denediyseniz (OBS Studio'nun ekran yakalama, Windows'taki Xbox Game Bar, Mac'teki QuickTime), muhtemelen aynı şeyi fark etmişsinizdir: ses iyi kaydeder ama video siyah bir dikdörtgen olarak görünür. Bu, Joilive web oynatıcısının donanım hızlandırmalı kod çözmeyi artı Widevine DRM'i kullanmasıdır. Kaydedici oynatıcıyı görür ama video karesini göremez. Bu Joilive'de bir hata değil, kaydedicinizin bozuk olması değil — modern tarayıcılarda korumalı videonun nasıl bileşik hale getirildiğinin bir yan etkisidir ve makinenizdeki ayarları değiştirerek düzeltilemez.\n\nPratik geçici çözüm, ekran kaydını tamamen atlamaktır. LiveStreamRecorder, Joilive yayınını tarayıcının üstünde, DRM/bileşim yolu devreye girmeden önce yakalar. Siyah ekran yok, kodek arayışı yok, GPU hızlandırma geçişleri yok — kayıt sadece çalışır.\n\n### Kendi Kaydınız, Sunucu Tarafında\n\nKendi yayınınızı kaydediyorsunuz ama bunu yapmak için hiçbir şey çalıştırmıyorsunuz. Telefonunuzda uygulama yok, PC'nizde yazılım yok. Joilive uygulamasında canlıya geçtiğinizde kayıt bulutta otomatik olarak başlar. Kanepenizden, arabanızdan, bir kafeden yayın yapın — laptopunuz kapalı olabilir, telefonunuz kilitli olabilir. Joilive yayınlarınız her yayın bittiğinde yayıncı sayfanıza iner, tarayıcıda geri izlenmeye hazırdır.\n\n### Joilive Kayıtlarınızı İzleyin ve İndirin\n\nKaydedilen her yayın herhangi bir modern tarayıcıda anında oynatılır, uygulama gerekmez, izlemek için Joilive hesabı gerekmez. Premium yayıncılar düzenleme, yeniden yükleme veya yerel arşivleme için ham video dosyasını indirebilir — ve ClipAI, TikTok, YouTube Shorts veya Reels'te paylaşmak için kayıttan kısa formatlı klipleri otomatik olarak oluşturabilir.\n\n### Yayınlarınız için Paylaşılabilir bir URL\n\nJoilive'in kendi oda URL'si `joilive.net/user/index.html?s=1880…` — kimsenin yazıp hatırlayamayacağı uzun bir sayısal kimlik. LiveStreamRecorder kayıtlarınız `livestreamrecorder.com/joilive/your-id/video/...` gibi Discord'a gönderebileceğiniz, Twitter biyografilerine yapıştırabileceğiniz veya hayranlara mesajla gönderebileceğiniz temiz URL'ler kullanır. Aynı içerik, sorgu dizesi yok, uygulama yükleme talebi yok.\n\n### Joilive Yayıncıları için Kuruldu, Onlara Karşı Değil\n\nLiveStreamRecorder başkalarının yayınlarını indirmiyor. Kayıt, **kendi** hesabı için Joilive yayıncısı tarafından isteğe bağlıdır ve yalnızca kendi yayınları — başka hiçbir şey değil. Video size ait, sayfa size ait, silme tek tıklama bir eylemdir. Ücretsiz kaydolun, Joilive kullanıcı kimliğinizi ekleyin ve Joilive'in eksik arşivi sizin sorununuz olmaktan çıkar.",
     "trovo": "## Trovo Yayın Kayıtları\n\nLiveStreamRecorder'ı kullanarak kendi yayınlarını kaydeden Trovo içerik üreticilerinin yayın kayıtlarını izle. Her Trovo yayını otomatik olarak yakalanır ve istediğin zaman izlemek için saklanır.\n\n### Kaybolmadan önce kaydedilen Trovo yayınları\n\nTrovo yayınları sadece canlıdır — yayını sonlandırdığın anda içerik uygulamadan kaybolur. Trovo kayıt aracımız, yayınlarını bulutta otomatik olarak saklar; böylece yayının bittiğinde hiçbir şey kaybolmaz. Sohbetler, müzik anları, günlük içerik — hepsi hayranların için erişilebilir kalır.\n\n### Trovo kayıtlarını izle ve indir\n\nHer Trovo yayın kaydı tarayıcıda anında izlenebilir. Premium üyeler, Trovo kayıtlarını çevrimdışı izleme için video dosyası olarak indirebilir — kendi içeriğini yeniden kullanmak veya kişisel kopya tutmak için ideal.\n\n### Trovo yayınlarını ekstra uygulama olmadan kaydet\n\nTelefon ekranını kaydetmeyi veya arka planda yakalama yazılımı çalıştırmayı unut. LiveStreamRecorder, yayınlarını sunucu tarafında yakalayan çevrimiçi bir Trovo kaydedicisidir. Pil tükenmesi yok, manuel kurulum yok, ekstra yazılım yok. Trovo yayınların herhangi bir cihazdan otomatik olarak yüksek kalitede kaydedilir.\n\n### Yayınlarını ClipAI ile kısa kliplere dönüştür\n\nTrovo yayın kayıtlarını kısa kliplere dönüştürmek ister misin? ClipAI, kayıtlı yayınlarını analiz eder ve TikTok, Instagram Reels veya YouTube Shorts'ta paylaşmaya hazır öne çıkan klipler oluşturur. En iyi anlarını yeniden kullanarak topluluğunu Trovo'in ötesinde büyüt.\n\n### İçerik üreticileri için en iyi Trovo kaydedici\n\nLiveStreamRecorder, Trovo yayınlarını kaydetmek için tasarlandı. Ücretsiz kaydol, Trovo kullanıcı adını ekle ve bir daha yayın kaybetme. Her yayın otomatik olarak kaydedilir — Trovo içeriğin için kalıcı bir kütüphane.",
-    "twitcast": "## TwitCasting Yayın Kayıtları\n\nLiveStreamRecorder'ı kullanarak kendi yayınlarını kaydeden TwitCasting içerik üreticilerinin yayın kayıtlarını izle. Her TwitCasting yayını otomatik olarak yakalanır ve istediğin zaman izlemek için saklanır.\n\n### Kaybolmadan önce kaydedilen TwitCasting yayınları\n\nTwitCasting yayınları sadece canlıdır — yayını sonlandırdığın anda içerik uygulamadan kaybolur. TwitCasting kayıt aracımız, yayınlarını bulutta otomatik olarak saklar; böylece yayının bittiğinde hiçbir şey kaybolmaz. Sohbetler, müzik anları, günlük içerik — hepsi hayranların için erişilebilir kalır.\n\n### TwitCasting kayıtlarını izle ve indir\n\nHer TwitCasting yayın kaydı tarayıcıda anında izlenebilir. Premium üyeler, TwitCasting kayıtlarını çevrimdışı izleme için video dosyası olarak indirebilir — kendi içeriğini yeniden kullanmak veya kişisel kopya tutmak için ideal.\n\n### TwitCasting yayınlarını ekstra uygulama olmadan kaydet\n\nTelefon ekranını kaydetmeyi veya arka planda yakalama yazılımı çalıştırmayı unut. LiveStreamRecorder, yayınlarını sunucu tarafında yakalayan çevrimiçi bir TwitCasting kaydedicisidir. Pil tükenmesi yok, manuel kurulum yok, ekstra yazılım yok. TwitCasting yayınların herhangi bir cihazdan otomatik olarak yüksek kalitede kaydedilir.\n\n### Yayınlarını ClipAI ile kısa kliplere dönüştür\n\nTwitCasting yayın kayıtlarını kısa kliplere dönüştürmek ister misin? ClipAI, kayıtlı yayınlarını analiz eder ve TikTok, Instagram Reels veya YouTube Shorts'ta paylaşmaya hazır öne çıkan klipler oluşturur. En iyi anlarını yeniden kullanarak topluluğunu TwitCasting'in ötesinde büyüt.\n\n### İçerik üreticileri için en iyi TwitCasting kaydedici\n\nLiveStreamRecorder, TwitCasting yayınlarını kaydetmek için tasarlandı. Ücretsiz kaydol, TwitCasting kullanıcı adını ekle ve bir daha yayın kaybetme. Her yayın otomatik olarak kaydedilir — TwitCasting içeriğin için kalıcı bir kütüphane."
+    "twitcast": "## TwitCasting Yayın Kayıtları\n\nLiveStreamRecorder'ı kullanarak kendi yayınlarını kaydeden TwitCasting içerik üreticilerinin yayın kayıtlarını izle. Her TwitCasting yayını otomatik olarak yakalanır ve istediğin zaman izlemek için saklanır.\n\n### Kaybolmadan önce kaydedilen TwitCasting yayınları\n\nTwitCasting yayınları sadece canlıdır — yayını sonlandırdığın anda içerik uygulamadan kaybolur. TwitCasting kayıt aracımız, yayınlarını bulutta otomatik olarak saklar; böylece yayının bittiğinde hiçbir şey kaybolmaz. Sohbetler, müzik anları, günlük içerik — hepsi hayranların için erişilebilir kalır.\n\n### TwitCasting kayıtlarını izle ve indir\n\nHer TwitCasting yayın kaydı tarayıcıda anında izlenebilir. Premium üyeler, TwitCasting kayıtlarını çevrimdışı izleme için video dosyası olarak indirebilir — kendi içeriğini yeniden kullanmak veya kişisel kopya tutmak için ideal.\n\n### TwitCasting yayınlarını ekstra uygulama olmadan kaydet\n\nTelefon ekranını kaydetmeyi veya arka planda yakalama yazılımı çalıştırmayı unut. LiveStreamRecorder, yayınlarını sunucu tarafında yakalayan çevrimiçi bir TwitCasting kaydedicisidir. Pil tükenmesi yok, manuel kurulum yok, ekstra yazılım yok. TwitCasting yayınların herhangi bir cihazdan otomatik olarak yüksek kalitede kaydedilir.\n\n### Yayınlarını ClipAI ile kısa kliplere dönüştür\n\nTwitCasting yayın kayıtlarını kısa kliplere dönüştürmek ister misin? ClipAI, kayıtlı yayınlarını analiz eder ve TikTok, Instagram Reels veya YouTube Shorts'ta paylaşmaya hazır öne çıkan klipler oluşturur. En iyi anlarını yeniden kullanarak topluluğunu TwitCasting'in ötesinde büyüt.\n\n### İçerik üreticileri için en iyi TwitCasting kaydedici\n\nLiveStreamRecorder, TwitCasting yayınlarını kaydetmek için tasarlandı. Ücretsiz kaydol, TwitCasting kullanıcı adını ekle ve bir daha yayın kaybetme. Her yayın otomatik olarak kaydedilir — TwitCasting içeriğin için kalıcı bir kütüphane.",
+    "live17": "## LiveStreamRecorder'da 17live Kayıtları\n\n17live (*yi-qi live* olarak okunur — 一起, Mandarin'de «birlikte») Asya'nın üçüncü en büyük canlı yayın platformudur; 2015'te Tayvan'da kuruldu, 2021'den beri genel merkezi Japonya'da, SGX'te **LVR** koduyla işlem görüyor. Hem **Liver**'ları (insan yayıncılar) hem de **V-Liver**'ları (sanal avatar yayıncılar — 17live'ın öncülük ettiği bir kategori) barındırıyor. Özellikle Japonya, Tayvan, Hong Kong, Singapur ve Filipinler'de güçlü. LiveStreamRecorder, yayınladığınız her Live'ın tam, web'den erişilebilir bir kaydını tutar — 17live'ın uygulama içi Stream Archive'inin yanında, ancak açık web'de.\n\n### 17live'ın zaten Stream Archive'i varken neden ikinci bir kayıt?\n\n17live'ın kendi Stream Archive'i iyi çalışıyor — son Live'ları 17live uygulamasının içinde saklıyor, sizin izin anahtarlarınız tarafından kontrol ediliyor. Ama hayranların görmek için 17live uygulaması gerekiyor, arşiv Google tarafından indekslenebilir değil ve Discord'a veya Twitter biyografisine yapıştırılabilecek istikrarlı bir kamu URL'si yayın başına yok. LiveStreamRecorder rekabetçi değil, **tamamlayıcı**: aynı yayın ikinci kez yakalanıyor, bu sefer `livestreamrecorder.com/live17/your-id/video/...` gibi herhangi bir tarayıcıda anında açılabilen halka açık bir web URL'sine iniyor.\n\n### Liver ve V-Liver için aynı yakalama\n\n17live'ın yayınladığını kaydederiz — ister face-cam'li bir Liver olarak sohbet / şarkı / dans yapıyor olun, ister özel sahnesi olan OBS ile bestelenmiş bir Liver, ister Live2D / 3D avatarlar çalıştıran bir V-Liver. Yakalama 17live dağıtımından önce gerçekleşir, böylece son videonuz hayranlarınızın canlıda gördüğünün aynısı görünür: avatar, bindirmeler, ses değiştirici, hediye animasyonları, hepsi korunmuş.\n\n### Telefonunuzda uygulama yok, PC'nizde OBS yok\n\nSunucu tarafı. Telefondan veya PC'den her zamanki gibi yayın yaparsınız, kayıt altyapımızda gerçekleşir. Live başladıktan sonra telefonunuz uyuyabilir, dizüstü bilgisayarınız kapatılabilir — kayıt devam eder. CPU yükü yok, GPU kullanımı yok, ekstra pil maliyeti yok. Bu, 4+ saat süren uzun şarkı veya sohbet Live'ları için önemlidir.\n\n### 90 saniyelik klip sınırının ötesinde\n\n17live'ın uygulama içi Stream Clips'i, uygulama içinde paylaşmak için harikadır ancak 15–90 saniyeyle sınırlıdır ve 17live yüzeyini terk etmez. Premium yayıncılar LiveStreamRecorder'da ClipAI kullanarak kaydedilmiş tam Live'lardan istediğiniz uzunlukta öne çıkan klipler kesebilir, **TikTok, Instagram Reels, YouTube Shorts** için biçimlendirilmiş — bu platformlar 17live dışındaki izleyicilerin gerçekten yaşadığı yerlerdir. Bunları 17live odanıza geri dönüş hunisi olarak kullanın.\n\n### Yetenek yönetimli ve bağımsız yayıncılar için eşit destek\n\n17live'ın yetenek yönetim sistemi yayıncıları aktif olarak keşfeder ve destekler — bu, platformu tamamen self-servis uygulamalardan ayıran özelliklerden biridir. LiveStreamRecorder bunların hiçbirine dokunmaz. 17live hesabınıza giriş yapmaz, Hot Star etkinliklerine, hediye promosyonlarına veya yetenek ajansı araçlarına müdahale etmez. Pasif paralel bir kayıttır — sizin kontrolünüz, sizin URL'niz, sizin arşiviniz.\n\n### Tarayıcıda izleyin, gerekirse indirin\n\nHer 17live kaydı, herhangi bir modern tarayıcıda anında oynatılır. İzlemek için 17live hesabı gerekmez — URL'yi herkesle, her yerde paylaşın. Premium içerik üreticileri her Live'dan ham HEVC video dosyasını yeniden düzenleme, YouTube'a uzun VOD olarak yükleme veya yerel arşivleme için indirebilir.\n\n### Opt-in, kendi içeriğiniz\n\nLiveStreamRecorder yalnızca kendi profilinizi kaydeder, yalnızca opt-in yaptıktan sonra. Hukuki duruş, kendi Live'larınızı 17live'ın uygulama içi Stream Archive'inden indirmenizle aynıdır — yalnızca farklı bir yüzeyde (uygulamanın içinde değil, sizin alan adınızdaki halka açık bir web URL'sinde). Kaydı istediğiniz zaman durdurabilir, herhangi bir kaydı tek tıklamayla silebilirsiniz."
   },
   "jsonLd": {
     "name": {
@@ -582,7 +637,8 @@
       "mixch": "Mixch Yayın Kayıtları",
       "joilive": "Joilive Yayın Kayıtları",
       "trovo": "Trovo Yayın Kayıtları",
-      "twitcast": "TwitCasting Yayın Kayıtları"
+      "twitcast": "TwitCasting Yayın Kayıtları",
+      "live17": "17live Yayın Kayıtları"
     },
     "description": {
       "all": "LiveStreamRecorder'daki içerik üreticilerinden canlı yayın kayıtlarını izleyin.",
@@ -598,7 +654,8 @@
       "mixch": "LiveStreamRecorder'daki içerik üreticilerinden Mixch kayıtlarını izleyin.",
       "joilive": "LiveStreamRecorder'daki yayıncılardan Joilive yayın kayıtlarını izleyin.",
       "trovo": "LiveStreamRecorder'daki içerik üreticilerinden Trovo kayıtlarını izleyin.",
-      "twitcast": "LiveStreamRecorder'daki içerik üreticilerinden TwitCasting kayıtlarını izleyin."
+      "twitcast": "LiveStreamRecorder'daki içerik üreticilerinden TwitCasting kayıtlarını izleyin.",
+      "live17": "LiveStreamRecorder'daki yayıncılardan 17live yayın kayıtlarını izleyin."
     },
     "streamTitle": "{nickname} Yayını - {date}",
     "streamDescription": {
@@ -615,7 +672,8 @@
       "mixch": "{nickname}'in Mixch kaydı",
       "joilive": "{nickname} tarafından Joilive yayın kaydı",
       "trovo": "{nickname}'in Trovo kaydı",
-      "twitcast": "{nickname}'in TwitCasting kaydı"
+      "twitcast": "{nickname}'in TwitCasting kaydı",
+      "live17": "{nickname} tarafından 17live yayın kaydı"
     }
   },
   "recordedOn": "{date} tarihinde kaydedildi",

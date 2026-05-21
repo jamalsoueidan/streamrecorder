@@ -39,6 +39,7 @@ const platformMap: Record<string, FollowerTypeEnum> = {
   Twitcast: FollowerTypeEnum.Twitcast,
   Trovo: FollowerTypeEnum.Trovo,
   Joilive: FollowerTypeEnum.Joilive,
+  Live17: FollowerTypeEnum.Live17,
 };
 
 export default async function Page() {

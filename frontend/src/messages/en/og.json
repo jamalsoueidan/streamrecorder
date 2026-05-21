@@ -17,7 +17,8 @@
       "mixch": "Mixch Creators",
       "twitcast": "TwitCasting Streamers",
       "trovo": "Trovo Streamers",
-      "joilive": "Joilive Streamers"
+      "joilive": "Joilive Streamers",
+      "live17": "17live Streamers"
     },
     "subtitle": {
       "all": "Browse all streamers and creators",
@@ -33,7 +34,8 @@
       "mixch": "Discover Mixch creators",
       "twitcast": "Discover TwitCasting streamers",
       "trovo": "Discover Trovo streamers",
-      "joilive": "Discover Joilive streamers"
+      "joilive": "Discover Joilive streamers",
+      "live17": "Discover 17live streamers"
     }
   },
   "recordings": {
@@ -51,7 +53,8 @@
       "mixch": "Mixch Recordings",
       "twitcast": "TwitCasting Recordings",
       "trovo": "Trovo Recordings",
-      "joilive": "Joilive Recordings"
+      "joilive": "Joilive Recordings",
+      "live17": "17live Recordings"
     },
     "subtitle": {
       "all": "Watch recorded live streams",
@@ -67,7 +70,8 @@
       "mixch": "Watch recorded Mixch streams",
       "twitcast": "Watch recorded TwitCasting Lives",
       "trovo": "Watch recorded Trovo streams",
-      "joilive": "Watch recorded Joilive streams"
+      "joilive": "Watch recorded Joilive streams",
+      "live17": "Watch recorded 17live streams"
     }
   },
   "home": {

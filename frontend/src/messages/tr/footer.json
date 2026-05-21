@@ -27,7 +27,8 @@
     "mixch": "Mixch içerik üreticileri",
     "joilive": "Joilive yayıncıları",
     "trovo": "Trovo içerik üreticileri",
-    "twitcast": "TwitCasting içerik üreticileri"
+    "twitcast": "TwitCasting içerik üreticileri",
+    "live17": "17live yayıncıları"
   },
   "watchRecordings": {
     "title": "Kayıtları İzle",
@@ -44,7 +45,8 @@
     "mixch": "Mixch kayıtları",
     "joilive": "Joilive kayıtları",
     "trovo": "Trovo kayıtları",
-    "twitcast": "TwitCasting kayıtları"
+    "twitcast": "TwitCasting kayıtları",
+    "live17": "17live kayıtları"
   },
   "legal": {
     "title": "Yasal",

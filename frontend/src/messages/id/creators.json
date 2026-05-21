@@ -312,6 +312,53 @@
         "rekaman twitcast",
         "perekam stream twitcast"
       ]
+    },
+    "live17": {
+      "title": "Kreator 17live — Liver, V-Liver, dan streamer dengan manajemen talenta",
+      "description": "17live (yi-qi, Mandarin untuk «bersama») adalah platform live-streaming terbesar ketiga di Asia, dengan campuran unik antara Liver manusia dan V-Liver (streamer avatar virtual). Kuat di Jepang, Taiwan, dan Hong Kong. LiveStreamRecorder memberi kreator 17live rumah publik di web di luar aplikasi.",
+      "keywords": [
+        "Liver 17live",
+        "V-Liver 17live",
+        "manajemen talenta 17live",
+        "arsip 17live",
+        "17live Jepang",
+        "17live Taiwan",
+        "17live Hong Kong",
+        "tonton 17live tanpa aplikasi",
+        "halaman kreator 17live",
+        "streamer virtual 17live",
+        "17live yi-qi bersama"
+      ],
+      "faqs": [
+        {
+          "question": "17live sudah punya Stream Archive dan Stream Clips di aplikasi — kenapa saya butuh ini?",
+          "answer": "Keduanya hidup di dalam aplikasi 17live dan tergantung pengaturan izin Anda — penggemar harus login ke 17live, dan tidak ada URL publik yang bisa diindeks Google. LiveStreamRecorder memberi setiap Live tautan web publik yang bisa dibuka di browser apa saja, tanpa install aplikasi atau gerbang izin."
+        },
+        {
+          "question": "Saya V-Liver — apakah stream avatar saya direkam dengan benar?",
+          "answer": "Ya. Kami menangkap persis apa yang 17live siarkan ke penonton: avatar Live2D/3D, scene OBS, voice changer — semua dipertahankan sama seperti yang dilihat penggemar saat live."
+        },
+        {
+          "question": "Agensi talenta mengelola akun 17live saya — apakah saya bisa pakai?",
+          "answer": "Ya. Perekaman bersifat opt-in oleh Anda atau agensi dan hanya memengaruhi profil Anda. Agensi tetap mengelola alat internal 17live; LiveStreamRecorder hanya menambahkan rumah publik di web untuk siaran Anda."
+        },
+        {
+          "question": "Saya kuat di Jepang dan Taiwan tapi ingin berkembang di Asia Tenggara / pasar berbahasa Inggris",
+          "answer": "Itulah tantangan jangka panjang 17live — aplikasinya berpusat di Asia, penonton baru di luar wilayah sulit menemukan Anda. Halaman LiveStreamRecorder Anda berada di web terbuka dengan URL berbahasa Inggris, dan ClipAI membuat klip highlight untuk TikTok, Reels, dan Shorts untuk membawa penggemar baru kembali ke ruang 17live Anda."
+        },
+        {
+          "question": "Apakah saya butuh software di HP atau PC?",
+          "answer": "Tidak. Anda live dari aplikasi 17live seperti biasa. Perekaman berjalan di sisi server — tidak ada beban CPU atau pemakaian baterai di perangkat Anda."
+        },
+        {
+          "question": "Apakah LiveStreamRecorder gratis untuk kreator 17live?",
+          "answer": "Ya. Paket gratis menyimpan setiap Live di halaman kreator Anda tanpa batas waktu. Premium membuka unduhan video HEVC mentah, klip otomatis via ClipAI, dan jendela retensi yang diperpanjang."
+        },
+        {
+          "question": "Apakah ini memengaruhi peringkat 17live, Hot Star, atau pendapatan hadiah saya?",
+          "answer": "Tidak. LiveStreamRecorder tidak menyentuh akun 17live Anda dan tidak memengaruhi peringkat, poin Hot Star, atau alat agensi. Ini hanya perekaman paralel pasif, mirip dengan penggemar yang merekam mandiri — hanya saja dengan kualitas tinggi dan disimpan di web."
+        }
+      ]
     }
   },
   "hero": {
@@ -329,7 +376,8 @@
       "mixch": "Kreator Mixch",
       "trovo": "Kreator Trovo",
       "twitcast": "Kreator TwitCasting",
-      "joilive": "Streamer Joilive"
+      "joilive": "Streamer Joilive",
+      "live17": "Streamer 17live"
     },
     "subtitle": {
       "all": "Bergabunglah dengan ribuan kreator yang menggunakan LiveStreamRecorder untuk menyimpan stream mereka dan membuat klip pendek.",
@@ -345,7 +393,8 @@
       "mixch": "Bergabunglah dengan ribuan kreator Mixch yang menggunakan LiveStreamRecorder untuk menyimpan stream mereka dan membuat klip pendek.",
       "trovo": "Bergabunglah dengan ribuan kreator Trovo yang menggunakan LiveStreamRecorder untuk menyimpan stream mereka dan membuat klip pendek.",
       "twitcast": "Bergabunglah dengan ribuan kreator TwitCasting yang menggunakan LiveStreamRecorder untuk menyimpan stream mereka dan membuat klip pendek.",
-      "joilive": "Gabung dengan streamer Joilive yang pakai LiveStreamRecorder untuk menyimpan setiap stream dan menjangkau penonton di luar Joilive."
+      "joilive": "Gabung dengan streamer Joilive yang pakai LiveStreamRecorder untuk menyimpan setiap stream dan menjangkau penonton di luar Joilive.",
+      "live17": "Gabung dengan streamer 17live yang pakai LiveStreamRecorder untuk menyimpan setiap stream dan menjangkau penonton di luar 17live."
     }
   },
   "features": {
@@ -364,7 +413,8 @@
       "mixch": "Rekam Stream Mixch Anda Secara Otomatis",
       "trovo": "Rekam Stream Trovo Anda Secara Otomatis",
       "twitcast": "Rekam Stream TwitCasting Anda Secara Otomatis",
-      "joilive": "Simpan Stream Joilive-mu Secara Otomatis"
+      "joilive": "Simpan Stream Joilive-mu Secara Otomatis",
+      "live17": "Simpan Stream 17live-mu Secara Otomatis"
     },
     "subtitle": "Dari live stream ke klip pendek dalam hitungan menit",
     "items": {
@@ -401,7 +451,8 @@
       "mixch": "Rekam Stream Mixch Anda",
       "trovo": "Rekam Stream Trovo Anda",
       "twitcast": "Rekam Stream TwitCasting Anda",
-      "joilive": "Simpan Stream Joilive-mu"
+      "joilive": "Simpan Stream Joilive-mu",
+      "live17": "Simpan Stream 17live-mu"
     },
     "subtitle": {
       "all": "Bergabunglah dengan ribuan kreator. Simpan stream Anda, buat klip pendek dengan ClipAI, dan kembangkan audiens Anda.",
@@ -417,7 +468,8 @@
       "mixch": "Bergabunglah dengan ribuan kreator Mixch. Simpan stream Anda dan buat klip pendek dengan ClipAI.",
       "trovo": "Bergabunglah dengan ribuan kreator Trovo. Simpan stream Anda dan buat klip pendek dengan ClipAI.",
       "twitcast": "Bergabunglah dengan ribuan kreator TwitCasting. Simpan stream Anda dan buat klip pendek dengan ClipAI.",
-      "joilive": "Gabung dengan streamer Joilive yang menyimpan setiap stream lewat LiveStreamRecorder. Buat klip pendek dengan ClipAI dan berkembang di luar Joilive."
+      "joilive": "Gabung dengan streamer Joilive yang menyimpan setiap stream lewat LiveStreamRecorder. Buat klip pendek dengan ClipAI dan berkembang di luar Joilive.",
+      "live17": "Gabung dengan streamer 17live yang menyimpan setiap stream lewat LiveStreamRecorder. Buat klip pendek dengan ClipAI dan berkembang di luar 17live."
     },
     "button": "Mulai Rekam Gratis"
   },
@@ -437,7 +489,8 @@
       "mixch": "Jadilah kreator Mixch pertama yang bergabung!",
       "trovo": "Jadilah kreator Trovo pertama yang bergabung!",
       "twitcast": "Jadilah kreator TwitCasting pertama yang bergabung!",
-      "joilive": "Jadilah streamer Joilive pertama yang bergabung!"
+      "joilive": "Jadilah streamer Joilive pertama yang bergabung!",
+      "live17": "Jadilah streamer 17live pertama yang bergabung!"
     },
     "button": "Mulai Sekarang"
   },
@@ -455,7 +508,8 @@
     "mixch": "## Kreator Mixch\n\nTemukan kreator Mixch yang menggunakan LiveStreamRecorder untuk menyimpan live mereka sendiri. Jelajahi streamer Mixch, tonton rekaman mereka, dan temukan kreator baru untuk diikuti dari komunitas live streaming mobile-first ini.\n\n### Kenapa kreator Mixch merekam live mereka\n\nLive Mixch hanya berlangsung secara live — begitu kamu mengakhiri siaran, kontennya hilang dari app. Tidak ada sistem replay dan fans tidak punya cara untuk menontonnya lagi. Kreator Mixch pakai LiveStreamRecorder untuk menyimpan setiap live secara otomatis, supaya sesi ngobrol, performa musik, dan konten sehari-harimu tetap tersedia untuk fans lama setelah live berakhir.\n\n### Jelajahi kreator Mixch terbaik\n\nBuka halaman kreator Mixch untuk menemukan streamer yang menyimpan live mereka sendiri di LiveStreamRecorder. Tonton rekaman mereka, kejar live yang kamu lewatkan, dan temukan kreator Mixch baru yang layak diikuti.\n\n### Halaman kreator Mixch milikmu\n\nSetiap kreator Mixch di LiveStreamRecorder punya halaman sendiri tempat fans bisa menonton semua live yang sudah direkam. Daftar, tambahkan username Mixch-mu, dan halaman kreatormu langsung siap — tempat permanen untuk kontenmu yang tidak hilang saat live berakhir.\n\n### Dari live jadi klip: bangun pengikutmu\n\nClipAI mengubah rekaman live Mixch-mu jadi klip pendek siap posting di TikTok, Instagram Reels, atau YouTube Shorts. Ubah reaksi, momen musik, dan highlight ngobrol jadi konten viral dan tumbuhkan pengikutmu di luar Mixch.\n\n### Jadi kreator Mixch di LiveStreamRecorder\n\nDaftar gratis, tambahkan username Mixch-mu, dan mulai simpan live-mu hari ini. Setiap live otomatis tertangkap — tanpa rekam manual, tanpa app tambahan. Gabung dengan kreator Mixch yang sudah pakai LiveStreamRecorder untuk menjaga setiap live dan menumbuhkan audiens mereka.",
     "joilive": "## Streamer Joilive di LiveStreamRecorder\n\nStreamer Joilive (joilive.net) memakai LiveStreamRecorder untuk **merekam live mereka sendiri** dan memberi channel mereka arsip yang nyata. Joilive sendiri tidak menyimpan siaran setelah kamu offline — tidak ada tab replay, tidak ada VOD, tidak ada daftar stream lampau. Platformnya dibangun seputar chat live dan gifting, artinya semua yang kamu lakukan saat siaran lenyap begitu siaran berakhir. Sebagai kreator Joilive, merekam siaranmu sendiri adalah satu-satunya cara untuk menyimpannya.\n\n### Masalah ID Numerik\n\nJoilive mengidentifikasi setiap streamer lewat ID numerik panjang seperti `1880336239059720193`. URL profilmu adalah `joilive.net/user/index.html?s=1880336239059720193`. Nggak ada yang bookmark itu. Nggak ada yang ngetik itu di Discord. Halaman Joilive nggak benar-benar bisa dibagikan — dan nggak ada cara mencari streamer lewat username karena Joilive nggak punya username. LiveStreamRecorder memberi setiap kreator Joilive URL yang bersih dan mudah diingat, plus halaman kreator yang ramah pencarian yang di belakang layar memetakan ke ID numerikmu. Akun yang sama, pintu depan yang jauh lebih baik.\n\n### Menjangkau Fans di Zona Waktu Lain\n\nJoilive lebih condong ke audiens Asia-Pasifik. Kalau kamu streaming di JST dan fans-mu di Eropa atau Amerika, separuh audiensmu nggak pernah nonton live-mu — dan di Joilive itu artinya mereka nggak pernah nonton sama sekali. Dengan merekam stream-mu sendiri di LiveStreamRecorder, kamu kasih fans di zona waktu lain kesempatan menonton siaran sesuai jadwal mereka. Chatnya memang sudah hilang, tapi kontennya tetap ada.\n\n### Apa Saja yang Tersimpan\n\nVideo lengkap setiap Live, dalam kualitas tinggi, mulai dari saat kamu live. Tanpa rekam layar, tanpa plugin OBS, tanpa pass encoder tambahan — streamer Joilive nggak menjalankan apa pun di sisi mereka. Rekaman langsung masuk ke halaman kreator LiveStreamRecorder-mu secara otomatis dan tetap di sana tanpa batas waktu. Kamu yang putuskan mana yang dibuat publik, disembunyikan, atau dihapus.\n\n### Ubah Stream-mu Jadi Klip yang Bisa Dibagikan\n\nJoilive itu platform kecil. Realitanya kebanyakan audiensmu hidup di TikTok, YouTube Shorts, atau Instagram Reels — mereka nggak punya app Joilive. ClipAI memindai siaran Joilive yang sudah direkam dan memotong klip pendek bercaption untuk format vertikal. Posting di tempat penonton sudah berada, lalu arahkan kembali ke room Joilive-mu saat kamu live lagi.\n\n### Jelajahi dan Temukan Streamer Joilive\n\nHalaman ini menampilkan kreator Joilive yang sudah mendaftarkan diri di LiveStreamRecorder. Karena Joilive tidak mengekspos username atau pencarian publik, ini mungkin salah satu dari sedikit cara untuk benar-benar menemukan streamer Joilive berdasarkan nama di web terbuka. Daftarnya akan terus bertambah seiring lebih banyak penyiar yang mendaftar.\n\n### Jadi Streamer Joilive di LiveStreamRecorder\n\nDaftar gratis, gratis untuk mulai menyimpan live-mu. Tempel Joilive user ID-mu (nilai `?s=…` dari URL profilmu) dan kami urus sisanya. Setiap siaran sejak saat itu tertangkap di halaman kreatormu. Perekaman adalah keputusanmu, kontennya milikmu, dan arsipnya ada di domainmu — `livestreamrecorder.com/joilive/id-mu` alih-alih URL query-string Joilive yang nggak bisa diingat siapa pun.",
     "trovo": "## Kreator Trovo\n\nTemukan kreator Trovo yang menggunakan LiveStreamRecorder untuk menyimpan live mereka sendiri. Jelajahi streamer Trovo, tonton rekaman mereka, dan temukan kreator baru untuk diikuti dari komunitas live streaming mobile-first ini.\n\n### Kenapa kreator Trovo merekam live mereka\n\nLive Trovo hanya berlangsung secara live — begitu kamu mengakhiri siaran, kontennya hilang dari app. Tidak ada sistem replay dan fans tidak punya cara untuk menontonnya lagi. Kreator Trovo pakai LiveStreamRecorder untuk menyimpan setiap live secara otomatis, supaya sesi ngobrol, performa musik, dan konten sehari-harimu tetap tersedia untuk fans lama setelah live berakhir.\n\n### Jelajahi kreator Trovo terbaik\n\nBuka halaman kreator Trovo untuk menemukan streamer yang menyimpan live mereka sendiri di LiveStreamRecorder. Tonton rekaman mereka, kejar live yang kamu lewatkan, dan temukan kreator Trovo baru yang layak diikuti.\n\n### Halaman kreator Trovo milikmu\n\nSetiap kreator Trovo di LiveStreamRecorder punya halaman sendiri tempat fans bisa menonton semua live yang sudah direkam. Daftar, tambahkan username Trovo-mu, dan halaman kreatormu langsung siap — tempat permanen untuk kontenmu yang tidak hilang saat live berakhir.\n\n### Dari live jadi klip: bangun pengikutmu\n\nClipAI mengubah rekaman live Trovo-mu jadi klip pendek siap posting di TikTok, Instagram Reels, atau YouTube Shorts. Ubah reaksi, momen musik, dan highlight ngobrol jadi konten viral dan tumbuhkan pengikutmu di luar Trovo.\n\n### Jadi kreator Trovo di LiveStreamRecorder\n\nDaftar gratis, tambahkan username Trovo-mu, dan mulai simpan live-mu hari ini. Setiap live otomatis tertangkap — tanpa rekam manual, tanpa app tambahan. Gabung dengan kreator Trovo yang sudah pakai LiveStreamRecorder untuk menjaga setiap live dan menumbuhkan audiens mereka.",
-    "twitcast": "## Kreator TwitCasting\n\nTemukan kreator TwitCasting yang menggunakan LiveStreamRecorder untuk menyimpan live mereka sendiri. Jelajahi streamer TwitCasting, tonton rekaman mereka, dan temukan kreator baru untuk diikuti dari komunitas live streaming mobile-first ini.\n\n### Kenapa kreator TwitCasting merekam live mereka\n\nLive TwitCasting hanya berlangsung secara live — begitu kamu mengakhiri siaran, kontennya hilang dari app. Tidak ada sistem replay dan fans tidak punya cara untuk menontonnya lagi. Kreator TwitCasting pakai LiveStreamRecorder untuk menyimpan setiap live secara otomatis, supaya sesi ngobrol, performa musik, dan konten sehari-harimu tetap tersedia untuk fans lama setelah live berakhir.\n\n### Jelajahi kreator TwitCasting terbaik\n\nBuka halaman kreator TwitCasting untuk menemukan streamer yang menyimpan live mereka sendiri di LiveStreamRecorder. Tonton rekaman mereka, kejar live yang kamu lewatkan, dan temukan kreator TwitCasting baru yang layak diikuti.\n\n### Halaman kreator TwitCasting milikmu\n\nSetiap kreator TwitCasting di LiveStreamRecorder punya halaman sendiri tempat fans bisa menonton semua live yang sudah direkam. Daftar, tambahkan username TwitCasting-mu, dan halaman kreatormu langsung siap — tempat permanen untuk kontenmu yang tidak hilang saat live berakhir.\n\n### Dari live jadi klip: bangun pengikutmu\n\nClipAI mengubah rekaman live TwitCasting-mu jadi klip pendek siap posting di TikTok, Instagram Reels, atau YouTube Shorts. Ubah reaksi, momen musik, dan highlight ngobrol jadi konten viral dan tumbuhkan pengikutmu di luar TwitCasting.\n\n### Jadi kreator TwitCasting di LiveStreamRecorder\n\nDaftar gratis, tambahkan username TwitCasting-mu, dan mulai simpan live-mu hari ini. Setiap live otomatis tertangkap — tanpa rekam manual, tanpa app tambahan. Gabung dengan kreator TwitCasting yang sudah pakai LiveStreamRecorder untuk menjaga setiap live dan menumbuhkan audiens mereka."
+    "twitcast": "## Kreator TwitCasting\n\nTemukan kreator TwitCasting yang menggunakan LiveStreamRecorder untuk menyimpan live mereka sendiri. Jelajahi streamer TwitCasting, tonton rekaman mereka, dan temukan kreator baru untuk diikuti dari komunitas live streaming mobile-first ini.\n\n### Kenapa kreator TwitCasting merekam live mereka\n\nLive TwitCasting hanya berlangsung secara live — begitu kamu mengakhiri siaran, kontennya hilang dari app. Tidak ada sistem replay dan fans tidak punya cara untuk menontonnya lagi. Kreator TwitCasting pakai LiveStreamRecorder untuk menyimpan setiap live secara otomatis, supaya sesi ngobrol, performa musik, dan konten sehari-harimu tetap tersedia untuk fans lama setelah live berakhir.\n\n### Jelajahi kreator TwitCasting terbaik\n\nBuka halaman kreator TwitCasting untuk menemukan streamer yang menyimpan live mereka sendiri di LiveStreamRecorder. Tonton rekaman mereka, kejar live yang kamu lewatkan, dan temukan kreator TwitCasting baru yang layak diikuti.\n\n### Halaman kreator TwitCasting milikmu\n\nSetiap kreator TwitCasting di LiveStreamRecorder punya halaman sendiri tempat fans bisa menonton semua live yang sudah direkam. Daftar, tambahkan username TwitCasting-mu, dan halaman kreatormu langsung siap — tempat permanen untuk kontenmu yang tidak hilang saat live berakhir.\n\n### Dari live jadi klip: bangun pengikutmu\n\nClipAI mengubah rekaman live TwitCasting-mu jadi klip pendek siap posting di TikTok, Instagram Reels, atau YouTube Shorts. Ubah reaksi, momen musik, dan highlight ngobrol jadi konten viral dan tumbuhkan pengikutmu di luar TwitCasting.\n\n### Jadi kreator TwitCasting di LiveStreamRecorder\n\nDaftar gratis, tambahkan username TwitCasting-mu, dan mulai simpan live-mu hari ini. Setiap live otomatis tertangkap — tanpa rekam manual, tanpa app tambahan. Gabung dengan kreator TwitCasting yang sudah pakai LiveStreamRecorder untuk menjaga setiap live dan menumbuhkan audiens mereka.",
+    "live17": "## Kreator 17live di LiveStreamRecorder\n\n17live (diucapkan *yi-qi live* — 一起, Mandarin untuk «bersama») adalah platform live-streaming terbesar ketiga di Asia dan rumah bagi **Liver** (streamer manusia) maupun **V-Liver** (streamer avatar virtual). Didirikan di Taiwan tahun 2015, berkantor pusat di Jepang sejak 2021, tercatat di SGX dengan kode **LVR** — 17live adalah salah satu ekosistem live yang paling terstruktur dan didukung manajemen talenta di Asia, sangat kuat di Jepang, Taiwan, Hong Kong, Singapura, dan Filipina. LiveStreamRecorder memberi kreator 17live **rumah kedua di web publik** di luar aplikasi 17live, di mana setiap Live menjadi video yang bisa ditonton dan terindeks mesin pencari di halaman kreator Anda sendiri.\n\n### Sambutan untuk V-Liver dan Liver\n\n17live mempelopori kategori V-Liver — streamer avatar virtual yang tampil sebagai persona digital yang bisa disesuaikan. Tangkapan kami berfungsi sama baik bagi Liver dengan face-cam, avatar V-Liver Live2D/3D, scene yang dirakit OBS, atau setup hanya HP. Apa pun yang 17live siarkan ke penonton, kami simpan. Tidak perlu workaround DRM, tidak perlu plugin OBS, tidak perlu alat V-Liver khusus — penangkapan terjadi sebelum proses render Anda.\n\n### Dibangun untuk realita Asia-first 17live\n\nBasis pengguna 17live terkonsentrasi di Jepang, Taiwan, Hong Kong, dan Asia Tenggara. Artinya, mayoritas penonton Anda di zona waktu JST/SGT/HKT. Penggemar di Eropa dan Amerika Utara melewatkan setengah dari Live Anda hanya karena terjaga di waktu yang salah, dan aplikasi 17live sendiri tidak mudah ditemukan oleh penonton baru di luar region. LiveStreamRecorder menutup celah ini: setiap siaran mendarat di halaman kreator publik yang terindeks mesin pencari yang bisa ditemukan siapa pun dari mana pun — tidak perlu akun 17live.\n\n### Jangkau penggemar yang tidak memiliki aplikasi 17live\n\nFitur in-app 17live (replay, klip in-app dengan batas 15–90 detik) bekerja baik bagi penggemar yang sudah pakai aplikasi. Tapi untuk menumbuhkan audiens di luar gelembung itu — penyusup Reddit, komunitas Discord, pengikut Twitter — Anda butuh URL publik yang bisa dibuka di browser apa saja. LiveStreamRecorder memberi setiap Live tautan web yang dapat dibagikan seperti `livestreamrecorder.com/live17/your-id` yang bisa Anda taruh di bio, kirim lewat DM, atau posting di media sosial. Konten yang sama, tapi bisa diakses tanpa gerbang aplikasi.\n\n### Agensi talenta dan streamer solo, alur yang sama\n\nSistem manajemen talenta 17live merekrut, melatih, dan mendukung streamer — terstruktur unik di antara platform live Asia. Baik Anda Liver yang dikelola agensi dengan ambisi Hot Star atau streamer indie yang membangun dari nol, LiveStreamRecorder hanyalah lapisan perekaman pasif. Tidak menyentuh hadiah, peringkat, kontrak agensi, atau alat 17live Anda — hanya menyimpan salinan setiap Live di web terbuka agar konten Anda hidup di luar aplikasi.\n\n### Pertumbuhan lintas platform dengan ClipAI\n\nKlip in-app 17live dibatasi 90 detik dan terjebak di dalam aplikasi. ClipAI memindai Live lengkap Anda yang tersimpan di LiveStreamRecorder dan menghasilkan klip pendek yang diformat untuk **TikTok, Instagram Reels, dan YouTube Shorts** — platform tempat sebagian besar penemuan terjadi untuk penonton Asia Tenggara dan global. Momen tari, cover lagu, reaksi hadiah, pertukaran chat, transisi adegan V-Liver — ubah setiap Live menjadi corong klip yang membawa penggemar baru kembali ke ruang 17live Anda.\n\n### Jadi kreator 17live di LiveStreamRecorder\n\nDaftar gratis. Tempel nomor `profile/r/your-id` dari URL profil 17live Anda — itu saja yang kami butuhkan. Mulai dari Live berikutnya, setiap siaran mendarat otomatis di halaman kreator Anda. Konten Anda, URL Anda, rumah Anda yang bisa dibagikan di web terbuka — independen dari aplikasi 17live."
   },
   "faq": "Pertanyaan yang Sering Diajukan",
   "country": {

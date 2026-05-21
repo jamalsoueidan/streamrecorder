@@ -27,7 +27,8 @@
     "mixch": "ミクチャ クリエイター",
     "trovo": "Trovo クリエイター",
     "twitcast": "ツイキャス クリエイター",
-    "joilive": "ジョイライブ ストリーマー"
+    "joilive": "ジョイライブ ストリーマー",
+    "live17": "17ライブ ストリーマー"
   },
   "watchRecordings": {
     "title": "録画を視聴",
@@ -44,7 +45,8 @@
     "mixch": "ミクチャ 録画",
     "trovo": "Trovo 録画",
     "twitcast": "ツイキャス 録画",
-    "joilive": "ジョイライブ 録画"
+    "joilive": "ジョイライブ 録画",
+    "live17": "17ライブ 録画"
   },
   "legal": {
     "title": "法的情報",

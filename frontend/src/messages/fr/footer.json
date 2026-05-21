@@ -27,7 +27,8 @@
     "mixch": "Créateurs Mixch",
     "trovo": "Créateurs Trovo",
     "twitcast": "Créateurs TwitCasting",
-    "joilive": "Créateurs Joilive"
+    "joilive": "Créateurs Joilive",
+    "live17": "Créateurs 17live"
   },
   "watchRecordings": {
     "title": "Regarder les enregistrements",
@@ -44,7 +45,8 @@
     "mixch": "Enregistrements Mixch",
     "trovo": "Enregistrements Trovo",
     "twitcast": "Enregistrements TwitCasting",
-    "joilive": "Enregistrements Joilive"
+    "joilive": "Enregistrements Joilive",
+    "live17": "Enregistrements 17live"
   },
   "legal": {
     "title": "Mentions légales",

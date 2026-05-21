@@ -312,6 +312,53 @@
         "gravação twitcast",
         "gravador de stream twitcast"
       ]
+    },
+    "live17": {
+      "title": "Criadores 17live — Livers, V-Livers e streamers com gestão de talentos",
+      "description": "17live (yi-qi, mandarim para «juntos») é a terceira maior plataforma de streaming ao vivo da Ásia, com uma mistura única de Livers humanos e V-Livers (streamers com avatares virtuais). Forte no Japão, Taiwan e Hong Kong. LiveStreamRecorder dá aos criadores 17live um lar público na web fora do app.",
+      "keywords": [
+        "Liver 17live",
+        "V-Liver 17live",
+        "gestão de talentos 17live",
+        "arquivo 17live",
+        "17live Japão",
+        "17live Taiwan",
+        "17live Hong Kong",
+        "ver 17live sem o app",
+        "página de criador 17live",
+        "streamer virtual 17live",
+        "17live yi-qi juntos"
+      ],
+      "faqs": [
+        {
+          "question": "17live já tem Stream Archive e Stream Clips no app — por que preciso disso?",
+          "answer": "Ambos vivem dentro do app do 17live e dependem das suas permissões — fãs precisam fazer login no 17live e não há URL pública indexável pelo Google. LiveStreamRecorder dá a cada Live um link público que abre em qualquer navegador, sem instalar app e sem barreira de permissão."
+        },
+        {
+          "question": "Sou V-Liver — meu stream com avatar é gravado corretamente?",
+          "answer": "Sim. Capturamos exatamente o que o 17live transmite aos espectadores: avatar Live2D/3D, cena OBS, alterador de voz — tudo preservado igual ao que seus fãs viram ao vivo."
+        },
+        {
+          "question": "Minha agência de talentos administra minha conta 17live — posso usar?",
+          "answer": "Sim. A gravação é opt-in por você ou pela agência e afeta apenas seu perfil. Sua agência continua administrando as ferramentas internas do 17live; LiveStreamRecorder apenas adiciona um lar público na web para suas transmissões."
+        },
+        {
+          "question": "Sou forte no Japão e Taiwan mas quero crescer em SEA / mercados anglófonos",
+          "answer": "Esse é o desafio de longo prazo do 17live — o app é focado na Ásia e novos espectadores fora da região dificilmente te descobrem. Sua página no LiveStreamRecorder vive na web aberta com URLs em inglês, e o ClipAI cria clipes para TikTok, Reels e Shorts que trazem novos fãs de volta à sua sala 17live."
+        },
+        {
+          "question": "Preciso de software no celular ou PC?",
+          "answer": "Não. Você abre o Live no app do 17live como sempre. A gravação acontece no servidor — sem uso de CPU nem de bateria no seu dispositivo."
+        },
+        {
+          "question": "LiveStreamRecorder é grátis para criadores 17live?",
+          "answer": "Sim. O plano grátis guarda cada Live indefinidamente na sua página de criador. Premium libera download do vídeo HEVC bruto, clipes automáticos via ClipAI e retenção estendida."
+        },
+        {
+          "question": "Isso afeta meu ranking no 17live, Hot Star ou receita de presentes?",
+          "answer": "Não. LiveStreamRecorder não toca sua conta 17live e não afeta ranking, pontos Hot Star ou ferramentas de agência. É uma gravação paralela passiva, como um fã gravando por conta própria — mas em alta qualidade e armazenada na web."
+        }
+      ]
     }
   },
   "hero": {
@@ -329,7 +376,8 @@
       "mixch": "Criadores do Mixch",
       "trovo": "Criadores do Trovo",
       "twitcast": "Criadores do TwitCasting",
-      "joilive": "Streamers do Joilive"
+      "joilive": "Streamers do Joilive",
+      "live17": "Streamers do 17live"
     },
     "subtitle": {
       "all": "Junte-se a milhares de criadores que usam o LiveStreamRecorder para salvar suas streams e criar clipes curtos.",
@@ -345,7 +393,8 @@
       "mixch": "Junte-se a milhares de criadores do Mixch que usam o LiveStreamRecorder para salvar suas streams e criar clipes curtos.",
       "trovo": "Junte-se a milhares de criadores do Trovo que usam o LiveStreamRecorder para salvar suas streams e criar clipes curtos.",
       "twitcast": "Junte-se a milhares de criadores do TwitCasting que usam o LiveStreamRecorder para salvar suas streams e criar clipes curtos.",
-      "joilive": "Junte-se aos streamers do Joilive que usam o LiveStreamRecorder para salvar cada Live e alcançar espectadores além do Joilive."
+      "joilive": "Junte-se aos streamers do Joilive que usam o LiveStreamRecorder para salvar cada Live e alcançar espectadores além do Joilive.",
+      "live17": "Junte-se aos streamers do 17live que usam o LiveStreamRecorder para salvar cada Live e alcançar espectadores além do 17live."
     }
   },
   "features": {
@@ -400,7 +449,8 @@
       "mixch": "Grave Suas Streams do Mixch",
       "trovo": "Grave Suas Streams do Trovo",
       "twitcast": "Grave Suas Streams do TwitCasting",
-      "joilive": "Salve Suas Lives do Joilive Automaticamente"
+      "joilive": "Salve Suas Lives do Joilive Automaticamente",
+      "live17": "Salve Suas Lives do 17live Automaticamente"
     },
     "subtitle": {
       "all": "Junte-se a milhares de criadores. Salve suas streams, crie clipes curtos com o ClipAI e faça sua audiência crescer.",
@@ -416,7 +466,8 @@
       "mixch": "Junte-se a milhares de criadores do Mixch. Salve suas streams e crie clipes curtos com o ClipAI.",
       "trovo": "Junte-se a milhares de criadores do Trovo. Salve suas streams e crie clipes curtos com o ClipAI.",
       "twitcast": "Junte-se a milhares de criadores do TwitCasting. Salve suas streams e crie clipes curtos com o ClipAI.",
-      "joilive": "Junte-se aos streamers do Joilive que salvam cada Live com o LiveStreamRecorder. Crie cortes curtos com o ClipAI e cresça além do Joilive."
+      "joilive": "Junte-se aos streamers do Joilive que salvam cada Live com o LiveStreamRecorder. Crie cortes curtos com o ClipAI e cresça além do Joilive.",
+      "live17": "Junte-se aos streamers do 17live que salvam cada Live com o LiveStreamRecorder. Crie cortes curtos com o ClipAI e cresça além do 17live."
     },
     "button": "Comece a Gravar Grátis"
   },
@@ -436,7 +487,8 @@
       "mixch": "Seja o primeiro criador do Mixch a entrar!",
       "trovo": "Seja o primeiro criador do Trovo a entrar!",
       "twitcast": "Seja o primeiro criador do TwitCasting a entrar!",
-      "joilive": "Seja o primeiro streamer do Joilive a entrar!"
+      "joilive": "Seja o primeiro streamer do Joilive a entrar!",
+      "live17": "Seja o primeiro streamer do 17live a entrar!"
     },
     "button": "Começar"
   },
@@ -454,7 +506,8 @@
     "mixch": "## Criadores da Mixch\n\nDescubra criadores da Mixch que usam o LiveStreamRecorder para salvar suas próprias lives. Explore streamers da Mixch, assista às gravações e encontre novos criadores para seguir desta comunidade de live streaming feita para o mobile.\n\n### Por que criadores da Mixch gravam suas lives\n\nLives da Mixch são só ao vivo — no momento em que você encerra a transmissão, o conteúdo desaparece do app. Não há sistema de replay e não há como os fãs recuperarem depois. Criadores da Mixch usam o LiveStreamRecorder para salvar cada live automaticamente, para que suas conversas, apresentações musicais e conteúdo do dia a dia continuem disponíveis para os fãs muito depois do fim da live.\n\n### Explore os melhores criadores da Mixch\n\nEntre na página de criadores da Mixch para encontrar streamers que salvam suas próprias lives no LiveStreamRecorder. Assista às gravações, recupere as lives que você perdeu e descubra novos criadores da Mixch que vale a pena seguir.\n\n### Sua página de criador da Mixch\n\nTodo criador da Mixch no LiveStreamRecorder ganha sua própria página onde os fãs podem ver todas as suas lives gravadas. Cadastre-se, adicione seu nome de usuário da Mixch e sua página de criador é configurada automaticamente — um lugar permanente para o seu conteúdo que não some assim que a live termina.\n\n### De lives a cortes: construa sua comunidade\n\nO ClipAI transforma suas lives gravadas da Mixch em cortes curtos prontos para postar no TikTok, Instagram Reels ou YouTube Shorts. Transforme reações, momentos musicais e destaques de bate-papo em conteúdo viral e faça sua audiência crescer além da Mixch.\n\n### Vire criador da Mixch no LiveStreamRecorder\n\nCadastre-se grátis, adicione seu nome de usuário da Mixch e comece a salvar suas lives hoje. Cada live é capturada automaticamente — sem gravação manual, sem apps extras. Junte-se aos criadores da Mixch que já usam o LiveStreamRecorder para guardar cada live e fazer sua audiência crescer.",
     "joilive": "## Streamers do Joilive no LiveStreamRecorder\n\nStreamers do Joilive (joilive.net) usam o LiveStreamRecorder para **gravar suas próprias Lives** e dar ao canal um arquivo de verdade. O próprio Joilive não guarda as transmissões depois que você sai do ar — não tem aba de replay, não tem VOD, não tem lista de lives anteriores. A plataforma é construída em torno do chat e dos presentes ao vivo, o que significa que tudo que você faz na live some no momento em que ela acaba. Como criador do Joilive, gravar suas próprias transmissões é a única forma de manter esse conteúdo.\n\n### O problema do ID numérico\n\nO Joilive identifica cada streamer com um ID numérico longo, tipo `1880336239059720193`. A URL do seu perfil é `joilive.net/user/index.html?s=1880336239059720193`. Ninguém vai favoritar isso. Ninguém vai digitar isso no Discord. A página do Joilive não é realmente compartilhável — e não dá para procurar um streamer pelo nome porque o Joilive não tem nomes de usuário. O LiveStreamRecorder dá para cada criador do Joilive uma URL limpa e fácil de lembrar, e uma página de criador fácil de buscar que mapeia para o seu ID numérico por baixo. Mesma conta, entrada muito melhor.\n\n### Alcançando fãs em outros fusos horários\n\nO Joilive tende para uma audiência do Pacífico Asiático. Se você transmite no horário JST e seus fãs estão na Europa ou na América, metade da sua audiência nunca te pega ao vivo — e no Joilive isso significa que nunca te pegam, ponto final. Ao gravar suas próprias lives no LiveStreamRecorder, você dá para esses fãs em outros fusos uma forma de assistir à transmissão no horário deles. O chat já era, mas o conteúdo fica.\n\n### O que é salvo, exatamente\n\nO vídeo completo de cada Live, em alta qualidade, no momento em que você entra ao vivo. Sem captura de tela, sem plugin do OBS, sem passada extra de codificador — streamers do Joilive não rodam nada do lado deles. A gravação aparece automaticamente na sua página de criador no LiveStreamRecorder e fica lá indefinidamente. Você decide o que deixar público, o que esconder e o que apagar.\n\n### Transforme suas lives em cortes compartilháveis\n\nO Joilive é uma plataforma pequena. A realidade é que a maior parte da sua audiência mora no TikTok, YouTube Shorts ou Instagram Reels — não tem o app do Joilive. O ClipAI analisa suas transmissões gravadas do Joilive e corta clipes curtos legendados formatados em vertical. Poste eles onde os espectadores já estão, e leve a galera de volta para sua sala do Joilive quando você for ao vivo de novo.\n\n### Explore e descubra streamers do Joilive\n\nEsta página lista os criadores do Joilive que se cadastraram no LiveStreamRecorder. Como o Joilive não expõe nomes de usuário nem busca pública, essa pode ser uma das poucas formas de achar streamers do Joilive pelo nome na web aberta. A lista cresce conforme mais transmissores se cadastram.\n\n### Vire streamer do Joilive no LiveStreamRecorder\n\nGrátis para se cadastrar, grátis para começar a salvar suas Lives. Cole seu ID de usuário do Joilive (o valor `?s=…` da URL do seu perfil) e a gente cuida do resto. Cada transmissão a partir daí é capturada na sua página de criador. A gravação é decisão sua, o conteúdo é seu e o arquivo está no seu domínio — `livestreamrecorder.com/joilive/seu-id` no lugar da URL com query-string do Joilive que ninguém consegue lembrar.",
     "trovo": "## Criadores da Trovo\n\nDescubra criadores da Trovo que usam o LiveStreamRecorder para salvar suas próprias lives. Explore streamers da Trovo, assista às gravações e encontre novos criadores para seguir desta comunidade de live streaming feita para o mobile.\n\n### Por que criadores da Trovo gravam suas lives\n\nLives da Trovo são só ao vivo — no momento em que você encerra a transmissão, o conteúdo desaparece do app. Não há sistema de replay e não há como os fãs recuperarem depois. Criadores da Trovo usam o LiveStreamRecorder para salvar cada live automaticamente, para que suas conversas, apresentações musicais e conteúdo do dia a dia continuem disponíveis para os fãs muito depois do fim da live.\n\n### Explore os melhores criadores da Trovo\n\nEntre na página de criadores da Trovo para encontrar streamers que salvam suas próprias lives no LiveStreamRecorder. Assista às gravações, recupere as lives que você perdeu e descubra novos criadores da Trovo que vale a pena seguir.\n\n### Sua página de criador da Trovo\n\nTodo criador da Trovo no LiveStreamRecorder ganha sua própria página onde os fãs podem ver todas as suas lives gravadas. Cadastre-se, adicione seu nome de usuário da Trovo e sua página de criador é configurada automaticamente — um lugar permanente para o seu conteúdo que não some assim que a live termina.\n\n### De lives a cortes: construa sua comunidade\n\nO ClipAI transforma suas lives gravadas da Trovo em cortes curtos prontos para postar no TikTok, Instagram Reels ou YouTube Shorts. Transforme reações, momentos musicais e destaques de bate-papo em conteúdo viral e faça sua audiência crescer além da Trovo.\n\n### Vire criador da Trovo no LiveStreamRecorder\n\nCadastre-se grátis, adicione seu nome de usuário da Trovo e comece a salvar suas lives hoje. Cada live é capturada automaticamente — sem gravação manual, sem apps extras. Junte-se aos criadores da Trovo que já usam o LiveStreamRecorder para guardar cada live e fazer sua audiência crescer.",
-    "twitcast": "## Criadores da TwitCasting\n\nDescubra criadores da TwitCasting que usam o LiveStreamRecorder para salvar suas próprias lives. Explore streamers da TwitCasting, assista às gravações e encontre novos criadores para seguir desta comunidade de live streaming feita para o mobile.\n\n### Por que criadores da TwitCasting gravam suas lives\n\nLives da TwitCasting são só ao vivo — no momento em que você encerra a transmissão, o conteúdo desaparece do app. Não há sistema de replay e não há como os fãs recuperarem depois. Criadores da TwitCasting usam o LiveStreamRecorder para salvar cada live automaticamente, para que suas conversas, apresentações musicais e conteúdo do dia a dia continuem disponíveis para os fãs muito depois do fim da live.\n\n### Explore os melhores criadores da TwitCasting\n\nEntre na página de criadores da TwitCasting para encontrar streamers que salvam suas próprias lives no LiveStreamRecorder. Assista às gravações, recupere as lives que você perdeu e descubra novos criadores da TwitCasting que vale a pena seguir.\n\n### Sua página de criador da TwitCasting\n\nTodo criador da TwitCasting no LiveStreamRecorder ganha sua própria página onde os fãs podem ver todas as suas lives gravadas. Cadastre-se, adicione seu nome de usuário da TwitCasting e sua página de criador é configurada automaticamente — um lugar permanente para o seu conteúdo que não some assim que a live termina.\n\n### De lives a cortes: construa sua comunidade\n\nO ClipAI transforma suas lives gravadas da TwitCasting em cortes curtos prontos para postar no TikTok, Instagram Reels ou YouTube Shorts. Transforme reações, momentos musicais e destaques de bate-papo em conteúdo viral e faça sua audiência crescer além da TwitCasting.\n\n### Vire criador da TwitCasting no LiveStreamRecorder\n\nCadastre-se grátis, adicione seu nome de usuário da TwitCasting e comece a salvar suas lives hoje. Cada live é capturada automaticamente — sem gravação manual, sem apps extras. Junte-se aos criadores da TwitCasting que já usam o LiveStreamRecorder para guardar cada live e fazer sua audiência crescer."
+    "twitcast": "## Criadores da TwitCasting\n\nDescubra criadores da TwitCasting que usam o LiveStreamRecorder para salvar suas próprias lives. Explore streamers da TwitCasting, assista às gravações e encontre novos criadores para seguir desta comunidade de live streaming feita para o mobile.\n\n### Por que criadores da TwitCasting gravam suas lives\n\nLives da TwitCasting são só ao vivo — no momento em que você encerra a transmissão, o conteúdo desaparece do app. Não há sistema de replay e não há como os fãs recuperarem depois. Criadores da TwitCasting usam o LiveStreamRecorder para salvar cada live automaticamente, para que suas conversas, apresentações musicais e conteúdo do dia a dia continuem disponíveis para os fãs muito depois do fim da live.\n\n### Explore os melhores criadores da TwitCasting\n\nEntre na página de criadores da TwitCasting para encontrar streamers que salvam suas próprias lives no LiveStreamRecorder. Assista às gravações, recupere as lives que você perdeu e descubra novos criadores da TwitCasting que vale a pena seguir.\n\n### Sua página de criador da TwitCasting\n\nTodo criador da TwitCasting no LiveStreamRecorder ganha sua própria página onde os fãs podem ver todas as suas lives gravadas. Cadastre-se, adicione seu nome de usuário da TwitCasting e sua página de criador é configurada automaticamente — um lugar permanente para o seu conteúdo que não some assim que a live termina.\n\n### De lives a cortes: construa sua comunidade\n\nO ClipAI transforma suas lives gravadas da TwitCasting em cortes curtos prontos para postar no TikTok, Instagram Reels ou YouTube Shorts. Transforme reações, momentos musicais e destaques de bate-papo em conteúdo viral e faça sua audiência crescer além da TwitCasting.\n\n### Vire criador da TwitCasting no LiveStreamRecorder\n\nCadastre-se grátis, adicione seu nome de usuário da TwitCasting e comece a salvar suas lives hoje. Cada live é capturada automaticamente — sem gravação manual, sem apps extras. Junte-se aos criadores da TwitCasting que já usam o LiveStreamRecorder para guardar cada live e fazer sua audiência crescer.",
+    "live17": "## Criadores 17live no LiveStreamRecorder\n\n17live (pronuncia-se *yi-qi live* — 一起, mandarim para «juntos») é a terceira maior plataforma de streaming ao vivo da Ásia e lar tanto de **Livers** (streamers humanos) quanto de **V-Livers** (streamers com avatar virtual). Fundada em Taiwan em 2015, sediada no Japão desde 2021, listada na SGX como **LVR** — 17live é um dos ecossistemas de streaming ao vivo mais estruturados e geridos por talentos da Ásia, especialmente forte no Japão, Taiwan, Hong Kong, Singapura e Filipinas. LiveStreamRecorder oferece aos criadores 17live um **segundo lar na web pública** fora do app do 17live, onde cada Live é um vídeo assistível e indexado por buscadores na sua própria página de criador.\n\n### V-Livers e Livers, ambos bem-vindos\n\n17live foi pioneira na categoria V-Liver — streamers com avatares virtuais que atuam como personas digitais personalizáveis. Nossa captura funciona da mesma forma quer seu stream mostre um Liver com câmera frontal, um avatar V-Liver em Live2D/3D, uma cena composta no OBS ou uma configuração apenas pelo celular. O que o 17live transmite aos espectadores, nós salvamos. Sem contornos de DRM, sem plugin OBS, sem ferramentas V-Liver especiais — a captura acontece antes da sua renderização.\n\n### Construído para a realidade Ásia-primeiro do 17live\n\nA base de usuários do 17live está fortemente concentrada no Japão, Taiwan, Hong Kong e Sudeste Asiático. Isso significa que a maior parte do seu público está nos fusos JST/SGT/HKT. Fãs na UE e NA perdem metade dos seus Lives apenas por estarem acordados na hora errada, e o próprio app do 17live não é muito descobrível para novos espectadores fora da região. LiveStreamRecorder fecha essa lacuna: cada transmissão pousa em uma página de criador pública e indexada por buscadores, que qualquer pessoa, de qualquer lugar, pode encontrar — sem precisar de conta no 17live.\n\n### Alcance fãs que não têm o app do 17live\n\nOs recursos in-app do 17live (replays, clipes in-app limitados a 15–90 segundos) funcionam bem para fãs que já usam o app. Mas para crescer sua audiência fora dessa bolha — lurkers do Reddit, comunidades Discord, seguidores do Twitter — você precisa de uma URL pública que abra em qualquer navegador. LiveStreamRecorder dá a cada Live um link web compartilhável como `livestreamrecorder.com/live17/your-id` que você pode colocar numa bio, enviar em DMs ou publicar nas redes sociais. Mesmo conteúdo, acessível sem a barreira do app.\n\n### Agências de talento e streamers solo, o mesmo fluxo\n\nO sistema de gestão de talentos do 17live recruta, treina e apoia streamers — exclusivamente estruturado entre as plataformas de live asiáticas. Seja você um Liver gerenciado por agência com ambições de Hot Star ou um streamer independente construindo do zero, LiveStreamRecorder é apenas uma camada de gravação passiva. Não toca nos seus presentes, ranking, contratos de agência ou ferramentas do 17live — apenas guarda uma cópia de cada Live na web aberta para que seu conteúdo sobreviva fora do app.\n\n### Crescimento multiplataforma com ClipAI\n\nOs clipes in-app do 17live são limitados a 90 segundos e ficam presos dentro do app. ClipAI escaneia seus Lives completos salvos no LiveStreamRecorder e produz clipes curtos formatados para **TikTok, Instagram Reels e YouTube Shorts** — as plataformas onde acontece a maior parte da descoberta para espectadores do Sudeste Asiático e globais. Momentos de dança, covers de músicas, reações a presentes, trocas de chat, transições de cena V-Liver — transforme cada Live em um funil de clipes que traz novos fãs de volta para sua sala do 17live.\n\n### Torne-se um criador 17live no LiveStreamRecorder\n\nCadastro gratuito. Cole o número `profile/r/your-id` da URL do seu perfil 17live — é tudo o que precisamos. A partir do seu próximo Live, cada transmissão pousa automaticamente na sua página de criador. Seu conteúdo, sua URL, seu lar compartilhável na web aberta — independente do app do 17live."
   },
   "faq": "Perguntas Frequentes",
   "country": {

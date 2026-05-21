@@ -17,7 +17,8 @@
       "mixch": "Mixch İçerik Üreticileri",
       "joilive": "Joilive Yayıncıları",
       "trovo": "Trovo İçerik Üreticileri",
-      "twitcast": "TwitCasting İçerik Üreticileri"
+      "twitcast": "TwitCasting İçerik Üreticileri",
+      "live17": "17live Yayıncıları"
     },
     "subtitle": {
       "all": "Tüm yayıncılara ve içerik üreticilerine göz atın",
@@ -33,7 +34,8 @@
       "mixch": "Mixch içerik üreticilerini keşfedin",
       "joilive": "Joilive yayıncılarını keşfedin",
       "trovo": "Trovo içerik üreticilerini keşfedin",
-      "twitcast": "TwitCasting içerik üreticilerini keşfedin"
+      "twitcast": "TwitCasting içerik üreticilerini keşfedin",
+      "live17": "17live yayıncılarını keşfedin"
     }
   },
   "recordings": {
@@ -51,7 +53,8 @@
       "mixch": "Mixch Kayıtları",
       "joilive": "Joilive Kayıtları",
       "trovo": "Trovo Kayıtları",
-      "twitcast": "TwitCasting Kayıtları"
+      "twitcast": "TwitCasting Kayıtları",
+      "live17": "17live Kayıtları"
     },
     "subtitle": {
       "all": "Kaydedilmiş canlı yayınları izleyin",
@@ -67,7 +70,8 @@
       "mixch": "Kaydedilmiş Mixch yayınlarını izleyin",
       "joilive": "Kaydedilmiş Joilive yayınlarını izleyin",
       "trovo": "Kaydedilmiş Trovo yayınlarını izleyin",
-      "twitcast": "Kaydedilmiş TwitCasting yayınlarını izleyin"
+      "twitcast": "Kaydedilmiş TwitCasting yayınlarını izleyin",
+      "live17": "Kaydedilmiş 17live yayınlarını izleyin"
     }
   },
   "home": {

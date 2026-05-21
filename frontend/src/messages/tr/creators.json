@@ -276,6 +276,53 @@
         "twitcast kaydı",
         "twitcast yayın kaydedici"
       ]
+    },
+    "live17": {
+      "title": "17live İçerik Üreticileri — Liver, V-Liver ve yetenek yönetimli yayıncılar",
+      "description": "17live (yi-qi, Mandarin'de «birlikte») Asya'nın üçüncü en büyük canlı yayın platformudur; insan Liver'lar ve V-Liver'lar (sanal avatar yayıncılar) için benzersiz bir karışım sunar. Japonya, Tayvan ve Hong Kong'da güçlüdür. LiveStreamRecorder, 17live içerik üreticilerine uygulamanın dışında web'de halka açık bir ev verir.",
+      "keywords": [
+        "17live Liver",
+        "17live V-Liver",
+        "17live yetenek yönetimi",
+        "17live arşiv",
+        "17live Japonya",
+        "17live Tayvan",
+        "17live Hong Kong",
+        "17live uygulamasız izleme",
+        "17live üretici sayfası",
+        "17live sanal yayıncı",
+        "17live yi-qi birlikte"
+      ],
+      "faqs": [
+        {
+          "question": "17live'da zaten Stream Archive ve Stream Clips var — bunu neden kullanmalıyım?",
+          "answer": "İkisi de 17live uygulamasının içinde yaşıyor ve izin ayarlarınıza bağlı; hayranların 17live'a giriş yapması gerekiyor ve Google'ın indeksleyebileceği halka açık bir URL yok. LiveStreamRecorder her Live'a herhangi bir tarayıcıda açılabilen halka açık bir web bağlantısı verir — uygulama kurulumu ya da izin engeli olmadan."
+        },
+        {
+          "question": "V-Liver'ım — avatarlı yayınım doğru kaydediliyor mu?",
+          "answer": "Evet. 17live'ın izleyicilere yayınladığı görüntüyü olduğu gibi kaydederiz: Live2D/3D avatar, OBS sahnesi, ses değiştirici — hepsi hayranlarınızın canlıda gördüğü gibi korunur."
+        },
+        {
+          "question": "Yetenek ajansım 17live hesabımı yönetiyor — yine de kullanabilir miyim?",
+          "answer": "Evet. Kayıt sizin ya da ajansınızın isteğiyle açılır ve yalnızca kendi profilinizi etkiler. Ajansınız 17live iç araçlarını yönetmeye devam eder; LiveStreamRecorder yalnızca yayınlarınıza web'de halka açık bir ev ekler."
+        },
+        {
+          "question": "Japonya ve Tayvan'da güçlüyüm ama SEA / İngilizce konuşan pazarlarda büyümek istiyorum",
+          "answer": "İşte bu 17live'ın uzun vadeli problemidir — uygulama Asya odaklı ve bölge dışındaki yeni izleyiciler sizi zor bulur. LiveStreamRecorder sayfanız açık webde, İngilizce okunabilir URL'lerle yaşar; ClipAI ise TikTok, Reels ve Shorts için öne çıkan klipler oluşturarak yeni hayranları 17live odanıza geri yönlendirir."
+        },
+        {
+          "question": "Telefonuma veya bilgisayarıma yazılım kurmam gerekir mi?",
+          "answer": "Hayır. 17live uygulamasından her zamanki gibi canlı yayın açarsınız. Kayıt sunucu tarafında yapılır — cihazınızda CPU yükü veya pil tüketimi yoktur."
+        },
+        {
+          "question": "LiveStreamRecorder 17live içerik üreticileri için ücretsiz mi?",
+          "answer": "Evet. Ücretsiz plan her Live'ı süresiz olarak içerik üretici sayfanızda saklar. Premium, ham HEVC video indirme, ClipAI ile otomatik klip üretimi ve uzatılmış saklama süreleri sunar."
+        },
+        {
+          "question": "Bu 17live sıralamamı, Hot Star'ımı veya hediye gelirimi etkiler mi?",
+          "answer": "Hayır. LiveStreamRecorder 17live hesabınıza dokunmaz ve sıralamayı, Hot Star puanlarını veya ajans araçlarını etkilemez. Pasif paralel bir kayıttır — bir hayranın yayını bağımsız olarak kaydetmesi gibidir; yalnızca yüksek kalitede ve yerel yerine web'de saklanır."
+        }
+      ]
     }
   },
   "hero": {
@@ -293,7 +340,8 @@
       "mixch": "Mixch İçerik Üreticileri",
       "joilive": "Joilive Yayıncıları",
       "trovo": "Trovo İçerik Üreticileri",
-      "twitcast": "TwitCasting İçerik Üreticileri"
+      "twitcast": "TwitCasting İçerik Üreticileri",
+      "live17": "17live Yayıncıları"
     },
     "subtitle": {
       "all": "Yayınlarını kaydetmek ve kısa klipler oluşturmak için LiveStreamRecorder kullanan binlerce içerik üreticisine katılın.",
@@ -309,7 +357,8 @@
       "mixch": "Yayınlarını kaydetmek ve kısa klipler oluşturmak için LiveStreamRecorder kullanan binlerce Mixch içerik üreticisine katılın.",
       "joilive": "Her yayını kaydetmek ve Joilive'in ötesindeki izleyicilere ulaşmak için LiveStreamRecorder kullanan Joilive yayıncılarına katılın.",
       "trovo": "Yayınlarını kaydetmek ve kısa klipler oluşturmak için LiveStreamRecorder kullanan binlerce Trovo içerik üreticisine katılın.",
-      "twitcast": "Yayınlarını kaydetmek ve kısa klipler oluşturmak için LiveStreamRecorder kullanan binlerce TwitCasting içerik üreticisine katılın."
+      "twitcast": "Yayınlarını kaydetmek ve kısa klipler oluşturmak için LiveStreamRecorder kullanan binlerce TwitCasting içerik üreticisine katılın.",
+      "live17": "Her yayını kaydetmek ve 17live'in ötesindeki izleyicilere ulaşmak için LiveStreamRecorder kullanan 17live yayıncılarına katılın."
     }
   },
   "features": {
@@ -328,7 +377,8 @@
       "mixch": "Mixch Yayınlarınızı Otomatik Kaydedin",
       "joilive": "Joilive Yayınlarınızı Otomatik Kaydedin",
       "trovo": "Trovo Yayınlarınızı Otomatik Kaydedin",
-      "twitcast": "TwitCasting Yayınlarınızı Otomatik Kaydedin"
+      "twitcast": "TwitCasting Yayınlarınızı Otomatik Kaydedin",
+      "live17": "17live Yayınlarınızı Otomatik Kaydedin"
     },
     "subtitle": "Canlı yayından kısa kliplere dakikalar içinde",
     "items": {
@@ -365,7 +415,8 @@
       "mixch": "Mixch Yayınlarınızı Kaydedin",
       "joilive": "Joilive Yayınlarınızı Kaydedin",
       "trovo": "Trovo Yayınlarınızı Kaydedin",
-      "twitcast": "TwitCasting Yayınlarınızı Kaydedin"
+      "twitcast": "TwitCasting Yayınlarınızı Kaydedin",
+      "live17": "17live Yayınlarınızı Kaydedin"
     },
     "subtitle": {
       "all": "Binlerce içerik üreticisine katılın. Yayınlarınızı kaydedin, ClipAI ile kısa klipler oluşturun ve kitlenizi büyütün.",
@@ -381,7 +432,8 @@
       "mixch": "Binlerce Mixch içerik üreticisine katılın. Yayınlarınızı kaydedin ve ClipAI ile kısa klipler oluşturun.",
       "joilive": "Her yayını LiveStreamRecorder ile kaydeden Joilive yayıncılarına katılın. ClipAI ile kısa klipler oluşturun ve Joilive'in ötesinde büyüyün.",
       "trovo": "Binlerce Trovo içerik üreticisine katılın. Yayınlarınızı kaydedin ve ClipAI ile kısa klipler oluşturun.",
-      "twitcast": "Binlerce TwitCasting içerik üreticisine katılın. Yayınlarınızı kaydedin ve ClipAI ile kısa klipler oluşturun."
+      "twitcast": "Binlerce TwitCasting içerik üreticisine katılın. Yayınlarınızı kaydedin ve ClipAI ile kısa klipler oluşturun.",
+      "live17": "Her yayını LiveStreamRecorder ile kaydeden 17live yayıncılarına katılın. ClipAI ile kısa klipler oluşturun ve 17live'in ötesinde büyüyün."
     },
     "button": "Ücretsiz Kayda Başla"
   },
@@ -401,7 +453,8 @@
       "mixch": "Katılan ilk Mixch içerik üreticisi olun!",
       "joilive": "Katılan ilk Joilive yayıncısı olun!",
       "trovo": "Katılan ilk Trovo içerik üreticisi olun!",
-      "twitcast": "Katılan ilk TwitCasting içerik üreticisi olun!"
+      "twitcast": "Katılan ilk TwitCasting içerik üreticisi olun!",
+      "live17": "Katılan ilk 17live yayıncısı olun!"
     },
     "button": "Başlayın"
   },
@@ -419,7 +472,8 @@
     "mixch": "## Mixch İçerik Üreticileri\n\nLiveStreamRecorder'ı kullanarak kendi yayınlarını kaydeden Mixch içerik üreticilerini keşfet. Mobile odaklı bu canlı yayın topluluğunun yayıncılarına göz at, kayıtlarını izle ve takip edebileceğin yeni içerik üreticilerini bul.\n\n### Neden Mixch içerik üreticileri yayınlarını kaydeder?\n\nMixch yayınları sadece canlıdır — yayını sonlandırdığın anda içerik uygulamadan kaybolur. Tekrar sistemi yok ve hayranların sonradan yakalamasının bir yolu yok. Mixch içerik üreticileri, her yayını otomatik olarak kaydetmek için LiveStreamRecorder'ı kullanıyor; böylece sohbetlerin, müzik performansların ve günlük içeriklerin yayın bittikten çok sonra bile hayranların için erişilebilir kalıyor.\n\n### En iyi Mixch içerik üreticilerine göz at\n\nLiveStreamRecorder'da kendi yayınlarını kaydeden yayıncıları bulmak için Mixch içerik üreticileri sayfasını keşfet. Kayıtlarını izle, kaçırdığın yayınları yakala ve takip etmeye değer yeni Mixch içerik üreticilerini bul.\n\n### Kendi Mixch içerik üretici sayfan\n\nLiveStreamRecorder'daki her Mixch içerik üreticisi, hayranlarının tüm kayıtlı yayınlarına göz atabileceği kendi sayfasına sahip olur. Kaydol, Mixch kullanıcı adını ekle ve içerik üretici sayfan otomatik olarak hazırlansın — yayın bittiği anda kaybolmayan kalıcı bir içerik yeri.\n\n### Yayınlardan kısa kliplere: takipçi kitleni büyüt\n\nClipAI, kayıtlı Mixch yayınlarını TikTok, Instagram Reels veya YouTube Shorts'ta paylaşmaya hazır kısa öne çıkan kliplere dönüştürür. Tepkileri, müzik anlarını ve sohbet öne çıkanlarını viral içeriğe dönüştür ve takipçi kitleni Mixch'in ötesinde büyüt.\n\n### LiveStreamRecorder'da Mixch içerik üreticisi ol\n\nÜcretsiz kaydol, Mixch kullanıcı adını ekle ve yayınlarını bugünden kaydetmeye başla. Her yayın otomatik olarak kaydedilir — manuel kayıt yok, ekstra uygulama yok. LiveStreamRecorder'ı kullanarak her yayınını koruyan ve kitlesini büyüten Mixch içerik üreticilerine katıl.",
     "joilive": "## LiveStreamRecorder'da Joilive Yayıncıları\n\nJoilive yayıncıları (joilive.net) **kendi canlı yayınlarını kaydetmek** ve kanallarına gerçek bir arşiv kazandırmak için LiveStreamRecorder'ı kullanıyor. Joilive çevrimdışı olduğunuzda yayını saklamaz — tekrar sekmesi yok, VOD yok, geçmiş yayın listesi yok. Platform yalnızca canlı sohbet ve hediye etrafında kuruludur, bu da yayında yaptığınız her şeyin bittiği anda yok olduğu anlamına gelir. Bir Joilive yayıncısı olarak, yayınlarınızı saklamanın tek yolu kendi yayınlarınızı kaydetmektir.\n\n### Sayısal Kimlik Sorunu\n\nJoilive her yayıncıyı `1880336239059720193` gibi uzun bir sayısal kimlikle tanımlar. Profil URL'niz `joilive.net/user/index.html?s=1880336239059720193`. Kimse bunu yer imine eklemiyor. Kimse bunu Discord'a yazmıyor. Joilive sayfası gerçekten paylaşılabilir değil — ve Joilive'de kullanıcı adı olmadığı için yayıncıyı kullanıcı adıyla bulmanın bir yolu yok. LiveStreamRecorder, her Joilive yayıncısına temiz, akılda kalan bir URL ve arka planda sayısal kimliğinize bağlanan arama dostu bir yayıncı sayfası verir. Aynı hesap, çok daha iyi bir ön kapı.\n\n### Geç Saat Dilimindeki Hayranları Yakalamak\n\nJoilive ağırlıklı olarak Asya-Pasifik izleyici tabanına yönelir. JST'de yayın yapıyorsanız ve hayranlarınız Avrupa veya Kuzey Amerika'daysa, kitlenizin yarısı sizi asla canlı yakalayamaz — ve Joilive'de bu, sizi hiç yakalayamayacakları anlamına gelir. LiveStreamRecorder'da kendi yayınlarınızı kaydederek bu saat dilimi dışındaki hayranlara yayını kendi programlarına göre izleme imkânı verirsiniz. Sohbet gitti ama içerik kalıyor.\n\n### Tam Olarak Ne Kaydediliyor\n\nHer canlı yayının tam videosu, yüksek kalitede, canlıya geçtiğiniz anda. Ekran yakalama yok, OBS eklentisi yok, ekstra kodlama geçişi yok — Joilive yayıncıları kendi taraflarında hiçbir şey çalıştırmıyor. Kayıt otomatik olarak LiveStreamRecorder yayıncı sayfanıza iner ve süresiz olarak kalır. Neyi herkese açık tutacağınıza, neyi gizleyeceğinize, neyi sileceğinize siz karar verirsiniz.\n\n### Yayınlarınızı Paylaşılabilir Kliplere Dönüştürün\n\nJoilive küçük bir platform. Gerçek şu ki kitlenizin çoğu TikTok, YouTube Shorts veya Instagram Reels'te yaşıyor — Joilive uygulamasına sahip değiller. ClipAI, kaydedilmiş Joilive yayınlarınızı tarar ve dikey kısa biçim için biçimlendirilmiş kısa, altyazılı klipler keser. Bunları izleyicilerin zaten bulunduğu yerlerde paylaşın, bir sonraki canlı yayınınızda Joilive odanıza geri bağlantı verin.\n\n### Joilive Yayıncılarına Göz Atın ve Keşfedin\n\nBu sayfa LiveStreamRecorder'a kendilerini ekleyen Joilive içerik üreticilerini listeler. Joilive kullanıcı adlarını veya genel bir aramayı kullanılabilir hale getirmediği için bu, açık webde Joilive yayıncılarını adlarıyla bulmanın gerçekten birkaç yolundan biri olabilir. Daha fazla yayıncı kaydoldukça liste büyür.\n\n### LiveStreamRecorder'da Joilive Yayıncısı Olun\n\nKaydolması ücretsiz, yayınlarınızı kaydetmeye başlamak ücretsiz. Joilive kullanıcı kimliğinizi (profil URL'nizdeki `?s=…` değeri) yapıştırın, gerisini biz halledelim. O andan itibaren her yayın yayıncı sayfanızda yakalanır. Kayıt sizin kararınız, içerik size ait ve arşiv kendi alan adınızda — kimsenin hatırlayamadığı Joilive sorgu dizesi URL'si yerine `livestreamrecorder.com/joilive/your-id`.",
     "trovo": "## Trovo İçerik Üreticileri\n\nLiveStreamRecorder'ı kullanarak kendi yayınlarını kaydeden Trovo içerik üreticilerini keşfet. Mobile odaklı bu canlı yayın topluluğunun yayıncılarına göz at, kayıtlarını izle ve takip edebileceğin yeni içerik üreticilerini bul.\n\n### Neden Trovo içerik üreticileri yayınlarını kaydeder?\n\nTrovo yayınları sadece canlıdır — yayını sonlandırdığın anda içerik uygulamadan kaybolur. Tekrar sistemi yok ve hayranların sonradan yakalamasının bir yolu yok. Trovo içerik üreticileri, her yayını otomatik olarak kaydetmek için LiveStreamRecorder'ı kullanıyor; böylece sohbetlerin, müzik performansların ve günlük içeriklerin yayın bittikten çok sonra bile hayranların için erişilebilir kalıyor.\n\n### En iyi Trovo içerik üreticilerine göz at\n\nLiveStreamRecorder'da kendi yayınlarını kaydeden yayıncıları bulmak için Trovo içerik üreticileri sayfasını keşfet. Kayıtlarını izle, kaçırdığın yayınları yakala ve takip etmeye değer yeni Trovo içerik üreticilerini bul.\n\n### Kendi Trovo içerik üretici sayfan\n\nLiveStreamRecorder'daki her Trovo içerik üreticisi, hayranlarının tüm kayıtlı yayınlarına göz atabileceği kendi sayfasına sahip olur. Kaydol, Trovo kullanıcı adını ekle ve içerik üretici sayfan otomatik olarak hazırlansın — yayın bittiği anda kaybolmayan kalıcı bir içerik yeri.\n\n### Yayınlardan kısa kliplere: takipçi kitleni büyüt\n\nClipAI, kayıtlı Trovo yayınlarını TikTok, Instagram Reels veya YouTube Shorts'ta paylaşmaya hazır kısa öne çıkan kliplere dönüştürür. Tepkileri, müzik anlarını ve sohbet öne çıkanlarını viral içeriğe dönüştür ve takipçi kitleni Trovo'in ötesinde büyüt.\n\n### LiveStreamRecorder'da Trovo içerik üreticisi ol\n\nÜcretsiz kaydol, Trovo kullanıcı adını ekle ve yayınlarını bugünden kaydetmeye başla. Her yayın otomatik olarak kaydedilir — manuel kayıt yok, ekstra uygulama yok. LiveStreamRecorder'ı kullanarak her yayınını koruyan ve kitlesini büyüten Trovo içerik üreticilerine katıl.",
-    "twitcast": "## TwitCasting İçerik Üreticileri\n\nLiveStreamRecorder'ı kullanarak kendi yayınlarını kaydeden TwitCasting içerik üreticilerini keşfet. Mobile odaklı bu canlı yayın topluluğunun yayıncılarına göz at, kayıtlarını izle ve takip edebileceğin yeni içerik üreticilerini bul.\n\n### Neden TwitCasting içerik üreticileri yayınlarını kaydeder?\n\nTwitCasting yayınları sadece canlıdır — yayını sonlandırdığın anda içerik uygulamadan kaybolur. Tekrar sistemi yok ve hayranların sonradan yakalamasının bir yolu yok. TwitCasting içerik üreticileri, her yayını otomatik olarak kaydetmek için LiveStreamRecorder'ı kullanıyor; böylece sohbetlerin, müzik performansların ve günlük içeriklerin yayın bittikten çok sonra bile hayranların için erişilebilir kalıyor.\n\n### En iyi TwitCasting içerik üreticilerine göz at\n\nLiveStreamRecorder'da kendi yayınlarını kaydeden yayıncıları bulmak için TwitCasting içerik üreticileri sayfasını keşfet. Kayıtlarını izle, kaçırdığın yayınları yakala ve takip etmeye değer yeni TwitCasting içerik üreticilerini bul.\n\n### Kendi TwitCasting içerik üretici sayfan\n\nLiveStreamRecorder'daki her TwitCasting içerik üreticisi, hayranlarının tüm kayıtlı yayınlarına göz atabileceği kendi sayfasına sahip olur. Kaydol, TwitCasting kullanıcı adını ekle ve içerik üretici sayfan otomatik olarak hazırlansın — yayın bittiği anda kaybolmayan kalıcı bir içerik yeri.\n\n### Yayınlardan kısa kliplere: takipçi kitleni büyüt\n\nClipAI, kayıtlı TwitCasting yayınlarını TikTok, Instagram Reels veya YouTube Shorts'ta paylaşmaya hazır kısa öne çıkan kliplere dönüştürür. Tepkileri, müzik anlarını ve sohbet öne çıkanlarını viral içeriğe dönüştür ve takipçi kitleni TwitCasting'in ötesinde büyüt.\n\n### LiveStreamRecorder'da TwitCasting içerik üreticisi ol\n\nÜcretsiz kaydol, TwitCasting kullanıcı adını ekle ve yayınlarını bugünden kaydetmeye başla. Her yayın otomatik olarak kaydedilir — manuel kayıt yok, ekstra uygulama yok. LiveStreamRecorder'ı kullanarak her yayınını koruyan ve kitlesini büyüten TwitCasting içerik üreticilerine katıl."
+    "twitcast": "## TwitCasting İçerik Üreticileri\n\nLiveStreamRecorder'ı kullanarak kendi yayınlarını kaydeden TwitCasting içerik üreticilerini keşfet. Mobile odaklı bu canlı yayın topluluğunun yayıncılarına göz at, kayıtlarını izle ve takip edebileceğin yeni içerik üreticilerini bul.\n\n### Neden TwitCasting içerik üreticileri yayınlarını kaydeder?\n\nTwitCasting yayınları sadece canlıdır — yayını sonlandırdığın anda içerik uygulamadan kaybolur. Tekrar sistemi yok ve hayranların sonradan yakalamasının bir yolu yok. TwitCasting içerik üreticileri, her yayını otomatik olarak kaydetmek için LiveStreamRecorder'ı kullanıyor; böylece sohbetlerin, müzik performansların ve günlük içeriklerin yayın bittikten çok sonra bile hayranların için erişilebilir kalıyor.\n\n### En iyi TwitCasting içerik üreticilerine göz at\n\nLiveStreamRecorder'da kendi yayınlarını kaydeden yayıncıları bulmak için TwitCasting içerik üreticileri sayfasını keşfet. Kayıtlarını izle, kaçırdığın yayınları yakala ve takip etmeye değer yeni TwitCasting içerik üreticilerini bul.\n\n### Kendi TwitCasting içerik üretici sayfan\n\nLiveStreamRecorder'daki her TwitCasting içerik üreticisi, hayranlarının tüm kayıtlı yayınlarına göz atabileceği kendi sayfasına sahip olur. Kaydol, TwitCasting kullanıcı adını ekle ve içerik üretici sayfan otomatik olarak hazırlansın — yayın bittiği anda kaybolmayan kalıcı bir içerik yeri.\n\n### Yayınlardan kısa kliplere: takipçi kitleni büyüt\n\nClipAI, kayıtlı TwitCasting yayınlarını TikTok, Instagram Reels veya YouTube Shorts'ta paylaşmaya hazır kısa öne çıkan kliplere dönüştürür. Tepkileri, müzik anlarını ve sohbet öne çıkanlarını viral içeriğe dönüştür ve takipçi kitleni TwitCasting'in ötesinde büyüt.\n\n### LiveStreamRecorder'da TwitCasting içerik üreticisi ol\n\nÜcretsiz kaydol, TwitCasting kullanıcı adını ekle ve yayınlarını bugünden kaydetmeye başla. Her yayın otomatik olarak kaydedilir — manuel kayıt yok, ekstra uygulama yok. LiveStreamRecorder'ı kullanarak her yayınını koruyan ve kitlesini büyüten TwitCasting içerik üreticilerine katıl.",
+    "live17": "## LiveStreamRecorder'da 17live İçerik Üreticileri\n\n17live (*yi-qi live* olarak okunur — 一起, Mandarin'de «birlikte» anlamına gelir) Asya'nın üçüncü en büyük canlı yayın platformudur ve hem **Liver** (insan yayıncı) hem de **V-Liver** (sanal avatar yayıncı) için bir evdir. 2015'te Tayvan'da kuruldu, 2021'den beri genel merkezi Japonya'da, SGX'te **LVR** koduyla işlem görüyor — 17live, Asya'daki en yapılandırılmış ve yetenek-yönetimli canlı ekosistemlerden biridir; özellikle Japonya, Tayvan, Hong Kong, Singapur ve Filipinler'de güçlüdür. LiveStreamRecorder, 17live içerik üreticilerine 17live uygulamasının dışında **halka açık web'de ikinci bir ev** sunar; her Live, kendi içerik üretici sayfanızda izlenebilir, arama motorlarınca indekslenmiş bir video olur.\n\n### V-Liver ve Liver, ikisi de hoş karşılanır\n\n17live, V-Liver kategorisinin öncüsü olmuştur — özelleştirilebilir dijital kişilikler olarak sahne alan sanal avatar yayıncılar. Yayınınız ister face-cam'li bir Liver, ister Live2D/3D V-Liver avatarı, ister OBS ile bestelenmiş bir sahne, ister yalnızca telefon kurulumu göstersin, çekimimiz aynı çalışır. 17live izleyicilere ne yayınlıyorsa, biz onu kaydederiz. DRM atlatma yok, OBS eklentisi yok, özel V-Liver aracı yok — yakalama sizin render aşamanızdan önce gerçekleşir.\n\n### 17live'ın Asya-öncelikli gerçekliği için tasarlandı\n\n17live'ın kullanıcı tabanı yoğun olarak Japonya, Tayvan, Hong Kong ve Güneydoğu Asya'da yoğunlaşmıştır. Bu, izleyicilerinizin çoğunun JST/SGT/HKT saat dilimlerinde olduğu anlamına gelir. AB ve KA hayranları sadece yanlış saatte uyanık oldukları için yayınlarınızın yarısını kaçırırlar ve 17live uygulamasının kendisi bölge dışındaki yeni izleyiciler için pek de keşfedilebilir değildir. LiveStreamRecorder bu boşluğu kapatır: her yayın, herhangi bir yerden herkesin bulabileceği halka açık, arama motorlarınca indekslenmiş bir içerik üretici sayfasına iner — 17live hesabı gerekmez.\n\n### 17live uygulaması olmayan hayranlara ulaşın\n\n17live'ın uygulama içi özellikleri (tekrar yayınlar, 15–90 saniyeyle sınırlı uygulama içi klipler) zaten uygulamayı kullanan hayranlar için iyi çalışır. Ancak bu balonun dışında izleyici büyütmek için — Reddit'te göz gezdirenler, Discord toplulukları, Twitter takipçileri — herhangi bir tarayıcıda açılan halka açık bir URL'ye ihtiyacınız var. LiveStreamRecorder her Live'a `livestreamrecorder.com/live17/your-id` gibi paylaşılabilir bir web bağlantısı verir; biyografinize ekleyebilir, DM'lerde gönderebilir veya sosyal medyada paylaşabilirsiniz. Aynı içerik, ama uygulama kapısı olmadan erişilebilir.\n\n### Yetenek ajansları ve solo yayıncılar, aynı akış\n\n17live'ın yetenek yönetim sistemi yayıncıları keşfeder, eğitir ve destekler — Asya canlı yayın platformları arasında benzersiz şekilde yapılandırılmıştır. Hot Star hedefiyle ajansa bağlı bir Liver da olsanız, sıfırdan yola çıkan bağımsız bir yayıncı da olsanız, LiveStreamRecorder yalnızca pasif bir kayıt katmanıdır. Hediyelerinize, sıralamanıza, ajans sözleşmelerinize veya 17live araçlarına dokunmaz — sadece her Live'ın bir kopyasını açık web'de tutar, böylece içeriğiniz uygulamanın dışında da yaşar.\n\n### ClipAI ile platformlar arası büyüme\n\n17live'ın uygulama içi klipleri 90 saniyeyle sınırlıdır ve uygulamanın içinde sıkışıp kalır. ClipAI, LiveStreamRecorder'da kaydedilmiş tam Live'larınızı tarar ve **TikTok, Instagram Reels ve YouTube Shorts** için biçimlendirilmiş kısa klipler üretir — bunlar SEA ve global izleyiciler için keşfin en çok gerçekleştiği platformlardır. Dans anları, şarkı kapakları, hediye tepkileri, sohbet alışverişleri, V-Liver sahne geçişleri — her Live'ı yeni hayranları 17live odanıza geri getiren bir klip hunisine dönüştürün.\n\n### LiveStreamRecorder'da 17live içerik üreticisi olun\n\nÜcretsiz kayıt. 17live profil URL'nizden `profile/r/your-id` numarasını yapıştırın — ihtiyacımız olan tek şey bu. Bir sonraki Live'ınızdan itibaren, her yayın otomatik olarak içerik üretici sayfanıza iner. İçeriğiniz, URL'niz, açık web'deki paylaşılabilir eviniz — 17live uygulamasından bağımsız."
   },
   "faq": "Sıkça Sorulan Sorular",
   "country": {

@@ -2,7 +2,26 @@ import Link from "@/app/components/link";
 import { streamingPlatforms } from "@/app/lib/streaming-platforms";
 import { Group, Image, Scroller, Stack, Text } from "@mantine/core";
 
-const NEW_PLATFORMS = new Set(["Mixch", "Twitcast", "Trovo", "Joilive"]);
+const NEW_PLATFORMS = new Set(["Trovo", "Joilive", "Live17"]);
+
+// Where each platform's streamers mostly come from — purely a visual hint
+// on the dashboard, not used for filtering or anything else.
+const PLATFORM_FLAGS: Record<string, string[]> = {
+  TikTok: ["🌍"],
+  Twitch: ["🌍"],
+  Kick: ["🌍"],
+  YouTube: ["🌍"],
+  AfreecaTV: ["🇰🇷"],
+  Pandalive: ["🇰🇷"],
+  Bigo: ["🌍"],
+  Buzzcast: ["🌍"],
+  LiveMe: ["🌍"],
+  Mixch: ["🇯🇵"],
+  Twitcast: ["🇯🇵"],
+  Trovo: ["🇷🇺", "🇧🇷"],
+  Joilive: ["🇨🇳", "🇹🇼"],
+  Live17: ["🇹🇼", "🇯🇵", "🇭🇰"],
+};
 
 export function PlatformsSection() {
   return (
@@ -49,6 +68,11 @@ export function PlatformsSection() {
                 <Text size="sm" fw={600} c="white">
                   {platform.name}
                 </Text>
+                {PLATFORM_FLAGS[platform.name] && (
+                  <Text fz={20} style={{ lineHeight: 1, letterSpacing: 2 }}>
+                    {PLATFORM_FLAGS[platform.name].join(" ")}
+                  </Text>
+                )}
               </Stack>
             </Link>
           );

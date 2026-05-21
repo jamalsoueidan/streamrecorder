@@ -17,7 +17,8 @@
       "mixch": "Kreator Mixch",
       "trovo": "Kreator Trovo",
       "twitcast": "Kreator TwitCasting",
-      "joilive": "Streamer Joilive"
+      "joilive": "Streamer Joilive",
+      "live17": "Streamer 17live"
     },
     "subtitle": {
       "all": "Jelajahi semua streamer dan kreator",
@@ -33,7 +34,8 @@
       "mixch": "Temukan kreator Mixch",
       "trovo": "Temukan kreator Trovo",
       "twitcast": "Temukan kreator TwitCasting",
-      "joilive": "Temukan streamer Joilive"
+      "joilive": "Temukan streamer Joilive",
+      "live17": "Temukan streamer 17live"
     }
   },
   "recordings": {
@@ -51,7 +53,8 @@
       "mixch": "Rekaman Mixch",
       "trovo": "Rekaman Trovo",
       "twitcast": "Rekaman TwitCasting",
-      "joilive": "Rekaman Joilive"
+      "joilive": "Rekaman Joilive",
+      "live17": "Rekaman 17live"
     },
     "subtitle": {
       "all": "Tonton rekaman live stream",
@@ -67,7 +70,8 @@
       "mixch": "Tonton stream Mixch yang direkam",
       "trovo": "Tonton stream Trovo yang direkam",
       "twitcast": "Tonton stream TwitCasting yang direkam",
-      "joilive": "Tonton stream Joilive yang direkam"
+      "joilive": "Tonton stream Joilive yang direkam",
+      "live17": "Tonton stream 17live yang direkam"
     }
   },
   "home": {
