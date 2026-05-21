@@ -20,7 +20,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2026-05-21T14:07:05.320Z"
+    "x-generation-date": "2026-05-21T16:00:59.469Z"
   },
   "servers": [
     {
@@ -45655,7 +45655,8 @@
           "twitcast",
           "trovo",
           "joilive",
-          "live17"
+          "live17",
+          "kwai"
         ]
       },
       "ApiTokenTypeEnum": {

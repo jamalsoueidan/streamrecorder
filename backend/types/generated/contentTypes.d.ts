@@ -1121,6 +1121,7 @@ export interface ApiFollowerFollower extends Struct.CollectionTypeSchema {
         'trovo',
         'joilive',
         'live17',
+        'kwai',
       ]
     > &
       Schema.Attribute.Required &
