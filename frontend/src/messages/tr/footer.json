@@ -28,7 +28,8 @@
     "joilive": "Joilive yayıncıları",
     "trovo": "Trovo içerik üreticileri",
     "twitcast": "TwitCasting içerik üreticileri",
-    "live17": "17live yayıncıları"
+    "live17": "17live yayıncıları",
+    "kwai": "Kwai yayıncıları"
   },
   "watchRecordings": {
     "title": "Kayıtları İzle",
@@ -46,7 +47,8 @@
     "joilive": "Joilive kayıtları",
     "trovo": "Trovo kayıtları",
     "twitcast": "TwitCasting kayıtları",
-    "live17": "17live kayıtları"
+    "live17": "17live kayıtları",
+    "kwai": "Kwai kayıtları"
   },
   "legal": {
     "title": "Yasal",

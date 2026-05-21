@@ -18,7 +18,8 @@
       "trovo": "Trovo-Creator",
       "twitcast": "TwitCasting-Creator",
       "joilive": "Joilive-Streamer",
-      "live17": "17live-Streamer"
+      "live17": "17live-Streamer",
+      "kwai": "Kwai-Streamer"
     },
     "subtitle": {
       "all": "Alle Streamer und Creator durchstöbern",
@@ -35,7 +36,8 @@
       "trovo": "Trovo-Creator entdecken",
       "twitcast": "TwitCasting-Creator entdecken",
       "joilive": "Joilive-Streamer entdecken",
-      "live17": "17live-Streamer entdecken"
+      "live17": "17live-Streamer entdecken",
+      "kwai": "Kwai-Streamer entdecken"
     }
   },
   "recordings": {
@@ -54,7 +56,8 @@
       "trovo": "Trovo-Aufnahmen",
       "twitcast": "TwitCasting-Aufnahmen",
       "joilive": "Joilive-Aufnahmen",
-      "live17": "17live-Aufnahmen"
+      "live17": "17live-Aufnahmen",
+      "kwai": "Kwai-Aufnahmen"
     },
     "subtitle": {
       "all": "Aufgenommene Live-Streams ansehen",
@@ -71,7 +74,8 @@
       "trovo": "Aufgenommene Trovo-Streams ansehen",
       "twitcast": "Aufgenommene TwitCasting-Streams ansehen",
       "joilive": "Aufgenommene Joilive-Streams ansehen",
-      "live17": "Aufgenommene 17live-Streams ansehen"
+      "live17": "Aufgenommene 17live-Streams ansehen",
+      "kwai": "Aufgenommene Kwai-Streams ansehen"
     }
   },
   "home": {

@@ -38,6 +38,7 @@ export enum FollowerTypeEnum {
   Trovo = "trovo",
   Joilive = "joilive",
   Live17 = "live17",
+  Kwai = "kwai",
 }
 
 export interface Error {

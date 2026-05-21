@@ -18,7 +18,8 @@
       "joilive": "Joilive Yayıncıları",
       "trovo": "Trovo İçerik Üreticileri",
       "twitcast": "TwitCasting İçerik Üreticileri",
-      "live17": "17live Yayıncıları"
+      "live17": "17live Yayıncıları",
+      "kwai": "Kwai Yayıncıları"
     },
     "subtitle": {
       "all": "Tüm yayıncılara ve içerik üreticilerine göz atın",
@@ -35,7 +36,8 @@
       "joilive": "Joilive yayıncılarını keşfedin",
       "trovo": "Trovo içerik üreticilerini keşfedin",
       "twitcast": "TwitCasting içerik üreticilerini keşfedin",
-      "live17": "17live yayıncılarını keşfedin"
+      "live17": "17live yayıncılarını keşfedin",
+      "kwai": "Kwai yayıncılarını keşfedin"
     }
   },
   "recordings": {
@@ -54,7 +56,8 @@
       "joilive": "Joilive Kayıtları",
       "trovo": "Trovo Kayıtları",
       "twitcast": "TwitCasting Kayıtları",
-      "live17": "17live Kayıtları"
+      "live17": "17live Kayıtları",
+      "kwai": "Kwai Kayıtları"
     },
     "subtitle": {
       "all": "Kaydedilmiş canlı yayınları izleyin",
@@ -71,7 +74,8 @@
       "joilive": "Kaydedilmiş Joilive yayınlarını izleyin",
       "trovo": "Kaydedilmiş Trovo yayınlarını izleyin",
       "twitcast": "Kaydedilmiş TwitCasting yayınlarını izleyin",
-      "live17": "Kaydedilmiş 17live yayınlarını izleyin"
+      "live17": "Kaydedilmiş 17live yayınlarını izleyin",
+      "kwai": "Kaydedilmiş Kwai yayınlarını izleyin"
     }
   },
   "home": {

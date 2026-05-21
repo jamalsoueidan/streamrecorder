@@ -143,6 +143,15 @@ export const usePlatformOptions = () => {
         </Center>
       ),
     },
+    {
+      value: "kwai",
+      label: (
+        <Center style={{ gap: 8 }}>
+          <IconBrandFunimation size={18} />
+          <Text size="sm">{t("platforms.kwai")}</Text>
+        </Center>
+      ),
+    },
   ];
 };
 
@@ -221,6 +230,11 @@ export const PLATFORM_OPTIONS = [
   {
     value: "live17",
     labelKey: "platforms.live17",
+    icon: IconBrandFunimation,
+  },
+  {
+    value: "kwai",
+    labelKey: "platforms.kwai",
     icon: IconBrandFunimation,
   },
 ];

@@ -33,6 +33,7 @@ export const SOCIAL_URL_PATTERNS: Partial<
     `https://www.joilive.net/user/index.html?s=${username}`,
   [FollowerTypeEnum.Live17]: (username) =>
     `https://17.live/en-US/profile/r/${username}`,
+  [FollowerTypeEnum.Kwai]: (username) => `https://www.kwai.com/@${username}`,
 };
 
 export const URL_PATTERNS: Partial<Record<FollowerTypeEnum, UrlPattern>> = {
@@ -52,6 +53,7 @@ export const URL_PATTERNS: Partial<Record<FollowerTypeEnum, UrlPattern>> = {
   [FollowerTypeEnum.Trovo]: (username) => `/trovo/${username}`,
   [FollowerTypeEnum.Joilive]: (username) => `/joilive/${username}`,
   [FollowerTypeEnum.Live17]: (username) => `/live17/${username}`,
+  [FollowerTypeEnum.Kwai]: (username) => `/kwai/${username}`,
 };
 
 export const getSocialUrl = (

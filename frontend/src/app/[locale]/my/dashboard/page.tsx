@@ -40,6 +40,7 @@ const platformMap: Record<string, FollowerTypeEnum> = {
   Trovo: FollowerTypeEnum.Trovo,
   Joilive: FollowerTypeEnum.Joilive,
   Live17: FollowerTypeEnum.Live17,
+  Kwai: FollowerTypeEnum.Kwai,
 };
 
 export default async function Page() {

@@ -28,7 +28,8 @@
     "trovo": "Kreator Trovo",
     "twitcast": "Kreator TwitCasting",
     "joilive": "Streamer Joilive",
-    "live17": "Streamer 17live"
+    "live17": "Streamer 17live",
+    "kwai": "Streamer Kwai"
   },
   "watchRecordings": {
     "title": "Tonton Rekaman",
@@ -46,7 +47,8 @@
     "trovo": "Rekaman Trovo",
     "twitcast": "Rekaman TwitCasting",
     "joilive": "Rekaman Joilive",
-    "live17": "Rekaman 17live"
+    "live17": "Rekaman 17live",
+    "kwai": "Rekaman Kwai"
   },
   "legal": {
     "title": "Legal",

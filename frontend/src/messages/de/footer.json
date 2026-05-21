@@ -28,7 +28,8 @@
     "trovo": "Trovo-Creator",
     "twitcast": "TwitCasting-Creator",
     "joilive": "Joilive-Streamer",
-    "live17": "17live-Streamer"
+    "live17": "17live-Streamer",
+    "kwai": "Kwai-Streamer"
   },
   "watchRecordings": {
     "title": "Aufnahmen ansehen",
@@ -46,7 +47,8 @@
     "trovo": "Trovo-Aufnahmen",
     "twitcast": "TwitCasting-Aufnahmen",
     "joilive": "Joilive-Aufnahmen",
-    "live17": "17live-Aufnahmen"
+    "live17": "17live-Aufnahmen",
+    "kwai": "Kwai-Aufnahmen"
   },
   "legal": {
     "title": "Rechtliches",

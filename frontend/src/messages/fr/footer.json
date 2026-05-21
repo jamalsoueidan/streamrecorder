@@ -28,7 +28,8 @@
     "trovo": "Créateurs Trovo",
     "twitcast": "Créateurs TwitCasting",
     "joilive": "Créateurs Joilive",
-    "live17": "Créateurs 17live"
+    "live17": "Créateurs 17live",
+    "kwai": "Créateurs Kwai"
   },
   "watchRecordings": {
     "title": "Regarder les enregistrements",
@@ -46,7 +47,8 @@
     "trovo": "Enregistrements Trovo",
     "twitcast": "Enregistrements TwitCasting",
     "joilive": "Enregistrements Joilive",
-    "live17": "Enregistrements 17live"
+    "live17": "Enregistrements 17live",
+    "kwai": "Enregistrements Kwai"
   },
   "legal": {
     "title": "Mentions légales",

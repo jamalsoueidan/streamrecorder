@@ -83,4 +83,10 @@ export const streamingPlatforms = [
     name: "Live17",
     file: "/simple/live17.svg",
   },
+  {
+    color: "orange.7",
+    colorCss: "var(--mantine-color-orange-7)",
+    name: "Kwai",
+    file: "/simple/kwai.svg",
+  },
 ];

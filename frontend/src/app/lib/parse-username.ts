@@ -197,6 +197,19 @@ export function parseUsername(input: string): ParsedUsername {
     };
   }
 
+  // Kwai URL patterns — kwai.com/@username (with optional locale segment, e.g.
+  // kwai.com/en/@username), or kwai.com/profile/{id}.
+  const kwaiRegex =
+    /(?:https?:\/\/)?(?:www\.|live\.|m\.)?kwai\.com\/(?:[a-z]{2}(?:-[A-Z]{2})?\/)?(?:@|profile\/)([^\/\s?]+)/i;
+  const kwaiMatch = trimmed.match(kwaiRegex);
+
+  if (kwaiMatch) {
+    return {
+      username: kwaiMatch[1],
+      platform: "kwai",
+    };
+  }
+
   // Plain username - remove @ if present
   const username = trimmed.startsWith("@") ? trimmed.slice(1) : trimmed;
 
