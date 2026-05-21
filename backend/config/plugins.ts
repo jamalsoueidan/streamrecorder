@@ -84,6 +84,29 @@ export default ({ env }) => ({
           // Activity / Recording / etc.) and generates
           // FollowerTypeEnum1, FollowerTypeEnum2, … which clobber the
           // canonical FollowerTypeEnum.
+          //
+          // STRICT matching: the platform-enum check compares against the
+          // canonical FollowerTypeEnum.enum set we extracted in step 1.
+          // Loose matching like `enum.includes("tiktok")` accidentally hits
+          // SocialAccount.provider (which lists google/apple/facebook/tiktok)
+          // — that's a different enum and must NOT be rewritten to
+          // FollowerTypeEnum.
+          const canonicalPlatformEnum: string[] =
+            (draft.components.schemas.FollowerTypeEnum &&
+              draft.components.schemas.FollowerTypeEnum.enum) ||
+            [];
+          const canonicalPlatformSet = new Set(canonicalPlatformEnum);
+          const isCanonicalPlatformEnum = (enumArr: string[]) => {
+            if (!Array.isArray(enumArr) || enumArr.length === 0) return false;
+            // Must be exactly the canonical set: same length AND every value
+            // is in the canonical set. This excludes SocialAccount.provider
+            // (which has google/apple/facebook/tiktok — overlaps tiktok but
+            // contains non-platform values and is shorter).
+            if (enumArr.length !== canonicalPlatformSet.size) return false;
+            for (const v of enumArr) if (!canonicalPlatformSet.has(v)) return false;
+            return true;
+          };
+
           const rewriteInlineEnums = (node: any) => {
             if (!node || typeof node !== "object") return;
             if (Array.isArray(node)) {
@@ -115,9 +138,9 @@ export default ({ env }) => ({
                   };
                   continue;
                 }
-                // Platform enum (Follower.type) — match by having "tiktok"
-                // since it's unique to this enum.
-                if (child.enum.includes("tiktok")) {
+                // Platform enum (Follower.type) — strict match against the
+                // canonical FollowerTypeEnum.enum extracted in step 1.
+                if (isCanonicalPlatformEnum(child.enum)) {
                   node[key] = {
                     $ref: "#/components/schemas/FollowerTypeEnum",
                   };

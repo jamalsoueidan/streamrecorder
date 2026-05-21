@@ -20,7 +20,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2026-05-21T16:00:59.469Z"
+    "x-generation-date": "2026-05-21T17:16:10.561Z"
   },
   "servers": [
     {
@@ -14585,7 +14585,14 @@
                           "type": "string"
                         },
                         "provider": {
-                          "$ref": "#/components/schemas/FollowerTypeEnum"
+                          "type": "string",
+                          "enum": [
+                            "google",
+                            "apple",
+                            "facebook",
+                            "tiktok",
+                            "youtube"
+                          ]
                         },
                         "providerId": {
                           "type": "string"
@@ -16730,7 +16737,14 @@
                           "type": "string"
                         },
                         "provider": {
-                          "$ref": "#/components/schemas/FollowerTypeEnum"
+                          "type": "string",
+                          "enum": [
+                            "google",
+                            "apple",
+                            "facebook",
+                            "tiktok",
+                            "youtube"
+                          ]
                         },
                         "providerId": {
                           "type": "string"
@@ -19391,7 +19405,14 @@
                               "type": "string"
                             },
                             "provider": {
-                              "$ref": "#/components/schemas/FollowerTypeEnum"
+                              "type": "string",
+                              "enum": [
+                                "google",
+                                "apple",
+                                "facebook",
+                                "tiktok",
+                                "youtube"
+                              ]
                             },
                             "providerId": {
                               "type": "string"
@@ -26640,7 +26661,14 @@
                           "type": "string"
                         },
                         "provider": {
-                          "$ref": "#/components/schemas/FollowerTypeEnum"
+                          "type": "string",
+                          "enum": [
+                            "google",
+                            "apple",
+                            "facebook",
+                            "tiktok",
+                            "youtube"
+                          ]
                         },
                         "providerId": {
                           "type": "string"
@@ -29125,7 +29153,14 @@
                               "type": "string"
                             },
                             "provider": {
-                              "$ref": "#/components/schemas/FollowerTypeEnum"
+                              "type": "string",
+                              "enum": [
+                                "google",
+                                "apple",
+                                "facebook",
+                                "tiktok",
+                                "youtube"
+                              ]
                             },
                             "providerId": {
                               "type": "string"
@@ -32957,7 +32992,14 @@
                       "type": "string"
                     },
                     "provider": {
-                      "$ref": "#/components/schemas/FollowerTypeEnum"
+                      "type": "string",
+                      "enum": [
+                        "google",
+                        "apple",
+                        "facebook",
+                        "tiktok",
+                        "youtube"
+                      ]
                     },
                     "providerId": {
                       "type": "string"
@@ -34976,7 +35018,14 @@
                               "type": "string"
                             },
                             "provider": {
-                              "$ref": "#/components/schemas/FollowerTypeEnum"
+                              "type": "string",
+                              "enum": [
+                                "google",
+                                "apple",
+                                "facebook",
+                                "tiktok",
+                                "youtube"
+                              ]
                             },
                             "providerId": {
                               "type": "string"
@@ -37398,7 +37447,14 @@
                           "type": "string"
                         },
                         "provider": {
-                          "$ref": "#/components/schemas/FollowerTypeEnum"
+                          "type": "string",
+                          "enum": [
+                            "google",
+                            "apple",
+                            "facebook",
+                            "tiktok",
+                            "youtube"
+                          ]
                         },
                         "providerId": {
                           "type": "string"
@@ -38750,7 +38806,14 @@
             "type": "object",
             "properties": {
               "provider": {
-                "$ref": "#/components/schemas/FollowerTypeEnum"
+                "type": "string",
+                "enum": [
+                  "google",
+                  "apple",
+                  "facebook",
+                  "tiktok",
+                  "youtube"
+                ]
               },
               "providerId": {
                 "type": "string"
@@ -38858,7 +38921,14 @@
             "type": "string"
           },
           "provider": {
-            "$ref": "#/components/schemas/FollowerTypeEnum"
+            "type": "string",
+            "enum": [
+              "google",
+              "apple",
+              "facebook",
+              "tiktok",
+              "youtube"
+            ]
           },
           "providerId": {
             "type": "string"
@@ -40478,7 +40548,14 @@
                       "type": "string"
                     },
                     "provider": {
-                      "$ref": "#/components/schemas/FollowerTypeEnum"
+                      "type": "string",
+                      "enum": [
+                        "google",
+                        "apple",
+                        "facebook",
+                        "tiktok",
+                        "youtube"
+                      ]
                     },
                     "providerId": {
                       "type": "string"
@@ -42504,7 +42581,14 @@
                               "type": "string"
                             },
                             "provider": {
-                              "$ref": "#/components/schemas/FollowerTypeEnum"
+                              "type": "string",
+                              "enum": [
+                                "google",
+                                "apple",
+                                "facebook",
+                                "tiktok",
+                                "youtube"
+                              ]
                             },
                             "providerId": {
                               "type": "string"
@@ -44762,7 +44846,14 @@
                               "type": "string"
                             },
                             "provider": {
-                              "$ref": "#/components/schemas/FollowerTypeEnum"
+                              "type": "string",
+                              "enum": [
+                                "google",
+                                "apple",
+                                "facebook",
+                                "tiktok",
+                                "youtube"
+                              ]
                             },
                             "providerId": {
                               "type": "string"

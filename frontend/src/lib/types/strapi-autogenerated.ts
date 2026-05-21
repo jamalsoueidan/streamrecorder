@@ -479,7 +479,7 @@ export interface Activity {
       socialAccounts?: {
         id?: string | number;
         documentId?: string;
-        provider?: FollowerTypeEnum;
+        provider?: ActivityProviderEnum;
         providerId?: string;
         accessToken?: string;
         refreshToken?: string;
@@ -1049,7 +1049,7 @@ export interface AiRequest {
       socialAccounts?: {
         id?: string | number;
         documentId?: string;
-        provider?: FollowerTypeEnum;
+        provider?: AiRequestProviderEnum;
         providerId?: string;
         accessToken?: string;
         refreshToken?: string;
@@ -1758,7 +1758,7 @@ export interface AiTask {
         socialAccounts?: {
           id?: string | number;
           documentId?: string;
-          provider?: FollowerTypeEnum;
+          provider?: AiTaskProviderEnum;
           providerId?: string;
           accessToken?: string;
           refreshToken?: string;
@@ -3712,7 +3712,7 @@ export interface Clip {
       socialAccounts?: {
         id?: string | number;
         documentId?: string;
-        provider?: FollowerTypeEnum;
+        provider?: ClipProviderEnum;
         providerId?: string;
         accessToken?: string;
         refreshToken?: string;
@@ -4377,7 +4377,7 @@ export interface ClipShare {
         socialAccounts?: {
           id?: string | number;
           documentId?: string;
-          provider?: FollowerTypeEnum;
+          provider?: ClipShareProviderEnum;
           providerId?: string;
           accessToken?: string;
           refreshToken?: string;
@@ -5419,7 +5419,7 @@ export interface Follower {
     socialAccounts?: {
       id?: string | number;
       documentId?: string;
-      provider?: FollowerTypeEnum;
+      provider?: FollowerProviderEnum;
       providerId?: string;
       accessToken?: string;
       refreshToken?: string;
@@ -5961,7 +5961,7 @@ export interface Meme {
         socialAccounts?: {
           id?: string | number;
           documentId?: string;
-          provider?: FollowerTypeEnum;
+          provider?: MemeProviderEnum;
           providerId?: string;
           accessToken?: string;
           refreshToken?: string;
@@ -6608,7 +6608,7 @@ export interface Recording {
       socialAccounts?: {
         id?: string | number;
         documentId?: string;
-        provider?: FollowerTypeEnum;
+        provider?: RecordingProviderEnum;
         providerId?: string;
         accessToken?: string;
         refreshToken?: string;
@@ -6979,7 +6979,7 @@ export interface ReportResponse {
 
 export interface SocialAccountRequest {
   data: {
-    provider: FollowerTypeEnum;
+    provider: SocialAccountRequestProviderEnum;
     providerId: string;
     accessToken: string;
     refreshToken?: string;
@@ -7010,7 +7010,7 @@ export interface SocialAccountListResponse {
 export interface SocialAccount {
   id?: string | number;
   documentId?: string;
-  provider: FollowerTypeEnum;
+  provider: SocialAccountProviderEnum;
   providerId: string;
   accessToken: string;
   refreshToken?: string;
@@ -7442,7 +7442,7 @@ export interface SocialAccount {
     socialAccounts?: {
       id?: string | number;
       documentId?: string;
-      provider?: FollowerTypeEnum;
+      provider?: SocialAccountProviderEnum1;
       providerId?: string;
       accessToken?: string;
       refreshToken?: string;
@@ -7986,7 +7986,7 @@ export interface Source {
         socialAccounts?: {
           id?: string | number;
           documentId?: string;
-          provider?: FollowerTypeEnum;
+          provider?: SourceProviderEnum;
           providerId?: string;
           accessToken?: string;
           refreshToken?: string;
@@ -8592,7 +8592,7 @@ export interface VisitorView {
         socialAccounts?: {
           id?: string | number;
           documentId?: string;
-          provider?: FollowerTypeEnum;
+          provider?: VisitorViewProviderEnum;
           providerId?: string;
           accessToken?: string;
           refreshToken?: string;
@@ -8927,6 +8927,14 @@ export enum ActivityKindEnum {
   Admin = "admin",
 }
 
+export enum ActivityProviderEnum {
+  Google = "google",
+  Apple = "apple",
+  Facebook = "facebook",
+  Tiktok = "tiktok",
+  Youtube = "youtube",
+}
+
 export enum ActivitySubscriptionStatusEnum {
   Active = "active",
   Cancelled = "cancelled",
@@ -8956,6 +8964,14 @@ export enum AiRequestGenderEnum {
 export enum AiRequestKindEnum {
   ContentApi = "content-api",
   Admin = "admin",
+}
+
+export enum AiRequestProviderEnum {
+  Google = "google",
+  Apple = "apple",
+  Facebook = "facebook",
+  Tiktok = "tiktok",
+  Youtube = "youtube",
 }
 
 export enum AiRequestSubscriptionStatusEnum {
@@ -9015,6 +9031,14 @@ export enum AiTaskGenderEnum {
 export enum AiTaskKindEnum {
   ContentApi = "content-api",
   Admin = "admin",
+}
+
+export enum AiTaskProviderEnum {
+  Google = "google",
+  Apple = "apple",
+  Facebook = "facebook",
+  Tiktok = "tiktok",
+  Youtube = "youtube",
 }
 
 export enum AiTaskSubscriptionStatusEnum {
@@ -9107,6 +9131,14 @@ export enum ClipKindEnum {
   Admin = "admin",
 }
 
+export enum ClipProviderEnum {
+  Google = "google",
+  Apple = "apple",
+  Facebook = "facebook",
+  Tiktok = "tiktok",
+  Youtube = "youtube",
+}
+
 export enum ClipSubscriptionStatusEnum {
   Active = "active",
   Cancelled = "cancelled",
@@ -9142,6 +9174,14 @@ export enum ClipShareGenderEnum {
 export enum ClipShareKindEnum {
   ContentApi = "content-api",
   Admin = "admin",
+}
+
+export enum ClipShareProviderEnum {
+  Google = "google",
+  Apple = "apple",
+  Facebook = "facebook",
+  Tiktok = "tiktok",
+  Youtube = "youtube",
 }
 
 export enum ClipShareSubscriptionStatusEnum {
@@ -9204,6 +9244,14 @@ export enum FollowerGenderEnum1 {
   Unknown = "unknown",
 }
 
+export enum FollowerProviderEnum {
+  Google = "google",
+  Apple = "apple",
+  Facebook = "facebook",
+  Tiktok = "tiktok",
+  Youtube = "youtube",
+}
+
 export enum FollowerSubscriptionStatusEnum {
   Active = "active",
   Cancelled = "cancelled",
@@ -9236,6 +9284,14 @@ export enum MemeGenderEnum {
 export enum MemeKindEnum {
   ContentApi = "content-api",
   Admin = "admin",
+}
+
+export enum MemeProviderEnum {
+  Google = "google",
+  Apple = "apple",
+  Facebook = "facebook",
+  Tiktok = "tiktok",
+  Youtube = "youtube",
 }
 
 export enum MemeSubscriptionStatusEnum {
@@ -9274,6 +9330,14 @@ export enum RecordingKindEnum {
   Admin = "admin",
 }
 
+export enum RecordingProviderEnum {
+  Google = "google",
+  Apple = "apple",
+  Facebook = "facebook",
+  Tiktok = "tiktok",
+  Youtube = "youtube",
+}
+
 export enum RecordingSubscriptionStatusEnum {
   Active = "active",
   Cancelled = "cancelled",
@@ -9292,6 +9356,22 @@ export enum ReportKindEnum {
   Admin = "admin",
 }
 
+export enum SocialAccountRequestProviderEnum {
+  Google = "google",
+  Apple = "apple",
+  Facebook = "facebook",
+  Tiktok = "tiktok",
+  Youtube = "youtube",
+}
+
+export enum SocialAccountProviderEnum {
+  Google = "google",
+  Apple = "apple",
+  Facebook = "facebook",
+  Tiktok = "tiktok",
+  Youtube = "youtube",
+}
+
 export enum SocialAccountKindEnum {
   ContentApi = "content-api",
   Admin = "admin",
@@ -9301,6 +9381,14 @@ export enum SocialAccountGenderEnum {
   Male = "male",
   Female = "female",
   Unknown = "unknown",
+}
+
+export enum SocialAccountProviderEnum1 {
+  Google = "google",
+  Apple = "apple",
+  Facebook = "facebook",
+  Tiktok = "tiktok",
+  Youtube = "youtube",
 }
 
 export enum SocialAccountSubscriptionStatusEnum {
@@ -9341,6 +9429,14 @@ export enum SourceKindEnum {
   Admin = "admin",
 }
 
+export enum SourceProviderEnum {
+  Google = "google",
+  Apple = "apple",
+  Facebook = "facebook",
+  Tiktok = "tiktok",
+  Youtube = "youtube",
+}
+
 export enum SourceSubscriptionStatusEnum {
   Active = "active",
   Cancelled = "cancelled",
@@ -9370,6 +9466,14 @@ export enum VisitorViewGenderEnum {
 export enum VisitorViewKindEnum {
   ContentApi = "content-api",
   Admin = "admin",
+}
+
+export enum VisitorViewProviderEnum {
+  Google = "google",
+  Apple = "apple",
+  Facebook = "facebook",
+  Tiktok = "tiktok",
+  Youtube = "youtube",
 }
 
 export enum VisitorViewSubscriptionStatusEnum {
