@@ -141,7 +141,7 @@ export function RecordingMenu({
       setDownloadUpgradeOpened(true);
       return;
     }
-    await downloadRecording(recording.documentId, user.id, locale);
+    await downloadRecording(recording.documentId, locale);
     notifications.show({
       title: t("downloadEmailSent"),
       message: null,

@@ -90,5 +90,24 @@
       "title": "已清除",
       "message": "你的观看历史已清除。"
     }
+  },
+  "trackingData": {
+    "title": "隐私和追踪数据",
+    "description": "我们会记录您的观看和下载以及 IP 地址,用于检测账户共享和信用卡争议。您可以随时在此清除所有追踪数据。之后新的观看和下载将重新开始记录。",
+    "clearButton": "清除我的追踪数据",
+    "clearConfirm": {
+      "title": "清除追踪数据",
+      "message": "这将永久删除您所有已存储的观看和下载记录,包括 IP 地址。是否继续?",
+      "confirm": "清除",
+      "cancel": "取消"
+    },
+    "cleared": {
+      "title": "已清除",
+      "message": "已删除 {views} 条观看和 {downloads} 条下载。"
+    },
+    "error": {
+      "title": "失败",
+      "message": "无法清除追踪数据。"
+    }
   }
 }

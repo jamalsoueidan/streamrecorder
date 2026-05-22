@@ -27,9 +27,11 @@
       "lastLogin": "Last login date",
       "lastLoginDesc": "for basic account management",
       "streamers": "Streamers you follow",
-      "streamersDesc": "to show you content from streamers you are interested in"
+      "streamersDesc": "to show you content from streamers you are interested in",
+      "ipAddress": "IP address & device fingerprint",
+      "ipAddressDesc": "logged with each video view and download for fraud prevention; clearable from Settings"
     },
-    "footer": "That is it. Nothing else."
+    "footer": "That is it."
   },
   "legalBasis": {
     "title": "Legal Basis for Processing",
@@ -40,36 +42,23 @@
       "consent": "Consent",
       "consentDesc": "You have given consent for specific purposes (e.g., marketing emails)",
       "legitimateInterest": "Legitimate Interest",
-      "legitimateInterestDesc": "To improve our services and prevent fraud"
+      "legitimateInterestDesc": "To improve our services, prevent fraud, detect account sharing, and defend against payment disputes"
     }
   },
   "payment": {
     "title": "Payment Processing",
-    "content": "For paid subscriptions, we use Freemius as our payment processor and merchant of record. Freemius collects and processes your payment information directly. We do not store your credit card details on our servers.",
-    "stripePolicy": "Freemius's privacy policy can be found at: freemius.com/privacy"
+    "content": "For paid subscriptions, we use Stripe as our payment processor. Stripe collects and processes your payment information directly. We do not store your credit card details on our servers.",
+    "stripePolicy": "Stripe's privacy policy can be found at: stripe.com/privacy"
   },
   "analytics": {
-    "title": "Analytics",
-    "intro": "We use Umami, a privacy-focused analytics tool, to understand how our site is used. This helps us improve the experience.",
-    "notCollect": "What Umami does NOT collect:",
-    "notCollectItems": {
-      "personal": "No personal information",
-      "tracking": "No cross-site tracking"
-    },
-    "collect": "What we do collect:",
-    "collectItems": {
-      "pageViews": "Page views",
-      "referrer": "Referrer (where you came from)",
-      "browser": "Browser and device type",
-      "country": "Country (not precise location)"
-    },
-    "footer": "All data is anonymized and stored on our own servers in Europe."
+    "title": "Analytics & Tracking",
+    "content": "We do not use any third-party analytics, advertising, or behavioral tracking tools. We do not run trackers, cookies for advertising, fingerprinting beacons, or session replay. The only data we log about your activity is described in the View & Download Logging section below — and you can delete it at any time."
   },
   "accessControl": {
-    "title": "Access Control & Usage Tracking",
-    "content1": "To enforce viewing limits, we track the first 5 recordings viewed by public visitors (not logged in) and basic users (logged in with a free account). After reaching this limit, access is restricted and no further tracking occurs.",
-    "content2": "For public visitors, we use an anonymous device fingerprint stored in a cookie. For basic users viewing content from creators they do not follow, we use your account ID.",
-    "content3": "Premium subscribers are never tracked. Basic users viewing content from creators they follow are also not tracked. This data is used solely to operate our freemium service and is not shared with third parties or used for advertising purposes."
+    "title": "View & Download Logging",
+    "content1": "Each time you view a recording or download a video file, we log the event against your account. Each log entry includes your IP address, account ID (if logged in), an anonymous device fingerprint, and the recording you accessed. We do not log playback position, watch time, or behavioral patterns — only that an access occurred.",
+    "content2": "We log every authenticated view and download regardless of subscription tier — basic, premium, champion, admin. For anonymous visitors, we use a device-fingerprint cookie instead of an account ID. This data exists to: (1) enforce the 5-view limit for free and anonymous viewers, (2) detect credit-card disputes by proving authorized account usage, (3) detect account-sharing by spotting multiple distinct IPs accessing the same account.",
+    "content3": "This data is never shared with third parties and is never used for advertising. You can delete every view and download log tied to your account at any time from Settings → Privacy & Tracking Data. After deletion, new views and downloads will start being logged again."
   },
   "dataRetention": {
     "title": "Data Retention",
@@ -93,8 +82,8 @@
     "title": "Third Parties",
     "intro": "We do not sell your data to anyone. We only share data with:",
     "items": {
-      "freemius": "Freemius",
-      "freemiusDesc": "For payment processing and subscription management (if you subscribe)"
+      "stripe": "Stripe",
+      "stripeDesc": "For payment processing and subscription management (if you subscribe)"
     },
     "footer": "We do not use third-party advertising networks or sell your personal information."
   },
@@ -130,7 +119,7 @@
       "withdraw": "Right to Withdraw Consent",
       "withdrawDesc": "Withdraw consent at any time"
     },
-    "footer": "To exercise any of these rights, contact us at contact@livestreamrecorder.com"
+    "footer": "To exercise any of these rights, contact us at contact@livestreamrecorder.com. For view and download logs specifically, you can also clear them yourself from Settings → Privacy & Tracking Data."
   },
   "children": {
     "title": "Children's Privacy",

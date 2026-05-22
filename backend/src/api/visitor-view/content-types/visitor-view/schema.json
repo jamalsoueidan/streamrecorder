@@ -14,10 +14,19 @@
     "fingerprint": {
       "type": "string"
     },
+    "ip": {
+      "type": "string",
+      "private": true
+    },
     "recording": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::recording.recording"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user"
     }
   }
 }

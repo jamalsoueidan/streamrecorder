@@ -29,7 +29,9 @@
     "latestRecordingDesc": "최근 방송",
     "latestRecordingAsc": "오래된 방송",
     "updatedAtDesc": "최신순",
-    "updatedAtAsc": "오래된순"
+    "updatedAtAsc": "오래된순",
+    "viewsCountDesc": "조회수 많은 순",
+    "downloadsCountDesc": "다운로드 많은 순"
   },
   "gender": {
     "label": "성별",

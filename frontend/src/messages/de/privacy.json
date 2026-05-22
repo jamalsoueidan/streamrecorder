@@ -27,9 +27,11 @@
       "lastLogin": "Datum der letzten Anmeldung",
       "lastLoginDesc": "für die einfache Kontoverwaltung",
       "streamers": "Streamer, denen du folgst",
-      "streamersDesc": "um dir Inhalte von Streamern zu zeigen, die dich interessieren"
+      "streamersDesc": "um dir Inhalte von Streamern zu zeigen, die dich interessieren",
+      "ipAddress": "IP-Adresse & Geräte-Fingerabdruck",
+      "ipAddressDesc": "wird bei jedem Aufruf und Download zum Schutz vor Betrug gespeichert; in den Einstellungen löschbar"
     },
-    "footer": "Das war's. Nichts weiter."
+    "footer": "Das ist alles."
   },
   "legalBasis": {
     "title": "Rechtsgrundlage der Verarbeitung",
@@ -40,36 +42,23 @@
       "consent": "Einwilligung",
       "consentDesc": "Du hast für bestimmte Zwecke (z. B. Marketing-E-Mails) eingewilligt",
       "legitimateInterest": "Berechtigtes Interesse",
-      "legitimateInterestDesc": "Zur Verbesserung unserer Dienste und zum Schutz vor Betrug"
+      "legitimateInterestDesc": "Zur Verbesserung unserer Dienste, Betrugsprävention, Erkennung von Account-Sharing und Abwehr von Zahlungsstreitigkeiten"
     }
   },
   "payment": {
     "title": "Zahlungsabwicklung",
-    "content": "Für kostenpflichtige Abonnements nutzen wir Freemius als Zahlungsabwickler und Merchant of Record. Freemius erfasst und verarbeitet deine Zahlungsinformationen direkt. Wir speichern deine Kreditkartendaten nicht auf unseren Servern.",
-    "stripePolicy": "Die Datenschutzerklärung von Freemius findest du unter: freemius.com/privacy"
+    "content": "Für bezahlte Abonnements nutzen wir Stripe als Zahlungsdienstleister. Stripe erfasst und verarbeitet deine Zahlungsdaten direkt. Wir speichern deine Kreditkartendaten nicht auf unseren Servern.",
+    "stripePolicy": "Die Datenschutzerklärung von Stripe findest du unter: stripe.com/privacy"
   },
   "analytics": {
-    "title": "Analyse",
-    "intro": "Wir verwenden Umami, ein datenschutzfreundliches Analyse-Tool, um zu verstehen, wie unsere Seite genutzt wird. Das hilft uns, das Erlebnis zu verbessern.",
-    "notCollect": "Was Umami NICHT erfasst:",
-    "notCollectItems": {
-      "personal": "Keine persönlichen Informationen",
-      "tracking": "Kein seitenübergreifendes Tracking"
-    },
-    "collect": "Was wir erfassen:",
-    "collectItems": {
-      "pageViews": "Seitenaufrufe",
-      "referrer": "Referrer (woher du kommst)",
-      "browser": "Browser- und Gerätetyp",
-      "country": "Land (kein präziser Standort)"
-    },
-    "footer": "Alle Daten werden anonymisiert und auf unseren eigenen Servern in Europa gespeichert."
+    "title": "Analyse & Tracking",
+    "content": "Wir verwenden keinerlei Drittanbieter-Analyse-, Werbe- oder Verhaltens-Tracking-Tools. Wir setzen keine Tracker, keine Werbe-Cookies, keine Fingerabdruck-Beacons und kein Session-Replay ein. Die einzigen Daten, die wir über deine Aktivität aufzeichnen, sind im Abschnitt Aufruf- und Download-Protokollierung unten beschrieben — du kannst sie jederzeit löschen."
   },
   "accessControl": {
-    "title": "Zugriffskontrolle & Nutzungs-Tracking",
-    "content1": "Um Anzeigelimits durchzusetzen, erfassen wir die ersten 5 Aufnahmen, die von öffentlichen Besuchern (nicht angemeldet) und Basis-Nutzern (mit kostenlosem Konto angemeldet) angesehen werden. Nach Erreichen dieses Limits wird der Zugriff eingeschränkt und kein weiteres Tracking durchgeführt.",
-    "content2": "Für öffentliche Besucher verwenden wir einen anonymen Geräte-Fingerprint, der in einem Cookie gespeichert ist. Für Basis-Nutzer, die Inhalte von Creatorn ansehen, denen sie nicht folgen, verwenden wir deine Konto-ID.",
-    "content3": "Premium-Abonnenten werden niemals getrackt. Basis-Nutzer, die Inhalte von Creatorn ansehen, denen sie folgen, werden ebenfalls nicht getrackt. Diese Daten werden ausschließlich zum Betrieb unseres Freemium-Dienstes verwendet und nicht an Dritte weitergegeben oder zu Werbezwecken genutzt."
+    "title": "Aufruf- und Download-Protokollierung",
+    "content1": "Jedes Mal, wenn du eine Aufzeichnung ansiehst oder eine Videodatei herunterlädst, protokollieren wir dieses Ereignis in deinem Konto. Jeder Eintrag enthält deine IP-Adresse, die Konto-ID (falls eingeloggt), einen anonymen Geräte-Fingerabdruck und die abgerufene Aufzeichnung. Wir protokollieren weder Wiedergabeposition noch Sehdauer noch Verhaltensmuster — nur dass ein Zugriff erfolgt ist.",
+    "content2": "Wir protokollieren jeden authentifizierten Aufruf und Download unabhängig vom Abonnement — Basic, Premium, Champion oder Admin. Für anonyme Besucher verwenden wir statt der Konto-ID ein Geräte-Fingerabdruck-Cookie. Diese Daten dienen dazu: (1) das 5-Aufruf-Limit für kostenlose und anonyme Nutzer durchzusetzen, (2) Kreditkartenstreitigkeiten zu erkennen, indem die autorisierte Kontonutzung nachgewiesen wird, (3) Account-Sharing zu erkennen, indem mehrere unterschiedliche IPs auf dasselbe Konto zugreifen.",
+    "content3": "Diese Daten werden niemals an Dritte weitergegeben und niemals für Werbung verwendet. Du kannst jederzeit alle Aufruf- und Download-Protokolle deines Kontos unter Einstellungen → Datenschutz & Tracking-Daten löschen. Nach der Löschung werden neue Aufrufe und Downloads wieder protokolliert."
   },
   "dataRetention": {
     "title": "Datenaufbewahrung",
@@ -93,8 +82,8 @@
     "title": "Dritte",
     "intro": "Wir verkaufen deine Daten an niemanden. Wir teilen Daten nur mit:",
     "items": {
-      "freemius": "Freemius",
-      "freemiusDesc": "Für Zahlungsabwicklung und Abo-Verwaltung (wenn du abonnierst)"
+      "stripe": "Stripe",
+      "stripeDesc": "Für Zahlungsabwicklung und Abonnementverwaltung (falls du abonnierst)"
     },
     "footer": "Wir nutzen keine Werbe-Netzwerke Dritter und verkaufen deine personenbezogenen Daten nicht."
   },
@@ -130,7 +119,7 @@
       "withdraw": "Recht auf Widerruf der Einwilligung",
       "withdrawDesc": "Widerruf der Einwilligung jederzeit möglich"
     },
-    "footer": "Um eines dieser Rechte auszuüben, kontaktiere uns unter contact@livestreamrecorder.com"
+    "footer": "Um eines dieser Rechte auszuüben, kontaktiere uns unter contact@livestreamrecorder.com. Aufruf- und Download-Protokolle kannst du auch selbst unter Einstellungen → Datenschutz & Tracking-Daten löschen."
   },
   "children": {
     "title": "Datenschutz für Kinder",

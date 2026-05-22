@@ -29,7 +29,9 @@
     "latestRecordingDesc": "بث مؤخراً",
     "latestRecordingAsc": "أقدم بث",
     "updatedAtDesc": "الأحدث",
-    "updatedAtAsc": "الأقدم"
+    "updatedAtAsc": "الأقدم",
+    "viewsCountDesc": "الأكثر مشاهدة",
+    "downloadsCountDesc": "الأكثر تحميلًا"
   },
   "gender": {
     "label": "الجنس",

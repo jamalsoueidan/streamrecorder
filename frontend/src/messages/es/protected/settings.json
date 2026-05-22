@@ -90,5 +90,24 @@
       "title": "Borrado",
       "message": "Tu historial de vistos ha sido borrado."
     }
+  },
+  "trackingData": {
+    "title": "Privacidad y datos de seguimiento",
+    "description": "Registramos tus visualizaciones y descargas junto con tu dirección IP para detectar el uso compartido de cuentas y disputas de tarjetas. Puedes borrar todos tus datos de seguimiento aquí en cualquier momento. Las nuevas visualizaciones y descargas se registrarán de nuevo a partir de entonces.",
+    "clearButton": "Borrar mis datos de seguimiento",
+    "clearConfirm": {
+      "title": "Borrar datos de seguimiento",
+      "message": "Esto eliminará permanentemente todas tus visualizaciones y descargas, incluidas las direcciones IP. ¿Continuar?",
+      "confirm": "Borrar",
+      "cancel": "Cancelar"
+    },
+    "cleared": {
+      "title": "Borrado",
+      "message": "Se eliminaron {views} visualizaciones y {downloads} descargas."
+    },
+    "error": {
+      "title": "Error",
+      "message": "No se pudieron borrar los datos de seguimiento."
+    }
   }
 }

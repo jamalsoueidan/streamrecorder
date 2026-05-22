@@ -1,10 +1,16 @@
 "use server";
 
+import api from "@/lib/api";
+
 export async function downloadRecording(
   videoDocumentId: string,
-  userId: number,
   locale: string,
 ): Promise<void> {
+  const user =
+    await api.usersPermissionsUsersRoles.getUsersPermissionsUsersRoles({});
+  const userId = (user?.data as any)?.id;
+  if (!userId) throw new Error("not authenticated");
+
   await fetch(process.env.N8N_URL + "/webhook/download", {
     method: "POST",
     headers: {

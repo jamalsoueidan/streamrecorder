@@ -29,7 +29,9 @@
     "latestRecordingDesc": "Baru-baru ini streaming",
     "latestRecordingAsc": "Stream terlama",
     "updatedAtDesc": "Terbaru",
-    "updatedAtAsc": "Terlama"
+    "updatedAtAsc": "Terlama",
+    "viewsCountDesc": "Paling banyak ditonton",
+    "downloadsCountDesc": "Paling banyak diunduh"
   },
   "gender": {
     "label": "Jenis Kelamin",

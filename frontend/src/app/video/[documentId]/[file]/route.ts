@@ -1,5 +1,7 @@
+import api from "@/lib/api";
 import publicApi from "@/lib/public-api";
 import { getBucket, getS3, proxySignedUrl } from "@/lib/s3";
+import { getToken } from "@/lib/token";
 import { GetObjectCommand } from "@aws-sdk/client-s3";
 import { getSignedUrl } from "@aws-sdk/s3-request-presigner";
 import { unstable_cache } from "next/cache";
@@ -52,6 +54,35 @@ export async function GET(
     const username = parts[1] || "video";
     const datePart = parts[2] || "";
     const filename = `${username}_${datePart}.mp4`;
+
+    try {
+      const token = await getToken();
+      if (token) {
+        const userResp =
+          await api.usersPermissionsUsersRoles.getUsersPermissionsUsersRoles(
+            {},
+          );
+        const userNumericId = (userResp?.data as any)?.id;
+        const userDocumentId = (userResp?.data as any)?.documentId;
+        if (userNumericId && userDocumentId) {
+          const ip =
+            request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
+            request.headers.get("x-real-ip") ||
+            null;
+
+          await publicApi.visitorDownload.postVisitorDownloads({
+            data: {
+              fingerprint: `user:${userDocumentId}`,
+              recording: documentId,
+              user: userNumericId,
+              ...(ip ? { ip } : {}),
+            },
+          });
+        }
+      }
+    } catch (err) {
+      console.error("[video/file route] visitor-download failed:", err);
+    }
 
     const command = new GetObjectCommand({
       Bucket: bucket,

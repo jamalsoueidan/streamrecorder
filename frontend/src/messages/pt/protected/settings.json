@@ -90,5 +90,24 @@
       "title": "Limpo",
       "message": "Seu histórico de visualizações foi limpo."
     }
+  },
+  "trackingData": {
+    "title": "Privacidade e dados de rastreamento",
+    "description": "Registramos suas visualizações e downloads junto com seu endereço IP para detectar compartilhamento de conta e disputas de cartão de crédito. Você pode limpar todos os seus dados de rastreamento aqui a qualquer momento. Novas visualizações e downloads começarão a ser registrados novamente depois.",
+    "clearButton": "Limpar meus dados de rastreamento",
+    "clearConfirm": {
+      "title": "Limpar dados de rastreamento",
+      "message": "Isso excluirá permanentemente todas as suas visualizações e downloads armazenados, incluindo endereços IP. Continuar?",
+      "confirm": "Limpar",
+      "cancel": "Cancelar"
+    },
+    "cleared": {
+      "title": "Limpo",
+      "message": "{views} visualizações e {downloads} downloads removidos."
+    },
+    "error": {
+      "title": "Falhou",
+      "message": "Não foi possível limpar os dados de rastreamento."
+    }
   }
 }

@@ -9,6 +9,7 @@ import { NotificationsCard } from "./components/notifications-card";
 import { ProfileCard } from "./components/profile-card";
 import { SubscriptionCard } from "./components/subscription-card";
 import { TikTokCard } from "./components/tiktok-card";
+import { TrackingDataCard } from "./components/tracking-data-card";
 import { WatchedHistoryCard } from "./components/watched-history-card";
 import { YouTubeCard } from "./components/youtube-card";
 
@@ -42,6 +43,7 @@ export default function SettingsPage() {
         </Can>
         <NotificationsCard />
         <WatchedHistoryCard />
+        <TrackingDataCard />
         <Role is="admin" not>
           <DangerZoneCard />
         </Role>

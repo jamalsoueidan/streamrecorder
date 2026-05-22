@@ -27,9 +27,11 @@
       "lastLogin": "Son giriş tarihi",
       "lastLoginDesc": "temel hesap yönetimi için",
       "streamers": "Takip ettiğiniz yayıncılar",
-      "streamersDesc": "ilgilendiğiniz yayıncılardan içerik göstermek için"
+      "streamersDesc": "ilgilendiğiniz yayıncılardan içerik göstermek için",
+      "ipAddress": "IP adresi ve cihaz parmak izi",
+      "ipAddressDesc": "dolandırıcılığı önlemek amacıyla her izleme ve indirme ile birlikte kaydedilir; Ayarlar'dan silinebilir"
     },
-    "footer": "Hepsi bu. Başka bir şey yok."
+    "footer": "Hepsi bu."
   },
   "legalBasis": {
     "title": "İşleme için Yasal Dayanak",
@@ -40,36 +42,23 @@
       "consent": "Onay",
       "consentDesc": "Belirli amaçlar için onay verdiniz (örn. pazarlama e-postaları)",
       "legitimateInterest": "Meşru Menfaat",
-      "legitimateInterestDesc": "Hizmetlerimizi iyileştirmek ve dolandırıcılığı önlemek için"
+      "legitimateInterestDesc": "Hizmetlerimizi iyileştirmek, dolandırıcılığı önlemek, hesap paylaşımını tespit etmek ve ödeme itirazlarına karşı kendimizi savunmak"
     }
   },
   "payment": {
-    "title": "Ödeme İşleme",
-    "content": "Ücretli abonelikler için, ödeme işlemcimiz ve kayıt satıcımız olarak Freemius kullanıyoruz. Freemius, ödeme bilgilerinizi doğrudan toplar ve işler. Kredi kartı bilgilerinizi sunucularımızda saklamıyoruz.",
-    "stripePolicy": "Freemius'un gizlilik politikası şu adreste bulunabilir: freemius.com/privacy"
+    "title": "Ödeme İşlemleri",
+    "content": "Ücretli abonelikler için Stripe'ı ödeme işlemcisi olarak kullanıyoruz. Stripe, ödeme bilgilerini doğrudan toplar ve işler. Kredi kartı bilgilerini sunucularımızda saklamıyoruz.",
+    "stripePolicy": "Stripe'ın gizlilik politikasına şu adresten ulaşabilirsin: stripe.com/privacy"
   },
   "analytics": {
-    "title": "Analitik",
-    "intro": "Sitemizin nasıl kullanıldığını anlamak için gizlilik odaklı bir analitik aracı olan Umami kullanıyoruz. Bu, deneyimi iyileştirmemize yardımcı olur.",
-    "notCollect": "Umami'nin TOPLAMADIĞI şeyler:",
-    "notCollectItems": {
-      "personal": "Kişisel bilgi yok",
-      "tracking": "Siteler arası takip yok"
-    },
-    "collect": "Topladıklarımız:",
-    "collectItems": {
-      "pageViews": "Sayfa görüntülemeleri",
-      "referrer": "Yönlendiren (nereden geldiğiniz)",
-      "browser": "Tarayıcı ve cihaz türü",
-      "country": "Ülke (kesin konum değil)"
-    },
-    "footer": "Tüm veriler anonimleştirilir ve Avrupa'daki kendi sunucularımızda saklanır."
+    "title": "Analitik ve Takip",
+    "content": "Üçüncü taraf analitik, reklam veya davranış takibi araçlarının hiçbirini kullanmıyoruz. Takip kodları, reklam çerezleri, parmak izi işaretçileri veya oturum yeniden oynatma araçları yoktur. Etkinliğin hakkında kaydettiğimiz tek veri, aşağıdaki İzleme ve İndirme Kayıtları bölümünde açıklanır ve dilediğin zaman silebilirsin."
   },
   "accessControl": {
-    "title": "Erişim Kontrolü ve Kullanım Takibi",
-    "content1": "Görüntüleme limitlerini uygulamak için, genel ziyaretçilerin (giriş yapmamış) ve temel kullanıcıların (ücretsiz hesapla giriş yapmış) görüntülediği ilk 5 kaydı takip ediyoruz. Bu limite ulaşıldıktan sonra erişim kısıtlanır ve daha fazla takip yapılmaz.",
-    "content2": "Genel ziyaretçiler için, bir çerezde saklanan anonim bir cihaz parmak izi kullanıyoruz. Takip etmedikleri içerik üreticilerinin içeriğini görüntüleyen temel kullanıcılar için hesap kimliğinizi kullanıyoruz.",
-    "content3": "Premium aboneler asla takip edilmez. Takip ettikleri içerik üreticilerin içeriğini görüntüleyen temel kullanıcılar da takip edilmez. Bu veriler yalnızca freemium hizmetimizi işletmek için kullanılır ve üçüncü taraflarla paylaşılmaz veya reklam amaçlı kullanılmaz."
+    "title": "İzleme ve İndirme Kayıtları",
+    "content1": "Bir kayıt izlediğin veya bir video dosyası indirdiğin her seferinde bu olayı hesabına işliyoruz. Her kayıt; IP adresini, hesap kimliğini (giriş yapmışsan), anonim bir cihaz parmak izini ve eriştiğin kaydı içerir. Oynatma konumunu, izleme süresini veya davranış kalıplarını kaydetmiyoruz — yalnızca erişimin gerçekleştiğini.",
+    "content2": "Abonelik düzeyinden (basic, premium, champion, admin) bağımsız olarak kimliği doğrulanmış her izleme ve indirmeyi kaydederiz. Anonim ziyaretçiler için hesap kimliği yerine cihaz parmak izi çerezi kullanırız. Bu veriler şu amaçlarla saklanır: (1) ücretsiz ve anonim kullanıcılar için 5 izleme sınırını uygulamak, (2) kredi kartı itirazlarını, yetkili hesap kullanımını kanıtlayarak tespit etmek, (3) aynı hesaba birden çok farklı IP üzerinden erişim olduğunda hesap paylaşımını tespit etmek.",
+    "content3": "Bu veriler asla üçüncü taraflarla paylaşılmaz ve reklam amacıyla kullanılmaz. Ayarlar → Gizlilik ve İzleme Verileri menüsünden hesabına bağlı tüm izleme ve indirme kayıtlarını dilediğin zaman silebilirsin. Silmenin ardından yeni izleme ve indirmeler tekrar kaydedilmeye başlar."
   },
   "dataRetention": {
     "title": "Veri Saklama",
@@ -93,8 +82,8 @@
     "title": "Üçüncü Taraflar",
     "intro": "Verilerinizi kimseye satmıyoruz. Verileri yalnızca şunlarla paylaşıyoruz:",
     "items": {
-      "freemius": "Freemius",
-      "freemiusDesc": "Ödeme işleme ve abonelik yönetimi için (abone olursanız)"
+      "stripe": "Stripe",
+      "stripeDesc": "Ödeme işlemleri ve abonelik yönetimi için (abone olursan)"
     },
     "footer": "Üçüncü taraf reklam ağları kullanmıyoruz veya kişisel bilgilerinizi satmıyoruz."
   },
@@ -130,7 +119,7 @@
       "withdraw": "Onayı Geri Çekme Hakkı",
       "withdrawDesc": "Onayınızı istediğiniz zaman geri çekin"
     },
-    "footer": "Bu haklardan herhangi birini kullanmak için contact@livestreamrecorder.com adresinden bizimle iletişime geçin"
+    "footer": "Bu haklardan herhangi birini kullanmak için contact@livestreamrecorder.com adresinden bize ulaşabilirsin. İzleme ve indirme kayıtlarını ayrıca Ayarlar → Gizlilik ve İzleme Verileri menüsünden kendin de silebilirsin."
   },
   "children": {
     "title": "Çocukların Gizliliği",

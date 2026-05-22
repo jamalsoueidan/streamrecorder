@@ -40,6 +40,8 @@ export const followingDefaultOptions = {
 export enum FollowingSortOptions {
   updatedAtDesc = "updatedAt:desc",
   updatedAtAsc = "updatedAt:asc",
+  viewsCountDesc = "viewsCount:desc",
+  downloadsCountDesc = "downloadsCount:desc",
 }
 
 export const followingParsers = {
@@ -81,4 +83,10 @@ export const buildFollowingFilters = (filters: FollowingFilters) =>
         : filters.duration === "long"
           ? { totalDuration: { $gt: 1200 } }
           : {},
+    filters.sort === FollowingSortOptions.viewsCountDesc
+      ? { viewsCount: { $gt: 0 } }
+      : {},
+    filters.sort === FollowingSortOptions.downloadsCountDesc
+      ? { downloadsCount: { $gt: 0 } }
+      : {},
   ].reduce((acc, curr) => deepMerge(acc, curr), {});

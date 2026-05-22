@@ -27,9 +27,11 @@
       "lastLogin": "Date de dernière connexion",
       "lastLoginDesc": "pour la gestion basique de ton compte",
       "streamers": "Streamers que tu suis",
-      "streamersDesc": "pour t'afficher du contenu des streamers qui t'intéressent"
+      "streamersDesc": "pour t'afficher du contenu des streamers qui t'intéressent",
+      "ipAddress": "Adresse IP et empreinte d'appareil",
+      "ipAddressDesc": "enregistrée à chaque visionnage et téléchargement pour prévenir la fraude ; effaçable depuis les Paramètres"
     },
-    "footer": "C'est tout. Rien d'autre."
+    "footer": "C'est tout."
   },
   "legalBasis": {
     "title": "Base légale du traitement",
@@ -40,36 +42,23 @@
       "consent": "Consentement",
       "consentDesc": "Tu as donné ton consentement pour des finalités spécifiques (par ex. e-mails marketing)",
       "legitimateInterest": "Intérêt légitime",
-      "legitimateInterestDesc": "Pour améliorer nos services et prévenir la fraude"
+      "legitimateInterestDesc": "Améliorer nos services, prévenir la fraude, détecter le partage de compte et nous défendre contre les litiges de paiement"
     }
   },
   "payment": {
     "title": "Traitement des paiements",
-    "content": "Pour les abonnements payants, nous utilisons Freemius comme processeur de paiement et merchant of record. Freemius collecte et traite directement tes informations de paiement. Nous ne stockons pas tes données de carte bancaire sur nos serveurs.",
-    "stripePolicy": "La politique de confidentialité de Freemius est disponible sur : freemius.com/privacy"
+    "content": "Pour les abonnements payants, nous utilisons Stripe comme processeur de paiement. Stripe collecte et traite directement tes informations de paiement. Nous ne stockons pas les détails de ta carte bancaire sur nos serveurs.",
+    "stripePolicy": "La politique de confidentialité de Stripe est disponible sur : stripe.com/privacy"
   },
   "analytics": {
-    "title": "Analyse",
-    "intro": "Nous utilisons Umami, un outil d'analyse respectueux de la vie privée, pour comprendre comment notre site est utilisé. Cela nous aide à améliorer l'expérience.",
-    "notCollect": "Ce qu'Umami NE collecte PAS :",
-    "notCollectItems": {
-      "personal": "Aucune information personnelle",
-      "tracking": "Aucun pistage inter-sites"
-    },
-    "collect": "Ce que nous collectons :",
-    "collectItems": {
-      "pageViews": "Pages vues",
-      "referrer": "Référent (d'où tu viens)",
-      "browser": "Type de navigateur et d'appareil",
-      "country": "Pays (pas de localisation précise)"
-    },
-    "footer": "Toutes les données sont anonymisées et stockées sur nos propres serveurs en Europe."
+    "title": "Analytique et suivi",
+    "content": "Nous n'utilisons aucun outil d'analytique, de publicité ou de suivi comportemental tiers. Pas de traceurs, pas de cookies publicitaires, pas de balises d'empreinte numérique, pas de relecture de session. Les seules données que nous enregistrons sur ton activité sont décrites dans la section Journalisation des visionnages et téléchargements ci-dessous — et tu peux les supprimer à tout moment."
   },
   "accessControl": {
-    "title": "Contrôle d'accès & suivi d'usage",
-    "content1": "Pour faire respecter les limites de visionnage, nous suivons les 5 premiers enregistrements visionnés par les visiteurs publics (non connectés) et les utilisateurs de base (connectés avec un compte gratuit). Une fois cette limite atteinte, l'accès est restreint et aucun suivi supplémentaire n'a lieu.",
-    "content2": "Pour les visiteurs publics, nous utilisons une empreinte d'appareil anonyme stockée dans un cookie. Pour les utilisateurs de base qui regardent du contenu de créateurs qu'ils ne suivent pas, nous utilisons l'identifiant de ton compte.",
-    "content3": "Les abonnés Premium ne sont jamais pistés. Les utilisateurs de base qui regardent du contenu de créateurs qu'ils suivent ne sont pas pistés non plus. Ces données servent uniquement à faire fonctionner notre service freemium et ne sont pas partagées avec des tiers ni utilisées à des fins publicitaires."
+    "title": "Journalisation des visionnages et téléchargements",
+    "content1": "Chaque fois que tu regardes un enregistrement ou télécharges un fichier vidéo, nous enregistrons l'événement sur ton compte. Chaque entrée comprend ton adresse IP, l'identifiant du compte (si tu es connecté), une empreinte d'appareil anonyme et l'enregistrement consulté. Nous n'enregistrons ni la position de lecture, ni la durée de visionnage, ni des schémas comportementaux — uniquement le fait qu'un accès a eu lieu.",
+    "content2": "Nous enregistrons chaque visionnage et téléchargement authentifié, quel que soit le niveau d'abonnement — basic, premium, champion, admin. Pour les visiteurs anonymes, nous utilisons un cookie d'empreinte d'appareil au lieu d'un identifiant de compte. Ces données servent à : (1) faire respecter la limite de 5 visionnages pour les utilisateurs gratuits et anonymes, (2) détecter les litiges de carte bancaire en prouvant un usage autorisé du compte, (3) repérer le partage de compte lorsque plusieurs IPs distinctes accèdent au même compte.",
+    "content3": "Ces données ne sont jamais partagées avec des tiers ni utilisées à des fins publicitaires. Tu peux supprimer à tout moment tous les journaux de visionnages et téléchargements liés à ton compte depuis Paramètres → Confidentialité et données de suivi. Après suppression, les nouveaux visionnages et téléchargements seront à nouveau enregistrés."
   },
   "dataRetention": {
     "title": "Conservation des données",
@@ -93,8 +82,8 @@
     "title": "Tiers",
     "intro": "Nous ne vendons tes données à personne. Nous ne partageons des données qu'avec :",
     "items": {
-      "freemius": "Freemius",
-      "freemiusDesc": "Pour le traitement des paiements et la gestion des abonnements (si tu t'abonnes)"
+      "stripe": "Stripe",
+      "stripeDesc": "Pour le traitement des paiements et la gestion des abonnements (si tu t'abonnes)"
     },
     "footer": "Nous n'utilisons pas de réseaux publicitaires tiers et ne vendons pas tes informations personnelles."
   },
@@ -130,7 +119,7 @@
       "withdraw": "Droit de retirer ton consentement",
       "withdrawDesc": "Retirer ton consentement à tout moment"
     },
-    "footer": "Pour exercer l'un de ces droits, contacte-nous à contact@livestreamrecorder.com"
+    "footer": "Pour exercer l'un de ces droits, contacte-nous à contact@livestreamrecorder.com. Pour les journaux de visionnages et téléchargements, tu peux aussi les effacer toi-même depuis Paramètres → Confidentialité et données de suivi."
   },
   "children": {
     "title": "Vie privée des enfants",

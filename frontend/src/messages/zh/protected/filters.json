@@ -29,7 +29,9 @@
     "latestRecordingDesc": "最近开播",
     "latestRecordingAsc": "最早开播",
     "updatedAtDesc": "最新",
-    "updatedAtAsc": "最早"
+    "updatedAtAsc": "最早",
+    "viewsCountDesc": "观看最多",
+    "downloadsCountDesc": "下载最多"
   },
   "gender": {
     "label": "性别",

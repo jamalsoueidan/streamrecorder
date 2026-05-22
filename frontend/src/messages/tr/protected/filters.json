@@ -29,7 +29,9 @@
     "latestRecordingDesc": "Son yayın yapanlar",
     "latestRecordingAsc": "En eski yayın",
     "updatedAtDesc": "En yeni",
-    "updatedAtAsc": "En eski"
+    "updatedAtAsc": "En eski",
+    "viewsCountDesc": "En çok izlenenler",
+    "downloadsCountDesc": "En çok indirilenler"
   },
   "gender": {
     "label": "Cinsiyet",

@@ -27,9 +27,11 @@
       "lastLogin": "最后登录日期",
       "lastLoginDesc": "用于基本账号管理",
       "streamers": "你关注的主播",
-      "streamersDesc": "用于向你展示你感兴趣的主播的内容"
+      "streamersDesc": "用于向你展示你感兴趣的主播的内容",
+      "ipAddress": "IP 地址与设备指纹",
+      "ipAddressDesc": "每次观看与下载时记录,用于防止欺诈;可在设置中清除"
     },
-    "footer": "就是这些。没有其他内容。"
+    "footer": "就这些。"
   },
   "legalBasis": {
     "title": "处理的法律依据",
@@ -40,36 +42,23 @@
       "consent": "同意",
       "consentDesc": "你已为特定目的(例如营销邮件)给予同意",
       "legitimateInterest": "正当利益",
-      "legitimateInterestDesc": "用于改进我们的服务和防止欺诈"
+      "legitimateInterestDesc": "改善我们的服务、预防欺诈、检测账户共享并防御支付争议"
     }
   },
   "payment": {
     "title": "支付处理",
-    "content": "对于付费订阅,我们使用 Freemius 作为支付处理商和登记商家。Freemius 直接收集和处理你的支付信息。我们不在我们的服务器上存储你的信用卡信息。",
-    "stripePolicy": "Freemius 的隐私政策可在以下位置找到：freemius.com/privacy"
+    "content": "对于付费订阅,我们使用 Stripe 作为支付处理方。Stripe 直接收集并处理您的支付信息。我们不会在自己的服务器上存储您的信用卡详细信息。",
+    "stripePolicy": "Stripe 的隐私政策可在此查看:stripe.com/privacy"
   },
   "analytics": {
-    "title": "分析",
-    "intro": "我们使用 Umami,一款注重隐私的分析工具,来了解我们的网站如何被使用。这有助于我们改善体验。",
-    "notCollect": "Umami 不收集的内容：",
-    "notCollectItems": {
-      "personal": "不收集个人信息",
-      "tracking": "不进行跨站追踪"
-    },
-    "collect": "我们收集的内容：",
-    "collectItems": {
-      "pageViews": "页面浏览量",
-      "referrer": "来源(你从哪里来)",
-      "browser": "浏览器和设备类型",
-      "country": "国家(非精确位置)"
-    },
-    "footer": "所有数据均经过匿名处理,并存储在我们位于欧洲的服务器上。"
+    "title": "分析与追踪",
+    "content": "我们不使用任何第三方分析、广告或行为追踪工具。没有追踪器、没有广告 cookie、没有指纹识别信标、没有会话回放。我们记录的关于您活动的唯一数据,均在下方“观看与下载记录”一节中说明,您可随时删除。"
   },
   "accessControl": {
-    "title": "访问控制和使用追踪",
-    "content1": "为了执行观看限制,我们追踪公开访客(未登录)和基础用户(使用免费账号登录)观看的前 5 个录像。达到此限制后,访问将被限制,不再进行进一步追踪。",
-    "content2": "对于公开访客,我们使用存储在 cookie 中的匿名设备指纹。对于观看未关注创作者内容的基础用户,我们使用你的账号 ID。",
-    "content3": "高级订阅用户从不被追踪。观看已关注创作者内容的基础用户也不会被追踪。这些数据仅用于运营我们的免费增值服务,不会与第三方共享或用于广告目的。"
+    "title": "观看与下载记录",
+    "content1": "您每次观看录像或下载视频文件时,我们都会将此事件记录到您的账户中。每条记录包含您的 IP 地址、账户 ID(若已登录)、匿名设备指纹以及访问的录像。我们不会记录播放位置、观看时长或行为模式 — 仅记录访问发生过这一事实。",
+    "content2": "无论订阅级别如何(基本、付费、Champion、管理员),所有经过身份验证的观看和下载都会被记录。对于匿名访客,我们使用设备指纹 cookie 代替账户 ID。此数据用于:(1)对免费用户和匿名访客执行 5 次观看限制;(2)通过证明账户被授权使用来识别信用卡争议;(3)当多个不同 IP 访问同一账户时识别账户共享行为。",
+    "content3": "这些数据绝不会与第三方共享,也不会用于广告。您可随时在 设置 → 隐私和追踪数据 中删除与您账户关联的所有观看和下载记录。删除后,新的观看和下载将重新开始被记录。"
   },
   "dataRetention": {
     "title": "数据保留",
@@ -93,8 +82,8 @@
     "title": "第三方",
     "intro": "我们不向任何人出售你的数据。我们仅与以下方共享数据：",
     "items": {
-      "freemius": "Freemius",
-      "freemiusDesc": "用于支付处理和订阅管理(如果你订阅)"
+      "stripe": "Stripe",
+      "stripeDesc": "用于支付处理和订阅管理(如果您订阅)"
     },
     "footer": "我们不使用第三方广告网络或出售你的个人信息。"
   },
@@ -130,7 +119,7 @@
       "withdraw": "撤回同意权",
       "withdrawDesc": "随时撤回同意"
     },
-    "footer": "要行使任何这些权利,请联系我们：contact@livestreamrecorder.com"
+    "footer": "如需行使上述任何权利,请通过 contact@livestreamrecorder.com 联系我们。对于观看和下载记录,您也可以自行在 设置 → 隐私和追踪数据 中清除。"
   },
   "children": {
     "title": "儿童隐私",

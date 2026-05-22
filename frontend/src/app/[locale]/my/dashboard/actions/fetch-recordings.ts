@@ -36,6 +36,28 @@ export async function fetchFavoriteRecordings() {
   return result.data || [];
 }
 
+export async function fetchMostViewedRecordings() {
+  const result = await fetchCachedRecordings({
+    scope: "all" as RecordingScope,
+    filters: { viewsCount: { $gt: 0 } },
+    sort: "viewsCount:desc",
+    page: 1,
+    pageSize: 8,
+  });
+  return result.data || [];
+}
+
+export async function fetchMostDownloadedRecordings() {
+  const result = await fetchCachedRecordings({
+    scope: "all" as RecordingScope,
+    filters: { downloadsCount: { $gt: 0 } },
+    sort: "downloadsCount:desc",
+    page: 1,
+    pageSize: 8,
+  });
+  return result.data || [];
+}
+
 export async function fetchLatestFollowers() {
   const response = await publicApi.follower.getFollowers({
     sort: "createdAt:desc",

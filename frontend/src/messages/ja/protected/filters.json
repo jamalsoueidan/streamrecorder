@@ -29,7 +29,9 @@
     "latestRecordingDesc": "最近配信",
     "latestRecordingAsc": "古い配信",
     "updatedAtDesc": "新しい順",
-    "updatedAtAsc": "古い順"
+    "updatedAtAsc": "古い順",
+    "viewsCountDesc": "再生数が多い順",
+    "downloadsCountDesc": "ダウンロード数が多い順"
   },
   "gender": {
     "label": "性別",

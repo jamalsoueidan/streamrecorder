@@ -90,5 +90,24 @@
       "title": "Effacé",
       "message": "Ton historique a été effacé."
     }
+  },
+  "trackingData": {
+    "title": "Confidentialité et données de suivi",
+    "description": "Nous enregistrons tes vues et téléchargements avec ton adresse IP pour détecter le partage de compte et les litiges de carte bancaire. Tu peux effacer toutes tes données de suivi ici à tout moment. Les nouvelles vues et téléchargements seront enregistrés à nouveau ensuite.",
+    "clearButton": "Effacer mes données de suivi",
+    "clearConfirm": {
+      "title": "Effacer les données de suivi",
+      "message": "Cela supprimera définitivement toutes tes vues et tous tes téléchargements, y compris les adresses IP. Continuer ?",
+      "confirm": "Effacer",
+      "cancel": "Annuler"
+    },
+    "cleared": {
+      "title": "Effacé",
+      "message": "{views} vues et {downloads} téléchargements supprimés."
+    },
+    "error": {
+      "title": "Échec",
+      "message": "Impossible d'effacer les données de suivi."
+    }
   }
 }

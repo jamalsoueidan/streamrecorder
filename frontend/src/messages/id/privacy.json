@@ -27,9 +27,11 @@
       "lastLogin": "Tanggal login terakhir",
       "lastLoginDesc": "untuk manajemen akun dasar",
       "streamers": "Streamer yang Anda ikuti",
-      "streamersDesc": "untuk menampilkan konten dari streamer yang Anda minati"
+      "streamersDesc": "untuk menampilkan konten dari streamer yang Anda minati",
+      "ipAddress": "Alamat IP & sidik jari perangkat",
+      "ipAddressDesc": "dicatat pada setiap tayangan dan unduhan untuk mencegah penipuan; dapat dihapus dari Pengaturan"
     },
-    "footer": "Hanya itu. Tidak ada yang lain."
+    "footer": "Itu saja."
   },
   "legalBasis": {
     "title": "Dasar Hukum Pemrosesan",
@@ -40,36 +42,23 @@
       "consent": "Persetujuan",
       "consentDesc": "Anda telah memberikan persetujuan untuk tujuan tertentu (misalnya, email pemasaran)",
       "legitimateInterest": "Kepentingan Sah",
-      "legitimateInterestDesc": "Untuk meningkatkan layanan kami dan mencegah penipuan"
+      "legitimateInterestDesc": "Untuk meningkatkan layanan kami, mencegah penipuan, mendeteksi berbagi akun, dan membela diri dari sengketa pembayaran"
     }
   },
   "payment": {
     "title": "Pemrosesan Pembayaran",
-    "content": "Untuk langganan berbayar, kami menggunakan Freemius sebagai pemroses pembayaran dan penjual resmi kami. Freemius mengumpulkan dan memproses informasi pembayaran Anda secara langsung. Kami tidak menyimpan detail kartu kredit Anda di server kami.",
-    "stripePolicy": "Kebijakan privasi Freemius dapat ditemukan di: freemius.com/privacy"
+    "content": "Untuk langganan berbayar, kami menggunakan Stripe sebagai pemroses pembayaran. Stripe mengumpulkan dan memproses informasi pembayaranmu secara langsung. Kami tidak menyimpan detail kartu kreditmu di server kami.",
+    "stripePolicy": "Kebijakan privasi Stripe dapat dilihat di: stripe.com/privacy"
   },
   "analytics": {
-    "title": "Analitik",
-    "intro": "Kami menggunakan Umami, alat analitik yang berfokus pada privasi, untuk memahami cara situs kami digunakan. Ini membantu kami meningkatkan pengalaman.",
-    "notCollect": "Apa yang TIDAK dikumpulkan Umami:",
-    "notCollectItems": {
-      "personal": "Tidak ada informasi pribadi",
-      "tracking": "Tidak ada pelacakan lintas situs"
-    },
-    "collect": "Apa yang kami kumpulkan:",
-    "collectItems": {
-      "pageViews": "Penayangan halaman",
-      "referrer": "Perujuk (dari mana Anda datang)",
-      "browser": "Jenis browser dan perangkat",
-      "country": "Negara (bukan lokasi tepat)"
-    },
-    "footer": "Semua data dianonimkan dan disimpan di server kami sendiri di Eropa."
+    "title": "Analitik & Pelacakan",
+    "content": "Kami tidak menggunakan alat analitik, iklan, atau pelacakan perilaku pihak ketiga apa pun. Tidak ada pelacak, tidak ada cookie iklan, tidak ada beacon sidik jari, tidak ada session replay. Satu-satunya data yang kami catat tentang aktivitasmu dijelaskan di bagian Pencatatan Tayangan dan Unduhan di bawah ini — dan kamu dapat menghapusnya kapan saja."
   },
   "accessControl": {
-    "title": "Kontrol Akses & Pelacakan Penggunaan",
-    "content1": "Untuk memberlakukan batas penayangan, kami melacak 5 rekaman pertama yang dilihat oleh pengunjung publik (tidak masuk) dan pengguna dasar (masuk dengan akun gratis). Setelah mencapai batas ini, akses dibatasi dan tidak ada pelacakan lebih lanjut.",
-    "content2": "Untuk pengunjung publik, kami menggunakan sidik jari perangkat anonim yang disimpan dalam cookie. Untuk pengguna dasar yang menonton konten dari kreator yang tidak mereka ikuti, kami menggunakan ID akun Anda.",
-    "content3": "Pelanggan premium tidak pernah dilacak. Pengguna dasar yang menonton konten dari kreator yang mereka ikuti juga tidak dilacak. Data ini digunakan semata-mata untuk mengoperasikan layanan freemium kami dan tidak dibagikan kepada pihak ketiga atau digunakan untuk tujuan periklanan."
+    "title": "Pencatatan Tayangan dan Unduhan",
+    "content1": "Setiap kali kamu menonton rekaman atau mengunduh berkas video, kami mencatat peristiwa tersebut di akunmu. Setiap catatan berisi alamat IP, ID akun (jika kamu login), sidik jari perangkat anonim, dan rekaman yang kamu akses. Kami tidak mencatat posisi pemutaran, durasi tonton, atau pola perilaku — hanya bahwa akses telah terjadi.",
+    "content2": "Kami mencatat setiap tayangan dan unduhan dari akun terotentikasi tanpa memandang tingkatan langganan — basic, premium, champion, admin. Untuk pengunjung anonim, kami memakai cookie sidik jari perangkat sebagai pengganti ID akun. Data ini ada untuk: (1) menegakkan batas 5 tayangan bagi pengguna gratis dan anonim, (2) mendeteksi sengketa kartu kredit dengan membuktikan penggunaan akun yang sah, (3) mendeteksi berbagi akun dengan menemukan beberapa IP berbeda yang mengakses akun yang sama.",
+    "content3": "Data ini tidak pernah dibagikan ke pihak ketiga dan tidak digunakan untuk iklan. Kamu dapat menghapus semua catatan tayangan dan unduhan yang terkait dengan akunmu kapan saja melalui Pengaturan → Privasi & Data Pelacakan. Setelah dihapus, tayangan dan unduhan baru akan mulai dicatat lagi."
   },
   "dataRetention": {
     "title": "Retensi Data",
@@ -93,8 +82,8 @@
     "title": "Pihak Ketiga",
     "intro": "Kami tidak menjual data Anda kepada siapa pun. Kami hanya berbagi data dengan:",
     "items": {
-      "freemius": "Freemius",
-      "freemiusDesc": "Untuk pemrosesan pembayaran dan manajemen langganan (jika Anda berlangganan)"
+      "stripe": "Stripe",
+      "stripeDesc": "Untuk pemrosesan pembayaran dan pengelolaan langganan (jika kamu berlangganan)"
     },
     "footer": "Kami tidak menggunakan jaringan periklanan pihak ketiga atau menjual informasi pribadi Anda."
   },
@@ -130,7 +119,7 @@
       "withdraw": "Hak Menarik Persetujuan",
       "withdrawDesc": "Tarik persetujuan kapan saja"
     },
-    "footer": "Untuk menggunakan hak-hak ini, hubungi kami di contact@livestreamrecorder.com"
+    "footer": "Untuk menggunakan salah satu hak ini, hubungi kami di contact@livestreamrecorder.com. Khusus catatan tayangan dan unduhan, kamu juga dapat menghapusnya sendiri dari Pengaturan → Privasi & Data Pelacakan."
   },
   "children": {
     "title": "Privasi Anak",
