@@ -90,5 +90,24 @@
       "title": "Temizlendi",
       "message": "İzleme geçmişiniz temizlendi."
     }
+  },
+  "trackingData": {
+    "title": "Gizlilik ve takip verileri",
+    "description": "Hesap paylaşımını ve kredi kartı itirazlarını tespit etmek için izlemelerini ve indirmelerini IP adresinle birlikte kaydediyoruz. Buradan takip verilerinin tümünü istediğin zaman silebilirsin. Yeni izlemeler ve indirmeler sonrasında tekrar kaydedilmeye başlanır.",
+    "clearButton": "Takip verilerimi sil",
+    "clearConfirm": {
+      "title": "Takip verilerini sil",
+      "message": "Bu, IP adresleri dahil tüm kayıtlı izlemelerini ve indirmelerini kalıcı olarak siler. Devam edilsin mi?",
+      "confirm": "Sil",
+      "cancel": "İptal"
+    },
+    "cleared": {
+      "title": "Silindi",
+      "message": "{views} izleme ve {downloads} indirme silindi."
+    },
+    "error": {
+      "title": "Başarısız",
+      "message": "Takip verileri silinemedi."
+    }
   }
 }

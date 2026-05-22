@@ -1,20 +1,23 @@
 export default {
   async afterCreate(event: any) {
-    const { result } = event;
+    const rec = event?.params?.data?.recording;
+    const recordingId =
+      typeof rec === "number"
+        ? rec
+        : rec?.set?.[0]?.id ?? rec?.connect?.[0]?.id;
 
-    const download = await strapi.db
-      .query("api::visitor-download.visitor-download")
-      .findOne({
-        where: { id: result.id },
-        populate: { recording: { select: ["id"] } },
-      });
+    console.log("[visitor-download.afterCreate] recordingId:", recordingId);
 
-    const recordingId = download?.recording?.id;
     if (!recordingId) return;
 
-    await strapi.db.connection.raw(
+    const result = await strapi.db.connection.raw(
       "UPDATE recordings SET downloads_count = COALESCE(downloads_count, 0) + 1 WHERE id = ?",
       [recordingId],
+    );
+
+    console.log(
+      "[visitor-download.afterCreate] updated rows:",
+      result?.rowCount ?? "unknown",
     );
   },
 };

@@ -37,7 +37,7 @@ export async function generateMetadata({ params }: PageProps) {
 export default async function PrivacyPolicy({ params }: PageProps) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "privacy" });
-  const lastUpdated = "February 20, 2026";
+  const lastUpdated = "May 22, 2026";
 
   return (
     <Container size="md" style={{ position: "relative", zIndex: 1 }}>
@@ -207,6 +207,16 @@ export default async function PrivacyPolicy({ params }: PageProps) {
                 — {t("whatWeCollect.items.streamersDesc")}
               </Text>
             </Text>
+            <Text style={{ color: "#94a3b8" }}>
+              •{" "}
+              <Text component="span" fw={500} style={{ color: "#f1f5f9" }}>
+                {t("whatWeCollect.items.ipAddress")}
+              </Text>
+              <Text component="span" style={{ color: "#64748b" }}>
+                {" "}
+                — {t("whatWeCollect.items.ipAddressDesc")}
+              </Text>
+            </Text>
           </Stack>
           <Text mt="md" style={{ color: "#64748b" }} size="sm">
             {t("whatWeCollect.footer")}
@@ -342,63 +352,8 @@ export default async function PrivacyPolicy({ params }: PageProps) {
               {t("analytics.title")}
             </Title>
           </Flex>
-          <Text style={{ color: "#94a3b8", lineHeight: 1.7 }} mb="md">
-            {t("analytics.intro")}
-          </Text>
-          <Text
-            style={{ color: "#94a3b8", lineHeight: 1.7, fontWeight: 500 }}
-            mb="sm"
-          >
-            {t("analytics.notCollect")}
-          </Text>
-          <Stack gap={4} mx={16} mb="md">
-            <Text style={{ color: "#94a3b8" }}>
-              •{" "}
-              <Text component="span" fw={500} style={{ color: "#f1f5f9" }}>
-                {t("analytics.notCollectItems.personal")}
-              </Text>
-            </Text>
-            <Text style={{ color: "#94a3b8" }}>
-              •{" "}
-              <Text component="span" fw={500} style={{ color: "#f1f5f9" }}>
-                {t("analytics.notCollectItems.tracking")}
-              </Text>
-            </Text>
-          </Stack>
-          <Text
-            style={{ color: "#94a3b8", lineHeight: 1.7, fontWeight: 500 }}
-            mb="sm"
-          >
-            {t("analytics.collect")}
-          </Text>
-          <Stack gap={4} mx={16}>
-            <Text style={{ color: "#94a3b8" }}>
-              •{" "}
-              <Text component="span" fw={500} style={{ color: "#f1f5f9" }}>
-                {t("analytics.collectItems.pageViews")}
-              </Text>
-            </Text>
-            <Text style={{ color: "#94a3b8" }}>
-              •{" "}
-              <Text component="span" fw={500} style={{ color: "#f1f5f9" }}>
-                {t("analytics.collectItems.referrer")}
-              </Text>
-            </Text>
-            <Text style={{ color: "#94a3b8" }}>
-              •{" "}
-              <Text component="span" fw={500} style={{ color: "#f1f5f9" }}>
-                {t("analytics.collectItems.browser")}
-              </Text>
-            </Text>
-            <Text style={{ color: "#94a3b8" }}>
-              •{" "}
-              <Text component="span" fw={500} style={{ color: "#f1f5f9" }}>
-                {t("analytics.collectItems.country")}
-              </Text>
-            </Text>
-          </Stack>
-          <Text mt="md" style={{ color: "#64748b" }} size="sm">
-            {t("analytics.footer")}
+          <Text style={{ color: "#94a3b8", lineHeight: 1.7 }}>
+            {t("analytics.content")}
           </Text>
         </Paper>
 
@@ -584,11 +539,11 @@ export default async function PrivacyPolicy({ params }: PageProps) {
             <Text style={{ color: "#94a3b8" }}>
               •{" "}
               <Text component="span" fw={500} style={{ color: "#f1f5f9" }}>
-                {t("thirdParties.items.freemius")}
+                {t("thirdParties.items.stripe")}
               </Text>
               <Text component="span" style={{ color: "#64748b" }}>
                 {" "}
-                — {t("thirdParties.items.freemiusDesc")}
+                — {t("thirdParties.items.stripeDesc")}
               </Text>
             </Text>
           </Stack>

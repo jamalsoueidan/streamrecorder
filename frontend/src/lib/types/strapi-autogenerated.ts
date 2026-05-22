@@ -1183,6 +1183,8 @@ export interface AiRequest {
     }[];
     hidden?: boolean;
     totalDuration?: number;
+    viewsCount?: number;
+    downloadsCount?: number;
     /** @format date-time */
     createdAt?: string;
     /** @format date-time */
@@ -1892,6 +1894,8 @@ export interface AiTask {
       }[];
       hidden?: boolean;
       totalDuration?: number;
+      viewsCount?: number;
+      downloadsCount?: number;
       /** @format date-time */
       createdAt?: string;
       /** @format date-time */
@@ -3846,6 +3850,8 @@ export interface Clip {
     }[];
     hidden?: boolean;
     totalDuration?: number;
+    viewsCount?: number;
+    downloadsCount?: number;
     /** @format date-time */
     createdAt?: string;
     /** @format date-time */
@@ -4511,6 +4517,8 @@ export interface ClipShare {
       }[];
       hidden?: boolean;
       totalDuration?: number;
+      viewsCount?: number;
+      downloadsCount?: number;
       /** @format date-time */
       createdAt?: string;
       /** @format date-time */
@@ -6086,6 +6094,8 @@ export interface Meme {
     }[];
     hidden?: boolean;
     totalDuration?: number;
+    viewsCount?: number;
+    downloadsCount?: number;
     /** @format date-time */
     createdAt?: string;
     /** @format date-time */
@@ -6182,6 +6192,8 @@ export interface RecordingRequest {
     sources?: (number | string)[];
     hidden?: boolean;
     totalDuration?: number;
+    viewsCount?: number;
+    downloadsCount?: number;
     locale?: string;
     localizations?: (number | string)[];
   };
@@ -6694,6 +6706,8 @@ export interface Recording {
   };
   hidden?: boolean;
   totalDuration?: number;
+  viewsCount?: number;
+  downloadsCount?: number;
   /** @format date-time */
   createdAt?: string;
   /** @format date-time */
@@ -8111,6 +8125,8 @@ export interface Source {
     }[];
     hidden?: boolean;
     totalDuration?: number;
+    viewsCount?: number;
+    downloadsCount?: number;
     /** @format date-time */
     createdAt?: string;
     /** @format date-time */
@@ -8157,11 +8173,659 @@ export interface SourceResponse {
   meta?: object;
 }
 
+export interface VisitorDownloadRequest {
+  data: {
+    fingerprint?: string;
+    ip?: string;
+    /** @example "string or id" */
+    recording?: number | string;
+    /** @example "string or id" */
+    user?: number | string;
+    locale?: string;
+    localizations?: (number | string)[];
+  };
+}
+
+export interface VisitorDownloadListResponse {
+  data?: VisitorDownload[];
+  meta?: {
+    pagination?: {
+      page?: number;
+      /** @min 25 */
+      pageSize?: number;
+      /** @max 1 */
+      pageCount?: number;
+      total?: number;
+    };
+  };
+}
+
+export interface VisitorDownload {
+  id?: string | number;
+  documentId?: string;
+  fingerprint?: string;
+  ip?: string;
+  recording?: {
+    id?: string | number;
+    documentId?: string;
+    title?: string;
+    description?: string;
+    follower?: {
+      id?: string | number;
+      documentId?: string;
+      /**
+       * @pattern ^\d*$
+       * @example "123456789"
+       */
+      uniqueId?: string;
+      nickname?: string;
+      username?: string;
+      type?: FollowerTypeEnum;
+      gender?: VisitorDownloadGenderEnum;
+      countryCode?: string;
+      languageCode?: string;
+      avatar?: {
+        id?: string | number;
+        documentId?: string;
+        name?: string;
+        alternativeText?: string;
+        caption?: string;
+        focalPoint?: any;
+        width?: number;
+        height?: number;
+        formats?: any;
+        hash?: string;
+        ext?: string;
+        mime?: string;
+        /** @format float */
+        size?: number;
+        url?: string;
+        previewUrl?: string;
+        provider?: string;
+        provider_metadata?: any;
+        related?: {
+          id?: string | number;
+          documentId?: string;
+        }[];
+        folder?: {
+          id?: string | number;
+          documentId?: string;
+          name?: string;
+          pathId?: number;
+          parent?: {
+            id?: string | number;
+            documentId?: string;
+          };
+          children?: {
+            id?: string | number;
+            documentId?: string;
+          }[];
+          files?: {
+            id?: string | number;
+            documentId?: string;
+            name?: string;
+            alternativeText?: string;
+            caption?: string;
+            focalPoint?: any;
+            width?: number;
+            height?: number;
+            formats?: any;
+            hash?: string;
+            ext?: string;
+            mime?: string;
+            /** @format float */
+            size?: number;
+            url?: string;
+            previewUrl?: string;
+            provider?: string;
+            provider_metadata?: any;
+            related?: {
+              id?: string | number;
+              documentId?: string;
+            }[];
+            folder?: {
+              id?: string | number;
+              documentId?: string;
+            };
+            folderPath?: string;
+            /** @format date-time */
+            createdAt?: string;
+            /** @format date-time */
+            updatedAt?: string;
+            /** @format date-time */
+            publishedAt?: string;
+            createdBy?: {
+              id?: string | number;
+              documentId?: string;
+              firstname?: string;
+              lastname?: string;
+              username?: string;
+              /** @format email */
+              email?: string;
+              resetPasswordToken?: string;
+              registrationToken?: string;
+              isActive?: boolean;
+              roles?: {
+                id?: string | number;
+                documentId?: string;
+                name?: string;
+                code?: string;
+                description?: string;
+                users?: {
+                  id?: string | number;
+                  documentId?: string;
+                }[];
+                permissions?: {
+                  id?: string | number;
+                  documentId?: string;
+                  action?: string;
+                  actionParameters?: any;
+                  subject?: string;
+                  properties?: any;
+                  conditions?: any;
+                  role?: {
+                    id?: string | number;
+                    documentId?: string;
+                  };
+                  apiToken?: {
+                    id?: string | number;
+                    documentId?: string;
+                    name?: string;
+                    description?: string;
+                    kind?: VisitorDownloadKindEnum;
+                    type?: ApiTokenTypeEnum;
+                    accessKey?: string;
+                    encryptedKey?: string;
+                    /** @format date-time */
+                    lastUsedAt?: string;
+                    permissions?: {
+                      id?: string | number;
+                      documentId?: string;
+                      action?: string;
+                      token?: {
+                        id?: string | number;
+                        documentId?: string;
+                      };
+                      /** @format date-time */
+                      createdAt?: string;
+                      /** @format date-time */
+                      updatedAt?: string;
+                      /** @format date-time */
+                      publishedAt?: string;
+                      createdBy?: {
+                        id?: string | number;
+                        documentId?: string;
+                      };
+                      updatedBy?: {
+                        id?: string | number;
+                        documentId?: string;
+                      };
+                      locale?: string;
+                      localizations?: {
+                        id?: string | number;
+                        documentId?: string;
+                      }[];
+                    }[];
+                    adminPermissions?: {
+                      id?: string | number;
+                      documentId?: string;
+                    }[];
+                    adminUserOwner?: {
+                      id?: string | number;
+                      documentId?: string;
+                    };
+                    /** @format date-time */
+                    expiresAt?: string;
+                    /**
+                     * @pattern ^\d*$
+                     * @example "123456789"
+                     */
+                    lifespan?: string;
+                    /** @format date-time */
+                    createdAt?: string;
+                    /** @format date-time */
+                    updatedAt?: string;
+                    /** @format date-time */
+                    publishedAt?: string;
+                    createdBy?: {
+                      id?: string | number;
+                      documentId?: string;
+                    };
+                    updatedBy?: {
+                      id?: string | number;
+                      documentId?: string;
+                    };
+                    locale?: string;
+                    localizations?: {
+                      id?: string | number;
+                      documentId?: string;
+                    }[];
+                  };
+                  /** @format date-time */
+                  createdAt?: string;
+                  /** @format date-time */
+                  updatedAt?: string;
+                  /** @format date-time */
+                  publishedAt?: string;
+                  createdBy?: {
+                    id?: string | number;
+                    documentId?: string;
+                  };
+                  updatedBy?: {
+                    id?: string | number;
+                    documentId?: string;
+                  };
+                  locale?: string;
+                  localizations?: {
+                    id?: string | number;
+                    documentId?: string;
+                  }[];
+                }[];
+                /** @format date-time */
+                createdAt?: string;
+                /** @format date-time */
+                updatedAt?: string;
+                /** @format date-time */
+                publishedAt?: string;
+                createdBy?: {
+                  id?: string | number;
+                  documentId?: string;
+                };
+                updatedBy?: {
+                  id?: string | number;
+                  documentId?: string;
+                };
+                locale?: string;
+                localizations?: {
+                  id?: string | number;
+                  documentId?: string;
+                }[];
+              }[];
+              apiTokens?: {
+                id?: string | number;
+                documentId?: string;
+              }[];
+              blocked?: boolean;
+              preferedLanguage?: string;
+              /** @format date-time */
+              createdAt?: string;
+              /** @format date-time */
+              updatedAt?: string;
+              /** @format date-time */
+              publishedAt?: string;
+              createdBy?: {
+                id?: string | number;
+                documentId?: string;
+              };
+              updatedBy?: {
+                id?: string | number;
+                documentId?: string;
+              };
+              locale?: string;
+              localizations?: {
+                id?: string | number;
+                documentId?: string;
+              }[];
+            };
+            updatedBy?: {
+              id?: string | number;
+              documentId?: string;
+            };
+            locale?: string;
+            localizations?: {
+              id?: string | number;
+              documentId?: string;
+            }[];
+          }[];
+          path?: string;
+          /** @format date-time */
+          createdAt?: string;
+          /** @format date-time */
+          updatedAt?: string;
+          /** @format date-time */
+          publishedAt?: string;
+          createdBy?: {
+            id?: string | number;
+            documentId?: string;
+          };
+          updatedBy?: {
+            id?: string | number;
+            documentId?: string;
+          };
+          locale?: string;
+          localizations?: {
+            id?: string | number;
+            documentId?: string;
+          }[];
+        };
+        folderPath?: string;
+        /** @format date-time */
+        createdAt?: string;
+        /** @format date-time */
+        updatedAt?: string;
+        /** @format date-time */
+        publishedAt?: string;
+        createdBy?: {
+          id?: string | number;
+          documentId?: string;
+        };
+        updatedBy?: {
+          id?: string | number;
+          documentId?: string;
+        };
+        locale?: string;
+        localizations?: {
+          id?: string | number;
+          documentId?: string;
+        }[];
+      };
+      /** @format date-time */
+      lastCheckedAt?: string;
+      recordingsCount?: number;
+      /** @format date-time */
+      lastRecordingAt?: string;
+      protected?: boolean;
+      blocked?: boolean;
+      pause?: boolean;
+      description?: string;
+      tagline?: string;
+      faq?: any;
+      category?: string;
+      migration?: number;
+      owner?: {
+        id?: string | number;
+        documentId?: string;
+        username?: string;
+        /** @format email */
+        email?: string;
+        provider?: string;
+        resetPasswordToken?: string;
+        confirmationToken?: string;
+        confirmed?: boolean;
+        blocked?: boolean;
+        role?: {
+          id?: string | number;
+          documentId?: string;
+          name?: string;
+          description?: string;
+          type?: string;
+          permissions?: {
+            id?: string | number;
+            documentId?: string;
+            action?: string;
+            role?: {
+              id?: string | number;
+              documentId?: string;
+            };
+            /** @format date-time */
+            createdAt?: string;
+            /** @format date-time */
+            updatedAt?: string;
+            /** @format date-time */
+            publishedAt?: string;
+            createdBy?: {
+              id?: string | number;
+              documentId?: string;
+            };
+            updatedBy?: {
+              id?: string | number;
+              documentId?: string;
+            };
+            locale?: string;
+            localizations?: {
+              id?: string | number;
+              documentId?: string;
+            }[];
+          }[];
+          users?: {
+            id?: string | number;
+            documentId?: string;
+          }[];
+          /** @format date-time */
+          createdAt?: string;
+          /** @format date-time */
+          updatedAt?: string;
+          /** @format date-time */
+          publishedAt?: string;
+          createdBy?: {
+            id?: string | number;
+            documentId?: string;
+          };
+          updatedBy?: {
+            id?: string | number;
+            documentId?: string;
+          };
+          locale?: string;
+          localizations?: {
+            id?: string | number;
+            documentId?: string;
+          }[];
+        };
+        followers?: {
+          id?: string | number;
+          documentId?: string;
+        }[];
+        favorites?: {
+          id?: string | number;
+          documentId?: string;
+        }[];
+        socialAccounts?: {
+          id?: string | number;
+          documentId?: string;
+          provider?: VisitorDownloadProviderEnum;
+          providerId?: string;
+          accessToken?: string;
+          refreshToken?: string;
+          /** @format date-time */
+          expiresAt?: string;
+          email?: string;
+          user?: {
+            id?: string | number;
+            documentId?: string;
+          };
+          /** @format date-time */
+          createdAt?: string;
+          /** @format date-time */
+          updatedAt?: string;
+          /** @format date-time */
+          publishedAt?: string;
+          createdBy?: {
+            id?: string | number;
+            documentId?: string;
+          };
+          updatedBy?: {
+            id?: string | number;
+            documentId?: string;
+          };
+          locale?: string;
+          localizations?: {
+            id?: string | number;
+            documentId?: string;
+          }[];
+        }[];
+        subscriptionStatus?: VisitorDownloadSubscriptionStatusEnum;
+        billingPeriod?: string;
+        /** @format date-time */
+        subscriptionEndDate?: string;
+        freemius?: string;
+        stripe?: string;
+        mollie?: string;
+        paymentProvider?: VisitorDownloadPaymentProviderEnum;
+        trialClaimed?: boolean;
+        pushSubscription?: any;
+        /** @format date-time */
+        createdAt?: string;
+        /** @format date-time */
+        updatedAt?: string;
+        /** @format date-time */
+        publishedAt?: string;
+        createdBy?: {
+          id?: string | number;
+          documentId?: string;
+        };
+        updatedBy?: {
+          id?: string | number;
+          documentId?: string;
+        };
+        locale?: string;
+        localizations?: {
+          id?: string | number;
+          documentId?: string;
+        }[];
+      };
+      lsr?: boolean;
+      sar?: boolean;
+      profileFilled?: boolean;
+      /** @format date-time */
+      createdAt?: string;
+      /** @format date-time */
+      updatedAt?: string;
+      /** @format date-time */
+      publishedAt?: string;
+      createdBy?: {
+        id?: string | number;
+        documentId?: string;
+      };
+      updatedBy?: {
+        id?: string | number;
+        documentId?: string;
+      };
+      locale?: string;
+      localizations?: {
+        id?: string | number;
+        documentId?: string;
+      }[];
+    };
+    sources?: {
+      id?: string | number;
+      documentId?: string;
+      state?: VisitorDownloadStateEnum;
+      executionId?: number;
+      /** @format date-time */
+      finishedAt?: string;
+      path?: string;
+      /** @format float */
+      duration?: number;
+      thumbnailInterval?: number;
+      thumbnailCols?: number;
+      bucket?: string;
+      videoOriginal?: VideosVideoComponent;
+      videoSmall?: VideosVideoComponent;
+      recording?: {
+        id?: string | number;
+        documentId?: string;
+      };
+      /** @format date-time */
+      createdAt?: string;
+      /** @format date-time */
+      updatedAt?: string;
+      /** @format date-time */
+      publishedAt?: string;
+      createdBy?: {
+        id?: string | number;
+        documentId?: string;
+      };
+      updatedBy?: {
+        id?: string | number;
+        documentId?: string;
+      };
+      locale?: string;
+      localizations?: {
+        id?: string | number;
+        documentId?: string;
+      }[];
+    }[];
+    hidden?: boolean;
+    totalDuration?: number;
+    viewsCount?: number;
+    downloadsCount?: number;
+    /** @format date-time */
+    createdAt?: string;
+    /** @format date-time */
+    updatedAt?: string;
+    /** @format date-time */
+    publishedAt?: string;
+    createdBy?: {
+      id?: string | number;
+      documentId?: string;
+    };
+    updatedBy?: {
+      id?: string | number;
+      documentId?: string;
+    };
+    locale?: string;
+    localizations?: {
+      id?: string | number;
+      documentId?: string;
+    }[];
+  };
+  user?: {
+    id?: string | number;
+    documentId?: string;
+  };
+  /** @format date-time */
+  createdAt?: string;
+  /** @format date-time */
+  updatedAt?: string;
+  /** @format date-time */
+  publishedAt?: string;
+  createdBy?: {
+    id?: string | number;
+    documentId?: string;
+  };
+  updatedBy?: {
+    id?: string | number;
+    documentId?: string;
+  };
+  locale?: string;
+  localizations?: {
+    id?: string | number;
+    documentId?: string;
+    fingerprint?: string;
+    ip?: string;
+    recording?: {
+      id?: string | number;
+      documentId?: string;
+    };
+    user?: {
+      id?: string | number;
+      documentId?: string;
+    };
+    /** @format date-time */
+    createdAt?: string;
+    /** @format date-time */
+    updatedAt?: string;
+    /** @format date-time */
+    publishedAt?: string;
+    createdBy?: {
+      id?: string | number;
+      documentId?: string;
+    };
+    updatedBy?: {
+      id?: string | number;
+      documentId?: string;
+    };
+    locale?: string;
+    localizations?: {
+      id?: string | number;
+      documentId?: string;
+    }[];
+  }[];
+}
+
+export interface VisitorDownloadResponse {
+  data?: VisitorDownload;
+  meta?: object;
+}
+
 export interface VisitorViewRequest {
   data: {
     fingerprint?: string;
+    ip?: string;
     /** @example "string or id" */
     recording?: number | string;
+    /** @example "string or id" */
+    user?: number | string;
     locale?: string;
     localizations?: (number | string)[];
   };
@@ -8185,6 +8849,7 @@ export interface VisitorView {
   id?: string | number;
   documentId?: string;
   fingerprint?: string;
+  ip?: string;
   recording?: {
     id?: string | number;
     documentId?: string;
@@ -8717,6 +9382,8 @@ export interface VisitorView {
     }[];
     hidden?: boolean;
     totalDuration?: number;
+    viewsCount?: number;
+    downloadsCount?: number;
     /** @format date-time */
     createdAt?: string;
     /** @format date-time */
@@ -8737,6 +9404,10 @@ export interface VisitorView {
       documentId?: string;
     }[];
   };
+  user?: {
+    id?: string | number;
+    documentId?: string;
+  };
   /** @format date-time */
   createdAt?: string;
   /** @format date-time */
@@ -8756,7 +9427,12 @@ export interface VisitorView {
     id?: string | number;
     documentId?: string;
     fingerprint?: string;
+    ip?: string;
     recording?: {
+      id?: string | number;
+      documentId?: string;
+    };
+    user?: {
       id?: string | number;
       documentId?: string;
     };
@@ -9451,6 +10127,45 @@ export enum SourcePaymentProviderEnum {
 }
 
 export enum SourceStateEnum1 {
+  Recording = "recording",
+  Uploading = "uploading",
+  Done = "done",
+  Failed = "failed",
+}
+
+export enum VisitorDownloadGenderEnum {
+  Male = "male",
+  Female = "female",
+  Unknown = "unknown",
+}
+
+export enum VisitorDownloadKindEnum {
+  ContentApi = "content-api",
+  Admin = "admin",
+}
+
+export enum VisitorDownloadProviderEnum {
+  Google = "google",
+  Apple = "apple",
+  Facebook = "facebook",
+  Tiktok = "tiktok",
+  Youtube = "youtube",
+}
+
+export enum VisitorDownloadSubscriptionStatusEnum {
+  Active = "active",
+  Cancelled = "cancelled",
+  Trialing = "trialing",
+  Expired = "expired",
+}
+
+export enum VisitorDownloadPaymentProviderEnum {
+  Freemius = "freemius",
+  Stripe = "stripe",
+  Mollie = "mollie",
+}
+
+export enum VisitorDownloadStateEnum {
   Recording = "recording",
   Uploading = "uploading",
   Done = "done",
@@ -10233,6 +10948,52 @@ export interface DeleteSourcesIdParams {
 
 /** @format int64 */
 export type DeleteSourcesIdData = number;
+
+export interface GetVisitorDownloadsParams {
+  /** Sort by attributes ascending (asc) or descending (desc) */
+  sort?: string;
+  /** Return page/pageSize (default: true) */
+  "pagination[withCount]"?: boolean;
+  /** Page number (default: 0) */
+  "pagination[page]"?: number;
+  /** Page size (default: 25) */
+  "pagination[pageSize]"?: number;
+  /** Offset value (default: 0) */
+  "pagination[start]"?: number;
+  /** Number of entities to return (default: 25) */
+  "pagination[limit]"?: number;
+  /** Fields to return (ex: title,author) */
+  fields?: string;
+  /** Relations to return */
+  populate?: string | string[] | object;
+  /** Filters to apply */
+  filters?: Record<string, any>;
+  /** Locale to apply */
+  locale?: string;
+}
+
+export type GetVisitorDownloadsData = VisitorDownloadListResponse;
+
+export type PostVisitorDownloadsData = VisitorDownloadResponse;
+
+export interface GetVisitorDownloadsIdParams {
+  id: string;
+}
+
+export type GetVisitorDownloadsIdData = VisitorDownloadResponse;
+
+export interface PutVisitorDownloadsIdParams {
+  id: string;
+}
+
+export type PutVisitorDownloadsIdData = VisitorDownloadResponse;
+
+export interface DeleteVisitorDownloadsIdParams {
+  id: string;
+}
+
+/** @format int64 */
+export type DeleteVisitorDownloadsIdData = number;
 
 export interface GetVisitorViewsParams {
   /** Sort by attributes ascending (asc) or descending (desc) */
@@ -13065,6 +13826,110 @@ export namespace Source {
     export type RequestBody = never;
     export type RequestHeaders = {};
     export type ResponseBody = DeleteSourcesIdData;
+  }
+}
+
+export namespace VisitorDownload {
+  /**
+   * No description
+   * @tags Visitor-download
+   * @name GetVisitorDownloads
+   * @request GET:/visitor-downloads
+   * @secure
+   */
+  export namespace GetVisitorDownloads {
+    export type RequestParams = {};
+    export type RequestQuery = {
+      /** Sort by attributes ascending (asc) or descending (desc) */
+      sort?: string;
+      /** Return page/pageSize (default: true) */
+      "pagination[withCount]"?: boolean;
+      /** Page number (default: 0) */
+      "pagination[page]"?: number;
+      /** Page size (default: 25) */
+      "pagination[pageSize]"?: number;
+      /** Offset value (default: 0) */
+      "pagination[start]"?: number;
+      /** Number of entities to return (default: 25) */
+      "pagination[limit]"?: number;
+      /** Fields to return (ex: title,author) */
+      fields?: string;
+      /** Relations to return */
+      populate?: string | string[] | object;
+      /** Filters to apply */
+      filters?: Record<string, any>;
+      /** Locale to apply */
+      locale?: string;
+    };
+    export type RequestBody = never;
+    export type RequestHeaders = {};
+    export type ResponseBody = GetVisitorDownloadsData;
+  }
+
+  /**
+   * No description
+   * @tags Visitor-download
+   * @name PostVisitorDownloads
+   * @request POST:/visitor-downloads
+   * @secure
+   */
+  export namespace PostVisitorDownloads {
+    export type RequestParams = {};
+    export type RequestQuery = {};
+    export type RequestBody = VisitorDownloadRequest;
+    export type RequestHeaders = {};
+    export type ResponseBody = PostVisitorDownloadsData;
+  }
+
+  /**
+   * No description
+   * @tags Visitor-download
+   * @name GetVisitorDownloadsId
+   * @request GET:/visitor-downloads/{id}
+   * @secure
+   */
+  export namespace GetVisitorDownloadsId {
+    export type RequestParams = {
+      id: string;
+    };
+    export type RequestQuery = {};
+    export type RequestBody = never;
+    export type RequestHeaders = {};
+    export type ResponseBody = GetVisitorDownloadsIdData;
+  }
+
+  /**
+   * No description
+   * @tags Visitor-download
+   * @name PutVisitorDownloadsId
+   * @request PUT:/visitor-downloads/{id}
+   * @secure
+   */
+  export namespace PutVisitorDownloadsId {
+    export type RequestParams = {
+      id: string;
+    };
+    export type RequestQuery = {};
+    export type RequestBody = VisitorDownloadRequest;
+    export type RequestHeaders = {};
+    export type ResponseBody = PutVisitorDownloadsIdData;
+  }
+
+  /**
+   * No description
+   * @tags Visitor-download
+   * @name DeleteVisitorDownloadsId
+   * @request DELETE:/visitor-downloads/{id}
+   * @secure
+   */
+  export namespace DeleteVisitorDownloadsId {
+    export type RequestParams = {
+      id: string;
+    };
+    export type RequestQuery = {};
+    export type RequestBody = never;
+    export type RequestHeaders = {};
+    export type ResponseBody = DeleteVisitorDownloadsIdData;
   }
 }
 
@@ -16073,6 +16938,113 @@ export class Api<
     ) =>
       this.request<DeleteSourcesIdData, Error>({
         path: `/sources/${id}`,
+        method: "DELETE",
+        secure: true,
+        format: "json",
+        ...params,
+      }),
+  };
+  visitorDownload = {
+    /**
+     * No description
+     *
+     * @tags Visitor-download
+     * @name GetVisitorDownloads
+     * @request GET:/visitor-downloads
+     * @secure
+     */
+    getVisitorDownloads: (
+      query: GetVisitorDownloadsParams,
+      params: RequestParams = {},
+    ) =>
+      this.request<GetVisitorDownloadsData, Error>({
+        path: `/visitor-downloads`,
+        method: "GET",
+        query: query,
+        secure: true,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Visitor-download
+     * @name PostVisitorDownloads
+     * @request POST:/visitor-downloads
+     * @secure
+     */
+    postVisitorDownloads: (
+      data: VisitorDownloadRequest,
+      params: RequestParams = {},
+    ) =>
+      this.request<PostVisitorDownloadsData, Error>({
+        path: `/visitor-downloads`,
+        method: "POST",
+        body: data,
+        secure: true,
+        type: ContentType.Json,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Visitor-download
+     * @name GetVisitorDownloadsId
+     * @request GET:/visitor-downloads/{id}
+     * @secure
+     */
+    getVisitorDownloadsId: (
+      { id }: GetVisitorDownloadsIdParams,
+      params: RequestParams = {},
+    ) =>
+      this.request<GetVisitorDownloadsIdData, Error>({
+        path: `/visitor-downloads/${id}`,
+        method: "GET",
+        secure: true,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Visitor-download
+     * @name PutVisitorDownloadsId
+     * @request PUT:/visitor-downloads/{id}
+     * @secure
+     */
+    putVisitorDownloadsId: (
+      { id }: PutVisitorDownloadsIdParams,
+      data: VisitorDownloadRequest,
+      params: RequestParams = {},
+    ) =>
+      this.request<PutVisitorDownloadsIdData, Error>({
+        path: `/visitor-downloads/${id}`,
+        method: "PUT",
+        body: data,
+        secure: true,
+        type: ContentType.Json,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Visitor-download
+     * @name DeleteVisitorDownloadsId
+     * @request DELETE:/visitor-downloads/{id}
+     * @secure
+     */
+    deleteVisitorDownloadsId: (
+      { id }: DeleteVisitorDownloadsIdParams,
+      params: RequestParams = {},
+    ) =>
+      this.request<DeleteVisitorDownloadsIdData, Error>({
+        path: `/visitor-downloads/${id}`,
         method: "DELETE",
         secure: true,
         format: "json",

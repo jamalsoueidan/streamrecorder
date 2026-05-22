@@ -20,7 +20,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2026-05-22T10:56:50.473Z"
+    "x-generation-date": "2026-05-22T13:25:39.802Z"
   },
   "servers": [
     {
@@ -46206,7 +46206,21 @@
               "fingerprint": {
                 "type": "string"
               },
+              "ip": {
+                "type": "string"
+              },
               "recording": {
+                "oneOf": [
+                  {
+                    "type": "integer"
+                  },
+                  {
+                    "type": "string"
+                  }
+                ],
+                "example": "string or id"
+              },
+              "user": {
                 "oneOf": [
                   {
                     "type": "integer"
@@ -46290,6 +46304,9 @@
             "type": "string"
           },
           "fingerprint": {
+            "type": "string"
+          },
+          "ip": {
             "type": "string"
           },
           "recording": {
@@ -48380,6 +48397,24 @@
               }
             }
           },
+          "user": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "oneOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "number"
+                  }
+                ]
+              },
+              "documentId": {
+                "type": "string"
+              }
+            }
+          },
           "createdAt": {
             "type": "string",
             "format": "date-time"
@@ -48452,7 +48487,28 @@
                 "fingerprint": {
                   "type": "string"
                 },
+                "ip": {
+                  "type": "string"
+                },
                 "recording": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "oneOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "number"
+                        }
+                      ]
+                    },
+                    "documentId": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "user": {
                   "type": "object",
                   "properties": {
                     "id": {

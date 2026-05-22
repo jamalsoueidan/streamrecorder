@@ -90,5 +90,24 @@
       "title": "Dihapus",
       "message": "Riwayat tontonan Anda telah dihapus."
     }
+  },
+  "trackingData": {
+    "title": "Privasi & data pelacakan",
+    "description": "Kami mencatat tampilan dan unduhan kamu beserta alamat IP untuk mendeteksi berbagi akun dan sengketa kartu kredit. Kamu dapat menghapus semua data pelacakan di sini kapan saja. Tampilan dan unduhan baru akan mulai dicatat kembali setelahnya.",
+    "clearButton": "Hapus data pelacakan saya",
+    "clearConfirm": {
+      "title": "Hapus data pelacakan",
+      "message": "Ini akan menghapus semua tampilan dan unduhan tersimpan secara permanen, termasuk alamat IP. Lanjutkan?",
+      "confirm": "Hapus",
+      "cancel": "Batal"
+    },
+    "cleared": {
+      "title": "Dihapus",
+      "message": "Menghapus {views} tampilan dan {downloads} unduhan."
+    },
+    "error": {
+      "title": "Gagal",
+      "message": "Tidak dapat menghapus data pelacakan."
+    }
   }
 }

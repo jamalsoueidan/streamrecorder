@@ -90,5 +90,24 @@
       "title": "Cleared",
       "message": "Your watched history has been cleared."
     }
+  },
+  "trackingData": {
+    "title": "Privacy & tracking data",
+    "description": "We log your video views and downloads with your IP address to detect account sharing and credit-card disputes. You can clear all of your tracking data here at any time. New views and downloads will start being logged again after.",
+    "clearButton": "Clear my tracking data",
+    "clearConfirm": {
+      "title": "Clear tracking data",
+      "message": "This permanently deletes all of your stored views and downloads, including IP addresses. Continue?",
+      "confirm": "Clear",
+      "cancel": "Cancel"
+    },
+    "cleared": {
+      "title": "Cleared",
+      "message": "Removed {views} views and {downloads} downloads."
+    },
+    "error": {
+      "title": "Failed",
+      "message": "Could not clear tracking data."
+    }
   }
 }

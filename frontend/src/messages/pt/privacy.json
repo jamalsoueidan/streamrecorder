@@ -27,9 +27,11 @@
       "lastLogin": "Data do último login",
       "lastLoginDesc": "para gerenciamento básico da conta",
       "streamers": "Streamers que você segue",
-      "streamersDesc": "para mostrar conteúdo dos streamers que você tem interesse"
+      "streamersDesc": "para mostrar conteúdo dos streamers que você tem interesse",
+      "ipAddress": "Endereço IP e impressão digital de dispositivo",
+      "ipAddressDesc": "registrados a cada visualização e download para prevenção de fraude; podem ser apagados nas Configurações"
     },
-    "footer": "É só isso. Nada mais."
+    "footer": "Isso é tudo."
   },
   "legalBasis": {
     "title": "Base Legal para o Tratamento",
@@ -40,36 +42,23 @@
       "consent": "Consentimento",
       "consentDesc": "Você deu consentimento para finalidades específicas (por exemplo, e-mails de marketing)",
       "legitimateInterest": "Interesse Legítimo",
-      "legitimateInterestDesc": "Para melhorar nossos serviços e prevenir fraudes"
+      "legitimateInterestDesc": "Melhorar nossos serviços, prevenir fraudes, detectar compartilhamento de conta e nos defender contra disputas de pagamento"
     }
   },
   "payment": {
     "title": "Processamento de Pagamentos",
-    "content": "Para assinaturas pagas, usamos o Freemius como nosso processador de pagamentos e comerciante registrado. O Freemius coleta e processa suas informações de pagamento diretamente. Não armazenamos os detalhes do seu cartão de crédito em nossos servidores.",
-    "stripePolicy": "A política de privacidade do Freemius pode ser encontrada em: freemius.com/privacy"
+    "content": "Para assinaturas pagas, usamos o Stripe como nosso processador de pagamentos. O Stripe coleta e processa suas informações de pagamento diretamente. Não armazenamos os dados do seu cartão de crédito em nossos servidores.",
+    "stripePolicy": "A política de privacidade do Stripe pode ser consultada em: stripe.com/privacy"
   },
   "analytics": {
-    "title": "Análises",
-    "intro": "Usamos o Umami, uma ferramenta de análise focada em privacidade, para entender como nosso site é utilizado. Isso nos ajuda a melhorar a experiência.",
-    "notCollect": "O que o Umami NÃO coleta:",
-    "notCollectItems": {
-      "personal": "Nenhuma informação pessoal",
-      "tracking": "Nenhum rastreamento entre sites"
-    },
-    "collect": "O que coletamos:",
-    "collectItems": {
-      "pageViews": "Visualizações de páginas",
-      "referrer": "Referenciador (de onde você veio)",
-      "browser": "Tipo de navegador e dispositivo",
-      "country": "País (não localização precisa)"
-    },
-    "footer": "Todos os dados são anonimizados e armazenados em nossos próprios servidores na Europa."
+    "title": "Análise e rastreamento",
+    "content": "Não utilizamos nenhuma ferramenta de análise, publicidade ou rastreamento comportamental de terceiros. Não há rastreadores, cookies publicitários, beacons de impressão digital nem replay de sessão. Os únicos dados que registramos sobre sua atividade estão descritos na seção Registro de Visualizações e Downloads abaixo — e você pode excluí-los a qualquer momento."
   },
   "accessControl": {
-    "title": "Controle de Acesso e Rastreamento de Uso",
-    "content1": "Para impor limites de visualização, rastreamos as primeiras 5 gravações visualizadas por visitantes públicos (não logados) e usuários básicos (logados com conta gratuita). Após atingir esse limite, o acesso é restrito e nenhum rastreamento adicional ocorre.",
-    "content2": "Para visitantes públicos, usamos uma impressão digital anônima do dispositivo armazenada em um cookie. Para usuários básicos que visualizam conteúdo de criadores que não seguem, usamos o ID da sua conta.",
-    "content3": "Assinantes premium nunca são rastreados. Usuários básicos que visualizam conteúdo de criadores que seguem também não são rastreados. Esses dados são usados exclusivamente para operar nosso serviço freemium e não são compartilhados com terceiros nem usados para fins publicitários."
+    "title": "Registro de Visualizações e Downloads",
+    "content1": "Sempre que você assiste a uma gravação ou baixa um arquivo de vídeo, registramos o evento na sua conta. Cada registro inclui seu endereço IP, ID da conta (se estiver logado), uma impressão digital de dispositivo anônima e a gravação acessada. Não registramos posição de reprodução, tempo de exibição ou padrões de comportamento — apenas que um acesso ocorreu.",
+    "content2": "Registramos toda visualização e download autenticados, independentemente do nível de assinatura — basic, premium, champion, admin. Para visitantes anônimos, usamos um cookie de impressão digital de dispositivo em vez do ID da conta. Esses dados existem para: (1) aplicar o limite de 5 visualizações a usuários gratuitos e anônimos, (2) detectar disputas de cartão de crédito comprovando o uso autorizado da conta, (3) detectar compartilhamento de conta identificando vários IPs distintos acessando a mesma conta.",
+    "content3": "Esses dados nunca são compartilhados com terceiros nem usados para publicidade. Você pode excluir, a qualquer momento, todos os registros de visualizações e downloads vinculados à sua conta em Configurações → Privacidade e dados de rastreamento. Após a exclusão, novas visualizações e downloads voltarão a ser registrados."
   },
   "dataRetention": {
     "title": "Retenção de Dados",
@@ -93,8 +82,8 @@
     "title": "Terceiros",
     "intro": "Não vendemos seus dados a ninguém. Compartilhamos dados apenas com:",
     "items": {
-      "freemius": "Freemius",
-      "freemiusDesc": "Para processamento de pagamentos e gestão de assinaturas (se você assinar)"
+      "stripe": "Stripe",
+      "stripeDesc": "Para processamento de pagamentos e gestão de assinaturas (se você assinar)"
     },
     "footer": "Não usamos redes de publicidade de terceiros nem vendemos suas informações pessoais."
   },
@@ -130,7 +119,7 @@
       "withdraw": "Direito de Retirar o Consentimento",
       "withdrawDesc": "Retirar o consentimento a qualquer momento"
     },
-    "footer": "Para exercer qualquer um desses direitos, entre em contato conosco em contact@livestreamrecorder.com"
+    "footer": "Para exercer qualquer um desses direitos, entre em contato pelo contact@livestreamrecorder.com. Para os registros de visualizações e downloads especificamente, você também pode limpá-los em Configurações → Privacidade e dados de rastreamento."
   },
   "children": {
     "title": "Privacidade de Crianças",

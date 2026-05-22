@@ -16,12 +16,16 @@ import { Suspense } from "react";
 import {
   fetchFavoriteRecordings,
   fetchLatestFollowers,
+  fetchMostDownloadedRecordings,
+  fetchMostViewedRecordings,
   fetchRecordingsByPlatform,
 } from "./actions/fetch-recordings";
 import { DiscoverSection } from "./components/discover-section";
 import { FavoritesSection } from "./components/favorites-section";
 import { GreetingSection } from "./components/greeting-section";
 import { LatestFollowersSection } from "./components/latest-followers-section";
+import { MostDownloadedSection } from "./components/most-downloaded-section";
+import { MostViewedSection } from "./components/most-viewed-section";
 import { MyFeedSection } from "./components/my-feed-section";
 import { PlatformsSection } from "./components/platforms-section";
 
@@ -50,6 +54,8 @@ export default async function Page() {
   const userPromise = getUser();
   const followersPromise = fetchLatestFollowers();
   const favoritesPromise = fetchFavoriteRecordings();
+  const mostViewedPromise = fetchMostViewedRecordings();
+  const mostDownloadedPromise = fetchMostDownloadedRecordings();
 
   const myFeedPromise = Promise.all(
     streamingPlatforms.map(async (platform) => {
@@ -110,6 +116,16 @@ export default async function Page() {
 
         <Suspense fallback={<Skeleton h={200} radius="md" m="md" />}>
           <FavoritesSection favoritesPromise={favoritesPromise} />
+        </Suspense>
+
+        <Suspense fallback={<Skeleton h={200} radius="md" m="md" />}>
+          <MostViewedSection mostViewedPromise={mostViewedPromise} />
+        </Suspense>
+
+        <Suspense fallback={<Skeleton h={200} radius="md" m="md" />}>
+          <MostDownloadedSection
+            mostDownloadedPromise={mostDownloadedPromise}
+          />
         </Suspense>
 
         <Suspense fallback={<Skeleton h={360} radius="md" m="md" />}>

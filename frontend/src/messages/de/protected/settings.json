@@ -90,5 +90,24 @@
       "title": "Geleert",
       "message": "Dein Verlauf wurde geleert."
     }
+  },
+  "trackingData": {
+    "title": "Datenschutz & Tracking-Daten",
+    "description": "Wir protokollieren deine Aufrufe und Downloads zusammen mit deiner IP-Adresse, um Account-Sharing und Kreditkartenstreitigkeiten zu erkennen. Du kannst deine Tracking-Daten hier jederzeit löschen. Neue Aufrufe und Downloads werden danach wieder erfasst.",
+    "clearButton": "Tracking-Daten löschen",
+    "clearConfirm": {
+      "title": "Tracking-Daten löschen",
+      "message": "Dadurch werden alle gespeicherten Aufrufe und Downloads inklusive IP-Adressen dauerhaft gelöscht. Fortfahren?",
+      "confirm": "Löschen",
+      "cancel": "Abbrechen"
+    },
+    "cleared": {
+      "title": "Gelöscht",
+      "message": "{views} Aufrufe und {downloads} Downloads entfernt."
+    },
+    "error": {
+      "title": "Fehlgeschlagen",
+      "message": "Tracking-Daten konnten nicht gelöscht werden."
+    }
   }
 }

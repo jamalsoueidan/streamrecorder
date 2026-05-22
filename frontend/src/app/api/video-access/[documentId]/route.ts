@@ -4,7 +4,7 @@ import publicApi from "@/lib/public-api";
 import { getToken } from "@/lib/token";
 import { signViewToken } from "@/lib/view-token";
 import { unstable_cache } from "next/cache";
-import { cookies } from "next/headers";
+import { cookies, headers } from "next/headers";
 import { NextRequest, NextResponse } from "next/server";
 
 const VIEW_SESSION_COOKIE = "view_session";
@@ -30,6 +30,7 @@ type AccessResult =
 async function resolveAccess(
   recordingDocumentId: string,
   followerDocumentId: string | null,
+  ip: string | null,
 ): Promise<AccessResult> {
   const token = await getToken();
   const isLoggedIn = !!token;
@@ -46,13 +47,30 @@ async function resolveAccess(
     const role = user?.data?.role;
     const roleType = (role as any)?.type;
     const userId = (user?.data as any)?.documentId;
+    const userNumericId = (user?.data as any)?.id;
+    const userFingerprint = `user:${userId ?? "anon"}`;
+
+    const logView = () => {
+      if (!userId) return;
+      publicApi.visitorView
+        .postVisitorViews({
+          data: {
+            fingerprint: userFingerprint,
+            ip,
+            recording: recordingDocumentId,
+            user: userNumericId,
+          } as never,
+        })
+        .catch((err) => console.error("[video-access] logView failed:", err));
+    };
 
     if (
       roleType === "admin" ||
       roleType === "champion" ||
       roleType === "premium"
     ) {
-      return { allowed: true, subject: `user:${userId ?? "anon"}` };
+      logView();
+      return { allowed: true, subject: userFingerprint };
     }
 
     if (followerDocumentId) {
@@ -61,7 +79,8 @@ async function resolveAccess(
         (f: any) => f.documentId === followerDocumentId,
       );
       if (isFollowing) {
-        return { allowed: true, subject: `user:${userId ?? "anon"}` };
+        logView();
+        return { allowed: true, subject: userFingerprint };
       }
     }
 
@@ -69,7 +88,6 @@ async function resolveAccess(
       return { allowed: false, reason: "upgrade" };
     }
 
-    const userFingerprint = `user:${userId}`;
     const { data: viewsData } = await publicApi.visitorView.getVisitorViews({
       filters: { fingerprint: { $eq: userFingerprint } },
       populate: "recording",
@@ -92,8 +110,10 @@ async function resolveAccess(
     await publicApi.visitorView.postVisitorViews({
       data: {
         fingerprint: userFingerprint,
+        ip,
         recording: recordingDocumentId,
-      },
+        user: userNumericId,
+      } as never,
     });
 
     return { allowed: true, subject: userFingerprint };
@@ -128,7 +148,7 @@ async function resolveAccess(
   }
 
   await publicApi.visitorView.postVisitorViews({
-    data: { fingerprint, recording: recordingDocumentId },
+    data: { fingerprint, ip, recording: recordingDocumentId } as never,
   });
 
   return { allowed: true, subject: `fp:${fingerprint}` };
@@ -145,7 +165,13 @@ export async function POST(
     return NextResponse.json({ allowed: false, reason: "not-found" }, { status: 404 });
   }
 
-  const result = await resolveAccess(documentId, followerDocumentId);
+  const h = await headers();
+  const ip =
+    h.get("x-forwarded-for")?.split(",")[0]?.trim() ||
+    h.get("x-real-ip") ||
+    null;
+
+  const result = await resolveAccess(documentId, followerDocumentId, ip);
 
   if (!result.allowed) {
     return NextResponse.json(

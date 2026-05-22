@@ -1,5 +1,8 @@
 "use server";
 
+import publicApi from "@/lib/public-api";
+import { headers } from "next/headers";
+
 export async function downloadRecording(
   videoDocumentId: string,
   userId: number,
@@ -18,4 +21,23 @@ export async function downloadRecording(
       platform: process.env.NEXT_PUBLIC_PLATFORM!,
     }),
   });
+
+  try {
+    const h = await headers();
+    const ip =
+      h.get("x-forwarded-for")?.split(",")[0]?.trim() ||
+      h.get("x-real-ip") ||
+      null;
+
+    await publicApi.visitorDownload.postVisitorDownloads({
+      data: {
+        fingerprint: `user:${userId}`,
+        ip,
+        recording: videoDocumentId,
+        user: userId,
+      } as never,
+    });
+  } catch (err) {
+    console.error("[downloadRecording] visitor-download create failed:", err);
+  }
 }
