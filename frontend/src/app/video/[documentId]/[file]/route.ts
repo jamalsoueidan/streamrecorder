@@ -64,7 +64,7 @@ export async function GET(
           );
         const userNumericId = (userResp?.data as any)?.id;
         const userDocumentId = (userResp?.data as any)?.documentId;
-        if (userNumericId) {
+        if (userNumericId && userDocumentId) {
           const ip =
             request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
             request.headers.get("x-real-ip") ||
@@ -73,10 +73,10 @@ export async function GET(
           await publicApi.visitorDownload.postVisitorDownloads({
             data: {
               fingerprint: `user:${userDocumentId}`,
-              ip,
               recording: documentId,
               user: userNumericId,
-            } as never,
+              ...(ip ? { ip } : {}),
+            },
           });
         }
       }

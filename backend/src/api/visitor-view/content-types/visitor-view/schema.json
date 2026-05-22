@@ -15,7 +15,8 @@
       "type": "string"
     },
     "ip": {
-      "type": "string"
+      "type": "string",
+      "private": true
     },
     "recording": {
       "type": "relation",

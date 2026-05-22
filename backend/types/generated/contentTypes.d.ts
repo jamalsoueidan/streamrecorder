@@ -1482,7 +1482,7 @@ export interface ApiVisitorViewVisitorView extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     fingerprint: Schema.Attribute.String;
-    ip: Schema.Attribute.String;
+    ip: Schema.Attribute.String & Schema.Attribute.Private;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',

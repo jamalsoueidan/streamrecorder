@@ -51,15 +51,15 @@ async function resolveAccess(
     const userFingerprint = `user:${userId ?? "anon"}`;
 
     const logView = async () => {
-      if (!userId) return;
+      if (!userId || !userNumericId) return;
       try {
         await publicApi.visitorView.postVisitorViews({
           data: {
             fingerprint: userFingerprint,
-            ip,
             recording: recordingDocumentId,
             user: userNumericId,
-          } as never,
+            ...(ip ? { ip } : {}),
+          },
         });
       } catch (err) {
         console.error("[video-access] logView failed:", err);
@@ -112,10 +112,10 @@ async function resolveAccess(
     await publicApi.visitorView.postVisitorViews({
       data: {
         fingerprint: userFingerprint,
-        ip,
         recording: recordingDocumentId,
-        user: userNumericId,
-      } as never,
+        ...(userNumericId ? { user: userNumericId } : {}),
+        ...(ip ? { ip } : {}),
+      },
     });
 
     return { allowed: true, subject: userFingerprint };
@@ -150,7 +150,11 @@ async function resolveAccess(
   }
 
   await publicApi.visitorView.postVisitorViews({
-    data: { fingerprint, ip, recording: recordingDocumentId } as never,
+    data: {
+      fingerprint,
+      recording: recordingDocumentId,
+      ...(ip ? { ip } : {}),
+    },
   });
 
   return { allowed: true, subject: `fp:${fingerprint}` };
