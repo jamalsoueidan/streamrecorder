@@ -29,7 +29,9 @@
     "latestRecordingDesc": "Transmitiu recentemente",
     "latestRecordingAsc": "Transmissão mais antiga",
     "updatedAtDesc": "Mais recentes",
-    "updatedAtAsc": "Mais antigos"
+    "updatedAtAsc": "Mais antigos",
+    "viewsCountDesc": "Mais assistidos",
+    "downloadsCountDesc": "Mais baixados"
   },
   "gender": {
     "label": "Gênero",

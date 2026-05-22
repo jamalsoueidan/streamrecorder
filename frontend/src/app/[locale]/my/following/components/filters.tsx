@@ -24,6 +24,8 @@ import {
   IconArrowUp,
   IconCalendar,
   IconClock,
+  IconDownload,
+  IconEye,
   IconFilter,
   IconGenderFemale,
   IconGenderMale,
@@ -44,11 +46,15 @@ import { followingParsers, FollowingSortOptions } from "../lib/search-params";
 const sortIcons: Record<string, React.ReactNode> = {
   [FollowingSortOptions.updatedAtDesc]: <IconArrowDown size={24} />,
   [FollowingSortOptions.updatedAtAsc]: <IconArrowUp size={24} />,
+  [FollowingSortOptions.viewsCountDesc]: <IconEye size={24} />,
+  [FollowingSortOptions.downloadsCountDesc]: <IconDownload size={24} />,
 };
 
 const sortLabelKeys: Record<string, string> = {
   [FollowingSortOptions.updatedAtDesc]: "sort.updatedAtDesc",
   [FollowingSortOptions.updatedAtAsc]: "sort.updatedAtAsc",
+  [FollowingSortOptions.viewsCountDesc]: "sort.viewsCountDesc",
+  [FollowingSortOptions.downloadsCountDesc]: "sort.downloadsCountDesc",
 };
 
 const genderIcons: Record<string, React.ReactNode> = {

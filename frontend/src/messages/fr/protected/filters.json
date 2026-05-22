@@ -29,7 +29,9 @@
     "latestRecordingDesc": "Récemment streamé",
     "latestRecordingAsc": "Plus ancien stream",
     "updatedAtDesc": "Plus récents",
-    "updatedAtAsc": "Plus anciens"
+    "updatedAtAsc": "Plus anciens",
+    "viewsCountDesc": "Les plus vus",
+    "downloadsCountDesc": "Les plus téléchargés"
   },
   "gender": {
     "label": "Genre",
