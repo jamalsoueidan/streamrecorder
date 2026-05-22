@@ -1263,6 +1263,13 @@ export interface ApiRecordingRecording extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
+    downloadsCount: Schema.Attribute.Integer &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<0>;
     follower: Schema.Attribute.Relation<'manyToOne', 'api::follower.follower'>;
     hidden: Schema.Attribute.Boolean &
       Schema.Attribute.SetPluginOptions<{
@@ -1294,6 +1301,13 @@ export interface ApiRecordingRecording extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    viewsCount: Schema.Attribute.Integer &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<0>;
   };
 }
 
@@ -1412,6 +1426,44 @@ export interface ApiSourceSource extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     videoOriginal: Schema.Attribute.Component<'videos.video', false>;
     videoSmall: Schema.Attribute.Component<'videos.video', false>;
+  };
+}
+
+export interface ApiVisitorDownloadVisitorDownload
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'visitor_downloads';
+  info: {
+    displayName: 'VisitorDownload';
+    pluralName: 'visitor-downloads';
+    singularName: 'visitor-download';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    fingerprint: Schema.Attribute.String;
+    ip: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::visitor-download.visitor-download'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    recording: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::recording.recording'
+    >;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    user: Schema.Attribute.Relation<
+      'manyToOne',
+      'plugin::users-permissions.user'
+    >;
   };
 }
 
@@ -1998,6 +2050,7 @@ declare module '@strapi/strapi' {
       'api::report.report': ApiReportReport;
       'api::social-account.social-account': ApiSocialAccountSocialAccount;
       'api::source.source': ApiSourceSource;
+      'api::visitor-download.visitor-download': ApiVisitorDownloadVisitorDownload;
       'api::visitor-view.visitor-view': ApiVisitorViewVisitorView;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
