@@ -50,18 +50,20 @@ async function resolveAccess(
     const userNumericId = (user?.data as any)?.id;
     const userFingerprint = `user:${userId ?? "anon"}`;
 
-    const logView = () => {
+    const logView = async () => {
       if (!userId) return;
-      publicApi.visitorView
-        .postVisitorViews({
+      try {
+        await publicApi.visitorView.postVisitorViews({
           data: {
             fingerprint: userFingerprint,
             ip,
             recording: recordingDocumentId,
             user: userNumericId,
           } as never,
-        })
-        .catch((err) => console.error("[video-access] logView failed:", err));
+        });
+      } catch (err) {
+        console.error("[video-access] logView failed:", err);
+      }
     };
 
     if (
@@ -69,7 +71,7 @@ async function resolveAccess(
       roleType === "champion" ||
       roleType === "premium"
     ) {
-      logView();
+      await logView();
       return { allowed: true, subject: userFingerprint };
     }
 
@@ -79,7 +81,7 @@ async function resolveAccess(
         (f: any) => f.documentId === followerDocumentId,
       );
       if (isFollowing) {
-        logView();
+        await logView();
         return { allowed: true, subject: userFingerprint };
       }
     }

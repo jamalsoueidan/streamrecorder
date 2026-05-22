@@ -55,35 +55,34 @@ export async function GET(
     const datePart = parts[2] || "";
     const filename = `${username}_${datePart}.mp4`;
 
-    (async () => {
-      try {
-        const token = await getToken();
-        if (!token) return;
+    try {
+      const token = await getToken();
+      if (token) {
         const userResp =
           await api.usersPermissionsUsersRoles.getUsersPermissionsUsersRoles(
             {},
           );
         const userNumericId = (userResp?.data as any)?.id;
         const userDocumentId = (userResp?.data as any)?.documentId;
-        if (!userNumericId) return;
+        if (userNumericId) {
+          const ip =
+            request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
+            request.headers.get("x-real-ip") ||
+            null;
 
-        const ip =
-          request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
-          request.headers.get("x-real-ip") ||
-          null;
-
-        await publicApi.visitorDownload.postVisitorDownloads({
-          data: {
-            fingerprint: `user:${userDocumentId}`,
-            ip,
-            recording: documentId,
-            user: userNumericId,
-          } as never,
-        });
-      } catch (err) {
-        console.error("[video/file route] visitor-download failed:", err);
+          await publicApi.visitorDownload.postVisitorDownloads({
+            data: {
+              fingerprint: `user:${userDocumentId}`,
+              ip,
+              recording: documentId,
+              user: userNumericId,
+            } as never,
+          });
+        }
       }
-    })();
+    } catch (err) {
+      console.error("[video/file route] visitor-download failed:", err);
+    }
 
     const command = new GetObjectCommand({
       Bucket: bucket,
