@@ -33,7 +33,7 @@ export function TrackingDataCard() {
         } else {
           notifications.show({
             title: t("error.title"),
-            message: result.error ?? t("error.message"),
+            message: t("error.message"),
             color: "red",
           });
         }

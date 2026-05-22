@@ -11,25 +11,20 @@ export default factories.createCoreController(
       const userId = ctx.state.user?.id;
       if (!userId) return ctx.unauthorized();
 
-      const viewResult = await strapi.db.connection.raw(
-        `DELETE FROM visitor_views WHERE id IN (
-          SELECT visitor_view_id FROM visitor_views_user_lnk WHERE user_id = ?
-        )`,
-        [userId],
-      );
+      const result = await strapi.db.transaction(async () => {
+        const views = await strapi.db
+          .query("api::visitor-view.visitor-view")
+          .deleteMany({ where: { user: userId } });
+        const downloads = await strapi.db
+          .query("api::visitor-download.visitor-download")
+          .deleteMany({ where: { user: userId } });
+        return {
+          deletedViews: views?.count ?? 0,
+          deletedDownloads: downloads?.count ?? 0,
+        };
+      });
 
-      const downloadResult = await strapi.db.connection.raw(
-        `DELETE FROM visitor_downloads WHERE id IN (
-          SELECT visitor_download_id FROM visitor_downloads_user_lnk WHERE user_id = ?
-        )`,
-        [userId],
-      );
-
-      return {
-        ok: true,
-        deletedViews: viewResult?.rowCount ?? 0,
-        deletedDownloads: downloadResult?.rowCount ?? 0,
-      };
+      return { ok: true, ...result };
     },
   }),
 );

@@ -11,6 +11,7 @@ export async function downloadRecording(
   const user =
     await api.usersPermissionsUsersRoles.getUsersPermissionsUsersRoles({});
   const userId = (user?.data as any)?.id;
+  const userDocumentId = (user?.data as any)?.documentId;
   if (!userId) throw new Error("not authenticated");
 
   await fetch(process.env.N8N_URL + "/webhook/download", {
@@ -36,7 +37,7 @@ export async function downloadRecording(
 
     await publicApi.visitorDownload.postVisitorDownloads({
       data: {
-        fingerprint: `user:${userId}`,
+        fingerprint: `user:${userDocumentId}`,
         ip,
         recording: videoDocumentId,
         user: userId,

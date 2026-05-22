@@ -1,23 +1,24 @@
 export default {
   async afterCreate(event: any) {
     const rec = event?.params?.data?.recording;
-    const recordingId =
-      typeof rec === "number"
-        ? rec
-        : rec?.set?.[0]?.id ?? rec?.connect?.[0]?.id;
 
-    console.log("[visitor-view.afterCreate] recordingId:", recordingId);
+    let recordingId: number | undefined;
+    if (typeof rec === "number") {
+      recordingId = rec;
+    } else if (typeof rec === "string") {
+      const found = await strapi.db
+        .query("api::recording.recording")
+        .findOne({ where: { documentId: rec }, select: ["id"] });
+      recordingId = found?.id;
+    } else {
+      recordingId = rec?.set?.[0]?.id ?? rec?.connect?.[0]?.id;
+    }
 
     if (!recordingId) return;
 
-    const result = await strapi.db.connection.raw(
+    await strapi.db.connection.raw(
       "UPDATE recordings SET views_count = COALESCE(views_count, 0) + 1 WHERE id = ?",
       [recordingId],
-    );
-
-    console.log(
-      "[visitor-view.afterCreate] updated rows:",
-      result?.rowCount ?? "unknown",
     );
   },
 };
