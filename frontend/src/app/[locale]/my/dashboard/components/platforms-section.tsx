@@ -29,7 +29,7 @@ const PLATFORM_FLAGS: Record<string, string[]> = {
 
 export function PlatformsSection() {
   return (
-    <Marquee py="lg" gap="md" speed={40} pauseOnHover>
+    <Marquee py="lg" gap="md" duration={30000} pauseOnHover>
       {[...streamingPlatforms].reverse().map((platform) => {
           const isSpecial = SPECIAL_PLATFORMS.has(platform.name);
           const isNew = NEW_PLATFORMS.has(platform.name);
