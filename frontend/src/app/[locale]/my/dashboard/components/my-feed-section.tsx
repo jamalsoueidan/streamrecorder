@@ -40,6 +40,7 @@ export async function MyFeedSection({ myFeedPromise }: MyFeedSectionProps) {
     <>
       <Divider />
       <Box
+        id="dashboard-my-feed"
         style={{
           background: "linear-gradient(150deg, #BDFF88, #5ABB91)",
         }}

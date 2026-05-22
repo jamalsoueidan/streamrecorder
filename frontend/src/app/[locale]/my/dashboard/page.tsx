@@ -20,6 +20,7 @@ import {
   fetchMostViewedRecordings,
   fetchRecordingsByPlatform,
 } from "./actions/fetch-recordings";
+import { DashboardNav } from "./components/dashboard-nav";
 import { DiscoverSection } from "./components/discover-section";
 import { FavoritesSection } from "./components/favorites-section";
 import { GreetingSection } from "./components/greeting-section";
@@ -82,6 +83,8 @@ export default async function Page() {
   return (
     <Stack w="100%">
       <Card radius="lg" withBorder p="0">
+        <DashboardNav />
+
         <Suspense fallback={<Skeleton h={80} m="xl" radius="md" />}>
           <GreetingSection userPromise={userPromise} />
         </Suspense>
@@ -93,6 +96,7 @@ export default async function Page() {
         <Divider />
 
         <Box
+          id="dashboard-new-creators"
           py="sm"
           px={{ base: "xs", sm: "md" }}
           style={{ background: "linear-gradient(150deg, #B4F4FF, #52DDE8)" }}

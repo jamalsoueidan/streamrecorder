@@ -29,6 +29,7 @@ export async function FavoritesSection({
     <>
       <Divider />
       <Box
+        id="dashboard-favorites"
         style={{
           background: "linear-gradient(150deg, #FFF4B8, #FFD700)",
         }}

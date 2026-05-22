@@ -1,6 +1,6 @@
 import Link from "@/app/components/link";
 import { streamingPlatforms } from "@/app/lib/streaming-platforms";
-import { Group, Image, Scroller, Stack, Text } from "@mantine/core";
+import { Image, Marquee, Stack, Text } from "@mantine/core";
 
 const NEW_PLATFORMS = new Set(["Trovo", "Joilive", "Live17"]);
 // Special "featured" platforms — get a gold pulse animation instead of the
@@ -29,9 +29,8 @@ const PLATFORM_FLAGS: Record<string, string[]> = {
 
 export function PlatformsSection() {
   return (
-    <Scroller px="lg" py="lg">
-      <Group gap="md" wrap="nowrap">
-        {[...streamingPlatforms].reverse().map((platform) => {
+    <Marquee py="lg" gap="md" speed={40} pauseOnHover>
+      {[...streamingPlatforms].reverse().map((platform) => {
           const isSpecial = SPECIAL_PLATFORMS.has(platform.name);
           const isNew = NEW_PLATFORMS.has(platform.name);
           const type = platform.name.toLowerCase();
@@ -88,7 +87,6 @@ export function PlatformsSection() {
             </Link>
           );
         })}
-      </Group>
-    </Scroller>
+    </Marquee>
   );
 }

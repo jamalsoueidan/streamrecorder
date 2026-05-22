@@ -46,6 +46,7 @@ export async function DiscoverSection({
     <>
       <Divider />
       <Box
+        id="dashboard-discover"
         style={{
           background: "linear-gradient(150deg, #FFCCCD , #F8888A)",
         }}
