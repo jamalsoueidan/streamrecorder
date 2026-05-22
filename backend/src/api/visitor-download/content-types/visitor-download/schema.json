@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "visitor_downloads",
+  "info": {
+    "singularName": "visitor-download",
+    "pluralName": "visitor-downloads",
+    "displayName": "VisitorDownload"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "fingerprint": {
+      "type": "string"
+    },
+    "ip": {
+      "type": "string"
+    },
+    "recording": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::recording.recording"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user"
+    }
+  }
+}
