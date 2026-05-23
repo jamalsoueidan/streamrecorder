@@ -78,7 +78,9 @@ export default async function Page({ params, searchParams }: PageProps) {
 
   return (
     <section>
-      <ProfileViewTracker followerDocumentId={follower.documentId} />
+      {follower.documentId && (
+        <ProfileViewTracker followerDocumentId={follower.documentId} />
+      )}
       <ProfileHeader follower={follower} isRecording={isRecording} clipsCount={clipsCount} />
 
       {!hasRecordings ? (
