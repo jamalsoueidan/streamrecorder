@@ -7,6 +7,8 @@ import {
 export enum SortOptions {
   createdAtDesc = "createdAt:desc",
   createdAtAsc = "createdAt:asc",
+  viewsCountDesc = "viewsCount:desc",
+  downloadsCountDesc = "downloadsCount:desc",
 }
 
 export const profileParsers = {
