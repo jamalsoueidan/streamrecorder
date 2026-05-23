@@ -39,10 +39,6 @@ export async function fetchLiveRecordings(
   page: number = 1,
   type?: string,
 ) {
-  const typeFilter = type
-    ? { filters: { follower: { type: { $eq: type } } } }
-    : {};
-
   // For "following" scope, get user's follower IDs and filter
   if (scope === ScopeEnum.Following) {
     const user =
@@ -62,9 +58,9 @@ export async function fetchLiveRecordings(
         filters: {
           follower: {
             id: { $in: followingIds.length === 0 ? [0] : followingIds },
+            ...(type ? { type: { $eq: type } } : {}),
           },
         },
-        ...typeFilter,
       }),
     );
 
@@ -79,7 +75,9 @@ export async function fetchLiveRecordings(
     deepMerge(defaultOptions, {
       "pagination[page]": page,
       "pagination[withCount]": true,
-      ...typeFilter,
+      filters: {
+        follower: type ? { type: { $eq: type } } : {},
+      },
     }),
   );
 
