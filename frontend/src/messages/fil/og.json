@@ -1,0 +1,85 @@
+{
+  "brand": "LiveStreamRecorder",
+  "tagline": "Wag nang makamiss ng stream",
+  "defaultDescription": "Awtomatikong nare-record ang mga live stream para mapanood mo anumang oras",
+  "creators": {
+    "title": {
+      "all": "Lahat ng Creators",
+      "tiktok": "TikTok Creators",
+      "twitch": "Twitch Creators",
+      "youtube": "YouTube Creators",
+      "kick": "Kick Creators",
+      "pandalive": "PandaLive Creators",
+      "afreecatv": "AfreecaTV Creators",
+      "bigo": "Bigo Creators",
+      "buzzcast": "Buzzcast Creators",
+      "liveme": "LiveMe Creators",
+      "mixch": "Mixch Creators",
+      "twitcast": "TwitCasting Streamers",
+      "trovo": "Trovo Streamers",
+      "joilive": "Joilive Streamers",
+      "live17": "17live Streamers",
+      "kwai": "Kwai Creators"
+    },
+    "subtitle": {
+      "all": "Tingnan lahat ng streamers at creators",
+      "tiktok": "Tuklasin ang mga TikTok streamer",
+      "twitch": "Tuklasin ang mga Twitch streamer",
+      "youtube": "Tuklasin ang mga YouTube creator",
+      "kick": "Tuklasin ang mga Kick streamer",
+      "pandalive": "Tuklasin ang mga PandaLive creator",
+      "afreecatv": "Tuklasin ang mga AfreecaTV creator",
+      "bigo": "Tuklasin ang mga Bigo creator",
+      "buzzcast": "Tuklasin ang mga Buzzcast creator",
+      "liveme": "Tuklasin ang mga LiveMe creator",
+      "mixch": "Tuklasin ang mga Mixch creator",
+      "twitcast": "Tuklasin ang mga TwitCasting streamer",
+      "trovo": "Tuklasin ang mga Trovo streamer",
+      "joilive": "Tuklasin ang mga Joilive streamer",
+      "live17": "Tuklasin ang mga 17live streamer",
+      "kwai": "Tuklasin ang mga Kwai creator"
+    }
+  },
+  "recordings": {
+    "title": {
+      "all": "Lahat ng Recordings",
+      "tiktok": "TikTok Recordings",
+      "twitch": "Twitch Recordings",
+      "youtube": "YouTube Recordings",
+      "kick": "Kick Recordings",
+      "pandalive": "PandaLive Recordings",
+      "afreecatv": "AfreecaTV Recordings",
+      "bigo": "Bigo Recordings",
+      "buzzcast": "Buzzcast Recordings",
+      "liveme": "LiveMe Recordings",
+      "mixch": "Mixch Recordings",
+      "twitcast": "TwitCasting Recordings",
+      "trovo": "Trovo Recordings",
+      "joilive": "Joilive Recordings",
+      "live17": "17live Recordings",
+      "kwai": "Kwai Recordings"
+    },
+    "subtitle": {
+      "all": "Panoorin ang mga recorded live stream",
+      "tiktok": "Panoorin ang mga recorded TikTok Live",
+      "twitch": "Panoorin ang mga recorded Twitch stream",
+      "youtube": "Panoorin ang mga recorded YouTube Live",
+      "kick": "Panoorin ang mga recorded Kick stream",
+      "pandalive": "Panoorin ang mga recorded PandaLive stream",
+      "afreecatv": "Panoorin ang mga recorded AfreecaTV stream",
+      "bigo": "Panoorin ang mga recorded Bigo stream",
+      "buzzcast": "Panoorin ang mga recorded Buzzcast stream",
+      "liveme": "Panoorin ang mga recorded LiveMe stream",
+      "mixch": "Panoorin ang mga recorded Mixch stream",
+      "twitcast": "Panoorin ang mga recorded TwitCasting Live",
+      "trovo": "Panoorin ang mga recorded Trovo stream",
+      "joilive": "Panoorin ang mga recorded Joilive stream",
+      "live17": "Panoorin ang mga recorded 17live stream",
+      "kwai": "Panoorin ang mga recorded Kwai live stream"
+    }
+  },
+  "home": {
+    "title": "Live Stream Recorder",
+    "subtitle": "Awtomatikong nare-record ang paborito mong mga stream"
+  }
+}

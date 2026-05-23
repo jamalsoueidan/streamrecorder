@@ -1,0 +1,84 @@
+{
+  "meta": {
+    "title": "DMCA Policy",
+    "description": "Magsumite ng DMCA takedown request para sa content na lumalabag sa copyright mo."
+  },
+  "header": {
+    "title": "Digital Millennium Copyright Act",
+    "subtitle": "Magsumite ng takedown request. Rine-review namin ang bawat notice at agad na pinapanagutan ang lehitimong claims."
+  },
+  "form": {
+    "title": "Notification of Claimed Infringement",
+    "description": "Gamitin ang form na ito para hilingin ang pagtanggal ng recordings na lumalabag sa copyright mo. Tumutugon kami sa legally valid DMCA notices at dini-disable ang accounts ng repeat infringers sa naaangkop na sitwasyon.",
+    "sections": {
+      "yourWork": "Iyong copyrighted work",
+      "infringing": "Lumalabag na content",
+      "yourRole": "Iyong role",
+      "contact": "Contact information",
+      "sworn": "Sworn statements",
+      "signature": "Lagda"
+    },
+    "work": {
+      "description": {
+        "label": "Ilarawan ang copyrighted work",
+        "description": "Ano ang original na content? Kailan ginawa o unang nai-publish? Kung mas maraming detalye, mas mabilis namin ma-verify ang claim mo.",
+        "placeholder": "hal. Ang livestream broadcast ko sa Twitch bilang @mychannel noong March 15, 2024 mula 8–10pm EST, tungkol sa paglabas ng bagong kanta ko 'Title'."
+      }
+    },
+    "infringing": {
+      "urls": {
+        "label": "URLs ng lumalabag na recordings",
+        "description": "Isang URL bawat linya. Ito ang recordings sa LiveStreamRecorder na hinihiling mong tanggalin.",
+        "placeholder": "https://www.livestreamrecorder.com/twitch/..."
+      }
+    },
+    "copyrightType": {
+      "label": "Sinusumite ko ang notice na ito bilang",
+      "personal": "Ang copyright owner",
+      "authorized": "Authorized representative ng copyright owner"
+    },
+    "contact": {
+      "firstName": {
+        "label": "Pangalan",
+        "placeholder": "Jane"
+      },
+      "lastName": {
+        "label": "Apelyido",
+        "placeholder": "Doe"
+      }
+    },
+    "email": {
+      "label": "Email address mo",
+      "description": "Gagamitin namin ito para tumugon sa request mo.",
+      "placeholder": "you@example.com"
+    },
+    "perjury": {
+      "title": "Sa pag-check ng mga sumusunod na boxes, sinasabi ko UNDER PENALTY OF PERJURY na:",
+      "warning": "Pakibasa nang mabuti ang bawat statement bago mag-check.",
+      "goodFaith": "May good faith belief ako na ang paggamit ng copyrighted material na inilarawan sa itaas ay hindi pinahihintulutan ng copyright owner, agent nito, o ng batas (hal., bilang fair use).",
+      "accurate": "Ang impormasyon sa notice na ito ay tama at, under penalty of perjury, ako ang may-ari o pinahihintulutan na kumilos sa ngalan ng may-ari ng exclusive right na sinasabing nilabag.",
+      "acknowledge": "Kinikilala ko na sa ilalim ng Section 512(f) ang sinumang nagsasabi nang sinasadya at maling materyal na ang materyal o aktibidad ay lumalabag ay maaaring managot sa damages."
+    },
+    "signature": {
+      "date": {
+        "label": "Petsa ng paglagda"
+      },
+      "label": "Typed signature",
+      "description": "I-type ang iyong full legal name. Dapat tumutugma sa Pangalan at Apelyido sa itaas — gumaganap ito bilang digital signature mo.",
+      "placeholder": "Jane Doe",
+      "mismatch": "Dapat tumutugma ang lagda sa Pangalan at Apelyido mo."
+    },
+    "captcha": {
+      "label": "Verification",
+      "description": "Ano ang {question}?",
+      "placeholder": "Sagot mo",
+      "error": "Maling sagot, subukan ulit"
+    },
+    "submit": "Isumite ang DMCA Request",
+    "footer": "Tumutugon kami sa lahat ng valid na DMCA requests. Ang pang-aabuso sa proseso na ito ay maaaring magresulta sa legal consequences."
+  },
+  "submitted": {
+    "title": "Naisumite na ang DMCA Request",
+    "description": "Natanggap namin ang DMCA takedown request mo. Rine-review namin ito at tutugon sa email address na ibinigay mo."
+  }
+}

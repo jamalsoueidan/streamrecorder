@@ -1,0 +1,30 @@
+{
+  "meta": {
+    "title": "Stream di {creatorName} - {recordedDate}",
+    "description": "Guarda lo stream {platform} registrato di {creatorName} del {recordedDate}. Durata: {duration}. Non perdere mai uno stream con Live Stream Recorder.",
+    "ogTitle": "Stream di {creatorName} - {recordedDate} | Live Stream Recorder",
+    "keywords": "{creatorName} video, stream {creatorName} {recordedDate}, {creatorName} {platform}, stream registrato {creatorName}, guarda {creatorName}"
+  },
+  "jsonLd": {
+    "name": "Stream di {creatorName} - {recordedDate}",
+    "description": "Live stream registrato di {creatorName} del {recordedDate}"
+  },
+  "watch": {
+    "title": "Guarda lo stream live di {username} - {date}"
+  },
+  "backToProfile": "Torna al profilo di {username}",
+  "otherRecordingsBy": "Altre registrazioni di {username}",
+  "accessGate": {
+    "signIn": {
+      "title": "Accedi per continuare a guardare",
+      "body": "Hai raggiunto il limite di anteprime gratis. Crea un account gratuito per continuare.",
+      "primaryCta": "Accedi",
+      "secondaryCta": "Crea account"
+    },
+    "upgrade": {
+      "title": "Passa al premium per continuare a guardare",
+      "body": "Hai raggiunto il limite gratis. Passa al premium per accesso illimitato.",
+      "primaryCta": "Upgrade"
+    }
+  }
+}

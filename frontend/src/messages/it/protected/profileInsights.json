@@ -1,0 +1,75 @@
+{
+  "beta": "Gli Insights sono in beta. I dati possono essere incompleti o cambiare mentre continuiamo a migliorare questa funzione.",
+  "tabs": {
+    "videos": "Video",
+    "clips": "Clip",
+    "insights": "Insights"
+  },
+  "stats": {
+    "totalDiamonds": "Diamanti totali",
+    "battleDiamonds": "Diamanti dalle battle",
+    "nonBattleDiamonds": "Diamanti fuori dalle battle",
+    "battles": "Battle",
+    "won": "Vinte",
+    "lost": "Perse",
+    "winRate": "Win rate",
+    "gifters": "Gifters",
+    "chatParticipants": "Partecipanti chat"
+  },
+  "battleHistory": {
+    "title": "Storico battle",
+    "empty": "Nessuna battle registrata.",
+    "colDate": "Data",
+    "colType": "Tipo",
+    "colOpponents": "Avversari",
+    "colScore": "Punteggio",
+    "colDiamonds": "Diamanti",
+    "colResult": "Risultato",
+    "vs": "vs",
+    "with": "w/",
+    "live": "LIVE",
+    "interrupted": "Interrotta",
+    "won": "Vinta",
+    "draw": "Pari",
+    "lost": "Persa"
+  },
+  "streamActivity": {
+    "title": "Stream recenti",
+    "empty": "Nessuna sessione di stream disponibile.",
+    "colDate": "Data",
+    "colDuration": "Durata",
+    "colPeakViewers": "Viewer di picco",
+    "colAvgViewers": "Viewer medi",
+    "colDiamonds": "Diamanti",
+    "colBattles": "Battle",
+    "durationMinutes": "{m}m",
+    "durationHoursMinutes": "{h}h {m}m"
+  },
+  "topGifters": {
+    "title": "Top gifters",
+    "empty": "Nessun dato sui gifters disponibile.",
+    "giftCount": "{count} gift"
+  },
+  "topOpponents": {
+    "title": "Top avversari",
+    "empty": "Nessun dato sulle battle disponibile.",
+    "wins": "{count}V",
+    "losses": "{count}P",
+    "battleCount": "{count} battle"
+  },
+  "earnings": {
+    "title": "Guadagni",
+    "empty": "Nessun dato sui guadagni disponibile.",
+    "seriesLabel": "Diamanti"
+  },
+  "schedule": {
+    "title": "Quando vanno live",
+    "mon": "Lun",
+    "tue": "Mar",
+    "wed": "Mer",
+    "thu": "Gio",
+    "fri": "Ven",
+    "sat": "Sab",
+    "sun": "Dom"
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "brand": "LiveStreamRecorder",
+  "tagline": "ไม่พลาดทุกไลฟ์",
+  "defaultDescription": "ระบบบันทึกไลฟ์อัตโนมัติ ดูได้ทุกเวลาแม้พลาดสด",
+  "creators": {
+    "title": {
+      "all": "ครีเอเตอร์ทั้งหมด",
+      "tiktok": "ครีเอเตอร์ TikTok",
+      "twitch": "ครีเอเตอร์ Twitch",
+      "youtube": "ครีเอเตอร์ YouTube",
+      "kick": "ครีเอเตอร์ Kick",
+      "pandalive": "ครีเอเตอร์ PandaLive",
+      "afreecatv": "ครีเอเตอร์ AfreecaTV",
+      "bigo": "ครีเอเตอร์ Bigo",
+      "buzzcast": "ครีเอเตอร์ Buzzcast",
+      "liveme": "ครีเอเตอร์ LiveMe",
+      "mixch": "ครีเอเตอร์ Mixch",
+      "twitcast": "สตรีมเมอร์ TwitCasting",
+      "trovo": "สตรีมเมอร์ Trovo",
+      "joilive": "สตรีมเมอร์ Joilive",
+      "live17": "สตรีมเมอร์ 17live",
+      "kwai": "ครีเอเตอร์ Kwai"
+    },
+    "subtitle": {
+      "all": "ค้นหาสตรีมเมอร์และครีเอเตอร์ทั้งหมด",
+      "tiktok": "ค้นพบสตรีมเมอร์ TikTok",
+      "twitch": "ค้นพบสตรีมเมอร์ Twitch",
+      "youtube": "ค้นพบครีเอเตอร์ YouTube",
+      "kick": "ค้นพบสตรีมเมอร์ Kick",
+      "pandalive": "ค้นพบครีเอเตอร์ PandaLive",
+      "afreecatv": "ค้นพบครีเอเตอร์ AfreecaTV",
+      "bigo": "ค้นพบครีเอเตอร์ Bigo",
+      "buzzcast": "ค้นพบครีเอเตอร์ Buzzcast",
+      "liveme": "ค้นพบครีเอเตอร์ LiveMe",
+      "mixch": "ค้นพบครีเอเตอร์ Mixch",
+      "twitcast": "ค้นพบสตรีมเมอร์ TwitCasting",
+      "trovo": "ค้นพบสตรีมเมอร์ Trovo",
+      "joilive": "ค้นพบสตรีมเมอร์ Joilive",
+      "live17": "ค้นพบสตรีมเมอร์ 17live",
+      "kwai": "ค้นพบครีเอเตอร์ Kwai"
+    }
+  },
+  "recordings": {
+    "title": {
+      "all": "บันทึกทั้งหมด",
+      "tiktok": "บันทึก TikTok",
+      "twitch": "บันทึก Twitch",
+      "youtube": "บันทึก YouTube",
+      "kick": "บันทึก Kick",
+      "pandalive": "บันทึก PandaLive",
+      "afreecatv": "บันทึก AfreecaTV",
+      "bigo": "บันทึก Bigo",
+      "buzzcast": "บันทึก Buzzcast",
+      "liveme": "บันทึก LiveMe",
+      "mixch": "บันทึก Mixch",
+      "twitcast": "บันทึก TwitCasting",
+      "trovo": "บันทึก Trovo",
+      "joilive": "บันทึก Joilive",
+      "live17": "บันทึก 17live",
+      "kwai": "บันทึก Kwai"
+    },
+    "subtitle": {
+      "all": "ดูไลฟ์ที่ถูกบันทึกไว้",
+      "tiktok": "ดูไลฟ์ TikTok ที่บันทึกไว้",
+      "twitch": "ดูสตรีม Twitch ที่บันทึกไว้",
+      "youtube": "ดูไลฟ์ YouTube ที่บันทึกไว้",
+      "kick": "ดูสตรีม Kick ที่บันทึกไว้",
+      "pandalive": "ดูสตรีม PandaLive ที่บันทึกไว้",
+      "afreecatv": "ดูสตรีม AfreecaTV ที่บันทึกไว้",
+      "bigo": "ดูสตรีม Bigo ที่บันทึกไว้",
+      "buzzcast": "ดูสตรีม Buzzcast ที่บันทึกไว้",
+      "liveme": "ดูสตรีม LiveMe ที่บันทึกไว้",
+      "mixch": "ดูสตรีม Mixch ที่บันทึกไว้",
+      "twitcast": "ดูไลฟ์ TwitCasting ที่บันทึกไว้",
+      "trovo": "ดูสตรีม Trovo ที่บันทึกไว้",
+      "joilive": "ดูสตรีม Joilive ที่บันทึกไว้",
+      "live17": "ดูสตรีม 17live ที่บันทึกไว้",
+      "kwai": "ดูไลฟ์ Kwai ที่บันทึกไว้"
+    }
+  },
+  "home": {
+    "title": "Live Stream Recorder",
+    "subtitle": "บันทึกไลฟ์โปรดของคุณอัตโนมัติ"
+  }
+}

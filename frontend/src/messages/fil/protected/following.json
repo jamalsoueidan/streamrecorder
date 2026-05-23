@@ -1,0 +1,13 @@
+{
+  "title": "Recordings",
+  "description": "Mga recording mula sa creators mo",
+  "emptyFiltered": {
+    "title": "Walang recording na tumutugma sa filter mo",
+    "description": "Subukang i-adjust o i-clear ang filters"
+  },
+  "emptyDefault": {
+    "title": "Wala pang recording",
+    "description": "Lalabas dito ang mga recording mo kapag nagdagdag ka na ng creator"
+  },
+  "noMoreToLoad": "Nakarating ka na sa dulo"
+}

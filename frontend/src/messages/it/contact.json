@@ -1,0 +1,35 @@
+{
+  "meta": {
+    "title": "Contattaci",
+    "description": "Mettiti in contatto con noi"
+  },
+  "header": {
+    "title": "Contattaci",
+    "subtitle": "Ci farebbe piacere sentire la tua opinione"
+  },
+  "form": {
+    "title": "Invia un messaggio",
+    "description": "Compila il modulo qui sotto e ti risponderemo il prima possibile.",
+    "name": {
+      "label": "Nome",
+      "placeholder": "Il tuo nome"
+    },
+    "email": {
+      "label": "Email",
+      "placeholder": "tua@email.com"
+    },
+    "subject": {
+      "label": "Oggetto",
+      "placeholder": "Di cosa si tratta?"
+    },
+    "message": {
+      "label": "Messaggio",
+      "placeholder": "Il tuo messaggio..."
+    },
+    "submit": "Invia messaggio"
+  },
+  "submitted": {
+    "title": "Messaggio inviato",
+    "description": "Grazie per averci contattato. Ti risponderemo presto."
+  }
+}

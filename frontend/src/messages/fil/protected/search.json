@@ -1,0 +1,64 @@
+{
+  "title": "Hanapin",
+  "description": "Idagdag ang mga live stream mo sa list",
+  "platforms": {
+    "tiktok": "TikTok",
+    "twitch": "Twitch",
+    "kick": "Kick",
+    "youtube": "YouTube",
+    "afreecatv": "AfreecaTV",
+    "pandalive": "PandaLive",
+    "bigo": "Bigo",
+    "buzzcast": "Buzzcast",
+    "liveme": "LiveMe",
+    "mixch": "Mixch",
+    "twitcast": "TwitCasting",
+    "trovo": "Trovo",
+    "joilive": "Joilive",
+    "live17": "17live",
+    "kwai": "Kwai"
+  },
+  "search": {
+    "actionButton": "Hanapin",
+    "submitButton": "Hanapin",
+    "placeholder": "I-enter ang stream URL o @username",
+    "searching": "Naghahanap sa {platform}...",
+    "pasteButton": "I-paste",
+    "pasteError": "I-paste manually gamit ang Ctrl+V o long-press",
+    "parseError": "Hindi ma-parse ang username",
+    "notFound": "Walang nakita...",
+    "autoDetected": "Auto-detected ang platform mula sa URL",
+    "enterUsername": "I-enter ang stream URL o username",
+    "selectPlatform": "Piliin ang platform kung saan ka nag-stream",
+    "changeUsername": "Palitan ang username",
+    "newSearch": "Bagong Search",
+    "premiumOnly": "Premium lang"
+  },
+  "upgrade": {
+    "title": "Kailangan ng Premium para sa {platform}",
+    "description": "Mag-upgrade sa Premium para magdagdag ng {platform} creators at simulan ang pag-record ng live streams mo."
+  },
+  "hints": {
+    "tryFormats": "Subukan ang mga halimbawa na ito:",
+    "enterUsername": "I-enter ang @username o i-paste ang profile URL"
+  },
+  "actions": {
+    "follow": "Idagdag",
+    "successTitle": "Nadagdag!",
+    "successMessage": "Nadagdag na si {username}",
+    "errorTitle": "Error",
+    "cancel": "Kanselahin",
+    "willRecord": "Ire-record kapag nag-live na sila",
+    "viewPage": "Tingnan ang page"
+  },
+  "chromeExtension": "I-install ang Chrome Extension",
+  "inputLabel": "I-paste dito ang stream link mula sa Twitch, TikTok, o YouTube",
+  "notFollowing": {
+    "title": "Wala sa list mo ang creator na ito",
+    "description": "Sinubukan mong i-access ang creator na wala sa list mo.",
+    "followToAccess": "Idagdag sila para makita ang recordings at ma-notify kapag nag-live sila.",
+    "notFoundTitle": "Hindi nahanap ang creator",
+    "notFoundDescription": "Walang @{username} sa {platform} o private ang account.",
+    "trySearch": "Subukang hanapin ang ibang creator:"
+  }
+}

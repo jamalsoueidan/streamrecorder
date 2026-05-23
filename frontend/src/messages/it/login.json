@@ -1,0 +1,41 @@
+{
+  "meta": {
+    "title": "Accedi",
+    "description": "Accedi al tuo account LiveStreamRecorder per gestire le tue registrazioni e gli streamer seguiti."
+  },
+  "title": "Bentornato",
+  "subtitle": "Accedi per continuare al tuo account",
+  "email": {
+    "label": "Indirizzo email",
+    "placeholder": "tu@esempio.com"
+  },
+  "password": {
+    "label": "Password",
+    "placeholder": "Inserisci la password"
+  },
+  "emailConfirmed": "La tua email è stata confermata. Ora puoi accedere.",
+  "forgotPassword": "Password dimenticata?",
+  "submit": {
+    "default": "Accedi",
+    "loading": "Accesso in corso..."
+  },
+  "choices": {
+    "emailPassword": "Usa Email / Password",
+    "google": "Continua con Google",
+    "tiktok": "Continua con TikTok",
+    "facebook": "Continua con Facebook"
+  },
+  "terms": {
+    "text": "Continuando, accetti i",
+    "tosLink": "Termini di servizio",
+    "and": "di Live Stream Recorder e confermi di aver letto la",
+    "privacyLink": "Informativa sulla privacy"
+  },
+  "errors": {
+    "emailTaken": "Esiste già un account con questa email. Accedi con il metodo originale."
+  },
+  "register": {
+    "text": "Non hai un account?",
+    "link": "Iscriviti"
+  }
+}

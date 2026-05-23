@@ -1,0 +1,34 @@
+{
+  "meta": {
+    "title": "{nickname} (@{username}) วิดีโอและบันทึก",
+    "notFoundTitle": "ไม่พบครีเอเตอร์",
+    "notFoundDescription": "ไม่พบโปรไฟล์ครีเอเตอร์นี้",
+    "description": "ดูบันทึกไลฟ์และคลิปของ {nickname} บน {platform} {nickname} ใช้ Live Stream Recorder เก็บและแชร์ไลฟ์ของตัวเอง",
+    "ogTitle": "{nickname} — วิดีโอและคลิป | Live Stream Recorder",
+    "twitterTitle": "{nickname} — วิดีโอและคลิป {platform}",
+    "keywords": "{nickname} วิดีโอ, {nickname} คลิป, {nickname} {platform}, ดู {nickname}, {nickname} ไลฟ์สตรีม, {nickname} บันทึก"
+  },
+  "defaultTagline": "{nickname} เก็บไลฟ์ของตัวเองไว้ที่นี่ ดูบันทึกและคลิปได้ทุกเวลา",
+  "about": "เกี่ยวกับ {nickname}",
+  "faq": "คำถามที่พบบ่อย",
+  "recorded": "บันทึกเมื่อ {date}",
+  "emptyState": {
+    "title": "ยังไม่มีบันทึก",
+    "description": "ครีเอเตอร์คนนี้ยังไม่ได้บันทึกไลฟ์ใดๆ กลับมาตรวจสอบใหม่ภายหลัง!"
+  },
+  "jsonLd": {
+    "streamTitle": "ไลฟ์ของ {nickname} - {date}"
+  },
+  "report": "รายงาน",
+  "blocked": {
+    "metaTitle": "คอนเทนต์ถูกลบแล้ว",
+    "metaDescription": "คอนเทนต์ของครีเอเตอร์นี้ถูกลบแล้ว",
+    "title": "คอนเทนต์ถูกลบแล้ว",
+    "description": "บันทึกของโปรไฟล์นี้ถูกลบเนื่องจากคำขอ DMCA ที่ได้รับการยืนยัน"
+  },
+  "cta": {
+    "title": "คุณกำลังดูตัวอย่างจาก @{username}",
+    "description": "@{username} แชร์บันทึกของตัวเองที่นี่ สมัครเพื่อบันทึกและแชร์ไลฟ์ของคุณเอง",
+    "button": "สร้างบัญชีฟรี"
+  }
+}

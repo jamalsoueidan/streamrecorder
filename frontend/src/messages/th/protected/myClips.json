@@ -1,0 +1,131 @@
+{
+  "title": "คลิปของฉัน",
+  "description": "คลิปที่สร้างด้วย AI จากบันทึกของคุณ",
+  "emptyState": {
+    "title": "ยังไม่มีคลิป",
+    "description": "คลิปจะปรากฏที่นี่เมื่อสร้างจากบันทึกของคุณ"
+  },
+  "share": {
+    "tiktok": "เผยแพร่ไปยัง TikTok",
+    "uploaded": "เผยแพร่ไปยัง TikTok แล้ว",
+    "processing": "กำลังเผยแพร่...",
+    "completed": "เผยแพร่แล้ว",
+    "shared": "เผยแพร่แล้ว",
+    "failed": "ล้มเหลว",
+    "retry": "ลองใหม่",
+    "failedTooltip": "เผยแพร่ล้มเหลว คลิกเพื่อลองใหม่",
+    "check": "ตรวจสอบ",
+    "checkStatus": "ตรวจสอบสถานะ TikTok",
+    "youtube": "เผยแพร่ไปยัง YouTube"
+  },
+  "actions": {
+    "edit": "แก้ไขวิดีโอ",
+    "delete": "ลบ"
+  },
+  "publishPage": {
+    "title": "เผยแพร่ไปยัง TikTok",
+    "description": "ตรวจสอบวิดีโอและเลือกวิธีแชร์บน TikTok",
+    "loadingCreator": "กำลังโหลดบัญชี TikTok...",
+    "publishingTo": "กำลังเผยแพร่ไปยัง",
+    "descriptionLabel": "ชื่อเรื่อง",
+    "descriptionPlaceholder": "เขียนชื่อสำหรับวิดีโอ...",
+    "privacyLabel": "สถานะความเป็นส่วนตัว",
+    "privacyPlaceholder": "เลือกสถานะความเป็นส่วนตัว",
+    "privacy": {
+      "PUBLIC_TO_EVERYONE": "ทุกคน",
+      "MUTUAL_FOLLOW_FRIENDS": "เพื่อน",
+      "FOLLOWER_OF_CREATOR": "ผู้ติดตาม",
+      "SELF_ONLY": "เฉพาะฉัน"
+    },
+    "interactionSettings": "อนุญาตให้ผู้ใช้",
+    "allowComments": "คอมเมนต์",
+    "allowDuet": "Duet",
+    "allowStitch": "Stitch",
+    "disabledByCreator": "ปิดในการตั้งค่า TikTok ของคุณ",
+    "commercialContent": "การตั้งค่าเปิดเผยเนื้อหา",
+    "commercialContentDescription": "เปิดเพื่อเปิดเผยว่าวิดีโอนี้โปรโมตสินค้าหรือบริการเพื่อแลกกับสิ่งมีค่า วิดีโอของคุณอาจโปรโมตตัวเอง บุคคลที่สาม หรือทั้งคู่",
+    "brandContentToggle": "แบรนด์ของคุณ",
+    "brandContentDescription": "คุณโปรโมตตัวเองหรือธุรกิจของตัวเอง เนื้อหานี้จะถูกจัดเป็น Brand Organic",
+    "brandOrganicToggle": "เนื้อหามีแบรนด์",
+    "brandOrganicDescription": "คุณโปรโมตแบรนด์อื่นหรือบุคคลที่สาม เนื้อหานี้จะถูกจัดเป็น Branded Content",
+    "promotionalContentLabel": "วิดีโอของคุณจะถูกติดป้าย 'เนื้อหาส่งเสริม'",
+    "paidPartnershipLabel": "วิดีโอของคุณจะถูกติดป้าย 'พาร์ทเนอร์ที่มีค่าจ้าง'",
+    "cannotChangeWarning": "ไม่สามารถเปลี่ยนได้เมื่อโพสต์วิดีโอแล้ว",
+    "musicConfirmation": "การโพสต์ คุณยอมรับการยืนยันการใช้เพลงของ TikTok",
+    "confirmationPrefix": "การโพสต์ คุณยอมรับ",
+    "termsOfServiceLink": "ข้อกำหนดการใช้งานของ LiveStreamRecorder",
+    "musicConfirmationLink": "การยืนยันการใช้เพลงของ TikTok",
+    "brandedContentPolicyLink": "นโยบายเนื้อหามีแบรนด์ของ TikTok",
+    "andText": "และ",
+    "commercialContentToggle": "เนื้อหานี้โปรโมตตัวเอง แบรนด์ ผลิตภัณฑ์ หรือบริการ",
+    "commercialContentRequired": "คุณต้องระบุว่าเนื้อหาโปรโมตตัวเอง บุคคลที่สาม หรือทั้งคู่",
+    "brandedContentPrivacyWarning": "เนื้อหามีแบรนด์ไม่สามารถตั้งเป็นความเป็นส่วนตัวได้",
+    "publishButton": "เผยแพร่ไปยัง TikTok",
+    "uploadButton": "เผยแพร่",
+    "cancel": "ยกเลิก",
+    "backToClips": "กลับไปคลิป",
+    "noTiktokConnection": {
+      "title": "ยังไม่ได้เชื่อมต่อบัญชี TikTok",
+      "description": "เพื่อเผยแพร่คลิปไปยัง TikTok ไปที่การตั้งค่าและเชื่อมต่อบัญชี TikTok ก่อน",
+      "goToSettings": "ไปการตั้งค่า",
+      "hint": "เมื่อเชื่อมต่อแล้ว กลับมาที่นี่เพื่อเผยแพร่คลิปของคุณ"
+    },
+    "success": "กำลังเผยแพร่",
+    "successMessage": "วิดีโอของคุณกำลังถูกเผยแพร่ไปยัง TikTok อาจใช้เวลาสักครู่ในการประมวลผลและปรากฏบนโปรไฟล์",
+    "error": "ผิดพลาด",
+    "errorMessage": "เผยแพร่ไปยัง TikTok ล้มเหลว",
+    "validation": {
+      "privacyRequired": "กรุณาเลือกใครที่สามารถดูวิดีโอนี้",
+      "musicConfirmationRequired": "คุณต้องยอมรับการยืนยันการใช้เพลง"
+    },
+    "cannotPostNow": "คุณถึงขีดจำกัดการโพสต์รายวันบน TikTok กรุณาลองใหม่ภายหลัง",
+    "videoTooLong": "วิดีโอนี้ยาว {duration} วินาที แต่ TikTok อนุญาตให้บัญชีของคุณโพสต์ได้สูงสุด {maxDuration} วินาที",
+    "selfOnlyDisabledBranded": "เนื้อหามีแบรนด์ไม่สามารถตั้งความเป็นส่วนตัวเป็นส่วนตัวได้"
+  },
+  "youtubePublishPage": {
+    "title": "เผยแพร่ไปยัง YouTube",
+    "description": "ตรวจสอบวิดีโอและเผยแพร่เป็น YouTube Short",
+    "titleLabel": "ชื่อเรื่อง",
+    "titlePlaceholder": "ใส่ชื่อสำหรับวิดีโอ...",
+    "descriptionLabel": "คำอธิบาย",
+    "descriptionPlaceholder": "เพิ่มคำอธิบาย (ไม่บังคับ)...",
+    "privacyLabel": "ความเป็นส่วนตัว",
+    "privacy": {
+      "public": "สาธารณะ",
+      "unlisted": "ไม่ระบุในรายการ",
+      "private": "ส่วนตัว"
+    },
+    "tagsLabel": "แท็ก",
+    "tagsPlaceholder": "gaming, highlights, live stream",
+    "tagsDescription": "แท็กคั่นด้วยจุลภาคเพื่อช่วยให้ผู้ชมหาวิดีโอ",
+    "checkingConnection": "กำลังตรวจสอบการเชื่อมต่อ YouTube...",
+    "quotaWarning": "YouTube มีขีดจำกัดการอัปโหลดรายวัน หากการอัปโหลดล้มเหลวด้วยข้อผิดพลาดโควต้า ลองใหม่พรุ่งนี้",
+    "confirmationPrefix": "การเผยแพร่ คุณยอมรับ",
+    "termsOfServiceLink": "ข้อกำหนดการใช้งานของ LiveStreamRecorder",
+    "andText": "และ",
+    "youtubeTermsLink": "ข้อกำหนดการใช้งานของ YouTube",
+    "uploadButton": "เผยแพร่ไปยัง YouTube",
+    "cancel": "ยกเลิก",
+    "success": "เผยแพร่แล้ว",
+    "successMessage": "วิดีโอของคุณถูกอัปโหลดไปยัง YouTube แล้ว",
+    "error": "ผิดพลาด",
+    "validation": {
+      "titleRequired": "กรุณาใส่ชื่อสำหรับวิดีโอ"
+    },
+    "noYoutubeConnection": {
+      "title": "ยังไม่ได้เชื่อมต่อบัญชี YouTube",
+      "description": "เพื่อเผยแพร่คลิปไปยัง YouTube ไปที่การตั้งค่าและเชื่อมต่อบัญชี YouTube ก่อน",
+      "goToSettings": "ไปการตั้งค่า"
+    }
+  },
+  "upgrade": {
+    "title": "จากบันทึกถึง TikTok ในไม่กี่วินาที",
+    "features": {
+      "publish": "โพสต์โดยตรงไปยัง TikTok, Reels และ Shorts",
+      "schedule": "กำหนดเวลาคลิปของคุณ คงความสม่ำเสมอแบบอัตโนมัติ",
+      "edit": "เพิ่มคำบรรยาย เอฟเฟกต์ และทำให้เป็นของคุณ"
+    },
+    "upgradeButton": "อัปเกรดตอนนี้",
+    "hint": "ปลดล็อกการเผยแพร่คลิปด้วยการสมัครพรีเมียม"
+  }
+}

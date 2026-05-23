@@ -1,0 +1,81 @@
+{
+  "platforms": {
+    "label": "Platform",
+    "all": "Lahat",
+    "tiktok": "TikTok",
+    "twitch": "Twitch",
+    "youtube": "YouTube",
+    "kick": "Kick",
+    "afreecatv": "AfreecaTV",
+    "pandalive": "PandaLive",
+    "bigo": "Bigo",
+    "buzzcast": "Buzzcast",
+    "liveme": "LiveMe",
+    "mixch": "Mixch",
+    "twitcast": "TwitCasting",
+    "trovo": "Trovo",
+    "joilive": "Joilive",
+    "live17": "17live",
+    "kwai": "Kwai"
+  },
+  "sort": {
+    "label": "I-sort ayon sa",
+    "usernameAsc": "A-Z",
+    "usernameDesc": "Z-A",
+    "createdAtDesc": "Bagong dagdag",
+    "createdAtAsc": "Unang dinagdag",
+    "totalRecordingsDesc": "Pinakamaraming recording",
+    "totalRecordingsAsc": "Pinakakaunting recording",
+    "latestRecordingDesc": "Pinakabagong stream",
+    "latestRecordingAsc": "Pinakalumang stream",
+    "updatedAtDesc": "Pinakabago",
+    "updatedAtAsc": "Pinakaluma",
+    "viewsCountDesc": "Pinakamaraming napanood",
+    "downloadsCountDesc": "Pinakamaraming na-download"
+  },
+  "gender": {
+    "label": "Kasarian",
+    "all": "Lahat",
+    "female": "Babae",
+    "male": "Lalaki",
+    "unknown": "Iba pa"
+  },
+  "dateRange": {
+    "label": "Naidagdag",
+    "today": "Ngayong araw",
+    "yesterday": "Kahapon",
+    "thisWeek": "Ngayong linggo",
+    "lastWeek": "Nakaraang linggo",
+    "thisMonth": "Ngayong buwan",
+    "lastMonth": "Nakaraang buwan",
+    "all": "Lahat"
+  },
+  "duration": {
+    "label": "Tagal",
+    "short": "Mababa sa 4 min",
+    "medium": "4-20 min",
+    "long": "Higit sa 20 min",
+    "all": "Lahat"
+  },
+  "country": {
+    "label": "Bansa",
+    "placeholder": "Karagdagang bansa..."
+  },
+  "language": {
+    "label": "Wika",
+    "placeholder": "Karagdagang wika..."
+  },
+  "search": {
+    "placeholder": "Hanapin ang username..."
+  },
+  "actions": {
+    "clearAll": "I-clear lahat",
+    "filters": "Filters",
+    "favorites": "Favorites",
+    "done": "Tapos na"
+  },
+  "options": {
+    "hasRecordings": "Ipakita lang ang creators na may recordings"
+  },
+  "excludeMyCreators": "Wag isama ang aking creators"
+}

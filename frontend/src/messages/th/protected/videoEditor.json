@@ -1,0 +1,22 @@
+{
+  "modal": {
+    "title": "แก้ไขคลิป",
+    "description": "ตัดและส่งออกคลิปจาก {username}"
+  },
+  "actions": {
+    "saveClip": "บันทึกคลิป",
+    "downloadClip": "ดาวน์โหลดคลิป",
+    "export": "ส่งออก"
+  },
+  "maxDuration": "ความยาวคลิปสูงสุด: {minutes} นาที",
+  "notifications": {
+    "exportStarted": {
+      "title": "เริ่มส่งออกแล้ว",
+      "message": "คลิปของคุณกำลังถูกประมวลผลและจะถูกบันทึกในพื้นที่จัดเก็บ"
+    },
+    "downloadQueued": {
+      "title": "อยู่ในคิวดาวน์โหลด",
+      "message": "คลิปของคุณจะถูกส่งทางอีเมลเมื่อพร้อม"
+    }
+  }
+}

@@ -1,0 +1,145 @@
+{
+  "meta": {
+    "title": "Privacy Policy",
+    "description": "Privacy Policy ng LiveStreamRecorder. Alamin kung paano kami nag-collect, gumagamit, at nagprotekta ng data mo."
+  },
+  "header": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Pinakabagong update: {date}"
+  },
+  "overview": {
+    "title": "Overview",
+    "content": "Pinapanatili naming simple ang mga bagay. Konting data lang ang ineimbak namin at hindi namin ibinebenta sa third parties. Walang invasive analytics, walang advertising tracking. Mahalaga sa amin ang privacy mo."
+  },
+  "dataController": {
+    "title": "Data Controller",
+    "content": "Ang LiveStreamRecorder.com ang data controller na may responsibilidad sa personal data mo. Kung may tanong ka tungkol sa Privacy Policy na ito o sa data practices namin, makipag-ugnayan sa amin sa:",
+    "email": "contact@livestreamrecorder.com"
+  },
+  "whatWeCollect": {
+    "title": "Ano ang Ineimbak Namin",
+    "intro": "Kapag gumawa ka ng account, ineimbak namin ang:",
+    "items": {
+      "email": "Email address",
+      "emailDesc": "para makapag-log in ka at ma-recover ang account mo",
+      "username": "Username",
+      "usernameDesc": "para ma-identify ang account mo",
+      "lastLogin": "Petsa ng huling login",
+      "lastLoginDesc": "para sa basic account management",
+      "streamers": "Username ng streamers na sinusundan mo",
+      "streamersDesc": "ang public usernames sa third-party platforms (TikTok, Twitch, Kick atbp.) na hiniling mong i-archive namin para sa iyo",
+      "ipAddress": "IP address at device fingerprint",
+      "ipAddressDesc": "ineimbak sa bawat video view at download para sa fraud prevention; pwedeng i-clear mula sa Settings"
+    },
+    "footer": "Yun lang."
+  },
+  "legalBasis": {
+    "title": "Legal Basis para sa Processing",
+    "intro": "Sa ilalim ng GDPR, pinoproseso namin ang personal data mo base sa sumusunod na legal grounds:",
+    "items": {
+      "contract": "Kontrata",
+      "contractDesc": "Kinakailangan ang processing para makapagbigay sa iyo ng serbisyo namin",
+      "consent": "Pahintulot",
+      "consentDesc": "Nagbigay ka ng pahintulot para sa specific purposes (hal., marketing emails)",
+      "legitimateInterest": "Lehitimong Interes",
+      "legitimateInterestDesc": "Para mapahusay ang serbisyo namin, maiwasan ang fraud, ma-detect ang account sharing, at proteksyunan ang sarili sa payment disputes"
+    }
+  },
+  "payment": {
+    "title": "Payment Processing",
+    "content": "Para sa paid subscriptions, ginagamit namin ang Stripe bilang payment processor. Direktang kinukulekta at pinoproseso ng Stripe ang payment information mo. Hindi namin ineimbak ang credit card details mo sa servers namin.",
+    "stripePolicy": "Ang privacy policy ng Stripe ay matatagpuan sa: stripe.com/privacy"
+  },
+  "analytics": {
+    "title": "Analytics at Tracking",
+    "content": "Hindi kami gumagamit ng kahit anong third-party analytics, advertising, o behavioral tracking tools. Hindi kami nagpapatakbo ng trackers, cookies para sa advertising, fingerprinting beacons, o session replay. Ang tanging data na inilo-log namin tungkol sa activity mo ay inilalarawan sa View & Download Logging section sa baba — at pwede mo itong burahin anumang oras."
+  },
+  "accessControl": {
+    "title": "View at Download Logging",
+    "content1": "Sa bawat panoorin mo ng recording o pag-download ng video file, inilo-log namin ang event laban sa account mo. Bawat log entry ay may IP address mo, account ID (kung naka-log in), anonymous device fingerprint, at ang recording na in-access mo. Hindi namin inilo-log ang playback position, watch time, o behavioral patterns — ang nangyari lang ay access.",
+    "content2": "Inilo-log namin ang bawat authenticated view at download anuman ang subscription tier — basic, premium, champion, admin. Para sa anonymous visitors, gumagamit kami ng device-fingerprint cookie sa halip ng account ID. Umiiral ang data na ito para: (1) ipatupad ang 5-view limit para sa free at anonymous viewers, (2) ma-detect ang credit-card disputes sa pamamagitan ng patunay ng authorized account usage, (3) ma-detect ang account-sharing sa pamamagitan ng pagtuklas ng maraming distinct IPs na nag-access ng parehong account.",
+    "content3": "Hindi kailanman shini-share ang data na ito sa third parties at hindi ginagamit para sa advertising. Pwede mong burahin ang bawat view at download log na naka-link sa account mo anumang oras mula sa Settings → Privacy & Tracking Data. Pagkatapos ng pagbura, magsisimulang ulit ma-log ang mga bagong view at download."
+  },
+  "dataRetention": {
+    "title": "Data Retention",
+    "intro": "Pinapanatili lang namin ang data mo hangga't kinakailangan:",
+    "items": {
+      "account": "Account data",
+      "accountDesc": "Hanggang burahin mo ang account mo",
+      "freeStreams": "Recorded streams (Free plan)",
+      "freeStreamsDesc": "7 araw",
+      "premiumStreams": "Recorded streams (Premium plan)",
+      "premiumStreamsDesc": "60 araw",
+      "analyticsData": "Analytics data",
+      "analyticsDataDesc": "Anonymized, pinapanatili para sa service improvement"
+    }
+  },
+  "dataStorage": {
+    "title": "Saan Naka-store ang Data Mo",
+    "content": "Nasa Europe ang servers namin. Pinoproseso at ineimbak ang data mo nang sumusunod sa GDPR requirements. Hindi namin nililipat ang personal data mo labas ng European Economic Area (EEA) maliban kung kinakailangan para sa service provision (hal., Stripe payment processing) at may naaangkop na safeguards."
+  },
+  "thirdParties": {
+    "title": "Third Parties",
+    "intro": "Hindi namin ibinebenta ang data mo sa kahit sino. Shini-share lang namin ang data sa:",
+    "items": {
+      "stripe": "Stripe",
+      "stripeDesc": "Para sa payment processing at subscription management (kung mag-subscribe ka)"
+    },
+    "footer": "Hindi kami gumagamit ng third-party advertising networks o nagbebenta ng personal information mo."
+  },
+  "cookies": {
+    "title": "Cookies",
+    "intro": "Gumagamit lang kami ng essential cookies na kailangan para gumana nang maayos ang website:",
+    "items": {
+      "session": "Session cookies",
+      "sessionDesc": "Para manatiling naka-log in ka",
+      "preference": "Preference cookies",
+      "preferenceDesc": "Para maalala ang settings mo",
+      "access": "Access control cookies",
+      "accessDesc": "Para ipatupad ang viewing limits para sa free users"
+    },
+    "footer": "Hindi kami gumagamit ng advertising cookies o third-party tracking cookies. Ang access control cookie ay strictly necessary para magpatakbo ng freemium service namin."
+  },
+  "rights": {
+    "title": "Karapatan Mo (GDPR)",
+    "intro": "Sa ilalim ng GDPR, may sumusunod kang karapatan:",
+    "items": {
+      "access": "Right to Access",
+      "accessDesc": "Humiling ng kopya ng personal data mo",
+      "rectification": "Right to Rectification",
+      "rectificationDesc": "Itama ang inaccurate o incomplete data",
+      "erasure": "Right to Erasure",
+      "erasureDesc": "Humiling ng pagbura ng data mo",
+      "restrict": "Right to Restrict Processing",
+      "restrictDesc": "Limitahan kung paano namin ginagamit ang data mo",
+      "portability": "Right to Data Portability",
+      "portabilityDesc": "Tumanggap ng data mo sa portable format",
+      "object": "Right to Object",
+      "objectDesc": "Tumutol sa processing base sa legitimate interests",
+      "withdraw": "Right to Withdraw Consent",
+      "withdrawDesc": "Bawiin ang pahintulot anumang oras"
+    },
+    "footer": "Para magamit ang kahit anong karapatan, makipag-ugnayan sa amin sa contact@livestreamrecorder.com. Para sa view at download logs specifically, pwede mo ring i-clear sila sarili mula sa Settings → Privacy & Tracking Data."
+  },
+  "children": {
+    "title": "Privacy ng Bata",
+    "content": "Ang Serbisyo namin ay hindi para sa kahit sinong mas bata sa 18 taong gulang. Hindi kami sadyang nag-collect ng personal information mula sa mga batang mas bata sa 18.",
+    "contact": "Kung naniniwala kang nagbigay ng personal information sa amin ang isang bata, makipag-ugnayan kaagad sa contact@livestreamrecorder.com, at gagawa kami ng hakbang para tanggalin ang naturang impormasyon mula sa systems namin."
+  },
+  "security": {
+    "title": "Data Security",
+    "content": "Nagpapatupad kami ng naaangkop na technical at organizational measures para protektahan ang personal data mo laban sa unauthorized access, pagbabago, pagsisiwalat, o pagkasira. Kasama dito ang encryption, secure servers, at access controls. Gayunpaman, walang paraan ng pagpapadala sa Internet na 100% ligtas, at hindi namin magagarantiya ang absolute security."
+  },
+  "deleteAccount": {
+    "title": "Burahin ang Account Mo",
+    "content": "Para burahin ang account mo, pumunta sa Settings tapos Delete Account.",
+    "footer": "Kapag binura na, permanenteng tatanggalin ang lahat ng data mo mula sa servers namin. Hindi na ito mababawi."
+  },
+  "contact": {
+    "title": "Contact Us",
+    "content": "Kung may tanong ka tungkol sa Privacy Policy na ito, sa data mo, o sa karapatan mo, makipag-ugnayan sa amin:",
+    "email": "contact@livestreamrecorder.com",
+    "footer": "May karapatan ka rin na maghain ng reklamo sa supervisory authority (tulad ng Danish Data Protection Agency - Datatilsynet) kung naniniwala kang nilabag ang data protection rights mo."
+  },
+  "footerNote": "Kung i-update namin ang policy na ito, ipo-post namin ang pagbabago dito kasama ng bagong petsa. Ang patuloy na paggamit ng Serbisyo pagkatapos ng pagbabago ay nangangahulugang tinatanggap mo ang updated policy."
+}

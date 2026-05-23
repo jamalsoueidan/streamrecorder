@@ -1,0 +1,16 @@
+{
+  "title": "Libreria ({count})",
+  "description": "Gestisci i tuoi creator",
+  "disabledHint": "Gli elementi disattivati non hanno ancora registrazioni",
+  "emptyFiltered": {
+    "title": "Nessun creator corrisponde ai tuoi filtri",
+    "description": "Prova a modificare o cancellare i filtri"
+  },
+  "emptyDefault": {
+    "title": "Non hai ancora aggiunto creator",
+    "description": "Sfoglia Friends per scoprire i creator sulla nostra piattaforma"
+  },
+  "noMoreToLoad": "Sei arrivato alla fine",
+  "favorite": "Aggiungi ai preferiti",
+  "unfavorite": "Rimuovi dai preferiti"
+}

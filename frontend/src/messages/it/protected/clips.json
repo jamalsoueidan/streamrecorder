@@ -1,0 +1,17 @@
+{
+  "title": "Clip",
+  "description": "Clip recenti dalla community",
+  "emptyState": {
+    "title": "Nessuna clip",
+    "description": "Le clip appariranno qui man mano che vengono create dalla community."
+  },
+  "menu": {
+    "delete": "Elimina clip",
+    "deleteTitle": "Elimina clip",
+    "deleteConfirm": "Sei sicuro di voler eliminare questa clip? Questa azione non può essere annullata.",
+    "deleteButton": "Elimina",
+    "cancel": "Annulla",
+    "deleteSuccess": "Clip eliminata",
+    "deleteError": "Impossibile eliminare la clip"
+  }
+}

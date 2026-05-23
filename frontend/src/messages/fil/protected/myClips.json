@@ -1,0 +1,131 @@
+{
+  "title": "Mga Clip Ko",
+  "description": "AI-generated clips mula sa recordings mo",
+  "emptyState": {
+    "title": "Wala pang clip",
+    "description": "Lalabas dito ang clips kapag nai-generate na mula sa recordings mo"
+  },
+  "share": {
+    "tiktok": "I-publish sa TikTok",
+    "uploaded": "Na-publish sa TikTok",
+    "processing": "Nai-publish...",
+    "completed": "Na-publish",
+    "shared": "Na-publish",
+    "failed": "Nabigo",
+    "retry": "Subukang muli",
+    "failedTooltip": "Nabigo ang publish. I-click para subukang muli.",
+    "check": "I-check",
+    "checkStatus": "I-check ang TikTok status",
+    "youtube": "I-publish sa YouTube"
+  },
+  "actions": {
+    "edit": "I-edit ang video",
+    "delete": "Burahin"
+  },
+  "publishPage": {
+    "title": "I-publish sa TikTok",
+    "description": "I-review ang video mo at piliin kung paano mo gustong i-share sa TikTok",
+    "loadingCreator": "Nilo-load ang TikTok account mo...",
+    "publishingTo": "Nai-publish sa",
+    "descriptionLabel": "Pamagat",
+    "descriptionPlaceholder": "Sumulat ng pamagat para sa video mo...",
+    "privacyLabel": "Privacy status",
+    "privacyPlaceholder": "Piliin ang privacy status",
+    "privacy": {
+      "PUBLIC_TO_EVERYONE": "Lahat",
+      "MUTUAL_FOLLOW_FRIENDS": "Friends",
+      "FOLLOWER_OF_CREATOR": "Followers",
+      "SELF_ONLY": "Ako lang"
+    },
+    "interactionSettings": "Payagan ang mga user na",
+    "allowComments": "Magkomento",
+    "allowDuet": "Duet",
+    "allowStitch": "Stitch",
+    "disabledByCreator": "Naka-disable sa TikTok settings mo",
+    "commercialContent": "Content disclosure setting",
+    "commercialContentDescription": "I-on para i-disclose na ang video na ito ay nagpo-promote ng goods o services bilang kapalit ng kahit anong may halaga. Ang video mo ay maaaring magpromote sa sarili mo, sa third party, o pareho.",
+    "brandContentToggle": "Brand mo",
+    "brandContentDescription": "Nagpo-promote ka ng sarili mo o ng sariling negosyo mo. I-classify ang content na ito bilang Brand Organic.",
+    "brandOrganicToggle": "Branded content",
+    "brandOrganicDescription": "Nagpo-promote ka ng ibang brand o third party. I-classify ang content na ito bilang Branded Content.",
+    "promotionalContentLabel": "Ila-label ang video mo bilang 'Promotional content'.",
+    "paidPartnershipLabel": "Ila-label ang video mo bilang 'Paid partnership'.",
+    "cannotChangeWarning": "Hindi na ito mababago kapag na-post na ang video mo.",
+    "musicConfirmation": "Sa pag-post, sumasang-ayon ka sa TikTok's Music Usage Confirmation",
+    "confirmationPrefix": "Sa pag-post, sumasang-ayon ka sa",
+    "termsOfServiceLink": "Terms of Service ng LiveStreamRecorder",
+    "musicConfirmationLink": "Music Usage Confirmation ng TikTok",
+    "brandedContentPolicyLink": "Branded Content Policy ng TikTok",
+    "andText": "at",
+    "commercialContentToggle": "Ang content na ito ay nagpo-promote ng sarili mo, brand, product o service",
+    "commercialContentRequired": "Kailangan mong i-indicate kung ang content mo ay nagpo-promote ng sarili mo, third party, o pareho",
+    "brandedContentPrivacyWarning": "Ang branded content ay hindi pwedeng i-set sa private visibility",
+    "publishButton": "I-publish sa TikTok",
+    "uploadButton": "I-publish",
+    "cancel": "Kanselahin",
+    "backToClips": "Bumalik sa Clips",
+    "noTiktokConnection": {
+      "title": "Hindi naka-connect ang TikTok account",
+      "description": "Para mag-publish ng clips sa TikTok, pumunta sa Settings at i-connect ang TikTok account mo muna.",
+      "goToSettings": "Pumunta sa Settings",
+      "hint": "Kapag naka-connect na, bumalik dito para i-publish ang clip mo."
+    },
+    "success": "Nai-publish",
+    "successMessage": "Nai-publish ang video mo sa TikTok. Maaaring tumagal ng ilang minuto bago ma-process at lumabas sa profile mo.",
+    "error": "Error",
+    "errorMessage": "Nabigo ang publish sa TikTok",
+    "validation": {
+      "privacyRequired": "Pakipili kung sino ang makakapanood ng video na ito",
+      "musicConfirmationRequired": "Dapat kang sumang-ayon sa Music Usage Confirmation"
+    },
+    "cannotPostNow": "Naabot mo na ang daily posting limit mo sa TikTok. Pakisubukan muli mamaya.",
+    "videoTooLong": "Ang video na ito ay {duration} segundo ang haba, pero ang TikTok ay nagpapahintulot lang ng videos hanggang {maxDuration} segundo para sa account mo.",
+    "selfOnlyDisabledBranded": "Hindi pwedeng i-set sa private ang branded content visibility"
+  },
+  "youtubePublishPage": {
+    "title": "I-publish sa YouTube",
+    "description": "I-review ang video mo at i-publish bilang YouTube Short",
+    "titleLabel": "Pamagat",
+    "titlePlaceholder": "I-enter ang pamagat para sa video mo...",
+    "descriptionLabel": "Description",
+    "descriptionPlaceholder": "Magdagdag ng description (optional)...",
+    "privacyLabel": "Privacy",
+    "privacy": {
+      "public": "Publiko",
+      "unlisted": "Unlisted",
+      "private": "Private"
+    },
+    "tagsLabel": "Tags",
+    "tagsPlaceholder": "gaming, highlights, live stream",
+    "tagsDescription": "Comma-separated tags para matulungan ang viewers na mahanap ang video mo",
+    "checkingConnection": "Chini-check ang YouTube connection...",
+    "quotaWarning": "May daily upload limit ang YouTube. Kung nabigo ang upload dahil sa quota error, subukan muli bukas.",
+    "confirmationPrefix": "Sa pag-publish, sumasang-ayon ka sa",
+    "termsOfServiceLink": "Terms of Service ng LiveStreamRecorder",
+    "andText": "at",
+    "youtubeTermsLink": "Terms of Service ng YouTube",
+    "uploadButton": "I-publish sa YouTube",
+    "cancel": "Kanselahin",
+    "success": "Na-publish",
+    "successMessage": "Na-upload na ang video mo sa YouTube.",
+    "error": "Error",
+    "validation": {
+      "titleRequired": "Paki-enter ng pamagat para sa video mo"
+    },
+    "noYoutubeConnection": {
+      "title": "Hindi naka-connect ang YouTube account",
+      "description": "Para mag-publish ng clips sa YouTube, pumunta sa Settings at i-connect ang YouTube account mo muna.",
+      "goToSettings": "Pumunta sa Settings"
+    }
+  },
+  "upgrade": {
+    "title": "Mula recording hanggang TikTok sa loob ng ilang segundo",
+    "features": {
+      "publish": "Mag-post diretso sa TikTok, Reels, at Shorts",
+      "schedule": "I-schedule ang clips mo — maging consistent sa autopilot",
+      "edit": "Magdagdag ng captions, effects, at gawing sa iyo"
+    },
+    "upgradeButton": "Mag-upgrade Ngayon",
+    "hint": "I-unlock ang clip publishing sa premium subscription"
+  }
+}

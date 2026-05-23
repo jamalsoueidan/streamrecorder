@@ -1,0 +1,94 @@
+{
+  "title": "TikTok Insights",
+  "description": "Platform-wide TikTok Live analytics",
+  "globalStats": {
+    "title": "Platform Overview",
+    "totalUsers": "Total Gifters",
+    "totalDiamonds": "Total Diamonds",
+    "totalGifts": "Total Gifts",
+    "totalBattles": "Total Battles"
+  },
+  "dailyEarnings": {
+    "title": "Pang-araw-araw na Kita",
+    "seriesLabel": "Diamonds",
+    "empty": "Walang available na earnings data",
+    "allCountries": "Lahat ng Bansa",
+    "allLanguages": "Lahat ng Wika"
+  },
+  "topEarners": {
+    "title": "Top Earners",
+    "username": "Username",
+    "country": "Bansa",
+    "language": "Wika",
+    "diamonds": "Diamonds",
+    "gifts": "Gifts",
+    "gifters": "Gifters",
+    "empty": "Walang available na data",
+    "allCountries": "Lahat ng Bansa",
+    "allLanguages": "Lahat ng Wika"
+  },
+  "mostLive": {
+    "title": "Pinaka-aktibong Streamers",
+    "username": "Username",
+    "country": "Bansa",
+    "language": "Wika",
+    "sessions": "Sessions",
+    "hours": "Oras",
+    "empty": "Walang available na data",
+    "allCountries": "Lahat ng Bansa",
+    "allLanguages": "Lahat ng Wika"
+  },
+  "countryLeaderboard": {
+    "title": "Country Leaderboard",
+    "rank": "#",
+    "country": "Bansa",
+    "diamonds": "Diamonds",
+    "gifts": "Gifts",
+    "streamers": "Streamers",
+    "gifters": "Gifters",
+    "empty": "Walang available na data",
+    "loadMore": "Mag-load pa"
+  },
+  "languageLeaderboard": {
+    "title": "Language Leaderboard",
+    "rank": "#",
+    "language": "Wika",
+    "diamonds": "Diamonds",
+    "gifts": "Gifts",
+    "streamers": "Streamers",
+    "gifters": "Gifters",
+    "empty": "Walang available na data",
+    "loadMore": "Mag-load pa"
+  },
+  "topGifters": {
+    "title": "Top Gifters",
+    "description": "Mga user na nagpadala ng pinakamaraming total diamonds sa lahat ng streamers sa TikTok.",
+    "username": "Username",
+    "diamonds": "Diamonds",
+    "gifts": "Gifts",
+    "streamers": "Streamers Supported",
+    "empty": "Walang available na data"
+  },
+  "battleStats": {
+    "title": "Battle Leaderboard",
+    "description": "Mga streamer na nakaranggo ayon sa battle record nila. Ang battles ay live head-to-head competitions kung saan ang audience gifts ang nagde-decide ng panalo.",
+    "username": "Username",
+    "battles": "Battles",
+    "wins": "Wins",
+    "losses": "Losses",
+    "draws": "Draws",
+    "winRate": "Win Rate",
+    "empty": "Walang available na data"
+  },
+  "gifterRelationships": {
+    "title": "Gifter Relationships",
+    "description": "Top gifter–streamer pairs na nakaranggo ayon sa diamonds na ipinadala. Pinapakita kung sino ang pinaka-dedicated supporters ng individual streamers.",
+    "pair": "Gifter → Streamer",
+    "supported": "sumusuporta kay",
+    "gifter": "Gifter",
+    "streamer": "Streamer",
+    "diamonds": "Diamonds",
+    "gifts": "Gifts",
+    "empty": "Walang available na data"
+  }
+}

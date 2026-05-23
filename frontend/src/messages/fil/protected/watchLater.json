@@ -1,0 +1,13 @@
+{
+  "title": "Watch Later",
+  "description": "Naka-save lang sa device na ito",
+  "empty": "Walang naka-save na video. Magdagdag ng video mula sa menu para panoorin mamaya.",
+  "clear": "I-clear lahat",
+  "clearConfirm": {
+    "title": "I-clear ang Watch Later",
+    "message": "Sigurado ka bang gusto mong tanggalin lahat ng video sa Watch Later list mo?",
+    "confirm": "I-clear lahat",
+    "cancel": "Kanselahin"
+  },
+  "loadMore": "Mag-load pa"
+}

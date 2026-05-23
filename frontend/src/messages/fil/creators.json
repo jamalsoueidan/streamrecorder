@@ -1,0 +1,656 @@
+{
+  "meta": {
+    "all": {
+      "title": "Mga Creator sa LiveStreamRecorder",
+      "description": "Tuklasin ang mga creator na gumagamit ng LiveStreamRecorder para i-record ang kanilang live streams at gawing short clips. Sumali sa libu-libong creator sa TikTok, Twitch, YouTube, Kick at iba pa.",
+      "keywords": [
+        "content creators",
+        "live stream",
+        "stream recording",
+        "live stream recorder"
+      ]
+    },
+    "tiktok": {
+      "title": "Mga TikTok Creator",
+      "description": "Tuklasin ang mga TikTok creator na nire-record ang kanilang Lives sa LiveStreamRecorder. I-browse ang top TikTok creators, panoorin ang kanilang live recordings, at maghanap ng bagong creator na pwedeng i-follow.",
+      "keywords": [
+        "tiktok creator",
+        "tiktok content creator",
+        "tiktok creators",
+        "top tiktok creators",
+        "popular tiktok creators",
+        "find tiktok creators",
+        "tiktok creators list",
+        "tiktok top creators",
+        "popular creators on tiktok",
+        "tiktok popular creator",
+        "best tiktok content creators",
+        "content creator tiktok",
+        "tiktok for creators",
+        "tiktok creator page",
+        "become a tiktok creator",
+        "tiktok for content creators"
+      ],
+      "faqs": [
+        {
+          "question": "Paano ako makakahanap ng TikTok creators sa LiveStreamRecorder?",
+          "answer": "I-browse ang TikTok creators list namin para makita ang mga content creator na nire-record ang kanilang Lives sa LiveStreamRecorder. Pwede kang mag-search by name o tingnan ang popular TikTok creators para makahanap ng bagong streamer na panoorin."
+        },
+        {
+          "question": "Paano ako magkakaroon ng TikTok creator page sa LiveStreamRecorder?",
+          "answer": "Mag-sign up nang libre at idagdag ang TikTok username mo. Awtomatikong magagawa ang TikTok creator page mo at magsisimulang mag-record ang Lives mo. Pwede ring i-browse ng ibang users ang recordings mo at matuklasan ang content mo."
+        },
+        {
+          "question": "Content creator ako sa TikTok — bakit ko dapat i-record ang Lives ko?",
+          "answer": "Nawawala ang TikTok Lives mo kapag natapos na. Bilang TikTok content creator, kapag nire-record mo ang Lives mo, pwede mong panoorin ulit ang pinakamagagandang moments, i-download para i-edit, at gamitin ang ClipAI para gawing TikTok clips, Reels, o Shorts ang highlights. Mas maraming content sa bawat Live = mas malaking growth."
+        },
+        {
+          "question": "Paano ako magiging TikTok creator sa LiveStreamRecorder?",
+          "answer": "Mag-sign up lang nang libre at idagdag ang TikTok username mo. Awtomatikong nare-record ang bawat Live na ginagawa mo. Makikita sa creator page mo ang lahat ng recordings, kaya madaling mahabol ng fans ang Lives na hindi nila naabutan."
+        },
+        {
+          "question": "Pwede ba akong makakita ng listahan ng top TikTok creators na gumagamit ng LiveStreamRecorder?",
+          "answer": "Oo. I-browse ang page na ito para makita ang popular TikTok creators na nire-record ang Lives nila sa LiveStreamRecorder. Nag-aupdate ang listahan habang dumarami ang content creators na sumasali at nag-go live."
+        },
+        {
+          "question": "Libre ba ang LiveStreamRecorder para sa TikTok creators?",
+          "answer": "Oo. Pwedeng mag-sign up ang TikTok creators at mag-record ng Lives nila nang libre. Mai-unlock ng Premium plans ang pag-download ng recordings, ClipAI para sa awtomatikong highlight clips, at extended storage."
+        },
+        {
+          "question": "Paano palalakihin ng TikTok creators ang following nila gamit ang LiveStreamRecorder?",
+          "answer": "I-record awtomatikong ang TikTok Lives mo, tapos gamitin ang ClipAI para gawing short clips ang pinakamagagandang moments. I-post bilang TikToks, YouTube Shorts, o Reels. Pwedeng maging maraming piraso ng content ang isang Live — mas maraming post, mas maraming reach, mas maraming followers."
+        },
+        {
+          "question": "Pwede ko bang gamitin ang recordings ko para sa TikTok creator campaigns o ads?",
+          "answer": "Oo. Ang live recordings mo ay content mo. I-download at gamitin sa kahit anong paraan — para sa TikTok creator campaigns, ad content, portfolio reels, o cross-platform posting."
+        }
+      ]
+    },
+    "twitch": {
+      "title": "Mga Twitch Streamer at Creator",
+      "description": "Tuklasin ang mga Twitch streamer na nire-record ang live streams nila sa LiveStreamRecorder. I-browse ang top Twitch live streamers, panoorin ang stream recordings nila, at maghanap ng bagong streamer na i-follow.",
+      "keywords": [
+        "twitch live streamers",
+        "twitch streamers",
+        "live twitch streamers",
+        "twitch live streamer",
+        "twitch streamer live",
+        "top live streamers",
+        "best live streamers",
+        "streamer live",
+        "twitch tv streamer",
+        "starting twitch streaming",
+        "starting a twitch",
+        "starting to stream on twitch",
+        "stream for twitch",
+        "streaming in twitch",
+        "irl streams",
+        "twitch irl stream",
+        "for streamers"
+      ],
+      "faqs": [
+        {
+          "question": "Paano ako makakahanap ng Twitch streamers sa LiveStreamRecorder?",
+          "answer": "I-browse ang Twitch streamers page namin para matuklasan ang live streamers na nire-record ang streams nila sa LiveStreamRecorder. Mag-search by name o tingnan ang top Twitch live streamers para makahanap ng bagong channel na i-follow."
+        },
+        {
+          "question": "Paano ako magkakaroon ng Twitch streamer page sa LiveStreamRecorder?",
+          "answer": "Mag-sign up nang libre at ikonekta ang Twitch channel mo. Awtomatikong magagawa ang streamer page mo at nare-record ang bawat live stream mo. Pwedeng i-browse ng fans ang lahat ng stream recordings mo sa isang lugar — kahit nag-expire na ang Twitch VODs mo."
+        },
+        {
+          "question": "Nagsisimula akong mag-stream sa Twitch — dapat ko bang i-record ang streams ko?",
+          "answer": "Talagang oo. Kapag nagsisimula ka pa lang sa Twitch streaming, mahalaga ang bawat stream. Kapag nire-record mo ang live streams mo, pwede mong panoorin ulit ang content mo, pagandahin ang delivery mo, at gamitin ang ClipAI para gawing short clips ang highlights para sa TikTok, YouTube Shorts, o Reels. Isa ito sa pinakamagandang paraan para lumaki bilang bagong Twitch streamer."
+        },
+        {
+          "question": "Paano palalakihin ng Twitch streamers ang audience nila gamit ang LiveStreamRecorder?",
+          "answer": "I-record awtomatikong ang Twitch live streams mo, tapos gamitin ang ClipAI para gumawa ng highlight clips mula sa pinakamagagandang moments. I-post sa TikTok, YouTube Shorts, at Reels. Ginagamit ng top Twitch live streamers ang content nila sa maraming platform — pinapadali ng LiveStreamRecorder yan."
+        },
+        {
+          "question": "Libre ba ang LiveStreamRecorder para sa Twitch streamers?",
+          "answer": "Oo. Pwedeng mag-sign up ang Twitch streamers at mag-record ng live streams nila nang libre. Mai-unlock ng Premium plans ang pag-download ng recordings, ClipAI para sa awtomatikong highlight clips, at extended storage."
+        },
+        {
+          "question": "Nare-record din ba ang IRL streams?",
+          "answer": "Oo. Kinukuha ng LiveStreamRecorder ang lahat ng Twitch streams mo — gaming, IRL streams, just chatting, o kahit anong kategorya. Tuwing nag-go live ka sa Twitch, awtomatikong nare-record ang stream mo kahit ano pa ang content type."
+        },
+        {
+          "question": "Ano ang difference nito sa Twitch VODs?",
+          "answer": "Nag-eexpire ang Twitch VODs after 14–60 days at pwedeng ma-mute. Binibigyan ng LiveStreamRecorder ang Twitch streamers ng permanenteng backup. Hindi nag-eexpire ang stream recordings mo, full quality lagi, at handa nang panoorin o i-download anumang oras."
+        },
+        {
+          "question": "Pwede bang gawing clips ng Twitch streamers ang streams nila?",
+          "answer": "Oo. Pwedeng gamitin ng Premium users ang ClipAI para awtomatikong gawing short highlight clips ang Twitch stream recordings. Pinakamabilis na paraan para sa Twitch live streamers na gumawa ng content para sa ibang platforms nang hindi gumugugol ng oras sa pag-edit."
+        }
+      ]
+    },
+    "youtube": {
+      "title": "Mga YouTube Creator",
+      "description": "Tuklasin ang mga YouTube creator na nire-record ang live streams nila sa LiveStreamRecorder. I-browse ang YouTube content creators, panoorin ang live recordings nila, at maghanap ng bagong channel na i-subscribe.",
+      "keywords": [
+        "youtube creators",
+        "youtube content creator",
+        "youtube creator studio",
+        "yt creator",
+        "youtube video creator",
+        "youtube shorts creator",
+        "youtube shorts maker",
+        "youtube channel creator",
+        "youtube video makers",
+        "content creation youtube",
+        "content for youtubers",
+        "youtubers shorts",
+        "youtubers content"
+      ],
+      "faqs": [
+        {
+          "question": "Paano ako makakahanap ng YouTube creators sa LiveStreamRecorder?",
+          "answer": "I-browse ang YouTube creators page namin para matuklasan ang content creators na nire-record ang live streams nila sa LiveStreamRecorder. Mag-search by name o tingnan ang popular YouTube creators para makahanap ng bagong channel na sulit i-subscribe."
+        },
+        {
+          "question": "Paano ako magkakaroon ng YouTube creator page sa LiveStreamRecorder?",
+          "answer": "Mag-sign up nang libre at ikonekta ang YouTube channel mo. Awtomatikong na-set up ang creator page mo at magsisimulang mag-record ang live streams mo. Pwedeng i-browse ng fans ang lahat ng recorded Lives mo sa isang lugar."
+        },
+        {
+          "question": "YouTube content creator ako — bakit ko dapat i-record ang Lives ko?",
+          "answer": "Bilang YouTube content creator, puno ng moments na sulit gamiting ulit ang live streams mo. Kapag nire-record mo ang Lives mo, pwede mong panoorin ulit ang highlights, i-download para i-edit, at gamitin ang ClipAI para gawing YouTube Shorts ang pinakamagagandang parte. Pwedeng makapagpalakas ng content creation mo ng ilang araw ang isang Live."
+        },
+        {
+          "question": "Paano gagawing Shorts ng YouTube creators ang Lives nila?",
+          "answer": "Ina-analyze ng ClipAI ang recorded live streams mo at kinukuha ang highlight clips na formatted para sa YouTube Shorts. Para sa YouTube creators na gustong palakihin ang channel nila, ang paggawa ng maraming Shorts mula sa isang live stream ay isa sa pinakamadaling content creation strategy."
+        },
+        {
+          "question": "Libre ba ang LiveStreamRecorder para sa YouTube creators?",
+          "answer": "Oo. Pwedeng mag-sign up ang YouTube creators at mag-record ng live streams nila nang libre. Mai-unlock ng Premium plans ang pag-download ng recordings, ClipAI para sa awtomatikong Shorts creation, at extended storage."
+        },
+        {
+          "question": "Ano ang difference nito sa YouTube Studio?",
+          "answer": "Pinapahintulutan ka ng YouTube Studio na i-manage ang channel mo at i-access ang stream replays — pero pwedeng mabigo ang replays na ma-process, ma-delete, o mawalan ng quality. Binibigyan ng LiveStreamRecorder ang YouTube creators ng independent backup. Awtomatikong nare-record ang live streams mo at hiwalay na nasa-save, kaya nasa iyo lagi ang content mo."
+        },
+        {
+          "question": "Pwede ko bang gamitin ang recordings ko para sa YouTube ads o promotions?",
+          "answer": "Oo. Ang live recordings mo ay content mo. I-download at gamitin sa kahit anong paraan — para sa YouTube ads, channel trailers, compilation videos, o cross-platform posting sa TikTok at Reels."
+        },
+        {
+          "question": "Paano palalakihin ng YouTube creators ang channel nila gamit ang LiveStreamRecorder?",
+          "answer": "I-record awtomatikong ang live streams mo, tapos gamitin ang ClipAI para gumawa ng YouTube Shorts mula sa pinakamagagandang moments. Consistent Shorts mula sa Lives mo ay nagpapanatili sa channel mo na active sa pagitan ng streams — mas maraming content para sa subscribers, mas maraming chance na maabot ang bagong viewers."
+        }
+      ]
+    },
+    "kick": {
+      "title": "Mga Kick Creator",
+      "description": "Tuklasin ang mga Kick creator na gumagamit ng LiveStreamRecorder para i-record ang kanilang live streams at gawing short clips.",
+      "keywords": [
+        "kick creators",
+        "kick live stream",
+        "kick recording",
+        "kick stream recorder"
+      ]
+    },
+    "pandalive": {
+      "title": "Mga Pandalive Creator",
+      "description": "Tuklasin ang mga Pandalive creator na gumagamit ng LiveStreamRecorder para i-record ang kanilang live streams at gawing short clips.",
+      "keywords": [
+        "pandalive creators",
+        "korean live stream",
+        "pandalive recording",
+        "korean stream recorder"
+      ]
+    },
+    "afreecatv": {
+      "title": "Mga AfreecaTV Creator",
+      "description": "Tuklasin ang mga AfreecaTV creator na gumagamit ng LiveStreamRecorder para i-record ang kanilang live streams at gawing short clips.",
+      "keywords": [
+        "afreecatv creators",
+        "korean live stream",
+        "afreecatv recording",
+        "korean stream recorder"
+      ]
+    },
+    "bigo": {
+      "title": "Mga Bigo Creator",
+      "description": "Tuklasin ang mga Bigo creator na gumagamit ng LiveStreamRecorder para i-record ang kanilang live streams at gawing short clips.",
+      "keywords": [
+        "bigo creators",
+        "bigo live stream",
+        "bigo recording",
+        "bigo stream recorder"
+      ]
+    },
+    "buzzcast": {
+      "title": "Mga Buzzcast Creator",
+      "description": "Tuklasin ang mga Buzzcast creator na gumagamit ng LiveStreamRecorder para i-record ang kanilang live streams at gawing short clips.",
+      "keywords": [
+        "buzzcast creators",
+        "buzzcast live stream",
+        "buzzcast recording",
+        "buzzcast stream recorder"
+      ]
+    },
+    "liveme": {
+      "title": "Mga LiveMe Creator",
+      "description": "Tuklasin ang mga LiveMe creator na gumagamit ng LiveStreamRecorder para i-record ang kanilang live streams at gawing short clips.",
+      "keywords": [
+        "liveme creators",
+        "liveme live stream",
+        "liveme recording",
+        "liveme stream recorder"
+      ]
+    },
+    "mixch": {
+      "title": "Mga Mixch Creator",
+      "description": "Tuklasin ang mga Mixch creator na gumagamit ng LiveStreamRecorder para i-record ang kanilang live streams at gawing short clips.",
+      "keywords": [
+        "mixch creators",
+        "mixch live stream",
+        "mixch recording",
+        "mixch stream recorder"
+      ]
+    },
+    "joilive": {
+      "title": "Mga Joilive Streamer — I-save ang Live Broadcasts Mo",
+      "description": "Gumagamit ang mga Joilive streamer (joilive.net) ng LiveStreamRecorder bilang kanilang personal archive. Nai-save sa creator page mo ang bawat Live na bina-broadcast mo — searchable gamit ang Joilive user ID mo, accessible sa clean URL kaysa numeric ?s= link.",
+      "keywords": [
+        "joilive streamer",
+        "joilive creator profile",
+        "joilive user id lookup",
+        "joilive archive",
+        "joilive broadcast backup",
+        "find joilive streamers by username",
+        "save joilive live",
+        "joilive live history",
+        "joilive creator page",
+        "joilive content creator",
+        "joilive shareable profile"
+      ],
+      "faqs": [
+        {
+          "question": "Numeric user IDs ang gamit ng Joilive — paano talaga ako mahahanap ng fans?",
+          "answer": "Yan ang hindi inaayos ng Joilive. Ang URL sa platform ay `joilive.net/user/index.html?s=1880…` — imposibleng tandaan, imposibleng i-share. Pinapalitan ito ng LiveStreamRecorder creator page mo ng clean URL na pwedeng i-type, i-bookmark, at i-share ng fans. Pareho lang na Joilive user ID sa likod; mas magandang front door."
+        },
+        {
+          "question": "Joilive streamer ako — ano ba talaga ang ginagawa ng LiveStreamRecorder para sa akin?",
+          "answer": "Dalawang bagay. (1) Nire-record mo ang sariling Lives mo — awtomatikong nase-save ang bawat broadcast sa creator page mo bilang viewable archive. (2) Nabibigyan ang archive mo ng shareable, search-friendly URL sa halip ng numeric ID link ng Joilive. Mahahanap ka ng fans sa pagitan ng streams, hindi lang kapag nag-go live ka."
+        },
+        {
+          "question": "Walang archive ang Joilive. Ano ang nangyayari sa mga lumang Lives ko?",
+          "answer": "Sa Joilive, kapag nag-offline ka, wala na ang broadcast — walang replay, walang VOD. Bilang Joilive streamer na nire-record ang sariling Lives sa LiveStreamRecorder, mananatiling panoorin ang bawat broadcast forever sa page mo. Useful para sa late-timezone fans, fans na hindi nakaabot, at sa portfolio mo."
+        },
+        {
+          "question": "Kailangan ko ba ng OBS, screen recording, o kahit anong software?",
+          "answer": "Hindi. Mag-go live ka sa Joilive gaya ng dati. Kinukuha ng LiveStreamRecorder ang broadcast server-side — walang tumatakbo sa PC o phone mo. Walang CPU na inuubos, walang laptop fan na umiingay, walang resolution drop sa side mo."
+        },
+        {
+          "question": "Pwede ba akong mag-sign up bago ako magkaroon ng malaking audience?",
+          "answer": "Oo — yan talaga ang pinakamagandang oras. Ang backlog ng clean Joilive Lives ay nagbibigay sa bagong viewers ng panoorin pagkatapos ng first stream nila sa iyo. Mag-sign up nang libre, idagdag ang user ID mo, at simulan nang itayo ang archive mula day one."
+        },
+        {
+          "question": "Libre ba ang LiveStreamRecorder para sa Joilive streamers?",
+          "answer": "Oo, fully libre para i-save ang Joilive Lives mo. Mai-unlock ng Premium ang pag-download ng raw video files, ClipAI para sa awtomatikong short-form clips, at mas mahabang retention."
+        },
+        {
+          "question": "Paano ako makakakuha ng viewers sa labas ng Joilive app?",
+          "answer": "Ina-scan ng ClipAI ang nai-save mong Joilive broadcasts at gumagawa ng highlight clips na formatted para sa TikTok, YouTube Shorts, at Instagram Reels. Maliit ang Joilive — nasa ibang lugar ang audience mo. Abutin sila gamit ang clips, ibalik sila sa Joilive room mo kapag live ka."
+        }
+      ]
+    },
+    "live17": {
+      "title": "Mga 17live Creator — V-Livers, Livers, at Talent-Backed Streamers",
+      "description": "Ang 17live (yi-qi live, 一起 = 'magkasama') ay ikatlong pinakamalaking live-streaming platform sa Asya na may unique na Liver + V-Liver mix. I-browse ang 17live talent-managed Livers mula Japan, Taiwan, at Hong Kong na gumagamit ng LiveStreamRecorder para ilagay ang broadcasts nila sa public, search-indexed creator page sa labas ng app.",
+      "keywords": [
+        "17live liver",
+        "17live v-liver",
+        "17live talent",
+        "17live japan",
+        "17live taiwan",
+        "17live hong kong",
+        "17live creator page outside app",
+        "find 17live streamers by name",
+        "17live virtual streamer",
+        "17live vtuber alternative",
+        "17live yi-qi together"
+      ],
+      "faqs": [
+        {
+          "question": "May Stream Archive at Stream Clips na sa app ang 17live — bakit ko kailangan ito?",
+          "answer": "Pareho ang in-app Archive at in-app Clips (15–90 sec) ay nasa likod ng 17live app, nasa likod ng permission settings ng streamer, at hindi naka-index sa Google o shareable bilang real web URL. Binibigyan ka ng LiveStreamRecorder ng public, search-engine-findable creator page kung saan ang bawat Live ay watchable video — walang app install, walang permission gate, walang 90-second limit sa broadcast mismo."
+        },
+        {
+          "question": "V-Liver ako — gumagana ba ito sa virtual avatar streams?",
+          "answer": "Oo. Kinukuha namin kung ano talaga ang ina-broadcast ng 17live. Kung naka-on stream ang V-Liver avatar mo, yan ang nare-record. Nasa upstream ang capture ng kahit anong rendering na ginagawa mo — pareho ang flow kung Liver ka, V-Liver, o gumagamit ng OBS-based setup."
+        },
+        {
+          "question": "May talent agency ang nag-manage ng 17live account ko — pwede pa rin ba akong gumamit nito?",
+          "answer": "Oo, opt-in ang recording sa iyo (o sa agency mo) at sa profile mo lang nakakaapekto. Patuloy na mag-manage ang agency mo ng scheduling, gifting promos, at internal tools ng 17live. Binibigyan lang ng LiveStreamRecorder ang broadcasts mo ng external home para mahanap ng fans sa public web."
+        },
+        {
+          "question": "Malakas ako sa Japan at Taiwan pero gusto kong lumaki sa Southeast Asia / EN-speaking markets",
+          "answer": "Yan ang long-tail problem ng 17live para sa non-Japanese fans — Asia-first ang 17live app, pero mas mahirap ang discovery para sa bagong viewers sa labas ng region. Nasa open web ang LiveStreamRecorder page mo na may English-readable URLs, at gumagawa ang ClipAI ng highlight clips na pwede mong i-post sa TikTok, Reels, at Shorts para maabot ang bagong audiences na susunod sa iyo pabalik sa 17live."
+        },
+        {
+          "question": "May kailangan ba akong software na tumatakbo sa phone o PC ko?",
+          "answer": "Wala. Mag-go live ka sa 17live app gaya ng dati. Nangyayari ang recording server-side. Walang ekstrang i-install, walang CPU na inuubos, walang battery hit sa iPhone o Android mo."
+        },
+        {
+          "question": "Libre ba ang LiveStreamRecorder para sa 17live creators?",
+          "answer": "Oo. Sine-save ng free tier ang bawat Live sa creator page mo indefinitely. Mai-unlock ng Premium ang raw HEVC video downloads, ClipAI auto-clips, at extended retention windows."
+        },
+        {
+          "question": "Maaapektuhan ba ang 17live ranking, Hot Star events, o gifting income ko?",
+          "answer": "Hindi. Hindi hinahawakan ng LiveStreamRecorder ang 17live account mo, gifting, Hot Star points, o talent agency contracts. Opt-in ang recording mo bilang 17live creator para sa sariling account mo, at sariling Lives mo lang ang kinukuha — wala nang iba. Kopya lang ng broadcast mo na nai-store sa public web sa halip na sa loob ng 17live app."
+        }
+      ]
+    },
+    "kwai": {
+      "title": "Mga Kwai Creator — I-save ang Bawat Live, Abutin sa Labas ng Brazil at Emerging Markets",
+      "description": "Ang Kwai (kuài 快 = 'mabilis') ay global short-video + live-streaming app ng Kuaishou Technology, dominante sa Brazil, Indonesia, Mexico, at Middle East. Binibigyan ng LiveStreamRecorder ang Kwai creators ng public, search-indexed creator page para mabuhay ang Lives mo sa labas ng Kwai app at maabot ang viewers na walang Kwai installed.",
+      "keywords": [
+        "kwai creator",
+        "kwai streamer brazil",
+        "kwai live save",
+        "kwai live archive",
+        "kwai live replay alternative",
+        "kuaishou kwai",
+        "kwai creator page outside app",
+        "find kwai creators by name",
+        "save my kwai live",
+        "kwai live recorder",
+        "kwai live download"
+      ],
+      "faqs": [
+        {
+          "question": "Malaki ang audience ng Kwai sa Brazil at emerging markets — ano ang idinadagdag ng LiveStreamRecorder?",
+          "answer": "Dalawang bagay: (1) bawat Kwai Live na bina-broadcast mo ay nai-save sa public creator page sa labas ng Kwai app, kaya mahahanap ka ng fans (lalo na yung walang Kwai installed) sa open web. (2) Nabibigyan ang archive mo ng clean, search-indexable URL — useful para sa fans sa YouTube, Instagram, o local apps. Ang Kwai app ang real-time room mo; ang LiveStreamRecorder ang long-tail home."
+        },
+        {
+          "question": "Kailangan ko ba ng OBS o kahit anong phone app para gumana ito?",
+          "answer": "Hindi. Mag-broadcast ka sa Kwai gaya ng dati — mula sa Kwai app sa phone mo. Nangyayari ang recording server-side sa infrastructure namin. Walang CPU drain sa phone mo, walang battery hit, walang pangalawang app na bukas sa background."
+        },
+        {
+          "question": "Nasa Brazil ako — pwede ko bang maabot ang fans sa labas ng LatAm Kwai community?",
+          "answer": "Yan ang pinakamagaling na ipinaayos ng LiveStreamRecorder. Malaki ang Kwai sa Brazil pero ang English-speaking viewers, fans sa EU, o kahit sino na wala sa Kwai ay mahirap makahanap ng Brazilian Kwai creators. Ang LiveStreamRecorder page mo ay public web URL na may English-readable URLs at metadata na ini-index ng Google. Plus gumagawa ang ClipAI ng highlight clips para sa TikTok / Reels / Shorts para maibalik ang viewers sa Kwai Lives mo."
+        },
+        {
+          "question": "Ano ang nangyayari sa Kwai Live ko pagkatapos?",
+          "answer": "Sa loob ng Kwai app, depende sa replay policy ng platform at settings mo ang availability ng Live mo. Sa labas ng app, may full-length copy ang LiveStreamRecorder sa creator page mo indefinitely. Sa iyo na, share, delete — independent sa lifecycle rules ng Kwai."
+        },
+        {
+          "question": "Naaapektuhan ba nito ang Kwai gifting, K-coins, o Kwai creator account ko?",
+          "answer": "Hindi. Hindi nagla-log in ang LiveStreamRecorder sa Kwai account mo o humahawak ng K-coins, ranking, gifting income, o creator program perks. Opt-in ang recording mo bilang Kwai creator para sa sariling account mo, at sariling Lives mo lang ang kinukuha — wala nang iba."
+        },
+        {
+          "question": "Libre ba ang LiveStreamRecorder para sa Kwai creators?",
+          "answer": "Oo. Sine-save ng free tier ang bawat Live indefinitely sa creator page mo. Mai-unlock ng Premium ang raw video downloads, ClipAI auto-clips para sa short-form posting, at extended retention."
+        },
+        {
+          "question": "Pwede ko bang i-download ang Kwai Lives ko para i-re-upload sa iba?",
+          "answer": "Oo — pwedeng i-download ng Premium users ang raw HEVC video file mula sa bawat recording. Useful para sa cross-posting sa YouTube bilang long-form content, pag-re-edit sa compilations, o local archival."
+        }
+      ]
+    },
+    "trovo": {
+      "title": "Mga Trovo Streamer",
+      "description": "Tuklasin ang mga Trovo streamer na gumagamit ng LiveStreamRecorder para i-save ang kanilang sariling streams. I-browse ang Trovo creators sa gaming, IRL, at music — panoorin ang stream recordings nila at maghanap ng bagong broadcaster na i-follow.",
+      "keywords": [
+        "trovo streamer",
+        "trovo creator",
+        "trovo streamers list",
+        "top trovo streamers",
+        "popular trovo creators",
+        "find trovo streamers",
+        "trovo creator page",
+        "become a trovo streamer",
+        "trovo for creators",
+        "trovo content creator",
+        "trovo gaming streamer"
+      ],
+      "faqs": [
+        {
+          "question": "Paano ako makakahanap ng Trovo streamers sa LiveStreamRecorder?",
+          "answer": "I-browse ang Trovo creators page namin para matuklasan ang streamers na sine-save ang sariling streams sa LiveStreamRecorder. Mag-search by name o tingnan ang popular Trovo streamers sa gaming, IRL, music, at just-chatting categories para makahanap ng bagong broadcaster na i-follow."
+        },
+        {
+          "question": "Paano ako magkakaroon ng Trovo creator page sa LiveStreamRecorder?",
+          "answer": "Mag-sign up nang libre at idagdag ang Trovo channel mo. Awtomatikong magagawa ang creator page mo at magsisimulang ma-save ang streams mo mula sa sandaling mag-go live ka. Pwedeng i-browse ng fans ang lahat ng stream recordings mo sa isang lugar — independent sa sariling VOD system ng Trovo."
+        },
+        {
+          "question": "Trovo streamer ako — bakit ko dapat i-record ang streams ko?",
+          "answer": "May sariling VOD system ang Trovo, pero pwedeng mabigo ang replays na ma-process, magbago ang channels, at maalis ang mga lumang streams. Bilang Trovo streamer, kapag nire-record mo ang streams mo sa LiveStreamRecorder, nabibigyan ka ng reliable na independent backup — mananatiling available ang bawat clutch play, IRL moment, at music session kahit wala na ang original Trovo VOD."
+        },
+        {
+          "question": "Paano ako magiging Trovo creator sa LiveStreamRecorder?",
+          "answer": "Mag-sign up lang nang libre at idagdag ang Trovo channel mo — yan lang. Awtomatikong kinukuha ang bawat stream na ginagawa mo. Nakalista sa creator page mo ang lahat ng recordings para mahabol ng fans ang streams na hindi nila naabutan."
+        },
+        {
+          "question": "Pwede ba akong makakita ng listahan ng top Trovo streamers na gumagamit ng LiveStreamRecorder?",
+          "answer": "Oo. I-browse ang page na ito para makita ang Trovo streamers na sine-save ang sariling streams sa LiveStreamRecorder. Bagong platform ang Trovo at nag-aupdate ang listahan habang dumarami ang creators na sumasali — magandang lugar para matuklasan ang streamers na nagtatayo pa ng audience."
+        },
+        {
+          "question": "Libre ba ang LiveStreamRecorder para sa Trovo streamers?",
+          "answer": "Oo. Pwedeng mag-sign up ang Trovo streamers at mag-save ng streams nila nang libre. Mai-unlock ng Premium plans ang pag-download ng recordings, ClipAI para sa awtomatikong highlight clips, at extended storage."
+        },
+        {
+          "question": "Paano palalakihin ng Trovo streamers ang following nila gamit ang LiveStreamRecorder?",
+          "answer": "Ginagawang short highlight clips ng ClipAI ang nai-save mong Trovo streams, handa nang i-post sa TikTok, YouTube Shorts, o Instagram Reels. Clutch plays, funny reactions, IRL moments, music highlights — gawing maraming piraso ng shareable content ang isang stream at abutin ang viewers sa labas ng Trovo app."
+        }
+      ]
+    },
+    "twitcast": {
+      "title": "Mga TwitCasting Streamer",
+      "description": "Tuklasin ang mga TwitCasting streamer (ツイキャス) na gumagamit ng LiveStreamRecorder para i-save ang sariling Lives. I-browse ang TwitCasting creators, panoorin ang archived broadcasts nila, at maghanap ng bagong streamer na i-follow.",
+      "keywords": [
+        "twitcasting creator",
+        "twitcasting streamer",
+        "twitcasting streamers list",
+        "top twitcasting streamers",
+        "popular twitcasting creators",
+        "find twitcasting streamers",
+        "twitcasting creator page",
+        "become a twitcasting streamer",
+        "twitcasting for creators",
+        "twitcasting live streamer",
+        "twitcasting content creator"
+      ],
+      "faqs": [
+        {
+          "question": "Paano ako makakahanap ng TwitCasting streamers sa LiveStreamRecorder?",
+          "answer": "I-browse ang TwitCasting creators page namin para matuklasan ang streamers na sine-save ang sariling Lives sa LiveStreamRecorder. Mag-search by name o tingnan ang popular TwitCasting streamers sa chat, music, voice, at entertainment categories para makahanap ng bagong broadcaster na i-follow."
+        },
+        {
+          "question": "Paano ako magkakaroon ng TwitCasting creator page sa LiveStreamRecorder?",
+          "answer": "Mag-sign up nang libre at idagdag ang TwitCasting username mo. Awtomatikong magagawa ang creator page mo at magsisimulang ma-save ang Lives mo mula sa sandaling mag-go live ka. Pwedeng i-browse ng fans ang lahat ng recordings mo sa isang lugar — independent sa archive limits ng TwitCasting."
+        },
+        {
+          "question": "TwitCasting streamer ako — bakit ko dapat i-record ang Lives ko?",
+          "answer": "May sariling archive system ang TwitCasting, pero limitado ang haba ng free-tier archives at pwedeng maalis ang mga lumang broadcasts para makatipid ng space. Bilang TwitCasting streamer, kapag nire-record mo ang Lives mo sa LiveStreamRecorder, nabibigyan ka ng permanenteng backup na walang length cap — mananatiling available ang chat sessions, song covers, voice-only Lives, at special moments mo kahit nag-expire na ang archive ng platform."
+        },
+        {
+          "question": "Paano ako magiging TwitCasting creator sa LiveStreamRecorder?",
+          "answer": "Mag-sign up lang nang libre at idagdag ang TwitCasting username mo — yan lang. Awtomatikong kinukuha ang bawat Live na bina-broadcast mo. Nakalista sa creator page mo ang lahat ng recordings para mahabol ng fans ang Lives na hindi nila naabutan sa iba't ibang time zones."
+        },
+        {
+          "question": "Pwede ba akong makakita ng listahan ng top TwitCasting streamers na gumagamit ng LiveStreamRecorder?",
+          "answer": "Oo. I-browse ang page na ito para makita ang TwitCasting streamers na sine-save ang sariling Lives sa LiveStreamRecorder. Nag-aupdate ang listahan habang dumarami ang creators na sumasali at nagsisimulang mag-broadcast."
+        },
+        {
+          "question": "Libre ba ang LiveStreamRecorder para sa TwitCasting streamers?",
+          "answer": "Oo. Pwedeng mag-sign up ang TwitCasting streamers at mag-save ng Lives nila nang libre. Mai-unlock ng Premium plans ang pag-download ng recordings, ClipAI para sa awtomatikong highlight clips, at extended storage."
+        },
+        {
+          "question": "Paano palalakihin ng TwitCasting streamers ang following nila gamit ang LiveStreamRecorder?",
+          "answer": "Ginagawang short highlight clips ng ClipAI ang nai-save mong TwitCasting Lives, handa nang i-post sa TikTok, YouTube Shorts, o Instagram Reels. Best chat moments, song highlights, co-broadcast clips — gawing maraming piraso ng shareable content ang isang Live at abutin ang fans sa labas ng TwitCasting app."
+        }
+      ]
+    }
+  },
+  "hero": {
+    "title": {
+      "all": "Mga Creator",
+      "tiktok": "Mga TikTok Creator",
+      "twitch": "Mga Twitch Creator",
+      "youtube": "Mga YouTube Creator",
+      "kick": "Mga Kick Creator",
+      "pandalive": "Mga Pandalive Creator",
+      "afreecatv": "Mga AfreecaTV Creator",
+      "bigo": "Mga Bigo Creator",
+      "buzzcast": "Mga Buzzcast Creator",
+      "liveme": "Mga LiveMe Creator",
+      "mixch": "Mga Mixch Creator",
+      "twitcast": "Mga TwitCasting Streamer",
+      "trovo": "Mga Trovo Streamer",
+      "joilive": "Mga Joilive Streamer",
+      "live17": "Mga 17live Streamer",
+      "kwai": "Mga Kwai Creator"
+    },
+    "subtitle": {
+      "all": "Sumali sa libu-libong creator na gumagamit ng LiveStreamRecorder para i-save ang streams nila at gumawa ng short clips.",
+      "tiktok": "Sumali sa libu-libong TikTok creator na gumagamit ng LiveStreamRecorder para i-save ang streams nila at gumawa ng short clips.",
+      "twitch": "Sumali sa libu-libong Twitch creator na gumagamit ng LiveStreamRecorder para i-save ang streams nila at gumawa ng short clips.",
+      "youtube": "Sumali sa libu-libong YouTube creator na gumagamit ng LiveStreamRecorder para i-save ang streams nila at gumawa ng short clips.",
+      "kick": "Sumali sa libu-libong Kick creator na gumagamit ng LiveStreamRecorder para i-save ang streams nila at gumawa ng short clips.",
+      "pandalive": "Sumali sa libu-libong Pandalive creator na gumagamit ng LiveStreamRecorder para i-save ang streams nila at gumawa ng short clips.",
+      "afreecatv": "Sumali sa libu-libong AfreecaTV creator na gumagamit ng LiveStreamRecorder para i-save ang streams nila at gumawa ng short clips.",
+      "bigo": "Sumali sa libu-libong Bigo creator na gumagamit ng LiveStreamRecorder para i-save ang streams nila at gumawa ng short clips.",
+      "buzzcast": "Sumali sa libu-libong Buzzcast creator na gumagamit ng LiveStreamRecorder para i-save ang streams nila at gumawa ng short clips.",
+      "liveme": "Sumali sa libu-libong LiveMe creator na gumagamit ng LiveStreamRecorder para i-save ang streams nila at gumawa ng short clips.",
+      "mixch": "Sumali sa libu-libong Mixch creator na gumagamit ng LiveStreamRecorder para i-save ang streams nila at gumawa ng short clips.",
+      "twitcast": "Sumali sa TwitCasting streamers na gumagamit ng LiveStreamRecorder para i-save ang bawat broadcast at abutin ang fans sa labas ng app.",
+      "trovo": "Sumali sa Trovo streamers na gumagamit ng LiveStreamRecorder para i-save ang bawat stream at abutin ang viewers sa labas ng Trovo.",
+      "joilive": "Sumali sa Joilive streamers na gumagamit ng LiveStreamRecorder para i-save ang bawat stream at abutin ang viewers sa labas ng Joilive.",
+      "live17": "Sumali sa 17live streamers na gumagamit ng LiveStreamRecorder para i-save ang bawat Live at abutin ang viewers sa labas ng app.",
+      "kwai": "Sumali sa Kwai creators mula Brazil, Indonesia, at iba pa na gumagamit ng LiveStreamRecorder para i-save ang bawat Live at palakihin ang audience sa iba't ibang platforms."
+    }
+  },
+  "features": {
+    "badge": "Paano Gumagana",
+    "title": {
+      "all": "I-record Awtomatikong ang Streams Mo",
+      "tiktok": "I-record Awtomatikong ang TikTok Streams Mo",
+      "twitch": "I-record Awtomatikong ang Twitch Streams Mo",
+      "youtube": "I-record Awtomatikong ang YouTube Streams Mo",
+      "kick": "I-record Awtomatikong ang Kick Streams Mo",
+      "pandalive": "I-record Awtomatikong ang Pandalive Streams Mo",
+      "afreecatv": "I-record Awtomatikong ang AfreecaTV Streams Mo",
+      "bigo": "I-record Awtomatikong ang Bigo Streams Mo",
+      "buzzcast": "I-record Awtomatikong ang Buzzcast Streams Mo",
+      "liveme": "I-record Awtomatikong ang LiveMe Streams Mo",
+      "mixch": "I-record Awtomatikong ang Mixch Streams Mo",
+      "twitcast": "I-save Awtomatikong ang TwitCasting Lives Mo",
+      "trovo": "I-save Awtomatikong ang Trovo Streams Mo",
+      "joilive": "I-save Awtomatikong ang Joilive Streams Mo",
+      "live17": "I-save Awtomatikong ang 17live Lives Mo",
+      "kwai": "I-save Awtomatikong ang Kwai Lives Mo"
+    },
+    "subtitle": "Mula sa live stream papunta sa short clips sa loob ng ilang minuto",
+    "items": {
+      "add": {
+        "title": "Idagdag ang Channel Mo",
+        "description": "I-paste ang URL ng streaming channel mo at magsisimula kaming mag-record tuwing nag-go live ka. Walang software na kailangan."
+      },
+      "watch": {
+        "title": "Panoorin Ulit ang Streams Mo",
+        "description": "Awtomatikong nase-save ang bawat stream. Panoorin ang recordings mo anumang oras o i-download para i-edit."
+      },
+      "clip": {
+        "title": "Kumuha ng Highlights gamit ang ClipAI",
+        "description": "Hinahanap ng ClipAI ang pinakamagagandang moments at ginagawang short clips — handa sa loob ng ilang minuto."
+      },
+      "edit": {
+        "title": "I-edit at I-share Kahit Saan",
+        "description": "I-customize ang clips mo sa gusto mong paraan. Magdagdag ng captions, i-trim, at i-share sa lahat ng platforms mo."
+      }
+    }
+  },
+  "cta": {
+    "title": {
+      "all": "I-record ang Live Streams Mo",
+      "tiktok": "I-record ang TikTok Lives Mo",
+      "twitch": "I-record ang Twitch Streams Mo",
+      "youtube": "I-record ang YouTube Lives Mo",
+      "kick": "I-record ang Kick Streams Mo",
+      "afreecatv": "I-record ang AfreecaTV Streams Mo",
+      "pandalive": "I-record ang Pandalive Streams Mo",
+      "bigo": "I-record ang Bigo Streams Mo",
+      "buzzcast": "I-record ang Buzzcast Streams Mo",
+      "liveme": "I-record ang LiveMe Streams Mo",
+      "mixch": "I-record ang Mixch Streams Mo",
+      "twitcast": "I-save ang TwitCasting Lives Mo",
+      "trovo": "I-save ang Trovo Streams Mo",
+      "joilive": "I-save ang Joilive Streams Mo",
+      "live17": "I-save ang 17live Lives Mo",
+      "kwai": "I-save ang Kwai Lives Mo"
+    },
+    "subtitle": {
+      "all": "Sumali sa libu-libong creator. I-save ang streams mo, gumawa ng short clips gamit ang ClipAI, at palakihin ang audience mo.",
+      "tiktok": "Sumali sa libu-libong TikTok creator. I-save ang Lives mo, gumawa ng short clips gamit ang ClipAI, at palakihin ang following mo.",
+      "twitch": "Sumali sa libu-libong Twitch streamer. I-save ang VODs mo, gumawa ng short clips gamit ang ClipAI, at palakihin ang channel mo.",
+      "youtube": "Sumali sa libu-libong YouTube creator. I-save ang Lives mo, gawing Shorts gamit ang ClipAI, at palakihin ang subscribers mo.",
+      "kick": "Sumali sa libu-libong Kick streamer. I-save ang streams mo, gumawa ng short clips gamit ang ClipAI, at palakihin ang audience mo.",
+      "afreecatv": "Sumali sa libu-libong AfreecaTV creator. I-save ang streams mo at gumawa ng short clips gamit ang ClipAI.",
+      "pandalive": "Sumali sa libu-libong Pandalive creator. I-save ang streams mo at gumawa ng short clips gamit ang ClipAI.",
+      "bigo": "Sumali sa libu-libong Bigo creator. I-save ang streams mo at gumawa ng short clips gamit ang ClipAI.",
+      "buzzcast": "Sumali sa libu-libong Buzzcast creator. I-save ang streams mo at gumawa ng short clips gamit ang ClipAI.",
+      "liveme": "Sumali sa libu-libong LiveMe creator. I-save ang streams mo at gumawa ng short clips gamit ang ClipAI.",
+      "mixch": "Sumali sa libu-libong Mixch creator. I-save ang streams mo at gumawa ng short clips gamit ang ClipAI.",
+      "twitcast": "Sumali sa TwitCasting streamers na sine-save ang bawat Live gamit ang LiveStreamRecorder. Gumawa ng short clips gamit ang ClipAI at lumago sa labas ng app.",
+      "trovo": "Sumali sa Trovo streamers na sine-save ang bawat stream gamit ang LiveStreamRecorder. Gumawa ng short clips gamit ang ClipAI at lumago sa labas ng Trovo.",
+      "joilive": "Sumali sa Joilive streamers na sine-save ang bawat stream gamit ang LiveStreamRecorder. Gumawa ng short clips gamit ang ClipAI at lumago sa labas ng Joilive.",
+      "live17": "Sumali sa 17live streamers na sine-save ang bawat Live gamit ang LiveStreamRecorder. Gumawa ng short clips gamit ang ClipAI at lumago sa labas ng 17live.",
+      "kwai": "Sumali sa Kwai creators na sine-save ang bawat Live gamit ang LiveStreamRecorder. Gumawa ng short clips gamit ang ClipAI at abutin ang viewers sa labas ng emerging-market focus ng Kwai."
+    },
+    "button": "Mag-simula nang Libre"
+  },
+  "empty": {
+    "title": "Wala Pang Creators",
+    "description": {
+      "all": "Maging unang creator na sumali!",
+      "tiktok": "Maging unang TikTok creator na sumali!",
+      "twitch": "Maging unang Twitch creator na sumali!",
+      "youtube": "Maging unang YouTube creator na sumali!",
+      "kick": "Maging unang Kick creator na sumali!",
+      "pandalive": "Maging unang Pandalive creator na sumali!",
+      "afreecatv": "Maging unang AfreecaTV creator na sumali!",
+      "bigo": "Maging unang Bigo creator na sumali!",
+      "buzzcast": "Maging unang Buzzcast creator na sumali!",
+      "liveme": "Maging unang LiveMe creator na sumali!",
+      "mixch": "Maging unang Mixch creator na sumali!",
+      "twitcast": "Maging unang TwitCasting streamer na sumali!",
+      "trovo": "Maging unang Trovo streamer na sumali!",
+      "joilive": "Maging unang Joilive streamer na sumali!",
+      "live17": "Maging unang 17live streamer na sumali!",
+      "kwai": "Maging unang Kwai creator na sumali!"
+    },
+    "button": "Mag-simula"
+  },
+  "about": {
+    "all": "## Tungkol sa LiveStreamRecorder\n\nWag mong hayaang mawala ang pinakamagandang content mo. Awtomatikong nire-record namin ang live streams mo para magamit mong short clips at palakihin ang audience mo.\n\n### Awtomatikong Stream Recording\n\nI-paste lang ang channel URL mo at mag-go live ka. Kami na bahala sa recording — walang software na i-install, walang i-set up. Awtomatikong nase-save ang bawat stream.\n\n### Panoorin Ulit at Mag-download\n\nTapos na ka mag-stream? Handa na ang recording mo. Panoorin ulit, i-download, o ipadala sa editor mo.\n\n### Hinahanap ng ClipAI ang Pinakamagagandang Moments Mo\n\nWag mong sayangin ang oras sa pag-scrub ng footage. Hina-highlight ng ClipAI ang pinakamagagandang moments mo at ginagawang short clips — handa sa loob ng ilang minuto.\n\n### Palakihin ang Audience Mo\n\nGawing dosenang clips ang isang live stream. I-share sa TikTok, YouTube Shorts, Instagram Reels, at kahit saan pa. Mas maraming content, mas maraming views, mas maraming followers.\n\n### I-record ang TikTok, Twitch, YouTube, Kick at iba pa\n\nMag-stream kahit saan — nire-record namin kahit saan. TikTok, Twitch, YouTube, Kick, at mas maraming platforms na paparating.\n\n### Libre Para Mag-simula\n\nGumawa ng account at mag-simulang mag-record ngayon. Mag-upgrade para sa mas mataas na quality, mas maraming recordings, at mas mabilis na downloads.",
+    "tiktok": "## Mga TikTok Creator\n\nTuklasin ang mga TikTok creator na gumagamit ng LiveStreamRecorder para i-save ang Lives nila. I-browse ang popular TikTok creators, panoorin ang live recordings nila, at maghanap ng bagong content creator na i-follow.\n\n### Bakit Nire-record ng TikTok Creators ang Lives Nila\n\nPuno ng magagandang content ang TikTok Lives — funny moments, viewer interactions, viral potential. Pero kapag natapos na, wala na. Ginagamit ng TikTok content creators ang LiveStreamRecorder para awtomatikong i-save ang bawat Live para walang nawawala.\n\n### I-browse ang Top TikTok Creators\n\nI-explore ang TikTok creators list namin para makahanap ng popular creators na nire-record ang live streams nila. Panoorin ang recordings nila, habulin ang Lives na hindi mo naabutan, at matuklasan ang bagong content creators na sulit i-follow.\n\n### Ang TikTok Creator Page Mo\n\nMay sariling page ang bawat TikTok creator sa LiveStreamRecorder kung saan pwedeng i-browse ng fans ang lahat ng recorded Lives. Mag-sign up, idagdag ang TikTok username mo, at awtomatikong na-set up ang creator page mo.\n\n### Mula Lives Papunta sa Clips — Palakihin ang Following Mo\n\nPwedeng gamitin ng TikTok content creators ang ClipAI para gawing short highlight clips ang recorded Lives nila. I-post bilang TikToks, YouTube Shorts, o Reels. Pwedeng maging maraming piraso ng content ang isang Live — mas maraming post, mas maraming reach, mas maraming followers.\n\n### Maging TikTok Creator sa LiveStreamRecorder\n\nMag-sign up nang libre, idagdag ang TikTok username mo, at mag-simulang mag-record ng Lives mo ngayon. Awtomatikong kinukuha ang bawat Live — walang screen recorder, walang phone na bukas buong gabi. Sumali sa TikTok creators na gumagamit na ng LiveStreamRecorder para palakihin ang audience nila.",
+    "twitch": "## Mga Twitch Streamer at Creator\n\nTuklasin ang mga Twitch live streamer na gumagamit ng LiveStreamRecorder para i-save ang streams nila. I-browse ang top Twitch streamers, panoorin ang recordings nila, at maghanap ng bagong live streamer na i-follow.\n\n### Bakit Nire-record ng Twitch Streamers ang Streams Nila\n\nNag-eexpire ang Twitch VODs, at nababaon sa oras ng footage ang pinakamagagandang moments mula sa live streams mo. Ginagamit ng Twitch streamers ang LiveStreamRecorder para awtomatikong i-save ang bawat stream — para walang nawawala at maging sulit na content para i-share ang bawat live stream.\n\n### I-browse ang Top Twitch Live Streamers\n\nI-explore ang Twitch streamers page namin para makahanap ng live streamers na nire-record ang streams nila. Panoorin ang recordings nila, habulin ang streams na hindi mo naabutan, at matuklasan ang best Twitch live streamers sa gaming, IRL streams, at lahat ng kategorya.\n\n### Ang Twitch Streamer Page Mo\n\nMay sariling page ang bawat Twitch streamer sa LiveStreamRecorder kung saan pwedeng i-browse ng fans ang lahat ng recorded streams. Mag-sign up, ikonekta ang Twitch channel mo, at awtomatikong na-set up ang page mo — permanenteng tahanan para sa content mo na hindi nag-eexpire gaya ng Twitch VODs.\n\n### Mula Streams Papunta sa Clips — Lumago sa Labas ng Twitch\n\nPinapalaki ng top Twitch live streamers ang audience nila sa pamamagitan ng paggamit ng content sa maraming platforms. Ginagawang short highlight clips ng ClipAI ang recorded streams mo, handa nang i-post sa TikTok, YouTube Shorts, o Reels. Pwedeng maging dosenang clips ang isang live stream — mas maraming content, mas maraming reach, mas maraming followers.\n\n### Nagsisimula sa Twitch Streaming? Mag-simulang Mag-record.\n\nKapag nagsisimula ka pa lang mag-stream sa Twitch, ang pag-record ng bawat stream mula day one ay isa sa pinakamatalinong galaw. Panoorin ulit ang content mo para mapaganda, magtayo ng library ng clips, at magsimulang lumago sa iba't ibang platforms agad. Mag-sign up nang libre at awtomatikong kinukuha ang bawat stream.",
+    "youtube": "## Mga YouTube Creator\n\nTuklasin ang mga YouTube creator na gumagamit ng LiveStreamRecorder para i-save ang live streams nila. I-browse ang YouTube content creators, panoorin ang recordings nila, at maghanap ng bagong channel na i-subscribe.\n\n### Bakit Nire-record ng YouTube Creators ang Lives Nila\n\nMaganda ang YouTube Lives para sa engagement, pero nababaon sa oras ng footage ang pinakamagagandang moments. Ginagamit ng YouTube content creators ang LiveStreamRecorder para awtomatikong i-save ang bawat live stream — para walang nawawala at maging content creation opportunity ang bawat Live.\n\n### I-browse ang YouTube Creators\n\nI-explore ang YouTube creators page namin para makahanap ng channels na nire-record ang live streams nila. Panoorin ang recordings nila, habulin ang Lives na hindi mo naabutan, at matuklasan ang bagong YouTube content creators na sulit i-follow.\n\n### Ang YouTube Creator Page Mo\n\nMay sariling page ang bawat YouTube creator sa LiveStreamRecorder kung saan pwedeng i-browse ng fans ang lahat ng recorded live streams. Mag-sign up, ikonekta ang YouTube channel mo, at awtomatikong na-set up ang page mo.\n\n### Mula Lives Papunta sa YouTube Shorts\n\nPwedeng gamitin ng YouTube creators ang ClipAI para awtomatikong gawing YouTube Shorts ang recorded Lives nila. Pwedeng maging maraming piraso ng content ang isang live stream — pinakamadaling content creation strategy para palakihin ang channel mo sa pagitan ng streams.\n\n### Higit pa sa YouTube Studio\n\nHinahawakan ng YouTube Studio ang channel management mo, pero pwedeng mabigo o ma-delete ang stream replays. Binibigyan ng LiveStreamRecorder ang YouTube creators ng independent backup ng bawat live stream, plus tools para gawing Shorts at clips ang content na yan.\n\n### Maging YouTube Creator sa LiveStreamRecorder\n\nMag-sign up nang libre, ikonekta ang YouTube channel mo, at mag-simulang mag-record ng Lives mo ngayon. Awtomatikong kinukuha ang bawat live stream. Sumali sa YouTube creators na gumagamit na ng LiveStreamRecorder para palakihin ang audience nila.",
+    "kick": "## Mga Kick Streamer at Creator\n\nTuklasin ang mga Kick streamer na gumagamit ng LiveStreamRecorder para i-save ang sariling streams. I-browse ang Kick creators, panoorin ang recordings nila, at maghanap ng bagong live streamer na i-follow mula sa lumalaking community ng Kick na puno ng gaming, IRL, at just-chatting creators.\n\n### Bakit Nire-record ng Kick Streamers ang Streams Nila\n\nBago pa lang ang Kick, at hindi laging reliable ang VODs — pwedeng mabigo ang replays na ma-process, magbago ang channels, at mawala ang pinakamagagandang streams bago pa man mapanood ulit ng fans. Ginagamit ng Kick streamers ang LiveStreamRecorder para awtomatikong i-save ang bawat stream, kaya nananatiling available ang bawat memorable moment mula sa live streams mo, kahit wala na ang original Kick VOD.\n\n### I-browse ang Top Kick Streamers\n\nI-explore ang Kick streamers page namin para makahanap ng live streamers na sine-save ang sariling streams sa LiveStreamRecorder. Panoorin ang recordings nila, habulin ang streams na hindi mo naabutan, at matuklasan ang bagong Kick creators sa gaming, IRL streams, at just-chatting categories.\n\n### Ang Kick Streamer Page Mo\n\nMay sariling page ang bawat Kick streamer sa LiveStreamRecorder kung saan pwedeng i-browse ng fans ang lahat ng recorded streams mo. Mag-sign up, idagdag ang Kick channel mo, at awtomatikong na-set up ang creator page mo — permanenteng tahanan para sa content mo na hindi nakadepende sa VOD system ng Kick.\n\n### Mula Streams Papunta sa Clips — Palakihin ang Audience Mo\n\nGinagawang short highlight clips ng ClipAI ang recorded Kick streams mo, handa nang i-post sa TikTok, YouTube Shorts, o Reels. Pwedeng maging dosenang clips ang isang live stream — mas maraming content, mas maraming reach, mas maraming followers. Ginagamit ng top Kick streamers ang pinakamagagandang moments nila sa bawat platform.\n\n### Maging Kick Streamer sa LiveStreamRecorder\n\nMag-sign up nang libre, idagdag ang Kick channel mo, at mag-simulang mag-record ng streams mo ngayon. Awtomatikong kinukuha ang bawat live stream — walang OBS plugin, walang backup VOD setup, walang ekstrang software. Sumali sa Kick streamers na gumagamit na ng LiveStreamRecorder para i-save ang content nila at palakihin ang audience.",
+    "pandalive": "## Mga Pandalive Creator\n\nTuklasin ang mga Pandalive BJ na gumagamit ng LiveStreamRecorder para i-save ang sariling Lives. I-browse ang mga Korean creator, panoorin ang recordings nila, at maghanap ng bagong BJ na i-follow mula sa isa sa pinaka-active na live streaming platforms ng Korea.\n\n### Bakit Nire-record ng Pandalive BJs ang Lives Nila\n\nHindi laging nananatili ang Pandalive Lives — kapag natapos na ang Live, walang garantisadong paraan para mabalik. Ginagamit ng Pandalive BJs ang LiveStreamRecorder para awtomatikong i-save ang bawat Live, kaya hindi mawawala ang dance performances, song covers, talk sessions, at fan interactions mo kapag natapos ang stream.\n\n### I-browse ang Top Pandalive BJs\n\nI-explore ang Pandalive creators page namin para makahanap ng BJs na sine-save ang sariling Lives sa LiveStreamRecorder. Panoorin ang recordings nila, habulin ang Lives na hindi mo naabutan sa iba't ibang time zones, at matuklasan ang bagong Pandalive creators na sulit i-follow.\n\n### Ang Pandalive Creator Page Mo\n\nMay sariling page ang bawat Pandalive BJ sa LiveStreamRecorder kung saan pwedeng i-browse ng fans ang lahat ng recorded Lives mo. Mag-sign up, idagdag ang Pandalive username mo, at awtomatikong na-set up ang creator page mo — permanenteng tahanan para sa content mo na hindi nawawala kapag natapos ang Live mo.\n\n### Mula Lives Papunta sa Clips — Magtayo ng Fanbase\n\nGinagawang short highlight clips ng ClipAI ang recorded Pandalive Lives mo, handa nang i-post sa TikTok, Instagram Reels, o YouTube Shorts. Pwedeng maging maraming piraso ng content ang isang Live — dance clips, song highlights, memorable reactions. Palakihin ang fanbase mo sa labas ng Pandalive sa pamamagitan ng paggamit ng pinakamagagandang moments mo.\n\n### Maging Pandalive Creator sa LiveStreamRecorder\n\nMag-sign up nang libre, idagdag ang Pandalive username mo, at mag-simulang mag-save ng Lives mo ngayon. Awtomatikong kinukuha ang bawat Live — walang screen recording, walang ekstrang software. Sumali sa Pandalive BJs na gumagamit na ng LiveStreamRecorder para itago ang bawat Live at palakihin ang audience nila worldwide.",
+    "afreecatv": "## Mga AfreecaTV Creator\n\nTuklasin ang mga AfreecaTV BJ na gumagamit ng LiveStreamRecorder para i-save ang sariling Lives. I-browse ang mga Korean creator, panoorin ang recordings nila, at maghanap ng bagong BJ na i-follow mula sa orihinal na live streaming platform ng Korea — tahanan ng gaming casters, IRL streamers, music performers, at chat personalities.\n\n### Bakit Nire-record ng AfreecaTV BJs ang Lives Nila\n\nMay sariling VOD system ang AfreecaTV, pero hindi laging nase-save ang replays, pwedeng matanggal ang content, at pwedeng magbago ang storage rules. Ginagamit ng AfreecaTV BJs ang LiveStreamRecorder bilang independent backup — awtomatikong kinukuha ang bawat Live kaya nananatiling buo ang streaming history mo, kahit ano pa ang mangyari sa original platform.\n\n### I-browse ang Top AfreecaTV BJs\n\nI-explore ang AfreecaTV creators page namin para makahanap ng BJs na sine-save ang sariling Lives sa LiveStreamRecorder. Panoorin ang recordings nila, habulin ang mahabang sessions na hindi mo naabutan, at matuklasan ang bagong AfreecaTV creators sa StarCraft casting, gaming, IRL, music, at chat categories.\n\n### Ang AfreecaTV Creator Page Mo\n\nMay sariling page ang bawat AfreecaTV BJ sa LiveStreamRecorder kung saan pwedeng i-browse ng fans ang lahat ng recorded Lives mo. Mag-sign up, idagdag ang AfreecaTV username mo, at awtomatikong na-set up ang creator page mo — independent backup ng content mo na hindi nakadepende sa VOD policies ng AfreecaTV.\n\n### Mula Mahahabang Sessions Papunta sa Short Clips gamit ang ClipAI\n\nPwedeng tumagal ng maraming oras ang AfreecaTV Lives. Ina-analyze ng ClipAI ang recorded Lives mo at kinukuha awtomatikong ang pinakamagagandang moments — clutch plays, reactions, funny exchanges, music highlights. I-post bilang TikTok clips, YouTube Shorts, o Reels para palakihin ang audience mo sa labas ng AfreecaTV.\n\n### Maging AfreecaTV Creator sa LiveStreamRecorder\n\nMag-sign up nang libre, idagdag ang AfreecaTV username mo, at mag-simulang mag-save ng Lives mo ngayon. Awtomatikong kinukuha ang bawat Live — walang dependence sa VOD system ng AfreecaTV, walang manual uploads. Sumali sa AfreecaTV BJs na gumagamit na ng LiveStreamRecorder para itago ang bawat Live at abutin ang fans sa buong mundo.",
+    "bigo": "## Mga Bigo Live Creator\n\nTuklasin ang mga Bigo Live creator na gumagamit ng LiveStreamRecorder para i-save ang sariling Lives. I-browse ang mga Bigo streamer, panoorin ang recordings nila, at maghanap ng bagong creator na i-follow mula sa isa sa pinakamalaking global live streaming platforms — tahanan ng dance, music, chat, at entertainment creators mula Middle East, Asia, at iba pa.\n\n### Bakit Nire-record ng Bigo Creators ang Lives Nila\n\nUmiiral lang ang Bigo Lives habang nag-stream — kapag natapos mo na ang session, wala na ang content sa app. Ginagamit ng Bigo creators ang LiveStreamRecorder para awtomatikong i-save ang bawat Live, kaya nananatiling available ang dance performances, singing sessions, chat moments, at gift interactions mo para sa fans matagal pagkatapos ng Live mo.\n\n### I-browse ang Top Bigo Creators\n\nI-explore ang Bigo creators page namin para makahanap ng streamers na sine-save ang sariling Lives sa LiveStreamRecorder. Panoorin ang recordings nila, habulin ang Lives na hindi mo naabutan, at matuklasan ang bagong Bigo creators sa bawat kategorya at wika.\n\n### Ang Bigo Creator Page Mo\n\nMay sariling page ang bawat Bigo creator sa LiveStreamRecorder kung saan pwedeng i-browse ng fans ang lahat ng recorded Lives mo. Mag-sign up, idagdag ang Bigo username mo, at awtomatikong na-set up ang creator page mo — permanenteng tahanan para sa content mo na nabubuhay sa kabila ng nawawalang Bigo Lives.\n\n### Mula Lives Papunta sa Clips — Palakihin ang Audience Mo\n\nGinagawang short highlight clips ng ClipAI ang recorded Bigo Lives mo, handa nang i-post sa TikTok, Instagram Reels, o YouTube Shorts. Dance moments, duets, fan interactions, musical performances — gawing maraming piraso ng content ang bawat Live at palakihin ang audience mo sa bawat platform.\n\n### Maging Bigo Creator sa LiveStreamRecorder\n\nMag-sign up nang libre, idagdag ang Bigo username mo, at mag-simulang mag-save ng Lives mo ngayon. Awtomatikong kinukuha ang bawat Live — walang phone recording, walang screen capture. Sumali sa Bigo creators na gumagamit na ng LiveStreamRecorder para itago ang bawat Live at abutin ang fans worldwide.",
+    "buzzcast": "## Mga Buzzcast Creator\n\nTuklasin ang mga Buzzcast creator na gumagamit ng LiveStreamRecorder para i-save ang sariling Lives. I-browse ang mga Buzzcast streamer, panoorin ang recordings nila, at maghanap ng bagong creator na i-follow mula sa mobile-first live streaming community na ito.\n\n### Bakit Nire-record ng Buzzcast Creators ang Lives Nila\n\nLive-only ang Buzzcast Lives — kapag natapos mo na ang stream, nawawala ang content sa app. Walang built-in replay system at walang paraan para mahabol ng fans. Ginagamit ng Buzzcast creators ang LiveStreamRecorder para awtomatikong i-save ang bawat Live, kaya nananatiling available ang chat sessions, music performances, at daily content mo para sa fans matagal pagkatapos ng Live.\n\n### I-browse ang Top Buzzcast Creators\n\nI-explore ang Buzzcast creators page namin para makahanap ng streamers na sine-save ang sariling Lives sa LiveStreamRecorder. Panoorin ang recordings nila, habulin ang Lives na hindi mo naabutan, at matuklasan ang bagong Buzzcast creators na sulit i-follow.\n\n### Ang Buzzcast Creator Page Mo\n\nMay sariling page ang bawat Buzzcast creator sa LiveStreamRecorder kung saan pwedeng i-browse ng fans ang lahat ng recorded Lives mo. Mag-sign up, idagdag ang Buzzcast username mo, at awtomatikong na-set up ang creator page mo — permanenteng lugar para sa content mo na hindi nawawala kapag natapos ang Live mo.\n\n### Mula Lives Papunta sa Clips — Magtayo ng Following\n\nGinagawang short highlight clips ng ClipAI ang recorded Buzzcast Lives mo, handa nang i-post sa TikTok, Instagram Reels, o YouTube Shorts. Gawing shareable content ang reactions, music moments, at chat highlights at palakihin ang following mo sa labas ng Buzzcast.\n\n### Maging Buzzcast Creator sa LiveStreamRecorder\n\nMag-sign up nang libre, idagdag ang Buzzcast username mo, at mag-simulang mag-save ng Lives mo ngayon. Awtomatikong kinukuha ang bawat Live — walang manual recording, walang ekstrang apps. Sumali sa Buzzcast creators na gumagamit na ng LiveStreamRecorder para itago ang bawat Live at palakihin ang audience nila.",
+    "liveme": "## Mga LiveMe Creator\n\nTuklasin ang mga LiveMe creator na gumagamit ng LiveStreamRecorder para i-save ang sariling Lives. I-browse ang mga LiveMe streamer, panoorin ang recordings nila, at maghanap ng bagong creator na i-follow mula sa mobile-first live streaming community na ito.\n\n### Bakit Nire-record ng LiveMe Creators ang Lives Nila\n\nLive-only ang LiveMe Lives — kapag natapos mo na ang stream, nawawala ang content sa app. Walang built-in replay system at walang paraan para mahabol ng fans. Ginagamit ng LiveMe creators ang LiveStreamRecorder para awtomatikong i-save ang bawat Live, kaya nananatiling available ang chat sessions, music performances, at daily content mo para sa fans matagal pagkatapos ng Live.\n\n### I-browse ang Top LiveMe Creators\n\nI-explore ang LiveMe creators page namin para makahanap ng streamers na sine-save ang sariling Lives sa LiveStreamRecorder. Panoorin ang recordings nila, habulin ang Lives na hindi mo naabutan, at matuklasan ang bagong LiveMe creators na sulit i-follow.\n\n### Ang LiveMe Creator Page Mo\n\nMay sariling page ang bawat LiveMe creator sa LiveStreamRecorder kung saan pwedeng i-browse ng fans ang lahat ng recorded Lives mo. Mag-sign up, idagdag ang LiveMe username mo, at awtomatikong na-set up ang creator page mo — permanenteng lugar para sa content mo na hindi nawawala kapag natapos ang Live mo.\n\n### Mula Lives Papunta sa Clips — Magtayo ng Following\n\nGinagawang short highlight clips ng ClipAI ang recorded LiveMe Lives mo, handa nang i-post sa TikTok, Instagram Reels, o YouTube Shorts. Gawing shareable content ang reactions, music moments, at chat highlights at palakihin ang following mo sa labas ng LiveMe.\n\n### Maging LiveMe Creator sa LiveStreamRecorder\n\nMag-sign up nang libre, idagdag ang LiveMe username mo, at mag-simulang mag-save ng Lives mo ngayon. Awtomatikong kinukuha ang bawat Live — walang manual recording, walang ekstrang apps. Sumali sa LiveMe creators na gumagamit na ng LiveStreamRecorder para itago ang bawat Live at palakihin ang audience nila.",
+    "mixch": "## Mga Mixch Creator\n\nTuklasin ang mga Mixch creator na gumagamit ng LiveStreamRecorder para i-save ang sariling Lives. I-browse ang mga Mixch streamer, panoorin ang recordings nila, at maghanap ng bagong creator na i-follow mula sa mobile-first live streaming community na ito.\n\n### Bakit Nire-record ng Mixch Creators ang Lives Nila\n\nLive-only ang Mixch Lives — kapag natapos mo na ang stream, nawawala ang content sa app. Walang built-in replay system at walang paraan para mahabol ng fans. Ginagamit ng Mixch creators ang LiveStreamRecorder para awtomatikong i-save ang bawat Live, kaya nananatiling available ang chat sessions, music performances, at daily content mo para sa fans matagal pagkatapos ng Live.\n\n### I-browse ang Top Mixch Creators\n\nI-explore ang Mixch creators page namin para makahanap ng streamers na sine-save ang sariling Lives sa LiveStreamRecorder. Panoorin ang recordings nila, habulin ang Lives na hindi mo naabutan, at matuklasan ang bagong Mixch creators na sulit i-follow.\n\n### Ang Mixch Creator Page Mo\n\nMay sariling page ang bawat Mixch creator sa LiveStreamRecorder kung saan pwedeng i-browse ng fans ang lahat ng recorded Lives mo. Mag-sign up, idagdag ang Mixch username mo, at awtomatikong na-set up ang creator page mo — permanenteng lugar para sa content mo na hindi nawawala kapag natapos ang Live mo.\n\n### Mula Lives Papunta sa Clips — Magtayo ng Following\n\nGinagawang short highlight clips ng ClipAI ang recorded Mixch Lives mo, handa nang i-post sa TikTok, Instagram Reels, o YouTube Shorts. Gawing shareable content ang reactions, music moments, at chat highlights at palakihin ang following mo sa labas ng Mixch.\n\n### Maging Mixch Creator sa LiveStreamRecorder\n\nMag-sign up nang libre, idagdag ang Mixch username mo, at mag-simulang mag-save ng Lives mo ngayon. Awtomatikong kinukuha ang bawat Live — walang manual recording, walang ekstrang apps. Sumali sa Mixch creators na gumagamit na ng LiveStreamRecorder para itago ang bawat Live at palakihin ang audience nila.",
+    "trovo": "## Mga Trovo Streamer\n\nTuklasin ang mga Trovo streamer na gumagamit ng LiveStreamRecorder para i-save ang sariling streams. I-browse ang mga Trovo creator sa gaming, IRL, music, at just-chatting categories — panoorin ang stream recordings nila at maghanap ng bagong broadcaster na i-follow mula sa Tencent-backed live streaming community na ito.\n\n### Bakit Nire-record ng Trovo Streamers ang Streams Nila\n\nMay sariling VOD system ang Trovo, pero hindi laging reliable — pwedeng mabigo ang replays na ma-process, makaapekto ang channel changes sa availability, at maalis ang mga lumang streams. Ginagamit ng Trovo streamers ang LiveStreamRecorder para magkaroon ng awtomatikong independent backup ng bawat stream, kaya nananatiling available ang clutch gaming moments, IRL adventures, music sessions, at viewer interactions kahit wala na ang original Trovo VOD.\n\n### I-browse ang Top Trovo Streamers\n\nI-explore ang Trovo creators page namin para makahanap ng streamers na sine-save ang sariling streams sa LiveStreamRecorder. Panoorin ang recordings nila, habulin ang streams na hindi mo naabutan, at matuklasan ang bagong Trovo creators sa bawat kategorya — bagong platform ang Trovo, kaya magandang lugar para makahanap ng streamers na nagtatayo ng audience.\n\n### Ang Trovo Streamer Page Mo\n\nMay sariling page ang bawat Trovo streamer sa LiveStreamRecorder kung saan pwedeng i-browse ng fans ang lahat ng stream recordings mo. Mag-sign up, idagdag ang Trovo channel mo, at awtomatikong na-set up ang creator page mo — independent na tahanan para sa content mo na hindi nakadepende sa VOD reliability ng Trovo.\n\n### Mula Streams Papunta sa Clips — Lumago sa Labas ng Trovo\n\nGinagawang short highlight clips ng ClipAI ang nai-save mong Trovo streams, handa nang i-post sa TikTok, YouTube Shorts, o Instagram Reels. Clutch plays, funny reactions, IRL moments, music highlights — gawing maraming piraso ng shareable content ang isang stream at abutin ang viewers na malayo sa Trovo app.\n\n### Maging Trovo Streamer sa LiveStreamRecorder\n\nMag-sign up nang libre, idagdag ang Trovo channel mo, at mag-simulang mag-save ng streams mo ngayon. Awtomatikong kinukuha ang bawat stream — walang OBS recording plugin, walang backup VOD setup, walang ekstrang software. Sumali sa Trovo streamers na gumagamit na ng LiveStreamRecorder para itago ang bawat stream at palakihin ang audience nila.",
+    "joilive": "## Mga Joilive Streamer sa LiveStreamRecorder\n\nGumagamit ang mga Joilive streamer (joilive.net) ng LiveStreamRecorder para **i-record ang sariling Lives** at bigyan ng tunay na archive ang channel nila. Hindi itinatabi ng Joilive ang broadcasts pagkatapos mong mag-offline — walang replay tab, walang VOD, walang past-streams list. Naka-build ang platform sa live-only chat at gifting, kaya nawawala ang lahat ng ginagawa mo sa stream sa sandaling matapos ito. Bilang Joilive creator, ang pag-record ng sariling broadcasts mo ang tanging paraan para itago ito.\n\n### Ang Problema sa Numeric ID\n\nIni-identify ng Joilive ang bawat streamer gamit ang mahabang numeric ID gaya ng `1880336239059720193`. Ang profile URL mo ay `joilive.net/user/index.html?s=1880336239059720193`. Walang magbo-bookmark niyan. Walang magta-type niyan sa Discord. Hindi talaga shareable ang Joilive page — at walang paraan para makahanap ng streamer by username dahil walang usernames ang Joilive. Binibigyan ng LiveStreamRecorder ang bawat Joilive creator ng clean, memorable URL at search-friendly creator page na nakamap sa numeric ID mo sa likod. Pareho lang na account, mas magandang front door.\n\n### Pag-abot sa Late-Timezone Fans\n\nNasa Asia-Pacific ang viewer base ng Joilive. Kung nag-stream ka sa JST at nasa EU o NA ang fans mo, kalahati ng audience mo ay hindi kailanman naabot ka live — at sa Joilive, ibig sabihin niyan hindi ka talaga naabot. Sa pamamagitan ng pag-record ng sariling streams sa LiveStreamRecorder, nabibigyan mo ang off-timezone fans na yan ng paraan para mapanood ang broadcast sa sariling schedule nila. Wala na ang chat, pero nananatili ang content.\n\n### Ano Eksaktong Nai-save\n\nAng buong video ng bawat Live, sa high quality, sa sandaling mag-go live ka. Walang screen capture, walang OBS plugin, walang ekstrang encoder pass — walang pinapagana ang Joilive streamers sa kanilang side. Awtomatikong dumadating ang recording sa LiveStreamRecorder creator page mo at nananatili roon indefinitely. Ikaw ang nagdedesisyon kung ano ang ipi-public, ano ang itatago, ano ang i-delete.\n\n### Gawing Shareable Clips ang Streams Mo\n\nMaliit na platform ang Joilive. Ang totoo, karamihan ng audience mo ay nasa TikTok, YouTube Shorts, o Instagram Reels — wala silang Joilive app. Ina-scan ng ClipAI ang recorded Joilive broadcasts mo at gumagawa ng short, captioned clips na formatted para sa vertical short-form. I-post sa kinaroroonan na ng viewers, ibalik sila sa Joilive room mo kapag live ka na ulit.\n\n### I-browse at Tuklasin ang Joilive Streamers\n\nLumilista ang page na ito ng Joilive creators na nagdagdag ng sarili sa LiveStreamRecorder. Dahil hindi nag-expose ng usernames o public search ang Joilive, pwede ito maging isa sa mga ilang paraan para makahanap talaga ng Joilive streamers by name sa open web. Lumalago ang listahan habang dumarami ang broadcasters na nag-sign up.\n\n### Maging Joilive Streamer sa LiveStreamRecorder\n\nLibre mag-sign up, libre mag-simulang mag-save ng Lives mo. I-paste ang Joilive user ID mo (ang `?s=…` value mula sa profile URL mo) at kami na bahala sa iba. Mula sa puntong yan pasulong, nai-capture ang bawat broadcast sa creator page mo. Sa iyo ang desisyon na mag-record, sa iyo ang content, at nasa domain mo ang archive — `livestreamrecorder.com/joilive/your-id` sa halip na sa query-string URL ng Joilive na walang makakatanda.",
+    "twitcast": "## Mga TwitCasting Streamer\n\nTuklasin ang mga TwitCasting streamer (ツイキャス) na gumagamit ng LiveStreamRecorder para i-save ang sariling broadcasts. I-browse ang mga TwitCasting creator, panoorin ang archived Lives nila, at maghanap ng bagong streamer na i-follow mula sa isa sa pinaka-active na mobile-first streaming communities ng Japan — tahanan ng chat broadcasts (おしゃべり), singing streams, voice-only Lives, at idol/VTuber content.\n\n### Bakit Nire-record ng TwitCasting Streamers ang Lives Nila\n\nMay sariling archive system ang TwitCasting, pero may limitasyon ito — limitado ang haba ng free archives, ang member-only (メンバー限定) Lives ay pwedeng panoorin lang ulit ng paying members, at pwedeng tanggalin ang mga lumang broadcasts para makatipid ng space. Ginagamit ng TwitCasting streamers ang LiveStreamRecorder para awtomatikong i-save ang bawat Live na walang length cap, kaya nananatiling available ang conversations, song covers, voice-only Lives, at special moments mo kahit nag-expire na ang original archive.\n\n### I-browse ang Top TwitCasting Streamers\n\nI-explore ang TwitCasting creators page namin para makahanap ng streamers na sine-save ang sariling Lives sa LiveStreamRecorder. Panoorin ang recordings nila, habulin ang broadcasts na hindi mo naabutan sa iba't ibang time zones, at matuklasan ang bagong TwitCasting creators sa chat, music, voice-only, at entertainment categories.\n\n### Ang TwitCasting Streamer Page Mo\n\nMay sariling page ang bawat TwitCasting streamer sa LiveStreamRecorder kung saan pwedeng i-browse ng fans ang lahat ng recorded Lives mo. Mag-sign up, idagdag ang TwitCasting username mo, at awtomatikong na-set up ang creator page mo — independent na tahanan para sa content mo na hindi nakadepende sa archive limits ng TwitCasting.\n\n### Mula Lives Papunta sa Clips — Lumago sa Labas ng TwitCasting\n\nGinagawang short highlight clips ng ClipAI ang recorded TwitCasting Lives mo, handa nang i-post sa TikTok, YouTube Shorts, o Instagram Reels. Best chat moments, song highlights, viewer Q&A, co-broadcast clips — gawing maraming piraso ng shareable content ang isang Live at abutin ang fans sa labas ng TwitCasting app.\n\n### Maging TwitCasting Streamer sa LiveStreamRecorder\n\nMag-sign up nang libre, idagdag ang TwitCasting username mo, at mag-simulang mag-save ng broadcasts mo ngayon. Awtomatikong kinukuha ang bawat Live — walang screen recording, walang manual archive saving, walang app na kailangang nakabukas. Sumali sa TwitCasting streamers na gumagamit na ng LiveStreamRecorder para itago ang bawat Live at palakihin ang audience nila worldwide.",
+    "live17": "## Mga 17live Creator sa LiveStreamRecorder\n\nAng 17live (binibigkas na *yi-qi* live — 一起, Mandarin para sa \"magkasama\") ang ikatlong pinakamalaking live-streaming platform sa Asya at ang tahanan ng parehong **Livers** at **V-Livers** (virtual-avatar streamers). Itinatag sa Taiwan noong 2015, naka-headquarter sa Japan mula 2021, nakalista sa SGX bilang **LVR** — isa ang 17live sa pinakastrukturadong at talent-managed na live ecosystems sa Asya, lalo na malakas sa Japan, Taiwan, Hong Kong, Singapore, at Pilipinas. Pinapahintulutan ng LiveStreamRecorder ang 17live creators na **i-save ang bawat Live sa sariling creator page** sa public web — pwedeng i-browse ng fans ang buong broadcast history mo nang hindi nangangailangan ng 17live app.\n\n### V-Livers at Livers Pareho Welcome\n\nPioneer ang 17live sa V-Liver category — virtual avatar streamers na nag-pe-perform bilang customizable digital personas. Pareho ang capture namin kung face-cam Liver, Live2D/3D V-Liver avatar, OBS-composed scene, o phone-only setup ang nasa stream mo. Kahit anong bina-broadcast ng 17live sa viewers, sine-save namin. Walang DRM workarounds, walang OBS plugin, walang special V-Liver tooling — nangyayari ang capture sa upstream ng rendering mo.\n\n### Built para sa Asia-First Reality ng 17live\n\nNakakonsentra nang husto ang user base ng 17live sa Japan, Taiwan, Hong Kong, at South-East Asia. Ibig sabihin nasa JST/SGT/HKT ang karamihan ng audience mo. Nawawala sa EU at NA fans ang Lives mo dahil lang gising sila sa maling oras, at ang 17live app mismo ay hindi talaga discoverable sa bagong viewers sa labas ng region. Pinapalapit ng LiveStreamRecorder ang gap na yan: dumadating ang bawat broadcast sa public, search-engine-indexed creator page na mahahanap ng sinuman, kahit saan — walang 17live account na kailangan.\n\n### Abutin ang Fans na Walang 17live App\n\nMaayos para sa fans na gumagamit na ng app ang in-app features ng 17live (replays, in-app clips capped sa 15–90 seconds). Pero para palakihin ang audience mo sa labas ng bubble na yan — Reddit lurkers, Discord communities, Twitter followers — kailangan mo ng public URL na mabubuksan sa kahit anong browser. Binibigyan ng LiveStreamRecorder ang bawat Live ng shareable web link gaya ng `livestreamrecorder.com/live17/your-id` na pwede mong ilagay sa bio, ipadala sa DMs, o i-post sa social. Pareho lang na content, pero accessible nang walang app gate.\n\n### Talent Agencies at Solo Streamers, Pareho ang Flow\n\nNagsa-scout, nagsasanay, at sumusuporta sa streamers ang talent management system ng 17live — uniquely structured sa mga Asian live platforms. Kung agency-managed Liver ka na may Hot Star ambitions o indie streamer na nagtatayo mula sa zero, passive recording layer lang ang LiveStreamRecorder. Hindi nito hinahawakan ang gifting, ranking, agency contracts, o 17live tools mo — itinatabi lang nito ang kopya ng bawat Live sa open web para mabuhay ang content mo sa labas ng app.\n\n### Cross-Platform Growth gamit ang ClipAI\n\nCapped sa 90 seconds at nakakulong sa loob ng app ang in-app clips ng 17live. Ina-scan ng ClipAI ang full saved Lives mo sa LiveStreamRecorder at gumagawa ng short-form clips na formatted para sa **TikTok, Instagram Reels, at YouTube Shorts** — ang mga platform kung saan nangyayari ang karamihan ng discovery para sa SE Asian at global viewers. Dance moments, song covers, gift reactions, chat exchanges, V-Liver scene transitions — gawing clip funnel ang bawat Live na nagda-drive ng bagong fans pabalik sa 17live room mo.\n\n### Maging 17live Creator sa LiveStreamRecorder\n\nLibre mag-sign up. I-paste ang `profile/r/your-id` number mula sa 17live profile URL mo — yan lang ang kailangan namin. Mula sa susunod na Live mo, dumadating awtomatikong ang bawat broadcast sa creator page mo. Sa iyo ang content, sa iyo ang URL, sa iyo ang shareable home sa open web — independent sa 17live app.",
+    "kwai": "## Mga Kwai Creator sa LiveStreamRecorder\n\nAng Kwai (mula Mandarin 快 *kuài*, ibig sabihin \"mabilis\") ay global short-video + live-streaming app mula sa **Kuaishou Technology** (HKEX 1024), madalas tawagin na pangalawang pinakamalaking short-video platform sa Asya pagkatapos ng Douyin/TikTok. Habang dominante ang TikTok sa US/EU markets, dominante ang Kwai sa ibang geography: **Brazil** (kung saan may tens of millions of MAU ang Kwai at karibal ng TikTok), plus Indonesia, Mexico, Argentina, Colombia, Middle East, at Russia/CIS. Binibigyan ng LiveStreamRecorder ang Kwai creators ng **public web home para sa bawat Live** — discoverable ng fans na walang Kwai app installed.\n\n### Saan Nakatira ang Discovery Gap ng Kwai\n\nMalaki ang Kwai sa loob ng app nito, pero halos invisible sa open English-language web. Pwedeng imposibleng mahanap sa Google search ang Brazilian Kwai creator na may milyong in-app fans. Ang Kwai profile URL (`kwai.com/@username`) ay madalas nagbibigay ng manipis na pages kumpara sa YouTube o TikTok equivalents. Pinapalapit ng LiveStreamRecorder ang gap na yan: dumadating ang bawat Live na bina-broadcast mo sa clean, search-engine-indexed creator page na matutuklasan ng fans sa Google, i-share sa WhatsApp, o i-paste sa kahit anong browser nang hindi nangangailangan ng Kwai app.\n\n### Hybrid Short Video + Live Streaming\n\nIsa ang Kwai sa ilang platforms na successful na nag-merge ng short-form video at live streaming. Sanay ang audience mo na mag-scroll sa Kwai feed at tumalon sa Live. Kinukuha ng LiveStreamRecorder ang live broadcast portion specifically — ang nakita ng fans in real time — at ginagawang long-form watchable content sa public web. Gamitin ang ClipAI para hatiin ang long-form Live pabalik sa short-form clips para sa cross-posting sa TikTok, Instagram Reels, at YouTube Shorts, kung saan mo makukuha ang viewers na wala sa Kwai.\n\n### Built para sa Emerging-Market Creator Realities\n\nDominante ang Kwai sa markets kung saan precious ang mobile data at nag-stream ang creators mula sa mobile-first setups: phones, madalas sa cellular. Naiintindihan namin yan. Fully server-side ang recording — hindi inuubos ng phone mo ang battery o data sa pag-pagana ng pangalawang recorder. Mag-go live ka lang sa Kwai gaya ng dati, at awtomatikong dumadating ang broadcast mo sa LiveStreamRecorder creator page mo.\n\n### Abutin ang Fans sa Labas ng LatAm at Asya\n\nAng pinakamalaking market ng Kwai ay Brazil, na may malaking growth sa Mexico at Indonesia. Pero pwedeng kalat din ang fans mo sa Portuguese-speaking Europe, sa Spanish-speaking diaspora, MENA migrants, o sa Twitter / Instagram users na gustong sumunod sa iyo pero walang Kwai. Gumagana sa kahit anong browser ang LiveStreamRecorder URLs (`livestreamrecorder.com/kwai/your-id`), walang app install, walang Kwai account, walang regional restrictions — discoverable, shareable, indexable.\n\n### Independent sa Account State ng Kwai\n\nHindi nagla-log in ang LiveStreamRecorder sa Kwai account mo, hindi nakikita ang K-coins o gift income, hindi nakikialam sa Kwai creator program o anumang rev-share. Opt-in ang recording mo bilang Kwai creator para sa **sariling** account mo, at sariling Lives mo lang — wala nang iba. Nananatiling sa Kwai pa rin ang Kwai account, ranking, at revenue mo.\n\n### Cross-Platform Growth gamit ang ClipAI\n\nNakapokus sa Kwai algorithm ang in-app clip tools ng Kwai. Ang ClipAI ay nakapokus sa **lahat ng iba** — ina-scan nito ang full saved Kwai Lives mo at gumagawa ng short-form vertical clips na formatted para sa TikTok, Instagram Reels, YouTube Shorts. Pinaka-funny moments, dance highlights, song covers, viewer reactions — gawing maraming clips ang isang Kwai Live na umaabot sa audiences na hindi madaling maabot ng Kwai mismo.\n\n### Maging Kwai Creator sa LiveStreamRecorder\n\nLibre mag-sign up. Idagdag ang Kwai username mo o i-paste ang Kwai profile URL mo — yan lang. Mula sa susunod na Live mo, awtomatikong kinukuha ang bawat broadcast. Sa iyo ang content, sa iyo ang shareable web URL, sa iyo ang discoverable creator page — independent sa Kwai app, sa open web kung saan sa wakas mahahanap ka ng natitirang audience mo."
+  },
+  "faq": "Mga Madalas Itanong",
+  "country": {
+    "title": "{platform} mula sa {country}",
+    "description": "Tuklasin ang {platform} mula sa {country} na nire-record ang live streams nila sa LiveStreamRecorder. I-browse ang creators, panoorin ang recordings nila, at maghanap ng bagong streamer na i-follow.",
+    "heroTitle": "{platform} sa {country}",
+    "heroSubtitle": "Tuklasin ang {platform} mula sa {country} na gumagamit ng LiveStreamRecorder para i-save ang streams nila at gumawa ng short clips.",
+    "empty": {
+      "title": "Wala Pang Creators",
+      "description": "Wala pang {platform} mula sa {country} na sumasali. Maging unang sumali!"
+    },
+    "browseByCountry": "I-browse ang {platform} ayon sa Bansa",
+    "browseLink": "{platform} mula sa {country}",
+    "backToPlatform": "Bumalik sa lahat ng {platform}"
+  }
+}

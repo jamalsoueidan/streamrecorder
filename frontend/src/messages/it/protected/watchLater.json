@@ -1,0 +1,13 @@
+{
+  "title": "Guarda dopo",
+  "description": "Salvato solo su questo dispositivo",
+  "empty": "Nessun video salvato. Aggiungi video dal menu per guardarli dopo.",
+  "clear": "Cancella tutto",
+  "clearConfirm": {
+    "title": "Cancella Guarda dopo",
+    "message": "Sei sicuro di voler rimuovere tutti i video dalla lista Guarda dopo?",
+    "confirm": "Cancella tutto",
+    "cancel": "Annulla"
+  },
+  "loadMore": "Carica altri"
+}

@@ -1,0 +1,104 @@
+{
+  "follow": {
+    "tooltip": "เพิ่มครีเอเตอร์",
+    "successTitle": "เพิ่มแล้ว!",
+    "successMessage": "เพิ่ม {username} แล้ว",
+    "errorTitle": "ผิดพลาด",
+    "blockedMessage": "ครีเอเตอร์นี้ไม่สามารถใช้งานได้เนื่องจากคำขอ DMCA ดูรายละเอียดเพิ่มเติมที่<terms>ข้อกำหนดการใช้งาน</terms>"
+  },
+  "unfollow": {
+    "tooltip": "ลบครีเอเตอร์",
+    "successTitle": "ลบแล้ว",
+    "successMessage": "คุณลบ {username} ออกแล้ว",
+    "successMessageGeneric": "ลบสำเร็จ"
+  },
+  "scopeFilter": {
+    "label": "กรอง:",
+    "following": "บันทึกของฉัน",
+    "discover": "เพื่อน",
+    "all": "ทั้งหมด"
+  },
+  "recordings": {
+    "liveAgo_context": "For live streams showing when recording started. Shows 'started recording 15 minutes ago'",
+    "liveAgo": "เริ่มบันทึก {time}",
+    "recordedAgo_context": "For recorded streams showing when recording was made. Shows 'recorded 3 days ago'",
+    "recordedAgo": "บันทึกเมื่อ {time}",
+    "recordCount": "REC {count}",
+    "newRecording": "ใหม่",
+    "parts": "{count, plural, other {# ส่วน}}",
+    "videoCount": "{count, plural, other {# วิดีโอ}}",
+    "noRecordings": "ดูครบทั้งหมดแล้ว",
+    "hide": "ซ่อนจากสาธารณะ",
+    "show": "แสดงต่อสาธารณะ",
+    "delete": "ลบวิดีโอ",
+    "deleteConfirm": {
+      "title": "ลบวิดีโอ",
+      "message": "ต้องการลบวิดีโอนี้ใช่ไหม การกระทำนี้ไม่สามารถย้อนกลับได้",
+      "confirm": "ลบ",
+      "cancel": "ยกเลิก"
+    },
+    "createWithAI": "สร้างคลิปด้วย AI",
+    "addToWatchLater": "บันทึกไว้ดูภายหลัง",
+    "removeFromWatchLater": "ลบจากดูภายหลัง",
+    "addedToWatchLater": "บันทึกไว้ดูภายหลังแล้ว",
+    "removedFromWatchLater": "ลบจากดูภายหลังแล้ว",
+    "videoLimitMessage": "คุณดูครบจำนวนวิดีโอฟรีของคุณแล้ว",
+    "download": "ดาวน์โหลดวิดีโอ",
+    "downloadPart": "ส่วนที่ {part}",
+    "sendToEmail": "ส่งไปที่อีเมล",
+    "downloadEmailSent": "ลิงก์ดาวน์โหลดกำลังถูกส่งไปยังอีเมลของคุณ",
+    "downloadFeatureMessage": "การดาวน์โหลดวิดีโอเป็นฟีเจอร์พรีเมียม",
+    "editClip": "แก้ไขคลิป",
+    "deleteSources": "ลบไฟล์ต้นฉบับ",
+    "deleteSourcesSuccess": "ลบ {count} ไฟล์แล้ว"
+  },
+  "followers": {
+    "addedAgo_context": "For when a creator was added to user's list. Shows 'Added 3 days ago'",
+    "addedAgo": "เพิ่มเมื่อ {time}",
+    "limitReachedTitle": "ถึงจำนวนครีเอเตอร์สูงสุดแล้ว",
+    "upgradeModalHeadline": "ไม่พลาดทุกไลฟ์อีกต่อไป",
+    "max3Message": "คุณถึงจำนวนครีเอเตอร์สูงสุด 3 คนของแผนฟรีแล้ว",
+    "max50Message": "คุณถึงจำนวนครีเอเตอร์สูงสุด 50 คนของแผนนี้แล้ว",
+    "max100Message": "คุณถึงจำนวนครีเอเตอร์สูงสุด 100 คนของแผนนี้แล้ว",
+    "upgradeButton": "อัปเกรดเป็นพรีเมียม",
+    "upgradeModalDiscount": "ลด 20% สำหรับเดือนแรก",
+    "upgradeModalCodeNote": "ใช้ที่หน้าชำระเงิน",
+    "unfollowUpgradeTitle": "จัดการครีเอเตอร์ของคุณได้อย่างอิสระด้วยพรีเมียม"
+  },
+  "newest": "ใหม่สุด",
+  "oldest": "เก่าสุด",
+  "expired": {
+    "title": "แผนพรีเมียมของคุณหมดอายุแล้ว",
+    "subtitle": "ครีเอเตอร์ของคุณจะไม่ถูกบันทึกอีกต่อไป ต่ออายุตอนนี้เพื่อใช้งานต่อจากเดิม ครีเอเตอร์และการตั้งค่าทั้งหมดของคุณยังคงอยู่",
+    "renewButton": "ต่ออายุพรีเมียม — เก็บทุกอย่างไว้",
+    "or": "หรือ",
+    "loseTitle": "หากดาวน์เกรดคุณจะสูญเสียอย่างถาวร:",
+    "loseCreators": "ครีเอเตอร์ที่ติดตามและบันทึกทั้งหมด",
+    "loseFavorites": "รายการโปรดที่บันทึกไว้ทั้งหมด",
+    "loseClips": "คลิป ดาวน์โหลด และฟีเจอร์ AI",
+    "losePremium": "การเข้าถึงฟีเจอร์พรีเมียมทั้งหมด",
+    "downgradeButton": "ดาวน์เกรด"
+  },
+  "freemiusShutdown": {
+    "title": "การชำระเงินผ่าน Freemius ของคุณกำลังถูกคืนเงิน",
+    "subtitle": "สมัครใหม่ผ่าน Stripe ภายใน 30 วินาทีเพื่อใช้ฟีเจอร์พรีเมียมต่อ",
+    "body": "Freemius — หนึ่งในผู้ให้บริการชำระเงินของผม — ได้ยุติความสัมพันธ์กับผมแล้ว พวกเขากำลังคืนเงินทุกการชำระที่เคยทำให้ผม รวมถึงของคุณด้วย เงินที่คุณจ่ายให้ผมผ่าน Freemius กำลังถูกคืนให้คุณ คุณได้ใช้พรีเมียมแบบฟรีมาตลอด\n\nเรื่องนี้กระทบผมหนัก แต่ตอนนี้สิ่งที่ผมห่วงที่สุดคือคุณ คุณได้สร้างครีเอเตอร์ บันทึก คลิปไว้ที่นี่ ผมไม่อยากให้คุณสูญเสียอะไรเลย\n\n Stripe เป็นอีกตัวเลือกการชำระเงินที่ใช้ได้ปกติ การสมัครใหม่ผ่าน Stripe ใช้เวลาแค่ 30 วินาที แผนเดิม ราคาเดิม ไม่ต้องตั้งค่าใหม่ ไม่มีการขัดจังหวะ",
+    "renewButton": "สมัครผ่าน Stripe",
+    "or": "หรือ",
+    "loseTitle": "หากดาวน์เกรดคุณจะสูญเสียอย่างถาวร:",
+    "loseCreators": "ครีเอเตอร์ที่ติดตามและบันทึกทั้งหมด",
+    "loseFavorites": "รายการโปรดที่บันทึกไว้ทั้งหมด",
+    "loseClips": "คลิป ดาวน์โหลด และฟีเจอร์ AI",
+    "losePremium": "การเข้าถึงฟีเจอร์พรีเมียมทั้งหมด",
+    "downgradeButton": "ดาวน์เกรดเป็นฟรี",
+    "contact": "มีคำถาม? ส่งอีเมลที่ <email>contact@livestreamrecorder.com</email> หรือติดต่อ Freemius เกี่ยวกับการคืนเงิน"
+  },
+  "videoPlayer": {
+    "hevcUnsupportedTitle": "เบราว์เซอร์ของคุณเล่นวิดีโอนี้ไม่ได้",
+    "hevcUnsupportedMessage": "บันทึก TikTok นี้ใช้โคเดก HEVC (H.265) ซึ่งเบราว์เซอร์ของคุณไม่รองรับ ลองใช้ Safari, Edge บน Windows หรือติดตั้ง HEVC Video Extensions จาก Microsoft Store",
+    "audioCodecUnsupportedTitle": "เบราว์เซอร์ของคุณเล่นเสียงของวิดีโอนี้ไม่ได้",
+    "audioCodecUnsupportedMessage": "บันทึกนี้ใช้เสียง HE-AACv2 ซึ่งเบราว์เซอร์ของคุณรองรับไม่เต็มที่ ลองใช้ Chrome หรือ Edge บนเดสก์ท็อป หรือใช้ Safari บน Mac/iOS",
+    "playbackFailedTitle": "เล่นวิดีโอไม่ได้",
+    "playbackFailedMessage": "เกิดข้อผิดพลาดขณะเล่นวิดีโอนี้ เปิดคอนโซลเบราว์เซอร์ (F12) และส่งข้อความที่ปรากฏให้ทีมซัพพอร์ตเพื่อช่วยแก้ไข"
+  }
+}

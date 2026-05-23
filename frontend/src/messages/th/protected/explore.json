@@ -1,0 +1,13 @@
+{
+  "title": "สำรวจ",
+  "description": "เลื่อนดูบันทึกจากครีเอเตอร์อื่นๆ",
+  "emptyFiltered": {
+    "title": "ไม่พบบันทึกที่ตรงกับตัวกรอง",
+    "description": "ลองปรับหรือล้างตัวกรอง"
+  },
+  "emptyDefault": {
+    "title": "ยังไม่มีบันทึก",
+    "description": "-"
+  },
+  "noMoreToLoad": "ดูครบทั้งหมดแล้ว"
+}

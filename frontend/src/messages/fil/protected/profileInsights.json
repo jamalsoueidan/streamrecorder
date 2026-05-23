@@ -1,0 +1,75 @@
+{
+  "beta": "Naka-beta pa ang Insights ngayon. Maaaring hindi kumpleto ang data o magbago habang pinapahusay namin ang feature na ito.",
+  "tabs": {
+    "videos": "Videos",
+    "clips": "Clips",
+    "insights": "Insights"
+  },
+  "stats": {
+    "totalDiamonds": "Total Diamonds",
+    "battleDiamonds": "Diamonds mula sa battles",
+    "nonBattleDiamonds": "Diamonds labas ng battles",
+    "battles": "Battles",
+    "won": "Panalo",
+    "lost": "Talo",
+    "winRate": "Win Rate",
+    "gifters": "Gifters",
+    "chatParticipants": "Chat Participants"
+  },
+  "battleHistory": {
+    "title": "Battle History",
+    "empty": "Wala pang naitalang battles.",
+    "colDate": "Petsa",
+    "colType": "Klase",
+    "colOpponents": "Opponent(s)",
+    "colScore": "Score",
+    "colDiamonds": "Diamonds",
+    "colResult": "Resulta",
+    "vs": "vs",
+    "with": "w/",
+    "live": "LIVE",
+    "interrupted": "Naputol",
+    "won": "Panalo",
+    "draw": "Tabla",
+    "lost": "Talo"
+  },
+  "streamActivity": {
+    "title": "Kamakailang Streams",
+    "empty": "Walang available na stream sessions.",
+    "colDate": "Petsa",
+    "colDuration": "Tagal",
+    "colPeakViewers": "Peak Viewers",
+    "colAvgViewers": "Avg Viewers",
+    "colDiamonds": "Diamonds",
+    "colBattles": "Battles",
+    "durationMinutes": "{m}m",
+    "durationHoursMinutes": "{h}h {m}m"
+  },
+  "topGifters": {
+    "title": "Top Gifters",
+    "empty": "Walang available na gifters data.",
+    "giftCount": "{count} gifts"
+  },
+  "topOpponents": {
+    "title": "Top Opponents",
+    "empty": "Walang available na battle data.",
+    "wins": "{count}W",
+    "losses": "{count}L",
+    "battleCount": "{count} battles"
+  },
+  "earnings": {
+    "title": "Kita",
+    "empty": "Walang available na earnings data.",
+    "seriesLabel": "Diamonds"
+  },
+  "schedule": {
+    "title": "Kailan Sila Nag-Live",
+    "mon": "Lun",
+    "tue": "Mar",
+    "wed": "Miy",
+    "thu": "Huw",
+    "fri": "Biy",
+    "sat": "Sab",
+    "sun": "Lin"
+  }
+}

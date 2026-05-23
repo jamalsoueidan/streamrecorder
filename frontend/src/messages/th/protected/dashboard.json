@@ -1,0 +1,16 @@
+{
+  "title": "แดชบอร์ด",
+  "description": "ยินดีต้อนรับกลับ! นี่คือสิ่งที่อัปเดตล่าสุด",
+  "greetingMorning": "สวัสดีตอนเช้า {username}!",
+  "greetingAfternoon": "สวัสดีตอนบ่าย {username}!",
+  "greetingEvening": "สวัสดีตอนเย็น {username}!",
+  "greetingSubtitle": "นี่คือสิ่งที่อัปเดตในฟีดของคุณ",
+  "noRecordings": "ยังไม่มีบันทึก",
+  "browseAll": "ดูทั้งหมด",
+  "newCreators": "ครีเอเตอร์ใหม่",
+  "myFeed": "ฟีดของฉัน",
+  "discoverSection": "ค้นพบ",
+  "favorites": "รายการโปรด",
+  "mostViewed": "ดูมากที่สุด",
+  "mostDownloaded": "ดาวน์โหลดมากที่สุด"
+}

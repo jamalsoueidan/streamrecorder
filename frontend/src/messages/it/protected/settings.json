@@ -1,0 +1,113 @@
+{
+  "title": "Impostazioni",
+  "description": "Gestisci le impostazioni del tuo account",
+  "profile": {
+    "title": "Profilo",
+    "username": "Nome utente",
+    "usernamePlaceholder": "Inserisci il tuo nome utente",
+    "usernameMinLength": "Il nome utente deve essere di almeno 3 caratteri",
+    "usernameMaxLength": "Il nome utente deve essere al massimo di 30 caratteri",
+    "saveChanges": "Salva modifiche",
+    "updateSuccess": "Operazione completata",
+    "usernameUpdated": "Il tuo nome utente è stato aggiornato",
+    "updateError": "Errore"
+  },
+  "subscription": {
+    "title": "Abbonamento",
+    "currentPlan": "Piano attuale",
+    "description": "L'abbonamento determina a quali funzioni hai accesso."
+  },
+  "tiktok": {
+    "title": "TikTok",
+    "description": "Collega il tuo account TikTok per pubblicare clip e far crescere il tuo pubblico.",
+    "descriptionConnected": "Il tuo account TikTok è collegato.",
+    "connect": "Collega TikTok",
+    "disconnect": "Scollega",
+    "connected": "Collegato",
+    "connectSuccess": "Operazione completata",
+    "connectSuccessMessage": "Il tuo account TikTok è stato collegato",
+    "connectError": "Errore",
+    "connectErrorMessage": "Impossibile collegare l'account TikTok",
+    "disconnectSuccess": "Scollegato",
+    "disconnectSuccessMessage": "Il tuo account TikTok è stato scollegato",
+    "disconnectError": "Errore"
+  },
+  "youtube": {
+    "title": "YouTube",
+    "description": "Collega il tuo account YouTube per pubblicare clip direttamente come YouTube Shorts.",
+    "descriptionConnected": "Il tuo account YouTube è collegato. Ora puoi pubblicare clip su YouTube.",
+    "connect": "Collega YouTube",
+    "disconnect": "Scollega",
+    "connected": "Collegato",
+    "connectSuccess": "Operazione completata",
+    "connectSuccessMessage": "Il tuo account YouTube è stato collegato",
+    "connectError": "Errore",
+    "connectErrorMessage": "Impossibile collegare l'account YouTube",
+    "disconnectSuccess": "Scollegato",
+    "disconnectSuccessMessage": "Il tuo account YouTube è stato scollegato",
+    "disconnectError": "Errore"
+  },
+  "dangerZone": {
+    "title": "Zona pericolosa",
+    "description": "Una volta eliminato l'account, non si torna indietro. Sii sicuro della scelta.",
+    "deleteAccount": "Elimina account",
+    "deleteConfirm": {
+      "title": "Elimina account",
+      "message": "Sei sicuro di voler eliminare il tuo account? Questa azione non può essere annullata e tutti i tuoi dati saranno rimossi permanentemente.",
+      "confirm": "Elimina account",
+      "cancel": "Annulla"
+    },
+    "deleteError": "Errore"
+  },
+  "notifications": {
+    "title": "Notifiche",
+    "description": "Ricevi una notifica quando i tuoi streamer vanno live.",
+    "on": "Notifiche attive",
+    "off": "Notifiche disattivate",
+    "enabled": "Notifiche attivate",
+    "disabled": "Notifiche disattivate",
+    "denied": "Le notifiche sono bloccate. Attivale nelle impostazioni del browser.",
+    "unsupported": "Il tuo browser non supporta le notifiche.",
+    "error": "Qualcosa è andato storto",
+    "sendTest": "Invia una notifica di prova",
+    "testSent": "Notifica di prova inviata",
+    "testSentMessage": "Controlla il tuo dispositivo — la notifica dovrebbe apparire a breve.",
+    "helpTitle": "Non vedi le notifiche?",
+    "helpPermission": "Assicurati che il browser sia autorizzato a mostrare notifiche nelle impostazioni di sistema.",
+    "helpFocus": "Disattiva Non Disturbare, Focus o Focus Assist. Silenziano le notifiche su Mac, iPhone, Android e Windows."
+  },
+  "watchedHistory": {
+    "title": "Video visti",
+    "description": "Hai segnato {count} video come visti. Appare come badge sulle anteprime così riconosci a colpo d'occhio quelli che hai già visto.",
+    "clearButton": "Cancella cronologia visti",
+    "clearConfirm": {
+      "title": "Cancella cronologia visti",
+      "message": "Questo rimuoverà il badge VISTO da {count} video. Appariranno di nuovo come non visti. Continuare?",
+      "confirm": "Cancella",
+      "cancel": "Annulla"
+    },
+    "cleared": {
+      "title": "Cancellato",
+      "message": "La tua cronologia visti è stata cancellata."
+    }
+  },
+  "trackingData": {
+    "title": "Privacy e dati di tracciamento",
+    "description": "Registriamo le tue visualizzazioni video e i download con il tuo indirizzo IP per rilevare la condivisione di account e le contestazioni di carta di credito. Puoi cancellare tutti i tuoi dati di tracciamento qui in qualsiasi momento. Nuove visualizzazioni e download inizieranno a essere registrati di nuovo dopo.",
+    "clearButton": "Cancella i miei dati di tracciamento",
+    "clearConfirm": {
+      "title": "Cancella dati di tracciamento",
+      "message": "Questo eliminerà permanentemente tutte le visualizzazioni e i download archiviati, inclusi gli indirizzi IP. Continuare?",
+      "confirm": "Cancella",
+      "cancel": "Annulla"
+    },
+    "cleared": {
+      "title": "Cancellato",
+      "message": "Rimosse {views} visualizzazioni e {downloads} download."
+    },
+    "error": {
+      "title": "Fallito",
+      "message": "Impossibile cancellare i dati di tracciamento."
+    }
+  }
+}

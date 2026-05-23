@@ -1,0 +1,91 @@
+{
+  "title": "AI Studio",
+  "description": "Crea clip e meme dalle tue registrazioni con l'AI",
+  "requestDetails": "Dettagli richiesta",
+  "createRequest": "Crea richiesta",
+  "unknownCreator": "Creator sconosciuto",
+  "unknownRecording": "Registrazione sconosciuta",
+  "recordingDeleted": {
+    "badge": "Registrazione eliminata"
+  },
+  "viewDetails": "Vedi dettagli",
+  "state": {
+    "pending": "In attesa",
+    "processing": "In elaborazione",
+    "completed": "Completata",
+    "failed": "Fallita"
+  },
+  "options": {
+    "clips": "Clip",
+    "memes": "Meme",
+    "profile": "Profilo"
+  },
+  "filters": {
+    "all": "Tutti",
+    "pending": "In attesa",
+    "processing": "In corso",
+    "completed": "Completati"
+  },
+  "emptyState": {
+    "title": "Nessuna richiesta AI",
+    "description": "Vai alle tue registrazioni e clicca il pulsante AI per creare clip e meme"
+  },
+  "create": {
+    "selectOptions": "Cosa vuoi creare?",
+    "options": {
+      "clips": {
+        "label": "Genera clip",
+        "description": "L'AI trova i momenti migliori e crea clip brevi"
+      },
+      "memes": {
+        "label": "Genera meme",
+        "description": "L'AI crea screenshot da meme con didascalie"
+      },
+      "profile": {
+        "label": "Genera profilo",
+        "description": "L'AI analizza e suggerisce miglioramenti al profilo"
+      }
+    },
+    "sizeWarning": {
+      "title": "Video troppo grande",
+      "message": "Questo video è di {size}GB. I video più grandi di 2GB devono essere elaborati in parti."
+    },
+    "submit": "Avvia elaborazione"
+  },
+  "status": {
+    "progress": "Progresso",
+    "tasks": "Task",
+    "pendingTitle": "In attesa di iniziare",
+    "pendingMessage": "La tua richiesta è in coda e inizierà l'elaborazione a breve.",
+    "clipsCount": "{count} clip",
+    "memesCount": "{count} meme",
+    "localesCount": "{count} lingue",
+    "clipFallback": "Clip {index}",
+    "default": "Default",
+    "tagline": "Tagline",
+    "description": "Descrizione",
+    "state": {
+      "pending": "In attesa",
+      "processing": "In elaborazione",
+      "completed": "Completata",
+      "failed": "Fallita"
+    }
+  },
+  "upgrade": {
+    "title": "Il tuo AI Video Studio",
+    "features": {
+      "clips": "Clip intelligenti da registrazioni lunghe — pronte da condividere",
+      "memes": "Meme e foto generati dall'AI dai tuoi video",
+      "viral": "Traduzione video istantanea in decine di lingue"
+    },
+    "upgradeButton": "Passa al Premium",
+    "hint": "Sblocca AI Studio con un abbonamento premium"
+  },
+  "quota": {
+    "badge": "{used} / {total} questo mese",
+    "limitReachedNote": "Limite raggiunto · si resetta il {date}",
+    "alertTitle": "Limite mensile raggiunto",
+    "alertBody": "Hai usato tutte le {total} generazioni AI di questo mese. Il limite si resetta il {date}.",
+    "editButton": "Modifica il video manualmente"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Esplora",
+  "description": "Sfoglia le registrazioni di altri creator",
+  "emptyFiltered": {
+    "title": "Nessuna registrazione corrisponde ai tuoi filtri",
+    "description": "Prova a modificare o cancellare i filtri"
+  },
+  "emptyDefault": {
+    "title": "Nessuna registrazione disponibile",
+    "description": "-"
+  },
+  "noMoreToLoad": "Sei arrivato alla fine"
+}

@@ -1,0 +1,42 @@
+{
+  "sections": {
+    "home": "Home",
+    "studio": "Studio",
+    "community": "Community"
+  },
+  "links": {
+    "dashboard": "Dashboard",
+    "premium": "Premium",
+    "myRecordings": "Recordings",
+    "myClips": "Mga Clip Ko",
+    "watchLater": "Watch Later",
+    "aiStudio": "AI Studio",
+    "myList": "Library",
+    "live": "Live",
+    "tiktokInsights": "TikTok Insights",
+    "explore": "Explore",
+    "clips": "Clips",
+    "friends": "Friends"
+  },
+  "actions": {
+    "settings": "Settings",
+    "logout": "Mag-log out",
+    "addCreator": "Idagdag ang Creator",
+    "search": "Hanapin",
+    "searchPlaceholder": "Ilagay ang stream URL mo",
+    "installApp": "I-install ang App",
+    "more": "Higit pa",
+    "language": "Wika",
+    "collapse": "I-collapse ang sidebar",
+    "expand": "Palakihin ang sidebar"
+  },
+  "installModal": {
+    "title": "I-install ang App",
+    "description": "Para i-install ang app na ito sa iPhone mo:",
+    "step1": "I-tap ang",
+    "shareButton": "Share button",
+    "step2": "I-tap ang",
+    "addToHomeScreen": "Add to Home Screen",
+    "step3": "I-tap ang \"Add\""
+  }
+}

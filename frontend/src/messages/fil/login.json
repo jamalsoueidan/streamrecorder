@@ -1,0 +1,41 @@
+{
+  "meta": {
+    "title": "Mag-sign in",
+    "description": "Mag-sign in sa LiveStreamRecorder account mo para i-access ang recordings at sinusundang streamers."
+  },
+  "title": "Maligayang pagbabalik",
+  "subtitle": "Mag-sign in para magpatuloy sa account mo",
+  "email": {
+    "label": "Email address",
+    "placeholder": "you@example.com"
+  },
+  "password": {
+    "label": "Password",
+    "placeholder": "Ilagay ang password mo"
+  },
+  "emailConfirmed": "Na-confirm na ang email mo. Pwede ka nang mag-sign in.",
+  "forgotPassword": "Nakalimutan ang password?",
+  "submit": {
+    "default": "Mag-sign in",
+    "loading": "Nagsa-sign in..."
+  },
+  "choices": {
+    "emailPassword": "Gamitin ang Email / Password",
+    "google": "Magpatuloy gamit ang Google",
+    "tiktok": "Magpatuloy gamit ang TikTok",
+    "facebook": "Magpatuloy gamit ang Facebook"
+  },
+  "terms": {
+    "text": "Sa pagpapatuloy, sumasang-ayon ka sa",
+    "tosLink": "Terms of Service",
+    "and": "ng Live Stream Recorder at kinukumpirma na nabasa mo na ang",
+    "privacyLink": "Privacy Policy"
+  },
+  "errors": {
+    "emailTaken": "Mayroon nang account na may ganitong email. Mag-sign in gamit ang original na paraan mo."
+  },
+  "register": {
+    "text": "Wala pang account?",
+    "link": "Mag-sign up"
+  }
+}

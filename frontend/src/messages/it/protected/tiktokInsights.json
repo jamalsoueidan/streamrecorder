@@ -1,0 +1,94 @@
+{
+  "title": "TikTok Insights",
+  "description": "Analytics TikTok Live a livello di piattaforma",
+  "globalStats": {
+    "title": "Panoramica piattaforma",
+    "totalUsers": "Gifters totali",
+    "totalDiamonds": "Diamanti totali",
+    "totalGifts": "Gift totali",
+    "totalBattles": "Battle totali"
+  },
+  "dailyEarnings": {
+    "title": "Guadagni giornalieri",
+    "seriesLabel": "Diamanti",
+    "empty": "Nessun dato sui guadagni disponibile",
+    "allCountries": "Tutti i paesi",
+    "allLanguages": "Tutte le lingue"
+  },
+  "topEarners": {
+    "title": "Top earners",
+    "username": "Username",
+    "country": "Paese",
+    "language": "Lingua",
+    "diamonds": "Diamanti",
+    "gifts": "Gift",
+    "gifters": "Gifters",
+    "empty": "Nessun dato disponibile",
+    "allCountries": "Tutti i paesi",
+    "allLanguages": "Tutte le lingue"
+  },
+  "mostLive": {
+    "title": "Streamer più attivi",
+    "username": "Username",
+    "country": "Paese",
+    "language": "Lingua",
+    "sessions": "Sessioni",
+    "hours": "Ore",
+    "empty": "Nessun dato disponibile",
+    "allCountries": "Tutti i paesi",
+    "allLanguages": "Tutte le lingue"
+  },
+  "countryLeaderboard": {
+    "title": "Classifica paesi",
+    "rank": "#",
+    "country": "Paese",
+    "diamonds": "Diamanti",
+    "gifts": "Gift",
+    "streamers": "Streamer",
+    "gifters": "Gifters",
+    "empty": "Nessun dato disponibile",
+    "loadMore": "Carica altri"
+  },
+  "languageLeaderboard": {
+    "title": "Classifica lingue",
+    "rank": "#",
+    "language": "Lingua",
+    "diamonds": "Diamanti",
+    "gifts": "Gift",
+    "streamers": "Streamer",
+    "gifters": "Gifters",
+    "empty": "Nessun dato disponibile",
+    "loadMore": "Carica altri"
+  },
+  "topGifters": {
+    "title": "Top gifters",
+    "description": "Utenti che hanno inviato più diamanti in totale su tutti gli streamer di TikTok.",
+    "username": "Username",
+    "diamonds": "Diamanti",
+    "gifts": "Gift",
+    "streamers": "Streamer supportati",
+    "empty": "Nessun dato disponibile"
+  },
+  "battleStats": {
+    "title": "Classifica battle",
+    "description": "Streamer ordinati per record di battle. Le battle sono competizioni live testa a testa dove i gift del pubblico decidono il vincitore.",
+    "username": "Username",
+    "battles": "Battle",
+    "wins": "Vittorie",
+    "losses": "Sconfitte",
+    "draws": "Pareggi",
+    "winRate": "Win rate",
+    "empty": "Nessun dato disponibile"
+  },
+  "gifterRelationships": {
+    "title": "Relazioni gifter",
+    "description": "Top coppie gifter–streamer ordinate per diamanti inviati. Rivela chi sono i supporter più fedeli dei singoli streamer.",
+    "pair": "Gifter → Streamer",
+    "supported": "ha supportato",
+    "gifter": "Gifter",
+    "streamer": "Streamer",
+    "diamonds": "Diamanti",
+    "gifts": "Gift",
+    "empty": "Nessun dato disponibile"
+  }
+}

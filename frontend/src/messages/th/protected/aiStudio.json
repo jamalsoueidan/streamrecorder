@@ -1,0 +1,91 @@
+{
+  "title": "AI สตูดิโอ",
+  "description": "สร้างคลิปและมีมจากบันทึกของคุณด้วย AI",
+  "requestDetails": "รายละเอียดคำขอ",
+  "createRequest": "สร้างคำขอ",
+  "unknownCreator": "ครีเอเตอร์ไม่ระบุ",
+  "unknownRecording": "บันทึกไม่ระบุ",
+  "recordingDeleted": {
+    "badge": "บันทึกถูกลบ"
+  },
+  "viewDetails": "ดูรายละเอียด",
+  "state": {
+    "pending": "รอดำเนินการ",
+    "processing": "กำลังประมวลผล",
+    "completed": "เสร็จสิ้น",
+    "failed": "ล้มเหลว"
+  },
+  "options": {
+    "clips": "คลิป",
+    "memes": "มีม",
+    "profile": "โปรไฟล์"
+  },
+  "filters": {
+    "all": "ทั้งหมด",
+    "pending": "รอดำเนินการ",
+    "processing": "กำลังดำเนินการ",
+    "completed": "เสร็จสิ้น"
+  },
+  "emptyState": {
+    "title": "ยังไม่มีคำขอ AI",
+    "description": "ไปที่บันทึกของคุณและคลิกปุ่ม AI เพื่อสร้างคลิปและมีม"
+  },
+  "create": {
+    "selectOptions": "คุณต้องการสร้างอะไร?",
+    "options": {
+      "clips": {
+        "label": "สร้างคลิป",
+        "description": "AI จะหาช่วงเด็ดและสร้างคลิปสั้นๆ"
+      },
+      "memes": {
+        "label": "สร้างมีม",
+        "description": "AI จะสร้างภาพหน้าจอคุณภาพมีมพร้อมคำบรรยาย"
+      },
+      "profile": {
+        "label": "สร้างโปรไฟล์",
+        "description": "AI จะวิเคราะห์และแนะนำการปรับปรุงโปรไฟล์"
+      }
+    },
+    "sizeWarning": {
+      "title": "วิดีโอใหญ่เกินไป",
+      "message": "วิดีโอนี้ {size}GB วิดีโอที่ใหญ่กว่า 2GB ต้องประมวลผลเป็นส่วน"
+    },
+    "submit": "เริ่มประมวลผล"
+  },
+  "status": {
+    "progress": "ความคืบหน้า",
+    "tasks": "งาน",
+    "pendingTitle": "รอเริ่ม",
+    "pendingMessage": "คำขอของคุณอยู่ในคิวและจะเริ่มประมวลผลในไม่ช้า",
+    "clipsCount": "{count} คลิป",
+    "memesCount": "{count} มีม",
+    "localesCount": "{count} ภาษา",
+    "clipFallback": "คลิป {index}",
+    "default": "ค่าเริ่มต้น",
+    "tagline": "Tagline",
+    "description": "คำอธิบาย",
+    "state": {
+      "pending": "รอดำเนินการ",
+      "processing": "กำลังประมวลผล",
+      "completed": "เสร็จสิ้น",
+      "failed": "ล้มเหลว"
+    }
+  },
+  "upgrade": {
+    "title": "AI Video Studio ของคุณ",
+    "features": {
+      "clips": "คลิปอัจฉริยะจากบันทึกยาว พร้อมแชร์",
+      "memes": "มีมและรูปภาพที่สร้างด้วย AI จากวิดีโอของคุณ",
+      "viral": "การแปลวิดีโอทันทีในหลายสิบภาษา"
+    },
+    "upgradeButton": "อัปเกรดตอนนี้",
+    "hint": "ปลดล็อก AI สตูดิโอด้วยการสมัครพรีเมียม"
+  },
+  "quota": {
+    "badge": "{used} / {total} เดือนนี้",
+    "limitReachedNote": "ถึงขีดจำกัด · รีเซ็ต {date}",
+    "alertTitle": "ถึงขีดจำกัดรายเดือน",
+    "alertBody": "คุณใช้การสร้าง AI ครบ {total} ครั้งเดือนนี้แล้ว ขีดจำกัดจะรีเซ็ต {date}",
+    "editButton": "แก้ไขวิดีโอด้วยตัวเอง"
+  }
+}

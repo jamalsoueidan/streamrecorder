@@ -1,0 +1,22 @@
+{
+  "modal": {
+    "title": "Modifica clip",
+    "description": "Ritaglia ed esporta una clip da {username}"
+  },
+  "actions": {
+    "saveClip": "Salva clip",
+    "downloadClip": "Scarica clip",
+    "export": "Esporta"
+  },
+  "maxDuration": "Durata massima clip: {minutes} minuti",
+  "notifications": {
+    "exportStarted": {
+      "title": "Esportazione avviata",
+      "message": "La tua clip è in elaborazione e sarà salvata nel tuo storage"
+    },
+    "downloadQueued": {
+      "title": "Download in coda",
+      "message": "La tua clip ti sarà inviata via email quando pronta"
+    }
+  }
+}

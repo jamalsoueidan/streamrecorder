@@ -1,0 +1,16 @@
+{
+  "title": "Dashboard",
+  "description": "Maligayang pagbabalik! Eto ang bago",
+  "greetingMorning": "Magandang umaga, {username}!",
+  "greetingAfternoon": "Magandang hapon, {username}!",
+  "greetingEvening": "Magandang gabi, {username}!",
+  "greetingSubtitle": "Eto ang bago sa feed mo",
+  "noRecordings": "Walang available na recordings",
+  "browseAll": "Tingnan lahat",
+  "newCreators": "Bagong Creators",
+  "myFeed": "Aking Feed",
+  "discoverSection": "Discover",
+  "favorites": "Favorites",
+  "mostViewed": "Pinakamaraming napanood",
+  "mostDownloaded": "Pinakamaraming na-download"
+}

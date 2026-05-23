@@ -1,0 +1,13 @@
+{
+  "meta": {
+    "defaultTitle": "Short clips",
+    "defaultDescription": "Manood ng short clips mula sa paborito mong streamers",
+    "title": "{title} - {creatorName} | Short clips",
+    "description": "Panoorin ang {duration} short clip na ito ni {creatorName} sa {platform}",
+    "keywords": "{creatorName}, shorts, clips, {platform}, live stream"
+  },
+  "jsonLd": {
+    "name": "{creatorName} short clip - {createdDate}",
+    "description": "Short clip ni {creatorName} nai-record noong {createdDate}"
+  }
+}

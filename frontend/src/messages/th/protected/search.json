@@ -1,0 +1,64 @@
+{
+  "title": "ค้นหา",
+  "description": "เพิ่มไลฟ์สตรีมของคุณในรายการ",
+  "platforms": {
+    "tiktok": "TikTok",
+    "twitch": "Twitch",
+    "kick": "Kick",
+    "youtube": "YouTube",
+    "afreecatv": "AfreecaTV",
+    "pandalive": "PandaLive",
+    "bigo": "Bigo",
+    "buzzcast": "Buzzcast",
+    "liveme": "LiveMe",
+    "mixch": "Mixch",
+    "twitcast": "TwitCasting",
+    "trovo": "Trovo",
+    "joilive": "Joilive",
+    "live17": "17live",
+    "kwai": "Kwai"
+  },
+  "search": {
+    "actionButton": "ค้นหา",
+    "submitButton": "ค้นหา",
+    "placeholder": "ใส่ URL สตรีมหรือ @username ของคุณ",
+    "searching": "กำลังค้นหาบน {platform}...",
+    "pasteButton": "วาง",
+    "pasteError": "วางด้วยตัวเองโดยใช้ Ctrl+V หรือกดค้าง",
+    "parseError": "ไม่สามารถแยกชื่อผู้ใช้ได้",
+    "notFound": "ไม่พบ...",
+    "autoDetected": "ตรวจพบแพลตฟอร์มอัตโนมัติจาก URL",
+    "enterUsername": "ใส่ URL สตรีมหรือชื่อผู้ใช้",
+    "selectPlatform": "เลือกแพลตฟอร์มที่คุณไลฟ์",
+    "changeUsername": "เปลี่ยนชื่อผู้ใช้",
+    "newSearch": "ค้นหาใหม่",
+    "premiumOnly": "เฉพาะพรีเมียม"
+  },
+  "upgrade": {
+    "title": "{platform} ต้องการพรีเมียม",
+    "description": "อัปเกรดเป็นพรีเมียมเพื่อเพิ่มครีเอเตอร์ {platform} และเริ่มบันทึกไลฟ์สตรีม"
+  },
+  "hints": {
+    "tryFormats": "ลองตัวอย่างเหล่านี้:",
+    "enterUsername": "ใส่ @username หรือวาง URL โปรไฟล์"
+  },
+  "actions": {
+    "follow": "เพิ่ม",
+    "successTitle": "เพิ่มแล้ว!",
+    "successMessage": "เพิ่ม {username} แล้ว",
+    "errorTitle": "ผิดพลาด",
+    "cancel": "ยกเลิก",
+    "willRecord": "จะถูกบันทึกเมื่อเริ่มไลฟ์",
+    "viewPage": "ดูหน้า"
+  },
+  "chromeExtension": "ติดตั้งส่วนขยาย Chrome",
+  "inputLabel": "วางลิงก์สตรีมจาก Twitch, TikTok หรือ YouTube ที่นี่",
+  "notFollowing": {
+    "title": "ครีเอเตอร์นี้ไม่อยู่ในรายการของคุณ",
+    "description": "คุณพยายามเข้าถึงครีเอเตอร์ที่ไม่อยู่ในรายการ",
+    "followToAccess": "เพิ่มเพื่อดูบันทึกและรับการแจ้งเตือนเมื่อพวกเขาเริ่มไลฟ์",
+    "notFoundTitle": "ไม่พบครีเอเตอร์",
+    "notFoundDescription": "@{username} ไม่มีอยู่บน {platform} หรือบัญชีเป็นส่วนตัว",
+    "trySearch": "ลองค้นหาครีเอเตอร์อื่น:"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Friends",
+  "description": "Scopri altri creator sulla piattaforma",
+  "emptyFiltered": {
+    "title": "Nessun creator corrisponde ai tuoi filtri",
+    "description": "Prova a modificare o cancellare i filtri"
+  },
+  "emptyDefault": {
+    "title": "Nessun creator trovato",
+    "description": "..."
+  },
+  "noMoreToLoad": "Sei arrivato alla fine"
+}

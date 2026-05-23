@@ -1,0 +1,13 @@
+{
+  "title": "Live ora",
+  "subtitle": "Stream attualmente in registrazione",
+  "streamingCount": "{count, plural, one {# in streaming} other {# in streaming}}",
+  "refresh": "Aggiorna",
+  "allPlatforms": "Tutte le piattaforme",
+  "showAll": "Mostra tutti",
+  "discoverStreamers": "Trova Friends",
+  "emptyState": {
+    "title": "Nessun live stream in questo momento",
+    "description": "Quando i tuoi creator vanno live, i loro stream appariranno qui"
+  }
+}

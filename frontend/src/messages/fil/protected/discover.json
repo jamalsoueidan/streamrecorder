@@ -1,0 +1,13 @@
+{
+  "title": "Friends",
+  "description": "Tuklasin ang ibang creators sa platform",
+  "emptyFiltered": {
+    "title": "Walang creator na tumutugma sa filter mo",
+    "description": "Subukang i-adjust o i-clear ang filters"
+  },
+  "emptyDefault": {
+    "title": "Walang nakitang creator",
+    "description": "..."
+  },
+  "noMoreToLoad": "Nakarating ka na sa dulo"
+}

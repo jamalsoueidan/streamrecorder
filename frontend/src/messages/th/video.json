@@ -1,0 +1,30 @@
+{
+  "meta": {
+    "title": "ไลฟ์ของ {creatorName} - {recordedDate}",
+    "description": "ดูไลฟ์ {platform} ของ {creatorName} ที่บันทึกไว้เมื่อ {recordedDate} ความยาว: {duration} ไม่พลาดไลฟ์ด้วย Live Stream Recorder",
+    "ogTitle": "ไลฟ์ของ {creatorName} - {recordedDate} | Live Stream Recorder",
+    "keywords": "{creatorName} วิดีโอ, {creatorName} ไลฟ์ {recordedDate}, {creatorName} {platform}, {creatorName} บันทึกไลฟ์, ดู {creatorName}"
+  },
+  "jsonLd": {
+    "name": "ไลฟ์ของ {creatorName} - {recordedDate}",
+    "description": "บันทึกไลฟ์จาก {creatorName} เมื่อ {recordedDate}"
+  },
+  "watch": {
+    "title": "ดูไลฟ์ของ {username} - {date}"
+  },
+  "backToProfile": "กลับไปโปรไฟล์ของ {username}",
+  "otherRecordingsBy": "บันทึกอื่นๆ ของ {username}",
+  "accessGate": {
+    "signIn": {
+      "title": "เข้าสู่ระบบเพื่อดูต่อ",
+      "body": "คุณดูตัวอย่างฟรีครบแล้ว สมัครบัญชีฟรีเพื่อดูต่อ",
+      "primaryCta": "เข้าสู่ระบบ",
+      "secondaryCta": "สร้างบัญชี"
+    },
+    "upgrade": {
+      "title": "อัปเกรดเพื่อดูต่อ",
+      "body": "คุณดูฟรีครบจำนวนแล้ว อัปเกรดเพื่อดูได้ไม่จำกัด",
+      "primaryCta": "อัปเกรด"
+    }
+  }
+}

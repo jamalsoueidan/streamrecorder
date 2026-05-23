@@ -9,8 +9,17 @@ import {
   SegmentedControl,
   Select,
   Tabs,
+  Tooltip,
 } from "@mantine/core";
-import { IconChartBar, IconScissors, IconVideo } from "@tabler/icons-react";
+import {
+  IconChartBar,
+  IconDownload,
+  IconEye,
+  IconScissors,
+  IconSortAscending,
+  IconSortDescending,
+  IconVideo,
+} from "@tabler/icons-react";
 import { useTranslations } from "next-intl";
 import { usePathname, useRouter } from "@/i18n/navigation";
 import { useQueryStates } from "nuqs";
@@ -24,10 +33,46 @@ interface ProfileTabsProps {
 
 export function ProfileTabs({ type, username, clipsCount }: ProfileTabsProps) {
   const t = useTranslations("protected.common");
+  const tFilters = useTranslations("protected.filters");
   const tInsights = useTranslations("protected.profileInsights");
   const router = useRouter();
   const pathname = usePathname();
   const [filters, setFilters] = useQueryStates(profileParsers);
+
+  const sortData = [
+    {
+      value: SortOptions.createdAtDesc,
+      label: (
+        <Tooltip label={t("newest")} withArrow>
+          <IconSortDescending size={18} stroke={1.8} />
+        </Tooltip>
+      ),
+    },
+    {
+      value: SortOptions.createdAtAsc,
+      label: (
+        <Tooltip label={t("oldest")} withArrow>
+          <IconSortAscending size={18} stroke={1.8} />
+        </Tooltip>
+      ),
+    },
+    {
+      value: SortOptions.viewsCountDesc,
+      label: (
+        <Tooltip label={tFilters("sort.viewsCountDesc")} withArrow>
+          <IconEye size={18} stroke={1.8} />
+        </Tooltip>
+      ),
+    },
+    {
+      value: SortOptions.downloadsCountDesc,
+      label: (
+        <Tooltip label={tFilters("sort.downloadsCountDesc")} withArrow>
+          <IconDownload size={18} stroke={1.8} />
+        </Tooltip>
+      ),
+    },
+  ];
 
   const isInsights = pathname.endsWith("/insights");
   const isClips = pathname.endsWith("/clips");
@@ -77,10 +122,7 @@ export function ProfileTabs({ type, username, clipsCount }: ProfileTabsProps) {
               size="md"
               value={filters.sort}
               onChange={(value) => setFilters({ sort: value as SortOptions })}
-              data={[
-                { label: t("newest"), value: SortOptions.createdAtDesc },
-                { label: t("oldest"), value: SortOptions.createdAtAsc },
-              ]}
+              data={sortData}
             />
           )}
         </Group>
@@ -145,10 +187,7 @@ export function ProfileTabs({ type, username, clipsCount }: ProfileTabsProps) {
                   onChange={(value) =>
                     setFilters({ sort: value as SortOptions })
                   }
-                  data={[
-                    { label: t("newest"), value: SortOptions.createdAtDesc },
-                    { label: t("oldest"), value: SortOptions.createdAtAsc },
-                  ]}
+                  data={sortData}
                 />
               </div>
             )}

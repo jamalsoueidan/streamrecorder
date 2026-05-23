@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "title": "Verifica il tuo account",
+    "description": "Verifica la proprietà del tuo profilo streaming per rivendicare il tuo account o gestire i tuoi contenuti."
+  },
+  "header": {
+    "title": "Verifica proprietà",
+    "subtitle": "Dimostra di essere il proprietario di questo account per rivendicare il tuo profilo o gestire i tuoi contenuti"
+  },
+  "common": {
+    "copy": "Copia",
+    "copied": "Copiato!"
+  },
+  "steps": {
+    "enterUrl": {
+      "label": "Il tuo profilo",
+      "description": "Inserisci l'URL del tuo profilo streaming",
+      "intro": "Inserisci l'URL del tuo profilo streaming.",
+      "input": {
+        "label": "URL profilo",
+        "placeholder": "https://tiktok.com/@tuonomeutente"
+      },
+      "detected": "Rilevato: {platform} - @{username}",
+      "continue": "Continua",
+      "email": {
+        "label": "Indirizzo email",
+        "placeholder": "tu@esempio.com"
+      },
+      "error": {
+        "required": "Inserisci l'URL del tuo profilo",
+        "invalid": "Non riconosciamo questo URL",
+        "emailRequired": "Inserisci il tuo indirizzo email",
+        "emailInvalid": "Inserisci un indirizzo email valido"
+      }
+    },
+    "verify": {
+      "label": "Verifica",
+      "description": "Aggiungi il codice alla tua bio",
+      "intro": "Per dimostrare di essere il proprietario, aggiungi il codice di verifica qui sotto alla bio del tuo profilo. Puoi rimuoverlo dopo la verifica.",
+      "codeLabel": "Il tuo codice di verifica",
+      "instructions": "Copia questo codice e aggiungilo ovunque nella tua bio. Può stare all'inizio, alla fine o in mezzo - lo troveremo noi.",
+      "openProfile": "Apri profilo {platform}",
+      "verifyButton": "Ho aggiunto il codice - Verifica adesso",
+      "failed": {
+        "title": "Non abbiamo trovato il codice",
+        "message": "Non siamo riusciti a trovare il codice di verifica nella tua bio. Assicurati di aver salvato il profilo dopo aver aggiunto il codice. Se non puoi aggiungere il codice alla bio, torna indietro e usa il modulo DMCA.",
+        "backToForm": "Torna al modulo DMCA"
+      }
+    },
+    "complete": {
+      "created": {
+        "title": "Benvenuto!",
+        "message": "Il tuo account è stato creato e il tuo profilo è ora collegato.",
+        "button": "Dashboard"
+      },
+      "linked": {
+        "title": "Profilo collegato",
+        "message": "Il tuo profilo è stato collegato al tuo account. Accedi per andare alla tua dashboard.",
+        "button": "Vai all'accesso"
+      },
+      "notFound": {
+        "title": "Profilo non trovato",
+        "message": "La proprietà è stata verificata, ma questo content creator non esiste nel nostro sistema."
+      }
+    }
+  }
+}

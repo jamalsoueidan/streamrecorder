@@ -1,0 +1,42 @@
+{
+  "sections": {
+    "home": "หน้าหลัก",
+    "studio": "สตูดิโอ",
+    "community": "ชุมชน"
+  },
+  "links": {
+    "dashboard": "แดชบอร์ด",
+    "premium": "พรีเมียม",
+    "myRecordings": "บันทึก",
+    "myClips": "คลิปของฉัน",
+    "watchLater": "ดูภายหลัง",
+    "aiStudio": "AI สตูดิโอ",
+    "myList": "คลังของฉัน",
+    "live": "ไลฟ์",
+    "tiktokInsights": "TikTok Insights",
+    "explore": "สำรวจ",
+    "clips": "คลิป",
+    "friends": "เพื่อน"
+  },
+  "actions": {
+    "settings": "การตั้งค่า",
+    "logout": "ออกจากระบบ",
+    "addCreator": "เพิ่มครีเอเตอร์",
+    "search": "ค้นหา",
+    "searchPlaceholder": "ใส่ URL ของสตรีม",
+    "installApp": "ติดตั้งแอป",
+    "more": "เพิ่มเติม",
+    "language": "ภาษา",
+    "collapse": "ย่อแถบด้านข้าง",
+    "expand": "ขยายแถบด้านข้าง"
+  },
+  "installModal": {
+    "title": "ติดตั้งแอป",
+    "description": "การติดตั้งแอปนี้บน iPhone:",
+    "step1": "แตะที่",
+    "shareButton": "ปุ่มแชร์",
+    "step2": "แตะ",
+    "addToHomeScreen": "เพิ่มไปยังหน้าจอหลัก",
+    "step3": "แตะ \"เพิ่ม\""
+  }
+}

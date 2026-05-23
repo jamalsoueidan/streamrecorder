@@ -1,0 +1,855 @@
+{
+  "meta": {
+    "all": {
+      "title": "Mga Live Stream Recording",
+      "description": "Panoorin ang live stream recordings mula sa mga creator sa LiveStreamRecorder. Naka-save at handa nang panoorin ang TikTok, Twitch, YouTube, Kick recordings.",
+      "keywords": [
+        "live stream recordings",
+        "stream recordings",
+        "tiktok live recording",
+        "twitch vod",
+        "live stream recorder",
+        "stream archive"
+      ]
+    },
+    "tiktok": {
+      "title": "Mga TikTok Live Recording",
+      "description": "Panoorin at i-download ang TikTok live recordings sa LiveStreamRecorder. Awtomatikong nare-record ang bawat TikTok Live — walang screen recorder na kailangan. Panoorin ang naka-save na TikTok Lives mula sa paborito mong creators.",
+      "keywords": [
+        "tiktok live recording",
+        "tiktok live stream",
+        "record tiktok live",
+        "tiktok recorder",
+        "how to record tiktok live",
+        "screen recorder for tiktok",
+        "can you record tiktok live",
+        "how to record a live on tiktok",
+        "tiktok vod",
+        "save tiktok live",
+        "screen record tiktok live",
+        "record tiktok on computer",
+        "can you screen record tiktok live"
+      ],
+      "faqs": [
+        {
+          "question": "Paano ko maire-record ang TikTok Lives ko?",
+          "answer": "Sa LiveStreamRecorder, awtomatikong nare-record ang TikTok Lives mo sa cloud. Mag-sign up lang, idagdag ang TikTok username mo, at na-capture na ang bawat Live mo — walang kailangang screen recorder para sa TikTok, walang phone na magdamag na naka-on."
+        },
+        {
+          "question": "Kailangan ko ba ng screen recorder para sa TikTok Lives?",
+          "answer": "Hindi. Sine-capture ng LiveStreamRecorder ang TikTok Lives mo server-side sa high quality, kaya wala nang need mag-screen record sa TikTok. Walang dropped frames, walang notifications na nakakaistorbo, walang unreliable na phone recording. Awtomatikong naka-save ang Lives mo sa account mo."
+        },
+        {
+          "question": "Pwede ko bang i-record ang TikTok Lives ko sa computer o laptop?",
+          "answer": "Oo. Buong-buo sa cloud tumatakbo ang LiveStreamRecorder, kaya pwede mong i-record ang TikTok Lives mo mula sa kahit anong device na may browser — PC, laptop, o mobile. Walang kailangang i-install, walang desktop screen recorder o browser extension. Idagdag mo lang ang username at awtomatikong nare-record na ang Lives mo."
+        },
+        {
+          "question": "Paano ko ma-i-download ang TikTok Live recordings ko?",
+          "answer": "Lahat ng TikTok live recordings mo sa LiveStreamRecorder ay agad mapapanood sa browser mo. Pwedeng i-download ng Premium users ang recordings nila bilang video files para sa offline viewing — walang watermark sa mga download mo."
+        },
+        {
+          "question": "Nawawala ba ang TikTok Lives pagkatapos ng broadcast?",
+          "answer": "Oo, hindi sine-save ng TikTok ang Lives pagkatapos matapos ang broadcast. Kaya ginagamit ng mga creator ang LiveStreamRecorder bilang TikTok recorder nila — na-capture at naka-store ang bawat Live para mapanood mo, ma-download, o magamit ulit ang content mo."
+        },
+        {
+          "question": "Ano ang pinakamagandang paraan para mag-record ng TikTok Lives ko?",
+          "answer": "Ang pinakamagandang paraan para mag-record ng TikTok Lives mo ay sa pamamagitan ng cloud-based recorder tulad ng LiveStreamRecorder. Hindi tulad ng phone screen recording o desktop capture software, nakukuha ng cloud recording ang buong stream mo sa high quality kahit mamatay ang phone mo o mawalan ka ng connection. Ito ang pinakamagandang alternatibo sa screen recorder para sa TikTok Lives."
+        },
+        {
+          "question": "Pwede ko bang gawing short clips ang naka-record na TikTok Lives ko?",
+          "answer": "Oo. Pwedeng gamitin ng Premium users ang ClipAI para awtomatikong gawing short highlight clips ang TikTok live recordings nila. Magandang paraan ito para magamit ulit ang Lives mo bilang TikTok videos, Reels, o Shorts para palakihin ang following mo."
+        }
+      ]
+    },
+    "twitch": {
+      "title": "Mga Twitch Stream Recording at VOD",
+      "description": "Panoorin at i-download ang Twitch stream recordings sa LiveStreamRecorder. Awtomatikong na-capture ang Twitch streams mo — walang kailangang screen recorder. Ang pinakamagandang Twitch recorder para sa mga creator na gustong magkaroon ng permanenteng VODs.",
+      "keywords": [
+        "twitch recorder",
+        "twitch stream recorder",
+        "twitch vod recorder",
+        "record twitch stream",
+        "capture twitch stream",
+        "twitch live recorder",
+        "record my twitch stream",
+        "record your twitch stream",
+        "record twitch stream automatically",
+        "screen recorder for twitch",
+        "best screen recorder for twitch",
+        "twitch video recorder",
+        "saving twitch streams",
+        "twitch stream capture",
+        "twitch record live stream",
+        "record stream on twitch",
+        "twitch vod",
+        "save twitch stream"
+      ],
+      "faqs": [
+        {
+          "question": "Paano ko awtomatikong maire-record ang Twitch streams ko?",
+          "answer": "Ang LiveStreamRecorder ay cloud-based Twitch recorder na awtomatikong nag-cacapture ng streams mo. Mag-sign up, idagdag ang Twitch channel mo, at sa bawat pag-live mo ay nare-record na ang stream mo. Walang kailangang screen recorder para sa Twitch — server-side na lahat ang nangyayari."
+        },
+        {
+          "question": "Nag-eexpire ba ang Twitch VODs?",
+          "answer": "Oo. Nag-eexpire ang Twitch VODs pagkatapos ng 14 na araw para sa regular streamers at 60 araw para sa Partners at Turbo users. Permanenteng sine-save ng LiveStreamRecorder ang Twitch streams mo — hindi nag-eexpire ang recordings mo at palaging available para mapanood o ma-download."
+        },
+        {
+          "question": "Ano ang pinakamagandang Twitch stream recorder para sa mga creator?",
+          "answer": "Para sa awtomatikong recording, ang pinakamagandang option ay cloud-based Twitch recorder tulad ng LiveStreamRecorder. Kailangan ng traditional screen recorders para sa Twitch na manatiling naka-on ang PC mo at tumatakbo ang recording software sa background. Sine-capture ng LiveStreamRecorder ang Twitch streams mo mula sa cloud — kahit mag-crash ang OBS o mag-restart ang PC mo, ligtas pa rin ang recording mo."
+        },
+        {
+          "question": "Kailangan ko ba ng screen recorder para i-save ang Twitch streams ko?",
+          "answer": "Hindi. Sine-capture ng LiveStreamRecorder ang Twitch streams mo server-side, kaya walang need sa screen capture software. Walang Bandicam, walang desktop app, walang extra CPU usage habang nagse-stream. Awtomatikong naka-save sa cloud ang streams mo sa high quality."
+        },
+        {
+          "question": "Pwede ko bang i-record ang Twitch streams ko nang libre?",
+          "answer": "Oo. Mag-sign up sa LiveStreamRecorder nang libre at agad nang magsimulang mag-record ng Twitch streams mo. Bina-unlock ng Premium plans ang pag-download ng recordings, ClipAI para sa automatic highlight clips, at extended storage."
+        },
+        {
+          "question": "Paano ito naiiba sa built-in VOD system ng Twitch?",
+          "answer": "Nag-eexpire ang Twitch VODs pagkatapos ng 14-60 araw at binubura kapag binura mo ang channel mo. Nagbibigay sa iyo ang LiveStreamRecorder ng independent backup ng Twitch streams mo. Hiwalay na naka-store ang recordings mo, hindi nag-eexpire, at nananatiling available kahit may mangyari sa Twitch account mo."
+        },
+        {
+          "question": "Pwede ko bang gawing clips ang Twitch recordings ko?",
+          "answer": "Oo. Pwedeng gamitin ng Premium users ang ClipAI para awtomatikong gawing short highlight clips ang Twitch stream recordings nila. I-post bilang YouTube Shorts, TikTok videos, o Reels para palakihin ang audience mo sa lahat ng platform."
+        },
+        {
+          "question": "Sine-capture ba ng LiveStreamRecorder ang Twitch stream ko kahit nakalimutan kong i-save ang VOD?",
+          "answer": "Oo. Kapag naka-connect na ang channel mo, awtomatikong nare-record ng LiveStreamRecorder ang bawat Twitch live stream — anuman ang Twitch VOD settings mo. Kahit naka-disable ang VODs mo sa Twitch, na-capture pa rin at naka-save sa account mo ang streams mo."
+        }
+      ]
+    },
+    "youtube": {
+      "title": "Mga YouTube Live Recording",
+      "description": "Panoorin at i-download ang YouTube live recordings sa LiveStreamRecorder. Awtomatikong na-capture ang YouTube Lives mo — walang kailangang screen recorder para sa YouTube. Ang pinakamadaling YouTube live recorder para sa mga creator.",
+      "keywords": [
+        "youtube live recording",
+        "youtube live stream",
+        "record youtube live stream",
+        "youtube recorder",
+        "screen recorder for youtube",
+        "youtube recording",
+        "youtube live record",
+        "capture live youtube stream",
+        "youtube live stream capture",
+        "best screen recorder for youtube",
+        "recording live youtube stream",
+        "youtube video recorder",
+        "online youtube recorder",
+        "save youtube live"
+      ],
+      "faqs": [
+        {
+          "question": "Paano ko maire-record ang YouTube Live streams ko?",
+          "answer": "Sa LiveStreamRecorder, awtomatikong nare-record ang YouTube Lives mo sa cloud. Mag-sign up, idagdag ang YouTube channel mo, at na-capture na ang bawat live stream na sinisimulan mo. Walang YouTube recording software na kailangang i-install, walang manual na pag-save — gumagana na lang."
+        },
+        {
+          "question": "Kailangan ko ba ng screen recorder para sa YouTube Lives?",
+          "answer": "Hindi. Ang LiveStreamRecorder ay cloud-based YouTube recorder na nagca-capture ng live streams mo server-side. Hindi tulad ng screen recording software para sa YouTube, walang dropped frames, walang desktop app na tumatakbo sa background, at walang storage na nauubos sa hard drive mo. Awtomatikong naka-save sa high quality ang Lives mo."
+        },
+        {
+          "question": "Ano ang pinakamagandang recording software para sa YouTube Lives?",
+          "answer": "Para sa live streams specifically, ang pinakamagandang option ay cloud-based YouTube recorder tulad ng LiveStreamRecorder. Kailangan ng traditional screen recorders para sa YouTube na manatiling naka-on ang computer mo buong stream. Sine-capture ng LiveStreamRecorder ang YouTube Lives mo mula sa cloud — kahit mag-crash ang PC mo o mawalan ng power, ligtas pa rin ang recording mo."
+        },
+        {
+          "question": "Pwede ko bang i-record ang YouTube Lives ko nang libre?",
+          "answer": "Oo. Pwede kang mag-sign up sa LiveStreamRecorder nang libre at agad nang magsimulang mag-record ng YouTube live streams mo. Bina-unlock ng Premium plans ang pag-download ng recordings, ClipAI para sa automatic highlight clips, at extended storage."
+        },
+        {
+          "question": "Awtomatikong nase-save ba ng YouTube ang YouTube Lives?",
+          "answer": "Pwede ma-save ng YouTube ang live stream replays sa channel mo, pero minsan binubura ng creators, o nabibigo ang streams sa pag-process. Nagbibigay sa iyo ang LiveStreamRecorder ng independent backup — na-capture at hiwalay na naka-store ang YouTube live recordings mo kaya palagi kang may kopya ng content mo."
+        },
+        {
+          "question": "Pwede ko bang gawing Shorts ang YouTube Live recordings ko?",
+          "answer": "Oo. Pwedeng gamitin ng Premium users ang ClipAI para awtomatikong gawing short highlight clips ang YouTube live recordings — perfect para sa YouTube Shorts, TikTok, o Reels. Ito ang pinakamadaling paraan para magamit ulit ang live content mo at palakihin ang subscribers mo."
+        },
+        {
+          "question": "Online YouTube recorder ba ang LiveStreamRecorder?",
+          "answer": "Oo. Ang LiveStreamRecorder ay fully online YouTube recorder — lahat sa cloud tumatakbo. Walang software na i-download, walang browser extension. Ikonekta lang ang channel mo at awtomatikong nare-record ang YouTube Lives mo mula sa kahit anong device."
+        },
+        {
+          "question": "Paano ko ma-capture ang YouTube live stream ko kung nakalimutan kong pindutin ang record?",
+          "answer": "Iyan mismo ang sinosolusyunan ng LiveStreamRecorder. Kapag naka-connect na ang channel mo, awtomatikong na-capture ang bawat YouTube live stream na sinisimulan mo. Hindi mo na kailangang maalala kung kailan pipindutin ang record — palaging naka-save ang Lives mo."
+        }
+      ]
+    },
+    "kick": {
+      "title": "Mga Kick Stream Recording",
+      "description": "Panoorin ang Kick stream recordings mula sa mga creator sa LiveStreamRecorder. Manood ng Kick VODs, mag-download ng streams, at tumuklas ng bagong streamers.",
+      "keywords": [
+        "kick recording",
+        "kick vod",
+        "kick stream download",
+        "record kick stream",
+        "kick archive",
+        "save kick stream"
+      ]
+    },
+    "afreecatv": {
+      "title": "Mga AfreecaTV Stream Recording",
+      "description": "Panoorin ang AfreecaTV stream recordings mula sa mga creator sa LiveStreamRecorder. Manood ng AfreecaTV VODs at mag-download ng Korean streams.",
+      "keywords": [
+        "afreecatv recording",
+        "afreecatv vod",
+        "afreecatv download",
+        "korean stream recording",
+        "afreecatv archive",
+        "save afreecatv stream"
+      ]
+    },
+    "pandalive": {
+      "title": "Mga Pandalive Stream Recording",
+      "description": "Panoorin ang Pandalive stream recordings mula sa mga creator sa LiveStreamRecorder. Manood ng Pandalive VODs at mag-download ng Korean streams.",
+      "keywords": [
+        "pandalive recording",
+        "pandalive vod",
+        "pandalive download",
+        "korean stream recording",
+        "pandalive archive",
+        "save pandalive stream"
+      ]
+    },
+    "bigo": {
+      "title": "Mga Bigo Live Recording",
+      "description": "Panoorin at i-download ang Bigo Live recordings sa LiveStreamRecorder. Awtomatikong na-capture sa cloud ang Bigo Lives mo — walang black screen issues, walang kailangang screen recorder. Ang pinakamadaling Bigo Live recorder para sa mga creator.",
+      "keywords": [
+        "bigo recorder",
+        "bigo live recorder",
+        "bigo live record",
+        "bigo live screen recorder",
+        "screen record bigo live",
+        "screen recorder for bigo live",
+        "bigo screen record",
+        "bigo black screen recording",
+        "bigo live screen recorder black screen",
+        "bigo record black screen",
+        "bigo screen recorder black screen",
+        "record bigo black screen",
+        "save bigo live"
+      ],
+      "faqs": [
+        {
+          "question": "Paano ko maire-record ang Bigo Lives ko?",
+          "answer": "Sa LiveStreamRecorder, awtomatikong nare-record ang Bigo Lives mo sa cloud. Mag-sign up, idagdag ang Bigo Live username mo, at sa bawat pag-live mo ay na-capture na. Walang Bigo Live recorder APK na i-install, walang screen recording — server-side ang lahat."
+        },
+        {
+          "question": "Bakit black screen ang nakukuha ko kapag nagre-record ng Bigo Live?",
+          "answer": "Karaniwan ang black screen issues kapag gumagamit ng screen recorders sa Bigo Live. Iniiwasan ito ng LiveStreamRecorder buong-buo dahil sine-capture nito ang Bigo Lives mo diretso mula sa cloud — walang black screen, walang workarounds, walang unreliable na screen recording apps."
+        },
+        {
+          "question": "Paano ko maaayos ang Bigo Live screen recorder black screen?",
+          "answer": "Ang pinakamadaling solusyon ay hindi na mag-screen record. Ang LiveStreamRecorder ay cloud-based Bigo recorder na nagca-capture ng Lives mo server-side sa high quality. Walang problema sa black screen, walang apps na i-configure — idagdag mo lang ang username at awtomatikong nare-record ang Bigo Lives mo."
+        },
+        {
+          "question": "Kailangan ko ba ng screen recorder para sa Bigo Live?",
+          "answer": "Hindi. Karaniwang nagdudulot ng black screen issues o low quality captures ang screen recorders para sa Bigo Live. Ang LiveStreamRecorder ay cloud-based Bigo Live recorder na awtomatikong nagca-capture ng streams mo sa high quality — walang app na i-install, walang black screen."
+        },
+        {
+          "question": "Pwede ko bang i-record ang Bigo Lives ko nang libre?",
+          "answer": "Oo. Mag-sign up sa LiveStreamRecorder nang libre at agad nang magsimulang mag-record ng Bigo Lives mo. Bina-unlock ng Premium plans ang pag-download ng recordings, ClipAI para sa automatic highlight clips, at extended storage."
+        },
+        {
+          "question": "Pwede ko bang i-download ang Bigo Live recordings ko?",
+          "answer": "Oo. Pwedeng i-download ng Premium users ang Bigo Live recordings nila bilang video files para sa offline viewing. Pwede ring panoorin agad ang bawat recording sa browser mo nang hindi nagda-download."
+        },
+        {
+          "question": "Pwede ko bang gawing short clips ang Bigo Live recordings ko?",
+          "answer": "Oo. Pwedeng gamitin ng Premium users ang ClipAI para awtomatikong gawing short highlight clips ang Bigo Live recordings nila, handa na para sa TikTok, YouTube Shorts, o Reels. Magandang paraan ito para magamit ulit ang live content mo at palakihin ang following mo sa iba't ibang platform."
+        }
+      ]
+    },
+    "buzzcast": {
+      "title": "Mga Buzzcast Live Recording",
+      "description": "Panoorin at i-download ang Buzzcast Live recordings sa LiveStreamRecorder. Awtomatikong na-capture sa cloud ang Buzzcast Lives mo — walang black screen issues, walang kailangang screen recorder. Ang pinakamadaling Buzzcast Live recorder para sa mga creator.",
+      "keywords": [
+        "buzzcast recorder",
+        "buzzcast live recorder",
+        "buzzcast live record",
+        "buzzcast live screen recorder",
+        "screen record buzzcast live",
+        "screen recorder for buzzcast live",
+        "buzzcast screen record",
+        "buzzcast black screen recording",
+        "buzzcast live screen recorder black screen",
+        "buzzcast record black screen",
+        "buzzcast screen recorder black screen",
+        "record buzzcast black screen",
+        "save buzzcast live"
+      ],
+      "faqs": [
+        {
+          "question": "Paano ko maire-record ang Buzzcast Lives ko?",
+          "answer": "Sa LiveStreamRecorder, awtomatikong nare-record ang Buzzcast Lives mo sa cloud. Mag-sign up, idagdag ang Buzzcast Live username mo, at sa bawat pag-live mo ay na-capture na. Walang Buzzcast Live recorder APK na i-install, walang screen recording — server-side ang lahat."
+        },
+        {
+          "question": "Bakit black screen ang nakukuha ko kapag nagre-record ng Buzzcast Live?",
+          "answer": "Karaniwan ang black screen issues kapag gumagamit ng screen recorders sa Buzzcast Live. Iniiwasan ito ng LiveStreamRecorder buong-buo dahil sine-capture nito ang Buzzcast Lives mo diretso mula sa cloud — walang black screen, walang workarounds, walang unreliable na screen recording apps."
+        },
+        {
+          "question": "Paano ko maaayos ang Buzzcast Live screen recorder black screen?",
+          "answer": "Ang pinakamadaling solusyon ay hindi na mag-screen record. Ang LiveStreamRecorder ay cloud-based Buzzcast recorder na nagca-capture ng Lives mo server-side sa high quality. Walang problema sa black screen, walang apps na i-configure — idagdag mo lang ang username at awtomatikong nare-record ang Buzzcast Lives mo."
+        },
+        {
+          "question": "Kailangan ko ba ng screen recorder para sa Buzzcast Live?",
+          "answer": "Hindi. Karaniwang nagdudulot ng black screen issues o low quality captures ang screen recorders para sa Buzzcast Live. Ang LiveStreamRecorder ay cloud-based Buzzcast Live recorder na awtomatikong nagca-capture ng streams mo sa high quality — walang app na i-install, walang black screen."
+        },
+        {
+          "question": "Pwede ko bang i-record ang Buzzcast Lives ko nang libre?",
+          "answer": "Oo. Mag-sign up sa LiveStreamRecorder nang libre at agad nang magsimulang mag-record ng Buzzcast Lives mo. Bina-unlock ng Premium plans ang pag-download ng recordings, ClipAI para sa automatic highlight clips, at extended storage."
+        },
+        {
+          "question": "Pwede ko bang i-download ang Buzzcast Live recordings ko?",
+          "answer": "Oo. Pwedeng i-download ng Premium users ang Buzzcast Live recordings nila bilang video files para sa offline viewing. Pwede ring panoorin agad ang bawat recording sa browser mo nang hindi nagda-download."
+        },
+        {
+          "question": "Pwede ko bang gawing short clips ang Buzzcast Live recordings ko?",
+          "answer": "Oo. Pwedeng gamitin ng Premium users ang ClipAI para awtomatikong gawing short highlight clips ang Buzzcast Live recordings nila, handa na para sa TikTok, YouTube Shorts, o Reels. Magandang paraan ito para magamit ulit ang live content mo at palakihin ang following mo sa iba't ibang platform."
+        }
+      ]
+    },
+    "liveme": {
+      "title": "Mga LiveMe Live Recording",
+      "description": "Panoorin at i-download ang LiveMe Live recordings sa LiveStreamRecorder. Awtomatikong na-capture sa cloud ang LiveMe Lives mo — walang black screen issues, walang kailangang screen recorder. Ang pinakamadaling LiveMe Live recorder para sa mga creator.",
+      "keywords": [
+        "liveme recorder",
+        "liveme live recorder",
+        "liveme live record",
+        "liveme live screen recorder",
+        "screen record liveme live",
+        "screen recorder for liveme live",
+        "liveme screen record",
+        "liveme black screen recording",
+        "liveme live screen recorder black screen",
+        "liveme record black screen",
+        "liveme screen recorder black screen",
+        "record liveme black screen",
+        "save liveme live"
+      ],
+      "faqs": [
+        {
+          "question": "Paano ko maire-record ang LiveMe Lives ko?",
+          "answer": "Sa LiveStreamRecorder, awtomatikong nare-record ang LiveMe Lives mo sa cloud. Mag-sign up, idagdag ang LiveMe Live username mo, at sa bawat pag-live mo ay na-capture na. Walang LiveMe Live recorder APK na i-install, walang screen recording — server-side ang lahat."
+        },
+        {
+          "question": "Bakit black screen ang nakukuha ko kapag nagre-record ng LiveMe Live?",
+          "answer": "Karaniwan ang black screen issues kapag gumagamit ng screen recorders sa LiveMe Live. Iniiwasan ito ng LiveStreamRecorder buong-buo dahil sine-capture nito ang LiveMe Lives mo diretso mula sa cloud — walang black screen, walang workarounds, walang unreliable na screen recording apps."
+        },
+        {
+          "question": "Paano ko maaayos ang LiveMe Live screen recorder black screen?",
+          "answer": "Ang pinakamadaling solusyon ay hindi na mag-screen record. Ang LiveStreamRecorder ay cloud-based LiveMe recorder na nagca-capture ng Lives mo server-side sa high quality. Walang problema sa black screen, walang apps na i-configure — idagdag mo lang ang username at awtomatikong nare-record ang LiveMe Lives mo."
+        },
+        {
+          "question": "Kailangan ko ba ng screen recorder para sa LiveMe Live?",
+          "answer": "Hindi. Karaniwang nagdudulot ng black screen issues o low quality captures ang screen recorders para sa LiveMe Live. Ang LiveStreamRecorder ay cloud-based LiveMe Live recorder na awtomatikong nagca-capture ng streams mo sa high quality — walang app na i-install, walang black screen."
+        },
+        {
+          "question": "Pwede ko bang i-record ang LiveMe Lives ko nang libre?",
+          "answer": "Oo. Mag-sign up sa LiveStreamRecorder nang libre at agad nang magsimulang mag-record ng LiveMe Lives mo. Bina-unlock ng Premium plans ang pag-download ng recordings, ClipAI para sa automatic highlight clips, at extended storage."
+        },
+        {
+          "question": "Pwede ko bang i-download ang LiveMe Live recordings ko?",
+          "answer": "Oo. Pwedeng i-download ng Premium users ang LiveMe Live recordings nila bilang video files para sa offline viewing. Pwede ring panoorin agad ang bawat recording sa browser mo nang hindi nagda-download."
+        },
+        {
+          "question": "Pwede ko bang gawing short clips ang LiveMe Live recordings ko?",
+          "answer": "Oo. Pwedeng gamitin ng Premium users ang ClipAI para awtomatikong gawing short highlight clips ang LiveMe Live recordings nila, handa na para sa TikTok, YouTube Shorts, o Reels. Magandang paraan ito para magamit ulit ang live content mo at palakihin ang following mo sa iba't ibang platform."
+        }
+      ]
+    },
+    "mixch": {
+      "title": "Mga Mixch Live Recording",
+      "description": "Panoorin at i-download ang Mixch Live recordings sa LiveStreamRecorder. Awtomatikong na-capture sa cloud ang Mixch Lives mo — walang black screen issues, walang kailangang screen recorder. Ang pinakamadaling Mixch Live recorder para sa mga creator.",
+      "keywords": [
+        "mixch recorder",
+        "mixch live recorder",
+        "mixch live record",
+        "mixch live screen recorder",
+        "screen record mixch live",
+        "screen recorder for mixch live",
+        "mixch screen record",
+        "mixch black screen recording",
+        "mixch live screen recorder black screen",
+        "mixch record black screen",
+        "mixch screen recorder black screen",
+        "record mixch black screen",
+        "save mixch live"
+      ],
+      "faqs": [
+        {
+          "question": "Paano ko maire-record ang Mixch Lives ko?",
+          "answer": "Sa LiveStreamRecorder, awtomatikong nare-record ang Mixch Lives mo sa cloud. Mag-sign up, idagdag ang Mixch Live username mo, at sa bawat pag-live mo ay na-capture na. Walang Mixch Live recorder APK na i-install, walang screen recording — server-side ang lahat."
+        },
+        {
+          "question": "Bakit black screen ang nakukuha ko kapag nagre-record ng Mixch Live?",
+          "answer": "Karaniwan ang black screen issues kapag gumagamit ng screen recorders sa Mixch Live. Iniiwasan ito ng LiveStreamRecorder buong-buo dahil sine-capture nito ang Mixch Lives mo diretso mula sa cloud — walang black screen, walang workarounds, walang unreliable na screen recording apps."
+        },
+        {
+          "question": "Paano ko maaayos ang Mixch Live screen recorder black screen?",
+          "answer": "Ang pinakamadaling solusyon ay hindi na mag-screen record. Ang LiveStreamRecorder ay cloud-based Mixch recorder na nagca-capture ng Lives mo server-side sa high quality. Walang problema sa black screen, walang apps na i-configure — idagdag mo lang ang username at awtomatikong nare-record ang Mixch Lives mo."
+        },
+        {
+          "question": "Kailangan ko ba ng screen recorder para sa Mixch Live?",
+          "answer": "Hindi. Karaniwang nagdudulot ng black screen issues o low quality captures ang screen recorders para sa Mixch Live. Ang LiveStreamRecorder ay cloud-based Mixch Live recorder na awtomatikong nagca-capture ng streams mo sa high quality — walang app na i-install, walang black screen."
+        },
+        {
+          "question": "Pwede ko bang i-record ang Mixch Lives ko nang libre?",
+          "answer": "Oo. Mag-sign up sa LiveStreamRecorder nang libre at agad nang magsimulang mag-record ng Mixch Lives mo. Bina-unlock ng Premium plans ang pag-download ng recordings, ClipAI para sa automatic highlight clips, at extended storage."
+        },
+        {
+          "question": "Pwede ko bang i-download ang Mixch Live recordings ko?",
+          "answer": "Oo. Pwedeng i-download ng Premium users ang Mixch Live recordings nila bilang video files para sa offline viewing. Pwede ring panoorin agad ang bawat recording sa browser mo nang hindi nagda-download."
+        },
+        {
+          "question": "Pwede ko bang gawing short clips ang Mixch Live recordings ko?",
+          "answer": "Oo. Pwedeng gamitin ng Premium users ang ClipAI para awtomatikong gawing short highlight clips ang Mixch Live recordings nila, handa na para sa TikTok, YouTube Shorts, o Reels. Magandang paraan ito para magamit ulit ang live content mo at palakihin ang following mo sa iba't ibang platform."
+        }
+      ]
+    },
+    "joilive": {
+      "title": "Mga Joilive Stream Recording — I-save ang Sariling Lives Mo",
+      "description": "Walang replay system ang Joilive. Bilang Joilive streamer, ang pag-record ng sariling broadcasts mo sa LiveStreamRecorder lang ang paraan para mapanatili ang mga ito. Idagdag ang user ID mo, mag-live tulad ng dati, at awtomatikong na-save na ang Lives mo — walang app sa phone, walang recorder sa PC.",
+      "keywords": [
+        "joilive recorder for streamers",
+        "save my joilive broadcast",
+        "joilive replay",
+        "joilive past streams",
+        "record my joilive live",
+        "joilive archive",
+        "joilive vod alternative",
+        "joilive download my stream",
+        "joilive black screen recording",
+        "joilive screen recorder black screen",
+        "record joilive without obs",
+        "joilive cloud recorder",
+        "joilive history",
+        "joilive backup live"
+      ],
+      "faqs": [
+        {
+          "question": "Walang replays ang Joilive — paano ko ise-save ang sariling broadcasts ko?",
+          "answer": "Iyan mismo ang sinosolusyunan ng LiveStreamRecorder para sa mga Joilive streamer. Maire-record mo ang sariling Lives mo sa pamamagitan ng pag-sign up, pagpaste ng Joilive user ID mo, at pag-live tulad ng dati. Bawat broadcast ay na-capture server-side at awtomatikong na-deliver sa creator page mo — hindi siya pinapanatili ng Joilive, kaya ikaw na mismo ang magpapanatili."
+        },
+        {
+          "question": "Bakit black screen ang nakukuha ko kapag nag-sse-screen-record ng Joilive?",
+          "answer": "Gumagamit ang Joilive web player ng hardware-accelerated decoding (Widevine + GPU compositing). Karamihan ng desktop screen recorders ay nakakakita ng transparent o black region kung saan dapat nasa video — DRM/compositing artifact iyan, hindi bug sa recorder mo. Hindi mo iyan maaayos locally. Ang reliable workaround ay huwag nang mag-screen record at hayaang ma-capture ng LiveStreamRecorder ang live stream upstream ng player."
+        },
+        {
+          "question": "Kailangan ko bang manatiling naka-on ang computer ko o magpatakbo ng kahit ano?",
+          "answer": "Hindi. Ikaw ay Joilive streamer na nagbo-broadcast mula sa phone o PC — yan lang. Hindi tumatakbo sa device mo ang LiveStreamRecorder. Nangyayari ang recording sa cloud namin, sa sandaling mag-live ka. Pwedeng matulog ang computer mo, pwedeng mag-lock ang phone mo, pwede kang umalis ng bansa — naka-save pa rin ang Joilive Lives mo."
+        },
+        {
+          "question": "Pwede ko bang i-download ang Live na in-broadcast ko noong nakaraang linggo, buwan, taon?",
+          "answer": "Oo — kapag na-record na ang Joilive Lives mo sa LiveStreamRecorder page mo, mananatili sila doon. Walang Joilive expiry na iiwasan dahil hindi naman talaga pinapanatili ng Joilive. Pwede ring i-download ng Premium streamers ang original MP4 files para sa pag-edit, archiving, o republishing."
+        },
+        {
+          "question": "Sini-share ko ang Joilive room URL ko pero may numeric ?s= ID — pwede bang mag-share ng recordings sa mas linis na link?",
+          "answer": "Oo. Bawat Joilive recording sa LiveStreamRecorder ay may sariling clean URL — `livestreamrecorder.com/joilive/your-id/video/...` — mas madali i-drop sa Discord, Twitter, o fan chats kaysa sa Joilive query-string URL. Nagpa-play inline ang video sa kahit anong browser, walang Joilive app na kailangan."
+        },
+        {
+          "question": "Libre ba ang pag-record ng Joilive Lives ko?",
+          "answer": "Oo — libre i-record, libre panoorin ulit sa creator page mo. Bina-unlock ng Premium ang pag-download ng raw video files, ClipAI auto-clips para sa short-form posting, at extended retention. Pwedeng magsimula ang Joilive streamers sa free tier nang zero risk."
+        },
+        {
+          "question": "Maliit ang audience ng Joilive — paano ako makakaabot sa mga tao sa ibang lugar?",
+          "answer": "Pinuputol ng ClipAI ang highlights mula sa naka-record na Joilive broadcasts mo bilang short, captioned clips na naka-format para sa TikTok, YouTube Shorts, at Instagram Reels. Ang mahirap na bahagi ng paglago sa Joilive ay hindi naman doon nag-spe-spend ng oras ang karamihan ng viewers. Gamitin ang clips para dalhin sila sa Joilive room mo sa susunod mong pag-live."
+        }
+      ]
+    },
+    "live17": {
+      "title": "Mga 17live Recording — Public Web Archive para sa Livers at V-Livers",
+      "description": "May in-app Stream Archive at 15–90 segundong Stream Clips ang 17live, pero nasa likod ng app at ng permission settings mo. Nagbibigay ang LiveStreamRecorder sa mga 17live Livers at V-Livers ng public, full-length recording ng bawat broadcast sa shareable web URL — labas sa app, na-iindex ng Google.",
+      "keywords": [
+        "17live recordings web archive",
+        "17live full length broadcast",
+        "17live v-liver recordings",
+        "17live liver archive outside app",
+        "17live profile r id video",
+        "17live stream archive alternative",
+        "17live clips longer than 90 seconds",
+        "17live yi-qi together",
+        "17live japan recordings",
+        "17live taiwan recordings",
+        "17live hong kong recordings",
+        "17live talent management archive",
+        "save 17live live without app"
+      ],
+      "faqs": [
+        {
+          "question": "Ano ang pagkakaiba sa built-in Stream Archive ng 17live?",
+          "answer": "Nasa loob ng 17live app ang Stream Archive ng 17live at pinapamahalaan ng permission settings mo — kailangang mag-log in ang fans sa 17live para manood, at walang shareable, search-indexed URL para sa bawat Live. Nagbibigay ang LiveStreamRecorder sa bawat broadcast ng public web URL na mabubuksan ng fans sa kahit anong browser, walang 17live account o app install na kailangan. Parehong Live, plain-web distribution."
+        },
+        {
+          "question": "May Stream Clips na sa 17live — bakit gagamit ng ClipAI?",
+          "answer": "Maganda ang 17live Stream Clips sa loob ng app, pero capped sila sa 15–90 segundo at nananatili sa surface ng 17live. Pinuputol ng ClipAI ang unlimited-length highlight clips mula sa buong saved Lives mo, naka-format para sa TikTok / Reels / Shorts — kung saan talaga nag-spe-spend ng oras ang karamihan ng potential new fans mo. Ibang goal: ang 17live Clips ay para sa fans na nasa app na; ang ClipAI ay para sa pagdadala ng bagong fans sa app."
+        },
+        {
+          "question": "V-Liver ako — tama bang nakukuha ng recording ang avatar ko?",
+          "answer": "Oo. Sine-capture namin kung ano talaga ang dini-deliver ng stream ng 17live sa viewers. Ang Live2D/3D avatar mo, OBS scene composition, MIDI overlays, voice changers — lahat naka-record as-is, dahil nangyayari ang capture pagkatapos ng rendering stack mo at bago ang distribution ng 17live. Parehong fidelity sa nakikita ng fans live."
+        },
+        {
+          "question": "Kailangan ko bang magpatakbo ng OBS, phone recorder, o kahit anong local software?",
+          "answer": "Hindi. Mag-live ka sa 17live app mula sa phone o PC mo gaya ng dati. Nangyayari ang recording server-side sa infrastructure namin — pwedeng matulog ang phone mo, pwedeng naka-off na ang laptop pagkatapos magsimula ang stream. Walang CPU, walang GPU, walang battery drain sa device mo."
+        },
+        {
+          "question": "Pwede ko bang i-download ang raw HEVC video file?",
+          "answer": "Pwedeng mag-download ng raw video ang Premium users para sa re-editing, pag-upload sa YouTube bilang long-form VOD, o local archival. Pwedeng panoorin ulit ng free tier streamers sa kahit anong browser nang hindi nagda-download."
+        },
+        {
+          "question": "Maaapektuhan ba nito ang 17live talent agency / Hot Star points / gifting ko?",
+          "answer": "Hindi — zero impact sa 17live account state mo. Hindi nagla-log in ang LiveStreamRecorder sa 17live account mo, hindi humihipo sa ranking, hindi nakakahadlang sa talent agency tooling. Opt-in ang recording mo bilang 17live creator para sa sarili mong account, at sini-capture lang ang sariling Lives mo — wala nang iba. Parehong legal posture sa pag-download ng sariling broadcasts mo mula sa in-app Stream Archive ng 17live, naka-store lang sa public web sa halip."
+        },
+        {
+          "question": "Pinapayagan bang i-record ang sariling 17live broadcasts ko?",
+          "answer": "Nagre-record ka ng **sariling content mo** sa **sariling profile mo**. Opt-in sa bawat 17live creator, sini-capture lang ang sariling Lives mo. Parehong legal posture sa pag-download ng sariling 17live archive mo mula sa in-app Stream Archive — sa ibang storage location lang."
+        }
+      ]
+    },
+    "kwai": {
+      "title": "Mga Kwai Recording — Public Web Archive para sa Brazilian at Global Kwai Creators",
+      "description": "Ang Kwai (kuài 快 = 'mabilis') ay ang global short-video + live-streaming app ng Kuaishou, dominant sa Brazil, Indonesia, Mexico, at Middle East. Nire-record ng LiveStreamRecorder ang bawat Kwai Live sa public, web-accessible URL para mapanood pa rin ng fans na walang Kwai app.",
+      "keywords": [
+        "kwai recorder",
+        "kwai live download",
+        "kwai live archive",
+        "kwai replay alternative",
+        "save my kwai live",
+        "kwai live brazil recording",
+        "kuaishou kwai archive",
+        "record kwai without app",
+        "kwai live history",
+        "kwai broadcast backup",
+        "kwai live indonesia",
+        "kwai live mexico"
+      ],
+      "faqs": [
+        {
+          "question": "Paano ko ma-i-save ang Kwai Lives ko?",
+          "answer": "Mag-sign up nang libre, idagdag ang Kwai username mo (o i-paste ang Kwai profile URL mo), at mag-live sa Kwai gaya ng dati. Bawat broadcast ay na-capture server-side at awtomatikong na-deliver sa creator page mo — walang app sa phone, walang screen recorder, walang OBS."
+        },
+        {
+          "question": "Ano ang URL format para sa naka-save kong Kwai Lives?",
+          "answer": "Bawat recording ay may clean web URL tulad ng `livestreamrecorder.com/kwai/your-username/video/...`. Gumagana sa kahit anong browser, kahit saan — walang Kwai account o app install na kailangan para manood. I-drop ang URL sa WhatsApp, Telegram, Discord, o kahit saan."
+        },
+        {
+          "question": "Pwede ko bang i-download ang raw video file?",
+          "answer": "Oo — pwedeng mag-download ng raw HEVC video file ang Premium creators mula sa bawat Kwai Live. Kapaki-pakinabang para sa pag-re-upload sa YouTube bilang long-form content, pag-re-edit sa compilations, o local archival sa computer mo."
+        },
+        {
+          "question": "Nasa Brazil ako — gumagana ba ito para sa Kwai BR?",
+          "answer": "Oo. Pareho lang ang Kwai app globally; nire-record namin ang Kwai Lives anuman ang region. Mas malaki pa nga ang benefit para sa Brazilian Kwai creators, dahil naka-index ng Google ang LiveStreamRecorder URLs sa Portuguese, English, at Spanish — na ginagawang discoverable ang content mo sa fans labas sa Kwai app at labas sa Brazil."
+        },
+        {
+          "question": "May replay feature na ba ang Kwai sa app?",
+          "answer": "Ang in-app replay/archive behavior ng Kwai ay depende sa region, sa account settings mo, at sa platform policy. Independent ang LiveStreamRecorder sa lahat ng iyon — nakakakuha ang broadcasts mo ng external public web archive na umiiral anuman ang ginagawa ng Kwai sa app niya."
+        },
+        {
+          "question": "Maaapektuhan ba nito ang Kwai K-coins, gifting, o creator program income ko?",
+          "answer": "Hindi. Hindi nagla-log in ang LiveStreamRecorder sa Kwai account mo o nakakahadlang sa Kwai's gifting, K-coins, creator program tiers, o rev-share. Opt-in ang recording mo bilang Kwai creator para sa sarili mong account, at sini-capture lang ang sariling Lives mo — wala nang iba. Kopya lang ito ng sariling broadcasts mo na naka-store sa public web."
+        },
+        {
+          "question": "Gamitin ang ClipAI para gawing TikTok / Reels / Shorts ang Kwai Lives?",
+          "answer": "Oo. Pwedeng patakbuhin ng Premium creators ang ClipAI sa saved Kwai Lives nila. Awtomatikong pinuputol nito ang highlight clips na naka-format para sa TikTok, Instagram Reels, at YouTube Shorts — funny moments, music, dance, gift reactions. Gamitin sila para maabot ang viewers na wala sa Kwai, at i-funnel sila pabalik sa Kwai Lives mo."
+        }
+      ]
+    },
+    "trovo": {
+      "title": "Mga Trovo Stream Recording",
+      "description": "Panoorin at i-download ang Trovo stream recordings sa LiveStreamRecorder. Awtomatikong naka-save sa cloud ang Trovo streams mo — independent sa VOD system ng Trovo, walang OBS plugin, walang kailangang screen recorder. Ang pinakamadaling Trovo recorder para sa mga streamer.",
+      "keywords": [
+        "trovo recorder",
+        "trovo downloader",
+        "trovo download",
+        "trovo vod download",
+        "save trovo stream",
+        "save trovo vod",
+        "record trovo",
+        "trovo screen record",
+        "trovo screen recorder",
+        "trovo black screen recording",
+        "trovo screen recorder black screen",
+        "trovo record black screen",
+        "record trovo black screen",
+        "trovo stream recorder",
+        "trovo live recorder"
+      ],
+      "faqs": [
+        {
+          "question": "Paano ko maire-record ang Trovo streams ko?",
+          "answer": "Sa LiveStreamRecorder, awtomatikong naka-save sa cloud ang Trovo streams mo. Mag-sign up, idagdag ang Trovo channel mo, at na-capture server-side ang bawat stream na linive mo. Walang Trovo recorder plugin na i-install sa OBS, walang screen recording — lahat sa cloud."
+        },
+        {
+          "question": "Bakit black screen ang nakukuha ko kapag nagre-record ng Trovo?",
+          "answer": "Nangyayari ang black screen issues kapag hindi maganda ang interaction ng desktop screen recorders sa Trovo player. Iniiwasan ito ng LiveStreamRecorder buong-buo — na-capture ang Trovo streams mo diretso mula sa stream source, hindi mula sa screen mo, kaya walang black screen at walang recording artifacts."
+        },
+        {
+          "question": "Paano ko maaayos ang Trovo screen recorder black screen?",
+          "answer": "Ang reliable na solusyon ay huwag nang mag-screen record. Ang LiveStreamRecorder ay cloud-based Trovo recorder na nagca-capture ng streams mo server-side sa high quality. Walang black screen, walang GPU acceleration tweaks, walang codec issues — idagdag mo lang ang channel mo at awtomatikong naka-save ang Trovo streams mo."
+        },
+        {
+          "question": "Kailangan ko ba ng screen recorder para sa Trovo?",
+          "answer": "Hindi. Pwedeng magdulot ng black screen captures ang screen recorders para sa Trovo, kumakain ng CPU sa mahahabang sessions, at nangangailangan na manatiling naka-on ang computer mo. Ang LiveStreamRecorder ay cloud-based Trovo stream recorder na awtomatikong nagca-capture ng broadcasts mo sa high quality — walang app na i-install, walang extra CPU load."
+        },
+        {
+          "question": "Pwede ko bang i-download ang Trovo VODs ko kahit binura ng Trovo?",
+          "answer": "Oo. Kapag na-save na ng LiveStreamRecorder ang stream mo, nakatira ang recording sa account mo independent sa VOD system ng Trovo. Kung nabigo ang replay ng Trovo sa pag-process o natanggal ang older VODs, manatiling available at downloadable ang LiveStreamRecorder copy mo."
+        },
+        {
+          "question": "Pwede ko bang i-record ang Trovo streams ko nang libre?",
+          "answer": "Oo. Mag-sign up sa LiveStreamRecorder nang libre at agad nang magsimulang mag-save ng Trovo streams mo. Bina-unlock ng Premium plans ang pag-download ng recordings, ClipAI para sa automatic highlight clips, at extended storage."
+        },
+        {
+          "question": "Pwede ko bang i-download ang Trovo recordings ko?",
+          "answer": "Oo. Pwedeng i-download ng Premium users ang Trovo stream recordings nila bilang video files para sa offline viewing o archiving. Pwede ring panoorin agad ang bawat recording sa browser mo nang hindi nagda-download."
+        },
+        {
+          "question": "Pwede ko bang gawing short clips ang Trovo streams ko?",
+          "answer": "Oo. Pwedeng gamitin ng Premium users ang ClipAI para awtomatikong gawing short highlight clips ang Trovo stream recordings nila, handa na para sa TikTok, YouTube Shorts, o Instagram Reels. Clutch plays, funny reactions, music highlights — magamit ulit ang Trovo content mo para sa bawat platform."
+        }
+      ]
+    },
+    "twitcast": {
+      "title": "Mga TwitCasting Live Recording",
+      "description": "Panoorin at i-download ang TwitCasting (ツイキャス) Live recordings sa LiveStreamRecorder. Awtomatikong naka-save sa cloud ang TwitCasting broadcasts mo — walang length limits, walang archive expiry, walang kailangang screen recorder. Ang pinakamadaling TwitCasting recorder para sa mga streamer.",
+      "keywords": [
+        "twitcasting recorder",
+        "twitcasting downloader",
+        "twitcasting download",
+        "twitcasting archive download",
+        "save twitcasting stream",
+        "save twitcasting live",
+        "record twitcasting",
+        "twitcasting screen record",
+        "twitcasting screen recorder",
+        "twitcasting black screen recording",
+        "twitcasting screen recorder black screen",
+        "twitcasting record black screen",
+        "record twitcasting black screen",
+        "twitcasting live recorder",
+        "twitcasting vod download"
+      ],
+      "faqs": [
+        {
+          "question": "Paano ko maire-record ang TwitCasting Lives ko?",
+          "answer": "Sa LiveStreamRecorder, awtomatikong naka-save sa cloud ang TwitCasting broadcasts mo. Mag-sign up, idagdag ang TwitCasting username mo, at na-capture server-side ang bawat Live na sinisimulan mo. Walang TwitCasting recorder app na i-install, walang screen recording — lahat sa cloud."
+        },
+        {
+          "question": "Bakit black screen ang nakukuha ko kapag nagre-record ng TwitCasting?",
+          "answer": "Karaniwan ang black screen issues kapag gumagamit ng mobile screen recorders sa TwitCasting dahil sa DRM at overlay handling. Iniiwasan ito ng LiveStreamRecorder buong-buo — na-capture ang TwitCasting Lives mo diretso mula sa stream source, hindi mula sa screen mo, kaya walang black screen at walang recording artifacts."
+        },
+        {
+          "question": "Paano ko maaayos ang TwitCasting screen recorder black screen?",
+          "answer": "Ang reliable na solusyon ay huwag nang mag-screen record. Ang LiveStreamRecorder ay cloud-based TwitCasting recorder na nagca-capture ng Lives mo server-side sa high quality. Walang black screen, walang app permissions na lalabanan, walang DRM workarounds — idagdag mo lang ang username at awtomatikong naka-save ang TwitCasting Lives mo."
+        },
+        {
+          "question": "Kailangan ko ba ng screen recorder para sa TwitCasting?",
+          "answer": "Hindi. Karaniwang nagdudulot ng black screen captures o low-quality output ang screen recorders para sa TwitCasting, at kailangan na manatiling nakabukas ang phone mo buong stream. Ang LiveStreamRecorder ay cloud-based TwitCasting Live recorder na awtomatikong nagca-capture ng broadcasts mo sa high quality — walang app na i-install, walang battery drain."
+        },
+        {
+          "question": "Pwede ko bang i-save ang TwitCasting Lives na mas mahaba sa free archive limit?",
+          "answer": "Oo. May length cap ang free archive system ng TwitCasting, pero walang length cap ang LiveStreamRecorder. Mahahabang chat broadcasts, multi-hour singing sessions, voice-only Lives — buong-buong naka-save ang bawat TwitCasting Live, gaano man katagal ka mag-broadcast."
+        },
+        {
+          "question": "Pwede ko bang i-record ang TwitCasting Lives ko nang libre?",
+          "answer": "Oo. Mag-sign up sa LiveStreamRecorder nang libre at agad nang magsimulang mag-save ng TwitCasting Lives mo. Bina-unlock ng Premium plans ang pag-download ng recordings, ClipAI para sa automatic highlight clips, at extended storage."
+        },
+        {
+          "question": "Pwede ko bang i-download ang TwitCasting recordings ko?",
+          "answer": "Oo. Pwedeng i-download ng Premium users ang TwitCasting Live recordings nila bilang video files para sa offline viewing o archiving. Pwede ring panoorin agad ang bawat recording sa browser mo nang hindi nagda-download."
+        },
+        {
+          "question": "Pwede ko bang gawing short clips ang TwitCasting Lives ko?",
+          "answer": "Oo. Pwedeng gamitin ng Premium users ang ClipAI para awtomatikong gawing short highlight clips ang TwitCasting Live recordings nila, handa na para sa TikTok, YouTube Shorts, o Instagram Reels. Best chat moments, song highlights, viewer reactions — magamit ulit ang TwitCasting content mo para sa bawat platform."
+        }
+      ]
+    }
+  },
+  "hero": {
+    "title": {
+      "all": "Mga Recording",
+      "tiktok": "Mga TikTok Recording",
+      "twitch": "Mga Twitch Recording",
+      "youtube": "Mga YouTube Recording",
+      "kick": "Mga Kick Recording",
+      "afreecatv": "Mga AfreecaTV Recording",
+      "pandalive": "Mga Pandalive Recording",
+      "bigo": "Mga Bigo Recording",
+      "buzzcast": "Mga Buzzcast Recording",
+      "liveme": "Mga LiveMe Recording",
+      "mixch": "Mga Mixch Recording",
+      "twitcast": "Mga TwitCasting Recording",
+      "trovo": "Mga Trovo Recording",
+      "joilive": "Mga Joilive Recording",
+      "live17": "Mga 17live Recording",
+      "kwai": "Mga Kwai Recording"
+    },
+    "subtitle": {
+      "all": "Panoorin ang live stream recordings mula sa mga creator sa platform namin. Mag-download at tumuklas ng bagong content.",
+      "tiktok": "Panoorin ang TikTok live recordings mula sa mga creator sa platform namin. Mag-download at tumuklas ng bagong content.",
+      "twitch": "Panoorin ang Twitch stream recordings mula sa mga creator sa platform namin. Mag-download at tumuklas ng bagong content.",
+      "youtube": "Panoorin ang YouTube live recordings mula sa mga creator sa platform namin. Mag-download at tumuklas ng bagong content.",
+      "kick": "Panoorin ang Kick stream recordings mula sa mga creator sa platform namin. Mag-download at tumuklas ng bagong content.",
+      "afreecatv": "Panoorin ang AfreecaTV recordings mula sa mga creator sa platform namin. Mag-download at tumuklas ng bagong content.",
+      "pandalive": "Panoorin ang Pandalive recordings mula sa mga creator sa platform namin. Mag-download at tumuklas ng bagong content.",
+      "bigo": "Panoorin ang Bigo recordings mula sa mga creator sa platform namin. Mag-download at tumuklas ng bagong content.",
+      "buzzcast": "Panoorin ang Buzzcast recordings mula sa mga creator sa platform namin. Mag-download at tumuklas ng bagong content.",
+      "liveme": "Panoorin ang LiveMe recordings mula sa mga creator sa platform namin. Mag-download at tumuklas ng bagong content.",
+      "mixch": "Panoorin ang Mixch recordings mula sa mga creator sa platform namin. Mag-download at tumuklas ng bagong content.",
+      "twitcast": "Panoorin ang TwitCasting Live recordings mula sa mga streamer sa platform namin. Mag-download at tumuklas ng bagong broadcasters.",
+      "trovo": "Panoorin ang Trovo stream recordings mula sa mga streamer sa platform namin. Mag-download at tumuklas ng bagong broadcasters.",
+      "joilive": "Panoorin ang Joilive stream recordings mula sa mga streamer sa platform namin. Mag-download at tumuklas ng bagong broadcasters.",
+      "live17": "Panoorin ang 17live recordings mula sa mga streamer sa platform namin. Mag-download at tumuklas ng bagong broadcasters.",
+      "kwai": "Panoorin ang Kwai recordings mula sa mga creator sa Brazil, Indonesia, Mexico, at iba pa. Mag-download at tumuklas ng bagong broadcasters."
+    }
+  },
+  "cta": {
+    "title": {
+      "all": "I-record ang Live Streams Mo Ngayon",
+      "tiktok": "I-record ang TikTok Live Streams",
+      "twitch": "I-record ang Twitch Streams at VODs",
+      "youtube": "I-record ang YouTube Live Streams",
+      "kick": "I-record ang Kick Streams",
+      "pandalive": "I-record ang Pandalive Streams",
+      "afreecatv": "I-record ang AfreecaTV Streams",
+      "bigo": "I-record ang Bigo Streams",
+      "buzzcast": "I-record ang Buzzcast Streams",
+      "liveme": "I-record ang LiveMe Streams",
+      "mixch": "I-record ang Mixch Streams",
+      "twitcast": "I-save ang TwitCasting Lives",
+      "trovo": "I-save ang Trovo Streams",
+      "joilive": "I-save ang Joilive Streams",
+      "live17": "I-save ang 17live Lives",
+      "kwai": "I-save ang Kwai Lives"
+    },
+    "subtitle": {
+      "all": "Awtomatikong i-save ang TikTok, Twitch, YouTube, at Kick streams mo. Mag-download ng recordings, gumawa ng short clips, at palakihin ang audience mo.",
+      "tiktok": "Awtomatikong i-save ang TikTok Lives mo. Mag-download ng recordings, gumawa ng short clips gamit ang ClipAI, at palakihin ang following mo.",
+      "twitch": "Awtomatikong i-save ang Twitch streams mo. Mag-download ng VODs, gumawa ng short clips gamit ang ClipAI, at palakihin ang channel mo.",
+      "youtube": "Awtomatikong i-save ang YouTube Lives mo. Mag-download ng recordings, gawing Shorts gamit ang ClipAI, at palakihin ang subscribers mo.",
+      "kick": "Awtomatikong i-save ang Kick streams mo. Mag-download ng recordings, gumawa ng short clips gamit ang ClipAI, at palakihin ang audience mo.",
+      "pandalive": "Awtomatikong i-save ang Pandalive streams mo. Mag-download ng recordings at gumawa ng short clips gamit ang ClipAI.",
+      "afreecatv": "Awtomatikong i-save ang AfreecaTV streams mo. Mag-download ng recordings at gumawa ng short clips gamit ang ClipAI.",
+      "bigo": "Awtomatikong i-save ang Bigo streams mo. Mag-download ng recordings at gumawa ng short clips gamit ang ClipAI.",
+      "buzzcast": "Awtomatikong i-save ang Buzzcast streams mo. Mag-download ng recordings at gumawa ng short clips gamit ang ClipAI.",
+      "liveme": "Awtomatikong i-save ang LiveMe streams mo. Mag-download ng recordings at gumawa ng short clips gamit ang ClipAI.",
+      "mixch": "Awtomatikong i-save ang Mixch streams mo. Mag-download ng recordings at gumawa ng short clips gamit ang ClipAI.",
+      "twitcast": "Awtomatikong i-save ang TwitCasting broadcasts mo. Mag-download ng recordings, talunin ang archive limits, at gumawa ng short clips gamit ang ClipAI.",
+      "trovo": "Awtomatikong i-save ang Trovo streams mo. Independent backup ng bawat VOD, kasama ang short clips gamit ang ClipAI.",
+      "joilive": "Awtomatikong i-save ang Joilive streams mo. Independent backup ng bawat Live, kasama ang short clips gamit ang ClipAI.",
+      "live17": "Awtomatikong i-save ang 17live Lives mo. Independent backup ng bawat broadcast, kasama ang short clips gamit ang ClipAI.",
+      "kwai": "Awtomatikong i-save ang Kwai Lives mo. Public web archive ng bawat broadcast, kasama ang short clips gamit ang ClipAI para sa TikTok at Reels."
+    },
+    "button": "Magsimulang Mag-record nang Libre"
+  },
+  "empty": {
+    "title": "Wala pang recordings",
+    "description": {
+      "all": "Maging unang creator na mag-record ng stream!",
+      "tiktok": "Maging unang creator na mag-record ng TikTok Live!",
+      "twitch": "Maging unang creator na mag-record ng Twitch stream!",
+      "youtube": "Maging unang creator na mag-record ng YouTube Live!",
+      "kick": "Maging unang creator na mag-record ng Kick stream!",
+      "afreecatv": "Maging unang creator na mag-record ng AfreecaTV stream!",
+      "pandalive": "Maging unang creator na mag-record ng Pandalive stream!",
+      "bigo": "Maging unang creator na mag-record ng Bigo stream!",
+      "buzzcast": "Maging unang creator na mag-record ng Buzzcast stream!",
+      "liveme": "Maging unang creator na mag-record ng LiveMe stream!",
+      "mixch": "Maging unang creator na mag-record ng Mixch stream!",
+      "twitcast": "Maging unang streamer na mag-record ng TwitCasting Live!",
+      "trovo": "Maging unang streamer na mag-record ng Trovo stream!",
+      "joilive": "Maging unang streamer na mag-record ng Joilive stream!",
+      "live17": "Maging unang streamer na mag-record ng 17live broadcast!",
+      "kwai": "Maging unang creator na mag-record ng Kwai broadcast!"
+    },
+    "button": "Magsimula"
+  },
+  "about": {
+    "all": "## Mga Live Stream Recording\n\nPanoorin ang recordings mula sa mga creator na gumagamit ng LiveStreamRecorder para i-save ang live streams nila.\n\n### Ano ang Mahahanap Mo Dito\n\nGinagamit ng mga creator ang platform namin para awtomatikong i-record ang TikTok Lives, Twitch streams, YouTube broadcasts, at Kick streams nila. Panoorin ang content nila, manood ng recordings, at tumuklas ng bagong creators.\n\n### Panoorin at Mag-download\n\nAgad mapapanood ang bawat recording. Pwedeng mag-download ng recordings ang Premium users para sa offline viewing.\n\n### Para sa Creators\n\nGusto mong nasa platform ang streams mo? Mag-sign up nang libre at magsimulang mag-record. I-paste ang channel URL mo, mag-live, at awtomatikong nase-save namin ang lahat. Gamitin ang ClipAI para gawing short clips ang streams mo at palakihin ang audience mo.\n\n### Mga Sinusuportahang Platform\n\nSinusuportahan namin ang TikTok live recording, Twitch VOD saving, YouTube live recording, Kick stream recording, AfreecaTV recording, at Pandalive recording. May mas marami pang platform na darating.",
+    "tiktok": "## Mga TikTok Live Recording\n\nPanoorin ang TikTok live recordings mula sa mga creator na gumagamit ng LiveStreamRecorder para i-save ang sariling Lives nila. Awtomatikong na-capture ang bawat TikTok Live at naka-store para sa on-demand viewing.\n\n### Awtomatikong Nase-save ang TikTok Lives\n\nNawawala ang TikTok Lives sa sandaling matapos — walang built-in na paraan para i-save sila. Ginagamit ng mga creator ang TikTok recorder namin para awtomatikong i-capture ang sariling TikTok Lives nila sa cloud. Walang kailangang screen recorder para sa TikTok, walang phone na maiiwang naka-on buong gabi. Idagdag mo lang ang username at nare-record na ang Lives mo.\n\n### Panoorin at Mag-download ng TikTok Recordings Mo\n\nAgad mapapanood ang bawat TikTok live recording sa browser mo. Pwedeng i-download ng Premium users ang TikTok recordings nila bilang video files para sa offline viewing — perfect para magamit ulit ang sariling content mo o mag-keep ng personal archive.\n\n### I-record ang TikTok Lives Mo sa Kahit Anong Device\n\nNagtataka ka kung paano i-record ang TikTok Lives mo sa computer o laptop? Buong-buo sa cloud tumatakbo ang LiveStreamRecorder. Walang i-install — walang desktop app, walang browser extension. Nasa PC, laptop, o mobile ka man, awtomatikong na-capture ang TikTok Lives mo sa high quality.\n\n### Gawing Clips ang Lives Mo gamit ang ClipAI\n\nGusto mong gawing short clips ang TikTok live recordings mo? Inaanalisa ng ClipAI ang naka-record na Lives mo at gumagawa ng highlight clips na pwede mong i-post bilang TikTok videos, Reels, o Shorts. Ito ang pinakamagandang paraan para palakihin ang following mo mula sa live content mo.\n\n### TikTok Recorder Mo — Walang Screen Recording na Kailangan\n\nKalimutan na ang unreliable screen recording apps at desktop capture tools. Ang LiveStreamRecorder ay purpose-built TikTok recorder na nagca-capture ng Lives mo server-side. Mag-sign up nang libre, idagdag ang TikTok username mo, at huwag nang mawawalan ng Live ulit.",
+    "twitch": "## Mga Twitch Stream Recording\n\nPanoorin ang Twitch stream recordings mula sa mga creator na gumagamit ng LiveStreamRecorder para i-save ang sariling streams nila. Awtomatikong na-capture ang bawat Twitch live stream at permanenteng naka-store.\n\n### Twitch VODs na Hindi Nag-eexpire\n\nNag-eexpire ang Twitch VODs pagkatapos ng 14–60 araw at binubura kapag binura mo ang channel mo. Permanenteng sine-save ng Twitch recorder namin ang streams mo sa cloud — walang expiry, walang deleted archives. Sa iyo ang content mo, sa iyo pa rin.\n\n### Panoorin at Mag-download ng Twitch Recordings Mo\n\nAgad mapapanood ang bawat Twitch stream recording sa browser mo — walang ads, walang interruptions. Pwedeng i-download ng Premium users ang Twitch recordings nila bilang video files para sa offline viewing o content repurposing.\n\n### I-record ang Twitch Streams Mo — Walang Screen Recorder na Kailangan\n\nKalimutan na ang pagpapatakbo ng screen capture software kasama ng OBS. Ang LiveStreamRecorder ay cloud-based Twitch stream recorder na nagca-capture ng live streams mo server-side. Walang extra CPU load, walang desktop app, walang Bandicam na tumatakbo sa background. Nagse-stream ka man mula sa PC, console, o mobile, awtomatikong nare-record ang Twitch streams mo sa high quality.\n\n### Gawing Clips ang Streams Mo gamit ang ClipAI\n\nGusto mong gawing short clips ang Twitch stream recordings mo? Inaanalisa ng ClipAI ang naka-record na streams mo at gumagawa ng highlight clips na handa nang i-post bilang YouTube Shorts, TikTok videos, o Reels. Palakihin ang audience mo sa lahat ng platform mula sa Twitch content mo.\n\n### Ang Pinakamagandang Twitch Recorder para sa Creators\n\nPurpose-built ang LiveStreamRecorder para sa pag-save ng Twitch streams. Mag-sign up nang libre, i-connect ang channel mo, at huwag nang mawawalan ng stream dahil sa expired VODs ulit. Awtomatikong nare-record ang bawat live stream — permanenteng Twitch archive mo.",
+    "youtube": "## Mga YouTube Live Recording\n\nPanoorin ang YouTube live recordings mula sa mga creator na gumagamit ng LiveStreamRecorder para i-save ang sariling live streams nila. Awtomatikong na-capture ang bawat YouTube Live at naka-store para sa on-demand viewing.\n\n### Awtomatikong Nase-save ang YouTube Lives\n\nPwede mawala ang YouTube live stream replays — binubura ng creators, nabibigo ang streams sa pag-process, o nagiging private ang channels. Ang YouTube recorder namin ay awtomatikong nagca-capture ng Lives mo sa cloud kaya palagi kang may kopya ng content mo.\n\n### Panoorin at Mag-download ng YouTube Recordings Mo\n\nAgad mapapanood ang bawat YouTube live recording sa browser mo. Pwedeng i-download ng Premium users ang recordings nila bilang video files para sa offline viewing — perfect para magamit ulit ang live content mo.\n\n### I-record ang YouTube Lives Mo — Walang Screen Recorder na Kailangan\n\nKalimutan na ang traditional screen recording software para sa YouTube. Ang LiveStreamRecorder ay online YouTube recorder na nagca-capture ng live streams mo server-side. Walang desktop app, walang browser extension, walang computer na maiiwang naka-on buong gabi. Nasa PC, laptop, o mobile ka man, nare-record ang YouTube Lives mo sa high quality.\n\n### Gawing YouTube Shorts ang Lives Mo gamit ang ClipAI\n\nGusto mong gawing Shorts ang YouTube live recordings mo? Inaanalisa ng ClipAI ang naka-record na Lives mo at gumagawa ng highlight clips na handa nang i-post. Ito ang pinakamagandang paraan para palakihin ang subscribers mo mula sa live content mo.\n\n### Ang Pinakamagandang YouTube Live Recorder para sa Creators\n\nPurpose-built ang LiveStreamRecorder para sa pag-capture ng YouTube live streams. Mag-sign up nang libre, i-connect ang channel mo, at huwag nang mawawalan ng Live ulit. Awtomatikong nare-record ang bawat stream — kahit nakalimutan mong pindutin ang record.",
+    "kick": "## Mga Kick Stream Recording\n\nPanoorin ang Kick stream recordings mula sa mga creator na gumagamit ng LiveStreamRecorder para i-save ang sariling streams nila. Awtomatikong na-capture ang bawat Kick live stream at permanenteng naka-store.\n\n### Kick VODs na Mananatili Habambuhay\n\nHindi palaging reliable ang Kick VODs — nabibigo ang replays sa pag-process, nagbabago ang channels, at pwedeng mawala ang content mo nang walang abiso. Permanenteng sine-save ng Kick recorder namin ang streams mo sa cloud kaya hindi umaasa ang content mo sa VOD system ng Kick. Sa iyo ang streams mo, habambuhay.\n\n### Panoorin at Mag-download ng Kick Recordings Mo\n\nAgad mapapanood ang bawat Kick stream recording sa browser mo — walang ads, walang interruptions. Pwedeng i-download ng Premium users ang Kick recordings nila bilang video files para sa offline viewing, editing, o content repurposing.\n\n### I-record ang Kick Streams Mo — Walang Screen Recorder na Kailangan\n\nKalimutan na ang pagpapatakbo ng OBS recording kasama ng live stream mo. Ang LiveStreamRecorder ay cloud-based Kick stream recorder na nagca-capture ng streams mo server-side. Walang extra CPU load, walang desktop capture software, walang tumatakbo sa background. Mag-stream mula sa PC, console, o mobile — awtomatikong nare-record ang Kick streams mo sa high quality.\n\n### Gawing Clips ang Streams Mo gamit ang ClipAI\n\nGusto mong gawing short clips ang Kick stream recordings mo? Inaanalisa ng ClipAI ang naka-record na streams mo at gumagawa ng highlight clips na handa nang i-post bilang TikTok videos, YouTube Shorts, o Reels. Palakihin ang audience mo labas sa Kick sa pamamagitan ng paggawa ng short-form content mula sa live content mo para sa bawat platform.\n\n### Ang Pinakamagandang Kick Recorder para sa Creators\n\nGinawa ang LiveStreamRecorder para sa pag-save ng Kick streams nang independent. Mag-sign up nang libre, idagdag ang Kick channel mo, at huwag nang mawawalan ng stream ulit. Awtomatikong nare-record ang bawat live stream — permanenteng backup na hindi umaasa sa VOD system ng Kick.",
+    "pandalive": "## Mga Pandalive Live Recording\n\nPanoorin ang Pandalive live recordings mula sa mga BJ na gumagamit ng LiveStreamRecorder para i-save ang sariling Lives nila. Awtomatikong na-capture ang bawat Pandalive Live at naka-store para sa on-demand viewing.\n\n### Awtomatikong Nase-save ang Pandalive Lives\n\nNawawala ang Pandalive Lives kapag natapos ang stream — walang guaranteed na replay system. Awtomatikong sine-save ng Pandalive recorder namin ang Lives mo sa cloud kaya walang nawawala kapag natapos ang Live mo. Dance performances, song covers, talk sessions — lahat nananatiling available.\n\n### Panoorin at Mag-download ng Pandalive Recordings Mo\n\nAgad mapapanood ang bawat Pandalive recording sa browser mo. Pwedeng i-download ng Premium users ang Pandalive recordings nila bilang video files para sa offline viewing — perfect para magamit ulit ang sariling content mo o mag-keep ng personal copy.\n\n### I-record ang Pandalive Lives Mo — Walang Extra Software na Kailangan\n\nKalimutan na ang screen recording apps at mobile capture tools. Ang LiveStreamRecorder ay online Pandalive recorder na nagca-capture ng Lives mo server-side. Walang desktop software, walang phone na tumatakbo buong gabi, walang browser extension. Nagse-stream ka man mula sa phone, tablet, o PC, awtomatikong nare-record ang Pandalive Lives mo sa high quality.\n\n### Gawing Clips ang Lives Mo gamit ang ClipAI\n\nGusto mong gawing short clips ang Pandalive Live recordings mo? Inaanalisa ng ClipAI ang naka-record na Lives mo at gumagawa ng highlight clips na handa nang i-post sa TikTok, Instagram Reels, o YouTube Shorts. Palakihin ang fanbase mo sa buong mundo sa pamamagitan ng pag-reuse ng pinakamagagandang Pandalive moments mo.\n\n### Ang Pinakamagandang Pandalive Recorder para sa mga BJ\n\nGinawa ang LiveStreamRecorder para sa pag-save ng Pandalive Lives. Mag-sign up nang libre, idagdag ang Pandalive username mo, at huwag nang mawawalan ng Live ulit. Awtomatikong na-capture ang bawat stream — permanenteng Pandalive content library mo.",
+    "afreecatv": "## Mga AfreecaTV Live Recording\n\nPanoorin ang AfreecaTV live recordings mula sa mga BJ na gumagamit ng LiveStreamRecorder para i-save ang sariling Lives nila. Awtomatikong na-capture ang bawat AfreecaTV Live at naka-store para sa on-demand viewing.\n\n### Independent na Nase-save ang AfreecaTV Lives\n\nMay sariling VOD system ang AfreecaTV, pero hindi palaging nase-save ang replays, pwedeng matanggal ang content, at pwedeng magbago ang storage rules. Awtomatikong sine-save ng AfreecaTV recorder namin ang Lives mo sa cloud bilang independent backup — kaya mananatiling intact ang content mo, anuman ang mangyari sa AfreecaTV.\n\n### Panoorin at Mag-download ng AfreecaTV Recordings Mo\n\nAgad mapapanood ang bawat AfreecaTV recording sa browser mo — walang ads, walang interruptions. Pwedeng i-download ng Premium users ang AfreecaTV recordings nila bilang video files para sa offline viewing o content repurposing.\n\n### I-record ang AfreecaTV Lives Mo — Walang Screen Recorder na Kailangan\n\nKalimutan na ang pagpapatakbo ng capture software sa mahahabang AfreecaTV sessions. Ang LiveStreamRecorder ay cloud-based AfreecaTV recorder na nagca-capture ng Lives mo server-side. Walang desktop app, walang background recording, walang extra CPU load. Mag-stream mula sa PC o mobile — awtomatikong nare-record ang AfreecaTV Lives mo sa high quality.\n\n### Gawing Short Clips ang Mahahabang Lives gamit ang ClipAI\n\nPwedeng tumagal nang oras ang AfreecaTV Lives. Inaanalisa ng ClipAI ang naka-record na Lives mo at hinuhugot ang pinakamagagandang moments — clutch plays, reactions, funny exchanges, highlights. I-post sila bilang TikTok clips, YouTube Shorts, o Reels para palakihin ang audience mo labas sa AfreecaTV.\n\n### Ang Pinakamagandang AfreecaTV Recorder para sa mga BJ\n\nGinawa ang LiveStreamRecorder para sa pag-save ng AfreecaTV Lives nang independent. Mag-sign up nang libre, idagdag ang AfreecaTV username mo, at huwag nang mawawalan ng Live ulit. Awtomatikong na-capture ang bawat stream — permanenteng backup na hindi umaasa sa VOD system ng AfreecaTV.",
+    "bigo": "## Mga Bigo Live Recording\n\nPanoorin ang Bigo Live recordings mula sa mga creator na gumagamit ng LiveStreamRecorder para i-save ang sariling Lives nila. Awtomatikong na-capture ang bawat Bigo Live at naka-store para sa on-demand viewing.\n\n### Nase-save ang Bigo Lives Bago Mawala\n\nUmiiral lang ang Bigo Lives habang nagse-stream — pagkatapos mong tapusin ang session, wala na ang content sa app. Awtomatikong sine-save ng Bigo recorder namin ang Lives mo sa cloud kaya hindi nawawala ang content mo sa sandaling matapos ang Live mo. Dance performances, singing, chat moments, gift interactions — lahat nananatiling available.\n\n### Panoorin at Mag-download ng Bigo Recordings Mo\n\nAgad mapapanood ang bawat Bigo Live recording sa browser mo. Pwedeng i-download ng Premium users ang Bigo recordings nila bilang video files para sa offline viewing — perfect para magamit ulit ang sariling content mo o mag-keep ng personal copy.\n\n### I-record ang Bigo Lives Mo — Walang Screen Recorder na Kailangan\n\nKalimutan na ang pagpapatakbo ng screen capture sa phone mo o pag-iwan ng extra device na nagre-record buong gabi. Ang LiveStreamRecorder ay online Bigo recorder na nagca-capture ng Lives mo server-side. Walang phone battery drain, walang manual setup, walang extra software. Nagse-stream ka man mula sa iPhone, Android, o PC, awtomatikong nare-record ang Bigo Lives mo sa high quality.\n\n### Gawing Clips ang Lives Mo gamit ang ClipAI\n\nGusto mong gawing short clips ang Bigo Live recordings mo? Inaanalisa ng ClipAI ang naka-record na Lives mo at gumagawa ng highlight clips na handa nang i-post sa TikTok, Instagram Reels, o YouTube Shorts. Palakihin ang audience mo sa buong mundo sa pamamagitan ng pag-reuse ng pinakamagagandang Bigo moments mo.\n\n### Ang Pinakamagandang Bigo Recorder para sa Creators\n\nGinawa ang LiveStreamRecorder para sa pag-save ng Bigo Lives. Mag-sign up nang libre, idagdag ang Bigo username mo, at huwag nang mawawalan ng Live ulit. Awtomatikong na-capture ang bawat stream — permanenteng lugar para sa Bigo content mo na hindi umaasa sa app para pag-iingat ng content para sa iyo.",
+    "buzzcast": "## Mga Buzzcast Live Recording\n\nPanoorin ang Buzzcast live recordings mula sa mga creator na gumagamit ng LiveStreamRecorder para i-save ang sariling Lives nila. Awtomatikong na-capture ang bawat Buzzcast Live at naka-store para sa on-demand viewing.\n\n### Nase-save ang Buzzcast Lives Bago Mawala\n\nLive-only ang Buzzcast Lives — pagkatapos mong tapusin ang stream, nawawala ang content sa app. Awtomatikong sine-save ng Buzzcast recorder namin ang Lives mo sa cloud kaya walang nawawala kapag natapos ang Live mo. Chat sessions, music moments, daily content — lahat nananatiling available para sa fans.\n\n### Panoorin at Mag-download ng Buzzcast Recordings Mo\n\nAgad mapapanood ang bawat Buzzcast Live recording sa browser mo. Pwedeng i-download ng Premium users ang Buzzcast recordings nila bilang video files para sa offline viewing — perfect para magamit ulit ang sariling content mo o mag-keep ng personal copy.\n\n### I-record ang Buzzcast Lives Mo — Walang Extra Apps na Kailangan\n\nKalimutan na ang pag-screen record sa phone mo o pagpapatakbo ng capture software sa background. Ang LiveStreamRecorder ay online Buzzcast recorder na nagca-capture ng Lives mo server-side. Walang battery drain, walang manual setup, walang extra software. Awtomatikong nare-record ang Buzzcast Lives mo sa high quality, mula sa kahit anong device.\n\n### Gawing Clips ang Lives Mo gamit ang ClipAI\n\nGusto mong gawing short clips ang Buzzcast Live recordings mo? Inaanalisa ng ClipAI ang naka-record na Lives mo at gumagawa ng highlight clips na handa nang i-post sa TikTok, Instagram Reels, o YouTube Shorts. Palakihin ang following mo labas sa Buzzcast sa pamamagitan ng pag-reuse ng pinakamagagandang moments mo.\n\n### Ang Pinakamagandang Buzzcast Recorder para sa Creators\n\nGinawa ang LiveStreamRecorder para sa pag-save ng Buzzcast Lives. Mag-sign up nang libre, idagdag ang Buzzcast username mo, at huwag nang mawawalan ng Live ulit. Awtomatikong na-capture ang bawat stream — permanenteng Buzzcast content library mo.",
+    "liveme": "## Mga LiveMe Live Recording\n\nPanoorin ang LiveMe live recordings mula sa mga creator na gumagamit ng LiveStreamRecorder para i-save ang sariling Lives nila. Awtomatikong na-capture ang bawat LiveMe Live at naka-store para sa on-demand viewing.\n\n### Nase-save ang LiveMe Lives Bago Mawala\n\nLive-only ang LiveMe Lives — pagkatapos mong tapusin ang stream, nawawala ang content sa app. Awtomatikong sine-save ng LiveMe recorder namin ang Lives mo sa cloud kaya walang nawawala kapag natapos ang Live mo. Chat sessions, music moments, daily content — lahat nananatiling available para sa fans.\n\n### Panoorin at Mag-download ng LiveMe Recordings Mo\n\nAgad mapapanood ang bawat LiveMe Live recording sa browser mo. Pwedeng i-download ng Premium users ang LiveMe recordings nila bilang video files para sa offline viewing — perfect para magamit ulit ang sariling content mo o mag-keep ng personal copy.\n\n### I-record ang LiveMe Lives Mo — Walang Extra Apps na Kailangan\n\nKalimutan na ang pag-screen record sa phone mo o pagpapatakbo ng capture software sa background. Ang LiveStreamRecorder ay online LiveMe recorder na nagca-capture ng Lives mo server-side. Walang battery drain, walang manual setup, walang extra software. Awtomatikong nare-record ang LiveMe Lives mo sa high quality, mula sa kahit anong device.\n\n### Gawing Clips ang Lives Mo gamit ang ClipAI\n\nGusto mong gawing short clips ang LiveMe Live recordings mo? Inaanalisa ng ClipAI ang naka-record na Lives mo at gumagawa ng highlight clips na handa nang i-post sa TikTok, Instagram Reels, o YouTube Shorts. Palakihin ang following mo labas sa LiveMe sa pamamagitan ng pag-reuse ng pinakamagagandang moments mo.\n\n### Ang Pinakamagandang LiveMe Recorder para sa Creators\n\nGinawa ang LiveStreamRecorder para sa pag-save ng LiveMe Lives. Mag-sign up nang libre, idagdag ang LiveMe username mo, at huwag nang mawawalan ng Live ulit. Awtomatikong na-capture ang bawat stream — permanenteng LiveMe content library mo.",
+    "mixch": "## Mga Mixch Live Recording\n\nPanoorin ang Mixch live recordings mula sa mga creator na gumagamit ng LiveStreamRecorder para i-save ang sariling Lives nila. Awtomatikong na-capture ang bawat Mixch Live at naka-store para sa on-demand viewing.\n\n### Nase-save ang Mixch Lives Bago Mawala\n\nLive-only ang Mixch Lives — pagkatapos mong tapusin ang stream, nawawala ang content sa app. Awtomatikong sine-save ng Mixch recorder namin ang Lives mo sa cloud kaya walang nawawala kapag natapos ang Live mo. Chat sessions, music moments, daily content — lahat nananatiling available para sa fans.\n\n### Panoorin at Mag-download ng Mixch Recordings Mo\n\nAgad mapapanood ang bawat Mixch Live recording sa browser mo. Pwedeng i-download ng Premium users ang Mixch recordings nila bilang video files para sa offline viewing — perfect para magamit ulit ang sariling content mo o mag-keep ng personal copy.\n\n### I-record ang Mixch Lives Mo — Walang Extra Apps na Kailangan\n\nKalimutan na ang pag-screen record sa phone mo o pagpapatakbo ng capture software sa background. Ang LiveStreamRecorder ay online Mixch recorder na nagca-capture ng Lives mo server-side. Walang battery drain, walang manual setup, walang extra software. Awtomatikong nare-record ang Mixch Lives mo sa high quality, mula sa kahit anong device.\n\n### Gawing Clips ang Lives Mo gamit ang ClipAI\n\nGusto mong gawing short clips ang Mixch Live recordings mo? Inaanalisa ng ClipAI ang naka-record na Lives mo at gumagawa ng highlight clips na handa nang i-post sa TikTok, Instagram Reels, o YouTube Shorts. Palakihin ang following mo labas sa Mixch sa pamamagitan ng pag-reuse ng pinakamagagandang moments mo.\n\n### Ang Pinakamagandang Mixch Recorder para sa Creators\n\nGinawa ang LiveStreamRecorder para sa pag-save ng Mixch Lives. Mag-sign up nang libre, idagdag ang Mixch username mo, at huwag nang mawawalan ng Live ulit. Awtomatikong na-capture ang bawat stream — permanenteng Mixch content library mo.",
+    "trovo": "## Mga Trovo Stream Recording\n\nPanoorin ang Trovo stream recordings mula sa mga streamer na gumagamit ng LiveStreamRecorder para i-save ang sariling streams nila. Awtomatikong na-capture ang bawat Trovo stream at permanenteng naka-store — independent sa sariling VOD system ng Trovo.\n\n### Trovo VODs na Mananatiling Available\n\nHindi palaging reliable ang VOD system ng Trovo — nabibigo ang replays sa pag-process, naaapektuhan ng channel changes ang availability, at pwedeng matanggal ang older streams. Permanenteng sine-save ng Trovo recorder namin ang streams mo sa cloud bilang independent backup, kaya nananatiling available ang gaming clips, IRL adventures, music sessions, at just-chatting moments mo anuman ang mangyari sa Trovo.\n\n### Panoorin at Mag-download ng Trovo Recordings Mo\n\nAgad mapapanood ang bawat Trovo stream recording sa browser mo — walang ads, walang interruptions. Pwedeng i-download ng Premium users ang Trovo recordings nila bilang video files para sa offline viewing, editing, o content repurposing.\n\n### I-record ang Trovo Streams Mo — Walang OBS Plugin na Kailangan\n\nKalimutan na ang pag-configure ng OBS recording o pagpapatakbo ng screen capture kasama ng stream mo. Ang LiveStreamRecorder ay cloud-based Trovo stream recorder na nagca-capture ng broadcasts mo server-side. Walang extra CPU load, walang GPU contention sa game mo, walang desktop software. Mag-stream mula sa PC, console, o mobile — awtomatikong nare-record ang Trovo streams mo sa high quality.\n\n### Gawing Clips ang Streams Mo gamit ang ClipAI\n\nInaanalisa ng ClipAI ang naka-record na Trovo streams mo at gumagawa ng highlight clips na handa nang i-post sa TikTok, YouTube Shorts, o Instagram Reels. Clutch plays, funny reactions, music highlights, IRL moments — gawing maraming shareable content ang isang stream at palakihin ang audience mo labas sa Trovo.\n\n### Ang Pinakamagandang Trovo Recorder para sa Streamers\n\nGinawa ang LiveStreamRecorder para sa pag-save ng Trovo streams nang independent. Mag-sign up nang libre, idagdag ang Trovo channel mo, at huwag nang mawawalan ng stream dahil sa failed VOD ulit. Awtomatikong na-capture ang bawat stream — permanenteng backup na hindi umaasa sa VOD system ng Trovo.",
+    "joilive": "## Mga Joilive Stream Recording\n\nWalang archive ang Joilive. Walang replay tab sa profile mo, walang past-streams list, walang VOD. Ginawa ang platform sa paligid ng live moment — kapag tumigil ka mag-broadcast, wala na ang stream. Okay lang iyan para sa casual short Lives, pero real problem ito kung regular kang nagse-stream at gusto mong manatili ang trabaho mo. Pinapayagan ng LiveStreamRecorder ang Joilive streamers na **i-record ang sariling broadcasts nila** kaya bawat Live ay napupunta bilang watchable, shareable video sa personal creator page.\n\n### Ang Black Screen Issue sa Joilive\n\nKung sinubukan mo nang mag-record ng Joilive stream mo gamit ang desktop recorder (display capture ng OBS Studio, Xbox Game Bar sa Windows, QuickTime sa Mac), napansin mo siguro ang ganito: nare-record ang audio, pero black rectangle ang lumalabas sa video. Iyan ang Joilive web player na gumagamit ng hardware-accelerated decoding plus Widevine DRM. Nakikita ng recorder ang player pero hindi makita ang video frame. Hindi bug ng Joilive, hindi sira ang recorder mo — side effect ito ng kung paano na-composite ang protected video sa modern browsers, at hindi maaayos sa pamamagitan ng pagbabago ng settings sa makina mo.\n\nAng practical workaround ay huwag nang mag-screen record. Sine-capture ng LiveStreamRecorder ang Joilive stream upstream ng browser, bago ma-involve ang DRM/compositing path. Walang black screen, walang codec hunting, walang GPU acceleration toggles — gumagana lang ang recording.\n\n### Self-Recording, Server-Side\n\nNagre-record ka ng sariling stream mo, pero wala kang pinapatakbo. Walang app sa phone, walang software sa PC. Kapag nag-live ka sa Joilive app, awtomatikong magsisimula ang recording sa cloud. Mag-stream mula sa couch mo, sa kotse mo, sa coffee shop — pwedeng naka-off ang laptop mo, pwedeng naka-lock ang phone mo. Napupunta ang Joilive Lives mo sa creator page mo kapag natapos ang bawat broadcast, handa nang panoorin ulit sa browser.\n\n### Panoorin at Mag-download ng Joilive Recordings Mo\n\nNagpa-play agad ang bawat naka-record na Live sa kahit anong modern browser, walang app na kailangan, walang Joilive account para manood. Pwedeng mag-download ng raw video file ang Premium streamers para sa editing, re-uploading, o local archival — at pwedeng awtomatikong mag-generate ang ClipAI ng short-form clips mula sa recording para sa posting sa TikTok, YouTube Shorts, o Reels.\n\n### Shareable URL para sa Lives Mo\n\nAng sariling room URL ng Joilive ay `joilive.net/user/index.html?s=1880…` — mahabang numeric ID na walang makakapag-type o makakaala. Gumagamit ang LiveStreamRecorder recordings mo ng clean URLs tulad ng `livestreamrecorder.com/joilive/your-id/video/...` na pwede mong i-post sa Discord, i-paste sa Twitter bios, o ipadala sa fans via text. Parehong content, walang query string, walang app install na hinihingi.\n\n### Ginawa para sa Joilive Streamers, Hindi Laban sa Kanila\n\nHindi nagda-download ng broadcasts ng ibang tao ang LiveStreamRecorder. Opt-in ang recording ng Joilive streamer para sa **sariling** account, at sariling Lives lang — wala nang iba. Sa iyo ang video, sa iyo ang page, one-click action ang deletion. Mag-sign up nang libre, idagdag ang Joilive user ID mo, at hindi na magiging problema mo ang missing archive ng Joilive.",
+    "twitcast": "## Mga TwitCasting Live Recording\n\nPanoorin ang TwitCasting (ツイキャス) Live recordings mula sa mga streamer na gumagamit ng LiveStreamRecorder para i-save ang sariling broadcasts nila. Awtomatikong na-capture ang bawat TwitCasting Live at naka-store para sa on-demand viewing — walang length limits, walang archive expiry.\n\n### Nase-save ang TwitCasting Lives Lampas sa Archive Limit\n\nMay sariling archive system ang TwitCasting, pero may mga limit ito — capped sa length ang free archives, mga member-only (メンバー限定) Lives ay mapapanood lang ng paying members, at pwedeng matanggal ang older broadcasts kapag kailangan ng storage. Awtomatikong sine-save ng TwitCasting recorder namin ang Lives mo sa cloud nang walang length cap, kaya ang mahahabang chat broadcasts, multi-hour singing sessions, at voice-only Lives ay lahat nananatiling available — independent sa archive policies ng TwitCasting.\n\n### Panoorin at Mag-download ng TwitCasting Recordings Mo\n\nAgad mapapanood ang bawat TwitCasting Live recording sa browser mo. Pwedeng i-download ng Premium users ang TwitCasting recordings nila bilang video files para sa offline viewing o archiving — mag-keep ng personal copy ng bawat broadcast.\n\n### I-record ang TwitCasting Lives Mo — Walang Screen Recorder na Kailangan\n\nKalimutan na ang mobile screen recorders na nagdudulot ng black screens, o apps na nag-uubos ng battery sa mahahabang broadcasts. Ang LiveStreamRecorder ay cloud-based TwitCasting recorder na nagca-capture ng Lives mo server-side. Walang phone na maiiwang tumatakbo, walang DRM workarounds, walang extra software. Nagse-stream ka man mula sa iPhone, Android, o PC, awtomatikong nare-record ang TwitCasting broadcasts mo sa high quality.\n\n### Gawing Clips ang Lives Mo gamit ang ClipAI\n\nInaanalisa ng ClipAI ang naka-record na TwitCasting Lives mo at gumagawa ng highlight clips na handa nang i-post sa TikTok, YouTube Shorts, o Instagram Reels. Best chat moments, song highlights, viewer Q&A, co-broadcast clips — gawing maraming shareable content ang isang Live at maabot ang fans labas sa TwitCasting app.\n\n### Ang Pinakamagandang TwitCasting Recorder para sa Streamers\n\nGinawa ang LiveStreamRecorder para sa pag-save ng TwitCasting broadcasts nang independent. Mag-sign up nang libre, idagdag ang TwitCasting username mo, at huwag nang mawawalan ng Live dahil sa archive limits ulit. Awtomatikong na-capture ang bawat broadcast — permanenteng TwitCasting content library mo, walang length cap at walang expiry.",
+    "live17": "## Mga 17live Recording sa LiveStreamRecorder\n\nAng 17live (binibigkas na *yi-qi live* — 一起, Mandarin para sa \"magkasama\") ay ang ikatlong pinakamalaking live-streaming platform sa Asya, itinatag sa Taiwan noong 2015 at naka-headquarter sa Japan mula 2021. Tumatanggap ito ng parehong **Livers** (human streamers) at **V-Livers** (virtual avatar streamers — category na pinasimulan ng 17live). Malakas sa Japan, Taiwan, Hong Kong, Singapore, at Pilipinas, naka-list sa SGX bilang **LVR**. Pinapanatili ng LiveStreamRecorder ang buo, web-accessible recording ng bawat Live na ibino-broadcast mo — katabi ng in-app Stream Archive ng 17live pero sa open web.\n\n### Bakit Second Recording Kung May Stream Archive na ang 17live?\n\nMaganda ang sariling Stream Archive ng 17live — nag-iimbak ito ng recent Lives sa loob ng 17live app, naka-gate ng permission toggles mo. Pero kailangan ng fans ang 17live app para manood, hindi naka-index ng Google ang archive, at walang stable public URL bawat broadcast na pwede mong i-paste sa Discord o Twitter bio. Complementary ang LiveStreamRecorder, hindi competitive: parehong broadcast na na-capture sa pangalawang beses, ngayon ay napunta sa public web URL tulad ng `livestreamrecorder.com/live17/your-id/video/...` na pwedeng buksan agad ng kahit anong browser.\n\n### Parehong Capture para sa Livers at V-Livers\n\nNire-record namin ang ibino-broadcast ng 17live — face-cam Liver ka man na nagcha-chat / song / dance, OBS-composed Liver na may custom scene, o V-Liver na nagpapatakbo ng Live2D / 3D avatars. Upstream sa distribution ng 17live ang capture, kaya ang final video mo ay magkamukha sa nakita ng fans live: avatar, overlays, voice changes, gift animations, lahat naka-preserve.\n\n### Walang App sa Phone, Walang OBS sa PC\n\nServer-side. Mag-stream ka mula sa phone o PC gaya ng dati, nangyayari ang recording sa infrastructure namin. Pagkatapos magsimula ang Live mo, pwedeng matulog ang phone mo, pwedeng naka-off na ang laptop mo — nagpapatuloy ang recording. Walang CPU drain, walang GPU load, walang extra battery cost. Mahalaga ito sa long-format singing o talk Lives na umaabot ng 4+ oras.\n\n### Lampas sa 90-Second Clip Limit\n\nMaganda ang in-app Stream Clips ng 17live para sa pag-share sa loob ng app pero capped sila sa 15–90 segundo at hindi umaalis sa surface ng 17live. Pwedeng gamitin ng Premium streamers ang ClipAI sa LiveStreamRecorder para magputol ng highlight clips ng kahit anong haba mula sa buong saved Lives, naka-format para sa **TikTok, Instagram Reels, YouTube Shorts** — ang platforms kung saan talaga nag-eexist ang karamihan ng non-17live viewers. Gamitin sila bilang funnel pabalik sa 17live room mo.\n\n### Ginawa para sa Talent-Managed at Indie Streamers Pareho\n\nAktibong nag-sscout at sumusuporta ang talent management system ng 17live sa mga streamer — bahagi iyan ng nagpapakaiba sa platform mula sa purely self-serve apps. Hindi humihipo ang LiveStreamRecorder sa kahit ano sa mga iyon. Hindi nagla-log in sa 17live account mo, hindi nakakahadlang sa Hot Star events, gifting promos, o tools ng talent agency mo. Passive parallel recording lang ito — kontrol mo, URL mo, archive mo.\n\n### Panoorin sa Browser, Mag-download Kung Kailangan\n\nNagpa-play agad ang bawat 17live recording sa kahit anong modern browser. Walang 17live account na kailangan para manood — i-share ang URL sa kahit kanino, kahit saan. Pwedeng mag-download ng raw HEVC video file ang Premium creators mula sa bawat Live para sa re-editing, pag-upload sa YouTube bilang long-form VOD, o local archival.\n\n### Opt-In, Sariling Content Mo\n\nNagre-record lang ang LiveStreamRecorder ng sariling profile mo, pagkatapos mong mag-opt in. Parehong legal posture ang recording sa pag-download ng sariling Lives mo mula sa in-app Stream Archive ng 17live — naka-store lang sa ibang surface (public web URL sa domain mo sa halip na sa loob ng app). Itigil ang recording kahit kailan, burahin ang kahit anong recording sa isang click.",
+    "kwai": "## Mga Kwai Recording sa LiveStreamRecorder\n\nAng Kwai (mula sa Mandarin 快 *kuài*, ibig sabihin ay \"mabilis\") ay ang global short-video + live-streaming app mula sa **Kuaishou Technology** (HKEX 1024), kadalasang tinatawag na #2 short-video platform sa Asya pagkatapos ng Douyin/TikTok. Labas sa China, dominant ang Kwai sa **Brazil** (ang pinakamalaki niyang market, naka-rival sa TikTok), plus Indonesia, Mexico, Argentina, Colombia, Middle East, at Russia/CIS. Nagca-capture ang LiveStreamRecorder ng bawat Kwai Live sa **public, web-accessible recording** — labas sa Kwai app, sa open web, na-iindex ng Google.\n\n### Kwai sa Loob ng App vs. Kwai sa Open Web\n\nGinawa ang Kwai sa paligid ng in-app feed niya: mag-scroll ng short videos, sumali sa Live, magpadala ng gifts via K-coins, lahat sa loob ng Kwai surface. Gumagana iyan nang maganda para sa users na nasa Kwai na. Pero sa sandaling wala sa Kwai ang fans mo — Brazilian fans sa WhatsApp / Instagram, Indonesian followers sa Telegram, viewers sa markets kung saan hindi naka-install ang Kwai — wala na ang broadcast. Nire-record ng LiveStreamRecorder ang bawat Kwai Live sa public URL tulad ng `livestreamrecorder.com/kwai/your-username/video/...` na pwedeng buksan ng kahit sino sa kahit anong browser. Walang Kwai install na kailangan para manood, walang Kwai account, walang app gate.\n\n### Ginawa para sa Mobile-First, Cellular-First Creators\n\nAng pinakamalaking markets ng Kwai — Brazil, Indonesia, MENA — ay markets din kung saan mahalagang resources ang mobile data at battery. Ayaw ng creators na maging mainit ang phone dahil sa OBS o screen recorder sa background. Naiintindihan namin. Nagre-record ang LiveStreamRecorder server-side. Nagbo-broadcast ka sa Kwai mula sa phone mo gaya ng normal — pwedeng mag-lock ang screen ng phone mo, matulog, mawalan ng call — nagpapatuloy ang recording sa infrastructure namin. Zero CPU, zero GPU, zero extra battery cost sa device mo.\n\n### Ang Brazilian Kwai Discovery Gap\n\nMassive ecosystem ang Kwai BR, pero halos invisible siya sa open Portuguese-language web. I-Google search ang Brazilian Kwai creator at kadalasan ay thin profile pages o third-party tracker sites lang makukuha mo. Malinis, na-iindex, at shareable ang LiveStreamRecorder URLs — nakakakuha ang Brazilian creators ng real Google footprint sa unang pagkakataon, na bawat Kwai Live ay nagsisilbing permanent SEO-discoverable page. Pareho rin sa Indonesian / Mexican / Argentinian creators sa kanilang markets.\n\n### ClipAI: Mula sa Kwai Live papuntang TikTok / Reels / Shorts\n\nDominant ang Kwai sa emerging markets, pero dominant pa rin ang TikTok / Instagram / YouTube sa global discovery. Sini-scan ng ClipAI ang saved Kwai Lives mo at nagpuputol ng vertical highlight clips na naka-format para sa **TikTok, Instagram Reels, YouTube Shorts** — ang discovery layer labas sa Kwai. Music covers, dance, comedy bits, gift reactions, viewer interactions — i-cross-post sila para palawakin ang audience funnel mo pabalik sa Kwai Lives mo.\n\n### Panoorin sa Browser, Mag-download Kung Kailangan\n\nNagpa-play agad ang bawat saved Kwai Live sa kahit anong modern browser. Walang Kwai account na kailangan para sa viewers. Pwedeng mag-download ng raw HEVC video file ang Premium creators mula sa bawat Live para sa re-editing bilang long-form YouTube content, compilation videos, o local archival.\n\n### Hindi Humihipo sa Kwai Account o Revenue Mo\n\nHindi nagla-log in ang LiveStreamRecorder sa Kwai account mo, hindi nakakakita ng K-coins, hindi binabasa ang gifting income mo, hindi nakakahadlang sa Kwai's creator program tiers. Opt-in ang recording mo bilang Kwai creator para sa **sariling** account, at sariling Lives lang — wala nang iba. Nananatili sa Kwai ang Kwai account state, ranking, at rev-share mo.\n\n### Opt-In, Sariling Content Mo, Burahin Kahit Kailan\n\nNagre-record lang ang LiveStreamRecorder ng sariling profile mo, pagkatapos mong mag-opt in. Itigil ang recording flow kahit kailan. Burahin ang kahit anong past Kwai recording sa isang click. Content mo, URL mo, kontrol mo — independent sa Kwai app, sa open public web kung saan finally mahahanap ka ng ibang potential audience mo."
+  },
+  "jsonLd": {
+    "name": {
+      "all": "Mga Live Stream Recording",
+      "tiktok": "Mga TikTok Live Recording",
+      "twitch": "Mga Twitch Stream Recording",
+      "youtube": "Mga YouTube Live Recording",
+      "kick": "Mga Kick Stream Recording",
+      "afreecatv": "Mga AfreecaTV Stream Recording",
+      "pandalive": "Mga Pandalive Stream Recording",
+      "bigo": "Mga Bigo Stream Recording",
+      "buzzcast": "Mga Buzzcast Stream Recording",
+      "liveme": "Mga LiveMe Stream Recording",
+      "mixch": "Mga Mixch Stream Recording",
+      "twitcast": "Mga TwitCasting Live Recording",
+      "trovo": "Mga Trovo Stream Recording",
+      "joilive": "Mga Joilive Stream Recording",
+      "live17": "Mga 17live Recording",
+      "kwai": "Mga Kwai Recording"
+    },
+    "description": {
+      "all": "Panoorin ang live stream recordings mula sa mga creator sa LiveStreamRecorder.",
+      "tiktok": "Panoorin ang TikTok live recordings mula sa mga creator sa LiveStreamRecorder.",
+      "twitch": "Panoorin ang Twitch stream recordings mula sa mga creator sa LiveStreamRecorder.",
+      "youtube": "Panoorin ang YouTube live recordings mula sa mga creator sa LiveStreamRecorder.",
+      "kick": "Panoorin ang Kick stream recordings mula sa mga creator sa LiveStreamRecorder.",
+      "afreecatv": "Panoorin ang AfreecaTV recordings mula sa mga creator sa LiveStreamRecorder.",
+      "pandalive": "Panoorin ang Pandalive recordings mula sa mga creator sa LiveStreamRecorder.",
+      "bigo": "Panoorin ang Bigo recordings mula sa mga creator sa LiveStreamRecorder.",
+      "buzzcast": "Panoorin ang Buzzcast recordings mula sa mga creator sa LiveStreamRecorder.",
+      "liveme": "Panoorin ang LiveMe recordings mula sa mga creator sa LiveStreamRecorder.",
+      "mixch": "Panoorin ang Mixch recordings mula sa mga creator sa LiveStreamRecorder.",
+      "twitcast": "Panoorin ang TwitCasting Live recordings mula sa mga streamer sa LiveStreamRecorder.",
+      "trovo": "Panoorin ang Trovo stream recordings mula sa mga streamer sa LiveStreamRecorder.",
+      "joilive": "Panoorin ang Joilive stream recordings mula sa mga streamer sa LiveStreamRecorder.",
+      "live17": "Panoorin ang 17live recordings mula sa mga streamer sa LiveStreamRecorder.",
+      "kwai": "Panoorin ang Kwai recordings mula sa mga creator sa LiveStreamRecorder."
+    },
+    "streamTitle": "{nickname} Stream - {date}",
+    "streamDescription": {
+      "tiktok": "TikTok live recording mula kay {nickname}",
+      "twitch": "Twitch stream recording mula kay {nickname}",
+      "youtube": "YouTube live recording mula kay {nickname}",
+      "kick": "Kick stream recording mula kay {nickname}",
+      "afreecatv": "AfreecaTV recording mula kay {nickname}",
+      "pandalive": "Pandalive recording mula kay {nickname}",
+      "bigo": "Bigo recording mula kay {nickname}",
+      "unknown": "Live stream recording mula kay {nickname}",
+      "buzzcast": "Buzzcast recording mula kay {nickname}",
+      "liveme": "LiveMe recording mula kay {nickname}",
+      "mixch": "Mixch recording mula kay {nickname}",
+      "twitcast": "TwitCasting Live recording mula kay {nickname}",
+      "trovo": "Trovo stream recording mula kay {nickname}",
+      "joilive": "Joilive stream recording mula kay {nickname}",
+      "live17": "17live recording mula kay {nickname}",
+      "kwai": "Kwai recording mula kay {nickname}"
+    }
+  },
+  "recordedOn": "Na-record noong {date}",
+  "faq": "Mga Madalas Itanong",
+  "country": {
+    "title": "{platform} mula sa {country}",
+    "description": "Panoorin ang {platform} mula sa {country} na nagre-record ng live streams nila sa LiveStreamRecorder. Panoorin ang recordings nila at tumuklas ng bagong content.",
+    "heroTitle": "{platform} sa {country}",
+    "heroSubtitle": "Panoorin ang pinakabagong {platform} videos mula sa {country}.",
+    "empty": {
+      "title": "Wala Pang Recordings",
+      "description": "Wala pang recordings ang {platform} mula sa {country}."
+    },
+    "browseByCountry": "Panoorin ang {platform} ayon sa Bansa",
+    "browseLink": "Panoorin ang pinakabagong {platform} videos mula sa {country}",
+    "backToPlatform": "Bumalik sa lahat ng {platform}"
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "title": "Settings",
+  "description": "I-manage ang account settings mo",
+  "profile": {
+    "title": "Profile",
+    "username": "Username",
+    "usernamePlaceholder": "Ilagay ang username mo",
+    "usernameMinLength": "Dapat may minimum na 3 character ang username",
+    "usernameMaxLength": "Hindi dapat lalagpas sa 30 character ang username",
+    "saveChanges": "I-save ang mga Pagbabago",
+    "updateSuccess": "Successful",
+    "usernameUpdated": "Na-update na ang username mo",
+    "updateError": "May Error"
+  },
+  "subscription": {
+    "title": "Subscription",
+    "currentPlan": "Current Plan",
+    "description": "Tinutukoy ng subscription mo kung anong features ang ma-access mo."
+  },
+  "tiktok": {
+    "title": "TikTok",
+    "description": "Ikonekta ang TikTok account mo para mag-post ng clips at palakihin ang audience.",
+    "descriptionConnected": "Naka-konekta na ang TikTok account mo.",
+    "connect": "Ikonekta ang TikTok",
+    "disconnect": "I-disconnect",
+    "connected": "Naka-konekta",
+    "connectSuccess": "Successful",
+    "connectSuccessMessage": "Naka-konekta na ang TikTok account mo",
+    "connectError": "May Error",
+    "connectErrorMessage": "Hindi naikonekta ang TikTok account",
+    "disconnectSuccess": "Na-disconnect",
+    "disconnectSuccessMessage": "Na-disconnect na ang TikTok account mo",
+    "disconnectError": "May Error"
+  },
+  "youtube": {
+    "title": "YouTube",
+    "description": "Ikonekta ang YouTube account mo para direktang mag-publish ng clips bilang YouTube Shorts.",
+    "descriptionConnected": "Naka-konekta na ang YouTube account mo. Pwede ka nang mag-publish ng clips sa YouTube.",
+    "connect": "Ikonekta ang YouTube",
+    "disconnect": "I-disconnect",
+    "connected": "Naka-konekta",
+    "connectSuccess": "Successful",
+    "connectSuccessMessage": "Naka-konekta na ang YouTube account mo",
+    "connectError": "May Error",
+    "connectErrorMessage": "Hindi naikonekta ang YouTube account",
+    "disconnectSuccess": "Na-disconnect",
+    "disconnectSuccessMessage": "Na-disconnect na ang YouTube account mo",
+    "disconnectError": "May Error"
+  },
+  "dangerZone": {
+    "title": "Danger Zone",
+    "description": "Kapag binura mo ang account mo, hindi na ito mababawi. Tiyaking sigurado ka.",
+    "deleteAccount": "Burahin ang Account",
+    "deleteConfirm": {
+      "title": "Burahin ang Account",
+      "message": "Sigurado ka bang gusto mong burahin ang account mo? Hindi na ito mababawi at permanenteng matatanggal ang lahat ng data mo.",
+      "confirm": "Burahin ang Account",
+      "cancel": "Kanselahin"
+    },
+    "deleteError": "May Error"
+  },
+  "notifications": {
+    "title": "Notifications",
+    "description": "Makatanggap ng abiso kapag nag-live ang streamers mo.",
+    "on": "Naka-on ang notifications",
+    "off": "Naka-off ang notifications",
+    "enabled": "Na-enable ang notifications",
+    "disabled": "Na-disable ang notifications",
+    "denied": "Naka-block ang notifications. I-enable ito sa browser settings mo.",
+    "unsupported": "Hindi sinusuportahan ng browser mo ang notifications.",
+    "error": "May nangyaring problema",
+    "sendTest": "Magpadala ng test notification",
+    "testSent": "Naipadala ang test notification",
+    "testSentMessage": "Tingnan ang device mo — lalabas ang notification sa ilang sandali.",
+    "helpTitle": "Hindi nakakakita ng notifications?",
+    "helpPermission": "Siguraduhing pinapayagan ang browser mo na magpakita ng notifications sa system settings mo.",
+    "helpFocus": "I-off ang Do Not Disturb, Focus, o Focus Assist. Sila ang nagpapatahimik ng notifications sa Mac, iPhone, Android, at Windows."
+  },
+  "watchedHistory": {
+    "title": "Mga napanood na video",
+    "description": "Naka-mark mo na ang {count} videos na napanood. Lalabas ito bilang badge sa thumbnails para alam mo agad kung alin ang napanood mo na.",
+    "clearButton": "I-clear ang watched history",
+    "clearConfirm": {
+      "title": "I-clear ang watched history",
+      "message": "Aalisin nito ang WATCHED badge sa {count} videos. Mukhang hindi napanood ulit ang mga ito. Magpatuloy?",
+      "confirm": "I-clear",
+      "cancel": "Kanselahin"
+    },
+    "cleared": {
+      "title": "Na-clear",
+      "message": "Na-clear na ang watched history mo."
+    }
+  },
+  "trackingData": {
+    "title": "Privacy at tracking data",
+    "description": "Iniimbak namin ang views at downloads ng video mo kasama ng IP address mo para matukoy ang account sharing at credit-card disputes. Pwede mong i-clear lahat ng tracking data mo dito anumang oras. Magsisimulang ulit ma-log ang mga bagong view at download pagkatapos nito.",
+    "clearButton": "I-clear ang aking tracking data",
+    "clearConfirm": {
+      "title": "I-clear ang tracking data",
+      "message": "Permanenteng buburahin nito lahat ng stored views at downloads mo, kasama ang IP addresses. Magpatuloy?",
+      "confirm": "I-clear",
+      "cancel": "Kanselahin"
+    },
+    "cleared": {
+      "title": "Na-clear",
+      "message": "Natanggal ang {views} views at {downloads} downloads."
+    },
+    "error": {
+      "title": "Nabigo",
+      "message": "Hindi na-clear ang tracking data."
+    }
+  }
+}

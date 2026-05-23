@@ -1,0 +1,48 @@
+{
+  "meta": {
+    "title": "Gumawa ng Account",
+    "description": "Gumawa ng libreng LiveStreamRecorder account para awtomatikong i-record ang live streams ng paborito mong creators."
+  },
+  "title": "Gumawa ng account",
+  "subtitle": "Sumali sa amin at mag-simulang mag-explore",
+  "username": {
+    "label": "Username",
+    "placeholder": "Pumili ng username"
+  },
+  "email": {
+    "label": "Email address",
+    "placeholder": "you@example.com"
+  },
+  "password": {
+    "label": "Password",
+    "placeholder": "Gumawa ng password",
+    "hint": "Dapat may minimum na 6 character ang password"
+  },
+  "choices": {
+    "emailPassword": "Gamitin ang Email / Password",
+    "google": "Magpatuloy gamit ang Google",
+    "tiktok": "Magpatuloy gamit ang TikTok",
+    "facebook": "Magpatuloy gamit ang Facebook"
+  },
+  "terms": {
+    "agree": "Sumasang-ayon ako sa",
+    "link": "Terms and Conditions",
+    "text": "Sa pagpapatuloy, sumasang-ayon ka sa",
+    "tosLink": "Terms of Service",
+    "and": "ng Live Stream Recorder at kinukumpirma na nabasa mo na ang",
+    "privacyLink": "Privacy Policy"
+  },
+  "submit": {
+    "default": "Gumawa ng account",
+    "loading": "Ginagawa ang account..."
+  },
+  "checkEmail": {
+    "title": "Tingnan ang inbox mo",
+    "description": "Nagpadala kami ng confirmation link sa email mo. I-click ang link para ma-verify ang account.",
+    "loginLink": "Pumunta sa sign in"
+  },
+  "login": {
+    "text": "Mayroon nang account?",
+    "link": "Mag-sign in"
+  }
+}

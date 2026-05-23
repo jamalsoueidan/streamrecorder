@@ -1,0 +1,165 @@
+{
+  "meta": {
+    "title": "Terms & Conditions",
+    "description": "Basahin ang terms and conditions para sa paggamit ng LiveStreamRecorder services."
+  },
+  "header": {
+    "title": "Terms & Conditions",
+    "lastUpdated": "Pinakabagong update: {date}"
+  },
+  "introduction": {
+    "title": "Introduksyon",
+    "content": "Sa paggamit ng LiveStreamRecorder.com at mga serbisyo nito, sumasang-ayon kang mabigkis sa Terms and Conditions na ito. Pakibasa nang mabuti bago gamitin ang platform namin. Kung hindi ka sang-ayon sa mga terms na ito, hindi mo pwedeng gamitin ang Serbisyo."
+  },
+  "serviceDescription": {
+    "title": "Paglalarawan ng Serbisyo",
+    "content1": "Nagbibigay ang LiveStreamRecorder ng cloud-based platform na nagpapahintulot sa mga content creator na automatic na i-record, i-archive, at i-store ang kanilang live streams mula sa mga platform tulad ng TikTok, Twitch, YouTube, Kick, AfreecaTV, at Pandalive.",
+    "content2": "Sa pamamagitan ng remote handling ng recording at storage sa servers namin, nakikinabang ang mga user sa mas malaking kaginhawaan at mas kaunting pagkakadepende sa personal hardware — nang hindi kailangang mag-install ng software o iwanang naka-on ang mga device.",
+    "content3": "Ang LiveStreamRecorder ay isang technical service provider. Hindi kami nag-host, nagmamay-ari, o nag-control ng content ng third-party streaming platforms."
+  },
+  "userContent": {
+    "title": "User Content at Lisensya",
+    "content1": "Pinananatili mo ang karapatan ng intellectual property ownership mo sa content na sini-submit mo sa amin o ina-record sa pamamagitan ng Serbisyo namin. Hindi kami kailanman maghahabol ng pagmamay-ari sa content mo.",
+    "content2": "Sa paggamit ng Serbisyo namin para mag-record, mag-upload, o magpadala ng content sa kahit anong paraan, binibigyan mo ang LiveStreamRecorder ng non-exclusive, royalty-free, transferable, sub-licensable, worldwide license para gamitin, i-host, i-store, ipakita, ipamahagi, at ibigay ang content mo para sa layunin ng pagpapatakbo at pagbibigay ng Serbisyo.",
+    "content3": "Patuloy ang lisensyang ito hanggang burahin mo ang content o account mo. Gayunpaman, ang content na nai-share na, na-download, o na-cache ng ibang user ay maaaring manatiling available.",
+    "content4": "Pinapahayag at ginagarantiyahan mo na ikaw ang nagmamay-ari o may kailangang karapatan sa lahat ng content na ire-record mo sa pamamagitan ng Serbisyo namin, at may awtoridad ka para ibigay ang lisensyang ito."
+  },
+  "contentVisibility": {
+    "title": "Visibility ng Content",
+    "content1": "Sa paggamit ng LiveStreamRecorder, naiintindihan at sumasang-ayon kang ang mga recording na ginawa sa pamamagitan ng Serbisyo namin ay maaaring publicly visible sa ibang mga user sa platform.",
+    "content2": "Ikaw lamang ang may responsibilidad sa content na ire-record at gagawing available mo. Kung ayaw mong maging publiko ang mga recording mo, pwede mong i-adjust ang privacy settings mo kung saan available o iwasan ang paggamit ng Serbisyo.",
+    "content3": "Pwede kang humiling ng pagtanggal ng content mo anumang oras sa pamamagitan ng pakikipag-ugnayan sa amin o paggamit ng available na controls sa account settings mo."
+  },
+  "ageRequirement": {
+    "title": "Kinakailangang Edad",
+    "content": "Dapat ay hindi bababa sa 18 taong gulang ka o naabot mo na ang edad ng karapatang legal sa hurisdiksyon mo para magamit ang platform na ito. Sa paggawa ng account, kinukumpirma mong natugunan mo ang kinakailangang ito."
+  },
+  "yourAccount": {
+    "title": "Account Mo",
+    "intro": "Sa pagrehistro para sa account, sumasang-ayon kang:",
+    "items": {
+      "accurate": "Magbigay ng tamang, kasalukuyan, at kompletong impormasyon",
+      "confidential": "Panatilihing confidential ang login credentials mo",
+      "noShare": "Hindi i-share ang account mo sa iba",
+      "oneAccount": "Magkaroon lang ng isang account bawat tao",
+      "notify": "Ipaalam sa amin kaagad ang kahit anong unauthorized access",
+      "responsibility": "Tanggapin ang responsibilidad sa lahat ng activity sa ilalim ng account mo"
+    },
+    "footer": "Hindi mananagot ang LiveStreamRecorder sa kahit anong pagkawala o pinsala na dulot ng pagkabigo mong i-secure ang account credentials mo."
+  },
+  "intellectualProperty": {
+    "title": "Intellectual Property at Copyright",
+    "content1": "Iginagalang ng LiveStreamRecorder ang mga karapatan ng intellectual property ng iba at inaasahan ang mga user na gawin din ito.",
+    "content2": "Sa paggamit ng Serbisyo namin, kinukumpirma mong may karapatan kang i-record ang content na idadagdag mo sa platform namin. Ikaw lamang ang may responsibilidad para tiyakin na ang paggamit mo ay sumusunod sa applicable copyright laws at terms of service ng third-party streaming platforms.",
+    "content3": "Ang pag-record, pag-reproduce, o pag-redistribute ng live stream content nang walang pahintulot ng creator ay maaaring maging copyright infringement at maaaring magdulot sa iyo ng legal liability. Ang LiveStreamRecorder ay isang technical tool lamang — ikaw ang may buong legal na responsibilidad sa kung paano mo ito gagamitin.",
+    "content4": "Sumasang-ayon kang hindi gamitin ang LiveStreamRecorder para mag-record ng content na hindi mo pag-aari o walang explicit authorization para i-record. Kung magdagdag ka ng creator sa account mo, pinapahayag mong ikaw ang creator o nakakuha ng kanilang pahintulot.",
+    "content5": "Ang anumang pang-aabuso ay maaaring magdulot ng pagwawakas ng account mo at potensyal na legal action mula sa rights holders. Walang responsibilidad ang LiveStreamRecorder sa unauthorized recordings na ginawa ng mga user.",
+    "content6": "Pinapanatili ng LiveStreamRecorder ang karapatang tanggalin o i-disable ang access sa kahit anong content na inaakusahang lumalabag at maaaring tapusin ang access ng paulit-ulit na infringers sa Serbisyo."
+  },
+  "prohibitedActivities": {
+    "title": "Mga Ipinagbabawal na Aktibidad",
+    "intro": "Hindi mo pwedeng gamitin ang platform na ito para:",
+    "items": {
+      "noRights": "Mag-record ng content na hindi mo pag-aari o walang karapatan",
+      "minors": "Mag-record ng content na may kasamang menor de edad (sinumang mas bata sa 18)",
+      "exploit": "Mag-access ng content na nag-eexploit, naglalagay sa peligro, o nagse-sexualize sa menor de edad",
+      "adultContent": "Mag-record, mag-upload, o mamahagi ng pornographic, sexually explicit, o adult content ng kahit anong klase",
+      "illegal": "Sumali sa kahit anong illegal activity",
+      "harass": "Mang-harass, mang-stalk, o manakit ng iba",
+      "bots": "Gumamit ng bots, scripts, o automated tools para abusuhin ang Serbisyo",
+      "multipleAccounts": "Gumawa ng maraming account para iwasan ang restrictions",
+      "malware": "Mag-upload ng malware o nakakasamang software",
+      "reverseEngineer": "Mag-reverse engineer o pakialaman ang mga systems namin"
+    },
+    "footer": "Maaaring magdulot ang mga paglabag ng agarang pagwawakas ng account nang walang abiso at maaaring magdala ng legal action."
+  },
+  "contentRemoval": {
+    "title": "Pagtanggal ng Content at DMCA",
+    "content1": "Pinapanatili namin ang karapatang tanggalin ang kahit anong content o tapusin ang kahit anong account sa pasya namin. Tutugon kami sa mga claim ng copyright infringement at gagawa ng naaangkop na aksyon ayon sa kinakailangan ng batas, kasama ang pagtanggal ng infringing content at pagwawakas ng access para sa paulit-ulit na infringers.",
+    "content2": "Kung naniniwala kang ang content sa platform namin ay lumalabag sa karapatan mo, may kasamang menor de edad, o lumalabag sa mga terms na ito, makipag-ugnayan sa amin sa contact@livestreamrecorder.com kasama ang kumpletong detalye para sa mabilis na resolusyon.",
+    "footer": "Pakisama: paglalarawan ng copyrighted work, URL ng infringing content, contact information mo, at pahayag na may good faith ka na hindi authorized ang paggamit."
+  },
+  "thirdPartyPlatforms": {
+    "title": "Third-Party Platforms",
+    "content1": "Ang mga serbisyo namin ay nag-iintegrate sa third-party streaming platforms. Sa paggamit ng Serbisyo namin, kinikilala mong nakatali ka rin sa mga terms at policies ng mga platform na ito:",
+    "platforms": {
+      "tiktok": "TikTok Terms of Service",
+      "twitch": "Twitch Terms of Service",
+      "youtube": "YouTube Terms of Service",
+      "kick": "Kick Terms of Service",
+      "afreecatv": "AfreecaTV Terms of Service",
+      "bigo": "Bigo Live Terms of Service",
+      "buzzcast": "BuzzCast Terms of Service",
+      "joilive": "Joi Live Terms of Service",
+      "liveme": "LiveMe Terms of Service",
+      "mixch": "Mixch Terms of Service",
+      "pandalive": "Pandalive Terms of Service",
+      "tango": "Tango Terms of Service",
+      "trovo": "Trovo Terms of Service",
+      "twitcast": "TwitCasting Terms of Service",
+      "google": "Google Terms of Service",
+      "googlePrivacy": "Google Privacy Policy",
+      "live17": "17live Terms of Service",
+      "kwai": "Kwai Terms of Service"
+    },
+    "content2": "Ikaw lamang ang may responsibilidad para sa pag-review at pagsunod sa mga third-party terms na ito. Hindi responsable ang LiveStreamRecorder sa kahit anong aksyon na ginawa ng third-party platforms, kasama ang pagtanggal ng content, mga pagbabago sa API, o restrictions sa account.",
+    "content3": "Ang mga pagbabago o restrictions na ipinapataw ng third-party platforms ay maaaring makaapekto sa availability o functionality ng mga serbisyo namin. Hindi responsable ang LiveStreamRecorder sa kahit anong disruptions na dulot ng third-party platforms."
+  },
+  "serviceTiers": {
+    "title": "Service Tiers at Access",
+    "content1": "Nag-aalok ang LiveStreamRecorder ng parehong free at premium access tiers na may iba't ibang features at limitations.",
+    "content2": "May access ang mga free user sa mga basic features na may usage limits. Nagagamit ng mga premium subscriber ang lahat ng features kasama ang AI tools, extended storage, at priority support.",
+    "content3": "Pwedeng manood ang anonymous visitors ng limitadong dami ng recordings bago hilingin na gumawa ng account. Maaaring magkaroon ang mga registered free user ng karagdagang viewing limitations base sa activity ng account nila.",
+    "content4": "Pinapanatili namin ang karapatang baguhin ang tier benefits, features, at limitations anumang oras. Ang mga significant na pagbabago ay ipapaalam sa mga existing user."
+  },
+  "payments": {
+    "title": "Mga Bayad at Subscriptions",
+    "items": {
+      "autoBill": "Automatic na sinisingil ang paid plans hanggang i-cancel mo",
+      "autoRenew": "Auto-renew ang mga subscription maliban kung kanselado nang hindi bababa sa 24 oras bago ang susunod na billing date",
+      "cancelAnytime": "I-cancel anumang oras sa account settings mo",
+      "noRefunds": "Walang refund para sa hindi nagamit na subscription time",
+      "priceChanges": "Maaari naming baguhin ang pricing na may makatwirang abiso sa existing subscribers",
+      "failedPayments": "Maaaring magdulot ang failed payments ng restricted access hanggang maresolba",
+      "taxes": "Responsable ka sa kahit anong applicable na buwis"
+    }
+  },
+  "termination": {
+    "title": "Pagwawakas",
+    "content1": "Maaari naming i-suspend o tapusin ang account mo anumang oras kung lumabag ka sa mga terms na ito, sumali sa mga ipinagbabawal na aktibidad, o mabigong maresolba ang payment issues.",
+    "content2": "Pwede mong burahin ang account mo anumang oras sa Settings. Magkakabisa ang pag-cancel sa katapusan ng kasalukuyang billing cycle.",
+    "content3": "Sa pagwawakas, agad na babawiin ang access sa Serbisyo, at ang kahit anong data na naka-store sa servers namin ay maaaring permanenteng tanggalin."
+  },
+  "liability": {
+    "title": "Limitasyon ng Pananagutan",
+    "content": "Ang platform na ito ay ibinibigay as-is at as-available nang walang warranties ng kahit anong klase, express man o implied. Ang paggamit mo sa Serbisyo ay nasa sariling panganib mo.",
+    "intro": "Hindi mananagot ang LiveStreamRecorder sa:",
+    "items": {
+      "content": "Content na ginawa, na-record, o na-access ng mga user",
+      "thirdParty": "Mga aksyon ng third-party streaming platforms",
+      "interruptions": "Pagkagambala ng serbisyo o technical issues",
+      "indirect": "Indirect, incidental, special, o consequential damages",
+      "lossData": "Pagkawala ng data, kita, o business opportunities",
+      "unauthorized": "Unauthorized access dahil sa pagkabigo mong i-secure ang credentials"
+    },
+    "footer": "Sa buong lawak na pinapahintulutan ng batas, ang kabuuang pananagutan namin ay hindi lalampas sa halagang binayad mo para sa Serbisyo sa loob ng labindalawang (12) buwan bago ang event na nagdulot ng claim."
+  },
+  "indemnification": {
+    "title": "Indemnification",
+    "content": "Sumasang-ayon kang ipagtanggol, indemnify, at panatiling walang sala ang LiveStreamRecorder at mga affiliates, officers, agents, at empleyado nito mula sa kahit anong claims, damages, losses, liabilities, costs, o expenses (kasama ang legal fees) na nagmumula sa paggamit mo ng platform, sa paglabag mo sa mga terms na ito, sa paglabag mo sa kahit anong karapatan ng third-party, o sa kahit anong unauthorized recordings na ginawa mo gamit ang Serbisyo."
+  },
+  "modifications": {
+    "title": "Mga Modification",
+    "content1": "Pinapanatili ng LiveStreamRecorder ang karapatang baguhin, i-update, o ihinto ang kahit anong bahagi ng Serbisyo anumang oras nang walang prior notice. Maaari rin naming i-update ang mga terms na ito anumang oras.",
+    "content2": "Ang patuloy na paggamit ng platform pagkatapos ng mga pagbabago ay nangangahulugang tinatanggap mo ang bagong terms. Ia-update namin ang \"Pinakabagong update\" na petsa sa itaas ng page na ito kapag may mga pagbabago."
+  },
+  "governingLaw": {
+    "title": "Namamahala na Batas",
+    "content": "Ang mga Terms na ito ay pinangangasiwaan at binubuo alinsunod sa mga batas ng Denmark, nang walang pagtutuon sa conflict of law provisions nito. Anumang pagtatalo na nagmumula sa mga terms na ito o sa paggamit mo ng Serbisyo ay sasailalim sa eksklusibong hurisdiksyon ng mga korte ng Denmark."
+  },
+  "contact": {
+    "title": "Makipag-ugnayan",
+    "content": "May mga tanong o alalahanin tungkol sa mga terms na ito? Makipag-ugnayan sa amin sa contact@livestreamrecorder.com"
+  },
+  "footerNote": "Sa paggamit ng LiveStreamRecorder, kinikilala mong nabasa, naintindihan, at sumasang-ayon kang mabigkis sa Terms and Conditions na ito."
+}
