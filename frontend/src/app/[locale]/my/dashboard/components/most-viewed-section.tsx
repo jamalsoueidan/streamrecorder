@@ -30,7 +30,7 @@ export async function MostViewedSection({
       <Divider />
       <Box
         id="dashboard-most-viewed"
-        style={{ background: "linear-gradient(150deg, #FFD1DC, #FF6B9D)" }}
+        style={{ background: "linear-gradient(150deg, #E6CCFF, #9B6BFF)" }}
         py="sm"
         px={{ base: "xs", sm: "md" }}
       >

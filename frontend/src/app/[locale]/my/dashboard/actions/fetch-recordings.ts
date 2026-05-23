@@ -42,7 +42,7 @@ export async function fetchMostViewedRecordings() {
     filters: { viewsCount: { $gt: 0 } },
     sort: "viewsCount:desc",
     page: 1,
-    pageSize: 8,
+    pageSize: 4,
   });
   return result.data || [];
 }
@@ -53,7 +53,7 @@ export async function fetchMostDownloadedRecordings() {
     filters: { downloadsCount: { $gt: 0 } },
     sort: "downloadsCount:desc",
     page: 1,
-    pageSize: 8,
+    pageSize: 4,
   });
   return result.data || [];
 }

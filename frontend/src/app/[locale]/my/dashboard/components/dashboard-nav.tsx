@@ -18,12 +18,42 @@ import {
 import { useTranslations } from "next-intl";
 
 const links = [
-  { href: "#dashboard-new-creators", labelKey: "newCreators", icon: IconWorldSearch },
-  { href: "#dashboard-favorites", labelKey: "favorites", icon: IconStar },
-  { href: "#dashboard-most-viewed", labelKey: "mostViewed", icon: IconEye },
-  { href: "#dashboard-most-downloaded", labelKey: "mostDownloaded", icon: IconDownload },
-  { href: "#dashboard-my-feed", labelKey: "myFeed", icon: IconVideo },
-  { href: "#dashboard-discover", labelKey: "discoverSection", icon: IconChartBar },
+  {
+    href: "#dashboard-new-creators",
+    labelKey: "newCreators",
+    icon: IconWorldSearch,
+    background: "linear-gradient(150deg, #B4F4FF, #52DDE8)",
+  },
+  {
+    href: "#dashboard-most-viewed",
+    labelKey: "mostViewed",
+    icon: IconEye,
+    background: "linear-gradient(150deg, #E6CCFF, #9B6BFF)",
+  },
+  {
+    href: "#dashboard-most-downloaded",
+    labelKey: "mostDownloaded",
+    icon: IconDownload,
+    background: "linear-gradient(150deg, #C7E9FF, #4A9EFF)",
+  },
+  {
+    href: "#dashboard-favorites",
+    labelKey: "favorites",
+    icon: IconStar,
+    background: "linear-gradient(150deg, #FFF4B8, #FFD700)",
+  },
+  {
+    href: "#dashboard-my-feed",
+    labelKey: "myFeed",
+    icon: IconVideo,
+    background: "linear-gradient(150deg, #BDFF88, #5ABB91)",
+  },
+  {
+    href: "#dashboard-discover",
+    labelKey: "discoverSection",
+    icon: IconChartBar,
+    background: "linear-gradient(150deg, #FFCCCD, #F8888A)",
+  },
 ];
 
 export function DashboardNav() {
@@ -56,22 +86,22 @@ export function DashboardNav() {
         scrollbarSize={0}
       >
         <Group gap="xs" wrap="nowrap">
-          {links.map(({ href, labelKey, icon: Icon }) => (
+          {links.map(({ href, labelKey, icon: Icon, background }) => (
             <Anchor
               key={href}
               href={href}
               onClick={(e) => handleClick(e, href)}
               underline="never"
-              c="var(--mantine-color-text)"
+              c="black"
               style={{
                 display: "inline-flex",
                 alignItems: "center",
                 gap: 6,
                 padding: "6px 12px",
                 borderRadius: 999,
-                background: "var(--mantine-color-default-hover)",
+                background,
                 fontSize: 13,
-                fontWeight: 500,
+                fontWeight: 600,
                 whiteSpace: "nowrap",
                 flexShrink: 0,
               }}

@@ -119,10 +119,6 @@ export default async function Page() {
         </Suspense>
 
         <Suspense fallback={<Skeleton h={200} radius="md" m="md" />}>
-          <FavoritesSection favoritesPromise={favoritesPromise} />
-        </Suspense>
-
-        <Suspense fallback={<Skeleton h={200} radius="md" m="md" />}>
           <MostViewedSection mostViewedPromise={mostViewedPromise} />
         </Suspense>
 
@@ -130,6 +126,10 @@ export default async function Page() {
           <MostDownloadedSection
             mostDownloadedPromise={mostDownloadedPromise}
           />
+        </Suspense>
+
+        <Suspense fallback={<Skeleton h={200} radius="md" m="md" />}>
+          <FavoritesSection favoritesPromise={favoritesPromise} />
         </Suspense>
 
         <Suspense fallback={<Skeleton h={360} radius="md" m="md" />}>
