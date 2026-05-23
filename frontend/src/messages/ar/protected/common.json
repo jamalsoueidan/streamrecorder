@@ -48,7 +48,8 @@
     "editClip": "تعديل المقطع",
     "deleteSources": "حذف المصادر",
     "deleteSourcesSuccess": "تم حذف {count} مصدر",
-    "parts": "{count, plural, one {جزء واحد} other {# أجزاء}}"
+    "parts": "{count, plural, one {جزء واحد} other {# أجزاء}}",
+    "report": "الإبلاغ"
   },
   "followers": {
     "addedAgo_context": "For when a creator was added to user's list. Shows 'Added 3 days ago'",
@@ -96,5 +97,19 @@
     "hevcUnsupportedMessage": "هذا التسجيل من تيك توك يستخدم ترميز HEVC (H.265). متصفحك لا يدعم هذا الترميز. جرّب Safari أو Edge على Windows، أو ثبّت إضافة HEVC Video Extensions من متجر Microsoft.",
     "playbackFailedTitle": "فشل التشغيل",
     "playbackFailedMessage": "حدث خطأ أثناء تشغيل هذا الفيديو. افتح وحدة تحكم المتصفح (F12) وأرسل ما يظهر فيها للدعم لنتمكن من إصلاحه."
+  },
+  "report": {
+    "title": "الإبلاغ",
+    "reasons": {
+      "sexual": "محتوى جنسي",
+      "violent": "محتوى عنيف أو مقزز",
+      "hateful": "محتوى مسيء أو يحض على الكراهية",
+      "harmful": "أعمال ضارة أو خطيرة",
+      "spam": "محتوى مضلل أو سبام"
+    },
+    "submit": "إبلاغ",
+    "cancel": "إلغاء",
+    "thanks": "شكراً على الإبلاغ",
+    "failed": "فشل الإبلاغ"
   }
 }

@@ -50,7 +50,8 @@
     "editClip": "Edit Klip",
     "deleteSources": "Hapus sumber",
     "deleteSourcesSuccess": "{count} sumber dihapus",
-    "parts": "{count, plural, one {# bagian} other {# bagian}}"
+    "parts": "{count, plural, one {# bagian} other {# bagian}}",
+    "report": "Laporkan"
   },
   "followers": {
     "addedAgo_context": "Untuk kapan kreator ditambahkan ke daftar pengguna. Menampilkan 'Ditambahkan 3 hari lalu'",
@@ -98,5 +99,19 @@
     "hevcUnsupportedMessage": "Rekaman TikTok ini menggunakan HEVC (H.265). Browser kamu tidak mendukung codec ini. Coba Safari, Edge di Windows, atau pasang HEVC Video Extensions dari Microsoft Store.",
     "playbackFailedTitle": "Gagal memutar",
     "playbackFailedMessage": "Terjadi kesalahan saat memutar video ini. Buka konsol browser (F12) dan bagikan log yang muncul ke support agar kami bisa memperbaikinya."
+  },
+  "report": {
+    "title": "Laporkan",
+    "reasons": {
+      "sexual": "Konten seksual",
+      "violent": "Konten kekerasan atau menjijikkan",
+      "hateful": "Konten kebencian atau pelecehan",
+      "harmful": "Tindakan berbahaya",
+      "spam": "Spam atau menyesatkan"
+    },
+    "submit": "Laporkan",
+    "cancel": "Batal",
+    "thanks": "Terima kasih atas laporannya",
+    "failed": "Gagal melaporkan"
   }
 }

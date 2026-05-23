@@ -10,5 +10,10 @@ export default {
       path: "/recordings/search",
       handler: "recording.search",
     },
+    {
+      method: "POST",
+      path: "/recordings/:documentId/report",
+      handler: "recording.report",
+    },
   ],
 };

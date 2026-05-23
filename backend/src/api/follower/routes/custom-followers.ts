@@ -50,5 +50,10 @@ export default {
       path: "/followers/connect-user-with-follower/:userDocumentId",
       handler: "follower.connectUserWithFollower",
     },
+    {
+      method: "POST",
+      path: "/followers/:documentId/view",
+      handler: "follower.incrementView",
+    },
   ],
 };

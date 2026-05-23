@@ -230,6 +230,15 @@
         }
       },
       "default": false
+    },
+    "viewsCount": {
+      "type": "integer",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "default": 0
     }
   }
 }

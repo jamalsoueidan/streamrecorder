@@ -21,6 +21,7 @@ import {
   IconDownload,
   IconEye,
   IconEyeOff,
+  IconFlag,
   IconMail,
   IconScissors,
   IconSparkles,
@@ -31,6 +32,7 @@ import { useLocale, useTranslations } from "next-intl";
 import Link from "@/app/components/link";
 import { useState } from "react";
 import { DownloadUpgradeModal } from "./download-upgrade-modal";
+import { ReportRecordingModal } from "./report-recording-modal";
 import { VideoEditorModal } from "./video-editor-modal";
 
 interface RecordingMenuProps {
@@ -63,6 +65,7 @@ export function RecordingMenu({
   const locale = useLocale();
   const [downloadUpgradeOpened, setDownloadUpgradeOpened] = useState(false);
   const [editorOpened, setEditorOpened] = useState(false);
+  const [reportOpened, setReportOpened] = useState(false);
 
   const isOwner = user?.id && recording.follower?.owner?.id === user.id;
   const isFollowing = user?.followers?.some(
@@ -199,6 +202,14 @@ export function RecordingMenu({
           >
             {t("editClip")}
           </Menu.Item>
+          {user && !isOwner && (
+            <Menu.Item
+              leftSection={<IconFlag />}
+              onClick={() => setReportOpened(true)}
+            >
+              {t("report")}
+            </Menu.Item>
+          )}
           <Menu.Divider />
           <Menu.Label>{t("download")}</Menu.Label>
           <Menu.Item leftSection={<IconMail />} onClick={handleDownload}>
@@ -290,6 +301,13 @@ export function RecordingMenu({
         opened={editorOpened}
         onClose={() => setEditorOpened(false)}
       />
+      {recording.documentId && (
+        <ReportRecordingModal
+          documentId={recording.documentId}
+          opened={reportOpened}
+          onClose={() => setReportOpened(false)}
+        />
+      )}
     </>
   );
 }

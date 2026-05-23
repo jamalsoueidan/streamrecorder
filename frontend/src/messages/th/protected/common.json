@@ -50,7 +50,8 @@
     "downloadFeatureMessage": "การดาวน์โหลดวิดีโอเป็นฟีเจอร์พรีเมียม",
     "editClip": "แก้ไขคลิป",
     "deleteSources": "ลบไฟล์ต้นฉบับ",
-    "deleteSourcesSuccess": "ลบ {count} ไฟล์แล้ว"
+    "deleteSourcesSuccess": "ลบ {count} ไฟล์แล้ว",
+    "report": "รายงาน"
   },
   "followers": {
     "addedAgo_context": "For when a creator was added to user's list. Shows 'Added 3 days ago'",
@@ -100,5 +101,19 @@
     "audioCodecUnsupportedMessage": "บันทึกนี้ใช้เสียง HE-AACv2 ซึ่งเบราว์เซอร์ของคุณรองรับไม่เต็มที่ ลองใช้ Chrome หรือ Edge บนเดสก์ท็อป หรือใช้ Safari บน Mac/iOS",
     "playbackFailedTitle": "เล่นวิดีโอไม่ได้",
     "playbackFailedMessage": "เกิดข้อผิดพลาดขณะเล่นวิดีโอนี้ เปิดคอนโซลเบราว์เซอร์ (F12) และส่งข้อความที่ปรากฏให้ทีมซัพพอร์ตเพื่อช่วยแก้ไข"
+  },
+  "report": {
+    "title": "รายงาน",
+    "reasons": {
+      "sexual": "เนื้อหาทางเพศ",
+      "violent": "เนื้อหารุนแรงหรือน่ารังเกียจ",
+      "hateful": "เนื้อหาที่แสดงความเกลียดชังหรือการล่วงละเมิด",
+      "harmful": "การกระทำที่เป็นอันตรายหรืออันตราย",
+      "spam": "สแปมหรือทำให้เข้าใจผิด"
+    },
+    "submit": "รายงาน",
+    "cancel": "ยกเลิก",
+    "thanks": "ขอบคุณที่รายงาน",
+    "failed": "รายงานล้มเหลว"
   }
 }

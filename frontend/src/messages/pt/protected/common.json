@@ -50,7 +50,8 @@
     "editClip": "Editar clipe",
     "deleteSources": "Excluir fontes",
     "deleteSourcesSuccess": "{count} fontes excluídas",
-    "parts": "{count, plural, one {# parte} other {# partes}}"
+    "parts": "{count, plural, one {# parte} other {# partes}}",
+    "report": "Denunciar"
   },
   "followers": {
     "addedAgo_context": "Para quando o criador foi adicionado à lista do usuário. Exibe 'Adicionado há 3 dias'",
@@ -98,5 +99,19 @@
     "hevcUnsupportedMessage": "Esta gravação do TikTok usa HEVC (H.265). Seu navegador não suporta esse codec. Tente Safari, Edge no Windows, ou instale o HEVC Video Extensions na Microsoft Store.",
     "playbackFailedTitle": "Falha na reprodução",
     "playbackFailedMessage": "Algo deu errado ao reproduzir este vídeo. Abra o console do navegador (F12) e compartilhe o que aparece com o suporte para podermos corrigir."
+  },
+  "report": {
+    "title": "Denunciar",
+    "reasons": {
+      "sexual": "Conteúdo sexual",
+      "violent": "Conteúdo violento ou repulsivo",
+      "hateful": "Conteúdo de ódio ou abusivo",
+      "harmful": "Atos prejudiciais ou perigosos",
+      "spam": "Spam ou enganoso"
+    },
+    "submit": "Denunciar",
+    "cancel": "Cancelar",
+    "thanks": "Obrigado por denunciar",
+    "failed": "Falha na denúncia"
   }
 }

@@ -754,6 +754,19 @@ export default factories.createCoreController(
         updated: result.count,
       };
     },
+    async incrementView(ctx) {
+      const { documentId } = ctx.params;
+      if (!documentId || typeof documentId !== "string") {
+        return ctx.badRequest("INVALID_DOCUMENT_ID");
+      }
+
+      await strapi.db.connection.raw(
+        "UPDATE followers SET views_count = COALESCE(views_count, 0) + 1 WHERE document_id = ?",
+        [documentId],
+      );
+
+      return { success: true };
+    },
     async unpauseMyFollowers(ctx) {
       const user = ctx.state.user;
       if (!user) return ctx.unauthorized();

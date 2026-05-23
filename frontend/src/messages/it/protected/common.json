@@ -50,7 +50,8 @@
     "downloadFeatureMessage": "Scaricare i video è una funzione premium.",
     "editClip": "Modifica clip",
     "deleteSources": "Elimina sorgenti",
-    "deleteSourcesSuccess": "Eliminate {count} sorgenti"
+    "deleteSourcesSuccess": "Eliminate {count} sorgenti",
+    "report": "Segnala"
   },
   "followers": {
     "addedAgo_context": "For when a creator was added to user's list. Shows 'Added 3 days ago'",
@@ -100,5 +101,19 @@
     "audioCodecUnsupportedMessage": "Questa registrazione usa audio HE-AACv2, che il tuo browser non supporta completamente. Prova Chrome o Edge su desktop, o usa Safari su Mac/iOS.",
     "playbackFailedTitle": "Riproduzione fallita",
     "playbackFailedMessage": "Qualcosa è andato storto durante la riproduzione del video. Apri la console del browser (F12) e condividi con il supporto quello che vedi così possiamo risolvere."
+  },
+  "report": {
+    "title": "Segnala",
+    "reasons": {
+      "sexual": "Contenuto sessuale",
+      "violent": "Contenuto violento o ripugnante",
+      "hateful": "Contenuto di odio o abusivo",
+      "harmful": "Atti dannosi o pericolosi",
+      "spam": "Spam o ingannevole"
+    },
+    "submit": "Segnala",
+    "cancel": "Annulla",
+    "thanks": "Grazie per la segnalazione",
+    "failed": "Segnalazione fallita"
   }
 }

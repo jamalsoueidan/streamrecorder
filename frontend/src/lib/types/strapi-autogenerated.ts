@@ -544,6 +544,7 @@ export interface Activity {
     lsr?: boolean;
     sar?: boolean;
     profileFilled?: boolean;
+    viewsCount?: number;
     /** @format date-time */
     createdAt?: string;
     /** @format date-time */
@@ -1114,6 +1115,7 @@ export interface AiRequest {
     lsr?: boolean;
     sar?: boolean;
     profileFilled?: boolean;
+    viewsCount?: number;
     /** @format date-time */
     createdAt?: string;
     /** @format date-time */
@@ -1825,6 +1827,7 @@ export interface AiTask {
       lsr?: boolean;
       sar?: boolean;
       profileFilled?: boolean;
+      viewsCount?: number;
       /** @format date-time */
       createdAt?: string;
       /** @format date-time */
@@ -3781,6 +3784,7 @@ export interface Clip {
     lsr?: boolean;
     sar?: boolean;
     profileFilled?: boolean;
+    viewsCount?: number;
     /** @format date-time */
     createdAt?: string;
     /** @format date-time */
@@ -4448,6 +4452,7 @@ export interface ClipShare {
       lsr?: boolean;
       sar?: boolean;
       profileFilled?: boolean;
+      viewsCount?: number;
       /** @format date-time */
       createdAt?: string;
       /** @format date-time */
@@ -4909,6 +4914,7 @@ export interface FollowerRequest {
     lsr?: boolean;
     sar?: boolean;
     profileFilled?: boolean;
+    viewsCount?: number;
     locale?: string;
     localizations?: (number | string)[];
   };
@@ -5401,6 +5407,7 @@ export interface Follower {
       lsr?: boolean;
       sar?: boolean;
       profileFilled?: boolean;
+      viewsCount?: number;
       /** @format date-time */
       createdAt?: string;
       /** @format date-time */
@@ -5492,6 +5499,7 @@ export interface Follower {
   lsr?: boolean;
   sar?: boolean;
   profileFilled?: boolean;
+  viewsCount?: number;
   /** @format date-time */
   createdAt?: string;
   /** @format date-time */
@@ -6034,6 +6042,7 @@ export interface Meme {
       lsr?: boolean;
       sar?: boolean;
       profileFilled?: boolean;
+      viewsCount?: number;
       /** @format date-time */
       createdAt?: string;
       /** @format date-time */
@@ -6685,6 +6694,7 @@ export interface Recording {
     lsr?: boolean;
     sar?: boolean;
     profileFilled?: boolean;
+    viewsCount?: number;
     /** @format date-time */
     createdAt?: string;
     /** @format date-time */
@@ -7430,6 +7440,7 @@ export interface SocialAccount {
       lsr?: boolean;
       sar?: boolean;
       profileFilled?: boolean;
+      viewsCount?: number;
       /** @format date-time */
       createdAt?: string;
       /** @format date-time */
@@ -8065,6 +8076,7 @@ export interface Source {
       lsr?: boolean;
       sar?: boolean;
       profileFilled?: boolean;
+      viewsCount?: number;
       /** @format date-time */
       createdAt?: string;
       /** @format date-time */
@@ -8677,6 +8689,7 @@ export interface VisitorDownload {
       lsr?: boolean;
       sar?: boolean;
       profileFilled?: boolean;
+      viewsCount?: number;
       /** @format date-time */
       createdAt?: string;
       /** @format date-time */
@@ -9322,6 +9335,7 @@ export interface VisitorView {
       lsr?: boolean;
       sar?: boolean;
       profileFilled?: boolean;
+      viewsCount?: number;
       /** @format date-time */
       createdAt?: string;
       /** @format date-time */
@@ -11647,6 +11661,43 @@ export interface UnfavoriteFollowerData {
   success?: boolean;
 }
 
+export enum ReportRecordingReasonEnum {
+  Sexual = "sexual",
+  Violent = "violent",
+  Hateful = "hateful",
+  Harmful = "harmful",
+  Spam = "spam",
+}
+
+export interface ReportRecordingPayload {
+  reason: ReportRecordingReasonEnum;
+  locale?: string;
+  reporter: {
+    id: number;
+    username: string;
+    /** @format email */
+    email: string;
+  };
+}
+
+export interface ReportRecordingParams {
+  /** Recording documentId */
+  documentId: string;
+}
+
+export interface ReportRecordingData {
+  success?: boolean;
+}
+
+export interface IncrementFollowerViewParams {
+  /** Follower documentId */
+  documentId: string;
+}
+
+export interface IncrementFollowerViewData {
+  success?: boolean;
+}
+
 export interface UnpauseMyFollowersData {
   updated?: number;
 }
@@ -13146,6 +13197,25 @@ export namespace Follower {
   /**
    * No description
    * @tags Follower
+   * @name IncrementFollowerView
+   * @summary Increment the public view counter for a follower
+   * @request POST:/followers/{documentId}/view
+   * @secure
+   */
+  export namespace IncrementFollowerView {
+    export type RequestParams = {
+      /** Follower documentId */
+      documentId: string;
+    };
+    export type RequestQuery = {};
+    export type RequestBody = never;
+    export type RequestHeaders = {};
+    export type ResponseBody = IncrementFollowerViewData;
+  }
+
+  /**
+   * No description
+   * @tags Follower
    * @name UnpauseMyFollowers
    * @summary Unpause all followers for the current user
    * @request POST:/followers/unpause-my-followers
@@ -13444,6 +13514,25 @@ export namespace Recording {
     export type RequestBody = SearchRecordingsPayload;
     export type RequestHeaders = {};
     export type ResponseBody = SearchRecordingsData;
+  }
+
+  /**
+   * No description
+   * @tags Recording
+   * @name ReportRecording
+   * @summary Report a recording for moderation review
+   * @request POST:/recordings/{documentId}/report
+   * @secure
+   */
+  export namespace ReportRecording {
+    export type RequestParams = {
+      /** Recording documentId */
+      documentId: string;
+    };
+    export type RequestQuery = {};
+    export type RequestBody = ReportRecordingPayload;
+    export type RequestHeaders = {};
+    export type ResponseBody = ReportRecordingData;
   }
 }
 
@@ -16274,6 +16363,27 @@ export class Api<
      * No description
      *
      * @tags Follower
+     * @name IncrementFollowerView
+     * @summary Increment the public view counter for a follower
+     * @request POST:/followers/{documentId}/view
+     * @secure
+     */
+    incrementFollowerView: (
+      { documentId }: IncrementFollowerViewParams,
+      params: RequestParams = {},
+    ) =>
+      this.request<IncrementFollowerViewData, void>({
+        path: `/followers/${documentId}/view`,
+        method: "POST",
+        secure: true,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Follower
      * @name UnpauseMyFollowers
      * @summary Unpause all followers for the current user
      * @request POST:/followers/unpause-my-followers
@@ -16544,6 +16654,30 @@ export class Api<
     ) =>
       this.request<SearchRecordingsData, Error>({
         path: `/recordings/search`,
+        method: "POST",
+        body: data,
+        secure: true,
+        type: ContentType.Json,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Recording
+     * @name ReportRecording
+     * @summary Report a recording for moderation review
+     * @request POST:/recordings/{documentId}/report
+     * @secure
+     */
+    reportRecording: (
+      { documentId }: ReportRecordingParams,
+      data: ReportRecordingPayload,
+      params: RequestParams = {},
+    ) =>
+      this.request<ReportRecordingData, void>({
+        path: `/recordings/${documentId}/report`,
         method: "POST",
         body: data,
         secure: true,

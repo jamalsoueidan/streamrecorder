@@ -50,7 +50,8 @@
     "downloadFeatureMessage": "下载视频是高级会员功能。",
     "editClip": "编辑片段",
     "deleteSources": "删除源文件",
-    "deleteSourcesSuccess": "已删除 {count} 个源文件"
+    "deleteSourcesSuccess": "已删除 {count} 个源文件",
+    "report": "举报"
   },
   "followers": {
     "addedAgo_context": "创作者被添加到用户列表时显示。例：3 天前添加",
@@ -98,5 +99,19 @@
     "hevcUnsupportedMessage": "这条 TikTok 录像使用了 HEVC (H.265) 编码。你的浏览器不支持该编码。请尝试 Safari、Windows 上的 Edge,或者从 Microsoft Store 安装 HEVC Video Extensions。",
     "playbackFailedTitle": "播放失败",
     "playbackFailedMessage": "播放此视频时出错。请打开浏览器控制台 (F12),将显示的内容发送给客服,以便我们排查修复。"
+  },
+  "report": {
+    "title": "举报",
+    "reasons": {
+      "sexual": "色情内容",
+      "violent": "暴力或令人反感的内容",
+      "hateful": "仇恨或辱骂内容",
+      "harmful": "有害或危险的行为",
+      "spam": "垃圾内容或误导"
+    },
+    "submit": "举报",
+    "cancel": "取消",
+    "thanks": "感谢你的举报",
+    "failed": "举报失败"
   }
 }

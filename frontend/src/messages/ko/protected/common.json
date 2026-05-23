@@ -50,7 +50,8 @@
     "editClip": "클립 편집",
     "deleteSources": "소스 삭제",
     "deleteSourcesSuccess": "{count}개 소스 삭제됨",
-    "parts": "{count}파트"
+    "parts": "{count}파트",
+    "report": "신고"
   },
   "followers": {
     "addedAgo_context": "크리에이터가 사용자 목록에 추가된 시점. '3일 전 추가됨'으로 표시됨",
@@ -98,5 +99,19 @@
     "hevcUnsupportedMessage": "이 TikTok 녹화본은 HEVC (H.265) 코덱을 사용합니다. 사용하시는 브라우저는 이 코덱을 지원하지 않습니다. Safari, Windows의 Edge를 사용하거나 Microsoft Store에서 HEVC Video Extensions를 설치해주세요.",
     "playbackFailedTitle": "재생 실패",
     "playbackFailedMessage": "영상을 재생하는 도중 문제가 발생했습니다. 브라우저 콘솔(F12)을 열어 표시되는 내용을 지원팀에 공유해주시면 빠르게 해결하겠습니다."
+  },
+  "report": {
+    "title": "신고",
+    "reasons": {
+      "sexual": "성적인 콘텐츠",
+      "violent": "폭력적이거나 혐오스러운 콘텐츠",
+      "hateful": "증오 또는 학대적인 콘텐츠",
+      "harmful": "유해하거나 위험한 행위",
+      "spam": "스팸 또는 오해를 일으키는 콘텐츠"
+    },
+    "submit": "신고하기",
+    "cancel": "취소",
+    "thanks": "신고해 주셔서 감사합니다",
+    "failed": "신고 실패"
   }
 }

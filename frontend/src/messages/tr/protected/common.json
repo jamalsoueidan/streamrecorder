@@ -50,7 +50,8 @@
     "editClip": "Klibi Düzenle",
     "deleteSources": "Kaynakları sil",
     "deleteSourcesSuccess": "{count} kaynak silindi",
-    "parts": "{count, plural, one {# bölüm} other {# bölüm}}"
+    "parts": "{count, plural, one {# bölüm} other {# bölüm}}",
+    "report": "Şikayet Et"
   },
   "followers": {
     "addedAgo_context": "For when a creator was added to user's list. Shows 'Added 3 days ago'",
@@ -98,5 +99,19 @@
     "hevcUnsupportedMessage": "Bu TikTok kaydı HEVC (H.265) kullanıyor. Tarayıcınız bu codec'i desteklemiyor. Safari, Windows'ta Edge'i deneyin ya da Microsoft Store'dan HEVC Video Extensions'ı yükleyin.",
     "playbackFailedTitle": "Oynatma başarısız",
     "playbackFailedMessage": "Bu video oynatılırken bir sorun oluştu. Tarayıcı konsolunu açın (F12) ve içerikteki hatayı destek ekibiyle paylaşın ki düzeltebilelim."
+  },
+  "report": {
+    "title": "Şikayet Et",
+    "reasons": {
+      "sexual": "Cinsel içerik",
+      "violent": "Şiddet veya tiksindirici içerik",
+      "hateful": "Nefret veya istismar içeren içerik",
+      "harmful": "Zararlı veya tehlikeli eylemler",
+      "spam": "Spam veya yanıltıcı"
+    },
+    "submit": "Şikayet Et",
+    "cancel": "İptal",
+    "thanks": "Şikayet için teşekkürler",
+    "failed": "Şikayet başarısız"
   }
 }

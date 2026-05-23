@@ -50,7 +50,8 @@
     "editClip": "クリップを編集",
     "deleteSources": "ソースを削除",
     "deleteSourcesSuccess": "{count} 件のソースを削除しました",
-    "parts": "{count}パート"
+    "parts": "{count}パート",
+    "report": "報告"
   },
   "followers": {
     "addedAgo_context": "クリエイターがリストに追加された日時を示します。「3 日前に追加」のように表示されます",
@@ -98,5 +99,19 @@
     "hevcUnsupportedMessage": "この TikTok の録画は HEVC (H.265) を使用しています。お使いのブラウザはこのコーデックに対応していません。Safari、Windows 版 Edge をお試しいただくか、Microsoft Store から HEVC Video Extensions をインストールしてください。",
     "playbackFailedTitle": "再生に失敗しました",
     "playbackFailedMessage": "動画の再生中にエラーが発生しました。ブラウザのコンソール (F12) を開き、ログをサポートまでお送りいただければ対応いたします。"
+  },
+  "report": {
+    "title": "報告",
+    "reasons": {
+      "sexual": "性的なコンテンツ",
+      "violent": "暴力的または不快なコンテンツ",
+      "hateful": "差別的または虐待的なコンテンツ",
+      "harmful": "有害または危険な行為",
+      "spam": "スパムまたは誤解を招く内容"
+    },
+    "submit": "報告する",
+    "cancel": "キャンセル",
+    "thanks": "報告ありがとうございます",
+    "failed": "報告に失敗しました"
   }
 }

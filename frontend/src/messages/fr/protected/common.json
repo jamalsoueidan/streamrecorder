@@ -50,7 +50,8 @@
     "downloadFeatureMessage": "Le téléchargement de vidéos est une fonctionnalité Premium.",
     "editClip": "Modifier le clip",
     "deleteSources": "Supprimer les sources",
-    "deleteSourcesSuccess": "{count} sources supprimées"
+    "deleteSourcesSuccess": "{count} sources supprimées",
+    "report": "Signaler"
   },
   "followers": {
     "addedAgo_context": "Quand un créateur a été ajouté à ta liste. Ex. « Ajouté il y a 3 jours ».",
@@ -98,5 +99,19 @@
     "hevcUnsupportedMessage": "Cet enregistrement TikTok utilise HEVC (H.265). Ton navigateur ne prend pas en charge ce codec. Essaie Safari, Edge sur Windows, ou installe les HEVC Video Extensions depuis le Microsoft Store.",
     "playbackFailedTitle": "Échec de la lecture",
     "playbackFailedMessage": "Une erreur est survenue pendant la lecture de cette vidéo. Ouvre la console du navigateur (F12) et partage les logs avec le support pour qu'on puisse corriger le problème."
+  },
+  "report": {
+    "title": "Signaler",
+    "reasons": {
+      "sexual": "Contenu sexuel",
+      "violent": "Contenu violent ou répugnant",
+      "hateful": "Contenu haineux ou abusif",
+      "harmful": "Actes nuisibles ou dangereux",
+      "spam": "Spam ou trompeur"
+    },
+    "submit": "Signaler",
+    "cancel": "Annuler",
+    "thanks": "Merci pour ton signalement",
+    "failed": "Échec du signalement"
   }
 }

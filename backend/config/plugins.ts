@@ -1194,6 +1194,109 @@ export default ({ env }) => ({
             },
           };
 
+          // Endpoint: POST /recordings/{documentId}/report
+          draft.paths["/recordings/{documentId}/report"] = {
+            post: {
+              tags: ["Recording"],
+              operationId: "reportRecording",
+              summary: "Report a recording for moderation review",
+              parameters: [
+                {
+                  name: "documentId",
+                  in: "path",
+                  required: true,
+                  schema: { type: "string" },
+                  description: "Recording documentId",
+                },
+              ],
+              requestBody: {
+                required: true,
+                content: {
+                  "application/json": {
+                    schema: {
+                      type: "object",
+                      required: ["reason", "reporter"],
+                      properties: {
+                        reason: {
+                          type: "string",
+                          enum: [
+                            "sexual",
+                            "violent",
+                            "hateful",
+                            "harmful",
+                            "spam",
+                          ],
+                        },
+                        locale: { type: "string" },
+                        reporter: {
+                          type: "object",
+                          required: ["id", "username", "email"],
+                          properties: {
+                            id: { type: "integer" },
+                            username: { type: "string" },
+                            email: { type: "string", format: "email" },
+                          },
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+              responses: {
+                "200": {
+                  description: "Report received",
+                  content: {
+                    "application/json": {
+                      schema: {
+                        type: "object",
+                        properties: {
+                          success: { type: "boolean" },
+                        },
+                      },
+                    },
+                  },
+                },
+                "400": { description: "Invalid report" },
+                "401": { description: "Unauthorized" },
+                "404": { description: "Recording not found" },
+              },
+            },
+          };
+
+          // Endpoint: POST /followers/{documentId}/view
+          draft.paths["/followers/{documentId}/view"] = {
+            post: {
+              tags: ["Follower"],
+              operationId: "incrementFollowerView",
+              summary: "Increment the public view counter for a follower",
+              parameters: [
+                {
+                  name: "documentId",
+                  in: "path",
+                  required: true,
+                  schema: { type: "string" },
+                  description: "Follower documentId",
+                },
+              ],
+              responses: {
+                "200": {
+                  description: "Counter incremented",
+                  content: {
+                    "application/json": {
+                      schema: {
+                        type: "object",
+                        properties: {
+                          success: { type: "boolean" },
+                        },
+                      },
+                    },
+                  },
+                },
+                "400": { description: "Invalid documentId" },
+              },
+            },
+          };
+
           draft.paths["/followers/unpause-my-followers"] = {
             post: {
               tags: ["Follower"],

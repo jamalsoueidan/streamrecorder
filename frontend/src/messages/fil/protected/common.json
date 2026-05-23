@@ -50,7 +50,8 @@
     "downloadFeatureMessage": "Ang pag-download ng video ay premium feature.",
     "editClip": "I-edit ang Clip",
     "deleteSources": "Burahin ang sources",
-    "deleteSourcesSuccess": "{count} sources ang nabura"
+    "deleteSourcesSuccess": "{count} sources ang nabura",
+    "report": "Mag-report"
   },
   "followers": {
     "addedAgo_context": "For when a creator was added to user's list. Shows 'Added 3 days ago'",
@@ -100,5 +101,19 @@
     "audioCodecUnsupportedMessage": "Gumagamit ng HE-AACv2 audio ang recording na ito, na hindi ganap na sinusuportahan ng browser mo. Subukan ang Chrome o Edge sa desktop, o gamitin ang Safari sa Mac/iOS.",
     "playbackFailedTitle": "Hindi na-play",
     "playbackFailedMessage": "May problema sa pag-play ng video. Buksan ang browser console (F12) at i-share ang nilalaman sa support para maayos namin."
+  },
+  "report": {
+    "title": "Mag-report",
+    "reasons": {
+      "sexual": "Sexual content",
+      "violent": "Violent o nakakadiri na content",
+      "hateful": "Hateful o abusive na content",
+      "harmful": "Harmful o mapanganib na actions",
+      "spam": "Spam o nakakadaya"
+    },
+    "submit": "I-report",
+    "cancel": "Kanselahin",
+    "thanks": "Salamat sa pag-report",
+    "failed": "Hindi nai-report"
   }
 }

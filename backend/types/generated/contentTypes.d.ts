@@ -1148,6 +1148,13 @@ export interface ApiFollowerFollower extends Struct.CollectionTypeSchema {
           localized: false;
         };
       }>;
+    viewsCount: Schema.Attribute.Integer &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<0>;
   };
 }
 

@@ -50,7 +50,8 @@
     "downloadFeatureMessage": "Downloading videos is a premium feature.",
     "editClip": "Edit Clip",
     "deleteSources": "Delete sources",
-    "deleteSourcesSuccess": "Deleted {count} sources"
+    "deleteSourcesSuccess": "Deleted {count} sources",
+    "report": "Report"
   },
   "followers": {
     "addedAgo_context": "For when a creator was added to user's list. Shows 'Added 3 days ago'",
@@ -100,5 +101,19 @@
     "audioCodecUnsupportedMessage": "This recording uses HE-AACv2 audio, which your browser doesn't fully support. Try Chrome or Edge on desktop, or use Safari on Mac/iOS.",
     "playbackFailedTitle": "Playback failed",
     "playbackFailedMessage": "Something went wrong playing this video. Open the browser console (F12) and share what's logged with support so we can fix it."
+  },
+  "report": {
+    "title": "Report",
+    "reasons": {
+      "sexual": "Sexual content",
+      "violent": "Violent or repulsive content",
+      "hateful": "Hateful or abusive content",
+      "harmful": "Harmful or dangerous acts",
+      "spam": "Spam or misleading"
+    },
+    "submit": "Report",
+    "cancel": "Cancel",
+    "thanks": "Thanks for reporting",
+    "failed": "Report failed"
   }
 }
