@@ -1,0 +1,91 @@
+{
+  "title": "AI Studio",
+  "description": "Gumawa ng clips at memes mula sa recordings mo gamit ang AI",
+  "requestDetails": "Detalye ng Request",
+  "createRequest": "Gumawa ng Request",
+  "unknownCreator": "Unknown Creator",
+  "unknownRecording": "Unknown Recording",
+  "recordingDeleted": {
+    "badge": "Nabura na ang recording"
+  },
+  "viewDetails": "Tingnan ang Detalye",
+  "state": {
+    "pending": "Pending",
+    "processing": "Pinoproseso",
+    "completed": "Tapos na",
+    "failed": "Nabigo"
+  },
+  "options": {
+    "clips": "Clips",
+    "memes": "Memes",
+    "profile": "Profile"
+  },
+  "filters": {
+    "all": "Lahat",
+    "pending": "Pending",
+    "processing": "Ginagawa",
+    "completed": "Tapos na"
+  },
+  "emptyState": {
+    "title": "Wala pang AI requests",
+    "description": "Pumunta sa recordings mo at i-click ang AI button para gumawa ng clips at memes"
+  },
+  "create": {
+    "selectOptions": "Ano ang gusto mong gawin?",
+    "options": {
+      "clips": {
+        "label": "Gumawa ng Clips",
+        "description": "Hahanapin ng AI ang pinakamagandang moments at gagawa ng short clips"
+      },
+      "memes": {
+        "label": "Gumawa ng Memes",
+        "description": "Gagawa ang AI ng meme-worthy screenshots na may captions"
+      },
+      "profile": {
+        "label": "Gumawa ng Profile",
+        "description": "Susuriin ng AI at magmumungkahi ng profile improvements"
+      }
+    },
+    "sizeWarning": {
+      "title": "Masyadong malaki ang video",
+      "message": "{size}GB ang video na ito. Ang mga video na mas malaki sa 2GB ay kailangang i-process sa parts."
+    },
+    "submit": "Simulan ang Processing"
+  },
+  "status": {
+    "progress": "Progreso",
+    "tasks": "Tasks",
+    "pendingTitle": "Naghihintay na Magsimula",
+    "pendingMessage": "Naka-queue ang request mo at magsisimulang i-process kaagad.",
+    "clipsCount": "{count} clips",
+    "memesCount": "{count} memes",
+    "localesCount": "{count} locales",
+    "clipFallback": "Clip {index}",
+    "default": "Default",
+    "tagline": "Tagline",
+    "description": "Description",
+    "state": {
+      "pending": "Pending",
+      "processing": "Pinoproseso",
+      "completed": "Tapos na",
+      "failed": "Nabigo"
+    }
+  },
+  "upgrade": {
+    "title": "Ang AI Video Studio Mo",
+    "features": {
+      "clips": "Smart clips mula sa mahabang recordings — handa nang i-share",
+      "memes": "AI-generated memes at photos mula sa videos mo",
+      "viral": "Instant video translation sa dose-dosenang wika"
+    },
+    "upgradeButton": "Mag-upgrade Ngayon",
+    "hint": "I-unlock ang AI Studio sa premium subscription"
+  },
+  "quota": {
+    "badge": "{used} / {total} ngayong buwan",
+    "limitReachedNote": "Naabot na ang limit · magre-reset {date}",
+    "alertTitle": "Naabot na ang buwanang limit",
+    "alertBody": "Nagamit mo na lahat ng {total} AI generations ngayong buwan. Magre-reset ang limit mo sa {date}.",
+    "editButton": "I-edit ang video manually"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "meta": {
+    "defaultTitle": "คลิปสั้น",
+    "defaultDescription": "ดูคลิปสั้นจากสตรีมเมอร์โปรดของคุณ",
+    "title": "{title} - {creatorName} | คลิปสั้น",
+    "description": "ดูคลิปสั้นความยาว {duration} โดย {creatorName} บน {platform}",
+    "keywords": "{creatorName}, shorts, คลิป, {platform}, ไลฟ์สตรีม"
+  },
+  "jsonLd": {
+    "name": "คลิปสั้นของ {creatorName} - {createdDate}",
+    "description": "คลิปสั้นโดย {creatorName} บันทึกเมื่อ {createdDate}"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "modal": {
+    "title": "I-edit ang Clip",
+    "description": "I-trim at i-export ang clip mula kay {username}"
+  },
+  "actions": {
+    "saveClip": "I-save ang clip",
+    "downloadClip": "I-download ang clip",
+    "export": "I-export"
+  },
+  "maxDuration": "Maximum clip duration: {minutes} minuto",
+  "notifications": {
+    "exportStarted": {
+      "title": "Nagsimula na ang export",
+      "message": "Pinoproseso ang clip mo at ise-save sa storage mo"
+    },
+    "downloadQueued": {
+      "title": "Naka-queue na ang download",
+      "message": "Ipapadala sa email mo ang clip kapag handa na"
+    }
+  }
+}

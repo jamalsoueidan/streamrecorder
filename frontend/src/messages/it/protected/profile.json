@@ -1,0 +1,28 @@
+{
+  "addedAgo": "aggiunto {time}",
+  "lastCheckedAgo": "stato live controllato {time}",
+  "discoverStreamers": "Trova Friends",
+  "emptyNewlyAdded": {
+    "title": "{username} è stato aggiunto!",
+    "description": "Inizieremo a registrare i suoi stream automaticamente."
+  },
+  "checkLastChecked": "Controlla quando è stato verificato l'ultima volta",
+  "paused": "La registrazione è in pausa — questo creator ha bisogno di un supporter premium per restare attivo.",
+  "blocked": "Questo creator ha inviato una richiesta DMCA. I suoi stream non saranno più registrati.",
+  "emptyDefault": {
+    "title": "Nessuna registrazione",
+    "description": "Nessuna registrazione di {username} per ora. Torna più tardi!"
+  },
+  "noClips": {
+    "title": "Nessuna clip",
+    "description": "Non è ancora stata creata nessuna clip per questo streamer."
+  },
+  "checkLive": {
+    "button": "Controlla live ora",
+    "liveTitle": "Lo streamer è live",
+    "liveMessage": "La registrazione sta iniziando.",
+    "offlineTitle": "Non live",
+    "offlineMessage": "Lo streamer è offline in questo momento.",
+    "errorTitle": "Controllo fallito"
+  }
+}

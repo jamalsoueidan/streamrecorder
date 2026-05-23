@@ -1,0 +1,17 @@
+{
+  "title": "คลิป",
+  "description": "คลิปล่าสุดจากชุมชน",
+  "emptyState": {
+    "title": "ยังไม่มีคลิป",
+    "description": "คลิปจะปรากฏที่นี่เมื่อชุมชนสร้างขึ้น"
+  },
+  "menu": {
+    "delete": "ลบคลิป",
+    "deleteTitle": "ลบคลิป",
+    "deleteConfirm": "ต้องการลบคลิปนี้ใช่ไหม? การกระทำนี้ย้อนกลับไม่ได้",
+    "deleteButton": "ลบ",
+    "cancel": "ยกเลิก",
+    "deleteSuccess": "ลบคลิปแล้ว",
+    "deleteError": "ลบคลิปไม่สำเร็จ"
+  }
+}

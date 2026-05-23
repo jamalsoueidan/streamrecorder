@@ -1,0 +1,13 @@
+{
+  "title": "ไลฟ์ตอนนี้",
+  "subtitle": "สตรีมที่กำลังถูกบันทึก",
+  "streamingCount": "{count, plural, other {# กำลังไลฟ์}}",
+  "refresh": "รีเฟรช",
+  "allPlatforms": "ทุกแพลตฟอร์ม",
+  "showAll": "แสดงทั้งหมด",
+  "discoverStreamers": "หาเพื่อน",
+  "emptyState": {
+    "title": "ไม่มีไลฟ์ตอนนี้",
+    "description": "เมื่อครีเอเตอร์ของคุณเริ่มไลฟ์ สตรีมจะปรากฏที่นี่"
+  }
+}

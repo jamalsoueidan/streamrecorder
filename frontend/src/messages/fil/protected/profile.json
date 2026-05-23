@@ -1,0 +1,28 @@
+{
+  "addedAgo": "nadagdag {time}",
+  "lastCheckedAgo": "live status na-check {time}",
+  "discoverStreamers": "Hanapin ang Friends",
+  "emptyNewlyAdded": {
+    "title": "Nadagdag na si {username}!",
+    "description": "Magsisimula na kaming mag-record ng streams nila automatically."
+  },
+  "checkLastChecked": "Tingnan kung kailan huling na-check",
+  "paused": "Naka-pause ang recording — kailangan ng creator na ito ng premium supporter para manatiling active.",
+  "blocked": "Nagsumite ang creator na ito ng DMCA request. Hindi na ire-record ang streams nila.",
+  "emptyDefault": {
+    "title": "Wala pang recording",
+    "description": "Wala pang recording mula kay {username}. Bumalik mamaya!"
+  },
+  "noClips": {
+    "title": "Wala pang clip",
+    "description": "Wala pang clip na ginawa para sa streamer na ito."
+  },
+  "checkLive": {
+    "button": "I-check live ngayon",
+    "liveTitle": "Live ang streamer",
+    "liveMessage": "Nagsisimula na ang recording.",
+    "offlineTitle": "Hindi live",
+    "offlineMessage": "Offline ang streamer ngayon.",
+    "errorTitle": "Hindi na-check"
+  }
+}

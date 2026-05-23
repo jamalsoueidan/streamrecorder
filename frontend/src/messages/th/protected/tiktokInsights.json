@@ -1,0 +1,94 @@
+{
+  "title": "TikTok Insights",
+  "description": "การวิเคราะห์ไลฟ์ TikTok ทั้งแพลตฟอร์ม",
+  "globalStats": {
+    "title": "ภาพรวมแพลตฟอร์ม",
+    "totalUsers": "ผู้ส่งของขวัญทั้งหมด",
+    "totalDiamonds": "เพชรทั้งหมด",
+    "totalGifts": "ของขวัญทั้งหมด",
+    "totalBattles": "การแบทเทิลทั้งหมด"
+  },
+  "dailyEarnings": {
+    "title": "รายได้รายวัน",
+    "seriesLabel": "เพชร",
+    "empty": "ไม่มีข้อมูลรายได้",
+    "allCountries": "ทุกประเทศ",
+    "allLanguages": "ทุกภาษา"
+  },
+  "topEarners": {
+    "title": "ผู้มีรายได้สูงสุด",
+    "username": "ชื่อผู้ใช้",
+    "country": "ประเทศ",
+    "language": "ภาษา",
+    "diamonds": "เพชร",
+    "gifts": "ของขวัญ",
+    "gifters": "ผู้ส่งของขวัญ",
+    "empty": "ไม่มีข้อมูล",
+    "allCountries": "ทุกประเทศ",
+    "allLanguages": "ทุกภาษา"
+  },
+  "mostLive": {
+    "title": "สตรีมเมอร์ที่ไลฟ์มากที่สุด",
+    "username": "ชื่อผู้ใช้",
+    "country": "ประเทศ",
+    "language": "ภาษา",
+    "sessions": "เซสชัน",
+    "hours": "ชั่วโมง",
+    "empty": "ไม่มีข้อมูล",
+    "allCountries": "ทุกประเทศ",
+    "allLanguages": "ทุกภาษา"
+  },
+  "countryLeaderboard": {
+    "title": "อันดับประเทศ",
+    "rank": "#",
+    "country": "ประเทศ",
+    "diamonds": "เพชร",
+    "gifts": "ของขวัญ",
+    "streamers": "สตรีมเมอร์",
+    "gifters": "ผู้ส่งของขวัญ",
+    "empty": "ไม่มีข้อมูล",
+    "loadMore": "โหลดเพิ่มเติม"
+  },
+  "languageLeaderboard": {
+    "title": "อันดับภาษา",
+    "rank": "#",
+    "language": "ภาษา",
+    "diamonds": "เพชร",
+    "gifts": "ของขวัญ",
+    "streamers": "สตรีมเมอร์",
+    "gifters": "ผู้ส่งของขวัญ",
+    "empty": "ไม่มีข้อมูล",
+    "loadMore": "โหลดเพิ่มเติม"
+  },
+  "topGifters": {
+    "title": "ผู้ส่งของขวัญสูงสุด",
+    "description": "ผู้ใช้ที่ส่งเพชรรวมมากที่สุดข้ามทุกสตรีมเมอร์บน TikTok",
+    "username": "ชื่อผู้ใช้",
+    "diamonds": "เพชร",
+    "gifts": "ของขวัญ",
+    "streamers": "สตรีมเมอร์ที่สนับสนุน",
+    "empty": "ไม่มีข้อมูล"
+  },
+  "battleStats": {
+    "title": "อันดับการแบทเทิล",
+    "description": "สตรีมเมอร์ที่จัดอันดับตามสถิติการแบทเทิล การแบทเทิลคือการแข่งขันแบบสดตัวต่อตัวที่ของขวัญจากผู้ชมตัดสินผู้ชนะ",
+    "username": "ชื่อผู้ใช้",
+    "battles": "การแบทเทิล",
+    "wins": "ชนะ",
+    "losses": "แพ้",
+    "draws": "เสมอ",
+    "winRate": "อัตราชนะ",
+    "empty": "ไม่มีข้อมูล"
+  },
+  "gifterRelationships": {
+    "title": "ความสัมพันธ์ผู้ส่งของขวัญ",
+    "description": "คู่ผู้ส่งของขวัญ-สตรีมเมอร์สูงสุดจัดอันดับตามเพชรที่ส่ง เผยให้เห็นว่าใครเป็นผู้สนับสนุนที่ทุ่มเทที่สุดของสตรีมเมอร์แต่ละคน",
+    "pair": "ผู้ส่ง → สตรีมเมอร์",
+    "supported": "สนับสนุน",
+    "gifter": "ผู้ส่งของขวัญ",
+    "streamer": "สตรีมเมอร์",
+    "diamonds": "เพชร",
+    "gifts": "ของขวัญ",
+    "empty": "ไม่มีข้อมูล"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "meta": {
+    "defaultTitle": "Clip brevi",
+    "defaultDescription": "Guarda clip brevi dei tuoi streamer preferiti",
+    "title": "{title} - {creatorName} | Clip brevi",
+    "description": "Guarda questa clip breve di {duration} di {creatorName} su {platform}",
+    "keywords": "{creatorName}, shorts, clip, {platform}, live stream"
+  },
+  "jsonLd": {
+    "name": "Clip breve di {creatorName} - {createdDate}",
+    "description": "Clip breve di {creatorName} registrata il {createdDate}"
+  }
+}

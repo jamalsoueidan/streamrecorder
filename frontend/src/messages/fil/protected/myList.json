@@ -1,0 +1,16 @@
+{
+  "title": "Library ({count})",
+  "description": "I-manage ang creators mo",
+  "disabledHint": "Walang pang recording ang naka-disable na items",
+  "emptyFiltered": {
+    "title": "Walang creator na tumutugma sa filter mo",
+    "description": "Subukang i-adjust o i-clear ang filters"
+  },
+  "emptyDefault": {
+    "title": "Wala ka pang nadagdag na creator",
+    "description": "I-browse ang Friends para tuklasin ang mga creator sa platform namin"
+  },
+  "noMoreToLoad": "Nakarating ka na sa dulo",
+  "favorite": "Idagdag sa favorites",
+  "unfavorite": "Alisin sa favorites"
+}

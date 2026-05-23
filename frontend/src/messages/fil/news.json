@@ -1,0 +1,12 @@
+{
+  "meta": {
+    "title": "News at Updates",
+    "description": "Manatiling updated sa pinakabagong announcements, features, at importanteng updates mula sa LiveStreamRecorder."
+  },
+  "title": "News at Updates",
+  "subtitle": "Manatiling updated sa pinakabagong announcements, features, at importanteng updates.",
+  "empty": {
+    "title": "Wala pang news",
+    "description": "Bumalik sa lalong madaling panahon para sa updates."
+  }
+}

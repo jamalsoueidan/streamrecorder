@@ -1,0 +1,85 @@
+{
+  "brand": "LiveStreamRecorder",
+  "tagline": "Non perdere mai uno stream",
+  "defaultDescription": "Le dirette vengono registrate automaticamente così puoi guardarle quando vuoi",
+  "creators": {
+    "title": {
+      "all": "Tutti i creator",
+      "tiktok": "Creator TikTok",
+      "twitch": "Creator Twitch",
+      "youtube": "Creator YouTube",
+      "kick": "Creator Kick",
+      "pandalive": "Creator PandaLive",
+      "afreecatv": "Creator AfreecaTV",
+      "bigo": "Creator Bigo",
+      "buzzcast": "Creator Buzzcast",
+      "liveme": "Creator LiveMe",
+      "mixch": "Creator Mixch",
+      "twitcast": "Streamer TwitCasting",
+      "trovo": "Streamer Trovo",
+      "joilive": "Streamer Joilive",
+      "live17": "Streamer 17live",
+      "kwai": "Creator Kwai"
+    },
+    "subtitle": {
+      "all": "Sfoglia tutti gli streamer e creator",
+      "tiktok": "Scopri gli streamer TikTok",
+      "twitch": "Scopri gli streamer Twitch",
+      "youtube": "Scopri i creator YouTube",
+      "kick": "Scopri gli streamer Kick",
+      "pandalive": "Scopri i creator PandaLive",
+      "afreecatv": "Scopri i creator AfreecaTV",
+      "bigo": "Scopri i creator Bigo",
+      "buzzcast": "Scopri i creator Buzzcast",
+      "liveme": "Scopri i creator LiveMe",
+      "mixch": "Scopri i creator Mixch",
+      "twitcast": "Scopri gli streamer TwitCasting",
+      "trovo": "Scopri gli streamer Trovo",
+      "joilive": "Scopri gli streamer Joilive",
+      "live17": "Scopri gli streamer 17live",
+      "kwai": "Scopri i creator Kwai"
+    }
+  },
+  "recordings": {
+    "title": {
+      "all": "Tutte le registrazioni",
+      "tiktok": "Registrazioni TikTok",
+      "twitch": "Registrazioni Twitch",
+      "youtube": "Registrazioni YouTube",
+      "kick": "Registrazioni Kick",
+      "pandalive": "Registrazioni PandaLive",
+      "afreecatv": "Registrazioni AfreecaTV",
+      "bigo": "Registrazioni Bigo",
+      "buzzcast": "Registrazioni Buzzcast",
+      "liveme": "Registrazioni LiveMe",
+      "mixch": "Registrazioni Mixch",
+      "twitcast": "Registrazioni TwitCasting",
+      "trovo": "Registrazioni Trovo",
+      "joilive": "Registrazioni Joilive",
+      "live17": "Registrazioni 17live",
+      "kwai": "Registrazioni Kwai"
+    },
+    "subtitle": {
+      "all": "Guarda le dirette registrate",
+      "tiktok": "Guarda i live TikTok registrati",
+      "twitch": "Guarda gli stream Twitch registrati",
+      "youtube": "Guarda i live YouTube registrati",
+      "kick": "Guarda gli stream Kick registrati",
+      "pandalive": "Guarda gli stream PandaLive registrati",
+      "afreecatv": "Guarda gli stream AfreecaTV registrati",
+      "bigo": "Guarda gli stream Bigo registrati",
+      "buzzcast": "Guarda gli stream Buzzcast registrati",
+      "liveme": "Guarda gli stream LiveMe registrati",
+      "mixch": "Guarda gli stream Mixch registrati",
+      "twitcast": "Guarda i live TwitCasting registrati",
+      "trovo": "Guarda gli stream Trovo registrati",
+      "joilive": "Guarda gli stream Joilive registrati",
+      "live17": "Guarda gli stream 17live registrati",
+      "kwai": "Guarda i live Kwai registrati"
+    }
+  },
+  "home": {
+    "title": "Live Stream Recorder",
+    "subtitle": "I tuoi stream preferiti registrati automaticamente"
+  }
+}

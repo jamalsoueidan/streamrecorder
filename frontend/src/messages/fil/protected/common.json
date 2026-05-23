@@ -1,0 +1,104 @@
+{
+  "follow": {
+    "tooltip": "Idagdag ang Creator",
+    "successTitle": "Naidagdag na!",
+    "successMessage": "Naidagdag na si {username}",
+    "errorTitle": "May Error",
+    "blockedMessage": "Hindi available ang creator na ito dahil sa DMCA takedown. Tingnan ang aming <terms>Terms of Service</terms> para sa karagdagang detalye."
+  },
+  "unfollow": {
+    "tooltip": "Tanggalin ang Creator",
+    "successTitle": "Natanggal na",
+    "successMessage": "Tinanggal mo si {username}",
+    "successMessageGeneric": "Matagumpay na natanggal"
+  },
+  "scopeFilter": {
+    "label": "Filter:",
+    "following": "Recordings Ko",
+    "discover": "Friends",
+    "all": "Lahat"
+  },
+  "recordings": {
+    "liveAgo_context": "For live streams showing when recording started. Shows 'started recording 15 minutes ago'",
+    "liveAgo": "nagsimulang mag-record {time}",
+    "recordedAgo_context": "For recorded streams showing when recording was made. Shows 'recorded 3 days ago'",
+    "recordedAgo": "naka-record {time}",
+    "recordCount": "REC {count}",
+    "newRecording": "Bago",
+    "parts": "{count, plural, other {# parte}}",
+    "videoCount": "{count, plural, other {# video}}",
+    "noRecordings": "Nakarating ka na sa dulo",
+    "hide": "Itago sa publiko",
+    "show": "Ipakita sa publiko",
+    "delete": "Burahin ang video",
+    "deleteConfirm": {
+      "title": "Burahin ang video",
+      "message": "Sigurado ka bang gusto mong burahin ang video na ito? Hindi na ito mababawi.",
+      "confirm": "Burahin",
+      "cancel": "Kanselahin"
+    },
+    "createWithAI": "Gumawa ng clips gamit ang AI",
+    "addToWatchLater": "I-save sa Watch Later",
+    "removeFromWatchLater": "Tanggalin sa Watch Later",
+    "addedToWatchLater": "Nai-save sa Watch Later",
+    "removedFromWatchLater": "Natanggal sa Watch Later",
+    "videoLimitMessage": "Naabot mo na ang iyong free video limit.",
+    "download": "I-download ang video",
+    "downloadPart": "Parte {part}",
+    "sendToEmail": "Ipadala sa email",
+    "downloadEmailSent": "Papadala ang download link sa email mo",
+    "downloadFeatureMessage": "Ang pag-download ng video ay premium feature.",
+    "editClip": "I-edit ang Clip",
+    "deleteSources": "Burahin ang sources",
+    "deleteSourcesSuccess": "{count} sources ang nabura"
+  },
+  "followers": {
+    "addedAgo_context": "For when a creator was added to user's list. Shows 'Added 3 days ago'",
+    "addedAgo": "Naidagdag {time}",
+    "limitReachedTitle": "Naabot ang creator limit",
+    "upgradeModalHeadline": "Wag nang makamiss ng live stream",
+    "max3Message": "Naabot mo na ang 3 creator limit ng free plan.",
+    "max50Message": "Naabot mo na ang limit na 50 creators sa plan na ito.",
+    "max100Message": "Naabot mo na ang limit na 100 creators sa plan na ito.",
+    "upgradeButton": "Mag-upgrade sa Premium",
+    "upgradeModalDiscount": "20% off sa unang buwan mo",
+    "upgradeModalCodeNote": "I-apply sa checkout",
+    "unfollowUpgradeTitle": "I-manage ang creators mo nang malaya gamit ang premium"
+  },
+  "newest": "Pinakabago",
+  "oldest": "Pinakaluma",
+  "expired": {
+    "title": "Tapos na ang Premium Plan Mo",
+    "subtitle": "Hindi na nare-record ang creators mo. I-renew ngayon para magpatuloy mula sa hinto mo — naka-save pa rin ang lahat ng creators at settings mo.",
+    "renewButton": "I-renew ang Premium — Itago Lahat",
+    "or": "o",
+    "loseTitle": "Kung mag-downgrade ka, permanenteng mawawala:",
+    "loseCreators": "Lahat ng creators at recordings na sinusundan mo",
+    "loseFavorites": "Lahat ng favorites mo",
+    "loseClips": "Clips, downloads, at AI features",
+    "losePremium": "Access sa lahat ng premium features",
+    "downgradeButton": "Mag-downgrade"
+  },
+  "freemiusShutdown": {
+    "title": "Ire-refund ang Freemius payment mo",
+    "subtitle": "Mag-subscribe ulit sa Stripe sa 30 segundo para mapanatili ang premium features mo.",
+    "body": "Ang Freemius — isa sa mga payment provider ko — ay tinapos ang relasyon sa akin. Ire-refund nila ang lahat ng bayad na natanggap nila para sa akin, kasama ang sa iyo. Anumang binayaran mo sa akin sa pamamagitan ng Freemius ay ibabalik sa iyo. Ibig sabihin, libre kang nag-premium hanggang ngayon.\n\nMatindi ang dagok nito sa akin, pero ang concern ko ngayon ay ikaw. Naipon mo na ang creators mo, recordings mo, clips mo dito — ayoko mawala kahit ano.\n\nLaging available ang Stripe bilang isa pang payment option ko. Mag-subscribe ulit dito ay 30 segundo lang. Parehong plan, parehong presyo, walang setup, walang interruption.",
+    "renewButton": "Mag-subscribe sa Stripe",
+    "or": "o",
+    "loseTitle": "Kung mag-downgrade ka, permanenteng mawawala:",
+    "loseCreators": "Lahat ng creators at recordings na sinusundan mo",
+    "loseFavorites": "Lahat ng favorites mo",
+    "loseClips": "Clips, downloads, at AI features",
+    "losePremium": "Access sa lahat ng premium features",
+    "downgradeButton": "Mag-downgrade sa free",
+    "contact": "May tanong? I-email ang <email>contact@livestreamrecorder.com</email> o kontakin ang Freemius tungkol sa refund mo."
+  },
+  "videoPlayer": {
+    "hevcUnsupportedTitle": "Hindi mapatugtog ng browser mo ang video na ito",
+    "hevcUnsupportedMessage": "Gumagamit ng HEVC (H.265) ang TikTok recording na ito. Hindi ito sinusuportahan ng browser mo. Subukan ang Safari, Edge sa Windows, o i-install ang HEVC Video Extensions mula sa Microsoft Store.",
+    "audioCodecUnsupportedTitle": "Hindi mapatugtog ng browser mo ang audio ng video na ito",
+    "audioCodecUnsupportedMessage": "Gumagamit ng HE-AACv2 audio ang recording na ito, na hindi ganap na sinusuportahan ng browser mo. Subukan ang Chrome o Edge sa desktop, o gamitin ang Safari sa Mac/iOS.",
+    "playbackFailedTitle": "Hindi na-play",
+    "playbackFailedMessage": "May problema sa pag-play ng video. Buksan ang browser console (F12) at i-share ang nilalaman sa support para maayos namin."
+  }
+}

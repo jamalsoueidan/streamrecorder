@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "title": "FAQ",
+    "description": "Hanapin ang sagot sa mga madalas itanong tungkol sa LiveStreamRecorder"
+  },
+  "title": "Mga Madalas Itanong",
+  "subtitle": "Hanapin ang sagot sa mga karaniwang tanong tungkol sa serbisyo namin.",
+  "faqs": [
+    {
+      "question": "Ano ang LiveStreamRecorder.com?",
+      "answer": "Cloud-based na serbisyo ang LiveStreamRecorder.com na awtomatikong nagre-record ng live streams mo. Idagdag ang username mo mula sa kahit anong supported platform at na-capture namin ang bawat broadcast — walang software na i-install, hindi kailangang iwanan ang computer mo na nakabukas. Manood ng recordings mo anumang oras o gawing clips."
+    },
+    {
+      "question": "Paano ito gumagana?",
+      "answer": "Mag-sign up nang libre at idagdag ang username mo mula sa platform na ginagamit mo. Kapag nag-live ka, awtomatikong nire-record ng system namin ang stream mo. Pwede mong panoorin ang recordings sa browser, i-download, o gumawa ng clips para i-share sa social media."
+    },
+    {
+      "question": "Libre ba talaga?",
+      "answer": "Oo! Pinapayagan ka ng free plan namin na mag-record mula sa hanggang 3 platforms at na-store ang recordings ng 5 araw. Kung kailangan mo ng higit pa, binibigyan ka ng premium plan namin ng mas magandang video quality, 30-day storage, video downloads, at kakayahang mag-record mula sa hanggang 100 platforms."
+    },
+    {
+      "question": "Anong platforms ang sinusuportahan?",
+      "answer": "Sa ngayon, sinusuportahan namin ang TikTok, Twitch, YouTube, Kick, AfreecaTV, at Pandalive. Palagi kaming nagdadagdag ng mas maraming platforms — bantayan ang updates."
+    },
+    {
+      "question": "Gaano katagal nai-store ang recordings?",
+      "answer": "Ang free users ay may 5 araw na storage. Ang premium users ay may 30 araw. Siguraduhing i-download mo ang recordings na gusto mong itago bago mag-expire."
+    },
+    {
+      "question": "Paano ko idadagdag ang username ko?",
+      "answer": "I-click ang Add sa dashboard mo, piliin ang platform mo, at ilagay ang username. Pagka-add, awtomatikong nag-record kami tuwing nag-live ka."
+    },
+    {
+      "question": "Pwede ba akong mag-record sa maraming platforms?",
+      "answer": "Oo! Kung nag-stream ka sa TikTok at Twitch, basta idagdag ang username mo mula sa bawat platform at ang lahat ng streams mo ay nai-save sa isang lugar."
+    },
+    {
+      "question": "Pwede ko bang i-download ang recordings ko?",
+      "answer": "Available ang downloading para sa premium users. Bawat recording ay may download button na nagpapayagan sa iyong i-save ang full video file sa computer mo."
+    },
+    {
+      "question": "Ano ang ClipAI?",
+      "answer": "Awtomatikong hinahanap ng ClipAI ang pinakamagagandang moments mula sa streams mo at gagawing short clips — handa nang i-share sa TikTok, YouTube Shorts, o Instagram Reels."
+    },
+    {
+      "question": "Ano ang kasama sa premium plan?",
+      "answer": "Binibigyan ka ng Premium ng mas magandang video quality, kakayahang mag-download ng recordings, 30-day storage, at suporta para sa hanggang 100 creators — perfect para sa agencies at management teams."
+    },
+    {
+      "question": "Paano ako mag-upgrade sa premium?",
+      "answer": "Pumunta sa dashboard mo at i-click ang Upgrade. Piliin ang plan na bagay sa iyo at kumpletuhin ang bayad. Tumatanggap kami ng credit cards, Apple Pay, at Google Pay."
+    },
+    {
+      "question": "Paano ako makipag-ugnayan sa support?",
+      "answer": "Pwede mo kaming kontakin anumang oras sa pamamagitan ng contact form sa website namin. Nandito kami para tumulong sa kahit anong tanong o problema."
+    },
+    {
+      "question": "Paano ko buburahin ang account ko?",
+      "answer": "Pumunta sa Settings at i-click ang Delete Account. Ang account mo at lahat ng data ay permanenteng matatanggal kaagad. Hindi na ito mababawi."
+    },
+    {
+      "question": "Naprotektahan ba ang privacy ko?",
+      "answer": "Oo. Ang email at username mo lang ang nai-store namin. Tingnan ang Privacy Policy namin para sa mga detalye."
+    },
+    {
+      "question": "Paano kung baguhin ko ang username ko sa isang platform?",
+      "answer": "Kung babaguhin mo ang username mo, kakailanganin mong tanggalin ang luma at idagdag ang bagong username."
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "title": "Clips",
+  "description": "Mga bagong clip mula sa community",
+  "emptyState": {
+    "title": "Wala pang clip",
+    "description": "Lalabas dito ang clips habang ginagawa sila ng community."
+  },
+  "menu": {
+    "delete": "Burahin ang Clip",
+    "deleteTitle": "Burahin ang Clip",
+    "deleteConfirm": "Sigurado ka bang gusto mong burahin ang clip na ito? Hindi na mababawi ang aksyon na ito.",
+    "deleteButton": "Burahin",
+    "cancel": "Kanselahin",
+    "deleteSuccess": "Nabura na ang clip",
+    "deleteError": "Hindi nabura ang clip"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "title": "Changelog",
+    "description": "Manatiling updated sa pinakabagong features, improvements, at fixes mula sa LiveStreamRecorder."
+  },
+  "title": "Changelog",
+  "subtitle": "Manatiling updated sa pinakabagong features, improvements, at fixes.",
+  "empty": {
+    "title": "Wala pang changelog entries",
+    "description": "Bumalik sa lalong madaling panahon para sa updates."
+  },
+  "noDescription": "Walang description para sa release na ito.",
+  "published": "Nai-publish {date}"
+}

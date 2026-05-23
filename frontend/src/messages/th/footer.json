@@ -1,0 +1,68 @@
+{
+  "tagline": "ไม่พลาดทุกไลฟ์อีกต่อไป",
+  "copyright": "Copyright © 2026 LiveStreamRecorder",
+  "copyright_text": "LiveStreamRecorder ให้บริการระบบคลาวด์สำหรับบันทึกสตรีมเพื่อการใช้งานส่วนตัวเท่านั้น ไม่ใช่เชิงพาณิชย์ ผู้ใช้มีหน้าที่รับผิดชอบให้การใช้งานเป็นไปตามกฎหมายที่เกี่ยวข้องและข้อกำหนดของแพลตฟอร์มต้นทาง",
+  "association": "ชื่อผลิตภัณฑ์ โลโก้ และแบรนด์ของ Twitch, YouTube, TikTok, Kick, AfreecaTV, PandaTV, Bigo, Buzzcast, LiveMe, Mixch, TwitCasting, Trovo, Joilive, 17live และ Kwai เป็นทรัพย์สินของเจ้าของแต่ละราย ชื่อบริษัท ผลิตภัณฑ์ และบริการทั้งหมดที่ปรากฏบนเว็บไซต์นี้ใช้เพื่อระบุตัวตนเท่านั้น การใช้ชื่อ เครื่องหมายการค้า และแบรนด์เหล่านี้ไม่ได้หมายความว่าได้รับการรับรองจากเจ้าของ",
+  "header": {
+    "creators": "ครีเอเตอร์",
+    "recordings": "บันทึก",
+    "shorts": "คลิปสั้น",
+    "dashboard": "แดชบอร์ด",
+    "login": "เข้าสู่ระบบ",
+    "signUp": "สมัครสมาชิก",
+    "language": "ภาษา"
+  },
+  "featuredCreators": {
+    "title": "ครีเอเตอร์แนะนำ",
+    "browse": "ดูครีเอเตอร์ทั้งหมด",
+    "tiktok": "ครีเอเตอร์ TikTok",
+    "twitch": "ครีเอเตอร์ Twitch",
+    "kick": "ครีเอเตอร์ Kick",
+    "youtube": "ครีเอเตอร์ YouTube",
+    "afreecatv": "ครีเอเตอร์ AfreecaTV",
+    "pandalive": "ครีเอเตอร์ Pandalive",
+    "bigo": "ครีเอเตอร์ Bigo",
+    "buzzcast": "ครีเอเตอร์ Buzzcast",
+    "liveme": "ครีเอเตอร์ LiveMe",
+    "mixch": "ครีเอเตอร์ Mixch",
+    "twitcast": "ครีเอเตอร์ TwitCasting",
+    "trovo": "ครีเอเตอร์ Trovo",
+    "joilive": "ครีเอเตอร์ Joilive",
+    "live17": "ครีเอเตอร์ 17live",
+    "kwai": "ครีเอเตอร์ Kwai"
+  },
+  "watchRecordings": {
+    "title": "ดูบันทึก",
+    "browse": "ดูบันทึกทั้งหมด",
+    "tiktok": "บันทึก TikTok",
+    "twitch": "บันทึก Twitch",
+    "kick": "บันทึก Kick",
+    "youtube": "บันทึก YouTube",
+    "afreecatv": "บันทึก AfreecaTV",
+    "pandalive": "บันทึก Pandalive",
+    "bigo": "บันทึก Bigo",
+    "buzzcast": "บันทึก Buzzcast",
+    "liveme": "บันทึก LiveMe",
+    "mixch": "บันทึก Mixch",
+    "twitcast": "บันทึก TwitCasting",
+    "trovo": "บันทึก Trovo",
+    "joilive": "บันทึก Joilive",
+    "live17": "บันทึก 17live",
+    "kwai": "บันทึก Kwai"
+  },
+  "legal": {
+    "title": "ข้อมูลทางกฎหมาย",
+    "privacy": "นโยบายความเป็นส่วนตัว",
+    "terms": "ข้อกำหนดและเงื่อนไข",
+    "dmca": "นโยบาย DMCA"
+  },
+  "company": {
+    "title": "บริษัท",
+    "news": "ข่าวสาร",
+    "pricing": "ราคา",
+    "faq": "คำถามที่พบบ่อย",
+    "updates": "บันทึกการอัปเดต",
+    "sitemap": "แผนผังเว็บไซต์",
+    "contact": "ติดต่อเรา"
+  }
+}

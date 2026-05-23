@@ -1,0 +1,145 @@
+{
+  "meta": {
+    "title": "Informativa sulla privacy",
+    "description": "Informativa sulla privacy di LiveStreamRecorder. Scopri come raccogliamo, usiamo e proteggiamo i tuoi dati."
+  },
+  "header": {
+    "title": "Informativa sulla privacy",
+    "lastUpdated": "Ultimo aggiornamento: {date}"
+  },
+  "overview": {
+    "title": "Panoramica",
+    "content": "Le cose le manteniamo semplici. Raccogliamo dati minimi e non li vendiamo a terze parti. Niente analytics invasive, niente tracciamento pubblicitario. La tua privacy è importante per noi."
+  },
+  "dataController": {
+    "title": "Titolare del trattamento",
+    "content": "LiveStreamRecorder.com è il titolare del trattamento responsabile dei tuoi dati personali. Se hai domande su questa Informativa sulla privacy o sulle nostre pratiche di gestione dei dati, puoi contattarci a:",
+    "email": "contact@livestreamrecorder.com"
+  },
+  "whatWeCollect": {
+    "title": "Cosa raccogliamo",
+    "intro": "Quando crei un account, salviamo:",
+    "items": {
+      "email": "Indirizzo email",
+      "emailDesc": "per permetterti di accedere e recuperare il tuo account",
+      "username": "Nome utente",
+      "usernameDesc": "per identificare il tuo account",
+      "lastLogin": "Data ultimo accesso",
+      "lastLoginDesc": "per la gestione base dell'account",
+      "streamers": "Nome utente degli streamer che segui",
+      "streamersDesc": "i nomi utente pubblici su piattaforme di terze parti (TikTok, Twitch, Kick ecc.) che ci hai chiesto di archiviare per te",
+      "ipAddress": "Indirizzo IP e impronta del dispositivo",
+      "ipAddressDesc": "registrati a ogni visualizzazione video e download per la prevenzione delle frodi; cancellabili dalle Impostazioni"
+    },
+    "footer": "Tutto qui."
+  },
+  "legalBasis": {
+    "title": "Base giuridica del trattamento",
+    "intro": "Ai sensi del GDPR, trattiamo i tuoi dati personali in base alle seguenti basi giuridiche:",
+    "items": {
+      "contract": "Contratto",
+      "contractDesc": "Il trattamento è necessario per fornirti i nostri servizi",
+      "consent": "Consenso",
+      "consentDesc": "Hai dato il consenso per scopi specifici (es. email di marketing)",
+      "legitimateInterest": "Interesse legittimo",
+      "legitimateInterestDesc": "Per migliorare i nostri servizi, prevenire frodi, rilevare la condivisione di account e difenderci dalle contestazioni di pagamento"
+    }
+  },
+  "payment": {
+    "title": "Elaborazione dei pagamenti",
+    "content": "Per gli abbonamenti a pagamento usiamo Stripe come elaboratore dei pagamenti. Stripe raccoglie ed elabora le tue informazioni di pagamento direttamente. Non salviamo i dati della tua carta di credito sui nostri server.",
+    "stripePolicy": "L'informativa sulla privacy di Stripe è disponibile a: stripe.com/privacy"
+  },
+  "analytics": {
+    "title": "Analytics e tracciamento",
+    "content": "Non usiamo nessun strumento di analytics, pubblicità o tracciamento comportamentale di terze parti. Non gestiamo tracker, cookie pubblicitari, beacon di fingerprinting o session replay. Gli unici dati che registriamo sulla tua attività sono descritti nella sezione Registrazione visualizzazioni e download qui sotto — e puoi cancellarli in qualsiasi momento."
+  },
+  "accessControl": {
+    "title": "Registrazione visualizzazioni e download",
+    "content1": "Ogni volta che guardi una registrazione o scarichi un file video, registriamo l'evento sul tuo account. Ogni voce di log include il tuo indirizzo IP, l'ID account (se hai effettuato l'accesso), un'impronta anonima del dispositivo e la registrazione a cui hai avuto accesso. Non registriamo la posizione di riproduzione, il tempo di visualizzazione o i pattern comportamentali — solo che è avvenuto un accesso.",
+    "content2": "Registriamo ogni visualizzazione e download autenticati indipendentemente dal piano di abbonamento — basic, premium, champion, admin. Per i visitatori anonimi, usiamo un cookie di impronta del dispositivo al posto dell'ID account. Questi dati esistono per: (1) far rispettare il limite di 5 visualizzazioni per gli utenti gratis e anonimi, (2) rilevare contestazioni di carta di credito dimostrando l'uso autorizzato dell'account, (3) rilevare la condivisione di account individuando più IP distinti che accedono allo stesso account.",
+    "content3": "Questi dati non vengono mai condivisi con terze parti e non vengono mai usati per pubblicità. Puoi cancellare in qualsiasi momento ogni voce di log di visualizzazione e download collegata al tuo account da Impostazioni → Privacy e dati di tracciamento. Dopo la cancellazione, le nuove visualizzazioni e download ricominceranno a essere registrati."
+  },
+  "dataRetention": {
+    "title": "Conservazione dei dati",
+    "intro": "Conserviamo i tuoi dati solo per il tempo necessario:",
+    "items": {
+      "account": "Dati account",
+      "accountDesc": "Fino a quando elimini il tuo account",
+      "freeStreams": "Stream registrati (piano gratis)",
+      "freeStreamsDesc": "7 giorni",
+      "premiumStreams": "Stream registrati (piano Premium)",
+      "premiumStreamsDesc": "60 giorni",
+      "analyticsData": "Dati di analytics",
+      "analyticsDataDesc": "Anonimizzati, conservati per il miglioramento del servizio"
+    }
+  },
+  "dataStorage": {
+    "title": "Dove sono salvati i tuoi dati",
+    "content": "I nostri server si trovano in Europa. I tuoi dati vengono elaborati e salvati in conformità ai requisiti GDPR. Non trasferiamo i tuoi dati personali fuori dallo Spazio Economico Europeo (SEE) se non per la fornitura del servizio (es. elaborazione dei pagamenti Stripe) e con adeguate garanzie."
+  },
+  "thirdParties": {
+    "title": "Terze parti",
+    "intro": "Non vendiamo i tuoi dati a nessuno. Condividiamo i dati solo con:",
+    "items": {
+      "stripe": "Stripe",
+      "stripeDesc": "Per l'elaborazione dei pagamenti e la gestione degli abbonamenti (se ti iscrivi)"
+    },
+    "footer": "Non usiamo network pubblicitari di terze parti né vendiamo le tue informazioni personali."
+  },
+  "cookies": {
+    "title": "Cookie",
+    "intro": "Usiamo solo cookie essenziali necessari per il corretto funzionamento del sito:",
+    "items": {
+      "session": "Cookie di sessione",
+      "sessionDesc": "Per mantenerti connesso",
+      "preference": "Cookie di preferenza",
+      "preferenceDesc": "Per ricordare le tue impostazioni",
+      "access": "Cookie di controllo accessi",
+      "accessDesc": "Per applicare i limiti di visualizzazione agli utenti gratis"
+    },
+    "footer": "Non usiamo cookie pubblicitari o cookie di tracciamento di terze parti. Il cookie di controllo accessi è strettamente necessario per il funzionamento del nostro servizio freemium."
+  },
+  "rights": {
+    "title": "I tuoi diritti (GDPR)",
+    "intro": "Ai sensi del GDPR, hai i seguenti diritti:",
+    "items": {
+      "access": "Diritto di accesso",
+      "accessDesc": "Richiedere una copia dei tuoi dati personali",
+      "rectification": "Diritto di rettifica",
+      "rectificationDesc": "Correggere dati inesatti o incompleti",
+      "erasure": "Diritto alla cancellazione",
+      "erasureDesc": "Richiedere la cancellazione dei tuoi dati",
+      "restrict": "Diritto di limitazione del trattamento",
+      "restrictDesc": "Limitare come usiamo i tuoi dati",
+      "portability": "Diritto alla portabilità dei dati",
+      "portabilityDesc": "Ricevere i tuoi dati in un formato portabile",
+      "object": "Diritto di opposizione",
+      "objectDesc": "Opporti al trattamento basato sull'interesse legittimo",
+      "withdraw": "Diritto di revoca del consenso",
+      "withdrawDesc": "Revocare il consenso in qualsiasi momento"
+    },
+    "footer": "Per esercitare uno qualsiasi di questi diritti, contattaci a contact@livestreamrecorder.com. Per i log di visualizzazione e download in particolare, puoi anche cancellarli tu stesso da Impostazioni → Privacy e dati di tracciamento."
+  },
+  "children": {
+    "title": "Privacy dei minori",
+    "content": "Il nostro Servizio non è destinato a chi ha meno di 18 anni. Non raccogliamo intenzionalmente informazioni personali da minori di 18 anni.",
+    "contact": "Se credi che un minore ci abbia fornito informazioni personali, contattaci immediatamente a contact@livestreamrecorder.com e prenderemo provvedimenti per eliminare tali informazioni dai nostri sistemi."
+  },
+  "security": {
+    "title": "Sicurezza dei dati",
+    "content": "Implementiamo misure tecniche e organizzative appropriate per proteggere i tuoi dati personali contro accessi non autorizzati, alterazioni, divulgazione o distruzione. Questo include crittografia, server sicuri e controlli degli accessi. Tuttavia, nessun metodo di trasmissione su Internet è sicuro al 100% e non possiamo garantire la sicurezza assoluta."
+  },
+  "deleteAccount": {
+    "title": "Elimina il tuo account",
+    "content": "Per eliminare il tuo account, vai in Impostazioni e poi Elimina account.",
+    "footer": "Una volta eliminato, tutti i tuoi dati vengono rimossi permanentemente dai nostri server. Questa azione non può essere annullata."
+  },
+  "contact": {
+    "title": "Contattaci",
+    "content": "Se hai domande su questa Informativa sulla privacy, i tuoi dati o i tuoi diritti, contattaci:",
+    "email": "contact@livestreamrecorder.com",
+    "footer": "Hai anche il diritto di presentare un reclamo a un'autorità di vigilanza (come il Garante per la protezione dei dati personali italiano - Garante Privacy) se ritieni che i tuoi diritti di protezione dei dati siano stati violati."
+  },
+  "footerNote": "Se aggiorniamo questa policy, pubblicheremo qui le modifiche con una nuova data. Continuare a usare il Servizio dopo le modifiche costituisce accettazione della policy aggiornata."
+}

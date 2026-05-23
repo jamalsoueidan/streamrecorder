@@ -1,0 +1,84 @@
+{
+  "meta": {
+    "title": "Policy DMCA",
+    "description": "Invia una richiesta di rimozione DMCA per contenuti che violano il tuo copyright."
+  },
+  "header": {
+    "title": "Digital Millennium Copyright Act",
+    "subtitle": "Invia una richiesta di rimozione. Revisioniamo ogni segnalazione e agiamo prontamente sulle richieste legittime."
+  },
+  "form": {
+    "title": "Notifica di presunta violazione",
+    "description": "Usa questo modulo per richiedere la rimozione delle registrazioni che violano il tuo copyright. Rispondiamo alle notifiche DMCA legalmente valide e disabilitiamo gli account di chi viola ripetutamente nelle circostanze appropriate.",
+    "sections": {
+      "yourWork": "La tua opera protetta da copyright",
+      "infringing": "Contenuto in violazione",
+      "yourRole": "Il tuo ruolo",
+      "contact": "Informazioni di contatto",
+      "sworn": "Dichiarazioni giurate",
+      "signature": "Firma"
+    },
+    "work": {
+      "description": {
+        "label": "Descrivi l'opera protetta da copyright",
+        "description": "Qual è il contenuto originale? Quando è stato creato o pubblicato per la prima volta? Più dettagli fornisci, più velocemente possiamo verificare la tua richiesta.",
+        "placeholder": "es. La mia diretta su Twitch come @miocanale il 15 marzo 2024 dalle 20:00 alle 22:00 EST, che copre il lancio della mia nuova canzone 'Titolo'."
+      }
+    },
+    "infringing": {
+      "urls": {
+        "label": "URL delle registrazioni in violazione",
+        "description": "Un URL per riga. Sono le registrazioni su LiveStreamRecorder che ci chiedi di rimuovere.",
+        "placeholder": "https://www.livestreamrecorder.com/twitch/..."
+      }
+    },
+    "copyrightType": {
+      "label": "Invio questa notifica come",
+      "personal": "Titolare del copyright",
+      "authorized": "Rappresentante autorizzato del titolare del copyright"
+    },
+    "contact": {
+      "firstName": {
+        "label": "Nome",
+        "placeholder": "Jane"
+      },
+      "lastName": {
+        "label": "Cognome",
+        "placeholder": "Doe"
+      }
+    },
+    "email": {
+      "label": "Il tuo indirizzo email",
+      "description": "Lo useremo per rispondere alla tua richiesta.",
+      "placeholder": "tu@esempio.com"
+    },
+    "perjury": {
+      "title": "Spuntando le seguenti caselle, dichiaro SOTTO PENA DI SPERGIURO che:",
+      "warning": "Leggi attentamente ogni dichiarazione prima di spuntare.",
+      "goodFaith": "Ho la ragionevole convinzione che l'uso del materiale protetto da copyright descritto sopra non sia autorizzato dal titolare del copyright, dal suo agente o dalla legge (es. come fair use).",
+      "accurate": "Le informazioni in questa notifica sono accurate e, sotto pena di spergiuro, sono il titolare o sono autorizzato ad agire per conto del titolare di un diritto esclusivo che è presumibilmente violato.",
+      "acknowledge": "Riconosco che ai sensi della Sezione 512(f) chiunque travisi consapevolmente in modo sostanziale che un materiale o un'attività siano in violazione può essere soggetto a responsabilità per danni."
+    },
+    "signature": {
+      "date": {
+        "label": "Data della firma"
+      },
+      "label": "Firma digitata",
+      "description": "Digita il tuo nome legale completo. Deve corrispondere esattamente al Nome e Cognome sopra — funge da firma digitale.",
+      "placeholder": "Jane Doe",
+      "mismatch": "La firma deve corrispondere esattamente al tuo Nome e Cognome."
+    },
+    "captcha": {
+      "label": "Verifica",
+      "description": "Quanto fa {question}?",
+      "placeholder": "La tua risposta",
+      "error": "Risposta errata, riprova"
+    },
+    "submit": "Invia richiesta DMCA",
+    "footer": "Rispondiamo a tutte le richieste DMCA valide. L'abuso di questo processo può comportare conseguenze legali."
+  },
+  "submitted": {
+    "title": "Richiesta DMCA inviata",
+    "description": "Abbiamo ricevuto la tua richiesta di rimozione DMCA. La esamineremo e risponderemo all'indirizzo email che hai fornito."
+  }
+}

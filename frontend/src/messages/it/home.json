@@ -1,0 +1,38 @@
+{
+  "meta": {
+    "title": "Live Stream Recorder | Registra TikTok, Twitch e altro automaticamente",
+    "titleTemplate": "%s | Live Stream Recorder",
+    "description": "Salva automaticamente i tuoi live stream e trasformali in clip virali. Registrazione stream sul cloud per TikTok, Twitch, YouTube, Kick e altro. Nessun software da installare.",
+    "keywords": "live stream recorder, registrazione stream, registrazione livestream, registra live stream, registra stream twitch, registra tiktok live, cattura youtube live, scarica vod twitch, registra tiktok live, clip creator, clip stream",
+    "ogTitle": "Live Stream Recorder | Salva i tuoi stream, crea clip virali",
+    "ogDescription": "Registra automaticamente i tuoi live stream e trasforma i momenti migliori in clip. Registrazione sul cloud per TikTok, Twitch, YouTube e altro.",
+    "ogAlt": "Live Stream Recorder - Registra TikTok, Twitch, YouTube e altro",
+    "twitterDescription": "Salva automaticamente i tuoi live stream. Trasforma i tuoi momenti migliori in clip che fanno crescere il tuo canale. Gratis per iniziare."
+  },
+  "hero": {
+    "title": "Live Stream Recorder",
+    "subtitle": "Registra i tuoi live stream",
+    "description": "Registra i tuoi stream TikTok, Twitch, Kick e YouTube. ClipAI trova i tuoi momenti migliori e li trasforma in clip brevi — pronte da condividere ovunque."
+  },
+  "feature": {
+    "title": "Tutti i tuoi stream",
+    "subtitle": "Salvati e pronti per i clip",
+    "description": "Aggiungi i tuoi live stream da qualsiasi piattaforma. Gli stream vengono registrati automaticamente e i VOD vengono salvati per te. Torna quando sei pronto a creare clip, scaricare o riutilizzare i tuoi contenuti."
+  },
+  "latestRecordings": {
+    "title": "Registrazioni recenti",
+    "subtitle": "Registrazioni di stream salvate nelle ultime 24 ore",
+    "browseAll": "Vedi tutte le registrazioni"
+  },
+  "featuredCreators": {
+    "title": "Unisciti a 100K creator",
+    "subtitle": "Content creator che trasformano i loro live stream in clip virali",
+    "browseAll": "Vedi tutti i creator"
+  },
+  "cta": {
+    "title": "Registra i tuoi live stream",
+    "description": "Registra i tuoi stream TikTok, Twitch, Kick e YouTube. ClipAI trova i tuoi momenti migliori e li trasforma in clip brevi — pronte da condividere ovunque.",
+    "button": "Inizia gratis oggi"
+  },
+  "about": "## Su Live Stream Recorder\n\nI tuoi live stream sono oro per i contenuti — non lasciarli sparire. La nostra piattaforma cloud salva automaticamente le tue dirette così puoi riutilizzarle per clip, highlight e contenuti short-form.\n\n### Registrazione automatica delle dirette\n\nCollega i tuoi canali streaming e pensiamo a tutto noi. La registrazione degli stream avviene in automatico in background — nessun software da installare, nessuna pianificazione manuale. Vai live e i tuoi stream vengono catturati e salvati sul cloud.\n\n### Trasforma gli stream in clip\n\nLo stream di 3 ore ha decine di momenti virali. I nostri strumenti ti aiutano a trovare e ritagliare gli highlight che performano meglio su TikTok, YouTube Shorts e Instagram Reels. Stream una volta, posta ovunque.\n\n### Guarda e scarica quando vuoi\n\nTutti i tuoi stream registrati sono salvati in sicurezza sui nostri server. Accedi alle tue registrazioni dal player integrato, scaricale per l'editing o condividile direttamente sui social.\n\n### Registra TikTok, Twitch, YouTube e altro\n\nChe tu faccia stream su TikTok, Twitch, YouTube, Kick, AfreecaTV o Pandalive — il nostro servizio cloud ti copre. Registra su più piattaforme, tutto organizzato in un unico posto.\n\n### Niente screen recorder\n\nA differenza di un screen recorder per live stream che richiede il computer sempre acceso, il nostro servizio cloud funziona 24 ore su 24. Nessun software di registrazione schermo necessario. I tuoi stream vengono registrati anche se te ne dimentichi.\n\n### Gratis per iniziare\n\nCrea un account e collega i tuoi canali oggi. Passa al premium per registrazioni di qualità superiore, storage illimitato e strumenti avanzati per i clip."
+}

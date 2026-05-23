@@ -1,0 +1,34 @@
+{
+  "meta": {
+    "title": "Video e registrazioni di {nickname} (@{username})",
+    "notFoundTitle": "Creator non trovato",
+    "notFoundDescription": "Questo profilo creator non è stato trovato.",
+    "description": "Guarda le registrazioni live e i clip di {nickname} su {platform}. {nickname} usa Live Stream Recorder per salvare e condividere i suoi live stream.",
+    "ogTitle": "{nickname} — Video e clip | Live Stream Recorder",
+    "twitterTitle": "{nickname} — Video e clip {platform}",
+    "keywords": "{nickname} video, {nickname} clip, {nickname} {platform}, guarda {nickname}, {nickname} live stream, {nickname} registrazioni"
+  },
+  "defaultTagline": "{nickname} salva qui i suoi live stream. Guarda registrazioni e clip quando vuoi.",
+  "about": "Su {nickname}",
+  "faq": "FAQ",
+  "recorded": "Registrato il {date}",
+  "emptyState": {
+    "title": "Nessuna registrazione",
+    "description": "Questo creator non ha ancora salvato stream. Torna più tardi!"
+  },
+  "jsonLd": {
+    "streamTitle": "Stream di {nickname} - {date}"
+  },
+  "report": "Segnala",
+  "blocked": {
+    "metaTitle": "Contenuto rimosso",
+    "metaDescription": "I contenuti di questo creator sono stati rimossi.",
+    "title": "Contenuto rimosso",
+    "description": "Le registrazioni di questo profilo sono state rimosse in risposta a una richiesta DMCA verificata."
+  },
+  "cta": {
+    "title": "Stai vedendo solo un'anteprima di @{username}",
+    "description": "@{username} condivide qui le sue registrazioni. Iscriviti per salvare e condividere i tuoi stream.",
+    "button": "Crea account gratis"
+  }
+}

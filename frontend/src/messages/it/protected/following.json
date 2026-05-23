@@ -1,0 +1,13 @@
+{
+  "title": "Registrazioni",
+  "description": "Registrazioni dei tuoi creator",
+  "emptyFiltered": {
+    "title": "Nessuna registrazione corrisponde ai tuoi filtri",
+    "description": "Prova a modificare o cancellare i filtri"
+  },
+  "emptyDefault": {
+    "title": "Nessuna registrazione",
+    "description": "Le tue registrazioni appariranno qui una volta aggiunto un creator"
+  },
+  "noMoreToLoad": "Sei arrivato alla fine"
+}

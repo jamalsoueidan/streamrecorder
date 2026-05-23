@@ -1,0 +1,30 @@
+{
+  "meta": {
+    "title": "Stream ni {creatorName} - {recordedDate}",
+    "description": "Panoorin ang recorded {platform} live stream ni {creatorName} mula {recordedDate}. Tagal: {duration}. Wag nang makamiss ng stream gamit ang Live Stream Recorder.",
+    "ogTitle": "Stream ni {creatorName} - {recordedDate} | Live Stream Recorder",
+    "keywords": "{creatorName} video, {creatorName} stream {recordedDate}, {creatorName} {platform}, {creatorName} recorded stream, watch {creatorName}"
+  },
+  "jsonLd": {
+    "name": "Stream ni {creatorName} - {recordedDate}",
+    "description": "Recorded live stream mula kay {creatorName} noong {recordedDate}"
+  },
+  "watch": {
+    "title": "Panoorin ang live stream video ni {username} - {date}"
+  },
+  "backToProfile": "Bumalik sa profile ni {username}",
+  "otherRecordingsBy": "Iba pang recordings ni {username}",
+  "accessGate": {
+    "signIn": {
+      "title": "Mag-sign in para magpatuloy manood",
+      "body": "Naabot mo na ang free preview limit. Gumawa ng libreng account para magpatuloy.",
+      "primaryCta": "Mag-sign in",
+      "secondaryCta": "Gumawa ng account"
+    },
+    "upgrade": {
+      "title": "Mag-upgrade para magpatuloy manood",
+      "body": "Naabot mo na ang free limit. Mag-upgrade para sa unlimited access.",
+      "primaryCta": "Mag-upgrade"
+    }
+  }
+}

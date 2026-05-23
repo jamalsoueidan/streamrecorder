@@ -1,0 +1,34 @@
+{
+  "meta": {
+    "title": "{nickname} (@{username}) Videos at Recordings",
+    "notFoundTitle": "Hindi Nahanap ang Creator",
+    "notFoundDescription": "Hindi mahanap ang profile ng creator na ito.",
+    "description": "Panoorin ang {platform} live recordings at clips ni {nickname}. Ginagamit ni {nickname} ang Live Stream Recorder para i-save at i-share ang live streams nila.",
+    "ogTitle": "{nickname} — Videos at Clips | Live Stream Recorder",
+    "twitterTitle": "{nickname} — {platform} Videos at Clips",
+    "keywords": "{nickname} videos, {nickname} clips, {nickname} {platform}, watch {nickname}, {nickname} live stream, {nickname} recordings"
+  },
+  "defaultTagline": "Sini-save ni {nickname} ang live streams nila dito. Manood ng recordings at clips anumang oras.",
+  "about": "Tungkol kay {nickname}",
+  "faq": "FAQ",
+  "recorded": "Nai-record noong {date}",
+  "emptyState": {
+    "title": "Wala pang recordings",
+    "description": "Wala pang nai-save na streams ang creator na ito. Bumalik mamaya!"
+  },
+  "jsonLd": {
+    "streamTitle": "Stream ni {nickname} - {date}"
+  },
+  "report": "I-report",
+  "blocked": {
+    "metaTitle": "Natanggal ang Content",
+    "metaDescription": "Natanggal na ang content ng creator na ito.",
+    "title": "Natanggal ang Content",
+    "description": "Natanggal ang recordings ng profile na ito bilang tugon sa verified DMCA takedown request."
+  },
+  "cta": {
+    "title": "Preview lang ang nakikita mo mula kay @{username}",
+    "description": "Sini-share ni @{username} ang recordings nila dito. Mag-sign up para i-save at i-share ang sarili mong streams.",
+    "button": "Gumawa ng Libreng Account"
+  }
+}

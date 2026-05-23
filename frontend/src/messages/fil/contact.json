@@ -1,0 +1,35 @@
+{
+  "meta": {
+    "title": "Contact Us",
+    "description": "Makipag-ugnayan sa amin"
+  },
+  "header": {
+    "title": "Contact Us",
+    "subtitle": "Gustong-gusto naming makarinig mula sa iyo"
+  },
+  "form": {
+    "title": "Magpadala ng Mensahe",
+    "description": "Sagutan ang form sa baba at babalikan ka namin sa lalong madaling panahon.",
+    "name": {
+      "label": "Pangalan",
+      "placeholder": "Pangalan mo"
+    },
+    "email": {
+      "label": "Email",
+      "placeholder": "your@email.com"
+    },
+    "subject": {
+      "label": "Paksa",
+      "placeholder": "Tungkol saan ito?"
+    },
+    "message": {
+      "label": "Mensahe",
+      "placeholder": "Mensahe mo..."
+    },
+    "submit": "Ipadala ang Mensahe"
+  },
+  "submitted": {
+    "title": "Naipadala na ang Mensahe!",
+    "description": "Salamat sa pagre-reach out. Babalikan ka namin sa lalong madaling panahon."
+  }
+}

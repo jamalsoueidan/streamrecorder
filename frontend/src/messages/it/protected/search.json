@@ -1,0 +1,64 @@
+{
+  "title": "Cerca",
+  "description": "Aggiungi i tuoi live stream alla lista",
+  "platforms": {
+    "tiktok": "TikTok",
+    "twitch": "Twitch",
+    "kick": "Kick",
+    "youtube": "YouTube",
+    "afreecatv": "AfreecaTV",
+    "pandalive": "PandaLive",
+    "bigo": "Bigo",
+    "buzzcast": "Buzzcast",
+    "liveme": "LiveMe",
+    "mixch": "Mixch",
+    "twitcast": "TwitCasting",
+    "trovo": "Trovo",
+    "joilive": "Joilive",
+    "live17": "17live",
+    "kwai": "Kwai"
+  },
+  "search": {
+    "actionButton": "Cerca",
+    "submitButton": "Cerca",
+    "placeholder": "Inserisci l'URL dello stream o @username",
+    "searching": "Ricerca su {platform}...",
+    "pasteButton": "Incolla",
+    "pasteError": "Incolla manualmente con Ctrl+V o long-press",
+    "parseError": "Impossibile interpretare lo username",
+    "notFound": "Nessun risultato...",
+    "autoDetected": "Piattaforma rilevata automaticamente dall'URL",
+    "enterUsername": "Inserisci l'URL dello stream o lo username",
+    "selectPlatform": "Seleziona la piattaforma su cui fai stream",
+    "changeUsername": "Cambia username",
+    "newSearch": "Nuova ricerca",
+    "premiumOnly": "Solo Premium"
+  },
+  "upgrade": {
+    "title": "{platform} richiede Premium",
+    "description": "Passa a Premium per aggiungere creator {platform} e iniziare a registrare i tuoi live stream."
+  },
+  "hints": {
+    "tryFormats": "Prova questi esempi:",
+    "enterUsername": "Inserisci uno @username o incolla l'URL del profilo"
+  },
+  "actions": {
+    "follow": "Aggiungi",
+    "successTitle": "Aggiunto!",
+    "successMessage": "{username} è stato aggiunto",
+    "errorTitle": "Errore",
+    "cancel": "Annulla",
+    "willRecord": "Sarà registrato quando va live",
+    "viewPage": "Vedi pagina"
+  },
+  "chromeExtension": "Installa l'Estensione Chrome",
+  "inputLabel": "Incolla qui un link a uno stream da Twitch, TikTok o YouTube",
+  "notFollowing": {
+    "title": "Questo creator non è nella tua lista",
+    "description": "Hai provato ad accedere a un creator che non è nella tua lista.",
+    "followToAccess": "Aggiungilo per vedere le registrazioni e ricevere una notifica quando va live.",
+    "notFoundTitle": "Creator non trovato",
+    "notFoundDescription": "@{username} non esiste su {platform} oppure l'account è privato.",
+    "trySearch": "Prova a cercare un altro creator:"
+  }
+}

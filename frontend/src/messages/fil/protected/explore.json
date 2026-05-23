@@ -1,0 +1,13 @@
+{
+  "title": "Explore",
+  "description": "I-browse ang mga recording mula sa ibang creators",
+  "emptyFiltered": {
+    "title": "Walang recording na tumutugma sa filter mo",
+    "description": "Subukang i-adjust o i-clear ang filters"
+  },
+  "emptyDefault": {
+    "title": "Walang available na recording",
+    "description": "-"
+  },
+  "noMoreToLoad": "Nakarating ka na sa dulo"
+}

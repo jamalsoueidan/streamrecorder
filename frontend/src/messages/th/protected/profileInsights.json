@@ -1,0 +1,75 @@
+{
+  "beta": "Insights ขณะนี้อยู่ในเวอร์ชันเบต้า ข้อมูลอาจไม่ครบถ้วนหรือเปลี่ยนแปลงในขณะที่เราปรับปรุงฟีเจอร์นี้",
+  "tabs": {
+    "videos": "วิดีโอ",
+    "clips": "คลิป",
+    "insights": "Insights"
+  },
+  "stats": {
+    "totalDiamonds": "เพชรทั้งหมด",
+    "battleDiamonds": "เพชรจากการแบทเทิล",
+    "nonBattleDiamonds": "เพชรนอกการแบทเทิล",
+    "battles": "การแบทเทิล",
+    "won": "ชนะ",
+    "lost": "แพ้",
+    "winRate": "อัตราชนะ",
+    "gifters": "ผู้ส่งของขวัญ",
+    "chatParticipants": "ผู้ร่วมแชท"
+  },
+  "battleHistory": {
+    "title": "ประวัติการแบทเทิล",
+    "empty": "ยังไม่มีการแบทเทิลที่บันทึก",
+    "colDate": "วันที่",
+    "colType": "ประเภท",
+    "colOpponents": "คู่ต่อสู้",
+    "colScore": "คะแนน",
+    "colDiamonds": "เพชร",
+    "colResult": "ผล",
+    "vs": "vs",
+    "with": "ร่วมกับ",
+    "live": "ไลฟ์",
+    "interrupted": "ขัดจังหวะ",
+    "won": "ชนะ",
+    "draw": "เสมอ",
+    "lost": "แพ้"
+  },
+  "streamActivity": {
+    "title": "สตรีมล่าสุด",
+    "empty": "ไม่มีเซสชันสตรีม",
+    "colDate": "วันที่",
+    "colDuration": "ความยาว",
+    "colPeakViewers": "ผู้ชมสูงสุด",
+    "colAvgViewers": "ผู้ชมเฉลี่ย",
+    "colDiamonds": "เพชร",
+    "colBattles": "การแบทเทิล",
+    "durationMinutes": "{m}น",
+    "durationHoursMinutes": "{h}ชม {m}น"
+  },
+  "topGifters": {
+    "title": "ผู้ส่งของขวัญสูงสุด",
+    "empty": "ไม่มีข้อมูลผู้ส่งของขวัญ",
+    "giftCount": "{count} ของขวัญ"
+  },
+  "topOpponents": {
+    "title": "คู่ต่อสู้สูงสุด",
+    "empty": "ไม่มีข้อมูลการแบทเทิล",
+    "wins": "{count}ช",
+    "losses": "{count}พ",
+    "battleCount": "{count} แบทเทิล"
+  },
+  "earnings": {
+    "title": "รายได้",
+    "empty": "ไม่มีข้อมูลรายได้",
+    "seriesLabel": "เพชร"
+  },
+  "schedule": {
+    "title": "เวลาที่พวกเขาไลฟ์",
+    "mon": "จ",
+    "tue": "อ",
+    "wed": "พ",
+    "thu": "พฤ",
+    "fri": "ศ",
+    "sat": "ส",
+    "sun": "อา"
+  }
+}

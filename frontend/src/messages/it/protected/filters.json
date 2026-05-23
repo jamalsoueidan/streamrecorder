@@ -1,0 +1,81 @@
+{
+  "platforms": {
+    "label": "Piattaforma",
+    "all": "Tutte",
+    "tiktok": "TikTok",
+    "twitch": "Twitch",
+    "youtube": "YouTube",
+    "kick": "Kick",
+    "afreecatv": "AfreecaTV",
+    "pandalive": "PandaLive",
+    "bigo": "Bigo",
+    "buzzcast": "Buzzcast",
+    "liveme": "LiveMe",
+    "mixch": "Mixch",
+    "twitcast": "TwitCasting",
+    "trovo": "Trovo",
+    "joilive": "Joilive",
+    "live17": "17live",
+    "kwai": "Kwai"
+  },
+  "sort": {
+    "label": "Ordina per",
+    "usernameAsc": "A-Z",
+    "usernameDesc": "Z-A",
+    "createdAtDesc": "Aggiunti di recente",
+    "createdAtAsc": "Aggiunti per primi",
+    "totalRecordingsDesc": "Più registrazioni",
+    "totalRecordingsAsc": "Meno registrazioni",
+    "latestRecordingDesc": "Stream recenti",
+    "latestRecordingAsc": "Stream meno recenti",
+    "updatedAtDesc": "Più recenti",
+    "updatedAtAsc": "Meno recenti",
+    "viewsCountDesc": "Più visti",
+    "downloadsCountDesc": "Più scaricati"
+  },
+  "gender": {
+    "label": "Genere",
+    "all": "Tutti",
+    "female": "Donna",
+    "male": "Uomo",
+    "unknown": "Altro"
+  },
+  "dateRange": {
+    "label": "Aggiunti",
+    "today": "Oggi",
+    "yesterday": "Ieri",
+    "thisWeek": "Questa settimana",
+    "lastWeek": "Settimana scorsa",
+    "thisMonth": "Questo mese",
+    "lastMonth": "Mese scorso",
+    "all": "Tutti"
+  },
+  "duration": {
+    "label": "Durata",
+    "short": "Meno di 4 min",
+    "medium": "4-20 min",
+    "long": "Oltre 20 min",
+    "all": "Tutte"
+  },
+  "country": {
+    "label": "Paese",
+    "placeholder": "Altri paesi..."
+  },
+  "language": {
+    "label": "Lingua",
+    "placeholder": "Altre lingue..."
+  },
+  "search": {
+    "placeholder": "Cerca username..."
+  },
+  "actions": {
+    "clearAll": "Cancella tutto",
+    "filters": "Filtri",
+    "favorites": "Preferiti",
+    "done": "Fatto"
+  },
+  "options": {
+    "hasRecordings": "Mostra solo i creator con registrazioni"
+  },
+  "excludeMyCreators": "Escludi i miei creator"
+}

@@ -1,0 +1,81 @@
+{
+  "platforms": {
+    "label": "แพลตฟอร์ม",
+    "all": "ทั้งหมด",
+    "tiktok": "TikTok",
+    "twitch": "Twitch",
+    "youtube": "YouTube",
+    "kick": "Kick",
+    "afreecatv": "AfreecaTV",
+    "pandalive": "PandaLive",
+    "bigo": "Bigo",
+    "buzzcast": "Buzzcast",
+    "liveme": "LiveMe",
+    "mixch": "Mixch",
+    "twitcast": "TwitCasting",
+    "trovo": "Trovo",
+    "joilive": "Joilive",
+    "live17": "17live",
+    "kwai": "Kwai"
+  },
+  "sort": {
+    "label": "เรียงตาม",
+    "usernameAsc": "A-Z",
+    "usernameDesc": "Z-A",
+    "createdAtDesc": "เพิ่มล่าสุด",
+    "createdAtAsc": "เพิ่มก่อน",
+    "totalRecordingsDesc": "บันทึกมากที่สุด",
+    "totalRecordingsAsc": "บันทึกน้อยที่สุด",
+    "latestRecordingDesc": "สตรีมล่าสุด",
+    "latestRecordingAsc": "สตรีมเก่าสุด",
+    "updatedAtDesc": "ใหม่สุด",
+    "updatedAtAsc": "เก่าสุด",
+    "viewsCountDesc": "ดูมากที่สุด",
+    "downloadsCountDesc": "ดาวน์โหลดมากที่สุด"
+  },
+  "gender": {
+    "label": "เพศ",
+    "all": "ทั้งหมด",
+    "female": "หญิง",
+    "male": "ชาย",
+    "unknown": "อื่นๆ"
+  },
+  "dateRange": {
+    "label": "เพิ่มเมื่อ",
+    "today": "วันนี้",
+    "yesterday": "เมื่อวาน",
+    "thisWeek": "สัปดาห์นี้",
+    "lastWeek": "สัปดาห์ที่แล้ว",
+    "thisMonth": "เดือนนี้",
+    "lastMonth": "เดือนที่แล้ว",
+    "all": "ทั้งหมด"
+  },
+  "duration": {
+    "label": "ความยาว",
+    "short": "ต่ำกว่า 4 นาที",
+    "medium": "4-20 นาที",
+    "long": "มากกว่า 20 นาที",
+    "all": "ทั้งหมด"
+  },
+  "country": {
+    "label": "ประเทศ",
+    "placeholder": "ประเทศเพิ่มเติม..."
+  },
+  "language": {
+    "label": "ภาษา",
+    "placeholder": "ภาษาเพิ่มเติม..."
+  },
+  "search": {
+    "placeholder": "ค้นหาชื่อผู้ใช้..."
+  },
+  "actions": {
+    "clearAll": "ล้างทั้งหมด",
+    "filters": "ตัวกรอง",
+    "favorites": "รายการโปรด",
+    "done": "เสร็จสิ้น"
+  },
+  "options": {
+    "hasRecordings": "แสดงเฉพาะครีเอเตอร์ที่มีบันทึก"
+  },
+  "excludeMyCreators": "ไม่รวมครีเอเตอร์ของฉัน"
+}

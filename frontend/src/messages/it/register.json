@@ -1,0 +1,48 @@
+{
+  "meta": {
+    "title": "Crea account",
+    "description": "Crea un account gratuito LiveStreamRecorder per registrare automaticamente i live stream dei tuoi creator preferiti."
+  },
+  "title": "Crea un account",
+  "subtitle": "Unisciti a noi e inizia a esplorare",
+  "username": {
+    "label": "Nome utente",
+    "placeholder": "Scegli un nome utente"
+  },
+  "email": {
+    "label": "Indirizzo email",
+    "placeholder": "tu@esempio.com"
+  },
+  "password": {
+    "label": "Password",
+    "placeholder": "Crea una password",
+    "hint": "La password deve essere di almeno 6 caratteri"
+  },
+  "choices": {
+    "emailPassword": "Usa Email / Password",
+    "google": "Continua con Google",
+    "tiktok": "Continua con TikTok",
+    "facebook": "Continua con Facebook"
+  },
+  "terms": {
+    "agree": "Accetto i",
+    "link": "Termini e condizioni",
+    "text": "Continuando, accetti i",
+    "tosLink": "Termini di servizio",
+    "and": "di Live Stream Recorder e confermi di aver letto la",
+    "privacyLink": "Informativa sulla privacy"
+  },
+  "submit": {
+    "default": "Crea account",
+    "loading": "Creazione account..."
+  },
+  "checkEmail": {
+    "title": "Controlla la tua email",
+    "description": "Ti abbiamo inviato un link di conferma. Clicca sul link per verificare il tuo account.",
+    "loginLink": "Vai all'accesso"
+  },
+  "login": {
+    "text": "Hai già un account?",
+    "link": "Accedi"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "title": "Dashboard",
+  "description": "Bentornato! Ecco le novità",
+  "greetingMorning": "Buongiorno, {username}!",
+  "greetingAfternoon": "Buon pomeriggio, {username}!",
+  "greetingEvening": "Buonasera, {username}!",
+  "greetingSubtitle": "Ecco le novità nel tuo feed",
+  "noRecordings": "Nessuna registrazione disponibile",
+  "browseAll": "Vedi tutti",
+  "newCreators": "Nuovi creator",
+  "myFeed": "Il mio feed",
+  "discoverSection": "Scopri",
+  "favorites": "Preferiti",
+  "mostViewed": "Più visti",
+  "mostDownloaded": "Più scaricati"
+}

@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "title": "I-verify ang Account Mo",
+    "description": "I-verify ang pagmamay-ari ng streaming profile mo para i-claim ang account o i-manage ang content mo."
+  },
+  "header": {
+    "title": "I-verify ang Pagmamay-ari",
+    "subtitle": "Patunayan na ikaw ang may-ari ng account na ito para i-claim ang profile o i-manage ang content mo"
+  },
+  "common": {
+    "copy": "Kopyahin",
+    "copied": "Nakopya na!"
+  },
+  "steps": {
+    "enterUrl": {
+      "label": "Profile Mo",
+      "description": "Ilagay ang URL ng streaming profile mo",
+      "intro": "Ilagay ang URL ng streaming profile mo.",
+      "input": {
+        "label": "Profile URL",
+        "placeholder": "https://tiktok.com/@yourusername"
+      },
+      "detected": "Na-detect: {platform} - @{username}",
+      "continue": "Magpatuloy",
+      "email": {
+        "label": "Email Address",
+        "placeholder": "you@example.com"
+      },
+      "error": {
+        "required": "Ilagay ang profile URL mo",
+        "invalid": "Hindi namin ma-recognize ang URL na ito",
+        "emailRequired": "Ilagay ang email address mo",
+        "emailInvalid": "Ilagay ang valid na email address"
+      }
+    },
+    "verify": {
+      "label": "I-verify",
+      "description": "Idagdag ang code sa bio mo",
+      "intro": "Para patunayang ikaw ang may-ari ng account, idagdag ang verification code sa baba sa bio ng profile mo. Pwede mong tanggalin pagkatapos ng verification.",
+      "codeLabel": "Verification Code Mo",
+      "instructions": "Kopyahin ang code na ito at idagdag kahit saan sa bio ng profile mo. Pwede ito sa simula, gitna, o dulo — hahanapin namin.",
+      "openProfile": "Buksan ang {platform} Profile",
+      "verifyButton": "Naidagdag Ko Na ang Code - I-verify Ngayon",
+      "failed": {
+        "title": "Hindi nahanap ang code",
+        "message": "Hindi namin nahanap ang verification code sa bio mo. Siguraduhing na-save mo ang profile pagkatapos idagdag ang code. Kung hindi mo madagdag ang code sa bio, bumalik at gamitin ang DMCA form.",
+        "backToForm": "Bumalik sa DMCA Form"
+      }
+    },
+    "complete": {
+      "created": {
+        "title": "Maligayang pagdating!",
+        "message": "Nagawa na ang account mo at naka-link na ang profile.",
+        "button": "Dashboard"
+      },
+      "linked": {
+        "title": "Naka-link na ang Profile",
+        "message": "Naka-link na ang profile sa account mo. Mag-login para i-access ang dashboard.",
+        "button": "Pumunta sa Login"
+      },
+      "notFound": {
+        "title": "Hindi Nahanap ang Profile",
+        "message": "Na-verify ang pagmamay-ari mo, pero wala sa system namin ang content creator na ito."
+      }
+    }
+  }
+}

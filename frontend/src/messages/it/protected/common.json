@@ -1,0 +1,104 @@
+{
+  "follow": {
+    "tooltip": "Aggiungi creator",
+    "successTitle": "Aggiunto!",
+    "successMessage": "{username} è stato aggiunto",
+    "errorTitle": "Errore",
+    "blockedMessage": "Questo creator non è disponibile a causa di una rimozione DMCA. Consulta i nostri <terms>Termini di servizio</terms> per maggiori dettagli."
+  },
+  "unfollow": {
+    "tooltip": "Rimuovi creator",
+    "successTitle": "Rimosso",
+    "successMessage": "Hai rimosso {username}",
+    "successMessageGeneric": "Rimosso con successo"
+  },
+  "scopeFilter": {
+    "label": "Filtra:",
+    "following": "Le mie registrazioni",
+    "discover": "Friends",
+    "all": "Tutti"
+  },
+  "recordings": {
+    "liveAgo_context": "For live streams showing when recording started. Shows 'started recording 15 minutes ago'",
+    "liveAgo": "registrazione iniziata {time}",
+    "recordedAgo_context": "For recorded streams showing when recording was made. Shows 'recorded 3 days ago'",
+    "recordedAgo": "registrato {time}",
+    "recordCount": "REC {count}",
+    "newRecording": "Nuovo",
+    "parts": "{count, plural, one {# parte} other {# parti}}",
+    "videoCount": "{count, plural, one {# video} other {# video}}",
+    "noRecordings": "Sei arrivato alla fine",
+    "hide": "Nascondi al pubblico",
+    "show": "Mostra al pubblico",
+    "delete": "Elimina video",
+    "deleteConfirm": {
+      "title": "Elimina video",
+      "message": "Sei sicuro di voler eliminare questo video? Questa azione non può essere annullata.",
+      "confirm": "Elimina",
+      "cancel": "Annulla"
+    },
+    "createWithAI": "Crea clip con AI",
+    "addToWatchLater": "Salva in Guarda dopo",
+    "removeFromWatchLater": "Rimuovi da Guarda dopo",
+    "addedToWatchLater": "Salvato in Guarda dopo",
+    "removedFromWatchLater": "Rimosso da Guarda dopo",
+    "videoLimitMessage": "Hai raggiunto il limite di video gratuiti.",
+    "download": "Scarica video",
+    "downloadPart": "Parte {part}",
+    "sendToEmail": "Invia via email",
+    "downloadEmailSent": "Il link per il download sta arrivando alla tua email",
+    "downloadFeatureMessage": "Scaricare i video è una funzione premium.",
+    "editClip": "Modifica clip",
+    "deleteSources": "Elimina sorgenti",
+    "deleteSourcesSuccess": "Eliminate {count} sorgenti"
+  },
+  "followers": {
+    "addedAgo_context": "For when a creator was added to user's list. Shows 'Added 3 days ago'",
+    "addedAgo": "Aggiunto {time}",
+    "limitReachedTitle": "Limite creator raggiunto",
+    "upgradeModalHeadline": "Non perdere mai più una diretta",
+    "max3Message": "Hai raggiunto il limite di 3 creator del piano gratuito.",
+    "max50Message": "Hai raggiunto il limite di 50 creator di questo piano.",
+    "max100Message": "Hai raggiunto il limite di 100 creator di questo piano.",
+    "upgradeButton": "Passa a Premium",
+    "upgradeModalDiscount": "20% di sconto sul primo mese",
+    "upgradeModalCodeNote": "Applica al checkout",
+    "unfollowUpgradeTitle": "Gestisci liberamente i tuoi creator con premium"
+  },
+  "newest": "Più recenti",
+  "oldest": "Meno recenti",
+  "expired": {
+    "title": "Il tuo piano Premium è scaduto",
+    "subtitle": "I tuoi creator non vengono più registrati. Rinnova ora per riprendere da dove avevi lasciato — tutti i tuoi creator e le tue impostazioni sono ancora salvati.",
+    "renewButton": "Rinnova Premium — Mantieni tutto",
+    "or": "oppure",
+    "loseTitle": "Se fai il downgrade perderai per sempre:",
+    "loseCreators": "Tutti i creator seguiti e le registrazioni",
+    "loseFavorites": "Tutti i tuoi preferiti salvati",
+    "loseClips": "Clip, download e funzioni AI",
+    "losePremium": "L'accesso a tutte le funzioni premium",
+    "downgradeButton": "Downgrade"
+  },
+  "freemiusShutdown": {
+    "title": "Il tuo pagamento Freemius sarà rimborsato",
+    "subtitle": "Iscriviti di nuovo via Stripe in 30 secondi per mantenere le funzioni premium.",
+    "body": "Freemius — uno dei miei fornitori di pagamento — ha terminato il rapporto con me. Stanno rimborsando tutti i pagamenti mai elaborati per me, compreso il tuo. Quello che mi hai pagato tramite Freemius ti verrà restituito. Di fatto hai avuto premium gratis fino ad ora.\n\nÈ stato un colpo duro per me, ma adesso la mia preoccupazione sei tu. Hai costruito i tuoi creator, le tue registrazioni, i tuoi clip qui — non voglio che tu perda nulla.\n\nStripe è sempre stata la mia altra opzione di pagamento ed è completamente disponibile. Iscriversi di nuovo richiede 30 secondi. Stesso piano, stesso prezzo, nessuna configurazione, nessuna interruzione.",
+    "renewButton": "Iscriviti via Stripe",
+    "or": "oppure",
+    "loseTitle": "Se fai il downgrade perderai per sempre:",
+    "loseCreators": "Tutti i creator seguiti e le registrazioni",
+    "loseFavorites": "Tutti i tuoi preferiti salvati",
+    "loseClips": "Clip, download e funzioni AI",
+    "losePremium": "L'accesso a tutte le funzioni premium",
+    "downgradeButton": "Downgrade al piano gratis",
+    "contact": "Domande? Scrivi a <email>contact@livestreamrecorder.com</email> o contatta Freemius per il rimborso."
+  },
+  "videoPlayer": {
+    "hevcUnsupportedTitle": "Il tuo browser non può riprodurre questo video",
+    "hevcUnsupportedMessage": "Questa registrazione TikTok usa HEVC (H.265). Il tuo browser non lo supporta. Prova Safari, Edge su Windows, o installa le HEVC Video Extensions dal Microsoft Store.",
+    "audioCodecUnsupportedTitle": "Il tuo browser non può riprodurre l'audio di questo video",
+    "audioCodecUnsupportedMessage": "Questa registrazione usa audio HE-AACv2, che il tuo browser non supporta completamente. Prova Chrome o Edge su desktop, o usa Safari su Mac/iOS.",
+    "playbackFailedTitle": "Riproduzione fallita",
+    "playbackFailedMessage": "Qualcosa è andato storto durante la riproduzione del video. Apri la console del browser (F12) e condividi con il supporto quello che vedi così possiamo risolvere."
+  }
+}

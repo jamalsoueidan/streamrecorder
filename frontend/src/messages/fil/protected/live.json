@@ -1,0 +1,13 @@
+{
+  "title": "Live Ngayon",
+  "subtitle": "Mga stream na kasalukuyang nire-record",
+  "streamingCount": "{count, plural, other {# streaming}}",
+  "refresh": "I-refresh",
+  "allPlatforms": "Lahat ng platform",
+  "showAll": "Ipakita lahat",
+  "discoverStreamers": "Hanapin ang Friends",
+  "emptyState": {
+    "title": "Walang live stream ngayon",
+    "description": "Kapag nag-live ang creators mo, lalabas ang streams nila dito"
+  }
+}
