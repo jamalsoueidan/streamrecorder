@@ -51,7 +51,15 @@
     "editClip": "Edit Clip",
     "deleteSources": "Delete sources",
     "deleteSourcesSuccess": "Deleted {count} sources",
-    "report": "Report"
+    "report": "Report",
+    "resetCounters": "Reset counters",
+    "resetCountersSuccess": "Counters reset to 0",
+    "resetCountersConfirm": {
+      "title": "Reset view & download counters",
+      "message": "This will reset views and downloads to 0 for this recording. The history of who viewed/downloaded is preserved in tracking data. Continue?",
+      "confirm": "Reset",
+      "cancel": "Cancel"
+    }
   },
   "followers": {
     "addedAgo_context": "For when a creator was added to user's list. Shows 'Added 3 days ago'",

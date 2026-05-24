@@ -11690,6 +11690,15 @@ export interface ReportRecordingData {
   success?: boolean;
 }
 
+export interface ResetRecordingCountersParams {
+  /** Recording documentId */
+  documentId: string;
+}
+
+export interface ResetRecordingCountersData {
+  success?: boolean;
+}
+
 export interface IncrementFollowerViewParams {
   /** Follower documentId */
   documentId: string;
@@ -13534,6 +13543,25 @@ export namespace Recording {
     export type RequestBody = ReportRecordingPayload;
     export type RequestHeaders = {};
     export type ResponseBody = ReportRecordingData;
+  }
+
+  /**
+   * No description
+   * @tags Recording
+   * @name ResetRecordingCounters
+   * @summary Reset views_count and downloads_count to 0
+   * @request POST:/recordings/{documentId}/reset-counters
+   * @secure
+   */
+  export namespace ResetRecordingCounters {
+    export type RequestParams = {
+      /** Recording documentId */
+      documentId: string;
+    };
+    export type RequestQuery = {};
+    export type RequestBody = never;
+    export type RequestHeaders = {};
+    export type ResponseBody = ResetRecordingCountersData;
   }
 }
 
@@ -16683,6 +16711,27 @@ export class Api<
         body: data,
         secure: true,
         type: ContentType.Json,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Recording
+     * @name ResetRecordingCounters
+     * @summary Reset views_count and downloads_count to 0
+     * @request POST:/recordings/{documentId}/reset-counters
+     * @secure
+     */
+    resetRecordingCounters: (
+      { documentId }: ResetRecordingCountersParams,
+      params: RequestParams = {},
+    ) =>
+      this.request<ResetRecordingCountersData, void>({
+        path: `/recordings/${documentId}/reset-counters`,
+        method: "POST",
+        secure: true,
         format: "json",
         ...params,
       }),

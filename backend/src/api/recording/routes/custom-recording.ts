@@ -15,5 +15,10 @@ export default {
       path: "/recordings/:documentId/report",
       handler: "recording.report",
     },
+    {
+      method: "POST",
+      path: "/recordings/:documentId/reset-counters",
+      handler: "recording.resetCounters",
+    },
   ],
 };

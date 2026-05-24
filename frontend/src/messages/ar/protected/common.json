@@ -49,7 +49,15 @@
     "deleteSources": "حذف المصادر",
     "deleteSourcesSuccess": "تم حذف {count} مصدر",
     "parts": "{count, plural, one {جزء واحد} other {# أجزاء}}",
-    "report": "الإبلاغ"
+    "report": "الإبلاغ",
+    "resetCounters": "إعادة تعيين العدادات",
+    "resetCountersSuccess": "تمت إعادة تعيين العدادات إلى 0",
+    "resetCountersConfirm": {
+      "title": "إعادة تعيين عدادات المشاهدات والتنزيلات",
+      "message": "سيؤدي هذا إلى إعادة تعيين المشاهدات والتنزيلات إلى 0 لهذا التسجيل. يتم الاحتفاظ بسجل من شاهد/نزّل في بيانات التتبع. متابعة؟",
+      "confirm": "إعادة تعيين",
+      "cancel": "إلغاء"
+    }
   },
   "followers": {
     "addedAgo_context": "For when a creator was added to user's list. Shows 'Added 3 days ago'",

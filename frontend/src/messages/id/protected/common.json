@@ -51,7 +51,15 @@
     "deleteSources": "Hapus sumber",
     "deleteSourcesSuccess": "{count} sumber dihapus",
     "parts": "{count, plural, one {# bagian} other {# bagian}}",
-    "report": "Laporkan"
+    "report": "Laporkan",
+    "resetCounters": "Reset penghitung",
+    "resetCountersSuccess": "Penghitung direset ke 0",
+    "resetCountersConfirm": {
+      "title": "Reset penghitung view dan download",
+      "message": "Ini akan mereset view dan download ke 0 untuk rekaman ini. Riwayat dipertahankan di data tracking. Lanjutkan?",
+      "confirm": "Reset",
+      "cancel": "Batal"
+    }
   },
   "followers": {
     "addedAgo_context": "Untuk kapan kreator ditambahkan ke daftar pengguna. Menampilkan 'Ditambahkan 3 hari lalu'",

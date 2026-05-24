@@ -51,7 +51,15 @@
     "editClip": "Modifica clip",
     "deleteSources": "Elimina sorgenti",
     "deleteSourcesSuccess": "Eliminate {count} sorgenti",
-    "report": "Segnala"
+    "report": "Segnala",
+    "resetCounters": "Reset contatori",
+    "resetCountersSuccess": "Contatori azzerati",
+    "resetCountersConfirm": {
+      "title": "Azzera contatori di views e download",
+      "message": "Questo azzera views e download di questa registrazione. Lo storico resta nei dati di tracciamento. Continuare?",
+      "confirm": "Azzera",
+      "cancel": "Annulla"
+    }
   },
   "followers": {
     "addedAgo_context": "For when a creator was added to user's list. Shows 'Added 3 days ago'",

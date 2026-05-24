@@ -51,7 +51,15 @@
     "deleteSources": "소스 삭제",
     "deleteSourcesSuccess": "{count}개 소스 삭제됨",
     "parts": "{count}파트",
-    "report": "신고"
+    "report": "신고",
+    "resetCounters": "카운터 초기화",
+    "resetCountersSuccess": "카운터를 0으로 초기화했습니다",
+    "resetCountersConfirm": {
+      "title": "조회수 및 다운로드 카운터 초기화",
+      "message": "이 녹화의 조회수와 다운로드를 0으로 초기화합니다. 누가 보고/다운로드했는지에 대한 기록은 추적 데이터에 보존됩니다. 계속하시겠습니까?",
+      "confirm": "초기화",
+      "cancel": "취소"
+    }
   },
   "followers": {
     "addedAgo_context": "크리에이터가 사용자 목록에 추가된 시점. '3일 전 추가됨'으로 표시됨",

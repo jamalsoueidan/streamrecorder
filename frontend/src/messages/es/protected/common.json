@@ -51,7 +51,15 @@
     "deleteSources": "Eliminar fuentes",
     "deleteSourcesSuccess": "{count} fuentes eliminadas",
     "parts": "{count, plural, one {# parte} other {# partes}}",
-    "report": "Reportar"
+    "report": "Reportar",
+    "resetCounters": "Restablecer contadores",
+    "resetCountersSuccess": "Contadores restablecidos a 0",
+    "resetCountersConfirm": {
+      "title": "Restablecer contadores de vistas y descargas",
+      "message": "Esto restablecerá las vistas y descargas a 0 para esta grabación. El historial se conserva en los datos de seguimiento. ¿Continuar?",
+      "confirm": "Restablecer",
+      "cancel": "Cancelar"
+    }
   },
   "followers": {
     "addedAgo_context": "Para cuando se agregó un creador a la lista del usuario. Muestra 'Agregado hace 3 días'",

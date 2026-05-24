@@ -20,7 +20,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2026-05-23T14:05:21.485Z"
+    "x-generation-date": "2026-05-24T11:04:16.685Z"
   },
   "servers": [
     {
@@ -13461,6 +13461,46 @@
           },
           "404": {
             "description": "Recording not found"
+          }
+        }
+      }
+    },
+    "/recordings/{documentId}/reset-counters": {
+      "post": {
+        "tags": [
+          "Recording"
+        ],
+        "operationId": "resetRecordingCounters",
+        "summary": "Reset views_count and downloads_count to 0",
+        "parameters": [
+          {
+            "name": "documentId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Recording documentId"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Counters reset",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": {
+                      "type": "boolean"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid documentId"
           }
         }
       }
