@@ -1297,6 +1297,44 @@ export default ({ env }) => ({
             },
           };
 
+          // Endpoint: POST /followers/{documentId}/block
+          draft.paths["/followers/{documentId}/block"] = {
+            post: {
+              tags: ["Follower"],
+              operationId: "blockFollower",
+              summary:
+                "Set follower.blocked=true and delete all their recordings + sources (admin/DMCA)",
+              parameters: [
+                {
+                  name: "documentId",
+                  in: "path",
+                  required: true,
+                  schema: { type: "string" },
+                  description: "Follower documentId",
+                },
+              ],
+              responses: {
+                "200": {
+                  description: "Blocked and purged",
+                  content: {
+                    "application/json": {
+                      schema: {
+                        type: "object",
+                        properties: {
+                          success: { type: "boolean" },
+                          deletedSources: { type: "integer" },
+                          deletedRecordings: { type: "integer" },
+                        },
+                      },
+                    },
+                  },
+                },
+                "400": { description: "Invalid documentId" },
+                "404": { description: "Follower not found" },
+              },
+            },
+          };
+
           // Endpoint: POST /followers/{documentId}/view
           draft.paths["/followers/{documentId}/view"] = {
             post: {

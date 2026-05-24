@@ -11699,6 +11699,17 @@ export interface ResetRecordingCountersData {
   success?: boolean;
 }
 
+export interface BlockFollowerParams {
+  /** Follower documentId */
+  documentId: string;
+}
+
+export interface BlockFollowerData {
+  success?: boolean;
+  deletedSources?: number;
+  deletedRecordings?: number;
+}
+
 export interface IncrementFollowerViewParams {
   /** Follower documentId */
   documentId: string;
@@ -13202,6 +13213,25 @@ export namespace Follower {
     export type RequestBody = UnfavoriteFollowerPayload;
     export type RequestHeaders = {};
     export type ResponseBody = UnfavoriteFollowerData;
+  }
+
+  /**
+   * No description
+   * @tags Follower
+   * @name BlockFollower
+   * @summary Set follower.blocked=true and delete all their recordings + sources (admin/DMCA)
+   * @request POST:/followers/{documentId}/block
+   * @secure
+   */
+  export namespace BlockFollower {
+    export type RequestParams = {
+      /** Follower documentId */
+      documentId: string;
+    };
+    export type RequestQuery = {};
+    export type RequestBody = never;
+    export type RequestHeaders = {};
+    export type ResponseBody = BlockFollowerData;
   }
 
   /**
@@ -16384,6 +16414,27 @@ export class Api<
         body: data,
         secure: true,
         type: ContentType.Json,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Follower
+     * @name BlockFollower
+     * @summary Set follower.blocked=true and delete all their recordings + sources (admin/DMCA)
+     * @request POST:/followers/{documentId}/block
+     * @secure
+     */
+    blockFollower: (
+      { documentId }: BlockFollowerParams,
+      params: RequestParams = {},
+    ) =>
+      this.request<BlockFollowerData, void>({
+        path: `/followers/${documentId}/block`,
+        method: "POST",
+        secure: true,
         format: "json",
         ...params,
       }),

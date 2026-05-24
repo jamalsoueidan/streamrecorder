@@ -64,48 +64,14 @@ export async function blockFollowerAndPurge(followerDocumentId: string) {
       return { success: false, error: "FORBIDDEN" };
     }
 
-    // 1. Flag the follower as blocked (across all locales)
-    await publicApi.follower.putFollowersId(
-      { id: followerDocumentId },
-      { data: { blocked: true } as any },
-    );
-
-    // 2. Fetch all recordings for this follower with their source documentIds
-    const { data: recResponse } = await publicApi.recording.getRecordings({
-      filters: { follower: { documentId: { $eq: followerDocumentId } } } as any,
-      populate: { sources: { fields: ["documentId"] } } as any,
-      "pagination[pageSize]": 1000,
+    const { data } = await publicApi.follower.blockFollower({
+      documentId: followerDocumentId,
     });
-
-    const recordings = (recResponse?.data || []) as Array<{
-      documentId?: string;
-      sources?: Array<{ documentId?: string }>;
-    }>;
-
-    const sourceIds = recordings
-      .flatMap((r) => r.sources || [])
-      .map((s) => s.documentId)
-      .filter((id): id is string => !!id);
-
-    const recordingIds = recordings
-      .map((r) => r.documentId)
-      .filter((id): id is string => !!id);
-
-    // 3. Delete all sources first (so storage files get cleaned up),
-    //    then delete the recording rows so nothing is left orphaned.
-    await Promise.all(
-      sourceIds.map((id) => publicApi.source.deleteSourcesId({ id })),
-    );
-    await Promise.all(
-      recordingIds.map((id) =>
-        publicApi.recording.deleteRecordingsId({ id }),
-      ),
-    );
 
     return {
       success: true,
-      deletedSources: sourceIds.length,
-      deletedRecordings: recordingIds.length,
+      deletedSources: (data as any)?.deletedSources ?? 0,
+      deletedRecordings: (data as any)?.deletedRecordings ?? 0,
     };
   } catch (error) {
     console.error("Error blocking follower:", error);

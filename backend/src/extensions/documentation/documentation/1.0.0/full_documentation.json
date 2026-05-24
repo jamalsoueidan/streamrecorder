@@ -20,7 +20,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2026-05-24T11:04:16.685Z"
+    "x-generation-date": "2026-05-24T11:20:08.704Z"
   },
   "servers": [
     {
@@ -13501,6 +13501,55 @@
           },
           "400": {
             "description": "Invalid documentId"
+          }
+        }
+      }
+    },
+    "/followers/{documentId}/block": {
+      "post": {
+        "tags": [
+          "Follower"
+        ],
+        "operationId": "blockFollower",
+        "summary": "Set follower.blocked=true and delete all their recordings + sources (admin/DMCA)",
+        "parameters": [
+          {
+            "name": "documentId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Follower documentId"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Blocked and purged",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": {
+                      "type": "boolean"
+                    },
+                    "deletedSources": {
+                      "type": "integer"
+                    },
+                    "deletedRecordings": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid documentId"
+          },
+          "404": {
+            "description": "Follower not found"
           }
         }
       }

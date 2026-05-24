@@ -767,6 +767,57 @@ export default factories.createCoreController(
 
       return { success: true };
     },
+    async blockAndPurge(ctx) {
+      const { documentId } = ctx.params;
+      if (!documentId || typeof documentId !== "string") {
+        return ctx.badRequest("INVALID_DOCUMENT_ID");
+      }
+
+      const knex = strapi.db.connection;
+
+      // Look up the follower's numeric id from any locale row
+      const followerRow = await knex("followers")
+        .where({ document_id: documentId })
+        .first("id");
+
+      if (!followerRow) return ctx.notFound("FOLLOWER_NOT_FOUND");
+
+      let deletedSources = 0;
+      let deletedRecordings = 0;
+
+      await knex.transaction(async (trx) => {
+        // 1. Flag follower as blocked across all locale rows
+        await trx("followers")
+          .where({ document_id: documentId })
+          .update({ blocked: true });
+
+        // 2. Find recording ids linked to this follower
+        const recordingRows = await trx("recordings_follower_lnk")
+          .where({ follower_id: followerRow.id })
+          .pluck("recording_id");
+
+        if (recordingRows.length === 0) return;
+
+        // 3. Find source ids linked to those recordings
+        const sourceRows = await trx("sources_recording_lnk")
+          .whereIn("recording_id", recordingRows)
+          .pluck("source_id");
+
+        // 4. Delete sources (link rows cascade via FK)
+        if (sourceRows.length > 0) {
+          deletedSources = await trx("sources")
+            .whereIn("id", sourceRows)
+            .del();
+        }
+
+        // 5. Delete the recordings themselves
+        deletedRecordings = await trx("recordings")
+          .whereIn("id", recordingRows)
+          .del();
+      });
+
+      return { success: true, deletedSources, deletedRecordings };
+    },
     async unpauseMyFollowers(ctx) {
       const user = ctx.state.user;
       if (!user) return ctx.unauthorized();
