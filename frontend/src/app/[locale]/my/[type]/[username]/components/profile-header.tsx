@@ -84,14 +84,24 @@ export function ProfileHeader({
                   ...(isRecording ? { border: "3px solid red" } : {}),
                 }}
               >
-                {follower.avatar?.url && (
+                {follower.blocked ? (
                   <Image
-                    src={generateAvatarUrl(follower.avatar)}
-                    alt={"Avatar"}
+                    src="/icons/icon-192.png"
+                    alt="Avatar"
                     width={120}
                     height={120}
                     loading="lazy"
                   />
+                ) : (
+                  follower.avatar?.url && (
+                    <Image
+                      src={generateAvatarUrl(follower.avatar)}
+                      alt={"Avatar"}
+                      width={120}
+                      height={120}
+                      loading="lazy"
+                    />
+                  )
                 )}
               </Avatar>
               {follower.type && (
@@ -190,14 +200,24 @@ export function ProfileHeader({
                   ...(isRecording ? { border: "3px solid red" } : {}),
                 }}
               >
-                {follower.avatar?.url && (
+                {follower.blocked ? (
                   <Image
-                    src={generateAvatarUrl(follower.avatar)}
-                    alt={"Avatar"}
+                    src="/icons/icon-192.png"
+                    alt="Avatar"
                     width={80}
                     height={80}
                     loading="lazy"
                   />
+                ) : (
+                  follower.avatar?.url && (
+                    <Image
+                      src={generateAvatarUrl(follower.avatar)}
+                      alt={"Avatar"}
+                      width={80}
+                      height={80}
+                      loading="lazy"
+                    />
+                  )
                 )}
               </Avatar>
               {follower.type && (

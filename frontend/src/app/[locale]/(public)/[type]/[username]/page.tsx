@@ -274,14 +274,24 @@ export default async function Page({ params }: PageProps) {
                 },
               }}
             >
-              {follower.avatar?.url && (
+              {follower.blocked ? (
                 <Image
-                  src={generateAvatarUrl(follower.avatar)}
+                  src="/icons/icon-192.png"
                   alt={creatorName}
                   width={100}
                   height={100}
                   priority
                 />
+              ) : (
+                follower.avatar?.url && (
+                  <Image
+                    src={generateAvatarUrl(follower.avatar)}
+                    alt={creatorName}
+                    width={100}
+                    height={100}
+                    priority
+                  />
+                )
               )}
             </Avatar>
 
