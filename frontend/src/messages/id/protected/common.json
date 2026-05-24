@@ -59,7 +59,8 @@
       "message": "Ini akan mereset view dan download ke 0 untuk rekaman ini. Riwayat dipertahankan di data tracking. Lanjutkan?",
       "confirm": "Reset",
       "cancel": "Batal"
-    }
+    },
+    "resetCountersFailed": "Gagal mereset penghitung"
   },
   "followers": {
     "addedAgo_context": "Untuk kapan kreator ditambahkan ke daftar pengguna. Menampilkan 'Ditambahkan 3 hari lalu'",

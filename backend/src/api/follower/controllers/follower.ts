@@ -775,7 +775,6 @@ export default factories.createCoreController(
 
       const knex = strapi.db.connection;
 
-      // Look up the follower's numeric id from any locale row
       const followerRow = await knex("followers")
         .where({ document_id: documentId })
         .first("id");
@@ -786,33 +785,48 @@ export default factories.createCoreController(
       let deletedRecordings = 0;
 
       await knex.transaction(async (trx) => {
-        // 1. Flag follower as blocked across all locale rows
+        // 1. Flag blocked (field is non-i18n, so this propagates across locales)
         await trx("followers")
           .where({ document_id: documentId })
           .update({ blocked: true });
 
-        // 2. Find recording ids linked to this follower
-        const recordingRows = await trx("recordings_follower_lnk")
+        // 2. Find recording numeric ids linked to this follower
+        const linkedRecordingIds: number[] = await trx(
+          "recordings_follower_lnk",
+        )
           .where({ follower_id: followerRow.id })
           .pluck("recording_id");
 
-        if (recordingRows.length === 0) return;
+        if (linkedRecordingIds.length === 0) return;
 
-        // 3. Find source ids linked to those recordings
-        const sourceRows = await trx("sources_recording_lnk")
-          .whereIn("recording_id", recordingRows)
+        // 3. Sources are SHARED across the recording's locale rows, so we can
+        //    pull source ids directly from the linked recording ids — no need
+        //    to fan out across locales first.
+        const sourceIds: number[] = await trx("sources_recording_lnk")
+          .whereIn("recording_id", linkedRecordingIds)
           .pluck("source_id");
 
-        // 4. Delete sources (link rows cascade via FK)
-        if (sourceRows.length > 0) {
+        // 4. Recording IS i18n though — each documentId has one row per locale.
+        //    Fan out via document_id to collect every locale row for deletion.
+        const recordingDocIds: string[] = await trx("recordings")
+          .whereIn("id", linkedRecordingIds)
+          .distinct("document_id")
+          .pluck("document_id");
+
+        const allRecordingIds: number[] = await trx("recordings")
+          .whereIn("document_id", recordingDocIds)
+          .pluck("id");
+
+        // 5. Delete sources once (link rows cascade via FK)
+        if (sourceIds.length > 0) {
           deletedSources = await trx("sources")
-            .whereIn("id", sourceRows)
+            .whereIn("id", sourceIds)
             .del();
         }
 
-        // 5. Delete the recordings themselves
+        // 6. Delete every locale row of every recording
         deletedRecordings = await trx("recordings")
-          .whereIn("id", recordingRows)
+          .whereIn("id", allRecordingIds)
           .del();
       });
 

@@ -59,7 +59,8 @@
       "message": "这将把此录制的观看和下载次数重置为 0。谁观看/下载的历史记录会保留在跟踪数据中。继续吗?",
       "confirm": "重置",
       "cancel": "取消"
-    }
+    },
+    "resetCountersFailed": "重置计数器失败"
   },
   "followers": {
     "addedAgo_context": "创作者被添加到用户列表时显示。例：3 天前添加",

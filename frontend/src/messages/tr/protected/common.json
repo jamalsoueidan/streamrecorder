@@ -59,7 +59,8 @@
       "message": "Bu, kaydın görüntüleme ve indirme sayısını 0 olarak sıfırlar. Kim görüntüledi/indirdi geçmişi takip verilerinde korunur. Devam edilsin mi?",
       "confirm": "Sıfırla",
       "cancel": "İptal"
-    }
+    },
+    "resetCountersFailed": "Sayaçlar sıfırlanamadı"
   },
   "followers": {
     "addedAgo_context": "For when a creator was added to user's list. Shows 'Added 3 days ago'",

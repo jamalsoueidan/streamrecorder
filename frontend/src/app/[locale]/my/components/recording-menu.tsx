@@ -140,6 +140,12 @@ export function RecordingMenu({
               queryKey: ["recordings", username, type],
             });
           }
+        } else {
+          notifications.show({
+            title: t("resetCountersFailed"),
+            message: result.error ?? null,
+            color: "red",
+          });
         }
       },
     });

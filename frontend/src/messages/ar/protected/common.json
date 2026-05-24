@@ -57,7 +57,8 @@
       "message": "سيؤدي هذا إلى إعادة تعيين المشاهدات والتنزيلات إلى 0 لهذا التسجيل. يتم الاحتفاظ بسجل من شاهد/نزّل في بيانات التتبع. متابعة؟",
       "confirm": "إعادة تعيين",
       "cancel": "إلغاء"
-    }
+    },
+    "resetCountersFailed": "فشل إعادة تعيين العدادات"
   },
   "followers": {
     "addedAgo_context": "For when a creator was added to user's list. Shows 'Added 3 days ago'",

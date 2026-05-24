@@ -59,7 +59,8 @@
       "message": "Dies setzt Aufrufe und Downloads dieser Aufnahme auf 0 zurück. Der Verlauf bleibt in den Tracking-Daten erhalten. Fortfahren?",
       "confirm": "Zurücksetzen",
       "cancel": "Abbrechen"
-    }
+    },
+    "resetCountersFailed": "Zurücksetzen der Zähler fehlgeschlagen"
   },
   "followers": {
     "addedAgo_context": "Wann ein Creator zur Liste hinzugefügt wurde. Z. B. Hinzugefügt vor 3 Tagen.",

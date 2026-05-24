@@ -59,7 +59,8 @@
       "message": "การดำเนินการนี้จะรีเซ็ตการดูและดาวน์โหลดของการบันทึกนี้เป็น 0 ประวัติของผู้ที่ดู/ดาวน์โหลดจะยังคงอยู่ในข้อมูลการติดตาม ดำเนินการต่อหรือไม่?",
       "confirm": "รีเซ็ต",
       "cancel": "ยกเลิก"
-    }
+    },
+    "resetCountersFailed": "รีเซ็ตตัวนับล้มเหลว"
   },
   "followers": {
     "addedAgo_context": "For when a creator was added to user's list. Shows 'Added 3 days ago'",

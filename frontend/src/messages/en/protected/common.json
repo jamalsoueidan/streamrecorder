@@ -59,7 +59,8 @@
       "message": "This will reset views and downloads to 0 for this recording. The history of who viewed/downloaded is preserved in tracking data. Continue?",
       "confirm": "Reset",
       "cancel": "Cancel"
-    }
+    },
+    "resetCountersFailed": "Failed to reset counters"
   },
   "followers": {
     "addedAgo_context": "For when a creator was added to user's list. Shows 'Added 3 days ago'",

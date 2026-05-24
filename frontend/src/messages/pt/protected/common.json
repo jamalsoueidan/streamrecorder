@@ -59,7 +59,8 @@
       "message": "Isto redefine as visualizações e downloads para 0 nesta gravação. O histórico é preservado nos dados de rastreamento. Continuar?",
       "confirm": "Redefinir",
       "cancel": "Cancelar"
-    }
+    },
+    "resetCountersFailed": "Falha ao redefinir os contadores"
   },
   "followers": {
     "addedAgo_context": "Para quando o criador foi adicionado à lista do usuário. Exibe 'Adicionado há 3 dias'",

@@ -59,7 +59,8 @@
       "message": "Esto restablecerá las vistas y descargas a 0 para esta grabación. El historial se conserva en los datos de seguimiento. ¿Continuar?",
       "confirm": "Restablecer",
       "cancel": "Cancelar"
-    }
+    },
+    "resetCountersFailed": "Error al restablecer los contadores"
   },
   "followers": {
     "addedAgo_context": "Para cuando se agregó un creador a la lista del usuario. Muestra 'Agregado hace 3 días'",
