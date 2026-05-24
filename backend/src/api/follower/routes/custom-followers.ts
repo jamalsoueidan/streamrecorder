@@ -55,5 +55,10 @@ export default {
       path: "/followers/:documentId/view",
       handler: "follower.incrementView",
     },
+    {
+      method: "POST",
+      path: "/followers/:documentId/block",
+      handler: "follower.blockAndPurge",
+    },
   ],
 };

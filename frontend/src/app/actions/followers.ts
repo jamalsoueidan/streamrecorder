@@ -53,6 +53,32 @@ export async function updateFollower(documentId: string, data: any) {
   await api.follower.putFollowersId({ id: documentId }, { data });
 }
 
+export async function blockFollowerAndPurge(followerDocumentId: string) {
+  try {
+    const userResponse =
+      await api.usersPermissionsUsersRoles.getUsersPermissionsUsersRoles({
+        populate: { role: { fields: ["type"] } },
+      });
+    const roleType = (userResponse?.data as any)?.role?.type;
+    if (roleType !== "admin") {
+      return { success: false, error: "FORBIDDEN" };
+    }
+
+    const { data } = await publicApi.follower.blockFollower({
+      documentId: followerDocumentId,
+    });
+
+    return {
+      success: true,
+      deletedSources: (data as any)?.deletedSources ?? 0,
+      deletedRecordings: (data as any)?.deletedRecordings ?? 0,
+    };
+  } catch (error) {
+    console.error("Error blocking follower:", error);
+    return { success: false, error: "Failed to block follower" };
+  }
+}
+
 export async function getFollowerFilters(type?: FollowerTypeEnum) {
   const { data: filtersData } = await publicApi.follower.getFollowerFilters(
     type ? { type } : { type: undefined },

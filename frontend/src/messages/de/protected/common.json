@@ -51,7 +51,16 @@
     "editClip": "Clip bearbeiten",
     "deleteSources": "Quellen löschen",
     "deleteSourcesSuccess": "{count} Quellen gelöscht",
-    "report": "Melden"
+    "report": "Melden",
+    "resetCounters": "Zähler zurücksetzen",
+    "resetCountersSuccess": "Zähler auf 0 zurückgesetzt",
+    "resetCountersConfirm": {
+      "title": "Aufruf- und Download-Zähler zurücksetzen",
+      "message": "Dies setzt Aufrufe und Downloads dieser Aufnahme auf 0 zurück. Der Verlauf bleibt in den Tracking-Daten erhalten. Fortfahren?",
+      "confirm": "Zurücksetzen",
+      "cancel": "Abbrechen"
+    },
+    "resetCountersFailed": "Zurücksetzen der Zähler fehlgeschlagen"
   },
   "followers": {
     "addedAgo_context": "Wann ein Creator zur Liste hinzugefügt wurde. Z. B. Hinzugefügt vor 3 Tagen.",

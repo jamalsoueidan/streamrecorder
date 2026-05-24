@@ -141,6 +141,30 @@ export async function deleteRecordingSources(
   }
 }
 
+export async function resetRecordingCounters(
+  recordingDocumentId: string,
+): Promise<ActionResult> {
+  try {
+    const userResponse =
+      await api.usersPermissionsUsersRoles.getUsersPermissionsUsersRoles({
+        populate: { role: { fields: ["type"] } },
+      });
+    const roleType = (userResponse?.data as any)?.role?.type;
+    if (roleType !== "admin") {
+      return { success: false, error: "FORBIDDEN" };
+    }
+
+    await publicApi.recording.resetRecordingCounters({
+      documentId: recordingDocumentId,
+    });
+
+    return { success: true };
+  } catch (error) {
+    console.error("Error resetting recording counters:", error);
+    return { success: false, error: "Failed to reset counters" };
+  }
+}
+
 export async function toggleHidden(
   recordingDocumentId: string,
   currentlyHidden: boolean,

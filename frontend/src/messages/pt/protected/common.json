@@ -51,7 +51,16 @@
     "deleteSources": "Excluir fontes",
     "deleteSourcesSuccess": "{count} fontes excluídas",
     "parts": "{count, plural, one {# parte} other {# partes}}",
-    "report": "Denunciar"
+    "report": "Denunciar",
+    "resetCounters": "Redefinir contadores",
+    "resetCountersSuccess": "Contadores redefinidos para 0",
+    "resetCountersConfirm": {
+      "title": "Redefinir contadores de visualizações e downloads",
+      "message": "Isto redefine as visualizações e downloads para 0 nesta gravação. O histórico é preservado nos dados de rastreamento. Continuar?",
+      "confirm": "Redefinir",
+      "cancel": "Cancelar"
+    },
+    "resetCountersFailed": "Falha ao redefinir os contadores"
   },
   "followers": {
     "addedAgo_context": "Para quando o criador foi adicionado à lista do usuário. Exibe 'Adicionado há 3 dias'",

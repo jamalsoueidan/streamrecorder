@@ -51,7 +51,16 @@
     "editClip": "แก้ไขคลิป",
     "deleteSources": "ลบไฟล์ต้นฉบับ",
     "deleteSourcesSuccess": "ลบ {count} ไฟล์แล้ว",
-    "report": "รายงาน"
+    "report": "รายงาน",
+    "resetCounters": "รีเซ็ตตัวนับ",
+    "resetCountersSuccess": "รีเซ็ตตัวนับเป็น 0 แล้ว",
+    "resetCountersConfirm": {
+      "title": "รีเซ็ตตัวนับการดูและดาวน์โหลด",
+      "message": "การดำเนินการนี้จะรีเซ็ตการดูและดาวน์โหลดของการบันทึกนี้เป็น 0 ประวัติของผู้ที่ดู/ดาวน์โหลดจะยังคงอยู่ในข้อมูลการติดตาม ดำเนินการต่อหรือไม่?",
+      "confirm": "รีเซ็ต",
+      "cancel": "ยกเลิก"
+    },
+    "resetCountersFailed": "รีเซ็ตตัวนับล้มเหลว"
   },
   "followers": {
     "addedAgo_context": "For when a creator was added to user's list. Shows 'Added 3 days ago'",

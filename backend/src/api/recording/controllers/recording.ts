@@ -183,5 +183,18 @@ export default factories.createCoreController(
 
       return { success: true };
     },
+    async resetCounters(ctx) {
+      const { documentId } = ctx.params;
+      if (!documentId || typeof documentId !== "string") {
+        return ctx.badRequest("INVALID_DOCUMENT_ID");
+      }
+
+      await strapi.db.connection.raw(
+        "UPDATE recordings SET views_count = 0, downloads_count = 0 WHERE document_id = ?",
+        [documentId],
+      );
+
+      return { success: true };
+    },
   }),
 );

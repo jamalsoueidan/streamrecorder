@@ -51,7 +51,16 @@
     "editClip": "Modifier le clip",
     "deleteSources": "Supprimer les sources",
     "deleteSourcesSuccess": "{count} sources supprimées",
-    "report": "Signaler"
+    "report": "Signaler",
+    "resetCounters": "Réinitialiser les compteurs",
+    "resetCountersSuccess": "Compteurs réinitialisés à 0",
+    "resetCountersConfirm": {
+      "title": "Réinitialiser les compteurs de vues et téléchargements",
+      "message": "Cela remet à 0 les vues et téléchargements de cet enregistrement. L'historique est conservé dans les données de tracking. Continuer ?",
+      "confirm": "Réinitialiser",
+      "cancel": "Annuler"
+    },
+    "resetCountersFailed": "Échec de la réinitialisation des compteurs"
   },
   "followers": {
     "addedAgo_context": "Quand un créateur a été ajouté à ta liste. Ex. « Ajouté il y a 3 jours ».",

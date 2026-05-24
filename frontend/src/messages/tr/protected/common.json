@@ -51,7 +51,16 @@
     "deleteSources": "Kaynakları sil",
     "deleteSourcesSuccess": "{count} kaynak silindi",
     "parts": "{count, plural, one {# bölüm} other {# bölüm}}",
-    "report": "Şikayet Et"
+    "report": "Şikayet Et",
+    "resetCounters": "Sayaçları sıfırla",
+    "resetCountersSuccess": "Sayaçlar 0 olarak sıfırlandı",
+    "resetCountersConfirm": {
+      "title": "Görüntüleme ve indirme sayaçlarını sıfırla",
+      "message": "Bu, kaydın görüntüleme ve indirme sayısını 0 olarak sıfırlar. Kim görüntüledi/indirdi geçmişi takip verilerinde korunur. Devam edilsin mi?",
+      "confirm": "Sıfırla",
+      "cancel": "İptal"
+    },
+    "resetCountersFailed": "Sayaçlar sıfırlanamadı"
   },
   "followers": {
     "addedAgo_context": "For when a creator was added to user's list. Shows 'Added 3 days ago'",

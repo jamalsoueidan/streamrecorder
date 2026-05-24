@@ -51,7 +51,16 @@
     "editClip": "编辑片段",
     "deleteSources": "删除源文件",
     "deleteSourcesSuccess": "已删除 {count} 个源文件",
-    "report": "举报"
+    "report": "举报",
+    "resetCounters": "重置计数器",
+    "resetCountersSuccess": "计数器已重置为 0",
+    "resetCountersConfirm": {
+      "title": "重置观看和下载计数器",
+      "message": "这将把此录制的观看和下载次数重置为 0。谁观看/下载的历史记录会保留在跟踪数据中。继续吗?",
+      "confirm": "重置",
+      "cancel": "取消"
+    },
+    "resetCountersFailed": "重置计数器失败"
   },
   "followers": {
     "addedAgo_context": "创作者被添加到用户列表时显示。例：3 天前添加",

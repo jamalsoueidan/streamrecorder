@@ -51,7 +51,16 @@
     "deleteSources": "ソースを削除",
     "deleteSourcesSuccess": "{count} 件のソースを削除しました",
     "parts": "{count}パート",
-    "report": "報告"
+    "report": "報告",
+    "resetCounters": "カウンターをリセット",
+    "resetCountersSuccess": "カウンターを 0 にリセットしました",
+    "resetCountersConfirm": {
+      "title": "視聴・ダウンロードカウンターをリセット",
+      "message": "この録画の視聴数とダウンロード数を 0 にリセットします。誰が視聴/ダウンロードしたかの履歴はトラッキングデータに保持されます。続行しますか?",
+      "confirm": "リセット",
+      "cancel": "キャンセル"
+    },
+    "resetCountersFailed": "カウンターのリセットに失敗しました"
   },
   "followers": {
     "addedAgo_context": "クリエイターがリストに追加された日時を示します。「3 日前に追加」のように表示されます",

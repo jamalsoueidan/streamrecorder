@@ -4,6 +4,7 @@ import { downloadRecording } from "@/app/actions/download-recording";
 import {
   deleteRecording,
   deleteRecordingSources,
+  resetRecordingCounters,
   toggleHidden,
 } from "@/app/actions/recording";
 import { useDownloaded } from "@/app/hooks/use-downloaded";
@@ -23,6 +24,7 @@ import {
   IconEyeOff,
   IconFlag,
   IconMail,
+  IconRefresh,
   IconScissors,
   IconSparkles,
   IconTrash,
@@ -113,6 +115,40 @@ export function RecordingMenu({
         });
       }
     }
+  };
+
+  const handleResetCounters = () => {
+    if (!recording.documentId) return;
+    modals.openConfirmModal({
+      title: t("resetCountersConfirm.title"),
+      children: <Text size="sm">{t("resetCountersConfirm.message")}</Text>,
+      labels: {
+        confirm: t("resetCountersConfirm.confirm"),
+        cancel: t("resetCountersConfirm.cancel"),
+      },
+      confirmProps: { color: "orange" },
+      onConfirm: async () => {
+        const result = await resetRecordingCounters(recording.documentId!);
+        if (result.success) {
+          notifications.show({
+            title: t("resetCountersSuccess"),
+            message: null,
+            color: "green",
+          });
+          if (username && type) {
+            queryClient.invalidateQueries({
+              queryKey: ["recordings", username, type],
+            });
+          }
+        } else {
+          notifications.show({
+            title: t("resetCountersFailed"),
+            message: result.error ?? null,
+            color: "red",
+          });
+        }
+      },
+    });
   };
 
   const handleToggleHidden = async () => {
@@ -279,6 +315,15 @@ export function RecordingMenu({
               onClick={handleDelete}
             >
               {t("delete")}
+            </Menu.Item>
+          )}
+          {user?.role?.type === "admin" && (
+            <Menu.Item
+              color="orange"
+              leftSection={<IconRefresh />}
+              onClick={handleResetCounters}
+            >
+              {t("resetCounters")}
             </Menu.Item>
           )}
           {user?.role?.type === "admin" && (

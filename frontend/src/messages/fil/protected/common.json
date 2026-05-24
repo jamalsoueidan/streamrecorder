@@ -51,7 +51,16 @@
     "editClip": "I-edit ang Clip",
     "deleteSources": "Burahin ang sources",
     "deleteSourcesSuccess": "{count} sources ang nabura",
-    "report": "Mag-report"
+    "report": "Mag-report",
+    "resetCounters": "I-reset ang counters",
+    "resetCountersSuccess": "Na-reset ang counters sa 0",
+    "resetCountersConfirm": {
+      "title": "I-reset ang views at downloads counters",
+      "message": "Ire-reset nito ang views at downloads sa 0 para sa recording na ito. Ang history ng nag-view/download ay naka-preserve sa tracking data. Tuloy?",
+      "confirm": "I-reset",
+      "cancel": "Kanselahin"
+    },
+    "resetCountersFailed": "Hindi na-reset ang counters"
   },
   "followers": {
     "addedAgo_context": "For when a creator was added to user's list. Shows 'Added 3 days ago'",
