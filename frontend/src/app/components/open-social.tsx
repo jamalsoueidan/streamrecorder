@@ -34,6 +34,9 @@ export const SOCIAL_URL_PATTERNS: Partial<
   [FollowerTypeEnum.Live17]: (username) =>
     `https://17.live/en-US/profile/r/${username}`,
   [FollowerTypeEnum.Kwai]: (username) => `https://www.kwai.com/@${username}`,
+  [FollowerTypeEnum.Nimotv]: (username) =>
+    `https://www.nimo.tv/live/${username}`,
+  [FollowerTypeEnum.Vklive]: (username) => `https://live.vkvideo.ru/${username}`,
 };
 
 export const URL_PATTERNS: Partial<Record<FollowerTypeEnum, UrlPattern>> = {
@@ -54,6 +57,8 @@ export const URL_PATTERNS: Partial<Record<FollowerTypeEnum, UrlPattern>> = {
   [FollowerTypeEnum.Joilive]: (username) => `/joilive/${username}`,
   [FollowerTypeEnum.Live17]: (username) => `/live17/${username}`,
   [FollowerTypeEnum.Kwai]: (username) => `/kwai/${username}`,
+  [FollowerTypeEnum.Nimotv]: (username) => `/nimotv/${username}`,
+  [FollowerTypeEnum.Vklive]: (username) => `/vklive/${username}`,
 };
 
 export const getSocialUrl = (

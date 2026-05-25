@@ -29,7 +29,9 @@
     "trovo": "Trovo creators",
     "joilive": "Joilive creators",
     "live17": "17live creators",
-    "kwai": "Kwai creators"
+    "kwai": "Kwai creators",
+    "nimotv": "NimoTV creators",
+    "vklive": "VK Live creators"
   },
   "watchRecordings": {
     "title": "Manood ng Recordings",
@@ -48,7 +50,9 @@
     "trovo": "Trovo recordings",
     "joilive": "Joilive recordings",
     "live17": "17live recordings",
-    "kwai": "Kwai recordings"
+    "kwai": "Kwai recordings",
+    "nimotv": "NimoTV recordings",
+    "vklive": "VK Live recordings"
   },
   "legal": {
     "title": "Legal",

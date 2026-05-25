@@ -19,7 +19,9 @@
       "twitcast": "TwitCasting 创作者",
       "joilive": "Joilive 主播",
       "live17": "17live 主播",
-      "kwai": "Kwai 主播"
+      "kwai": "Kwai 主播",
+      "nimotv": "NimoTV 主播",
+      "vklive": "VK Live 主播"
     },
     "subtitle": {
       "all": "浏览所有主播和创作者",
@@ -37,7 +39,9 @@
       "twitcast": "发现 TwitCasting 创作者",
       "joilive": "发现 Joilive 主播",
       "live17": "发现 17live 主播",
-      "kwai": "发现 Kwai 主播"
+      "kwai": "发现 Kwai 主播",
+      "nimotv": "发现 NimoTV 主播",
+      "vklive": "发现 VK Live 主播"
     }
   },
   "recordings": {
@@ -57,7 +61,9 @@
       "twitcast": "TwitCasting 录制",
       "joilive": "Joilive 录制",
       "live17": "17live 录制",
-      "kwai": "Kwai 录制"
+      "kwai": "Kwai 录制",
+      "nimotv": "NimoTV 录制",
+      "vklive": "VK Live 录制"
     },
     "subtitle": {
       "all": "观看直播录像",
@@ -75,7 +81,9 @@
       "twitcast": "观看 TwitCasting 直播录像",
       "joilive": "观看 Joilive 直播录像",
       "live17": "观看 17live 直播录像",
-      "kwai": "观看 Kwai 直播录像"
+      "kwai": "观看 Kwai 直播录像",
+      "nimotv": "观看 NimoTV 直播录像",
+      "vklive": "观看 VK Live 直播录像"
     }
   },
   "home": {

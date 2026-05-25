@@ -19,7 +19,9 @@
       "trovo": "Trovo Streamers",
       "joilive": "Joilive Streamers",
       "live17": "17live Streamers",
-      "kwai": "Kwai Creators"
+      "kwai": "Kwai Creators",
+      "nimotv": "NimoTV Creators",
+      "vklive": "VK Live Creators"
     },
     "subtitle": {
       "all": "Tingnan lahat ng streamers at creators",
@@ -37,7 +39,9 @@
       "trovo": "Tuklasin ang mga Trovo streamer",
       "joilive": "Tuklasin ang mga Joilive streamer",
       "live17": "Tuklasin ang mga 17live streamer",
-      "kwai": "Tuklasin ang mga Kwai creator"
+      "kwai": "Tuklasin ang mga Kwai creator",
+      "nimotv": "Tuklasin ang mga NimoTV creator",
+      "vklive": "Tuklasin ang mga VK Live creator"
     }
   },
   "recordings": {
@@ -57,7 +61,9 @@
       "trovo": "Trovo Recordings",
       "joilive": "Joilive Recordings",
       "live17": "17live Recordings",
-      "kwai": "Kwai Recordings"
+      "kwai": "Kwai Recordings",
+      "nimotv": "NimoTV Recordings",
+      "vklive": "VK Live Recordings"
     },
     "subtitle": {
       "all": "Panoorin ang mga recorded live stream",
@@ -75,7 +81,9 @@
       "trovo": "Panoorin ang mga recorded Trovo stream",
       "joilive": "Panoorin ang mga recorded Joilive stream",
       "live17": "Panoorin ang mga recorded 17live stream",
-      "kwai": "Panoorin ang mga recorded Kwai live stream"
+      "kwai": "Panoorin ang mga recorded Kwai live stream",
+      "nimotv": "Panoorin ang mga recorded NimoTV live stream",
+      "vklive": "Panoorin ang mga recorded VK Live live stream"
     }
   },
   "home": {

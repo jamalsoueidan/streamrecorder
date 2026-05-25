@@ -391,6 +391,102 @@
           "answer": "نعم — يستطيع المستخدمون المميّزون تنزيل ملف فيديو HEVC الخام من كل تسجيل. مفيد لإعادة النشر على YouTube كمحتوى طويل، أو إعادة التحرير في تجميعات، أو الأرشفة المحلية."
         }
       ]
+    },
+    "nimotv": {
+      "title": "NimoTV Creators — Mobile Esports Streamers from Brazil, Indonesia, and Beyond",
+      "description": "NimoTV is the international mobile-esports streaming platform spun out from Tencent (launched 2018). Mobile Legends, Free Fire, PUBG Mobile, and COD Mobile dominate the catalog, with huge audiences in Brazil, Indonesia, Thailand, Mexico, and Peru. LiveStreamRecorder catches every ranked grind, scrim, and tournament run from NimoTV's phone-only creators before they vanish.",
+      "keywords": [
+        "nimotv creator",
+        "nimotv streamer brazil",
+        "nimotv streamer indonesia",
+        "nimotv mobile legends streamer",
+        "nimotv free fire creator",
+        "nimotv pubg mobile",
+        "nimotv cod mobile",
+        "nimotv mlbb live",
+        "find nimotv creators by name",
+        "nimotv archive",
+        "save my nimotv live",
+        "nimotv creator page outside app"
+      ],
+      "faqs": [
+        {
+          "question": "I stream Mobile Legends on NimoTV from my phone — does this work without OBS or a PC?",
+          "answer": "Yes, that's exactly the case we built it for. Most NimoTV creators are phone-only — no PC, no OBS, no capture card. LiveStreamRecorder captures your NimoTV broadcast server-side, so you broadcast on the NimoTV app like always and the recording happens in our cloud. Your phone doesn't run anything extra, no battery hit during the ranked grind."
+        },
+        {
+          "question": "My MLBB ranked sessions can run 4+ hours. Are they all saved in full?",
+          "answer": "Yes — every NimoTV Live you broadcast is captured in full length, no caps. Ranked grinds, scrim sessions, tournament-quality runs — all saved on your creator page so you can rewatch a clutch play or pull a specific match for analysis later."
+        },
+        {
+          "question": "I stream Free Fire / PUBG Mobile to a Brazilian/Indonesian audience — how does LiveStreamRecorder help me reach more people?",
+          "answer": "NimoTV is strong in LatAm and SE Asia but largely invisible outside those communities. Your LiveStreamRecorder creator page is a public web URL that fans on TikTok, YouTube, or Discord can open without installing the NimoTV app. ClipAI cuts highlight clips formatted for vertical short-form so you can post your best plays on TikTok, Reels, and Shorts — and bring those viewers back to your NimoTV channel."
+        },
+        {
+          "question": "How do I become a NimoTV creator on LiveStreamRecorder?",
+          "answer": "Sign up free, add your NimoTV username — that's the entire setup. From your next stream onwards, every NimoTV Live is recorded automatically to your creator page. No app, no plugin, no scheduling."
+        },
+        {
+          "question": "Can fans browse a list of NimoTV creators on LiveStreamRecorder?",
+          "answer": "Yes. This page lists NimoTV creators who've signed up. As more mobile esports streamers from Brazil, Indonesia, Thailand, Mexico, and Peru join, the directory grows — a good place to discover NimoTV gamers building their channel."
+        },
+        {
+          "question": "Will my NimoTV diamonds, ranking, or Tencent creator program perks be affected?",
+          "answer": "No. LiveStreamRecorder never logs into your NimoTV account or touches diamonds, gifting income, watch-time ranking, or Tencent creator program tiers. The recording is opt-in by you as the NimoTV creator for your own account, and only captures your own Lives — nothing else."
+        },
+        {
+          "question": "Is LiveStreamRecorder free for NimoTV creators?",
+          "answer": "Yes. Free tier saves every Live indefinitely on your creator page. Premium unlocks raw video downloads (useful for putting full matches on YouTube), ClipAI for auto-cutting highlight clips, and extended retention."
+        }
+      ]
+    },
+    "vklive": {
+      "title": "VK Live Streamers — Russian and CIS Creators with a Permanent Archive",
+      "description": "VK Live is the livestreaming layer inside VK (VKontakte), Russia's biggest social network with 100M+ MAU. Russian-speaking gamers, musicians, and IRL streamers go live to fans across Russia, Belarus, and Kazakhstan — but VK's algorithm buries old streams within hours. LiveStreamRecorder gives VK Live creators a permanent archive their audience can rewatch on the open web.",
+      "keywords": [
+        "vk live creator",
+        "vk live streamer",
+        "vkontakte live stream",
+        "vk live archive",
+        "russian streamer archive",
+        "vk live recording",
+        "save my vk live",
+        "vk live replay",
+        "vk live history",
+        "find vk live creators",
+        "vk live dota streamer",
+        "vk live cs streamer"
+      ],
+      "faqs": [
+        {
+          "question": "VK Live already shows my stream in fans' feeds — why do I need a separate archive?",
+          "answer": "VK's social feed surfaces a stream when you're live and for a short window after, then the algorithm moves on. Within 24 hours the stream is buried — fans who didn't catch the notification have a hard time finding it. LiveStreamRecorder gives every VK Live a permanent URL on your creator page that doesn't depend on the VK feed. Your fans get a stable place to rewatch, you get an actual back catalogue."
+        },
+        {
+          "question": "I'm a Dota / CS / WoT streamer on VK Live — does this capture gameplay correctly?",
+          "answer": "Yes. We record whatever VK Live broadcasts to viewers — gameplay capture, webcam overlay, OBS scene composition, voice. The recording is upstream of your local hardware, so it's the same video your VK Live audience saw, preserved at full length on your LiveStreamRecorder page."
+        },
+        {
+          "question": "Does this affect my VK ranking, VK Music integration, or VK Play account?",
+          "answer": "No. LiveStreamRecorder doesn't log into your VK account, doesn't touch VK Music, doesn't interfere with VK Play, and doesn't affect any VK creator metrics. The recording is opt-in by you for your own VK Live account, and only captures your own broadcasts — nothing else."
+        },
+        {
+          "question": "How do I get my VK Live creator page on LiveStreamRecorder?",
+          "answer": "Sign up free and add your VK Live username or profile URL. Your creator page is created automatically and every broadcast from that point onwards is recorded to it. No phone app, no OBS plugin — capture happens server-side."
+        },
+        {
+          "question": "Can fans browse a list of VK Live streamers on LiveStreamRecorder?",
+          "answer": "Yes. This page lists VK Live creators who've signed up — Russian-speaking gamers, musicians, anime/manga commentators, IRL streamers. The list grows as more VK Live broadcasters sign up. A useful directory for discovering VK Live creators outside the VK app itself."
+        },
+        {
+          "question": "I broadcast in Russian — does LiveStreamRecorder support a Russian audience?",
+          "answer": "Yes. LiveStreamRecorder's interface is available in multiple languages and your recording URLs work in any browser worldwide. Russian-speaking fans inside Russia, in the CIS, or in the diaspora can all open your creator page without needing a VK account — useful for fans on a different platform than VK itself."
+        },
+        {
+          "question": "Is LiveStreamRecorder free for VK Live creators?",
+          "answer": "Yes. Free tier saves every VK Live indefinitely on your creator page. Premium unlocks raw video downloads, ClipAI for auto-clipping highlights, and extended retention windows."
+        }
+      ]
     }
   },
   "hero": {
@@ -410,7 +506,9 @@
       "trovo": "صناع محتوى تروفو",
       "twitcast": "صناع محتوى تويتكاستنغ",
       "live17": "بثّاثو 17 لايف",
-      "kwai": "بثّاثو كواي"
+      "kwai": "بثّاثو كواي",
+      "nimotv": "بثّاثو كواي",
+      "vklive": "بثّاثو كواي"
     },
     "subtitle": {
       "all": "انضم لآلاف المبدعين الذين يستخدمون موقعنا لحفظ بثوثهم وإنشاء مقاطع قصيرة.",
@@ -428,7 +526,9 @@
       "trovo": "انضم لآلاف مبدعي تروفو الذين يستخدمون موقعنا لحفظ بثوثهم وإنشاء مقاطع قصيرة.",
       "twitcast": "انضم لآلاف مبدعي تويتكاستنغ الذين يستخدمون موقعنا لحفظ بثوثهم وإنشاء مقاطع قصيرة.",
       "live17": "انضم إلى بثّاثي 17 لايف الذين يستخدمون LiveStreamRecorder لحفظ كل بث والوصول إلى مشاهدين خارج 17 لايف.",
-      "kwai": "انضم إلى بثّاثي كواي الذين يستخدمون LiveStreamRecorder لحفظ كل بث والوصول إلى مشاهدين خارج كواي."
+      "kwai": "انضم إلى بثّاثي كواي الذين يستخدمون LiveStreamRecorder لحفظ كل بث والوصول إلى مشاهدين خارج كواي.",
+      "nimotv": "انضم إلى بثّاثي كواي الذين يستخدمون LiveStreamRecorder لحفظ كل بث والوصول إلى مشاهدين خارج كواي.",
+      "vklive": "انضم إلى بثّاثي كواي الذين يستخدمون LiveStreamRecorder لحفظ كل بث والوصول إلى مشاهدين خارج كواي."
     }
   },
   "features": {
@@ -449,7 +549,9 @@
       "trovo": "سجّل بثوث تروفو تلقائياً",
       "twitcast": "سجّل بثوث تويتكاستنغ تلقائياً",
       "live17": "احفظ بثوث 17 لايف تلقائياً",
-      "kwai": "احفظ بثوث كواي تلقائياً"
+      "kwai": "احفظ بثوث كواي تلقائياً",
+      "nimotv": "احفظ بثوث كواي تلقائياً",
+      "vklive": "احفظ بثوث كواي تلقائياً"
     },
     "subtitle": "من بث مباشر إلى مقاطع قصيرة في دقائق",
     "items": {
@@ -488,7 +590,9 @@
       "trovo": "سجّل بثوث تروفو",
       "twitcast": "سجّل بثوث تويتكاستنغ",
       "live17": "احفظ بثوث 17 لايف",
-      "kwai": "احفظ بثوث كواي"
+      "kwai": "احفظ بثوث كواي",
+      "nimotv": "احفظ بثوث كواي",
+      "vklive": "احفظ بثوث كواي"
     },
     "subtitle": {
       "all": "انضم لآلاف المبدعين. احفظ بثوثك، أنشئ مقاطع قصيرة مع ClipAI، ونمّي جمهورك.",
@@ -506,7 +610,9 @@
       "trovo": "انضم لآلاف مبدعي تروفو. احفظ بثوثك وأنشئ مقاطع قصيرة مع ClipAI.",
       "twitcast": "انضم لآلاف مبدعي تويتكاستنغ. احفظ بثوثك وأنشئ مقاطع قصيرة مع ClipAI.",
       "live17": "انضم إلى بثّاثي 17 لايف الذين يحفظون كل بث مع LiveStreamRecorder. أنشئ مقاطع قصيرة مع ClipAI ونمِّ جمهورك خارج 17 لايف.",
-      "kwai": "انضم إلى بثّاثي كواي الذين يحفظون كل بث مع LiveStreamRecorder. أنشئ مقاطع قصيرة مع ClipAI ونمِّ جمهورك خارج كواي."
+      "kwai": "انضم إلى بثّاثي كواي الذين يحفظون كل بث مع LiveStreamRecorder. أنشئ مقاطع قصيرة مع ClipAI ونمِّ جمهورك خارج كواي.",
+      "nimotv": "انضم إلى بثّاثي كواي الذين يحفظون كل بث مع LiveStreamRecorder. أنشئ مقاطع قصيرة مع ClipAI ونمِّ جمهورك خارج كواي.",
+      "vklive": "انضم إلى بثّاثي كواي الذين يحفظون كل بث مع LiveStreamRecorder. أنشئ مقاطع قصيرة مع ClipAI ونمِّ جمهورك خارج كواي."
     },
     "button": "ابدأ التسجيل مجاناً"
   },
@@ -528,7 +634,9 @@
       "trovo": "كن أول صانع محتوى تروفو ينضم!",
       "twitcast": "كن أول صانع محتوى تويتكاستنغ ينضم!",
       "live17": "كن أول بثّاث 17 لايف ينضم!",
-      "kwai": "كن أول بثّاث كواي ينضم!"
+      "kwai": "كن أول بثّاث كواي ينضم!",
+      "nimotv": "كن أول بثّاث كواي ينضم!",
+      "vklive": "كن أول بثّاث كواي ينضم!"
     },
     "button": "ابدأ الآن"
   },
@@ -548,7 +656,9 @@
     "trovo": "## صناع محتوى تروفو\n\nاكتشف صناع محتوى تروفو الذين يستخدمون موقعنا لحفظ بثوثهم. تصفّح صناع تروفو، شاهد تسجيلاتهم، واعثر على مبدعين جدد تتابعهم من مجتمع البث المباشر هذا الذي صُمّم خصيصاً للهواتف.\n\n### لماذا يسجّل صناع تروفو بثوثهم؟\n\nبثوث تروفو تكون فقط مباشرة — بمجرد إنهاء البث، يختفي المحتوى من التطبيق. لا يوجد نظام إعادة بث ولا طريقة ليلحق بها المعجبون لاحقاً. صناع تروفو يستخدمون موقعنا لحفظ كل بث تلقائياً، بحيث تبقى محادثاتك وعروضك الموسيقية ومحتواك اليومي متاحة لمعجبيك لفترة طويلة بعد انتهاء البث.\n\n### تصفّح أفضل صناع تروفو\n\nافتح صفحة صناع تروفو لإيجاد الصنّاع الذين يحفظون بثوثهم على موقعنا. شاهد تسجيلاتهم، والحق بالبثوث التي فوتّها، واكتشف صناع تروفو جدد تستحق المتابعة.\n\n### صفحتك الخاصة كصانع محتوى على تروفو\n\nكل صانع محتوى تروفو على موقعنا يحصل على صفحته الخاصة حيث يمكن للمعجبين تصفّح كل بثوثه المسجلة. سجّل حسابك، أضف اسم المستخدم الخاص بك على تروفو، وتُنشأ صفحتك تلقائياً — مكان دائم لمحتواك لا يختفي عند انتهاء البث.\n\n### من البثوث إلى المقاطع القصيرة: ابنِ جمهورك\n\nClipAI يحوّل بثوثك المسجلة من تروفو إلى مقاطع قصيرة جاهزة للنشر على تيك توك، إنستقرام ريلز، ويوتيوب شورتس. حوّل ردود الأفعال واللحظات الموسيقية وأبرز المحادثات إلى محتوى فيروسي ونمِّ جمهورك إلى ما هو أبعد من تروفو.\n\n### كن صانع محتوى على تروفو مع موقعنا\n\nسجّل مجاناً، أضف اسم المستخدم الخاص بك على تروفو، وابدأ حفظ بثوثك من اليوم. يُلتقط كل بث تلقائياً — دون تسجيل يدوي، دون تطبيقات إضافية. انضم إلى صناع تروفو الذين يستخدمون موقعنا بالفعل للحفاظ على كل بث وتنمية جمهورهم.",
     "twitcast": "## صناع محتوى تويتكاستنغ\n\nاكتشف صناع محتوى تويتكاستنغ الذين يستخدمون موقعنا لحفظ بثوثهم. تصفّح صناع تويتكاستنغ، شاهد تسجيلاتهم، واعثر على مبدعين جدد تتابعهم من مجتمع البث المباشر هذا الذي صُمّم خصيصاً للهواتف.\n\n### لماذا يسجّل صناع تويتكاستنغ بثوثهم؟\n\nبثوث تويتكاستنغ تكون فقط مباشرة — بمجرد إنهاء البث، يختفي المحتوى من التطبيق. لا يوجد نظام إعادة بث ولا طريقة ليلحق بها المعجبون لاحقاً. صناع تويتكاستنغ يستخدمون موقعنا لحفظ كل بث تلقائياً، بحيث تبقى محادثاتك وعروضك الموسيقية ومحتواك اليومي متاحة لمعجبيك لفترة طويلة بعد انتهاء البث.\n\n### تصفّح أفضل صناع تويتكاستنغ\n\nافتح صفحة صناع تويتكاستنغ لإيجاد الصنّاع الذين يحفظون بثوثهم على موقعنا. شاهد تسجيلاتهم، والحق بالبثوث التي فوتّها، واكتشف صناع تويتكاستنغ جدد تستحق المتابعة.\n\n### صفحتك الخاصة كصانع محتوى على تويتكاستنغ\n\nكل صانع محتوى تويتكاستنغ على موقعنا يحصل على صفحته الخاصة حيث يمكن للمعجبين تصفّح كل بثوثه المسجلة. سجّل حسابك، أضف اسم المستخدم الخاص بك على تويتكاستنغ، وتُنشأ صفحتك تلقائياً — مكان دائم لمحتواك لا يختفي عند انتهاء البث.\n\n### من البثوث إلى المقاطع القصيرة: ابنِ جمهورك\n\nClipAI يحوّل بثوثك المسجلة من تويتكاستنغ إلى مقاطع قصيرة جاهزة للنشر على تيك توك، إنستقرام ريلز، ويوتيوب شورتس. حوّل ردود الأفعال واللحظات الموسيقية وأبرز المحادثات إلى محتوى فيروسي ونمِّ جمهورك إلى ما هو أبعد من تويتكاستنغ.\n\n### كن صانع محتوى على تويتكاستنغ مع موقعنا\n\nسجّل مجاناً، أضف اسم المستخدم الخاص بك على تويتكاستنغ، وابدأ حفظ بثوثك من اليوم. يُلتقط كل بث تلقائياً — دون تسجيل يدوي، دون تطبيقات إضافية. انضم إلى صناع تويتكاستنغ الذين يستخدمون موقعنا بالفعل للحفاظ على كل بث وتنمية جمهورهم.",
     "live17": "## صنّاع 17 لايف على LiveStreamRecorder\n\n17 لايف (يُنطق *يي-تشي* لايف، 一起 بالماندارين تعني «معاً») هي ثالث أكبر منصة بث مباشر في آسيا، وموطن كل من **Liver** (المذيعين البشر) و **V-Liver** (مذيعي الأفاتار الافتراضية). تأسست في تايوان عام 2015، ومنذ 2021 أصبح مقرها الرئيسي في اليابان، ومدرجة في بورصة سنغافورة برمز **LVR**. قوية بشكل خاص في اليابان وتايوان وهونغ كونغ وسنغافورة والفلبين. LiveStreamRecorder يتيح لصنّاع 17 لايف **حفظ كل بث مباشر على صفحتهم العامة على الويب**، حيث يمكن للمعجبين تصفّح سجلّ بثوثك الكامل دون الحاجة إلى تطبيق 17 لايف.\n\n### مرحباً بـ Liver و V-Liver معاً\n\n17 لايف ابتكرت فئة V-Liver — مذيعي الأفاتار الافتراضية الذين يؤدّون كشخصيات رقمية قابلة للتخصيص. التقاطنا يعمل بنفس الكفاءة مع Liver أمام الكاميرا، أو أفاتار V-Liver بصيغة Live2D/3D، أو مشهد مُركّب عبر OBS، أو إعداد بهاتف فقط. مهما بثّ 17 لايف للمشاهدين، نحفظه. لا حاجة لتجاوز DRM، ولا إضافات OBS، ولا أدوات V-Liver خاصة — لأن الالتقاط يحدث قبل عملية الإخراج لديك.\n\n### مُصمَّم لواقع 17 لايف الآسيوي\n\nقاعدة مستخدمي 17 لايف متركّزة بشكل كبير في اليابان وتايوان وهونغ كونغ وجنوب شرق آسيا. هذا يعني أن غالبية جمهورك في توقيتات JST/SGT/HKT. معجبوك في أوروبا وأمريكا الشمالية يفوّتون نصف بثوثك بسبب فارق التوقيت وحده، والتطبيق نفسه لا يُكتشف بسهولة من قبل المشاهدين الجدد خارج المنطقة. LiveStreamRecorder يسدّ هذه الفجوة — كل بث يصل إلى صفحة عامة مُفهرَسة في محرّكات البحث يمكن لأي شخص الوصول إليها من أي مكان، دون الحاجة إلى حساب 17 لايف.\n\n### الوصول إلى المعجبين الذين لا يستخدمون تطبيق 17 لايف\n\nميزات 17 لايف داخل التطبيق (إعادة المشاهدة، المقاطع داخل التطبيق المقيّدة بين 15 و90 ثانية) رائعة للمعجبين الذين يستخدمون التطبيق فعلاً. ولكن لتوسيع جمهورك خارج هذه الفقاعة — متصفحو Reddit، مجتمعات Discord، متابعو Twitter — تحتاج إلى رابط عام يفتح في أي متصفح. LiveStreamRecorder يمنح كل بث رابطاً عاماً قابلاً للمشاركة مثل `livestreamrecorder.com/live17/your-id`، يمكنك وضعه في السيرة الذاتية أو إرساله في الرسائل أو نشره على الشبكات الاجتماعية. المحتوى نفسه، لكن من دون بوّابة التطبيق.\n\n### وكالات المواهب والمذيعون المستقلون، نفس التدفّق\n\nنظام إدارة المواهب في 17 لايف يبحث ويُدرّب ويدعم المذيعين — وهو من أكثر الأنظمة هيكلةً بين منصّات البث الآسيوية. سواء كنت Liver تابعاً لوكالة تستهدف Hot Star، أو مذيعاً مستقلاً يبني من الصفر، فإن LiveStreamRecorder ليس سوى طبقة تسجيل سلبية. لا يلمس هداياك أو ترتيبك أو عقود الوكالة أو أدوات 17 لايف — إنه يحتفظ فقط بنسخة من كل بث على الويب المفتوح لتبقى محتوياتك حيّة خارج التطبيق.\n\n### النمو عبر المنصّات مع ClipAI\n\nمقاطع 17 لايف داخل التطبيق مقيّدة بـ90 ثانية ومحبوسة داخل التطبيق. ClipAI يفحص بثوثك الكاملة المحفوظة على LiveStreamRecorder وينتج مقاطع قصيرة منسّقة لـ**تيك توك، Instagram Reels، YouTube Shorts** — وهي المنصّات التي يحدث فيها معظم الاكتشاف من قبل المشاهدين في جنوب شرق آسيا وحول العالم. لحظات الرقص، تغطيات الأغاني، ردود فعل الهدايا، تبادلات المحادثة، تحوّلات مشاهد V-Liver — حوّل كل بث إلى قناة مقاطع تُعيد المعجبين الجدد إلى غرفتك على 17 لايف.\n\n### كن صانع 17 لايف على LiveStreamRecorder\n\nالتسجيل مجاني. الصق رقم `profile/r/your-id` من رابط ملفك الشخصي على 17 لايف — هذا كل ما نحتاجه. اعتباراً من بثّك التالي، كل بث سيهبط تلقائياً على صفحة صانعك. محتواك، رابطك، منزلك القابل للمشاركة على الويب المفتوح — مستقل تماماً عن تطبيق 17 لايف.",
-    "kwai": "## صنّاع كواي على LiveStreamRecorder\n\nكواي (من الماندارين 快 *kuài*، «سريع») هو تطبيق الفيديو القصير + البث المباشر العالمي من **Kuaishou Technology** (HKEX 1024)، يُسمّى غالباً منصّة الفيديو القصير #2 في آسيا بعد Douyin/TikTok. بينما يهيمن TikTok على أسواق الولايات المتحدة / الاتحاد الأوروبي، يهيمن كواي على جغرافيا مختلفة جداً: **البرازيل** (حيث يملك كواي عشرات الملايين من المستخدمين النشطين شهرياً ويُنافس TikTok)، إضافة إلى إندونيسيا والمكسيك والأرجنتين وكولومبيا والشرق الأوسط وروسيا/الكومنولث المستقل. LiveStreamRecorder يمنح صنّاع كواي **منزلاً عاماً على الويب لكل بث** — يكتشفه المعجبون الذين لا يثبّتون تطبيق كواي.\n\n### أين تعيش فجوة اكتشاف كواي\n\nكواي ضخم داخل تطبيقه، لكنه شبه غير مرئي على الويب الإنجليزي المفتوح. صانع كواي برازيلي يملك ملايين المعجبين داخل التطبيق قد يكون من المستحيل العثور عليه عبر بحث Google. غالباً ما يُعيد رابط ملف كواي الشخصي (`kwai.com/@username`) صفحات ضعيفة المحتوى مقارنة بمعادلات YouTube أو TikTok. LiveStreamRecorder يسدّ تلك الفجوة: كل بث تبثّه يهبط على صفحة صانع نظيفة ومفهرسة في محرّكات البحث، يمكن للمعجبين اكتشافها عبر Google، مشاركتها على WhatsApp، أو لصقها في أي متصفح دون الحاجة إلى تطبيق كواي.\n\n### هجين فيديو قصير + بث مباشر\n\nكواي من المنصّات القليلة التي نجحت في دمج الفيديو القصير مع البث المباشر. اعتاد جمهورك على تمرير موجز كواي ثم الدخول إلى بث مباشر. LiveStreamRecorder يلتقط جزء البث المباشر تحديداً — ما رآه المعجبون في الوقت الفعلي — ويحوّله إلى محتوى طويل قابل للمشاهدة على الويب العام. استخدم ClipAI لتقطيع البث الطويل إلى مقاطع قصيرة لإعادة النشر على TikTok و Instagram Reels و YouTube Shorts، حيث ستلتقط المشاهدين غير الموجودين على كواي.\n\n### مبنيّ لواقع صانعي الأسواق الناشئة\n\nكواي مهيمن في أسواق تكون فيها بيانات الهاتف المحمول ثمينة ويبثّ المبدعون من إعدادات الهاتف أولاً: الهواتف، غالباً على الشبكة الخلوية. نفهم ذلك. التسجيل بالكامل على الخادم — هاتفك لا يحرق البطارية أو البيانات أثناء تشغيل مسجّل ثانٍ. ابثّ على كواي كالعادة، وسيهبط بثّك تلقائياً على صفحة صانعك على LiveStreamRecorder.\n\n### الوصول إلى معجبين خارج LatAm وآسيا\n\nأكبر سوق لكواي هو البرازيل، مع نموّ هائل في المكسيك وإندونيسيا. لكن قد يكون معجبوك أيضاً منتشرين في أوروبا الناطقة بالبرتغالية، وفي الشتات الناطق بالإسبانية، ومن مهاجري MENA، أو فقط مستخدمي Twitter / Instagram الذين يريدون متابعتك لكن ليس لديهم كواي. روابط LiveStreamRecorder (`livestreamrecorder.com/kwai/your-id`) تعمل في أي متصفح، دون تثبيت تطبيق، دون حساب كواي، دون قيود إقليمية — قابلة للاكتشاف، للمشاركة، للفهرسة.\n\n### مستقلّ عن حالة حساب كواي\n\nLiveStreamRecorder لا يدخل إلى حسابك على كواي، لا يرى K-coins أو دخل الهدايا، لا يتداخل مع برنامج صانعي كواي ولا أي مشاركة عائدات. التسجيل اختياري من قِبَلك بصفتك صانع كواي لحسابك **الخاص**، ويلتقط بثوثك الخاصة فقط — لا شيء غير ذلك. حسابك على كواي وترتيبك ودخلك يبقى بالكامل في مجال كواي.\n\n### النموّ عبر المنصّات مع ClipAI\n\nأدوات المقاطع داخل تطبيق كواي تتركّز على خوارزمية كواي. ClipAI يتركّز على **كل ما عداها** — يفحص بثوثك الكاملة المحفوظة على كواي وينتج مقاطع عمودية قصيرة منسّقة لـ TikTok و Instagram Reels و YouTube Shorts. أكثر اللحظات إضحاكاً، أبرز لحظات الرقص، تغطيات الأغاني، ردود فعل المشاهدين — حوّل بثاً واحداً على كواي إلى مقاطع متعدّدة تصل إلى جماهير لا يستطيع كواي نفسه الوصول إليها بسهولة.\n\n### كن صانع كواي على LiveStreamRecorder\n\nالتسجيل مجاني. أضف اسم مستخدم كواي أو الصق رابط ملفك الشخصي على كواي — هذا كل شيء. اعتباراً من بثّك التالي، يُلتقط كل بث تلقائياً. محتواك، رابط الويب القابل للمشاركة، صفحة صانعك القابلة للاكتشاف — مستقلٌّ عن تطبيق كواي، على الويب المفتوح حيث يستطيع باقي جمهورك أخيراً العثور عليك."
+    "kwai": "## صنّاع كواي على LiveStreamRecorder\n\nكواي (من الماندارين 快 *kuài*، «سريع») هو تطبيق الفيديو القصير + البث المباشر العالمي من **Kuaishou Technology** (HKEX 1024)، يُسمّى غالباً منصّة الفيديو القصير #2 في آسيا بعد Douyin/TikTok. بينما يهيمن TikTok على أسواق الولايات المتحدة / الاتحاد الأوروبي، يهيمن كواي على جغرافيا مختلفة جداً: **البرازيل** (حيث يملك كواي عشرات الملايين من المستخدمين النشطين شهرياً ويُنافس TikTok)، إضافة إلى إندونيسيا والمكسيك والأرجنتين وكولومبيا والشرق الأوسط وروسيا/الكومنولث المستقل. LiveStreamRecorder يمنح صنّاع كواي **منزلاً عاماً على الويب لكل بث** — يكتشفه المعجبون الذين لا يثبّتون تطبيق كواي.\n\n### أين تعيش فجوة اكتشاف كواي\n\nكواي ضخم داخل تطبيقه، لكنه شبه غير مرئي على الويب الإنجليزي المفتوح. صانع كواي برازيلي يملك ملايين المعجبين داخل التطبيق قد يكون من المستحيل العثور عليه عبر بحث Google. غالباً ما يُعيد رابط ملف كواي الشخصي (`kwai.com/@username`) صفحات ضعيفة المحتوى مقارنة بمعادلات YouTube أو TikTok. LiveStreamRecorder يسدّ تلك الفجوة: كل بث تبثّه يهبط على صفحة صانع نظيفة ومفهرسة في محرّكات البحث، يمكن للمعجبين اكتشافها عبر Google، مشاركتها على WhatsApp، أو لصقها في أي متصفح دون الحاجة إلى تطبيق كواي.\n\n### هجين فيديو قصير + بث مباشر\n\nكواي من المنصّات القليلة التي نجحت في دمج الفيديو القصير مع البث المباشر. اعتاد جمهورك على تمرير موجز كواي ثم الدخول إلى بث مباشر. LiveStreamRecorder يلتقط جزء البث المباشر تحديداً — ما رآه المعجبون في الوقت الفعلي — ويحوّله إلى محتوى طويل قابل للمشاهدة على الويب العام. استخدم ClipAI لتقطيع البث الطويل إلى مقاطع قصيرة لإعادة النشر على TikTok و Instagram Reels و YouTube Shorts، حيث ستلتقط المشاهدين غير الموجودين على كواي.\n\n### مبنيّ لواقع صانعي الأسواق الناشئة\n\nكواي مهيمن في أسواق تكون فيها بيانات الهاتف المحمول ثمينة ويبثّ المبدعون من إعدادات الهاتف أولاً: الهواتف، غالباً على الشبكة الخلوية. نفهم ذلك. التسجيل بالكامل على الخادم — هاتفك لا يحرق البطارية أو البيانات أثناء تشغيل مسجّل ثانٍ. ابثّ على كواي كالعادة، وسيهبط بثّك تلقائياً على صفحة صانعك على LiveStreamRecorder.\n\n### الوصول إلى معجبين خارج LatAm وآسيا\n\nأكبر سوق لكواي هو البرازيل، مع نموّ هائل في المكسيك وإندونيسيا. لكن قد يكون معجبوك أيضاً منتشرين في أوروبا الناطقة بالبرتغالية، وفي الشتات الناطق بالإسبانية، ومن مهاجري MENA، أو فقط مستخدمي Twitter / Instagram الذين يريدون متابعتك لكن ليس لديهم كواي. روابط LiveStreamRecorder (`livestreamrecorder.com/kwai/your-id`) تعمل في أي متصفح، دون تثبيت تطبيق، دون حساب كواي، دون قيود إقليمية — قابلة للاكتشاف، للمشاركة، للفهرسة.\n\n### مستقلّ عن حالة حساب كواي\n\nLiveStreamRecorder لا يدخل إلى حسابك على كواي، لا يرى K-coins أو دخل الهدايا، لا يتداخل مع برنامج صانعي كواي ولا أي مشاركة عائدات. التسجيل اختياري من قِبَلك بصفتك صانع كواي لحسابك **الخاص**، ويلتقط بثوثك الخاصة فقط — لا شيء غير ذلك. حسابك على كواي وترتيبك ودخلك يبقى بالكامل في مجال كواي.\n\n### النموّ عبر المنصّات مع ClipAI\n\nأدوات المقاطع داخل تطبيق كواي تتركّز على خوارزمية كواي. ClipAI يتركّز على **كل ما عداها** — يفحص بثوثك الكاملة المحفوظة على كواي وينتج مقاطع عمودية قصيرة منسّقة لـ TikTok و Instagram Reels و YouTube Shorts. أكثر اللحظات إضحاكاً، أبرز لحظات الرقص، تغطيات الأغاني، ردود فعل المشاهدين — حوّل بثاً واحداً على كواي إلى مقاطع متعدّدة تصل إلى جماهير لا يستطيع كواي نفسه الوصول إليها بسهولة.\n\n### كن صانع كواي على LiveStreamRecorder\n\nالتسجيل مجاني. أضف اسم مستخدم كواي أو الصق رابط ملفك الشخصي على كواي — هذا كل شيء. اعتباراً من بثّك التالي، يُلتقط كل بث تلقائياً. محتواك، رابط الويب القابل للمشاركة، صفحة صانعك القابلة للاكتشاف — مستقلٌّ عن تطبيق كواي، على الويب المفتوح حيث يستطيع باقي جمهورك أخيراً العثور عليك.",
+    "nimotv": "## NimoTV Creators on LiveStreamRecorder\n\nNimoTV is the international mobile-esports streaming platform launched by **Huya** (originally part of Tencent's gaming ecosystem) in 2018, built specifically for the global mobile-gaming explosion happening in Brazil, Indonesia, Thailand, Mexico, and Peru. Its catalogue is dominated by mobile titles — **Mobile Legends: Bang Bang (MLBB)**, **Free Fire**, **PUBG Mobile**, **Call of Duty: Mobile**, **Wild Rift**, **Arena of Valor** — and its creator base reflects that: streamers who broadcast directly from their phone, often during ranked grinds that run for hours. LiveStreamRecorder records those broadcasts to a public creator page so fans can rewatch every clutch match — even on platforms that don't have a NimoTV app installed.\n\n### Phone-Only Streaming, Server-Side Recording\n\nMost NimoTV creators are phone-only. No PC, no OBS, no capture card, no second device running in the background. When the ranked session ends, the broadcast is gone — there's no native VOD export from the NimoTV app, and your phone's battery doesn't have spare cycles to record a 4-hour grind locally. LiveStreamRecorder removes the burden entirely: capture happens in our cloud, you broadcast on NimoTV as usual, and the saved recording lands on your creator page automatically. Your phone runs one app, the game runs at full FPS, the recording handles itself.\n\n### Mobile Esports Catalogue, Saved in Full\n\nMobile Legends draft phases, Free Fire squad rotations, PUBG Mobile final circles, COD Mobile sniper rotations — none of it gets cut. Every NimoTV Live is captured at full length, no caps. Want to review a teamfight you lost? Pull the recording, scrub to the timestamp. Want a specific MVP play for a thumbnail? It's on your page, ready to clip.\n\n### Reach Beyond NimoTV's Region Bubble\n\nNimoTV is huge in Brazil, Indonesia, and SE Asia, but invisible on the rest of the internet. Your audience on TikTok, YouTube, and Instagram doesn't have the NimoTV app — and there's no point trying to convince them to install it for a one-time link. LiveStreamRecorder gives each NimoTV Live a public web URL anyone can open. ClipAI then cuts your best plays into vertical short-form clips formatted for **TikTok, Instagram Reels, YouTube Shorts** — the discovery layer outside NimoTV.\n\n### Hashtag Communities Get the Full Match\n\n#MLBB, #FreeFire, #PUBGM, #MobileGaming — the mobile-esports community lives across multiple platforms. A clutch clip on TikTok drives curiosity, but the people who want the full match (analysts, sub-Reddit lurkers, teammates) want the long-form recording. Your LiveStreamRecorder page hosts both: the full Live and the clipped highlights, linked together.\n\n### Browse and Discover NimoTV Creators\n\nThis page lists NimoTV creators on LiveStreamRecorder — Mobile Legends pros, Free Fire streamers from Indonesia, COD Mobile rotation kings from Peru. The directory grows as more mobile esports creators sign up, making it one of the more useful places to discover NimoTV gamers by name outside the NimoTV app itself.\n\n### Doesn't Touch Your NimoTV Account or Diamonds\n\nLiveStreamRecorder never logs into your NimoTV account, doesn't see your diamond income, doesn't read gifting stats, and doesn't interfere with Tencent / Huya creator program tiers. The recording is opt-in by you as the NimoTV creator for **your own** account, and only your own Lives — nothing else. Your NimoTV ranking, watch-time, gifting, and partner status remain entirely on NimoTV.\n\n### Become a NimoTV Creator on LiveStreamRecorder\n\nFree to sign up, free to start saving Lives. Add your NimoTV username and we wire up the rest. From your next ranked grind onwards, every broadcast is captured automatically. Your content, your shareable URL, your discoverable creator page — built for mobile esports creators who don't have time to also run a recording rig.",
+    "vklive": "## VK Live Streamers on LiveStreamRecorder\n\nVK Live is the livestreaming layer inside **VKontakte (VK)**, Russia's largest social network with over 100 million monthly active users. Unlike standalone streaming platforms, VK Live is deeply woven into VK's social graph — streams appear in friends' feeds, can be reposted into communities, integrate with **VK Music** and the **VK Play** gaming platform, and reach an audience that spans Russia, Belarus, Kazakhstan, and Russian-speaking communities worldwide. Since 2022, when Western platforms like Twitch became harder to access from Russia, VK Live has become the de-facto livestreaming home for many Russian-speaking creators. LiveStreamRecorder records every VK Live broadcast to a permanent, shareable archive on the open web.\n\n### The VK Feed Buries Streams Fast\n\nVK Live is a social-first streaming experience. Streams show up in your followers' feeds in real time, can be reposted into communities, and pull live engagement from the VK social graph. That's the strength of the platform — but it's also the weakness if you want a back catalogue. The VK algorithm prioritizes fresh content. Within hours of going offline, your stream is buried beneath new posts. Within 24 hours, even popular VK Lives are effectively invisible to anyone who didn't catch them live. Fans who'd love to rewatch a Dota 2 match or a music set have nowhere to go.\n\nLiveStreamRecorder gives every VK Live broadcast a stable URL on your creator page that exists independently of the VK feed. The feed moves on, your archive stays.\n\n### Built for Russian-Speaking Creators Across Categories\n\nVK Live's creator base spans **Dota 2, CS:GO/CS2, World of Tanks, Standoff 2**, music artists running album drops and acoustic sets, lifestyle and IRL streamers, anime/manga commentators, and educational creators teaching everything from coding to language learning. LiveStreamRecorder works for all of them — the capture is upstream of whatever you broadcast, so OBS scene composition, gameplay overlays, music visualisers, and webcam-only chat streams all preserve perfectly.\n\n### A Permanent Home for Long-Form Content\n\nVK's feed is built for short attention spans — quick scrolling, fast engagement, fresh posts every few hours. That's fine for a 2-minute clip but actively hostile to a 3-hour Dota grind or a 90-minute concert set. A permanent archive on LiveStreamRecorder is the long-form counterpart: fans who want to actually sit with your stream, rewatch a match, or share a specific moment with a friend get a stable URL that works the same way next week and next year.\n\n### Cross-Platform Reach with ClipAI\n\nClipAI scans your saved VK Live broadcasts and cuts vertical short-form clips ready for **TikTok, Instagram Reels, YouTube Shorts** — and for VK's own short-video features. Highlight plays, music drops, funny chat moments, IRL reactions — turn one long broadcast into a stream of shareable content that brings new fans back to your VK Live channel.\n\n### Russian, CIS, and Diaspora Audiences\n\nVK is huge inside Russia and across the CIS, but Russian-speaking communities also live throughout Europe, Israel, North America, and beyond — many of whom don't actively use VK day-to-day. LiveStreamRecorder URLs work in any browser, anywhere in the world, with no VK account required to watch. Your diaspora fans get a way to follow your work that doesn't depend on them maintaining an active VK presence.\n\n### Doesn't Touch Your VK Account or Integrations\n\nLiveStreamRecorder never logs into your VK account, doesn't interfere with VK Music tags, doesn't touch VK Play integrations, and doesn't affect any of VK's creator-side metrics or monetization. The recording is opt-in by you as the VK Live creator for **your own** account, and only captures your own broadcasts — nothing else. Your VK profile, community pages, and creator status stay entirely within VK.\n\n### Become a VK Live Streamer on LiveStreamRecorder\n\nFree to sign up. Add your VK Live username or profile URL, and from your next broadcast onwards every Live is recorded to your creator page automatically. Server-side capture, no software on your end, no extra resources from your streaming PC. The result: a permanent archive of your work on the open web, where the VK feed buries streams fast but your back catalogue stays put."
   },
   "faq": "الأسئلة الشائعة",
   "country": {

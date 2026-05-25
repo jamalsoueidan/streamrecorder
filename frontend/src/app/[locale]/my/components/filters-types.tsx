@@ -152,6 +152,24 @@ export const usePlatformOptions = () => {
         </Center>
       ),
     },
+    {
+      value: "nimotv",
+      label: (
+        <Center style={{ gap: 8 }}>
+          <IconBrandFunimation size={18} />
+          <Text size="sm">{t("platforms.nimotv")}</Text>
+        </Center>
+      ),
+    },
+    {
+      value: "vklive",
+      label: (
+        <Center style={{ gap: 8 }}>
+          <IconBrandFunimation size={18} />
+          <Text size="sm">{t("platforms.vklive")}</Text>
+        </Center>
+      ),
+    },
   ];
 };
 
@@ -235,6 +253,16 @@ export const PLATFORM_OPTIONS = [
   {
     value: "kwai",
     labelKey: "platforms.kwai",
+    icon: IconBrandFunimation,
+  },
+  {
+    value: "nimotv",
+    labelKey: "platforms.nimotv",
+    icon: IconBrandFunimation,
+  },
+  {
+    value: "vklive",
+    labelKey: "platforms.vklive",
     icon: IconBrandFunimation,
   },
 ];

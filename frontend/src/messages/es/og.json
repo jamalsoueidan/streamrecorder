@@ -19,7 +19,9 @@
       "twitcast": "Creadores de TwitCasting",
       "joilive": "Streamers de Joilive",
       "live17": "Streamers de 17live",
-      "kwai": "Streamers de Kwai"
+      "kwai": "Streamers de Kwai",
+      "nimotv": "Streamers de NimoTV",
+      "vklive": "Streamers de VK Live"
     },
     "subtitle": {
       "all": "Explora todos los streamers y creadores",
@@ -37,7 +39,9 @@
       "twitcast": "Descubre creadores de TwitCasting",
       "joilive": "Descubre streamers de Joilive",
       "live17": "Descubre streamers de 17live",
-      "kwai": "Descubre streamers de Kwai"
+      "kwai": "Descubre streamers de Kwai",
+      "nimotv": "Descubre streamers de NimoTV",
+      "vklive": "Descubre streamers de VK Live"
     }
   },
   "recordings": {
@@ -57,7 +61,9 @@
       "twitcast": "Grabaciones de TwitCasting",
       "joilive": "Grabaciones de Joilive",
       "live17": "Grabaciones de 17live",
-      "kwai": "Grabaciones de Kwai"
+      "kwai": "Grabaciones de Kwai",
+      "nimotv": "Grabaciones de NimoTV",
+      "vklive": "Grabaciones de VK Live"
     },
     "subtitle": {
       "all": "Mira transmisiones en vivo grabadas",
@@ -75,7 +81,9 @@
       "twitcast": "Mira streams grabados de TwitCasting",
       "joilive": "Mira lives grabados de Joilive",
       "live17": "Mira lives grabados de 17live",
-      "kwai": "Mira lives grabados de Kwai"
+      "kwai": "Mira lives grabados de Kwai",
+      "nimotv": "Mira lives grabados de NimoTV",
+      "vklive": "Mira lives grabados de VK Live"
     }
   },
   "home": {

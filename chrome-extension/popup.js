@@ -25,6 +25,10 @@ const PLATFORM_META = {
   twitcast:  { name: "TwitCasting", letter: "TC", prefix: "" },
   trovo:     { name: "Trovo",     letter: "Tv", prefix: "" },
   joilive:   { name: "Joilive",   letter: "Jo", prefix: "" },
+  live17:    { name: "17live",    letter: "17", prefix: "" },
+  kwai:      { name: "Kwai",      letter: "Kw", prefix: "@" },
+  nimotv:    { name: "NimoTV",    letter: "N",  prefix: "" },
+  vklive:    { name: "VK Live",   letter: "VK", prefix: "" },
 };
 
 // ── Platform SVG icons ──────────────────────────────────────────────────────
@@ -42,6 +46,10 @@ const PLATFORM_SVGS = {
   twitcast: `<svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><text x="2" y="17" font-size="12" font-weight="bold" font-family="Arial">TC</text></svg>`,
   trovo: `<svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><text x="2" y="17" font-size="12" font-weight="bold" font-family="Arial">Tv</text></svg>`,
   joilive: `<svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><text x="2" y="17" font-size="12" font-weight="bold" font-family="Arial">Jo</text></svg>`,
+  live17: `<svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><text x="2" y="17" font-size="12" font-weight="bold" font-family="Arial">17</text></svg>`,
+  kwai: `<svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><text x="2" y="17" font-size="12" font-weight="bold" font-family="Arial">Kw</text></svg>`,
+  nimotv: `<svg width="20" height="20" viewBox="0 0 24 24" fill="#000"><text x="6" y="17" font-size="14" font-weight="bold" font-family="Arial">N</text></svg>`,
+  vklive: `<svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><text x="2" y="17" font-size="12" font-weight="bold" font-family="Arial">VK</text></svg>`,
 };
 
 // ── DOM refs ────────────────────────────────────────────────────────────────

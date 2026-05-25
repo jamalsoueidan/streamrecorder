@@ -234,6 +234,10 @@ body {
 .platform-icon-large.twitcast  { background-color: #00C2A8; }
 .platform-icon-large.trovo     { background-color: #19D66B; }
 .platform-icon-large.joilive   { background-color: #4F46E5; }
+.platform-icon-large.live17    { background-color: #FF1654; }
+.platform-icon-large.kwai      { background-color: #FF5500; }
+.platform-icon-large.nimotv    { background-color: #C7EE2E; color: #000; }
+.platform-icon-large.vklive    { background-color: #0077FF; }
 
 /* ── Tracked badge ───────────────────────────────────────────────────────── */
 

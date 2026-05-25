@@ -19,7 +19,9 @@
       "trovo": "สตรีมเมอร์ Trovo",
       "joilive": "สตรีมเมอร์ Joilive",
       "live17": "สตรีมเมอร์ 17live",
-      "kwai": "ครีเอเตอร์ Kwai"
+      "kwai": "ครีเอเตอร์ Kwai",
+      "nimotv": "ครีเอเตอร์ NimoTV",
+      "vklive": "ครีเอเตอร์ VK Live"
     },
     "subtitle": {
       "all": "ค้นหาสตรีมเมอร์และครีเอเตอร์ทั้งหมด",
@@ -37,7 +39,9 @@
       "trovo": "ค้นพบสตรีมเมอร์ Trovo",
       "joilive": "ค้นพบสตรีมเมอร์ Joilive",
       "live17": "ค้นพบสตรีมเมอร์ 17live",
-      "kwai": "ค้นพบครีเอเตอร์ Kwai"
+      "kwai": "ค้นพบครีเอเตอร์ Kwai",
+      "nimotv": "ค้นพบครีเอเตอร์ NimoTV",
+      "vklive": "ค้นพบครีเอเตอร์ VK Live"
     }
   },
   "recordings": {
@@ -57,7 +61,9 @@
       "trovo": "บันทึก Trovo",
       "joilive": "บันทึก Joilive",
       "live17": "บันทึก 17live",
-      "kwai": "บันทึก Kwai"
+      "kwai": "บันทึก Kwai",
+      "nimotv": "บันทึก NimoTV",
+      "vklive": "บันทึก VK Live"
     },
     "subtitle": {
       "all": "ดูไลฟ์ที่ถูกบันทึกไว้",
@@ -75,7 +81,9 @@
       "trovo": "ดูสตรีม Trovo ที่บันทึกไว้",
       "joilive": "ดูสตรีม Joilive ที่บันทึกไว้",
       "live17": "ดูสตรีม 17live ที่บันทึกไว้",
-      "kwai": "ดูไลฟ์ Kwai ที่บันทึกไว้"
+      "kwai": "ดูไลฟ์ Kwai ที่บันทึกไว้",
+      "nimotv": "ดูไลฟ์ NimoTV ที่บันทึกไว้",
+      "vklive": "ดูไลฟ์ VK Live ที่บันทึกไว้"
     }
   },
   "home": {

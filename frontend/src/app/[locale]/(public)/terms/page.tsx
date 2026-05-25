@@ -581,6 +581,20 @@ export default async function TermsAndConditions({ params }: PageProps) {
               • {t("thirdPartyPlatforms.platforms.kwai")}
             </Anchor>
             <Anchor
+              href="https://www.nimo.tv/agreement"
+              target="_blank"
+              style={{ color: "#60a5fa" }}
+            >
+              • {t("thirdPartyPlatforms.platforms.nimotv")}
+            </Anchor>
+            <Anchor
+              href="https://vk.com/terms"
+              target="_blank"
+              style={{ color: "#60a5fa" }}
+            >
+              • {t("thirdPartyPlatforms.platforms.vklive")}
+            </Anchor>
+            <Anchor
               href="https://www.liveme.com/protocol/terms.html"
               target="_blank"
               style={{ color: "#60a5fa" }}

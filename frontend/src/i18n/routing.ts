@@ -1,7 +1,7 @@
 import { defineRouting } from "next-intl/routing";
 
 export const routing = defineRouting({
-  locales: ["en", "ar", "tr", "ko", "ja", "es", "pt", "id", "de", "fr", "zh", "th", "fil", "it"],
+  locales: ["en", "ar", "tr", "ko", "ja", "es", "pt", "id", "de", "fr", "zh", "th", "fil", "it", "ru"],
   defaultLocale: "en",
   localePrefix: "as-needed",
   localeCookie: false,
@@ -24,6 +24,7 @@ export const OG_LOCALES: Record<string, string> = {
   th: "th_TH", // Thai
   fil: "fil_PH", // Filipino (Tagalog)
   it: "it_IT", // Italian
+  ru: "ru_RU", // Russian
 };
 
 export function getOgLocale(locale: string): string {

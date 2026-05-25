@@ -27,6 +27,7 @@ export const navConfig = {
     { code: "ja", label: "日本語", flag: "jp" },
     { code: "ko", label: "한국어", flag: "kr" },
     { code: "pt", label: "Português", flag: "br" },
+    { code: "ru", label: "Русский", flag: "ru" },
     { code: "th", label: "ไทย", flag: "th" },
     { code: "tr", label: "Türkçe", flag: "tr" },
     { code: "zh", label: "中文", flag: "cn" },
@@ -48,6 +49,8 @@ export const navConfig = {
     { key: "joilive", label: "Joilive", href: "/creators/joilive" },
     { key: "live17", label: "17live", href: "/creators/live17" },
     { key: "kwai", label: "Kwai", href: "/creators/kwai" },
+    { key: "nimotv", label: "NimoTV", href: "/creators/nimotv" },
+    { key: "vklive", label: "VK Live", href: "/creators/vklive" },
   ],
   watchRecordings: [
     { key: "browse", label: "Browse All", href: "/recordings/all" },
@@ -66,6 +69,8 @@ export const navConfig = {
     { key: "joilive", label: "Joilive", href: "/recordings/joilive" },
     { key: "live17", label: "17live", href: "/recordings/live17" },
     { key: "kwai", label: "Kwai", href: "/recordings/kwai" },
+    { key: "nimotv", label: "NimoTV", href: "/recordings/nimotv" },
+    { key: "vklive", label: "VK Live", href: "/recordings/vklive" },
   ],
   legal: [
     { key: "privacy", label: "Privacy Policy", href: "/privacy" },

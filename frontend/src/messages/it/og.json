@@ -19,7 +19,9 @@
       "trovo": "Streamer Trovo",
       "joilive": "Streamer Joilive",
       "live17": "Streamer 17live",
-      "kwai": "Creator Kwai"
+      "kwai": "Creator Kwai",
+      "nimotv": "Creator NimoTV",
+      "vklive": "Creator VK Live"
     },
     "subtitle": {
       "all": "Sfoglia tutti gli streamer e creator",
@@ -37,7 +39,9 @@
       "trovo": "Scopri gli streamer Trovo",
       "joilive": "Scopri gli streamer Joilive",
       "live17": "Scopri gli streamer 17live",
-      "kwai": "Scopri i creator Kwai"
+      "kwai": "Scopri i creator Kwai",
+      "nimotv": "Scopri i creator NimoTV",
+      "vklive": "Scopri i creator VK Live"
     }
   },
   "recordings": {
@@ -57,7 +61,9 @@
       "trovo": "Registrazioni Trovo",
       "joilive": "Registrazioni Joilive",
       "live17": "Registrazioni 17live",
-      "kwai": "Registrazioni Kwai"
+      "kwai": "Registrazioni Kwai",
+      "nimotv": "Registrazioni NimoTV",
+      "vklive": "Registrazioni VK Live"
     },
     "subtitle": {
       "all": "Guarda le dirette registrate",
@@ -75,7 +81,9 @@
       "trovo": "Guarda gli stream Trovo registrati",
       "joilive": "Guarda gli stream Joilive registrati",
       "live17": "Guarda gli stream 17live registrati",
-      "kwai": "Guarda i live Kwai registrati"
+      "kwai": "Guarda i live Kwai registrati",
+      "nimotv": "Guarda i live NimoTV registrati",
+      "vklive": "Guarda i live VK Live registrati"
     }
   },
   "home": {

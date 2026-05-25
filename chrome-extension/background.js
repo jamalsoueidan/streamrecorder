@@ -78,6 +78,7 @@ function isSupportedSite(urlString) {
     "afreecatv.com", "sooplive.co.kr", "pandalive.co.kr", "bigo.tv",
     "buzzcast.com", "liveme.com", "mixch.tv",
     "twitcasting.tv", "trovo.live", "joilive.net",
+    "17.live", "kwai.com", "nimo.tv", "vkvideo.ru",
   ];
   return supported.some((d) => hostname === d || hostname.endsWith("." + d));
 }
@@ -210,6 +211,40 @@ function parseProfileUrl(urlString) {
       if (userId && /^[A-Za-z0-9_]+$/.test(userId)) {
         return { platform: "joilive", username: userId };
       }
+    }
+    return null;
+  }
+
+  // 17live: 17.live/en-US/profile/r/{id} (or any locale segment)
+  if (hostname === "17.live" || hostname.endsWith(".17.live")) {
+    const match = path.match(/^\/[a-z]{2}(?:-[A-Z]{2})?\/profile\/r\/([A-Za-z0-9_]+)/);
+    if (match) return { platform: "live17", username: match[1] };
+    const noLocale = path.match(/^\/profile\/r\/([A-Za-z0-9_]+)/);
+    if (noLocale) return { platform: "live17", username: noLocale[1] };
+    return null;
+  }
+
+  // Kwai: kwai.com/@username or kwai.com/{lang}/@username or kwai.com/profile/{id}
+  if (hostname === "kwai.com" || hostname.endsWith(".kwai.com")) {
+    const handle = path.match(/^\/(?:[a-z]{2}(?:-[A-Z]{2})?\/)?@([A-Za-z0-9_.-]+)/);
+    if (handle) return { platform: "kwai", username: handle[1] };
+    const profile = path.match(/^\/(?:[a-z]{2}(?:-[A-Z]{2})?\/)?profile\/([A-Za-z0-9_-]+)/);
+    if (profile) return { platform: "kwai", username: profile[1] };
+    return null;
+  }
+
+  // NimoTV: nimo.tv/live/{id}
+  if (hostname === "nimo.tv" || hostname.endsWith(".nimo.tv")) {
+    const live = path.match(/^\/live\/([A-Za-z0-9_-]+)/);
+    if (live) return { platform: "nimotv", username: live[1] };
+    return null;
+  }
+
+  // VK Live: live.vkvideo.ru/{username}
+  if (hostname === "vkvideo.ru" || hostname.endsWith(".vkvideo.ru")) {
+    const match = path.match(/^\/([A-Za-z0-9_.-]+)\/?$/);
+    if (match && !IGNORED_PATHS.has(match[1].toLowerCase())) {
+      return { platform: "vklive", username: match[1] };
     }
     return null;
   }
