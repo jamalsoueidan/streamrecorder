@@ -384,40 +384,6 @@
           "answer": "可以 — Premium 用户可以从每次录制中下载原始 HEVC 视频文件。对在 YouTube 上以长形式内容重新发布、重新编辑成合集或本地存档有用。"
         }
       ]
-    },
-    "nimotv": {
-      "title": "NimoTV 创作者 — 保存每场 Live,触达巴西及新兴市场之外",
-      "description": "NimoTV(kuài 快 =「快速」)是 Kuaishou Technology 的全球短视频+直播应用,在巴西、印尼、墨西哥和中东占主导地位。LiveStreamRecorder 为 NimoTV 创作者提供搜索引擎索引的公开页面,让您的 Live 在 NimoTV 应用之外也能存在。",
-      "keywords": [
-        "NimoTV 创作者",
-        "NimoTV 巴西主播",
-        "NimoTV Live 保存",
-        "NimoTV Live 存档",
-        "NimoTV 回放替代",
-        "Kuaishou NimoTV",
-        "应用外 NimoTV 创作者主页",
-        "按名字查找 NimoTV 创作者",
-        "保存我的 NimoTV Live",
-        "NimoTV Live 录制器",
-        "NimoTV Live 下载"
-      ]
-    },
-    "vklive": {
-      "title": "VK Live 创作者 — 保存每场 Live,触达巴西及新兴市场之外",
-      "description": "VK Live(kuài 快 =「快速」)是 Kuaishou Technology 的全球短视频+直播应用,在巴西、印尼、墨西哥和中东占主导地位。LiveStreamRecorder 为 VK Live 创作者提供搜索引擎索引的公开页面,让您的 Live 在 VK Live 应用之外也能存在。",
-      "keywords": [
-        "VK Live 创作者",
-        "VK Live 巴西主播",
-        "VK Live Live 保存",
-        "VK Live Live 存档",
-        "VK Live 回放替代",
-        "Kuaishou VK Live",
-        "应用外 VK Live 创作者主页",
-        "按名字查找 VK Live 创作者",
-        "保存我的 VK Live Live",
-        "VK Live Live 录制器",
-        "VK Live Live 下载"
-      ]
     }
   },
   "hero": {

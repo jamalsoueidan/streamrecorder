@@ -377,40 +377,6 @@
           "answer": "네 — 프리미엄 사용자는 각 녹화에서 원본 HEVC 비디오 파일을 다운로드할 수 있습니다. YouTube에 긴 형식 콘텐츠로 다시 게시하거나 컴파일로 다시 편집하거나 로컬에 아카이브하는 데 유용."
         }
       ]
-    },
-    "nimotv": {
-      "title": "NimoTV 크리에이터 — 모든 Live 저장, 브라질·신흥 시장 너머로 도달",
-      "description": "NimoTV(kuài 快 = '빠른')는 Kuaishou Technology의 글로벌 짧은 영상 + 라이브 스트리밍 앱으로, 브라질, 인도네시아, 멕시코, 중동에서 우세합니다. LiveStreamRecorder는 NimoTV 크리에이터에게 검색 엔진 인덱싱된 공개 페이지를 제공해 Live가 NimoTV 앱 너머에서도 살아 있게 합니다.",
-      "keywords": [
-        "NimoTV 크리에이터",
-        "NimoTV 브라질 스트리머",
-        "NimoTV Live 저장",
-        "NimoTV Live 아카이브",
-        "NimoTV 리플레이 대안",
-        "Kuaishou NimoTV",
-        "앱 외 NimoTV 크리에이터 페이지",
-        "이름으로 NimoTV 크리에이터 찾기",
-        "내 NimoTV Live 저장",
-        "NimoTV Live 녹화기",
-        "NimoTV Live 다운로드"
-      ]
-    },
-    "vklive": {
-      "title": "VK Live 크리에이터 — 모든 Live 저장, 브라질·신흥 시장 너머로 도달",
-      "description": "VK Live(kuài 快 = '빠른')는 Kuaishou Technology의 글로벌 짧은 영상 + 라이브 스트리밍 앱으로, 브라질, 인도네시아, 멕시코, 중동에서 우세합니다. LiveStreamRecorder는 VK Live 크리에이터에게 검색 엔진 인덱싱된 공개 페이지를 제공해 Live가 VK Live 앱 너머에서도 살아 있게 합니다.",
-      "keywords": [
-        "VK Live 크리에이터",
-        "VK Live 브라질 스트리머",
-        "VK Live Live 저장",
-        "VK Live Live 아카이브",
-        "VK Live 리플레이 대안",
-        "Kuaishou VK Live",
-        "앱 외 VK Live 크리에이터 페이지",
-        "이름으로 VK Live 크리에이터 찾기",
-        "내 VK Live Live 저장",
-        "VK Live Live 녹화기",
-        "VK Live Live 다운로드"
-      ]
     }
   },
   "hero": {

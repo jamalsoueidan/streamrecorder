@@ -210,9 +210,9 @@ export function parseUsername(input: string): ParsedUsername {
     };
   }
 
-  // NimoTV — nimo.tv/live/{username} or nimo.tv/{username}
+  // NimoTV — nimo.tv/live/{id}
   const nimotvRegex =
-    /(?:https?:\/\/)?(?:www\.|m\.)?nimo\.tv\/(?:live\/)?([^\/\s?]+)/i;
+    /(?:https?:\/\/)?(?:www\.|m\.)?nimo\.tv\/live\/([^\/\s?]+)/i;
   const nimotvMatch = trimmed.match(nimotvRegex);
 
   if (nimotvMatch) {
@@ -222,9 +222,9 @@ export function parseUsername(input: string): ParsedUsername {
     };
   }
 
-  // VK Live — vk.com/video/@username, vk.com/@username, or vk.com/{name}
+  // VK Live — live.vkvideo.ru/{username} or vk.com/video/@{username}
   const vkliveRegex =
-    /(?:https?:\/\/)?(?:www\.|m\.)?vk\.com\/(?:video\/|live\/)?@?([^\/\s?]+)/i;
+    /(?:https?:\/\/)?(?:live\.vkvideo\.ru\/|(?:www\.|m\.)?vk\.com\/video\/@)([^\/\s?]+)/i;
   const vkliveMatch = trimmed.match(vkliveRegex);
 
   if (vkliveMatch) {

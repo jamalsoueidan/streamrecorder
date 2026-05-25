@@ -602,42 +602,6 @@
           "answer": "Oui. Les créateurs Premium peuvent exécuter ClipAI sur leurs Lives Kwai sauvegardés. Il coupe automatiquement des clips de mise en valeur formatés pour TikTok, Instagram Reels et YouTube Shorts — moments drôles, musique, danse, réactions aux cadeaux. Utilisez-les pour atteindre les spectateurs qui ne sont pas sur Kwai et les ramener vers vos Lives Kwai."
         }
       ]
-    },
-    "nimotv": {
-      "title": "Enregistrements NimoTV — archive web public pour les créateurs NimoTV brésiliens et mondiaux",
-      "description": "NimoTV (kuài 快 = « rapide ») est l'app globale de vidéo courte + streaming live de Kuaishou, dominante au Brésil, en Indonésie, au Mexique et au Moyen-Orient. LiveStreamRecorder enregistre chaque Live NimoTV sur une URL publique accessible par le web pour que les fans sans l'app NimoTV puissent quand même regarder.",
-      "keywords": [
-        "enregistreur nimotv",
-        "télécharger live nimotv",
-        "archives live nimotv",
-        "alternative replay nimotv",
-        "sauvegarder mon live nimotv",
-        "enregistrement live nimotv brésil",
-        "archives kuaishou nimotv",
-        "enregistrer nimotv sans app",
-        "historique live nimotv",
-        "sauvegarde diffusion nimotv",
-        "live nimotv indonésie",
-        "live nimotv mexique"
-      ]
-    },
-    "vklive": {
-      "title": "Enregistrements VK Live — archive web public pour les créateurs VK Live brésiliens et mondiaux",
-      "description": "VK Live (kuài 快 = « rapide ») est l'app globale de vidéo courte + streaming live de Kuaishou, dominante au Brésil, en Indonésie, au Mexique et au Moyen-Orient. LiveStreamRecorder enregistre chaque Live VK Live sur une URL publique accessible par le web pour que les fans sans l'app VK Live puissent quand même regarder.",
-      "keywords": [
-        "enregistreur vklive",
-        "télécharger live vklive",
-        "archives live vklive",
-        "alternative replay vklive",
-        "sauvegarder mon live vklive",
-        "enregistrement live vklive brésil",
-        "archives kuaishou vklive",
-        "enregistrer vklive sans app",
-        "historique live vklive",
-        "sauvegarde diffusion vklive",
-        "live vklive indonésie",
-        "live vklive mexique"
-      ]
     }
   },
   "hero": {

@@ -602,42 +602,6 @@
           "answer": "是的。Premium 创作者可以在保存的 Kwai Live 上运行 ClipAI。它自动剪辑为 TikTok、Instagram Reels 和 YouTube Shorts 格式化的精彩片段 — 有趣瞬间、音乐、舞蹈、礼物反应。用来触达不在 Kwai 上的观众并把他们漏斗回您的 Kwai Live。"
         }
       ]
-    },
-    "nimotv": {
-      "title": "NimoTV 录制 — 巴西及全球 NimoTV 创作者的公开网络存档",
-      "description": "NimoTV(kuài 快 =「快速」)是 Kuaishou 的全球短视频+直播应用,在巴西、印尼、墨西哥和中东占主导地位。LiveStreamRecorder 将每场 NimoTV Live 录制到公开可访问网络的 URL,即使没有 NimoTV 应用的粉丝也能观看。",
-      "keywords": [
-        "NimoTV 录制器",
-        "NimoTV Live 下载",
-        "NimoTV Live 存档",
-        "NimoTV 回放替代",
-        "保存我的 NimoTV Live",
-        "NimoTV Live 录制 巴西",
-        "Kuaishou NimoTV 存档",
-        "无应用录制 NimoTV",
-        "NimoTV Live 历史",
-        "NimoTV 播出备份",
-        "NimoTV Live 印度尼西亚",
-        "NimoTV Live 墨西哥"
-      ]
-    },
-    "vklive": {
-      "title": "VK Live 录制 — 巴西及全球 VK Live 创作者的公开网络存档",
-      "description": "VK Live(kuài 快 =「快速」)是 Kuaishou 的全球短视频+直播应用,在巴西、印尼、墨西哥和中东占主导地位。LiveStreamRecorder 将每场 VK Live Live 录制到公开可访问网络的 URL,即使没有 VK Live 应用的粉丝也能观看。",
-      "keywords": [
-        "VK Live 录制器",
-        "VK Live Live 下载",
-        "VK Live Live 存档",
-        "VK Live 回放替代",
-        "保存我的 VK Live Live",
-        "VK Live Live 录制 巴西",
-        "Kuaishou VK Live 存档",
-        "无应用录制 VK Live",
-        "VK Live Live 历史",
-        "VK Live 播出备份",
-        "VK Live Live 印度尼西亚",
-        "VK Live Live 墨西哥"
-      ]
     }
   },
   "hero": {

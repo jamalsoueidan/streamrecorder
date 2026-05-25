@@ -661,42 +661,6 @@
           "answer": "Sì. Gli utenti premium possono usare ClipAI per trasformare automaticamente le registrazioni TwitCasting Live in clip highlight brevi pronte per TikTok, YouTube Shorts o Instagram Reels. Migliori momenti di chat, highlight delle canzoni, reazioni dei viewer — riutilizza i tuoi contenuti TwitCasting per ogni piattaforma."
         }
       ]
-    },
-    "nimotv": {
-      "title": "Registrazioni NimoTV — Archivio web pubblico per creator NimoTV brasiliani e globali",
-      "description": "NimoTV (kuài 快 = 'veloce') è l'app short-video + live-streaming globale di Kuaishou, dominante in Brasile, Indonesia, Messico e Medio Oriente. LiveStreamRecorder registra ogni NimoTV Live su un URL pubblico accessibile dal web così i fan senza l'app NimoTV possono comunque guardare.",
-      "keywords": [
-        "nimotv recorder",
-        "nimotv live download",
-        "archivio nimotv live",
-        "alternativa nimotv replay",
-        "salva il mio nimotv live",
-        "registrazione nimotv live brasile",
-        "archivio kuaishou nimotv",
-        "registra nimotv senza app",
-        "cronologia nimotv live",
-        "nimotv backup trasmissioni",
-        "nimotv live indonesia",
-        "nimotv live messico"
-      ]
-    },
-    "vklive": {
-      "title": "Registrazioni VK Live — Archivio web pubblico per creator VK Live brasiliani e globali",
-      "description": "VK Live (kuài 快 = 'veloce') è l'app short-video + live-streaming globale di Kuaishou, dominante in Brasile, Indonesia, Messico e Medio Oriente. LiveStreamRecorder registra ogni VK Live Live su un URL pubblico accessibile dal web così i fan senza l'app VK Live possono comunque guardare.",
-      "keywords": [
-        "vklive recorder",
-        "vklive live download",
-        "archivio vklive live",
-        "alternativa vklive replay",
-        "salva il mio vklive live",
-        "registrazione vklive live brasile",
-        "archivio kuaishou vklive",
-        "registra vklive senza app",
-        "cronologia vklive live",
-        "vklive backup trasmissioni",
-        "vklive live indonesia",
-        "vklive live messico"
-      ]
     }
   },
   "hero": {

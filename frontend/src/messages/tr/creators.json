@@ -370,40 +370,6 @@
           "answer": "Evet — Premium kullanıcılar her kayıttan ham HEVC video dosyasını indirebilir. YouTube'a uzun içerik olarak yeniden yayınlamak, derlemelere yeniden düzenlemek veya yerel arşivlemek için yararlı."
         }
       ]
-    },
-    "nimotv": {
-      "title": "NimoTV İçerik Üreticileri — Her Live'ı kaydedin, Brezilya ve gelişen pazarların ötesine ulaşın",
-      "description": "NimoTV (kuài 快 = «hızlı») Kuaishou Technology'nin küresel kısa video + canlı yayın uygulamasıdır; Brezilya, Endonezya, Meksika ve Orta Doğu'da baskındır. LiveStreamRecorder, NimoTV içerik üreticilerine arama motorlarınca indekslenmiş halka açık bir sayfa sunar, böylece Live'larınız NimoTV uygulamasının ötesinde yaşar.",
-      "keywords": [
-        "nimotv içerik üreticisi",
-        "nimotv streamer brezilya",
-        "nimotv live kaydet",
-        "nimotv live arşivi",
-        "nimotv replay alternatifi",
-        "kuaishou nimotv",
-        "uygulama dışı nimotv içerik üretici sayfası",
-        "isim ile nimotv içerik üreticisi bul",
-        "nimotv live'ımı kaydet",
-        "nimotv live kaydedici",
-        "nimotv live indir"
-      ]
-    },
-    "vklive": {
-      "title": "VK Live İçerik Üreticileri — Her Live'ı kaydedin, Brezilya ve gelişen pazarların ötesine ulaşın",
-      "description": "VK Live (kuài 快 = «hızlı») Kuaishou Technology'nin küresel kısa video + canlı yayın uygulamasıdır; Brezilya, Endonezya, Meksika ve Orta Doğu'da baskındır. LiveStreamRecorder, VK Live içerik üreticilerine arama motorlarınca indekslenmiş halka açık bir sayfa sunar, böylece Live'larınız VK Live uygulamasının ötesinde yaşar.",
-      "keywords": [
-        "vklive içerik üreticisi",
-        "vklive streamer brezilya",
-        "vklive live kaydet",
-        "vklive live arşivi",
-        "vklive replay alternatifi",
-        "kuaishou vklive",
-        "uygulama dışı vklive içerik üretici sayfası",
-        "isim ile vklive içerik üreticisi bul",
-        "vklive live'ımı kaydet",
-        "vklive live kaydedici",
-        "vklive live indir"
-      ]
     }
   },
   "hero": {

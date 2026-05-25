@@ -649,42 +649,6 @@
           "answer": "Sí. Los creadores Premium pueden ejecutar ClipAI en sus Lives Kwai guardados. Corta automáticamente clips destacados formateados para TikTok, Instagram Reels y YouTube Shorts — momentos divertidos, música, baile, reacciones a regalos. Úsalos para alcanzar espectadores que no están en Kwai y traerlos de vuelta a tus Lives Kwai."
         }
       ]
-    },
-    "nimotv": {
-      "title": "Grabaciones NimoTV — archivo web público para creadores NimoTV latinoamericanos y globales",
-      "description": "NimoTV (kuài 快 = «rápido») es la app global de vídeo corto + streaming en vivo de Kuaishou, dominante en Brasil, Indonesia, México y Oriente Medio. LiveStreamRecorder graba cada Live NimoTV en una URL pública accesible por web para que los fans sin la app NimoTV puedan ver.",
-      "keywords": [
-        "grabador nimotv",
-        "descargar live nimotv",
-        "archivo live nimotv",
-        "alternativa replay nimotv",
-        "guardar mi live nimotv",
-        "grabación live nimotv latam",
-        "archivo kuaishou nimotv",
-        "grabar nimotv sin app",
-        "historial live nimotv",
-        "respaldo transmisión nimotv",
-        "live nimotv indonesia",
-        "live nimotv méxico"
-      ]
-    },
-    "vklive": {
-      "title": "Grabaciones VK Live — archivo web público para creadores VK Live latinoamericanos y globales",
-      "description": "VK Live (kuài 快 = «rápido») es la app global de vídeo corto + streaming en vivo de Kuaishou, dominante en Brasil, Indonesia, México y Oriente Medio. LiveStreamRecorder graba cada Live VK Live en una URL pública accesible por web para que los fans sin la app VK Live puedan ver.",
-      "keywords": [
-        "grabador vklive",
-        "descargar live vklive",
-        "archivo live vklive",
-        "alternativa replay vklive",
-        "guardar mi live vklive",
-        "grabación live vklive latam",
-        "archivo kuaishou vklive",
-        "grabar vklive sin app",
-        "historial live vklive",
-        "respaldo transmisión vklive",
-        "live vklive indonesia",
-        "live vklive méxico"
-      ]
     }
   },
   "hero": {

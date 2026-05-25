@@ -575,34 +575,6 @@
           "answer": "ได้ ผู้ใช้พรีเมียมสามารถใช้ ClipAI เปลี่ยนบันทึกไลฟ์ TwitCasting เป็นคลิปไฮไลต์สั้นๆ พร้อมโพสต์บน TikTok, YouTube Shorts หรือ Instagram Reels ช่วงแชทเด็ด ไฮไลต์เพลง Q&A ผู้ชม คลิป co-broadcast นำคอนเทนต์ TwitCasting ไปใช้บนทุกแพลตฟอร์ม"
         }
       ]
-    },
-    "nimotv": {
-      "title": "บันทึก NimoTV — คลังเว็บสาธารณะสำหรับครีเอเตอร์ NimoTV บราซิลและทั่วโลก",
-      "description": "NimoTV (kuài 快 = 'เร็ว') คือแอปวิดีโอสั้น + ไลฟ์สตรีมระดับโลกของ Kuaishou ที่ครองตลาดบราซิล อินโดนีเซีย เม็กซิโก และตะวันออกกลาง LiveStreamRecorder บันทึกทุกไลฟ์ NimoTV ลงใน URL ที่เข้าถึงได้บนเว็บสาธารณะ เพื่อให้แฟนที่ไม่มีแอป NimoTV ยังดูได้",
-      "keywords": [
-        "บันทึก nimotv",
-        "nimotv recorder",
-        "nimotv live download",
-        "nimotv live archive",
-        "save my nimotv live",
-        "nimotv live brazil recording",
-        "kuaishou nimotv archive",
-        "record nimotv without app"
-      ]
-    },
-    "vklive": {
-      "title": "บันทึก VK Live — คลังเว็บสาธารณะสำหรับครีเอเตอร์ VK Live บราซิลและทั่วโลก",
-      "description": "VK Live (kuài 快 = 'เร็ว') คือแอปวิดีโอสั้น + ไลฟ์สตรีมระดับโลกของ Kuaishou ที่ครองตลาดบราซิล อินโดนีเซีย เม็กซิโก และตะวันออกกลาง LiveStreamRecorder บันทึกทุกไลฟ์ VK Live ลงใน URL ที่เข้าถึงได้บนเว็บสาธารณะ เพื่อให้แฟนที่ไม่มีแอป VK Live ยังดูได้",
-      "keywords": [
-        "บันทึก vklive",
-        "vklive recorder",
-        "vklive live download",
-        "vklive live archive",
-        "save my vklive live",
-        "vklive live brazil recording",
-        "kuaishou vklive archive",
-        "record vklive without app"
-      ]
     }
   },
   "hero": {

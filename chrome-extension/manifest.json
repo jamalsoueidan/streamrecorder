@@ -31,7 +31,7 @@
     "*://*.17.live/*",
     "*://*.kwai.com/*",
     "*://*.nimo.tv/*",
-    "*://*.vk.com/*"
+    "*://*.vkvideo.ru/*"
   ],
   "background": {
     "service_worker": "background.js"

@@ -78,7 +78,7 @@ function isSupportedSite(urlString) {
     "afreecatv.com", "sooplive.co.kr", "pandalive.co.kr", "bigo.tv",
     "buzzcast.com", "liveme.com", "mixch.tv",
     "twitcasting.tv", "trovo.live", "joilive.net",
-    "17.live", "kwai.com", "nimo.tv", "vk.com",
+    "17.live", "kwai.com", "nimo.tv", "vkvideo.ru",
   ];
   return supported.some((d) => hostname === d || hostname.endsWith("." + d));
 }
@@ -233,23 +233,15 @@ function parseProfileUrl(urlString) {
     return null;
   }
 
-  // NimoTV: nimo.tv/live/{username} or nimo.tv/{username}
+  // NimoTV: nimo.tv/live/{id}
   if (hostname === "nimo.tv" || hostname.endsWith(".nimo.tv")) {
     const live = path.match(/^\/live\/([A-Za-z0-9_-]+)/);
     if (live) return { platform: "nimotv", username: live[1] };
-    const match = path.match(/^\/([A-Za-z0-9_-]+)\/?$/);
-    if (match && !IGNORED_PATHS.has(match[1].toLowerCase())) {
-      return { platform: "nimotv", username: match[1] };
-    }
     return null;
   }
 
-  // VK Live: vk.com/video/@username, vk.com/@username, vk.com/{name}
-  if (hostname === "vk.com" || hostname.endsWith(".vk.com")) {
-    const videoHandle = path.match(/^\/video\/@([A-Za-z0-9_.-]+)/);
-    if (videoHandle) return { platform: "vklive", username: videoHandle[1] };
-    const handle = path.match(/^\/@([A-Za-z0-9_.-]+)/);
-    if (handle) return { platform: "vklive", username: handle[1] };
+  // VK Live: live.vkvideo.ru/{username}
+  if (hostname === "vkvideo.ru" || hostname.endsWith(".vkvideo.ru")) {
     const match = path.match(/^\/([A-Za-z0-9_.-]+)\/?$/);
     if (match && !IGNORED_PATHS.has(match[1].toLowerCase())) {
       return { platform: "vklive", username: match[1] };

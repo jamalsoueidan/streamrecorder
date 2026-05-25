@@ -580,42 +580,6 @@
           "answer": "네. 프리미엄 크리에이터는 저장된 Kwai Live에서 ClipAI를 실행할 수 있습니다. TikTok, Instagram Reels, YouTube Shorts용으로 포맷된 하이라이트 클립을 자동으로 잘라냅니다 — 재미있는 순간, 음악, 댄스, 기프트 반응. Kwai에 없는 시청자에 도달하고 그들을 Kwai Live로 다시 깔때기로 가져가는 데 사용."
         }
       ]
-    },
-    "nimotv": {
-      "title": "NimoTV 녹화 — 브라질·글로벌 NimoTV 크리에이터를 위한 공개 웹 아카이브",
-      "description": "NimoTV(kuài 快 = '빠른')는 Kuaishou의 글로벌 짧은 영상 + 라이브 스트리밍 앱으로, 브라질, 인도네시아, 멕시코, 중동에서 우세합니다. LiveStreamRecorder는 각 NimoTV Live를 공개 웹 접근 가능한 URL에 녹화하여 NimoTV 앱이 없는 팬도 시청할 수 있게 합니다.",
-      "keywords": [
-        "NimoTV 녹화기",
-        "NimoTV Live 다운로드",
-        "NimoTV Live 아카이브",
-        "NimoTV 리플레이 대안",
-        "내 NimoTV Live 저장",
-        "NimoTV Live 녹화 브라질",
-        "Kuaishou NimoTV 아카이브",
-        "앱 없이 NimoTV 녹화",
-        "NimoTV Live 히스토리",
-        "NimoTV 방송 백업",
-        "NimoTV Live 인도네시아",
-        "NimoTV Live 멕시코"
-      ]
-    },
-    "vklive": {
-      "title": "VK Live 녹화 — 브라질·글로벌 VK Live 크리에이터를 위한 공개 웹 아카이브",
-      "description": "VK Live(kuài 快 = '빠른')는 Kuaishou의 글로벌 짧은 영상 + 라이브 스트리밍 앱으로, 브라질, 인도네시아, 멕시코, 중동에서 우세합니다. LiveStreamRecorder는 각 VK Live Live를 공개 웹 접근 가능한 URL에 녹화하여 VK Live 앱이 없는 팬도 시청할 수 있게 합니다.",
-      "keywords": [
-        "VK Live 녹화기",
-        "VK Live Live 다운로드",
-        "VK Live Live 아카이브",
-        "VK Live 리플레이 대안",
-        "내 VK Live Live 저장",
-        "VK Live Live 녹화 브라질",
-        "Kuaishou VK Live 아카이브",
-        "앱 없이 VK Live 녹화",
-        "VK Live Live 히스토리",
-        "VK Live 방송 백업",
-        "VK Live Live 인도네시아",
-        "VK Live Live 멕시코"
-      ]
     }
   },
   "hero": {
