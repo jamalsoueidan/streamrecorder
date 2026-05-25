@@ -27,7 +27,6 @@ export const navConfig = {
     { code: "ja", label: "日本語", flag: "jp" },
     { code: "ko", label: "한국어", flag: "kr" },
     { code: "pt", label: "Português", flag: "br" },
-    { code: "ru", label: "Русский", flag: "ru" },
     { code: "th", label: "ไทย", flag: "th" },
     { code: "tr", label: "Türkçe", flag: "tr" },
     { code: "zh", label: "中文", flag: "cn" },
