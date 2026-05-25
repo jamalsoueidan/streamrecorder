@@ -19,7 +19,9 @@
       "twitcast": "ツイキャス クリエイター",
       "joilive": "ジョイライブ ストリーマー",
       "live17": "17ライブ ストリーマー",
-      "kwai": "Kwai ストリーマー"
+      "kwai": "Kwai ストリーマー",
+      "nimotv": "NimoTV ストリーマー",
+      "vklive": "VK Live ストリーマー"
     },
     "subtitle": {
       "all": "すべてのストリーマー・クリエイターを探す",
@@ -37,7 +39,9 @@
       "twitcast": "ツイキャス クリエイターを見つける",
       "joilive": "ジョイライブ ストリーマーを見つける",
       "live17": "17ライブ ストリーマーを見つける",
-      "kwai": "Kwai ストリーマーを見つける"
+      "kwai": "Kwai ストリーマーを見つける",
+      "nimotv": "NimoTV ストリーマーを見つける",
+      "vklive": "VK Live ストリーマーを見つける"
     }
   },
   "recordings": {
@@ -57,7 +61,9 @@
       "twitcast": "ツイキャス 録画",
       "joilive": "ジョイライブ 録画",
       "live17": "17ライブ 録画",
-      "kwai": "Kwai 録画"
+      "kwai": "Kwai 録画",
+      "nimotv": "NimoTV 録画",
+      "vklive": "VK Live 録画"
     },
     "subtitle": {
       "all": "録画済みライブ配信を視聴",
@@ -75,7 +81,9 @@
       "twitcast": "録画された ツイキャス 配信を視聴",
       "joilive": "録画された ジョイライブ 配信を視聴",
       "live17": "録画された 17ライブ 配信を視聴",
-      "kwai": "録画された Kwai 配信を視聴"
+      "kwai": "録画された Kwai 配信を視聴",
+      "nimotv": "録画された NimoTV 配信を視聴",
+      "vklive": "録画された VK Live 配信を視聴"
     }
   },
   "home": {

@@ -19,7 +19,9 @@
       "trovo": "Trovo İçerik Üreticileri",
       "twitcast": "TwitCasting İçerik Üreticileri",
       "live17": "17live Yayıncıları",
-      "kwai": "Kwai Yayıncıları"
+      "kwai": "Kwai Yayıncıları",
+      "nimotv": "NimoTV Yayıncıları",
+      "vklive": "VK Live Yayıncıları"
     },
     "subtitle": {
       "all": "Tüm yayıncılara ve içerik üreticilerine göz atın",
@@ -37,7 +39,9 @@
       "trovo": "Trovo içerik üreticilerini keşfedin",
       "twitcast": "TwitCasting içerik üreticilerini keşfedin",
       "live17": "17live yayıncılarını keşfedin",
-      "kwai": "Kwai yayıncılarını keşfedin"
+      "kwai": "Kwai yayıncılarını keşfedin",
+      "nimotv": "NimoTV yayıncılarını keşfedin",
+      "vklive": "VK Live yayıncılarını keşfedin"
     }
   },
   "recordings": {
@@ -57,7 +61,9 @@
       "trovo": "Trovo Kayıtları",
       "twitcast": "TwitCasting Kayıtları",
       "live17": "17live Kayıtları",
-      "kwai": "Kwai Kayıtları"
+      "kwai": "Kwai Kayıtları",
+      "nimotv": "NimoTV Kayıtları",
+      "vklive": "VK Live Kayıtları"
     },
     "subtitle": {
       "all": "Kaydedilmiş canlı yayınları izleyin",
@@ -75,7 +81,9 @@
       "trovo": "Kaydedilmiş Trovo yayınlarını izleyin",
       "twitcast": "Kaydedilmiş TwitCasting yayınlarını izleyin",
       "live17": "Kaydedilmiş 17live yayınlarını izleyin",
-      "kwai": "Kaydedilmiş Kwai yayınlarını izleyin"
+      "kwai": "Kaydedilmiş Kwai yayınlarını izleyin",
+      "nimotv": "Kaydedilmiş NimoTV yayınlarını izleyin",
+      "vklive": "Kaydedilmiş VK Live yayınlarını izleyin"
     }
   },
   "home": {

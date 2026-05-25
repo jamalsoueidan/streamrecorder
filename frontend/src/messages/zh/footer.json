@@ -29,7 +29,9 @@
     "twitcast": "TwitCasting 创作者",
     "joilive": "Joilive 主播",
     "live17": "17live 主播",
-    "kwai": "Kwai 主播"
+    "kwai": "Kwai 主播",
+    "nimotv": "NimoTV 主播",
+    "vklive": "VK Live 主播"
   },
   "watchRecordings": {
     "title": "观看录制内容",
@@ -48,7 +50,9 @@
     "twitcast": "TwitCasting 录制",
     "joilive": "Joilive 录制",
     "live17": "17live 录制",
-    "kwai": "Kwai 录制"
+    "kwai": "Kwai 录制",
+    "nimotv": "NimoTV 录制",
+    "vklive": "VK Live 录制"
   },
   "legal": {
     "title": "法律",

@@ -29,7 +29,9 @@
     "trovo": "Creator Trovo",
     "joilive": "Creator Joilive",
     "live17": "Creator 17live",
-    "kwai": "Creator Kwai"
+    "kwai": "Creator Kwai",
+    "nimotv": "Creator NimoTV",
+    "vklive": "Creator VK Live"
   },
   "watchRecordings": {
     "title": "Guarda le registrazioni",
@@ -48,7 +50,9 @@
     "trovo": "Registrazioni Trovo",
     "joilive": "Registrazioni Joilive",
     "live17": "Registrazioni 17live",
-    "kwai": "Registrazioni Kwai"
+    "kwai": "Registrazioni Kwai",
+    "nimotv": "Registrazioni NimoTV",
+    "vklive": "Registrazioni VK Live"
   },
   "legal": {
     "title": "Note legali",

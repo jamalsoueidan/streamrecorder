@@ -29,7 +29,9 @@
     "twitcast": "ツイキャス クリエイター",
     "joilive": "ジョイライブ ストリーマー",
     "live17": "17ライブ ストリーマー",
-    "kwai": "Kwai ストリーマー"
+    "kwai": "Kwai ストリーマー",
+    "nimotv": "NimoTV ストリーマー",
+    "vklive": "VK Live ストリーマー"
   },
   "watchRecordings": {
     "title": "録画を視聴",
@@ -48,7 +50,9 @@
     "twitcast": "ツイキャス 録画",
     "joilive": "ジョイライブ 録画",
     "live17": "17ライブ 録画",
-    "kwai": "Kwai 録画"
+    "kwai": "Kwai 録画",
+    "nimotv": "NimoTV 録画",
+    "vklive": "VK Live 録画"
   },
   "legal": {
     "title": "法的情報",

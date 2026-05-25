@@ -210,6 +210,30 @@ export function parseUsername(input: string): ParsedUsername {
     };
   }
 
+  // NimoTV — nimo.tv/live/{username} or nimo.tv/{username}
+  const nimotvRegex =
+    /(?:https?:\/\/)?(?:www\.|m\.)?nimo\.tv\/(?:live\/)?([^\/\s?]+)/i;
+  const nimotvMatch = trimmed.match(nimotvRegex);
+
+  if (nimotvMatch) {
+    return {
+      username: nimotvMatch[1],
+      platform: "nimotv",
+    };
+  }
+
+  // VK Live — vk.com/video/@username, vk.com/@username, or vk.com/{name}
+  const vkliveRegex =
+    /(?:https?:\/\/)?(?:www\.|m\.)?vk\.com\/(?:video\/|live\/)?@?([^\/\s?]+)/i;
+  const vkliveMatch = trimmed.match(vkliveRegex);
+
+  if (vkliveMatch) {
+    return {
+      username: vkliveMatch[1],
+      platform: "vklive",
+    };
+  }
+
   // Plain username - remove @ if present
   const username = trimmed.startsWith("@") ? trimmed.slice(1) : trimmed;
 

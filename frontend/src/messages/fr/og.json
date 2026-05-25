@@ -19,7 +19,9 @@
       "twitcast": "Créateurs TwitCasting",
       "joilive": "Streamers Joilive",
       "live17": "Streamers 17live",
-      "kwai": "Streamers Kwai"
+      "kwai": "Streamers Kwai",
+      "nimotv": "Streamers NimoTV",
+      "vklive": "Streamers VK Live"
     },
     "subtitle": {
       "all": "Parcourir tous les streamers et créateurs",
@@ -37,7 +39,9 @@
       "twitcast": "Découvrir les créateurs TwitCasting",
       "joilive": "Découvrir les streamers Joilive",
       "live17": "Découvrir les streamers 17live",
-      "kwai": "Découvrir les streamers Kwai"
+      "kwai": "Découvrir les streamers Kwai",
+      "nimotv": "Découvrir les streamers NimoTV",
+      "vklive": "Découvrir les streamers VK Live"
     }
   },
   "recordings": {
@@ -57,7 +61,9 @@
       "twitcast": "Enregistrements TwitCasting",
       "joilive": "Enregistrements Joilive",
       "live17": "Enregistrements 17live",
-      "kwai": "Enregistrements Kwai"
+      "kwai": "Enregistrements Kwai",
+      "nimotv": "Enregistrements NimoTV",
+      "vklive": "Enregistrements VK Live"
     },
     "subtitle": {
       "all": "Regarder les lives enregistrés",
@@ -75,7 +81,9 @@
       "twitcast": "Regarder les streams TwitCasting enregistrés",
       "joilive": "Regarder les lives Joilive enregistrés",
       "live17": "Regarder les lives 17live enregistrés",
-      "kwai": "Regarder les lives Kwai enregistrés"
+      "kwai": "Regarder les lives Kwai enregistrés",
+      "nimotv": "Regarder les lives NimoTV enregistrés",
+      "vklive": "Regarder les lives VK Live enregistrés"
     }
   },
   "home": {

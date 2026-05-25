@@ -29,7 +29,9 @@
     "twitcast": "Kreator TwitCasting",
     "joilive": "Streamer Joilive",
     "live17": "Streamer 17live",
-    "kwai": "Streamer Kwai"
+    "kwai": "Streamer Kwai",
+    "nimotv": "Streamer NimoTV",
+    "vklive": "Streamer VK Live"
   },
   "watchRecordings": {
     "title": "Tonton Rekaman",
@@ -48,7 +50,9 @@
     "twitcast": "Rekaman TwitCasting",
     "joilive": "Rekaman Joilive",
     "live17": "Rekaman 17live",
-    "kwai": "Rekaman Kwai"
+    "kwai": "Rekaman Kwai",
+    "nimotv": "Rekaman NimoTV",
+    "vklive": "Rekaman VK Live"
   },
   "legal": {
     "title": "Legal",

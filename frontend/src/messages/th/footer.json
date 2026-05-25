@@ -29,7 +29,9 @@
     "trovo": "ครีเอเตอร์ Trovo",
     "joilive": "ครีเอเตอร์ Joilive",
     "live17": "ครีเอเตอร์ 17live",
-    "kwai": "ครีเอเตอร์ Kwai"
+    "kwai": "ครีเอเตอร์ Kwai",
+    "nimotv": "ครีเอเตอร์ NimoTV",
+    "vklive": "ครีเอเตอร์ VK Live"
   },
   "watchRecordings": {
     "title": "ดูบันทึก",
@@ -48,7 +50,9 @@
     "trovo": "บันทึก Trovo",
     "joilive": "บันทึก Joilive",
     "live17": "บันทึก 17live",
-    "kwai": "บันทึก Kwai"
+    "kwai": "บันทึก Kwai",
+    "nimotv": "บันทึก NimoTV",
+    "vklive": "บันทึก VK Live"
   },
   "legal": {
     "title": "ข้อมูลทางกฎหมาย",

@@ -67,6 +67,8 @@ const ALL_PLATFORMS: PlatformType[] = [
   "joilive",
   "live17",
   "kwai",
+  "nimotv",
+  "vklive",
 ];
 
 type SearchStep = "input" | "selectPlatform" | "results";

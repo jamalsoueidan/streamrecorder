@@ -29,7 +29,9 @@
     "trovo": "Trovo içerik üreticileri",
     "twitcast": "TwitCasting içerik üreticileri",
     "live17": "17live yayıncıları",
-    "kwai": "Kwai yayıncıları"
+    "kwai": "Kwai yayıncıları",
+    "nimotv": "NimoTV yayıncıları",
+    "vklive": "VK Live yayıncıları"
   },
   "watchRecordings": {
     "title": "Kayıtları İzle",
@@ -48,7 +50,9 @@
     "trovo": "Trovo kayıtları",
     "twitcast": "TwitCasting kayıtları",
     "live17": "17live kayıtları",
-    "kwai": "Kwai kayıtları"
+    "kwai": "Kwai kayıtları",
+    "nimotv": "NimoTV kayıtları",
+    "vklive": "VK Live kayıtları"
   },
   "legal": {
     "title": "Yasal",

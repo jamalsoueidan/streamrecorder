@@ -29,7 +29,9 @@
     "twitcast": "TwitCasting-Creator",
     "joilive": "Joilive-Streamer",
     "live17": "17live-Streamer",
-    "kwai": "Kwai-Streamer"
+    "kwai": "Kwai-Streamer",
+    "nimotv": "NimoTV-Streamer",
+    "vklive": "VK Live-Streamer"
   },
   "watchRecordings": {
     "title": "Aufnahmen ansehen",
@@ -48,7 +50,9 @@
     "twitcast": "TwitCasting-Aufnahmen",
     "joilive": "Joilive-Aufnahmen",
     "live17": "17live-Aufnahmen",
-    "kwai": "Kwai-Aufnahmen"
+    "kwai": "Kwai-Aufnahmen",
+    "nimotv": "NimoTV-Aufnahmen",
+    "vklive": "VK Live-Aufnahmen"
   },
   "legal": {
     "title": "Rechtliches",

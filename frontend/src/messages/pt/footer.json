@@ -29,7 +29,9 @@
     "twitcast": "Criadores do TwitCasting",
     "joilive": "Criadores do Joilive",
     "live17": "Criadores do 17live",
-    "kwai": "Criadores do Kwai"
+    "kwai": "Criadores do Kwai",
+    "nimotv": "Criadores do NimoTV",
+    "vklive": "Criadores do VK Live"
   },
   "watchRecordings": {
     "title": "Assistir Gravações",
@@ -48,7 +50,9 @@
     "twitcast": "Gravações do TwitCasting",
     "joilive": "Gravações do Joilive",
     "live17": "Gravações do 17live",
-    "kwai": "Gravações do Kwai"
+    "kwai": "Gravações do Kwai",
+    "nimotv": "Gravações do NimoTV",
+    "vklive": "Gravações do VK Live"
   },
   "legal": {
     "title": "Legal",

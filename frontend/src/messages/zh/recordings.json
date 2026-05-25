@@ -602,6 +602,102 @@
           "answer": "是的。Premium 创作者可以在保存的 Kwai Live 上运行 ClipAI。它自动剪辑为 TikTok、Instagram Reels 和 YouTube Shorts 格式化的精彩片段 — 有趣瞬间、音乐、舞蹈、礼物反应。用来触达不在 Kwai 上的观众并把他们漏斗回您的 Kwai Live。"
         }
       ]
+    },
+    "nimotv": {
+      "title": "NimoTV 录制 — 巴西及全球 NimoTV 创作者的公开网络存档",
+      "description": "NimoTV(kuài 快 =「快速」)是 Kuaishou 的全球短视频+直播应用,在巴西、印尼、墨西哥和中东占主导地位。LiveStreamRecorder 将每场 NimoTV Live 录制到公开可访问网络的 URL,即使没有 NimoTV 应用的粉丝也能观看。",
+      "keywords": [
+        "NimoTV 录制器",
+        "NimoTV Live 下载",
+        "NimoTV Live 存档",
+        "NimoTV 回放替代",
+        "保存我的 NimoTV Live",
+        "NimoTV Live 录制 巴西",
+        "Kuaishou NimoTV 存档",
+        "无应用录制 NimoTV",
+        "NimoTV Live 历史",
+        "NimoTV 播出备份",
+        "NimoTV Live 印度尼西亚",
+        "NimoTV Live 墨西哥"
+      ],
+      "faqs": [
+        {
+          "question": "如何保存我的 NimoTV Live?",
+          "answer": "免费注册,添加您的 NimoTV 用户名(或粘贴 NimoTV 个人资料 URL),像往常一样在 NimoTV 上直播。每次播出在服务器端捕获并自动落在您的创作者主页上 — 手机上无应用,无屏幕录制器,无 OBS。"
+        },
+        {
+          "question": "保存的 NimoTV Live 的 URL 格式是什么?",
+          "answer": "每次录制获得一个干净的网络 URL,例如 `livestreamrecorder.com/nimotv/your-username/video/...`。在任何浏览器中、任何地方都能工作 — 无需 NimoTV 账户或应用安装。把 URL 粘贴到 WhatsApp、Telegram、Discord 或任何您想要的地方。"
+        },
+        {
+          "question": "可以下载原始视频文件吗?",
+          "answer": "可以 — Premium 创作者可以从每场 NimoTV Live 下载原始 HEVC 视频文件。对在 YouTube 上以长形式内容重新上传、重新编辑成合集或在您的电脑上本地存档很有用。"
+        },
+        {
+          "question": "我在中文市场 — 这对 NimoTV 适用吗?",
+          "answer": "适用。NimoTV 在全球是同一个应用;我们不分地区录制 NimoTV Live。NimoTV 创作者实际上受益最多,因为 LiveStreamRecorder URL 可被 Google 用中文、英文和其他语言索引 — 让您的内容对 NimoTV 应用之外和您所在地区之外的粉丝可发现。"
+        },
+        {
+          "question": "NimoTV 已经在应用内有回放功能了吗?",
+          "answer": "NimoTV 在应用内的回放/存档行为取决于地区、您的账户设置和平台政策。LiveStreamRecorder 独立于所有这些 — 您的播出获得一个外部公开网络存档,无论 NimoTV 在自己的应用内做什么都存在。"
+        },
+        {
+          "question": "这会影响我的 NimoTV K-coins、礼物或创作者计划收入吗?",
+          "answer": "不会。LiveStreamRecorder 不登录您的 NimoTV 账户,也不干涉 NimoTV 的礼物、K-coins、创作者计划层级或收益分成。录制由您作为 NimoTV 创作者主动开启,针对您自己的账户,只录制您自己的直播 — 不录制其他任何东西。"
+        },
+        {
+          "question": "用 ClipAI 把 NimoTV Live 变成 TikTok / Reels / Shorts?",
+          "answer": "是的。Premium 创作者可以在保存的 NimoTV Live 上运行 ClipAI。它自动剪辑为 TikTok、Instagram Reels 和 YouTube Shorts 格式化的精彩片段 — 有趣瞬间、音乐、舞蹈、礼物反应。用来触达不在 NimoTV 上的观众并把他们漏斗回您的 NimoTV Live。"
+        }
+      ]
+    },
+    "vklive": {
+      "title": "VK Live 录制 — 巴西及全球 VK Live 创作者的公开网络存档",
+      "description": "VK Live(kuài 快 =「快速」)是 Kuaishou 的全球短视频+直播应用,在巴西、印尼、墨西哥和中东占主导地位。LiveStreamRecorder 将每场 VK Live Live 录制到公开可访问网络的 URL,即使没有 VK Live 应用的粉丝也能观看。",
+      "keywords": [
+        "VK Live 录制器",
+        "VK Live Live 下载",
+        "VK Live Live 存档",
+        "VK Live 回放替代",
+        "保存我的 VK Live Live",
+        "VK Live Live 录制 巴西",
+        "Kuaishou VK Live 存档",
+        "无应用录制 VK Live",
+        "VK Live Live 历史",
+        "VK Live 播出备份",
+        "VK Live Live 印度尼西亚",
+        "VK Live Live 墨西哥"
+      ],
+      "faqs": [
+        {
+          "question": "如何保存我的 VK Live Live?",
+          "answer": "免费注册,添加您的 VK Live 用户名(或粘贴 VK Live 个人资料 URL),像往常一样在 VK Live 上直播。每次播出在服务器端捕获并自动落在您的创作者主页上 — 手机上无应用,无屏幕录制器,无 OBS。"
+        },
+        {
+          "question": "保存的 VK Live Live 的 URL 格式是什么?",
+          "answer": "每次录制获得一个干净的网络 URL,例如 `livestreamrecorder.com/vklive/your-username/video/...`。在任何浏览器中、任何地方都能工作 — 无需 VK Live 账户或应用安装。把 URL 粘贴到 WhatsApp、Telegram、Discord 或任何您想要的地方。"
+        },
+        {
+          "question": "可以下载原始视频文件吗?",
+          "answer": "可以 — Premium 创作者可以从每场 VK Live Live 下载原始 HEVC 视频文件。对在 YouTube 上以长形式内容重新上传、重新编辑成合集或在您的电脑上本地存档很有用。"
+        },
+        {
+          "question": "我在中文市场 — 这对 VK Live 适用吗?",
+          "answer": "适用。VK Live 在全球是同一个应用;我们不分地区录制 VK Live Live。VK Live 创作者实际上受益最多,因为 LiveStreamRecorder URL 可被 Google 用中文、英文和其他语言索引 — 让您的内容对 VK Live 应用之外和您所在地区之外的粉丝可发现。"
+        },
+        {
+          "question": "VK Live 已经在应用内有回放功能了吗?",
+          "answer": "VK Live 在应用内的回放/存档行为取决于地区、您的账户设置和平台政策。LiveStreamRecorder 独立于所有这些 — 您的播出获得一个外部公开网络存档,无论 VK Live 在自己的应用内做什么都存在。"
+        },
+        {
+          "question": "这会影响我的 VK Live K-coins、礼物或创作者计划收入吗?",
+          "answer": "不会。LiveStreamRecorder 不登录您的 VK Live 账户,也不干涉 VK Live 的礼物、K-coins、创作者计划层级或收益分成。录制由您作为 VK Live 创作者主动开启,针对您自己的账户,只录制您自己的直播 — 不录制其他任何东西。"
+        },
+        {
+          "question": "用 ClipAI 把 VK Live Live 变成 TikTok / Reels / Shorts?",
+          "answer": "是的。Premium 创作者可以在保存的 VK Live Live 上运行 ClipAI。它自动剪辑为 TikTok、Instagram Reels 和 YouTube Shorts 格式化的精彩片段 — 有趣瞬间、音乐、舞蹈、礼物反应。用来触达不在 VK Live 上的观众并把他们漏斗回您的 VK Live Live。"
+        }
+      ]
     }
   },
   "hero": {
@@ -621,7 +717,9 @@
       "twitcast": "TwitCasting 录像",
       "joilive": "Joilive 录像",
       "live17": "17live 录像",
-      "kwai": "Kwai 录像"
+      "kwai": "Kwai 录像",
+      "nimotv": "NimoTV 录像",
+      "vklive": "VK Live 录像"
     },
     "subtitle": {
       "all": "在我们的平台上观看创作者的直播录像。下载并发现新内容。",
@@ -639,7 +737,9 @@
       "twitcast": "在我们的平台上观看创作者的 TwitCasting 录像。下载并发现新内容。",
       "joilive": "观看在 LiveStreamRecorder 上保存自己直播的 Joilive 主播的录像。下载并发现新创作者。",
       "live17": "观看在 LiveStreamRecorder 上保存自己直播的 17live 主播的录像。下载并发现新创作者。",
-      "kwai": "观看在 LiveStreamRecorder 上保存自己直播的 Kwai 主播的录像。下载并发现新创作者。"
+      "kwai": "观看在 LiveStreamRecorder 上保存自己直播的 Kwai 主播的录像。下载并发现新创作者。",
+      "nimotv": "观看在 LiveStreamRecorder 上保存自己直播的 NimoTV 主播的录像。下载并发现新创作者。",
+      "vklive": "观看在 LiveStreamRecorder 上保存自己直播的 VK Live 主播的录像。下载并发现新创作者。"
     }
   },
   "cta": {
@@ -659,7 +759,9 @@
       "twitcast": "录制 TwitCasting 直播",
       "joilive": "保存 Joilive 直播",
       "live17": "保存 17live 直播",
-      "kwai": "保存 Kwai 直播"
+      "kwai": "保存 Kwai 直播",
+      "nimotv": "保存 NimoTV 直播",
+      "vklive": "保存 VK Live 直播"
     },
     "subtitle": {
       "all": "自动保存你的 TikTok、Twitch、YouTube 和 Kick 直播。下载录像、创建短视频并扩大你的受众。",
@@ -677,7 +779,9 @@
       "twitcast": "自动保存你的 TwitCasting 直播。下载录像并使用 ClipAI 创建短视频。",
       "joilive": "自动保存你的 Joilive 直播。为每场直播创建独立备份,使用 ClipAI 创建短视频。",
       "live17": "自动保存你的 17live 直播。为每场直播创建独立备份,使用 ClipAI 创建短视频。",
-      "kwai": "自动保存你的 Kwai 直播。为每场直播创建独立备份,使用 ClipAI 创建短视频。"
+      "kwai": "自动保存你的 Kwai 直播。为每场直播创建独立备份,使用 ClipAI 创建短视频。",
+      "nimotv": "自动保存你的 NimoTV 直播。为每场直播创建独立备份,使用 ClipAI 创建短视频。",
+      "vklive": "自动保存你的 VK Live 直播。为每场直播创建独立备份,使用 ClipAI 创建短视频。"
     },
     "button": "免费开始录制"
   },
@@ -699,7 +803,9 @@
       "twitcast": "成为第一个录制 TwitCasting 直播的创作者！",
       "joilive": "成为第一个录制 Joilive 直播的主播！",
       "live17": "成为第一个录制 17live 直播的主播！",
-      "kwai": "成为第一个录制 Kwai 直播的主播！"
+      "kwai": "成为第一个录制 Kwai 直播的主播！",
+      "nimotv": "成为第一个录制 NimoTV 直播的主播！",
+      "vklive": "成为第一个录制 VK Live 直播的主播！"
     },
     "button": "立即开始"
   },
@@ -719,7 +825,9 @@
     "trovo": "## Trovo 直播录像\n\n观看使用 LiveStreamRecorder 保存自己直播的创作者的 Trovo 直播录像。每场 Trovo 直播都自动捕获并存储以供随时观看。\n\n### Trovo 直播在消失前保存\n\nTrovo 直播仅在直播时可用 — 一旦你结束直播,内容就从应用中消失。我们的 Trovo 录制器在云端自动保存你的直播,所以一旦你的直播结束,什么都不会丢失。聊天会话、音乐瞬间、日常内容 — 一切都为粉丝保持可用。\n\n### 观看和下载你的 Trovo 录像\n\n每个 Trovo 直播录像都可以在浏览器中即时观看。高级用户可以将 Trovo 录像下载为视频文件以离线观看 — 非常适合重新利用自己的内容或保留个人副本。\n\n### 录制你的 Trovo 直播 — 无需额外应用\n\n忘掉在手机上进行屏幕录制或在后台运行捕获软件。LiveStreamRecorder 是在线 Trovo 录制器,在服务器端捕获你的直播。无电池消耗、无手动设置、无额外软件。你的 Trovo 直播会从任何设备自动以高质量录制。\n\n### 使用 ClipAI 将直播转换为短视频\n\n想将你的 Trovo 直播录像转换为短视频？ClipAI 分析你的录制直播并创建准备好发布到 TikTok、Instagram Reels 或 YouTube Shorts 的精彩短视频。通过重新利用你最精彩的瞬间,在 Trovo 之外扩大你的粉丝。\n\n### 创作者的最佳 Trovo 录制器\n\nLiveStreamRecorder 专为保存 Trovo 直播而构建。免费注册、添加你的 Trovo 用户名,再也不会丢失任何直播。每场直播都自动捕获 — 你的永久 Trovo 内容库。",
     "twitcast": "## TwitCasting 直播录像\n\n观看使用 LiveStreamRecorder 保存自己直播的创作者的 TwitCasting 直播录像。每场 TwitCasting 直播都自动捕获并存储以供随时观看。\n\n### TwitCasting 直播在消失前保存\n\nTwitCasting 直播仅在直播时可用 — 一旦你结束直播,内容就从应用中消失。我们的 TwitCasting 录制器在云端自动保存你的直播,所以一旦你的直播结束,什么都不会丢失。聊天会话、音乐瞬间、日常内容 — 一切都为粉丝保持可用。\n\n### 观看和下载你的 TwitCasting 录像\n\n每个 TwitCasting 直播录像都可以在浏览器中即时观看。高级用户可以将 TwitCasting 录像下载为视频文件以离线观看 — 非常适合重新利用自己的内容或保留个人副本。\n\n### 录制你的 TwitCasting 直播 — 无需额外应用\n\n忘掉在手机上进行屏幕录制或在后台运行捕获软件。LiveStreamRecorder 是在线 TwitCasting 录制器,在服务器端捕获你的直播。无电池消耗、无手动设置、无额外软件。你的 TwitCasting 直播会从任何设备自动以高质量录制。\n\n### 使用 ClipAI 将直播转换为短视频\n\n想将你的 TwitCasting 直播录像转换为短视频？ClipAI 分析你的录制直播并创建准备好发布到 TikTok、Instagram Reels 或 YouTube Shorts 的精彩短视频。通过重新利用你最精彩的瞬间,在 TwitCasting 之外扩大你的粉丝。\n\n### 创作者的最佳 TwitCasting 录制器\n\nLiveStreamRecorder 专为保存 TwitCasting 直播而构建。免费注册、添加你的 TwitCasting 用户名,再也不会丢失任何直播。每场直播都自动捕获 — 你的永久 TwitCasting 内容库。",
     "live17": "## LiveStreamRecorder 上的 17live 录制\n\n17live(发音 *yi-qi live* — 一起,意为「在一起」)是亚洲第三大直播平台,2015 年于台湾创立,2021 年起总部位于日本,在 SGX 以 **LVR** 上市。同时托管 **Liver**(人类主播)与 **V-Liver**(虚拟形象主播 — 17live 开创的类别)。在日本、台湾、香港、新加坡和菲律宾尤为强势。LiveStreamRecorder 将您直播的每一场 Live 的完整可在网页访问的录制 — 与 17live 应用内的 Stream Archive 并行存放在公开网络上。\n\n### 17live 已经有 Stream Archive,为什么还要第二份录制?\n\n17live 自己的 Stream Archive 没问题 — 它把近期直播保存在 17live App 内,由您的权限开关控制。但粉丝需要 17live App 才能观看,存档不会被 Google 收录,每场直播也没有稳定的公开 URL 可贴在 Discord 或 Twitter 简介里。LiveStreamRecorder 是**补充**而非竞争:把同一场直播第二次捕获,这次落到一个公开网址,比如 `livestreamrecorder.com/live17/your-id/video/...`,任何浏览器都能立即打开。\n\n### Liver 与 V-Liver 同样的捕获\n\n我们录制 17live 实际播出的画面 — 无论您是聊天/唱歌/跳舞的真人 Liver、有自定义场景的 OBS 合成 Liver,还是运行 Live2D / 3D 形象的 V-Liver。捕获在 17live 分发之前发生,所以最终视频与粉丝在直播中看到的完全一致:形象、叠加、变声、礼物动画全部保留。\n\n### 手机不用 App,电脑不用 OBS\n\n服务器端。从手机或电脑像平常一样直播,录制在我们的基础设施里进行。直播开始后,您的手机可以休眠,笔记本可以关机 — 录制继续。设备没有 CPU 占用、GPU 负担、额外耗电。这对持续 4 小时以上的歌唱或谈话直播很重要。\n\n### 超越 90 秒的剪辑限制\n\n17live App 内的 Stream Clips 在 App 内分享时很棒,但被限制在 15-90 秒,并且不会离开 17live 表面。高级主播可以在 LiveStreamRecorder 上使用 ClipAI 从完整保存的直播中剪出任意长度的精选片段,适配 **TikTok、Instagram Reels、YouTube Shorts** — 这些正是大多数 17live 外的潜在观众实际所在的平台。把它们用作把粉丝引回 17live 直播间的漏斗。\n\n### 同等支持经纪签约与独立主播\n\n17live 的经纪管理系统主动发掘和支持主播 — 这是它区别于纯自助 App 的特色。LiveStreamRecorder 不会触碰任何这些。它不登录您的 17live 账号,不干涉 Hot Star 活动、礼物推广或经纪公司工具。它是被动的并行录制 — 您来控制,您的 URL,您的存档。\n\n### 浏览器中观看,需要时下载\n\n每一场 17live 录制都能在任何现代浏览器中即时播放。观看不需要 17live 账号 — 把 URL 分享给任何人、任何地方。高级创作者可以从每场直播下载原始 HEVC 视频文件用于再编辑、作为长视频 VOD 上传到 YouTube,或本地存档。\n\n### 主动开启,您自己的内容\n\nLiveStreamRecorder 只录制您自己的主页,只在您主动开启之后。法律地位与从 17live 应用内的 Stream Archive 下载您自己的直播相同 — 只是存储在不同的位置(不是在 App 内,而是在您自己域名上的公开网址)。随时可停止录制,任何录制都可一键删除。",
-    "kwai": "## LiveStreamRecorder 上的 Kwai 录制\n\nKwai(来自普通话 快 *kuài*,意为「快速」)是 **Kuaishou Technology**(HKEX 1024)的全球短视频+直播应用,常被称为亚洲仅次于抖音/TikTok 的 #2 短视频平台。在中国之外,Kwai 在**巴西**占主导地位(其最大市场,与 TikTok 竞争),加上印度尼西亚、墨西哥、阿根廷、哥伦比亚、中东和俄罗斯/CIS。LiveStreamRecorder 将每场 Kwai Live 捕获到**公开可访问网络的录制** — Kwai 应用之外,开放网络上,Google 可索引。\n\n### 应用内的 Kwai vs. 开放网络上的 Kwai\n\nKwai 围绕其应用内信息流构建:滚动短视频、进入 Live、通过 K-coins 发送礼物,一切都在 Kwai 表面内。这对已在 Kwai 上的用户来说很棒。但当您的粉丝不在 Kwai 上时 — WhatsApp/Instagram 上的巴西粉丝、Telegram 上的印度尼西亚关注者、Kwai 甚至未安装的市场中的观众 — 播出就消失了。LiveStreamRecorder 把每场 Kwai Live 录制到公开 URL,例如 `livestreamrecorder.com/kwai/your-username/video/...`,任何人都可以在任何浏览器中打开。观看无需安装 Kwai,无需 Kwai 账户,无应用门槛。\n\n### 为移动优先、蜂窝网络优先创作者构建\n\nKwai 最大的市场 — 巴西、印度尼西亚、MENA — 也是移动数据和电池是宝贵资源的市场。创作者不希望手机在后台运行 OBS 或屏幕录制器而烧坏。我们明白。LiveStreamRecorder 在服务器端录制。您从手机上像平常一样在 Kwai 上播出 — 您的手机可以锁定屏幕、入睡、丢失通话 — 录制在我们的基础设施中继续。设备上零 CPU、零 GPU、零额外电池成本。\n\n### 巴西 Kwai 的发现鸿沟\n\nKwai BR 是一个庞大的生态系统,但在开放的葡萄牙语网络上基本不可见。在 Google 上搜索巴西 Kwai 创作者,您经常会得到内容稀薄的个人资料页面或第三方追踪网站。LiveStreamRecorder URL 干净、可索引、可分享 — 巴西创作者首次获得真正的 Google 足迹,每场 Kwai Live 充当 SEO 可发现的永久页面。\n\n### ClipAI:从 Kwai Live 到 TikTok / Reels / Shorts\n\nKwai 在新兴市场占主导地位,但 TikTok / Instagram / YouTube 仍主导全球发现。ClipAI 扫描您保存的 Kwai Live 并剪辑为 **TikTok、Instagram Reels、YouTube Shorts** 格式化的竖向精彩片段 — Kwai 之外的发现层。音乐翻唱、舞蹈、喜剧片段、礼物反应、观众互动 — 跨发以扩大受众漏斗回到您的 Kwai Live。\n\n### 在浏览器中观看,需要时下载\n\n每个保存的 Kwai Live 在任何现代浏览器中即时播放。观众无需 Kwai 账户。Premium 创作者可以从每场 Live 下载原始 HEVC 视频文件,用于重新编辑为 YouTube 长形式内容、合集视频或本地存档。\n\n### 不接触您的 Kwai 账户或收入\n\nLiveStreamRecorder 不登录您的 Kwai 账户,看不到 K-coins,不读取您的礼物收入,不干涉 Kwai 创作者计划层级。录制由您作为 Kwai 创作者主动开启,针对您**自己**的账户,只录制您自己的直播 — 不录制其他任何东西。您的 Kwai 账户状态、排名和收益分成完全保留在 Kwai 的领域内。\n\n### 主动开启,您自己的内容,随时删除\n\nLiveStreamRecorder 只录制您自己的个人资料,只在您主动开启之后。随时停止录制流程。一键删除任何过去的 Kwai 录制。您的内容、您的 URL、您的控制 — 独立于 Kwai 应用,在开放公开网络上,您潜在受众的其余部分终于可以找到您。"
+    "kwai": "## LiveStreamRecorder 上的 Kwai 录制\n\nKwai(来自普通话 快 *kuài*,意为「快速」)是 **Kuaishou Technology**(HKEX 1024)的全球短视频+直播应用,常被称为亚洲仅次于抖音/TikTok 的 #2 短视频平台。在中国之外,Kwai 在**巴西**占主导地位(其最大市场,与 TikTok 竞争),加上印度尼西亚、墨西哥、阿根廷、哥伦比亚、中东和俄罗斯/CIS。LiveStreamRecorder 将每场 Kwai Live 捕获到**公开可访问网络的录制** — Kwai 应用之外,开放网络上,Google 可索引。\n\n### 应用内的 Kwai vs. 开放网络上的 Kwai\n\nKwai 围绕其应用内信息流构建:滚动短视频、进入 Live、通过 K-coins 发送礼物,一切都在 Kwai 表面内。这对已在 Kwai 上的用户来说很棒。但当您的粉丝不在 Kwai 上时 — WhatsApp/Instagram 上的巴西粉丝、Telegram 上的印度尼西亚关注者、Kwai 甚至未安装的市场中的观众 — 播出就消失了。LiveStreamRecorder 把每场 Kwai Live 录制到公开 URL,例如 `livestreamrecorder.com/kwai/your-username/video/...`,任何人都可以在任何浏览器中打开。观看无需安装 Kwai,无需 Kwai 账户,无应用门槛。\n\n### 为移动优先、蜂窝网络优先创作者构建\n\nKwai 最大的市场 — 巴西、印度尼西亚、MENA — 也是移动数据和电池是宝贵资源的市场。创作者不希望手机在后台运行 OBS 或屏幕录制器而烧坏。我们明白。LiveStreamRecorder 在服务器端录制。您从手机上像平常一样在 Kwai 上播出 — 您的手机可以锁定屏幕、入睡、丢失通话 — 录制在我们的基础设施中继续。设备上零 CPU、零 GPU、零额外电池成本。\n\n### 巴西 Kwai 的发现鸿沟\n\nKwai BR 是一个庞大的生态系统,但在开放的葡萄牙语网络上基本不可见。在 Google 上搜索巴西 Kwai 创作者,您经常会得到内容稀薄的个人资料页面或第三方追踪网站。LiveStreamRecorder URL 干净、可索引、可分享 — 巴西创作者首次获得真正的 Google 足迹,每场 Kwai Live 充当 SEO 可发现的永久页面。\n\n### ClipAI:从 Kwai Live 到 TikTok / Reels / Shorts\n\nKwai 在新兴市场占主导地位,但 TikTok / Instagram / YouTube 仍主导全球发现。ClipAI 扫描您保存的 Kwai Live 并剪辑为 **TikTok、Instagram Reels、YouTube Shorts** 格式化的竖向精彩片段 — Kwai 之外的发现层。音乐翻唱、舞蹈、喜剧片段、礼物反应、观众互动 — 跨发以扩大受众漏斗回到您的 Kwai Live。\n\n### 在浏览器中观看,需要时下载\n\n每个保存的 Kwai Live 在任何现代浏览器中即时播放。观众无需 Kwai 账户。Premium 创作者可以从每场 Live 下载原始 HEVC 视频文件,用于重新编辑为 YouTube 长形式内容、合集视频或本地存档。\n\n### 不接触您的 Kwai 账户或收入\n\nLiveStreamRecorder 不登录您的 Kwai 账户,看不到 K-coins,不读取您的礼物收入,不干涉 Kwai 创作者计划层级。录制由您作为 Kwai 创作者主动开启,针对您**自己**的账户,只录制您自己的直播 — 不录制其他任何东西。您的 Kwai 账户状态、排名和收益分成完全保留在 Kwai 的领域内。\n\n### 主动开启,您自己的内容,随时删除\n\nLiveStreamRecorder 只录制您自己的个人资料,只在您主动开启之后。随时停止录制流程。一键删除任何过去的 Kwai 录制。您的内容、您的 URL、您的控制 — 独立于 Kwai 应用,在开放公开网络上,您潜在受众的其余部分终于可以找到您。",
+    "nimotv": "## LiveStreamRecorder 上的 NimoTV 录制\n\nNimoTV(来自普通话 快 *kuài*,意为「快速」)是 **Kuaishou Technology**(HKEX 1024)的全球短视频+直播应用,常被称为亚洲仅次于抖音/TikTok 的 #2 短视频平台。在中国之外,NimoTV 在**巴西**占主导地位(其最大市场,与 TikTok 竞争),加上印度尼西亚、墨西哥、阿根廷、哥伦比亚、中东和俄罗斯/CIS。LiveStreamRecorder 将每场 NimoTV Live 捕获到**公开可访问网络的录制** — NimoTV 应用之外,开放网络上,Google 可索引。\n\n### 应用内的 NimoTV vs. 开放网络上的 NimoTV\n\nNimoTV 围绕其应用内信息流构建:滚动短视频、进入 Live、通过 K-coins 发送礼物,一切都在 NimoTV 表面内。这对已在 NimoTV 上的用户来说很棒。但当您的粉丝不在 NimoTV 上时 — WhatsApp/Instagram 上的巴西粉丝、Telegram 上的印度尼西亚关注者、NimoTV 甚至未安装的市场中的观众 — 播出就消失了。LiveStreamRecorder 把每场 NimoTV Live 录制到公开 URL,例如 `livestreamrecorder.com/nimotv/your-username/video/...`,任何人都可以在任何浏览器中打开。观看无需安装 NimoTV,无需 NimoTV 账户,无应用门槛。\n\n### 为移动优先、蜂窝网络优先创作者构建\n\nNimoTV 最大的市场 — 巴西、印度尼西亚、MENA — 也是移动数据和电池是宝贵资源的市场。创作者不希望手机在后台运行 OBS 或屏幕录制器而烧坏。我们明白。LiveStreamRecorder 在服务器端录制。您从手机上像平常一样在 NimoTV 上播出 — 您的手机可以锁定屏幕、入睡、丢失通话 — 录制在我们的基础设施中继续。设备上零 CPU、零 GPU、零额外电池成本。\n\n### 巴西 NimoTV 的发现鸿沟\n\nNimoTV BR 是一个庞大的生态系统,但在开放的葡萄牙语网络上基本不可见。在 Google 上搜索巴西 NimoTV 创作者,您经常会得到内容稀薄的个人资料页面或第三方追踪网站。LiveStreamRecorder URL 干净、可索引、可分享 — 巴西创作者首次获得真正的 Google 足迹,每场 NimoTV Live 充当 SEO 可发现的永久页面。\n\n### ClipAI:从 NimoTV Live 到 TikTok / Reels / Shorts\n\nNimoTV 在新兴市场占主导地位,但 TikTok / Instagram / YouTube 仍主导全球发现。ClipAI 扫描您保存的 NimoTV Live 并剪辑为 **TikTok、Instagram Reels、YouTube Shorts** 格式化的竖向精彩片段 — NimoTV 之外的发现层。音乐翻唱、舞蹈、喜剧片段、礼物反应、观众互动 — 跨发以扩大受众漏斗回到您的 NimoTV Live。\n\n### 在浏览器中观看,需要时下载\n\n每个保存的 NimoTV Live 在任何现代浏览器中即时播放。观众无需 NimoTV 账户。Premium 创作者可以从每场 Live 下载原始 HEVC 视频文件,用于重新编辑为 YouTube 长形式内容、合集视频或本地存档。\n\n### 不接触您的 NimoTV 账户或收入\n\nLiveStreamRecorder 不登录您的 NimoTV 账户,看不到 K-coins,不读取您的礼物收入,不干涉 NimoTV 创作者计划层级。录制由您作为 NimoTV 创作者主动开启,针对您**自己**的账户,只录制您自己的直播 — 不录制其他任何东西。您的 NimoTV 账户状态、排名和收益分成完全保留在 NimoTV 的领域内。\n\n### 主动开启,您自己的内容,随时删除\n\nLiveStreamRecorder 只录制您自己的个人资料,只在您主动开启之后。随时停止录制流程。一键删除任何过去的 NimoTV 录制。您的内容、您的 URL、您的控制 — 独立于 NimoTV 应用,在开放公开网络上,您潜在受众的其余部分终于可以找到您。",
+    "vklive": "## LiveStreamRecorder 上的 VK Live 录制\n\nVK Live(来自普通话 快 *kuài*,意为「快速」)是 **Kuaishou Technology**(HKEX 1024)的全球短视频+直播应用,常被称为亚洲仅次于抖音/TikTok 的 #2 短视频平台。在中国之外,VK Live 在**巴西**占主导地位(其最大市场,与 TikTok 竞争),加上印度尼西亚、墨西哥、阿根廷、哥伦比亚、中东和俄罗斯/CIS。LiveStreamRecorder 将每场 VK Live Live 捕获到**公开可访问网络的录制** — VK Live 应用之外,开放网络上,Google 可索引。\n\n### 应用内的 VK Live vs. 开放网络上的 VK Live\n\nVK Live 围绕其应用内信息流构建:滚动短视频、进入 Live、通过 K-coins 发送礼物,一切都在 VK Live 表面内。这对已在 VK Live 上的用户来说很棒。但当您的粉丝不在 VK Live 上时 — WhatsApp/Instagram 上的巴西粉丝、Telegram 上的印度尼西亚关注者、VK Live 甚至未安装的市场中的观众 — 播出就消失了。LiveStreamRecorder 把每场 VK Live Live 录制到公开 URL,例如 `livestreamrecorder.com/vklive/your-username/video/...`,任何人都可以在任何浏览器中打开。观看无需安装 VK Live,无需 VK Live 账户,无应用门槛。\n\n### 为移动优先、蜂窝网络优先创作者构建\n\nVK Live 最大的市场 — 巴西、印度尼西亚、MENA — 也是移动数据和电池是宝贵资源的市场。创作者不希望手机在后台运行 OBS 或屏幕录制器而烧坏。我们明白。LiveStreamRecorder 在服务器端录制。您从手机上像平常一样在 VK Live 上播出 — 您的手机可以锁定屏幕、入睡、丢失通话 — 录制在我们的基础设施中继续。设备上零 CPU、零 GPU、零额外电池成本。\n\n### 巴西 VK Live 的发现鸿沟\n\nVK Live BR 是一个庞大的生态系统,但在开放的葡萄牙语网络上基本不可见。在 Google 上搜索巴西 VK Live 创作者,您经常会得到内容稀薄的个人资料页面或第三方追踪网站。LiveStreamRecorder URL 干净、可索引、可分享 — 巴西创作者首次获得真正的 Google 足迹,每场 VK Live Live 充当 SEO 可发现的永久页面。\n\n### ClipAI:从 VK Live Live 到 TikTok / Reels / Shorts\n\nVK Live 在新兴市场占主导地位,但 TikTok / Instagram / YouTube 仍主导全球发现。ClipAI 扫描您保存的 VK Live Live 并剪辑为 **TikTok、Instagram Reels、YouTube Shorts** 格式化的竖向精彩片段 — VK Live 之外的发现层。音乐翻唱、舞蹈、喜剧片段、礼物反应、观众互动 — 跨发以扩大受众漏斗回到您的 VK Live Live。\n\n### 在浏览器中观看,需要时下载\n\n每个保存的 VK Live Live 在任何现代浏览器中即时播放。观众无需 VK Live 账户。Premium 创作者可以从每场 Live 下载原始 HEVC 视频文件,用于重新编辑为 YouTube 长形式内容、合集视频或本地存档。\n\n### 不接触您的 VK Live 账户或收入\n\nLiveStreamRecorder 不登录您的 VK Live 账户,看不到 K-coins,不读取您的礼物收入,不干涉 VK Live 创作者计划层级。录制由您作为 VK Live 创作者主动开启,针对您**自己**的账户,只录制您自己的直播 — 不录制其他任何东西。您的 VK Live 账户状态、排名和收益分成完全保留在 VK Live 的领域内。\n\n### 主动开启,您自己的内容,随时删除\n\nLiveStreamRecorder 只录制您自己的个人资料,只在您主动开启之后。随时停止录制流程。一键删除任何过去的 VK Live 录制。您的内容、您的 URL、您的控制 — 独立于 VK Live 应用,在开放公开网络上,您潜在受众的其余部分终于可以找到您。"
   },
   "jsonLd": {
     "name": {
@@ -738,7 +846,9 @@
       "twitcast": "TwitCasting 直播录像",
       "joilive": "Joilive 直播录像",
       "live17": "17live 直播录像",
-      "kwai": "Kwai 直播录像"
+      "kwai": "Kwai 直播录像",
+      "nimotv": "NimoTV 直播录像",
+      "vklive": "VK Live 直播录像"
     },
     "description": {
       "all": "在 LiveStreamRecorder 上观看创作者的直播录像。",
@@ -756,7 +866,9 @@
       "twitcast": "在 LiveStreamRecorder 上观看创作者的 TwitCasting 录像。",
       "joilive": "在 LiveStreamRecorder 上观看主播的 Joilive 录像。",
       "live17": "在 LiveStreamRecorder 上观看主播的 17live 录像。",
-      "kwai": "在 LiveStreamRecorder 上观看主播的 Kwai 录像。"
+      "kwai": "在 LiveStreamRecorder 上观看主播的 Kwai 录像。",
+      "nimotv": "在 LiveStreamRecorder 上观看主播的 NimoTV 录像。",
+      "vklive": "在 LiveStreamRecorder 上观看主播的 VK Live 录像。"
     },
     "streamTitle": "{nickname} 直播 - {date}",
     "streamDescription": {
@@ -775,7 +887,9 @@
       "twitcast": "{nickname} 的 TwitCasting 录像",
       "joilive": "{nickname} 的 Joilive 录像",
       "live17": "{nickname} 的 17live 录像",
-      "kwai": "{nickname} 的 Kwai 录像"
+      "kwai": "{nickname} 的 Kwai 录像",
+      "nimotv": "{nickname} 的 NimoTV 录像",
+      "vklive": "{nickname} 的 VK Live 录像"
     }
   },
   "recordedOn": "录制于 {date}",

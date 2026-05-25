@@ -89,4 +89,16 @@ export const streamingPlatforms = [
     name: "Kwai",
     file: "/simple/kwai.svg",
   },
+  {
+    color: "lime.7",
+    colorCss: "var(--mantine-color-lime-7)",
+    name: "Nimotv",
+    file: "/simple/nimotv.svg",
+  },
+  {
+    color: "blue.7",
+    colorCss: "var(--mantine-color-blue-7)",
+    name: "Vklive",
+    file: "/simple/vklive.svg",
+  },
 ];
