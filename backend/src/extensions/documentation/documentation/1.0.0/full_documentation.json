@@ -20,7 +20,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2026-05-24T11:42:58.995Z"
+    "x-generation-date": "2026-05-26T11:09:16.179Z"
   },
   "servers": [
     {
@@ -13505,6 +13505,221 @@
         }
       }
     },
+    "/clips/{documentId}/view": {
+      "post": {
+        "tags": [
+          "Clip"
+        ],
+        "operationId": "incrementClipView",
+        "summary": "Increment clip views_count by 1",
+        "parameters": [
+          {
+            "name": "documentId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Clip documentId"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "View counted",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": {
+                      "type": "boolean"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid documentId"
+          }
+        }
+      }
+    },
+    "/clips/{documentId}/download": {
+      "post": {
+        "tags": [
+          "Clip"
+        ],
+        "operationId": "incrementClipDownload",
+        "summary": "Increment clip downloads_count by 1",
+        "parameters": [
+          {
+            "name": "documentId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Clip documentId"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Download counted",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": {
+                      "type": "boolean"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid documentId"
+          }
+        }
+      }
+    },
+    "/clips/{documentId}/report": {
+      "post": {
+        "tags": [
+          "Clip"
+        ],
+        "operationId": "reportClip",
+        "summary": "Report a clip for moderation review",
+        "parameters": [
+          {
+            "name": "documentId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Clip documentId"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "reason",
+                  "reporter"
+                ],
+                "properties": {
+                  "reason": {
+                    "type": "string",
+                    "enum": [
+                      "sexual",
+                      "violent",
+                      "hateful",
+                      "harmful",
+                      "spam"
+                    ]
+                  },
+                  "locale": {
+                    "type": "string"
+                  },
+                  "reporter": {
+                    "type": "object",
+                    "required": [
+                      "id",
+                      "username",
+                      "email"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "integer"
+                      },
+                      "username": {
+                        "type": "string"
+                      },
+                      "email": {
+                        "type": "string",
+                        "format": "email"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Report received",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": {
+                      "type": "boolean"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid report"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Clip not found"
+          }
+        }
+      }
+    },
+    "/clips/{documentId}/reset-counters": {
+      "post": {
+        "tags": [
+          "Clip"
+        ],
+        "operationId": "resetClipCounters",
+        "summary": "Reset clip views_count and downloads_count to 0",
+        "parameters": [
+          {
+            "name": "documentId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Clip documentId"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Counters reset",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": {
+                      "type": "boolean"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid documentId"
+          }
+        }
+      }
+    },
     "/followers/{documentId}/block": {
       "post": {
         "tags": [
@@ -25803,6 +26018,12 @@
                 ],
                 "example": "string or id"
               },
+              "viewsCount": {
+                "type": "integer"
+              },
+              "downloadsCount": {
+                "type": "integer"
+              },
               "locale": {
                 "type": "string"
               },
@@ -28015,6 +28236,12 @@
               }
             }
           },
+          "viewsCount": {
+            "type": "integer"
+          },
+          "downloadsCount": {
+            "type": "integer"
+          },
           "createdAt": {
             "type": "string",
             "format": "date-time"
@@ -28150,6 +28377,12 @@
                       "type": "string"
                     }
                   }
+                },
+                "viewsCount": {
+                  "type": "integer"
+                },
+                "downloadsCount": {
+                  "type": "integer"
                 },
                 "createdAt": {
                   "type": "string",
@@ -30515,6 +30748,12 @@
                     }
                   }
                 }
+              },
+              "viewsCount": {
+                "type": "integer"
+              },
+              "downloadsCount": {
+                "type": "integer"
               },
               "createdAt": {
                 "type": "string",

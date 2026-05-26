@@ -1297,6 +1297,169 @@ export default ({ env }) => ({
             },
           };
 
+          // Endpoint: POST /clips/{documentId}/view
+          draft.paths["/clips/{documentId}/view"] = {
+            post: {
+              tags: ["Clip"],
+              operationId: "incrementClipView",
+              summary: "Increment clip views_count by 1",
+              parameters: [
+                {
+                  name: "documentId",
+                  in: "path",
+                  required: true,
+                  schema: { type: "string" },
+                  description: "Clip documentId",
+                },
+              ],
+              responses: {
+                "200": {
+                  description: "View counted",
+                  content: {
+                    "application/json": {
+                      schema: {
+                        type: "object",
+                        properties: { success: { type: "boolean" } },
+                      },
+                    },
+                  },
+                },
+                "400": { description: "Invalid documentId" },
+              },
+            },
+          };
+
+          // Endpoint: POST /clips/{documentId}/download
+          draft.paths["/clips/{documentId}/download"] = {
+            post: {
+              tags: ["Clip"],
+              operationId: "incrementClipDownload",
+              summary: "Increment clip downloads_count by 1",
+              parameters: [
+                {
+                  name: "documentId",
+                  in: "path",
+                  required: true,
+                  schema: { type: "string" },
+                  description: "Clip documentId",
+                },
+              ],
+              responses: {
+                "200": {
+                  description: "Download counted",
+                  content: {
+                    "application/json": {
+                      schema: {
+                        type: "object",
+                        properties: { success: { type: "boolean" } },
+                      },
+                    },
+                  },
+                },
+                "400": { description: "Invalid documentId" },
+              },
+            },
+          };
+
+          // Endpoint: POST /clips/{documentId}/report
+          draft.paths["/clips/{documentId}/report"] = {
+            post: {
+              tags: ["Clip"],
+              operationId: "reportClip",
+              summary: "Report a clip for moderation review",
+              parameters: [
+                {
+                  name: "documentId",
+                  in: "path",
+                  required: true,
+                  schema: { type: "string" },
+                  description: "Clip documentId",
+                },
+              ],
+              requestBody: {
+                required: true,
+                content: {
+                  "application/json": {
+                    schema: {
+                      type: "object",
+                      required: ["reason", "reporter"],
+                      properties: {
+                        reason: {
+                          type: "string",
+                          enum: [
+                            "sexual",
+                            "violent",
+                            "hateful",
+                            "harmful",
+                            "spam",
+                          ],
+                        },
+                        locale: { type: "string" },
+                        reporter: {
+                          type: "object",
+                          required: ["id", "username", "email"],
+                          properties: {
+                            id: { type: "integer" },
+                            username: { type: "string" },
+                            email: { type: "string", format: "email" },
+                          },
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+              responses: {
+                "200": {
+                  description: "Report received",
+                  content: {
+                    "application/json": {
+                      schema: {
+                        type: "object",
+                        properties: { success: { type: "boolean" } },
+                      },
+                    },
+                  },
+                },
+                "400": { description: "Invalid report" },
+                "401": { description: "Unauthorized" },
+                "404": { description: "Clip not found" },
+              },
+            },
+          };
+
+          // Endpoint: POST /clips/{documentId}/reset-counters
+          draft.paths["/clips/{documentId}/reset-counters"] = {
+            post: {
+              tags: ["Clip"],
+              operationId: "resetClipCounters",
+              summary: "Reset clip views_count and downloads_count to 0",
+              parameters: [
+                {
+                  name: "documentId",
+                  in: "path",
+                  required: true,
+                  schema: { type: "string" },
+                  description: "Clip documentId",
+                },
+              ],
+              responses: {
+                "200": {
+                  description: "Counters reset",
+                  content: {
+                    "application/json": {
+                      schema: {
+                        type: "object",
+                        properties: { success: { type: "boolean" } },
+                      },
+                    },
+                  },
+                },
+                "400": { description: "Invalid documentId" },
+              },
+            },
+          };
+
           // Endpoint: POST /followers/{documentId}/block
           draft.paths["/followers/{documentId}/block"] = {
             post: {

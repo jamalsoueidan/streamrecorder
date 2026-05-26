@@ -112,6 +112,24 @@
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::recording.recording"
+    },
+    "viewsCount": {
+      "type": "integer",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "default": 0
+    },
+    "downloadsCount": {
+      "type": "integer",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "default": 0
     }
   }
 }

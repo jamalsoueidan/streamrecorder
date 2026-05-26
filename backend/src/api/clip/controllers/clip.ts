@@ -184,6 +184,120 @@ export default factories.createCoreController(
 
         return { data: shuffled };
       },
+
+      async incrementView(ctx) {
+        const { documentId } = ctx.params;
+        if (!documentId || typeof documentId !== "string") {
+          return ctx.badRequest("INVALID_DOCUMENT_ID");
+        }
+        await strapi.db.connection.raw(
+          "UPDATE clips SET views_count = COALESCE(views_count, 0) + 1 WHERE document_id = ?",
+          [documentId],
+        );
+        return { success: true };
+      },
+
+      async incrementDownload(ctx) {
+        const { documentId } = ctx.params;
+        if (!documentId || typeof documentId !== "string") {
+          return ctx.badRequest("INVALID_DOCUMENT_ID");
+        }
+        await strapi.db.connection.raw(
+          "UPDATE clips SET downloads_count = COALESCE(downloads_count, 0) + 1 WHERE document_id = ?",
+          [documentId],
+        );
+        return { success: true };
+      },
+
+      async report(ctx) {
+        const { documentId } = ctx.params;
+        const { reason, locale, reporter } = (ctx.request.body as any) || {};
+
+        const ALLOWED = new Set([
+          "sexual",
+          "violent",
+          "hateful",
+          "harmful",
+          "spam",
+        ]);
+        if (
+          !documentId ||
+          typeof reason !== "string" ||
+          !ALLOWED.has(reason) ||
+          !reporter?.id ||
+          !reporter?.email
+        ) {
+          return ctx.badRequest("INVALID_REPORT");
+        }
+
+        const clip = await strapi.documents("api::clip.clip").findOne({
+          documentId,
+          populate: { follower: { fields: ["username", "type"] } },
+        });
+
+        if (!clip) return ctx.notFound("CLIP_NOT_FOUND");
+
+        const follower = (clip as any).follower;
+        const localePrefix = locale && locale !== "en" ? `${locale}/` : "";
+        const clipUrl = follower
+          ? `https://www.livestreamrecorder.com/${localePrefix}${follower.type}/${follower.username}/clip/${documentId}`
+          : `https://www.livestreamrecorder.com/clip/${documentId}`;
+
+        const emailSettings = strapi.plugin("email").config("settings") as {
+          defaultTo?: string;
+          defaultFrom?: string;
+        };
+
+        const reasonLabels: Record<string, string> = {
+          sexual: "Sexual content",
+          violent: "Violent or repulsive content",
+          hateful: "Hateful or abusive content",
+          harmful: "Harmful or dangerous acts",
+          spam: "Spam or misleading",
+        };
+
+        try {
+          await fetch("https://api.resend.com/emails", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
+            },
+            body: JSON.stringify({
+              from: emailSettings.defaultFrom,
+              to: emailSettings.defaultTo,
+              subject: `Report (clip): ${reasonLabels[reason]} — ${follower?.username ?? "unknown"}`,
+              html: `
+                <p><strong>Type:</strong> Clip</p>
+                <p><strong>Reason:</strong> ${reasonLabels[reason]}</p>
+                <p><strong>Clip:</strong> <a href="${clipUrl}">${clipUrl}</a></p>
+                <p><strong>Creator:</strong> ${follower?.username ?? "unknown"} (${follower?.type ?? "?"})</p>
+                <hr/>
+                <p><strong>Reported by:</strong> ${reporter.username} (${reporter.email})</p>
+                <p><strong>User ID:</strong> ${reporter.id}</p>
+              `,
+              reply_to: reporter.email,
+            }),
+          });
+        } catch (error) {
+          strapi.log.error("Clip report email send error:", error);
+          return ctx.internalServerError("Failed to send report");
+        }
+
+        return { success: true };
+      },
+
+      async resetCounters(ctx) {
+        const { documentId } = ctx.params;
+        if (!documentId || typeof documentId !== "string") {
+          return ctx.badRequest("INVALID_DOCUMENT_ID");
+        }
+        await strapi.db.connection.raw(
+          "UPDATE clips SET views_count = 0, downloads_count = 0 WHERE document_id = ?",
+          [documentId],
+        );
+        return { success: true };
+      },
     };
   },
 );
