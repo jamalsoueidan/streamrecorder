@@ -63,7 +63,11 @@ const cachedGetRecordings = unstable_cache(
 
     const hasFollowerFilter = Object.keys(follower).length > 0;
 
-    const response = await publicApi.recording.getRecordings(
+    // POST /recordings/search — sends the filter array in the body, avoids
+    // the ~2KB query-string limit that silently truncated long follower-id
+    // $in arrays (a free user with 100+ followers would lose IDs and miss
+    // recordings from the tail of their list).
+    const response = await publicApi.recording.searchRecordings(
       deepMerge(defaultOptions, {
         filters: {
           ...filters,
@@ -72,9 +76,7 @@ const cachedGetRecordings = unstable_cache(
             : {}),
         },
         sort,
-        "pagination[page]": page,
-        "pagination[pageSize]": pageSize,
-        "pagination[withCount]": false,
+        pagination: { page, pageSize, withCount: false },
       }),
     );
 

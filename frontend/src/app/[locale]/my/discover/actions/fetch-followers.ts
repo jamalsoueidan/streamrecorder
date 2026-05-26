@@ -22,10 +22,10 @@ const cachedDiscover = unstable_cache(
     excludeFollowingIds: number[],
   ) => {
     const baseFilters = buildCreatorsFilters(filters);
-    const response = await publicApi.follower.getFollowers({
-      "pagination[page]": page,
-      "pagination[pageSize]": 24,
-      "pagination[withCount]": true,
+    // POST /followers/search — body avoids URL truncation when a user with
+    // 100+ followers triggers the $notIn array.
+    const response = await publicApi.follower.searchFollowers({
+      pagination: { page, pageSize: 24, withCount: true },
       sort: mapSort(filters.sort),
       populate: { avatar: { fields: ["url"] } },
       filters: {

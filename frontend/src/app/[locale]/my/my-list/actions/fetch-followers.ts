@@ -26,10 +26,11 @@ const cachedDiscover = unstable_cache(
   ) => {
     const idScope = filters.favorites ? favoriteIds : followingIds;
     const baseFilters = buildCreatorsFilters(filters);
-    const response = await publicApi.follower.getFollowers({
-      "pagination[page]": page,
-      "pagination[pageSize]": 10,
-      "pagination[withCount]": true,
+    // POST /followers/search — body-based filter avoids the URL-length limit
+    // that silently dropped IDs from the $in array on GET when a user had
+    // 100+ followers/favorites.
+    const response = await publicApi.follower.searchFollowers({
+      pagination: { page, pageSize: 10, withCount: true },
       sort: mapSort(filters.sort),
       populate: { avatar: { fields: ["url"] } },
       filters: {

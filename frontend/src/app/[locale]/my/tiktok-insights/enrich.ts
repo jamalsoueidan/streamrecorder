@@ -17,13 +17,15 @@ export async function enrichWithFollowers<T extends { owner_username?: string }>
 
   if (usernames.length > 0) {
     try {
-      const res = await api.follower.getFollowers({
+      // POST /followers/search — body avoids URL truncation when the
+      // insights surface 100+ usernames in the $in array.
+      const res = await api.follower.searchFollowers({
         filters: {
           username: { $in: usernames },
           type: { $eq: FollowerTypeEnum.Tiktok },
         },
         populate: ["avatar"],
-        "pagination[limit]": usernames.length,
+        pagination: { limit: usernames.length } as never,
       });
       for (const f of res.data?.data ?? []) {
         if (f.username) {

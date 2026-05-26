@@ -6,7 +6,9 @@ export async function getRecordingsByIds(documentIds: string[]) {
   if (documentIds.length === 0) return [];
 
   try {
-    const { data } = await api.recording.getRecordings({
+    // POST /recordings/search — body avoids URL truncation when a power
+    // user has 100+ entries in watch-later.
+    const { data } = await api.recording.searchRecordings({
       filters: {
         documentId: { $in: documentIds },
         sources: {
