@@ -34,7 +34,7 @@ import { useLocale, useTranslations } from "next-intl";
 import Link from "@/app/components/link";
 import { useState } from "react";
 import { DownloadUpgradeModal } from "./download-upgrade-modal";
-import { ReportRecordingModal } from "./report-recording-modal";
+import { ReportModal } from "./report-modal";
 import { VideoEditorModal } from "./video-editor-modal";
 
 interface RecordingMenuProps {
@@ -347,7 +347,8 @@ export function RecordingMenu({
         onClose={() => setEditorOpened(false)}
       />
       {recording.documentId && (
-        <ReportRecordingModal
+        <ReportModal
+          entity="recording"
           documentId={recording.documentId}
           opened={reportOpened}
           onClose={() => setReportOpened(false)}

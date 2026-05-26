@@ -6,6 +6,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { useState } from "react";
 
 interface Props {
+  entity: "recording" | "clip";
   documentId: string;
   opened: boolean;
   onClose: () => void;
@@ -19,7 +20,7 @@ const REASONS = [
   { value: "spam", key: "spam" },
 ] as const;
 
-export function ReportRecordingModal({ documentId, opened, onClose }: Props) {
+export function ReportModal({ entity, documentId, opened, onClose }: Props) {
   const t = useTranslations("protected.common.report");
   const locale = useLocale();
   const [reason, setReason] = useState<string>("");
@@ -29,7 +30,7 @@ export function ReportRecordingModal({ documentId, opened, onClose }: Props) {
     if (!reason) return;
     setSubmitting(true);
     try {
-      const res = await fetch(`/api/report-recording/${documentId}`, {
+      const res = await fetch(`/api/report-${entity}/${documentId}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ reason, locale }),
@@ -61,7 +62,11 @@ export function ReportRecordingModal({ documentId, opened, onClose }: Props) {
         <Radio.Group value={reason} onChange={setReason}>
           <Stack gap="sm">
             {REASONS.map((r) => (
-              <Radio key={r.value} value={r.value} label={t(`reasons.${r.key}`)} />
+              <Radio
+                key={r.value}
+                value={r.value}
+                label={t(`reasons.${r.key}`)}
+              />
             ))}
           </Stack>
         </Radio.Group>

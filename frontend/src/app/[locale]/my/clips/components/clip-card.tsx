@@ -18,7 +18,7 @@ import {
   Tooltip,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
-import { IconDownload } from "@tabler/icons-react";
+import { IconDownload, IconEye } from "@tabler/icons-react";
 import { useDateFormatter } from "../../lib/use-date-formatter";
 
 import Image from "next/image";
@@ -121,6 +121,16 @@ export function ClipCard({ clip, locale }: ClipCardProps) {
                     })}
                   </Text>
                 )}
+                <Group gap={8} c="dimmed" wrap="nowrap">
+                  <Group gap={3} wrap="nowrap">
+                    <IconEye size={12} />
+                    <Text size="xs">{clip.viewsCount ?? 0}</Text>
+                  </Group>
+                  <Group gap={3} wrap="nowrap">
+                    <IconDownload size={12} />
+                    <Text size="xs">{clip.downloadsCount ?? 0}</Text>
+                  </Group>
+                </Group>
               </Stack>
             </Group>
             <ClipMenu clip={clip} />

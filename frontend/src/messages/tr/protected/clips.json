@@ -12,6 +12,16 @@
     "deleteButton": "Sil",
     "cancel": "İptal",
     "deleteSuccess": "Klip silindi",
-    "deleteError": "Klip silinemedi"
+    "deleteError": "Klip silinemedi",
+    "report": "Bildir",
+    "resetCounters": "Sayaçları sıfırla",
+    "resetCountersConfirm": {
+      "title": "Klip sayaçlarını sıfırla",
+      "message": "Bu klibin görüntülenme ve indirme sayıları 0 olarak ayarlanacak. Devam edilsin mi?",
+      "confirm": "Sıfırla",
+      "cancel": "İptal"
+    },
+    "resetCountersSuccess": "Sayaçlar sıfırlandı",
+    "resetCountersFailed": "Sayaçlar sıfırlanamadı"
   }
 }

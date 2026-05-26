@@ -1,6 +1,6 @@
 "use client";
 
-import { getRandomClip } from "@/app/actions/clip";
+import { getRandomClip, incrementClipView } from "@/app/actions/clip";
 import { getClipUrl } from "@/app/lib/clip-url";
 import { getProfileUrl } from "@/app/components/open-social";
 import { generateAvatarUrl } from "@/app/lib/avatar-url";
@@ -43,6 +43,7 @@ interface ClipCardProps {
 function ClipCard({ clip, isActive }: ClipCardProps) {
   const locale = useLocale();
   const videoRef = useRef<HTMLVideoElement>(null);
+  const hasCountedViewRef = useRef(false);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
   const [progress, setProgress] = useState(0);
@@ -67,7 +68,13 @@ function ClipCard({ clip, isActive }: ClipCardProps) {
     const video = videoRef.current;
     if (!video) return;
 
-    const onPlay = () => setIsPlaying(true);
+    const onPlay = () => {
+      setIsPlaying(true);
+      if (!hasCountedViewRef.current && clip.documentId) {
+        hasCountedViewRef.current = true;
+        void incrementClipView(clip.documentId);
+      }
+    };
     const onPause = () => setIsPlaying(false);
     const onTimeUpdate = () => {
       if (video.duration) {

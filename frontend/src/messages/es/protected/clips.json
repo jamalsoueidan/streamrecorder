@@ -12,6 +12,16 @@
     "deleteButton": "Eliminar",
     "cancel": "Cancelar",
     "deleteSuccess": "Clip eliminado",
-    "deleteError": "No se pudo eliminar el clip"
+    "deleteError": "No se pudo eliminar el clip",
+    "report": "Reportar",
+    "resetCounters": "Restablecer contadores",
+    "resetCountersConfirm": {
+      "title": "Restablecer contadores del clip",
+      "message": "Esto pondrá vistas y descargas en 0 para este clip. ¿Continuar?",
+      "confirm": "Restablecer",
+      "cancel": "Cancelar"
+    },
+    "resetCountersSuccess": "Contadores restablecidos",
+    "resetCountersFailed": "Error al restablecer contadores"
   }
 }

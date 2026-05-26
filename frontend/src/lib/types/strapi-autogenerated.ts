@@ -3286,6 +3286,8 @@ export interface ClipRequest {
     follower?: number | string;
     /** @example "string or id" */
     recording?: number | string;
+    viewsCount?: number;
+    downloadsCount?: number;
     locale?: string;
     localizations?: (number | string)[];
   };
@@ -3878,6 +3880,8 @@ export interface Clip {
       documentId?: string;
     }[];
   };
+  viewsCount?: number;
+  downloadsCount?: number;
   /** @format date-time */
   createdAt?: string;
   /** @format date-time */
@@ -3915,6 +3919,8 @@ export interface Clip {
       id?: string | number;
       documentId?: string;
     };
+    viewsCount?: number;
+    downloadsCount?: number;
     /** @format date-time */
     createdAt?: string;
     /** @format date-time */
@@ -4546,6 +4552,8 @@ export interface ClipShare {
         documentId?: string;
       }[];
     };
+    viewsCount?: number;
+    downloadsCount?: number;
     /** @format date-time */
     createdAt?: string;
     /** @format date-time */
@@ -11699,6 +11707,61 @@ export interface ResetRecordingCountersData {
   success?: boolean;
 }
 
+export interface IncrementClipViewParams {
+  /** Clip documentId */
+  documentId: string;
+}
+
+export interface IncrementClipViewData {
+  success?: boolean;
+}
+
+export interface IncrementClipDownloadParams {
+  /** Clip documentId */
+  documentId: string;
+}
+
+export interface IncrementClipDownloadData {
+  success?: boolean;
+}
+
+export enum ReportClipReasonEnum {
+  Sexual = "sexual",
+  Violent = "violent",
+  Hateful = "hateful",
+  Harmful = "harmful",
+  Spam = "spam",
+}
+
+export interface ReportClipPayload {
+  reason: ReportClipReasonEnum;
+  locale?: string;
+  reporter: {
+    id: number;
+    username: string;
+    /** @format email */
+    email: string;
+  };
+}
+
+export interface ReportClipParams {
+  /** Clip documentId */
+  documentId: string;
+}
+
+export interface ReportClipData {
+  success?: boolean;
+}
+
+export interface ResetClipCountersParams {
+  /** Clip documentId */
+  documentId: string;
+}
+
+export interface ResetClipCountersData {
+  success?: boolean;
+}
+
 export interface BlockFollowerParams {
   /** Follower documentId */
   documentId: string;
@@ -12707,6 +12770,82 @@ export namespace Clip {
     export type RequestBody = never;
     export type RequestHeaders = {};
     export type ResponseBody = GetRandomClipsData;
+  }
+
+  /**
+   * No description
+   * @tags Clip
+   * @name IncrementClipView
+   * @summary Increment clip views_count by 1
+   * @request POST:/clips/{documentId}/view
+   * @secure
+   */
+  export namespace IncrementClipView {
+    export type RequestParams = {
+      /** Clip documentId */
+      documentId: string;
+    };
+    export type RequestQuery = {};
+    export type RequestBody = never;
+    export type RequestHeaders = {};
+    export type ResponseBody = IncrementClipViewData;
+  }
+
+  /**
+   * No description
+   * @tags Clip
+   * @name IncrementClipDownload
+   * @summary Increment clip downloads_count by 1
+   * @request POST:/clips/{documentId}/download
+   * @secure
+   */
+  export namespace IncrementClipDownload {
+    export type RequestParams = {
+      /** Clip documentId */
+      documentId: string;
+    };
+    export type RequestQuery = {};
+    export type RequestBody = never;
+    export type RequestHeaders = {};
+    export type ResponseBody = IncrementClipDownloadData;
+  }
+
+  /**
+   * No description
+   * @tags Clip
+   * @name ReportClip
+   * @summary Report a clip for moderation review
+   * @request POST:/clips/{documentId}/report
+   * @secure
+   */
+  export namespace ReportClip {
+    export type RequestParams = {
+      /** Clip documentId */
+      documentId: string;
+    };
+    export type RequestQuery = {};
+    export type RequestBody = ReportClipPayload;
+    export type RequestHeaders = {};
+    export type ResponseBody = ReportClipData;
+  }
+
+  /**
+   * No description
+   * @tags Clip
+   * @name ResetClipCounters
+   * @summary Reset clip views_count and downloads_count to 0
+   * @request POST:/clips/{documentId}/reset-counters
+   * @secure
+   */
+  export namespace ResetClipCounters {
+    export type RequestParams = {
+      /** Clip documentId */
+      documentId: string;
+    };
+    export type RequestQuery = {};
+    export type RequestBody = never;
+    export type RequestHeaders = {};
+    export type ResponseBody = ResetClipCountersData;
   }
 }
 
@@ -15884,6 +16023,93 @@ export class Api<
         path: `/clips/random`,
         method: "GET",
         query: query,
+        secure: true,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Clip
+     * @name IncrementClipView
+     * @summary Increment clip views_count by 1
+     * @request POST:/clips/{documentId}/view
+     * @secure
+     */
+    incrementClipView: (
+      { documentId }: IncrementClipViewParams,
+      params: RequestParams = {},
+    ) =>
+      this.request<IncrementClipViewData, void>({
+        path: `/clips/${documentId}/view`,
+        method: "POST",
+        secure: true,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Clip
+     * @name IncrementClipDownload
+     * @summary Increment clip downloads_count by 1
+     * @request POST:/clips/{documentId}/download
+     * @secure
+     */
+    incrementClipDownload: (
+      { documentId }: IncrementClipDownloadParams,
+      params: RequestParams = {},
+    ) =>
+      this.request<IncrementClipDownloadData, void>({
+        path: `/clips/${documentId}/download`,
+        method: "POST",
+        secure: true,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Clip
+     * @name ReportClip
+     * @summary Report a clip for moderation review
+     * @request POST:/clips/{documentId}/report
+     * @secure
+     */
+    reportClip: (
+      { documentId }: ReportClipParams,
+      data: ReportClipPayload,
+      params: RequestParams = {},
+    ) =>
+      this.request<ReportClipData, void>({
+        path: `/clips/${documentId}/report`,
+        method: "POST",
+        body: data,
+        secure: true,
+        type: ContentType.Json,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Clip
+     * @name ResetClipCounters
+     * @summary Reset clip views_count and downloads_count to 0
+     * @request POST:/clips/{documentId}/reset-counters
+     * @secure
+     */
+    resetClipCounters: (
+      { documentId }: ResetClipCountersParams,
+      params: RequestParams = {},
+    ) =>
+      this.request<ResetClipCountersData, void>({
+        path: `/clips/${documentId}/reset-counters`,
+        method: "POST",
         secure: true,
         format: "json",
         ...params,

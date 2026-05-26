@@ -12,6 +12,16 @@
     "deleteButton": "Delete",
     "cancel": "Cancel",
     "deleteSuccess": "Clip deleted",
-    "deleteError": "Failed to delete clip"
+    "deleteError": "Failed to delete clip",
+    "report": "Report",
+    "resetCounters": "Reset counters",
+    "resetCountersConfirm": {
+      "title": "Reset clip counters",
+      "message": "This will set views and downloads to 0 for this clip. Continue?",
+      "confirm": "Reset",
+      "cancel": "Cancel"
+    },
+    "resetCountersSuccess": "Counters reset",
+    "resetCountersFailed": "Failed to reset counters"
   }
 }

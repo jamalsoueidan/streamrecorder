@@ -12,6 +12,16 @@
     "deleteButton": "Burahin",
     "cancel": "Kanselahin",
     "deleteSuccess": "Nabura na ang clip",
-    "deleteError": "Hindi nabura ang clip"
+    "deleteError": "Hindi nabura ang clip",
+    "report": "I-report",
+    "resetCounters": "I-reset ang counters",
+    "resetCountersConfirm": {
+      "title": "I-reset ang counters ng clip",
+      "message": "Ise-set sa 0 ang views at downloads ng clip na ito. Magpatuloy?",
+      "confirm": "I-reset",
+      "cancel": "Kanselahin"
+    },
+    "resetCountersSuccess": "Na-reset ang counters",
+    "resetCountersFailed": "Hindi na-reset ang counters"
   }
 }

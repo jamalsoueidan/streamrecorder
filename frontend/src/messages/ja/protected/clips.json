@@ -12,6 +12,16 @@
     "deleteButton": "削除",
     "cancel": "キャンセル",
     "deleteSuccess": "クリップを削除しました",
-    "deleteError": "クリップの削除に失敗しました"
+    "deleteError": "クリップの削除に失敗しました",
+    "report": "報告",
+    "resetCounters": "カウンターをリセット",
+    "resetCountersConfirm": {
+      "title": "クリップのカウンターをリセット",
+      "message": "このクリップの再生数とダウンロード数を0にリセットします。続行しますか?",
+      "confirm": "リセット",
+      "cancel": "キャンセル"
+    },
+    "resetCountersSuccess": "カウンターをリセットしました",
+    "resetCountersFailed": "カウンターのリセットに失敗しました"
   }
 }

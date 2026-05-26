@@ -12,6 +12,16 @@
     "deleteButton": "删除",
     "cancel": "取消",
     "deleteSuccess": "短视频已删除",
-    "deleteError": "删除短视频失败"
+    "deleteError": "删除短视频失败",
+    "report": "举报",
+    "resetCounters": "重置计数器",
+    "resetCountersConfirm": {
+      "title": "重置剪辑计数器",
+      "message": "此剪辑的观看次数和下载次数将被设为 0。是否继续?",
+      "confirm": "重置",
+      "cancel": "取消"
+    },
+    "resetCountersSuccess": "计数器已重置",
+    "resetCountersFailed": "重置计数器失败"
   }
 }

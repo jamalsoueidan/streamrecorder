@@ -12,6 +12,16 @@
     "deleteButton": "ลบ",
     "cancel": "ยกเลิก",
     "deleteSuccess": "ลบคลิปแล้ว",
-    "deleteError": "ลบคลิปไม่สำเร็จ"
+    "deleteError": "ลบคลิปไม่สำเร็จ",
+    "report": "รายงาน",
+    "resetCounters": "รีเซ็ตตัวนับ",
+    "resetCountersConfirm": {
+      "title": "รีเซ็ตตัวนับของคลิป",
+      "message": "ยอดวิวและดาวน์โหลดของคลิปนี้จะถูกตั้งเป็น 0 ดำเนินการต่อ?",
+      "confirm": "รีเซ็ต",
+      "cancel": "ยกเลิก"
+    },
+    "resetCountersSuccess": "รีเซ็ตตัวนับแล้ว",
+    "resetCountersFailed": "ไม่สามารถรีเซ็ตตัวนับได้"
   }
 }

@@ -12,6 +12,16 @@
     "deleteButton": "Supprimer",
     "cancel": "Annuler",
     "deleteSuccess": "Clip supprimé",
-    "deleteError": "Échec de la suppression du clip"
+    "deleteError": "Échec de la suppression du clip",
+    "report": "Signaler",
+    "resetCounters": "Réinitialiser les compteurs",
+    "resetCountersConfirm": {
+      "title": "Réinitialiser les compteurs du clip",
+      "message": "Les vues et téléchargements de ce clip seront remis à 0. Continuer ?",
+      "confirm": "Réinitialiser",
+      "cancel": "Annuler"
+    },
+    "resetCountersSuccess": "Compteurs réinitialisés",
+    "resetCountersFailed": "Échec de la réinitialisation"
   }
 }

@@ -12,6 +12,16 @@
     "deleteButton": "Löschen",
     "cancel": "Abbrechen",
     "deleteSuccess": "Clip gelöscht",
-    "deleteError": "Clip konnte nicht gelöscht werden"
+    "deleteError": "Clip konnte nicht gelöscht werden",
+    "report": "Melden",
+    "resetCounters": "Zähler zurücksetzen",
+    "resetCountersConfirm": {
+      "title": "Clip-Zähler zurücksetzen",
+      "message": "Aufrufe und Downloads für diesen Clip werden auf 0 gesetzt. Fortfahren?",
+      "confirm": "Zurücksetzen",
+      "cancel": "Abbrechen"
+    },
+    "resetCountersSuccess": "Zähler zurückgesetzt",
+    "resetCountersFailed": "Zurücksetzen fehlgeschlagen"
   }
 }

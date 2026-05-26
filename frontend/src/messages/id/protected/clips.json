@@ -12,6 +12,16 @@
     "deleteButton": "Hapus",
     "cancel": "Batal",
     "deleteSuccess": "Klip dihapus",
-    "deleteError": "Gagal menghapus klip"
+    "deleteError": "Gagal menghapus klip",
+    "report": "Laporkan",
+    "resetCounters": "Reset penghitung",
+    "resetCountersConfirm": {
+      "title": "Reset penghitung clip",
+      "message": "Jumlah tampilan dan unduhan clip ini akan diatur ke 0. Lanjutkan?",
+      "confirm": "Reset",
+      "cancel": "Batal"
+    },
+    "resetCountersSuccess": "Penghitung direset",
+    "resetCountersFailed": "Gagal mereset penghitung"
   }
 }

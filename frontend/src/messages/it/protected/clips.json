@@ -12,6 +12,16 @@
     "deleteButton": "Elimina",
     "cancel": "Annulla",
     "deleteSuccess": "Clip eliminata",
-    "deleteError": "Impossibile eliminare la clip"
+    "deleteError": "Impossibile eliminare la clip",
+    "report": "Segnala",
+    "resetCounters": "Azzera contatori",
+    "resetCountersConfirm": {
+      "title": "Azzera i contatori del clip",
+      "message": "Visualizzazioni e download di questo clip verranno azzerati. Continuare?",
+      "confirm": "Azzera",
+      "cancel": "Annulla"
+    },
+    "resetCountersSuccess": "Contatori azzerati",
+    "resetCountersFailed": "Impossibile azzerare i contatori"
   }
 }

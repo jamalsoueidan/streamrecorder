@@ -12,6 +12,16 @@
     "deleteButton": "حذف",
     "cancel": "إلغاء",
     "deleteSuccess": "تم حذف المقطع",
-    "deleteError": "فشل حذف المقطع"
+    "deleteError": "فشل حذف المقطع",
+    "report": "إبلاغ",
+    "resetCounters": "إعادة تعيين العدّادات",
+    "resetCountersConfirm": {
+      "title": "إعادة تعيين عدّادات الكليب",
+      "message": "سيتم تصفير عدد المشاهدات والتنزيلات لهذا الكليب. هل تريد المتابعة؟",
+      "confirm": "إعادة تعيين",
+      "cancel": "إلغاء"
+    },
+    "resetCountersSuccess": "تمت إعادة تعيين العدّادات",
+    "resetCountersFailed": "فشل في إعادة تعيين العدّادات"
   }
 }

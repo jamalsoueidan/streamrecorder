@@ -12,6 +12,16 @@
     "deleteButton": "삭제",
     "cancel": "취소",
     "deleteSuccess": "클립이 삭제되었습니다",
-    "deleteError": "클립 삭제에 실패했습니다"
+    "deleteError": "클립 삭제에 실패했습니다",
+    "report": "신고",
+    "resetCounters": "카운터 초기화",
+    "resetCountersConfirm": {
+      "title": "클립 카운터 초기화",
+      "message": "이 클립의 조회수와 다운로드 수가 0으로 초기화됩니다. 계속하시겠습니까?",
+      "confirm": "초기화",
+      "cancel": "취소"
+    },
+    "resetCountersSuccess": "카운터가 초기화되었습니다",
+    "resetCountersFailed": "카운터 초기화에 실패했습니다"
   }
 }

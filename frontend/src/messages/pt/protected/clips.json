@@ -12,6 +12,16 @@
     "deleteButton": "Excluir",
     "cancel": "Cancelar",
     "deleteSuccess": "Clipe excluído",
-    "deleteError": "Falha ao excluir o clipe"
+    "deleteError": "Falha ao excluir o clipe",
+    "report": "Denunciar",
+    "resetCounters": "Zerar contadores",
+    "resetCountersConfirm": {
+      "title": "Zerar contadores do clip",
+      "message": "As visualizações e downloads deste clip serão zerados. Continuar?",
+      "confirm": "Zerar",
+      "cancel": "Cancelar"
+    },
+    "resetCountersSuccess": "Contadores zerados",
+    "resetCountersFailed": "Falha ao zerar contadores"
   }
 }

@@ -15,19 +15,23 @@ import PaginationControls from "@/app/components/pagination";
 import { enrichClipsWithUrls } from "@/app/lib/clip-url.server";
 import publicApi from "@/lib/public-api";
 import { ClipCard } from "./components/clip-card";
+import { ClipsSort } from "./components/clips-sort";
+import { clipsParamsCache, SortOptions } from "./lib/search-params";
 
 interface PageProps {
   searchParams: Promise<{
     page?: string;
+    sort?: string;
   }>;
 }
 
 export default async function Page({ searchParams }: PageProps) {
-  const { page } = await searchParams;
+  const params = await searchParams;
+  const { sort } = clipsParamsCache.parse(params);
   const t = await getTranslations("protected.clips");
   const locale = await getLocale();
 
-  const pageNumber = parseInt(page || "1", 10);
+  const pageNumber = parseInt(params.page || "1", 10);
   const limit = 12;
 
   const response = await publicApi.clip
@@ -43,7 +47,7 @@ export default async function Page({ searchParams }: PageProps) {
       "pagination[pageSize]": limit,
       "pagination[page]": pageNumber,
       "pagination[withCount]": true,
-      sort: "createdAt:desc",
+      sort: sort as SortOptions,
       locale,
     })
     .catch(() => null);
@@ -56,7 +60,7 @@ export default async function Page({ searchParams }: PageProps) {
 
   return (
     <Stack w="100%">
-      <Flex justify="space-between" align="center">
+      <Flex justify="space-between" align="center" gap="md">
         <Stack gap={2}>
           <Flex gap="xs" align="center">
             <IconScissors size={32} />
@@ -68,6 +72,7 @@ export default async function Page({ searchParams }: PageProps) {
             {t("description")}
           </Text>
         </Stack>
+        <ClipsSort />
       </Flex>
 
       <Divider mx={{ base: "-xs", sm: "-md" }} />
