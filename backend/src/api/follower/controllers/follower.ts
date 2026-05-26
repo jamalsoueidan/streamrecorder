@@ -509,8 +509,21 @@ export default factories.createCoreController(
           },
         });
 
+      // DMCA-blocked creator — premium/champion/admin/moderator can still
+      // follow (used by streamarchive's premium-archive flow). Free users
+      // get blocked. On streamrecorder this is essentially harmless since
+      // a blocked creator's content is purged — premium just follows an
+      // empty profile.
       if (follower?.blocked) {
-        return ctx.forbidden("FOLLOWER_BLOCKED");
+        const requesterRole = currentUser?.role?.type;
+        const isPremium =
+          requesterRole === "premium" ||
+          requesterRole === "champion" ||
+          requesterRole === "admin" ||
+          requesterRole === "moderator";
+        if (!isPremium) {
+          return ctx.forbidden("FOLLOWER_BLOCKED");
+        }
       }
 
       if (!follower) {
