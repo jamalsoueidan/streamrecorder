@@ -2019,7 +2019,7 @@ export interface PluginUsersPermissionsUser
         minLength: 6;
       }>;
     paymentProvider: Schema.Attribute.Enumeration<
-      ['freemius', 'stripe', 'mollie']
+      ['freemius', 'stripe', 'mollie', 'nowpayments']
     >;
     provider: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;

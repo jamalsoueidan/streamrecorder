@@ -20,7 +20,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2026-05-27T09:09:14.102Z"
+    "x-generation-date": "2026-05-27T12:14:45.724Z"
   },
   "servers": [
     {
@@ -15733,7 +15733,8 @@
                     "enum": [
                       "freemius",
                       "stripe",
-                      "mollie"
+                      "mollie",
+                      "nowpayments"
                     ]
                   },
                   "trialClaimed": {
@@ -17888,7 +17889,8 @@
                     "enum": [
                       "freemius",
                       "stripe",
-                      "mollie"
+                      "mollie",
+                      "nowpayments"
                     ]
                   },
                   "trialClaimed": {
@@ -20565,7 +20567,8 @@
                         "enum": [
                           "freemius",
                           "stripe",
-                          "mollie"
+                          "mollie",
+                          "nowpayments"
                         ]
                       },
                       "trialClaimed": {
@@ -27836,7 +27839,8 @@
                     "enum": [
                       "freemius",
                       "stripe",
-                      "mollie"
+                      "mollie",
+                      "nowpayments"
                     ]
                   },
                   "trialClaimed": {
@@ -30349,7 +30353,8 @@
                         "enum": [
                           "freemius",
                           "stripe",
-                          "mollie"
+                          "mollie",
+                          "nowpayments"
                         ]
                       },
                       "trialClaimed": {
@@ -34209,7 +34214,8 @@
                 "enum": [
                   "freemius",
                   "stripe",
-                  "mollie"
+                  "mollie",
+                  "nowpayments"
                 ]
               },
               "trialClaimed": {
@@ -36238,7 +36244,8 @@
                         "enum": [
                           "freemius",
                           "stripe",
-                          "mollie"
+                          "mollie",
+                          "nowpayments"
                         ]
                       },
                       "trialClaimed": {
@@ -38682,7 +38689,8 @@
                     "enum": [
                       "freemius",
                       "stripe",
-                      "mollie"
+                      "mollie",
+                      "nowpayments"
                     ]
                   },
                   "trialClaimed": {
@@ -41795,7 +41803,8 @@
                 "enum": [
                   "freemius",
                   "stripe",
-                  "mollie"
+                  "mollie",
+                  "nowpayments"
                 ]
               },
               "trialClaimed": {
@@ -43828,7 +43837,8 @@
                         "enum": [
                           "freemius",
                           "stripe",
-                          "mollie"
+                          "mollie",
+                          "nowpayments"
                         ]
                       },
                       "trialClaimed": {
@@ -46119,7 +46129,8 @@
                         "enum": [
                           "freemius",
                           "stripe",
-                          "mollie"
+                          "mollie",
+                          "nowpayments"
                         ]
                       },
                       "trialClaimed": {
@@ -48542,7 +48553,8 @@
                         "enum": [
                           "freemius",
                           "stripe",
-                          "mollie"
+                          "mollie",
+                          "nowpayments"
                         ]
                       },
                       "trialClaimed": {

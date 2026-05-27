@@ -103,7 +103,7 @@
     },
     "paymentProvider": {
       "type": "enumeration",
-      "enum": ["freemius", "stripe", "mollie"]
+      "enum": ["freemius", "stripe", "mollie", "nowpayments"]
     },
     "trialClaimed": {
       "type": "boolean",
