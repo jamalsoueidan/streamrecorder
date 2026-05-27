@@ -137,9 +137,16 @@ export default factories.createCoreController(
 
       const follower = (recording as any).follower;
       const localePrefix = locale && locale !== "en" ? `${locale}/` : "";
+      // FRONTEND_URL lets each backend deployment point at its own product:
+      // streamrecorder → www.livestreamrecorder.com, streamarchive → www.streamarchive.io.
+      // /my/ prefix sends the admin straight to the protected (authed) view
+      // instead of the public page — they don't have to hand-edit the URL.
+      const frontendUrl = (
+        process.env.FRONTEND_URL || "https://www.livestreamrecorder.com"
+      ).replace(/\/$/, "");
       const videoUrl = follower
-        ? `https://www.livestreamrecorder.com/${localePrefix}${follower.type}/${follower.username}/video/${documentId}`
-        : `https://www.livestreamrecorder.com/video/${documentId}`;
+        ? `${frontendUrl}/${localePrefix}my/${follower.type}/${follower.username}/video/${documentId}`
+        : `${frontendUrl}/video/${documentId}`;
 
       const emailSettings = strapi.plugin("email").config("settings") as {
         defaultTo?: string;

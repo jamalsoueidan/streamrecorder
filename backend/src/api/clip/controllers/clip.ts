@@ -239,9 +239,15 @@ export default factories.createCoreController(
 
         const follower = (clip as any).follower;
         const localePrefix = locale && locale !== "en" ? `${locale}/` : "";
+        // FRONTEND_URL is set per deployment (streamrecorder vs streamarchive).
+        // Clips land in /shorts/{id} on both — no /my/ prefix because the
+        // shorts viewer is the same surface for public + authed visitors.
+        const frontendUrl = (
+          process.env.FRONTEND_URL || "https://www.livestreamrecorder.com"
+        ).replace(/\/$/, "");
         const clipUrl = follower
-          ? `https://www.livestreamrecorder.com/${localePrefix}${follower.type}/${follower.username}/clip/${documentId}`
-          : `https://www.livestreamrecorder.com/clip/${documentId}`;
+          ? `${frontendUrl}/${localePrefix}shorts/${documentId}`
+          : `${frontendUrl}/shorts/${documentId}`;
 
         const emailSettings = strapi.plugin("email").config("settings") as {
           defaultTo?: string;
