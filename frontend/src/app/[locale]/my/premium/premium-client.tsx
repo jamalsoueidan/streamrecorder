@@ -51,7 +51,6 @@ import { useTranslations } from "next-intl";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { cancelSubscription } from "./actions";
-import { FreemiusPaymentButton } from "./components/freemius-payment-button";
 import { StripePaymentButton } from "./components/stripe-payment-button";
 
 // Extend user type with subscription fields from schema
@@ -687,44 +686,25 @@ export default function PremiumClient() {
                   {t("vatNotice")}
                 </Text>
 
-                {/* Pay Button */}
-                {!FREEMIUS_ENABLED || selectedPayment === "stripe" ? (
-                  <StripePaymentButton
-                    billingCycle={selectedPlan?.billingCycle || "annual"}
-                    planLabel={selectedPlan?.label || "Premium"}
-                    userEmail={user?.email || ""}
-                    userId={String(user?.id || "")}
-                    fullWidth
-                    size="lg"
-                    radius="md"
-                    disabled={!selectedPayment}
-                    style={{
-                      background:
-                        "linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%)",
-                    }}
-                  >
-                    {selectedBilling === "lifetime"
-                      ? t("buyNow")
-                      : t("subscribe")}
-                  </StripePaymentButton>
-                ) : (
-                  <FreemiusPaymentButton
-                    billingCycle={selectedPlan?.billingCycle || "annual"}
-                    planLabel={selectedPlan?.label || "Premium"}
-                    fullWidth
-                    size="lg"
-                    radius="md"
-                    disabled={!selectedPayment}
-                    style={{
-                      background:
-                        "linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%)",
-                    }}
-                  >
-                    {selectedBilling === "lifetime"
-                      ? t("buyNow")
-                      : t("subscribe")}
-                  </FreemiusPaymentButton>
-                )}
+                {/* Pay Button — Stripe only (Freemius removed 2026-05-27) */}
+                <StripePaymentButton
+                  billingCycle={selectedPlan?.billingCycle || "annual"}
+                  planLabel={selectedPlan?.label || "Premium"}
+                  userEmail={user?.email || ""}
+                  userId={String(user?.id || "")}
+                  fullWidth
+                  size="lg"
+                  radius="md"
+                  disabled={!selectedPayment}
+                  style={{
+                    background:
+                      "linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%)",
+                  }}
+                >
+                  {selectedBilling === "lifetime"
+                    ? t("buyNow")
+                    : t("subscribe")}
+                </StripePaymentButton>
 
                 {/* Security Note */}
                 <Flex gap="xs" align="center" justify="center">

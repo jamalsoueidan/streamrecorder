@@ -1,10 +1,11 @@
 "use server";
 
 import api from "@/lib/api";
-import { cancelFreemiusSubscription } from "./freemius";
 import { cancelStripeSubscription } from "./stripe";
 
-// Generic cancel that detects provider
+// Generic cancel that detects provider. Freemius removed (provider shut us
+// down 2026-05-27); legacy freemius users get pushed to the
+// FreemiusShutdownModal which calls downgradeToFree directly.
 export async function cancelSubscription(): Promise<{
   success: boolean;
   error?: string;
@@ -21,10 +22,12 @@ export async function cancelSubscription(): Promise<{
 
     if (provider === "stripe") {
       return cancelStripeSubscription();
-    } else {
-      // Default to freemius for backwards compatibility
-      return cancelFreemiusSubscription();
     }
+
+    return {
+      success: false,
+      error: "Unsupported payment provider. Use the downgrade flow.",
+    };
   } catch (error) {
     console.error("Cancel subscription error:", error);
     return { success: false, error: "Failed to cancel subscription" };

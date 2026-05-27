@@ -9646,6 +9646,7 @@ export enum ActivityPaymentProviderEnum {
   Freemius = "freemius",
   Stripe = "stripe",
   Mollie = "mollie",
+  Nowpayments = "nowpayments",
 }
 
 export enum AiRequestRequestStateEnum {
@@ -9685,6 +9686,7 @@ export enum AiRequestPaymentProviderEnum {
   Freemius = "freemius",
   Stripe = "stripe",
   Mollie = "mollie",
+  Nowpayments = "nowpayments",
 }
 
 export enum AiRequestStateEnum {
@@ -9752,6 +9754,7 @@ export enum AiTaskPaymentProviderEnum {
   Freemius = "freemius",
   Stripe = "stripe",
   Mollie = "mollie",
+  Nowpayments = "nowpayments",
 }
 
 export enum AiTaskStateEnum {
@@ -9850,6 +9853,7 @@ export enum ClipPaymentProviderEnum {
   Freemius = "freemius",
   Stripe = "stripe",
   Mollie = "mollie",
+  Nowpayments = "nowpayments",
 }
 
 export enum ClipStateEnum {
@@ -9895,6 +9899,7 @@ export enum ClipSharePaymentProviderEnum {
   Freemius = "freemius",
   Stripe = "stripe",
   Mollie = "mollie",
+  Nowpayments = "nowpayments",
 }
 
 export enum ClipShareStateEnum {
@@ -9963,6 +9968,7 @@ export enum FollowerPaymentProviderEnum {
   Freemius = "freemius",
   Stripe = "stripe",
   Mollie = "mollie",
+  Nowpayments = "nowpayments",
 }
 
 export enum MemeRequestTypeEnum {
@@ -10005,6 +10011,7 @@ export enum MemePaymentProviderEnum {
   Freemius = "freemius",
   Stripe = "stripe",
   Mollie = "mollie",
+  Nowpayments = "nowpayments",
 }
 
 export enum MemeStateEnum {
@@ -10049,6 +10056,7 @@ export enum RecordingPaymentProviderEnum {
   Freemius = "freemius",
   Stripe = "stripe",
   Mollie = "mollie",
+  Nowpayments = "nowpayments",
 }
 
 export enum ReportKindEnum {
@@ -10102,6 +10110,7 @@ export enum SocialAccountPaymentProviderEnum {
   Freemius = "freemius",
   Stripe = "stripe",
   Mollie = "mollie",
+  Nowpayments = "nowpayments",
 }
 
 export enum SourceRequestStateEnum {
@@ -10148,6 +10157,7 @@ export enum SourcePaymentProviderEnum {
   Freemius = "freemius",
   Stripe = "stripe",
   Mollie = "mollie",
+  Nowpayments = "nowpayments",
 }
 
 export enum SourceStateEnum1 {
@@ -10187,6 +10197,7 @@ export enum VisitorDownloadPaymentProviderEnum {
   Freemius = "freemius",
   Stripe = "stripe",
   Mollie = "mollie",
+  Nowpayments = "nowpayments",
 }
 
 export enum VisitorDownloadStateEnum {
@@ -10226,6 +10237,7 @@ export enum VisitorViewPaymentProviderEnum {
   Freemius = "freemius",
   Stripe = "stripe",
   Mollie = "mollie",
+  Nowpayments = "nowpayments",
 }
 
 export enum VisitorViewStateEnum {
@@ -11382,6 +11394,14 @@ export type NotifyStreamersLivePayload = {
 
 export interface NotifyStreamersLiveData {
   accepted?: number;
+}
+
+export interface GetRecentSubscribersData {
+  data?: {
+    username: string;
+    /** @format date-time */
+    subscribedAt: string;
+  }[];
 }
 
 export interface TestPushNotificationData {
@@ -14880,6 +14900,22 @@ export namespace User {
   /**
    * No description
    * @tags User
+   * @name GetRecentSubscribers
+   * @summary List usernames of users whose inferred subscription start (subscriptionEndDate - billingPeriod) falls today
+   * @request GET:/user/recent-subscribers
+   * @secure
+   */
+  export namespace GetRecentSubscribers {
+    export type RequestParams = {};
+    export type RequestQuery = {};
+    export type RequestBody = never;
+    export type RequestHeaders = {};
+    export type ResponseBody = GetRecentSubscribersData;
+  }
+
+  /**
+   * No description
+   * @tags User
    * @name TestPushNotification
    * @summary Send a test push notification to the current user
    * @request POST:/user/test-push
@@ -18255,6 +18291,24 @@ export class Api<
         body: data,
         secure: true,
         type: ContentType.Json,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags User
+     * @name GetRecentSubscribers
+     * @summary List usernames of users whose inferred subscription start (subscriptionEndDate - billingPeriod) falls today
+     * @request GET:/user/recent-subscribers
+     * @secure
+     */
+    getRecentSubscribers: (params: RequestParams = {}) =>
+      this.request<GetRecentSubscribersData, any>({
+        path: `/user/recent-subscribers`,
+        method: "GET",
+        secure: true,
         format: "json",
         ...params,
       }),
