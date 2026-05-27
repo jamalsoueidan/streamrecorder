@@ -20,7 +20,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2026-05-26T15:19:15.419Z"
+    "x-generation-date": "2026-05-27T09:09:14.102Z"
   },
   "servers": [
     {
@@ -11223,6 +11223,48 @@
           },
           "401": {
             "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/user/recent-subscribers": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "operationId": "getRecentSubscribers",
+        "summary": "List usernames of users whose inferred subscription start (subscriptionEndDate - billingPeriod) falls today",
+        "responses": {
+          "200": {
+            "description": "Recent subscribers",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "required": [
+                          "username",
+                          "subscribedAt"
+                        ],
+                        "properties": {
+                          "username": {
+                            "type": "string"
+                          },
+                          "subscribedAt": {
+                            "type": "string",
+                            "format": "date-time"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
           }
         }
       }

@@ -379,6 +379,44 @@ export default ({ env }) => ({
             },
           };
 
+          // Endpoint: GET /user/recent-subscribers
+          draft.paths["/user/recent-subscribers"] = {
+            get: {
+              tags: ["User"],
+              operationId: "getRecentSubscribers",
+              summary:
+                "List usernames of users whose inferred subscription start (subscriptionEndDate - billingPeriod) falls today",
+              responses: {
+                "200": {
+                  description: "Recent subscribers",
+                  content: {
+                    "application/json": {
+                      schema: {
+                        type: "object",
+                        properties: {
+                          data: {
+                            type: "array",
+                            items: {
+                              type: "object",
+                              required: ["username", "subscribedAt"],
+                              properties: {
+                                username: { type: "string" },
+                                subscribedAt: {
+                                  type: "string",
+                                  format: "date-time",
+                                },
+                              },
+                            },
+                          },
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          };
+
           // Endpoint: POST /user/test-push
           draft.paths["/user/test-push"] = {
             post: {

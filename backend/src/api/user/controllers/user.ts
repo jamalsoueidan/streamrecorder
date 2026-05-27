@@ -456,4 +456,45 @@ export default {
 
     return { success: true };
   },
+
+  // Recent subscribers — list users whose inferred subscription start
+  // date is "today" (server time). subscribedAt is inferred from
+  // subscriptionEndDate minus billingPeriod (monthly = 30d, yearly = 365d).
+  // Used by the premium page on streamarchive for social-proof toasts;
+  // frontend gates display to non-premium visitors only.
+  async recentSubscribers(ctx) {
+    const knex = strapi.db.connection;
+    const now = new Date();
+    const startOfToday = new Date(
+      Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate()),
+    );
+
+    // Fetch all currently-active subscribers with the fields we need.
+    // The dataset is bounded (paying users only), so JS-side filtering
+    // is fine and avoids brittle SQL date math against an enum column.
+    const rows = await knex("up_users")
+      .select("username", "subscription_end_date", "billing_period")
+      .where("subscription_status", "active")
+      .whereNotNull("subscription_end_date")
+      .whereNotNull("username");
+
+    const todays: { username: string; subscribedAt: string }[] = [];
+    for (const r of rows) {
+      const end = new Date(r.subscription_end_date);
+      const periodDays = r.billing_period === "yearly" ? 365 : 30;
+      const subscribedAt = new Date(
+        end.getTime() - periodDays * 24 * 60 * 60 * 1000,
+      );
+      if (subscribedAt >= startOfToday) {
+        todays.push({
+          username: r.username,
+          subscribedAt: subscribedAt.toISOString(),
+        });
+      }
+    }
+
+    // Most recent first; cap output for safety.
+    todays.sort((a, b) => (b.subscribedAt > a.subscribedAt ? 1 : -1));
+    return { data: todays.slice(0, 25) };
+  },
 };

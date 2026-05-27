@@ -30,5 +30,10 @@ export default {
       path: "/user/notify-streamers-live",
       handler: "user.notifyStreamersLive",
     },
+    {
+      method: "GET",
+      path: "/user/recent-subscribers",
+      handler: "user.recentSubscribers",
+    },
   ],
 };
