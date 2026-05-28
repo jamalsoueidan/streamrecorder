@@ -13,6 +13,7 @@ import {
 import { IconWorldSearch } from "@tabler/icons-react";
 import { getTranslations } from "next-intl/server";
 import { Suspense } from "react";
+import { fetchRandomClips } from "./actions/fetch-clips";
 import {
   fetchFavoriteRecordings,
   fetchLatestFollowers,
@@ -29,6 +30,7 @@ import { MostDownloadedSection } from "./components/most-downloaded-section";
 import { MostViewedSection } from "./components/most-viewed-section";
 import { MyFeedSection } from "./components/my-feed-section";
 import { PlatformsSection } from "./components/platforms-section";
+import { ShortsSection } from "./components/shorts-section";
 
 const platformMap: Record<string, FollowerTypeEnum> = {
   TikTok: FollowerTypeEnum.Tiktok,
@@ -59,6 +61,7 @@ export default async function Page() {
   const favoritesPromise = fetchFavoriteRecordings();
   const mostViewedPromise = fetchMostViewedRecordings();
   const mostDownloadedPromise = fetchMostDownloadedRecordings();
+  const shortsPromise = fetchRandomClips();
 
   const myFeedPromise = Promise.all(
     streamingPlatforms.map(async (platform) => {
@@ -120,6 +123,14 @@ export default async function Page() {
           <LatestFollowersSection followersPromise={followersPromise} />
         </Suspense>
 
+        <Suspense fallback={<Skeleton h={340} radius="md" m="md" />}>
+          <ShortsSection shortsPromise={shortsPromise} />
+        </Suspense>
+
+        <Suspense fallback={<Skeleton h={200} radius="md" m="md" />}>
+          <FavoritesSection favoritesPromise={favoritesPromise} />
+        </Suspense>
+
         <Suspense fallback={<Skeleton h={200} radius="md" m="md" />}>
           <MostViewedSection mostViewedPromise={mostViewedPromise} />
         </Suspense>
@@ -128,10 +139,6 @@ export default async function Page() {
           <MostDownloadedSection
             mostDownloadedPromise={mostDownloadedPromise}
           />
-        </Suspense>
-
-        <Suspense fallback={<Skeleton h={200} radius="md" m="md" />}>
-          <FavoritesSection favoritesPromise={favoritesPromise} />
         </Suspense>
 
         <Suspense fallback={<Skeleton h={360} radius="md" m="md" />}>

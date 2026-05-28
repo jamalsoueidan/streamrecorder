@@ -72,6 +72,7 @@ export async function blockFollowerAndPurge(followerDocumentId: string) {
       success: true,
       deletedSources: (data as any)?.deletedSources ?? 0,
       deletedRecordings: (data as any)?.deletedRecordings ?? 0,
+      deletedClips: (data as any)?.deletedClips ?? 0,
     };
   } catch (error) {
     console.error("Error blocking follower:", error);

@@ -75,7 +75,7 @@ export function AdminMenu({ follower, showLabel }: { follower: Follower; showLab
           const result = await blockFollowerAndPurge(follower.documentId!);
           if (result.success) {
             notifications.show({
-              title: `Blocked. Deleted ${result.deletedRecordings ?? 0} recording(s), ${result.deletedSources ?? 0} source(s).`,
+              title: `Blocked. Deleted ${result.deletedRecordings ?? 0} recording(s), ${result.deletedSources ?? 0} source(s), ${result.deletedClips ?? 0} clip(s).`,
               message: null,
               color: "red",
             });

@@ -796,6 +796,7 @@ export default factories.createCoreController(
 
       let deletedSources = 0;
       let deletedRecordings = 0;
+      let deletedClips = 0;
 
       await knex.transaction(async (trx) => {
         // 1. Flag blocked (field is non-i18n, so this propagates across locales)
@@ -803,23 +804,52 @@ export default factories.createCoreController(
           .where({ document_id: documentId })
           .update({ blocked: true });
 
-        // 2. Find recording numeric ids linked to this follower
+        // 2. Followers are i18n — each documentId has one row per locale.
+        //    Link tables may reference ANY locale row, so we need ALL the
+        //    follower ids before querying recordings_follower_lnk /
+        //    clips_follower_lnk, otherwise we miss links registered
+        //    against other locale rows.
+        const allFollowerIds: number[] = await trx("followers")
+          .where({ document_id: documentId })
+          .pluck("id");
+
+        // 3. Find recording numeric ids linked to this follower (any locale)
         const linkedRecordingIds: number[] = await trx(
           "recordings_follower_lnk",
         )
-          .where({ follower_id: followerRow.id })
+          .whereIn("follower_id", allFollowerIds)
           .pluck("recording_id");
+
+        // 4. Find clip numeric ids linked to this follower (any locale)
+        const linkedClipIds: number[] = await trx("clips_follower_lnk")
+          .whereIn("follower_id", allFollowerIds)
+          .pluck("clip_id");
+
+        // 5. Clips are i18n too — fan out via document_id so we catch every
+        //    locale row, not just the one the link table points at.
+        if (linkedClipIds.length > 0) {
+          const clipDocIds: string[] = await trx("clips")
+            .whereIn("id", linkedClipIds)
+            .distinct("document_id")
+            .pluck("document_id");
+
+          const allClipIds: number[] = await trx("clips")
+            .whereIn("document_id", clipDocIds)
+            .pluck("id");
+
+          deletedClips = await trx("clips").whereIn("id", allClipIds).del();
+        }
 
         if (linkedRecordingIds.length === 0) return;
 
-        // 3. Sources are SHARED across the recording's locale rows, so we can
+        // 6. Sources are SHARED across the recording's locale rows, so we can
         //    pull source ids directly from the linked recording ids — no need
         //    to fan out across locales first.
         const sourceIds: number[] = await trx("sources_recording_lnk")
           .whereIn("recording_id", linkedRecordingIds)
           .pluck("source_id");
 
-        // 4. Recording IS i18n though — each documentId has one row per locale.
+        // 7. Recording IS i18n though — each documentId has one row per locale.
         //    Fan out via document_id to collect every locale row for deletion.
         const recordingDocIds: string[] = await trx("recordings")
           .whereIn("id", linkedRecordingIds)
@@ -830,20 +860,20 @@ export default factories.createCoreController(
           .whereIn("document_id", recordingDocIds)
           .pluck("id");
 
-        // 5. Delete sources once (link rows cascade via FK)
+        // 8. Delete sources once (link rows cascade via FK)
         if (sourceIds.length > 0) {
           deletedSources = await trx("sources")
             .whereIn("id", sourceIds)
             .del();
         }
 
-        // 6. Delete every locale row of every recording
+        // 9. Delete every locale row of every recording
         deletedRecordings = await trx("recordings")
           .whereIn("id", allRecordingIds)
           .del();
       });
 
-      return { success: true, deletedSources, deletedRecordings };
+      return { success: true, deletedSources, deletedRecordings, deletedClips };
     },
     async unpauseMyFollowers(ctx) {
       const user = ctx.state.user;

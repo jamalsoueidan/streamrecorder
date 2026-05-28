@@ -10,6 +10,7 @@ import {
   IconChartBar,
   IconDownload,
   IconEye,
+  IconScissors,
   IconStar,
   IconUsers,
   IconVideo,
@@ -23,6 +24,12 @@ const links = [
     labelKey: "newCreators",
     icon: IconWorldSearch,
     background: "linear-gradient(150deg, #B4F4FF, #52DDE8)",
+  },
+  {
+    href: "#dashboard-shorts",
+    labelKey: "shorts",
+    icon: IconScissors,
+    background: "linear-gradient(150deg, #FFB4E5, #FF52A8)",
   },
   {
     href: "#dashboard-most-viewed",
