@@ -2,6 +2,11 @@
   "title": "Daha Sonra İzle",
   "description": "Yalnızca bu cihazda kayıtlı",
   "empty": "Kayıtlı video yok. Daha sonra izlemek için menüden video ekleyin.",
+  "emptyState": {
+    "title": "Sıran boş",
+    "description": "Daha sonra izlemek istediğin videoları kaydet — burada görünecekler.",
+    "cta": "Videolara göz at"
+  },
   "clear": "Tümünü temizle",
   "clearConfirm": {
     "title": "Daha Sonra İzle'yi Temizle",

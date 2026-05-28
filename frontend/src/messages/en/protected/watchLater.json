@@ -2,6 +2,11 @@
   "title": "Watch Later",
   "description": "Saved on this device only",
   "empty": "No videos saved. Add videos from the menu to watch later.",
+  "emptyState": {
+    "title": "Your queue is empty",
+    "description": "Save videos you want to watch later — they'll show up here.",
+    "cta": "Browse videos"
+  },
   "clear": "Clear all",
   "clearConfirm": {
     "title": "Clear Watch Later",

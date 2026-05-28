@@ -2,6 +2,11 @@
   "title": "Watch Later",
   "description": "Naka-save lang sa device na ito",
   "empty": "Walang naka-save na video. Magdagdag ng video mula sa menu para panoorin mamaya.",
+  "emptyState": {
+    "title": "Empty ang queue mo",
+    "description": "I-save ang mga video na gusto mong panoorin mamaya — lalabas sila dito.",
+    "cta": "Browse videos"
+  },
   "clear": "I-clear lahat",
   "clearConfirm": {
     "title": "I-clear ang Watch Later",

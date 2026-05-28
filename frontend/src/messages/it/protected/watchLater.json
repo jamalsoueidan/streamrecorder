@@ -2,6 +2,11 @@
   "title": "Guarda dopo",
   "description": "Salvato solo su questo dispositivo",
   "empty": "Nessun video salvato. Aggiungi video dal menu per guardarli dopo.",
+  "emptyState": {
+    "title": "La tua coda è vuota",
+    "description": "Salva i video che vuoi guardare dopo — appariranno qui.",
+    "cta": "Esplora i video"
+  },
   "clear": "Cancella tutto",
   "clearConfirm": {
     "title": "Cancella Guarda dopo",

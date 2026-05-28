@@ -2,6 +2,11 @@
   "title": "稍后观看",
   "description": "仅保存在此设备上",
   "empty": "暂未保存视频。从菜单中添加视频以稍后观看。",
+  "emptyState": {
+    "title": "播放队列为空",
+    "description": "保存你想稍后观看的视频，它们会出现在这里。",
+    "cta": "浏览视频"
+  },
   "clear": "清空",
   "clearConfirm": {
     "title": "清空稍后观看",

@@ -2,6 +2,11 @@
   "title": "À regarder plus tard",
   "description": "Enregistré uniquement sur cet appareil",
   "empty": "Aucune vidéo enregistrée. Ajoute des vidéos depuis le menu pour les regarder plus tard.",
+  "emptyState": {
+    "title": "Ta file d'attente est vide",
+    "description": "Enregistre les vidéos que tu veux regarder plus tard — elles apparaîtront ici.",
+    "cta": "Parcourir les vidéos"
+  },
   "clear": "Tout effacer",
   "clearConfirm": {
     "title": "Effacer la liste À regarder plus tard",

@@ -2,6 +2,11 @@
   "title": "Später ansehen",
   "description": "Nur auf diesem Gerät gespeichert",
   "empty": "Keine Videos gespeichert. Füge Videos über das Menü hinzu, um sie später anzusehen.",
+  "emptyState": {
+    "title": "Deine Warteschlange ist leer",
+    "description": "Speichere Videos, die du später ansehen möchtest — sie erscheinen hier.",
+    "cta": "Videos entdecken"
+  },
   "clear": "Alle löschen",
   "clearConfirm": {
     "title": "Später ansehen leeren",

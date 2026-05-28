@@ -2,6 +2,11 @@
   "title": "Assistir Depois",
   "description": "Salvo apenas neste dispositivo",
   "empty": "Nenhum vídeo salvo. Adicione vídeos pelo menu para assistir depois.",
+  "emptyState": {
+    "title": "Sua fila está vazia",
+    "description": "Salve os vídeos que quer assistir depois — eles aparecerão aqui.",
+    "cta": "Explorar vídeos"
+  },
   "clear": "Limpar tudo",
   "clearConfirm": {
     "title": "Limpar Assistir Depois",

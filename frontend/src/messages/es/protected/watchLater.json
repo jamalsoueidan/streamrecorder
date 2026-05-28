@@ -2,6 +2,11 @@
   "title": "Ver Después",
   "description": "Guardado solo en este dispositivo",
   "empty": "No hay videos guardados. Agrega videos desde el menú para ver después.",
+  "emptyState": {
+    "title": "Tu cola está vacía",
+    "description": "Guarda los videos que quieras ver después — aparecerán aquí.",
+    "cta": "Explorar videos"
+  },
   "clear": "Limpiar todo",
   "clearConfirm": {
     "title": "Limpiar Ver Después",
