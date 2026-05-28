@@ -1,6 +1,6 @@
 "use server";
 
-import { getRoleIdByName } from "@/app/api/freemius/utils";
+import { getRoleIdByName } from "@/app/lib/user-subscription";
 import api from "@/lib/api";
 import publicApi from "@/lib/public-api";
 import { revalidatePath } from "next/cache";

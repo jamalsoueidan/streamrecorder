@@ -17,6 +17,7 @@ import {
 import { useTranslations } from "next-intl";
 import { use, useState, useTransition } from "react";
 import { getGlobalDailyEarnings } from "../actions";
+import { formatCompact } from "../lib";
 
 const FlagIcon = ({ code, size = 20 }: { code: string; size?: number }) => (
   <Image
@@ -161,6 +162,7 @@ export function DailyEarningsChart({
           gridAxis="xy"
           withLegend
           withTooltip
+          valueFormatter={formatCompact}
         />
       </Box>
     </Paper>

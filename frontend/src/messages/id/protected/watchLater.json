@@ -2,6 +2,11 @@
   "title": "Tonton Nanti",
   "description": "Tersimpan di perangkat ini saja",
   "empty": "Tidak ada video tersimpan. Tambahkan video dari menu untuk ditonton nanti.",
+  "emptyState": {
+    "title": "Antrianmu kosong",
+    "description": "Simpan video yang ingin ditonton nanti — akan muncul di sini.",
+    "cta": "Jelajahi video"
+  },
   "clear": "Hapus semua",
   "clearConfirm": {
     "title": "Hapus Tonton Nanti",
@@ -9,5 +14,13 @@
     "confirm": "Hapus semua",
     "cancel": "Batal"
   },
-  "loadMore": "Muat lebih banyak"
+  "loadMore": "Muat lebih banyak",
+  "queue": {
+    "title": "Antrian",
+    "count": "{current} / {total}",
+    "nowPlaying": "Sedang diputar",
+    "remove": "Hapus dari antrian",
+    "autoplayOn": "Putar otomatis aktif",
+    "autoplayOff": "Putar otomatis nonaktif"
+  }
 }

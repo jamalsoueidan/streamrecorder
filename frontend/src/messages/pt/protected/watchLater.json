@@ -2,6 +2,11 @@
   "title": "Assistir Depois",
   "description": "Salvo apenas neste dispositivo",
   "empty": "Nenhum vídeo salvo. Adicione vídeos pelo menu para assistir depois.",
+  "emptyState": {
+    "title": "Sua fila está vazia",
+    "description": "Salve os vídeos que quer assistir depois — eles aparecerão aqui.",
+    "cta": "Explorar vídeos"
+  },
   "clear": "Limpar tudo",
   "clearConfirm": {
     "title": "Limpar Assistir Depois",
@@ -9,5 +14,13 @@
     "confirm": "Limpar tudo",
     "cancel": "Cancelar"
   },
-  "loadMore": "Carregar mais"
+  "loadMore": "Carregar mais",
+  "queue": {
+    "title": "Fila",
+    "count": "{current} / {total}",
+    "nowPlaying": "Reproduzindo agora",
+    "remove": "Remover da fila",
+    "autoplayOn": "Reprodução automática ativada",
+    "autoplayOff": "Reprodução automática desativada"
+  }
 }

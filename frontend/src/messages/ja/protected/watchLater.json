@@ -2,6 +2,11 @@
   "title": "後で見る",
   "description": "このデバイスにのみ保存されます",
   "empty": "保存された動画はありません。メニューから動画を追加して後で見ましょう。",
+  "emptyState": {
+    "title": "キューは空です",
+    "description": "後で見たい動画を保存すると、ここに表示されます。",
+    "cta": "動画を探す"
+  },
   "clear": "すべてクリア",
   "clearConfirm": {
     "title": "後で見るをクリア",
@@ -9,5 +14,13 @@
     "confirm": "すべてクリア",
     "cancel": "キャンセル"
   },
-  "loadMore": "もっと読み込む"
+  "loadMore": "もっと読み込む",
+  "queue": {
+    "title": "再生キュー",
+    "count": "{current} / {total}",
+    "nowPlaying": "再生中",
+    "remove": "キューから削除",
+    "autoplayOn": "自動再生 オン",
+    "autoplayOff": "自動再生 オフ"
+  }
 }

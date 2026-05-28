@@ -2,6 +2,11 @@
   "title": "나중에 볼 영상",
   "description": "이 기기에만 저장됨",
   "empty": "저장된 영상이 없습니다. 메뉴에서 영상을 추가하여 나중에 시청하세요.",
+  "emptyState": {
+    "title": "재생 대기열이 비어 있습니다",
+    "description": "나중에 보고 싶은 영상을 저장하면 여기에 표시됩니다.",
+    "cta": "영상 둘러보기"
+  },
   "clear": "전체 삭제",
   "clearConfirm": {
     "title": "나중에 볼 영상 삭제",
@@ -9,5 +14,13 @@
     "confirm": "전체 삭제",
     "cancel": "취소"
   },
-  "loadMore": "더 보기"
+  "loadMore": "더 보기",
+  "queue": {
+    "title": "재생 대기열",
+    "count": "{current} / {total}",
+    "nowPlaying": "재생 중",
+    "remove": "대기열에서 제거",
+    "autoplayOn": "자동 재생 켜짐",
+    "autoplayOff": "자동 재생 꺼짐"
+  }
 }

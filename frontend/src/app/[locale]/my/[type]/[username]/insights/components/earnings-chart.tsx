@@ -5,6 +5,7 @@ import { Box, Paper, Text, Title } from "@mantine/core";
 import { AreaChart } from "@mantine/charts";
 import { useTranslations } from "next-intl";
 import { use } from "react";
+import { formatCompact } from "../lib";
 
 interface EarningsChartProps {
   earningsPromise: Promise<DailyEarnings[]>;
@@ -58,6 +59,7 @@ export function EarningsChart({ earningsPromise }: EarningsChartProps) {
           gridAxis="xy"
           withLegend
           withTooltip
+          valueFormatter={formatCompact}
           areaChartProps={{ syncId: "earnings" }}
         />
       </Box>
