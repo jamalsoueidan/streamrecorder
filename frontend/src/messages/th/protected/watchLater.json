@@ -9,5 +9,13 @@
     "confirm": "ล้างทั้งหมด",
     "cancel": "ยกเลิก"
   },
-  "loadMore": "โหลดเพิ่มเติม"
+  "loadMore": "โหลดเพิ่มเติม",
+  "queue": {
+    "title": "คิว",
+    "count": "{current} / {total}",
+    "nowPlaying": "กำลังเล่น",
+    "remove": "ลบออกจากคิว",
+    "autoplayOn": "ออโต้เพลย์ เปิด",
+    "autoplayOff": "ออโต้เพลย์ ปิด"
+  }
 }

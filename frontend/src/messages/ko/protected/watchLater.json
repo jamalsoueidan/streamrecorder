@@ -9,5 +9,13 @@
     "confirm": "전체 삭제",
     "cancel": "취소"
   },
-  "loadMore": "더 보기"
+  "loadMore": "더 보기",
+  "queue": {
+    "title": "재생 대기열",
+    "count": "{current} / {total}",
+    "nowPlaying": "재생 중",
+    "remove": "대기열에서 제거",
+    "autoplayOn": "자동 재생 켜짐",
+    "autoplayOff": "자동 재생 꺼짐"
+  }
 }

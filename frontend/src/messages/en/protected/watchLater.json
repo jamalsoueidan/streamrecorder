@@ -9,5 +9,13 @@
     "confirm": "Clear all",
     "cancel": "Cancel"
   },
-  "loadMore": "Load more"
+  "loadMore": "Load more",
+  "queue": {
+    "title": "Queue",
+    "count": "{current} / {total}",
+    "nowPlaying": "Now playing",
+    "remove": "Remove from queue",
+    "autoplayOn": "Autoplay on",
+    "autoplayOff": "Autoplay off"
+  }
 }

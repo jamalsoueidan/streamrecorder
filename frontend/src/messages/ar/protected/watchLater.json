@@ -9,5 +9,13 @@
     "confirm": "مسح الكل",
     "cancel": "إلغاء"
   },
-  "loadMore": "تحميل المزيد"
+  "loadMore": "تحميل المزيد",
+  "queue": {
+    "title": "قائمة التشغيل",
+    "count": "{current} / {total}",
+    "nowPlaying": "قيد التشغيل",
+    "remove": "إزالة من القائمة",
+    "autoplayOn": "التشغيل التلقائي مفعّل",
+    "autoplayOff": "التشغيل التلقائي معطّل"
+  }
 }

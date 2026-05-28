@@ -29,6 +29,11 @@ interface VideoPlayerProps {
   onMuteChange?: (muted: boolean) => void;
   autoPlay?: boolean;
   onPlay?: () => void;
+  onEnded?: () => void;
+  // Set to true when the player is rendered inline on a regular page (not inside
+  // a Next.js parallel @modal route). Disables the pathname-based HLS stopLoad
+  // workaround that exists for the modal-stays-mounted bug.
+  inline?: boolean;
 }
 
 export function VideoPlayer({
@@ -37,6 +42,8 @@ export function VideoPlayer({
   onMuteChange,
   autoPlay = false,
   onPlay,
+  onEnded,
+  inline = false,
 }: VideoPlayerProps) {
   const searchParams = useSearchParams();
   const startTime = Number(searchParams.get("t")) || 0;
@@ -87,6 +94,7 @@ export function VideoPlayer({
   // down the tree.
   const pathname = usePathname();
   useEffect(() => {
+    if (inline) return;
     if (!recording.documentId) return;
     if (pathname.includes(recording.documentId)) return;
 
@@ -98,7 +106,7 @@ export function VideoPlayer({
     if (!hlsEl?.api) return;
 
     hlsEl.api.stopLoad();
-  }, [pathname, recording.documentId]);
+  }, [inline, pathname, recording.documentId]);
 
   // Handle seek to start time
   useEffect(() => {
@@ -185,6 +193,15 @@ export function VideoPlayer({
     video.addEventListener("play", handlePlay, { once: true });
     return () => video.removeEventListener("play", handlePlay);
   }, [onPlay]);
+
+  // Notify parent when playback ends (used by watch-later auto-advance)
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video || !onEnded) return;
+
+    video.addEventListener("ended", onEnded);
+    return () => video.removeEventListener("ended", onEnded);
+  }, [onEnded]);
 
   // Mark recording as WATCHED in localStorage once it has actually been
   // playing for ~1.5s — this is what powers the WATCHED badge on

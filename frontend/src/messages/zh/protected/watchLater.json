@@ -9,5 +9,13 @@
     "confirm": "全部清空",
     "cancel": "取消"
   },
-  "loadMore": "加载更多"
+  "loadMore": "加载更多",
+  "queue": {
+    "title": "播放队列",
+    "count": "{current} / {total}",
+    "nowPlaying": "正在播放",
+    "remove": "从队列中移除",
+    "autoplayOn": "自动播放 开",
+    "autoplayOff": "自动播放 关"
+  }
 }

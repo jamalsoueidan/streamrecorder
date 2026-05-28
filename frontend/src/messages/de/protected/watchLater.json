@@ -9,5 +9,13 @@
     "confirm": "Alle löschen",
     "cancel": "Abbrechen"
   },
-  "loadMore": "Mehr laden"
+  "loadMore": "Mehr laden",
+  "queue": {
+    "title": "Warteschlange",
+    "count": "{current} / {total}",
+    "nowPlaying": "Läuft gerade",
+    "remove": "Aus Warteschlange entfernen",
+    "autoplayOn": "Autoplay an",
+    "autoplayOff": "Autoplay aus"
+  }
 }

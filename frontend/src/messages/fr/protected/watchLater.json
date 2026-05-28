@@ -9,5 +9,13 @@
     "confirm": "Tout effacer",
     "cancel": "Annuler"
   },
-  "loadMore": "Charger plus"
+  "loadMore": "Charger plus",
+  "queue": {
+    "title": "File d'attente",
+    "count": "{current} / {total}",
+    "nowPlaying": "En cours de lecture",
+    "remove": "Retirer de la file",
+    "autoplayOn": "Lecture auto activée",
+    "autoplayOff": "Lecture auto désactivée"
+  }
 }

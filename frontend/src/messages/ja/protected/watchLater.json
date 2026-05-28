@@ -9,5 +9,13 @@
     "confirm": "すべてクリア",
     "cancel": "キャンセル"
   },
-  "loadMore": "もっと読み込む"
+  "loadMore": "もっと読み込む",
+  "queue": {
+    "title": "再生キュー",
+    "count": "{current} / {total}",
+    "nowPlaying": "再生中",
+    "remove": "キューから削除",
+    "autoplayOn": "自動再生 オン",
+    "autoplayOff": "自動再生 オフ"
+  }
 }

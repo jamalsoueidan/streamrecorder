@@ -9,5 +9,13 @@
     "confirm": "I-clear lahat",
     "cancel": "Kanselahin"
   },
-  "loadMore": "Mag-load pa"
+  "loadMore": "Mag-load pa",
+  "queue": {
+    "title": "Queue",
+    "count": "{current} / {total}",
+    "nowPlaying": "Pinapanood ngayon",
+    "remove": "Alisin sa queue",
+    "autoplayOn": "Autoplay on",
+    "autoplayOff": "Autoplay off"
+  }
 }

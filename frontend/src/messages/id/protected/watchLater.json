@@ -9,5 +9,13 @@
     "confirm": "Hapus semua",
     "cancel": "Batal"
   },
-  "loadMore": "Muat lebih banyak"
+  "loadMore": "Muat lebih banyak",
+  "queue": {
+    "title": "Antrian",
+    "count": "{current} / {total}",
+    "nowPlaying": "Sedang diputar",
+    "remove": "Hapus dari antrian",
+    "autoplayOn": "Putar otomatis aktif",
+    "autoplayOff": "Putar otomatis nonaktif"
+  }
 }

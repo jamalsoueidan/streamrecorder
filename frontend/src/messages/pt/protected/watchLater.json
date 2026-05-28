@@ -9,5 +9,13 @@
     "confirm": "Limpar tudo",
     "cancel": "Cancelar"
   },
-  "loadMore": "Carregar mais"
+  "loadMore": "Carregar mais",
+  "queue": {
+    "title": "Fila",
+    "count": "{current} / {total}",
+    "nowPlaying": "Reproduzindo agora",
+    "remove": "Remover da fila",
+    "autoplayOn": "Reprodução automática ativada",
+    "autoplayOff": "Reprodução automática desativada"
+  }
 }

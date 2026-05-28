@@ -9,5 +9,13 @@
     "confirm": "Cancella tutto",
     "cancel": "Annulla"
   },
-  "loadMore": "Carica altri"
+  "loadMore": "Carica altri",
+  "queue": {
+    "title": "Coda",
+    "count": "{current} / {total}",
+    "nowPlaying": "In riproduzione",
+    "remove": "Rimuovi dalla coda",
+    "autoplayOn": "Autoplay attivo",
+    "autoplayOff": "Autoplay disattivo"
+  }
 }

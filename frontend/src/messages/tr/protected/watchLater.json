@@ -9,5 +9,13 @@
     "confirm": "Tümünü temizle",
     "cancel": "İptal"
   },
-  "loadMore": "Daha fazla yükle"
+  "loadMore": "Daha fazla yükle",
+  "queue": {
+    "title": "Sıra",
+    "count": "{current} / {total}",
+    "nowPlaying": "Şu an oynatılıyor",
+    "remove": "Sıradan kaldır",
+    "autoplayOn": "Otomatik oynatma açık",
+    "autoplayOff": "Otomatik oynatma kapalı"
+  }
 }
