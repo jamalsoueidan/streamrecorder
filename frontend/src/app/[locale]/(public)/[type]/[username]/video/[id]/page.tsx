@@ -206,15 +206,15 @@ export default async function VideoPage({ params }: PageProps) {
             position: 4,
             item: {
               "@id": videoUrl,
-              name: t("jsonLd.name", { creatorName, recordedDate }),
+              name: data.title || t("jsonLd.name", { creatorName, recordedDate }),
             },
           },
         ],
       },
       {
         "@type": "VideoObject",
-        name: t("jsonLd.name", { creatorName, recordedDate }),
-        description: t("jsonLd.description", { creatorName, recordedDate }),
+        name: data.title || t("jsonLd.name", { creatorName, recordedDate }),
+        description: data.description || t("jsonLd.description", { creatorName, recordedDate }),
         thumbnailUrl: getImageUrl(data.documentId!, "screenshot.jpg", sources.at(-1)),
         uploadDate: data.createdAt,
         duration: `PT${Math.floor(duration / 60)}M${Math.round(duration % 60)}S`,
