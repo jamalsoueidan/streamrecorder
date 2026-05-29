@@ -1,24 +1,8 @@
-// Never pre-render at build time. The homepage shows random clips +
-// latest recordings; if a clip is deleted after build, the baked HTML
-// keeps serving the stale clip until unstable_cache revalidates (which
-// only happens on next request after 1h). force-dynamic eliminates
-// build-time pre-rendering entirely — every request renders fresh
-// from Strapi, so deletions show immediately. unstable_cache inside
-// (cache.ts) still gives us a 1h fetch dedupe for cost/perf, but the
-// PAGE itself isn't cached.
-export const dynamic = "force-dynamic";
-
+import { LinkButton } from "@/app/components/link-button";
 import { generateProfileUrl } from "@/app/lib/profile-url";
 import { generateAlternates } from "@/app/lib/seo";
 import { getAlternateOgLocales, getOgLocale } from "@/i18n/routing";
-import {
-  Container,
-  Flex,
-  Paper,
-  Stack,
-  Text,
-  Title,
-} from "@mantine/core";
+import { Container, Flex, Paper, Stack, Text, Title } from "@mantine/core";
 import { IconArrowRight } from "@tabler/icons-react";
 import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
@@ -33,7 +17,6 @@ import { ClipSlider } from "./components/clip-slider";
 import { PlatformBadges } from "./components/platform-badge";
 import { CreatorsSlider } from "./creators/components/creators-slider";
 import { RecordingsSimpleGrid } from "./recordings/components/recordings-simple-grid";
-import { LinkButton } from "@/app/components/link-button";
 
 interface PageProps {
   params: Promise<{ locale: string }>;
@@ -219,7 +202,8 @@ export default async function LandingPage({ params }: PageProps) {
             {t("hero.description")}
           </Text>
 
-          <LinkButton href="/register"
+          <LinkButton
+            href="/register"
             size="responsive"
             variant="gradient"
             gradient={{ from: "#6366f1", to: "#a855f7", deg: 135 }}
@@ -332,7 +316,8 @@ export default async function LandingPage({ params }: PageProps) {
                 {t("latestRecordings.subtitle")}
               </Text>
             </Stack>
-            <LinkButton variant="subtle"
+            <LinkButton
+              variant="subtle"
               color="gray"
               rightSection={<IconArrowRight size={16} />}
               style={{ color: "#94a3b8" }}
@@ -367,7 +352,8 @@ export default async function LandingPage({ params }: PageProps) {
               {t("featuredCreators.subtitle")}
             </Text>
 
-            <LinkButton variant="subtle"
+            <LinkButton
+              variant="subtle"
               size="compact-lg"
               color="gray"
               href="/creators"
@@ -432,7 +418,8 @@ export default async function LandingPage({ params }: PageProps) {
                 {t("cta.description")}
               </Text>
 
-              <LinkButton href="/register"
+              <LinkButton
+                href="/register"
                 size="responsive"
                 variant="gradient"
                 gradient={{ from: "#6366f1", to: "#a855f7", deg: 135 }}
