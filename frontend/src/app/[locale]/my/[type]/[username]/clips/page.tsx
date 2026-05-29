@@ -15,7 +15,7 @@ import { getLocale, getTranslations } from "next-intl/server";
 import { redirect } from "next/navigation";
 import { getFollower } from "../actions/actions";
 import { ProfileHeader } from "../components/profile-header";
-import { ProfileClipCard } from "./components/profile-clip-card";
+import { ClipCard } from "@/app/[locale]/my/clips/components/clip-card";
 
 interface PageProps {
   params: Promise<{
@@ -110,7 +110,7 @@ export default async function Page({ params, searchParams }: PageProps) {
           )}
           <SimpleGrid cols={{ base: 1, md: 2, xl: 3 }}>
             {clips.map((clip) => (
-              <ProfileClipCard
+              <ClipCard
                 key={clip.documentId}
                 clip={clip}
                 locale={locale}

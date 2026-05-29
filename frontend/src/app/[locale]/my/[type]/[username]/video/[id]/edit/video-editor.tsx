@@ -74,13 +74,16 @@ export default function VideoEditor({ recording }: Props) {
   const clipDuration = endTime - startTime;
   const isOverLimit = clipDuration > MAX_CLIP_DURATION;
 
-  // Load video duration
+  // Load video duration. Listen for both loadedmetadata and durationchange —
+  // HLS elements often report duration via durationchange after the initial
+  // metadata event, so we need both. canPlayVideo is in the dep array so the
+  // effect re-runs once the <HlsVideo> is actually mounted (initially false).
   useEffect(() => {
     trackEvent("video_editor_open");
     const video = videoRef.current;
     if (!video) return;
 
-    const handleMetadata = () => {
+    const applyDuration = () => {
       const dur = Math.floor(video.duration || 0);
       if (dur > 0) {
         setDuration(dur);
@@ -88,15 +91,18 @@ export default function VideoEditor({ recording }: Props) {
       }
     };
 
-    // Check if metadata is already loaded (cached video)
     if (video.readyState >= 1 && video.duration > 0) {
-      handleMetadata();
-    } else {
-      video.addEventListener("loadedmetadata", handleMetadata);
+      applyDuration();
     }
 
-    return () => video.removeEventListener("loadedmetadata", handleMetadata);
-  }, []);
+    video.addEventListener("loadedmetadata", applyDuration);
+    video.addEventListener("durationchange", applyDuration);
+
+    return () => {
+      video.removeEventListener("loadedmetadata", applyDuration);
+      video.removeEventListener("durationchange", applyDuration);
+    };
+  }, [canPlayVideo]);
 
   // Track current time and loop within range
   useEffect(() => {
