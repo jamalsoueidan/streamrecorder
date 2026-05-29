@@ -344,7 +344,12 @@ export default async function Page({ params }: PageProps) {
                         recording={rec}
                         type={type as unknown as FollowerTypeEnum}
                       />
-                      <Text size="xs" suppressHydrationWarning>
+                      {rec.title && (
+                        <Text fw={600} size="sm" lineClamp={2} style={{ lineHeight: 1.3 }}>
+                          {rec.title}
+                        </Text>
+                      )}
+                      <Text size="xs" c="dimmed" suppressHydrationWarning>
                         {t("recorded", {
                           date: format.dateTime(new Date(rec.createdAt || ""), {
                             year: "numeric",

@@ -86,13 +86,18 @@ export async function generateMetadata({
     username,
   };
 
+  const metaTitle = data.title
+    ? `${data.title} — ${creatorName}`
+    : t("meta.title", translation);
+  const metaDescription = data.description || t("meta.description", translation);
+
   return {
-    title: t("meta.title", translation),
-    description: t("meta.description", translation),
+    title: metaTitle,
+    description: metaDescription,
     keywords: t("meta.keywords", translation).split(", "),
     openGraph: {
-      title: t("meta.title", translation),
-      description: t("meta.description", translation),
+      title: metaTitle,
+      description: metaDescription,
       type: "video.other",
       url: generateProfileUrl(data.follower, true) + `/video/${id}`,
       siteName: "Live Stream Recorder",
@@ -102,7 +107,7 @@ export async function generateMetadata({
             url: thumbnailUrl,
             width: 1280,
             height: 720,
-            alt: `${creatorName} stream thumbnail`,
+            alt: data.title || `${creatorName} stream thumbnail`,
           },
         ],
         videos: [
@@ -117,8 +122,8 @@ export async function generateMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title: t("meta.title", translation),
-      description: t("meta.description", translation),
+      title: metaTitle,
+      description: metaDescription,
       ...(thumbnailUrl && {
         images: [thumbnailUrl],
       }),
@@ -255,9 +260,25 @@ export default async function VideoPage({ params }: PageProps) {
             thumbnailsUrl={`/video/${data.documentId}/thumbnails.vtt`}
           />
 
-          <Title order={1} c="dimmed" size="xl" fw="400">
-            {t("watch.title", { username: creatorName, date: recordedDate })}
-          </Title>
+          {data.title ? (
+            <Stack gap={4} align="center">
+              <Title order={1} size="xl" fw={600}>
+                {data.title}
+              </Title>
+              <Text size="sm" c="dimmed" ta="center">
+                {t("watch.title", { username: creatorName, date: recordedDate })}
+              </Text>
+              {data.description && (
+                <Text size="sm" c="dimmed" ta="center" maw={700} mt="xs">
+                  {data.description}
+                </Text>
+              )}
+            </Stack>
+          ) : (
+            <Title order={1} c="dimmed" size="xl" fw="400">
+              {t("watch.title", { username: creatorName, date: recordedDate })}
+            </Title>
+          )}
 
           <LinkButton href={generateProfileUrl(data.follower)}
             variant="light"
@@ -284,7 +305,12 @@ export default async function VideoPage({ params }: PageProps) {
                     recording={rec}
                     type={type as unknown as FollowerTypeEnum}
                   />
-                  <Text size="xs" suppressHydrationWarning>
+                  {rec.title && (
+                    <Text fw={600} size="sm" lineClamp={2} style={{ lineHeight: 1.3 }}>
+                      {rec.title}
+                    </Text>
+                  )}
+                  <Text size="xs" c="dimmed" suppressHydrationWarning>
                     {tp("recorded", {
                       date: format.dateTime(new Date(rec.createdAt || ""), {
                         year: "numeric",

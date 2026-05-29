@@ -18,7 +18,7 @@ import {
   IconBookmark,
   IconBookmarkFilled,
   IconDatabaseX,
-  IconDots,
+  IconDotsVertical,
   IconDownload,
   IconEye,
   IconEyeOff,
@@ -211,7 +211,7 @@ export function RecordingMenu({
             size="md"
             onClick={(e) => e.preventDefault()}
           >
-            <IconDots />
+            <IconDotsVertical />
           </ActionIcon>
         </Menu.Target>
         <Menu.Dropdown>
