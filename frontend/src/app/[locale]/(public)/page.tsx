@@ -1,3 +1,13 @@
+// Never pre-render at build time. The homepage shows random clips +
+// latest recordings; if a clip is deleted after build, the baked HTML
+// keeps serving the stale clip until unstable_cache revalidates (which
+// only happens on next request after 1h). force-dynamic eliminates
+// build-time pre-rendering entirely — every request renders fresh
+// from Strapi, so deletions show immediately. unstable_cache inside
+// (cache.ts) still gives us a 1h fetch dedupe for cost/perf, but the
+// PAGE itself isn't cached.
+export const dynamic = "force-dynamic";
+
 import { generateProfileUrl } from "@/app/lib/profile-url";
 import { generateAlternates } from "@/app/lib/seo";
 import { getAlternateOgLocales, getOgLocale } from "@/i18n/routing";
