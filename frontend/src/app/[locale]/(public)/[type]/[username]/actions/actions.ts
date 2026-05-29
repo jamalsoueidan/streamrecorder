@@ -81,21 +81,36 @@ export const getFollower = cache(
 
 export const getRecordingById = cache(
   unstable_cache(
-    async (id: string) => {
-      const response = await publicApi.recording.getRecordings({
-        filters: {
-          documentId: id,
+    async (id: string, locale: string = "en") => {
+      const populate = {
+        sources: true,
+        follower: {
+          fields: ["username", "type", "nickname"],
+          populate: ["avatar"],
         },
-        populate: {
-          sources: true,
-          follower: {
-            fields: ["username", "type", "nickname"],
-            populate: ["avatar"],
-          },
-        },
-      });
+      } as const;
 
-      return response.data.data?.[0] ?? null;
+      // Try the requested locale first. Not every recording has been
+      // translated yet (cron may not have processed it), so fall back to
+      // English if the localized row doesn't exist. This way Arabic/JP/etc.
+      // pages still render with the English title/description rather than
+      // 404 or show blank.
+      const tryFetch = (loc: string) =>
+        publicApi.recording.getRecordings({
+          filters: { documentId: id },
+          populate,
+          locale: loc,
+        });
+
+      let response = await tryFetch(locale);
+      let row = response.data.data?.[0];
+
+      if (!row && locale !== "en") {
+        response = await tryFetch("en");
+        row = response.data.data?.[0];
+      }
+
+      return row ?? null;
     },
     ["recording-by-id"],
     { revalidate: 86400 },

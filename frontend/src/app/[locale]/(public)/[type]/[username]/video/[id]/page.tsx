@@ -48,7 +48,7 @@ export async function generateMetadata({
   const { locale, id, username, type } = await params;
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "video" });
-  const data = await getRecordingById(id);
+  const data = await getRecordingById(id, locale);
 
   if (!data) {
     return {};
@@ -137,7 +137,7 @@ export default async function VideoPage({ params }: PageProps) {
   setRequestLocale(locale);
   const tp = await getTranslations({ locale, namespace: "profile" });
   const t = await getTranslations({ locale, namespace: "video" });
-  const data = await getRecordingById(id);
+  const data = await getRecordingById(id, locale);
 
   if (!data) {
     return redirect(getProfileUrl({ type, username }));
