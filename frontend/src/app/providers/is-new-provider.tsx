@@ -6,6 +6,7 @@ import {
   useCallback,
   useContext,
   useEffect,
+  useState,
   useSyncExternalStore,
 } from "react";
 
@@ -36,6 +37,14 @@ export function IsNewProvider({ children }: { children: React.ReactNode }) {
     getServerSnapshot,
   );
 
+  // Defer "is new" detection until after the first client paint so the
+  // server-rendered HTML (which never sees localStorage) matches the
+  // initial client render. Without this gate, recordings flagged as new
+  // appear on the client but not on the server, shifting badge positions
+  // and triggering a hydration mismatch.
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+
   useEffect(() => {
     const now = dayjs();
     const nowStr = now.toISOString();
@@ -59,10 +68,10 @@ export function IsNewProvider({ children }: { children: React.ReactNode }) {
 
   const isNew = useCallback(
     (item: { updatedAt?: string | null }) => {
-      if (!sessionStartedAt || !item.updatedAt) return false;
+      if (!mounted || !sessionStartedAt || !item.updatedAt) return false;
       return dayjs(item.updatedAt).isAfter(dayjs(sessionStartedAt));
     },
-    [sessionStartedAt],
+    [sessionStartedAt, mounted],
   );
 
   return (

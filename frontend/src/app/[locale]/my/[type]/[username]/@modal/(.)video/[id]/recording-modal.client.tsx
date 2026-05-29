@@ -12,11 +12,13 @@ import { Flex, Loader, Modal } from "@mantine/core";
 import { useInfiniteQuery, useQuery } from "@tanstack/react-query";
 import { useParams, useSearchParams } from "next/navigation";
 import { useRouter } from "@/i18n/navigation";
+import { useLocale } from "next-intl";
 import { useQueryStates } from "nuqs";
 import { useCallback, useEffect, useMemo, useState } from "react";
 
 export default function ProfileRecordingModalClient() {
   const router = useRouter();
+  const locale = useLocale();
   const { id, username, type } = useParams<{
     id: string;
     username: string;
@@ -71,10 +73,13 @@ export default function ProfileRecordingModalClient() {
   const handleVisibleChange = useCallback((recording: Recording) => {
     setCurrentVideoId(recording.documentId!);
     const basePath = `${getMyProfileUrl({ type, username })}/video/${recording.documentId}`;
+    // Preserve the locale prefix — replaceState bypasses Next.js routing and
+    // strips /ar (etc.) otherwise, leaving the user on a base-locale URL.
+    const localePath = locale === "en" ? basePath : `/${locale}${basePath}`;
     const search = searchParams.toString();
-    const url = search ? `${basePath}?${search}` : basePath;
+    const url = search ? `${localePath}?${search}` : localePath;
     window.history.replaceState(null, "", url);
-  }, [type, username, searchParams]);
+  }, [type, username, searchParams, locale]);
 
   const handleNotFound = () => {
     router.replace(`/my/${type}/${decodeURIComponent(username)}`);

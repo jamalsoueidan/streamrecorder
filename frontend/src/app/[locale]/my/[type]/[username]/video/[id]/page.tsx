@@ -4,6 +4,7 @@ import { Box, Flex, Loader } from "@mantine/core";
 import { useInfiniteQuery } from "@tanstack/react-query";
 import { useParams, useSearchParams } from "next/navigation";
 import { useRouter } from "@/i18n/navigation";
+import { useLocale } from "next-intl";
 import { useQueryStates } from "nuqs";
 import { useCallback, useEffect, useMemo } from "react";
 
@@ -18,6 +19,7 @@ const SHELL_HEIGHT =
 
 export default function VideoPage() {
   const router = useRouter();
+  const locale = useLocale();
   const params = useParams<{
     id: string;
     username: string;
@@ -68,12 +70,12 @@ export default function VideoPage() {
   const handleVisibleChange = useCallback(
     (recording: Recording) => {
       const basePath = `${getMyProfileUrl(recording.follower)}/video/${recording.documentId}`;
-
+      const localePath = locale === "en" ? basePath : `/${locale}${basePath}`;
       const search = searchParams.toString();
-      const url = search ? `${basePath}?${search}` : basePath;
+      const url = search ? `${localePath}?${search}` : localePath;
       window.history.replaceState(null, "", url);
     },
-    [searchParams],
+    [searchParams, locale],
   );
 
   const handleNotFound = () => {

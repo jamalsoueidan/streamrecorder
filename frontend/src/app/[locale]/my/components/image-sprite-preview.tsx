@@ -39,6 +39,14 @@ export function ImageSpritePreview({ recording, type, username }: Props) {
   const [showVideo, setShowVideo] = useState(false);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
+  // Gate any localStorage-derived UI (watched / new badges) until after
+  // hydration completes. Server can never know these values, so we MUST
+  // return null on the first client render and only swap them in afterwards
+  // — otherwise React aligns the parts/duration/icon elements against the
+  // wrong DOM positions and throws a hydration mismatch.
+  const [hydrated, setHydrated] = useState(false);
+  useEffect(() => setHydrated(true), []);
+
   const sources = recording.sources;
   const totalDuration =
     sources?.reduce((sum, s) => sum + (s.duration || 0), 0) || 0;
@@ -214,7 +222,7 @@ export function ImageSpritePreview({ recording, type, username }: Props) {
         </>
       )}
 
-      {watched ? (
+      {hydrated && watched ? (
         <Badge
           radius="md"
           variant="filled"
@@ -228,7 +236,7 @@ export function ImageSpritePreview({ recording, type, username }: Props) {
         >
           Watched
         </Badge>
-      ) : isNew(recording) ? (
+      ) : hydrated && isNew(recording) ? (
         <Badge
           radius="md"
           variant="outline"

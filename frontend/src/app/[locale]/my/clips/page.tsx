@@ -43,18 +43,39 @@ export default async function Page({ searchParams }: PageProps) {
             owner: { fields: ["id"] },
           },
         },
-      },
+        ...(locale !== "en"
+          ? {
+              localizations: {
+                fields: ["locale", "title", "description"],
+                filters: { locale: { $eq: locale } },
+              },
+            }
+          : {}),
+      } as never,
       "pagination[pageSize]": limit,
       "pagination[page]": pageNumber,
       "pagination[withCount]": true,
       sort: sort as SortOptions,
-      locale,
     })
     .catch(() => null);
 
-  const clips = response?.data?.data
-    ? await enrichClipsWithUrls(response.data.data)
-    : null;
+  let rawClips = response?.data?.data ?? null;
+
+  if (rawClips && locale !== "en") {
+    rawClips = rawClips.map((c: any) => {
+      const loc = c.localizations?.[0];
+      if (loc?.title) {
+        return {
+          ...c,
+          title: loc.title,
+          description: loc.description || c.description,
+        };
+      }
+      return c;
+    });
+  }
+
+  const clips = rawClips ? await enrichClipsWithUrls(rawClips) : null;
   const meta = response?.data?.meta;
   const totalPages = meta?.pagination?.pageCount || 1;
 

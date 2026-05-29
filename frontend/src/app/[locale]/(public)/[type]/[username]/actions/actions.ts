@@ -113,7 +113,7 @@ export const getRecordingById = cache(
       return row ?? null;
     },
     ["recording-by-id"],
-    { revalidate: 86400 },
+    { revalidate: 3600 },
   ),
 );
 

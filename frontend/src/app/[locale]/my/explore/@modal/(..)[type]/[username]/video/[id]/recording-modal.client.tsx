@@ -13,11 +13,13 @@ import { Flex, Loader, Modal } from "@mantine/core";
 import { useInfiniteQuery, useQuery } from "@tanstack/react-query";
 import { useParams, useSearchParams } from "next/navigation";
 import { useRouter } from "@/i18n/navigation";
+import { useLocale } from "next-intl";
 import { useQueryStates } from "nuqs";
 import { useCallback, useMemo, useState } from "react";
 
 export default function RecordingModalClient() {
   const router = useRouter();
+  const locale = useLocale();
   const params = useParams<{
     id: string;
     username: string;
@@ -70,11 +72,12 @@ export default function RecordingModalClient() {
     (recording: Recording) => {
       setCurrentVideoId(recording.documentId!);
       const basePath = `${getMyProfileUrl(recording.follower)}/video/${recording.documentId}`;
+      const localePath = locale === "en" ? basePath : `/${locale}${basePath}`;
       const search = searchParams.toString();
-      const url = search ? `${basePath}?${search}` : basePath;
+      const url = search ? `${localePath}?${search}` : localePath;
       window.history.replaceState(null, "", url);
     },
-    [searchParams],
+    [searchParams, locale],
   );
 
   const handleNotFound = () => {
