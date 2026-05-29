@@ -28,7 +28,7 @@ export async function GET(
             duration: { $gt: 60 },
           },
         },
-        fields: ["documentId", "title", "description", "createdAt", "updatedAt"],
+        fields: "documentId,title,description,createdAt,updatedAt",
         populate: {
           follower: {
             fields: ["username", "type", "nickname"],
