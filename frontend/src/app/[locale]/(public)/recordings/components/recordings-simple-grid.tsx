@@ -44,12 +44,14 @@ export async function RecordingsSimpleGrid({
             >
               <Card
                 padding={0}
+                className="public-recording-card"
                 style={{
                   background: "rgba(255, 255, 255, 0.02)",
                   border: "1px solid rgba(255, 255, 255, 0.06)",
                   borderRadius: "16px",
                   overflow: "hidden",
                   cursor: "pointer",
+                  transition: "background 150ms ease, border-color 150ms ease",
                 }}
               >
                 <div
@@ -127,10 +129,13 @@ export async function RecordingsSimpleGrid({
                       lineClamp={2}
                       style={{ color: "#f1f5f9", lineHeight: 1.4 }}
                     >
-                      {recording.follower?.nickname || "-"}
+                      {recording.title || recording.follower?.nickname || "-"}
                     </Text>
 
-                    <Text size="xs" c="dimmed">
+                    <Text size="xs" c="dimmed" lineClamp={1}>
+                      {recording.title && recording.follower?.nickname
+                        ? `${recording.follower.nickname} · `
+                        : ""}
                       {t("recordedOn", {
                         date: format.dateTime(
                           new Date(recording.createdAt || ""),

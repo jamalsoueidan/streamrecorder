@@ -28,6 +28,7 @@ export async function GET(
             duration: { $gt: 60 },
           },
         },
+        fields: ["documentId", "title", "description", "createdAt", "updatedAt"],
         populate: {
           follower: {
             fields: ["username", "type", "nickname"],
@@ -81,23 +82,27 @@ export async function GET(
         pageUrl +
         '"/>';
 
+      const recordingTitle =
+        r.title || creatorName + "'s Stream - " + r.createdAt?.split("T")[0];
+      const recordingDescription =
+        r.description ||
+        "Watch " +
+          creatorName +
+          "'s recorded " +
+          r.follower?.type +
+          " live stream from " +
+          r.createdAt?.split("T")[0];
+
       const videoTag =
         "<video:video>" +
         "<video:thumbnail_loc>" +
         thumbnailUrl +
         "</video:thumbnail_loc>" +
         "<video:title>" +
-        escapeXml(creatorName + "'s Stream - " + r.createdAt?.split("T")[0]) +
+        escapeXml(recordingTitle) +
         "</video:title>" +
         "<video:description>" +
-        escapeXml(
-          "Watch " +
-            creatorName +
-            "'s recorded " +
-            r.follower?.type +
-            " live stream from " +
-            r.createdAt?.split("T")[0],
-        ) +
+        escapeXml(recordingDescription) +
         "</video:description>" +
         "<video:content_loc>" +
         videoUrl +

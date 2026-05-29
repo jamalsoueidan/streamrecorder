@@ -147,3 +147,35 @@ media-volume-range {
       0 0 16px rgba(251, 191, 36, 0.35);
   }
 }
+
+.recording-card-hover {
+  transition: background 150ms ease;
+  border-radius: 12px;
+  padding: 8px;
+  margin: -8px;
+  cursor: pointer;
+}
+
+.recording-card-hover:hover {
+  background: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Stretched-link pattern: a real anchor whose ::after expands to cover the
+   nearest positioned ancestor. The card stays a proper <a> (keyboard
+   focusable, middle-click opens a new tab, screen readers announce it).
+   Inner clickable elements use position: relative + z-index: 2 to remain
+   clickable on top of the overlay. */
+.recording-stretched-link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+.recording-stretched-link {
+  text-decoration: none !important;
+}
+
+.public-recording-card:hover {
+  background: rgba(255, 255, 255, 0.06) !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+}
