@@ -54,18 +54,39 @@ export default async function Page({ params, searchParams }: PageProps) {
         follower: {
           populate: { avatar: true },
         },
-      },
+        ...(locale !== "en"
+          ? {
+              localizations: {
+                fields: ["locale", "title", "description"],
+                filters: { locale: { $eq: locale } },
+              },
+            }
+          : {}),
+      } as never,
       "pagination[pageSize]": limit,
       "pagination[page]": pageNumber,
       "pagination[withCount]": true,
       sort: "createdAt:desc",
-      locale,
     })
     .catch(() => null);
 
-  const clips = response?.data?.data
-    ? await enrichClipsWithUrls(response.data.data)
-    : [];
+  let rawClips = response?.data?.data ?? [];
+
+  if (locale !== "en") {
+    rawClips = rawClips.map((c: any) => {
+      const loc = c.localizations?.[0];
+      if (loc?.title) {
+        return {
+          ...c,
+          title: loc.title,
+          description: loc.description || c.description,
+        };
+      }
+      return c;
+    });
+  }
+
+  const clips = rawClips.length ? await enrichClipsWithUrls(rawClips) : [];
   const totalPages = response?.data?.meta?.pagination?.pageCount || 1;
   const clipsCount = response?.data?.meta?.pagination?.total || 0;
 

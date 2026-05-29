@@ -41,16 +41,39 @@ export default async function Page({ params }: PageProps) {
         follower: {
           populate: { avatar: true },
         },
+        ...(locale !== "en"
+          ? {
+              localizations: {
+                fields: ["locale", "title", "description"],
+                filters: { locale: { $eq: locale } },
+              },
+            }
+          : {}),
       },
       "pagination[pageSize]": 50,
       "pagination[page]": 1,
       sort: "createdAt:desc",
-      locale,
     } as never)
     .catch(() => null);
 
-  const allClips = response?.data?.data
-    ? await enrichClipsWithUrls(response.data.data)
+  let rawClips = response?.data?.data ?? [];
+
+  if (locale !== "en") {
+    rawClips = rawClips.map((c: any) => {
+      const loc = c.localizations?.[0];
+      if (loc?.title) {
+        return {
+          ...c,
+          title: loc.title,
+          description: loc.description || c.description,
+        };
+      }
+      return c;
+    });
+  }
+
+  const allClips = rawClips.length
+    ? await enrichClipsWithUrls(rawClips)
     : [];
 
   const currentClip = allClips.find((c) => c.documentId === id);

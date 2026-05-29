@@ -1,9 +1,11 @@
 "use server";
 
 import publicApi from "@/lib/public-api";
+import { getLocale } from "next-intl/server";
 
 export async function getRecordingsByIds(documentIds: string[]) {
   if (documentIds.length === 0) return [];
+  const locale = await getLocale();
 
   try {
     // POST /recordings/search — body avoids URL truncation when a power
@@ -34,10 +36,34 @@ export async function getRecordingsByIds(documentIds: string[]) {
             },
           },
         },
+        ...(locale !== "en"
+          ? {
+              localizations: {
+                fields: ["locale", "title", "description"],
+                filters: { locale: { $eq: locale } },
+              },
+            }
+          : {}),
       },
     });
 
-    return data.data || [];
+    let rows = data.data || [];
+
+    if (locale !== "en") {
+      rows = rows.map((rec: any) => {
+        const loc = rec.localizations?.[0];
+        if (loc?.title) {
+          return {
+            ...rec,
+            title: loc.title,
+            description: loc.description || rec.description,
+          };
+        }
+        return rec;
+      });
+    }
+
+    return rows;
   } catch (error) {
     console.error("Error fetching recordings:", error);
     return [];

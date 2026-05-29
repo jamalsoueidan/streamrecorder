@@ -90,9 +90,25 @@ export async function fetchProfileRecordings(
   filters: ProfileFilters,
   page: number = 1,
 ) {
-  //const locale = await getLocale();
+  const locale = await getLocale();
+
+  // Non-default locale: ask Strapi to also include the localized row so we
+  // can override title/description in JS, falling back to the base (en)
+  // when no localization exists.
+  const localePopulate =
+    locale !== "en"
+      ? {
+          populate: {
+            localizations: {
+              fields: ["locale", "title", "description"],
+              filters: { locale: { $eq: locale } },
+            },
+          },
+        }
+      : {};
+
   const response = await publicApi.recording.getRecordings(
-    deepMerge(defaultOptions, {
+    deepMerge(deepMerge(defaultOptions, localePopulate), {
       filters: {
         follower: {
           ...usernameOrFilter(username),
@@ -102,11 +118,27 @@ export async function fetchProfileRecordings(
       sort: filters.sort,
       "pagination[page]": page,
       "pagination[pageSize]": 15,
-      }),
+    }),
   );
 
+  let data = response.data?.data || [];
+
+  if (locale !== "en") {
+    data = data.map((rec: any) => {
+      const loc = rec.localizations?.[0];
+      if (loc?.title) {
+        return {
+          ...rec,
+          title: loc.title,
+          description: loc.description || rec.description,
+        };
+      }
+      return rec;
+    });
+  }
+
   return {
-    data: response.data?.data || [],
+    data,
     meta: response.data?.meta,
   };
 }
@@ -172,9 +204,23 @@ export async function fetchRecordingWithContext(
     actualPage = Math.floor(countBefore / pageSize) + 1;
   }
 
+  // Non-default locale: pull the localized row alongside the base, so we
+  // can override title/description in JS with EN fallback.
+  const localePopulate =
+    locale !== "en"
+      ? {
+          populate: {
+            localizations: {
+              fields: ["locale", "title", "description"],
+              filters: { locale: { $eq: locale } },
+            },
+          },
+        }
+      : {};
+
   // 3. Fetch the actual page
   const response = await publicApi.recording.getRecordings(
-    deepMerge(defaultOptions, {
+    deepMerge(deepMerge(defaultOptions, localePopulate), {
       filters: {
         follower: {
           ..._usernameFilter,
@@ -184,12 +230,27 @@ export async function fetchRecordingWithContext(
       sort: filters.sort,
       "pagination[page]": actualPage,
       "pagination[pageSize]": pageSize,
-        //locale,
     }),
   );
 
+  let data = response.data?.data || [];
+
+  if (locale !== "en") {
+    data = data.map((rec: any) => {
+      const loc = rec.localizations?.[0];
+      if (loc?.title) {
+        return {
+          ...rec,
+          title: loc.title,
+          description: loc.description || rec.description,
+        };
+      }
+      return rec;
+    });
+  }
+
   return {
-    data: response.data?.data || [],
+    data,
     meta: response.data?.meta,
   };
 }

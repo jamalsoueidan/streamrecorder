@@ -5,6 +5,7 @@ import { Flex, Loader, Modal } from "@mantine/core";
 import { useQuery } from "@tanstack/react-query";
 import { useParams, useSearchParams } from "next/navigation";
 import { useRouter } from "@/i18n/navigation";
+import { useLocale } from "next-intl";
 import { useCallback, useState } from "react";
 
 import { VideoScrollPlayer } from "@/app/[locale]/my/components/video/video-scroll-player";
@@ -18,6 +19,7 @@ const PAGE_SIZE = 12;
 
 export default function CreatorRecordingModal() {
   const router = useRouter();
+  const locale = useLocale();
   const params = useParams<{
     id: string;
     username: string;
@@ -64,11 +66,12 @@ export default function CreatorRecordingModal() {
   const handleVisibleChange = useCallback(
     (recording: Recording) => {
       const basePath = `${getMyProfileUrl(recording.follower)}/video/${recording.documentId}`;
+      const localePath = locale === "en" ? basePath : `/${locale}${basePath}`;
       const search = searchParams.toString();
-      const url = search ? `${basePath}?${search}` : basePath;
+      const url = search ? `${localePath}?${search}` : localePath;
       window.history.replaceState(null, "", url);
     },
-    [searchParams],
+    [searchParams, locale],
   );
 
   const handleNotFound = () => {
