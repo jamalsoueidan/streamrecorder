@@ -14,7 +14,6 @@ import { useDateFormatter } from "../lib/use-date-formatter";
 
 import Image from "next/image";
 import Link from "@/app/components/link";
-import { useRouter } from "next/navigation";
 import { getMyProfileUrl } from "@/app/lib/profile-url";
 import { ImageSpritePreview } from "./image-sprite-preview";
 import { RecordingMenu } from "./recording-menu";
@@ -28,7 +27,6 @@ export default function RecordingItem({ recording, hideAvatar = false }: Props) 
   const format = useDateFormatter();
   const now = useNow();
   const t = useTranslations("protected.common");
-  const router = useRouter();
   const stop = (e: React.MouseEvent) => e.stopPropagation();
 
   const isRecording = recording.sources?.some(
@@ -56,12 +54,11 @@ export default function RecordingItem({ recording, hideAvatar = false }: Props) 
       gap="xs"
       key={recording.documentId}
       w="100%"
-      className="recording-card-hover"
-      onClick={!isRecording ? () => router.push(videoHref) : undefined}
-      style={{ cursor: !isRecording ? "pointer" : "default" }}
+      className={!isRecording ? "recording-card-hover" : undefined}
+      style={{ position: "relative" }}
     >
       {recording.follower && (
-        <Grid.Col span={12} onClick={stop}>
+        <Grid.Col span={12} style={{ position: "relative", zIndex: 2 }}>
           <ImageSpritePreview
             username={recording.follower?.username || "unknown"}
             type={recording.follower?.type || FollowerTypeEnum.Tiktok}
@@ -77,6 +74,7 @@ export default function RecordingItem({ recording, hideAvatar = false }: Props) 
               prefetch={false}
               href={getMyProfileUrl(recording.follower)}
               onClick={stop}
+              style={{ position: "relative", zIndex: 2 }}
             >
               <Avatar size={38}>
                 {recording.follower?.avatar?.url && (
@@ -91,10 +89,35 @@ export default function RecordingItem({ recording, hideAvatar = false }: Props) 
             </Anchor>
           )}
           <Stack gap={0} style={{ flex: 1, minWidth: 0 }}>
-            {recording.title && (
-              <Text fw={500} size="md" lineClamp={2} c="white">
-                {recording.title}
-              </Text>
+            {!isRecording ? (
+              recording.title ? (
+                <Anchor
+                  component={Link}
+                  prefetch={false}
+                  href={videoHref}
+                  className="recording-stretched-link"
+                  c="white"
+                  fw={500}
+                  size="md"
+                  lineClamp={2}
+                >
+                  {recording.title}
+                </Anchor>
+              ) : (
+                <Anchor
+                  component={Link}
+                  prefetch={false}
+                  href={videoHref}
+                  className="recording-stretched-link"
+                  aria-label={`Open ${decodeURIComponent(recording.follower?.username || "recording")}'s stream`}
+                />
+              )
+            ) : (
+              recording.title && (
+                <Text fw={500} size="md" lineClamp={2} c="white">
+                  {recording.title}
+                </Text>
+              )
             )}
             {!hideAvatar && (
               <Anchor
@@ -105,7 +128,7 @@ export default function RecordingItem({ recording, hideAvatar = false }: Props) 
                 truncate
                 c={recording.title ? "dimmed" : undefined}
                 onClick={stop}
-                style={{ alignSelf: "flex-start" }}
+                style={{ alignSelf: "flex-start", position: "relative", zIndex: 2 }}
               >
                 {decodeURIComponent(recording.follower?.username || "")}
               </Anchor>
@@ -127,7 +150,7 @@ export default function RecordingItem({ recording, hideAvatar = false }: Props) 
             </Group>
           </Stack>
           {!isRecording && (
-            <Box onClick={stop}>
+            <Box onClick={stop} style={{ position: "relative", zIndex: 2 }}>
               <RecordingMenu
                 recording={recording}
                 username={recording.follower?.username}
