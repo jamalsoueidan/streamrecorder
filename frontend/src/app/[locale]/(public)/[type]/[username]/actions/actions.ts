@@ -36,47 +36,50 @@ const defaultOptions = {
   },
 };
 
+// Tag scheme: one tag per follower. blockFollowerAndPurge calls
+// revalidateTag(publicFollowerTag(type, username)) to bust EXACTLY this
+// follower's cache without touching anyone else's.
+export const publicFollowerTag = (type: string, username: string) =>
+  `public-follower:${type.toLowerCase()}:${username.toLowerCase()}`;
+
 export const getFollower = cache(
-  unstable_cache(
-    async function (args: {
-      username: string;
-      type: string;
-      locale?: string;
-    }) {
-      const { username, type, locale = "en" } = args;
-      const filters = {
-        ...usernameOrFilter(username),
-        type,
-      };
+  async (args: { username: string; type: string; locale?: string }) => {
+    const { username, type, locale = "en" } = args;
 
-      // Try requested locale first
-      let response = await publicApi.follower.getFollowers({
-        filters,
-        populate: ["avatar"],
-        locale,
-      });
+    // unstable_cache is built inside the call so we can attach a tag that
+    // includes the type+username — the `tags` option is static per
+    // unstable_cache instance, so per-follower tags require per-call
+    // construction. The cache key (third arg) still scopes to type+username
+    // so each follower gets its own cache entry.
+    return unstable_cache(
+      async () => {
+        const filters = { ...usernameOrFilter(username), type };
 
-      let follower = response.data.data?.at(0);
-
-      // Fallback to default locale if not found
-      if (!follower && locale !== "en") {
-        response = await publicApi.follower.getFollowers({
+        let response = await publicApi.follower.getFollowers({
           filters,
           populate: ["avatar"],
-          locale: "en",
+          locale,
         });
-        follower = response.data.data?.at(0);
-      }
+        let follower = response.data.data?.at(0);
 
-      if (!follower) {
-        return null;
-      }
+        if (!follower && locale !== "en") {
+          response = await publicApi.follower.getFollowers({
+            filters,
+            populate: ["avatar"],
+            locale: "en",
+          });
+          follower = response.data.data?.at(0);
+        }
 
-      return follower;
-    },
-    ["public-follower"],
-    { revalidate: 86400 },
-  ),
+        return follower ?? null;
+      },
+      ["public-follower", type, username, locale],
+      {
+        revalidate: 86400,
+        tags: [publicFollowerTag(type, username)],
+      },
+    )();
+  },
 );
 
 export const getRecordingById = cache(

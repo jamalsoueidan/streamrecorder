@@ -553,13 +553,6 @@ export default async function TermsAndConditions({ params }: PageProps) {
               • {t("thirdPartyPlatforms.platforms.bigo")}
             </Anchor>
             <Anchor
-              href="https://www.buzzcast.info/ServicesTerms"
-              target="_blank"
-              style={{ color: "#60a5fa" }}
-            >
-              • {t("thirdPartyPlatforms.platforms.buzzcast")}
-            </Anchor>
-            <Anchor
               href="https://www.joilive.net/protocol/terms.html"
               target="_blank"
               style={{ color: "#60a5fa" }}

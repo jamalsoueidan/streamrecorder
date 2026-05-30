@@ -194,16 +194,6 @@
         "Bigo 直播录制器"
       ]
     },
-    "buzzcast": {
-      "title": "Buzzcast 创作者",
-      "description": "发现使用 LiveStreamRecorder 录制直播并将其转换为短视频的 Buzzcast 创作者。",
-      "keywords": [
-        "Buzzcast 创作者",
-        "Buzzcast 直播",
-        "Buzzcast 录制",
-        "Buzzcast 直播录制器"
-      ]
-    },
     "liveme": {
       "title": "LiveMe 创作者",
       "description": "发现使用 LiveStreamRecorder 录制直播并将其转换为短视频的 LiveMe 创作者。",
@@ -492,7 +482,6 @@
       "pandalive": "Pandalive 创作者",
       "afreecatv": "AfreecaTV 创作者",
       "bigo": "Bigo 创作者",
-      "buzzcast": "Buzzcast 创作者",
       "liveme": "LiveMe 创作者",
       "mixch": "Mixch 创作者",
       "trovo": "Trovo 创作者",
@@ -512,7 +501,6 @@
       "pandalive": "加入数千名使用 LiveStreamRecorder 保存直播并创建短视频的 Pandalive 创作者。",
       "afreecatv": "加入数千名使用 LiveStreamRecorder 保存直播并创建短视频的 AfreecaTV 创作者。",
       "bigo": "加入数千名使用 LiveStreamRecorder 保存直播并创建短视频的 Bigo 创作者。",
-      "buzzcast": "加入数千名使用 LiveStreamRecorder 保存直播并创建短视频的 Buzzcast 创作者。",
       "liveme": "加入数千名使用 LiveStreamRecorder 保存直播并创建短视频的 LiveMe 创作者。",
       "mixch": "加入数千名使用 LiveStreamRecorder 保存直播并创建短视频的 Mixch 创作者。",
       "trovo": "加入数千名使用 LiveStreamRecorder 保存直播并创建短视频的 Trovo 创作者。",
@@ -535,7 +523,6 @@
       "pandalive": "自动录制你的 Pandalive 直播",
       "afreecatv": "自动录制你的 AfreecaTV 直播",
       "bigo": "自动录制你的 Bigo 直播",
-      "buzzcast": "自动录制你的 Buzzcast 直播",
       "liveme": "自动录制你的 LiveMe 直播",
       "mixch": "自动录制你的 Mixch 直播",
       "trovo": "自动录制你的 Trovo 直播",
@@ -576,7 +563,6 @@
       "afreecatv": "录制你的 AfreecaTV 直播",
       "pandalive": "录制你的 Pandalive 直播",
       "bigo": "录制你的 Bigo 直播",
-      "buzzcast": "录制你的 Buzzcast 直播",
       "liveme": "录制你的 LiveMe 直播",
       "mixch": "录制你的 Mixch 直播",
       "trovo": "录制你的 Trovo 直播",
@@ -596,7 +582,6 @@
       "afreecatv": "加入数千名 AfreecaTV 创作者。保存你的直播并使用 ClipAI 创建短视频。",
       "pandalive": "加入数千名 Pandalive 创作者。保存你的直播并使用 ClipAI 创建短视频。",
       "bigo": "加入数千名 Bigo 创作者。保存你的直播并使用 ClipAI 创建短视频。",
-      "buzzcast": "加入数千名 Buzzcast 创作者。保存你的直播并使用 ClipAI 创建短视频。",
       "liveme": "加入数千名 LiveMe 创作者。保存你的直播并使用 ClipAI 创建短视频。",
       "mixch": "加入数千名 Mixch 创作者。保存你的直播并使用 ClipAI 创建短视频。",
       "trovo": "加入数千名 Trovo 创作者。保存你的直播并使用 ClipAI 创建短视频。",
@@ -620,7 +605,6 @@
       "pandalive": "成为第一个加入的 Pandalive 创作者！",
       "afreecatv": "成为第一个加入的 AfreecaTV 创作者！",
       "bigo": "成为第一个加入的 Bigo 创作者！",
-      "buzzcast": "成为第一个加入的 Buzzcast 创作者！",
       "liveme": "成为第一个加入的 LiveMe 创作者！",
       "mixch": "成为第一个加入的 Mixch 创作者！",
       "trovo": "成为第一个加入的 Trovo 创作者！",
@@ -642,7 +626,6 @@
     "pandalive": "## Pandalive 创作者\n\n发现使用 LiveStreamRecorder 保存自己直播的 Pandalive BJ。浏览韩国创作者,观看他们的录像,在韩国最活跃的直播平台之一中找到要关注的新 BJ。\n\n### Pandalive BJ 为什么录制他们的直播\n\nPandalive 直播并不总是保留 — 一旦直播结束,就没有保证的方式将其找回。Pandalive BJ 使用 LiveStreamRecorder 自动保存每场直播,所以你的舞蹈表演、歌曲翻唱、聊天会话和粉丝互动在直播结束时永远不会丢失。\n\n### 浏览顶级 Pandalive BJ\n\n探索我们的 Pandalive 创作者页面,找到在 LiveStreamRecorder 上保存自己直播的 BJ。观看他们的录像、跨时区补看错过的直播,发现值得关注的新 Pandalive 创作者。\n\n### 你的 Pandalive 创作者主页\n\nLiveStreamRecorder 上的每位 Pandalive BJ 都有自己的主页,粉丝可以浏览所有录制的直播。注册、添加你的 Pandalive 用户名,你的创作者主页就会自动设置 — 一个不在直播结束时消失的内容永久家园。\n\n### 从直播到短视频 — 建立你的粉丝群\n\nClipAI 将你的 Pandalive 直播录像转换为准备好发布到 TikTok、Instagram Reels 或 YouTube Shorts 的短视频。一场直播变成多个内容 — 舞蹈短视频、歌曲精彩瞬间、值得记忆的反应。通过重新利用最精彩的瞬间,在 Pandalive 之外扩大你的粉丝群。\n\n### 在 LiveStreamRecorder 上成为 Pandalive 创作者\n\n免费注册、添加你的 Pandalive 用户名,今天就开始保存你的直播。每场直播都会自动捕获 — 无需屏幕录制、无需额外软件。加入已经使用 LiveStreamRecorder 保留每场直播并在全球扩大受众的 Pandalive BJ。",
     "afreecatv": "## AfreecaTV 创作者\n\n发现使用 LiveStreamRecorder 保存自己直播的 AfreecaTV BJ。浏览韩国创作者,观看他们的录像,在韩国原创直播平台中找到要关注的新 BJ — 这里汇集游戏解说员、IRL 主播、音乐表演者和聊天达人。\n\n### AfreecaTV BJ 为什么录制他们的直播\n\nAfreecaTV 有自己的 VOD 系统,但重播并不总是被保存,内容可能被下架,存储规则可能更改。AfreecaTV BJ 使用 LiveStreamRecorder 作为独立备份 — 每场直播都自动捕获,所以无论原平台发生什么,你的直播历史都保持完整。\n\n### 浏览顶级 AfreecaTV BJ\n\n探索我们的 AfreecaTV 创作者页面,找到在 LiveStreamRecorder 上保存自己直播的 BJ。观看他们的录像、补看错过的长会话,发现 StarCraft 解说、游戏、IRL、音乐和聊天类别中的新 AfreecaTV 创作者。\n\n### 你的 AfreecaTV 创作者主页\n\nLiveStreamRecorder 上的每位 AfreecaTV BJ 都有自己的主页,粉丝可以浏览所有录制的直播。注册、添加你的 AfreecaTV 用户名,你的创作者主页就会自动设置 — 一个不依赖 AfreecaTV VOD 政策的独立内容备份。\n\n### 用 ClipAI 将长会话转为短视频\n\nAfreecaTV 直播可以持续数小时。ClipAI 分析你的录制直播并自动提取最精彩的瞬间 — 关键操作、反应、有趣对话、音乐精彩瞬间。将其发布为 TikTok 短视频、YouTube Shorts 或 Reels,在 AfreecaTV 之外扩大你的受众。\n\n### 在 LiveStreamRecorder 上成为 AfreecaTV 创作者\n\n免费注册、添加你的 AfreecaTV 用户名,今天就开始保存你的直播。每场直播都会自动捕获 — 不依赖 AfreecaTV 的 VOD 系统、无需手动上传。加入已经使用 LiveStreamRecorder 保留每场直播并在全球触达粉丝的 AfreecaTV BJ。",
     "bigo": "## Bigo 直播创作者\n\n发现使用 LiveStreamRecorder 保存自己直播的 Bigo 直播创作者。浏览 Bigo 主播,观看他们的录像,在最大的全球直播平台之一中找到要关注的新创作者 — 来自中东、亚洲及其他地区的舞蹈、音乐、聊天和娱乐创作者的家园。\n\n### Bigo 创作者为什么录制他们的直播\n\nBigo 直播仅在直播时存在 — 一旦你结束会话,内容就完全从应用中消失。Bigo 创作者使用 LiveStreamRecorder 自动保存每场直播,所以你的舞蹈表演、歌唱会话、聊天瞬间和礼物互动在直播结束后很久仍然可供粉丝观看。\n\n### 浏览顶级 Bigo 创作者\n\n探索我们的 Bigo 创作者页面,找到在 LiveStreamRecorder 上保存自己直播的主播。观看他们的录像、补看错过的直播,发现各类别和语言中的新 Bigo 创作者。\n\n### 你的 Bigo 创作者主页\n\nLiveStreamRecorder 上的每位 Bigo 创作者都有自己的主页,粉丝可以浏览所有录制的直播。注册、添加你的 Bigo 用户名,你的创作者主页就会自动设置 — 一个超越 Bigo 直播消失性质的内容永久家园。\n\n### 从直播到短视频 — 扩大你的受众\n\nClipAI 将你的 Bigo 直播录像转换为准备好发布到 TikTok、Instagram Reels 或 YouTube Shorts 的短视频。舞蹈瞬间、合拍、粉丝互动、音乐表演 — 将每场直播转换为多个内容,在每个平台上扩大你的受众。\n\n### 在 LiveStreamRecorder 上成为 Bigo 创作者\n\n免费注册、添加你的 Bigo 用户名,今天就开始保存你的直播。每场直播都会自动捕获 — 无需手机录制、无需屏幕捕获。加入已经使用 LiveStreamRecorder 保留每场直播并在全球触达粉丝的 Bigo 创作者。",
-    "buzzcast": "## Buzzcast 创作者\n\n发现使用 LiveStreamRecorder 保存自己直播的 Buzzcast 创作者。浏览 Buzzcast 主播,观看他们的录像,在这个移动优先的直播社区中找到要关注的新创作者。\n\n### Buzzcast 创作者为什么录制他们的直播\n\nBuzzcast 直播仅在直播时可用 — 一旦你结束直播,内容就从应用中消失。没有内置的重播系统,粉丝也没有事后补看的方式。Buzzcast 创作者使用 LiveStreamRecorder 自动保存每场直播,所以你的聊天会话、音乐表演和日常内容在直播结束后很久仍然可供粉丝观看。\n\n### 浏览顶级 Buzzcast 创作者\n\n探索我们的 Buzzcast 创作者页面,找到在 LiveStreamRecorder 上保存自己直播的主播。观看他们的录像、补看错过的直播,发现值得关注的新 Buzzcast 创作者。\n\n### 你的 Buzzcast 创作者主页\n\nLiveStreamRecorder 上的每位 Buzzcast 创作者都有自己的主页,粉丝可以浏览所有录制的直播。注册、添加你的 Buzzcast 用户名,你的创作者主页就会自动设置 — 一个不会在你直播结束时消失的内容永久家园。\n\n### 从直播到短视频 — 建立你的粉丝\n\nClipAI 将你的 Buzzcast 直播录像转换为准备好发布到 TikTok、Instagram Reels 或 YouTube Shorts 的短视频。将反应、音乐瞬间和聊天精彩瞬间转换为可分享的内容,在 Buzzcast 之外扩大你的粉丝。\n\n### 在 LiveStreamRecorder 上成为 Buzzcast 创作者\n\n免费注册、添加你的 Buzzcast 用户名,今天就开始保存你的直播。每场直播都会自动捕获 — 无需手动录制、无需额外应用。加入已经使用 LiveStreamRecorder 保留每场直播并扩大受众的 Buzzcast 创作者。",
     "liveme": "## LiveMe 创作者\n\n发现使用 LiveStreamRecorder 保存自己直播的 LiveMe 创作者。浏览 LiveMe 主播,观看他们的录像,在这个移动优先的直播社区中找到要关注的新创作者。\n\n### LiveMe 创作者为什么录制他们的直播\n\nLiveMe 直播仅在直播时可用 — 一旦你结束直播,内容就从应用中消失。没有内置的重播系统,粉丝也没有事后补看的方式。LiveMe 创作者使用 LiveStreamRecorder 自动保存每场直播,所以你的聊天会话、音乐表演和日常内容在直播结束后很久仍然可供粉丝观看。\n\n### 浏览顶级 LiveMe 创作者\n\n探索我们的 LiveMe 创作者页面,找到在 LiveStreamRecorder 上保存自己直播的主播。观看他们的录像、补看错过的直播,发现值得关注的新 LiveMe 创作者。\n\n### 你的 LiveMe 创作者主页\n\nLiveStreamRecorder 上的每位 LiveMe 创作者都有自己的主页,粉丝可以浏览所有录制的直播。注册、添加你的 LiveMe 用户名,你的创作者主页就会自动设置 — 一个不会在你直播结束时消失的内容永久家园。\n\n### 从直播到短视频 — 建立你的粉丝\n\nClipAI 将你的 LiveMe 直播录像转换为准备好发布到 TikTok、Instagram Reels 或 YouTube Shorts 的短视频。将反应、音乐瞬间和聊天精彩瞬间转换为可分享的内容,在 LiveMe 之外扩大你的粉丝。\n\n### 在 LiveStreamRecorder 上成为 LiveMe 创作者\n\n免费注册、添加你的 LiveMe 用户名,今天就开始保存你的直播。每场直播都会自动捕获 — 无需手动录制、无需额外应用。加入已经使用 LiveStreamRecorder 保留每场直播并扩大受众的 LiveMe 创作者。",
     "mixch": "## Mixch 创作者\n\n发现使用 LiveStreamRecorder 保存自己直播的 Mixch 创作者。浏览 Mixch 主播,观看他们的录像,在这个移动优先的直播社区中找到要关注的新创作者。\n\n### Mixch 创作者为什么录制他们的直播\n\nMixch 直播仅在直播时可用 — 一旦你结束直播,内容就从应用中消失。没有内置的重播系统,粉丝也没有事后补看的方式。Mixch 创作者使用 LiveStreamRecorder 自动保存每场直播,所以你的聊天会话、音乐表演和日常内容在直播结束后很久仍然可供粉丝观看。\n\n### 浏览顶级 Mixch 创作者\n\n探索我们的 Mixch 创作者页面,找到在 LiveStreamRecorder 上保存自己直播的主播。观看他们的录像、补看错过的直播,发现值得关注的新 Mixch 创作者。\n\n### 你的 Mixch 创作者主页\n\nLiveStreamRecorder 上的每位 Mixch 创作者都有自己的主页,粉丝可以浏览所有录制的直播。注册、添加你的 Mixch 用户名,你的创作者主页就会自动设置 — 一个不会在你直播结束时消失的内容永久家园。\n\n### 从直播到短视频 — 建立你的粉丝\n\nClipAI 将你的 Mixch 直播录像转换为准备好发布到 TikTok、Instagram Reels 或 YouTube Shorts 的短视频。将反应、音乐瞬间和聊天精彩瞬间转换为可分享的内容,在 Mixch 之外扩大你的粉丝。\n\n### 在 LiveStreamRecorder 上成为 Mixch 创作者\n\n免费注册、添加你的 Mixch 用户名,今天就开始保存你的直播。每场直播都会自动捕获 — 无需手动录制、无需额外应用。加入已经使用 LiveStreamRecorder 保留每场直播并扩大受众的 Mixch 创作者。",
     "joilive": "## LiveStreamRecorder 上的 Joilive 主播\n\nJoilive（joilive.net）主播使用 LiveStreamRecorder **录制自己的直播**,让频道有一个真正的存档。Joilive 本身在你下线后不保留直播 — 没有重播标签、没有 VOD、没有过往直播列表。平台完全围绕直播聊天和送礼构建,意味着你在直播中做的一切在结束的那一刻就消失了。作为 Joilive 创作者,录制自己的直播是保留它们的唯一方式。\n\n### 数字 ID 问题\n\nJoilive 用一个像 `1880336239059720193` 这样的长数字 ID 标识每位主播。你的个人资料 URL 是 `joilive.net/user/index.html?s=1880336239059720193`。没人会收藏这个。没人会把它打到 Discord 里。Joilive 页面其实并不可分享 — 而且没办法按用户名查找主播,因为 Joilive 根本没有用户名。LiveStreamRecorder 为每位 Joilive 创作者提供一个干净、好记的 URL 和搜索友好的创作者主页,底层映射到你的数字 ID。同一个账号,更好的入口。\n\n### 抓住不同时区的粉丝\n\nJoilive 偏向亚太观众。如果你按 JST 直播,而粉丝在欧洲或北美,一半观众永远看不到你的直播 — 在 Joilive 上这意味着他们根本看不到你。在 LiveStreamRecorder 上录制自己的直播,这些时区错开的粉丝就有办法按自己的时间看直播了。聊天没了,但内容还在。\n\n### 究竟保存了什么\n\n每场直播的完整高画质视频,在你上线的那一刻就开始录制。没有屏幕捕获、没有 OBS 插件、没有额外的编码处理 — Joilive 主播这边什么都不需要运行。直播录像在每场直播结束时自动出现在你的 LiveStreamRecorder 创作者主页上,无限期保留。哪些公开、哪些隐藏、哪些删除,由你决定。\n\n### 把直播变成可分享的短视频\n\nJoilive 是一个小型平台。现实是你的大多数观众生活在 TikTok、YouTube Shorts 或 Instagram Reels 上 — 他们没装 Joilive 应用。ClipAI 扫描你录制的 Joilive 直播,剪出适合竖屏短视频的简短带字幕片段。把它们发到观众已经在的地方,等你下次直播时再把他们引回 Joilive 直播间。\n\n### 浏览和发现 Joilive 主播\n\n这个页面列出了把自己添加到 LiveStreamRecorder 的 Joilive 创作者。由于 Joilive 不暴露用户名或公开搜索,这可能是在公开网络上按名字找到 Joilive 主播的少数方式之一。随着更多播主注册,这个列表会增长。\n\n### 在 LiveStreamRecorder 上成为 Joilive 主播\n\n免费注册、免费开始保存直播。粘贴你的 Joilive 用户 ID（个人资料 URL 中 `?s=…` 的值),其余我们来处理。从那一刻起,每场直播都会被捕获到你的创作者主页。是否录制由你决定,内容是你的,存档在你的域名下 — `livestreamrecorder.com/joilive/your-id`,而不是没人记得住的 Joilive 查询字符串 URL。",

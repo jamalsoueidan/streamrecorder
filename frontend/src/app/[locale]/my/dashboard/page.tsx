@@ -40,7 +40,6 @@ const platformMap: Record<string, FollowerTypeEnum> = {
   AfreecaTV: FollowerTypeEnum.Afreecatv,
   Pandalive: FollowerTypeEnum.Pandalive,
   Bigo: FollowerTypeEnum.Bigo,
-  Buzzcast: FollowerTypeEnum.Buzzcast,
   LiveMe: FollowerTypeEnum.Liveme,
   Mixch: FollowerTypeEnum.Mixch,
   Twitcast: FollowerTypeEnum.Twitcast,
