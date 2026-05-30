@@ -76,7 +76,7 @@ function isSupportedSite(urlString) {
   const supported = [
     "tiktok.com", "twitch.tv", "kick.com", "youtube.com",
     "afreecatv.com", "sooplive.co.kr", "pandalive.co.kr", "bigo.tv",
-    "buzzcast.com", "liveme.com", "mixch.tv",
+    "liveme.com", "mixch.tv",
     "twitcasting.tv", "trovo.live", "joilive.net",
     "17.live", "kwai.com", "nimo.tv", "vkvideo.ru",
   ];
@@ -160,13 +160,6 @@ function parseProfileUrl(urlString) {
     if (match && !IGNORED_PATHS.has(match[1].toLowerCase())) {
       return { platform: "bigo", username: match[1] };
     }
-    return null;
-  }
-
-  // Buzzcast: buzzcast.com/web/personalInfo/username
-  if (hostname === "buzzcast.com" || hostname.endsWith(".buzzcast.com")) {
-    const match = path.match(/^\/web\/personalInfo\/([A-Za-z0-9_]+)/);
-    if (match) return { platform: "buzzcast", username: match[1] };
     return null;
   }
 
