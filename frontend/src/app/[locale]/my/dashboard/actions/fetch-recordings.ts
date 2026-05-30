@@ -18,7 +18,7 @@ export async function fetchRecordingsByPlatform(
         type: { $eq: platform },
       },
     },
-    sort: "updatedAt:desc",
+    sort: "createdAt:desc",
     page: 1,
     pageSize: 4,
   });
@@ -29,7 +29,7 @@ export async function fetchFavoriteRecordings() {
   const result = await fetchCachedRecordings({
     scope: "favorites" as RecordingScope,
     filters: {},
-    sort: "updatedAt:desc",
+    sort: "createdAt:desc",
     page: 1,
     pageSize: 4,
   });

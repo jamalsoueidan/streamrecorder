@@ -40,8 +40,8 @@ export const followingDefaultOptions = {
 };
 
 export enum FollowingSortOptions {
-  updatedAtDesc = "updatedAt:desc",
-  updatedAtAsc = "updatedAt:asc",
+  createdAtDesc = "createdAt:desc",
+  createdAtAsc = "createdAt:asc",
   viewsCountDesc = "viewsCount:desc",
   downloadsCountDesc = "downloadsCount:desc",
 }
@@ -49,7 +49,7 @@ export enum FollowingSortOptions {
 export const followingParsers = {
   sort: parseAsStringEnum<FollowingSortOptions>(
     Object.values(FollowingSortOptions),
-  ).withDefault(FollowingSortOptions.updatedAtDesc),
+  ).withDefault(FollowingSortOptions.createdAtDesc),
   scope: parseAsStringEnum<ScopeEnum>(Object.values(ScopeEnum)).withDefault(
     ScopeEnum.Following,
   ),
@@ -86,7 +86,7 @@ export const buildFollowingFilters = (filters: FollowingFilters) =>
           },
         }
       : {},
-    filters.dateRange ? getDateRange(filters.dateRange, "updatedAt") : {},
+    filters.dateRange ? getDateRange(filters.dateRange, "createdAt") : {},
     filters.duration === "short"
       ? { totalDuration: { $lt: 240 } }
       : filters.duration === "medium"
