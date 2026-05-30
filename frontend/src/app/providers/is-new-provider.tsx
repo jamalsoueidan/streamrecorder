@@ -13,7 +13,7 @@ import {
 const SESSION_GAP_MINUTES = 10;
 
 type IsNewContextValue = {
-  isNew: (item: { updatedAt?: string | null }) => boolean;
+  isNew: (item: { createdAt?: string | null }) => boolean;
 };
 
 const IsNewContext = createContext<IsNewContextValue | null>(null);
@@ -67,9 +67,9 @@ export function IsNewProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   const isNew = useCallback(
-    (item: { updatedAt?: string | null }) => {
-      if (!mounted || !sessionStartedAt || !item.updatedAt) return false;
-      return dayjs(item.updatedAt).isAfter(dayjs(sessionStartedAt));
+    (item: { createdAt?: string | null }) => {
+      if (!mounted || !sessionStartedAt || !item.createdAt) return false;
+      return dayjs(item.createdAt).isAfter(dayjs(sessionStartedAt));
     },
     [sessionStartedAt, mounted],
   );

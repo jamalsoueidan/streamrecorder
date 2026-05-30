@@ -45,15 +45,15 @@ import { useIntlNames } from "../../hooks/use-intl-names";
 import { followingParsers, FollowingSortOptions } from "../lib/search-params";
 
 const sortIcons: Record<string, React.ReactNode> = {
-  [FollowingSortOptions.updatedAtDesc]: <IconArrowDown size={24} />,
-  [FollowingSortOptions.updatedAtAsc]: <IconArrowUp size={24} />,
+  [FollowingSortOptions.createdAtDesc]: <IconArrowDown size={24} />,
+  [FollowingSortOptions.createdAtAsc]: <IconArrowUp size={24} />,
   [FollowingSortOptions.viewsCountDesc]: <IconEye size={24} />,
   [FollowingSortOptions.downloadsCountDesc]: <IconDownload size={24} />,
 };
 
 const sortLabelKeys: Record<string, string> = {
-  [FollowingSortOptions.updatedAtDesc]: "sort.updatedAtDesc",
-  [FollowingSortOptions.updatedAtAsc]: "sort.updatedAtAsc",
+  [FollowingSortOptions.createdAtDesc]: "sort.createdAtDesc",
+  [FollowingSortOptions.createdAtAsc]: "sort.createdAtAsc",
   [FollowingSortOptions.viewsCountDesc]: "sort.viewsCountDesc",
   [FollowingSortOptions.downloadsCountDesc]: "sort.downloadsCountDesc",
 };
