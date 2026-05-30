@@ -17,7 +17,6 @@ const PLATFORM_FLAGS: Record<string, string[]> = {
   AfreecaTV: ["🇰🇷"],
   Pandalive: ["🇰🇷"],
   Bigo: ["🌍"],
-  Buzzcast: ["🌍"],
   LiveMe: ["🌍"],
   Mixch: ["🇯🇵"],
   Twitcast: ["🇯🇵"],

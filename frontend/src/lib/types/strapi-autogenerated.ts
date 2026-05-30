@@ -31,7 +31,6 @@ export enum FollowerTypeEnum {
   Pandalive = "pandalive",
   Bigo = "bigo",
   Tango = "tango",
-  Buzzcast = "buzzcast",
   Liveme = "liveme",
   Mixch = "mixch",
   Twitcast = "twitcast",

@@ -258,55 +258,6 @@
         }
       ]
     },
-    "buzzcast": {
-      "title": "Rekaman Live Buzzcast",
-      "description": "Tonton dan unduh rekaman Live Buzzcast di LiveStreamRecorder. Live Buzzcast Anda direkam secara otomatis di cloud — tidak ada masalah layar hitam, tidak perlu screen recorder. Perekam Live Buzzcast termudah untuk kreator.",
-      "keywords": [
-        "perekam buzzcast",
-        "perekam live buzzcast",
-        "rekam live buzzcast",
-        "screen recorder live buzzcast",
-        "screen record live buzzcast",
-        "screen recorder untuk live buzzcast",
-        "screen record buzzcast",
-        "rekaman layar hitam buzzcast",
-        "screen recorder live buzzcast layar hitam",
-        "rekaman layar hitam buzzcast",
-        "screen recorder buzzcast layar hitam",
-        "rekam buzzcast layar hitam",
-        "simpan live buzzcast"
-      ],
-      "faqs": [
-        {
-          "question": "Bagaimana cara merekam Live Buzzcast saya?",
-          "answer": "Dengan LiveStreamRecorder, Live Buzzcast Anda direkam secara otomatis di cloud. Daftar, tambahkan username Buzzcast Live Anda, dan setiap kali Anda live akan direkam. Tidak perlu instal APK perekam Buzzcast Live, tidak perlu screen recording — semuanya terjadi dari sisi server."
-        },
-        {
-          "question": "Mengapa saya mendapatkan layar hitam saat merekam Buzzcast Live?",
-          "answer": "Masalah layar hitam umum terjadi saat menggunakan screen recorder di Buzzcast Live. LiveStreamRecorder menghindari ini sepenuhnya karena merekam Live Buzzcast Anda langsung dari cloud — tidak ada layar hitam, tidak ada solusi alternatif, tidak ada aplikasi screen recording yang tidak dapat diandalkan."
-        },
-        {
-          "question": "Bagaimana cara memperbaiki masalah layar hitam screen recorder Buzzcast Live?",
-          "answer": "Solusi termudah adalah melewati screen recording sama sekali. LiveStreamRecorder adalah perekam Buzzcast berbasis cloud yang merekam Live Anda dari sisi server dalam kualitas tinggi. Tidak ada masalah layar hitam, tidak ada aplikasi yang perlu dikonfigurasi — cukup tambahkan username Anda dan Live Buzzcast Anda direkam secara otomatis."
-        },
-        {
-          "question": "Apakah saya perlu screen recorder untuk Buzzcast Live?",
-          "answer": "Tidak. Screen recorder untuk Buzzcast Live sering mengakibatkan masalah layar hitam atau kualitas rekaman yang rendah. LiveStreamRecorder adalah perekam Buzzcast Live berbasis cloud yang merekam stream Anda secara otomatis dalam kualitas tinggi — tidak perlu instal aplikasi, tidak ada layar hitam."
-        },
-        {
-          "question": "Bisakah saya merekam Live Buzzcast saya secara gratis?",
-          "answer": "Ya. Daftar ke LiveStreamRecorder gratis dan mulai merekam Live Buzzcast Anda segera. Paket premium membuka fitur unduhan rekaman, ClipAI untuk klip sorotan otomatis, dan penyimpanan yang diperluas."
-        },
-        {
-          "question": "Bisakah saya mengunduh rekaman Live Buzzcast saya?",
-          "answer": "Ya. Pengguna premium dapat mengunduh rekaman Live Buzzcast sebagai file video untuk ditonton secara offline. Setiap rekaman juga dapat ditonton langsung di browser Anda tanpa perlu mengunduh."
-        },
-        {
-          "question": "Bisakah saya mengubah rekaman Live Buzzcast menjadi klip pendek?",
-          "answer": "Ya. Pengguna premium dapat menggunakan ClipAI untuk secara otomatis mengubah rekaman Live Buzzcast menjadi klip sorotan pendek siap untuk TikTok, YouTube Shorts, atau Reels. Ini adalah cara yang bagus untuk memanfaatkan konten live Anda dan menumbuhkan pengikut di berbagai platform."
-        }
-      ]
-    },
     "liveme": {
       "title": "Rekaman Live LiveMe",
       "description": "Tonton dan unduh rekaman Live LiveMe di LiveStreamRecorder. Live LiveMe Anda direkam secara otomatis di cloud — tidak ada masalah layar hitam, tidak perlu screen recorder. Perekam Live LiveMe termudah untuk kreator.",
@@ -758,7 +709,6 @@
       "afreecatv": "Rekaman AfreecaTV",
       "pandalive": "Rekaman Pandalive",
       "bigo": "Rekaman Bigo",
-      "buzzcast": "Rekaman Buzzcast",
       "liveme": "Rekaman LiveMe",
       "mixch": "Rekaman Mixch",
       "trovo": "Rekaman Trovo",
@@ -778,7 +728,6 @@
       "afreecatv": "Tonton rekaman AfreecaTV dari kreator di platform kami. Unduh dan temukan konten baru.",
       "pandalive": "Tonton rekaman Pandalive dari kreator di platform kami. Unduh dan temukan konten baru.",
       "bigo": "Tonton rekaman Bigo dari kreator di platform kami. Unduh dan temukan konten baru.",
-      "buzzcast": "Tonton rekaman Buzzcast dari kreator di platform kami. Unduh dan temukan konten baru.",
       "liveme": "Tonton rekaman LiveMe dari kreator di platform kami. Unduh dan temukan konten baru.",
       "mixch": "Tonton rekaman Mixch dari kreator di platform kami. Unduh dan temukan konten baru.",
       "trovo": "Tonton rekaman Trovo dari kreator di platform kami. Unduh dan temukan konten baru.",
@@ -800,7 +749,6 @@
       "pandalive": "Rekam Stream Pandalive",
       "afreecatv": "Rekam Stream AfreecaTV",
       "bigo": "Rekam Stream Bigo",
-      "buzzcast": "Rekam Stream Buzzcast",
       "liveme": "Rekam Stream LiveMe",
       "mixch": "Rekam Stream Mixch",
       "trovo": "Rekam Stream Trovo",
@@ -820,7 +768,6 @@
       "pandalive": "Simpan stream Pandalive Anda secara otomatis. Unduh rekaman dan buat klip pendek dengan ClipAI.",
       "afreecatv": "Simpan stream AfreecaTV Anda secara otomatis. Unduh rekaman dan buat klip pendek dengan ClipAI.",
       "bigo": "Simpan stream Bigo Anda secara otomatis. Unduh rekaman dan buat klip pendek dengan ClipAI.",
-      "buzzcast": "Simpan stream Buzzcast Anda secara otomatis. Unduh rekaman dan buat klip pendek dengan ClipAI.",
       "liveme": "Simpan stream LiveMe Anda secara otomatis. Unduh rekaman dan buat klip pendek dengan ClipAI.",
       "mixch": "Simpan stream Mixch Anda secara otomatis. Unduh rekaman dan buat klip pendek dengan ClipAI.",
       "trovo": "Simpan stream Trovo Anda secara otomatis. Unduh rekaman dan buat klip pendek dengan ClipAI.",
@@ -844,7 +791,6 @@
       "afreecatv": "Jadilah kreator pertama yang merekam stream AfreecaTV!",
       "pandalive": "Jadilah kreator pertama yang merekam stream Pandalive!",
       "bigo": "Jadilah kreator pertama yang merekam stream Bigo!",
-      "buzzcast": "Jadilah kreator pertama yang merekam stream Buzzcast!",
       "liveme": "Jadilah kreator pertama yang merekam stream LiveMe!",
       "mixch": "Jadilah kreator pertama yang merekam stream Mixch!",
       "trovo": "Jadilah kreator pertama yang merekam stream Trovo!",
@@ -866,7 +812,6 @@
     "pandalive": "## Rekaman Live Pandalive\n\nTonton rekaman live Pandalive dari BJ yang menggunakan LiveStreamRecorder untuk menyimpan live mereka sendiri. Setiap live Pandalive otomatis tertangkap dan disimpan untuk ditonton kapan saja.\n\n### Live Pandalive tersimpan otomatis\n\nLive Pandalive hilang saat siaran berakhir — tidak ada sistem replay yang dijamin. Perekam Pandalive kami menyimpan live-mu secara otomatis di cloud, supaya tidak ada yang hilang saat siaranmu selesai. Dansa, lagu, ngobrol — semuanya tetap tersedia.\n\n### Tonton dan unduh rekaman Pandalive-mu\n\nSetiap rekaman Pandalive bisa langsung ditonton di browser. Pengguna Premium bisa mengunduh rekaman Pandalive mereka sebagai file video untuk tontonan offline — sempurna untuk memanfaatkan ulang kontenmu sendiri atau menyimpan salinan pribadi.\n\n### Rekam live Pandalive-mu tanpa software tambahan\n\nLupakan aplikasi rekam layar dan alat capture mobile. LiveStreamRecorder adalah perekam Pandalive online yang menangkap live-mu di sisi server. Tanpa software desktop, tanpa HP menyala semalaman, tanpa ekstensi browser. Siaran dari HP, tablet, atau PC — live Pandalive-mu otomatis terekam dengan kualitas tinggi.\n\n### Ubah live-mu jadi klip dengan ClipAI\n\nMau ubah rekaman live Pandalive-mu jadi klip pendek? ClipAI menganalisis live yang sudah direkam dan membuat klip highlight siap posting di TikTok, Instagram Reels, atau YouTube Shorts. Tumbuhkan komunitasmu di seluruh dunia dengan memanfaatkan ulang momen Pandalive terbaikmu.\n\n### Perekam Pandalive terbaik untuk BJ\n\nLiveStreamRecorder dirancang untuk menyimpan live Pandalive. Daftar gratis, tambahkan username Pandalive-mu, dan jangan pernah kehilangan live lagi. Setiap live otomatis terekam — pustaka konten Pandalive permanen milikmu.",
     "afreecatv": "## Rekaman Live AfreecaTV\n\nTonton rekaman live AfreecaTV dari BJ yang menggunakan LiveStreamRecorder untuk menyimpan live mereka sendiri. Setiap live AfreecaTV otomatis tertangkap dan disimpan untuk ditonton kapan saja.\n\n### Live AfreecaTV disimpan secara independen\n\nAfreecaTV punya sistem VOD sendiri, tapi tidak semua replay disimpan, konten bisa dihapus, dan aturan penyimpanan bisa berubah. Perekam AfreecaTV kami menyimpan live-mu secara otomatis di cloud sebagai cadangan independen — kontenmu tetap utuh, apa pun yang terjadi di AfreecaTV.\n\n### Tonton dan unduh rekaman AfreecaTV-mu\n\nSetiap rekaman AfreecaTV bisa langsung ditonton di browser — tanpa iklan, tanpa interupsi. Pengguna Premium bisa mengunduh rekaman AfreecaTV mereka sebagai file video untuk tontonan offline atau pemanfaatan ulang konten.\n\n### Rekam live AfreecaTV-mu tanpa screen recorder\n\nLupakan menjalankan software capture selama sesi AfreecaTV yang panjang. LiveStreamRecorder adalah perekam AfreecaTV berbasis cloud yang menangkap live-mu di sisi server. Tanpa app desktop, tanpa rekaman background, tanpa beban CPU ekstra. Siaran dari PC atau HP — live AfreecaTV-mu otomatis terekam dengan kualitas tinggi.\n\n### Ubah live panjang jadi klip pendek dengan ClipAI\n\nLive AfreecaTV bisa berlangsung berjam-jam. ClipAI menganalisis rekamanmu dan mengambil momen terbaik — permainan penting, reaksi, momen lucu, highlight. Posting sebagai klip TikTok, YouTube Shorts, atau Reels untuk menjangkau audiens di luar AfreecaTV.\n\n### Perekam AfreecaTV terbaik untuk BJ\n\nLiveStreamRecorder dirancang untuk menyimpan live AfreecaTV secara independen. Daftar gratis, tambahkan username AfreecaTV-mu, dan jangan pernah kehilangan live lagi. Setiap live otomatis terekam — cadangan permanen yang tidak bergantung pada sistem VOD AfreecaTV.",
     "bigo": "## Rekaman Live Bigo Live\n\nTonton rekaman live Bigo Live dari kreator yang menggunakan LiveStreamRecorder untuk menyimpan live mereka sendiri. Setiap live Bigo otomatis tertangkap dan disimpan untuk ditonton kapan saja.\n\n### Live Bigo tersimpan sebelum hilang\n\nLive Bigo hanya ada saat sedang on-air — begitu kamu mengakhiri sesi, kontennya hilang sepenuhnya dari app. Perekam Bigo kami menyimpan live-mu secara otomatis di cloud, supaya kontenmu tidak hilang saat live berakhir. Dansa, lagu, ngobrol, momen gift — semuanya tetap tersedia.\n\n### Tonton dan unduh rekaman Bigo-mu\n\nSetiap rekaman live Bigo bisa langsung ditonton di browser. Pengguna Premium bisa mengunduh rekaman Bigo mereka sebagai file video untuk tontonan offline — sempurna untuk memanfaatkan ulang kontenmu sendiri atau menyimpan salinan pribadi.\n\n### Rekam live Bigo-mu tanpa rekam layar\n\nLupakan merekam layar HP atau membiarkan perangkat lain merekam semalaman. LiveStreamRecorder adalah perekam Bigo online yang menangkap live-mu di sisi server. Tanpa baterai terkuras, tanpa setup manual, tanpa software tambahan. Siaran dari iPhone, Android, atau PC — live Bigo-mu otomatis terekam dengan kualitas tinggi.\n\n### Ubah live-mu jadi klip dengan ClipAI\n\nMau ubah rekaman live Bigo-mu jadi klip pendek? ClipAI menganalisis live yang sudah direkam dan membuat klip highlight siap posting di TikTok, Instagram Reels, atau YouTube Shorts. Tumbuhkan audiens globalmu dengan memanfaatkan ulang momen Bigo terbaikmu.\n\n### Perekam Bigo terbaik untuk kreator\n\nLiveStreamRecorder dirancang untuk menyimpan live Bigo. Daftar gratis, tambahkan username Bigo-mu, dan jangan pernah kehilangan live lagi. Setiap live otomatis terekam — tempat permanen untuk konten Bigo-mu yang tidak bergantung pada app menyimpannya untukmu.",
-    "buzzcast": "## Rekaman Live Buzzcast\n\nTonton rekaman live Buzzcast dari kreator yang menggunakan LiveStreamRecorder untuk menyimpan live mereka sendiri. Setiap live Buzzcast otomatis tertangkap dan disimpan untuk ditonton kapan saja.\n\n### Live Buzzcast tersimpan sebelum hilang\n\nLive Buzzcast hanya berlangsung secara live — begitu kamu mengakhiri siaran, kontennya hilang dari app. Perekam Buzzcast kami menyimpan live-mu secara otomatis di cloud, supaya tidak ada yang hilang saat siaranmu selesai. Ngobrol, momen musik, konten sehari-hari — semuanya tetap tersedia untuk fans.\n\n### Tonton dan unduh rekaman Buzzcast-mu\n\nSetiap rekaman live Buzzcast bisa langsung ditonton di browser. Pengguna Premium bisa mengunduh rekaman Buzzcast mereka sebagai file video untuk tontonan offline — sempurna untuk memanfaatkan ulang kontenmu sendiri atau menyimpan salinan pribadi.\n\n### Rekam live Buzzcast-mu tanpa app tambahan\n\nLupakan merekam layar HP atau menjalankan software capture di background. LiveStreamRecorder adalah perekam Buzzcast online yang menangkap live-mu di sisi server. Tanpa baterai terkuras, tanpa setup manual, tanpa software tambahan. Live Buzzcast-mu otomatis terekam dengan kualitas tinggi dari perangkat manapun.\n\n### Ubah live-mu jadi klip dengan ClipAI\n\nMau ubah rekaman live Buzzcast-mu jadi klip pendek? ClipAI menganalisis live yang sudah direkam dan membuat klip highlight siap posting di TikTok, Instagram Reels, atau YouTube Shorts. Tumbuhkan komunitasmu di luar Buzzcast dengan memanfaatkan ulang momen terbaikmu.\n\n### Perekam Buzzcast terbaik untuk kreator\n\nLiveStreamRecorder dirancang untuk menyimpan live Buzzcast. Daftar gratis, tambahkan username Buzzcast-mu, dan jangan pernah kehilangan live lagi. Setiap live otomatis terekam — pustaka konten Buzzcast permanen milikmu.",
     "liveme": "## Rekaman Live LiveMe\n\nTonton rekaman live LiveMe dari kreator yang menggunakan LiveStreamRecorder untuk menyimpan live mereka sendiri. Setiap live LiveMe otomatis tertangkap dan disimpan untuk ditonton kapan saja.\n\n### Live LiveMe tersimpan sebelum hilang\n\nLive LiveMe hanya berlangsung secara live — begitu kamu mengakhiri siaran, kontennya hilang dari app. Perekam LiveMe kami menyimpan live-mu secara otomatis di cloud, supaya tidak ada yang hilang saat siaranmu selesai. Ngobrol, momen musik, konten sehari-hari — semuanya tetap tersedia untuk fans.\n\n### Tonton dan unduh rekaman LiveMe-mu\n\nSetiap rekaman live LiveMe bisa langsung ditonton di browser. Pengguna Premium bisa mengunduh rekaman LiveMe mereka sebagai file video untuk tontonan offline — sempurna untuk memanfaatkan ulang kontenmu sendiri atau menyimpan salinan pribadi.\n\n### Rekam live LiveMe-mu tanpa app tambahan\n\nLupakan merekam layar HP atau menjalankan software capture di background. LiveStreamRecorder adalah perekam LiveMe online yang menangkap live-mu di sisi server. Tanpa baterai terkuras, tanpa setup manual, tanpa software tambahan. Live LiveMe-mu otomatis terekam dengan kualitas tinggi dari perangkat manapun.\n\n### Ubah live-mu jadi klip dengan ClipAI\n\nMau ubah rekaman live LiveMe-mu jadi klip pendek? ClipAI menganalisis live yang sudah direkam dan membuat klip highlight siap posting di TikTok, Instagram Reels, atau YouTube Shorts. Tumbuhkan komunitasmu di luar LiveMe dengan memanfaatkan ulang momen terbaikmu.\n\n### Perekam LiveMe terbaik untuk kreator\n\nLiveStreamRecorder dirancang untuk menyimpan live LiveMe. Daftar gratis, tambahkan username LiveMe-mu, dan jangan pernah kehilangan live lagi. Setiap live otomatis terekam — pustaka konten LiveMe permanen milikmu.",
     "mixch": "## Rekaman Live Mixch\n\nTonton rekaman live Mixch dari kreator yang menggunakan LiveStreamRecorder untuk menyimpan live mereka sendiri. Setiap live Mixch otomatis tertangkap dan disimpan untuk ditonton kapan saja.\n\n### Live Mixch tersimpan sebelum hilang\n\nLive Mixch hanya berlangsung secara live — begitu kamu mengakhiri siaran, kontennya hilang dari app. Perekam Mixch kami menyimpan live-mu secara otomatis di cloud, supaya tidak ada yang hilang saat siaranmu selesai. Ngobrol, momen musik, konten sehari-hari — semuanya tetap tersedia untuk fans.\n\n### Tonton dan unduh rekaman Mixch-mu\n\nSetiap rekaman live Mixch bisa langsung ditonton di browser. Pengguna Premium bisa mengunduh rekaman Mixch mereka sebagai file video untuk tontonan offline — sempurna untuk memanfaatkan ulang kontenmu sendiri atau menyimpan salinan pribadi.\n\n### Rekam live Mixch-mu tanpa app tambahan\n\nLupakan merekam layar HP atau menjalankan software capture di background. LiveStreamRecorder adalah perekam Mixch online yang menangkap live-mu di sisi server. Tanpa baterai terkuras, tanpa setup manual, tanpa software tambahan. Live Mixch-mu otomatis terekam dengan kualitas tinggi dari perangkat manapun.\n\n### Ubah live-mu jadi klip dengan ClipAI\n\nMau ubah rekaman live Mixch-mu jadi klip pendek? ClipAI menganalisis live yang sudah direkam dan membuat klip highlight siap posting di TikTok, Instagram Reels, atau YouTube Shorts. Tumbuhkan komunitasmu di luar Mixch dengan memanfaatkan ulang momen terbaikmu.\n\n### Perekam Mixch terbaik untuk kreator\n\nLiveStreamRecorder dirancang untuk menyimpan live Mixch. Daftar gratis, tambahkan username Mixch-mu, dan jangan pernah kehilangan live lagi. Setiap live otomatis terekam — pustaka konten Mixch permanen milikmu.",
     "joilive": "## Rekaman Stream Joilive\n\nJoilive tidak mengarsipkan. Tidak ada tab replay di profilmu, tidak ada daftar stream lampau, tidak ada VOD. Platformnya dibangun sepenuhnya untuk momen live — saat kamu berhenti siaran, stream-nya hilang. Itu nggak masalah untuk live pendek dan santai, tapi jadi problem nyata kalau kamu streaming rutin dan ingin karyamu tetap ada. LiveStreamRecorder membuat streamer Joilive bisa **merekam siaran mereka sendiri** sehingga setiap Live berakhir sebagai video yang bisa ditonton dan dibagikan di halaman kreator pribadi.\n\n### Masalah Layar Hitam di Joilive\n\nKalau kamu pernah coba merekam stream Joilive sendiri dengan perekam desktop (display capture OBS Studio, Xbox Game Bar di Windows, QuickTime di Mac), kamu mungkin sudah memperhatikan hal yang sama: audionya terekam baik, tapi videonya muncul sebagai persegi hitam. Itu karena web player Joilive memakai decoding terakselerasi hardware plus DRM Widevine. Perekam melihat player tapi nggak bisa melihat frame video-nya. Ini bukan bug Joilive, bukan perekammu rusak — itu efek samping dari cara video terlindungi dikomposisi di browser modern, dan nggak bisa diperbaiki dengan mengubah pengaturan di mesinmu.\n\nWorkaround praktisnya adalah melewati screen recording sama sekali. LiveStreamRecorder menangkap stream Joilive upstream dari browser, sebelum jalur DRM/compositing terlibat. Tanpa layar hitam, tanpa berburu codec, tanpa toggle akselerasi GPU — perekaman tinggal jalan.\n\n### Rekam Sendiri, dari Sisi Server\n\nKamu merekam stream-mu sendiri, tapi nggak menjalankan apa pun untuk melakukannya. Tanpa app di HP, tanpa software di PC. Saat kamu live di app Joilive, perekaman dimulai otomatis di cloud. Streaming dari sofa, mobil, atau kafe — laptopmu bisa mati, HP-mu bisa terkunci. Live Joilive-mu masuk ke halaman kreatormu saat tiap siaran berakhir, siap untuk ditonton kembali di browser.\n\n### Tonton dan Unduh Rekaman Joilive-mu\n\nSetiap Live yang sudah direkam langsung diputar di browser modern apa pun, tanpa app, tanpa akun Joilive untuk menonton. Streamer Premium bisa mengunduh file video mentah untuk diedit, diunggah ulang, atau diarsipkan lokal — dan ClipAI bisa otomatis menghasilkan klip format pendek dari rekaman untuk posting di TikTok, YouTube Shorts, atau Reels.\n\n### URL yang Bisa Dibagikan untuk Live-mu\n\nURL room Joilive sendiri adalah `joilive.net/user/index.html?s=1880…` — ID numerik panjang yang nggak bisa siapa pun ketik atau ingat. Rekaman LiveStreamRecorder-mu memakai URL bersih seperti `livestreamrecorder.com/joilive/id-mu/video/...` yang bisa kamu posting di Discord, masukkan ke bio Twitter, atau kirim ke fans lewat SMS. Konten yang sama, tanpa query string, tanpa harus instal app.\n\n### Dibangun untuk Streamer Joilive, Bukan Melawan Mereka\n\nLiveStreamRecorder bukan mengunduh siaran orang lain. Perekaman opt-in oleh streamer Joilive untuk akun **mereka sendiri**, dan hanya live mereka sendiri — bukan yang lain. Video itu milikmu, halaman itu milikmu, penghapusan adalah aksi satu klik. Daftar gratis, tambahkan Joilive user ID-mu, dan arsip Joilive yang hilang berhenti jadi masalahmu.",
@@ -887,7 +832,6 @@
       "afreecatv": "Rekaman Stream AfreecaTV",
       "pandalive": "Rekaman Stream Pandalive",
       "bigo": "Rekaman Stream Bigo",
-      "buzzcast": "Rekaman Stream Buzzcast",
       "liveme": "Rekaman Stream LiveMe",
       "mixch": "Rekaman Stream Mixch",
       "trovo": "Rekaman Stream Trovo",
@@ -907,7 +851,6 @@
       "afreecatv": "Tonton rekaman AfreecaTV dari kreator di LiveStreamRecorder.",
       "pandalive": "Tonton rekaman Pandalive dari kreator di LiveStreamRecorder.",
       "bigo": "Tonton rekaman Bigo dari kreator di LiveStreamRecorder.",
-      "buzzcast": "Tonton rekaman Buzzcast dari kreator di LiveStreamRecorder.",
       "liveme": "Tonton rekaman LiveMe dari kreator di LiveStreamRecorder.",
       "mixch": "Tonton rekaman Mixch dari kreator di LiveStreamRecorder.",
       "trovo": "Tonton rekaman Trovo dari kreator di LiveStreamRecorder.",
@@ -928,7 +871,6 @@
       "pandalive": "Rekaman Pandalive dari {nickname}",
       "bigo": "Rekaman Bigo dari {nickname}",
       "unknown": "Rekaman live stream dari {nickname}",
-      "buzzcast": "Rekaman Buzzcast dari {nickname}",
       "liveme": "Rekaman LiveMe dari {nickname}",
       "mixch": "Rekaman Mixch dari {nickname}",
       "trovo": "Rekaman Trovo dari {nickname}",

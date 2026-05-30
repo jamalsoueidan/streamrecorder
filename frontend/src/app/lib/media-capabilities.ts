@@ -90,7 +90,6 @@ export const PLATFORM_CODECS: Record<string, PlatformCodecs> = {
   bigo: { video: "h264", audio: "aacHeV2" },
   liveme: { video: "h264", audio: "aacHeV2" },
   afreecatv: { video: "h264", audio: "aacLc" },
-  buzzcast: { video: "h264", audio: "aacLc" },
   kick: { video: "h264", audio: "aacLc" },
   mixch: { video: "h264", audio: "aacLc" },
   pandalive: { video: "h264", audio: "aacLc" },
