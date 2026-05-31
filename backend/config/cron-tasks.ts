@@ -83,4 +83,41 @@ export default {
       rule: "*/15 * * * *",
     },
   },
+
+  // Hard 30-day retention on sources. The S3 lifecycle policy deletes the
+  // file from the bucket independently; this task removes the matching DB
+  // rows (the `sources` row + its `sources_recording_lnk` row) so listings
+  // stop pointing at gone-S3 within at most one cron tick.
+  //
+  // Batched at 1,000 rows per run to keep the table lock short. With the
+  // cron running every 15 min, that's 96,000 rows/day, which is plenty
+  // headroom for the ~28K/day failure-rate-equivalent volume. Bump the
+  // BATCH constant if a backlog accumulates.
+  deleteExpiredSources: {
+    task: async ({ strapi }) => {
+      const knex = strapi.db.connection;
+      const start = Date.now();
+      const BATCH = 1000;
+      const { rows } = await knex.raw(`
+        WITH expired AS (
+          SELECT id FROM sources
+          WHERE created_at < NOW() - INTERVAL '30 days'
+          ORDER BY created_at
+          LIMIT ${BATCH}
+        ),
+        _ AS (
+          DELETE FROM sources_recording_lnk
+          WHERE source_id IN (SELECT id FROM expired)
+        )
+        DELETE FROM sources WHERE id IN (SELECT id FROM expired)
+        RETURNING id
+      `);
+      strapi.log.info(
+        `[cron] deleteExpiredSources removed ${rows.length} rows in ${Date.now() - start}ms`,
+      );
+    },
+    options: {
+      rule: "*/15 * * * *",
+    },
+  },
 };
