@@ -1138,6 +1138,9 @@ export interface ApiFollowerFollower extends Struct.CollectionTypeSchema {
         'kwai',
         'nimotv',
         'vklive',
+        'chzzk',
+        'younow',
+        'clapper',
       ]
     > &
       Schema.Attribute.Required &
