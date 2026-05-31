@@ -49,6 +49,7 @@ const platformMap: Record<string, FollowerTypeEnum> = {
   Kwai: FollowerTypeEnum.Kwai,
   Nimotv: FollowerTypeEnum.Nimotv,
   Vklive: FollowerTypeEnum.Vklive,
+  Chzzk: FollowerTypeEnum.Chzzk,
 };
 
 export default async function Page() {

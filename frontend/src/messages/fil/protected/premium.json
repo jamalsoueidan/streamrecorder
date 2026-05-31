@@ -1,7 +1,7 @@
 {
   "title": "Premium",
-  "descriptionPremium": "May access ka na sa lahat ng inihahandog ng LiveStreamRecorder",
-  "descriptionNonPremium": "Magkaroon ng instant access sa lahat ng inihahandog ng LiveStreamRecorder",
+  "descriptionPremium": "May access ka na sa lahat ng inihahandog ng platform namin",
+  "descriptionNonPremium": "Magkaroon ng instant access sa lahat ng inihahandog ng platform namin",
   "descriptionShort": "Magkaroon ng instant access sa lahat",
   "billingPeriodMonthly": "buwanan",
   "billingPeriodQuarterly": "tatlong buwan",
@@ -45,7 +45,7 @@
   "activeMessage": "Nasa {billingPeriod} plan ka. Susunod na billing date: {renewDate}.",
   "lifetimeMessage": "May lifetime access ka sa lahat ng premium features. Salamat sa support mo!",
   "cancelSubscription": "Kanselahin ang subscription",
-  "supportMessage": "Isang taong proyekto lang ang LiveStreamRecorder. Tumutulong ang support mo para mapanatili ang servers at magkaroon ng bagong features. Salamat!",
+  "supportMessage": "Isang taong proyekto lang ang platform namin. Tumutulong ang support mo para mapanatili ang servers at magkaroon ng bagong features. Salamat!",
   "choosePlan": "Piliin ang Plan Mo",
   "perMonth": "${price}/buwan",
   "oneTime": "isang beses",

@@ -1,7 +1,7 @@
 {
   "title": "プレミアム",
-  "descriptionPremium": "LiveStreamRecorder のすべての機能をご利用いただけます",
-  "descriptionNonPremium": "LiveStreamRecorder のすべての機能に今すぐアクセスしましょう",
+  "descriptionPremium": "当サイト のすべての機能をご利用いただけます",
+  "descriptionNonPremium": "当サイト のすべての機能に今すぐアクセスしましょう",
   "descriptionShort": "すべての機能に今すぐアクセス",
   "billingPeriodMonthly": "月払い",
   "billingPeriodQuarterly": "3ヶ月払い",
@@ -45,7 +45,7 @@
   "activeMessage": "{billingPeriod} プランをご利用中です。次回請求日：{renewDate}。",
   "lifetimeMessage": "すべてのプレミアム機能への永久アクセス権をお持ちです。ご支援ありがとうございます！",
   "cancelSubscription": "サブスクリプションをキャンセル",
-  "supportMessage": "LiveStreamRecorder は一人で運営しているプロジェクトです。皆さまのご支援がサーバーの維持と新機能の開発を支えています。ありがとうございます！",
+  "supportMessage": "当サイト は一人で運営しているプロジェクトです。皆さまのご支援がサーバーの維持と新機能の開発を支えています。ありがとうございます！",
   "choosePlan": "プランを選択",
   "perMonth": "${price}/月",
   "oneTime": "一括払い",

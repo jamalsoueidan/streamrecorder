@@ -28,7 +28,7 @@
     "infringing": {
       "urls": {
         "label": "侵害録画の URL",
-        "description": "1行に1つの URL を記入してください。LiveStreamRecorder 上で削除を希望される録画の URL です。",
+        "description": "1行に1つの URL を記入してください。当サイト 上で削除を希望される録画の URL です。",
         "placeholder": "https://www.livestreamrecorder.com/twitch/..."
       }
     },

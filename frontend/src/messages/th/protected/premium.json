@@ -1,7 +1,7 @@
 {
   "title": "พรีเมียม",
-  "descriptionPremium": "คุณเข้าถึงทุกอย่างที่ LiveStreamRecorder มีให้",
-  "descriptionNonPremium": "เข้าถึงทุกอย่างที่ LiveStreamRecorder มีให้ทันที",
+  "descriptionPremium": "คุณเข้าถึงทุกอย่างที่ เว็บไซต์ของเรา มีให้",
+  "descriptionNonPremium": "เข้าถึงทุกอย่างที่ เว็บไซต์ของเรา มีให้ทันที",
   "descriptionShort": "เข้าถึงทุกอย่างทันที",
   "billingPeriodMonthly": "รายเดือน",
   "billingPeriodQuarterly": "รายไตรมาส",
@@ -45,7 +45,7 @@
   "activeMessage": "คุณอยู่ในแผน {billingPeriod} วันที่เรียกเก็บถัดไป: {renewDate}",
   "lifetimeMessage": "คุณมีสิทธิ์เข้าถึงฟีเจอร์พรีเมียมทั้งหมดตลอดชีพ ขอบคุณสำหรับการสนับสนุน!",
   "cancelSubscription": "ยกเลิกการสมัคร",
-  "supportMessage": "LiveStreamRecorder เป็นโปรเจกต์คนเดียว การสนับสนุนของคุณช่วยให้เซิร์ฟเวอร์ทำงานและมีฟีเจอร์ใหม่ๆ ขอบคุณ!",
+  "supportMessage": "เว็บไซต์ของเรา เป็นโปรเจกต์คนเดียว การสนับสนุนของคุณช่วยให้เซิร์ฟเวอร์ทำงานและมีฟีเจอร์ใหม่ๆ ขอบคุณ!",
   "choosePlan": "เลือกแผนของคุณ",
   "perMonth": "${price}/เดือน",
   "oneTime": "ครั้งเดียว",

@@ -49,6 +49,7 @@ export const navConfig = {
     { key: "kwai", label: "Kwai", href: "/creators/kwai" },
     { key: "nimotv", label: "NimoTV", href: "/creators/nimotv" },
     { key: "vklive", label: "VK Live", href: "/creators/vklive" },
+    { key: "chzzk", label: "Chzzk", href: "/creators/chzzk" },
   ],
   watchRecordings: [
     { key: "browse", label: "Browse All", href: "/recordings/all" },
@@ -68,6 +69,7 @@ export const navConfig = {
     { key: "kwai", label: "Kwai", href: "/recordings/kwai" },
     { key: "nimotv", label: "NimoTV", href: "/recordings/nimotv" },
     { key: "vklive", label: "VK Live", href: "/recordings/vklive" },
+    { key: "chzzk", label: "Chzzk", href: "/recordings/chzzk" },
   ],
   legal: [
     { key: "privacy", label: "Privacy Policy", href: "/privacy" },

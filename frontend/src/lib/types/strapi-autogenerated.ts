@@ -40,6 +40,7 @@ export enum FollowerTypeEnum {
   Kwai = "kwai",
   Nimotv = "nimotv",
   Vklive = "vklive",
+  Chzzk = "chzzk",
 }
 
 export interface Error {

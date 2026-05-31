@@ -1,7 +1,7 @@
 {
   "title": "高级会员",
-  "descriptionPremium": "你已可以访问 LiveStreamRecorder 的全部功能",
-  "descriptionNonPremium": "立即获得 LiveStreamRecorder 的全部功能",
+  "descriptionPremium": "你已可以访问 我们的平台 的全部功能",
+  "descriptionNonPremium": "立即获得 我们的平台 的全部功能",
   "descriptionShort": "立即获得全部功能",
   "billingPeriodMonthly": "月付",
   "billingPeriodQuarterly": "季付",
@@ -45,7 +45,7 @@
   "activeMessage": "你正在使用{billingPeriod}套餐。下次扣款日期：{renewDate}。",
   "lifetimeMessage": "你拥有所有高级功能的终身访问权限。感谢你的支持！",
   "cancelSubscription": "取消订阅",
-  "supportMessage": "LiveStreamRecorder 是个人项目。你的支持帮助维持服务器运行和开发新功能。感谢你！",
+  "supportMessage": "我们的平台 是个人项目。你的支持帮助维持服务器运行和开发新功能。感谢你！",
   "choosePlan": "选择你的套餐",
   "perMonth": "${price}/月",
   "oneTime": "一次性",

@@ -17,26 +17,33 @@ export async function purgeCloudflareUrls(urls: string[]): Promise<void> {
   }
   if (urls.length === 0) return;
 
-  try {
-    const res = await fetch(
-      `https://api.cloudflare.com/client/v4/zones/${CF_ZONE_ID}/purge_cache`,
-      {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${CF_API_TOKEN}`,
-          "Content-Type": "application/json",
+  // CF caps purge_cache at 30 URLs per request, so chunk when needed.
+  // Run batches sequentially — parallel POSTs to the same endpoint risk
+  // CF rate-limiting and the operation is best-effort anyway.
+  const BATCH = 30;
+  for (let i = 0; i < urls.length; i += BATCH) {
+    const chunk = urls.slice(i, i + BATCH);
+    try {
+      const res = await fetch(
+        `https://api.cloudflare.com/client/v4/zones/${CF_ZONE_ID}/purge_cache`,
+        {
+          method: "POST",
+          headers: {
+            Authorization: `Bearer ${CF_API_TOKEN}`,
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ files: chunk }),
         },
-        body: JSON.stringify({ files: urls }),
-      },
-    );
-    if (!res.ok) {
-      console.error(
-        "[cloudflare] purge failed:",
-        res.status,
-        await res.text().catch(() => ""),
       );
+      if (!res.ok) {
+        console.error(
+          "[cloudflare] purge batch failed:",
+          res.status,
+          await res.text().catch(() => ""),
+        );
+      }
+    } catch (error) {
+      console.error("[cloudflare] purge batch error:", error);
     }
-  } catch (error) {
-    console.error("[cloudflare] purge error:", error);
   }
 }

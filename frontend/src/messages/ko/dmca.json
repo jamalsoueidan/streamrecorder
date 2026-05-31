@@ -28,7 +28,7 @@
     "infringing": {
       "urls": {
         "label": "침해 녹화물 URL",
-        "description": "한 줄에 하나의 URL을 입력하십시오. LiveStreamRecorder에서 삭제를 요청하는 녹화물입니다.",
+        "description": "한 줄에 하나의 URL을 입력하십시오. 저희 플랫폼에서 삭제를 요청하는 녹화물입니다.",
         "placeholder": "https://www.livestreamrecorder.com/twitch/..."
       }
     },

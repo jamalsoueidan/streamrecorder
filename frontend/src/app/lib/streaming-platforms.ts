@@ -95,5 +95,11 @@ export const streamingPlatforms = [
     name: "Vklive",
     file: "/simple/vklive.svg",
   },
+  {
+    color: "teal.4",
+    colorCss: "var(--mantine-color-teal-4)",
+    name: "Chzzk",
+    file: "/simple/chzzk.svg",
+  },
 ];
 

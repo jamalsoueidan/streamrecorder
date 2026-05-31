@@ -588,6 +588,13 @@ export default async function TermsAndConditions({ params }: PageProps) {
               • {t("thirdPartyPlatforms.platforms.vklive")}
             </Anchor>
             <Anchor
+              href="https://chzzk.naver.com/policy/terms"
+              target="_blank"
+              style={{ color: "#60a5fa" }}
+            >
+              • {t("thirdPartyPlatforms.platforms.chzzk")}
+            </Anchor>
+            <Anchor
               href="https://www.liveme.com/protocol/terms.html"
               target="_blank"
               style={{ color: "#60a5fa" }}

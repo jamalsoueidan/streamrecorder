@@ -2,7 +2,7 @@
   "meta": {
     "all": {
       "title": "直播录像",
-      "description": "在 LiveStreamRecorder 上观看创作者的直播录像。TikTok、Twitch、YouTube、Kick 录像已保存,随时可观看。",
+      "description": "在 我们的平台 上观看创作者的直播录像。TikTok、Twitch、YouTube、Kick 录像已保存,随时可观看。",
       "keywords": [
         "直播录像",
         "直播录制",
@@ -14,7 +14,7 @@
     },
     "tiktok": {
       "title": "TikTok 直播录像",
-      "description": "在 LiveStreamRecorder 上观看和下载 TikTok 直播录像。每场 TikTok 直播都自动捕获 — 无需屏幕录制器。观看你喜爱创作者的已保存 TikTok 直播。",
+      "description": "在 我们的平台 上观看和下载 TikTok 直播录像。每场 TikTok 直播都自动捕获 — 无需屏幕录制器。观看你喜爱创作者的已保存 TikTok 直播。",
       "keywords": [
         "TikTok 直播录像",
         "TikTok 直播",
@@ -30,27 +30,27 @@
       "faqs": [
         {
           "question": "如何录制我的 TikTok 直播？",
-          "answer": "使用 LiveStreamRecorder,你的 TikTok 直播会自动在云端录制。只需注册、添加你的 TikTok 用户名,每场你进行的直播都会被捕获 — 无需 TikTok 屏幕录制器,也无需手机彻夜运行。"
+          "answer": "使用 我们的平台,你的 TikTok 直播会自动在云端录制。只需注册、添加你的 TikTok 用户名,每场你进行的直播都会被捕获 — 无需 TikTok 屏幕录制器,也无需手机彻夜运行。"
         },
         {
           "question": "我需要 TikTok 直播屏幕录制器吗？",
-          "answer": "不需要。LiveStreamRecorder 在服务器端以高质量捕获你的 TikTok 直播,所以根本不需要在 TikTok 上进行屏幕录制。没有掉帧、没有通知打扰、没有不可靠的手机录制。你的直播会自动以高质量保存到你的账号。"
+          "answer": "不需要。我们的平台 在服务器端以高质量捕获你的 TikTok 直播,所以根本不需要在 TikTok 上进行屏幕录制。没有掉帧、没有通知打扰、没有不可靠的手机录制。你的直播会自动以高质量保存到你的账号。"
         },
         {
           "question": "我可以在电脑或笔记本上录制 TikTok 直播吗？",
-          "answer": "可以。LiveStreamRecorder 完全在云端运行,所以你可以从任何带浏览器的设备上录制 TikTok 直播 — PC、笔记本或手机。无需安装任何东西,不需要桌面屏幕录制器或浏览器扩展。只需添加你的用户名,你的直播就会自动录制。"
+          "answer": "可以。我们的平台 完全在云端运行,所以你可以从任何带浏览器的设备上录制 TikTok 直播 — PC、笔记本或手机。无需安装任何东西,不需要桌面屏幕录制器或浏览器扩展。只需添加你的用户名,你的直播就会自动录制。"
         },
         {
           "question": "如何下载我的 TikTok 直播录像？",
-          "answer": "你在 LiveStreamRecorder 上的所有 TikTok 直播录像都可以在浏览器中即时观看。高级用户可以将录像下载为视频文件以离线观看 — 下载内容不带水印。"
+          "answer": "你在 我们的平台 上的所有 TikTok 直播录像都可以在浏览器中即时观看。高级用户可以将录像下载为视频文件以离线观看 — 下载内容不带水印。"
         },
         {
           "question": "TikTok 直播结束后会消失吗？",
-          "answer": "是的,TikTok 在直播结束后不会保存直播。这就是为什么创作者使用 LiveStreamRecorder 作为他们的 TikTok 录制器 — 每场直播都被捕获和存储,这样你以后可以观看、下载或重新利用你的内容。"
+          "answer": "是的,TikTok 在直播结束后不会保存直播。这就是为什么创作者使用 我们的平台 作为他们的 TikTok 录制器 — 每场直播都被捕获和存储,这样你以后可以观看、下载或重新利用你的内容。"
         },
         {
           "question": "录制 TikTok 直播的最佳方式是什么？",
-          "answer": "录制 TikTok 直播的最佳方式是使用基于云端的录制器,如 LiveStreamRecorder。与手机屏幕录制或桌面捕获软件不同,云端录制以高质量捕获你的完整直播,即使你的手机没电或失去连接。这是 TikTok 直播屏幕录制器的最佳替代方案。"
+          "answer": "录制 TikTok 直播的最佳方式是使用基于云端的录制器,如 我们的平台。与手机屏幕录制或桌面捕获软件不同,云端录制以高质量捕获你的完整直播,即使你的手机没电或失去连接。这是 TikTok 直播屏幕录制器的最佳替代方案。"
         },
         {
           "question": "我可以将录制的 TikTok 直播转换为短视频吗？",
@@ -60,7 +60,7 @@
     },
     "twitch": {
       "title": "Twitch 直播录像和 VOD",
-      "description": "在 LiveStreamRecorder 上观看和下载 Twitch 直播录像。你的 Twitch 直播自动捕获 — 无需屏幕录制器。想要永久 VOD 的创作者的最佳 Twitch 录制器。",
+      "description": "在 我们的平台 上观看和下载 Twitch 直播录像。你的 Twitch 直播自动捕获 — 无需屏幕录制器。想要永久 VOD 的创作者的最佳 Twitch 录制器。",
       "keywords": [
         "Twitch 录制器",
         "Twitch 直播录制器",
@@ -78,41 +78,41 @@
       "faqs": [
         {
           "question": "如何自动录制我的 Twitch 直播？",
-          "answer": "LiveStreamRecorder 是一款基于云端的 Twitch 录制器,它会自动捕获你的直播。注册、添加你的 Twitch 频道,每次开播时都会录制你的直播。无需 Twitch 屏幕录制器 — 一切都在服务器端进行。"
+          "answer": "我们的平台 是一款基于云端的 Twitch 录制器,它会自动捕获你的直播。注册、添加你的 Twitch 频道,每次开播时都会录制你的直播。无需 Twitch 屏幕录制器 — 一切都在服务器端进行。"
         },
         {
           "question": "Twitch VOD 会过期吗？",
-          "answer": "是的。普通主播的 Twitch VOD 在 14 天后过期,合作伙伴和 Turbo 用户为 60 天。LiveStreamRecorder 永久保存你的 Twitch 直播 — 你的录像永不过期,始终可观看或下载。"
+          "answer": "是的。普通主播的 Twitch VOD 在 14 天后过期,合作伙伴和 Turbo 用户为 60 天。我们的平台 永久保存你的 Twitch 直播 — 你的录像永不过期,始终可观看或下载。"
         },
         {
           "question": "对于创作者来说,最佳的 Twitch 直播录制器是什么？",
-          "answer": "对于自动录制,基于云端的 Twitch 录制器(如 LiveStreamRecorder)是最佳选择。传统的 Twitch 屏幕录制器需要你的 PC 保持开启并在后台运行录制软件。LiveStreamRecorder 从云端捕获你的 Twitch 直播 — 即使 OBS 崩溃或你的 PC 重启,你的录制也是安全的。"
+          "answer": "对于自动录制,基于云端的 Twitch 录制器(如 我们的平台)是最佳选择。传统的 Twitch 屏幕录制器需要你的 PC 保持开启并在后台运行录制软件。我们的平台 从云端捕获你的 Twitch 直播 — 即使 OBS 崩溃或你的 PC 重启,你的录制也是安全的。"
         },
         {
           "question": "我需要屏幕录制器来保存我的 Twitch 直播吗？",
-          "answer": "不需要。LiveStreamRecorder 在服务器端捕获你的 Twitch 直播,所以不需要屏幕捕获软件。无需 Bandicam、无需桌面应用、直播时没有额外的 CPU 占用。你的直播会自动以高质量保存到云端。"
+          "answer": "不需要。我们的平台 在服务器端捕获你的 Twitch 直播,所以不需要屏幕捕获软件。无需 Bandicam、无需桌面应用、直播时没有额外的 CPU 占用。你的直播会自动以高质量保存到云端。"
         },
         {
           "question": "我可以免费录制我的 Twitch 直播吗？",
-          "answer": "可以。免费注册 LiveStreamRecorder 并立即开始录制你的 Twitch 直播。高级套餐解锁下载录像、ClipAI 自动精彩瞬间短视频和扩展存储。"
+          "answer": "可以。免费注册 我们的平台 并立即开始录制你的 Twitch 直播。高级套餐解锁下载录像、ClipAI 自动精彩瞬间短视频和扩展存储。"
         },
         {
           "question": "这与 Twitch 内置的 VOD 系统有何不同？",
-          "answer": "Twitch VOD 在 14-60 天后过期,如果你删除频道也会被删除。LiveStreamRecorder 为你提供 Twitch 直播的独立备份。你的录像单独存储,永不过期,即使你的 Twitch 账号发生问题也能保持可用。"
+          "answer": "Twitch VOD 在 14-60 天后过期,如果你删除频道也会被删除。我们的平台 为你提供 Twitch 直播的独立备份。你的录像单独存储,永不过期,即使你的 Twitch 账号发生问题也能保持可用。"
         },
         {
           "question": "我可以将我的 Twitch 录像转换为短视频吗？",
           "answer": "可以。高级用户可以使用 ClipAI 将他们的 Twitch 直播录像自动转换为短视频。将其发布为 YouTube Shorts、TikTok 视频或 Reels,在多个平台上扩大你的受众。"
         },
         {
-          "question": "即使我忘记保存 VOD,LiveStreamRecorder 也能捕获我的 Twitch 直播吗？",
-          "answer": "可以。一旦你的频道连接,LiveStreamRecorder 会自动录制每场 Twitch 直播 — 无论你的 Twitch VOD 设置如何。即使你在 Twitch 上禁用了 VOD,你的直播仍会被捕获并保存到你的账号。"
+          "question": "即使我忘记保存 VOD,我们的平台 也能捕获我的 Twitch 直播吗？",
+          "answer": "可以。一旦你的频道连接,我们的平台 会自动录制每场 Twitch 直播 — 无论你的 Twitch VOD 设置如何。即使你在 Twitch 上禁用了 VOD,你的直播仍会被捕获并保存到你的账号。"
         }
       ]
     },
     "youtube": {
       "title": "YouTube 直播录像",
-      "description": "在 LiveStreamRecorder 上观看和下载 YouTube 直播录像。你的 YouTube 直播自动捕获 — 无需 YouTube 屏幕录制器。创作者最简单的 YouTube 直播录制器。",
+      "description": "在 我们的平台 上观看和下载 YouTube 直播录像。你的 YouTube 直播自动捕获 — 无需 YouTube 屏幕录制器。创作者最简单的 YouTube 直播录制器。",
       "keywords": [
         "YouTube 直播录像",
         "YouTube 直播",
@@ -129,41 +129,41 @@
       "faqs": [
         {
           "question": "如何录制我的 YouTube 直播？",
-          "answer": "使用 LiveStreamRecorder,你的 YouTube 直播会自动在云端录制。注册、添加你的 YouTube 频道,每场你启动的直播都会被捕获。无需安装 YouTube 录制软件,无需手动保存 — 它就是这么简单。"
+          "answer": "使用 我们的平台,你的 YouTube 直播会自动在云端录制。注册、添加你的 YouTube 频道,每场你启动的直播都会被捕获。无需安装 YouTube 录制软件,无需手动保存 — 它就是这么简单。"
         },
         {
           "question": "我需要 YouTube 直播屏幕录制器吗？",
-          "answer": "不需要。LiveStreamRecorder 是一款基于云端的 YouTube 录制器,它在服务器端捕获你的直播。与 YouTube 屏幕录制软件不同,不会有掉帧、不会有桌面应用在后台运行、不会占用你的硬盘存储。你的直播会自动以高质量保存。"
+          "answer": "不需要。我们的平台 是一款基于云端的 YouTube 录制器,它在服务器端捕获你的直播。与 YouTube 屏幕录制软件不同,不会有掉帧、不会有桌面应用在后台运行、不会占用你的硬盘存储。你的直播会自动以高质量保存。"
         },
         {
           "question": "录制 YouTube 直播的最佳软件是什么？",
-          "answer": "专门针对直播,基于云端的 YouTube 录制器(如 LiveStreamRecorder)是最佳选择。传统的 YouTube 屏幕录制器需要你的电脑在整个直播期间保持开启。LiveStreamRecorder 从云端捕获你的 YouTube 直播 — 即使你的 PC 崩溃或失去电源,你的录制都是安全的。"
+          "answer": "专门针对直播,基于云端的 YouTube 录制器(如 我们的平台)是最佳选择。传统的 YouTube 屏幕录制器需要你的电脑在整个直播期间保持开启。我们的平台 从云端捕获你的 YouTube 直播 — 即使你的 PC 崩溃或失去电源,你的录制都是安全的。"
         },
         {
           "question": "我可以免费录制我的 YouTube 直播吗？",
-          "answer": "可以。你可以免费注册 LiveStreamRecorder 并立即开始录制你的 YouTube 直播。高级套餐解锁下载录像、ClipAI 自动精彩瞬间短视频和扩展存储。"
+          "answer": "可以。你可以免费注册 我们的平台 并立即开始录制你的 YouTube 直播。高级套餐解锁下载录像、ClipAI 自动精彩瞬间短视频和扩展存储。"
         },
         {
           "question": "YouTube 是否会自动保存 YouTube 直播？",
-          "answer": "YouTube 可以将直播重播保存到你的频道,但创作者有时会删除它们,或直播可能无法处理。LiveStreamRecorder 为你提供独立备份 — 你的 YouTube 直播录像单独捕获和存储,所以你始终拥有内容副本。"
+          "answer": "YouTube 可以将直播重播保存到你的频道,但创作者有时会删除它们,或直播可能无法处理。我们的平台 为你提供独立备份 — 你的 YouTube 直播录像单独捕获和存储,所以你始终拥有内容副本。"
         },
         {
           "question": "我可以将我的 YouTube 直播录像转换为 Shorts 吗？",
           "answer": "可以。高级用户可以使用 ClipAI 将 YouTube 直播录像自动转换为完美适合 YouTube Shorts、TikTok 或 Reels 的精彩短视频。这是重新利用你的直播内容并增加订阅者的最简单方法。"
         },
         {
-          "question": "LiveStreamRecorder 是在线 YouTube 录制器吗？",
-          "answer": "是的。LiveStreamRecorder 是完全在线的 YouTube 录制器 — 一切都在云端运行。无需下载软件、无需浏览器扩展。只需连接你的频道,你的 YouTube 直播就会从任何设备自动录制。"
+          "question": "我们的平台 是在线 YouTube 录制器吗？",
+          "answer": "是的。我们的平台 是完全在线的 YouTube 录制器 — 一切都在云端运行。无需下载软件、无需浏览器扩展。只需连接你的频道,你的 YouTube 直播就会从任何设备自动录制。"
         },
         {
           "question": "如果我忘记按录制,如何捕获我的 YouTube 直播？",
-          "answer": "这正是 LiveStreamRecorder 解决的问题。一旦你的频道连接,你启动的每场 YouTube 直播都会自动捕获。你永远不需要记得按录制 — 你的直播总会被保存。"
+          "answer": "这正是 我们的平台 解决的问题。一旦你的频道连接,你启动的每场 YouTube 直播都会自动捕获。你永远不需要记得按录制 — 你的直播总会被保存。"
         }
       ]
     },
     "kick": {
       "title": "Kick 直播录像",
-      "description": "在 LiveStreamRecorder 上观看创作者的 Kick 直播录像。观看 Kick VOD、下载直播,发现新主播。",
+      "description": "在 我们的平台 上观看创作者的 Kick 直播录像。观看 Kick VOD、下载直播,发现新主播。",
       "keywords": [
         "Kick 录制",
         "Kick VOD",
@@ -175,7 +175,7 @@
     },
     "afreecatv": {
       "title": "AfreecaTV 直播录像",
-      "description": "在 LiveStreamRecorder 上观看创作者的 AfreecaTV 直播录像。观看 AfreecaTV VOD,下载韩国直播。",
+      "description": "在 我们的平台 上观看创作者的 AfreecaTV 直播录像。观看 AfreecaTV VOD,下载韩国直播。",
       "keywords": [
         "AfreecaTV 录制",
         "AfreecaTV VOD",
@@ -187,7 +187,7 @@
     },
     "pandalive": {
       "title": "Pandalive 直播录像",
-      "description": "在 LiveStreamRecorder 上观看创作者的 Pandalive 直播录像。观看 Pandalive VOD,下载韩国直播。",
+      "description": "在 我们的平台 上观看创作者的 Pandalive 直播录像。观看 Pandalive VOD,下载韩国直播。",
       "keywords": [
         "Pandalive 录制",
         "Pandalive VOD",
@@ -199,7 +199,7 @@
     },
     "bigo": {
       "title": "Bigo 直播录像",
-      "description": "在 LiveStreamRecorder 上观看和下载 Bigo 直播录像。你的 Bigo 直播自动在云端捕获 — 无黑屏问题、无需屏幕录制器。创作者最简单的 Bigo 直播录制器。",
+      "description": "在 我们的平台 上观看和下载 Bigo 直播录像。你的 Bigo 直播自动在云端捕获 — 无黑屏问题、无需屏幕录制器。创作者最简单的 Bigo 直播录制器。",
       "keywords": [
         "Bigo 录制器",
         "Bigo 直播录制器",
@@ -213,23 +213,23 @@
       "faqs": [
         {
           "question": "如何录制我的 Bigo 直播？",
-          "answer": "使用 LiveStreamRecorder,你的 Bigo 直播会自动在云端录制。注册、添加你的 Bigo 直播用户名,每次开播时都会被捕获。无需安装 Bigo 直播录制器 APK,无需屏幕录制 — 一切都在服务器端进行。"
+          "answer": "使用 我们的平台,你的 Bigo 直播会自动在云端录制。注册、添加你的 Bigo 直播用户名,每次开播时都会被捕获。无需安装 Bigo 直播录制器 APK,无需屏幕录制 — 一切都在服务器端进行。"
         },
         {
           "question": "为什么录制 Bigo 直播时出现黑屏？",
-          "answer": "在 Bigo 直播上使用屏幕录制器时,黑屏问题很常见。LiveStreamRecorder 完全避免了这个问题,因为它直接从云端捕获你的 Bigo 直播 — 没有黑屏、没有变通方法、没有不可靠的屏幕录制应用。"
+          "answer": "在 Bigo 直播上使用屏幕录制器时,黑屏问题很常见。我们的平台 完全避免了这个问题,因为它直接从云端捕获你的 Bigo 直播 — 没有黑屏、没有变通方法、没有不可靠的屏幕录制应用。"
         },
         {
           "question": "如何修复 Bigo 直播屏幕录制器的黑屏？",
-          "answer": "最简单的解决方法是完全跳过屏幕录制。LiveStreamRecorder 是基于云端的 Bigo 录制器,在服务器端以高质量捕获你的直播。没有黑屏问题、无需配置应用 — 只需添加你的用户名,你的 Bigo 直播就会自动录制。"
+          "answer": "最简单的解决方法是完全跳过屏幕录制。我们的平台 是基于云端的 Bigo 录制器,在服务器端以高质量捕获你的直播。没有黑屏问题、无需配置应用 — 只需添加你的用户名,你的 Bigo 直播就会自动录制。"
         },
         {
           "question": "我需要 Bigo 直播屏幕录制器吗？",
-          "answer": "不需要。Bigo 直播的屏幕录制器经常导致黑屏问题或低质量捕获。LiveStreamRecorder 是基于云端的 Bigo 直播录制器,它会自动以高质量捕获你的直播 — 无需安装应用,没有黑屏。"
+          "answer": "不需要。Bigo 直播的屏幕录制器经常导致黑屏问题或低质量捕获。我们的平台 是基于云端的 Bigo 直播录制器,它会自动以高质量捕获你的直播 — 无需安装应用,没有黑屏。"
         },
         {
           "question": "我可以免费录制我的 Bigo 直播吗？",
-          "answer": "可以。免费注册 LiveStreamRecorder 并立即开始录制你的 Bigo 直播。高级套餐解锁下载录像、ClipAI 自动精彩瞬间短视频和扩展存储。"
+          "answer": "可以。免费注册 我们的平台 并立即开始录制你的 Bigo 直播。高级套餐解锁下载录像、ClipAI 自动精彩瞬间短视频和扩展存储。"
         },
         {
           "question": "我可以下载我的 Bigo 直播录像吗？",
@@ -243,7 +243,7 @@
     },
     "liveme": {
       "title": "LiveMe 直播录像",
-      "description": "在 LiveStreamRecorder 上观看和下载 LiveMe 直播录像。你的 LiveMe 直播自动在云端捕获 — 无黑屏问题、无需屏幕录制器。创作者最简单的 LiveMe 直播录制器。",
+      "description": "在 我们的平台 上观看和下载 LiveMe 直播录像。你的 LiveMe 直播自动在云端捕获 — 无黑屏问题、无需屏幕录制器。创作者最简单的 LiveMe 直播录制器。",
       "keywords": [
         "LiveMe 录制器",
         "LiveMe 直播录制器",
@@ -256,23 +256,23 @@
       "faqs": [
         {
           "question": "如何录制我的 LiveMe 直播？",
-          "answer": "使用 LiveStreamRecorder,你的 LiveMe 直播会自动在云端录制。注册、添加你的 LiveMe 直播用户名,每次开播时都会被捕获。无需安装 LiveMe 直播录制器 APK,无需屏幕录制 — 一切都在服务器端进行。"
+          "answer": "使用 我们的平台,你的 LiveMe 直播会自动在云端录制。注册、添加你的 LiveMe 直播用户名,每次开播时都会被捕获。无需安装 LiveMe 直播录制器 APK,无需屏幕录制 — 一切都在服务器端进行。"
         },
         {
           "question": "为什么录制 LiveMe 直播时出现黑屏？",
-          "answer": "在 LiveMe 直播上使用屏幕录制器时,黑屏问题很常见。LiveStreamRecorder 完全避免了这个问题,因为它直接从云端捕获你的 LiveMe 直播 — 没有黑屏、没有变通方法、没有不可靠的屏幕录制应用。"
+          "answer": "在 LiveMe 直播上使用屏幕录制器时,黑屏问题很常见。我们的平台 完全避免了这个问题,因为它直接从云端捕获你的 LiveMe 直播 — 没有黑屏、没有变通方法、没有不可靠的屏幕录制应用。"
         },
         {
           "question": "如何修复 LiveMe 直播屏幕录制器的黑屏？",
-          "answer": "最简单的解决方法是完全跳过屏幕录制。LiveStreamRecorder 是基于云端的 LiveMe 录制器,在服务器端以高质量捕获你的直播。没有黑屏问题、无需配置应用 — 只需添加你的用户名,你的 LiveMe 直播就会自动录制。"
+          "answer": "最简单的解决方法是完全跳过屏幕录制。我们的平台 是基于云端的 LiveMe 录制器,在服务器端以高质量捕获你的直播。没有黑屏问题、无需配置应用 — 只需添加你的用户名,你的 LiveMe 直播就会自动录制。"
         },
         {
           "question": "我需要 LiveMe 直播屏幕录制器吗？",
-          "answer": "不需要。LiveMe 直播的屏幕录制器经常导致黑屏问题或低质量捕获。LiveStreamRecorder 是基于云端的 LiveMe 直播录制器,它会自动以高质量捕获你的直播 — 无需安装应用,没有黑屏。"
+          "answer": "不需要。LiveMe 直播的屏幕录制器经常导致黑屏问题或低质量捕获。我们的平台 是基于云端的 LiveMe 直播录制器,它会自动以高质量捕获你的直播 — 无需安装应用,没有黑屏。"
         },
         {
           "question": "我可以免费录制我的 LiveMe 直播吗？",
-          "answer": "可以。免费注册 LiveStreamRecorder 并立即开始录制你的 LiveMe 直播。高级套餐解锁下载录像、ClipAI 自动精彩瞬间短视频和扩展存储。"
+          "answer": "可以。免费注册 我们的平台 并立即开始录制你的 LiveMe 直播。高级套餐解锁下载录像、ClipAI 自动精彩瞬间短视频和扩展存储。"
         },
         {
           "question": "我可以下载我的 LiveMe 直播录像吗？",
@@ -286,7 +286,7 @@
     },
     "mixch": {
       "title": "Mixch 直播录像",
-      "description": "在 LiveStreamRecorder 上观看和下载 Mixch 直播录像。你的 Mixch 直播自动在云端捕获 — 无黑屏问题、无需屏幕录制器。创作者最简单的 Mixch 直播录制器。",
+      "description": "在 我们的平台 上观看和下载 Mixch 直播录像。你的 Mixch 直播自动在云端捕获 — 无黑屏问题、无需屏幕录制器。创作者最简单的 Mixch 直播录制器。",
       "keywords": [
         "Mixch 录制器",
         "Mixch 直播录制器",
@@ -299,23 +299,23 @@
       "faqs": [
         {
           "question": "如何录制我的 Mixch 直播？",
-          "answer": "使用 LiveStreamRecorder,你的 Mixch 直播会自动在云端录制。注册、添加你的 Mixch 直播用户名,每次开播时都会被捕获。无需安装 Mixch 直播录制器 APK,无需屏幕录制 — 一切都在服务器端进行。"
+          "answer": "使用 我们的平台,你的 Mixch 直播会自动在云端录制。注册、添加你的 Mixch 直播用户名,每次开播时都会被捕获。无需安装 Mixch 直播录制器 APK,无需屏幕录制 — 一切都在服务器端进行。"
         },
         {
           "question": "为什么录制 Mixch 直播时出现黑屏？",
-          "answer": "在 Mixch 直播上使用屏幕录制器时,黑屏问题很常见。LiveStreamRecorder 完全避免了这个问题,因为它直接从云端捕获你的 Mixch 直播 — 没有黑屏、没有变通方法、没有不可靠的屏幕录制应用。"
+          "answer": "在 Mixch 直播上使用屏幕录制器时,黑屏问题很常见。我们的平台 完全避免了这个问题,因为它直接从云端捕获你的 Mixch 直播 — 没有黑屏、没有变通方法、没有不可靠的屏幕录制应用。"
         },
         {
           "question": "如何修复 Mixch 直播屏幕录制器的黑屏？",
-          "answer": "最简单的解决方法是完全跳过屏幕录制。LiveStreamRecorder 是基于云端的 Mixch 录制器,在服务器端以高质量捕获你的直播。没有黑屏问题、无需配置应用 — 只需添加你的用户名,你的 Mixch 直播就会自动录制。"
+          "answer": "最简单的解决方法是完全跳过屏幕录制。我们的平台 是基于云端的 Mixch 录制器,在服务器端以高质量捕获你的直播。没有黑屏问题、无需配置应用 — 只需添加你的用户名,你的 Mixch 直播就会自动录制。"
         },
         {
           "question": "我需要 Mixch 直播屏幕录制器吗？",
-          "answer": "不需要。Mixch 直播的屏幕录制器经常导致黑屏问题或低质量捕获。LiveStreamRecorder 是基于云端的 Mixch 直播录制器,它会自动以高质量捕获你的直播 — 无需安装应用,没有黑屏。"
+          "answer": "不需要。Mixch 直播的屏幕录制器经常导致黑屏问题或低质量捕获。我们的平台 是基于云端的 Mixch 直播录制器,它会自动以高质量捕获你的直播 — 无需安装应用,没有黑屏。"
         },
         {
           "question": "我可以免费录制我的 Mixch 直播吗？",
-          "answer": "可以。免费注册 LiveStreamRecorder 并立即开始录制你的 Mixch 直播。高级套餐解锁下载录像、ClipAI 自动精彩瞬间短视频和扩展存储。"
+          "answer": "可以。免费注册 我们的平台 并立即开始录制你的 Mixch 直播。高级套餐解锁下载录像、ClipAI 自动精彩瞬间短视频和扩展存储。"
         },
         {
           "question": "我可以下载我的 Mixch 直播录像吗？",
@@ -329,7 +329,7 @@
     },
     "joilive": {
       "title": "Joilive 直播录像 — 保存你自己的直播",
-      "description": "Joilive 没有重播系统。作为 Joilive 主播,在 LiveStreamRecorder 上录制自己的直播是保留它们的唯一方式。添加你的用户 ID,像往常一样开播,你的直播会自动保存 — 手机上不用装应用,电脑上也不用装录制器。",
+      "description": "Joilive 没有重播系统。作为 Joilive 主播,在 我们的平台 上录制自己的直播是保留它们的唯一方式。添加你的用户 ID,像往常一样开播,你的直播会自动保存 — 手机上不用装应用,电脑上也不用装录制器。",
       "keywords": [
         "面向主播的 Joilive 录制器",
         "保存我的 Joilive 直播",
@@ -349,23 +349,23 @@
       "faqs": [
         {
           "question": "Joilive 没有重播 — 怎么保存我自己的直播?",
-          "answer": "这正是 LiveStreamRecorder 为 Joilive 主播解决的问题。你通过注册、粘贴一次 Joilive 用户 ID,然后像平常一样开播,就可以录制自己的直播。每场直播都会在服务端被捕获并自动出现在你的创作者主页上 — Joilive 不为你保留,你就自己保留。"
+          "answer": "这正是 我们的平台 为 Joilive 主播解决的问题。你通过注册、粘贴一次 Joilive 用户 ID,然后像平常一样开播,就可以录制自己的直播。每场直播都会在服务端被捕获并自动出现在你的创作者主页上 — Joilive 不为你保留,你就自己保留。"
         },
         {
           "question": "为什么用屏幕录制 Joilive 会出现黑屏?",
-          "answer": "Joilive 网页播放器使用硬件加速解码（Widevine + GPU 合成）。大多数桌面屏幕录制器在视频应该出现的位置看到的是透明或黑色区域 — 这是 DRM/合成的副作用,不是你的录制器有 bug。在本地是修不好的。可靠的解决方法是完全跳过屏幕录制,让 LiveStreamRecorder 在播放器上游捕获直播。"
+          "answer": "Joilive 网页播放器使用硬件加速解码（Widevine + GPU 合成）。大多数桌面屏幕录制器在视频应该出现的位置看到的是透明或黑色区域 — 这是 DRM/合成的副作用,不是你的录制器有 bug。在本地是修不好的。可靠的解决方法是完全跳过屏幕录制,让 我们的平台 在播放器上游捕获直播。"
         },
         {
           "question": "我需要让电脑开机或运行什么吗?",
-          "answer": "不需要。你是 Joilive 主播,从手机或电脑直播 — 就这些。LiveStreamRecorder 不在你的设备上运行。录制在你上线的那一刻发生在我们的云端。你的电脑可以休眠、手机可以锁屏、人可以出国 — 你的 Joilive 直播照样被保存。"
+          "answer": "不需要。你是 Joilive 主播,从手机或电脑直播 — 就这些。我们的平台 不在你的设备上运行。录制在你上线的那一刻发生在我们的云端。你的电脑可以休眠、手机可以锁屏、人可以出国 — 你的 Joilive 直播照样被保存。"
         },
         {
           "question": "我能下载上周、上个月、去年的直播吗?",
-          "answer": "可以 — 一旦你的 Joilive 直播录制到 LiveStreamRecorder 页面上,它们就一直在那里。没有 Joilive 过期问题要规避,因为 Joilive 一开始就没保存过。高级主播还可以下载原始 MP4 文件用于编辑、归档或重新发布。"
+          "answer": "可以 — 一旦你的 Joilive 直播录制到 我们的平台 页面上,它们就一直在那里。没有 Joilive 过期问题要规避,因为 Joilive 一开始就没保存过。高级主播还可以下载原始 MP4 文件用于编辑、归档或重新发布。"
         },
         {
           "question": "我分享 Joilive 房间 URL 但带着数字 ?s= ID — 能用更干净的链接分享录像吗?",
-          "answer": "可以。LiveStreamRecorder 上的每个 Joilive 录像都有自己干净的 URL — `livestreamrecorder.com/joilive/your-id/video/...` — 比 Joilive 的查询字符串 URL 更容易丢到 Discord、Twitter 或粉丝群里。视频在任何浏览器中都能内联播放,不需要 Joilive 应用。"
+          "answer": "可以。我们的平台 上的每个 Joilive 录像都有自己干净的 URL — `livestreamrecorder.com/joilive/your-id/video/...` — 比 Joilive 的查询字符串 URL 更容易丢到 Discord、Twitter 或粉丝群里。视频在任何浏览器中都能内联播放,不需要 Joilive 应用。"
         },
         {
           "question": "录制 Joilive 直播免费吗?",
@@ -379,7 +379,7 @@
     },
     "trovo": {
       "title": "Trovo 直播录像",
-      "description": "在 LiveStreamRecorder 上观看和下载 Trovo 直播录像。你的 Trovo 直播自动在云端捕获 — 无黑屏问题、无需屏幕录制器。创作者最简单的 Trovo 直播录制器。",
+      "description": "在 我们的平台 上观看和下载 Trovo 直播录像。你的 Trovo 直播自动在云端捕获 — 无黑屏问题、无需屏幕录制器。创作者最简单的 Trovo 直播录制器。",
       "keywords": [
         "Trovo 录制器",
         "Trovo 直播录制器",
@@ -392,23 +392,23 @@
       "faqs": [
         {
           "question": "如何录制我的 Trovo 直播？",
-          "answer": "使用 LiveStreamRecorder,你的 Trovo 直播会自动在云端录制。注册、添加你的 Trovo 直播用户名,每次开播时都会被捕获。无需安装 Trovo 直播录制器 APK,无需屏幕录制 — 一切都在服务器端进行。"
+          "answer": "使用 我们的平台,你的 Trovo 直播会自动在云端录制。注册、添加你的 Trovo 直播用户名,每次开播时都会被捕获。无需安装 Trovo 直播录制器 APK,无需屏幕录制 — 一切都在服务器端进行。"
         },
         {
           "question": "为什么录制 Trovo 直播时出现黑屏？",
-          "answer": "在 Trovo 直播上使用屏幕录制器时,黑屏问题很常见。LiveStreamRecorder 完全避免了这个问题,因为它直接从云端捕获你的 Trovo 直播 — 没有黑屏、没有变通方法、没有不可靠的屏幕录制应用。"
+          "answer": "在 Trovo 直播上使用屏幕录制器时,黑屏问题很常见。我们的平台 完全避免了这个问题,因为它直接从云端捕获你的 Trovo 直播 — 没有黑屏、没有变通方法、没有不可靠的屏幕录制应用。"
         },
         {
           "question": "如何修复 Trovo 直播屏幕录制器的黑屏？",
-          "answer": "最简单的解决方法是完全跳过屏幕录制。LiveStreamRecorder 是基于云端的 Trovo 录制器,在服务器端以高质量捕获你的直播。没有黑屏问题、无需配置应用 — 只需添加你的用户名,你的 Trovo 直播就会自动录制。"
+          "answer": "最简单的解决方法是完全跳过屏幕录制。我们的平台 是基于云端的 Trovo 录制器,在服务器端以高质量捕获你的直播。没有黑屏问题、无需配置应用 — 只需添加你的用户名,你的 Trovo 直播就会自动录制。"
         },
         {
           "question": "我需要 Trovo 直播屏幕录制器吗？",
-          "answer": "不需要。Trovo 直播的屏幕录制器经常导致黑屏问题或低质量捕获。LiveStreamRecorder 是基于云端的 Trovo 直播录制器,它会自动以高质量捕获你的直播 — 无需安装应用,没有黑屏。"
+          "answer": "不需要。Trovo 直播的屏幕录制器经常导致黑屏问题或低质量捕获。我们的平台 是基于云端的 Trovo 直播录制器,它会自动以高质量捕获你的直播 — 无需安装应用,没有黑屏。"
         },
         {
           "question": "我可以免费录制我的 Trovo 直播吗？",
-          "answer": "可以。免费注册 LiveStreamRecorder 并立即开始录制你的 Trovo 直播。高级套餐解锁下载录像、ClipAI 自动精彩瞬间短视频和扩展存储。"
+          "answer": "可以。免费注册 我们的平台 并立即开始录制你的 Trovo 直播。高级套餐解锁下载录像、ClipAI 自动精彩瞬间短视频和扩展存储。"
         },
         {
           "question": "我可以下载我的 Trovo 直播录像吗？",
@@ -422,7 +422,7 @@
     },
     "twitcast": {
       "title": "TwitCasting 直播录像",
-      "description": "在 LiveStreamRecorder 上观看和下载 TwitCasting 直播录像。你的 TwitCasting 直播自动在云端捕获 — 无黑屏问题、无需屏幕录制器。创作者最简单的 TwitCasting 直播录制器。",
+      "description": "在 我们的平台 上观看和下载 TwitCasting 直播录像。你的 TwitCasting 直播自动在云端捕获 — 无黑屏问题、无需屏幕录制器。创作者最简单的 TwitCasting 直播录制器。",
       "keywords": [
         "TwitCasting 录制器",
         "TwitCasting 直播录制器",
@@ -435,23 +435,23 @@
       "faqs": [
         {
           "question": "如何录制我的 TwitCasting 直播？",
-          "answer": "使用 LiveStreamRecorder,你的 TwitCasting 直播会自动在云端录制。注册、添加你的 TwitCasting 直播用户名,每次开播时都会被捕获。无需安装 TwitCasting 直播录制器 APK,无需屏幕录制 — 一切都在服务器端进行。"
+          "answer": "使用 我们的平台,你的 TwitCasting 直播会自动在云端录制。注册、添加你的 TwitCasting 直播用户名,每次开播时都会被捕获。无需安装 TwitCasting 直播录制器 APK,无需屏幕录制 — 一切都在服务器端进行。"
         },
         {
           "question": "为什么录制 TwitCasting 直播时出现黑屏？",
-          "answer": "在 TwitCasting 直播上使用屏幕录制器时,黑屏问题很常见。LiveStreamRecorder 完全避免了这个问题,因为它直接从云端捕获你的 TwitCasting 直播 — 没有黑屏、没有变通方法、没有不可靠的屏幕录制应用。"
+          "answer": "在 TwitCasting 直播上使用屏幕录制器时,黑屏问题很常见。我们的平台 完全避免了这个问题,因为它直接从云端捕获你的 TwitCasting 直播 — 没有黑屏、没有变通方法、没有不可靠的屏幕录制应用。"
         },
         {
           "question": "如何修复 TwitCasting 直播屏幕录制器的黑屏？",
-          "answer": "最简单的解决方法是完全跳过屏幕录制。LiveStreamRecorder 是基于云端的 TwitCasting 录制器,在服务器端以高质量捕获你的直播。没有黑屏问题、无需配置应用 — 只需添加你的用户名,你的 TwitCasting 直播就会自动录制。"
+          "answer": "最简单的解决方法是完全跳过屏幕录制。我们的平台 是基于云端的 TwitCasting 录制器,在服务器端以高质量捕获你的直播。没有黑屏问题、无需配置应用 — 只需添加你的用户名,你的 TwitCasting 直播就会自动录制。"
         },
         {
           "question": "我需要 TwitCasting 直播屏幕录制器吗？",
-          "answer": "不需要。TwitCasting 直播的屏幕录制器经常导致黑屏问题或低质量捕获。LiveStreamRecorder 是基于云端的 TwitCasting 直播录制器,它会自动以高质量捕获你的直播 — 无需安装应用,没有黑屏。"
+          "answer": "不需要。TwitCasting 直播的屏幕录制器经常导致黑屏问题或低质量捕获。我们的平台 是基于云端的 TwitCasting 直播录制器,它会自动以高质量捕获你的直播 — 无需安装应用,没有黑屏。"
         },
         {
           "question": "我可以免费录制我的 TwitCasting 直播吗？",
-          "answer": "可以。免费注册 LiveStreamRecorder 并立即开始录制你的 TwitCasting 直播。高级套餐解锁下载录像、ClipAI 自动精彩瞬间短视频和扩展存储。"
+          "answer": "可以。免费注册 我们的平台 并立即开始录制你的 TwitCasting 直播。高级套餐解锁下载录像、ClipAI 自动精彩瞬间短视频和扩展存储。"
         },
         {
           "question": "我可以下载我的 TwitCasting 直播录像吗？",
@@ -465,7 +465,7 @@
     },
     "live17": {
       "title": "17live 录制 — Liver 与 V-Liver 的公开网页存档",
-      "description": "17live 在 App 内提供 Stream Archive 与 15-90 秒的 Stream Clips,但这些都在 App 之内,并受您的权限设置控制。LiveStreamRecorder 为 17live 的 Liver 与 V-Liver 提供每场直播的完整长度录制,放在 App 之外的可分享网址上 — 由 Google 收录。",
+      "description": "17live 在 App 内提供 Stream Archive 与 15-90 秒的 Stream Clips,但这些都在 App 之内,并受您的权限设置控制。我们的平台 为 17live 的 Liver 与 V-Liver 提供每场直播的完整长度录制,放在 App 之外的可分享网址上 — 由 Google 收录。",
       "keywords": [
         "17live 录制 网页存档",
         "17live 完整直播",
@@ -484,11 +484,11 @@
       "faqs": [
         {
           "question": "和 17live 内置的 Stream Archive 有什么不同?",
-          "answer": "17live 的 Stream Archive 在 17live App 内,受您的权限设置控制 — 粉丝需要登录 17live 才能观看,而且没有可分享、可被搜索引擎索引的公开 URL。LiveStreamRecorder 为每场直播生成公开网址,粉丝在任何浏览器中都能打开,无需 17live 账号或安装 App。"
+          "answer": "17live 的 Stream Archive 在 17live App 内,受您的权限设置控制 — 粉丝需要登录 17live 才能观看,而且没有可分享、可被搜索引擎索引的公开 URL。我们的平台 为每场直播生成公开网址,粉丝在任何浏览器中都能打开,无需 17live 账号或安装 App。"
         },
         {
           "question": "17live 已经有 Stream Clips,为什么还要用 ClipAI?",
-          "answer": "17live 的 Stream Clips 在 App 内很好用,但被限制在 15-90 秒,并且只能留在 17live 表面。ClipAI 从 LiveStreamRecorder 上保存的完整直播中剪出任意长度的精选片段,适配 TikTok/Reels/Shorts — 这些正是大多数潜在新粉丝实际花时间的平台。目标不同:17live Clips 面向已在 App 中的粉丝,ClipAI 是把新粉丝导入 App。"
+          "answer": "17live 的 Stream Clips 在 App 内很好用,但被限制在 15-90 秒,并且只能留在 17live 表面。ClipAI 从 我们的平台 上保存的完整直播中剪出任意长度的精选片段,适配 TikTok/Reels/Shorts — 这些正是大多数潜在新粉丝实际花时间的平台。目标不同:17live Clips 面向已在 App 中的粉丝,ClipAI 是把新粉丝导入 App。"
         },
         {
           "question": "我是 V-Liver,虚拟形象录制效果如何?",
@@ -504,7 +504,7 @@
         },
         {
           "question": "这会影响我的 17live 经纪 / Hot Star 积分 / 礼物收益吗?",
-          "answer": "完全不会 — 对您的 17live 账户状态零影响。LiveStreamRecorder 不登录您的 17live 账户,不接触排名,不干扰经纪工具。录制由您作为 17live 创作者主动开启,针对您自己的账户,只录制您自己的直播 — 不录制其他任何东西。"
+          "answer": "完全不会 — 对您的 17live 账户状态零影响。我们的平台 不登录您的 17live 账户,不接触排名,不干扰经纪工具。录制由您作为 17live 创作者主动开启,针对您自己的账户,只录制您自己的直播 — 不录制其他任何东西。"
         },
         {
           "question": "录制自己的 17live 直播被允许吗?",
@@ -514,7 +514,7 @@
     },
     "kwai": {
       "title": "Kwai 录制 — 巴西及全球 Kwai 创作者的公开网络存档",
-      "description": "Kwai(kuài 快 =「快速」)是 Kuaishou 的全球短视频+直播应用,在巴西、印尼、墨西哥和中东占主导地位。LiveStreamRecorder 将每场 Kwai Live 录制到公开可访问网络的 URL,即使没有 Kwai 应用的粉丝也能观看。",
+      "description": "Kwai(kuài 快 =「快速」)是 Kuaishou 的全球短视频+直播应用,在巴西、印尼、墨西哥和中东占主导地位。我们的平台 将每场 Kwai Live 录制到公开可访问网络的 URL,即使没有 Kwai 应用的粉丝也能观看。",
       "keywords": [
         "Kwai 录制器",
         "Kwai Live 下载",
@@ -544,15 +544,15 @@
         },
         {
           "question": "我在中文市场 — 这对 Kwai 适用吗?",
-          "answer": "适用。Kwai 在全球是同一个应用;我们不分地区录制 Kwai Live。Kwai 创作者实际上受益最多,因为 LiveStreamRecorder URL 可被 Google 用中文、英文和其他语言索引 — 让您的内容对 Kwai 应用之外和您所在地区之外的粉丝可发现。"
+          "answer": "适用。Kwai 在全球是同一个应用;我们不分地区录制 Kwai Live。Kwai 创作者实际上受益最多,因为 我们的平台 URL 可被 Google 用中文、英文和其他语言索引 — 让您的内容对 Kwai 应用之外和您所在地区之外的粉丝可发现。"
         },
         {
           "question": "Kwai 已经在应用内有回放功能了吗?",
-          "answer": "Kwai 在应用内的回放/存档行为取决于地区、您的账户设置和平台政策。LiveStreamRecorder 独立于所有这些 — 您的播出获得一个外部公开网络存档,无论 Kwai 在自己的应用内做什么都存在。"
+          "answer": "Kwai 在应用内的回放/存档行为取决于地区、您的账户设置和平台政策。我们的平台 独立于所有这些 — 您的播出获得一个外部公开网络存档,无论 Kwai 在自己的应用内做什么都存在。"
         },
         {
           "question": "这会影响我的 Kwai K-coins、礼物或创作者计划收入吗?",
-          "answer": "不会。LiveStreamRecorder 不登录您的 Kwai 账户,也不干涉 Kwai 的礼物、K-coins、创作者计划层级或收益分成。录制由您作为 Kwai 创作者主动开启,针对您自己的账户,只录制您自己的直播 — 不录制其他任何东西。"
+          "answer": "不会。我们的平台 不登录您的 Kwai 账户,也不干涉 Kwai 的礼物、K-coins、创作者计划层级或收益分成。录制由您作为 Kwai 创作者主动开启,针对您自己的账户,只录制您自己的直播 — 不录制其他任何东西。"
         },
         {
           "question": "用 ClipAI 把 Kwai Live 变成 TikTok / Reels / Shorts?",
@@ -562,7 +562,7 @@
     },
     "nimotv": {
       "title": "NimoTV Live Recordings — Mobile Esports Streams Saved in Full",
-      "description": "Watch and download NimoTV Live recordings on LiveStreamRecorder. Mobile Legends, Free Fire, PUBG Mobile, and COD Mobile broadcasts captured server-side from phone-only creators in Brazil, Indonesia, Thailand, Mexico, and Peru. No screen recorder, no battery drain, no PC required.",
+      "description": "Watch and download NimoTV Live recordings on 我们的平台. Mobile Legends, Free Fire, PUBG Mobile, and COD Mobile broadcasts captured server-side from phone-only creators in Brazil, Indonesia, Thailand, Mexico, and Peru. No screen recorder, no battery drain, no PC required.",
       "keywords": [
         "nimotv recorder",
         "nimotv live download",
@@ -580,38 +580,38 @@
       ],
       "faqs": [
         {
-          "question": "How do I save my NimoTV Lives without a PC?",
-          "answer": "Sign up free, add your NimoTV username, and broadcast on the NimoTV app like always — that's it. Capture happens server-side in our cloud, not on your phone. No OBS, no screen recorder, no second device. The recording lands on your creator page automatically after each Live ends."
+          "question": "没有电脑怎么保存我的 NimoTV 直播?",
+          "answer": "免费注册,添加您的 NimoTV 用户名,然后像往常一样在 NimoTV 应用里开播 — 就这样。捕获在我们的云端服务器上完成,不在您的手机上 — 无需 OBS、无需录屏工具、无需第二台设备。每场直播结束后,录像会自动出现在您的创作者主页上。"
         },
         {
-          "question": "Will recording slow my game down or eat my phone battery?",
-          "answer": "No. The recording runs in our infrastructure, not on your phone — your phone only does what it normally does when you broadcast on NimoTV. Mobile Legends, Free Fire, PUBG Mobile, COD Mobile all run at the same FPS as before. Battery, thermals, data usage on your end are unchanged."
+          "question": "录制会让游戏变卡或耗光手机电量吗?",
+          "answer": "不会。录制运行在我们的基础设施上,不在您的手机上 — 您的手机做的事和平时在 NimoTV 上直播完全一样。Mobile Legends、Free Fire、PUBG Mobile、COD Mobile 的帧率和原来一样。您这边的电量、发热、流量消耗都不变。"
         },
         {
-          "question": "Are long ranked grinds saved in full?",
-          "answer": "Yes. Every NimoTV Live is captured at full length — no time caps. A 4-hour MLBB ranked session, a Free Fire scrim block, a PUBG Mobile tournament run — all saved in full, ready to rewatch, scrub through, or pull specific matches from."
+          "question": "长时间的排位练号会完整保存吗?",
+          "answer": "会。每场 NimoTV 直播都按完整长度捕获 — 没有时长限制。4 小时的 MLBB 排位、Free Fire 训练赛、PUBG Mobile 比赛通通完整保存,随时可以重看、拖动进度条,或者把特定的对局单独拎出来。"
         },
         {
-          "question": "What's the URL format for my saved NimoTV Lives?",
-          "answer": "Each recording gets a clean web URL like `livestreamrecorder.com/nimotv/your-username/video/...`. Works in any browser — fans without the NimoTV app can still open, watch, and share it. Drop the URL in WhatsApp, Discord, a TikTok bio, or anywhere else."
+          "question": "保存后的 NimoTV 直播 URL 长什么样?",
+          "answer": "每条录像都有一个简洁的网页 URL,例如 `livestreamrecorder.com/nimotv/your-username/video/...`。任何浏览器都能打开 — 没装 NimoTV 应用的粉丝照样能点开、观看、转发。把 URL 丢到 WhatsApp、Discord、TikTok 简介里,或者任何地方都行。"
         },
         {
-          "question": "Can I download the raw video to put on YouTube?",
-          "answer": "Yes. Premium NimoTV creators can download the raw video file from each Live — useful for uploading full ranked sessions to YouTube as long-form gaming content, cutting compilations, or local archival on your computer."
+          "question": "可以下载原始视频文件传到 YouTube 吗?",
+          "answer": "可以。Premium NimoTV 创作者能从每场直播下载原始视频文件 — 适合把整场排位作为长视频内容上传到 YouTube、剪辑精彩合集,或者在自己电脑上做本地存档。"
         },
         {
-          "question": "Will this affect my NimoTV diamonds, ranking, or partner status?",
-          "answer": "No. LiveStreamRecorder doesn't log into your NimoTV account, doesn't see diamonds or gifting income, and doesn't interfere with Huya/Tencent creator program tiers or partner status. The recording is opt-in by you as the NimoTV creator for your own account, and only captures your own Lives — nothing else."
+          "question": "这会影响我的 NimoTV 钻石、排名或签约创作者身份吗?",
+          "answer": "不会。我们的平台 不会登录您的 NimoTV 账号,看不到钻石或礼物收益,也不会干扰 Huya/Tencent 的创作者计划等级或合作伙伴身份。录制由您作为 NimoTV 创作者主动开启,只针对您自己的账号、只捕获您自己的直播 — 其他什么都不碰。"
         },
         {
-          "question": "Use ClipAI to turn my best plays into TikTok / Reels / Shorts?",
-          "answer": "Yes. Premium creators can run ClipAI on their saved NimoTV Lives. It auto-cuts vertical highlight clips formatted for TikTok, Instagram Reels, and YouTube Shorts — clutch plays, MVP moments, gift reactions. Use them to reach mobile gaming fans outside NimoTV's region bubble."
+          "question": "可以用 ClipAI 把精彩操作剪成 TikTok / Reels / Shorts 吗?",
+          "answer": "可以。Premium 创作者能在保存的 NimoTV 直播上运行 ClipAI。它会自动剪出适配 TikTok、Instagram Reels 和 YouTube Shorts 的竖屏高光片段 — 关键操作、MVP 时刻、礼物反应。用这些片段去触达 NimoTV 区域之外的手游粉丝。"
         }
       ]
     },
     "vklive": {
       "title": "VK Live Recordings — Permanent Archive for Russian and CIS Streamers",
-      "description": "VK Live broadcasts vanish from the VK feed within hours. LiveStreamRecorder records every VK Live to a stable URL on your creator page — works in any browser worldwide, no VK account required to watch. Built for Russian-speaking Dota, CS, music, and IRL streamers who want a real back catalogue.",
+      "description": "VK Live broadcasts vanish from the VK feed within hours. 我们的平台 records every VK Live to a stable URL on your creator page — works in any browser worldwide, no VK account required to watch. Built for Russian-speaking Dota, CS, music, and IRL streamers who want a real back catalogue.",
       "keywords": [
         "vk live recorder",
         "vk live download",
@@ -633,7 +633,7 @@
         },
         {
           "question": "Why isn't VK's own feed enough?",
-          "answer": "VK Live is a social-first stream surface — broadcasts show in followers' feeds while live and for a short window after, then the algorithm moves on. Within 24 hours, even popular VK Lives are effectively invisible in the feed. LiveStreamRecorder gives every broadcast a stable URL that doesn't depend on the VK feed cycle. Useful for fans who want to rewatch a Dota match next week or share a music set with a friend."
+          "answer": "VK Live is a social-first stream surface — broadcasts show in followers' feeds while live and for a short window after, then the algorithm moves on. Within 24 hours, even popular VK Lives are effectively invisible in the feed. 我们的平台 gives every broadcast a stable URL that doesn't depend on the VK feed cycle. Useful for fans who want to rewatch a Dota match next week or share a music set with a friend."
         },
         {
           "question": "What's the URL format for my saved VK Lives?",
@@ -641,7 +641,7 @@
         },
         {
           "question": "Will VK detect this or affect my VK account?",
-          "answer": "No. LiveStreamRecorder doesn't log into your VK account, doesn't interact with VK Music tags, doesn't touch VK Play integrations, and doesn't affect any VK creator metrics or monetization. The recording is opt-in by you as the VK Live creator for your own account, and only captures your own broadcasts — nothing else."
+          "answer": "No. 我们的平台 doesn't log into your VK account, doesn't interact with VK Music tags, doesn't touch VK Play integrations, and doesn't affect any VK creator metrics or monetization. The recording is opt-in by you as the VK Live creator for your own account, and only captures your own broadcasts — nothing else."
         },
         {
           "question": "Can I download the raw video file?",
@@ -654,6 +654,56 @@
         {
           "question": "Use ClipAI to turn long VK Lives into short-form?",
           "answer": "Yes. Premium creators can run ClipAI on their saved VK Live broadcasts. It auto-cuts vertical highlight clips formatted for TikTok, Instagram Reels, YouTube Shorts, and VK's own short-video features — best plays, music drops, funny chat moments, IRL reactions."
+        }
+      ]
+    },
+    "chzzk": {
+      "title": "Chzzk 录像 — Naver 韩国直播平台的完整存档",
+      "description": "在 我们的平台 上观看 Chzzk(치지직)直播完整录像 — Naver 旗下、承接 Twitch 韩国业务的新平台,以 1080p 原画质同步捕获。Chzzk 自家的 VOD 需主播逐场开启且保留时间有限,我们的平台 为每场直播提供永久可回看的网址。",
+      "keywords": [
+        "Chzzk 录像",
+        "Chzzk VOD 存档",
+        "Chzzk 直播回放",
+        "观看 Chzzk 直播",
+        "Chzzk 치지직 存档",
+        "Naver Chzzk 录像",
+        "Chzzk 直播重看",
+        "错过的 Chzzk 直播",
+        "Chzzk LCK VOD",
+        "韩国直播存档"
+      ],
+      "faqs": [
+        {
+          "question": "Chzzk 主播下播之后,我还能回看那场 Live 吗?",
+          "answer": "在 Chzzk 上,只有当主播为那一场 Live 开了 VOD,才能在 Chzzk 保留期内回看。在 我们的平台 上,可以 — 我们的存档是在直播进行时实时捕获的,不是事后录制。一旦录在我们这里,即便主播在 Chzzk 那边删掉 VOD,这里的录像依然在。"
+        },
+        {
+          "question": "在 我们的平台 上看 Chzzk 录像,需要登录 Naver 账号吗?",
+          "answer": "不需要。我们的平台 上的录像在任何浏览器里都能播放,既不需要 Chzzk 账号,也不需要 Naver 账号,连 我们的平台 账号都不用。录像直接从我们的边缘节点提供 — 不走 Chzzk 播放器,也没有 Naver 登录墙。"
+        },
+        {
+          "question": "我在韩国之外观看,Chzzk 录像还流畅吗?",
+          "answer": "流畅。我们的存档由全球 CDN 分发,不走 Naver 韩国的源站。原始 Live 是按韩国当地的网络条件捕获的,所以画质与当天韩国本地观众看到的一致。"
+        },
+        {
+          "question": "录像里会包含聊天吗?",
+          "answer": "Live 的视频部分会完整保留 — 主播和镜头里嘉宾的所有说话和动作都在。Chzzk 的聊天是独立的实时服务,不会随录像一同重放。如果主播在直播中念聊天(这在韩国直播里很常见),这些反应会作为音频的一部分保留下来。"
+        },
+        {
+          "question": "如果 Chzzk 主播删了那场 Live 或整条频道呢?",
+          "answer": "我们在删除发生之前已经捕获到的内容,会以原 URL 继续保留在存档里。我们不会因为源站删除而追溯删除录像。如果删除涉及 DMCA,或主播专门要求下架自己的内容,我们会按所有平台通用的下架流程处理。"
+        },
+        {
+          "question": "录 Chzzk 是不是应该用屏幕录制器?",
+          "answer": "浏览器屏幕录制器技术上能用,但整场直播都得占着你的电脑,关了标签就停录,画质受限于你显示器当时跑的分辨率。我们的平台 跑在服务器端,以 1080p 60fps 原画保存 Chzzk 直播 — 不用一直留着标签页、画质不打折、人睡着或不在线时也不会漏录。"
+        },
+        {
+          "question": "这里的录像会插广告吗?",
+          "answer": "录像按 Live 当时播出的样子提供,不会另外插任何广告。如果赞助片段本来就是直播的一部分,它会原样保留在录像里,和原直播一样。"
+        },
+        {
+          "question": "我浏览器打开 Chzzk 播放器是黑屏 — 会影响这里的录像吗?",
+          "answer": "Chzzk 播放器的浏览器兼容问题,出在你浏览器和 Naver 视频栈之间,跟 我们的平台 上的存档录像没关系。我们的录像用标准 HLS 播放,所以哪怕是放不动 Chzzk 直播播放器的浏览器,也能正常回看录像。"
         }
       ]
     }
@@ -676,7 +726,8 @@
       "live17": "17live 录像",
       "kwai": "Kwai 录像",
       "nimotv": "NimoTV 录像",
-      "vklive": "VK Live 录像"
+      "vklive": "VK Live 录像",
+      "chzzk": "Chzzk 录像"
     },
     "subtitle": {
       "all": "在我们的平台上观看创作者的直播录像。下载并发现新内容。",
@@ -691,11 +742,12 @@
       "mixch": "在我们的平台上观看创作者的 Mixch 录像。下载并发现新内容。",
       "trovo": "在我们的平台上观看创作者的 Trovo 录像。下载并发现新内容。",
       "twitcast": "在我们的平台上观看创作者的 TwitCasting 录像。下载并发现新内容。",
-      "joilive": "观看在 LiveStreamRecorder 上保存自己直播的 Joilive 主播的录像。下载并发现新创作者。",
-      "live17": "观看在 LiveStreamRecorder 上保存自己直播的 17live 主播的录像。下载并发现新创作者。",
-      "kwai": "观看在 LiveStreamRecorder 上保存自己直播的 Kwai 主播的录像。下载并发现新创作者。",
-      "nimotv": "观看在 LiveStreamRecorder 上保存自己直播的 NimoTV 主播的录像。下载并发现新创作者。",
-      "vklive": "观看在 LiveStreamRecorder 上保存自己直播的 VK Live 主播的录像。下载并发现新创作者。"
+      "joilive": "观看在 我们的平台 上保存自己直播的 Joilive 主播的录像。下载并发现新创作者。",
+      "live17": "观看在 我们的平台 上保存自己直播的 17live 主播的录像。下载并发现新创作者。",
+      "kwai": "观看在 我们的平台 上保存自己直播的 Kwai 主播的录像。下载并发现新创作者。",
+      "nimotv": "观看在 我们的平台 上保存自己直播的 NimoTV 主播的录像。下载并发现新创作者。",
+      "vklive": "观看在 我们的平台 上保存自己直播的 VK Live 主播的录像。下载并发现新创作者。",
+      "chzzk": "观看韩国主播的 Chzzk 录像 — 游戏、LCK 合作频道、IRL,以及从 Twitch 迁移过来的主播。下载并发现新创作者。"
     }
   },
   "cta": {
@@ -716,7 +768,8 @@
       "live17": "保存 17live 直播",
       "kwai": "保存 Kwai 直播",
       "nimotv": "保存 NimoTV 直播",
-      "vklive": "保存 VK Live 直播"
+      "vklive": "保存 VK Live 直播",
+      "chzzk": "保存 Chzzk 直播"
     },
     "subtitle": {
       "all": "自动保存你的 TikTok、Twitch、YouTube 和 Kick 直播。下载录像、创建短视频并扩大你的受众。",
@@ -735,7 +788,8 @@
       "live17": "自动保存你的 17live 直播。为每场直播创建独立备份,使用 ClipAI 创建短视频。",
       "kwai": "自动保存你的 Kwai 直播。为每场直播创建独立备份,使用 ClipAI 创建短视频。",
       "nimotv": "自动保存你的 NimoTV 直播。为每场直播创建独立备份,使用 ClipAI 创建短视频。",
-      "vklive": "自动保存你的 VK Live 直播。为每场直播创建独立备份,使用 ClipAI 创建短视频。"
+      "vklive": "自动保存你的 VK Live 直播。为每场直播创建独立备份,使用 ClipAI 创建短视频。",
+      "chzzk": "自动保存你的 Chzzk 直播。比 Naver VOD 时间线更长久的网页存档,搭配 ClipAI 短视频投放 TikTok 与 Reels。"
     },
     "button": "免费开始录制"
   },
@@ -758,28 +812,30 @@
       "live17": "成为第一个录制 17live 直播的主播！",
       "kwai": "成为第一个录制 Kwai 直播的主播！",
       "nimotv": "成为第一个录制 NimoTV 直播的主播！",
-      "vklive": "成为第一个录制 VK Live 直播的主播！"
+      "vklive": "成为第一个录制 VK Live 直播的主播！",
+      "chzzk": "成为第一个录制 Chzzk 直播的主播！"
     },
     "button": "立即开始"
   },
   "about": {
-    "all": "## 直播录像\n\n观看使用 LiveStreamRecorder 保存直播的创作者的录像。\n\n### 你将在这里找到什么\n\n创作者使用我们的平台自动录制 TikTok 直播、Twitch 直播、YouTube 广播和 Kick 直播。观看他们的内容、观看录像并发现新创作者。\n\n### 观看和下载\n\n每个录像都可以即时观看。高级用户可以下载录像以离线观看。\n\n### 致创作者\n\n想让你的直播出现在这里？免费注册并开始录制。粘贴你的频道 URL、开播,我们会自动保存一切。使用 ClipAI 将你的直播转换为短视频并扩大你的受众。\n\n### 支持的平台\n\n我们支持 TikTok 直播录制、Twitch VOD 保存、YouTube 直播录制、Kick 直播录制、AfreecaTV 录制和 Pandalive 录制。更多平台即将到来。",
-    "tiktok": "## TikTok 直播录像\n\n观看使用 LiveStreamRecorder 保存自己直播的创作者的 TikTok 直播录像。每场 TikTok 直播都自动捕获并存储以供随时观看。\n\n### TikTok 直播自动保存\n\nTikTok 直播一结束就消失 — 没有内置的方式来保存它们。创作者使用我们的 TikTok 录制器在云端自动捕获自己的 TikTok 直播。无需 TikTok 屏幕录制器,无需手机彻夜运行。只需添加你的用户名,你的直播就会被录制。\n\n### 观看和下载你的 TikTok 录像\n\n每个 TikTok 直播录像都可以在浏览器中即时观看。高级用户可以将 TikTok 录像下载为视频文件以离线观看 — 非常适合重新利用自己的内容或保留个人存档。\n\n### 在任何设备上录制你的 TikTok 直播\n\n想知道如何在电脑或笔记本上录制 TikTok 直播？LiveStreamRecorder 完全在云端运行。无需安装任何东西 — 没有桌面应用、没有浏览器扩展。无论你在 PC、笔记本还是手机上,你的 TikTok 直播都会自动以高质量捕获。\n\n### 使用 ClipAI 将直播转换为短视频\n\n想将你的 TikTok 直播录像转换为短视频？ClipAI 分析你的录制直播并创建你可以发布为 TikTok 视频、Reels 或 Shorts 的精彩短视频。这是从直播内容增长粉丝的最佳方式。\n\n### 你的 TikTok 录制器 — 无需屏幕录制\n\n忘掉不可靠的屏幕录制应用和桌面捕获工具。LiveStreamRecorder 是专为 TikTok 录制构建的,在服务器端捕获你的直播。免费注册、添加你的 TikTok 用户名,再也不会丢失任何直播。",
-    "twitch": "## Twitch 直播录像\n\n观看使用 LiveStreamRecorder 保存自己直播的创作者的 Twitch 直播录像。每场 Twitch 直播都自动捕获并永久存储。\n\n### 永不过期的 Twitch VOD\n\nTwitch VOD 在 14-60 天后过期,如果你删除频道也会被删除。我们的 Twitch 录制器在云端永久保存你的直播 — 无过期、无删除存档。你的内容仍然属于你。\n\n### 观看和下载你的 Twitch 录像\n\n每个 Twitch 直播录像都可以在浏览器中即时观看 — 没有广告、没有中断。高级用户可以将 Twitch 录像下载为视频文件以离线观看或重新利用内容。\n\n### 录制你的 Twitch 直播 — 无需屏幕录制器\n\n忘掉与 OBS 一起运行屏幕捕获软件。LiveStreamRecorder 是基于云端的 Twitch 直播录制器,在服务器端捕获你的直播。无额外 CPU 负载、无桌面应用、无 Bandicam 在后台运行。无论你从 PC、主机还是手机直播,你的 Twitch 直播都会自动以高质量录制。\n\n### 使用 ClipAI 将直播转换为短视频\n\n想将你的 Twitch 直播录像转换为短视频？ClipAI 分析你的录制直播并创建准备好发布为 YouTube Shorts、TikTok 视频或 Reels 的精彩短视频。从你的 Twitch 内容跨平台扩大受众。\n\n### 创作者的最佳 Twitch 录制器\n\nLiveStreamRecorder 专为保存 Twitch 直播而构建。免费注册、连接你的频道,再也不会因 VOD 过期而失去直播。每场直播都自动录制 — 你的永久 Twitch 存档。",
-    "youtube": "## YouTube 直播录像\n\n观看使用 LiveStreamRecorder 保存自己直播的创作者的 YouTube 直播录像。每场 YouTube 直播都自动捕获并存储以供随时观看。\n\n### YouTube 直播自动保存\n\nYouTube 直播重播可能消失 — 创作者删除它们、直播无法处理或频道变为私密。我们的 YouTube 录制器在云端自动捕获你的直播,所以你始终拥有内容副本。\n\n### 观看和下载你的 YouTube 录像\n\n每个 YouTube 直播录像都可以在浏览器中即时观看。高级用户可以将录像下载为视频文件以离线观看 — 非常适合重新利用直播内容。\n\n### 录制你的 YouTube 直播 — 无需屏幕录制器\n\n忘掉传统的 YouTube 屏幕录制软件。LiveStreamRecorder 是在线 YouTube 录制器,在服务器端捕获你的直播。无桌面应用、无浏览器扩展、无电脑彻夜运行。无论你在 PC、笔记本还是手机上,你的 YouTube 直播都会以高质量录制。\n\n### 使用 ClipAI 将直播转换为 YouTube Shorts\n\n想将你的 YouTube 直播录像转换为 Shorts？ClipAI 分析你的录制直播并创建准备好发布的精彩短视频。这是从直播内容增加订阅者的最佳方式。\n\n### 创作者的最佳 YouTube 直播录制器\n\nLiveStreamRecorder 专为捕获 YouTube 直播而构建。免费注册、连接你的频道,再也不会丢失任何直播。每场直播都自动录制 — 即使你忘记按录制。",
-    "kick": "## Kick 直播录像\n\n观看使用 LiveStreamRecorder 保存自己直播的创作者的 Kick 直播录像。每场 Kick 直播都自动捕获并永久存储。\n\n### 永远保留的 Kick VOD\n\nKick VOD 并不总是可靠 — 重播可能无法处理、频道可能更改、你的内容可能毫无预警地消失。我们的 Kick 录制器在云端永久保存你的直播,所以你的内容不依赖 Kick 的 VOD 系统。你的直播永远属于你。\n\n### 观看和下载你的 Kick 录像\n\n每个 Kick 直播录像都可以在浏览器中即时观看 — 没有广告、没有中断。高级用户可以将 Kick 录像下载为视频文件以离线观看、编辑或重新利用内容。\n\n### 录制你的 Kick 直播 — 无需屏幕录制器\n\n忘掉与你的直播一起运行 OBS 录制。LiveStreamRecorder 是基于云端的 Kick 直播录制器,在服务器端捕获你的直播。无额外 CPU 负载、无桌面捕获软件、后台无任何运行。从 PC、主机或手机直播 — 你的 Kick 直播会自动以高质量录制。\n\n### 使用 ClipAI 将直播转换为短视频\n\n想将你的 Kick 直播录像转换为短视频？ClipAI 分析你的录制直播并创建准备好发布为 TikTok 视频、YouTube Shorts 或 Reels 的精彩短视频。通过将直播内容转换为每个平台的短格式内容,在 Kick 之外扩大你的受众。\n\n### 创作者的最佳 Kick 录制器\n\nLiveStreamRecorder 专为独立保存 Kick 直播而构建。免费注册、添加你的 Kick 频道,再也不会丢失任何直播。每场直播都自动录制 — 不依赖 Kick VOD 系统的永久备份。",
-    "pandalive": "## Pandalive 直播录像\n\n观看使用 LiveStreamRecorder 保存自己直播的 BJ 的 Pandalive 直播录像。每场 Pandalive 直播都自动捕获并存储以供随时观看。\n\n### Pandalive 直播自动保存\n\nPandalive 直播在直播结束时消失 — 没有保证的重播系统。我们的 Pandalive 录制器在云端自动保存你的直播,所以一旦你的直播结束,什么都不会丢失。舞蹈表演、歌曲翻唱、聊天会话 — 一切都保持可用。\n\n### 观看和下载你的 Pandalive 录像\n\n每个 Pandalive 录像都可以在浏览器中即时观看。高级用户可以将 Pandalive 录像下载为视频文件以离线观看 — 非常适合重新利用自己的内容或保留个人副本。\n\n### 录制你的 Pandalive 直播 — 无需额外软件\n\n忘掉屏幕录制应用和移动捕获工具。LiveStreamRecorder 是在线 Pandalive 录制器,在服务器端捕获你的直播。无桌面软件、无手机彻夜运行、无浏览器扩展。无论你从手机、平板还是 PC 直播,你的 Pandalive 直播都会自动以高质量录制。\n\n### 使用 ClipAI 将直播转换为短视频\n\n想将你的 Pandalive 直播录像转换为短视频？ClipAI 分析你的录制直播并创建准备好发布到 TikTok、Instagram Reels 或 YouTube Shorts 的精彩短视频。通过重新利用你最精彩的 Pandalive 瞬间,在全球范围内扩大你的粉丝群。\n\n### BJ 的最佳 Pandalive 录制器\n\nLiveStreamRecorder 专为保存 Pandalive 直播而构建。免费注册、添加你的 Pandalive 用户名,再也不会丢失任何直播。每场直播都自动捕获 — 你的永久 Pandalive 内容库。",
-    "afreecatv": "## AfreecaTV 直播录像\n\n观看使用 LiveStreamRecorder 保存自己直播的 BJ 的 AfreecaTV 直播录像。每场 AfreecaTV 直播都自动捕获并存储以供随时观看。\n\n### AfreecaTV 直播独立保存\n\nAfreecaTV 有自己的 VOD 系统,但重播并不总是被保存,内容可能被下架,存储规则可能更改。我们的 AfreecaTV 录制器在云端自动保存你的直播作为独立备份 — 所以无论 AfreecaTV 上发生什么,你的内容都保持完整。\n\n### 观看和下载你的 AfreecaTV 录像\n\n每个 AfreecaTV 录像都可以在浏览器中即时观看 — 没有广告、没有中断。高级用户可以将 AfreecaTV 录像下载为视频文件以离线观看或重新利用内容。\n\n### 录制你的 AfreecaTV 直播 — 无需屏幕录制器\n\n忘掉在长 AfreecaTV 会话期间运行捕获软件。LiveStreamRecorder 是基于云端的 AfreecaTV 录制器,在服务器端捕获你的直播。无桌面应用、无后台录制、无额外 CPU 负载。从 PC 或手机直播 — 你的 AfreecaTV 直播会自动以高质量录制。\n\n### 使用 ClipAI 将长直播转换为短视频\n\nAfreecaTV 直播可能持续数小时。ClipAI 分析你的录制直播并自动提取最精彩的瞬间 — 关键操作、反应、有趣对话、精彩瞬间。将其发布为 TikTok 短视频、YouTube Shorts 或 Reels,在 AfreecaTV 之外扩大你的受众。\n\n### BJ 的最佳 AfreecaTV 录制器\n\nLiveStreamRecorder 专为独立保存 AfreecaTV 直播而构建。免费注册、添加你的 AfreecaTV 用户名,再也不会丢失任何直播。每场直播都自动捕获 — 不依赖 AfreecaTV VOD 系统的永久备份。",
-    "bigo": "## Bigo 直播录像\n\n观看使用 LiveStreamRecorder 保存自己直播的创作者的 Bigo 直播录像。每场 Bigo 直播都自动捕获并存储以供随时观看。\n\n### Bigo 直播在消失前保存\n\nBigo 直播仅在直播时存在 — 一旦你结束会话,内容就完全从应用中消失。我们的 Bigo 录制器在云端自动保存你的直播,所以你的内容不会在直播结束时消失。舞蹈表演、唱歌、聊天瞬间、礼物互动 — 一切都保持可用。\n\n### 观看和下载你的 Bigo 录像\n\n每个 Bigo 直播录像都可以在浏览器中即时观看。高级用户可以将 Bigo 录像下载为视频文件以离线观看 — 非常适合重新利用自己的内容或保留个人副本。\n\n### 录制你的 Bigo 直播 — 无需屏幕录制器\n\n忘掉在手机上运行屏幕捕获或让额外设备彻夜录制。LiveStreamRecorder 是在线 Bigo 录制器,在服务器端捕获你的直播。无手机电池消耗、无手动设置、无额外软件。无论你从 iPhone、Android 还是 PC 直播,你的 Bigo 直播都会自动以高质量录制。\n\n### 使用 ClipAI 将直播转换为短视频\n\n想将你的 Bigo 直播录像转换为短视频？ClipAI 分析你的录制直播并创建准备好发布到 TikTok、Instagram Reels 或 YouTube Shorts 的精彩短视频。通过重新利用你最精彩的 Bigo 瞬间,在全球范围内扩大你的受众。\n\n### 创作者的最佳 Bigo 录制器\n\nLiveStreamRecorder 专为保存 Bigo 直播而构建。免费注册、添加你的 Bigo 用户名,再也不会丢失任何直播。每场直播都自动捕获 — 你的 Bigo 内容的永久家园,不依赖应用为你保留。",
-    "liveme": "## LiveMe 直播录像\n\n观看使用 LiveStreamRecorder 保存自己直播的创作者的 LiveMe 直播录像。每场 LiveMe 直播都自动捕获并存储以供随时观看。\n\n### LiveMe 直播在消失前保存\n\nLiveMe 直播仅在直播时可用 — 一旦你结束直播,内容就从应用中消失。我们的 LiveMe 录制器在云端自动保存你的直播,所以一旦你的直播结束,什么都不会丢失。聊天会话、音乐瞬间、日常内容 — 一切都为粉丝保持可用。\n\n### 观看和下载你的 LiveMe 录像\n\n每个 LiveMe 直播录像都可以在浏览器中即时观看。高级用户可以将 LiveMe 录像下载为视频文件以离线观看 — 非常适合重新利用自己的内容或保留个人副本。\n\n### 录制你的 LiveMe 直播 — 无需额外应用\n\n忘掉在手机上进行屏幕录制或在后台运行捕获软件。LiveStreamRecorder 是在线 LiveMe 录制器,在服务器端捕获你的直播。无电池消耗、无手动设置、无额外软件。你的 LiveMe 直播会从任何设备自动以高质量录制。\n\n### 使用 ClipAI 将直播转换为短视频\n\n想将你的 LiveMe 直播录像转换为短视频？ClipAI 分析你的录制直播并创建准备好发布到 TikTok、Instagram Reels 或 YouTube Shorts 的精彩短视频。通过重新利用你最精彩的瞬间,在 LiveMe 之外扩大你的粉丝。\n\n### 创作者的最佳 LiveMe 录制器\n\nLiveStreamRecorder 专为保存 LiveMe 直播而构建。免费注册、添加你的 LiveMe 用户名,再也不会丢失任何直播。每场直播都自动捕获 — 你的永久 LiveMe 内容库。",
-    "mixch": "## Mixch 直播录像\n\n观看使用 LiveStreamRecorder 保存自己直播的创作者的 Mixch 直播录像。每场 Mixch 直播都自动捕获并存储以供随时观看。\n\n### Mixch 直播在消失前保存\n\nMixch 直播仅在直播时可用 — 一旦你结束直播,内容就从应用中消失。我们的 Mixch 录制器在云端自动保存你的直播,所以一旦你的直播结束,什么都不会丢失。聊天会话、音乐瞬间、日常内容 — 一切都为粉丝保持可用。\n\n### 观看和下载你的 Mixch 录像\n\n每个 Mixch 直播录像都可以在浏览器中即时观看。高级用户可以将 Mixch 录像下载为视频文件以离线观看 — 非常适合重新利用自己的内容或保留个人副本。\n\n### 录制你的 Mixch 直播 — 无需额外应用\n\n忘掉在手机上进行屏幕录制或在后台运行捕获软件。LiveStreamRecorder 是在线 Mixch 录制器,在服务器端捕获你的直播。无电池消耗、无手动设置、无额外软件。你的 Mixch 直播会从任何设备自动以高质量录制。\n\n### 使用 ClipAI 将直播转换为短视频\n\n想将你的 Mixch 直播录像转换为短视频？ClipAI 分析你的录制直播并创建准备好发布到 TikTok、Instagram Reels 或 YouTube Shorts 的精彩短视频。通过重新利用你最精彩的瞬间,在 Mixch 之外扩大你的粉丝。\n\n### 创作者的最佳 Mixch 录制器\n\nLiveStreamRecorder 专为保存 Mixch 直播而构建。免费注册、添加你的 Mixch 用户名,再也不会丢失任何直播。每场直播都自动捕获 — 你的永久 Mixch 内容库。",
-    "joilive": "## Joilive 直播录像\n\nJoilive 不存档。你的个人资料上没有重播标签,没有过往直播列表,没有 VOD。这个平台完全围绕直播这一刻构建 — 你停止播出时,直播就没了。对于轻量级的短直播,这没问题,但如果你定期直播并希望作品留下来,那就是个真问题了。LiveStreamRecorder 让 Joilive 主播 **录制自己的直播**,这样每场直播都会变成可以在个人创作者主页上观看、可分享的视频。\n\n### Joilive 的黑屏问题\n\n如果你试过用桌面录制器（OBS Studio 的显示器捕获、Windows 上的 Xbox Game Bar、Mac 上的 QuickTime）录制自己的 Joilive 直播,你大概都注意到了同一件事:音频录得很好,但视频显示为一块黑色的方框。这是 Joilive 网页播放器使用硬件加速解码加上 Widevine DRM 的结果。录制器看得到播放器,但看不到视频画面。这不是 Joilive 的 bug,也不是你的录制器坏了 — 这是受保护视频在现代浏览器上合成的副作用,在你机器上改设置改不好。\n\n实际可行的解决办法是完全跳过屏幕录制。LiveStreamRecorder 在浏览器之上的位置捕获 Joilive 直播,DRM/合成路径根本不参与。没有黑屏、不用找编解码器、不用切换 GPU 加速开关 — 录制就是能用。\n\n### 自录,服务端运行\n\n你在录自己的直播,但你不需要为此运行任何东西。手机上不装应用,电脑上不装软件。你在 Joilive 应用里开播时,录制会在云端自动开始。在沙发上、车里、咖啡店里直播都行 — 你的笔记本可以是关机的,手机可以是锁屏的。每场直播结束时,你的 Joilive 直播会出现在你的创作者主页上,准备好在浏览器中回看。\n\n### 观看和下载你的 Joilive 录像\n\n每场录制好的直播都可以在任何现代浏览器中即时播放,不需要应用,看也不需要 Joilive 账号。高级主播可以下载原始视频文件用于编辑、重新上传或本地归档 — 而 ClipAI 可以从录像自动生成发布到 TikTok、YouTube Shorts 或 Reels 的短视频。\n\n### 直播的可分享 URL\n\nJoilive 自己的房间 URL 是 `joilive.net/user/index.html?s=1880…` — 一串没人能打字或记住的长数字 ID。你的 LiveStreamRecorder 录像使用像 `livestreamrecorder.com/joilive/your-id/video/...` 这样干净的 URL,可以发到 Discord、贴到 Twitter 简介里,或者短信发给粉丝。同样的内容,没有查询字符串,也没有强制安装应用。\n\n### 为 Joilive 主播打造,而不是与他们为敌\n\nLiveStreamRecorder 并不是在下载别人的直播。录制由 Joilive 主播为 **自己的** 账号主动选择,而且只针对自己的直播 — 别的什么都不管。视频归你,页面归你,删除是一键操作。免费注册、添加你的 Joilive 用户 ID,Joilive 缺失的存档就不再是你的问题了。",
-    "trovo": "## Trovo 直播录像\n\n观看使用 LiveStreamRecorder 保存自己直播的创作者的 Trovo 直播录像。每场 Trovo 直播都自动捕获并存储以供随时观看。\n\n### Trovo 直播在消失前保存\n\nTrovo 直播仅在直播时可用 — 一旦你结束直播,内容就从应用中消失。我们的 Trovo 录制器在云端自动保存你的直播,所以一旦你的直播结束,什么都不会丢失。聊天会话、音乐瞬间、日常内容 — 一切都为粉丝保持可用。\n\n### 观看和下载你的 Trovo 录像\n\n每个 Trovo 直播录像都可以在浏览器中即时观看。高级用户可以将 Trovo 录像下载为视频文件以离线观看 — 非常适合重新利用自己的内容或保留个人副本。\n\n### 录制你的 Trovo 直播 — 无需额外应用\n\n忘掉在手机上进行屏幕录制或在后台运行捕获软件。LiveStreamRecorder 是在线 Trovo 录制器,在服务器端捕获你的直播。无电池消耗、无手动设置、无额外软件。你的 Trovo 直播会从任何设备自动以高质量录制。\n\n### 使用 ClipAI 将直播转换为短视频\n\n想将你的 Trovo 直播录像转换为短视频？ClipAI 分析你的录制直播并创建准备好发布到 TikTok、Instagram Reels 或 YouTube Shorts 的精彩短视频。通过重新利用你最精彩的瞬间,在 Trovo 之外扩大你的粉丝。\n\n### 创作者的最佳 Trovo 录制器\n\nLiveStreamRecorder 专为保存 Trovo 直播而构建。免费注册、添加你的 Trovo 用户名,再也不会丢失任何直播。每场直播都自动捕获 — 你的永久 Trovo 内容库。",
-    "twitcast": "## TwitCasting 直播录像\n\n观看使用 LiveStreamRecorder 保存自己直播的创作者的 TwitCasting 直播录像。每场 TwitCasting 直播都自动捕获并存储以供随时观看。\n\n### TwitCasting 直播在消失前保存\n\nTwitCasting 直播仅在直播时可用 — 一旦你结束直播,内容就从应用中消失。我们的 TwitCasting 录制器在云端自动保存你的直播,所以一旦你的直播结束,什么都不会丢失。聊天会话、音乐瞬间、日常内容 — 一切都为粉丝保持可用。\n\n### 观看和下载你的 TwitCasting 录像\n\n每个 TwitCasting 直播录像都可以在浏览器中即时观看。高级用户可以将 TwitCasting 录像下载为视频文件以离线观看 — 非常适合重新利用自己的内容或保留个人副本。\n\n### 录制你的 TwitCasting 直播 — 无需额外应用\n\n忘掉在手机上进行屏幕录制或在后台运行捕获软件。LiveStreamRecorder 是在线 TwitCasting 录制器,在服务器端捕获你的直播。无电池消耗、无手动设置、无额外软件。你的 TwitCasting 直播会从任何设备自动以高质量录制。\n\n### 使用 ClipAI 将直播转换为短视频\n\n想将你的 TwitCasting 直播录像转换为短视频？ClipAI 分析你的录制直播并创建准备好发布到 TikTok、Instagram Reels 或 YouTube Shorts 的精彩短视频。通过重新利用你最精彩的瞬间,在 TwitCasting 之外扩大你的粉丝。\n\n### 创作者的最佳 TwitCasting 录制器\n\nLiveStreamRecorder 专为保存 TwitCasting 直播而构建。免费注册、添加你的 TwitCasting 用户名,再也不会丢失任何直播。每场直播都自动捕获 — 你的永久 TwitCasting 内容库。",
-    "live17": "## LiveStreamRecorder 上的 17live 录制\n\n17live(发音 *yi-qi live* — 一起,意为「在一起」)是亚洲第三大直播平台,2015 年于台湾创立,2021 年起总部位于日本,在 SGX 以 **LVR** 上市。同时托管 **Liver**(人类主播)与 **V-Liver**(虚拟形象主播 — 17live 开创的类别)。在日本、台湾、香港、新加坡和菲律宾尤为强势。LiveStreamRecorder 将您直播的每一场 Live 的完整可在网页访问的录制 — 与 17live 应用内的 Stream Archive 并行存放在公开网络上。\n\n### 17live 已经有 Stream Archive,为什么还要第二份录制?\n\n17live 自己的 Stream Archive 没问题 — 它把近期直播保存在 17live App 内,由您的权限开关控制。但粉丝需要 17live App 才能观看,存档不会被 Google 收录,每场直播也没有稳定的公开 URL 可贴在 Discord 或 Twitter 简介里。LiveStreamRecorder 是**补充**而非竞争:把同一场直播第二次捕获,这次落到一个公开网址,比如 `livestreamrecorder.com/live17/your-id/video/...`,任何浏览器都能立即打开。\n\n### Liver 与 V-Liver 同样的捕获\n\n我们录制 17live 实际播出的画面 — 无论您是聊天/唱歌/跳舞的真人 Liver、有自定义场景的 OBS 合成 Liver,还是运行 Live2D / 3D 形象的 V-Liver。捕获在 17live 分发之前发生,所以最终视频与粉丝在直播中看到的完全一致:形象、叠加、变声、礼物动画全部保留。\n\n### 手机不用 App,电脑不用 OBS\n\n服务器端。从手机或电脑像平常一样直播,录制在我们的基础设施里进行。直播开始后,您的手机可以休眠,笔记本可以关机 — 录制继续。设备没有 CPU 占用、GPU 负担、额外耗电。这对持续 4 小时以上的歌唱或谈话直播很重要。\n\n### 超越 90 秒的剪辑限制\n\n17live App 内的 Stream Clips 在 App 内分享时很棒,但被限制在 15-90 秒,并且不会离开 17live 表面。高级主播可以在 LiveStreamRecorder 上使用 ClipAI 从完整保存的直播中剪出任意长度的精选片段,适配 **TikTok、Instagram Reels、YouTube Shorts** — 这些正是大多数 17live 外的潜在观众实际所在的平台。把它们用作把粉丝引回 17live 直播间的漏斗。\n\n### 同等支持经纪签约与独立主播\n\n17live 的经纪管理系统主动发掘和支持主播 — 这是它区别于纯自助 App 的特色。LiveStreamRecorder 不会触碰任何这些。它不登录您的 17live 账号,不干涉 Hot Star 活动、礼物推广或经纪公司工具。它是被动的并行录制 — 您来控制,您的 URL,您的存档。\n\n### 浏览器中观看,需要时下载\n\n每一场 17live 录制都能在任何现代浏览器中即时播放。观看不需要 17live 账号 — 把 URL 分享给任何人、任何地方。高级创作者可以从每场直播下载原始 HEVC 视频文件用于再编辑、作为长视频 VOD 上传到 YouTube,或本地存档。\n\n### 主动开启,您自己的内容\n\nLiveStreamRecorder 只录制您自己的主页,只在您主动开启之后。法律地位与从 17live 应用内的 Stream Archive 下载您自己的直播相同 — 只是存储在不同的位置(不是在 App 内,而是在您自己域名上的公开网址)。随时可停止录制,任何录制都可一键删除。",
-    "kwai": "## LiveStreamRecorder 上的 Kwai 录制\n\nKwai(来自普通话 快 *kuài*,意为「快速」)是 **Kuaishou Technology**(HKEX 1024)的全球短视频+直播应用,常被称为亚洲仅次于抖音/TikTok 的 #2 短视频平台。在中国之外,Kwai 在**巴西**占主导地位(其最大市场,与 TikTok 竞争),加上印度尼西亚、墨西哥、阿根廷、哥伦比亚、中东和俄罗斯/CIS。LiveStreamRecorder 将每场 Kwai Live 捕获到**公开可访问网络的录制** — Kwai 应用之外,开放网络上,Google 可索引。\n\n### 应用内的 Kwai vs. 开放网络上的 Kwai\n\nKwai 围绕其应用内信息流构建:滚动短视频、进入 Live、通过 K-coins 发送礼物,一切都在 Kwai 表面内。这对已在 Kwai 上的用户来说很棒。但当您的粉丝不在 Kwai 上时 — WhatsApp/Instagram 上的巴西粉丝、Telegram 上的印度尼西亚关注者、Kwai 甚至未安装的市场中的观众 — 播出就消失了。LiveStreamRecorder 把每场 Kwai Live 录制到公开 URL,例如 `livestreamrecorder.com/kwai/your-username/video/...`,任何人都可以在任何浏览器中打开。观看无需安装 Kwai,无需 Kwai 账户,无应用门槛。\n\n### 为移动优先、蜂窝网络优先创作者构建\n\nKwai 最大的市场 — 巴西、印度尼西亚、MENA — 也是移动数据和电池是宝贵资源的市场。创作者不希望手机在后台运行 OBS 或屏幕录制器而烧坏。我们明白。LiveStreamRecorder 在服务器端录制。您从手机上像平常一样在 Kwai 上播出 — 您的手机可以锁定屏幕、入睡、丢失通话 — 录制在我们的基础设施中继续。设备上零 CPU、零 GPU、零额外电池成本。\n\n### 巴西 Kwai 的发现鸿沟\n\nKwai BR 是一个庞大的生态系统,但在开放的葡萄牙语网络上基本不可见。在 Google 上搜索巴西 Kwai 创作者,您经常会得到内容稀薄的个人资料页面或第三方追踪网站。LiveStreamRecorder URL 干净、可索引、可分享 — 巴西创作者首次获得真正的 Google 足迹,每场 Kwai Live 充当 SEO 可发现的永久页面。\n\n### ClipAI:从 Kwai Live 到 TikTok / Reels / Shorts\n\nKwai 在新兴市场占主导地位,但 TikTok / Instagram / YouTube 仍主导全球发现。ClipAI 扫描您保存的 Kwai Live 并剪辑为 **TikTok、Instagram Reels、YouTube Shorts** 格式化的竖向精彩片段 — Kwai 之外的发现层。音乐翻唱、舞蹈、喜剧片段、礼物反应、观众互动 — 跨发以扩大受众漏斗回到您的 Kwai Live。\n\n### 在浏览器中观看,需要时下载\n\n每个保存的 Kwai Live 在任何现代浏览器中即时播放。观众无需 Kwai 账户。Premium 创作者可以从每场 Live 下载原始 HEVC 视频文件,用于重新编辑为 YouTube 长形式内容、合集视频或本地存档。\n\n### 不接触您的 Kwai 账户或收入\n\nLiveStreamRecorder 不登录您的 Kwai 账户,看不到 K-coins,不读取您的礼物收入,不干涉 Kwai 创作者计划层级。录制由您作为 Kwai 创作者主动开启,针对您**自己**的账户,只录制您自己的直播 — 不录制其他任何东西。您的 Kwai 账户状态、排名和收益分成完全保留在 Kwai 的领域内。\n\n### 主动开启,您自己的内容,随时删除\n\nLiveStreamRecorder 只录制您自己的个人资料,只在您主动开启之后。随时停止录制流程。一键删除任何过去的 Kwai 录制。您的内容、您的 URL、您的控制 — 独立于 Kwai 应用,在开放公开网络上,您潜在受众的其余部分终于可以找到您。",
-    "nimotv": "## NimoTV Live Recordings on LiveStreamRecorder\n\nNimoTV (launched 2018 by Huya, part of Tencent's global gaming ecosystem) is the international mobile-esports streaming platform — purpose-built for the mobile-gaming explosion happening across **Brazil, Indonesia, Thailand, Mexico, and Peru**. The catalogue is dominated by **Mobile Legends: Bang Bang, Free Fire, PUBG Mobile, Call of Duty: Mobile, Wild Rift, and Arena of Valor**. Its creator base is mostly phone-only — no PC, no OBS, no capture card. When a ranked grind ends, the broadcast is gone. LiveStreamRecorder catches every match before it disappears, on a public web URL fans can rewatch anytime.\n\n### Phone-Only Capture, Server-Side\n\nThe NimoTV creator workflow is brutally simple: open the NimoTV app, hit go-live, play the game, end the stream. There's no native VOD export. There's no \"keep my last broadcast for replay\" button you can rely on across regions and account tiers. And a phone running a ranked Mobile Legends match doesn't have spare resources to also run a screen recorder in the background — thermals, FPS, battery, and data all suffer. LiveStreamRecorder runs entirely in our cloud. Your phone broadcasts on NimoTV the way it always has; we capture the stream upstream and store it on your creator page.\n\n### Full-Length Matches, Not 30-Second Clips\n\nMobile esports matches are long. MLBB ranked grinds run hours, Free Fire squads rotate through round after round, PUBG Mobile final-circle hunts can stretch a broadcast past 4 hours. NimoTV's in-app clip and replay surfaces, where they exist, are short-form by design. LiveStreamRecorder saves the full broadcast — every match, every draft phase, every comms moment — at full length, ready to scrub. Want to review a teamfight you lost? Pull the recording, jump to the timestamp. Want a specific MVP highlight for a thumbnail? Clip it from the saved Live.\n\n### Brazilian and Indonesian Discovery, the Open Web Way\n\nNimoTV is huge inside its app in Brazil and SE Asia. It is also almost completely invisible on the open Portuguese, Spanish, and Indonesian web. Search for a top Brazilian MLBB streamer on Google and you'll get thin profile pages, third-party trackers, or nothing useful. Your LiveStreamRecorder creator page is indexable, shareable, and openable in any browser — your Lives finally get a real Google footprint.\n\n### Cross-Posting to Where Mobile Gaming Fans Actually Hang Out\n\n#MLBB, #FreeFire, #PUBGM, #MobileGaming — the mobile esports community lives across TikTok, Instagram, YouTube, Discord, and language-specific community apps. Most don't have the NimoTV app installed and aren't going to install it to watch one stream. ClipAI scans your saved NimoTV Lives and cuts vertical highlight clips formatted for **TikTok, Instagram Reels, YouTube Shorts** — clutch plays, MVP moments, gift reactions. Use them as the funnel that brings new fans back to your NimoTV channel.\n\n### Watch in Browser, Download if You Need It\n\nEvery saved NimoTV Live plays instantly in any modern browser. No NimoTV account needed to watch. Premium creators can download the raw video file from each Live — useful for uploading full matches to YouTube as long-form gaming content, cutting compilations, or local archival.\n\n### Doesn't Touch Your NimoTV Account or Diamond Income\n\nLiveStreamRecorder never logs into your NimoTV account, doesn't see diamond income, doesn't read your gifting stats, and doesn't interfere with Huya / Tencent creator program tiers or partner status. The recording is opt-in by you as the NimoTV creator for **your own** account, and only your own Lives — nothing else. Your NimoTV ranking, watch-time, gifting, and partner status remain entirely on NimoTV.\n\n### Opt-In, Delete Anytime\n\nLiveStreamRecorder only records your own profile, only after you opt in. Stop recording any time. Delete any past NimoTV Live with a single click. Your content, your URL, your control — independent of the NimoTV app, built for mobile esports creators who don't have time to also run a recording rig.",
-    "vklive": "## VK Live Recordings on LiveStreamRecorder\n\nVK Live is the livestreaming layer inside **VKontakte (VK)**, Russia's biggest social network with over 100 million monthly active users. Unlike standalone streaming apps, VK Live is woven directly into VK's social graph — broadcasts appear in friends' feeds, get reposted into communities, integrate with **VK Music** and the **VK Play** gaming platform, and reach an audience that spans Russia, Belarus, Kazakhstan, and Russian-speaking communities worldwide. Since 2022, when Western livestreaming options became harder to access from Russia, VK Live has grown significantly as the de-facto livestreaming home for Russian-speaking creators. LiveStreamRecorder records every VK Live broadcast to a stable, public web URL — built for creators who want their work to outlive a single news cycle in the VK feed.\n\n### The VK Feed Buries Streams Within Hours\n\nVK Live is a social-first stream surface. The strength of that design: a Live shows up in followers' feeds in real time, can be reposted into communities, pulls live engagement from the VK social graph. The weakness of that design: the VK algorithm prioritizes fresh content. Within a few hours of going offline, your broadcast slides down the feed. Within 24 hours, even popular VK Lives are effectively invisible to anyone who didn't catch them live. There's no proper archive UX, no dedicated past-streams view on your profile. Fans who'd love to rewatch a Dota 2 match, share a music set with a friend, or pull up that one clutch CS round you had last weekend have no real place to go.\n\nLiveStreamRecorder gives every VK Live broadcast a stable URL on your creator page that exists independently of the VK feed cycle. The feed moves on, your archive stays.\n\n### Built for the VK Live Creator Mix\n\nVK Live's creator base is broad and category-rich. **Gaming**: Dota 2, CS 2, World of Tanks, Standoff 2 — the cornerstones of the Russian-speaking gaming community. **Music**: artists running album drops, acoustic sets, electronic DJ sets, often integrated with their VK Music releases. **IRL and lifestyle**: vlog-style streams, cooking, travel (where geopolitics allows), commentary on news and pop culture. **Anime and manga commentators**: reaction streams, watch-alongs, deep-dive discussions. **Educational**: language learning, coding tutorials, exam prep. The capture is upstream of your local hardware, so whatever you broadcast — OBS scene composition, gameplay overlays, music visualisers, webcam-only chat — preserves exactly as your fans saw it.\n\n### A Permanent Home for Long-Form Content\n\nThe VK feed is built for short attention spans — quick scrolling, fast engagement, fresh posts every few hours. That's fine for a 2-minute clip and actively hostile to a 3-hour Dota grind or a 90-minute concert set. A permanent archive on LiveStreamRecorder is the long-form counterpart: fans who want to actually sit with your stream, rewatch a specific match, or share a moment with a friend get a stable URL that works the same way next week and next year. The clip lives in the feed; the full broadcast lives on your creator page.\n\n### Russian, CIS, and Diaspora Audiences\n\nVK is dominant inside Russia, Belarus, and Kazakhstan, but Russian-speaking communities also live throughout Europe, Israel, the US, and Canada — many of whom don't actively maintain a VK account day-to-day. LiveStreamRecorder URLs work in any browser, anywhere in the world, with no VK login required to watch. Your diaspora fans get a way to keep up with your work that doesn't depend on them maintaining an active VK presence.\n\n### Cross-Platform Reach with ClipAI\n\nClipAI scans your saved VK Live broadcasts and cuts vertical short-form clips ready for **TikTok, Instagram Reels, YouTube Shorts**, and VK's own short-video features. Highlight plays from a Dota match, music drops from a concert set, funny chat moments, IRL reactions — turn one long broadcast into a stream of shareable content that brings new fans back to your VK Live channel.\n\n### Watch in Browser, Download if You Need It\n\nEvery saved VK Live plays instantly in any modern browser, no VK account required. Premium creators can download the raw video file from each broadcast — useful for re-uploading full matches to YouTube as long-form content, cutting compilations, or local archival on your own machine.\n\n### Doesn't Touch Your VK Account or Integrations\n\nLiveStreamRecorder never logs into your VK account, doesn't interact with VK Music tags, doesn't touch VK Play integrations, and doesn't affect any of VK's creator-side metrics, monetization, or community management. The recording is opt-in by you as the VK Live creator for **your own** account, and only captures your own broadcasts — nothing else. Your VK profile, community pages, friend graph, and creator status stay entirely within VK.\n\n### Opt-In, Delete Anytime\n\nLiveStreamRecorder only records your own profile, only after you opt in. Stop the recording flow any time. Delete any past VK Live with a single click. Your content, your URL, your control — a permanent archive of your work on the open web, where the VK feed buries streams fast but your back catalogue stays put."
+    "all": "## 直播录像\n\n观看使用 我们的平台 保存直播的创作者的录像。\n\n### 你将在这里找到什么\n\n创作者使用我们的平台自动录制 TikTok 直播、Twitch 直播、YouTube 广播和 Kick 直播。观看他们的内容、观看录像并发现新创作者。\n\n### 观看和下载\n\n每个录像都可以即时观看。高级用户可以下载录像以离线观看。\n\n### 致创作者\n\n想让你的直播出现在这里？免费注册并开始录制。粘贴你的频道 URL、开播,我们会自动保存一切。使用 ClipAI 将你的直播转换为短视频并扩大你的受众。\n\n### 支持的平台\n\n我们支持 TikTok 直播录制、Twitch VOD 保存、YouTube 直播录制、Kick 直播录制、AfreecaTV 录制和 Pandalive 录制。更多平台即将到来。",
+    "tiktok": "## TikTok 直播录像\n\n观看使用 我们的平台 保存自己直播的创作者的 TikTok 直播录像。每场 TikTok 直播都自动捕获并存储以供随时观看。\n\n### TikTok 直播自动保存\n\nTikTok 直播一结束就消失 — 没有内置的方式来保存它们。创作者使用我们的 TikTok 录制器在云端自动捕获自己的 TikTok 直播。无需 TikTok 屏幕录制器,无需手机彻夜运行。只需添加你的用户名,你的直播就会被录制。\n\n### 观看和下载你的 TikTok 录像\n\n每个 TikTok 直播录像都可以在浏览器中即时观看。高级用户可以将 TikTok 录像下载为视频文件以离线观看 — 非常适合重新利用自己的内容或保留个人存档。\n\n### 在任何设备上录制你的 TikTok 直播\n\n想知道如何在电脑或笔记本上录制 TikTok 直播？我们的平台 完全在云端运行。无需安装任何东西 — 没有桌面应用、没有浏览器扩展。无论你在 PC、笔记本还是手机上,你的 TikTok 直播都会自动以高质量捕获。\n\n### 使用 ClipAI 将直播转换为短视频\n\n想将你的 TikTok 直播录像转换为短视频？ClipAI 分析你的录制直播并创建你可以发布为 TikTok 视频、Reels 或 Shorts 的精彩短视频。这是从直播内容增长粉丝的最佳方式。\n\n### 你的 TikTok 录制器 — 无需屏幕录制\n\n忘掉不可靠的屏幕录制应用和桌面捕获工具。我们的平台 是专为 TikTok 录制构建的,在服务器端捕获你的直播。免费注册、添加你的 TikTok 用户名,再也不会丢失任何直播。",
+    "twitch": "## Twitch 直播录像\n\n观看使用 我们的平台 保存自己直播的创作者的 Twitch 直播录像。每场 Twitch 直播都自动捕获并永久存储。\n\n### 永不过期的 Twitch VOD\n\nTwitch VOD 在 14-60 天后过期,如果你删除频道也会被删除。我们的 Twitch 录制器在云端永久保存你的直播 — 无过期、无删除存档。你的内容仍然属于你。\n\n### 观看和下载你的 Twitch 录像\n\n每个 Twitch 直播录像都可以在浏览器中即时观看 — 没有广告、没有中断。高级用户可以将 Twitch 录像下载为视频文件以离线观看或重新利用内容。\n\n### 录制你的 Twitch 直播 — 无需屏幕录制器\n\n忘掉与 OBS 一起运行屏幕捕获软件。我们的平台 是基于云端的 Twitch 直播录制器,在服务器端捕获你的直播。无额外 CPU 负载、无桌面应用、无 Bandicam 在后台运行。无论你从 PC、主机还是手机直播,你的 Twitch 直播都会自动以高质量录制。\n\n### 使用 ClipAI 将直播转换为短视频\n\n想将你的 Twitch 直播录像转换为短视频？ClipAI 分析你的录制直播并创建准备好发布为 YouTube Shorts、TikTok 视频或 Reels 的精彩短视频。从你的 Twitch 内容跨平台扩大受众。\n\n### 创作者的最佳 Twitch 录制器\n\n我们的平台 专为保存 Twitch 直播而构建。免费注册、连接你的频道,再也不会因 VOD 过期而失去直播。每场直播都自动录制 — 你的永久 Twitch 存档。",
+    "youtube": "## YouTube 直播录像\n\n观看使用 我们的平台 保存自己直播的创作者的 YouTube 直播录像。每场 YouTube 直播都自动捕获并存储以供随时观看。\n\n### YouTube 直播自动保存\n\nYouTube 直播重播可能消失 — 创作者删除它们、直播无法处理或频道变为私密。我们的 YouTube 录制器在云端自动捕获你的直播,所以你始终拥有内容副本。\n\n### 观看和下载你的 YouTube 录像\n\n每个 YouTube 直播录像都可以在浏览器中即时观看。高级用户可以将录像下载为视频文件以离线观看 — 非常适合重新利用直播内容。\n\n### 录制你的 YouTube 直播 — 无需屏幕录制器\n\n忘掉传统的 YouTube 屏幕录制软件。我们的平台 是在线 YouTube 录制器,在服务器端捕获你的直播。无桌面应用、无浏览器扩展、无电脑彻夜运行。无论你在 PC、笔记本还是手机上,你的 YouTube 直播都会以高质量录制。\n\n### 使用 ClipAI 将直播转换为 YouTube Shorts\n\n想将你的 YouTube 直播录像转换为 Shorts？ClipAI 分析你的录制直播并创建准备好发布的精彩短视频。这是从直播内容增加订阅者的最佳方式。\n\n### 创作者的最佳 YouTube 直播录制器\n\n我们的平台 专为捕获 YouTube 直播而构建。免费注册、连接你的频道,再也不会丢失任何直播。每场直播都自动录制 — 即使你忘记按录制。",
+    "kick": "## Kick 直播录像\n\n观看使用 我们的平台 保存自己直播的创作者的 Kick 直播录像。每场 Kick 直播都自动捕获并永久存储。\n\n### 永远保留的 Kick VOD\n\nKick VOD 并不总是可靠 — 重播可能无法处理、频道可能更改、你的内容可能毫无预警地消失。我们的 Kick 录制器在云端永久保存你的直播,所以你的内容不依赖 Kick 的 VOD 系统。你的直播永远属于你。\n\n### 观看和下载你的 Kick 录像\n\n每个 Kick 直播录像都可以在浏览器中即时观看 — 没有广告、没有中断。高级用户可以将 Kick 录像下载为视频文件以离线观看、编辑或重新利用内容。\n\n### 录制你的 Kick 直播 — 无需屏幕录制器\n\n忘掉与你的直播一起运行 OBS 录制。我们的平台 是基于云端的 Kick 直播录制器,在服务器端捕获你的直播。无额外 CPU 负载、无桌面捕获软件、后台无任何运行。从 PC、主机或手机直播 — 你的 Kick 直播会自动以高质量录制。\n\n### 使用 ClipAI 将直播转换为短视频\n\n想将你的 Kick 直播录像转换为短视频？ClipAI 分析你的录制直播并创建准备好发布为 TikTok 视频、YouTube Shorts 或 Reels 的精彩短视频。通过将直播内容转换为每个平台的短格式内容,在 Kick 之外扩大你的受众。\n\n### 创作者的最佳 Kick 录制器\n\n我们的平台 专为独立保存 Kick 直播而构建。免费注册、添加你的 Kick 频道,再也不会丢失任何直播。每场直播都自动录制 — 不依赖 Kick VOD 系统的永久备份。",
+    "pandalive": "## Pandalive 直播录像\n\n观看使用 我们的平台 保存自己直播的 BJ 的 Pandalive 直播录像。每场 Pandalive 直播都自动捕获并存储以供随时观看。\n\n### Pandalive 直播自动保存\n\nPandalive 直播在直播结束时消失 — 没有保证的重播系统。我们的 Pandalive 录制器在云端自动保存你的直播,所以一旦你的直播结束,什么都不会丢失。舞蹈表演、歌曲翻唱、聊天会话 — 一切都保持可用。\n\n### 观看和下载你的 Pandalive 录像\n\n每个 Pandalive 录像都可以在浏览器中即时观看。高级用户可以将 Pandalive 录像下载为视频文件以离线观看 — 非常适合重新利用自己的内容或保留个人副本。\n\n### 录制你的 Pandalive 直播 — 无需额外软件\n\n忘掉屏幕录制应用和移动捕获工具。我们的平台 是在线 Pandalive 录制器,在服务器端捕获你的直播。无桌面软件、无手机彻夜运行、无浏览器扩展。无论你从手机、平板还是 PC 直播,你的 Pandalive 直播都会自动以高质量录制。\n\n### 使用 ClipAI 将直播转换为短视频\n\n想将你的 Pandalive 直播录像转换为短视频？ClipAI 分析你的录制直播并创建准备好发布到 TikTok、Instagram Reels 或 YouTube Shorts 的精彩短视频。通过重新利用你最精彩的 Pandalive 瞬间,在全球范围内扩大你的粉丝群。\n\n### BJ 的最佳 Pandalive 录制器\n\n我们的平台 专为保存 Pandalive 直播而构建。免费注册、添加你的 Pandalive 用户名,再也不会丢失任何直播。每场直播都自动捕获 — 你的永久 Pandalive 内容库。",
+    "afreecatv": "## AfreecaTV 直播录像\n\n观看使用 我们的平台 保存自己直播的 BJ 的 AfreecaTV 直播录像。每场 AfreecaTV 直播都自动捕获并存储以供随时观看。\n\n### AfreecaTV 直播独立保存\n\nAfreecaTV 有自己的 VOD 系统,但重播并不总是被保存,内容可能被下架,存储规则可能更改。我们的 AfreecaTV 录制器在云端自动保存你的直播作为独立备份 — 所以无论 AfreecaTV 上发生什么,你的内容都保持完整。\n\n### 观看和下载你的 AfreecaTV 录像\n\n每个 AfreecaTV 录像都可以在浏览器中即时观看 — 没有广告、没有中断。高级用户可以将 AfreecaTV 录像下载为视频文件以离线观看或重新利用内容。\n\n### 录制你的 AfreecaTV 直播 — 无需屏幕录制器\n\n忘掉在长 AfreecaTV 会话期间运行捕获软件。我们的平台 是基于云端的 AfreecaTV 录制器,在服务器端捕获你的直播。无桌面应用、无后台录制、无额外 CPU 负载。从 PC 或手机直播 — 你的 AfreecaTV 直播会自动以高质量录制。\n\n### 使用 ClipAI 将长直播转换为短视频\n\nAfreecaTV 直播可能持续数小时。ClipAI 分析你的录制直播并自动提取最精彩的瞬间 — 关键操作、反应、有趣对话、精彩瞬间。将其发布为 TikTok 短视频、YouTube Shorts 或 Reels,在 AfreecaTV 之外扩大你的受众。\n\n### BJ 的最佳 AfreecaTV 录制器\n\n我们的平台 专为独立保存 AfreecaTV 直播而构建。免费注册、添加你的 AfreecaTV 用户名,再也不会丢失任何直播。每场直播都自动捕获 — 不依赖 AfreecaTV VOD 系统的永久备份。",
+    "bigo": "## Bigo 直播录像\n\n观看使用 我们的平台 保存自己直播的创作者的 Bigo 直播录像。每场 Bigo 直播都自动捕获并存储以供随时观看。\n\n### Bigo 直播在消失前保存\n\nBigo 直播仅在直播时存在 — 一旦你结束会话,内容就完全从应用中消失。我们的 Bigo 录制器在云端自动保存你的直播,所以你的内容不会在直播结束时消失。舞蹈表演、唱歌、聊天瞬间、礼物互动 — 一切都保持可用。\n\n### 观看和下载你的 Bigo 录像\n\n每个 Bigo 直播录像都可以在浏览器中即时观看。高级用户可以将 Bigo 录像下载为视频文件以离线观看 — 非常适合重新利用自己的内容或保留个人副本。\n\n### 录制你的 Bigo 直播 — 无需屏幕录制器\n\n忘掉在手机上运行屏幕捕获或让额外设备彻夜录制。我们的平台 是在线 Bigo 录制器,在服务器端捕获你的直播。无手机电池消耗、无手动设置、无额外软件。无论你从 iPhone、Android 还是 PC 直播,你的 Bigo 直播都会自动以高质量录制。\n\n### 使用 ClipAI 将直播转换为短视频\n\n想将你的 Bigo 直播录像转换为短视频？ClipAI 分析你的录制直播并创建准备好发布到 TikTok、Instagram Reels 或 YouTube Shorts 的精彩短视频。通过重新利用你最精彩的 Bigo 瞬间,在全球范围内扩大你的受众。\n\n### 创作者的最佳 Bigo 录制器\n\n我们的平台 专为保存 Bigo 直播而构建。免费注册、添加你的 Bigo 用户名,再也不会丢失任何直播。每场直播都自动捕获 — 你的 Bigo 内容的永久家园,不依赖应用为你保留。",
+    "liveme": "## LiveMe 直播录像\n\n观看使用 我们的平台 保存自己直播的创作者的 LiveMe 直播录像。每场 LiveMe 直播都自动捕获并存储以供随时观看。\n\n### LiveMe 直播在消失前保存\n\nLiveMe 直播仅在直播时可用 — 一旦你结束直播,内容就从应用中消失。我们的 LiveMe 录制器在云端自动保存你的直播,所以一旦你的直播结束,什么都不会丢失。聊天会话、音乐瞬间、日常内容 — 一切都为粉丝保持可用。\n\n### 观看和下载你的 LiveMe 录像\n\n每个 LiveMe 直播录像都可以在浏览器中即时观看。高级用户可以将 LiveMe 录像下载为视频文件以离线观看 — 非常适合重新利用自己的内容或保留个人副本。\n\n### 录制你的 LiveMe 直播 — 无需额外应用\n\n忘掉在手机上进行屏幕录制或在后台运行捕获软件。我们的平台 是在线 LiveMe 录制器,在服务器端捕获你的直播。无电池消耗、无手动设置、无额外软件。你的 LiveMe 直播会从任何设备自动以高质量录制。\n\n### 使用 ClipAI 将直播转换为短视频\n\n想将你的 LiveMe 直播录像转换为短视频？ClipAI 分析你的录制直播并创建准备好发布到 TikTok、Instagram Reels 或 YouTube Shorts 的精彩短视频。通过重新利用你最精彩的瞬间,在 LiveMe 之外扩大你的粉丝。\n\n### 创作者的最佳 LiveMe 录制器\n\n我们的平台 专为保存 LiveMe 直播而构建。免费注册、添加你的 LiveMe 用户名,再也不会丢失任何直播。每场直播都自动捕获 — 你的永久 LiveMe 内容库。",
+    "mixch": "## Mixch 直播录像\n\n观看使用 我们的平台 保存自己直播的创作者的 Mixch 直播录像。每场 Mixch 直播都自动捕获并存储以供随时观看。\n\n### Mixch 直播在消失前保存\n\nMixch 直播仅在直播时可用 — 一旦你结束直播,内容就从应用中消失。我们的 Mixch 录制器在云端自动保存你的直播,所以一旦你的直播结束,什么都不会丢失。聊天会话、音乐瞬间、日常内容 — 一切都为粉丝保持可用。\n\n### 观看和下载你的 Mixch 录像\n\n每个 Mixch 直播录像都可以在浏览器中即时观看。高级用户可以将 Mixch 录像下载为视频文件以离线观看 — 非常适合重新利用自己的内容或保留个人副本。\n\n### 录制你的 Mixch 直播 — 无需额外应用\n\n忘掉在手机上进行屏幕录制或在后台运行捕获软件。我们的平台 是在线 Mixch 录制器,在服务器端捕获你的直播。无电池消耗、无手动设置、无额外软件。你的 Mixch 直播会从任何设备自动以高质量录制。\n\n### 使用 ClipAI 将直播转换为短视频\n\n想将你的 Mixch 直播录像转换为短视频？ClipAI 分析你的录制直播并创建准备好发布到 TikTok、Instagram Reels 或 YouTube Shorts 的精彩短视频。通过重新利用你最精彩的瞬间,在 Mixch 之外扩大你的粉丝。\n\n### 创作者的最佳 Mixch 录制器\n\n我们的平台 专为保存 Mixch 直播而构建。免费注册、添加你的 Mixch 用户名,再也不会丢失任何直播。每场直播都自动捕获 — 你的永久 Mixch 内容库。",
+    "joilive": "## Joilive 直播录像\n\nJoilive 不存档。你的个人资料上没有重播标签,没有过往直播列表,没有 VOD。这个平台完全围绕直播这一刻构建 — 你停止播出时,直播就没了。对于轻量级的短直播,这没问题,但如果你定期直播并希望作品留下来,那就是个真问题了。我们的平台 让 Joilive 主播 **录制自己的直播**,这样每场直播都会变成可以在个人创作者主页上观看、可分享的视频。\n\n### Joilive 的黑屏问题\n\n如果你试过用桌面录制器（OBS Studio 的显示器捕获、Windows 上的 Xbox Game Bar、Mac 上的 QuickTime）录制自己的 Joilive 直播,你大概都注意到了同一件事:音频录得很好,但视频显示为一块黑色的方框。这是 Joilive 网页播放器使用硬件加速解码加上 Widevine DRM 的结果。录制器看得到播放器,但看不到视频画面。这不是 Joilive 的 bug,也不是你的录制器坏了 — 这是受保护视频在现代浏览器上合成的副作用,在你机器上改设置改不好。\n\n实际可行的解决办法是完全跳过屏幕录制。我们的平台 在浏览器之上的位置捕获 Joilive 直播,DRM/合成路径根本不参与。没有黑屏、不用找编解码器、不用切换 GPU 加速开关 — 录制就是能用。\n\n### 自录,服务端运行\n\n你在录自己的直播,但你不需要为此运行任何东西。手机上不装应用,电脑上不装软件。你在 Joilive 应用里开播时,录制会在云端自动开始。在沙发上、车里、咖啡店里直播都行 — 你的笔记本可以是关机的,手机可以是锁屏的。每场直播结束时,你的 Joilive 直播会出现在你的创作者主页上,准备好在浏览器中回看。\n\n### 观看和下载你的 Joilive 录像\n\n每场录制好的直播都可以在任何现代浏览器中即时播放,不需要应用,看也不需要 Joilive 账号。高级主播可以下载原始视频文件用于编辑、重新上传或本地归档 — 而 ClipAI 可以从录像自动生成发布到 TikTok、YouTube Shorts 或 Reels 的短视频。\n\n### 直播的可分享 URL\n\nJoilive 自己的房间 URL 是 `joilive.net/user/index.html?s=1880…` — 一串没人能打字或记住的长数字 ID。你的 我们的平台 录像使用像 `livestreamrecorder.com/joilive/your-id/video/...` 这样干净的 URL,可以发到 Discord、贴到 Twitter 简介里,或者短信发给粉丝。同样的内容,没有查询字符串,也没有强制安装应用。\n\n### 为 Joilive 主播打造,而不是与他们为敌\n\n我们的平台 并不是在下载别人的直播。录制由 Joilive 主播为 **自己的** 账号主动选择,而且只针对自己的直播 — 别的什么都不管。视频归你,页面归你,删除是一键操作。免费注册、添加你的 Joilive 用户 ID,Joilive 缺失的存档就不再是你的问题了。",
+    "trovo": "## Trovo 直播录像\n\n观看使用 我们的平台 保存自己直播的创作者的 Trovo 直播录像。每场 Trovo 直播都自动捕获并存储以供随时观看。\n\n### Trovo 直播在消失前保存\n\nTrovo 直播仅在直播时可用 — 一旦你结束直播,内容就从应用中消失。我们的 Trovo 录制器在云端自动保存你的直播,所以一旦你的直播结束,什么都不会丢失。聊天会话、音乐瞬间、日常内容 — 一切都为粉丝保持可用。\n\n### 观看和下载你的 Trovo 录像\n\n每个 Trovo 直播录像都可以在浏览器中即时观看。高级用户可以将 Trovo 录像下载为视频文件以离线观看 — 非常适合重新利用自己的内容或保留个人副本。\n\n### 录制你的 Trovo 直播 — 无需额外应用\n\n忘掉在手机上进行屏幕录制或在后台运行捕获软件。我们的平台 是在线 Trovo 录制器,在服务器端捕获你的直播。无电池消耗、无手动设置、无额外软件。你的 Trovo 直播会从任何设备自动以高质量录制。\n\n### 使用 ClipAI 将直播转换为短视频\n\n想将你的 Trovo 直播录像转换为短视频？ClipAI 分析你的录制直播并创建准备好发布到 TikTok、Instagram Reels 或 YouTube Shorts 的精彩短视频。通过重新利用你最精彩的瞬间,在 Trovo 之外扩大你的粉丝。\n\n### 创作者的最佳 Trovo 录制器\n\n我们的平台 专为保存 Trovo 直播而构建。免费注册、添加你的 Trovo 用户名,再也不会丢失任何直播。每场直播都自动捕获 — 你的永久 Trovo 内容库。",
+    "twitcast": "## TwitCasting 直播录像\n\n观看使用 我们的平台 保存自己直播的创作者的 TwitCasting 直播录像。每场 TwitCasting 直播都自动捕获并存储以供随时观看。\n\n### TwitCasting 直播在消失前保存\n\nTwitCasting 直播仅在直播时可用 — 一旦你结束直播,内容就从应用中消失。我们的 TwitCasting 录制器在云端自动保存你的直播,所以一旦你的直播结束,什么都不会丢失。聊天会话、音乐瞬间、日常内容 — 一切都为粉丝保持可用。\n\n### 观看和下载你的 TwitCasting 录像\n\n每个 TwitCasting 直播录像都可以在浏览器中即时观看。高级用户可以将 TwitCasting 录像下载为视频文件以离线观看 — 非常适合重新利用自己的内容或保留个人副本。\n\n### 录制你的 TwitCasting 直播 — 无需额外应用\n\n忘掉在手机上进行屏幕录制或在后台运行捕获软件。我们的平台 是在线 TwitCasting 录制器,在服务器端捕获你的直播。无电池消耗、无手动设置、无额外软件。你的 TwitCasting 直播会从任何设备自动以高质量录制。\n\n### 使用 ClipAI 将直播转换为短视频\n\n想将你的 TwitCasting 直播录像转换为短视频？ClipAI 分析你的录制直播并创建准备好发布到 TikTok、Instagram Reels 或 YouTube Shorts 的精彩短视频。通过重新利用你最精彩的瞬间,在 TwitCasting 之外扩大你的粉丝。\n\n### 创作者的最佳 TwitCasting 录制器\n\n我们的平台 专为保存 TwitCasting 直播而构建。免费注册、添加你的 TwitCasting 用户名,再也不会丢失任何直播。每场直播都自动捕获 — 你的永久 TwitCasting 内容库。",
+    "live17": "## 我们的平台 上的 17live 录制\n\n17live(发音 *yi-qi live* — 一起,意为「在一起」)是亚洲第三大直播平台,2015 年于台湾创立,2021 年起总部位于日本,在 SGX 以 **LVR** 上市。同时托管 **Liver**(人类主播)与 **V-Liver**(虚拟形象主播 — 17live 开创的类别)。在日本、台湾、香港、新加坡和菲律宾尤为强势。我们的平台 将您直播的每一场 Live 的完整可在网页访问的录制 — 与 17live 应用内的 Stream Archive 并行存放在公开网络上。\n\n### 17live 已经有 Stream Archive,为什么还要第二份录制?\n\n17live 自己的 Stream Archive 没问题 — 它把近期直播保存在 17live App 内,由您的权限开关控制。但粉丝需要 17live App 才能观看,存档不会被 Google 收录,每场直播也没有稳定的公开 URL 可贴在 Discord 或 Twitter 简介里。我们的平台 是**补充**而非竞争:把同一场直播第二次捕获,这次落到一个公开网址,比如 `livestreamrecorder.com/live17/your-id/video/...`,任何浏览器都能立即打开。\n\n### Liver 与 V-Liver 同样的捕获\n\n我们录制 17live 实际播出的画面 — 无论您是聊天/唱歌/跳舞的真人 Liver、有自定义场景的 OBS 合成 Liver,还是运行 Live2D / 3D 形象的 V-Liver。捕获在 17live 分发之前发生,所以最终视频与粉丝在直播中看到的完全一致:形象、叠加、变声、礼物动画全部保留。\n\n### 手机不用 App,电脑不用 OBS\n\n服务器端。从手机或电脑像平常一样直播,录制在我们的基础设施里进行。直播开始后,您的手机可以休眠,笔记本可以关机 — 录制继续。设备没有 CPU 占用、GPU 负担、额外耗电。这对持续 4 小时以上的歌唱或谈话直播很重要。\n\n### 超越 90 秒的剪辑限制\n\n17live App 内的 Stream Clips 在 App 内分享时很棒,但被限制在 15-90 秒,并且不会离开 17live 表面。高级主播可以在 我们的平台 上使用 ClipAI 从完整保存的直播中剪出任意长度的精选片段,适配 **TikTok、Instagram Reels、YouTube Shorts** — 这些正是大多数 17live 外的潜在观众实际所在的平台。把它们用作把粉丝引回 17live 直播间的漏斗。\n\n### 同等支持经纪签约与独立主播\n\n17live 的经纪管理系统主动发掘和支持主播 — 这是它区别于纯自助 App 的特色。我们的平台 不会触碰任何这些。它不登录您的 17live 账号,不干涉 Hot Star 活动、礼物推广或经纪公司工具。它是被动的并行录制 — 您来控制,您的 URL,您的存档。\n\n### 浏览器中观看,需要时下载\n\n每一场 17live 录制都能在任何现代浏览器中即时播放。观看不需要 17live 账号 — 把 URL 分享给任何人、任何地方。高级创作者可以从每场直播下载原始 HEVC 视频文件用于再编辑、作为长视频 VOD 上传到 YouTube,或本地存档。\n\n### 主动开启,您自己的内容\n\n我们的平台 只录制您自己的主页,只在您主动开启之后。法律地位与从 17live 应用内的 Stream Archive 下载您自己的直播相同 — 只是存储在不同的位置(不是在 App 内,而是在您自己域名上的公开网址)。随时可停止录制,任何录制都可一键删除。",
+    "kwai": "## 我们的平台 上的 Kwai 录制\n\nKwai(来自普通话 快 *kuài*,意为「快速」)是 **Kuaishou Technology**(HKEX 1024)的全球短视频+直播应用,常被称为亚洲仅次于抖音/TikTok 的 #2 短视频平台。在中国之外,Kwai 在**巴西**占主导地位(其最大市场,与 TikTok 竞争),加上印度尼西亚、墨西哥、阿根廷、哥伦比亚、中东和俄罗斯/CIS。我们的平台 将每场 Kwai Live 捕获到**公开可访问网络的录制** — Kwai 应用之外,开放网络上,Google 可索引。\n\n### 应用内的 Kwai vs. 开放网络上的 Kwai\n\nKwai 围绕其应用内信息流构建:滚动短视频、进入 Live、通过 K-coins 发送礼物,一切都在 Kwai 表面内。这对已在 Kwai 上的用户来说很棒。但当您的粉丝不在 Kwai 上时 — WhatsApp/Instagram 上的巴西粉丝、Telegram 上的印度尼西亚关注者、Kwai 甚至未安装的市场中的观众 — 播出就消失了。我们的平台 把每场 Kwai Live 录制到公开 URL,例如 `livestreamrecorder.com/kwai/your-username/video/...`,任何人都可以在任何浏览器中打开。观看无需安装 Kwai,无需 Kwai 账户,无应用门槛。\n\n### 为移动优先、蜂窝网络优先创作者构建\n\nKwai 最大的市场 — 巴西、印度尼西亚、MENA — 也是移动数据和电池是宝贵资源的市场。创作者不希望手机在后台运行 OBS 或屏幕录制器而烧坏。我们明白。我们的平台 在服务器端录制。您从手机上像平常一样在 Kwai 上播出 — 您的手机可以锁定屏幕、入睡、丢失通话 — 录制在我们的基础设施中继续。设备上零 CPU、零 GPU、零额外电池成本。\n\n### 巴西 Kwai 的发现鸿沟\n\nKwai BR 是一个庞大的生态系统,但在开放的葡萄牙语网络上基本不可见。在 Google 上搜索巴西 Kwai 创作者,您经常会得到内容稀薄的个人资料页面或第三方追踪网站。我们的平台 URL 干净、可索引、可分享 — 巴西创作者首次获得真正的 Google 足迹,每场 Kwai Live 充当 SEO 可发现的永久页面。\n\n### ClipAI:从 Kwai Live 到 TikTok / Reels / Shorts\n\nKwai 在新兴市场占主导地位,但 TikTok / Instagram / YouTube 仍主导全球发现。ClipAI 扫描您保存的 Kwai Live 并剪辑为 **TikTok、Instagram Reels、YouTube Shorts** 格式化的竖向精彩片段 — Kwai 之外的发现层。音乐翻唱、舞蹈、喜剧片段、礼物反应、观众互动 — 跨发以扩大受众漏斗回到您的 Kwai Live。\n\n### 在浏览器中观看,需要时下载\n\n每个保存的 Kwai Live 在任何现代浏览器中即时播放。观众无需 Kwai 账户。Premium 创作者可以从每场 Live 下载原始 HEVC 视频文件,用于重新编辑为 YouTube 长形式内容、合集视频或本地存档。\n\n### 不接触您的 Kwai 账户或收入\n\n我们的平台 不登录您的 Kwai 账户,看不到 K-coins,不读取您的礼物收入,不干涉 Kwai 创作者计划层级。录制由您作为 Kwai 创作者主动开启,针对您**自己**的账户,只录制您自己的直播 — 不录制其他任何东西。您的 Kwai 账户状态、排名和收益分成完全保留在 Kwai 的领域内。\n\n### 主动开启,您自己的内容,随时删除\n\n我们的平台 只录制您自己的个人资料,只在您主动开启之后。随时停止录制流程。一键删除任何过去的 Kwai 录制。您的内容、您的 URL、您的控制 — 独立于 Kwai 应用,在开放公开网络上,您潜在受众的其余部分终于可以找到您。",
+    "nimotv": "## NimoTV Live Recordings on 我们的平台\n\nNimoTV (launched 2018 by Huya, part of Tencent's global gaming ecosystem) is the international mobile-esports streaming platform — purpose-built for the mobile-gaming explosion happening across **Brazil, Indonesia, Thailand, Mexico, and Peru**. The catalogue is dominated by **Mobile Legends: Bang Bang, Free Fire, PUBG Mobile, Call of Duty: Mobile, Wild Rift, and Arena of Valor**. Its creator base is mostly phone-only — no PC, no OBS, no capture card. When a ranked grind ends, the broadcast is gone. 我们的平台 catches every match before it disappears, on a public web URL fans can rewatch anytime.\n\n### Phone-Only Capture, Server-Side\n\nThe NimoTV creator workflow is brutally simple: open the NimoTV app, hit go-live, play the game, end the stream. There's no native VOD export. There's no \"keep my last broadcast for replay\" button you can rely on across regions and account tiers. And a phone running a ranked Mobile Legends match doesn't have spare resources to also run a screen recorder in the background — thermals, FPS, battery, and data all suffer. 我们的平台 runs entirely in our cloud. Your phone broadcasts on NimoTV the way it always has; we capture the stream upstream and store it on your creator page.\n\n### Full-Length Matches, Not 30-Second Clips\n\nMobile esports matches are long. MLBB ranked grinds run hours, Free Fire squads rotate through round after round, PUBG Mobile final-circle hunts can stretch a broadcast past 4 hours. NimoTV's in-app clip and replay surfaces, where they exist, are short-form by design. 我们的平台 saves the full broadcast — every match, every draft phase, every comms moment — at full length, ready to scrub. Want to review a teamfight you lost? Pull the recording, jump to the timestamp. Want a specific MVP highlight for a thumbnail? Clip it from the saved Live.\n\n### Brazilian and Indonesian Discovery, the Open Web Way\n\nNimoTV is huge inside its app in Brazil and SE Asia. It is also almost completely invisible on the open Portuguese, Spanish, and Indonesian web. Search for a top Brazilian MLBB streamer on Google and you'll get thin profile pages, third-party trackers, or nothing useful. Your 我们的平台 creator page is indexable, shareable, and openable in any browser — your Lives finally get a real Google footprint.\n\n### Cross-Posting to Where Mobile Gaming Fans Actually Hang Out\n\n#MLBB, #FreeFire, #PUBGM, #MobileGaming — the mobile esports community lives across TikTok, Instagram, YouTube, Discord, and language-specific community apps. Most don't have the NimoTV app installed and aren't going to install it to watch one stream. ClipAI scans your saved NimoTV Lives and cuts vertical highlight clips formatted for **TikTok, Instagram Reels, YouTube Shorts** — clutch plays, MVP moments, gift reactions. Use them as the funnel that brings new fans back to your NimoTV channel.\n\n### Watch in Browser, Download if You Need It\n\nEvery saved NimoTV Live plays instantly in any modern browser. No NimoTV account needed to watch. Premium creators can download the raw video file from each Live — useful for uploading full matches to YouTube as long-form gaming content, cutting compilations, or local archival.\n\n### Doesn't Touch Your NimoTV Account or Diamond Income\n\n我们的平台 never logs into your NimoTV account, doesn't see diamond income, doesn't read your gifting stats, and doesn't interfere with Huya / Tencent creator program tiers or partner status. The recording is opt-in by you as the NimoTV creator for **your own** account, and only your own Lives — nothing else. Your NimoTV ranking, watch-time, gifting, and partner status remain entirely on NimoTV.\n\n### Opt-In, Delete Anytime\n\n我们的平台 only records your own profile, only after you opt in. Stop recording any time. Delete any past NimoTV Live with a single click. Your content, your URL, your control — independent of the NimoTV app, built for mobile esports creators who don't have time to also run a recording rig.",
+    "vklive": "## VK Live Recordings on 我们的平台\n\nVK Live is the livestreaming layer inside **VKontakte (VK)**, Russia's biggest social network with over 100 million monthly active users. Unlike standalone streaming apps, VK Live is woven directly into VK's social graph — broadcasts appear in friends' feeds, get reposted into communities, integrate with **VK Music** and the **VK Play** gaming platform, and reach an audience that spans Russia, Belarus, Kazakhstan, and Russian-speaking communities worldwide. Since 2022, when Western livestreaming options became harder to access from Russia, VK Live has grown significantly as the de-facto livestreaming home for Russian-speaking creators. 我们的平台 records every VK Live broadcast to a stable, public web URL — built for creators who want their work to outlive a single news cycle in the VK feed.\n\n### The VK Feed Buries Streams Within Hours\n\nVK Live is a social-first stream surface. The strength of that design: a Live shows up in followers' feeds in real time, can be reposted into communities, pulls live engagement from the VK social graph. The weakness of that design: the VK algorithm prioritizes fresh content. Within a few hours of going offline, your broadcast slides down the feed. Within 24 hours, even popular VK Lives are effectively invisible to anyone who didn't catch them live. There's no proper archive UX, no dedicated past-streams view on your profile. Fans who'd love to rewatch a Dota 2 match, share a music set with a friend, or pull up that one clutch CS round you had last weekend have no real place to go.\n\n我们的平台 gives every VK Live broadcast a stable URL on your creator page that exists independently of the VK feed cycle. The feed moves on, your archive stays.\n\n### Built for the VK Live Creator Mix\n\nVK Live's creator base is broad and category-rich. **Gaming**: Dota 2, CS 2, World of Tanks, Standoff 2 — the cornerstones of the Russian-speaking gaming community. **Music**: artists running album drops, acoustic sets, electronic DJ sets, often integrated with their VK Music releases. **IRL and lifestyle**: vlog-style streams, cooking, travel (where geopolitics allows), commentary on news and pop culture. **Anime and manga commentators**: reaction streams, watch-alongs, deep-dive discussions. **Educational**: language learning, coding tutorials, exam prep. The capture is upstream of your local hardware, so whatever you broadcast — OBS scene composition, gameplay overlays, music visualisers, webcam-only chat — preserves exactly as your fans saw it.\n\n### A Permanent Home for Long-Form Content\n\nThe VK feed is built for short attention spans — quick scrolling, fast engagement, fresh posts every few hours. That's fine for a 2-minute clip and actively hostile to a 3-hour Dota grind or a 90-minute concert set. A permanent archive on 我们的平台 is the long-form counterpart: fans who want to actually sit with your stream, rewatch a specific match, or share a moment with a friend get a stable URL that works the same way next week and next year. The clip lives in the feed; the full broadcast lives on your creator page.\n\n### Russian, CIS, and Diaspora Audiences\n\nVK is dominant inside Russia, Belarus, and Kazakhstan, but Russian-speaking communities also live throughout Europe, Israel, the US, and Canada — many of whom don't actively maintain a VK account day-to-day. 我们的平台 URLs work in any browser, anywhere in the world, with no VK login required to watch. Your diaspora fans get a way to keep up with your work that doesn't depend on them maintaining an active VK presence.\n\n### Cross-Platform Reach with ClipAI\n\nClipAI scans your saved VK Live broadcasts and cuts vertical short-form clips ready for **TikTok, Instagram Reels, YouTube Shorts**, and VK's own short-video features. Highlight plays from a Dota match, music drops from a concert set, funny chat moments, IRL reactions — turn one long broadcast into a stream of shareable content that brings new fans back to your VK Live channel.\n\n### Watch in Browser, Download if You Need It\n\nEvery saved VK Live plays instantly in any modern browser, no VK account required. Premium creators can download the raw video file from each broadcast — useful for re-uploading full matches to YouTube as long-form content, cutting compilations, or local archival on your own machine.\n\n### Doesn't Touch Your VK Account or Integrations\n\n我们的平台 never logs into your VK account, doesn't interact with VK Music tags, doesn't touch VK Play integrations, and doesn't affect any of VK's creator-side metrics, monetization, or community management. The recording is opt-in by you as the VK Live creator for **your own** account, and only captures your own broadcasts — nothing else. Your VK profile, community pages, friend graph, and creator status stay entirely within VK.\n\n### Opt-In, Delete Anytime\n\n我们的平台 only records your own profile, only after you opt in. Stop the recording flow any time. Delete any past VK Live with a single click. Your content, your URL, your control — a permanent archive of your work on the open web, where the VK feed buries streams fast but your back catalogue stays put.",
+    "chzzk": "## 在 我们的平台 上观看 Chzzk 录像\n\nChzzk(치지직)是韩国最大互联网公司 **Naver** 运营的直播平台,2023 年 12 月进入公测,2024 年 4 月正式上线 — 时间点正好与 Twitch 退出韩国市场重合。Naver 配套推出了一键 Twitch 导入工具,把主播原本在 Twitch 上的关注者和订阅一次性带过来,Chzzk 也因此承接了韩国最受关注的一大批直播红人,成了他们的新家。「치지직」本身是一个拟声词,模仿的是老式阴极射线管电视在频道之间调台时那种「沙沙」的雪花噪声 — 就是老电视搜到信号那一瞬间的声音,Naver 选这个名字是要唤起一场直播刚刚接通画面的那一刻。截至 2026 年初,Chzzk 在韩国直播观看时长中拿下大约 39% 的份额,以最高 1080p 60fps、8 Mbps 码率播出,明显高于 Twitch 在 2022 年末下调后的上限。我们的平台 按原画质捕获 Chzzk Live,并以永久网址提供回看 — 任何浏览器都能打开,不需要 Naver 账号。\n\n### 这里能回看什么内容\n\n录像来自从 Twitch 韩国关停之后迁过来的韩国综艺与游戏主播 — 长时间的闲聊直播、动辄半天的订阅马拉松、在新平台积累人气的音乐和 IRL 主播,还有转播 League of Legends Champions Korea(LCK)赛事的电竞合作频道(Naver 拿到了 2026 至 2030 年的 LCK 韩语独家转播权,与 SOOP Korea 共同持有)。每场 Live 都按完整时长捕获,不是剪过的精华片段,这样直播的整条节奏 — 铺垫、高光、以及高光之间那段长长的过渡 — 才能从头到尾保留下来。\n\n### 为什么还要一份独立存档\n\nChzzk 自己提供 VOD 和短剪辑,但 VOD 是逐场由主播决定开不开的,很多主播在订阅马拉松、商务合作和不希望被完整重看的活动场次里干脆把开关关掉。Live 结束时如果 VOD 是关着的,这场直播在 Chzzk 那边就直接没了。即便开了 VOD,保留时间也是有上限的 — 较老的直播会被滚出去,主播偶尔也会自己删除过往 Live,而 Chzzk 的剪辑系统呈现的是「瞬间」而不是「过程」,所以一场四小时的订阅马拉松靠剪辑根本拼不回来。我们的平台 上的存档则是这场原始直播在网上一个独立存在的永久网址 — 主播开不开 VOD、Chzzk 留多久、是不是只有剪辑、事后是不是删了,这四道坎都和它无关。"
   },
   "jsonLd": {
     "name": {
@@ -799,26 +855,28 @@
       "live17": "17live 直播录像",
       "kwai": "Kwai 直播录像",
       "nimotv": "NimoTV 直播录像",
-      "vklive": "VK Live 直播录像"
+      "vklive": "VK Live 直播录像",
+      "chzzk": "Chzzk 直播录像"
     },
     "description": {
-      "all": "在 LiveStreamRecorder 上观看创作者的直播录像。",
-      "tiktok": "在 LiveStreamRecorder 上观看创作者的 TikTok 直播录像。",
-      "twitch": "在 LiveStreamRecorder 上观看创作者的 Twitch 直播录像。",
-      "youtube": "在 LiveStreamRecorder 上观看创作者的 YouTube 直播录像。",
-      "kick": "在 LiveStreamRecorder 上观看创作者的 Kick 直播录像。",
-      "afreecatv": "在 LiveStreamRecorder 上观看创作者的 AfreecaTV 录像。",
-      "pandalive": "在 LiveStreamRecorder 上观看创作者的 Pandalive 录像。",
-      "bigo": "在 LiveStreamRecorder 上观看创作者的 Bigo 录像。",
-      "liveme": "在 LiveStreamRecorder 上观看创作者的 LiveMe 录像。",
-      "mixch": "在 LiveStreamRecorder 上观看创作者的 Mixch 录像。",
-      "trovo": "在 LiveStreamRecorder 上观看创作者的 Trovo 录像。",
-      "twitcast": "在 LiveStreamRecorder 上观看创作者的 TwitCasting 录像。",
-      "joilive": "在 LiveStreamRecorder 上观看主播的 Joilive 录像。",
-      "live17": "在 LiveStreamRecorder 上观看主播的 17live 录像。",
-      "kwai": "在 LiveStreamRecorder 上观看主播的 Kwai 录像。",
-      "nimotv": "在 LiveStreamRecorder 上观看主播的 NimoTV 录像。",
-      "vklive": "在 LiveStreamRecorder 上观看主播的 VK Live 录像。"
+      "all": "在 我们的平台 上观看创作者的直播录像。",
+      "tiktok": "在 我们的平台 上观看创作者的 TikTok 直播录像。",
+      "twitch": "在 我们的平台 上观看创作者的 Twitch 直播录像。",
+      "youtube": "在 我们的平台 上观看创作者的 YouTube 直播录像。",
+      "kick": "在 我们的平台 上观看创作者的 Kick 直播录像。",
+      "afreecatv": "在 我们的平台 上观看创作者的 AfreecaTV 录像。",
+      "pandalive": "在 我们的平台 上观看创作者的 Pandalive 录像。",
+      "bigo": "在 我们的平台 上观看创作者的 Bigo 录像。",
+      "liveme": "在 我们的平台 上观看创作者的 LiveMe 录像。",
+      "mixch": "在 我们的平台 上观看创作者的 Mixch 录像。",
+      "trovo": "在 我们的平台 上观看创作者的 Trovo 录像。",
+      "twitcast": "在 我们的平台 上观看创作者的 TwitCasting 录像。",
+      "joilive": "在 我们的平台 上观看主播的 Joilive 录像。",
+      "live17": "在 我们的平台 上观看主播的 17live 录像。",
+      "kwai": "在 我们的平台 上观看主播的 Kwai 录像。",
+      "nimotv": "在 我们的平台 上观看主播的 NimoTV 录像。",
+      "vklive": "在 我们的平台 上观看主播的 VK Live 录像。",
+      "chzzk": "来自 Chzzk(Naver 韩国直播平台)的存档直播,以原直播的分辨率和帧率捕获。"
     },
     "streamTitle": "{nickname} 直播 - {date}",
     "streamDescription": {
@@ -838,14 +896,15 @@
       "live17": "{nickname} 的 17live 录像",
       "kwai": "{nickname} 的 Kwai 录像",
       "nimotv": "{nickname} 的 NimoTV 录像",
-      "vklive": "{nickname} 的 VK Live 录像"
+      "vklive": "{nickname} 的 VK Live 录像",
+      "chzzk": "我们的平台 上的 Chzzk Live 录像 — 原韩国直播在 Chzzk 自家 VOD 窗口期之外的回看版本。"
     }
   },
   "recordedOn": "录制于 {date}",
   "faq": "常见问题",
   "country": {
     "title": "{country}的{platform}",
-    "description": "观看在 LiveStreamRecorder 上录制直播的{country}{platform}。观看他们的录像并发现新内容。",
+    "description": "观看在 我们的平台 上录制直播的{country}{platform}。观看他们的录像并发现新内容。",
     "heroTitle": "{country}的{platform}",
     "heroSubtitle": "观看{country}最新的{platform}视频。",
     "empty": {

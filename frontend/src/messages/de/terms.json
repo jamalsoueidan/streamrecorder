@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Nutzungsbedingungen",
-    "description": "Lies die Nutzungsbedingungen für die Nutzung der LiveStreamRecorder-Dienste."
+    "description": "Lies die Nutzungsbedingungen für die Nutzung der unsere Plattform-Dienste."
   },
   "header": {
     "title": "Nutzungsbedingungen",
@@ -13,20 +13,20 @@
   },
   "serviceDescription": {
     "title": "Dienstbeschreibung",
-    "content1": "LiveStreamRecorder bietet eine Cloud-basierte Plattform, mit der Content Creator ihre Live-Streams von Plattformen wie TikTok, Twitch, YouTube, Kick, AfreecaTV und Pandalive automatisch aufnehmen, archivieren und speichern können.",
+    "content1": "Unsere Plattform bietet eine Cloud-basierte Plattform, mit der Content Creator ihre Live-Streams von Plattformen wie TikTok, Twitch, YouTube, Kick, AfreecaTV und Pandalive automatisch aufnehmen, archivieren und speichern können.",
     "content2": "Da die Aufnahme und Speicherung remote auf unseren Servern erfolgt, profitieren Nutzer von erhöhtem Komfort und sind weniger auf eigene Hardware angewiesen – ohne Software-Installation oder dauerhaft laufende Geräte.",
-    "content3": "LiveStreamRecorder ist ein technischer Dienstleister. Wir hosten, besitzen oder kontrollieren keine Inhalte von Drittanbieter-Streaming-Plattformen."
+    "content3": "Unsere Plattform ist ein technischer Dienstleister. Wir hosten, besitzen oder kontrollieren keine Inhalte von Drittanbieter-Streaming-Plattformen."
   },
   "userContent": {
     "title": "Nutzerinhalte & Lizenz",
     "content1": "Du behältst alle geistigen Eigentumsrechte an Inhalten, die du an uns übermittelst oder über unseren Dienst aufnimmst. Wir werden niemals Eigentum an deinen Inhalten beanspruchen.",
-    "content2": "Indem du unseren Dienst zur Aufnahme, zum Hochladen oder anderweitigen Übertragen von Inhalten nutzt, gewährst du LiveStreamRecorder eine nicht-exklusive, gebührenfreie, übertragbare, unterlizenzierbare, weltweite Lizenz zur Nutzung, zum Hosten, Speichern, Anzeigen, Verbreiten und Bereitstellen deiner Inhalte zum Zweck des Betriebs und der Bereitstellung des Dienstes.",
+    "content2": "Indem du unseren Dienst zur Aufnahme, zum Hochladen oder anderweitigen Übertragen von Inhalten nutzt, gewährst du unsere Plattform eine nicht-exklusive, gebührenfreie, übertragbare, unterlizenzierbare, weltweite Lizenz zur Nutzung, zum Hosten, Speichern, Anzeigen, Verbreiten und Bereitstellen deiner Inhalte zum Zweck des Betriebs und der Bereitstellung des Dienstes.",
     "content3": "Diese Lizenz besteht, bis du deine Inhalte oder dein Konto löschst. Inhalte, die von anderen Nutzern geteilt, heruntergeladen oder zwischengespeichert wurden, können jedoch weiterhin verfügbar bleiben.",
     "content4": "Du erklärst und garantierst, dass du Inhaber aller Inhalte bist, die du über unseren Dienst aufnimmst, oder die nötigen Rechte daran besitzt, und dass du befugt bist, diese Lizenz zu erteilen."
   },
   "contentVisibility": {
     "title": "Sichtbarkeit von Inhalten",
-    "content1": "Indem du LiveStreamRecorder nutzt, verstehst und akzeptierst du, dass über unseren Dienst gemachte Aufnahmen für andere Nutzer auf der Plattform öffentlich sichtbar sein können.",
+    "content1": "Indem du unsere Plattform nutzt, verstehst und akzeptierst du, dass über unseren Dienst gemachte Aufnahmen für andere Nutzer auf der Plattform öffentlich sichtbar sein können.",
     "content2": "Du bist allein für die Inhalte verantwortlich, die du aufnimmst und verfügbar machst. Wenn du nicht möchtest, dass deine Aufnahmen öffentlich sind, kannst du deine Datenschutzeinstellungen anpassen, sofern verfügbar, oder den Dienst nicht nutzen.",
     "content3": "Du kannst jederzeit die Entfernung deiner Inhalte beantragen, indem du uns kontaktierst oder die verfügbaren Steuerelemente in deinen Kontoeinstellungen verwendest."
   },
@@ -45,16 +45,16 @@
       "notify": "Uns sofort über jeden unbefugten Zugriff zu informieren",
       "responsibility": "Die Verantwortung für alle Aktivitäten unter deinem Konto zu übernehmen"
     },
-    "footer": "LiveStreamRecorder haftet nicht für Verluste oder Schäden, die durch das Versäumnis der Sicherung deiner Konto-Anmeldedaten entstehen."
+    "footer": "Unsere Plattform haftet nicht für Verluste oder Schäden, die durch das Versäumnis der Sicherung deiner Konto-Anmeldedaten entstehen."
   },
   "intellectualProperty": {
     "title": "Geistiges Eigentum & Urheberrecht",
-    "content1": "LiveStreamRecorder respektiert die geistigen Eigentumsrechte anderer und erwartet von Nutzern dasselbe.",
+    "content1": "Unsere Plattform respektiert die geistigen Eigentumsrechte anderer und erwartet von Nutzern dasselbe.",
     "content2": "Indem du unseren Dienst nutzt, bestätigst du, dass du das Recht hast, die Inhalte aufzunehmen, die du unserer Plattform hinzufügst. Du bist allein dafür verantwortlich, sicherzustellen, dass deine Nutzung mit dem geltenden Urheberrecht und den Nutzungsbedingungen von Drittanbieter-Streaming-Plattformen übereinstimmt.",
-    "content3": "Das Aufnehmen, Vervielfältigen oder Weiterverbreiten von Live-Stream-Inhalten ohne Zustimmung des Erstellers kann eine Urheberrechtsverletzung darstellen und dich rechtlich haftbar machen. LiveStreamRecorder ist nur ein technisches Werkzeug – die volle rechtliche Verantwortung für die Nutzung trägst du.",
-    "content4": "Du verpflichtest dich, LiveStreamRecorder nicht zu verwenden, um Inhalte aufzunehmen, die du nicht besitzt oder für die du keine ausdrückliche Genehmigung zur Aufnahme hast. Wenn du einen Creator zu deinem Konto hinzufügst, erklärst du, dass du der Creator bist oder seine Zustimmung erhalten hast.",
-    "content5": "Jeder Missbrauch kann zur Kündigung deines Kontos und zu möglichen rechtlichen Schritten von Rechteinhabern führen. LiveStreamRecorder übernimmt keine Haftung für unbefugte Aufnahmen, die von Nutzern gemacht werden.",
-    "content6": "LiveStreamRecorder behält sich das Recht vor, den Zugriff auf jegliche Inhalte zu entfernen oder zu deaktivieren, die mutmaßlich Rechte verletzen, und kann den Zugriff auf den Dienst für wiederholte Rechtsverletzer beenden."
+    "content3": "Das Aufnehmen, Vervielfältigen oder Weiterverbreiten von Live-Stream-Inhalten ohne Zustimmung des Erstellers kann eine Urheberrechtsverletzung darstellen und dich rechtlich haftbar machen. Unsere Plattform ist nur ein technisches Werkzeug – die volle rechtliche Verantwortung für die Nutzung trägst du.",
+    "content4": "Du verpflichtest dich, unsere Plattform nicht zu verwenden, um Inhalte aufzunehmen, die du nicht besitzt oder für die du keine ausdrückliche Genehmigung zur Aufnahme hast. Wenn du einen Creator zu deinem Konto hinzufügst, erklärst du, dass du der Creator bist oder seine Zustimmung erhalten hast.",
+    "content5": "Jeder Missbrauch kann zur Kündigung deines Kontos und zu möglichen rechtlichen Schritten von Rechteinhabern führen. Unsere Plattform übernimmt keine Haftung für unbefugte Aufnahmen, die von Nutzern gemacht werden.",
+    "content6": "Unsere Plattform behält sich das Recht vor, den Zugriff auf jegliche Inhalte zu entfernen oder zu deaktivieren, die mutmaßlich Rechte verletzen, und kann den Zugriff auf den Dienst für wiederholte Rechtsverletzer beenden."
   },
   "prohibitedActivities": {
     "title": "Verbotene Aktivitäten",
@@ -103,12 +103,12 @@
       "nimotv": "Nutzungsbedingungen von NimoTV",
       "vklive": "Nutzungsbedingungen von VK Live"
     },
-    "content2": "Du bist allein dafür verantwortlich, diese Bedingungen Dritter zu prüfen und einzuhalten. LiveStreamRecorder ist nicht verantwortlich für Maßnahmen von Drittanbieter-Plattformen, einschließlich Inhaltsentfernungen, API-Änderungen oder Kontobeschränkungen.",
-    "content3": "Änderungen oder Beschränkungen, die von Drittanbieter-Plattformen auferlegt werden, können die Verfügbarkeit oder Funktionalität unserer Dienste beeinträchtigen. LiveStreamRecorder ist nicht verantwortlich für Störungen, die durch Drittanbieter-Plattformen verursacht werden."
+    "content2": "Du bist allein dafür verantwortlich, diese Bedingungen Dritter zu prüfen und einzuhalten. Unsere Plattform ist nicht verantwortlich für Maßnahmen von Drittanbieter-Plattformen, einschließlich Inhaltsentfernungen, API-Änderungen oder Kontobeschränkungen.",
+    "content3": "Änderungen oder Beschränkungen, die von Drittanbieter-Plattformen auferlegt werden, können die Verfügbarkeit oder Funktionalität unserer Dienste beeinträchtigen. Unsere Plattform ist nicht verantwortlich für Störungen, die durch Drittanbieter-Plattformen verursacht werden."
   },
   "serviceTiers": {
     "title": "Servicestufen & Zugriff",
-    "content1": "LiveStreamRecorder bietet sowohl kostenlose als auch Premium-Zugriffsstufen mit unterschiedlichen Funktionen und Beschränkungen an.",
+    "content1": "Unsere Plattform bietet sowohl kostenlose als auch Premium-Zugriffsstufen mit unterschiedlichen Funktionen und Beschränkungen an.",
     "content2": "Kostenlose Nutzer haben Zugriff auf grundlegende Funktionen mit Nutzungsbeschränkungen. Premium-Abonnenten genießen Zugriff auf alle Funktionen, einschließlich KI-Tools, erweiterten Speicher und priorisierten Support.",
     "content3": "Anonyme Besucher können eine begrenzte Anzahl von Aufnahmen ansehen, bevor sie ein Konto erstellen müssen. Registrierte kostenlose Nutzer können je nach Kontoaktivität zusätzliche Anzeigebeschränkungen haben.",
     "content4": "Wir behalten uns das Recht vor, Vorteile, Funktionen und Beschränkungen der Stufen jederzeit zu ändern. Wesentliche Änderungen werden bestehenden Nutzern mitgeteilt."
@@ -134,7 +134,7 @@
   "liability": {
     "title": "Haftungsbeschränkung",
     "content": "Diese Plattform wird ohne ausdrückliche oder stillschweigende Garantien jeglicher Art im Ist-Zustand und nach Verfügbarkeit bereitgestellt. Die Nutzung des Dienstes erfolgt auf dein eigenes Risiko.",
-    "intro": "LiveStreamRecorder haftet nicht für:",
+    "intro": "Unsere Plattform haftet nicht für:",
     "items": {
       "content": "Inhalte, die von Nutzern erstellt, aufgenommen oder abgerufen werden",
       "thirdParty": "Aktionen von Drittanbieter-Streaming-Plattformen",
@@ -147,11 +147,11 @@
   },
   "indemnification": {
     "title": "Freistellung",
-    "content": "Du erklärst dich bereit, LiveStreamRecorder und seine verbundenen Unternehmen, leitenden Angestellten, Vertreter und Mitarbeiter von Ansprüchen, Schäden, Verlusten, Verbindlichkeiten, Kosten oder Aufwendungen (einschließlich Anwaltskosten) freizustellen, schadlos zu halten und zu verteidigen, die sich aus deiner Nutzung der Plattform, deinem Verstoß gegen diese Bedingungen, deiner Verletzung von Rechten Dritter oder unbefugten Aufnahmen, die du mit dem Dienst machst, ergeben."
+    "content": "Du erklärst dich bereit, unsere Plattform und seine verbundenen Unternehmen, leitenden Angestellten, Vertreter und Mitarbeiter von Ansprüchen, Schäden, Verlusten, Verbindlichkeiten, Kosten oder Aufwendungen (einschließlich Anwaltskosten) freizustellen, schadlos zu halten und zu verteidigen, die sich aus deiner Nutzung der Plattform, deinem Verstoß gegen diese Bedingungen, deiner Verletzung von Rechten Dritter oder unbefugten Aufnahmen, die du mit dem Dienst machst, ergeben."
   },
   "modifications": {
     "title": "Änderungen",
-    "content1": "LiveStreamRecorder behält sich das Recht vor, jeden Teil des Dienstes jederzeit ohne vorherige Ankündigung zu ändern, zu aktualisieren oder einzustellen. Wir können diese Bedingungen ebenfalls jederzeit aktualisieren.",
+    "content1": "Unsere Plattform behält sich das Recht vor, jeden Teil des Dienstes jederzeit ohne vorherige Ankündigung zu ändern, zu aktualisieren oder einzustellen. Wir können diese Bedingungen ebenfalls jederzeit aktualisieren.",
     "content2": "Die fortgesetzte Nutzung der Plattform nach Änderungen bedeutet, dass du die neuen Bedingungen akzeptierst. Wir aktualisieren das Datum Zuletzt aktualisiert am oberen Rand dieser Seite, wenn Änderungen vorgenommen werden."
   },
   "governingLaw": {
@@ -162,5 +162,5 @@
     "title": "Kontakt",
     "content": "Fragen oder Bedenken zu diesen Bedingungen? Kontaktiere uns unter contact@livestreamrecorder.com"
   },
-  "footerNote": "Indem du LiveStreamRecorder nutzt, bestätigst du, dass du diese Nutzungsbedingungen gelesen und verstanden hast und dich durch sie gebunden erklärst."
+  "footerNote": "Indem du unsere Plattform nutzt, bestätigst du, dass du diese Nutzungsbedingungen gelesen und verstanden hast und dich durch sie gebunden erklärst."
 }

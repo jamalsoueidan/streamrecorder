@@ -35,6 +35,7 @@ export const SOCIAL_URL_PATTERNS: Partial<
   [FollowerTypeEnum.Nimotv]: (username) =>
     `https://www.nimo.tv/live/${username}`,
   [FollowerTypeEnum.Vklive]: (username) => `https://live.vkvideo.ru/${username}`,
+  [FollowerTypeEnum.Chzzk]: (username) => `https://chzzk.naver.com/${username}`,
 };
 
 export const URL_PATTERNS: Partial<Record<FollowerTypeEnum, UrlPattern>> = {
@@ -56,6 +57,7 @@ export const URL_PATTERNS: Partial<Record<FollowerTypeEnum, UrlPattern>> = {
   [FollowerTypeEnum.Kwai]: (username) => `/kwai/${username}`,
   [FollowerTypeEnum.Nimotv]: (username) => `/nimotv/${username}`,
   [FollowerTypeEnum.Vklive]: (username) => `/vklive/${username}`,
+  [FollowerTypeEnum.Chzzk]: (username) => `/chzzk/${username}`,
 };
 
 export const getSocialUrl = (

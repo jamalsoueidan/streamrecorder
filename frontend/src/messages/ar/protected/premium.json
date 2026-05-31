@@ -1,7 +1,7 @@
 {
   "title": "بريميوم",
-  "descriptionPremium": "لديك صلاحية الوصول لكل ما يقدمه LiveStreamRecorder",
-  "descriptionNonPremium": "اشترك الآن واستمتع بكل ما يقدمه LiveStreamRecorder",
+  "descriptionPremium": "لديك صلاحية الوصول لكل ما يقدمه موقعنا",
+  "descriptionNonPremium": "اشترك الآن واستمتع بكل ما يقدمه موقعنا",
   "descriptionShort": "اشترك واستمتع بكل الميزات",
   "billingPeriodMonthly": "الشهري",
   "billingPeriodQuarterly": "ربع سنوي",
@@ -45,7 +45,7 @@
   "activeMessage": "أنت على الاشتراك {billingPeriod}. تاريخ الفوترة القادم: {renewDate}.",
   "lifetimeMessage": "لديك صلاحية مدى الحياة لجميع ميزات البريميوم. شكراً لدعمك!",
   "cancelSubscription": "إلغاء الاشتراك",
-  "supportMessage": "LiveStreamRecorder مشروع شخص واحد. دعمك يساعد في إبقاء الخوادم تعمل وإضافة ميزات جديدة. شكراً لك!",
+  "supportMessage": "موقعنا مشروع شخص واحد. دعمك يساعد في إبقاء الخوادم تعمل وإضافة ميزات جديدة. شكراً لك!",
   "choosePlan": "اختر اشتراكك",
   "perMonth": "${price}/شهر",
   "oneTime": "دفعة واحدة",

@@ -28,7 +28,7 @@
     "infringing": {
       "urls": {
         "label": "URLs des enregistrements en infraction",
-        "description": "Une URL par ligne. Il s'agit des enregistrements sur LiveStreamRecorder dont vous demandez la suppression.",
+        "description": "Une URL par ligne. Il s'agit des enregistrements sur notre plateforme dont vous demandez la suppression.",
         "placeholder": "https://www.livestreamrecorder.com/twitch/..."
       }
     },
