@@ -28,7 +28,7 @@
     "infringing": {
       "urls": {
         "label": "URL rekaman yang melanggar",
-        "description": "Satu URL per baris. Ini adalah rekaman di platform kami yang Anda minta untuk kami hapus.",
+        "description": "Satu URL per baris. Ini adalah rekaman di LiveStreamRecorder yang Anda minta untuk kami hapus.",
         "placeholder": "https://www.livestreamrecorder.com/twitch/..."
       }
     },

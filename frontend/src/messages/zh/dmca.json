@@ -28,7 +28,7 @@
     "infringing": {
       "urls": {
         "label": "侵权录制内容的 URL",
-        "description": "每行一个 URL。这些是你要求我们从 我们的平台 上删除的录制内容。",
+        "description": "每行一个 URL。这些是你要求我们从 LiveStreamRecorder 上删除的录制内容。",
         "placeholder": "https://www.livestreamrecorder.com/twitch/..."
       }
     },

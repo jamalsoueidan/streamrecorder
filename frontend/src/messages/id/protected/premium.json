@@ -1,7 +1,7 @@
 {
   "title": "Premium",
-  "descriptionPremium": "Anda memiliki akses ke semua yang ditawarkan platform kami",
-  "descriptionNonPremium": "Dapatkan akses instan ke semua yang ditawarkan platform kami",
+  "descriptionPremium": "Anda memiliki akses ke semua yang ditawarkan LiveStreamRecorder",
+  "descriptionNonPremium": "Dapatkan akses instan ke semua yang ditawarkan LiveStreamRecorder",
   "descriptionShort": "Dapatkan akses instan ke semuanya",
   "billingPeriodMonthly": "bulanan",
   "billingPeriodQuarterly": "3 bulanan",
@@ -45,7 +45,7 @@
   "activeMessage": "Anda menggunakan paket {billingPeriod}. Tanggal tagihan berikutnya: {renewDate}.",
   "lifetimeMessage": "Anda memiliki akses seumur hidup ke semua fitur premium. Terima kasih atas dukungan Anda!",
   "cancelSubscription": "Batalkan langganan",
-  "supportMessage": "Platform kami adalah proyek satu orang. Dukungan Anda membantu menjaga server tetap berjalan dan fitur baru terus hadir. Terima kasih!",
+  "supportMessage": "LiveStreamRecorder adalah proyek satu orang. Dukungan Anda membantu menjaga server tetap berjalan dan fitur baru terus hadir. Terima kasih!",
   "choosePlan": "Pilih Paket Anda",
   "perMonth": "${price}/bln",
   "oneTime": "satu kali",

@@ -1,7 +1,7 @@
 {
   "title": "프리미엄",
-  "descriptionPremium": "저희 플랫폼의 모든 기능을 이용할 수 있습니다",
-  "descriptionNonPremium": "저희 플랫폼의 모든 기능에 바로 접근하세요",
+  "descriptionPremium": "LiveStreamRecorder의 모든 기능을 이용할 수 있습니다",
+  "descriptionNonPremium": "LiveStreamRecorder의 모든 기능에 바로 접근하세요",
   "descriptionShort": "모든 기능에 바로 접근하세요",
   "billingPeriodMonthly": "월간",
   "billingPeriodQuarterly": "분기",
@@ -45,7 +45,7 @@
   "activeMessage": "{billingPeriod} 플랜을 이용 중입니다. 다음 결제일: {renewDate}.",
   "lifetimeMessage": "모든 프리미엄 기능에 평생 접근할 수 있습니다. 지원해 주셔서 감사합니다!",
   "cancelSubscription": "구독 취소",
-  "supportMessage": "저희 플랫폼는 1인 프로젝트입니다. 지원해 주시면 서버 운영과 새로운 기능 개발에 도움이 됩니다. 감사합니다!",
+  "supportMessage": "LiveStreamRecorder는 1인 프로젝트입니다. 지원해 주시면 서버 운영과 새로운 기능 개발에 도움이 됩니다. 감사합니다!",
   "choosePlan": "플랜 선택",
   "perMonth": "${price}/월",
   "oneTime": "일회성",

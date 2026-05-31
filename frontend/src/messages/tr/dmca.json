@@ -28,7 +28,7 @@
     "infringing": {
       "urls": {
         "label": "İhlal eden kayıtların URL'leri",
-        "description": "Her satıra bir URL. Bunlar, platformumuz üzerinde kaldırmamızı istediğiniz kayıtlardır.",
+        "description": "Her satıra bir URL. Bunlar, LiveStreamRecorder üzerinde kaldırmamızı istediğiniz kayıtlardır.",
         "placeholder": "https://www.livestreamrecorder.com/twitch/..."
       }
     },

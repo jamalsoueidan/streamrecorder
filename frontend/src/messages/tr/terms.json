@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Şartlar ve Koşullar",
-    "description": "Platformumuz hizmetlerini kullanma şartları ve koşullarını okuyun."
+    "description": "LiveStreamRecorder hizmetlerini kullanma şartları ve koşullarını okuyun."
   },
   "header": {
     "title": "Şartlar ve Koşullar",
@@ -9,24 +9,24 @@
   },
   "introduction": {
     "title": "Giriş",
-    "content": "LiveStreamRecorder.com ve hizmetlerini kullanarak, bu Şartlar ve Koşullarla bağlı olmayı kabul ediyorsunuz. Platformumuzu kullanmadan önce lütfen bunları dikkatlice okuyun. Bu şartları kabul etmiyorsanız, Hizmeti kullanamazsınız."
+    "content": "LiveStreamRecorder.com ve hizmetlerini kullanarak, bu Şartlar ve Koşullarla bağlı olmayı kabul ediyorsunuz. LiveStreamRecorderu kullanmadan önce lütfen bunları dikkatlice okuyun. Bu şartları kabul etmiyorsanız, Hizmeti kullanamazsınız."
   },
   "serviceDescription": {
     "title": "Hizmet Açıklaması",
-    "content1": "Platformumuz, içerik üreticilerinin TikTok, Twitch, YouTube, Kick, AfreecaTV ve Pandalive gibi platformlardan canlı yayınlarını otomatik olarak kaydetmelerini, arşivlemelerini ve saklamalarını sağlayan bulut tabanlı bir platform sunar.",
+    "content1": "LiveStreamRecorder, içerik üreticilerinin TikTok, Twitch, YouTube, Kick, AfreecaTV ve Pandalive gibi platformlardan canlı yayınlarını otomatik olarak kaydetmelerini, arşivlemelerini ve saklamalarını sağlayan bulut tabanlı bir platform sunar.",
     "content2": "Kayıt ve depolamayı sunucularımızda uzaktan gerçekleştirerek, kullanıcılar yazılım kurmaya veya cihazlarını çalışır durumda bırakmaya gerek kalmadan artırılmış kolaylıktan ve kişisel donanıma daha az bağımlılıktan yararlanır.",
-    "content3": "Platformumuz teknik bir hizmet sağlayıcısıdır. Üçüncü taraf yayın platformlarının içeriğini barındırmıyoruz, sahip olmuyoruz veya kontrol etmiyoruz."
+    "content3": "LiveStreamRecorder teknik bir hizmet sağlayıcısıdır. Üçüncü taraf yayın platformlarının içeriğini barındırmıyoruz, sahip olmuyoruz veya kontrol etmiyoruz."
   },
   "userContent": {
     "title": "Kullanıcı İçeriği ve Lisans",
     "content1": "Bize gönderdiğiniz veya Hizmetimiz aracılığıyla kaydettiğiniz içerik üzerindeki fikri mülkiyet haklarınızı korursunuz. İçeriğiniz üzerinde hiçbir zaman sahiplik iddiasında bulunmayacağız.",
-    "content2": "Hizmetimizi içerik kaydetmek, yüklemek veya başka şekilde iletmek için kullanarak, platformumuz'a içeriğinizi Hizmeti işletmek ve sağlamak amacıyla kullanmak, barındırmak, depolamak, görüntülemek, dağıtmak ve kullanılabilir hale getirmek için münhasır olmayan, telifsiz, devredilebilir, alt lisanslanabilir, dünya çapında bir lisans veriyorsunuz.",
+    "content2": "Hizmetimizi içerik kaydetmek, yüklemek veya başka şekilde iletmek için kullanarak, LiveStreamRecorder'a içeriğinizi Hizmeti işletmek ve sağlamak amacıyla kullanmak, barındırmak, depolamak, görüntülemek, dağıtmak ve kullanılabilir hale getirmek için münhasır olmayan, telifsiz, devredilebilir, alt lisanslanabilir, dünya çapında bir lisans veriyorsunuz.",
     "content3": "Bu lisans, içeriğinizi veya hesabınızı silene kadar devam eder. Ancak, diğer kullanıcılar tarafından paylaşılan, indirilen veya önbelleğe alınan içerik kullanılabilir kalabilir.",
     "content4": "Hizmetimiz aracılığıyla kaydettiğiniz tüm içeriğe sahip olduğunuzu veya gerekli haklara sahip olduğunuzu ve bu lisansı verme yetkiniz olduğunu beyan ve garanti ediyorsunuz."
   },
   "contentVisibility": {
     "title": "İçerik Görünürlüğü",
-    "content1": "Platformumuz'ı kullanarak, Hizmetimiz aracılığıyla yapılan kayıtların platformdaki diğer kullanıcılar tarafından herkese açık olarak görülebileceğini anlıyor ve kabul ediyorsunuz.",
+    "content1": "LiveStreamRecorder'ı kullanarak, Hizmetimiz aracılığıyla yapılan kayıtların platformdaki diğer kullanıcılar tarafından herkese açık olarak görülebileceğini anlıyor ve kabul ediyorsunuz.",
     "content2": "Kaydettiğiniz ve kullanılabilir hale getirdiğiniz içerikten yalnızca siz sorumlusunuz. Kayıtlarınızın herkese açık olmasını istemiyorsanız, mümkün olduğunda gizlilik ayarlarınızı düzenleyebilir veya Hizmeti kullanmaktan kaçınabilirsiniz.",
     "content3": "Bizimle iletişime geçerek veya hesap ayarlarınızdaki mevcut kontrolleri kullanarak içeriğinizin kaldırılmasını istediğiniz zaman talep edebilirsiniz."
   },
@@ -45,16 +45,16 @@
       "notify": "Yetkisiz erişim durumunda bizi hemen bilgilendirmek",
       "responsibility": "Hesabınız altındaki tüm faaliyetler için sorumluluk kabul etmek"
     },
-    "footer": "Platformumuz, hesap bilgilerinizi güvence altına almamaktan kaynaklanan herhangi bir kayıp veya hasardan sorumlu değildir."
+    "footer": "LiveStreamRecorder, hesap bilgilerinizi güvence altına almamaktan kaynaklanan herhangi bir kayıp veya hasardan sorumlu değildir."
   },
   "intellectualProperty": {
     "title": "Fikri Mülkiyet ve Telif Hakkı",
-    "content1": "Platformumuz başkalarının fikri mülkiyet haklarına saygı duyar ve kullanıcıların da aynısını yapmasını bekler.",
-    "content2": "Hizmetimizi kullanarak, platformumuza eklediğiniz içeriği kaydetme hakkına sahip olduğunuzu onaylıyorsunuz. Kullanımınızın geçerli telif hakkı yasalarına ve üçüncü taraf yayın platformlarının hizmet şartlarına uygun olmasını sağlamaktan yalnızca siz sorumlusunuz.",
-    "content3": "Canlı yayın içeriğini içerik üreticisinin izni olmadan kaydetmek, çoğaltmak veya yeniden dağıtmak telif hakkı ihlali oluşturabilir ve sizi yasal sorumluluğa maruz bırakabilir. Platformumuz yalnızca teknik bir araçtır — onu nasıl kullandığınızın tam yasal sorumluluğunu siz taşırsınız.",
-    "content4": "Sahip olmadığınız veya kaydetmek için açık yetkiniz olmayan içeriği kaydetmek için platformumuz'ı kullanmamayı kabul ediyorsunuz. Hesabınıza bir içerik üreticisi eklerseniz, içerik üreticisi olduğunuzu veya onların iznini aldığınızı beyan ediyorsunuz.",
-    "content5": "Herhangi bir kötüye kullanım, hesabınızın feshedilmesine ve hak sahiplerinden olası yasal işlemlere yol açabilir. Platformumuz, kullanıcılar tarafından yapılan yetkisiz kayıtlar için sorumluluk kabul etmez.",
-    "content6": "Platformumuz, ihlal ettiği iddia edilen herhangi bir içeriğe erişimi kaldırma veya devre dışı bırakma hakkını saklı tutar ve tekrar ihlal edenlerin Hizmete erişimini sonlandırabilir."
+    "content1": "LiveStreamRecorder başkalarının fikri mülkiyet haklarına saygı duyar ve kullanıcıların da aynısını yapmasını bekler.",
+    "content2": "Hizmetimizi kullanarak, LiveStreamRecordera eklediğiniz içeriği kaydetme hakkına sahip olduğunuzu onaylıyorsunuz. Kullanımınızın geçerli telif hakkı yasalarına ve üçüncü taraf yayın platformlarının hizmet şartlarına uygun olmasını sağlamaktan yalnızca siz sorumlusunuz.",
+    "content3": "Canlı yayın içeriğini içerik üreticisinin izni olmadan kaydetmek, çoğaltmak veya yeniden dağıtmak telif hakkı ihlali oluşturabilir ve sizi yasal sorumluluğa maruz bırakabilir. LiveStreamRecorder yalnızca teknik bir araçtır — onu nasıl kullandığınızın tam yasal sorumluluğunu siz taşırsınız.",
+    "content4": "Sahip olmadığınız veya kaydetmek için açık yetkiniz olmayan içeriği kaydetmek için LiveStreamRecorder'ı kullanmamayı kabul ediyorsunuz. Hesabınıza bir içerik üreticisi eklerseniz, içerik üreticisi olduğunuzu veya onların iznini aldığınızı beyan ediyorsunuz.",
+    "content5": "Herhangi bir kötüye kullanım, hesabınızın feshedilmesine ve hak sahiplerinden olası yasal işlemlere yol açabilir. LiveStreamRecorder, kullanıcılar tarafından yapılan yetkisiz kayıtlar için sorumluluk kabul etmez.",
+    "content6": "LiveStreamRecorder, ihlal ettiği iddia edilen herhangi bir içeriğe erişimi kaldırma veya devre dışı bırakma hakkını saklı tutar ve tekrar ihlal edenlerin Hizmete erişimini sonlandırabilir."
   },
   "prohibitedActivities": {
     "title": "Yasaklı Faaliyetler",
@@ -76,7 +76,7 @@
   "contentRemoval": {
     "title": "İçerik Kaldırma ve DMCA",
     "content1": "Herhangi bir içeriği kaldırma veya herhangi bir hesabı kendi takdirimize göre feshetme hakkını saklı tutuyoruz. Telif hakkı ihlali iddialarına yanıt vereceğiz ve ihlal eden içeriğin kaldırılması ve tekrar ihlal edenlerin erişiminin sonlandırılması dahil olmak üzere yasaların gerektirdiği şekilde uygun önlemleri alacağız.",
-    "content2": "Platformumuzdaki içeriğin haklarınızı ihlal ettiğine, reşit olmayan birini içerdiğine veya başka şekilde bu şartları ihlal ettiğine inanıyorsanız, hızlı çözüm için tüm ayrıntılarla birlikte contact@livestreamrecorder.com adresinden bizimle iletişime geçin.",
+    "content2": "LiveStreamRecorderdaki içeriğin haklarınızı ihlal ettiğine, reşit olmayan birini içerdiğine veya başka şekilde bu şartları ihlal ettiğine inanıyorsanız, hızlı çözüm için tüm ayrıntılarla birlikte contact@livestreamrecorder.com adresinden bizimle iletişime geçin.",
     "footer": "Lütfen şunları ekleyin: telif hakkıyla korunan eserin açıklaması, ihlal eden içeriğin URL'si, iletişim bilgileriniz ve kullanımın yetkili olmadığına dair iyi niyetli bir inancınız olduğuna dair bir beyan."
   },
   "thirdPartyPlatforms": {
@@ -103,12 +103,12 @@
       "nimotv": "NimoTV Hizmet Şartları",
       "vklive": "VK Live Hizmet Şartları"
     },
-    "content2": "Bu üçüncü taraf şartlarını gözden geçirmekten ve bunlara uymaktan yalnızca siz sorumlusunuz. Platformumuz, içerik kaldırma, API değişiklikleri veya hesap kısıtlamaları dahil olmak üzere üçüncü taraf platformları tarafından gerçekleştirilen herhangi bir işlemden sorumlu değildir.",
-    "content3": "Üçüncü taraf platformları tarafından dayatılan değişiklikler veya kısıtlamalar hizmetlerimizin kullanılabilirliğini veya işlevselliğini etkileyebilir. Platformumuz, üçüncü taraf platformlarının neden olduğu herhangi bir kesintiden sorumlu değildir."
+    "content2": "Bu üçüncü taraf şartlarını gözden geçirmekten ve bunlara uymaktan yalnızca siz sorumlusunuz. LiveStreamRecorder, içerik kaldırma, API değişiklikleri veya hesap kısıtlamaları dahil olmak üzere üçüncü taraf platformları tarafından gerçekleştirilen herhangi bir işlemden sorumlu değildir.",
+    "content3": "Üçüncü taraf platformları tarafından dayatılan değişiklikler veya kısıtlamalar hizmetlerimizin kullanılabilirliğini veya işlevselliğini etkileyebilir. LiveStreamRecorder, üçüncü taraf platformlarının neden olduğu herhangi bir kesintiden sorumlu değildir."
   },
   "serviceTiers": {
     "title": "Hizmet Seviyeleri ve Erişim",
-    "content1": "Platformumuz, farklı özellikler ve sınırlamalarla hem ücretsiz hem de premium erişim seviyeleri sunar.",
+    "content1": "LiveStreamRecorder, farklı özellikler ve sınırlamalarla hem ücretsiz hem de premium erişim seviyeleri sunar.",
     "content2": "Ücretsiz kullanıcılar kullanım limitleri olan temel özelliklere erişebilir. Premium aboneler, AI araçları, genişletilmiş depolama ve öncelikli destek dahil olmak üzere tüm özelliklere erişimin keyfini çıkarır.",
     "content3": "Anonim ziyaretçiler, hesap oluşturmaları gerekmeden önce sınırlı sayıda kayıt görüntüleyebilir. Kayıtlı ücretsiz kullanıcıların hesap etkinliklerine göre ek görüntüleme sınırlamaları olabilir.",
     "content4": "Seviye avantajlarını, özellikleri ve sınırlamaları istediğimiz zaman değiştirme hakkımızı saklı tutuyoruz. Önemli değişiklikler mevcut kullanıcılara iletilecektir."
@@ -134,7 +134,7 @@
   "liability": {
     "title": "Sorumluluk Sınırlaması",
     "content": "Bu platform, açık veya zımni herhangi bir garanti olmaksızın olduğu gibi ve mevcut olduğu şekilde sağlanmaktadır. Hizmeti kullanımınız tamamen kendi riskinize aittir.",
-    "intro": "Platformumuz şunlardan sorumlu değildir:",
+    "intro": "LiveStreamRecorder şunlardan sorumlu değildir:",
     "items": {
       "content": "Kullanıcılar tarafından oluşturulan, kaydedilen veya erişilen içerik",
       "thirdParty": "Üçüncü taraf yayın platformlarının eylemleri",
@@ -147,11 +147,11 @@
   },
   "indemnification": {
     "title": "Tazminat",
-    "content": "Platformumuz'ı ve bağlı kuruluşlarını, yetkililerini, temsilcilerini ve çalışanlarını, platformu kullanımınızdan, bu şartları ihlal etmenizden, herhangi bir üçüncü taraf haklarını ihlal etmenizden veya Hizmeti kullanarak yaptığınız yetkisiz kayıtlardan kaynaklanan herhangi bir talep, zarar, kayıp, yükümlülük, maliyet veya masrafa (yasal ücretler dahil) karşı savunmayı, tazmin etmeyi ve zarar görmemelerini sağlamayı kabul ediyorsunuz."
+    "content": "LiveStreamRecorder'ı ve bağlı kuruluşlarını, yetkililerini, temsilcilerini ve çalışanlarını, platformu kullanımınızdan, bu şartları ihlal etmenizden, herhangi bir üçüncü taraf haklarını ihlal etmenizden veya Hizmeti kullanarak yaptığınız yetkisiz kayıtlardan kaynaklanan herhangi bir talep, zarar, kayıp, yükümlülük, maliyet veya masrafa (yasal ücretler dahil) karşı savunmayı, tazmin etmeyi ve zarar görmemelerini sağlamayı kabul ediyorsunuz."
   },
   "modifications": {
     "title": "Değişiklikler",
-    "content1": "Platformumuz, Hizmetin herhangi bir bölümünü önceden haber vermeksizin istediğimiz zaman değiştirme, güncelleme veya durdurma hakkını saklı tutar. Bu şartları da istediğimiz zaman güncelleyebiliriz.",
+    "content1": "LiveStreamRecorder, Hizmetin herhangi bir bölümünü önceden haber vermeksizin istediğimiz zaman değiştirme, güncelleme veya durdurma hakkını saklı tutar. Bu şartları da istediğimiz zaman güncelleyebiliriz.",
     "content2": "Değişikliklerden sonra platformu kullanmaya devam etmeniz, yeni şartları kabul ettiğiniz anlamına gelir. Değişiklikler yapıldığında bu sayfanın üstündeki \"Son güncelleme\" tarihini güncelleyeceğiz."
   },
   "governingLaw": {
@@ -162,5 +162,5 @@
     "title": "Bize Ulaşın",
     "content": "Bu şartlarla ilgili sorularınız veya endişeleriniz mi var? contact@livestreamrecorder.com adresinden bizimle iletişime geçin"
   },
-  "footerNote": "Platformumuz'ı kullanarak, bu Şartları ve Koşulları okuduğunuzu, anladığınızı ve bunlara bağlı olmayı kabul ettiğinizi onaylıyorsunuz."
+  "footerNote": "LiveStreamRecorder'ı kullanarak, bu Şartları ve Koşulları okuduğunuzu, anladığınızı ve bunlara bağlı olmayı kabul ettiğinizi onaylıyorsunuz."
 }

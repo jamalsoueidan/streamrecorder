@@ -28,7 +28,7 @@
     "infringing": {
       "urls": {
         "label": "روابط التسجيلات المخالفة",
-        "description": "رابط واحد في كل سطر. هذه هي التسجيلات على موقعنا التي تطلب منا إزالتها.",
+        "description": "رابط واحد في كل سطر. هذه هي التسجيلات على LiveStreamRecorder التي تطلب منا إزالتها.",
         "placeholder": "https://www.livestreamrecorder.com/twitch/..."
       }
     },

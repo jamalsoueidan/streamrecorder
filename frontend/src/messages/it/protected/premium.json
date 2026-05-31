@@ -1,7 +1,7 @@
 {
   "title": "Premium",
-  "descriptionPremium": "Hai accesso a tutto quello che la nostra piattaforma ha da offrire",
-  "descriptionNonPremium": "Ottieni accesso immediato a tutto quello che la nostra piattaforma ha da offrire",
+  "descriptionPremium": "Hai accesso a tutto quello che LiveStreamRecorder ha da offrire",
+  "descriptionNonPremium": "Ottieni accesso immediato a tutto quello che LiveStreamRecorder ha da offrire",
   "descriptionShort": "Ottieni accesso immediato a tutto",
   "billingPeriodMonthly": "mensile",
   "billingPeriodQuarterly": "trimestrale",
@@ -45,7 +45,7 @@
   "activeMessage": "Sei sul piano {billingPeriod}. Prossima data di fatturazione: {renewDate}.",
   "lifetimeMessage": "Hai accesso a vita a tutte le funzioni premium. Grazie per il tuo supporto!",
   "cancelSubscription": "Annulla abbonamento",
-  "supportMessage": "La nostra piattaforma è un progetto di una sola persona. Il tuo supporto aiuta a mantenere i server attivi e a sviluppare nuove funzioni. Grazie!",
+  "supportMessage": "LiveStreamRecorder è un progetto di una sola persona. Il tuo supporto aiuta a mantenere i server attivi e a sviluppare nuove funzioni. Grazie!",
   "choosePlan": "Scegli il tuo piano",
   "perMonth": "${price}/mese",
   "oneTime": "una tantum",

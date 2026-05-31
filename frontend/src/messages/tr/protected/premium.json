@@ -1,7 +1,7 @@
 {
   "title": "Premium",
-  "descriptionPremium": "Platformumuz'ın sunduğu her şeye erişiminiz var",
-  "descriptionNonPremium": "Platformumuz'ın sunduğu her şeye anında erişin",
+  "descriptionPremium": "LiveStreamRecorder'ın sunduğu her şeye erişiminiz var",
+  "descriptionNonPremium": "LiveStreamRecorder'ın sunduğu her şeye anında erişin",
   "descriptionShort": "Her şeye anında erişin",
   "billingPeriodMonthly": "aylık",
   "billingPeriodQuarterly": "3 aylık",
@@ -45,7 +45,7 @@
   "activeMessage": "{billingPeriod} aboneliğindesiniz. Sonraki fatura tarihi: {renewDate}.",
   "lifetimeMessage": "Tüm premium özelliklere ömür boyu erişiminiz var. Desteğiniz için teşekkürler!",
   "cancelSubscription": "Aboneliği iptal et",
-  "supportMessage": "Platformumuz tek kişilik bir projedir. Desteğiniz sunucuların çalışmasını ve yeni özelliklerin gelmesini sağlıyor. Teşekkürler!",
+  "supportMessage": "LiveStreamRecorder tek kişilik bir projedir. Desteğiniz sunucuların çalışmasını ve yeni özelliklerin gelmesini sağlıyor. Teşekkürler!",
   "choosePlan": "Planınızı Seçin",
   "perMonth": "${price}/ay",
   "oneTime": "tek seferlik",
