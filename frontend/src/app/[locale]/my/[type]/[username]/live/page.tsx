@@ -17,8 +17,9 @@ const STREAM_HOST =
 // user per platform: tiktok, trovo, nimotv serve FLV (Enhanced-FLV with HEVC
 // for tiktok). NimoTV verified 2026-05-26 via
 // stream.livestreamrecorder.com/nimotv/5928797/index.m3u8 → Content-Type
-// video/x-flv. live17/kwai/vklive NOT yet verified — assumed HLS until
-// confirmed otherwise.
+// video/x-flv. live17/kwai/vklive/chzzk NOT yet verified — assumed HLS until
+// confirmed otherwise. (Chzzk's web player streams via HLS, so the default
+// is almost certainly correct for it.)
 const PLATFORM_LIVE_FORMAT: Record<string, "flv" | "hls"> = {
   tiktok: "flv",
   trovo: "flv",

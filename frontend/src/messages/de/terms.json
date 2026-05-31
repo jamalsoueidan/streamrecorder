@@ -9,7 +9,7 @@
   },
   "introduction": {
     "title": "Einleitung",
-    "content": "Indem du LiveStreamRecorder.com und seine Dienste nutzt, erklärst du dich an diese Nutzungsbedingungen gebunden. Bitte lies sie sorgfältig durch, bevor du unsere Plattform nutzt. Wenn du diesen Bedingungen nicht zustimmst, darfst du den Dienst nicht nutzen."
+    "content": "Indem du LiveStreamRecorder.com und seine Dienste nutzt, erklärst du dich an diese Nutzungsbedingungen gebunden. Bitte lies sie sorgfältig durch, bevor du LiveStreamRecorder nutzt. Wenn du diesen Bedingungen nicht zustimmst, darfst du den Dienst nicht nutzen."
   },
   "serviceDescription": {
     "title": "Dienstbeschreibung",
@@ -50,7 +50,7 @@
   "intellectualProperty": {
     "title": "Geistiges Eigentum & Urheberrecht",
     "content1": "LiveStreamRecorder respektiert die geistigen Eigentumsrechte anderer und erwartet von Nutzern dasselbe.",
-    "content2": "Indem du unseren Dienst nutzt, bestätigst du, dass du das Recht hast, die Inhalte aufzunehmen, die du unserer Plattform hinzufügst. Du bist allein dafür verantwortlich, sicherzustellen, dass deine Nutzung mit dem geltenden Urheberrecht und den Nutzungsbedingungen von Drittanbieter-Streaming-Plattformen übereinstimmt.",
+    "content2": "Indem du unseren Dienst nutzt, bestätigst du, dass du das Recht hast, die Inhalte aufzunehmen, die du LiveStreamRecorder hinzufügst. Du bist allein dafür verantwortlich, sicherzustellen, dass deine Nutzung mit dem geltenden Urheberrecht und den Nutzungsbedingungen von Drittanbieter-Streaming-Plattformen übereinstimmt.",
     "content3": "Das Aufnehmen, Vervielfältigen oder Weiterverbreiten von Live-Stream-Inhalten ohne Zustimmung des Erstellers kann eine Urheberrechtsverletzung darstellen und dich rechtlich haftbar machen. LiveStreamRecorder ist nur ein technisches Werkzeug – die volle rechtliche Verantwortung für die Nutzung trägst du.",
     "content4": "Du verpflichtest dich, LiveStreamRecorder nicht zu verwenden, um Inhalte aufzunehmen, die du nicht besitzt oder für die du keine ausdrückliche Genehmigung zur Aufnahme hast. Wenn du einen Creator zu deinem Konto hinzufügst, erklärst du, dass du der Creator bist oder seine Zustimmung erhalten hast.",
     "content5": "Jeder Missbrauch kann zur Kündigung deines Kontos und zu möglichen rechtlichen Schritten von Rechteinhabern führen. LiveStreamRecorder übernimmt keine Haftung für unbefugte Aufnahmen, die von Nutzern gemacht werden.",
@@ -76,7 +76,7 @@
   "contentRemoval": {
     "title": "Entfernung von Inhalten & DMCA",
     "content1": "Wir behalten uns das Recht vor, jegliche Inhalte zu entfernen oder jegliche Konten nach eigenem Ermessen zu kündigen. Wir werden auf Ansprüche wegen Urheberrechtsverletzung reagieren und gesetzlich vorgeschriebene Maßnahmen ergreifen, einschließlich der Entfernung verletzender Inhalte und der Beendigung des Zugriffs für wiederholte Rechtsverletzer.",
-    "content2": "Wenn du der Meinung bist, dass Inhalte auf unserer Plattform deine Rechte verletzen, einen Minderjährigen betreffen oder anderweitig gegen diese Bedingungen verstoßen, kontaktiere uns bitte unter contact@livestreamrecorder.com mit vollständigen Details, damit wir das Anliegen zügig bearbeiten können.",
+    "content2": "Wenn du der Meinung bist, dass Inhalte auf LiveStreamRecorder deine Rechte verletzen, einen Minderjährigen betreffen oder anderweitig gegen diese Bedingungen verstoßen, kontaktiere uns bitte unter contact@livestreamrecorder.com mit vollständigen Details, damit wir das Anliegen zügig bearbeiten können.",
     "footer": "Bitte gib an: Beschreibung des urheberrechtlich geschützten Werks, URL des verletzenden Inhalts, deine Kontaktinformationen und eine Erklärung, dass du in gutem Glauben annimmst, dass die Nutzung nicht autorisiert ist."
   },
   "thirdPartyPlatforms": {

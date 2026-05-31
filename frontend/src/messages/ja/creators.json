@@ -1,8 +1,8 @@
 {
   "meta": {
     "all": {
-      "title": "LiveStreamRecorder のクリエイター",
-      "description": "LiveStreamRecorder を使ってライブ配信を録画し、ショートクリップに変換するクリエイターを発見しましょう。TikTok、Twitch、YouTube、Kick などのプラットフォームで活躍する数千人のクリエイターが参加しています。",
+      "title": "当サイト のクリエイター",
+      "description": "当サイト を使ってライブ配信を録画し、ショートクリップに変換するクリエイターを発見しましょう。TikTok、Twitch、YouTube、Kick などのプラットフォームで活躍する数千人のクリエイターが参加しています。",
       "keywords": [
         "コンテンツクリエイター",
         "ライブ配信",
@@ -12,7 +12,7 @@
     },
     "tiktok": {
       "title": "TikTok クリエイター",
-      "description": "LiveStreamRecorder でライブ配信を録画する TikTok クリエイターを発見しましょう。人気 TikTok クリエイターを探し、ライブ録画を視聴して、フォローしたい新しいクリエイターを見つけてください。",
+      "description": "当サイト でライブ配信を録画する TikTok クリエイターを発見しましょう。人気 TikTok クリエイターを探し、ライブ録画を視聴して、フォローしたい新しいクリエイターを見つけてください。",
       "keywords": [
         "tikTokクリエイター",
         "tikTokコンテンツクリエイター",
@@ -33,11 +33,11 @@
       ],
       "faqs": [
         {
-          "question": "LiveStreamRecorder で TikTok クリエイターを見つけるには？",
-          "answer": "TikTok クリエイター一覧をブラウズして、LiveStreamRecorder でライブ配信を録画しているクリエイターを探しましょう。名前で検索するか、人気の TikTok クリエイターをブラウズして新しい配信者を見つけることができます。"
+          "question": "当サイト で TikTok クリエイターを見つけるには？",
+          "answer": "TikTok クリエイター一覧をブラウズして、当サイト でライブ配信を録画しているクリエイターを探しましょう。名前で検索するか、人気の TikTok クリエイターをブラウズして新しい配信者を見つけることができます。"
         },
         {
-          "question": "LiveStreamRecorder に TikTok クリエイターページを作るには？",
+          "question": "当サイト に TikTok クリエイターページを作るには？",
           "answer": "無料登録して TikTok ユーザー名を追加するだけです。TikTok クリエイターページが自動的に作成され、ライブ配信の録画が始まります。他のユーザーが録画を閲覧してコンテンツを発見できるようになります。"
         },
         {
@@ -45,19 +45,19 @@
           "answer": "TikTok のライブ配信は終了すると消えてしまいます。コンテンツクリエイターとして録画しておくことで、ベストモーメントを見返したり、編集のためにダウンロードしたり、ClipAI を使ってハイライトを TikTok クリップ、リール、Shorts に変換できます。1 回のライブからより多くのコンテンツを生み出せば、より大きな成長につながります。"
         },
         {
-          "question": "LiveStreamRecorder で TikTok クリエイターになるには？",
+          "question": "当サイト で TikTok クリエイターになるには？",
           "answer": "無料登録して TikTok ユーザー名を追加するだけです。ライブ配信のたびに自動録画されます。クリエイターページにすべての録画が表示されるので、見逃したライブをファンが簡単にキャッチアップできます。"
         },
         {
-          "question": "LiveStreamRecorder を使っているトップ TikTok クリエイターのリストを見られますか？",
-          "answer": "はい。このページをブラウズして、LiveStreamRecorder でライブ配信を録画している人気 TikTok クリエイターをご覧ください。より多くのクリエイターが参加・配信するにつれ、リストは更新されます。"
+          "question": "当サイト を使っているトップ TikTok クリエイターのリストを見られますか？",
+          "answer": "はい。このページをブラウズして、当サイト でライブ配信を録画している人気 TikTok クリエイターをご覧ください。より多くのクリエイターが参加・配信するにつれ、リストは更新されます。"
         },
         {
-          "question": "TikTok クリエイターは LiveStreamRecorder を無料で使えますか？",
+          "question": "TikTok クリエイターは 当サイト を無料で使えますか？",
           "answer": "はい。TikTok クリエイターは無料で登録してライブ配信の録画を開始できます。プレミアムプランでは、録画のダウンロード、自動ハイライトクリップのための ClipAI、拡張ストレージが利用可能になります。"
         },
         {
-          "question": "TikTok クリエイターが LiveStreamRecorder でフォロワーを増やすには？",
+          "question": "TikTok クリエイターが 当サイト でフォロワーを増やすには？",
           "answer": "TikTok ライブ配信を自動録画し、ClipAI を使ってベストモーメントをショートクリップに変換しましょう。TikTok、YouTube Shorts、リールに投稿してください。1 回のライブが複数のコンテンツになり、投稿が増えてリーチが広がり、フォロワーが増えます。"
         },
         {
@@ -68,7 +68,7 @@
     },
     "twitch": {
       "title": "Twitch ストリーマー＆クリエイター",
-      "description": "LiveStreamRecorder でライブ配信を録画する Twitch ストリーマーを発見しましょう。トップ Twitch ライブストリーマーを探し、配信録画を視聴して、フォローしたい新しいストリーマーを見つけてください。",
+      "description": "当サイト でライブ配信を録画する Twitch ストリーマーを発見しましょう。トップ Twitch ライブストリーマーを探し、配信録画を視聴して、フォローしたい新しいストリーマーを見つけてください。",
       "keywords": [
         "twitchライブストリーマー",
         "twitchストリーマー",
@@ -90,11 +90,11 @@
       ],
       "faqs": [
         {
-          "question": "LiveStreamRecorder で Twitch ストリーマーを見つけるには？",
-          "answer": "Twitch ストリーマーページをブラウズして、LiveStreamRecorder で配信を録画しているライブストリーマーを探しましょう。名前で検索するか、トップ Twitch ライブストリーマーをブラウズして新しいチャンネルを見つけることができます。"
+          "question": "当サイト で Twitch ストリーマーを見つけるには？",
+          "answer": "Twitch ストリーマーページをブラウズして、当サイト で配信を録画しているライブストリーマーを探しましょう。名前で検索するか、トップ Twitch ライブストリーマーをブラウズして新しいチャンネルを見つけることができます。"
         },
         {
-          "question": "LiveStreamRecorder に Twitch ストリーマーページを作るには？",
+          "question": "当サイト に Twitch ストリーマーページを作るには？",
           "answer": "無料登録して Twitch チャンネルを連携するだけです。ストリーマーページが自動作成され、すべてのライブ配信が録画されます。Twitch VOD が期限切れになった後でも、ファンがすべての配信録画を一か所で確認できます。"
         },
         {
@@ -102,20 +102,20 @@
           "answer": "ぜひ録画してください。Twitch の配信を始めたばかりの頃は、1 回 1 回の配信が大切です。ライブ配信を録画することで、自分のコンテンツを振り返り、話し方を改善し、ClipAI を使ってハイライトを TikTok、YouTube Shorts、リール用のショートクリップに変換できます。新しい Twitch ストリーマーとして成長するための最善の方法の一つです。"
         },
         {
-          "question": "Twitch ストリーマーが LiveStreamRecorder でオーディエンスを増やすには？",
-          "answer": "Twitch ライブ配信を自動録画し、ClipAI を使ってベストモーメントからハイライトクリップを作成しましょう。TikTok、YouTube Shorts、リールにまたがって投稿してください。トップの Twitch ライブストリーマーたちはコンテンツを複数のプラットフォームで活用しており、LiveStreamRecorder がその作業を簡単にします。"
+          "question": "Twitch ストリーマーが 当サイト でオーディエンスを増やすには？",
+          "answer": "Twitch ライブ配信を自動録画し、ClipAI を使ってベストモーメントからハイライトクリップを作成しましょう。TikTok、YouTube Shorts、リールにまたがって投稿してください。トップの Twitch ライブストリーマーたちはコンテンツを複数のプラットフォームで活用しており、当サイト がその作業を簡単にします。"
         },
         {
-          "question": "Twitch ストリーマーは LiveStreamRecorder を無料で使えますか？",
+          "question": "Twitch ストリーマーは 当サイト を無料で使えますか？",
           "answer": "はい。Twitch ストリーマーは無料で登録してライブ配信の録画を開始できます。プレミアムプランでは、録画のダウンロード、自動ハイライトクリップのための ClipAI、拡張ストレージが利用可能になります。"
         },
         {
           "question": "IRL ストリームも録画されますか？",
-          "answer": "はい。LiveStreamRecorder はゲーム配信、IRL ストリーム、雑談配信など、あらゆる Twitch 配信を録画します。Twitch でライブを開始するたびに、コンテンツの種類にかかわらず自動的に録画されます。"
+          "answer": "はい。当サイト はゲーム配信、IRL ストリーム、雑談配信など、あらゆる Twitch 配信を録画します。Twitch でライブを開始するたびに、コンテンツの種類にかかわらず自動的に録画されます。"
         },
         {
           "question": "Twitch VOD とどう違いますか？",
-          "answer": "Twitch VOD は 14〜60 日で期限切れになり、ミュートされることもあります。LiveStreamRecorder は Twitch ストリーマーに永続的なバックアップを提供します。配信録画は期限切れにならず、フルクオリティで保存され、いつでも視聴またはダウンロードできます。"
+          "answer": "Twitch VOD は 14〜60 日で期限切れになり、ミュートされることもあります。当サイト は Twitch ストリーマーに永続的なバックアップを提供します。配信録画は期限切れにならず、フルクオリティで保存され、いつでも視聴またはダウンロードできます。"
         },
         {
           "question": "Twitch ストリーマーは配信をクリップに変換できますか？",
@@ -125,7 +125,7 @@
     },
     "youtube": {
       "title": "YouTube クリエイター",
-      "description": "LiveStreamRecorder でライブ配信を録画する YouTube クリエイターを発見しましょう。YouTube コンテンツクリエイターを探し、ライブ録画を視聴して、登録する新しいチャンネルを見つけてください。",
+      "description": "当サイト でライブ配信を録画する YouTube クリエイターを発見しましょう。YouTube コンテンツクリエイターを探し、ライブ録画を視聴して、登録する新しいチャンネルを見つけてください。",
       "keywords": [
         "youTubeクリエイター",
         "youTubeコンテンツクリエイター",
@@ -143,11 +143,11 @@
       ],
       "faqs": [
         {
-          "question": "LiveStreamRecorder で YouTube クリエイターを見つけるには？",
-          "answer": "YouTube クリエイターページをブラウズして、LiveStreamRecorder でライブ配信を録画しているクリエイターを探しましょう。名前で検索するか、人気 YouTube クリエイターをブラウズして登録する価値のある新しいチャンネルを見つけることができます。"
+          "question": "当サイト で YouTube クリエイターを見つけるには？",
+          "answer": "YouTube クリエイターページをブラウズして、当サイト でライブ配信を録画しているクリエイターを探しましょう。名前で検索するか、人気 YouTube クリエイターをブラウズして登録する価値のある新しいチャンネルを見つけることができます。"
         },
         {
-          "question": "LiveStreamRecorder に YouTube クリエイターページを作るには？",
+          "question": "当サイト に YouTube クリエイターページを作るには？",
           "answer": "無料登録して YouTube チャンネルを連携するだけです。クリエイターページが自動的に設定され、ライブ配信の録画が始まります。ファンがすべての録画ライブを一か所で確認できます。"
         },
         {
@@ -159,26 +159,26 @@
           "answer": "ClipAI が録画済みのライブ配信を分析し、YouTube Shorts 形式のハイライトクリップを抽出します。チャンネルを成長させたい YouTube クリエイターにとって、1 回のライブ配信から複数の Shorts を作成することは最も手軽なコンテンツ制作戦略の一つです。"
         },
         {
-          "question": "YouTube クリエイターは LiveStreamRecorder を無料で使えますか？",
+          "question": "YouTube クリエイターは 当サイト を無料で使えますか？",
           "answer": "はい。YouTube クリエイターは無料で登録してライブ配信の録画を開始できます。プレミアムプランでは、録画のダウンロード、Shorts 自動作成のための ClipAI、拡張ストレージが利用可能になります。"
         },
         {
           "question": "YouTube Studio とどう違いますか？",
-          "answer": "YouTube Studio ではチャンネル管理や配信リプレイへのアクセスができますが、リプレイの処理が失敗したり削除されたり品質が低下することがあります。LiveStreamRecorder は YouTube クリエイターに独立したバックアップを提供します。ライブ配信は自動録画され別途保存されるため、常にコンテンツのコピーを持てます。"
+          "answer": "YouTube Studio ではチャンネル管理や配信リプレイへのアクセスができますが、リプレイの処理が失敗したり削除されたり品質が低下することがあります。当サイト は YouTube クリエイターに独立したバックアップを提供します。ライブ配信は自動録画され別途保存されるため、常にコンテンツのコピーを持てます。"
         },
         {
           "question": "YouTube 広告やプロモーションに録画を使えますか？",
           "answer": "はい。ライブ録画はあなたのコンテンツです。ダウンロードして好きなように活用できます。YouTube 広告、チャンネルトレーラー、まとめ動画、TikTok やリールへのクロスプラットフォーム投稿など幅広く対応できます。"
         },
         {
-          "question": "YouTube クリエイターが LiveStreamRecorder でチャンネルを成長させるには？",
+          "question": "YouTube クリエイターが 当サイト でチャンネルを成長させるには？",
           "answer": "ライブ配信を自動録画し、ClipAI を使ってベストモーメントから YouTube Shorts を作成しましょう。ライブ配信から継続的に Shorts を投稿することでチャンネルを活性化できます。登録者にとって多くのコンテンツがあり、新しい視聴者にリーチする機会が増えます。"
         }
       ]
     },
     "kick": {
       "title": "Kick クリエイター",
-      "description": "LiveStreamRecorder を使ってライブ配信を録画し、ショートクリップに変換する Kick クリエイターを発見しましょう。",
+      "description": "当サイト を使ってライブ配信を録画し、ショートクリップに変換する Kick クリエイターを発見しましょう。",
       "keywords": [
         "kickクリエイター",
         "kickライブ配信",
@@ -188,7 +188,7 @@
     },
     "pandalive": {
       "title": "Pandalive クリエイター",
-      "description": "LiveStreamRecorder を使ってライブ配信を録画し、ショートクリップに変換する Pandalive クリエイターを発見しましょう。",
+      "description": "当サイト を使ってライブ配信を録画し、ショートクリップに変換する Pandalive クリエイターを発見しましょう。",
       "keywords": [
         "pandaliveクリエイター",
         "韓国ライブ配信",
@@ -198,7 +198,7 @@
     },
     "afreecatv": {
       "title": "AfreecaTV クリエイター",
-      "description": "LiveStreamRecorder を使ってライブ配信を録画し、ショートクリップに変換する AfreecaTV クリエイターを発見しましょう。",
+      "description": "当サイト を使ってライブ配信を録画し、ショートクリップに変換する AfreecaTV クリエイターを発見しましょう。",
       "keywords": [
         "afreecaTVクリエイター",
         "韓国ライブ配信",
@@ -208,7 +208,7 @@
     },
     "bigo": {
       "title": "Bigo クリエイター",
-      "description": "LiveStreamRecorder を使ってライブ配信を録画し、ショートクリップに変換する Bigo クリエイターを発見しましょう。",
+      "description": "当サイト を使ってライブ配信を録画し、ショートクリップに変換する Bigo クリエイターを発見しましょう。",
       "keywords": [
         "bigoクリエイター",
         "bigoライブ配信",
@@ -218,7 +218,7 @@
     },
     "liveme": {
       "title": "ライブミー クリエイター",
-      "description": "LiveStreamRecorder を使ってライブ配信を録画し、ショートクリップに変換する ライブミー クリエイターを発見しましょう。",
+      "description": "当サイト を使ってライブ配信を録画し、ショートクリップに変換する ライブミー クリエイターを発見しましょう。",
       "keywords": [
         "livemeクリエイター",
         "livemeライブ配信",
@@ -228,7 +228,7 @@
     },
     "mixch": {
       "title": "ミクチャ クリエイター",
-      "description": "LiveStreamRecorder を使ってライブ配信を録画し、ショートクリップに変換する ミクチャ クリエイターを発見しましょう。",
+      "description": "当サイト を使ってライブ配信を録画し、ショートクリップに変換する ミクチャ クリエイターを発見しましょう。",
       "keywords": [
         "mixchクリエイター",
         "mixchライブ配信",
@@ -238,7 +238,7 @@
     },
     "joilive": {
       "title": "ジョイライブ ストリーマー — 自分のライブを保存",
-      "description": "ジョイライブ（joilive.net）のストリーマーは、LiveStreamRecorder を自分専用のアーカイブとして使っています。配信したライブはすべてあなたのクリエイターページに保存され、ジョイライブのユーザー ID で検索でき、数字だらけの `?s=…` URL ではなく、覚えやすい URL でアクセスできます。",
+      "description": "ジョイライブ（joilive.net）のストリーマーは、当サイト を自分専用のアーカイブとして使っています。配信したライブはすべてあなたのクリエイターページに保存され、ジョイライブのユーザー ID で検索でき、数字だらけの `?s=…` URL ではなく、覚えやすい URL でアクセスできます。",
       "keywords": [
         "ジョイライブ ストリーマー",
         "ジョイライブ クリエイタープロフィール",
@@ -255,26 +255,26 @@
       "faqs": [
         {
           "question": "ジョイライブは数字だけのユーザー ID ですが、ファンはどうやって見つけるの？",
-          "answer": "そこはジョイライブが解決してくれない部分です。プロフィール URL は `joilive.net/user/index.html?s=1880…` — 覚えられないし、シェアもしにくい。LiveStreamRecorder のクリエイターページなら、ファンが入力・ブックマーク・シェアできるクリーンな URL に置き換わります。裏側は同じジョイライブのユーザー ID、表側だけ使いやすい入口になります。"
+          "answer": "そこはジョイライブが解決してくれない部分です。プロフィール URL は `joilive.net/user/index.html?s=1880…` — 覚えられないし、シェアもしにくい。当サイト のクリエイターページなら、ファンが入力・ブックマーク・シェアできるクリーンな URL に置き換わります。裏側は同じジョイライブのユーザー ID、表側だけ使いやすい入口になります。"
         },
         {
-          "question": "ジョイライブで配信しています — LiveStreamRecorder は具体的に何をしてくれるの？",
+          "question": "ジョイライブで配信しています — 当サイト は具体的に何をしてくれるの？",
           "answer": "2 つあります。(1) 自分のライブを自分で録画 — すべての配信がクリエイターページに自動保存され、視聴できるアーカイブになります。(2) ジョイライブの数字 ID リンクの代わりに、共有しやすく検索しやすい URL が与えられます。配信していない時間帯でも、ファンがあなたを見つけられるようになります。"
         },
         {
           "question": "ジョイライブにはアーカイブがありません。過去のライブはどうなるの？",
-          "answer": "ジョイライブではオフラインになった瞬間、配信は消えてしまいます — リプレイも VOD もありません。LiveStreamRecorder で自分のライブを録画しているジョイライブのストリーマーなら、すべての配信があなたのページで永久に視聴可能のまま残ります。海外時間帯のファン、見逃したファン、そして自分のポートフォリオに役立ちます。"
+          "answer": "ジョイライブではオフラインになった瞬間、配信は消えてしまいます — リプレイも VOD もありません。当サイト で自分のライブを録画しているジョイライブのストリーマーなら、すべての配信があなたのページで永久に視聴可能のまま残ります。海外時間帯のファン、見逃したファン、そして自分のポートフォリオに役立ちます。"
         },
         {
           "question": "OBS や画面録画、何かソフトは必要？",
-          "answer": "いいえ。普段通りジョイライブでライブを開始するだけです。LiveStreamRecorder はサーバー側で配信をキャプチャするので、あなたの PC やスマホでは何も動きません。CPU を食われることも、ノートのファンが回ることも、画質が落ちることもありません。"
+          "answer": "いいえ。普段通りジョイライブでライブを開始するだけです。当サイト はサーバー側で配信をキャプチャするので、あなたの PC やスマホでは何も動きません。CPU を食われることも、ノートのファンが回ることも、画質が落ちることもありません。"
         },
         {
           "question": "視聴者がまだ少なくても登録していいの？",
           "answer": "むしろ今が一番いいタイミングです。クリーンなジョイライブライブのバックログがあれば、初めて見に来たファンが最初の配信後にスクロールして楽しめるものができます。無料登録して、ユーザー ID を追加し、初日からアーカイブを作り始めましょう。"
         },
         {
-          "question": "ジョイライブのストリーマーにとって LiveStreamRecorder は無料？",
+          "question": "ジョイライブのストリーマーにとって 当サイト は無料？",
           "answer": "はい、ジョイライブのライブを保存するのは完全無料です。プレミアムでは動画ファイルのダウンロード、ショートクリップの自動生成（ClipAI）、長期間の保存が利用できます。"
         },
         {
@@ -285,7 +285,7 @@
     },
     "trovo": {
       "title": "Trovo クリエイター",
-      "description": "LiveStreamRecorder を使ってライブ配信を録画し、ショートクリップに変換する Trovo クリエイターを発見しましょう。",
+      "description": "当サイト を使ってライブ配信を録画し、ショートクリップに変換する Trovo クリエイターを発見しましょう。",
       "keywords": [
         "trovoクリエイター",
         "trovoライブ配信",
@@ -295,7 +295,7 @@
     },
     "twitcast": {
       "title": "ツイキャス クリエイター",
-      "description": "LiveStreamRecorder を使ってライブ配信を録画し、ショートクリップに変換する ツイキャス クリエイターを発見しましょう。",
+      "description": "当サイト を使ってライブ配信を録画し、ショートクリップに変換する ツイキャス クリエイターを発見しましょう。",
       "keywords": [
         "twitcastクリエイター",
         "twitcastライブ配信",
@@ -305,7 +305,7 @@
     },
     "live17": {
       "title": "17ライブ クリエイター — Liver、V-Liverの公開アーカイブ",
-      "description": "17ライブ(yi-qi=「一緒に」)は日本・台湾・香港を中心にアジア最大級の配信プラットフォーム。LiverとV-Liverの両方をサポート。LiveStreamRecorderは、17ライブ配信者の全ライブを公開Webページに保存し、アプリ外からも視聴可能にします。",
+      "description": "17ライブ(yi-qi=「一緒に」)は日本・台湾・香港を中心にアジア最大級の配信プラットフォーム。LiverとV-Liverの両方をサポート。当サイトは、17ライブ配信者の全ライブを公開Webページに保存し、アプリ外からも視聴可能にします。",
       "keywords": [
         "17ライブ Liver",
         "17ライブ V-Liver",
@@ -321,8 +321,8 @@
       ],
       "faqs": [
         {
-          "question": "17ライブの公式Stream Archive・Stream Clipsがあるのに、なぜLiveStreamRecorderが必要?",
-          "answer": "17ライブのアーカイブはアプリ内、配信者の権限設定の中にあります。ファンは17ライブアプリにログインする必要があり、Googleにインデックスされる公開URLは存在しません。LiveStreamRecorderは全ライブに公開Webリンクを付与し、アプリインストール不要・権限ゲートなしでブラウザから視聴できます。"
+          "question": "17ライブの公式Stream Archive・Stream Clipsがあるのに、なぜ当サイトが必要?",
+          "answer": "17ライブのアーカイブはアプリ内、配信者の権限設定の中にあります。ファンは17ライブアプリにログインする必要があり、Googleにインデックスされる公開URLは存在しません。当サイトは全ライブに公開Webリンクを付与し、アプリインストール不要・権限ゲートなしでブラウザから視聴できます。"
         },
         {
           "question": "V-Liverですが、バーチャルアバター配信も録画されますか?",
@@ -330,11 +330,11 @@
         },
         {
           "question": "タレント事務所が私の17ライブアカウントを管理していますが使えますか?",
-          "answer": "はい。録画は完全にオプトインで、あなた自身のプロフィールのみに影響します。事務所は引き続き17ライブ内のスケジュール、ギフト企画、内部ツールを管理。LiveStreamRecorderは配信に公開Webの居場所を追加するだけです。"
+          "answer": "はい。録画は完全にオプトインで、あなた自身のプロフィールのみに影響します。事務所は引き続き17ライブ内のスケジュール、ギフト企画、内部ツールを管理。当サイトは配信に公開Webの居場所を追加するだけです。"
         },
         {
           "question": "日本・台湾は強いですが、東南アジアや英語圏のファンも増やしたい",
-          "answer": "それが17ライブの長尾課題です。アプリ自体がアジア中心で、地域外の新規視聴者には発見されにくい。LiveStreamRecorderの公開ページはオープンWeb上の英語URLで、ClipAIがTikTok・Reels・Shortsに最適化したハイライトクリップを生成。新規ファンを獲得して17ライブへ誘導できます。"
+          "answer": "それが17ライブの長尾課題です。アプリ自体がアジア中心で、地域外の新規視聴者には発見されにくい。当サイトの公開ページはオープンWeb上の英語URLで、ClipAIがTikTok・Reels・Shortsに最適化したハイライトクリップを生成。新規ファンを獲得して17ライブへ誘導できます。"
         },
         {
           "question": "スマホやPCに何かインストールが必要?",
@@ -346,13 +346,13 @@
         },
         {
           "question": "17ライブのランキング、ホットスター、ギフト収益に影響しますか?",
-          "answer": "いいえ。LiveStreamRecorderは17ライブアカウントには一切触れません。ランキング、ホットスターポイント、タレント事務所のツールには影響なし。録画はあなた自身が17ライブクリエイターとして自分のアカウントに対してオプトインするもので、あなた自身のライブのみをキャプチャします — それ以外は録画しません。"
+          "answer": "いいえ。当サイトは17ライブアカウントには一切触れません。ランキング、ホットスターポイント、タレント事務所のツールには影響なし。録画はあなた自身が17ライブクリエイターとして自分のアカウントに対してオプトインするもので、あなた自身のライブのみをキャプチャします — それ以外は録画しません。"
         }
       ]
     },
     "kwai": {
       "title": "Kwaiクリエイター — すべてのLiveを保存、ブラジル・新興市場の先へ",
-      "description": "Kwai(kuài 快 =「速い」)はKuaishou Technologyのグローバルショート動画+ライブ配信アプリで、ブラジル、インドネシア、メキシコ、中東で支配的。LiveStreamRecorderはKwaiクリエイターに検索エンジンに索引化された公開ページを提供し、LiveがKwaiアプリの外でも存在できるようにします。",
+      "description": "Kwai(kuài 快 =「速い」)はKuaishou Technologyのグローバルショート動画+ライブ配信アプリで、ブラジル、インドネシア、メキシコ、中東で支配的。当サイトはKwaiクリエイターに検索エンジンに索引化された公開ページを提供し、LiveがKwaiアプリの外でも存在できるようにします。",
       "keywords": [
         "Kwai クリエイター",
         "Kwai ブラジル ストリーマー",
@@ -368,8 +368,8 @@
       ],
       "faqs": [
         {
-          "question": "Kwaiの視聴者はブラジルや新興市場で大規模ですが、LiveStreamRecorderは何を追加しますか?",
-          "answer": "2つです:(1)配信した各Kwai LiveはKwaiアプリ外の公開クリエイターページに保存されるので、ファン(特にKwaiをインストールしていない人)はオープンWebであなたを発見・視聴できます。(2)アーカイブはGoogleにインデックスされるクリーンなURLを取得 — YouTube、Instagram、現地アプリなど他プラットフォームのファンに有用。Kwaiはリアルタイムの場、LiveStreamRecorderはロングテールの居場所。"
+          "question": "Kwaiの視聴者はブラジルや新興市場で大規模ですが、当サイトは何を追加しますか?",
+          "answer": "2つです:(1)配信した各Kwai LiveはKwaiアプリ外の公開クリエイターページに保存されるので、ファン(特にKwaiをインストールしていない人)はオープンWebであなたを発見・視聴できます。(2)アーカイブはGoogleにインデックスされるクリーンなURLを取得 — YouTube、Instagram、現地アプリなど他プラットフォームのファンに有用。Kwaiはリアルタイムの場、当サイトはロングテールの居場所。"
         },
         {
           "question": "動かすためにOBSやスマホにアプリが必要ですか?",
@@ -377,18 +377,18 @@
         },
         {
           "question": "日本にいます — 地元のKwaiコミュニティ外のファンにリーチできますか?",
-          "answer": "それこそLiveStreamRecorderが最もよく埋める隙間です。Kwaiは特定地域で巨大ですが、英語圏の視聴者、欧州のファン、Kwaiに居ない誰も簡単にKwaiクリエイターを発見できません。LiveStreamRecorderページは英語で読めるURLとメタデータでGoogleがインデックス化する公開Web URL。さらにClipAIがTikTok / Reels / Shorts用のクリップを切り出して、その視聴者をKwai Liveに連れ戻します。"
+          "answer": "それこそ当サイトが最もよく埋める隙間です。Kwaiは特定地域で巨大ですが、英語圏の視聴者、欧州のファン、Kwaiに居ない誰も簡単にKwaiクリエイターを発見できません。当サイトページは英語で読めるURLとメタデータでGoogleがインデックス化する公開Web URL。さらにClipAIがTikTok / Reels / Shorts用のクリップを切り出して、その視聴者をKwai Liveに連れ戻します。"
         },
         {
           "question": "Kwai Liveが終わった後どうなりますか?",
-          "answer": "Kwaiアプリ内ではLiveの可用性はプラットフォームのリプレイポリシーと設定に依存します。アプリ外では、LiveStreamRecorderがクリエイターページに無期限に全長コピーを保持。保存・共有・削除はあなた次第 — Kwaiのライフサイクル規則から独立。"
+          "answer": "Kwaiアプリ内ではLiveの可用性はプラットフォームのリプレイポリシーと設定に依存します。アプリ外では、当サイトがクリエイターページに無期限に全長コピーを保持。保存・共有・削除はあなた次第 — Kwaiのライフサイクル規則から独立。"
         },
         {
           "question": "Kwaiのギフト、K-coins、クリエイターアカウントに影響しますか?",
-          "answer": "いいえ。LiveStreamRecorderはKwaiアカウントにログインせず、K-coins、ランキング、ギフト収入、クリエイタープログラム特典に触れません。録画はあなた自身がKwaiクリエイターとして自分のアカウントに対してオプトインするもので、あなた自身のライブのみをキャプチャします — それ以外は録画しません。"
+          "answer": "いいえ。当サイトはKwaiアカウントにログインせず、K-coins、ランキング、ギフト収入、クリエイタープログラム特典に触れません。録画はあなた自身がKwaiクリエイターとして自分のアカウントに対してオプトインするもので、あなた自身のライブのみをキャプチャします — それ以外は録画しません。"
         },
         {
-          "question": "LiveStreamRecorderはKwaiクリエイターに無料ですか?",
+          "question": "当サイトはKwaiクリエイターに無料ですか?",
           "answer": "はい。無料プランで全Liveを無期限にクリエイターページに保存。プレミアムでは生動画ダウンロード、ClipAI自動クリップ生成、保存期間延長が利用可能。"
         },
         {
@@ -399,7 +399,7 @@
     },
     "nimotv": {
       "title": "NimoTV Creators — Mobile Esports Streamers from Brazil, Indonesia, and Beyond",
-      "description": "NimoTV is the international mobile-esports streaming platform spun out from Tencent (launched 2018). Mobile Legends, Free Fire, PUBG Mobile, and COD Mobile dominate the catalog, with huge audiences in Brazil, Indonesia, Thailand, Mexico, and Peru. LiveStreamRecorder catches every ranked grind, scrim, and tournament run from NimoTV's phone-only creators before they vanish.",
+      "description": "NimoTV is the international mobile-esports streaming platform spun out from Tencent (launched 2018). Mobile Legends, Free Fire, PUBG Mobile, and COD Mobile dominate the catalog, with huge audiences in Brazil, Indonesia, Thailand, Mexico, and Peru. 当サイト catches every ranked grind, scrim, and tournament run from NimoTV's phone-only creators before they vanish.",
       "keywords": [
         "nimotv creator",
         "nimotv streamer brazil",
@@ -417,37 +417,37 @@
       "faqs": [
         {
           "question": "I stream Mobile Legends on NimoTV from my phone — does this work without OBS or a PC?",
-          "answer": "Yes, that's exactly the case we built it for. Most NimoTV creators are phone-only — no PC, no OBS, no capture card. LiveStreamRecorder captures your NimoTV broadcast server-side, so you broadcast on the NimoTV app like always and the recording happens in our cloud. Your phone doesn't run anything extra, no battery hit during the ranked grind."
+          "answer": "Yes, that's exactly the case we built it for. Most NimoTV creators are phone-only — no PC, no OBS, no capture card. 当サイト captures your NimoTV broadcast server-side, so you broadcast on the NimoTV app like always and the recording happens in our cloud. Your phone doesn't run anything extra, no battery hit during the ranked grind."
         },
         {
           "question": "My MLBB ranked sessions can run 4+ hours. Are they all saved in full?",
           "answer": "Yes — every NimoTV Live you broadcast is captured in full length, no caps. Ranked grinds, scrim sessions, tournament-quality runs — all saved on your creator page so you can rewatch a clutch play or pull a specific match for analysis later."
         },
         {
-          "question": "I stream Free Fire / PUBG Mobile to a Brazilian/Indonesian audience — how does LiveStreamRecorder help me reach more people?",
-          "answer": "NimoTV is strong in LatAm and SE Asia but largely invisible outside those communities. Your LiveStreamRecorder creator page is a public web URL that fans on TikTok, YouTube, or Discord can open without installing the NimoTV app. ClipAI cuts highlight clips formatted for vertical short-form so you can post your best plays on TikTok, Reels, and Shorts — and bring those viewers back to your NimoTV channel."
+          "question": "I stream Free Fire / PUBG Mobile to a Brazilian/Indonesian audience — how does 当サイト help me reach more people?",
+          "answer": "NimoTV is strong in LatAm and SE Asia but largely invisible outside those communities. Your 当サイト creator page is a public web URL that fans on TikTok, YouTube, or Discord can open without installing the NimoTV app. ClipAI cuts highlight clips formatted for vertical short-form so you can post your best plays on TikTok, Reels, and Shorts — and bring those viewers back to your NimoTV channel."
         },
         {
-          "question": "How do I become a NimoTV creator on LiveStreamRecorder?",
+          "question": "How do I become a NimoTV creator on 当サイト?",
           "answer": "Sign up free, add your NimoTV username — that's the entire setup. From your next stream onwards, every NimoTV Live is recorded automatically to your creator page. No app, no plugin, no scheduling."
         },
         {
-          "question": "Can fans browse a list of NimoTV creators on LiveStreamRecorder?",
+          "question": "Can fans browse a list of NimoTV creators on 当サイト?",
           "answer": "Yes. This page lists NimoTV creators who've signed up. As more mobile esports streamers from Brazil, Indonesia, Thailand, Mexico, and Peru join, the directory grows — a good place to discover NimoTV gamers building their channel."
         },
         {
           "question": "Will my NimoTV diamonds, ranking, or Tencent creator program perks be affected?",
-          "answer": "No. LiveStreamRecorder never logs into your NimoTV account or touches diamonds, gifting income, watch-time ranking, or Tencent creator program tiers. The recording is opt-in by you as the NimoTV creator for your own account, and only captures your own Lives — nothing else."
+          "answer": "No. 当サイト never logs into your NimoTV account or touches diamonds, gifting income, watch-time ranking, or Tencent creator program tiers. The recording is opt-in by you as the NimoTV creator for your own account, and only captures your own Lives — nothing else."
         },
         {
-          "question": "Is LiveStreamRecorder free for NimoTV creators?",
+          "question": "Is 当サイト free for NimoTV creators?",
           "answer": "Yes. Free tier saves every Live indefinitely on your creator page. Premium unlocks raw video downloads (useful for putting full matches on YouTube), ClipAI for auto-cutting highlight clips, and extended retention."
         }
       ]
     },
     "vklive": {
       "title": "VK Live Streamers — Russian and CIS Creators with a Permanent Archive",
-      "description": "VK Live is the livestreaming layer inside VK (VKontakte), Russia's biggest social network with 100M+ MAU. Russian-speaking gamers, musicians, and IRL streamers go live to fans across Russia, Belarus, and Kazakhstan — but VK's algorithm buries old streams within hours. LiveStreamRecorder gives VK Live creators a permanent archive their audience can rewatch on the open web.",
+      "description": "VK Live is the livestreaming layer inside VK (VKontakte), Russia's biggest social network with 100M+ MAU. Russian-speaking gamers, musicians, and IRL streamers go live to fans across Russia, Belarus, and Kazakhstan — but VK's algorithm buries old streams within hours. 当サイト gives VK Live creators a permanent archive their audience can rewatch on the open web.",
       "keywords": [
         "vk live creator",
         "vk live streamer",
@@ -465,31 +465,71 @@
       "faqs": [
         {
           "question": "VK Live already shows my stream in fans' feeds — why do I need a separate archive?",
-          "answer": "VK's social feed surfaces a stream when you're live and for a short window after, then the algorithm moves on. Within 24 hours the stream is buried — fans who didn't catch the notification have a hard time finding it. LiveStreamRecorder gives every VK Live a permanent URL on your creator page that doesn't depend on the VK feed. Your fans get a stable place to rewatch, you get an actual back catalogue."
+          "answer": "VK's social feed surfaces a stream when you're live and for a short window after, then the algorithm moves on. Within 24 hours the stream is buried — fans who didn't catch the notification have a hard time finding it. 当サイト gives every VK Live a permanent URL on your creator page that doesn't depend on the VK feed. Your fans get a stable place to rewatch, you get an actual back catalogue."
         },
         {
           "question": "I'm a Dota / CS / WoT streamer on VK Live — does this capture gameplay correctly?",
-          "answer": "Yes. We record whatever VK Live broadcasts to viewers — gameplay capture, webcam overlay, OBS scene composition, voice. The recording is upstream of your local hardware, so it's the same video your VK Live audience saw, preserved at full length on your LiveStreamRecorder page."
+          "answer": "Yes. We record whatever VK Live broadcasts to viewers — gameplay capture, webcam overlay, OBS scene composition, voice. The recording is upstream of your local hardware, so it's the same video your VK Live audience saw, preserved at full length on your 当サイト page."
         },
         {
           "question": "Does this affect my VK ranking, VK Music integration, or VK Play account?",
-          "answer": "No. LiveStreamRecorder doesn't log into your VK account, doesn't touch VK Music, doesn't interfere with VK Play, and doesn't affect any VK creator metrics. The recording is opt-in by you for your own VK Live account, and only captures your own broadcasts — nothing else."
+          "answer": "No. 当サイト doesn't log into your VK account, doesn't touch VK Music, doesn't interfere with VK Play, and doesn't affect any VK creator metrics. The recording is opt-in by you for your own VK Live account, and only captures your own broadcasts — nothing else."
         },
         {
-          "question": "How do I get my VK Live creator page on LiveStreamRecorder?",
+          "question": "How do I get my VK Live creator page on 当サイト?",
           "answer": "Sign up free and add your VK Live username or profile URL. Your creator page is created automatically and every broadcast from that point onwards is recorded to it. No phone app, no OBS plugin — capture happens server-side."
         },
         {
-          "question": "Can fans browse a list of VK Live streamers on LiveStreamRecorder?",
+          "question": "Can fans browse a list of VK Live streamers on 当サイト?",
           "answer": "Yes. This page lists VK Live creators who've signed up — Russian-speaking gamers, musicians, anime/manga commentators, IRL streamers. The list grows as more VK Live broadcasters sign up. A useful directory for discovering VK Live creators outside the VK app itself."
         },
         {
-          "question": "I broadcast in Russian — does LiveStreamRecorder support a Russian audience?",
-          "answer": "Yes. LiveStreamRecorder's interface is available in multiple languages and your recording URLs work in any browser worldwide. Russian-speaking fans inside Russia, in the CIS, or in the diaspora can all open your creator page without needing a VK account — useful for fans on a different platform than VK itself."
+          "question": "I broadcast in Russian — does 当サイト support a Russian audience?",
+          "answer": "Yes. 当サイト's interface is available in multiple languages and your recording URLs work in any browser worldwide. Russian-speaking fans inside Russia, in the CIS, or in the diaspora can all open your creator page without needing a VK account — useful for fans on a different platform than VK itself."
         },
         {
-          "question": "Is LiveStreamRecorder free for VK Live creators?",
+          "question": "Is 当サイト free for VK Live creators?",
           "answer": "Yes. Free tier saves every VK Live indefinitely on your creator page. Premium unlocks raw video downloads, ClipAI for auto-clipping highlights, and extended retention windows."
+        }
+      ]
+    },
+    "chzzk": {
+      "title": "Chzzk クリエイター — Naver の Twitch 後継プラットフォームの韓国配信者",
+      "description": "Chzzk(치지직)は Naver が運営するライブ配信プラットフォームで、Twitch が韓国市場から撤退した後、2024年4月に韓国配信者の新しい本拠地として正式ローンチされました。名前は古いテレビの砂嵐音を模したものです。Chzzk は 1080p 60fps で配信されますが、アーカイブされた VOD は数週間で公開タイムラインから消えてしまいます。当サイト で Chzzk のクリエイターをブラウズして、視聴者がいつでも見返せる永続的なライブアーカイブをご覧ください。",
+      "keywords": [
+        "chzzk クリエイター",
+        "chzzk 配信者",
+        "chzzk 치지직 クリエイター",
+        "naver chzzk アーカイブ",
+        "韓国ライブ配信者",
+        "chzzk クリエイター一覧",
+        "chzzk 配信者を探す",
+        "chzzk lck 配信者",
+        "chzzk バラエティ配信者",
+        "chzzk irl 配信者",
+        "twitch 韓国出身の配信者",
+        "chzzk サバソン アーカイブ"
+      ],
+      "faqs": [
+        {
+          "question": "Chzzk はどこから生まれ、なぜ多くの配信者がここへ移ったのですか？",
+          "answer": "Chzzk は韓国の代表的なインターネットポータル Naver が運営しています。2023年12月にオープンベータを開始し、2024年4月に正式ローンチ — 同じ時期に Twitch が韓国事業を終了しました。Naver は Twitch アカウントを直接インポートできるツールを用意して、クリエイターがフォローやサブスクリプションをワンクリックで移行できるようにしたため、結果として韓国の有名 Twitch 配信者の相当数が Chzzk で配信するようになりました。彼らの古い VOD は Twitch に取り残されたままです。当サイト にアーカイブすれば、新しいライブには初日から持ち運び可能な拠点が用意できます。"
+        },
+        {
+          "question": "Chzzk のチャンネル URL はどう構成されていますか？長いランダムな文字列に見えるのですが。",
+          "answer": "Chzzk は読める形のハンドルではなく、32文字の16進数のチャンネル ID を採用しています。プロフィール URL は chzzk.naver.com/fd91ae67d83bd43ea9ea3322eb055683 のような形で、配信中は同じ ID が /live/<id> の URL にも入ります。当サイト はどちらの形式も受け付けます — 検索バーにそのまま貼り付ければ、こちらでチャンネルを正しく解決します。"
+        },
+        {
+          "question": "Chzzk にはすでに VOD 再生があります。なぜ別途アーカイブする必要があるのですか？",
+          "answer": "Chzzk の VOD サポートは確かに存在しますが、配信ごとに配信者が有効化する必要があり、保存される期間も限られています — トグルを完全にオフにしているチャンネルも多くあります。サバソンや、トラブル、配信者が見返してほしくない単発イベントは、Chzzk のアーカイブで取りこぼされがちです。当サイト はライブをそのまま放送中にキャプチャするので、配信者がうっかり忘れたり、VOD をオフにしたり、後から配信を削除したりしても、その瞬間は残り続けます。"
+        },
+        {
+          "question": "まだ録画がない Chzzk クリエイターでもここでフォローできますか？",
+          "answer": "はい。検索バーから Chzzk のクリエイターを追加すると、そのチャンネルが監視対象としてキューに入ります — 次にライブが始まれば、自動でキャプチャされます。新しい Chzzk クリエイターは毎週増えており(Naver は他プラットフォームからの移行を今も積極的に後押ししています)、視聴者が彼らを検索するにつれカタログは成長していきます。"
+        },
+        {
+          "question": "Chzzk は韓国以外でも利用できますか？",
+          "answer": "視聴は開かれています — どの地域からでもアカウントなしで Chzzk の配信を見られます。配信やチャットの参加は韓国の視聴者を想定した設計でインターフェースも韓国語が中心ですが、配信そのものはどんなブラウザでも再生できます。当サイト のアーカイブも同じです。どの国にいても、Naver にログインせず Chzzk の録画を視聴できます。"
         }
       ]
     }
@@ -512,26 +552,28 @@
       "live17": "17ライブ ストリーマー",
       "kwai": "Kwai ストリーマー",
       "nimotv": "NimoTV ストリーマー",
-      "vklive": "VK Live ストリーマー"
+      "vklive": "VK Live ストリーマー",
+      "chzzk": "Chzzk クリエイター"
     },
     "subtitle": {
-      "all": "LiveStreamRecorder を使って配信を保存しショートクリップを作成している数千人のクリエイターに参加しましょう。",
-      "tiktok": "LiveStreamRecorder を使って配信を保存しショートクリップを作成している数千人の TikTok クリエイターに参加しましょう。",
-      "twitch": "LiveStreamRecorder を使って配信を保存しショートクリップを作成している数千人の Twitch クリエイターに参加しましょう。",
-      "youtube": "LiveStreamRecorder を使って配信を保存しショートクリップを作成している数千人の YouTube クリエイターに参加しましょう。",
-      "kick": "LiveStreamRecorder を使って配信を保存しショートクリップを作成している数千人の Kick クリエイターに参加しましょう。",
-      "pandalive": "LiveStreamRecorder を使って配信を保存しショートクリップを作成している数千人の Pandalive クリエイターに参加しましょう。",
-      "afreecatv": "LiveStreamRecorder を使って配信を保存しショートクリップを作成している数千人の AfreecaTV クリエイターに参加しましょう。",
-      "bigo": "LiveStreamRecorder を使って配信を保存しショートクリップを作成している数千人の Bigo クリエイターに参加しましょう。",
-      "liveme": "LiveStreamRecorder を使って配信を保存しショートクリップを作成している数千人の ライブミー クリエイターに参加しましょう。",
-      "mixch": "LiveStreamRecorder を使って配信を保存しショートクリップを作成している数千人の ミクチャ クリエイターに参加しましょう。",
-      "trovo": "LiveStreamRecorder を使って配信を保存しショートクリップを作成している数千人の Trovo クリエイターに参加しましょう。",
-      "twitcast": "LiveStreamRecorder を使って配信を保存しショートクリップを作成している数千人の ツイキャス クリエイターに参加しましょう。",
-      "joilive": "LiveStreamRecorder で配信を保存し、ジョイライブの外でもファンにリーチしているジョイライブのストリーマーに仲間入りしましょう。",
-      "live17": "LiveStreamRecorder で配信を保存し、17ライブの外でもファンにリーチしている17ライブのストリーマーに仲間入りしましょう。",
-      "kwai": "LiveStreamRecorder で配信を保存し、Kwaiの外でもファンにリーチしているKwaiのストリーマーに仲間入りしましょう。",
-      "nimotv": "LiveStreamRecorder で配信を保存し、NimoTVの外でもファンにリーチしているNimoTVのストリーマーに仲間入りしましょう。",
-      "vklive": "LiveStreamRecorder で配信を保存し、VK Liveの外でもファンにリーチしているVK Liveのストリーマーに仲間入りしましょう。"
+      "all": "当サイト を使って配信を保存しショートクリップを作成している数千人のクリエイターに参加しましょう。",
+      "tiktok": "当サイト を使って配信を保存しショートクリップを作成している数千人の TikTok クリエイターに参加しましょう。",
+      "twitch": "当サイト を使って配信を保存しショートクリップを作成している数千人の Twitch クリエイターに参加しましょう。",
+      "youtube": "当サイト を使って配信を保存しショートクリップを作成している数千人の YouTube クリエイターに参加しましょう。",
+      "kick": "当サイト を使って配信を保存しショートクリップを作成している数千人の Kick クリエイターに参加しましょう。",
+      "pandalive": "当サイト を使って配信を保存しショートクリップを作成している数千人の Pandalive クリエイターに参加しましょう。",
+      "afreecatv": "当サイト を使って配信を保存しショートクリップを作成している数千人の AfreecaTV クリエイターに参加しましょう。",
+      "bigo": "当サイト を使って配信を保存しショートクリップを作成している数千人の Bigo クリエイターに参加しましょう。",
+      "liveme": "当サイト を使って配信を保存しショートクリップを作成している数千人の ライブミー クリエイターに参加しましょう。",
+      "mixch": "当サイト を使って配信を保存しショートクリップを作成している数千人の ミクチャ クリエイターに参加しましょう。",
+      "trovo": "当サイト を使って配信を保存しショートクリップを作成している数千人の Trovo クリエイターに参加しましょう。",
+      "twitcast": "当サイト を使って配信を保存しショートクリップを作成している数千人の ツイキャス クリエイターに参加しましょう。",
+      "joilive": "当サイト で配信を保存し、ジョイライブの外でもファンにリーチしているジョイライブのストリーマーに仲間入りしましょう。",
+      "live17": "当サイト で配信を保存し、17ライブの外でもファンにリーチしている17ライブのストリーマーに仲間入りしましょう。",
+      "kwai": "当サイト で配信を保存し、Kwaiの外でもファンにリーチしているKwaiのストリーマーに仲間入りしましょう。",
+      "nimotv": "当サイト で配信を保存し、NimoTVの外でもファンにリーチしているNimoTVのストリーマーに仲間入りしましょう。",
+      "vklive": "当サイト で配信を保存し、VK Liveの外でもファンにリーチしているVK Liveのストリーマーに仲間入りしましょう。",
+      "chzzk": "Naver の VOD タイムラインから消えた後も、すべてのライブを残しておくために 当サイト を使っている Chzzk のクリエイターに仲間入りしましょう。"
     }
   },
   "features": {
@@ -553,7 +595,8 @@
       "live17": "17ライブ ライブを自動録画しましょう",
       "kwai": "Kwai ライブを自動録画しましょう",
       "nimotv": "NimoTV ライブを自動録画しましょう",
-      "vklive": "VK Live ライブを自動録画しましょう"
+      "vklive": "VK Live ライブを自動録画しましょう",
+      "chzzk": "Chzzk のライブを自動録画しましょう"
     },
     "subtitle": "ライブ配信からショートクリップまで、数分で完成",
     "items": {
@@ -593,7 +636,8 @@
       "live17": "17ライブ ライブを録画する",
       "kwai": "Kwai ライブを録画する",
       "nimotv": "NimoTV ライブを録画する",
-      "vklive": "VK Live ライブを録画する"
+      "vklive": "VK Live ライブを録画する",
+      "chzzk": "Chzzk のライブを保存する"
     },
     "subtitle": {
       "all": "数千人のクリエイターに参加して、配信を保存し ClipAI でショートクリップを作り、オーディエンスを増やしましょう。",
@@ -612,7 +656,8 @@
       "live17": "17ライブのストリーマーに仲間入りして、すべての配信を保存し、ClipAI でショートクリップを作って、17ライブの外でも視聴者を増やしましょう。",
       "kwai": "Kwaiのストリーマーに仲間入りして、すべての配信を保存し、ClipAI でショートクリップを作って、Kwaiの外でも視聴者を増やしましょう。",
       "nimotv": "NimoTVのストリーマーに仲間入りして、すべての配信を保存し、ClipAI でショートクリップを作って、NimoTVの外でも視聴者を増やしましょう。",
-      "vklive": "VK Liveのストリーマーに仲間入りして、すべての配信を保存し、ClipAI でショートクリップを作って、VK Liveの外でも視聴者を増やしましょう。"
+      "vklive": "VK Liveのストリーマーに仲間入りして、すべての配信を保存し、ClipAI でショートクリップを作って、VK Liveの外でも視聴者を増やしましょう。",
+      "chzzk": "当サイト ですべてのライブを保存している Chzzk の配信者に仲間入りしましょう。ClipAI でショートクリップを作って、Naver の外の視聴者にもリーチできます。"
     },
     "button": "無料で録画を始める"
   },
@@ -635,35 +680,37 @@
       "live17": "最初の 17ライブ ストリーマーになりましょう！",
       "kwai": "最初の Kwai ストリーマーになりましょう！",
       "nimotv": "最初の NimoTV ストリーマーになりましょう！",
-      "vklive": "最初の VK Live ストリーマーになりましょう！"
+      "vklive": "最初の VK Live ストリーマーになりましょう！",
+      "chzzk": "最初の Chzzk クリエイターになりましょう！"
     },
     "button": "始める"
   },
   "about": {
-    "all": "## LiveStreamRecorder について\n\nベストコンテンツを失わないでください。ライブ配信を自動録画して、ショートクリップに変換しオーディエンスを増やしましょう。\n\n### 配信の自動録画\n\nチャンネル URL を貼り付けてライブを始めるだけです。録画はすべてお任せください。インストール不要、設定不要。すべての配信が自動保存されます。\n\n### 視聴とダウンロード\n\n配信が終わったらすぐに録画を確認できます。視聴したり、ダウンロードしたり、編集者に送ったりできます。\n\n### ClipAI がベストモーメントを見つける\n\n何時間もの映像を見返す必要はありません。ClipAI がベストモーメントをハイライトしてショートクリップに変換します。数分で完成します。\n\n### オーディエンスを増やす\n\n1 回のライブ配信から数十のクリップを作成できます。TikTok、YouTube Shorts、Instagram リールなどあらゆる場所でシェアしましょう。コンテンツが増え、視聴が増え、フォロワーが増えます。\n\n### TikTok、Twitch、YouTube、Kick などを録画\n\nどこで配信しても録画できます。TikTok、Twitch、YouTube、Kick、そして近日公開予定のさらに多くのプラットフォームに対応しています。\n\n### 無料で始められる\n\nアカウントを作成して今日から録画を始めましょう。高品質、より多くの録画、高速ダウンロードのためにアップグレードできます。",
-    "tiktok": "## TikTok クリエイター\n\nLiveStreamRecorder でライブ配信を保存している TikTok クリエイターを発見しましょう。人気 TikTok クリエイターを探し、ライブ録画を視聴して、フォローしたい新しいクリエイターを見つけてください。\n\n### なぜ TikTok クリエイターはライブを録画するのか\n\nTikTok のライブ配信は面白い瞬間やリスナーとのやり取り、バイラルなネタが満載です。でも終了すると消えてしまいます。TikTok コンテンツクリエイターたちは LiveStreamRecorder を使って、すべてのライブを自動保存し何も失わないようにしています。\n\n### トップ TikTok クリエイターをブラウズ\n\nTikTok クリエイター一覧を探索して、ライブ配信を録画している人気クリエイターを見つけましょう。録画を視聴したり、見逃したライブをキャッチアップしたり、フォローする価値のある新しいクリエイターを発見したりできます。\n\n### TikTok クリエイターページ\n\nLiveStreamRecorder に登録したすべての TikTok クリエイターは、ファンがすべての録画ライブを確認できる専用ページを持ちます。登録して TikTok ユーザー名を追加するだけで、クリエイターページが自動設定されます。\n\n### ライブからクリップへ — フォロワーを増やす\n\nTikTok コンテンツクリエイターは ClipAI を使って録画ライブをショートハイライトクリップに変換できます。TikTok、YouTube Shorts、リールに投稿しましょう。1 回のライブが複数のコンテンツになり、投稿が増えてリーチが広がり、フォロワーが増えます。\n\n### LiveStreamRecorder の TikTok クリエイターになる\n\n無料登録して TikTok ユーザー名を追加し、今日からライブ配信の録画を始めましょう。すべてのライブが自動録画されます。画面録画アプリ不要、夜通しスマホを起動したままにする必要もありません。LiveStreamRecorder を使ってオーディエンスを増やしている TikTok クリエイターに参加しましょう。",
-    "twitch": "## Twitch ストリーマー＆クリエイター\n\nLiveStreamRecorder で配信を保存している Twitch ライブストリーマーを発見しましょう。トップ Twitch ストリーマーを探し、録画を視聴して、フォローしたい新しいライブストリーマーを見つけてください。\n\n### なぜ Twitch ストリーマーは配信を録画するのか\n\nTwitch VOD は期限切れになり、ライブ配信のベストモーメントは何時間もの映像の中に埋もれてしまいます。Twitch ストリーマーたちは LiveStreamRecorder を使ってすべての配信を自動保存し、何も失わず、すべてのライブ配信をシェアできるコンテンツに変えています。\n\n### トップ Twitch ライブストリーマーをブラウズ\n\nTwitch ストリーマーページを探索して、配信を録画しているライブストリーマーを見つけましょう。録画を視聴したり、見逃した配信をキャッチアップしたり、ゲーム、IRL ストリームなどあらゆるカテゴリのベスト Twitch ライブストリーマーを発見したりできます。\n\n### Twitch ストリーマーページ\n\nLiveStreamRecorder に登録したすべての Twitch ストリーマーは、ファンがすべての録画配信を確認できる専用ページを持ちます。登録して Twitch チャンネルを連携するだけでページが自動設定されます。Twitch VOD のように期限切れにならない、コンテンツの恒久的なホームとなります。\n\n### 配信からクリップへ — Twitch を超えて成長する\n\nトップの Twitch ライブストリーマーたちはコンテンツを複数のプラットフォームで活用してオーディエンスを増やしています。ClipAI が録画配信を TikTok、YouTube Shorts、リール向けのショートハイライトクリップに変換します。1 回のライブ配信から数十のクリップが生まれ、コンテンツが増え、リーチが広がり、フォロワーが増えます。\n\n### Twitch 配信を始めたばかりなら？今すぐ録画を。\n\nTwitch の配信を始めたばかりの頃から、初日の配信から録画することが最も賢い選択の一つです。コンテンツを振り返って改善し、クリップのライブラリを構築し、すぐに複数プラットフォームでの存在感を高め始めましょう。無料登録ですべての配信が自動録画されます。",
-    "youtube": "## YouTube クリエイター\n\nLiveStreamRecorder でライブ配信を保存している YouTube クリエイターを発見しましょう。YouTube コンテンツクリエイターを探し、録画を視聴して、登録する新しいチャンネルを見つけてください。\n\n### なぜ YouTube クリエイターはライブを録画するのか\n\nYouTube ライブ配信はエンゲージメントに最適ですが、ベストモーメントは何時間もの映像の中に埋もれています。YouTube コンテンツクリエイターたちは LiveStreamRecorder を使ってすべてのライブ配信を自動保存し、何も失わず、すべてのライブをコンテンツ制作の機会に変えています。\n\n### YouTube クリエイターをブラウズ\n\nYouTube クリエイターページを探索して、ライブ配信を録画しているチャンネルを見つけましょう。録画を視聴したり、見逃したライブをキャッチアップしたり、フォローする価値のある新しい YouTube コンテンツクリエイターを発見したりできます。\n\n### YouTube クリエイターページ\n\nLiveStreamRecorder に登録したすべての YouTube クリエイターは、ファンがすべての録画ライブ配信を確認できる専用ページを持ちます。登録して YouTube チャンネルを連携するだけでページが自動設定されます。\n\n### ライブから YouTube Shorts へ\n\nYouTube クリエイターは ClipAI を使って録画ライブを YouTube Shorts に自動変換できます。1 回のライブ配信が複数のコンテンツになり、配信の合間にチャンネルを活性化する最も手軽なコンテンツ制作戦略です。\n\n### YouTube Studio 以上の機能\n\nYouTube Studio はチャンネル管理を担いますが、配信リプレイが失敗したり削除されることがあります。LiveStreamRecorder は YouTube クリエイターにすべてのライブ配信の独立したバックアップを提供し、そのコンテンツを Shorts やクリップに変換するツールも備えています。\n\n### LiveStreamRecorder の YouTube クリエイターになる\n\n無料登録して YouTube チャンネルを連携し、今日からライブ配信の録画を始めましょう。すべてのライブ配信が自動録画されます。LiveStreamRecorder を使ってオーディエンスを増やしている YouTube クリエイターに参加しましょう。",
-    "kick": "## Kickのストリーマー＆クリエイター\n\nLiveStreamRecorderで自分の配信を保存しているKickのストリーマーを見つけよう。Kickクリエイターをブラウズして、録画を視聴して、ゲーミングやIRL、Just Chattingなど、成長中のKickコミュニティから新しいストリーマーをフォローしよう。\n\n### なぜKickのストリーマーは配信を録画するのか\n\nKickはまだ新しいプラットフォームで、VODは常に信頼できるとは限りません。リプレイの処理が失敗したり、チャンネルが変わったり、あなたのベスト配信がファンが見直す前に消えてしまうこともあります。KickストリーマーはLiveStreamRecorderを使って、配信を自動で保存しています。Kickの元のVODが消えても、あなたの配信の印象的な瞬間は常に見られる状態で残ります。\n\n### トップのKickストリーマーをブラウズ\n\n自分の配信をLiveStreamRecorderに保存しているストリーマーを、Kickストリーマーページで探そう。録画を視聴したり、見逃した配信をキャッチアップしたり、ゲーミング、IRL、Just Chattingなどのカテゴリで新しいKickクリエイターを発見できます。\n\n### あなた専用のKickストリーマーページ\n\nLiveStreamRecorderのKickストリーマーは全員、ファンが録画された配信をすべて閲覧できる専用ページを持てます。登録して、あなたのKickチャンネルを追加すれば、クリエイターページが自動で設定されます。Kickのvodシステムに依存しない、あなたのコンテンツの永久的な拠点です。\n\n### 配信からクリップへ — オーディエンスを増やそう\n\nClipAIは、録画されたKick配信を、TikTokやYouTube Shorts、Reelsに投稿できる短いハイライトクリップに変換します。一つの配信が何十ものクリップに。コンテンツが増え、リーチが広がり、フォロワーも増えます。トップのKickストリーマーたちは、ベストシーンをあらゆるプラットフォームで再活用しています。\n\n### LiveStreamRecorderでKickクリエイターになろう\n\n無料で登録して、Kickチャンネルを追加して、今日から配信を録画し始めよう。すべての配信が自動でキャプチャされます。OBSのプラグインも、追加ソフトも、面倒なセットアップも不要です。LiveStreamRecorderでコンテンツを保存しオーディエンスを増やしているKickストリーマーに仲間入りしよう。",
-    "pandalive": "## Pandaliveのクリエイター\n\nLiveStreamRecorderで自分のライブを保存しているPandaliveのBJを見つけよう。韓国のクリエイターをブラウズして、録画を視聴して、韓国で最も活発なライブ配信プラットフォームの一つから新しいBJをフォローしよう。\n\n### なぜPandaliveのBJはライブを録画するのか\n\nPandaliveのライブは常に残るとは限りません。配信が終わったら、もう一度見る確実な方法はありません。PandaliveのBJはLiveStreamRecorderを使って、ライブを自動で保存しています。ダンス、歌、トーク、ファンとの忘れられない瞬間が、配信終了後も失われません。\n\n### トップのPandalive BJをブラウズ\n\n自分のライブをLiveStreamRecorderに保存しているBJを、Pandaliveクリエイターページで探そう。録画を視聴したり、時差で見逃したライブをキャッチアップしたり、フォローする価値のある新しいPandaliveクリエイターを発見できます。\n\n### あなた専用のPandaliveクリエイターページ\n\nLiveStreamRecorderのPandaliveのBJは全員、ファンが録画されたライブをすべて閲覧できる専用ページを持てます。登録して、あなたのPandaliveユーザー名を追加すれば、クリエイターページが自動で設定されます。ライブが終わっても消えない、あなたのコンテンツの永久的な拠点です。\n\n### ライブからクリップへ — ファン層を広げよう\n\nClipAIは、録画されたPandaliveライブを、TikTokやInstagram Reels、YouTube Shortsに投稿できる短いハイライトクリップに変換します。一つのライブが複数のコンテンツに。ダンスクリップ、歌のハイライト、印象的なリアクション。ベストシーンを再活用して、Pandaliveを越えてファン層を広げよう。\n\n### LiveStreamRecorderでPandaliveクリエイターになろう\n\n無料で登録して、Pandaliveユーザー名を追加して、今日からライブを保存し始めよう。すべてのライブが自動でキャプチャされます。画面録画も追加ソフトも不要です。LiveStreamRecorderでライブを守り、世界中のファンにリーチしているPandaliveのBJに仲間入りしよう。",
-    "afreecatv": "## AfreecaTVのクリエイター\n\nLiveStreamRecorderで自分の配信を保存しているAfreecaTVのBJを見つけよう。韓国のクリエイターをブラウズして、録画を視聴して、韓国オリジナルのライブ配信プラットフォーム — eスポーツの実況者、IRLストリーマー、ミュージシャン、トーク番組のパーソナリティの本拠地 — から新しいBJをフォローしよう。\n\n### なぜAfreecaTVのBJは配信を録画するのか\n\nAfreecaTVには独自のVODシステムがありますが、すべてのリプレイが保存されるわけではなく、コンテンツが削除されたり、ストレージのルールが変わったりすることもあります。AfreecaTVのBJはLiveStreamRecorderを独立したバックアップとして使っています。配信は自動でキャプチャされ、元のプラットフォームで何が起きてもあなたの配信履歴は無傷のまま残ります。\n\n### トップのAfreecaTV BJをブラウズ\n\n自分の配信をLiveStreamRecorderに保存しているBJを、AfreecaTVクリエイターページで探そう。録画を視聴したり、見逃した長時間セッションをキャッチアップしたり、StarCraft実況、ゲーミング、IRL、音楽、トークなどのカテゴリで新しいAfreecaTVクリエイターを発見できます。\n\n### あなた専用のAfreecaTVクリエイターページ\n\nLiveStreamRecorderのAfreecaTVのBJは全員、ファンが録画された配信をすべて閲覧できる専用ページを持てます。登録して、あなたのAfreecaTVユーザー名を追加すれば、クリエイターページが自動で設定されます。AfreecaTVのVODポリシーに依存しない、独立したバックアップです。\n\n### 長時間セッションから短いクリップへ — ClipAIで\n\nAfreecaTV配信は何時間にもわたることがあります。ClipAIはあなたの録画を解析して、自動でベストシーンを抽出します。クラッチプレイ、リアクション、面白い瞬間、音楽のハイライト。TikTokクリップ、YouTube Shorts、Reelsとして投稿して、AfreecaTV以外でもオーディエンスを広げよう。\n\n### LiveStreamRecorderでAfreecaTVクリエイターになろう\n\n無料で登録して、AfreecaTVユーザー名を追加して、今日から配信を保存し始めよう。すべての配信が自動でキャプチャされます。AfreecaTVのVODシステムへの依存も、手動アップロードも不要です。LiveStreamRecorderで配信を守り、世界中のファンにリーチしているAfreecaTVのBJに仲間入りしよう。",
-    "bigo": "## Bigo Liveのクリエイター\n\nLiveStreamRecorderで自分のライブを保存しているBigo Liveのクリエイターを見つけよう。Bigoのストリーマーをブラウズして、録画を視聴して、中東、アジア、その他の地域からダンス、音楽、トーク、エンターテイメントのクリエイターが集まる世界最大級のグローバルライブ配信プラットフォームから、新しいクリエイターをフォローしよう。\n\n### なぜBigoのクリエイターはライブを録画するのか\n\nBigoのライブはライブ中にだけ存在します — セッションを終了した瞬間、コンテンツはアプリから完全に消えます。BigoのクリエイターはLiveStreamRecorderを使って、ライブを自動で保存しています。ダンスパフォーマンス、歌、トーク、ギフトの瞬間が、ライブが終わったずっと後でもファンに見てもらえる状態で残ります。\n\n### トップのBigoクリエイターをブラウズ\n\n自分のライブをLiveStreamRecorderに保存しているストリーマーを、Bigoクリエイターページで探そう。録画を視聴したり、見逃したライブをキャッチアップしたり、あらゆるカテゴリと言語で新しいBigoクリエイターを発見できます。\n\n### あなた専用のBigoクリエイターページ\n\nLiveStreamRecorderのBigoクリエイターは全員、ファンが録画されたライブをすべて閲覧できる専用ページを持てます。登録して、あなたのBigoユーザー名を追加すれば、クリエイターページが自動で設定されます。Bigoライブの儚さを越えて生き続ける、あなたのコンテンツの永久的な拠点です。\n\n### ライブからクリップへ — オーディエンスを増やそう\n\nClipAIは、録画されたBigoライブを、TikTokやInstagram Reels、YouTube Shortsに投稿できる短いハイライトクリップに変換します。ダンスの瞬間、デュエット、ファンとの交流、音楽パフォーマンス。一つのライブを複数のコンテンツに変えて、あらゆるプラットフォームでオーディエンスを増やそう。\n\n### LiveStreamRecorderでBigoクリエイターになろう\n\n無料で登録して、Bigoユーザー名を追加して、今日からライブを保存し始めよう。すべてのライブが自動でキャプチャされます。スマホでの録画も画面キャプチャも不要です。LiveStreamRecorderでライブを守り、世界中のファンにリーチしているBigoクリエイターに仲間入りしよう。",
-    "liveme": "## ライブミーのクリエイター\n\nLiveStreamRecorderで自分のライブを保存しているライブミーのクリエイターを見つけよう。ライブミーのストリーマーをブラウズして、録画を視聴して、モバイル中心のライブ配信コミュニティから新しいクリエイターをフォローしよう。\n\n### なぜライブミーのクリエイターはライブを録画するのか\n\nライブミーのライブはライブ専用です — 配信を終了した瞬間、コンテンツはアプリから消えます。リプレイシステムもなく、ファンが後から追いつく方法もありません。ライブミーのクリエイターはLiveStreamRecorderを使って、ライブを自動で保存しています。トーク、音楽パフォーマンス、日常のコンテンツが、ライブが終わったずっと後でもファンに見てもらえる状態で残ります。\n\n### トップのライブミークリエイターをブラウズ\n\n自分のライブをLiveStreamRecorderに保存しているストリーマーを、ライブミークリエイターページで探そう。録画を視聴したり、見逃したライブをキャッチアップしたり、フォローする価値のある新しいライブミークリエイターを発見できます。\n\n### あなた専用のライブミークリエイターページ\n\nLiveStreamRecorderのライブミークリエイターは全員、ファンが録画されたライブをすべて閲覧できる専用ページを持てます。登録して、あなたのライブミーユーザー名を追加すれば、クリエイターページが自動で設定されます。ライブが終わっても消えない、あなたのコンテンツの永久的な場所です。\n\n### ライブからクリップへ — フォロワーを増やそう\n\nClipAIは、録画されたライブミーライブを、TikTokやInstagram Reels、YouTube Shortsに投稿できる短いハイライトクリップに変換します。リアクション、音楽の瞬間、トークのハイライトをバズるコンテンツに変えて、ライブミーを越えてフォロワーを増やそう。\n\n### LiveStreamRecorderでライブミークリエイターになろう\n\n無料で登録して、ライブミーユーザー名を追加して、今日からライブを保存し始めよう。すべてのライブが自動でキャプチャされます。手動録画も追加アプリも不要です。LiveStreamRecorderでライブを守り、オーディエンスを増やしているライブミークリエイターに仲間入りしよう。",
-    "mixch": "## ミクチャのクリエイター\n\nLiveStreamRecorderで自分のライブを保存しているミクチャのクリエイターを見つけよう。ミクチャのストリーマーをブラウズして、録画を視聴して、モバイル中心のライブ配信コミュニティから新しいクリエイターをフォローしよう。\n\n### なぜミクチャのクリエイターはライブを録画するのか\n\nミクチャのライブはライブ専用です — 配信を終了した瞬間、コンテンツはアプリから消えます。リプレイシステムもなく、ファンが後から追いつく方法もありません。ミクチャのクリエイターはLiveStreamRecorderを使って、ライブを自動で保存しています。トーク、音楽パフォーマンス、日常のコンテンツが、ライブが終わったずっと後でもファンに見てもらえる状態で残ります。\n\n### トップのミクチャクリエイターをブラウズ\n\n自分のライブをLiveStreamRecorderに保存しているストリーマーを、ミクチャクリエイターページで探そう。録画を視聴したり、見逃したライブをキャッチアップしたり、フォローする価値のある新しいミクチャクリエイターを発見できます。\n\n### あなた専用のミクチャクリエイターページ\n\nLiveStreamRecorderのミクチャクリエイターは全員、ファンが録画されたライブをすべて閲覧できる専用ページを持てます。登録して、あなたのミクチャユーザー名を追加すれば、クリエイターページが自動で設定されます。ライブが終わっても消えない、あなたのコンテンツの永久的な場所です。\n\n### ライブからクリップへ — フォロワーを増やそう\n\nClipAIは、録画されたミクチャライブを、TikTokやInstagram Reels、YouTube Shortsに投稿できる短いハイライトクリップに変換します。リアクション、音楽の瞬間、トークのハイライトをバズるコンテンツに変えて、ミクチャを越えてフォロワーを増やそう。\n\n### LiveStreamRecorderでミクチャクリエイターになろう\n\n無料で登録して、ミクチャユーザー名を追加して、今日からライブを保存し始めよう。すべてのライブが自動でキャプチャされます。手動録画も追加アプリも不要です。LiveStreamRecorderでライブを守り、オーディエンスを増やしているミクチャクリエイターに仲間入りしよう。",
-    "joilive": "## LiveStreamRecorder のジョイライブ ストリーマー\n\nジョイライブ（joilive.net）のストリーマーは LiveStreamRecorder を使って **自分のライブを自分で録画** し、チャンネルに本物のアーカイブを残しています。ジョイライブ自体はオフラインになると配信を残しません — リプレイタブも、VOD も、過去配信リストもないんです。プラットフォームはライブ専用のチャット・ギフトで構成されているため、配信した内容は終わった瞬間にすべて消えてしまいます。ジョイライブのクリエイターにとって、自分の配信を録画することがそれを残す唯一の方法です。\n\n### 数字 ID 問題\n\nジョイライブはすべてのストリーマーを `1880336239059720193` のような長い数字 ID で識別します。プロフィール URL は `joilive.net/user/index.html?s=1880336239059720193`。誰もブックマークしません。Discord にも貼れません。ジョイライブのページは実質シェアできず、ユーザー名がないのでユーザー名で検索することもできません。LiveStreamRecorder はすべてのジョイライブクリエイターに、クリーンで覚えやすい URL と、検索しやすいクリエイターページを提供します — 裏側ではあなたの数字 ID と紐付いています。同じアカウント、ずっと使いやすい入口。\n\n### 海外時間帯のファンも逃さない\n\nジョイライブはアジア太平洋の視聴者が中心です。JST で配信していて、ファンが EU や NA にいるなら、半分のファンはあなたのライブに間に合いません — ジョイライブでは「間に合わない＝見られない」を意味します。LiveStreamRecorder で自分のライブを録画すれば、時差のあるファンが自分のスケジュールで配信を視聴できるようになります。チャットは消えても、コンテンツは残ります。\n\n### 保存されるもの\n\nライブの動画フル尺、高画質、配信開始の瞬間から。画面キャプチャも、OBS プラグインも、追加のエンコードパスもありません — ジョイライブのストリーマーは自分の側で何も動かす必要がありません。録画は各配信終了時に自動的にあなたの LiveStreamRecorder クリエイターページに着地し、無期限で残ります。何を公開するか、何を非公開にするか、何を削除するかはあなたが決めます。\n\n### ライブをシェア可能なクリップに変える\n\nジョイライブは小さなプラットフォームです。現実問題、視聴者の多くは TikTok、YouTube Shorts、Instagram リールにいて、ジョイライブのアプリは入れていません。ClipAI が保存されたジョイライブの配信をスキャンして、縦型ショート向けに字幕付きの短いクリップを切り出します。視聴者がいる場所に投稿して、次のライブの時にジョイライブのルームへ誘導しましょう。\n\n### ジョイライブのストリーマーを探す・発見する\n\nこのページには LiveStreamRecorder に自分を登録したジョイライブのクリエイターが掲載されています。ジョイライブにはユーザー名も公開検索もないため、Web 上でジョイライブのストリーマーを名前で見つけられる数少ない場所のひとつかもしれません。新しいストリーマーが登録するたびにリストは増えます。\n\n### LiveStreamRecorder でジョイライブのストリーマーになる\n\n登録無料、ライブの保存も無料。プロフィール URL の `?s=…` の値（ジョイライブのユーザー ID）を貼り付けるだけで、あとはこちらでセットアップします。その時点以降の配信はすべてクリエイターページにキャプチャされます。録画するかどうかはあなたの判断、コンテンツはあなたのもの、アーカイブはあなたのドメイン — 誰も覚えられないジョイライブのクエリ文字列 URL ではなく、`livestreamrecorder.com/joilive/your-id` に。",
-    "trovo": "## Trovoのクリエイター\n\nLiveStreamRecorderで自分のライブを保存しているTrovoのクリエイターを見つけよう。Trovoのストリーマーをブラウズして、録画を視聴して、モバイル中心のライブ配信コミュニティから新しいクリエイターをフォローしよう。\n\n### なぜTrovoのクリエイターはライブを録画するのか\n\nTrovoのライブはライブ専用です — 配信を終了した瞬間、コンテンツはアプリから消えます。リプレイシステムもなく、ファンが後から追いつく方法もありません。TrovoのクリエイターはLiveStreamRecorderを使って、ライブを自動で保存しています。トーク、音楽パフォーマンス、日常のコンテンツが、ライブが終わったずっと後でもファンに見てもらえる状態で残ります。\n\n### トップのTrovoクリエイターをブラウズ\n\n自分のライブをLiveStreamRecorderに保存しているストリーマーを、Trovoクリエイターページで探そう。録画を視聴したり、見逃したライブをキャッチアップしたり、フォローする価値のある新しいTrovoクリエイターを発見できます。\n\n### あなた専用のTrovoクリエイターページ\n\nLiveStreamRecorderのTrovoクリエイターは全員、ファンが録画されたライブをすべて閲覧できる専用ページを持てます。登録して、あなたのTrovoユーザー名を追加すれば、クリエイターページが自動で設定されます。ライブが終わっても消えない、あなたのコンテンツの永久的な場所です。\n\n### ライブからクリップへ — フォロワーを増やそう\n\nClipAIは、録画されたTrovoライブを、TikTokやInstagram Reels、YouTube Shortsに投稿できる短いハイライトクリップに変換します。リアクション、音楽の瞬間、トークのハイライトをバズるコンテンツに変えて、Trovoを越えてフォロワーを増やそう。\n\n### LiveStreamRecorderでTrovoクリエイターになろう\n\n無料で登録して、Trovoユーザー名を追加して、今日からライブを保存し始めよう。すべてのライブが自動でキャプチャされます。手動録画も追加アプリも不要です。LiveStreamRecorderでライブを守り、オーディエンスを増やしているTrovoクリエイターに仲間入りしよう。",
-    "twitcast": "## ツイキャスのクリエイター\n\nLiveStreamRecorderで自分のライブを保存しているツイキャスのクリエイターを見つけよう。ツイキャスのストリーマーをブラウズして、録画を視聴して、モバイル中心のライブ配信コミュニティから新しいクリエイターをフォローしよう。\n\n### なぜツイキャスのクリエイターはライブを録画するのか\n\nツイキャスのライブはライブ専用です — 配信を終了した瞬間、コンテンツはアプリから消えます。リプレイシステムもなく、ファンが後から追いつく方法もありません。ツイキャスのクリエイターはLiveStreamRecorderを使って、ライブを自動で保存しています。トーク、音楽パフォーマンス、日常のコンテンツが、ライブが終わったずっと後でもファンに見てもらえる状態で残ります。\n\n### トップのツイキャスクリエイターをブラウズ\n\n自分のライブをLiveStreamRecorderに保存しているストリーマーを、ツイキャスクリエイターページで探そう。録画を視聴したり、見逃したライブをキャッチアップしたり、フォローする価値のある新しいツイキャスクリエイターを発見できます。\n\n### あなた専用のツイキャスクリエイターページ\n\nLiveStreamRecorderのツイキャスクリエイターは全員、ファンが録画されたライブをすべて閲覧できる専用ページを持てます。登録して、あなたのツイキャスユーザー名を追加すれば、クリエイターページが自動で設定されます。ライブが終わっても消えない、あなたのコンテンツの永久的な場所です。\n\n### ライブからクリップへ — フォロワーを増やそう\n\nClipAIは、録画されたツイキャスライブを、TikTokやInstagram Reels、YouTube Shortsに投稿できる短いハイライトクリップに変換します。リアクション、音楽の瞬間、トークのハイライトをバズるコンテンツに変えて、ツイキャスを越えてフォロワーを増やそう。\n\n### LiveStreamRecorderでツイキャスクリエイターになろう\n\n無料で登録して、ツイキャスユーザー名を追加して、今日からライブを保存し始めよう。すべてのライブが自動でキャプチャされます。手動録画も追加アプリも不要です。LiveStreamRecorderでライブを守り、オーディエンスを増やしているツイキャスクリエイターに仲間入りしよう。",
-    "live17": "## LiveStreamRecorder の 17ライブ クリエイター\n\n17ライブ(yi-qi=「一緒に」、一起)はアジア3位の配信プラットフォーム。**Liver**(リアル配信者)と **V-Liver**(バーチャルアバター配信者)の両方をホスティング。2015年に台湾で創業、2021年から日本に本社、SGXに **LVR** として上場。日本、台湾、香港、シンガポール、フィリピンで特に強い。LiveStreamRecorder は、17ライブ配信者の**全ライブを公開Webページに保存**し、17ライブアプリを使わないファンも完全な配信履歴を閲覧できるようにします。\n\n### Liver と V-Liver どちらも対応\n\n17ライブは V-Liver カテゴリ(カスタマイズ可能なデジタル人格としての仮想アバター配信者)を開拓しました。私たちのキャプチャは、フェイスカメラの Liver、Live2D/3D の V-Liver アバター、OBS で構成されたシーン、スマホのみのセットアップ、どれでも同じように動作します。17ライブが視聴者に送信する内容をそのまま保存。DRM 回避や OBS プラグイン、特別な V-Liver ツールは一切不要 — レンダリングの上流でキャプチャするためです。\n\n### 17ライブのアジア中心の現実に最適化\n\n17ライブのユーザーベースは日本、台湾、香港、東南アジアに大きく偏っています。これは多くのオーディエンスが JST/SGT/HKT にいることを意味します。EU や NA のファンは時差のせいだけでライブの半分を見逃してしまい、17ライブアプリ自体は地域外の新規視聴者には発見されにくい。LiveStreamRecorder はこのギャップを埋めます — すべての配信は、誰でも、どこからでも見つけられる公開・検索エンジン索引可能なクリエイターページに保存されます。17ライブアカウントは不要。\n\n### 17ライブアプリを持たないファンにもリーチ\n\n17ライブのアプリ内機能(リプレイ、15〜90秒のアプリ内クリップ)は既存ファンには十分です。しかし、Reddit のラーカー、Discord コミュニティ、Twitter フォロワーなどアプリの外で視聴者を増やすには、どのブラウザでも開ける公開 URL が必要です。LiveStreamRecorder は、`livestreamrecorder.com/live17/your-id` のような共有可能な Web リンクを各ライブに付与します — プロフィールや DM、SNS に貼り付け可能。同じコンテンツ、アプリゲートなしでアクセス可能。\n\n### タレント事務所所属とソロ配信者、同じフロー\n\n17ライブのタレント管理システムは、配信者の発掘、トレーニング、サポートを行います — アジアのライブ配信プラットフォームの中でも特に体系化されています。Hot Star を狙う事務所所属の Liver でも、ゼロから築き上げるインディー配信者でも、LiveStreamRecorder は受動的な録画レイヤーとして機能します。ギフトやランキング、事務所契約、17ライブツールに一切干渉せず、アプリの外でコンテンツを生き残らせるだけです。\n\n### ClipAI でクロスプラットフォーム成長\n\n17ライブのアプリ内クリップは90秒上限でアプリ内に閉じ込められています。ClipAI は LiveStreamRecorder 上の完全版ライブをスキャンし、**TikTok、Instagram Reels、YouTube Shorts** に最適化したショートクリップを生成します — 東南アジアやグローバルの視聴者の発見が最も起こるプラットフォームです。ダンスシーン、歌のカバー、ギフトリアクション、チャットでのやり取り、V-Liver シーンの切り替え — 各ライブをクリップファネルにして、新規ファンを 17ライブの配信室に呼び戻します。\n\n### LiveStreamRecorder で 17ライブクリエイターを始める\n\n登録は無料。17ライブプロフィール URL の `profile/r/your-id` 番号を貼り付けるだけ — それだけで設定完了。次のライブから、すべての配信が自動的にクリエイターページに保存されます。あなたのコンテンツ、あなたの URL、あなたの公開Webでの共有可能な家 — 17ライブアプリから独立して。",
-    "kwai": "## LiveStreamRecorderのKwaiクリエイター\n\nKwai(マンダリン 快 *kuài*、「速い」より)は**Kuaishou Technology**(HKEX 1024)のグローバルショート動画+ライブ配信アプリで、Douyin/TikTokに次ぐアジア#2のショート動画プラットフォームとよく呼ばれます。TikTokが米国/欧州市場を支配する一方、Kwaiは非常に異なる地理を支配:**ブラジル**(Kwaiが数千万MAUを持ちTikTokに匹敵)、加えてインドネシア、メキシコ、アルゼンチン、コロンビア、中東、ロシア/CIS。LiveStreamRecorderはKwaiクリエイターに**各Liveのための公開Webホーム**を提供 — Kwaiアプリをインストールしていないファンによって発見可能。\n\n### Kwaiの発見ギャップはどこに住んでいるか\n\nKwaiはアプリ内では巨大ですが、英語圏のオープンWebではほぼ見えません。アプリ内に数百万ファンを持つブラジル人Kwaiクリエイターも、Google検索では見つけられないことがあります。Kwaiプロフィール URL(`kwai.com/@username`)はYouTubeやTikTokの同等品と比べて薄いページを返します。LiveStreamRecorderはそのギャップを埋めます:配信した各LiveはGoogle経由で発見可能、WhatsAppで共有可能、Kwaiアプリなしで任意のブラウザに貼り付け可能な、クリーンで検索エンジンに索引化されたクリエイターページに着地します。\n\n### ハイブリッドショート動画 + ライブ配信\n\nKwaiはショート動画とライブ配信を成功裏に融合した数少ないプラットフォーム。視聴者はKwaiのフィードをスクロールしてからLiveに入ることに慣れています。LiveStreamRecorderはライブ配信部分を特に取得 — ファンがリアルタイムで見たもの — を公開Webで見られる長尺コンテンツに変えます。ClipAIを使って長いLiveをショートクリップに切り直し、TikTok、Instagram Reels、YouTube ShortsにクロスポストすればKwaiにいない視聴者を捕まえられます。\n\n### 新興市場クリエイターの現実のために構築\n\nKwaiはモバイルデータが貴重で、クリエイターがモバイル中心のセットアップから配信する市場で支配的。私たちは理解しています。録画は完全にサーバーサイド — スマホは2つ目のレコーダーを動かしてバッテリーやデータを焼かない。Kwaiでいつも通り配信するだけで、配信は自動的にLiveStreamRecorderクリエイターページに着地。\n\n### LatAmとアジアの先のファンに届く\n\nKwai最大の市場はブラジル、メキシコとインドネシアで急成長。しかしファンはポルトガル語圏の欧州、スペイン語圏のディアスポラ、MENA移民、またはあなたをフォローしたいけれどKwaiを持っていないTwitter / Instagramユーザーにも広がっているかもしれません。LiveStreamRecorder URL(`livestreamrecorder.com/kwai/your-id`)は任意のブラウザで動作 — アプリインストール不要、Kwaiアカウント不要、地域制限なし — 発見可能、共有可能、索引化可能。\n\n### Kwaiアカウント状態から独立\n\nLiveStreamRecorderはKwaiアカウントにログインせず、K-coinsやギフト収入を見ず、Kwaiのクリエイタープログラムや収益分配にも干渉しません。録画はあなた自身がKwaiクリエイターとして**自分自身の**アカウントに対してオプトインするもので、あなた自身のライブのみをキャプチャします — それ以外は録画しません。Kwaiアカウント、ランキング、収益は完全にKwaiの領域です。\n\n### ClipAIによるクロスプラットフォーム成長\n\nKwaiのアプリ内クリップツールはKwaiアルゴリズムに集中しています。ClipAIは**他のすべて**に集中 — 完全保存されたKwai LiveをスキャンしてTikTok、Instagram Reels、YouTube Shorts用の短い縦型クリップを生成。面白い瞬間、ダンスのハイライト、歌のカバー、視聴者の反応 — 1つのKwai Liveを複数クリップに変えて、Kwai自身が簡単に届けられないオーディエンスに到達。\n\n### LiveStreamRecorderでKwaiクリエイターになる\n\n無料登録。Kwaiユーザー名を追加するか、Kwaiプロフィール URLを貼り付け — それだけ。次のLiveから、各配信が自動的にキャプチャされます。あなたのコンテンツ、共有可能なWeb URL、発見可能なクリエイターページ — Kwaiアプリから独立、残りのオーディエンスがついにあなたを見つけられるオープンWebで。",
-    "nimotv": "## NimoTV Creators on LiveStreamRecorder\n\nNimoTV is the international mobile-esports streaming platform launched by **Huya** (originally part of Tencent's gaming ecosystem) in 2018, built specifically for the global mobile-gaming explosion happening in Brazil, Indonesia, Thailand, Mexico, and Peru. Its catalogue is dominated by mobile titles — **Mobile Legends: Bang Bang (MLBB)**, **Free Fire**, **PUBG Mobile**, **Call of Duty: Mobile**, **Wild Rift**, **Arena of Valor** — and its creator base reflects that: streamers who broadcast directly from their phone, often during ranked grinds that run for hours. LiveStreamRecorder records those broadcasts to a public creator page so fans can rewatch every clutch match — even on platforms that don't have a NimoTV app installed.\n\n### Phone-Only Streaming, Server-Side Recording\n\nMost NimoTV creators are phone-only. No PC, no OBS, no capture card, no second device running in the background. When the ranked session ends, the broadcast is gone — there's no native VOD export from the NimoTV app, and your phone's battery doesn't have spare cycles to record a 4-hour grind locally. LiveStreamRecorder removes the burden entirely: capture happens in our cloud, you broadcast on NimoTV as usual, and the saved recording lands on your creator page automatically. Your phone runs one app, the game runs at full FPS, the recording handles itself.\n\n### Mobile Esports Catalogue, Saved in Full\n\nMobile Legends draft phases, Free Fire squad rotations, PUBG Mobile final circles, COD Mobile sniper rotations — none of it gets cut. Every NimoTV Live is captured at full length, no caps. Want to review a teamfight you lost? Pull the recording, scrub to the timestamp. Want a specific MVP play for a thumbnail? It's on your page, ready to clip.\n\n### Reach Beyond NimoTV's Region Bubble\n\nNimoTV is huge in Brazil, Indonesia, and SE Asia, but invisible on the rest of the internet. Your audience on TikTok, YouTube, and Instagram doesn't have the NimoTV app — and there's no point trying to convince them to install it for a one-time link. LiveStreamRecorder gives each NimoTV Live a public web URL anyone can open. ClipAI then cuts your best plays into vertical short-form clips formatted for **TikTok, Instagram Reels, YouTube Shorts** — the discovery layer outside NimoTV.\n\n### Hashtag Communities Get the Full Match\n\n#MLBB, #FreeFire, #PUBGM, #MobileGaming — the mobile-esports community lives across multiple platforms. A clutch clip on TikTok drives curiosity, but the people who want the full match (analysts, sub-Reddit lurkers, teammates) want the long-form recording. Your LiveStreamRecorder page hosts both: the full Live and the clipped highlights, linked together.\n\n### Browse and Discover NimoTV Creators\n\nThis page lists NimoTV creators on LiveStreamRecorder — Mobile Legends pros, Free Fire streamers from Indonesia, COD Mobile rotation kings from Peru. The directory grows as more mobile esports creators sign up, making it one of the more useful places to discover NimoTV gamers by name outside the NimoTV app itself.\n\n### Doesn't Touch Your NimoTV Account or Diamonds\n\nLiveStreamRecorder never logs into your NimoTV account, doesn't see your diamond income, doesn't read gifting stats, and doesn't interfere with Tencent / Huya creator program tiers. The recording is opt-in by you as the NimoTV creator for **your own** account, and only your own Lives — nothing else. Your NimoTV ranking, watch-time, gifting, and partner status remain entirely on NimoTV.\n\n### Become a NimoTV Creator on LiveStreamRecorder\n\nFree to sign up, free to start saving Lives. Add your NimoTV username and we wire up the rest. From your next ranked grind onwards, every broadcast is captured automatically. Your content, your shareable URL, your discoverable creator page — built for mobile esports creators who don't have time to also run a recording rig.",
-    "vklive": "## VK Live Streamers on LiveStreamRecorder\n\nVK Live is the livestreaming layer inside **VKontakte (VK)**, Russia's largest social network with over 100 million monthly active users. Unlike standalone streaming platforms, VK Live is deeply woven into VK's social graph — streams appear in friends' feeds, can be reposted into communities, integrate with **VK Music** and the **VK Play** gaming platform, and reach an audience that spans Russia, Belarus, Kazakhstan, and Russian-speaking communities worldwide. Since 2022, when Western platforms like Twitch became harder to access from Russia, VK Live has become the de-facto livestreaming home for many Russian-speaking creators. LiveStreamRecorder records every VK Live broadcast to a permanent, shareable archive on the open web.\n\n### The VK Feed Buries Streams Fast\n\nVK Live is a social-first streaming experience. Streams show up in your followers' feeds in real time, can be reposted into communities, and pull live engagement from the VK social graph. That's the strength of the platform — but it's also the weakness if you want a back catalogue. The VK algorithm prioritizes fresh content. Within hours of going offline, your stream is buried beneath new posts. Within 24 hours, even popular VK Lives are effectively invisible to anyone who didn't catch them live. Fans who'd love to rewatch a Dota 2 match or a music set have nowhere to go.\n\nLiveStreamRecorder gives every VK Live broadcast a stable URL on your creator page that exists independently of the VK feed. The feed moves on, your archive stays.\n\n### Built for Russian-Speaking Creators Across Categories\n\nVK Live's creator base spans **Dota 2, CS:GO/CS2, World of Tanks, Standoff 2**, music artists running album drops and acoustic sets, lifestyle and IRL streamers, anime/manga commentators, and educational creators teaching everything from coding to language learning. LiveStreamRecorder works for all of them — the capture is upstream of whatever you broadcast, so OBS scene composition, gameplay overlays, music visualisers, and webcam-only chat streams all preserve perfectly.\n\n### A Permanent Home for Long-Form Content\n\nVK's feed is built for short attention spans — quick scrolling, fast engagement, fresh posts every few hours. That's fine for a 2-minute clip but actively hostile to a 3-hour Dota grind or a 90-minute concert set. A permanent archive on LiveStreamRecorder is the long-form counterpart: fans who want to actually sit with your stream, rewatch a match, or share a specific moment with a friend get a stable URL that works the same way next week and next year.\n\n### Cross-Platform Reach with ClipAI\n\nClipAI scans your saved VK Live broadcasts and cuts vertical short-form clips ready for **TikTok, Instagram Reels, YouTube Shorts** — and for VK's own short-video features. Highlight plays, music drops, funny chat moments, IRL reactions — turn one long broadcast into a stream of shareable content that brings new fans back to your VK Live channel.\n\n### Russian, CIS, and Diaspora Audiences\n\nVK is huge inside Russia and across the CIS, but Russian-speaking communities also live throughout Europe, Israel, North America, and beyond — many of whom don't actively use VK day-to-day. LiveStreamRecorder URLs work in any browser, anywhere in the world, with no VK account required to watch. Your diaspora fans get a way to follow your work that doesn't depend on them maintaining an active VK presence.\n\n### Doesn't Touch Your VK Account or Integrations\n\nLiveStreamRecorder never logs into your VK account, doesn't interfere with VK Music tags, doesn't touch VK Play integrations, and doesn't affect any of VK's creator-side metrics or monetization. The recording is opt-in by you as the VK Live creator for **your own** account, and only captures your own broadcasts — nothing else. Your VK profile, community pages, and creator status stay entirely within VK.\n\n### Become a VK Live Streamer on LiveStreamRecorder\n\nFree to sign up. Add your VK Live username or profile URL, and from your next broadcast onwards every Live is recorded to your creator page automatically. Server-side capture, no software on your end, no extra resources from your streaming PC. The result: a permanent archive of your work on the open web, where the VK feed buries streams fast but your back catalogue stays put."
+    "all": "## 当サイト について\n\nベストコンテンツを失わないでください。ライブ配信を自動録画して、ショートクリップに変換しオーディエンスを増やしましょう。\n\n### 配信の自動録画\n\nチャンネル URL を貼り付けてライブを始めるだけです。録画はすべてお任せください。インストール不要、設定不要。すべての配信が自動保存されます。\n\n### 視聴とダウンロード\n\n配信が終わったらすぐに録画を確認できます。視聴したり、ダウンロードしたり、編集者に送ったりできます。\n\n### ClipAI がベストモーメントを見つける\n\n何時間もの映像を見返す必要はありません。ClipAI がベストモーメントをハイライトしてショートクリップに変換します。数分で完成します。\n\n### オーディエンスを増やす\n\n1 回のライブ配信から数十のクリップを作成できます。TikTok、YouTube Shorts、Instagram リールなどあらゆる場所でシェアしましょう。コンテンツが増え、視聴が増え、フォロワーが増えます。\n\n### TikTok、Twitch、YouTube、Kick などを録画\n\nどこで配信しても録画できます。TikTok、Twitch、YouTube、Kick、そして近日公開予定のさらに多くのプラットフォームに対応しています。\n\n### 無料で始められる\n\nアカウントを作成して今日から録画を始めましょう。高品質、より多くの録画、高速ダウンロードのためにアップグレードできます。",
+    "tiktok": "## TikTok クリエイター\n\n当サイト でライブ配信を保存している TikTok クリエイターを発見しましょう。人気 TikTok クリエイターを探し、ライブ録画を視聴して、フォローしたい新しいクリエイターを見つけてください。\n\n### なぜ TikTok クリエイターはライブを録画するのか\n\nTikTok のライブ配信は面白い瞬間やリスナーとのやり取り、バイラルなネタが満載です。でも終了すると消えてしまいます。TikTok コンテンツクリエイターたちは 当サイト を使って、すべてのライブを自動保存し何も失わないようにしています。\n\n### トップ TikTok クリエイターをブラウズ\n\nTikTok クリエイター一覧を探索して、ライブ配信を録画している人気クリエイターを見つけましょう。録画を視聴したり、見逃したライブをキャッチアップしたり、フォローする価値のある新しいクリエイターを発見したりできます。\n\n### TikTok クリエイターページ\n\n当サイト に登録したすべての TikTok クリエイターは、ファンがすべての録画ライブを確認できる専用ページを持ちます。登録して TikTok ユーザー名を追加するだけで、クリエイターページが自動設定されます。\n\n### ライブからクリップへ — フォロワーを増やす\n\nTikTok コンテンツクリエイターは ClipAI を使って録画ライブをショートハイライトクリップに変換できます。TikTok、YouTube Shorts、リールに投稿しましょう。1 回のライブが複数のコンテンツになり、投稿が増えてリーチが広がり、フォロワーが増えます。\n\n### 当サイト の TikTok クリエイターになる\n\n無料登録して TikTok ユーザー名を追加し、今日からライブ配信の録画を始めましょう。すべてのライブが自動録画されます。画面録画アプリ不要、夜通しスマホを起動したままにする必要もありません。当サイト を使ってオーディエンスを増やしている TikTok クリエイターに参加しましょう。",
+    "twitch": "## Twitch ストリーマー＆クリエイター\n\n当サイト で配信を保存している Twitch ライブストリーマーを発見しましょう。トップ Twitch ストリーマーを探し、録画を視聴して、フォローしたい新しいライブストリーマーを見つけてください。\n\n### なぜ Twitch ストリーマーは配信を録画するのか\n\nTwitch VOD は期限切れになり、ライブ配信のベストモーメントは何時間もの映像の中に埋もれてしまいます。Twitch ストリーマーたちは 当サイト を使ってすべての配信を自動保存し、何も失わず、すべてのライブ配信をシェアできるコンテンツに変えています。\n\n### トップ Twitch ライブストリーマーをブラウズ\n\nTwitch ストリーマーページを探索して、配信を録画しているライブストリーマーを見つけましょう。録画を視聴したり、見逃した配信をキャッチアップしたり、ゲーム、IRL ストリームなどあらゆるカテゴリのベスト Twitch ライブストリーマーを発見したりできます。\n\n### Twitch ストリーマーページ\n\n当サイト に登録したすべての Twitch ストリーマーは、ファンがすべての録画配信を確認できる専用ページを持ちます。登録して Twitch チャンネルを連携するだけでページが自動設定されます。Twitch VOD のように期限切れにならない、コンテンツの恒久的なホームとなります。\n\n### 配信からクリップへ — Twitch を超えて成長する\n\nトップの Twitch ライブストリーマーたちはコンテンツを複数のプラットフォームで活用してオーディエンスを増やしています。ClipAI が録画配信を TikTok、YouTube Shorts、リール向けのショートハイライトクリップに変換します。1 回のライブ配信から数十のクリップが生まれ、コンテンツが増え、リーチが広がり、フォロワーが増えます。\n\n### Twitch 配信を始めたばかりなら？今すぐ録画を。\n\nTwitch の配信を始めたばかりの頃から、初日の配信から録画することが最も賢い選択の一つです。コンテンツを振り返って改善し、クリップのライブラリを構築し、すぐに複数プラットフォームでの存在感を高め始めましょう。無料登録ですべての配信が自動録画されます。",
+    "youtube": "## YouTube クリエイター\n\n当サイト でライブ配信を保存している YouTube クリエイターを発見しましょう。YouTube コンテンツクリエイターを探し、録画を視聴して、登録する新しいチャンネルを見つけてください。\n\n### なぜ YouTube クリエイターはライブを録画するのか\n\nYouTube ライブ配信はエンゲージメントに最適ですが、ベストモーメントは何時間もの映像の中に埋もれています。YouTube コンテンツクリエイターたちは 当サイト を使ってすべてのライブ配信を自動保存し、何も失わず、すべてのライブをコンテンツ制作の機会に変えています。\n\n### YouTube クリエイターをブラウズ\n\nYouTube クリエイターページを探索して、ライブ配信を録画しているチャンネルを見つけましょう。録画を視聴したり、見逃したライブをキャッチアップしたり、フォローする価値のある新しい YouTube コンテンツクリエイターを発見したりできます。\n\n### YouTube クリエイターページ\n\n当サイト に登録したすべての YouTube クリエイターは、ファンがすべての録画ライブ配信を確認できる専用ページを持ちます。登録して YouTube チャンネルを連携するだけでページが自動設定されます。\n\n### ライブから YouTube Shorts へ\n\nYouTube クリエイターは ClipAI を使って録画ライブを YouTube Shorts に自動変換できます。1 回のライブ配信が複数のコンテンツになり、配信の合間にチャンネルを活性化する最も手軽なコンテンツ制作戦略です。\n\n### YouTube Studio 以上の機能\n\nYouTube Studio はチャンネル管理を担いますが、配信リプレイが失敗したり削除されることがあります。当サイト は YouTube クリエイターにすべてのライブ配信の独立したバックアップを提供し、そのコンテンツを Shorts やクリップに変換するツールも備えています。\n\n### 当サイト の YouTube クリエイターになる\n\n無料登録して YouTube チャンネルを連携し、今日からライブ配信の録画を始めましょう。すべてのライブ配信が自動録画されます。当サイト を使ってオーディエンスを増やしている YouTube クリエイターに参加しましょう。",
+    "kick": "## Kickのストリーマー＆クリエイター\n\n当サイトで自分の配信を保存しているKickのストリーマーを見つけよう。Kickクリエイターをブラウズして、録画を視聴して、ゲーミングやIRL、Just Chattingなど、成長中のKickコミュニティから新しいストリーマーをフォローしよう。\n\n### なぜKickのストリーマーは配信を録画するのか\n\nKickはまだ新しいプラットフォームで、VODは常に信頼できるとは限りません。リプレイの処理が失敗したり、チャンネルが変わったり、あなたのベスト配信がファンが見直す前に消えてしまうこともあります。Kickストリーマーは当サイトを使って、配信を自動で保存しています。Kickの元のVODが消えても、あなたの配信の印象的な瞬間は常に見られる状態で残ります。\n\n### トップのKickストリーマーをブラウズ\n\n自分の配信を当サイトに保存しているストリーマーを、Kickストリーマーページで探そう。録画を視聴したり、見逃した配信をキャッチアップしたり、ゲーミング、IRL、Just Chattingなどのカテゴリで新しいKickクリエイターを発見できます。\n\n### あなた専用のKickストリーマーページ\n\n当サイトのKickストリーマーは全員、ファンが録画された配信をすべて閲覧できる専用ページを持てます。登録して、あなたのKickチャンネルを追加すれば、クリエイターページが自動で設定されます。Kickのvodシステムに依存しない、あなたのコンテンツの永久的な拠点です。\n\n### 配信からクリップへ — オーディエンスを増やそう\n\nClipAIは、録画されたKick配信を、TikTokやYouTube Shorts、Reelsに投稿できる短いハイライトクリップに変換します。一つの配信が何十ものクリップに。コンテンツが増え、リーチが広がり、フォロワーも増えます。トップのKickストリーマーたちは、ベストシーンをあらゆるプラットフォームで再活用しています。\n\n### 当サイトでKickクリエイターになろう\n\n無料で登録して、Kickチャンネルを追加して、今日から配信を録画し始めよう。すべての配信が自動でキャプチャされます。OBSのプラグインも、追加ソフトも、面倒なセットアップも不要です。当サイトでコンテンツを保存しオーディエンスを増やしているKickストリーマーに仲間入りしよう。",
+    "pandalive": "## Pandaliveのクリエイター\n\n当サイトで自分のライブを保存しているPandaliveのBJを見つけよう。韓国のクリエイターをブラウズして、録画を視聴して、韓国で最も活発なライブ配信プラットフォームの一つから新しいBJをフォローしよう。\n\n### なぜPandaliveのBJはライブを録画するのか\n\nPandaliveのライブは常に残るとは限りません。配信が終わったら、もう一度見る確実な方法はありません。PandaliveのBJは当サイトを使って、ライブを自動で保存しています。ダンス、歌、トーク、ファンとの忘れられない瞬間が、配信終了後も失われません。\n\n### トップのPandalive BJをブラウズ\n\n自分のライブを当サイトに保存しているBJを、Pandaliveクリエイターページで探そう。録画を視聴したり、時差で見逃したライブをキャッチアップしたり、フォローする価値のある新しいPandaliveクリエイターを発見できます。\n\n### あなた専用のPandaliveクリエイターページ\n\n当サイトのPandaliveのBJは全員、ファンが録画されたライブをすべて閲覧できる専用ページを持てます。登録して、あなたのPandaliveユーザー名を追加すれば、クリエイターページが自動で設定されます。ライブが終わっても消えない、あなたのコンテンツの永久的な拠点です。\n\n### ライブからクリップへ — ファン層を広げよう\n\nClipAIは、録画されたPandaliveライブを、TikTokやInstagram Reels、YouTube Shortsに投稿できる短いハイライトクリップに変換します。一つのライブが複数のコンテンツに。ダンスクリップ、歌のハイライト、印象的なリアクション。ベストシーンを再活用して、Pandaliveを越えてファン層を広げよう。\n\n### 当サイトでPandaliveクリエイターになろう\n\n無料で登録して、Pandaliveユーザー名を追加して、今日からライブを保存し始めよう。すべてのライブが自動でキャプチャされます。画面録画も追加ソフトも不要です。当サイトでライブを守り、世界中のファンにリーチしているPandaliveのBJに仲間入りしよう。",
+    "afreecatv": "## AfreecaTVのクリエイター\n\n当サイトで自分の配信を保存しているAfreecaTVのBJを見つけよう。韓国のクリエイターをブラウズして、録画を視聴して、韓国オリジナルのライブ配信プラットフォーム — eスポーツの実況者、IRLストリーマー、ミュージシャン、トーク番組のパーソナリティの本拠地 — から新しいBJをフォローしよう。\n\n### なぜAfreecaTVのBJは配信を録画するのか\n\nAfreecaTVには独自のVODシステムがありますが、すべてのリプレイが保存されるわけではなく、コンテンツが削除されたり、ストレージのルールが変わったりすることもあります。AfreecaTVのBJは当サイトを独立したバックアップとして使っています。配信は自動でキャプチャされ、元のプラットフォームで何が起きてもあなたの配信履歴は無傷のまま残ります。\n\n### トップのAfreecaTV BJをブラウズ\n\n自分の配信を当サイトに保存しているBJを、AfreecaTVクリエイターページで探そう。録画を視聴したり、見逃した長時間セッションをキャッチアップしたり、StarCraft実況、ゲーミング、IRL、音楽、トークなどのカテゴリで新しいAfreecaTVクリエイターを発見できます。\n\n### あなた専用のAfreecaTVクリエイターページ\n\n当サイトのAfreecaTVのBJは全員、ファンが録画された配信をすべて閲覧できる専用ページを持てます。登録して、あなたのAfreecaTVユーザー名を追加すれば、クリエイターページが自動で設定されます。AfreecaTVのVODポリシーに依存しない、独立したバックアップです。\n\n### 長時間セッションから短いクリップへ — ClipAIで\n\nAfreecaTV配信は何時間にもわたることがあります。ClipAIはあなたの録画を解析して、自動でベストシーンを抽出します。クラッチプレイ、リアクション、面白い瞬間、音楽のハイライト。TikTokクリップ、YouTube Shorts、Reelsとして投稿して、AfreecaTV以外でもオーディエンスを広げよう。\n\n### 当サイトでAfreecaTVクリエイターになろう\n\n無料で登録して、AfreecaTVユーザー名を追加して、今日から配信を保存し始めよう。すべての配信が自動でキャプチャされます。AfreecaTVのVODシステムへの依存も、手動アップロードも不要です。当サイトで配信を守り、世界中のファンにリーチしているAfreecaTVのBJに仲間入りしよう。",
+    "bigo": "## Bigo Liveのクリエイター\n\n当サイトで自分のライブを保存しているBigo Liveのクリエイターを見つけよう。Bigoのストリーマーをブラウズして、録画を視聴して、中東、アジア、その他の地域からダンス、音楽、トーク、エンターテイメントのクリエイターが集まる世界最大級のグローバルライブ配信プラットフォームから、新しいクリエイターをフォローしよう。\n\n### なぜBigoのクリエイターはライブを録画するのか\n\nBigoのライブはライブ中にだけ存在します — セッションを終了した瞬間、コンテンツはアプリから完全に消えます。Bigoのクリエイターは当サイトを使って、ライブを自動で保存しています。ダンスパフォーマンス、歌、トーク、ギフトの瞬間が、ライブが終わったずっと後でもファンに見てもらえる状態で残ります。\n\n### トップのBigoクリエイターをブラウズ\n\n自分のライブを当サイトに保存しているストリーマーを、Bigoクリエイターページで探そう。録画を視聴したり、見逃したライブをキャッチアップしたり、あらゆるカテゴリと言語で新しいBigoクリエイターを発見できます。\n\n### あなた専用のBigoクリエイターページ\n\n当サイトのBigoクリエイターは全員、ファンが録画されたライブをすべて閲覧できる専用ページを持てます。登録して、あなたのBigoユーザー名を追加すれば、クリエイターページが自動で設定されます。Bigoライブの儚さを越えて生き続ける、あなたのコンテンツの永久的な拠点です。\n\n### ライブからクリップへ — オーディエンスを増やそう\n\nClipAIは、録画されたBigoライブを、TikTokやInstagram Reels、YouTube Shortsに投稿できる短いハイライトクリップに変換します。ダンスの瞬間、デュエット、ファンとの交流、音楽パフォーマンス。一つのライブを複数のコンテンツに変えて、あらゆるプラットフォームでオーディエンスを増やそう。\n\n### 当サイトでBigoクリエイターになろう\n\n無料で登録して、Bigoユーザー名を追加して、今日からライブを保存し始めよう。すべてのライブが自動でキャプチャされます。スマホでの録画も画面キャプチャも不要です。当サイトでライブを守り、世界中のファンにリーチしているBigoクリエイターに仲間入りしよう。",
+    "liveme": "## ライブミーのクリエイター\n\n当サイトで自分のライブを保存しているライブミーのクリエイターを見つけよう。ライブミーのストリーマーをブラウズして、録画を視聴して、モバイル中心のライブ配信コミュニティから新しいクリエイターをフォローしよう。\n\n### なぜライブミーのクリエイターはライブを録画するのか\n\nライブミーのライブはライブ専用です — 配信を終了した瞬間、コンテンツはアプリから消えます。リプレイシステムもなく、ファンが後から追いつく方法もありません。ライブミーのクリエイターは当サイトを使って、ライブを自動で保存しています。トーク、音楽パフォーマンス、日常のコンテンツが、ライブが終わったずっと後でもファンに見てもらえる状態で残ります。\n\n### トップのライブミークリエイターをブラウズ\n\n自分のライブを当サイトに保存しているストリーマーを、ライブミークリエイターページで探そう。録画を視聴したり、見逃したライブをキャッチアップしたり、フォローする価値のある新しいライブミークリエイターを発見できます。\n\n### あなた専用のライブミークリエイターページ\n\n当サイトのライブミークリエイターは全員、ファンが録画されたライブをすべて閲覧できる専用ページを持てます。登録して、あなたのライブミーユーザー名を追加すれば、クリエイターページが自動で設定されます。ライブが終わっても消えない、あなたのコンテンツの永久的な場所です。\n\n### ライブからクリップへ — フォロワーを増やそう\n\nClipAIは、録画されたライブミーライブを、TikTokやInstagram Reels、YouTube Shortsに投稿できる短いハイライトクリップに変換します。リアクション、音楽の瞬間、トークのハイライトをバズるコンテンツに変えて、ライブミーを越えてフォロワーを増やそう。\n\n### 当サイトでライブミークリエイターになろう\n\n無料で登録して、ライブミーユーザー名を追加して、今日からライブを保存し始めよう。すべてのライブが自動でキャプチャされます。手動録画も追加アプリも不要です。当サイトでライブを守り、オーディエンスを増やしているライブミークリエイターに仲間入りしよう。",
+    "mixch": "## ミクチャのクリエイター\n\n当サイトで自分のライブを保存しているミクチャのクリエイターを見つけよう。ミクチャのストリーマーをブラウズして、録画を視聴して、モバイル中心のライブ配信コミュニティから新しいクリエイターをフォローしよう。\n\n### なぜミクチャのクリエイターはライブを録画するのか\n\nミクチャのライブはライブ専用です — 配信を終了した瞬間、コンテンツはアプリから消えます。リプレイシステムもなく、ファンが後から追いつく方法もありません。ミクチャのクリエイターは当サイトを使って、ライブを自動で保存しています。トーク、音楽パフォーマンス、日常のコンテンツが、ライブが終わったずっと後でもファンに見てもらえる状態で残ります。\n\n### トップのミクチャクリエイターをブラウズ\n\n自分のライブを当サイトに保存しているストリーマーを、ミクチャクリエイターページで探そう。録画を視聴したり、見逃したライブをキャッチアップしたり、フォローする価値のある新しいミクチャクリエイターを発見できます。\n\n### あなた専用のミクチャクリエイターページ\n\n当サイトのミクチャクリエイターは全員、ファンが録画されたライブをすべて閲覧できる専用ページを持てます。登録して、あなたのミクチャユーザー名を追加すれば、クリエイターページが自動で設定されます。ライブが終わっても消えない、あなたのコンテンツの永久的な場所です。\n\n### ライブからクリップへ — フォロワーを増やそう\n\nClipAIは、録画されたミクチャライブを、TikTokやInstagram Reels、YouTube Shortsに投稿できる短いハイライトクリップに変換します。リアクション、音楽の瞬間、トークのハイライトをバズるコンテンツに変えて、ミクチャを越えてフォロワーを増やそう。\n\n### 当サイトでミクチャクリエイターになろう\n\n無料で登録して、ミクチャユーザー名を追加して、今日からライブを保存し始めよう。すべてのライブが自動でキャプチャされます。手動録画も追加アプリも不要です。当サイトでライブを守り、オーディエンスを増やしているミクチャクリエイターに仲間入りしよう。",
+    "joilive": "## 当サイト のジョイライブ ストリーマー\n\nジョイライブ（joilive.net）のストリーマーは 当サイト を使って **自分のライブを自分で録画** し、チャンネルに本物のアーカイブを残しています。ジョイライブ自体はオフラインになると配信を残しません — リプレイタブも、VOD も、過去配信リストもないんです。プラットフォームはライブ専用のチャット・ギフトで構成されているため、配信した内容は終わった瞬間にすべて消えてしまいます。ジョイライブのクリエイターにとって、自分の配信を録画することがそれを残す唯一の方法です。\n\n### 数字 ID 問題\n\nジョイライブはすべてのストリーマーを `1880336239059720193` のような長い数字 ID で識別します。プロフィール URL は `joilive.net/user/index.html?s=1880336239059720193`。誰もブックマークしません。Discord にも貼れません。ジョイライブのページは実質シェアできず、ユーザー名がないのでユーザー名で検索することもできません。当サイト はすべてのジョイライブクリエイターに、クリーンで覚えやすい URL と、検索しやすいクリエイターページを提供します — 裏側ではあなたの数字 ID と紐付いています。同じアカウント、ずっと使いやすい入口。\n\n### 海外時間帯のファンも逃さない\n\nジョイライブはアジア太平洋の視聴者が中心です。JST で配信していて、ファンが EU や NA にいるなら、半分のファンはあなたのライブに間に合いません — ジョイライブでは「間に合わない＝見られない」を意味します。当サイト で自分のライブを録画すれば、時差のあるファンが自分のスケジュールで配信を視聴できるようになります。チャットは消えても、コンテンツは残ります。\n\n### 保存されるもの\n\nライブの動画フル尺、高画質、配信開始の瞬間から。画面キャプチャも、OBS プラグインも、追加のエンコードパスもありません — ジョイライブのストリーマーは自分の側で何も動かす必要がありません。録画は各配信終了時に自動的にあなたの 当サイト クリエイターページに着地し、無期限で残ります。何を公開するか、何を非公開にするか、何を削除するかはあなたが決めます。\n\n### ライブをシェア可能なクリップに変える\n\nジョイライブは小さなプラットフォームです。現実問題、視聴者の多くは TikTok、YouTube Shorts、Instagram リールにいて、ジョイライブのアプリは入れていません。ClipAI が保存されたジョイライブの配信をスキャンして、縦型ショート向けに字幕付きの短いクリップを切り出します。視聴者がいる場所に投稿して、次のライブの時にジョイライブのルームへ誘導しましょう。\n\n### ジョイライブのストリーマーを探す・発見する\n\nこのページには 当サイト に自分を登録したジョイライブのクリエイターが掲載されています。ジョイライブにはユーザー名も公開検索もないため、Web 上でジョイライブのストリーマーを名前で見つけられる数少ない場所のひとつかもしれません。新しいストリーマーが登録するたびにリストは増えます。\n\n### 当サイト でジョイライブのストリーマーになる\n\n登録無料、ライブの保存も無料。プロフィール URL の `?s=…` の値（ジョイライブのユーザー ID）を貼り付けるだけで、あとはこちらでセットアップします。その時点以降の配信はすべてクリエイターページにキャプチャされます。録画するかどうかはあなたの判断、コンテンツはあなたのもの、アーカイブはあなたのドメイン — 誰も覚えられないジョイライブのクエリ文字列 URL ではなく、`livestreamrecorder.com/joilive/your-id` に。",
+    "trovo": "## Trovoのクリエイター\n\n当サイトで自分のライブを保存しているTrovoのクリエイターを見つけよう。Trovoのストリーマーをブラウズして、録画を視聴して、モバイル中心のライブ配信コミュニティから新しいクリエイターをフォローしよう。\n\n### なぜTrovoのクリエイターはライブを録画するのか\n\nTrovoのライブはライブ専用です — 配信を終了した瞬間、コンテンツはアプリから消えます。リプレイシステムもなく、ファンが後から追いつく方法もありません。Trovoのクリエイターは当サイトを使って、ライブを自動で保存しています。トーク、音楽パフォーマンス、日常のコンテンツが、ライブが終わったずっと後でもファンに見てもらえる状態で残ります。\n\n### トップのTrovoクリエイターをブラウズ\n\n自分のライブを当サイトに保存しているストリーマーを、Trovoクリエイターページで探そう。録画を視聴したり、見逃したライブをキャッチアップしたり、フォローする価値のある新しいTrovoクリエイターを発見できます。\n\n### あなた専用のTrovoクリエイターページ\n\n当サイトのTrovoクリエイターは全員、ファンが録画されたライブをすべて閲覧できる専用ページを持てます。登録して、あなたのTrovoユーザー名を追加すれば、クリエイターページが自動で設定されます。ライブが終わっても消えない、あなたのコンテンツの永久的な場所です。\n\n### ライブからクリップへ — フォロワーを増やそう\n\nClipAIは、録画されたTrovoライブを、TikTokやInstagram Reels、YouTube Shortsに投稿できる短いハイライトクリップに変換します。リアクション、音楽の瞬間、トークのハイライトをバズるコンテンツに変えて、Trovoを越えてフォロワーを増やそう。\n\n### 当サイトでTrovoクリエイターになろう\n\n無料で登録して、Trovoユーザー名を追加して、今日からライブを保存し始めよう。すべてのライブが自動でキャプチャされます。手動録画も追加アプリも不要です。当サイトでライブを守り、オーディエンスを増やしているTrovoクリエイターに仲間入りしよう。",
+    "twitcast": "## ツイキャスのクリエイター\n\n当サイトで自分のライブを保存しているツイキャスのクリエイターを見つけよう。ツイキャスのストリーマーをブラウズして、録画を視聴して、モバイル中心のライブ配信コミュニティから新しいクリエイターをフォローしよう。\n\n### なぜツイキャスのクリエイターはライブを録画するのか\n\nツイキャスのライブはライブ専用です — 配信を終了した瞬間、コンテンツはアプリから消えます。リプレイシステムもなく、ファンが後から追いつく方法もありません。ツイキャスのクリエイターは当サイトを使って、ライブを自動で保存しています。トーク、音楽パフォーマンス、日常のコンテンツが、ライブが終わったずっと後でもファンに見てもらえる状態で残ります。\n\n### トップのツイキャスクリエイターをブラウズ\n\n自分のライブを当サイトに保存しているストリーマーを、ツイキャスクリエイターページで探そう。録画を視聴したり、見逃したライブをキャッチアップしたり、フォローする価値のある新しいツイキャスクリエイターを発見できます。\n\n### あなた専用のツイキャスクリエイターページ\n\n当サイトのツイキャスクリエイターは全員、ファンが録画されたライブをすべて閲覧できる専用ページを持てます。登録して、あなたのツイキャスユーザー名を追加すれば、クリエイターページが自動で設定されます。ライブが終わっても消えない、あなたのコンテンツの永久的な場所です。\n\n### ライブからクリップへ — フォロワーを増やそう\n\nClipAIは、録画されたツイキャスライブを、TikTokやInstagram Reels、YouTube Shortsに投稿できる短いハイライトクリップに変換します。リアクション、音楽の瞬間、トークのハイライトをバズるコンテンツに変えて、ツイキャスを越えてフォロワーを増やそう。\n\n### 当サイトでツイキャスクリエイターになろう\n\n無料で登録して、ツイキャスユーザー名を追加して、今日からライブを保存し始めよう。すべてのライブが自動でキャプチャされます。手動録画も追加アプリも不要です。当サイトでライブを守り、オーディエンスを増やしているツイキャスクリエイターに仲間入りしよう。",
+    "live17": "## 当サイト の 17ライブ クリエイター\n\n17ライブ(yi-qi=「一緒に」、一起)はアジア3位の配信プラットフォーム。**Liver**(リアル配信者)と **V-Liver**(バーチャルアバター配信者)の両方をホスティング。2015年に台湾で創業、2021年から日本に本社、SGXに **LVR** として上場。日本、台湾、香港、シンガポール、フィリピンで特に強い。当サイト は、17ライブ配信者の**全ライブを公開Webページに保存**し、17ライブアプリを使わないファンも完全な配信履歴を閲覧できるようにします。\n\n### Liver と V-Liver どちらも対応\n\n17ライブは V-Liver カテゴリ(カスタマイズ可能なデジタル人格としての仮想アバター配信者)を開拓しました。私たちのキャプチャは、フェイスカメラの Liver、Live2D/3D の V-Liver アバター、OBS で構成されたシーン、スマホのみのセットアップ、どれでも同じように動作します。17ライブが視聴者に送信する内容をそのまま保存。DRM 回避や OBS プラグイン、特別な V-Liver ツールは一切不要 — レンダリングの上流でキャプチャするためです。\n\n### 17ライブのアジア中心の現実に最適化\n\n17ライブのユーザーベースは日本、台湾、香港、東南アジアに大きく偏っています。これは多くのオーディエンスが JST/SGT/HKT にいることを意味します。EU や NA のファンは時差のせいだけでライブの半分を見逃してしまい、17ライブアプリ自体は地域外の新規視聴者には発見されにくい。当サイト はこのギャップを埋めます — すべての配信は、誰でも、どこからでも見つけられる公開・検索エンジン索引可能なクリエイターページに保存されます。17ライブアカウントは不要。\n\n### 17ライブアプリを持たないファンにもリーチ\n\n17ライブのアプリ内機能(リプレイ、15〜90秒のアプリ内クリップ)は既存ファンには十分です。しかし、Reddit のラーカー、Discord コミュニティ、Twitter フォロワーなどアプリの外で視聴者を増やすには、どのブラウザでも開ける公開 URL が必要です。当サイト は、`livestreamrecorder.com/live17/your-id` のような共有可能な Web リンクを各ライブに付与します — プロフィールや DM、SNS に貼り付け可能。同じコンテンツ、アプリゲートなしでアクセス可能。\n\n### タレント事務所所属とソロ配信者、同じフロー\n\n17ライブのタレント管理システムは、配信者の発掘、トレーニング、サポートを行います — アジアのライブ配信プラットフォームの中でも特に体系化されています。Hot Star を狙う事務所所属の Liver でも、ゼロから築き上げるインディー配信者でも、当サイト は受動的な録画レイヤーとして機能します。ギフトやランキング、事務所契約、17ライブツールに一切干渉せず、アプリの外でコンテンツを生き残らせるだけです。\n\n### ClipAI でクロスプラットフォーム成長\n\n17ライブのアプリ内クリップは90秒上限でアプリ内に閉じ込められています。ClipAI は 当サイト 上の完全版ライブをスキャンし、**TikTok、Instagram Reels、YouTube Shorts** に最適化したショートクリップを生成します — 東南アジアやグローバルの視聴者の発見が最も起こるプラットフォームです。ダンスシーン、歌のカバー、ギフトリアクション、チャットでのやり取り、V-Liver シーンの切り替え — 各ライブをクリップファネルにして、新規ファンを 17ライブの配信室に呼び戻します。\n\n### 当サイト で 17ライブクリエイターを始める\n\n登録は無料。17ライブプロフィール URL の `profile/r/your-id` 番号を貼り付けるだけ — それだけで設定完了。次のライブから、すべての配信が自動的にクリエイターページに保存されます。あなたのコンテンツ、あなたの URL、あなたの公開Webでの共有可能な家 — 17ライブアプリから独立して。",
+    "kwai": "## 当サイトのKwaiクリエイター\n\nKwai(マンダリン 快 *kuài*、「速い」より)は**Kuaishou Technology**(HKEX 1024)のグローバルショート動画+ライブ配信アプリで、Douyin/TikTokに次ぐアジア#2のショート動画プラットフォームとよく呼ばれます。TikTokが米国/欧州市場を支配する一方、Kwaiは非常に異なる地理を支配:**ブラジル**(Kwaiが数千万MAUを持ちTikTokに匹敵)、加えてインドネシア、メキシコ、アルゼンチン、コロンビア、中東、ロシア/CIS。当サイトはKwaiクリエイターに**各Liveのための公開Webホーム**を提供 — Kwaiアプリをインストールしていないファンによって発見可能。\n\n### Kwaiの発見ギャップはどこに住んでいるか\n\nKwaiはアプリ内では巨大ですが、英語圏のオープンWebではほぼ見えません。アプリ内に数百万ファンを持つブラジル人Kwaiクリエイターも、Google検索では見つけられないことがあります。Kwaiプロフィール URL(`kwai.com/@username`)はYouTubeやTikTokの同等品と比べて薄いページを返します。当サイトはそのギャップを埋めます:配信した各LiveはGoogle経由で発見可能、WhatsAppで共有可能、Kwaiアプリなしで任意のブラウザに貼り付け可能な、クリーンで検索エンジンに索引化されたクリエイターページに着地します。\n\n### ハイブリッドショート動画 + ライブ配信\n\nKwaiはショート動画とライブ配信を成功裏に融合した数少ないプラットフォーム。視聴者はKwaiのフィードをスクロールしてからLiveに入ることに慣れています。当サイトはライブ配信部分を特に取得 — ファンがリアルタイムで見たもの — を公開Webで見られる長尺コンテンツに変えます。ClipAIを使って長いLiveをショートクリップに切り直し、TikTok、Instagram Reels、YouTube ShortsにクロスポストすればKwaiにいない視聴者を捕まえられます。\n\n### 新興市場クリエイターの現実のために構築\n\nKwaiはモバイルデータが貴重で、クリエイターがモバイル中心のセットアップから配信する市場で支配的。私たちは理解しています。録画は完全にサーバーサイド — スマホは2つ目のレコーダーを動かしてバッテリーやデータを焼かない。Kwaiでいつも通り配信するだけで、配信は自動的に当サイトクリエイターページに着地。\n\n### LatAmとアジアの先のファンに届く\n\nKwai最大の市場はブラジル、メキシコとインドネシアで急成長。しかしファンはポルトガル語圏の欧州、スペイン語圏のディアスポラ、MENA移民、またはあなたをフォローしたいけれどKwaiを持っていないTwitter / Instagramユーザーにも広がっているかもしれません。当サイト URL(`livestreamrecorder.com/kwai/your-id`)は任意のブラウザで動作 — アプリインストール不要、Kwaiアカウント不要、地域制限なし — 発見可能、共有可能、索引化可能。\n\n### Kwaiアカウント状態から独立\n\n当サイトはKwaiアカウントにログインせず、K-coinsやギフト収入を見ず、Kwaiのクリエイタープログラムや収益分配にも干渉しません。録画はあなた自身がKwaiクリエイターとして**自分自身の**アカウントに対してオプトインするもので、あなた自身のライブのみをキャプチャします — それ以外は録画しません。Kwaiアカウント、ランキング、収益は完全にKwaiの領域です。\n\n### ClipAIによるクロスプラットフォーム成長\n\nKwaiのアプリ内クリップツールはKwaiアルゴリズムに集中しています。ClipAIは**他のすべて**に集中 — 完全保存されたKwai LiveをスキャンしてTikTok、Instagram Reels、YouTube Shorts用の短い縦型クリップを生成。面白い瞬間、ダンスのハイライト、歌のカバー、視聴者の反応 — 1つのKwai Liveを複数クリップに変えて、Kwai自身が簡単に届けられないオーディエンスに到達。\n\n### 当サイトでKwaiクリエイターになる\n\n無料登録。Kwaiユーザー名を追加するか、Kwaiプロフィール URLを貼り付け — それだけ。次のLiveから、各配信が自動的にキャプチャされます。あなたのコンテンツ、共有可能なWeb URL、発見可能なクリエイターページ — Kwaiアプリから独立、残りのオーディエンスがついにあなたを見つけられるオープンWebで。",
+    "nimotv": "## NimoTV Creators on 当サイト\n\nNimoTV is the international mobile-esports streaming platform launched by **Huya** (originally part of Tencent's gaming ecosystem) in 2018, built specifically for the global mobile-gaming explosion happening in Brazil, Indonesia, Thailand, Mexico, and Peru. Its catalogue is dominated by mobile titles — **Mobile Legends: Bang Bang (MLBB)**, **Free Fire**, **PUBG Mobile**, **Call of Duty: Mobile**, **Wild Rift**, **Arena of Valor** — and its creator base reflects that: streamers who broadcast directly from their phone, often during ranked grinds that run for hours. 当サイト records those broadcasts to a public creator page so fans can rewatch every clutch match — even on platforms that don't have a NimoTV app installed.\n\n### Phone-Only Streaming, Server-Side Recording\n\nMost NimoTV creators are phone-only. No PC, no OBS, no capture card, no second device running in the background. When the ranked session ends, the broadcast is gone — there's no native VOD export from the NimoTV app, and your phone's battery doesn't have spare cycles to record a 4-hour grind locally. 当サイト removes the burden entirely: capture happens in our cloud, you broadcast on NimoTV as usual, and the saved recording lands on your creator page automatically. Your phone runs one app, the game runs at full FPS, the recording handles itself.\n\n### Mobile Esports Catalogue, Saved in Full\n\nMobile Legends draft phases, Free Fire squad rotations, PUBG Mobile final circles, COD Mobile sniper rotations — none of it gets cut. Every NimoTV Live is captured at full length, no caps. Want to review a teamfight you lost? Pull the recording, scrub to the timestamp. Want a specific MVP play for a thumbnail? It's on your page, ready to clip.\n\n### Reach Beyond NimoTV's Region Bubble\n\nNimoTV is huge in Brazil, Indonesia, and SE Asia, but invisible on the rest of the internet. Your audience on TikTok, YouTube, and Instagram doesn't have the NimoTV app — and there's no point trying to convince them to install it for a one-time link. 当サイト gives each NimoTV Live a public web URL anyone can open. ClipAI then cuts your best plays into vertical short-form clips formatted for **TikTok, Instagram Reels, YouTube Shorts** — the discovery layer outside NimoTV.\n\n### Hashtag Communities Get the Full Match\n\n#MLBB, #FreeFire, #PUBGM, #MobileGaming — the mobile-esports community lives across multiple platforms. A clutch clip on TikTok drives curiosity, but the people who want the full match (analysts, sub-Reddit lurkers, teammates) want the long-form recording. Your 当サイト page hosts both: the full Live and the clipped highlights, linked together.\n\n### Browse and Discover NimoTV Creators\n\nThis page lists NimoTV creators on 当サイト — Mobile Legends pros, Free Fire streamers from Indonesia, COD Mobile rotation kings from Peru. The directory grows as more mobile esports creators sign up, making it one of the more useful places to discover NimoTV gamers by name outside the NimoTV app itself.\n\n### Doesn't Touch Your NimoTV Account or Diamonds\n\n当サイト never logs into your NimoTV account, doesn't see your diamond income, doesn't read gifting stats, and doesn't interfere with Tencent / Huya creator program tiers. The recording is opt-in by you as the NimoTV creator for **your own** account, and only your own Lives — nothing else. Your NimoTV ranking, watch-time, gifting, and partner status remain entirely on NimoTV.\n\n### Become a NimoTV Creator on 当サイト\n\nFree to sign up, free to start saving Lives. Add your NimoTV username and we wire up the rest. From your next ranked grind onwards, every broadcast is captured automatically. Your content, your shareable URL, your discoverable creator page — built for mobile esports creators who don't have time to also run a recording rig.",
+    "vklive": "## VK Live Streamers on 当サイト\n\nVK Live is the livestreaming layer inside **VKontakte (VK)**, Russia's largest social network with over 100 million monthly active users. Unlike standalone streaming platforms, VK Live is deeply woven into VK's social graph — streams appear in friends' feeds, can be reposted into communities, integrate with **VK Music** and the **VK Play** gaming platform, and reach an audience that spans Russia, Belarus, Kazakhstan, and Russian-speaking communities worldwide. Since 2022, when Western platforms like Twitch became harder to access from Russia, VK Live has become the de-facto livestreaming home for many Russian-speaking creators. 当サイト records every VK Live broadcast to a permanent, shareable archive on the open web.\n\n### The VK Feed Buries Streams Fast\n\nVK Live is a social-first streaming experience. Streams show up in your followers' feeds in real time, can be reposted into communities, and pull live engagement from the VK social graph. That's the strength of the platform — but it's also the weakness if you want a back catalogue. The VK algorithm prioritizes fresh content. Within hours of going offline, your stream is buried beneath new posts. Within 24 hours, even popular VK Lives are effectively invisible to anyone who didn't catch them live. Fans who'd love to rewatch a Dota 2 match or a music set have nowhere to go.\n\n当サイト gives every VK Live broadcast a stable URL on your creator page that exists independently of the VK feed. The feed moves on, your archive stays.\n\n### Built for Russian-Speaking Creators Across Categories\n\nVK Live's creator base spans **Dota 2, CS:GO/CS2, World of Tanks, Standoff 2**, music artists running album drops and acoustic sets, lifestyle and IRL streamers, anime/manga commentators, and educational creators teaching everything from coding to language learning. 当サイト works for all of them — the capture is upstream of whatever you broadcast, so OBS scene composition, gameplay overlays, music visualisers, and webcam-only chat streams all preserve perfectly.\n\n### A Permanent Home for Long-Form Content\n\nVK's feed is built for short attention spans — quick scrolling, fast engagement, fresh posts every few hours. That's fine for a 2-minute clip but actively hostile to a 3-hour Dota grind or a 90-minute concert set. A permanent archive on 当サイト is the long-form counterpart: fans who want to actually sit with your stream, rewatch a match, or share a specific moment with a friend get a stable URL that works the same way next week and next year.\n\n### Cross-Platform Reach with ClipAI\n\nClipAI scans your saved VK Live broadcasts and cuts vertical short-form clips ready for **TikTok, Instagram Reels, YouTube Shorts** — and for VK's own short-video features. Highlight plays, music drops, funny chat moments, IRL reactions — turn one long broadcast into a stream of shareable content that brings new fans back to your VK Live channel.\n\n### Russian, CIS, and Diaspora Audiences\n\nVK is huge inside Russia and across the CIS, but Russian-speaking communities also live throughout Europe, Israel, North America, and beyond — many of whom don't actively use VK day-to-day. 当サイト URLs work in any browser, anywhere in the world, with no VK account required to watch. Your diaspora fans get a way to follow your work that doesn't depend on them maintaining an active VK presence.\n\n### Doesn't Touch Your VK Account or Integrations\n\n当サイト never logs into your VK account, doesn't interfere with VK Music tags, doesn't touch VK Play integrations, and doesn't affect any of VK's creator-side metrics or monetization. The recording is opt-in by you as the VK Live creator for **your own** account, and only captures your own broadcasts — nothing else. Your VK profile, community pages, and creator status stay entirely within VK.\n\n### Become a VK Live Streamer on 当サイト\n\nFree to sign up. Add your VK Live username or profile URL, and from your next broadcast onwards every Live is recorded to your creator page automatically. Server-side capture, no software on your end, no extra resources from your streaming PC. The result: a permanent archive of your work on the open web, where the VK feed buries streams fast but your back catalogue stays put.",
+    "chzzk": "## 当サイト の Chzzk 配信者\n\nChzzk(치지직)は、韓国最大のインターネット企業 **Naver** が運営するライブ配信サービスです。2023年12月19日にオープンベータが始まり、2024年4月に正式ローンチ — Twitch が韓国市場から撤退するという発表とちょうど重なるタイミングでした。Naver は Twitch アカウントを直接インポートできるツールを用意し、クリエイターがフォロワーやサブスクリプションのリストをワンクリックで移行できるようにしたため、Chzzk はそれ以来、韓国で最も視聴されているライブ配信タレントの相当数の新しい本拠地となっています。「치지직」という名前そのものがオノマトペで、ブラウン管テレビがチャンネル間を切り替えるときの砂嵐音 — 古いテレビが信号を捕まえたときに出るあの音を韓国語話者が文字に起こしたものです。Naver は、配信が初めて電波に乗る瞬間を喚起するためにこの名前を選びました。2026年初頭時点で、Chzzk は韓国のライブ配信視聴時間の約39%のシェアを握り、最大 1080p 60fps、上限ビットレート 8 Mbps で配信されています — これは Twitch が2022年末に引き下げた上限を明確に上回る数値です。\n\n### 韓国のバラエティ、e スポーツ、LCK パートナーコンテンツ\n\nChzzk のクリエイターカタログは、かつて Twitch 韓国に集まっていた韓国のバラエティ、ゲーミング、IRL、音楽シーン全体に広がっています — 終日のサバソン、長尺の just-chatting 配信、League of Legends Champions Korea(LCK)を放送する e スポーツのパートナーチャンネル(Naver は2026年から2030年までの韓国語 LCK 独占放映権を SOOP Korea と共有で保有しています)、そしてローンチ間もないこのプラットフォームで視聴者を築きつつある新進の配信者たちです。当サイト は、すべてのライブを放送中にフル尺、配信者が実際に流していた解像度・フレームレートのままキャプチャします。ハイライト用にトリミングされたり、サムネイル用にダウンスケールされたり、配信者の VOD トグルに左右されたりすることはありません。\n\n### Naver の VOD はオプトインで、しかも保持期間が短い\n\nChzzk には VOD 再生とショートクリップの機能がありますが、韓国のアーカイブ勢がすぐにぶつかる2つの注意点があります。VOD は配信ごとに有効化する必要があり、多くのクリエイターはトグルをオフのままにしています — 特にサバソン、案件配信、フル尺で見返してほしくないイベントではそうです。VOD を無効にしたままライブが終了すると、その配信は Chzzk 側からは単純に消えてしまいます。VOD を有効にしていても保持期間には限りがあり、古い配信は順次ローテーションで消え、クリエイターが過去のライブをそのまま削除することもあります。Chzzk のクリップ機能はハイライトをキュレーションするもので、配信全体の流れではなく — 瞬間であって弧ではない — ため、何時間もに及ぶサバソンの全体像はクリップだけからは復元できません。当サイト はそれらすべてから独立して動きます。録画はクリエイターの 当サイト ページ上の永続的な URL に置かれ、配信が Chzzk 側のタイムラインから消えた後でも視聴者は見返せます。\n\n### Naver エコシステムの外までリーチ\n\nChzzk は Naver のエコシステム — チャンネルページ、Tongnamoo Power の視聴者エンゲージメント、Naver の他アプリとの連携 — の中で再生されます。これは韓国国内では強みであり、外では壁です。TikTok、YouTube Shorts、Instagram にいる視聴者は Naver ネイティブのリンクを追いません。当サイト は、Naver アカウントなしでどんなブラウザでも再生できる、公開された Web アドレスを各 Chzzk ライブに与えます。さらに ClipAI が、フル配信を TikTok・Reels・Shorts 用にフォーマットされたショートハイライトクリップへと変えます。韓国でのライブが終わっても、アーカイブとクリップのパイプラインは動き続けます。\n\n### Chzzk のアカウントや設定には触れません\n\n当サイト はあなたの Chzzk アカウントにログインせず、サブスクリプション数を見ず、Tongnamoo の残高を読まず、Naver のクリエイタープログラムの階層にも干渉しません。録画は、Chzzk クリエイターとしてのあなた自身が**自分のチャンネルのみ**を対象にオプトインするものであり、キャプチャされたアーカイブは完全に 当サイト 上にあります。Chzzk のプロフィール、VOD 設定、フォロワー数、パートナーステータスはすべて元のままです。\n\n### 当サイト で Chzzk 配信者になる\n\n登録は無料。Chzzk チャンネルを追加すれば、次のライブ以降すべての配信が自動的にクリエイターページに録画されます — サーバーサイドで Chzzk の配信品質そのままにキャプチャ、あなた側のソフトウェアは不要、配信用 PC への追加負荷もありません。結果として、オープンな Web 上にあなたの韓国配信の永続アーカイブができ上がり、それと並んで Chzzk のアプリだけでは届かない TikTok や Reels の視聴者に届けるためのショートクリップも用意できます。"
   },
   "faq": "よくある質問",
   "country": {
     "title": "{country} の {platform}",
-    "description": "{country} の {platform} が LiveStreamRecorder でライブ配信を録画しています。クリエイターをブラウズし、録画を視聴して、フォローしたい新しいストリーマーを見つけてください。",
+    "description": "{country} の {platform} が 当サイト でライブ配信を録画しています。クリエイターをブラウズし、録画を視聴して、フォローしたい新しいストリーマーを見つけてください。",
     "heroTitle": "{country} の {platform}",
-    "heroSubtitle": "{country} の {platform} が LiveStreamRecorder を使って配信を保存しショートクリップを作成しています。",
+    "heroSubtitle": "{country} の {platform} が 当サイト を使って配信を保存しショートクリップを作成しています。",
     "empty": {
       "title": "まだクリエイターはいません",
       "description": "{country} からの {platform} はまだ参加していません。最初になりましょう！"

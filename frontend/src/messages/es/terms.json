@@ -9,7 +9,7 @@
   },
   "introduction": {
     "title": "Introducción",
-    "content": "Al usar LiveStreamRecorder.com y sus servicios, aceptas estar vinculado por estos Términos y Condiciones. Por favor, léelos detenidamente antes de usar nuestra plataforma. Si no estás de acuerdo con estos términos, no podrás usar el Servicio."
+    "content": "Al usar LiveStreamRecorder.com y sus servicios, aceptas estar vinculado por estos Términos y Condiciones. Por favor, léelos detenidamente antes de usar LiveStreamRecorder. Si no estás de acuerdo con estos términos, no podrás usar el Servicio."
   },
   "serviceDescription": {
     "title": "Descripción del Servicio",
@@ -50,7 +50,7 @@
   "intellectualProperty": {
     "title": "Propiedad Intelectual y Derechos de Autor",
     "content1": "LiveStreamRecorder respeta los derechos de propiedad intelectual de otros y espera que los usuarios hagan lo mismo.",
-    "content2": "Al usar nuestro Servicio, confirmas que tienes derecho a grabar el contenido que agregas a nuestra plataforma. Eres el único responsable de garantizar que tu uso cumpla con las leyes de derechos de autor aplicables y los términos de servicio de las plataformas de streaming de terceros.",
+    "content2": "Al usar nuestro Servicio, confirmas que tienes derecho a grabar el contenido que agregas a LiveStreamRecorder. Eres el único responsable de garantizar que tu uso cumpla con las leyes de derechos de autor aplicables y los términos de servicio de las plataformas de streaming de terceros.",
     "content3": "Grabar, reproducir o redistribuir contenido de transmisiones en vivo sin el consentimiento del creador puede constituir una infracción de los derechos de autor y podría exponerte a responsabilidad legal. LiveStreamRecorder es solo una herramienta técnica — asumes plena responsabilidad legal sobre cómo la utilizas.",
     "content4": "Aceptas no usar LiveStreamRecorder para grabar contenido que no sea de tu propiedad o para el que no tengas autorización explícita. Si agregas un creador a tu cuenta, declaras que eres el creador o has obtenido su consentimiento.",
     "content5": "Cualquier uso indebido puede resultar en la terminación de tu cuenta y posibles acciones legales por parte de los titulares de derechos. LiveStreamRecorder no asume ninguna responsabilidad por las grabaciones no autorizadas realizadas por los usuarios.",
@@ -76,7 +76,7 @@
   "contentRemoval": {
     "title": "Eliminación de Contenido y DMCA",
     "content1": "Nos reservamos el derecho de eliminar cualquier contenido o terminar cualquier cuenta a nuestra discreción. Responderemos a las reclamaciones de infracción de derechos de autor y tomaremos las medidas apropiadas según lo requiera la ley, incluyendo la eliminación de contenido infractor y la terminación del acceso para infractores reincidentes.",
-    "content2": "Si crees que el contenido en nuestra plataforma infringe tus derechos, involucra a un menor o viola estos términos, contáctanos en contact@livestreamrecorder.com con todos los detalles para una resolución rápida.",
+    "content2": "Si crees que el contenido en LiveStreamRecorder infringe tus derechos, involucra a un menor o viola estos términos, contáctanos en contact@livestreamrecorder.com con todos los detalles para una resolución rápida.",
     "footer": "Por favor incluye: una descripción de la obra protegida por derechos de autor, la URL del contenido infractor, tu información de contacto y una declaración de que tienes la creencia de buena fe de que el uso no está autorizado."
   },
   "thirdPartyPlatforms": {

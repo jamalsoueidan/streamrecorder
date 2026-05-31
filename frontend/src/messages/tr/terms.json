@@ -9,7 +9,7 @@
   },
   "introduction": {
     "title": "Giriş",
-    "content": "LiveStreamRecorder.com ve hizmetlerini kullanarak, bu Şartlar ve Koşullarla bağlı olmayı kabul ediyorsunuz. Platformumuzu kullanmadan önce lütfen bunları dikkatlice okuyun. Bu şartları kabul etmiyorsanız, Hizmeti kullanamazsınız."
+    "content": "LiveStreamRecorder.com ve hizmetlerini kullanarak, bu Şartlar ve Koşullarla bağlı olmayı kabul ediyorsunuz. LiveStreamRecorderu kullanmadan önce lütfen bunları dikkatlice okuyun. Bu şartları kabul etmiyorsanız, Hizmeti kullanamazsınız."
   },
   "serviceDescription": {
     "title": "Hizmet Açıklaması",
@@ -50,7 +50,7 @@
   "intellectualProperty": {
     "title": "Fikri Mülkiyet ve Telif Hakkı",
     "content1": "LiveStreamRecorder başkalarının fikri mülkiyet haklarına saygı duyar ve kullanıcıların da aynısını yapmasını bekler.",
-    "content2": "Hizmetimizi kullanarak, platformumuza eklediğiniz içeriği kaydetme hakkına sahip olduğunuzu onaylıyorsunuz. Kullanımınızın geçerli telif hakkı yasalarına ve üçüncü taraf yayın platformlarının hizmet şartlarına uygun olmasını sağlamaktan yalnızca siz sorumlusunuz.",
+    "content2": "Hizmetimizi kullanarak, LiveStreamRecordera eklediğiniz içeriği kaydetme hakkına sahip olduğunuzu onaylıyorsunuz. Kullanımınızın geçerli telif hakkı yasalarına ve üçüncü taraf yayın platformlarının hizmet şartlarına uygun olmasını sağlamaktan yalnızca siz sorumlusunuz.",
     "content3": "Canlı yayın içeriğini içerik üreticisinin izni olmadan kaydetmek, çoğaltmak veya yeniden dağıtmak telif hakkı ihlali oluşturabilir ve sizi yasal sorumluluğa maruz bırakabilir. LiveStreamRecorder yalnızca teknik bir araçtır — onu nasıl kullandığınızın tam yasal sorumluluğunu siz taşırsınız.",
     "content4": "Sahip olmadığınız veya kaydetmek için açık yetkiniz olmayan içeriği kaydetmek için LiveStreamRecorder'ı kullanmamayı kabul ediyorsunuz. Hesabınıza bir içerik üreticisi eklerseniz, içerik üreticisi olduğunuzu veya onların iznini aldığınızı beyan ediyorsunuz.",
     "content5": "Herhangi bir kötüye kullanım, hesabınızın feshedilmesine ve hak sahiplerinden olası yasal işlemlere yol açabilir. LiveStreamRecorder, kullanıcılar tarafından yapılan yetkisiz kayıtlar için sorumluluk kabul etmez.",
@@ -76,7 +76,7 @@
   "contentRemoval": {
     "title": "İçerik Kaldırma ve DMCA",
     "content1": "Herhangi bir içeriği kaldırma veya herhangi bir hesabı kendi takdirimize göre feshetme hakkını saklı tutuyoruz. Telif hakkı ihlali iddialarına yanıt vereceğiz ve ihlal eden içeriğin kaldırılması ve tekrar ihlal edenlerin erişiminin sonlandırılması dahil olmak üzere yasaların gerektirdiği şekilde uygun önlemleri alacağız.",
-    "content2": "Platformumuzdaki içeriğin haklarınızı ihlal ettiğine, reşit olmayan birini içerdiğine veya başka şekilde bu şartları ihlal ettiğine inanıyorsanız, hızlı çözüm için tüm ayrıntılarla birlikte contact@livestreamrecorder.com adresinden bizimle iletişime geçin.",
+    "content2": "LiveStreamRecorderdaki içeriğin haklarınızı ihlal ettiğine, reşit olmayan birini içerdiğine veya başka şekilde bu şartları ihlal ettiğine inanıyorsanız, hızlı çözüm için tüm ayrıntılarla birlikte contact@livestreamrecorder.com adresinden bizimle iletişime geçin.",
     "footer": "Lütfen şunları ekleyin: telif hakkıyla korunan eserin açıklaması, ihlal eden içeriğin URL'si, iletişim bilgileriniz ve kullanımın yetkili olmadığına dair iyi niyetli bir inancınız olduğuna dair bir beyan."
   },
   "thirdPartyPlatforms": {

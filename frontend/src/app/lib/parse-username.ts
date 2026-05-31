@@ -222,6 +222,19 @@ export function parseUsername(input: string): ParsedUsername {
     };
   }
 
+  // Chzzk — chzzk.naver.com/{32-hex-id} or chzzk.naver.com/live/{32-hex-id}.
+  // IDs are channel hashes, not human-readable handles.
+  const chzzkRegex =
+    /(?:https?:\/\/)?(?:www\.)?chzzk\.naver\.com\/(?:live\/)?([a-f0-9]{32})/i;
+  const chzzkMatch = trimmed.match(chzzkRegex);
+
+  if (chzzkMatch) {
+    return {
+      username: chzzkMatch[1].toLowerCase(),
+      platform: "chzzk",
+    };
+  }
+
   // Plain username - remove @ if present
   const username = trimmed.startsWith("@") ? trimmed.slice(1) : trimmed;
 

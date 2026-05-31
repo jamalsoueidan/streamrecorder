@@ -9,7 +9,7 @@
   },
   "introduction": {
     "title": "Introduction",
-    "content": "En utilisant LiveStreamRecorder.com et ses services, tu acceptes d'être lié·e par ces conditions d'utilisation. Lis-les attentivement avant d'utiliser notre plateforme. Si tu n'acceptes pas ces conditions, tu ne peux pas utiliser le Service."
+    "content": "En utilisant LiveStreamRecorder.com et ses services, tu acceptes d'être lié·e par ces conditions d'utilisation. Lis-les attentivement avant d'utiliser LiveStreamRecorder. Si tu n'acceptes pas ces conditions, tu ne peux pas utiliser le Service."
   },
   "serviceDescription": {
     "title": "Description du service",
@@ -50,7 +50,7 @@
   "intellectualProperty": {
     "title": "Propriété intellectuelle & droits d'auteur",
     "content1": "LiveStreamRecorder respecte les droits de propriété intellectuelle d'autrui et attend des utilisateurs qu'ils fassent de même.",
-    "content2": "En utilisant notre Service, tu confirmes avoir le droit d'enregistrer le contenu que tu ajoutes à notre plateforme. Tu es seul·e responsable de t'assurer que ton utilisation est conforme aux lois sur le droit d'auteur applicables et aux conditions d'utilisation des plateformes de streaming tierces.",
+    "content2": "En utilisant notre Service, tu confirmes avoir le droit d'enregistrer le contenu que tu ajoutes à LiveStreamRecorder. Tu es seul·e responsable de t'assurer que ton utilisation est conforme aux lois sur le droit d'auteur applicables et aux conditions d'utilisation des plateformes de streaming tierces.",
     "content3": "Enregistrer, reproduire ou redistribuer le contenu d'un live sans le consentement du créateur peut constituer une violation du droit d'auteur et t'exposer à une responsabilité juridique. LiveStreamRecorder n'est qu'un outil technique — tu portes l'entière responsabilité juridique de la manière dont tu l'utilises.",
     "content4": "Tu acceptes de ne pas utiliser LiveStreamRecorder pour enregistrer du contenu que tu ne possèdes pas ou pour lequel tu n'as pas d'autorisation explicite. Si tu ajoutes un créateur à ton compte, tu déclares être ce créateur ou avoir obtenu son consentement.",
     "content5": "Tout abus peut entraîner la résiliation de ton compte et d'éventuelles poursuites juridiques de la part des titulaires de droits. LiveStreamRecorder n'assume aucune responsabilité pour les enregistrements non autorisés effectués par les utilisateurs.",
@@ -76,7 +76,7 @@
   "contentRemoval": {
     "title": "Suppression de contenu & DMCA",
     "content1": "Nous nous réservons le droit de supprimer tout contenu ou de résilier tout compte à notre discrétion. Nous répondrons aux réclamations pour violation du droit d'auteur et prendrons les mesures appropriées requises par la loi, y compris la suppression du contenu contrefaisant et la résiliation de l'accès des contrevenants récidivistes.",
-    "content2": "Si tu penses que du contenu sur notre plateforme viole tes droits, implique un·e mineur·e, ou enfreint autrement ces conditions, contacte-nous à contact@livestreamrecorder.com avec des détails complets pour une résolution rapide.",
+    "content2": "Si tu penses que du contenu sur LiveStreamRecorder viole tes droits, implique un·e mineur·e, ou enfreint autrement ces conditions, contacte-nous à contact@livestreamrecorder.com avec des détails complets pour une résolution rapide.",
     "footer": "Merci d'inclure : une description de l'œuvre protégée, l'URL du contenu contrefaisant, tes coordonnées et une déclaration selon laquelle tu as la conviction de bonne foi que l'utilisation n'est pas autorisée."
   },
   "thirdPartyPlatforms": {

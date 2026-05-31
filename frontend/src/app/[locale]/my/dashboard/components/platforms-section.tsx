@@ -2,7 +2,7 @@ import Link from "@/app/components/link";
 import { streamingPlatforms } from "@/app/lib/streaming-platforms";
 import { Box, Image, Marquee, Stack, Text } from "@mantine/core";
 
-const NEW_PLATFORMS = new Set<string>(["Live17", "Kwai", "Nimotv", "Vklive"]);
+const NEW_PLATFORMS = new Set<string>(["Live17", "Kwai", "Nimotv", "Vklive", "Chzzk"]);
 // Special "featured" platforms — get a gold pulse animation instead of the
 // regular purple "new" one. Use sparingly.
 const SPECIAL_PLATFORMS = new Set<string>([]);
@@ -26,6 +26,7 @@ const PLATFORM_FLAGS: Record<string, string[]> = {
   Kwai: ["🇧🇷", "🇮🇩", "🇲🇽"],
   Nimotv: ["🇧🇷", "🇮🇩", "🇹🇭"],
   Vklive: ["🇷🇺"],
+  Chzzk: ["🇰🇷"],
 };
 
 export function PlatformsSection() {

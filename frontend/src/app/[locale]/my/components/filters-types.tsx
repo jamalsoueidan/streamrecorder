@@ -161,6 +161,15 @@ export const usePlatformOptions = () => {
         </Center>
       ),
     },
+    {
+      value: "chzzk",
+      label: (
+        <Center style={{ gap: 8 }}>
+          <IconBrandFunimation size={18} />
+          <Text size="sm">{t("platforms.chzzk")}</Text>
+        </Center>
+      ),
+    },
   ];
 };
 
@@ -249,6 +258,11 @@ export const PLATFORM_OPTIONS = [
   {
     value: "vklive",
     labelKey: "platforms.vklive",
+    icon: IconBrandFunimation,
+  },
+  {
+    value: "chzzk",
+    labelKey: "platforms.chzzk",
     icon: IconBrandFunimation,
   },
 ];
