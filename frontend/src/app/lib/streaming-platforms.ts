@@ -104,7 +104,7 @@ export const streamingPlatforms = [
   {
     color: "orange.5",
     colorCss: "var(--mantine-color-orange-5)",
-    name: "Younow",
+    name: "YouNow",
     file: "/simple/younow.svg",
   },
 ];
