@@ -21,7 +21,8 @@
       "kwai": "Kwai ストリーマー",
       "nimotv": "NimoTV ストリーマー",
       "vklive": "VK Live ストリーマー",
-      "younow": "YouNow クリエイター"
+      "younow": "YouNow クリエイター",
+      "chzzk": "Chzzk クリエイター"
     },
     "subtitle": {
       "all": "すべてのストリーマー・クリエイターを探す",
@@ -41,7 +42,8 @@
       "kwai": "Kwai ストリーマーを見つける",
       "nimotv": "NimoTV ストリーマーを見つける",
       "vklive": "VK Live ストリーマーを見つける",
-      "younow": "モバイル向けライブ配信アプリの草分けである YouNow の配信者を発見。アプリ内フィードから流れた後も、すべてのライブが公開 URL にアーカイブされます。"
+      "younow": "YouNow 配信者を見つける",
+      "chzzk": "Chzzk ストリーマーを見つける"
     }
   },
   "recordings": {
@@ -63,7 +65,8 @@
       "kwai": "Kwai 録画",
       "nimotv": "NimoTV 録画",
       "vklive": "VK Live 録画",
-      "younow": "YouNow 録画 — アーカイブ済み YouNow 配信を視聴"
+      "younow": "YouNow 録画",
+      "chzzk": "Chzzk 録画"
     },
     "subtitle": {
       "all": "録画済みライブ配信を視聴",
@@ -83,7 +86,8 @@
       "kwai": "録画された Kwai 配信を視聴",
       "nimotv": "録画された NimoTV 配信を視聴",
       "vklive": "録画された VK Live 配信を視聴",
-      "younow": "アプリ内フィードが流れた後も、アーカイブされた YouNow ライブを永続的な Web URL で視聴できます。"
+      "younow": "録画された YouNow ライブを視聴",
+      "chzzk": "録画された Chzzk 配信を視聴"
     }
   },
   "home": {

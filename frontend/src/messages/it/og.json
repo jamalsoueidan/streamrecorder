@@ -21,7 +21,8 @@
       "kwai": "Creator Kwai",
       "nimotv": "Creator NimoTV",
       "vklive": "Creator VK Live",
-      "younow": "Creator YouNow"
+      "younow": "Creator YouNow",
+      "chzzk": "Creator Chzzk"
     },
     "subtitle": {
       "all": "Sfoglia tutti gli streamer e creator",
@@ -41,7 +42,8 @@
       "kwai": "Scopri i creator Kwai",
       "nimotv": "Scopri i creator NimoTV",
       "vklive": "Scopri i creator VK Live",
-      "younow": "Sfoglia broadcaster YouNow da una delle prime app di live streaming mobile — ogni Live archiviato a un URL pubblico dopo che il feed in-app è andato avanti."
+      "younow": "Scopri i broadcaster YouNow",
+      "chzzk": "Scopri gli streamer Chzzk"
     }
   },
   "recordings": {
@@ -63,7 +65,8 @@
       "kwai": "Registrazioni Kwai",
       "nimotv": "Registrazioni NimoTV",
       "vklive": "Registrazioni VK Live",
-      "younow": "Registrazioni YouNow — Guarda i broadcast YouNow archiviati"
+      "younow": "Registrazioni YouNow",
+      "chzzk": "Registrazioni Chzzk"
     },
     "subtitle": {
       "all": "Guarda le dirette registrate",
@@ -83,7 +86,8 @@
       "kwai": "Guarda i live Kwai registrati",
       "nimotv": "Guarda i live NimoTV registrati",
       "vklive": "Guarda i live VK Live registrati",
-      "younow": "Live YouNow archiviati serviti come URL web permanenti dopo che il feed in-app è andato avanti."
+      "younow": "Guarda i Live YouNow registrati",
+      "chzzk": "Guarda gli stream Chzzk registrati"
     }
   },
   "home": {

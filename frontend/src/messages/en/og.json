@@ -21,8 +21,8 @@
       "kwai": "Kwai Creators",
       "nimotv": "NimoTV Streamers",
       "vklive": "VK Live Streamers",
-      "chzzk": "Chzzk Creators on LiveStreamRecorder",
-      "younow": "YouNow Creators on LiveStreamRecorder"
+      "chzzk": "Chzzk Creators",
+      "younow": "YouNow Creators"
     },
     "subtitle": {
       "all": "Browse all streamers and creators",
@@ -42,8 +42,8 @@
       "kwai": "Discover Kwai creators",
       "nimotv": "Discover NimoTV streamers",
       "vklive": "Discover VK Live streamers",
-      "chzzk": "Browse Chzzk streamers from Naver's Korean livestreaming platform — VODs preserved when Chzzk's own archive lets them go.",
-      "younow": "Browse YouNow broadcasters from one of the earliest mobile live-streaming apps — every Live archived to a public URL after the in-app feed clears it."
+      "chzzk": "Discover Chzzk streamers",
+      "younow": "Discover YouNow broadcasters"
     }
   },
   "recordings": {
@@ -65,8 +65,8 @@
       "kwai": "Kwai Recordings",
       "nimotv": "NimoTV Recordings",
       "vklive": "VK Live Recordings",
-      "chzzk": "Chzzk Recordings — Watch Naver's Korean Lives",
-      "younow": "YouNow Recordings — Watch Archived YouNow Broadcasts"
+      "chzzk": "Chzzk Recordings",
+      "younow": "YouNow Recordings"
     },
     "subtitle": {
       "all": "Watch recorded live streams",
@@ -86,8 +86,8 @@
       "kwai": "Watch recorded Kwai live streams",
       "nimotv": "Watch recorded NimoTV streams",
       "vklive": "Watch recorded VK Live streams",
-      "chzzk": "Archived Chzzk broadcasts at 1080p, replayable any time without a Naver account.",
-      "younow": "Archived YouNow Lives served as permanent web URLs after the in-app feed has rotated past them."
+      "chzzk": "Watch recorded Chzzk streams",
+      "younow": "Watch recorded YouNow Lives"
     }
   },
   "home": {

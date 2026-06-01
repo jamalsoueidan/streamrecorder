@@ -21,7 +21,8 @@
       "kwai": "Streamer Kwai",
       "nimotv": "Streamer NimoTV",
       "vklive": "Streamer VK Live",
-      "younow": "Kreator YouNow"
+      "younow": "Kreator YouNow",
+      "chzzk": "Kreator Chzzk"
     },
     "subtitle": {
       "all": "Jelajahi semua streamer dan kreator",
@@ -41,7 +42,8 @@
       "kwai": "Temukan streamer Kwai",
       "nimotv": "Temukan streamer NimoTV",
       "vklive": "Temukan streamer VK Live",
-      "younow": "Jelajahi broadcaster YouNow dari salah satu aplikasi live streaming mobile paling awal — setiap Live diarsipkan ke URL publik setelah feed in-app berlalu."
+      "younow": "Temukan broadcaster YouNow",
+      "chzzk": "Temukan streamer Chzzk"
     }
   },
   "recordings": {
@@ -63,7 +65,8 @@
       "kwai": "Rekaman Kwai",
       "nimotv": "Rekaman NimoTV",
       "vklive": "Rekaman VK Live",
-      "younow": "Rekaman YouNow — Tonton broadcast YouNow yang diarsipkan"
+      "younow": "Rekaman YouNow",
+      "chzzk": "Rekaman Chzzk"
     },
     "subtitle": {
       "all": "Tonton rekaman live stream",
@@ -83,7 +86,8 @@
       "kwai": "Tonton stream Kwai yang direkam",
       "nimotv": "Tonton stream NimoTV yang direkam",
       "vklive": "Tonton stream VK Live yang direkam",
-      "younow": "Live YouNow yang diarsipkan disajikan sebagai URL web permanen setelah feed in-app berlalu."
+      "younow": "Tonton Live YouNow yang direkam",
+      "chzzk": "Tonton stream Chzzk yang direkam"
     }
   },
   "home": {

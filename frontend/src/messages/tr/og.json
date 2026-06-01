@@ -21,7 +21,8 @@
       "kwai": "Kwai Yayıncıları",
       "nimotv": "NimoTV Yayıncıları",
       "vklive": "VK Live Yayıncıları",
-      "younow": "YouNow İçerik Üreticileri"
+      "younow": "YouNow İçerik Üreticileri",
+      "chzzk": "Chzzk İçerik Üreticileri"
     },
     "subtitle": {
       "all": "Tüm yayıncılara ve içerik üreticilerine göz atın",
@@ -41,7 +42,8 @@
       "kwai": "Kwai yayıncılarını keşfedin",
       "nimotv": "NimoTV yayıncılarını keşfedin",
       "vklive": "VK Live yayıncılarını keşfedin",
-      "younow": "En eski mobil canlı yayın uygulamalarından biri olan YouNow yayıncılarına göz at — uygulama içi akış geçtikten sonra her Live herkese açık bir URL'de arşivlenir."
+      "younow": "YouNow yayıncılarını keşfedin",
+      "chzzk": "Chzzk yayıncılarını keşfedin"
     }
   },
   "recordings": {
@@ -63,7 +65,8 @@
       "kwai": "Kwai Kayıtları",
       "nimotv": "NimoTV Kayıtları",
       "vklive": "VK Live Kayıtları",
-      "younow": "YouNow Kayıtları — Arşivlenmiş YouNow yayınlarını izle"
+      "younow": "YouNow Kayıtları",
+      "chzzk": "Chzzk Kayıtları"
     },
     "subtitle": {
       "all": "Kaydedilmiş canlı yayınları izleyin",
@@ -83,7 +86,8 @@
       "kwai": "Kaydedilmiş Kwai yayınlarını izleyin",
       "nimotv": "Kaydedilmiş NimoTV yayınlarını izleyin",
       "vklive": "Kaydedilmiş VK Live yayınlarını izleyin",
-      "younow": "Uygulama içi akış geçtikten sonra arşivlenmiş YouNow Live'ları kalıcı web URL'leri olarak sunulur."
+      "younow": "Kaydedilmiş YouNow Live'larını izleyin",
+      "chzzk": "Kaydedilmiş Chzzk yayınlarını izleyin"
     }
   },
   "home": {
