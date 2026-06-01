@@ -30,7 +30,8 @@
     "live17": "17live creators",
     "kwai": "Kwai creators",
     "nimotv": "NimoTV creators",
-    "vklive": "VK Live creators"
+    "vklive": "VK Live creators",
+    "younow": "Mga YouNow creator"
   },
   "watchRecordings": {
     "title": "Manood ng Recordings",
@@ -50,7 +51,8 @@
     "live17": "17live recordings",
     "kwai": "Kwai recordings",
     "nimotv": "NimoTV recordings",
-    "vklive": "VK Live recordings"
+    "vklive": "VK Live recordings",
+    "younow": "YouNow recordings"
   },
   "legal": {
     "title": "Legal",

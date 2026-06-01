@@ -20,7 +20,8 @@
       "live17": "17live Streamers",
       "kwai": "Kwai Creators",
       "nimotv": "NimoTV Creators",
-      "vklive": "VK Live Creators"
+      "vklive": "VK Live Creators",
+      "younow": "Mga YouNow creator"
     },
     "subtitle": {
       "all": "Tingnan lahat ng streamers at creators",
@@ -39,7 +40,8 @@
       "live17": "Tuklasin ang mga 17live streamer",
       "kwai": "Tuklasin ang mga Kwai creator",
       "nimotv": "Tuklasin ang mga NimoTV creator",
-      "vklive": "Tuklasin ang mga VK Live creator"
+      "vklive": "Tuklasin ang mga VK Live creator",
+      "younow": "I-browse ang YouNow broadcasters mula sa isa sa pinakaunang mobile live streaming apps — bawat Live na-archive sa public URL pagkatapos mawala sa in-app feed."
     }
   },
   "recordings": {
@@ -60,7 +62,8 @@
       "live17": "17live Recordings",
       "kwai": "Kwai Recordings",
       "nimotv": "NimoTV Recordings",
-      "vklive": "VK Live Recordings"
+      "vklive": "VK Live Recordings",
+      "younow": "YouNow Recordings — Panoorin ang archived YouNow broadcasts"
     },
     "subtitle": {
       "all": "Panoorin ang mga recorded live stream",
@@ -79,7 +82,8 @@
       "live17": "Panoorin ang mga recorded 17live stream",
       "kwai": "Panoorin ang mga recorded Kwai live stream",
       "nimotv": "Panoorin ang mga recorded NimoTV live stream",
-      "vklive": "Panoorin ang mga recorded VK Live live stream"
+      "vklive": "Panoorin ang mga recorded VK Live live stream",
+      "younow": "Archived YouNow Lives sina-serve bilang permanent web URLs pagkatapos lumampas ng in-app feed."
     }
   },
   "home": {

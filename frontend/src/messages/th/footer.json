@@ -30,7 +30,8 @@
     "live17": "ครีเอเตอร์ 17live",
     "kwai": "ครีเอเตอร์ Kwai",
     "nimotv": "ครีเอเตอร์ NimoTV",
-    "vklive": "ครีเอเตอร์ VK Live"
+    "vklive": "ครีเอเตอร์ VK Live",
+    "younow": "ครีเอเตอร์ YouNow"
   },
   "watchRecordings": {
     "title": "ดูบันทึก",
@@ -50,7 +51,8 @@
     "live17": "บันทึก 17live",
     "kwai": "บันทึก Kwai",
     "nimotv": "บันทึก NimoTV",
-    "vklive": "บันทึก VK Live"
+    "vklive": "บันทึก VK Live",
+    "younow": "บันทึก YouNow"
   },
   "legal": {
     "title": "ข้อมูลทางกฎหมาย",

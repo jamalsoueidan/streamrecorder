@@ -2,7 +2,7 @@
   "meta": {
     "all": {
       "title": "Live-Stream-Aufnahmen",
-      "description": "Sieh dir Live-Stream-Aufnahmen von Creatorn auf unsere Plattform an. TikTok-, Twitch-, YouTube-, Kick-Aufnahmen gespeichert und bereit zum Ansehen.",
+      "description": "Sieh dir Live-Stream-Aufnahmen von Creatorn auf unserer Plattform an. TikTok-, Twitch-, YouTube-, Kick-Aufnahmen gespeichert und bereit zum Ansehen.",
       "keywords": [
         "Live-Stream-Aufnahmen",
         "Stream-Aufnahmen",
@@ -14,7 +14,7 @@
     },
     "tiktok": {
       "title": "TikTok Live-Aufnahmen",
-      "description": "Sieh dir TikTok-Live-Aufnahmen auf unsere Plattform an und lade sie herunter. Jedes TikTok-Live wird automatisch erfasst – kein Screen Recorder nötig. Sieh dir gespeicherte TikTok-Lives deiner Lieblings-Creator an.",
+      "description": "Sieh dir TikTok-Live-Aufnahmen auf unserer Plattform an und lade sie herunter. Jedes TikTok-Live wird automatisch erfasst – kein Screen Recorder nötig. Sieh dir gespeicherte TikTok-Lives deiner Lieblings-Creator an.",
       "keywords": [
         "TikTok Live-Aufnahme",
         "TikTok Live-Stream",
@@ -30,7 +30,7 @@
       "faqs": [
         {
           "question": "Wie nehme ich meine TikTok-Lives auf?",
-          "answer": "Mit unsere Plattform werden deine TikTok-Lives automatisch in der Cloud aufgenommen. Registriere dich, füge deinen TikTok-Benutzernamen hinzu und jedes Live, das du machst, wird erfasst – kein Screen Recorder für TikTok nötig, kein Handy, das die ganze Nacht läuft."
+          "answer": "Mit unserer Plattform werden deine TikTok-Lives automatisch in der Cloud aufgenommen. Registriere dich, füge deinen TikTok-Benutzernamen hinzu und jedes Live, das du machst, wird erfasst – kein Screen Recorder für TikTok nötig, kein Handy, das die ganze Nacht läuft."
         },
         {
           "question": "Brauche ich einen Screen Recorder für TikTok-Lives?",
@@ -60,7 +60,7 @@
     },
     "twitch": {
       "title": "Twitch-Stream-Aufnahmen & VODs",
-      "description": "Sieh dir Twitch-Stream-Aufnahmen auf unsere Plattform an und lade sie herunter. Deine Twitch-Streams werden automatisch erfasst – kein Screen Recorder nötig. Der beste Twitch-Recorder für Creator, die dauerhafte VODs wollen.",
+      "description": "Sieh dir Twitch-Stream-Aufnahmen auf unserer Plattform an und lade sie herunter. Deine Twitch-Streams werden automatisch erfasst – kein Screen Recorder nötig. Der beste Twitch-Recorder für Creator, die dauerhafte VODs wollen.",
       "keywords": [
         "Twitch Recorder",
         "Twitch Stream Recorder",
@@ -93,7 +93,7 @@
         },
         {
           "question": "Kann ich meine Twitch-Streams kostenlos aufnehmen?",
-          "answer": "Ja. Registriere dich kostenlos bei unsere Plattform und beginne sofort mit der Aufnahme deiner Twitch-Streams. Premium-Pläne schalten den Download deiner Aufnahmen, ClipAI für automatische Highlight-Clips und erweiterten Speicher frei."
+          "answer": "Ja. Registriere dich kostenlos bei unserer Plattform und beginne sofort mit der Aufnahme deiner Twitch-Streams. Premium-Pläne schalten den Download deiner Aufnahmen, ClipAI für automatische Highlight-Clips und erweiterten Speicher frei."
         },
         {
           "question": "Wie unterscheidet sich das vom integrierten VOD-System von Twitch?",
@@ -111,7 +111,7 @@
     },
     "youtube": {
       "title": "YouTube Live-Aufnahmen",
-      "description": "Sieh dir YouTube-Live-Aufnahmen auf unsere Plattform an und lade sie herunter. Deine YouTube-Lives werden automatisch erfasst – kein Screen Recorder für YouTube nötig. Der einfachste YouTube-Live-Recorder für Creator.",
+      "description": "Sieh dir YouTube-Live-Aufnahmen auf unserer Plattform an und lade sie herunter. Deine YouTube-Lives werden automatisch erfasst – kein Screen Recorder für YouTube nötig. Der einfachste YouTube-Live-Recorder für Creator.",
       "keywords": [
         "YouTube Live-Aufnahme",
         "YouTube Live-Stream",
@@ -128,7 +128,7 @@
       "faqs": [
         {
           "question": "Wie nehme ich meine YouTube-Live-Streams auf?",
-          "answer": "Mit unsere Plattform werden deine YouTube-Lives automatisch in der Cloud aufgenommen. Registriere dich, füge deinen YouTube-Kanal hinzu und jeder Live-Stream, den du startest, wird erfasst. Keine YouTube-Aufnahmesoftware zu installieren, kein manuelles Speichern – es funktioniert einfach."
+          "answer": "Mit unserer Plattform werden deine YouTube-Lives automatisch in der Cloud aufgenommen. Registriere dich, füge deinen YouTube-Kanal hinzu und jeder Live-Stream, den du startest, wird erfasst. Keine YouTube-Aufnahmesoftware zu installieren, kein manuelles Speichern – es funktioniert einfach."
         },
         {
           "question": "Brauche ich einen Screen Recorder für YouTube-Lives?",
@@ -140,7 +140,7 @@
         },
         {
           "question": "Kann ich meine YouTube-Lives kostenlos aufnehmen?",
-          "answer": "Ja. Du kannst dich kostenlos bei unsere Plattform registrieren und sofort mit der Aufnahme deiner YouTube-Live-Streams beginnen. Premium-Pläne schalten den Download deiner Aufnahmen, ClipAI für automatische Highlight-Clips und erweiterten Speicher frei."
+          "answer": "Ja. Du kannst dich kostenlos bei unserer Plattform registrieren und sofort mit der Aufnahme deiner YouTube-Live-Streams beginnen. Premium-Pläne schalten den Download deiner Aufnahmen, ClipAI für automatische Highlight-Clips und erweiterten Speicher frei."
         },
         {
           "question": "Werden YouTube-Lives automatisch von YouTube gespeichert?",
@@ -162,7 +162,7 @@
     },
     "kick": {
       "title": "Kick-Stream-Aufnahmen",
-      "description": "Sieh dir Kick-Stream-Aufnahmen von Creatorn auf unsere Plattform an. Schau dir Kick-VODs an, lade Streams herunter und entdecke neue Streamer.",
+      "description": "Sieh dir Kick-Stream-Aufnahmen von Creatorn auf unserer Plattform an. Schau dir Kick-VODs an, lade Streams herunter und entdecke neue Streamer.",
       "keywords": [
         "Kick Aufnahme",
         "Kick VOD",
@@ -174,7 +174,7 @@
     },
     "afreecatv": {
       "title": "AfreecaTV-Stream-Aufnahmen",
-      "description": "Sieh dir AfreecaTV-Stream-Aufnahmen von Creatorn auf unsere Plattform an. Schau dir AfreecaTV-VODs an und lade koreanische Streams herunter.",
+      "description": "Sieh dir AfreecaTV-Stream-Aufnahmen von Creatorn auf unserer Plattform an. Schau dir AfreecaTV-VODs an und lade koreanische Streams herunter.",
       "keywords": [
         "AfreecaTV Aufnahme",
         "AfreecaTV VOD",
@@ -186,7 +186,7 @@
     },
     "pandalive": {
       "title": "Pandalive-Stream-Aufnahmen",
-      "description": "Sieh dir Pandalive-Stream-Aufnahmen von Creatorn auf unsere Plattform an. Schau dir Pandalive-VODs an und lade koreanische Streams herunter.",
+      "description": "Sieh dir Pandalive-Stream-Aufnahmen von Creatorn auf unserer Plattform an. Schau dir Pandalive-VODs an und lade koreanische Streams herunter.",
       "keywords": [
         "Pandalive Aufnahme",
         "Pandalive VOD",
@@ -198,7 +198,7 @@
     },
     "bigo": {
       "title": "Bigo Live-Aufnahmen",
-      "description": "Sieh dir Bigo-Live-Aufnahmen auf unsere Plattform an und lade sie herunter. Deine Bigo-Lives werden automatisch in der Cloud erfasst – keine Black-Screen-Probleme, kein Screen Recorder nötig. Der einfachste Bigo-Live-Recorder für Creator.",
+      "description": "Sieh dir Bigo-Live-Aufnahmen auf unserer Plattform an und lade sie herunter. Deine Bigo-Lives werden automatisch in der Cloud erfasst – keine Black-Screen-Probleme, kein Screen Recorder nötig. Der einfachste Bigo-Live-Recorder für Creator.",
       "keywords": [
         "Bigo Recorder",
         "Bigo Live Recorder",
@@ -212,7 +212,7 @@
       "faqs": [
         {
           "question": "Wie nehme ich meine Bigo-Lives auf?",
-          "answer": "Mit unsere Plattform werden deine Bigo-Lives automatisch in der Cloud aufgenommen. Registriere dich, füge deinen Bigo-Live-Benutzernamen hinzu und jedes Mal, wenn du live gehst, wird es erfasst. Keine Bigo-Live-Recorder-APK zu installieren, keine Bildschirmaufnahme – alles läuft serverseitig."
+          "answer": "Mit unserer Plattform werden deine Bigo-Lives automatisch in der Cloud aufgenommen. Registriere dich, füge deinen Bigo-Live-Benutzernamen hinzu und jedes Mal, wenn du live gehst, wird es erfasst. Keine Bigo-Live-Recorder-APK zu installieren, keine Bildschirmaufnahme – alles läuft serverseitig."
         },
         {
           "question": "Warum bekomme ich einen schwarzen Bildschirm bei der Aufnahme von Bigo Live?",
@@ -228,7 +228,7 @@
         },
         {
           "question": "Kann ich meine Bigo-Lives kostenlos aufnehmen?",
-          "answer": "Ja. Registriere dich kostenlos bei unsere Plattform und beginne sofort mit der Aufnahme deiner Bigo-Lives. Premium-Pläne schalten den Download deiner Aufnahmen, ClipAI für automatische Highlight-Clips und erweiterten Speicher frei."
+          "answer": "Ja. Registriere dich kostenlos bei unserer Plattform und beginne sofort mit der Aufnahme deiner Bigo-Lives. Premium-Pläne schalten den Download deiner Aufnahmen, ClipAI für automatische Highlight-Clips und erweiterten Speicher frei."
         },
         {
           "question": "Kann ich meine Bigo-Live-Aufnahmen herunterladen?",
@@ -242,7 +242,7 @@
     },
     "liveme": {
       "title": "LiveMe Live-Aufnahmen",
-      "description": "Sieh dir LiveMe-Live-Aufnahmen auf unsere Plattform an und lade sie herunter. Deine LiveMe-Lives werden automatisch in der Cloud erfasst – keine Black-Screen-Probleme, kein Screen Recorder nötig. Der einfachste LiveMe-Live-Recorder für Creator.",
+      "description": "Sieh dir LiveMe-Live-Aufnahmen auf unserer Plattform an und lade sie herunter. Deine LiveMe-Lives werden automatisch in der Cloud erfasst – keine Black-Screen-Probleme, kein Screen Recorder nötig. Der einfachste LiveMe-Live-Recorder für Creator.",
       "keywords": [
         "LiveMe Recorder",
         "LiveMe Live Recorder",
@@ -255,7 +255,7 @@
       "faqs": [
         {
           "question": "Wie nehme ich meine LiveMe-Lives auf?",
-          "answer": "Mit unsere Plattform werden deine LiveMe-Lives automatisch in der Cloud aufgenommen. Registriere dich, füge deinen LiveMe-Live-Benutzernamen hinzu und jedes Mal, wenn du live gehst, wird es erfasst. Keine LiveMe-Live-Recorder-APK zu installieren, keine Bildschirmaufnahme – alles läuft serverseitig."
+          "answer": "Mit unserer Plattform werden deine LiveMe-Lives automatisch in der Cloud aufgenommen. Registriere dich, füge deinen LiveMe-Live-Benutzernamen hinzu und jedes Mal, wenn du live gehst, wird es erfasst. Keine LiveMe-Live-Recorder-APK zu installieren, keine Bildschirmaufnahme – alles läuft serverseitig."
         },
         {
           "question": "Warum bekomme ich einen schwarzen Bildschirm bei der Aufnahme von LiveMe Live?",
@@ -271,7 +271,7 @@
         },
         {
           "question": "Kann ich meine LiveMe-Lives kostenlos aufnehmen?",
-          "answer": "Ja. Registriere dich kostenlos bei unsere Plattform und beginne sofort mit der Aufnahme deiner LiveMe-Lives. Premium-Pläne schalten den Download deiner Aufnahmen, ClipAI für automatische Highlight-Clips und erweiterten Speicher frei."
+          "answer": "Ja. Registriere dich kostenlos bei unserer Plattform und beginne sofort mit der Aufnahme deiner LiveMe-Lives. Premium-Pläne schalten den Download deiner Aufnahmen, ClipAI für automatische Highlight-Clips und erweiterten Speicher frei."
         },
         {
           "question": "Kann ich meine LiveMe-Live-Aufnahmen herunterladen?",
@@ -285,7 +285,7 @@
     },
     "mixch": {
       "title": "Mixch Live-Aufnahmen",
-      "description": "Sieh dir Mixch-Live-Aufnahmen auf unsere Plattform an und lade sie herunter. Deine Mixch-Lives werden automatisch in der Cloud erfasst – keine Black-Screen-Probleme, kein Screen Recorder nötig. Der einfachste Mixch-Live-Recorder für Creator.",
+      "description": "Sieh dir Mixch-Live-Aufnahmen auf unserer Plattform an und lade sie herunter. Deine Mixch-Lives werden automatisch in der Cloud erfasst – keine Black-Screen-Probleme, kein Screen Recorder nötig. Der einfachste Mixch-Live-Recorder für Creator.",
       "keywords": [
         "Mixch Recorder",
         "Mixch Live Recorder",
@@ -298,7 +298,7 @@
       "faqs": [
         {
           "question": "Wie nehme ich meine Mixch-Lives auf?",
-          "answer": "Mit unsere Plattform werden deine Mixch-Lives automatisch in der Cloud aufgenommen. Registriere dich, füge deinen Mixch-Live-Benutzernamen hinzu und jedes Mal, wenn du live gehst, wird es erfasst. Keine Mixch-Live-Recorder-APK zu installieren, keine Bildschirmaufnahme – alles läuft serverseitig."
+          "answer": "Mit unserer Plattform werden deine Mixch-Lives automatisch in der Cloud aufgenommen. Registriere dich, füge deinen Mixch-Live-Benutzernamen hinzu und jedes Mal, wenn du live gehst, wird es erfasst. Keine Mixch-Live-Recorder-APK zu installieren, keine Bildschirmaufnahme – alles läuft serverseitig."
         },
         {
           "question": "Warum bekomme ich einen schwarzen Bildschirm bei der Aufnahme von Mixch Live?",
@@ -314,7 +314,7 @@
         },
         {
           "question": "Kann ich meine Mixch-Lives kostenlos aufnehmen?",
-          "answer": "Ja. Registriere dich kostenlos bei unsere Plattform und beginne sofort mit der Aufnahme deiner Mixch-Lives. Premium-Pläne schalten den Download deiner Aufnahmen, ClipAI für automatische Highlight-Clips und erweiterten Speicher frei."
+          "answer": "Ja. Registriere dich kostenlos bei unserer Plattform und beginne sofort mit der Aufnahme deiner Mixch-Lives. Premium-Pläne schalten den Download deiner Aufnahmen, ClipAI für automatische Highlight-Clips und erweiterten Speicher frei."
         },
         {
           "question": "Kann ich meine Mixch-Live-Aufnahmen herunterladen?",
@@ -378,7 +378,7 @@
     },
     "trovo": {
       "title": "Trovo Live-Aufnahmen",
-      "description": "Sieh dir Trovo-Live-Aufnahmen auf unsere Plattform an und lade sie herunter. Deine Trovo-Lives werden automatisch in der Cloud erfasst – keine Black-Screen-Probleme, kein Screen Recorder nötig. Der einfachste Trovo-Live-Recorder für Creator.",
+      "description": "Sieh dir Trovo-Live-Aufnahmen auf unserer Plattform an und lade sie herunter. Deine Trovo-Lives werden automatisch in der Cloud erfasst – keine Black-Screen-Probleme, kein Screen Recorder nötig. Der einfachste Trovo-Live-Recorder für Creator.",
       "keywords": [
         "Trovo Recorder",
         "Trovo Live Recorder",
@@ -391,7 +391,7 @@
       "faqs": [
         {
           "question": "Wie nehme ich meine Trovo-Lives auf?",
-          "answer": "Mit unsere Plattform werden deine Trovo-Lives automatisch in der Cloud aufgenommen. Registriere dich, füge deinen Trovo-Live-Benutzernamen hinzu und jedes Mal, wenn du live gehst, wird es erfasst. Keine Trovo-Live-Recorder-APK zu installieren, keine Bildschirmaufnahme – alles läuft serverseitig."
+          "answer": "Mit unserer Plattform werden deine Trovo-Lives automatisch in der Cloud aufgenommen. Registriere dich, füge deinen Trovo-Live-Benutzernamen hinzu und jedes Mal, wenn du live gehst, wird es erfasst. Keine Trovo-Live-Recorder-APK zu installieren, keine Bildschirmaufnahme – alles läuft serverseitig."
         },
         {
           "question": "Warum bekomme ich einen schwarzen Bildschirm bei der Aufnahme von Trovo Live?",
@@ -407,7 +407,7 @@
         },
         {
           "question": "Kann ich meine Trovo-Lives kostenlos aufnehmen?",
-          "answer": "Ja. Registriere dich kostenlos bei unsere Plattform und beginne sofort mit der Aufnahme deiner Trovo-Lives. Premium-Pläne schalten den Download deiner Aufnahmen, ClipAI für automatische Highlight-Clips und erweiterten Speicher frei."
+          "answer": "Ja. Registriere dich kostenlos bei unserer Plattform und beginne sofort mit der Aufnahme deiner Trovo-Lives. Premium-Pläne schalten den Download deiner Aufnahmen, ClipAI für automatische Highlight-Clips und erweiterten Speicher frei."
         },
         {
           "question": "Kann ich meine Trovo-Live-Aufnahmen herunterladen?",
@@ -421,7 +421,7 @@
     },
     "twitcast": {
       "title": "TwitCasting Live-Aufnahmen",
-      "description": "Sieh dir TwitCasting-Live-Aufnahmen auf unsere Plattform an und lade sie herunter. Deine TwitCasting-Lives werden automatisch in der Cloud erfasst – keine Black-Screen-Probleme, kein Screen Recorder nötig. Der einfachste TwitCasting-Live-Recorder für Creator.",
+      "description": "Sieh dir TwitCasting-Live-Aufnahmen auf unserer Plattform an und lade sie herunter. Deine TwitCasting-Lives werden automatisch in der Cloud erfasst – keine Black-Screen-Probleme, kein Screen Recorder nötig. Der einfachste TwitCasting-Live-Recorder für Creator.",
       "keywords": [
         "TwitCasting Recorder",
         "TwitCasting Live Recorder",
@@ -434,7 +434,7 @@
       "faqs": [
         {
           "question": "Wie nehme ich meine TwitCasting-Lives auf?",
-          "answer": "Mit unsere Plattform werden deine TwitCasting-Lives automatisch in der Cloud aufgenommen. Registriere dich, füge deinen TwitCasting-Live-Benutzernamen hinzu und jedes Mal, wenn du live gehst, wird es erfasst. Keine TwitCasting-Live-Recorder-APK zu installieren, keine Bildschirmaufnahme – alles läuft serverseitig."
+          "answer": "Mit unserer Plattform werden deine TwitCasting-Lives automatisch in der Cloud aufgenommen. Registriere dich, füge deinen TwitCasting-Live-Benutzernamen hinzu und jedes Mal, wenn du live gehst, wird es erfasst. Keine TwitCasting-Live-Recorder-APK zu installieren, keine Bildschirmaufnahme – alles läuft serverseitig."
         },
         {
           "question": "Warum bekomme ich einen schwarzen Bildschirm bei der Aufnahme von TwitCasting Live?",
@@ -450,7 +450,7 @@
         },
         {
           "question": "Kann ich meine TwitCasting-Lives kostenlos aufnehmen?",
-          "answer": "Ja. Registriere dich kostenlos bei unsere Plattform und beginne sofort mit der Aufnahme deiner TwitCasting-Lives. Premium-Pläne schalten den Download deiner Aufnahmen, ClipAI für automatische Highlight-Clips und erweiterten Speicher frei."
+          "answer": "Ja. Registriere dich kostenlos bei unserer Plattform und beginne sofort mit der Aufnahme deiner TwitCasting-Lives. Premium-Pläne schalten den Download deiner Aufnahmen, ClipAI für automatische Highlight-Clips und erweiterten Speicher frei."
         },
         {
           "question": "Kann ich meine TwitCasting-Live-Aufnahmen herunterladen?",
@@ -705,6 +705,56 @@
           "answer": "Player-Kompatibilitätsprobleme auf Chzzk liegen zwischen deinem Browser und Navers Video-Stack — sie haben keinen Einfluss auf archivierte Aufnahmen auf unsere Plattform. Unsere Aufnahmen nutzen Standard-HLS-Playback, also spielen selbst Browser, die mit Chzzks Live-Player Probleme haben, die Aufnahme problemlos ab."
         }
       ]
+    },
+    "younow": {
+      "title": "YouNow-Aufnahmen — dauerhaftes Archiv mobiler Live-Übertragungen",
+      "description": "Sieh dir vollständige Aufnahmen von YouNow-Lives an. YouNow war 2011 Pionier für vertikales Live-Streaming vom Handy, hält aber kein öffentliches Archiv — sobald eine Übertragung endet, ist sie aus der App verschwunden. Unsere Plattform gibt jedem YouNow-Live eine dauerhafte URL, die das In-App-Fenster überdauert.",
+      "keywords": [
+        "YouNow-Aufnahme",
+        "YouNow Live-Archiv",
+        "YouNow-Übertragung Wiederholung",
+        "YouNow Live ansehen",
+        "YouNow Moments",
+        "YouNow-Archiv",
+        "YouNow-Übertragung erneut ansehen",
+        "verpasstes YouNow Live",
+        "YouNow Props-Archiv",
+        "mobiles Live-Stream-Archiv"
+      ],
+      "faqs": [
+        {
+          "question": "Kann ich ein YouNow-Live nachsehen, nachdem der Streamer beendet hat?",
+          "answer": "Auf YouNow selbst — nein. YouNow hält keine öffentlichen Übertragungsarchive; sobald du auf Beenden tippst, ist der Stream aus der App und aus den Feeds deiner Zuschauer verschwunden. Auf unsere Plattform — ja, denn wir erfassen das Live während es läuft und liefern es unter einer dauerhaften URL aus, die nicht davon abhängt, dass YouNows App irgendetwas behält."
+        },
+        {
+          "question": "Sind die Moments und Props-Highlights in den Aufnahmen enthalten?",
+          "answer": "Aufnahmen enthalten die vollständige Übertragung — jede Minute, in der die Kamera lief, genau so, wie es ausgestrahlt wurde. YouNows In-App-Moments sind automatisch generierte kurze Clips aus der Originalübertragung, also schon Teil dessen, was wir erfassen. Props-Transaktionen sind ein In-App-Overlay und kein Bestandteil des Videostreams; was du siehst, sind die Reaktionen des Streamers vor der Kamera, wenn Props reinkommen."
+        },
+        {
+          "question": "Brauche ich ein YouNow-Konto, um eine Aufnahme auf unsere Plattform anzusehen?",
+          "answer": "Nein. Jede Aufnahme läuft in jedem Browser ohne YouNow-Login, ohne Coin-Guthaben und ohne installierte YouNow-App. Die Aufnahme wird direkt von unserem CDN ausgeliefert, nicht von YouNow."
+        },
+        {
+          "question": "Sollte ich stattdessen einen Screen-Recorder für YouNow verwenden?",
+          "answer": "Browser-Screen-Recorder erfassen YouNow-Lives technisch zwar, erfordern aber, dass der YouNow-Tab die ganze Zeit offen bleibt, und stoppen, sobald dein Handy gesperrt wird, der Laptop schläft oder das WLAN abbricht. Unsere Plattform läuft in der Cloud — die Aufnahme läuft weiter, ob dein Gerät an oder aus ist, und die gespeicherte Datei hat genau die Übertragungsqualität, nicht deine Bildschirmauflösung."
+        },
+        {
+          "question": "Was passiert, wenn ein YouNow-Streamer privat wird oder gebannt wird?",
+          "answer": "Aufnahmen, die wir vor der Änderung erfasst haben, bleiben im Archiv unter ihrer bestehenden URL. Wir entfernen Übertragungen nicht nachträglich, wenn sich der YouNow-Status eines Creators ändert. DMCA und direkte Takedown-Anfragen von Creatorn werden genauso behandelt wie bei jeder anderen Plattform."
+        },
+        {
+          "question": "Sind YouNow-Aufnahmen hier eine einzelne Datei oder eine HLS-Playlist?",
+          "answer": "Aufnahmen werden für die schnelle Wiedergabe in jedem Browser per HLS gestreamt, und Premium-Nutzer können die vollständige Übertragung als einzelnes MP4 für die Offline-Wiedergabe oder zum erneuten Hochladen auf YouTube / Vimeo / wohin auch immer du sie als Nächstes haben willst, herunterladen."
+        },
+        {
+          "question": "Wird der YouNow-Chat in den Aufnahmen gezeigt?",
+          "answer": "Der Videoteil der Übertragung bleibt erhalten — einschließlich dessen, was der Streamer vorliest oder worauf er vor der Kamera reagiert. YouNows Live-Chat ist ein separater Echtzeit-Feed und wird nicht parallel zur Aufnahme wiedergegeben — aber die meisten YouNow-Übertragungen sind konversationell genug, dass der Tenor des Chats durch die Reaktionen des Streamers durchkommt."
+        },
+        {
+          "question": "Enthalten die Aufnahmen 18+-Inhalte?",
+          "answer": "Unsere Plattform setzt dieselben Inhaltsrichtlinien durch wie bei jeder anderen Plattform: keine Erwachseneninhalte, keine Minderjährigen, keine Rechteverletzungen. Aufnahmen, die unter unsere Richtlinie oder YouNows veröffentlichte Richtlinie fallen, werden entfernt, sobald sie über unseren DMCA / Takedown-Kanal gemeldet werden."
+        }
+      ]
     }
   },
   "hero": {
@@ -726,7 +776,8 @@
       "kwai": "Kwai-Aufnahmen",
       "nimotv": "NimoTV-Aufnahmen",
       "vklive": "VK Live-Aufnahmen",
-      "chzzk": "Chzzk-Aufnahmen"
+      "chzzk": "Chzzk-Aufnahmen",
+      "younow": "YouNow-Aufnahmen"
     },
     "subtitle": {
       "all": "Sieh dir Live-Stream-Aufnahmen von Creatorn auf unserer Plattform an. Lade sie herunter und entdecke neue Inhalte.",
@@ -746,7 +797,8 @@
       "kwai": "Sieh dir Kwai-Stream-Aufnahmen von Streamern auf unserer Plattform an. Lade sie herunter und entdecke neue Broadcaster.",
       "nimotv": "Sieh dir NimoTV-Stream-Aufnahmen von Streamern auf unserer Plattform an. Lade sie herunter und entdecke neue Broadcaster.",
       "vklive": "Sieh dir VK Live-Stream-Aufnahmen von Streamern auf unserer Plattform an. Lade sie herunter und entdecke neue Broadcaster.",
-      "chzzk": "Sieh dir Chzzk-Aufnahmen von koreanischen Streamern an — Gaming, LCK-Partnerkanäle, IRL und Ex-Twitch-Broadcaster. Lade sie herunter und entdecke neue Creator."
+      "chzzk": "Sieh dir Chzzk-Aufnahmen von koreanischen Streamern an — Gaming, LCK-Partnerkanäle, IRL und Ex-Twitch-Broadcaster. Lade sie herunter und entdecke neue Creator.",
+      "younow": "Sieh dir YouNow-Aufnahmen von Mobile-First-Streamern weltweit an. Jedes Live bleibt erhalten, lange nachdem das In-App-Fenster vorbei ist — lade sie herunter und entdecke neue Creator."
     }
   },
   "cta": {
@@ -768,7 +820,8 @@
       "kwai": "Kwai-Streams sichern",
       "nimotv": "NimoTV-Streams sichern",
       "vklive": "VK Live-Streams sichern",
-      "chzzk": "Chzzk-Lives sichern"
+      "chzzk": "Chzzk-Lives sichern",
+      "younow": "YouNow-Lives sichern"
     },
     "subtitle": {
       "all": "Sichere automatisch deine TikTok-, Twitch-, YouTube- und Kick-Streams. Lade Aufnahmen herunter, erstelle kurze Clips und vergrößere dein Publikum.",
@@ -788,7 +841,8 @@
       "kwai": "Sichere automatisch deine Kwai-Streams. Unabhängiges Backup jedes Lives, plus kurze Clips mit ClipAI.",
       "nimotv": "Sichere automatisch deine NimoTV-Streams. Unabhängiges Backup jedes Lives, plus kurze Clips mit ClipAI.",
       "vklive": "Sichere automatisch deine VK Live-Streams. Unabhängiges Backup jedes Lives, plus kurze Clips mit ClipAI.",
-      "chzzk": "Sichere automatisch deine Chzzk-Lives. Dauerhaftes Web-Archiv, das länger hält als Navers VOD-Fenster, plus kurze Clips mit ClipAI für TikTok und Reels."
+      "chzzk": "Sichere automatisch deine Chzzk-Lives. Dauerhaftes Web-Archiv, das länger hält als Navers VOD-Fenster, plus kurze Clips mit ClipAI für TikTok und Reels.",
+      "younow": "Sichere automatisch deine YouNow-Lives. Dauerhaftes Web-Archiv, das den In-App-Feed-Zyklus überdauert, plus kurze Clips mit ClipAI für TikTok und Reels."
     },
     "button": "Kostenlos mit der Aufnahme starten"
   },
@@ -812,7 +866,8 @@
       "kwai": "Sei der erste Streamer, der einen Kwai-Stream aufnimmt!",
       "nimotv": "Sei der erste Streamer, der einen NimoTV-Stream aufnimmt!",
       "vklive": "Sei der erste Streamer, der einen VK Live-Stream aufnimmt!",
-      "chzzk": "Sei der erste Creator, der eine Chzzk-Übertragung aufnimmt!"
+      "chzzk": "Sei der erste Creator, der eine Chzzk-Übertragung aufnimmt!",
+      "younow": "Sei der erste Creator, der eine YouNow-Übertragung aufnimmt!"
     },
     "button": "Los geht's"
   },
@@ -834,7 +889,8 @@
     "kwai": "## Kwai-Aufnahmen auf unsere Plattform\n\nKwai (vom Mandarin 快 *kuài*, „schnell\") ist die globale Kurzvideo- + Live-Streaming-App von **Kuaishou Technology** (HKEX 1024), oft als Asiens #2 Kurzvideo-Plattform nach Douyin/TikTok bezeichnet. Außerhalb Chinas ist Kwai dominant in **Brasilien** (sein größter Markt mit weitem Abstand, konkurrierend mit TikTok), plus Indonesien, Mexiko, Argentinien, Kolumbien, Naher Osten und Russland/CIS. Unsere Plattform erfasst jeden Kwai-Live in einer **öffentlichen, web-zugänglichen Aufnahme** — außerhalb der Kwai-App, im offenen Web, von Google indexierbar.\n\n### Kwai in der App vs. Kwai im offenen Web\n\nKwai ist um seinen In-App-Feed gebaut: Kurzvideos scrollen, in einen Live einsteigen, Geschenke via K-coins senden, alles in der Kwai-Oberfläche. Das funktioniert großartig für Nutzer, die schon auf Kwai sind. Aber sobald deine Fans nicht auf Kwai sind — brasilianische Fans auf WhatsApp/Instagram, indonesische Follower auf Telegram, Zuschauer in Märkten, wo Kwai nicht einmal installiert ist — ist die Übertragung weg. Unsere Plattform nimmt jeden Kwai-Live auf eine öffentliche URL wie `livestreamrecorder.com/kwai/dein-username/video/...` auf, die jeder in jedem Browser öffnen kann. Keine Kwai-Installation zum Ansehen nötig, kein Kwai-Konto, keine App-Schranke.\n\n### Gebaut für Mobile-First, Mobilfunk-First-Creator\n\nKwais größte Märkte — Brasilien, Indonesien, MENA — sind auch Märkte, in denen mobile Daten und Akku kostbare Ressourcen sind. Creator wollen kein Handy, das brennt, indem es OBS oder einen Bildschirmrecorder im Hintergrund ausführt. Wir verstehen. Unsere Plattform zeichnet serverseitig auf. Du sendest von deinem Handy aus normal auf Kwai — dein Handy kann den Bildschirm sperren, schlafen, den Anruf abbrechen — die Aufnahme läuft in unserer Infrastruktur weiter. Null CPU, null GPU, null zusätzliche Akkukosten auf deinem Gerät.\n\n### Die Entdeckungslücke des brasilianischen Kwai\n\nKwai BR ist ein riesiges Ökosystem, aber weitgehend unsichtbar im offenen portugiesischsprachigen Web. Such bei Google nach einem brasilianischen Kwai-Creator und du bekommst oft dünne Profilseiten oder Drittanbieter-Tracker-Seiten. Unsere Plattform-URLs sind sauber, indexierbar und teilbar — brasilianische Creator bekommen zum ersten Mal einen echten Google-Fußabdruck, mit jedem Kwai-Live als permanente SEO-entdeckbare Seite. Gleiches gilt für indonesische / mexikanische / argentinische Creator in ihren jeweiligen Märkten.\n\n### ClipAI: Vom Kwai-Live zu TikTok / Reels / Shorts\n\nKwai ist in Schwellenmärkten dominant, aber TikTok / Instagram / YouTube dominieren weiterhin die globale Entdeckung. ClipAI scannt deine gespeicherten Kwai-Lives und schneidet vertikale Highlight-Clips formatiert für **TikTok, Instagram Reels, YouTube Shorts** — die Entdeckungsschicht außerhalb von Kwai. Musik-Cover, Tanz, Comedy-Sketches, Geschenkreaktionen, Zuschauer-Interaktionen — Cross-Post sie, um deinen Publikumstrichter zurück zu deinen Kwai-Lives zu erweitern.\n\n### Im Browser ansehen, herunterladen wenn nötig\n\nJede gespeicherte Kwai-Live spielt sofort in jedem modernen Browser. Kein Kwai-Konto für Zuschauer erforderlich. Premium-Creator können die HEVC-Rohvideodatei jedes Lives für Neueditierung in langem YouTube-Content, Kompilationsvideos oder lokales Archivieren herunterladen.\n\n### Berührt nicht dein Kwai-Konto oder deine Einnahmen\n\nUnsere Plattform loggt sich nicht in dein Kwai-Konto ein, sieht keine K-coins, liest deine Geschenkeinnahmen nicht, mischt sich nicht in Kwais Creator-Programm-Tiers ein. Die Aufnahme wird von dir als Kwai-Creator für deinen **eigenen** Account per Opt-in aktiviert und erfasst nur deine eigenen Lives — nichts anderes. Der Status deines Kwai-Kontos, Ranking und Umsatzanteil bleiben vollständig in Kwais Domäne.\n\n### Opt-in, dein eigener Inhalt, jederzeit löschbar\n\nUnsere Plattform nimmt nur dein eigenes Profil auf, nur nachdem du angemeldet hast. Stoppe den Aufnahmeflow jederzeit. Lösche jede vergangene Kwai-Aufnahme mit einem einzigen Klick. Dein Inhalt, deine URL, deine Kontrolle — unabhängig von der Kwai-App, im offenen öffentlichen Web, wo der Rest deines potenziellen Publikums dich endlich finden kann.",
     "nimotv": "## NimoTV Live Recordings on unsere Plattform\n\nNimoTV (launched 2018 by Huya, part of Tencent's global gaming ecosystem) is the international mobile-esports streaming platform — purpose-built for the mobile-gaming explosion happening across **Brazil, Indonesia, Thailand, Mexico, and Peru**. The catalogue is dominated by **Mobile Legends: Bang Bang, Free Fire, PUBG Mobile, Call of Duty: Mobile, Wild Rift, and Arena of Valor**. Its creator base is mostly phone-only — no PC, no OBS, no capture card. When a ranked grind ends, the broadcast is gone. Unsere Plattform catches every match before it disappears, on a public web URL fans can rewatch anytime.\n\n### Phone-Only Capture, Server-Side\n\nThe NimoTV creator workflow is brutally simple: open the NimoTV app, hit go-live, play the game, end the stream. There's no native VOD export. There's no \"keep my last broadcast for replay\" button you can rely on across regions and account tiers. And a phone running a ranked Mobile Legends match doesn't have spare resources to also run a screen recorder in the background — thermals, FPS, battery, and data all suffer. Unsere Plattform runs entirely in our cloud. Your phone broadcasts on NimoTV the way it always has; we capture the stream upstream and store it on your creator page.\n\n### Full-Length Matches, Not 30-Second Clips\n\nMobile esports matches are long. MLBB ranked grinds run hours, Free Fire squads rotate through round after round, PUBG Mobile final-circle hunts can stretch a broadcast past 4 hours. NimoTV's in-app clip and replay surfaces, where they exist, are short-form by design. Unsere Plattform saves the full broadcast — every match, every draft phase, every comms moment — at full length, ready to scrub. Want to review a teamfight you lost? Pull the recording, jump to the timestamp. Want a specific MVP highlight for a thumbnail? Clip it from the saved Live.\n\n### Brazilian and Indonesian Discovery, the Open Web Way\n\nNimoTV is huge inside its app in Brazil and SE Asia. It is also almost completely invisible on the open Portuguese, Spanish, and Indonesian web. Search for a top Brazilian MLBB streamer on Google and you'll get thin profile pages, third-party trackers, or nothing useful. Your unsere Plattform creator page is indexable, shareable, and openable in any browser — your Lives finally get a real Google footprint.\n\n### Cross-Posting to Where Mobile Gaming Fans Actually Hang Out\n\n#MLBB, #FreeFire, #PUBGM, #MobileGaming — the mobile esports community lives across TikTok, Instagram, YouTube, Discord, and language-specific community apps. Most don't have the NimoTV app installed and aren't going to install it to watch one stream. ClipAI scans your saved NimoTV Lives and cuts vertical highlight clips formatted for **TikTok, Instagram Reels, YouTube Shorts** — clutch plays, MVP moments, gift reactions. Use them as the funnel that brings new fans back to your NimoTV channel.\n\n### Watch in Browser, Download if You Need It\n\nEvery saved NimoTV Live plays instantly in any modern browser. No NimoTV account needed to watch. Premium creators can download the raw video file from each Live — useful for uploading full matches to YouTube as long-form gaming content, cutting compilations, or local archival.\n\n### Doesn't Touch Your NimoTV Account or Diamond Income\n\nUnsere Plattform never logs into your NimoTV account, doesn't see diamond income, doesn't read your gifting stats, and doesn't interfere with Huya / Tencent creator program tiers or partner status. The recording is opt-in by you as the NimoTV creator for **your own** account, and only your own Lives — nothing else. Your NimoTV ranking, watch-time, gifting, and partner status remain entirely on NimoTV.\n\n### Opt-In, Delete Anytime\n\nUnsere Plattform only records your own profile, only after you opt in. Stop recording any time. Delete any past NimoTV Live with a single click. Your content, your URL, your control — independent of the NimoTV app, built for mobile esports creators who don't have time to also run a recording rig.",
     "vklive": "## VK Live Recordings on unsere Plattform\n\nVK Live is the livestreaming layer inside **VKontakte (VK)**, Russia's biggest social network with over 100 million monthly active users. Unlike standalone streaming apps, VK Live is woven directly into VK's social graph — broadcasts appear in friends' feeds, get reposted into communities, integrate with **VK Music** and the **VK Play** gaming platform, and reach an audience that spans Russia, Belarus, Kazakhstan, and Russian-speaking communities worldwide. Since 2022, when Western livestreaming options became harder to access from Russia, VK Live has grown significantly as the de-facto livestreaming home for Russian-speaking creators. Unsere Plattform records every VK Live broadcast to a stable, public web URL — built for creators who want their work to outlive a single news cycle in the VK feed.\n\n### The VK Feed Buries Streams Within Hours\n\nVK Live is a social-first stream surface. The strength of that design: a Live shows up in followers' feeds in real time, can be reposted into communities, pulls live engagement from the VK social graph. The weakness of that design: the VK algorithm prioritizes fresh content. Within a few hours of going offline, your broadcast slides down the feed. Within 24 hours, even popular VK Lives are effectively invisible to anyone who didn't catch them live. There's no proper archive UX, no dedicated past-streams view on your profile. Fans who'd love to rewatch a Dota 2 match, share a music set with a friend, or pull up that one clutch CS round you had last weekend have no real place to go.\n\nUnsere Plattform gives every VK Live broadcast a stable URL on your creator page that exists independently of the VK feed cycle. The feed moves on, your archive stays.\n\n### Built for the VK Live Creator Mix\n\nVK Live's creator base is broad and category-rich. **Gaming**: Dota 2, CS 2, World of Tanks, Standoff 2 — the cornerstones of the Russian-speaking gaming community. **Music**: artists running album drops, acoustic sets, electronic DJ sets, often integrated with their VK Music releases. **IRL and lifestyle**: vlog-style streams, cooking, travel (where geopolitics allows), commentary on news and pop culture. **Anime and manga commentators**: reaction streams, watch-alongs, deep-dive discussions. **Educational**: language learning, coding tutorials, exam prep. The capture is upstream of your local hardware, so whatever you broadcast — OBS scene composition, gameplay overlays, music visualisers, webcam-only chat — preserves exactly as your fans saw it.\n\n### A Permanent Home for Long-Form Content\n\nThe VK feed is built for short attention spans — quick scrolling, fast engagement, fresh posts every few hours. That's fine for a 2-minute clip and actively hostile to a 3-hour Dota grind or a 90-minute concert set. A permanent archive on unsere Plattform is the long-form counterpart: fans who want to actually sit with your stream, rewatch a specific match, or share a moment with a friend get a stable URL that works the same way next week and next year. The clip lives in the feed; the full broadcast lives on your creator page.\n\n### Russian, CIS, and Diaspora Audiences\n\nVK is dominant inside Russia, Belarus, and Kazakhstan, but Russian-speaking communities also live throughout Europe, Israel, the US, and Canada — many of whom don't actively maintain a VK account day-to-day. Unsere Plattform URLs work in any browser, anywhere in the world, with no VK login required to watch. Your diaspora fans get a way to keep up with your work that doesn't depend on them maintaining an active VK presence.\n\n### Cross-Platform Reach with ClipAI\n\nClipAI scans your saved VK Live broadcasts and cuts vertical short-form clips ready for **TikTok, Instagram Reels, YouTube Shorts**, and VK's own short-video features. Highlight plays from a Dota match, music drops from a concert set, funny chat moments, IRL reactions — turn one long broadcast into a stream of shareable content that brings new fans back to your VK Live channel.\n\n### Watch in Browser, Download if You Need It\n\nEvery saved VK Live plays instantly in any modern browser, no VK account required. Premium creators can download the raw video file from each broadcast — useful for re-uploading full matches to YouTube as long-form content, cutting compilations, or local archival on your own machine.\n\n### Doesn't Touch Your VK Account or Integrations\n\nUnsere Plattform never logs into your VK account, doesn't interact with VK Music tags, doesn't touch VK Play integrations, and doesn't affect any of VK's creator-side metrics, monetization, or community management. The recording is opt-in by you as the VK Live creator for **your own** account, and only captures your own broadcasts — nothing else. Your VK profile, community pages, friend graph, and creator status stay entirely within VK.\n\n### Opt-In, Delete Anytime\n\nUnsere Plattform only records your own profile, only after you opt in. Stop the recording flow any time. Delete any past VK Live with a single click. Your content, your URL, your control — a permanent archive of your work on the open web, where the VK feed buries streams fast but your back catalogue stays put.",
-    "chzzk": "## Chzzk-Aufnahmen auf unsere Plattform\n\nChzzk (치지직) ist die Live-Streaming-Plattform von **Naver**, Südkoreas größtem Internetunternehmen. Sie ging im Dezember 2023 in die offene Beta und startete vollständig im April 2024 — genau im selben Zeitfenster, in dem sich Twitch aus dem südkoreanischen Markt zurückzog. Naver stellte ein Ein-Klick-Twitch-Import-Tool bereit, mit dem Creator ihre Follower und Abonnements übertragen konnten, und seither ist Chzzk zur neuen Heimat eines großen Teils der meistgesehenen Live-Streaming-Talente Koreas geworden. Der Name 치지직 ist eine Onomatopöie für das statische Knistern eines Röhrenfernsehers, der zwischen den Kanälen umschaltet — der Klang, den ein alter Fernseher macht, wenn er Signal findet. Naver wählte ihn, um den Moment zu evozieren, in dem eine Übertragung gerade auf Sendung geht. Anfang 2026 hält die Plattform rund 39 Prozent der südkoreanischen Live-Streaming-Stunden und sendet in bis zu 1080p 60fps bei 8 Mbit/s — deutlich über der Grenze, auf die Twitch Ende 2022 heruntergestuft hatte. Unsere Plattform erfasst Chzzk-Lives in dieser Sendequalität und liefert sie unter einer dauerhaften URL aus, die in jedem Browser läuft — ganz ohne Naver-Konto.\n\n### Was du hier erneut ansehen kannst\n\nDie Aufnahmen stammen von den koreanischen Variety- und Gaming-Creatorn, die nach der Abschaltung von Twitch Korea umgezogen sind — lange Just-Chatting-Streams, Subathons, die einen halben Tag durchlaufen, Musik- und IRL-Broadcaster, die auf der neuen Plattform Publikum aufbauen, und Esports-Partnerkanäle, die League of Legends Champions Korea übertragen (Naver hält die exklusiven koreanischsprachigen LCK-Rechte von 2026 bis 2030, gemeinsam mit SOOP Korea). Jeder Live wird in voller Länge erfasst, nicht als kuratierte Highlight-Clips, sodass der Bogen der Übertragung — der Aufbau, die guten Runs, die langen Strecken zwischen den lauten Momenten — von Anfang bis Ende erhalten bleibt.\n\n### Warum ein separates Archiv zählt\n\nChzzk unterstützt VOD und kurze Clips, aber VOD-Wiedergabe ist pro Stream Opt-in, und viele Creator lassen den Schalter bei Subathons, Sponsoren-Sessions und Events, die sie nicht in voller Länge nachschaubar haben wollen, ausgeschaltet. Wenn der Live mit deaktiviertem VOD endet, ist die Übertragung auf Chzzks Seite einfach weg. Selbst mit aktiviertem VOD ist die Aufbewahrung begrenzt — ältere Streams rotieren raus, Creator löschen gelegentlich vergangene Lives, und Chzzks Clip-System hebt Momente hervor statt Bögen, sodass ein vierstündiger Subathon nicht allein aus Clips rekonstruierbar ist. Ein unsere Plattform-Archiv ist eine dauerhafte Web-Adresse für die ursprüngliche Übertragung, die unabhängig von all diesen vier Lücken existiert — dem VOD-Schalter des Creators, Chzzks Aufbewahrungsfenster, der Clip-only-Highlight-Funktion und nachträglichen Löschungen."
+    "chzzk": "## Chzzk-Aufnahmen auf unsere Plattform\n\nChzzk (치지직) ist die Live-Streaming-Plattform von **Naver**, Südkoreas größtem Internetunternehmen. Sie ging im Dezember 2023 in die offene Beta und startete vollständig im April 2024 — genau im selben Zeitfenster, in dem sich Twitch aus dem südkoreanischen Markt zurückzog. Naver stellte ein Ein-Klick-Twitch-Import-Tool bereit, mit dem Creator ihre Follower und Abonnements übertragen konnten, und seither ist Chzzk zur neuen Heimat eines großen Teils der meistgesehenen Live-Streaming-Talente Koreas geworden. Der Name 치지직 ist eine Onomatopöie für das statische Knistern eines Röhrenfernsehers, der zwischen den Kanälen umschaltet — der Klang, den ein alter Fernseher macht, wenn er Signal findet. Naver wählte ihn, um den Moment zu evozieren, in dem eine Übertragung gerade auf Sendung geht. Anfang 2026 hält die Plattform rund 39 Prozent der südkoreanischen Live-Streaming-Stunden und sendet in bis zu 1080p 60fps bei 8 Mbit/s — deutlich über der Grenze, auf die Twitch Ende 2022 heruntergestuft hatte. Unsere Plattform erfasst Chzzk-Lives in dieser Sendequalität und liefert sie unter einer dauerhaften URL aus, die in jedem Browser läuft — ganz ohne Naver-Konto.\n\n### Was du hier erneut ansehen kannst\n\nDie Aufnahmen stammen von den koreanischen Variety- und Gaming-Creatorn, die nach der Abschaltung von Twitch Korea umgezogen sind — lange Just-Chatting-Streams, Subathons, die einen halben Tag durchlaufen, Musik- und IRL-Broadcaster, die auf der neuen Plattform Publikum aufbauen, und Esports-Partnerkanäle, die League of Legends Champions Korea übertragen (Naver hält die exklusiven koreanischsprachigen LCK-Rechte von 2026 bis 2030, gemeinsam mit SOOP Korea). Jeder Live wird in voller Länge erfasst, nicht als kuratierte Highlight-Clips, sodass der Bogen der Übertragung — der Aufbau, die guten Runs, die langen Strecken zwischen den lauten Momenten — von Anfang bis Ende erhalten bleibt.\n\n### Warum ein separates Archiv zählt\n\nChzzk unterstützt VOD und kurze Clips, aber VOD-Wiedergabe ist pro Stream Opt-in, und viele Creator lassen den Schalter bei Subathons, Sponsoren-Sessions und Events, die sie nicht in voller Länge nachschaubar haben wollen, ausgeschaltet. Wenn der Live mit deaktiviertem VOD endet, ist die Übertragung auf Chzzks Seite einfach weg. Selbst mit aktiviertem VOD ist die Aufbewahrung begrenzt — ältere Streams rotieren raus, Creator löschen gelegentlich vergangene Lives, und Chzzks Clip-System hebt Momente hervor statt Bögen, sodass ein vierstündiger Subathon nicht allein aus Clips rekonstruierbar ist. Ein unsere Plattform-Archiv ist eine dauerhafte Web-Adresse für die ursprüngliche Übertragung, die unabhängig von all diesen vier Lücken existiert — dem VOD-Schalter des Creators, Chzzks Aufbewahrungsfenster, der Clip-only-Highlight-Funktion und nachträglichen Löschungen.",
+    "younow": "## YouNow-Aufnahmen auf unsere Plattform\n\nYouNow startete 2011 in New York, gegründet von Adi Sideman. Es war eine der ersten Mobile-First-Live-Streaming-Apps — vertikales Senden vom Handy, Swipe-Discovery und eine Coin-und-Props-Geschenk-Ökonomie waren alle schon da, Jahre bevor TikTok Live, Twitch IRL oder Instagram Live überhaupt existierten. Durch die mittleren 2010er hinweg baute YouNow ein Teenager- und Gen-Z-Publikum in den USA, Mexiko, Brasilien, Ägypten und Saudi-Arabien auf — Streamer mit Just-Chatting-Sessions, Talent-Showcases, Gameshow-Abenden, Musik-Sessions und Streams, die einem über Nacht Gesellschaft leisten. Heute ist der Katalog kleiner als auf dem Höhepunkt, aber das Format, das modernes mobiles Live-Streaming geprägt hat, lebt hier weiter, und die Streamer-Basis bleibt stark international. Unsere Plattform erfasst YouNow-Lives, während sie ausgestrahlt werden, und liefert sie unter einer dauerhaften URL aus — ohne YouNow-App und ohne Login zum Zuschauen.\n\n### Was du hier erneut ansehen kannst\n\nDie Aufnahmen decken die Formate ab, die YouNows Publikum tatsächlich sendet: Chat-Streams, Gesangs- und Tanz-Talente, Gameshow-Räume, Sprachlern-Lives in Englisch, Arabisch, Spanisch und Portugiesisch, nächtliche Gesellschafts-Streams aus den Amerikas und die Streamer-zu-Fan-Tipping-Momente, die YouNows Props-Ökonomie geprägt haben. Jedes Live wird in voller Länge in der Auflösung erfasst, in der es ausgestrahlt wurde — meist 720p oder 1080p vertikal von der Handy-Kamera — sodass der Bogen der Übertragung, von den ersten beitretenden Zuschauern bis zum Streamer, der das Live beendet, von Anfang bis Ende erhalten bleibt und überall abspielbar ist.\n\n### Warum ein separates Archiv zählt\n\nYouNow selbst hält keine öffentlichen Übertragungsarchive. Sobald ein Streamer auf Beenden tippt, ist das Live aus der App verschwunden — kein Rewind, keine VOD-Liste auf dem Profil, kein Weg für Zuschauer, die es verpasst haben, später nachzuholen. YouNows automatisch generierte Moments bewahren kurze Highlight-Clips, die vom Algorithmus oder vom Streamer ausgewählt werden, aber die vollständige Übertragung — der langsame Aufbau, die unerwarteten Gäste, die langen Strecken, die ein YouNow-Live eher wie Gesellschaft statt wie Content wirken lassen — ist allein aus Moments nicht wiederherstellbar. Ein Archiv auf unsere Plattform ist die einzige beständige Kopie: eine dauerhafte Web-URL, die jeder ohne YouNow-App öffnen kann, die in jedem Browser läuft und lange bestehen bleibt, nachdem der Streamer zu einem neuen Live weitergezogen ist."
   },
   "jsonLd": {
     "name": {
@@ -855,27 +911,29 @@
       "kwai": "Kwai-Stream-Aufnahmen",
       "nimotv": "NimoTV-Stream-Aufnahmen",
       "vklive": "VK Live-Stream-Aufnahmen",
-      "chzzk": "Chzzk Live-Aufnahme"
+      "chzzk": "Chzzk Live-Aufnahme",
+      "younow": "YouNow Live-Aufnahme"
     },
     "description": {
-      "all": "Sieh dir Live-Stream-Aufnahmen von Creatorn auf unsere Plattform an.",
-      "tiktok": "Sieh dir TikTok-Live-Aufnahmen von Creatorn auf unsere Plattform an.",
-      "twitch": "Sieh dir Twitch-Stream-Aufnahmen von Creatorn auf unsere Plattform an.",
-      "youtube": "Sieh dir YouTube-Live-Aufnahmen von Creatorn auf unsere Plattform an.",
-      "kick": "Sieh dir Kick-Stream-Aufnahmen von Creatorn auf unsere Plattform an.",
-      "afreecatv": "Sieh dir AfreecaTV-Aufnahmen von Creatorn auf unsere Plattform an.",
-      "pandalive": "Sieh dir Pandalive-Aufnahmen von Creatorn auf unsere Plattform an.",
-      "bigo": "Sieh dir Bigo-Aufnahmen von Creatorn auf unsere Plattform an.",
-      "liveme": "Sieh dir LiveMe-Aufnahmen von Creatorn auf unsere Plattform an.",
-      "mixch": "Sieh dir Mixch-Aufnahmen von Creatorn auf unsere Plattform an.",
-      "trovo": "Sieh dir Trovo-Aufnahmen von Creatorn auf unsere Plattform an.",
-      "twitcast": "Sieh dir TwitCasting-Aufnahmen von Creatorn auf unsere Plattform an.",
-      "joilive": "Sieh dir Joilive-Stream-Aufnahmen von Streamern auf unsere Plattform an.",
-      "live17": "Sieh dir 17live-Stream-Aufnahmen von Streamern auf unsere Plattform an.",
-      "kwai": "Sieh dir Kwai-Stream-Aufnahmen von Streamern auf unsere Plattform an.",
-      "nimotv": "Sieh dir NimoTV-Stream-Aufnahmen von Streamern auf unsere Plattform an.",
-      "vklive": "Sieh dir VK Live-Stream-Aufnahmen von Streamern auf unsere Plattform an.",
-      "chzzk": "Archivierte Live-Übertragung von Chzzk, Navers südkoreanischer Live-Streaming-Plattform, erfasst in der Auflösung und Bildrate des Originalstreams."
+      "all": "Sieh dir Live-Stream-Aufnahmen von Creatorn auf unserer Plattform an.",
+      "tiktok": "Sieh dir TikTok-Live-Aufnahmen von Creatorn auf unserer Plattform an.",
+      "twitch": "Sieh dir Twitch-Stream-Aufnahmen von Creatorn auf unserer Plattform an.",
+      "youtube": "Sieh dir YouTube-Live-Aufnahmen von Creatorn auf unserer Plattform an.",
+      "kick": "Sieh dir Kick-Stream-Aufnahmen von Creatorn auf unserer Plattform an.",
+      "afreecatv": "Sieh dir AfreecaTV-Aufnahmen von Creatorn auf unserer Plattform an.",
+      "pandalive": "Sieh dir Pandalive-Aufnahmen von Creatorn auf unserer Plattform an.",
+      "bigo": "Sieh dir Bigo-Aufnahmen von Creatorn auf unserer Plattform an.",
+      "liveme": "Sieh dir LiveMe-Aufnahmen von Creatorn auf unserer Plattform an.",
+      "mixch": "Sieh dir Mixch-Aufnahmen von Creatorn auf unserer Plattform an.",
+      "trovo": "Sieh dir Trovo-Aufnahmen von Creatorn auf unserer Plattform an.",
+      "twitcast": "Sieh dir TwitCasting-Aufnahmen von Creatorn auf unserer Plattform an.",
+      "joilive": "Sieh dir Joilive-Stream-Aufnahmen von Streamern auf unserer Plattform an.",
+      "live17": "Sieh dir 17live-Stream-Aufnahmen von Streamern auf unserer Plattform an.",
+      "kwai": "Sieh dir Kwai-Stream-Aufnahmen von Streamern auf unserer Plattform an.",
+      "nimotv": "Sieh dir NimoTV-Stream-Aufnahmen von Streamern auf unserer Plattform an.",
+      "vklive": "Sieh dir VK Live-Stream-Aufnahmen von Streamern auf unserer Plattform an.",
+      "chzzk": "Archivierte Live-Übertragung von Chzzk, Navers südkoreanischer Live-Streaming-Plattform, erfasst in der Auflösung und Bildrate des Originalstreams.",
+      "younow": "Archivierte Live-Übertragung von YouNow, einer der ursprünglichen Mobile-First-Live-Streaming-Plattformen, erfasst in der Auflösung und Bildrate des Originalstreams."
     },
     "streamTitle": "Stream von {nickname} – {date}",
     "streamDescription": {
@@ -896,7 +954,8 @@
       "kwai": "Kwai-Stream-Aufnahme von {nickname}",
       "nimotv": "NimoTV-Stream-Aufnahme von {nickname}",
       "vklive": "VK Live-Stream-Aufnahme von {nickname}",
-      "chzzk": "Chzzk-Live-Aufnahme auf unsere Plattform von {nickname} — die originale koreanische Übertragung, bewahrt zur Wiedergabe außerhalb von Chzzks eigenem VOD-Fenster."
+      "chzzk": "Chzzk-Live-Aufnahme auf unsere Plattform von {nickname} — die originale koreanische Übertragung, bewahrt zur Wiedergabe außerhalb von Chzzks eigenem VOD-Fenster.",
+      "younow": "YouNow-Live-Aufnahme auf unsere Plattform von {nickname} — die originale Übertragung, bewahrt zur Wiedergabe, nachdem YouNows App-Feed weitergezogen ist."
     }
   },
   "recordedOn": "Aufgenommen am {date}",

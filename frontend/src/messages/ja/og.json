@@ -20,7 +20,8 @@
       "live17": "17ライブ ストリーマー",
       "kwai": "Kwai ストリーマー",
       "nimotv": "NimoTV ストリーマー",
-      "vklive": "VK Live ストリーマー"
+      "vklive": "VK Live ストリーマー",
+      "younow": "YouNow クリエイター"
     },
     "subtitle": {
       "all": "すべてのストリーマー・クリエイターを探す",
@@ -39,7 +40,8 @@
       "live17": "17ライブ ストリーマーを見つける",
       "kwai": "Kwai ストリーマーを見つける",
       "nimotv": "NimoTV ストリーマーを見つける",
-      "vklive": "VK Live ストリーマーを見つける"
+      "vklive": "VK Live ストリーマーを見つける",
+      "younow": "モバイル向けライブ配信アプリの草分けである YouNow の配信者を発見。アプリ内フィードから流れた後も、すべてのライブが公開 URL にアーカイブされます。"
     }
   },
   "recordings": {
@@ -60,7 +62,8 @@
       "live17": "17ライブ 録画",
       "kwai": "Kwai 録画",
       "nimotv": "NimoTV 録画",
-      "vklive": "VK Live 録画"
+      "vklive": "VK Live 録画",
+      "younow": "YouNow 録画 — アーカイブ済み YouNow 配信を視聴"
     },
     "subtitle": {
       "all": "録画済みライブ配信を視聴",
@@ -79,7 +82,8 @@
       "live17": "録画された 17ライブ 配信を視聴",
       "kwai": "録画された Kwai 配信を視聴",
       "nimotv": "録画された NimoTV 配信を視聴",
-      "vklive": "録画された VK Live 配信を視聴"
+      "vklive": "録画された VK Live 配信を視聴",
+      "younow": "アプリ内フィードが流れた後も、アーカイブされた YouNow ライブを永続的な Web URL で視聴できます。"
     }
   },
   "home": {

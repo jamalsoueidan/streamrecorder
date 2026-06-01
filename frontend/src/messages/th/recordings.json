@@ -682,6 +682,56 @@
           "answer": "ปัญหาความเข้ากันได้ของเพลเยอร์บน Chzzk เป็นเรื่องระหว่างเบราว์เซอร์ของคุณกับ video stack ของ Naver ไม่กระทบบันทึกที่เก็บใน เว็บไซต์ของเรา บันทึกของเราใช้ HLS มาตรฐาน เบราว์เซอร์ที่มีปัญหากับเพลเยอร์ไลฟ์ของ Chzzk ก็เล่นบันทึกได้โดยไม่มีปัญหา"
         }
       ]
+    },
+    "younow": {
+      "title": "บันทึก YouNow — คลังถาวรของไลฟ์มือถือจากแอปสตรีมรุ่นแรกๆ",
+      "description": "ดูบันทึกเต็มของไลฟ์ YouNow YouNow บุกเบิกไลฟ์สตรีมมือถือแนวตั้งในปี 2011 แต่ไม่มีคลังสาธารณะ — พอจบไลฟ์ก็หายจากแอป เว็บไซต์ของเรา ให้ทุกไลฟ์ YouNow มี URL ดูซ้ำได้ที่อยู่นานเกินวงรอบฟีดในแอป",
+      "keywords": [
+        "บันทึก younow",
+        "คลังไลฟ์ younow",
+        "รีเพลย์การถ่ายทอด younow",
+        "ดูไลฟ์ younow",
+        "moments younow",
+        "คลัง younow",
+        "ดูซ้ำการถ่ายทอด younow",
+        "พลาดไลฟ์ younow",
+        "คลัง props younow",
+        "คลังไลฟ์สตรีมมือถือ"
+      ],
+      "faqs": [
+        {
+          "question": "ดูซ้ำไลฟ์ YouNow หลังจากผู้ถ่ายทอดจบสตรีมได้ไหม?",
+          "answer": "บน YouNow เอง — ไม่ได้ YouNow ไม่เก็บคลังการถ่ายทอดสาธารณะ พอกดจบ สตรีมก็หายจากแอปและจากฟีดผู้ชม บน เว็บไซต์ของเรา — ได้ เพราะเราจับไลฟ์ตอนออกอากาศและส่งกลับที่ URL ถาวรที่ไม่ขึ้นกับแอปของ YouNow"
+        },
+        {
+          "question": "บันทึกที่นี่จะมี moments และไฮไลต์ props ด้วยไหม?",
+          "answer": "บันทึกครอบคลุมการถ่ายทอดเต็ม — ทุกนาทีที่กล้องเปิด ตามที่ออกอากาศจริง Moments ในแอปของ YouNow เป็นคลิปสั้นที่ระบบสร้างจากการถ่ายทอดต้นฉบับ จึงอยู่ในสิ่งที่เราจับอยู่แล้ว ธุรกรรม props เป็นโอเวอร์เลย์ในแอป ไม่ใช่ส่วนของฟีดวิดีโอ สิ่งที่คุณจะเห็นคือผู้ถ่ายทอดรีแอ็คในกล้องตอนได้ props"
+        },
+        {
+          "question": "ต้องมีบัญชี YouNow ในการดูบันทึกบน เว็บไซต์ของเรา ไหม?",
+          "answer": "ไม่ต้อง ทุกบันทึกเล่นได้ในเบราว์เซอร์ใดก็ได้โดยไม่ต้องล็อกอิน YouNow ไม่ต้องมียอด coin และไม่ต้องติดตั้งแอป YouNow บันทึกถูกส่งตรงจาก CDN ของเรา ไม่ใช่จาก YouNow"
+        },
+        {
+          "question": "มีเครื่องอัดหน้าจอที่ควรใช้แทนสำหรับ YouNow ไหม?",
+          "answer": "เครื่องอัดหน้าจอเบราว์เซอร์จับไลฟ์ YouNow ได้ทางเทคนิค แต่ต้องเปิดแท็บ YouNow ทิ้งไว้ตลอด และหยุดทันทีที่มือถือล็อก แล็ปท็อปนอน หรือ Wi-Fi หลุด เว็บไซต์ของเรา รันบนคลาวด์ — การจับต่อเนื่องไม่ว่าอุปกรณ์คุณจะเปิดหรือปิด และไฟล์ที่เก็บเป็นคุณภาพการถ่ายทอดจริง ไม่ใช่ความละเอียดจอแสดงผลของคุณ"
+        },
+        {
+          "question": "ถ้าผู้ถ่ายทอด YouNow ตั้งเป็นส่วนตัวหรือถูกแบนล่ะ?",
+          "answer": "บันทึกที่เราจับไว้ก่อนการเปลี่ยนแปลงยังอยู่ในคลังที่ URL เดิม เราไม่ลบการถ่ายทอดย้อนหลังเมื่อสถานะ YouNow ของครีเอเตอร์เปลี่ยน คำร้อง DMCA และคำขอ takedown โดยตรงของครีเอเตอร์จัดการแบบเดียวกับแพลตฟอร์มอื่นทุกอัน"
+        },
+        {
+          "question": "บันทึก YouNow ที่นี่เป็นไฟล์เดียวหรือเพลย์ลิสต์ HLS?",
+          "answer": "บันทึกสตรีมผ่าน HLS เพื่อการเล่นที่เร็วในเบราว์เซอร์ใดก็ได้ และผู้ใช้พรีเมียมสามารถดาวน์โหลดการถ่ายทอดเต็มเป็นไฟล์ MP4 เดียวเพื่อดูออฟไลน์หรืออัปโหลดใหม่ไปยัง YouTube / Vimeo / ที่ไหนก็ตามที่คุณอยากให้อยู่ต่อไป"
+        },
+        {
+          "question": "บันทึกแสดงแชท YouNow ด้วยไหม?",
+          "answer": "ส่วนวิดีโอของการถ่ายทอดถูกเก็บไว้ รวมถึงสิ่งที่ผู้ถ่ายทอดอ่านออกเสียงหรือรีแอ็คในกล้อง แชทไลฟ์ของ YouNow เป็นฟีด real-time แยกต่างหากและไม่ถูกเล่นซ้ำพร้อมบันทึก — แต่ไลฟ์ YouNow ส่วนใหญ่เป็นแนวคุยกัน ใจความของแชทมักออกมาผ่านรีแอ็คชั่นของผู้ถ่ายทอด"
+        },
+        {
+          "question": "บันทึกมีคอนเทนต์ที่กรอง 18+ ด้วยไหม?",
+          "answer": "เว็บไซต์ของเรา บังคับใช้นโยบายคอนเทนต์เดียวกันกับแพลตฟอร์มอื่นทุกอัน: ไม่มีคอนเทนต์ผู้ใหญ่ ไม่มีผู้เยาว์ ไม่มีการละเมิดสิทธิ์ บันทึกที่ถูกแฟล็กตามนโยบายของเราหรือนโยบายที่ YouNow เผยแพร่จะถูกลบเมื่อรายงานผ่านช่องทาง DMCA / takedown ของเรา"
+        }
+      ]
     }
   },
   "hero": {
@@ -703,7 +753,8 @@
       "kwai": "บันทึก Kwai",
       "nimotv": "บันทึก NimoTV",
       "vklive": "บันทึก VK Live",
-      "chzzk": "บันทึก Chzzk"
+      "chzzk": "บันทึก Chzzk",
+      "younow": "บันทึก YouNow"
     },
     "subtitle": {
       "all": "ดูบันทึกไลฟ์สตรีมจากครีเอเตอร์บนแพลตฟอร์มของเรา ดาวน์โหลดและค้นพบคอนเทนต์ใหม่",
@@ -723,7 +774,8 @@
       "kwai": "ดูบันทึก Kwai จากครีเอเตอร์ในบราซิล อินโดนีเซีย เม็กซิโก และอีกหลายประเทศ ดาวน์โหลดและค้นพบสตรีมเมอร์ใหม่",
       "nimotv": "ดูบันทึก NimoTV จากครีเอเตอร์ในบราซิล อินโดนีเซีย เม็กซิโก และอีกหลายประเทศ ดาวน์โหลดและค้นพบสตรีมเมอร์ใหม่",
       "vklive": "ดูบันทึก VK Live จากครีเอเตอร์ในบราซิล อินโดนีเซีย เม็กซิโก และอีกหลายประเทศ ดาวน์โหลดและค้นพบสตรีมเมอร์ใหม่",
-      "chzzk": "ดูบันทึก Chzzk จากสตรีมเมอร์เกาหลี — เกม ช่องพาร์ตเนอร์ LCK, IRL และผู้ถ่ายทอดอดีต Twitch ดาวน์โหลดและค้นพบครีเอเตอร์ใหม่"
+      "chzzk": "ดูบันทึก Chzzk จากสตรีมเมอร์เกาหลี — เกม ช่องพาร์ตเนอร์ LCK, IRL และผู้ถ่ายทอดอดีต Twitch ดาวน์โหลดและค้นพบครีเอเตอร์ใหม่",
+      "younow": "ดูบันทึก YouNow จากผู้ถ่ายทอดมือถือทั่วโลก ทุกไลฟ์ถูกเก็บนานเกินวงรอบฟีดในแอป ดาวน์โหลดและค้นพบครีเอเตอร์ใหม่"
     }
   },
   "cta": {
@@ -745,7 +797,8 @@
       "kwai": "เก็บไลฟ์ Kwai",
       "nimotv": "เก็บไลฟ์ NimoTV",
       "vklive": "เก็บไลฟ์ VK Live",
-      "chzzk": "เก็บไลฟ์ Chzzk"
+      "chzzk": "เก็บไลฟ์ Chzzk",
+      "younow": "เก็บไลฟ์ YouNow"
     },
     "subtitle": {
       "all": "เก็บสตรีม TikTok, Twitch, YouTube และ Kick ของคุณอัตโนมัติ ดาวน์โหลดบันทึก สร้างคลิปสั้น และขยายผู้ชม",
@@ -765,7 +818,8 @@
       "kwai": "เก็บไลฟ์ Kwai ของคุณอัตโนมัติ คลังเว็บสาธารณะของทุกการถ่ายทอด บวกคลิปสั้นด้วย ClipAI สำหรับ TikTok และ Reels",
       "nimotv": "เก็บไลฟ์ NimoTV ของคุณอัตโนมัติ คลังเว็บสาธารณะของทุกการถ่ายทอด บวกคลิปสั้นด้วย ClipAI สำหรับ TikTok และ Reels",
       "vklive": "เก็บไลฟ์ VK Live ของคุณอัตโนมัติ คลังเว็บสาธารณะของทุกการถ่ายทอด บวกคลิปสั้นด้วย ClipAI สำหรับ TikTok และ Reels",
-      "chzzk": "เก็บไลฟ์ Chzzk ของคุณอัตโนมัติ คลังเว็บถาวรที่อยู่นานกว่าไทม์ไลน์ VOD ของ Naver บวกคลิปสั้นด้วย ClipAI สำหรับ TikTok และ Reels"
+      "chzzk": "เก็บไลฟ์ Chzzk ของคุณอัตโนมัติ คลังเว็บถาวรที่อยู่นานกว่าไทม์ไลน์ VOD ของ Naver บวกคลิปสั้นด้วย ClipAI สำหรับ TikTok และ Reels",
+      "younow": "เก็บไลฟ์ YouNow ของคุณอัตโนมัติ คลังเว็บถาวรที่อยู่นานเกินวงรอบฟีดในแอป บวกคลิปสั้นด้วย ClipAI สำหรับ TikTok และ Reels"
     },
     "button": "เริ่มบันทึกฟรี"
   },
@@ -789,7 +843,8 @@
       "kwai": "เป็นครีเอเตอร์คนแรกที่บันทึกการถ่ายทอด Kwai!",
       "nimotv": "เป็นครีเอเตอร์คนแรกที่บันทึกการถ่ายทอด NimoTV!",
       "vklive": "เป็นครีเอเตอร์คนแรกที่บันทึกการถ่ายทอด VK Live!",
-      "chzzk": "เป็นครีเอเตอร์คนแรกที่บันทึกการถ่ายทอด Chzzk!"
+      "chzzk": "เป็นครีเอเตอร์คนแรกที่บันทึกการถ่ายทอด Chzzk!",
+      "younow": "เป็นครีเอเตอร์คนแรกที่บันทึกการถ่ายทอด YouNow!"
     },
     "button": "เริ่มต้น"
   },
@@ -811,6 +866,7 @@
     "kwai": "## บันทึก Kwai บน เว็บไซต์ของเรา\n\nKwai (จากภาษาจีนกลาง 快 *kuài* แปลว่า \"เร็ว\") เป็นแอปวิดีโอสั้น + ไลฟ์สตรีมระดับโลกของ **Kuaishou Technology** (HKEX 1024) มักเรียกว่าแพลตฟอร์มวิดีโอสั้นอันดับ 2 ของเอเชียรองจาก Douyin/TikTok นอกจีน Kwai ครองตลาด **บราซิล** (ตลาดที่ใหญ่ที่สุดของ Kwai แข่งกับ TikTok) บวกอินโดนีเซีย เม็กซิโก อาร์เจนตินา โคลอมเบีย ตะวันออกกลาง และรัสเซีย/CIS เว็บไซต์ของเรา จับทุกไลฟ์ Kwai เป็น **บันทึกสาธารณะที่เข้าถึงได้บนเว็บ** นอกแอป Kwai บนเว็บเปิด Google index ได้\n\n### Kwai ในแอปกับ Kwai บนเว็บเปิด\n\nKwai สร้างขึ้นรอบฟีดในแอป เลื่อนวิดีโอสั้น เข้าไปดูไลฟ์ ส่งของขวัญผ่าน K-coins ทั้งหมดในพื้นผิว Kwai ใช้ได้ดีสำหรับผู้ใช้ที่อยู่บน Kwai อยู่แล้ว แต่ทันทีที่แฟนของคุณไม่อยู่บน Kwai — แฟนชาวบราซิลใน WhatsApp / Instagram, ผู้ติดตามชาวอินโดนีเซียบน Telegram, ผู้ชมในตลาดที่ Kwai ไม่ได้ติดตั้ง — การถ่ายทอดหายไป เว็บไซต์ของเรา บันทึกทุกไลฟ์ Kwai เป็น URL สาธารณะเช่น `livestreamrecorder.com/kwai/your-username/video/...` ที่ทุกคนเปิดในเบราว์เซอร์ใดก็ได้ ไม่ต้องติดตั้ง Kwai ในการดู ไม่ต้องมีบัญชี Kwai ไม่มีประตูแอป\n\n### สร้างมาสำหรับครีเอเตอร์ที่ใช้มือถือก่อน ใช้เครือข่ายมือถือ\n\nตลาดที่ใหญ่ที่สุดของ Kwai — บราซิล อินโดนีเซีย MENA — ก็เป็นตลาดที่ข้อมูลมือถือและแบตเตอรี่เป็นทรัพยากรมีค่า ครีเอเตอร์ไม่ต้องการให้มือถือไหม้รัน OBS หรือเครื่องอัดหน้าจอในเบื้องหลัง เราเข้าใจ เว็บไซต์ของเรา บันทึกที่ฝั่งเซิร์ฟเวอร์ คุณถ่ายทอดบน Kwai จากมือถือเหมือนปกติ มือถือคุณล็อกหน้าจอได้ นอนได้ สายหลุดได้ การบันทึกยังต่อเนื่องในระบบของเรา ไม่กิน CPU ไม่กิน GPU ไม่กินแบตเตอรี่เพิ่มบนอุปกรณ์ของคุณ\n\n### ช่องว่างการค้นพบของ Kwai บราซิล\n\nKwai BR เป็นระบบนิเวศมหาศาล แต่แทบมองไม่เห็นบนเว็บภาษาโปรตุเกสเปิด ค้นหา Google สำหรับครีเอเตอร์ Kwai บราซิลและคุณจะมักได้หน้าโปรไฟล์บางๆ หรือไซต์ติดตามของบุคคลที่สาม URL ของ เว็บไซต์ของเรา สะอาด index ได้ และแชร์ได้ ครีเอเตอร์บราซิลได้รอยเท้า Google จริงเป็นครั้งแรก โดยแต่ละไลฟ์ Kwai เป็นหน้าค้นพบได้ SEO ถาวร เหมือนกันสำหรับครีเอเตอร์อินโดนีเซีย เม็กซิโก อาร์เจนตินาในตลาดของพวกเขา\n\n### ClipAI: จากไลฟ์ Kwai เป็น TikTok / Reels / Shorts\n\nKwai ครองตลาดเกิดใหม่ แต่ TikTok / Instagram / YouTube ยังครองการค้นพบระดับโลก ClipAI สแกนไลฟ์ Kwai ที่บันทึกของคุณและตัดคลิปไฮไลต์แนวตั้งในรูปแบบ **TikTok, Instagram Reels, YouTube Shorts** ชั้นการค้นพบนอก Kwai คัฟเวอร์เพลง เต้น คลิปตลก รีแอ็คชั่นของขวัญ ปฏิสัมพันธ์ผู้ชม โพสต์ข้ามแพลตฟอร์มเพื่อขยายช่องผู้ชมกลับไปยังไลฟ์ Kwai ของคุณ\n\n### ดูในเบราว์เซอร์ ดาวน์โหลดถ้าคุณต้องการ\n\nไลฟ์ Kwai ที่บันทึกทุกอันเล่นได้ทันทีในเบราว์เซอร์สมัยใหม่ ไม่ต้องมีบัญชี Kwai สำหรับผู้ชม ครีเอเตอร์พรีเมียมสามารถดาวน์โหลดไฟล์วิดีโอ HEVC ดิบจากแต่ละไลฟ์เพื่อตัดต่อใหม่เป็นคอนเทนต์ YouTube ยาว วิดีโอรวม หรือเก็บไฟล์ในเครื่อง\n\n### ไม่แตะบัญชี Kwai หรือรายได้ของคุณ\n\nเว็บไซต์ของเรา ไม่ล็อกอินเข้าบัญชี Kwai ของคุณ ไม่เห็น K-coins ไม่อ่านรายได้จาก gift ไม่แทรกแซงระดับโปรแกรมครีเอเตอร์ของ Kwai การบันทึกเป็น opt-in โดยคุณในฐานะครีเอเตอร์ Kwai สำหรับบัญชี **ของคุณเอง** และเฉพาะไลฟ์ของคุณเองเท่านั้น ไม่มีอย่างอื่น สถานะบัญชี Kwai อันดับ และ rev-share ของคุณยังคงอยู่ในอาณาเขตของ Kwai เต็มที่\n\n### Opt-In คอนเทนต์ของคุณเอง ลบได้ทุกเมื่อ\n\nเว็บไซต์ของเรา บันทึกเฉพาะโปรไฟล์ของคุณเอง เฉพาะหลังจากคุณ opt in หยุดการบันทึกเมื่อใดก็ได้ ลบบันทึก Kwai ในอดีตด้วยคลิกเดียว คอนเทนต์ของคุณ URL ของคุณ การควบคุมของคุณ อิสระจากแอป Kwai บนเว็บสาธารณะเปิดที่ผู้ชมที่เหลือของคุณสามารถหาเจอได้ในที่สุด",
     "nimotv": "## NimoTV Live Recordings on เว็บไซต์ของเรา\n\nNimoTV (launched 2018 by Huya, part of Tencent's global gaming ecosystem) is the international mobile-esports streaming platform — purpose-built for the mobile-gaming explosion happening across **Brazil, Indonesia, Thailand, Mexico, and Peru**. The catalogue is dominated by **Mobile Legends: Bang Bang, Free Fire, PUBG Mobile, Call of Duty: Mobile, Wild Rift, and Arena of Valor**. Its creator base is mostly phone-only — no PC, no OBS, no capture card. When a ranked grind ends, the broadcast is gone. เว็บไซต์ของเรา catches every match before it disappears, on a public web URL fans can rewatch anytime.\n\n### Phone-Only Capture, Server-Side\n\nThe NimoTV creator workflow is brutally simple: open the NimoTV app, hit go-live, play the game, end the stream. There's no native VOD export. There's no \"keep my last broadcast for replay\" button you can rely on across regions and account tiers. And a phone running a ranked Mobile Legends match doesn't have spare resources to also run a screen recorder in the background — thermals, FPS, battery, and data all suffer. เว็บไซต์ของเรา runs entirely in our cloud. Your phone broadcasts on NimoTV the way it always has; we capture the stream upstream and store it on your creator page.\n\n### Full-Length Matches, Not 30-Second Clips\n\nMobile esports matches are long. MLBB ranked grinds run hours, Free Fire squads rotate through round after round, PUBG Mobile final-circle hunts can stretch a broadcast past 4 hours. NimoTV's in-app clip and replay surfaces, where they exist, are short-form by design. เว็บไซต์ของเรา saves the full broadcast — every match, every draft phase, every comms moment — at full length, ready to scrub. Want to review a teamfight you lost? Pull the recording, jump to the timestamp. Want a specific MVP highlight for a thumbnail? Clip it from the saved Live.\n\n### Brazilian and Indonesian Discovery, the Open Web Way\n\nNimoTV is huge inside its app in Brazil and SE Asia. It is also almost completely invisible on the open Portuguese, Spanish, and Indonesian web. Search for a top Brazilian MLBB streamer on Google and you'll get thin profile pages, third-party trackers, or nothing useful. Your เว็บไซต์ของเรา creator page is indexable, shareable, and openable in any browser — your Lives finally get a real Google footprint.\n\n### Cross-Posting to Where Mobile Gaming Fans Actually Hang Out\n\n#MLBB, #FreeFire, #PUBGM, #MobileGaming — the mobile esports community lives across TikTok, Instagram, YouTube, Discord, and language-specific community apps. Most don't have the NimoTV app installed and aren't going to install it to watch one stream. ClipAI scans your saved NimoTV Lives and cuts vertical highlight clips formatted for **TikTok, Instagram Reels, YouTube Shorts** — clutch plays, MVP moments, gift reactions. Use them as the funnel that brings new fans back to your NimoTV channel.\n\n### Watch in Browser, Download if You Need It\n\nEvery saved NimoTV Live plays instantly in any modern browser. No NimoTV account needed to watch. Premium creators can download the raw video file from each Live — useful for uploading full matches to YouTube as long-form gaming content, cutting compilations, or local archival.\n\n### Doesn't Touch Your NimoTV Account or Diamond Income\n\nเว็บไซต์ของเรา never logs into your NimoTV account, doesn't see diamond income, doesn't read your gifting stats, and doesn't interfere with Huya / Tencent creator program tiers or partner status. The recording is opt-in by you as the NimoTV creator for **your own** account, and only your own Lives — nothing else. Your NimoTV ranking, watch-time, gifting, and partner status remain entirely on NimoTV.\n\n### Opt-In, Delete Anytime\n\nเว็บไซต์ของเรา only records your own profile, only after you opt in. Stop recording any time. Delete any past NimoTV Live with a single click. Your content, your URL, your control — independent of the NimoTV app, built for mobile esports creators who don't have time to also run a recording rig.",
     "chzzk": "## ดูบันทึก Chzzk บน เว็บไซต์ของเรา\n\nChzzk (치지직) เป็นแพลตฟอร์มไลฟ์สตรีมของ **Naver** บริษัทอินเทอร์เน็ตที่ใหญ่ที่สุดในเกาหลีใต้ เข้า open beta ในเดือนธันวาคม 2023 และเปิดเต็มรูปแบบในเดือนเมษายน 2024 ซึ่งตรงกับช่วงที่ Twitch ปิดให้บริการในตลาดเกาหลีใต้พอดี — Naver ปล่อยเครื่องมือนำเข้าจาก Twitch แบบคลิกเดียวที่ย้ายผู้ติดตามและสมาชิกของครีเอเตอร์ข้ามมา และตั้งแต่นั้น Chzzk ก็กลายเป็นบ้านใหม่ของส่วนแบ่งใหญ่ของ talent ไลฟ์ที่มีคนดูมากที่สุดในเกาหลี ชื่อ 치지직 เป็นการเลียนเสียงไฟฟ้าซ่าของทีวี cathode-ray ตอนปรับช่อง เสียงที่ทีวีเก่าทำตอนจับสัญญาณได้ Naver เลือกชื่อนี้เพื่อสื่อถึงช่วงเวลาที่การถ่ายทอดเริ่มออกอากาศ ในต้นปี 2026 แพลตฟอร์มมีส่วนแบ่งตลาดไลฟ์สตรีมเกาหลีประมาณ 39 เปอร์เซ็นต์ และถ่ายทอดได้สูงสุด 1080p 60fps ที่ 8 Mbps สูงกว่าขีดจำกัดที่ Twitch ลดลงมาในปลายปี 2022 อย่างเห็นได้ชัด เว็บไซต์ของเรา จับไลฟ์ Chzzk ที่คุณภาพออกอากาศนั้นและส่งกลับที่ URL ถาวรที่เล่นได้ในเบราว์เซอร์ใดก็ได้ ไม่ต้องมีบัญชี Naver\n\n### สิ่งที่คุณดูซ้ำได้ที่นี่\n\nบันทึกมาจากครีเอเตอร์วาไรตี้และเกมเกาหลีที่ย้ายมาจาก Twitch Korea หลังการปิดบริการ — สตรีม just-chatting รูปแบบยาว, subathons ที่รันครึ่งวัน, ผู้ถ่ายทอดเพลงและ IRL ที่กำลังสร้างผู้ชมบนแพลตฟอร์มใหม่ และช่องพาร์ตเนอร์ esports ที่ถ่ายทอด League of Legends Champions Korea (Naver ถือสิทธิ์ภาษาเกาหลีของ LCK ตั้งแต่ 2026 ถึง 2030 ร่วมกับ SOOP Korea) ทุกไลฟ์ถูกจับเต็ม ไม่ใช่คลิปไฮไลต์คัดสรร ส่วนโค้งของการถ่ายทอด — การก่อตัว ช่วงเด็ด ช่วงยาวระหว่างจังหวะดัง — ถูกเก็บไว้ครบจากต้นจนจบ\n\n### ทำไมคลังแยกถึงสำคัญ\n\nChzzk รองรับ VOD และคลิปสั้น แต่การเล่น VOD เป็น opt-in ต่อสตรีม และครีเอเตอร์หลายคนปล่อยให้ปิดไว้สำหรับ subathons, เซสชันสปอนเซอร์ และอีเวนต์ที่ไม่อยากให้ผู้ชมดูซ้ำเต็มๆ เมื่อไลฟ์จบโดย VOD ปิดอยู่ การถ่ายทอดก็หายไปจากฝั่ง Chzzk แม้เปิด VOD ก็ตาม การเก็บมีขีดจำกัด — สตรีมเก่าหมุนออก ครีเอเตอร์บางครั้งลบไลฟ์ในอดีต และระบบคลิปของ Chzzk แสดงโมเมนต์ ไม่ใช่ส่วนโค้ง subathon สี่ชั่วโมงจึงไม่สามารถสร้างใหม่จากคลิปอย่างเดียวได้ คลัง เว็บไซต์ของเรา คือเว็บแอดเดรสถาวรสำหรับการถ่ายทอดต้นฉบับที่อยู่อิสระจากทั้งสี่ช่องว่างนั้น — สวิตช์ VOD ของครีเอเตอร์ ช่วงเวลาเก็บของ Chzzk ฟีเจอร์คลิปไฮไลต์เท่านั้น และการลบหลังเหตุการณ์",
+    "younow": "## ดูบันทึก YouNow บน เว็บไซต์ของเรา\n\nYouNow เปิดตัวในปี 2011 ก่อตั้งโดย Adi Sideman ในนิวยอร์ก เป็นหนึ่งในแอปไลฟ์สตรีมที่เน้นมือถือเป็นอันดับแรกๆ — การถ่ายทอดแนวตั้งจากโทรศัพท์ การค้นพบแบบเลื่อนไปเรื่อยๆ และเศรษฐกิจการให้ของขวัญแบบ coin-and-props มีมาก่อน TikTok Live, Twitch IRL หรือ Instagram Live หลายปี ตลอดช่วงกลางทศวรรษ 2010 YouNow สร้างผู้ชมวัยรุ่นและ Gen-Z ใน US เม็กซิโก บราซิล อียิปต์ และซาอุดีอาระเบีย โดยผู้ถ่ายทอดทำสตรีม just-chatting, โชว์ความสามารถ, ค่ำคืน gameshow, เซสชันเพลง และสตรีมเป็นเพื่อนข้ามคืน วันนี้แคตตาล็อกเล็กกว่าช่วงพีคแต่รูปแบบที่นิยามไลฟ์สตรีมมือถือยุคใหม่ก็ยังอยู่ที่นี่ และฐานผู้ถ่ายทอดยังเป็นสากลอย่างชัดเจน เว็บไซต์ของเรา จับไลฟ์ YouNow ตอนออกอากาศและส่งกลับที่ URL ถาวร โดยไม่ต้องใช้แอปหรือล็อกอิน YouNow ในการดู\n\n### สิ่งที่คุณดูซ้ำได้ที่นี่\n\nบันทึกครอบคลุมรูปแบบที่ผู้ชม YouNow ถ่ายทอดจริง: สตรีมแชท ร้องเพลงและเต้น ห้อง gameshow ไลฟ์เรียนภาษาทั้งอังกฤษ อาหรับ สเปน และโปรตุเกส สตรีมเป็นเพื่อนยามดึกจากผู้ถ่ายทอดโซน Americas และโมเมนต์การทิป broadcaster-to-fan ที่สร้างเศรษฐกิจ props ของ YouNow ทุกไลฟ์ถูกจับเต็มที่ความละเอียดที่ออกอากาศ — ปกติคือมือถือแนวตั้ง 720p หรือ 1080p — ส่วนโค้งของการถ่ายทอด ตั้งแต่ผู้ชมคนแรกเข้ามาจนผู้ถ่ายทอดจบสตรีม ถูกเก็บไว้ครบจากต้นจนจบและเล่นซ้ำได้ทุกที่\n\n### ทำไมคลังแยกถึงสำคัญ\n\nYouNow เองไม่เก็บคลังการถ่ายทอดสาธารณะ พอผู้ถ่ายทอดกดจบ ไลฟ์ก็หายจากแอป — ไม่มี rewind ไม่มีรายการ VOD ฝั่งโปรไฟล์ ไม่มีวิธีให้ผู้ชมที่พลาดตามดูภายหลัง Moments ที่ระบบ YouNow สร้างเก็บคลิปไฮไลต์สั้นที่อัลกอริทึมหรือผู้ถ่ายทอดเลือก แต่การถ่ายทอดเต็ม — การก่อตัวช้าๆ แขกที่ไม่คาดคิด ช่วงยาวที่ทำให้ไลฟ์ YouNow รู้สึกเหมือนเพื่อนมากกว่าคอนเทนต์ — กู้คืนจาก Moments อย่างเดียวไม่ได้ คลัง เว็บไซต์ของเรา เป็นสำเนาถาวรอันเดียว: URL เว็บถาวรที่ทุกคนเปิดได้โดยไม่ต้องใช้แอป YouNow เล่นในเบราว์เซอร์ใดก็ได้ และอยู่ต่อนานหลังจากผู้ถ่ายทอดย้ายไปไลฟ์ใหม่",
     "vklive": "## VK Live Recordings on เว็บไซต์ของเรา\n\nVK Live is the livestreaming layer inside **VKontakte (VK)**, Russia's biggest social network with over 100 million monthly active users. Unlike standalone streaming apps, VK Live is woven directly into VK's social graph — broadcasts appear in friends' feeds, get reposted into communities, integrate with **VK Music** and the **VK Play** gaming platform, and reach an audience that spans Russia, Belarus, Kazakhstan, and Russian-speaking communities worldwide. Since 2022, when Western livestreaming options became harder to access from Russia, VK Live has grown significantly as the de-facto livestreaming home for Russian-speaking creators. เว็บไซต์ของเรา records every VK Live broadcast to a stable, public web URL — built for creators who want their work to outlive a single news cycle in the VK feed.\n\n### The VK Feed Buries Streams Within Hours\n\nVK Live is a social-first stream surface. The strength of that design: a Live shows up in followers' feeds in real time, can be reposted into communities, pulls live engagement from the VK social graph. The weakness of that design: the VK algorithm prioritizes fresh content. Within a few hours of going offline, your broadcast slides down the feed. Within 24 hours, even popular VK Lives are effectively invisible to anyone who didn't catch them live. There's no proper archive UX, no dedicated past-streams view on your profile. Fans who'd love to rewatch a Dota 2 match, share a music set with a friend, or pull up that one clutch CS round you had last weekend have no real place to go.\n\nเว็บไซต์ของเรา gives every VK Live broadcast a stable URL on your creator page that exists independently of the VK feed cycle. The feed moves on, your archive stays.\n\n### Built for the VK Live Creator Mix\n\nVK Live's creator base is broad and category-rich. **Gaming**: Dota 2, CS 2, World of Tanks, Standoff 2 — the cornerstones of the Russian-speaking gaming community. **Music**: artists running album drops, acoustic sets, electronic DJ sets, often integrated with their VK Music releases. **IRL and lifestyle**: vlog-style streams, cooking, travel (where geopolitics allows), commentary on news and pop culture. **Anime and manga commentators**: reaction streams, watch-alongs, deep-dive discussions. **Educational**: language learning, coding tutorials, exam prep. The capture is upstream of your local hardware, so whatever you broadcast — OBS scene composition, gameplay overlays, music visualisers, webcam-only chat — preserves exactly as your fans saw it.\n\n### A Permanent Home for Long-Form Content\n\nThe VK feed is built for short attention spans — quick scrolling, fast engagement, fresh posts every few hours. That's fine for a 2-minute clip and actively hostile to a 3-hour Dota grind or a 90-minute concert set. A permanent archive on เว็บไซต์ของเรา is the long-form counterpart: fans who want to actually sit with your stream, rewatch a specific match, or share a moment with a friend get a stable URL that works the same way next week and next year. The clip lives in the feed; the full broadcast lives on your creator page.\n\n### Russian, CIS, and Diaspora Audiences\n\nVK is dominant inside Russia, Belarus, and Kazakhstan, but Russian-speaking communities also live throughout Europe, Israel, the US, and Canada — many of whom don't actively maintain a VK account day-to-day. เว็บไซต์ของเรา URLs work in any browser, anywhere in the world, with no VK login required to watch. Your diaspora fans get a way to keep up with your work that doesn't depend on them maintaining an active VK presence.\n\n### Cross-Platform Reach with ClipAI\n\nClipAI scans your saved VK Live broadcasts and cuts vertical short-form clips ready for **TikTok, Instagram Reels, YouTube Shorts**, and VK's own short-video features. Highlight plays from a Dota match, music drops from a concert set, funny chat moments, IRL reactions — turn one long broadcast into a stream of shareable content that brings new fans back to your VK Live channel.\n\n### Watch in Browser, Download if You Need It\n\nEvery saved VK Live plays instantly in any modern browser, no VK account required. Premium creators can download the raw video file from each broadcast — useful for re-uploading full matches to YouTube as long-form content, cutting compilations, or local archival on your own machine.\n\n### Doesn't Touch Your VK Account or Integrations\n\nเว็บไซต์ของเรา never logs into your VK account, doesn't interact with VK Music tags, doesn't touch VK Play integrations, and doesn't affect any of VK's creator-side metrics, monetization, or community management. The recording is opt-in by you as the VK Live creator for **your own** account, and only captures your own broadcasts — nothing else. Your VK profile, community pages, friend graph, and creator status stay entirely within VK.\n\n### Opt-In, Delete Anytime\n\nเว็บไซต์ของเรา only records your own profile, only after you opt in. Stop the recording flow any time. Delete any past VK Live with a single click. Your content, your URL, your control — a permanent archive of your work on the open web, where the VK feed buries streams fast but your back catalogue stays put."
   },
   "jsonLd": {
@@ -832,7 +888,8 @@
       "kwai": "บันทึก Kwai",
       "nimotv": "บันทึก NimoTV",
       "vklive": "บันทึก VK Live",
-      "chzzk": "บันทึกไลฟ์ Chzzk"
+      "chzzk": "บันทึกไลฟ์ Chzzk",
+      "younow": "บันทึกไลฟ์ YouNow"
     },
     "description": {
       "all": "ดูบันทึกไลฟ์สตรีมจากครีเอเตอร์บน เว็บไซต์ของเรา",
@@ -852,7 +909,8 @@
       "kwai": "ดูบันทึก Kwai จากครีเอเตอร์บน เว็บไซต์ของเรา",
       "nimotv": "ดูบันทึก NimoTV จากครีเอเตอร์บน เว็บไซต์ของเรา",
       "vklive": "ดูบันทึก VK Live จากครีเอเตอร์บน เว็บไซต์ของเรา",
-      "chzzk": "ดูบันทึก Chzzk จากครีเอเตอร์บน เว็บไซต์ของเรา"
+      "chzzk": "ดูบันทึก Chzzk จากครีเอเตอร์บน เว็บไซต์ของเรา",
+      "younow": "ดูบันทึก YouNow จากครีเอเตอร์บน เว็บไซต์ของเรา"
     },
     "streamTitle": "ไลฟ์ของ {nickname} - {date}",
     "streamDescription": {
@@ -873,7 +931,8 @@
       "kwai": "บันทึก Kwai จาก {nickname}",
       "nimotv": "บันทึก NimoTV จาก {nickname}",
       "vklive": "บันทึก VK Live จาก {nickname}",
-      "chzzk": "บันทึกไลฟ์ Chzzk จาก {nickname}"
+      "chzzk": "บันทึกไลฟ์ Chzzk จาก {nickname}",
+      "younow": "บันทึกไลฟ์ YouNow จาก {nickname}"
     }
   },
   "recordedOn": "บันทึกเมื่อ {date}",

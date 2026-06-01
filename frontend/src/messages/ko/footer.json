@@ -30,7 +30,8 @@
     "live17": "17라이브 스트리머",
     "kwai": "콰이 스트리머",
     "nimotv": "니모TV 크리에이터",
-    "vklive": "VK 라이브 크리에이터"
+    "vklive": "VK 라이브 크리에이터",
+    "younow": "유나우 크리에이터"
   },
   "watchRecordings": {
     "title": "녹화 영상 시청",
@@ -50,7 +51,8 @@
     "live17": "17라이브 녹화 영상",
     "kwai": "콰이 녹화 영상",
     "nimotv": "니모TV 녹화 영상",
-    "vklive": "VK 라이브 녹화 영상"
+    "vklive": "VK 라이브 녹화 영상",
+    "younow": "유나우 녹화"
   },
   "legal": {
     "title": "법적 고지",

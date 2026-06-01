@@ -170,6 +170,15 @@ export const usePlatformOptions = () => {
         </Center>
       ),
     },
+    {
+      value: "younow",
+      label: (
+        <Center style={{ gap: 8 }}>
+          <IconBrandFunimation size={18} />
+          <Text size="sm">{t("platforms.younow")}</Text>
+        </Center>
+      ),
+    },
   ];
 };
 
@@ -263,6 +272,11 @@ export const PLATFORM_OPTIONS = [
   {
     value: "chzzk",
     labelKey: "platforms.chzzk",
+    icon: IconBrandFunimation,
+  },
+  {
+    value: "younow",
+    labelKey: "platforms.younow",
     icon: IconBrandFunimation,
   },
 ];

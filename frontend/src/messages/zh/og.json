@@ -20,7 +20,8 @@
       "live17": "17live 主播",
       "kwai": "Kwai 主播",
       "nimotv": "NimoTV 主播",
-      "vklive": "VK Live 主播"
+      "vklive": "VK Live 主播",
+      "younow": "YouNow 主播"
     },
     "subtitle": {
       "all": "浏览所有主播和创作者",
@@ -39,7 +40,8 @@
       "live17": "发现 17live 主播",
       "kwai": "发现 Kwai 主播",
       "nimotv": "发现 NimoTV 主播",
-      "vklive": "发现 VK Live 主播"
+      "vklive": "发现 VK Live 主播",
+      "younow": "浏览 YouNow 主播,这是最早的移动直播应用之一 — 即便应用内的信息流已翻过,每场 Live 都会归档到公开 URL 上。"
     }
   },
   "recordings": {
@@ -60,7 +62,8 @@
       "live17": "17live 录制",
       "kwai": "Kwai 录制",
       "nimotv": "NimoTV 录制",
-      "vklive": "VK Live 录制"
+      "vklive": "VK Live 录制",
+      "younow": "YouNow 录像 — 观看归档的 YouNow 直播"
     },
     "subtitle": {
       "all": "观看直播录像",
@@ -79,7 +82,8 @@
       "live17": "观看 17live 直播录像",
       "kwai": "观看 Kwai 直播录像",
       "nimotv": "观看 NimoTV 直播录像",
-      "vklive": "观看 VK Live 直播录像"
+      "vklive": "观看 VK Live 直播录像",
+      "younow": "即便应用内的信息流已翻过,归档的 YouNow 直播仍以永久网页 URL 形式提供。"
     }
   },
   "home": {

@@ -235,6 +235,19 @@ export function parseUsername(input: string): ParsedUsername {
     };
   }
 
+  // Younow — younow.com/{username}. Usernames allow letters, digits, dot,
+  // underscore, hyphen. The URL path after the domain IS the username.
+  const younowRegex =
+    /(?:https?:\/\/)?(?:www\.)?younow\.com\/([a-zA-Z0-9._-]+)/i;
+  const younowMatch = trimmed.match(younowRegex);
+
+  if (younowMatch) {
+    return {
+      username: younowMatch[1],
+      platform: "younow",
+    };
+  }
+
   // Plain username - remove @ if present
   const username = trimmed.startsWith("@") ? trimmed.slice(1) : trimmed;
 

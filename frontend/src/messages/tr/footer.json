@@ -30,7 +30,8 @@
     "live17": "17live yayıncıları",
     "kwai": "Kwai yayıncıları",
     "nimotv": "NimoTV yayıncıları",
-    "vklive": "VK Live yayıncıları"
+    "vklive": "VK Live yayıncıları",
+    "younow": "YouNow içerik üreticileri"
   },
   "watchRecordings": {
     "title": "Kayıtları İzle",
@@ -50,7 +51,8 @@
     "live17": "17live kayıtları",
     "kwai": "Kwai kayıtları",
     "nimotv": "NimoTV kayıtları",
-    "vklive": "VK Live kayıtları"
+    "vklive": "VK Live kayıtları",
+    "younow": "YouNow kayıtları"
   },
   "legal": {
     "title": "Yasal",

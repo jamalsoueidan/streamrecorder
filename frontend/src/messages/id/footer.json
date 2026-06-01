@@ -30,7 +30,8 @@
     "live17": "Streamer 17live",
     "kwai": "Streamer Kwai",
     "nimotv": "Streamer NimoTV",
-    "vklive": "Streamer VK Live"
+    "vklive": "Streamer VK Live",
+    "younow": "Kreator YouNow"
   },
   "watchRecordings": {
     "title": "Tonton Rekaman",
@@ -50,7 +51,8 @@
     "live17": "Rekaman 17live",
     "kwai": "Rekaman Kwai",
     "nimotv": "Rekaman NimoTV",
-    "vklive": "Rekaman VK Live"
+    "vklive": "Rekaman VK Live",
+    "younow": "Rekaman YouNow"
   },
   "legal": {
     "title": "Legal",
