@@ -20,7 +20,9 @@
       "live17": "Streamers do 17live",
       "kwai": "Streamers do Kwai",
       "nimotv": "Streamers do NimoTV",
-      "vklive": "Streamers do VK Live"
+      "vklive": "Streamers do VK Live",
+      "younow": "Criadores do YouNow",
+      "chzzk": "Criadores do Chzzk"
     },
     "subtitle": {
       "all": "Navegue por todos os streamers e criadores",
@@ -39,7 +41,9 @@
       "live17": "Descubra streamers do 17live",
       "kwai": "Descubra streamers do Kwai",
       "nimotv": "Descubra streamers do NimoTV",
-      "vklive": "Descubra streamers do VK Live"
+      "vklive": "Descubra streamers do VK Live",
+      "younow": "Descubra broadcasters do YouNow",
+      "chzzk": "Descubra streamers do Chzzk"
     }
   },
   "recordings": {
@@ -60,7 +64,9 @@
       "live17": "Gravações do 17live",
       "kwai": "Gravações do Kwai",
       "nimotv": "Gravações do NimoTV",
-      "vklive": "Gravações do VK Live"
+      "vklive": "Gravações do VK Live",
+      "younow": "Gravações do YouNow",
+      "chzzk": "Gravações do Chzzk"
     },
     "subtitle": {
       "all": "Assista lives gravadas",
@@ -79,7 +85,9 @@
       "live17": "Assista lives gravadas do 17live",
       "kwai": "Assista lives gravadas do Kwai",
       "nimotv": "Assista lives gravadas do NimoTV",
-      "vklive": "Assista lives gravadas do VK Live"
+      "vklive": "Assista lives gravadas do VK Live",
+      "younow": "Assista Lives gravadas do YouNow",
+      "chzzk": "Assista streams gravados do Chzzk"
     }
   },
   "home": {

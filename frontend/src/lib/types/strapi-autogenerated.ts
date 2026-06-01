@@ -41,6 +41,7 @@ export enum FollowerTypeEnum {
   Nimotv = "nimotv",
   Vklive = "vklive",
   Chzzk = "chzzk",
+  Younow = "younow",
 }
 
 export interface Error {

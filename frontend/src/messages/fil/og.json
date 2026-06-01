@@ -20,7 +20,9 @@
       "live17": "17live Streamers",
       "kwai": "Kwai Creators",
       "nimotv": "NimoTV Creators",
-      "vklive": "VK Live Creators"
+      "vklive": "VK Live Creators",
+      "younow": "Mga YouNow creator",
+      "chzzk": "Mga Chzzk creator"
     },
     "subtitle": {
       "all": "Tingnan lahat ng streamers at creators",
@@ -39,7 +41,9 @@
       "live17": "Tuklasin ang mga 17live streamer",
       "kwai": "Tuklasin ang mga Kwai creator",
       "nimotv": "Tuklasin ang mga NimoTV creator",
-      "vklive": "Tuklasin ang mga VK Live creator"
+      "vklive": "Tuklasin ang mga VK Live creator",
+      "younow": "Tuklasin ang mga YouNow broadcaster",
+      "chzzk": "Tuklasin ang mga Chzzk streamer"
     }
   },
   "recordings": {
@@ -60,7 +64,9 @@
       "live17": "17live Recordings",
       "kwai": "Kwai Recordings",
       "nimotv": "NimoTV Recordings",
-      "vklive": "VK Live Recordings"
+      "vklive": "VK Live Recordings",
+      "younow": "YouNow Recordings",
+      "chzzk": "Chzzk Recordings"
     },
     "subtitle": {
       "all": "Panoorin ang mga recorded live stream",
@@ -79,7 +85,9 @@
       "live17": "Panoorin ang mga recorded 17live stream",
       "kwai": "Panoorin ang mga recorded Kwai live stream",
       "nimotv": "Panoorin ang mga recorded NimoTV live stream",
-      "vklive": "Panoorin ang mga recorded VK Live live stream"
+      "vklive": "Panoorin ang mga recorded VK Live live stream",
+      "younow": "Panoorin ang mga recorded YouNow Lives",
+      "chzzk": "Panoorin ang mga recorded Chzzk stream"
     }
   },
   "home": {

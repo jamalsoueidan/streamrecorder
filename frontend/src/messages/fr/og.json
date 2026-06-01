@@ -20,7 +20,9 @@
       "live17": "Streamers 17live",
       "kwai": "Streamers Kwai",
       "nimotv": "Streamers NimoTV",
-      "vklive": "Streamers VK Live"
+      "vklive": "Streamers VK Live",
+      "younow": "Créateurs YouNow",
+      "chzzk": "Créateurs Chzzk"
     },
     "subtitle": {
       "all": "Parcourir tous les streamers et créateurs",
@@ -39,7 +41,9 @@
       "live17": "Découvrir les streamers 17live",
       "kwai": "Découvrir les streamers Kwai",
       "nimotv": "Découvrir les streamers NimoTV",
-      "vklive": "Découvrir les streamers VK Live"
+      "vklive": "Découvrir les streamers VK Live",
+      "younow": "Découvrir les broadcasters YouNow",
+      "chzzk": "Découvrir les streamers Chzzk"
     }
   },
   "recordings": {
@@ -60,7 +64,9 @@
       "live17": "Enregistrements 17live",
       "kwai": "Enregistrements Kwai",
       "nimotv": "Enregistrements NimoTV",
-      "vklive": "Enregistrements VK Live"
+      "vklive": "Enregistrements VK Live",
+      "younow": "Enregistrements YouNow",
+      "chzzk": "Enregistrements Chzzk"
     },
     "subtitle": {
       "all": "Regarder les lives enregistrés",
@@ -79,7 +85,9 @@
       "live17": "Regarder les lives 17live enregistrés",
       "kwai": "Regarder les lives Kwai enregistrés",
       "nimotv": "Regarder les lives NimoTV enregistrés",
-      "vklive": "Regarder les lives VK Live enregistrés"
+      "vklive": "Regarder les lives VK Live enregistrés",
+      "younow": "Regarder les Lives YouNow enregistrés",
+      "chzzk": "Regarder les streams Chzzk enregistrés"
     }
   },
   "home": {

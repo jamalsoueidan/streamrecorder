@@ -20,7 +20,9 @@
       "live17": "17ライブ ストリーマー",
       "kwai": "Kwai ストリーマー",
       "nimotv": "NimoTV ストリーマー",
-      "vklive": "VK Live ストリーマー"
+      "vklive": "VK Live ストリーマー",
+      "younow": "YouNow クリエイター",
+      "chzzk": "Chzzk クリエイター"
     },
     "subtitle": {
       "all": "すべてのストリーマー・クリエイターを探す",
@@ -39,7 +41,9 @@
       "live17": "17ライブ ストリーマーを見つける",
       "kwai": "Kwai ストリーマーを見つける",
       "nimotv": "NimoTV ストリーマーを見つける",
-      "vklive": "VK Live ストリーマーを見つける"
+      "vklive": "VK Live ストリーマーを見つける",
+      "younow": "YouNow 配信者を見つける",
+      "chzzk": "Chzzk ストリーマーを見つける"
     }
   },
   "recordings": {
@@ -60,7 +64,9 @@
       "live17": "17ライブ 録画",
       "kwai": "Kwai 録画",
       "nimotv": "NimoTV 録画",
-      "vklive": "VK Live 録画"
+      "vklive": "VK Live 録画",
+      "younow": "YouNow 録画",
+      "chzzk": "Chzzk 録画"
     },
     "subtitle": {
       "all": "録画済みライブ配信を視聴",
@@ -79,7 +85,9 @@
       "live17": "録画された 17ライブ 配信を視聴",
       "kwai": "録画された Kwai 配信を視聴",
       "nimotv": "録画された NimoTV 配信を視聴",
-      "vklive": "録画された VK Live 配信を視聴"
+      "vklive": "録画された VK Live 配信を視聴",
+      "younow": "録画された YouNow ライブを視聴",
+      "chzzk": "録画された Chzzk 配信を視聴"
     }
   },
   "home": {

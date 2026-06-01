@@ -20,7 +20,9 @@
       "live17": "สตรีมเมอร์ 17live",
       "kwai": "ครีเอเตอร์ Kwai",
       "nimotv": "ครีเอเตอร์ NimoTV",
-      "vklive": "ครีเอเตอร์ VK Live"
+      "vklive": "ครีเอเตอร์ VK Live",
+      "younow": "ครีเอเตอร์ YouNow",
+      "chzzk": "ครีเอเตอร์ Chzzk"
     },
     "subtitle": {
       "all": "ค้นหาสตรีมเมอร์และครีเอเตอร์ทั้งหมด",
@@ -39,7 +41,9 @@
       "live17": "ค้นพบสตรีมเมอร์ 17live",
       "kwai": "ค้นพบครีเอเตอร์ Kwai",
       "nimotv": "ค้นพบครีเอเตอร์ NimoTV",
-      "vklive": "ค้นพบครีเอเตอร์ VK Live"
+      "vklive": "ค้นพบครีเอเตอร์ VK Live",
+      "younow": "ค้นพบผู้ถ่ายทอด YouNow",
+      "chzzk": "ค้นพบสตรีมเมอร์ Chzzk"
     }
   },
   "recordings": {
@@ -60,7 +64,9 @@
       "live17": "บันทึก 17live",
       "kwai": "บันทึก Kwai",
       "nimotv": "บันทึก NimoTV",
-      "vklive": "บันทึก VK Live"
+      "vklive": "บันทึก VK Live",
+      "younow": "บันทึก YouNow",
+      "chzzk": "บันทึก Chzzk"
     },
     "subtitle": {
       "all": "ดูไลฟ์ที่ถูกบันทึกไว้",
@@ -79,7 +85,9 @@
       "live17": "ดูสตรีม 17live ที่บันทึกไว้",
       "kwai": "ดูไลฟ์ Kwai ที่บันทึกไว้",
       "nimotv": "ดูไลฟ์ NimoTV ที่บันทึกไว้",
-      "vklive": "ดูไลฟ์ VK Live ที่บันทึกไว้"
+      "vklive": "ดูไลฟ์ VK Live ที่บันทึกไว้",
+      "younow": "ดูไลฟ์ YouNow ที่บันทึกไว้",
+      "chzzk": "ดูสตรีม Chzzk ที่บันทึกไว้"
     }
   },
   "home": {

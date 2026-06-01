@@ -30,7 +30,8 @@
     "live17": "17live 主播",
     "kwai": "Kwai 主播",
     "nimotv": "NimoTV 主播",
-    "vklive": "VK Live 主播"
+    "vklive": "VK Live 主播",
+    "younow": "YouNow 主播"
   },
   "watchRecordings": {
     "title": "观看录制内容",
@@ -50,7 +51,8 @@
     "live17": "17live 录制",
     "kwai": "Kwai 录制",
     "nimotv": "NimoTV 录制",
-    "vklive": "VK Live 录制"
+    "vklive": "VK Live 录制",
+    "younow": "YouNow 录像"
   },
   "legal": {
     "title": "法律",

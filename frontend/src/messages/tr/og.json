@@ -20,7 +20,9 @@
       "live17": "17live Yayıncıları",
       "kwai": "Kwai Yayıncıları",
       "nimotv": "NimoTV Yayıncıları",
-      "vklive": "VK Live Yayıncıları"
+      "vklive": "VK Live Yayıncıları",
+      "younow": "YouNow İçerik Üreticileri",
+      "chzzk": "Chzzk İçerik Üreticileri"
     },
     "subtitle": {
       "all": "Tüm yayıncılara ve içerik üreticilerine göz atın",
@@ -39,7 +41,9 @@
       "live17": "17live yayıncılarını keşfedin",
       "kwai": "Kwai yayıncılarını keşfedin",
       "nimotv": "NimoTV yayıncılarını keşfedin",
-      "vklive": "VK Live yayıncılarını keşfedin"
+      "vklive": "VK Live yayıncılarını keşfedin",
+      "younow": "YouNow yayıncılarını keşfedin",
+      "chzzk": "Chzzk yayıncılarını keşfedin"
     }
   },
   "recordings": {
@@ -60,7 +64,9 @@
       "live17": "17live Kayıtları",
       "kwai": "Kwai Kayıtları",
       "nimotv": "NimoTV Kayıtları",
-      "vklive": "VK Live Kayıtları"
+      "vklive": "VK Live Kayıtları",
+      "younow": "YouNow Kayıtları",
+      "chzzk": "Chzzk Kayıtları"
     },
     "subtitle": {
       "all": "Kaydedilmiş canlı yayınları izleyin",
@@ -79,7 +85,9 @@
       "live17": "Kaydedilmiş 17live yayınlarını izleyin",
       "kwai": "Kaydedilmiş Kwai yayınlarını izleyin",
       "nimotv": "Kaydedilmiş NimoTV yayınlarını izleyin",
-      "vklive": "Kaydedilmiş VK Live yayınlarını izleyin"
+      "vklive": "Kaydedilmiş VK Live yayınlarını izleyin",
+      "younow": "Kaydedilmiş YouNow Live'larını izleyin",
+      "chzzk": "Kaydedilmiş Chzzk yayınlarını izleyin"
     }
   },
   "home": {

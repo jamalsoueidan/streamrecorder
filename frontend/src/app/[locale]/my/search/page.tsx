@@ -69,6 +69,7 @@ const ALL_PLATFORMS: PlatformType[] = [
   "nimotv",
   "vklive",
   "chzzk",
+  "younow",
 ];
 
 type SearchStep = "input" | "selectPlatform" | "results";

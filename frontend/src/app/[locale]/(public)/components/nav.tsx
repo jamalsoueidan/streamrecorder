@@ -50,6 +50,7 @@ export const navConfig = {
     { key: "nimotv", label: "NimoTV", href: "/creators/nimotv" },
     { key: "vklive", label: "VK Live", href: "/creators/vklive" },
     { key: "chzzk", label: "Chzzk", href: "/creators/chzzk" },
+    { key: "younow", label: "YouNow", href: "/creators/younow" },
   ],
   watchRecordings: [
     { key: "browse", label: "Browse All", href: "/recordings/all" },
@@ -70,6 +71,7 @@ export const navConfig = {
     { key: "nimotv", label: "NimoTV", href: "/recordings/nimotv" },
     { key: "vklive", label: "VK Live", href: "/recordings/vklive" },
     { key: "chzzk", label: "Chzzk", href: "/recordings/chzzk" },
+    { key: "younow", label: "YouNow", href: "/recordings/younow" },
   ],
   legal: [
     { key: "privacy", label: "Privacy Policy", href: "/privacy" },

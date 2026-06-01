@@ -20,7 +20,9 @@
       "live17": "Streamers de 17live",
       "kwai": "Streamers de Kwai",
       "nimotv": "Streamers de NimoTV",
-      "vklive": "Streamers de VK Live"
+      "vklive": "Streamers de VK Live",
+      "younow": "Creadores de YouNow",
+      "chzzk": "Creadores de Chzzk"
     },
     "subtitle": {
       "all": "Explora todos los streamers y creadores",
@@ -39,7 +41,9 @@
       "live17": "Descubre streamers de 17live",
       "kwai": "Descubre streamers de Kwai",
       "nimotv": "Descubre streamers de NimoTV",
-      "vklive": "Descubre streamers de VK Live"
+      "vklive": "Descubre streamers de VK Live",
+      "younow": "Descubre broadcasters de YouNow",
+      "chzzk": "Descubre streamers de Chzzk"
     }
   },
   "recordings": {
@@ -60,7 +64,9 @@
       "live17": "Grabaciones de 17live",
       "kwai": "Grabaciones de Kwai",
       "nimotv": "Grabaciones de NimoTV",
-      "vklive": "Grabaciones de VK Live"
+      "vklive": "Grabaciones de VK Live",
+      "younow": "Grabaciones de YouNow",
+      "chzzk": "Grabaciones de Chzzk"
     },
     "subtitle": {
       "all": "Mira transmisiones en vivo grabadas",
@@ -79,7 +85,9 @@
       "live17": "Mira lives grabados de 17live",
       "kwai": "Mira lives grabados de Kwai",
       "nimotv": "Mira lives grabados de NimoTV",
-      "vklive": "Mira lives grabados de VK Live"
+      "vklive": "Mira lives grabados de VK Live",
+      "younow": "Mira Lives grabadas de YouNow",
+      "chzzk": "Mira streams grabados de Chzzk"
     }
   },
   "home": {
