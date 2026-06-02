@@ -179,6 +179,15 @@ export const usePlatformOptions = () => {
         </Center>
       ),
     },
+    {
+      value: "clapper",
+      label: (
+        <Center style={{ gap: 8 }}>
+          <IconBrandFunimation size={18} />
+          <Text size="sm">{t("platforms.clapper")}</Text>
+        </Center>
+      ),
+    },
   ];
 };
 
@@ -277,6 +286,11 @@ export const PLATFORM_OPTIONS = [
   {
     value: "younow",
     labelKey: "platforms.younow",
+    icon: IconBrandFunimation,
+  },
+  {
+    value: "clapper",
+    labelKey: "platforms.clapper",
     icon: IconBrandFunimation,
   },
 ];

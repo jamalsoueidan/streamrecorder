@@ -31,6 +31,7 @@ export enum FollowerTypeEnum {
   Pandalive = "pandalive",
   Bigo = "bigo",
   Tango = "tango",
+  Buzzcast = "buzzcast",
   Liveme = "liveme",
   Mixch = "mixch",
   Twitcast = "twitcast",
@@ -42,6 +43,7 @@ export enum FollowerTypeEnum {
   Vklive = "vklive",
   Chzzk = "chzzk",
   Younow = "younow",
+  Clapper = "clapper",
 }
 
 export interface Error {

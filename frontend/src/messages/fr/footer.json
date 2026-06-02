@@ -31,7 +31,8 @@
     "kwai": "Créateurs Kwai",
     "nimotv": "Créateurs NimoTV",
     "vklive": "Créateurs VK Live",
-    "younow": "Créateurs YouNow"
+    "younow": "Créateurs YouNow",
+    "clapper": "Créateurs Clapper"
   },
   "watchRecordings": {
     "title": "Regarder les enregistrements",
@@ -52,7 +53,8 @@
     "kwai": "Enregistrements Kwai",
     "nimotv": "Enregistrements NimoTV",
     "vklive": "Enregistrements VK Live",
-    "younow": "Enregistrements YouNow"
+    "younow": "Enregistrements YouNow",
+    "clapper": "Enregistrements Clapper"
   },
   "legal": {
     "title": "Mentions légales",

@@ -544,6 +544,46 @@
           "answer": "유나우는 2018년 이후 미성년자 보호 정책을 반복적으로 강화해 왔고, 성인 콘텐츠를 명시적으로 금지하고 있습니다. 저희 플랫폼도 동일한 기준을 적용합니다 — 미성년자 등장 금지, 성인 콘텐츠 금지, 권리 침해 금지. 이 기준을 위반한 것으로 신고된 녹화본은 DMCA/테이크다운 채널을 통해 접수되면 삭제됩니다."
         }
       ]
+    },
+    "clapper": {
+      "title": "클래퍼 크리에이터 — 성인 시청자 중심 라이브 스트리밍 앱의 미국 기반 방송인",
+      "description": "클래퍼(Clapper)는 알고리즘과 모더레이션 이슈로 틱톡과 페이스북을 떠난 미국 성인 크리에이터들의 거처가 된 미국 기반 라이브 스트리밍·숏폼 비디오 플랫폼입니다. 2018년 Austin에서 창업되어 2020년에 정식 출시되었고, 정치 평론, 라이프스타일, 컨트리 뮤직, 신앙·가정, 농촌 생활 방송을 이어가는 X세대, 베이비붐 세대, 그리고 시니어 밀레니얼 방송인들이 주를 이룹니다. 클래퍼는 공개 방송 아카이브를 보관하지 않아서 — 라이브가 끝나는 순간 피드에서 사라집니다. 저희 플랫폼에서 클래퍼 크리에이터를 둘러보고, 송출되는 모든 라이브의 영구 다시보기 아카이브를 확인해 보세요.",
+      "keywords": [
+        "클래퍼 크리에이터",
+        "클래퍼 방송인",
+        "클래퍼 스트리머",
+        "클래퍼 아카이브",
+        "클래퍼 크리에이터 목록",
+        "클래퍼 방송인 찾기",
+        "클래퍼 라이브 아카이브",
+        "틱톡 대안 크리에이터",
+        "미국 라이브 스트리머",
+        "클래퍼 정치 방송인",
+        "클래퍼 컨트리 뮤직",
+        "클래퍼 농촌 방송인"
+      ],
+      "faqs": [
+        {
+          "question": "클래퍼는 어떤 플랫폼이고, 사람들이 왜 옮겨갔나요?",
+          "answer": "클래퍼는 2018년 Edison Chen이 Austin에서 창업해 2020년에 정식 출시된 미국 기반의 숏폼 비디오·라이브 스트리밍 앱입니다. 2020~2024년 사이, 틱톡 알고리즘이 자기 도달을 억제한다고 느끼거나 그 모더레이션이 자기 시청자와 맞지 않는다고 느낀 미국 성인 크리에이터들의 선택지로 자리 잡았어요. 활동 중인 방송인층은 X세대와 베이비붐 세대 쪽으로 기울어 있고, 정치 평론, 컨트리 뮤직, 신앙, 농촌 생활 커뮤니티가 강합니다."
+        },
+        {
+          "question": "클래퍼 프로필 URL은 어떻게 생겼나요?",
+          "answer": "클래퍼 프로필 URL은 clapperapp.com/사용자명 형태이며, 사용자명에는 영문자·숫자·점·언더스코어·하이픈이 들어갈 수 있습니다. 전체 URL이든 사용자명만이든 저희 플랫폼 검색창에 붙여넣으면 해당 방송인을 정확히 찾아드립니다."
+        },
+        {
+          "question": "클래퍼에는 이미 피드와 Gem이 있는데, 왜 따로 아카이브해야 하나요?",
+          "answer": "클래퍼의 앱 피드는 디스커버리 중심이에요 — 라이브가 끝나면 피드 밖으로 밀려나고, 팬이 스크롤로 돌아갈 수 있는 프로필 쪽 다시보기 탭도 없습니다. 긴 호흡의 라이브 — 정치 코너, Gem으로 굴러가는 서브어톤, 농촌 생활 방송 — 은 한 번 피드를 벗어나면 다시 찾아낼 길이 없어요. 컴필레이션 영상, 팬 다시보기, 에이전시 리뷰, 또는 유튜브·럼블 교차 게시를 위해 풀 라이브를 보존해두고 싶은 방송인이라면 별도의 아카이브가 필요합니다. 저희 플랫폼이 바로 그 역할을 합니다."
+        },
+        {
+          "question": "녹화본이 아직 없는 클래퍼 크리에이터도 여기서 팔로우할 수 있나요?",
+          "answer": "네. 검색창에서 클래퍼 크리에이터를 추가하면 해당 계정이 모니터링 대상으로 등록되고, 다음 라이브 때 방송이 자동으로 캡처됩니다. 더 많은 시청자가 검색할수록 카탈로그도 함께 커지고, 크리에이터를 추가하면 그 페이지가 공개 디렉터리에 노출됩니다."
+        },
+        {
+          "question": "클래퍼는 콘텐츠 정책에 엄격한가요?",
+          "answer": "클래퍼는 미성년자, 성인 콘텐츠, 괴롭힘에 대한 자체 커뮤니티 가이드라인을 갖추고 있습니다. 저희 플랫폼도 동일한 기준을 적용합니다 — 미성년자 등장 금지, 성인 콘텐츠 금지, 권리 침해 금지, 표적 괴롭힘 금지. 이 기준을 위반한 녹화본은 DMCA/테이크다운 채널을 통해 신고되면 삭제됩니다."
+        }
+      ]
     }
   },
   "hero": {
@@ -566,7 +606,8 @@
       "nimotv": "니모TV 크리에이터",
       "vklive": "VK 라이브 스트리머",
       "chzzk": "치지직 크리에이터",
-      "younow": "유나우 크리에이터"
+      "younow": "유나우 크리에이터",
+      "clapper": "클래퍼 크리에이터"
     },
     "subtitle": {
       "all": "저희 플랫폼을 사용하여 방송을 저장하고 숏폼 클립을 만드는 수천 명의 크리에이터와 함께하세요.",
@@ -587,7 +628,8 @@
       "nimotv": "Mobile Legends, Free Fire, PUBG Mobile 등을 송출하는 니모TV 모바일 이스포츠 크리에이터와 함께하세요 — 랭크 한 판 한 판이 사라지기 전에 그대로 보관됩니다.",
       "vklive": "저희 플랫폼을 통해 VK 피드 바깥에 방송의 영구 아카이브를 두는 러시아·CIS 지역 VK 라이브 크리에이터와 함께하세요.",
       "chzzk": "네이버 VOD 타임라인에서 라이브가 빠진 뒤에도 모든 방송을 아카이브로 남기는 치지직 크리에이터와 함께하세요.",
-      "younow": "유나우 인앱 피드가 지나간 뒤에도 모든 라이브를 저희 플랫폼으로 아카이브에 남기는 유나우 방송인들과 함께하세요."
+      "younow": "유나우 인앱 피드가 지나간 뒤에도 모든 라이브를 저희 플랫폼으로 아카이브에 남기는 유나우 방송인들과 함께하세요.",
+      "clapper": "인앱 디스커버리 노출 기간이 지나간 뒤에도 모든 라이브를 저희 플랫폼으로 아카이브에 남기는 클래퍼 방송인들과 함께하세요."
     }
   },
   "features": {
@@ -611,7 +653,8 @@
       "nimotv": "니모TV 모바일 스트림을 자동으로 저장하세요",
       "vklive": "VK 라이브 방송을 자동으로 저장하세요",
       "chzzk": "치지직 라이브를 자동으로 저장하세요",
-      "younow": "유나우 라이브를 자동으로 저장하세요"
+      "younow": "유나우 라이브를 자동으로 저장하세요",
+      "clapper": "클래퍼 라이브를 자동으로 저장하세요"
     },
     "subtitle": "라이브 방송에서 숏폼 클립까지 몇 분 만에",
     "items": {
@@ -653,7 +696,8 @@
       "nimotv": "니모TV 스트림을 저장하세요",
       "vklive": "VK 라이브 방송을 저장하세요",
       "chzzk": "치지직 라이브를 저장하세요",
-      "younow": "유나우 라이브를 저장하세요"
+      "younow": "유나우 라이브를 저장하세요",
+      "clapper": "클래퍼 라이브를 저장하세요"
     },
     "subtitle": {
       "all": "수천 명의 크리에이터와 함께하세요. 방송을 저장하고, ClipAI로 숏폼 클립을 만들고, 시청자를 늘리세요.",
@@ -674,7 +718,8 @@
       "nimotv": "저희 플랫폼으로 모든 라이브를 저장하는 니모TV 모바일 이스포츠 크리에이터와 함께하세요. ClipAI로 숏폼 클립을 만들어 니모TV 바깥의 게이밍 팬에게도 닿으세요.",
       "vklive": "저희 플랫폼으로 모든 방송을 저장하는 VK 라이브 스트리머와 함께하세요. ClipAI로 숏폼 클립을 만들어 VK 피드 너머로 시청자를 넓혀 보세요.",
       "chzzk": "저희 플랫폼으로 모든 라이브를 저장하는 치지직 스트리머와 함께하세요. ClipAI로 숏폼 클립을 만들어 네이버 생태계 밖의 시청자에게도 닿으세요.",
-      "younow": "저희 플랫폼으로 모든 라이브를 저장하는 유나우 방송인들과 함께하세요. ClipAI로 숏폼 클립을 만들어 유나우 앱 밖의 시청자에게도 닿으세요."
+      "younow": "저희 플랫폼으로 모든 라이브를 저장하는 유나우 방송인들과 함께하세요. ClipAI로 숏폼 클립을 만들어 유나우 앱 밖의 시청자에게도 닿으세요.",
+      "clapper": "저희 플랫폼으로 모든 라이브를 저장하는 클래퍼 방송인들과 함께하세요. ClipAI로 숏폼 클립을 만들어 클래퍼 앱 밖의 시청자에게도 닿으세요."
     },
     "button": "무료로 녹화 시작"
   },
@@ -699,7 +744,8 @@
       "nimotv": "첫 번째 니모TV 크리에이터가 되어 보세요!",
       "vklive": "첫 번째 VK 라이브 스트리머가 되어 보세요!",
       "chzzk": "첫 번째 치지직 스트리머가 되어 보세요!",
-      "younow": "첫 번째 유나우 방송인이 되어 보세요!"
+      "younow": "첫 번째 유나우 방송인이 되어 보세요!",
+      "clapper": "첫 번째 클래퍼 방송인이 되어 보세요!"
     },
     "button": "시작하기"
   },
@@ -722,7 +768,8 @@
     "nimotv": "## NimoTV Creators on 저희 플랫폼\n\nNimoTV is the international mobile-esports streaming platform launched by **Huya** (originally part of Tencent's gaming ecosystem) in 2018, built specifically for the global mobile-gaming explosion happening in Brazil, Indonesia, Thailand, Mexico, and Peru. Its catalogue is dominated by mobile titles — **Mobile Legends: Bang Bang (MLBB)**, **Free Fire**, **PUBG Mobile**, **Call of Duty: Mobile**, **Wild Rift**, **Arena of Valor** — and its creator base reflects that: streamers who broadcast directly from their phone, often during ranked grinds that run for hours. 저희 플랫폼 records those broadcasts to a public creator page so fans can rewatch every clutch match — even on platforms that don't have a NimoTV app installed.\n\n### Phone-Only Streaming, Server-Side Recording\n\nMost NimoTV creators are phone-only. No PC, no OBS, no capture card, no second device running in the background. When the ranked session ends, the broadcast is gone — there's no native VOD export from the NimoTV app, and your phone's battery doesn't have spare cycles to record a 4-hour grind locally. 저희 플랫폼 removes the burden entirely: capture happens in our cloud, you broadcast on NimoTV as usual, and the saved recording lands on your creator page automatically. Your phone runs one app, the game runs at full FPS, the recording handles itself.\n\n### Mobile Esports Catalogue, Saved in Full\n\nMobile Legends draft phases, Free Fire squad rotations, PUBG Mobile final circles, COD Mobile sniper rotations — none of it gets cut. Every NimoTV Live is captured at full length, no caps. Want to review a teamfight you lost? Pull the recording, scrub to the timestamp. Want a specific MVP play for a thumbnail? It's on your page, ready to clip.\n\n### Reach Beyond NimoTV's Region Bubble\n\nNimoTV is huge in Brazil, Indonesia, and SE Asia, but invisible on the rest of the internet. Your audience on TikTok, YouTube, and Instagram doesn't have the NimoTV app — and there's no point trying to convince them to install it for a one-time link. 저희 플랫폼 gives each NimoTV Live a public web URL anyone can open. ClipAI then cuts your best plays into vertical short-form clips formatted for **TikTok, Instagram Reels, YouTube Shorts** — the discovery layer outside NimoTV.\n\n### Hashtag Communities Get the Full Match\n\n#MLBB, #FreeFire, #PUBGM, #MobileGaming — the mobile-esports community lives across multiple platforms. A clutch clip on TikTok drives curiosity, but the people who want the full match (analysts, sub-Reddit lurkers, teammates) want the long-form recording. Your 저희 플랫폼 page hosts both: the full Live and the clipped highlights, linked together.\n\n### Browse and Discover NimoTV Creators\n\nThis page lists NimoTV creators on 저희 플랫폼 — Mobile Legends pros, Free Fire streamers from Indonesia, COD Mobile rotation kings from Peru. The directory grows as more mobile esports creators sign up, making it one of the more useful places to discover NimoTV gamers by name outside the NimoTV app itself.\n\n### Doesn't Touch Your NimoTV Account or Diamonds\n\n저희 플랫폼 never logs into your NimoTV account, doesn't see your diamond income, doesn't read gifting stats, and doesn't interfere with Tencent / Huya creator program tiers. The recording is opt-in by you as the NimoTV creator for **your own** account, and only your own Lives — nothing else. Your NimoTV ranking, watch-time, gifting, and partner status remain entirely on NimoTV.\n\n### Become a NimoTV Creator on 저희 플랫폼\n\nFree to sign up, free to start saving Lives. Add your NimoTV username and we wire up the rest. From your next ranked grind onwards, every broadcast is captured automatically. Your content, your shareable URL, your discoverable creator page — built for mobile esports creators who don't have time to also run a recording rig.",
     "vklive": "## VK Live Streamers on 저희 플랫폼\n\nVK Live is the livestreaming layer inside **VKontakte (VK)**, Russia's largest social network with over 100 million monthly active users. Unlike standalone streaming platforms, VK Live is deeply woven into VK's social graph — streams appear in friends' feeds, can be reposted into communities, integrate with **VK Music** and the **VK Play** gaming platform, and reach an audience that spans Russia, Belarus, Kazakhstan, and Russian-speaking communities worldwide. Since 2022, when Western platforms like Twitch became harder to access from Russia, VK Live has become the de-facto livestreaming home for many Russian-speaking creators. 저희 플랫폼 records every VK Live broadcast to a permanent, shareable archive on the open web.\n\n### The VK Feed Buries Streams Fast\n\nVK Live is a social-first streaming experience. Streams show up in your followers' feeds in real time, can be reposted into communities, and pull live engagement from the VK social graph. That's the strength of the platform — but it's also the weakness if you want a back catalogue. The VK algorithm prioritizes fresh content. Within hours of going offline, your stream is buried beneath new posts. Within 24 hours, even popular VK Lives are effectively invisible to anyone who didn't catch them live. Fans who'd love to rewatch a Dota 2 match or a music set have nowhere to go.\n\n저희 플랫폼 gives every VK Live broadcast a stable URL on your creator page that exists independently of the VK feed. The feed moves on, your archive stays.\n\n### Built for Russian-Speaking Creators Across Categories\n\nVK Live's creator base spans **Dota 2, CS:GO/CS2, World of Tanks, Standoff 2**, music artists running album drops and acoustic sets, lifestyle and IRL streamers, anime/manga commentators, and educational creators teaching everything from coding to language learning. 저희 플랫폼 works for all of them — the capture is upstream of whatever you broadcast, so OBS scene composition, gameplay overlays, music visualisers, and webcam-only chat streams all preserve perfectly.\n\n### A Permanent Home for Long-Form Content\n\nVK's feed is built for short attention spans — quick scrolling, fast engagement, fresh posts every few hours. That's fine for a 2-minute clip but actively hostile to a 3-hour Dota grind or a 90-minute concert set. A permanent archive on 저희 플랫폼 is the long-form counterpart: fans who want to actually sit with your stream, rewatch a match, or share a specific moment with a friend get a stable URL that works the same way next week and next year.\n\n### Cross-Platform Reach with ClipAI\n\nClipAI scans your saved VK Live broadcasts and cuts vertical short-form clips ready for **TikTok, Instagram Reels, YouTube Shorts** — and for VK's own short-video features. Highlight plays, music drops, funny chat moments, IRL reactions — turn one long broadcast into a stream of shareable content that brings new fans back to your VK Live channel.\n\n### Russian, CIS, and Diaspora Audiences\n\nVK is huge inside Russia and across the CIS, but Russian-speaking communities also live throughout Europe, Israel, North America, and beyond — many of whom don't actively use VK day-to-day. 저희 플랫폼 URLs work in any browser, anywhere in the world, with no VK account required to watch. Your diaspora fans get a way to follow your work that doesn't depend on them maintaining an active VK presence.\n\n### Doesn't Touch Your VK Account or Integrations\n\n저희 플랫폼 never logs into your VK account, doesn't interfere with VK Music tags, doesn't touch VK Play integrations, and doesn't affect any of VK's creator-side metrics or monetization. The recording is opt-in by you as the VK Live creator for **your own** account, and only captures your own broadcasts — nothing else. Your VK profile, community pages, and creator status stay entirely within VK.\n\n### Become a VK Live Streamer on 저희 플랫폼\n\nFree to sign up. Add your VK Live username or profile URL, and from your next broadcast onwards every Live is recorded to your creator page automatically. Server-side capture, no software on your end, no extra resources from your streaming PC. The result: a permanent archive of your work on the open web, where the VK feed buries streams fast but your back catalogue stays put.",
     "chzzk": "## 저희 플랫폼의 치지직 스트리머\n\n치지직(Chzzk)은 한국 최대 인터넷 기업 **네이버**가 운영하는 라이브 스트리밍 서비스입니다. 2023년 12월 19일 오픈베타로 시작해 2024년 4월에 정식 출시되었고, 그 시점은 트위치가 한국 사업 종료를 발표한 시기와 정확히 맞물렸습니다. 네이버는 크리에이터가 트위치 계정의 팔로워와 구독 목록을 한 번에 옮길 수 있도록 직접 임포트 도구를 내놓았고, 이후 치지직은 한국에서 가장 많이 시청되는 라이브 방송 진행자 상당수의 새로운 본거지가 되었습니다. 이름 자체도 의성어로, ‘치지직’은 옛 브라운관 TV가 채널 사이에서 신호를 잡을 때 나는 잡음을 한국어로 옮긴 것입니다. 네이버는 방송이 처음 송출되는 그 순간의 감각을 떠올리게 하려고 이 이름을 골랐어요. 2026년 초 기준으로 치지직은 한국 라이브 스트리밍 시청 시간의 약 39%를 차지하며, 최대 1080p 60fps에 8 Mbps 상한으로 송출됩니다 — 2022년 말 트위치가 한국에서 낮춘 상한을 눈에 띄게 웃도는 수준이에요.\n\n### 한국 버라이어티, 이스포츠, LCK 파트너 콘텐츠\n\n치지직의 크리에이터 카탈로그는 과거 트위치 코리아에 머물던 버라이어티·게이밍·IRL·음악 신을 폭넓게 포괄합니다 — 반나절씩 가는 서브어톤, 긴 잡담 방송, LCK 경기를 송출하는 이스포츠 파트너 채널(네이버는 2026년부터 2030년까지 SOOP Korea와 공동으로 LCK 한국어 독점 중계권을 보유합니다), 그리고 새롭게 시작된 플랫폼에서 시청자를 쌓아가는 신규 스트리머들의 꾸준한 유입까지. 저희 플랫폼는 모든 라이브를 송출되는 그대로, 풀 길이로, 크리에이터가 실제로 송출한 해상도와 프레임레이트로 캡처합니다. 하이라이트로 잘리지도, 썸네일용으로 다운스케일되지도, 크리에이터의 VOD 토글 뒤에 갇히지도 않아요.\n\n### 네이버 VOD는 옵트인이고 보관 기간이 짧다\n\n치지직은 VOD 재생과 짧은 클립을 지원하지만, 한국 아카이버라면 바로 부딪히는 두 가지 단서가 있습니다. VOD는 방송별로 직접 켜야 하고, 많은 크리에이터가 토글을 꺼둡니다 — 특히 서브어톤, 협찬 방송, 풀 다시보기를 원치 않는 이벤트에서 그렇죠. VOD가 꺼진 채로 라이브가 끝나면 그 방송은 치지직 쪽에서는 그대로 사라집니다. VOD가 켜져 있어도 보관 기간에 한계가 있어 오래된 방송은 차례로 빠지고, 크리에이터가 과거 라이브를 직접 삭제하는 경우도 있어요. 치지직의 클립 시스템은 흐름이 아니라 순간을 중심으로 큐레이션되기 때문에 — 장면은 남아도 호흡은 남지 않습니다 — 몇 시간짜리 서브어톤의 전체 형태를 클립만으로 복원할 수는 없습니다. 저희 플랫폼는 이 모든 것과 무관하게 동작합니다: 녹화본은 크리에이터의 저희 플랫폼 페이지에 영구 URL로 남아 있고, 시청자는 치지직 자체 타임라인에서 방송이 사라진 뒤에도 다시 볼 수 있습니다.\n\n### 네이버 생태계 밖으로 닿기\n\n치지직은 네이버의 채널 페이지, 통나무 파워(시청자 포인트 시스템), 그리고 다른 네이버 앱들과의 연결 안에서 재생됩니다. 한국 안에서는 강점이지만, 한국 밖에서는 그게 곧 벽이에요 — 틱톡, 유튜브 쇼츠, 인스타그램의 시청자는 네이버 도메인 링크를 따라가지 않습니다. 저희 플랫폼는 모든 치지직 라이브에 네이버 계정 없이 어느 브라우저에서나 재생되는 공개 웹 URL을 부여하고, ClipAI는 풀 방송을 틱톡·릴스·쇼츠용 숏폼 하이라이트 클립으로 가공해 줍니다. 한국 라이브는 끝나도, 아카이브와 클립 파이프라인은 계속 일을 합니다.\n\n### 치지직 계정과 설정은 그대로 둡니다\n\n저희 플랫폼는 치지직 계정에 로그인하지 않고, 구독자 수를 보지 않으며, 통나무 파워 잔액을 읽지 않고, 네이버 크리에이터 프로그램 등급에 간섭하지 않습니다. 녹화는 치지직 크리에이터인 본인이 **본인** 채널에 대해 옵트인하는 방식이며, 캡처된 아카이브는 전부 저희 플랫폼에 머뭅니다. 본인의 치지직 프로필, VOD 설정, 팔로워 수, 파트너 상태는 모두 원래 자리에 그대로 남아 있어요.\n\n### 저희 플랫폼에서 치지직 스트리머가 되기\n\n가입은 무료입니다. 치지직 채널을 추가하면 다음 라이브부터 모든 방송이 자동으로 크리에이터 페이지에 녹화됩니다 — 치지직 송출 화질 그대로 서버 측에서 캡처하며, 본인 쪽에 설치할 소프트웨어도, 송출 장비에 추가 부담도 없습니다. 결과는 공개 웹에 남는 한국어 방송의 영구 아카이브와, 치지직 앱 안에서 혼자 발견되기 어려운 틱톡·릴스 시청자에게 뿌릴 수 있는 숏폼 클립 라이브러리예요.",
-    "younow": "## 저희 플랫폼의 유나우 방송인\n\n유나우(YouNow)는 본격 라이브 스트리밍 플랫폼의 원조 중 하나입니다 — 2011년 뉴욕에서 Adi Sideman이 창업했고, 스와이프로 넘기는 채널 발견과 시청자 후원 기반 기프트(요즘 거의 모든 모던 라이브 플랫폼이 따라 한 코인·Props 경제)를 가장 먼저 출시 시점에 갖춘 앱 중 하나예요. 2010년대 중반을 거치며 유나우는 미국, 멕시코, 브라질, 이집트, 사우디아라비아의 10대와 Z세대 시청자들이 저녁마다 방송인과 어울리는 곳이 됐고, 라이브 방송을 직업으로 만든 1세대 풀타임 방송인들이 가장 먼저 자리 잡은 플랫폼이기도 했습니다. 지금은 전성기보다 규모가 작아졌지만, 유나우가 개척한 포맷 — 길고, 대화 중심이고, 가볍게 만들어진 라이브 — 은 여전히 핵심이고, 방송인 분포도 여전히 다언어·다지역으로 강하게 퍼져 있습니다.\n\n### 잡담, 탤런트, 게임쇼, 그리고 오버나잇 동반 방송\n\n유나우의 방송인 카탈로그는 트위치처럼 게이머 중심도 아니고, 틱톡 라이브처럼 숏폼 중심도 아닙니다. 주를 이루는 포맷은 잡담 라이브, 탤런트 무대(노래와 춤이 큰 비중을 차지해요), 방송인이 직접 진행하는 게임쇼 나이트, 영어·아랍어·스페인어·포르투갈어로 진행되는 언어 학습 방송, 그리고 아메리카 시간대 방송인들이 요리하거나 공부하거나 그냥 시간을 보내면서 카메라를 켜둔 채 진행하는 오버나잇 동반 방송입니다. 저희 플랫폼은 모든 라이브를 송출되는 그대로, 풀 길이로 캡처합니다. 하이라이트로 잘리지도, 요약되지도, 유나우 인앱 피드 정렬에 묻히지도 않아요.\n\n### 유나우는 공개 아카이브를 두지 않습니다\n\n이게 자기 방송을 정말로 되돌아보고 싶은 유나우 방송인에게 가장 큰 빈틈이에요. 종료 버튼을 누르는 순간 라이브는 앱에서 사라집니다 — 방송인 쪽 VOD 목록도, 팬 쪽 다시보기 탭도, 놓친 시청자가 나중에 따라잡을 방법도 없어요. 유나우의 자동 생성 모먼츠(Moments)는 짧은 클립 하이라이트는 남기지만 풀 방송은 남기지 않고, 컴필레이션 영상, 팬 다시보기, 에이전시 리뷰, 틱톡·유튜브 쇼츠 교차 게시 — 어떤 용도든 풀 라이브가 필요한 방송인에게는 지금 네이티브 옵션 자체가 없습니다. 저희 플랫폼이 그래서 유일하게 남는 사본 역할을 합니다: 모든 라이브를 서버 측에서 캡처해서, 유나우 앱과 무관하게 존재하는 영구 웹 URL로 다시 제공하고, 내일 다시 방송하든 1년을 쉬든 그 자리에 그대로 남아 있어요.\n\n### 유나우 앱 밖으로 닿기\n\n유나우는 앱 우선 플랫폼입니다 — 채널 발견도 유나우 앱 안에서 일어나고, 기프트 흐름도 유나우 앱 안에서 일어나며, 시청자의 여정 대부분은 웹 URL을 한 번도 거치지 않고 시작해서 끝납니다. 앱 안에서는 강점이지만, 앱 밖에서는 그게 곧 벽이에요. 틱톡, 유튜브 쇼츠, 인스타그램, X의 시청자는 앱 전용 링크를 따라가지 않습니다 — 그들에게 필요한 건 설치 없이 브라우저에서 바로 재생되는 공유 가능한 URL이에요. 저희 플랫폼은 모든 유나우 라이브에 유나우 앱 없이, 유나우 계정 없이, 어떤 로그인도 없이 재생되는 공개 웹 URL을 부여합니다. ClipAI는 풀 방송을 틱톡·릴스·쇼츠용 숏폼 하이라이트 클립으로 가공해 주고요. 유나우 라이브는 끝나도, 아카이브와 클립 파이프라인은 인앱 피드가 지나간 뒤에도 계속 일을 합니다.\n\n### 유나우 계정, 바, 파트너 등급은 그대로 둡니다\n\n저희 플랫폼은 유나우 계정에 로그인하지 않고, 바/코인 잔액을 보지 않으며, Props 거래를 읽지 않고, 유나우의 파트너 프로그램이나 모더레이션에도 간섭하지 않습니다. 녹화는 유나우 방송인 본인이 **본인** 계정에 대해 옵트인하는 방식이며, 본인의 라이브만 — 그 외에는 아무것도 다루지 않아요. 캡처된 아카이브는 전부 저희 플랫폼에 머뭅니다. 본인의 유나우 프로필, 팬 수, 바 잔액, 파트너 프로그램 상태는 모두 원래 자리에 그대로 남아 있어요.\n\n### 저희 플랫폼에서 유나우 방송인이 되기\n\n가입은 무료입니다. 유나우 계정을 추가하면 다음 라이브부터 모든 방송이 자동으로 크리에이터 페이지에 녹화됩니다 — 송출 화질 그대로 서버 측에서 캡처하며, 본인 쪽에 설치할 소프트웨어도, 기기에 추가 부담도, 별도 장비도 필요 없습니다. 결과는 공개 웹에 남는 유나우 라이브의 영구 아카이브와, 유나우 앱 안에서 혼자 채널을 발견하기 어려운 틱톡·릴스 시청자에게 뿌릴 수 있는 숏폼 클립 라이브러리예요."
+    "younow": "## 저희 플랫폼의 유나우 방송인\n\n유나우(YouNow)는 본격 라이브 스트리밍 플랫폼의 원조 중 하나입니다 — 2011년 뉴욕에서 Adi Sideman이 창업했고, 스와이프로 넘기는 채널 발견과 시청자 후원 기반 기프트(요즘 거의 모든 모던 라이브 플랫폼이 따라 한 코인·Props 경제)를 가장 먼저 출시 시점에 갖춘 앱 중 하나예요. 2010년대 중반을 거치며 유나우는 미국, 멕시코, 브라질, 이집트, 사우디아라비아의 10대와 Z세대 시청자들이 저녁마다 방송인과 어울리는 곳이 됐고, 라이브 방송을 직업으로 만든 1세대 풀타임 방송인들이 가장 먼저 자리 잡은 플랫폼이기도 했습니다. 지금은 전성기보다 규모가 작아졌지만, 유나우가 개척한 포맷 — 길고, 대화 중심이고, 가볍게 만들어진 라이브 — 은 여전히 핵심이고, 방송인 분포도 여전히 다언어·다지역으로 강하게 퍼져 있습니다.\n\n### 잡담, 탤런트, 게임쇼, 그리고 오버나잇 동반 방송\n\n유나우의 방송인 카탈로그는 트위치처럼 게이머 중심도 아니고, 틱톡 라이브처럼 숏폼 중심도 아닙니다. 주를 이루는 포맷은 잡담 라이브, 탤런트 무대(노래와 춤이 큰 비중을 차지해요), 방송인이 직접 진행하는 게임쇼 나이트, 영어·아랍어·스페인어·포르투갈어로 진행되는 언어 학습 방송, 그리고 아메리카 시간대 방송인들이 요리하거나 공부하거나 그냥 시간을 보내면서 카메라를 켜둔 채 진행하는 오버나잇 동반 방송입니다. 저희 플랫폼은 모든 라이브를 송출되는 그대로, 풀 길이로 캡처합니다. 하이라이트로 잘리지도, 요약되지도, 유나우 인앱 피드 정렬에 묻히지도 않아요.\n\n### 유나우는 공개 아카이브를 두지 않습니다\n\n이게 자기 방송을 정말로 되돌아보고 싶은 유나우 방송인에게 가장 큰 빈틈이에요. 종료 버튼을 누르는 순간 라이브는 앱에서 사라집니다 — 방송인 쪽 VOD 목록도, 팬 쪽 다시보기 탭도, 놓친 시청자가 나중에 따라잡을 방법도 없어요. 유나우의 자동 생성 모먼츠(Moments)는 짧은 클립 하이라이트는 남기지만 풀 방송은 남기지 않고, 컴필레이션 영상, 팬 다시보기, 에이전시 리뷰, 틱톡·유튜브 쇼츠 교차 게시 — 어떤 용도든 풀 라이브가 필요한 방송인에게는 지금 네이티브 옵션 자체가 없습니다. 저희 플랫폼이 그래서 유일하게 남는 사본 역할을 합니다: 모든 라이브를 서버 측에서 캡처해서, 유나우 앱과 무관하게 존재하는 영구 웹 URL로 다시 제공하고, 내일 다시 방송하든 1년을 쉬든 그 자리에 그대로 남아 있어요.\n\n### 유나우 앱 밖으로 닿기\n\n유나우는 앱 우선 플랫폼입니다 — 채널 발견도 유나우 앱 안에서 일어나고, 기프트 흐름도 유나우 앱 안에서 일어나며, 시청자의 여정 대부분은 웹 URL을 한 번도 거치지 않고 시작해서 끝납니다. 앱 안에서는 강점이지만, 앱 밖에서는 그게 곧 벽이에요. 틱톡, 유튜브 쇼츠, 인스타그램, X의 시청자는 앱 전용 링크를 따라가지 않습니다 — 그들에게 필요한 건 설치 없이 브라우저에서 바로 재생되는 공유 가능한 URL이에요. 저희 플랫폼은 모든 유나우 라이브에 유나우 앱 없이, 유나우 계정 없이, 어떤 로그인도 없이 재생되는 공개 웹 URL을 부여합니다. ClipAI는 풀 방송을 틱톡·릴스·쇼츠용 숏폼 하이라이트 클립으로 가공해 주고요. 유나우 라이브는 끝나도, 아카이브와 클립 파이프라인은 인앱 피드가 지나간 뒤에도 계속 일을 합니다.\n\n### 유나우 계정, 바, 파트너 등급은 그대로 둡니다\n\n저희 플랫폼은 유나우 계정에 로그인하지 않고, 바/코인 잔액을 보지 않으며, Props 거래를 읽지 않고, 유나우의 파트너 프로그램이나 모더레이션에도 간섭하지 않습니다. 녹화는 유나우 방송인 본인이 **본인** 계정에 대해 옵트인하는 방식이며, 본인의 라이브만 — 그 외에는 아무것도 다루지 않아요. 캡처된 아카이브는 전부 저희 플랫폼에 머뭅니다. 본인의 유나우 프로필, 팬 수, 바 잔액, 파트너 프로그램 상태는 모두 원래 자리에 그대로 남아 있어요.\n\n### 저희 플랫폼에서 유나우 방송인이 되기\n\n가입은 무료입니다. 유나우 계정을 추가하면 다음 라이브부터 모든 방송이 자동으로 크리에이터 페이지에 녹화됩니다 — 송출 화질 그대로 서버 측에서 캡처하며, 본인 쪽에 설치할 소프트웨어도, 기기에 추가 부담도, 별도 장비도 필요 없습니다. 결과는 공개 웹에 남는 유나우 라이브의 영구 아카이브와, 유나우 앱 안에서 혼자 채널을 발견하기 어려운 틱톡·릴스 시청자에게 뿌릴 수 있는 숏폼 클립 라이브러리예요.",
+    "clapper": "## 저희 플랫폼의 클래퍼 방송인\n\n클래퍼(Clapper)는 2018년 Edison Chen이 Austin에서 창업해 2020년에 정식 출시된 미국 기반 라이브 스트리밍·숏폼 비디오 플랫폼입니다. 2020~2024년을 거치며, 틱톡과 페이스북에서 자기 자리가 좁아진다고 느낀 미국 성인 크리에이터층의 거처로 자리 잡았어요 — X세대와 베이비붐 세대 방송인, 정치·시사 평론가, 컨트리와 아메리카나 음악 방송인, 신앙·가정 중심 스트리머, 목장과 농촌 생활 방송인, 군·법 집행 커뮤니티 방송까지. 디스커버리 피드는 미국 중심이고, 모더레이션 철학은 의도적으로 틱톡보다 덜 빡빡하며, 방송인 경제는 시청자가 보내는 Gem 후원으로 굴러갑니다. 저희 플랫폼은 모든 클래퍼 방송인에게 클래퍼 앱과 별개로 존재하는 라이브의 영구 웹 아카이브를 제공합니다.\n\n### 틱톡과는 다른 결의 라이브 카탈로그\n\n클래퍼의 방송인 기반은 트위치처럼 게이머 우선도 아니고, 틱톡 라이브처럼 댄스·트렌드 우선도 아닙니다. 주를 이루는 포맷은 긴 호흡의 정치·시사 평론 방송, 컨트리와 아메리카나 음악 세션, 신앙·가정 라이브, 목장과 농촌 생활 방송, 라이프스타일과 IRL 잡담, 그리고 플랫폼 크리에이터 경제를 떠받치는 방송인-팬 간 Gem 후원 순간들이에요. 저희 플랫폼은 모든 라이브를 송출되는 그대로, 풀 길이로 캡처해서 영구 URL로 다시 제공합니다. 하이라이트 클립으로 잘리지도, 요약되지도, 클래퍼 인앱 피드 정렬에 묻히지도 않아요.\n\n### 클래퍼 피드는 공개 아카이브를 두지 않습니다\n\n자기 작업을 되돌아보고 싶은 클래퍼 방송인이 가장 먼저 부딪히는 빈틈이 바로 이거예요. 라이브를 종료하는 순간 방송은 디스커버리 피드 밖으로 밀려납니다 — 방송인 쪽 VOD 목록도, 팬 쪽 다시보기 탭도, 놓친 시청자가 나중에 따라잡을 방법도 없어요. 긴 호흡의 라이브 — 두 시간짜리 정치 코너, Gem으로 굴러간 서브어톤, 오후 내내 이어진 농촌 생활 방송 — 어느 것도 일단 인앱 피드 시점을 지나면 다시 찾아낼 길이 없습니다. 저희 플랫폼이 그래서 유일하게 남는 사본 역할을 합니다: 모든 라이브를 서버 측에서 캡처해서, 클래퍼 앱과 무관하게 존재하는 영구 웹 URL로 다시 제공하고, 내일 다시 방송하든 1년을 쉬든 그 자리에 그대로 남아 있어요.\n\n### 클래퍼 앱 밖으로 닿기\n\n클래퍼는 앱 우선 플랫폼입니다 — 디스커버리도 클래퍼 앱 안에서 일어나고, Gem 후원도 클래퍼 앱 안에서 일어나며, 시청자의 여정 대부분은 웹 URL을 한 번도 거치지 않고 시작해서 끝납니다. 앱 안에서는 강점이지만, 앱 밖에서는 그게 곧 벽이에요. 유튜브, 럼블, X, 페이스북 그룹의 시청자는 앱 전용 링크를 따라가지 않습니다 — 그들에게 필요한 건 설치 없이 브라우저에서 바로 재생되는 공유 가능한 URL이에요. 저희 플랫폼은 모든 클래퍼 라이브에 클래퍼 앱 없이, 클래퍼 계정 없이, 어떤 로그인도 없이 재생되는 공개·웹 주소를 부여합니다. ClipAI는 풀 방송을 틱톡·릴스·쇼츠용 숏폼 하이라이트 클립으로 가공해 주고요. 클래퍼 라이브는 끝나도, 아카이브와 클립 파이프라인은 인앱 피드가 지나간 뒤에도 계속 일을 합니다.\n\n### 클래퍼 계정과 Gem 잔액에 손대지 않습니다\n\n저희 플랫폼은 클래퍼 계정에 로그인하지 않고, Gem 잔액을 보지 않으며, 후원 거래를 읽지 않고, 클래퍼의 크리에이터 프로그램이나 모더레이션에도 간섭하지 않습니다. 녹화는 클래퍼 방송인 본인이 **본인** 계정에 대해 옵트인하는 방식이며, 본인의 라이브만 — 그 외에는 아무것도 다루지 않아요. 캡처된 아카이브는 전부 저희 플랫폼에 머뭅니다. 본인의 클래퍼 프로필, 팔로워 수, Gem 잔액, 크리에이터 프로그램 상태는 모두 원래 자리에 그대로 남아 있어요.\n\n### 저희 플랫폼에서 클래퍼 방송인이 되기\n\n가입은 무료입니다. 클래퍼 계정을 추가하면 다음 라이브부터 모든 방송이 자동으로 크리에이터 페이지에 녹화됩니다 — 송출 화질 그대로 서버 측에서 캡처하며, 본인 쪽에 설치할 소프트웨어도, 기기에 추가 부담도 없습니다. 결과는 공개 웹에 남는 클래퍼 라이브의 영구 아카이브와, 클래퍼 앱 안에서 혼자 채널을 발견하기 어려운 유튜브·럼블·X·페이스북 그룹 시청자에게 뿌릴 수 있는 숏폼 클립 라이브러리예요."
   },
   "faq": "자주 묻는 질문",
   "country": {

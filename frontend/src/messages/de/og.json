@@ -22,7 +22,8 @@
       "nimotv": "NimoTV-Streamer",
       "vklive": "VK Live-Streamer",
       "younow": "YouNow Creator",
-      "chzzk": "Chzzk-Creator"
+      "chzzk": "Chzzk-Creator",
+      "clapper": "Clapper-Creator"
     },
     "subtitle": {
       "all": "Alle Streamer und Creator durchstöbern",
@@ -43,7 +44,8 @@
       "nimotv": "NimoTV-Streamer entdecken",
       "vklive": "VK Live-Streamer entdecken",
       "younow": "YouNow-Streamer entdecken",
-      "chzzk": "Chzzk-Streamer entdecken"
+      "chzzk": "Chzzk-Streamer entdecken",
+      "clapper": "Clapper-Streamer entdecken"
     }
   },
   "recordings": {
@@ -66,7 +68,8 @@
       "nimotv": "NimoTV-Aufnahmen",
       "vklive": "VK Live-Aufnahmen",
       "younow": "YouNow-Aufnahmen",
-      "chzzk": "Chzzk-Aufnahmen"
+      "chzzk": "Chzzk-Aufnahmen",
+      "clapper": "Clapper-Aufnahmen"
     },
     "subtitle": {
       "all": "Aufgenommene Live-Streams ansehen",
@@ -87,7 +90,8 @@
       "nimotv": "Aufgenommene NimoTV-Streams ansehen",
       "vklive": "Aufgenommene VK Live-Streams ansehen",
       "younow": "Aufgenommene YouNow-Lives ansehen",
-      "chzzk": "Aufgenommene Chzzk-Streams ansehen"
+      "chzzk": "Aufgenommene Chzzk-Streams ansehen",
+      "clapper": "Aufgenommene Clapper-Streams ansehen"
     }
   },
   "home": {

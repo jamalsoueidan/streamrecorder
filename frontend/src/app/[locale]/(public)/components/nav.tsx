@@ -51,6 +51,7 @@ export const navConfig = {
     { key: "vklive", label: "VK Live", href: "/creators/vklive" },
     { key: "chzzk", label: "Chzzk", href: "/creators/chzzk" },
     { key: "younow", label: "YouNow", href: "/creators/younow" },
+    { key: "clapper", label: "Clapper", href: "/creators/clapper" },
   ],
   watchRecordings: [
     { key: "browse", label: "Browse All", href: "/recordings/all" },
@@ -72,6 +73,7 @@ export const navConfig = {
     { key: "vklive", label: "VK Live", href: "/recordings/vklive" },
     { key: "chzzk", label: "Chzzk", href: "/recordings/chzzk" },
     { key: "younow", label: "YouNow", href: "/recordings/younow" },
+    { key: "clapper", label: "Clapper", href: "/recordings/clapper" },
   ],
   legal: [
     { key: "privacy", label: "Privacy Policy", href: "/privacy" },

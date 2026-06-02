@@ -31,7 +31,8 @@
     "kwai": "Kwai yayıncıları",
     "nimotv": "NimoTV yayıncıları",
     "vklive": "VK Live yayıncıları",
-    "younow": "YouNow içerik üreticileri"
+    "younow": "YouNow içerik üreticileri",
+    "clapper": "Clapper içerik üreticileri"
   },
   "watchRecordings": {
     "title": "Kayıtları İzle",
@@ -52,7 +53,8 @@
     "kwai": "Kwai kayıtları",
     "nimotv": "NimoTV kayıtları",
     "vklive": "VK Live kayıtları",
-    "younow": "YouNow kayıtları"
+    "younow": "YouNow kayıtları",
+    "clapper": "Clapper kayıtları"
   },
   "legal": {
     "title": "Yasal",

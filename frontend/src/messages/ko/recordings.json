@@ -735,6 +735,57 @@
           "answer": "저희 플랫폼는 다른 모든 플랫폼과 동일한 콘텐츠 정책을 적용합니다: 성인 콘텐츠 금지, 미성년자 등장 금지, 권리 침해 금지. 저희 정책 또는 유나우의 공식 정책을 위반한 것으로 신고된 녹화본은 DMCA/테이크다운 채널을 통해 접수되면 삭제됩니다."
         }
       ]
+    },
+    "clapper": {
+      "title": "클래퍼 녹화 — 클래퍼 라이브의 영구 아카이브",
+      "description": "클래퍼(Clapper) 라이브의 풀 녹화를 시청하세요. 클래퍼는 알고리즘과 모더레이션 이슈로 틱톡과 페이스북을 떠난 미국 성인 크리에이터들이 모인 미국 기반 라이브 스트리밍 플랫폼입니다. 인앱 피드는 공개 방송 아카이브를 보관하지 않지만, 저희 플랫폼은 모든 클래퍼 라이브에 피드 순환보다 오래 살아남는 다시보기 URL을 부여합니다.",
+      "keywords": [
+        "클래퍼 녹화",
+        "clapper 녹화",
+        "클래퍼 라이브 아카이브",
+        "클래퍼 방송 다시보기",
+        "클래퍼 라이브 시청",
+        "클래퍼 아카이브",
+        "클래퍼 방송 다시 보기",
+        "놓친 클래퍼 라이브",
+        "클래퍼 Gem 아카이브",
+        "틱톡 대안 아카이브",
+        "미국 라이브 스트리밍 아카이브"
+      ],
+      "faqs": [
+        {
+          "question": "방송인이 라이브를 종료한 뒤에도 클래퍼 라이브를 다시 볼 수 있나요?",
+          "answer": "클래퍼 자체에서는 — 불가능합니다. 라이브가 끝나는 순간 방송은 피드에서 사라지고, 앱은 시청자를 위한 공개 라이브 아카이브를 보관하지 않습니다. 저희 플랫폼에서는 — 가능합니다. 송출되는 그대로 라이브를 캡처해서 영구 URL로 다시 제공하기 때문에, 클래퍼 앱이 무엇을 보관하는지와 무관하게 다시 볼 수 있어요."
+        },
+        {
+          "question": "저희 플랫폼에서 녹화본을 보려면 클래퍼 계정이 필요한가요?",
+          "answer": "아니요. 모든 녹화본은 클래퍼 로그인, Gem 잔액, 클래퍼 앱 설치 없이 어느 브라우저에서나 재생됩니다. 녹화본은 클래퍼가 아니라 저희 자체 CDN에서 직접 전송됩니다."
+        },
+        {
+          "question": "녹화본에 Gem과 후원 리액션도 보존되나요?",
+          "answer": "방송의 영상 부분은 그대로 보존됩니다 — 방송인이 카메라 앞에서 말하고 행동한 모든 것, Gem이 들어왔을 때의 반응까지 포함해서요. 클래퍼의 Gem·후원 애니메이션은 영상 피드가 아니라 앱 내 오버레이 레이어라, 떠다니는 Gem 아이콘 자체는 녹화본에 나타나지 않습니다. 후원에 대한 방송인의 카메라 앞 리액션은 모두 그대로 남아 있어요."
+        },
+        {
+          "question": "2026년에 클래퍼가 왜 의미 있나요?",
+          "answer": "클래퍼는 2020~2024년에 걸쳐, 알고리즘 변화·모더레이션·시청자 인구 구성 미스매치로 틱톡을 떠난 미국 성인 크리에이터들의 정착지로 성장했습니다. 2018년 Austin에서 창업되어 2020년에 정식 출시된 이 플랫폼은 지금 X세대와 베이비붐 세대 방송인, 정치·라이프스타일 평론가, 다른 앱이 너무 제한적이라고 느낀 미국 중심 커뮤니티에 의미 있는 자리를 차지하고 있어요."
+        },
+        {
+          "question": "클래퍼는 화면 녹화 프로그램을 따로 쓰는 게 낫지 않나요?",
+          "answer": "브라우저 화면 녹화기는 기술적으로 동작하긴 하지만, 방송 내내 클래퍼 탭을 띄워둬야 하고, 기기가 잠기거나 와이파이가 끊기는 순간 멈추며, 디스플레이가 돌아가는 해상도 그대로 캡처됩니다. 저희 플랫폼은 클라우드에서 동작하므로 기기가 켜져 있든 꺼져 있든 캡처가 계속되고, 저장 파일은 디스플레이 해상도가 아니라 송출된 원본 그대로의 방송 화질이에요."
+        },
+        {
+          "question": "클래퍼 방송인이 차단되거나 비공개로 전환되면 어떻게 되나요?",
+          "answer": "전환 전에 캡처해 둔 녹화본은 기존 URL에 그대로 남습니다. 크리에이터의 클래퍼 상태가 바뀌었다고 해서 소급해서 방송을 내리지는 않아요. DMCA나 크리에이터 본인의 테이크다운 요청은 다른 모든 플랫폼과 동일한 절차로 처리됩니다."
+        },
+        {
+          "question": "여기 녹화본은 단일 파일인가요, HLS 플레이리스트인가요?",
+          "answer": "녹화본은 어느 브라우저에서나 빠르게 재생할 수 있도록 HLS로 스트리밍되며, 프리미엄 사용자는 풀 방송을 단일 MP4로 다운로드해 오프라인으로 보거나, 컴필레이션 편집, 또는 유튜브·럼블 등 영구 보관처에 재업로드할 수 있습니다."
+        },
+        {
+          "question": "클래퍼 녹화본에도 콘텐츠 정책을 적용하나요?",
+          "answer": "저희 플랫폼은 다른 모든 플랫폼과 동일한 콘텐츠 정책을 적용합니다: 성인 콘텐츠 금지, 미성년자 등장 금지, 권리 침해 금지, 표적 괴롭힘 금지. 저희 정책 또는 클래퍼의 공식 가이드라인을 위반한 것으로 신고된 녹화본은 DMCA/테이크다운 채널을 통해 접수되면 삭제됩니다."
+        }
+      ]
     }
   },
   "hero": {
@@ -757,7 +808,8 @@
       "nimotv": "니모TV 녹화 영상",
       "vklive": "VK 라이브 녹화 영상",
       "chzzk": "치지직 녹화",
-      "younow": "유나우 녹화"
+      "younow": "유나우 녹화",
+      "clapper": "클래퍼 녹화"
     },
     "subtitle": {
       "all": "플랫폼 크리에이터들의 라이브 방송 녹화 영상을 시청하세요. 다운로드하고 새로운 콘텐츠를 발견하세요.",
@@ -778,7 +830,8 @@
       "nimotv": "Mobile Legends, Free Fire, PUBG Mobile, COD Mobile까지 — 모바일 이스포츠 크리에이터의 니모TV 라이브 녹화를 시청하세요. 다운로드하고 새로운 게이머를 발견해 보세요.",
       "vklive": "러시아와 CIS 지역 스트리머의 VK 라이브 녹화를 시청하세요 — 게임, 음악, IRL까지. 다운로드하고 새로운 방송인을 발견해 보세요.",
       "chzzk": "한국 스트리머들의 치지직 녹화를 시청하세요 — 게이밍, LCK 파트너 채널, IRL, 트위치에서 넘어온 방송인들까지. 다운로드하고 새로운 크리에이터를 발견해 보세요.",
-      "younow": "전 세계 유나우 방송인들의 녹화를 시청하세요. 모든 라이브가 앱 피드 노출 기간을 넘어 보존됩니다 — 다운로드하고 새로운 크리에이터를 발견해 보세요."
+      "younow": "전 세계 유나우 방송인들의 녹화를 시청하세요. 모든 라이브가 앱 피드 노출 기간을 넘어 보존됩니다 — 다운로드하고 새로운 크리에이터를 발견해 보세요.",
+      "clapper": "미국 기반 방송인들의 클래퍼 녹화를 시청하세요 — 정치 평론, 라이프스타일, 컨트리 뮤직, IRL 잡담까지. 다운로드하고 새로운 크리에이터를 발견해 보세요."
     }
   },
   "cta": {
@@ -801,7 +854,8 @@
       "nimotv": "니모TV 라이브를 저장하세요",
       "vklive": "VK 라이브 방송을 저장하세요",
       "chzzk": "치지직 라이브를 저장하세요",
-      "younow": "유나우 라이브를 저장하세요"
+      "younow": "유나우 라이브를 저장하세요",
+      "clapper": "클래퍼 라이브를 저장하세요"
     },
     "subtitle": {
       "all": "틱톡, 트위치, 유튜브, 키크 방송을 자동으로 저장하세요. 녹화 영상을 다운로드하고, 숏폼 클립을 만들고, 시청자를 늘리세요.",
@@ -822,7 +876,8 @@
       "nimotv": "니모TV 라이브를 자동으로 저장하세요. 랭크 한 판 한 판이 서버 측에서 그대로 캡처되고, ClipAI로 틱톡과 릴스용 하이라이트 클립까지 만들 수 있어요.",
       "vklive": "VK 라이브 방송을 자동으로 저장하세요. VK 피드 바깥에 영구 아카이브가 남고, ClipAI로 틱톡과 릴스용 숏폼 클립까지 만들 수 있어요.",
       "chzzk": "치지직 라이브를 자동으로 저장하세요. 네이버 VOD 보관 기간보다 오래 가는 영구 웹 아카이브, 거기다 ClipAI로 틱톡과 릴스용 숏폼 클립까지.",
-      "younow": "유나우 라이브를 자동으로 저장하세요. 인앱 피드 순환을 넘어 살아남는 영구 웹 아카이브에, ClipAI로 틱톡과 릴스용 숏폼 클립까지."
+      "younow": "유나우 라이브를 자동으로 저장하세요. 인앱 피드 순환을 넘어 살아남는 영구 웹 아카이브에, ClipAI로 틱톡과 릴스용 숏폼 클립까지.",
+      "clapper": "클래퍼 라이브를 자동으로 저장하세요. 인앱 피드를 넘어 살아남는 영구 웹 아카이브에, ClipAI로 틱톡과 릴스용 숏폼 클립까지."
     },
     "button": "무료로 녹화 시작"
   },
@@ -847,7 +902,8 @@
       "nimotv": "첫 번째로 니모TV 방송을 녹화해 보세요!",
       "vklive": "첫 번째로 VK 라이브 방송을 녹화해 보세요!",
       "chzzk": "첫 번째로 치지직 방송을 녹화해 보세요!",
-      "younow": "첫 번째로 유나우 방송을 녹화해 보세요!"
+      "younow": "첫 번째로 유나우 방송을 녹화해 보세요!",
+      "clapper": "첫 번째로 클래퍼 방송을 녹화해 보세요!"
     },
     "button": "시작하기"
   },
@@ -870,7 +926,8 @@
     "nimotv": "## NimoTV Live Recordings on 저희 플랫폼\n\nNimoTV (launched 2018 by Huya, part of Tencent's global gaming ecosystem) is the international mobile-esports streaming platform — purpose-built for the mobile-gaming explosion happening across **Brazil, Indonesia, Thailand, Mexico, and Peru**. The catalogue is dominated by **Mobile Legends: Bang Bang, Free Fire, PUBG Mobile, Call of Duty: Mobile, Wild Rift, and Arena of Valor**. Its creator base is mostly phone-only — no PC, no OBS, no capture card. When a ranked grind ends, the broadcast is gone. 저희 플랫폼 catches every match before it disappears, on a public web URL fans can rewatch anytime.\n\n### Phone-Only Capture, Server-Side\n\nThe NimoTV creator workflow is brutally simple: open the NimoTV app, hit go-live, play the game, end the stream. There's no native VOD export. There's no \"keep my last broadcast for replay\" button you can rely on across regions and account tiers. And a phone running a ranked Mobile Legends match doesn't have spare resources to also run a screen recorder in the background — thermals, FPS, battery, and data all suffer. 저희 플랫폼 runs entirely in our cloud. Your phone broadcasts on NimoTV the way it always has; we capture the stream upstream and store it on your creator page.\n\n### Full-Length Matches, Not 30-Second Clips\n\nMobile esports matches are long. MLBB ranked grinds run hours, Free Fire squads rotate through round after round, PUBG Mobile final-circle hunts can stretch a broadcast past 4 hours. NimoTV's in-app clip and replay surfaces, where they exist, are short-form by design. 저희 플랫폼 saves the full broadcast — every match, every draft phase, every comms moment — at full length, ready to scrub. Want to review a teamfight you lost? Pull the recording, jump to the timestamp. Want a specific MVP highlight for a thumbnail? Clip it from the saved Live.\n\n### Brazilian and Indonesian Discovery, the Open Web Way\n\nNimoTV is huge inside its app in Brazil and SE Asia. It is also almost completely invisible on the open Portuguese, Spanish, and Indonesian web. Search for a top Brazilian MLBB streamer on Google and you'll get thin profile pages, third-party trackers, or nothing useful. Your 저희 플랫폼 creator page is indexable, shareable, and openable in any browser — your Lives finally get a real Google footprint.\n\n### Cross-Posting to Where Mobile Gaming Fans Actually Hang Out\n\n#MLBB, #FreeFire, #PUBGM, #MobileGaming — the mobile esports community lives across TikTok, Instagram, YouTube, Discord, and language-specific community apps. Most don't have the NimoTV app installed and aren't going to install it to watch one stream. ClipAI scans your saved NimoTV Lives and cuts vertical highlight clips formatted for **TikTok, Instagram Reels, YouTube Shorts** — clutch plays, MVP moments, gift reactions. Use them as the funnel that brings new fans back to your NimoTV channel.\n\n### Watch in Browser, Download if You Need It\n\nEvery saved NimoTV Live plays instantly in any modern browser. No NimoTV account needed to watch. Premium creators can download the raw video file from each Live — useful for uploading full matches to YouTube as long-form gaming content, cutting compilations, or local archival.\n\n### Doesn't Touch Your NimoTV Account or Diamond Income\n\n저희 플랫폼 never logs into your NimoTV account, doesn't see diamond income, doesn't read your gifting stats, and doesn't interfere with Huya / Tencent creator program tiers or partner status. The recording is opt-in by you as the NimoTV creator for **your own** account, and only your own Lives — nothing else. Your NimoTV ranking, watch-time, gifting, and partner status remain entirely on NimoTV.\n\n### Opt-In, Delete Anytime\n\n저희 플랫폼 only records your own profile, only after you opt in. Stop recording any time. Delete any past NimoTV Live with a single click. Your content, your URL, your control — independent of the NimoTV app, built for mobile esports creators who don't have time to also run a recording rig.",
     "vklive": "## VK Live Recordings on 저희 플랫폼\n\nVK Live is the livestreaming layer inside **VKontakte (VK)**, Russia's biggest social network with over 100 million monthly active users. Unlike standalone streaming apps, VK Live is woven directly into VK's social graph — broadcasts appear in friends' feeds, get reposted into communities, integrate with **VK Music** and the **VK Play** gaming platform, and reach an audience that spans Russia, Belarus, Kazakhstan, and Russian-speaking communities worldwide. Since 2022, when Western livestreaming options became harder to access from Russia, VK Live has grown significantly as the de-facto livestreaming home for Russian-speaking creators. 저희 플랫폼 records every VK Live broadcast to a stable, public web URL — built for creators who want their work to outlive a single news cycle in the VK feed.\n\n### The VK Feed Buries Streams Within Hours\n\nVK Live is a social-first stream surface. The strength of that design: a Live shows up in followers' feeds in real time, can be reposted into communities, pulls live engagement from the VK social graph. The weakness of that design: the VK algorithm prioritizes fresh content. Within a few hours of going offline, your broadcast slides down the feed. Within 24 hours, even popular VK Lives are effectively invisible to anyone who didn't catch them live. There's no proper archive UX, no dedicated past-streams view on your profile. Fans who'd love to rewatch a Dota 2 match, share a music set with a friend, or pull up that one clutch CS round you had last weekend have no real place to go.\n\n저희 플랫폼 gives every VK Live broadcast a stable URL on your creator page that exists independently of the VK feed cycle. The feed moves on, your archive stays.\n\n### Built for the VK Live Creator Mix\n\nVK Live's creator base is broad and category-rich. **Gaming**: Dota 2, CS 2, World of Tanks, Standoff 2 — the cornerstones of the Russian-speaking gaming community. **Music**: artists running album drops, acoustic sets, electronic DJ sets, often integrated with their VK Music releases. **IRL and lifestyle**: vlog-style streams, cooking, travel (where geopolitics allows), commentary on news and pop culture. **Anime and manga commentators**: reaction streams, watch-alongs, deep-dive discussions. **Educational**: language learning, coding tutorials, exam prep. The capture is upstream of your local hardware, so whatever you broadcast — OBS scene composition, gameplay overlays, music visualisers, webcam-only chat — preserves exactly as your fans saw it.\n\n### A Permanent Home for Long-Form Content\n\nThe VK feed is built for short attention spans — quick scrolling, fast engagement, fresh posts every few hours. That's fine for a 2-minute clip and actively hostile to a 3-hour Dota grind or a 90-minute concert set. A permanent archive on 저희 플랫폼 is the long-form counterpart: fans who want to actually sit with your stream, rewatch a specific match, or share a moment with a friend get a stable URL that works the same way next week and next year. The clip lives in the feed; the full broadcast lives on your creator page.\n\n### Russian, CIS, and Diaspora Audiences\n\nVK is dominant inside Russia, Belarus, and Kazakhstan, but Russian-speaking communities also live throughout Europe, Israel, the US, and Canada — many of whom don't actively maintain a VK account day-to-day. 저희 플랫폼 URLs work in any browser, anywhere in the world, with no VK login required to watch. Your diaspora fans get a way to keep up with your work that doesn't depend on them maintaining an active VK presence.\n\n### Cross-Platform Reach with ClipAI\n\nClipAI scans your saved VK Live broadcasts and cuts vertical short-form clips ready for **TikTok, Instagram Reels, YouTube Shorts**, and VK's own short-video features. Highlight plays from a Dota match, music drops from a concert set, funny chat moments, IRL reactions — turn one long broadcast into a stream of shareable content that brings new fans back to your VK Live channel.\n\n### Watch in Browser, Download if You Need It\n\nEvery saved VK Live plays instantly in any modern browser, no VK account required. Premium creators can download the raw video file from each broadcast — useful for re-uploading full matches to YouTube as long-form content, cutting compilations, or local archival on your own machine.\n\n### Doesn't Touch Your VK Account or Integrations\n\n저희 플랫폼 never logs into your VK account, doesn't interact with VK Music tags, doesn't touch VK Play integrations, and doesn't affect any of VK's creator-side metrics, monetization, or community management. The recording is opt-in by you as the VK Live creator for **your own** account, and only captures your own broadcasts — nothing else. Your VK profile, community pages, friend graph, and creator status stay entirely within VK.\n\n### Opt-In, Delete Anytime\n\n저희 플랫폼 only records your own profile, only after you opt in. Stop the recording flow any time. Delete any past VK Live with a single click. Your content, your URL, your control — a permanent archive of your work on the open web, where the VK feed buries streams fast but your back catalogue stays put.",
     "chzzk": "## 저희 플랫폼에서 치지직 녹화 보기\n\n치지직(Chzzk)은 한국 최대 인터넷 기업 **네이버**가 운영하는 라이브 스트리밍 플랫폼입니다. 2023년 12월에 오픈베타로 시작해 2024년 4월에 정식 출시되었고, 그 시점은 트위치가 한국 시장에서 철수하던 시기와 정확히 맞물렸습니다. 네이버는 원클릭 트위치 임포트 도구를 제공해 크리에이터의 팔로워와 구독을 그대로 옮길 수 있게 했고, 그 이후 치지직은 한국에서 가장 많이 시청되는 라이브 방송 진행자들의 새로운 본거지로 자리 잡았습니다. ‘치지직’이라는 이름은 옛 브라운관 TV가 채널을 맞출 때 나는 잡음을 본뜬 의성어로, 네이버는 방송이 처음 송출되는 그 순간의 감각을 담아 이 이름을 골랐습니다. 2026년 초 기준으로 치지직은 한국 라이브 스트리밍 시청 시간의 약 39%를 차지하고 있고, 최대 1080p 60fps에 8 Mbps까지 송출합니다 — 2022년 말 트위치가 한국에서 낮춘 화질 상한을 눈에 띄게 웃도는 수준이에요. 저희 플랫폼는 치지직 라이브를 송출 화질 그대로 캡처해 영구 URL로 다시 제공하며, 네이버 계정 없이도 어느 브라우저에서나 재생됩니다.\n\n### 여기서 다시 볼 수 있는 것\n\n녹화본은 트위치 코리아 종료 이후 새 플랫폼으로 넘어온 한국 버라이어티·게이밍 크리에이터들에게서 옵니다 — 긴 잡담 방송, 반나절씩 가는 서브어톤, 새 플랫폼에서 시청자를 쌓아가는 음악·IRL 방송인들, 그리고 LCK 경기를 송출하는 이스포츠 파트너 채널까지 (네이버는 2026년부터 2030년까지 SOOP Korea와 공동으로 LCK 한국어 독점 중계권을 보유하고 있습니다). 모든 라이브는 큐레이션된 하이라이트 클립이 아니라 풀 길이로 캡처되므로, 빌드업, 클러치, 큰 순간 사이의 긴 흐름까지 방송의 전체 호흡이 처음부터 끝까지 그대로 남습니다.\n\n### 별도의 아카이브가 왜 필요한가\n\n치지직은 VOD와 짧은 클립을 지원하지만, VOD 재생은 방송별 옵트인이라 많은 크리에이터가 서브어톤, 협찬 방송, 풀 다시보기를 원치 않는 이벤트에서는 토글을 꺼둡니다. VOD가 꺼진 채로 라이브가 끝나면 그 방송은 치지직 쪽에서는 그대로 사라져요. VOD를 켜둔 경우에도 보관 기간에 한계가 있어 오래된 방송은 차례로 빠지고, 크리에이터가 과거 라이브를 직접 삭제하는 경우도 가끔 있으며, 치지직의 클립 시스템은 흐름보다는 순간을 중심으로 만들어져 있어 4시간짜리 서브어톤을 클립만 가지고 복원할 수는 없습니다. 저희 플랫폼의 아카이브는 이 네 가지 빈틈 — 크리에이터의 VOD 토글, 치지직의 보관 기간, 클립 중심 하이라이트 기능, 사후 삭제 — 어느 것에도 영향을 받지 않고 원본 방송을 가리키는 영구 웹 주소로 존재합니다.",
-    "younow": "## 저희 플랫폼에서 유나우 녹화 보기\n\n유나우(YouNow)는 2011년 뉴욕에서 Adi Sideman이 창업했습니다. 가장 초기의 본격 라이브 스트리밍 앱 중 하나로, 스와이프로 넘기는 채널 발견과 코인·Props 기반 후원 경제 모두 틱톡 라이브, 트위치 IRL, 인스타그램 라이브가 등장하기 몇 년 전부터 자리 잡고 있었어요. 2010년대 중반을 거치며 유나우는 미국, 멕시코, 브라질, 이집트, 사우디아라비아의 10대와 Z세대 시청자를 모았고, 방송인들은 잡담 라이브, 노래·춤 같은 탤런트 무대, 게임쇼 나이트, 음악 세션, 그리고 동반 방송 형태의 오버나잇 라이브를 이어갔습니다. 지금은 전성기보다 카탈로그가 작아졌지만, 유나우가 정의하는 데 일조한 그 포맷은 여기서 여전히 살아 있고, 방송인 분포도 강하게 국제적입니다. 저희 플랫폼은 유나우 라이브를 송출되는 그대로 캡처해 영구 URL로 다시 제공하며, 유나우 앱이나 로그인 없이도 시청할 수 있습니다.\n\n### 여기서 다시 볼 수 있는 것\n\n녹화본은 유나우 시청자가 실제로 송출하는 포맷을 폭넓게 담습니다 — 잡담 방송, 노래와 댄스 무대, 게임쇼 룸, 영어·아랍어·스페인어·포르투갈어로 진행되는 언어 학습 라이브, 아메리카 시간대의 늦은 밤 동반 방송, 그리고 유나우의 Props 경제를 만들어낸 방송인 대 팬 후원 순간들까지. 모든 라이브는 풀 길이로 캡처되므로, 첫 시청자가 들어오는 순간부터 방송인이 라이브를 종료하는 순간까지 방송의 전체 호흡이 처음부터 끝까지 그대로 남고, 어디서나 다시 재생할 수 있습니다.\n\n### 별도의 아카이브가 왜 필요한가\n\n유나우 자체는 공개 방송 아카이브를 보관하지 않습니다. 방송인이 종료 버튼을 누르는 순간 라이브는 앱에서 사라지고, 되돌려보기도, 프로필에 남는 VOD 목록도, 놓친 시청자가 나중에 따라잡을 방법도 없어요. 유나우의 자동 생성 모먼츠(Moments)는 알고리즘이나 방송인이 고른 짧은 하이라이트 클립을 남기지만, 풀 방송 — 천천히 쌓이는 분위기, 예상치 못한 게스트, 콘텐츠라기보다 함께 있는 시간처럼 느껴지게 만드는 그 긴 흐름 — 은 모먼츠만으로는 복원할 수 없습니다. 저희 플랫폼의 아카이브가 그래서 유일하게 남는 사본입니다: 유나우 앱 없이 누구나 열 수 있고 어느 브라우저에서나 재생되는 영구 웹 URL로, 방송인이 다음 라이브로 옮겨간 뒤에도 그대로 살아남습니다."
+    "younow": "## 저희 플랫폼에서 유나우 녹화 보기\n\n유나우(YouNow)는 2011년 뉴욕에서 Adi Sideman이 창업했습니다. 가장 초기의 본격 라이브 스트리밍 앱 중 하나로, 스와이프로 넘기는 채널 발견과 코인·Props 기반 후원 경제 모두 틱톡 라이브, 트위치 IRL, 인스타그램 라이브가 등장하기 몇 년 전부터 자리 잡고 있었어요. 2010년대 중반을 거치며 유나우는 미국, 멕시코, 브라질, 이집트, 사우디아라비아의 10대와 Z세대 시청자를 모았고, 방송인들은 잡담 라이브, 노래·춤 같은 탤런트 무대, 게임쇼 나이트, 음악 세션, 그리고 동반 방송 형태의 오버나잇 라이브를 이어갔습니다. 지금은 전성기보다 카탈로그가 작아졌지만, 유나우가 정의하는 데 일조한 그 포맷은 여기서 여전히 살아 있고, 방송인 분포도 강하게 국제적입니다. 저희 플랫폼은 유나우 라이브를 송출되는 그대로 캡처해 영구 URL로 다시 제공하며, 유나우 앱이나 로그인 없이도 시청할 수 있습니다.\n\n### 여기서 다시 볼 수 있는 것\n\n녹화본은 유나우 시청자가 실제로 송출하는 포맷을 폭넓게 담습니다 — 잡담 방송, 노래와 댄스 무대, 게임쇼 룸, 영어·아랍어·스페인어·포르투갈어로 진행되는 언어 학습 라이브, 아메리카 시간대의 늦은 밤 동반 방송, 그리고 유나우의 Props 경제를 만들어낸 방송인 대 팬 후원 순간들까지. 모든 라이브는 풀 길이로 캡처되므로, 첫 시청자가 들어오는 순간부터 방송인이 라이브를 종료하는 순간까지 방송의 전체 호흡이 처음부터 끝까지 그대로 남고, 어디서나 다시 재생할 수 있습니다.\n\n### 별도의 아카이브가 왜 필요한가\n\n유나우 자체는 공개 방송 아카이브를 보관하지 않습니다. 방송인이 종료 버튼을 누르는 순간 라이브는 앱에서 사라지고, 되돌려보기도, 프로필에 남는 VOD 목록도, 놓친 시청자가 나중에 따라잡을 방법도 없어요. 유나우의 자동 생성 모먼츠(Moments)는 알고리즘이나 방송인이 고른 짧은 하이라이트 클립을 남기지만, 풀 방송 — 천천히 쌓이는 분위기, 예상치 못한 게스트, 콘텐츠라기보다 함께 있는 시간처럼 느껴지게 만드는 그 긴 흐름 — 은 모먼츠만으로는 복원할 수 없습니다. 저희 플랫폼의 아카이브가 그래서 유일하게 남는 사본입니다: 유나우 앱 없이 누구나 열 수 있고 어느 브라우저에서나 재생되는 영구 웹 URL로, 방송인이 다음 라이브로 옮겨간 뒤에도 그대로 살아남습니다.",
+    "clapper": "## 저희 플랫폼에서 클래퍼 녹화 보기\n\n클래퍼(Clapper)는 알고리즘 억제, 모더레이션 마찰, 시청자 인구 구성의 미스매치로 틱톡과 페이스북을 떠난 미국 성인 크리에이터들의 사실상의 거처가 된 미국 기반 라이브 스트리밍·숏폼 비디오 플랫폼입니다. 2018년 Edison Chen이 Austin에서 창업해 2020년에 정식 출시된 클래퍼는, 의도적으로 더 나이 있고 미국 중심의 방송인 기반에 무게를 실었어요 — 정치 평론가, 라이프스타일 크리에이터, 군·법 집행 커뮤니티 방송인, 컨트리 뮤직 팬, 그리고 메이저 숏폼 비디오 앱이 제공하는 것보다 더 긴 라이브와 덜 빡빡한 디스커버리 경험을 원했던 X세대와 베이비붐 세대 시청자까지. 저희 플랫폼은 클래퍼 라이브를 송출되는 그대로 캡처해 영구 URL로 다시 제공하며, 시청을 위해 클래퍼 앱이나 로그인이 필요하지 않습니다.\n\n### 여기서 다시 볼 수 있는 것\n\n녹화본은 클래퍼 시청자가 실제로 송출하는 포맷을 폭넓게 담습니다: 긴 호흡의 정치·시사 평론, 라이프스타일과 IRL 방송, 컨트리와 아메리카나 음악 세션, 신앙·가정 중심 방송, 목장과 농촌 생활 방송, 그리고 시청자가 카메라 앞에서 방송인에게 직접 감사를 표하는 Gem 후원 순간들까지. 모든 라이브는 풀 길이로 캡처되므로, 첫 시청자가 들어오는 순간부터 방송인이 라이브를 종료하는 순간까지 방송의 전체 호흡이 처음부터 끝까지 그대로 남고, 어디서나 다시 재생할 수 있습니다.\n\n### 별도의 아카이브가 왜 필요한가\n\n클래퍼의 앱 피드는 시청자가 유튜브에서 기대할 법한 방식의 공개 방송 아카이브를 두지 않습니다. 방송인이 라이브를 종료하는 순간 그 방송은 디스커버리 피드 밖으로 밀려나고, 팬이 스크롤로 되돌려볼 수 있는 프로필 쪽 다시보기 탭도 없어요. 긴 호흡의 라이브 — 정치 코너, Gem으로 굴러가는 서브어톤, 몇 시간씩 이어지는 농촌 생활 방송 — 은 피드를 벗어나면 다시 찾아낼 길이 없습니다. 저희 플랫폼의 아카이브가 그래서 유일하게 남는 사본 역할을 합니다: 클래퍼 앱 없이 누구나 열 수 있고 어느 브라우저에서나 재생되는 영구 웹 URL로, 인앱 노출 기간이 한참 지나간 뒤에도 그대로 살아남습니다."
   },
   "jsonLd": {
     "name": {
@@ -892,7 +949,8 @@
       "nimotv": "니모TV 라이브 녹화 영상",
       "vklive": "VK 라이브 녹화 영상",
       "chzzk": "치지직 라이브 녹화",
-      "younow": "유나우 라이브 녹화"
+      "younow": "유나우 라이브 녹화",
+      "clapper": "클래퍼 라이브 녹화"
     },
     "description": {
       "all": "저희 플랫폼에서 크리에이터들의 라이브 방송 녹화 영상을 시청하세요.",
@@ -913,7 +971,8 @@
       "nimotv": "저희 플랫폼에서 모바일 이스포츠 크리에이터의 니모TV 라이브 녹화를 시청하세요.",
       "vklive": "저희 플랫폼에서 러시아와 CIS 지역 스트리머의 VK 라이브 녹화를 시청하세요.",
       "chzzk": "네이버의 한국 라이브 스트리밍 플랫폼 치지직의 라이브 방송을 원본 해상도와 프레임레이트로 캡처한 아카이브 녹화입니다.",
-      "younow": "가장 초기의 본격 라이브 스트리밍 플랫폼 중 하나인 유나우의 라이브 방송을 캡처해 보관한 아카이브 녹화입니다."
+      "younow": "가장 초기의 본격 라이브 스트리밍 플랫폼 중 하나인 유나우의 라이브 방송을 캡처해 보관한 아카이브 녹화입니다.",
+      "clapper": "틱톡과 페이스북을 떠난 미국 성인 크리에이터들을 위해 만들어진 미국 기반 플랫폼, 클래퍼의 라이브 방송을 캡처해 보관한 아카이브 녹화입니다."
     },
     "streamTitle": "{nickname} 방송 - {date}",
     "streamDescription": {
@@ -935,7 +994,8 @@
       "nimotv": "{nickname}의 니모TV 라이브 녹화",
       "vklive": "{nickname}의 VK 라이브 녹화",
       "chzzk": "저희 플랫폼에 보관된 치지직 라이브 녹화 — 치지직 자체 VOD 기간이 끝난 뒤에도 다시 볼 수 있도록 보존된 한국 원본 방송입니다.",
-      "younow": "저희 플랫폼에 보관된 유나우 라이브 녹화 — 유나우 앱 피드가 지나간 뒤에도 다시 볼 수 있도록 원본 방송을 그대로 보존한 영상입니다."
+      "younow": "저희 플랫폼에 보관된 유나우 라이브 녹화 — 유나우 앱 피드가 지나간 뒤에도 다시 볼 수 있도록 원본 방송을 그대로 보존한 영상입니다.",
+      "clapper": "저희 플랫폼에 보관된 클래퍼 라이브 녹화 — 클래퍼 인앱 피드가 지나간 뒤에도 다시 볼 수 있도록 원본 방송을 그대로 보존한 영상입니다."
     }
   },
   "recordedOn": "{date}에 녹화됨",

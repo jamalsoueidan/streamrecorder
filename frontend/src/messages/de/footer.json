@@ -31,7 +31,8 @@
     "kwai": "Kwai-Streamer",
     "nimotv": "NimoTV-Streamer",
     "vklive": "VK Live-Streamer",
-    "younow": "YouNow Creator"
+    "younow": "YouNow Creator",
+    "clapper": "Clapper Creator"
   },
   "watchRecordings": {
     "title": "Aufnahmen ansehen",
@@ -52,7 +53,8 @@
     "kwai": "Kwai-Aufnahmen",
     "nimotv": "NimoTV-Aufnahmen",
     "vklive": "VK Live-Aufnahmen",
-    "younow": "YouNow-Aufnahmen"
+    "younow": "YouNow-Aufnahmen",
+    "clapper": "Clapper-Aufnahmen"
   },
   "legal": {
     "title": "Rechtliches",

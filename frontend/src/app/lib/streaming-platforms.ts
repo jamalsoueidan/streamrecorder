@@ -107,5 +107,11 @@ export const streamingPlatforms = [
     name: "YouNow",
     file: "/simple/younow.svg",
   },
+  {
+    color: "yellow.7",
+    colorCss: "var(--mantine-color-yellow-7)",
+    name: "Clapper",
+    file: "/simple/clapper.svg",
+  },
 ];
 

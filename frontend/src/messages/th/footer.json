@@ -31,7 +31,8 @@
     "kwai": "ครีเอเตอร์ Kwai",
     "nimotv": "ครีเอเตอร์ NimoTV",
     "vklive": "ครีเอเตอร์ VK Live",
-    "younow": "ครีเอเตอร์ YouNow"
+    "younow": "ครีเอเตอร์ YouNow",
+    "clapper": "ครีเอเตอร์ Clapper"
   },
   "watchRecordings": {
     "title": "ดูบันทึก",
@@ -52,7 +53,8 @@
     "kwai": "บันทึก Kwai",
     "nimotv": "บันทึก NimoTV",
     "vklive": "บันทึก VK Live",
-    "younow": "บันทึก YouNow"
+    "younow": "บันทึก YouNow",
+    "clapper": "บันทึก Clapper"
   },
   "legal": {
     "title": "ข้อมูลทางกฎหมาย",

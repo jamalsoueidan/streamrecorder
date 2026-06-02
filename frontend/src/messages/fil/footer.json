@@ -31,7 +31,8 @@
     "kwai": "Kwai creators",
     "nimotv": "NimoTV creators",
     "vklive": "VK Live creators",
-    "younow": "Mga YouNow creator"
+    "younow": "Mga YouNow creator",
+    "clapper": "Mga Clapper creator"
   },
   "watchRecordings": {
     "title": "Manood ng Recordings",
@@ -52,7 +53,8 @@
     "kwai": "Kwai recordings",
     "nimotv": "NimoTV recordings",
     "vklive": "VK Live recordings",
-    "younow": "YouNow recordings"
+    "younow": "YouNow recordings",
+    "clapper": "Clapper recordings"
   },
   "legal": {
     "title": "Legal",

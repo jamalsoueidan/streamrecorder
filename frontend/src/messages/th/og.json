@@ -22,7 +22,8 @@
       "nimotv": "ครีเอเตอร์ NimoTV",
       "vklive": "ครีเอเตอร์ VK Live",
       "younow": "ครีเอเตอร์ YouNow",
-      "chzzk": "ครีเอเตอร์ Chzzk"
+      "chzzk": "ครีเอเตอร์ Chzzk",
+      "clapper": "ครีเอเตอร์ Clapper"
     },
     "subtitle": {
       "all": "ค้นหาสตรีมเมอร์และครีเอเตอร์ทั้งหมด",
@@ -43,7 +44,8 @@
       "nimotv": "ค้นพบครีเอเตอร์ NimoTV",
       "vklive": "ค้นพบครีเอเตอร์ VK Live",
       "younow": "ค้นพบผู้ถ่ายทอด YouNow",
-      "chzzk": "ค้นพบสตรีมเมอร์ Chzzk"
+      "chzzk": "ค้นพบสตรีมเมอร์ Chzzk",
+      "clapper": "ค้นพบครีเอเตอร์ Clapper"
     }
   },
   "recordings": {
@@ -66,7 +68,8 @@
       "nimotv": "บันทึก NimoTV",
       "vklive": "บันทึก VK Live",
       "younow": "บันทึก YouNow",
-      "chzzk": "บันทึก Chzzk"
+      "chzzk": "บันทึก Chzzk",
+      "clapper": "บันทึก Clapper"
     },
     "subtitle": {
       "all": "ดูไลฟ์ที่ถูกบันทึกไว้",
@@ -87,7 +90,8 @@
       "nimotv": "ดูไลฟ์ NimoTV ที่บันทึกไว้",
       "vklive": "ดูไลฟ์ VK Live ที่บันทึกไว้",
       "younow": "ดูไลฟ์ YouNow ที่บันทึกไว้",
-      "chzzk": "ดูสตรีม Chzzk ที่บันทึกไว้"
+      "chzzk": "ดูสตรีม Chzzk ที่บันทึกไว้",
+      "clapper": "ดูสตรีม Clapper ที่บันทึกไว้"
     }
   },
   "home": {

@@ -31,7 +31,8 @@
     "kwai": "Kwai ストリーマー",
     "nimotv": "NimoTV ストリーマー",
     "vklive": "VK Live ストリーマー",
-    "younow": "YouNow クリエイター"
+    "younow": "YouNow クリエイター",
+    "clapper": "Clapper クリエイター"
   },
   "watchRecordings": {
     "title": "録画を視聴",
@@ -52,7 +53,8 @@
     "kwai": "Kwai 録画",
     "nimotv": "NimoTV 録画",
     "vklive": "VK Live 録画",
-    "younow": "YouNow 録画"
+    "younow": "YouNow 録画",
+    "clapper": "Clapper 録画"
   },
   "legal": {
     "title": "法的情報",

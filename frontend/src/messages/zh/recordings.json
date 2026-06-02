@@ -756,6 +756,56 @@
           "answer": "我们的平台 执行和其他平台一致的内容政策:不允许成人内容、不允许未成年人内容、不允许侵权内容。被我们的政策或 YouNow 公开政策标记的录像,经由我们的 DMCA / 下架渠道举报后会被移除。"
         }
       ]
+    },
+    "clapper": {
+      "title": "Clapper 录像 — Clapper 直播的永久存档",
+      "description": "在 我们的平台 上观看 Clapper Live 的完整录像。Clapper 是一家美国本土平台,为那些因算法和审查问题离开 TikTok、Facebook 的成人创作者而生。Clapper 应用内的信息流不保留公开直播存档;我们的平台 为每场 Clapper Live 提供一个能挺过信息流轮替周期的可回看网址。",
+      "keywords": [
+        "Clapper 录像",
+        "Clapper 直播存档",
+        "Clapper 直播回放",
+        "观看 Clapper 直播",
+        "Clapper 存档",
+        "重看 Clapper 直播",
+        "错过的 Clapper 直播",
+        "Clapper Gem 存档",
+        "TikTok 替代品存档",
+        "美国直播存档"
+      ],
+      "faqs": [
+        {
+          "question": "主播下播之后,我还能回看 Clapper Live 吗?",
+          "answer": "在 Clapper 上 — 不行。直播一结束就会从信息流里消失,Clapper 应用不为观众保留公开的 Live 存档。在 我们的平台 上 — 可以,我们在直播进行时同步捕获,然后挂在一个永久网址上回放,这条网址不依赖 Clapper 应用替你保留任何东西。"
+        },
+        {
+          "question": "在 我们的平台 上看录像需要 Clapper 账号吗?",
+          "answer": "不需要。每条录像在任何浏览器里都能播放,不用登录 Clapper、不用 Gem 余额,也不用装 Clapper 应用。录像直接由我们的 CDN 提供,不走 Clapper。"
+        },
+        {
+          "question": "录像里会保留 Gem 和打赏反应吗?",
+          "answer": "直播的视频部分会完整保留 — 主播在镜头前说过、做过的内容都在,包括 Gem 进来时的反应。Clapper 的 Gem 和打赏动效是应用内的浮层,不属于视频流本身,所以那些漂浮的 Gem 图标不会出现在录像里;但主播在镜头前对打赏作出的反应会完整保留下来。"
+        },
+        {
+          "question": "Clapper 在 2026 年为什么还值得关注?",
+          "answer": "Clapper 从 2020 到 2024 年间一路成长,接住了那些因算法变化、审查问题和受众错位而离开 TikTok 的成人美国创作者。它 2018 年由 Edison Chen 在 Austin 创立,2020 年正式上线,如今已经成了 Gen X 和 Boomer 主播、政治评论员、生活方式创作者,以及那些觉得其他应用过于受限、偏美国本土的社群的一处重要据点。"
+        },
+        {
+          "question": "录 Clapper 是不是应该用屏幕录制器?",
+          "answer": "浏览器屏幕录制器技术上能录,但你得全程开着 Clapper 那个标签页,设备一锁屏、Wi-Fi 一断,录制就停了,画质也只会是你显示器当时跑的分辨率。我们的平台 跑在云端 — 不管你的设备开着关着,录制都在继续,保存下来的文件就是直播本身的画质,不是你显示器的分辨率。"
+        },
+        {
+          "question": "Clapper 主播被封或者转私密怎么办?",
+          "answer": "在状态变更之前我们已经捕获到的录像,会以原网址继续保留在存档里。我们不会因为创作者在 Clapper 上的状态变了就追溯删除直播。DMCA 和创作者本人的下架请求,按所有平台通用的流程处理。"
+        },
+        {
+          "question": "这里的录像是单个文件还是 HLS 播放列表?",
+          "answer": "录像通过 HLS 播放,在任何浏览器里都能快速起播;高级用户还可以把完整直播下载成单个 MP4,用于离线观看、做合集剪辑,或者转发到 YouTube、Rumble 之类你想给它一个永久家的地方。"
+        },
+        {
+          "question": "Clapper 录像这边会执行内容规则吗?",
+          "answer": "我们的平台 执行和其他平台一致的内容政策:不允许成人内容、不允许未成年人内容、不允许侵权内容、不允许针对性骚扰。被我们的政策或 Clapper 公开指引标记的录像,经由我们的 DMCA / 下架渠道举报后会被移除。"
+        }
+      ]
     }
   },
   "hero": {
@@ -778,7 +828,8 @@
       "nimotv": "NimoTV 录像",
       "vklive": "VK Live 录像",
       "chzzk": "Chzzk 录像",
-      "younow": "YouNow 录像"
+      "younow": "YouNow 录像",
+      "clapper": "Clapper 录像"
     },
     "subtitle": {
       "all": "在我们的平台上观看创作者的直播录像。下载并发现新内容。",
@@ -799,7 +850,8 @@
       "nimotv": "观看在 我们的平台 上保存自己直播的 NimoTV 主播的录像。下载并发现新创作者。",
       "vklive": "观看在 我们的平台 上保存自己直播的 VK Live 主播的录像。下载并发现新创作者。",
       "chzzk": "观看韩国主播的 Chzzk 录像 — 游戏、LCK 合作频道、IRL,以及从 Twitch 迁移过来的主播。下载并发现新创作者。",
-      "younow": "观看来自全球各地主播的 YouNow 录像。每场 Live 都在应用内信息流的窗口期之外保留下来 — 可下载,也可以发现新创作者。"
+      "younow": "观看来自全球各地主播的 YouNow 录像。每场 Live 都在应用内信息流的窗口期之外保留下来 — 可下载,也可以发现新创作者。",
+      "clapper": "观看 Clapper 美国本土主播的录像 — 政治评论、生活方式、乡村音乐、IRL 闲聊。可下载,也可以发现新创作者。"
     }
   },
   "cta": {
@@ -822,7 +874,8 @@
       "nimotv": "保存 NimoTV 直播",
       "vklive": "保存 VK Live 直播",
       "chzzk": "保存 Chzzk 直播",
-      "younow": "保存 YouNow 直播"
+      "younow": "保存 YouNow 直播",
+      "clapper": "保存 Clapper 直播"
     },
     "subtitle": {
       "all": "自动保存你的 TikTok、Twitch、YouTube 和 Kick 直播。下载录像、创建短视频并扩大你的受众。",
@@ -843,7 +896,8 @@
       "nimotv": "自动保存你的 NimoTV 直播。为每场直播创建独立备份,使用 ClipAI 创建短视频。",
       "vklive": "自动保存你的 VK Live 直播。为每场直播创建独立备份,使用 ClipAI 创建短视频。",
       "chzzk": "自动保存你的 Chzzk 直播。比 Naver VOD 时间线更长久的网页存档,搭配 ClipAI 短视频投放 TikTok 与 Reels。",
-      "younow": "自动保存你的 YouNow Live。比应用内信息流更长久的网页存档,搭配 ClipAI 短视频投放 TikTok 与 Reels。"
+      "younow": "自动保存你的 YouNow Live。比应用内信息流更长久的网页存档,搭配 ClipAI 短视频投放 TikTok 与 Reels。",
+      "clapper": "自动保存你的 Clapper Live。比应用内信息流更长久的网页存档,搭配 ClipAI 短视频投放 TikTok 与 Reels。"
     },
     "button": "免费开始录制"
   },
@@ -868,7 +922,8 @@
       "nimotv": "成为第一个录制 NimoTV 直播的主播！",
       "vklive": "成为第一个录制 VK Live 直播的主播！",
       "chzzk": "成为第一个录制 Chzzk 直播的主播！",
-      "younow": "成为第一个录制 YouNow 直播的主播！"
+      "younow": "成为第一个录制 YouNow 直播的主播！",
+      "clapper": "成为第一个录制 Clapper 直播的主播！"
     },
     "button": "立即开始"
   },
@@ -891,7 +946,8 @@
     "nimotv": "## NimoTV Live Recordings on 我们的平台\n\nNimoTV (launched 2018 by Huya, part of Tencent's global gaming ecosystem) is the international mobile-esports streaming platform — purpose-built for the mobile-gaming explosion happening across **Brazil, Indonesia, Thailand, Mexico, and Peru**. The catalogue is dominated by **Mobile Legends: Bang Bang, Free Fire, PUBG Mobile, Call of Duty: Mobile, Wild Rift, and Arena of Valor**. Its creator base is mostly phone-only — no PC, no OBS, no capture card. When a ranked grind ends, the broadcast is gone. 我们的平台 catches every match before it disappears, on a public web URL fans can rewatch anytime.\n\n### Phone-Only Capture, Server-Side\n\nThe NimoTV creator workflow is brutally simple: open the NimoTV app, hit go-live, play the game, end the stream. There's no native VOD export. There's no \"keep my last broadcast for replay\" button you can rely on across regions and account tiers. And a phone running a ranked Mobile Legends match doesn't have spare resources to also run a screen recorder in the background — thermals, FPS, battery, and data all suffer. 我们的平台 runs entirely in our cloud. Your phone broadcasts on NimoTV the way it always has; we capture the stream upstream and store it on your creator page.\n\n### Full-Length Matches, Not 30-Second Clips\n\nMobile esports matches are long. MLBB ranked grinds run hours, Free Fire squads rotate through round after round, PUBG Mobile final-circle hunts can stretch a broadcast past 4 hours. NimoTV's in-app clip and replay surfaces, where they exist, are short-form by design. 我们的平台 saves the full broadcast — every match, every draft phase, every comms moment — at full length, ready to scrub. Want to review a teamfight you lost? Pull the recording, jump to the timestamp. Want a specific MVP highlight for a thumbnail? Clip it from the saved Live.\n\n### Brazilian and Indonesian Discovery, the Open Web Way\n\nNimoTV is huge inside its app in Brazil and SE Asia. It is also almost completely invisible on the open Portuguese, Spanish, and Indonesian web. Search for a top Brazilian MLBB streamer on Google and you'll get thin profile pages, third-party trackers, or nothing useful. Your 我们的平台 creator page is indexable, shareable, and openable in any browser — your Lives finally get a real Google footprint.\n\n### Cross-Posting to Where Mobile Gaming Fans Actually Hang Out\n\n#MLBB, #FreeFire, #PUBGM, #MobileGaming — the mobile esports community lives across TikTok, Instagram, YouTube, Discord, and language-specific community apps. Most don't have the NimoTV app installed and aren't going to install it to watch one stream. ClipAI scans your saved NimoTV Lives and cuts vertical highlight clips formatted for **TikTok, Instagram Reels, YouTube Shorts** — clutch plays, MVP moments, gift reactions. Use them as the funnel that brings new fans back to your NimoTV channel.\n\n### Watch in Browser, Download if You Need It\n\nEvery saved NimoTV Live plays instantly in any modern browser. No NimoTV account needed to watch. Premium creators can download the raw video file from each Live — useful for uploading full matches to YouTube as long-form gaming content, cutting compilations, or local archival.\n\n### Doesn't Touch Your NimoTV Account or Diamond Income\n\n我们的平台 never logs into your NimoTV account, doesn't see diamond income, doesn't read your gifting stats, and doesn't interfere with Huya / Tencent creator program tiers or partner status. The recording is opt-in by you as the NimoTV creator for **your own** account, and only your own Lives — nothing else. Your NimoTV ranking, watch-time, gifting, and partner status remain entirely on NimoTV.\n\n### Opt-In, Delete Anytime\n\n我们的平台 only records your own profile, only after you opt in. Stop recording any time. Delete any past NimoTV Live with a single click. Your content, your URL, your control — independent of the NimoTV app, built for mobile esports creators who don't have time to also run a recording rig.",
     "vklive": "## VK Live Recordings on 我们的平台\n\nVK Live is the livestreaming layer inside **VKontakte (VK)**, Russia's biggest social network with over 100 million monthly active users. Unlike standalone streaming apps, VK Live is woven directly into VK's social graph — broadcasts appear in friends' feeds, get reposted into communities, integrate with **VK Music** and the **VK Play** gaming platform, and reach an audience that spans Russia, Belarus, Kazakhstan, and Russian-speaking communities worldwide. Since 2022, when Western livestreaming options became harder to access from Russia, VK Live has grown significantly as the de-facto livestreaming home for Russian-speaking creators. 我们的平台 records every VK Live broadcast to a stable, public web URL — built for creators who want their work to outlive a single news cycle in the VK feed.\n\n### The VK Feed Buries Streams Within Hours\n\nVK Live is a social-first stream surface. The strength of that design: a Live shows up in followers' feeds in real time, can be reposted into communities, pulls live engagement from the VK social graph. The weakness of that design: the VK algorithm prioritizes fresh content. Within a few hours of going offline, your broadcast slides down the feed. Within 24 hours, even popular VK Lives are effectively invisible to anyone who didn't catch them live. There's no proper archive UX, no dedicated past-streams view on your profile. Fans who'd love to rewatch a Dota 2 match, share a music set with a friend, or pull up that one clutch CS round you had last weekend have no real place to go.\n\n我们的平台 gives every VK Live broadcast a stable URL on your creator page that exists independently of the VK feed cycle. The feed moves on, your archive stays.\n\n### Built for the VK Live Creator Mix\n\nVK Live's creator base is broad and category-rich. **Gaming**: Dota 2, CS 2, World of Tanks, Standoff 2 — the cornerstones of the Russian-speaking gaming community. **Music**: artists running album drops, acoustic sets, electronic DJ sets, often integrated with their VK Music releases. **IRL and lifestyle**: vlog-style streams, cooking, travel (where geopolitics allows), commentary on news and pop culture. **Anime and manga commentators**: reaction streams, watch-alongs, deep-dive discussions. **Educational**: language learning, coding tutorials, exam prep. The capture is upstream of your local hardware, so whatever you broadcast — OBS scene composition, gameplay overlays, music visualisers, webcam-only chat — preserves exactly as your fans saw it.\n\n### A Permanent Home for Long-Form Content\n\nThe VK feed is built for short attention spans — quick scrolling, fast engagement, fresh posts every few hours. That's fine for a 2-minute clip and actively hostile to a 3-hour Dota grind or a 90-minute concert set. A permanent archive on 我们的平台 is the long-form counterpart: fans who want to actually sit with your stream, rewatch a specific match, or share a moment with a friend get a stable URL that works the same way next week and next year. The clip lives in the feed; the full broadcast lives on your creator page.\n\n### Russian, CIS, and Diaspora Audiences\n\nVK is dominant inside Russia, Belarus, and Kazakhstan, but Russian-speaking communities also live throughout Europe, Israel, the US, and Canada — many of whom don't actively maintain a VK account day-to-day. 我们的平台 URLs work in any browser, anywhere in the world, with no VK login required to watch. Your diaspora fans get a way to keep up with your work that doesn't depend on them maintaining an active VK presence.\n\n### Cross-Platform Reach with ClipAI\n\nClipAI scans your saved VK Live broadcasts and cuts vertical short-form clips ready for **TikTok, Instagram Reels, YouTube Shorts**, and VK's own short-video features. Highlight plays from a Dota match, music drops from a concert set, funny chat moments, IRL reactions — turn one long broadcast into a stream of shareable content that brings new fans back to your VK Live channel.\n\n### Watch in Browser, Download if You Need It\n\nEvery saved VK Live plays instantly in any modern browser, no VK account required. Premium creators can download the raw video file from each broadcast — useful for re-uploading full matches to YouTube as long-form content, cutting compilations, or local archival on your own machine.\n\n### Doesn't Touch Your VK Account or Integrations\n\n我们的平台 never logs into your VK account, doesn't interact with VK Music tags, doesn't touch VK Play integrations, and doesn't affect any of VK's creator-side metrics, monetization, or community management. The recording is opt-in by you as the VK Live creator for **your own** account, and only captures your own broadcasts — nothing else. Your VK profile, community pages, friend graph, and creator status stay entirely within VK.\n\n### Opt-In, Delete Anytime\n\n我们的平台 only records your own profile, only after you opt in. Stop the recording flow any time. Delete any past VK Live with a single click. Your content, your URL, your control — a permanent archive of your work on the open web, where the VK feed buries streams fast but your back catalogue stays put.",
     "chzzk": "## 在 我们的平台 上观看 Chzzk 录像\n\nChzzk(치지직)是韩国最大互联网公司 **Naver** 运营的直播平台,2023 年 12 月进入公测,2024 年 4 月正式上线 — 时间点正好与 Twitch 退出韩国市场重合。Naver 配套推出了一键 Twitch 导入工具,把主播原本在 Twitch 上的关注者和订阅一次性带过来,Chzzk 也因此承接了韩国最受关注的一大批直播红人,成了他们的新家。「치지직」本身是一个拟声词,模仿的是老式阴极射线管电视在频道之间调台时那种「沙沙」的雪花噪声 — 就是老电视搜到信号那一瞬间的声音,Naver 选这个名字是要唤起一场直播刚刚接通画面的那一刻。截至 2026 年初,Chzzk 在韩国直播观看时长中拿下大约 39% 的份额,以最高 1080p 60fps、8 Mbps 码率播出,明显高于 Twitch 在 2022 年末下调后的上限。我们的平台 按原画质捕获 Chzzk Live,并以永久网址提供回看 — 任何浏览器都能打开,不需要 Naver 账号。\n\n### 这里能回看什么内容\n\n录像来自从 Twitch 韩国关停之后迁过来的韩国综艺与游戏主播 — 长时间的闲聊直播、动辄半天的订阅马拉松、在新平台积累人气的音乐和 IRL 主播,还有转播 League of Legends Champions Korea(LCK)赛事的电竞合作频道(Naver 拿到了 2026 至 2030 年的 LCK 韩语独家转播权,与 SOOP Korea 共同持有)。每场 Live 都按完整时长捕获,不是剪过的精华片段,这样直播的整条节奏 — 铺垫、高光、以及高光之间那段长长的过渡 — 才能从头到尾保留下来。\n\n### 为什么还要一份独立存档\n\nChzzk 自己提供 VOD 和短剪辑,但 VOD 是逐场由主播决定开不开的,很多主播在订阅马拉松、商务合作和不希望被完整重看的活动场次里干脆把开关关掉。Live 结束时如果 VOD 是关着的,这场直播在 Chzzk 那边就直接没了。即便开了 VOD,保留时间也是有上限的 — 较老的直播会被滚出去,主播偶尔也会自己删除过往 Live,而 Chzzk 的剪辑系统呈现的是「瞬间」而不是「过程」,所以一场四小时的订阅马拉松靠剪辑根本拼不回来。我们的平台 上的存档则是这场原始直播在网上一个独立存在的永久网址 — 主播开不开 VOD、Chzzk 留多久、是不是只有剪辑、事后是不是删了,这四道坎都和它无关。",
-    "younow": "## 在 我们的平台 上观看 YouNow 录像\n\nYouNow 2011 年由 Adi Sideman 在纽约创立,是最早一批专门做直播的应用之一 — 上下滑动发现新主播,加上金币和 Props 礼物打赏经济,两样都早在 TikTok 直播、Twitch IRL 和 Instagram 直播出现之前就已经在 YouNow 上跑通了。整个 2010 年代中期,YouNow 在美国、墨西哥、巴西、埃及和沙特阿拉伯一路积累出一群以青少年和 Gen-Z 为主的观众,主播阵容里有 just-chatting 的闲聊直播、才艺秀、游戏节目之夜、音乐场,以及那种长时间陪在镜头另一头的通宵陪伴直播。今天它的规模比鼎盛期小了一些,但 YouNow 当年帮忙定义出来的那种直播格式仍然活在这里,主播来源也仍然非常国际化。我们的平台 在 YouNow Live 进行时就同步捕获,然后挂在一个永久网址上回放,既不需要 YouNow 应用,也不需要登录。\n\n### 这里能回看什么\n\n录像覆盖的是 YouNow 观众实际在播的那些内容:闲聊直播、唱歌跳舞的才艺场、主播自办的游戏节目房间,跨英语、阿拉伯语、西班牙语和葡萄牙语的语言学习直播,来自美洲时区的深夜陪伴直播,以及构成了 YouNow Props 经济的那些主播与粉丝之间的打赏互动场面。每场直播都完整捕获,不做剪辑,这样一场直播的整条节奏 — 从最早一批观众进来,到主播按下结束 — 头到尾都保留下来,任何地方都能回放。\n\n### 为什么还要一份独立存档\n\nYouNow 自己不保留公开的直播存档。主播一点结束,这场 Live 就从应用里消失 — 没有回退、没有个人页里的 VOD 列表、没有让错过直播的观众事后补看的路径。YouNow 自动生成的 Moments 保留的是算法或主播挑出来的短高光片段,但完整的直播 — 那种慢慢预热、意外的串门、让 YouNow Live 更像是「有人陪着」而不是「一段内容」的那些长段落 — 光靠 Moments 是拼不回来的。我们的平台 上的存档是唯一一份持久的副本:一个不需要 YouNow 应用、任何浏览器都能打开的永久网址,哪怕主播早就开下一场 Live 去了,这条网址也还在。"
+    "younow": "## 在 我们的平台 上观看 YouNow 录像\n\nYouNow 2011 年由 Adi Sideman 在纽约创立,是最早一批专门做直播的应用之一 — 上下滑动发现新主播,加上金币和 Props 礼物打赏经济,两样都早在 TikTok 直播、Twitch IRL 和 Instagram 直播出现之前就已经在 YouNow 上跑通了。整个 2010 年代中期,YouNow 在美国、墨西哥、巴西、埃及和沙特阿拉伯一路积累出一群以青少年和 Gen-Z 为主的观众,主播阵容里有 just-chatting 的闲聊直播、才艺秀、游戏节目之夜、音乐场,以及那种长时间陪在镜头另一头的通宵陪伴直播。今天它的规模比鼎盛期小了一些,但 YouNow 当年帮忙定义出来的那种直播格式仍然活在这里,主播来源也仍然非常国际化。我们的平台 在 YouNow Live 进行时就同步捕获,然后挂在一个永久网址上回放,既不需要 YouNow 应用,也不需要登录。\n\n### 这里能回看什么\n\n录像覆盖的是 YouNow 观众实际在播的那些内容:闲聊直播、唱歌跳舞的才艺场、主播自办的游戏节目房间,跨英语、阿拉伯语、西班牙语和葡萄牙语的语言学习直播,来自美洲时区的深夜陪伴直播,以及构成了 YouNow Props 经济的那些主播与粉丝之间的打赏互动场面。每场直播都完整捕获,不做剪辑,这样一场直播的整条节奏 — 从最早一批观众进来,到主播按下结束 — 头到尾都保留下来,任何地方都能回放。\n\n### 为什么还要一份独立存档\n\nYouNow 自己不保留公开的直播存档。主播一点结束,这场 Live 就从应用里消失 — 没有回退、没有个人页里的 VOD 列表、没有让错过直播的观众事后补看的路径。YouNow 自动生成的 Moments 保留的是算法或主播挑出来的短高光片段,但完整的直播 — 那种慢慢预热、意外的串门、让 YouNow Live 更像是「有人陪着」而不是「一段内容」的那些长段落 — 光靠 Moments 是拼不回来的。我们的平台 上的存档是唯一一份持久的副本:一个不需要 YouNow 应用、任何浏览器都能打开的永久网址,哪怕主播早就开下一场 Live 去了,这条网址也还在。",
+    "clapper": "## 在 我们的平台 上观看 Clapper 录像\n\nClapper 是一家美国本土的直播加短视频平台,慢慢变成了那些因算法压制、审查摩擦和受众错位而离开 TikTok 与 Facebook 的成人创作者的事实大本营。它 2018 年由 Edison Chen 在 Austin 创立,2020 年正式上线;一开始就有意把方向偏向偏年长、偏美国本土的主播群体 — 政治评论员、生活方式创作者、军警社群主播、乡村音乐爱好者,以及那些觉得主流短视频应用过度策展、想要更长 Live 时长的 Gen X 与 Boomer 观众。我们的平台 在 Clapper Live 进行时就同步捕获,然后挂在一个永久网址上回放,既不需要 Clapper 应用,也不需要任何登录。\n\n### 这里能回看什么\n\n录像覆盖的正是 Clapper 受众实际在播的那些形态:长篇的政治与新闻评论、生活方式与 IRL 直播、乡村音乐和 Americana 现场场次、信仰与家庭直播、牧场与乡村生活的日常直播,以及观众用 Gem 当场感谢主播的那些打赏瞬间。每场 Live 都按完整时长捕获,所以从最早一批观众进来,到主播按下结束 — 整条节奏头到尾都保留下来,任何地方都能回放。\n\n### 为什么还要一份独立存档\n\nClapper 应用内的信息流并不像 YouTube 那样替观众保留公开的直播存档。主播一点结束,这场直播就从发现信息流里滚走,粉丝在个人页里也找不到回看入口。那些长篇的 Live — 政治时段、Gem 打赏支撑起来的 subathon、连播几个小时的乡村生活场 — 一旦离开信息流就没办法再翻回来。我们的平台 上的存档则是那份持久副本:一个不需要 Clapper 应用、任何浏览器都能打开的永久网址,哪怕应用内的信息流早就把它滚走了,这条链接依然在线。"
   },
   "jsonLd": {
     "name": {
@@ -913,7 +969,8 @@
       "nimotv": "NimoTV 直播录像",
       "vklive": "VK Live 直播录像",
       "chzzk": "Chzzk 直播录像",
-      "younow": "YouNow Live 录像"
+      "younow": "YouNow Live 录像",
+      "clapper": "Clapper Live 录像"
     },
     "description": {
       "all": "在 我们的平台 上观看创作者的直播录像。",
@@ -934,7 +991,8 @@
       "nimotv": "在 我们的平台 上观看主播的 NimoTV 录像。",
       "vklive": "在 我们的平台 上观看主播的 VK Live 录像。",
       "chzzk": "来自 Chzzk(Naver 韩国直播平台)的存档直播,以原直播的分辨率和帧率捕获。",
-      "younow": "来自 YouNow 的存档直播 — 最早一批专门做直播的平台之一。"
+      "younow": "来自 YouNow 的存档直播 — 最早一批专门做直播的平台之一。",
+      "clapper": "来自 Clapper 的存档直播 — 为离开 TikTok 和 Facebook 的美国成人创作者而生的本土平台。"
     },
     "streamTitle": "{nickname} 直播 - {date}",
     "streamDescription": {
@@ -956,7 +1014,8 @@
       "nimotv": "{nickname} 的 NimoTV 录像",
       "vklive": "{nickname} 的 VK Live 录像",
       "chzzk": "我们的平台 上的 Chzzk Live 录像 — 原韩国直播在 Chzzk 自家 VOD 窗口期之外的回看版本。",
-      "younow": "我们的平台 上的 YouNow Live 录像 — 原直播保留下来,等 YouNow 应用信息流把它滚走之后照样能回看。"
+      "younow": "我们的平台 上的 YouNow Live 录像 — 原直播保留下来,等 YouNow 应用信息流把它滚走之后照样能回看。",
+      "clapper": "我们的平台 上的 Clapper Live 录像 — 原直播保留下来,等 Clapper 应用内的信息流把它滚走之后照样能回看。"
     }
   },
   "recordedOn": "录制于 {date}",

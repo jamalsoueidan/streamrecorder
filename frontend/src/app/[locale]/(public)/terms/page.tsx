@@ -602,6 +602,13 @@ export default async function TermsAndConditions({ params }: PageProps) {
               • {t("thirdPartyPlatforms.platforms.younow")}
             </Anchor>
             <Anchor
+              href="https://clapperapp.com/terms-of-service"
+              target="_blank"
+              style={{ color: "#60a5fa" }}
+            >
+              • {t("thirdPartyPlatforms.platforms.clapper")}
+            </Anchor>
+            <Anchor
               href="https://www.liveme.com/protocol/terms.html"
               target="_blank"
               style={{ color: "#60a5fa" }}
