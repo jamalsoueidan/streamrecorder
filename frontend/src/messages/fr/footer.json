@@ -32,7 +32,8 @@
     "nimotv": "Créateurs NimoTV",
     "vklive": "Créateurs VK Live",
     "younow": "Créateurs YouNow",
-    "clapper": "Créateurs Clapper"
+    "clapper": "Créateurs Clapper",
+    "chzzk": "Créateurs Chzzk"
   },
   "watchRecordings": {
     "title": "Regarder les enregistrements",
@@ -54,7 +55,8 @@
     "nimotv": "Enregistrements NimoTV",
     "vklive": "Enregistrements VK Live",
     "younow": "Enregistrements YouNow",
-    "clapper": "Enregistrements Clapper"
+    "clapper": "Enregistrements Clapper",
+    "chzzk": "Enregistrements Chzzk"
   },
   "legal": {
     "title": "Mentions légales",

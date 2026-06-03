@@ -32,7 +32,8 @@
     "nimotv": "Streamer NimoTV",
     "vklive": "Streamer VK Live",
     "younow": "Kreator YouNow",
-    "clapper": "Kreator Clapper"
+    "clapper": "Kreator Clapper",
+    "chzzk": "Kreator Chzzk"
   },
   "watchRecordings": {
     "title": "Tonton Rekaman",
@@ -54,7 +55,8 @@
     "nimotv": "Rekaman NimoTV",
     "vklive": "Rekaman VK Live",
     "younow": "Rekaman YouNow",
-    "clapper": "Rekaman Clapper"
+    "clapper": "Rekaman Clapper",
+    "chzzk": "Rekaman Chzzk"
   },
   "legal": {
     "title": "Legal",

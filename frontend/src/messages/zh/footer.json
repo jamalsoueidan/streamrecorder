@@ -32,7 +32,8 @@
     "nimotv": "NimoTV 主播",
     "vklive": "VK Live 主播",
     "younow": "YouNow 主播",
-    "clapper": "Clapper 主播"
+    "clapper": "Clapper 主播",
+    "chzzk": "Chzzk 主播"
   },
   "watchRecordings": {
     "title": "观看录制内容",
@@ -54,7 +55,8 @@
     "nimotv": "NimoTV 录制",
     "vklive": "VK Live 录制",
     "younow": "YouNow 录像",
-    "clapper": "Clapper 录像"
+    "clapper": "Clapper 录像",
+    "chzzk": "Chzzk 录像"
   },
   "legal": {
     "title": "法律",

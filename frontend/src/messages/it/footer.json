@@ -32,7 +32,8 @@
     "nimotv": "Creator NimoTV",
     "vklive": "Creator VK Live",
     "younow": "Creator YouNow",
-    "clapper": "Creator Clapper"
+    "clapper": "Creator Clapper",
+    "chzzk": "Creator Chzzk"
   },
   "watchRecordings": {
     "title": "Guarda le registrazioni",
@@ -54,7 +55,8 @@
     "nimotv": "Registrazioni NimoTV",
     "vklive": "Registrazioni VK Live",
     "younow": "Registrazioni YouNow",
-    "clapper": "Registrazioni Clapper"
+    "clapper": "Registrazioni Clapper",
+    "chzzk": "Registrazioni Chzzk"
   },
   "legal": {
     "title": "Note legali",

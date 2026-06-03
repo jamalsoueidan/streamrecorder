@@ -32,7 +32,8 @@
     "nimotv": "ครีเอเตอร์ NimoTV",
     "vklive": "ครีเอเตอร์ VK Live",
     "younow": "ครีเอเตอร์ YouNow",
-    "clapper": "ครีเอเตอร์ Clapper"
+    "clapper": "ครีเอเตอร์ Clapper",
+    "chzzk": "ครีเอเตอร์ Chzzk"
   },
   "watchRecordings": {
     "title": "ดูบันทึก",
@@ -54,7 +55,8 @@
     "nimotv": "บันทึก NimoTV",
     "vklive": "บันทึก VK Live",
     "younow": "บันทึก YouNow",
-    "clapper": "บันทึก Clapper"
+    "clapper": "บันทึก Clapper",
+    "chzzk": "บันทึก Chzzk"
   },
   "legal": {
     "title": "ข้อมูลทางกฎหมาย",
