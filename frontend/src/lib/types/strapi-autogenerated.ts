@@ -1162,6 +1162,7 @@ export interface AiRequest {
       thumbnailInterval?: number;
       thumbnailCols?: number;
       bucket?: string;
+      endpoint?: string;
       videoOriginal?: VideosVideoComponent;
       videoSmall?: VideosVideoComponent;
       recording?: {
@@ -1874,6 +1875,7 @@ export interface AiTask {
         thumbnailInterval?: number;
         thumbnailCols?: number;
         bucket?: string;
+        endpoint?: string;
         videoOriginal?: VideosVideoComponent;
         videoSmall?: VideosVideoComponent;
         recording?: {
@@ -3833,6 +3835,7 @@ export interface Clip {
       thumbnailInterval?: number;
       thumbnailCols?: number;
       bucket?: string;
+      endpoint?: string;
       videoOriginal?: VideosVideoComponent;
       videoSmall?: VideosVideoComponent;
       recording?: {
@@ -4505,6 +4508,7 @@ export interface ClipShare {
         thumbnailInterval?: number;
         thumbnailCols?: number;
         bucket?: string;
+        endpoint?: string;
         videoOriginal?: VideosVideoComponent;
         videoSmall?: VideosVideoComponent;
         recording?: {
@@ -6088,6 +6092,7 @@ export interface Meme {
       thumbnailInterval?: number;
       thumbnailCols?: number;
       bucket?: string;
+      endpoint?: string;
       videoOriginal?: VideosVideoComponent;
       videoSmall?: VideosVideoComponent;
       recording?: {
@@ -7579,6 +7584,7 @@ export interface SourceRequest {
     thumbnailInterval?: number;
     thumbnailCols?: number;
     bucket?: string;
+    endpoint?: string;
     videoOriginal?: VideosVideoComponent;
     videoSmall?: VideosVideoComponent;
     /** @example "string or id" */
@@ -7615,6 +7621,7 @@ export interface Source {
   thumbnailInterval?: number;
   thumbnailCols?: number;
   bucket?: string;
+  endpoint?: string;
   videoOriginal?: VideosVideoComponent;
   videoSmall?: VideosVideoComponent;
   recording?: {
@@ -8122,6 +8129,7 @@ export interface Source {
       thumbnailInterval?: number;
       thumbnailCols?: number;
       bucket?: string;
+      endpoint?: string;
       videoOriginal?: VideosVideoComponent;
       videoSmall?: VideosVideoComponent;
       recording?: {
@@ -8735,6 +8743,7 @@ export interface VisitorDownload {
       thumbnailInterval?: number;
       thumbnailCols?: number;
       bucket?: string;
+      endpoint?: string;
       videoOriginal?: VideosVideoComponent;
       videoSmall?: VideosVideoComponent;
       recording?: {
@@ -9381,6 +9390,7 @@ export interface VisitorView {
       thumbnailInterval?: number;
       thumbnailCols?: number;
       bucket?: string;
+      endpoint?: string;
       videoOriginal?: VideosVideoComponent;
       videoSmall?: VideosVideoComponent;
       recording?: {

@@ -1427,6 +1427,8 @@ export interface ApiSourceSource extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     duration: Schema.Attribute.Decimal & Schema.Attribute.Required;
+    endpoint: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'nbg1.your-objectstorage.com'>;
     executionId: Schema.Attribute.Integer;
     finishedAt: Schema.Attribute.DateTime;
     locale: Schema.Attribute.String & Schema.Attribute.Private;

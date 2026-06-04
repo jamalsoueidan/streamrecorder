@@ -44,6 +44,10 @@
     "bucket": {
       "type": "string"
     },
+    "endpoint": {
+      "type": "string",
+      "default": "nbg1.your-objectstorage.com"
+    },
     "videoOriginal": {
       "type": "component",
       "component": "videos.video",

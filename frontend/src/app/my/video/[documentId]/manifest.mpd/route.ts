@@ -140,14 +140,14 @@ async function _fetchSourcePlaylistsImpl(documentId: string) {
         state: { $eq: "done" },
       },
       sort: "createdAt:asc",
-      fields: ["path", "createdAt", "bucket"],
+      fields: ["path", "createdAt", "bucket", "endpoint"],
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } as any);
 
     const sources = response.data.data ?? [];
     if (!sources.length) return null;
 
-    const s3Client = getS3();
+    const s3Client = getS3((sources[0] as { endpoint?: string }).endpoint);
     const bucket = getBucket(process.env.MEDIA_BUCKET!, sources[0].bucket);
     const sourcesWithPlaylists = await fetchPlaylistsFromS3(
       s3Client,
@@ -155,7 +155,11 @@ async function _fetchSourcePlaylistsImpl(documentId: string) {
       sources,
     );
 
-    return { sourcesWithPlaylists, bucket: sources[0].bucket };
+    return {
+      sourcesWithPlaylists,
+      bucket: sources[0].bucket,
+      endpoint: (sources[0] as { endpoint?: string }).endpoint ?? null,
+    };
 }
 
 // Cache disabled while debugging codec detection. The probe runs every
@@ -163,7 +167,9 @@ async function _fetchSourcePlaylistsImpl(documentId: string) {
 async function buildDashManifest(documentId: string) {
   const cached = await fetchSourcePlaylists(documentId);
   if (!cached) return null;
-  const s3Client = getS3();
+  const s3Client = getS3(
+    (cached as { endpoint?: string | null }).endpoint,
+  );
   const bucket = getBucket(process.env.MEDIA_BUCKET!, cached.bucket);
   const sourceManifests = await buildSourceManifests(
     s3Client,
