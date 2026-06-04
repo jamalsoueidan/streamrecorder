@@ -147,19 +147,9 @@ async function _fetchSourcePlaylistsImpl(documentId: string) {
     const sources = response.data.data ?? [];
     if (!sources.length) return null;
 
-    const s3Client = getS3((sources[0] as { endpoint?: string }).endpoint);
-    const bucket = getBucket(process.env.MEDIA_BUCKET!, sources[0].bucket);
-    const sourcesWithPlaylists = await fetchPlaylistsFromS3(
-      s3Client,
-      bucket,
-      sources,
-    );
+    const sourcesWithPlaylists = await fetchPlaylistsFromS3(sources);
 
-    return {
-      sourcesWithPlaylists,
-      bucket: sources[0].bucket,
-      endpoint: (sources[0] as { endpoint?: string }).endpoint ?? null,
-    };
+    return { sourcesWithPlaylists };
 }
 
 // Cache disabled while debugging codec detection. The probe runs every
@@ -167,13 +157,7 @@ async function _fetchSourcePlaylistsImpl(documentId: string) {
 async function buildDashManifest(documentId: string) {
   const cached = await fetchSourcePlaylists(documentId);
   if (!cached) return null;
-  const s3Client = getS3(
-    (cached as { endpoint?: string | null }).endpoint,
-  );
-  const bucket = getBucket(process.env.MEDIA_BUCKET!, cached.bucket);
   const sourceManifests = await buildSourceManifests(
-    s3Client,
-    bucket,
     cached.sourcesWithPlaylists,
   );
   return renderMpd(sourceManifests);
@@ -223,21 +207,25 @@ async function fetchFromS3(
   }
 }
 
+// Per-source S3 client / bucket — sources can live on different
+// backends (Hetzner / Backblaze) and signing them all with one client
+// breaks playback the moment a recording is split across providers.
 async function fetchPlaylistsFromS3(
-  s3Client: S3Client,
-  bucket: string,
   sources: Source[],
 ): Promise<SourceWithPlaylist[]> {
   const playlists = await Promise.all(
-    sources.map((source) =>
-      source.path
-        ? fetchFromS3(
-            s3Client,
-            bucket,
-            `${source.path.substring(1)}playlist.m3u8`,
-          )
-        : Promise.resolve(null),
-    ),
+    sources.map((source) => {
+      if (!source.path) return Promise.resolve(null);
+      const client = getS3(
+        source.endpoint,
+      );
+      const bucket = getBucket(process.env.MEDIA_BUCKET!, source.bucket);
+      return fetchFromS3(
+        client,
+        bucket,
+        `${source.path.substring(1)}playlist.m3u8`,
+      );
+    }),
   );
   return sources.map((source, i) => ({ ...source, playlist: playlists[i] }));
 }
@@ -316,14 +304,19 @@ function parseSourcePlaylist(
 }
 
 async function buildSourceManifests(
-  s3Client: S3Client,
-  bucket: string,
   sources: SourceWithPlaylist[],
 ): Promise<SourceManifest[]> {
   const manifests: SourceManifest[] = [];
 
   for (const source of sources) {
     if (!source.playlist || !source.path) continue;
+
+    // Each source has its own backend; derive the client + bucket here
+    // so a recording that spans providers still produces a valid MPD.
+    const s3Client = getS3(
+      source.endpoint,
+    );
+    const bucket = getBucket(process.env.MEDIA_BUCKET!, source.bucket);
 
     // Find the video.mp4 referenced in this source's playlist (always
     // a single file per source — segments are byte-range refs into it).

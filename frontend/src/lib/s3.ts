@@ -82,7 +82,12 @@ export function getS3(endpoint?: string | null): S3Client {
   return getCachedClient(endpoint || DEFAULT_ENDPOINT);
 }
 
-export const s3Nbg1 = getCachedClient("nbg1.your-objectstorage.com");
+// Lazy helper for callers that previously imported `s3Nbg1` as a module
+// constant. Eager init crashed unrelated routes (e.g. VTT routes that
+// don't touch S3) when env vars weren't loaded yet — make it a function
+// so the client is built on first call, not on import.
+export const s3Nbg1 = (): S3Client =>
+  getCachedClient("nbg1.your-objectstorage.com");
 
 // Map every supported origin host to the public CF subdomain that fronts
 // it. Each backend gets its own opaque subdomain (m1/m2) so the Worker
@@ -107,11 +112,18 @@ export function proxyClipSignedUrl(url: string): string {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
   if (!baseUrl) return url;
   const host = new URL(baseUrl).hostname.replace(/^www\./, "");
+  const u = new URL(url);
+  if (!HOST_TO_MEDIA_SUBDOMAIN[u.hostname]) return url;
+  u.hostname = `clip.${host}`;
+  // Strip the leading `/<bucket>/` segment from the path so the public
+  // clip URL doesn't leak the bucket name. Only path-segment match —
+  // safer than a global string replace that could hit signed-URL query
+  // params.
   const bucket = `${process.env.CLIP_BUCKET!}-nbg`;
-  return url
-    .replace("nbg1.your-objectstorage.com", `clip.${host}`)
-    .replace("s3.eu-central-003.backblazeb2.com", `clip.${host}`)
-    .replace(`/${bucket}/`, "/");
+  if (u.pathname.startsWith(`/${bucket}/`)) {
+    u.pathname = u.pathname.slice(bucket.length + 1);
+  }
+  return u.toString();
 }
 
 export function getBucket(

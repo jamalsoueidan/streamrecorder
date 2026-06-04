@@ -120,7 +120,7 @@ async function fetchPlaylistsFromS3(
     sources.map((source) => {
       if (!source.path) return Promise.resolve(null);
       const client = getS3(
-        (source as { endpoint?: string | null }).endpoint,
+        source.endpoint,
       );
       const bucket = getBucket(process.env.MEDIA_BUCKET!, source.bucket);
       return fetchFromS3(
@@ -189,7 +189,7 @@ async function combinePlaylistsWithSignedUrls(
   const signedEntries = await Promise.all(
     toSign.map(async ({ mapKey, s3Key, source }) => {
       const client = getS3(
-        (source as { endpoint?: string | null }).endpoint,
+        source.endpoint,
       );
       const bucket = getBucket(process.env.MEDIA_BUCKET!, source.bucket);
       const command = new GetObjectCommand({ Bucket: bucket, Key: s3Key });

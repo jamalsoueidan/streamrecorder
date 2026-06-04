@@ -1162,7 +1162,7 @@ export interface AiRequest {
       thumbnailInterval?: number;
       thumbnailCols?: number;
       bucket?: string;
-      endpoint?: string;
+      endpoint?: AiRequestEndpointEnum;
       videoOriginal?: VideosVideoComponent;
       videoSmall?: VideosVideoComponent;
       recording?: {
@@ -1875,7 +1875,7 @@ export interface AiTask {
         thumbnailInterval?: number;
         thumbnailCols?: number;
         bucket?: string;
-        endpoint?: string;
+        endpoint?: AiTaskEndpointEnum;
         videoOriginal?: VideosVideoComponent;
         videoSmall?: VideosVideoComponent;
         recording?: {
@@ -3835,7 +3835,7 @@ export interface Clip {
       thumbnailInterval?: number;
       thumbnailCols?: number;
       bucket?: string;
-      endpoint?: string;
+      endpoint?: ClipEndpointEnum;
       videoOriginal?: VideosVideoComponent;
       videoSmall?: VideosVideoComponent;
       recording?: {
@@ -4508,7 +4508,7 @@ export interface ClipShare {
         thumbnailInterval?: number;
         thumbnailCols?: number;
         bucket?: string;
-        endpoint?: string;
+        endpoint?: ClipShareEndpointEnum;
         videoOriginal?: VideosVideoComponent;
         videoSmall?: VideosVideoComponent;
         recording?: {
@@ -6092,7 +6092,7 @@ export interface Meme {
       thumbnailInterval?: number;
       thumbnailCols?: number;
       bucket?: string;
-      endpoint?: string;
+      endpoint?: MemeEndpointEnum;
       videoOriginal?: VideosVideoComponent;
       videoSmall?: VideosVideoComponent;
       recording?: {
@@ -7584,7 +7584,7 @@ export interface SourceRequest {
     thumbnailInterval?: number;
     thumbnailCols?: number;
     bucket?: string;
-    endpoint?: string;
+    endpoint?: SourceRequestEndpointEnum;
     videoOriginal?: VideosVideoComponent;
     videoSmall?: VideosVideoComponent;
     /** @example "string or id" */
@@ -7621,7 +7621,7 @@ export interface Source {
   thumbnailInterval?: number;
   thumbnailCols?: number;
   bucket?: string;
-  endpoint?: string;
+  endpoint?: SourceEndpointEnum;
   videoOriginal?: VideosVideoComponent;
   videoSmall?: VideosVideoComponent;
   recording?: {
@@ -8129,7 +8129,7 @@ export interface Source {
       thumbnailInterval?: number;
       thumbnailCols?: number;
       bucket?: string;
-      endpoint?: string;
+      endpoint?: SourceEndpointEnum1;
       videoOriginal?: VideosVideoComponent;
       videoSmall?: VideosVideoComponent;
       recording?: {
@@ -8743,7 +8743,7 @@ export interface VisitorDownload {
       thumbnailInterval?: number;
       thumbnailCols?: number;
       bucket?: string;
-      endpoint?: string;
+      endpoint?: VisitorDownloadEndpointEnum;
       videoOriginal?: VideosVideoComponent;
       videoSmall?: VideosVideoComponent;
       recording?: {
@@ -9390,7 +9390,7 @@ export interface VisitorView {
       thumbnailInterval?: number;
       thumbnailCols?: number;
       bucket?: string;
-      endpoint?: string;
+      endpoint?: VisitorViewEndpointEnum;
       videoOriginal?: VideosVideoComponent;
       videoSmall?: VideosVideoComponent;
       recording?: {
@@ -9709,6 +9709,11 @@ export enum AiRequestStateEnum {
   Failed = "failed",
 }
 
+export enum AiRequestEndpointEnum {
+  Nbg1YourObjectstorageCom = "nbg1.your-objectstorage.com",
+  S3EuCentral003Backblazeb2Com = "s3.eu-central-003.backblazeb2.com",
+}
+
 export enum AiRequestStateEnum1 {
   Pending = "pending",
   Processing = "processing",
@@ -9775,6 +9780,11 @@ export enum AiTaskStateEnum {
   Uploading = "uploading",
   Done = "done",
   Failed = "failed",
+}
+
+export enum AiTaskEndpointEnum {
+  Nbg1YourObjectstorageCom = "nbg1.your-objectstorage.com",
+  S3EuCentral003Backblazeb2Com = "s3.eu-central-003.backblazeb2.com",
 }
 
 export enum AiTaskStateEnum1 {
@@ -9876,6 +9886,11 @@ export enum ClipStateEnum {
   Failed = "failed",
 }
 
+export enum ClipEndpointEnum {
+  Nbg1YourObjectstorageCom = "nbg1.your-objectstorage.com",
+  S3EuCentral003Backblazeb2Com = "s3.eu-central-003.backblazeb2.com",
+}
+
 export enum ClipShareRequestStateEnum {
   Completed = "completed",
   Failed = "failed",
@@ -9920,6 +9935,11 @@ export enum ClipShareStateEnum {
   Uploading = "uploading",
   Done = "done",
   Failed = "failed",
+}
+
+export enum ClipShareEndpointEnum {
+  Nbg1YourObjectstorageCom = "nbg1.your-objectstorage.com",
+  S3EuCentral003Backblazeb2Com = "s3.eu-central-003.backblazeb2.com",
 }
 
 export enum ClipShareStateEnum1 {
@@ -10034,6 +10054,11 @@ export enum MemeStateEnum {
   Failed = "failed",
 }
 
+export enum MemeEndpointEnum {
+  Nbg1YourObjectstorageCom = "nbg1.your-objectstorage.com",
+  S3EuCentral003Backblazeb2Com = "s3.eu-central-003.backblazeb2.com",
+}
+
 export enum MemeTypeEnum1 {
   ValueMp4 = ".mp4",
   ValueGif = ".gif",
@@ -10133,11 +10158,21 @@ export enum SourceRequestStateEnum {
   Failed = "failed",
 }
 
+export enum SourceRequestEndpointEnum {
+  Nbg1YourObjectstorageCom = "nbg1.your-objectstorage.com",
+  S3EuCentral003Backblazeb2Com = "s3.eu-central-003.backblazeb2.com",
+}
+
 export enum SourceStateEnum {
   Recording = "recording",
   Uploading = "uploading",
   Done = "done",
   Failed = "failed",
+}
+
+export enum SourceEndpointEnum {
+  Nbg1YourObjectstorageCom = "nbg1.your-objectstorage.com",
+  S3EuCentral003Backblazeb2Com = "s3.eu-central-003.backblazeb2.com",
 }
 
 export enum SourceGenderEnum {
@@ -10180,6 +10215,11 @@ export enum SourceStateEnum1 {
   Failed = "failed",
 }
 
+export enum SourceEndpointEnum1 {
+  Nbg1YourObjectstorageCom = "nbg1.your-objectstorage.com",
+  S3EuCentral003Backblazeb2Com = "s3.eu-central-003.backblazeb2.com",
+}
+
 export enum VisitorDownloadGenderEnum {
   Male = "male",
   Female = "female",
@@ -10220,6 +10260,11 @@ export enum VisitorDownloadStateEnum {
   Failed = "failed",
 }
 
+export enum VisitorDownloadEndpointEnum {
+  Nbg1YourObjectstorageCom = "nbg1.your-objectstorage.com",
+  S3EuCentral003Backblazeb2Com = "s3.eu-central-003.backblazeb2.com",
+}
+
 export enum VisitorViewGenderEnum {
   Male = "male",
   Female = "female",
@@ -10258,6 +10303,11 @@ export enum VisitorViewStateEnum {
   Uploading = "uploading",
   Done = "done",
   Failed = "failed",
+}
+
+export enum VisitorViewEndpointEnum {
+  Nbg1YourObjectstorageCom = "nbg1.your-objectstorage.com",
+  S3EuCentral003Backblazeb2Com = "s3.eu-central-003.backblazeb2.com",
 }
 
 export interface GetActivitiesParams {
