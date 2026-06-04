@@ -52,7 +52,9 @@ async function buildSignedPlaylist(documentId: string) {
   const cached = await fetchSourcePlaylists(documentId);
   if (!cached) return null;
 
-  const s3Client = getS3();
+  const s3Client = getS3(
+    (cached as { endpoint?: string | null }).endpoint,
+  );
   const bucket = getBucket(process.env.MEDIA_BUCKET!, cached.bucket);
   return combinePlaylistsWithSignedUrls(
     s3Client,

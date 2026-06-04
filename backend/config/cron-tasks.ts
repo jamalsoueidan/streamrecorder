@@ -10,19 +10,28 @@ import {
 // schema doesn't change.
 const ENDPOINT_CONFIGS: Record<
   string,
-  { endpoint: string; region: string; accessKeyId: string; secretAccessKey: string }
+  {
+    endpoint: string;
+    region: string;
+    accessKeyId: string | undefined;
+    secretAccessKey: string | undefined;
+  }
 > = {
   "nbg1.your-objectstorage.com": {
-    endpoint: "https://nbg1.your-objectstorage.com",
+    // Respect AWS_ENDPOINT env var — the rest of the backend already uses
+    // it for non-cron S3 work, and overriding to e.g. MinIO must apply
+    // here too. Fall back to the public Hetzner URL when not set.
+    endpoint:
+      process.env.AWS_ENDPOINT ?? "https://nbg1.your-objectstorage.com",
     region: process.env.AWS_REGION ?? "nbg1",
-    accessKeyId: process.env.AWS_ACCESS_KEY_ID as string,
-    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY as string,
+    accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
   },
   "s3.eu-central-003.backblazeb2.com": {
     endpoint: process.env.B2_ENDPOINT ?? "https://s3.eu-central-003.backblazeb2.com",
     region: process.env.B2_REGION ?? "eu-central-003",
-    accessKeyId: process.env.B2_ACCESS_KEY_ID as string,
-    secretAccessKey: process.env.B2_SECRET_ACCESS_KEY as string,
+    accessKeyId: process.env.B2_ACCESS_KEY_ID,
+    secretAccessKey: process.env.B2_SECRET_ACCESS_KEY,
   },
 };
 
@@ -35,6 +44,11 @@ function getS3(endpoint: string | null | undefined): S3Client {
   if (client) return client;
   const cfg = ENDPOINT_CONFIGS[ep];
   if (!cfg) throw new Error(`unknown S3 endpoint: ${ep}`);
+  if (!cfg.accessKeyId || !cfg.secretAccessKey) {
+    throw new Error(
+      `S3 credentials missing for endpoint "${ep}" — check env vars are set on this deployment`,
+    );
+  }
   client = new S3Client({
     region: cfg.region,
     endpoint: cfg.endpoint,

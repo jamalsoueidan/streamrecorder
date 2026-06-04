@@ -21,22 +21,22 @@ const ENDPOINT_CONFIGS: Record<
   {
     endpoint: string;
     region: string;
-    accessKey: string;
-    secretKey: string;
+    accessKey: string | undefined;
+    secretKey: string | undefined;
   }
 > = {
   "nbg1.your-objectstorage.com": {
     endpoint: "https://nbg1.your-objectstorage.com",
     region: "nbg1",
-    accessKey: process.env.S3_ACCESS_KEY!,
-    secretKey: process.env.S3_SECRET_KEY!,
+    accessKey: process.env.S3_ACCESS_KEY,
+    secretKey: process.env.S3_SECRET_KEY,
   },
   "s3.eu-central-003.backblazeb2.com": {
     endpoint:
       process.env.B2_ENDPOINT ?? "https://s3.eu-central-003.backblazeb2.com",
     region: process.env.B2_REGION ?? "eu-central-003",
-    accessKey: process.env.B2_ACCESS_KEY!,
-    secretKey: process.env.B2_SECRET_KEY!,
+    accessKey: process.env.B2_ACCESS_KEY,
+    secretKey: process.env.B2_SECRET_KEY,
   },
 };
 
@@ -45,6 +45,11 @@ const DEFAULT_ENDPOINT = "nbg1.your-objectstorage.com";
 function buildClient(endpoint: string): S3Client {
   const cfg = ENDPOINT_CONFIGS[endpoint];
   if (!cfg) throw new Error(`unknown S3 endpoint: ${endpoint}`);
+  if (!cfg.accessKey || !cfg.secretKey) {
+    throw new Error(
+      `S3 credentials missing for endpoint "${endpoint}" — check env vars are set on this deployment`,
+    );
+  }
   return new S3Client({
     region: cfg.region,
     endpoint: cfg.endpoint,
@@ -80,12 +85,12 @@ export function getS3(endpoint?: string | null): S3Client {
 export const s3Nbg1 = getCachedClient("nbg1.your-objectstorage.com");
 
 // Map every supported origin host to the public CF subdomain that fronts
-// it. We use ONE media.* subdomain regardless of backend — the Worker
-// decides which storage to fetch from. Adding a third provider here is
-// just one line, no Worker change for clients.
+// it. Each backend gets its own opaque subdomain (m1/m2) so the Worker
+// decides which storage to fetch from purely by hostname. Users can't
+// tell which storage from the URL.
 const HOST_TO_MEDIA_SUBDOMAIN: Record<string, string> = {
-  "nbg1.your-objectstorage.com": "media",
-  "s3.eu-central-003.backblazeb2.com": "media",
+  "nbg1.your-objectstorage.com": "m1",
+  "s3.eu-central-003.backblazeb2.com": "m2",
 };
 
 export function proxySignedUrl(url: string): string {
