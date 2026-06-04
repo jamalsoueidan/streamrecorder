@@ -76,7 +76,7 @@ function getCachedClient(endpoint: string): S3Client {
   return client;
 }
 
-// Backward-compatible: getS3() with no args returns the Hetzner client.
+// Backward-compatible: getS3() with no args returns the default client.
 // Callers that have a Source row should pass `source.endpoint`.
 export function getS3(endpoint?: string | null): S3Client {
   return getCachedClient(endpoint || DEFAULT_ENDPOINT);
@@ -86,13 +86,12 @@ export function getS3(endpoint?: string | null): S3Client {
 // constant. Eager init crashed unrelated routes (e.g. VTT routes that
 // don't touch S3) when env vars weren't loaded yet — make it a function
 // so the client is built on first call, not on import.
-export const s3Nbg1 = (): S3Client =>
-  getCachedClient("nbg1.your-objectstorage.com");
+export const s3Nbg1 = (): S3Client => getCachedClient(DEFAULT_ENDPOINT);
 
 // Map every supported origin host to the public CF subdomain that fronts
 // it. Each backend gets its own opaque subdomain (m1/m2) so the Worker
-// decides which storage to fetch from purely by hostname. Users can't
-// tell which storage from the URL.
+// decides upstream purely by hostname. The mapping isn't visible to the
+// browser.
 const HOST_TO_MEDIA_SUBDOMAIN: Record<string, string> = {
   "nbg1.your-objectstorage.com": "m1",
   "s3.eu-central-003.backblazeb2.com": "m2",

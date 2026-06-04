@@ -111,8 +111,8 @@ async function fetchFromS3(
 }
 
 // Each source carries its own bucket + endpoint. Using a single S3
-// client across sources breaks playback when sources are split between
-// Hetzner and B2 — they get signed against the wrong backend.
+// client across sources breaks playback when sources are split across
+// different backends — they get signed against the wrong one.
 async function fetchPlaylistsFromS3(
   sources: Source[],
 ): Promise<SourceWithPlaylist[]> {

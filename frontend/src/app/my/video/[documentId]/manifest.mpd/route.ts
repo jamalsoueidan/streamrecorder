@@ -208,8 +208,8 @@ async function fetchFromS3(
 }
 
 // Per-source S3 client / bucket — sources can live on different
-// backends (Hetzner / Backblaze) and signing them all with one client
-// breaks playback the moment a recording is split across providers.
+// backends, and signing them all with one client breaks playback the
+// moment a recording is split across providers.
 async function fetchPlaylistsFromS3(
   sources: Source[],
 ): Promise<SourceWithPlaylist[]> {

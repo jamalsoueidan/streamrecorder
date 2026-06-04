@@ -20,7 +20,7 @@ const ENDPOINT_CONFIGS: Record<
   "nbg1.your-objectstorage.com": {
     // Respect AWS_ENDPOINT env var — the rest of the backend already uses
     // it for non-cron S3 work, and overriding to e.g. MinIO must apply
-    // here too. Fall back to the public Hetzner URL when not set.
+    // here too. Fall back to the default public URL when not set.
     endpoint:
       process.env.AWS_ENDPOINT ?? "https://nbg1.your-objectstorage.com",
     region: process.env.AWS_REGION ?? "nbg1",

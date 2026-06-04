@@ -137,7 +137,7 @@ async function fetchFromS3(
 
 // Each source carries its own bucket + endpoint, so we MUST derive the
 // S3 client per-source. Using a single client across sources breaks
-// playback when a recording has sources split between Hetzner and B2.
+// playback when a recording has sources split across different backends.
 async function fetchPlaylistsFromS3(
   sources: Source[],
   quality: "high" | "low",
