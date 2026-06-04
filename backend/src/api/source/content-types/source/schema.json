@@ -44,6 +44,14 @@
     "bucket": {
       "type": "string"
     },
+    "endpoint": {
+      "type": "enumeration",
+      "enum": [
+        "nbg1.your-objectstorage.com",
+        "s3.eu-central-003.backblazeb2.com"
+      ],
+      "default": "nbg1.your-objectstorage.com"
+    },
     "videoOriginal": {
       "type": "component",
       "component": "videos.video",

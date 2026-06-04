@@ -19,24 +19,15 @@ const fetchSourcePlaylists = unstable_cache(
         state: { $eq: "done" },
       },
       sort: "createdAt:asc",
-      fields: ["path", "createdAt", "bucket"],
+      fields: ["path", "createdAt", "bucket", "endpoint"],
     } as any);
 
     const sources = response.data.data ?? [];
     if (!sources.length) return null;
 
-    const s3Client = getS3();
-    const bucket = getBucket(process.env.MEDIA_BUCKET!, sources[0].bucket);
-    const sourcesWithPlaylists = await fetchPlaylistsFromS3(
-      s3Client,
-      bucket,
-      sources,
-    );
+    const sourcesWithPlaylists = await fetchPlaylistsFromS3(sources);
 
-    return {
-      sourcesWithPlaylists,
-      bucket: sources[0].bucket,
-    };
+    return { sourcesWithPlaylists };
   },
   ["playlist-sources"],
   { revalidate: 3600 },
@@ -51,13 +42,7 @@ async function buildSignedPlaylist(documentId: string) {
   const cached = await fetchSourcePlaylists(documentId);
   if (!cached) return null;
 
-  const s3Client = getS3();
-  const bucket = getBucket(process.env.MEDIA_BUCKET!, cached.bucket);
-  return combinePlaylistsWithSignedUrls(
-    s3Client,
-    bucket,
-    cached.sourcesWithPlaylists,
-  );
+  return combinePlaylistsWithSignedUrls(cached.sourcesWithPlaylists);
 }
 
 export type SourceWithPlaylist = Source & { playlist?: string | null };
@@ -125,21 +110,25 @@ async function fetchFromS3(
   }
 }
 
+// Each source carries its own bucket + endpoint. Using a single S3
+// client across sources breaks playback when sources are split between
+// Hetzner and B2 — they get signed against the wrong backend.
 async function fetchPlaylistsFromS3(
-  s3Client: S3Client,
-  bucket: string,
   sources: Source[],
 ): Promise<SourceWithPlaylist[]> {
   const playlists = await Promise.all(
-    sources.map((source) =>
-      source.path
-        ? fetchFromS3(
-            s3Client,
-            bucket,
-            `${source.path.substring(1)}playlist.m3u8`,
-          )
-        : Promise.resolve(null),
-    ),
+    sources.map((source) => {
+      if (!source.path) return Promise.resolve(null);
+      const client = getS3(
+        source.endpoint,
+      );
+      const bucket = getBucket(process.env.MEDIA_BUCKET!, source.bucket);
+      return fetchFromS3(
+        client,
+        bucket,
+        `${source.path.substring(1)}playlist.m3u8`,
+      );
+    }),
   );
 
   return sources.map((source, i) => ({
@@ -149,13 +138,17 @@ async function fetchPlaylistsFromS3(
 }
 
 async function combinePlaylistsWithSignedUrls(
-  s3Client: S3Client,
-  bucket: string,
   sources: SourceWithPlaylist[],
 ): Promise<string> {
   if (!sources || sources.length === 0) return "";
 
-  const toSign: { mapKey: string; s3Key: string }[] = [];
+  // Carry the source forward so each URL is signed with the right
+  // backend.
+  const toSign: {
+    mapKey: string;
+    s3Key: string;
+    source: SourceWithPlaylist;
+  }[] = [];
   const seen = new Set<string>();
 
   for (const source of sources) {
@@ -171,6 +164,7 @@ async function combinePlaylistsWithSignedUrls(
           toSign.push({
             mapKey,
             s3Key: `${source.path.substring(1)}${filename}`,
+            source,
           });
         }
       }
@@ -184,6 +178,7 @@ async function combinePlaylistsWithSignedUrls(
             toSign.push({
               mapKey,
               s3Key: `${source.path.substring(1)}${filename}`,
+              source,
             });
           }
         }
@@ -192,9 +187,13 @@ async function combinePlaylistsWithSignedUrls(
   }
 
   const signedEntries = await Promise.all(
-    toSign.map(async ({ mapKey, s3Key }) => {
+    toSign.map(async ({ mapKey, s3Key, source }) => {
+      const client = getS3(
+        source.endpoint,
+      );
+      const bucket = getBucket(process.env.MEDIA_BUCKET!, source.bucket);
       const command = new GetObjectCommand({ Bucket: bucket, Key: s3Key });
-      const url = await getSignedUrl(s3Client, command, { expiresIn: 14400 });
+      const url = await getSignedUrl(client, command, { expiresIn: 14400 });
       return [mapKey, proxySignedUrl(url)] as const;
     }),
   );

@@ -8,7 +8,7 @@ export async function GET(
   const { path } = await params;
   const filePath = path.join("/");
 
-  const s3 = s3Nbg1;
+  const s3 = s3Nbg1();
   const bucket = `${process.env.AVATAR_BUCKET!}-nbg`;
 
   const abortController = new AbortController();

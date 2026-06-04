@@ -45,7 +45,7 @@ export async function GET(
     return new Response("Not found", { status: 404 });
   }
 
-  const s3 = getS3();
+  const s3 = getS3(source.endpoint);
   const bucket = getBucket(process.env.MEDIA_BUCKET!, source.bucket);
   const key = `${source.path.substring(1)}${file}`;
 

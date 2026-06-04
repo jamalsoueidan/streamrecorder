@@ -4,15 +4,63 @@ import {
   S3Client,
 } from "@aws-sdk/client-s3";
 
-const s3 = new S3Client({
-  region: process.env.AWS_REGION,
-  endpoint: process.env.AWS_ENDPOINT,
-  credentials: {
-    accessKeyId: process.env.AWS_ACCESS_KEY_ID as string,
-    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY as string,
+// Endpoint → S3 connection config. Each source row carries its
+// own `endpoint` hostname; this map tells us how to actually talk
+// to that storage. Add a new entry to onboard another provider —
+// schema doesn't change.
+const ENDPOINT_CONFIGS: Record<
+  string,
+  {
+    endpoint: string;
+    region: string;
+    accessKeyId: string | undefined;
+    secretAccessKey: string | undefined;
+  }
+> = {
+  "nbg1.your-objectstorage.com": {
+    // Respect AWS_ENDPOINT env var — the rest of the backend already uses
+    // it for non-cron S3 work, and overriding to e.g. MinIO must apply
+    // here too. Fall back to the public Hetzner URL when not set.
+    endpoint:
+      process.env.AWS_ENDPOINT ?? "https://nbg1.your-objectstorage.com",
+    region: process.env.AWS_REGION ?? "nbg1",
+    accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
   },
-  forcePathStyle: true,
-});
+  "s3.eu-central-003.backblazeb2.com": {
+    endpoint: process.env.B2_ENDPOINT ?? "https://s3.eu-central-003.backblazeb2.com",
+    region: process.env.B2_REGION ?? "eu-central-003",
+    accessKeyId: process.env.B2_ACCESS_KEY_ID,
+    secretAccessKey: process.env.B2_SECRET_ACCESS_KEY,
+  },
+};
+
+const DEFAULT_ENDPOINT = "nbg1.your-objectstorage.com";
+
+const s3ClientCache = new Map<string, S3Client>();
+function getS3(endpoint: string | null | undefined): S3Client {
+  const ep = endpoint || DEFAULT_ENDPOINT;
+  let client = s3ClientCache.get(ep);
+  if (client) return client;
+  const cfg = ENDPOINT_CONFIGS[ep];
+  if (!cfg) throw new Error(`unknown S3 endpoint: ${ep}`);
+  if (!cfg.accessKeyId || !cfg.secretAccessKey) {
+    throw new Error(
+      `S3 credentials missing for endpoint "${ep}" — check env vars are set on this deployment`,
+    );
+  }
+  client = new S3Client({
+    region: cfg.region,
+    endpoint: cfg.endpoint,
+    credentials: {
+      accessKeyId: cfg.accessKeyId,
+      secretAccessKey: cfg.secretAccessKey,
+    },
+    forcePathStyle: true,
+  });
+  s3ClientCache.set(ep, client);
+  return client;
+}
 
 // Refuse anything that could wipe more than one recording folder.
 // Valid path shape: "/<platform>/<username>/<timestamp>/" → 3+ segments
@@ -41,6 +89,7 @@ function assertSafe(bucket: string, path: string) {
 const DRY_RUN = process.env.CRON_DELETE_DRY_RUN === "1";
 
 async function deleteS3Prefix(
+  s3: S3Client,
   bucket: string,
   prefix: string,
   log: (m: string) => void,
@@ -170,14 +219,21 @@ export default {
       const CONCURRENCY = 20;
 
       const { rows: expired } = (await knex.raw(`
-        SELECT id, bucket, path
+        SELECT id, bucket, path, endpoint
         FROM sources
         WHERE created_at < NOW() - INTERVAL '30 days'
           AND bucket IS NOT NULL
           AND path IS NOT NULL
         ORDER BY created_at
         LIMIT ${BATCH}
-      `)) as { rows: Array<{ id: number; bucket: string; path: string }> };
+      `)) as {
+        rows: Array<{
+          id: number;
+          bucket: string;
+          path: string;
+          endpoint: string | null;
+        }>;
+      };
 
       if (expired.length === 0) {
         strapi.log.info(
@@ -199,14 +255,15 @@ export default {
             try {
               assertSafe(src.bucket, src.path);
               const prefix = src.path.replace(/^\//, "");
-              await deleteS3Prefix(src.bucket, prefix, (m) =>
+              const s3 = getS3(src.endpoint);
+              await deleteS3Prefix(s3, src.bucket, prefix, (m) =>
                 strapi.log.info(m),
               );
               if (!DRY_RUN) deletedIds.push(src.id);
             } catch (err) {
               failed++;
               strapi.log.warn(
-                `[cron] deleteExpiredSources s3 fail id=${src.id} ${src.bucket}${src.path}: ${(err as Error).message}`,
+                `[cron] deleteExpiredSources s3 fail id=${src.id} endpoint=${src.endpoint ?? "(default)"} ${src.bucket}${src.path}: ${(err as Error).message}`,
               );
             }
           }

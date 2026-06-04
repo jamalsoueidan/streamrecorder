@@ -20,7 +20,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2026-05-31T12:41:19.750Z"
+    "x-generation-date": "2026-06-04T16:48:44.447Z"
   },
   "servers": [
     {
@@ -18147,6 +18147,13 @@
                     "bucket": {
                       "type": "string"
                     },
+                    "endpoint": {
+                      "type": "string",
+                      "enum": [
+                        "nbg1.your-objectstorage.com",
+                        "s3.eu-central-003.backblazeb2.com"
+                      ]
+                    },
                     "videoOriginal": {
                       "$ref": "#/components/schemas/VideosVideoComponent"
                     },
@@ -20824,6 +20831,13 @@
                         },
                         "bucket": {
                           "type": "string"
+                        },
+                        "endpoint": {
+                          "type": "string",
+                          "enum": [
+                            "nbg1.your-objectstorage.com",
+                            "s3.eu-central-003.backblazeb2.com"
+                          ]
                         },
                         "videoOriginal": {
                           "$ref": "#/components/schemas/VideosVideoComponent"
@@ -28097,6 +28111,13 @@
                     "bucket": {
                       "type": "string"
                     },
+                    "endpoint": {
+                      "type": "string",
+                      "enum": [
+                        "nbg1.your-objectstorage.com",
+                        "s3.eu-central-003.backblazeb2.com"
+                      ]
+                    },
                     "videoOriginal": {
                       "$ref": "#/components/schemas/VideosVideoComponent"
                     },
@@ -30610,6 +30631,13 @@
                         },
                         "bucket": {
                           "type": "string"
+                        },
+                        "endpoint": {
+                          "type": "string",
+                          "enum": [
+                            "nbg1.your-objectstorage.com",
+                            "s3.eu-central-003.backblazeb2.com"
+                          ]
                         },
                         "videoOriginal": {
                           "$ref": "#/components/schemas/VideosVideoComponent"
@@ -36462,6 +36490,13 @@
                     "bucket": {
                       "type": "string"
                     },
+                    "endpoint": {
+                      "type": "string",
+                      "enum": [
+                        "nbg1.your-objectstorage.com",
+                        "s3.eu-central-003.backblazeb2.com"
+                      ]
+                    },
                     "videoOriginal": {
                       "$ref": "#/components/schemas/VideosVideoComponent"
                     },
@@ -42016,6 +42051,13 @@
               "bucket": {
                 "type": "string"
               },
+              "endpoint": {
+                "type": "string",
+                "enum": [
+                  "nbg1.your-objectstorage.com",
+                  "s3.eu-central-003.backblazeb2.com"
+                ]
+              },
               "videoOriginal": {
                 "$ref": "#/components/schemas/VideosVideoComponent"
               },
@@ -42141,6 +42183,13 @@
           },
           "bucket": {
             "type": "string"
+          },
+          "endpoint": {
+            "type": "string",
+            "enum": [
+              "nbg1.your-objectstorage.com",
+              "s3.eu-central-003.backblazeb2.com"
+            ]
           },
           "videoOriginal": {
             "$ref": "#/components/schemas/VideosVideoComponent"
@@ -44054,6 +44103,13 @@
                     },
                     "bucket": {
                       "type": "string"
+                    },
+                    "endpoint": {
+                      "type": "string",
+                      "enum": [
+                        "nbg1.your-objectstorage.com",
+                        "s3.eu-central-003.backblazeb2.com"
+                      ]
                     },
                     "videoOriginal": {
                       "$ref": "#/components/schemas/VideosVideoComponent"
@@ -46346,6 +46402,13 @@
                     },
                     "bucket": {
                       "type": "string"
+                    },
+                    "endpoint": {
+                      "type": "string",
+                      "enum": [
+                        "nbg1.your-objectstorage.com",
+                        "s3.eu-central-003.backblazeb2.com"
+                      ]
                     },
                     "videoOriginal": {
                       "$ref": "#/components/schemas/VideosVideoComponent"
@@ -48770,6 +48833,13 @@
                     },
                     "bucket": {
                       "type": "string"
+                    },
+                    "endpoint": {
+                      "type": "string",
+                      "enum": [
+                        "nbg1.your-objectstorage.com",
+                        "s3.eu-central-003.backblazeb2.com"
+                      ]
                     },
                     "videoOriginal": {
                       "$ref": "#/components/schemas/VideosVideoComponent"

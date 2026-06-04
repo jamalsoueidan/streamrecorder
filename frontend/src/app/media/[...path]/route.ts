@@ -58,7 +58,7 @@ export async function GET(
       return new Response("Not found", { status: 404 });
     }
 
-    const s3 = getS3();
+    const s3 = getS3(source.endpoint);
     const mediaBucket = getBucket(process.env.MEDIA_BUCKET!, source.bucket);
 
     // Check if user is logged in
