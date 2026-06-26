@@ -797,56 +797,6 @@
           "answer": "موقعنا يطبّق سياسات المحتوى نفسها المتّبعة في باقي المنصّات: لا محتوى للكبار، لا قاصرين، لا انتهاكات للحقوق. التسجيلات التي يُبلَّغ عنها بموجب سياستنا أو سياسة يونو المعلنة تُزال فور ورود بلاغ عبر قناة DMCA / الإزالة لدينا."
         }
       ]
-    },
-    "clapper": {
-      "title": "تسجيلات كلابر — أرشيف دائم لبثوث كلابر المباشرة",
-      "description": "شاهد تسجيلات كاملة لبثوث كلابر المباشرة. كلابر منصة أمريكية مبنية لصنّاع المحتوى البالغين الذين تركوا تيك توك وفيسبوك بسبب الخوارزميات وسياسات الإشراف. الموجز داخل التطبيق لا يحتفظ بأرشيف عام للبثوث؛ موقعنا يمنح كل بث على كلابر رابطاً قابلاً لإعادة المشاهدة يبقى بعد أن تنتهي دورة الموجز.",
-      "keywords": [
-        "تسجيل كلابر",
-        "أرشيف كلابر المباشر",
-        "إعادة بث كلابر",
-        "مشاهدة بث كلابر",
-        "أرشيف كلابر",
-        "إعادة مشاهدة بث كلابر",
-        "بث كلابر فائت",
-        "أرشيف جواهر كلابر",
-        "أرشيف بديل تيك توك",
-        "أرشيف البث المباشر الأمريكي"
-      ],
-      "faqs": [
-        {
-          "question": "هل يمكنني إعادة مشاهدة بث كلابر بعد أن ينهيه البثّاث؟",
-          "answer": "على كلابر نفسها — لا. يختفي البث من الموجز حالما ينتهي، ولا يحتفظ التطبيق بأي أرشيف عام للبثوث المباشرة يستطيع المشاهدون العودة إليه. أمّا على موقعنا — فنعم، نلتقط البث أثناء بثّه على الهواء ونعيد تقديمه على رابط دائم لا يعتمد على احتفاظ تطبيق كلابر بأي شيء."
-        },
-        {
-          "question": "هل أحتاج إلى حساب على كلابر لمشاهدة تسجيل على موقعنا؟",
-          "answer": "لا. كل تسجيل يُشغَّل في أي متصفّح دون تسجيل دخول إلى كلابر، ودون رصيد جواهر، ودون تثبيت تطبيق كلابر. يُقدَّم التسجيل مباشرة من شبكتنا الطرفية، لا من كلابر."
-        },
-        {
-          "question": "هل الجواهر وتفاعلات الإكراميات محفوظة في التسجيل؟",
-          "answer": "الجزء المرئي من البث محفوظ — كل ما قاله البثّاث وفعله على الكاميرا، بما فيه ردود فعله حين تصل الجواهر. أمّا رسوم الجواهر/الإكراميات في كلابر فهي طبقة فوقية داخل التطبيق وليست جزءاً من تدفّق الفيديو نفسه، فأيقونات الجواهر الطائرة لا تظهر في التسجيل. لكن ردود البثّاث على هذه الإكراميات أمام الكاميرا محفوظة بالكامل."
-        },
-        {
-          "question": "لماذا تبقى كلابر مهمّة في 2026؟",
-          "answer": "نمت كلابر على مدى 2020-2024 لتصبح الوجهة للصنّاع البالغين في الولايات المتحدة الذين تركوا تيك توك بسبب تغييرات الخوارزمية، وسياسات الإشراف، وعدم توافق التركيبة العمرية للجمهور. تأسّست في أوستن عام 2018 وانطلقت علنياً عام 2020، وأصبحت اليوم منصة مهمّة لبثّاثي جيل X وجيل طفرة المواليد، ومعلّقي السياسة وأسلوب الحياة، والمجتمعات ذات الميول الأمريكية التي وجدت بقيّة التطبيقات مقيّدة أكثر من اللازم."
-        },
-        {
-          "question": "هل عليّ استخدام مسجّل شاشة لبثوث كلابر بدلاً من هذا؟",
-          "answer": "مسجّلات شاشة المتصفّح تعمل تقنياً، لكنها تتطلّب إبقاء تبويب كلابر مفتوحاً طوال الوقت، وتتوقّف لحظة قفل شاشة جهازك أو انقطاع الواي-فاي، وتلتقط بأي جودة تكون شاشتك تعمل عليها في تلك اللحظة. موقعنا يعمل في السحابة — يستمرّ الالتقاط سواء كان جهازك مشغّلاً أو مغلقاً، والملف المحفوظ هو بجودة البث الأصلية تماماً، لا بدقة شاشتك."
-        },
-        {
-          "question": "ماذا لو حُظر بثّاث كلابر أو جعل حسابه خاصاً؟",
-          "answer": "أي تسجيلات التقطناها قبل التغيير تبقى في الأرشيف على روابطها الموجودة. لا نزيل البثوث بأثر رجعي عند تغيّر حالة الصانع على كلابر. طلبات DMCA وطلبات الإزالة المباشرة من الصانع نتعامل معها بالطريقة نفسها المتّبعة في باقي المنصّات."
-        },
-        {
-          "question": "هل تسجيلات كلابر هنا ملف واحد أم قائمة تشغيل HLS؟",
-          "answer": "التسجيلات تُبثّ عبر HLS لتشغيل سريع في أي متصفّح، ويستطيع المستخدمون المميّزون تنزيل البث الكامل كملف MP4 واحد للمشاهدة بدون اتصال، أو لتجميع التعديلات، أو لإعادة الرفع على يوتيوب / Rumble أو أي مكان آخر تريد أن يجد فيه البث موطناً دائماً."
-        },
-        {
-          "question": "هل تطبّقون قواعد محتوى على تسجيلات كلابر؟",
-          "answer": "موقعنا يطبّق سياسات المحتوى نفسها المتّبعة في باقي المنصّات: لا محتوى للكبار، لا قاصرين، لا انتهاكات للحقوق، لا تحرّش موجّه. التسجيلات التي يُبلَّغ عنها بموجب سياستنا أو إرشادات كلابر المعلنة تُزال فور ورود بلاغ عبر قناة DMCA / الإزالة لدينا."
-        }
-      ]
     }
   },
   "hero": {
@@ -869,8 +819,7 @@
       "nimotv": "تسجيلات نيمو تي في",
       "vklive": "تسجيلات في كي لايف",
       "chzzk": "تسجيلات تشيزك",
-      "younow": "تسجيلات يونو",
-      "clapper": "تسجيلات كلابر"
+      "younow": "تسجيلات يونو"
     },
     "subtitle": {
       "all": "شاهد تسجيلات البث المباشر من صناع المحتوى على موقعنا. حمّل واكتشف محتوى جديد.",
@@ -891,8 +840,7 @@
       "nimotv": "شاهد تسجيلات بثوث نيمو تي في من صنّاع الإسبورتس على الجوّال — Mobile Legends، Free Fire، PUBG Mobile، COD Mobile. حمّل واكتشف صنّاعاً جدداً.",
       "vklive": "شاهد تسجيلات بثوث في كي لايف من البثّاثين الروس وفي رابطة الدول المستقلّة — ألعاب، موسيقى، بث خارجي. حمّل واكتشف بثّاثين جدداً.",
       "chzzk": "شاهد تسجيلات تشيزك من بثّاثين كوريين — ألعاب، قنوات شركاء LCK، بث خارجي، وبثّاثون قادمون من تويتش. حمّل واكتشف بثّاثين جدداً.",
-      "younow": "شاهد تسجيلات يونو من بثّاثين حول العالم. كل بث محفوظ خارج نافذة الموجز داخل التطبيق — حمّل واكتشف صنّاعاً جدداً.",
-      "clapper": "شاهد تسجيلات كلابر من بثّاثين أمريكيين — تعليق سياسي، أسلوب حياة، موسيقى، بث خارجي. حمّل واكتشف صنّاعاً جدداً."
+      "younow": "شاهد تسجيلات يونو من بثّاثين حول العالم. كل بث محفوظ خارج نافذة الموجز داخل التطبيق — حمّل واكتشف صنّاعاً جدداً."
     }
   },
   "cta": {
@@ -915,8 +863,7 @@
       "nimotv": "احفظ بثوث نيمو تي في",
       "vklive": "احفظ بثوث في كي لايف",
       "chzzk": "احفظ بثوث تشيزك",
-      "younow": "احفظ بثوث يونو",
-      "clapper": "احفظ بثوث كلابر"
+      "younow": "احفظ بثوث يونو"
     },
     "subtitle": {
       "all": "احفظ بثوث تيك توك، تويتش، يوتيوب، وكيك تلقائياً. حمّل التسجيلات، أنشئ مقاطع قصيرة، ونمّي جمهورك.",
@@ -937,8 +884,7 @@
       "nimotv": "احفظ بثوثك على نيمو تي في تلقائياً. كل ساعات الجلسات المُصنَّفة تُلتقط على الخادم، إضافة إلى مقاطع مميّزة عبر ClipAI لتيك توك وReels.",
       "vklive": "احفظ بثوث في كي لايف تلقائياً. أرشيف دائم خارج موجز VK، إضافة إلى مقاطع قصيرة عبر ClipAI لتيك توك وReels.",
       "chzzk": "احفظ بثوث تشيزك تلقائياً. أرشيف ويب دائم يتجاوز نافذة VOD على Naver، إضافة إلى مقاطع قصيرة عبر ClipAI لتيك توك وReels.",
-      "younow": "احفظ بثوثك على يونو تلقائياً. أرشيف ويب دائم يصمد بعد دورة الموجز داخل التطبيق، إلى جانب مقاطع قصيرة عبر ClipAI لتيك توك وReels.",
-      "clapper": "احفظ بثوثك على كلابر تلقائياً. أرشيف ويب دائم يصمد بعد دورة الموجز داخل التطبيق، إلى جانب مقاطع قصيرة عبر ClipAI لتيك توك وReels."
+      "younow": "احفظ بثوثك على يونو تلقائياً. أرشيف ويب دائم يصمد بعد دورة الموجز داخل التطبيق، إلى جانب مقاطع قصيرة عبر ClipAI لتيك توك وReels."
     },
     "button": "ابدأ التسجيل مجاناً"
   },
@@ -963,8 +909,7 @@
       "nimotv": "كن أوّل صانع يسجّل بث نيمو تي في!",
       "vklive": "كن أوّل بثّاث يسجّل بث في كي لايف!",
       "chzzk": "كن أوّل بثّاث يسجّل بث تشيزك!",
-      "younow": "كن أوّل صانع يسجّل بث يونو!",
-      "clapper": "كن أوّل صانع يسجّل بث كلابر!"
+      "younow": "كن أوّل صانع يسجّل بث يونو!"
     },
     "button": "ابدأ الآن"
   },
@@ -987,8 +932,7 @@
     "nimotv": "## NimoTV Live Recordings on موقعنا\n\nNimoTV (launched 2018 by Huya, part of Tencent's global gaming ecosystem) is the international mobile-esports streaming platform — purpose-built for the mobile-gaming explosion happening across **Brazil, Indonesia, Thailand, Mexico, and Peru**. The catalogue is dominated by **Mobile Legends: Bang Bang, Free Fire, PUBG Mobile, Call of Duty: Mobile, Wild Rift, and Arena of Valor**. Its creator base is mostly phone-only — no PC, no OBS, no capture card. When a ranked grind ends, the broadcast is gone. موقعنا catches every match before it disappears, on a public web URL fans can rewatch anytime.\n\n### Phone-Only Capture, Server-Side\n\nThe NimoTV creator workflow is brutally simple: open the NimoTV app, hit go-live, play the game, end the stream. There's no native VOD export. There's no \"keep my last broadcast for replay\" button you can rely on across regions and account tiers. And a phone running a ranked Mobile Legends match doesn't have spare resources to also run a screen recorder in the background — thermals, FPS, battery, and data all suffer. موقعنا runs entirely in our cloud. Your phone broadcasts on NimoTV the way it always has; we capture the stream upstream and store it on your creator page.\n\n### Full-Length Matches, Not 30-Second Clips\n\nMobile esports matches are long. MLBB ranked grinds run hours, Free Fire squads rotate through round after round, PUBG Mobile final-circle hunts can stretch a broadcast past 4 hours. NimoTV's in-app clip and replay surfaces, where they exist, are short-form by design. موقعنا saves the full broadcast — every match, every draft phase, every comms moment — at full length, ready to scrub. Want to review a teamfight you lost? Pull the recording, jump to the timestamp. Want a specific MVP highlight for a thumbnail? Clip it from the saved Live.\n\n### Brazilian and Indonesian Discovery, the Open Web Way\n\nNimoTV is huge inside its app in Brazil and SE Asia. It is also almost completely invisible on the open Portuguese, Spanish, and Indonesian web. Search for a top Brazilian MLBB streamer on Google and you'll get thin profile pages, third-party trackers, or nothing useful. Your موقعنا creator page is indexable, shareable, and openable in any browser — your Lives finally get a real Google footprint.\n\n### Cross-Posting to Where Mobile Gaming Fans Actually Hang Out\n\n#MLBB, #FreeFire, #PUBGM, #MobileGaming — the mobile esports community lives across TikTok, Instagram, YouTube, Discord, and language-specific community apps. Most don't have the NimoTV app installed and aren't going to install it to watch one stream. ClipAI scans your saved NimoTV Lives and cuts vertical highlight clips formatted for **TikTok, Instagram Reels, YouTube Shorts** — clutch plays, MVP moments, gift reactions. Use them as the funnel that brings new fans back to your NimoTV channel.\n\n### Watch in Browser, Download if You Need It\n\nEvery saved NimoTV Live plays instantly in any modern browser. No NimoTV account needed to watch. Premium creators can download the raw video file from each Live — useful for uploading full matches to YouTube as long-form gaming content, cutting compilations, or local archival.\n\n### Doesn't Touch Your NimoTV Account or Diamond Income\n\nموقعنا never logs into your NimoTV account, doesn't see diamond income, doesn't read your gifting stats, and doesn't interfere with Huya / Tencent creator program tiers or partner status. The recording is opt-in by you as the NimoTV creator for **your own** account, and only your own Lives — nothing else. Your NimoTV ranking, watch-time, gifting, and partner status remain entirely on NimoTV.\n\n### Opt-In, Delete Anytime\n\nموقعنا only records your own profile, only after you opt in. Stop recording any time. Delete any past NimoTV Live with a single click. Your content, your URL, your control — independent of the NimoTV app, built for mobile esports creators who don't have time to also run a recording rig.",
     "vklive": "## VK Live Recordings on موقعنا\n\nVK Live is the livestreaming layer inside **VKontakte (VK)**, Russia's biggest social network with over 100 million monthly active users. Unlike standalone streaming apps, VK Live is woven directly into VK's social graph — broadcasts appear in friends' feeds, get reposted into communities, integrate with **VK Music** and the **VK Play** gaming platform, and reach an audience that spans Russia, Belarus, Kazakhstan, and Russian-speaking communities worldwide. Since 2022, when Western livestreaming options became harder to access from Russia, VK Live has grown significantly as the de-facto livestreaming home for Russian-speaking creators. موقعنا records every VK Live broadcast to a stable, public web URL — built for creators who want their work to outlive a single news cycle in the VK feed.\n\n### The VK Feed Buries Streams Within Hours\n\nVK Live is a social-first stream surface. The strength of that design: a Live shows up in followers' feeds in real time, can be reposted into communities, pulls live engagement from the VK social graph. The weakness of that design: the VK algorithm prioritizes fresh content. Within a few hours of going offline, your broadcast slides down the feed. Within 24 hours, even popular VK Lives are effectively invisible to anyone who didn't catch them live. There's no proper archive UX, no dedicated past-streams view on your profile. Fans who'd love to rewatch a Dota 2 match, share a music set with a friend, or pull up that one clutch CS round you had last weekend have no real place to go.\n\nموقعنا gives every VK Live broadcast a stable URL on your creator page that exists independently of the VK feed cycle. The feed moves on, your archive stays.\n\n### Built for the VK Live Creator Mix\n\nVK Live's creator base is broad and category-rich. **Gaming**: Dota 2, CS 2, World of Tanks, Standoff 2 — the cornerstones of the Russian-speaking gaming community. **Music**: artists running album drops, acoustic sets, electronic DJ sets, often integrated with their VK Music releases. **IRL and lifestyle**: vlog-style streams, cooking, travel (where geopolitics allows), commentary on news and pop culture. **Anime and manga commentators**: reaction streams, watch-alongs, deep-dive discussions. **Educational**: language learning, coding tutorials, exam prep. The capture is upstream of your local hardware, so whatever you broadcast — OBS scene composition, gameplay overlays, music visualisers, webcam-only chat — preserves exactly as your fans saw it.\n\n### A Permanent Home for Long-Form Content\n\nThe VK feed is built for short attention spans — quick scrolling, fast engagement, fresh posts every few hours. That's fine for a 2-minute clip and actively hostile to a 3-hour Dota grind or a 90-minute concert set. A permanent archive on موقعنا is the long-form counterpart: fans who want to actually sit with your stream, rewatch a specific match, or share a moment with a friend get a stable URL that works the same way next week and next year. The clip lives in the feed; the full broadcast lives on your creator page.\n\n### Russian, CIS, and Diaspora Audiences\n\nVK is dominant inside Russia, Belarus, and Kazakhstan, but Russian-speaking communities also live throughout Europe, Israel, the US, and Canada — many of whom don't actively maintain a VK account day-to-day. موقعنا URLs work in any browser, anywhere in the world, with no VK login required to watch. Your diaspora fans get a way to keep up with your work that doesn't depend on them maintaining an active VK presence.\n\n### Cross-Platform Reach with ClipAI\n\nClipAI scans your saved VK Live broadcasts and cuts vertical short-form clips ready for **TikTok, Instagram Reels, YouTube Shorts**, and VK's own short-video features. Highlight plays from a Dota match, music drops from a concert set, funny chat moments, IRL reactions — turn one long broadcast into a stream of shareable content that brings new fans back to your VK Live channel.\n\n### Watch in Browser, Download if You Need It\n\nEvery saved VK Live plays instantly in any modern browser, no VK account required. Premium creators can download the raw video file from each broadcast — useful for re-uploading full matches to YouTube as long-form content, cutting compilations, or local archival on your own machine.\n\n### Doesn't Touch Your VK Account or Integrations\n\nموقعنا never logs into your VK account, doesn't interact with VK Music tags, doesn't touch VK Play integrations, and doesn't affect any of VK's creator-side metrics, monetization, or community management. The recording is opt-in by you as the VK Live creator for **your own** account, and only captures your own broadcasts — nothing else. Your VK profile, community pages, friend graph, and creator status stay entirely within VK.\n\n### Opt-In, Delete Anytime\n\nموقعنا only records your own profile, only after you opt in. Stop the recording flow any time. Delete any past VK Live with a single click. Your content, your URL, your control — a permanent archive of your work on the open web, where the VK feed buries streams fast but your back catalogue stays put.",
     "chzzk": "## مشاهدة تسجيلات تشيزك على موقعنا\n\nتشيزك (치지직) هي منصة البث المباشر التي تشغّلها **Naver**، أكبر شركة إنترنت في كوريا الجنوبية. دخلت النسخة التجريبية المفتوحة في ديسمبر 2023 وانطلقت رسمياً في أبريل 2024، في توقيت تزامن تماماً مع خروج تويتش من السوق الكوري الجنوبي — وقد وفّرت Naver أداة استيراد بنقرة واحدة من تويتش تنقل المتابعين والاشتراكات إلى المنصة الجديدة، فأصبحت تشيزك منذ ذلك الحين الوجهة الجديدة لشريحة كبيرة من أكثر بثّاثي كوريا متابعةً. أمّا الاسم 치지직 فهو محاكاة صوتية لطقطقة شاشة التلفزيون المهبطي (CRT) وهي تنتقل بين القنوات، الصوت الذي يصدره التلفزيون القديم لحظة التقاط الإشارة؛ اختارته Naver ليستدعي اللحظة التي يبدأ فيها البث على الهواء. ومع مطلع 2026 تستحوذ المنصة على نحو 39 بالمئة من ساعات البث المباشر في كوريا الجنوبية، وتبثّ بدقة تصل إلى 1080p و60 إطاراً في الثانية عند 8 ميغابت/ث — وهو سقف أعلى ملحوظاً من الحدّ الذي خفّضت إليه تويتش في أواخر 2022. موقعنا يلتقط بثوث تشيزك بجودة البث الأصلية ويعيد تقديمها على رابط دائم يعمل في أي متصفّح، دون الحاجة إلى حساب على Naver.\n\n### ما يمكنك إعادة مشاهدته هنا\n\nتأتي التسجيلات من بثّاثي المتنوّعات والألعاب الكوريين الذين انتقلوا من تويتش كوريا بعد الإغلاق — بثوث المحادثة الطويلة، حملات الـsubathon التي تمتدّ نصف يوم، بثّاثو الموسيقى والبث الخارجي الذين يبنون جمهورهم على المنصة الجديدة، وقنوات شركاء الرياضات الإلكترونية التي تبثّ مباريات League of Legends Champions Korea (تحتفظ Naver بالحقوق الحصرية لبثّ LCK باللغة الكورية من 2026 حتى 2030، بالشراكة مع SOOP Korea). كل بث يُلتقط كاملاً، لا كمقاطع منتقاة، فيُحفظ قوس البث بأكمله — البناء الأوّلي، الجولات الحاسمة، الفترات الطويلة بين اللحظات الصاخبة — من بدايته إلى نهايته.\n\n### لماذا يهمّ وجود أرشيف منفصل\n\nتدعم تشيزك نظام VOD ومقاطع قصيرة، غير أنّ تشغيل الـVOD اختياري لكل بث على حدة، ويترك كثير من البثّاثين الخيار معطّلاً في حملات الـsubathon والجلسات المدعومة وفعاليات لا يريدون أن يُعاد مشاهدتها كاملة. وعندما ينتهي البث وVOD معطّل، يختفي البث ببساطة من جانب تشيزك. وحتى عندما يُفعَّل VOD، فترة الاحتفاظ محدودة — البثوث القديمة تتساقط بمرور الوقت، ويحذف البثّاثون أحياناً بثوثاً سابقة، ونظام المقاطع في تشيزك يُبرز اللحظات لا الأقواس الكاملة، فمن المستحيل إعادة تركيب بث subathon من أربع ساعات من المقاطع وحدها. أرشيف موقعنا هو عنوان ويب دائم للبث الأصلي يبقى مستقلاً عن كل هذه الثغرات الأربع — خيار VOD لدى البثّاث، فترة الاحتفاظ في تشيزك، اقتصار النظام على المقاطع المنتقاة، والحذف اللاحق.",
-    "younow": "## مشاهدة تسجيلات يونو على موقعنا\n\nانطلقت يونو عام 2011 على يد Adi Sideman من نيويورك، وكانت من أوائل تطبيقات البث المباشر المخصّصة — الاكتشاف بالتمرير واقتصاد الهدايا بالعملات وأدوات props كلّها كانت موجودة فيها قبل سنوات من ظهور TikTok Live أو Twitch IRL أو Instagram Live. وعبر منتصف العقد الثاني من الألفية بنت يونو جمهوراً من المراهقين وجيل Z في الولايات المتحدة والمكسيك والبرازيل ومصر والسعودية، مع بثّاثين يقدّمون بثوث محادثة، عروض مواهب، ليالي ألعاب تفاعلية، جلسات موسيقية، ورفقة طوال الليل. اليوم، أصبح الكتالوج أصغر من ذروته السابقة، لكن الصيغة التي ساعدت يونو على تشكيلها لا تزال تعيش هنا، وقاعدة البثّاثين تبقى دولية بقوّة. موقعنا يلتقط بثوث يونو أثناء بثّها على الهواء ويعيد تقديمها على رابط دائم، دون الحاجة إلى تطبيق يونو أو تسجيل دخول للمشاهدة.\n\n### ما يمكنك إعادة مشاهدته هنا\n\nتمتدّ التسجيلات لتشمل الصيَغ التي يبثّها جمهور يونو فعلاً: بثوث المحادثة، عروض الغناء والرقص، غرف الألعاب التفاعلية، بثوث تعلّم اللغات بالإنجليزية والعربية والإسبانية والبرتغالية، بثوث الرفقة المتأخّرة من الأمريكتين، ولحظات الإكراميات بين البثّاث ومعجبيه التي بنت اقتصاد الـ props على يونو. يُلتقط كل بث كاملاً، فيُحفظ قوس البث بأكمله من لحظة دخول أوّل المشاهدين وحتى لحظة إنهاء البثّاث للبث، قابلاً للتشغيل في أي مكان.\n\n### لماذا يهمّ وجود أرشيف منفصل\n\nيونو نفسها لا تحتفظ بأي أرشيف عام للبثوث. لحظة أن يضغط البثّاث إنهاء، يختفي البث من التطبيق — لا توجد عودة، ولا قائمة VOD على الملف الشخصي، ولا أي طريقة للمشاهدين الذين فاتهم البث للحاق به لاحقاً. لحظات Moments المُولَّدة تلقائياً تحفظ مقاطع قصيرة تنتقيها الخوارزمية أو البثّاث، لكن البث الكامل — التصاعد البطيء، الضيوف المفاجئون، الفترات الطويلة التي تجعل بث يونو يبدو وكأنه رفقة لا محتوى — لا يمكن استرجاعه من Moments وحدها. أرشيف موقعنا هو النسخة الوحيدة الدائمة: رابط ويب يستطيع أي شخص فتحه دون تطبيق يونو، يعمل في أي متصفّح، ويبقى قائماً بعد فترة طويلة من انتقال البثّاث إلى بث جديد.",
-    "clapper": "## مشاهدة تسجيلات كلابر على موقعنا\n\nكلابر هي منصة البث المباشر والفيديو القصير الأمريكية التي تحوّلت إلى الموطن الفعلي للصنّاع البالغين الذين تركوا تيك توك وفيسبوك بسبب كبح الخوارزميات لوصولهم، وضغط سياسات الإشراف، وعدم توافق التركيبة العمرية لجمهورهم مع المنصّات الكبرى. تأسّست في أوستن، تكساس عام 2018 على يد Edison Chen، وانطلقت علنياً عام 2020، ومنذ ذلك الحين انحازت كلابر بقصد إلى قاعدة بثّاثين أكبر سنّاً وذات ميول أمريكية — معلّقي السياسة، صنّاع أسلوب الحياة، بثّاثي مجتمعات الجيش وإنفاذ القانون، محبّي موسيقى الكانتري، وجماهير جيل X وجيل طفرة المواليد الذين أرادوا بثوثاً أطول وتجربة اكتشاف أقل انتقاءً من تلك التي تقدّمها تطبيقات الفيديو القصير الكبرى. موقعنا يلتقط بثوث كلابر أثناء بثّها على الهواء ويعيد تقديمها على رابط دائم، دون الحاجة إلى تطبيق كلابر أو تسجيل دخول للمشاهدة.\n\n### ما يمكنك إعادة مشاهدته هنا\n\nتمتدّ التسجيلات لتشمل الصيغ التي يبثّها جمهور كلابر فعلاً: التعليق السياسي والإخباري الطويل، بثوث أسلوب الحياة والبث الخارجي، جلسات موسيقى الكانتري والأمريكانا، بثوث الإيمان والعائلة، بث الحياة الريفية والمزارع، إلى جانب لحظات الإكراميات بالجواهر حين يشكر المشاهدون البثّاث مباشرةً على الكاميرا. يُلتقط كل بث كاملاً، فيُحفظ قوس البث بأكمله — من لحظة دخول أوّل المشاهدين وحتى إنهاء البثّاث للبث — قابلاً للتشغيل في أي مكان.\n\n### لماذا يهمّ وجود أرشيف منفصل\n\nموجز تطبيق كلابر لا يحتفظ بأرشيفات عامة للبثوث بالطريقة التي يتوقّعها المشاهد من يوتيوب. لحظة أن ينهي البثّاث البث، يخرج من موجز الاكتشاف، ولا توجد تبويبة إعادة في الملف الشخصي يمرّر المعجبون فيها. البثوث الطويلة — الفقرات السياسية، حملات الـsubathon المموّلة بالجواهر، بثوث الحياة الريفية التي تمتدّ ساعات — لا يمكن استرجاعها بعد خروجها من الموجز. أرشيف موقعنا هو النسخة الدائمة: رابط ويب دائم يستطيع أي شخص فتحه دون تطبيق كلابر، يعمل في أي متصفّح، ويبقى قائماً بعد فترة طويلة من تجاوز نافذة الموجز له."
+    "younow": "## مشاهدة تسجيلات يونو على موقعنا\n\nانطلقت يونو عام 2011 على يد Adi Sideman من نيويورك، وكانت من أوائل تطبيقات البث المباشر المخصّصة — الاكتشاف بالتمرير واقتصاد الهدايا بالعملات وأدوات props كلّها كانت موجودة فيها قبل سنوات من ظهور TikTok Live أو Twitch IRL أو Instagram Live. وعبر منتصف العقد الثاني من الألفية بنت يونو جمهوراً من المراهقين وجيل Z في الولايات المتحدة والمكسيك والبرازيل ومصر والسعودية، مع بثّاثين يقدّمون بثوث محادثة، عروض مواهب، ليالي ألعاب تفاعلية، جلسات موسيقية، ورفقة طوال الليل. اليوم، أصبح الكتالوج أصغر من ذروته السابقة، لكن الصيغة التي ساعدت يونو على تشكيلها لا تزال تعيش هنا، وقاعدة البثّاثين تبقى دولية بقوّة. موقعنا يلتقط بثوث يونو أثناء بثّها على الهواء ويعيد تقديمها على رابط دائم، دون الحاجة إلى تطبيق يونو أو تسجيل دخول للمشاهدة.\n\n### ما يمكنك إعادة مشاهدته هنا\n\nتمتدّ التسجيلات لتشمل الصيَغ التي يبثّها جمهور يونو فعلاً: بثوث المحادثة، عروض الغناء والرقص، غرف الألعاب التفاعلية، بثوث تعلّم اللغات بالإنجليزية والعربية والإسبانية والبرتغالية، بثوث الرفقة المتأخّرة من الأمريكتين، ولحظات الإكراميات بين البثّاث ومعجبيه التي بنت اقتصاد الـ props على يونو. يُلتقط كل بث كاملاً، فيُحفظ قوس البث بأكمله من لحظة دخول أوّل المشاهدين وحتى لحظة إنهاء البثّاث للبث، قابلاً للتشغيل في أي مكان.\n\n### لماذا يهمّ وجود أرشيف منفصل\n\nيونو نفسها لا تحتفظ بأي أرشيف عام للبثوث. لحظة أن يضغط البثّاث إنهاء، يختفي البث من التطبيق — لا توجد عودة، ولا قائمة VOD على الملف الشخصي، ولا أي طريقة للمشاهدين الذين فاتهم البث للحاق به لاحقاً. لحظات Moments المُولَّدة تلقائياً تحفظ مقاطع قصيرة تنتقيها الخوارزمية أو البثّاث، لكن البث الكامل — التصاعد البطيء، الضيوف المفاجئون، الفترات الطويلة التي تجعل بث يونو يبدو وكأنه رفقة لا محتوى — لا يمكن استرجاعه من Moments وحدها. أرشيف موقعنا هو النسخة الوحيدة الدائمة: رابط ويب يستطيع أي شخص فتحه دون تطبيق يونو، يعمل في أي متصفّح، ويبقى قائماً بعد فترة طويلة من انتقال البثّاث إلى بث جديد."
   },
   "jsonLd": {
     "name": {
@@ -1010,8 +954,7 @@
       "nimotv": "تسجيلات بثوث نيمو تي في",
       "vklive": "تسجيلات بثوث في كي لايف",
       "chzzk": "تسجيل بث تشيزك المباشر",
-      "younow": "تسجيل بث يونو المباشر",
-      "clapper": "تسجيل بث كلابر المباشر"
+      "younow": "تسجيل بث يونو المباشر"
     },
     "description": {
       "all": "شاهد تسجيلات البث المباشر من صناع المحتوى على موقعنا.",
@@ -1032,8 +975,7 @@
       "nimotv": "شاهد تسجيلات بثوث نيمو تي في من صنّاع الإسبورتس على الجوّال على موقعنا.",
       "vklive": "شاهد تسجيلات بثوث في كي لايف من البثّاثين الروس وفي رابطة الدول المستقلّة على موقعنا.",
       "chzzk": "بث مباشر مؤرشف من تشيزك، منصة البث المباشر الكورية الجنوبية التابعة لـNaver، التُقط بنفس دقة البث الأصلي ومعدّل إطاراته.",
-      "younow": "بث مباشر مؤرشف من يونو، إحدى أوائل منصّات البث المباشر المخصّصة.",
-      "clapper": "بث مباشر مؤرشف من كلابر، المنصة الأمريكية المبنية للصنّاع البالغين الذين تركوا تيك توك وفيسبوك."
+      "younow": "بث مباشر مؤرشف من يونو، إحدى أوائل منصّات البث المباشر المخصّصة."
     },
     "streamTitle": "بث {nickname} - {date}",
     "streamDescription": {
@@ -1055,8 +997,7 @@
       "nimotv": "تسجيل بث نيمو تي في من {nickname}",
       "vklive": "تسجيل بث في كي لايف من {nickname}",
       "chzzk": "تسجيل بث تشيزك مباشر على موقعنا — البث الكوري الأصلي محفوظ لإعادة المشاهدة خارج نافذة VOD على تشيزك.",
-      "younow": "تسجيل بث يونو على موقعنا — البث الأصلي محفوظ لإعادة المشاهدة بعد أن يتقدّم موجز يونو ويتجاوزه.",
-      "clapper": "تسجيل بث كلابر على موقعنا — البث الأصلي محفوظ لإعادة المشاهدة بعد أن تتقدّم نافذة الموجز داخل كلابر وتتجاوزه."
+      "younow": "تسجيل بث يونو على موقعنا — البث الأصلي محفوظ لإعادة المشاهدة بعد أن يتقدّم موجز يونو ويتجاوزه."
     }
   },
   "recordedOn": "تم التسجيل في {date}",

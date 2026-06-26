@@ -2,7 +2,7 @@ import { LinkButton } from "@/app/components/link-button";
 import { generateProfileUrl } from "@/app/lib/profile-url";
 import { generateAlternates } from "@/app/lib/seo";
 import { getAlternateOgLocales, getOgLocale } from "@/i18n/routing";
-import { Container, Flex, Paper, Stack, Text, Title } from "@mantine/core";
+import { Container, Flex, Marquee, Paper, Stack, Text, Title } from "@mantine/core";
 import { IconArrowRight } from "@tabler/icons-react";
 import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
@@ -149,8 +149,6 @@ export default async function LandingPage({ params }: PageProps) {
           />
         </div>
 
-        <PlatformBadges href={`/recordings/`} activePlatform={"type"} />
-
         <Stack
           align="center"
           style={{ position: "relative", zIndex: 1 }}
@@ -218,6 +216,10 @@ export default async function LandingPage({ params }: PageProps) {
           </LinkButton>
         </Stack>
       </Container>
+
+      <Marquee pauseOnHover gap="md" mt="xl" duration={20000}>
+        <PlatformBadges href={`/recordings/`} activePlatform={"type"} />
+      </Marquee>
 
       {clips ? <ClipSlider clips={clips} /> : null}
 

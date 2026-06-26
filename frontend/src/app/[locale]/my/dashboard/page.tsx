@@ -51,7 +51,6 @@ const platformMap: Record<string, FollowerTypeEnum> = {
   Vklive: FollowerTypeEnum.Vklive,
   Chzzk: FollowerTypeEnum.Chzzk,
   YouNow: FollowerTypeEnum.Younow,
-  Clapper: FollowerTypeEnum.Clapper,
 };
 
 export default async function Page() {

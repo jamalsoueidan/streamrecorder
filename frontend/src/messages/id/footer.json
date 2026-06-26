@@ -32,7 +32,6 @@
     "nimotv": "Streamer NimoTV",
     "vklive": "Streamer VK Live",
     "younow": "Kreator YouNow",
-    "clapper": "Kreator Clapper",
     "chzzk": "Kreator Chzzk"
   },
   "watchRecordings": {
@@ -55,7 +54,6 @@
     "nimotv": "Rekaman NimoTV",
     "vklive": "Rekaman VK Live",
     "younow": "Rekaman YouNow",
-    "clapper": "Rekaman Clapper",
     "chzzk": "Rekaman Chzzk"
   },
   "legal": {

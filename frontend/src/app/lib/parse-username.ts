@@ -248,19 +248,6 @@ export function parseUsername(input: string): ParsedUsername {
     };
   }
 
-  // Clapper — clapperapp.com/{username}. Username can be letters, digits,
-  // underscore, dot, hyphen. The path after the domain is the username.
-  const clapperRegex =
-    /(?:https?:\/\/)?(?:www\.)?clapperapp\.com\/([a-zA-Z0-9._-]+)/i;
-  const clapperMatch = trimmed.match(clapperRegex);
-
-  if (clapperMatch) {
-    return {
-      username: clapperMatch[1],
-      platform: "clapper",
-    };
-  }
-
   // Plain username - remove @ if present
   const username = trimmed.startsWith("@") ? trimmed.slice(1) : trimmed;
 

@@ -32,7 +32,6 @@
     "nimotv": "NimoTV creators",
     "vklive": "VK Live creators",
     "younow": "Mga YouNow creator",
-    "clapper": "Mga Clapper creator",
     "chzzk": "Mga Chzzk creator"
   },
   "watchRecordings": {
@@ -55,7 +54,6 @@
     "nimotv": "NimoTV recordings",
     "vklive": "VK Live recordings",
     "younow": "YouNow recordings",
-    "clapper": "Clapper recordings",
     "chzzk": "Chzzk recordings"
   },
   "legal": {
