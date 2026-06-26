@@ -22,8 +22,7 @@
       "nimotv": "NimoTV Creators",
       "vklive": "VK Live Creators",
       "younow": "Mga YouNow creator",
-      "chzzk": "Mga Chzzk creator",
-      "clapper": "Mga Clapper creator"
+      "chzzk": "Mga Chzzk creator"
     },
     "subtitle": {
       "all": "Tingnan lahat ng streamers at creators",
@@ -44,8 +43,7 @@
       "nimotv": "Tuklasin ang mga NimoTV creator",
       "vklive": "Tuklasin ang mga VK Live creator",
       "younow": "Tuklasin ang mga YouNow broadcaster",
-      "chzzk": "Tuklasin ang mga Chzzk streamer",
-      "clapper": "Tuklasin ang mga Clapper creator"
+      "chzzk": "Tuklasin ang mga Chzzk streamer"
     }
   },
   "recordings": {
@@ -68,8 +66,7 @@
       "nimotv": "NimoTV Recordings",
       "vklive": "VK Live Recordings",
       "younow": "YouNow Recordings",
-      "chzzk": "Chzzk Recordings",
-      "clapper": "Clapper Recordings"
+      "chzzk": "Chzzk Recordings"
     },
     "subtitle": {
       "all": "Panoorin ang mga recorded live stream",
@@ -90,8 +87,7 @@
       "nimotv": "Panoorin ang mga recorded NimoTV live stream",
       "vklive": "Panoorin ang mga recorded VK Live live stream",
       "younow": "Panoorin ang mga recorded YouNow Lives",
-      "chzzk": "Panoorin ang mga recorded Chzzk stream",
-      "clapper": "Panoorin ang mga recorded Clapper stream"
+      "chzzk": "Panoorin ang mga recorded Chzzk stream"
     }
   },
   "home": {

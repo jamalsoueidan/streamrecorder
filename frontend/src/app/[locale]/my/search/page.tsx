@@ -70,7 +70,6 @@ const ALL_PLATFORMS: PlatformType[] = [
   "vklive",
   "chzzk",
   "younow",
-  "clapper",
 ];
 
 type SearchStep = "input" | "selectPlatform" | "results";

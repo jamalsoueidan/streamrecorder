@@ -22,8 +22,7 @@
       "nimotv": "Streamer NimoTV",
       "vklive": "Streamer VK Live",
       "younow": "Kreator YouNow",
-      "chzzk": "Kreator Chzzk",
-      "clapper": "Kreator Clapper"
+      "chzzk": "Kreator Chzzk"
     },
     "subtitle": {
       "all": "Jelajahi semua streamer dan kreator",
@@ -44,8 +43,7 @@
       "nimotv": "Temukan streamer NimoTV",
       "vklive": "Temukan streamer VK Live",
       "younow": "Temukan broadcaster YouNow",
-      "chzzk": "Temukan streamer Chzzk",
-      "clapper": "Temukan streamer Clapper"
+      "chzzk": "Temukan streamer Chzzk"
     }
   },
   "recordings": {
@@ -68,8 +66,7 @@
       "nimotv": "Rekaman NimoTV",
       "vklive": "Rekaman VK Live",
       "younow": "Rekaman YouNow",
-      "chzzk": "Rekaman Chzzk",
-      "clapper": "Rekaman Clapper"
+      "chzzk": "Rekaman Chzzk"
     },
     "subtitle": {
       "all": "Tonton rekaman live stream",
@@ -90,8 +87,7 @@
       "nimotv": "Tonton stream NimoTV yang direkam",
       "vklive": "Tonton stream VK Live yang direkam",
       "younow": "Tonton Live YouNow yang direkam",
-      "chzzk": "Tonton stream Chzzk yang direkam",
-      "clapper": "Tonton stream Clapper yang direkam"
+      "chzzk": "Tonton stream Chzzk yang direkam"
     }
   },
   "home": {

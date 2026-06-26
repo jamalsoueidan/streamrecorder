@@ -714,56 +714,6 @@
           "answer": "Platformumuz, diğer her platformda olduğu gibi aynı içerik politikalarını uygular: yetişkin içeriği yok, reşit olmayanlar yok, hak ihlali yok. Bizim politikamız ya da YouNow'un yayımlanmış politikası kapsamında işaretlenen kayıtlar, DMCA / kaldırma kanalımız üzerinden bildirildiğinde kaldırılır."
         }
       ]
-    },
-    "clapper": {
-      "title": "Clapper Kayıtları — Clapper Live'larının Kalıcı Arşivi",
-      "description": "Clapper Live'larının tam kayıtlarını izle. Clapper, algoritma ve moderasyon sorunları nedeniyle TikTok ve Facebook'tan ayrılan yetişkin yayıncılar için kurulmuş ABD merkezli bir platform. Uygulama içi akış, kamuya açık bir yayın arşivi tutmuyor; platformumuz ise her Clapper Live'ına, akış döngüsünden kurtulan yeniden izlenebilir bir URL veriyor.",
-      "keywords": [
-        "clapper kaydı",
-        "clapper live arşivi",
-        "clapper yayın tekrarı",
-        "clapper live izle",
-        "clapper arşivi",
-        "clapper yayın yeniden izle",
-        "kaçırılan clapper live",
-        "clapper gem arşivi",
-        "tiktok alternatifi arşiv",
-        "abd canlı yayın arşivi"
-      ],
-      "faqs": [
-        {
-          "question": "Yayıncı yayını bitirdikten sonra bir Clapper Live'ını yeniden izleyebilir miyim?",
-          "answer": "Clapper'ın kendisinde — hayır, yayın bittiği anda akıştan kayboluyor; uygulama izleyiciler için kamuya açık bir Live arşivi tutmuyor. Platformumuz'da — evet, Live'ı yayınlandığı anda yakalıyoruz ve Clapper'ın uygulamasının herhangi bir şeyi saklamasına bağlı olmayan kalıcı bir URL'de geri sunuyoruz."
-        },
-        {
-          "question": "Platformumuz'da bir kaydı izlemek için Clapper hesabına ihtiyacım var mı?",
-          "answer": "Hayır. Her kayıt; Clapper girişi, gem bakiyesi veya Clapper uygulaması yüklü olmadan herhangi bir tarayıcıda oynar. Kayıt doğrudan kendi CDN'imizden sunulur, Clapper'dan değil."
-        },
-        {
-          "question": "Gem'ler ve bahşiş tepkileri kayıtta korunuyor mu?",
-          "answer": "Yayının video kısmı korunur — yayıncının kamerada söylediği ve yaptığı her şey, gem'ler geldiğinde verdiği tepkiler dahil. Clapper'ın gem/bahşiş animasyonları, video akışının değil uygulama içi bir bindirme katmanının parçasıdır; yani uçuşan gem ikonları kayıtta görünmez. Buna karşılık yayıncının bu bahşişlere kamerada verdiği tepkiler tamamen korunur."
-        },
-        {
-          "question": "Clapper 2026'da neden hâlâ önemli?",
-          "answer": "Clapper 2020-2024 boyunca, algoritma değişiklikleri, moderasyon ve izleyici demografisi uyumsuzluğu nedeniyle TikTok'tan ayrılan yetişkin ABD yayıncılarının ana adresi olarak büyüdü. 2018'de Austin'de Edison Chen tarafından kuruldu ve 2020'de kamuya açıldı; bugün Gen X ve Boomer yayıncılar, siyasi ve lifestyle yorumcuları ve diğer uygulamaları fazla kısıtlayıcı bulan ABD ağırlıklı topluluklar için önemli bir platform."
-        },
-        {
-          "question": "Clapper için bunun yerine kullanmam gereken bir ekran kaydedici var mı?",
-          "answer": "Tarayıcı ekran kaydedicileri teknik olarak çalışır ama Clapper sekmesini tüm yayın boyunca açık tutmanı gerektirir, cihazın kilitlendiğinde ya da Wi-Fi'ın koptuğunda durur ve ekranın o anda hangi kalitede çalışıyorsa onu yakalar. Platformumuz bulutta çalışır — cihazın açık olsa da olmasa da yakalama devam eder ve kaydedilen dosya, ekran çözünürlüğün değil tam olarak yayının kendisidir."
-        },
-        {
-          "question": "Bir Clapper yayıncısı yasaklanır veya gizliye geçerse ne olur?",
-          "answer": "Değişiklikten önce yakaladığımız kayıtlar mevcut URL'lerinde arşivde kalır. Bir içerik üreticisinin Clapper durumu değiştiğinde yayınları geriye dönük olarak kaldırmıyoruz. DMCA ve doğrudan içerik üreticisi kaldırma talepleri, diğer her platformda olduğu gibi aynı şekilde işlenir."
-        },
-        {
-          "question": "Buradaki kayıtlar tek dosya mı, yoksa HLS playlist mi?",
-          "answer": "Kayıtlar, herhangi bir tarayıcıda hızlı oynatma için HLS üzerinden yayınlanır; premium kullanıcılar ise tam yayını çevrimdışı izlemek, derleme kurgulamak veya YouTube / Rumble / kalıcı bir ev vermek istediğin başka bir yere yeniden yüklemek için tek bir MP4 olarak indirebilir."
-        },
-        {
-          "question": "Clapper kayıtlarında içerik kurallarını uyguluyor musunuz?",
-          "answer": "Platformumuz, diğer her platformda olduğu gibi aynı içerik politikalarını uygular: yetişkin içeriği yok, reşit olmayanlar yok, hak ihlali yok, hedefli taciz yok. Bizim politikamız ya da Clapper'ın yayımlanmış kuralları kapsamında işaretlenen kayıtlar, DMCA / kaldırma kanalımız üzerinden bildirildiğinde kaldırılır."
-        }
-      ]
     }
   },
   "hero": {
@@ -786,8 +736,7 @@
       "nimotv": "NimoTV Kayıtları",
       "vklive": "VK Live Kayıtları",
       "chzzk": "Chzzk Kayıtları",
-      "younow": "YouNow Kayıtları",
-      "clapper": "Clapper Kayıtları"
+      "younow": "YouNow Kayıtları"
     },
     "subtitle": {
       "all": "Platformumuzdaki içerik üreticilerinden canlı yayın kayıtlarını izleyin. İndirin ve yeni içerikler keşfedin.",
@@ -808,8 +757,7 @@
       "nimotv": "Platformumuzdaki yayıncılardan NimoTV yayın kayıtlarını izleyin. İndirin ve yeni yayıncılar keşfedin.",
       "vklive": "Platformumuzdaki yayıncılardan VK Live yayın kayıtlarını izleyin. İndirin ve yeni yayıncılar keşfedin.",
       "chzzk": "Kore'den Chzzk kayıtlarını izleyin — oyun, LCK partner kanalları, IRL ve eski Twitch yayıncıları. İndirin ve yeni yayıncılar keşfedin.",
-      "younow": "Dünya genelinde yayıncılardan YouNow kayıtlarını izle. Uygulamanın akış penceresinin ötesinde korunan her Live — indir ve yeni içerik üreticileri keşfet.",
-      "clapper": "ABD merkezli yayıncılardan Clapper kayıtlarını izle — siyasi yorum, lifestyle, müzik, IRL sohbet. İndir ve yeni içerik üreticileri keşfet."
+      "younow": "Dünya genelinde yayıncılardan YouNow kayıtlarını izle. Uygulamanın akış penceresinin ötesinde korunan her Live — indir ve yeni içerik üreticileri keşfet."
     }
   },
   "cta": {
@@ -832,8 +780,7 @@
       "nimotv": "NimoTV Yayınlarınızı Kaydedin",
       "vklive": "VK Live Yayınlarınızı Kaydedin",
       "chzzk": "Chzzk Live'larınızı Kaydedin",
-      "younow": "YouNow Live'larını Kaydet",
-      "clapper": "Clapper Live'larını Kaydet"
+      "younow": "YouNow Live'larını Kaydet"
     },
     "subtitle": {
       "all": "TikTok, Twitch, YouTube ve Kick yayınlarınızı otomatik olarak kaydedin. Kayıtları indirin, kısa klipler oluşturun ve kitlenizi büyütün.",
@@ -854,8 +801,7 @@
       "nimotv": "NimoTV yayınlarınızı otomatik olarak kaydedin. Her yayın için bağımsız yedek, ClipAI ile kısa klipler.",
       "vklive": "VK Live yayınlarınızı otomatik olarak kaydedin. Her yayın için bağımsız yedek, ClipAI ile kısa klipler.",
       "chzzk": "Chzzk Live'larınızı otomatik olarak kaydedin. Naver'in VOD zaman çizelgesinin ötesinde kalıcı bir web arşivi, artı TikTok ve Reels için ClipAI ile kısa klipler.",
-      "younow": "YouNow Live'larını otomatik olarak kaydet. Uygulama içi akış döngüsünden kurtulan kalıcı bir web arşivi, artı TikTok ve Reels için ClipAI ile kısa klipler.",
-      "clapper": "Clapper Live'larını otomatik olarak kaydet. Uygulama içi akıştan kurtulan kalıcı bir web arşivi, artı TikTok ve Reels için ClipAI ile kısa klipler."
+      "younow": "YouNow Live'larını otomatik olarak kaydet. Uygulama içi akış döngüsünden kurtulan kalıcı bir web arşivi, artı TikTok ve Reels için ClipAI ile kısa klipler."
     },
     "button": "Ücretsiz Kayda Başla"
   },
@@ -880,8 +826,7 @@
       "nimotv": "NimoTV yayını kaydeden ilk yayıncı olun!",
       "vklive": "VK Live yayını kaydeden ilk yayıncı olun!",
       "chzzk": "Chzzk yayını kaydeden ilk yayıncı olun!",
-      "younow": "YouNow yayını kaydeden ilk içerik üreticisi ol!",
-      "clapper": "Clapper yayını kaydeden ilk içerik üreticisi ol!"
+      "younow": "YouNow yayını kaydeden ilk içerik üreticisi ol!"
     },
     "button": "Başlayın"
   },
@@ -904,8 +849,7 @@
     "nimotv": "## NimoTV Live Recordings on platformumuz\n\nNimoTV (launched 2018 by Huya, part of Tencent's global gaming ecosystem) is the international mobile-esports streaming platform — purpose-built for the mobile-gaming explosion happening across **Brazil, Indonesia, Thailand, Mexico, and Peru**. The catalogue is dominated by **Mobile Legends: Bang Bang, Free Fire, PUBG Mobile, Call of Duty: Mobile, Wild Rift, and Arena of Valor**. Its creator base is mostly phone-only — no PC, no OBS, no capture card. When a ranked grind ends, the broadcast is gone. Platformumuz catches every match before it disappears, on a public web URL fans can rewatch anytime.\n\n### Phone-Only Capture, Server-Side\n\nThe NimoTV creator workflow is brutally simple: open the NimoTV app, hit go-live, play the game, end the stream. There's no native VOD export. There's no \"keep my last broadcast for replay\" button you can rely on across regions and account tiers. And a phone running a ranked Mobile Legends match doesn't have spare resources to also run a screen recorder in the background — thermals, FPS, battery, and data all suffer. Platformumuz runs entirely in our cloud. Your phone broadcasts on NimoTV the way it always has; we capture the stream upstream and store it on your creator page.\n\n### Full-Length Matches, Not 30-Second Clips\n\nMobile esports matches are long. MLBB ranked grinds run hours, Free Fire squads rotate through round after round, PUBG Mobile final-circle hunts can stretch a broadcast past 4 hours. NimoTV's in-app clip and replay surfaces, where they exist, are short-form by design. Platformumuz saves the full broadcast — every match, every draft phase, every comms moment — at full length, ready to scrub. Want to review a teamfight you lost? Pull the recording, jump to the timestamp. Want a specific MVP highlight for a thumbnail? Clip it from the saved Live.\n\n### Brazilian and Indonesian Discovery, the Open Web Way\n\nNimoTV is huge inside its app in Brazil and SE Asia. It is also almost completely invisible on the open Portuguese, Spanish, and Indonesian web. Search for a top Brazilian MLBB streamer on Google and you'll get thin profile pages, third-party trackers, or nothing useful. Your platformumuz creator page is indexable, shareable, and openable in any browser — your Lives finally get a real Google footprint.\n\n### Cross-Posting to Where Mobile Gaming Fans Actually Hang Out\n\n#MLBB, #FreeFire, #PUBGM, #MobileGaming — the mobile esports community lives across TikTok, Instagram, YouTube, Discord, and language-specific community apps. Most don't have the NimoTV app installed and aren't going to install it to watch one stream. ClipAI scans your saved NimoTV Lives and cuts vertical highlight clips formatted for **TikTok, Instagram Reels, YouTube Shorts** — clutch plays, MVP moments, gift reactions. Use them as the funnel that brings new fans back to your NimoTV channel.\n\n### Watch in Browser, Download if You Need It\n\nEvery saved NimoTV Live plays instantly in any modern browser. No NimoTV account needed to watch. Premium creators can download the raw video file from each Live — useful for uploading full matches to YouTube as long-form gaming content, cutting compilations, or local archival.\n\n### Doesn't Touch Your NimoTV Account or Diamond Income\n\nPlatformumuz never logs into your NimoTV account, doesn't see diamond income, doesn't read your gifting stats, and doesn't interfere with Huya / Tencent creator program tiers or partner status. The recording is opt-in by you as the NimoTV creator for **your own** account, and only your own Lives — nothing else. Your NimoTV ranking, watch-time, gifting, and partner status remain entirely on NimoTV.\n\n### Opt-In, Delete Anytime\n\nPlatformumuz only records your own profile, only after you opt in. Stop recording any time. Delete any past NimoTV Live with a single click. Your content, your URL, your control — independent of the NimoTV app, built for mobile esports creators who don't have time to also run a recording rig.",
     "vklive": "## VK Live Recordings on platformumuz\n\nVK Live is the livestreaming layer inside **VKontakte (VK)**, Russia's biggest social network with over 100 million monthly active users. Unlike standalone streaming apps, VK Live is woven directly into VK's social graph — broadcasts appear in friends' feeds, get reposted into communities, integrate with **VK Music** and the **VK Play** gaming platform, and reach an audience that spans Russia, Belarus, Kazakhstan, and Russian-speaking communities worldwide. Since 2022, when Western livestreaming options became harder to access from Russia, VK Live has grown significantly as the de-facto livestreaming home for Russian-speaking creators. Platformumuz records every VK Live broadcast to a stable, public web URL — built for creators who want their work to outlive a single news cycle in the VK feed.\n\n### The VK Feed Buries Streams Within Hours\n\nVK Live is a social-first stream surface. The strength of that design: a Live shows up in followers' feeds in real time, can be reposted into communities, pulls live engagement from the VK social graph. The weakness of that design: the VK algorithm prioritizes fresh content. Within a few hours of going offline, your broadcast slides down the feed. Within 24 hours, even popular VK Lives are effectively invisible to anyone who didn't catch them live. There's no proper archive UX, no dedicated past-streams view on your profile. Fans who'd love to rewatch a Dota 2 match, share a music set with a friend, or pull up that one clutch CS round you had last weekend have no real place to go.\n\nPlatformumuz gives every VK Live broadcast a stable URL on your creator page that exists independently of the VK feed cycle. The feed moves on, your archive stays.\n\n### Built for the VK Live Creator Mix\n\nVK Live's creator base is broad and category-rich. **Gaming**: Dota 2, CS 2, World of Tanks, Standoff 2 — the cornerstones of the Russian-speaking gaming community. **Music**: artists running album drops, acoustic sets, electronic DJ sets, often integrated with their VK Music releases. **IRL and lifestyle**: vlog-style streams, cooking, travel (where geopolitics allows), commentary on news and pop culture. **Anime and manga commentators**: reaction streams, watch-alongs, deep-dive discussions. **Educational**: language learning, coding tutorials, exam prep. The capture is upstream of your local hardware, so whatever you broadcast — OBS scene composition, gameplay overlays, music visualisers, webcam-only chat — preserves exactly as your fans saw it.\n\n### A Permanent Home for Long-Form Content\n\nThe VK feed is built for short attention spans — quick scrolling, fast engagement, fresh posts every few hours. That's fine for a 2-minute clip and actively hostile to a 3-hour Dota grind or a 90-minute concert set. A permanent archive on platformumuz is the long-form counterpart: fans who want to actually sit with your stream, rewatch a specific match, or share a moment with a friend get a stable URL that works the same way next week and next year. The clip lives in the feed; the full broadcast lives on your creator page.\n\n### Russian, CIS, and Diaspora Audiences\n\nVK is dominant inside Russia, Belarus, and Kazakhstan, but Russian-speaking communities also live throughout Europe, Israel, the US, and Canada — many of whom don't actively maintain a VK account day-to-day. Platformumuz URLs work in any browser, anywhere in the world, with no VK login required to watch. Your diaspora fans get a way to keep up with your work that doesn't depend on them maintaining an active VK presence.\n\n### Cross-Platform Reach with ClipAI\n\nClipAI scans your saved VK Live broadcasts and cuts vertical short-form clips ready for **TikTok, Instagram Reels, YouTube Shorts**, and VK's own short-video features. Highlight plays from a Dota match, music drops from a concert set, funny chat moments, IRL reactions — turn one long broadcast into a stream of shareable content that brings new fans back to your VK Live channel.\n\n### Watch in Browser, Download if You Need It\n\nEvery saved VK Live plays instantly in any modern browser, no VK account required. Premium creators can download the raw video file from each broadcast — useful for re-uploading full matches to YouTube as long-form content, cutting compilations, or local archival on your own machine.\n\n### Doesn't Touch Your VK Account or Integrations\n\nPlatformumuz never logs into your VK account, doesn't interact with VK Music tags, doesn't touch VK Play integrations, and doesn't affect any of VK's creator-side metrics, monetization, or community management. The recording is opt-in by you as the VK Live creator for **your own** account, and only captures your own broadcasts — nothing else. Your VK profile, community pages, friend graph, and creator status stay entirely within VK.\n\n### Opt-In, Delete Anytime\n\nPlatformumuz only records your own profile, only after you opt in. Stop the recording flow any time. Delete any past VK Live with a single click. Your content, your URL, your control — a permanent archive of your work on the open web, where the VK feed buries streams fast but your back catalogue stays put.",
     "chzzk": "## platformumuz'da Chzzk kayıtlarını izlemek\n\nChzzk (치지직), Güney Kore'nin en büyük internet şirketi olan **Naver** tarafından işletilen canlı yayın platformudur. Aralık 2023'te açık betaya girdi ve Nisan 2024'te tam olarak hizmete açıldı — tam da Twitch'in Güney Kore pazarından çekildiği döneme denk geliyor. Naver, yayıncıların takipçilerini ve aboneliklerini tek tıkla taşıyabileceği bir Twitch import aracı sundu ve Chzzk o günden beri Kore'nin en çok izlenen canlı yayıncılarının önemli bir kısmına yeni ev oldu. 치지직 ismi, eski tüp televizyonların kanal aradığında çıkardığı parazit sesinin yansımasıdır — yani bir yayının yayına ilk girdiği anın sesi; Naver de bu çağrışımı bilerek seçti. 2026 başı itibarıyla platform, Güney Kore'nin canlı yayın saatlerinin yaklaşık yüzde 39'unu elinde tutuyor ve 8 Mbps'de 1080p 60fps'e kadar yayın yapıyor — bu Twitch'in 2022 sonunda düşürdüğü tavanın belirgin biçimde üstünde. Platformumuz, Chzzk Live'larını bu yayın kalitesinde yakalar ve herhangi bir tarayıcıda Naver hesabı olmadan açılan kalıcı bir URL'de geri sunar.\n\n### Burada neleri yeniden izleyebilirsin\n\nKayıtlar, Twitch Korea'nın kapanmasından sonra yeni platforma geçen Koreli variety ve oyun yayıncılarından geliyor — yarım gün süren just-chatting yayınları, yarım güne yayılan subathon'lar, yeni platformda kitle kuran müzik ve IRL yayıncıları ve League of Legends Champions Korea maçlarını yayınlayan esports partner kanalları (Naver, 2026–2030 arası özel Kore dili LCK haklarına sahip; bu haklar SOOP Korea ile paylaşılıyor). Her Live, seçilmiş öne çıkan klipler olarak değil tam haliyle yakalanır; böylece yayının yayı — yapım aşaması, ardı ardına gelen runlar, yüksek sesli anlar arasındaki uzun bölümler — baştan sona korunur.\n\n### Neden ayrı bir arşive ihtiyacın var\n\nChzzk, VOD ve kısa klipleri destekliyor ama VOD oynatması yayın bazında opt-in ve birçok yayıncı subathon'lar, sponsorlu oturumlar ve tam olarak yeniden izlenmesini istemediği etkinlikler için bu seçeneği kapalı bırakıyor. Live VOD kapalıyken biterse, yayın Chzzk tarafından basitçe siliniyor. VOD açık olsa bile saklama süresi sınırlı — eski yayınlar zamanla dönüşüme uğrar, yayıncılar bazen geçmiş Live'ları siler ve Chzzk'ın klip sistemi yayın yayı yerine anlar üzerine kuruludur, dolayısıyla dört saatlik bir subathon yalnızca kliplerden yeniden inşa edilemez. Platformumuz arşivi ise orijinal yayın için bağımsız, kalıcı bir web adresidir — yayıncının VOD anahtarı, Chzzk'ın saklama penceresi, yalnızca-klip öne çıkanlar özelliği ve sonradan yapılan silmeler — bu dört boşluktan da etkilenmez.",
-    "younow": "## Platformumuz'da YouNow kayıtlarını izlemek\n\nYouNow, 2011'de New York'ta Adi Sideman tarafından kuruldu ve dünyanın en erken canlı yayın uygulamalarından biri oldu. Kaydırarak keşif ve coin ile props'a dayalı hediye ekonomisi; TikTok Live, Twitch IRL ya da Instagram Live ortaya çıkmadan yıllar önce buradaydı. 2010'ların ortasında YouNow; ABD, Meksika, Brezilya, Mısır ve Suudi Arabistan'da güçlü bir genç ve Z kuşağı kitlesi inşa etti. Yayıncılar just-chatting yayınları, yetenek gösterileri, gameshow geceleri, müzik oturumları ve gece boyu eşlik yayınları yapıyordu. Bugün katalog zirvesine kıyasla daha küçük olsa da YouNow'un tanımlamaya yardım ettiği format hâlâ burada yaşıyor ve yayıncı tabanı belirgin biçimde uluslararası kalmaya devam ediyor. Platformumuz, YouNow Live'larını yayınlandığı anda yakalar ve izlemek için YouNow uygulaması veya girişi gerekmeden kalıcı bir URL'de geri sunar.\n\n### Burada neleri yeniden izleyebilirsin\n\nKayıtlar, YouNow kitlesinin gerçekten yayınladığı formatları kapsıyor: sohbet yayınları, şarkı ve dans yetenekleri, gameshow odaları, İngilizce, Arapça, İspanyolca ve Portekizce dil öğrenme Live'ları, Amerika'dan gece eşlik yayınları ve YouNow'un props ekonomisini inşa eden, yayıncıdan hayrana bahşiş anları. Her Live tam haliyle yakalanır; böylece yayının yayı — ilk izleyicilerin katılmasından yayıncının yayını sonlandırmasına kadar — baştan sona korunur ve istediğin yerden yeniden oynatılabilir.\n\n### Neden ayrı bir arşive ihtiyacın var\n\nYouNow'un kendisi kamuya açık yayın arşivi tutmuyor. Yayıncı «bitir»e dokunduğu anda Live uygulamadan kayboluyor — geri sarma yok, profil tarafında VOD listesi yok, kaçıran izleyicilerin sonradan yetişmesi için bir yol yok. YouNow'un otomatik üretilen Moments'ı, algoritmanın veya yayıncının seçtiği kısa öne çıkan klipleri saklıyor; ama tam yayın — yavaş yükseliş, beklenmedik konuklar, YouNow Live'ını içerikten çok bir tür eşlik hissine dönüştüren uzun bölümler — yalnızca Moments'tan yeniden kurulamaz. Platformumuz arşivi tek dayanıklı kopyadır: YouNow uygulaması olmadan herkesin açabileceği kalıcı bir web URL'si, herhangi bir tarayıcıda oynar ve yayıncı yeni bir Live'a geçtikten çok sonra bile yaşamaya devam eder.",
-    "clapper": "## Platformumuz'da Clapper kayıtlarını izlemek\n\nClapper, algoritmik baskı, moderasyon sürtüşmesi ve izleyici demografisi uyumsuzluğu nedeniyle TikTok ve Facebook'tan ayrılan yetişkin yayıncılar için fiili bir ev haline gelen ABD merkezli canlı yayın ve kısa video platformudur. 2018'de Austin'de Edison Chen tarafından kuruldu ve 2020'de kamuya açıldı; Clapper en başından beri bilinçli biçimde daha yaşlı, ABD ağırlıklı bir yayıncı tabanına yaslandı — siyasi yorumcular, lifestyle içerik üreticileri, ordu ve emniyet topluluğu yayıncıları, country müzik dinleyicileri ve büyük kısa video uygulamalarının sunduğundan daha uzun Live'lar ve daha az ağır biçimde küratörlenmiş bir keşif deneyimi isteyen Gen X ve Boomer izleyiciler. Platformumuz, Clapper Live'larını yayınlandığı anda yakalar ve izlemek için Clapper uygulaması veya girişi gerekmeden kalıcı bir URL'de geri sunar.\n\nKayıtlar, Clapper kitlesinin gerçekten yayınladığı formatları kapsıyor: uzun soluklu siyasi ve haber yorumu yayınları, lifestyle ve IRL Live'ları, country ve Americana müzik oturumları, inanç ve aile yayınları, çiftlik ve kırsal yaşam yayınları, ayrıca izleyicilerin yayıncıya doğrudan kamerada teşekkür ettiği gem-tipping anları. Her Live tam haliyle yakalanır; böylece yayının yayı — ilk izleyicilerin katılmasından yayıncının yayını sonlandırmasına kadar — baştan sona korunur ve istediğin yerden yeniden oynatılabilir.\n\nClapper'ın uygulama içi akışı, YouTube'da bir izleyicinin beklediği biçimde kamuya açık yayın arşivi tutmuyor. Bir yayıncı Live'ı bitirdiği anda yayın keşif akışından çıkıyor ve hayranların geri kaydırabileceği bir profil-yanı tekrar sekmesi yok. Uzun-form Live'lar — siyasi segmentler, gem ile fonlanan subathon'lar, saatlerce süren kırsal yaşam yayınları — akıştan çıktıktan sonra geri getirilemiyor. Platformumuz arşivi dayanıklı kopyadır: Clapper uygulaması olmadan herkesin açabileceği kalıcı bir web URL'si, herhangi bir tarayıcıda oynar ve uygulama içi pencere onun ötesine geçtikten çok sonra bile yaşamaya devam eder."
+    "younow": "## Platformumuz'da YouNow kayıtlarını izlemek\n\nYouNow, 2011'de New York'ta Adi Sideman tarafından kuruldu ve dünyanın en erken canlı yayın uygulamalarından biri oldu. Kaydırarak keşif ve coin ile props'a dayalı hediye ekonomisi; TikTok Live, Twitch IRL ya da Instagram Live ortaya çıkmadan yıllar önce buradaydı. 2010'ların ortasında YouNow; ABD, Meksika, Brezilya, Mısır ve Suudi Arabistan'da güçlü bir genç ve Z kuşağı kitlesi inşa etti. Yayıncılar just-chatting yayınları, yetenek gösterileri, gameshow geceleri, müzik oturumları ve gece boyu eşlik yayınları yapıyordu. Bugün katalog zirvesine kıyasla daha küçük olsa da YouNow'un tanımlamaya yardım ettiği format hâlâ burada yaşıyor ve yayıncı tabanı belirgin biçimde uluslararası kalmaya devam ediyor. Platformumuz, YouNow Live'larını yayınlandığı anda yakalar ve izlemek için YouNow uygulaması veya girişi gerekmeden kalıcı bir URL'de geri sunar.\n\n### Burada neleri yeniden izleyebilirsin\n\nKayıtlar, YouNow kitlesinin gerçekten yayınladığı formatları kapsıyor: sohbet yayınları, şarkı ve dans yetenekleri, gameshow odaları, İngilizce, Arapça, İspanyolca ve Portekizce dil öğrenme Live'ları, Amerika'dan gece eşlik yayınları ve YouNow'un props ekonomisini inşa eden, yayıncıdan hayrana bahşiş anları. Her Live tam haliyle yakalanır; böylece yayının yayı — ilk izleyicilerin katılmasından yayıncının yayını sonlandırmasına kadar — baştan sona korunur ve istediğin yerden yeniden oynatılabilir.\n\n### Neden ayrı bir arşive ihtiyacın var\n\nYouNow'un kendisi kamuya açık yayın arşivi tutmuyor. Yayıncı «bitir»e dokunduğu anda Live uygulamadan kayboluyor — geri sarma yok, profil tarafında VOD listesi yok, kaçıran izleyicilerin sonradan yetişmesi için bir yol yok. YouNow'un otomatik üretilen Moments'ı, algoritmanın veya yayıncının seçtiği kısa öne çıkan klipleri saklıyor; ama tam yayın — yavaş yükseliş, beklenmedik konuklar, YouNow Live'ını içerikten çok bir tür eşlik hissine dönüştüren uzun bölümler — yalnızca Moments'tan yeniden kurulamaz. Platformumuz arşivi tek dayanıklı kopyadır: YouNow uygulaması olmadan herkesin açabileceği kalıcı bir web URL'si, herhangi bir tarayıcıda oynar ve yayıncı yeni bir Live'a geçtikten çok sonra bile yaşamaya devam eder."
   },
   "jsonLd": {
     "name": {
@@ -927,8 +871,7 @@
       "nimotv": "NimoTV Yayın Kayıtları",
       "vklive": "VK Live Yayın Kayıtları",
       "chzzk": "Chzzk Live Kaydı",
-      "younow": "YouNow Live Kaydı",
-      "clapper": "Clapper Live Kaydı"
+      "younow": "YouNow Live Kaydı"
     },
     "description": {
       "all": "Platformumuz'daki içerik üreticilerinden canlı yayın kayıtlarını izleyin.",
@@ -949,8 +892,7 @@
       "nimotv": "Platformumuz'daki yayıncılardan NimoTV yayın kayıtlarını izleyin.",
       "vklive": "Platformumuz'daki yayıncılardan VK Live yayın kayıtlarını izleyin.",
       "chzzk": "Naver'in Güney Kore canlı yayın platformu Chzzk'tan arşivlenmiş Live yayını, orijinal yayının çözünürlük ve kare hızında yakalandı.",
-      "younow": "En erken canlı yayın platformlarından biri olan YouNow'dan arşivlenmiş Live yayını.",
-      "clapper": "TikTok ve Facebook'tan ayrılan yetişkin yayıncılar için kurulmuş ABD merkezli platform Clapper'dan arşivlenmiş Live yayını."
+      "younow": "En erken canlı yayın platformlarından biri olan YouNow'dan arşivlenmiş Live yayını."
     },
     "streamTitle": "{nickname} Yayını - {date}",
     "streamDescription": {
@@ -972,8 +914,7 @@
       "nimotv": "{nickname} tarafından NimoTV yayın kaydı",
       "vklive": "{nickname} tarafından VK Live yayın kaydı",
       "chzzk": "{nickname} tarafından Chzzk Live kaydı — Chzzk'ın kendi VOD penceresi dışında oynatmak için korunmuş orijinal Kore yayını.",
-      "younow": "{nickname} tarafından YouNow Live kaydı — platformumuz'da, YouNow'un uygulama akışı onun ötesine geçtikten sonra yeniden izlemek için korunan orijinal yayın.",
-      "clapper": "{nickname} tarafından Clapper Live kaydı — platformumuz'da, Clapper'ın uygulama içi penceresi onun ötesine geçtikten sonra yeniden izlemek için korunan orijinal yayın."
+      "younow": "{nickname} tarafından YouNow Live kaydı — platformumuz'da, YouNow'un uygulama akışı onun ötesine geçtikten sonra yeniden izlemek için korunan orijinal yayın."
     }
   },
   "recordedOn": "{date} tarihinde kaydedildi",

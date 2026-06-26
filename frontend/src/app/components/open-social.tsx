@@ -37,7 +37,6 @@ export const SOCIAL_URL_PATTERNS: Partial<
   [FollowerTypeEnum.Vklive]: (username) => `https://live.vkvideo.ru/${username}`,
   [FollowerTypeEnum.Chzzk]: (username) => `https://chzzk.naver.com/${username}`,
   [FollowerTypeEnum.Younow]: (username) => `https://www.younow.com/${username}`,
-  [FollowerTypeEnum.Clapper]: (username) => `https://clapperapp.com/${username}`,
 };
 
 export const URL_PATTERNS: Partial<Record<FollowerTypeEnum, UrlPattern>> = {
@@ -61,7 +60,6 @@ export const URL_PATTERNS: Partial<Record<FollowerTypeEnum, UrlPattern>> = {
   [FollowerTypeEnum.Vklive]: (username) => `/vklive/${username}`,
   [FollowerTypeEnum.Chzzk]: (username) => `/chzzk/${username}`,
   [FollowerTypeEnum.Younow]: (username) => `/younow/${username}`,
-  [FollowerTypeEnum.Clapper]: (username) => `/clapper/${username}`,
 };
 
 export const getSocialUrl = (

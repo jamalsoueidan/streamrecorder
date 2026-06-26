@@ -22,8 +22,7 @@
       "nimotv": "NimoTV 主播",
       "vklive": "VK Live 主播",
       "younow": "YouNow 主播",
-      "chzzk": "Chzzk 主播",
-      "clapper": "Clapper 主播"
+      "chzzk": "Chzzk 主播"
     },
     "subtitle": {
       "all": "浏览所有主播和创作者",
@@ -44,8 +43,7 @@
       "nimotv": "发现 NimoTV 主播",
       "vklive": "发现 VK Live 主播",
       "younow": "发现 YouNow 主播",
-      "chzzk": "发现 Chzzk 主播",
-      "clapper": "发现 Clapper 主播"
+      "chzzk": "发现 Chzzk 主播"
     }
   },
   "recordings": {
@@ -68,8 +66,7 @@
       "nimotv": "NimoTV 录制",
       "vklive": "VK Live 录制",
       "younow": "YouNow 录制",
-      "chzzk": "Chzzk 录制",
-      "clapper": "Clapper 录制"
+      "chzzk": "Chzzk 录制"
     },
     "subtitle": {
       "all": "观看直播录像",
@@ -90,8 +87,7 @@
       "nimotv": "观看 NimoTV 直播录像",
       "vklive": "观看 VK Live 直播录像",
       "younow": "观看 YouNow 直播录像",
-      "chzzk": "观看 Chzzk 直播录像",
-      "clapper": "观看 Clapper 直播录像"
+      "chzzk": "观看 Chzzk 直播录像"
     }
   },
   "home": {

@@ -22,8 +22,7 @@
       "nimotv": "NimoTV Yayıncıları",
       "vklive": "VK Live Yayıncıları",
       "younow": "YouNow İçerik Üreticileri",
-      "chzzk": "Chzzk İçerik Üreticileri",
-      "clapper": "Clapper İçerik Üreticileri"
+      "chzzk": "Chzzk İçerik Üreticileri"
     },
     "subtitle": {
       "all": "Tüm yayıncılara ve içerik üreticilerine göz atın",
@@ -44,8 +43,7 @@
       "nimotv": "NimoTV yayıncılarını keşfedin",
       "vklive": "VK Live yayıncılarını keşfedin",
       "younow": "YouNow yayıncılarını keşfedin",
-      "chzzk": "Chzzk yayıncılarını keşfedin",
-      "clapper": "Clapper yayıncılarını keşfedin"
+      "chzzk": "Chzzk yayıncılarını keşfedin"
     }
   },
   "recordings": {
@@ -68,8 +66,7 @@
       "nimotv": "NimoTV Kayıtları",
       "vklive": "VK Live Kayıtları",
       "younow": "YouNow Kayıtları",
-      "chzzk": "Chzzk Kayıtları",
-      "clapper": "Clapper Kayıtları"
+      "chzzk": "Chzzk Kayıtları"
     },
     "subtitle": {
       "all": "Kaydedilmiş canlı yayınları izleyin",
@@ -90,8 +87,7 @@
       "nimotv": "Kaydedilmiş NimoTV yayınlarını izleyin",
       "vklive": "Kaydedilmiş VK Live yayınlarını izleyin",
       "younow": "Kaydedilmiş YouNow Live'larını izleyin",
-      "chzzk": "Kaydedilmiş Chzzk yayınlarını izleyin",
-      "clapper": "Kaydedilmiş Clapper yayınlarını izleyin"
+      "chzzk": "Kaydedilmiş Chzzk yayınlarını izleyin"
     }
   },
   "home": {

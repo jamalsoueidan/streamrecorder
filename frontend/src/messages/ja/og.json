@@ -22,8 +22,7 @@
       "nimotv": "NimoTV ストリーマー",
       "vklive": "VK Live ストリーマー",
       "younow": "YouNow クリエイター",
-      "chzzk": "Chzzk クリエイター",
-      "clapper": "Clapper クリエイター"
+      "chzzk": "Chzzk クリエイター"
     },
     "subtitle": {
       "all": "すべてのストリーマー・クリエイターを探す",
@@ -44,8 +43,7 @@
       "nimotv": "NimoTV ストリーマーを見つける",
       "vklive": "VK Live ストリーマーを見つける",
       "younow": "YouNow 配信者を見つける",
-      "chzzk": "Chzzk ストリーマーを見つける",
-      "clapper": "Clapper ストリーマーを見つける"
+      "chzzk": "Chzzk ストリーマーを見つける"
     }
   },
   "recordings": {
@@ -68,8 +66,7 @@
       "nimotv": "NimoTV 録画",
       "vklive": "VK Live 録画",
       "younow": "YouNow 録画",
-      "chzzk": "Chzzk 録画",
-      "clapper": "Clapper 録画"
+      "chzzk": "Chzzk 録画"
     },
     "subtitle": {
       "all": "録画済みライブ配信を視聴",
@@ -90,8 +87,7 @@
       "nimotv": "録画された NimoTV 配信を視聴",
       "vklive": "録画された VK Live 配信を視聴",
       "younow": "録画された YouNow ライブを視聴",
-      "chzzk": "録画された Chzzk 配信を視聴",
-      "clapper": "録画された Clapper 配信を視聴"
+      "chzzk": "録画された Chzzk 配信を視聴"
     }
   },
   "home": {

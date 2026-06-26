@@ -22,8 +22,7 @@
       "nimotv": "Streamers do NimoTV",
       "vklive": "Streamers do VK Live",
       "younow": "Criadores do YouNow",
-      "chzzk": "Criadores do Chzzk",
-      "clapper": "Criadores do Clapper"
+      "chzzk": "Criadores do Chzzk"
     },
     "subtitle": {
       "all": "Navegue por todos os streamers e criadores",
@@ -44,8 +43,7 @@
       "nimotv": "Descubra streamers do NimoTV",
       "vklive": "Descubra streamers do VK Live",
       "younow": "Descubra broadcasters do YouNow",
-      "chzzk": "Descubra streamers do Chzzk",
-      "clapper": "Descubra streamers do Clapper"
+      "chzzk": "Descubra streamers do Chzzk"
     }
   },
   "recordings": {
@@ -68,8 +66,7 @@
       "nimotv": "Gravações do NimoTV",
       "vklive": "Gravações do VK Live",
       "younow": "Gravações do YouNow",
-      "chzzk": "Gravações do Chzzk",
-      "clapper": "Gravações do Clapper"
+      "chzzk": "Gravações do Chzzk"
     },
     "subtitle": {
       "all": "Assista lives gravadas",
@@ -90,8 +87,7 @@
       "nimotv": "Assista lives gravadas do NimoTV",
       "vklive": "Assista lives gravadas do VK Live",
       "younow": "Assista Lives gravadas do YouNow",
-      "chzzk": "Assista streams gravados do Chzzk",
-      "clapper": "Assista streams gravados do Clapper"
+      "chzzk": "Assista streams gravados do Chzzk"
     }
   },
   "home": {

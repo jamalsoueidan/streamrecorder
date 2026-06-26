@@ -797,56 +797,6 @@
           "answer": "Platform kami menerapkan kebijakan konten yang sama seperti platform lain: nggak ada konten dewasa, nggak ada minor, nggak ada pelanggaran hak. Rekaman yang melanggar kebijakan kami atau kebijakan YouNow yang dipublikasikan akan dihapus saat dilaporkan lewat channel DMCA / takedown kami."
         }
       ]
-    },
-    "clapper": {
-      "title": "Rekaman Clapper — arsip permanen Live Clapper",
-      "description": "Tonton rekaman lengkap Live Clapper. Clapper adalah platform berbasis US yang dibangun untuk kreator dewasa yang meninggalkan TikTok dan Facebook karena masalah algoritma dan moderasi. Feed in-app-nya nggak nyimpen arsip siaran publik; platform kami memberi setiap Live Clapper URL yang bisa ditonton ulang dan bertahan melampaui siklus feed.",
-      "keywords": [
-        "perekam clapper",
-        "arsip live clapper",
-        "replay siaran clapper",
-        "tonton live clapper",
-        "arsip clapper",
-        "tonton ulang siaran clapper",
-        "live clapper yang terlewat",
-        "arsip gem clapper",
-        "arsip alternatif tiktok",
-        "arsip live stream us"
-      ],
-      "faqs": [
-        {
-          "question": "Bisa nonton ulang Live Clapper setelah broadcaster mengakhiri siaran?",
-          "answer": "Di Clapper sendiri — nggak bisa. Siarannya langsung hilang dari feed begitu berakhir; app-nya nggak nyimpen arsip Live publik buat penonton. Di platform kami — bisa. Live ditangkap saat siaran berlangsung dan disajikan kembali di URL permanen yang nggak tergantung app Clapper nyimpen apa pun."
-        },
-        {
-          "question": "Harus punya akun Clapper untuk nonton rekaman di platform kami?",
-          "answer": "Nggak perlu. Setiap rekaman diputar di browser mana saja tanpa login Clapper, tanpa saldo gem, tanpa app Clapper terinstal. Rekamannya disajikan langsung dari CDN kami, bukan dari Clapper."
-        },
-        {
-          "question": "Gem dan reaksi tipping ikut tersimpan di rekaman?",
-          "answer": "Bagian video siaran tersimpan — apa yang dikatakan dan dilakukan streamer di depan kamera, termasuk reaksi saat gem masuk. Animasi gem/tip Clapper adalah lapisan overlay in-app, bukan bagian dari feed video, jadi ikon gem yang floating nggak muncul di rekaman. Reaksi broadcaster di depan kamera terhadap tip-tip itu tetap utuh tersimpan."
-        },
-        {
-          "question": "Kenapa Clapper masih relevan di 2026?",
-          "answer": "Clapper tumbuh sepanjang 2020-2024 sebagai tujuan kreator dewasa di US yang ninggalin TikTok karena perubahan algoritma, moderasi, dan mismatch demografi audiens. Didirikan di Austin tahun 2018 dan diluncurkan publik tahun 2020, sekarang platformnya jadi rumah penting buat broadcaster Gen X dan Boomer, komentator politik dan lifestyle, dan komunitas berbasis US yang merasa app lain terlalu restriktif."
-        },
-        {
-          "question": "Ada screen recorder yang lebih cocok untuk Clapper?",
-          "answer": "Screen recorder browser secara teknis bisa menangkap Live Clapper, tapi tab Clapper harus tetap terbuka sepanjang siaran, langsung berhenti saat perangkat terkunci atau Wi-Fi putus, dan menangkap di kualitas apa pun yang kebetulan dipakai display-mu. Platform kami jalan di cloud — penangkapan terus berlangsung apa pun status perangkatmu, dan file yang tersimpan persis kualitas siaran aslinya, bukan resolusi display-mu."
-        },
-        {
-          "question": "Kalau broadcaster Clapper di-ban atau jadi privat gimana?",
-          "answer": "Rekaman yang sudah kami tangkap sebelum perubahan tetap ada di arsip dengan URL aslinya. Kami nggak menghapus siaran secara retroaktif saat status Clapper kreator berubah. Permintaan DMCA dan takedown langsung dari kreator ditangani dengan cara yang sama seperti platform lain."
-        },
-        {
-          "question": "Rekaman Clapper di sini berupa file tunggal atau playlist HLS?",
-          "answer": "Rekaman streaming via HLS untuk playback cepat di browser apa saja, dan pengguna premium bisa mengunduh siaran lengkap sebagai MP4 tunggal untuk tontonan offline, editing kompilasi, atau re-upload ke YouTube / Rumble / di mana pun kamu mau menaruhnya secara permanen."
-        },
-        {
-          "question": "Rekaman Clapper menerapkan aturan konten?",
-          "answer": "Platform kami menerapkan kebijakan konten yang sama seperti platform lain: nggak ada konten dewasa, nggak ada minor, nggak ada pelanggaran hak, nggak ada harassment yang ditargetkan. Rekaman yang melanggar kebijakan kami atau panduan Clapper yang dipublikasikan akan dihapus saat dilaporkan lewat channel DMCA / takedown kami."
-        }
-      ]
     }
   },
   "hero": {
@@ -869,8 +819,7 @@
       "nimotv": "Rekaman NimoTV",
       "vklive": "Rekaman VK Live",
       "chzzk": "Rekaman Chzzk",
-      "younow": "Rekaman YouNow",
-      "clapper": "Rekaman Clapper"
+      "younow": "Rekaman YouNow"
     },
     "subtitle": {
       "all": "Tonton rekaman live stream dari kreator di platform kami. Unduh dan temukan konten baru.",
@@ -891,8 +840,7 @@
       "nimotv": "Tonton rekaman stream NimoTV dari streamer di platform kami. Unduh dan temukan penyiar baru.",
       "vklive": "Tonton rekaman stream VK Live dari streamer di platform kami. Unduh dan temukan penyiar baru.",
       "chzzk": "Tonton rekaman Chzzk dari streamer Korea — gaming, channel partner LCK, IRL, dan eks-broadcaster Twitch. Unduh dan temukan kreator baru.",
-      "younow": "Tonton rekaman YouNow dari broadcaster di seluruh dunia. Setiap Live tersimpan melampaui window in-feed app — unduh dan temukan kreator baru.",
-      "clapper": "Tonton rekaman Clapper dari broadcaster berbasis US — komentar politik, lifestyle, musik, IRL chat. Unduh dan temukan kreator baru."
+      "younow": "Tonton rekaman YouNow dari broadcaster di seluruh dunia. Setiap Live tersimpan melampaui window in-feed app — unduh dan temukan kreator baru."
     }
   },
   "cta": {
@@ -915,8 +863,7 @@
       "nimotv": "Simpan Stream NimoTV",
       "vklive": "Simpan Stream VK Live",
       "chzzk": "Simpan Live Chzzk",
-      "younow": "Simpan Live YouNow",
-      "clapper": "Simpan Live Clapper"
+      "younow": "Simpan Live YouNow"
     },
     "subtitle": {
       "all": "Simpan stream TikTok, Twitch, YouTube, dan Kick Anda secara otomatis. Unduh rekaman, buat klip pendek, dan kembangkan audiens Anda.",
@@ -937,8 +884,7 @@
       "nimotv": "Simpan stream NimoTV-mu secara otomatis. Cadangan independen untuk setiap Live, plus klip pendek dengan ClipAI.",
       "vklive": "Simpan stream VK Live-mu secara otomatis. Cadangan independen untuk setiap Live, plus klip pendek dengan ClipAI.",
       "chzzk": "Simpan Live Chzzk-mu secara otomatis. Arsip web permanen yang bertahan melebihi timeline VOD Naver, plus klip pendek dengan ClipAI untuk TikTok dan Reels.",
-      "younow": "Simpan Live YouNow-mu secara otomatis. Arsip web permanen yang bertahan melebihi siklus feed in-app, plus klip pendek dengan ClipAI untuk TikTok dan Reels.",
-      "clapper": "Simpan Live Clapper-mu secara otomatis. Arsip web permanen yang bertahan melampaui feed in-app, plus klip pendek dengan ClipAI untuk TikTok dan Reels."
+      "younow": "Simpan Live YouNow-mu secara otomatis. Arsip web permanen yang bertahan melebihi siklus feed in-app, plus klip pendek dengan ClipAI untuk TikTok dan Reels."
     },
     "button": "Mulai Rekam Gratis"
   },
@@ -963,8 +909,7 @@
       "nimotv": "Jadilah streamer pertama yang merekam stream NimoTV!",
       "vklive": "Jadilah streamer pertama yang merekam stream VK Live!",
       "chzzk": "Jadilah kreator pertama yang merekam siaran Chzzk!",
-      "younow": "Jadilah broadcaster pertama yang merekam siaran YouNow!",
-      "clapper": "Jadilah kreator pertama yang merekam siaran Clapper!"
+      "younow": "Jadilah broadcaster pertama yang merekam siaran YouNow!"
     },
     "button": "Mulai Sekarang"
   },
@@ -987,8 +932,7 @@
     "nimotv": "## NimoTV Live Recordings on platform kami\n\nNimoTV (launched 2018 by Huya, part of Tencent's global gaming ecosystem) is the international mobile-esports streaming platform — purpose-built for the mobile-gaming explosion happening across **Brazil, Indonesia, Thailand, Mexico, and Peru**. The catalogue is dominated by **Mobile Legends: Bang Bang, Free Fire, PUBG Mobile, Call of Duty: Mobile, Wild Rift, and Arena of Valor**. Its creator base is mostly phone-only — no PC, no OBS, no capture card. When a ranked grind ends, the broadcast is gone. Platform kami catches every match before it disappears, on a public web URL fans can rewatch anytime.\n\n### Phone-Only Capture, Server-Side\n\nThe NimoTV creator workflow is brutally simple: open the NimoTV app, hit go-live, play the game, end the stream. There's no native VOD export. There's no \"keep my last broadcast for replay\" button you can rely on across regions and account tiers. And a phone running a ranked Mobile Legends match doesn't have spare resources to also run a screen recorder in the background — thermals, FPS, battery, and data all suffer. Platform kami runs entirely in our cloud. Your phone broadcasts on NimoTV the way it always has; we capture the stream upstream and store it on your creator page.\n\n### Full-Length Matches, Not 30-Second Clips\n\nMobile esports matches are long. MLBB ranked grinds run hours, Free Fire squads rotate through round after round, PUBG Mobile final-circle hunts can stretch a broadcast past 4 hours. NimoTV's in-app clip and replay surfaces, where they exist, are short-form by design. Platform kami saves the full broadcast — every match, every draft phase, every comms moment — at full length, ready to scrub. Want to review a teamfight you lost? Pull the recording, jump to the timestamp. Want a specific MVP highlight for a thumbnail? Clip it from the saved Live.\n\n### Brazilian and Indonesian Discovery, the Open Web Way\n\nNimoTV is huge inside its app in Brazil and SE Asia. It is also almost completely invisible on the open Portuguese, Spanish, and Indonesian web. Search for a top Brazilian MLBB streamer on Google and you'll get thin profile pages, third-party trackers, or nothing useful. Your platform kami creator page is indexable, shareable, and openable in any browser — your Lives finally get a real Google footprint.\n\n### Cross-Posting to Where Mobile Gaming Fans Actually Hang Out\n\n#MLBB, #FreeFire, #PUBGM, #MobileGaming — the mobile esports community lives across TikTok, Instagram, YouTube, Discord, and language-specific community apps. Most don't have the NimoTV app installed and aren't going to install it to watch one stream. ClipAI scans your saved NimoTV Lives and cuts vertical highlight clips formatted for **TikTok, Instagram Reels, YouTube Shorts** — clutch plays, MVP moments, gift reactions. Use them as the funnel that brings new fans back to your NimoTV channel.\n\n### Watch in Browser, Download if You Need It\n\nEvery saved NimoTV Live plays instantly in any modern browser. No NimoTV account needed to watch. Premium creators can download the raw video file from each Live — useful for uploading full matches to YouTube as long-form gaming content, cutting compilations, or local archival.\n\n### Doesn't Touch Your NimoTV Account or Diamond Income\n\nPlatform kami never logs into your NimoTV account, doesn't see diamond income, doesn't read your gifting stats, and doesn't interfere with Huya / Tencent creator program tiers or partner status. The recording is opt-in by you as the NimoTV creator for **your own** account, and only your own Lives — nothing else. Your NimoTV ranking, watch-time, gifting, and partner status remain entirely on NimoTV.\n\n### Opt-In, Delete Anytime\n\nPlatform kami only records your own profile, only after you opt in. Stop recording any time. Delete any past NimoTV Live with a single click. Your content, your URL, your control — independent of the NimoTV app, built for mobile esports creators who don't have time to also run a recording rig.",
     "vklive": "## VK Live Recordings on platform kami\n\nVK Live is the livestreaming layer inside **VKontakte (VK)**, Russia's biggest social network with over 100 million monthly active users. Unlike standalone streaming apps, VK Live is woven directly into VK's social graph — broadcasts appear in friends' feeds, get reposted into communities, integrate with **VK Music** and the **VK Play** gaming platform, and reach an audience that spans Russia, Belarus, Kazakhstan, and Russian-speaking communities worldwide. Since 2022, when Western livestreaming options became harder to access from Russia, VK Live has grown significantly as the de-facto livestreaming home for Russian-speaking creators. Platform kami records every VK Live broadcast to a stable, public web URL — built for creators who want their work to outlive a single news cycle in the VK feed.\n\n### The VK Feed Buries Streams Within Hours\n\nVK Live is a social-first stream surface. The strength of that design: a Live shows up in followers' feeds in real time, can be reposted into communities, pulls live engagement from the VK social graph. The weakness of that design: the VK algorithm prioritizes fresh content. Within a few hours of going offline, your broadcast slides down the feed. Within 24 hours, even popular VK Lives are effectively invisible to anyone who didn't catch them live. There's no proper archive UX, no dedicated past-streams view on your profile. Fans who'd love to rewatch a Dota 2 match, share a music set with a friend, or pull up that one clutch CS round you had last weekend have no real place to go.\n\nPlatform kami gives every VK Live broadcast a stable URL on your creator page that exists independently of the VK feed cycle. The feed moves on, your archive stays.\n\n### Built for the VK Live Creator Mix\n\nVK Live's creator base is broad and category-rich. **Gaming**: Dota 2, CS 2, World of Tanks, Standoff 2 — the cornerstones of the Russian-speaking gaming community. **Music**: artists running album drops, acoustic sets, electronic DJ sets, often integrated with their VK Music releases. **IRL and lifestyle**: vlog-style streams, cooking, travel (where geopolitics allows), commentary on news and pop culture. **Anime and manga commentators**: reaction streams, watch-alongs, deep-dive discussions. **Educational**: language learning, coding tutorials, exam prep. The capture is upstream of your local hardware, so whatever you broadcast — OBS scene composition, gameplay overlays, music visualisers, webcam-only chat — preserves exactly as your fans saw it.\n\n### A Permanent Home for Long-Form Content\n\nThe VK feed is built for short attention spans — quick scrolling, fast engagement, fresh posts every few hours. That's fine for a 2-minute clip and actively hostile to a 3-hour Dota grind or a 90-minute concert set. A permanent archive on platform kami is the long-form counterpart: fans who want to actually sit with your stream, rewatch a specific match, or share a moment with a friend get a stable URL that works the same way next week and next year. The clip lives in the feed; the full broadcast lives on your creator page.\n\n### Russian, CIS, and Diaspora Audiences\n\nVK is dominant inside Russia, Belarus, and Kazakhstan, but Russian-speaking communities also live throughout Europe, Israel, the US, and Canada — many of whom don't actively maintain a VK account day-to-day. Platform kami URLs work in any browser, anywhere in the world, with no VK login required to watch. Your diaspora fans get a way to keep up with your work that doesn't depend on them maintaining an active VK presence.\n\n### Cross-Platform Reach with ClipAI\n\nClipAI scans your saved VK Live broadcasts and cuts vertical short-form clips ready for **TikTok, Instagram Reels, YouTube Shorts**, and VK's own short-video features. Highlight plays from a Dota match, music drops from a concert set, funny chat moments, IRL reactions — turn one long broadcast into a stream of shareable content that brings new fans back to your VK Live channel.\n\n### Watch in Browser, Download if You Need It\n\nEvery saved VK Live plays instantly in any modern browser, no VK account required. Premium creators can download the raw video file from each broadcast — useful for re-uploading full matches to YouTube as long-form content, cutting compilations, or local archival on your own machine.\n\n### Doesn't Touch Your VK Account or Integrations\n\nPlatform kami never logs into your VK account, doesn't interact with VK Music tags, doesn't touch VK Play integrations, and doesn't affect any of VK's creator-side metrics, monetization, or community management. The recording is opt-in by you as the VK Live creator for **your own** account, and only captures your own broadcasts — nothing else. Your VK profile, community pages, friend graph, and creator status stay entirely within VK.\n\n### Opt-In, Delete Anytime\n\nPlatform kami only records your own profile, only after you opt in. Stop the recording flow any time. Delete any past VK Live with a single click. Your content, your URL, your control — a permanent archive of your work on the open web, where the VK feed buries streams fast but your back catalogue stays put.",
     "chzzk": "## Menonton rekaman Chzzk di platform kami\n\nChzzk (치지직) adalah platform live streaming yang dioperasikan oleh **Naver**, perusahaan internet terbesar di Korea Selatan. Chzzk masuk open beta di Desember 2023 dan diluncurkan penuh April 2024, persis bertepatan dengan keluarnya Twitch dari pasar Korea Selatan — Naver merilis tool import Twitch sekali-klik yang memindahkan follower dan subscription para kreator, dan sejak itu Chzzk jadi rumah baru bagi sebagian besar talenta livestream Korea yang paling banyak ditonton. Nama 치지직 sendiri adalah onomatope untuk suara statis TV tabung lama saat mencari sinyal antar channel, suara yang muncul saat TV tua nemu sinyal; Naver memilih nama itu untuk membangkitkan momen saat siaran pertama kali muncul di udara. Per awal 2026 platform ini memegang sekitar 39 persen pangsa jam livestream Korea Selatan dan menyiarkan hingga 1080p 60fps di 8 Mbps, jelas di atas batas yang Twitch turunkan di akhir 2022. Platform kami menangkap Live Chzzk dalam kualitas siaran tersebut dan menyajikannya kembali di URL permanen yang bisa diputar di browser apa saja, tanpa perlu akun Naver.\n\n### Apa yang bisa kamu tonton ulang di sini\n\nRekamannya berasal dari kreator variety dan gaming Korea yang pindah dari Twitch Korea setelah shutdown — stream just-chatting panjang, subathon yang jalan setengah hari, broadcaster musik dan IRL yang lagi membangun audiens di platform baru, dan channel partner esports yang menyiarkan pertandingan League of Legends Champions Korea (Naver memegang hak siar LCK berbahasa Korea eksklusif dari 2026 sampai 2030, dibagi dengan SOOP Korea). Setiap Live ditangkap utuh, bukan sebagai klip highlight yang dikurasi, jadi alur siarannya — build-up, momen seru, jeda panjang antar momen ramai — tersimpan dari awal sampai akhir.\n\n### Kenapa arsip terpisah itu penting\n\nChzzk mendukung VOD dan klip pendek, tapi playback VOD bersifat opt-in per stream, dan banyak kreator membiarkan toggle-nya mati untuk subathon, sesi sponsor, dan event yang nggak ingin ditonton ulang secara penuh. Saat Live berakhir dengan VOD nonaktif, siarannya langsung hilang dari sisi Chzzk. Bahkan saat VOD aktif, retensinya terbatas — stream lama digulir keluar, kreator sesekali menghapus Live lampau, dan sistem klip Chzzk menampilkan momen bukan alur, jadi subathon empat jam nggak bisa direkonstruksi dari klip saja. Arsip platform kami adalah alamat web permanen untuk siaran aslinya yang ada secara independen dari keempat celah itu — toggle VOD kreator, window retensi Chzzk, fitur klip-only, dan penghapusan setelah fakta.",
-    "younow": "## Menonton rekaman YouNow di platform kami\n\nYouNow diluncurkan tahun 2011, didirikan oleh Adi Sideman di New York. Ini salah satu app live streaming yang paling awal — discovery swipe-through dan ekonomi gifting coin-and-props sudah ada di sana bertahun-tahun sebelum TikTok Live, Twitch IRL, atau Instagram Live muncul. Sepanjang pertengahan 2010-an YouNow membangun audiens remaja dan Gen-Z di Amerika, Meksiko, Brasil, Mesir, dan Arab Saudi, dengan broadcaster yang menjalankan stream just-chatting, talent showcase, gameshow night, sesi musik, dan overnight company. Sekarang katalognya lebih kecil daripada puncaknya, tapi format yang ikut didefinisikan YouNow masih hidup di sini, dan basis broadcaster-nya tetap sangat internasional. Platform kami menangkap Live YouNow saat siaran berlangsung dan menyajikannya kembali di URL permanen, tanpa perlu app YouNow atau login untuk menonton.\n\n### Apa yang bisa kamu tonton ulang di sini\n\nRekamannya mencakup format yang benar-benar disiarkan audiens YouNow: stream chat, talent menyanyi dan menari, room gameshow, Live language-learning lintas bahasa Inggris dan Arab dan Spanyol dan Portugis, stream overnight company dari Amerika, dan momen tipping broadcaster-to-fan yang membangun ekonomi props YouNow. Setiap Live ditangkap utuh, jadi alur siarannya — dari penonton pertama gabung sampai broadcaster mengakhiri stream — tersimpan dari awal sampai akhir dan bisa diputar di mana saja.\n\n### Kenapa arsip terpisah itu penting\n\nYouNow sendiri nggak nyimpen arsip siaran publik. Begitu broadcaster tap end, Live-nya langsung hilang dari app — nggak ada rewind, nggak ada daftar VOD di profil, nggak ada cara buat penonton yang ketinggalan untuk catch up nanti. Moments YouNow yang auto-generated menyimpan klip highlight pendek yang dipilih algoritma atau broadcaster, tapi siaran lengkap — build-up yang pelan, tamu nggak terduga, jeda panjang yang bikin Live YouNow terasa kayak company bukan content — nggak bisa direkonstruksi dari Moments saja. Arsip platform kami adalah satu-satunya salinan yang awet: URL web permanen yang siapa pun bisa buka tanpa app YouNow, diputar di browser apa saja, dan tetap ada lama setelah broadcaster pindah ke Live berikutnya.",
-    "clapper": "## Menonton rekaman Clapper di platform kami\n\nClapper adalah platform live streaming dan video pendek berbasis US yang jadi rumah de-facto buat kreator dewasa yang ninggalin TikTok dan Facebook karena suppresi algoritma, friksi moderasi, dan mismatch demografi audiens. Didirikan di Austin tahun 2018 oleh Edison Chen dan diluncurkan publik tahun 2020, Clapper sengaja membidik basis broadcaster yang lebih tua dan condong US — komentator politik, kreator lifestyle, broadcaster komunitas militer dan penegak hukum, fans country music, dan audiens Gen X serta Boomer yang pengen Live lebih panjang dan pengalaman discovery yang nggak terlalu dikurasi ketat seperti yang ditawarkan app short-video besar. Platform kami menangkap Live Clapper saat siaran dan menyajikannya kembali di URL permanen, tanpa perlu app Clapper atau login untuk menonton.\n\nRekamannya mencakup format yang benar-benar disiarkan audiens Clapper: komentar politik dan berita yang long-form, stream lifestyle dan IRL, sesi musik country dan Americana, stream faith-and-family, broadcasting kehidupan ranch dan rural, plus momen gem-tipping di mana penonton berterima kasih ke broadcaster langsung di depan kamera. Setiap Live ditangkap utuh, jadi alur siarannya — dari penonton pertama gabung sampai broadcaster mengakhiri stream — tersimpan dari awal sampai akhir dan bisa diputar di mana saja.\n\nFeed app Clapper sendiri nggak nyimpen arsip siaran publik seperti yang diharapkan penonton dari YouTube. Begitu broadcaster mengakhiri Live, stream-nya langsung tergulir keluar dari feed discovery, dan nggak ada tab replay di sisi profil buat fans di-scroll. Live long-form — segmen politik, subathon yang didanai gem, broadcast rural-life yang jalan berjam-jam — nggak bisa dipulihkan begitu udah lewat dari feed. Arsip platform kami adalah salinan yang awet: URL web permanen yang siapa pun bisa buka tanpa app Clapper, diputar di browser apa saja, dan tetap ada lama setelah window in-feed udah berotasi lewat dari mereka."
+    "younow": "## Menonton rekaman YouNow di platform kami\n\nYouNow diluncurkan tahun 2011, didirikan oleh Adi Sideman di New York. Ini salah satu app live streaming yang paling awal — discovery swipe-through dan ekonomi gifting coin-and-props sudah ada di sana bertahun-tahun sebelum TikTok Live, Twitch IRL, atau Instagram Live muncul. Sepanjang pertengahan 2010-an YouNow membangun audiens remaja dan Gen-Z di Amerika, Meksiko, Brasil, Mesir, dan Arab Saudi, dengan broadcaster yang menjalankan stream just-chatting, talent showcase, gameshow night, sesi musik, dan overnight company. Sekarang katalognya lebih kecil daripada puncaknya, tapi format yang ikut didefinisikan YouNow masih hidup di sini, dan basis broadcaster-nya tetap sangat internasional. Platform kami menangkap Live YouNow saat siaran berlangsung dan menyajikannya kembali di URL permanen, tanpa perlu app YouNow atau login untuk menonton.\n\n### Apa yang bisa kamu tonton ulang di sini\n\nRekamannya mencakup format yang benar-benar disiarkan audiens YouNow: stream chat, talent menyanyi dan menari, room gameshow, Live language-learning lintas bahasa Inggris dan Arab dan Spanyol dan Portugis, stream overnight company dari Amerika, dan momen tipping broadcaster-to-fan yang membangun ekonomi props YouNow. Setiap Live ditangkap utuh, jadi alur siarannya — dari penonton pertama gabung sampai broadcaster mengakhiri stream — tersimpan dari awal sampai akhir dan bisa diputar di mana saja.\n\n### Kenapa arsip terpisah itu penting\n\nYouNow sendiri nggak nyimpen arsip siaran publik. Begitu broadcaster tap end, Live-nya langsung hilang dari app — nggak ada rewind, nggak ada daftar VOD di profil, nggak ada cara buat penonton yang ketinggalan untuk catch up nanti. Moments YouNow yang auto-generated menyimpan klip highlight pendek yang dipilih algoritma atau broadcaster, tapi siaran lengkap — build-up yang pelan, tamu nggak terduga, jeda panjang yang bikin Live YouNow terasa kayak company bukan content — nggak bisa direkonstruksi dari Moments saja. Arsip platform kami adalah satu-satunya salinan yang awet: URL web permanen yang siapa pun bisa buka tanpa app YouNow, diputar di browser apa saja, dan tetap ada lama setelah broadcaster pindah ke Live berikutnya."
   },
   "jsonLd": {
     "name": {
@@ -1010,8 +954,7 @@
       "nimotv": "Rekaman Stream NimoTV",
       "vklive": "Rekaman Stream VK Live",
       "chzzk": "Rekaman Live Chzzk",
-      "younow": "Rekaman Live YouNow",
-      "clapper": "Rekaman Live Clapper"
+      "younow": "Rekaman Live YouNow"
     },
     "description": {
       "all": "Tonton rekaman live stream dari kreator di platform kami.",
@@ -1032,8 +975,7 @@
       "nimotv": "Tonton rekaman stream NimoTV dari streamer di platform kami.",
       "vklive": "Tonton rekaman stream VK Live dari streamer di platform kami.",
       "chzzk": "Siaran Live yang diarsipkan dari Chzzk, platform livestreaming Naver dari Korea Selatan, ditangkap pada resolusi dan framerate stream aslinya.",
-      "younow": "Siaran Live yang diarsipkan dari YouNow, salah satu platform live streaming yang paling awal.",
-      "clapper": "Siaran Live yang diarsipkan dari Clapper, platform berbasis US yang dibangun untuk kreator dewasa yang meninggalkan TikTok dan Facebook."
+      "younow": "Siaran Live yang diarsipkan dari YouNow, salah satu platform live streaming yang paling awal."
     },
     "streamTitle": "Stream {nickname} - {date}",
     "streamDescription": {
@@ -1055,8 +997,7 @@
       "nimotv": "Rekaman stream NimoTV dari {nickname}",
       "vklive": "Rekaman stream VK Live dari {nickname}",
       "chzzk": "Rekaman Live Chzzk dari {nickname}",
-      "younow": "Rekaman Live YouNow dari {nickname}",
-      "clapper": "Rekaman Live Clapper dari {nickname}"
+      "younow": "Rekaman Live YouNow dari {nickname}"
     }
   },
   "recordedOn": "Direkam pada {date}",
