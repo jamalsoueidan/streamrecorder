@@ -15,7 +15,9 @@ import { getTranslations } from "next-intl/server";
 import { Suspense } from "react";
 import { fetchRandomClips } from "./actions/fetch-clips";
 import {
+  fetchDiscoverByPlatform,
   fetchFavoriteRecordings,
+  fetchFollowedPlatforms,
   fetchLatestFollowers,
   fetchMostDownloadedRecordings,
   fetchMostViewedRecordings,
@@ -64,24 +66,31 @@ export default async function Page() {
   const mostDownloadedPromise = fetchMostDownloadedRecordings();
   const shortsPromise = fetchRandomClips();
 
-  const myFeedPromise = Promise.all(
-    streamingPlatforms.map(async (platform) => {
-      const type = platformMap[platform.name];
-      const recordings = await fetchRecordingsByPlatform(
-        ScopeEnum.Following,
-        type,
-      );
-      return { ...platform, type, recordings };
-    }),
-  );
+  // Only query platforms the user actually follows — not all ~18. Follows
+  // nobody → zero MyFeed queries. Follows 2 platforms → 2 queries.
+  const myFeedPromise = (async () => {
+    const followedTypes = new Set(await fetchFollowedPlatforms());
+    const followedPlatforms = streamingPlatforms.filter((platform) =>
+      followedTypes.has(platformMap[platform.name]),
+    );
+    return Promise.all(
+      followedPlatforms.map(async (platform) => {
+        const type = platformMap[platform.name];
+        const recordings = await fetchRecordingsByPlatform(
+          ScopeEnum.Following,
+          type,
+        );
+        return { ...platform, type, recordings };
+      }),
+    );
+  })();
 
   const discoverPromise = Promise.all(
     streamingPlatforms.map(async (platform) => {
       const type = platformMap[platform.name];
-      const recordings = await fetchRecordingsByPlatform(
-        ScopeEnum.Discover,
-        type,
-      );
+      // Global, shared-across-users cache (see fetchDiscoverByPlatform) so a
+      // restart warms one entry for everyone instead of N×18 per-user queries.
+      const recordings = await fetchDiscoverByPlatform(type);
       return { ...platform, type, recordings };
     }),
   );

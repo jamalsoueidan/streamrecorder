@@ -31,6 +31,8 @@ import { QueryProvider } from "@/app/providers/query-provider";
 import { UserProvider } from "@/app/providers/user-provider";
 import api from "@/lib/api";
 import { Shell } from "./components/shell";
+import { FreezeModal } from "./components/freeze-modal";
+import { computeFreeze, FREEZE_DISCOUNT_CODE } from "./lib/freeze";
 import { HourCycleProvider } from "./lib/hour-cycle";
 import { hourCycleFromTimeZone } from "./lib/hour-cycle-server";
 
@@ -66,6 +68,9 @@ export default async function DashboardLayout({
 
   const role = user?.data?.role || null;
 
+  // Payday freeze campaign (env-gated; inert unless FREEZE_START is set).
+  const freeze = computeFreeze(user?.data);
+
   const permissions = await api.usersPermissionsUsersRoles.rolesDetail({
     id: role?.id?.toString() || "",
   });
@@ -93,6 +98,12 @@ export default async function DashboardLayout({
             <AbilityProvider rules={rules} role={role}>
               <SwRegister />
               <TimezoneCookie />
+              {freeze ? (
+                <FreezeModal
+                  endsAt={freeze.endsAt}
+                  discountCode={FREEZE_DISCOUNT_CODE}
+                />
+              ) : null}
               <Shell initialCollapsed={navbarCollapsed} announcement={announcement}>{children}</Shell>
             </AbilityProvider>
           </UserProvider>
