@@ -18,6 +18,10 @@ function config() {
   if (Number.isNaN(start)) return null;
   const hours = Number(process.env.FREEZE_HOURS ?? 24);
   const minAgeDays = Number(process.env.FREEZE_MIN_AGE_DAYS ?? 7);
+  // Fail safe: a non-numeric env var must NOT silently produce an unbounded
+  // freeze (NaN end -> `now >= end` is always false -> window never closes).
+  if (!Number.isFinite(hours) || hours <= 0) return null;
+  if (!Number.isFinite(minAgeDays) || minAgeDays < 0) return null;
   return { start, end: start + hours * 3600_000, minAgeDays };
 }
 
