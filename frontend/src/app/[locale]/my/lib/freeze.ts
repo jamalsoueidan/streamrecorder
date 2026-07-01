@@ -9,8 +9,6 @@
 //
 // A fixed window (not per-user) so it needs no DB field / backend deploy.
 
-const PREMIUM_ROLES = ["premium", "champion", "admin", "moderator"];
-
 export const FREEZE_DISCOUNT_CODE = "EXTRA20";
 
 function config() {
@@ -31,9 +29,12 @@ export function computeFreeze(user: any): { endsAt: number } | null {
   const cfg = config();
   if (!cfg) return null; // feature off
 
-  // premium/staff never frozen
+  // In this app "authenticated" IS the free role; every other role type
+  // (premium / champion / admin / moderator / superadmin) is paid or staff and
+  // is never frozen. Matches how the rest of the app gates free vs paid
+  // (e.g. `user?.role?.type === "authenticated"`). Missing role = not frozen.
   const roleType: string | undefined = user?.role?.type;
-  if (roleType && PREMIUM_ROLES.includes(roleType)) return null;
+  if (roleType !== "authenticated") return null;
 
   // account must be older than the min age
   const createdAt = user?.createdAt ? new Date(user.createdAt).getTime() : null;
