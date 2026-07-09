@@ -26,7 +26,6 @@ export const SOCIAL_URL_PATTERNS: Partial<
   [FollowerTypeEnum.Mixch]: (username) => `https://mixch.tv/u/${username}`,
   [FollowerTypeEnum.Twitcast]: (username) =>
     `https://twitcasting.tv/${username}`,
-  [FollowerTypeEnum.Trovo]: (username) => `https://trovo.live/s/${username}`,
   [FollowerTypeEnum.Joilive]: (username) =>
     `https://www.joilive.net/user/index.html?s=${username}`,
   [FollowerTypeEnum.Live17]: (username) =>
@@ -52,7 +51,6 @@ export const URL_PATTERNS: Partial<Record<FollowerTypeEnum, UrlPattern>> = {
   [FollowerTypeEnum.Liveme]: (username) => `/liveme/${username}`,
   [FollowerTypeEnum.Mixch]: (username) => `/mixch/${username}`,
   [FollowerTypeEnum.Twitcast]: (username) => `/twitcast/${username}`,
-  [FollowerTypeEnum.Trovo]: (username) => `/trovo/${username}`,
   [FollowerTypeEnum.Joilive]: (username) => `/joilive/${username}`,
   [FollowerTypeEnum.Live17]: (username) => `/live17/${username}`,
   [FollowerTypeEnum.Kwai]: (username) => `/kwai/${username}`,

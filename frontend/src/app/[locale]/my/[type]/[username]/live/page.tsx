@@ -14,7 +14,7 @@ const STREAM_HOST =
   process.env.NEXT_PUBLIC_STREAM_HOST || "https://stream.livestreamrecorder.com";
 
 // Verified by probing n8n live-status-check / the worker for a currently-live
-// user per platform: tiktok, trovo, nimotv serve FLV (Enhanced-FLV with HEVC
+// user per platform: tiktok, nimotv serve FLV (Enhanced-FLV with HEVC
 // for tiktok). NimoTV verified 2026-05-26 via
 // stream.livestreamrecorder.com/nimotv/5928797/index.m3u8 → Content-Type
 // video/x-flv. live17/kwai/vklive/chzzk NOT yet verified — assumed HLS until
@@ -22,7 +22,6 @@ const STREAM_HOST =
 // is almost certainly correct for it.)
 const PLATFORM_LIVE_FORMAT: Record<string, "flv" | "hls"> = {
   tiktok: "flv",
-  trovo: "flv",
   nimotv: "flv",
 };
 

@@ -111,7 +111,7 @@ export async function generateMetadata({
         )}`,
       ],
     },
-    alternates: generateAlternates(`/${type}/${creatorName}`, locale),
+    alternates: generateAlternates(generateProfileUrl(follower, false), locale),
   };
 }
 

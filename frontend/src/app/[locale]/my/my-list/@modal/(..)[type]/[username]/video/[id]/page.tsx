@@ -7,7 +7,7 @@ import { useInfiniteQuery } from "@tanstack/react-query";
 import { useParams, useSearchParams } from "next/navigation";
 import { useRouter } from "@/i18n/navigation";
 import { useLocale } from "next-intl";
-import { useCallback } from "react";
+import { useCallback, useEffect } from "react";
 
 import { VideoScrollPlayer } from "@/app/[locale]/my/components/video/video-scroll-player";
 
@@ -75,7 +75,16 @@ export default function CreatorRecordingModal() {
 
   const videoExists = recordings.some((r) => r.documentId === params.id);
 
-  if (isLoading || (isFetching && !videoExists)) {
+  // List starts at page 1, but the clicked video may live on page 2+ of the
+  // accordion. Keep paging forward until it's loaded, otherwise the player
+  // can't find initialId and falls back to the first video (wrong one).
+  useEffect(() => {
+    if (!videoExists && hasNextPage && !isFetchingNextPage) {
+      fetchNextPage();
+    }
+  }, [videoExists, hasNextPage, isFetchingNextPage, fetchNextPage]);
+
+  if (isLoading || (!videoExists && (hasNextPage || isFetching))) {
     return (
       <Modal.Root opened={true} onClose={handleClose} fullScreen>
         <Modal.Content>

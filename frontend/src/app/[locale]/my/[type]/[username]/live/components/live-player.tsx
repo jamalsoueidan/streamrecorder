@@ -10,7 +10,7 @@ interface LivePlayerProps {
 }
 
 // Live player using xgplayer (built by ByteDance). FLV path handles
-// Enhanced-FLV with HEVC inside — the format TikTok / Douyin / Trovo
+// Enhanced-FLV with HEVC inside — the format TikTok / Douyin
 // serve their lives in. mpegts.js / flv.js choke on TikTok's HVCC
 // config record; xgplayer-flv parses it correctly out of the box.
 // HLS path handles every other platform (Twitch, YouTube, Kick, Bigo,

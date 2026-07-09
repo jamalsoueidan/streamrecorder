@@ -108,15 +108,6 @@ export const usePlatformOptions = () => {
       ),
     },
     {
-      value: "trovo",
-      label: (
-        <Center style={{ gap: 8 }}>
-          <IconBrandFunimation size={18} />
-          <Text size="sm">{t("platforms.trovo")}</Text>
-        </Center>
-      ),
-    },
-    {
       value: "joilive",
       label: (
         <Center style={{ gap: 8 }}>
@@ -237,11 +228,6 @@ export const PLATFORM_OPTIONS = [
   {
     value: "twitcast",
     labelKey: "platforms.twitcast",
-    icon: IconBrandFunimation,
-  },
-  {
-    value: "trovo",
-    labelKey: "platforms.trovo",
     icon: IconBrandFunimation,
   },
   {

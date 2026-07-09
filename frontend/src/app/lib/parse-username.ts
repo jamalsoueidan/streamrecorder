@@ -145,19 +145,6 @@ export function parseUsername(input: string): ParsedUsername {
     };
   }
 
-  // Trovo URL pattern — canonical trovo.live/s/{username}, also accepts
-  // legacy trovo.live/{username}
-  const trovoRegex =
-    /(?:https?:\/\/)?(?:www\.)?trovo\.live\/(?:s\/)?([^\/\s?]+)/i;
-  const trovoMatch = trimmed.match(trovoRegex);
-
-  if (trovoMatch) {
-    return {
-      username: trovoMatch[1],
-      platform: "trovo",
-    };
-  }
-
   // Joilive URL pattern — joilive.net/user/index.html?s={numericId}.
   // The `s` query param value is the username.
   const joiliveRegex =

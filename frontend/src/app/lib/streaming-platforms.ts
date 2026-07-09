@@ -60,12 +60,6 @@ export const streamingPlatforms = [
     file: "/simple/twitcast.svg",
   },
   {
-    color: "green.5",
-    colorCss: "var(--mantine-color-green-5)",
-    name: "Trovo",
-    file: "/simple/trovo.svg",
-  },
-  {
     color: "indigo.6",
     colorCss: "var(--mantine-color-indigo-6)",
     name: "Joilive",

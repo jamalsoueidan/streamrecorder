@@ -630,13 +630,6 @@ export default async function TermsAndConditions({ params }: PageProps) {
               • {t("thirdPartyPlatforms.platforms.tango")}
             </Anchor>
             <Anchor
-              href="https://trovo.live/trovo-policy/terms-of-service.html"
-              target="_blank"
-              style={{ color: "#60a5fa" }}
-            >
-              • {t("thirdPartyPlatforms.platforms.trovo")}
-            </Anchor>
-            <Anchor
               href="https://en.twitcasting.tv/indexlicense.php"
               target="_blank"
               style={{ color: "#60a5fa" }}

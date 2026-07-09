@@ -45,7 +45,6 @@ const platformMap: Record<string, FollowerTypeEnum> = {
   LiveMe: FollowerTypeEnum.Liveme,
   Mixch: FollowerTypeEnum.Mixch,
   Twitcast: FollowerTypeEnum.Twitcast,
-  Trovo: FollowerTypeEnum.Trovo,
   Joilive: FollowerTypeEnum.Joilive,
   Live17: FollowerTypeEnum.Live17,
   Kwai: FollowerTypeEnum.Kwai,

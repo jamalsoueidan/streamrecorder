@@ -103,7 +103,7 @@ export async function generateMetadata({
         )}`,
       ],
     },
-    alternates: generateAlternates(`/${type}/${follower.username}/memes`, locale),
+    alternates: generateAlternates(`${generateProfileUrl(follower, false)}/memes`, locale),
   };
 }
 
