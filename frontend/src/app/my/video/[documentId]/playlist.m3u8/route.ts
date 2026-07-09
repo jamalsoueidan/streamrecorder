@@ -11,27 +11,33 @@ import { NextRequest } from "next/server";
 
 const VIEW_SESSION_COOKIE = "view_session";
 
-const fetchSourcePlaylists = unstable_cache(
-  async (documentId: string) => {
-    const response = await publicApi.source.getSources({
-      filters: {
-        recording: { documentId },
-        state: { $eq: "done" },
-      },
-      sort: "createdAt:asc",
-      fields: ["path", "createdAt", "bucket", "endpoint"],
-    } as any);
+// Tagged per-documentId so the B2 migration can bust exactly one video's
+// cached source list (bucket/endpoint) the instant it repoints a source —
+// via POST /api/revalidate-playlist. Without this the 1h TTL would keep
+// serving the old Hetzner (m1) URLs until it expired.
+function fetchSourcePlaylists(documentId: string) {
+  return unstable_cache(
+    async () => {
+      const response = await publicApi.source.getSources({
+        filters: {
+          recording: { documentId },
+          state: { $eq: "done" },
+        },
+        sort: "createdAt:asc",
+        fields: ["path", "createdAt", "bucket", "endpoint"],
+      } as any);
 
-    const sources = response.data.data ?? [];
-    if (!sources.length) return null;
+      const sources = response.data.data ?? [];
+      if (!sources.length) return null;
 
-    const sourcesWithPlaylists = await fetchPlaylistsFromS3(sources);
+      const sourcesWithPlaylists = await fetchPlaylistsFromS3(sources);
 
-    return { sourcesWithPlaylists };
-  },
-  ["playlist-sources"],
-  { revalidate: 3600 },
-);
+      return { sourcesWithPlaylists };
+    },
+    ["playlist-sources", documentId],
+    { revalidate: 3600, tags: [`playlist-${documentId}`] },
+  )();
+}
 
 // The signed playlist is NOT cached — signing is cheap local HMAC
 // compute (~5-10ms per request), and caching the signed output risks
