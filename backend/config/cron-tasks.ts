@@ -207,10 +207,13 @@ export default {
     },
   },
 
-  // 30-day retention. For each expired source: list every object under its
-  // S3 prefix and delete them via batch DeleteObjects, THEN drop the DB
-  // row. Ordering matters — if S3 fails, the row stays so the next tick
-  // retries. No row is ever orphaned pointing at a gone-S3 prefix.
+  // 30-day retention — HETZNER ONLY. For each expired source: list every
+  // object under its S3 prefix and delete them via batch DeleteObjects, THEN
+  // drop the DB row. Ordering matters — if S3 fails, the row stays so the next
+  // tick retries. No row is ever orphaned pointing at a gone-S3 prefix.
+  // B2 sources (endpoint = s3.eu-central-003.backblazeb2.com) are excluded by
+  // the WHERE clause — they have their own longer retention and must never be
+  // wiped by this Hetzner cron.
   deleteExpiredSources: {
     task: async ({ strapi }) => {
       const knex = strapi.db.connection;
@@ -224,6 +227,7 @@ export default {
         WHERE created_at < NOW() - INTERVAL '30 days'
           AND bucket IS NOT NULL
           AND path IS NOT NULL
+          AND (endpoint IS NULL OR endpoint = 'nbg1.your-objectstorage.com')
         ORDER BY created_at
         LIMIT ${BATCH}
       `)) as {
