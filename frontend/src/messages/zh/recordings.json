@@ -377,49 +377,6 @@
         }
       ]
     },
-    "trovo": {
-      "title": "Trovo 直播录像",
-      "description": "在 我们的平台 上观看和下载 Trovo 直播录像。你的 Trovo 直播自动在云端捕获 — 无黑屏问题、无需屏幕录制器。创作者最简单的 Trovo 直播录制器。",
-      "keywords": [
-        "Trovo 录制器",
-        "Trovo 直播录制器",
-        "Trovo 直播录制",
-        "Trovo 直播屏幕录制器",
-        "屏幕录制 Trovo 直播",
-        "Trovo 黑屏录制",
-        "保存 Trovo 直播"
-      ],
-      "faqs": [
-        {
-          "question": "如何录制我的 Trovo 直播？",
-          "answer": "使用 我们的平台,你的 Trovo 直播会自动在云端录制。注册、添加你的 Trovo 直播用户名,每次开播时都会被捕获。无需安装 Trovo 直播录制器 APK,无需屏幕录制 — 一切都在服务器端进行。"
-        },
-        {
-          "question": "为什么录制 Trovo 直播时出现黑屏？",
-          "answer": "在 Trovo 直播上使用屏幕录制器时,黑屏问题很常见。我们的平台 完全避免了这个问题,因为它直接从云端捕获你的 Trovo 直播 — 没有黑屏、没有变通方法、没有不可靠的屏幕录制应用。"
-        },
-        {
-          "question": "如何修复 Trovo 直播屏幕录制器的黑屏？",
-          "answer": "最简单的解决方法是完全跳过屏幕录制。我们的平台 是基于云端的 Trovo 录制器,在服务器端以高质量捕获你的直播。没有黑屏问题、无需配置应用 — 只需添加你的用户名,你的 Trovo 直播就会自动录制。"
-        },
-        {
-          "question": "我需要 Trovo 直播屏幕录制器吗？",
-          "answer": "不需要。Trovo 直播的屏幕录制器经常导致黑屏问题或低质量捕获。我们的平台 是基于云端的 Trovo 直播录制器,它会自动以高质量捕获你的直播 — 无需安装应用,没有黑屏。"
-        },
-        {
-          "question": "我可以免费录制我的 Trovo 直播吗？",
-          "answer": "可以。免费注册 我们的平台 并立即开始录制你的 Trovo 直播。高级套餐解锁下载录像、ClipAI 自动精彩瞬间短视频和扩展存储。"
-        },
-        {
-          "question": "我可以下载我的 Trovo 直播录像吗？",
-          "answer": "可以。高级用户可以将其 Trovo 直播录像下载为视频文件以离线观看。每个录像也可以在浏览器中即时观看,无需下载。"
-        },
-        {
-          "question": "我可以将 Trovo 直播录像转换为短视频吗？",
-          "answer": "可以。高级用户可以使用 ClipAI 将其 Trovo 直播录像自动转换为准备好用于 TikTok、YouTube Shorts 或 Reels 的精彩短视频。这是重新利用直播内容并在各平台上增加粉丝的好方法。"
-        }
-      ]
-    },
     "twitcast": {
       "title": "TwitCasting 直播录像",
       "description": "在 我们的平台 上观看和下载 TwitCasting 直播录像。你的 TwitCasting 直播自动在云端捕获 — 无黑屏问题、无需屏幕录制器。创作者最简单的 TwitCasting 直播录制器。",
@@ -770,7 +727,6 @@
       "bigo": "Bigo 录像",
       "liveme": "LiveMe 录像",
       "mixch": "Mixch 录像",
-      "trovo": "Trovo 录像",
       "twitcast": "TwitCasting 录像",
       "joilive": "Joilive 录像",
       "live17": "17live 录像",
@@ -791,7 +747,6 @@
       "bigo": "在我们的平台上观看创作者的 Bigo 录像。下载并发现新内容。",
       "liveme": "在我们的平台上观看创作者的 LiveMe 录像。下载并发现新内容。",
       "mixch": "在我们的平台上观看创作者的 Mixch 录像。下载并发现新内容。",
-      "trovo": "在我们的平台上观看创作者的 Trovo 录像。下载并发现新内容。",
       "twitcast": "在我们的平台上观看创作者的 TwitCasting 录像。下载并发现新内容。",
       "joilive": "观看在 我们的平台 上保存自己直播的 Joilive 主播的录像。下载并发现新创作者。",
       "live17": "观看在 我们的平台 上保存自己直播的 17live 主播的录像。下载并发现新创作者。",
@@ -814,7 +769,6 @@
       "bigo": "录制 Bigo 直播",
       "liveme": "录制 LiveMe 直播",
       "mixch": "录制 Mixch 直播",
-      "trovo": "录制 Trovo 直播",
       "twitcast": "录制 TwitCasting 直播",
       "joilive": "保存 Joilive 直播",
       "live17": "保存 17live 直播",
@@ -835,7 +789,6 @@
       "bigo": "自动保存你的 Bigo 直播。下载录像并使用 ClipAI 创建短视频。",
       "liveme": "自动保存你的 LiveMe 直播。下载录像并使用 ClipAI 创建短视频。",
       "mixch": "自动保存你的 Mixch 直播。下载录像并使用 ClipAI 创建短视频。",
-      "trovo": "自动保存你的 Trovo 直播。下载录像并使用 ClipAI 创建短视频。",
       "twitcast": "自动保存你的 TwitCasting 直播。下载录像并使用 ClipAI 创建短视频。",
       "joilive": "自动保存你的 Joilive 直播。为每场直播创建独立备份,使用 ClipAI 创建短视频。",
       "live17": "自动保存你的 17live 直播。为每场直播创建独立备份,使用 ClipAI 创建短视频。",
@@ -860,7 +813,6 @@
       "bigo": "成为第一个录制 Bigo 直播的创作者！",
       "liveme": "成为第一个录制 LiveMe 直播的创作者！",
       "mixch": "成为第一个录制 Mixch 直播的创作者！",
-      "trovo": "成为第一个录制 Trovo 直播的创作者！",
       "twitcast": "成为第一个录制 TwitCasting 直播的创作者！",
       "joilive": "成为第一个录制 Joilive 直播的主播！",
       "live17": "成为第一个录制 17live 直播的主播！",
@@ -884,7 +836,6 @@
     "liveme": "## LiveMe 直播录像\n\n观看使用 我们的平台 保存自己直播的创作者的 LiveMe 直播录像。每场 LiveMe 直播都自动捕获并存储以供随时观看。\n\n### LiveMe 直播在消失前保存\n\nLiveMe 直播仅在直播时可用 — 一旦你结束直播,内容就从应用中消失。我们的 LiveMe 录制器在云端自动保存你的直播,所以一旦你的直播结束,什么都不会丢失。聊天会话、音乐瞬间、日常内容 — 一切都为粉丝保持可用。\n\n### 观看和下载你的 LiveMe 录像\n\n每个 LiveMe 直播录像都可以在浏览器中即时观看。高级用户可以将 LiveMe 录像下载为视频文件以离线观看 — 非常适合重新利用自己的内容或保留个人副本。\n\n### 录制你的 LiveMe 直播 — 无需额外应用\n\n忘掉在手机上进行屏幕录制或在后台运行捕获软件。我们的平台 是在线 LiveMe 录制器,在服务器端捕获你的直播。无电池消耗、无手动设置、无额外软件。你的 LiveMe 直播会从任何设备自动以高质量录制。\n\n### 使用 ClipAI 将直播转换为短视频\n\n想将你的 LiveMe 直播录像转换为短视频？ClipAI 分析你的录制直播并创建准备好发布到 TikTok、Instagram Reels 或 YouTube Shorts 的精彩短视频。通过重新利用你最精彩的瞬间,在 LiveMe 之外扩大你的粉丝。\n\n### 创作者的最佳 LiveMe 录制器\n\n我们的平台 专为保存 LiveMe 直播而构建。免费注册、添加你的 LiveMe 用户名,再也不会丢失任何直播。每场直播都自动捕获 — 你的永久 LiveMe 内容库。",
     "mixch": "## Mixch 直播录像\n\n观看使用 我们的平台 保存自己直播的创作者的 Mixch 直播录像。每场 Mixch 直播都自动捕获并存储以供随时观看。\n\n### Mixch 直播在消失前保存\n\nMixch 直播仅在直播时可用 — 一旦你结束直播,内容就从应用中消失。我们的 Mixch 录制器在云端自动保存你的直播,所以一旦你的直播结束,什么都不会丢失。聊天会话、音乐瞬间、日常内容 — 一切都为粉丝保持可用。\n\n### 观看和下载你的 Mixch 录像\n\n每个 Mixch 直播录像都可以在浏览器中即时观看。高级用户可以将 Mixch 录像下载为视频文件以离线观看 — 非常适合重新利用自己的内容或保留个人副本。\n\n### 录制你的 Mixch 直播 — 无需额外应用\n\n忘掉在手机上进行屏幕录制或在后台运行捕获软件。我们的平台 是在线 Mixch 录制器,在服务器端捕获你的直播。无电池消耗、无手动设置、无额外软件。你的 Mixch 直播会从任何设备自动以高质量录制。\n\n### 使用 ClipAI 将直播转换为短视频\n\n想将你的 Mixch 直播录像转换为短视频？ClipAI 分析你的录制直播并创建准备好发布到 TikTok、Instagram Reels 或 YouTube Shorts 的精彩短视频。通过重新利用你最精彩的瞬间,在 Mixch 之外扩大你的粉丝。\n\n### 创作者的最佳 Mixch 录制器\n\n我们的平台 专为保存 Mixch 直播而构建。免费注册、添加你的 Mixch 用户名,再也不会丢失任何直播。每场直播都自动捕获 — 你的永久 Mixch 内容库。",
     "joilive": "## Joilive 直播录像\n\nJoilive 不存档。你的个人资料上没有重播标签,没有过往直播列表,没有 VOD。这个平台完全围绕直播这一刻构建 — 你停止播出时,直播就没了。对于轻量级的短直播,这没问题,但如果你定期直播并希望作品留下来,那就是个真问题了。我们的平台 让 Joilive 主播 **录制自己的直播**,这样每场直播都会变成可以在个人创作者主页上观看、可分享的视频。\n\n### Joilive 的黑屏问题\n\n如果你试过用桌面录制器（OBS Studio 的显示器捕获、Windows 上的 Xbox Game Bar、Mac 上的 QuickTime）录制自己的 Joilive 直播,你大概都注意到了同一件事:音频录得很好,但视频显示为一块黑色的方框。这是 Joilive 网页播放器使用硬件加速解码加上 Widevine DRM 的结果。录制器看得到播放器,但看不到视频画面。这不是 Joilive 的 bug,也不是你的录制器坏了 — 这是受保护视频在现代浏览器上合成的副作用,在你机器上改设置改不好。\n\n实际可行的解决办法是完全跳过屏幕录制。我们的平台 在浏览器之上的位置捕获 Joilive 直播,DRM/合成路径根本不参与。没有黑屏、不用找编解码器、不用切换 GPU 加速开关 — 录制就是能用。\n\n### 自录,服务端运行\n\n你在录自己的直播,但你不需要为此运行任何东西。手机上不装应用,电脑上不装软件。你在 Joilive 应用里开播时,录制会在云端自动开始。在沙发上、车里、咖啡店里直播都行 — 你的笔记本可以是关机的,手机可以是锁屏的。每场直播结束时,你的 Joilive 直播会出现在你的创作者主页上,准备好在浏览器中回看。\n\n### 观看和下载你的 Joilive 录像\n\n每场录制好的直播都可以在任何现代浏览器中即时播放,不需要应用,看也不需要 Joilive 账号。高级主播可以下载原始视频文件用于编辑、重新上传或本地归档 — 而 ClipAI 可以从录像自动生成发布到 TikTok、YouTube Shorts 或 Reels 的短视频。\n\n### 直播的可分享 URL\n\nJoilive 自己的房间 URL 是 `joilive.net/user/index.html?s=1880…` — 一串没人能打字或记住的长数字 ID。你的 我们的平台 录像使用像 `livestreamrecorder.com/joilive/your-id/video/...` 这样干净的 URL,可以发到 Discord、贴到 Twitter 简介里,或者短信发给粉丝。同样的内容,没有查询字符串,也没有强制安装应用。\n\n### 为 Joilive 主播打造,而不是与他们为敌\n\n我们的平台 并不是在下载别人的直播。录制由 Joilive 主播为 **自己的** 账号主动选择,而且只针对自己的直播 — 别的什么都不管。视频归你,页面归你,删除是一键操作。免费注册、添加你的 Joilive 用户 ID,Joilive 缺失的存档就不再是你的问题了。",
-    "trovo": "## Trovo 直播录像\n\n观看使用 我们的平台 保存自己直播的创作者的 Trovo 直播录像。每场 Trovo 直播都自动捕获并存储以供随时观看。\n\n### Trovo 直播在消失前保存\n\nTrovo 直播仅在直播时可用 — 一旦你结束直播,内容就从应用中消失。我们的 Trovo 录制器在云端自动保存你的直播,所以一旦你的直播结束,什么都不会丢失。聊天会话、音乐瞬间、日常内容 — 一切都为粉丝保持可用。\n\n### 观看和下载你的 Trovo 录像\n\n每个 Trovo 直播录像都可以在浏览器中即时观看。高级用户可以将 Trovo 录像下载为视频文件以离线观看 — 非常适合重新利用自己的内容或保留个人副本。\n\n### 录制你的 Trovo 直播 — 无需额外应用\n\n忘掉在手机上进行屏幕录制或在后台运行捕获软件。我们的平台 是在线 Trovo 录制器,在服务器端捕获你的直播。无电池消耗、无手动设置、无额外软件。你的 Trovo 直播会从任何设备自动以高质量录制。\n\n### 使用 ClipAI 将直播转换为短视频\n\n想将你的 Trovo 直播录像转换为短视频？ClipAI 分析你的录制直播并创建准备好发布到 TikTok、Instagram Reels 或 YouTube Shorts 的精彩短视频。通过重新利用你最精彩的瞬间,在 Trovo 之外扩大你的粉丝。\n\n### 创作者的最佳 Trovo 录制器\n\n我们的平台 专为保存 Trovo 直播而构建。免费注册、添加你的 Trovo 用户名,再也不会丢失任何直播。每场直播都自动捕获 — 你的永久 Trovo 内容库。",
     "twitcast": "## TwitCasting 直播录像\n\n观看使用 我们的平台 保存自己直播的创作者的 TwitCasting 直播录像。每场 TwitCasting 直播都自动捕获并存储以供随时观看。\n\n### TwitCasting 直播在消失前保存\n\nTwitCasting 直播仅在直播时可用 — 一旦你结束直播,内容就从应用中消失。我们的 TwitCasting 录制器在云端自动保存你的直播,所以一旦你的直播结束,什么都不会丢失。聊天会话、音乐瞬间、日常内容 — 一切都为粉丝保持可用。\n\n### 观看和下载你的 TwitCasting 录像\n\n每个 TwitCasting 直播录像都可以在浏览器中即时观看。高级用户可以将 TwitCasting 录像下载为视频文件以离线观看 — 非常适合重新利用自己的内容或保留个人副本。\n\n### 录制你的 TwitCasting 直播 — 无需额外应用\n\n忘掉在手机上进行屏幕录制或在后台运行捕获软件。我们的平台 是在线 TwitCasting 录制器,在服务器端捕获你的直播。无电池消耗、无手动设置、无额外软件。你的 TwitCasting 直播会从任何设备自动以高质量录制。\n\n### 使用 ClipAI 将直播转换为短视频\n\n想将你的 TwitCasting 直播录像转换为短视频？ClipAI 分析你的录制直播并创建准备好发布到 TikTok、Instagram Reels 或 YouTube Shorts 的精彩短视频。通过重新利用你最精彩的瞬间,在 TwitCasting 之外扩大你的粉丝。\n\n### 创作者的最佳 TwitCasting 录制器\n\n我们的平台 专为保存 TwitCasting 直播而构建。免费注册、添加你的 TwitCasting 用户名,再也不会丢失任何直播。每场直播都自动捕获 — 你的永久 TwitCasting 内容库。",
     "live17": "## 我们的平台 上的 17live 录制\n\n17live(发音 *yi-qi live* — 一起,意为「在一起」)是亚洲第三大直播平台,2015 年于台湾创立,2021 年起总部位于日本,在 SGX 以 **LVR** 上市。同时托管 **Liver**(人类主播)与 **V-Liver**(虚拟形象主播 — 17live 开创的类别)。在日本、台湾、香港、新加坡和菲律宾尤为强势。我们的平台 将您直播的每一场 Live 的完整可在网页访问的录制 — 与 17live 应用内的 Stream Archive 并行存放在公开网络上。\n\n### 17live 已经有 Stream Archive,为什么还要第二份录制?\n\n17live 自己的 Stream Archive 没问题 — 它把近期直播保存在 17live App 内,由您的权限开关控制。但粉丝需要 17live App 才能观看,存档不会被 Google 收录,每场直播也没有稳定的公开 URL 可贴在 Discord 或 Twitter 简介里。我们的平台 是**补充**而非竞争:把同一场直播第二次捕获,这次落到一个公开网址,比如 `livestreamrecorder.com/live17/your-id/video/...`,任何浏览器都能立即打开。\n\n### Liver 与 V-Liver 同样的捕获\n\n我们录制 17live 实际播出的画面 — 无论您是聊天/唱歌/跳舞的真人 Liver、有自定义场景的 OBS 合成 Liver,还是运行 Live2D / 3D 形象的 V-Liver。捕获在 17live 分发之前发生,所以最终视频与粉丝在直播中看到的完全一致:形象、叠加、变声、礼物动画全部保留。\n\n### 手机不用 App,电脑不用 OBS\n\n服务器端。从手机或电脑像平常一样直播,录制在我们的基础设施里进行。直播开始后,您的手机可以休眠,笔记本可以关机 — 录制继续。设备没有 CPU 占用、GPU 负担、额外耗电。这对持续 4 小时以上的歌唱或谈话直播很重要。\n\n### 超越 90 秒的剪辑限制\n\n17live App 内的 Stream Clips 在 App 内分享时很棒,但被限制在 15-90 秒,并且不会离开 17live 表面。高级主播可以在 我们的平台 上使用 ClipAI 从完整保存的直播中剪出任意长度的精选片段,适配 **TikTok、Instagram Reels、YouTube Shorts** — 这些正是大多数 17live 外的潜在观众实际所在的平台。把它们用作把粉丝引回 17live 直播间的漏斗。\n\n### 同等支持经纪签约与独立主播\n\n17live 的经纪管理系统主动发掘和支持主播 — 这是它区别于纯自助 App 的特色。我们的平台 不会触碰任何这些。它不登录您的 17live 账号,不干涉 Hot Star 活动、礼物推广或经纪公司工具。它是被动的并行录制 — 您来控制,您的 URL,您的存档。\n\n### 浏览器中观看,需要时下载\n\n每一场 17live 录制都能在任何现代浏览器中即时播放。观看不需要 17live 账号 — 把 URL 分享给任何人、任何地方。高级创作者可以从每场直播下载原始 HEVC 视频文件用于再编辑、作为长视频 VOD 上传到 YouTube,或本地存档。\n\n### 主动开启,您自己的内容\n\n我们的平台 只录制您自己的主页,只在您主动开启之后。法律地位与从 17live 应用内的 Stream Archive 下载您自己的直播相同 — 只是存储在不同的位置(不是在 App 内,而是在您自己域名上的公开网址)。随时可停止录制,任何录制都可一键删除。",
     "kwai": "## 我们的平台 上的 Kwai 录制\n\nKwai(来自普通话 快 *kuài*,意为「快速」)是 **Kuaishou Technology**(HKEX 1024)的全球短视频+直播应用,常被称为亚洲仅次于抖音/TikTok 的 #2 短视频平台。在中国之外,Kwai 在**巴西**占主导地位(其最大市场,与 TikTok 竞争),加上印度尼西亚、墨西哥、阿根廷、哥伦比亚、中东和俄罗斯/CIS。我们的平台 将每场 Kwai Live 捕获到**公开可访问网络的录制** — Kwai 应用之外,开放网络上,Google 可索引。\n\n### 应用内的 Kwai vs. 开放网络上的 Kwai\n\nKwai 围绕其应用内信息流构建:滚动短视频、进入 Live、通过 K-coins 发送礼物,一切都在 Kwai 表面内。这对已在 Kwai 上的用户来说很棒。但当您的粉丝不在 Kwai 上时 — WhatsApp/Instagram 上的巴西粉丝、Telegram 上的印度尼西亚关注者、Kwai 甚至未安装的市场中的观众 — 播出就消失了。我们的平台 把每场 Kwai Live 录制到公开 URL,例如 `livestreamrecorder.com/kwai/your-username/video/...`,任何人都可以在任何浏览器中打开。观看无需安装 Kwai,无需 Kwai 账户,无应用门槛。\n\n### 为移动优先、蜂窝网络优先创作者构建\n\nKwai 最大的市场 — 巴西、印度尼西亚、MENA — 也是移动数据和电池是宝贵资源的市场。创作者不希望手机在后台运行 OBS 或屏幕录制器而烧坏。我们明白。我们的平台 在服务器端录制。您从手机上像平常一样在 Kwai 上播出 — 您的手机可以锁定屏幕、入睡、丢失通话 — 录制在我们的基础设施中继续。设备上零 CPU、零 GPU、零额外电池成本。\n\n### 巴西 Kwai 的发现鸿沟\n\nKwai BR 是一个庞大的生态系统,但在开放的葡萄牙语网络上基本不可见。在 Google 上搜索巴西 Kwai 创作者,您经常会得到内容稀薄的个人资料页面或第三方追踪网站。我们的平台 URL 干净、可索引、可分享 — 巴西创作者首次获得真正的 Google 足迹,每场 Kwai Live 充当 SEO 可发现的永久页面。\n\n### ClipAI:从 Kwai Live 到 TikTok / Reels / Shorts\n\nKwai 在新兴市场占主导地位,但 TikTok / Instagram / YouTube 仍主导全球发现。ClipAI 扫描您保存的 Kwai Live 并剪辑为 **TikTok、Instagram Reels、YouTube Shorts** 格式化的竖向精彩片段 — Kwai 之外的发现层。音乐翻唱、舞蹈、喜剧片段、礼物反应、观众互动 — 跨发以扩大受众漏斗回到您的 Kwai Live。\n\n### 在浏览器中观看,需要时下载\n\n每个保存的 Kwai Live 在任何现代浏览器中即时播放。观众无需 Kwai 账户。Premium 创作者可以从每场 Live 下载原始 HEVC 视频文件,用于重新编辑为 YouTube 长形式内容、合集视频或本地存档。\n\n### 不接触您的 Kwai 账户或收入\n\n我们的平台 不登录您的 Kwai 账户,看不到 K-coins,不读取您的礼物收入,不干涉 Kwai 创作者计划层级。录制由您作为 Kwai 创作者主动开启,针对您**自己**的账户,只录制您自己的直播 — 不录制其他任何东西。您的 Kwai 账户状态、排名和收益分成完全保留在 Kwai 的领域内。\n\n### 主动开启,您自己的内容,随时删除\n\n我们的平台 只录制您自己的个人资料,只在您主动开启之后。随时停止录制流程。一键删除任何过去的 Kwai 录制。您的内容、您的 URL、您的控制 — 独立于 Kwai 应用,在开放公开网络上,您潜在受众的其余部分终于可以找到您。",
@@ -905,7 +856,6 @@
       "bigo": "Bigo 直播录像",
       "liveme": "LiveMe 直播录像",
       "mixch": "Mixch 直播录像",
-      "trovo": "Trovo 直播录像",
       "twitcast": "TwitCasting 直播录像",
       "joilive": "Joilive 直播录像",
       "live17": "17live 直播录像",
@@ -926,7 +876,6 @@
       "bigo": "在 我们的平台 上观看创作者的 Bigo 录像。",
       "liveme": "在 我们的平台 上观看创作者的 LiveMe 录像。",
       "mixch": "在 我们的平台 上观看创作者的 Mixch 录像。",
-      "trovo": "在 我们的平台 上观看创作者的 Trovo 录像。",
       "twitcast": "在 我们的平台 上观看创作者的 TwitCasting 录像。",
       "joilive": "在 我们的平台 上观看主播的 Joilive 录像。",
       "live17": "在 我们的平台 上观看主播的 17live 录像。",
@@ -948,7 +897,6 @@
       "unknown": "{nickname} 的直播录像",
       "liveme": "{nickname} 的 LiveMe 录像",
       "mixch": "{nickname} 的 Mixch 录像",
-      "trovo": "{nickname} 的 Trovo 录像",
       "twitcast": "{nickname} 的 TwitCasting 录像",
       "joilive": "{nickname} 的 Joilive 录像",
       "live17": "{nickname} 的 17live 录像",

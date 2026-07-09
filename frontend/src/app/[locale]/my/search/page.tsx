@@ -62,7 +62,6 @@ const ALL_PLATFORMS: PlatformType[] = [
   "liveme",
   "mixch",
   "twitcast",
-  "trovo",
   "joilive",
   "live17",
   "kwai",

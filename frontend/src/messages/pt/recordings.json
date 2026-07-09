@@ -406,55 +406,6 @@
         }
       ]
     },
-    "trovo": {
-      "title": "Gravações do Trovo Live",
-      "description": "Assista e baixe gravações do Trovo Live na nossa plataforma. Suas lives do Trovo são capturadas automaticamente na nuvem — sem tela preta, sem gravador de tela. O gravador do Trovo Live mais fácil para criadores.",
-      "keywords": [
-        "gravador trovo",
-        "gravador trovo live",
-        "gravar trovo live",
-        "gravador de tela trovo live",
-        "gravar tela trovo live",
-        "gravador de tela para trovo live",
-        "gravar tela trovo",
-        "tela preta gravação trovo",
-        "gravador trovo live tela preta",
-        "gravar trovo tela preta",
-        "gravador de tela trovo tela preta",
-        "gravar trovo tela preta",
-        "salvar trovo live"
-      ],
-      "faqs": [
-        {
-          "question": "Como gravo minhas lives do Trovo?",
-          "answer": "Com a nossa plataforma, suas lives do Trovo são gravadas automaticamente na nuvem. Cadastre-se, adicione seu nome de usuário do Trovo Live e cada vez que você entra ao vivo é capturado. Sem APK de gravador do Trovo Live para instalar, sem gravar a tela — tudo acontece no servidor."
-        },
-        {
-          "question": "Por que aparece tela preta ao gravar o Trovo Live?",
-          "answer": "Problemas de tela preta são comuns ao usar gravadores de tela no Trovo Live. A nossa plataforma evita isso completamente porque captura suas lives do Trovo diretamente na nuvem — sem tela preta, sem gambiarras, sem aplicativos de gravação de tela não confiáveis."
-        },
-        {
-          "question": "Como resolvo o problema de tela preta do gravador de tela do Trovo Live?",
-          "answer": "A solução mais fácil é abandonar a gravação de tela de vez. A nossa plataforma é um gravador do Trovo na nuvem que captura suas lives no servidor em alta qualidade. Sem problemas de tela preta, sem aplicativos para configurar — basta adicionar seu nome de usuário e suas lives do Trovo são gravadas automaticamente."
-        },
-        {
-          "question": "Preciso de um gravador de tela para o Trovo Live?",
-          "answer": "Não. Gravadores de tela para Trovo Live frequentemente resultam em tela preta ou capturas de baixa qualidade. A nossa plataforma é um gravador do Trovo Live na nuvem que captura suas streams automaticamente em alta qualidade — sem aplicativo para instalar, sem tela preta."
-        },
-        {
-          "question": "Posso gravar minhas lives do Trovo gratuitamente?",
-          "answer": "Sim. Cadastre-se na nossa plataforma gratuitamente e comece a gravar suas lives do Trovo agora mesmo. Os planos premium desbloqueiam download das suas gravações, ClipAI para clipes de destaques automáticos e armazenamento estendido."
-        },
-        {
-          "question": "Posso baixar minhas gravações do Trovo Live?",
-          "answer": "Sim. Usuários premium podem baixar suas gravações do Trovo Live como arquivos de vídeo para visualização offline. Cada gravação também pode ser assistida instantaneamente no navegador sem precisar baixar."
-        },
-        {
-          "question": "Posso transformar minhas gravações do Trovo Live em clipes curtos?",
-          "answer": "Sim. Usuários premium podem usar o ClipAI para transformar automaticamente suas gravações do Trovo Live em clipes curtos de destaque prontos para TikTok, YouTube Shorts ou Reels. É uma ótima forma de reutilizar seu conteúdo ao vivo e crescer seus seguidores em outras plataformas."
-        }
-      ]
-    },
     "twitcast": {
       "title": "Gravações do TwitCasting Live",
       "description": "Assista e baixe gravações do TwitCasting Live na nossa plataforma. Suas lives do TwitCasting são capturadas automaticamente na nuvem — sem tela preta, sem gravador de tela. O gravador do TwitCasting Live mais fácil para criadores.",
@@ -811,7 +762,6 @@
       "bigo": "Gravações do Bigo",
       "liveme": "Gravações do LiveMe",
       "mixch": "Gravações do Mixch",
-      "trovo": "Gravações do Trovo",
       "twitcast": "Gravações do TwitCasting",
       "joilive": "Gravações do Joilive",
       "live17": "Gravações do 17live",
@@ -832,7 +782,6 @@
       "bigo": "Assista gravações do Bigo de criadores na nossa plataforma. Baixe e descubra novos conteúdos.",
       "liveme": "Assista gravações do LiveMe de criadores na nossa plataforma. Baixe e descubra novos conteúdos.",
       "mixch": "Assista gravações do Mixch de criadores na nossa plataforma. Baixe e descubra novos conteúdos.",
-      "trovo": "Assista gravações do Trovo de criadores na nossa plataforma. Baixe e descubra novos conteúdos.",
       "twitcast": "Assista gravações do TwitCasting de criadores na nossa plataforma. Baixe e descubra novos conteúdos.",
       "joilive": "Assista gravações do Joilive de streamers na nossa plataforma. Baixe e descubra novos criadores.",
       "live17": "Assista gravações do 17live de streamers na nossa plataforma. Baixe e descubra novos criadores.",
@@ -855,7 +804,6 @@
       "bigo": "Grave Streams do Bigo",
       "liveme": "Grave Streams do LiveMe",
       "mixch": "Grave Streams do Mixch",
-      "trovo": "Grave Streams do Trovo",
       "twitcast": "Grave Streams do TwitCasting",
       "joilive": "Salve Lives do Joilive",
       "live17": "Salve Lives do 17live",
@@ -876,7 +824,6 @@
       "bigo": "Salve automaticamente suas streams do Bigo. Baixe gravações e crie clipes curtos com o ClipAI.",
       "liveme": "Salve automaticamente suas streams do LiveMe. Baixe gravações e crie clipes curtos com o ClipAI.",
       "mixch": "Salve automaticamente suas streams do Mixch. Baixe gravações e crie clipes curtos com o ClipAI.",
-      "trovo": "Salve automaticamente suas streams do Trovo. Baixe gravações e crie clipes curtos com o ClipAI.",
       "twitcast": "Salve automaticamente suas streams do TwitCasting. Baixe gravações e crie clipes curtos com o ClipAI.",
       "joilive": "Salve automaticamente suas Lives do Joilive. Backup independente de cada transmissão, mais cortes curtos com o ClipAI.",
       "live17": "Salve automaticamente suas Lives do 17live. Backup independente de cada transmissão, mais cortes curtos com o ClipAI.",
@@ -901,7 +848,6 @@
       "bigo": "Seja o primeiro criador a gravar uma stream do Bigo!",
       "liveme": "Seja o primeiro criador a gravar uma stream do LiveMe!",
       "mixch": "Seja o primeiro criador a gravar uma stream do Mixch!",
-      "trovo": "Seja o primeiro criador a gravar uma stream do Trovo!",
       "twitcast": "Seja o primeiro criador a gravar uma stream do TwitCasting!",
       "joilive": "Seja o primeiro streamer a gravar uma Live do Joilive!",
       "live17": "Seja o primeiro streamer a gravar uma Live do 17live!",
@@ -924,7 +870,6 @@
     "bigo": "## Gravações de Lives da Bigo Live\n\nAssista às gravações de lives da Bigo Live de criadores que usam a nossa plataforma para salvar suas próprias lives. Cada live da Bigo é capturada automaticamente e armazenada para assistir quando quiser.\n\n### Lives da Bigo salvas antes de desaparecer\n\nLives da Bigo existem apenas enquanto estão no ar — no momento em que você encerra a sessão, o conteúdo some completamente do app. Nosso gravador da Bigo salva suas lives automaticamente na nuvem, para que seu conteúdo não desapareça quando a live termina. Danças, músicas, bate-papos, momentos de presentes — tudo continua disponível.\n\n### Assista e baixe suas gravações da Bigo\n\nToda gravação de live da Bigo fica disponível para assistir instantaneamente no navegador. Usuários Premium podem baixar suas gravações da Bigo como arquivos de vídeo para assistir offline — perfeito para reaproveitar seu próprio conteúdo ou guardar uma cópia pessoal.\n\n### Grave suas lives da Bigo sem gravação de tela\n\nEsqueça gravar a tela do celular ou deixar outro aparelho gravando a noite toda. A nossa plataforma é um gravador da Bigo online que captura suas lives do lado do servidor. Sem gasto de bateria, sem configuração manual, sem software extra. Stream do iPhone, Android ou PC — suas lives da Bigo são gravadas automaticamente em alta qualidade.\n\n### Transforme suas lives em cortes com ClipAI\n\nQuer transformar suas gravações de lives da Bigo em cortes curtos? O ClipAI analisa suas lives gravadas e cria cortes de destaques prontos para postar no TikTok, Instagram Reels ou YouTube Shorts. Faça sua audiência global crescer reaproveitando seus melhores momentos da Bigo.\n\n### O melhor gravador de Bigo para criadores\n\nO nossa plataforma foi feito para salvar lives da Bigo. Cadastre-se grátis, adicione seu nome de usuário da Bigo e nunca mais perca uma live. Cada live é capturada automaticamente — um lugar permanente para o seu conteúdo da Bigo que não depende do app guardar por você.",
     "liveme": "## Gravações de Lives da LiveMe\n\nAssista às gravações de lives da LiveMe de criadores que usam a nossa plataforma para salvar suas próprias lives. Cada live da LiveMe é capturada automaticamente e armazenada para assistir quando quiser.\n\n### Lives da LiveMe salvas antes de desaparecer\n\nLives da LiveMe são só ao vivo — no momento em que você encerra a transmissão, o conteúdo desaparece do app. Nosso gravador da LiveMe salva suas lives automaticamente na nuvem, para que nada se perca quando sua live acabar. Conversas, momentos musicais, conteúdo do dia a dia — tudo continua disponível para os fãs.\n\n### Assista e baixe suas gravações da LiveMe\n\nToda gravação de live da LiveMe fica disponível para assistir instantaneamente no navegador. Usuários Premium podem baixar suas gravações da LiveMe como arquivos de vídeo para assistir offline — perfeito para reaproveitar seu próprio conteúdo ou guardar uma cópia pessoal.\n\n### Grave suas lives da LiveMe sem apps extras\n\nEsqueça gravar a tela do celular ou rodar software de captura em segundo plano. A nossa plataforma é um gravador da LiveMe online que captura suas lives do lado do servidor. Sem gasto de bateria, sem configuração manual, sem software extra. Suas lives da LiveMe são gravadas automaticamente em alta qualidade, de qualquer dispositivo.\n\n### Transforme suas lives em cortes com ClipAI\n\nQuer transformar suas gravações de lives da LiveMe em cortes curtos? O ClipAI analisa suas lives gravadas e cria cortes de destaques prontos para postar no TikTok, Instagram Reels ou YouTube Shorts. Faça sua comunidade crescer além da LiveMe reaproveitando seus melhores momentos.\n\n### O melhor gravador de LiveMe para criadores\n\nO nossa plataforma foi feito para salvar lives da LiveMe. Cadastre-se grátis, adicione seu nome de usuário da LiveMe e nunca mais perca uma live. Cada live é capturada automaticamente — sua biblioteca permanente de conteúdo da LiveMe.",
     "mixch": "## Gravações de Lives da Mixch\n\nAssista às gravações de lives da Mixch de criadores que usam a nossa plataforma para salvar suas próprias lives. Cada live da Mixch é capturada automaticamente e armazenada para assistir quando quiser.\n\n### Lives da Mixch salvas antes de desaparecer\n\nLives da Mixch são só ao vivo — no momento em que você encerra a transmissão, o conteúdo desaparece do app. Nosso gravador da Mixch salva suas lives automaticamente na nuvem, para que nada se perca quando sua live acabar. Conversas, momentos musicais, conteúdo do dia a dia — tudo continua disponível para os fãs.\n\n### Assista e baixe suas gravações da Mixch\n\nToda gravação de live da Mixch fica disponível para assistir instantaneamente no navegador. Usuários Premium podem baixar suas gravações da Mixch como arquivos de vídeo para assistir offline — perfeito para reaproveitar seu próprio conteúdo ou guardar uma cópia pessoal.\n\n### Grave suas lives da Mixch sem apps extras\n\nEsqueça gravar a tela do celular ou rodar software de captura em segundo plano. A nossa plataforma é um gravador da Mixch online que captura suas lives do lado do servidor. Sem gasto de bateria, sem configuração manual, sem software extra. Suas lives da Mixch são gravadas automaticamente em alta qualidade, de qualquer dispositivo.\n\n### Transforme suas lives em cortes com ClipAI\n\nQuer transformar suas gravações de lives da Mixch em cortes curtos? O ClipAI analisa suas lives gravadas e cria cortes de destaques prontos para postar no TikTok, Instagram Reels ou YouTube Shorts. Faça sua comunidade crescer além da Mixch reaproveitando seus melhores momentos.\n\n### O melhor gravador de Mixch para criadores\n\nO nossa plataforma foi feito para salvar lives da Mixch. Cadastre-se grátis, adicione seu nome de usuário da Mixch e nunca mais perca uma live. Cada live é capturada automaticamente — sua biblioteca permanente de conteúdo da Mixch.",
-    "trovo": "## Gravações de Lives da Trovo\n\nAssista às gravações de lives da Trovo de criadores que usam a nossa plataforma para salvar suas próprias lives. Cada live da Trovo é capturada automaticamente e armazenada para assistir quando quiser.\n\n### Lives da Trovo salvas antes de desaparecer\n\nLives da Trovo são só ao vivo — no momento em que você encerra a transmissão, o conteúdo desaparece do app. Nosso gravador da Trovo salva suas lives automaticamente na nuvem, para que nada se perca quando sua live acabar. Conversas, momentos musicais, conteúdo do dia a dia — tudo continua disponível para os fãs.\n\n### Assista e baixe suas gravações da Trovo\n\nToda gravação de live da Trovo fica disponível para assistir instantaneamente no navegador. Usuários Premium podem baixar suas gravações da Trovo como arquivos de vídeo para assistir offline — perfeito para reaproveitar seu próprio conteúdo ou guardar uma cópia pessoal.\n\n### Grave suas lives da Trovo sem apps extras\n\nEsqueça gravar a tela do celular ou rodar software de captura em segundo plano. A nossa plataforma é um gravador da Trovo online que captura suas lives do lado do servidor. Sem gasto de bateria, sem configuração manual, sem software extra. Suas lives da Trovo são gravadas automaticamente em alta qualidade, de qualquer dispositivo.\n\n### Transforme suas lives em cortes com ClipAI\n\nQuer transformar suas gravações de lives da Trovo em cortes curtos? O ClipAI analisa suas lives gravadas e cria cortes de destaques prontos para postar no TikTok, Instagram Reels ou YouTube Shorts. Faça sua comunidade crescer além da Trovo reaproveitando seus melhores momentos.\n\n### O melhor gravador de Trovo para criadores\n\nO nossa plataforma foi feito para salvar lives da Trovo. Cadastre-se grátis, adicione seu nome de usuário da Trovo e nunca mais perca uma live. Cada live é capturada automaticamente — sua biblioteca permanente de conteúdo da Trovo.",
     "joilive": "## Gravações de Streams do Joilive\n\nO Joilive não arquiva. Não tem aba de replay no seu perfil, não tem lista de lives antigas, não tem VOD. A plataforma é construída inteiramente em torno do momento ao vivo — quando você para de transmitir, a stream era. Isso funciona bem para Lives casuais e curtas, mas vira um problema real se você transmite com regularidade e quer que seu trabalho permaneça. A nossa plataforma deixa os streamers do Joilive **gravarem suas próprias transmissões** para que cada Live vire um vídeo assistível e compartilhável numa página de criador pessoal.\n\n### O problema da tela preta com o Joilive\n\nSe você já tentou gravar sua stream do Joilive com um gravador de desktop (captura de tela do OBS Studio, a Xbox Game Bar no Windows, QuickTime no Mac), provavelmente notou a mesma coisa: o áudio grava direitinho, mas o vídeo aparece como um retângulo preto. Isso é o player web do Joilive usando decodificação acelerada por hardware mais DRM Widevine. O gravador vê o player mas não consegue ver o frame de vídeo. Não é bug do Joilive, não é seu gravador estragado — é um efeito colateral de como o vídeo protegido é composto nos navegadores modernos, e não dá para consertar mudando ajustes na sua máquina.\n\nO contorno prático é abandonar a gravação de tela por completo. A nossa plataforma captura a stream do Joilive antes do navegador, antes do caminho de DRM/composição estar envolvido. Sem tela preta, sem caça a codec, sem mexer em aceleração por GPU — a gravação simplesmente funciona.\n\n### Auto-gravação, do lado do servidor\n\nVocê está gravando sua própria stream, mas não roda nada para isso. Sem app no celular, sem software no PC. Quando você entra ao vivo no app do Joilive, a gravação começa na nuvem automaticamente. Transmita do sofá, do carro, de uma cafeteria — seu notebook pode estar desligado, seu celular pode estar bloqueado. Suas Lives do Joilive aterrissam na sua página de criador no momento em que cada transmissão termina, prontas para você rever no navegador.\n\n### Assista e baixe suas gravações do Joilive\n\nToda Live gravada toca instantaneamente em qualquer navegador moderno, sem precisar de app, sem precisar de conta no Joilive para assistir. Streamers premium podem baixar o arquivo de vídeo original para editar, reupar ou arquivar localmente — e o ClipAI pode gerar automaticamente cortes curtos a partir da gravação para postagem no TikTok, YouTube Shorts ou Reels.\n\n### Uma URL compartilhável para suas Lives\n\nA URL da sua própria sala no Joilive é `joilive.net/user/index.html?s=1880…` — um ID numérico longo que ninguém consegue digitar nem lembrar. Suas gravações na nossa plataforma usam URLs limpas tipo `livestreamrecorder.com/joilive/seu-id/video/...` que você pode postar no Discord, colar em bios do Twitter ou mandar para os fãs por mensagem. Mesmo conteúdo, sem query string, sem exigir instalação de app.\n\n### Feito para streamers do Joilive, não contra eles\n\nO nossa plataforma não baixa transmissões dos outros. A gravação é opt-in pelo próprio streamer do Joilive para **a sua própria** conta, e só as suas Lives — nada além disso. O vídeo é seu, a página é sua, deletar é com um clique. Cadastre-se grátis, adicione seu ID de usuário do Joilive, e o arquivo que falta no Joilive para de ser problema seu.",
     "twitcast": "## Gravações de Lives da TwitCasting\n\nAssista às gravações de lives da TwitCasting de criadores que usam a nossa plataforma para salvar suas próprias lives. Cada live da TwitCasting é capturada automaticamente e armazenada para assistir quando quiser.\n\n### Lives da TwitCasting salvas antes de desaparecer\n\nLives da TwitCasting são só ao vivo — no momento em que você encerra a transmissão, o conteúdo desaparece do app. Nosso gravador da TwitCasting salva suas lives automaticamente na nuvem, para que nada se perca quando sua live acabar. Conversas, momentos musicais, conteúdo do dia a dia — tudo continua disponível para os fãs.\n\n### Assista e baixe suas gravações da TwitCasting\n\nToda gravação de live da TwitCasting fica disponível para assistir instantaneamente no navegador. Usuários Premium podem baixar suas gravações da TwitCasting como arquivos de vídeo para assistir offline — perfeito para reaproveitar seu próprio conteúdo ou guardar uma cópia pessoal.\n\n### Grave suas lives da TwitCasting sem apps extras\n\nEsqueça gravar a tela do celular ou rodar software de captura em segundo plano. A nossa plataforma é um gravador da TwitCasting online que captura suas lives do lado do servidor. Sem gasto de bateria, sem configuração manual, sem software extra. Suas lives da TwitCasting são gravadas automaticamente em alta qualidade, de qualquer dispositivo.\n\n### Transforme suas lives em cortes com ClipAI\n\nQuer transformar suas gravações de lives da TwitCasting em cortes curtos? O ClipAI analisa suas lives gravadas e cria cortes de destaques prontos para postar no TikTok, Instagram Reels ou YouTube Shorts. Faça sua comunidade crescer além da TwitCasting reaproveitando seus melhores momentos.\n\n### O melhor gravador de TwitCasting para criadores\n\nO nossa plataforma foi feito para salvar lives da TwitCasting. Cadastre-se grátis, adicione seu nome de usuário da TwitCasting e nunca mais perca uma live. Cada live é capturada automaticamente — sua biblioteca permanente de conteúdo da TwitCasting.",
     "live17": "## Gravações 17live na nossa plataforma\n\n17live (pronuncia-se *yi-qi live* — 一起, mandarim para «juntos») é a terceira maior plataforma de streaming ao vivo da Ásia, fundada em Taiwan em 2015, sediada no Japão desde 2021, listada na SGX como **LVR**. Hospeda tanto **Livers** (streamers humanos) quanto **V-Livers** (streamers com avatar virtual — uma categoria que o 17live pioneerou). Especialmente forte no Japão, Taiwan, Hong Kong, Singapura e Filipinas. Nossa plataforma mantém uma gravação completa e acessível pela web de cada Live que você transmite — ao lado do Stream Archive in-app do 17live, mas na web aberta.\n\n### Por que uma segunda gravação se o 17live já tem Stream Archive?\n\nO próprio Stream Archive do 17live está bom — armazena os Lives recentes dentro do app do 17live, controlado pelos seus toggles de permissão. Mas os fãs precisam do app do 17live para ver, o arquivo não é indexável pelo Google e não há URL pública estável por transmissão que você possa colar no Discord ou numa bio do Twitter. Nossa plataforma é **complementar**, não competitivo: a mesma transmissão capturada uma segunda vez, dessa vez pousando em uma URL web pública como `livestreamrecorder.com/live17/your-id/video/...` que qualquer navegador pode abrir instantaneamente.\n\n### Mesma captura para Livers e V-Livers\n\nGravamos o que o 17live transmite — quer você seja um Liver com face-cam fazendo chat / música / dança, um Liver composto com OBS com cena customizada ou um V-Liver rodando avatares Live2D / 3D. A captura acontece antes da distribuição do 17live, então seu vídeo final fica exatamente como seus fãs viram ao vivo: avatar, sobreposições, modulador de voz, animações de presentes, tudo preservado.\n\n### Sem app no celular, sem OBS no PC\n\nLado do servidor. Você transmite do celular ou PC como sempre, a gravação acontece na nossa infraestrutura. Depois que o Live começa, seu celular pode dormir, seu notebook pode ficar desligado — a gravação continua. Sem carga de CPU, sem uso de GPU, sem custo extra de bateria. Isso importa para Lives longos de canto ou conversa que vão 4+ horas.\n\n### Além do limite de 90 segundos do clipe\n\nOs Stream Clips in-app do 17live são ótimos para compartilhamento dentro do app, mas limitados a 15–90 segundos e não saem da superfície do 17live. Streamers Premium podem usar o ClipAI na nossa plataforma para cortar clipes de destaque de qualquer comprimento dos Lives completos salvos, formatados para **TikTok, Instagram Reels, YouTube Shorts** — as plataformas onde realmente vivem a maioria dos espectadores não-17live. Use-os como funil de volta para a sua sala do 17live.\n\n### Suporte equitativo para streamers geridos por agência e independentes\n\nO sistema de gestão de talentos do 17live recruta e apoia ativamente streamers — isso faz parte do que distingue a plataforma dos apps puramente de autosserviço. Nossa plataforma não toca em nada disso. Não faz login na sua conta 17live, não interfere com eventos Hot Star, promoções de presentes ou ferramentas de agência. É uma gravação paralela passiva — seu controle, sua URL, seu arquivo.\n\n### Ver no navegador, baixar se precisar\n\nCada gravação 17live é reproduzida instantaneamente em qualquer navegador moderno. Sem conta 17live necessária para assistir — compartilhe a URL com qualquer pessoa, em qualquer lugar. Criadores Premium podem baixar o arquivo de vídeo HEVC bruto de cada Live para reedição, upload no YouTube como VOD longo ou arquivamento local.\n\n### Opt-in, seu próprio conteúdo\n\nNossa plataforma só grava seu próprio perfil, apenas depois que você se inscreve. A postura legal é a mesma de baixar seus próprios Lives do Stream Archive in-app do 17live — só em uma superfície diferente (não dentro do app, mas em uma URL web pública no seu domínio). Pare a gravação a qualquer momento, exclua qualquer gravação com um clique.",
@@ -946,7 +891,6 @@
       "bigo": "Gravações de Streams do Bigo",
       "liveme": "Gravações de Streams do LiveMe",
       "mixch": "Gravações de Streams do Mixch",
-      "trovo": "Gravações de Streams do Trovo",
       "twitcast": "Gravações de Streams do TwitCasting",
       "joilive": "Gravações de Streams do Joilive",
       "live17": "Gravações de Streams do 17live",
@@ -967,7 +911,6 @@
       "bigo": "Assista gravações do Bigo de criadores na nossa plataforma.",
       "liveme": "Assista gravações do LiveMe de criadores na nossa plataforma.",
       "mixch": "Assista gravações do Mixch de criadores na nossa plataforma.",
-      "trovo": "Assista gravações do Trovo de criadores na nossa plataforma.",
       "twitcast": "Assista gravações do TwitCasting de criadores na nossa plataforma.",
       "joilive": "Assista gravações do Joilive de streamers na nossa plataforma.",
       "live17": "Assista gravações do 17live de streamers na nossa plataforma.",
@@ -989,7 +932,6 @@
       "unknown": "Gravação de live de {nickname}",
       "liveme": "Gravação do LiveMe de {nickname}",
       "mixch": "Gravação do Mixch de {nickname}",
-      "trovo": "Gravação do Trovo de {nickname}",
       "twitcast": "Gravação do TwitCasting de {nickname}",
       "joilive": "Gravação do Joilive de {nickname}",
       "live17": "Gravação do 17live de {nickname}",

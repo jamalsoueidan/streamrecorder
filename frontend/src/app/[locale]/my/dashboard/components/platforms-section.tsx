@@ -20,7 +20,6 @@ const PLATFORM_FLAGS: Record<string, string[]> = {
   LiveMe: ["🌍"],
   Mixch: ["🇯🇵"],
   Twitcast: ["🇯🇵"],
-  Trovo: ["🇷🇺", "🇧🇷"],
   Joilive: ["🇨🇳", "🇹🇼"],
   Live17: ["🇹🇼", "🇯🇵", "🇭🇰"],
   Kwai: ["🇧🇷", "🇮🇩", "🇲🇽"],
