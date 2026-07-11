@@ -1,9 +1,9 @@
 import { revalidateTag } from "next/cache";
 import { NextRequest, NextResponse } from "next/server";
 
-// Called by the Hetzner->B2 migration after it repoints a source's
+// Called by the storage migration after it repoints a source's
 // bucket/endpoint, to instantly bust the playlist.m3u8 cache for the
-// affected recording(s) so playback flips to B2 without waiting out the
+// affected recording(s) so playback flips to B without waiting out the
 // 1h unstable_cache TTL. Worst case if hit by anyone else: a harmless
 // Strapi refetch, so no auth.
 export async function POST(req: NextRequest) {
@@ -24,7 +24,7 @@ export async function POST(req: NextRequest) {
   }
 
   // { expire: 0 } forces immediate hard expiration (Next 16). NOT a
-  // stale-while-revalidate profile like "max" — after we delete the Hetzner
+  // stale-while-revalidate profile like "max" — after we delete the H
   // copy the old m1 URL must never be served again.
   for (const id of documentIds) revalidateTag(`playlist-${id}`, { expire: 0 });
   return NextResponse.json({ revalidated: true, count: documentIds.length });

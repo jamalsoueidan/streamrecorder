@@ -11,10 +11,10 @@ import { NextRequest } from "next/server";
 
 const VIEW_SESSION_COOKIE = "view_session";
 
-// Tagged per-documentId so the B2 migration can bust exactly one video's
+// Tagged per-documentId so the storage migration can bust exactly one video's
 // cached source list (bucket/endpoint) the instant it repoints a source —
 // via POST /api/revalidate-playlist. Without this the 1h TTL would keep
-// serving the old Hetzner (m1) URLs until it expired.
+// serving the old (H, m1) URLs until it expired.
 function fetchSourcePlaylists(documentId: string) {
   return unstable_cache(
     async () => {

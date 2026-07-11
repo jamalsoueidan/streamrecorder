@@ -152,9 +152,9 @@ export default async function VideoPage({ params }: PageProps) {
 
   const previewUrl = getImageUrl(data.documentId!, "screenshot.jpg", sources.at(-1));
 
-  // Public preview: for B2 sources, play the pre-made 60s demo.mp4 (single
-  // cached file via media proxy) instead of truncating + signing the full
-  // HLS. Falls back to the HLS playlist for Hetzner sources (no demo.mp4).
+  // Public preview: for B-backend sources, play the pre-made 60s demo.mp4
+  // (single cached file via media proxy) instead of truncating + signing the
+  // full HLS. Falls back to the HLS playlist for other sources (no demo.mp4).
   const demoVideoUrl = getDemoVideoUrl(sources[0]);
 
   const duration = sources.reduce(

@@ -34,7 +34,7 @@ interface VideoPlayerProps {
   src: string;
   previewUrl: string;
   thumbnailsUrl?: string;
-  // When true, `src` is a progressive mp4 (the B2 demo.mp4 preview) and is
+  // When true, `src` is a progressive mp4 (the demo.mp4 preview) and is
   // rendered with a plain <video> — HlsVideo can only play HLS playlists.
   isMp4?: boolean;
 }
@@ -92,7 +92,10 @@ export function VideoPlayer({
           width="auto"
           height="500px"
         >
-          <source src={src} type="application/x-mpegURL" />
+          <source
+            src={src}
+            type={isMp4 ? "video/mp4" : "application/x-mpegURL"}
+          />
         </video>
       </noscript>
       <MediaController
