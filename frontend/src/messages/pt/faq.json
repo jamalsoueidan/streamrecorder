@@ -16,7 +16,7 @@
     },
     {
       "question": "É realmente gratuito?",
-      "answer": "Sim! Nosso plano gratuito permite gravar em até 3 plataformas e as gravações ficam disponíveis por 5 dias. Se precisar de mais, nosso plano premium oferece melhor qualidade de vídeo, armazenamento por 30 dias, download de vídeos e a possibilidade de gravar em até 100 plataformas."
+      "answer": "Sim! Nosso plano gratuito permite gravar em até 3 plataformas e as gravações ficam disponíveis por 5 dias. Se precisar de mais, nosso plano premium oferece melhor qualidade de vídeo, armazenamento por 60 dias, download de vídeos e a possibilidade de gravar em até 100 plataformas."
     },
     {
       "question": "Quais plataformas são suportadas?",
@@ -24,7 +24,7 @@
     },
     {
       "question": "Por quanto tempo as gravações ficam armazenadas?",
-      "answer": "Usuários gratuitos têm 5 dias de armazenamento. Usuários premium têm 30 dias. Certifique-se de baixar as gravações que quiser manter antes que expirem."
+      "answer": "Usuários gratuitos têm 5 dias de armazenamento. Usuários premium têm 60 dias. Certifique-se de baixar as gravações que quiser manter antes que expirem."
     },
     {
       "question": "Como faço para adicionar meu nome de usuário?",
@@ -44,7 +44,7 @@
     },
     {
       "question": "O que está incluído no plano premium?",
-      "answer": "O premium oferece melhor qualidade de vídeo, download de gravações, armazenamento por 30 dias e suporte a até 100 criadores — ideal para agências e equipes de gestão."
+      "answer": "O premium oferece melhor qualidade de vídeo, download de gravações, armazenamento por 60 dias e suporte a até 100 criadores — ideal para agências e equipes de gestão."
     },
     {
       "question": "Como faço upgrade para o premium?",

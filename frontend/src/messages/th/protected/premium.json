@@ -23,7 +23,7 @@
   "premiumNotifications": "การแจ้งเตือนเมื่อพร้อม",
   "premiumLiveNotifications": "แจ้งเตือนเมื่อมีไลฟ์",
   "premiumWatchAnonymous": "ดูไลฟ์แบบไม่ระบุตัวตน",
-  "premiumStorage30Days": "พื้นที่จัดเก็บไม่จำกัด 30 วัน",
+  "premiumStorage30Days": "พื้นที่จัดเก็บไม่จำกัด 60 วัน",
   "premiumAiHighlights": "ไฮไลต์และคลิป AI",
   "premiumAiSubtitles": "คำบรรยายและแปล AI",
   "premiumAiMemes": "มีมและ GIF AI",

@@ -87,8 +87,8 @@ export default function PremiumClient() {
     {
       id: "1month",
       label: t("billing1MonthLabel"),
-      price: 20,
-      perMonth: 20,
+      price: 24,
+      perMonth: 24,
       savings: null,
       badge: null,
       billingCycle: "monthly" as const,
@@ -97,8 +97,8 @@ export default function PremiumClient() {
     {
       id: "3months",
       label: t("billing3MonthsLabel"),
-      price: 39,
-      perMonth: 13,
+      price: 48,
+      perMonth: 16,
       savings: t("billing3MonthsSavings"),
       badge: null,
       billingCycle: "quarterly" as const,
@@ -107,8 +107,8 @@ export default function PremiumClient() {
     {
       id: "12months",
       label: t("billing12MonthsLabel"),
-      price: 120,
-      perMonth: 10,
+      price: 144,
+      perMonth: 12,
       savings: t("billing12MonthsSavings"),
       badge: t("billing12MonthsBadge"),
       billingCycle: "annual" as const,

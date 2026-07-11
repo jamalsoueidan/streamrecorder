@@ -34,6 +34,9 @@ interface VideoPlayerProps {
   src: string;
   previewUrl: string;
   thumbnailsUrl?: string;
+  // When true, `src` is a progressive mp4 (the B2 demo.mp4 preview) and is
+  // rendered with a plain <video> — HlsVideo can only play HLS playlists.
+  isMp4?: boolean;
 }
 
 export function VideoPlayer({
@@ -41,6 +44,7 @@ export function VideoPlayer({
   src,
   previewUrl,
   thumbnailsUrl,
+  isMp4 = false,
 }: VideoPlayerProps) {
   const controllerRef = useRef<HTMLElement>(null);
 
@@ -159,26 +163,46 @@ export function VideoPlayer({
           </Flex>
         )}
         {canPlay && <VideoLoadingOverlay containerRef={controllerRef} />}
-        {canPlay && (
-          <HlsVideo
-            src={src}
-            slot="media"
-            playsInline
-            autoPlay
-            muted
-            preload="metadata"
-            poster={previewUrl}
-          >
-            {thumbnailsUrl ? (
-              <track
-                default
-                kind="metadata"
-                label="thumbnails"
-                src={thumbnailsUrl}
-              />
-            ) : null}
-          </HlsVideo>
-        )}
+        {canPlay &&
+          (isMp4 ? (
+            <video
+              src={src}
+              slot="media"
+              playsInline
+              autoPlay
+              muted
+              preload="metadata"
+              poster={previewUrl}
+            >
+              {thumbnailsUrl ? (
+                <track
+                  default
+                  kind="metadata"
+                  label="thumbnails"
+                  src={thumbnailsUrl}
+                />
+              ) : null}
+            </video>
+          ) : (
+            <HlsVideo
+              src={src}
+              slot="media"
+              playsInline
+              autoPlay
+              muted
+              preload="metadata"
+              poster={previewUrl}
+            >
+              {thumbnailsUrl ? (
+                <track
+                  default
+                  kind="metadata"
+                  label="thumbnails"
+                  src={thumbnailsUrl}
+                />
+              ) : null}
+            </HlsVideo>
+          ))}
 
       {previewUrl && <MediaPosterImage slot="poster" src={previewUrl} />}
 

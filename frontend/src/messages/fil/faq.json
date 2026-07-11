@@ -16,7 +16,7 @@
     },
     {
       "question": "Libre ba talaga?",
-      "answer": "Oo! Pinapayagan ka ng free plan namin na mag-record mula sa hanggang 3 platforms at na-store ang recordings ng 5 araw. Kung kailangan mo ng higit pa, binibigyan ka ng premium plan namin ng mas magandang video quality, 30-day storage, video downloads, at kakayahang mag-record mula sa hanggang 100 platforms."
+      "answer": "Oo! Pinapayagan ka ng free plan namin na mag-record mula sa hanggang 3 platforms at na-store ang recordings ng 5 araw. Kung kailangan mo ng higit pa, binibigyan ka ng premium plan namin ng mas magandang video quality, 60-day storage, video downloads, at kakayahang mag-record mula sa hanggang 100 platforms."
     },
     {
       "question": "Anong platforms ang sinusuportahan?",
@@ -24,7 +24,7 @@
     },
     {
       "question": "Gaano katagal nai-store ang recordings?",
-      "answer": "Ang free users ay may 5 araw na storage. Ang premium users ay may 30 araw. Siguraduhing i-download mo ang recordings na gusto mong itago bago mag-expire."
+      "answer": "Ang free users ay may 5 araw na storage. Ang premium users ay may 60 araw. Siguraduhing i-download mo ang recordings na gusto mong itago bago mag-expire."
     },
     {
       "question": "Paano ko idadagdag ang username ko?",
@@ -44,7 +44,7 @@
     },
     {
       "question": "Ano ang kasama sa premium plan?",
-      "answer": "Binibigyan ka ng Premium ng mas magandang video quality, kakayahang mag-download ng recordings, 30-day storage, at suporta para sa hanggang 100 creators — perfect para sa agencies at management teams."
+      "answer": "Binibigyan ka ng Premium ng mas magandang video quality, kakayahang mag-download ng recordings, 60-day storage, at suporta para sa hanggang 100 creators — perfect para sa agencies at management teams."
     },
     {
       "question": "Paano ako mag-upgrade sa premium?",

@@ -16,7 +16,7 @@
     },
     {
       "question": "È davvero gratis?",
-      "answer": "Sì! Il piano gratis ti permette di registrare da un massimo di 3 piattaforme e le registrazioni vengono mantenute per 5 giorni. Se ti serve di più, il piano premium offre qualità video migliore, storage di 30 giorni, download dei video e la possibilità di registrare da un massimo di 100 piattaforme."
+      "answer": "Sì! Il piano gratis ti permette di registrare da un massimo di 3 piattaforme e le registrazioni vengono mantenute per 5 giorni. Se ti serve di più, il piano premium offre qualità video migliore, storage di 60 giorni, download dei video e la possibilità di registrare da un massimo di 100 piattaforme."
     },
     {
       "question": "Quali piattaforme sono supportate?",
@@ -24,7 +24,7 @@
     },
     {
       "question": "Per quanto tempo vengono salvate le registrazioni?",
-      "answer": "Gli utenti gratis hanno 5 giorni di storage. Gli utenti premium ne hanno 30. Assicurati di scaricare le registrazioni che vuoi tenere prima che scadano."
+      "answer": "Gli utenti gratis hanno 5 giorni di storage. Gli utenti premium ne hanno 60. Assicurati di scaricare le registrazioni che vuoi tenere prima che scadano."
     },
     {
       "question": "Come aggiungo il mio nome utente?",
@@ -44,7 +44,7 @@
     },
     {
       "question": "Cosa include il piano premium?",
-      "answer": "Il premium ti offre qualità video migliore, la possibilità di scaricare le registrazioni, 30 giorni di storage e il supporto per un massimo di 100 creator — perfetto per agenzie e team di management."
+      "answer": "Il premium ti offre qualità video migliore, la possibilità di scaricare le registrazioni, 60 giorni di storage e il supporto per un massimo di 100 creator — perfetto per agenzie e team di management."
     },
     {
       "question": "Come passo al premium?",
