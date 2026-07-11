@@ -36,14 +36,10 @@ export default function VideoPage() {
     isLoading,
     isFetching,
   } = useInfiniteQuery({
+    // Same key as the parent profile feed so a warm cache is reused.
     queryKey: ["profile-recordings", params.type, params.username, filters],
     queryFn: ({ pageParam }) =>
-      fetchProfileRecordings(
-        params.type,
-        params.username,
-        filters,
-        pageParam,
-      ),
+      fetchProfileRecordings(params.type, params.username, filters, pageParam),
     initialPageParam: 1,
     getNextPageParam: (lastPage) => {
       const { page = 1, pageSize } = lastPage.meta?.pagination ?? {};
@@ -58,14 +54,20 @@ export default function VideoPage() {
 
   const videoExists = recordings.some((r) => r.documentId === params.id);
 
-  // Auto-fetch pages until target video appears (mirrors modal behavior).
-  // Shares the same `profile-recordings` cache as parent profile page and
-  // the @modal route — any pages we load here benefit them too.
+  // Safety net: the context fetch lands the video on the first page, so this
+  // rarely runs — but cap it so a genuinely-missing video can never trigger
+  // the old runaway "fetch every page" loop (which mounted a player per
+  // recording and flooded blob URLs).
   useEffect(() => {
-    if (!videoExists && hasNextPage && !isFetchingNextPage) {
+    if (
+      !videoExists &&
+      hasNextPage &&
+      !isFetchingNextPage &&
+      (data?.pages.length ?? 0) < 5
+    ) {
       fetchNextPage();
     }
-  }, [videoExists, hasNextPage, isFetchingNextPage, fetchNextPage]);
+  }, [videoExists, hasNextPage, isFetchingNextPage, fetchNextPage, data?.pages.length]);
 
   const handleVisibleChange = useCallback(
     (recording: Recording) => {

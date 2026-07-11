@@ -16,7 +16,7 @@
     },
     {
       "question": "C'est vraiment gratuit ?",
-      "answer": "Oui ! Notre offre gratuite te permet d'enregistrer depuis jusqu'à 3 plateformes, et les enregistrements sont conservés 5 jours. Si tu as besoin de plus, notre offre Premium te donne une meilleure qualité vidéo, un stockage de 30 jours, le téléchargement de vidéos et la possibilité d'enregistrer depuis jusqu'à 100 plateformes."
+      "answer": "Oui ! Notre offre gratuite te permet d'enregistrer depuis jusqu'à 3 plateformes, et les enregistrements sont conservés 5 jours. Si tu as besoin de plus, notre offre Premium te donne une meilleure qualité vidéo, un stockage de 60 jours, le téléchargement de vidéos et la possibilité d'enregistrer depuis jusqu'à 100 plateformes."
     },
     {
       "question": "Quelles plateformes sont prises en charge ?",
@@ -24,7 +24,7 @@
     },
     {
       "question": "Combien de temps les enregistrements sont-ils conservés ?",
-      "answer": "Les utilisateurs gratuits ont 5 jours de stockage. Les utilisateurs Premium ont 30 jours. Pense à télécharger les enregistrements que tu veux conserver avant qu'ils n'expirent."
+      "answer": "Les utilisateurs gratuits ont 5 jours de stockage. Les utilisateurs Premium ont 60 jours. Pense à télécharger les enregistrements que tu veux conserver avant qu'ils n'expirent."
     },
     {
       "question": "Comment ajouter mon nom d'utilisateur ?",
@@ -44,7 +44,7 @@
     },
     {
       "question": "Que comprend l'offre Premium ?",
-      "answer": "Premium te donne une meilleure qualité vidéo, la possibilité de télécharger les enregistrements, un stockage de 30 jours et la prise en charge de jusqu'à 100 créateurs — parfait pour les agences et les équipes de management."
+      "answer": "Premium te donne une meilleure qualité vidéo, la possibilité de télécharger les enregistrements, un stockage de 60 jours et la prise en charge de jusqu'à 100 créateurs — parfait pour les agences et les équipes de management."
     },
     {
       "question": "Comment passer Premium ?",
