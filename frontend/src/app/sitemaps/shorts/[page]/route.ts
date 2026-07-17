@@ -1,3 +1,4 @@
+import { CANONICAL_BASE_URL } from "@/app/lib/canonical";
 import { getClipUrl } from "@/app/lib/clip-url";
 import { routing } from "@/i18n/routing";
 import publicApi from "@/lib/public-api";
@@ -14,7 +15,7 @@ export async function GET(
 ) {
   const { page } = await params;
   const sitemapPage = Number.parseInt(page, 10);
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  const baseUrl = CANONICAL_BASE_URL;
 
   const startPage = (sitemapPage - 1) * PAGES_PER_SITEMAP + 1;
 

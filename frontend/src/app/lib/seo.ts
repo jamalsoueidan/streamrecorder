@@ -1,6 +1,9 @@
+import { CANONICAL_BASE_URL } from "@/app/lib/canonical";
 import { routing } from "@/i18n/routing";
 
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "";
+// Canonical + hreflang must ALWAYS point at the primary domain, never the
+// deployment's own host — see canonical.ts for the full reasoning.
+const baseUrl = CANONICAL_BASE_URL;
 
 /**
  * Generate alternates object for metadata with canonical and hreflang tags.

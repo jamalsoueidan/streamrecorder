@@ -1,4 +1,5 @@
 import { getFollowerFilters } from "@/app/actions/followers";
+import { CANONICAL_BASE_URL } from "@/app/lib/canonical";
 import { countryCodeToSlug } from "@/app/lib/country-utils";
 import { streamingPlatforms } from "@/app/lib/streaming-platforms";
 import { routing } from "@/i18n/routing";
@@ -8,7 +9,7 @@ export const dynamic = "force-dynamic";
 export const revalidate = 3600;
 
 export async function GET() {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  const baseUrl = CANONICAL_BASE_URL;
 
   // Fetch country codes for each platform
   const platformCountries: { platform: string; countries: string[] }[] = [];

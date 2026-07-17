@@ -1,4 +1,5 @@
 // app/sitemap.xml/route.ts
+import { CANONICAL_BASE_URL } from "@/app/lib/canonical";
 import publicApi from "@/lib/public-api";
 
 const STRAPI_PAGE_SIZE = 100;
@@ -51,13 +52,13 @@ export async function GET() {
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
     <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
       <sitemap>
-        <loc>${process.env.NEXT_PUBLIC_BASE_URL}/sitemaps/static.xml</loc>
+        <loc>${CANONICAL_BASE_URL}/sitemaps/static.xml</loc>
       </sitemap>
       ${Array.from(
         { length: followerSitemapCount },
         (_, i) => `
         <sitemap>
-          <loc>${process.env.NEXT_PUBLIC_BASE_URL}/sitemaps/followers/${i + 1}.xml</loc>
+          <loc>${CANONICAL_BASE_URL}/sitemaps/followers/${i + 1}.xml</loc>
         </sitemap>
       `,
       ).join("")}
@@ -65,7 +66,7 @@ export async function GET() {
         { length: recordingSitemapCount },
         (_, i) => `
         <sitemap>
-          <loc>${process.env.NEXT_PUBLIC_BASE_URL}/sitemaps/videos/${i + 1}.xml</loc>
+          <loc>${CANONICAL_BASE_URL}/sitemaps/videos/${i + 1}.xml</loc>
         </sitemap>
       `,
       ).join("")}
@@ -73,7 +74,7 @@ export async function GET() {
         { length: clipsSitemapCount },
         (_, i) => `
         <sitemap>
-          <loc>${process.env.NEXT_PUBLIC_BASE_URL}/sitemaps/shorts/${i + 1}.xml</loc>
+          <loc>${CANONICAL_BASE_URL}/sitemaps/shorts/${i + 1}.xml</loc>
         </sitemap>
       `,
       ).join("")}

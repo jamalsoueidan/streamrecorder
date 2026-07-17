@@ -1,3 +1,4 @@
+import { CANONICAL_BASE_URL } from "@/app/lib/canonical";
 import { getImageUrl } from "@/app/lib/media-url";
 import { generateProfileUrl } from "@/app/lib/profile-url";
 import { routing } from "@/i18n/routing";
@@ -15,7 +16,7 @@ export async function GET(
 ) {
   const { page } = await params;
   const sitemapPage = parseInt(page);
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  const baseUrl = CANONICAL_BASE_URL;
 
   const startPage = (sitemapPage - 1) * PAGES_PER_SITEMAP + 1;
 
