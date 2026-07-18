@@ -1,3 +1,4 @@
+import { canonicalUrl } from "@/app/lib/canonical";
 import { LinkButton } from "@/app/components/link-button";
 import { generateProfileUrl } from "@/app/lib/profile-url";
 import { generateAlternates } from "@/app/lib/seo";
@@ -85,17 +86,17 @@ export default async function LandingPage({ params }: PageProps) {
     "@graph": [
       {
         "@type": "WebSite",
-        "@id": `${process.env.NEXT_PUBLIC_BASE_URL}/#website`,
+        "@id": `${canonicalUrl()}/#website`,
         name: "Live Stream Recorder",
-        url: process.env.NEXT_PUBLIC_BASE_URL,
+        url: canonicalUrl(),
         description: t("hero.description"),
       },
       {
         "@type": "Organization",
-        "@id": `${process.env.NEXT_PUBLIC_BASE_URL}/#organization`,
+        "@id": `${canonicalUrl()}/#organization`,
         name: "Live Stream Recorder",
-        url: process.env.NEXT_PUBLIC_BASE_URL,
-        logo: `${process.env.NEXT_PUBLIC_BASE_URL}/og-image.png`,
+        url: canonicalUrl(),
+        logo: `${canonicalUrl()}/og-image.png`,
       },
       {
         "@type": "ItemList",

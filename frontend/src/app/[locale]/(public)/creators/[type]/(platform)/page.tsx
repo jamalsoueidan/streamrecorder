@@ -1,3 +1,4 @@
+import { canonicalUrl } from "@/app/lib/canonical";
 import { getSocialUrl } from "@/app/components/open-social";
 import PaginationControls from "@/app/components/pagination";
 import { generateAvatarUrl } from "@/app/lib/avatar-url";
@@ -105,7 +106,7 @@ export default async function Page({ params, searchParams }: PageProps) {
     return regionNames.of(countryCode.toUpperCase());
   };
 
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  const baseUrl = canonicalUrl();
 
   const jsonLd = {
     "@context": "https://schema.org",

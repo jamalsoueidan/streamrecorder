@@ -1,3 +1,4 @@
+import { canonical, canonicalUrl } from "@/app/lib/canonical";
 import { getClipUrl } from "@/app/lib/clip-url";
 import { routing } from "@/i18n/routing";
 import publicApi from "@/lib/public-api";
@@ -14,7 +15,7 @@ export async function GET(
 ) {
   const { page } = await params;
   const sitemapPage = Number.parseInt(page, 10);
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  const baseUrl = canonicalUrl();
 
   const startPage = (sitemapPage - 1) * PAGES_PER_SITEMAP + 1;
 
@@ -38,8 +39,8 @@ export async function GET(
     .map((clip) => {
       const path = "/shorts/" + clip.documentId;
       const pageUrl = baseUrl + path;
-      const videoUrl = getClipUrl(clip.documentId!, "preview.mp4", clip.path);
-      const thumbnailUrl = getClipUrl(clip.documentId!, "thumbnail.jpg", clip.path);
+      const videoUrl = canonical(getClipUrl(clip.documentId!, "preview.mp4", clip.path));
+      const thumbnailUrl = canonical(getClipUrl(clip.documentId!, "thumbnail.jpg", clip.path));
 
       const creatorName =
         clip.follower?.nickname || clip.follower?.username || "Unknown";

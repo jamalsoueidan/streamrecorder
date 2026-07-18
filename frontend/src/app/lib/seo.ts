@@ -1,6 +1,7 @@
+import { canonicalUrl } from "@/app/lib/canonical";
 import { routing } from "@/i18n/routing";
 
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "";
+const baseUrl = canonicalUrl();
 
 /**
  * Generate alternates object for metadata with canonical and hreflang tags.

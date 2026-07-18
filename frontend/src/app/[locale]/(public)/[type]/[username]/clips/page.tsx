@@ -1,3 +1,4 @@
+import { canonicalUrl } from "@/app/lib/canonical";
 import { IconVideo } from "@tabler/icons-react";
 
 import {
@@ -146,7 +147,7 @@ export default async function Page({ params, searchParams }: PageProps) {
 
   const countryName = getCountryName(follower.countryCode);
 
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  const baseUrl = canonicalUrl();
   const profileUrl = generateProfileUrl(follower, true);
   const platformName = type.charAt(0).toUpperCase() + type.slice(1);
 

@@ -1,3 +1,4 @@
+import { canonical, canonicalUrl } from "@/app/lib/canonical";
 import { getImageUrl } from "@/app/lib/media-url";
 import { generateProfileUrl } from "@/app/lib/profile-url";
 import { routing } from "@/i18n/routing";
@@ -15,7 +16,7 @@ export async function GET(
 ) {
   const { page } = await params;
   const sitemapPage = parseInt(page);
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  const baseUrl = canonicalUrl();
 
   const startPage = (sitemapPage - 1) * PAGES_PER_SITEMAP + 1;
 
@@ -51,10 +52,12 @@ export async function GET(
         generateProfileUrl(r.follower, false) + "/video/" + r.documentId;
       const pageUrl = baseUrl + path;
       const videoUrl = baseUrl + `/video/${r.documentId}/playlist.m3u8`;
-      const thumbnailUrl = getImageUrl(
-        r.documentId!,
-        "screenshot.jpg",
-        r.sources?.find((s: any) => s.state === "done"),
+      const thumbnailUrl = canonical(
+        getImageUrl(
+          r.documentId!,
+          "screenshot.jpg",
+          r.sources?.find((s: any) => s.state === "done"),
+        ),
       );
 
       const creatorName = r.follower?.username;
