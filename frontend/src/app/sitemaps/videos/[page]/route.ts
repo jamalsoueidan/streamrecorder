@@ -56,6 +56,7 @@ export async function GET(
         r.documentId!,
         "screenshot.jpg",
         r.sources?.find((s: any) => s.state === "done"),
+        CANONICAL_BASE_URL,
       );
 
       const creatorName = r.follower?.username;

@@ -1,4 +1,5 @@
 import { LinkButton } from "@/app/components/link-button";
+import { CANONICAL_BASE_URL } from "@/app/lib/canonical";
 import { generateProfileUrl } from "@/app/lib/profile-url";
 import { generateAlternates } from "@/app/lib/seo";
 import { getAlternateOgLocales, getOgLocale } from "@/i18n/routing";
@@ -85,17 +86,17 @@ export default async function LandingPage({ params }: PageProps) {
     "@graph": [
       {
         "@type": "WebSite",
-        "@id": `${process.env.NEXT_PUBLIC_BASE_URL}/#website`,
+        "@id": `${CANONICAL_BASE_URL}/#website`,
         name: "Live Stream Recorder",
-        url: process.env.NEXT_PUBLIC_BASE_URL,
+        url: CANONICAL_BASE_URL,
         description: t("hero.description"),
       },
       {
         "@type": "Organization",
-        "@id": `${process.env.NEXT_PUBLIC_BASE_URL}/#organization`,
+        "@id": `${CANONICAL_BASE_URL}/#organization`,
         name: "Live Stream Recorder",
-        url: process.env.NEXT_PUBLIC_BASE_URL,
-        logo: `${process.env.NEXT_PUBLIC_BASE_URL}/og-image.png`,
+        url: CANONICAL_BASE_URL,
+        logo: `${CANONICAL_BASE_URL}/og-image.png`,
       },
       {
         "@type": "ItemList",

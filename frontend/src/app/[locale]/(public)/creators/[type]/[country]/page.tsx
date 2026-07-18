@@ -1,6 +1,7 @@
 import { getSocialUrl } from "@/app/components/open-social";
 import PaginationControls from "@/app/components/pagination";
 import { generateAvatarUrl } from "@/app/lib/avatar-url";
+import { CANONICAL_BASE_URL } from "@/app/lib/canonical";
 import {
   countrySlugToCode,
   getCountryName,
@@ -122,7 +123,7 @@ export default async function Page({ params, searchParams }: PageProps) {
 
   const totalPages = meta?.pagination?.pageCount || 1;
 
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  const baseUrl = CANONICAL_BASE_URL;
 
   const jsonLd = {
     "@context": "https://schema.org",

@@ -39,8 +39,18 @@ export async function GET(
     .map((clip) => {
       const path = "/shorts/" + clip.documentId;
       const pageUrl = baseUrl + path;
-      const videoUrl = getClipUrl(clip.documentId!, "preview.mp4", clip.path);
-      const thumbnailUrl = getClipUrl(clip.documentId!, "thumbnail.jpg", clip.path);
+      const videoUrl = getClipUrl(
+        clip.documentId!,
+        "preview.mp4",
+        clip.path,
+        CANONICAL_BASE_URL,
+      );
+      const thumbnailUrl = getClipUrl(
+        clip.documentId!,
+        "thumbnail.jpg",
+        clip.path,
+        CANONICAL_BASE_URL,
+      );
 
       const creatorName =
         clip.follower?.nickname || clip.follower?.username || "Unknown";

@@ -1,4 +1,5 @@
 import { getProfileUrl } from "@/app/components/open-social";
+import { CANONICAL_BASE_URL } from "@/app/lib/canonical";
 import { getDemoVideoUrl, getImageUrl } from "@/app/lib/media-url";
 import { generateProfileUrl } from "@/app/lib/profile-url";
 import { generateAlternates } from "@/app/lib/seo";
@@ -171,7 +172,7 @@ export default async function VideoPage({ params }: PageProps) {
     minute: "2-digit",
   });
 
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  const baseUrl = CANONICAL_BASE_URL;
   const profileUrl = generateProfileUrl(data.follower, true);
   const platformName = type.charAt(0).toUpperCase() + type.slice(1);
   const videoUrl = `${profileUrl}/video/${data.documentId}`;

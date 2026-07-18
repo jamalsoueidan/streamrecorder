@@ -1,6 +1,7 @@
 import { getSocialUrl } from "@/app/components/open-social";
 import PaginationControls from "@/app/components/pagination";
 import { generateAvatarUrl } from "@/app/lib/avatar-url";
+import { CANONICAL_BASE_URL } from "@/app/lib/canonical";
 import { generateProfileUrl } from "@/app/lib/profile-url";
 import { generateAlternates } from "@/app/lib/seo";
 import { streamingPlatforms } from "@/app/lib/streaming-platforms";
@@ -105,7 +106,7 @@ export default async function Page({ params, searchParams }: PageProps) {
     return regionNames.of(countryCode.toUpperCase());
   };
 
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  const baseUrl = CANONICAL_BASE_URL;
 
   const jsonLd = {
     "@context": "https://schema.org",

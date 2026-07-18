@@ -19,8 +19,11 @@ export function getImageUrl(
     path?: string | null;
     bucket?: string | null;
   } | null,
+  // SEO contexts (sitemaps) pass CANONICAL_BASE_URL so the media host resolves
+  // to the primary domain instead of a mirror deployment's own host.
+  baseUrlOverride?: string,
 ): string {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  const baseUrl = baseUrlOverride ?? process.env.NEXT_PUBLIC_BASE_URL;
   if (baseUrl && source?.path && source?.bucket) {
     const host = new URL(baseUrl).hostname.replace(/^www\./, "");
     return `https://media.${host}/${source.bucket}${encodePath(source.path)}${file}`;
@@ -44,11 +47,12 @@ export function getDemoVideoUrl(
     bucket?: string | null;
     endpoint?: string | null;
   } | null,
+  baseUrlOverride?: string,
 ): string | null {
   if (source?.endpoint !== B_ENDPOINT || !source?.path || !source?.bucket) {
     return null;
   }
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  const baseUrl = baseUrlOverride ?? process.env.NEXT_PUBLIC_BASE_URL;
   if (!baseUrl) return null;
   const host = new URL(baseUrl).hostname.replace(/^www\./, "");
   return `https://media.${host}/${source.bucket}${encodePath(source.path)}demo.mp4`;

@@ -27,6 +27,7 @@ import { CountryFlag } from "@/app/[locale]/my/components/country-flag";
 import { FollowerTypeIcon } from "@/app/[locale]/my/components/follower-type-icon";
 import { getProfileUrl, getSocialUrl } from "@/app/components/open-social";
 import { generateAvatarUrl } from "@/app/lib/avatar-url";
+import { CANONICAL_BASE_URL } from "@/app/lib/canonical";
 
 import { generateProfileUrl } from "@/app/lib/profile-url";
 import { generateAlternates } from "@/app/lib/seo";
@@ -142,7 +143,7 @@ export default async function Page({ params, searchParams }: PageProps) {
 
   const countryName = getCountryName(follower.countryCode);
 
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  const baseUrl = CANONICAL_BASE_URL;
   const profileUrl = generateProfileUrl(follower, true);
   const platformName = type.charAt(0).toUpperCase() + type.slice(1);
 

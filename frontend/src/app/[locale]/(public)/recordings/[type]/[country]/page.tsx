@@ -1,4 +1,5 @@
 import PaginationControls from "@/app/components/pagination";
+import { CANONICAL_BASE_URL } from "@/app/lib/canonical";
 import { generateProfileUrl } from "@/app/lib/profile-url";
 import { generateAlternates } from "@/app/lib/seo";
 import {
@@ -120,7 +121,7 @@ export default async function Page({ params, searchParams }: PageProps) {
 
   const totalPages = meta?.pagination?.pageCount || 1;
 
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  const baseUrl = CANONICAL_BASE_URL;
 
   const jsonLd = {
     "@context": "https://schema.org",

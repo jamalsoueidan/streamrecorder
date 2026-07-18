@@ -1,4 +1,5 @@
 import PaginationControls from "@/app/components/pagination";
+import { CANONICAL_BASE_URL } from "@/app/lib/canonical";
 import { generateProfileUrl } from "@/app/lib/profile-url";
 import { Center } from "@mantine/core";
 import { Metadata } from "next";
@@ -93,7 +94,7 @@ export default async function RecordingTypePage({
 
   const totalPages = meta?.pagination?.pageCount || 1;
 
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  const baseUrl = CANONICAL_BASE_URL;
 
   const jsonLd = {
     "@context": "https://schema.org",

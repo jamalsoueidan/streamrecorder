@@ -1,4 +1,5 @@
 import { getClipById, getRandomClips } from "@/app/actions/clip";
+import { CANONICAL_BASE_URL } from "@/app/lib/canonical";
 import { getClipUrl } from "@/app/lib/clip-url";
 import { generateProfileUrl } from "@/app/lib/profile-url";
 import { Metadata } from "next";
@@ -141,11 +142,11 @@ export default async function ShortsPage({ params }: Props) {
       contentUrl:
         specificClip.signedClipUrl ||
         getClipUrl(specificClip.documentId!, "clip.mp4", specificClip.path),
-      embedUrl: `${process.env.NEXT_PUBLIC_BASE_URL}/shorts/${specificClip.documentId}`,
+      embedUrl: `${CANONICAL_BASE_URL}/shorts/${specificClip.documentId}`,
       publisher: {
         "@type": "Organization",
         name: "Live Stream Recorder",
-        url: process.env.NEXT_PUBLIC_BASE_URL,
+        url: CANONICAL_BASE_URL,
       },
       ...(specificClip.follower && {
         author: {
@@ -159,7 +160,7 @@ export default async function ShortsPage({ params }: Props) {
       inLanguage: locale,
       potentialAction: {
         "@type": "WatchAction",
-        target: `${process.env.NEXT_PUBLIC_BASE_URL}/shorts/${specificClip.documentId}`,
+        target: `${CANONICAL_BASE_URL}/shorts/${specificClip.documentId}`,
       },
     };
   } else {
