@@ -57,7 +57,7 @@ export async function generateMetadata({
     openGraph: {
       title: t(`meta.${platformKey}.title`),
       description: t(`meta.${platformKey}.description`),
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}/creators/${type}`,
+      url: canonicalUrl(`/creators/${type}`),
       type: "website",
       images: [
         {

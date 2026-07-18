@@ -136,12 +136,12 @@ export default async function ShortsPage({ params }: Props) {
       description:
         specificClip.description ||
         t("jsonLd.description", { creatorName, createdDate }),
-      thumbnailUrl: getClipUrl(specificClip.documentId!, "thumbnail.jpg", specificClip.path),
+      thumbnailUrl: canonical(getClipUrl(specificClip.documentId!, "thumbnail.jpg", specificClip.path)),
       uploadDate: specificClip.createdAt,
       duration: `PT${specificClip.duration || 0}S`,
       contentUrl:
         specificClip.signedClipUrl ||
-        getClipUrl(specificClip.documentId!, "clip.mp4", specificClip.path),
+        canonical(getClipUrl(specificClip.documentId!, "clip.mp4", specificClip.path)),
       embedUrl: `${canonicalUrl()}/shorts/${specificClip.documentId}`,
       publisher: {
         "@type": "Organization",

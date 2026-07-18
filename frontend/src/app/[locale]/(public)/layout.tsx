@@ -1,10 +1,11 @@
+import { canonical } from "@/app/lib/canonical";
 import { Box } from "@mantine/core";
 import { Metadata } from "next";
 import { Footer } from "./components/footer";
 import { Header } from "./components/header";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL!),
+  metadataBase: new URL(canonical(process.env.NEXT_PUBLIC_BASE_URL!)),
 };
 
 export default async function MainLayout({

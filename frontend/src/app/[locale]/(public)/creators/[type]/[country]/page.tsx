@@ -71,7 +71,7 @@ export async function generateMetadata({
     openGraph: {
       title,
       description,
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}/creators/${type}/${country}`,
+      url: canonicalUrl(`/creators/${type}/${country}`),
       type: "website",
       images: [
         {

@@ -86,7 +86,7 @@ export async function generateMetadata({
       type: "profile",
       siteName: "Live Stream Recorder",
       images: [
-        `${process.env.NEXT_PUBLIC_BASE_URL}/api/og/${generateProfileUrl(
+        `${canonicalUrl()}/api/og/${generateProfileUrl(
           follower,
           false,
         )}`,
@@ -97,7 +97,7 @@ export async function generateMetadata({
       title: t("meta.twitterTitle", translation),
       description,
       images: [
-        `${process.env.NEXT_PUBLIC_BASE_URL}/api/og/${generateProfileUrl(
+        `${canonicalUrl()}/api/og/${generateProfileUrl(
           follower,
           false,
         )}`,
