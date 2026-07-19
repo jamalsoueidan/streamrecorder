@@ -1,4 +1,5 @@
 // app/sitemap.xml/route.ts
+import { SUPPORTED_PLATFORM_TYPES } from "@/app/lib/streaming-platforms";
 import publicApi from "@/lib/public-api";
 
 const STRAPI_PAGE_SIZE = 100;
@@ -9,7 +10,10 @@ export const revalidate = 3600;
 
 export async function GET() {
   const { data: follower } = await publicApi.follower.getFollowers({
-    filters: { recordingsCount: { $gt: 0 } },
+    filters: {
+      recordingsCount: { $gt: 0 },
+      type: { $in: SUPPORTED_PLATFORM_TYPES },
+    },
     "pagination[page]": 1,
     "pagination[pageSize]": STRAPI_PAGE_SIZE,
     "pagination[withCount]": true,
@@ -25,12 +29,20 @@ export async function GET() {
           $gt: 60,
         },
       },
+      follower: {
+        type: { $in: SUPPORTED_PLATFORM_TYPES },
+      },
     },
     "pagination[page]": 1,
     "pagination[pageSize]": STRAPI_PAGE_SIZE,
   });
 
   const { data: clips } = await publicApi.clip.getClips({
+    filters: {
+      follower: {
+        type: { $in: SUPPORTED_PLATFORM_TYPES },
+      },
+    },
     "pagination[page]": 1,
     "pagination[pageSize]": STRAPI_PAGE_SIZE,
   });

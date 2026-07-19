@@ -1,5 +1,6 @@
 "use server";
 
+import { SUPPORTED_PLATFORM_TYPES } from "@/app/lib/streaming-platforms";
 import api from "@/lib/api";
 import publicApi from "@/lib/public-api";
 import { deepMerge } from "@mantine/core";
@@ -23,7 +24,9 @@ const getUserFollowData = cache(async () => {
   };
 });
 
-const defaultOptions = {
+// Owner-scoped views (following / favorites=my-list) — the user sees ALL of
+// their own followers, including unlisted types (clapper, tango, ...).
+const defaultFollowingOptions = {
   filters: {
     sources: {
       state: {
@@ -51,6 +54,20 @@ const defaultOptions = {
   },
 };
 
+// Discovery views (explore "all" / discover) additionally hide follower types
+// that aren't publicly listed, so unlisted creators never surface to strangers.
+const defaultExploreOptions = {
+  ...defaultFollowingOptions,
+  filters: {
+    ...defaultFollowingOptions.filters,
+    follower: {
+      type: {
+        $in: SUPPORTED_PLATFORM_TYPES,
+      },
+    },
+  },
+};
+
 const cachedGetRecordings = unstable_cache(
   async (
     followerFilter: string,
@@ -59,9 +76,14 @@ const cachedGetRecordings = unstable_cache(
     page: number,
     pageSize: number,
     locale: string,
+    isDiscovery: boolean,
   ) => {
     const filters = JSON.parse(filterKey);
     const follower = followerFilter ? { id: JSON.parse(followerFilter) } : {};
+
+    // Discovery ("all"/"discover") hides unlisted follower types; owner-scoped
+    // views ("following"/"favorites") see everything they follow.
+    const base = isDiscovery ? defaultExploreOptions : defaultFollowingOptions;
 
     const hasFollowerFilter = Object.keys(follower).length > 0;
 
@@ -87,7 +109,7 @@ const cachedGetRecordings = unstable_cache(
     // $in arrays (a free user with 100+ followers would lose IDs and miss
     // recordings from the tail of their list).
     const response = await publicApi.recording.searchRecordings(
-      deepMerge(deepMerge(defaultOptions, localePopulate), {
+      deepMerge(deepMerge(base, localePopulate), {
         filters: {
           ...filters,
           ...(hasFollowerFilter
@@ -147,9 +169,20 @@ export async function fetchCachedRecordings({
   const filterKey = JSON.stringify(filters);
   const locale = await getLocale();
 
+  // Discovery scopes hide unlisted follower types; owner scopes show all.
+  const isDiscovery = scope === "all" || scope === "discover";
+
   // "all" — no follower filter, fully shared cache
   if (scope === "all") {
-    return cachedGetRecordings("", filterKey, sort, page, pageSize, locale);
+    return cachedGetRecordings(
+      "",
+      filterKey,
+      sort,
+      page,
+      pageSize,
+      locale,
+      isDiscovery,
+    );
   }
 
   // Fresh user data every call — no React cache
@@ -170,5 +203,13 @@ export async function fetchCachedRecordings({
     followerFilter = JSON.stringify({ $notIn: ids });
   }
 
-  return cachedGetRecordings(followerFilter, filterKey, sort, page, pageSize, locale);
+  return cachedGetRecordings(
+    followerFilter,
+    filterKey,
+    sort,
+    page,
+    pageSize,
+    locale,
+    isDiscovery,
+  );
 }

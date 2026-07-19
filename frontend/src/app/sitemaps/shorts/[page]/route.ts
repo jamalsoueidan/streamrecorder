@@ -1,4 +1,5 @@
 import { getClipUrl } from "@/app/lib/clip-url";
+import { SUPPORTED_PLATFORM_TYPES } from "@/app/lib/streaming-platforms";
 import { routing } from "@/i18n/routing";
 import publicApi from "@/lib/public-api";
 
@@ -21,6 +22,11 @@ export async function GET(
   const results = await Promise.all(
     Array.from({ length: PAGES_PER_SITEMAP }, (_, i) =>
       publicApi.clip.getClips({
+        filters: {
+          follower: {
+            type: { $in: SUPPORTED_PLATFORM_TYPES },
+          },
+        },
         populate: {
           follower: {
             fields: ["username", "type", "nickname"],
