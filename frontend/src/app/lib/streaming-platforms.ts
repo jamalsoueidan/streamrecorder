@@ -103,3 +103,19 @@ export const streamingPlatforms = [
   },
 ];
 
+/**
+ * The follower types that are publicly discoverable — explore/discover, the
+ * public listing pages, and the sitemaps. Derived from `streamingPlatforms` so
+ * it can never drift from the UI list.
+ *
+ * Types NOT in here (e.g. clapper, tango, trovo, buzzcast) are hidden from every
+ * public/discovery surface, but stay fully visible to the owner in
+ * `/my/following` and `/my/my-list` — they can still play their own recordings.
+ */
+export const SUPPORTED_PLATFORM_TYPES = streamingPlatforms.map((p) =>
+  p.name.toLowerCase(),
+);
+
+export const isSupportedPlatform = (type?: string | null): boolean =>
+  !!type && SUPPORTED_PLATFORM_TYPES.includes(type.toLowerCase());
+

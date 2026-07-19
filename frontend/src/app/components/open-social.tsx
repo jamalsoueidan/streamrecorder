@@ -72,7 +72,13 @@ export const getProfileUrl = (
   follower?: Partial<Pick<Follower, "username" | "type">>,
 ) => {
   const patternFn = URL_PATTERNS[follower?.type || FollowerTypeEnum.Tiktok];
-  return patternFn ? patternFn(follower?.username || "unknown") : "/404";
+  if (patternFn) return patternFn(follower?.username || "unknown");
+  // Unlisted types (clapper, tango, ...) have no pattern. Return a valid
+  // `/{type}/{username}` path (instead of the old "/404") so the OWNER can open
+  // and play them from /my. Public `/{type}/...` routes hard-404 these via a
+  // layout guard, and every public/discovery query filters them out — so this
+  // never leaks them anywhere strangers can reach.
+  return `/${follower?.type || "unknown"}/${follower?.username || "unknown"}`;
 };
 
 export default function OpenSocial({
