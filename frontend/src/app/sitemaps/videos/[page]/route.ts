@@ -1,6 +1,7 @@
 import { canonical, canonicalUrl } from "@/app/lib/canonical";
 import { getImageUrl } from "@/app/lib/media-url";
 import { generateProfileUrl } from "@/app/lib/profile-url";
+import { SUPPORTED_PLATFORM_TYPES } from "@/app/lib/streaming-platforms";
 import { routing } from "@/i18n/routing";
 import publicApi from "@/lib/public-api";
 
@@ -27,6 +28,9 @@ export async function GET(
           sources: {
             state: { $eq: "done" },
             duration: { $gt: 60 },
+          },
+          follower: {
+            type: { $in: SUPPORTED_PLATFORM_TYPES },
           },
         },
         fields: "documentId,title,description,createdAt,updatedAt",

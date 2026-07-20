@@ -1,3 +1,4 @@
+import { SUPPORTED_PLATFORM_TYPES } from "@/app/lib/streaming-platforms";
 import publicApi from "@/lib/public-api";
 import { unstable_cache } from "next/cache";
 
@@ -10,6 +11,7 @@ export const getFeaturedFollowers = unstable_cache(
     } = await publicApi.follower.getFollowers({
       filters: {
         description: { $notNull: true },
+        type: { $in: SUPPORTED_PLATFORM_TYPES },
       },
       "pagination[limit]": 30,
       sort: "updatedAt:desc",
@@ -30,6 +32,11 @@ export const getLatestRecordings = unstable_cache(
         sources: {
           state: {
             $eq: ["done"],
+          },
+        },
+        follower: {
+          type: {
+            $in: SUPPORTED_PLATFORM_TYPES,
           },
         },
       },

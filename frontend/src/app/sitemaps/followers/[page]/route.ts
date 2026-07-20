@@ -1,5 +1,6 @@
 import { canonicalUrl } from "@/app/lib/canonical";
 import { generateProfileUrl } from "@/app/lib/profile-url";
+import { SUPPORTED_PLATFORM_TYPES } from "@/app/lib/streaming-platforms";
 import { routing } from "@/i18n/routing";
 import publicApi from "@/lib/public-api";
 
@@ -22,7 +23,10 @@ export async function GET(
   const results = await Promise.all(
     Array.from({ length: PAGES_PER_SITEMAP }, (_, i) =>
       publicApi.follower.getFollowers({
-        filters: { recordingsCount: { $gt: 0 } },
+        filters: {
+          recordingsCount: { $gt: 0 },
+          type: { $in: SUPPORTED_PLATFORM_TYPES },
+        },
         "pagination[page]": startPage + i,
         "pagination[pageSize]": STRAPI_PAGE_SIZE,
       }),
