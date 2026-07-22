@@ -1,3 +1,4 @@
+import { canonicalUrl } from "@/app/lib/canonical";
 import PaginationControls from "@/app/components/pagination";
 import { generateProfileUrl } from "@/app/lib/profile-url";
 import { generateAlternates } from "@/app/lib/seo";
@@ -68,7 +69,7 @@ export async function generateMetadata({
     openGraph: {
       title,
       description,
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}/recordings/${type}/${country}`,
+      url: canonicalUrl(`/recordings/${type}/${country}`),
       type: "website",
       images: [
         {
@@ -120,7 +121,7 @@ export default async function Page({ params, searchParams }: PageProps) {
 
   const totalPages = meta?.pagination?.pageCount || 1;
 
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  const baseUrl = canonicalUrl();
 
   const jsonLd = {
     "@context": "https://schema.org",

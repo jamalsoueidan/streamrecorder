@@ -1,4 +1,5 @@
 // app/sitemap.xml/route.ts
+import { canonicalUrl } from "@/app/lib/canonical";
 import { SUPPORTED_PLATFORM_TYPES } from "@/app/lib/streaming-platforms";
 import publicApi from "@/lib/public-api";
 
@@ -63,13 +64,13 @@ export async function GET() {
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
     <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
       <sitemap>
-        <loc>${process.env.NEXT_PUBLIC_BASE_URL}/sitemaps/static.xml</loc>
+        <loc>${canonicalUrl()}/sitemaps/static.xml</loc>
       </sitemap>
       ${Array.from(
         { length: followerSitemapCount },
         (_, i) => `
         <sitemap>
-          <loc>${process.env.NEXT_PUBLIC_BASE_URL}/sitemaps/followers/${i + 1}.xml</loc>
+          <loc>${canonicalUrl()}/sitemaps/followers/${i + 1}.xml</loc>
         </sitemap>
       `,
       ).join("")}
@@ -77,7 +78,7 @@ export async function GET() {
         { length: recordingSitemapCount },
         (_, i) => `
         <sitemap>
-          <loc>${process.env.NEXT_PUBLIC_BASE_URL}/sitemaps/videos/${i + 1}.xml</loc>
+          <loc>${canonicalUrl()}/sitemaps/videos/${i + 1}.xml</loc>
         </sitemap>
       `,
       ).join("")}
@@ -85,7 +86,7 @@ export async function GET() {
         { length: clipsSitemapCount },
         (_, i) => `
         <sitemap>
-          <loc>${process.env.NEXT_PUBLIC_BASE_URL}/sitemaps/shorts/${i + 1}.xml</loc>
+          <loc>${canonicalUrl()}/sitemaps/shorts/${i + 1}.xml</loc>
         </sitemap>
       `,
       ).join("")}

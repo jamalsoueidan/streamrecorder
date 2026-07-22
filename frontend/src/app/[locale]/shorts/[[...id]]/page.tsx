@@ -1,3 +1,4 @@
+import { canonical, canonicalUrl } from "@/app/lib/canonical";
 import { getClipById, getRandomClips } from "@/app/actions/clip";
 import { getClipUrl } from "@/app/lib/clip-url";
 import { generateProfileUrl } from "@/app/lib/profile-url";
@@ -42,8 +43,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     day: "numeric",
   });
 
-  const thumbnailUrl = getClipUrl(data.documentId!, "thumbnail.jpg", data.path);
-  const clipUrl = `${process.env.NEXT_PUBLIC_BASE_URL}/shorts/${data.documentId}`;
+  const thumbnailUrl = canonical(getClipUrl(data.documentId!, "thumbnail.jpg", data.path));
+  const clipUrl = canonicalUrl(`/shorts/${data.documentId}`);
 
   const durationFormatted = `${data.duration || 0}s`;
 
@@ -77,7 +78,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         {
           url:
             data.signedClipUrl ||
-            getClipUrl(data.documentId!, "clip.mp4", data.path),
+            canonical(getClipUrl(data.documentId!, "clip.mp4", data.path)),
           width: 720,
           height: 1280,
           type: "video/mp4",
@@ -135,17 +136,17 @@ export default async function ShortsPage({ params }: Props) {
       description:
         specificClip.description ||
         t("jsonLd.description", { creatorName, createdDate }),
-      thumbnailUrl: getClipUrl(specificClip.documentId!, "thumbnail.jpg", specificClip.path),
+      thumbnailUrl: canonical(getClipUrl(specificClip.documentId!, "thumbnail.jpg", specificClip.path)),
       uploadDate: specificClip.createdAt,
       duration: `PT${specificClip.duration || 0}S`,
       contentUrl:
         specificClip.signedClipUrl ||
-        getClipUrl(specificClip.documentId!, "clip.mp4", specificClip.path),
-      embedUrl: `${process.env.NEXT_PUBLIC_BASE_URL}/shorts/${specificClip.documentId}`,
+        canonical(getClipUrl(specificClip.documentId!, "clip.mp4", specificClip.path)),
+      embedUrl: `${canonicalUrl()}/shorts/${specificClip.documentId}`,
       publisher: {
         "@type": "Organization",
         name: "Live Stream Recorder",
-        url: process.env.NEXT_PUBLIC_BASE_URL,
+        url: canonicalUrl(),
       },
       ...(specificClip.follower && {
         author: {
@@ -159,7 +160,7 @@ export default async function ShortsPage({ params }: Props) {
       inLanguage: locale,
       potentialAction: {
         "@type": "WatchAction",
-        target: `${process.env.NEXT_PUBLIC_BASE_URL}/shorts/${specificClip.documentId}`,
+        target: `${canonicalUrl()}/shorts/${specificClip.documentId}`,
       },
     };
   } else {

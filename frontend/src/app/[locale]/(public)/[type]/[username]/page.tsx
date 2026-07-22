@@ -1,3 +1,4 @@
+import { canonicalUrl } from "@/app/lib/canonical";
 import { IconFlag, IconShieldOff, IconVideo } from "@tabler/icons-react";
 
 import {
@@ -94,7 +95,7 @@ export async function generateMetadata({
       type: "profile",
       siteName: "Live Stream Recorder",
       images: [
-        `${process.env.NEXT_PUBLIC_BASE_URL}/api/og/${generateProfileUrl(
+        `${canonicalUrl()}/api/og/${generateProfileUrl(
           follower,
           false,
         )}`,
@@ -105,7 +106,7 @@ export async function generateMetadata({
       title: t("meta.twitterTitle", translation),
       description,
       images: [
-        `${process.env.NEXT_PUBLIC_BASE_URL}/api/og/${generateProfileUrl(
+        `${canonicalUrl()}/api/og/${generateProfileUrl(
           follower,
           false,
         )}`,
@@ -159,7 +160,7 @@ export default async function Page({ params }: PageProps) {
 
   const profileUrl = generateProfileUrl(follower, true);
   const creatorName = decodeURIComponent(follower.username || "Unknown");
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  const baseUrl = canonicalUrl();
   const platformName = type.charAt(0).toUpperCase() + type.slice(1);
 
   const breadcrumbSchema = {

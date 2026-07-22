@@ -1,3 +1,4 @@
+import { canonicalUrl } from "@/app/lib/canonical";
 import { getSocialUrl } from "@/app/components/open-social";
 import PaginationControls from "@/app/components/pagination";
 import { generateAvatarUrl } from "@/app/lib/avatar-url";
@@ -56,7 +57,7 @@ export async function generateMetadata({
     openGraph: {
       title: t(`meta.${platformKey}.title`),
       description: t(`meta.${platformKey}.description`),
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}/creators/${type}`,
+      url: canonicalUrl(`/creators/${type}`),
       type: "website",
       images: [
         {
@@ -105,7 +106,7 @@ export default async function Page({ params, searchParams }: PageProps) {
     return regionNames.of(countryCode.toUpperCase());
   };
 
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  const baseUrl = canonicalUrl();
 
   const jsonLd = {
     "@context": "https://schema.org",

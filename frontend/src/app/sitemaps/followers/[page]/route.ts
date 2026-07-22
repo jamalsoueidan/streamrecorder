@@ -1,3 +1,4 @@
+import { canonicalUrl } from "@/app/lib/canonical";
 import { generateProfileUrl } from "@/app/lib/profile-url";
 import { SUPPORTED_PLATFORM_TYPES } from "@/app/lib/streaming-platforms";
 import { routing } from "@/i18n/routing";
@@ -15,7 +16,7 @@ export async function GET(
 ) {
   const { page } = await params;
   const sitemapPage = parseInt(page);
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  const baseUrl = canonicalUrl();
 
   const startPage = (sitemapPage - 1) * PAGES_PER_SITEMAP + 1;
 
