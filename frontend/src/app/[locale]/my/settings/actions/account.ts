@@ -43,9 +43,15 @@ export async function deleteAccount(): Promise<ActionResult> {
       const subscriptionId = stripeData?.subscriptionId;
       // Only real recurring subscriptions (sub_...). Lifetime/champion stores a
       // checkout-session id here, which has nothing to cancel.
-      if (subscriptionId && subscriptionId.startsWith("sub_")) {
+      if (typeof subscriptionId === "string" && subscriptionId.startsWith("sub_")) {
         const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
-        await stripe.subscriptions.cancel(subscriptionId);
+        // Explicitly no proration and no final invoice: cancelling on account
+        // deletion must never generate a last-minute charge (that would be the
+        // very dispute this change exists to prevent). Access simply ends now.
+        await stripe.subscriptions.cancel(subscriptionId, {
+          prorate: false,
+          invoice_now: false,
+        });
       }
     } catch (stripeError) {
       console.error(
