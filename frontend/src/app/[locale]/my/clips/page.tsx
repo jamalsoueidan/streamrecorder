@@ -24,6 +24,7 @@ interface PageProps {
   searchParams: Promise<{
     page?: string;
     sort?: string;
+    type?: string;
   }>;
 }
 
