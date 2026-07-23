@@ -15,6 +15,7 @@ import PaginationControls from "@/app/components/pagination";
 import { enrichClipsWithUrls } from "@/app/lib/clip-url.server";
 import publicApi from "@/lib/public-api";
 import { ClipCard } from "./components/clip-card";
+import { ClipsPlatform } from "./components/clips-platform";
 import { ClipsSort } from "./components/clips-sort";
 import { clipsParamsCache, SortOptions } from "./lib/search-params";
 
@@ -27,7 +28,7 @@ interface PageProps {
 
 export default async function Page({ searchParams }: PageProps) {
   const params = await searchParams;
-  const { sort } = clipsParamsCache.parse(params);
+  const { sort, type } = clipsParamsCache.parse(params);
   const t = await getTranslations("protected.clips");
   const locale = await getLocale();
 
@@ -36,6 +37,10 @@ export default async function Page({ searchParams }: PageProps) {
 
   const response = await publicApi.clip
     .getClips({
+      // Platform filter via the clip's follower.type ("" = all platforms).
+      ...(type
+        ? { filters: { follower: { type: { $eq: type } } } as never }
+        : {}),
       populate: {
         follower: {
           populate: {
@@ -93,7 +98,10 @@ export default async function Page({ searchParams }: PageProps) {
             {t("description")}
           </Text>
         </Stack>
-        <ClipsSort />
+        <Flex gap="sm" align="center" wrap="wrap">
+          <ClipsPlatform />
+          <ClipsSort />
+        </Flex>
       </Flex>
 
       <Divider mx={{ base: "-xs", sm: "-md" }} />
