@@ -8,16 +8,22 @@ import { IconChevronDown } from "@tabler/icons-react";
 import { ReactNode } from "react";
 import { FollowerTypeIcon } from "./follower-type-icon";
 
-interface PlatformFilterMenuProps {
+/**
+ * Exactly ONE navigation strategy must be supplied:
+ * - `buildHref` → live-page style, items render as <Link href>.
+ * - `onSelect`  → clips-page style, items call back on click.
+ * The discriminated union makes omitting both (dead menu) or passing both
+ * (one silently ignored) a compile-time error.
+ */
+type PlatformFilterMenuProps = {
   /** Current platform type; "" / undefined = all platforms. */
   value?: string;
   /** Localized "All platforms" label (pass t("allPlatforms")). */
   allLabel: string;
-  /** Live-page style: navigate via <Link href>. Receives "" for all. */
-  buildHref?: (value: string) => string;
-  /** Clips-page style: callback navigation (e.g. nuqs). Receives "" for all. */
-  onSelect?: (value: string) => void;
-}
+} & (
+  | { buildHref: (value: string) => string; onSelect?: never }
+  | { onSelect: (value: string) => void; buildHref?: never }
+);
 
 /**
  * Shared platform dropdown (Menu + FollowerTypeIcon) used by the live page and

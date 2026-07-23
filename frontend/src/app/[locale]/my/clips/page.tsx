@@ -13,6 +13,7 @@ import { getLocale, getTranslations } from "next-intl/server";
 
 import PaginationControls from "@/app/components/pagination";
 import { enrichClipsWithUrls } from "@/app/lib/clip-url.server";
+import { isSupportedPlatform } from "@/app/lib/streaming-platforms";
 import publicApi from "@/lib/public-api";
 import { ClipCard } from "./components/clip-card";
 import { ClipsPlatform } from "./components/clips-platform";
@@ -35,11 +36,15 @@ export default async function Page({ searchParams }: PageProps) {
   const pageNumber = parseInt(params.page || "1", 10);
   const limit = 12;
 
+  // Guard the user-controlled ?type= against garbage: only apply it when it's a
+  // real platform (matches the dropdown options / SUPPORTED_PLATFORM_TYPES).
+  const platform = isSupportedPlatform(type) ? type : "";
+
   const response = await publicApi.clip
     .getClips({
       // Platform filter via the clip's follower.type ("" = all platforms).
-      ...(type
-        ? { filters: { follower: { type: { $eq: type } } } as never }
+      ...(platform
+        ? { filters: { follower: { type: { $eq: platform } } } as never }
         : {}),
       populate: {
         follower: {

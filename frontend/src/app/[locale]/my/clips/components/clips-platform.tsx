@@ -21,7 +21,8 @@ export function ClipsPlatform() {
       allLabel={t("allPlatforms")}
       onSelect={(value) => {
         setPage(null);
-        setFilters({ type: value }, { shallow: false });
+        // null clears the param entirely (?type= -> no param); "" default parses back.
+        setFilters({ type: value || null }, { shallow: false });
       }}
     />
   );
