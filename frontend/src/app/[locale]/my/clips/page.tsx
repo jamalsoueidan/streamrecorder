@@ -13,8 +13,10 @@ import { getLocale, getTranslations } from "next-intl/server";
 
 import PaginationControls from "@/app/components/pagination";
 import { enrichClipsWithUrls } from "@/app/lib/clip-url.server";
+import { isSupportedPlatform } from "@/app/lib/streaming-platforms";
 import publicApi from "@/lib/public-api";
 import { ClipCard } from "./components/clip-card";
+import { ClipsPlatform } from "./components/clips-platform";
 import { ClipsSort } from "./components/clips-sort";
 import { clipsParamsCache, SortOptions } from "./lib/search-params";
 
@@ -22,20 +24,29 @@ interface PageProps {
   searchParams: Promise<{
     page?: string;
     sort?: string;
+    type?: string;
   }>;
 }
 
 export default async function Page({ searchParams }: PageProps) {
   const params = await searchParams;
-  const { sort } = clipsParamsCache.parse(params);
+  const { sort, type } = clipsParamsCache.parse(params);
   const t = await getTranslations("protected.clips");
   const locale = await getLocale();
 
   const pageNumber = parseInt(params.page || "1", 10);
   const limit = 12;
 
+  // Guard the user-controlled ?type= against garbage: only apply it when it's a
+  // real platform (matches the dropdown options / SUPPORTED_PLATFORM_TYPES).
+  const platform = isSupportedPlatform(type) ? type : "";
+
   const response = await publicApi.clip
     .getClips({
+      // Platform filter via the clip's follower.type ("" = all platforms).
+      ...(platform
+        ? { filters: { follower: { type: { $eq: platform } } } as never }
+        : {}),
       populate: {
         follower: {
           populate: {
@@ -93,7 +104,10 @@ export default async function Page({ searchParams }: PageProps) {
             {t("description")}
           </Text>
         </Stack>
-        <ClipsSort />
+        <Flex gap="sm" align="center" wrap="wrap">
+          <ClipsPlatform />
+          <ClipsSort />
+        </Flex>
       </Flex>
 
       <Divider mx={{ base: "-xs", sm: "-md" }} />
