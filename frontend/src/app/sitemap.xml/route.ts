@@ -36,6 +36,9 @@ export async function GET() {
     },
     "pagination[page]": 1,
     "pagination[pageSize]": STRAPI_PAGE_SIZE,
+    // Without this, Strapi returns no pageCount -> the count below falls back to
+    // 1 -> only ONE video sitemap (~500 URLs) was emitted for ~1M recordings.
+    "pagination[withCount]": true,
   });
 
   const { data: clips } = await publicApi.clip.getClips({
@@ -46,6 +49,7 @@ export async function GET() {
     },
     "pagination[page]": 1,
     "pagination[pageSize]": STRAPI_PAGE_SIZE,
+    "pagination[withCount]": true,
   });
 
   // Calculate how many sitemap files we need
